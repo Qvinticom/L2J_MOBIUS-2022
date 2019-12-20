@@ -68,13 +68,13 @@ public class ZombieGatekeepers extends Quest
 		
 		final Creature target = isPet ? player.getPet() : player;
 		
-		final ItemInstance VisitorsMark = player.getInventory().getItemByItemId(8064);
-		final ItemInstance FadedVisitorsMark = player.getInventory().getItemByItemId(8065);
-		final ItemInstance PagansMark = player.getInventory().getItemByItemId(8067);
+		final ItemInstance visitorsMark = player.getInventory().getItemByItemId(8064);
+		final ItemInstance fadedVisitorsMark = player.getInventory().getItemByItemId(8065);
+		final ItemInstance pagansMark = player.getInventory().getItemByItemId(8067);
 		
-		final long mark1 = VisitorsMark == null ? 0 : VisitorsMark.getCount();
-		final long mark2 = FadedVisitorsMark == null ? 0 : FadedVisitorsMark.getCount();
-		final long mark3 = PagansMark == null ? 0 : PagansMark.getCount();
+		final long mark1 = visitorsMark == null ? 0 : visitorsMark.getCount();
+		final long mark2 = fadedVisitorsMark == null ? 0 : fadedVisitorsMark.getCount();
+		final long mark3 = pagansMark == null ? 0 : pagansMark.getCount();
 		
 		if ((mark1 == 0) && (mark2 == 0) && (mark3 == 0))
 		{

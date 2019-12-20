@@ -38,7 +38,7 @@ import org.l2jmobius.loginserver.network.loginserverpackets.LoginServerFail;
  */
 public class GameServerPacketHandler
 {
-	protected static Logger LOGGER = Logger.getLogger(GameServerPacketHandler.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(GameServerPacketHandler.class.getName());
 	
 	public enum GameServerState
 	{

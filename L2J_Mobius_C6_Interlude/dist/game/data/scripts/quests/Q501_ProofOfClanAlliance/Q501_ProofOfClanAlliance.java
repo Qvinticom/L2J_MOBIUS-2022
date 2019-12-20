@@ -76,6 +76,7 @@ public class Q501_ProofOfClanAlliance extends Quest
 	
 	// Drops
 	private static final Map<Integer, Integer> DROP = new HashMap<>();
+	static
 	{
 		DROP.put(VANOR_SILENOS_SHAMAN, HERB_OF_VANOR);
 		DROP.put(HARIT_LIZARDMAN_SHAMAN, HERB_OF_HARIT);
@@ -107,6 +108,7 @@ public class Q501_ProofOfClanAlliance extends Quest
 	
 	// Chests
 	private static final List<Integer> CHESTS_ID = new ArrayList<>();
+	static
 	{
 		CHESTS_ID.add(BOX_OF_ATHREA_1);
 		CHESTS_ID.add(BOX_OF_ATHREA_2);
@@ -344,7 +346,7 @@ public class Q501_ProofOfClanAlliance extends Quest
 							st.takeItems(VOUCHER_OF_FAITH, -1);
 							st.giveItems(PROOF_OF_ALLIANCE, 1);
 							st.playSound(QuestState.SOUND_FINISH);
-							htmltext = getAlreadyCompletedMsg();
+							// htmltext = getAlreadyCompletedMsg();
 							st.exitQuest(true);
 						}
 						else if (state > 0)

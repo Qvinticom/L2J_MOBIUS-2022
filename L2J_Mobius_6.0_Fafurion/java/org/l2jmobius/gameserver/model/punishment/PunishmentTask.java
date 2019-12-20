@@ -239,7 +239,7 @@ public class PunishmentTask implements Runnable
 		
 		if (_type == PunishmentType.CHAT_BAN && _affect == PunishmentAffect.CHARACTER)
 		{
-			final PlayerInstance player = World.getInstance().getPlayer(Integer.valueOf(_key));
+			final PlayerInstance player = World.getInstance().getPlayer(Integer.parseInt(_key));
 			if (player != null)
 			{
 				player.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.NO_CHAT);

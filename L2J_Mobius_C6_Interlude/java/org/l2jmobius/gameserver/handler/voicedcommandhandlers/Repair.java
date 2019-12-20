@@ -314,6 +314,7 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 			}
 			case repair_close_win:
 			{
+				// Do nothing.
 				return;
 			}
 		}

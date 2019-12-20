@@ -238,14 +238,14 @@ public class TaskManager
 			}
 			case TYPE_SHEDULED:
 			{
-				delay = Long.valueOf(task.getParams()[0]);
+				delay = Long.parseLong(task.getParams()[0]);
 				task.scheduled = ThreadPool.schedule(task, delay);
 				return true;
 			}
 			case TYPE_FIXED_SHEDULED:
 			{
-				delay = Long.valueOf(task.getParams()[0]);
-				interval = Long.valueOf(task.getParams()[1]);
+				delay = Long.parseLong(task.getParams()[0]);
+				interval = Long.parseLong(task.getParams()[1]);
 				task.scheduled = ThreadPool.scheduleAtFixedRate(task, delay, interval);
 				return true;
 			}
@@ -280,7 +280,7 @@ public class TaskManager
 			}
 			case TYPE_GLOBAL_TASK:
 			{
-				interval = Long.valueOf(task.getParams()[0]) * 86400000;
+				interval = Long.parseLong(task.getParams()[0]) * 86400000;
 				final String[] hour = task.getParams()[1].split(":");
 				
 				if (hour.length != 3)

@@ -23,7 +23,6 @@ public class ManagePledgePower extends GameServerPacket
 	private final int _action;
 	private final Clan _clan;
 	private final int _rank;
-	private int _privs;
 	
 	public ManagePledgePower(Clan clan, int action, int rank)
 	{
@@ -35,9 +34,10 @@ public class ManagePledgePower extends GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
+		int privs = 0;
 		if (_action == 1)
 		{
-			_privs = _clan.getRankPrivs(_rank);
+			privs = _clan.getRankPrivs(_rank);
 		}
 		else
 		{
@@ -47,6 +47,6 @@ public class ManagePledgePower extends GameServerPacket
 		writeC(0x30);
 		writeD(0);
 		writeD(0);
-		writeD(_privs);
+		writeD(privs);
 	}
 }

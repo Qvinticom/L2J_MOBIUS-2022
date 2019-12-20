@@ -68,6 +68,8 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 			
 			case ALIVE:
 				spawnNpc();
+				// fallthrough
+				
 			case DEAD:
 				startQuestTimer("check", CHECK_INTERVAL, null, null, true);
 				break;

@@ -67,35 +67,26 @@ class EffectRelax extends Effect
 			retval = false;
 		}
 		
-		if (getEffected() instanceof PlayerInstance)
+		if ((getEffected() instanceof PlayerInstance) && !((PlayerInstance) getEffected()).isSitting())
 		{
-			if (!((PlayerInstance) getEffected()).isSitting())
-			{
-				retval = false;
-			}
+			retval = false;
 		}
 		
-		if ((getEffected().getCurrentHp() + 1) > getEffected().getMaxHp())
+		if (((getEffected().getCurrentHp() + 1) > getEffected().getMaxHp()) && getSkill().isToggle())
 		{
-			if (getSkill().isToggle())
-			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString("Fully rested. Effect of " + getSkill().getName() + " has been removed.");
-				getEffected().sendPacket(sm);
-				retval = false;
-			}
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+			sm.addString("Fully rested. Effect of " + getSkill().getName() + " has been removed.");
+			getEffected().sendPacket(sm);
+			retval = false;
 		}
 		
 		final double manaDam = calc();
 		
-		if (manaDam > getEffected().getCurrentMp())
+		if ((manaDam > getEffected().getCurrentMp()) && getSkill().isToggle())
 		{
-			if (getSkill().isToggle())
-			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
-				getEffected().sendPacket(sm);
-				retval = false;
-			}
+			final SystemMessage sm = new SystemMessage(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
+			getEffected().sendPacket(sm);
+			retval = false;
 		}
 		
 		if (!retval)

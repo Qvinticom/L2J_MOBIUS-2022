@@ -138,7 +138,7 @@ public class MobGroup
 	
 	public void spawnGroup(int x, int y, int z)
 	{
-		if (getMobs().size() > 0)
+		if (!getMobs().isEmpty())
 		{
 			return;
 		}

@@ -46,7 +46,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class CursedWeapon
 {
-	private static final Logger LOGGER = Logger.getLogger(CursedWeaponsManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(CursedWeapon.class.getName());
 	
 	private final String _name;
 	private final int _itemId;
@@ -363,28 +363,19 @@ public class CursedWeapon
 			}
 		}
 		
-		if ((player._inEventTvT && !Config.TVT_JOIN_CURSED))
+		if ((player._inEventTvT && !Config.TVT_JOIN_CURSED) && player._inEventTvT)
 		{
-			if (player._inEventTvT)
-			{
-				TvT.removePlayer(player);
-			}
+			TvT.removePlayer(player);
 		}
 		
-		if ((player._inEventCTF && !Config.CTF_JOIN_CURSED))
+		if ((player._inEventCTF && !Config.CTF_JOIN_CURSED) && player._inEventCTF)
 		{
-			if (player._inEventCTF)
-			{
-				CTF.removePlayer(player);
-			}
+			CTF.removePlayer(player);
 		}
 		
-		if ((player._inEventDM && !Config.DM_JOIN_CURSED))
+		if ((player._inEventDM && !Config.DM_JOIN_CURSED) && player._inEventDM)
 		{
-			if (player._inEventDM)
-			{
-				DM.removePlayer(player);
-			}
+			DM.removePlayer(player);
 		}
 		
 		_isActivated = true;

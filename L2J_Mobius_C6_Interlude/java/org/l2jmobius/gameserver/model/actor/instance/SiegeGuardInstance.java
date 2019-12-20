@@ -51,7 +51,7 @@ public class SiegeGuardInstance extends Attackable
 	@Override
 	public SiegeGuardKnownList getKnownList()
 	{
-		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof SiegeGuardKnownList))
+		if (!(super.getKnownList() instanceof SiegeGuardKnownList))
 		{
 			setKnownList(new SiegeGuardKnownList(this));
 		}
@@ -81,7 +81,7 @@ public class SiegeGuardInstance extends Attackable
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		// Attackable during siege by all except defenders ( Castle or Fort )
-		return (attacker != null) && (attacker instanceof PlayerInstance) && (((getCastle() != null) && (getCastle().getCastleId() > 0) && getCastle().getSiege().getIsInProgress() && !getCastle().getSiege().checkIsDefender(((PlayerInstance) attacker).getClan())) || DevastatedCastle.getInstance().getIsInProgress());
+		return (attacker instanceof PlayerInstance) && (((getCastle() != null) && (getCastle().getCastleId() > 0) && getCastle().getSiege().getIsInProgress() && !getCastle().getSiege().checkIsDefender(((PlayerInstance) attacker).getClan())) || DevastatedCastle.getInstance().getIsInProgress());
 	}
 	
 	@Override

@@ -46,7 +46,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class MultiSellChoose extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(MultiSellChoose.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(MultiSellChoose.class.getName());
 	private int _listId;
 	private int _entryId;
 	private int _amount;
@@ -132,15 +132,11 @@ public class MultiSellChoose extends GameClientPacket
 		// given the template entry and information about maintaining enchantment and applying taxes re-create the instance of
 		// the entry that will be used for this exchange i.e. change the enchantment level of select ingredient/products and adena amount appropriately.
 		final NpcInstance merchant = player.getTarget() instanceof NpcInstance ? (NpcInstance) player.getTarget() : null;
-		
-		// if(merchant == null) TODO: Check this
-		// return;
-		
 		final MultiSellEntry entry = prepareEntry(merchant, templateEntry, applyTaxes, maintainEnchantment, enchantment);
 		
 		// Generate a list of distinct ingredients and counts in order to check if the correct item-counts
 		// are possessed by the player
-		List<MultiSellIngredient> _ingredientsList = new ArrayList<>();
+		List<MultiSellIngredient> ingredientsList = new ArrayList<>();
 		boolean newIng = true;
 		
 		for (MultiSellIngredient e : entry.getIngredients())
@@ -149,7 +145,7 @@ public class MultiSellChoose extends GameClientPacket
 			
 			// at this point, the template has already been modified so that enchantments are properly included
 			// whenever they need to be applied. Uniqueness of items is thus judged by item id AND enchantment level
-			for (MultiSellIngredient ex : _ingredientsList)
+			for (MultiSellIngredient ex : ingredientsList)
 			{
 				// if the item was already added in the list, merely increment the count
 				// this happens if 1 list entry has the same ingredient twice (example 2 swords = 1 dual)
@@ -158,7 +154,7 @@ public class MultiSellChoose extends GameClientPacket
 					if (((double) ex.getItemCount() + e.getItemCount()) > Integer.MAX_VALUE)
 					{
 						player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_QUANTITY_THAT_CAN_BE_INPUTTED);
-						_ingredientsList.clear();
+						ingredientsList.clear();
 						return;
 					}
 					ex.setItemCount(ex.getItemCount() + e.getItemCount());
@@ -174,7 +170,7 @@ public class MultiSellChoose extends GameClientPacket
 				}
 				
 				// if it's a new ingredient, just store its info directly (item id, count, enchantment)
-				_ingredientsList.add(new MultiSellIngredient(e));
+				ingredientsList.add(new MultiSellIngredient(e));
 			}
 		}
 		
@@ -188,12 +184,12 @@ public class MultiSellChoose extends GameClientPacket
 		}
 		
 		// now check if the player has sufficient items in the inventory to cover the ingredients' expences
-		for (MultiSellIngredient e : _ingredientsList)
+		for (MultiSellIngredient e : ingredientsList)
 		{
 			if ((e.getItemCount() * _amount) > Integer.MAX_VALUE)
 			{
 				player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_QUANTITY_THAT_CAN_BE_INPUTTED);
-				_ingredientsList.clear();
+				ingredientsList.clear();
 				return;
 			}
 			
@@ -204,7 +200,7 @@ public class MultiSellChoose extends GameClientPacket
 				if (inv.getInventoryItemCount(e.getItemId(), maintainEnchantment ? e.getEnchantmentLevel() : -1) < (Config.ALT_BLACKSMITH_USE_RECIPES || !e.getMantainIngredient() ? e.getItemCount() * _amount : e.getItemCount()))
 				{
 					player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
-					_ingredientsList.clear();
+					ingredientsList.clear();
 					return;
 				}
 			}
@@ -238,7 +234,7 @@ public class MultiSellChoose extends GameClientPacket
 			}
 		}
 		
-		_ingredientsList.clear();
+		ingredientsList.clear();
 		final List<Augmentation> augmentation = new ArrayList<>();
 		/** All ok, remove items and add final product */
 		
@@ -296,12 +292,9 @@ public class MultiSellChoose extends GameClientPacket
 								augmentation.add(inventoryContents[i].getAugmentation());
 							}
 							
-							if (inventoryContents[i].isEquipped())
+							if (inventoryContents[i].isEquipped() && inventoryContents[i].isAugmented())
 							{
-								if (inventoryContents[i].isAugmented())
-								{
-									inventoryContents[i].getAugmentation().removeBonus(player);
-								}
+								inventoryContents[i].getAugmentation().removeBonus(player);
 							}
 							
 							if (!player.destroyItem("Multisell", inventoryContents[i].getObjectId(), 1, player.getTarget(), true))
@@ -349,12 +342,9 @@ public class MultiSellChoose extends GameClientPacket
 								}
 							}
 							
-							if (itemToTake.isEquipped())
+							if (itemToTake.isEquipped() && itemToTake.isAugmented())
 							{
-								if (itemToTake.isAugmented())
-								{
-									itemToTake.getAugmentation().removeBonus(player);
-								}
+								itemToTake.getAugmentation().removeBonus(player);
 							}
 							
 							if (!player.destroyItem("Multisell", itemToTake.getObjectId(), 1, player.getTarget(), true))
@@ -467,12 +457,9 @@ public class MultiSellChoose extends GameClientPacket
 			{
 				double taxRate = 0.0;
 				
-				if (applyTaxes)
+				if (applyTaxes && (merchant != null) && merchant.getIsInTown())
 				{
-					if ((merchant != null) && merchant.getIsInTown())
-					{
-						taxRate = merchant.getCastle().getTaxRate();
-					}
+					taxRate = merchant.getCastle().getTaxRate();
 				}
 				
 				_transactionTax = (int) Math.round(newIngredient.getItemCount() * taxRate);

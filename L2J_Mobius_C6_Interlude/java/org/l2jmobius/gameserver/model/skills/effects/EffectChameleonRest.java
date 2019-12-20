@@ -83,12 +83,9 @@ public class EffectChameleonRest extends Effect
 			return false;
 		}
 		
-		if (effected instanceof PlayerInstance)
+		if ((effected instanceof PlayerInstance) && !((PlayerInstance) effected).isSitting())
 		{
-			if (!((PlayerInstance) effected).isSitting())
-			{
-				retval = false;
-			}
+			retval = false;
 		}
 		
 		final double manaDam = calc();

@@ -73,7 +73,7 @@ public class Expression
 	public Expression setVariable(String name, double value)
 	{
 		checkVariableName(name);
-		variables.put(name, Double.valueOf(value));
+		variables.put(name, value);
 		return this;
 	}
 	

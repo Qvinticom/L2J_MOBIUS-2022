@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class BlockList
 {
-	private static Logger LOGGER = Logger.getLogger(BlockList.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(BlockList.class.getName());
 	private static Map<Integer, List<Integer>> _offlineList = new HashMap<>();
 	
 	private final PlayerInstance _owner;
@@ -66,21 +66,21 @@ public class BlockList
 		_offlineList.put(_owner.getObjectId(), _blockList);
 	}
 	
-	private static List<Integer> loadList(int ObjId)
+	private static List<Integer> loadList(int objId)
 	{
 		List<Integer> list = new ArrayList<>();
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT friend_id FROM character_friends WHERE char_id = ? AND relation = 1");
-			statement.setInt(1, ObjId);
+			statement.setInt(1, objId);
 			ResultSet rset = statement.executeQuery();
 			
 			int friendId;
 			while (rset.next())
 			{
 				friendId = rset.getInt("friend_id");
-				if (friendId == ObjId)
+				if (friendId == objId)
 				{
 					continue;
 				}
@@ -93,7 +93,7 @@ public class BlockList
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Error found in " + ObjId + " friendlist while loading BlockList: " + e.getMessage());
+			LOGGER.warning("Error found in " + objId + " friendlist while loading BlockList: " + e.getMessage());
 		}
 		return list;
 	}

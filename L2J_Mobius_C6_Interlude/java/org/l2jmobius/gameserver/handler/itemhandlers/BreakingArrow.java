@@ -49,16 +49,16 @@ public class BreakingArrow implements IItemHandler
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		final GrandBossInstance Frintezza = (GrandBossInstance) target;
-		if (!player.isInsideRadius(Frintezza, 500, false, false))
+		final GrandBossInstance frintezza = (GrandBossInstance) target;
+		if (!player.isInsideRadius(frintezza, 500, false, false))
 		{
 			player.sendMessage("The purpose is inaccessible");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		if ((itemId == 8192) && (Frintezza.getObjectId() == 29045))
+		if ((itemId == 8192) && (frintezza.getObjectId() == 29045))
 		{
-			Frintezza.broadcastPacket(new SocialAction(Frintezza.getObjectId(), 2));
+			frintezza.broadcastPacket(new SocialAction(frintezza.getObjectId(), 2));
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 	}

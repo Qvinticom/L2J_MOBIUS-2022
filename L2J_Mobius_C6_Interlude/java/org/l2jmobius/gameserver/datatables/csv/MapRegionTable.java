@@ -47,7 +47,7 @@ import org.l2jmobius.gameserver.model.zone.type.TownZone;
 
 public class MapRegionTable
 {
-	private static Logger LOGGER = Logger.getLogger(MapRegionTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(MapRegionTable.class.getName());
 	
 	private final int[][] _regions = new int[19][21];
 	private final int[][] _pointsWithKarmas;
@@ -104,12 +104,10 @@ public class MapRegionTable
 		catch (NoSuchElementException e1)
 		{
 			LOGGER.warning("Error for structure CSV file: ");
-			e1.printStackTrace();
 		}
 		catch (IOException e0)
 		{
 			LOGGER.warning("Error while creating table: " + e0);
-			e0.printStackTrace();
 		}
 		finally
 		{
@@ -121,7 +119,7 @@ public class MapRegionTable
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with MapRegionTable: " + e1.getMessage());
 				}
 			}
 			
@@ -133,7 +131,7 @@ public class MapRegionTable
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with MapRegionTable: " + e1.getMessage());
 				}
 			}
 			
@@ -145,7 +143,7 @@ public class MapRegionTable
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with MapRegionTable: " + e1.getMessage());
 				}
 			}
 		}
@@ -446,7 +444,7 @@ public class MapRegionTable
 			case 16:
 			{
 				nearestTown = "Town of Shuttgart";
-				break; // TODO: (Check mapregion table)[Luno]
+				break;
 			}
 			case 18:
 			{
@@ -596,15 +594,15 @@ public class MapRegionTable
 		}
 		
 		// Get the nearest town
-		TownZone local_zone = null;
-		if ((creature != null) && ((local_zone = TownManager.getInstance().getClosestTown(creature)) != null))
+		TownZone localZone = null;
+		if ((creature != null) && ((localZone = TownManager.getInstance().getClosestTown(creature)) != null))
 		{
-			coord = local_zone.getSpawnLoc();
+			coord = localZone.getSpawnLoc();
 			return new Location(coord[0], coord[1], coord[2]);
 		}
 		
-		local_zone = TownManager.getInstance().getTown(9); // giran
-		coord = local_zone.getSpawnLoc();
+		localZone = TownManager.getInstance().getTown(9); // giran
+		coord = localZone.getSpawnLoc();
 		return new Location(coord[0], coord[1], coord[2]);
 	}
 	

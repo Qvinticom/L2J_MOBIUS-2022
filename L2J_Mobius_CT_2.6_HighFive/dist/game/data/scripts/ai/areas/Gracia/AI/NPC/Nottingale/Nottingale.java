@@ -109,7 +109,7 @@ public class Nottingale extends AbstractNpcAI
 			case "32627-09.html":
 			case "32627-10.html":
 			{
-				player.sendPacket(RADARS.get(Integer.valueOf(event.substring(6, 8))));
+				player.sendPacket(RADARS.get(Integer.parseInt(event.substring(6, 8))));
 				htmltext = event;
 				break;
 			}

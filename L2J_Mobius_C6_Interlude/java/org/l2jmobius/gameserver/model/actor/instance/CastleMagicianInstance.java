@@ -89,7 +89,6 @@ public class CastleMagicianInstance extends NpcInstance
 			{
 			}
 			showChatWindow(player, val);
-			return;
 		}
 		else if (command.equals("gotoleader"))
 		{
@@ -114,7 +113,6 @@ public class CastleMagicianInstance extends NpcInstance
 				final String filename = "data/html/castlemagician/magician-nogate.htm";
 				showChatWindow(player, filename);
 			}
-			return;
 		}
 		else
 		{
@@ -129,18 +127,15 @@ public class CastleMagicianInstance extends NpcInstance
 	 */
 	protected int validateCondition(PlayerInstance player)
 	{
-		if ((getCastle() != null) && (getCastle().getCastleId() > 0))
+		if ((getCastle() != null) && (getCastle().getCastleId() > 0) && (player.getClan() != null))
 		{
-			if (player.getClan() != null)
+			if (getCastle().getZone().isSiegeActive())
 			{
-				if (getCastle().getZone().isSiegeActive())
-				{
-					return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
-				}
-				else if (getCastle().getOwnerId() == player.getClanId())
-				{
-					return COND_OWNER;
-				}
+				return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
+			}
+			else if (getCastle().getOwnerId() == player.getClanId())
+			{
+				return COND_OWNER;
 			}
 		}
 		return COND_ALL_FALSE;

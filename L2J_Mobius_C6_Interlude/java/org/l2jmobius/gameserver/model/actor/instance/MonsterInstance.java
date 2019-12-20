@@ -66,7 +66,7 @@ public class MonsterInstance extends Attackable
 	@Override
 	public MonsterKnownList getKnownList()
 	{
-		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof MonsterKnownList))
+		if (!(super.getKnownList() instanceof MonsterKnownList))
 		{
 			setKnownList(new MonsterKnownList(this));
 		}
@@ -155,7 +155,7 @@ public class MonsterInstance extends Attackable
 	 */
 	protected void manageMinions()
 	{
-		_minionMaintainTask = ThreadPool.schedule(() -> _minionList.spawnMinions(), 1000);
+		_minionMaintainTask = ThreadPool.schedule(_minionList::spawnMinions, 1000);
 	}
 	
 	public void callMinions()
@@ -201,7 +201,7 @@ public class MonsterInstance extends Attackable
 		if (_minionList.hasMinions())
 		{
 			List<MinionInstance> spawnedMinions = _minionList.getSpawnedMinions();
-			if ((spawnedMinions != null) && (spawnedMinions.size() > 0))
+			if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
 			{
 				final Iterator<MinionInstance> itr = spawnedMinions.iterator();
 				MinionInstance minion;

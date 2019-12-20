@@ -88,7 +88,6 @@ public class BoatManager
 		catch (Exception e)
 		{
 			LOGGER.warning("error while creating boat table " + e);
-			e.printStackTrace();
 		}
 		finally
 		{
@@ -100,7 +99,7 @@ public class BoatManager
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with BoatManager " + e1.getMessage());
 				}
 			}
 			
@@ -112,7 +111,7 @@ public class BoatManager
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with BoatManager " + e1.getMessage());
 				}
 			}
 			
@@ -124,7 +123,7 @@ public class BoatManager
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with BoatManager " + e1.getMessage());
 				}
 			}
 		}
@@ -190,30 +189,30 @@ public class BoatManager
 		boat.getPosition().setHeading(heading);
 		boat.setXYZ(xspawn, yspawn, zspawn);
 		
-		int IdWaypoint1 = Integer.parseInt(st.nextToken());
-		int IdWTicket1 = Integer.parseInt(st.nextToken());
+		int idWaypoint1 = Integer.parseInt(st.nextToken());
+		int idWTicket1 = Integer.parseInt(st.nextToken());
 		int ntx1 = Integer.parseInt(st.nextToken());
 		int nty1 = Integer.parseInt(st.nextToken());
 		int ntz1 = Integer.parseInt(st.nextToken());
 		String npc1 = st.nextToken();
-		String mess10_1 = st.nextToken();
-		String mess5_1 = st.nextToken();
-		String mess1_1 = st.nextToken();
-		String mess0_1 = st.nextToken();
-		String messb_1 = st.nextToken();
-		boat.setTrajet1(IdWaypoint1, IdWTicket1, ntx1, nty1, ntz1, npc1, mess10_1, mess5_1, mess1_1, mess0_1, messb_1);
-		IdWaypoint1 = Integer.parseInt(st.nextToken());
-		IdWTicket1 = Integer.parseInt(st.nextToken());
+		String mess10 = st.nextToken();
+		String mess5 = st.nextToken();
+		String mess1 = st.nextToken();
+		String mess0 = st.nextToken();
+		String messb = st.nextToken();
+		boat.setTrajet1(idWaypoint1, idWTicket1, ntx1, nty1, ntz1, npc1, mess10, mess5, mess1, mess0, messb);
+		idWaypoint1 = Integer.parseInt(st.nextToken());
+		idWTicket1 = Integer.parseInt(st.nextToken());
 		ntx1 = Integer.parseInt(st.nextToken());
 		nty1 = Integer.parseInt(st.nextToken());
 		ntz1 = Integer.parseInt(st.nextToken());
 		npc1 = st.nextToken();
-		mess10_1 = st.nextToken();
-		mess5_1 = st.nextToken();
-		mess1_1 = st.nextToken();
-		mess0_1 = st.nextToken();
-		messb_1 = st.nextToken();
-		boat.setTrajet2(IdWaypoint1, IdWTicket1, ntx1, nty1, ntz1, npc1, mess10_1, mess5_1, mess1_1, mess0_1, messb_1);
+		mess10 = st.nextToken();
+		mess5 = st.nextToken();
+		mess1 = st.nextToken();
+		mess0 = st.nextToken();
+		messb = st.nextToken();
+		boat.setTrajet2(idWaypoint1, idWTicket1, ntx1, nty1, ntz1, npc1, mess10, mess5, mess1, mess0, messb);
 		
 		return boat;
 	}

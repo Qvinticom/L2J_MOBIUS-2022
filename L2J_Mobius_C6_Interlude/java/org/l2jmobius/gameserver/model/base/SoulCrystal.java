@@ -23,53 +23,25 @@ import org.l2jmobius.Config;
  */
 public class SoulCrystal
 {
-	public static final int[][] HighSoulConvert =
+	public static final int[][] HIGH_SOUL_CONVERT =
 	{
-		{
-			4639,
-			5577
-		}, // RED 10 - 11
-		{
-			5577,
-			5580
-		}, // RED 11 - 12
-		{
-			5580,
-			5908
-		}, // RED 12 - 13
-		
-		{
-			4650,
-			5578
-		}, // GRN 10 - 11
-		{
-			5578,
-			5581
-		}, // GRN 11 - 12
-		{
-			5581,
-			5911
-		}, // GRN 12 - 13
-		
-		{
-			4661,
-			5579
-		}, // BLU 10 - 11
-		{
-			5579,
-			5582
-		}, // BLU 11 - 12
-		{
-			5582,
-			5914
-		}
-		// BLU 12 - 13
+		// @formatter:off
+		{4639, 5577}, // RED 10 - 11
+		{5577, 5580}, // RED 11 - 12
+		{5580, 5908}, // RED 12 - 13
+		{4650, 5578}, // GRN 10 - 11
+		{5578, 5581}, // GRN 11 - 12
+		{5581, 5911}, // GRN 12 - 13
+		{4661, 5579}, // BLU 10 - 11
+		{5579, 5582}, // BLU 11 - 12
+		{5582, 5914}, // BLU 12 - 13
+		// @formatter:on
 	};
 	
 	/**
 	 * "First line is for Red Soul Crystals, second is Green and third is Blue Soul Crystals, ordered by ascending level, from 0 to 13..."
 	 */
-	public static final int[] SoulCrystalTable =
+	public static final int[] SOUL_CRYSTAL_TABLE =
 	{
 		4629,
 		4630,

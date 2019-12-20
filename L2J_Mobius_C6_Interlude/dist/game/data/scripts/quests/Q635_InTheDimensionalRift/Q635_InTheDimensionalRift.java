@@ -79,7 +79,7 @@ public class Q635_InTheDimensionalRift extends Quest
 		
 		final int id = qs.getInt("id");
 		final int count = qs.getInt("count");
-		if (event == "5.htm")
+		if (event.equals("5.htm"))
 		{
 			if (id > 0)
 			{
@@ -98,7 +98,7 @@ public class Q635_InTheDimensionalRift extends Quest
 				qs.exitQuest(true);
 			}
 		}
-		else if (event == "6.htm")
+		else if (event.equals("6.htm"))
 		{
 			qs.exitQuest(true);
 		}
@@ -130,7 +130,7 @@ public class Q635_InTheDimensionalRift extends Quest
 				qs.exitQuest(true);
 				htmltext = "1a.htm";
 			}
-			else if (!(qs.getQuestItemsCount(DIMENSION_FRAGMENT) > 0))
+			else if (qs.getQuestItemsCount(DIMENSION_FRAGMENT) <= 0)
 			{
 				htmltext = "3.htm";
 			}

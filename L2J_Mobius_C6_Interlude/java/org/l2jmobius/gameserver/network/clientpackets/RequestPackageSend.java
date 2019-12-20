@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
  */
 public class RequestPackageSend extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestPackageSend.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestPackageSend.class.getName());
 	private final List<Item> _items = new ArrayList<>();
 	private int _objectID;
 	private int _count;

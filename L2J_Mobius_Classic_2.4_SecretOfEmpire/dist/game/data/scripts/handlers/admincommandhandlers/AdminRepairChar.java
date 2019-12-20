@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class AdminRepairChar implements IAdminCommandHandler
 {
-	private static Logger LOGGER = Logger.getLogger(AdminRepairChar.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AdminRepairChar.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{

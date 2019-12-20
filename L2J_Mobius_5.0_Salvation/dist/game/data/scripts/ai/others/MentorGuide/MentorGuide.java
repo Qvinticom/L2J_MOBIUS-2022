@@ -161,7 +161,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 			final String[] params = event.split(" ");
 			if (Util.isDigit(params[1]))
 			{
-				final int objectId = Integer.valueOf(params[1]);
+				final int objectId = Integer.parseInt(params[1]);
 				MentorManager.getInstance().getMentees(objectId).stream().filter(Objects::nonNull).filter(Mentee::isOnline).forEach(mentee ->
 				{
 					final PlayerInstance menteePlayer = mentee.getPlayerInstance();

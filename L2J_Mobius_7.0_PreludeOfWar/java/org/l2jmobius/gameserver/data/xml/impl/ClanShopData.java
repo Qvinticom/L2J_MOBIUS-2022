@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.items.Item;
  */
 public class ClanShopData implements IXmlReader
 {
-	private static Logger LOGGER = Logger.getLogger(ClanShopData.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ClanShopData.class.getName());
 	
 	private final List<ClanShopProductHolder> _clanShopProducts = new ArrayList<>();
 	

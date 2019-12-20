@@ -114,7 +114,7 @@ public class Gui
 					final String input = ((String) answer).trim();
 					if (Util.isDigit(input))
 					{
-						final int delay = Integer.valueOf(input);
+						final int delay = Integer.parseInt(input);
 						if (delay > 0)
 						{
 							Shutdown.getInstance().startShutdown(null, delay, false);
@@ -137,7 +137,7 @@ public class Gui
 					final String input = ((String) answer).trim();
 					if (Util.isDigit(input))
 					{
-						final int delay = Integer.valueOf(input);
+						final int delay = Integer.parseInt(input);
 						if (delay > 0)
 						{
 							Shutdown.getInstance().startShutdown(null, delay, true);

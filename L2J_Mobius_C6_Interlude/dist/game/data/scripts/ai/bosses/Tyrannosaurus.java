@@ -36,7 +36,7 @@ public class Tyrannosaurus extends Quest
 		22217, // Tyrannosaurus
 	};
 	// Locations
-	private final static Location[] SPAWNS =
+	private static final Location[] SPAWNS =
 	{
 		new Location(19506, -15772, -3080, 49220),
 		new Location(22253, -17062, -2976, 47449),
@@ -61,10 +61,7 @@ public class Tyrannosaurus extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
-		ThreadPool.schedule(() ->
-		{
-			addSpawn(TREX[Rnd.get(TREX.length)], SPAWNS[Rnd.get(SPAWNS.length)], false, 0);
-		}, 1800000);
+		ThreadPool.schedule(() -> addSpawn(TREX[Rnd.get(TREX.length)], SPAWNS[Rnd.get(SPAWNS.length)], false, 0), 1800000);
 		return super.onKill(npc, killer, isPet);
 	}
 	

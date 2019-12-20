@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class CharSelectionInfo implements IClientOutgoingPacket
 {
-	private static Logger LOGGER = Logger.getLogger(CharSelectionInfo.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(CharSelectionInfo.class.getName());
 	private final String _loginName;
 	private final int _sessionId;
 	private int _activeId;

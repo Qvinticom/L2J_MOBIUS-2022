@@ -492,22 +492,16 @@ public class Q218_TestimonyOfLife extends Quest
 		switch (npc.getNpcId())
 		{
 			case 20550:
-				if ((st.getInt("cond") == 4) && st.dropItems(PURE_MITHRIL_ORE, 1, 10, 500000))
+				if ((st.getInt("cond") == 4) && st.dropItems(PURE_MITHRIL_ORE, 1, 10, 500000) && (st.getQuestItemsCount(WYRM_TALON) >= 20) && (st.getQuestItemsCount(ANT_SOLDIER_ACID) >= 20))
 				{
-					if ((st.getQuestItemsCount(WYRM_TALON) >= 20) && (st.getQuestItemsCount(ANT_SOLDIER_ACID) >= 20))
-					{
-						st.set("cond", "5");
-					}
+					st.set("cond", "5");
 				}
 				break;
 			
 			case 20176:
-				if ((st.getInt("cond") == 4) && st.dropItems(WYRM_TALON, 1, 20, 500000))
+				if ((st.getInt("cond") == 4) && st.dropItems(WYRM_TALON, 1, 20, 500000) && (st.getQuestItemsCount(PURE_MITHRIL_ORE) >= 10) && (st.getQuestItemsCount(ANT_SOLDIER_ACID) >= 20))
 				{
-					if ((st.getQuestItemsCount(PURE_MITHRIL_ORE) >= 10) && (st.getQuestItemsCount(ANT_SOLDIER_ACID) >= 20))
-					{
-						st.set("cond", "5");
-					}
+					st.set("cond", "5");
 				}
 				break;
 			
@@ -516,12 +510,9 @@ public class Q218_TestimonyOfLife extends Quest
 			case 20086:
 			case 20087:
 			case 20088:
-				if ((st.getInt("cond") == 4) && st.dropItems(ANT_SOLDIER_ACID, 1, 20, 800000))
+				if ((st.getInt("cond") == 4) && st.dropItems(ANT_SOLDIER_ACID, 1, 20, 800000) && (st.getQuestItemsCount(PURE_MITHRIL_ORE) >= 10) && (st.getQuestItemsCount(WYRM_TALON) >= 20))
 				{
-					if ((st.getQuestItemsCount(PURE_MITHRIL_ORE) >= 10) && (st.getQuestItemsCount(WYRM_TALON) >= 20))
-					{
-						st.set("cond", "5");
-					}
+					st.set("cond", "5");
 				}
 				break;
 			

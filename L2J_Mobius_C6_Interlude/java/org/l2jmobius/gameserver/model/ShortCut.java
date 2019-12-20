@@ -30,7 +30,7 @@ public class ShortCut
 	private final int _id;
 	private final int _level;
 	
-	public ShortCut(int slotId, int pageId, int shortcutType, int shortcutId, int shortcutLevel, int unknown)
+	public ShortCut(int slotId, int pageId, int shortcutType, int shortcutId, int shortcutLevel)
 	{
 		_slot = slotId;
 		_page = pageId;

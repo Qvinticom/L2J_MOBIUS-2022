@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.holders.ItemHolder;
  */
 public class EquipmentUpgradeData implements IXmlReader
 {
-	private static Logger LOGGER = Logger.getLogger(EquipmentUpgradeData.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(EquipmentUpgradeData.class.getName());
 	private static final Map<Integer, EquipmentUpgradeHolder> _upgrades = new HashMap<>();
 	
 	protected EquipmentUpgradeData()

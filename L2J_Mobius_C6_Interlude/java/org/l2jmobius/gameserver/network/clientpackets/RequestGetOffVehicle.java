@@ -51,7 +51,7 @@ public class RequestGetOffVehicle extends GameClientPacket
 		}
 		
 		final BoatInstance boat = BoatManager.getInstance().GetBoat(_id);
-		final GetOffVehicle Gon = new GetOffVehicle(player, boat, _x, _y, _z);
-		player.broadcastPacket(Gon);
+		final GetOffVehicle gon = new GetOffVehicle(player, boat, _x, _y, _z);
+		player.broadcastPacket(gon);
 	}
 }

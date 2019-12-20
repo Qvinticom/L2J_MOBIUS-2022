@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
 public class RequestRestart extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestRestart.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestRestart.class.getName());
 	
 	@Override
 	protected void readImpl()
@@ -167,7 +167,7 @@ public class RequestRestart extends GameClientPacket
 		}
 		
 		// delete box from the world
-		if (player._active_boxes != -1)
+		if (player._activeBoxes != -1)
 		{
 			player.decreaseBoxes();
 		}

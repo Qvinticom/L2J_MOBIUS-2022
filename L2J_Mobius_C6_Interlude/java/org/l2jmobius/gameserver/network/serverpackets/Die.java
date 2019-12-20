@@ -55,7 +55,7 @@ public class Die extends GameServerPacket
 			final PlayerInstance player = (PlayerInstance) creature;
 			_access = player.getAccessLevel();
 			_clan = player.getClan();
-			_canTeleport = ((!TvT.is_started() || !player._inEventTvT) && (!DM.is_started() || !player._inEventDM) && (!CTF.is_started() || !player._inEventCTF) && !player.isInFunEvent() && !player.isPendingRevive());
+			_canTeleport = ((!TvT.isStarted() || !player._inEventTvT) && (!DM.is_started() || !player._inEventDM) && (!CTF.isStarted() || !player._inEventCTF) && !player.isInFunEvent() && !player.isPendingRevive());
 		}
 		_objectId = creature.getObjectId();
 		_fake = !creature.isDead();
@@ -114,7 +114,7 @@ public class Die extends GameServerPacket
 			
 			writeD(_clan.getHasHideout() > 0 ? 0x01 : 0x00); // 6d 01 00 00 00 - to hide away
 			writeD((_clan.getHasCastle() > 0) || (_clan.getHasFort() > 0) || isInDefense ? 0x01 : 0x00); // 6d 02 00 00 00 - to castle
-			writeD((siegeClan != null) && !isInDefense && (siegeClan.getFlag().size() > 0) ? 0x01 : 0x00); // 6d 03 00 00 00 - to siege HQ
+			writeD((siegeClan != null) && !isInDefense && !siegeClan.getFlag().isEmpty() ? 0x01 : 0x00); // 6d 03 00 00 00 - to siege HQ
 		}
 		else
 		{

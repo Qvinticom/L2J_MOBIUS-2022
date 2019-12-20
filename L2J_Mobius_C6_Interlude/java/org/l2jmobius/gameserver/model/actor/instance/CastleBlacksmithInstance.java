@@ -81,11 +81,7 @@ public class CastleBlacksmithInstance extends FolkInstance
 			return;
 		}
 		
-		if (condition == COND_BUSY_BECAUSE_OF_SIEGE)
-		{
-			return;
-		}
-		else if (condition == COND_OWNER)
+		if ((condition != COND_BUSY_BECAUSE_OF_SIEGE) && (condition == COND_OWNER))
 		{
 			if (command.startsWith("Chat"))
 			{
@@ -147,19 +143,16 @@ public class CastleBlacksmithInstance extends FolkInstance
 			return COND_OWNER;
 		}
 		
-		if ((getCastle() != null) && (getCastle().getCastleId() > 0))
+		if ((getCastle() != null) && (getCastle().getCastleId() > 0) && (player.getClan() != null))
 		{
-			if (player.getClan() != null)
+			if (getCastle().getSiege().getIsInProgress())
 			{
-				if (getCastle().getSiege().getIsInProgress())
-				{
-					return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
-				}
-				else if ((getCastle().getOwnerId() == player.getClanId() // Clan owns castle
-				) && ((player.getClanPrivileges() & Clan.CP_CS_MANOR_ADMIN) == Clan.CP_CS_MANOR_ADMIN))
-				{
-					return COND_OWNER; // Owner
-				}
+				return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
+			}
+			else if ((getCastle().getOwnerId() == player.getClanId()) // Clan owns castle
+				&& ((player.getClanPrivileges() & Clan.CP_CS_MANOR_ADMIN) == Clan.CP_CS_MANOR_ADMIN))
+			{
+				return COND_OWNER; // Owner
 			}
 		}
 		return COND_ALL_FALSE;

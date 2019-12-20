@@ -26,7 +26,7 @@ public class Q072_SagaOfTheSwordMuse extends SagasSuperClass
 	public Q072_SagaOfTheSwordMuse()
 	{
 		super(72, "Saga of the Sword Muse");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			30853,
 			31624,
@@ -41,7 +41,7 @@ public class Q072_SagaOfTheSwordMuse extends SagasSuperClass
 			31659,
 			31281
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7536,
@@ -56,39 +56,39 @@ public class Q072_SagaOfTheSwordMuse extends SagasSuperClass
 			7095,
 			6482
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27288,
 			27221,
 			27280
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			100
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x15
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			161719,
 			124355,
 			124376
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-92823,
 			82155,
 			82127
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-1893,
 			-2803,
 			-2796
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

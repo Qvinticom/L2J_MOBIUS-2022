@@ -25,14 +25,10 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class NobleCustomItem implements IItemHandler
 {
-	private static final int ITEM_IDS[] =
+	private static final int[] ITEM_IDS =
 	{
 		Config.NOOBLE_CUSTOM_ITEM_ID
 	};
-	
-	public NobleCustomItem()
-	{
-	}
 	
 	@Override
 	public void useItem(Playable playable, ItemInstance item)

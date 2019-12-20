@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.TeleportLocation;
 
 public class TeleportLocationTable
 {
-	private static Logger LOGGER = Logger.getLogger(TeleportLocationTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(TeleportLocationTable.class.getName());
 	
 	private final Map<Integer, TeleportLocation> _teleports = new HashMap<>();
 	

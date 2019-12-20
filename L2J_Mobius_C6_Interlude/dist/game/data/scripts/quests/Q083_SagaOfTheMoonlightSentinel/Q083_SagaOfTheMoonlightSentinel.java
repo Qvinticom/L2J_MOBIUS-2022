@@ -26,7 +26,7 @@ public class Q083_SagaOfTheMoonlightSentinel extends SagasSuperClass
 	public Q083_SagaOfTheMoonlightSentinel()
 	{
 		super(83, "Saga of the Moonlight Sentinel");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			30702,
 			31627,
@@ -41,7 +41,7 @@ public class Q083_SagaOfTheMoonlightSentinel extends SagasSuperClass
 			31658,
 			31641
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7520,
@@ -56,39 +56,39 @@ public class Q083_SagaOfTheMoonlightSentinel extends SagasSuperClass
 			7106,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27297,
 			27232,
 			27306
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			102
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x18
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			161719,
 			181227,
 			181215
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-92823,
 			36703,
 			36676
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-1893,
 			-4816,
 			-4812
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.util.GMAudit;
 
 public class RequestBypassToServer extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestBypassToServer.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestBypassToServer.class.getName());
 	
 	// S
 	private String _command;
@@ -82,7 +82,7 @@ public class RequestBypassToServer extends GameClientPacket
 				String command;
 				if (_command.contains(" "))
 				{
-					command = _command.substring(0, _command.indexOf(" "));
+					command = _command.substring(0, _command.indexOf(' '));
 				}
 				else
 				{
@@ -149,7 +149,7 @@ public class RequestBypassToServer extends GameClientPacket
 					{
 						final String teamName = _command.substring(endOfId + 1).substring(16);
 						
-						if (TvT.is_joining())
+						if (TvT.isJoining())
 						{
 							TvT.addPlayer(player, teamName);
 						}
@@ -161,7 +161,7 @@ public class RequestBypassToServer extends GameClientPacket
 					
 					else if (_command.substring(endOfId + 1).startsWith("tvt_player_leave"))
 					{
-						if (TvT.is_joining())
+						if (TvT.isJoining())
 						{
 							TvT.removePlayer(player);
 						}
@@ -173,7 +173,7 @@ public class RequestBypassToServer extends GameClientPacket
 					
 					else if (_command.substring(endOfId + 1).startsWith("dmevent_player_join"))
 					{
-						if (DM.is_joining())
+						if (DM.isJoining())
 						{
 							DM.addPlayer(player);
 						}
@@ -185,7 +185,7 @@ public class RequestBypassToServer extends GameClientPacket
 					
 					else if (_command.substring(endOfId + 1).startsWith("dmevent_player_leave"))
 					{
-						if (DM.is_joining())
+						if (DM.isJoining())
 						{
 							DM.removePlayer(player);
 						}
@@ -198,7 +198,7 @@ public class RequestBypassToServer extends GameClientPacket
 					else if (_command.substring(endOfId + 1).startsWith("ctf_player_join "))
 					{
 						final String teamName = _command.substring(endOfId + 1).substring(16);
-						if (CTF.is_joining())
+						if (CTF.isJoining())
 						{
 							CTF.addPlayer(player, teamName);
 						}
@@ -210,7 +210,7 @@ public class RequestBypassToServer extends GameClientPacket
 					
 					else if (_command.substring(endOfId + 1).startsWith("ctf_player_leave"))
 					{
-						if (CTF.is_joining())
+						if (CTF.isJoining())
 						{
 							CTF.removePlayer(player);
 						}

@@ -93,7 +93,7 @@ public class Q644_GraveRobberAnnihilation extends Quest
 			htmltext = "32017-04.htm";
 			st.takeItems(ORC_GRAVE_GOODS, -1);
 			
-			final int reward[] = REWARDS[Integer.parseInt(event)];
+			final int[] reward = REWARDS[Integer.parseInt(event)];
 			st.rewardItems(reward[0], reward[1]);
 			
 			st.playSound(QuestState.SOUND_FINISH);

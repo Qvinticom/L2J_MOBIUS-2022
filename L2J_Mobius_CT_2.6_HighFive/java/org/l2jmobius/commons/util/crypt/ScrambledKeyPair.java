@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 
 public class ScrambledKeyPair
 {
-	private static Logger LOGGER = Logger.getLogger(ScrambledKeyPair.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ScrambledKeyPair.class.getName());
 	private final KeyPair _pair;
 	private final byte[] _scrambledModulus;
 	

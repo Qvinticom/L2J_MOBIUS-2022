@@ -20,12 +20,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Random;
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.xml.ItemTable;
@@ -45,6 +46,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class VIP
 {
 	private static final Logger LOGGER = Logger.getLogger(VIP.class.getName());
+	
 	public static String _teamName = "";
 	public static String _joinArea = "";
 	public static int _time = 0;
@@ -74,8 +76,8 @@ public class VIP
 	public static boolean _sitForced = false;
 	public static Spawn _endSpawn;
 	public static Spawn _joinSpawn;
-	public static Vector<PlayerInstance> _playersVIP = new Vector<>();
-	public static Vector<PlayerInstance> _playersNotVIP = new Vector<>();
+	public static List<PlayerInstance> _playersVIP = new ArrayList<>();
+	public static List<PlayerInstance> _playersNotVIP = new ArrayList<>();
 	
 	public static void setTeam(String team, PlayerInstance player)
 	{
@@ -114,10 +116,7 @@ public class VIP
 	
 	public static void setRandomTeam(PlayerInstance player)
 	{
-		final Random generator = new Random();
-		
-		final int random = generator.nextInt(5) + 1; // (0 - 4) + 1
-		
+		final int random = Rnd.get(5) + 1; // (0 - 4) + 1
 		LOGGER.info("Random number generated in setRandomTeam(): " + random);
 		
 		switch (random)
@@ -322,9 +321,9 @@ public class VIP
 	
 	public static void setJoinLOC(String x, String y, String z)
 	{
-		_joinX = Integer.valueOf(x);
-		_joinY = Integer.valueOf(y);
-		_joinZ = Integer.valueOf(z);
+		_joinX = Integer.parseInt(x);
+		_joinY = Integer.parseInt(y);
+		_joinZ = Integer.parseInt(z);
 	}
 	
 	public static void startJoin(PlayerInstance player)
@@ -380,7 +379,7 @@ public class VIP
 				Announcements.getInstance().gameAnnounceToAll("VIP event will end if the " + _teamName + " team makes it to their town or when " + (_time / 1000 / 60) + " mins have elapsed.");
 				VIP.sit();
 				
-				ThreadPool.schedule(() -> endEventTime(), _time);
+				ThreadPool.schedule(VIP::endEventTime, _time);
 			}, 20000);
 		}, 20000);
 	}
@@ -686,23 +685,20 @@ public class VIP
 			player._isVIP = false;
 		}
 		
-		_playersVIP = new Vector<>();
-		_playersNotVIP = new Vector<>();
+		_playersVIP = new ArrayList<>();
+		_playersNotVIP = new ArrayList<>();
 	}
 	
 	public static void chooseVIP()
 	{
 		final int size = _playersVIP.size();
-		
 		LOGGER.info("Size of players on VIP: " + size);
 		
-		final Random generator = new Random();
-		final int random = generator.nextInt(size);
-		
+		final int random = Rnd.get(size);
 		LOGGER.info("Random number chosen in VIP: " + random);
 		
-		final PlayerInstance VIP = _playersVIP.get(random);
-		VIP._isTheVIP = true;
+		final PlayerInstance vip = _playersVIP.get(random);
+		vip._isTheVIP = true;
 	}
 	
 	public static void teleportPlayers()
@@ -917,10 +913,8 @@ public class VIP
 	
 	public static void onDisconnect(PlayerInstance player)
 	{
-		
 		if (player._inEventTvT)
 		{
-			
 			player.getAppearance().setNameColor(player._originalNameColourVIP);
 			player.setKarma(player._originalKarmaVIP);
 			player.broadcastUserInfo();

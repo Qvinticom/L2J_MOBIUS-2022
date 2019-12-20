@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class AdminMonsterRace implements IAdminCommandHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(AdminMonsterRace.class.getName());
+	// private static final Logger LOGGER = Logger.getLogger(AdminMonsterRace.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{

@@ -33,24 +33,23 @@ public class RequestMakeMacro extends GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		final int _id = readD();
-		final String _name = readS();
-		final String _desc = readS();
-		final String _acronym = readS();
-		final int _icon = readC();
-		int _count = readC();
-		if (_count < 0)
+		final int id = readD();
+		final String name = readS();
+		final String desc = readS();
+		final String acronym = readS();
+		final int icon = readC();
+		int count = readC();
+		if (count < 0)
 		{
-			_count = 0;
 			return;
 		}
-		if (_count > MAX_MACRO_LENGTH)
+		if (count > MAX_MACRO_LENGTH)
 		{
-			_count = MAX_MACRO_LENGTH;
+			count = MAX_MACRO_LENGTH;
 		}
 		
-		final MacroCmd[] commands = new MacroCmd[_count];
-		for (int i = 0; i < _count; i++)
+		final MacroCmd[] commands = new MacroCmd[count];
+		for (int i = 0; i < count; i++)
 		{
 			final int entry = readC();
 			final int type = readC(); // 1 = skill, 3 = action, 4 = shortcut
@@ -60,7 +59,7 @@ public class RequestMakeMacro extends GameClientPacket
 			_commandsLenght += command.length() + 1;
 			commands[i] = new MacroCmd(entry, type, d1, d2, command);
 		}
-		_macro = new Macro(_id, _icon, _name, _desc, _acronym, commands);
+		_macro = new Macro(id, icon, name, desc, acronym, commands);
 	}
 	
 	@Override

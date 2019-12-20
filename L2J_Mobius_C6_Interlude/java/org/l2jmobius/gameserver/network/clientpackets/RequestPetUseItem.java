@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestPetUseItem extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestPetUseItem.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestPetUseItem.class.getName());
 	private int _objectId;
 	
 	@Override
@@ -121,33 +121,33 @@ public class RequestPetUseItem extends GameClientPacket
 		{
 			if (PetDataTable.isWolf(pet.getNpcId()) && PetDataTable.isWolfFood(itemId))
 			{
-				feed(player, pet, item);
+				feed(pet, item);
 				return;
 			}
 			
 			if (PetDataTable.isSinEater(pet.getNpcId()) && PetDataTable.isSinEaterFood(itemId))
 			{
-				feed(player, pet, item);
+				feed(pet, item);
 				return;
 			}
 			else if (PetDataTable.isHatchling(pet.getNpcId()) && PetDataTable.isHatchlingFood(itemId))
 			{
-				feed(player, pet, item);
+				feed(pet, item);
 				return;
 			}
 			else if (PetDataTable.isStrider(pet.getNpcId()) && PetDataTable.isStriderFood(itemId))
 			{
-				feed(player, pet, item);
+				feed(pet, item);
 				return;
 			}
 			else if (PetDataTable.isWyvern(pet.getNpcId()) && PetDataTable.isWyvernFood(itemId))
 			{
-				feed(player, pet, item);
+				feed(pet, item);
 				return;
 			}
 			else if (PetDataTable.isBaby(pet.getNpcId()) && PetDataTable.isBabyFood(itemId))
 			{
-				feed(player, pet, item);
+				feed(pet, item);
 				return;
 			}
 		}
@@ -163,8 +163,6 @@ public class RequestPetUseItem extends GameClientPacket
 			final SystemMessage sm = new SystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS);
 			player.sendPacket(sm);
 		}
-		
-		return;
 	}
 	
 	private synchronized void useItem(PetInstance pet, ItemInstance item, PlayerInstance player)
@@ -209,11 +207,10 @@ public class RequestPetUseItem extends GameClientPacket
 	 * <BR>
 	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : 1 food = 100 points of currentFed</B></FONT><BR>
 	 * <BR>
-	 * @param player
 	 * @param pet
 	 * @param item
 	 */
-	private void feed(PlayerInstance player, PetInstance pet, ItemInstance item)
+	private void feed(PetInstance pet, ItemInstance item)
 	{
 		// if pet has food in inventory
 		if (pet.destroyItem("Feed", item.getObjectId(), 1, pet, false))

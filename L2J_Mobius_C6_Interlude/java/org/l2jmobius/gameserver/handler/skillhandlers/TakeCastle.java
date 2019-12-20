@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
- * @author _drunk_ TODO To change the template for this generated type comment go to Window - Preferences - Java - Code Style - Code Templates
+ * @author _drunk_
  */
 public class TakeCastle implements ISkillHandler
 {
@@ -44,7 +44,7 @@ public class TakeCastle implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if ((creature == null) || !(creature instanceof PlayerInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return;
 		}
@@ -122,7 +122,7 @@ public class TakeCastle implements ISkillHandler
 	
 	public static boolean checkIfOkToCastSealOfRule(Creature creature, Castle castle, boolean isCheckOnly)
 	{
-		if ((creature == null) || !(creature instanceof PlayerInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return false;
 		}
@@ -174,7 +174,7 @@ public class TakeCastle implements ISkillHandler
 	
 	public static boolean checkIfOkToCastFlagDisplay(Creature creature, Fort fort, boolean isCheckOnly)
 	{
-		if ((creature == null) || !(creature instanceof PlayerInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return false;
 		}

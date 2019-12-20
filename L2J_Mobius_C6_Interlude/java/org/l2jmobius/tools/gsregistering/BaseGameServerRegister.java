@@ -163,7 +163,7 @@ public abstract class BaseGameServerRegister
 	/**
 	 * The Class BaseTask.
 	 */
-	protected static abstract class BaseTask implements Runnable
+	protected abstract static class BaseTask implements Runnable
 	{
 		protected ResourceBundle _bundle;
 		

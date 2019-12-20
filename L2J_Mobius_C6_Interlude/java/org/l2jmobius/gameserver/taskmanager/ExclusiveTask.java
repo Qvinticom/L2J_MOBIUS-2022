@@ -29,7 +29,6 @@ public abstract class ExclusiveTask
 	
 	private Future<?> _future;
 	private boolean _isRunning;
-	private Thread _currentThread;
 	
 	protected ExclusiveTask(boolean returnIfAlreadyRunning)
 	{
@@ -98,7 +97,7 @@ public abstract class ExclusiveTask
 			return !_isRunning;
 		}
 		
-		_currentThread = Thread.currentThread();
+		Thread currentThread = Thread.currentThread();
 		
 		for (;;)
 		{
@@ -106,7 +105,7 @@ public abstract class ExclusiveTask
 			{
 				notifyAll();
 				
-				if (_currentThread != Thread.currentThread())
+				if (currentThread != Thread.currentThread())
 				{
 					return false;
 				}

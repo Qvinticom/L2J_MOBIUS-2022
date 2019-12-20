@@ -135,7 +135,7 @@ public class Q00617_GatherTheFlames extends Quest
 				{
 					return getNoQuestMsg(player);
 				}
-				giveItems(player, Integer.valueOf(event), 1);
+				giveItems(player, Integer.parseInt(event), 1);
 				takeItems(player, TORCH, 1200);
 				htmltext = "32049-04.html";
 				break;
@@ -147,7 +147,7 @@ public class Q00617_GatherTheFlames extends Quest
 				{
 					return getNoQuestMsg(player);
 				}
-				giveItems(player, Integer.valueOf(event), 1);
+				giveItems(player, Integer.parseInt(event), 1);
 				takeItems(player, TORCH, 1200);
 				htmltext = "32049-03.html";
 				break;

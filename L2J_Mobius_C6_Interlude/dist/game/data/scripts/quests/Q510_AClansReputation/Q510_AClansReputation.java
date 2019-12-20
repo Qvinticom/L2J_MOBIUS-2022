@@ -29,10 +29,10 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class Q510_AClansReputation extends Quest
 {
 	// NPC
-	private static final int Valdis = 31331;
+	private static final int VALDIS = 31331;
 	
 	// Quest Item
-	private static final int Claw = 8767;
+	private static final int CLAW = 8767;
 	
 	// Reward
 	private static final int CLAN_POINTS_REWARD = 50; // Quantity of points
@@ -41,10 +41,10 @@ public class Q510_AClansReputation extends Quest
 	{
 		super(510, "A Clan's Reputation");
 		
-		registerQuestItems(Claw);
+		registerQuestItems(CLAW);
 		
-		addStartNpc(Valdis);
-		addTalkId(Valdis);
+		addStartNpc(VALDIS);
+		addTalkId(VALDIS);
 		
 		addKillId(22215, 22216, 22217);
 	}
@@ -106,11 +106,11 @@ public class Q510_AClansReputation extends Quest
 			case State.STARTED:
 				if (st.getInt("cond") == 1)
 				{
-					int count = st.getQuestItemsCount(Claw);
+					int count = st.getQuestItemsCount(CLAW);
 					if (count > 0)
 					{
 						int reward = (CLAN_POINTS_REWARD * count);
-						st.takeItems(Claw, -1);
+						st.takeItems(CLAW, -1);
 						Clan clan = player.getClan();
 						clan.setReputationScore(clan.getReputationScore() + reward, true);
 						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_QUEST_COMPLETED_AND_S1_POINTS_GAINED).addNumber(reward));
@@ -139,7 +139,7 @@ public class Q510_AClansReputation extends Quest
 			return null;
 		}
 		
-		st.giveItems(Claw, 1);
+		st.giveItems(CLAW, 1);
 		st.playSound(QuestState.SOUND_MIDDLE);
 		
 		return null;

@@ -66,12 +66,12 @@ public class FloodProtectorConfig
 	/**
 	 * Creates new instance of FloodProtectorConfig.
 	 * @param floodProtectorType {@link #FLOOD_PROTECTOR_TYPE}
-	 * @param alt_func
+	 * @param altFunc
 	 */
-	public FloodProtectorConfig(String floodProtectorType, boolean alt_func)
+	public FloodProtectorConfig(String floodProtectorType, boolean altFunc)
 	{
 		super();
 		FLOOD_PROTECTOR_TYPE = floodProtectorType;
-		ALTERNATIVE_METHOD = alt_func;
+		ALTERNATIVE_METHOD = altFunc;
 	}
 }

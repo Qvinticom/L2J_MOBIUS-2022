@@ -29,18 +29,18 @@ import org.l2jmobius.commons.database.DatabaseFactory;
  */
 public abstract class ClanHallSiege
 {
-	private static Logger LOGGER = Logger.getLogger(ClanHallSiege.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ClanHallSiege.class.getName());
 	private Calendar _siegeDate;
 	public Calendar _siegeEndDate;
 	private boolean _isInProgress = false;
 	
-	public long restoreSiegeDate(int ClanHallId)
+	public long restoreSiegeDate(int clanHallId)
 	{
 		long res = 0;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT siege_data FROM clanhall_siege WHERE id=?");
-			statement.setInt(1, ClanHallId);
+			statement.setInt(1, clanHallId);
 			final ResultSet rs = statement.executeQuery();
 			
 			if (rs.next())
@@ -53,13 +53,12 @@ public abstract class ClanHallSiege
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Exception: can't get clanhall siege date: ");
-			e.printStackTrace();
+			LOGGER.warning("Exception: can't get clanhall siege date: " + e);
 		}
 		return res;
 	}
 	
-	public void setNewSiegeDate(long siegeDate, int ClanHallId, int hour)
+	public void setNewSiegeDate(long siegeDate, int clanHallId, int hour)
 	{
 		final Calendar tmpDate = Calendar.getInstance();
 		if (siegeDate <= System.currentTimeMillis())
@@ -76,14 +75,13 @@ public abstract class ClanHallSiege
 			{
 				final PreparedStatement statement = con.prepareStatement("UPDATE clanhall_siege SET siege_data=? WHERE id = ?");
 				statement.setLong(1, _siegeDate.getTimeInMillis());
-				statement.setInt(2, ClanHallId);
+				statement.setInt(2, clanHallId);
 				statement.execute();
 				statement.close();
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning("Exception: can't save clanhall siege date: ");
-				e.printStackTrace();
+				LOGGER.warning("Exception: can't save clanhall siege date: " + e);
 			}
 		}
 	}

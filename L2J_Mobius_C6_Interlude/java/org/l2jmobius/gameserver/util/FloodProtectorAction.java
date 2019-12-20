@@ -16,7 +16,8 @@
  */
 package org.l2jmobius.gameserver.util;
 
-import java.util.Hashtable;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
 
@@ -77,7 +78,7 @@ public class FloodProtectorAction
 		this.config = config;
 	}
 	
-	private final Hashtable<String, AtomicInteger> received_commands_actions = new Hashtable<>();
+	private final Map<String, AtomicInteger> received_commands_actions = new HashMap<>();
 	
 	/**
 	 * Checks whether the request is flood protected or not.
@@ -131,7 +132,7 @@ public class FloodProtectorAction
 				}
 				
 				// Avoid macro issue
-				if ((config.FLOOD_PROTECTOR_TYPE == "UseItemFloodProtector") || (config.FLOOD_PROTECTOR_TYPE == "ServerBypassFloodProtector"))
+				if ((config.FLOOD_PROTECTOR_TYPE.equals("UseItemFloodProtector")) || (config.FLOOD_PROTECTOR_TYPE.equals("ServerBypassFloodProtector")))
 				{
 					// _untilBlock value is 4
 					if (_count.get() > _untilBlock)
@@ -145,12 +146,9 @@ public class FloodProtectorAction
 				return false;
 			}
 			
-			if (_count.get() > 0)
+			if ((_count.get() > 0) && config.LOG_FLOODING)
 			{
-				if (config.LOG_FLOODING)
-				{
-					LOGGER(" issued ", String.valueOf(_count), " extra requests within ~", String.valueOf(config.FLOOD_PROTECTION_INTERVAL * GameTimeController.MILLIS_IN_TICK), " ms");
-				}
+				LOGGER(" issued ", String.valueOf(_count), " extra requests within ~", String.valueOf(config.FLOOD_PROTECTION_INTERVAL * GameTimeController.MILLIS_IN_TICK), " ms");
 			}
 			
 			_nextGameTick = curTick + config.FLOOD_PROTECTION_INTERVAL;
@@ -170,14 +168,14 @@ public class FloodProtectorAction
 				_logged = true;
 			}
 			
-			AtomicInteger command_count = received_commands_actions.get(command);
-			if (command_count == null)
+			AtomicInteger commandCount = received_commands_actions.get(command);
+			if (commandCount == null)
 			{
-				command_count = new AtomicInteger(0);
+				commandCount = new AtomicInteger(0);
 			}
 			
-			final int count = command_count.incrementAndGet();
-			received_commands_actions.put(command, command_count);
+			final int count = commandCount.incrementAndGet();
+			received_commands_actions.put(command, commandCount);
 			
 			if (!_punishmentInProgress && (config.PUNISHMENT_LIMIT > 0) && (count >= config.PUNISHMENT_LIMIT) && (config.PUNISHMENT_TYPE != null))
 			{
@@ -202,25 +200,25 @@ public class FloodProtectorAction
 			return false;
 		}
 		
-		AtomicInteger command_count = received_commands_actions.get(command);
-		if (command_count == null)
+		AtomicInteger commandCount = received_commands_actions.get(command);
+		if (commandCount == null)
 		{
-			command_count = new AtomicInteger(0);
-			received_commands_actions.put(command, command_count);
+			commandCount = new AtomicInteger(0);
+			received_commands_actions.put(command, commandCount);
 		}
 		
-		if (command_count.get() > 0)
+		if (commandCount.get() > 0)
 		{
 			if (config.LOG_FLOODING)
 			{
-				LOGGER.warning(" issued " + command_count + " extra requests within ~ " + (config.FLOOD_PROTECTION_INTERVAL * GameTimeController.MILLIS_IN_TICK) + " ms");
+				LOGGER.warning(" issued " + commandCount + " extra requests within ~ " + (config.FLOOD_PROTECTION_INTERVAL * GameTimeController.MILLIS_IN_TICK) + " ms");
 			}
 		}
 		
 		_nextGameTick = curTick + config.FLOOD_PROTECTION_INTERVAL;
 		_logged = false;
-		command_count.set(0);
-		received_commands_actions.put(command, command_count);
+		commandCount.set(0);
+		received_commands_actions.put(command, commandCount);
 		
 		return true;
 	}
@@ -329,6 +327,7 @@ public class FloodProtectorAction
 					StringUtil.append(output, client.getPlayer().getName());
 					StringUtil.append(output, "(", String.valueOf(client.getPlayer().getObjectId()), ") ");
 				}
+				break;
 			}
 			case AUTHED:
 			{
@@ -336,6 +335,7 @@ public class FloodProtectorAction
 				{
 					StringUtil.append(output, client.getAccountName(), " ");
 				}
+				break;
 			}
 			case CONNECTED:
 			{

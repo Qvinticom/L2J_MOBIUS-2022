@@ -27,7 +27,7 @@ public class Q095_SagaOfTheHellKnight extends SagasSuperClass
 	public Q095_SagaOfTheHellKnight()
 	{
 		super(95, "Saga of the Hell Knight");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			31582,
 			31623,
@@ -42,7 +42,7 @@ public class Q095_SagaOfTheHellKnight extends SagasSuperClass
 			31656,
 			31297
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7532,
@@ -57,39 +57,39 @@ public class Q095_SagaOfTheHellKnight extends SagasSuperClass
 			7086,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27258,
 			27244,
 			27263
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			91
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x06
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			164650,
 			47391,
 			47429
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-74121,
 			-56929,
 			-56923
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-2871,
 			-2370,
 			-2383
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

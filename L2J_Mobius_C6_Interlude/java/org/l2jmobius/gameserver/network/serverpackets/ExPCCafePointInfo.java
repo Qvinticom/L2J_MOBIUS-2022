@@ -25,20 +25,11 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class ExPCCafePointInfo extends GameServerPacket
 {
-	/** The _character. */
 	private final PlayerInstance _player;
-	
-	/** The m_ add point. */
-	private final int m_AddPoint;
-	
-	/** The m_ period type. */
-	private int m_PeriodType;
-	
-	/** The Remain time. */
-	private final int RemainTime;
-	
-	/** The Point type. */
-	private int PointType;
+	private final int _addPoint;
+	private int _periodType;
+	private final int _remainTime;
+	private int _pointType;
 	
 	/**
 	 * Instantiates a new ex pc cafe point info.
@@ -46,30 +37,30 @@ public class ExPCCafePointInfo extends GameServerPacket
 	 * @param modify the modify
 	 * @param add the add
 	 * @param hour the hour
-	 * @param _double the _double
+	 * @param value the double
 	 */
-	public ExPCCafePointInfo(PlayerInstance user, int modify, boolean add, int hour, boolean _double)
+	public ExPCCafePointInfo(PlayerInstance user, int modify, boolean add, int hour, boolean value)
 	{
 		_player = user;
-		m_AddPoint = modify;
+		_addPoint = modify;
 		
 		if (add)
 		{
-			m_PeriodType = 1;
-			PointType = 1;
+			_periodType = 1;
+			_pointType = 1;
 		}
-		else if (add && _double)
+		else if (add && value) // check first?
 		{
-			m_PeriodType = 1;
-			PointType = 0;
+			_periodType = 1;
+			_pointType = 0;
 		}
 		else
 		{
-			m_PeriodType = 2;
-			PointType = 2;
+			_periodType = 2;
+			_pointType = 2;
 		}
 		
-		RemainTime = hour;
+		_remainTime = hour;
 	}
 	
 	@Override
@@ -78,9 +69,9 @@ public class ExPCCafePointInfo extends GameServerPacket
 		writeC(0xFE);
 		writeH(0x31);
 		writeD(_player.getPcBangScore());
-		writeD(m_AddPoint);
-		writeC(m_PeriodType);
-		writeD(RemainTime);
-		writeC(PointType);
+		writeD(_addPoint);
+		writeC(_periodType);
+		writeD(_remainTime);
+		writeC(_pointType);
 	}
 }

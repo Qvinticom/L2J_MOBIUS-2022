@@ -21,6 +21,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -324,9 +325,8 @@ public class SkillTreeTable
 	{
 		if (_skillTrees == null)
 		{
-			_skillTrees = new HashMap<>();
+			_skillTrees = new EnumMap<>(ClassId.class);
 		}
-		
 		return _skillTrees;
 	}
 	
@@ -519,12 +519,9 @@ public class SkillTreeTable
 		
 		for (SkillLearn temp : skills)
 		{
-			if ((temp.getMinLevel() > player.getLevel()) && (temp.getSpCost() != 0))
+			if ((temp.getMinLevel() > player.getLevel()) && (temp.getSpCost() != 0) && ((minLevel == 0) || (temp.getMinLevel() < minLevel)))
 			{
-				if ((minLevel == 0) || (temp.getMinLevel() < minLevel))
-				{
-					minLevel = temp.getMinLevel();
-				}
+				minLevel = temp.getMinLevel();
 			}
 		}
 		
@@ -545,12 +542,9 @@ public class SkillTreeTable
 		
 		for (SkillLearn s : skills)
 		{
-			if (s.getMinLevel() > player.getLevel())
+			if ((s.getMinLevel() > player.getLevel()) && ((minLevel == 0) || (s.getMinLevel() < minLevel)))
 			{
-				if ((minLevel == 0) || (s.getMinLevel() < minLevel))
-				{
-					minLevel = s.getMinLevel();
-				}
+				minLevel = s.getMinLevel();
 			}
 		}
 		

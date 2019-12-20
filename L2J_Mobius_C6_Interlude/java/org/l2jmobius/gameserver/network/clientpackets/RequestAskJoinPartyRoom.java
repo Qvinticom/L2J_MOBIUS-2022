@@ -39,29 +39,29 @@ public class RequestAskJoinPartyRoom extends GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final PlayerInstance _player = getClient().getPlayer();
-		if (_player == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		// Send PartyRoom invite request (with activeChar) name to the target
-		final PlayerInstance _target = World.getInstance().getPlayer(_name);
-		if (_target != null)
+		final PlayerInstance target = World.getInstance().getPlayer(_name);
+		if (target != null)
 		{
-			if (!_target.isProcessingRequest())
+			if (!target.isProcessingRequest())
 			{
-				_player.onTransactionRequest(_target);
-				_target.sendPacket(new ExAskJoinPartyRoom(_player.getName()));
+				player.onTransactionRequest(target);
+				target.sendPacket(new ExAskJoinPartyRoom(player.getName()));
 			}
 			else
 			{
-				_player.sendPacket(new SystemMessage(SystemMessageId.S1_IS_BUSY_TRY_LATER).addString(_target.getName()));
+				player.sendPacket(new SystemMessage(SystemMessageId.S1_IS_BUSY_TRY_LATER).addString(target.getName()));
 			}
 		}
 		else
 		{
-			_player.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+			player.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
 		}
 	}
 }

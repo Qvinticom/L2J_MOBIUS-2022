@@ -22,11 +22,10 @@ import org.l2jmobius.gameserver.model.zone.ZoneType;
 
 public class CustomZone extends ZoneType
 {
-	
 	public CustomZone(int id)
 	{
 		super(id);
-		_IsFlyingEnable = true;
+		_isFlyingEnable = true;
 	}
 	
 	@Override
@@ -51,7 +50,7 @@ public class CustomZone extends ZoneType
 			}
 			case "flying":
 			{
-				_IsFlyingEnable = Boolean.parseBoolean(value);
+				_isFlyingEnable = Boolean.parseBoolean(value);
 				break;
 			}
 			default:
@@ -68,7 +67,7 @@ public class CustomZone extends ZoneType
 		if (creature instanceof PlayerInstance)
 		{
 			final PlayerInstance player = (PlayerInstance) creature;
-			if (!player.isGM() && player.isFlying() && !player.isInJail() && !_IsFlyingEnable)
+			if (!player.isGM() && player.isFlying() && !player.isInJail() && !_isFlyingEnable)
 			{
 				player.teleToLocation(org.l2jmobius.gameserver.datatables.csv.MapRegionTable.TeleportWhereType.Town);
 			}
@@ -103,9 +102,9 @@ public class CustomZone extends ZoneType
 	
 	public boolean isFlyingEnable()
 	{
-		return _IsFlyingEnable;
+		return _isFlyingEnable;
 	}
 	
 	private String _zoneName;
-	private boolean _IsFlyingEnable;
+	private boolean _isFlyingEnable;
 }

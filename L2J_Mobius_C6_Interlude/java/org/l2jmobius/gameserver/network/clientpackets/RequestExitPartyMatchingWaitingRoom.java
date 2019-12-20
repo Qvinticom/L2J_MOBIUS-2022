@@ -34,12 +34,12 @@ public class RequestExitPartyMatchingWaitingRoom extends GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final PlayerInstance _player = getClient().getPlayer();
-		if (_player == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		PartyMatchWaitingList.getInstance().removePlayer(_player);
+		PartyMatchWaitingList.getInstance().removePlayer(player);
 	}
 }

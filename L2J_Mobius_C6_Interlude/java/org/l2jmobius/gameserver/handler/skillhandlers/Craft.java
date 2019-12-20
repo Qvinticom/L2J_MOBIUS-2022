@@ -36,7 +36,7 @@ public class Craft implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if ((creature == null) || !(creature instanceof PlayerInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return;
 		}
@@ -54,7 +54,7 @@ public class Craft implements ISkillHandler
 			player.sendPacket(SystemMessageId.CANNOT_CREATED_WHILE_ENGAGED_IN_TRADING);
 			return;
 		}
-		RecipeController.getInstance().requestBookOpen(player, (skill.getSkillType() == SkillType.DWARVEN_CRAFT) ? true : false);
+		RecipeController.getInstance().requestBookOpen(player, (skill.getSkillType() == SkillType.DWARVEN_CRAFT));
 	}
 	
 	@Override

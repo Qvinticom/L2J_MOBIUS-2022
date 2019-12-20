@@ -103,7 +103,7 @@ public class ScrollOfEscape implements IItemHandler
 			return;
 		}
 		
-		if (player._inEventTvT && TvT.is_started())
+		if (player._inEventTvT && TvT.isStarted())
 		{
 			player.sendMessage("You can't use Scroll of Escape in TvT.");
 			return;
@@ -115,7 +115,7 @@ public class ScrollOfEscape implements IItemHandler
 			return;
 		}
 		
-		if (player._inEventCTF && CTF.is_started())
+		if (player._inEventCTF && CTF.isStarted())
 		{
 			player.sendMessage("You can't use Scroll of Escape in CTF.");
 			return;
@@ -264,12 +264,10 @@ public class ScrollOfEscape implements IItemHandler
 				else if (_itemId == 5858) // do nothing
 				{
 					_player.sendPacket(SystemMessageId.CLAN_HAS_NO_CLAN_HALL);
-					return;
 				}
 				else if ((_player.getKarma() > 0) && Config.ALT_KARMA_TELEPORT_TO_FLORAN)
 				{
 					_player.teleToLocation(17836, 170178, -3507, true); // Floran
-					return;
 				}
 				else if (_itemId < 7117)
 				{

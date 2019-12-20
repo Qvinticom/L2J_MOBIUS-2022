@@ -26,7 +26,7 @@ public class Q075_SagaOfTheTitan extends SagasSuperClass
 	public Q075_SagaOfTheTitan()
 	{
 		super(75, "Saga of the Titan");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			31327,
 			31624,
@@ -41,7 +41,7 @@ public class Q075_SagaOfTheTitan extends SagasSuperClass
 			31658,
 			31290
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7539,
@@ -56,39 +56,39 @@ public class Q075_SagaOfTheTitan extends SagasSuperClass
 			7098,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27292,
 			27224,
 			27283
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			113
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x2e
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			119518,
 			181215,
 			181227
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-28658,
 			36676,
 			36703
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-3811,
 			-4812,
 			-4816
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

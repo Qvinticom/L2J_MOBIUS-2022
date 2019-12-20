@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class OlympiadManagerInstance extends FolkInstance
 {
-	private static Logger LOGGER = Logger.getLogger(OlympiadManagerInstance.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(OlympiadManagerInstance.class.getName());
 	
 	private static final int GATE_PASS = Config.ALT_OLY_COMP_RITEM;
 	
@@ -199,7 +199,7 @@ public class OlympiadManagerInstance extends FolkInstance
 						replyMSG.append("<center>Grand Olympiad Ranking");
 						replyMSG.append("<img src=\"L2UI.SquareWhite\" width=270 height=1><img src=\"L2UI.SquareBlank\" width=1 height=3>");
 						final List<String> names = Olympiad.getInstance().getClassLeaderBoard(classId);
-						if (names.size() != 0)
+						if (!names.isEmpty())
 						{
 							replyMSG.append("<table width=270 border=0 bgcolor=\"000000\">");
 							int index = 1;

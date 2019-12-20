@@ -28,7 +28,7 @@ public class RequestReplyStartPledgeWar extends GameClientPacket
 	protected void readImpl()
 	{
 		@SuppressWarnings("unused")
-		final String _reqName = readS();
+		final String reqName = readS();
 		_answer = readD();
 	}
 	

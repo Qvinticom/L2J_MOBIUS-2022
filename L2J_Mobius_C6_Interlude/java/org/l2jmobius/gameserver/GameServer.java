@@ -140,7 +140,7 @@ import org.l2jmobius.telnet.TelnetStatusThread;
 
 public class GameServer
 {
-	private static Logger LOGGER = Logger.getLogger(GameServer.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(GameServer.class.getName());
 	
 	private static SelectorThread<GameClient> _selectorThread;
 	private static LoginServerThread _loginThread;

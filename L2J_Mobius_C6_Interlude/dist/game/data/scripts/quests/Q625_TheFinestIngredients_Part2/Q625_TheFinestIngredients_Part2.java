@@ -41,7 +41,7 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 	private static final int SOY_SAUCE_JAR = 7205;
 	private static final int FOOD_FOR_BUMBALUMP = 7209;
 	private static final int SPECIAL_YETI_MEAT = 7210;
-	private static final int REWARD_DYE[] =
+	private static final int[] REWARD_DYE =
 	{
 		4589,
 		4590,
@@ -78,6 +78,8 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 			
 			case ALIVE:
 				spawnNpc();
+				// fallthrough
+				
 			case DEAD:
 				startQuestTimer("check", CHECK_INTERVAL, null, null, true);
 				break;

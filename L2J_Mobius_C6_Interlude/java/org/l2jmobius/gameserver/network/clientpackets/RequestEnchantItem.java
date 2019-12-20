@@ -21,7 +21,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.Inventory;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -38,7 +37,8 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class RequestEnchantItem extends GameClientPacket
 {
-	protected static final Logger LOGGER = Logger.getLogger(Inventory.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(RequestEnchantItem.class.getName());
+	
 	private static final int[] CRYSTAL_SCROLLS =
 	{
 		731,
@@ -612,12 +612,9 @@ public class RequestEnchantItem extends GameClientPacket
 		
 		int rndValue = Rnd.get(100);
 		
-		if (Config.ENABLE_DWARF_ENCHANT_BONUS && (player.getRace() == Race.DWARF))
+		if (Config.ENABLE_DWARF_ENCHANT_BONUS && (player.getRace() == Race.DWARF) && (player.getLevel() >= Config.DWARF_ENCHANT_MIN_LEVEL))
 		{
-			if (player.getLevel() >= Config.DWARF_ENCHANT_MIN_LEVEL)
-			{
-				rndValue -= Config.DWARF_ENCHANT_BONUS;
-			}
+			rndValue -= Config.DWARF_ENCHANT_BONUS;
 		}
 		
 		synchronized (item)

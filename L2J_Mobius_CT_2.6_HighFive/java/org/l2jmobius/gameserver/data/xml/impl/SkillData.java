@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class SkillData
 {
-	private static Logger LOGGER = Logger.getLogger(SkillData.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SkillData.class.getName());
 	
 	private final Map<Integer, Skill> _skills = new ConcurrentHashMap<>();
 	private final Map<Integer, Integer> _skillMaxLevel = new ConcurrentHashMap<>();

@@ -80,7 +80,7 @@ public class SchemeBufferTable
 						break;
 					}
 					
-					schemeList.add(Integer.valueOf(skill));
+					schemeList.add(Integer.parseInt(skill));
 				}
 				
 				setScheme(objectId, schemeName, schemeList);

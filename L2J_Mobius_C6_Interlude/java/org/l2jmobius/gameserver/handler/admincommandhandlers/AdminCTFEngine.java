@@ -132,7 +132,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 			{
 				if (st.hasMoreTokens())
 				{
-					if (CTF.set_eventName(st.nextToken()))
+					if (CTF.setEventName(st.nextToken()))
 					{
 						showMainPage(activeChar);
 						return true;
@@ -147,7 +147,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 			{
 				if (st.hasMoreTokens())
 				{
-					if (CTF.set_eventDesc(st.nextToken()))
+					if (CTF.setEventDesc(st.nextToken()))
 					{
 						showMainPage(activeChar);
 						return true;
@@ -162,7 +162,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 			{
 				if (st.hasMoreTokens())
 				{
-					if (CTF.set_joiningLocationName(st.nextToken()))
+					if (CTF.setJoiningLocationName(st.nextToken()))
 					{
 						showMainPage(activeChar);
 						return true;
@@ -234,7 +234,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, Max lvl must be higher then Min");
 						return false;
 					}
-					if (CTF.set_maxlvl(lvl))
+					if (CTF.setMaxlvl(lvl))
 					{
 						showMainPage(activeChar);
 						return true;
@@ -247,8 +247,9 @@ public class AdminCTFEngine implements IAdminCommandHandler
 			}
 			case admin_ctf_tele_npc:
 			{
-				activeChar.teleToLocation(CTF.get_npcLocation(), false);
+				activeChar.teleToLocation(CTF.getNpcLocation(), false);
 				showMainPage(activeChar);
+				return false;
 			}
 			case admin_ctf_tele_team:
 			{
@@ -297,14 +298,14 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					int id = 0;
 					try
 					{
-						id = Integer.valueOf(st.nextToken());
+						id = Integer.parseInt(st.nextToken());
 					}
 					catch (NumberFormatException e)
 					{
 						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_npc <npc_id>");
 						return false;
 					}
-					if (CTF.set_npcId(id))
+					if (CTF.setNpcId(id))
 					{
 						showMainPage(activeChar);
 						return true;
@@ -328,7 +329,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					int id = 0;
 					try
 					{
-						id = Integer.valueOf(st.nextToken());
+						id = Integer.parseInt(st.nextToken());
 					}
 					catch (NumberFormatException e)
 					{
@@ -353,7 +354,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					int amount = 0;
 					try
 					{
-						amount = Integer.valueOf(st.nextToken());
+						amount = Integer.parseInt(st.nextToken());
 					}
 					catch (NumberFormatException e)
 					{
@@ -521,7 +522,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_jointime <minutes>");
 						return false;
 					}
-					if (CTF.set_joinTime(time))
+					if (CTF.setJoinTime(time))
 					{
 						showMainPage(activeChar);
 						return true;
@@ -547,7 +548,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_eventtime <minutes>");
 						return false;
 					}
-					if (CTF.set_eventTime(time))
+					if (CTF.setEventTime(time))
 					{
 						showMainPage(activeChar);
 						return true;
@@ -560,7 +561,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 			}
 			case admin_ctf_autoevent:
 			{
-				if ((CTF.get_joinTime() > 0) && (CTF.get_eventTime() > 0))
+				if ((CTF.getJoinTime() > 0) && (CTF.getEventTime() > 0))
 				{
 					CTF.autoEvent();
 					showMainPage(activeChar);
@@ -584,7 +585,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_interval <minutes>");
 						return false;
 					}
-					if (CTF.set_intervalBetweenMatches(time))
+					if (CTF.setIntervalBetweenMatches(time))
 					{
 						showMainPage(activeChar);
 						return true;
@@ -610,7 +611,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_minplayers <number>");
 						return false;
 					}
-					if (CTF.set_minPlayers(min))
+					if (CTF.setMinPlayers(min))
 					{
 						showMainPage(activeChar);
 						return true;
@@ -636,7 +637,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_maxplayers <number>");
 						return false;
 					}
-					if (CTF.set_maxPlayers(max))
+					if (CTF.setMaxPlayers(max))
 					{
 						showMainPage(activeChar);
 						return true;
@@ -652,7 +653,6 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				return false;
 			}
 		}
-		
 	}
 	
 	@Override
@@ -738,7 +738,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 		replyMSG.append("<center><font color=\"LEVEL\">[CTF Engine]</font></center><br><br><br>");
 		
 		replyMSG.append("<table><tr>");
-		if (!CTF.is_inProgress())
+		if (!CTF.isInProgress())
 		{
 			replyMSG.append("<td width=\"100\"><button value=\"Edit\" action=\"bypass -h admin_ctf_edit\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 		}
@@ -746,13 +746,13 @@ public class AdminCTFEngine implements IAdminCommandHandler
 		replyMSG.append("</tr></table><br>");
 		
 		replyMSG.append("<br><font color=\"LEVEL\">Current event...</font><br1>");
-		replyMSG.append("Name:&nbsp;<font color=\"00FF00\">" + CTF.get_eventName() + "</font><br1>");
-		replyMSG.append("Description:&nbsp;<font color=\"00FF00\">" + CTF.get_eventDesc() + "</font><br1>");
-		replyMSG.append("Joining location name:&nbsp;<font color=\"00FF00\">" + CTF.get_joiningLocationName() + "</font><br1>");
+		replyMSG.append("Name:&nbsp;<font color=\"00FF00\">" + CTF.getEventName() + "</font><br1>");
+		replyMSG.append("Description:&nbsp;<font color=\"00FF00\">" + CTF.getEventDesc() + "</font><br1>");
+		replyMSG.append("Joining location name:&nbsp;<font color=\"00FF00\">" + CTF.getJoiningLocationName() + "</font><br1>");
 		
-		final Location npc_loc = CTF.get_npcLocation();
+		final Location npcLoc = CTF.getNpcLocation();
 		
-		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + CTF.get_npcId() + " on pos " + npc_loc.getX() + "," + npc_loc.getY() + "," + npc_loc.getZ() + "</font><br1>");
+		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + CTF.getNpcId() + " on pos " + npcLoc.getX() + "," + npcLoc.getY() + "," + npcLoc.getZ() + "</font><br1>");
 		replyMSG.append("<button value=\"Tele->NPC\" action=\"bypass -h admin_ctf_tele_npc\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"><br>");
 		replyMSG.append("Reward ID:&nbsp;<font color=\"00FF00\">" + CTF.get_rewardId() + "</font><br1>");
 		if (ItemTable.getInstance().getTemplate(CTF.get_rewardId()) != null)
@@ -765,11 +765,11 @@ public class AdminCTFEngine implements IAdminCommandHandler
 		}
 		replyMSG.append("Reward Amount:&nbsp;<font color=\"00FF00\">" + CTF.get_rewardAmount() + "</font><br>");
 		replyMSG.append("Min lvl:&nbsp;<font color=\"00FF00\">" + CTF.get_minlvl() + "</font><br1>");
-		replyMSG.append("Max lvl:&nbsp;<font color=\"00FF00\">" + CTF.get_maxlvl() + "</font><br><br>");
-		replyMSG.append("Min Players:&nbsp;<font color=\"00FF00\">" + CTF.get_minPlayers() + "</font><br1>");
-		replyMSG.append("Max Players:&nbsp;<font color=\"00FF00\">" + CTF.get_maxPlayers() + "</font><br>");
-		replyMSG.append("Joining Time:&nbsp;<font color=\"00FF00\">" + CTF.get_joinTime() + "</font><br1>");
-		replyMSG.append("Event Time:&nbsp;<font color=\"00FF00\">" + CTF.get_eventTime() + "</font><br>");
+		replyMSG.append("Max lvl:&nbsp;<font color=\"00FF00\">" + CTF.getMaxlvl() + "</font><br><br>");
+		replyMSG.append("Min Players:&nbsp;<font color=\"00FF00\">" + CTF.getMinPlayers() + "</font><br1>");
+		replyMSG.append("Max Players:&nbsp;<font color=\"00FF00\">" + CTF.getMaxPlayers() + "</font><br>");
+		replyMSG.append("Joining Time:&nbsp;<font color=\"00FF00\">" + CTF.getJoinTime() + "</font><br1>");
+		replyMSG.append("Event Time:&nbsp;<font color=\"00FF00\">" + CTF.getEventTime() + "</font><br>");
 		if ((CTF._teams != null) && !CTF._teams.isEmpty())
 		{
 			replyMSG.append("<font color=\"LEVEL\">Current teams:</font><br1>");
@@ -786,7 +786,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 			}
 			else if (Config.CTF_EVEN_TEAMS.equals("SHUFFLE"))
 			{
-				if (CTF.is_teleport() || CTF.is_started())
+				if (CTF.isTeleport() || CTF.isStarted())
 				{
 					replyMSG.append("&nbsp;(" + CTF.teamPlayersCount(team) + " in)");
 				}
@@ -810,7 +810,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 			replyMSG.append("<button value=\"Tele->Flag\" action=\"bypass -h admin_ctf_tele_flag " + team + "\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 			replyMSG.append("</td></tr><tr><td>");
 			replyMSG.append(CTF._flagsX.get(CTF._teams.indexOf(team)) + ", " + CTF._flagsY.get(CTF._teams.indexOf(team)) + ", " + CTF._flagsZ.get(CTF._teams.indexOf(team)) + "</td></tr>");
-			if (!CTF.is_inProgress())
+			if (!CTF.isInProgress())
 			{
 				replyMSG.append("<tr><td width=\"60\"><button value=\"Remove\" action=\"bypass -h admin_ctf_team_remove " + team + "\" width=50 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr><tr></tr>");
 			}
@@ -818,7 +818,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 		
 		replyMSG.append("</table></center>");
 		
-		if (!CTF.is_inProgress())
+		if (!CTF.isInProgress())
 		{
 			if (CTF.checkStartJoinOk())
 			{
@@ -834,7 +834,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				replyMSG.append("<br>");
 			}
 		}
-		else if (Config.CTF_EVEN_TEAMS.equals("SHUFFLE") && !CTF.is_started())
+		else if (Config.CTF_EVEN_TEAMS.equals("SHUFFLE") && !CTF.isStarted())
 		{
 			replyMSG.append("<br1>");
 			replyMSG.append(CTF._playersShuffle.size() + " players participating. Waiting to shuffle in teams(done on teleport)!");

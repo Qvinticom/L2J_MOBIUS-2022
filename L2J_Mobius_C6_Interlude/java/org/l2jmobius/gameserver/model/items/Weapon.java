@@ -351,7 +351,7 @@ public class Weapon extends Item
 				effects.add(e);
 			}
 		}
-		if (effects.size() == 0)
+		if (effects.isEmpty())
 		{
 			return _emptyEffectSet;
 		}

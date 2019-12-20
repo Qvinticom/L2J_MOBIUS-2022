@@ -152,17 +152,17 @@ public class Party
 	
 	/**
 	 * get random member from party
-	 * @param ItemId
+	 * @param itemId
 	 * @param target
 	 * @return
 	 */
-	private PlayerInstance getCheckedRandomMember(int ItemId, Creature target)
+	private PlayerInstance getCheckedRandomMember(int itemId, Creature target)
 	{
 		final List<PlayerInstance> availableMembers = new ArrayList<>();
 		
 		for (PlayerInstance member : _members)
 		{
-			if (member.getInventory().validateCapacityByItemId(ItemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
+			if (member.getInventory().validateCapacityByItemId(itemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
 			{
 				availableMembers.add(member);
 			}
@@ -177,11 +177,11 @@ public class Party
 	
 	/**
 	 * get next item looter
-	 * @param ItemId
+	 * @param itemId
 	 * @param target
 	 * @return
 	 */
-	private PlayerInstance getCheckedNextLooter(int ItemId, Creature target)
+	private PlayerInstance getCheckedNextLooter(int itemId, Creature target)
 	{
 		for (int i = 0; i < _members.size(); i++)
 		{
@@ -194,7 +194,7 @@ public class Party
 			try
 			{
 				member = _members.get(_itemLastLoot);
-				if (member.getInventory().validateCapacityByItemId(ItemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
+				if (member.getInventory().validateCapacityByItemId(itemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
 				{
 					return member;
 				}
@@ -211,12 +211,12 @@ public class Party
 	/**
 	 * get next item looter
 	 * @param player
-	 * @param ItemId
+	 * @param itemId
 	 * @param spoil
 	 * @param target
 	 * @return
 	 */
-	private PlayerInstance getActualLooter(PlayerInstance player, int ItemId, boolean spoil, Creature target)
+	private PlayerInstance getActualLooter(PlayerInstance player, int itemId, boolean spoil, Creature target)
 	{
 		PlayerInstance looter = player;
 		
@@ -226,26 +226,26 @@ public class Party
 			{
 				if (!spoil)
 				{
-					looter = getCheckedRandomMember(ItemId, target);
+					looter = getCheckedRandomMember(itemId, target);
 				}
 				break;
 			}
 			case ITEM_RANDOM_SPOIL:
 			{
-				looter = getCheckedRandomMember(ItemId, target);
+				looter = getCheckedRandomMember(itemId, target);
 				break;
 			}
 			case ITEM_ORDER:
 			{
 				if (!spoil)
 				{
-					looter = getCheckedNextLooter(ItemId, target);
+					looter = getCheckedNextLooter(itemId, target);
 				}
 				break;
 			}
 			case ITEM_ORDER_SPOIL:
 			{
-				looter = getCheckedNextLooter(ItemId, target);
+				looter = getCheckedNextLooter(itemId, target);
 				break;
 			}
 		}
@@ -662,30 +662,27 @@ public class Party
 		// Get all the party members
 		final List<PlayerInstance> membersList = _members;
 		
-		// Check the number of party members that must be rewarded
-		// (The party member must be in range to receive its reward)
-		final List<PlayerInstance> ToReward = new ArrayList<>();
-		
+		// Check the number of party members that must be rewarded (The party member must be in range to receive its reward)
+		final List<PlayerInstance> rewarded = new ArrayList<>();
 		for (PlayerInstance member : membersList)
 		{
 			if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
 			{
 				continue;
 			}
-			ToReward.add(member);
+			rewarded.add(member);
 		}
 		
 		// Avoid null exceptions, if any
-		if (ToReward.isEmpty())
+		if (rewarded.isEmpty())
 		{
 			return;
 		}
 		
-		// Now we can actually distribute the adena reward
-		// (Total adena split by the number of party members that are in range and must be rewarded)
-		final int count = adena / ToReward.size();
+		// Now we can actually distribute the adena reward (Total adena split by the number of party members that are in range and must be rewarded)
+		final int count = adena / rewarded.size();
 		
-		for (PlayerInstance member : ToReward)
+		for (PlayerInstance member : rewarded)
 		{
 			member.addAdena("Party", count, player, true);
 		}

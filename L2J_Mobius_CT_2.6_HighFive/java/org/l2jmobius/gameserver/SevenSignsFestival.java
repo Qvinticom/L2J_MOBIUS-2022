@@ -1024,7 +1024,7 @@ public class SevenSignsFestival implements SpawnListener
 					psInsert.setInt(1, festivalDat.getInt("festivalId"));
 					psInsert.setString(2, festivalDat.getString("cabal"));
 					psInsert.setInt(3, festivalDat.getInt("cycle"));
-					psInsert.setLong(4, Long.valueOf(festivalDat.getString("date")));
+					psInsert.setLong(4, Long.parseLong(festivalDat.getString("date")));
 					psInsert.setInt(5, festivalDat.getInt("score"));
 					psInsert.setString(6, festivalDat.getString("members"));
 					psInsert.addBatch();

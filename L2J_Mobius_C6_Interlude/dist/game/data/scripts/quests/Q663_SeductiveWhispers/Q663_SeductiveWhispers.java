@@ -43,7 +43,7 @@ public class Q663_SeductiveWhispers extends Quest
 	private static final int ENCHANT_WEAPON_C = 951;
 	private static final int ENCHANT_WEAPON_D = 955;
 	
-	private static final int RECIPES[] =
+	private static final int[] RECIPES =
 	{
 		2353,
 		4963,
@@ -57,7 +57,7 @@ public class Q663_SeductiveWhispers extends Quest
 		5007
 	};
 	
-	private static final int BLADES[] =
+	private static final int[] BLADES =
 	{
 		2115,
 		4104,

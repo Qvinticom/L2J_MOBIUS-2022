@@ -281,22 +281,16 @@ public class Q125_TheNameOfEvil_1 extends Quest
 		final int npcId = npc.getNpcId();
 		if (Util.contains(ORNITHOMIMUS, npcId))
 		{
-			if (st.dropItems(ORNITHOMIMUS_CLAW, 1, 2, 50000))
+			if (st.dropItems(ORNITHOMIMUS_CLAW, 1, 2, 50000) && (st.getQuestItemsCount(DEINONYCHUS_BONE) == 2))
 			{
-				if (st.getQuestItemsCount(DEINONYCHUS_BONE) == 2)
-				{
-					st.set("cond", "4");
-				}
+				st.set("cond", "4");
 			}
 		}
 		else if (Util.contains(DEINONYCHUS, npcId))
 		{
-			if (st.dropItems(DEINONYCHUS_BONE, 1, 2, 50000))
+			if (st.dropItems(DEINONYCHUS_BONE, 1, 2, 50000) && (st.getQuestItemsCount(ORNITHOMIMUS_CLAW) == 2))
 			{
-				if (st.getQuestItemsCount(ORNITHOMIMUS_CLAW) == 2)
-				{
-					st.set("cond", "4");
-				}
+				st.set("cond", "4");
 			}
 		}
 		return null;

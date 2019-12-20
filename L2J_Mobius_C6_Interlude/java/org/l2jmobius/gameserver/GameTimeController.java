@@ -203,7 +203,7 @@ public class GameTimeController
 				{
 					sleep(sleepTime); // hope other threads will have much more cpu time available now
 				}
-				catch (InterruptedException ie)
+				catch (InterruptedException e)
 				{
 					// nothing
 				}

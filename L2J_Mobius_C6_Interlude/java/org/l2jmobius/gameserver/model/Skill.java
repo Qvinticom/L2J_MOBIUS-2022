@@ -671,20 +671,14 @@ public abstract class Skill
 	
 	public abstract void useSkill(Creature caster, WorldObject[] targets);
 	
-	/**
-	 * @return the _singleEffect
-	 */
-	public boolean is_singleEffect()
+	public boolean isSingleEffect()
 	{
 		return _singleEffect;
 	}
 	
-	/**
-	 * @return the _isDebuff
-	 */
-	public boolean is_Debuff()
+	public boolean isDebuff()
 	{
-		boolean type_debuff = false;
+		boolean typeDebuff = false;
 		
 		switch (_skillType)
 		{
@@ -701,11 +695,11 @@ public abstract class Skill
 			case MUTE:
 			case WEAKNESS:
 			{
-				type_debuff = true;
+				typeDebuff = true;
 			}
 		}
 		
-		return _isDebuff || type_debuff;
+		return _isDebuff || typeDebuff;
 	}
 	
 	/**
@@ -1063,12 +1057,6 @@ public abstract class Skill
 		return _reuseDelay;
 	}
 	
-	@Deprecated
-	public int getSkillTime()
-	{
-		return _hitTime;
-	}
-	
 	public int getHitTime()
 	{
 		return _hitTime;
@@ -1334,7 +1322,7 @@ public abstract class Skill
 	
 	public boolean getWeaponDependancy(Creature creature)
 	{
-		if (getWeaponDependancy(creature, false))
+		if (calcWeaponDependancy(creature))
 		{
 			return true;
 		}
@@ -1345,7 +1333,7 @@ public abstract class Skill
 		return false;
 	}
 	
-	public boolean getWeaponDependancy(Creature creature, boolean chance)
+	public boolean calcWeaponDependancy(Creature creature)
 	{
 		final int weaponsAllowed = _weaponsAllowed;
 		// check to see if skill has a weapon dependency.
@@ -1450,14 +1438,11 @@ public abstract class Skill
 	 */
 	public WorldObject[] getTargetList(Creature creature, boolean onlyFirst, Creature target)
 	{
-		if (creature instanceof PlayerInstance)
-		{ // to avoid attacks during oly start period
-			
-			if (_isOffensive && (((PlayerInstance) creature).isInOlympiadMode() && !((PlayerInstance) creature).isOlympiadStart()))
-			{
-				creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
-				return null;
-			}
+		// to avoid attacks during oly start period
+		if ((creature instanceof PlayerInstance) && _isOffensive && (((PlayerInstance) creature).isInOlympiadMode() && !((PlayerInstance) creature).isOlympiadStart()))
+		{
+			creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+			return null;
 		}
 		
 		final List<Creature> targetList = new ArrayList<>();
@@ -1586,15 +1571,12 @@ public abstract class Skill
 			}
 			case TARGET_HOLY:
 			{
-				if (creature instanceof PlayerInstance)
+				if ((creature instanceof PlayerInstance) && (creature.getTarget() instanceof ArtefactInstance))
 				{
-					if (creature.getTarget() instanceof ArtefactInstance)
+					return new Creature[]
 					{
-						return new Creature[]
-						{
-							(ArtefactInstance) creature.getTarget()
-						};
-					}
+						(ArtefactInstance) creature.getTarget()
+					};
 				}
 				return null;
 			}
@@ -1655,9 +1637,9 @@ public abstract class Skill
 					src = ((Summon) creature).getOwner();
 				}
 				// Go through the Creature _knownList
-				for (WorldObject obj : creature.getKnownList().getKnownCharactersInRadius(radius))
+				for (Creature nearby : creature.getKnownList().getKnownCharactersInRadius(radius))
 				{
-					if ((obj == null) || (!(creature instanceof Playable) && !(obj instanceof Playable)))
+					if ((nearby == null) || (!(creature instanceof Playable) && !(nearby instanceof Playable)))
 					{
 						continue;
 					}
@@ -1666,47 +1648,47 @@ public abstract class Skill
 					{
 						continue;
 					}
-					if ((src != null) && ((obj instanceof Attackable) || (obj instanceof Playable)))
+					if ((src != null) && ((nearby instanceof Attackable) || (nearby instanceof Playable)))
 					{
 						// Don't add this target if this is a Pc->Pc pvp casting and pvp condition not met
-						if ((obj == creature) || (obj == src))
+						if ((nearby == creature) || (nearby == src))
 						{
 							continue;
 						}
-						if (!GeoEngine.getInstance().canSeeTarget(creature, obj))
+						if (!GeoEngine.getInstance().canSeeTarget(creature, nearby))
 						{
 							continue;
 						}
 						// check if both attacker and target are PlayerInstances and if they are in same party
-						if (obj instanceof PlayerInstance)
+						if (nearby instanceof PlayerInstance)
 						{
-							if (((PlayerInstance) obj).isDead())
+							if (((PlayerInstance) nearby).isDead())
 							{
 								continue;
 							}
-							if (((PlayerInstance) obj).getAppearance().isInvisible())
+							if (((PlayerInstance) nearby).getAppearance().isInvisible())
 							{
 								continue;
 							}
-							if (!src.checkPvpSkill(obj, this))
+							if (!src.checkPvpSkill(nearby, this))
 							{
 								continue;
 							}
-							if (!srcInArena && (!((Creature) obj).isInsideZone(ZoneId.PVP) || ((Creature) obj).isInsideZone(ZoneId.SIEGE)))
+							if (!srcInArena && (!nearby.isInsideZone(ZoneId.PVP) || nearby.isInsideZone(ZoneId.SIEGE)))
 							{
-								if (checkPartyClan(src, obj))
+								if (checkPartyClan(src, nearby))
 								{
 									continue;
 								}
-								if ((src.getAllyId() != 0) && (src.getAllyId() == ((PlayerInstance) obj).getAllyId()))
+								if ((src.getAllyId() != 0) && (src.getAllyId() == ((PlayerInstance) nearby).getAllyId()))
 								{
 									continue;
 								}
 							}
 						}
-						if (obj instanceof Summon)
+						if (nearby instanceof Summon)
 						{
-							PlayerInstance trg = ((Summon) obj).getOwner();
+							PlayerInstance trg = ((Summon) nearby).getOwner();
 							if (trg == null)
 							{
 								continue;
@@ -1723,9 +1705,9 @@ public abstract class Skill
 							{
 								continue;
 							}
-							if (!srcInArena && (!((Creature) obj).isInsideZone(ZoneId.PVP) || ((Creature) obj).isInsideZone(ZoneId.SIEGE)))
+							if (!srcInArena && (!nearby.isInsideZone(ZoneId.PVP) || nearby.isInsideZone(ZoneId.SIEGE)))
 							{
-								if (checkPartyClan(src, obj))
+								if (checkPartyClan(src, nearby))
 								{
 									continue;
 								}
@@ -1736,19 +1718,19 @@ public abstract class Skill
 							}
 						}
 					}
-					if (!Util.checkIfInRange(radius, creature, obj, true))
+					if (!Util.checkIfInRange(radius, creature, nearby, true))
 					{
 						continue;
 					}
 					if (!onlyFirst)
 					{
-						targetList.add((Creature) obj);
+						targetList.add(nearby);
 					}
 					else
 					{
 						return new Creature[]
 						{
-							(Creature) obj
+							nearby
 						};
 					}
 				}
@@ -1930,7 +1912,7 @@ public abstract class Skill
 						targetList.add((Creature) obj);
 					}
 				}
-				if (targetList.size() == 0)
+				if (targetList.isEmpty())
 				{
 					return null;
 				}
@@ -2010,7 +1992,7 @@ public abstract class Skill
 					{
 						targetList.add((Creature) obj);
 					}
-					if (targetList.size() == 0)
+					if (targetList.isEmpty())
 					{
 						creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_CANT_FOUND));
 						return null;
@@ -2064,7 +2046,7 @@ public abstract class Skill
 							continue;
 						}
 						// check if allow interference is allowed if player is not on event but target is on event
-						if (((TvT.is_started() && !Config.TVT_ALLOW_INTERFERENCE) || (CTF.is_started() && !Config.CTF_ALLOW_INTERFERENCE) || (DM.is_started() && !Config.DM_ALLOW_INTERFERENCE))/* && !player.isGM() */)
+						if (((TvT.isStarted() && !Config.TVT_ALLOW_INTERFERENCE) || (CTF.isStarted() && !Config.CTF_ALLOW_INTERFERENCE) || (DM.is_started() && !Config.DM_ALLOW_INTERFERENCE))/* && !player.isGM() */)
 						{
 							if ((partyMember._inEventTvT && !player._inEventTvT) || (!partyMember._inEventTvT && player._inEventTvT))
 							{
@@ -2093,12 +2075,9 @@ public abstract class Skill
 							final PlayerInstance trg = partyMember;
 							// if src is in event and trg not OR viceversa:
 							// to be fixed for mixed events status (in TvT joining phase, someone can attack a partecipating CTF player with area attack)
-							if (src != null)
+							if ((src != null) && (((src._inEvent || src._inEventCTF || src._inEventDM || src._inEventTvT || src._inEventVIP) && (!trg._inEvent && !trg._inEventCTF && !trg._inEventDM && !trg._inEventTvT && !trg._inEventVIP)) || ((trg._inEvent || trg._inEventCTF || trg._inEventDM || trg._inEventTvT || trg._inEventVIP) && (!src._inEvent && !src._inEventCTF && !src._inEventDM && !src._inEventTvT && !src._inEventVIP))))
 							{
-								if (((src._inEvent || src._inEventCTF || src._inEventDM || src._inEventTvT || src._inEventVIP) && (!trg._inEvent && !trg._inEventCTF && !trg._inEventDM && !trg._inEventTvT && !trg._inEventVIP)) || ((trg._inEvent || trg._inEventCTF || trg._inEventDM || trg._inEventTvT || trg._inEventVIP) && (!src._inEvent && !src._inEventCTF && !src._inEventDM && !src._inEventTvT && !src._inEventVIP)))
-								{
-									continue;
-								}
+								continue;
 							}
 							targetList.add(partyMember);
 							if ((partyMember.getPet() != null) && !partyMember.getPet().isDead())
@@ -2180,7 +2159,7 @@ public abstract class Skill
 						// Get Clan Members
 						for (WorldObject newTarget : creature.getKnownList().getKnownObjects().values())
 						{
-							if ((newTarget == null) || !(newTarget instanceof PlayerInstance))
+							if (!(newTarget instanceof PlayerInstance))
 							{
 								continue;
 							}
@@ -2533,12 +2512,9 @@ public abstract class Skill
 								{
 									continue;
 								}
-								if ((src.getClan() != null) && (trg.getClan() != null))
+								if ((src.getClan() != null) && (trg.getClan() != null) && (src.getClan().getClanId() == trg.getClan().getClanId()))
 								{
-									if (src.getClan().getClanId() == trg.getClan().getClanId())
-									{
-										continue;
-									}
+									continue;
 								}
 								if (!src.checkPvpSkill(obj, this))
 								{
@@ -2563,12 +2539,9 @@ public abstract class Skill
 								{
 									continue;
 								}
-								if ((src.getClan() != null) && (trg.getClan() != null))
+								if ((src.getClan() != null) && (trg.getClan() != null) && (src.getClan().getClanId() == trg.getClan().getClanId()))
 								{
-									if (src.getClan().getClanId() == trg.getClan().getClanId())
-									{
-										continue;
-									}
+									continue;
 								}
 								if (!src.checkPvpSkill(trg, this))
 								{
@@ -2583,17 +2556,14 @@ public abstract class Skill
 						}
 						// if src is in event and trg not OR viceversa:
 						// to be fixed for mixed events status (in TvT joining phase, someone can attack a partecipating CTF player with area attack)
-						if ((src != null) && (trg != null))
+						if ((src != null) && (trg != null) && (((src._inEvent || src._inEventCTF || src._inEventDM || src._inEventTvT || src._inEventVIP) && (!trg._inEvent && !trg._inEventCTF && !trg._inEventDM && !trg._inEventTvT && !trg._inEventVIP)) || ((trg._inEvent || trg._inEventCTF || trg._inEventDM || trg._inEventTvT || trg._inEventVIP) && (!src._inEvent && !src._inEventCTF && !src._inEventDM && !src._inEventTvT && !src._inEventVIP))))
 						{
-							if (((src._inEvent || src._inEventCTF || src._inEventDM || src._inEventTvT || src._inEventVIP) && (!trg._inEvent && !trg._inEventCTF && !trg._inEventDM && !trg._inEventTvT && !trg._inEventVIP)) || ((trg._inEvent || trg._inEventCTF || trg._inEventDM || trg._inEventTvT || trg._inEventVIP) && (!src._inEvent && !src._inEventCTF && !src._inEventDM && !src._inEventTvT && !src._inEventVIP)))
-							{
-								continue;
-							}
+							continue;
 						}
 						targetList.add((Creature) obj);
 					}
 				}
-				if (targetList.size() == 0)
+				if (targetList.isEmpty())
 				{
 					return null;
 				}
@@ -2720,7 +2690,7 @@ public abstract class Skill
 						}
 					}
 				}
-				if (targetList.size() == 0)
+				if (targetList.isEmpty())
 				{
 					return null;
 				}
@@ -2728,7 +2698,7 @@ public abstract class Skill
 			}
 			case TARGET_ENEMY_SUMMON:
 			{
-				if ((target != null) && (target instanceof Summon))
+				if (target instanceof Summon)
 				{
 					Summon targetSummon = (Summon) target;
 					if (((creature instanceof PlayerInstance) && (creature.getPet() != targetSummon) && !targetSummon.isDead() && ((targetSummon.getOwner().getPvpFlag() != 0) || (targetSummon.getOwner().getKarma() > 0) || targetSummon.getOwner().isInDuel())) || (targetSummon.getOwner().isInsideZone(ZoneId.PVP) && ((PlayerInstance) creature).isInsideZone(ZoneId.PVP)))
@@ -2870,7 +2840,7 @@ public abstract class Skill
 				funcs.add(f);
 			}
 		}
-		if (funcs.size() == 0)
+		if (funcs.isEmpty())
 		{
 			return _emptyFunctionSet;
 		}
@@ -2944,7 +2914,7 @@ public abstract class Skill
 			}
 		}
 		
-		if (effects.size() == 0)
+		if (effects.isEmpty())
 		{
 			return _emptyEffectSet;
 		}
@@ -3008,7 +2978,7 @@ public abstract class Skill
 				}
 			}
 		}
-		if (effects.size() == 0)
+		if (effects.isEmpty())
 		{
 			return _emptyEffectSet;
 		}
@@ -3197,7 +3167,7 @@ public abstract class Skill
 	/**
 	 * @return the _advancedFlag
 	 */
-	public boolean is_advancedFlag()
+	public boolean isAdvancedFlag()
 	{
 		return _advancedFlag;
 	}
@@ -3205,7 +3175,7 @@ public abstract class Skill
 	/**
 	 * @return the _advancedMultiplier
 	 */
-	public int get_advancedMultiplier()
+	public int getAdvancedMultiplier()
 	{
 		return _advancedMultiplier;
 	}
@@ -3219,10 +3189,10 @@ public abstract class Skill
 	}
 	
 	/**
-	 * @param _effectTemplates the _effectTemplates to set
+	 * @param effectTemplates the _effectTemplates to set
 	 */
-	public void setEffectTemplates(EffectTemplate[] _effectTemplates)
+	public void setEffectTemplates(EffectTemplate[] effectTemplates)
 	{
-		this._effectTemplates = _effectTemplates;
+		_effectTemplates = effectTemplates;
 	}
 }

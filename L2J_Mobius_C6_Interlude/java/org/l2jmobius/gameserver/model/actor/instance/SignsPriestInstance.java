@@ -146,13 +146,10 @@ public class SignsPriestInstance extends FolkInstance
 					{
 						if (Config.ALT_GAME_REQUIRE_CASTLE_DAWN)
 						{
-							if (getPlayerAllyHasCastle(player))
+							if (getPlayerAllyHasCastle(player) && (cabal == SevenSigns.CABAL_DUSK))
 							{
-								if (cabal == SevenSigns.CABAL_DUSK)
-								{
-									player.sendMessage("You must not be a member of a castle-owning clan to join the Revolutionaries of Dusk.");
-									return;
-								}
+								player.sendMessage("You must not be a member of a castle-owning clan to join the Revolutionaries of Dusk.");
+								return;
 							}
 							
 							if (!getPlayerAllyHasCastle(player))
@@ -293,26 +290,17 @@ public class SignsPriestInstance extends FolkInstance
 							break;
 						}
 					}
-					if (redContribCount > 0)
+					if ((redContribCount > 0) && player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_RED_ID, redContribCount, this, false))
 					{
-						if (player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_RED_ID, redContribCount, this, false))
-						{
-							stonesFound = true;
-						}
+						stonesFound = true;
 					}
-					if (greenContribCount > 0)
+					if ((greenContribCount > 0) && player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_GREEN_ID, greenContribCount, this, false))
 					{
-						if (player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_GREEN_ID, greenContribCount, this, false))
-						{
-							stonesFound = true;
-						}
+						stonesFound = true;
 					}
-					if (blueContribCount > 0)
+					if ((blueContribCount > 0) && player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_BLUE_ID, blueContribCount, this, false))
 					{
-						if (player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_BLUE_ID, blueContribCount, this, false))
-						{
-							stonesFound = true;
-						}
+						stonesFound = true;
 					}
 					
 					if (!stonesFound)
@@ -400,12 +388,9 @@ public class SignsPriestInstance extends FolkInstance
 						final int y = Integer.parseInt(st.nextToken());
 						final int z = Integer.parseInt(st.nextToken());
 						final int ancientAdenaCost = Integer.parseInt(st.nextToken());
-						if (ancientAdenaCost > 0)
+						if ((ancientAdenaCost > 0) && !player.reduceAncientAdena("SevenSigns", ancientAdenaCost, this, true))
 						{
-							if (!player.reduceAncientAdena("SevenSigns", ancientAdenaCost, this, true))
-							{
-								break;
-							}
+							break;
 						}
 						player.teleToLocation(x, y, z, true);
 					}
@@ -460,11 +445,11 @@ public class SignsPriestInstance extends FolkInstance
 					
 					if (content != null)
 					{
-						content = content.replaceAll("%stoneColor%", stoneColor);
-						content = content.replaceAll("%stoneValue%", String.valueOf(stoneValue));
-						content = content.replaceAll("%stoneCount%", String.valueOf(stoneCount));
-						content = content.replaceAll("%stoneItemId%", String.valueOf(stoneId));
-						content = content.replaceAll("%objectId%", String.valueOf(getObjectId()));
+						content = content.replace("%stoneColor%", stoneColor);
+						content = content.replace("%stoneValue%", String.valueOf(stoneValue));
+						content = content.replace("%stoneCount%", String.valueOf(stoneCount));
+						content = content.replace("%stoneItemId%", String.valueOf(stoneId));
+						content = content.replace("%objectId%", String.valueOf(getObjectId()));
 						
 						NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 						html.setHtml(content);

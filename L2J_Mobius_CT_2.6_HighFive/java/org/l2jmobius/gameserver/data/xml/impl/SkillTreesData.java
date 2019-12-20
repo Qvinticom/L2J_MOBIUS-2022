@@ -214,7 +214,7 @@ public class SkillTreesData implements IXmlReader
 										}
 										case "residenceId":
 										{
-											skillLearn.addResidenceId(Integer.valueOf(b.getTextContent()));
+											skillLearn.addResidenceId(Integer.parseInt(b.getTextContent()));
 											break;
 										}
 										case "socialClass":

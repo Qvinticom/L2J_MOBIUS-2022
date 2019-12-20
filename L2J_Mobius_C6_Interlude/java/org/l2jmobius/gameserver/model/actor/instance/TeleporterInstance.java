@@ -275,8 +275,8 @@ public class TeleporterInstance extends FolkInstance
 			// Lilith and Anakim have BossZone, so players must be allowed to enter
 			else if (list.getTeleId() == 450)
 			{
-				final BossZone _zone = GrandBossManager.getInstance().getZone(list.getX(), list.getY(), list.getZ());
-				_zone.allowPlayerEntry(player, 300);
+				final BossZone zone = GrandBossManager.getInstance().getZone(list.getX(), list.getY(), list.getZ());
+				zone.allowPlayerEntry(player, 300);
 				player.teleToLocation(list.getX(), list.getY(), list.getZ(), true);
 			}
 			else if (!list.getIsForNoble() && (Config.ALT_GAME_FREE_TELEPORT || player.reduceAdena("Teleport", list.getPrice(), this, true)))

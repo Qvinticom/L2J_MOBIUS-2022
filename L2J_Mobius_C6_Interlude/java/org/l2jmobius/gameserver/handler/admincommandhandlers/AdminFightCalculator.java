@@ -246,86 +246,86 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		
 		for (int i = 0; i < 10000; i++)
 		{
-			final boolean _miss1 = Formulas.calcHitMiss(npc1, npc2);
-			if (_miss1)
+			final boolean calcMiss1 = Formulas.calcHitMiss(npc1, npc2);
+			if (calcMiss1)
 			{
 				miss1++;
 			}
 			
-			final boolean _shld1 = Formulas.calcShldUse(npc1, npc2);
-			if (_shld1)
+			final boolean calcShld1 = Formulas.calcShldUse(npc1, npc2);
+			if (calcShld1)
 			{
 				shld1++;
 			}
 			
-			final boolean _crit1 = Formulas.calcCrit(npc1.getCriticalHit(npc2, null));
-			if (_crit1)
+			final boolean calcCrit1 = Formulas.calcCrit(npc1.getCriticalHit(npc2, null));
+			if (calcCrit1)
 			{
 				crit1++;
 			}
 			
-			final boolean _crit4 = Formulas.calcCrit(npc1.getMCriticalHit(npc2, null));
-			if (_crit4)
+			final boolean calcCrit4 = Formulas.calcCrit(npc1.getMCriticalHit(npc2, null));
+			if (calcCrit4)
 			{
 				crit4++;
 			}
 			
-			double _patk1 = npc1.getPAtk(npc2);
-			_patk1 += Rnd.nextDouble() * npc1.getRandomDamage(npc2);
-			patk1 += _patk1;
+			double npcPatk1 = npc1.getPAtk(npc2);
+			npcPatk1 += Rnd.nextDouble() * npc1.getRandomDamage(npc2);
+			patk1 += npcPatk1;
 			
-			final double _pdef1 = npc1.getPDef(npc2);
-			pdef1 += _pdef1;
+			final double npcPdef1 = npc1.getPDef(npc2);
+			pdef1 += npcPdef1;
 			
-			if (!_miss1)
+			if (!calcMiss1)
 			{
 				npc1.setAttackingBodypart();
 				
-				final double _dmg1 = Formulas.calcPhysDam(npc1, npc2, null, _shld1, _crit1, false, false);
-				dmg1 += _dmg1;
+				final double calcDmg1 = Formulas.calcPhysDam(npc1, npc2, null, calcShld1, calcCrit1, false, false);
+				dmg1 += calcDmg1;
 				npc1.abortAttack();
 			}
 		}
 		
 		for (int i = 0; i < 10000; i++)
 		{
-			final boolean _miss2 = Formulas.calcHitMiss(npc2, npc1);
-			if (_miss2)
+			final boolean calcMiss2 = Formulas.calcHitMiss(npc2, npc1);
+			if (calcMiss2)
 			{
 				miss2++;
 			}
 			
-			final boolean _shld2 = Formulas.calcShldUse(npc2, npc1);
-			if (_shld2)
+			final boolean calcShld2 = Formulas.calcShldUse(npc2, npc1);
+			if (calcShld2)
 			{
 				shld2++;
 			}
 			
-			final boolean _crit2 = Formulas.calcCrit(npc2.getCriticalHit(npc1, null));
-			if (_crit2)
+			final boolean calcCrit2 = Formulas.calcCrit(npc2.getCriticalHit(npc1, null));
+			if (calcCrit2)
 			{
 				crit2++;
 			}
 			
-			final boolean _crit3 = Formulas.calcCrit(npc2.getMCriticalHit(npc1, null));
-			if (_crit3)
+			final boolean calcCrit3 = Formulas.calcCrit(npc2.getMCriticalHit(npc1, null));
+			if (calcCrit3)
 			{
 				crit3++;
 			}
 			
-			double _patk2 = npc2.getPAtk(npc1);
-			_patk2 += Rnd.nextDouble() * npc2.getRandomDamage(npc1);
-			patk2 += _patk2;
+			double npcPatk2 = npc2.getPAtk(npc1);
+			npcPatk2 += Rnd.nextDouble() * npc2.getRandomDamage(npc1);
+			patk2 += npcPatk2;
 			
-			final double _pdef2 = npc2.getPDef(npc1);
-			pdef2 += _pdef2;
+			final double npcPdef2 = npc2.getPDef(npc1);
+			pdef2 += npcPdef2;
 			
-			if (!_miss2)
+			if (!calcMiss2)
 			{
 				npc2.setAttackingBodypart();
 				
-				final double _dmg2 = Formulas.calcPhysDam(npc2, npc1, null, _shld2, _crit2, false, false);
-				dmg2 += _dmg2;
+				final double calcDmg2 = Formulas.calcPhysDam(npc2, npc1, null, calcShld2, calcCrit2, false, false);
+				dmg2 += calcDmg2;
 				npc2.abortAttack();
 			}
 		}

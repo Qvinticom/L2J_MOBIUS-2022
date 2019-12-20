@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
  */
 public class Broadcast
 {
-	private static Logger LOGGER = Logger.getLogger(Broadcast.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Broadcast.class.getName());
 	
 	/**
 	 * Send a packet to all PlayerInstance in the _KnownPlayers of the Creature that have the Character targeted.<BR>

@@ -120,9 +120,8 @@ public class ItemInstance extends WorldObject
 	 * Constructor of the ItemInstance from the objectId and the itemId.
 	 * @param objectId : int designating the ID of the object in the world
 	 * @param itemId : int designating the ID of the item
-	 * @throws IllegalArgumentException the illegal argument exception
 	 */
-	public ItemInstance(int objectId, int itemId) throws IllegalArgumentException
+	public ItemInstance(int objectId, int itemId)
 	{
 		this(objectId, ItemTable.getInstance().getTemplate(itemId));
 	}
@@ -131,9 +130,8 @@ public class ItemInstance extends WorldObject
 	 * Constructor of the ItemInstance from the objetId and the description of the item given by the Item.
 	 * @param objectId : int designating the ID of the object in the world
 	 * @param item : Item containing informations of the item
-	 * @throws IllegalArgumentException the illegal argument exception
 	 */
-	public ItemInstance(int objectId, Item item) throws IllegalArgumentException
+	public ItemInstance(int objectId, Item item)
 	{
 		super(objectId);
 		
@@ -154,27 +152,27 @@ public class ItemInstance extends WorldObject
 	/**
 	 * Sets the ownerID of the item.
 	 * @param process : String Identifier of process triggering this action
-	 * @param owner_id : int designating the ID of the owner
+	 * @param ownerId : int designating the ID of the owner
 	 * @param creator : PlayerInstance Player requesting the item creation
 	 * @param reference : WorldObject Object referencing current action like NPC selling item or previous item in transformation
 	 */
-	public void setOwnerId(String process, int owner_id, PlayerInstance creator, WorldObject reference)
+	public void setOwnerId(String process, int ownerId, PlayerInstance creator, WorldObject reference)
 	{
-		setOwnerId(owner_id);
+		setOwnerId(ownerId);
 	}
 	
 	/**
 	 * Sets the ownerID of the item.
-	 * @param owner_id : int designating the ID of the owner
+	 * @param ownerId : int designating the ID of the owner
 	 */
-	public void setOwnerId(int owner_id)
+	public void setOwnerId(int ownerId)
 	{
-		if (owner_id == _ownerId)
+		if (ownerId == _ownerId)
 		{
 			return;
 		}
 		
-		_ownerId = owner_id;
+		_ownerId = ownerId;
 		_storedInDb = false;
 	}
 	
@@ -201,16 +199,16 @@ public class ItemInstance extends WorldObject
 	 * <BR>
 	 * <U><I>Remark :</I></U> If loc and loc_data different from database, say datas not up-to-date
 	 * @param loc : ItemLocation (enumeration)
-	 * @param loc_data : int designating the slot where the item is stored or the village for freights
+	 * @param locData : int designating the slot where the item is stored or the village for freights
 	 */
-	public void setLocation(ItemLocation loc, int loc_data)
+	public void setLocation(ItemLocation loc, int locData)
 	{
-		if ((loc == _loc) && (loc_data == _locData))
+		if ((loc == _loc) && (locData == _locData))
 		{
 			return;
 		}
 		_loc = loc;
-		_locData = loc_data;
+		_locData = locData;
 		_storedInDb = false;
 	}
 	
@@ -426,11 +424,7 @@ public class ItemInstance extends WorldObject
 	 */
 	public boolean isCupidBow()
 	{
-		if ((_itemId == 9140) || (_itemId == 9141))
-		{
-			return true;
-		}
-		return false;
+		return (_itemId == 9140) || (_itemId == 9141);
 	}
 	
 	/**
@@ -548,7 +542,7 @@ public class ItemInstance extends WorldObject
 	 */
 	public boolean isDropable()
 	{
-		return isAugmented() ? false : _item.isDropable();
+		return !isAugmented() && _item.isDropable();
 	}
 	
 	/**
@@ -566,7 +560,7 @@ public class ItemInstance extends WorldObject
 	 */
 	public boolean isTradeable()
 	{
-		return isAugmented() ? false : _item.isTradeable();
+		return !isAugmented() && _item.isTradeable();
 	}
 	
 	/**
@@ -670,7 +664,7 @@ public class ItemInstance extends WorldObject
 	 */
 	public boolean isAugmented()
 	{
-		return _augmentation == null ? false : true;
+		return _augmentation != null;
 	}
 	
 	/**
@@ -1085,11 +1079,9 @@ public class ItemInstance extends WorldObject
 				if (inst._mana == 0)
 				{
 					inst.removeFromDb();
-					
 					rs.close();
 					statement.close();
 					con.close();
-					
 					return null;
 				}
 				else if ((inst._mana > 0) && (inst.getItemLocation() == ItemLocation.PAPERDOLL))
@@ -1100,11 +1092,9 @@ public class ItemInstance extends WorldObject
 			else
 			{
 				LOGGER.warning("Item object_id=" + objectId + " not found");
-				
 				rs.close();
 				statement.close();
 				con.close();
-				
 				return null;
 			}
 			
@@ -1298,7 +1288,6 @@ public class ItemInstance extends WorldObject
 		catch (Exception e)
 		{
 			LOGGER.warning("Could not delete item " + getObjectId() + " in DB: " + e);
-			e.printStackTrace();
 		}
 	}
 	
@@ -1343,11 +1332,11 @@ public class ItemInstance extends WorldObject
 	
 	/**
 	 * Sets the protected.
-	 * @param is_protected the new protected
+	 * @param isProtected the new protected
 	 */
-	public void setProtected(boolean is_protected)
+	public void setProtected(boolean isProtected)
 	{
-		_protected = is_protected;
+		_protected = isProtected;
 	}
 	
 	/**
@@ -1388,11 +1377,11 @@ public class ItemInstance extends WorldObject
 	
 	/**
 	 * Sets the inits the count.
-	 * @param InitCount the new inits the count
+	 * @param initCount the new inits the count
 	 */
-	public void setInitCount(int InitCount)
+	public void setInitCount(int initCount)
 	{
-		_initCount = InitCount;
+		_initCount = initCount;
 	}
 	
 	/**
@@ -1464,12 +1453,7 @@ public class ItemInstance extends WorldObject
 	 */
 	public boolean isVarkaKetraAllyQuestItem()
 	{
-		if (((_itemId >= 7211) && (_itemId <= 7215)) || ((_itemId >= 7221) && (_itemId <= 7225)))
-		{
-			return true;
-		}
-		
-		return false;
+		return ((_itemId >= 7211) && (_itemId <= 7215)) || ((_itemId >= 7221) && (_itemId <= 7225));
 	}
 	
 	public boolean isOlyRestrictedItem()
@@ -1484,11 +1468,7 @@ public class ItemInstance extends WorldObject
 	
 	public boolean checkOlympCondition()
 	{
-		if (isHeroItem() || isOlyRestrictedItem() || _wear || (!Config.ALT_OLY_AUGMENT_ALLOW && isAugmented()))
-		{
-			return false;
-		}
-		return true;
+		return !isHeroItem() && !isOlyRestrictedItem() && !_wear && (Config.ALT_OLY_AUGMENT_ALLOW || !isAugmented());
 	}
 	
 	/**

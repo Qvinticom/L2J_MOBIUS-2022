@@ -71,31 +71,31 @@ public class SkillDrain extends Skill
 			final boolean mcrit = Formulas.calcMCrit(creature.getMCriticalHit(target, this));
 			final int damage = (int) Formulas.calcMagicDam(creature, target, this, sps, bss, mcrit);
 			
-			int _drain = 0;
-			final int _cp = (int) target.getStatus().getCurrentCp();
-			final int _hp = (int) target.getStatus().getCurrentHp();
+			int drain = 0;
+			final int currentCp = (int) target.getStatus().getCurrentCp();
+			final int currentHp = (int) target.getStatus().getCurrentHp();
 			
-			if (_cp > 0)
+			if (currentCp > 0)
 			{
-				if (damage < _cp)
+				if (damage < currentCp)
 				{
-					_drain = 0;
+					drain = 0;
 				}
 				else
 				{
-					_drain = damage - _cp;
+					drain = damage - currentCp;
 				}
 			}
-			else if (damage > _hp)
+			else if (damage > currentHp)
 			{
-				_drain = _hp;
+				drain = currentHp;
 			}
 			else
 			{
-				_drain = damage;
+				drain = damage;
 			}
 			
-			final double hpAdd = _absorbAbs + (_absorbPart * _drain);
+			final double hpAdd = _absorbAbs + (_absorbPart * drain);
 			final double hp = (creature.getCurrentHp() + hpAdd) > creature.getMaxHp() ? creature.getMaxHp() : creature.getCurrentHp() + hpAdd;
 			
 			creature.setCurrentHp(hp);

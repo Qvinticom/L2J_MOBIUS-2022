@@ -94,19 +94,19 @@ public class AdminBuffs implements IAdminCommandHandler
 					String playername = st.nextToken();
 					if (st.hasMoreTokens())
 					{
-						int SkillId = 0;
+						int skillId = 0;
 						try
 						{
-							SkillId = Integer.parseInt(st.nextToken());
+							skillId = Integer.parseInt(st.nextToken());
 						}
 						catch (NumberFormatException e)
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Usage: //stopbuff <playername> [skillId] (skillId must be a number)");
 							return false;
 						}
-						if (SkillId > 0)
+						if (skillId > 0)
 						{
-							removeBuff(activeChar, playername, SkillId);
+							removeBuff(activeChar, playername, skillId);
 						}
 						else
 						{

@@ -123,7 +123,6 @@ public class BeastSoulShot implements IItemHandler
 				return;
 			}
 			
-			shotCount = 0;
 			weaponInst.setChargedSoulshot(ItemInstance.CHARGED_SOULSHOT);
 		}
 		else
@@ -137,23 +136,20 @@ public class BeastSoulShot implements IItemHandler
 		}
 		
 		// If the player doesn't have enough beast soulshot remaining, remove any auto soulshot task.
-		if (!Config.DONT_DESTROY_SS)
+		if (!Config.DONT_DESTROY_SS && !activeOwner.destroyItemWithoutTrace("Consume", item.getObjectId(), shotConsumption, null, false))
 		{
-			if (!activeOwner.destroyItemWithoutTrace("Consume", item.getObjectId(), shotConsumption, null, false))
+			if (activeOwner.getAutoSoulShot().containsKey(itemId))
 			{
-				if (activeOwner.getAutoSoulShot().containsKey(itemId))
-				{
-					activeOwner.removeAutoSoulShot(itemId);
-					activeOwner.sendPacket(new ExAutoSoulShot(itemId, 0));
-					SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
-					sm.addString(item.getItem().getName());
-					activeOwner.sendPacket(sm);
-					
-					return;
-				}
-				activeOwner.sendPacket(SystemMessageId.NOT_ENOUGH_SOULSHOTS);
+				activeOwner.removeAutoSoulShot(itemId);
+				activeOwner.sendPacket(new ExAutoSoulShot(itemId, 0));
+				SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
+				sm.addString(item.getItem().getName());
+				activeOwner.sendPacket(sm);
+				
 				return;
 			}
+			activeOwner.sendPacket(SystemMessageId.NOT_ENOUGH_SOULSHOTS);
+			return;
 		}
 		
 		// Pet uses the power of spirit.

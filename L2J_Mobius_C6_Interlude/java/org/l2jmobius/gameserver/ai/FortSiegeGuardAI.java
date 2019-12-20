@@ -365,7 +365,6 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 				((CommanderInstance) _actor).returnHome();
 			}
 		}
-		return;
 	}
 	
 	/**
@@ -382,17 +381,14 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 	 */
 	private void thinkAttack()
 	{
-		if (_attackTimeout < GameTimeController.getGameTicks())
+		// Check if the actor is running
+		if ((_attackTimeout < GameTimeController.getGameTicks()) && _actor.isRunning())
 		{
-			// Check if the actor is running
-			if (_actor.isRunning())
-			{
-				// Set the actor movement type to walk and send Server->Client packet ChangeMoveType to all others PlayerInstance
-				_actor.setWalking();
-				
-				// Calculate a new attack timeout
-				_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getGameTicks();
-			}
+			// Set the actor movement type to walk and send Server->Client packet ChangeMoveType to all others PlayerInstance
+			_actor.setWalking();
+			
+			// Calculate a new attack timeout
+			_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getGameTicks();
 		}
 		
 		final Creature attackTarget = getAttackTarget();
@@ -525,11 +521,11 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 								break;
 							}
 							
-							final WorldObject OldTarget = _actor.getTarget();
+							final WorldObject oldTarget = _actor.getTarget();
 							_actor.setTarget(creature);
 							clientStopMoving(null);
 							_accessor.doCast(sk);
-							_actor.setTarget(OldTarget);
+							_actor.setTarget(oldTarget);
 							return;
 						}
 					}
@@ -560,9 +556,9 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 					}
 				}
 				// heal friends
-				if (/* _selfAnalysis.hasHealOrResurrect && */!_actor.isAttackingDisabled() && (npc.getCurrentHp() < (npc.getMaxHp() * 0.6)) && (_actor.getCurrentHp() > (_actor.getMaxHp() / 2)) && (_actor.getCurrentMp() > (_actor.getMaxMp() / 2)) && npc.isInCombat())
+				if (/* _selfAnalysis.hasHealOrResurrect && */ !_actor.isAttackingDisabled() && (npc.getCurrentHp() < (npc.getMaxHp() * 0.6)) && (_actor.getCurrentHp() > (_actor.getMaxHp() / 2)) && (_actor.getCurrentMp() > (_actor.getMaxMp() / 2)) && npc.isInCombat())
 				{
-					for (Skill sk : /* _selfAnalysis.healSkills */healSkills)
+					for (Skill sk : /* _selfAnalysis.healSkills */ healSkills)
 					{
 						if (_actor.getCurrentMp() < sk.getMpConsume())
 						{
@@ -587,11 +583,11 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 							break;
 						}
 						
-						final WorldObject OldTarget = _actor.getTarget();
+						final WorldObject oldTarget = _actor.getTarget();
 						_actor.setTarget(npc);
 						clientStopMoving(null);
 						_accessor.doCast(sk);
-						_actor.setTarget(OldTarget);
+						_actor.setTarget(oldTarget);
 						return;
 					}
 				}
@@ -603,7 +599,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 	{
 		// Get all information needed to choose between physical or magical attack
 		Skill[] skills = null;
-		double dist_2 = 0;
+		double dist2 = 0;
 		int range = 0;
 		FortSiegeGuardInstance sGuard;
 		sGuard = (FortSiegeGuardInstance) _actor;
@@ -613,7 +609,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 		{
 			_actor.setTarget(attackTarget);
 			skills = _actor.getAllSkills();
-			dist_2 = _actor.getPlanDistanceSq(attackTarget.getX(), attackTarget.getY());
+			dist2 = _actor.getPlanDistanceSq(attackTarget.getX(), attackTarget.getY());
 			range = _actor.getPhysicalAttackRange() + _actor.getTemplate().collisionRadius + attackTarget.getTemplate().collisionRadius;
 			if (attackTarget.isMoving())
 			{
@@ -648,16 +644,16 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 		}
 		
 		// Check if the actor isn't muted and if it is far from target
-		if (!_actor.isMuted() && (dist_2 > (range * range)))
+		if (!_actor.isMuted() && (dist2 > (range * range)))
 		{
 			// check for long ranged skills and heal/buff skills
 			for (Skill sk : skills)
 			{
 				final int castRange = sk.getCastRange();
 				
-				if ((dist_2 <= (castRange * castRange)) && (castRange > 70) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive())
+				if ((dist2 <= (castRange * castRange)) && (castRange > 70) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive())
 				{
-					final WorldObject OldTarget = _actor.getTarget();
+					final WorldObject oldTarget = _actor.getTarget();
 					if ((sk.getSkillType() == SkillType.BUFF) || (sk.getSkillType() == SkillType.HEAL))
 					{
 						boolean useSkillSelf = true;
@@ -687,7 +683,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 					
 					clientStopMoving(null);
 					_accessor.doCast(sk);
-					_actor.setTarget(OldTarget);
+					_actor.setTarget(oldTarget);
 					return;
 				}
 			}
@@ -736,11 +732,9 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 					}
 				}
 			}
-			
-			return;
 		}
 		// Else, if the actor is muted and far from target, just "move to pawn"
-		else if (_actor.isMuted() && (dist_2 > (range * range)))
+		else if (_actor.isMuted() && (dist2 > (range * range)))
 		{
 			// Temporary hack for preventing guards jumping off towers,
 			// before replacing this with effective GeoClient checks and AI modification
@@ -762,10 +756,9 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 					moveToPawn(attackTarget, range);
 				}
 			}
-			return;
 		}
 		// Else, if this is close enough to attack
-		else if (dist_2 <= (range * range))
+		else if (dist2 <= (range * range))
 		{
 			// Force mobs to attack anybody if confused
 			Creature hated = null;
@@ -797,9 +790,9 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 				{
 					final int castRange = sk.getCastRange();
 					
-					if (((castRange * castRange) >= dist_2) && !sk.isPassive() && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !_actor.isSkillDisabled(sk))
+					if (((castRange * castRange) >= dist2) && !sk.isPassive() && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !_actor.isSkillDisabled(sk))
 					{
-						final WorldObject OldTarget = _actor.getTarget();
+						final WorldObject oldTarget = _actor.getTarget();
 						if ((sk.getSkillType() == SkillType.BUFF) || (sk.getSkillType() == SkillType.HEAL))
 						{
 							boolean useSkillSelf = true;
@@ -829,7 +822,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 						
 						clientStopMoving(null);
 						_accessor.doCast(sk);
-						_actor.setTarget(OldTarget);
+						_actor.setTarget(oldTarget);
 						return;
 					}
 				}

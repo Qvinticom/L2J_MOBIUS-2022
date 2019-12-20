@@ -21,7 +21,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.clientpackets.RequestBypassToServer;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -128,7 +127,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
 public class NpcHtmlMessage extends GameServerPacket
 {
 	/** The LOGGER. */
-	private static Logger LOGGER = Logger.getLogger(RequestBypassToServer.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(NpcHtmlMessage.class.getName());
 	
 	/** The _npc obj id. */
 	private final int _npcObjId;
@@ -275,7 +274,7 @@ public class NpcHtmlMessage extends GameServerPacket
 			
 			start += 10;
 			i = start;
-			final int finish2 = _html.indexOf("$", start);
+			final int finish2 = _html.indexOf('$', start);
 			if ((finish2 < finish) && (finish2 > 0))
 			{
 				player.addBypass2(_html.substring(start, finish2));

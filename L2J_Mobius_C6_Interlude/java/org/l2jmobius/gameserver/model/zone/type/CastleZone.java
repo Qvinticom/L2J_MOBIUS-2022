@@ -35,7 +35,6 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class CastleZone extends ZoneType
 {
-	private int _castleId;
 	private Castle _castle;
 	private final int[] _spawnLoc;
 	
@@ -53,9 +52,9 @@ public class CastleZone extends ZoneType
 		{
 			case "castleId":
 			{
-				_castleId = Integer.parseInt(value);
+				int castleId = Integer.parseInt(value);
 				// Register self to the correct castle
-				_castle = CastleManager.getInstance().getCastleById(_castleId);
+				_castle = CastleManager.getInstance().getCastleById(castleId);
 				_castle.setZone(this);
 				break;
 			}

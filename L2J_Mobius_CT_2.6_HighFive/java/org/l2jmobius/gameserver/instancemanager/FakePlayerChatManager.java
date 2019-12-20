@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
  */
 public class FakePlayerChatManager implements IXmlReader
 {
-	private static Logger LOGGER = Logger.getLogger(FakePlayerChatManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FakePlayerChatManager.class.getName());
 	final List<FakePlayerChatHolder> MESSAGES = new ArrayList<>();
 	private static final int MIN_DELAY = 5000;
 	private static final int MAX_DELAY = 15000;

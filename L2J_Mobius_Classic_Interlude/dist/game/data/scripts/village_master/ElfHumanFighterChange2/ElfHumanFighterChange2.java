@@ -130,7 +130,7 @@ public class ElfHumanFighterChange2 extends AbstractNpcAI
 			case "23":
 			case "24":
 			{
-				htmltext = ClassChangeRequested(player, Integer.valueOf(event));
+				htmltext = ClassChangeRequested(player, Integer.parseInt(event));
 				break;
 			}
 		}

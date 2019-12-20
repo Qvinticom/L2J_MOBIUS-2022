@@ -26,7 +26,7 @@ public class Q081_SagaOfTheGhostHunter extends SagasSuperClass
 	public Q081_SagaOfTheGhostHunter()
 	{
 		super(81, "Saga of the Ghost Hunter");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			31603,
 			31624,
@@ -41,7 +41,7 @@ public class Q081_SagaOfTheGhostHunter extends SagasSuperClass
 			31656,
 			31616
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7518,
@@ -56,39 +56,39 @@ public class Q081_SagaOfTheGhostHunter extends SagasSuperClass
 			7104,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27301,
 			27230,
 			27304
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			108
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x24
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			164650,
 			47391,
 			47429
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-74121,
 			-56929,
 			-56923
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-2871,
 			-2370,
 			-2383
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

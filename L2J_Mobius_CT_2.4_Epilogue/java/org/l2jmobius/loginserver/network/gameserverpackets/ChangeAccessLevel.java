@@ -27,7 +27,7 @@ import org.l2jmobius.loginserver.LoginController;
  */
 public class ChangeAccessLevel extends BaseRecievePacket
 {
-	protected static Logger LOGGER = Logger.getLogger(ChangeAccessLevel.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(ChangeAccessLevel.class.getName());
 	
 	/**
 	 * @param decrypt

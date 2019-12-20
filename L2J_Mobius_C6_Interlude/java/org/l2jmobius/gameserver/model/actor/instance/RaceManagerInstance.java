@@ -74,7 +74,7 @@ public class RaceManagerInstance extends NpcInstance
 	};
 	private static boolean _notInitialized = true;
 	protected static MonRaceInfo _packet;
-	protected static final int _cost[] =
+	protected static final int[] _cost =
 	{
 		100,
 		500,
@@ -122,7 +122,7 @@ public class RaceManagerInstance extends NpcInstance
 	@Override
 	public RaceManagerKnownList getKnownList()
 	{
-		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof RaceManagerKnownList))
+		if (!(super.getKnownList() instanceof RaceManagerKnownList))
 		{
 			setKnownList(new RaceManagerKnownList(this));
 		}
@@ -223,10 +223,10 @@ public class RaceManagerInstance extends NpcInstance
 		MonsterRace race = MonsterRace.getInstance();
 		if (_state == STARTING_RACE)
 		{
-			PlaySound SRace = new PlaySound(1, "S_Race", 0, 0, 0, 0, 0);
-			broadcast(SRace);
-			PlaySound SRace2 = new PlaySound(0, "ItemSound2.race_start", 1, 121209259, 12125, 182487, -3559);
-			broadcast(SRace2);
+			PlaySound sRace = new PlaySound(1, "S_Race", 0, 0, 0, 0, 0);
+			broadcast(sRace);
+			PlaySound sRace2 = new PlaySound(0, "ItemSound2.race_start", 1, 121209259, 12125, 182487, -3559);
+			broadcast(sRace2);
 			_packet = new MonRaceInfo(_codes[1][0], _codes[1][1], race.getMonsters(), race.getSpeeds());
 			sendMonsterInfo();
 			

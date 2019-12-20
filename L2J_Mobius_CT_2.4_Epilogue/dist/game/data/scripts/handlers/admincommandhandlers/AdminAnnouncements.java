@@ -454,7 +454,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							final String token = st.nextToken();
 							if (Util.isDigit(token))
 							{
-								page = Integer.valueOf(token);
+								page = Integer.parseInt(token);
 							}
 						}
 						

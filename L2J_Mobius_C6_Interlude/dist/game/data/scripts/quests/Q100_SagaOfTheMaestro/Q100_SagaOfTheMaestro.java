@@ -27,7 +27,7 @@ public class Q100_SagaOfTheMaestro extends SagasSuperClass
 	public Q100_SagaOfTheMaestro()
 	{
 		super(100, "Saga of the Maestro");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			31592,
 			31273,
@@ -42,7 +42,7 @@ public class Q100_SagaOfTheMaestro extends SagasSuperClass
 			31656,
 			31597
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7607,
@@ -57,39 +57,39 @@ public class Q100_SagaOfTheMaestro extends SagasSuperClass
 			7108,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27260,
 			27249,
 			27308
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			118
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x39
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			164650,
 			47429,
 			47391
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-74121,
 			-56923,
 			-56929
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-2871,
 			-2383,
 			-2370
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

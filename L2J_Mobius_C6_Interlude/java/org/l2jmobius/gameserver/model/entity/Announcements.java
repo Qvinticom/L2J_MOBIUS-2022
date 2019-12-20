@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.script.DateRange;
  */
 public class Announcements
 {
-	private static Logger LOGGER = Logger.getLogger(Announcements.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Announcements.class.getName());
 	
 	private final List<String> _announcements = new ArrayList<>();
 	private final List<List<Object>> _eventAnnouncements = new ArrayList<>();
@@ -173,7 +173,7 @@ public class Announcements
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning(e1.toString());
 				}
 			}
 			
@@ -185,7 +185,7 @@ public class Announcements
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning(e1.toString());
 				}
 			}
 		}
@@ -220,7 +220,7 @@ public class Announcements
 				}
 				catch (IOException e)
 				{
-					e.printStackTrace();
+					LOGGER.warning(e.toString());
 				}
 			}
 		}
@@ -244,12 +244,9 @@ public class Announcements
 		
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
-			if (player != null)
+			if ((player != null) && (player.isOnline() != 0))
 			{
-				if (player.isOnline() != 0)
-				{
-					player.sendPacket(cs);
-				}
+				player.sendPacket(cs);
 			}
 		}
 	}

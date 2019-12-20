@@ -333,7 +333,7 @@ public class Attackable extends NpcInstance
 	private Creature _overhitAttacker;
 	
 	/** First CommandChannel who attacked the Attackable and meet the requirements **/
-	private volatile CommandChannel _firstCommandChannelAttacked = null;
+	private CommandChannel _firstCommandChannelAttacked = null;
 	private CommandChannelTimer _commandChannelTimer = null;
 	private long _commandChannelLastAttack = 0;
 	
@@ -370,7 +370,7 @@ public class Attackable extends NpcInstance
 	@Override
 	public AttackableKnownList getKnownList()
 	{
-		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof AttackableKnownList))
+		if (!(super.getKnownList() instanceof AttackableKnownList))
 		{
 			setKnownList(new AttackableKnownList(this));
 		}
@@ -568,12 +568,9 @@ public class Attackable extends NpcInstance
 		if (Config.L2JMOD_CHAMPION_ENABLE)
 		{
 			// Set champion on next spawn.
-			if (!(this instanceof GrandBossInstance) && !(this instanceof RaidBossInstance) && (this instanceof MonsterInstance) /* && !getTemplate().isQuestMonster */ && (Config.L2JMOD_CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.L2JMOD_CHAMP_MIN_LVL) && (getLevel() <= Config.L2JMOD_CHAMP_MAX_LVL))
+			if (!(this instanceof GrandBossInstance) && !(this instanceof RaidBossInstance) && (this instanceof MonsterInstance) /* && !getTemplate().isQuestMonster */ && (Config.L2JMOD_CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.L2JMOD_CHAMP_MIN_LVL) && (getLevel() <= Config.L2JMOD_CHAMP_MAX_LVL) && (Rnd.get(100) < Config.L2JMOD_CHAMPION_FREQUENCY))
 			{
-				if (Rnd.get(100) < Config.L2JMOD_CHAMPION_FREQUENCY)
-				{
-					setChampion(true);
-				}
+				setChampion(true);
 			}
 		}
 		
@@ -878,7 +875,7 @@ public class Attackable extends NpcInstance
 							}
 							
 							final Playable summon = pl.getPet();
-							if ((summon != null) && (summon instanceof PetInstance))
+							if (summon instanceof PetInstance)
 							{
 								reward2 = rewards.get(summon);
 								
@@ -983,7 +980,6 @@ public class Attackable extends NpcInstance
 		
 		// Get the AggroInfo of the attacker Creature from the _aggroList of the Attackable
 		AggroInfo ai = _aggroList.get(attacker);
-		
 		if (ai == null)
 		{
 			ai = new AggroInfo(attacker);
@@ -1065,14 +1061,12 @@ public class Attackable extends NpcInstance
 				((AttackableAI) getAI()).setGlobalAggro(-25);
 				return;
 			}
-			for (Creature aggroed : _aggroList.keySet())
+			for (AggroInfo ai : _aggroList.values())
 			{
-				AggroInfo ai = _aggroList.get(aggroed);
 				if (ai == null)
 				{
 					return;
 				}
-				
 				ai._hate -= amount;
 			}
 			
@@ -1089,7 +1083,6 @@ public class Attackable extends NpcInstance
 		}
 		
 		AggroInfo ai = _aggroList.get(target);
-		
 		if (ai == null)
 		{
 			return;
@@ -1097,15 +1090,12 @@ public class Attackable extends NpcInstance
 		
 		ai._hate -= amount;
 		
-		if (ai._hate <= 0)
+		if ((ai._hate <= 0) && (getMostHated() == null))
 		{
-			if (getMostHated() == null)
-			{
-				((AttackableAI) getAI()).setGlobalAggro(-25);
-				clearAggroList();
-				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-				setWalking();
-			}
+			((AttackableAI) getAI()).setGlobalAggro(-25);
+			clearAggroList();
+			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+			setWalking();
 		}
 	}
 	
@@ -1311,18 +1301,15 @@ public class Attackable extends NpcInstance
 		
 		int deepBlueDrop = 1;
 		
-		if (Config.DEEPBLUE_DROP_RULES)
+		if (Config.DEEPBLUE_DROP_RULES && (levelModifier > 0))
 		{
-			if (levelModifier > 0)
+			// We should multiply by the server's drop rate, so we always get a low chance of drop for deep blue mobs.
+			// NOTE: This is valid only for adena drops! Others drops will still obey server's rate
+			deepBlueDrop = 3;
+			
+			if (drop.getItemId() == 57)
 			{
-				// We should multiply by the server's drop rate, so we always get a low chance of drop for deep blue mobs.
-				// NOTE: This is valid only for adena drops! Others drops will still obey server's rate
-				deepBlueDrop = 3;
-				
-				if (drop.getItemId() == 57)
-				{
-					deepBlueDrop *= isRaid() ? 1 : Config.RATE_DROP_ITEMS;
-				}
+				deepBlueDrop *= isRaid() ? 1 : Config.RATE_DROP_ITEMS;
 			}
 		}
 		
@@ -1471,12 +1458,9 @@ public class Attackable extends NpcInstance
 			// Prepare for next iteration if dropChance > DropData.MAX_CHANCE
 			dropChance -= DropData.MAX_CHANCE;
 		}
-		if (Config.L2JMOD_CHAMPION_ENABLE && isChampion())
+		if (Config.L2JMOD_CHAMPION_ENABLE && isChampion() && ((drop.getItemId() == 57) || ((drop.getItemId() >= 6360) && (drop.getItemId() <= 6362))))
 		{
-			if ((drop.getItemId() == 57) || ((drop.getItemId() >= 6360) && (drop.getItemId() <= 6362)))
-			{
-				itemCount *= Config.L2JMOD_CHAMPION_ADENAS_REWARDS;
-			}
+			itemCount *= Config.L2JMOD_CHAMPION_ADENAS_REWARDS;
 		}
 		
 		if ((drop.getItemId() >= 6360) && (drop.getItemId() <= 6362))
@@ -1536,14 +1520,11 @@ public class Attackable extends NpcInstance
 		
 		int deepBlueDrop = 1;
 		
-		if (Config.DEEPBLUE_DROP_RULES)
+		if (Config.DEEPBLUE_DROP_RULES && (levelModifier > 0))
 		{
-			if (levelModifier > 0)
-			{
-				// We should multiply by the server's drop rate, so we always get a low chance of drop for deep blue mobs.
-				// NOTE: This is valid only for adena drops! Others drops will still obey server's rate
-				deepBlueDrop = 3;
-			}
+			// We should multiply by the server's drop rate, so we always get a low chance of drop for deep blue mobs.
+			// NOTE: This is valid only for adena drops! Others drops will still obey server's rate
+			deepBlueDrop = 3;
 		}
 		
 		if (deepBlueDrop == 0)
@@ -1770,12 +1751,9 @@ public class Attackable extends NpcInstance
 				// Prepare for next iteration if dropChance > DropData.MAX_CHANCE
 				dropChance -= DropData.MAX_CHANCE;
 			}
-			if (Config.L2JMOD_CHAMPION_ENABLE && isChampion())
+			if (Config.L2JMOD_CHAMPION_ENABLE && isChampion() && ((drop.getItemId() == 57) || ((drop.getItemId() >= 6360) && (drop.getItemId() <= 6362))))
 			{
-				if ((drop.getItemId() == 57) || ((drop.getItemId() >= 6360) && (drop.getItemId() <= 6362)))
-				{
-					itemCount *= Config.L2JMOD_CHAMPION_ADENAS_REWARDS;
-				}
+				itemCount *= Config.L2JMOD_CHAMPION_ADENAS_REWARDS;
 			}
 			
 			if ((drop.getItemId() >= 6360) && (drop.getItemId() <= 6362))
@@ -2417,7 +2395,7 @@ public class Attackable extends NpcInstance
 			// Randomize drop position
 			final int newX = (getX() + Rnd.get((randDropLim * 2) + 1)) - randDropLim;
 			final int newY = (getY() + Rnd.get((randDropLim * 2) + 1)) - randDropLim;
-			final int newZ = Math.max(getZ(), mainDamageDealer.getZ()) + 20; // TODO: temp hack, do somethign nicer when we have geodatas
+			final int newZ = Math.max(getZ(), mainDamageDealer.getZ()) + 20; // TODO: temp hack, do something nicer when we have geodata
 			
 			// Init the dropped ItemInstance and add it in the world as a visible object at the position where mob was last
 			ditem = ItemTable.getInstance().createItem("Loot", item.getItemId(), item.getCount(), mainDamageDealer, this);
@@ -2425,12 +2403,9 @@ public class Attackable extends NpcInstance
 			ditem.dropMe(this, newX, newY, newZ);
 			
 			// Add drop to auto destroy item task
-			if (!Config.LIST_PROTECTED_ITEMS.contains(item.getItemId()))
+			if (!Config.LIST_PROTECTED_ITEMS.contains(item.getItemId()) && (((Config.AUTODESTROY_ITEM_AFTER > 0) && (ditem.getItemType() != EtcItemType.HERB)) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && (ditem.getItemType() == EtcItemType.HERB))))
 			{
-				if (((Config.AUTODESTROY_ITEM_AFTER > 0) && (ditem.getItemType() != EtcItemType.HERB)) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && (ditem.getItemType() == EtcItemType.HERB)))
-				{
-					ItemsAutoDestroy.getInstance().addItem(ditem);
-				}
+				ItemsAutoDestroy.getInstance().addItem(ditem);
 			}
 			
 			ditem.setProtected(false);
@@ -2693,7 +2668,7 @@ public class Attackable extends NpcInstance
 		// Init some useful vars
 		boolean isSuccess = true;
 		boolean doLevelup = true;
-		final boolean isBossMob = maxAbsorbLevel > 10 ? true : false;
+		final boolean isBossMob = maxAbsorbLevel > 10;
 		
 		final NpcTemplate.AbsorbCrystalType absorbType = getTemplate().absorbType;
 		
@@ -2777,7 +2752,7 @@ public class Attackable extends NpcInstance
 			for (ItemInstance item : inv)
 			{
 				final int itemId = item.getItemId();
-				for (int id : SoulCrystal.SoulCrystalTable)
+				for (int id : SoulCrystal.SOUL_CRYSTAL_TABLE)
 				{
 					// Find any of the 39 possible crystals.
 					if (id == itemId)
@@ -2816,7 +2791,7 @@ public class Attackable extends NpcInstance
 								// Allocate current and levelup ids' for higher level crystals
 								if (crystalLVL > 9)
 								{
-									for (int[] element : SoulCrystal.HighSoulConvert)
+									for (int[] element : SoulCrystal.HIGH_SOUL_CONVERT)
 									{
 										// Get the next stage above 10 using array.
 										if (id == element[0])
@@ -2842,7 +2817,6 @@ public class Attackable extends NpcInstance
 							}
 							catch (Exception e)
 							{
-								e.printStackTrace();
 								isSuccess = false;
 								break;
 							}
@@ -2931,17 +2905,16 @@ public class Attackable extends NpcInstance
 	
 	private void exchangeCrystal(PlayerInstance player, int takeid, int giveid, boolean broke)
 	{
-		ItemInstance Item = player.getInventory().destroyItemByItemId("SoulCrystal", takeid, 1, player, this);
-		
-		if (Item != null)
+		ItemInstance item = player.getInventory().destroyItemByItemId("SoulCrystal", takeid, 1, player, this);
+		if (item != null)
 		{
 			// Prepare inventory update packet
 			InventoryUpdate playerIU = new InventoryUpdate();
-			playerIU.addRemovedItem(Item);
+			playerIU.addRemovedItem(item);
 			
 			// Add new crystal to the killer's inventory
-			Item = player.getInventory().addItem("SoulCrystal", giveid, 1, player, this);
-			playerIU.addItem(Item);
+			item = player.getInventory().addItem("SoulCrystal", giveid, 1, player, this);
+			playerIU.addItem(item);
 			
 			// Send a sound event and text message to the player
 			if (broke)
@@ -3020,13 +2993,11 @@ public class Attackable extends NpcInstance
 			}
 		}
 		
-		final int[] tmp =
+		return new int[]
 		{
 			(int) xp,
 			(int) sp
 		};
-		
-		return tmp;
 	}
 	
 	public long calculateOverhitExp(long normalExp)
@@ -3108,18 +3079,18 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Sets state of the mob to seeded. Paramets needed to be set before.
+	 * Sets state of the mob to seeded. Parameters needed to be set before.
 	 */
 	public void setSeeded()
 	{
 		if ((_seedType != 0) && (_seeder != null))
 		{
-			setSeeded(_seedType, _seeder.getLevel());
+			setSeeded(_seedType);
 		}
 	}
 	
 	/**
-	 * Sets the seed parametrs, but not the seed state
+	 * Sets the seed parameters, but not the seed state
 	 * @param id - id of the seed
 	 * @param seeder - player who is sowind the seed
 	 */
@@ -3132,7 +3103,7 @@ public class Attackable extends NpcInstance
 		}
 	}
 	
-	public void setSeeded(int id, int seederLvl)
+	public void setSeeded(int id)
 	{
 		_seeded = true;
 		_seedType = id;

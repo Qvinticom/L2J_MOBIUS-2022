@@ -217,7 +217,7 @@ public class DevastatedCastle
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 		
 		RunSiege rs = new RunSiege();
@@ -264,9 +264,9 @@ public class DevastatedCastle
 		NpcTemplate template = null;
 		Spawn spawn = null;
 		
-		final ClanHall CH = ClanHallManager.getInstance().getClanHallById(34);
-		CH.banishForeigners();
-		CH.spawnDoor();
+		final ClanHall ch = ClanHallManager.getInstance().getClanHallById(34);
+		ch.banishForeigners();
+		ch.spawnDoor();
 		
 		setIsInProgress(true);
 		
@@ -305,7 +305,7 @@ public class DevastatedCastle
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 		
 		Announce("Siege of Devastated castle has begun!");
@@ -725,7 +725,7 @@ public class DevastatedCastle
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
+				LOGGER.warning(e.toString());
 			}
 		}
 		_monsterdespawn = ThreadPool.schedule(new DeSpawnMonsters(), 3600000); // 60 * 60 * 1000
@@ -769,9 +769,9 @@ public class DevastatedCastle
 				Announce("Siege of Devastated castle is over.");
 				Announce("Nobody won! ClanHall belong to NPC until next siege.");
 				
-				final ClanHall CH = ClanHallManager.getInstance().getClanHallById(34);
-				CH.banishForeigners();
-				CH.spawnDoor();
+				final ClanHall ch = ClanHallManager.getInstance().getClanHallById(34);
+				ch.banishForeigners();
+				ch.spawnDoor();
 			}
 			_npc.onDecay();
 		}
@@ -779,11 +779,7 @@ public class DevastatedCastle
 	
 	public boolean Conditions(PlayerInstance player)
 	{
-		if ((player != null) && (player.getClan() != null) && player.isClanLeader() && (player.getClan().getAuctionBiddedAt() <= 0) && (ClanHallManager.getInstance().getClanHallByOwner(player.getClan()) == null) && (player.getClan().getLevel() > 3))
-		{
-			return true;
-		}
-		return false;
+		return (player != null) && (player.getClan() != null) && player.isClanLeader() && (player.getClan().getAuctionBiddedAt() <= 0) && (ClanHallManager.getInstance().getClanHallByOwner(player.getClan()) == null) && (player.getClan().getLevel() > 3);
 	}
 	
 	public boolean getIsInProgress()
@@ -802,13 +798,10 @@ public class DevastatedCastle
 		long tempMaxDamage = 0;
 		for (DamageInfo damageInfo : _clansDamageInfo.values())
 		{
-			if (damageInfo != null)
+			if ((damageInfo != null) && (damageInfo._damage > tempMaxDamage))
 			{
-				if (damageInfo._damage > tempMaxDamage)
-				{
-					tempMaxDamage = damageInfo._damage;
-					clanIdMaxDamage = damageInfo._clan;
-				}
+				tempMaxDamage = damageInfo._damage;
+				clanIdMaxDamage = damageInfo._clan;
 			}
 		}
 		if (clanIdMaxDamage != null)
@@ -834,9 +827,9 @@ public class DevastatedCastle
 		_mikhail.cancel(true);
 		_monsterdespawn.cancel(true);
 		
-		ClanHall CH = ClanHallManager.getInstance().getClanHallById(34);
-		CH.banishForeigners();
-		CH.spawnDoor();
+		ClanHall ch = ClanHallManager.getInstance().getClanHallById(34);
+		ch.banishForeigners();
+		ch.spawnDoor();
 	}
 	
 	public void addSiegeDamage(Clan clan, long damage)
@@ -870,8 +863,7 @@ public class DevastatedCastle
 		}
 		catch (Exception e)
 		{
-			LOGGER.info("Exception: updateOwnerInDB(Pledge clan): " + e.getMessage());
-			e.printStackTrace();
+			LOGGER.info("Exception: updateOwnerInDB(Pledge clan): " + e);
 		}
 	}
 	

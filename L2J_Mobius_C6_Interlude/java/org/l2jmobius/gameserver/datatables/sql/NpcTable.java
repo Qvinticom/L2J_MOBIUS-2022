@@ -274,23 +274,22 @@ public class NpcTable
 		}
 		catch (Exception e)
 		{
-			LOGGER.info("Error loading minion data");
-			e.printStackTrace();
+			LOGGER.info("Error loading minion data: " + e.getMessage());
 		}
 		
 		_initialized = true;
 	}
 	
-	private void fillNpcTable(ResultSet NpcData, boolean custom) throws Exception
+	private void fillNpcTable(ResultSet npcData, boolean custom) throws Exception
 	{
-		while (NpcData.next())
+		while (npcData.next())
 		{
 			final StatsSet npcDat = new StatsSet();
 			
-			final int id = NpcData.getInt("id");
+			final int id = npcData.getInt("id");
 			
 			npcDat.set("npcId", id);
-			npcDat.set("idTemplate", NpcData.getInt("idTemplate"));
+			npcDat.set("idTemplate", npcData.getInt("idTemplate"));
 			
 			// Level: for special bosses could be different
 			int level = 0;
@@ -305,17 +304,18 @@ public class NpcTable
 				case 29005:
 				{
 					minion = true;
+					// fallthrough
 				}
 				case 29001: // queenAnt
 				{
 					if (Config.QA_LEVEL > 0)
 					{
-						diff = Config.QA_LEVEL - NpcData.getInt("level");
+						diff = Config.QA_LEVEL - npcData.getInt("level");
 						level = Config.QA_LEVEL;
 					}
 					else
 					{
-						level = NpcData.getInt("level");
+						level = npcData.getInt("level");
 					}
 					break;
 				}
@@ -323,12 +323,12 @@ public class NpcTable
 				{
 					if (Config.ZAKEN_LEVEL > 0)
 					{
-						diff = Config.ZAKEN_LEVEL - NpcData.getInt("level");
+						diff = Config.ZAKEN_LEVEL - npcData.getInt("level");
 						level = Config.ZAKEN_LEVEL;
 					}
 					else
 					{
-						level = NpcData.getInt("level");
+						level = npcData.getInt("level");
 					}
 					break;
 				}
@@ -338,17 +338,18 @@ public class NpcTable
 				case 29018:
 				{
 					minion = true;
+					// fallthrough
 				}
 				case 29014: // orfen
 				{
 					if (Config.ORFEN_LEVEL > 0)
 					{
-						diff = Config.ORFEN_LEVEL - NpcData.getInt("level");
+						diff = Config.ORFEN_LEVEL - npcData.getInt("level");
 						level = Config.ORFEN_LEVEL;
 					}
 					else
 					{
-						level = NpcData.getInt("level");
+						level = npcData.getInt("level");
 					}
 					break;
 				}
@@ -357,58 +358,59 @@ public class NpcTable
 				case 290011:
 				{
 					minion = true;
+					// fallthrough
 				}
 				case 29006: // core
 				{
 					if (Config.CORE_LEVEL > 0)
 					{
-						diff = Config.CORE_LEVEL - NpcData.getInt("level");
+						diff = Config.CORE_LEVEL - npcData.getInt("level");
 						level = Config.CORE_LEVEL;
 					}
 					else
 					{
-						level = NpcData.getInt("level");
+						level = npcData.getInt("level");
 					}
 					break;
 				}
 				default:
 				{
-					level = NpcData.getInt("level");
+					level = npcData.getInt("level");
 				}
 			}
 			
 			npcDat.set("level", level);
-			npcDat.set("jClass", NpcData.getString("class"));
+			npcDat.set("jClass", npcData.getString("class"));
 			
 			npcDat.set("baseShldDef", 0);
 			npcDat.set("baseShldRate", 0);
 			npcDat.set("baseCritRate", 4);
 			
-			npcDat.set("name", NpcData.getString("name"));
-			npcDat.set("serverSideName", NpcData.getBoolean("serverSideName"));
-			npcDat.set("title", NpcData.getString("title"));
-			npcDat.set("serverSideTitle", NpcData.getBoolean("serverSideTitle"));
-			npcDat.set("collision_radius", NpcData.getDouble("collision_radius"));
-			npcDat.set("collision_height", NpcData.getDouble("collision_height"));
-			npcDat.set("sex", NpcData.getString("sex"));
-			npcDat.set("type", NpcData.getString("type"));
-			npcDat.set("baseAtkRange", NpcData.getInt("attackrange"));
+			npcDat.set("name", npcData.getString("name"));
+			npcDat.set("serverSideName", npcData.getBoolean("serverSideName"));
+			npcDat.set("title", npcData.getString("title"));
+			npcDat.set("serverSideTitle", npcData.getBoolean("serverSideTitle"));
+			npcDat.set("collision_radius", npcData.getDouble("collision_radius"));
+			npcDat.set("collision_height", npcData.getDouble("collision_height"));
+			npcDat.set("sex", npcData.getString("sex"));
+			npcDat.set("type", npcData.getString("type"));
+			npcDat.set("baseAtkRange", npcData.getInt("attackrange"));
 			
 			// BOSS POWER CHANGES
-			double multi_value = 1;
+			double multiValue = 1;
 			
 			if (diff >= 15) // means that there is level customization
 			{
-				multi_value = multi_value * (diff / 10);
+				multiValue = multiValue * (diff / 10);
 			}
 			else if ((diff > 0) && (diff < 15))
 			{
-				multi_value = multi_value + (diff / 10);
+				multiValue = multiValue + (diff / 10);
 			}
 			
 			if (minion)
 			{
-				multi_value = multi_value * Config.LEVEL_DIFF_MULTIPLIER_MINION;
+				multiValue = multiValue * Config.LEVEL_DIFF_MULTIPLIER_MINION;
 			}
 			else
 			{
@@ -418,7 +420,7 @@ public class NpcTable
 					{
 						if (Config.QA_POWER_MULTIPLIER > 0)
 						{
-							multi_value = multi_value * Config.QA_POWER_MULTIPLIER;
+							multiValue = multiValue * Config.QA_POWER_MULTIPLIER;
 						}
 						break;
 					}
@@ -426,7 +428,7 @@ public class NpcTable
 					{
 						if (Config.ZAKEN_POWER_MULTIPLIER > 0)
 						{
-							multi_value = multi_value * Config.ZAKEN_POWER_MULTIPLIER;
+							multiValue = multiValue * Config.ZAKEN_POWER_MULTIPLIER;
 						}
 						break;
 					}
@@ -434,7 +436,7 @@ public class NpcTable
 					{
 						if (Config.ORFEN_POWER_MULTIPLIER > 0)
 						{
-							multi_value = multi_value * Config.ORFEN_POWER_MULTIPLIER;
+							multiValue = multiValue * Config.ORFEN_POWER_MULTIPLIER;
 						}
 						break;
 					}
@@ -442,7 +444,7 @@ public class NpcTable
 					{
 						if (Config.CORE_POWER_MULTIPLIER > 0)
 						{
-							multi_value = multi_value * Config.CORE_POWER_MULTIPLIER;
+							multiValue = multiValue * Config.CORE_POWER_MULTIPLIER;
 						}
 						break;
 					}
@@ -450,7 +452,7 @@ public class NpcTable
 					{
 						if (Config.ANTHARAS_POWER_MULTIPLIER > 0)
 						{
-							multi_value = multi_value * Config.ANTHARAS_POWER_MULTIPLIER;
+							multiValue = multiValue * Config.ANTHARAS_POWER_MULTIPLIER;
 						}
 						break;
 					}
@@ -458,7 +460,7 @@ public class NpcTable
 					{
 						if (Config.VALAKAS_POWER_MULTIPLIER > 0)
 						{
-							multi_value = multi_value * Config.VALAKAS_POWER_MULTIPLIER;
+							multiValue = multiValue * Config.VALAKAS_POWER_MULTIPLIER;
 						}
 						break;
 					}
@@ -466,7 +468,7 @@ public class NpcTable
 					{
 						if (Config.BAIUM_POWER_MULTIPLIER > 0)
 						{
-							multi_value = multi_value * Config.BAIUM_POWER_MULTIPLIER;
+							multiValue = multiValue * Config.BAIUM_POWER_MULTIPLIER;
 						}
 						break;
 					}
@@ -474,50 +476,50 @@ public class NpcTable
 					{
 						if (Config.FRINTEZZA_POWER_MULTIPLIER > 0)
 						{
-							multi_value = multi_value * Config.FRINTEZZA_POWER_MULTIPLIER;
+							multiValue = multiValue * Config.FRINTEZZA_POWER_MULTIPLIER;
 						}
 						break;
 					}
 				}
 			}
 			
-			npcDat.set("rewardExp", NpcData.getInt("exp") * multi_value);
-			npcDat.set("rewardSp", NpcData.getInt("sp") * multi_value);
-			npcDat.set("basePAtkSpd", NpcData.getInt("atkspd") * multi_value);
-			npcDat.set("baseMAtkSpd", NpcData.getInt("matkspd") * multi_value);
-			npcDat.set("baseHpMax", NpcData.getInt("hp") * multi_value);
-			npcDat.set("baseMpMax", NpcData.getInt("mp") * multi_value);
-			npcDat.set("baseHpReg", ((int) NpcData.getFloat("hpreg") * multi_value) > 0 ? NpcData.getFloat("hpreg") : 1.5 + ((level - 1) / 10.0));
-			npcDat.set("baseMpReg", ((int) NpcData.getFloat("mpreg") * multi_value) > 0 ? NpcData.getFloat("mpreg") : 0.9 + ((0.3 * (level - 1)) / 10.0));
-			npcDat.set("basePAtk", NpcData.getInt("patk") * multi_value);
-			npcDat.set("basePDef", NpcData.getInt("pdef") * multi_value);
-			npcDat.set("baseMAtk", NpcData.getInt("matk") * multi_value);
-			npcDat.set("baseMDef", NpcData.getInt("mdef") * multi_value);
+			npcDat.set("rewardExp", npcData.getInt("exp") * multiValue);
+			npcDat.set("rewardSp", npcData.getInt("sp") * multiValue);
+			npcDat.set("basePAtkSpd", npcData.getInt("atkspd") * multiValue);
+			npcDat.set("baseMAtkSpd", npcData.getInt("matkspd") * multiValue);
+			npcDat.set("baseHpMax", npcData.getInt("hp") * multiValue);
+			npcDat.set("baseMpMax", npcData.getInt("mp") * multiValue);
+			npcDat.set("baseHpReg", ((int) npcData.getFloat("hpreg") * multiValue) > 0 ? npcData.getFloat("hpreg") : 1.5 + ((level - 1) / 10.0));
+			npcDat.set("baseMpReg", ((int) npcData.getFloat("mpreg") * multiValue) > 0 ? npcData.getFloat("mpreg") : 0.9 + ((0.3 * (level - 1)) / 10.0));
+			npcDat.set("basePAtk", npcData.getInt("patk") * multiValue);
+			npcDat.set("basePDef", npcData.getInt("pdef") * multiValue);
+			npcDat.set("baseMAtk", npcData.getInt("matk") * multiValue);
+			npcDat.set("baseMDef", npcData.getInt("mdef") * multiValue);
 			
-			npcDat.set("aggroRange", NpcData.getInt("aggro"));
-			npcDat.set("rhand", NpcData.getInt("rhand"));
-			npcDat.set("lhand", NpcData.getInt("lhand"));
-			npcDat.set("armor", NpcData.getInt("armor"));
-			npcDat.set("baseWalkSpd", NpcData.getInt("walkspd"));
-			npcDat.set("baseRunSpd", NpcData.getInt("runspd"));
+			npcDat.set("aggroRange", npcData.getInt("aggro"));
+			npcDat.set("rhand", npcData.getInt("rhand"));
+			npcDat.set("lhand", npcData.getInt("lhand"));
+			npcDat.set("armor", npcData.getInt("armor"));
+			npcDat.set("baseWalkSpd", npcData.getInt("walkspd"));
+			npcDat.set("baseRunSpd", npcData.getInt("runspd"));
 			
 			// constants, until we have stats in DB
-			npcDat.safeSet("baseSTR", NpcData.getInt("str"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + NpcData.getInt("idTemplate"));
-			npcDat.safeSet("baseCON", NpcData.getInt("con"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + NpcData.getInt("idTemplate"));
-			npcDat.safeSet("baseDEX", NpcData.getInt("dex"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + NpcData.getInt("idTemplate"));
-			npcDat.safeSet("baseINT", NpcData.getInt("int"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + NpcData.getInt("idTemplate"));
-			npcDat.safeSet("baseWIT", NpcData.getInt("wit"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + NpcData.getInt("idTemplate"));
-			npcDat.safeSet("baseMEN", NpcData.getInt("men"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + NpcData.getInt("idTemplate"));
+			npcDat.safeSet("baseSTR", npcData.getInt("str"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
+			npcDat.safeSet("baseCON", npcData.getInt("con"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
+			npcDat.safeSet("baseDEX", npcData.getInt("dex"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
+			npcDat.safeSet("baseINT", npcData.getInt("int"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
+			npcDat.safeSet("baseWIT", npcData.getInt("wit"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
+			npcDat.safeSet("baseMEN", npcData.getInt("men"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
 			
 			npcDat.set("baseCpMax", 0);
 			
-			npcDat.set("factionId", NpcData.getString("faction_id"));
-			npcDat.set("factionRange", NpcData.getInt("faction_range"));
+			npcDat.set("factionId", npcData.getString("faction_id"));
+			npcDat.set("factionRange", npcData.getInt("faction_range"));
 			
-			npcDat.set("isUndead", NpcData.getString("isUndead"));
+			npcDat.set("isUndead", npcData.getString("isUndead"));
 			
-			npcDat.set("absorb_level", NpcData.getString("absorb_level"));
-			npcDat.set("absorb_type", NpcData.getString("absorb_type"));
+			npcDat.set("absorb_level", npcData.getString("absorb_level"));
+			npcDat.set("absorb_type", npcData.getString("absorb_type"));
 			
 			final NpcTemplate template = new NpcTemplate(npcDat, custom);
 			template.addVulnerability(Stats.BOW_WPN_VULN, 1);

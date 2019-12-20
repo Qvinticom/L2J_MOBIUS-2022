@@ -247,14 +247,14 @@ public class TaskManager
 		}
 		else if (type == TYPE_SHEDULED)
 		{
-			final long delay = Long.valueOf(task.getParams()[0]);
+			final long delay = Long.parseLong(task.getParams()[0]);
 			task.scheduled = ThreadPool.schedule(task, delay);
 			return true;
 		}
 		else if (type == TYPE_FIXED_SHEDULED)
 		{
-			final long delay = Long.valueOf(task.getParams()[0]);
-			final long interval = Long.valueOf(task.getParams()[1]);
+			final long delay = Long.parseLong(task.getParams()[0]);
+			final long interval = Long.parseLong(task.getParams()[1]);
 			
 			task.scheduled = ThreadPool.scheduleAtFixedRate(task, delay, interval);
 			return true;
@@ -287,7 +287,7 @@ public class TaskManager
 		}
 		else if (type == TYPE_GLOBAL_TASK)
 		{
-			final long interval = Long.valueOf(task.getParams()[0]) * 86400000;
+			final long interval = Long.parseLong(task.getParams()[0]) * 86400000;
 			final String[] hour = task.getParams()[1].split(":");
 			
 			if (hour.length != 3)
@@ -302,9 +302,9 @@ public class TaskManager
 			final Calendar min = Calendar.getInstance();
 			try
 			{
-				min.set(Calendar.HOUR_OF_DAY, Integer.valueOf(hour[0]));
-				min.set(Calendar.MINUTE, Integer.valueOf(hour[1]));
-				min.set(Calendar.SECOND, Integer.valueOf(hour[2]));
+				min.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour[0]));
+				min.set(Calendar.MINUTE, Integer.parseInt(hour[1]));
+				min.set(Calendar.SECOND, Integer.parseInt(hour[2]));
 			}
 			catch (Exception e)
 			{

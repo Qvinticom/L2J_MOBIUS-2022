@@ -24,6 +24,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
 
@@ -356,10 +357,10 @@ public class FourSepulchersManager extends GrandBossManager
 	{
 		for (int i = 31921; i < 31925; i++)
 		{
-			final int[] Location = _startHallSpawns.get(i);
-			if ((Location != null) && (Location.length == 3))
+			final int[] location = _startHallSpawns.get(i);
+			if ((location != null) && (location.length == 3))
 			{
-				final BossZone zone = GrandBossManager.getInstance().getZone(Location[0], Location[1], Location[2]);
+				final BossZone zone = GrandBossManager.getInstance().getZone(location[0], location[1], location[2]);
 				if (zone != null)
 				{
 					zone.oustAllPlayers();
@@ -596,11 +597,12 @@ public class FourSepulchersManager extends GrandBossManager
 		Spawn spawnDat;
 		NpcTemplate template;
 		
-		for (int keyNpcId : _keyBoxNpc.keySet())
+		for (Entry<Integer, Integer> entry : _keyBoxNpc.entrySet())
 		{
+			final int id = entry.getValue();
 			try
 			{
-				template = NpcTable.getInstance().getTemplate(_keyBoxNpc.get(keyNpcId));
+				template = NpcTable.getInstance().getTemplate(id);
 				if (template != null)
 				{
 					spawnDat = new Spawn(template);
@@ -611,11 +613,11 @@ public class FourSepulchersManager extends GrandBossManager
 					spawnDat.setHeading(0);
 					spawnDat.setRespawnDelay(3600);
 					SpawnTable.getInstance().addNewSpawn(spawnDat, false);
-					_keyBoxSpawns.put(keyNpcId, spawnDat);
+					_keyBoxSpawns.put(entry.getKey(), spawnDat);
 				}
 				else
 				{
-					LOGGER.warning("FourSepulchersManager.InitKeyBoxSpawns: Data missing in NPC table for ID: " + _keyBoxNpc.get(keyNpcId) + ".");
+					LOGGER.warning("FourSepulchersManager.InitKeyBoxSpawns: Data missing in NPC table for ID: " + id + ".");
 				}
 			}
 			catch (Exception e)
@@ -913,11 +915,12 @@ public class FourSepulchersManager extends GrandBossManager
 		Spawn spawnDat;
 		NpcTemplate template;
 		
-		for (int keyNpcId : _victim.keySet())
+		for (Entry<Integer, Integer> entry : _victim.entrySet())
 		{
+			final int id = entry.getValue();
 			try
 			{
-				template = NpcTable.getInstance().getTemplate(_victim.get(keyNpcId));
+				template = NpcTable.getInstance().getTemplate(id);
 				if (template != null)
 				{
 					spawnDat = new Spawn(template);
@@ -928,11 +931,11 @@ public class FourSepulchersManager extends GrandBossManager
 					spawnDat.setHeading(0);
 					spawnDat.setRespawnDelay(3600);
 					SpawnTable.getInstance().addNewSpawn(spawnDat, false);
-					_executionerSpawns.put(keyNpcId, spawnDat);
+					_executionerSpawns.put(entry.getKey(), spawnDat);
 				}
 				else
 				{
-					LOGGER.warning("FourSepulchersManager.InitExecutionerSpawns: Data missing in NPC table for ID: " + _victim.get(keyNpcId) + ".");
+					LOGGER.warning("FourSepulchersManager.InitExecutionerSpawns: Data missing in NPC table for ID: " + id + ".");
 				}
 			}
 			catch (Exception e)
@@ -1083,9 +1086,9 @@ public class FourSepulchersManager extends GrandBossManager
 	
 	private void entry(int npcId, PlayerInstance player)
 	{
-		final int[] Location = _startHallSpawns.get(npcId);
-		int driftx;
-		int drifty;
+		final int[] location = _startHallSpawns.get(npcId);
+		int driftX;
+		int driftY;
 		
 		if (Config.FS_PARTY_MEMBER_COUNT > 1)
 		{
@@ -1100,10 +1103,10 @@ public class FourSepulchersManager extends GrandBossManager
 			
 			for (PlayerInstance mem : members)
 			{
-				GrandBossManager.getInstance().getZone(Location[0], Location[1], Location[2]).allowPlayerEntry(mem, 30);
-				driftx = Rnd.get(-80, 80);
-				drifty = Rnd.get(-80, 80);
-				mem.teleToLocation(Location[0] + driftx, Location[1] + drifty, Location[2]);
+				GrandBossManager.getInstance().getZone(location[0], location[1], location[2]).allowPlayerEntry(mem, 30);
+				driftX = Rnd.get(-80, 80);
+				driftY = Rnd.get(-80, 80);
+				mem.teleToLocation(location[0] + driftX, location[1] + driftY, location[2]);
 				mem.destroyItemByItemId("Quest", ENTRANCE_PASS, 1, mem, true);
 				if (mem.getInventory().getItemByItemId(ANTIQUE_BROOCH) == null)
 				{
@@ -1136,10 +1139,10 @@ public class FourSepulchersManager extends GrandBossManager
 			
 			for (PlayerInstance mem : members)
 			{
-				GrandBossManager.getInstance().getZone(Location[0], Location[1], Location[2]).allowPlayerEntry(mem, 30);
-				driftx = Rnd.get(-80, 80);
-				drifty = Rnd.get(-80, 80);
-				mem.teleToLocation(Location[0] + driftx, Location[1] + drifty, Location[2]);
+				GrandBossManager.getInstance().getZone(location[0], location[1], location[2]).allowPlayerEntry(mem, 30);
+				driftX = Rnd.get(-80, 80);
+				driftY = Rnd.get(-80, 80);
+				mem.teleToLocation(location[0] + driftX, location[1] + driftY, location[2]);
 				mem.destroyItemByItemId("Quest", ENTRANCE_PASS, 1, mem, true);
 				if (mem.getInventory().getItemByItemId(ANTIQUE_BROOCH) == null)
 				{
@@ -1161,10 +1164,10 @@ public class FourSepulchersManager extends GrandBossManager
 		}
 		else
 		{
-			GrandBossManager.getInstance().getZone(Location[0], Location[1], Location[2]).allowPlayerEntry(player, 30);
-			driftx = Rnd.get(-80, 80);
-			drifty = Rnd.get(-80, 80);
-			player.teleToLocation(Location[0] + driftx, Location[1] + drifty, Location[2]);
+			GrandBossManager.getInstance().getZone(location[0], location[1], location[2]).allowPlayerEntry(player, 30);
+			driftX = Rnd.get(-80, 80);
+			driftY = Rnd.get(-80, 80);
+			player.teleToLocation(location[0] + driftX, location[1] + driftY, location[2]);
 			player.destroyItemByItemId("Quest", ENTRANCE_PASS, 1, player, true);
 			if (player.getInventory().getItemByItemId(ANTIQUE_BROOCH) == null)
 			{

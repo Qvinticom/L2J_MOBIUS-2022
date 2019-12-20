@@ -29,14 +29,10 @@ import org.l2jmobius.gameserver.network.serverpackets.TradeUpdate;
 
 public class AddTradeItem extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(AddTradeItem.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AddTradeItem.class.getName());
 	private int _tradeId;
 	private int _objectId;
 	private int _count;
-	
-	public AddTradeItem()
-	{
-	}
 	
 	@Override
 	protected void readImpl()

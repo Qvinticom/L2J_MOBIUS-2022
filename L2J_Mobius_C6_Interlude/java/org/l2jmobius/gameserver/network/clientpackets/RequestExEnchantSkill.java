@@ -92,10 +92,10 @@ public class RequestExEnchantSkill extends GameClientPacket
 		final Skill skill = SkillTable.getInstance().getInfo(_skillId, _skillLvl);
 		
 		int counts = 0;
-		int _requiredSp = 10000000;
-		int _requiredExp = 100000;
-		byte _rate = 0;
-		int _baseLvl = 1;
+		int requiredSp = 10000000;
+		int requiredExp = 100000;
+		byte rate = 0;
+		int baseLvl = 1;
 		
 		final EnchantSkillLearn[] skills = SkillTreeTable.getInstance().getAvailableEnchantSkills(player);
 		
@@ -109,10 +109,10 @@ public class RequestExEnchantSkill extends GameClientPacket
 			}
 			
 			counts++;
-			_requiredSp = s.getSpCost();
-			_requiredExp = s.getExp();
-			_rate = s.getRate(player);
-			_baseLvl = s.getBaseLevel();
+			requiredSp = s.getSpCost();
+			requiredExp = s.getExp();
+			rate = s.getRate(player);
+			baseLvl = s.getBaseLevel();
 		}
 		
 		if ((counts == 0) && !Config.ALT_GAME_SKILL_LEARN)
@@ -122,11 +122,11 @@ public class RequestExEnchantSkill extends GameClientPacket
 			return;
 		}
 		
-		if (player.getSp() >= _requiredSp)
+		if (player.getSp() >= requiredSp)
 		{
 			// Like L2OFF you can't delevel during skill enchant
-			final long expAfter = player.getExp() - _requiredExp;
-			if ((player.getExp() >= _requiredExp) && (expAfter >= ExperienceData.getInstance().getExpForLevel(player.getLevel())))
+			final long expAfter = player.getExp() - requiredExp;
+			if ((player.getExp() >= requiredExp) && (expAfter >= ExperienceData.getInstance().getExpForLevel(player.getLevel())))
 			{
 				if (Config.ES_SP_BOOK_NEEDED && ((_skillLvl == 101) || (_skillLvl == 141))) // only first lvl requires book
 				{
@@ -156,21 +156,21 @@ public class RequestExEnchantSkill extends GameClientPacket
 			player.sendPacket(sm);
 			return;
 		}
-		if (Rnd.get(100) <= _rate)
+		if (Rnd.get(100) <= rate)
 		{
 			player.addSkill(skill, true);
-			player.getStat().removeExpAndSp(_requiredExp, _requiredSp);
+			player.getStat().removeExpAndSp(requiredExp, requiredSp);
 			
 			final StatusUpdate su = new StatusUpdate(player.getObjectId());
 			su.addAttribute(StatusUpdate.SP, player.getSp());
 			player.sendPacket(su);
 			
 			final SystemMessage ep = new SystemMessage(SystemMessageId.EXP_DECREASED_BY_S1);
-			ep.addNumber(_requiredExp);
+			ep.addNumber(requiredExp);
 			sendPacket(ep);
 			
 			final SystemMessage sp = new SystemMessage(SystemMessageId.SP_DECREASED_S1);
-			sp.addNumber(_requiredSp);
+			sp.addNumber(requiredSp);
 			sendPacket(sp);
 			
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_SUCCEEDED_IN_ENCHANTING_THE_SKILL_S1);
@@ -181,7 +181,7 @@ public class RequestExEnchantSkill extends GameClientPacket
 		{
 			if (skill.getLevel() > 100)
 			{
-				_skillLvl = _baseLvl;
+				_skillLvl = baseLvl;
 				player.addSkill(SkillTable.getInstance().getInfo(_skillId, _skillLvl), true);
 				player.sendSkillList();
 			}
@@ -201,7 +201,7 @@ public class RequestExEnchantSkill extends GameClientPacket
 		{
 			if ((sc.getId() == _skillId) && (sc.getType() == ShortCut.TYPE_SKILL))
 			{
-				final ShortCut newsc = new ShortCut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), _skillLvl, 1);
+				final ShortCut newsc = new ShortCut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), _skillLvl);
 				player.sendPacket(new ShortCutRegister(newsc));
 				player.registerShortCut(newsc);
 			}

@@ -69,7 +69,6 @@ public class CharNameTable
 		catch (SQLException e)
 		{
 			LOGGER.warning("Could not check existing player name " + e);
-			e.printStackTrace();
 		}
 		
 		return name;
@@ -96,7 +95,6 @@ public class CharNameTable
 		catch (SQLException e)
 		{
 			LOGGER.warning("Could not check existing player id " + e);
-			e.printStackTrace();
 		}
 		
 		return id;
@@ -123,7 +121,6 @@ public class CharNameTable
 		catch (SQLException e)
 		{
 			LOGGER.warning("Could not check existing player id " + e);
-			e.printStackTrace();
 		}
 		
 		return accessLevel;
@@ -150,7 +147,6 @@ public class CharNameTable
 		catch (SQLException e)
 		{
 			LOGGER.warning("Could not check existing char number " + e);
-			e.printStackTrace();
 		}
 		
 		return number;

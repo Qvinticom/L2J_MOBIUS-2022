@@ -23,6 +23,7 @@ import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -951,12 +952,9 @@ public class SevenSigns
 			
 			for (StatsSet sevenDat : _signsPlayerData.values())
 			{
-				if (player != null)
+				if ((player != null) && (sevenDat.getInt("char_obj_id") != player.getObjectId()))
 				{
-					if (sevenDat.getInt("char_obj_id") != player.getObjectId())
-					{
-						continue;
-					}
+					continue;
 				}
 				
 				statement = con.prepareStatement("UPDATE seven_signs SET cabal=?, seal=?, red_stones=?, green_stones=?, blue_stones=?, ancient_adena_amount=?, contribution_score=? WHERE char_obj_id=?");
@@ -1103,7 +1101,7 @@ public class SevenSigns
 		}
 		
 		// Increasing Seal total score for the player chosen Seal.
-		if (currPlayerData.getString("cabal") == "dawn")
+		if (currPlayerData.getString("cabal").equals("dawn"))
 		{
 			_signsDawnSealTotals.put(chosenSeal, _signsDawnSealTotals.get(chosenSeal) + 1);
 		}
@@ -1272,9 +1270,10 @@ public class SevenSigns
 	 */
 	protected void initializeSeals()
 	{
-		for (Integer currSeal : _signsSealOwners.keySet())
+		for (Entry<Integer, Integer> entry : _signsSealOwners.entrySet())
 		{
-			final int sealOwner = _signsSealOwners.get(currSeal);
+			final int currSeal = entry.getKey();
+			final int sealOwner = entry.getValue();
 			
 			if (sealOwner != CABAL_NULL)
 			{

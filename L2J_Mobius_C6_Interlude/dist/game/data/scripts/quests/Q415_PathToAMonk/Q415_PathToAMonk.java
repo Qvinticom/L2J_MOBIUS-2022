@@ -409,66 +409,54 @@ public class Q415_PathToAMonk extends Quest
 				break;
 			
 			case 20014:
-				if ((st.getInt("cond") == 11) && st.dropItemsAlways(FELIM_LIZARDMAN_TOOTH, 1, 3))
+				if ((st.getInt("cond") == 11) && st.dropItemsAlways(FELIM_LIZARDMAN_TOOTH, 1, 3) && (st.getQuestItemsCount(RATMAN_FANG) == 3) && (st.getQuestItemsCount(LANG_KLIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(VUKU_ORC_TUSK) == 3))
 				{
-					if ((st.getQuestItemsCount(RATMAN_FANG) == 3) && (st.getQuestItemsCount(LANG_KLIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(VUKU_ORC_TUSK) == 3))
-					{
-						st.set("cond", "12");
-						st.takeItems(VUKU_ORC_TUSK, -1);
-						st.takeItems(RATMAN_FANG, -1);
-						st.takeItems(LANG_KLIZARDMAN_TOOTH, -1);
-						st.takeItems(FELIM_LIZARDMAN_TOOTH, -1);
-						st.takeItems(LEATHER_POUCH_4, 1);
-						st.giveItems(LEATHER_POUCH_FULL_4, 1);
-					}
+					st.set("cond", "12");
+					st.takeItems(VUKU_ORC_TUSK, -1);
+					st.takeItems(RATMAN_FANG, -1);
+					st.takeItems(LANG_KLIZARDMAN_TOOTH, -1);
+					st.takeItems(FELIM_LIZARDMAN_TOOTH, -1);
+					st.takeItems(LEATHER_POUCH_4, 1);
+					st.giveItems(LEATHER_POUCH_FULL_4, 1);
 				}
 				break;
 			
 			case 20017:
-				if ((st.getInt("cond") == 11) && st.dropItemsAlways(VUKU_ORC_TUSK, 1, 3))
+				if ((st.getInt("cond") == 11) && st.dropItemsAlways(VUKU_ORC_TUSK, 1, 3) && (st.getQuestItemsCount(RATMAN_FANG) == 3) && (st.getQuestItemsCount(LANG_KLIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(FELIM_LIZARDMAN_TOOTH) == 3))
 				{
-					if ((st.getQuestItemsCount(RATMAN_FANG) == 3) && (st.getQuestItemsCount(LANG_KLIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(FELIM_LIZARDMAN_TOOTH) == 3))
-					{
-						st.set("cond", "12");
-						st.takeItems(VUKU_ORC_TUSK, -1);
-						st.takeItems(RATMAN_FANG, -1);
-						st.takeItems(LANG_KLIZARDMAN_TOOTH, -1);
-						st.takeItems(FELIM_LIZARDMAN_TOOTH, -1);
-						st.takeItems(LEATHER_POUCH_4, 1);
-						st.giveItems(LEATHER_POUCH_FULL_4, 1);
-					}
+					st.set("cond", "12");
+					st.takeItems(VUKU_ORC_TUSK, -1);
+					st.takeItems(RATMAN_FANG, -1);
+					st.takeItems(LANG_KLIZARDMAN_TOOTH, -1);
+					st.takeItems(FELIM_LIZARDMAN_TOOTH, -1);
+					st.takeItems(LEATHER_POUCH_4, 1);
+					st.giveItems(LEATHER_POUCH_FULL_4, 1);
 				}
 				break;
 			
 			case 20024:
-				if ((st.getInt("cond") == 11) && st.dropItemsAlways(LANG_KLIZARDMAN_TOOTH, 1, 3))
+				if ((st.getInt("cond") == 11) && st.dropItemsAlways(LANG_KLIZARDMAN_TOOTH, 1, 3) && (st.getQuestItemsCount(RATMAN_FANG) == 3) && (st.getQuestItemsCount(FELIM_LIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(VUKU_ORC_TUSK) == 3))
 				{
-					if ((st.getQuestItemsCount(RATMAN_FANG) == 3) && (st.getQuestItemsCount(FELIM_LIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(VUKU_ORC_TUSK) == 3))
-					{
-						st.set("cond", "12");
-						st.takeItems(VUKU_ORC_TUSK, -1);
-						st.takeItems(RATMAN_FANG, -1);
-						st.takeItems(LANG_KLIZARDMAN_TOOTH, -1);
-						st.takeItems(FELIM_LIZARDMAN_TOOTH, -1);
-						st.takeItems(LEATHER_POUCH_4, 1);
-						st.giveItems(LEATHER_POUCH_FULL_4, 1);
-					}
+					st.set("cond", "12");
+					st.takeItems(VUKU_ORC_TUSK, -1);
+					st.takeItems(RATMAN_FANG, -1);
+					st.takeItems(LANG_KLIZARDMAN_TOOTH, -1);
+					st.takeItems(FELIM_LIZARDMAN_TOOTH, -1);
+					st.takeItems(LEATHER_POUCH_4, 1);
+					st.giveItems(LEATHER_POUCH_FULL_4, 1);
 				}
 				break;
 			
 			case 20359:
-				if ((st.getInt("cond") == 11) && st.dropItemsAlways(RATMAN_FANG, 1, 3))
+				if ((st.getInt("cond") == 11) && st.dropItemsAlways(RATMAN_FANG, 1, 3) && (st.getQuestItemsCount(LANG_KLIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(FELIM_LIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(VUKU_ORC_TUSK) == 3))
 				{
-					if ((st.getQuestItemsCount(LANG_KLIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(FELIM_LIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(VUKU_ORC_TUSK) == 3))
-					{
-						st.set("cond", "12");
-						st.takeItems(VUKU_ORC_TUSK, -1);
-						st.takeItems(RATMAN_FANG, -1);
-						st.takeItems(LANG_KLIZARDMAN_TOOTH, -1);
-						st.takeItems(FELIM_LIZARDMAN_TOOTH, -1);
-						st.takeItems(LEATHER_POUCH_4, 1);
-						st.giveItems(LEATHER_POUCH_FULL_4, 1);
-					}
+					st.set("cond", "12");
+					st.takeItems(VUKU_ORC_TUSK, -1);
+					st.takeItems(RATMAN_FANG, -1);
+					st.takeItems(LANG_KLIZARDMAN_TOOTH, -1);
+					st.takeItems(FELIM_LIZARDMAN_TOOTH, -1);
+					st.takeItems(LEATHER_POUCH_4, 1);
+					st.giveItems(LEATHER_POUCH_FULL_4, 1);
 				}
 				break;
 			

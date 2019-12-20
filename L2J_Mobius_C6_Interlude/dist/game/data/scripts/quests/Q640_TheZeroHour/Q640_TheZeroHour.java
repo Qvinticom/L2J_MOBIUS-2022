@@ -125,7 +125,7 @@ public class Q640_TheZeroHour extends Quest
 		}
 		else if (Util.isDigit(event))
 		{
-			int reward[] = REWARDS[Integer.parseInt(event)];
+			int[] reward = REWARDS[Integer.parseInt(event)];
 			
 			if (st.getQuestItemsCount(FANG_OF_STAKATO) >= reward[0])
 			{

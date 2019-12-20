@@ -282,12 +282,9 @@ public class TopicBBSManager extends BaseBBSManager
 			}
 			
 			Topic t = forum.getTopic(j);
-			if (t != null)
+			if ((t != null) && (i++ >= (12 * (index - 1))))
 			{
-				if (i++ >= (12 * (index - 1)))
-				{
-					StringUtil.append(sb, "<table border=0 cellspacing=0 cellpadding=5 WIDTH=610><tr><td FIXWIDTH=5></td><td FIXWIDTH=415><a action=\"bypass _bbsposts;read;", forum.getID(), ";", t.getID(), "\">", t.getName(), "</a></td><td FIXWIDTH=120 align=center></td><td FIXWIDTH=70 align=center>", dateFormat.format(new Date(t.getDate())), "</td></tr></table><img src=\"L2UI.Squaregray\" width=\"610\" height=\"1\">");
-				}
+				StringUtil.append(sb, "<table border=0 cellspacing=0 cellpadding=5 WIDTH=610><tr><td FIXWIDTH=5></td><td FIXWIDTH=415><a action=\"bypass _bbsposts;read;", forum.getID(), ";", t.getID(), "\">", t.getName(), "</a></td><td FIXWIDTH=120 align=center></td><td FIXWIDTH=70 align=center>", dateFormat.format(new Date(t.getDate())), "</td></tr></table><img src=\"L2UI.Squaregray\" width=\"610\" height=\"1\">");
 			}
 		}
 		

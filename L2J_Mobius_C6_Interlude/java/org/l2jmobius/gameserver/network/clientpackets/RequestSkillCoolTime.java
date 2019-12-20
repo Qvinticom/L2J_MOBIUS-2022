@@ -17,26 +17,22 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 
 public class RequestSkillCoolTime extends GameClientPacket
 {
-	GameClient _client;
-	
 	@Override
 	public void readImpl()
 	{
-		_client = getClient();
 	}
 	
 	@Override
 	public void runImpl()
 	{
-		final PlayerInstance pl = _client.getPlayer();
-		if (pl != null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player != null)
 		{
-			pl.sendPacket(new SkillCoolTime(pl));
+			player.sendPacket(new SkillCoolTime(player));
 		}
 	}
 }

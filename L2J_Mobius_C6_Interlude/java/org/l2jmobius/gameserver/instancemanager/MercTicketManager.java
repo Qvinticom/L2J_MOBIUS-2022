@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
  */
 public class MercTicketManager
 {
-	protected static Logger LOGGER = Logger.getLogger(MercTicketManager.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(MercTicketManager.class.getName());
 	
 	private final List<ItemInstance> _droppedTickets = new ArrayList<>();
 	
@@ -735,7 +735,6 @@ public class MercTicketManager
 		catch (Exception e)
 		{
 			LOGGER.info("Exception: loadMercenaryData(): " + e.getMessage());
-			e.printStackTrace();
 		}
 	}
 	
@@ -772,12 +771,8 @@ public class MercTicketManager
 				count++;
 			}
 		}
-		if (count >= limit)
-		{
-			return true;
-		}
 		
-		return false;
+		return count >= limit;
 	}
 	
 	/**
@@ -809,12 +804,8 @@ public class MercTicketManager
 				count++;
 			}
 		}
-		if (count >= limit)
-		{
-			return true;
-		}
 		
-		return false;
+		return count >= limit;
 	}
 	
 	/**
@@ -880,7 +871,7 @@ public class MercTicketManager
 			
 			if (despawnDelay > 0)
 			{
-				ThreadPool.schedule(() -> npc.deleteMe(), despawnDelay);
+				ThreadPool.schedule(npc::deleteMe, despawnDelay);
 			}
 		}
 	}

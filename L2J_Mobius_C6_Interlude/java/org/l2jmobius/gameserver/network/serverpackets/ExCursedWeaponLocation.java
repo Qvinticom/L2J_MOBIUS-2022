@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.model.Location;
  */
 public class ExCursedWeaponLocation extends GameServerPacket
 {
-	/** The _cursed weapon info. */
 	private final List<CursedWeaponInfo> _cursedWeaponInfo;
 	
 	/**
@@ -81,13 +80,13 @@ public class ExCursedWeaponLocation extends GameServerPacket
 		/**
 		 * Instantiates a new cursed weapon info.
 		 * @param location the Location
-		 * @param ID the iD
+		 * @param cwId the Id
 		 * @param status the status
 		 */
-		public CursedWeaponInfo(Location location, int ID, int status)
+		public CursedWeaponInfo(Location location, int cwId, int status)
 		{
 			loc = location;
-			id = ID;
+			id = cwId;
 			activated = status;
 		}
 	}

@@ -34,25 +34,25 @@ public class NewbieHelper extends Quest
 {
 	// Quest Items
 	// Human
-	private final static int RECOMMENDATION_01 = 1067;
-	private final static int RECOMMENDATION_02 = 1068;
+	private static final int RECOMMENDATION_01 = 1067;
+	private static final int RECOMMENDATION_02 = 1068;
 	// Elf
-	private final static int LEAF_OF_MOTHERTREE = 1069;
+	private static final int LEAF_OF_MOTHERTREE = 1069;
 	// Dark Elf
-	private final static int BLOOD_OF_JUNDIN = 1070;
+	private static final int BLOOD_OF_JUNDIN = 1070;
 	// Dwarf
-	private final static int LICENSE_OF_MINER = 1498;
+	private static final int LICENSE_OF_MINER = 1498;
 	// Orc
-	private final static int VOUCHER_OF_FLAME = 1496;
+	private static final int VOUCHER_OF_FLAME = 1496;
 	
 	// Items Reward
-	private final static int SOULSHOT_NOVICE = 5789;
-	private final static int SPIRITSHOT_NOVICE = 5790;
-	private final static int BLUE_GEM = 6353;
-	private final static int TOKEN = 8542;
-	private final static int SCROLL = 8594;
+	private static final int SOULSHOT_NOVICE = 5789;
+	private static final int SPIRITSHOT_NOVICE = 5790;
+	private static final int BLUE_GEM = 6353;
+	private static final int TOKEN = 8542;
+	private static final int SCROLL = 8594;
 	
-	private final static Map<String, Event> _events = new HashMap<>();
+	private static final Map<String, Event> _events = new HashMap<>();
 	static
 	{
 		_events.put("30008_02", new Event("30008-03.htm", -84058, 243239, -3730, RECOMMENDATION_01, 0x00, SOULSHOT_NOVICE, 200, 0x00, 0, 0));
@@ -64,7 +64,7 @@ public class NewbieHelper extends Quest
 	}
 	
 	// @formatter:off
-	private final static Map<Integer, Talk> _talks = new HashMap<>();
+	private static final Map<Integer, Talk> _talks = new HashMap<>();
 	static
 	{
 		// Grand Master - Roien - Human
@@ -126,14 +126,14 @@ public class NewbieHelper extends Quest
 	{
 		int _raceId;
 		String[] _htmlfiles;
-		int _npcTyp;
+		int _npcType;
 		int _item;
 		
 		public Talk(int raceId, String[] htmlfiles, int npcTyp, int item)
 		{
 			_raceId = raceId;
 			_htmlfiles = htmlfiles;
-			_npcTyp = npcTyp;
+			_npcType = npcTyp;
 			_item = item;
 		}
 	}
@@ -232,13 +232,10 @@ public class NewbieHelper extends Quest
 						qs1.giveItems(ev._gift1, ev._count1);
 						qs1.playTutorialVoice(ev._gift1 == SPIRITSHOT_NOVICE ? "tutorial_voice_027" : "tutorial_voice_026");
 					}
-					else if (classId == ev._classId2)
+					else if ((classId == ev._classId2) && (ev._gift2 != 0))
 					{
-						if (ev._gift2 != 0)
-						{
-							qs1.giveItems(ev._gift2, ev._count2);
-							qs1.playTutorialVoice("tutorial_voice_026");
-						}
+						qs1.giveItems(ev._gift2, ev._count2);
+						qs1.playTutorialVoice("tutorial_voice_026");
 					}
 					qs1.unset("step");
 					qs1.set("onlyone", "1");
@@ -270,7 +267,9 @@ public class NewbieHelper extends Quest
 		boolean isMage = player.isMageClass();
 		boolean isOrcMage = player.getClassId().getId() == 49;
 		
-		int npcTyp = 0, raceId = 0, item = 0;
+		int npcType = 0;
+		int raceId = 0;
+		int item = 0;
 		String[] htmlfiles = {};
 		Talk talk = _talks.get(npcId);
 		try
@@ -279,10 +278,10 @@ public class NewbieHelper extends Quest
 			{
 				raceId = talk._raceId;
 				htmlfiles = talk._htmlfiles;
-				npcTyp = talk._npcTyp;
+				npcType = talk._npcType;
 				item = talk._item;
 			}
-			if (((level >= 10) || (qs1.getInt("onlyone") == 1)) && (npcTyp == 1))
+			if (((level >= 10) || (qs1.getInt("onlyone") == 1)) && (npcType == 1))
 			{
 				htmltext = "newbiehelper_03.htm";
 			}
@@ -291,7 +290,7 @@ public class NewbieHelper extends Quest
 				if (player.getRace().ordinal() == raceId)
 				{
 					htmltext = htmlfiles[0];
-					if (npcTyp == 1)
+					if (npcType == 1)
 					{
 						if ((qs1.getInt("step") == 0) && (qs2.get("Ex") == null))
 						{
@@ -342,7 +341,7 @@ public class NewbieHelper extends Quest
 							htmltext = htmlfiles[3];
 						}
 					}
-					else if (npcTyp == 0)
+					else if (npcType == 0)
 					{
 						int step = qs1.getInt("step");
 						if (step == 1)
@@ -377,7 +376,7 @@ public class NewbieHelper extends Quest
 				npc.showChatWindow(player);
 				return null;
 			}
-			else if ((npcTyp == 0) && (qs1.getState() == State.COMPLETED))
+			else if ((npcType == 0) && (qs1.getState() == State.COMPLETED))
 			{
 				htmltext = "" + npcId + "-04.htm";
 			}
@@ -387,9 +386,9 @@ public class NewbieHelper extends Quest
 				return null;
 			}
 		}
-		catch (Exception ex)
+		catch (Exception e)
 		{
-			// TODO: do nothing
+			// Ignore.
 		}
 		return htmltext;
 	}

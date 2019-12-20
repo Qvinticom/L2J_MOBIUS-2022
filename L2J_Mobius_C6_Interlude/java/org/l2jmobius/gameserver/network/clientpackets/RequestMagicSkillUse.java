@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
  */
 public class RequestMagicSkillUse extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestMagicSkillUse.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestMagicSkillUse.class.getName());
 	
 	private int _magicId;
 	private boolean _ctrlPressed;

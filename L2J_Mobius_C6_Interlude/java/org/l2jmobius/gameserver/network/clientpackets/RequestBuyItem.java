@@ -46,7 +46,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class RequestBuyItem extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestBuyItem.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestBuyItem.class.getName());
 	
 	private int _listId;
 	private int _count;
@@ -196,13 +196,10 @@ public class RequestBuyItem extends GameClientPacket
 		
 		_listId = list.getListId();
 		
-		if (_listId > 1000000) // lease
+		if ((_listId > 1000000) && (merchant != null) && (merchant.getTemplate().npcId != (_listId - 1000000)))
 		{
-			if ((merchant != null) && (merchant.getTemplate().npcId != (_listId - 1000000)))
-			{
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return;
 		}
 		
 		if (_count < 1)
@@ -262,10 +259,7 @@ public class RequestBuyItem extends GameClientPacket
 					price *= Config.RATE_SIEGE_GUARDS_PRICE;
 				}
 			}
-			/*
-			 * TODO: Disabled until Leaseholders are rewritten ;-) } else { ItemInstance li = merchant.findLeaseItem(itemId, 0); if (li == null || li.getCount() < cnt) { cnt = li.getCount(); if (cnt <= 0) { items.remove(i); continue; } items.get(i).setCount((int)cnt); } price =
-			 * li.getPriceToSell(); // lease holder sells the item weight = li.getItem().getWeight(); }
-			 */
+			
 			if (price < 0)
 			{
 				LOGGER.warning("ERROR, no price found .. wrong buylist ??");
@@ -344,21 +338,14 @@ public class RequestBuyItem extends GameClientPacket
 				return;
 			}
 			
-			if (list.countDecrease(itemId))
+			if (list.countDecrease(itemId) && !list.decreaseCount(itemId, count))
 			{
-				if (!list.decreaseCount(itemId, count))
-				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_QUANTITY_THAT_CAN_BE_INPUTTED);
-					sendPacket(sm);
-					return;
-				}
+				SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_QUANTITY_THAT_CAN_BE_INPUTTED);
+				sendPacket(sm);
+				return;
 			}
 			// Add item to Inventory and adjust update packet
 			player.getInventory().addItem("Buy", itemId, count, player, merchant);
-			/*
-			 * TODO: Disabled until Leaseholders are rewritten ;-) // Update Leaseholder list if (_listId >= 1000000) { ItemInstance li = merchant.findLeaseItem(item.getItemId(), 0); if (li == null) continue; if (li.getCount() < item.getCount()) item.setCount(li.getCount());
-			 * li.setCount(li.getCount() - item.getCount()); li.updateDatabase(); price = item.getCount() + li.getPriceToSell(); ItemInstance la = merchant.getLeaseAdena(); la.setCount(la.getCount() + price); la.updateDatabase(); player.getInventory().addItem(item); item.updateDatabase(); }
-			 */
 		}
 		
 		if (merchant != null)
@@ -368,7 +355,7 @@ public class RequestBuyItem extends GameClientPacket
 			if (html != null)
 			{
 				final NpcHtmlMessage boughtMsg = new NpcHtmlMessage(merchant.getObjectId());
-				boughtMsg.setHtml(html.replaceAll("%objectId%", String.valueOf(merchant.getObjectId())));
+				boughtMsg.setHtml(html.replace("%objectId%", String.valueOf(merchant.getObjectId())));
 				player.sendPacket(boughtMsg);
 			}
 		}

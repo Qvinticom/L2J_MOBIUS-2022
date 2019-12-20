@@ -66,7 +66,7 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 						final String token = st.nextToken();
 						if (Util.isDigit(token))
 						{
-							final PlayerCondOverride ex = PlayerCondOverride.getCondOverride(Integer.valueOf(token));
+							final PlayerCondOverride ex = PlayerCondOverride.getCondOverride(Integer.parseInt(token));
 							if (ex != null)
 							{
 								if (activeChar.canOverrideCond(ex))

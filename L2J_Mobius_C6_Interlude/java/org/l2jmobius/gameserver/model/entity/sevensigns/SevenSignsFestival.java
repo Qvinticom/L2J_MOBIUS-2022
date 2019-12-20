@@ -3395,7 +3395,7 @@ public class SevenSignsFestival implements SpawnListener
 					
 					// Try to update an existing record.
 					statement = con.prepareStatement("UPDATE seven_signs_festival SET date=?, score=?, members=? WHERE cycle=? AND cabal=? AND festivalId=?");
-					statement.setLong(1, Long.valueOf(festivalDat.getString("date")));
+					statement.setLong(1, Long.parseLong(festivalDat.getString("date")));
 					statement.setInt(2, festivalDat.getInt("score"));
 					statement.setString(3, festivalDat.getString("members"));
 					statement.setInt(4, festivalCycle);
@@ -3415,7 +3415,7 @@ public class SevenSignsFestival implements SpawnListener
 					statement.setInt(1, festivalId);
 					statement.setString(2, cabal);
 					statement.setInt(3, festivalCycle);
-					statement.setLong(4, Long.valueOf(festivalDat.getString("date")));
+					statement.setLong(4, Long.parseLong(festivalDat.getString("date")));
 					statement.setInt(5, festivalDat.getInt("score"));
 					statement.setString(6, festivalDat.getString("members"));
 					statement.execute();
@@ -3680,7 +3680,6 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			return -1;
 		}
-		
 		return Math.round((_nextFestivalCycleStart - System.currentTimeMillis()) / 60000);
 	}
 	
@@ -3694,7 +3693,6 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			return -1;
 		}
-		
 		return Math.round((_nextFestivalStart - System.currentTimeMillis()) / 60000) + 1;
 	}
 	
@@ -3708,7 +3706,6 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			return "<font color=\"FF0000\">This is the Seal Validation period. Festivals will resume next week.</font>";
 		}
-		
 		return "<font color=\"FF0000\">The next festival will begin in " + getMinsToNextFestival() + " minute(s).</font>";
 	}
 	
@@ -4506,7 +4503,7 @@ public class SevenSignsFestival implements SpawnListener
 		protected void festivalInit()
 		{
 			// Teleport all players to arena and notify them.
-			if (_participants.size() > 0)
+			if (!_participants.isEmpty())
 			{
 				try
 				{
@@ -4648,24 +4645,24 @@ public class SevenSignsFestival implements SpawnListener
 		 */
 		protected void spawnFestivalMonsters(int respawnDelay, int spawnType)
 		{
-			int[][] _npcSpawns = null;
+			int[][] npcSpawns = null;
 			
 			switch (spawnType)
 			{
 				case 0:
 				case 1:
 				{
-					_npcSpawns = _cabal == SevenSigns.CABAL_DAWN ? FESTIVAL_DAWN_PRIMARY_SPAWNS[_levelRange] : FESTIVAL_DUSK_PRIMARY_SPAWNS[_levelRange];
+					npcSpawns = _cabal == SevenSigns.CABAL_DAWN ? FESTIVAL_DAWN_PRIMARY_SPAWNS[_levelRange] : FESTIVAL_DUSK_PRIMARY_SPAWNS[_levelRange];
 					break;
 				}
 				case 2:
 				{
-					_npcSpawns = _cabal == SevenSigns.CABAL_DAWN ? FESTIVAL_DAWN_SECONDARY_SPAWNS[_levelRange] : FESTIVAL_DUSK_SECONDARY_SPAWNS[_levelRange];
+					npcSpawns = _cabal == SevenSigns.CABAL_DAWN ? FESTIVAL_DAWN_SECONDARY_SPAWNS[_levelRange] : FESTIVAL_DUSK_SECONDARY_SPAWNS[_levelRange];
 					break;
 				}
 				case 3:
 				{
-					_npcSpawns = _cabal == SevenSigns.CABAL_DAWN ? FESTIVAL_DAWN_CHEST_SPAWNS[_levelRange] : FESTIVAL_DUSK_CHEST_SPAWNS[_levelRange];
+					npcSpawns = _cabal == SevenSigns.CABAL_DAWN ? FESTIVAL_DAWN_CHEST_SPAWNS[_levelRange] : FESTIVAL_DUSK_CHEST_SPAWNS[_levelRange];
 					break;
 				}
 				default:
@@ -4674,7 +4671,7 @@ public class SevenSignsFestival implements SpawnListener
 				}
 			}
 			
-			for (int[] npcSpawn2 : _npcSpawns)
+			for (int[] npcSpawn2 : npcSpawns)
 			{
 				final FestivalSpawn currSpawn = new FestivalSpawn(npcSpawn2);
 				
@@ -4748,10 +4745,9 @@ public class SevenSignsFestival implements SpawnListener
 		 */
 		public void sendMessageToParticipants(String message)
 		{
-			if (_participants.size() > 0)
+			if (!_participants.isEmpty())
 			{
 				CreatureSay cs = new CreatureSay(_witchInst.getObjectId(), 0, "Festival Witch", message);
-				
 				for (PlayerInstance participant : _participants)
 				{
 					try
@@ -4770,7 +4766,7 @@ public class SevenSignsFestival implements SpawnListener
 		 */
 		protected void festivalEnd()
 		{
-			if (_participants.size() > 0)
+			if (!_participants.isEmpty())
 			{
 				for (PlayerInstance participant : _participants)
 				{
@@ -4794,7 +4790,6 @@ public class SevenSignsFestival implements SpawnListener
 				}
 			}
 			_participants = null;
-			
 			unspawnMobs();
 		}
 		

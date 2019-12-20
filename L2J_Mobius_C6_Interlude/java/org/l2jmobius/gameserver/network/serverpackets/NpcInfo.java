@@ -182,13 +182,11 @@ public class NpcInfo extends GameServerPacket
 			return;
 		}
 		
-		if (_creature instanceof Summon)
+		if ((_creature instanceof Summon) && (((Summon) _creature).getOwner() != null) && ((Summon) _creature).getOwner().getAppearance().isInvisible())
 		{
-			if ((((Summon) _creature).getOwner() != null) && ((Summon) _creature).getOwner().getAppearance().isInvisible())
-			{
-				return;
-			}
+			return;
 		}
+		
 		writeC(0x16);
 		writeD(_creature.getObjectId());
 		writeD(_idTemplate + 1000000); // npctype id

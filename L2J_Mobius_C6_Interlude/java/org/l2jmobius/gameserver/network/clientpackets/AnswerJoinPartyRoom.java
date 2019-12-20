@@ -65,33 +65,33 @@ public class AnswerJoinPartyRoom extends GameClientPacket
 		// If answer is positive, join the requester's PartyRoom.
 		if ((_answer == 1) && !partner.isRequestExpired())
 		{
-			final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(partner.getPartyRoom());
-			if (_room == null)
+			final PartyMatchRoom room = PartyMatchRoomList.getInstance().getRoom(partner.getPartyRoom());
+			if (room == null)
 			{
 				return;
 			}
 			
-			if ((player.getLevel() >= _room.getMinLvl()) && (player.getLevel() <= _room.getMaxLvl()))
+			if ((player.getLevel() >= room.getMinLvl()) && (player.getLevel() <= room.getMaxLvl()))
 			{
 				// Remove from waiting list
 				PartyMatchWaitingList.getInstance().removePlayer(player);
 				
 				player.setPartyRoom(partner.getPartyRoom());
 				
-				player.sendPacket(new PartyMatchDetail(player, _room));
-				player.sendPacket(new ExPartyRoomMember(player, _room, 0));
+				player.sendPacket(new PartyMatchDetail(room));
+				player.sendPacket(new ExPartyRoomMember(room, 0));
 				
-				for (PlayerInstance _member : _room.getPartyMembers())
+				for (PlayerInstance member : room.getPartyMembers())
 				{
-					if (_member == null)
+					if (member == null)
 					{
 						continue;
 					}
 					
-					_member.sendPacket(new ExManagePartyRoomMember(player, _room, 0));
-					_member.sendPacket(new SystemMessage(SystemMessageId.S1_ENTERED_PARTY_ROOM).addString(player.getName()));
+					member.sendPacket(new ExManagePartyRoomMember(player, room, 0));
+					member.sendPacket(new SystemMessage(SystemMessageId.S1_ENTERED_PARTY_ROOM).addString(player.getName()));
 				}
-				_room.addMember(player);
+				room.addMember(player);
 				
 				// Info Broadcast
 				player.broadcastUserInfo();

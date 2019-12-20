@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.model.entity.ClanHall;
 
 public class DoorTable
 {
-	private static Logger LOGGER = Logger.getLogger(DoorTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(DoorTable.class.getName());
 	
 	private final Map<Integer, DoorInstance> _doors = new HashMap<>();
 	
@@ -106,7 +106,7 @@ public class DoorTable
 		catch (IOException e)
 		{
 			_initialized = false;
-			LOGGER.warning("error while creating door table " + e);
+			LOGGER.warning("Error while creating door table " + e);
 		}
 		finally
 		{
@@ -118,7 +118,7 @@ public class DoorTable
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with DoorTable: " + e1.getMessage());
 				}
 			}
 			
@@ -130,7 +130,7 @@ public class DoorTable
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with DoorTable: " + e1.getMessage());
 				}
 			}
 			
@@ -142,7 +142,7 @@ public class DoorTable
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with DoorTable: " + e1.getMessage());
 				}
 			}
 		}

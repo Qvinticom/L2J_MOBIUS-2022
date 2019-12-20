@@ -50,6 +50,8 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class AdminSpawn implements IAdminCommandHandler
 {
+	public static final Logger LOGGER = Logger.getLogger(AdminSpawn.class.getName());
+	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_show_spawns",
@@ -68,8 +70,6 @@ public class AdminSpawn implements IAdminCommandHandler
 		"admin_topspawncount",
 		"admin_top_spawn_count"
 	};
-	
-	public static Logger LOGGER = Logger.getLogger(AdminSpawn.class.getName());
 	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)

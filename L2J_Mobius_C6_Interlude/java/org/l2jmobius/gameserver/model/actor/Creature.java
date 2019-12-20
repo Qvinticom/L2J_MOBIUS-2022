@@ -60,7 +60,6 @@ import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillTargetType;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
-import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.WorldRegion;
@@ -243,14 +242,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public boolean charIsGM()
 	{
-		if (this instanceof PlayerInstance)
-		{
-			if (((PlayerInstance) this).isGM())
-			{
-				return true;
-			}
-		}
-		return false;
+		return (this instanceof PlayerInstance) && ((PlayerInstance) this).isGM();
 	}
 	
 	/**
@@ -475,7 +467,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				}
 				catch (NullPointerException e)
 				{
-					e.printStackTrace();
+					LOGGER.warning(e.toString());
 				}
 			}
 		}
@@ -520,7 +512,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 			catch (NullPointerException e)
 			{
-				e.printStackTrace();
+				LOGGER.warning(e.toString());
 			}
 		}
 	}
@@ -671,11 +663,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			x1 = getX();
 			y1 = getY();
 			z1 = getZ();
-			TownZone Town;
-			Town = TownManager.getInstance().getTown(x1, y1, z1);
-			if ((Town != null) && _inTownWar)
+			TownZone town;
+			town = TownManager.getInstance().getTown(x1, y1, z1);
+			if ((town != null) && _inTownWar)
 			{
-				if ((Town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
+				if ((town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
 				{
 					return;
 				}
@@ -962,15 +954,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		if ((target instanceof GrandBossInstance) && (((GrandBossInstance) target).getNpcId() == 29022))
+		if ((target instanceof GrandBossInstance) && (((GrandBossInstance) target).getNpcId() == 29022) && (Math.abs(_clientZ - target.getZ()) > 200))
 		{
-			if (Math.abs(_clientZ - target.getZ()) > 200)
-			{
-				sendPacket(new SystemMessage(SystemMessageId.CANT_SEE_TARGET));
-				getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
+			sendPacket(new SystemMessage(SystemMessageId.CANT_SEE_TARGET));
+			getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return;
 		}
 		
 		// GeoData Los Check here (or dz > 1000)
@@ -1180,13 +1169,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 						target.setCurrentCp(0);
 					}
 				}
-				else if (player.isHero())
+				else if (player.isHero() && (target instanceof PlayerInstance) && ((PlayerInstance) target).isCursedWeaponEquiped())
 				{
-					if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isCursedWeaponEquiped())
-					{
-						// If a cursed weapon is hitted by a Hero, Cp is reduced to 0
-						target.setCurrentCp(0);
-					}
+					// If a cursed weapon is hitted by a Hero, Cp is reduced to 0
+					target.setCurrentCp(0);
 				}
 			}
 		}
@@ -1438,18 +1424,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				{
 					attackcount += 1;
 					
-					if (attackcount <= attackcountmax)
+					if ((attackcount <= attackcountmax) && ((target == getAI().getAttackTarget()) || target.isAutoAttackable(this)))
 					{
-						if ((target == getAI().getAttackTarget()) || target.isAutoAttackable(this))
+						hitted |= doAttackHitSimple(attack, target, attackpercent, sAtk);
+						attackpercent /= 1.15;
+						
+						// Flag player if the target is another player
+						if ((this instanceof PlayerInstance) && (obj instanceof PlayerInstance))
 						{
-							hitted |= doAttackHitSimple(attack, target, attackpercent, sAtk);
-							attackpercent /= 1.15;
-							
-							// Flag player if the target is another player
-							if ((this instanceof PlayerInstance) && (obj instanceof PlayerInstance))
-							{
-								((PlayerInstance) this).updatePvPStatus(target);
-							}
+							((PlayerInstance) this).updatePvPStatus(target);
 						}
 					}
 				}
@@ -1587,12 +1570,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		if ((creature instanceof PlayerInstance) && !skill.isPotion())
 		{
 			final ItemInstance rhand = ((PlayerInstance) this).getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
-			if (((rhand != null) && (rhand.getItemType() == WeaponType.BOW)))
+			if (((rhand != null) && (rhand.getItemType() == WeaponType.BOW)) && isAttackingNow())
 			{
-				if (isAttackingNow())
-				{
-					return;
-				}
+				return;
 			}
 		}
 		
@@ -2059,14 +2039,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					stopAllEffects();
 				}
 			}
-			else if (player._inEventTvT && TvT.is_started())
+			else if (player._inEventTvT && TvT.isStarted())
 			{
 				if (Config.TVT_REMOVE_BUFFS_ON_DIE)
 				{
 					stopAllEffects();
 				}
 			}
-			else if (player._inEventCTF && CTF.is_started())
+			else if (player._inEventCTF && CTF.isStarted())
 			{
 				if (Config.CTF_REMOVE_BUFFS_ON_DIE)
 				{
@@ -2867,7 +2847,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	@Override
 	public CreatureKnownList getKnownList()
 	{
-		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof CreatureKnownList))
+		if (!(super.getKnownList() instanceof CreatureKnownList))
 		{
 			setKnownList(new CreatureKnownList(this));
 		}
@@ -3138,7 +3118,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			catch (Throwable e)
 			{
 				LOGGER.warning(e.getMessage());
-				e.printStackTrace();
 				enableAllSkills();
 			}
 		}
@@ -3218,13 +3197,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	class PvPFlag implements Runnable
 	{
-		/**
-		 * Instantiates a new pvp flag.
-		 */
-		public PvPFlag()
-		{
-		}
-		
 		@Override
 		public void run()
 		{
@@ -3328,7 +3300,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				continue;
 			}
 			
-			if ((effect.getSkill().getId() == newEffect.getSkill().getId()) && (effect.getEffectType() == newEffect.getEffectType()) && (effect.getStackType() == newEffect.getStackType()))
+			if ((effect.getSkill().getId() == newEffect.getSkill().getId()) && (effect.getEffectType() == newEffect.getEffectType()) && (effect.getStackType().equals(newEffect.getStackType())))
 			{
 				if (this instanceof PlayerInstance)
 				{
@@ -3366,7 +3338,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// Remove first DeBuff if number of debuffs > DEBUFFS_MAX_AMOUNT
-		if ((getDeBuffCount() >= Config.DEBUFFS_MAX_AMOUNT) && !doesStack(tempskill) && tempskill.is_Debuff())
+		if ((getDeBuffCount() >= Config.DEBUFFS_MAX_AMOUNT) && !doesStack(tempskill) && tempskill.isDebuff())
 		{
 			removeFirstDeBuff(tempskill.getId());
 		}
@@ -3431,17 +3403,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			stackQueue = new ArrayList<>();
 		}
 		
-		if (stackQueue.size() > 0)
+		// Get the first stacked effect of the Stack group selected
+		if (!stackQueue.isEmpty() && _effects.contains(stackQueue.get(0)))
 		{
-			// Get the first stacked effect of the Stack group selected
-			if (_effects.contains(stackQueue.get(0)))
-			{
-				// Remove all Func objects corresponding to this stacked effect from the Calculator set of the Creature
-				removeStatsOwner(stackQueue.get(0));
-				
-				// Set the Effect to Not In Use
-				stackQueue.get(0).setInUse(false);
-			}
+			// Remove all Func objects corresponding to this stacked effect from the Calculator set of the Creature
+			removeStatsOwner(stackQueue.get(0));
+			
+			// Set the Effect to Not In Use
+			stackQueue.get(0).setInUse(false);
 		}
 		
 		// Add the new effect to the stack group selected at its position
@@ -3542,7 +3511,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		if (effect.getStackType() == "none")
+		if (effect.getStackType().equals("none"))
 		{
 			// Remove Func added by this effect from the Creature Calculator
 			removeStatsOwner(effect);
@@ -3557,7 +3526,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			// Get the list of all stacked effects corresponding to the stack type of the Effect to add
 			final List<Effect> stackQueue = _stackedEffects.get(effect.getStackType());
 			
-			if ((stackQueue == null) || (stackQueue.size() < 1))
+			if ((stackQueue == null) || stackQueue.isEmpty())
 			{
 				return;
 			}
@@ -3576,17 +3545,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					// Remove all its Func objects from the Creature calculator set
 					removeStatsOwner(effect);
 					
-					// Check if there's another effect in the Stack Group
-					if (stackQueue.size() > 0)
+					// Check if there's another effect in the Stack Group and add its list of Funcs to the Calculator set of the Creature
+					if (!stackQueue.isEmpty() && _effects.contains(stackQueue.get(0)))
 					{
 						// Add its list of Funcs to the Calculator set of the Creature
-						if (_effects.contains(stackQueue.get(0)))
-						{
-							// Add its list of Funcs to the Calculator set of the Creature
-							addStatFuncs(stackQueue.get(0).getStatFuncs());
-							// Set the effect to In Use
-							stackQueue.get(0).setInUse(true);
-						}
+						addStatFuncs(stackQueue.get(0).getStatFuncs());
+						// Set the effect to In Use
+						stackQueue.get(0).setInUse(true);
 					}
 				}
 				if (stackQueue.isEmpty())
@@ -4313,18 +4278,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 		}
 		
-		if (os != null)
+		if ((os != null) && (player != null) && (Olympiad.getInstance().getSpectators(player.getOlympiadGameId()) != null))
 		{
-			if ((player != null) && (Olympiad.getInstance().getSpectators(player.getOlympiadGameId()) != null))
+			for (PlayerInstance spectator : Olympiad.getInstance().getSpectators(player.getOlympiadGameId()))
 			{
-				for (PlayerInstance spectator : Olympiad.getInstance().getSpectators(player.getOlympiadGameId()))
+				if (spectator == null)
 				{
-					if (spectator == null)
-					{
-						continue;
-					}
-					spectator.sendPacket(os);
+					continue;
 				}
+				spectator.sendPacket(os);
 			}
 		}
 	}
@@ -4391,9 +4353,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		synchronized (_effects)
 		{
-			final Effect[] output = _effects.toArray(new Effect[_effects.size()]);
-			
-			return output;
+			return _effects.toArray(new Effect[_effects.size()]);
 		}
 	}
 	
@@ -4586,10 +4546,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public class AIAccessor
 	{
-		public AIAccessor()
-		{
-		}
-		
 		/**
 		 * Return the Creature managed by this Accessor AI.<BR>
 		 * <BR>
@@ -5100,7 +5056,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 						}
 						catch (NullPointerException e)
 						{
-							e.printStackTrace();
+							LOGGER.warning(e.toString());
 						}
 					}
 				}
@@ -5654,7 +5610,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * TODO: test broadcast head packets ffro !in boat.
 	 * @param pos the pos
 	 * @param updateKnownObjects the update known objects
 	 */
@@ -5730,29 +5685,26 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// If object==null, Cancel Attack or Cast
-		if (object == null)
+		if ((object == null) && (_target != null))
 		{
-			if (_target != null)
+			final TargetUnselected my = new TargetUnselected(this);
+			
+			// No need to broadcast the packet to all players
+			if (this instanceof PlayerInstance)
 			{
-				final TargetUnselected my = new TargetUnselected(this);
-				
-				// No need to broadcast the packet to all players
-				if (this instanceof PlayerInstance)
+				// Send packet just to me and to party, not to any other that does not use the information
+				if (!isInParty())
 				{
-					// Send packet just to me and to party, not to any other that does not use the information
-					if (!isInParty())
-					{
-						sendPacket(my);
-					}
-					else
-					{
-						getParty().broadcastToPartyMembers(my);
-					}
+					sendPacket(my);
 				}
 				else
 				{
-					sendPacket(new TargetUnselected(this));
+					getParty().broadcastToPartyMembers(my);
 				}
+			}
+			else
+			{
+				sendPacket(new TargetUnselected(this));
 			}
 		}
 		
@@ -5825,7 +5777,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				((PlayerInstance) this).getClient().sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			else if ((TvT.is_sitForced() && ((PlayerInstance) this)._inEventTvT) || (CTF.is_sitForced() && ((PlayerInstance) this)._inEventCTF) || (DM.is_sitForced() && ((PlayerInstance) this)._inEventDM))
+			else if ((TvT.isSitForced() && ((PlayerInstance) this)._inEventTvT) || (CTF.isSitForced() && ((PlayerInstance) this)._inEventCTF) || (DM.isSitForced() && ((PlayerInstance) this)._inEventDM))
 			{
 				((PlayerInstance) this).sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
 				((PlayerInstance) this).getClient().sendPacket(ActionFailed.STATIC_PACKET);
@@ -6548,7 +6500,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			if (Config.ALLOW_RAID_BOSS_PETRIFIED && ((this instanceof PlayerInstance) || (this instanceof Summon))) // Check if option is True Or False.
 			{
-				boolean to_be_cursed = false;
+				boolean toBeCursed = false;
 				
 				// check on BossZone raid lvl
 				if (!(target instanceof Playable) && !(target instanceof SummonInstance))
@@ -6556,57 +6508,55 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					// this must work just on mobs/raids
 					if ((target.isRaid() && (getLevel() > (target.getLevel() + 8))) || (!(target instanceof PlayerInstance) && ((target.getTarget() != null) && (target.getTarget() instanceof RaidBossInstance) && (getLevel() > (((RaidBossInstance) target.getTarget()).getLevel() + 8)))) || (!(target instanceof PlayerInstance) && ((target.getTarget() != null) && (target.getTarget() instanceof GrandBossInstance) && (getLevel() > (((GrandBossInstance) target.getTarget()).getLevel() + 8)))))
 					{
-						to_be_cursed = true;
+						toBeCursed = true;
 					}
 					
 					// advanced check too if not already cursed
-					if (!to_be_cursed)
+					if (!toBeCursed)
 					{
-						int boss_id = -1;
-						NpcTemplate boss_template = null;
-						final BossZone boss_zone = GrandBossManager.getInstance().getZone(this);
+						int bossId = -1;
+						NpcTemplate bossTemplate = null;
+						final BossZone bossZone = GrandBossManager.getInstance().getZone(this);
 						
-						if (boss_zone != null)
+						if (bossZone != null)
 						{
-							boss_id = boss_zone.getBossId();
+							bossId = bossZone.getBossId();
 						}
 						
-						if (boss_id != -1)
+						if (bossId != -1)
 						{
-							boss_template = NpcTable.getInstance().getTemplate(boss_id);
+							bossTemplate = NpcTable.getInstance().getTemplate(bossId);
 							
-							if ((boss_template != null) && (getLevel() > (boss_template.getLevel() + 8)))
+							if ((bossTemplate != null) && (getLevel() > (bossTemplate.getLevel() + 8)))
 							{
-								MonsterInstance boss_instance = null;
+								MonsterInstance bossInstance = null;
 								
-								if (boss_template.type.equals("RaidBoss"))
+								if (bossTemplate.type.equals("RaidBoss"))
 								{
-									final StatsSet actual_boss_stat = RaidBossSpawnManager.getInstance().getStatsSet(boss_id);
-									if (actual_boss_stat != null)
+									if (RaidBossSpawnManager.getInstance().getStatsSet(bossId) != null)
 									{
-										boss_instance = RaidBossSpawnManager.getInstance().getBoss(boss_id);
+										bossInstance = RaidBossSpawnManager.getInstance().getBoss(bossId);
 									}
 								}
-								else if (boss_template.type.equals("GrandBoss"))
+								else if (bossTemplate.type.equals("GrandBoss"))
 								{
-									final StatsSet actual_boss_stat = GrandBossManager.getInstance().getStatsSet(boss_id);
-									if (actual_boss_stat != null)
+									if (GrandBossManager.getInstance().getStatsSet(bossId) != null)
 									{
-										boss_instance = GrandBossManager.getInstance().getBoss(boss_id);
+										bossInstance = GrandBossManager.getInstance().getBoss(bossId);
 									}
 								}
 								
 								// max allowed rage into take cursed is 3000
-								if ((boss_instance != null) && boss_instance.isInsideRadius(this, 3000, false, false))
+								if ((bossInstance != null) && bossInstance.isInsideRadius(this, 3000, false, false))
 								{
-									to_be_cursed = true;
+									toBeCursed = true;
 								}
 							}
 						}
 					}
 				}
 				
-				if (to_be_cursed)
+				if (toBeCursed)
 				{
 					Skill skill = SkillTable.getInstance().getInfo(4515, 1);
 					
@@ -6639,7 +6589,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 						((MinionInstance) target).getLeader().stopHating(this);
 						
 						List<MinionInstance> spawnedMinions = ((MinionInstance) target).getLeader().getSpawnedMinions();
-						if ((spawnedMinions != null) && (spawnedMinions.size() > 0))
+						if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
 						{
 							Iterator<MinionInstance> itr = spawnedMinions.iterator();
 							MinionInstance minion;
@@ -6667,7 +6617,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					{
 						((Attackable) target).stopHating(this);
 						List<MinionInstance> spawnedMinions = ((MonsterInstance) target).getSpawnedMinions();
-						if ((spawnedMinions != null) && (spawnedMinions.size() > 0))
+						if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
 						{
 							Iterator<MinionInstance> itr = spawnedMinions.iterator();
 							MinionInstance minion;
@@ -6870,7 +6820,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	@Override
 	public void onForcedAttack(PlayerInstance player)
 	{
-		if ((player.getTarget() == null) || !(player.getTarget() instanceof Creature))
+		if (!(player.getTarget() instanceof Creature))
 		{
 			// If target is not attackable, send a Server->Client packet ActionFailed
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -7064,10 +7014,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					return false;
 				}
 				else if (src.isInStartedCTFEvent() && dst.isInStartedCTFEvent())
-				{
-					return false;
-				}
-				else if (src.isInStartedVIPEvent() && dst.isInStartedVIPEvent())
 				{
 					return false;
 				}
@@ -7395,22 +7341,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 			
 			// Stop casting if this skill is used right now
-			if ((_lastSkillCast != null) && isCastingNow())
+			if ((_lastSkillCast != null) && isCastingNow() && (oldSkill.getId() == _lastSkillCast.getId()))
 			{
-				if (oldSkill.getId() == _lastSkillCast.getId())
-				{
-					abortCast();
-				}
+				abortCast();
 			}
 			
-			if (cancelEffect || oldSkill.isToggle())
+			if ((cancelEffect || oldSkill.isToggle()) && (getFirstEffect(oldSkill) == null))
 			{
-				final Effect e = getFirstEffect(oldSkill);
-				if (e == null)
-				{
-					removeStatsOwner(oldSkill);
-					stopSkillEffects(oldSkill.getId());
-				}
+				removeStatsOwner(oldSkill);
+				stopSkillEffects(oldSkill.getId());
 			}
 			
 			if (oldSkill.isChance() && (_chanceSkills != null))
@@ -7532,7 +7471,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 			
 			// Check for all debuff skills
-			if (e.getSkill().is_Debuff())
+			if (e.getSkill().isDebuff())
 			{
 				numDeBuffs++;
 			}
@@ -7619,7 +7558,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				continue;
 			}
 			
-			if (e.getSkill().is_Debuff())
+			if (e.getSkill().isDebuff())
 			{
 				if (preferSkill == 0)
 				{
@@ -7682,7 +7621,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public boolean doesStack(Skill checkSkill)
 	{
-		if ((_effects.size() < 1) || (checkSkill.getEffectTemplates() == null) || (checkSkill.getEffectTemplates().length < 1) || (checkSkill.getEffectTemplates()[0].stackType == null))
+		if (_effects.isEmpty() || (checkSkill.getEffectTemplates() == null) || (checkSkill.getEffectTemplates().length < 1) || (checkSkill.getEffectTemplates()[0].stackType == null))
 		{
 			return false;
 		}
@@ -7758,8 +7697,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			escapeRange = skill.getSkillRadius();
 		}
 		
-		WorldObject[] final_targets = null;
-		int _skipped = 0;
+		WorldObject[] finalTargets = null;
+		int skipped = 0;
 		
 		if (escapeRange > 0)
 		{
@@ -7777,7 +7716,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					// Check if the target is behind a wall
 					if ((skill.getSkillRadius() > 0) && skill.isOffensive() && Config.PATHFINDING && !GeoEngine.getInstance().canSeeTarget(this, targets[i]))
 					{
-						_skipped++;
+						skipped++;
 						continue;
 					}
 					
@@ -7802,7 +7741,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			{
 				if (this instanceof PlayerInstance)
 				{
-					for (int i = 0; i < _skipped; i++)
+					for (int i = 0; i < skipped; i++)
 					{
 						sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANT_SEE_TARGET));
 					}
@@ -7811,31 +7750,27 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				abortCast();
 				return;
 			}
-			final_targets = targetList.toArray(new Creature[targetList.size()]);
+			finalTargets = targetList.toArray(new Creature[targetList.size()]);
 		}
 		else
 		{
-			final_targets = targets;
+			finalTargets = targets;
 		}
 		
-		// if the skill is not a potion and player
-		// is not casting now
+		// if the skill is not a potion and player is not casting now
 		// Ensure that a cast is in progress
 		// Check if player is using fake death.
 		// Potions can be used while faking death.
-		if (!skill.isPotion())
+		if (!skill.isPotion() && (!isCastingNow() || isAlikeDead()))
 		{
-			if (!isCastingNow() || isAlikeDead())
-			{
-				_skillCast = null;
-				enableAllSkills();
-				
-				getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
-				
-				_castEndTime = 0;
-				_castInterruptTime = 0;
-				return;
-			}
+			_skillCast = null;
+			enableAllSkills();
+			
+			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
+			
+			_castEndTime = 0;
+			_castInterruptTime = 0;
+			return;
 		}
 		
 		// Get the display identifier of the skill
@@ -7847,20 +7782,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// Send a Server->Client packet MagicSkillLaunched to the Creature AND to all PlayerInstance in the _KnownPlayers of the Creature
 		if (!skill.isPotion())
 		{
-			broadcastPacket(new MagicSkillLaunched(this, magicId, level, final_targets));
+			broadcastPacket(new MagicSkillLaunched(this, magicId, level, finalTargets));
 		}
 		
 		if (instant)
 		{
-			onMagicHitTimer(final_targets, skill, coolTime, true);
+			onMagicHitTimer(finalTargets, skill, coolTime, true);
 		}
 		else if (skill.isPotion())
 		{
-			_potionCast = ThreadPool.schedule(new MagicUseTask(final_targets, skill, coolTime, 2), 200);
+			_potionCast = ThreadPool.schedule(new MagicUseTask(finalTargets, skill, coolTime, 2), 200);
 		}
 		else
 		{
-			_skillCast = ThreadPool.schedule(new MagicUseTask(final_targets, skill, coolTime, 2), 200);
+			_skillCast = ThreadPool.schedule(new MagicUseTask(finalTargets, skill, coolTime, 2), 200);
 		}
 	}
 	
@@ -7960,7 +7895,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 		
 		try
@@ -8025,7 +7960,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 		
 		if (instant || (coolTime == 0))
@@ -8153,21 +8088,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 						{
 							for (WorldObject target : targets)
 							{
-								if ((target != null) && (target instanceof Creature) && !((Creature) target).isDead())
+								if ((target instanceof Creature) && !((Creature) target).isDead() && activeWeapon.getSkillEffects(this, (Creature) target, skill))
 								{
-									final Creature creature = (Creature) target;
-									
-									if (activeWeapon.getSkillEffects(this, creature, skill))
-									{
-										sendPacket(SystemMessage.sendString("Target affected by weapon special ability!"));
-									}
+									sendPacket(SystemMessage.sendString("Target affected by weapon special ability!"));
 								}
 							}
 						}
 					}
 					catch (Exception e)
 					{
-						e.printStackTrace();
+						LOGGER.warning(e.toString());
 					}
 				}
 			}
@@ -8376,12 +8306,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					// Set some values inside target's instance for later use
 					Creature creature = (Creature) target;
 					
-					if (skill.getEffectType() == SkillType.BUFF)
+					if ((skill.getEffectType() == SkillType.BUFF) && creature.isBlockBuff())
 					{
-						if (creature.isBlockBuff())
-						{
-							continue;
-						}
+						continue;
 					}
 					
 					if (target instanceof Creature)
@@ -8405,65 +8332,63 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					
 					if (Config.ALLOW_RAID_BOSS_PETRIFIED && ((this instanceof PlayerInstance) || (this instanceof Summon))) // Check if option is True Or False.
 					{
-						boolean to_be_cursed = false;
+						boolean toBeCursed = false;
 						
 						// check on BossZone raid lvl
 						if (!(creature.getTarget() instanceof Playable) && !(creature.getTarget() instanceof SummonInstance))
 						{
 							// this must work just on mobs/raids
-							if ((creature.isRaid() && (getLevel() > (creature.getLevel() + 8))) || (!(creature instanceof PlayerInstance) && ((creature.getTarget() != null) && (creature.getTarget() instanceof RaidBossInstance) && (getLevel() > (((RaidBossInstance) creature.getTarget()).getLevel() + 8)))) || (!(creature instanceof PlayerInstance) && ((creature.getTarget() != null) && (creature.getTarget() instanceof GrandBossInstance) && (getLevel() > (((GrandBossInstance) creature.getTarget()).getLevel() + 8)))))
+							if ((creature.isRaid() && (getLevel() > (creature.getLevel() + 8))) || (!(creature instanceof PlayerInstance) && ((creature.getTarget() instanceof RaidBossInstance) && (getLevel() > (((RaidBossInstance) creature.getTarget()).getLevel() + 8)))) || (!(creature instanceof PlayerInstance) && ((creature.getTarget() instanceof GrandBossInstance) && (getLevel() > (((GrandBossInstance) creature.getTarget()).getLevel() + 8)))))
 							{
-								to_be_cursed = true;
+								toBeCursed = true;
 							}
 							
 							// advanced check too if not already cursed
-							if (!to_be_cursed)
+							if (!toBeCursed)
 							{
-								int boss_id = -1;
-								NpcTemplate boss_template = null;
-								final BossZone boss_zone = GrandBossManager.getInstance().getZone(this);
+								int bossId = -1;
+								NpcTemplate bossTemplate = null;
+								final BossZone bossZone = GrandBossManager.getInstance().getZone(this);
 								
-								if (boss_zone != null)
+								if (bossZone != null)
 								{
-									boss_id = boss_zone.getBossId();
+									bossId = bossZone.getBossId();
 								}
 								
-								if (boss_id != -1)
+								if (bossId != -1)
 								{
-									boss_template = NpcTable.getInstance().getTemplate(boss_id);
+									bossTemplate = NpcTable.getInstance().getTemplate(bossId);
 									
-									if ((boss_template != null) && (getLevel() > (boss_template.getLevel() + 8)))
+									if ((bossTemplate != null) && (getLevel() > (bossTemplate.getLevel() + 8)))
 									{
-										MonsterInstance boss_instance = null;
+										MonsterInstance bossInstance = null;
 										
-										if (boss_template.type.equals("RaidBoss"))
+										if (bossTemplate.type.equals("RaidBoss"))
 										{
-											final StatsSet actual_boss_stat = RaidBossSpawnManager.getInstance().getStatsSet(boss_id);
-											if (actual_boss_stat != null)
+											if (RaidBossSpawnManager.getInstance().getStatsSet(bossId) != null)
 											{
-												boss_instance = RaidBossSpawnManager.getInstance().getBoss(boss_id);
+												bossInstance = RaidBossSpawnManager.getInstance().getBoss(bossId);
 											}
 										}
-										else if (boss_template.type.equals("GrandBoss"))
+										else if (bossTemplate.type.equals("GrandBoss"))
 										{
-											final StatsSet actual_boss_stat = GrandBossManager.getInstance().getStatsSet(boss_id);
-											if (actual_boss_stat != null)
+											if (GrandBossManager.getInstance().getStatsSet(bossId) != null)
 											{
-												boss_instance = GrandBossManager.getInstance().getBoss(boss_id);
+												bossInstance = GrandBossManager.getInstance().getBoss(bossId);
 											}
 										}
 										
 										// max allowed rage into take cursed is 3000
-										if ((boss_instance != null/* && alive */) && boss_instance.isInsideRadius(this, 3000, false, false))
+										if ((bossInstance != null/* && alive */) && bossInstance.isInsideRadius(this, 3000, false, false))
 										{
-											to_be_cursed = true;
+											toBeCursed = true;
 										}
 									}
 								}
 							}
 						}
 						
-						if (to_be_cursed)
+						if (toBeCursed)
 						{
 							if (skill.isMagic())
 							{
@@ -8508,7 +8433,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 								{
 									((MinionInstance) creature).getLeader().stopHating(this);
 									List<MinionInstance> spawnedMinions = ((MonsterInstance) creature).getSpawnedMinions();
-									if ((spawnedMinions != null) && (spawnedMinions.size() > 0))
+									if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
 									{
 										Iterator<MinionInstance> itr = spawnedMinions.iterator();
 										MinionInstance minion;
@@ -8536,7 +8461,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 								{
 									((Attackable) creature).stopHating(this);
 									List<MinionInstance> spawnedMinions = ((MonsterInstance) creature).getSpawnedMinions();
-									if ((spawnedMinions != null) && (spawnedMinions.size() > 0))
+									if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
 									{
 										Iterator<MinionInstance> itr = spawnedMinions.iterator();
 										MinionInstance minion;
@@ -8647,25 +8572,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 			
 			ISkillHandler handler = null;
-			
-			if (skill.isToggle())
+			// Check if the skill effects are already in progress on the Creature
+			if (skill.isToggle() && (getFirstEffect(skill.getId()) != null))
 			{
-				// Check if the skill effects are already in progress on the Creature
-				if (getFirstEffect(skill.getId()) != null)
+				handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
+				if (handler != null)
 				{
-					handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
-					
-					if (handler != null)
-					{
-						handler.useSkill(this, skill, targets);
-					}
-					else
-					{
-						skill.useSkill(this, targets);
-					}
-					
-					return;
+					handler.useSkill(this, skill, targets);
 				}
+				else
+				{
+					skill.useSkill(this, targets);
+				}
+				return;
 			}
 			
 			// Check if over-hit is possible
@@ -8698,7 +8617,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			// if the skill is a potion, must delete the potion item
 			if (skill.isPotion() && (this instanceof Playable))
 			{
-				Potions.delete_Potion_Item((Playable) this, skill.getId(), skill.getLevel());
+				Potions.deletePotionItem((Playable) this, skill.getId(), skill.getLevel());
 			}
 			
 			if ((this instanceof PlayerInstance) || (this instanceof Summon))
@@ -8893,12 +8812,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			if (Math.abs(angleDiff) <= maxAngleDiff)
 			{
-				if (isBehind(_target))
-				{
-					return false;
-				}
-				
-				return true;
+				return !isBehind(_target);
 			}
 		}
 		
@@ -8927,12 +8841,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return false;
 		}
 		
-		if (target instanceof Creature)
+		if ((target instanceof Creature) && (isBehind(_target) || isFront(_target)))
 		{
-			if (isBehind(_target) || isFront(_target))
-			{
-				return false;
-			}
+			return false;
 		}
 		
 		return true;
@@ -9570,12 +9481,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void reduceCurrentHp(double i, Creature attacker, boolean awake)
 	{
-		if (this instanceof NpcInstance)
+		if ((this instanceof NpcInstance) && Config.INVUL_NPC_LIST.contains(((NpcInstance) this).getNpcId()))
 		{
-			if (Config.INVUL_NPC_LIST.contains(Integer.valueOf(((NpcInstance) this).getNpcId())))
-			{
-				return;
-			}
+			return;
 		}
 		
 		if (Config.L2JMOD_CHAMPION_ENABLE && _champion && (Config.L2JMOD_CHAMPION_HP != 0))
@@ -9850,14 +9758,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public boolean reflectSkill(Skill skill)
 	{
-		final double reflect = calcStat(skill.isMagic() ? Stats.REFLECT_SKILL_MAGIC : Stats.REFLECT_SKILL_PHYSIC, 0, null, null);
-		
-		if (Rnd.get(100) < reflect)
-		{
-			return true;
-		}
-		
-		return false;
+		return Rnd.get(100) < calcStat(skill.isMagic() ? Stats.REFLECT_SKILL_MAGIC : Stats.REFLECT_SKILL_PHYSIC, 0, null, null);
 	}
 	
 	/**

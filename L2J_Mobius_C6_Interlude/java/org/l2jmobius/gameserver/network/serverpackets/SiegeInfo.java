@@ -45,7 +45,7 @@ import org.l2jmobius.gameserver.model.entity.siege.Castle;
  */
 public class SiegeInfo extends GameServerPacket
 {
-	private static Logger LOGGER = Logger.getLogger(SiegeInfo.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SiegeInfo.class.getName());
 	private final Castle _castle;
 	
 	public SiegeInfo(Castle castle)

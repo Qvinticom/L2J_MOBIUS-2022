@@ -104,10 +104,6 @@ public class Location
 	
 	public boolean equals(int x, int y, int z)
 	{
-		if ((_x == x) && (_y == y) && (_z == z))
-		{
-			return true;
-		}
-		return false;
+		return (_x == x) && (_y == y) && (_z == z);
 	}
 }

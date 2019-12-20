@@ -141,7 +141,7 @@ public class ManorManagerInstance extends MerchantInstance
 				return;
 			}
 			
-			String params = command.substring(command.indexOf("?") + 1);
+			String params = command.substring(command.indexOf('?') + 1);
 			StringTokenizer st = new StringTokenizer(params, "&");
 			final int ask = Integer.parseInt(st.nextToken().split("=")[1]);
 			final int state = Integer.parseInt(st.nextToken().split("=")[1]);

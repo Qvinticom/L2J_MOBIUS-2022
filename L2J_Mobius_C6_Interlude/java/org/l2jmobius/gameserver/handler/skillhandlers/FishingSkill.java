@@ -41,7 +41,7 @@ public class FishingSkill implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if ((creature == null) || !(creature instanceof PlayerInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return;
 		}
@@ -74,16 +74,16 @@ public class FishingSkill implements ISkillHandler
 			return;
 		}
 		
-		int SS = 1;
+		int ss = 1;
 		int pen = 0;
 		
 		if (weaponInst.getChargedFishshot())
 		{
-			SS = 2;
+			ss = 2;
 		}
 		
 		final double gradebonus = 1 + (weaponItem.getCrystalType() * 0.1);
-		int dmg = (int) (skill.getPower() * gradebonus * SS);
+		int dmg = (int) (skill.getPower() * gradebonus * ss);
 		if (player.getSkillLevel(1315) <= (skill.getLevel() - 2)) // 1315 - Fish Expertise Penalty
 		{
 			player.sendPacket(SystemMessageId.REELING_PUMPING_3_LEVELS_HIGHER_THAN_FISHING_PENALTY);
@@ -96,7 +96,7 @@ public class FishingSkill implements ISkillHandler
 			dmg = penatlydmg;
 		}
 		
-		if (SS > 1)
+		if (ss > 1)
 		{
 			weaponInst.setChargedFishshot(false);
 		}

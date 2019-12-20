@@ -93,25 +93,22 @@ public class SpiritShot implements IItemHandler
 		}
 		
 		// Consume Spiritshot if player has enough of them
-		if (!Config.DONT_DESTROY_SS)
+		if (!Config.DONT_DESTROY_SS && !player.destroyItemWithoutTrace("Consume", item.getObjectId(), weaponItem.getSpiritShotCount(), null, false))
 		{
-			if (!player.destroyItemWithoutTrace("Consume", item.getObjectId(), weaponItem.getSpiritShotCount(), null, false))
+			if (player.getAutoSoulShot().containsKey(itemId))
 			{
-				if (player.getAutoSoulShot().containsKey(itemId))
-				{
-					player.removeAutoSoulShot(itemId);
-					player.sendPacket(new ExAutoSoulShot(itemId, 0));
-					
-					final SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
-					sm.addString(item.getItem().getName());
-					player.sendPacket(sm);
-				}
-				else
-				{
-					player.sendPacket(SystemMessageId.NOT_ENOUGH_SPIRITSHOTS);
-				}
-				return;
+				player.removeAutoSoulShot(itemId);
+				player.sendPacket(new ExAutoSoulShot(itemId, 0));
+				
+				final SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
+				sm.addString(item.getItem().getName());
+				player.sendPacket(sm);
 			}
+			else
+			{
+				player.sendPacket(SystemMessageId.NOT_ENOUGH_SPIRITSHOTS);
+			}
+			return;
 		}
 		
 		// Charge Spiritshot

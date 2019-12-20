@@ -313,7 +313,6 @@ public class Fort
 	public void upgradeDoor(int doorId, int hp, int pDef, int mDef)
 	{
 		final DoorInstance door = getDoor(doorId);
-		
 		if (door == null)
 		{
 			return;
@@ -322,9 +321,7 @@ public class Fort
 		if (door.getDoorId() == doorId)
 		{
 			door.setCurrentHp(door.getMaxHp() + hp);
-			
 			saveDoorUpgrade(doorId, hp, pDef, mDef);
-			return;
 		}
 	}
 	
@@ -382,8 +379,7 @@ public class Fort
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Exception: loadFortData(): " + e.getMessage());
-			e.printStackTrace();
+			LOGGER.warning("Exception: loadFortData(): " + e);
 		}
 	}
 	
@@ -414,8 +410,7 @@ public class Fort
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Exception: loadFortDoor(): " + e.getMessage());
-			e.printStackTrace();
+			LOGGER.warning("Exception: loadFortDoor(): " + e);
 		}
 	}
 	
@@ -437,8 +432,7 @@ public class Fort
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Exception: loadFortDoorUpgrade(): " + e.getMessage());
-			e.printStackTrace();
+			LOGGER.warning("Exception: loadFortDoorUpgrade(): " + e);
 		}
 	}
 	
@@ -453,8 +447,7 @@ public class Fort
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Exception: removeDoorUpgrade(): " + e.getMessage());
-			e.printStackTrace();
+			LOGGER.warning("Exception: removeDoorUpgrade(): " + e);
 		}
 	}
 	
@@ -472,8 +465,7 @@ public class Fort
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Exception: saveDoorUpgrade(int doorId, int hp, int pDef, int mDef): " + e.getMessage());
-			e.printStackTrace();
+			LOGGER.warning("Exception: saveDoorUpgrade(int doorId, int hp, int pDef, int mDef): " + e);
 		}
 	}
 	

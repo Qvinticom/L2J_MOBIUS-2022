@@ -27,7 +27,7 @@ import org.l2jmobius.loginserver.network.clientpackets.ClientBasePacket;
  */
 public class ServerStatus extends ClientBasePacket
 {
-	protected static Logger LOGGER = Logger.getLogger(ServerStatus.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(ServerStatus.class.getName());
 	
 	public static final String[] STATUS_STRING =
 	{

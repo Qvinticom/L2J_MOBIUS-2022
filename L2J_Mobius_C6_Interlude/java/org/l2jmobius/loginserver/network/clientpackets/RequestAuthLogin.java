@@ -39,7 +39,7 @@ import org.l2jmobius.loginserver.network.serverpackets.ServerList;
  */
 public class RequestAuthLogin extends LoginClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestAuthLogin.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestAuthLogin.class.getName());
 	
 	private final byte[] _raw = new byte[128];
 	
@@ -91,7 +91,7 @@ public class RequestAuthLogin extends LoginClientPacket
 		}
 		catch (GeneralSecurityException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 			return;
 		}
 		

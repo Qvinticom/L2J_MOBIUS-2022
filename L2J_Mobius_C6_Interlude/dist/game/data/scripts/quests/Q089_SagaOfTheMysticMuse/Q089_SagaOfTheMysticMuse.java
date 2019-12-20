@@ -26,7 +26,7 @@ public class Q089_SagaOfTheMysticMuse extends SagasSuperClass
 	public Q089_SagaOfTheMysticMuse()
 	{
 		super(89, "Saga of the Mystic Muse");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			30174,
 			31627,
@@ -41,7 +41,7 @@ public class Q089_SagaOfTheMysticMuse extends SagasSuperClass
 			31658,
 			31283
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7530,
@@ -56,39 +56,39 @@ public class Q089_SagaOfTheMysticMuse extends SagasSuperClass
 			7083,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27251,
 			27238,
 			27255
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			103
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x1b
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			119518,
 			181227,
 			181215
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-28658,
 			36703,
 			36676
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-3811,
 			-4816,
 			-4812
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

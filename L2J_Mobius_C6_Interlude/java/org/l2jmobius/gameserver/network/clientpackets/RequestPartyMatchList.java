@@ -54,74 +54,74 @@ public class RequestPartyMatchList extends GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final PlayerInstance _player = getClient().getPlayer();
-		if (_player == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		if (_roomid > 0)
 		{
-			final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
-			if (_room != null)
+			final PartyMatchRoom room = PartyMatchRoomList.getInstance().getRoom(_roomid);
+			if (room != null)
 			{
-				LOGGER.info("PartyMatchRoom #" + _room.getId() + " changed by " + _player.getName());
-				_room.setMaxMembers(_membersmax);
-				_room.setMinLvl(_lvlmin);
-				_room.setMaxLvl(_lvlmax);
-				_room.setLootType(_loot);
-				_room.setTitle(_roomtitle);
+				LOGGER.info("PartyMatchRoom #" + room.getId() + " changed by " + player.getName());
+				room.setMaxMembers(_membersmax);
+				room.setMinLvl(_lvlmin);
+				room.setMaxLvl(_lvlmax);
+				room.setLootType(_loot);
+				room.setTitle(_roomtitle);
 				
-				for (PlayerInstance _member : _room.getPartyMembers())
+				for (PlayerInstance member : room.getPartyMembers())
 				{
-					if (_member == null)
+					if (member == null)
 					{
 						continue;
 					}
 					
-					_member.sendPacket(new PartyMatchDetail(_player, _room));
-					_member.sendPacket(SystemMessageId.PARTY_ROOM_REVISED);
+					member.sendPacket(new PartyMatchDetail(room));
+					member.sendPacket(SystemMessageId.PARTY_ROOM_REVISED);
 				}
 			}
 		}
 		else
 		{
-			final int _maxid = PartyMatchRoomList.getInstance().getMaxId();
+			final int maxId = PartyMatchRoomList.getInstance().getMaxId();
 			
-			final PartyMatchRoom _room = new PartyMatchRoom(_maxid, _roomtitle, _loot, _lvlmin, _lvlmax, _membersmax, _player);
+			final PartyMatchRoom room = new PartyMatchRoom(maxId, _roomtitle, _loot, _lvlmin, _lvlmax, _membersmax, player);
 			
-			LOGGER.info("PartyMatchRoom #" + _maxid + " created by " + _player.getName());
+			LOGGER.info("PartyMatchRoom #" + maxId + " created by " + player.getName());
 			
 			// Remove from waiting list, and add to current room
-			PartyMatchWaitingList.getInstance().removePlayer(_player);
-			PartyMatchRoomList.getInstance().addPartyMatchRoom(_maxid, _room);
+			PartyMatchWaitingList.getInstance().removePlayer(player);
+			PartyMatchRoomList.getInstance().addPartyMatchRoom(maxId, room);
 			
-			if (_player.isInParty())
+			if (player.isInParty())
 			{
-				for (PlayerInstance ptmember : _player.getParty().getPartyMembers())
+				for (PlayerInstance ptmember : player.getParty().getPartyMembers())
 				{
 					if (ptmember == null)
 					{
 						continue;
 					}
-					if (ptmember == _player)
+					if (ptmember == player)
 					{
 						continue;
 					}
 					
-					ptmember.setPartyRoom(_maxid);
+					ptmember.setPartyRoom(maxId);
 					
-					_room.addMember(ptmember);
+					room.addMember(ptmember);
 				}
 			}
 			
-			_player.sendPacket(new PartyMatchDetail(_player, _room));
-			_player.sendPacket(new ExPartyRoomMember(_player, _room, 1));
+			player.sendPacket(new PartyMatchDetail(room));
+			player.sendPacket(new ExPartyRoomMember(room, 1));
 			
-			_player.sendPacket(SystemMessageId.PARTY_ROOM_CREATED);
+			player.sendPacket(SystemMessageId.PARTY_ROOM_CREATED);
 			
-			_player.setPartyRoom(_maxid);
-			_player.broadcastUserInfo();
+			player.setPartyRoom(maxId);
+			player.broadcastUserInfo();
 		}
 	}
 }

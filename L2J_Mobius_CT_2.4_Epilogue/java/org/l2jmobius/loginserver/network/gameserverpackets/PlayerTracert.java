@@ -26,7 +26,7 @@ import org.l2jmobius.loginserver.LoginController;
  */
 public class PlayerTracert extends BaseRecievePacket
 {
-	protected static Logger LOGGER = Logger.getLogger(PlayerTracert.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(PlayerTracert.class.getName());
 	
 	/**
 	 * @param decrypt

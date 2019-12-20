@@ -97,7 +97,7 @@ public class PlayerStatus extends PlayableStatus
 			Summon summon = getActiveChar().getPet();
 			
 			// TODO correct range
-			if ((summon != null) && (summon instanceof SummonInstance) && Util.checkIfInRange(900, getActiveChar(), summon, true))
+			if ((summon instanceof SummonInstance) && Util.checkIfInRange(900, getActiveChar(), summon, true))
 			{
 				int tDmg = ((int) value * (int) getActiveChar().getStat().calcStat(Stats.TRANSFER_DAMAGE_PERCENT, 0, null, null)) / 100;
 				

@@ -27,7 +27,7 @@ public class Q099_SagaOfTheFortuneSeeker extends SagasSuperClass
 	public Q099_SagaOfTheFortuneSeeker()
 	{
 		super(99, "Saga of the Fortune Seeker");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			31594,
 			31623,
@@ -42,7 +42,7 @@ public class Q099_SagaOfTheFortuneSeeker extends SagasSuperClass
 			31657,
 			31600
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7608,
@@ -57,39 +57,39 @@ public class Q099_SagaOfTheFortuneSeeker extends SagasSuperClass
 			7109,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27259,
 			27248,
 			27309
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			117
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x37
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			191046,
 			46066,
 			46087
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-40640,
 			-36396,
 			-36372
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-3042,
 			-1685,
 			-1685
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

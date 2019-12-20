@@ -389,11 +389,7 @@ public class Scrolls implements IItemHandler
 			}
 		}
 		
-		// for the rest, there are no extra conditions
-		if (!playable.destroyItem("Consume", item.getObjectId(), 1, null, true))
-		{
-			return;
-		}
+		playable.destroyItem("Consume", item.getObjectId(), 1, null, true);
 	}
 	
 	public void useScroll(PlayerInstance player, int magicId, int level)

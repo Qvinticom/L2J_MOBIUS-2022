@@ -36,7 +36,7 @@ public class FriendlyMobInstance extends Attackable
 	@Override
 	public FriendlyMobKnownList getKnownList()
 	{
-		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof FriendlyMobKnownList))
+		if (!(super.getKnownList() instanceof FriendlyMobKnownList))
 		{
 			setKnownList(new FriendlyMobKnownList(this));
 		}

@@ -16,7 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
@@ -68,7 +69,7 @@ public class StatusUpdate extends GameServerPacket
 	
 	private PlayerInstance _actor;
 	
-	private Vector<Attribute> _attributes;
+	private List<Attribute> _attributes;
 	public int _objectId;
 	
 	class Attribute
@@ -91,7 +92,7 @@ public class StatusUpdate extends GameServerPacket
 	
 	public StatusUpdate(int objectId)
 	{
-		_attributes = new Vector<>();
+		_attributes = new ArrayList<>();
 		_objectId = objectId;
 	}
 	

@@ -66,7 +66,7 @@ public class SummonFriend implements ISkillHandler
 			activePlayer.sendMessage("You cannot use this skill in Event.");
 			return;
 		}
-		if (activePlayer._inEventCTF && CTF.is_started())
+		if (activePlayer._inEventCTF && CTF.isStarted())
 		{
 			activePlayer.sendMessage("You cannot use this skill in Event.");
 			return;
@@ -76,7 +76,7 @@ public class SummonFriend implements ISkillHandler
 			activePlayer.sendMessage("You cannot use this skill in Event.");
 			return;
 		}
-		if (activePlayer._inEventTvT && TvT.is_started())
+		if (activePlayer._inEventTvT && TvT.isStarted())
 		{
 			activePlayer.sendMessage("You cannot use this skill in Event.");
 			return;

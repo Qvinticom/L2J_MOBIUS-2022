@@ -52,10 +52,10 @@ public class CreatureSay extends GameServerPacket
 		writeS(_charName);
 		writeS(_text);
 		
-		final PlayerInstance _pci = getClient().getPlayer();
-		if (_pci != null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player != null)
 		{
-			_pci.broadcastSnoop(_textType, _charName, _text, this);
+			player.broadcastSnoop(_textType, _charName, _text, this);
 		}
 	}
 }

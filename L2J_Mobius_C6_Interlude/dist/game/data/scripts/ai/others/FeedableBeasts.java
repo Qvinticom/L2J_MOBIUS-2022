@@ -130,9 +130,9 @@ public class FeedableBeasts extends Quest
 			_chance = chance;
 		}
 		
-		public void addMobs(int spice, int[][] Mobs)
+		public void addMobs(int spice, int[][] mobs)
 		{
-			_spiceToMob.put(spice, Mobs);
+			_spiceToMob.put(spice, mobs);
 		}
 		
 		public Integer getMob(int spice, int mobType, int classType)
@@ -442,29 +442,26 @@ public class FeedableBeasts extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		if (event.equalsIgnoreCase("polymorph Mad Cow") && (npc != null) && (player != null))
+		if (event.equalsIgnoreCase("polymorph Mad Cow") && (npc != null) && (player != null) && MAD_COW_POLYMORPH.containsKey(npc.getNpcId()))
 		{
-			if (MAD_COW_POLYMORPH.containsKey(npc.getNpcId()))
+			// remove the feed info from the previous mob
+			if (FEED_INFO.getOrDefault(npc.getObjectId(), 0) == player.getObjectId())
 			{
-				// remove the feed info from the previous mob
-				if (FEED_INFO.getOrDefault(npc.getObjectId(), 0) == player.getObjectId())
-				{
-					FEED_INFO.remove(npc.getObjectId());
-				}
-				
-				// despawn the mad cow
-				npc.deleteMe();
-				
-				// spawn the new mob
-				Attackable nextNpc = (Attackable) addSpawn(MAD_COW_POLYMORPH.get(npc.getNpcId()), npc);
-				
-				// register the player in the feedinfo for the mob that just spawned
-				FEED_INFO.put(nextNpc.getObjectId(), player.getObjectId());
-				
-				nextNpc.setRunning();
-				nextNpc.addDamageHate(player, 0, 99999);
-				nextNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+				FEED_INFO.remove(npc.getObjectId());
 			}
+			
+			// despawn the mad cow
+			npc.deleteMe();
+			
+			// spawn the new mob
+			Attackable nextNpc = (Attackable) addSpawn(MAD_COW_POLYMORPH.get(npc.getNpcId()), npc);
+			
+			// register the player in the feedinfo for the mob that just spawned
+			FEED_INFO.put(nextNpc.getObjectId(), player.getObjectId());
+			
+			nextNpc.setRunning();
+			nextNpc.addDamageHate(player, 0, 99999);
+			nextNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 		}
 		
 		return super.onAdvEvent(event, npc, player);
@@ -506,7 +503,7 @@ public class FeedableBeasts extends Quest
 		{
 			food = GOLDEN_SPICE;
 		}
-		else if (skillId == SKILL_CRYSTAL_SPICE)
+		else // if (skillId == SKILL_CRYSTAL_SPICE)
 		{
 			food = CRYSTAL_SPICE;
 		}

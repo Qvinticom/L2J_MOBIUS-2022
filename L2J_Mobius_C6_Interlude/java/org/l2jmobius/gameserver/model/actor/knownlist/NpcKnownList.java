@@ -41,13 +41,10 @@ public class NpcKnownList extends CreatureKnownList
 			return false;
 		}
 		
-		if (getActiveObject().isNpc() && (object instanceof Creature))
+		// Broadcast correct walking NPC position.
+		if (getActiveObject().isNpc() && (object instanceof Creature) && object.isPlayer() && getActiveChar().isMoving() && !getActiveChar().isInCombat())
 		{
-			// Broadcast correct walking NPC position.
-			if (object.isPlayer() && getActiveChar().isMoving() && !getActiveChar().isInCombat())
-			{
-				((Creature) object).broadcastPacket(new CharMoveToLocation(getActiveChar()));
-			}
+			((Creature) object).broadcastPacket(new CharMoveToLocation(getActiveChar()));
 		}
 		return true;
 	}

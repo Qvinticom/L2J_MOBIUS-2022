@@ -34,7 +34,7 @@ import org.l2jmobius.loginserver.network.clientpackets.RequestServerLogin;
 
 public class LoginPacketHandler implements IPacketHandler<LoginClient>
 {
-	private final Logger LOGGER = Logger.getLogger(LoginPacketHandler.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(LoginPacketHandler.class.getName());
 	
 	@Override
 	public ReceivablePacket<LoginClient> handlePacket(ByteBuffer buf, LoginClient client)

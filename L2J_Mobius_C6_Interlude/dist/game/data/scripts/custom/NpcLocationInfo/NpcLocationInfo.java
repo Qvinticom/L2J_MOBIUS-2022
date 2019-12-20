@@ -229,7 +229,7 @@ public class NpcLocationInfo extends Quest
 			
 			if (Util.contains(RADARS, npcId))
 			{
-				for (Spawn spawn : SpawnTable.getInstance().getAllTemplates().values())
+				for (Spawn spawn : SpawnTable.getInstance().getSpawnTable().values())
 				{
 					if (npcId == spawn.getNpcId())
 					{

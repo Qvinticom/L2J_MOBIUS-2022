@@ -20,6 +20,7 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileInputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -32,7 +33,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class HtmCache
 {
-	private static Logger LOGGER = Logger.getLogger(HtmCache.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(HtmCache.class.getName());
 	
 	private final Map<Integer, String> _cache;
 	private int _loadedFiles;
@@ -132,7 +133,7 @@ public class HtmCache
 				
 				bis.read(raw);
 				
-				content = new String(raw, "UTF-8");
+				content = new String(raw, StandardCharsets.UTF_8);
 				content = content.replaceAll("\r\n", "\n");
 				content = content.replaceAll("(?s)<!--.*?-->", ""); // Remove html comments
 				
@@ -155,8 +156,7 @@ public class HtmCache
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning("problem with htm file " + e);
-				e.printStackTrace();
+				LOGGER.warning("Problem with htm file " + e);
 			}
 			finally
 			{
@@ -168,7 +168,7 @@ public class HtmCache
 					}
 					catch (Exception e1)
 					{
-						e1.printStackTrace();
+						LOGGER.warning("Problem with HtmCache: " + e1.getMessage());
 					}
 				}
 				
@@ -180,7 +180,7 @@ public class HtmCache
 					}
 					catch (Exception e1)
 					{
-						e1.printStackTrace();
+						LOGGER.warning("Problem with HtmCache: " + e1.getMessage());
 					}
 				}
 			}
@@ -228,13 +228,7 @@ public class HtmCache
 	{
 		File file = new File(path);
 		HtmFilter filter = new HtmFilter();
-		
-		if (file.exists() && filter.accept(file) && !file.isDirectory())
-		{
-			return true;
-		}
-		
-		return false;
+		return file.exists() && filter.accept(file) && !file.isDirectory();
 	}
 	
 	public static HtmCache getInstance()

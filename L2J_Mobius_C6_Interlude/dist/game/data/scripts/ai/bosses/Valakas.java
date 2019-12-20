@@ -126,14 +126,12 @@ public class Valakas extends Quest
 			final int mp = info.getInt("currentMP");
 			final GrandBossInstance valakas = (GrandBossInstance) addSpawn(VALAKAS, loc_x, loc_y, loc_z, heading, false, 0);
 			GrandBossManager.getInstance().addBoss(valakas);
-			final NpcInstance _valakas = valakas;
-			
 			ThreadPool.schedule(() ->
 			{
 				try
 				{
-					_valakas.setCurrentHpMp(hp, mp);
-					_valakas.setRunning();
+					valakas.setCurrentHpMp(hp, mp);
+					valakas.setRunning();
 				}
 				catch (Throwable e)
 				{
@@ -161,7 +159,7 @@ public class Valakas extends Quest
 			if (event.equals("check_activity_and_do_actions"))
 			{
 				int lvl = 0;
-				int sk_4691 = 0;
+				int sk4691 = 0;
 				final Effect[] effects = npc.getAllEffects();
 				if ((effects != null) && (effects.length != 0))
 				{
@@ -169,7 +167,7 @@ public class Valakas extends Quest
 					{
 						if (e.getSkill().getId() == 4629)
 						{
-							sk_4691 = 1;
+							sk4691 = 1;
 							lvl = e.getSkill().getLevel();
 							break;
 						}
@@ -186,8 +184,8 @@ public class Valakas extends Quest
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 					
 					// delete the actual boss
-					final GrandBossInstance _boss_instance = GrandBossManager.getInstance().deleteBoss(VALAKAS);
-					_boss_instance.decayMe();
+					final GrandBossInstance boss = GrandBossManager.getInstance().deleteBoss(VALAKAS);
+					boss.decayMe();
 					GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
 					// npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
 					_Zone.oustAllPlayers();
@@ -198,7 +196,7 @@ public class Valakas extends Quest
 				}
 				else if (npc.getCurrentHp() > ((npc.getMaxHp() * 1) / 4))
 				{
-					if ((sk_4691 == 0) || ((sk_4691 == 1) && (lvl != 4)))
+					if ((sk4691 == 0) || ((sk4691 == 1) && (lvl != 4)))
 					{
 						npc.setTarget(npc);
 						npc.doCast(SkillTable.getInstance().getInfo(4691, 4));
@@ -206,7 +204,7 @@ public class Valakas extends Quest
 				}
 				else if (npc.getCurrentHp() > ((npc.getMaxHp() * 2) / 4.0))
 				{
-					if ((sk_4691 == 0) || ((sk_4691 == 1) && (lvl != 3)))
+					if ((sk4691 == 0) || ((sk4691 == 1) && (lvl != 3)))
 					{
 						npc.setTarget(npc);
 						npc.doCast(SkillTable.getInstance().getInfo(4691, 3));
@@ -214,13 +212,13 @@ public class Valakas extends Quest
 				}
 				else if (npc.getCurrentHp() > ((npc.getMaxHp() * 3) / 4.0))
 				{
-					if ((sk_4691 == 0) || ((sk_4691 == 1) && (lvl != 2)))
+					if ((sk4691 == 0) || ((sk4691 == 1) && (lvl != 2)))
 					{
 						npc.setTarget(npc);
 						npc.doCast(SkillTable.getInstance().getInfo(4691, 2));
 					}
 				}
-				else if ((sk_4691 == 0) || ((sk_4691 == 1) && (lvl != 1)))
+				else if ((sk4691 == 0) || ((sk4691 == 1) && (lvl != 1)))
 				{
 					npc.setTarget(npc);
 					npc.doCast(SkillTable.getInstance().getInfo(4691, 1));
@@ -349,12 +347,11 @@ public class Valakas extends Quest
 			GrandBossManager.getInstance().addBoss(valakas);
 			
 			lastAttackTime = System.currentTimeMillis();
-			final NpcInstance _valakas = valakas;
 			ThreadPool.schedule(() ->
 			{
 				try
 				{
-					broadcastSpawn(_valakas);
+					broadcastSpawn(valakas);
 				}
 				catch (Throwable e)
 				{
@@ -388,7 +385,7 @@ public class Valakas extends Quest
 		 */
 		if (attacker.getMountType() == 1)
 		{
-			int sk_4258 = 0;
+			int sk4258 = 0;
 			final Effect[] effects = attacker.getAllEffects();
 			if ((effects != null) && (effects.length != 0))
 			{
@@ -396,11 +393,11 @@ public class Valakas extends Quest
 				{
 					if (e.getSkill().getId() == 4258)
 					{
-						sk_4258 = 1;
+						sk4258 = 1;
 					}
 				}
 			}
-			if (sk_4258 == 0)
+			if (sk4258 == 0)
 			{
 				npc.setTarget(attacker);
 				npc.doCast(SkillTable.getInstance().getInfo(4258, 1));
@@ -424,19 +421,13 @@ public class Valakas extends Quest
 			{
 				i_ai0 = (i_ai0 + damage);
 			}
-			if (i_quest0 == 0)
+			if ((i_quest0 == 0) && (((i_ai4 / npc.getMaxHp()) * 100) > 1) && (i_ai3 > (i_ai4 - i_ai3)))
 			{
-				if ((((i_ai4 / npc.getMaxHp()) * 100)) > 1)
-				{
-					if (i_ai3 > (i_ai4 - i_ai3))
-					{
-						i_ai3 = 0;
-						i_ai4 = 0;
-						npc.setTarget(npc);
-						npc.doCast(SkillTable.getInstance().getInfo(4687, 1));
-						i_quest0 = 1;
-					}
-				}
+				i_ai3 = 0;
+				i_ai4 = 0;
+				npc.setTarget(npc);
+				npc.doCast(SkillTable.getInstance().getInfo(4687, 1));
+				i_quest0 = 1;
 			}
 		}
 		int i1 = 0;
@@ -974,21 +965,14 @@ public class Valakas extends Quest
 	
 	public void broadcastSpawn(NpcInstance npc)
 	{
-		final Collection<WorldObject> objs = npc.getKnownList().getKnownObjects().values();
+		for (WorldObject obj : npc.getKnownList().getKnownObjects().values())
 		{
-			for (WorldObject obj : objs)
+			if ((obj instanceof PlayerInstance) && Util.checkIfInRange(10000, npc, obj, true))
 			{
-				if (obj instanceof PlayerInstance)
-				{
-					if (Util.checkIfInRange(10000, npc, obj, true))
-					{
-						((Creature) obj).sendPacket(new PlaySound(1, "B03_A", 1, npc.getObjectId(), 212852, -114842, -1632));
-						((Creature) obj).sendPacket(new SocialAction(npc.getObjectId(), 3));
-					}
-				}
+				((Creature) obj).sendPacket(new PlaySound(1, "B03_A", 1, npc.getObjectId(), 212852, -114842, -1632));
+				((Creature) obj).sendPacket(new SocialAction(npc.getObjectId(), 3));
 			}
 		}
-		return;
 	}
 	
 	public Creature getRandomTarget(NpcInstance npc)
@@ -998,16 +982,13 @@ public class Valakas extends Quest
 		{
 			for (WorldObject obj : objs)
 			{
-				if ((obj instanceof PlayerInstance) || (obj instanceof Summon))
+				if (((obj instanceof PlayerInstance) || (obj instanceof Summon)) && Util.checkIfInRange(5000, npc, obj, true) && !((Creature) obj).isDead() && (obj instanceof PlayerInstance) && !((PlayerInstance) obj).isGM())
 				{
-					if (Util.checkIfInRange(5000, npc, obj, true) && !((Creature) obj).isDead() && (obj instanceof PlayerInstance) && !((PlayerInstance) obj).isGM())
-					{
-						result.add((Creature) obj);
-					}
+					result.add((Creature) obj);
 				}
 			}
 		}
-		if (!result.isEmpty() && (result.size() != 0))
+		if (!result.isEmpty())
 		{
 			final Object[] characters = result.toArray();
 			return (Creature) characters[Rnd.get(characters.length)];

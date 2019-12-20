@@ -42,31 +42,30 @@ public class RequestWithdrawPartyRoom extends GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final PlayerInstance _player = getClient().getPlayer();
-		
-		if (_player == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
-		if (_room == null)
+		final PartyMatchRoom room = PartyMatchRoomList.getInstance().getRoom(_roomid);
+		if (room == null)
 		{
 			return;
 		}
 		
-		if ((_player.isInParty() && _room.getOwner().isInParty()) && (_player.getParty().getPartyLeaderOID() == _room.getOwner().getParty().getPartyLeaderOID()))
+		if ((player.isInParty() && room.getOwner().isInParty()) && (player.getParty().getPartyLeaderOID() == room.getOwner().getParty().getPartyLeaderOID()))
 		{
 			// If user is in party with Room Owner is not removed from Room
 		}
 		else
 		{
-			_room.deleteMember(_player);
-			_player.setPartyRoom(0);
-			_player.broadcastUserInfo();
+			room.deleteMember(player);
+			player.setPartyRoom(0);
+			player.broadcastUserInfo();
 			
-			_player.sendPacket(new ExClosePartyRoom());
-			_player.sendPacket(SystemMessageId.PARTY_ROOM_EXITED);
+			player.sendPacket(new ExClosePartyRoom());
+			player.sendPacket(SystemMessageId.PARTY_ROOM_EXITED);
 		}
 	}
 }

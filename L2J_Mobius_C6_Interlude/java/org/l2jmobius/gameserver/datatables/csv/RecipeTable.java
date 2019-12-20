@@ -90,7 +90,7 @@ public class RecipeTable extends RecipeController
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with RecipeTable: " + e1.getMessage());
 				}
 			}
 			
@@ -102,7 +102,7 @@ public class RecipeTable extends RecipeController
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with RecipeTable: " + e1.getMessage());
 				}
 			}
 			
@@ -114,7 +114,7 @@ public class RecipeTable extends RecipeController
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with RecipeTable: " + e1.getMessage());
 				}
 			}
 		}

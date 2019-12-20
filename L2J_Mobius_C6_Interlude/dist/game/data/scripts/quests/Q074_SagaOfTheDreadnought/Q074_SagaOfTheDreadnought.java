@@ -26,7 +26,7 @@ public class Q074_SagaOfTheDreadnought extends SagasSuperClass
 	public Q074_SagaOfTheDreadnought()
 	{
 		super(74, "Saga of the Dreadnought");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			30850,
 			31624,
@@ -41,7 +41,7 @@ public class Q074_SagaOfTheDreadnought extends SagasSuperClass
 			31657,
 			31522
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7538,
@@ -56,39 +56,39 @@ public class Q074_SagaOfTheDreadnought extends SagasSuperClass
 			7097,
 			6480
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27290,
 			27223,
 			27282
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			89
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x03
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			191046,
 			46087,
 			46066
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-40640,
 			-36372,
 			-36396
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-3042,
 			-1685,
 			-1685
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

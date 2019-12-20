@@ -50,7 +50,7 @@ public class ControlTowerInstance extends NpcInstance
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		// Attackable during siege by attacker only
-		return (attacker != null) && (attacker instanceof PlayerInstance) && (getCastle() != null) && (getCastle().getCastleId() > 0) && getCastle().getSiege().getIsInProgress() && getCastle().getSiege().checkIsAttacker(((PlayerInstance) attacker).getClan());
+		return (attacker instanceof PlayerInstance) && (getCastle() != null) && (getCastle().getCastleId() > 0) && getCastle().getSiege().getIsInProgress() && getCastle().getSiege().checkIsAttacker(((PlayerInstance) attacker).getClan());
 	}
 	
 	@Override
@@ -103,7 +103,7 @@ public class ControlTowerInstance extends NpcInstance
 		{
 			getCastle().getSiege().killedCT(this);
 			
-			if ((getGuards() != null) && (getGuards().size() > 0))
+			if ((getGuards() != null) && !getGuards().isEmpty())
 			{
 				for (Spawn spawn : getGuards())
 				{

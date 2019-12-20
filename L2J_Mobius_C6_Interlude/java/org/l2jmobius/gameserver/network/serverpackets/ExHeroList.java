@@ -35,10 +35,6 @@ public class ExHeroList extends GameServerPacket
 		_heroList = Hero.getInstance().getHeroes();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see net.sf.l2j.gameserver.serverpackets.ServerBasePacket#writeImpl()
-	 */
 	@Override
 	protected void writeImpl()
 	{
@@ -46,9 +42,8 @@ public class ExHeroList extends GameServerPacket
 		writeH(0x23);
 		writeD(_heroList.size());
 		
-		for (Integer heroId : _heroList.keySet())
+		for (StatsSet hero : _heroList.values())
 		{
-			final StatsSet hero = _heroList.get(heroId);
 			writeS(hero.getString(Olympiad.CHAR_NAME));
 			writeD(hero.getInt(Olympiad.CLASS_ID));
 			writeS(hero.getString(Hero.CLAN_NAME, ""));

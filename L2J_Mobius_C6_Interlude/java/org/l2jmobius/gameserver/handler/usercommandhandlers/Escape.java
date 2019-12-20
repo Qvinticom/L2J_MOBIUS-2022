@@ -54,14 +54,14 @@ public class Escape implements IUserCommandHandler
 		}
 		
 		// Check to see if the current player is in TVT Event.
-		if (player._inEventTvT && TvT.is_started())
+		if (player._inEventTvT && TvT.isStarted())
 		{
 			player.sendMessage("You may not use an escape skill in TvT.");
 			return false;
 		}
 		
 		// Check to see if the current player is in CTF Event.
-		if (player._inEventCTF && CTF.is_started())
+		if (player._inEventCTF && CTF.isStarted())
 		{
 			player.sendMessage("You may not use an escape skill in CTF.");
 			return false;

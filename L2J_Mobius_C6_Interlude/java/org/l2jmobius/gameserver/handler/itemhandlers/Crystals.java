@@ -144,9 +144,6 @@ public class Crystals implements IItemHandler
 				skill = SkillTable.getInstance().getInfo(2259, 1);
 				break;
 			}
-			default:
-			{
-			}
 		}
 		if (skill != null)
 		{

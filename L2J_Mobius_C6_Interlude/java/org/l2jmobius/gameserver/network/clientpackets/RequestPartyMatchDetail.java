@@ -56,46 +56,46 @@ public class RequestPartyMatchDetail extends GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final PlayerInstance _player = getClient().getPlayer();
-		if (_player == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
-		if (_room == null)
+		final PartyMatchRoom room = PartyMatchRoomList.getInstance().getRoom(_roomid);
+		if (room == null)
 		{
 			return;
 		}
 		
-		if ((_player.getLevel() >= _room.getMinLvl()) && (_player.getLevel() <= _room.getMaxLvl()))
+		if ((player.getLevel() >= room.getMinLvl()) && (player.getLevel() <= room.getMaxLvl()))
 		{
 			// Remove from waiting list
-			PartyMatchWaitingList.getInstance().removePlayer(_player);
+			PartyMatchWaitingList.getInstance().removePlayer(player);
 			
-			_player.setPartyRoom(_roomid);
+			player.setPartyRoom(_roomid);
 			
-			_player.sendPacket(new PartyMatchDetail(_player, _room));
-			_player.sendPacket(new ExPartyRoomMember(_player, _room, 0));
+			player.sendPacket(new PartyMatchDetail(room));
+			player.sendPacket(new ExPartyRoomMember(room, 0));
 			
-			for (PlayerInstance _member : _room.getPartyMembers())
+			for (PlayerInstance _member : room.getPartyMembers())
 			{
 				if (_member == null)
 				{
 					continue;
 				}
 				
-				_member.sendPacket(new ExManagePartyRoomMember(_player, _room, 0));
-				_member.sendPacket(new SystemMessage(SystemMessageId.S1_ENTERED_PARTY_ROOM).addString(_player.getName()));
+				_member.sendPacket(new ExManagePartyRoomMember(player, room, 0));
+				_member.sendPacket(new SystemMessage(SystemMessageId.S1_ENTERED_PARTY_ROOM).addString(player.getName()));
 			}
-			_room.addMember(_player);
+			room.addMember(player);
 			
 			// Info Broadcast
-			_player.broadcastUserInfo();
+			player.broadcastUserInfo();
 		}
 		else
 		{
-			_player.sendPacket(SystemMessageId.CANT_ENTER_PARTY_ROOM);
+			player.sendPacket(SystemMessageId.CANT_ENTER_PARTY_ROOM);
 		}
 	}
 }

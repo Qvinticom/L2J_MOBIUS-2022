@@ -45,7 +45,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class VillageMasterInstance extends NpcInstance
 {
-	private static Logger LOGGER = Logger.getLogger(VillageMasterInstance.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(VillageMasterInstance.class.getName());
 	
 	public VillageMasterInstance(NpcTemplate template)
 	{

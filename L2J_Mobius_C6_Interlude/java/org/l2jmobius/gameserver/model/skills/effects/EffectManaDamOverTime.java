@@ -44,14 +44,11 @@ class EffectManaDamOverTime extends Effect
 		
 		final double manaDam = calc();
 		
-		if (manaDam > getEffected().getCurrentMp())
+		if ((manaDam > getEffected().getCurrentMp()) && getSkill().isToggle())
 		{
-			if (getSkill().isToggle())
-			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
-				getEffected().sendPacket(sm);
-				return false;
-			}
+			final SystemMessage sm = new SystemMessage(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
+			getEffected().sendPacket(sm);
+			return false;
 		}
 		
 		getEffected().reduceCurrentMpByDamOverTime(manaDam, getPeriod());

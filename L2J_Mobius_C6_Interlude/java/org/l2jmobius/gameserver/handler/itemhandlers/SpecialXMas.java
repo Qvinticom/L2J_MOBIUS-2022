@@ -53,8 +53,8 @@ public class SpecialXMas implements IItemHandler
 		
 		if (itemId == 5555) // Token of Love
 		{
-			ShowXMasSeal SXS = new ShowXMasSeal(5555);
-			player.sendPacket(SXS);
+			ShowXMasSeal sxs = new ShowXMasSeal(5555);
+			player.sendPacket(sxs);
 		}
 	}
 	

@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class RequestPrivateStoreBuy extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestPrivateStoreBuy.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestPrivateStoreBuy.class.getName());
 	
 	private int _storePlayerId;
 	private int _count;
@@ -83,7 +83,7 @@ public class RequestPrivateStoreBuy extends GameClientPacket
 		}
 		
 		final WorldObject object = World.getInstance().findObject(_storePlayerId);
-		if ((object == null) || !(object instanceof PlayerInstance))
+		if (!(object instanceof PlayerInstance))
 		{
 			return;
 		}
@@ -157,7 +157,7 @@ public class RequestPrivateStoreBuy extends GameClientPacket
 			priceTotal += ir.getPrice() * ir.getCount();
 		}
 		
-		// FIXME: this check should be (and most probabliy is) done in the TradeList mechanics
+		// FIXME: this check should be (and most probably is) done in the TradeList mechanics
 		if ((priceTotal < 0) || (priceTotal > Integer.MAX_VALUE))
 		{
 			final String msgErr = "[RequestPrivateStoreBuy] player " + getClient().getPlayer().getName() + " tried an overflow exploit, ban this player!";
@@ -181,14 +181,11 @@ public class RequestPrivateStoreBuy extends GameClientPacket
 			return;
 		}
 		
-		if (storePlayer.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_PACKAGE_SELL)
+		if ((storePlayer.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_PACKAGE_SELL) && (storeList.getItemCount() > _count))
 		{
-			if (storeList.getItemCount() > _count)
-			{
-				final String msgErr = "[RequestPrivateStoreBuy] player " + getClient().getPlayer().getName() + " tried to buy less items then sold by package-sell, ban this player for bot-usage!";
-				Util.handleIllegalPlayerAction(getClient().getPlayer(), msgErr, Config.DEFAULT_PUNISH);
-				return;
-			}
+			final String msgErr = "[RequestPrivateStoreBuy] player " + getClient().getPlayer().getName() + " tried to buy less items then sold by package-sell, ban this player for bot-usage!";
+			Util.handleIllegalPlayerAction(getClient().getPlayer(), msgErr, Config.DEFAULT_PUNISH);
+			return;
 		}
 		
 		if (!storeList.PrivateStoreBuy(player, _items, (int) priceTotal))

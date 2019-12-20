@@ -38,7 +38,7 @@ public class Q367_ElectrifyingRecharge extends Quest
 	private static final int TITAN_LAMP_5 = 5880;
 	
 	// Reward
-	private static final int REWARD[] =
+	private static final int[] REWARD =
 	{
 		4553,
 		4554,

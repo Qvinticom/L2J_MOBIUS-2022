@@ -152,15 +152,15 @@ public class Calculator
 			return;
 		}
 		
-		final ArrayList<Func> tmp_arraylist = new ArrayList<>();
-		tmp_arraylist.addAll(Arrays.asList(_functions));
+		final ArrayList<Func> tmp = new ArrayList<>();
+		tmp.addAll(Arrays.asList(_functions));
 		
-		if (tmp_arraylist.contains(f))
+		if (tmp.contains(f))
 		{
-			tmp_arraylist.remove(f);
+			tmp.remove(f);
 		}
 		
-		_functions = tmp_arraylist.toArray(new Func[tmp_arraylist.size()]);
+		_functions = tmp.toArray(new Func[tmp.size()]);
 	}
 	
 	/**

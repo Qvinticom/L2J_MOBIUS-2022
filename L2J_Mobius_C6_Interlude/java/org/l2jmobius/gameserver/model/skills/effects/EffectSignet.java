@@ -85,14 +85,9 @@ public class EffectSignet extends Effect
 			
 			if (_skill.isOffensive())
 			{
-				if (creature instanceof PlayerInstance)
+				if ((creature instanceof PlayerInstance) && (((((PlayerInstance) creature).getClanId() > 0) && (caster.getClanId() > 0) && (((PlayerInstance) creature).getClanId() != caster.getClanId())) || ((((PlayerInstance) creature).getAllyId() > 0) && (caster.getAllyId() > 0) && (((PlayerInstance) creature).getAllyId() != caster.getAllyId())) || ((creature.getParty() != null) && (caster.getParty() != null) && !creature.getParty().equals(caster.getParty()))))
 				{
-					
-					if (((((PlayerInstance) creature).getClanId() > 0) && (caster.getClanId() > 0) && (((PlayerInstance) creature).getClanId() != caster.getClanId())) || ((((PlayerInstance) creature).getAllyId() > 0) && (caster.getAllyId() > 0) && (((PlayerInstance) creature).getAllyId() != caster.getAllyId())) || ((creature.getParty() != null) && (caster.getParty() != null) && !creature.getParty().equals(caster.getParty())))
-					{
-						_skill.getEffects(_actor, creature, false, false, false);
-						continue;
-					}
+					_skill.getEffects(_actor, creature, false, false, false);
 				}
 			}
 			else if (creature instanceof PlayerInstance)
@@ -101,7 +96,6 @@ public class EffectSignet extends Effect
 				{
 					_skill.getEffects(_actor, creature, false, false, false);
 					_skill.getEffects(_actor, caster, false, false, false); // Affect caster too.
-					continue;
 				}
 			}
 		}

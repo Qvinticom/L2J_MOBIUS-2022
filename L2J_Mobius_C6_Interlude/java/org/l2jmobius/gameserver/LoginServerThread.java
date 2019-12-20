@@ -444,9 +444,7 @@ public class LoginServerThread extends Thread
 		}
 		catch (IOException e)
 		{
-			LOGGER.warning("Error while sending logout packet to login");
-			
-			e.printStackTrace();
+			LOGGER.warning("Error while sending logout packet to login: " + e.getMessage());
 		}
 	}
 	

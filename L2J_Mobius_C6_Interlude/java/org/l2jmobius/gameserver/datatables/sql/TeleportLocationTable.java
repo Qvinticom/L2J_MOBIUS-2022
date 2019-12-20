@@ -83,7 +83,7 @@ public class TeleportLocationTable
 				final ResultSet rset = statement.executeQuery();
 				TeleportLocation teleport;
 				
-				int _cTeleCount = _teleports.size();
+				int cTeleCount = _teleports.size();
 				
 				while (rset.next())
 				{
@@ -100,11 +100,11 @@ public class TeleportLocationTable
 				statement.close();
 				rset.close();
 				
-				_cTeleCount = _teleports.size() - _cTeleCount;
+				cTeleCount = _teleports.size() - cTeleCount;
 				
-				if (_cTeleCount > 0)
+				if (cTeleCount > 0)
 				{
-					LOGGER.info("TeleportLocationTable: Loaded " + _cTeleCount + " Custom Teleport Location Templates.");
+					LOGGER.info("TeleportLocationTable: Loaded " + cTeleCount + " Custom Teleport Location Templates.");
 				}
 			}
 			catch (Exception e)

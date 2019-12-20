@@ -46,71 +46,71 @@ public class CrownTable
 		return _crownList;
 	}
 	
-	public static int getCrownId(int CastleId)
+	public static int getCrownId(int castleId)
 	{
-		int CrownId = 0;
-		switch (CastleId)
+		int crownId = 0;
+		switch (castleId)
 		{
 			// Gludio
 			case 1:
 			{
-				CrownId = 6838;
+				crownId = 6838;
 				break;
 			}
 			// Dion
 			case 2:
 			{
-				CrownId = 6835;
+				crownId = 6835;
 				break;
 			}
 			// Giran
 			case 3:
 			{
-				CrownId = 6839;
+				crownId = 6839;
 				break;
 			}
 			// Oren
 			case 4:
 			{
-				CrownId = 6837;
+				crownId = 6837;
 				break;
 			}
 			// Aden
 			case 5:
 			{
-				CrownId = 6840;
+				crownId = 6840;
 				break;
 			}
 			// Innadril
 			case 6:
 			{
-				CrownId = 6834;
+				crownId = 6834;
 				break;
 			}
 			// Goddard
 			case 7:
 			{
-				CrownId = 6836;
+				crownId = 6836;
 				break;
 			}
 			// Rune
 			case 8:
 			{
-				CrownId = 8182;
+				crownId = 8182;
 				break;
 			}
 			// Schuttgart
 			case 9:
 			{
-				CrownId = 8183;
+				crownId = 8183;
 				break;
 			}
 			default:
 			{
-				CrownId = 0;
+				crownId = 0;
 				break;
 			}
 		}
-		return CrownId;
+		return crownId;
 	}
 }

@@ -249,6 +249,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 					BuilderUtil.sendSysMessage(activeChar, "Usage: //del_autoannouncement <index> (number >= 0)");
 					return false;
 				}
+				return false;
 			}
 			case admin_autoannounce:
 			{

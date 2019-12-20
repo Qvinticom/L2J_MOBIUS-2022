@@ -438,12 +438,12 @@ public class Siege
 				_siegeGuardManager.removeMercs(); // Remove all merc entry from db
 			}
 			
-			if ((getDefenderClans().size() == 0) && // If defender doesn't exist (Pc vs Npc)
+			if ((getDefenderClans().isEmpty()) && // If defender doesn't exist (Pc vs Npc)
 				(getAttackerClans().size() == 1)) // Only 1 attacker
 			{
-				SiegeClan sc_newowner = getAttackerClan(getCastle().getOwnerId());
-				removeAttacker(sc_newowner);
-				addDefender(sc_newowner, SiegeClanType.OWNER);
+				SiegeClan scNewOwner = getAttackerClan(getCastle().getOwnerId());
+				removeAttacker(scNewOwner);
+				addDefender(scNewOwner, SiegeClanType.OWNER);
 				endSiege();
 				
 				return;
@@ -452,34 +452,25 @@ public class Siege
 			if (getCastle().getOwnerId() > 0)
 			{
 				final int allyId = ClanTable.getInstance().getClan(getCastle().getOwnerId()).getAllyId();
-				
-				if (getDefenderClans().size() == 0) // If defender doesn't exist (Pc vs Npc)
-				// and only an alliance attacks
+				// If defender doesn't exist (Pc vs Npc) and only an alliance attacks
+				// The player's clan is in an alliance
+				if (getDefenderClans().isEmpty() && (allyId != 0))
 				{
-					// The player's clan is in an alliance
-					if (allyId != 0)
+					boolean allinsamealliance = true;
+					for (SiegeClan sc : getAttackerClans())
 					{
-						boolean allinsamealliance = true;
-						
-						for (SiegeClan sc : getAttackerClans())
+						if ((sc != null) && (ClanTable.getInstance().getClan(sc.getClanId()).getAllyId() != allyId))
 						{
-							if (sc != null)
-							{
-								if (ClanTable.getInstance().getClan(sc.getClanId()).getAllyId() != allyId)
-								{
-									allinsamealliance = false;
-								}
-							}
+							allinsamealliance = false;
 						}
-						if (allinsamealliance)
-						{
-							SiegeClan sc_newowner = getAttackerClan(getCastle().getOwnerId());
-							removeAttacker(sc_newowner);
-							addDefender(sc_newowner, SiegeClanType.OWNER);
-							endSiege();
-							
-							return;
-						}
+					}
+					if (allinsamealliance)
+					{
+						SiegeClan scNewOwner = getAttackerClan(getCastle().getOwnerId());
+						removeAttacker(scNewOwner);
+						addDefender(scNewOwner, SiegeClanType.OWNER);
+						endSiege();
+						return;
 					}
 				}
 				
@@ -492,9 +483,9 @@ public class Siege
 					}
 				}
 				
-				SiegeClan sc_newowner = getAttackerClan(getCastle().getOwnerId());
-				removeAttacker(sc_newowner);
-				addDefender(sc_newowner, SiegeClanType.OWNER);
+				SiegeClan scNewOwner = getAttackerClan(getCastle().getOwnerId());
+				removeAttacker(scNewOwner);
+				addDefender(scNewOwner, SiegeClanType.OWNER);
 				
 				// The player's clan is in an alliance
 				if (allyId != 0)
@@ -553,10 +544,9 @@ public class Siege
 	{
 		if (!_isInProgress)
 		{
-			if (getAttackerClans().size() <= 0)
+			if (getAttackerClans().isEmpty())
 			{
 				SystemMessage sm;
-				
 				if (getCastle().getOwnerId() <= 0)
 				{
 					sm = new SystemMessage(SystemMessageId.SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST);
@@ -568,7 +558,6 @@ public class Siege
 				
 				sm.addString(getCastle().getName());
 				Announcements.getInstance().announceToAll(sm);
-				
 				return;
 			}
 			
@@ -808,7 +797,7 @@ public class Siege
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -828,7 +817,7 @@ public class Siege
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -1035,13 +1024,10 @@ public class Siege
 			allyId = ClanTable.getInstance().getClan(getCastle().getOwnerId()).getAllyId();
 		}
 		
-		if (allyId != 0)
+		if ((allyId != 0) && (player.getClan().getAllyId() == allyId) && !force)
 		{
-			if ((player.getClan().getAllyId() == allyId) && !force)
-			{
-				player.sendMessage("You cannot register as an attacker because your alliance owns the castle");
-				return;
-			}
+			player.sendMessage("You cannot register as an attacker because your alliance owns the castle");
+			return;
 		}
 		
 		if (force || checkIfCanRegister(player))
@@ -1103,7 +1089,7 @@ public class Siege
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -1412,8 +1398,7 @@ public class Siege
 		}
 		catch (Exception e)
 		{
-			LOGGER.info("Exception: loadSiegeClan(): " + e.getMessage());
-			e.printStackTrace();
+			LOGGER.info("Exception: loadSiegeClan(): " + e);
 		}
 	}
 	
@@ -1505,8 +1490,7 @@ public class Siege
 		}
 		catch (Exception e)
 		{
-			LOGGER.info("Exception: saveSiegeDate(): " + e.getMessage());
-			e.printStackTrace();
+			LOGGER.info("Exception: saveSiegeDate(): " + e);
 		}
 	}
 	
@@ -1577,8 +1561,7 @@ public class Siege
 		}
 		catch (Exception e)
 		{
-			LOGGER.info("Exception: saveSiegeClan(Pledge clan, int typeId, boolean isUpdateRegistration): " + e.getMessage());
-			e.printStackTrace();
+			LOGGER.info("Exception: saveSiegeClan(Pledge clan, int typeId, boolean isUpdateRegistration): " + e);
 		}
 	}
 	
@@ -1598,9 +1581,9 @@ public class Siege
 	
 	/**
 	 * Spawn artifact.
-	 * @param Id the id
+	 * @param id the id
 	 */
-	private void spawnArtifact(int Id)
+	private void spawnArtifact(int id)
 	{
 		// Set artefact array size if one does not exist
 		if (_artifacts == null)
@@ -1608,7 +1591,7 @@ public class Siege
 			_artifacts = new ArrayList<>();
 		}
 		
-		for (SiegeSpawn _sp : SiegeManager.getInstance().getArtefactSpawnList(Id))
+		for (SiegeSpawn _sp : SiegeManager.getInstance().getArtefactSpawnList(id))
 		{
 			ArtefactInstance art;
 			
@@ -1623,9 +1606,9 @@ public class Siege
 	
 	/**
 	 * Spawn control tower.
-	 * @param Id the id
+	 * @param id the id
 	 */
-	private void spawnControlTower(int Id)
+	private void spawnControlTower(int id)
 	{
 		// Set control tower array size if one does not exist
 		if (_controlTowers == null)
@@ -1633,7 +1616,7 @@ public class Siege
 			_controlTowers = new ArrayList<>();
 		}
 		
-		for (SiegeSpawn _sp : SiegeManager.getInstance().getControlTowerSpawnList(Id))
+		for (SiegeSpawn _sp : SiegeManager.getInstance().getControlTowerSpawnList(id))
 		{
 			ControlTowerInstance ct;
 			
@@ -1661,7 +1644,7 @@ public class Siege
 		
 		// Register guard to the closest Control Tower
 		// When CT dies, so do all the guards that it controls
-		if ((getSiegeGuardManager().getSiegeGuardSpawn().size() > 0) && (_controlTowers.size() > 0))
+		if (!getSiegeGuardManager().getSiegeGuardSpawn().isEmpty() && !_controlTowers.isEmpty())
 		{
 			ControlTowerInstance closestCt;
 			

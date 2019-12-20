@@ -258,12 +258,9 @@ public class Q111_ElrokianHuntersProof extends Quest
 			case 22201:
 			case 22202:
 			case 22219:
-				if ((st.getInt("cond") == 10) && st.dropItems(CLAW, 1, 10, 650000))
+				if ((st.getInt("cond") == 10) && st.dropItems(CLAW, 1, 10, 650000) && (st.getQuestItemsCount(BONE) >= 10) && (st.getQuestItemsCount(SKIN) >= 10))
 				{
-					if ((st.getQuestItemsCount(BONE) >= 10) && (st.getQuestItemsCount(SKIN) >= 10))
-					{
-						st.set("cond", "11");
-					}
+					st.set("cond", "11");
 				}
 				break;
 			
@@ -271,12 +268,9 @@ public class Q111_ElrokianHuntersProof extends Quest
 			case 22209:
 			case 22210:
 			case 22221:
-				if ((st.getInt("cond") == 10) && st.dropItems(SKIN, 1, 10, 650000))
+				if ((st.getInt("cond") == 10) && st.dropItems(SKIN, 1, 10, 650000) && (st.getQuestItemsCount(CLAW) >= 10) && (st.getQuestItemsCount(BONE) >= 10))
 				{
-					if ((st.getQuestItemsCount(CLAW) >= 10) && (st.getQuestItemsCount(BONE) >= 10))
-					{
-						st.set("cond", "11");
-					}
+					st.set("cond", "11");
 				}
 				break;
 			
@@ -284,12 +278,9 @@ public class Q111_ElrokianHuntersProof extends Quest
 			case 22204:
 			case 22205:
 			case 22220:
-				if ((st.getInt("cond") == 10) && st.dropItems(BONE, 1, 10, 650000))
+				if ((st.getInt("cond") == 10) && st.dropItems(BONE, 1, 10, 650000) && (st.getQuestItemsCount(CLAW) >= 10) && (st.getQuestItemsCount(SKIN) >= 10))
 				{
-					if ((st.getQuestItemsCount(CLAW) >= 10) && (st.getQuestItemsCount(SKIN) >= 10))
-					{
-						st.set("cond", "11");
-					}
+					st.set("cond", "11");
 				}
 				break;
 		}

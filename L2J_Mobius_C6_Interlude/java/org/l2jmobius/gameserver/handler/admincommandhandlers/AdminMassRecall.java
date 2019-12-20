@@ -146,11 +146,11 @@ public class AdminMassRecall implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void Teleport(PlayerInstance player, int X, int Y, int Z, String Message)
+	private void Teleport(PlayerInstance player, int x, int y, int z, String message)
 	{
-		player.sendMessage(Message);
+		player.sendMessage(message);
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		player.teleToLocation(X, Y, Z, true);
+		player.teleToLocation(x, y, z, true);
 	}
 	
 	@Override

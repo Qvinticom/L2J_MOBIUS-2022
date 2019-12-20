@@ -143,7 +143,7 @@ public class DocumentItem extends DocumentBase implements IXmlReader
 					if ("stat".equalsIgnoreCase(b.getNodeName()))
 					{
 						final Stats type = Stats.valueOfXml(b.getAttributes().getNamedItem("type").getNodeValue());
-						final double value = Double.valueOf(b.getTextContent());
+						final double value = Double.parseDouble(b.getTextContent());
 						_currentItem.item.addFunctionTemplate(new FuncTemplate(null, null, "add", 0x00, type, value));
 					}
 				}

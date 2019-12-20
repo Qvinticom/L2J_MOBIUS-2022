@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class RequestAquireSkill extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestAquireSkill.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestAquireSkill.class.getName());
 	
 	private int _id;
 	
@@ -97,7 +97,7 @@ public class RequestAquireSkill extends GameClientPacket
 		final Skill skill = SkillTable.getInstance().getInfo(_id, _level);
 		
 		int counts = 0;
-		int _requiredSp = 10000000;
+		int requiredSp = 10000000;
 		
 		if (_skillType == 0)
 		{
@@ -111,7 +111,7 @@ public class RequestAquireSkill extends GameClientPacket
 					continue;
 				}
 				counts++;
-				_requiredSp = SkillTreeTable.getInstance().getSkillCost(player, skill);
+				requiredSp = SkillTreeTable.getInstance().getSkillCost(player, skill);
 			}
 			
 			if ((counts == 0) && !Config.ALT_GAME_SKILL_LEARN)
@@ -121,7 +121,7 @@ public class RequestAquireSkill extends GameClientPacket
 				return;
 			}
 			
-			if (player.getSp() >= _requiredSp)
+			if (player.getSp() >= requiredSp)
 			{
 				int spbId = -1;
 				// divine inspiration require book for each level
@@ -177,7 +177,7 @@ public class RequestAquireSkill extends GameClientPacket
 				counts++;
 				costid = s.getIdCost();
 				costcount = s.getCostCount();
-				_requiredSp = s.getSpCost();
+				requiredSp = s.getSpCost();
 			}
 			
 			if (counts == 0)
@@ -187,7 +187,7 @@ public class RequestAquireSkill extends GameClientPacket
 				return;
 			}
 			
-			if (player.getSp() >= _requiredSp)
+			if (player.getSp() >= requiredSp)
 			{
 				if (!player.destroyItemByItemId("Consume", costid, costcount, trainer, false))
 				{
@@ -297,14 +297,14 @@ public class RequestAquireSkill extends GameClientPacket
 		}
 		
 		player.addSkill(skill, true);
-		player.setSp(player.getSp() - _requiredSp);
+		player.setSp(player.getSp() - requiredSp);
 		
 		final StatusUpdate su = new StatusUpdate(player.getObjectId());
 		su.addAttribute(StatusUpdate.SP, player.getSp());
 		player.sendPacket(su);
 		
 		final SystemMessage sp = new SystemMessage(SystemMessageId.SP_DECREASED_S1);
-		sp.addNumber(_requiredSp);
+		sp.addNumber(requiredSp);
 		sendPacket(sp);
 		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.LEARNED_SKILL_S1);
@@ -320,7 +320,7 @@ public class RequestAquireSkill extends GameClientPacket
 			{
 				if ((sc.getId() == _id) && (sc.getType() == ShortCut.TYPE_SKILL))
 				{
-					final ShortCut newsc = new ShortCut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), _level, 1);
+					final ShortCut newsc = new ShortCut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), _level);
 					player.sendPacket(new ShortCutRegister(newsc));
 					player.registerShortCut(newsc);
 				}

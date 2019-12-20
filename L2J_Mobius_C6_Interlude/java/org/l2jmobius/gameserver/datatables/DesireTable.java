@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.datatables;
 
+import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -74,7 +75,7 @@ public class DesireTable
 		
 		public Desires(DesireType... desireList)
 		{
-			_desireTable = new HashMap<>();
+			_desireTable = new EnumMap<>(DesireType.class);
 			
 			for (DesireType desire : desireList)
 			{

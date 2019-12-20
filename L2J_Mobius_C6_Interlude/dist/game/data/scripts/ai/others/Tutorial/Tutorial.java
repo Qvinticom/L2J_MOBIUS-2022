@@ -169,7 +169,7 @@ public class Tutorial extends Quest
 		String html = "";
 		
 		int classId = player.getClassId().getId();
-		int Ex = qs.getInt("Ex");
+		int ex = qs.getInt("Ex");
 		
 		if (event.startsWith("UC"))
 		{
@@ -193,7 +193,7 @@ public class Tutorial extends Quest
 					}
 					case 2:
 					{
-						if (Ex == 2)
+						if (ex == 2)
 						{
 							qs.showQuestionMark(3);
 						}
@@ -216,12 +216,12 @@ public class Tutorial extends Quest
 		}
 		else if (event.startsWith("QT"))
 		{
-			if (Ex == -2)
+			if (ex == -2)
 			{
 				String voice = "";
 				for (String[] element : QTEXMTWO)
 				{
-					if (classId == Integer.valueOf(element[0]))
+					if (classId == Integer.parseInt(element[0]))
 					{
 						voice = element[1];
 						html = element[2];
@@ -232,12 +232,12 @@ public class Tutorial extends Quest
 				cancelQuestTimers("QT");
 				startQuestTimer("QT", 30000, null, player, false);
 			}
-			else if (Ex == -3)
+			else if (ex == -3)
 			{
 				qs.playTutorialVoice("tutorial_voice_002");
 				qs.set("Ex", "0");
 			}
-			else if (Ex == -4)
+			else if (ex == -4)
 			{
 				qs.playTutorialVoice("tutorial_voice_008");
 				qs.set("Ex", "-5");
@@ -249,7 +249,7 @@ public class Tutorial extends Quest
 			cancelQuestTimers("TE");
 			if (!event.equalsIgnoreCase("TE"))
 			{
-				switch (Integer.valueOf(event.substring(2)))
+				switch (Integer.parseInt(event.substring(2)))
 				{
 					case 0:
 					{
@@ -354,34 +354,34 @@ public class Tutorial extends Quest
 		// Client Event
 		else if (event.startsWith("CE"))
 		{
-			int event_id = Integer.valueOf(event.substring(2));
-			if ((event_id == 1) && (player.getLevel() < 6))
+			final int eventId = Integer.parseInt(event.substring(2));
+			if ((eventId == 1) && (player.getLevel() < 6))
 			{
 				qs.playTutorialVoice("tutorial_voice_004");
 				html = "tutorial_03.htm";
 				qs.playSound("ItemSound.quest_tutorial");
 				qs.onTutorialClientEvent(2);
 			}
-			else if ((event_id == 2) && (player.getLevel() < 6))
+			else if ((eventId == 2) && (player.getLevel() < 6))
 			{
 				qs.playTutorialVoice("tutorial_voice_005");
 				html = "tutorial_05.htm";
 				qs.playSound("ItemSound.quest_tutorial");
 				qs.onTutorialClientEvent(8);
 			}
-			else if ((event_id == 8) && (player.getLevel() < 6))
+			else if ((eventId == 8) && (player.getLevel() < 6))
 			{
 				int x = 0;
 				int y = 0;
 				int z = 0;
 				for (String[] element : CEEa)
 				{
-					if (classId == Integer.valueOf(element[0]))
+					if (classId == Integer.parseInt(element[0]))
 					{
 						html = element[1];
-						x = Integer.valueOf(element[2]);
-						y = Integer.valueOf(element[3]);
-						z = Integer.valueOf(element[4]);
+						x = Integer.parseInt(element[2]);
+						y = Integer.parseInt(element[3]);
+						z = Integer.parseInt(element[4]);
 					}
 				}
 				if (x != 0)
@@ -393,7 +393,7 @@ public class Tutorial extends Quest
 					qs.set("Ex", "-5");
 				}
 			}
-			else if ((event_id == 30) && (player.getLevel() < 10) && (qs.getInt("Die") == 0))
+			else if ((eventId == 30) && (player.getLevel() < 10) && (qs.getInt("Die") == 0))
 			{
 				qs.playTutorialVoice("tutorial_voice_016");
 				qs.playSound("ItemSound.quest_tutorial");
@@ -401,7 +401,7 @@ public class Tutorial extends Quest
 				qs.showQuestionMark(8);
 				qs.onTutorialClientEvent(0);
 			}
-			else if ((event_id == 800000) && (player.getLevel() < 6) && (qs.getInt("sit") == 0))
+			else if ((eventId == 800000) && (player.getLevel() < 6) && (qs.getInt("sit") == 0))
 			{
 				qs.playTutorialVoice("tutorial_voice_018");
 				qs.playSound("ItemSound.quest_tutorial");
@@ -409,7 +409,7 @@ public class Tutorial extends Quest
 				qs.onTutorialClientEvent(0);
 				html = "tutorial_21z.htm";
 			}
-			else if (event_id == 40)
+			else if (eventId == 40)
 			{
 				switch (player.getLevel())
 				{
@@ -517,7 +517,7 @@ public class Tutorial extends Quest
 					}
 				}
 			}
-			else if ((event_id == 45) && (player.getLevel() < 10) && (qs.getInt("HP") == 0))
+			else if ((eventId == 45) && (player.getLevel() < 10) && (qs.getInt("HP") == 0))
 			{
 				qs.playTutorialVoice("tutorial_voice_017");
 				qs.playSound("ItemSound.quest_tutorial");
@@ -525,21 +525,21 @@ public class Tutorial extends Quest
 				qs.showQuestionMark(10);
 				qs.onTutorialClientEvent(800000);
 			}
-			else if ((event_id == 57) && (player.getLevel() < 6) && (qs.getInt("Adena") == 0))
+			else if ((eventId == 57) && (player.getLevel() < 6) && (qs.getInt("Adena") == 0))
 			{
 				qs.playTutorialVoice("tutorial_voice_012");
 				qs.playSound("ItemSound.quest_tutorial");
 				qs.set("Adena", "1");
 				qs.showQuestionMark(23);
 			}
-			else if ((event_id == 6353) && (player.getLevel() < 6) && (qs.getInt("Gemstone") == 0))
+			else if ((eventId == 6353) && (player.getLevel() < 6) && (qs.getInt("Gemstone") == 0))
 			{
 				qs.playTutorialVoice("tutorial_voice_013");
 				qs.playSound("ItemSound.quest_tutorial");
 				qs.set("Gemstone", "1");
 				qs.showQuestionMark(5);
 			}
-			else if ((event_id == 1048576) && (player.getLevel() < 6))
+			else if ((eventId == 1048576) && (player.getLevel() < 6))
 			{
 				qs.showQuestionMark(5);
 				qs.playTutorialVoice("tutorial_voice_013");
@@ -552,7 +552,7 @@ public class Tutorial extends Quest
 			int x = 0;
 			int y = 0;
 			int z = 0;
-			switch (Integer.valueOf(event.substring(2)))
+			switch (Integer.parseInt(event.substring(2)))
 			{
 				case 1:
 				{
@@ -560,12 +560,12 @@ public class Tutorial extends Quest
 					qs.set("Ex", "-5");
 					for (String[] element : CEEa)
 					{
-						if (classId == Integer.valueOf(element[0]))
+						if (classId == Integer.parseInt(element[0]))
 						{
 							html = element[1];
-							x = Integer.valueOf(element[2]);
-							y = Integer.valueOf(element[3]);
-							z = Integer.valueOf(element[4]);
+							x = Integer.parseInt(element[2]);
+							y = Integer.parseInt(element[3]);
+							z = Integer.parseInt(element[4]);
 						}
 					}
 					qs.addRadar(x, y, z);
@@ -581,12 +581,12 @@ public class Tutorial extends Quest
 				{
 					for (String[] element : CEEa)
 					{
-						if (classId == Integer.valueOf(element[0]))
+						if (classId == Integer.parseInt(element[0]))
 						{
 							html = element[1];
-							x = Integer.valueOf(element[2]);
-							y = Integer.valueOf(element[3]);
-							z = Integer.valueOf(element[4]);
+							x = Integer.parseInt(element[2]);
+							y = Integer.parseInt(element[3]);
+							z = Integer.parseInt(element[4]);
 						}
 					}
 					qs.addRadar(x, y, z);
@@ -608,12 +608,12 @@ public class Tutorial extends Quest
 				{
 					for (String[] element : QMCa)
 					{
-						if (classId == Integer.valueOf(element[0]))
+						if (classId == Integer.parseInt(element[0]))
 						{
 							html = element[1];
-							x = Integer.valueOf(element[2]);
-							y = Integer.valueOf(element[3]);
-							z = Integer.valueOf(element[4]);
+							x = Integer.parseInt(element[2]);
+							y = Integer.parseInt(element[3]);
+							z = Integer.parseInt(element[4]);
 						}
 					}
 					if (x != 0)
@@ -631,12 +631,12 @@ public class Tutorial extends Quest
 				{
 					for (String[] element : QMCa)
 					{
-						if (classId == Integer.valueOf(element[0]))
+						if (classId == Integer.parseInt(element[0]))
 						{
 							html = element[1];
-							x = Integer.valueOf(element[2]);
-							y = Integer.valueOf(element[3]);
-							z = Integer.valueOf(element[4]);
+							x = Integer.parseInt(element[2]);
+							y = Integer.parseInt(element[3]);
+							z = Integer.parseInt(element[4]);
 						}
 					}
 					if (x != 0)

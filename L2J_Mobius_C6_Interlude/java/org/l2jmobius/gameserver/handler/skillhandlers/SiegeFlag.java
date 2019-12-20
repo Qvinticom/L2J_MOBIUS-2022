@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * @author _drunk_ TODO To change the template for this generated type comment go to Window - Preferences - Java - Code Style - Code Templates
+ * @author _drunk_
  */
 public class SiegeFlag implements ISkillHandler
 {
@@ -48,7 +48,7 @@ public class SiegeFlag implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if ((creature == null) || !(creature instanceof PlayerInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return;
 		}
@@ -83,10 +83,10 @@ public class SiegeFlag implements ISkillHandler
 			// Spawn a new flag
 			SiegeFlagInstance flag = new SiegeFlagInstance(player, IdFactory.getInstance().getNextId(), NpcTable.getInstance().getTemplate(35062));
 			
-			if (skill.is_advancedFlag())
+			if (skill.isAdvancedFlag())
 			{
 				flag.set_advanceFlag(true);
-				flag.set_advanceMultiplier(skill.get_advancedMultiplier());
+				flag.set_advanceMultiplier(skill.getAdvancedMultiplier());
 			}
 			
 			flag.setTitle(player.getClan().getName());
@@ -140,7 +140,7 @@ public class SiegeFlag implements ISkillHandler
 	
 	public static boolean checkIfOkToPlaceFlag(Creature creature, Castle castle, boolean isCheckOnly)
 	{
-		if ((creature == null) || !(creature instanceof PlayerInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return false;
 		}
@@ -186,7 +186,7 @@ public class SiegeFlag implements ISkillHandler
 	
 	public static boolean checkIfOkToPlaceFlag(Creature creature, Fort fort, boolean isCheckOnly)
 	{
-		if ((creature == null) || !(creature instanceof PlayerInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return false;
 		}

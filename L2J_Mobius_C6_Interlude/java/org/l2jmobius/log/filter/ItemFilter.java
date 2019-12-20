@@ -36,7 +36,7 @@ public class ItemFilter implements Filter
 	@Override
 	public boolean isLoggable(LogRecord record)
 	{
-		if (record.getLoggerName() != "item")
+		if (!record.getLoggerName().equals("item"))
 		{
 			return false;
 		}

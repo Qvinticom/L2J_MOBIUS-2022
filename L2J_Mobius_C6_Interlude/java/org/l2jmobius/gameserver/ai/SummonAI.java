@@ -32,7 +32,6 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 public class SummonAI extends CreatureAI
 {
 	private boolean _thinking; // to prevent recursive thinking
-	private Summon summon;
 	
 	public SummonAI(AIAccessor accessor)
 	{
@@ -63,12 +62,13 @@ public class SummonAI extends CreatureAI
 	
 	private void thinkAttack()
 	{
-		summon = (Summon) _actor;
+		Summon summon = (Summon) _actor;
+		
 		WorldObject target = null;
 		target = summon.getTarget();
 		
 		// Like L2OFF if the target is dead the summon must go back to his owner
-		if ((target != null) && (summon != null) && ((Creature) target).isDead())
+		if ((target != null) && ((Creature) target).isDead())
 		{
 			summon.setFollowStatus(true);
 		}
@@ -86,7 +86,6 @@ public class SummonAI extends CreatureAI
 		
 		clientStopMoving(null);
 		_accessor.doAttack(getAttackTarget());
-		return;
 	}
 	
 	private void thinkCast()
@@ -99,7 +98,7 @@ public class SummonAI extends CreatureAI
 			setCastTarget(null);
 		}
 		
-		final Skill skill = get_skill();
+		final Skill skill = getSkill();
 		if (maybeMoveToPawn(target, _actor.getMagicalAttackRange(skill)))
 		{
 			return;
@@ -109,7 +108,6 @@ public class SummonAI extends CreatureAI
 		summon.setFollowStatus(false);
 		setIntention(AI_INTENTION_IDLE);
 		_accessor.doCast(skill);
-		return;
 	}
 	
 	private void thinkPickUp()
@@ -133,8 +131,6 @@ public class SummonAI extends CreatureAI
 		
 		setIntention(AI_INTENTION_IDLE);
 		((Summon.AIAccessor) _accessor).doPickupItem(target);
-		
-		return;
 	}
 	
 	private void thinkInteract()
@@ -157,8 +153,6 @@ public class SummonAI extends CreatureAI
 		}
 		
 		setIntention(AI_INTENTION_IDLE);
-		
-		return;
 	}
 	
 	@Override

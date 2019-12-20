@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
@@ -58,12 +59,13 @@ public class SellListProcure extends GameServerPacket
 		writeD(0x00); // lease ?
 		writeH(_sellList.size()); // list size
 		
-		for (ItemInstance item : _sellList.keySet())
+		for (Entry<ItemInstance, Integer> entry : _sellList.entrySet())
 		{
+			ItemInstance item = entry.getKey();
 			writeH(item.getItem().getType1());
 			writeD(item.getObjectId());
 			writeD(item.getItemId());
-			writeD(_sellList.get(item)); // count
+			writeD(entry.getValue()); // count
 			writeH(item.getItem().getType2());
 			writeH(0); // unknown
 			writeD(0); // price, u shouldnt get any adena for crops, only raw materials

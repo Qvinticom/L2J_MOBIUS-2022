@@ -16,7 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -31,8 +32,8 @@ public class SystemMessage extends GameServerPacket
 	private static final int TYPE_NUMBER = 1;
 	private static final int TYPE_TEXT = 0;
 	private final int _messageId;
-	private final Vector<Integer> _types = new Vector<>();
-	private final Vector<Object> _values = new Vector<>();
+	private final List<Integer> _types = new ArrayList<>();
+	private final List<Object> _values = new ArrayList<>();
 	private int _skillLvL = 1;
 	
 	public SystemMessage(SystemMessageId messageId)
@@ -109,13 +110,16 @@ public class SystemMessage extends GameServerPacket
 		_types.add(TYPE_SKILL_NAME);
 		_values.add(id);
 		_skillLvL = lvl;
-		
 		return this;
 	}
 	
-	public void addSkillName(Skill skill)
+	public SystemMessage addSkillName(Skill skill)
 	{
-	} // Check this
+		_types.add(TYPE_SKILL_NAME);
+		_values.add(skill.getId());
+		_skillLvL = skill.getLevel();
+		return this;
+	}
 	
 	@Override
 	protected final void writeImpl()
@@ -174,7 +178,6 @@ public class SystemMessage extends GameServerPacket
 	
 	public static SystemMessage getSystemMessage(SystemMessageId smId)
 	{
-		final SystemMessage sm = new SystemMessage(smId);
-		return sm;
+		return new SystemMessage(smId);
 	}
 }

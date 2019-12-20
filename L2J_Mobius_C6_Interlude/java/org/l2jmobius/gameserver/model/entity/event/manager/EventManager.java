@@ -21,6 +21,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 import java.util.logging.Logger;
 
@@ -38,13 +39,13 @@ public class EventManager
 	private static final String EVENT_MANAGER_CONFIGURATION_FILE = "./config/events/EventManager.ini";
 	
 	public static boolean TVT_EVENT_ENABLED;
-	public static ArrayList<String> TVT_TIMES_LIST;
+	public static List<String> TVT_TIMES_LIST;
 	
 	public static boolean CTF_EVENT_ENABLED;
-	public static ArrayList<String> CTF_TIMES_LIST;
+	public static List<String> CTF_TIMES_LIST;
 	
 	public static boolean DM_EVENT_ENABLED;
-	public static ArrayList<String> DM_TIMES_LIST;
+	public static List<String> DM_TIMES_LIST;
 	
 	private static EventManager instance = null;
 	
@@ -104,7 +105,7 @@ public class EventManager
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 		finally
 		{
@@ -116,7 +117,7 @@ public class EventManager
 				}
 				catch (IOException e)
 				{
-					e.printStackTrace();
+					LOGGER.warning(e.toString());
 				}
 			}
 		}
@@ -148,7 +149,7 @@ public class EventManager
 			LOGGER.warning("registerTvT: TvT Event is not setted Properly");
 		}
 		
-		EventsGlobalTask.getInstance().clearEventTasksByEventName(TvT.get_eventName());
+		EventsGlobalTask.getInstance().clearEventTasksByEventName(TvT.getEventName());
 		
 		for (String time : TVT_TIMES_LIST)
 		{
@@ -166,7 +167,7 @@ public class EventManager
 			LOGGER.warning("registerCTF: CTF Event is not setted Properly");
 		}
 		
-		EventsGlobalTask.getInstance().clearEventTasksByEventName(CTF.get_eventName());
+		EventsGlobalTask.getInstance().clearEventTasksByEventName(CTF.getEventName());
 		
 		for (String time : CTF_TIMES_LIST)
 		{
@@ -184,7 +185,7 @@ public class EventManager
 			LOGGER.warning("registerDM: DM Event is not setted Properly");
 		}
 		
-		EventsGlobalTask.getInstance().clearEventTasksByEventName(DM.get_eventName());
+		EventsGlobalTask.getInstance().clearEventTasksByEventName(DM.getEventName());
 		
 		for (String time : DM_TIMES_LIST)
 		{

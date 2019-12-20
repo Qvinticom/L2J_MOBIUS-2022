@@ -164,12 +164,9 @@ public class FortWyvernManagerInstance extends NpcInstance
 		
 		final int condition = validateCondition(player);
 		
-		if (condition > COND_ALL_FALSE)
+		if ((condition > COND_ALL_FALSE) && (condition == COND_OWNER))
 		{
-			if (condition == COND_OWNER)
-			{
-				filename = "data/html/fortress/wyvernmanager.htm";
-			}
+			filename = "data/html/fortress/wyvernmanager.htm";
 		}
 		
 		NpcHtmlMessage html = new NpcHtmlMessage(1);
@@ -181,18 +178,15 @@ public class FortWyvernManagerInstance extends NpcInstance
 	
 	protected int validateCondition(PlayerInstance player)
 	{
-		if ((getFort() != null) && (getFort().getFortId() > 0))
+		if ((getFort() != null) && (getFort().getFortId() > 0) && (player.getClan() != null))
 		{
-			if (player.getClan() != null)
+			if (getFort().getSiege().getIsInProgress())
 			{
-				if (getFort().getSiege().getIsInProgress())
-				{
-					return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
-				}
-				else if ((getFort().getOwnerId() == player.getClanId()) && player.isClanLeader())
-				{
-					return COND_OWNER; // Owner
-				}
+				return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
+			}
+			else if ((getFort().getOwnerId() == player.getClanId()) && player.isClanLeader())
+			{
+				return COND_OWNER; // Owner
 			}
 		}
 		return COND_ALL_FALSE;

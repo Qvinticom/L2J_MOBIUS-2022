@@ -50,7 +50,7 @@ public class Q508_AClansReputation extends Quest
 	private static final int RAHHA = 25051;
 	
 	// Reward list (itemId, minClanPoints, maxClanPoints)
-	private static final int reward_list[][] =
+	private static final int[][] REWARD_LIST =
 	{
 		{
 			PALIBATI_QUEEN_THEMIS,
@@ -91,7 +91,7 @@ public class Q508_AClansReputation extends Quest
 	};
 	
 	// Radar
-	private static final int radar[][] =
+	private static final int[][] radar =
 	{
 		{
 			192346,
@@ -210,9 +210,9 @@ public class Q508_AClansReputation extends Quest
 				int raid = st.getInt("raid");
 				if (st.getInt("cond") == 1)
 				{
-					int item = reward_list[raid - 1][1];
+					int item = REWARD_LIST[raid - 1][1];
 					int count = st.getQuestItemsCount(item);
-					int reward = Rnd.get(reward_list[raid - 1][2], reward_list[raid - 1][3]);
+					int reward = Rnd.get(REWARD_LIST[raid - 1][2], REWARD_LIST[raid - 1][3]);
 					
 					if (count == 0)
 					{
@@ -245,9 +245,9 @@ public class Q508_AClansReputation extends Quest
 		
 		// Reward only if quest is setup on good index.
 		int raid = st.getInt("raid");
-		if (reward_list[raid - 1][0] == npc.getNpcId())
+		if (REWARD_LIST[raid - 1][0] == npc.getNpcId())
 		{
-			int item = reward_list[raid - 1][1];
+			int item = REWARD_LIST[raid - 1][1];
 			if (!st.hasQuestItems(item))
 			{
 				st.giveItems(item, 1);

@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.skills.conditions;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Env;
@@ -26,13 +26,13 @@ import org.l2jmobius.gameserver.model.skills.Env;
  */
 public class ConditionPlayerClassIdRestriction extends Condition
 {
-	private final ArrayList<Integer> _classIds;
+	private final List<Integer> _classIds;
 	
 	/**
 	 * Instantiates a new condition player class id restriction.
 	 * @param classId the class id
 	 */
-	public ConditionPlayerClassIdRestriction(ArrayList<Integer> classId)
+	public ConditionPlayerClassIdRestriction(List<Integer> classId)
 	{
 		_classIds = classId;
 	}

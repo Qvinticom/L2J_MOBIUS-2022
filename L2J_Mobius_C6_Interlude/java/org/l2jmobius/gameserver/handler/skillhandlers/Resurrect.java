@@ -64,12 +64,9 @@ public class Resurrect implements ISkillHandler
 				targetPlayer = (PlayerInstance) target;
 				
 				// Check for same party or for same clan, if target is for clan.
-				if (skill.getTargetType() == SkillTargetType.TARGET_CORPSE_CLAN)
+				if ((skill.getTargetType() == SkillTargetType.TARGET_CORPSE_CLAN) && ((player == null) || (player.getClanId() != targetPlayer.getClanId())))
 				{
-					if ((player == null) || (player.getClanId() != targetPlayer.getClanId()))
-					{
-						continue;
-					}
+					continue;
 				}
 			}
 			
@@ -79,7 +76,7 @@ public class Resurrect implements ISkillHandler
 			}
 		}
 		
-		if (targetToRes.size() == 0)
+		if (targetToRes.isEmpty())
 		{
 			creature.abortCast();
 			creature.sendPacket(SystemMessage.sendString("No valid target to resurrect"));

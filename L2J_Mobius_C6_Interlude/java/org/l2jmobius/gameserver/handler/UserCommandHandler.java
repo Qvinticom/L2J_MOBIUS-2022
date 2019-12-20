@@ -21,7 +21,6 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.handler.usercommandhandlers.ChannelDelete;
 import org.l2jmobius.gameserver.handler.usercommandhandlers.ChannelLeave;
 import org.l2jmobius.gameserver.handler.usercommandhandlers.ChannelListUpdate;
@@ -39,7 +38,7 @@ import org.l2jmobius.gameserver.handler.usercommandhandlers.Time;
 
 public class UserCommandHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(GameServer.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(UserCommandHandler.class.getName());
 	
 	private final Map<Integer, IUserCommandHandler> _datatable;
 	

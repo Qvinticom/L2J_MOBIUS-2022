@@ -79,12 +79,9 @@ public class Manadam implements ISkillHandler
 				final double mp = (damage > target.getCurrentMp() ? target.getCurrentMp() : damage);
 				target.reduceCurrentMp(mp);
 				
-				if (damage > 0)
+				if ((damage > 0) && target.isSleeping())
 				{
-					if (target.isSleeping())
-					{
-						target.stopSleeping(null);
-					}
+					target.stopSleeping(null);
 				}
 				
 				StatusUpdate sump = new StatusUpdate(target.getObjectId());

@@ -103,10 +103,9 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class EnterWorld extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(EnterWorld.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(EnterWorld.class.getName());
 	
 	private final SimpleDateFormat fmt = new SimpleDateFormat("H:mm.");
-	private long _daysleft;
 	SimpleDateFormat df = new SimpleDateFormat("dd MM yyyy");
 	
 	@Override
@@ -134,14 +133,11 @@ public class EnterWorld extends GameClientPacket
 		// Register in flood protector
 		// FloodProtector.getInstance().registerNewPlayer(player.getObjectId());
 		
-		if (!player.isGM() && !player.isDonator() && Config.CHECK_NAME_ON_LOGIN)
+		if (!player.isGM() && !player.isDonator() && Config.CHECK_NAME_ON_LOGIN && ((player.getName().length() < 3) || (player.getName().length() > 16) || !Util.isAlphaNumeric(player.getName()) || !isValidName(player.getName())))
 		{
-			if ((player.getName().length() < 3) || (player.getName().length() > 16) || !Util.isAlphaNumeric(player.getName()) || !isValidName(player.getName()))
-			{
-				LOGGER.warning("Charname: " + player.getName() + " is invalid. EnterWorld failed.");
-				getClient().closeNow();
-				return;
-			}
+			LOGGER.warning("Charname: " + player.getName() + " is invalid. EnterWorld failed.");
+			getClient().closeNow();
+			return;
 		}
 		
 		// Set online status
@@ -156,7 +152,7 @@ public class EnterWorld extends GameClientPacket
 		if (Config.L2JMOD_ALLOW_WEDDING)
 		{
 			engage(player);
-			notifyPartner(player, player.getPartnerId());
+			notifyPartner(player);
 		}
 		
 		EnterGM(player);
@@ -180,7 +176,7 @@ public class EnterWorld extends GameClientPacket
 				final NpcHtmlMessage html = new NpcHtmlMessage(0);
 				html.setFile("data/html/clan_notice.htm");
 				html.replace("%clan_name%", player.getClan().getName());
-				html.replace("%notice_text%", player.getClan().getNotice().replaceAll("\r\n", "<br>").replaceAll("action", "").replaceAll("bypass", ""));
+				html.replace("%notice_text%", player.getClan().getNotice().replaceAll("\r\n", "<br>").replaceAll("action", "").replace("bypass", ""));
 				sendPacket(html);
 			}
 		}
@@ -236,11 +232,11 @@ public class EnterWorld extends GameClientPacket
 		}
 		
 		// Remove Demonic Weapon if character is not Cursed Weapon Equipped
-		if ((player.getInventory().getItemByItemId(8190) != null) && (player.isCursedWeaponEquipped() == false))
+		if ((player.getInventory().getItemByItemId(8190) != null) && !player.isCursedWeaponEquipped())
 		{
 			player.destroyItem("Zariche", player.getInventory().getItemByItemId(8190), null, true);
 		}
-		if ((player.getInventory().getItemByItemId(8689) != null) && (player.isCursedWeaponEquipped() == false))
+		if ((player.getInventory().getItemByItemId(8689) != null) && !player.isCursedWeaponEquipped())
 		{
 			player.destroyItem("Akamanah", player.getInventory().getItemByItemId(8689), null, true);
 		}
@@ -262,26 +258,20 @@ public class EnterWorld extends GameClientPacket
 		{
 			for (ItemInstance i : player.getInventory().getItems())
 			{
-				if (!player.isGM())
+				if (!player.isGM() && i.isEquipable() && (i.getEnchantLevel() > Config.MAX_ITEM_ENCHANT_KICK))
 				{
-					if (i.isEquipable())
-					{
-						if (i.getEnchantLevel() > Config.MAX_ITEM_ENCHANT_KICK)
-						{
-							// Delete Item Over enchanted
-							player.getInventory().destroyItem(null, i, player, null);
-							// Message to Player
-							player.sendMessage("[Server]: You have over enchanted items you will be kicked from server!");
-							player.sendMessage("[Server]: Respect our server rules.");
-							// Message with screen
-							sendPacket(new ExShowScreenMessage(" You have an over enchanted item, you will be kicked from server! ", 6000));
-							// Punishment e LOGGER in audit
-							Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has Overenchanted  item! Kicked! ", Config.DEFAULT_PUNISH);
-							// Logger in console
-							LOGGER.info("#### ATTENTION ####");
-							LOGGER.info(i + " item has been removed from " + player);
-						}
-					}
+					// Delete Item Over enchanted
+					player.getInventory().destroyItem(null, i, player, null);
+					// Message to Player
+					player.sendMessage("[Server]: You have over enchanted items you will be kicked from server!");
+					player.sendMessage("[Server]: Respect our server rules.");
+					// Message with screen
+					sendPacket(new ExShowScreenMessage(" You have an over enchanted item, you will be kicked from server! ", 6000));
+					// Punishment e LOGGER in audit
+					Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has Overenchanted  item! Kicked! ", Config.DEFAULT_PUNISH);
+					// Logger in console
+					LOGGER.info("#### ATTENTION ####");
+					LOGGER.info(i + " item has been removed from " + player);
 				}
 			}
 		}
@@ -431,12 +421,9 @@ public class EnterWorld extends GameClientPacket
 			// Add message at connexion if clanHall not paid. Possibly this is custom...
 			final ClanHall clanHall = ClanHallManager.getInstance().getClanHallByOwner(player.getClan());
 			
-			if (clanHall != null)
+			if ((clanHall != null) && !clanHall.getPaid())
 			{
-				if (!clanHall.getPaid())
-				{
-					player.sendPacket(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
-				}
+				player.sendPacket(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
 			}
 		}
 		
@@ -475,9 +462,8 @@ public class EnterWorld extends GameClientPacket
 		
 		if (Config.ALLOW_CLASS_MASTERS && Config.ALLOW_REMOTE_CLASS_MASTERS)
 		{
-			final ClassMasterInstance master_instance = ClassMasterInstance.getInstance();
-			
-			if (master_instance != null)
+			final ClassMasterInstance master = ClassMasterInstance.getInstance();
+			if (master != null)
 			{
 				final ClassLevel lvlnow = PlayerClass.values()[player.getClassId().getId()].getLevel();
 				
@@ -659,9 +645,9 @@ public class EnterWorld extends GameClientPacket
 			final Skill skill = SkillTable.getInstance().getInfo(2025, 1);
 			if (skill != null)
 			{
-				final MagicSkillUse MSU = new MagicSkillUse(player, player, 2025, 1, 1, 0);
-				player.sendPacket(MSU);
-				player.broadcastPacket(MSU);
+				final MagicSkillUse msu = new MagicSkillUse(player, player, 2025, 1, 1, 0);
+				player.sendPacket(msu);
+				player.broadcastPacket(msu);
 				player.useMagic(skill, false, false);
 			}
 			player.setFirstLog(false);
@@ -803,16 +789,16 @@ public class EnterWorld extends GameClientPacket
 		else
 		{
 			final Date dt = new Date(endDay);
-			_daysleft = (endDay - now) / 86400000;
-			if (_daysleft > 30)
+			final long daysleft = (endDay - now) / 86400000;
+			if (daysleft > 30)
 			{
 				player.sendMessage("[Aio System]: Aio period ends in " + df.format(dt) + ". enjoy the Game.");
 			}
-			else if (_daysleft > 0)
+			else if (daysleft > 0)
 			{
-				player.sendMessage("[Aio System]: Left " + (int) _daysleft + " for Aio period ends.");
+				player.sendMessage("[Aio System]: Left " + (int) daysleft + " for Aio period ends.");
 			}
-			else if (_daysleft < 1)
+			else if (daysleft < 1)
 			{
 				final long hour = (endDay - now) / 3600000;
 				player.sendMessage("[Aio System]: Left " + (int) hour + " hours to Aio period ends.");
@@ -848,7 +834,7 @@ public class EnterWorld extends GameClientPacket
 		}
 	}
 	
-	private void notifyPartner(PlayerInstance player, int partnerId)
+	private void notifyPartner(PlayerInstance player)
 	{
 		if (player.getPartnerId() != 0)
 		{
@@ -931,15 +917,12 @@ public class EnterWorld extends GameClientPacket
 	private void notifyCastleOwner(PlayerInstance player)
 	{
 		final Clan clan = player.getClan();
-		if (clan != null)
+		if ((clan != null) && (clan.getHasCastle() > 0))
 		{
-			if (clan.getHasCastle() > 0)
+			final Castle castle = CastleManager.getInstance().getCastleById(clan.getHasCastle());
+			if ((castle != null) && (player.getObjectId() == clan.getLeaderId()))
 			{
-				final Castle castle = CastleManager.getInstance().getCastleById(clan.getHasCastle());
-				if ((castle != null) && (player.getObjectId() == clan.getLeaderId()))
-				{
-					Announcements.getInstance().announceToAll("Lord " + player.getName() + " Ruler Of " + castle.getName() + " Castle is now Online!");
-				}
+				Announcements.getInstance().announceToAll("Lord " + player.getName() + " Ruler Of " + castle.getName() + " Castle is now Online!");
 			}
 		}
 	}

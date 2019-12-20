@@ -21,7 +21,6 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.AwayCmd;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.BankingCmd;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.CTFCmd;
@@ -36,7 +35,7 @@ import org.l2jmobius.gameserver.handler.voicedcommandhandlers.Wedding;
 
 public class VoicedCommandHandler
 {
-	private static Logger LOGGER = Logger.getLogger(GameServer.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(VoicedCommandHandler.class.getName());
 	
 	private final Map<String, IVoicedCommandHandler> _datatable;
 	
@@ -108,9 +107,9 @@ public class VoicedCommandHandler
 	public IVoicedCommandHandler getVoicedCommandHandler(String voicedCommand)
 	{
 		String command = voicedCommand;
-		if (voicedCommand.indexOf(" ") != -1)
+		if (voicedCommand.indexOf(' ') != -1)
 		{
-			command = voicedCommand.substring(0, voicedCommand.indexOf(" "));
+			command = voicedCommand.substring(0, voicedCommand.indexOf(' '));
 		}
 		return _datatable.get(command);
 	}

@@ -257,7 +257,7 @@ public class ClanHallManagerInstance extends FolkInstance
 								{
 									int fee;
 									val = st.nextToken();
-									final int percent = Integer.valueOf(val);
+									final int percent = Integer.parseInt(val);
 									switch (percent)
 									{
 										case 0:
@@ -347,7 +347,7 @@ public class ClanHallManagerInstance extends FolkInstance
 								{
 									int fee;
 									val = st.nextToken();
-									final int percent = Integer.valueOf(val);
+									final int percent = Integer.parseInt(val);
 									switch (percent)
 									{
 										case 0:
@@ -397,7 +397,7 @@ public class ClanHallManagerInstance extends FolkInstance
 								{
 									int fee;
 									val = st.nextToken();
-									final int percent = Integer.valueOf(val);
+									final int percent = Integer.parseInt(val);
 									switch (percent)
 									{
 										case 0:
@@ -519,7 +519,7 @@ public class ClanHallManagerInstance extends FolkInstance
 									}
 									val = st.nextToken();
 									int fee;
-									final int lvl = Integer.valueOf(val);
+									final int lvl = Integer.parseInt(val);
 									switch (lvl)
 									{
 										case 0:
@@ -559,7 +559,7 @@ public class ClanHallManagerInstance extends FolkInstance
 								{
 									int fee;
 									val = st.nextToken();
-									final int lvl = Integer.valueOf(val);
+									final int lvl = Integer.parseInt(val);
 									switch (lvl)
 									{
 										case 0:
@@ -594,7 +594,7 @@ public class ClanHallManagerInstance extends FolkInstance
 								{
 									int fee;
 									val = st.nextToken();
-									final int lvl = Integer.valueOf(val);
+									final int lvl = Integer.parseInt(val);
 									switch (lvl)
 									{
 										case 0:
@@ -716,7 +716,7 @@ public class ClanHallManagerInstance extends FolkInstance
 								{
 									int fee;
 									val = st.nextToken();
-									final int lvl = Integer.valueOf(val);
+									final int lvl = Integer.parseInt(val);
 									switch (lvl)
 									{
 										case 0:
@@ -751,7 +751,7 @@ public class ClanHallManagerInstance extends FolkInstance
 								{
 									int fee;
 									val = st.nextToken();
-									final int lvl = Integer.valueOf(val);
+									final int lvl = Integer.parseInt(val);
 									switch (lvl)
 									{
 										case 0:
@@ -834,22 +834,22 @@ public class ClanHallManagerInstance extends FolkInstance
 			{
 				setTarget(player);
 				Skill skill;
-				if (val == "")
+				if (val.equals(""))
 				{
 					return;
 				}
 				
 				try
 				{
-					final int skill_id = Integer.parseInt(val);
+					final int skillId = Integer.parseInt(val);
 					try
 					{
-						int skill_lvl = 0;
+						int skillLevel = 0;
 						if (st.countTokens() >= 1)
 						{
-							skill_lvl = Integer.parseInt(st.nextToken());
+							skillLevel = Integer.parseInt(st.nextToken());
 						}
-						skill = SkillTable.getInstance().getInfo(skill_id, skill_lvl);
+						skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
 						if (skill.getSkillType() == SkillType.SUMMON)
 						{
 							player.doCast(skill);

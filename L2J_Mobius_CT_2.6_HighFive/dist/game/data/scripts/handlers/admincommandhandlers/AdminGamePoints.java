@@ -126,7 +126,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 			return false;
 		}
 		
-		final Long points = Long.valueOf(val);
+		final Long points = Long.parseLong(val);
 		if (points < 1)
 		{
 			admin.sendMessage("Invalid game point count.");
@@ -162,7 +162,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 			return false;
 		}
 		
-		final Long points = Long.valueOf(val);
+		final Long points = Long.parseLong(val);
 		if (points < 0)
 		{
 			admin.sendMessage("Invalid game point count.");
@@ -188,7 +188,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 			return false;
 		}
 		
-		final Long points = Long.valueOf(val);
+		final Long points = Long.parseLong(val);
 		if (points < 1)
 		{
 			admin.sendMessage("Invalid game point count.");

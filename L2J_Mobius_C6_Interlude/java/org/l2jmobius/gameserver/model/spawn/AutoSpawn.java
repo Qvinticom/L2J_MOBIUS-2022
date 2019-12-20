@@ -230,15 +230,12 @@ public class AutoSpawn
 	 */
 	public void removeSpawn(int objectId)
 	{
-		AutoSpawnInstance spawn_inst = null;
-		
+		AutoSpawnInstance spawn = null;
 		synchronized (_registeredSpawns)
 		{
-			spawn_inst = _registeredSpawns.get(objectId);
+			spawn = _registeredSpawns.get(objectId);
 		}
-		
-		removeSpawn(spawn_inst);
-		
+		removeSpawn(spawn);
 	}
 	
 	/**
@@ -338,11 +335,10 @@ public class AutoSpawn
 		
 		synchronized (_runningSpawns)
 		{
-			
-			final ScheduledFuture<?> future_task = _runningSpawns.get(objectId);
-			if (future_task != null)
+			final ScheduledFuture<?> task = _runningSpawns.get(objectId);
+			if (task != null)
 			{
-				return future_task.getDelay(TimeUnit.MILLISECONDS);
+				return task.getDelay(TimeUnit.MILLISECONDS);
 			}
 		}
 		
@@ -564,7 +560,6 @@ public class AutoSpawn
 			catch (Exception e)
 			{
 				LOGGER.warning("AutoSpawnHandler: An error occurred while initializing spawn instance (Object ID = " + _objectId + "): " + e);
-				e.printStackTrace();
 			}
 		}
 	}
@@ -601,28 +596,27 @@ public class AutoSpawn
 					return;
 				}
 				
-				final NpcInstance[] npc_instances = spawnInst.getNPCInstanceList();
-				if (npc_instances == null)
+				final NpcInstance[] npcs = spawnInst.getNPCInstanceList();
+				if (npcs == null)
 				{
 					LOGGER.info("AutoSpawnHandler: No spawn registered");
 					return;
 				}
 				
-				for (NpcInstance npcInst : npc_instances)
+				for (NpcInstance npc : npcs)
 				{
-					if (npcInst == null)
+					if (npc == null)
 					{
 						continue;
 					}
 					
-					npcInst.deleteMe();
-					spawnInst.removeNpcInstance(npcInst);
+					npc.deleteMe();
+					spawnInst.removeNpcInstance(npc);
 				}
 			}
 			catch (Exception e)
 			{
 				LOGGER.warning("AutoSpawnHandler: An error occurred while despawning spawn (Object ID = " + _objectId + "): " + e);
-				e.printStackTrace();
 			}
 		}
 	}

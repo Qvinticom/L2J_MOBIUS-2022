@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
  */
 public class TradeController
 {
-	private static Logger LOGGER = Logger.getLogger(TradeController.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(TradeController.class.getName());
 	
 	private int _nextListId;
 	private final Map<Integer, StoreTradeList> _lists;
@@ -98,13 +98,15 @@ public class TradeController
 					{
 						continue;
 					}
+					
+					// FIXME: Nothing?
 				}
 				
 				LOGGER.info("TradeController: Loaded " + _lists.size() + " Buylists.");
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning("error while creating trade controller in line: " + (lnr == null ? 0 : lnr.getLineNumber()) + " " + e);
+				LOGGER.warning("Error while creating trade controller in line: " + (lnr == null ? 0 : lnr.getLineNumber()) + " " + e);
 			}
 			finally
 			{
@@ -116,7 +118,7 @@ public class TradeController
 					}
 					catch (Exception e1)
 					{
-						e1.printStackTrace();
+						LOGGER.warning("Problem with TradeController: " + e1.getMessage());
 					}
 				}
 				
@@ -128,7 +130,7 @@ public class TradeController
 					}
 					catch (Exception e1)
 					{
-						e1.printStackTrace();
+						LOGGER.warning("Problem with TradeController: " + e1.getMessage());
 					}
 				}
 				
@@ -140,7 +142,7 @@ public class TradeController
 					}
 					catch (Exception e1)
 					{
-						e1.printStackTrace();
+						LOGGER.warning("Problem with TradeController: " + e1.getMessage());
 					}
 				}
 			}
@@ -152,7 +154,7 @@ public class TradeController
 			/**
 			 * Initialize Shop buylist
 			 */
-			boolean LimitedItem = false;
+			boolean limitedItem = false;
 			
 			try (Connection con = DatabaseFactory.getConnection())
 			{
@@ -168,7 +170,7 @@ public class TradeController
 					ResultSet rset = statement.executeQuery();
 					if (rset.next())
 					{
-						LimitedItem = false;
+						limitedItem = false;
 						StoreTradeList buy1 = new StoreTradeList(rset1.getInt("shop_id"));
 						
 						int itemId = rset.getInt("item_id");
@@ -189,7 +191,7 @@ public class TradeController
 						if (count > -1)
 						{
 							item.setCountDecrease(true);
-							LimitedItem = true;
+							limitedItem = true;
 						}
 						
 						if (!rset1.getString("npc_id").equals("gm") && (price < (item.getReferencePrice() / 2)))
@@ -216,7 +218,7 @@ public class TradeController
 						
 						try
 						{
-							while (rset.next()) // TODO aici
+							while (rset.next())
 							{
 								itemId = rset.getInt("item_id");
 								price = rset.getInt("price");
@@ -233,7 +235,7 @@ public class TradeController
 								if (count > -1)
 								{
 									item2.setCountDecrease(true);
-									LimitedItem = true;
+									limitedItem = true;
 								}
 								
 								if (!rset1.getString("npc_id").equals("gm") && (price < (item2.getReferencePrice() / 2)))
@@ -261,7 +263,7 @@ public class TradeController
 						{
 							LOGGER.warning("TradeController: Problem with buylist " + buy1.getListId() + " item " + itemId);
 						}
-						if (LimitedItem)
+						if (limitedItem)
 						{
 							_listsTaskItem.put(buy1.getListId(), buy1);
 						}
@@ -312,15 +314,13 @@ public class TradeController
 				}
 				catch (Exception e)
 				{
-					LOGGER.warning("TradeController: Could not restore Timer for Item count.");
-					e.printStackTrace();
+					LOGGER.warning("TradeController: Could not restore Timer for Item count. " + e.getMessage());
 				}
 			}
 			catch (Exception e)
 			{
 				// problem with initializing spawn, go to next one
-				LOGGER.warning("TradeController: Buylists could not be initialized.");
-				e.printStackTrace();
+				LOGGER.warning("TradeController: Buylists could not be initialized." + e.getMessage());
 			}
 			
 			/*
@@ -345,7 +345,7 @@ public class TradeController
 						
 						if (rset.next())
 						{
-							LimitedItem = false;
+							limitedItem = false;
 							StoreTradeList buy1 = new StoreTradeList(rset1.getInt("shop_id"));
 							int itemId = rset.getInt("item_id");
 							int price = rset.getInt("price");
@@ -363,7 +363,7 @@ public class TradeController
 							if (count > -1)
 							{
 								item.setCountDecrease(true);
-								LimitedItem = true;
+								limitedItem = true;
 							}
 							
 							if (!rset1.getString("npc_id").equals("gm") && (price < (item.getReferencePrice() / 2)))
@@ -405,7 +405,7 @@ public class TradeController
 									if (count > -1)
 									{
 										item2.setCountDecrease(true);
-										LimitedItem = true;
+										limitedItem = true;
 									}
 									
 									if (!rset1.getString("npc_id").equals("gm") && (price < (item2.getReferencePrice() / 2)))
@@ -432,7 +432,7 @@ public class TradeController
 							{
 								LOGGER.warning("TradeController: Problem with buylist " + buy1.getListId() + " item " + itemId);
 							}
-							if (LimitedItem)
+							if (limitedItem)
 							{
 								_listsTaskItem.put(buy1.getListId(), buy1);
 							}
@@ -481,15 +481,13 @@ public class TradeController
 					}
 					catch (Exception e)
 					{
-						LOGGER.warning("TradeController: Could not restore Timer for Item count.");
-						e.printStackTrace();
+						LOGGER.warning("TradeController: Could not restore Timer for Item count. " + e.getMessage());
 					}
 				}
 				catch (Exception e)
 				{
 					// problem with initializing spawn, go to next one
-					LOGGER.warning("TradeController: Buylists could not be initialized.");
-					e.printStackTrace();
+					LOGGER.warning("TradeController: Buylists could not be initialized. " + e.getMessage());
 				}
 			}
 		}

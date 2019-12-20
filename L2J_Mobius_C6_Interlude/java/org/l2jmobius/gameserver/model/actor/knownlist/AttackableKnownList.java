@@ -43,7 +43,7 @@ public class AttackableKnownList extends NpcKnownList
 		}
 		
 		// Remove the WorldObject from the _aggrolist of the Attackable
-		if ((object != null) && (object instanceof Creature))
+		if (object instanceof Creature)
 		{
 			getActiveChar().getAggroList().remove(object);
 		}
@@ -70,12 +70,9 @@ public class AttackableKnownList extends NpcKnownList
 	@Override
 	public int getDistanceToForgetObject(WorldObject object)
 	{
-		if (getActiveChar().getAggroList() != null)
+		if ((getActiveChar().getAggroList() != null) && (getActiveChar().getAggroList().get(object) != null))
 		{
-			if (getActiveChar().getAggroList().get(object) != null)
-			{
-				return 3000;
-			}
+			return 3000;
 		}
 		return Math.min(2200, 2 * getDistanceToWatchObject(object));
 	}

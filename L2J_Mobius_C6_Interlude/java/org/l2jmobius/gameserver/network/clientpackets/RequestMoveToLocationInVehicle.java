@@ -27,36 +27,36 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 public class RequestMoveToLocationInVehicle extends GameClientPacket
 {
 	private final Location _pos = new Location(0, 0, 0);
-	private final Location _origin_pos = new Location(0, 0, 0);
+	private final Location _originPos = new Location(0, 0, 0);
 	private int _boatId;
 	
 	@Override
 	protected void readImpl()
 	{
-		int _x;
-		int _y;
-		int _z;
+		int x;
+		int y;
+		int z;
 		_boatId = readD(); // objectId of boat
-		_x = readD();
-		_y = readD();
-		_z = readD();
-		_pos.setXYZ(_x, _y, _z);
-		_x = readD();
-		_y = readD();
-		_z = readD();
-		_origin_pos.setXYZ(_x, _y, _z);
+		x = readD();
+		y = readD();
+		z = readD();
+		_pos.setXYZ(x, y, z);
+		x = readD();
+		y = readD();
+		z = readD();
+		_originPos.setXYZ(x, y, z);
 	}
 	
 	@Override
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
 		}
-		else if (player.isAttackingNow() && (player.getActiveWeaponItem() != null) && (player.getActiveWeaponItem().getItemType() == WeaponType.BOW))
+		
+		if (player.isAttackingNow() && (player.getActiveWeaponItem() != null) && (player.getActiveWeaponItem().getItemType() == WeaponType.BOW))
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 		}
@@ -70,7 +70,7 @@ public class RequestMoveToLocationInVehicle extends GameClientPacket
 			player.setBoat(boat);
 			player.setInBoat(true);
 			player.setInBoatPosition(_pos);
-			player.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO_IN_A_BOAT, new Location(_pos.getX(), _pos.getY(), _pos.getZ(), 0), new Location(_origin_pos.getX(), _origin_pos.getY(), _origin_pos.getZ(), 0));
+			player.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO_IN_A_BOAT, new Location(_pos.getX(), _pos.getY(), _pos.getZ(), 0), new Location(_originPos.getX(), _originPos.getY(), _originPos.getZ(), 0));
 		}
 	}
 }

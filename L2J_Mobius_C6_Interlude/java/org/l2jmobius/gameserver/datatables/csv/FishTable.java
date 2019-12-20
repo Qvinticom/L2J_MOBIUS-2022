@@ -28,7 +28,6 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.model.FishData;
 
 /**
@@ -36,7 +35,7 @@ import org.l2jmobius.gameserver.model.FishData;
  */
 public class FishTable
 {
-	private static Logger LOGGER = Logger.getLogger(SkillTreeTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FishTable.class.getName());
 	
 	private static List<FishData> _fishsNormal;
 	private static List<FishData> _fishsEasy;
@@ -64,7 +63,6 @@ public class FishTable
 			_fishsEasy = new ArrayList<>();
 			_fishsNormal = new ArrayList<>();
 			_fishsHard = new ArrayList<>();
-			FishData fish;
 			
 			// format:
 			// id;level;name;hp;hpregen;fish_type;fish_group;fish_guts;guts_check_time;wait_time;combat_time
@@ -130,7 +128,7 @@ public class FishTable
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with FishTable: " + e1.getMessage());
 				}
 			}
 			
@@ -142,7 +140,7 @@ public class FishTable
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with FishTable: " + e1.getMessage());
 				}
 			}
 			
@@ -154,7 +152,7 @@ public class FishTable
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with FishTable: " + e1.getMessage());
 				}
 			}
 		}
@@ -170,31 +168,31 @@ public class FishTable
 	public List<FishData> getfish(int lvl, int type, int group)
 	{
 		final List<FishData> result = new ArrayList<>();
-		List<FishData> _Fishs = null;
+		List<FishData> fishes = null;
 		
 		switch (group)
 		{
 			case 0:
 			{
-				_Fishs = _fishsEasy;
+				fishes = _fishsEasy;
 				break;
 			}
 			case 1:
 			{
-				_Fishs = _fishsNormal;
+				fishes = _fishsNormal;
 				break;
 			}
 			case 2:
 			{
-				_Fishs = _fishsHard;
+				fishes = _fishsHard;
 			}
 		}
-		if (_Fishs == null)
+		if (fishes == null)
 		{
 			LOGGER.warning("Fish are not defined!");
 			return null;
 		}
-		for (FishData f : _Fishs)
+		for (FishData f : fishes)
 		{
 			if (f.getLevel() != lvl)
 			{
@@ -208,7 +206,7 @@ public class FishTable
 			
 			result.add(f);
 		}
-		if (result.size() == 0)
+		if (result.isEmpty())
 		{
 			LOGGER.warning("Cant Find Any Fish!? - Lvl: " + lvl + " Type: " + type);
 		}

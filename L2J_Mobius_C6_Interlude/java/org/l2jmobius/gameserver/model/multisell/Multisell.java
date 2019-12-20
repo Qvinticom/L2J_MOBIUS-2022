@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.network.serverpackets.MultiSellList;
  */
 public class Multisell
 {
-	private static Logger LOGGER = Logger.getLogger(Multisell.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Multisell.class.getName());
 	private final List<MultiSellListContainer> _entries = new ArrayList<>();
 	
 	public MultiSellListContainer getList(int id)

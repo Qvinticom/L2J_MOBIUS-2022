@@ -45,20 +45,16 @@ public class CannotMoveAnymoreInVehicle extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (player.isInBoat())
+		if (player.isInBoat() && (player.getBoat().getObjectId() == _boatId))
 		{
-			if (player.getBoat().getObjectId() == _boatId)
-			{
-				player.setInBoatPosition(new Location(_x, _y, _z));
-				player.getPosition().setHeading(_heading);
-				player.broadcastPacket(new StopMoveInVehicle(player, _boatId));
-			}
+			player.setInBoatPosition(new Location(_x, _y, _z));
+			player.getPosition().setHeading(_heading);
+			player.broadcastPacket(new StopMoveInVehicle(player, _boatId));
 		}
 	}
 }

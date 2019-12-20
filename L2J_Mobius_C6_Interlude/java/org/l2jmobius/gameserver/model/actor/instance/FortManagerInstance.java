@@ -99,7 +99,8 @@ public class FortManagerInstance extends MerchantInstance
 		{
 			return;
 		}
-		else if (condition == COND_OWNER)
+		
+		if (condition == COND_OWNER)
 		{
 			StringTokenizer st = new StringTokenizer(command, " ");
 			String actualCommand = st.nextToken(); // Get actual command
@@ -133,7 +134,6 @@ public class FortManagerInstance extends MerchantInstance
 				
 				html.replace("%objectId%", String.valueOf(getObjectId()));
 				player.sendPacket(html);
-				return;
 			}
 			else if (actualCommand.equalsIgnoreCase("manage_vault"))
 			{
@@ -160,9 +160,7 @@ public class FortManagerInstance extends MerchantInstance
 					html.setFile("data/html/fortress/foreman-noprivs.htm");
 					html.replace("%objectId%", String.valueOf(getObjectId()));
 					player.sendPacket(html);
-					return;
 				}
-				return;
 			}
 			else if (actualCommand.equalsIgnoreCase("operate_door")) // Door Control
 			{
@@ -190,7 +188,6 @@ public class FortManagerInstance extends MerchantInstance
 					html.replace("%objectId%", String.valueOf(getObjectId()));
 					player.sendPacket(html);
 				}
-				return;
 			}
 			else
 			{
@@ -245,24 +242,20 @@ public class FortManagerInstance extends MerchantInstance
 			html.setFile("data/html/fortress/foreman-noprivs.htm");
 			html.replace("%objectId%", String.valueOf(getObjectId()));
 			player.sendPacket(html);
-			return;
 		}
 	}
 	
 	protected int validateCondition(PlayerInstance player)
 	{
-		if ((getFort() != null) && (getFort().getFortId() > 0))
+		if ((getFort() != null) && (getFort().getFortId() > 0) && (player.getClan() != null))
 		{
-			if (player.getClan() != null)
+			if (getFort().getSiege().getIsInProgress())
 			{
-				if (getFort().getSiege().getIsInProgress())
-				{
-					return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
-				}
-				else if (getFort().getOwnerId() == player.getClanId())
-				{
-					return COND_OWNER; // Owner
-				}
+				return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
+			}
+			else if (getFort().getOwnerId() == player.getClanId())
+			{
+				return COND_OWNER; // Owner
 			}
 		}
 		return COND_ALL_FALSE;

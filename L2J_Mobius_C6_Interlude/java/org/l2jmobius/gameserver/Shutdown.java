@@ -22,8 +22,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseBackup;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import org.l2jmobius.gameserver.datatables.OfflineTradeTable;
+import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import org.l2jmobius.gameserver.instancemanager.AutoSaveManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
@@ -174,7 +174,7 @@ public class Shutdown extends Thread
 	 */
 	public void startShutdown(PlayerInstance player, int seconds, boolean restart)
 	{
-		Announcements _an = Announcements.getInstance();
+		Announcements announcements = Announcements.getInstance();
 		
 		LOGGER.warning((player != null ? "GM: " + player.getName() + "(" + player.getObjectId() + ")" : "Server") + " issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
 		
@@ -189,8 +189,8 @@ public class Shutdown extends Thread
 		
 		if (_shutdownMode > 0)
 		{
-			_an.announceToAll("Server is " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
-			_an.announceToAll("Please exit game now!!");
+			announcements.announceToAll("Server is " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
+			announcements.announceToAll("Please exit game now!!");
 		}
 		
 		if (_counterInstance != null)
@@ -214,11 +214,11 @@ public class Shutdown extends Thread
 	 */
 	public void abort(PlayerInstance player)
 	{
-		Announcements _an = Announcements.getInstance();
+		Announcements announcements = Announcements.getInstance();
 		
 		LOGGER.warning((player != null ? "GM: " + player.getName() + "(" + player.getObjectId() + ")" : "Server") + " issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
 		
-		_an.announceToAll("Server aborts " + MODE_TEXT[_shutdownMode] + " and continues normal operation!");
+		announcements.announceToAll("Server aborts " + MODE_TEXT[_shutdownMode] + " and continues normal operation!");
 		
 		if (_counterInstance != null)
 		{
@@ -246,25 +246,25 @@ public class Shutdown extends Thread
 		{
 			while (_secondsShut > 0)
 			{
-				int _seconds;
-				int _minutes;
-				int _hours;
+				int seconds;
+				int minutes;
+				int hours;
 				
-				_seconds = _secondsShut;
-				_minutes = _seconds / 60;
-				_hours = _seconds / 3600;
+				seconds = _secondsShut;
+				minutes = seconds / 60;
+				hours = seconds / 3600;
 				
 				// announce only every minute after 10 minutes left and every second after 20 seconds
-				if (((_seconds <= 20) || (_seconds == (_minutes * 10))) && (_seconds <= 600) && (_hours <= 1))
+				if (((seconds <= 20) || (seconds == (minutes * 10))) && (seconds <= 600) && (hours <= 1))
 				{
 					SystemMessage sm = new SystemMessage(SystemMessageId.THE_SERVER_WILL_BE_COMING_DOWN_IN_S1_SECONDS);
-					sm.addString(Integer.toString(_seconds));
+					sm.addString(Integer.toString(seconds));
 					Announcements.getInstance().announceToAll(sm);
 				}
 				
 				try
 				{
-					if (_seconds <= 60)
+					if (seconds <= 60)
 					{
 						LoginServerThread.getInstance().setServerStatus(ServerStatus.STATUS_DOWN);
 					}
@@ -444,7 +444,7 @@ public class Shutdown extends Thread
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning("Problem while saving Olympiad: " + e.getMessage());
 		}
 		LOGGER.info("Olympiad System: Data saved!!");
 		

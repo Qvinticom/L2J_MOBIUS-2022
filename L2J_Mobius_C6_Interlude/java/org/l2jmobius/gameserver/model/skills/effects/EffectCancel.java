@@ -61,37 +61,34 @@ final class EffectCancel extends Effect
 					}
 				}
 				
-				if ((e.getSkill().getId() != 4082) && (e.getSkill().getId() != 4215) && (e.getSkill().getId() != 5182) && (e.getSkill().getId() != 4515) && (e.getSkill().getId() != 110) && (e.getSkill().getId() != 111) && (e.getSkill().getId() != 1323) && (e.getSkill().getId() != 1325))
+				if ((e.getSkill().getId() != 4082) && (e.getSkill().getId() != 4215) && (e.getSkill().getId() != 5182) && (e.getSkill().getId() != 4515) && (e.getSkill().getId() != 110) && (e.getSkill().getId() != 111) && (e.getSkill().getId() != 1323) && (e.getSkill().getId() != 1325) && (e.getSkill().getSkillType() == SkillType.BUFF))
 				{
-					if (e.getSkill().getSkillType() == SkillType.BUFF)
+					// TODO Fix cancel debuffs
+					if (e.getSkill().getSkillType() != SkillType.DEBUFF)
 					{
-						// TODO Fix cancel debuffs
-						if (e.getSkill().getSkillType() != SkillType.DEBUFF)
+						int rate = 100;
+						final int level = e.getLevel();
+						if (level > 0)
 						{
-							int rate = 100;
-							final int level = e.getLevel();
-							if (level > 0)
+							rate = 150 / (1 + level);
+						}
+						
+						if (rate > 95)
+						{
+							rate = 95;
+						}
+						else if (rate < 5)
+						{
+							rate = 5;
+						}
+						
+						if (Rnd.get(100) < rate)
+						{
+							e.exit(true);
+							maxdisp--;
+							if (maxdisp == 0)
 							{
-								rate = Integer.valueOf(150 / (1 + level));
-							}
-							
-							if (rate > 95)
-							{
-								rate = 95;
-							}
-							else if (rate < 5)
-							{
-								rate = 5;
-							}
-							
-							if (Rnd.get(100) < rate)
-							{
-								e.exit(true);
-								maxdisp--;
-								if (maxdisp == 0)
-								{
-									break;
-								}
+								break;
 							}
 						}
 					}

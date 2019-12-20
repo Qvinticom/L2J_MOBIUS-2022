@@ -33,7 +33,7 @@ import org.l2jmobius.Config;
  */
 public class DeadLockDetector extends Thread
 {
-	private static Logger LOGGER = Logger.getLogger(DeadLockDetector.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(DeadLockDetector.class.getName());
 	
 	private final Duration _checkInterval;
 	private final Runnable _deadLockCallback;

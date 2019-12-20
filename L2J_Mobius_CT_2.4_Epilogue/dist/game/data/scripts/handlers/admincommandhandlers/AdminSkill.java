@@ -58,7 +58,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminSkill implements IAdminCommandHandler
 {
-	private static Logger LOGGER = Logger.getLogger(AdminSkill.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AdminSkill.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{

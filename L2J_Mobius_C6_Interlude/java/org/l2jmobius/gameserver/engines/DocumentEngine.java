@@ -59,12 +59,9 @@ public class DocumentEngine
 		final File[] files = dir.listFiles();
 		for (File f : files)
 		{
-			if (f.getName().endsWith(".xml"))
+			if (f.getName().endsWith(".xml") && !f.getName().startsWith("custom"))
 			{
-				if (!f.getName().startsWith("custom"))
-				{
-					hash.add(f);
-				}
+				hash.add(f);
 			}
 		}
 		final File customfile = new File(Config.DATAPACK_ROOT, dirname + "/custom.xml");

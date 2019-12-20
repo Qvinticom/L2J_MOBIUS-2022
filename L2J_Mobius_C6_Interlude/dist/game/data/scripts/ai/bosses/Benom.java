@@ -42,7 +42,7 @@ public class Benom extends Quest
 	private static final int BENOM = 29054;
 	private static final int BENOM_TELEPORT = 13101;
 	// Locations
-	private final static Location[] WALK_ROUTES =
+	private static final Location[] WALK_ROUTES =
 	{
 		new Location(12565, -49739, -547),
 		new Location(11242, -49689, -33),
@@ -79,7 +79,7 @@ public class Benom extends Quest
 		new Location(13175, -49153, -537)
 	};
 	// Misc
-	private final static int[] WALK_TIMES =
+	private static final int[] WALK_TIMES =
 	{
 		18000,
 		17000,
@@ -115,15 +115,15 @@ public class Benom extends Quest
 		12000,
 		20000
 	};
-	private final static String[] TALK =
+	private static final String[] TALK =
 	{
 		"You should have finished me when you had the chance!!!",
 		"I will crush all of you!!!",
 		"I am not finished here, come face me!!!",
 		"You cowards!!! I will torture each and everyone of you!!!"
 	};
-	private final static int ALIVE = 0;
-	private final static int DEAD = 1;
+	private static final int ALIVE = 0;
+	private static final int DEAD = 1;
 	private static int _benomWalkRouteStep = 0;
 	private static int _benomIsSpawned = 0;
 	private static NpcInstance _benomInstance;
@@ -216,7 +216,7 @@ public class Benom extends Quest
 			case "Attacking":
 			{
 				final Collection<PlayerInstance> knownPlayers = npc.getKnownList().getKnownPlayers().values();
-				if (knownPlayers.size() > 0)
+				if (!knownPlayers.isEmpty())
 				{
 					final PlayerInstance target = knownPlayers.stream().findAny().get();
 					((MonsterInstance) npc).addDamageHate(target, 0, 999);
@@ -264,7 +264,6 @@ public class Benom extends Quest
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, WALK_ROUTES[_benomWalkRouteStep]);
 					startQuestTimer("BenomWalk", WALK_TIMES[_benomWalkRouteStep], npc, null);
-					System.out.println(WALK_TIMES[_benomWalkRouteStep]);
 					_benomWalkRouteStep = _benomWalkRouteStep + 1;
 				}
 				break;

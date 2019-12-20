@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.Playable;
 
 public class PlayableStat extends CreatureStat
 {
-	private final Logger LOGGER = Logger.getLogger(PlayableStat.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(PlayableStat.class.getName());
 	
 	public PlayableStat(Playable activeChar)
 	{

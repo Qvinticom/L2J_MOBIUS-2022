@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.communitybbs.Manager.PostBBSManager;
  */
 public class Post
 {
-	private static Logger LOGGER = Logger.getLogger(Post.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Post.class.getName());
 	
 	public static class CPost
 	{

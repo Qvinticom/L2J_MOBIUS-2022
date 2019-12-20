@@ -141,29 +141,26 @@ public class Transform extends Quest
 	{
 		for (Transformer monster : _mobs)
 		{
-			if (npc.getNpcId() == monster.getId())
+			if ((npc.getNpcId() == monster.getId()) && (Rnd.get(100) <= (monster.getChance() * Config.RATE_DROP_QUEST)))
 			{
-				if (Rnd.get(100) <= (monster.getChance() * Config.RATE_DROP_QUEST))
+				if (monster.getMessage() != 0)
 				{
-					if (monster.getMessage() != 0)
-					{
-						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), Message[Rnd.get(monster.getMessage())]));
-					}
-					npc.onDecay();
-					final Attackable newNpc = (Attackable) addSpawn(monster.getIdPoly(), npc);
-					final Creature originalAttacker = isPet ? attacker.getPet() : attacker;
-					newNpc.setRunning();
-					newNpc.addDamageHate(originalAttacker, 0, 999);
-					newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalAttacker);
-					
-					// NPC Spawn Effect L2OFF
-					final NPCSpawnTask spawnEffectTask = new NPCSpawnTask(newNpc, 4000, 800000);
-					final Thread effectThread = new Thread(spawnEffectTask);
-					effectThread.start();
-					
-					// Like L2OFF auto target new mob (like an aggression)
-					originalAttacker.setTargetTrasformedNpc(newNpc);
+					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), Message[Rnd.get(monster.getMessage())]));
 				}
+				npc.onDecay();
+				final Attackable newNpc = (Attackable) addSpawn(monster.getIdPoly(), npc);
+				final Creature originalAttacker = isPet ? attacker.getPet() : attacker;
+				newNpc.setRunning();
+				newNpc.addDamageHate(originalAttacker, 0, 999);
+				newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalAttacker);
+				
+				// NPC Spawn Effect L2OFF
+				final NPCSpawnTask spawnEffectTask = new NPCSpawnTask(newNpc, 4000, 800000);
+				final Thread effectThread = new Thread(spawnEffectTask);
+				effectThread.start();
+				
+				// Like L2OFF auto target new mob (like an aggression)
+				originalAttacker.setTargetTrasformedNpc(newNpc);
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isPet);

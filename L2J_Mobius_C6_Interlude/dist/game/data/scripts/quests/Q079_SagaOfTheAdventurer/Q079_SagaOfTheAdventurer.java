@@ -26,7 +26,7 @@ public class Q079_SagaOfTheAdventurer extends SagasSuperClass
 	public Q079_SagaOfTheAdventurer()
 	{
 		super(79, "Saga of the Adventurer");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			31603,
 			31584,
@@ -41,7 +41,7 @@ public class Q079_SagaOfTheAdventurer extends SagasSuperClass
 			31658,
 			31616
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7516,
@@ -56,39 +56,39 @@ public class Q079_SagaOfTheAdventurer extends SagasSuperClass
 			7102,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27299,
 			27228,
 			27302
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			93
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x08
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			119518,
 			181205,
 			181215
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-28658,
 			36676,
 			36676
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-3811,
 			-4816,
 			-4812
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

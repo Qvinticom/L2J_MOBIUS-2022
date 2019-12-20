@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.SummonItem;
 
 public class SummonItemsData
 {
-	private static Logger LOGGER = Logger.getLogger(SummonItemsData.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SummonItemsData.class.getName());
 	
 	private final Map<Integer, SummonItem> _summonitems;
 	

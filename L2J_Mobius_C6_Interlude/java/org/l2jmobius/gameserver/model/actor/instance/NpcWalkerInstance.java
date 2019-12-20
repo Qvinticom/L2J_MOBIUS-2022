@@ -72,20 +72,19 @@ public class NpcWalkerInstance extends NpcInstance
 	 */
 	public void broadcastChat(String chat)
 	{
-		final Map<Integer, PlayerInstance> _knownPlayers = getKnownList().getKnownPlayers();
-		
-		if (_knownPlayers == null)
+		final Map<Integer, PlayerInstance> knownPlayers = getKnownList().getKnownPlayers();
+		if (knownPlayers == null)
 		{
 			return;
 		}
 		
 		// we send message to known players only!
-		if (_knownPlayers.size() > 0)
+		if (!knownPlayers.isEmpty())
 		{
 			CreatureSay cs = new CreatureSay(getObjectId(), 0, getName(), chat);
 			
 			// we interact and list players here
-			for (PlayerInstance players : _knownPlayers.values())
+			for (PlayerInstance players : knownPlayers.values())
 			{
 				// finally send packet :D
 				players.sendPacket(cs);

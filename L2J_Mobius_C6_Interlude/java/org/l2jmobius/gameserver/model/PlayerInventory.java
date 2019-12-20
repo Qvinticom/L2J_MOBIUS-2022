@@ -689,8 +689,7 @@ public class PlayerInventory extends Inventory
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("could not restore inventory:");
-			e.printStackTrace();
+			LOGGER.warning("could not restore inventory: " + e);
 		}
 		return paperdoll;
 	}
@@ -722,17 +721,14 @@ public class PlayerInventory extends Inventory
 		return validateCapacity(slots);
 	}
 	
-	public boolean validateCapacityByItemId(int ItemId)
+	public boolean validateCapacityByItemId(int itemId)
 	{
 		int slots = 0;
-		
-		ItemInstance invItem = getItemByItemId(ItemId);
-		
+		ItemInstance invItem = getItemByItemId(itemId);
 		if (((invItem == null) || !invItem.isStackable()))
 		{
 			slots++;
 		}
-		
 		return validateCapacity(slots);
 	}
 	
@@ -750,65 +746,48 @@ public class PlayerInventory extends Inventory
 	
 	public boolean validateCapacity(Item item)
 	{
-		
 		int slots = 0;
-		
 		if ((!item.isStackable() || (getItemByItemId(item.getItemId()) == null)) && (item.getItemType() != EtcItemType.HERB))
 		{
 			slots++;
 		}
-		
 		return validateCapacity(slots);
-		
 	}
 	
-	public boolean checkIfEquipped(int item_id)
+	public boolean checkIfEquipped(int itemId)
 	{
-		
-		final ItemInstance[] items = getAllItemsByItemId(item_id);
-		
+		final ItemInstance[] items = getAllItemsByItemId(itemId);
 		if ((items == null) || (items.length == 0))
 		{
-			
 			return false;
-			
 		}
 		
 		for (ItemInstance item : items)
 		{
-			
 			if (item.isEquipped())
 			{
 				return true;
 			}
-			
 		}
 		
 		return false;
-		
 	}
 	
-	public int checkHowManyEquipped(int item_id)
+	public int checkHowManyEquipped(int itemId)
 	{
-		
-		final ItemInstance[] items = getAllItemsByItemId(item_id);
-		
+		final ItemInstance[] items = getAllItemsByItemId(itemId);
 		if ((items == null) || (items.length == 0))
 		{
-			
 			return 0;
-			
 		}
 		
 		int count = 0;
 		for (ItemInstance item : items)
 		{
-			
 			if (item.isEquipped())
 			{
 				count++;
 			}
-			
 		}
 		
 		return count;

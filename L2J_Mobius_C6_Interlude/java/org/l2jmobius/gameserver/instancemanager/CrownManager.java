@@ -32,10 +32,6 @@ public class CrownManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(CrownManager.class.getName());
 	
-	public CrownManager()
-	{
-	}
-	
 	public void checkCrowns(Clan clan)
 	{
 		if (clan == null)
@@ -121,13 +117,10 @@ public class CrownManager
 							continue;
 						}
 					}
-					else if ((item.getItemId() == 6841) && isLeader)
+					else if ((item.getItemId() == 6841) && isLeader && !alreadyFoundCrown)
 					{
-						if (!alreadyFoundCrown)
-						{
-							alreadyFoundCrown = true;
-							continue;
-						}
+						alreadyFoundCrown = true;
+						continue;
 					}
 				}
 				

@@ -85,7 +85,6 @@ import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminTeleport;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminTest;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminTownWar;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminTvTEngine;
-import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminUnblockIp;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminVIPEngine;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminWho;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminZone;
@@ -153,7 +152,6 @@ public class AdminCommandHandler
 		registerAdminCommandHandler(new AdminMobGroup());
 		registerAdminCommandHandler(new AdminRes());
 		registerAdminCommandHandler(new AdminMammon());
-		registerAdminCommandHandler(new AdminUnblockIp());
 		registerAdminCommandHandler(new AdminPledge());
 		registerAdminCommandHandler(new AdminRideWyvern());
 		registerAdminCommandHandler(new AdminLogin());
@@ -180,7 +178,7 @@ public class AdminCommandHandler
 		String[] ids = handler.getAdminCommandList();
 		for (String element : ids)
 		{
-			if (_datatable.keySet().contains(new String(element)))
+			if (_datatable.keySet().contains(element))
 			{
 				LOGGER.warning("Duplicated command \"" + element + "\" definition in " + handler.getClass().getName() + ".");
 			}
@@ -195,9 +193,9 @@ public class AdminCommandHandler
 	{
 		String command = adminCommand;
 		
-		if (adminCommand.indexOf(" ") != -1)
+		if (adminCommand.indexOf(' ') != -1)
 		{
-			command = adminCommand.substring(0, adminCommand.indexOf(" "));
+			command = adminCommand.substring(0, adminCommand.indexOf(' '));
 		}
 		
 		return _datatable.get(command);

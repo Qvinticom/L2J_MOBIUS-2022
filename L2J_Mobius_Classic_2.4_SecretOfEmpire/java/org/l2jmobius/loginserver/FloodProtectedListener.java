@@ -32,7 +32,7 @@ import org.l2jmobius.Config;
  */
 public abstract class FloodProtectedListener extends Thread
 {
-	private final Logger LOGGER = Logger.getLogger(FloodProtectedListener.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FloodProtectedListener.class.getName());
 	private final Map<String, ForeignConnection> _floodProtection = new ConcurrentHashMap<>();
 	private ServerSocket _serverSocket;
 	

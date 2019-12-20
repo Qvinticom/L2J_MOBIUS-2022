@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.network.GameClient.GameClientState;
  */
 public class OfflineTradeTable
 {
-	private static Logger LOGGER = Logger.getLogger(OfflineTradeTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(OfflineTradeTable.class.getName());
 	
 	// SQL DEFINITIONS
 	private static final String SAVE_OFFLINE_STATUS = "INSERT INTO character_offline_trade (`charId`,`time`,`type`,`title`) VALUES (?,?,?,?)";
@@ -67,7 +67,7 @@ public class OfflineTradeTable
 			
 			con.setAutoCommit(false); // avoid halfway done
 			stm = con.prepareStatement(SAVE_OFFLINE_STATUS);
-			final PreparedStatement stm_items = con.prepareStatement(SAVE_ITEMS);
+			final PreparedStatement stmItems = con.prepareStatement(SAVE_ITEMS);
 			
 			for (PlayerInstance pc : World.getInstance().getAllPlayers())
 			{
@@ -92,13 +92,13 @@ public class OfflineTradeTable
 								title = pc.getBuyList().getTitle();
 								for (TradeItem i : pc.getBuyList().getItems())
 								{
-									stm_items.setInt(1, pc.getObjectId());
-									stm_items.setInt(2, i.getItem().getItemId());
-									stm_items.setLong(3, i.getCount());
-									stm_items.setLong(4, i.getPrice());
-									stm_items.setLong(5, i.getEnchant());
-									stm_items.executeUpdate();
-									stm_items.clearParameters();
+									stmItems.setInt(1, pc.getObjectId());
+									stmItems.setInt(2, i.getItem().getItemId());
+									stmItems.setLong(3, i.getCount());
+									stmItems.setLong(4, i.getPrice());
+									stmItems.setLong(5, i.getEnchant());
+									stmItems.executeUpdate();
+									stmItems.clearParameters();
 								}
 								break;
 							}
@@ -113,13 +113,13 @@ public class OfflineTradeTable
 								pc.getSellList().updateItems();
 								for (TradeItem i : pc.getSellList().getItems())
 								{
-									stm_items.setInt(1, pc.getObjectId());
-									stm_items.setInt(2, i.getObjectId());
-									stm_items.setLong(3, i.getCount());
-									stm_items.setLong(4, i.getPrice());
-									stm_items.setLong(5, i.getEnchant());
-									stm_items.executeUpdate();
-									stm_items.clearParameters();
+									stmItems.setInt(1, pc.getObjectId());
+									stmItems.setInt(2, i.getObjectId());
+									stmItems.setLong(3, i.getCount());
+									stmItems.setLong(4, i.getPrice());
+									stmItems.setLong(5, i.getEnchant());
+									stmItems.executeUpdate();
+									stmItems.clearParameters();
 								}
 								break;
 							}
@@ -132,13 +132,13 @@ public class OfflineTradeTable
 								title = pc.getCreateList().getStoreName();
 								for (ManufactureItem i : pc.getCreateList().getList())
 								{
-									stm_items.setInt(1, pc.getObjectId());
-									stm_items.setInt(2, i.getRecipeId());
-									stm_items.setLong(3, 0);
-									stm_items.setLong(4, i.getCost());
-									stm_items.setLong(5, 0);
-									stm_items.executeUpdate();
-									stm_items.clearParameters();
+									stmItems.setInt(1, pc.getObjectId());
+									stmItems.setInt(2, i.getRecipeId());
+									stmItems.setLong(3, 0);
+									stmItems.setLong(4, i.getCost());
+									stmItems.setLong(5, 0);
+									stmItems.executeUpdate();
+									stmItems.clearParameters();
 								}
 								break;
 							}
@@ -161,7 +161,7 @@ public class OfflineTradeTable
 				}
 			}
 			stm.close();
-			stm_items.close();
+			stmItems.close();
 			LOGGER.info("Offline traders stored.");
 		}
 		catch (Exception e)
@@ -217,9 +217,9 @@ public class OfflineTradeTable
 					}
 					player.spawnMe(player.getX(), player.getY(), player.getZ());
 					LoginServerThread.getInstance().addGameServerLogin(player.getAccountName(), client);
-					final PreparedStatement stm_items = con.prepareStatement(LOAD_OFFLINE_ITEMS);
-					stm_items.setInt(1, player.getObjectId());
-					final ResultSet items = stm_items.executeQuery();
+					final PreparedStatement stmItems = con.prepareStatement(LOAD_OFFLINE_ITEMS);
+					stmItems.setInt(1, player.getObjectId());
+					final ResultSet items = stmItems.executeQuery();
 					
 					switch (type)
 					{
@@ -260,7 +260,7 @@ public class OfflineTradeTable
 						}
 					}
 					items.close();
-					stm_items.close();
+					stmItems.close();
 					
 					player.sitDown();
 					if (Config.OFFLINE_MODE_SET_INVULNERABLE)
@@ -320,7 +320,7 @@ public class OfflineTradeTable
 			
 			con.setAutoCommit(false); // avoid halfway done
 			stm = con.prepareStatement(SAVE_OFFLINE_STATUS);
-			final PreparedStatement stm_items = con.prepareStatement(SAVE_ITEMS);
+			final PreparedStatement stmItems = con.prepareStatement(SAVE_ITEMS);
 			
 			boolean save = true;
 			
@@ -342,13 +342,13 @@ public class OfflineTradeTable
 						title = pc.getBuyList().getTitle();
 						for (TradeItem i : pc.getBuyList().getItems())
 						{
-							stm_items.setInt(1, pc.getObjectId());
-							stm_items.setInt(2, i.getItem().getItemId());
-							stm_items.setLong(3, i.getCount());
-							stm_items.setLong(4, i.getPrice());
-							stm_items.setLong(5, i.getEnchant());
-							stm_items.executeUpdate();
-							stm_items.clearParameters();
+							stmItems.setInt(1, pc.getObjectId());
+							stmItems.setInt(2, i.getItem().getItemId());
+							stmItems.setLong(3, i.getCount());
+							stmItems.setLong(4, i.getPrice());
+							stmItems.setLong(5, i.getEnchant());
+							stmItems.executeUpdate();
+							stmItems.clearParameters();
 						}
 						break;
 					}
@@ -363,13 +363,13 @@ public class OfflineTradeTable
 						pc.getSellList().updateItems();
 						for (TradeItem i : pc.getSellList().getItems())
 						{
-							stm_items.setInt(1, pc.getObjectId());
-							stm_items.setInt(2, i.getObjectId());
-							stm_items.setLong(3, i.getCount());
-							stm_items.setLong(4, i.getPrice());
-							stm_items.setLong(5, i.getEnchant());
-							stm_items.executeUpdate();
-							stm_items.clearParameters();
+							stmItems.setInt(1, pc.getObjectId());
+							stmItems.setInt(2, i.getObjectId());
+							stmItems.setLong(3, i.getCount());
+							stmItems.setLong(4, i.getPrice());
+							stmItems.setLong(5, i.getEnchant());
+							stmItems.executeUpdate();
+							stmItems.clearParameters();
 						}
 						break;
 					}
@@ -382,13 +382,13 @@ public class OfflineTradeTable
 						title = pc.getCreateList().getStoreName();
 						for (ManufactureItem i : pc.getCreateList().getList())
 						{
-							stm_items.setInt(1, pc.getObjectId());
-							stm_items.setInt(2, i.getRecipeId());
-							stm_items.setLong(3, 0);
-							stm_items.setLong(4, i.getCost());
-							stm_items.setLong(5, 0);
-							stm_items.executeUpdate();
-							stm_items.clearParameters();
+							stmItems.setInt(1, pc.getObjectId());
+							stmItems.setInt(2, i.getRecipeId());
+							stmItems.setLong(3, 0);
+							stmItems.setLong(4, i.getCost());
+							stmItems.setLong(5, 0);
+							stmItems.executeUpdate();
+							stmItems.clearParameters();
 						}
 						break;
 					}
@@ -414,7 +414,7 @@ public class OfflineTradeTable
 			}
 			
 			stm.close();
-			stm_items.close();
+			stmItems.close();
 		}
 		catch (Exception e)
 		{

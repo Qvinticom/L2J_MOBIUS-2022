@@ -68,12 +68,10 @@ public class MultiSort
 	private final List<Integer> getIntList(int[] valueList)
 	{
 		final Integer[] tempIntList = new Integer[valueList.length];
-		
 		for (int i = 0; i < valueList.length; i++)
 		{
 			tempIntList[i] = valueList[i];
 		}
-		
 		return Arrays.asList(tempIntList);
 	}
 	

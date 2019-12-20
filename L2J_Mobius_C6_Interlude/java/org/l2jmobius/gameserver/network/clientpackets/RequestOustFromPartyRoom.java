@@ -55,13 +55,13 @@ public class RequestOustFromPartyRoom extends GameClientPacket
 			return;
 		}
 		
-		final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getPlayerRoom(member);
-		if (_room == null)
+		final PartyMatchRoom room = PartyMatchRoomList.getInstance().getPlayerRoom(member);
+		if (room == null)
 		{
 			return;
 		}
 		
-		if (_room.getOwner() != player)
+		if (room.getOwner() != player)
 		{
 			return;
 		}
@@ -72,7 +72,7 @@ public class RequestOustFromPartyRoom extends GameClientPacket
 		}
 		else
 		{
-			_room.deleteMember(member);
+			room.deleteMember(member);
 			member.setPartyRoom(0);
 			
 			// Close the PartyRoom window
@@ -82,8 +82,8 @@ public class RequestOustFromPartyRoom extends GameClientPacket
 			PartyMatchWaitingList.getInstance().addPlayer(member);
 			
 			// Send Room list
-			final int _loc = TownManager.getClosestLocation(member);
-			member.sendPacket(new PartyMatchList(member, 0, _loc, member.getLevel()));
+			final int loc = TownManager.getClosestLocation(member);
+			member.sendPacket(new PartyMatchList(member, 0, loc, member.getLevel()));
 			
 			// Clean player's LFP title
 			member.broadcastUserInfo();

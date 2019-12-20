@@ -33,13 +33,13 @@ public class ExFishingHpRegen extends GameServerPacket
 	private final int _penalty;
 	private final int _hpBarColor;
 	
-	public ExFishingHpRegen(Creature creature, int time, int fishHP, int HPmode, int GoodUse, int anim, int penalty, int hpBarColor)
+	public ExFishingHpRegen(Creature creature, int time, int fishHP, int hpMode, int goodUse, int anim, int penalty, int hpBarColor)
 	{
 		_creature = creature;
 		_time = time;
 		_fishHP = fishHP;
-		_hpMode = HPmode;
-		_goodUse = GoodUse;
+		_hpMode = hpMode;
+		_goodUse = goodUse;
 		_anim = anim;
 		_penalty = penalty;
 		_hpBarColor = hpBarColor;

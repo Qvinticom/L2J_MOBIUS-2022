@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Map;
+import java.util.Map.Entry;
 
 /**
  * Format: (c) d[dS] d: list size [ d: char ID S: char Name ]
@@ -37,10 +38,10 @@ public class PackageToList extends GameServerPacket
 	{
 		writeC(0xC2);
 		writeD(_players.size());
-		for (int objId : _players.keySet())
+		for (Entry<Integer, String> entry : _players.entrySet())
 		{
-			writeD(objId); // you told me char id, i guess this was object id?
-			writeS(_players.get(objId));
+			writeD(entry.getKey()); // you told me char id, i guess this was object id?
+			writeS(entry.getValue());
 		}
 	}
 }

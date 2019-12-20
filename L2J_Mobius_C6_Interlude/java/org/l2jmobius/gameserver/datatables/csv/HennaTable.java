@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.items.Henna;
 
 public class HennaTable
 {
-	private static Logger LOGGER = Logger.getLogger(HennaTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(HennaTable.class.getName());
 	
 	private final Map<Integer, Henna> _henna;
 	private final boolean _initialized = true;
@@ -108,7 +108,7 @@ public class HennaTable
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with HennaTable: " + e1.getMessage());
 				}
 			}
 			
@@ -120,7 +120,7 @@ public class HennaTable
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with HennaTable: " + e1.getMessage());
 				}
 			}
 			
@@ -132,7 +132,7 @@ public class HennaTable
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with HennaTable: " + e1.getMessage());
 				}
 			}
 		}

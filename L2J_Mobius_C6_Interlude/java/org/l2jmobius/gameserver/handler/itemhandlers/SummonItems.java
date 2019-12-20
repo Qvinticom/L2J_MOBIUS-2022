@@ -60,7 +60,7 @@ public class SummonItems implements IItemHandler
 			return;
 		}
 		
-		if (player._inEventTvT && TvT.is_started() && !Config.TVT_ALLOW_SUMMON)
+		if (player._inEventTvT && TvT.isStarted() && !Config.TVT_ALLOW_SUMMON)
 		{
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
 			player.sendPacket(af);
@@ -74,7 +74,7 @@ public class SummonItems implements IItemHandler
 			return;
 		}
 		
-		if (player._inEventCTF && CTF.is_started() && !Config.CTF_ALLOW_SUMMON)
+		if (player._inEventCTF && CTF.isStarted() && !Config.CTF_ALLOW_SUMMON)
 		{
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
 			player.sendPacket(af);

@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q320_BonesTellTheFuture extends Quest
 {
-	// Quest item
-	private final int BONE_FRAGMENT = 809;
+	// Item
+	private static final int BONE_FRAGMENT = 809;
 	
 	public Q320_BonesTellTheFuture()
 	{

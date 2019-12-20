@@ -64,7 +64,6 @@ public class EffectDeflectBuff extends Effect
 	public void onStart()
 	{
 		getEffected().setIsBuffProtected(true);
-		return;
 	}
 	
 	@Override

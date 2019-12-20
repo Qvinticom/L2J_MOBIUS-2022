@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ShowTownMap;
  */
 public class StaticObjectInstance extends WorldObject
 {
-	private static Logger LOGGER = Logger.getLogger(StaticObjectInstance.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(StaticObjectInstance.class.getName());
 	
 	public static final int INTERACTION_DISTANCE = 150;
 	private int _staticObjectId;
@@ -53,11 +53,11 @@ public class StaticObjectInstance extends WorldObject
 	
 	/**
 	 * Sets the static object id.
-	 * @param StaticObjectId the new static object id
+	 * @param staticObjectId the new static object id
 	 */
-	public void setStaticObjectId(int StaticObjectId)
+	public void setStaticObjectId(int staticObjectId)
 	{
-		_staticObjectId = StaticObjectId;
+		_staticObjectId = staticObjectId;
 	}
 	
 	/**

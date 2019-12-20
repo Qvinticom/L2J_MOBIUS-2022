@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class ForumsBBSManager extends BaseBBSManager
 {
-	private static Logger LOGGER = Logger.getLogger(ForumsBBSManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ForumsBBSManager.class.getName());
 	private final Collection<Forum> _table;
 	private int _lastid = 1;
 	

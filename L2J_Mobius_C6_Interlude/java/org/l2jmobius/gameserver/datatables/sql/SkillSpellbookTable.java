@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.Skill;
  */
 public class SkillSpellbookTable
 {
-	private static final Logger LOGGER = Logger.getLogger(SkillTreeTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SkillSpellbookTable.class.getName());
 	
 	private static Map<Integer, Integer> skillSpellbooks;
 	

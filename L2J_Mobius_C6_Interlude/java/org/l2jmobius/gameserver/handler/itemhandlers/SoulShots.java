@@ -100,25 +100,22 @@ public class SoulShots implements IItemHandler
 			final int saSSCount = (int) player.getStat().calcStat(Stats.SOULSHOT_COUNT, 0, null, null);
 			final int SSCount = saSSCount == 0 ? weaponItem.getSoulShotCount() : saSSCount;
 			
-			if (!Config.DONT_DESTROY_SS)
+			if (!Config.DONT_DESTROY_SS && !player.destroyItemWithoutTrace("Consume", item.getObjectId(), SSCount, null, false))
 			{
-				if (!player.destroyItemWithoutTrace("Consume", item.getObjectId(), SSCount, null, false))
+				if (player.getAutoSoulShot().containsKey(itemId))
 				{
-					if (player.getAutoSoulShot().containsKey(itemId))
-					{
-						player.removeAutoSoulShot(itemId);
-						player.sendPacket(new ExAutoSoulShot(itemId, 0));
-						
-						SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
-						sm.addString(item.getItem().getName());
-						player.sendPacket(sm);
-					}
-					else
-					{
-						player.sendPacket(SystemMessageId.NOT_ENOUGH_SOULSHOTS);
-					}
-					return;
+					player.removeAutoSoulShot(itemId);
+					player.sendPacket(new ExAutoSoulShot(itemId, 0));
+					
+					SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
+					sm.addString(item.getItem().getName());
+					player.sendPacket(sm);
 				}
+				else
+				{
+					player.sendPacket(SystemMessageId.NOT_ENOUGH_SOULSHOTS);
+				}
+				return;
 			}
 			
 			// Charge soulshot

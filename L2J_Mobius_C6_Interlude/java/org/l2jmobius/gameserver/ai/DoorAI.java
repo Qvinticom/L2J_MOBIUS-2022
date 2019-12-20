@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.actor.instance.FortSiegeGuardInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
 
 /**
- * @author mkizub TODO To change the template for this generated type comment go to Window - Preferences - Java - Code Style - Code Templates
+ * @author mkizub
  */
 public class DoorAI extends CreatureAI
 {
@@ -186,10 +186,6 @@ public class DoorAI extends CreatureAI
 			_attacker = attacker;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{

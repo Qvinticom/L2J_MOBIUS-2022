@@ -52,7 +52,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
  */
 public class QuestState
 {
-	protected static final Logger LOGGER = Logger.getLogger(Quest.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(QuestState.class.getName());
 	
 	public static final String SOUND_ACCEPT = "ItemSound.quest_accept";
 	public static final String SOUND_ITEMGET = "ItemSound.quest_itemget";
@@ -239,7 +239,7 @@ public class QuestState
 			Quest.createQuestVarInDb(this, var, val);
 		}
 		
-		if (var == "cond")
+		if (var.equals("cond"))
 		{
 			try
 			{
@@ -415,12 +415,12 @@ public class QuestState
 	{
 		int varint = 0;
 		
-		String var_value = "";
-		if ((_vars != null) && ((var_value = _vars.get(var)) != null))
+		String value = "";
+		if ((_vars != null) && ((value = _vars.get(var)) != null))
 		{
 			try
 			{
-				varint = Integer.parseInt(var_value);
+				varint = Integer.parseInt(value);
 			}
 			catch (Exception e)
 			{

@@ -43,47 +43,47 @@ public class RequestPartyMatchConfig extends GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final PlayerInstance _player = getClient().getPlayer();
-		if (_player == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (!_player.isInPartyMatchRoom() && (_player.getParty() != null) && (_player.getParty().getLeader() != _player))
+		if (!player.isInPartyMatchRoom() && (player.getParty() != null) && (player.getParty().getLeader() != player))
 		{
-			_player.sendPacket(SystemMessageId.CANT_VIEW_PARTY_ROOMS);
-			_player.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.CANT_VIEW_PARTY_ROOMS);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (_player.isInPartyMatchRoom())
+		if (player.isInPartyMatchRoom())
 		{
 			// If Player is in Room show him room, not list
-			final PartyMatchRoomList _list = PartyMatchRoomList.getInstance();
-			if (_list == null)
+			final PartyMatchRoomList list = PartyMatchRoomList.getInstance();
+			if (list == null)
 			{
 				return;
 			}
 			
-			final PartyMatchRoom _room = _list.getPlayerRoom(_player);
-			if (_room == null)
+			final PartyMatchRoom room = list.getPlayerRoom(player);
+			if (room == null)
 			{
 				return;
 			}
 			
-			_player.sendPacket(new PartyMatchDetail(_player, _room));
-			_player.sendPacket(new ExPartyRoomMember(_player, _room, 2));
+			player.sendPacket(new PartyMatchDetail(room));
+			player.sendPacket(new ExPartyRoomMember(room, 2));
 			
-			_player.setPartyRoom(_room.getId());
-			_player.broadcastUserInfo();
+			player.setPartyRoom(room.getId());
+			player.broadcastUserInfo();
 		}
 		else
 		{
 			// Add to waiting list
-			PartyMatchWaitingList.getInstance().addPlayer(_player);
+			PartyMatchWaitingList.getInstance().addPlayer(player);
 			
 			// Send Room list
-			_player.sendPacket(new PartyMatchList(_player, _auto, _loc, _lvl));
+			player.sendPacket(new PartyMatchList(player, _auto, _loc, _lvl));
 		}
 	}
 }

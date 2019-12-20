@@ -44,7 +44,7 @@ public class Forum
 	public static final int CLANMEMBERONLY = 2;
 	public static final int OWNERONLY = 3;
 	
-	private static Logger LOGGER = Logger.getLogger(Forum.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Forum.class.getName());
 	private final List<Forum> _children;
 	private final Map<Integer, Topic> _topic;
 	private final int _forumId;
@@ -58,13 +58,13 @@ public class Forum
 	private boolean _loaded = false;
 	
 	/**
-	 * @param Forumid
-	 * @param FParent
+	 * @param forumId
+	 * @param fParent
 	 */
-	public Forum(int Forumid, Forum FParent)
+	public Forum(int forumId, Forum fParent)
 	{
-		_forumId = Forumid;
-		_fParent = FParent;
+		_forumId = forumId;
+		_fParent = fParent;
 		_children = new ArrayList<>();
 		_topic = new HashMap<>();
 	}
@@ -74,9 +74,9 @@ public class Forum
 	 * @param parent
 	 * @param type
 	 * @param perm
-	 * @param OwnerID
+	 * @param ownerID
 	 */
-	public Forum(String name, Forum parent, int type, int perm, int OwnerID)
+	public Forum(String name, Forum parent, int type, int perm, int ownerID)
 	{
 		_forumName = name;
 		_forumId = ForumsBBSManager.getInstance().getANewID();
@@ -85,7 +85,7 @@ public class Forum
 		_forumPost = 0;
 		_forumPerm = perm;
 		_fParent = parent;
-		_ownerID = OwnerID;
+		_ownerID = ownerID;
 		_children = new ArrayList<>();
 		_topic = new HashMap<>();
 		parent._children.add(this);

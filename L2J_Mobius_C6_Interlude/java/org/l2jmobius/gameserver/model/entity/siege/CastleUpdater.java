@@ -29,7 +29,8 @@ import org.l2jmobius.gameserver.model.clan.Clan;
  */
 public class CastleUpdater implements Runnable
 {
-	protected static Logger LOGGER = Logger.getLogger(CastleUpdater.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(CastleUpdater.class.getName());
+	
 	private final Clan _clan;
 	private int _runCount = 0;
 	
@@ -49,13 +50,10 @@ public class CastleUpdater implements Runnable
 			if ((warehouse != null) && (_clan.getHasCastle() > 0))
 			{
 				final Castle castle = CastleManager.getInstance().getCastleById(_clan.getHasCastle());
-				if (!Config.ALT_MANOR_SAVE_ALL_ACTIONS)
+				if (!Config.ALT_MANOR_SAVE_ALL_ACTIONS && ((_runCount % Config.ALT_MANOR_SAVE_PERIOD_RATE) == 0))
 				{
-					if ((_runCount % Config.ALT_MANOR_SAVE_PERIOD_RATE) == 0)
-					{
-						castle.saveSeedData();
-						castle.saveCropData();
-					}
+					castle.saveSeedData();
+					castle.saveCropData();
 				}
 				
 				_runCount++;
@@ -65,7 +63,7 @@ public class CastleUpdater implements Runnable
 		}
 		catch (Throwable e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 }

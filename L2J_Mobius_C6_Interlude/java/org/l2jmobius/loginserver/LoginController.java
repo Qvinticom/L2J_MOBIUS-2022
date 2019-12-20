@@ -18,6 +18,7 @@ package org.l2jmobius.loginserver;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.nio.charset.StandardCharsets;
 import java.security.GeneralSecurityException;
 import java.security.KeyPairGenerator;
 import java.security.MessageDigest;
@@ -575,7 +576,7 @@ public class LoginController
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			MessageDigest md = MessageDigest.getInstance("SHA");
-			final byte[] raw = password.getBytes("UTF-8");
+			final byte[] raw = password.getBytes(StandardCharsets.UTF_8);
 			final byte[] hash = md.digest(raw);
 			
 			byte[] expected = null;
@@ -837,7 +838,7 @@ public class LoginController
 				}
 				catch (InterruptedException e)
 				{
-					e.printStackTrace();
+					LOGGER.warning(e.toString());
 				}
 			}
 		}

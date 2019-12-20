@@ -816,32 +816,23 @@ public class Q214_TrialOfTheScholar extends Quest
 			
 			case SHACKLE_1:
 			case SHACKLE_2:
-				if ((st.getInt("cond") == 16) && st.dropItems(SHACKLE_SCALP, 1, 2, 500000))
+				if ((st.getInt("cond") == 16) && st.dropItems(SHACKLE_SCALP, 1, 2, 500000) && (st.getQuestItemsCount(MONSTER_EYE_DESTROYER_SKIN) == 5) && (st.getQuestItemsCount(SHAMAN_NECKLACE) == 5))
 				{
-					if ((st.getQuestItemsCount(MONSTER_EYE_DESTROYER_SKIN) == 5) && (st.getQuestItemsCount(SHAMAN_NECKLACE) == 5))
-					{
-						st.set("cond", "17");
-					}
+					st.set("cond", "17");
 				}
 				break;
 			
 			case MONSTER_EYE_DESTROYER:
-				if ((st.getInt("cond") == 16) && st.dropItems(MONSTER_EYE_DESTROYER_SKIN, 1, 5, 500000))
+				if ((st.getInt("cond") == 16) && st.dropItems(MONSTER_EYE_DESTROYER_SKIN, 1, 5, 500000) && (st.getQuestItemsCount(SHACKLE_SCALP) == 2) && (st.getQuestItemsCount(SHAMAN_NECKLACE) == 5))
 				{
-					if ((st.getQuestItemsCount(SHACKLE_SCALP) == 2) && (st.getQuestItemsCount(SHAMAN_NECKLACE) == 5))
-					{
-						st.set("cond", "17");
-					}
+					st.set("cond", "17");
 				}
 				break;
 			
 			case BREKA_ORC_SHAMAN:
-				if ((st.getInt("cond") == 16) && st.dropItems(SHAMAN_NECKLACE, 1, 5, 500000))
+				if ((st.getInt("cond") == 16) && st.dropItems(SHAMAN_NECKLACE, 1, 5, 500000) && (st.getQuestItemsCount(SHACKLE_SCALP) == 2) && (st.getQuestItemsCount(MONSTER_EYE_DESTROYER_SKIN) == 5))
 				{
-					if ((st.getQuestItemsCount(SHACKLE_SCALP) == 2) && (st.getQuestItemsCount(MONSTER_EYE_DESTROYER_SKIN) == 5))
-					{
-						st.set("cond", "17");
-					}
+					st.set("cond", "17");
 				}
 				break;
 			
@@ -853,42 +844,30 @@ public class Q214_TrialOfTheScholar extends Quest
 				break;
 			
 			case MEDUSA:
-				if ((st.getInt("cond") == 28) && st.dropItemsAlways(MEDUSA_BLOOD, 1, 12))
+				if ((st.getInt("cond") == 28) && st.dropItemsAlways(MEDUSA_BLOOD, 1, 12) && (st.getQuestItemsCount(GHOUL_SKIN) == 10) && (st.getQuestItemsCount(FETTERED_SOUL_ICHOR) == 5) && (st.getQuestItemsCount(ENCHANTED_GARGOYLE_NAIL) == 5))
 				{
-					if ((st.getQuestItemsCount(GHOUL_SKIN) == 10) && (st.getQuestItemsCount(FETTERED_SOUL_ICHOR) == 5) && (st.getQuestItemsCount(ENCHANTED_GARGOYLE_NAIL) == 5))
-					{
-						st.set("cond", "29");
-					}
+					st.set("cond", "29");
 				}
 				break;
 			
 			case GHOUL:
-				if ((st.getInt("cond") == 28) && st.dropItemsAlways(GHOUL_SKIN, 1, 10))
+				if ((st.getInt("cond") == 28) && st.dropItemsAlways(GHOUL_SKIN, 1, 10) && (st.getQuestItemsCount(MEDUSA_BLOOD) == 12) && (st.getQuestItemsCount(FETTERED_SOUL_ICHOR) == 5) && (st.getQuestItemsCount(ENCHANTED_GARGOYLE_NAIL) == 5))
 				{
-					if ((st.getQuestItemsCount(MEDUSA_BLOOD) == 12) && (st.getQuestItemsCount(FETTERED_SOUL_ICHOR) == 5) && (st.getQuestItemsCount(ENCHANTED_GARGOYLE_NAIL) == 5))
-					{
-						st.set("cond", "29");
-					}
+					st.set("cond", "29");
 				}
 				break;
 			
 			case FETTERED_SOUL:
-				if ((st.getInt("cond") == 28) && st.dropItemsAlways(FETTERED_SOUL_ICHOR, 1, 5))
+				if ((st.getInt("cond") == 28) && st.dropItemsAlways(FETTERED_SOUL_ICHOR, 1, 5) && (st.getQuestItemsCount(MEDUSA_BLOOD) == 12) && (st.getQuestItemsCount(GHOUL_SKIN) == 10) && (st.getQuestItemsCount(ENCHANTED_GARGOYLE_NAIL) == 5))
 				{
-					if ((st.getQuestItemsCount(MEDUSA_BLOOD) == 12) && (st.getQuestItemsCount(GHOUL_SKIN) == 10) && (st.getQuestItemsCount(ENCHANTED_GARGOYLE_NAIL) == 5))
-					{
-						st.set("cond", "29");
-					}
+					st.set("cond", "29");
 				}
 				break;
 			
 			case ENCHANTED_GARGOYLE:
-				if ((st.getInt("cond") == 28) && st.dropItemsAlways(ENCHANTED_GARGOYLE_NAIL, 1, 5))
+				if ((st.getInt("cond") == 28) && st.dropItemsAlways(ENCHANTED_GARGOYLE_NAIL, 1, 5) && (st.getQuestItemsCount(MEDUSA_BLOOD) == 12) && (st.getQuestItemsCount(GHOUL_SKIN) == 10) && (st.getQuestItemsCount(FETTERED_SOUL_ICHOR) == 5))
 				{
-					if ((st.getQuestItemsCount(MEDUSA_BLOOD) == 12) && (st.getQuestItemsCount(GHOUL_SKIN) == 10) && (st.getQuestItemsCount(FETTERED_SOUL_ICHOR) == 5))
-					{
-						st.set("cond", "29");
-					}
+					st.set("cond", "29");
 				}
 				break;
 		}

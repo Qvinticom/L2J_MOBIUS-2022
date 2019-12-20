@@ -119,14 +119,11 @@ public class CreatureAI extends AbstractAI
 	 */
 	protected void onIntentionActive(Creature target)
 	{
-		if ((target instanceof PlayerInstance) && (_actor instanceof PlayerInstance))
+		// If attacker have karma and have level >= 10 than his target and target have Newbie Protection Buff.
+		if ((target instanceof PlayerInstance) && (_actor instanceof PlayerInstance) && (((PlayerInstance) _actor).getKarma() > 0) && ((_actor.getLevel() - target.getLevel()) >= 10) && ((Playable) target).getProtectionBlessing() && !target.isInsideZone(ZoneId.PVP))
 		{
-			if ((((PlayerInstance) _actor).getKarma() > 0) && ((_actor.getLevel() - target.getLevel()) >= 10) && ((Playable) target).getProtectionBlessing() && !target.isInsideZone(ZoneId.PVP))
-			{
-				// If attacker have karma and have level >= 10 than his target and target have Newbie Protection Buff,
-				clientActionFailed();
-				return;
-			}
+			clientActionFailed();
+			return;
 		}
 		
 		// Check if the Intention is not already Active
@@ -274,14 +271,11 @@ public class CreatureAI extends AbstractAI
 			clientActionFailed();
 			return;
 		}
-		if ((target instanceof PlayerInstance) && (_actor instanceof PlayerInstance))
+		// If attacker have karma and have level >= 10 than his target and target have Newbie Protection Buff.
+		if ((target instanceof PlayerInstance) && (_actor instanceof PlayerInstance) && (((PlayerInstance) _actor).getKarma() > 0) && ((_actor.getLevel() - ((PlayerInstance) target).getLevel()) >= 10) && ((Playable) target).getProtectionBlessing() && !((Creature) target).isInsideZone(ZoneId.PVP))
 		{
-			if ((((PlayerInstance) _actor).getKarma() > 0) && ((_actor.getLevel() - ((PlayerInstance) target).getLevel()) >= 10) && ((Playable) target).getProtectionBlessing() && !((Creature) target).isInsideZone(ZoneId.PVP))
-			{
-				// If attacker have karma and have level >= 10 than his target and target have Newbie Protection Buff,
-				clientActionFailed();
-				return;
-			}
+			clientActionFailed();
+			return;
 		}
 		
 		// Set the AI cast target
@@ -299,7 +293,7 @@ public class CreatureAI extends AbstractAI
 		}
 		
 		// Set the AI skill used by INTENTION_CAST
-		set_skill(skill);
+		setSkill(skill);
 		
 		// Change the Intention of this AbstractAI to AI_INTENTION_CAST
 		changeIntention(AI_INTENTION_CAST, skill, target);
@@ -502,7 +496,7 @@ public class CreatureAI extends AbstractAI
 		// Set the AI pick up target
 		setTarget(object);
 		
-		if ((object.getX() == 0) && (object.getY() == 0)) // TODO: Find the drop&spawn bug
+		if ((object.getX() == 0) && (object.getY() == 0))
 		{
 			final Creature creature = getActor();
 			if (creature instanceof PlayerInstance)
@@ -796,7 +790,7 @@ public class CreatureAI extends AbstractAI
 	 * <BR>
 	 */
 	@Override
-	protected void onEvtArrivedBlocked(Location blocked_at_pos)
+	protected void onEvtArrivedBlocked(Location location)
 	{
 		// If the Intention was AI_INTENTION_MOVE_TO, set the Intention to AI_INTENTION_ACTIVE
 		if ((getIntention() == AI_INTENTION_MOVE_TO) || (getIntention() == AI_INTENTION_CAST))
@@ -805,7 +799,7 @@ public class CreatureAI extends AbstractAI
 		}
 		
 		// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)
-		clientStopMoving(blocked_at_pos);
+		clientStopMoving(location);
 		
 		// Launch actions corresponding to the Event Think
 		onEvtThink();
@@ -1020,18 +1014,15 @@ public class CreatureAI extends AbstractAI
 			if (follow != null)
 			{
 				// prevent attack-follow into peace zones
-				if ((getAttackTarget() != null) && (_actor instanceof Playable) && (target instanceof Playable))
+				if ((getAttackTarget() != null) && (_actor instanceof Playable) && (target instanceof Playable) && (getAttackTarget() == follow))
 				{
-					if (getAttackTarget() == follow)
+					// allow GMs to keep following
+					final boolean isGM = (_actor instanceof PlayerInstance) && ((PlayerInstance) _actor).isGM();
+					if (Creature.isInsidePeaceZone(_actor, target) && !isGM)
 					{
-						// allow GMs to keep following
-						final boolean isGM = _actor instanceof PlayerInstance ? ((PlayerInstance) _actor).isGM() : false;
-						if (Creature.isInsidePeaceZone(_actor, target) && !isGM)
-						{
-							stopFollow();
-							setIntention(AI_INTENTION_IDLE);
-							return true;
-						}
+						stopFollow();
+						setIntention(AI_INTENTION_IDLE);
+						return true;
 					}
 				}
 				// if the target is too far (maybe also teleported)
@@ -1198,25 +1189,18 @@ public class CreatureAI extends AbstractAI
 		}
 	}
 	
-	/**
-	 * @return the _skill
-	 */
-	public synchronized Skill get_skill()
+	public synchronized Skill getSkill()
 	{
 		return _skill;
 	}
 	
-	/**
-	 * @param _skill the _skill to set
-	 */
-	public synchronized void set_skill(Skill _skill)
+	public synchronized void setSkill(Skill skill)
 	{
-		this._skill = _skill;
+		this._skill = skill;
 	}
 	
 	public IntentionCommand getNextIntention()
 	{
 		return null;
 	}
-	
 }

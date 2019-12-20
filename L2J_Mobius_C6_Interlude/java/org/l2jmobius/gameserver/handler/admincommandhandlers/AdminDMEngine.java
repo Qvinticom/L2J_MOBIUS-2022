@@ -60,7 +60,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_dmevent_name "))
 		{
-			if (DM.set_eventName(command.substring(19)))
+			if (DM.setEventName(command.substring(19)))
 			{
 				showMainPage(activeChar);
 			}
@@ -71,7 +71,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_dmevent_desc "))
 		{
-			if (DM.set_eventDesc(command.substring(19)))
+			if (DM.setEventDesc(command.substring(19)))
 			{
 				showMainPage(activeChar);
 			}
@@ -83,12 +83,12 @@ public class AdminDMEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_dmevent_minlvl "))
 		{
-			if (!DM.checkMinLevel(Integer.valueOf(command.substring(21))))
+			if (!DM.checkMinLevel(Integer.parseInt(command.substring(21))))
 			{
 				return false;
 			}
 			
-			if (DM.set_minlvl(Integer.valueOf(command.substring(21))))
+			if (DM.setMinlvl(Integer.parseInt(command.substring(21))))
 			{
 				showMainPage(activeChar);
 			}
@@ -99,12 +99,12 @@ public class AdminDMEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_dmevent_maxlvl "))
 		{
-			if (!DM.checkMaxLevel(Integer.valueOf(command.substring(21))))
+			if (!DM.checkMaxLevel(Integer.parseInt(command.substring(21))))
 			{
 				return false;
 			}
 			
-			if (DM.set_maxlvl(Integer.valueOf(command.substring(21))))
+			if (DM.setMaxlvl(Integer.parseInt(command.substring(21))))
 			{
 				showMainPage(activeChar);
 			}
@@ -115,7 +115,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_dmevent_join_loc "))
 		{
-			if (DM.set_joiningLocationName(command.substring(23)))
+			if (DM.setJoiningLocationName(command.substring(23)))
 			{
 				showMainPage(activeChar);
 			}
@@ -126,7 +126,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_dmevent_npc "))
 		{
-			if (DM.set_npcId(Integer.valueOf(command.substring(18))))
+			if (DM.setNpcId(Integer.parseInt(command.substring(18))))
 			{
 				showMainPage(activeChar);
 			}
@@ -142,7 +142,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_dmevent_reward "))
 		{
-			if (DM.set_rewardId(Integer.valueOf(command.substring(21))))
+			if (DM.setRewardId(Integer.parseInt(command.substring(21))))
 			{
 				showMainPage(activeChar);
 			}
@@ -153,7 +153,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_dmevent_reward_amount "))
 		{
-			if (DM.set_rewardAmount(Integer.valueOf(command.substring(28))))
+			if (DM.setRewardAmount(Integer.parseInt(command.substring(28))))
 			{
 				showMainPage(activeChar);
 			}
@@ -169,7 +169,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_dmevent_color "))
 		{
-			if (DM.set_playerColors(Integer.decode("0x" + command.substring(20))))
+			if (DM.setPlayerColors(Integer.decode("0x" + command.substring(20))))
 			{
 				showMainPage(activeChar);
 			}
@@ -293,22 +293,22 @@ public class AdminDMEngine implements IAdminCommandHandler
 		replyMSG.append("<td width=\"100\"><button value=\"Load\" action=\"bypass -h admin_dmevent_load\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 		replyMSG.append("</tr></table><br><br>");
 		replyMSG.append("Current event...<br1>");
-		replyMSG.append("Name:&nbsp;<font color=\"00FF00\">" + DM.get_eventName() + "</font><br1>");
-		replyMSG.append("Description:&nbsp;<font color=\"00FF00\">" + DM.get_eventDesc() + "</font><br1>");
-		replyMSG.append("Joining location name:&nbsp;<font color=\"00FF00\">" + DM.get_joiningLocationName() + "</font><br1>");
+		replyMSG.append("Name:&nbsp;<font color=\"00FF00\">" + DM.getEventName() + "</font><br1>");
+		replyMSG.append("Description:&nbsp;<font color=\"00FF00\">" + DM.getEventDesc() + "</font><br1>");
+		replyMSG.append("Joining location name:&nbsp;<font color=\"00FF00\">" + DM.getJoiningLocationName() + "</font><br1>");
 		
-		final Location npc_loc = DM.get_npcLocation();
+		final Location npcLoc = DM.getNpcLocation();
 		
-		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + DM.get_npcId() + " on pos " + npc_loc.getX() + "," + npc_loc.getY() + "," + npc_loc.getZ() + "</font><br1>");
-		replyMSG.append("Reward ID:&nbsp;<font color=\"00FF00\">" + DM.get_rewardId() + "</font><br1>");
-		replyMSG.append("Reward Amount:&nbsp;<font color=\"00FF00\">" + DM.get_rewardAmount() + "</font><br><br>");
-		replyMSG.append("Min lvl:&nbsp;<font color=\"00FF00\">" + DM.get_minlvl() + "</font><br>");
-		replyMSG.append("Max lvl:&nbsp;<font color=\"00FF00\">" + DM.get_maxlvl() + "</font><br><br>");
-		replyMSG.append("Death Match Color:&nbsp;<font color=\"00FF00\">" + DM.get_playerColors() + "</font><br>");
+		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + DM.getNpcId() + " on pos " + npcLoc.getX() + "," + npcLoc.getY() + "," + npcLoc.getZ() + "</font><br1>");
+		replyMSG.append("Reward ID:&nbsp;<font color=\"00FF00\">" + DM.getRewardId() + "</font><br1>");
+		replyMSG.append("Reward Amount:&nbsp;<font color=\"00FF00\">" + DM.getRewardAmount() + "</font><br><br>");
+		replyMSG.append("Min lvl:&nbsp;<font color=\"00FF00\">" + DM.getMinlvl() + "</font><br>");
+		replyMSG.append("Max lvl:&nbsp;<font color=\"00FF00\">" + DM.getMaxlvl() + "</font><br><br>");
+		replyMSG.append("Death Match Color:&nbsp;<font color=\"00FF00\">" + DM.getPlayerColors() + "</font><br>");
 		
-		final Location player_loc = DM.get_playersSpawnLocation();
+		final Location playerLoc = DM.get_playersSpawnLocation();
 		
-		replyMSG.append("Death Match Spawn Pos:&nbsp;<font color=\"00FF00\">" + player_loc.getX() + "," + player_loc.getY() + "," + player_loc.getZ() + "</font><br><br>");
+		replyMSG.append("Death Match Spawn Pos:&nbsp;<font color=\"00FF00\">" + playerLoc.getX() + "," + playerLoc.getY() + "," + playerLoc.getZ() + "</font><br><br>");
 		replyMSG.append("Current players:<br1>");
 		
 		if (!DM.is_started())

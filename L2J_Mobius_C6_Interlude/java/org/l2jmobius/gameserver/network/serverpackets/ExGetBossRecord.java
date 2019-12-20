@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Map;
+import java.util.Map.Entry;
 
 /**
  * Format: ch ddd [ddd].
@@ -63,10 +64,10 @@ public class ExGetBossRecord extends GameServerPacket
 		else
 		{
 			writeD(_bossRecordInfo.size());
-			for (int bossId : _bossRecordInfo.keySet())
+			for (Entry<Integer, Integer> entry : _bossRecordInfo.entrySet())
 			{
-				writeD(bossId);
-				writeD(_bossRecordInfo.get(bossId));
+				writeD(entry.getKey());
+				writeD(entry.getValue());
 				writeD(0x00); // ??
 			}
 		}

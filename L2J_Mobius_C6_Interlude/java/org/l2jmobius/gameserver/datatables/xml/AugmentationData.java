@@ -62,7 +62,7 @@ public class AugmentationData
 	private static final int BASESTAT_INT = 16343;
 	private static final int BASESTAT_MEN = 16344;
 	
-	private static List<augmentationStat> _augmentationStats[] = null;
+	private static List<augmentationStat>[] _augmentationStats = null;
 	private static Map<Integer, ArrayList<augmentationSkill>> _blueSkills = null;
 	private static Map<Integer, ArrayList<augmentationSkill>> _purpleSkills = null;
 	private static Map<Integer, ArrayList<augmentationSkill>> _redSkills = null;
@@ -218,8 +218,8 @@ public class AugmentationData
 								NamedNodeMap attrs = d.getAttributes();
 								String statName = attrs.getNamedItem("name").getNodeValue();
 								
-								float soloValues[] = null;
-								float combinedValues[] = null;
+								float[] soloValues = null;
+								float[] combinedValues = null;
 								
 								for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 								{
@@ -289,7 +289,7 @@ public class AugmentationData
 		// Note: stat12 stands for stat 1 AND 2 (same for stat34 ;p ) this is because a value can contain up to 2 stat modifications (there are two short values packed in one integer value, meaning 4 stat modifications at max) for more info take a look at getAugStatsById(...)
 		// Note: lifeStoneGrade: (0 means low grade, 3 top grade)
 		// First: determine whether we will add a skill/baseStatModifier or not because this determine which color could be the result
-		int skill_Chance = 0;
+		int skillChance = 0;
 		int stat34 = 0;
 		boolean generateSkill = false;
 		int resultColor = 0;
@@ -299,7 +299,7 @@ public class AugmentationData
 		{
 			case 0:
 			{
-				skill_Chance = Config.AUGMENTATION_NG_SKILL_CHANCE;
+				skillChance = Config.AUGMENTATION_NG_SKILL_CHANCE;
 				if (Rnd.get(1, 100) <= Config.AUGMENTATION_NG_GLOW_CHANCE)
 				{
 					generateGlow = true;
@@ -308,7 +308,7 @@ public class AugmentationData
 			}
 			case 1:
 			{
-				skill_Chance = Config.AUGMENTATION_MID_SKILL_CHANCE;
+				skillChance = Config.AUGMENTATION_MID_SKILL_CHANCE;
 				if (Rnd.get(1, 100) <= Config.AUGMENTATION_MID_GLOW_CHANCE)
 				{
 					generateGlow = true;
@@ -317,7 +317,7 @@ public class AugmentationData
 			}
 			case 2:
 			{
-				skill_Chance = Config.AUGMENTATION_HIGH_SKILL_CHANCE;
+				skillChance = Config.AUGMENTATION_HIGH_SKILL_CHANCE;
 				if (Rnd.get(1, 100) <= Config.AUGMENTATION_HIGH_GLOW_CHANCE)
 				{
 					generateGlow = true;
@@ -326,7 +326,7 @@ public class AugmentationData
 			}
 			case 3:
 			{
-				skill_Chance = Config.AUGMENTATION_TOP_SKILL_CHANCE;
+				skillChance = Config.AUGMENTATION_TOP_SKILL_CHANCE;
 				if (Rnd.get(1, 100) <= Config.AUGMENTATION_TOP_GLOW_CHANCE)
 				{
 					generateGlow = true;
@@ -334,7 +334,7 @@ public class AugmentationData
 			}
 		}
 		
-		if (Rnd.get(1, 100) <= skill_Chance)
+		if (Rnd.get(1, 100) <= skillChance)
 		{
 			generateSkill = true;
 		}
@@ -489,7 +489,7 @@ public class AugmentationData
 		// the first 12 combined stats (14-26) is the stat 1 combined with stat 2-13
 		// the next 11 combined stats then are stat 2 combined with stat 3-13 and so on...
 		// to get the idea have a look @ optiondata_client-e.dat - thats where the data came from :)
-		final int stats[] = new int[2];
+		final int[] stats = new int[2];
 		stats[0] = 0x0000FFFF & augmentationId;
 		stats[1] = augmentationId >> 16;
 		
@@ -622,10 +622,10 @@ public class AugmentationData
 		private final Stats _stat;
 		private final int _singleSize;
 		private final int _combinedSize;
-		private final float _singleValues[];
-		private final float _combinedValues[];
+		private final float[] _singleValues;
+		private final float[] _combinedValues;
 		
-		public augmentationStat(Stats stat, float sValues[], float cValues[])
+		public augmentationStat(Stats stat, float[] sValues, float[] cValues)
 		{
 			_stat = stat;
 			_singleSize = sValues.length;

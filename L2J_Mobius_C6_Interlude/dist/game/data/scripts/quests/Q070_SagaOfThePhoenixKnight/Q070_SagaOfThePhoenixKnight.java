@@ -26,7 +26,7 @@ public class Q070_SagaOfThePhoenixKnight extends SagasSuperClass
 	public Q070_SagaOfThePhoenixKnight()
 	{
 		super(70, "Saga of the Phoenix Knight");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			30849,
 			31624,
@@ -41,7 +41,7 @@ public class Q070_SagaOfThePhoenixKnight extends SagasSuperClass
 			31657,
 			31277
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7534,
@@ -56,39 +56,39 @@ public class Q070_SagaOfThePhoenixKnight extends SagasSuperClass
 			7093,
 			6482
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27286,
 			27219,
 			27278
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			90
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x05
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			191046,
 			46087,
 			46066
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-40640,
 			-36372,
 			-36396
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-3042,
 			-1685,
 			-1685
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

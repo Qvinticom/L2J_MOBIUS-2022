@@ -236,37 +236,37 @@ public class AdminAdmin implements IAdminCommandHandler
 				{
 					case "RateXp":
 					{
-						Config.RATE_XP = Float.valueOf(pValue);
+						Config.RATE_XP = Float.parseFloat(pValue);
 						break;
 					}
 					case "RateSp":
 					{
-						Config.RATE_SP = Float.valueOf(pValue);
+						Config.RATE_SP = Float.parseFloat(pValue);
 						break;
 					}
 					case "RateDropSpoil":
 					{
-						Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER = Float.valueOf(pValue);
+						Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER = Float.parseFloat(pValue);
 						break;
 					}
 					case "EnchantChanceElementStone":
 					{
-						Config.ENCHANT_CHANCE_ELEMENT_STONE = Float.valueOf(pValue);
+						Config.ENCHANT_CHANCE_ELEMENT_STONE = Float.parseFloat(pValue);
 						break;
 					}
 					case "EnchantChanceElementCrystal":
 					{
-						Config.ENCHANT_CHANCE_ELEMENT_CRYSTAL = Float.valueOf(pValue);
+						Config.ENCHANT_CHANCE_ELEMENT_CRYSTAL = Float.parseFloat(pValue);
 						break;
 					}
 					case "EnchantChanceElementJewel":
 					{
-						Config.ENCHANT_CHANCE_ELEMENT_JEWEL = Float.valueOf(pValue);
+						Config.ENCHANT_CHANCE_ELEMENT_JEWEL = Float.parseFloat(pValue);
 						break;
 					}
 					case "EnchantChanceElementEnergy":
 					{
-						Config.ENCHANT_CHANCE_ELEMENT_ENERGY = Float.valueOf(pValue);
+						Config.ENCHANT_CHANCE_ELEMENT_ENERGY = Float.parseFloat(pValue);
 						break;
 					}
 				}

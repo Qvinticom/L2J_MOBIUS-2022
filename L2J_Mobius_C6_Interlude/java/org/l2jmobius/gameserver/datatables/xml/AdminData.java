@@ -245,9 +245,9 @@ public class AdminData implements IXmlReader
 		}
 		
 		String command = adminCommand;
-		if (adminCommand.indexOf(" ") != -1)
+		if (adminCommand.indexOf(' ') != -1)
 		{
-			command = adminCommand.substring(0, adminCommand.indexOf(" "));
+			command = adminCommand.substring(0, adminCommand.indexOf(' '));
 		}
 		
 		int acar = 0;

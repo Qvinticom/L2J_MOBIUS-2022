@@ -103,7 +103,6 @@ public class ItemsOnGroundManager
 			catch (Exception e)
 			{
 				LOGGER.warning("error while updating table ItemsOnGround " + e);
-				e.printStackTrace();
 			}
 		}
 		
@@ -132,29 +131,15 @@ public class ItemsOnGroundManager
 				item.getPosition().setWorldRegion(World.getInstance().getRegion(item.getPosition().getWorldPosition()));
 				item.getPosition().getWorldRegion().addVisibleObject(item);
 				item.setDropTime(result.getLong(8));
-				if (result.getLong(8) == -1)
-				{
-					item.setProtected(true);
-				}
-				else
-				{
-					item.setProtected(false);
-				}
-				
+				item.setProtected(result.getLong(8) == -1);
 				item.setVisible(true);
 				World.getInstance().addVisibleObject(item, item.getPosition().getWorldRegion(), null);
 				_items.add(item);
 				count++;
 				// add to ItemsAutoDestroy only items not protected
-				if (!Config.LIST_PROTECTED_ITEMS.contains(item.getItemId()))
+				if (!Config.LIST_PROTECTED_ITEMS.contains(item.getItemId()) && (result.getLong(8) > -1) && (((Config.AUTODESTROY_ITEM_AFTER > 0) && (item.getItemType() != EtcItemType.HERB)) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && (item.getItemType() == EtcItemType.HERB))))
 				{
-					if (result.getLong(8) > -1)
-					{
-						if (((Config.AUTODESTROY_ITEM_AFTER > 0) && (item.getItemType() != EtcItemType.HERB)) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && (item.getItemType() == EtcItemType.HERB)))
-						{
-							ItemsAutoDestroy.getInstance().addItem(item);
-						}
-					}
+					ItemsAutoDestroy.getInstance().addItem(item);
 				}
 			}
 			
@@ -226,12 +211,11 @@ public class ItemsOnGroundManager
 		}
 		catch (Exception e1)
 		{
-			LOGGER.warning("error while cleaning table ItemsOnGround " + e1);
-			e1.printStackTrace();
+			LOGGER.warning("Error while cleaning table ItemsOnGround: " + e1);
 		}
 	}
 	
-	protected class StoreInDb extends Thread
+	protected class StoreInDb implements Runnable
 	{
 		@Override
 		public void run()
@@ -283,8 +267,7 @@ public class ItemsOnGroundManager
 				}
 				catch (Exception e)
 				{
-					LOGGER.warning("error while inserting into table ItemsOnGround " + e);
-					e.printStackTrace();
+					LOGGER.warning("Error while inserting into table ItemsOnGround: " + e);
 				}
 			}
 		}

@@ -44,7 +44,6 @@ public class ProtectorInstance extends NpcInstance
 			_caster = caster;
 		}
 		
-		@SuppressWarnings("synthetic-access")
 		@Override
 		public void run()
 		{

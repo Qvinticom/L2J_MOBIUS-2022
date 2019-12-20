@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.holders.SkillHolder;
  */
 public class PetSkillData implements IXmlReader
 {
-	private static Logger LOGGER = Logger.getLogger(PetSkillData.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(PetSkillData.class.getName());
 	private final Map<Integer, Map<Long, SkillHolder>> _skillTrees = new HashMap<>();
 	
 	protected PetSkillData()

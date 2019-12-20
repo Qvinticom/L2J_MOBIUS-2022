@@ -23,42 +23,40 @@ import org.l2jmobius.gameserver.model.Skill;
  */
 public class HeroSkillTable
 {
-	private static Skill[] _heroSkills;
+	private static final Integer[] HERO_SKILL_IDS = new Integer[]
+	{
+		395,
+		396,
+		1374,
+		1375,
+		1376
+	};
+	private static Skill[] HERO_SKILLS;
 	
 	private HeroSkillTable()
 	{
-		_heroSkills = new Skill[5];
-		_heroSkills[0] = SkillTable.getInstance().getInfo(395, 1);
-		_heroSkills[1] = SkillTable.getInstance().getInfo(396, 1);
-		_heroSkills[2] = SkillTable.getInstance().getInfo(1374, 1);
-		_heroSkills[3] = SkillTable.getInstance().getInfo(1375, 1);
-		_heroSkills[4] = SkillTable.getInstance().getInfo(1376, 1);
+		HERO_SKILLS = new Skill[5];
+		HERO_SKILLS[0] = SkillTable.getInstance().getInfo(395, 1);
+		HERO_SKILLS[1] = SkillTable.getInstance().getInfo(396, 1);
+		HERO_SKILLS[2] = SkillTable.getInstance().getInfo(1374, 1);
+		HERO_SKILLS[3] = SkillTable.getInstance().getInfo(1375, 1);
+		HERO_SKILLS[4] = SkillTable.getInstance().getInfo(1376, 1);
 	}
 	
 	public static Skill[] getHeroSkills()
 	{
-		return _heroSkills;
+		return HERO_SKILLS;
 	}
 	
 	public static boolean isHeroSkill(int skillid)
 	{
-		Integer[] _HeroSkillsId = new Integer[]
-		{
-			395,
-			396,
-			1374,
-			1375,
-			1376
-		};
-		
-		for (int id : _HeroSkillsId)
+		for (int id : HERO_SKILL_IDS)
 		{
 			if (id == skillid)
 			{
 				return true;
 			}
 		}
-		
 		return false;
 	}
 	

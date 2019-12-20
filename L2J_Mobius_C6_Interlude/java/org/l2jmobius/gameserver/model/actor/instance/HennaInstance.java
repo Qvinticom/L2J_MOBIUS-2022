@@ -117,9 +117,9 @@ public class HennaInstance
 		return _symbolId;
 	}
 	
-	public void setSymbolId(int SymbolId)
+	public void setSymbolId(int symbolId)
 	{
-		_symbolId = SymbolId;
+		_symbolId = symbolId;
 	}
 	
 	public int getItemIdDye()
@@ -127,9 +127,9 @@ public class HennaInstance
 		return _itemIdDye;
 	}
 	
-	public void setItemIdDye(int ItemIdDye)
+	public void setItemIdDye(int itemIdDye)
 	{
-		_itemIdDye = ItemIdDye;
+		_itemIdDye = itemIdDye;
 	}
 	
 	public int getAmountDyeRequire()
@@ -137,9 +137,9 @@ public class HennaInstance
 		return _amountDyeRequire;
 	}
 	
-	public void setAmountDyeRequire(int AmountDyeRequire)
+	public void setAmountDyeRequire(int amountDyeRequire)
 	{
-		_amountDyeRequire = AmountDyeRequire;
+		_amountDyeRequire = amountDyeRequire;
 	}
 	
 	public int getPrice()
@@ -147,9 +147,9 @@ public class HennaInstance
 		return _price;
 	}
 	
-	public void setPrice(int Price)
+	public void setPrice(int price)
 	{
-		_price = Price;
+		_price = price;
 	}
 	
 	public int getStatINT()
@@ -157,9 +157,9 @@ public class HennaInstance
 		return _statINT;
 	}
 	
-	public void setStatINT(int StatINT)
+	public void setStatINT(int statINT)
 	{
-		_statINT = StatINT;
+		_statINT = statINT;
 	}
 	
 	public int getStatSTR()
@@ -167,9 +167,9 @@ public class HennaInstance
 		return _statSTR;
 	}
 	
-	public void setStatSTR(int StatSTR)
+	public void setStatSTR(int statSTR)
 	{
-		_statSTR = StatSTR;
+		_statSTR = statSTR;
 	}
 	
 	public int getStatCON()
@@ -177,9 +177,9 @@ public class HennaInstance
 		return _statCON;
 	}
 	
-	public void setStatCON(int StatCON)
+	public void setStatCON(int statCON)
 	{
-		_statCON = StatCON;
+		_statCON = statCON;
 	}
 	
 	public int getStatMEM()
@@ -187,9 +187,9 @@ public class HennaInstance
 		return _statMEM;
 	}
 	
-	public void setStatMEM(int StatMEM)
+	public void setStatMEM(int statMEM)
 	{
-		_statMEM = StatMEM;
+		_statMEM = statMEM;
 	}
 	
 	public int getStatDEX()
@@ -197,9 +197,9 @@ public class HennaInstance
 		return _statDEX;
 	}
 	
-	public void setStatDEX(int StatDEX)
+	public void setStatDEX(int statDEX)
 	{
-		_statDEX = StatDEX;
+		_statDEX = statDEX;
 	}
 	
 	public int getStatWIT()
@@ -207,8 +207,8 @@ public class HennaInstance
 		return _statWIT;
 	}
 	
-	public void setStatWIT(int StatWIT)
+	public void setStatWIT(int statWIT)
 	{
-		_statWIT = StatWIT;
+		_statWIT = statWIT;
 	}
 }

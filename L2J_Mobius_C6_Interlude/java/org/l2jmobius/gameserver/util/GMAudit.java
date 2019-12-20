@@ -46,8 +46,8 @@ public class GMAudit
 	 */
 	public static void auditGMAction(String gmName, String action, String target, String params)
 	{
-		final SimpleDateFormat _formatter = new SimpleDateFormat("dd/MM/yyyy H:mm:ss");
-		final String date = _formatter.format(new Date());
+		final SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy H:mm:ss");
+		final String date = formatter.format(new Date());
 		String name = Util.replaceIllegalCharacters(gmName);
 		if (!Util.isValidFileName(name))
 		{

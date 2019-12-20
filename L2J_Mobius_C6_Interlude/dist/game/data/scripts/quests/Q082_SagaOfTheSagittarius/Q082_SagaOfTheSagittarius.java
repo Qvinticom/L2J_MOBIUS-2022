@@ -27,7 +27,7 @@ public class Q082_SagaOfTheSagittarius extends SagasSuperClass
 	public Q082_SagaOfTheSagittarius()
 	{
 		super(82, "Saga of the Sagittarius");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			30702,
 			31627,
@@ -42,7 +42,7 @@ public class Q082_SagaOfTheSagittarius extends SagasSuperClass
 			31657,
 			31641
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7519,
@@ -57,39 +57,39 @@ public class Q082_SagaOfTheSagittarius extends SagasSuperClass
 			7105,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27296,
 			27231,
 			27305
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			92
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x09
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			191046,
 			46066,
 			46066
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-40640,
 			-36396,
 			-36396
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-3042,
 			-1685,
 			-1685
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

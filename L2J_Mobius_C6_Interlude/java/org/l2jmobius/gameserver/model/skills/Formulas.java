@@ -62,7 +62,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class Formulas
 {
-	protected static final Logger LOGGER = Logger.getLogger(Creature.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(Formulas.class.getName());
 	
 	private static final int HP_REGENERATE_PERIOD = 3000; // 3 secs
 	
@@ -1035,12 +1035,9 @@ public class Formulas
 				if (clanHallIndex > 0)
 				{
 					final ClanHall clansHall = ClanHallManager.getInstance().getClanHallById(clanHallIndex);
-					if (clansHall != null)
+					if ((clansHall != null) && (clansHall.getFunction(ClanHall.FUNC_RESTORE_HP) != null))
 					{
-						if (clansHall.getFunction(ClanHall.FUNC_RESTORE_HP) != null)
-						{
-							hpRegenMultiplier *= 1 + (clansHall.getFunction(ClanHall.FUNC_RESTORE_HP).getLvl() / 100);
-						}
+						hpRegenMultiplier *= 1 + (clansHall.getFunction(ClanHall.FUNC_RESTORE_HP).getLvl() / 100);
 					}
 				}
 			}
@@ -1114,12 +1111,9 @@ public class Formulas
 				if (clanHallIndex > 0)
 				{
 					final ClanHall clansHall = ClanHallManager.getInstance().getClanHallById(clanHallIndex);
-					if (clansHall != null)
+					if ((clansHall != null) && (clansHall.getFunction(ClanHall.FUNC_RESTORE_MP) != null))
 					{
-						if (clansHall.getFunction(ClanHall.FUNC_RESTORE_MP) != null)
-						{
-							mpRegenMultiplier *= 1 + (clansHall.getFunction(ClanHall.FUNC_RESTORE_MP).getLvl() / 100);
-						}
+						mpRegenMultiplier *= 1 + (clansHall.getFunction(ClanHall.FUNC_RESTORE_MP).getLvl() / 100);
 					}
 				}
 			}
@@ -1246,7 +1240,7 @@ public class Formulas
 		}
 		
 		final SiegeClan siegeClan = siege.getAttackerClan(player.getClan().getClanId());
-		if ((siegeClan == null) || (siegeClan.getFlag().size() == 0) || !Util.checkIfInRange(200, player, siegeClan.getFlag().get(0), true))
+		if ((siegeClan == null) || siegeClan.getFlag().isEmpty() || !Util.checkIfInRange(200, player, siegeClan.getFlag().get(0), true))
 		{
 			return 0;
 		}
@@ -1661,13 +1655,10 @@ public class Formulas
 			}
 		}
 		
-		if (shld)
+		if (shld && ((100 - Config.ALT_PERFECT_SHLD_BLOCK) < Rnd.get(100)))
 		{
-			if ((100 - Config.ALT_PERFECT_SHLD_BLOCK) < Rnd.get(100))
-			{
-				damage = 1;
-				target.sendPacket(new SystemMessage(SystemMessageId.YOUR_EXCELLENT_SHIELD_DEFENSE_WAS_A_SUCCESS));
-			}
+			damage = 1;
+			target.sendPacket(new SystemMessage(SystemMessageId.YOUR_EXCELLENT_SHIELD_DEFENSE_WAS_A_SUCCESS));
 		}
 		
 		if ((damage > 0) && (damage < 1))
@@ -1905,8 +1896,7 @@ public class Formulas
 	
 	public static final double calcMagicDam(CubicInstance attacker, Creature target, Skill skill, boolean mcrit)
 	{
-		final double damage = calcMagicDam(attacker.getOwner(), target, skill, false, false, mcrit);
-		return damage;
+		return calcMagicDam(attacker.getOwner(), target, skill, false, false, mcrit);
 	}
 	
 	/**
@@ -1964,14 +1954,11 @@ public class Formulas
 					else if (target instanceof PlayerInstance) // If is a active player set his HP and CP to 1
 					{
 						final PlayerInstance player = (PlayerInstance) target;
-						if (!player.isInvul())
+						if (!player.isInvul() && (!(creature instanceof PlayerInstance) || (!((PlayerInstance) creature).isGM() || ((PlayerInstance) creature).getAccessLevel().canGiveDamage())))
 						{
-							if ((!(creature instanceof PlayerInstance) || (!((PlayerInstance) creature).isGM() || ((PlayerInstance) creature).getAccessLevel().canGiveDamage())))
-							{
-								player.setCurrentHp(1);
-								player.setCurrentCp(1);
-								player.sendPacket(SystemMessageId.LETHAL_STRIKE_SUCCESSFUL);
-							}
+							player.setCurrentHp(1);
+							player.setCurrentCp(1);
+							player.sendPacket(SystemMessageId.LETHAL_STRIKE_SUCCESSFUL);
 						}
 					}
 				}
@@ -1980,14 +1967,11 @@ public class Formulas
 					if (target instanceof PlayerInstance)
 					{
 						final PlayerInstance player = (PlayerInstance) target;
-						if (!player.isInvul())
+						if (!player.isInvul() && (!(creature instanceof PlayerInstance) || (!((PlayerInstance) creature).isGM() || ((PlayerInstance) creature).getAccessLevel().canGiveDamage())))
 						{
-							if ((!(creature instanceof PlayerInstance) || (!((PlayerInstance) creature).isGM() || ((PlayerInstance) creature).getAccessLevel().canGiveDamage())))
-							{
-								player.setCurrentCp(1); // Set CP to 1
-								player.sendPacket(SystemMessage.sendString("Combat points disappear when hit with a half kill skill"));
-								creature.sendPacket(new SystemMessage(SystemMessageId.LETHAL_STRIKE));
-							}
+							player.setCurrentCp(1); // Set CP to 1
+							player.sendPacket(SystemMessage.sendString("Combat points disappear when hit with a half kill skill"));
+							creature.sendPacket(new SystemMessage(SystemMessageId.LETHAL_STRIKE));
 						}
 					}
 				}
@@ -2017,12 +2001,9 @@ public class Formulas
 	 */
 	public static final boolean calcAtkBreak(Creature target, double dmg)
 	{
-		if (target instanceof PlayerInstance)
+		if ((target instanceof PlayerInstance) && (((PlayerInstance) target).getForceBuff() != null))
 		{
-			if (((PlayerInstance) target).getForceBuff() != null)
-			{
-				return true;
-			}
+			return true;
 		}
 		double init = 0;
 		
@@ -2142,7 +2123,7 @@ public class Formulas
 	 */
 	public static boolean calcShldUse(Creature attacker, Creature target)
 	{
-		final Weapon at_weapon = attacker.getActiveWeaponItem();
+		final Weapon weapon = attacker.getActiveWeaponItem();
 		// double shldRate = target.calcStat(Stats.SHIELD_RATE, 0, attacker, null) * DEXbonus[target.getDEX()];
 		double shldRate = target.calcStat(Stats.SHIELD_RATE, 0, attacker, null) * BaseStats.DEX.calcBonus(target);
 		if (shldRate == 0.0)
@@ -2151,15 +2132,12 @@ public class Formulas
 		}
 		// Check for passive skill Aegis (316) or Aegis Stance (318)
 		// Like L2OFF you can't parry if your target is behind you
-		if ((target.getKnownSkill(316) == null) && (target.getFirstEffect(318) == null))
+		if ((target.getKnownSkill(316) == null) && (target.getFirstEffect(318) == null) && (target.isBehind(attacker) || !target.isFront(attacker) || !attacker.isFront(target)))
 		{
-			if (target.isBehind(attacker) || !target.isFront(attacker) || !attacker.isFront(target))
-			{
-				return false;
-			}
+			return false;
 		}
 		// if attacker use bow and target wear shield, shield block rate is multiplied by 1.3 (30%)
-		if ((at_weapon != null) && (at_weapon.getItemType() == WeaponType.BOW))
+		if ((weapon != null) && (weapon.getItemType() == WeaponType.BOW))
 		{
 			shldRate *= 1.3;
 		}
@@ -2180,14 +2158,10 @@ public class Formulas
 		double d = (attack - defence) / (attack + defence);
 		if (target.isRaid() && ((type == SkillType.CONFUSION) || (type == SkillType.MUTE) || (type == SkillType.PARALYZE) || (type == SkillType.ROOT) || (type == SkillType.FEAR) || (type == SkillType.SLEEP) || (type == SkillType.STUN) || (type == SkillType.DEBUFF) || (type == SkillType.AGGDEBUFF)))
 		{
-			if ((d > 0) && (Rnd.get(1000) == 1))
-			{
-				return true;
-			}
-			return false;
+			return (d > 0) && (Rnd.get(1000) == 1);
 		}
 		
-		if ((target.calcStat(Stats.DEBUFF_IMMUNITY, 0, null, skill) > 0) && skill.is_Debuff())
+		if ((target.calcStat(Stats.DEBUFF_IMMUNITY, 0, null, skill) > 0) && skill.isDebuff())
 		{
 			return false;
 		}
@@ -2412,7 +2386,7 @@ public class Formulas
 			return false;
 		}
 		
-		if ((target.calcStat(Stats.DEBUFF_IMMUNITY, 0, null, skill) > 0) && skill.is_Debuff())
+		if ((target.calcStat(Stats.DEBUFF_IMMUNITY, 0, null, skill) > 0) && skill.isDebuff())
 		{
 			return false;
 		}
@@ -2511,7 +2485,7 @@ public class Formulas
 			return false;
 		}
 		
-		if ((target.calcStat(Stats.DEBUFF_IMMUNITY, 0, null, skill) > 0) && skill.is_Debuff())
+		if ((target.calcStat(Stats.DEBUFF_IMMUNITY, 0, null, skill) > 0) && skill.isDebuff())
 		{
 			return false;
 		}
@@ -2622,7 +2596,7 @@ public class Formulas
 			return false;
 		}
 		
-		if ((target.calcStat(Stats.DEBUFF_IMMUNITY, 0, null, skill) > 0) && skill.is_Debuff())
+		if ((target.calcStat(Stats.DEBUFF_IMMUNITY, 0, null, skill) > 0) && skill.isDebuff())
 		{
 			return false;
 		}
@@ -2964,11 +2938,7 @@ public class Formulas
 				break;
 			}
 		}
-		if (Rnd.get(120) > chance)
-		{
-			return false;
-		}
-		return true;
+		return Rnd.get(120) <= chance; // 120?
 	}
 	
 	public double calcManaDam(Creature attacker, Creature target, Skill skill, boolean ss, boolean bss)
@@ -3094,8 +3064,7 @@ public class Formulas
 		{
 			return 0;
 		}
-		final double damage = creature.calcStat(Stats.FALL, (fallHeight * creature.getMaxHp()) / 1000, null, null);
-		return damage;
+		return creature.calcStat(Stats.FALL, (fallHeight * creature.getMaxHp()) / 1000, null, null);
 	}
 	
 	/**
@@ -3106,10 +3075,10 @@ public class Formulas
 	 * @param shld
 	 * @param crit if the ATTACK have critical success
 	 * @param ss if weapon item was charged by soulshot
-	 * @param _numCharges
+	 * @param numCharges
 	 * @return damage points
 	 */
-	public static final double calcChargeSkillsDam(Creature attacker, Creature target, Skill skill, boolean shld, boolean crit, boolean ss, int _numCharges)
+	public static final double calcChargeSkillsDam(Creature attacker, Creature target, Skill skill, boolean shld, boolean crit, boolean ss, int numCharges)
 	{
 		if (attacker instanceof PlayerInstance)
 		{
@@ -3157,9 +3126,9 @@ public class Formulas
 			}
 			
 			// Charges multiplier, just when skill is used
-			if (_numCharges >= 1)
+			if (numCharges >= 1)
 			{
-				final double chargesModifier = 0.7 + (0.3 * _numCharges);
+				final double chargesModifier = 0.7 + (0.3 * numCharges);
 				damage *= chargesModifier;
 			}
 		}
@@ -3321,13 +3290,10 @@ public class Formulas
 			}
 		}
 		
-		if (shld)
+		if (shld && ((100 - Config.ALT_PERFECT_SHLD_BLOCK) < Rnd.get(100)))
 		{
-			if ((100 - Config.ALT_PERFECT_SHLD_BLOCK) < Rnd.get(100))
-			{
-				damage = 1;
-				target.sendPacket(new SystemMessage(SystemMessageId.YOUR_EXCELLENT_SHIELD_DEFENSE_WAS_A_SUCCESS));
-			}
+			damage = 1;
+			target.sendPacket(new SystemMessage(SystemMessageId.YOUR_EXCELLENT_SHIELD_DEFENSE_WAS_A_SUCCESS));
 		}
 		
 		if ((damage > 0) && (damage < 1))

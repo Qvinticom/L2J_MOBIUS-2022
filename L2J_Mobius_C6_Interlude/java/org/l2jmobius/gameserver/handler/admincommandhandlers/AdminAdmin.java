@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminAdmin implements IAdminCommandHandler
 {
-	private static Logger LOGGER = Logger.getLogger(AdminAdmin.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AdminAdmin.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -145,7 +145,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			}
 			case admin_diet:
 			{
-				boolean no_token = false;
+				boolean noToken = false;
 				if (st.hasMoreTokens())
 				{
 					if (st.nextToken().equalsIgnoreCase("on"))
@@ -161,9 +161,9 @@ public class AdminAdmin implements IAdminCommandHandler
 				}
 				else
 				{
-					no_token = true;
+					noToken = true;
 				}
-				if (no_token)
+				if (noToken)
 				{
 					if (activeChar.getDietMode())
 					{
@@ -181,7 +181,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			}
 			case admin_set:
 			{
-				boolean no_token = false;
+				boolean noToken = false;
 				String[] cmd = st.nextToken().split("_");
 				if ((cmd != null) && (cmd.length > 1))
 				{
@@ -201,17 +201,17 @@ public class AdminAdmin implements IAdminCommandHandler
 							{
 								case "RateXp":
 								{
-									Config.RATE_XP = Float.valueOf(pValue);
+									Config.RATE_XP = Float.parseFloat(pValue);
 									break;
 								}
 								case "RateSp":
 								{
-									Config.RATE_SP = Float.valueOf(pValue);
+									Config.RATE_SP = Float.parseFloat(pValue);
 									break;
 								}
 								case "RateDropSpoil":
 								{
-									Config.RATE_DROP_SPOIL = Float.valueOf(pValue);
+									Config.RATE_DROP_SPOIL = Float.parseFloat(pValue);
 									break;
 								}
 							}
@@ -219,7 +219,7 @@ public class AdminAdmin implements IAdminCommandHandler
 						}
 						else
 						{
-							no_token = true;
+							noToken = true;
 						}
 					}
 					
@@ -237,10 +237,10 @@ public class AdminAdmin implements IAdminCommandHandler
 				}
 				else
 				{
-					no_token = true;
+					noToken = true;
 				}
 				
-				if (no_token)
+				if (noToken)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Usage: //set parameter=vaue");
 					return false;

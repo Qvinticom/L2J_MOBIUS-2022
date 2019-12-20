@@ -85,7 +85,7 @@ public class Q646_SignsOfRevolt extends Quest
 			htmltext = "32016-07.htm";
 			st.takeItems(CURSED_DOLL, -1);
 			
-			final int reward[] = REWARDS[Integer.parseInt(event)];
+			final int[] reward = REWARDS[Integer.parseInt(event)];
 			st.giveItems(reward[0], reward[1]);
 			
 			st.playSound(QuestState.SOUND_FINISH);

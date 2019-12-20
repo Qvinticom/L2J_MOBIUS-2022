@@ -16,7 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author kombat Format: cd d[d s/d/dd/ddd]
@@ -31,8 +32,8 @@ public class ConfirmDlg extends GameServerPacket
 	private static final int TYPE_NPC_NAME = 2;
 	private static final int TYPE_NUMBER = 1;
 	private static final int TYPE_TEXT = 0;
-	private final Vector<Integer> _types = new Vector<>();
-	private final Vector<Object> _values = new Vector<>();
+	private final List<Integer> _types = new ArrayList<>();
+	private final List<Object> _values = new ArrayList<>();
 	private int _time = 0;
 	private int _requesterId = 0;
 	
@@ -112,7 +113,7 @@ public class ConfirmDlg extends GameServerPacket
 	{
 		writeC(0xed);
 		writeD(_messageId);
-		if ((_types != null) && (_types.size() > 0))
+		if (!_types.isEmpty())
 		{
 			writeD(_types.size());
 			for (int i = 0; i < _types.size(); i++)

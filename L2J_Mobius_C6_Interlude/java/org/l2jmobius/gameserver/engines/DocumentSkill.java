@@ -373,12 +373,12 @@ final class DocumentSkill extends DocumentBase
 			}
 		}
 		
-		int _count = count;
+		int count2 = count;
 		for (int i = 0; i < _currentSkill.enchsets1.length; i++)
 		{
 			try
 			{
-				_currentSkill.currentSkills.add(_count + i, _currentSkill.enchsets1[i].getEnum("skillType", SkillType.class).makeSkill(_currentSkill.enchsets1[i]));
+				_currentSkill.currentSkills.add(count2 + i, _currentSkill.enchsets1[i].getEnum("skillType", SkillType.class).makeSkill(_currentSkill.enchsets1[i]));
 				count++;
 			}
 			catch (Exception e)
@@ -387,12 +387,12 @@ final class DocumentSkill extends DocumentBase
 			}
 		}
 		
-		_count = count;
+		count2 = count;
 		for (int i = 0; i < _currentSkill.enchsets2.length; i++)
 		{
 			try
 			{
-				_currentSkill.currentSkills.add(_count + i, _currentSkill.enchsets2[i].getEnum("skillType", SkillType.class).makeSkill(_currentSkill.enchsets2[i]));
+				_currentSkill.currentSkills.add(count2 + i, _currentSkill.enchsets2[i].getEnum("skillType", SkillType.class).makeSkill(_currentSkill.enchsets2[i]));
 				count++;
 			}
 			catch (Exception e)

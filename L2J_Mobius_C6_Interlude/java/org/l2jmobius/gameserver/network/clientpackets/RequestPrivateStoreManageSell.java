@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class RequestPrivateStoreManageSell extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(EnterWorld.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestPrivateStoreManageSell.class.getName());
 	
 	@Override
 	protected void readImpl()

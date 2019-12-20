@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
  */
 public class StoreTradeList
 {
-	private static Logger LOGGER = Logger.getLogger(StoreTradeList.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(StoreTradeList.class.getName());
 	
 	private final List<ItemInstance> _items;
 	private final int _listId;
@@ -118,15 +118,14 @@ public class StoreTradeList
 		}
 	}
 	
-	public void removeItem(int itemID)
+	public void removeItem(int itemId)
 	{
 		for (int i = 0; i < _items.size(); i++)
 		{
 			ItemInstance item = _items.get(i);
-			
-			if (item.getItemId() == itemID)
+			if (item.getItemId() == itemId)
 			{
-				_items.remove(i);
+				_items.remove(item);
 			}
 		}
 	}
@@ -213,13 +212,13 @@ public class StoreTradeList
 		return false;
 	}
 	
-	public ItemInstance getItem(int ObjectId)
+	public ItemInstance getItem(int objectId)
 	{
 		for (int i = 0; i < _items.size(); i++)
 		{
 			ItemInstance item = _items.get(i);
 			
-			if (item.getObjectId() == ObjectId)
+			if (item.getObjectId() == objectId)
 			{
 				return item;
 			}
@@ -227,9 +226,9 @@ public class StoreTradeList
 		return null;
 	}
 	
-	public synchronized void setConfirmedTrade(boolean x)
+	public synchronized void setConfirmedTrade(boolean confirmed)
 	{
-		_confirmed = x;
+		_confirmed = confirmed;
 	}
 	
 	public synchronized boolean hasConfirmed()

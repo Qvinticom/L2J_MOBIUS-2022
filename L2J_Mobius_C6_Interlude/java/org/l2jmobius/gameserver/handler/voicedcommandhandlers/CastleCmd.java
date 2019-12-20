@@ -65,20 +65,17 @@ public class CastleCmd implements IVoicedCommandHandler
 				door.closeMe();
 			}
 		}
-		else if (command.startsWith("ride wyvern") && target.equals("castle"))
+		else if (command.startsWith("ride wyvern") && target.equals("castle") && (activeChar.getClan().getHasCastle() > 0) && activeChar.isClanLeader())
 		{
-			if ((activeChar.getClan().getHasCastle() > 0) && activeChar.isClanLeader())
+			if (!activeChar.disarmWeapons())
 			{
-				if (!activeChar.disarmWeapons())
-				{
-					return false;
-				}
-				
-				Ride mount = new Ride(activeChar.getObjectId(), Ride.ACTION_MOUNT, 12621);
-				activeChar.sendPacket(mount);
-				activeChar.broadcastPacket(mount);
-				activeChar.setMountType(mount.getMountType());
+				return false;
 			}
+			
+			Ride mount = new Ride(activeChar.getObjectId(), Ride.ACTION_MOUNT, 12621);
+			activeChar.sendPacket(mount);
+			activeChar.broadcastPacket(mount);
+			activeChar.setMountType(mount.getMountType());
 		}
 		
 		return true;

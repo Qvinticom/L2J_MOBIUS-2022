@@ -52,7 +52,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class DimensionalRiftManager
 {
-	private static Logger LOGGER = Logger.getLogger(DimensionalRiftManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(DimensionalRiftManager.class.getName());
 	private final Map<Byte, Map<Byte, DimensionalRiftRoom>> _rooms = new HashMap<>(7);
 	private static final int DIMENSIONAL_FRAGMENT_ITEM_ID = 7079;
 	
@@ -225,13 +225,13 @@ public class DimensionalRiftManager
 	
 	public void reload()
 	{
-		for (Map<Byte, DimensionalRiftRoom> room : _rooms.values())
+		for (Map<Byte, DimensionalRiftRoom> rooms : _rooms.values())
 		{
-			for (DimensionalRiftRoom drr : room.values())
+			for (DimensionalRiftRoom room : rooms.values())
 			{
-				drr.getSpawns().clear();
+				room.getSpawns().clear();
 			}
-			room.clear();
+			rooms.clear();
 		}
 		_rooms.clear();
 		loadRooms();
@@ -244,7 +244,6 @@ public class DimensionalRiftManager
 		{
 			return _rooms.get((byte) 0).get((byte) 1).checkIfInZone(x, y, z);
 		}
-		
 		return _rooms.get((byte) 0).get((byte) 1).checkIfInZone(x, y, z) && !_rooms.get((byte) 0).get((byte) 0).checkIfInZone(x, y, z);
 	}
 	

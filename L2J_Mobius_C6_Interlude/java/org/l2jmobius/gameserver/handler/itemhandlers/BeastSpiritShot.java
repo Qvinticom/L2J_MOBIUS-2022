@@ -149,24 +149,21 @@ public class BeastSpiritShot implements IItemHandler
 			}
 		}
 		
-		if (!Config.DONT_DESTROY_SS)
+		if (!Config.DONT_DESTROY_SS && !activeOwner.destroyItemWithoutTrace("Consume", item.getObjectId(), shotConsumption, null, false))
 		{
-			if (!activeOwner.destroyItemWithoutTrace("Consume", item.getObjectId(), shotConsumption, null, false))
+			if (activeOwner.getAutoSoulShot().containsKey(itemId))
 			{
-				if (activeOwner.getAutoSoulShot().containsKey(itemId))
-				{
-					activeOwner.removeAutoSoulShot(itemId);
-					activeOwner.sendPacket(new ExAutoSoulShot(itemId, 0));
-					SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
-					sm.addString(item.getItem().getName());
-					activeOwner.sendPacket(sm);
-					
-					return;
-				}
+				activeOwner.removeAutoSoulShot(itemId);
+				activeOwner.sendPacket(new ExAutoSoulShot(itemId, 0));
+				SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
+				sm.addString(item.getItem().getName());
+				activeOwner.sendPacket(sm);
 				
-				activeOwner.sendPacket(SystemMessageId.NOT_ENOUGH_SPIRITSHOTS);
 				return;
 			}
+			
+			activeOwner.sendPacket(SystemMessageId.NOT_ENOUGH_SPIRITSHOTS);
+			return;
 		}
 		
 		// Pet uses the power of spirit.

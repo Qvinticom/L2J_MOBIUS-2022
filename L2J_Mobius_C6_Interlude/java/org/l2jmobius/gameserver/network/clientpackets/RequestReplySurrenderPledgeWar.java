@@ -27,7 +27,7 @@ public class RequestReplySurrenderPledgeWar extends GameClientPacket
 	protected void readImpl()
 	{
 		@SuppressWarnings("unused")
-		final String _reqName = readS();
+		final String reqName = readS();
 		_answer = readD();
 	}
 	
@@ -50,9 +50,6 @@ public class RequestReplySurrenderPledgeWar extends GameClientPacket
 		{
 			requestor.deathPenalty(false);
 			ClanTable.getInstance().deleteClanWars(requestor.getClanId(), player.getClanId());
-		}
-		else
-		{
 		}
 		
 		player.onTransactionRequest(null);

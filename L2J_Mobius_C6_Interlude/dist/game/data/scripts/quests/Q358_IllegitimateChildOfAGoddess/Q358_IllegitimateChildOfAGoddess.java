@@ -29,7 +29,7 @@ public class Q358_IllegitimateChildOfAGoddess extends Quest
 	private static final int SCALE = 5868;
 	
 	// Reward
-	private static final int REWARD[] =
+	private static final int[] REWARD =
 	{
 		6329,
 		6331,

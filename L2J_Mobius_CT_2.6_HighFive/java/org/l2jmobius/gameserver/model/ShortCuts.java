@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 
 public class ShortCuts implements IRestorable
 {
-	private static Logger LOGGER = Logger.getLogger(ShortCuts.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ShortCuts.class.getName());
 	private static final int MAX_SHORTCUTS_PER_BAR = 12;
 	private final PlayerInstance _owner;
 	private final Map<Integer, Shortcut> _shortCuts = new TreeMap<>();

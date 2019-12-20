@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.model.actor.templates;
 
 import java.util.ArrayList;
+import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,6 +30,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.quest.Quest.QuestEventType;
 import org.l2jmobius.gameserver.model.skills.Stats;
 
 /**
@@ -51,7 +53,7 @@ import org.l2jmobius.gameserver.model.skills.Stats;
  */
 public class NpcTemplate extends CreatureTemplate
 {
-	protected static final Logger LOGGER = Logger.getLogger(Quest.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(NpcTemplate.class.getName());
 	
 	public int npcId;
 	public int idTemplate;
@@ -121,9 +123,9 @@ public class NpcTemplate extends CreatureTemplate
 	
 	private final List<ClassId> _teachInfo = new ArrayList<>();
 	private final Map<Integer, Skill> _skills = new HashMap<>();
-	private final Map<Stats, Double> _vulnerabilities = new HashMap<>();
+	private final Map<Stats, Double> _vulnerabilities = new EnumMap<>(Stats.class);
 	// contains a list of quests for each event type (questStart, questAttack, questKill, etc)
-	private final Map<Quest.QuestEventType, Quest[]> _questEvents = new HashMap<>();
+	private final Map<QuestEventType, Quest[]> _questEvents = new EnumMap<>(QuestEventType.class);
 	
 	/**
 	 * Constructor of Creature.<BR>
@@ -269,12 +271,11 @@ public class NpcTemplate extends CreatureTemplate
 	}
 	
 	/**
-	 * Empty all possible drops of this NpcTemplate.<BR>
-	 * <BR>
+	 * Empty all possible drops of this NpcTemplate.
 	 */
 	public synchronized void clearAllDropData()
 	{
-		while (_categories.size() > 0)
+		while (!_categories.isEmpty())
 		{
 			_categories.get(0).clearAllDrops();
 			_categories.remove(0);
@@ -283,8 +284,7 @@ public class NpcTemplate extends CreatureTemplate
 	}
 	
 	/**
-	 * Return the list of all Minions that must be spawn with the NpcInstance using this NpcTemplate.<BR>
-	 * <BR>
+	 * Return the list of all Minions that must be spawn with the NpcInstance using this NpcTemplate.
 	 * @return
 	 */
 	public List<MinionData> getMinionData()
@@ -297,32 +297,32 @@ public class NpcTemplate extends CreatureTemplate
 		return _skills;
 	}
 	
-	public void addQuestEvent(Quest.QuestEventType EventType, Quest q)
+	public void addQuestEvent(Quest.QuestEventType eventType, Quest q)
 	{
-		if (_questEvents.get(EventType) == null)
+		if (_questEvents.get(eventType) == null)
 		{
-			_questEvents.put(EventType, new Quest[]
+			_questEvents.put(eventType, new Quest[]
 			{
 				q
 			});
 		}
 		else
 		{
-			final Quest[] _quests = _questEvents.get(EventType);
-			final int len = _quests.length;
+			final Quest[] quests = _questEvents.get(eventType);
+			final int len = quests.length;
 			
 			// If only one registration per npc is allowed for this event type then only register this NPC if not already registered for the specified event.
 			// If a quest allows multiple registrations, then register regardless of count.
 			// In all cases, check if this new registration is replacing an older copy of the SAME quest.
-			if (!EventType.isMultipleRegistrationAllowed())
+			if (!eventType.isMultipleRegistrationAllowed())
 			{
-				if (_quests[0].getName().equals(q.getName()))
+				if (quests[0].getName().equals(q.getName()))
 				{
-					_quests[0] = q;
+					quests[0] = q;
 				}
 				else
 				{
-					LOGGER.warning("Quest event not allowed in multiple quests.  Skipped addition of Event Type \"" + EventType + "\" for NPC \"" + name + "\" and quest \"" + q.getName() + "\".");
+					LOGGER.warning("Quest event not allowed in multiple quests.  Skipped addition of Event Type \"" + eventType + "\" for NPC \"" + name + "\" and quest \"" + q.getName() + "\".");
 				}
 			}
 			else
@@ -333,27 +333,26 @@ public class NpcTemplate extends CreatureTemplate
 				// If so, just save the updated reference and do NOT use the new list. Else, add the new quest to the end of the new list.
 				for (int i = 0; i < len; i++)
 				{
-					if (_quests[i].getName().equals(q.getName()))
+					if (quests[i].getName().equals(q.getName()))
 					{
-						_quests[i] = q;
+						quests[i] = q;
 						return;
 					}
-					tmp[i] = _quests[i];
+					tmp[i] = quests[i];
 				}
 				tmp[len] = q;
-				_questEvents.put(EventType, tmp);
+				_questEvents.put(eventType, tmp);
 			}
 		}
 	}
 	
-	public Quest[] getEventQuests(Quest.QuestEventType EventType)
+	public Quest[] getEventQuests(Quest.QuestEventType eventType)
 	{
-		if (_questEvents.get(EventType) == null)
+		if (_questEvents.get(eventType) == null)
 		{
 			return new Quest[0];
 		}
-		
-		return _questEvents.get(EventType);
+		return _questEvents.get(eventType);
 	}
 	
 	public StatsSet getStatsSet()

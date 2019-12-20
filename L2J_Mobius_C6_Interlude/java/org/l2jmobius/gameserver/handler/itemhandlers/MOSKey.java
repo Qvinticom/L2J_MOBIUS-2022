@@ -37,7 +37,7 @@ public class MOSKey implements IItemHandler
 		8056
 	};
 	public static final int INTERACTION_DISTANCE = 150;
-	public static long LAST_OPEN = 0;
+	public static long _lastOpen = 0;
 	
 	@Override
 	public void useItem(Playable playable, ItemInstance item)
@@ -74,7 +74,7 @@ public class MOSKey implements IItemHandler
 			return;
 		}
 		
-		if ((LAST_OPEN + 1800000) > System.currentTimeMillis()) // 30 * 60 * 1000 = 1800000
+		if ((_lastOpen + 1800000) > System.currentTimeMillis()) // 30 * 60 * 1000 = 1800000
 		{
 			player.sendMessage("You can`t use the key right now.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -86,17 +86,14 @@ public class MOSKey implements IItemHandler
 			return;
 		}
 		
-		if (itemId == 8056)
+		if ((itemId == 8056) && ((door.getDoorId() == 23150003) || (door.getDoorId() == 23150004)))
 		{
-			if ((door.getDoorId() == 23150003) || (door.getDoorId() == 23150004))
-			{
-				DoorTable.getInstance().getDoor(23150003).openMe();
-				DoorTable.getInstance().getDoor(23150004).openMe();
-				DoorTable.getInstance().getDoor(23150003).onOpen();
-				DoorTable.getInstance().getDoor(23150004).onOpen();
-				player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
-				LAST_OPEN = System.currentTimeMillis();
-			}
+			DoorTable.getInstance().getDoor(23150003).openMe();
+			DoorTable.getInstance().getDoor(23150004).openMe();
+			DoorTable.getInstance().getDoor(23150003).onOpen();
+			DoorTable.getInstance().getDoor(23150004).onOpen();
+			player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
+			_lastOpen = System.currentTimeMillis();
 		}
 	}
 	

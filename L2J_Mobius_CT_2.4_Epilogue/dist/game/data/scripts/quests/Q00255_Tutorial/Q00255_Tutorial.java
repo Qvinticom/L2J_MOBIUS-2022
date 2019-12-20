@@ -236,7 +236,7 @@ public class Q00255_Tutorial extends Quest
 				String voice = "";
 				for (String[] element : QTEXMTWO)
 				{
-					if (classId == Integer.valueOf(element[0]))
+					if (classId == Integer.parseInt(element[0]))
 					{
 						voice = element[1];
 						html = element[2];
@@ -264,7 +264,7 @@ public class Q00255_Tutorial extends Quest
 			cancelQuestTimers("TE");
 			if (!event.equalsIgnoreCase("TE"))
 			{
-				switch (Integer.valueOf(event.substring(2)))
+				switch (Integer.parseInt(event.substring(2)))
 				{
 					case 0:
 					{
@@ -391,12 +391,12 @@ public class Q00255_Tutorial extends Quest
 				int z = 0;
 				for (String[] element : CEEa)
 				{
-					if (classId == Integer.valueOf(element[0]))
+					if (classId == Integer.parseInt(element[0]))
 					{
 						html = element[1];
-						x = Integer.valueOf(element[2]);
-						y = Integer.valueOf(element[3]);
-						z = Integer.valueOf(element[4]);
+						x = Integer.parseInt(element[2]);
+						y = Integer.parseInt(element[3]);
+						z = Integer.parseInt(element[4]);
 					}
 				}
 				if (x != 0)
@@ -567,7 +567,7 @@ public class Q00255_Tutorial extends Quest
 			int x = 0;
 			int y = 0;
 			int z = 0;
-			switch (Integer.valueOf(event.substring(2)))
+			switch (Integer.parseInt(event.substring(2)))
 			{
 				case 1:
 				{
@@ -575,12 +575,12 @@ public class Q00255_Tutorial extends Quest
 					qs.set("Ex", "-5");
 					for (String[] element : CEEa)
 					{
-						if (classId == Integer.valueOf(element[0]))
+						if (classId == Integer.parseInt(element[0]))
 						{
 							html = element[1];
-							x = Integer.valueOf(element[2]);
-							y = Integer.valueOf(element[3]);
-							z = Integer.valueOf(element[4]);
+							x = Integer.parseInt(element[2]);
+							y = Integer.parseInt(element[3]);
+							z = Integer.parseInt(element[4]);
 						}
 					}
 					addRadar(player, x, y, z);
@@ -596,12 +596,12 @@ public class Q00255_Tutorial extends Quest
 				{
 					for (String[] element : CEEa)
 					{
-						if (classId == Integer.valueOf(element[0]))
+						if (classId == Integer.parseInt(element[0]))
 						{
 							// html = element[1];
-							x = Integer.valueOf(element[2]);
-							y = Integer.valueOf(element[3]);
-							z = Integer.valueOf(element[4]);
+							x = Integer.parseInt(element[2]);
+							y = Integer.parseInt(element[3]);
+							z = Integer.parseInt(element[4]);
 						}
 					}
 					addRadar(player, x, y, z);
@@ -623,12 +623,12 @@ public class Q00255_Tutorial extends Quest
 				{
 					for (String[] element : QMCa)
 					{
-						if (classId == Integer.valueOf(element[0]))
+						if (classId == Integer.parseInt(element[0]))
 						{
 							html = element[1];
-							x = Integer.valueOf(element[2]);
-							y = Integer.valueOf(element[3]);
-							z = Integer.valueOf(element[4]);
+							x = Integer.parseInt(element[2]);
+							y = Integer.parseInt(element[3]);
+							z = Integer.parseInt(element[4]);
 						}
 					}
 					if (x != 0)
@@ -646,12 +646,12 @@ public class Q00255_Tutorial extends Quest
 				{
 					for (String[] element : QMCa)
 					{
-						if (classId == Integer.valueOf(element[0]))
+						if (classId == Integer.parseInt(element[0]))
 						{
 							html = element[1];
-							x = Integer.valueOf(element[2]);
-							y = Integer.valueOf(element[3]);
-							z = Integer.valueOf(element[4]);
+							x = Integer.parseInt(element[2]);
+							y = Integer.parseInt(element[3]);
+							z = Integer.parseInt(element[4]);
 						}
 					}
 					if (x != 0)

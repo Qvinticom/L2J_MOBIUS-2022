@@ -236,7 +236,6 @@ public class Frintezza extends Quest
 	
 	private static long _lastAction = 0;
 	private static int _angle = 0;
-	private static int _heading = 0;
 	private static int _locCycle = 0;
 	private static int _bomber = 0;
 	private static int _checkDie = 0;
@@ -844,14 +843,14 @@ public class Frintezza extends Quest
 		}
 		else if (event.equals("stop_npc"))
 		{
-			_heading = npc.getHeading();
-			if (_heading < 32768)
+			final int heading = npc.getHeading();
+			if (heading < 32768)
 			{
-				_angle = Math.abs(180 - (int) (_heading / 182.044444444));
+				_angle = Math.abs(180 - (int) (heading / 182.044444444));
 			}
 			else
 			{
-				_angle = Math.abs(540 - (int) (_heading / 182.044444444));
+				_angle = Math.abs(540 - (int) (heading / 182.044444444));
 			}
 		}
 		else if (event.equals("start_pc"))
@@ -1043,45 +1042,45 @@ public class Frintezza extends Quest
 					_onSong = 2;
 				}
 				
-				String SongName = "";
+				String songName = "";
 				
 				// Name of the songs are custom, named with client side description.
 				switch (_onSong)
 				{
 					case 1:
 					{
-						SongName = "Frintezza's Healing Rhapsody";
+						songName = "Frintezza's Healing Rhapsody";
 						break;
 					}
 					case 2:
 					{
-						SongName = "Frintezza's Rampaging Opus";
+						songName = "Frintezza's Rampaging Opus";
 						break;
 					}
 					case 3:
 					{
-						SongName = "Frintezza's Power Concerto";
+						songName = "Frintezza's Power Concerto";
 						break;
 					}
 					case 4:
 					{
-						SongName = "Frintezza's Plagued Concerto";
+						songName = "Frintezza's Plagued Concerto";
 						break;
 					}
 					case 5:
 					{
-						SongName = "Frintezza's Psycho Symphony";
+						songName = "Frintezza's Psycho Symphony";
 						break;
 					}
 					default:
 					{
-						SongName = "Frintezza's Song";
+						songName = "Frintezza's Song";
 						break;
 					}
 				}
 				
 				// Like L2OFF the skill name is printed on screen
-				_zone.broadcastPacket(new ExShowScreenMessage(SongName, 6000));
+				_zone.broadcastPacket(new ExShowScreenMessage(songName, 6000));
 				
 				if ((_onSong == 1) && (_thirdMorph == 1) && (_strongScarlet.getCurrentHp() < (_strongScarlet.getMaxHp() * 0.6)) && (Rnd.get(100) < 80))
 				{
@@ -1122,45 +1121,45 @@ public class Frintezza extends Quest
 				return null;
 			}
 			
-			String SongName = "";
+			String songName = "";
 			
 			// Name of the songs are custom, named with client side description.
 			switch (_onSong)
 			{
 				case 1:
 				{
-					SongName = "Frintezza's Concert Hall Melody";
+					songName = "Frintezza's Concert Hall Melody";
 					break;
 				}
 				case 2:
 				{
-					SongName = "Frintezza's Rampaging Opus en masse";
+					songName = "Frintezza's Rampaging Opus en masse";
 					break;
 				}
 				case 3:
 				{
-					SongName = "Frintezza Power Encore";
+					songName = "Frintezza Power Encore";
 					break;
 				}
 				case 4:
 				{
-					SongName = "Mournful Chorale Prelude";
+					songName = "Mournful Chorale Prelude";
 					break;
 				}
 				case 5:
 				{
-					SongName = "Hypnotic Mazurka ";
+					songName = "Hypnotic Mazurka ";
 					break;
 				}
 				default:
 				{
-					SongName = "Frintezza's Song";
+					songName = "Frintezza's Song";
 					break;
 				}
 			}
 			
 			// Like L2OFF the skill name is printed on screen
-			_zone.broadcastPacket(new ExShowScreenMessage(SongName, 6000));
+			_zone.broadcastPacket(new ExShowScreenMessage(songName, 6000));
 			
 			if ((_onSong == 1) || (_onSong == 2) || (_onSong == 3))
 			{
@@ -1339,19 +1338,16 @@ public class Frintezza extends Quest
 			{
 				for (Creature creature : _zone.getCharactersInside().values())
 				{
-					if (creature instanceof PlayerInstance)
+					if ((creature instanceof PlayerInstance) && (creature.getFirstEffect(5016) != null))
 					{
-						if (creature.getFirstEffect(5016) != null)
-						{
-							creature.abortAttack();
-							creature.abortCast();
-							creature.disableAllSkills();
-							creature.stopMove(null);
-							creature.setIsImobilised(true);
-							creature.setIsParalyzed(true);
-							creature.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-							creature.startAbnormalEffect(Creature.ABNORMAL_EFFECT_FLOATING_ROOT);
-						}
+						creature.abortAttack();
+						creature.abortCast();
+						creature.disableAllSkills();
+						creature.stopMove(null);
+						creature.setIsImobilised(true);
+						creature.setIsParalyzed(true);
+						creature.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+						creature.startAbnormalEffect(Creature.ABNORMAL_EFFECT_FLOATING_ROOT);
 					}
 				}
 				startQuestTimer("stop_effect", 25000, npc, null);
@@ -1469,23 +1465,23 @@ public class Frintezza extends Quest
 		}
 		else if (status == DORMANT)
 		{
-			boolean party_check_success = true;
+			boolean partyCheckSuccess = true;
 			
 			if (!Config.BYPASS_FRINTEZZA_PARTIES_CHECK)
 			{
 				if ((!player.isInParty() || !player.getParty().isLeader(player)) || (player.getParty().getCommandChannel() == null) || (player.getParty().getCommandChannel().getChannelLeader() != player))
 				{
 					htmltext = "<html><body>No reaction. Contact must be initiated by the Command Channel Leader.</body></html>";
-					party_check_success = false;
+					partyCheckSuccess = false;
 				}
 				else if ((player.getParty().getCommandChannel().getParties().size() < Config.FRINTEZZA_MIN_PARTIES) || (player.getParty().getCommandChannel().getParties().size() > Config.FRINTEZZA_MAX_PARTIES))
 				{
 					htmltext = "<html><body>Your command channel needs to have at least " + Config.FRINTEZZA_MIN_PARTIES + " parties and a maximum of " + Config.FRINTEZZA_MAX_PARTIES + ".</body></html>";
-					party_check_success = false;
+					partyCheckSuccess = false;
 				}
 			}
 			
-			if (party_check_success)
+			if (partyCheckSuccess)
 			{
 				if (player.getInventory().getItemByItemId(8073) == null)
 				{
@@ -1507,12 +1503,12 @@ public class Frintezza extends Quest
 					{
 						if (player.getParty() != null)
 						{
-							final CommandChannel CC = player.getParty().getCommandChannel();
+							final CommandChannel cc = player.getParty().getCommandChannel();
 							
-							if (CC != null)
-							{ // teleport all parties into CC
-								
-								for (Party party : CC.getParties())
+							if (cc != null)
+							{
+								// teleport all parties into CC
+								for (Party party : cc.getParties())
 								{
 									if (party == null)
 									{
@@ -1602,9 +1598,9 @@ public class Frintezza extends Quest
 					}
 					else
 					{
-						final CommandChannel CC = player.getParty().getCommandChannel();
+						final CommandChannel cc = player.getParty().getCommandChannel();
 						
-						for (Party party : CC.getParties())
+						for (Party party : cc.getParties())
 						{
 							if (party == null)
 							{
@@ -1696,22 +1692,16 @@ public class Frintezza extends Quest
 			_onCheck = 1;
 			startQuestTimer("check_hp", 0, npc, null);
 		}
-		else if (((npc.getNpcId() == 29050) || (npc.getNpcId() == 29051)) && (_bomber == 0))
+		else if (((npc.getNpcId() == 29050) || (npc.getNpcId() == 29051)) && (_bomber == 0) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.1)) && (Rnd.get(100) < 30))
 		{
-			if (npc.getCurrentHp() < (npc.getMaxHp() * 0.1))
+			_bomber = 1;
+			startQuestTimer("bomber", 3000, npc, null);
+			
+			final Skill skill = SkillTable.getInstance().getInfo(5011, 1);
+			if (skill != null)
 			{
-				if (Rnd.get(100) < 30)
-				{
-					_bomber = 1;
-					startQuestTimer("bomber", 3000, npc, null);
-					
-					final Skill skill = SkillTable.getInstance().getInfo(5011, 1);
-					if (skill != null)
-					{
-						// npc.setIsCastingNow(true);
-						npc.doCast(skill);
-					}
-				}
+				// npc.setIsCastingNow(true);
+				npc.doCast(skill);
 			}
 		}
 		

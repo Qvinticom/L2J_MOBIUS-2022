@@ -95,7 +95,7 @@ public class OlympiadManager
 	
 	private boolean isRegistered(PlayerInstance noble, PlayerInstance player, boolean showMessage)
 	{
-		final Integer objId = Integer.valueOf(noble.getObjectId());
+		final Integer objId = noble.getObjectId();
 		if (_nonClassBasedRegisters.contains(objId))
 		{
 			if (showMessage)
@@ -269,7 +269,7 @@ public class OlympiadManager
 			return false;
 		}
 		
-		final Integer objId = Integer.valueOf(noble.getObjectId());
+		final Integer objId = noble.getObjectId();
 		if (_nonClassBasedRegisters.remove(objId))
 		{
 			if (Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0)
@@ -304,7 +304,7 @@ public class OlympiadManager
 			task.getGame().handleDisconnect(player);
 		}
 		
-		final Integer objId = Integer.valueOf(player.getObjectId());
+		final Integer objId = player.getObjectId();
 		if (_nonClassBasedRegisters.remove(objId))
 		{
 			return;

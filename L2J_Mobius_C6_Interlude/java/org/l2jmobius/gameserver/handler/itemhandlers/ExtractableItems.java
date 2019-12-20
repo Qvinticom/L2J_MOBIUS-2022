@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class ExtractableItems implements IItemHandler
 {
-	private static Logger LOGGER = Logger.getLogger(ItemTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ExtractableItems.class.getName());
 	
 	public void doExtract(Playable playable, ItemInstance item, int count)
 	{

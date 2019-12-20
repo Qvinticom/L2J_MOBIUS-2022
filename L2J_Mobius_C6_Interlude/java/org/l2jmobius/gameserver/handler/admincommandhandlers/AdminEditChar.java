@@ -401,7 +401,7 @@ public class AdminEditChar implements IAdminCommandHandler
 						}
 						else
 						{
-							val = val + " " + st.nextToken();
+							val += " " + st.nextToken();
 						}
 					}
 				}
@@ -474,7 +474,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					AdminHelpPage.showSubMenuPage(activeChar, "charclasses.htm");
+					AdminHelpPage.showHelpPage(activeChar, "charclasses.htm");
 					return false;
 				}
 				final WorldObject target = activeChar.getTarget();
@@ -939,15 +939,13 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	private void listCharacters(PlayerInstance activeChar, int page)
 	{
-		final Collection<PlayerInstance> allPlayers_with_offlines = World.getInstance().getAllPlayers();
+		List<PlayerInstance> onlinePlayersList = new ArrayList<>();
 		
-		List<PlayerInstance> online_players_list = new ArrayList<>();
-		
-		for (PlayerInstance actual_player : allPlayers_with_offlines)
+		for (PlayerInstance actual_player : World.getInstance().getAllPlayers())
 		{
 			if ((actual_player != null) && (actual_player.isOnline() == 1) && !actual_player.isInOfflineMode())
 			{
-				online_players_list.add(actual_player);
+				onlinePlayersList.add(actual_player);
 			}
 			else if (actual_player == null)
 			{
@@ -955,35 +953,35 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 		}
 		
-		PlayerInstance[] players = online_players_list.toArray(new PlayerInstance[online_players_list.size()]);
+		PlayerInstance[] players = onlinePlayersList.toArray(new PlayerInstance[onlinePlayersList.size()]);
 		
 		final int MaxCharactersPerPage = 20;
-		int MaxPages = players.length / MaxCharactersPerPage;
+		int maxPages = players.length / MaxCharactersPerPage;
 		
-		if (players.length > (MaxCharactersPerPage * MaxPages))
+		if (players.length > (MaxCharactersPerPage * maxPages))
 		{
-			MaxPages++;
+			maxPages++;
 		}
 		
 		// Check if number of users changed
-		if (page > MaxPages)
+		if (page > maxPages)
 		{
-			page = MaxPages;
+			page = maxPages;
 		}
 		
 		final int CharactersStart = MaxCharactersPerPage * page;
-		int CharactersEnd = players.length;
+		int charactersEnd = players.length;
 		
-		if ((CharactersEnd - CharactersStart) > MaxCharactersPerPage)
+		if ((charactersEnd - CharactersStart) > MaxCharactersPerPage)
 		{
-			CharactersEnd = CharactersStart + MaxCharactersPerPage;
+			charactersEnd = CharactersStart + MaxCharactersPerPage;
 		}
 		
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/charlist.htm");
 		StringBuilder replyMSG = new StringBuilder();
 		
-		for (int x = 0; x < MaxPages; x++)
+		for (int x = 0; x < maxPages; x++)
 		{
 			final int pagenr = x + 1;
 			replyMSG.append("<center><a action=\"bypass -h admin_show_characters " + x + "\">Page " + pagenr + "</a></center>");
@@ -992,7 +990,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%pages%", replyMSG.toString());
 		replyMSG = new StringBuilder();
 		
-		for (int i = CharactersStart; i < CharactersEnd; i++)
+		for (int i = CharactersStart; i < charactersEnd; i++)
 		{
 			replyMSG.append("<tr><td width=80><a action=\"bypass -h admin_character_info " + players[i].getName() + "\">" + players[i].getName() + "</a></td><td width=110>" + players[i].getTemplate().className + "</td><td width=40>" + players[i].getLevel() + "</td></tr>");
 		}
@@ -1198,9 +1196,9 @@ public class AdminEditChar implements IAdminCommandHandler
 		gatherCharacterInfo(activeChar, player, "charedit.htm");
 	}
 	
-	private void findCharacter(PlayerInstance activeChar, String CharacterToFind)
+	private void findCharacter(PlayerInstance activeChar, String characterToFind)
 	{
-		int CharactersFound = 0;
+		int charactersFound = 0;
 		
 		String name;
 		Collection<PlayerInstance> allPlayers = World.getInstance().getAllPlayers();
@@ -1214,13 +1212,13 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			name = player.getName();
 			
-			if (name.toLowerCase().contains(CharacterToFind.toLowerCase()))
+			if (name.toLowerCase().contains(characterToFind.toLowerCase()))
 			{
-				CharactersFound = CharactersFound + 1;
+				charactersFound = charactersFound + 1;
 				replyMSG.append("<tr><td width=80><a action=\"bypass -h admin_character_list " + name + "\">" + name + "</a></td><td width=110>" + player.getTemplate().className + "</td><td width=40>" + player.getLevel() + "</td></tr>");
 			}
 			
-			if (CharactersFound > 20)
+			if (charactersFound > 20)
 			{
 				break;
 			}
@@ -1229,16 +1227,16 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%results%", replyMSG.toString());
 		replyMSG = new StringBuilder();
 		
-		if (CharactersFound == 0)
+		if (charactersFound == 0)
 		{
 			replyMSG.append("s. Please try again.");
 		}
-		else if (CharactersFound > 20)
+		else if (charactersFound > 20)
 		{
 			adminReply.replace("%number%", " more than 20");
 			replyMSG.append("s.<br>Please refine your search to see all of the results.");
 		}
-		else if (CharactersFound == 1)
+		else if (charactersFound == 1)
 		{
 			replyMSG.append('.');
 		}
@@ -1247,12 +1245,12 @@ public class AdminEditChar implements IAdminCommandHandler
 			replyMSG.append("s.");
 		}
 		
-		adminReply.replace("%number%", String.valueOf(CharactersFound));
+		adminReply.replace("%number%", String.valueOf(charactersFound));
 		adminReply.replace("%end%", replyMSG.toString());
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void findMultibox(PlayerInstance activeChar, int multibox) throws IllegalArgumentException
+	private void findMultibox(PlayerInstance activeChar, int multibox)
 	{
 		final Collection<PlayerInstance> allPlayers = World.getInstance().getAllPlayers();
 		final PlayerInstance[] players = allPlayers.toArray(new PlayerInstance[allPlayers.size()]);
@@ -1310,12 +1308,11 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	/**
 	 * @param activeChar
-	 * @param IpAdress
-	 * @throws IllegalArgumentException
+	 * @param ipAdress
 	 */
-	private void findCharactersPerIp(PlayerInstance activeChar, String IpAdress) throws IllegalArgumentException
+	private void findCharactersPerIp(PlayerInstance activeChar, String ipAdress)
 	{
-		if (!IpAdress.matches("^(?:(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))\\.){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))$"))
+		if (!ipAdress.matches("^(?:(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))\\.){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))$"))
 		{
 			throw new IllegalArgumentException("Malformed IPv4 number");
 		}
@@ -1323,7 +1320,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		Collection<PlayerInstance> allPlayers = World.getInstance().getAllPlayers();
 		PlayerInstance[] players = allPlayers.toArray(new PlayerInstance[allPlayers.size()]);
 		
-		int CharactersFound = 0;
+		int charactersFound = 0;
 		
 		String name;
 		String ip = "0.0.0.0";
@@ -1340,14 +1337,14 @@ public class AdminEditChar implements IAdminCommandHandler
 			
 			ip = player.getClient().getConnection().getInetAddress().getHostAddress();
 			
-			if (ip.equals(IpAdress))
+			if (ip.equals(ipAdress))
 			{
 				name = player.getName();
-				CharactersFound = CharactersFound + 1;
+				charactersFound = charactersFound + 1;
 				replyMSG.append("<tr><td width=80><a action=\"bypass -h admin_character_list " + name + "\">" + name + "</a></td><td width=110>" + player.getTemplate().className + "</td><td width=40>" + player.getLevel() + "</td></tr>");
 			}
 			
-			if (CharactersFound > 20)
+			if (charactersFound > 20)
 			{
 				break;
 			}
@@ -1356,16 +1353,16 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%results%", replyMSG.toString());
 		replyMSG = new StringBuilder();
 		
-		if (CharactersFound == 0)
+		if (charactersFound == 0)
 		{
 			replyMSG.append("s. Maybe they got d/c? :)");
 		}
-		else if (CharactersFound > 20)
+		else if (charactersFound > 20)
 		{
-			adminReply.replace("%number%", " more than " + CharactersFound);
+			adminReply.replace("%number%", " more than " + charactersFound);
 			replyMSG.append("s.<br>In order to avoid you a client crash I won't <br1>display results beyond the 20th character.");
 		}
-		else if (CharactersFound == 1)
+		else if (charactersFound == 1)
 		{
 			replyMSG.append('.');
 		}
@@ -1375,7 +1372,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		
 		adminReply.replace("%ip%", ip);
-		adminReply.replace("%number%", String.valueOf(CharactersFound));
+		adminReply.replace("%number%", String.valueOf(charactersFound));
 		adminReply.replace("%end%", replyMSG.toString());
 		activeChar.sendPacket(adminReply);
 	}
@@ -1383,9 +1380,8 @@ public class AdminEditChar implements IAdminCommandHandler
 	/**
 	 * @param activeChar
 	 * @param characterName
-	 * @throws IllegalArgumentException
 	 */
-	private void findCharactersPerAccount(PlayerInstance activeChar, String characterName) throws IllegalArgumentException
+	private void findCharactersPerAccount(PlayerInstance activeChar, String characterName)
 	{
 		if (characterName.matches(Config.CNAME_TEMPLATE))
 		{

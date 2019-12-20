@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.holders.TeleportListHolder;
  */
 public class TeleportListData implements IXmlReader
 {
-	private static Logger LOGGER = Logger.getLogger(TeleportListData.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(TeleportListData.class.getName());
 	private final Map<Integer, TeleportListHolder> _teleports = new HashMap<>();
 	private int _teleportsCount = 0;
 	

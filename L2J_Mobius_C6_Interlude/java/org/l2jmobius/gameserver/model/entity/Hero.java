@@ -24,6 +24,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -212,12 +213,9 @@ public class Hero
 		{
 			_heroes.remove(objId);
 		}
-		if (isComplete)
+		if (isComplete && _completeHeroes.containsKey(objId))
 		{
-			if (_completeHeroes.containsKey(objId))
-			{
-				_completeHeroes.remove(objId);
-			}
+			_completeHeroes.remove(objId);
 		}
 	}
 	
@@ -302,7 +300,7 @@ public class Hero
 				}
 			}
 		}
-		if (newHeroes.size() == 0)
+		if (newHeroes.isEmpty())
 		{
 			_heroes.clear();
 			return;
@@ -406,9 +404,10 @@ public class Hero
 			}
 			else
 			{
-				for (Integer heroId : _heroes.keySet())
+				for (Entry<Integer, StatsSet> entry : _heroes.entrySet())
 				{
-					final StatsSet hero = _heroes.get(heroId);
+					final Integer heroId = entry.getKey();
+					final StatsSet hero = entry.getValue();
 					if ((_completeHeroes == null) || !_completeHeroes.containsKey(heroId))
 					{
 						statement = con.prepareStatement(INSERT_HERO);
@@ -446,7 +445,7 @@ public class Hero
 						}
 						rset2.close();
 						statement2.close();
-						_heroes.remove(heroId);
+						// _heroes.remove(heroId);
 						_heroes.put(heroId, hero);
 						_completeHeroes.put(heroId, hero);
 					}
@@ -483,7 +482,7 @@ public class Hero
 		}
 		catch (SQLException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	

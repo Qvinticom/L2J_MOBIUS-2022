@@ -57,8 +57,8 @@ public class ExListPartyMatchingWaitingRoom extends GameServerPacket
 		if (_mode == 0)
 		{
 			// Retrieve the activeChar PartyMatchRoom
-			final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_player.getPartyRoom());
-			if ((_room != null) && (_room.getOwner() != null) && !_room.getOwner().equals(_player))
+			final PartyMatchRoom room = PartyMatchRoomList.getInstance().getRoom(_player.getPartyRoom());
+			if ((room != null) && (room.getOwner() != null) && !room.getOwner().equals(_player))
 			{
 				writeD(0);
 				writeD(0);
@@ -88,17 +88,17 @@ public class ExListPartyMatchingWaitingRoom extends GameServerPacket
 			_members.add(cha);
 		}
 		
-		int _count = 0;
-		final int _size = _members.size();
+		int count = 0;
+		final int size = _members.size();
 		
 		writeD(1);
-		writeD(_size);
-		while (_size > _count)
+		writeD(size);
+		while (size > count)
 		{
-			writeS(_members.get(_count).getName());
-			writeD(_members.get(_count).getActiveClass());
-			writeD(_members.get(_count).getLevel());
-			_count++;
+			writeS(_members.get(count).getName());
+			writeD(_members.get(count).getActiveClass());
+			writeD(_members.get(count).getLevel());
+			count++;
 		}
 	}
 }

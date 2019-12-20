@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.model.zone.type.ResidenceZone;
  */
 public abstract class AbstractResidence extends ListenersContainer implements INamable
 {
-	private final Logger LOGGER = Logger.getLogger(getClass().getName());
+	private static final Logger LOGGER = Logger.getLogger(AbstractResidence.class.getName());
 	private final int _residenceId;
 	private String _name;
 	

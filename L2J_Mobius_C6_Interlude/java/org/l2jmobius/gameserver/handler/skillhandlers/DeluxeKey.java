@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class DeluxeKey implements ISkillHandler
 {
-	private static Logger LOGGER = Logger.getLogger(BeastFeed.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(DeluxeKey.class.getName());
 	
 	private static final SkillType[] SKILL_IDS =
 	{

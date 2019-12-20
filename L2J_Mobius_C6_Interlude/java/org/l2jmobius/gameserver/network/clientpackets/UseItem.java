@@ -412,15 +412,12 @@ public class UseItem extends GameClientPacket
 			}
 			
 			// Elrokian Trap like L2OFF, add skills
-			if (itemId == 8763)
+			if ((itemId == 8763) && !item.isEquipped())
 			{
-				if (!item.isEquipped())
-				{
-					player.addSkill(SkillTable.getInstance().getInfo(3626, 1));
-					player.addSkill(SkillTable.getInstance().getInfo(3627, 1));
-					player.addSkill(SkillTable.getInstance().getInfo(3628, 1));
-					player.sendSkillList();
-				}
+				player.addSkill(SkillTable.getInstance().getInfo(3626, 1));
+				player.addSkill(SkillTable.getInstance().getInfo(3627, 1));
+				player.addSkill(SkillTable.getInstance().getInfo(3628, 1));
+				player.sendSkillList();
 			}
 			
 			// Equip or unEquip
@@ -678,7 +675,6 @@ public class UseItem extends GameClientPacket
 				// Send a Server->Client packet ItemList to this PlayerInstance to update left hand equipement
 				final ItemList il = new ItemList(player, false);
 				sendPacket(il);
-				return;
 			}
 			else
 			{

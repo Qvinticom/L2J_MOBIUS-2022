@@ -407,32 +407,23 @@ public class Q223_TestOfTheChampion extends Quest
 			
 			case HARPY:
 			case HARPY_MATRIARCH:
-				if ((st.getInt("cond") == 6) && st.dropItems(HARPY_EGG, 1, 30, 500000))
+				if ((st.getInt("cond") == 6) && st.dropItems(HARPY_EGG, 1, 30, 500000) && (st.getQuestItemsCount(MEDUSA_VENOM) == 30) && (st.getQuestItemsCount(WINDSUS_BILE) == 30))
 				{
-					if ((st.getQuestItemsCount(MEDUSA_VENOM) == 30) && (st.getQuestItemsCount(WINDSUS_BILE) == 30))
-					{
-						st.set("cond", "7");
-					}
+					st.set("cond", "7");
 				}
 				break;
 			
 			case MEDUSA:
-				if ((st.getInt("cond") == 6) && st.dropItems(MEDUSA_VENOM, 1, 30, 500000))
+				if ((st.getInt("cond") == 6) && st.dropItems(MEDUSA_VENOM, 1, 30, 500000) && (st.getQuestItemsCount(HARPY_EGG) == 30) && (st.getQuestItemsCount(WINDSUS_BILE) == 30))
 				{
-					if ((st.getQuestItemsCount(HARPY_EGG) == 30) && (st.getQuestItemsCount(WINDSUS_BILE) == 30))
-					{
-						st.set("cond", "7");
-					}
+					st.set("cond", "7");
 				}
 				break;
 			
 			case WINDSUS:
-				if ((st.getInt("cond") == 6) && st.dropItems(WINDSUS_BILE, 1, 30, 500000))
+				if ((st.getInt("cond") == 6) && st.dropItems(WINDSUS_BILE, 1, 30, 500000) && (st.getQuestItemsCount(HARPY_EGG) == 30) && (st.getQuestItemsCount(MEDUSA_VENOM) == 30))
 				{
-					if ((st.getQuestItemsCount(HARPY_EGG) == 30) && (st.getQuestItemsCount(MEDUSA_VENOM) == 30))
-					{
-						st.set("cond", "7");
-					}
+					st.set("cond", "7");
 				}
 				break;
 			

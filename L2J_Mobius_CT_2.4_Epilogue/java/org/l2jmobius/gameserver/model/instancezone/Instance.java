@@ -628,7 +628,7 @@ public class Instance
 									}
 									if (d.getAttributes().getNamedItem("allowRandomWalk") != null)
 									{
-										allowRandomWalk = Boolean.valueOf(d.getAttributes().getNamedItem("allowRandomWalk").getNodeValue());
+										allowRandomWalk = Boolean.parseBoolean(d.getAttributes().getNamedItem("allowRandomWalk").getNodeValue());
 									}
 									
 									final StatsSet spawnSet = new StatsSet();

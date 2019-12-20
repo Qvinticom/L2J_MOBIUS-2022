@@ -79,7 +79,7 @@ public class Baium extends Quest
 	
 	// Archangel locations.
 	// @formatter:off
-	private static final int ANGEL_LOCATION[][] =
+	private static final int[][] ANGEL_LOCATION =
 	{
 		{114239, 17168, 10080, 63544},
 		{115780, 15564, 10080, 13620},
@@ -151,20 +151,19 @@ public class Baium extends Quest
 				Announcements.getInstance().announceToAll("Raid boss " + baium.getName() + " spawned in world.");
 			}
 			GrandBossManager.getInstance().addBoss(baium);
-			final NpcInstance _baium = baium;
 			ThreadPool.schedule(() ->
 			{
 				try
 				{
-					_baium.setCurrentHpMp(hp, mp);
-					_baium.setIsInvul(true);
+					baium.setCurrentHpMp(hp, mp);
+					baium.setIsInvul(true);
 					// _baium.setIsImobilised(true);
-					_baium.broadcastPacket(new SocialAction(_baium.getObjectId(), 2));
-					startQuestTimer("baium_wakeup", 15000, _baium, null);
+					baium.broadcastPacket(new SocialAction(baium.getObjectId(), 2));
+					startQuestTimer("baium_wakeup", 15000, baium, null);
 				}
 				catch (Exception e)
 				{
-					e.printStackTrace();
+					LOGGER.warning(e.getMessage());
 				}
 			}, 100L);
 		}
@@ -314,15 +313,14 @@ public class Baium extends Quest
 				npc.deleteMe();
 				final GrandBossInstance baium = (GrandBossInstance) addSpawn(LIVE_BAIUM, npc);
 				GrandBossManager.getInstance().addBoss(baium);
-				final NpcInstance _baium = baium;
 				ThreadPool.schedule(() ->
 				{
 					try
 					{
-						_baium.setIsInvul(true);
-						_baium.setRunning();
-						_baium.broadcastPacket(new SocialAction(_baium.getObjectId(), 2));
-						startQuestTimer("baium_wakeup", 15000, _baium, player);
+						baium.setIsInvul(true);
+						baium.setRunning();
+						baium.broadcastPacket(new SocialAction(baium.getObjectId(), 2));
+						startQuestTimer("baium_wakeup", 15000, baium, player);
 						// _baium.setShowSummonAnimation(false);
 					}
 					catch (Throwable e)
@@ -392,7 +390,7 @@ public class Baium extends Quest
 		{
 			if (attacker.getMountType() == 1)
 			{
-				int sk_4258 = 0;
+				int sk4258 = 0;
 				final Effect[] effects = attacker.getAllEffects();
 				if ((effects != null) && (effects.length != 0))
 				{
@@ -400,11 +398,11 @@ public class Baium extends Quest
 					{
 						if (e.getSkill().getId() == 4258)
 						{
-							sk_4258 = 1;
+							sk4258 = 1;
 						}
 					}
 				}
-				if (sk_4258 == 0)
+				if (sk4258 == 0)
 				{
 					npc.setTarget(attacker);
 					npc.doCast(SkillTable.getInstance().getInfo(4258, 1));
@@ -462,26 +460,17 @@ public class Baium extends Quest
 		{
 			for (WorldObject obj : objs)
 			{
-				if (obj instanceof Creature)
+				if ((obj instanceof Creature) && (((((Creature) obj).getZ() < (npc.getZ() - 100)) && (((Creature) obj).getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc)))
 				{
-					if (((((Creature) obj).getZ() < (npc.getZ() - 100)) && (((Creature) obj).getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
-					{
-						continue;
-					}
+					continue;
 				}
-				if (obj instanceof PlayerInstance)
+				if ((obj instanceof PlayerInstance) && Util.checkIfInRange(9000, npc, obj, true) && !((Creature) obj).isDead())
 				{
-					if (Util.checkIfInRange(9000, npc, obj, true) && !((Creature) obj).isDead())
-					{
-						result.add((PlayerInstance) obj);
-					}
+					result.add((PlayerInstance) obj);
 				}
-				if (obj instanceof Summon)
+				if ((obj instanceof Summon) && Util.checkIfInRange(9000, npc, obj, true) && !((Creature) obj).isDead())
 				{
-					if (Util.checkIfInRange(9000, npc, obj, true) && !((Creature) obj).isDead())
-					{
-						result.add((Summon) obj);
-					}
+					result.add((Summon) obj);
 				}
 			}
 		}
@@ -508,8 +497,7 @@ public class Baium extends Quest
 			timer.cancel();
 		}
 		startQuestTimer("clean_player", 20000, npc, null);
-		final Creature target = (Creature) characters[Rnd.get(characters.length)];
-		return target;
+		return (Creature) characters[Rnd.get(characters.length)];
 	}
 	
 	public synchronized void callSkillAI(NpcInstance npc)
@@ -557,7 +545,7 @@ public class Baium extends Quest
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
+				LOGGER.warning(e.getMessage());
 			}
 		}
 		else

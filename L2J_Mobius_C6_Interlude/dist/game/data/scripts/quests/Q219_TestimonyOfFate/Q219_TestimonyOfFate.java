@@ -551,33 +551,24 @@ public class Q219_TestimonyOfFate extends Quest
 				break;
 			
 			case DEAD_SEEKER:
-				if ((st.getInt("cond") == 6) && st.dropItems(DEAD_SEEKER_DUNG, 1, 10, CHANCES.get(npcId)))
+				if ((st.getInt("cond") == 6) && st.dropItems(DEAD_SEEKER_DUNG, 1, 10, CHANCES.get(npcId)) && (st.getQuestItemsCount(TYRANT_BLOOD) >= 10) && (st.getQuestItemsCount(MEDUSA_ICHOR) >= 10) && (st.getQuestItemsCount(NIGHTSHADE_ROOT) >= 10) && (st.getQuestItemsCount(MARSH_SPIDER_FLUIDS) >= 10))
 				{
-					if ((st.getQuestItemsCount(TYRANT_BLOOD) >= 10) && (st.getQuestItemsCount(MEDUSA_ICHOR) >= 10) && (st.getQuestItemsCount(NIGHTSHADE_ROOT) >= 10) && (st.getQuestItemsCount(MARSH_SPIDER_FLUIDS) >= 10))
-					{
-						st.set("cond", "7");
-					}
+					st.set("cond", "7");
 				}
 				break;
 			
 			case TYRANT:
 			case TYRANT_KINGPIN:
-				if ((st.getInt("cond") == 6) && st.dropItems(TYRANT_BLOOD, 1, 10, CHANCES.get(npcId)))
+				if ((st.getInt("cond") == 6) && st.dropItems(TYRANT_BLOOD, 1, 10, CHANCES.get(npcId)) && (st.getQuestItemsCount(DEAD_SEEKER_DUNG) >= 10) && (st.getQuestItemsCount(MEDUSA_ICHOR) >= 10) && (st.getQuestItemsCount(NIGHTSHADE_ROOT) >= 10) && (st.getQuestItemsCount(MARSH_SPIDER_FLUIDS) >= 10))
 				{
-					if ((st.getQuestItemsCount(DEAD_SEEKER_DUNG) >= 10) && (st.getQuestItemsCount(MEDUSA_ICHOR) >= 10) && (st.getQuestItemsCount(NIGHTSHADE_ROOT) >= 10) && (st.getQuestItemsCount(MARSH_SPIDER_FLUIDS) >= 10))
-					{
-						st.set("cond", "7");
-					}
+					st.set("cond", "7");
 				}
 				break;
 			
 			case MEDUSA:
-				if ((st.getInt("cond") == 6) && st.dropItems(MEDUSA_ICHOR, 1, 10, CHANCES.get(npcId)))
+				if ((st.getInt("cond") == 6) && st.dropItems(MEDUSA_ICHOR, 1, 10, CHANCES.get(npcId)) && (st.getQuestItemsCount(DEAD_SEEKER_DUNG) >= 10) && (st.getQuestItemsCount(TYRANT_BLOOD) >= 10) && (st.getQuestItemsCount(NIGHTSHADE_ROOT) >= 10) && (st.getQuestItemsCount(MARSH_SPIDER_FLUIDS) >= 10))
 				{
-					if ((st.getQuestItemsCount(DEAD_SEEKER_DUNG) >= 10) && (st.getQuestItemsCount(TYRANT_BLOOD) >= 10) && (st.getQuestItemsCount(NIGHTSHADE_ROOT) >= 10) && (st.getQuestItemsCount(MARSH_SPIDER_FLUIDS) >= 10))
-					{
-						st.set("cond", "7");
-					}
+					st.set("cond", "7");
 				}
 				break;
 			
@@ -585,22 +576,16 @@ public class Q219_TestimonyOfFate extends Quest
 			case MARSH_STAKATO_WORKER:
 			case MARSH_STAKATO_SOLDIER:
 			case MARSH_STAKATO_DRONE:
-				if ((st.getInt("cond") == 6) && st.dropItems(NIGHTSHADE_ROOT, 1, 10, CHANCES.get(npcId)))
+				if ((st.getInt("cond") == 6) && st.dropItems(NIGHTSHADE_ROOT, 1, 10, CHANCES.get(npcId)) && (st.getQuestItemsCount(DEAD_SEEKER_DUNG) >= 10) && (st.getQuestItemsCount(TYRANT_BLOOD) >= 10) && (st.getQuestItemsCount(MEDUSA_ICHOR) >= 10) && (st.getQuestItemsCount(MARSH_SPIDER_FLUIDS) >= 10))
 				{
-					if ((st.getQuestItemsCount(DEAD_SEEKER_DUNG) >= 10) && (st.getQuestItemsCount(TYRANT_BLOOD) >= 10) && (st.getQuestItemsCount(MEDUSA_ICHOR) >= 10) && (st.getQuestItemsCount(MARSH_SPIDER_FLUIDS) >= 10))
-					{
-						st.set("cond", "7");
-					}
+					st.set("cond", "7");
 				}
 				break;
 			
 			case MARSH_SPIDER:
-				if ((st.getInt("cond") == 6) && st.dropItems(MARSH_SPIDER_FLUIDS, 1, 10, CHANCES.get(npcId)))
+				if ((st.getInt("cond") == 6) && st.dropItems(MARSH_SPIDER_FLUIDS, 1, 10, CHANCES.get(npcId)) && (st.getQuestItemsCount(DEAD_SEEKER_DUNG) >= 10) && (st.getQuestItemsCount(TYRANT_BLOOD) >= 10) && (st.getQuestItemsCount(MEDUSA_ICHOR) >= 10) && (st.getQuestItemsCount(NIGHTSHADE_ROOT) >= 10))
 				{
-					if ((st.getQuestItemsCount(DEAD_SEEKER_DUNG) >= 10) && (st.getQuestItemsCount(TYRANT_BLOOD) >= 10) && (st.getQuestItemsCount(MEDUSA_ICHOR) >= 10) && (st.getQuestItemsCount(NIGHTSHADE_ROOT) >= 10))
-					{
-						st.set("cond", "7");
-					}
+					st.set("cond", "7");
 				}
 				break;
 			

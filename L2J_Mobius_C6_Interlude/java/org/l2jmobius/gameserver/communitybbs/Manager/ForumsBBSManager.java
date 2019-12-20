@@ -83,11 +83,11 @@ public class ForumsBBSManager extends BaseBBSManager
 		}
 	}
 	
-	public Forum getForumByName(String Name)
+	public Forum getForumByName(String name)
 	{
 		for (Forum f : _table)
 		{
-			if (f.getName().equals(Name))
+			if (f.getName().equals(name))
 			{
 				return f;
 			}

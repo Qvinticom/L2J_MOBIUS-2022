@@ -69,7 +69,6 @@ public class BlowFishKey extends ClientBasePacket
 		catch (GeneralSecurityException e)
 		{
 			LOGGER.warning("Error While decrypting blowfish key (RSA) " + e);
-			e.printStackTrace();
 		}
 	}
 	

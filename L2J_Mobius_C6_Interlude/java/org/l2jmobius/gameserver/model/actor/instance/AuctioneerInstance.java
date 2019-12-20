@@ -115,7 +115,7 @@ public class AuctioneerInstance extends FolkInstance
 			
 			if (actualCommand.equalsIgnoreCase("auction"))
 			{
-				if (val == "")
+				if (val.equals(""))
 				{
 					return;
 				}
@@ -179,7 +179,7 @@ public class AuctioneerInstance extends FolkInstance
 			}
 			else if (actualCommand.equalsIgnoreCase("bidding"))
 			{
-				if (val == "")
+				if (val.equals(""))
 				{
 					return;
 				}
@@ -225,7 +225,7 @@ public class AuctioneerInstance extends FolkInstance
 			}
 			else if (actualCommand.equalsIgnoreCase("bid"))
 			{
-				if (val == "")
+				if (val.equals(""))
 				{
 					return;
 				}
@@ -266,7 +266,7 @@ public class AuctioneerInstance extends FolkInstance
 					return;
 				}
 				
-				if (val == "")
+				if (val.equals(""))
 				{
 					return;
 				}
@@ -294,8 +294,6 @@ public class AuctioneerInstance extends FolkInstance
 					html.replace("%AGIT_AUCTION_MINBID%", String.valueOf(minimumBid));
 					html.replace("npc_%objectId%_bid", "npc_" + getObjectId() + "_bid " + val);
 					player.sendPacket(html);
-					
-					return;
 				}
 				catch (Exception e)
 				{
@@ -313,7 +311,7 @@ public class AuctioneerInstance extends FolkInstance
 				int i = 1;
 				final double npage = Math.ceil((float) auctions.size() / limit);
 				
-				if (val == "")
+				if (val.equals(""))
 				{
 					start = 1;
 				}
@@ -363,7 +361,7 @@ public class AuctioneerInstance extends FolkInstance
 			{
 				int auctionId = 0;
 				
-				if (val == "")
+				if (val.equals(""))
 				{
 					if (player.getClan().getAuctionBiddedAt() <= 0)
 					{
@@ -622,7 +620,7 @@ public class AuctioneerInstance extends FolkInstance
 	
 	public void showMessageWindow(PlayerInstance player)
 	{
-		String filename = "data/html/auction/auction-no.htm";
+		String filename; // = "data/html/auction/auction-no.htm";
 		
 		final int condition = validateCondition(player);
 		

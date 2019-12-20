@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.ExtractableProductItem;
  */
 public class ExtractableItemsData
 {
-	private static Logger LOGGER = Logger.getLogger(ExtractableItemsData.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ExtractableItemsData.class.getName());
 	
 	// Map<itemid, ExtractableItem>
 	private Map<Integer, ExtractableItem> _items;
@@ -76,7 +76,7 @@ public class ExtractableItemsData
 					return;
 				}
 				
-				final List<ExtractableProductItem> product_temp = new ArrayList<>(lineSplit.length);
+				final List<ExtractableProductItem> productTemp = new ArrayList<>(lineSplit.length);
 				for (int i = 0; i < (lineSplit.length - 1); i++)
 				{
 					String[] lineSplit2 = lineSplit[i + 1].split(",");
@@ -104,11 +104,11 @@ public class ExtractableItemsData
 						continue;
 					}
 					
-					product_temp.add(new ExtractableProductItem(production, amount, chance));
+					productTemp.add(new ExtractableProductItem(production, amount, chance));
 				}
 				
 				int fullChances = 0;
-				for (ExtractableProductItem Pi : product_temp)
+				for (ExtractableProductItem Pi : productTemp)
 				{
 					fullChances += Pi.getChance();
 				}
@@ -120,15 +120,13 @@ public class ExtractableItemsData
 					continue;
 				}
 				
-				_items.put(itemID, new ExtractableItem(itemID, product_temp));
+				_items.put(itemID, new ExtractableItem(itemID, productTemp));
 			}
 			
 			LOGGER.info("Extractable items data: Loaded " + _items.size() + " extractable items!");
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
-			
 			LOGGER.info("Extractable items data: Can not find './data/csv/extractable_items.csv'");
 		}
 		finally
@@ -141,7 +139,7 @@ public class ExtractableItemsData
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with ExtractableItemsData: " + e1.getMessage());
 				}
 			}
 		}

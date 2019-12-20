@@ -86,7 +86,7 @@ public class Duel
 		_duelId = duelId;
 		_playerA = playerA;
 		_playerB = playerB;
-		_partyDuel = partyDuel == 1 ? true : false;
+		_partyDuel = partyDuel == 1;
 		
 		_duelEndTime = Calendar.getInstance();
 		
@@ -280,7 +280,7 @@ public class Duel
 			}
 			catch (Throwable t)
 			{
-				t.printStackTrace();
+				LOGGER.warning(t.toString());
 			}
 		}
 	}
@@ -341,7 +341,7 @@ public class Duel
 			}
 			catch (Throwable t)
 			{
-				t.printStackTrace();
+				LOGGER.warning(t.toString());
 			}
 		}
 	}
@@ -371,7 +371,7 @@ public class Duel
 			}
 			catch (Throwable t)
 			{
-				t.printStackTrace();
+				LOGGER.warning(t.toString());
 			}
 		}
 	}
@@ -482,9 +482,6 @@ public class Duel
 			broadcastToTeam2(ready);
 			broadcastToTeam1(start);
 			broadcastToTeam2(start);
-			
-			ready = null;
-			start = null;
 		}
 		else
 		{
@@ -509,17 +506,12 @@ public class Duel
 			// _playerB.broadcastStatusUpdate();
 			_playerA.broadcastUserInfo();
 			_playerB.broadcastUserInfo();
-			
-			ready = null;
-			start = null;
 		}
 		
 		// play sound
 		PlaySound ps = new PlaySound(1, "B04_S01", 0, 0, 0, 0, 0);
 		broadcastToTeam1(ps);
 		broadcastToTeam2(ps);
-		
-		ps = null;
 		
 		// start duelling task
 		ThreadPool.schedule(new ScheduleDuelTask(this), 1000);
@@ -589,10 +581,9 @@ public class Duel
 		}
 		
 		// restore player conditions
-		for (Integer playerObjId : _playerConditions.keySet())
+		for (PlayerCondition cond : _playerConditions.values())
 		{
-			final PlayerCondition e = _playerConditions.get(playerObjId);
-			e.restoreCondition();
+			cond.restoreCondition();
 		}
 	}
 	

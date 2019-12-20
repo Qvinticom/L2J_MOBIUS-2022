@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 
 public class OfflineTradersTable
 {
-	private static Logger LOGGER = Logger.getLogger(OfflineTradersTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(OfflineTradersTable.class.getName());
 	
 	// SQL DEFINITIONS
 	private static final String SAVE_OFFLINE_STATUS = "INSERT INTO character_offline_trade (`charId`,`time`,`type`,`title`) VALUES (?,?,?,?)";

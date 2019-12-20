@@ -43,19 +43,19 @@ public class FaenorEventParser extends FaenorParser
 	@Override
 	public void parseScript(Node eventNode, ScriptContext context)
 	{
-		String ID = attribute(eventNode, "ID");
+		String id = attribute(eventNode, "ID");
 		_eventDates = DateRange.parse(attribute(eventNode, "Active"), DATE_FORMAT);
 		
 		Date currentDate = new Date();
 		if (_eventDates.getEndDate().before(currentDate))
 		{
-			_log.info("Event ID: (" + ID + ") has passed... Ignored.");
+			_log.info("Event ID: (" + id + ") has passed... Ignored.");
 			return;
 		}
 		
 		if (_eventDates.getStartDate().after(currentDate))
 		{
-			_log.info("Event ID: (" + ID + ") is not active yet... Ignored.");
+			_log.info("Event ID: (" + id + ") is not active yet... Ignored.");
 			ThreadPool.schedule(() -> parseEventDropAndMessage(eventNode), _eventDates.getStartDate().getTime() - currentDate.getTime());
 			return;
 		}

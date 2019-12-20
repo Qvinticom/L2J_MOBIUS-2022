@@ -21,7 +21,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -56,9 +55,9 @@ public class DM implements EventTask
 {
 	protected static final Logger LOGGER = Logger.getLogger(DM.class.getName());
 	
-	private static String _eventName = new String();
-	private static String _eventDesc = new String();
-	private static String _joiningLocationName = new String();
+	private static String _eventName = "";
+	private static String _eventDesc = "";
+	private static String _joiningLocationName = "";
 	private static Spawn _npcSpawn;
 	private static boolean _joining = false;
 	private static boolean _teleport = false;
@@ -84,12 +83,12 @@ public class DM implements EventTask
 	protected static int _playerX = 0;
 	protected static int _playerY = 0;
 	protected static int _playerZ = 0;
-	private static long _intervalBetweenMatchs = 0;
+	private static long _intervalBetweenMatches = 0;
 	private String startEventTime;
 	protected static boolean _teamEvent = false; // TODO to be integrated
-	public static Vector<PlayerInstance> _players = new Vector<>();
+	public static List<PlayerInstance> _players = new ArrayList<>();
 	public static List<PlayerInstance> _topPlayers = new ArrayList<>();
-	public static Vector<String> _savePlayers = new Vector<>();
+	public static List<String> _savePlayers = new ArrayList<>();
 	
 	/**
 	 * Instantiates a new dM.
@@ -111,21 +110,21 @@ public class DM implements EventTask
 	 * Gets the _event name.
 	 * @return the _eventName
 	 */
-	public static String get_eventName()
+	public static String getEventName()
 	{
 		return _eventName;
 	}
 	
 	/**
 	 * Set_event name.
-	 * @param _eventName the _eventName to set
+	 * @param eventName the _eventName to set
 	 * @return true, if successful
 	 */
-	public static boolean set_eventName(String _eventName)
+	public static boolean setEventName(String eventName)
 	{
 		if (!_inProgress)
 		{
-			DM._eventName = _eventName;
+			DM._eventName = eventName;
 			return true;
 		}
 		return false;
@@ -135,21 +134,21 @@ public class DM implements EventTask
 	 * Gets the _event desc.
 	 * @return the _eventDesc
 	 */
-	public static String get_eventDesc()
+	public static String getEventDesc()
 	{
 		return _eventDesc;
 	}
 	
 	/**
 	 * Set_event desc.
-	 * @param _eventDesc the _eventDesc to set
+	 * @param eventDesc the _eventDesc to set
 	 * @return true, if successful
 	 */
-	public static boolean set_eventDesc(String _eventDesc)
+	public static boolean setEventDesc(String eventDesc)
 	{
 		if (!_inProgress)
 		{
-			DM._eventDesc = _eventDesc;
+			DM._eventDesc = eventDesc;
 			return true;
 		}
 		return false;
@@ -159,21 +158,21 @@ public class DM implements EventTask
 	 * Gets the _joining location name.
 	 * @return the _joiningLocationName
 	 */
-	public static String get_joiningLocationName()
+	public static String getJoiningLocationName()
 	{
 		return _joiningLocationName;
 	}
 	
 	/**
 	 * Set_joining location name.
-	 * @param _joiningLocationName the _joiningLocationName to set
+	 * @param joiningLocationName the _joiningLocationName to set
 	 * @return true, if successful
 	 */
-	public static boolean set_joiningLocationName(String _joiningLocationName)
+	public static boolean setJoiningLocationName(String joiningLocationName)
 	{
 		if (!_inProgress)
 		{
-			DM._joiningLocationName = _joiningLocationName;
+			DM._joiningLocationName = joiningLocationName;
 			return true;
 		}
 		return false;
@@ -183,21 +182,21 @@ public class DM implements EventTask
 	 * Gets the _npc id.
 	 * @return the _npcId
 	 */
-	public static int get_npcId()
+	public static int getNpcId()
 	{
 		return _npcId;
 	}
 	
 	/**
 	 * Set_npc id.
-	 * @param _npcId the _npcId to set
+	 * @param npcId the _npcId to set
 	 * @return true, if successful
 	 */
-	public static boolean set_npcId(int _npcId)
+	public static boolean setNpcId(int npcId)
 	{
 		if (!_inProgress)
 		{
-			DM._npcId = _npcId;
+			DM._npcId = npcId;
 			return true;
 		}
 		return false;
@@ -207,32 +206,30 @@ public class DM implements EventTask
 	 * Gets the _npc location.
 	 * @return the _npc location
 	 */
-	public static Location get_npcLocation()
+	public static Location getNpcLocation()
 	{
-		final Location npc_loc = new Location(_npcX, _npcY, _npcZ, _npcHeading);
-		
-		return npc_loc;
+		return new Location(_npcX, _npcY, _npcZ, _npcHeading);
 	}
 	
 	/**
 	 * Gets the _reward id.
 	 * @return the _rewardId
 	 */
-	public static int get_rewardId()
+	public static int getRewardId()
 	{
 		return _rewardId;
 	}
 	
 	/**
 	 * Set_reward id.
-	 * @param _rewardId the _rewardId to set
+	 * @param rewardId the _rewardId to set
 	 * @return true, if successful
 	 */
-	public static boolean set_rewardId(int _rewardId)
+	public static boolean setRewardId(int rewardId)
 	{
 		if (!_inProgress)
 		{
-			DM._rewardId = _rewardId;
+			DM._rewardId = rewardId;
 			return true;
 		}
 		return false;
@@ -242,21 +239,21 @@ public class DM implements EventTask
 	 * Gets the _reward amount.
 	 * @return the _rewardAmount
 	 */
-	public static int get_rewardAmount()
+	public static int getRewardAmount()
 	{
 		return _rewardAmount;
 	}
 	
 	/**
 	 * Set_reward amount.
-	 * @param _rewardAmount the _rewardAmount to set
+	 * @param rewardAmount the _rewardAmount to set
 	 * @return true, if successful
 	 */
-	public static boolean set_rewardAmount(int _rewardAmount)
+	public static boolean setRewardAmount(int rewardAmount)
 	{
 		if (!_inProgress)
 		{
-			DM._rewardAmount = _rewardAmount;
+			DM._rewardAmount = rewardAmount;
 			return true;
 		}
 		return false;
@@ -266,21 +263,21 @@ public class DM implements EventTask
 	 * Gets the _minlvl.
 	 * @return the _minlvl
 	 */
-	public static int get_minlvl()
+	public static int getMinlvl()
 	{
 		return _minlvl;
 	}
 	
 	/**
 	 * Set_minlvl.
-	 * @param _minlvl the _minlvl to set
+	 * @param minlvl the _minlvl to set
 	 * @return true, if successful
 	 */
-	public static boolean set_minlvl(int _minlvl)
+	public static boolean setMinlvl(int minlvl)
 	{
 		if (!_inProgress)
 		{
-			DM._minlvl = _minlvl;
+			DM._minlvl = minlvl;
 			return true;
 		}
 		return false;
@@ -290,21 +287,21 @@ public class DM implements EventTask
 	 * Gets the _maxlvl.
 	 * @return the _maxlvl
 	 */
-	public static int get_maxlvl()
+	public static int getMaxlvl()
 	{
 		return _maxlvl;
 	}
 	
 	/**
 	 * Set_maxlvl.
-	 * @param _maxlvl the _maxlvl to set
+	 * @param maxlvl the _maxlvl to set
 	 * @return true, if successful
 	 */
-	public static boolean set_maxlvl(int _maxlvl)
+	public static boolean setMaxlvl(int maxlvl)
 	{
 		if (!_inProgress)
 		{
-			DM._maxlvl = _maxlvl;
+			DM._maxlvl = maxlvl;
 			return true;
 		}
 		return false;
@@ -314,21 +311,21 @@ public class DM implements EventTask
 	 * Gets the _join time.
 	 * @return the _joinTime
 	 */
-	public static int get_joinTime()
+	public static int getJoinTime()
 	{
 		return _joinTime;
 	}
 	
 	/**
 	 * Set_join time.
-	 * @param _joinTime the _joinTime to set
+	 * @param joinTime the _joinTime to set
 	 * @return true, if successful
 	 */
-	public static boolean set_joinTime(int _joinTime)
+	public static boolean setJoinTime(int joinTime)
 	{
 		if (!_inProgress)
 		{
-			DM._joinTime = _joinTime;
+			DM._joinTime = joinTime;
 			return true;
 		}
 		return false;
@@ -338,21 +335,21 @@ public class DM implements EventTask
 	 * Gets the _event time.
 	 * @return the _eventTime
 	 */
-	public static int get_eventTime()
+	public static int getEventTime()
 	{
 		return _eventTime;
 	}
 	
 	/**
 	 * Set_event time.
-	 * @param _eventTime the _eventTime to set
+	 * @param eventTime the _eventTime to set
 	 * @return true, if successful
 	 */
-	public static boolean set_eventTime(int _eventTime)
+	public static boolean setEventTime(int eventTime)
 	{
 		if (!_inProgress)
 		{
-			DM._eventTime = _eventTime;
+			DM._eventTime = eventTime;
 			return true;
 		}
 		return false;
@@ -362,21 +359,21 @@ public class DM implements EventTask
 	 * Gets the _min players.
 	 * @return the _minPlayers
 	 */
-	public static int get_minPlayers()
+	public static int getMinPlayers()
 	{
 		return _minPlayers;
 	}
 	
 	/**
 	 * Set_min players.
-	 * @param _minPlayers the _minPlayers to set
+	 * @param minPlayers the _minPlayers to set
 	 * @return true, if successful
 	 */
-	public static boolean set_minPlayers(int _minPlayers)
+	public static boolean setMinPlayers(int minPlayers)
 	{
 		if (!_inProgress)
 		{
-			DM._minPlayers = _minPlayers;
+			DM._minPlayers = minPlayers;
 			return true;
 		}
 		return false;
@@ -386,45 +383,45 @@ public class DM implements EventTask
 	 * Gets the _max players.
 	 * @return the _maxPlayers
 	 */
-	public static int get_maxPlayers()
+	public static int getMaxPlayers()
 	{
 		return _maxPlayers;
 	}
 	
 	/**
 	 * Set_max players.
-	 * @param _maxPlayers the _maxPlayers to set
+	 * @param maxPlayers the _maxPlayers to set
 	 * @return true, if successful
 	 */
-	public static boolean set_maxPlayers(int _maxPlayers)
+	public static boolean setMaxPlayers(int maxPlayers)
 	{
 		if (!_inProgress)
 		{
-			DM._maxPlayers = _maxPlayers;
+			DM._maxPlayers = maxPlayers;
 			return true;
 		}
 		return false;
 	}
 	
 	/**
-	 * Gets the _interval between matchs.
+	 * Gets the _interval between matches.
 	 * @return the _intervalBetweenMatchs
 	 */
-	public static long get_intervalBetweenMatchs()
+	public static long getIntervalBetweenMatches()
 	{
-		return _intervalBetweenMatchs;
+		return _intervalBetweenMatches;
 	}
 	
 	/**
-	 * Set_interval between matchs.
-	 * @param _intervalBetweenMatchs the _intervalBetweenMatchs to set
+	 * Set_interval between matches.
+	 * @param intervalBetweenMatches the _intervalBetweenMatchs to set
 	 * @return true, if successful
 	 */
-	public static boolean set_intervalBetweenMatchs(long _intervalBetweenMatchs)
+	public static boolean setIntervalBetweenMatches(long intervalBetweenMatches)
 	{
 		if (!_inProgress)
 		{
-			DM._intervalBetweenMatchs = _intervalBetweenMatchs;
+			DM._intervalBetweenMatches = intervalBetweenMatches;
 			return true;
 		}
 		return false;
@@ -458,7 +455,7 @@ public class DM implements EventTask
 	 * Checks if is _joining.
 	 * @return the _joining
 	 */
-	public static boolean is_joining()
+	public static boolean isJoining()
 	{
 		return _joining;
 	}
@@ -467,7 +464,7 @@ public class DM implements EventTask
 	 * Checks if is _teleport.
 	 * @return the _teleport
 	 */
-	public static boolean is_teleport()
+	public static boolean isTeleport()
 	{
 		return _teleport;
 	}
@@ -485,7 +482,7 @@ public class DM implements EventTask
 	 * Checks if is _aborted.
 	 * @return the _aborted
 	 */
-	public static boolean is_aborted()
+	public static boolean isAborted()
 	{
 		return _aborted;
 	}
@@ -494,7 +491,7 @@ public class DM implements EventTask
 	 * Checks if is _sit forced.
 	 * @return the _sitForced
 	 */
-	public static boolean is_sitForced()
+	public static boolean isSitForced()
 	{
 		return _sitForced;
 	}
@@ -503,7 +500,7 @@ public class DM implements EventTask
 	 * Checks if is _in progress.
 	 * @return the _inProgress
 	 */
-	public static boolean is_inProgress()
+	public static boolean isInProgress()
 	{
 		return _inProgress;
 	}
@@ -515,12 +512,7 @@ public class DM implements EventTask
 	 */
 	public static boolean checkMaxLevel(int maxlvl)
 	{
-		if (_minlvl >= maxlvl)
-		{
-			return false;
-		}
-		
-		return true;
+		return _minlvl < maxlvl;
 	}
 	
 	/**
@@ -530,12 +522,7 @@ public class DM implements EventTask
 	 */
 	public static boolean checkMinLevel(int minlvl)
 	{
-		if (_maxlvl <= minlvl)
-		{
-			return false;
-		}
-		
-		return true;
+		return _maxlvl > minlvl;
 	}
 	
 	/**
@@ -545,12 +532,7 @@ public class DM implements EventTask
 	 */
 	public static boolean checkMinPlayers(int players)
 	{
-		if (_minPlayers <= players)
-		{
-			return true;
-		}
-		
-		return false;
+		return _minPlayers > players;
 	}
 	
 	/**
@@ -560,12 +542,7 @@ public class DM implements EventTask
 	 */
 	public static boolean checkMaxPlayers(int players)
 	{
-		if (_maxPlayers > players)
-		{
-			return true;
-		}
-		
-		return false;
+		return _maxPlayers <= players;
 	}
 	
 	/**
@@ -628,12 +605,7 @@ public class DM implements EventTask
 	 */
 	private static boolean checkStartJoinPlayerInfo()
 	{
-		if ((_playerX == 0) || (_playerY == 0) || (_playerZ == 0) || (_playerColors == 0))
-		{
-			return false;
-		}
-		
-		return true;
+		return (_playerX != 0) && (_playerY != 0) && (_playerZ != 0) && (_playerColors != 0);
 	}
 	
 	/**
@@ -642,12 +614,7 @@ public class DM implements EventTask
 	 */
 	private static boolean checkAutoEventStartJoinOk()
 	{
-		if ((_joinTime == 0) || (_eventTime == 0))
-		{
-			return false;
-		}
-		
-		return true;
+		return (_joinTime != 0) && (_eventTime != 0);
 	}
 	
 	/**
@@ -768,10 +735,7 @@ public class DM implements EventTask
 		
 		removeOfflinePlayers();
 		
-		if (_teamEvent)
-		{
-		}
-		else
+		if (!_teamEvent)
 		{
 			synchronized (_players)
 			{
@@ -804,18 +768,15 @@ public class DM implements EventTask
 				{
 					if (player != null)
 					{
-						if (Config.DM_ON_START_UNSUMMON_PET)
+						// Remove Summon's buffs
+						if (Config.DM_ON_START_UNSUMMON_PET && (player.getPet() != null))
 						{
-							// Remove Summon's buffs
-							if (player.getPet() != null)
+							final Summon summon = player.getPet();
+							summon.stopAllEffects();
+							
+							if (summon instanceof PetInstance)
 							{
-								final Summon summon = player.getPet();
-								summon.stopAllEffects();
-								
-								if (summon instanceof PetInstance)
-								{
-									summon.unSummon(player);
-								}
+								summon.unSummon(player);
 							}
 						}
 						
@@ -910,9 +871,9 @@ public class DM implements EventTask
 		_started = false;
 		_inProgress = false;
 		_aborted = false;
-		final long delay = _intervalBetweenMatchs;
+		final long delay = _intervalBetweenMatches;
 		
-		Announcements.getInstance().gameAnnounceToAll(_eventName + ": joining period will be avaible again in " + _intervalBetweenMatchs + " minute(s)!");
+		Announcements.getInstance().gameAnnounceToAll(_eventName + ": joining period will be avaible again in " + _intervalBetweenMatches + " minute(s)!");
 		
 		waiter(delay);
 		
@@ -930,7 +891,6 @@ public class DM implements EventTask
 		catch (Exception e)
 		{
 			LOGGER.warning(_eventName + ": Error While Trying to restart Event... " + e);
-			e.printStackTrace();
 		}
 	}
 	
@@ -1116,7 +1076,7 @@ public class DM implements EventTask
 					if (!_started && !_aborted) // if is not already started and it's not aborted
 					{
 						
-						LOGGER.info(_eventName + ": waiting.....delay for restart event  " + _intervalBetweenMatchs + " minutes.");
+						LOGGER.info(_eventName + ": waiting.....delay for restart event  " + _intervalBetweenMatches + " minutes.");
 						waiter(60000); // just a give a delay to next restart
 						
 						try
@@ -1129,7 +1089,6 @@ public class DM implements EventTask
 						catch (Exception e)
 						{
 							LOGGER.warning("Error while tying to Restart Event " + e);
-							e.printStackTrace();
 						}
 					}
 				}
@@ -1230,6 +1189,7 @@ public class DM implements EventTask
 					case 10: // 10 seconds left
 					{
 						removeOfflinePlayers();
+						// fallthrough?
 					}
 					case 3: // 3 seconds left
 					case 2: // 2 seconds left
@@ -1330,7 +1290,8 @@ public class DM implements EventTask
 					{
 						continue;
 					}
-					else if ((player._inEventDM && (player.isOnline() == 0)) || player.isInJail() || player.isInOfflineMode())
+					
+					if ((player._inEventDM && (player.isOnline() == 0)) || player.isInJail() || player.isInOfflineMode())
 					{
 						if (!_joining)
 						{
@@ -1358,8 +1319,7 @@ public class DM implements EventTask
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning(e.getMessage());
-			return;
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -1369,12 +1329,7 @@ public class DM implements EventTask
 	 */
 	private static boolean startEventOk()
 	{
-		if (_joining || !_teleport || _started)
-		{
-			return false;
-		}
-		
-		return true;
+		return !_joining && _teleport && !_started;
 	}
 	
 	/**
@@ -1383,12 +1338,7 @@ public class DM implements EventTask
 	 */
 	private static boolean finishEventOk()
 	{
-		if (!_started)
-		{
-			return false;
-		}
-		
-		return true;
+		return _started;
 	}
 	
 	/**
@@ -1420,15 +1370,14 @@ public class DM implements EventTask
 			return false;
 		}
 		
-		if ((eventPlayer._active_boxes > 1) && !Config.ALLOW_DUALBOX_EVENT)
+		if ((eventPlayer._activeBoxes > 1) && !Config.ALLOW_DUALBOX_EVENT)
 		{
-			final List<String> players_in_boxes = eventPlayer.active_boxes_characters;
-			
-			if ((players_in_boxes != null) && (players_in_boxes.size() > 1))
+			final List<String> playerBoxes = eventPlayer._activeBoxeCharacters;
+			if ((playerBoxes != null) && (playerBoxes.size() > 1))
 			{
-				for (String character_name : players_in_boxes)
+				for (String characterName : playerBoxes)
 				{
-					final PlayerInstance player = World.getInstance().getPlayer(character_name);
+					final PlayerInstance player = World.getInstance().getPlayer(characterName);
 					
 					if ((player != null) && player._inEventDM)
 					{
@@ -1487,19 +1436,16 @@ public class DM implements EventTask
 				player.setKarma(0);
 				player.setTitle("Kills: " + player._countDMkills);
 				
-				if (player.isMounted())
+				if (player.isMounted() && player.setMountType(0))
 				{
-					if (player.setMountType(0))
+					if (player.isFlying())
 					{
-						if (player.isFlying())
-						{
-							player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
-						}
-						
-						final Ride dismount = new Ride(player.getObjectId(), Ride.ACTION_DISMOUNT, 0);
-						player.broadcastPacket(dismount);
-						player.setMountObjectID(0);
+						player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
 					}
+					
+					final Ride dismount = new Ride(player.getObjectId(), Ride.ACTION_DISMOUNT, 0);
+					player.broadcastPacket(dismount);
+					player.setMountObjectID(0);
 				}
 				player.broadcastUserInfo();
 			}
@@ -1547,7 +1493,7 @@ public class DM implements EventTask
 		
 		LOGGER.info("");
 		LOGGER.info("##################################");
-		LOGGER.info("# _players(Vector<PlayerInstance>) #");
+		LOGGER.info("# _players(List<PlayerInstance>) #");
 		LOGGER.info("##################################");
 		
 		synchronized (_players)
@@ -1565,7 +1511,7 @@ public class DM implements EventTask
 		
 		LOGGER.info("");
 		LOGGER.info("################################");
-		LOGGER.info("# _savePlayers(Vector<String>) #");
+		LOGGER.info("# _savePlayers(List<String>) #");
 		LOGGER.info("################################");
 		
 		for (String player : _savePlayers)
@@ -1591,10 +1537,10 @@ public class DM implements EventTask
 	 */
 	public static void loadData()
 	{
-		_eventName = new String();
-		_eventDesc = new String();
-		_joiningLocationName = new String();
-		_savePlayers = new Vector<>();
+		_eventName = "";
+		_eventDesc = "";
+		_joiningLocationName = "";
+		_savePlayers = new ArrayList<>();
 		
 		synchronized (_players)
 		{
@@ -1624,7 +1570,7 @@ public class DM implements EventTask
 		_eventTime = 0;
 		_minPlayers = 0;
 		_maxPlayers = 0;
-		_intervalBetweenMatchs = 0;
+		_intervalBetweenMatches = 0;
 		_playerColors = 0;
 		_playerX = 0;
 		_playerY = 0;
@@ -1660,7 +1606,7 @@ public class DM implements EventTask
 				_playerX = rs.getInt("playerX");
 				_playerY = rs.getInt("playerY");
 				_playerZ = rs.getInt("playerZ");
-				_intervalBetweenMatchs = rs.getInt("delayForNextEvent");
+				_intervalBetweenMatches = rs.getInt("delayForNextEvent");
 			}
 			statement.close();
 		}
@@ -1704,7 +1650,7 @@ public class DM implements EventTask
 			statement.setInt(18, _playerX);
 			statement.setInt(19, _playerY);
 			statement.setInt(20, _playerZ);
-			statement.setLong(21, _intervalBetweenMatchs);
+			statement.setLong(21, _intervalBetweenMatches);
 			statement.execute();
 			statement.close();
 		}
@@ -1899,7 +1845,7 @@ public class DM implements EventTask
 		}
 		
 		_topKills = 0;
-		_savePlayers = new Vector<>();
+		_savePlayers = new ArrayList<>();
 		_topPlayers = new ArrayList<>();
 		
 		cleanLocalEventInfo();
@@ -1964,21 +1910,21 @@ public class DM implements EventTask
 	 * Gets the _player colors.
 	 * @return the _playerColors
 	 */
-	public static int get_playerColors()
+	public static int getPlayerColors()
 	{
 		return _playerColors;
 	}
 	
 	/**
 	 * Set_player colors.
-	 * @param _playerColors the _playerColors to set
+	 * @param playerColors the _playerColors to set
 	 * @return true, if successful
 	 */
-	public static boolean set_playerColors(int _playerColors)
+	public static boolean setPlayerColors(int playerColors)
 	{
 		if (!_inProgress)
 		{
-			DM._playerColors = _playerColors;
+			DM._playerColors = playerColors;
 			return true;
 		}
 		return false;
@@ -1989,27 +1935,24 @@ public class DM implements EventTask
 	 */
 	public static void rewardPlayer()
 	{
-		if (_topPlayers.size() > 0)
+		for (PlayerInstance _topPlayer : _topPlayers)
 		{
-			for (PlayerInstance _topPlayer : _topPlayers)
-			{
-				_topPlayer.addItem("DM Event: " + _eventName, _rewardId, _rewardAmount, _topPlayer, true);
-				
-				final StatusUpdate su = new StatusUpdate(_topPlayer.getObjectId());
-				su.addAttribute(StatusUpdate.CUR_LOAD, _topPlayer.getCurrentLoad());
-				_topPlayer.sendPacket(su);
-				
-				final NpcHtmlMessage nhm = new NpcHtmlMessage(5);
-				final StringBuilder replyMSG = new StringBuilder("");
-				
-				replyMSG.append("<html><body>You won the event. Look in your inventory for the reward.</body></html>");
-				
-				nhm.setHtml(replyMSG.toString());
-				_topPlayer.sendPacket(nhm);
-				
-				// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
-				_topPlayer.sendPacket(ActionFailed.STATIC_PACKET);
-			}
+			_topPlayer.addItem("DM Event: " + _eventName, _rewardId, _rewardAmount, _topPlayer, true);
+			
+			final StatusUpdate su = new StatusUpdate(_topPlayer.getObjectId());
+			su.addAttribute(StatusUpdate.CUR_LOAD, _topPlayer.getCurrentLoad());
+			_topPlayer.sendPacket(su);
+			
+			final NpcHtmlMessage nhm = new NpcHtmlMessage(5);
+			final StringBuilder replyMSG = new StringBuilder("");
+			
+			replyMSG.append("<html><body>You won the event. Look in your inventory for the reward.</body></html>");
+			
+			nhm.setHtml(replyMSG.toString());
+			_topPlayer.sendPacket(nhm);
+			
+			// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
+			_topPlayer.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}
 	
@@ -2052,9 +1995,7 @@ public class DM implements EventTask
 	 */
 	public static Location get_playersSpawnLocation()
 	{
-		final Location npc_loc = new Location(_playerX + Rnd.get(Config.DM_SPAWN_OFFSET), _playerY + Rnd.get(Config.DM_SPAWN_OFFSET), _playerZ, 0);
-		
-		return npc_loc;
+		return new Location(_playerX + Rnd.get(Config.DM_SPAWN_OFFSET), _playerY + Rnd.get(Config.DM_SPAWN_OFFSET), _playerZ, 0);
 	}
 	
 	/**
@@ -2105,7 +2046,7 @@ public class DM implements EventTask
 	public static int getIntervalBetweenMatchs()
 	{
 		final long actualTime = System.currentTimeMillis();
-		final long totalTime = actualTime + _intervalBetweenMatchs;
+		final long totalTime = actualTime + _intervalBetweenMatches;
 		final long interval = totalTime - actualTime;
 		final int seconds = (int) (interval / 1000);
 		

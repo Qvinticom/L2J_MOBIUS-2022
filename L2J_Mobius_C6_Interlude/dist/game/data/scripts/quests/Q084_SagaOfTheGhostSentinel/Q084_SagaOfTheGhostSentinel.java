@@ -27,7 +27,7 @@ public class Q084_SagaOfTheGhostSentinel extends SagasSuperClass
 	public Q084_SagaOfTheGhostSentinel()
 	{
 		super(84, "Saga of the Ghost Sentinel");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			30702,
 			31587,
@@ -42,7 +42,7 @@ public class Q084_SagaOfTheGhostSentinel extends SagasSuperClass
 			31659,
 			31641
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7521,
@@ -57,39 +57,39 @@ public class Q084_SagaOfTheGhostSentinel extends SagasSuperClass
 			7107,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27298,
 			27233,
 			27307
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			109
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x25
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			161719,
 			124376,
 			124376
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-92823,
 			82127,
 			82127
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-1893,
 			-2796,
 			-2796
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

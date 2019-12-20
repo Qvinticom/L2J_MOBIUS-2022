@@ -79,7 +79,7 @@ public class TelnetStatusThread extends Thread
 					}
 					catch (IOException io)
 					{
-						io.printStackTrace();
+						LOGGER.warning(io.toString());
 					}
 					break;
 				}
@@ -94,7 +94,7 @@ public class TelnetStatusThread extends Thread
 					}
 					catch (IOException io)
 					{
-						io.printStackTrace();
+						LOGGER.warning(io.toString());
 					}
 					break;
 				}

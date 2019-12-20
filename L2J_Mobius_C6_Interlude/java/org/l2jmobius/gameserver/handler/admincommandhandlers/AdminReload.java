@@ -179,7 +179,7 @@ public class AdminReload implements IAdminCommandHandler
 	 */
 	private void sendReloadPage(PlayerInstance activeChar)
 	{
-		AdminHelpPage.showSubMenuPage(activeChar, "reload_menu.htm");
+		AdminHelpPage.showHelpPage(activeChar, "reload_menu.htm");
 	}
 	
 	@Override

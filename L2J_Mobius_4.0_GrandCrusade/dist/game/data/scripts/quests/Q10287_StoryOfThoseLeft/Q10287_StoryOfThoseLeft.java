@@ -131,7 +131,7 @@ public class Q10287_StoryOfThoseLeft extends Quest
 			{
 				if (qs.isMemoState(2))
 				{
-					rewardItems(player, Integer.valueOf(event), 1);
+					rewardItems(player, Integer.parseInt(event), 1);
 					htmltext = "32020-09.html";
 					qs.exitQuest(false, true);
 				}

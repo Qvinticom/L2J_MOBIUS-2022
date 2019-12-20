@@ -48,7 +48,7 @@ public class Fishing implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if ((creature == null) || !(creature instanceof PlayerInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return;
 		}

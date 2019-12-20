@@ -101,7 +101,7 @@ public class ZoneData
 			{
 				Document doc = factory.newDocumentBuilder().parse(file);
 				
-				int effect_zone_id = 150000; // FIXME Temporally workaround to avoid zone.xml modification
+				int effectZoneId = 150000; // FIXME: Temporally workaround to avoid zone.xml modification
 				for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 				{
 					if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -216,22 +216,22 @@ public class ZoneData
 									}
 									case "BossZone":
 									{
-										int boss_id = -1;
+										int bossId = -1;
 										try
 										{
-											boss_id = Integer.parseInt(attrs.getNamedItem("bossId").getNodeValue());
+											bossId = Integer.parseInt(attrs.getNamedItem("bossId").getNodeValue());
 										}
 										catch (IllegalArgumentException e)
 										{
 											e.printStackTrace();
 										}
-										temp = new BossZone(zoneId, boss_id);
+										temp = new BossZone(zoneId, bossId);
 										break;
 									}
 									case "EffectZone":
 									{
-										zoneId = effect_zone_id;
-										effect_zone_id++;
+										zoneId = effectZoneId;
+										effectZoneId++;
 										temp = new EffectZone(zoneId);
 										break;
 									}
@@ -341,25 +341,25 @@ public class ZoneData
 											}
 											case "NPoly":
 											{
-												List<Integer> fl_x = new ArrayList<>();
-												final List<Integer> fl_y = new ArrayList<>();
+												List<Integer> flX = new ArrayList<>();
+												final List<Integer> flY = new ArrayList<>();
 												// Load the rest
 												while (rset.next())
 												{
-													fl_x.add(rset.getInt("x"));
-													fl_y.add(rset.getInt("y"));
+													flX.add(rset.getInt("x"));
+													flY.add(rset.getInt("y"));
 												}
 												// An nPoly needs to have at least 3 vertices
-												if ((fl_x.size() == fl_y.size()) && (fl_x.size() > 2))
+												if ((flX.size() == flY.size()) && (flX.size() > 2))
 												{
 													// Create arrays
-													final int[] aX = new int[fl_x.size()];
-													final int[] aY = new int[fl_y.size()];
+													final int[] aX = new int[flX.size()];
+													final int[] aY = new int[flY.size()];
 													// This runs only at server startup so dont complain :>
-													for (int i = 0; i < fl_x.size(); i++)
+													for (int i = 0; i < flX.size(); i++)
 													{
-														aX[i] = fl_x.get(i);
-														aY[i] = fl_y.get(i);
+														aX[i] = flX.get(i);
+														aY[i] = flY.get(i);
 													}
 													// Create the zone
 													temp.setZone(new ZoneNPoly(aX, aY, minZ, maxZ));

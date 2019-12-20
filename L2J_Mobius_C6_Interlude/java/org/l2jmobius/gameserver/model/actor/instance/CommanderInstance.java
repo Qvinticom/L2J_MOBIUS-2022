@@ -47,13 +47,13 @@ public class CommanderInstance extends Attackable
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		// Attackable during siege by all except defenders
-		return (attacker != null) && (attacker instanceof PlayerInstance) && (getFort() != null) && (getFort().getFortId() > 0) && getFort().getSiege().getIsInProgress() && !getFort().getSiege().checkIsDefender(((PlayerInstance) attacker).getClan());
+		return (attacker instanceof PlayerInstance) && (getFort() != null) && (getFort().getFortId() > 0) && getFort().getSiege().getIsInProgress() && !getFort().getSiege().checkIsDefender(((PlayerInstance) attacker).getClan());
 	}
 	
 	@Override
 	public CommanderKnownList getKnownList()
 	{
-		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof CommanderKnownList))
+		if (!(super.getKnownList() instanceof CommanderKnownList))
 		{
 			setKnownList(new CommanderKnownList(this));
 		}

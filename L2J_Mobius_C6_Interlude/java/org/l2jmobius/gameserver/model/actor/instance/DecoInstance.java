@@ -29,7 +29,6 @@ public class DecoInstance extends NpcInstance
 	@Override
 	public void reduceCurrentHp(double damage, Creature attacker, boolean awake)
 	{
-		damage = 0;
-		super.reduceCurrentHp(damage, attacker, awake);
+		super.reduceCurrentHp(0, attacker, awake);
 	}
 }

@@ -79,7 +79,7 @@ public class GuardInstance extends Attackable
 	@Override
 	public GuardKnownList getKnownList()
 	{
-		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof GuardKnownList))
+		if (!(super.getKnownList() instanceof GuardKnownList))
 		{
 			setKnownList(new GuardKnownList(this));
 		}

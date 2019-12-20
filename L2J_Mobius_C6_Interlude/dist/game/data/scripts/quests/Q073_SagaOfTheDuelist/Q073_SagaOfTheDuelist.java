@@ -26,7 +26,7 @@ public class Q073_SagaOfTheDuelist extends SagasSuperClass
 	public Q073_SagaOfTheDuelist()
 	{
 		super(73, "Saga of the Duelist");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			30849,
 			31624,
@@ -41,7 +41,7 @@ public class Q073_SagaOfTheDuelist extends SagasSuperClass
 			31656,
 			31277
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7537,
@@ -56,39 +56,39 @@ public class Q073_SagaOfTheDuelist extends SagasSuperClass
 			7096,
 			7546
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27289,
 			27222,
 			27281
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			88
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x02
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			164650,
 			47429,
 			47391
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-74121,
 			-56923,
 			-56929
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-2871,
 			-2383,
 			-2370
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

@@ -728,7 +728,7 @@ public class StatsSet implements IParserAdvUtils
 	{
 		Objects.requireNonNull(key);
 		final Object obj = _set.get(key);
-		if ((obj == null) || !(obj instanceof SkillHolder))
+		if (!(obj instanceof SkillHolder))
 		{
 			return null;
 		}
@@ -740,7 +740,7 @@ public class StatsSet implements IParserAdvUtils
 	{
 		Objects.requireNonNull(key);
 		final Object obj = _set.get(key);
-		if ((obj == null) || !(obj instanceof Location))
+		if (!(obj instanceof Location))
 		{
 			return null;
 		}
@@ -753,7 +753,7 @@ public class StatsSet implements IParserAdvUtils
 		Objects.requireNonNull(key);
 		Objects.requireNonNull(clazz);
 		final Object obj = _set.get(key);
-		if ((obj == null) || !(obj instanceof List<?>))
+		if (!(obj instanceof List<?>))
 		{
 			return null;
 		}
@@ -791,7 +791,7 @@ public class StatsSet implements IParserAdvUtils
 	public <T extends Enum<T>> List<T> getEnumList(String key, Class<T> clazz)
 	{
 		final Object obj = _set.get(key);
-		if ((obj == null) || !(obj instanceof List<?>))
+		if (!(obj instanceof List<?>))
 		{
 			return null;
 		}
@@ -844,18 +844,15 @@ public class StatsSet implements IParserAdvUtils
 	public <K, V> Map<K, V> getMap(String key, Class<K> keyClass, Class<V> valueClass)
 	{
 		final Object obj = _set.get(key);
-		if ((obj == null) || !(obj instanceof Map<?, ?>))
+		if (!(obj instanceof Map<?, ?>))
 		{
 			return null;
 		}
 		
 		final Map<?, ?> originalList = (Map<?, ?>) obj;
-		if (!originalList.isEmpty())
+		if (!originalList.isEmpty() && ((!originalList.keySet().stream().allMatch(keyClass::isInstance)) || (!originalList.values().stream().allMatch(valueClass::isInstance))))
 		{
-			if ((!originalList.keySet().stream().allMatch(keyClass::isInstance)) || (!originalList.values().stream().allMatch(valueClass::isInstance)))
-			{
-				LOGGER.log(Level.WARNING, "getMap(\"" + key + "\", " + keyClass.getSimpleName() + ", " + valueClass.getSimpleName() + ") requested with wrong generic type: " + obj.getClass().getGenericInterfaces()[0] + "!", new ClassNotFoundException());
-			}
+			LOGGER.log(Level.WARNING, "getMap(\"" + key + "\", " + keyClass.getSimpleName() + ", " + valueClass.getSimpleName() + ") requested with wrong generic type: " + obj.getClass().getGenericInterfaces()[0] + "!", new ClassNotFoundException());
 		}
 		return (Map<K, V>) obj;
 	}

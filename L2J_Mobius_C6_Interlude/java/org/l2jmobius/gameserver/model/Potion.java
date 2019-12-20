@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 
 public class Potion extends WorldObject
 {
-	protected static final Logger LOGGER = Logger.getLogger(Creature.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(Potion.class.getName());
 	
 	private Future<?> _potionhpRegTask;
 	private Future<?> _potionmpRegTask;

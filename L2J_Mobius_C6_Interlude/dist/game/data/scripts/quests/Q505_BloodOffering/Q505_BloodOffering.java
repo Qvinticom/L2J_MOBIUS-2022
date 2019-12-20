@@ -142,7 +142,7 @@ public class Q505_BloodOffering extends Quest
 			if (!SevenSigns.getInstance().isSealValidationPeriod())
 			{
 				final String cabal = SevenSigns.getInstance().getPlayerData(player).getString("cabal");
-				if (cabal == "dawn")
+				if (cabal.equals("dawn"))
 				{
 					qs.setState(State.STARTED);
 					qs.set("cond", "1");
@@ -153,7 +153,7 @@ public class Q505_BloodOffering extends Quest
 					}
 					return "riftpost-1.htm";
 				}
-				if (cabal == "dusk")
+				if (cabal.equals("dusk"))
 				{
 					qs.setState(State.STARTED);
 					qs.set("cond", "1");

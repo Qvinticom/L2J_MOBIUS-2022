@@ -64,17 +64,10 @@ public abstract class Summon extends Playable
 	private int _chargedSoulShot;
 	private int _chargedSpiritShot;
 	
-	// TODO: currently, all servitors use 1 shot. However, this value should vary depending on the servitor template (id and level)!
-	private final int _soulShotsPerHit = 1;
-	private final int _spiritShotsPerHit = 1;
 	protected boolean _showSummonAnimation;
 	
 	public class AIAccessor extends Creature.AIAccessor
 	{
-		protected AIAccessor()
-		{
-		}
-		
 		public Summon getSummon()
 		{
 			return Summon.this;
@@ -113,7 +106,7 @@ public abstract class Summon extends Playable
 	@Override
 	public SummonKnownList getKnownList()
 	{
-		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof SummonKnownList))
+		if (!(super.getKnownList() instanceof SummonKnownList))
 		{
 			setKnownList(new SummonKnownList(this));
 		}
@@ -124,7 +117,7 @@ public abstract class Summon extends Playable
 	@Override
 	public SummonStat getStat()
 	{
-		if ((super.getStat() == null) || !(super.getStat() instanceof SummonStat))
+		if (!(super.getStat() instanceof SummonStat))
 		{
 			setStat(new SummonStat(this));
 		}
@@ -135,7 +128,7 @@ public abstract class Summon extends Playable
 	@Override
 	public SummonStatus getStatus()
 	{
-		if ((super.getStatus() == null) || !(super.getStatus() instanceof SummonStatus))
+		if (!(super.getStatus() instanceof SummonStatus))
 		{
 			setStatus(new SummonStatus(this));
 		}
@@ -300,13 +293,10 @@ public abstract class Summon extends Playable
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			return;
 		}
-		if (!target.isAttackable())
+		if (!target.isAttackable() && !(this instanceof SiegeSummonInstance))
 		{
-			if (!(this instanceof SiegeSummonInstance))
-			{
-				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-				return;
-			}
+			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+			return;
 		}
 		
 		super.doAttack(target);
@@ -329,12 +319,12 @@ public abstract class Summon extends Playable
 	
 	public int getSoulShotsPerHit()
 	{
-		return _soulShotsPerHit;
+		return 1;
 	}
 	
 	public int getSpiritShotsPerHit()
 	{
-		return _spiritShotsPerHit;
+		return 1;
 	}
 	
 	public void setMaxLoad(int maxLoad)
@@ -790,7 +780,7 @@ public abstract class Summon extends Playable
 	@Override
 	public boolean isInCombat()
 	{
-		return _owner != null ? _owner.isInCombat() : false;
+		return (_owner != null) && _owner.isInCombat();
 	}
 	
 	/**

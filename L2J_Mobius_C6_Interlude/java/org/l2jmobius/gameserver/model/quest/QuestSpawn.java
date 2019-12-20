@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.spawn.Spawn;
  */
 public class QuestSpawn
 {
-	private final Logger LOGGER = Quest.LOGGER;
+	private static final Logger LOGGER = Quest.LOGGER;
 	
 	private class DeSpawnScheduleTimerTask implements Runnable
 	{

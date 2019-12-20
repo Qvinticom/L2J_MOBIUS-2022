@@ -26,7 +26,7 @@ public class Q091_SagaOfTheArcanaLord extends SagasSuperClass
 	public Q091_SagaOfTheArcanaLord()
 	{
 		super(91, "Saga of the Arcana Lord");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			31605,
 			31622,
@@ -41,7 +41,7 @@ public class Q091_SagaOfTheArcanaLord extends SagasSuperClass
 			31658,
 			31608
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7604,
@@ -56,39 +56,39 @@ public class Q091_SagaOfTheArcanaLord extends SagasSuperClass
 			7110,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27313,
 			27240,
 			27310
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			96
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x0e
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			119518,
 			181215,
 			181227
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-28658,
 			36676,
 			36703
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-3811,
 			-4812,
 			-4816
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

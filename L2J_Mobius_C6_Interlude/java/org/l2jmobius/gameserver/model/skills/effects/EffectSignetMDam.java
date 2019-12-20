@@ -136,12 +136,9 @@ public class EffectSignetMDam extends Effect
 				
 				caster.reduceCurrentMp(mpConsume);
 				
-				if (creature instanceof Playable)
+				if ((creature instanceof Playable) && (!(creature instanceof Summon) || (((Summon) creature).getOwner() != caster)))
 				{
-					if ((!(creature instanceof Summon) || (((Summon) creature).getOwner() != caster)))
-					{
-						caster.updatePvPStatus(creature);
-					}
+					caster.updatePvPStatus(creature);
 				}
 				
 				targets.add(creature);

@@ -193,12 +193,12 @@ public class WarehouseInstance extends FolkInstance
 	/**
 	 * Show deposit window freight.
 	 * @param player the player
-	 * @param obj_Id the obj_ id
+	 * @param objId the object id
 	 */
-	private void showDepositWindowFreight(PlayerInstance player, int obj_Id)
+	private void showDepositWindowFreight(PlayerInstance player, int objId)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
-		PlayerInstance destChar = PlayerInstance.load(obj_Id);
+		PlayerInstance destChar = PlayerInstance.load(objId);
 		if (destChar == null)
 		{
 			// Something went wrong!
@@ -264,7 +264,7 @@ public class WarehouseInstance extends FolkInstance
 		{
 			if (Config.ALLOW_FREIGHT)
 			{
-				final int startOfId = command.lastIndexOf("_") + 1;
+				final int startOfId = command.lastIndexOf('_') + 1;
 				final String id = command.substring(startOfId);
 				showDepositWindowFreight(player, Integer.parseInt(id));
 			}

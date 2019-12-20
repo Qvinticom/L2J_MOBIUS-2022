@@ -65,8 +65,8 @@ public class Augmentation
 	
 	public class augmentationStatBonus
 	{
-		private final Stats _stats[];
-		private final float _values[];
+		private final Stats[] _stats;
+		private final float[] _values;
 		private boolean _active;
 		
 		public augmentationStatBonus(int augmentationId)

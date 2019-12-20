@@ -127,7 +127,7 @@ public class QuestLink implements IBypassHandler
 					String localisation = quest.isCustomQuest() ? quest.getPath() : "<fstring>" + quest.getNpcStringId() + "01</fstring>";
 					if (Config.MULTILANG_ENABLE)
 					{
-						final NpcStringId ns = NpcStringId.getNpcStringId(Integer.valueOf(quest.getNpcStringId() + "01"));
+						final NpcStringId ns = NpcStringId.getNpcStringId(Integer.parseInt(quest.getNpcStringId() + "01"));
 						if (ns != null)
 						{
 							final NSLocalisation nsl = ns.getLocalisation(player.getLang());
@@ -147,7 +147,7 @@ public class QuestLink implements IBypassHandler
 					String localisation = quest.isCustomQuest() ? quest.getPath() : "<fstring>" + quest.getNpcStringId() + "01</fstring>";
 					if (Config.MULTILANG_ENABLE)
 					{
-						final NpcStringId ns = NpcStringId.getNpcStringId(Integer.valueOf(quest.getNpcStringId() + "01"));
+						final NpcStringId ns = NpcStringId.getNpcStringId(Integer.parseInt(quest.getNpcStringId() + "01"));
 						if (ns != null)
 						{
 							final NSLocalisation nsl = ns.getLocalisation(player.getLang());
@@ -172,7 +172,7 @@ public class QuestLink implements IBypassHandler
 				String localisation = quest.isCustomQuest() ? quest.getPath() + " (In Progress)" : "<fstring>" + quest.getNpcStringId() + "02</fstring>";
 				if (Config.MULTILANG_ENABLE)
 				{
-					final NpcStringId ns = NpcStringId.getNpcStringId(Integer.valueOf(quest.getNpcStringId() + "02"));
+					final NpcStringId ns = NpcStringId.getNpcStringId(Integer.parseInt(quest.getNpcStringId() + "02"));
 					if (ns != null)
 					{
 						final NSLocalisation nsl = ns.getLocalisation(player.getLang());
@@ -192,7 +192,7 @@ public class QuestLink implements IBypassHandler
 				String localisation = quest.isCustomQuest() ? quest.getPath() + " (Done) " : "<fstring>" + quest.getNpcStringId() + "03</fstring>";
 				if (Config.MULTILANG_ENABLE)
 				{
-					final NpcStringId ns = NpcStringId.getNpcStringId(Integer.valueOf(quest.getNpcStringId() + "03"));
+					final NpcStringId ns = NpcStringId.getNpcStringId(Integer.parseInt(quest.getNpcStringId() + "03"));
 					if (ns != null)
 					{
 						final NSLocalisation nsl = ns.getLocalisation(player.getLang());

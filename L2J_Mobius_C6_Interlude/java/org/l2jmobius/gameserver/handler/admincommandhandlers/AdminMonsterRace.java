@@ -99,13 +99,13 @@ public class AdminMonsterRace implements IAdminCommandHandler
 			sm.addNumber(0);
 			activeChar.sendPacket(sm);
 			
-			PlaySound SRace = new PlaySound(1, "S_Race", 0, 0, 0, 0, 0);
-			activeChar.sendPacket(SRace);
-			activeChar.broadcastPacket(SRace);
+			PlaySound sRace = new PlaySound(1, "S_Race", 0, 0, 0, 0, 0);
+			activeChar.sendPacket(sRace);
+			activeChar.broadcastPacket(sRace);
 			
-			PlaySound SRace2 = new PlaySound(0, "ItemSound2.race_start", 1, 121209259, 12125, 182487, -3559);
-			activeChar.sendPacket(SRace2);
-			activeChar.broadcastPacket(SRace2);
+			PlaySound sRace2 = new PlaySound(0, "ItemSound2.race_start", 1, 121209259, 12125, 182487, -3559);
+			activeChar.sendPacket(sRace2);
+			activeChar.broadcastPacket(sRace2);
 			
 			MonRaceInfo spk = new MonRaceInfo(codes[state][0], codes[state][1], race.getMonsters(), race.getSpeeds());
 			activeChar.sendPacket(spk);

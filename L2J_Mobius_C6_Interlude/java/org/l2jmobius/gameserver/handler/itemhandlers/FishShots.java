@@ -97,8 +97,8 @@ public class FishShots implements IItemHandler
 		final WorldObject oldTarget = player.getTarget();
 		player.setTarget(player);
 		
-		MagicSkillUse MSU = new MagicSkillUse(player, SKILL_IDS[grade], 1, 0, 0);
-		Broadcast.toSelfAndKnownPlayers(player, MSU);
+		MagicSkillUse msu = new MagicSkillUse(player, SKILL_IDS[grade], 1, 0, 0);
+		Broadcast.toSelfAndKnownPlayers(player, msu);
 		player.setTarget(oldTarget);
 	}
 	

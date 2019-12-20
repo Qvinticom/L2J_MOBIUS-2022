@@ -24,7 +24,8 @@ import org.l2jmobius.gameserver.network.serverpackets.ManagePledgePower;
 
 public class RequestPledgePower extends GameClientPacket
 {
-	static Logger LOGGER = Logger.getLogger(ManagePledgePower.class.getName());
+	static Logger LOGGER = Logger.getLogger(RequestPledgePower.class.getName());
+	
 	private int _rank;
 	private int _action;
 	private int _privs;

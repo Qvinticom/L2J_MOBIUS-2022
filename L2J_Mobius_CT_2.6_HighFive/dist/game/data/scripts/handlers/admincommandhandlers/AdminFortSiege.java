@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminFortSiege implements IAdminCommandHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(AdminFortSiege.class.getName());
+	// private static final Logger LOGGER = Logger.getLogger(AdminFortSiege.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{

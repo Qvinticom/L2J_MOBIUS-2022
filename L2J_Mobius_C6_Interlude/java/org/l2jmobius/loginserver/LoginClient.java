@@ -41,7 +41,7 @@ import org.l2jmobius.loginserver.network.serverpackets.PlayFail.PlayFailReason;
  */
 public class LoginClient extends MMOClient<MMOConnection<LoginClient>>
 {
-	private static Logger LOGGER = Logger.getLogger(LoginClient.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(LoginClient.class.getName());
 	
 	public enum LoginClientState
 	{
@@ -122,7 +122,7 @@ public class LoginClient extends MMOClient<MMOConnection<LoginClient>>
 		}
 		catch (IOException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 			super.getConnection().close((SendablePacket<LoginClient>) null);
 			return false;
 		}
@@ -148,7 +148,7 @@ public class LoginClient extends MMOClient<MMOConnection<LoginClient>>
 		}
 		catch (IOException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 			return false;
 		}
 		

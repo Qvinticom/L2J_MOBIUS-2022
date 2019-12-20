@@ -21,10 +21,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
  */
 public class PledgeShowMemberListDeleteAll extends GameServerPacket
 {
-	public PledgeShowMemberListDeleteAll()
-	{
-	}
-	
 	@Override
 	protected final void writeImpl()
 	{

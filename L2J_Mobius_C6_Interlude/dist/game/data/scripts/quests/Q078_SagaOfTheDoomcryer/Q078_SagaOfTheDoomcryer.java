@@ -27,7 +27,7 @@ public class Q078_SagaOfTheDoomcryer extends SagasSuperClass
 	public Q078_SagaOfTheDoomcryer()
 	{
 		super(78, "Saga of the Doomcryer");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			31336,
 			31624,
@@ -42,7 +42,7 @@ public class Q078_SagaOfTheDoomcryer extends SagasSuperClass
 			31657,
 			31290
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7539,
@@ -57,39 +57,39 @@ public class Q078_SagaOfTheDoomcryer extends SagasSuperClass
 			7101,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27295,
 			27227,
 			27285
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			116
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x34
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			191046,
 			46087,
 			46066
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-40640,
 			-36372,
 			-36396
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-3042,
 			-1685,
 			-1685
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

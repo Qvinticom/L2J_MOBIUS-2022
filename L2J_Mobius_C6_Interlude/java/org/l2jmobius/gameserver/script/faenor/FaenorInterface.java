@@ -73,9 +73,8 @@ public class FaenorInterface implements EngineInterface
 	 * @param max
 	 * @param sweep
 	 * @param chance
-	 * @throws NullPointerException
 	 */
-	public void addDrop(int npcID, int itemID, int min, int max, boolean sweep, int chance) throws NullPointerException
+	public void addDrop(int npcID, int itemID, int min, int max, boolean sweep, int chance)
 	{
 		final NpcTemplate npc = npcTable.getTemplate(npcID);
 		if (npc == null)

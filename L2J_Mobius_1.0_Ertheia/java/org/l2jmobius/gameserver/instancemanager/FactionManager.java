@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class FactionManager
 {
-	private static Logger LOGGER = Logger.getLogger(FactionManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FactionManager.class.getName());
 	private final Map<Integer, Integer> _playerFactions = new ConcurrentHashMap<>();
 	
 	protected FactionManager()

@@ -137,10 +137,10 @@ public class QuestLink implements IBypassHandler
 			}
 			else
 			{
-				String localisation = NpcStringId.getNpcStringId(Integer.valueOf(quest.getNpcStringId() + state)).getText();
+				String localisation = NpcStringId.getNpcStringId(Integer.parseInt(quest.getNpcStringId() + state)).getText();
 				if (Config.MULTILANG_ENABLE)
 				{
-					final NpcStringId ns = NpcStringId.getNpcStringId(Integer.valueOf(quest.getNpcStringId() + state));
+					final NpcStringId ns = NpcStringId.getNpcStringId(Integer.parseInt(quest.getNpcStringId() + state));
 					if (ns != null)
 					{
 						final NSLocalisation nsl = ns.getLocalisation(player.getLang());
@@ -159,10 +159,10 @@ public class QuestLink implements IBypassHandler
 			{
 				if (questId == TO_LEAD_AND_BE_LED)
 				{
-					String localisation = "<a action=\"bypass -h Quest Q00118_ToLeadAndBeLed sponsor\">[" + NpcStringId.getNpcStringId(Integer.valueOf(questId + state)).getText() + " (Sponsor)]</a><br>";
+					String localisation = "<a action=\"bypass -h Quest Q00118_ToLeadAndBeLed sponsor\">[" + NpcStringId.getNpcStringId(Integer.parseInt(questId + state)).getText() + " (Sponsor)]</a><br>";
 					if (Config.MULTILANG_ENABLE)
 					{
-						final NpcStringId ns = NpcStringId.getNpcStringId(Integer.valueOf(questId + state));
+						final NpcStringId ns = NpcStringId.getNpcStringId(Integer.parseInt(questId + state));
 						if (ns != null)
 						{
 							final NSLocalisation nsl = ns.getLocalisation(player.getLang());
@@ -177,10 +177,10 @@ public class QuestLink implements IBypassHandler
 				
 				if (questId == THE_LEADER_AND_THE_FOLLOWER)
 				{
-					String localisation = "<a action=\"bypass -h Quest Q00123_TheLeaderAndTheFollower sponsor\">[" + NpcStringId.getNpcStringId(Integer.valueOf(questId + state)).getText() + " (Sponsor)]</a><br>";
+					String localisation = "<a action=\"bypass -h Quest Q00123_TheLeaderAndTheFollower sponsor\">[" + NpcStringId.getNpcStringId(Integer.parseInt(questId + state)).getText() + " (Sponsor)]</a><br>";
 					if (Config.MULTILANG_ENABLE)
 					{
-						final NpcStringId ns = NpcStringId.getNpcStringId(Integer.valueOf(questId + state));
+						final NpcStringId ns = NpcStringId.getNpcStringId(Integer.parseInt(questId + state));
 						if (ns != null)
 						{
 							final NSLocalisation nsl = ns.getLocalisation(player.getLang());

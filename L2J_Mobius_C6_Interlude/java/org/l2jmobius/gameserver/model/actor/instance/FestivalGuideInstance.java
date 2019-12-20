@@ -549,7 +549,7 @@ public class FestivalGuideInstance extends FolkInstance
 	 */
 	private final String calculateDate(String milliFromEpoch)
 	{
-		final long numMillis = Long.valueOf(milliFromEpoch);
+		final long numMillis = Long.parseLong(milliFromEpoch);
 		final Calendar calCalc = Calendar.getInstance();
 		
 		calCalc.setTimeInMillis(numMillis);

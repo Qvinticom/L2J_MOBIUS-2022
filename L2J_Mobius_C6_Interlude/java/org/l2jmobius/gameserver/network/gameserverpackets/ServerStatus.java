@@ -16,14 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.gameserverpackets;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author -Wooden-
  */
 public class ServerStatus extends GameServerBasePacket
 {
-	private final Vector<Attribute> _attributes;
+	private final List<Attribute> _attributes;
 	
 	public static final String[] STATUS_STRING =
 	{
@@ -65,7 +66,7 @@ public class ServerStatus extends GameServerBasePacket
 	
 	public ServerStatus()
 	{
-		_attributes = new Vector<>();
+		_attributes = new ArrayList<>();
 	}
 	
 	public void addAttribute(int id, int value)

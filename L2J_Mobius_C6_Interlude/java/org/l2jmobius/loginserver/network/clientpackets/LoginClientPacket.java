@@ -26,7 +26,7 @@ import org.l2jmobius.loginserver.LoginClient;
  */
 public abstract class LoginClientPacket extends ReceivablePacket<LoginClient>
 {
-	private static Logger LOGGER = Logger.getLogger(LoginClientPacket.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(LoginClientPacket.class.getName());
 	
 	@Override
 	protected final boolean read()

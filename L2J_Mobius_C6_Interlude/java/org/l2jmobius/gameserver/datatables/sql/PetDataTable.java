@@ -25,11 +25,10 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.PetData;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 
 public class PetDataTable
 {
-	private static final Logger LOGGER = Logger.getLogger(PetInstance.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(PetDataTable.class.getName());
 	
 	private static Map<Integer, Map<Integer, PetData>> _petTable = new HashMap<>();
 	

@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class RequestDropItem extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestDropItem.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestDropItem.class.getName());
 	
 	private int _objectId;
 	private int _count;

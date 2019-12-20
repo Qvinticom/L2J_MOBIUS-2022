@@ -45,18 +45,18 @@ public class RaidBossPointsManager
 	public static void init()
 	{
 		_list = new HashMap<>();
-		final List<Integer> _chars = new ArrayList<>();
+		final List<Integer> chars = new ArrayList<>();
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM `character_raid_points`");
 			ResultSet rset = statement.executeQuery();
 			while (rset.next())
 			{
-				_chars.add(rset.getInt("charId"));
+				chars.add(rset.getInt("charId"));
 			}
 			rset.close();
 			statement.close();
-			for (int charId : _chars)
+			for (int charId : chars)
 			{
 				final Map<Integer, Integer> values = new HashMap<>();
 				statement = con.prepareStatement("SELECT * FROM `character_raid_points` WHERE `charId`=?");
@@ -102,7 +102,7 @@ public class RaidBossPointsManager
 	public static void addPoints(PlayerInstance player, int bossId, int points)
 	{
 		final int ownerId = player.getObjectId();
-		Map<Integer, Integer> tmpPoint = new HashMap<>();
+		Map<Integer, Integer> tmpPoint;
 		if (_list == null)
 		{
 			_list = new HashMap<>();
@@ -127,7 +127,7 @@ public class RaidBossPointsManager
 	
 	public static final int getPointsByOwnerId(int ownerId)
 	{
-		Map<Integer, Integer> tmpPoint = new HashMap<>();
+		Map<Integer, Integer> tmpPoint;
 		if (_list == null)
 		{
 			_list = new HashMap<>();
@@ -140,9 +140,9 @@ public class RaidBossPointsManager
 			return 0;
 		}
 		
-		for (int bossId : tmpPoint.keySet())
+		for (int points : tmpPoint.values())
 		{
-			totalPoints += tmpPoint.get(bossId);
+			totalPoints += points;
 		}
 		return totalPoints;
 	}

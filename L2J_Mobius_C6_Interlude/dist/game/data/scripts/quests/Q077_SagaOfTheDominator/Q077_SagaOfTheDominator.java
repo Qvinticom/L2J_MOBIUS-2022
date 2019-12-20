@@ -26,7 +26,7 @@ public class Q077_SagaOfTheDominator extends SagasSuperClass
 	public Q077_SagaOfTheDominator()
 	{
 		super(77, "Saga of the Dominator");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			31336,
 			31624,
@@ -41,7 +41,7 @@ public class Q077_SagaOfTheDominator extends SagasSuperClass
 			31656,
 			31290
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7539,
@@ -56,39 +56,39 @@ public class Q077_SagaOfTheDominator extends SagasSuperClass
 			7100,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27294,
 			27226,
 			27262
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			115
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x33
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			164650,
 			47429,
 			47391
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-74121,
 			-56923,
 			-56929
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-2871,
 			-2383,
 			-2370
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

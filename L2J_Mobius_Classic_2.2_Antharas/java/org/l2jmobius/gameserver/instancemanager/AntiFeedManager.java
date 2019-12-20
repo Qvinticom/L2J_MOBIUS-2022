@@ -158,7 +158,7 @@ public class AntiFeedManager
 			return false; // no such event registered
 		}
 		
-		final Integer addrHash = Integer.valueOf(client.getConnectionAddress().hashCode());
+		final Integer addrHash = client.getConnectionAddress().hashCode();
 		final AtomicInteger connectionCount = event.computeIfAbsent(addrHash, k -> new AtomicInteger());
 		
 		if (!Config.DUALBOX_COUNT_OFFLINE_TRADERS)
@@ -211,7 +211,7 @@ public class AntiFeedManager
 			return false; // no such event registered
 		}
 		
-		final Integer addrHash = Integer.valueOf(client.getConnectionAddress().hashCode());
+		final Integer addrHash = client.getConnectionAddress().hashCode();
 		
 		return event.computeIfPresent(addrHash, (k, v) ->
 		{
@@ -275,7 +275,7 @@ public class AntiFeedManager
 			return max;
 		}
 		
-		final Integer addrHash = Integer.valueOf(client.getConnectionAddress().hashCode());
+		final Integer addrHash = client.getConnectionAddress().hashCode();
 		int limit = max;
 		if (Config.DUALBOX_CHECK_WHITELIST.containsKey(addrHash))
 		{

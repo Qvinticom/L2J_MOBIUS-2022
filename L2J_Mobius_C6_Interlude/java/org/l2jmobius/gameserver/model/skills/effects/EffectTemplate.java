@@ -91,23 +91,21 @@ public class EffectTemplate
 		}
 		try
 		{
-			final Effect effect = (Effect) _constructor.newInstance(env, this);
-			return effect;
+			return (Effect) _constructor.newInstance(env, this);
 		}
 		catch (IllegalAccessException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 			return null;
 		}
 		catch (InstantiationException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 			return null;
 		}
 		catch (InvocationTargetException e)
 		{
-			LOGGER.warning("Error creating new instance of Class " + _func + " Exception was:");
-			e.getTargetException().printStackTrace();
+			LOGGER.warning("Error creating new instance of Class " + _func + " Exception was: " + e);
 			return null;
 		}
 	}

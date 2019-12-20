@@ -225,18 +225,14 @@ public enum PlayerClass
 		return subclasses;
 	}
 	
-	public static EnumSet<PlayerClass> getSet(Race race, ClassLevel level)
+	public static Set<PlayerClass> getSet(Race race, ClassLevel level)
 	{
-		final EnumSet<PlayerClass> allOf = EnumSet.noneOf(PlayerClass.class);
-		
+		final Set<PlayerClass> allOf = EnumSet.noneOf(PlayerClass.class);
 		for (PlayerClass playerClass : EnumSet.allOf(PlayerClass.class))
 		{
-			if ((race == null) || playerClass.isOfRace(race))
+			if (((race == null) || playerClass.isOfRace(race)) && ((level == null) || playerClass.isOfLevel(level)))
 			{
-				if ((level == null) || playerClass.isOfLevel(level))
-				{
-					allOf.add(playerClass);
-				}
+				allOf.add(playerClass);
 			}
 		}
 		return allOf;

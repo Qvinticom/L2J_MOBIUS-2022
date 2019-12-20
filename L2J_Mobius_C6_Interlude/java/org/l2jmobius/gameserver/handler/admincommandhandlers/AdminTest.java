@@ -181,7 +181,7 @@ public class AdminTest implements IAdminCommandHandler
 		Creature creature;
 		WorldObject target = activeChar.getTarget();
 		
-		if ((target == null) || !(target instanceof Creature))
+		if (!(target instanceof Creature))
 		{
 			creature = activeChar;
 		}

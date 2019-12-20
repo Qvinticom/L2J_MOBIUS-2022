@@ -55,7 +55,6 @@ public class AdminPForge implements IAdminCommandHandler
 			}
 			catch (Exception ex)
 			{
-				ex.printStackTrace();
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //forge2 format");
 			}
 		}
@@ -69,7 +68,7 @@ public class AdminPForge implements IAdminCommandHandler
 				
 				boolean broadcast = false;
 				
-				if (format.toLowerCase().equals("broadcast"))
+				if (format.equalsIgnoreCase("broadcast"))
 				{
 					format = st.nextToken();
 					broadcast = true;
@@ -81,66 +80,66 @@ public class AdminPForge implements IAdminCommandHandler
 				{
 					String val = st.nextToken();
 					
-					if (val.toLowerCase().equals("$objid"))
+					if (val.equalsIgnoreCase("$objid"))
 					{
 						val = String.valueOf(activeChar.getObjectId());
 					}
-					else if (val.toLowerCase().equals("$tobjid"))
+					else if (val.equalsIgnoreCase("$tobjid"))
 					{
 						val = String.valueOf(activeChar.getTarget().getObjectId());
 					}
-					else if (val.toLowerCase().equals("$bobjid"))
+					else if (val.equalsIgnoreCase("$bobjid"))
 					{
 						if (activeChar.getBoat() != null)
 						{
 							val = String.valueOf(activeChar.getBoat().getObjectId());
 						}
 					}
-					else if (val.toLowerCase().equals("$clarid"))
+					else if (val.equalsIgnoreCase("$clarid"))
 					{
 						val = String.valueOf(((PlayerInstance) activeChar.getTarget()).getObjectId());
 					}
-					else if (val.toLowerCase().equals("$allyid"))
+					else if (val.equalsIgnoreCase("$allyid"))
 					{
 						val = String.valueOf(activeChar.getAllyId());
 					}
-					else if (val.toLowerCase().equals("$tclanid"))
+					else if (val.equalsIgnoreCase("$tclanid"))
 					{
 						val = String.valueOf(((PlayerInstance) activeChar.getTarget()).getClanId());
 					}
-					else if (val.toLowerCase().equals("$tallyid"))
+					else if (val.equalsIgnoreCase("$tallyid"))
 					{
 						val = String.valueOf(((PlayerInstance) activeChar.getTarget()).getAllyId());
 					}
-					else if (val.toLowerCase().equals("$x"))
+					else if (val.equalsIgnoreCase("$x"))
 					{
 						val = String.valueOf(activeChar.getX());
 					}
-					else if (val.toLowerCase().equals("$y"))
+					else if (val.equalsIgnoreCase("$y"))
 					{
 						val = String.valueOf(activeChar.getY());
 					}
-					else if (val.toLowerCase().equals("$z"))
+					else if (val.equalsIgnoreCase("$z"))
 					{
 						val = String.valueOf(activeChar.getZ());
 					}
-					else if (val.toLowerCase().equals("$heading"))
+					else if (val.equalsIgnoreCase("$heading"))
 					{
 						val = String.valueOf(activeChar.getHeading());
 					}
-					else if (val.toLowerCase().equals("$tx"))
+					else if (val.equalsIgnoreCase("$tx"))
 					{
 						val = String.valueOf(activeChar.getTarget().getX());
 					}
-					else if (val.toLowerCase().equals("$ty"))
+					else if (val.equalsIgnoreCase("$ty"))
 					{
 						val = String.valueOf(activeChar.getTarget().getY());
 					}
-					else if (val.toLowerCase().equals("$tz"))
+					else if (val.equalsIgnoreCase("$tz"))
 					{
 						val = String.valueOf(activeChar.getTarget().getZ());
 					}
-					else if (val.toLowerCase().equals("$theading"))
+					else if (val.equalsIgnoreCase("$theading"))
 					{
 						val = String.valueOf(((PlayerInstance) activeChar.getTarget()).getHeading());
 					}

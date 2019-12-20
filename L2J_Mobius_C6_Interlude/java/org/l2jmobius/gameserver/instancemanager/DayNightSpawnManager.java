@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
@@ -40,7 +41,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class DayNightSpawnManager
 {
-	private static Logger LOGGER = Logger.getLogger(DayNightSpawnManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(DayNightSpawnManager.class.getName());
 	
 	private final List<Spawn> _dayCreatures = new ArrayList<>();
 	private final List<Spawn> _nightCreatures = new ArrayList<>();
@@ -90,10 +91,10 @@ public class DayNightSpawnManager
 	 * Manage Spawn/Respawn
 	 * @param unSpawnCreatures List with spawns must be unspawned
 	 * @param spawnCreatures List with spawns must be spawned
-	 * @param UnspawnLogInfo String for log info for unspawned NpcInstance
-	 * @param SpawnLogInfo String for log info for spawned NpcInstance
+	 * @param unspawnLogInfo String for log info for unspawned NpcInstance
+	 * @param spawnLogInfo String for log info for spawned NpcInstance
 	 */
-	private void spawnCreatures(List<Spawn> unSpawnCreatures, List<Spawn> spawnCreatures, String UnspawnLogInfo, String SpawnLogInfo)
+	private void spawnCreatures(List<Spawn> unSpawnCreatures, List<Spawn> spawnCreatures, String unspawnLogInfo, String spawnLogInfo)
 	{
 		try
 		{
@@ -115,7 +116,7 @@ public class DayNightSpawnManager
 						i++;
 					}
 				}
-				LOGGER.info("DayNightSpawnManager: Removed " + i + " " + UnspawnLogInfo + " creatures");
+				LOGGER.info("DayNightSpawnManager: Removed " + i + " " + unspawnLogInfo + " creatures");
 			}
 			
 			int i = 0;
@@ -130,7 +131,7 @@ public class DayNightSpawnManager
 				i++;
 			}
 			
-			LOGGER.info("DayNightSpawnManager: Spawned " + i + " " + SpawnLogInfo + " creatures");
+			LOGGER.info("DayNightSpawnManager: Spawned " + i + " " + spawnLogInfo + " creatures");
 		}
 		catch (Exception e)
 		{
@@ -199,12 +200,12 @@ public class DayNightSpawnManager
 	{
 		try
 		{
-			RaidBossInstance boss;
-			for (Spawn spawn : _bosses.keySet())
+			for (Entry<Spawn, RaidBossInstance> entry : _bosses.entrySet())
 			{
-				boss = _bosses.get(spawn);
+				RaidBossInstance boss = entry.getValue();
 				if ((boss == null) && (mode == 1))
 				{
+					final Spawn spawn = entry.getKey();
 					boss = (RaidBossInstance) spawn.doSpawn();
 					RaidBossSpawnManager.getInstance().notifySpawnNightBoss(boss);
 					_bosses.put(spawn, boss);

@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.gameserver.model.PartyMatchRoom;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Gnacik
@@ -27,10 +26,9 @@ public class PartyMatchDetail extends GameServerPacket
 	private final PartyMatchRoom _room;
 	
 	/**
-	 * @param player
 	 * @param room
 	 */
-	public PartyMatchDetail(PlayerInstance player, PartyMatchRoom room)
+	public PartyMatchDetail(PartyMatchRoom room)
 	{
 		_room = room;
 	}

@@ -641,7 +641,7 @@ public abstract class Item
 				funcs.add(f);
 			}
 		}
-		if (funcs.size() == 0)
+		if (funcs.isEmpty())
 		{
 			return _emptyFunctionSet;
 		}
@@ -673,7 +673,7 @@ public abstract class Item
 				effects.add(e);
 			}
 		}
-		if (effects.size() == 0)
+		if (effects.isEmpty())
 		{
 			return _emptyEffectSet;
 		}
@@ -710,7 +710,7 @@ public abstract class Item
 				effects.add(e);
 			}
 		}
-		if (effects.size() == 0)
+		if (effects.isEmpty())
 		{
 			return _emptyEffectSet;
 		}

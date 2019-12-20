@@ -378,7 +378,7 @@ public class Q00620_FourGoblets extends Quest
 				final int memoStateEx = qs.getMemoStateEx(1);
 				if (((memoStateEx == 2) || (memoStateEx == 3)) && (getQuestItemsCount(player, BROKEN_RELIC_PART) >= 1000))
 				{
-					giveItems(player, Integer.valueOf(event), 1);
+					giveItems(player, Integer.parseInt(event), 1);
 					takeItems(player, BROKEN_RELIC_PART, 1000);
 					htmltext = "31454-05.html";
 				}

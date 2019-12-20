@@ -52,8 +52,6 @@ public class Maps implements IItemHandler
 		{
 			player.sendPacket(new ShowMiniMap(itemId));
 		}
-		
-		return;
 	}
 	
 	@Override

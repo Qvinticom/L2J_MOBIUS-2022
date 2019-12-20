@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class RequestGetItemFromPet extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestGetItemFromPet.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestGetItemFromPet.class.getName());
 	
 	private int _objectId;
 	private int _amount;

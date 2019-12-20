@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class CastleManorManager
 {
-	protected static Logger LOGGER = Logger.getLogger(CastleManorManager.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(CastleManorManager.class.getName());
 	
 	public static final int PERIOD_CURRENT = 0;
 	public static final int PERIOD_NEXT = 1;
@@ -176,7 +176,7 @@ public class CastleManorManager
 		_disabled = !Config.ALLOW_MANOR;
 		for (Castle c : CastleManager.getInstance().getCastles())
 		{
-			c.setNextPeriodApproved(APPROVE == 1 ? true : false);
+			c.setNextPeriodApproved(APPROVE == 1);
 		}
 	}
 	
@@ -277,11 +277,11 @@ public class CastleManorManager
 			APPROVE = isApproved ? 1 : 0;
 		}
 		
-		final Calendar FirstDelay = Calendar.getInstance();
-		FirstDelay.set(Calendar.SECOND, 0);
-		FirstDelay.set(Calendar.MILLISECOND, 0);
-		FirstDelay.add(Calendar.MINUTE, 1);
-		ThreadPool.scheduleAtFixedRate(new ManorTask(), FirstDelay.getTimeInMillis() - Calendar.getInstance().getTimeInMillis(), 60000);
+		final Calendar firstDelay = Calendar.getInstance();
+		firstDelay.set(Calendar.SECOND, 0);
+		firstDelay.set(Calendar.MILLISECOND, 0);
+		firstDelay.add(Calendar.MINUTE, 1);
+		ThreadPool.scheduleAtFixedRate(new ManorTask(), firstDelay.getTimeInMillis() - Calendar.getInstance().getTimeInMillis(), 60000);
 	}
 	
 	public void setNextPeriod()
@@ -342,15 +342,15 @@ public class CastleManorManager
 			c.setSeedProduction(c.getSeedProduction(PERIOD_NEXT), PERIOD_CURRENT);
 			c.setCropProcure(c.getCropProcure(PERIOD_NEXT), PERIOD_CURRENT);
 			
-			int manor_cost = c.getManorCost(PERIOD_CURRENT);
-			if (c.getTreasury() < manor_cost)
+			int manorCost = c.getManorCost(PERIOD_CURRENT);
+			if (c.getTreasury() < manorCost)
 			{
 				c.setSeedProduction(getNewSeedsList(c.getCastleId()), PERIOD_NEXT);
 				c.setCropProcure(getNewCropsList(c.getCastleId()), PERIOD_NEXT);
-				manor_cost = c.getManorCost(PERIOD_CURRENT);
-				if (manor_cost > 0)
+				manorCost = c.getManorCost(PERIOD_CURRENT);
+				if (manorCost > 0)
 				{
-					LOGGER.info(c.getName() + "|" + -manor_cost + "|ManorManager Error@setNextPeriod");
+					LOGGER.info(c.getName() + "|" + -manorCost + "|ManorManager Error@setNextPeriod");
 				}
 			}
 			else
@@ -400,16 +400,16 @@ public class CastleManorManager
 			// Castle has no owner
 			if (c.getOwnerId() > 0)
 			{
-				int manor_cost = c.getManorCost(PERIOD_NEXT);
+				int manorCost = c.getManorCost(PERIOD_NEXT);
 				
-				if (c.getTreasury() < manor_cost)
+				if (c.getTreasury() < manorCost)
 				{
 					c.setSeedProduction(getNewSeedsList(c.getCastleId()), PERIOD_NEXT);
 					c.setCropProcure(getNewCropsList(c.getCastleId()), PERIOD_NEXT);
-					manor_cost = c.getManorCost(PERIOD_NEXT);
-					if (manor_cost > 0)
+					manorCost = c.getManorCost(PERIOD_NEXT);
+					if (manorCost > 0)
 					{
-						LOGGER.info(c.getName() + "|" + -manor_cost + "|ManorManager Error@approveNextPeriod");
+						LOGGER.info(c.getName() + "|" + -manorCost + "|ManorManager Error@approveNextPeriod");
 					}
 					final Clan clan = ClanTable.getInstance().getClan(c.getOwnerId());
 					PlayerInstance clanLeader = null;
@@ -424,8 +424,8 @@ public class CastleManorManager
 				}
 				else
 				{
-					c.addToTreasuryNoTax(-manor_cost);
-					LOGGER.info(c.getName() + "|" + -manor_cost + "|ManorManager");
+					c.addToTreasuryNoTax(-manorCost);
+					LOGGER.info(c.getName() + "|" + -manorCost + "|ManorManager");
 				}
 			}
 			c.setNextPeriodApproved(true);

@@ -22,7 +22,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.ICustomByPassHandler;
-import org.l2jmobius.gameserver.idfactory.BitSetIDFactory;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Rebirth;
 
@@ -35,7 +34,7 @@ import org.l2jmobius.gameserver.model.entity.Rebirth;
  */
 public class CustomBypassHandler
 {
-	private static Logger LOGGER = Logger.getLogger(BitSetIDFactory.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(CustomBypassHandler.class.getName());
 	
 	private final Map<String, ICustomByPassHandler> _handlers;
 	
@@ -67,7 +66,7 @@ public class CustomBypassHandler
 		
 		String cmd = "";
 		String params = "";
-		final int iPos = command.indexOf(" ");
+		final int iPos = command.indexOf(' ');
 		if (iPos != -1)
 		{
 			cmd = command.substring(7, iPos);

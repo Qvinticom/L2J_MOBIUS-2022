@@ -55,7 +55,7 @@ public class ExtractableByPassHandler implements ICustomByPassHandler
 				return;
 			}
 			final IItemHandler ih = ItemHandler.getInstance().getItemHandler(item.getItemId());
-			if ((ih == null) || !(ih instanceof ExtractableItems))
+			if (!(ih instanceof ExtractableItems))
 			{
 				return;
 			}

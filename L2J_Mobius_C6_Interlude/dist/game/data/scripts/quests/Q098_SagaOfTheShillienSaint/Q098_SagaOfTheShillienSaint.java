@@ -27,7 +27,7 @@ public class Q098_SagaOfTheShillienSaint extends SagasSuperClass
 	public Q098_SagaOfTheShillienSaint()
 	{
 		super(98, "Saga of the Shillien Saint");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			31581,
 			31626,
@@ -42,7 +42,7 @@ public class Q098_SagaOfTheShillienSaint extends SagasSuperClass
 			31658,
 			31287
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7525,
@@ -57,39 +57,39 @@ public class Q098_SagaOfTheShillienSaint extends SagasSuperClass
 			7090,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27270,
 			27247,
 			27277
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			112
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x2b
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			119518,
 			181215,
 			181227
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-28658,
 			36676,
 			36703
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-3811,
 			-4812,
 			-4816
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

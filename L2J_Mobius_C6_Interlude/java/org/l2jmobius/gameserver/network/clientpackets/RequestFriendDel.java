@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestFriendDel extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestFriendDel.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestFriendDel.class.getName());
 	
 	private String _name;
 	

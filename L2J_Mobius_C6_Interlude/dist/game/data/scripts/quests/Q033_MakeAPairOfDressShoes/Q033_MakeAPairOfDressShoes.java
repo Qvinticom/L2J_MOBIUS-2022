@@ -37,7 +37,7 @@ public class Q033_MakeAPairOfDressShoes extends Quest
 	private static final int ADENA = 57;
 	
 	// Rewards
-	public static int DRESS_SHOES_BOX = 7113;
+	public static final int DRESS_SHOES_BOX = 7113;
 	
 	public Q033_MakeAPairOfDressShoes()
 	{

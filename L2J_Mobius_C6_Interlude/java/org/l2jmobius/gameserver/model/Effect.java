@@ -309,12 +309,7 @@ public abstract class Effect
 	
 	public boolean isHerbEffect()
 	{
-		if (_skill.getName().contains("Herb"))
-		{
-			return true;
-		}
-		
-		return false;
+		return _skill.getName().contains("Herb");
 	}
 	
 	public double calc()
@@ -467,7 +462,6 @@ public abstract class Effect
 			if (_period > 0)
 			{
 				startEffectTask(_period * 1000);
-				return;
 			}
 		}
 	}
@@ -524,9 +518,9 @@ public abstract class Effect
 			onExit();
 			
 			// If the time left is equal to zero, send the message
-			if ((_effected != null) && (_effected instanceof PlayerInstance) && _template.showIcon && !_effected.isDead())
+			if ((_effected instanceof PlayerInstance) && _template.showIcon && !_effected.isDead())
 			{
-				// Like L2OFF message S1_HAS_BEEN_ABORTED for toogle skills
+				// Like L2OFF message S1_HAS_BEEN_ABORTED for toggle skills
 				if (_skill.isToggle())
 				{
 					final SystemMessage smsg3 = new SystemMessage(SystemMessageId.S1_HAS_BEEN_ABORTED);
@@ -547,7 +541,7 @@ public abstract class Effect
 				}
 			}
 			
-			// Stop the task of the Effect, remove it and update client magic icone
+			// Stop the task of the Effect, remove it and update client magic icon.
 			stopEffectTask();
 		}
 	}
@@ -571,7 +565,7 @@ public abstract class Effect
 				funcs.add(f);
 			}
 		}
-		if (funcs.size() == 0)
+		if (funcs.isEmpty())
 		{
 			return _emptyFunctionSet;
 		}
@@ -606,27 +600,16 @@ public abstract class Effect
 			}
 			else if (!_skill.isToggle())
 			{
-				if (_skill.is_Debuff())
-				{
-					mi.addEffect(_skill.getId(), _skill.getLevel(), (_count * _period) * 1000, true);
-				}
-				else
-				{
-					mi.addEffect(_skill.getId(), _skill.getLevel(), (_count * _period) * 1000, false);
-				}
+				mi.addEffect(_skill.getId(), _skill.getLevel(), (_count * _period) * 1000, _skill.isDebuff());
 			}
 			else
 			{
 				mi.addEffect(_skill.getId(), _skill.getLevel(), -1, true);
 			}
 		}
-		else if (_skill.getSkillType() == SkillType.DEBUFF)
-		{
-			mi.addEffect(_skill.getId(), _skill.getLevel(), (int) future.getDelay(TimeUnit.MILLISECONDS) + 1000, true);
-		}
 		else
 		{
-			mi.addEffect(_skill.getId(), _skill.getLevel(), (int) future.getDelay(TimeUnit.MILLISECONDS) + 1000, false);
+			mi.addEffect(_skill.getId(), _skill.getLevel(), (int) future.getDelay(TimeUnit.MILLISECONDS) + 1000, _skill.getSkillType() == SkillType.DEBUFF);
 		}
 	}
 	

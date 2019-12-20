@@ -35,7 +35,7 @@ import org.l2jmobius.loginserver.GameServerThread;
  */
 public class ChangePassword extends BaseRecievePacket
 {
-	protected static Logger LOGGER = Logger.getLogger(ChangePassword.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(ChangePassword.class.getName());
 	private static GameServerThread gst = null;
 	
 	public ChangePassword(byte[] decrypt)

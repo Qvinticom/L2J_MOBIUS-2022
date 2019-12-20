@@ -77,9 +77,9 @@ public class Fishing implements Runnable
 		}
 	}
 	
-	public Fishing(PlayerInstance Fisher, FishData fish, boolean isNoob, boolean isUpperGrade, int lureId)
+	public Fishing(PlayerInstance fisher, FishData fish, boolean isNoob, boolean isUpperGrade, int lureId)
 	{
-		_fisher = Fisher;
+		_fisher = fisher;
 		_fishMaxHp = fish.getHP();
 		_fishCurHp = _fishMaxHp;
 		_regenHp = fish.getHpRegen();
@@ -128,12 +128,10 @@ public class Fishing implements Runnable
 		{
 			_fishCurHp = _fishMaxHp * 2;
 			doDie(false);
-			return;
 		}
 		else if (_fishCurHp == 0)
 		{
 			doDie(true);
-			return;
 		}
 	}
 	

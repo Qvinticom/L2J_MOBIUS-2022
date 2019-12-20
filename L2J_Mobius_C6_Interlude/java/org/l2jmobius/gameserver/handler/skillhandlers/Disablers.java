@@ -49,6 +49,8 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class Disablers implements ISkillHandler
 {
+	protected static final Logger LOGGER = Logger.getLogger(Disablers.class.getName());
+	
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.STUN,
@@ -73,16 +75,6 @@ public class Disablers implements ISkillHandler
 		SkillType.BETRAY
 	};
 	
-	protected static final Logger LOGGER = Logger.getLogger(Skill.class.getName());
-	private String[] _negateSkillTypes = null;
-	private String[] _negateEffectTypes = null;
-	private float _negatePower = 0.f;
-	private int _negateId = 0;
-	
-	/*
-	 * Suppress null warnings, all are checked if target is null go to the next iteration.
-	 */
-	@SuppressWarnings("null")
 	@Override
 	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
@@ -101,8 +93,7 @@ public class Disablers implements ISkillHandler
 			}
 			
 			Creature target = (Creature) target2;
-			
-			if ((target == null) || target.isDead())
+			if (target.isDead())
 			{
 				continue;
 			}
@@ -143,6 +134,7 @@ public class Disablers implements ISkillHandler
 					{
 						target = creature;
 					}
+					// fallthrough?
 				}
 				case ROOT:
 				{
@@ -223,6 +215,7 @@ public class Disablers implements ISkillHandler
 						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						creature.sendPacket(sm);
 					}
+					break; // Used to be fallthrough.
 				}
 				case AGGDAMAGE:
 				{
@@ -259,15 +252,15 @@ public class Disablers implements ISkillHandler
 					{
 						if (target instanceof Attackable)
 						{
-							Attackable _target = (Attackable) target;
-							_target.stopHating(creature);
-							if (_target.getMostHated() == null)
+							Attackable attackable = (Attackable) target;
+							attackable.stopHating(creature);
+							if (attackable.getMostHated() == null)
 							{
-								((AttackableAI) _target.getAI()).setGlobalAggro(-25);
-								_target.clearAggroList();
-								_target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-								_target.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-								_target.setWalking();
+								((AttackableAI) attackable.getAI()).setGlobalAggro(-25);
+								attackable.clearAggroList();
+								attackable.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+								attackable.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+								attackable.setWalking();
 							}
 						}
 						skill.getEffects(creature, target, ss, sps, bss);
@@ -477,7 +470,7 @@ public class Disablers implements ISkillHandler
 										final int level = e.getLevel();
 										if (level > 0)
 										{
-											rate = Integer.valueOf(150 / (1 + level));
+											rate = 150 / (1 + level);
 										}
 										
 										if (rate > 95)
@@ -533,34 +526,31 @@ public class Disablers implements ISkillHandler
 								}
 							}
 							
-							if ((e.getSkill().getId() != 4082) && (e.getSkill().getId() != 4215) && (e.getSkill().getId() != 5182) && (e.getSkill().getId() != 4515) && (e.getSkill().getId() != 110) && (e.getSkill().getId() != 111) && (e.getSkill().getId() != 1323) && (e.getSkill().getId() != 1325))
+							if ((e.getSkill().getId() != 4082) && (e.getSkill().getId() != 4215) && (e.getSkill().getId() != 5182) && (e.getSkill().getId() != 4515) && (e.getSkill().getId() != 110) && (e.getSkill().getId() != 111) && (e.getSkill().getId() != 1323) && (e.getSkill().getId() != 1325) && (e.getSkill().getSkillType() == SkillType.BUFF))
 							{
-								if (e.getSkill().getSkillType() == SkillType.BUFF)
+								int rate = 100;
+								final int level = e.getLevel();
+								if (level > 0)
 								{
-									int rate = 100;
-									final int level = e.getLevel();
-									if (level > 0)
+									rate = 150 / (1 + level);
+								}
+								
+								if (rate > 95)
+								{
+									rate = 95;
+								}
+								else if (rate < 5)
+								{
+									rate = 5;
+								}
+								
+								if (Rnd.get(100) < rate)
+								{
+									e.exit(true);
+									maxdisp--;
+									if (maxdisp == 0)
 									{
-										rate = Integer.valueOf(150 / (1 + level));
-									}
-									
-									if (rate > 95)
-									{
-										rate = 95;
-									}
-									else if (rate < 5)
-									{
-										rate = 5;
-									}
-									
-									if (Rnd.get(100) < rate)
-									{
-										e.exit(true);
-										maxdisp--;
-										if (maxdisp == 0)
-										{
-											break;
-										}
+										break;
 									}
 								}
 							}
@@ -577,21 +567,22 @@ public class Disablers implements ISkillHandler
 				}
 				case NEGATE:
 				{
+					float negatePower;
 					if (skill.getId() == 2275) // fishing potion
 					{
-						_negatePower = skill.getNegatePower();
-						_negateId = skill.getNegateId();
-						negateEffect(target, SkillType.BUFF, _negatePower, _negateId);
+						negatePower = skill.getNegatePower();
+						int negateId = skill.getNegateId();
+						negateEffect(target, SkillType.BUFF, negatePower, negateId);
 					}
 					else // all others negate type skills
 					{
-						_negateSkillTypes = skill.getNegateSkillTypes();
-						_negateEffectTypes = skill.getNegateEffectTypes();
-						_negatePower = skill.getNegatePower();
-						for (String stat : _negateSkillTypes)
+						String[] negateSkillTypes = skill.getNegateSkillTypes();
+						String[] negateEffectTypes = skill.getNegateEffectTypes();
+						negatePower = skill.getNegatePower();
+						for (String stat : negateSkillTypes)
 						{
 							stat = stat.toLowerCase().intern();
-							if (stat == "buff")
+							if (stat.equals("buff"))
 							{
 								int lvlmodifier = 52 + (skill.getMagicLevel() * 2);
 								if (skill.getMagicLevel() == 12)
@@ -609,69 +600,69 @@ public class Disablers implements ISkillHandler
 									negateEffect(target, SkillType.BUFF, -1);
 								}
 							}
-							if (stat == "debuff")
+							if (stat.equals("debuff"))
 							{
 								negateEffect(target, SkillType.DEBUFF, -1);
 							}
-							if (stat == "weakness")
+							if (stat.equals("weakness"))
 							{
 								negateEffect(target, SkillType.WEAKNESS, -1);
 							}
-							if (stat == "stun")
+							if (stat.equals("stun"))
 							{
 								negateEffect(target, SkillType.STUN, -1);
 							}
-							if (stat == "sleep")
+							if (stat.equals("sleep"))
 							{
 								negateEffect(target, SkillType.SLEEP, -1);
 							}
-							if (stat == "mdam")
+							if (stat.equals("mdam"))
 							{
 								negateEffect(target, SkillType.MDAM, -1);
 							}
-							if (stat == "confusion")
+							if (stat.equals("confusion"))
 							{
 								negateEffect(target, SkillType.CONFUSION, -1);
 							}
-							if (stat == "mute")
+							if (stat.equals("mute"))
 							{
 								negateEffect(target, SkillType.MUTE, -1);
 							}
-							if (stat == "fear")
+							if (stat.equals("fear"))
 							{
 								negateEffect(target, SkillType.FEAR, -1);
 							}
-							if (stat == "poison")
+							if (stat.equals("poison"))
 							{
-								negateEffect(target, SkillType.POISON, _negatePower);
+								negateEffect(target, SkillType.POISON, negatePower);
 							}
-							if (stat == "bleed")
+							if (stat.equals("bleed"))
 							{
-								negateEffect(target, SkillType.BLEED, _negatePower);
+								negateEffect(target, SkillType.BLEED, negatePower);
 							}
-							if (stat == "paralyze")
+							if (stat.equals("paralyze"))
 							{
 								negateEffect(target, SkillType.PARALYZE, -1);
 							}
-							if (stat == "root")
+							if (stat.equals("root"))
 							{
 								negateEffect(target, SkillType.ROOT, -1);
 							}
-							if (stat == "heal")
+							if (stat.equals("heal"))
 							{
-								ISkillHandler Healhandler = SkillHandler.getInstance().getSkillHandler(SkillType.HEAL);
-								if (Healhandler == null)
+								ISkillHandler healhandler = SkillHandler.getInstance().getSkillHandler(SkillType.HEAL);
+								if (healhandler == null)
 								{
 									LOGGER.warning("Couldn't find skill handler for HEAL.");
 									continue;
 								}
-								final WorldObject tgts[] = new WorldObject[]
+								final WorldObject[] tgts = new WorldObject[]
 								{
 									target
 								};
 								try
 								{
-									Healhandler.useSkill(creature, skill, tgts);
+									healhandler.useSkill(creature, skill, tgts);
 								}
 								catch (IOException e)
 								{
@@ -679,20 +670,20 @@ public class Disablers implements ISkillHandler
 								}
 							}
 						}
-						for (String stat : _negateEffectTypes)
+						for (String stat : negateEffectTypes)
 						{
-							EffectType effect_type = null;
+							EffectType effectType = null;
 							try
 							{
-								effect_type = EffectType.valueOf(stat.toUpperCase());
+								effectType = EffectType.valueOf(stat.toUpperCase());
 							}
 							catch (Exception e)
 							{
 								//
 							}
-							if (effect_type != null)
+							if (effectType != null)
 							{
-								switch (effect_type)
+								switch (effectType)
 								{
 									case BUFF:
 									{
@@ -709,13 +700,13 @@ public class Disablers implements ISkillHandler
 										landrate = (int) target.calcStat(Stats.CANCEL_VULN, landrate, target, null);
 										if (Rnd.get(100) < landrate)
 										{
-											target.stopEffects(effect_type);
+											target.stopEffects(effectType);
 										}
 									}
 										break;
 									default:
 									{
-										target.stopEffects(effect_type);
+										target.stopEffects(effectType);
 									}
 										break;
 								}

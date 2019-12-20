@@ -27,7 +27,7 @@ import javax.crypto.Cipher;
  */
 public class BlowFishKey extends GameServerBasePacket
 {
-	private static Logger LOGGER = Logger.getLogger(BlowFishKey.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(BlowFishKey.class.getName());
 	
 	/**
 	 * @param blowfishKey
@@ -46,8 +46,7 @@ public class BlowFishKey extends GameServerBasePacket
 		}
 		catch (GeneralSecurityException e)
 		{
-			LOGGER.warning("Error While encrypting blowfish key for transmision (Crypt error)");
-			e.printStackTrace();
+			LOGGER.warning("Error While encrypting blowfish key for transmision (Crypt error) " + e);
 		}
 	}
 	

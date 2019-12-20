@@ -62,7 +62,7 @@ public class CloseShieldedInputStream extends InputStream
 	 * {@inheritDoc}
 	 */
 	@Override
-	public int read(byte b[]) throws IOException
+	public int read(byte[] b) throws IOException
 	{
 		if (_in == null)
 		{
@@ -75,7 +75,7 @@ public class CloseShieldedInputStream extends InputStream
 	 * {@inheritDoc}
 	 */
 	@Override
-	public int read(byte b[], int off, int len) throws IOException
+	public int read(byte[] b, int off, int len) throws IOException
 	{
 		if (_in == null)
 		{

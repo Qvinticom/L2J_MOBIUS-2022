@@ -24,11 +24,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class MapForestOfTheDead implements IItemHandler
 {
-	public MapForestOfTheDead()
-	{
-	}
-	
-	private static int _itemIds[] =
+	private static final int[] ITEM_IDS =
 	{
 		7063
 	};
@@ -63,6 +59,6 @@ public class MapForestOfTheDead implements IItemHandler
 	@Override
 	public int[] getItemIds()
 	{
-		return _itemIds;
+		return ITEM_IDS;
 	}
 }

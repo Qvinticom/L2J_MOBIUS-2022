@@ -71,10 +71,10 @@ public class LoginStatusThread extends Thread
 	private boolean isValidIP(Socket client)
 	{
 		boolean result = false;
-		final InetAddress ClientIP = client.getInetAddress();
+		final InetAddress clientIP = client.getInetAddress();
 		
 		// convert IP to String, and compare with list
-		final String clientStringIP = ClientIP.getHostAddress();
+		final String clientStringIP = clientIP.getHostAddress();
 		
 		telnetOutput(1, "Connection from: " + clientStringIP);
 		
@@ -116,7 +116,7 @@ public class LoginStatusThread extends Thread
 				}
 				catch (Exception e)
 				{
-					e.printStackTrace();
+					LOGGER.warning(e.toString());
 				}
 			}
 		}
@@ -124,7 +124,7 @@ public class LoginStatusThread extends Thread
 		return result;
 	}
 	
-	public LoginStatusThread(Socket client, int uptime, String StatusPW) throws IOException
+	public LoginStatusThread(Socket client, int uptime, String statusPW) throws IOException
 	{
 		_cSocket = client;
 		
@@ -146,7 +146,7 @@ public class LoginStatusThread extends Thread
 				_print.flush();
 				_cSocket.close();
 			}
-			else if (tmpLine.compareTo(StatusPW) != 0)
+			else if (tmpLine.compareTo(statusPW) != 0)
 			{
 				_print.println("Incorrect Password!");
 				_print.println("Disconnected...");
@@ -171,18 +171,18 @@ public class LoginStatusThread extends Thread
 	@Override
 	public void run()
 	{
-		String _usrCommand = "";
+		String usrCommand = "";
 		try
 		{
-			while ((_usrCommand.compareTo("quit") != 0) && (_usrCommand.compareTo("exit") != 0))
+			while ((usrCommand.compareTo("quit") != 0) && (usrCommand.compareTo("exit") != 0))
 			{
-				_usrCommand = _read.readLine();
-				if (_usrCommand == null)
+				usrCommand = _read.readLine();
+				if (usrCommand == null)
 				{
 					_cSocket.close();
 					break;
 				}
-				if (_usrCommand.equals("help"))
+				if (usrCommand.equals("help"))
 				{
 					_print.println("The following is a list of all available commands: ");
 					_print.println("help                - shows this help.");
@@ -194,20 +194,20 @@ public class LoginStatusThread extends Thread
 					_print.println("quit                - closes telnet session.");
 					_print.println("");
 				}
-				else if (_usrCommand.equals("status"))
+				else if (usrCommand.equals("status"))
 				{
 					// TODO enhance the output
 					_print.println("Registered Server Count: " + GameServerTable.getInstance().getRegisteredGameServers().size());
 				}
-				else if (_usrCommand.startsWith("unblock"))
+				else if (usrCommand.startsWith("unblock"))
 				{
 					try
 					{
-						_usrCommand = _usrCommand.substring(8);
-						if (LoginController.getInstance().removeBanForAddress(_usrCommand))
+						usrCommand = usrCommand.substring(8);
+						if (LoginController.getInstance().removeBanForAddress(usrCommand))
 						{
 							LOGGER.warning("IP removed via TELNET by host: " + _cSocket.getInetAddress().getHostAddress());
-							_print.println("The IP " + _usrCommand + " has been removed from the hack protection list!");
+							_print.println("The IP " + usrCommand + " has been removed from the hack protection list!");
 						}
 						else
 						{
@@ -219,28 +219,28 @@ public class LoginStatusThread extends Thread
 						_print.println("Please Enter the IP to Unblock!");
 					}
 				}
-				else if (_usrCommand.startsWith("shutdown"))
+				else if (usrCommand.startsWith("shutdown"))
 				{
 					LoginServer.getInstance().shutdown(false);
 					_print.println("Bye Bye!");
 					_print.flush();
 					_cSocket.close();
 				}
-				else if (_usrCommand.startsWith("restart"))
+				else if (usrCommand.startsWith("restart"))
 				{
 					LoginServer.getInstance().shutdown(true);
 					_print.println("Bye Bye!");
 					_print.flush();
 					_cSocket.close();
 				}
-				else if (_usrCommand.equals("RedirectLogger"))
+				else if (usrCommand.equals("RedirectLogger"))
 				{
 					_redirectLogger = true;
 				}
-				else if (_usrCommand.equals("quit"))
+				else if (usrCommand.equals("quit"))
 				{ /* Do Nothing :p - Just here to save us from the "Command Not Understood" Text */
 				}
-				else if (_usrCommand.length() == 0)
+				else if (usrCommand.length() == 0)
 				{ /* Do Nothing Again - Same reason as the quit part */
 				}
 				else
@@ -260,7 +260,7 @@ public class LoginStatusThread extends Thread
 		}
 		catch (IOException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	

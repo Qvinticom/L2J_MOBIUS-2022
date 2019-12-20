@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.model.entity.Castle;
 public class MerchantPriceConfigTable implements InstanceListManager
 {
 	// Zoey76: TODO: Implement using IXmlReader.
-	private static Logger LOGGER = Logger.getLogger(MerchantPriceConfigTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(MerchantPriceConfigTable.class.getName());
 	
 	public static MerchantPriceConfigTable getInstance()
 	{

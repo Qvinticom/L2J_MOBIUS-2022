@@ -83,7 +83,7 @@ public class Q503_PursuitOfClanAmbition extends Quest
 	private static final int IMPERIAL_GRAVEKEEPER = 27181;
 	
 	// DROPLIST
-	private static final int DROPLIST[][] =
+	private static final int[][] DROPLIST =
 	{
 		// npcId, cond, MaxCount, chance, item1, item2 (giants), item3 (giants)
 		// @formatter:off
@@ -234,10 +234,10 @@ public class Q503_PursuitOfClanAmbition extends Quest
 		{
 			st.set("cond", "9");
 			npc.broadcastNpcSay("Blood and Honor");
-			NpcInstance Sister1 = addSpawn(KALIS, 160665, 21209, -3710, npc.getHeading(), false, 180000);
-			Sister1.broadcastNpcSay("Ambition and Power");
-			NpcInstance Sister2 = addSpawn(ATHREA, 160665, 21291, -3710, npc.getHeading(), false, 180000);
-			Sister2.broadcastNpcSay("War and Death");
+			NpcInstance sister1 = addSpawn(KALIS, 160665, 21209, -3710, npc.getHeading(), false, 180000);
+			sister1.broadcastNpcSay("Ambition and Power");
+			NpcInstance sister2 = addSpawn(ATHREA, 160665, 21291, -3710, npc.getHeading(), false, 180000);
+			sister2.broadcastNpcSay("War and Death");
 		}
 		// Coffer
 		else if (event.equalsIgnoreCase("Open"))
@@ -417,52 +417,43 @@ public class Q503_PursuitOfClanAmbition extends Quest
 						break;
 					
 					case LUTZ:
-						if (player.isClanLeader())
+						if (player.isClanLeader() && (cond == 2))
 						{
-							if (cond == 2)
+							if (st.getInt("lutz") == 1)
 							{
-								if (st.getInt("lutz") == 1)
-								{
-									htmltext = "30762-03.htm";
-								}
-								else
-								{
-									htmltext = "30762-01.htm";
-								}
+								htmltext = "30762-03.htm";
+							}
+							else
+							{
+								htmltext = "30762-01.htm";
 							}
 						}
 						break;
 					
 					case KURTZ:
-						if (player.isClanLeader())
+						if (player.isClanLeader() && (cond == 2))
 						{
-							if (cond == 2)
+							if (st.getInt("kurt") == 1)
 							{
-								if (st.getInt("kurt") == 1)
-								{
-									htmltext = "30763-03.htm";
-								}
-								else
-								{
-									htmltext = "30763-01.htm";
-								}
+								htmltext = "30763-03.htm";
+							}
+							else
+							{
+								htmltext = "30763-01.htm";
 							}
 						}
 						break;
 					
 					case FRITZ:
-						if (player.isClanLeader())
+						if (player.isClanLeader() && (cond == 2))
 						{
-							if (cond == 2)
+							if (st.getInt("fritz") == 1)
 							{
-								if (st.getInt("fritz") == 1)
-								{
-									htmltext = "30761-03.htm";
-								}
-								else
-								{
-									htmltext = "30761-01.htm";
-								}
+								htmltext = "30761-03.htm";
+							}
+							else
+							{
+								htmltext = "30761-01.htm";
 							}
 						}
 						break;
@@ -679,15 +670,9 @@ public class Q503_PursuitOfClanAmbition extends Quest
 							NpcInstance coffer = addSpawn(COFFER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 180000);
 							coffer.broadcastNpcSay("Curse of the gods on the one that defiles the property of the empire!");
 						}
-						else if (element[0] == GRAVE_GUARD)
+						else if ((element[0] == GRAVE_GUARD) && (st.getQuestItemsCount(IMP_KEYS) < 6) && (Rnd.get(50) < chance))
 						{
-							if (st.getQuestItemsCount(IMP_KEYS) < 6)
-							{
-								if (Rnd.get(50) < chance)
-								{
-									addSpawn(GRAVE_KEYMASTER, player.getX(), player.getY(), player.getZ(), player.getHeading(), true, 0);
-								}
-							}
+							addSpawn(GRAVE_KEYMASTER, player.getX(), player.getY(), player.getZ(), player.getHeading(), true, 0);
 						}
 					}
 					if ((item2 != 0) && (item3 != 0))

@@ -139,10 +139,10 @@ public class SkillSummon extends Skill
 			// 12 at 130 (+30 Power)
 			// Because 12 is max 5115-5117 skills
 			// TODO: make better method of calculation, dunno how its calculated on offi
-			int _cubicSkillLevel = getLevel();
-			if (_cubicSkillLevel > 100)
+			int cubicSkillLevel = getLevel();
+			if (cubicSkillLevel > 100)
 			{
-				_cubicSkillLevel = ((getLevel() - 100) / 7) + 8;
+				cubicSkillLevel = ((getLevel() - 100) / 7) + 8;
 			}
 			
 			if (targets.length > 1) // Mass cubic skill
@@ -172,15 +172,7 @@ public class SkillSummon extends Skill
 					{
 						continue;
 					}
-					if (player == activeChar)
-					{
-						player.addCubic(_npcId, _cubicSkillLevel, getPower(), _activationtime, _activationchance, _summonTotalLifeTime, false);
-					}
-					else
-					{
-						// given by other player
-						player.addCubic(_npcId, _cubicSkillLevel, getPower(), _activationtime, _activationchance, _summonTotalLifeTime, true);
-					}
+					player.addCubic(_npcId, cubicSkillLevel, getPower(), _activationtime, _activationchance, _summonTotalLifeTime, player != activeChar);
 					player.broadcastUserInfo();
 				}
 				return;
@@ -199,7 +191,7 @@ public class SkillSummon extends Skill
 				activeChar.sendPacket(SystemMessageId.CUBIC_SUMMONING_FAILED);
 				return;
 			}
-			activeChar.addCubic(_npcId, _cubicSkillLevel, getPower(), _activationtime, _activationchance, _summonTotalLifeTime, false);
+			activeChar.addCubic(_npcId, cubicSkillLevel, getPower(), _activationtime, _activationchance, _summonTotalLifeTime, false);
 			activeChar.broadcastUserInfo();
 			return;
 		}

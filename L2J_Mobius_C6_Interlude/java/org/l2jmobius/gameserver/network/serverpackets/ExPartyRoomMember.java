@@ -28,7 +28,7 @@ public class ExPartyRoomMember extends GameServerPacket
 	private final PartyMatchRoom _room;
 	private final int _mode;
 	
-	public ExPartyRoomMember(PlayerInstance player, PartyMatchRoom room, int mode)
+	public ExPartyRoomMember(PartyMatchRoom room, int mode)
 	{
 		_room = room;
 		_mode = mode;

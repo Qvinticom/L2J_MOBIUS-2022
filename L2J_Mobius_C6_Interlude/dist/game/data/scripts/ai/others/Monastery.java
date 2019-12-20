@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class Monastery extends Quest
 {
-	static final int[] mobs1 =
+	private static final int[] MOBS_1 =
 	{
 		22124,
 		22125,
@@ -47,13 +47,12 @@ public class Monastery extends Quest
 		22127,
 		22129
 	};
-	static final int[] mobs2 =
+	private static final int[] MOBS_2 =
 	{
 		22134,
 		22135
 	};
-	// TODO: npcstring
-	static final String[] text =
+	private static final String[] TEXT =
 	{
 		"You cannot carry a weapon without authorization!",
 		"name, why would you choose the path of darkness?!",
@@ -63,19 +62,19 @@ public class Monastery extends Quest
 	public Monastery()
 	{
 		super(-1, "ai");
-		registerMobs(mobs1, QuestEventType.ON_AGGRO_RANGE_ENTER, QuestEventType.ON_SPAWN, QuestEventType.ON_SPELL_FINISHED);
-		registerMobs(mobs2, QuestEventType.ON_SPELL_FINISHED);
+		registerMobs(MOBS_1, QuestEventType.ON_AGGRO_RANGE_ENTER, QuestEventType.ON_SPAWN, QuestEventType.ON_SPELL_FINISHED);
+		registerMobs(MOBS_2, QuestEventType.ON_SPELL_FINISHED);
 	}
 	
 	@Override
 	public String onAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		if (Util.contains(mobs1, npc.getNpcId()) && !npc.isInCombat() && (npc.getTarget() == null))
+		if (Util.contains(MOBS_1, npc.getNpcId()) && !npc.isInCombat() && (npc.getTarget() == null))
 		{
 			if ((player.getActiveWeaponInstance() != null) && !player.isSilentMoving())
 			{
 				npc.setTarget(player);
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), text[0]));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), TEXT[0]));
 				
 				switch (npc.getNpcId())
 				{
@@ -106,21 +105,18 @@ public class Monastery extends Quest
 	@Override
 	public String onSpawn(NpcInstance npc)
 	{
-		if (Util.contains(mobs1, npc.getNpcId()))
+		if (Util.contains(MOBS_1, npc.getNpcId()))
 		{
 			final List<Playable> result = new ArrayList<>();
 			final Collection<WorldObject> objs = npc.getKnownList().getKnownObjects().values();
 			for (WorldObject obj : objs)
 			{
-				if ((obj instanceof PlayerInstance) || (obj instanceof PetInstance))
+				if (((obj instanceof PlayerInstance) || (obj instanceof PetInstance)) && Util.checkIfInRange(npc.getAggroRange(), npc, obj, true) && !((Creature) obj).isDead())
 				{
-					if (Util.checkIfInRange(npc.getAggroRange(), npc, obj, true) && !((Creature) obj).isDead())
-					{
-						result.add((Playable) obj);
-					}
+					result.add((Playable) obj);
 				}
 			}
-			if (!result.isEmpty() && (result.size() != 0))
+			if (!result.isEmpty())
 			{
 				final Object[] characters = result.toArray();
 				for (Object obj : characters)
@@ -135,7 +131,7 @@ public class Monastery extends Quest
 					if ((target.getActiveWeaponInstance() != null) && !npc.isInCombat() && (npc.getTarget() == null))
 					{
 						npc.setTarget(target);
-						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), text[0]));
+						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), TEXT[0]));
 						switch (npc.getNpcId())
 						{
 							case 22124:
@@ -165,21 +161,18 @@ public class Monastery extends Quest
 	@Override
 	public String onSpellFinished(NpcInstance npc, PlayerInstance player, Skill skill)
 	{
-		if (Util.contains(mobs1, npc.getNpcId()) && (skill.getId() == 4589))
+		if (Util.contains(MOBS_1, npc.getNpcId()) && (skill.getId() == 4589))
 		{
 			npc.setIsRunning(true);
 			((Attackable) npc).addDamageHate(player, 0, 999);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 		}
 		
-		if (Util.contains(mobs2, npc.getNpcId()))
+		if (Util.contains(MOBS_2, npc.getNpcId()) && (skill.getSkillType() == SkillType.AGGDAMAGE))
 		{
-			if (skill.getSkillType() == SkillType.AGGDAMAGE)
-			{
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), text[Rnd.get(2) + 1].replace("name", player.getName())));
-				((Attackable) npc).addDamageHate(player, 0, 999);
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-			}
+			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), TEXT[Rnd.get(2) + 1].replace("name", player.getName())));
+			((Attackable) npc).addDamageHate(player, 0, 999);
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 		}
 		
 		return super.onSpellFinished(npc, player, skill);

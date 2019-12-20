@@ -116,13 +116,13 @@ public class RaidBossInstance extends MonsterInstance
 			// teleport raid boss home if it's too far from home location
 			Spawn bossSpawn = getSpawn();
 			
-			int rb_lock_range = Config.RBLOCKRAGE;
+			int rbLockRange = Config.RBLOCKRAGE;
 			if (Config.RBS_SPECIFIC_LOCK_RAGE.get(bossSpawn.getNpcId()) != null)
 			{
-				rb_lock_range = Config.RBS_SPECIFIC_LOCK_RAGE.get(bossSpawn.getNpcId());
+				rbLockRange = Config.RBS_SPECIFIC_LOCK_RAGE.get(bossSpawn.getNpcId());
 			}
 			
-			if ((rb_lock_range != -1) && !isInsideRadius(bossSpawn.getX(), bossSpawn.getY(), bossSpawn.getZ(), rb_lock_range, true, false))
+			if ((rbLockRange != -1) && !isInsideRadius(bossSpawn.getX(), bossSpawn.getY(), bossSpawn.getZ(), rbLockRange, true, false))
 			{
 				teleToLocation(bossSpawn.getX(), bossSpawn.getY(), bossSpawn.getZ(), true);
 				// healFull(); // Prevents minor exploiting with it

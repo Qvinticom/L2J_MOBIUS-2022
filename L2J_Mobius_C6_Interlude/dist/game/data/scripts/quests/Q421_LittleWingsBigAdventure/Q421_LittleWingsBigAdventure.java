@@ -309,15 +309,12 @@ public class Q421_LittleWingsBigAdventure extends Quest
 		final Creature originalKiller = isPet ? killer.getPet() : killer;
 		
 		// Tree curses the killer.
-		if (Rnd.get(100) < 30)
+		if ((Rnd.get(100) < 30) && (originalKiller != null))
 		{
-			if (originalKiller != null)
+			final Skill skill = SkillTable.getInstance().getInfo(4243, 1);
+			if ((skill != null) && (originalKiller.getFirstEffect(skill) == null))
 			{
-				final Skill skill = SkillTable.getInstance().getInfo(4243, 1);
-				if ((skill != null) && (originalKiller.getFirstEffect(skill) == null))
-				{
-					skill.getEffects(npc, originalKiller);
-				}
+				skill.getEffects(npc, originalKiller);
 			}
 		}
 		

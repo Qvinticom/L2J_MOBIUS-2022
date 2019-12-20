@@ -69,12 +69,12 @@ public class BoxInstance extends NpcInstance
 		public int count;
 		public String name;
 		
-		public BoxItem(int _itemid, int _count, String _name, int _id/* , int _enchant */)
+		public BoxItem(int itemid, int count, String name, int id)
 		{
-			itemid = _itemid;
-			count = _count;
-			name = _name;
-			id = _id;
+			this.itemid = itemid;
+			this.count = count;
+			this.name = name;
+			this.id = id;
 		}
 		
 		@Override
@@ -101,9 +101,9 @@ public class BoxInstance extends NpcInstance
 	private static final String LIST_GRANT = "SELECT charname FROM boxaccess WHERE spawn=?";
 	private static final String VARIABLE_PREFIX = "_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	
-	public BoxInstance(int objectId, NpcTemplate _template)
+	public BoxInstance(int objectId, NpcTemplate template)
 	{
-		super(objectId, _template);
+		super(objectId, template);
 	}
 	
 	@Override
@@ -215,22 +215,21 @@ public class BoxInstance extends NpcInstance
 		return acl;
 	}
 	
-	public boolean grantAccess(String player, boolean what)
+	public void grantAccess(String player, boolean what)
 	{
-		boolean result = false;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			String _query;
+			String query;
 			if (what)
 			{
-				_query = INSERT_GRANT;
+				query = INSERT_GRANT;
 			}
 			else
 			{
-				_query = DELETE_GRANT;
+				query = DELETE_GRANT;
 			}
 			
-			PreparedStatement st = con.prepareStatement(_query);
+			PreparedStatement st = con.prepareStatement(query);
 			st.setString(1, player);
 			st.setInt(2, getSpawn().getId());
 			st.execute();
@@ -238,9 +237,7 @@ public class BoxInstance extends NpcInstance
 		}
 		catch (Exception e)
 		{
-			result = false;
 		}
-		return result;
 	}
 	
 	private void showWithdrawWindow(PlayerInstance player, String command)
@@ -266,9 +263,9 @@ public class BoxInstance extends NpcInstance
 		
 		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		int nitems = 0;
-		Set<BoxItem> _items = getItems(drawername);
+		Set<BoxItem> items = getItems(drawername);
 		
-		if (startPos >= _items.size())
+		if (startPos >= items.size())
 		{
 			startPos = 0;
 		}
@@ -278,7 +275,7 @@ public class BoxInstance extends NpcInstance
 		String back = "<button value=\"back\" width=50 height=15 action=\"bypass -h npc_" + getObjectId() + "_Chat 0\">";
 		String content = "<html><body>Drawer " + drawername + ":<br>" + next + " " + back + "<table width=\"100%\">";
 		content += "<tr><td>Item</td><td>Count</td><td>Withdraw</td></tr>";
-		for (BoxItem i : _items)
+		for (BoxItem i : items)
 		{
 			nitems++;
 			if (nitems < startPos)
@@ -327,7 +324,7 @@ public class BoxInstance extends NpcInstance
 		
 		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		int nitems = 0;
-		Set<BoxItem> _items = new HashSet<>();
+		Set<BoxItem> items = new HashSet<>();
 		for (ItemInstance i : player.getInventory().getItems())
 		{
 			if ((i.getItemId() == 57) || i.isEquipped())
@@ -336,10 +333,10 @@ public class BoxInstance extends NpcInstance
 			}
 			
 			final BoxItem bi = new BoxItem(i.getItemId(), i.getCount(), i.getItem().getName(), i.getObjectId()/* , i.getEnchantLevel() */);
-			_items.add(bi);
+			items.add(bi);
 		}
 		
-		if (startPos >= _items.size())
+		if (startPos >= items.size())
 		{
 			startPos = 0;
 		}
@@ -350,7 +347,7 @@ public class BoxInstance extends NpcInstance
 		String content = "<html><body>Drawer " + drawername + ":<br>" + next + " " + back + "<table width=\"100%\">";
 		content += "<tr><td>Item</td><td>Count</td><td>Deposit</td></tr>";
 		
-		for (BoxItem i : _items)
+		for (BoxItem i : items)
 		{
 			nitems++;
 			if (nitems < startPos)

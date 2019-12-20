@@ -46,7 +46,7 @@ public class StrSiegeAssault implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if ((creature == null) || !(creature instanceof PlayerInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return;
 		}
@@ -180,7 +180,7 @@ public class StrSiegeAssault implements ISkillHandler
 	
 	public static boolean checkIfOkToUseStriderSiegeAssault(Creature creature, Castle castle, boolean isCheckOnly)
 	{
-		if ((creature == null) || !(creature instanceof PlayerInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return false;
 		}
@@ -219,7 +219,7 @@ public class StrSiegeAssault implements ISkillHandler
 	
 	public static boolean checkIfOkToUseStriderSiegeAssault(Creature creature, Fort fort, boolean isCheckOnly)
 	{
-		if ((creature == null) || !(creature instanceof PlayerInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return false;
 		}

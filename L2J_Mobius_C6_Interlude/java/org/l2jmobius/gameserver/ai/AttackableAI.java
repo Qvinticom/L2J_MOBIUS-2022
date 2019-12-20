@@ -183,8 +183,8 @@ public class AttackableAI extends CreatureAI
 				return false;
 			}
 			
-			// Check if player is an ally //TODO! [Nemesiss] it should be rather boolean or smth like that
-			// Comparing String isnt good idea!
+			// Check if player is an ally
+			// TODO! [Nemesiss] it should be rather boolean or something like that. Comparing String isnt good idea!
 			if ((me.getFactionId() != null) && me.getFactionId().equals("varka") && ((PlayerInstance) target).isAlliedWithVarka())
 			{
 				return false;
@@ -231,11 +231,11 @@ public class AttackableAI extends CreatureAI
 					return false;
 				}
 				// Check if player is an ally (comparing mem addr)
-				if ((me.getFactionId() != null) && (me.getFactionId() == "varka") && owner.isAlliedWithVarka())
+				if ((me.getFactionId() != null) && (me.getFactionId().equals("varka")) && owner.isAlliedWithVarka())
 				{
 					return false;
 				}
-				if ((me.getFactionId() != null) && (me.getFactionId() == "ketra") && owner.isAlliedWithKetra())
+				if ((me.getFactionId() != null) && (me.getFactionId().equals("ketra")) && owner.isAlliedWithKetra())
 				{
 					return false;
 				}
@@ -427,7 +427,7 @@ public class AttackableAI extends CreatureAI
 			// Go through visible objects
 			for (WorldObject obj : npc.getKnownList().getKnownObjects().values())
 			{
-				if ((obj == null) || !(obj instanceof Creature))
+				if (!(obj instanceof Creature))
 				{
 					continue;
 				}
@@ -562,7 +562,6 @@ public class AttackableAI extends CreatureAI
 				z1 = ((MinionInstance) _actor).getLeader().getZ();
 				// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
 				moveTo(x1, y1, z1);
-				return;
 			}
 		}
 		// Order to the MonsterInstance to random walk (1/100)
@@ -619,8 +618,6 @@ public class AttackableAI extends CreatureAI
 			// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
 			moveTo(x1, y1, z1);
 		}
-		
-		return;
 	}
 	
 	/**
@@ -694,9 +691,9 @@ public class AttackableAI extends CreatureAI
 				if (obj instanceof NpcInstance)
 				{
 					NpcInstance npc = (NpcInstance) obj;
-					String faction_id = ((NpcInstance) _actor).getFactionId();
+					String factionId = ((NpcInstance) _actor).getFactionId();
 					
-					if (!faction_id.equalsIgnoreCase(npc.getFactionId()) || (npc.getFactionRange() == 0))
+					if (!factionId.equalsIgnoreCase(npc.getFactionId()) || (npc.getFactionRange() == 0))
 					{
 						continue;
 					}
@@ -753,7 +750,7 @@ public class AttackableAI extends CreatureAI
 		{
 			_actor.setTarget(originalAttackTarget);
 			skills = _actor.getAllSkills();
-			dist2 = _actor.getPlanDistanceSq(originalAttackTarget.getX(), originalAttackTarget.getY());
+			// dist2 = _actor.getPlanDistanceSq(originalAttackTarget.getX(), originalAttackTarget.getY());
 			range = _actor.getPhysicalAttackRange() + _actor.getTemplate().collisionRadius + originalAttackTarget.getTemplate().collisionRadius;
 		}
 		catch (NullPointerException e)
@@ -882,13 +879,13 @@ public class AttackableAI extends CreatureAI
 				{
 					final int castRange = sk.getCastRange();
 					
-					boolean _inRange = false;
+					boolean inRange = false;
 					if ((dist2 >= ((castRange * castRange) / 9.0)) && (dist2 <= (castRange * castRange)) && (castRange > 70))
 					{
-						_inRange = true;
+						inRange = true;
 					}
 					
-					if (((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL) || _inRange) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive() && (Rnd.get(100) <= 5))
+					if (((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL) || inRange) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive() && (Rnd.get(100) <= 5))
 					{
 						if ((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL))
 						{
@@ -921,12 +918,12 @@ public class AttackableAI extends CreatureAI
 							}
 						}
 						
-						WorldObject OldTarget = _actor.getTarget();
+						WorldObject oldTarget = _actor.getTarget();
 						
 						clientStopMoving(null);
 						
 						_accessor.doCast(sk);
-						_actor.setTarget(OldTarget);
+						_actor.setTarget(oldTarget);
 						return;
 					}
 				}
@@ -994,11 +991,11 @@ public class AttackableAI extends CreatureAI
 						return;
 					}
 					
-					WorldObject OldTarget = _actor.getTarget();
+					WorldObject oldTarget = _actor.getTarget();
 					
 					clientStopMoving(null);
 					_accessor.doCast(sk);
-					_actor.setTarget(OldTarget);
+					_actor.setTarget(oldTarget);
 					return;
 				}
 			}

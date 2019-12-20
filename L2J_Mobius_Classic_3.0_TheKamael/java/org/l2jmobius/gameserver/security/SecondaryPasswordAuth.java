@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class SecondaryPasswordAuth
 {
-	private final Logger LOGGER = Logger.getLogger(SecondaryPasswordAuth.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SecondaryPasswordAuth.class.getName());
 	private final GameClient _activeClient;
 	
 	private String _password;

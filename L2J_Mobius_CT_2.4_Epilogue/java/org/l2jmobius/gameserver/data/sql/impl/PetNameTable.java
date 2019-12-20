@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 
 public class PetNameTable
 {
-	private static Logger LOGGER = Logger.getLogger(PetNameTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(PetNameTable.class.getName());
 	
 	public static PetNameTable getInstance()
 	{

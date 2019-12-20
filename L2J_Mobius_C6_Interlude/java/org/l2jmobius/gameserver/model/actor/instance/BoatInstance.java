@@ -87,14 +87,14 @@ public class BoatInstance extends Creature
 		 * @param pNty1
 		 * @param pNtz1
 		 * @param pNpc1
-		 * @param pSysmess10_1
-		 * @param pSysmess5_1
-		 * @param pSysmess1_1
-		 * @param pSysmess0_1
-		 * @param pSysmessb_1
+		 * @param pSysmess10
+		 * @param pSysmess5
+		 * @param pSysmess1
+		 * @param pSysmess0
+		 * @param pSysmessb
 		 * @param pBoatname
 		 */
-		public BoatTrajet(int pIdWaypoint1, int pIdWTicket1, int pNtx1, int pNty1, int pNtz1, String pNpc1, String pSysmess10_1, String pSysmess5_1, String pSysmess1_1, String pSysmess0_1, String pSysmessb_1, String pBoatname)
+		public BoatTrajet(int pIdWaypoint1, int pIdWTicket1, int pNtx1, int pNty1, int pNtz1, String pNpc1, String pSysmess10, String pSysmess5, String pSysmess1, String pSysmess0, String pSysmessb, String pBoatname)
 		{
 			idWaypoint1 = pIdWaypoint1;
 			idWTicket1 = pIdWTicket1;
@@ -102,11 +102,11 @@ public class BoatInstance extends Creature
 			nty1 = pNty1;
 			ntz1 = pNtz1;
 			npc1 = pNpc1;
-			sysmess10_1 = pSysmess10_1;
-			sysmess5_1 = pSysmess5_1;
-			sysmess1_1 = pSysmess1_1;
-			sysmessb_1 = pSysmessb_1;
-			sysmess0_1 = pSysmess0_1;
+			sysmess10_1 = pSysmess10;
+			sysmess5_1 = pSysmess5;
+			sysmess1_1 = pSysmess1;
+			sysmessb_1 = pSysmessb;
+			sysmess0_1 = pSysmess0;
 			boatName = pBoatname;
 			loadBoatPath();
 		}
@@ -115,7 +115,7 @@ public class BoatInstance extends Creature
 		{
 			_path = new HashMap<>();
 			StringTokenizer st = new StringTokenizer(line, ";");
-			Integer.parseInt(st.nextToken());
+			st.nextToken();
 			max = Integer.parseInt(st.nextToken());
 			for (int i = 0; i < max; i++)
 			{
@@ -128,7 +128,6 @@ public class BoatInstance extends Creature
 				bp.time = Integer.parseInt(st.nextToken());
 				_path.put(i, bp);
 			}
-			return;
 		}
 		
 		protected void loadBoatPath()
@@ -180,7 +179,7 @@ public class BoatInstance extends Creature
 					}
 					catch (Exception e1)
 					{
-						e1.printStackTrace();
+						LOGGER.warning(e1.toString());
 					}
 				}
 				
@@ -192,7 +191,7 @@ public class BoatInstance extends Creature
 					}
 					catch (Exception e1)
 					{
-						e1.printStackTrace();
+						LOGGER.warning(e1.toString());
 					}
 				}
 				
@@ -204,36 +203,36 @@ public class BoatInstance extends Creature
 					}
 					catch (Exception e1)
 					{
-						e1.printStackTrace();
+						LOGGER.warning(e1.toString());
 					}
 				}
 			}
 		}
 		
-		public int state(int state, BoatInstance _boat)
+		public int state(int state, BoatInstance boat)
 		{
 			if (state < max)
 			{
 				final BoatPoint bp = _path.get(state);
-				final double dx = _boat.getX() - bp.x;
-				final double dy = _boat.getY() - bp.y;
+				final double dx = boat.getX() - bp.x;
+				final double dy = boat.getY() - bp.y;
 				final double distance = Math.sqrt((dx * dx) + (dy * dy));
 				final double cos = dx / distance;
 				final double sin = dy / distance;
 				
-				_boat.getPosition().setHeading((int) (Math.atan2(-sin, -cos) * 10430.378350470452724949566316381) + 32768);
+				boat.getPosition().setHeading((int) (Math.atan2(-sin, -cos) * 10430.378350470452724949566316381) + 32768);
 				
-				_boat._vd = new VehicleDeparture(_boat, bp.speed1, bp.speed2, bp.x, bp.y, bp.z);
+				boat._vd = new VehicleDeparture(boat, bp.speed1, bp.speed2, bp.x, bp.y, bp.z);
 				boatSpeed = bp.speed1;
-				_boat.moveToLocation(bp.x, bp.y, bp.z, (float) bp.speed1);
-				Collection<PlayerInstance> knownPlayers = _boat.getKnownList().getKnownPlayers().values();
+				boat.moveToLocation(bp.x, bp.y, bp.z, (float) bp.speed1);
+				Collection<PlayerInstance> knownPlayers = boat.getKnownList().getKnownPlayers().values();
 				if ((knownPlayers == null) || knownPlayers.isEmpty())
 				{
 					return bp.time;
 				}
 				for (PlayerInstance player : knownPlayers)
 				{
-					player.sendPacket(_boat._vd);
+					player.sendPacket(boat._vd);
 				}
 				if (bp.time == 0)
 				{
@@ -473,13 +472,10 @@ public class BoatInstance extends Creature
 			for (int i = 0; i < _inboat.size(); i++)
 			{
 				final PlayerInstance player = _inboat.get(i);
-				if ((player != null) && player.isInBoat())
+				if ((player != null) && player.isInBoat() && (player.getBoat() == this))
 				{
-					if (player.getBoat() == this)
-					{
-						player.getPosition().setXYZ(x, y, z);
-						player.revalidateZone(false);
-					}
+					player.getPosition().setXYZ(x, y, z);
+					player.revalidateZone(false);
 				}
 				
 				if (check && needOnVehicleCheckLocation && (player != null))
@@ -709,25 +705,26 @@ public class BoatInstance extends Creature
 	 * @param nty1
 	 * @param ntz1
 	 * @param idnpc1
-	 * @param sysmess10_1
-	 * @param sysmess5_1
-	 * @param sysmess1_1
-	 * @param sysmess0_1
-	 * @param sysmessb_1
+	 * @param sysmess10
+	 * @param sysmess5
+	 * @param sysmess1
+	 * @param sysmess0
+	 * @param sysmessb
 	 */
-	public void setTrajet1(int idWaypoint1, int idWTicket1, int ntx1, int nty1, int ntz1, String idnpc1, String sysmess10_1, String sysmess5_1, String sysmess1_1, String sysmess0_1, String sysmessb_1)
+	public void setTrajet1(int idWaypoint1, int idWTicket1, int ntx1, int nty1, int ntz1, String idnpc1, String sysmess10, String sysmess5, String sysmess1, String sysmess0, String sysmessb)
 	{
-		_t1 = new BoatTrajet(idWaypoint1, idWTicket1, ntx1, nty1, ntz1, idnpc1, sysmess10_1, sysmess5_1, sysmess1_1, sysmess0_1, sysmessb_1, _name);
+		_t1 = new BoatTrajet(idWaypoint1, idWTicket1, ntx1, nty1, ntz1, idnpc1, sysmess10, sysmess5, sysmess1, sysmess0, sysmessb, _name);
 	}
 	
-	public void setTrajet2(int idWaypoint1, int idWTicket1, int ntx1, int nty1, int ntz1, String idnpc1, String sysmess10_1, String sysmess5_1, String sysmess1_1, String sysmess0_1, String sysmessb_1)
+	public void setTrajet2(int idWaypoint1, int idWTicket1, int ntx1, int nty1, int ntz1, String idnpc1, String sysmess10, String sysmess5, String sysmess1, String sysmess0, String sysmessb)
 	{
-		_t2 = new BoatTrajet(idWaypoint1, idWTicket1, ntx1, nty1, ntz1, idnpc1, sysmess10_1, sysmess5_1, sysmess1_1, sysmess0_1, sysmessb_1, _name);
+		_t2 = new BoatTrajet(idWaypoint1, idWTicket1, ntx1, nty1, ntz1, idnpc1, sysmess10, sysmess5, sysmess1, sysmess0, sysmessb, _name);
 	}
 	
 	@Override
 	public void updateAbnormalEffect()
 	{
+		// No effects.
 	}
 	
 	@Override

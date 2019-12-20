@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 
 public class RequestBlock extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestBlock.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestBlock.class.getName());
 	
 	private static final int BLOCK = 0;
 	private static final int UNBLOCK = 1;

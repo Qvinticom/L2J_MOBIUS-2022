@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
@@ -62,10 +63,10 @@ public class ExShowProcureCropDetail extends GameServerPacket
 		writeD(_cropId); // crop id
 		writeD(_castleCrops.size()); // size
 		
-		for (int manorId : _castleCrops.keySet())
+		for (Entry<Integer, CropProcure> entry : _castleCrops.entrySet())
 		{
-			final CropProcure crop = _castleCrops.get(manorId);
-			writeD(manorId); // manor name
+			final CropProcure crop = entry.getValue();
+			writeD(entry.getKey()); // manor name
 			writeD(crop.getAmount()); // buy residual
 			writeD(crop.getPrice()); // buy price
 			writeC(crop.getReward()); // reward type

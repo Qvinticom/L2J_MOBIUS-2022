@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class PlayerStat extends PlayableStat
 {
-	private static Logger LOGGER = Logger.getLogger(PlayerStat.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(PlayerStat.class.getName());
 	
 	private int _oldMaxHp; // stats watch
 	private int _oldMaxMp; // stats watch
@@ -224,7 +224,7 @@ public class PlayerStat extends PlayableStat
 		
 		if (getActiveChar().isInFunEvent())
 		{
-			if (getActiveChar()._inEventTvT && (TvT.get_maxlvl() == getLevel()) && !TvT.is_started())
+			if (getActiveChar()._inEventTvT && (TvT.getMaxlvl() == getLevel()) && !TvT.isStarted())
 			{
 				TvT.removePlayer(getActiveChar());
 			}
@@ -272,7 +272,6 @@ public class PlayerStat extends PlayableStat
 		StatusUpdate su = new StatusUpdate(getActiveChar().getObjectId());
 		su.addAttribute(StatusUpdate.SP, getSp());
 		getActiveChar().sendPacket(su);
-		
 		return true;
 	}
 	
@@ -294,17 +293,12 @@ public class PlayerStat extends PlayableStat
 		final PlayerInstance player = getActiveChar();
 		if ((player != null) && player.isSubClassActive())
 		{
-			
-			final int class_index = player.getClassIndex();
-			
-			SubClass player_subclass = player.getSubClasses().get(class_index);
-			if (player_subclass != null)
+			SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
+			if (playerSubclass != null)
 			{
-				return player_subclass.getExp();
+				return playerSubclass.getExp();
 			}
-			
 		}
-		
 		return super.getExp();
 	}
 	
@@ -312,15 +306,12 @@ public class PlayerStat extends PlayableStat
 	public void setExp(long value)
 	{
 		final PlayerInstance player = getActiveChar();
-		
 		if (player.isSubClassActive())
 		{
-			final int class_index = player.getClassIndex();
-			
-			SubClass player_subclass = player.getSubClasses().get(class_index);
-			if (player_subclass != null)
+			SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
+			if (playerSubclass != null)
 			{
-				player_subclass.setExp(value);
+				playerSubclass.setExp(value);
 			}
 		}
 		else
@@ -337,12 +328,10 @@ public class PlayerStat extends PlayableStat
 			final PlayerInstance player = getActiveChar();
 			if (player.isSubClassActive())
 			{
-				final int class_index = player.getClassIndex();
-				
-				SubClass player_subclass = player.getSubClasses().get(class_index);
-				if (player_subclass != null)
+				SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
+				if (playerSubclass != null)
 				{
-					return player_subclass.getLevel();
+					return playerSubclass.getLevel();
 				}
 			}
 			return super.getLevel();
@@ -362,15 +351,12 @@ public class PlayerStat extends PlayableStat
 		}
 		
 		final PlayerInstance player = getActiveChar();
-		
 		if (player.isSubClassActive())
 		{
-			final int class_index = player.getClassIndex();
-			
-			SubClass player_subclass = player.getSubClasses().get(class_index);
-			if (player_subclass != null)
+			SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
+			if (playerSubclass != null)
 			{
-				player_subclass.setLevel(value);
+				playerSubclass.setLevel(value);
 			}
 		}
 		else
@@ -448,12 +434,10 @@ public class PlayerStat extends PlayableStat
 		final PlayerInstance player = getActiveChar();
 		if (player.isSubClassActive())
 		{
-			final int class_index = player.getClassIndex();
-			
-			SubClass player_subclass = player.getSubClasses().get(class_index);
-			if (player_subclass != null)
+			SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
+			if (playerSubclass != null)
 			{
-				return player_subclass.getSp();
+				return playerSubclass.getSp();
 			}
 		}
 		return super.getSp();
@@ -464,15 +448,12 @@ public class PlayerStat extends PlayableStat
 	{
 		
 		final PlayerInstance player = getActiveChar();
-		
 		if (player.isSubClassActive())
 		{
-			final int class_index = player.getClassIndex();
-			
-			SubClass player_subclass = player.getSubClasses().get(class_index);
-			if (player_subclass != null)
+			SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
+			if (playerSubclass != null)
 			{
-				player_subclass.setSp(value);
+				playerSubclass.setSp(value);
 			}
 		}
 		else

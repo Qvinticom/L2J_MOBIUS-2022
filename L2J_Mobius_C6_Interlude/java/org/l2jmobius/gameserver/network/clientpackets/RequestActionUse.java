@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -48,25 +48,26 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestActionUse extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestActionUse.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestActionUse.class.getName());
 	
 	private int _actionId;
 	private boolean _ctrlPressed;
 	private boolean _shiftPressed;
 	
 	// List of Pet Actions
-	private static List<Integer> _petActions = Arrays.asList(new Integer[]
+	private static List<Integer> _petActions = new ArrayList<>();
+	static
 	{
-		15,
-		16,
-		17,
-		21,
-		22,
-		23,
-		52,
-		53,
-		54
-	});
+		_petActions.add(15);
+		_petActions.add(16);
+		_petActions.add(17);
+		_petActions.add(21);
+		_petActions.add(22);
+		_petActions.add(23);
+		_petActions.add(52);
+		_petActions.add(53);
+		_petActions.add(54);
+	}
 	
 	@Override
 	protected void readImpl()
@@ -183,13 +184,10 @@ public class RequestActionUse extends GameClientPacket
 						player.sendPacket(ActionFailed.STATIC_PACKET);
 						return;
 					}
-					if ((target instanceof PlayerInstance) && !player.getAccessLevel().allowPeaceAttack() && Creature.isInsidePeaceZone(pet, target))
+					if ((target instanceof PlayerInstance) && !player.getAccessLevel().allowPeaceAttack() && Creature.isInsidePeaceZone(pet, target) && (!player.isInFunEvent() || !((PlayerInstance) target).isInFunEvent()))
 					{
-						if (!player.isInFunEvent() || !((PlayerInstance) target).isInFunEvent())
-						{
-							player.sendPacket(SystemMessageId.TARGET_IN_PEACEZONE);
-							return;
-						}
+						player.sendPacket(SystemMessageId.TARGET_IN_PEACEZONE);
+						return;
 					}
 					if (target.isAutoAttackable(player) || _ctrlPressed)
 					{
@@ -690,16 +688,14 @@ public class RequestActionUse extends GameClientPacket
 		
 		if ((activeSummon != null) && !player.isBetrayed())
 		{
-			final Map<Integer, Skill> _skills = activeSummon.getTemplate().getSkills();
-			
-			if (_skills.size() == 0)
+			final Map<Integer, Skill> skills = activeSummon.getTemplate().getSkills();
+			if (skills.isEmpty())
 			{
 				// player.sendPacket(SystemMessageId.SKILL_NOT_AVAILABLE);
 				return;
 			}
 			
-			final Skill skill = _skills.get(skillId);
-			
+			final Skill skill = skills.get(skillId);
 			if (skill == null)
 			{
 				return;
@@ -709,12 +705,9 @@ public class RequestActionUse extends GameClientPacket
 			
 			boolean force = _ctrlPressed;
 			
-			if (target instanceof Creature)
+			if ((target instanceof Creature) && activeSummon.isInsideZone(ZoneId.PVP) && ((Creature) target).isInsideZone(ZoneId.PVP))
 			{
-				if (activeSummon.isInsideZone(ZoneId.PVP) && ((Creature) target).isInsideZone(ZoneId.PVP))
-				{
-					force = true;
-				}
+				force = true;
 			}
 			
 			activeSummon.useMagic(skill, force, _shiftPressed);

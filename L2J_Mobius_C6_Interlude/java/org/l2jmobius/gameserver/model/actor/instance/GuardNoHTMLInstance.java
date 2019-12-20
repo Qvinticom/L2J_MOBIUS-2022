@@ -77,7 +77,7 @@ public class GuardNoHTMLInstance extends Attackable
 	@Override
 	public GuardNoHTMLKnownList getKnownList()
 	{
-		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof GuardNoHTMLKnownList))
+		if (!(super.getKnownList() instanceof GuardNoHTMLKnownList))
 		{
 			setKnownList(new GuardNoHTMLKnownList(this));
 		}

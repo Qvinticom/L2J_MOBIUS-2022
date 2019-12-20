@@ -93,20 +93,17 @@ public class CoupleManager
 	
 	public void createCouple(PlayerInstance player1, PlayerInstance player2)
 	{
-		if ((player1 != null) && (player2 != null))
+		if ((player1 != null) && (player2 != null) && (player1.getPartnerId() == 0) && (player2.getPartnerId() == 0))
 		{
-			if ((player1.getPartnerId() == 0) && (player2.getPartnerId() == 0))
-			{
-				final int _player1id = player1.getObjectId();
-				final int _player2id = player2.getObjectId();
-				
-				Wedding _new = new Wedding(player1, player2);
-				_couples.add(_new);
-				player1.setPartnerId(_player2id);
-				player2.setPartnerId(_player1id);
-				player1.setCoupleId(_new.getId());
-				player2.setCoupleId(_new.getId());
-			}
+			final int playerId1 = player1.getObjectId();
+			final int playerId2 = player2.getObjectId();
+			
+			Wedding wedding = new Wedding(player1, player2);
+			_couples.add(wedding);
+			player1.setPartnerId(playerId2);
+			player2.setPartnerId(playerId1);
+			player1.setCoupleId(wedding.getId());
+			player2.setCoupleId(wedding.getId());
 		}
 	}
 	

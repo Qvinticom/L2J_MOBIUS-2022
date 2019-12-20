@@ -63,7 +63,6 @@ public class Continuous implements ISkillHandler
 		SkillType.AGGDEBUFF,
 		SkillType.FORCE_BUFF
 	};
-	private Skill _skill;
 	
 	@Override
 	public void useSkill(Creature creature, Skill skill2, WorldObject[] targets)
@@ -83,26 +82,23 @@ public class Continuous implements ISkillHandler
 		{
 			final int skillLevel = skill2.getEffectLvl();
 			final int skillEffectId = skill2.getEffectId();
+			Skill skill;
 			if (skillLevel == 0)
 			{
-				_skill = SkillTable.getInstance().getInfo(skillEffectId, 1);
+				skill = SkillTable.getInstance().getInfo(skillEffectId, 1);
 			}
 			else
 			{
-				_skill = SkillTable.getInstance().getInfo(skillEffectId, skillLevel);
+				skill = SkillTable.getInstance().getInfo(skillEffectId, skillLevel);
 			}
 			
-			if (_skill != null)
+			if (skill != null)
 			{
-				skill2 = _skill;
+				skill2 = skill;
 			}
 		}
 		
 		final Skill skill = skill2;
-		if (skill == null)
-		{
-			return;
-		}
 		
 		final boolean bss = creature.checkBss();
 		final boolean sps = creature.checkSps();
@@ -119,24 +115,21 @@ public class Continuous implements ISkillHandler
 			
 			if ((target instanceof PlayerInstance) && (creature instanceof Playable) && skill.isOffensive())
 			{
-				final PlayerInstance _char = (creature instanceof PlayerInstance) ? (PlayerInstance) creature : ((Summon) creature).getOwner();
-				final PlayerInstance _attacked = (PlayerInstance) target;
-				if ((_attacked.getClanId() != 0) && (_char.getClanId() != 0) && (_attacked.getClanId() == _char.getClanId()) && (_attacked.getPvpFlag() == 0))
+				final PlayerInstance targetChar = (creature instanceof PlayerInstance) ? (PlayerInstance) creature : ((Summon) creature).getOwner();
+				final PlayerInstance attacked = (PlayerInstance) target;
+				if ((attacked.getClanId() != 0) && (targetChar.getClanId() != 0) && (attacked.getClanId() == targetChar.getClanId()) && (attacked.getPvpFlag() == 0))
 				{
 					continue;
 				}
-				if ((_attacked.getAllyId() != 0) && (_char.getAllyId() != 0) && (_attacked.getAllyId() == _char.getAllyId()) && (_attacked.getPvpFlag() == 0))
+				if ((attacked.getAllyId() != 0) && (targetChar.getAllyId() != 0) && (attacked.getAllyId() == targetChar.getAllyId()) && (attacked.getPvpFlag() == 0))
 				{
 					continue;
 				}
 			}
 			
-			if ((skill.getSkillType() != SkillType.BUFF) && (skill.getSkillType() != SkillType.HOT) && (skill.getSkillType() != SkillType.CPHOT) && (skill.getSkillType() != SkillType.MPHOT) && (skill.getSkillType() != SkillType.UNDEAD_DEFENSE) && (skill.getSkillType() != SkillType.AGGDEBUFF) && (skill.getSkillType() != SkillType.CONT))
+			if ((skill.getSkillType() != SkillType.BUFF) && (skill.getSkillType() != SkillType.HOT) && (skill.getSkillType() != SkillType.CPHOT) && (skill.getSkillType() != SkillType.MPHOT) && (skill.getSkillType() != SkillType.UNDEAD_DEFENSE) && (skill.getSkillType() != SkillType.AGGDEBUFF) && (skill.getSkillType() != SkillType.CONT) && target.reflectSkill(skill))
 			{
-				if (target.reflectSkill(skill))
-				{
-					target = creature;
-				}
+				target = creature;
 			}
 			
 			// Walls and Door should not be buffed
@@ -152,18 +145,15 @@ public class Continuous implements ISkillHandler
 			}
 			
 			// Player holding a cursed weapon can't be buffed and can't buff
-			if (skill.getSkillType() == SkillType.BUFF)
+			if ((skill.getSkillType() == SkillType.BUFF) && (target != creature))
 			{
-				if (target != creature)
+				if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isCursedWeaponEquiped())
 				{
-					if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isCursedWeaponEquiped())
-					{
-						continue;
-					}
-					else if ((player != null) && player.isCursedWeaponEquiped())
-					{
-						continue;
-					}
+					continue;
+				}
+				else if ((player != null) && player.isCursedWeaponEquiped())
+				{
+					continue;
 				}
 			}
 			
@@ -183,13 +173,10 @@ public class Continuous implements ISkillHandler
 				else
 				{
 					Formulas.getInstance();
-					if ((skill.getLethalChance1() > 0) && (chance < Formulas.calcLethal(creature, target, skill.getLethalChance1())))
+					if ((skill.getLethalChance1() > 0) && (chance < Formulas.calcLethal(creature, target, skill.getLethalChance1())) && (target instanceof NpcInstance))
 					{
-						if (target instanceof NpcInstance)
-						{
-							target.reduceCurrentHp(target.getCurrentHp() / 2, creature);
-							creature.sendPacket(new SystemMessage(SystemMessageId.LETHAL_STRIKE));
-						}
+						target.reduceCurrentHp(target.getCurrentHp() / 2, creature);
+						creature.sendPacket(new SystemMessage(SystemMessageId.LETHAL_STRIKE));
 					}
 				}
 			}
@@ -204,19 +191,16 @@ public class Continuous implements ISkillHandler
 					continue;
 				}
 			}
-			else if (skill.getSkillType() == SkillType.BUFF)
+			else if ((skill.getSkillType() == SkillType.BUFF) && !Formulas.getInstance().calcBuffSuccess(target, skill))
 			{
-				if (!Formulas.getInstance().calcBuffSuccess(target, skill))
+				if (player != null)
 				{
-					if (player != null)
-					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
-						sm.addString(target.getName());
-						sm.addSkillName(skill.getDisplayId());
-						creature.sendPacket(sm);
-					}
-					continue;
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+					sm.addString(target.getName());
+					sm.addSkillName(skill.getDisplayId());
+					creature.sendPacket(sm);
 				}
+				continue;
 			}
 			
 			if (skill.isToggle())
@@ -228,13 +212,10 @@ public class Continuous implements ISkillHandler
 				{
 					for (Effect e : effects)
 					{
-						if (e != null)
+						if ((e != null) && (e.getSkill().getId() == skill.getId()))
 						{
-							if (e.getSkill().getId() == skill.getId())
-							{
-								e.exit(false);
-								stopped = true;
-							}
+							e.exit(false);
+							stopped = true;
 						}
 					}
 				}

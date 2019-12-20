@@ -304,7 +304,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				WorldObject target = null;
 				PlayerInstance player = null;
 				target = activeChar.getTarget();
-				if ((target != null) && (target instanceof PlayerInstance))
+				if (target instanceof PlayerInstance)
 				{
 					player = (PlayerInstance) target;
 				}
@@ -556,7 +556,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	{
 		PlayerInstance player = null;
 		
-		if ((target != null) && (target instanceof PlayerInstance))
+		if (target instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) target;
 		}
@@ -586,8 +586,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	private void recallNPC(PlayerInstance activeChar)
 	{
 		WorldObject obj = activeChar.getTarget();
-		
-		if ((obj != null) && (obj instanceof NpcInstance))
+		if (obj instanceof NpcInstance)
 		{
 			NpcInstance target = (NpcInstance) obj;
 			

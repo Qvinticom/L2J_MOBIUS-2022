@@ -26,13 +26,13 @@ import org.l2jmobius.gameserver.model.quest.State;
 public class Q009_IntoTheCityOfHumans extends Quest
 {
 	// NPCs
-	private final int PETUKAI = 30583;
-	private final int TANAPI = 30571;
-	private final int TAMIL = 30576;
+	private static final int PETUKAI = 30583;
+	private static final int TANAPI = 30571;
+	private static final int TAMIL = 30576;
 	
 	// Rewards
-	private final int MARK_OF_TRAVELER = 7570;
-	private final int SOE_GIRAN = 7126;
+	private static final int MARK_OF_TRAVELER = 7570;
+	private static final int SOE_GIRAN = 7126;
 	
 	public Q009_IntoTheCityOfHumans()
 	{

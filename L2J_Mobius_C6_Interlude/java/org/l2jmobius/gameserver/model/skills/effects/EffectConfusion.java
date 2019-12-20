@@ -75,7 +75,7 @@ final class EffectConfusion extends Effect
 			}
 		}
 		// if there is no target, exit function
-		if (targetList.size() == 0)
+		if (targetList.isEmpty())
 		{
 			return true;
 		}

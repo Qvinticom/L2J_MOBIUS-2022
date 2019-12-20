@@ -67,7 +67,7 @@ public class RollingDice implements IItemHandler
 		
 		if ((itemId == 4625) || (itemId == 4626) || (itemId == 4627) || (itemId == 4628))
 		{
-			final int number = rollDice(player);
+			final int number = rollDice();
 			if (number == 0)
 			{
 				player.sendPacket(SystemMessageId.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIME_TRY_AGAIN_LATER);
@@ -102,7 +102,7 @@ public class RollingDice implements IItemHandler
 		}
 	}
 	
-	private int rollDice(PlayerInstance player)
+	private int rollDice()
 	{
 		// Check if the dice is ready
 		return Rnd.get(1, 6);

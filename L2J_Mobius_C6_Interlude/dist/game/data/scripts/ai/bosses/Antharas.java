@@ -50,7 +50,6 @@ import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
 
 /**
- * @version $Revision: $ $Date: $
  * @author L2J_JP SANDMAN
  */
 public class Antharas extends Quest
@@ -61,7 +60,7 @@ public class Antharas extends Quest
 	private static final int FWA_ACTIVITYTIMEOFANTHARAS = 120;
 	// private static final int FWA_APPTIMEOFANTHARAS = 1800000;
 	// private static final int FWA_INACTIVITYTIME = 900000;
-	// private static final boolean FWA_OLDANTHARAS = true; //use antharas interlude with minions
+	// private static final boolean FWA_OLDANTHARAS = true; // use antharas interlude with minions
 	protected static final boolean FWA_OLDANTHARAS = Config.ANTHARAS_OLD; // use antharas interlude with minions
 	private static final boolean FWA_MOVEATRANDOM = true;
 	private static final boolean FWA_DOSERVEREARTHQUAKE = true;
@@ -75,15 +74,13 @@ public class Antharas extends Quest
 	private static final int FWA_PERCENTOFBEHEMOTH = 60;
 	private static final int FWA_SELFDESTRUCTTIME = 15000;
 	// Location of teleport cube.
-	private final int _teleportCubeId = 31859;
-	private final int _teleportCubeLocation[][] =
+	private static final int TELEPORT_CUBE = 31859;
+	private static final int[] TELEPORT_CUBE_LOCATION =
 	{
-		{
-			177615,
-			114941,
-			-7709,
-			0
-		}
+		177615,
+		114941,
+		-7709,
+		0
 	};
 	
 	protected Collection<Spawn> _teleportCubeSpawn = ConcurrentHashMap.newKeySet();
@@ -104,7 +101,7 @@ public class Antharas extends Quest
 	
 	// Tasks.
 	protected ScheduledFuture<?> _cubeSpawnTask = null;
-	protected volatile ScheduledFuture<?> _monsterSpawnTask = null;
+	protected ScheduledFuture<?> _monsterSpawnTask = null;
 	protected ScheduledFuture<?> _activityCheckTask = null;
 	protected ScheduledFuture<?> _socialTask = null;
 	protected ScheduledFuture<?> _mobiliseTask = null;
@@ -223,21 +220,18 @@ public class Antharas extends Quest
 		// Setting spawn data of teleport cube.
 		try
 		{
-			final NpcTemplate Cube = NpcTable.getInstance().getTemplate(_teleportCubeId);
+			final NpcTemplate cube = NpcTable.getInstance().getTemplate(TELEPORT_CUBE);
 			Spawn spawnDat;
-			for (int[] element : _teleportCubeLocation)
-			{
-				spawnDat = new Spawn(Cube);
-				spawnDat.setAmount(1);
-				spawnDat.setX(element[0]);
-				spawnDat.setY(element[1]);
-				spawnDat.setZ(element[2]);
-				spawnDat.setHeading(element[3]);
-				spawnDat.setRespawnDelay(60);
-				spawnDat.setLocation(0);
-				SpawnTable.getInstance().addNewSpawn(spawnDat, false);
-				_teleportCubeSpawn.add(spawnDat);
-			}
+			spawnDat = new Spawn(cube);
+			spawnDat.setAmount(1);
+			spawnDat.setX(TELEPORT_CUBE_LOCATION[0]);
+			spawnDat.setY(TELEPORT_CUBE_LOCATION[1]);
+			spawnDat.setZ(TELEPORT_CUBE_LOCATION[2]);
+			spawnDat.setHeading(TELEPORT_CUBE_LOCATION[3]);
+			spawnDat.setRespawnDelay(60);
+			spawnDat.setLocation(0);
+			SpawnTable.getInstance().addNewSpawn(spawnDat, false);
+			_teleportCubeSpawn.add(spawnDat);
 		}
 		catch (Exception e)
 		{
@@ -447,11 +441,11 @@ public class Antharas extends Quest
 					{
 						npcId = 29019; // old
 					}
-					else if ((_players == null) || ((_players != null) && (_players.size() <= FWA_LIMITOFWEAK)))
+					else if ((_players == null) || (_players.size() <= FWA_LIMITOFWEAK))
 					{
 						npcId = 29066; // weak
 					}
-					else if ((_players != null) && (_players.size() > FWA_LIMITOFNORMAL))
+					else if (_players.size() > FWA_LIMITOFNORMAL)
 					{
 						npcId = 29068; // strong
 					}
@@ -586,10 +580,6 @@ public class Antharas extends Quest
 	// Do spawn Behemoth or Bomber.
 	private class MobsSpawn implements Runnable
 	{
-		public MobsSpawn()
-		{
-		}
-		
 		@Override
 		public void run()
 		{
@@ -629,17 +619,14 @@ public class Antharas extends Quest
 						final int ry = Rnd.get(112400, 116000);
 						final int rdt = ((_antharas.getX() - rx) * (_antharas.getX() - rx)) + ((_antharas.getY() - ry) * (_antharas.getY() - ry));
 						final Location randomLocation = new Location(rx, ry, -7704);
-						if (GeoEngine.getInstance().canSeeTarget(_antharas, randomLocation))
+						if (GeoEngine.getInstance().canSeeTarget(_antharas, randomLocation) && (rdt < dt))
 						{
-							if (rdt < dt)
+							x = rx;
+							y = ry;
+							dt = rdt;
+							if (rdt <= 900000)
 							{
-								x = rx;
-								y = ry;
-								dt = rdt;
-								if (rdt <= 900000)
-								{
-									notFound = false;
-								}
+								notFound = false;
 							}
 						}
 					}

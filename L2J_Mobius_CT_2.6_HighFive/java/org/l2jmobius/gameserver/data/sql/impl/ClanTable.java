@@ -199,7 +199,7 @@ public class ClanTable
 		player.setPledgeClass(ClanMember.calculatePledgeClass(player));
 		player.setClanPrivileges(new EnumIntBitmask<>(ClanPrivilege.class, true));
 		
-		_clans.put(Integer.valueOf(clan.getId()), clan);
+		_clans.put(clan.getId(), clan);
 		
 		// should be update packet only
 		player.sendPacket(new PledgeShowInfoUpdate(clan));

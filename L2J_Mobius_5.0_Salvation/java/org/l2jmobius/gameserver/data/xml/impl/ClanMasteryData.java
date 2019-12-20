@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ClanMasteryData implements IXmlReader
 {
-	private static Logger LOGGER = Logger.getLogger(ClanMasteryData.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ClanMasteryData.class.getName());
 	
 	private final Map<Integer, ClanMasteryHolder> _clanMasteryData = new HashMap<>();
 	

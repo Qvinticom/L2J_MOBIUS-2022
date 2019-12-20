@@ -39,9 +39,6 @@ public class Gordon extends Quest
 	private static int _npcMoveY = 0;
 	private static int _isWalkTo = 0;
 	private static int _npcBlock = 0;
-	private static int X = 0;
-	private static int Y = 0;
-	private static int Z = 0;
 	
 	// @formatter:off
 	private static final int[][] WALKS =
@@ -129,106 +126,113 @@ public class Gordon extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		X = WALKS[_isWalkTo - 1][0];
-		Y = WALKS[_isWalkTo - 1][1];
-		Z = WALKS[_isWalkTo - 1][2];
-		if (event.equals("time_isAttacked"))
+		int x = WALKS[_isWalkTo - 1][0];
+		int y = WALKS[_isWalkTo - 1][1];
+		int z = WALKS[_isWalkTo - 1][2];
+		
+		switch (event)
 		{
-			_isAttacked = false;
-			if (npc.getNpcId() == GORDON)
+			case "time_isAttacked":
 			{
-				npc.setWalking();
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(X, Y, Z, 0));
-			}
-		}
-		else if (event.equals("check_ai"))
-		{
-			cancelQuestTimer("check_ai", null, null);
-			if (!_isSpawned)
-			{
-				final NpcInstance gordon_ai = findTemplate(GORDON);
-				if (gordon_ai != null)
-				{
-					_isSpawned = true;
-					startQuestTimer("Start", 1000, gordon_ai, null, true);
-					return super.onAdvEvent(event, npc, player);
-				}
-			}
-		}
-		else if (event.equals("Start"))
-		{
-			// startQuestTimer("Start", 1000, npc, null);
-			if ((npc != null) && _isSpawned)
-			{
-				// check if player have Cursed Weapon and in radius
+				_isAttacked = false;
 				if (npc.getNpcId() == GORDON)
 				{
-					final Collection<PlayerInstance> chars = npc.getKnownList().getKnownPlayers().values();
-					if ((chars != null) && (chars.size() > 0))
+					npc.setWalking();
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(x, y, z, 0));
+				}
+				break;
+			}
+			case "check_ai":
+			{
+				cancelQuestTimer("check_ai", null, null);
+				if (!_isSpawned)
+				{
+					final NpcInstance gordon = findTemplate(GORDON);
+					if (gordon != null)
 					{
-						for (PlayerInstance pc : chars)
+						_isSpawned = true;
+						startQuestTimer("Start", 1000, gordon, null, true);
+						return super.onAdvEvent(event, npc, player);
+					}
+				}
+				break;
+			}
+			case "Start":
+			{
+				// startQuestTimer("Start", 1000, npc, null);
+				if ((npc != null) && _isSpawned)
+				{
+					// check if player have Cursed Weapon and in radius
+					if (npc.getNpcId() == GORDON)
+					{
+						final Collection<PlayerInstance> chars = npc.getKnownList().getKnownPlayers().values();
+						if ((chars != null) && !chars.isEmpty())
 						{
-							if (pc.isCursedWeaponEquipped() && pc.isInsideRadius(npc, 5000, false, false))
+							for (PlayerInstance pc : chars)
 							{
-								npc.setRunning();
-								((Attackable) npc).addDamageHate(pc, 0, 9999);
-								npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, pc);
-								_isAttacked = true;
-								cancelQuestTimer("time_isAttacked", null, null);
-								startQuestTimer("time_isAttacked", 180000, npc, null);
-								return super.onAdvEvent(event, npc, player);
+								if (pc.isCursedWeaponEquipped() && pc.isInsideRadius(npc, 5000, false, false))
+								{
+									npc.setRunning();
+									((Attackable) npc).addDamageHate(pc, 0, 9999);
+									npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, pc);
+									_isAttacked = true;
+									cancelQuestTimer("time_isAttacked", null, null);
+									startQuestTimer("time_isAttacked", 180000, npc, null);
+									return super.onAdvEvent(event, npc, player);
+								}
 							}
 						}
 					}
-				}
-				// end check
-				if (_isAttacked)
-				{
-					return super.onAdvEvent(event, npc, player);
-				}
-				
-				if ((npc.getNpcId() == GORDON) && ((npc.getX() - 50) <= X) && ((npc.getX() + 50) >= X) && ((npc.getY() - 50) <= Y) && ((npc.getY() + 50) >= Y))
-				{
-					_isWalkTo++;
-					if (_isWalkTo > 55)
+					// end check
+					if (_isAttacked)
 					{
-						_isWalkTo = 1;
-					}
-					X = WALKS[_isWalkTo - 1][0];
-					Y = WALKS[_isWalkTo - 1][1];
-					Z = WALKS[_isWalkTo - 1][2];
-					npc.setWalking();
-					// TODO: find better way to prevent teleporting to the home location
-					npc.getSpawn().setX(X);
-					npc.getSpawn().setY(Y);
-					npc.getSpawn().setZ(Z);
-					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(X, Y, Z, 0));
-				}
-				// Test for unblock Npc
-				if ((npc.getX() != _npcMoveX) && (npc.getY() != _npcMoveY))
-				{
-					_npcMoveX = npc.getX();
-					_npcMoveY = npc.getY();
-					_npcBlock = 0;
-				}
-				else if (npc.getNpcId() == GORDON)
-				{
-					_npcBlock++;
-					if (_npcBlock > 2)
-					{
-						npc.teleToLocation(X, Y, Z);
 						return super.onAdvEvent(event, npc, player);
 					}
-					if (_npcBlock > 0)
+					
+					if ((npc.getNpcId() == GORDON) && ((npc.getX() - 50) <= x) && ((npc.getX() + 50) >= x) && ((npc.getY() - 50) <= y) && ((npc.getY() + 50) >= y))
 					{
+						_isWalkTo++;
+						if (_isWalkTo > 55)
+						{
+							_isWalkTo = 1;
+						}
+						x = WALKS[_isWalkTo - 1][0];
+						y = WALKS[_isWalkTo - 1][1];
+						z = WALKS[_isWalkTo - 1][2];
+						npc.setWalking();
 						// TODO: find better way to prevent teleporting to the home location
-						npc.getSpawn().setX(X);
-						npc.getSpawn().setY(Y);
-						npc.getSpawn().setZ(Z);
-						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(X, Y, Z, 0));
+						npc.getSpawn().setX(x);
+						npc.getSpawn().setY(y);
+						npc.getSpawn().setZ(z);
+						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(x, y, z, 0));
 					}
+					// Test for unblock Npc
+					if ((npc.getX() != _npcMoveX) && (npc.getY() != _npcMoveY))
+					{
+						_npcMoveX = npc.getX();
+						_npcMoveY = npc.getY();
+						_npcBlock = 0;
+					}
+					else if (npc.getNpcId() == GORDON)
+					{
+						_npcBlock++;
+						if (_npcBlock > 2)
+						{
+							npc.teleToLocation(x, y, z);
+							return super.onAdvEvent(event, npc, player);
+						}
+						if (_npcBlock > 0)
+						{
+							// TODO: find better way to prevent teleporting to the home location
+							npc.getSpawn().setX(x);
+							npc.getSpawn().setY(y);
+							npc.getSpawn().setZ(z);
+							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(x, y, z, 0));
+						}
+					}
+					// End Test unblock Npc
 				}
-				// End Test unblock Npc
+				break;
 			}
 		}
 		return super.onAdvEvent(event, npc, player);

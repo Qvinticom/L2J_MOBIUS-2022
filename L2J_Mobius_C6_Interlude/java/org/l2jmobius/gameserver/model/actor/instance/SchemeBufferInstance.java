@@ -171,7 +171,7 @@ public class SchemeBufferInstance extends FolkInstance
 					return;
 				}
 				
-				final Map<String, ArrayList<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
+				final Map<String, List<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
 				if (schemes != null)
 				{
 					if (schemes.size() == Config.BUFFER_MAX_SCHEMES)
@@ -200,7 +200,7 @@ public class SchemeBufferInstance extends FolkInstance
 			try
 			{
 				final String schemeName = st.nextToken();
-				final Map<String, ArrayList<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
+				final Map<String, List<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
 				
 				if ((schemes != null) && schemes.containsKey(schemeName))
 				{
@@ -241,14 +241,14 @@ public class SchemeBufferInstance extends FolkInstance
 	{
 		final StringBuilder sb = new StringBuilder(200);
 		
-		final Map<String, ArrayList<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
+		final Map<String, List<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
 		if ((schemes == null) || schemes.isEmpty())
 		{
 			sb.append("<font color=\"LEVEL\">You haven't defined any scheme.</font>");
 		}
 		else
 		{
-			for (Map.Entry<String, ArrayList<Integer>> scheme : schemes.entrySet())
+			for (Map.Entry<String, List<Integer>> scheme : schemes.entrySet())
 			{
 				final int cost = getFee(scheme.getValue());
 				StringUtil.append(sb, "<font color=\"LEVEL\">", scheme.getKey(), " [", scheme.getValue().size(), " / ", player.getMaxBuffCount(), "]", ((cost > 0) ? " - cost: " + StringUtil.formatNumber(cost) : ""), "</font><br1>");
@@ -437,7 +437,7 @@ public class SchemeBufferInstance extends FolkInstance
 	 * @param list : A list of skill ids.
 	 * @return a global fee for all skills contained in list.
 	 */
-	private static int getFee(ArrayList<Integer> list)
+	private static int getFee(List<Integer> list)
 	{
 		if (Config.BUFFER_STATIC_BUFF_COST > 0)
 		{

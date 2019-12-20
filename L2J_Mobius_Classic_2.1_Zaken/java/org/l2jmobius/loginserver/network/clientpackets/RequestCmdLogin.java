@@ -40,7 +40,7 @@ import org.l2jmobius.loginserver.network.serverpackets.ServerList;
 
 public class RequestCmdLogin implements IIncomingPacket<LoginClient>
 {
-	private static Logger LOGGER = Logger.getLogger(RequestCmdLogin.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestCmdLogin.class.getName());
 	
 	private final byte[] _raw = new byte[128];
 	

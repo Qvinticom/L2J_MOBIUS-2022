@@ -80,11 +80,10 @@ public class Spawn
 	 * <li>Create the generic constructor of NpcInstance managed by this Spawn</li><BR>
 	 * <BR>
 	 * @param mobTemplate The NpcTemplate to link to this Spawn
-	 * @throws SecurityException
 	 * @throws ClassNotFoundException
 	 * @throws NoSuchMethodException
 	 */
-	public Spawn(NpcTemplate mobTemplate) throws SecurityException, ClassNotFoundException, NoSuchMethodException
+	public Spawn(NpcTemplate mobTemplate) throws ClassNotFoundException, NoSuchMethodException
 	{
 		// Set the _template of the Spawn
 		_template = mobTemplate;
@@ -484,7 +483,7 @@ public class Spawn
 			}
 			
 			// Calculate the random position in the location area
-			final int p[] = TerritoryTable.getInstance().getRandomPoint(getLocation());
+			final int[] p = TerritoryTable.getInstance().getRandomPoint(getLocation());
 			
 			// Set the calculated position of the NpcInstance
 			newlocx = p[0];

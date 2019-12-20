@@ -167,32 +167,23 @@ public class Q380_BringOutTheFlavorOfIngredients extends Quest
 		switch (npc.getNpcId())
 		{
 			case DIRE_WOLF:
-				if (st.dropItems(RITRON_FRUIT, 1, 4, 100000))
+				if (st.dropItems(RITRON_FRUIT, 1, 4, 100000) && (st.getQuestItemsCount(MOON_FACE_FLOWER) == 20) && (st.getQuestItemsCount(LEECH_FLUIDS) == 10))
 				{
-					if ((st.getQuestItemsCount(MOON_FACE_FLOWER) == 20) && (st.getQuestItemsCount(LEECH_FLUIDS) == 10))
-					{
-						st.set("cond", "2");
-					}
+					st.set("cond", "2");
 				}
 				break;
 			
 			case KADIF_WEREWOLF:
-				if (st.dropItems(MOON_FACE_FLOWER, 1, 20, 500000))
+				if (st.dropItems(MOON_FACE_FLOWER, 1, 20, 500000) && (st.getQuestItemsCount(RITRON_FRUIT) == 4) && (st.getQuestItemsCount(LEECH_FLUIDS) == 10))
 				{
-					if ((st.getQuestItemsCount(RITRON_FRUIT) == 4) && (st.getQuestItemsCount(LEECH_FLUIDS) == 10))
-					{
-						st.set("cond", "2");
-					}
+					st.set("cond", "2");
 				}
 				break;
 			
 			case GIANT_MIST_LEECH:
-				if (st.dropItems(LEECH_FLUIDS, 1, 10, 500000))
+				if (st.dropItems(LEECH_FLUIDS, 1, 10, 500000) && (st.getQuestItemsCount(RITRON_FRUIT) == 4) && (st.getQuestItemsCount(MOON_FACE_FLOWER) == 20))
 				{
-					if ((st.getQuestItemsCount(RITRON_FRUIT) == 4) && (st.getQuestItemsCount(MOON_FACE_FLOWER) == 20))
-					{
-						st.set("cond", "2");
-					}
+					st.set("cond", "2");
 				}
 				break;
 		}

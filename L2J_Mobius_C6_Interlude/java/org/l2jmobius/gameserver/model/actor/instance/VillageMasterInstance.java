@@ -117,7 +117,7 @@ public class VillageMasterInstance extends FolkInstance
 				return;
 			}
 			
-			renameSubPledge(player, Integer.valueOf(cmdParams), cmdParams2);
+			renameSubPledge(player, Integer.parseInt(cmdParams), cmdParams2);
 		}
 		else if (actualCommand.equalsIgnoreCase("create_royal"))
 		{
@@ -360,19 +360,16 @@ public class VillageMasterInstance extends FolkInstance
 						player.setLocked(false);
 						return;
 					}
-					if (allowAddition)
+					if (allowAddition && !player.getSubClasses().isEmpty())
 					{
-						if (!player.getSubClasses().isEmpty())
+						for (Iterator<SubClass> subList = iterSubClasses(player); subList.hasNext();)
 						{
-							for (Iterator<SubClass> subList = iterSubClasses(player); subList.hasNext();)
+							final SubClass subClass = subList.next();
+							if (subClass.getLevel() < 75)
 							{
-								final SubClass subClass = subList.next();
-								if (subClass.getLevel() < 75)
-								{
-									player.sendMessage("You may not add a new sub class before you are level 75 on your previous sub class.");
-									allowAddition = false;
-									break;
-								}
+								player.sendMessage("You may not add a new sub class before you are level 75 on your previous sub class.");
+								allowAddition = false;
+								break;
 							}
 						}
 					}
@@ -781,20 +778,17 @@ public class VillageMasterInstance extends FolkInstance
 			}
 		}
 		
-		if (pledgeType != Clan.SUBUNIT_ACADEMY)
+		if ((pledgeType != Clan.SUBUNIT_ACADEMY) && ((clan.getClanMember(leaderName) == null) || (clan.getClanMember(leaderName).getPledgeType() != 0)))
 		{
-			if ((clan.getClanMember(leaderName) == null) || (clan.getClanMember(leaderName).getPledgeType() != 0))
+			if (pledgeType >= Clan.SUBUNIT_KNIGHT1)
 			{
-				if (pledgeType >= Clan.SUBUNIT_KNIGHT1)
-				{
-					player.sendPacket(SystemMessageId.CAPTAIN_OF_ORDER_OF_KNIGHTS_CANNOT_BE_APPOINTED);
-				}
-				else if (pledgeType >= Clan.SUBUNIT_ROYAL1)
-				{
-					player.sendPacket(SystemMessageId.CAPTAIN_OF_ROYAL_GUARD_CANNOT_BE_APPOINTED);
-				}
-				return;
+				player.sendPacket(SystemMessageId.CAPTAIN_OF_ORDER_OF_KNIGHTS_CANNOT_BE_APPOINTED);
 			}
+			else if (pledgeType >= Clan.SUBUNIT_ROYAL1)
+			{
+				player.sendPacket(SystemMessageId.CAPTAIN_OF_ROYAL_GUARD_CANNOT_BE_APPOINTED);
+			}
+			return;
 		}
 		
 		if (clan.createSubPledge(player, pledgeType, leaderName, clanName) == null)

@@ -245,8 +245,8 @@ public class ChristmasManager
 	protected Future<?> _XMasPresentsTask = null;
 	protected int isManagerInit = 0;
 	protected long _IntervalOfChristmas = 600000; // 10 minutes
-	private final int first = 25000;
-	private final int last = 73099;
+	private static final int FIRST = 25000;
+	private static final int LAST = 73099;
 	
 	/************************************** Initial Functions **************************************/
 	
@@ -330,7 +330,7 @@ public class ChristmasManager
 	 */
 	public void spawnTrees()
 	{
-		GetTreePos gtp = new GetTreePos(first);
+		GetTreePos gtp = new GetTreePos(FIRST);
 		ThreadPool.execute(gtp);
 	}
 	
@@ -383,12 +383,9 @@ public class ChristmasManager
 					obj = SpawnTable.getInstance().getTemplate(_iterator).getLastSpawn();
 					_iterator++;
 					
-					if ((obj != null) && (obj instanceof Attackable))
+					if ((obj instanceof Attackable) && (rand.nextInt(100) > 10))
 					{
-						if (rand.nextInt(100) > 10)
-						{
-							obj = null;
-						}
+						obj = null;
 					}
 				}
 				
@@ -401,11 +398,11 @@ public class ChristmasManager
 			{
 			}
 			
-			if (_iterator >= last)
+			if (_iterator >= LAST)
 			{
 				isManagerInit++;
 				
-				SpawnSantaNPCs ssNPCs = new SpawnSantaNPCs(first);
+				SpawnSantaNPCs ssNPCs = new SpawnSantaNPCs(FIRST);
 				
 				_task = ThreadPool.schedule(ssNPCs, 300);
 				ssNPCs.setTask(_task);
@@ -450,7 +447,6 @@ public class ChristmasManager
 				}
 				catch (Throwable t)
 				{
-					continue;
 				}
 			}
 			
@@ -509,8 +505,8 @@ public class ChristmasManager
 	
 	private void startFestiveMessagesAtFixedRate()
 	{
-		SendXMasMessage XMasMessage = new SendXMasMessage();
-		_XMasMessageTask = ThreadPool.scheduleAtFixedRate(XMasMessage, 60000, _IntervalOfChristmas);
+		SendXMasMessage xmasMessage = new SendXMasMessage();
+		_XMasMessageTask = ThreadPool.scheduleAtFixedRate(xmasMessage, 60000, _IntervalOfChristmas);
 	}
 	
 	/**
@@ -549,8 +545,7 @@ public class ChristmasManager
 	 */
 	protected CreatureSay getXMasMessage()
 	{
-		final CreatureSay cs = new CreatureSay(0, 17, getRandomSender(), getRandomXMasMessage());
-		return cs;
+		return new CreatureSay(0, 17, getRandomSender(), getRandomXMasMessage());
 	}
 	
 	/**
@@ -578,8 +573,8 @@ public class ChristmasManager
 	 */
 	private void givePresentsAtFixedRate()
 	{
-		final XMasPresentGivingTask XMasPresents = new XMasPresentGivingTask();
-		_XMasPresentsTask = ThreadPool.scheduleAtFixedRate(XMasPresents, _IntervalOfChristmas, _IntervalOfChristmas * 3);
+		final XMasPresentGivingTask xmasPresents = new XMasPresentGivingTask();
+		_XMasPresentsTask = ThreadPool.scheduleAtFixedRate(xmasPresents, _IntervalOfChristmas, _IntervalOfChristmas * 3);
 	}
 	
 	class XMasPresentGivingTask implements Runnable
@@ -604,7 +599,6 @@ public class ChristmasManager
 						pc.sendMessage("Santa wanted to give you a Present but your inventory was full :(");
 						continue;
 					}
-					
 					else if (rand.nextInt(100) < 50)
 					{
 						final int itemId = getSantaRandomPresent();
@@ -676,7 +670,7 @@ public class ChristmasManager
 				{
 					obj = SpawnTable.getInstance().getTemplate(_iterator).getLastSpawn();
 					_iterator++;
-					if ((obj != null) && (obj instanceof Attackable))
+					if (obj instanceof Attackable)
 					{
 						obj = null;
 					}
@@ -691,7 +685,7 @@ public class ChristmasManager
 			{
 			}
 			
-			if (_iterator >= last)
+			if (_iterator >= LAST)
 			{
 				isManagerInit++;
 				checkIfOkToAnnounce();

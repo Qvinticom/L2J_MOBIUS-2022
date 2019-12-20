@@ -34,7 +34,6 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 public class CastleManager
 {
-	
 	protected static final Logger LOGGER = Logger.getLogger(CastleManager.class.getName());
 	
 	public static final CastleManager getInstance()
@@ -44,7 +43,7 @@ public class CastleManager
 	
 	private static final List<Castle> _castles = new CopyOnWriteArrayList<>();
 	
-	private static final int _castleCirclets[] =
+	private static final int[] _castleCirclets =
 	{
 		0,
 		6838,
@@ -112,7 +111,7 @@ public class CastleManager
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning("Problem with CastleManager " + e.getMessage());
 		}
 	}
 	

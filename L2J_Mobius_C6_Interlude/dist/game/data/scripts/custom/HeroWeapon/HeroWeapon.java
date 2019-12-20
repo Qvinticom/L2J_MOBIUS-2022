@@ -52,7 +52,7 @@ public class HeroWeapon extends Quest
 	{
 		QuestState st = player.getQuestState(getName());
 		
-		int weaponId = Integer.valueOf(event);
+		int weaponId = Integer.parseInt(event);
 		if (Util.contains(WEAPON_IDS, weaponId))
 		{
 			st.giveItems(weaponId, 1);

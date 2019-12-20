@@ -86,15 +86,15 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		final int _partnerId = activeChar.getPartnerId();
-		final int _coupleId = activeChar.getCoupleId();
-		int AdenaAmount = 0;
+		final int partnerId = activeChar.getPartnerId();
+		final int coupleId = activeChar.getCoupleId();
+		int adenaAmount = 0;
 		
 		if (activeChar.isMarried())
 		{
 			activeChar.sendMessage("You are now divorced.");
-			AdenaAmount = (activeChar.getAdena() / 100) * Config.L2JMOD_WEDDING_DIVORCE_COSTS;
-			activeChar.getInventory().reduceAdena("Wedding", AdenaAmount, activeChar, null);
+			adenaAmount = (activeChar.getAdena() / 100) * Config.L2JMOD_WEDDING_DIVORCE_COSTS;
+			activeChar.getInventory().reduceAdena("Wedding", adenaAmount, activeChar, null);
 		}
 		else
 		{
@@ -102,7 +102,7 @@ public class Wedding implements IVoicedCommandHandler
 		}
 		
 		PlayerInstance partner;
-		partner = (PlayerInstance) World.getInstance().findObject(_partnerId);
+		partner = (PlayerInstance) World.getInstance().findObject(partnerId);
 		
 		if (partner != null)
 		{
@@ -117,13 +117,13 @@ public class Wedding implements IVoicedCommandHandler
 			}
 			
 			// give adena
-			if (AdenaAmount > 0)
+			if (adenaAmount > 0)
 			{
-				partner.addAdena("WEDDING", AdenaAmount, null, false);
+				partner.addAdena("WEDDING", adenaAmount, null, false);
 			}
 		}
 		
-		CoupleManager.getInstance().deleteCouple(_coupleId);
+		CoupleManager.getInstance().deleteCouple(coupleId);
 		return true;
 	}
 	
@@ -323,12 +323,12 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("You are in an event.");
 			return false;
 		}
-		if (activeChar._inEventTvT && TvT.is_started())
+		if (activeChar._inEventTvT && TvT.isStarted())
 		{
 			activeChar.sendMessage("You may not use go to love in TvT.");
 			return false;
 		}
-		if (activeChar._inEventCTF && CTF.is_started())
+		if (activeChar._inEventCTF && CTF.isStarted())
 		{
 			activeChar.sendMessage("You may not use go to love in CTF.");
 			return false;

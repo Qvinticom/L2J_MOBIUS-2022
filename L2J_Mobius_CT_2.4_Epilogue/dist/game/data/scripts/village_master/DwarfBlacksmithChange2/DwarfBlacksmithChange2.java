@@ -71,7 +71,7 @@ public class DwarfBlacksmithChange2 extends AbstractNpcAI
 			}
 			case "57":
 			{
-				htmltext = ClassChangeRequested(player, Integer.valueOf(event));
+				htmltext = ClassChangeRequested(player, Integer.parseInt(event));
 				break;
 			}
 		}

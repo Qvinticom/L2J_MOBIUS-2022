@@ -52,7 +52,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class ClanTable
 {
-	private static Logger LOGGER = Logger.getLogger(ClanTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ClanTable.class.getName());
 	
 	private final Map<Integer, Clan> _clans = new HashMap<>();
 	
@@ -113,29 +113,19 @@ public class ClanTable
 		return _clans.values().toArray(new Clan[_clans.size()]);
 	}
 	
-	public int getTopRate(int clan_id)
+	public int getTopRate(int clanId)
 	{
-		Clan clan = getClan(clan_id);
+		Clan clan = getClan(clanId);
 		if (clan.getLevel() < 3)
 		{
 			return 0;
 		}
 		int i = 1;
-		for (Clan clans : getClans())
+		for (Clan c : getClans())
 		{
-			if (clan != clans)
+			if ((clan != c) && ((clan.getLevel() < c.getLevel()) || ((clan.getLevel() == c.getLevel()) && (clan.getReputationScore() <= c.getReputationScore()))))
 			{
-				if (clan.getLevel() < clans.getLevel())
-				{
-					i++;
-				}
-				else if (clan.getLevel() == clans.getLevel())
-				{
-					if (clan.getReputationScore() <= clans.getReputationScore())
-					{
-						i++;
-					}
-				}
+				i++;
 			}
 		}
 		return i;
@@ -541,8 +531,7 @@ public class ClanTable
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Could not restore clan wars data:");
-			e.printStackTrace();
+			LOGGER.warning("Could not restore clan wars data: " + e.getMessage());
 		}
 	}
 	

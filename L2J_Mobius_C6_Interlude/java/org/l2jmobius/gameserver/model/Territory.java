@@ -23,7 +23,7 @@ import org.l2jmobius.commons.util.Rnd;
 
 public class Territory
 {
-	private static Logger LOGGER = Logger.getLogger(Territory.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Territory.class.getName());
 	
 	protected class Point
 	{

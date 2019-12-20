@@ -62,15 +62,12 @@ public class RequestAnswerJoinParty extends GameClientPacket
 		
 		if (_response == 1)
 		{
-			if (requestor.isInParty())
+			if (requestor.isInParty() && (requestor.getParty().getMemberCount() >= 9))
 			{
-				if (requestor.getParty().getMemberCount() >= 9)
-				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.PARTY_FULL);
-					player.sendPacket(sm);
-					requestor.sendPacket(sm);
-					return;
-				}
+				final SystemMessage sm = new SystemMessage(SystemMessageId.PARTY_FULL);
+				player.sendPacket(sm);
+				requestor.sendPacket(sm);
+				return;
 			}
 			player.joinParty(requestor.getParty());
 			

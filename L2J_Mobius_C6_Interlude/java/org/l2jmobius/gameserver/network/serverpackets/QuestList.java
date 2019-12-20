@@ -29,10 +29,6 @@ public class QuestList extends GameServerPacket
 	private Quest[] _quests;
 	private PlayerInstance _player;
 	
-	public QuestList()
-	{
-	}
-	
 	@Override
 	public void runImpl()
 	{

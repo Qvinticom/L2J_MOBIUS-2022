@@ -154,21 +154,15 @@ public class MercManagerInstance extends FolkInstance
 	
 	private int validateCondition(PlayerInstance player)
 	{
-		if ((getCastle() != null) && (getCastle().getCastleId() > 0))
+		if ((getCastle() != null) && (getCastle().getCastleId() > 0) && (player.getClan() != null))
 		{
-			if (player.getClan() != null)
+			if (getCastle().getSiege().getIsInProgress())
 			{
-				if (getCastle().getSiege().getIsInProgress())
-				{
-					return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
-				}
-				else if (getCastle().getOwnerId() == player.getClanId()) // Clan owns castle
-				{
-					if ((player.getClanPrivileges() & Clan.CP_CS_MERCENARIES) == Clan.CP_CS_MERCENARIES)
-					{
-						return COND_OWNER;
-					}
-				}
+				return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
+			}
+			else if ((getCastle().getOwnerId() == player.getClanId()) && ((player.getClanPrivileges() & Clan.CP_CS_MERCENARIES) == Clan.CP_CS_MERCENARIES))
+			{
+				return COND_OWNER;
 			}
 		}
 		

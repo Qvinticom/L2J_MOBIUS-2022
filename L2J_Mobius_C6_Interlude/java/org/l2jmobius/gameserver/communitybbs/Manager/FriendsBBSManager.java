@@ -69,12 +69,12 @@ public class FriendsBBSManager extends BaseBBSManager
 			
 			if (action.equals("select"))
 			{
-				activeChar.selectFriend((st.hasMoreTokens()) ? Integer.valueOf(st.nextToken()) : 0);
+				activeChar.selectFriend((st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : 0);
 				showFriendsList(activeChar, false);
 			}
 			else if (action.equals("deselect"))
 			{
-				activeChar.deselectFriend((st.hasMoreTokens()) ? Integer.valueOf(st.nextToken()) : 0);
+				activeChar.deselectFriend((st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : 0);
 				showFriendsList(activeChar, false);
 			}
 			else if (action.equals("delall"))
@@ -170,12 +170,12 @@ public class FriendsBBSManager extends BaseBBSManager
 			
 			if (action.equals("select"))
 			{
-				activeChar.selectBlock((st.hasMoreTokens()) ? Integer.valueOf(st.nextToken()) : 0);
+				activeChar.selectBlock((st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : 0);
 				showBlockList(activeChar, false);
 			}
 			else if (action.equals("deselect"))
 			{
-				activeChar.deselectBlock((st.hasMoreTokens()) ? Integer.valueOf(st.nextToken()) : 0);
+				activeChar.deselectBlock((st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : 0);
 				showBlockList(activeChar, false);
 			}
 			else if (action.equals("delall"))
@@ -257,7 +257,7 @@ public class FriendsBBSManager extends BaseBBSManager
 			final PlayerInstance friend = World.getInstance().getPlayer(id);
 			StringUtil.append(sb, "<a action=\"bypass _friend;select;", id, "\">[Select]</a>&nbsp;", friendName, " ", (((friend != null) && (friend.isOnline() == 1)) ? "(on)" : "(off)"), "<br1>");
 		}
-		content = content.replaceAll("%friendslist%", sb.toString());
+		content = content.replace("%friendslist%", sb.toString());
 		
 		// Cleanup sb.
 		sb.setLength(0);
@@ -274,10 +274,10 @@ public class FriendsBBSManager extends BaseBBSManager
 			final PlayerInstance friend = World.getInstance().getPlayer(id);
 			StringUtil.append(sb, "<a action=\"bypass _friend;deselect;", id, "\">[Deselect]</a>&nbsp;", friendName, " ", (((friend != null) && (friend.isOnline() == 1)) ? "(on)" : "(off)"), "<br1>");
 		}
-		content = content.replaceAll("%selectedFriendsList%", sb.toString());
+		content = content.replace("%selectedFriendsList%", sb.toString());
 		
 		// Delete button.
-		content = content.replaceAll("%deleteMSG%", (delMsg) ? FRIENDLIST_DELETE_BUTTON : "");
+		content = content.replace("%deleteMSG%", (delMsg) ? FRIENDLIST_DELETE_BUTTON : "");
 		
 		separateAndSend(content, activeChar);
 	}
@@ -313,7 +313,7 @@ public class FriendsBBSManager extends BaseBBSManager
 			final PlayerInstance block = World.getInstance().getPlayer(id);
 			StringUtil.append(sb, "<a action=\"bypass _block;select;", id, "\">[Select]</a>&nbsp;", blockName, " ", (((block != null) && (block.isOnline() == 1)) ? "(on)" : "(off)"), "<br1>");
 		}
-		content = content.replaceAll("%blocklist%", sb.toString());
+		content = content.replace("%blocklist%", sb.toString());
 		
 		// Cleanup sb.
 		sb.setLength(0);
@@ -330,10 +330,10 @@ public class FriendsBBSManager extends BaseBBSManager
 			final PlayerInstance block = World.getInstance().getPlayer(id);
 			StringUtil.append(sb, "<a action=\"bypass _block;deselect;", id, "\">[Deselect]</a>&nbsp;", blockName, " ", (((block != null) && (block.isOnline() == 1)) ? "(on)" : "(off)"), "<br1>");
 		}
-		content = content.replaceAll("%selectedBlocksList%", sb.toString());
+		content = content.replace("%selectedBlocksList%", sb.toString());
 		
 		// Delete button.
-		content = content.replaceAll("%deleteMSG%", (delMsg) ? BLOCKLIST_DELETE_BUTTON : "");
+		content = content.replace("%deleteMSG%", (delMsg) ? BLOCKLIST_DELETE_BUTTON : "");
 		
 		separateAndSend(content, activeChar);
 	}
@@ -363,7 +363,7 @@ public class FriendsBBSManager extends BaseBBSManager
 			sb.append(friendName);
 		}
 		
-		content = content.replaceAll("%list%", sb.toString());
+		content = content.replace("%list%", sb.toString());
 		
 		separateAndSend(content, activeChar);
 	}

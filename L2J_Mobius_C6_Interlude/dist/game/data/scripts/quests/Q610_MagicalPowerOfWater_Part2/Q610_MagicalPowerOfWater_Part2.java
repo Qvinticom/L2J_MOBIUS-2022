@@ -68,6 +68,8 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 			
 			case ALIVE:
 				spawnNpc();
+				// fallthrough
+				
 			case DEAD:
 				startQuestTimer("check", CHECK_INTERVAL, null, null, true);
 				break;

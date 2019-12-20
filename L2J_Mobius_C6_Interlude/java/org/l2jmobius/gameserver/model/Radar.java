@@ -16,7 +16,8 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -25,12 +26,12 @@ import org.l2jmobius.gameserver.network.serverpackets.RadarControl;
 public class Radar
 {
 	private final PlayerInstance _player;
-	private final Vector<RadarMarker> _markers;
+	private final List<RadarMarker> _markers;
 	
 	public Radar(PlayerInstance player)
 	{
 		_player = player;
-		_markers = new Vector<>();
+		_markers = new ArrayList<>();
 	}
 	
 	// Add a marker to player's radar
@@ -59,7 +60,7 @@ public class Radar
 			_player.sendPacket(new RadarControl(1, tempMarker._type, tempMarker._x, tempMarker._y, tempMarker._z));
 		}
 		
-		_markers.removeAllElements();
+		_markers.clear();
 	}
 	
 	public void loadMarkers()

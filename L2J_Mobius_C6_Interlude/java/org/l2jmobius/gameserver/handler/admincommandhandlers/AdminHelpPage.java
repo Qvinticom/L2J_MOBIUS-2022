@@ -66,12 +66,4 @@ public class AdminHelpPage implements IAdminCommandHandler
 		adminReply.setHtml(content);
 		targetChar.sendPacket(adminReply);
 	}
-	
-	public static void showSubMenuPage(PlayerInstance targetChar, String filename)
-	{
-		String content = HtmCache.getInstance().getHtmForce("data/html/admin/" + filename);
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		adminReply.setHtml(content);
-		targetChar.sendPacket(adminReply);
-	}
 }

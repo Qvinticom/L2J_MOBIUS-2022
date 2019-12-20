@@ -72,41 +72,41 @@ public class Blow implements ISkillHandler
 			// Check firstly if target dodges skill
 			final boolean skillIsEvaded = Formulas.calcPhysicalSkillEvasion(target, skill);
 			
-			byte _successChance = 0;
+			byte successChance = 0;
 			
 			if (skill.getName().equals("Backstab"))
 			{
 				if (creature.isBehindTarget())
 				{
-					_successChance = (byte) Config.BACKSTAB_ATTACK_BEHIND;
+					successChance = (byte) Config.BACKSTAB_ATTACK_BEHIND;
 				}
 				else if (creature.isFrontTarget())
 				{
-					_successChance = (byte) Config.BACKSTAB_ATTACK_FRONT;
+					successChance = (byte) Config.BACKSTAB_ATTACK_FRONT;
 				}
 				else
 				{
-					_successChance = (byte) Config.BACKSTAB_ATTACK_SIDE;
+					successChance = (byte) Config.BACKSTAB_ATTACK_SIDE;
 				}
 			}
 			else if (creature.isBehindTarget())
 			{
-				_successChance = (byte) Config.BLOW_ATTACK_BEHIND;
+				successChance = (byte) Config.BLOW_ATTACK_BEHIND;
 			}
 			else if (creature.isFrontTarget())
 			{
-				_successChance = (byte) Config.BLOW_ATTACK_FRONT;
+				successChance = (byte) Config.BLOW_ATTACK_FRONT;
 			}
 			else
 			{
-				_successChance = (byte) Config.BLOW_ATTACK_SIDE;
+				successChance = (byte) Config.BLOW_ATTACK_SIDE;
 			}
 			
 			boolean success = true;
 			
 			if ((skill.getCondition() & Skill.COND_CRIT) != 0)
 			{
-				success = (success && Formulas.getInstance().calcBlow(creature, target, _successChance));
+				success = (success && Formulas.getInstance().calcBlow(creature, target, successChance));
 			}
 			
 			if (!skillIsEvaded && success)
@@ -259,19 +259,16 @@ public class Blow implements ISkillHandler
 				
 				// Possibility of a lethal strike
 				Formulas.calcLethalHit(creature, target, skill);
-				final PlaySound PlaySound = new PlaySound("skillsound.critical_hit_02");
-				creature.sendPacket(PlaySound);
+				final PlaySound playSound = new PlaySound("skillsound.critical_hit_02");
+				creature.sendPacket(playSound);
 			}
 			else
 			{
-				if (skillIsEvaded)
+				if (skillIsEvaded && (target instanceof PlayerInstance))
 				{
-					if (target instanceof PlayerInstance)
-					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.AVOIDED_S1S_ATTACK);
-						sm.addString(creature.getName());
-						((PlayerInstance) target).sendPacket(sm);
-					}
+					final SystemMessage sm = new SystemMessage(SystemMessageId.AVOIDED_S1S_ATTACK);
+					sm.addString(creature.getName());
+					((PlayerInstance) target).sendPacket(sm);
 				}
 				
 				final SystemMessage sm = new SystemMessage(SystemMessageId.ATTACK_FAILED);

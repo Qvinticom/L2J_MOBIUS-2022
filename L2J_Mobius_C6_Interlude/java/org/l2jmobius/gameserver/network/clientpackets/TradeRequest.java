@@ -238,14 +238,11 @@ public class TradeRequest extends GameClientPacket
 			return;
 		}
 		
-		if (!Config.ALLOW_LOW_LEVEL_TRADE)
+		if (!Config.ALLOW_LOW_LEVEL_TRADE && (((player.getLevel() < 76) && (partner.getLevel() >= 76)) || (partner.getLevel() < 76) || (player.getLevel() >= 76)))
 		{
-			if (((player.getLevel() < 76) && (partner.getLevel() >= 76)) || (partner.getLevel() < 76) || (player.getLevel() >= 76))
-			{
-				player.sendMessage("You Cannot Trade a Lower Level Character");
-				player.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
+			player.sendMessage("You Cannot Trade a Lower Level Character");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
 		}
 		
 		if (player.isProcessingTransaction())

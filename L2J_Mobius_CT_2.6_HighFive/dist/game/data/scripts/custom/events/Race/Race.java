@@ -235,7 +235,7 @@ public class Race extends Event
 			}
 			else
 			{
-				final int number = Integer.valueOf(bypass.substring(5));
+				final int number = Integer.parseInt(bypass.substring(5));
 				final Skill skill = SkillData.getInstance().getSkill(number, 1);
 				if (skill != null)
 				{
@@ -252,7 +252,7 @@ public class Race extends Event
 		}
 		else if (bypass.startsWith("tele"))
 		{
-			if ((Integer.valueOf(bypass.substring(4)) > 0) && (_randspawn != null))
+			if ((Integer.parseInt(bypass.substring(4)) > 0) && (_randspawn != null))
 			{
 				player.teleToLocation(_randspawn[0], _randspawn[1], _randspawn[2]);
 			}

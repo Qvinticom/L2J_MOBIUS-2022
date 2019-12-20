@@ -46,7 +46,7 @@ import org.l2jmobius.gameserver.taskmanager.ExclusiveTask;
 
 public class WildBeastFarmSiege extends ClanHallSiege
 {
-	protected static Logger LOGGER = Logger.getLogger(WildBeastFarmSiege.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(WildBeastFarmSiege.class.getName());
 	
 	boolean _registrationPeriod = false;
 	private int _clanCounter = 0;
@@ -55,7 +55,6 @@ public class WildBeastFarmSiege extends ClanHallSiege
 	protected clanPlayersInfo _ownerClanInfo = new clanPlayersInfo();
 	protected boolean _finalStage = false;
 	protected ScheduledFuture<?> _midTimer;
-	private ClanHallZone zone;
 	
 	private WildBeastFarmSiege()
 	{
@@ -189,7 +188,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 	
 	public void teleportPlayers()
 	{
-		zone = clanhall.getZone();
+		ClanHallZone zone = clanhall.getZone();
 		for (Creature creature : zone.getCharactersInside().values())
 		{
 			if (creature instanceof PlayerInstance)
@@ -365,14 +364,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 			return false;
 		}
 		final clanPlayersInfo regPlayers = _clansInfo.get(playerClan.getClanId());
-		if (regPlayers != null)
-		{
-			if (regPlayers._players.contains(playerName))
-			{
-				return true;
-			}
-		}
-		return false;
+		return (regPlayers != null) && regPlayers._players.contains(playerName);
 	}
 	
 	public boolean isClanOnSiege(Clan playerClan)
@@ -382,11 +374,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 			return true;
 		}
 		final clanPlayersInfo regPlayers = _clansInfo.get(playerClan.getClanId());
-		if (regPlayers == null)
-		{
-			return false;
-		}
-		return true;
+		return regPlayers != null;
 	}
 	
 	public synchronized int registerClanOnSiege(PlayerInstance player, Clan playerClan)
@@ -482,47 +470,29 @@ public class WildBeastFarmSiege extends ClanHallSiege
 	
 	public void addPlayer(Clan playerClan, String playerName)
 	{
-		if (playerClan == clanhall.getOwnerClan())
+		if ((playerClan == clanhall.getOwnerClan()) && (_ownerClanInfo._players.size() < 18) && !_ownerClanInfo._players.contains(playerName))
 		{
-			if (_ownerClanInfo._players.size() < 18)
-			{
-				if (!_ownerClanInfo._players.contains(playerName))
-				{
-					_ownerClanInfo._players.add(playerName);
-					return;
-				}
-			}
+			_ownerClanInfo._players.add(playerName);
+			return;
 		}
 		final clanPlayersInfo regPlayers = _clansInfo.get(playerClan.getClanId());
-		if (regPlayers != null)
+		if ((regPlayers != null) && (regPlayers._players.size() < 18) && !regPlayers._players.contains(playerName))
 		{
-			if (regPlayers._players.size() < 18)
-			{
-				if (!regPlayers._players.contains(playerName))
-				{
-					regPlayers._players.add(playerName);
-				}
-			}
+			regPlayers._players.add(playerName);
 		}
 	}
 	
 	public void removePlayer(Clan playerClan, String playerName)
 	{
-		if (playerClan == clanhall.getOwnerClan())
+		if ((playerClan == clanhall.getOwnerClan()) && _ownerClanInfo._players.contains(playerName))
 		{
-			if (_ownerClanInfo._players.contains(playerName))
-			{
-				_ownerClanInfo._players.remove(playerName);
-				return;
-			}
+			_ownerClanInfo._players.remove(playerName);
+			return;
 		}
 		final clanPlayersInfo regPlayers = _clansInfo.get(playerClan.getClanId());
-		if (regPlayers != null)
+		if ((regPlayers != null) && regPlayers._players.contains(playerName))
 		{
-			if (regPlayers._players.contains(playerName))
-			{
-				regPlayers._players.remove(playerName);
-			}
+			regPlayers._players.remove(playerName);
 		}
 	}
 	
@@ -542,22 +512,19 @@ public class WildBeastFarmSiege extends ClanHallSiege
 			siegeStart.add(Calendar.HOUR, 1);
 			final long siegeTimeRemaining = siegeStart.getTimeInMillis() - System.currentTimeMillis();
 			long remaining = registerTimeRemaining;
-			if (registerTimeRemaining <= 0)
+			if ((registerTimeRemaining <= 0) && !_registrationPeriod)
 			{
-				if (!_registrationPeriod)
+				if (clanhall.getOwnerClan() != null)
 				{
-					if (clanhall.getOwnerClan() != null)
-					{
-						_ownerClanInfo._clanName = clanhall.getOwnerClan().getName();
-					}
-					else
-					{
-						_ownerClanInfo._clanName = "";
-					}
-					setRegistrationPeriod(true);
-					anonce("Attention! The period of registration at the siege clan hall, farm wild animals.", 2);
-					remaining = siegeTimeRemaining;
+					_ownerClanInfo._clanName = clanhall.getOwnerClan().getName();
 				}
+				else
+				{
+					_ownerClanInfo._clanName = "";
+				}
+				setRegistrationPeriod(true);
+				anonce("Attention! The period of registration at the siege clan hall, farm wild animals.", 2);
+				remaining = siegeTimeRemaining;
 			}
 			if (siegeTimeRemaining <= 0)
 			{

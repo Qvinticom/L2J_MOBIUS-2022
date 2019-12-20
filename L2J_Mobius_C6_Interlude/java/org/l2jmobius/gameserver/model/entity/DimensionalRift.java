@@ -37,8 +37,8 @@ public class DimensionalRift
 	protected byte _type;
 	protected Party _party;
 	protected List<Byte> _completedRooms = new ArrayList<>();
-	private static final long seconds_5 = 5000;
-	protected byte jumps_current = 0;
+	private static final long FIVE_SECONDS = 5000;
+	protected byte jumpsCurrent = 0;
 	
 	private Timer teleporterTimer;
 	private TimerTask teleporterTimerTask;
@@ -103,9 +103,9 @@ public class DimensionalRift
 					DimensionalRiftManager.getInstance().getRoom(_type, _choosenRoom).unspawn();
 				}
 				
-				if (reasonTP && (jumps_current < getMaxJumps()) && (_party.getMemberCount() > deadPlayers.size()))
+				if (reasonTP && (jumpsCurrent < getMaxJumps()) && (_party.getMemberCount() > deadPlayers.size()))
 				{
-					jumps_current++;
+					jumpsCurrent++;
 					
 					_completedRooms.add(_choosenRoom);
 					_choosenRoom = -1;
@@ -143,7 +143,7 @@ public class DimensionalRift
 		}
 		else
 		{
-			teleporterTimer.schedule(teleporterTimerTask, seconds_5); // incorrect party member invited.
+			teleporterTimer.schedule(teleporterTimerTask, FIVE_SECONDS); // incorrect party member invited.
 		}
 	}
 	

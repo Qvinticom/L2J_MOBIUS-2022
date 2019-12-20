@@ -40,19 +40,22 @@ public class ClanMaster extends Quest
 				{
 					return "9000-03-no.htm";
 				}
-				
+				break;
+			
 			case "9000-04.htm":
 				if (!player.isClanLeader())
 				{
 					return "9000-04-no.htm";
 				}
-				
+				break;
+			
 			case "9000-05.htm":
 				if (!player.isClanLeader())
 				{
 					return "9000-05-no.htm";
 				}
-				
+				break;
+			
 			case "9000-07.htm":
 			case "9000-08.htm":
 			case "9000-12a.htm":
@@ -64,6 +67,7 @@ public class ClanMaster extends Quest
 				{
 					return "9000-07-no.htm";
 				}
+				break;
 		}
 		
 		return event;

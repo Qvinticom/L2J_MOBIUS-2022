@@ -50,13 +50,13 @@ public class ConditionElementSeed extends Condition
 	@Override
 	public boolean testImpl(Env env)
 	{
-		final int[] Seeds = new int[3];
-		for (int i = 0; i < Seeds.length; i++)
+		final int[] seeds = new int[3];
+		for (int i = 0; i < seeds.length; i++)
 		{
-			Seeds[i] = env.player.getFirstEffect(seedSkills[i]) instanceof EffectSeed ? ((EffectSeed) env.player.getFirstEffect(seedSkills[i])).getPower() : 0;
-			if (Seeds[i] >= _requiredSeeds[i])
+			seeds[i] = env.player.getFirstEffect(seedSkills[i]) instanceof EffectSeed ? ((EffectSeed) env.player.getFirstEffect(seedSkills[i])).getPower() : 0;
+			if (seeds[i] >= _requiredSeeds[i])
 			{
-				Seeds[i] -= _requiredSeeds[i];
+				seeds[i] -= _requiredSeeds[i];
 			}
 			else
 			{
@@ -67,11 +67,11 @@ public class ConditionElementSeed extends Condition
 		if (_requiredSeeds[3] > 0)
 		{
 			int count = 0;
-			for (int i = 0; (i < Seeds.length) && (count < _requiredSeeds[3]); i++)
+			for (int i = 0; (i < seeds.length) && (count < _requiredSeeds[3]); i++)
 			{
-				if (Seeds[i] > 0)
+				if (seeds[i] > 0)
 				{
-					Seeds[i]--;
+					seeds[i]--;
 					count++;
 				}
 			}
@@ -84,9 +84,9 @@ public class ConditionElementSeed extends Condition
 		if (_requiredSeeds[4] > 0)
 		{
 			int count = 0;
-			for (int i = 0; (i < Seeds.length) && (count < _requiredSeeds[4]); i++)
+			for (int i = 0; (i < seeds.length) && (count < _requiredSeeds[4]); i++)
 			{
-				count += Seeds[i];
+				count += seeds[i];
 			}
 			if (count < _requiredSeeds[4])
 			{

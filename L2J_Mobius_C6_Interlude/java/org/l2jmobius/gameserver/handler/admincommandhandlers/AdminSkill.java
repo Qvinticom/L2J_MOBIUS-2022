@@ -258,25 +258,25 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		Skill[] skills = player.getAllSkills();
 		
-		final int MaxSkillsPerPage = 10;
-		int MaxPages = skills.length / MaxSkillsPerPage;
+		final int maxSkillsPerPage = 10;
+		int maxPages = skills.length / maxSkillsPerPage;
 		
-		if (skills.length > (MaxSkillsPerPage * MaxPages))
+		if (skills.length > (maxSkillsPerPage * maxPages))
 		{
-			MaxPages++;
+			maxPages++;
 		}
 		
-		if (page > MaxPages)
+		if (page > maxPages)
 		{
-			page = MaxPages;
+			page = maxPages;
 		}
 		
-		final int SkillsStart = MaxSkillsPerPage * page;
-		int SkillsEnd = skills.length;
+		final int SkillsStart = maxSkillsPerPage * page;
+		int skillsEnd = skills.length;
 		
-		if ((SkillsEnd - SkillsStart) > MaxSkillsPerPage)
+		if ((skillsEnd - SkillsStart) > maxSkillsPerPage)
 		{
-			SkillsEnd = SkillsStart + MaxSkillsPerPage;
+			skillsEnd = SkillsStart + maxSkillsPerPage;
 		}
 		
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -295,7 +295,7 @@ public class AdminSkill implements IAdminCommandHandler
 		replyMSG.append("<br>");
 		String pages = "<center><table width=270><tr>";
 		
-		for (int x = 0; x < MaxPages; x++)
+		for (int x = 0; x < maxPages; x++)
 		{
 			final int pagenr = x + 1;
 			pages += "<td><a action=\"bypass -h admin_remove_skills " + x + "\">Page " + pagenr + "</a></td>";
@@ -306,7 +306,7 @@ public class AdminSkill implements IAdminCommandHandler
 		replyMSG.append("<br><table width=270>");
 		replyMSG.append("<tr><td width=80>Name:</td><td width=60>Level:</td><td width=40>Id:</td></tr>");
 		
-		for (int i = SkillsStart; i < SkillsEnd; i++)
+		for (int i = SkillsStart; i < skillsEnd; i++)
 		{
 			replyMSG.append("<tr><td width=80><a action=\"bypass -h admin_remove_skill " + skills[i].getId() + "\">" + skills[i].getName() + "</a></td><td width=60>" + skills[i].getLevel() + "</td><td width=40>" + skills[i].getId() + "</td></tr>");
 		}
@@ -446,7 +446,7 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		if (target instanceof PlayerInstance)
 		{
-			if ((target == activeChar) || ((target != activeChar) && (activeChar.getAccessLevel().getLevel() > 70)))
+			if ((target == activeChar) || (activeChar.getAccessLevel().getLevel() > 70))
 			{
 				player = (PlayerInstance) target;
 			}

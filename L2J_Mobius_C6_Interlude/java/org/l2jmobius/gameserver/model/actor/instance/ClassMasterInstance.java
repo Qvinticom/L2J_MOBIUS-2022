@@ -498,7 +498,6 @@ public class ClassMasterInstance extends FolkInstance
 		sb.append("</html>");
 		html.setHtml(sb.toString());
 		player.sendPacket(html);
-		return;
 	}
 	
 	/**
@@ -537,7 +536,6 @@ public class ClassMasterInstance extends FolkInstance
 		sb.append("</html>");
 		html.setHtml(sb.toString());
 		player.sendPacket(html);
-		return;
 	}
 	
 	/**
@@ -589,7 +587,6 @@ public class ClassMasterInstance extends FolkInstance
 		sb.append("</html>");
 		html.setHtml(sb.toString());
 		player.sendPacket(html);
-		return;
 	}
 	
 	/**
@@ -641,7 +638,6 @@ public class ClassMasterInstance extends FolkInstance
 		sb.append("</html>");
 		html.setHtml(sb.toString());
 		player.sendPacket(html);
-		return;
 	}
 	
 	/**
@@ -671,7 +667,6 @@ public class ClassMasterInstance extends FolkInstance
 		sb.append("</html>");
 		html.setHtml(sb.toString());
 		player.sendPacket(html);
-		return;
 	}
 	
 	/**

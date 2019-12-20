@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.model.items.Item;
  */
 public class Manor
 {
-	private static Logger LOGGER = Logger.getLogger(Manor.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Manor.class.getName());
 	
 	private static Map<Integer, SeedData> _seeds = new ConcurrentHashMap<>();
 	
@@ -53,7 +53,7 @@ public class Manor
 		final List<Integer> crops = new ArrayList<>();
 		for (SeedData seed : _seeds.values())
 		{
-			if (!crops.contains(seed.getCrop()) && (seed.getCrop() != 0) && !crops.contains(seed.getCrop()))
+			if (!crops.contains(seed.getCrop()) && (seed.getCrop() != 0))
 			{
 				crops.add(seed.getCrop());
 			}
@@ -400,7 +400,7 @@ public class Manor
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with Manor: " + e1);
 				}
 			}
 			
@@ -412,7 +412,7 @@ public class Manor
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with Manor: " + e1);
 				}
 			}
 			
@@ -424,7 +424,7 @@ public class Manor
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with Manor: " + e1);
 				}
 			}
 			

@@ -239,13 +239,10 @@ public class CreatureStatus
 			_creature.abortAttack();
 			_creature.abortCast();
 			
-			if (_creature instanceof PlayerInstance)
+			if ((_creature instanceof PlayerInstance) && ((PlayerInstance) _creature).isInOlympiadMode())
 			{
-				if (((PlayerInstance) _creature).isInOlympiadMode())
-				{
-					stopHpMpRegeneration();
-					return;
-				}
+				stopHpMpRegeneration();
+				return;
 			}
 			
 			// Start the doDie process

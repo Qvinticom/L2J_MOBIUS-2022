@@ -33,7 +33,6 @@ public class AdminRideWyvern implements IAdminCommandHandler
 		"admin_unride_strider",
 		"admin_unride",
 	};
-	private int _petRideId;
 	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
@@ -49,9 +48,10 @@ public class AdminRideWyvern implements IAdminCommandHandler
 				return false;
 			}
 			
+			int petRideId;
 			if (command.startsWith("admin_ride_wyvern"))
 			{
-				_petRideId = 12621;
+				petRideId = 12621;
 				
 				// Add skill Wyvern Breath
 				activeChar.addSkill(SkillTable.getInstance().getInfo(4289, 1));
@@ -59,7 +59,7 @@ public class AdminRideWyvern implements IAdminCommandHandler
 			}
 			else if (command.startsWith("admin_ride_strider"))
 			{
-				_petRideId = 12526;
+				petRideId = 12526;
 			}
 			else
 			{
@@ -75,7 +75,7 @@ public class AdminRideWyvern implements IAdminCommandHandler
 				return false;
 			}
 			
-			Ride mount = new Ride(activeChar.getObjectId(), Ride.ACTION_MOUNT, _petRideId);
+			Ride mount = new Ride(activeChar.getObjectId(), Ride.ACTION_MOUNT, petRideId);
 			activeChar.sendPacket(mount);
 			activeChar.broadcastPacket(mount);
 			activeChar.setMountType(mount.getMountType());

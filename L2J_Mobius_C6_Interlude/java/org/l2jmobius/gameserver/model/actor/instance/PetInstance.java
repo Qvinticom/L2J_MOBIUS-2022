@@ -69,7 +69,6 @@ public class PetInstance extends Summon
 	private boolean _respawned;
 	private final boolean _mountable;
 	private Future<?> _feedTask;
-	private int _feedTime;
 	protected boolean _feedMode;
 	private PetData _data;
 	private long _expBeforeDeath = 0;
@@ -240,7 +239,7 @@ public class PetInstance extends Summon
 	@Override
 	public PetStat getStat()
 	{
-		if ((super.getStat() == null) || !(super.getStat() instanceof PetStat))
+		if (!(super.getStat() instanceof PetStat))
 		{
 			setStat(new PetStat(this));
 		}
@@ -276,7 +275,7 @@ public class PetInstance extends Summon
 		
 		if (isOwner && thisIsTarget)
 		{
-			if (isOwner && (player != getOwner()))
+			if (player != getOwner())
 			{
 				// update owner
 				updateRefOwner(player);
@@ -717,10 +716,10 @@ public class PetInstance extends Summon
 		{
 			getInventory().transferItem("PetTransfer", item.getObjectId(), item.getCount(), getOwner().getInventory(), getOwner(), this);
 			PetInventoryUpdate petiu = new PetInventoryUpdate();
-			ItemList PlayerUI = new ItemList(getOwner(), false);
+			ItemList playerUI = new ItemList(getOwner(), false);
 			petiu.addRemovedItem(item);
 			getOwner().sendPacket(petiu);
-			getOwner().sendPacket(PlayerUI);
+			getOwner().sendPacket(playerUI);
 		}
 		catch (Exception e)
 		{
@@ -963,23 +962,24 @@ public class PetInstance extends Summon
 		stopFeed();
 		if (!isDead())
 		{
+			int feedTime;
 			if (battleFeed)
 			{
 				_feedMode = true;
-				_feedTime = _data.getPetFeedBattle();
+				feedTime = _data.getPetFeedBattle();
 			}
 			else
 			{
 				_feedMode = false;
-				_feedTime = _data.getPetFeedNormal();
+				feedTime = _data.getPetFeedNormal();
 			}
 			// pet feed time must be different than 0. Changing time to bypass divide by 0
-			if (_feedTime <= 0)
+			if (feedTime <= 0)
 			{
-				_feedTime = 1;
+				feedTime = 1;
 			}
 			
-			_feedTask = ThreadPool.scheduleAtFixedRate(new FeedTask(), 60000 / _feedTime, 60000 / _feedTime);
+			_feedTask = ThreadPool.scheduleAtFixedRate(new FeedTask(), 60000 / feedTime, 60000 / feedTime);
 		}
 	}
 	

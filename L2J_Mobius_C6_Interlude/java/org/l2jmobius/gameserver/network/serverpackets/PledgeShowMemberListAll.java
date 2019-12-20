@@ -36,7 +36,7 @@ public class PledgeShowMemberListAll extends GameServerPacket
 	private final ClanMember[] _members;
 	private int _pledgeType;
 	
-	// private static Logger LOGGER = Logger.getLogger(PledgeShowMemberListAll.class);
+	// private static final Logger LOGGER = Logger.getLogger(PledgeShowMemberListAll.class);
 	
 	public PledgeShowMemberListAll(Clan clan, PlayerInstance player)
 	{

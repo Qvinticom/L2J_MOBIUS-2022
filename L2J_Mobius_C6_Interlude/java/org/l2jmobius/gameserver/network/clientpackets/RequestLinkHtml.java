@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class RequestLinkHtml extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestLinkHtml.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestLinkHtml.class.getName());
 	private String _link;
 	
 	@Override

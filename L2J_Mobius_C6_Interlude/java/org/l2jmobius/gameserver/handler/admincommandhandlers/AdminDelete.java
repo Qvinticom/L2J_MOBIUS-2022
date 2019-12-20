@@ -60,7 +60,7 @@ public class AdminDelete implements IAdminCommandHandler
 	{
 		WorldObject obj = activeChar.getTarget();
 		
-		if ((obj != null) && (obj instanceof NpcInstance))
+		if (obj instanceof NpcInstance)
 		{
 			final NpcInstance target = (NpcInstance) obj;
 			target.deleteMe();
@@ -76,13 +76,13 @@ public class AdminDelete implements IAdminCommandHandler
 				}
 				else
 				{
-					boolean update_db = true;
+					boolean update = true;
 					if (GrandBossManager.getInstance().isDefined(spawn.getNpcId()) && spawn.is_customBossInstance())
 					{
-						update_db = false;
+						update = false;
 					}
 					
-					SpawnTable.getInstance().deleteSpawn(spawn, update_db);
+					SpawnTable.getInstance().deleteSpawn(spawn, update);
 				}
 			}
 			

@@ -96,7 +96,7 @@ public class OrcChange1 extends AbstractNpcAI
 			case "47":
 			case "50":
 			{
-				htmltext = ClassChangeRequested(player, npc, Integer.valueOf(event));
+				htmltext = ClassChangeRequested(player, npc, Integer.parseInt(event));
 				break;
 			}
 		}

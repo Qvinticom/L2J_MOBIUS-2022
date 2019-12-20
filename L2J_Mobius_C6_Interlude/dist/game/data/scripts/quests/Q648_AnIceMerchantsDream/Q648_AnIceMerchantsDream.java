@@ -168,14 +168,11 @@ public class Q648_AnIceMerchantsDream extends Quest
 				{
 					final QuestState st2 = player.getQuestState(Q115_TheOtherSideOfTruth.class.getSimpleName());
 					htmltext = "32020-05.htm";
-					if (st2 != null)
+					if ((st2 != null) && (st2.getState() == State.COMPLETED))
 					{
-						if (st2.getState() == State.COMPLETED)
-						{
-							htmltext = "32020-10.htm";
-							qs.playSound("ItemSound.quest_middle");
-							qs.set("cond", "2");
-						}
+						htmltext = "32020-10.htm";
+						qs.playSound("ItemSound.quest_middle");
+						qs.set("cond", "2");
 					}
 				}
 				else

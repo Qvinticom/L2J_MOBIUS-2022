@@ -52,13 +52,13 @@ public class Q636_TheTruthBeyondTheGate extends Quest
 			return htmltext;
 		}
 		
-		if (htmltext == "31329-04.htm")
+		if (event.equals("31329-04.htm"))
 		{
 			qs.set("cond", "1");
 			qs.setState(State.STARTED);
 			qs.playSound("ItemSound.quest_accept");
 		}
-		else if (htmltext == "32010-02.htm")
+		else if (event.equals("32010-02.htm"))
 		{
 			qs.playSound("ItemSound.quest_finish");
 			qs.giveItems(MARK, 1);

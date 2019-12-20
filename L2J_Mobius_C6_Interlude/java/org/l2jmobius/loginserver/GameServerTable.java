@@ -48,7 +48,7 @@ import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
  */
 public class GameServerTable
 {
-	private static Logger LOGGER = Logger.getLogger(GameServerTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(GameServerTable.class.getName());
 	
 	// Server Names Config
 	private static Map<Integer, String> _serverNames = new HashMap<>();
@@ -146,7 +146,7 @@ public class GameServerTable
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	

@@ -280,12 +280,9 @@ public abstract class ZoneType
 	public void revalidateInZone(Creature creature)
 	{
 		// If the character can't be affected by this zone return
-		if (_checkAffected)
+		if (_checkAffected && !isAffected(creature))
 		{
-			if (!isAffected(creature))
-			{
-				return;
-			}
+			return;
 		}
 		
 		// If the object is inside the zone...
@@ -298,8 +295,8 @@ public abstract class ZoneType
 				onEnter(creature);
 			}
 		}
-		else // Was the character inside this zone?
-		if (_characterList.containsKey(creature.getObjectId()))
+		// Was the character inside this zone?
+		else if (_characterList.containsKey(creature.getObjectId()))
 		{
 			_characterList.remove(creature.getObjectId());
 			onExit(creature);

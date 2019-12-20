@@ -27,12 +27,12 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 public class TradeUpdate extends GameServerPacket
 {
 	private final ItemInstance[] _items;
-	private final TradeItem[] _trade_items;
+	private final TradeItem[] _tradeItems;
 	
 	public TradeUpdate(TradeList trade, PlayerInstance player)
 	{
 		_items = player.getInventory().getItems();
-		_trade_items = trade.getItems();
+		_tradeItems = trade.getItems();
 	}
 	
 	private int getItemCount(int objectId)
@@ -52,25 +52,25 @@ public class TradeUpdate extends GameServerPacket
 	{
 		writeC(0x74);
 		
-		writeH(_trade_items.length);
-		for (TradeItem _item : _trade_items)
+		writeH(_tradeItems.length);
+		for (TradeItem item : _tradeItems)
 		{
-			int _aveable_count = getItemCount(_item.getObjectId()) - _item.getCount();
-			boolean _stackable = _item.getItem().isStackable();
-			if (_aveable_count == 0)
+			int aveCount = getItemCount(item.getObjectId()) - item.getCount();
+			boolean stackable = item.getItem().isStackable();
+			if (aveCount == 0)
 			{
-				_aveable_count = 1;
-				_stackable = false;
+				aveCount = 1;
+				stackable = false;
 			}
-			writeH(_stackable ? 3 : 2);
-			writeH(_item.getItem().getType1()); // item type1
-			writeD(_item.getObjectId());
-			writeD(_item.getItem().getItemId());
-			writeD(_aveable_count);
-			writeH(_item.getItem().getType2()); // item type2
+			writeH(stackable ? 3 : 2);
+			writeH(item.getItem().getType1()); // item type1
+			writeD(item.getObjectId());
+			writeD(item.getItem().getItemId());
+			writeD(aveCount);
+			writeH(item.getItem().getType2()); // item type2
 			writeH(0x00); // ?
-			writeD(_item.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
-			writeH(_item.getEnchant()); // enchant level
+			writeD(item.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
+			writeH(item.getEnchant()); // enchant level
 			writeH(0x00); // ?
 			writeH(0x00);
 		}

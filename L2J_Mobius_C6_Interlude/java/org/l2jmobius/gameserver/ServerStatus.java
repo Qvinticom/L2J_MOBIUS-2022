@@ -48,25 +48,25 @@ public class ServerStatus
 		@Override
 		public void run()
 		{
-			int ActivePlayers = 0;
-			int OfflinePlayers = 0;
+			int activePlayers = 0;
+			int offlinePlayers = 0;
 			
 			for (PlayerInstance player : World.getInstance().getAllPlayers())
 			{
 				if (player.isInOfflineMode())
 				{
-					OfflinePlayers++;
+					offlinePlayers++;
 				}
 				else
 				{
-					ActivePlayers++;
+					activePlayers++;
 				}
 			}
 			
 			Util.printSection("Server Status");
 			LOGGER.info("Server Time: " + fmt.format(new Date(System.currentTimeMillis())));
-			LOGGER.info("Active Players Online: " + ActivePlayers);
-			LOGGER.info("Offline Players Online: " + OfflinePlayers);
+			LOGGER.info("Active Players Online: " + activePlayers);
+			LOGGER.info("Offline Players Online: " + offlinePlayers);
 			LOGGER.info("Threads: " + Thread.activeCount());
 			LOGGER.info("Free Memory: " + (((Runtime.getRuntime().maxMemory() - Runtime.getRuntime().totalMemory()) + Runtime.getRuntime().freeMemory()) / 1048576) + " MB");
 			LOGGER.info("Used memory: " + ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576) + " MB");

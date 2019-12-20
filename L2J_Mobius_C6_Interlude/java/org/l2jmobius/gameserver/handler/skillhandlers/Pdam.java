@@ -61,17 +61,16 @@ public class Pdam implements ISkillHandler
 		int damage = 0;
 		
 		// Calculate targets based on vegeance
-		final List<WorldObject> target_s = new ArrayList<>();
-		
-		for (WorldObject _target : targets)
+		final List<WorldObject> result = new ArrayList<>();
+		for (WorldObject wo : targets)
 		{
-			target_s.add(_target);
+			result.add(wo);
 			
-			final Creature target = (Creature) _target;
+			final Creature target = (Creature) wo;
 			
 			if (target.vengeanceSkill(skill))
 			{
-				target_s.add(creature);
+				result.add(creature);
 			}
 		}
 		
@@ -79,7 +78,7 @@ public class Pdam implements ISkillHandler
 		final boolean sps = creature.checkSps();
 		final boolean ss = creature.checkSs();
 		
-		for (WorldObject target2 : target_s)
+		for (WorldObject target2 : result)
 		{
 			if (target2 == null)
 			{
@@ -149,34 +148,31 @@ public class Pdam implements ISkillHandler
 					creature.sendPacket(smsg);
 				}
 				
-				if (!target.isInvul())
+				if (!target.isInvul() && skill.hasEffects())
 				{
-					if (skill.hasEffects())
+					if (target.reflectSkill(skill))
 					{
-						if (target.reflectSkill(skill))
-						{
-							creature.stopSkillEffects(skill.getId());
-							
-							skill.getEffects(null, creature, ss, sps, bss);
-							SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
-							sm.addSkillName(skill.getId());
-							creature.sendPacket(sm);
-						}
-						else if (f.calcSkillSuccess(creature, target, skill, soul, false, false)) // activate attacked effects, if any
-						{
-							// Like L2OFF must remove the first effect if the second effect lands
-							skill.getEffects(creature, target, ss, sps, bss);
-							SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
-							sm.addSkillName(skill.getId());
-							target.sendPacket(sm);
-						}
-						else
-						{
-							SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
-							sm.addString(target.getName());
-							sm.addSkillName(skill.getDisplayId());
-							creature.sendPacket(sm);
-						}
+						creature.stopSkillEffects(skill.getId());
+						
+						skill.getEffects(null, creature, ss, sps, bss);
+						SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+						sm.addSkillName(skill.getId());
+						creature.sendPacket(sm);
+					}
+					else if (f.calcSkillSuccess(creature, target, skill, soul, false, false)) // activate attacked effects, if any
+					{
+						// Like L2OFF must remove the first effect if the second effect lands
+						skill.getEffects(creature, target, ss, sps, bss);
+						SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+						sm.addSkillName(skill.getId());
+						target.sendPacket(sm);
+					}
+					else
+					{
+						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						sm.addString(target.getName());
+						sm.addSkillName(skill.getDisplayId());
+						creature.sendPacket(sm);
 					}
 				}
 				
@@ -271,13 +267,11 @@ public class Pdam implements ISkillHandler
 				else if ((creature instanceof PlayerInstance) && (target instanceof PlayerInstance) && !target.isInvul()) // only players can reduce CPs each other
 				{
 					final PlayerInstance player = (PlayerInstance) target;
-					
-					double hp_damage = 0;
-					
+					double hpDamage = 0;
 					if (damage >= player.getCurrentCp())
 					{
 						final double cur_cp = player.getCurrentCp();
-						hp_damage = damage - cur_cp;
+						hpDamage = damage - cur_cp;
 						player.setCurrentCp(1);
 					}
 					else
@@ -286,7 +280,7 @@ public class Pdam implements ISkillHandler
 						player.setCurrentCp(cur_cp - damage);
 					}
 					
-					if (hp_damage > 0)
+					if (hpDamage > 0)
 					{
 						player.reduceCurrentHp(damage, creature);
 					}

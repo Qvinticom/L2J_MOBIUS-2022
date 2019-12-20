@@ -50,9 +50,9 @@ public class MysteryPotion implements IItemHandler
 		PlayerInstance player = (PlayerInstance) playable;
 		
 		// Use a summon skill effect for fun ;)
-		MagicSkillUse MSU = new MagicSkillUse(playable, playable, 2103, 1, 0, 0);
-		player.sendPacket(MSU);
-		player.broadcastPacket(MSU);
+		MagicSkillUse msu = new MagicSkillUse(playable, playable, 2103, 1, 0, 0);
+		player.sendPacket(msu);
+		player.broadcastPacket(msu);
 		
 		player.startAbnormalEffect(BIGHEAD_EFFECT);
 		player.destroyItem("Consume", item.getObjectId(), 1, null, false);

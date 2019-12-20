@@ -45,7 +45,7 @@ import org.l2jmobius.loginserver.network.loginserverpackets.LoginServerFail;
  */
 public class GameServerAuth extends BaseRecievePacket
 {
-	protected static Logger LOGGER = Logger.getLogger(GameServerAuth.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(GameServerAuth.class.getName());
 	GameServerThread _server;
 	private final byte[] _hexId;
 	private final int _desiredId;

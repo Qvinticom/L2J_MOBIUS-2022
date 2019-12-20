@@ -105,14 +105,14 @@ public class ArmorSetsTable
 		private final int _skill_id;
 		private final int _shield;
 		
-		public ArmorDummy(int chest, int legs, int head, int gloves, int feet, int skill_id, int shield)
+		public ArmorDummy(int chest, int legs, int head, int gloves, int feet, int skillId, int shield)
 		{
 			_chest = chest;
 			_legs = legs;
 			_head = head;
 			_gloves = gloves;
 			_feet = feet;
-			_skill_id = skill_id;
+			_skill_id = skillId;
 			_shield = shield;
 		}
 		

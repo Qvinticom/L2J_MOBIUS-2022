@@ -78,7 +78,6 @@ public class RecipeController
 		
 		SystemMessage sm = new SystemMessage(SystemMessageId.CANT_ALTER_RECIPEBOOK_WHILE_CRAFTING);
 		player.sendPacket(sm);
-		return;
 	}
 	
 	public synchronized void requestMakeItemAbort(PlayerInstance player)
@@ -396,8 +395,9 @@ public class RecipeController
 					{
 						Thread.sleep(_delay);
 					}
-					catch (InterruptedException e)
+					catch (Exception e)
 					{
+						// Ignore.
 					}
 					finally
 					{

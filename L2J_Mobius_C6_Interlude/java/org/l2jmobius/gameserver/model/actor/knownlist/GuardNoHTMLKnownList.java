@@ -57,13 +57,10 @@ public class GuardNoHTMLKnownList extends AttackableKnownList
 			// Check if the object added is a PlayerInstance that owns Karma
 			PlayerInstance player = (PlayerInstance) object;
 			
-			if (player.getKarma() > 0)
+			// Set the GuardInstance Intention to AI_INTENTION_ACTIVE
+			if ((player.getKarma() > 0) && (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 			{
-				// Set the GuardInstance Intention to AI_INTENTION_ACTIVE
-				if (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
-				{
-					getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
-				}
+				getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
 			}
 		}
 		else if (Config.ALLOW_GUARDS && (object instanceof MonsterInstance))
@@ -71,13 +68,10 @@ public class GuardNoHTMLKnownList extends AttackableKnownList
 			// Check if the object added is an aggressive MonsterInstance
 			MonsterInstance mob = (MonsterInstance) object;
 			
-			if (mob.isAggressive())
+			// Set the GuardInstance Intention to AI_INTENTION_ACTIVE
+			if (mob.isAggressive() && (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 			{
-				// Set the GuardInstance Intention to AI_INTENTION_ACTIVE
-				if (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
-				{
-					getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
-				}
+				getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
 			}
 		}
 		

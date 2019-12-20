@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.taskmanager;
 
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.NoSuchElementException;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
@@ -75,8 +76,9 @@ public class DecayTaskManager
 			{
 				if (_decayTasks != null)
 				{
-					for (Creature actor : _decayTasks.keySet())
+					for (Entry<Creature, Long> entry : _decayTasks.entrySet())
 					{
+						final Creature actor = entry.getKey();
 						if (actor instanceof RaidBossInstance)
 						{
 							delay = 30000;
@@ -85,7 +87,7 @@ public class DecayTaskManager
 						{
 							delay = 8500;
 						}
-						if ((current - _decayTasks.get(actor)) > delay)
+						if ((current - entry.getValue()) > delay)
 						{
 							actor.onDecay();
 							_decayTasks.remove(actor);

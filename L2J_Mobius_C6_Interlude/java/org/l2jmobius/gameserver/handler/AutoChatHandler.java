@@ -754,7 +754,7 @@ public class AutoChatHandler implements SpawnListener
 							
 							if (text.indexOf("%player_random%") > -1)
 							{
-								text = text.replaceAll("%player_random%", randomPlayer.getName());
+								text = text.replace("%player_random%", randomPlayer.getName());
 							}
 							
 							if (text.indexOf("%player_cabal_winner%") > -1)
@@ -763,7 +763,7 @@ public class AutoChatHandler implements SpawnListener
 								{
 									if (SevenSigns.getInstance().getPlayerCabal(nearbyPlayer) == winningCabal)
 									{
-										text = text.replaceAll("%player_cabal_winner%", nearbyPlayer.getName());
+										text = text.replace("%player_cabal_winner%", nearbyPlayer.getName());
 										break;
 									}
 								}
@@ -775,7 +775,7 @@ public class AutoChatHandler implements SpawnListener
 								{
 									if (SevenSigns.getInstance().getPlayerCabal(nearbyPlayer) == losingCabal)
 									{
-										text = text.replaceAll("%player_cabal_loser%", nearbyPlayer.getName());
+										text = text.replace("%player_cabal_loser%", nearbyPlayer.getName());
 										break;
 									}
 								}
@@ -806,7 +806,7 @@ public class AutoChatHandler implements SpawnListener
 					}
 					catch (Exception e)
 					{
-						e.printStackTrace();
+						LOGGER.info("Problem with AutoChatHandler: " + e.getMessage());
 						return;
 					}
 				}

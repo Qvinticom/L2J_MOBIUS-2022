@@ -43,7 +43,7 @@ import org.l2jmobius.loginserver.network.serverpackets.ServerList;
  */
 public class RequestAuthLogin implements IIncomingPacket<LoginClient>
 {
-	private static Logger LOGGER = Logger.getLogger(RequestAuthLogin.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestAuthLogin.class.getName());
 	
 	private final byte[] _raw1 = new byte[128];
 	private final byte[] _raw2 = new byte[128];

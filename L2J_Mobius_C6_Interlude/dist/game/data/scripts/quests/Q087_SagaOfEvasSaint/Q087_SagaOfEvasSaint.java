@@ -26,7 +26,7 @@ public class Q087_SagaOfEvasSaint extends SagasSuperClass
 	public Q087_SagaOfEvasSaint()
 	{
 		super(87, "Saga of Eva's Saint");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			30191,
 			31626,
@@ -41,7 +41,7 @@ public class Q087_SagaOfEvasSaint extends SagasSuperClass
 			31657,
 			31280
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7524,
@@ -56,39 +56,39 @@ public class Q087_SagaOfEvasSaint extends SagasSuperClass
 			7088,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27266,
 			27236,
 			27276
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			105
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x1e
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			164650,
 			46087,
 			46066
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-74121,
 			-36372,
 			-36396
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-2871,
 			-1685,
 			-1685
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

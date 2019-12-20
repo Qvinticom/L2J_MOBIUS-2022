@@ -2247,7 +2247,7 @@ public class Config
 			LIST_PET_RENT_NPC = new ArrayList<>(listPetRentNpc.length);
 			for (String id : listPetRentNpc)
 			{
-				LIST_PET_RENT_NPC.add(Integer.valueOf(id));
+				LIST_PET_RENT_NPC.add(Integer.parseInt(id));
 			}
 			RAID_HP_REGEN_MULTIPLIER = NPC.getDouble("RaidHpRegenMultiplier", 100) / 100;
 			RAID_MP_REGEN_MULTIPLIER = NPC.getDouble("RaidMpRegenMultiplier", 100) / 100;
@@ -2270,7 +2270,7 @@ public class Config
 				
 				try
 				{
-					MINIONS_RESPAWN_TIME.put(Integer.valueOf(propSplit[0]), Integer.valueOf(propSplit[1]));
+					MINIONS_RESPAWN_TIME.put(Integer.parseInt(propSplit[0]), Integer.parseInt(propSplit[1]));
 				}
 				catch (NumberFormatException nfe)
 				{
@@ -2365,7 +2365,7 @@ public class Config
 					{
 						try
 						{
-							RATE_DROP_AMOUNT_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
+							RATE_DROP_AMOUNT_BY_ID.put(Integer.parseInt(itemSplit[0]), Float.parseFloat(itemSplit[1]));
 						}
 						catch (NumberFormatException nfe)
 						{
@@ -2393,7 +2393,7 @@ public class Config
 					{
 						try
 						{
-							RATE_DROP_CHANCE_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
+							RATE_DROP_CHANCE_BY_ID.put(Integer.parseInt(itemSplit[0]), Float.parseFloat(itemSplit[1]));
 						}
 						catch (NumberFormatException nfe)
 						{
@@ -2822,7 +2822,7 @@ public class Config
 			final PropertiesParser FactionSystem = new PropertiesParser(CUSTOM_FACTION_SYSTEM_CONFIG_FILE);
 			
 			String[] tempString;
-			FACTION_SYSTEM_ENABLED = Boolean.valueOf(FactionSystem.getBoolean("EnableFactionSystem", false));
+			FACTION_SYSTEM_ENABLED = FactionSystem.getBoolean("EnableFactionSystem", false);
 			tempString = FactionSystem.getString("StartingLocation", "85332,16199,-1252").split(",");
 			FACTION_STARTING_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]));
 			tempString = FactionSystem.getString("ManagerSpawnLocation", "85712,15974,-1260,26808").split(",");
@@ -2844,16 +2844,16 @@ public class Config
 			
 			// Load FakePlayers config file (if exists)
 			final PropertiesParser FakePlayers = new PropertiesParser(CUSTOM_FAKE_PLAYERS_CONFIG_FILE);
-			FAKE_PLAYERS_ENABLED = Boolean.valueOf(FakePlayers.getBoolean("EnableFakePlayers", false));
-			FAKE_PLAYER_CHAT = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerChat", false));
-			FAKE_PLAYER_USE_SHOTS = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerUseShots", false));
-			FAKE_PLAYER_KILL_PVP = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerKillsRewardPvP", false));
-			FAKE_PLAYER_KILL_KARMA = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerUnflaggedKillsKarma", false));
-			FAKE_PLAYER_AGGRO_MONSTERS = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerAggroMonsters", false));
-			FAKE_PLAYER_AGGRO_PLAYERS = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerAggroPlayers", false));
-			FAKE_PLAYER_AGGRO_FPC = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerAggroFPC", false));
-			FAKE_PLAYER_CAN_DROP_ITEMS = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerCanDropItems", false));
-			FAKE_PLAYER_CAN_PICKUP = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerCanPickup", false));
+			FAKE_PLAYERS_ENABLED = FakePlayers.getBoolean("EnableFakePlayers", false);
+			FAKE_PLAYER_CHAT = FakePlayers.getBoolean("FakePlayerChat", false);
+			FAKE_PLAYER_USE_SHOTS = FakePlayers.getBoolean("FakePlayerUseShots", false);
+			FAKE_PLAYER_KILL_PVP = FakePlayers.getBoolean("FakePlayerKillsRewardPvP", false);
+			FAKE_PLAYER_KILL_KARMA = FakePlayers.getBoolean("FakePlayerUnflaggedKillsKarma", false);
+			FAKE_PLAYER_AGGRO_MONSTERS = FakePlayers.getBoolean("FakePlayerAggroMonsters", false);
+			FAKE_PLAYER_AGGRO_PLAYERS = FakePlayers.getBoolean("FakePlayerAggroPlayers", false);
+			FAKE_PLAYER_AGGRO_FPC = FakePlayers.getBoolean("FakePlayerAggroFPC", false);
+			FAKE_PLAYER_CAN_DROP_ITEMS = FakePlayers.getBoolean("FakePlayerCanDropItems", false);
+			FAKE_PLAYER_CAN_PICKUP = FakePlayers.getBoolean("FakePlayerCanPickup", false);
 			
 			// Load FindPvP config file (if exists)
 			final PropertiesParser FindPvP = new PropertiesParser(CUSTOM_FIND_PVP_CONFIG_FILE);
@@ -2927,7 +2927,7 @@ public class Config
 					{
 						try
 						{
-							PREMIUM_RATE_DROP_CHANCE_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
+							PREMIUM_RATE_DROP_CHANCE_BY_ID.put(Integer.parseInt(itemSplit[0]), Float.parseFloat(itemSplit[1]));
 						}
 						catch (NumberFormatException nfe)
 						{
@@ -2954,7 +2954,7 @@ public class Config
 					{
 						try
 						{
-							PREMIUM_RATE_DROP_AMOUNT_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
+							PREMIUM_RATE_DROP_AMOUNT_BY_ID.put(Integer.parseInt(itemSplit[0]), Float.parseFloat(itemSplit[1]));
 						}
 						catch (NumberFormatException nfe)
 						{
@@ -3027,7 +3027,7 @@ public class Config
 				MOBS_LIST_NOT_RANDOM = new ArrayList<>(mobsIds.length);
 				for (String id : mobsIds)
 				{
-					MOBS_LIST_NOT_RANDOM.add(Integer.valueOf(id));
+					MOBS_LIST_NOT_RANDOM.add(Integer.parseInt(id));
 				}
 			}
 			

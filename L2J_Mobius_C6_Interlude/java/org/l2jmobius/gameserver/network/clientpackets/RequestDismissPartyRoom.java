@@ -40,14 +40,14 @@ public class RequestDismissPartyRoom extends GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final PlayerInstance _player = getClient().getPlayer();
-		if (_player == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
-		if (_room == null)
+		final PartyMatchRoom room = PartyMatchRoomList.getInstance().getRoom(_roomid);
+		if (room == null)
 		{
 			return;
 		}

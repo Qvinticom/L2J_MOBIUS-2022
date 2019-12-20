@@ -54,7 +54,7 @@ import org.l2jmobius.gameserver.util.GMAudit;
  */
 public class ItemTable
 {
-	private static Logger LOGGER = Logger.getLogger(ItemTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ItemTable.class.getName());
 	private static Logger LOGGER_ITEMS = Logger.getLogger("item");
 	
 	public static final Map<String, Integer> SLOTS = new HashMap<>();

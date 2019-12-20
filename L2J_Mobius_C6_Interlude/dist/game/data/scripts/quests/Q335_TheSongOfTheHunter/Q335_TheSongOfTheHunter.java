@@ -229,17 +229,17 @@ public class Q335_TheSongOfTheHunter extends Quest
 		registerQuestItems(questItems.stream().mapToInt(i -> i).toArray());
 	}
 	
-	private static int CalcItemsConds(QuestState st, int[][][] ItemsConds)
+	private static int CalcItemsConds(QuestState st, int[][][] itemConds)
 	{
 		int result = 0;
-		for (int[][] ItemsCond : ItemsConds)
+		for (int[][] itemCond : itemConds)
 		{
 			int count = 0;
-			for (int i : ItemsCond[0])
+			for (int i : itemCond[0])
 			{
 				count += st.getQuestItemsCount(i);
 			}
-			if (count >= ItemsCond[1][0])
+			if (count >= itemCond[1][0])
 			{
 				++result;
 			}
@@ -247,11 +247,11 @@ public class Q335_TheSongOfTheHunter extends Quest
 		return result;
 	}
 	
-	private void DelItemsConds(QuestState st, int[][][] ItemsConds)
+	private void DelItemsConds(QuestState st, int[][][] itemConds)
 	{
-		for (int[][] ItemsCond : ItemsConds)
+		for (int[][] itemCond : itemConds)
 		{
-			for (int i : ItemsCond[0])
+			for (int i : itemCond[0])
 			{
 				st.takeItems(i, -1);
 			}
@@ -270,9 +270,9 @@ public class Q335_TheSongOfTheHunter extends Quest
 		return -1;
 	}
 	
-	private static boolean Blood_Crystal2Adena(QuestState st, int Blood_Crystal_Level)
+	private static boolean Blood_Crystal2Adena(QuestState st, int bloodCrystalLevel)
 	{
-		if (Blood_Crystal_Level < 2)
+		if (bloodCrystalLevel < 2)
 		{
 			return false;
 		}
@@ -280,7 +280,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		{
 			st.takeItems(i, -1);
 		}
-		st.giveItems(57, (3400 * (int) Math.pow(2.0, Blood_Crystal_Level - 2)));
+		st.giveItems(57, (3400 * (int) Math.pow(2.0, bloodCrystalLevel - 2)));
 		return true;
 	}
 	
@@ -327,10 +327,10 @@ public class Q335_TheSongOfTheHunter extends Quest
 				list[3] = 6 + Rnd.get(6);
 				list[4] = Rnd.get(12);
 			}
-			boolean sort_flag;
+			boolean sortFlag;
 			do
 			{
-				sort_flag = false;
+				sortFlag = false;
 				for (int j = 1; j < list.length; ++j)
 				{
 					if (list[j] < list[j - 1])
@@ -338,11 +338,11 @@ public class Q335_TheSongOfTheHunter extends Quest
 						final int tmp = list[j];
 						list[j] = list[j - 1];
 						list[j - 1] = tmp;
-						sort_flag = true;
+						sortFlag = true;
 					}
 				}
 			}
-			while (sort_flag);
+			while (sortFlag);
 			int packedlist = 0;
 			try
 			{
@@ -350,7 +350,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
+				// Ignore.
 			}
 			st.set("list", String.valueOf(packedlist));
 		}
@@ -517,21 +517,21 @@ public class Q335_TheSongOfTheHunter extends Quest
 			if (event.startsWith("30745-request-") && (state == 2))
 			{
 				event = event.replaceFirst("30745-request-", "");
-				int request_id;
+				int requestId;
 				try
 				{
-					request_id = Integer.valueOf(event);
+					requestId = Integer.parseInt(event);
 				}
 				catch (Exception e)
 				{
 					return null;
 				}
-				if (!isValidRequest(request_id))
+				if (!isValidRequest(requestId))
 				{
 					return null;
 				}
-				st.giveItems(request_id, 1);
-				return "30745-" + request_id + ".htm";
+				st.giveItems(requestId, 1);
+				return "30745-" + requestId + ".htm";
 			}
 		}
 		return event;
@@ -691,67 +691,64 @@ public class Q335_TheSongOfTheHunter extends Quest
 			return null;
 		}
 		final int npcId = npc.getNpcId();
-		int[][][] Items_Circle = null;
+		int[][][] itemsCircle = null;
 		if (st.getQuestItemsCount(TEST_INSTRUCTIONS1) > 0)
 		{
-			Items_Circle = ITEMS_1ST_CIRCLE;
+			itemsCircle = ITEMS_1ST_CIRCLE;
 		}
 		else if (st.getQuestItemsCount(TEST_INSTRUCTIONS2) > 0)
 		{
-			Items_Circle = ITEMS_2ND_CIRCLE;
+			itemsCircle = ITEMS_2ND_CIRCLE;
 		}
-		if (Items_Circle != null)
+		if (itemsCircle != null)
 		{
-			for (int[][] ItemsCond : Items_Circle)
+			for (int[][] itemCond : itemsCircle)
 			{
-				for (int i = 2; i < ItemsCond.length; ++i)
+				for (int i = 2; i < itemCond.length; ++i)
 				{
-					if (npcId == ItemsCond[i][0])
+					if ((npcId == itemCond[i][0]) && (Rnd.get(100) < itemCond[i][1]) && (st.getQuestItemsCount(itemCond[0][0]) < itemCond[1][0]))
 					{
-						if ((Rnd.get(100) < ItemsCond[i][1]) && (st.getQuestItemsCount(ItemsCond[0][0]) < ItemsCond[1][0]))
-						{
-							st.giveItems(ItemsCond[0][0], 1);
-						}
+						st.giveItems(itemCond[0][0], 1);
 					}
 				}
 			}
 			if (st.getQuestItemsCount(TEST_INSTRUCTIONS1) > 0)
 			{
-				final long Hakas_Head_count = st.getQuestItemsCount(HAKAS_HEAD);
-				final long Jakas_Head_count = st.getQuestItemsCount(JAKAS_HEAD);
-				final long Markas_Head_count = st.getQuestItemsCount(MARKAS_HEAD);
+				final long hakasHeadCount = st.getQuestItemsCount(HAKAS_HEAD);
+				final long jakasHeadCount = st.getQuestItemsCount(JAKAS_HEAD);
+				final long markasHeadCount = st.getQuestItemsCount(MARKAS_HEAD);
 				if (npcId == BREKA_ORC_WARRIOR)
 				{
-					if ((Hakas_Head_count == 0) && (Rnd.get(100) < 10))
+					if ((hakasHeadCount == 0) && (Rnd.get(100) < 10))
 					{
 						st.addSpawn(BREKA_OVERLORD_HAKA, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 300000);
 					}
-					else if ((Jakas_Head_count == 0) && (Rnd.get(100) < 10))
+					else if ((jakasHeadCount == 0) && (Rnd.get(100) < 10))
 					{
 						st.addSpawn(BREKA_OVERLORD_JAKA, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 300000);
 					}
-					else if ((Markas_Head_count == 0) && (Rnd.get(100) < 10))
+					else if ((markasHeadCount == 0) && (Rnd.get(100) < 10))
 					{
 						st.addSpawn(BREKA_OVERLORD_MARKA, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 300000);
 					}
 				}
 				else if (npcId == BREKA_OVERLORD_HAKA)
 				{
-					if (Hakas_Head_count == 0)
+					if (hakasHeadCount == 0)
 					{
 						st.giveItems(HAKAS_HEAD, 1);
 					}
 				}
 				else if (npcId == BREKA_OVERLORD_JAKA)
 				{
-					if (Jakas_Head_count == 0)
+					if (jakasHeadCount == 0)
 					{
 						st.giveItems(JAKAS_HEAD, 1);
 					}
 				}
 				else if (npcId == BREKA_OVERLORD_MARKA)
 				{
-					if (Markas_Head_count == 0)
+					if (markasHeadCount == 0)
 					{
 						st.giveItems(MARKAS_HEAD, 1);
 					}
@@ -861,20 +858,17 @@ public class Q335_TheSongOfTheHunter extends Quest
 			}
 			if (request != null)
 			{
-				if (request.droplist.containsKey(npcId))
+				if (request.droplist.containsKey(npcId) && (Rnd.get(100) < request.droplist.get(npcId)) && (st.getQuestItemsCount(request.request_item) < request.request_count))
 				{
-					if ((Rnd.get(100) < request.droplist.get(npcId)) && (st.getQuestItemsCount(request.request_item) < request.request_count))
-					{
-						st.giveItems(request.request_item, 1);
-					}
+					st.giveItems(request.request_item, 1);
 				}
 				if (request.spawnlist.containsKey(npcId) && (st.getQuestItemsCount(request.request_item) < request.request_count))
 				{
-					final int[] spawn_n_chance = request.spawnlist.get(npcId);
-					if (Rnd.get(100) < spawn_n_chance[1])
+					final int[] spawnChance = request.spawnlist.get(npcId);
+					if (Rnd.get(100) < spawnChance[1])
 					{
-						st.addSpawn(spawn_n_chance[0], npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 300000);
-						if (spawn_n_chance[0] == 27149)
+						st.addSpawn(spawnChance[0], npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 300000);
+						if (spawnChance[0] == 27149)
 						{
 							npc.broadcastNpcSay("Show me the pretty sparkling things! They're all mine!");
 						}
@@ -912,25 +906,25 @@ public class Q335_TheSongOfTheHunter extends Quest
 			text = txt;
 		}
 		
-		public Request addDrop(int kill_mob_id, int chance)
+		public Request addDrop(int killMobId, int chance)
 		{
-			droplist.put(kill_mob_id, chance);
+			droplist.put(killMobId, chance);
 			return this;
 		}
 		
-		public Request addSpawn(int kill_mob_id, int spawn_mob_id, int chance)
+		public Request addSpawn(int killMobId, int spawnMobId, int chance)
 		{
 			try
 			{
-				spawnlist.put(kill_mob_id, new int[]
+				spawnlist.put(killMobId, new int[]
 				{
-					spawn_mob_id,
+					spawnMobId,
 					chance
 				});
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
+				// Ignore.
 			}
 			return this;
 		}

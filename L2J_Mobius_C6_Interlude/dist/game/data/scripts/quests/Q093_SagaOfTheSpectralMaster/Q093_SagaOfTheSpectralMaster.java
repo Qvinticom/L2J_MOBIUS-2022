@@ -27,7 +27,7 @@ public class Q093_SagaOfTheSpectralMaster extends SagasSuperClass
 	public Q093_SagaOfTheSpectralMaster()
 	{
 		super(93, "Saga of the Spectral Master");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			30175,
 			31287,
@@ -42,7 +42,7 @@ public class Q093_SagaOfTheSpectralMaster extends SagasSuperClass
 			31656,
 			31613
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7606,
@@ -57,39 +57,39 @@ public class Q093_SagaOfTheSpectralMaster extends SagasSuperClass
 			7112,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27315,
 			27242,
 			27312
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			111
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x29
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			164650,
 			47429,
 			47391
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-74121,
 			-56923,
 			-56929
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-2871,
 			-2383,
 			-2370
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

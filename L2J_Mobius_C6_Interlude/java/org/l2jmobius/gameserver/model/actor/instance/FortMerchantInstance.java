@@ -164,10 +164,6 @@ public class FortMerchantInstance extends NpcWalkerInstance
 	
 	private boolean validateCondition(PlayerInstance player)
 	{
-		if (getFort().getSiege().getIsInProgress())
-		{
-			return false; // Busy because of siege
-		}
-		return true;
+		return !getFort().getSiege().getIsInProgress();
 	}
 }

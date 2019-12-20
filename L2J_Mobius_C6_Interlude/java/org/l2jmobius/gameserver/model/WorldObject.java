@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.network.serverpackets.GetItem;
  */
 public abstract class WorldObject
 {
-	private final Logger LOGGER = Logger.getLogger(WorldObject.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(WorldObject.class.getName());
 	
 	private boolean _visible;
 	private WorldObjectKnownList _knownList;

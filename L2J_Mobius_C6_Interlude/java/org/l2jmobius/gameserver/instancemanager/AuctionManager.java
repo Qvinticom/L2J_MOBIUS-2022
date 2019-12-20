@@ -150,7 +150,6 @@ public class AuctionManager
 		catch (Exception e)
 		{
 			LOGGER.info("Exception: AuctionManager.load(): " + e.getMessage());
-			e.printStackTrace();
 		}
 	}
 	

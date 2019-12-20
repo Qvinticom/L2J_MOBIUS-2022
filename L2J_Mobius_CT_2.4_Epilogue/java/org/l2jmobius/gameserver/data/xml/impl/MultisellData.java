@@ -98,7 +98,7 @@ public class MultisellData implements IXmlReader
 						try
 						{
 							
-							list.setUseRate(Double.valueOf(att.getNodeValue()));
+							list.setUseRate(Double.parseDouble(att.getNodeValue()));
 							if (list.getUseRate() <= 1e-6)
 							{
 								throw new NumberFormatException("The value cannot be 0"); // threat 0 as invalid value

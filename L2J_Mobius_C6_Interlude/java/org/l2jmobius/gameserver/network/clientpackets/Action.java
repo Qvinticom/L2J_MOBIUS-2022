@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 @SuppressWarnings("unused")
 public class Action extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(Action.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Action.class.getName());
 	private int _objectId;
 	private int _originX;
 	private int _originY;

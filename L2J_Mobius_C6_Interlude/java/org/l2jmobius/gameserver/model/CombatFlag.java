@@ -40,10 +40,10 @@ public class CombatFlag
 	
 	private final int _itemId;
 	
-	public CombatFlag(int x, int y, int z, int heading, int item_id)
+	public CombatFlag(int x, int y, int z, int heading, int itemId)
 	{
 		_location = new Location(x, y, z, heading);
-		_itemId = item_id;
+		_itemId = itemId;
 	}
 	
 	public synchronized void spawnMe()
@@ -71,16 +71,12 @@ public class CombatFlag
 	
 	public void activate(PlayerInstance player, ItemInstance item)
 	{
-		// if the player is mounted, attempt to unmount first. Only allow picking up the comabt flag if unmounting is successful.
-		if (player.isMounted())
+		// if the player is mounted, attempt to unmount first. Only allow picking up the combat flag if dismount is successful.
+		if (player.isMounted() && !player.dismount())
 		{
-			// TODO: dismount
-			if (!player.dismount())
-			{
-				// TODO: correct this custom message.
-				player.sendMessage("You may not pick up this item while riding in this territory");
-				return;
-			}
+			// TODO: correct this custom message.
+			player.sendMessage("You may not pick up this item while riding in this territory");
+			return;
 		}
 		
 		// Player holding it data

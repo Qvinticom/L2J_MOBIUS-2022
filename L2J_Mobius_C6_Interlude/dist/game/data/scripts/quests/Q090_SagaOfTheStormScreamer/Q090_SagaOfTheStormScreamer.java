@@ -26,7 +26,7 @@ public class Q090_SagaOfTheStormScreamer extends SagasSuperClass
 	public Q090_SagaOfTheStormScreamer()
 	{
 		super(90, "Saga of the Storm Screamer");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			30175,
 			31627,
@@ -41,7 +41,7 @@ public class Q090_SagaOfTheStormScreamer extends SagasSuperClass
 			31659,
 			31287
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7531,
@@ -56,39 +56,39 @@ public class Q090_SagaOfTheStormScreamer extends SagasSuperClass
 			7084,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27252,
 			27239,
 			27256
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			110
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x28
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			161719,
 			124376,
 			124355
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-92823,
 			82127,
 			82155
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-1893,
 			-2796,
 			-2803
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

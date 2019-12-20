@@ -36,11 +36,9 @@ public class Harvester implements IItemHandler
 	{
 		5125
 	};
-	PlayerInstance _player;
-	MonsterInstance _target;
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance _item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
 		if (!(playable instanceof PlayerInstance))
 		{
@@ -52,23 +50,23 @@ public class Harvester implements IItemHandler
 			return;
 		}
 		
-		_player = (PlayerInstance) playable;
-		if ((_player.getTarget() == null) || !(_player.getTarget() instanceof MonsterInstance))
+		final PlayerInstance player = (PlayerInstance) playable;
+		if (!(player.getTarget() instanceof MonsterInstance))
 		{
-			_player.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
-			_player.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		_target = (MonsterInstance) _player.getTarget();
-		if ((_target == null) || !_target.isDead())
+		final MonsterInstance target = (MonsterInstance) player.getTarget();
+		if ((target == null) || !target.isDead())
 		{
-			_player.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		final Skill skill = SkillTable.getInstance().getInfo(2098, 1); // harvesting skill
-		_player.useMagic(skill, false, false);
+		player.useMagic(skill, false, false);
 	}
 	
 	@Override

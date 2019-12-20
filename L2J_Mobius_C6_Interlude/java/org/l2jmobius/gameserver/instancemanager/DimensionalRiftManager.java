@@ -57,7 +57,7 @@ public class DimensionalRiftManager
 	protected static final Logger LOGGER = Logger.getLogger(DimensionalRiftManager.class.getName());
 	
 	private final Map<Byte, Map<Byte, DimensionalRiftRoom>> _rooms = new HashMap<>();
-	private final short DIMENSIONAL_FRAGMENT_ITEM_ID = 7079;
+	private static final short DIMENSIONAL_FRAGMENT_ITEM_ID = 7079;
 	private static final int MAX_PARTY_PER_AREA = 3;
 	
 	private DimensionalRiftManager()
@@ -142,9 +142,9 @@ public class DimensionalRiftManager
 		final int typeSize = _rooms.keySet().size();
 		int roomSize = 0;
 		
-		for (Byte b : _rooms.keySet())
+		for (Map<Byte, DimensionalRiftRoom> room : _rooms.values())
 		{
-			roomSize += _rooms.get(b).keySet().size();
+			roomSize += room.keySet().size();
 		}
 		
 		LOGGER.info("DimensionalRiftManager: Loaded " + typeSize + " room types with " + roomSize + " rooms.");
@@ -258,20 +258,19 @@ public class DimensionalRiftManager
 		catch (Exception e)
 		{
 			LOGGER.warning("Error on loading dimensional rift spawns: " + e);
-			e.printStackTrace();
 		}
 		LOGGER.info("DimensionalRiftManager: Loaded " + countGood + " dimensional rift spawns, " + countBad + " errors.");
 	}
 	
 	public void reload()
 	{
-		for (Byte b : _rooms.keySet())
+		for (Map<Byte, DimensionalRiftRoom> rooms : _rooms.values())
 		{
-			for (byte i : _rooms.get(b).keySet())
+			for (DimensionalRiftRoom room : rooms.values())
 			{
-				_rooms.get(b).get(i).getSpawns().clear();
+				room.getSpawns().clear();
 			}
-			_rooms.get(b).clear();
+			rooms.clear();
 		}
 		_rooms.clear();
 		loadRooms();
@@ -360,12 +359,9 @@ public class DimensionalRiftManager
 				break;
 			}
 			
-			if (i.getCount() > 0)
+			if ((i.getCount() > 0) && (i.getCount() < getNeededItems(type)))
 			{
-				if (i.getCount() < getNeededItems(type))
-				{
-					canPass = false;
-				}
+				canPass = false;
 			}
 		}
 		

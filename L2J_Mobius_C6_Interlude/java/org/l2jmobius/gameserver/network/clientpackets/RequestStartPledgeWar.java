@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class RequestStartPledgeWar extends GameClientPacket
 {
 	private String _pledgeName;
-	private Clan _clan;
-	private PlayerInstance player;
 	
 	@Override
 	protected void readImpl()
@@ -40,19 +38,19 @@ public class RequestStartPledgeWar extends GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		player = getClient().getPlayer();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		_clan = getClient().getPlayer().getClan();
-		if (_clan == null)
+		final Clan playerClan = player.getClan();
+		if (playerClan == null)
 		{
 			return;
 		}
 		
-		if ((_clan.getLevel() < 3) || (_clan.getMembersCount() < Config.ALT_CLAN_MEMBERS_FOR_WAR))
+		if ((playerClan.getLevel() < 3) || (playerClan.getMembersCount() < Config.ALT_CLAN_MEMBERS_FOR_WAR))
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_WAR_DECLARED_IF_CLAN_LVL3_OR_15_MEMBER);
 			player.sendPacket(sm);
@@ -74,7 +72,7 @@ public class RequestStartPledgeWar extends GameClientPacket
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		else if ((_clan.getAllyId() == clan.getAllyId()) && (_clan.getAllyId() != 0))
+		else if ((playerClan.getAllyId() == clan.getAllyId()) && (playerClan.getAllyId() != 0))
 		{
 			SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_WAR_AGAINST_A_ALLIED_CLAN_NOT_WORK);
 			player.sendPacket(sm);
@@ -88,7 +86,7 @@ public class RequestStartPledgeWar extends GameClientPacket
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		else if (_clan.isAtWarWith(clan.getClanId()))
+		else if (playerClan.isAtWarWith(clan.getClanId()))
 		{
 			SystemMessage sm = new SystemMessage(SystemMessageId.ALREADY_AT_WAR_WITH_S1_WAIT_5_DAYS); // msg id 628
 			sm.addString(clan.getName());

@@ -41,7 +41,7 @@ public class Q038_DragonFangs extends Quest
 	private static final int ROHMER = 30344;
 	
 	// Reward { item, adena }
-	private static final int REWARD[][] =
+	private static final int[][] REWARD =
 	{
 		{
 			45,
@@ -271,8 +271,7 @@ public class Q038_DragonFangs extends Quest
 			return null;
 		}
 		
-		final int droplist[] = DROPLIST.get(npc.getNpcId());
-		
+		final int[] droplist = DROPLIST.get(npc.getNpcId());
 		if ((st.getInt("cond") == droplist[0]) && st.dropItems(droplist[1], 1, droplist[2], droplist[3]))
 		{
 			st.set("cond", String.valueOf(droplist[0] + 1));

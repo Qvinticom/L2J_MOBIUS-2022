@@ -240,14 +240,14 @@ public class MerchantInstance extends FolkInstance
 		
 		int petId;
 		double price = 1;
-		final int cost[] =
+		final int[] cost =
 		{
 			1800,
 			7200,
 			720000,
 			6480000
 		};
-		final int ridetime[] =
+		final int[] ridetime =
 		{
 			30,
 			60,

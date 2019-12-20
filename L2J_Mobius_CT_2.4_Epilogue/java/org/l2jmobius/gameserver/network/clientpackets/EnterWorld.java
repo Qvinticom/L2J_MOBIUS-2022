@@ -594,7 +594,7 @@ public class EnterWorld implements IClientIncomingPacket
 			
 			Calendar now = Calendar.getInstance();
 			now.setTimeInMillis(System.currentTimeMillis());
-			if ((NextBirthday == null) || (Integer.valueOf(NextBirthday) == now.get(Calendar.YEAR)))
+			if ((NextBirthday == null) || (Integer.parseInt(NextBirthday) == now.get(Calendar.YEAR)))
 			{
 				player.sendPacket(SystemMessageId.HAPPY_BIRTHDAY_ALEGRIA_HAS_SENT_YOU_A_BIRTHDAY_GIFT);
 				player.sendPacket(new ExBirthdayPopup());

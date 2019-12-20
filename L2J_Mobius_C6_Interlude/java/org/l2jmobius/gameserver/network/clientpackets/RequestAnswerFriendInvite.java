@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class RequestAnswerFriendInvite extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestAnswerFriendInvite.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestAnswerFriendInvite.class.getName());
 	
 	private int _response;
 	

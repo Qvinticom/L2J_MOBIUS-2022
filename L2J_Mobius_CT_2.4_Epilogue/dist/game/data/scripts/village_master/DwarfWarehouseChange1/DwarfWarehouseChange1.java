@@ -78,7 +78,7 @@ public class DwarfWarehouseChange1 extends AbstractNpcAI
 			}
 			case "54":
 			{
-				htmltext = ClassChangeRequested(player, npc, Integer.valueOf(event));
+				htmltext = ClassChangeRequested(player, npc, Integer.parseInt(event));
 				break;
 			}
 		}

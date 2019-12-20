@@ -35,6 +35,7 @@ import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
@@ -180,12 +181,12 @@ public class Olympiad
 		_nobles = new ConcurrentHashMap<>();
 		_oldnobles = new HashMap<>();
 		
-		final Properties OlympiadProperties = new Properties();
+		final Properties olympiadProperties = new Properties();
 		InputStream is = null;
 		try
 		{
 			is = new FileInputStream(new File("./" + OLYMPIAD_DATA_FILE));
-			OlympiadProperties.load(is);
+			olympiadProperties.load(is);
 		}
 		catch (Exception e)
 		{
@@ -205,11 +206,11 @@ public class Olympiad
 			}
 		}
 		
-		_currentCycle = Integer.parseInt(OlympiadProperties.getProperty("CurrentCycle", "1"));
-		_period = Integer.parseInt(OlympiadProperties.getProperty("Period", "0"));
-		_olympiadEnd = Long.parseLong(OlympiadProperties.getProperty("OlympiadEnd", "0"));
-		_validationEnd = Long.parseLong(OlympiadProperties.getProperty("ValdationEnd", "0"));
-		_nextWeeklyChange = Long.parseLong(OlympiadProperties.getProperty("NextWeeklyChange", "0"));
+		_currentCycle = Integer.parseInt(olympiadProperties.getProperty("CurrentCycle", "1"));
+		_period = Integer.parseInt(olympiadProperties.getProperty("Period", "0"));
+		_olympiadEnd = Long.parseLong(olympiadProperties.getProperty("OlympiadEnd", "0"));
+		_validationEnd = Long.parseLong(olympiadProperties.getProperty("ValdationEnd", "0"));
+		_nextWeeklyChange = Long.parseLong(olympiadProperties.getProperty("NextWeeklyChange", "0"));
 		
 		switch (_period)
 		{
@@ -498,16 +499,14 @@ public class Olympiad
 		}
 		
 		// Olympiad dualbox protection
-		if ((noble._active_boxes > 1) && !Config.ALLOW_DUALBOX_OLY)
+		if ((noble._activeBoxes > 1) && !Config.ALLOW_DUALBOX_OLY)
 		{
-			final List<String> players_in_boxes = noble.active_boxes_characters;
-			
-			if ((players_in_boxes != null) && (players_in_boxes.size() > 1))
+			final List<String> playerBoxes = noble._activeBoxeCharacters;
+			if ((playerBoxes != null) && (playerBoxes.size() > 1))
 			{
-				for (String character_name : players_in_boxes)
+				for (String character_name : playerBoxes)
 				{
 					final PlayerInstance player = World.getInstance().getPlayer(character_name);
-					
 					if ((player != null) && ((player.getOlympiadGameId() > 0) || player.isInOlympiadMode() || getInstance().isRegistered(player)))
 					{
 						noble.sendMessage("You are already participating in Olympiad with another char!");
@@ -1008,13 +1007,13 @@ public class Olympiad
 			return;
 		}
 		
-		for (Integer nobleId : _nobles.keySet())
+		for (Entry<Integer, StatsSet> entry : _nobles.entrySet())
 		{
-			final StatsSet nobleInfo = _nobles.get(nobleId);
+			final Integer nobleId = entry.getKey();
+			final StatsSet nobleInfo = entry.getValue();
 			int currentPoints = nobleInfo.getInt(POINTS);
 			currentPoints += WEEKLY_POINTS;
 			nobleInfo.set(POINTS, currentPoints);
-			
 			updateNobleStats(nobleId, nobleInfo);
 		}
 	}
@@ -1025,13 +1024,13 @@ public class Olympiad
 	}
 	
 	// returns the players for the given olympiad game Id
-	public PlayerInstance[] getPlayers(int Id)
+	public PlayerInstance[] getPlayers(int id)
 	{
-		if (OlympiadManager.getInstance().getOlympiadGame(Id) == null)
+		if (OlympiadManager.getInstance().getOlympiadGame(id) == null)
 		{
 			return null;
 		}
-		return OlympiadManager.getInstance().getOlympiadGame(Id).getPlayers();
+		return OlympiadManager.getInstance().getOlympiadGame(id).getPlayers();
 	}
 	
 	public int getCurrentCycle()
@@ -1137,9 +1136,10 @@ public class Olympiad
 			con = DatabaseFactory.getConnection();
 			PreparedStatement statement;
 			
-			for (Integer nobleId : _nobles.keySet())
+			for (Entry<Integer, StatsSet> entry : _nobles.entrySet())
 			{
-				final StatsSet nobleInfo = _nobles.get(nobleId);
+				final Integer nobleId = entry.getKey();
+				final StatsSet nobleInfo = entry.getValue();
 				
 				if (nobleInfo == null)
 				{
@@ -1239,30 +1239,30 @@ public class Olympiad
 	{
 		saveNobleData();
 		
-		final Properties OlympiadProperties = new Properties();
+		final Properties olympiadProperties = new Properties();
 		FileOutputStream fos = null;
 		try
 		{
 			fos = new FileOutputStream(new File("./" + OLYMPIAD_DATA_FILE));
 			
-			OlympiadProperties.setProperty("CurrentCycle", String.valueOf(_currentCycle));
-			OlympiadProperties.setProperty("Period", String.valueOf(_period));
-			OlympiadProperties.setProperty("OlympiadEnd", String.valueOf(_olympiadEnd));
-			OlympiadProperties.setProperty("ValdationEnd", String.valueOf(_validationEnd));
-			OlympiadProperties.setProperty("NextWeeklyChange", String.valueOf(_nextWeeklyChange));
+			olympiadProperties.setProperty("CurrentCycle", String.valueOf(_currentCycle));
+			olympiadProperties.setProperty("Period", String.valueOf(_period));
+			olympiadProperties.setProperty("OlympiadEnd", String.valueOf(_olympiadEnd));
+			olympiadProperties.setProperty("ValdationEnd", String.valueOf(_validationEnd));
+			olympiadProperties.setProperty("NextWeeklyChange", String.valueOf(_nextWeeklyChange));
 			
 			final GregorianCalendar gc = (GregorianCalendar) Calendar.getInstance();
 			gc.clear();
 			gc.setTimeInMillis(_nextWeeklyChange);
 			
-			OlympiadProperties.setProperty("NextWeeklyChange_DateFormat", DateFormat.getDateTimeInstance().format(gc.getTime()));
+			olympiadProperties.setProperty("NextWeeklyChange_DateFormat", DateFormat.getDateTimeInstance().format(gc.getTime()));
 			
 			gc.clear();
 			gc.setTimeInMillis(_olympiadEnd);
 			
-			OlympiadProperties.setProperty("OlympiadEnd_DateFormat", DateFormat.getDateTimeInstance().format(gc.getTime()));
+			olympiadProperties.setProperty("OlympiadEnd_DateFormat", DateFormat.getDateTimeInstance().format(gc.getTime()));
 			
-			OlympiadProperties.store(fos, "Olympiad Properties");
+			olympiadProperties.store(fos, "Olympiad Properties");
 		}
 		catch (Exception e)
 		{
@@ -1310,9 +1310,10 @@ public class Olympiad
 		
 		if (_nobles != null)
 		{
-			for (Integer nobleId : _nobles.keySet())
+			for (Entry<Integer, StatsSet> entry : _nobles.entrySet())
 			{
-				final StatsSet nobleInfo = _nobles.get(nobleId);
+				final Integer nobleId = entry.getKey();
+				final StatsSet nobleInfo = entry.getValue();
 				
 				if (nobleInfo == null)
 				{
@@ -1398,7 +1399,7 @@ public class Olympiad
 	
 	protected void giveHeroBonus()
 	{
-		if (_heroesToBe.size() == 0)
+		if (_heroesToBe.isEmpty())
 		{
 			return;
 		}
@@ -1499,9 +1500,8 @@ public class Olympiad
 		{
 			return 0;
 		}
-		final int points = noble.getInt(POINTS);
 		
-		return points;
+		return noble.getInt(POINTS);
 	}
 	
 	public int getCompetitionDone(int objId)
@@ -1516,9 +1516,8 @@ public class Olympiad
 		{
 			return 0;
 		}
-		final int points = noble.getInt(COMP_DONE);
 		
-		return points;
+		return noble.getInt(COMP_DONE);
 	}
 	
 	public int getCompetitionWon(int objId)
@@ -1533,9 +1532,8 @@ public class Olympiad
 		{
 			return 0;
 		}
-		final int points = noble.getInt(COMP_WON);
 		
-		return points;
+		return noble.getInt(COMP_WON);
 	}
 	
 	public int getCompetitionLost(int objId)
@@ -1550,9 +1548,8 @@ public class Olympiad
 		{
 			return 0;
 		}
-		final int points = noble.getInt(COMP_LOST);
 		
-		return points;
+		return noble.getInt(COMP_LOST);
 	}
 	
 	protected void deleteNobles()
@@ -1740,7 +1737,7 @@ public class Olympiad
 	
 	private void schedulePointsRestoreCustom()
 	{
-		long final_change_period = WEEKLY_PERIOD;
+		long finalChangePeriod = WEEKLY_PERIOD;
 		
 		switch (Config.ALT_OLY_PERIOD)
 		{
@@ -1748,21 +1745,21 @@ public class Olympiad
 			{
 				if (Config.ALT_OLY_PERIOD_MULTIPLIER < 10)
 				{
-					final_change_period = WEEKLY_PERIOD / 2;
+					finalChangePeriod = WEEKLY_PERIOD / 2;
 				}
-			}
 				break;
+			}
 			case WEEK:
 			{
 				if (Config.ALT_OLY_PERIOD_MULTIPLIER == 1)
 				{
-					final_change_period = WEEKLY_PERIOD / 2;
+					finalChangePeriod = WEEKLY_PERIOD / 2;
 				}
-			}
 				break;
+			}
 		}
 		
-		_scheduledWeeklyTask = ThreadPool.scheduleAtFixedRate(new OlympiadPointsRestoreTask(final_change_period), getMillisToWeekChange(), final_change_period);
+		_scheduledWeeklyTask = ThreadPool.scheduleAtFixedRate(new OlympiadPointsRestoreTask(finalChangePeriod), getMillisToWeekChange(), finalChangePeriod);
 	}
 	
 	class OlympiadPointsRestoreTask implements Runnable

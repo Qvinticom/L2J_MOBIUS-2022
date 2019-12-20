@@ -47,7 +47,7 @@ public class GrandBossManager implements IStorable
 	private static final String UPDATE_GRAND_BOSS_DATA = "UPDATE grandboss_data set loc_x = ?, loc_y = ?, loc_z = ?, heading = ?, respawn_time = ?, currentHP = ?, currentMP = ?, status = ? where boss_id = ?";
 	private static final String UPDATE_GRAND_BOSS_DATA2 = "UPDATE grandboss_data set status = ? where boss_id = ?";
 	
-	protected static Logger LOGGER = Logger.getLogger(GrandBossManager.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(GrandBossManager.class.getName());
 	
 	protected static Map<Integer, GrandBossInstance> _bosses = new ConcurrentHashMap<>();
 	

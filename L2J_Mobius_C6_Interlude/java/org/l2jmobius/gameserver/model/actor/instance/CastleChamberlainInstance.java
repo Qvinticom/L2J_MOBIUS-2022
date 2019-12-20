@@ -268,7 +268,7 @@ public class CastleChamberlainInstance extends FolkInstance
 			{
 				if ((player.getClanPrivileges() & Clan.CP_CS_USE_FUNCTIONS) == Clan.CP_CS_USE_FUNCTIONS)
 				{
-					if (val == "")
+					if (val.equals(""))
 					{
 						return;
 					}
@@ -439,7 +439,7 @@ public class CastleChamberlainInstance extends FolkInstance
 						return;
 					}
 					
-					String params = command.substring(command.indexOf("?") + 1);
+					String params = command.substring(command.indexOf('?') + 1);
 					StringTokenizer str = new StringTokenizer(params, "&");
 					final int ask = Integer.parseInt(str.nextToken().split("=")[1]);
 					final int state = Integer.parseInt(str.nextToken().split("=")[1]);
@@ -625,21 +625,17 @@ public class CastleChamberlainInstance extends FolkInstance
 	
 	protected int validateCondition(PlayerInstance player)
 	{
-		if ((getCastle() != null) && (getCastle().getCastleId() > 0))
+		if ((getCastle() != null) && (getCastle().getCastleId() > 0) && (player.getClan() != null))
 		{
-			if (player.getClan() != null)
+			if (getCastle().getSiege().getIsInProgress())
 			{
-				if (getCastle().getSiege().getIsInProgress())
-				{
-					return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
-				}
-				else if (getCastle().getOwnerId() == player.getClanId())
-				{
-					return COND_OWNER; // Owner
-				}
+				return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
+			}
+			else if (getCastle().getOwnerId() == player.getClanId())
+			{
+				return COND_OWNER; // Owner
 			}
 		}
-		
 		return COND_ALL_FALSE;
 	}
 }

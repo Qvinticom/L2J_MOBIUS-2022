@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class BlockList
 {
-	private static Logger LOGGER = Logger.getLogger(BlockList.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(BlockList.class.getName());
 	private static final Map<Integer, List<Integer>> OFFLINE_LIST = new ConcurrentHashMap<>();
 	
 	private final PlayerInstance _owner;

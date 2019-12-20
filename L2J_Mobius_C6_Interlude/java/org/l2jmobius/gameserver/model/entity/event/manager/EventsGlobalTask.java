@@ -18,7 +18,9 @@ package org.l2jmobius.gameserver.model.entity.event.manager;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Hashtable;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -34,8 +36,8 @@ public class EventsGlobalTask implements Runnable
 	
 	private boolean destroy = false;
 	
-	private final Hashtable<String, ArrayList<EventTask>> time_to_tasks = new Hashtable<>(); // time is in hh:mm
-	private final Hashtable<String, ArrayList<EventTask>> eventid_to_tasks = new Hashtable<>();
+	private final Map<String, List<EventTask>> timeToTasks = new ConcurrentHashMap<>(); // time is in hh:mm
+	private final Map<String, List<EventTask>> eventIdToTasks = new ConcurrentHashMap<>();
 	
 	private EventsGlobalTask()
 	{
@@ -60,8 +62,8 @@ public class EventsGlobalTask implements Runnable
 			return;
 		}
 		
-		ArrayList<EventTask> savedTasksForTime = time_to_tasks.get(event.getEventStartTime());
-		ArrayList<EventTask> savedTasksForId = eventid_to_tasks.get(event.getEventIdentifier());
+		List<EventTask> savedTasksForTime = timeToTasks.get(event.getEventStartTime());
+		List<EventTask> savedTasksForId = eventIdToTasks.get(event.getEventIdentifier());
 		
 		if (savedTasksForTime != null)
 		{
@@ -76,7 +78,7 @@ public class EventsGlobalTask implements Runnable
 			savedTasksForTime.add(event);
 		}
 		
-		time_to_tasks.put(event.getEventStartTime(), savedTasksForTime);
+		timeToTasks.put(event.getEventStartTime(), savedTasksForTime);
 		
 		if (savedTasksForId != null)
 		{
@@ -91,7 +93,7 @@ public class EventsGlobalTask implements Runnable
 			savedTasksForId.add(event);
 		}
 		
-		eventid_to_tasks.put(event.getEventIdentifier(), savedTasksForId);
+		eventIdToTasks.put(event.getEventIdentifier(), savedTasksForId);
 	}
 	
 	public void clearEventTasksByEventName(String eventId)
@@ -104,28 +106,24 @@ public class EventsGlobalTask implements Runnable
 		
 		if (eventId.equalsIgnoreCase("all"))
 		{
-			time_to_tasks.clear();
-			eventid_to_tasks.clear();
+			timeToTasks.clear();
+			eventIdToTasks.clear();
 		}
 		else
 		{
-			final ArrayList<EventTask> oldTasksForId = eventid_to_tasks.get(eventId);
-			
+			final List<EventTask> oldTasksForId = eventIdToTasks.get(eventId);
 			if (oldTasksForId != null)
 			{
 				for (EventTask actual : oldTasksForId)
 				{
-					final ArrayList<EventTask> oldTasksForTime = time_to_tasks.get(actual.getEventStartTime());
-					
+					final List<EventTask> oldTasksForTime = timeToTasks.get(actual.getEventStartTime());
 					if (oldTasksForTime != null)
 					{
 						oldTasksForTime.remove(actual);
-						
-						time_to_tasks.put(actual.getEventStartTime(), oldTasksForTime);
+						timeToTasks.put(actual.getEventStartTime(), oldTasksForTime);
 					}
 				}
-				
-				eventid_to_tasks.remove(eventId);
+				eventIdToTasks.remove(eventId);
 			}
 		}
 	}
@@ -138,30 +136,30 @@ public class EventsGlobalTask implements Runnable
 			return;
 		}
 		
-		if (time_to_tasks.size() < 0)
+		if (timeToTasks.size() < 0)
 		{
 			return;
 		}
 		
-		final ArrayList<EventTask> oldTasksForId = eventid_to_tasks.get(event.getEventIdentifier());
-		final ArrayList<EventTask> oldTasksForTime = time_to_tasks.get(event.getEventStartTime());
+		final List<EventTask> oldTasksForId = eventIdToTasks.get(event.getEventIdentifier());
+		final List<EventTask> oldTasksForTime = timeToTasks.get(event.getEventStartTime());
 		
 		if (oldTasksForId != null)
 		{
 			oldTasksForId.remove(event);
-			eventid_to_tasks.put(event.getEventIdentifier(), oldTasksForId);
+			eventIdToTasks.put(event.getEventIdentifier(), oldTasksForId);
 		}
 		
 		if (oldTasksForTime != null)
 		{
 			oldTasksForTime.remove(event);
-			time_to_tasks.put(event.getEventStartTime(), oldTasksForTime);
+			timeToTasks.put(event.getEventStartTime(), oldTasksForTime);
 		}
 	}
 	
 	private void checkRegisteredEvents()
 	{
-		if (time_to_tasks.size() < 0)
+		if (timeToTasks.size() < 0)
 		{
 			return;
 		}
@@ -194,7 +192,7 @@ public class EventsGlobalTask implements Runnable
 		}
 		
 		final String currentTime = hourStr + ":" + minStr;
-		final ArrayList<EventTask> registeredEventsAtCurrentTime = time_to_tasks.get(currentTime);
+		final List<EventTask> registeredEventsAtCurrentTime = timeToTasks.get(currentTime);
 		if (registeredEventsAtCurrentTime != null)
 		{
 			for (EventTask actualEvent : registeredEventsAtCurrentTime)
@@ -227,5 +225,4 @@ public class EventsGlobalTask implements Runnable
 			}
 		}
 	}
-	
 }

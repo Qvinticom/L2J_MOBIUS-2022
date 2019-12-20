@@ -243,12 +243,9 @@ public class Q340_SubjugationOfLizardmen extends Quest
 			case 20024:
 			case 20027:
 			case 20030:
-				if (st.getInt("cond") == 3)
+				if ((st.getInt("cond") == 3) && st.dropItems(HOLY, 1, 1, 100000))
 				{
-					if (st.dropItems(HOLY, 1, 1, 100000))
-					{
-						st.dropItems(ROSARY, 1, 1, 100000);
-					}
+					st.dropItems(ROSARY, 1, 1, 100000);
 				}
 				break;
 			

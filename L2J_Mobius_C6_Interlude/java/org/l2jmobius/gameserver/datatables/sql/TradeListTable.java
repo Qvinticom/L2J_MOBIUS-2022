@@ -19,9 +19,7 @@ package org.l2jmobius.gameserver.datatables.sql;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -84,9 +82,9 @@ public class TradeListTable
 				final StoreTradeList buylist = new StoreTradeList(rset1.getInt("shop_id"));
 				
 				buylist.setNpcId(rset1.getString("npc_id"));
-				int _itemId = 0;
-				int _itemCount = 0;
-				int _price = 0;
+				int itemId = 0;
+				int itemCount = 0;
+				int price = 0;
 				
 				if (!buylist.isGm() && (NpcTable.getInstance().getTemplate(rset1.getInt("npc_id")) == null))
 				{
@@ -97,26 +95,26 @@ public class TradeListTable
 				{
 					while (rset.next())
 					{
-						_itemId = rset.getInt("item_id");
-						_price = rset.getInt("price");
+						itemId = rset.getInt("item_id");
+						price = rset.getInt("price");
 						final int count = rset.getInt("count");
 						final int currentCount = rset.getInt("currentCount");
 						final int time = rset.getInt("time");
 						
-						final ItemInstance buyItem = ItemTable.getInstance().createDummyItem(_itemId);
+						final ItemInstance buyItem = ItemTable.getInstance().createDummyItem(itemId);
 						
 						if (buyItem == null)
 						{
 							continue;
 						}
 						
-						_itemCount++;
+						itemCount++;
 						
 						if (count > -1)
 						{
 							buyItem.setCountDecrease(true);
 						}
-						buyItem.setPriceToSell(_price);
+						buyItem.setPriceToSell(price);
 						buyItem.setTime(time);
 						buyItem.setInitCount(count);
 						
@@ -131,9 +129,9 @@ public class TradeListTable
 						
 						buylist.addItem(buyItem);
 						
-						if (!buylist.isGm() && (buyItem.getReferencePrice() > _price))
+						if (!buylist.isGm() && (buyItem.getReferencePrice() > price))
 						{
-							LOGGER.warning("TradeListTable: Reference price of item " + _itemId + " in buylist " + buylist.getListId() + " higher then sell price.");
+							LOGGER.warning("TradeListTable: Reference price of item " + itemId + " in buylist " + buylist.getListId() + " higher then sell price.");
 						}
 					}
 				}
@@ -142,7 +140,7 @@ public class TradeListTable
 					LOGGER.warning("TradeListTable: Problem with buylist " + buylist.getListId() + ". " + e);
 				}
 				
-				if (_itemCount > 0)
+				if (itemCount > 0)
 				{
 					_lists.put(buylist.getListId(), buylist);
 					_nextListId = Math.max(_nextListId, buylist.getListId() + 1);
@@ -165,7 +163,7 @@ public class TradeListTable
 				int time = 0;
 				long savetimer = 0;
 				final long currentMillis = System.currentTimeMillis();
-				final PreparedStatement statement2 = con.prepareStatement("SELECT DISTINCT time, savetimer FROM " + (custom ? "merchant_buylists" : "merchant_buylists") + " WHERE time <> 0 ORDER BY time");
+				final PreparedStatement statement2 = con.prepareStatement("SELECT DISTINCT time, savetimer FROM " + (custom ? "custom_merchant_buylists" : "merchant_buylists") + " WHERE time <> 0 ORDER BY time");
 				final ResultSet rset2 = statement2.executeQuery();
 				
 				while (rset2.next())
@@ -220,30 +218,8 @@ public class TradeListTable
 		return null;
 	}
 	
-	public List<StoreTradeList> getBuyListByNpcId(int npcId)
-	{
-		final List<StoreTradeList> lists = new ArrayList<>();
-		
-		for (StoreTradeList list : _lists.values())
-		{
-			if (list.isGm())
-			{
-				continue;
-			}
-			/** if (npcId == list.getNpcId()) **/
-			lists.add(list);
-		}
-		
-		return lists;
-	}
-	
 	protected void restoreCount(int time)
 	{
-		if (_lists == null)
-		{
-			return;
-		}
-		
 		for (StoreTradeList list : _lists.values())
 		{
 			list.restoreCount(time);
@@ -270,11 +246,6 @@ public class TradeListTable
 	
 	public void dataCountStore()
 	{
-		if (_lists == null)
-		{
-			return;
-		}
-		
 		int listId;
 		try (Connection con = DatabaseFactory.getConnection())
 		{

@@ -26,16 +26,16 @@ import org.l2jmobius.commons.util.Rnd;
  */
 public class Bingo
 {
-	protected static final String template = "%msg%<br><br>%choices%<br><br>%board%";
-	protected static final String template_final = "%msg%<br><br>%board%";
-	protected static final String template_board = "For your information, below is your current selection.<br><table border=\"1\" border color=\"white\" width=100><tr><td align=\"center\">%cell1%</td><td align=\"center\">%cell2%</td><td align=\"center\">%cell3%</td></tr><tr><td align=\"center\">%cell4%</td><td align=\"center\">%cell5%</td><td align=\"center\">%cell6%</td></tr><tr><td align=\"center\">%cell7%</td><td align=\"center\">%cell8%</td><td align=\"center\">%cell9%</td></tr></table>";
-	protected static final String msg_again = "You have already selected that number. Choose your %choicenum% number again.";
-	protected static final String msg_begin = "I've arranged 9 numbers on the panel.<br>Now, select your %choicenum% number.";
-	protected static final String msg_next = "Now, choose your %choicenum% number.";
-	protected static final String msg_0lines = "You are spectacularly unlucky! The red-colored numbers on the panel below are the ones you chose. As you can see, they didn't create even a single line. Did you know that it is harder not to create a single line than creating all 3 lines?";
-	protected static final String msg_3lines = "You've created 3 lines! The red colored numbers on the bingo panel below are the numbers you chose. Congratulations!";
-	protected static final String msg_lose = "Hmm... You didn't make 3 lines. Why don't you try again? The red-colored numbers on the panel are the ones you chose.";
-	protected static final String[] nums =
+	protected static final String TEMPLATE = "%msg%<br><br>%choices%<br><br>%board%";
+	protected static final String TEMPLATE_FINAL = "%msg%<br><br>%board%";
+	protected static final String TEMPLATE_BOARD = "For your information, below is your current selection.<br><table border=\"1\" border color=\"white\" width=100><tr><td align=\"center\">%cell1%</td><td align=\"center\">%cell2%</td><td align=\"center\">%cell3%</td></tr><tr><td align=\"center\">%cell4%</td><td align=\"center\">%cell5%</td><td align=\"center\">%cell6%</td></tr><tr><td align=\"center\">%cell7%</td><td align=\"center\">%cell8%</td><td align=\"center\">%cell9%</td></tr></table>";
+	protected static final String MSG_AGAIN = "You have already selected that number. Choose your %choicenum% number again.";
+	protected static final String MSG_BEGIN = "I've arranged 9 numbers on the panel.<br>Now, select your %choicenum% number.";
+	protected static final String MSG_NEXT = "Now, choose your %choicenum% number.";
+	protected static final String MSG_ZERO_LINES = "You are spectacularly unlucky! The red-colored numbers on the panel below are the ones you chose. As you can see, they didn't create even a single line. Did you know that it is harder not to create a single line than creating all 3 lines?";
+	protected static final String MSG_THREE_LINES = "You've created 3 lines! The red colored numbers on the bingo panel below are the numbers you chose. Congratulations!";
+	protected static final String MSG_LOSE = "Hmm... You didn't make 3 lines. Why don't you try again? The red-colored numbers on the panel are the ones you chose.";
+	protected static final String[] NUMBERS =
 	{
 		"first",
 		"second",
@@ -50,11 +50,11 @@ public class Bingo
 	private final List<Integer> guesses;
 	protected int lines;
 	
-	public Bingo(String template_choice)
+	public Bingo(String templateChoice)
 	{
 		board = new ArrayList<>();
 		guesses = new ArrayList<>();
-		_template_choice = template_choice;
+		_template_choice = templateChoice;
 		while (board.size() < 9)
 		{
 			final int num = Rnd.get(1, 9);
@@ -69,7 +69,7 @@ public class Bingo
 	{
 		try
 		{
-			return Select(Integer.valueOf(s));
+			return Select(Integer.parseInt(s));
 		}
 		catch (Exception E)
 		{
@@ -97,18 +97,18 @@ public class Bingo
 	
 	protected String getBoard()
 	{
-		if (guesses.size() == 0)
+		if (guesses.isEmpty())
 		{
 			return "";
 		}
 		String result = "For your information, below is your current selection.<br><table border=\"1\" border color=\"white\" width=100><tr><td align=\"center\">%cell1%</td><td align=\"center\">%cell2%</td><td align=\"center\">%cell3%</td></tr><tr><td align=\"center\">%cell4%</td><td align=\"center\">%cell5%</td><td align=\"center\">%cell6%</td></tr><tr><td align=\"center\">%cell7%</td><td align=\"center\">%cell8%</td><td align=\"center\">%cell9%</td></tr></table>";
 		for (int i = 1; i <= 9; ++i)
 		{
-			final String cell = "%cell" + String.valueOf(i) + "%";
+			final String cell = "%cell" + i + "%";
 			final int num = board.get(i - 1);
 			if (guesses.contains(num))
 			{
-				result = result.replaceFirst(cell, "<font color=\"" + ((guesses.size() == 6) ? "ff0000" : "ffff00") + "\">" + String.valueOf(num) + "</font>");
+				result = result.replaceFirst(cell, "<font color=\"" + ((guesses.size() == 6) ? "ff0000" : "ffff00") + "\">" + num + "</font>");
 			}
 			else
 			{
@@ -121,7 +121,7 @@ public class Bingo
 	public String getDialog(String msg)
 	{
 		String result = "%msg%<br><br>%choices%<br><br>%board%";
-		if (guesses.size() == 0)
+		if (guesses.isEmpty())
 		{
 			result = result.replaceFirst("%msg%", "I've arranged 9 numbers on the panel.<br>Now, select your %choicenum% number.");
 		}
@@ -129,13 +129,13 @@ public class Bingo
 		{
 			result = result.replaceFirst("%msg%", "".equalsIgnoreCase(msg) ? "Now, choose your %choicenum% number." : msg);
 		}
-		result = result.replaceFirst("%choicenum%", Bingo.nums[guesses.size()]);
+		result = result.replaceFirst("%choicenum%", Bingo.NUMBERS[guesses.size()]);
 		final StringBuilder choices = new StringBuilder();
 		for (int i = 1; i <= 9; ++i)
 		{
 			if (!guesses.contains(i))
 			{
-				choices.append(_template_choice.replaceAll("%n%", String.valueOf(i)));
+				choices.append(_template_choice.replace("%n%", String.valueOf(i)));
 			}
 		}
 		result = result.replaceFirst("%choices%", choices.toString());

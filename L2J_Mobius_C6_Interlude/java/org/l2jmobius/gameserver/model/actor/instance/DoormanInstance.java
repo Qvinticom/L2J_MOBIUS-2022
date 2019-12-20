@@ -94,7 +94,7 @@ public class DoormanInstance extends FolkInstance
 					
 					return;
 				}
-				else if (condition == COND_FORT_OWNER)
+				else // if (condition == COND_FORT_OWNER)
 				{
 					StringTokenizer st = new StringTokenizer(command.substring(10), ", ");
 					st.nextToken(); // Bypass first value since its castleid/hallid/fortid
@@ -336,20 +336,14 @@ public class DoormanInstance extends FolkInstance
 				return COND_ALL_FALSE;
 			}
 			// Prepare doorman for Castle
-			if ((getCastle() != null) && (getCastle().getCastleId() > 0))
+			if ((getCastle() != null) && (getCastle().getCastleId() > 0) && (getCastle().getOwnerId() == player.getClanId()))
 			{
-				if (getCastle().getOwnerId() == player.getClanId())
-				{
-					return COND_CASTLE_OWNER; // Owner
-				}
+				return COND_CASTLE_OWNER; // Owner
 			}
 			// Prepare doorman for Fortress
-			if ((getFort() != null) && (getFort().getFortId() > 0))
+			if ((getFort() != null) && (getFort().getFortId() > 0) && (getFort().getOwnerId() == player.getClanId()))
 			{
-				if (getFort().getOwnerId() == player.getClanId())
-				{
-					return COND_FORT_OWNER;
-				}
+				return COND_FORT_OWNER;
 			}
 		}
 		

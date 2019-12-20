@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
  */
 public class AnnouncementsTable
 {
-	private static Logger LOGGER = Logger.getLogger(AnnouncementsTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AnnouncementsTable.class.getName());
 	
 	private final Map<Integer, IAnnouncement> _announcements = new ConcurrentSkipListMap<>();
 	

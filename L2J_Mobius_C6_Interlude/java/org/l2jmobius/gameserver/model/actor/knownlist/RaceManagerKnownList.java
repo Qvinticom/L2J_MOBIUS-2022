@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.model.actor.knownlist;
 
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.RaceManagerInstance;
 import org.l2jmobius.gameserver.model.entity.MonsterRace;
@@ -34,17 +33,6 @@ public class RaceManagerKnownList extends NpcKnownList
 	public boolean addKnownObject(WorldObject object)
 	{
 		return addKnownObject(object, null);
-	}
-	
-	@Override
-	public boolean addKnownObject(WorldObject object, Creature dropper)
-	{
-		if (!super.addKnownObject(object, dropper))
-		{
-			return false;
-		}
-		
-		return true;
 	}
 	
 	@Override

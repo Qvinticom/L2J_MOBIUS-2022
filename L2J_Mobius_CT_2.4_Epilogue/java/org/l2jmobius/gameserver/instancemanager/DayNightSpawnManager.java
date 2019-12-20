@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
  */
 public class DayNightSpawnManager
 {
-	private static Logger LOGGER = Logger.getLogger(DayNightSpawnManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(DayNightSpawnManager.class.getName());
 	
 	private final List<Spawn> _dayCreatures = new ArrayList<>();
 	private final List<Spawn> _nightCreatures = new ArrayList<>();

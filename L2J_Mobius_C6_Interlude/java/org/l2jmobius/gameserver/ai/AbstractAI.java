@@ -475,7 +475,7 @@ abstract class AbstractAI implements Ctrl
 	
 	protected abstract void onEvtArrivedRevalidate();
 	
-	protected abstract void onEvtArrivedBlocked(Location blocked_at_pos);
+	protected abstract void onEvtArrivedBlocked(Location location);
 	
 	protected abstract void onEvtForgetObject(WorldObject object);
 	
@@ -618,7 +618,6 @@ abstract class AbstractAI implements Ctrl
 			// Send a Server->Client packet CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
 			CharMoveToLocation msg = new CharMoveToLocation(_actor);
 			_actor.broadcastPacket(msg);
-			msg = null;
 		}
 		else
 		{
@@ -637,7 +636,6 @@ abstract class AbstractAI implements Ctrl
 			{
 				MoveToLocationInVehicle msg = new MoveToLocationInVehicle(_actor, destination, origin);
 				_actor.broadcastPacket(msg);
-				msg = null;
 			}
 		}
 		else
@@ -670,7 +668,6 @@ abstract class AbstractAI implements Ctrl
 			// Send a Server->Client packet StopMove to the actor and all PlayerInstance in its _knownPlayers
 			StopMove msg = new StopMove(_actor);
 			_actor.broadcastPacket(msg);
-			msg = null;
 			
 			if (pos != null)
 			{
@@ -678,7 +675,6 @@ abstract class AbstractAI implements Ctrl
 				StopRotation sr = new StopRotation(_actor, pos.getHeading(), 0);
 				_actor.sendPacket(sr);
 				_actor.broadcastPacket(sr);
-				sr = null;
 			}
 		}
 	}
@@ -691,7 +687,6 @@ abstract class AbstractAI implements Ctrl
 			_clientMovingToPawnOffset = 0;
 			StopMove msg = new StopMove(_actor);
 			_actor.broadcastPacket(msg);
-			msg = null;
 		}
 		_clientMoving = false;
 	}
@@ -776,7 +771,6 @@ abstract class AbstractAI implements Ctrl
 		// Send a Server->Client packet Die to the actor and all PlayerInstance in its _knownPlayers
 		Die msg = new Die(_actor);
 		_actor.broadcastPacket(msg);
-		msg = null;
 		
 		// Init AI
 		setIntention(AI_INTENTION_IDLE);
@@ -806,14 +800,12 @@ abstract class AbstractAI implements Ctrl
 				// Send a Server->Client packet MoveToPawn to the actor and all PlayerInstance in its _knownPlayers
 				MoveToPawn msg = new MoveToPawn(_actor, follow, _clientMovingToPawnOffset);
 				player.sendPacket(msg);
-				msg = null;
 			}
 			else
 			{
 				// Send a Server->Client packet CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
 				CharMoveToLocation msg = new CharMoveToLocation(_actor);
 				player.sendPacket(msg);
-				msg = null;
 			}
 		}
 	}
@@ -925,33 +917,33 @@ abstract class AbstractAI implements Ctrl
 	/**
 	 * @return the _intentionArg0
 	 */
-	public synchronized Object get_intentionArg0()
+	public synchronized Object getIntentionArg0()
 	{
 		return _intentionArg0;
 	}
 	
 	/**
-	 * @param _intentionArg0 the _intentionArg0 to set
+	 * @param intentionArg0 the _intentionArg0 to set
 	 */
-	public synchronized void set_intentionArg0(Object _intentionArg0)
+	public synchronized void setIntentionArg0(Object intentionArg0)
 	{
-		this._intentionArg0 = _intentionArg0;
+		_intentionArg0 = intentionArg0;
 	}
 	
 	/**
 	 * @return the _intentionArg1
 	 */
-	public synchronized Object get_intentionArg1()
+	public synchronized Object getIntentionArg1()
 	{
 		return _intentionArg1;
 	}
 	
 	/**
-	 * @param _intentionArg1 the _intentionArg1 to set
+	 * @param intentionArg1 the _intentionArg1 to set
 	 */
-	public synchronized void set_intentionArg1(Object _intentionArg1)
+	public synchronized void setIntentionArg1(Object intentionArg1)
 	{
-		this._intentionArg1 = _intentionArg1;
+		_intentionArg1 = intentionArg1;
 	}
 	
 	/**

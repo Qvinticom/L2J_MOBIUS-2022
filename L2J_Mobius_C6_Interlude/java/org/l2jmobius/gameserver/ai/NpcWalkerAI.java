@@ -100,12 +100,12 @@ public class NpcWalkerAI extends CreatureAI implements Runnable
 	
 	/**
 	 * If npc can't walk to it's target then just teleport to next point
-	 * @param blocked_at_pos ignoring it
+	 * @param location ignoring it
 	 */
 	@Override
-	protected void onEvtArrivedBlocked(Location blocked_at_pos)
+	protected void onEvtArrivedBlocked(Location location)
 	{
-		LOGGER.warning("NpcWalker ID: " + getActor().getNpcId() + ": Blocked at rote position [" + _currentPos + "], coords: " + blocked_at_pos.getX() + ", " + blocked_at_pos.getY() + ", " + blocked_at_pos.getZ() + ". Teleporting to next point");
+		LOGGER.warning("NpcWalker ID: " + getActor().getNpcId() + ": Blocked at rote position [" + _currentPos + "], coords: " + location.getX() + ", " + location.getY() + ", " + location.getZ() + ". Teleporting to next point");
 		
 		if (_route.size() <= _currentPos)
 		{
@@ -117,7 +117,7 @@ public class NpcWalkerAI extends CreatureAI implements Runnable
 		final int destinationZ = _route.get(_currentPos).getMoveZ();
 		
 		getActor().teleToLocation(destinationX, destinationY, destinationZ, false);
-		super.onEvtArrivedBlocked(blocked_at_pos);
+		super.onEvtArrivedBlocked(location);
 	}
 	
 	private void checkArrived()

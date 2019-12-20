@@ -51,11 +51,11 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
- * @author terry Window - Preferences - Java - Code Style - Code Templates
+ * @author terry
  */
 public class AdminEditNpc implements IAdminCommandHandler
 {
-	private static Logger LOGGER = Logger.getLogger(AdminEditChar.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AdminEditNpc.class.getName());
 	private static final int PAGE_LIMIT = 7;
 	
 	private static final String[] ADMIN_COMMANDS =
@@ -108,7 +108,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 				{
 					String[] commandSplit = command.split(" ");
 					
-					final int npcId = Integer.valueOf(commandSplit[1]);
+					final int npcId = Integer.parseInt(commandSplit[1]);
 					
 					NpcTemplate npc = NpcTable.getInstance().getTemplate(npcId);
 					Show_Npc_Property(activeChar, npc);
@@ -120,7 +120,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			}
 			else if (activeChar.getTarget() instanceof NpcInstance)
 			{
-				final int npcId = Integer.valueOf(((NpcInstance) activeChar.getTarget()).getNpcId());
+				final int npcId = ((NpcInstance) activeChar.getTarget()).getNpcId();
 				
 				NpcTemplate npc = NpcTable.getInstance().getTemplate(npcId);
 				Show_Npc_Property(activeChar, npc);
@@ -544,12 +544,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 	private void editShopItem(PlayerInstance activeChar, String[] args)
 	{
 		final int tradeListID = Integer.parseInt(args[1]);
-		final int itemID = Integer.parseInt(args[2]);
+		final int itemId = Integer.parseInt(args[2]);
 		
 		StoreTradeList tradeList = TradeController.getInstance().getBuyList(tradeListID);
-		Item item = ItemTable.getInstance().getTemplate(itemID);
+		Item item = ItemTable.getInstance().getTemplate(itemId);
 		
-		if (tradeList.getPriceForItemId(itemID) < 0)
+		if (tradeList.getPriceForItemId(itemId) < 0)
 		{
 			return;
 		}
@@ -557,10 +557,10 @@ public class AdminEditNpc implements IAdminCommandHandler
 		if (args.length > 3)
 		{
 			final int price = Integer.parseInt(args[3]);
-			final int order = findOrderTradeList(itemID, tradeList.getPriceForItemId(itemID), tradeListID);
+			final int order = findOrderTradeList(itemId, tradeList.getPriceForItemId(itemId), tradeListID);
 			
-			tradeList.replaceItem(itemID, Integer.parseInt(args[3]));
-			updateTradeList(itemID, price, tradeListID, order);
+			tradeList.replaceItem(itemId, Integer.parseInt(args[3]));
+			updateTradeList(itemId, price, tradeListID, order);
 			
 			BuilderUtil.sendSysMessage(activeChar, "Updated price for " + item.getName() + " in Trade List " + tradeListID);
 			showShopList(activeChar, tradeListID, 1);
@@ -577,10 +577,10 @@ public class AdminEditNpc implements IAdminCommandHandler
 		replyMSG.append("<table>");
 		replyMSG.append("<tr><td width=100>Property</td><td width=100>Edit Field</td><td width=100>Old Value</td></tr>");
 		replyMSG.append("<tr><td><br></td><td></td></tr>");
-		replyMSG.append("<tr><td>Price</td><td><edit var=\"price\" width=80></td><td>" + tradeList.getPriceForItemId(itemID) + "</td></tr>");
+		replyMSG.append("<tr><td>Price</td><td><edit var=\"price\" width=80></td><td>" + tradeList.getPriceForItemId(itemId) + "</td></tr>");
 		replyMSG.append("</table>");
 		replyMSG.append("<center><br><br><br>");
-		replyMSG.append("<button value=\"Save\" action=\"bypass -h admin_editShopItem " + tradeListID + " " + itemID + " $price\"  width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
+		replyMSG.append("<button value=\"Save\" action=\"bypass -h admin_editShopItem " + tradeListID + " " + itemId + " $price\"  width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 		replyMSG.append("<br><button value=\"Back\" action=\"bypass -h admin_showShopList " + tradeListID + " 1\"  width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 		replyMSG.append("</center>");
 		replyMSG.append("</body></html>");
@@ -795,11 +795,11 @@ public class AdminEditNpc implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void storeTradeList(int itemID, int price, int tradeListID, int order)
+	private void storeTradeList(int itemId, int price, int tradeListID, int order)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement stmt = con.prepareStatement("INSERT INTO merchant_buylists (`item_id`,`price`,`shop_id`,`order`) values (" + itemID + "," + price + "," + tradeListID + "," + order + ")");
+			PreparedStatement stmt = con.prepareStatement("INSERT INTO merchant_buylists (`item_id`,`price`,`shop_id`,`order`) values (" + itemId + "," + price + "," + tradeListID + "," + order + ")");
 			stmt.execute();
 			stmt.close();
 		}
@@ -809,7 +809,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 	}
 	
-	private void updateTradeList(int itemID, int price, int tradeListID, int order)
+	private void updateTradeList(int itemId, int price, int tradeListID, int order)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -823,11 +823,11 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 	}
 	
-	private void deleteTradeList(int tradeListID, int order)
+	private void deleteTradeList(int tradeListId, int order)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement stmt = con.prepareStatement("DELETE FROM merchant_buylists WHERE `shop_id`='" + tradeListID + "' AND `order`='" + order + "'");
+			PreparedStatement stmt = con.prepareStatement("DELETE FROM merchant_buylists WHERE `shop_id`='" + tradeListId + "' AND `order`='" + order + "'");
 			stmt.execute();
 			stmt.close();
 		}
@@ -837,12 +837,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 	}
 	
-	private int findOrderTradeList(int itemID, int price, int tradeListID)
+	private int findOrderTradeList(int itemId, int price, int tradeListId)
 	{
 		int order = 0;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement stmt = con.prepareStatement("SELECT * FROM merchant_buylists WHERE `shop_id`='" + tradeListID + "' AND `item_id` ='" + itemID + "' AND `price` = '" + price + "'");
+			PreparedStatement stmt = con.prepareStatement("SELECT * FROM merchant_buylists WHERE `shop_id`='" + tradeListId + "' AND `item_id` ='" + itemId + "' AND `price` = '" + price + "'");
 			ResultSet rs = stmt.executeQuery();
 			rs.first();
 			
@@ -858,11 +858,11 @@ public class AdminEditNpc implements IAdminCommandHandler
 		return order;
 	}
 	
-	private List<StoreTradeList> getTradeLists(int merchantID)
+	private List<StoreTradeList> getTradeLists(int merchantId)
 	{
 		String target = "npc_%objectId%_Buy";
 		
-		String content = HtmCache.getInstance().getHtm("data/html/merchant/" + merchantID + ".htm");
+		String content = HtmCache.getInstance().getHtm("data/html/merchant/" + merchantId + ".htm");
 		
 		if (content == null)
 		{
@@ -988,7 +988,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			{
 				case "templateId":
 				{
-					newNpcData.set("idTemplate", Integer.valueOf(value));
+					newNpcData.set("idTemplate", Integer.parseInt(value));
 					break;
 				}
 				case "name":
@@ -998,7 +998,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 				}
 				case "serverSideName":
 				{
-					newNpcData.set("serverSideName", Integer.valueOf(value));
+					newNpcData.set("serverSideName", Integer.parseInt(value));
 					break;
 				}
 				case "title":
@@ -1008,27 +1008,27 @@ public class AdminEditNpc implements IAdminCommandHandler
 				}
 				case "serverSideTitle":
 				{
-					newNpcData.set("serverSideTitle", Integer.valueOf(value) == 1 ? 1 : 0);
+					newNpcData.set("serverSideTitle", Integer.parseInt(value) == 1 ? 1 : 0);
 					break;
 				}
 				case "collisionRadius":
 				{
-					newNpcData.set("collision_radius", Integer.valueOf(value));
+					newNpcData.set("collision_radius", Integer.parseInt(value));
 					break;
 				}
 				case "collisionHeight":
 				{
-					newNpcData.set("collision_height", Integer.valueOf(value));
+					newNpcData.set("collision_height", Integer.parseInt(value));
 					break;
 				}
 				case "level":
 				{
-					newNpcData.set("level", Integer.valueOf(value));
+					newNpcData.set("level", Integer.parseInt(value));
 					break;
 				}
 				case "sex":
 				{
-					final int intValue = Integer.valueOf(value);
+					final int intValue = Integer.parseInt(value);
 					newNpcData.set("sex", intValue == 0 ? "male" : intValue == 1 ? "female" : "etc");
 					break;
 				}
@@ -1040,122 +1040,122 @@ public class AdminEditNpc implements IAdminCommandHandler
 				}
 				case "attackRange":
 				{
-					newNpcData.set("attackrange", Integer.valueOf(value));
+					newNpcData.set("attackrange", Integer.parseInt(value));
 					break;
 				}
 				case "hp":
 				{
-					newNpcData.set("hp", Integer.valueOf(value));
+					newNpcData.set("hp", Integer.parseInt(value));
 					break;
 				}
 				case "mp":
 				{
-					newNpcData.set("mp", Integer.valueOf(value));
+					newNpcData.set("mp", Integer.parseInt(value));
 					break;
 				}
 				case "hpRegen":
 				{
-					newNpcData.set("hpreg", Integer.valueOf(value));
+					newNpcData.set("hpreg", Integer.parseInt(value));
 					break;
 				}
 				case "mpRegen":
 				{
-					newNpcData.set("mpreg", Integer.valueOf(value));
+					newNpcData.set("mpreg", Integer.parseInt(value));
 					break;
 				}
 				case "str":
 				{
-					newNpcData.set("str", Integer.valueOf(value));
+					newNpcData.set("str", Integer.parseInt(value));
 					break;
 				}
 				case "con":
 				{
-					newNpcData.set("con", Integer.valueOf(value));
+					newNpcData.set("con", Integer.parseInt(value));
 					break;
 				}
 				case "dex":
 				{
-					newNpcData.set("dex", Integer.valueOf(value));
+					newNpcData.set("dex", Integer.parseInt(value));
 					break;
 				}
 				case "int":
 				{
-					newNpcData.set("int", Integer.valueOf(value));
+					newNpcData.set("int", Integer.parseInt(value));
 					break;
 				}
 				case "wit":
 				{
-					newNpcData.set("wit", Integer.valueOf(value));
+					newNpcData.set("wit", Integer.parseInt(value));
 					break;
 				}
 				case "men":
 				{
-					newNpcData.set("men", Integer.valueOf(value));
+					newNpcData.set("men", Integer.parseInt(value));
 					break;
 				}
 				case "exp":
 				{
-					newNpcData.set("exp", Integer.valueOf(value));
+					newNpcData.set("exp", Integer.parseInt(value));
 					break;
 				}
 				case "sp":
 				{
-					newNpcData.set("sp", Integer.valueOf(value));
+					newNpcData.set("sp", Integer.parseInt(value));
 					break;
 				}
 				case "pAtk":
 				{
-					newNpcData.set("patk", Integer.valueOf(value));
+					newNpcData.set("patk", Integer.parseInt(value));
 					break;
 				}
 				case "pDef":
 				{
-					newNpcData.set("pdef", Integer.valueOf(value));
+					newNpcData.set("pdef", Integer.parseInt(value));
 					break;
 				}
 				case "mAtk":
 				{
-					newNpcData.set("matk", Integer.valueOf(value));
+					newNpcData.set("matk", Integer.parseInt(value));
 					break;
 				}
 				case "mDef":
 				{
-					newNpcData.set("mdef", Integer.valueOf(value));
+					newNpcData.set("mdef", Integer.parseInt(value));
 					break;
 				}
 				case "pAtkSpd":
 				{
-					newNpcData.set("atkspd", Integer.valueOf(value));
+					newNpcData.set("atkspd", Integer.parseInt(value));
 					break;
 				}
 				case "aggro":
 				{
-					newNpcData.set("aggro", Integer.valueOf(value));
+					newNpcData.set("aggro", Integer.parseInt(value));
 					break;
 				}
 				case "mAtkSpd":
 				{
-					newNpcData.set("matkspd", Integer.valueOf(value));
+					newNpcData.set("matkspd", Integer.parseInt(value));
 					break;
 				}
 				case "rHand":
 				{
-					newNpcData.set("rhand", Integer.valueOf(value));
+					newNpcData.set("rhand", Integer.parseInt(value));
 					break;
 				}
 				case "lHand":
 				{
-					newNpcData.set("lhand", Integer.valueOf(value));
+					newNpcData.set("lhand", Integer.parseInt(value));
 					break;
 				}
 				case "armor":
 				{
-					newNpcData.set("armor", Integer.valueOf(value));
+					newNpcData.set("armor", Integer.parseInt(value));
 					break;
 				}
 				case "runSpd":
 				{
-					newNpcData.set("runspd", Integer.valueOf(value));
+					newNpcData.set("runspd", Integer.parseInt(value));
 					break;
 				}
 				case "factionId":
@@ -1165,17 +1165,17 @@ public class AdminEditNpc implements IAdminCommandHandler
 				}
 				case "factionRange":
 				{
-					newNpcData.set("faction_range", Integer.valueOf(value));
+					newNpcData.set("faction_range", Integer.parseInt(value));
 					break;
 				}
 				case "isUndead":
 				{
-					newNpcData.set("isUndead", Integer.valueOf(value) == 1 ? 1 : 0);
+					newNpcData.set("isUndead", Integer.parseInt(value) == 1 ? 1 : 0);
 					break;
 				}
 				case "absorbLevel":
 				{
-					final int intVal = Integer.valueOf(value);
+					final int intVal = Integer.parseInt(value);
 					newNpcData.set("absorb_level", intVal < 0 ? 0 : intVal > 12 ? 0 : intVal);
 					break;
 				}
@@ -1477,35 +1477,35 @@ public class AdminEditNpc implements IAdminCommandHandler
 		
 		final Map<Integer, Skill> skills = npcData.getSkills();
 		
-		final int _skillsize = Integer.valueOf(skills.size());
+		final int skillSize = skills.size();
 		
-		final int MaxSkillsPerPage = 10;
-		int MaxPages = _skillsize / MaxSkillsPerPage;
-		if (_skillsize > (MaxSkillsPerPage * MaxPages))
+		final int maxSkillsPerPage = 10;
+		int maxPages = skillSize / maxSkillsPerPage;
+		if (skillSize > (maxSkillsPerPage * maxPages))
 		{
-			MaxPages++;
+			maxPages++;
 		}
 		
-		if (page > MaxPages)
+		if (page > maxPages)
 		{
-			page = MaxPages;
+			page = maxPages;
 		}
 		
-		final int SkillsStart = MaxSkillsPerPage * page;
-		int SkillsEnd = _skillsize;
-		if ((SkillsEnd - SkillsStart) > MaxSkillsPerPage)
+		final int SkillsStart = maxSkillsPerPage * page;
+		int skillsEnd = skillSize;
+		if ((skillsEnd - SkillsStart) > maxSkillsPerPage)
 		{
-			SkillsEnd = SkillsStart + MaxSkillsPerPage;
+			skillsEnd = SkillsStart + maxSkillsPerPage;
 		}
 		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		
-		final StringBuffer replyMSG = new StringBuffer("");
+		final StringBuilder replyMSG = new StringBuilder();
 		replyMSG.append("<html><title>" + npcData.getName() + " Skillist");
-		replyMSG.append(" (ID:" + npcData.getNpcId() + "Skills " + Integer.valueOf(_skillsize) + ")</title>");
+		replyMSG.append(" (ID:" + npcData.getNpcId() + "Skills " + skillSize + ")</title>");
 		replyMSG.append("<body>");
 		String pages = "<center><table width=270><tr>";
-		for (int x = 0; x < MaxPages; x++)
+		for (int x = 0; x < maxPages; x++)
 		{
 			final int pagenr = x + 1;
 			if (page == x)
@@ -1538,7 +1538,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		while (skillite.hasNext())
 		{
 			cnt++;
-			if (cnt > SkillsEnd)
+			if (cnt > skillsEnd)
 			{
 				break;
 			}
@@ -1565,7 +1565,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 			
-			final StringBuffer replyMSG = new StringBuffer("<html><title>(NPC:" + npcId + " SKILL:" + skillId + ")</title>");
+			final StringBuilder replyMSG = new StringBuilder("<html><title>(NPC:" + npcId + " SKILL:" + skillId + ")</title>");
 			replyMSG.append("<body>");
 			
 			if (skillData.next())
@@ -1603,7 +1603,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		if (skillData == null)
 		{
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-			final StringBuffer replyMSG = new StringBuffer("<html><title>Update Npc Skill Data</title>");
+			final StringBuilder replyMSG = new StringBuilder("<html><title>Update Npc Skill Data</title>");
 			replyMSG.append("<body>");
 			replyMSG.append("<center><button value=\"Back to Skillist\" action=\"bypass -h admin_show_skilllist_npc " + npcId + "\" width=100 height=20 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center>");
 			replyMSG.append("</body></html>");
@@ -1628,7 +1628,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 				reLoadNpcSkillList(npcId);
 				
 				final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-				final StringBuffer replyMSG = new StringBuffer("<html><title>Update Npc Skill Data</title>");
+				final StringBuilder replyMSG = new StringBuilder("<html><title>Update Npc Skill Data</title>");
 				replyMSG.append("<body>");
 				replyMSG.append("<center><button value=\"Back to Skillist\" action=\"bypass -h admin_show_skilllist_npc " + npcId + "\" width=100 height=20 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center>");
 				replyMSG.append("</body></html>");
@@ -1650,7 +1650,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		
-		final StringBuffer replyMSG = new StringBuffer("<html><title>Add Skill to " + npcData.getName() + "(ID:" + npcData.getNpcId() + ")</title>");
+		final StringBuilder replyMSG = new StringBuilder("<html><title>Add Skill to " + npcData.getName() + "(ID:" + npcData.getNpcId() + ")</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<table>");
 		replyMSG.append("<tr><td>SkillId</td><td><edit var=\"skillId\" width=80></td></tr>");
@@ -1674,7 +1674,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		if (skillData == null)
 		{
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-			final StringBuffer replyMSG = new StringBuffer("<html><title>Add Skill to Npc</title>");
+			final StringBuilder replyMSG = new StringBuilder("<html><title>Add Skill to Npc</title>");
 			replyMSG.append("<body>");
 			replyMSG.append("<center><button value=\"Back to Skillist\" action=\"bypass -h admin_show_skilllist_npc " + npcId + "\" width=100 height=20 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center>");
 			replyMSG.append("</body></html>");
@@ -1696,7 +1696,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			reLoadNpcSkillList(npcId);
 			
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-			final StringBuffer replyMSG = new StringBuffer("<html><title>Add Skill to Npc (" + npcId + ", " + skillId + ", " + level + ")</title>");
+			final StringBuilder replyMSG = new StringBuilder("<html><title>Add Skill to Npc (" + npcId + ", " + skillId + ", " + level + ")</title>");
 			replyMSG.append("<body>");
 			replyMSG.append("<center><button value=\"Add Skill\" action=\"bypass -h admin_add_skill_npc " + npcId + "\" width=100 height=20 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 			replyMSG.append("<br><br><button value=\"Back to Skillist\" action=\"bypass -h admin_show_skilllist_npc " + npcId + "\" width=100 height=20 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
@@ -1725,7 +1725,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 				reLoadNpcSkillList(npcId);
 				
 				final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-				final StringBuffer replyMSG = new StringBuffer("<html><title>Delete Skill (" + npcId + ", " + skillId + ")</title>");
+				final StringBuilder replyMSG = new StringBuilder("<html><title>Delete Skill (" + npcId + ", " + skillId + ")</title>");
 				replyMSG.append("<body>");
 				replyMSG.append("<center><button value=\"Back to Skillist\" action=\"bypass -h admin_show_skilllist_npc " + npcId + "\" width=100 height=20 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center>");
 				replyMSG.append("</body></html>");

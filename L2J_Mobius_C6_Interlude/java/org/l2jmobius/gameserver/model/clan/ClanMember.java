@@ -81,18 +81,18 @@ public class ClanMember
 	{
 		if ((player == null) && (_player != null))
 		{
-			final PlayerInstance local_player = _player;
+			final PlayerInstance localPlayer = _player;
 			
 			// this is here to keep the data when the player logs off
-			_name = local_player.getName();
-			_level = local_player.getLevel();
-			_classId = local_player.getClassId().getId();
-			_objectId = local_player.getObjectId();
-			_powerGrade = local_player.getPowerGrade();
-			_pledgeType = local_player.getPledgeType();
-			_title = local_player.getTitle();
-			_apprentice = local_player.getApprentice();
-			_sponsor = local_player.getSponsor();
+			_name = localPlayer.getName();
+			_level = localPlayer.getLevel();
+			_classId = localPlayer.getClassId().getId();
+			_objectId = localPlayer.getObjectId();
+			_powerGrade = localPlayer.getPowerGrade();
+			_pledgeType = localPlayer.getPledgeType();
+			_title = localPlayer.getTitle();
+			_apprentice = localPlayer.getApprentice();
+			_sponsor = localPlayer.getSponsor();
 		}
 		
 		if (player != null)
@@ -251,8 +251,7 @@ public class ClanMember
 	}
 	
 	/**
-	 * Update the characters table of the database with power grade.<BR>
-	 * <BR>
+	 * Update the characters table of the database with power grade.
 	 */
 	public void updatePowerGrade()
 	{

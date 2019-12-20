@@ -98,14 +98,14 @@ public class AttackRequest extends GameClientPacket
 		}
 		
 		// During teleport phase, players cant do any attack
-		if ((TvT.is_teleport() && player._inEventTvT) || (CTF.is_teleport() && player._inEventCTF) || (DM.is_teleport() && player._inEventDM))
+		if ((TvT.isTeleport() && player._inEventTvT) || (CTF.isTeleport() && player._inEventCTF) || (DM.isTeleport() && player._inEventDM))
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// No attacks to same team in Event
-		if (TvT.is_started())
+		if (TvT.isStarted())
 		{
 			if (target instanceof PlayerInstance)
 			{
@@ -126,7 +126,7 @@ public class AttackRequest extends GameClientPacket
 		}
 		
 		// No attacks to same team in Event
-		if (CTF.is_started())
+		if (CTF.isStarted())
 		{
 			if (target instanceof PlayerInstance)
 			{

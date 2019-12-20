@@ -26,7 +26,7 @@ public class Q088_SagaOfTheArchmage extends SagasSuperClass
 	public Q088_SagaOfTheArchmage()
 	{
 		super(88, "Saga of the Archmage");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			30176,
 			31627,
@@ -41,7 +41,7 @@ public class Q088_SagaOfTheArchmage extends SagasSuperClass
 			31657,
 			31282
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7529,
@@ -56,39 +56,39 @@ public class Q088_SagaOfTheArchmage extends SagasSuperClass
 			7082,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27250,
 			27237,
 			27254
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			94
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x0c
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			191046,
 			46066,
 			46087
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-40640,
 			-36396,
 			-36372
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-3042,
 			-1685,
 			-1685
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

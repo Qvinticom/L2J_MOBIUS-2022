@@ -300,8 +300,6 @@ public class Seed implements IItemHandler
 	};
 	
 	private int _seedId;
-	private MonsterInstance _target;
-	private PlayerInstance _player;
 	
 	@Override
 	public void useItem(Playable playable, ItemInstance item)
@@ -316,50 +314,50 @@ public class Seed implements IItemHandler
 			return;
 		}
 		
-		_player = (PlayerInstance) playable;
-		WorldObject target = _player.getTarget();
+		PlayerInstance player = (PlayerInstance) playable;
+		WorldObject target = player.getTarget();
 		
 		if (!(target instanceof NpcInstance))
 		{
-			_player.sendPacket(SystemMessageId.INCORRECT_TARGET);
-			_player.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (!(target instanceof MonsterInstance) || (target instanceof ChestInstance) || (target instanceof GrandBossInstance) || (target instanceof RaidBossInstance))
 		{
-			_player.sendPacket(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING);
-			_player.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		_target = (MonsterInstance) target;
+		MonsterInstance monster = (MonsterInstance) target;
 		
-		if ((_target == null) || _target.isDead())
+		if (monster.isDead())
 		{
-			_player.sendPacket(SystemMessageId.INCORRECT_TARGET);
-			_player.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (_target.isSeeded())
+		if (monster.isSeeded())
 		{
-			_player.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		_seedId = item.getItemId();
 		
-		if (areaValid(MapRegionTable.getInstance().getAreaCastle(_player)))
+		if (areaValid(MapRegionTable.getInstance().getAreaCastle(player)))
 		{
 			// TODO: get right skill level
-			_target.setSeeded(_seedId, _player);
+			monster.setSeeded(_seedId, player);
 			Skill skill = SkillTable.getInstance().getInfo(2097, 3); // sowing skill
-			_player.useMagic(skill, false, false);
+			player.useMagic(skill, false, false);
 		}
 		else
 		{
-			_player.sendPacket(SystemMessageId.THIS_SEED_MAY_NOT_BE_SOWN_HERE);
+			player.sendPacket(SystemMessageId.THIS_SEED_MAY_NOT_BE_SOWN_HERE);
 		}
 	}
 	

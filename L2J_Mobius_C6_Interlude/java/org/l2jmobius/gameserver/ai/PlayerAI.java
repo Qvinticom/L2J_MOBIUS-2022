@@ -75,10 +75,6 @@ public class PlayerAI extends CreatureAI
 	@Override
 	public void changeIntention(CtrlIntention intention, Object arg0, Object arg1)
 	{
-		/*
-		 * if (Config.DEBUG) LOGGER.warning("PlayerAI: changeIntention -> " + intention + " " + arg0 + " " + arg1);
-		 */
-		
 		// nothing to do if it does not CAST intention
 		if (intention != AI_INTENTION_CAST)
 		{
@@ -86,23 +82,19 @@ public class PlayerAI extends CreatureAI
 			return;
 		}
 		
-		final CtrlIntention _intention = getIntention();
-		final Object _intentionArg0 = get_intentionArg0();
-		final Object _intentionArg1 = get_intentionArg1();
+		final CtrlIntention oldIntention = getIntention();
+		final Object oldArg0 = getIntentionArg0();
+		final Object oldArg1 = getIntentionArg1();
 		
 		// do nothing if next intention is same as current one.
-		if ((intention == _intention) && (arg0 == _intentionArg0) && (arg1 == _intentionArg1))
+		if ((intention == oldIntention) && (arg0 == oldArg0) && (arg1 == oldArg1))
 		{
 			super.changeIntention(intention, arg0, arg1);
 			return;
 		}
 		
-		/*
-		 * if (Config.DEBUG) LOGGER.warning("PlayerAI: changeIntention -> Saving current intention: " + _intention + " " + _intention_arg0 + " " + _intention_arg1);
-		 */
-		
 		// push current intention to stack
-		getInterruptedIntentions().push(new IntentionCommand(_intention, _intentionArg0, _intentionArg1));
+		getInterruptedIntentions().push(new IntentionCommand(oldIntention, oldArg0, oldArg1));
 		super.changeIntention(intention, arg0, arg1);
 	}
 	
@@ -115,7 +107,7 @@ public class PlayerAI extends CreatureAI
 	protected void onEvtFinishCasting()
 	{
 		// forget interupted actions after offensive skill
-		final Skill skill = get_skill();
+		final Skill skill = getSkill();
 		
 		if ((skill != null) && skill.isOffensive())
 		{
@@ -136,10 +128,6 @@ public class PlayerAI extends CreatureAI
 				{
 				}
 				
-				/*
-				 * if (Config.DEBUG) LOGGER.warning("PlayerAI: onEvtFinishCasting -> " + cmd._intention + " " + cmd._arg0 + " " + cmd._arg1);
-				 */
-				
 				if ((cmd != null) && (cmd._crtlIntention != AI_INTENTION_CAST)) // previous state shouldn't be casting
 				{
 					setIntention(cmd._crtlIntention, cmd._arg0, cmd._arg1);
@@ -151,9 +139,6 @@ public class PlayerAI extends CreatureAI
 			}
 			else
 			{
-				/*
-				 * if (Config.DEBUG) LOGGER.warning("PlayerAI: no previous intention set... Setting it to IDLE");
-				 */
 				// set intention to idle if skill doesn't change intention.
 				setIntention(AI_INTENTION_IDLE);
 			}
@@ -213,13 +198,12 @@ public class PlayerAI extends CreatureAI
 		}
 		
 		_accessor.doAttack(target);
-		return;
 	}
 	
 	private void thinkCast()
 	{
 		final Creature target = getCastTarget();
-		final Skill skill = get_skill();
+		final Skill skill = getSkill();
 		// if (Config.DEBUG) LOGGER.warning("PlayerAI: thinkCast -> Start");
 		
 		if (checkTargetLost(target))
@@ -232,12 +216,9 @@ public class PlayerAI extends CreatureAI
 			return;
 		}
 		
-		if (target != null)
+		if ((target != null) && maybeMoveToPawn(target, _actor.getMagicalAttackRange(skill)))
 		{
-			if (maybeMoveToPawn(target, _actor.getMagicalAttackRange(skill)))
-			{
-				return;
-			}
+			return;
 		}
 		
 		if (skill.getHitTime() > 50)
@@ -256,7 +237,7 @@ public class PlayerAI extends CreatureAI
 			}
 			
 			// Launch the Cast of the skill
-			_accessor.doCast(get_skill());
+			_accessor.doCast(getSkill());
 			
 			// Restore the initial target
 			if ((target != null) && (oldTarget != target))
@@ -268,8 +249,6 @@ public class PlayerAI extends CreatureAI
 		{
 			_accessor.doCast(skill);
 		}
-		
-		return;
 	}
 	
 	private void thinkPickUp()
@@ -292,8 +271,6 @@ public class PlayerAI extends CreatureAI
 		
 		setIntention(AI_INTENTION_IDLE);
 		((PlayerInstance.AIAccessor) _accessor).doPickupItem(target);
-		
-		return;
 	}
 	
 	private void thinkInteract()
@@ -320,7 +297,6 @@ public class PlayerAI extends CreatureAI
 		}
 		
 		setIntention(AI_INTENTION_IDLE);
-		return;
 	}
 	
 	@Override
@@ -363,5 +339,4 @@ public class PlayerAI extends CreatureAI
 		ThreadPool.execute(new KnownListAsynchronousUpdateTask(_actor));
 		super.onEvtArrivedRevalidate();
 	}
-	
 }

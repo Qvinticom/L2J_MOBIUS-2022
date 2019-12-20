@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.cache;
 
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
@@ -54,12 +55,13 @@ public class WarehouseCacheManager
 		public void run()
 		{
 			final long cTime = System.currentTimeMillis();
-			for (PlayerInstance pc : _cachedWh.keySet())
+			for (Entry<PlayerInstance, Long> entry : _cachedWh.entrySet())
 			{
-				if ((cTime - _cachedWh.get(pc)) > _cacheTime)
+				if ((cTime - entry.getValue()) > _cacheTime)
 				{
-					pc.clearWarehouse();
-					_cachedWh.remove(pc);
+					PlayerInstance player = entry.getKey();
+					player.clearWarehouse();
+					_cachedWh.remove(player);
 				}
 			}
 		}

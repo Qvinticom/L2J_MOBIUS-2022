@@ -56,7 +56,7 @@ public class Topzone extends VoteSystem
 			String line;
 			while ((line = br.readLine()) != null)
 			{
-				int votes = Integer.valueOf(line);
+				int votes = Integer.parseInt(line);
 				return votes;
 			}
 			

@@ -23,6 +23,7 @@ import java.sql.SQLException;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
@@ -267,10 +268,11 @@ public class GrandBossManager
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			for (Integer bossId : _storedInfo.keySet())
+			for (Entry<Integer, StatsSet> entry : _storedInfo.entrySet())
 			{
+				final int bossId = entry.getKey();
 				final GrandBossInstance boss = _bosses.get(bossId);
-				final StatsSet info = _storedInfo.get(bossId);
+				final StatsSet info = entry.getValue();
 				if ((boss == null) || (info == null))
 				{
 					final PreparedStatement update2 = con.prepareStatement(UPDATE_GRAND_BOSS_DATA2);
@@ -339,10 +341,11 @@ public class GrandBossManager
 				}
 			}
 			
-			for (Integer bossId : _storedInfo.keySet())
+			for (Entry<Integer, StatsSet> entry : _storedInfo.entrySet())
 			{
+				final int bossId = entry.getKey();
 				final GrandBossInstance boss = _bosses.get(bossId);
-				final StatsSet info = _storedInfo.get(bossId);
+				final StatsSet info = entry.getValue();
 				if ((boss == null) || (info == null))
 				{
 					final PreparedStatement update2 = con.prepareStatement(UPDATE_GRAND_BOSS_DATA2);

@@ -99,7 +99,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 				return false;
 			}
 			
-			VIP._time = Integer.valueOf(params[1]) * 60 * 1000;
+			VIP._time = Integer.parseInt(params[1]) * 60 * 1000;
 			showMainPage(activeChar);
 		}
 		else if (command.startsWith("admin_vip_endnpc "))
@@ -119,7 +119,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 				return false;
 			}
 			
-			VIP.endNPC(Integer.valueOf(params[1]), activeChar);
+			VIP.endNPC(Integer.parseInt(params[1]), activeChar);
 			showMainPage(activeChar);
 		}
 		else if (command.startsWith("admin_vip_joinnpc "))
@@ -139,7 +139,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 				return false;
 			}
 			
-			VIP.joinNPC(Integer.valueOf(params[1]), activeChar);
+			VIP.joinNPC(Integer.parseInt(params[1]), activeChar);
 			showMainPage(activeChar);
 		}
 		else if (command.startsWith("admin_vip_setdelay "))
@@ -159,7 +159,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 				return false;
 			}
 			
-			VIP._delay = Integer.valueOf(params[1]) * 60 * 1000;
+			VIP._delay = Integer.parseInt(params[1]) * 60 * 1000;
 			showMainPage(activeChar);
 		}
 		else if (command.startsWith("admin_vip_joininit"))
@@ -203,7 +203,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 				return false;
 			}
 			
-			VIP.joinNPC(Integer.valueOf(params[1]), activeChar);
+			VIP.joinNPC(Integer.parseInt(params[1]), activeChar);
 			showMainPage(activeChar);
 		}
 		else if (command.startsWith("admin_vip_setarea "))
@@ -242,7 +242,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 				return false;
 			}
 			
-			VIP._vipReward = Integer.valueOf(params[1]);
+			VIP._vipReward = Integer.parseInt(params[1]);
 			showMainPage(activeChar);
 		}
 		else if (command.startsWith("admin_vip_viprewardamount "))
@@ -262,7 +262,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 				return false;
 			}
 			
-			VIP._vipRewardAmount = Integer.valueOf(params[1]);
+			VIP._vipRewardAmount = Integer.parseInt(params[1]);
 			showMainPage(activeChar);
 		}
 		else if (command.startsWith("admin_vip_notvipreward "))
@@ -282,7 +282,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 				return false;
 			}
 			
-			VIP._notVipReward = Integer.valueOf(params[1]);
+			VIP._notVipReward = Integer.parseInt(params[1]);
 			showMainPage(activeChar);
 		}
 		else if (command.startsWith("admin_vip_notviprewardamount "))
@@ -302,7 +302,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 				return false;
 			}
 			
-			VIP._notVipRewardAmount = Integer.valueOf(params[1]);
+			VIP._notVipRewardAmount = Integer.parseInt(params[1]);
 			showMainPage(activeChar);
 		}
 		else if (command.startsWith("admin_vip_thevipreward "))
@@ -322,7 +322,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 				return false;
 			}
 			
-			VIP._theVipReward = Integer.valueOf(params[1]);
+			VIP._theVipReward = Integer.parseInt(params[1]);
 			showMainPage(activeChar);
 		}
 		else if (command.startsWith("admin_vip_theviprewardamount "))
@@ -342,7 +342,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 				return false;
 			}
 			
-			VIP._theVipRewardAmount = Integer.valueOf(params[1]);
+			VIP._theVipRewardAmount = Integer.parseInt(params[1]);
 			showMainPage(activeChar);
 		}
 		

@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class RequestDestroyItem extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestDestroyItem.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestDestroyItem.class.getName());
 	
 	private int _objectId;
 	private int _count;
@@ -87,13 +87,10 @@ public class RequestDestroyItem extends GameClientPacket
 		}
 		
 		// Cannot discard item that the skill is consumming
-		if (player.isCastingNow())
+		if (player.isCastingNow() && (player.getCurrentSkill() != null) && (player.getCurrentSkill().getSkill().getItemConsumeId() == itemToRemove.getItemId()))
 		{
-			if ((player.getCurrentSkill() != null) && (player.getCurrentSkill().getSkill().getItemConsumeId() == itemToRemove.getItemId()))
-			{
-				player.sendPacket(SystemMessageId.CANNOT_DISCARD_THIS_ITEM);
-				return;
-			}
+			player.sendPacket(SystemMessageId.CANNOT_DISCARD_THIS_ITEM);
+			return;
 		}
 		
 		final int itemId = itemToRemove.getItemId();

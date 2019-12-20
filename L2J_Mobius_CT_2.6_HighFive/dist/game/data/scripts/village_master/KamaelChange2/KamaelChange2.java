@@ -101,7 +101,7 @@ public class KamaelChange2 extends AbstractNpcAI
 			case "129":
 			case "130":
 			{
-				htmltext = ClassChangeRequested(player, npc, Integer.valueOf(event));
+				htmltext = ClassChangeRequested(player, npc, Integer.parseInt(event));
 				break;
 			}
 		}

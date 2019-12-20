@@ -24,11 +24,11 @@ public class StaticObject extends GameServerPacket
 	
 	/**
 	 * [S]0x99 StaticObjectPacket dd
-	 * @param StaticObject
+	 * @param staticObject
 	 */
-	public StaticObject(StaticObjectInstance StaticObject)
+	public StaticObject(StaticObjectInstance staticObject)
 	{
-		_staticObject = StaticObject; // staticObjectId
+		_staticObject = staticObject; // staticObjectId
 	}
 	
 	@Override

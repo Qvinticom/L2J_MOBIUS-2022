@@ -230,12 +230,7 @@ public class ChestInstance extends MonsterInstance
 			return true;
 		}
 		
-		if (_isInteracted)
-		{
-			return false;
-		}
-		
-		return true;
+		return !_isInteracted;
 	}
 	
 	@Override

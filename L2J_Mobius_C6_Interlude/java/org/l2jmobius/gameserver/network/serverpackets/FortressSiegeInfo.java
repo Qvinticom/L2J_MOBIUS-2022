@@ -45,7 +45,7 @@ import org.l2jmobius.gameserver.model.entity.siege.Fort;
  */
 public class FortressSiegeInfo extends GameServerPacket
 {
-	private static Logger LOGGER = Logger.getLogger(FortressSiegeInfo.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FortressSiegeInfo.class.getName());
 	private final Fort _fort;
 	
 	public FortressSiegeInfo(Fort fort)

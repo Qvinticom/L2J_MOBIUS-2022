@@ -251,10 +251,10 @@ public class MailBBSManager extends BaseBBSManager
 	
 	private List<Mail> getPlayerMails(int objId)
 	{
-		List<Mail> _letters = _mails.get(objId);
-		if (_letters == null)
+		List<Mail> letters = _mails.get(objId);
+		if (letters == null)
 		{
-			_letters = new ArrayList<>();
+			letters = new ArrayList<>();
 			try (Connection con = DatabaseFactory.getConnection())
 			{
 				PreparedStatement statement = con.prepareStatement(SELECT_CHAR_MAILS);
@@ -273,7 +273,7 @@ public class MailBBSManager extends BaseBBSManager
 					letter.sentDate = result.getTimestamp("sentDate");
 					letter.sentDateString = new SimpleDateFormat("yyyy-MM-dd HH:mm").format(letter.sentDate);
 					letter.unread = result.getInt("unread") != 0;
-					_letters.add(0, letter);
+					letters.add(0, letter);
 				}
 				result.close();
 				statement.close();
@@ -282,9 +282,9 @@ public class MailBBSManager extends BaseBBSManager
 			{
 				LOGGER.warning("couldnt load mail for ID:" + objId + " " + e.getMessage());
 			}
-			_mails.put(objId, _letters);
+			_mails.put(objId, letters);
 		}
-		return _letters;
+		return letters;
 	}
 	
 	private Mail getLetter(PlayerInstance activeChar, int letterId)
@@ -515,8 +515,8 @@ public class MailBBSManager extends BaseBBSManager
 		content = content.replace("%sentDate%", letter.sentDateString);
 		content = content.replace("%receiver%", letter.recipientNames);
 		content = content.replace("%delDate%", "Unknown");
-		content = content.replace("%title%", letter.subject.replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\"", "&quot;"));
-		content = content.replace("%mes%", letter.message.replaceAll("\r\n", "<br>").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\"", "&quot;"));
+		content = content.replace("%title%", letter.subject.replace("<", "&lt;").replace(">", "&gt;").replace("\"", "&quot;"));
+		content = content.replace("%mes%", letter.message.replace("\r\n", "<br>").replace("<", "&lt;").replace(">", "&gt;").replace("\"", "&quot;"));
 		content = content.replace("%letterId%", letter.letterId + "");
 		separateAndSend(content, activeChar);
 	}
@@ -570,7 +570,7 @@ public class MailBBSManager extends BaseBBSManager
 		}
 		
 		// Edit message.
-		message = message.replaceAll("\n", "<br1>");
+		message = message.replace("\n", "<br1>");
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -738,12 +738,7 @@ public class MailBBSManager extends BaseBBSManager
 		{
 			if (player.getObjectId() == recipId)
 			{
-				if (BlockList.isInBlockList(player, activeChar))
-				{
-					return true;
-				}
-				
-				return false;
+				return BlockList.isInBlockList(player, activeChar);
 			}
 		}
 		return false;

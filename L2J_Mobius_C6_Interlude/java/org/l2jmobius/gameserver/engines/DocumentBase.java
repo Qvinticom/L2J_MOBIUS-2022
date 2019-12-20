@@ -258,22 +258,19 @@ public abstract class DocumentBase
 		{
 			time = Integer.decode(getValue(attrs.getNamedItem("time").getNodeValue(), template));
 			
-			if (Config.ENABLE_MODIFY_SKILL_DURATION)
+			if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(((Skill) template).getId()))
 			{
-				if (Config.SKILL_DURATION_LIST.containsKey(((Skill) template).getId()))
+				if (((Skill) template).getLevel() < 100)
 				{
-					if (((Skill) template).getLevel() < 100)
-					{
-						time = Config.SKILL_DURATION_LIST.get(((Skill) template).getId());
-					}
-					else if ((((Skill) template).getLevel() >= 100) && (((Skill) template).getLevel() < 140))
-					{
-						time += Config.SKILL_DURATION_LIST.get(((Skill) template).getId());
-					}
-					else if (((Skill) template).getLevel() > 140)
-					{
-						time = Config.SKILL_DURATION_LIST.get(((Skill) template).getId());
-					}
+					time = Config.SKILL_DURATION_LIST.get(((Skill) template).getId());
+				}
+				else if ((((Skill) template).getLevel() >= 100) && (((Skill) template).getLevel() < 140))
+				{
+					time += Config.SKILL_DURATION_LIST.get(((Skill) template).getId());
+				}
+				else if (((Skill) template).getLevel() > 140)
+				{
+					time = Config.SKILL_DURATION_LIST.get(((Skill) template).getId());
 				}
 			}
 		}
@@ -284,12 +281,9 @@ public abstract class DocumentBase
 		
 		boolean self = false;
 		
-		if (attrs.getNamedItem("self") != null)
+		if ((attrs.getNamedItem("self") != null) && (Integer.decode(getValue(attrs.getNamedItem("self").getNodeValue(), template)) == 1))
 		{
-			if (Integer.decode(getValue(attrs.getNamedItem("self").getNodeValue(), template)) == 1)
-			{
-				self = true;
-			}
+			self = true;
 		}
 		
 		final Lambda lambda = getLambda(n, template);
@@ -541,7 +535,7 @@ public abstract class DocumentBase
 	protected Condition parsePlayerCondition(Node n)
 	{
 		Condition cond = null;
-		final int[] ElementSeeds = new int[5];
+		final int[] elementSeeds = new int[5];
 		final int[] forces = new int[2];
 		final NamedNodeMap attrs = n.getAttributes();
 		for (int i = 0; i < attrs.getLength(); i++)
@@ -559,37 +553,37 @@ public abstract class DocumentBase
 			}
 			else if ("resting".equalsIgnoreCase(a.getNodeName()))
 			{
-				final boolean val = Boolean.valueOf(a.getNodeValue());
+				final boolean val = Boolean.parseBoolean(a.getNodeValue());
 				cond = joinAnd(cond, new ConditionPlayerState(CheckPlayerState.RESTING, val));
 			}
 			else if ("flying".equalsIgnoreCase(a.getNodeName()))
 			{
-				final boolean val = Boolean.valueOf(a.getNodeValue());
+				final boolean val = Boolean.parseBoolean(a.getNodeValue());
 				cond = joinAnd(cond, new ConditionPlayerState(CheckPlayerState.FLYING, val));
 			}
 			else if ("moving".equalsIgnoreCase(a.getNodeName()))
 			{
-				final boolean val = Boolean.valueOf(a.getNodeValue());
+				final boolean val = Boolean.parseBoolean(a.getNodeValue());
 				cond = joinAnd(cond, new ConditionPlayerState(CheckPlayerState.MOVING, val));
 			}
 			else if ("running".equalsIgnoreCase(a.getNodeName()))
 			{
-				final boolean val = Boolean.valueOf(a.getNodeValue());
+				final boolean val = Boolean.parseBoolean(a.getNodeValue());
 				cond = joinAnd(cond, new ConditionPlayerState(CheckPlayerState.RUNNING, val));
 			}
 			else if ("behind".equalsIgnoreCase(a.getNodeName()))
 			{
-				final boolean val = Boolean.valueOf(a.getNodeValue());
+				final boolean val = Boolean.parseBoolean(a.getNodeValue());
 				cond = joinAnd(cond, new ConditionPlayerState(CheckPlayerState.BEHIND, val));
 			}
 			else if ("front".equalsIgnoreCase(a.getNodeName()))
 			{
-				final boolean val = Boolean.valueOf(a.getNodeValue());
+				final boolean val = Boolean.parseBoolean(a.getNodeValue());
 				cond = joinAnd(cond, new ConditionPlayerState(CheckPlayerState.FRONT, val));
 			}
 			else if ("side".equalsIgnoreCase(a.getNodeName()))
 			{
-				final boolean val = Boolean.valueOf(a.getNodeValue());
+				final boolean val = Boolean.parseBoolean(a.getNodeValue());
 				cond = joinAnd(cond, new ConditionPlayerState(CheckPlayerState.SIDE, val));
 			}
 			else if ("hp".equalsIgnoreCase(a.getNodeName()))
@@ -609,23 +603,23 @@ public abstract class DocumentBase
 			}
 			else if ("seed_fire".equalsIgnoreCase(a.getNodeName()))
 			{
-				ElementSeeds[0] = Integer.decode(getValue(a.getNodeValue(), null));
+				elementSeeds[0] = Integer.decode(getValue(a.getNodeValue(), null));
 			}
 			else if ("seed_water".equalsIgnoreCase(a.getNodeName()))
 			{
-				ElementSeeds[1] = Integer.decode(getValue(a.getNodeValue(), null));
+				elementSeeds[1] = Integer.decode(getValue(a.getNodeValue(), null));
 			}
 			else if ("seed_wind".equalsIgnoreCase(a.getNodeName()))
 			{
-				ElementSeeds[2] = Integer.decode(getValue(a.getNodeValue(), null));
+				elementSeeds[2] = Integer.decode(getValue(a.getNodeValue(), null));
 			}
 			else if ("seed_various".equalsIgnoreCase(a.getNodeName()))
 			{
-				ElementSeeds[3] = Integer.decode(getValue(a.getNodeValue(), null));
+				elementSeeds[3] = Integer.decode(getValue(a.getNodeValue(), null));
 			}
 			else if ("seed_any".equalsIgnoreCase(a.getNodeName()))
 			{
-				ElementSeeds[4] = Integer.decode(getValue(a.getNodeValue(), null));
+				elementSeeds[4] = Integer.decode(getValue(a.getNodeValue(), null));
 			}
 			else if ("battle_force".equalsIgnoreCase(a.getNodeName()))
 			{
@@ -649,11 +643,11 @@ public abstract class DocumentBase
 		}
 		
 		// Elemental seed condition processing
-		for (int elementSeed : ElementSeeds)
+		for (int elementSeed : elementSeeds)
 		{
 			if (elementSeed > 0)
 			{
-				cond = joinAnd(cond, new ConditionElementSeed(ElementSeeds));
+				cond = joinAnd(cond, new ConditionElementSeed(elementSeeds));
 				break;
 			}
 		}
@@ -679,7 +673,7 @@ public abstract class DocumentBase
 			final Node a = attrs.item(i);
 			if ("aggro".equalsIgnoreCase(a.getNodeName()))
 			{
-				final boolean val = Boolean.valueOf(a.getNodeValue());
+				final boolean val = Boolean.parseBoolean(a.getNodeValue());
 				cond = joinAnd(cond, new ConditionTargetAggro(val));
 			}
 			else if ("level".equalsIgnoreCase(a.getNodeName()))
@@ -831,13 +825,13 @@ public abstract class DocumentBase
 			final Node a = attrs.item(i);
 			if ("skill".equalsIgnoreCase(a.getNodeName()))
 			{
-				final boolean val = Boolean.valueOf(a.getNodeValue());
+				final boolean val = Boolean.parseBoolean(a.getNodeValue());
 				cond = joinAnd(cond, new ConditionWithSkill(val));
 			}
 			
 			if ("night".equalsIgnoreCase(a.getNodeName()))
 			{
-				final boolean val = Boolean.valueOf(a.getNodeValue());
+				final boolean val = Boolean.parseBoolean(a.getNodeValue());
 				cond = joinAnd(cond, new ConditionGameTime(CheckGameTime.NIGHT, val));
 			}
 			

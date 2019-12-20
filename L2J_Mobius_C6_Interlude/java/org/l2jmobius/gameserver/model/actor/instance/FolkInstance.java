@@ -248,20 +248,20 @@ public class FolkInstance extends NpcInstance
 				}
 				else
 				{
-					boolean own_class = false;
+					boolean ownClass = false;
 					
 					for (ClassId cid : _classesToTeach)
 					{
 						if (cid.equalsOrChildOf(player.getClassId()))
 						{
-							own_class = true;
+							ownClass = true;
 							break;
 						}
 					}
 					
 					String text = "<html><body><center>Skill learning:</center><br>";
 					
-					if (!own_class)
+					if (!ownClass)
 					{
 						final String mages = player.getClassId().isMage() ? "fighters" : "mages";
 						text += "Skills of your class are the easiest to learn.<br>Skills of another class are harder.<br>Skills for another race are even more hard to learn.<br>You can also learn skills of " + mages + ", and they are the hardest to learn!<br><br>";

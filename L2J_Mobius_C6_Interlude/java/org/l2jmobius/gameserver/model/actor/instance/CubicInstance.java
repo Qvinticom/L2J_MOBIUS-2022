@@ -361,13 +361,13 @@ public class CubicInstance
 			// Duel targeting
 			if (_owner.isInDuel())
 			{
-				final PlayerInstance PlayerA = DuelManager.getInstance().getDuel(_owner.getDuelId()).getPlayerA();
-				final PlayerInstance PlayerB = DuelManager.getInstance().getDuel(_owner.getDuelId()).getPlayerB();
+				final PlayerInstance playerA = DuelManager.getInstance().getDuel(_owner.getDuelId()).getPlayerA();
+				final PlayerInstance playerB = DuelManager.getInstance().getDuel(_owner.getDuelId()).getPlayerB();
 				
 				if (DuelManager.getInstance().getDuel(_owner.getDuelId()).isPartyDuel())
 				{
-					final Party partyA = PlayerA.getParty();
-					final Party partyB = PlayerB.getParty();
+					final Party partyA = playerA.getParty();
+					final Party partyB = playerB.getParty();
 					Party partyEnemy = null;
 					
 					if (partyA != null)
@@ -380,7 +380,7 @@ public class CubicInstance
 							}
 							else
 							{
-								_target = PlayerB;
+								_target = playerB;
 							}
 						}
 						else
@@ -388,7 +388,7 @@ public class CubicInstance
 							partyEnemy = partyA;
 						}
 					}
-					else if (PlayerA == _owner)
+					else if (playerA == _owner)
 					{
 						if (partyB != null)
 						{
@@ -396,19 +396,16 @@ public class CubicInstance
 						}
 						else
 						{
-							_target = PlayerB;
+							_target = playerB;
 						}
 					}
 					else
 					{
-						_target = PlayerA;
+						_target = playerA;
 					}
-					if ((_target == PlayerA) || (_target == PlayerB))
+					if (((_target == playerA) || (_target == playerB)) && (_target == ownerTarget))
 					{
-						if (_target == ownerTarget)
-						{
-							return;
-						}
+						return;
 					}
 					if (partyEnemy != null)
 					{
@@ -419,14 +416,14 @@ public class CubicInstance
 						return;
 					}
 				}
-				if ((PlayerA != _owner) && (ownerTarget == PlayerA))
+				if ((playerA != _owner) && (ownerTarget == playerA))
 				{
-					_target = PlayerA;
+					_target = playerA;
 					return;
 				}
-				if ((PlayerB != _owner) && (ownerTarget == PlayerB))
+				if ((playerB != _owner) && (ownerTarget == playerB))
 				{
-					_target = PlayerB;
+					_target = playerB;
 					return;
 				}
 				_target = null;
@@ -476,13 +473,10 @@ public class CubicInstance
 						_target = (Creature) ownerTarget;
 						return;
 					}
-					if (_owner.getPet() != null)
+					if ((_owner.getPet() != null) && (((Attackable) ownerTarget).getAggroList().get(_owner.getPet()) != null) && !((Attackable) ownerTarget).isDead())
 					{
-						if ((((Attackable) ownerTarget).getAggroList().get(_owner.getPet()) != null) && !((Attackable) ownerTarget).isDead())
-						{
-							_target = (Creature) ownerTarget;
-							return;
-						}
+						_target = (Creature) ownerTarget;
+						return;
 					}
 				}
 				
@@ -506,12 +500,9 @@ public class CubicInstance
 							{
 								targetIt = false;
 							}
-							else if (_owner.getParty().getCommandChannel() != null)
+							else if ((_owner.getParty().getCommandChannel() != null) && _owner.getParty().getCommandChannel().getMembers().contains(enemy))
 							{
-								if (_owner.getParty().getCommandChannel().getMembers().contains(enemy))
-								{
-									targetIt = false;
-								}
+								targetIt = false;
 							}
 						}
 						if ((_owner.getClan() != null) && !_owner.isInsideZone(ZoneId.PVP))
@@ -520,12 +511,9 @@ public class CubicInstance
 							{
 								targetIt = false;
 							}
-							if ((_owner.getAllyId() > 0) && (enemy.getAllyId() > 0))
+							if ((_owner.getAllyId() > 0) && (enemy.getAllyId() > 0) && (_owner.getAllyId() == enemy.getAllyId()))
 							{
-								if (_owner.getAllyId() == enemy.getAllyId())
-								{
-									targetIt = false;
-								}
+								targetIt = false;
 							}
 						}
 						if ((enemy.getPvpFlag() == 0) && !enemy.isInsideZone(ZoneId.PVP))
@@ -548,7 +536,6 @@ public class CubicInstance
 						if (targetIt)
 						{
 							_target = enemy;
-							return;
 						}
 					}
 				}
@@ -613,7 +600,7 @@ public class CubicInstance
 				}
 				
 				// Smart Cubic debuff cancel is 100%
-				boolean UseCubicCure = false;
+				boolean useCubicCure = false;
 				Skill skill = null;
 				
 				if ((_id >= SMART_CUBIC_EVATEMPLAR) && (_id <= SMART_CUBIC_SPECTRALMASTER))
@@ -624,13 +611,13 @@ public class CubicInstance
 					{
 						if ((e != null) && e.getSkill().isOffensive())
 						{
-							UseCubicCure = true;
+							useCubicCure = true;
 							e.exit(true);
 						}
 					}
 				}
 				
-				if (UseCubicCure)
+				if (useCubicCure)
 				{
 					// Smart Cubic debuff cancel is needed, no other skill is used in this
 					// activation period
@@ -875,20 +862,17 @@ public class CubicInstance
 					{
 						break;
 					}
-					final int max_negated_effects = 3;
+					final int maxNegatedEffects = 3;
 					int count = 0;
 					for (Effect e : effects)
 					{
-						if (e.getSkill().isOffensive() && (count < max_negated_effects))
+						// Do not remove raid curse skills
+						if (e.getSkill().isOffensive() && (count < maxNegatedEffects) && (e.getSkill().getId() != 4215) && (e.getSkill().getId() != 4515) && (e.getSkill().getId() != 4082))
 						{
-							// Do not remove raid curse skills
-							if ((e.getSkill().getId() != 4215) && (e.getSkill().getId() != 4515) && (e.getSkill().getId() != 4082))
+							e.exit(true);
+							if (count > -1)
 							{
-								e.exit(true);
-								if (count > -1)
-								{
-									count++;
-								}
+								count++;
 							}
 						}
 					}
@@ -969,12 +953,9 @@ public class CubicInstance
 		Party party = _owner.getParty();
 		
 		// if owner is in a duel but not in a party duel, then it is the same as he does not have a party
-		if (_owner.isInDuel())
+		if (_owner.isInDuel() && !DuelManager.getInstance().getDuel(_owner.getDuelId()).isPartyDuel())
 		{
-			if (!DuelManager.getInstance().getDuel(_owner.getDuelId()).isPartyDuel())
-			{
-				party = null;
-			}
+			party = null;
 		}
 		
 		if ((party != null) && !_owner.isInOlympiadMode())
@@ -984,21 +965,11 @@ public class CubicInstance
 			final List<PlayerInstance> partyList = party.getPartyMembers();
 			for (Creature partyMember : partyList)
 			{
-				if (!partyMember.isDead())
+				// if party member not dead, check if he is in castrange of heal cubic and member is in cubic casting range, check if he need heal and if he have the lowest HP
+				if (!partyMember.isDead() && isInCubicRange(_owner, partyMember) && (partyMember.getCurrentHp() < partyMember.getMaxHp()) && (percentleft > (partyMember.getCurrentHp() / partyMember.getMaxHp())))
 				{
-					// if party member not dead, check if he is in castrange of heal cubic
-					if (isInCubicRange(_owner, partyMember))
-					{
-						// member is in cubic casting range, check if he need heal and if he have the lowest HP
-						if (partyMember.getCurrentHp() < partyMember.getMaxHp())
-						{
-							if (percentleft > (partyMember.getCurrentHp() / partyMember.getMaxHp()))
-							{
-								percentleft = (partyMember.getCurrentHp() / partyMember.getMaxHp());
-								target = partyMember;
-							}
-						}
-					}
+					percentleft = (partyMember.getCurrentHp() / partyMember.getMaxHp());
+					target = partyMember;
 				}
 				if (partyMember.getPet() != null)
 				{
@@ -1014,13 +985,10 @@ public class CubicInstance
 					}
 					
 					// member's pet is in cubic casting range, check if he need heal and if he have the lowest HP
-					if (partyMember.getPet().getCurrentHp() < partyMember.getPet().getMaxHp())
+					if ((partyMember.getPet().getCurrentHp() < partyMember.getPet().getMaxHp()) && (percentleft > (partyMember.getPet().getCurrentHp() / partyMember.getPet().getMaxHp())))
 					{
-						if (percentleft > (partyMember.getPet().getCurrentHp() / partyMember.getPet().getMaxHp()))
-						{
-							percentleft = (partyMember.getPet().getCurrentHp() / partyMember.getPet().getMaxHp());
-							target = partyMember.getPet();
-						}
+						percentleft = (partyMember.getPet().getCurrentHp() / partyMember.getPet().getMaxHp());
+						target = partyMember.getPet();
 					}
 				}
 			}
@@ -1032,12 +1000,9 @@ public class CubicInstance
 				percentleft = (_owner.getCurrentHp() / _owner.getMaxHp());
 				target = _owner;
 			}
-			if (_owner.getPet() != null)
+			if ((_owner.getPet() != null) && !_owner.getPet().isDead() && (_owner.getPet().getCurrentHp() < _owner.getPet().getMaxHp()) && (percentleft > (_owner.getPet().getCurrentHp() / _owner.getPet().getMaxHp())) && isInCubicRange(_owner, _owner.getPet()))
 			{
-				if (!_owner.getPet().isDead() && (_owner.getPet().getCurrentHp() < _owner.getPet().getMaxHp()) && (percentleft > (_owner.getPet().getCurrentHp() / _owner.getPet().getMaxHp())) && isInCubicRange(_owner, _owner.getPet()))
-				{
-					target = _owner.getPet();
-				}
+				target = _owner.getPet();
 			}
 		}
 		
@@ -1086,27 +1051,24 @@ public class CubicInstance
 				{
 					cubicTargetForHeal();
 					final Creature target = _target;
-					if ((target != null) && !target.isDead())
+					if ((target != null) && !target.isDead() && ((target.getMaxHp() - target.getCurrentHp()) > skill.getPower()))
 					{
-						if ((target.getMaxHp() - target.getCurrentHp()) > skill.getPower())
+						final Creature[] targets =
 						{
-							final Creature[] targets =
-							{
-								target
-							};
-							final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
-							if (handler != null)
-							{
-								handler.useSkill(_owner, skill, targets);
-							}
-							else
-							{
-								skill.useSkill(_owner, targets);
-							}
-							
-							final MagicSkillUse msu = new MagicSkillUse(_owner, target, skill.getId(), skill.getLevel(), 0, 0);
-							_owner.broadcastPacket(msu);
+							target
+						};
+						final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
+						if (handler != null)
+						{
+							handler.useSkill(_owner, skill, targets);
 						}
+						else
+						{
+							skill.useSkill(_owner, targets);
+						}
+						
+						final MagicSkillUse msu = new MagicSkillUse(_owner, target, skill.getId(), skill.getLevel(), 0, 0);
+						_owner.broadcastPacket(msu);
 					}
 				}
 			}

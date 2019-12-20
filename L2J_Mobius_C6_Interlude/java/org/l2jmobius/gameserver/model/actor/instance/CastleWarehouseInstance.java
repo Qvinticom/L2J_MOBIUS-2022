@@ -214,18 +214,15 @@ public class CastleWarehouseInstance extends FolkInstance
 		{
 			return COND_OWNER;
 		}
-		if ((getCastle() != null) && (getCastle().getCastleId() > 0))
+		if ((getCastle() != null) && (getCastle().getCastleId() > 0) && (player.getClan() != null))
 		{
-			if (player.getClan() != null)
+			if (getCastle().getSiege().getIsInProgress())
 			{
-				if (getCastle().getSiege().getIsInProgress())
-				{
-					return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
-				}
-				else if (getCastle().getOwnerId() == player.getClanId())
-				{
-					return COND_OWNER;
-				}
+				return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
+			}
+			else if (getCastle().getOwnerId() == player.getClanId())
+			{
+				return COND_OWNER;
 			}
 		}
 		return COND_ALL_FALSE;

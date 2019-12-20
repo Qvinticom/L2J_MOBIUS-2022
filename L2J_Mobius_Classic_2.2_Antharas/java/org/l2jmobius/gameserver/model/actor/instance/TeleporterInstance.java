@@ -144,7 +144,7 @@ public class TeleporterInstance extends Npc
 			final String token = st.nextToken();
 			if (Util.isDigit(token))
 			{
-				return Integer.valueOf(token);
+				return Integer.parseInt(token);
 			}
 		}
 		return defaultVal;

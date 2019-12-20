@@ -1322,7 +1322,7 @@ public class Olympiad extends ListenersContainer
 	 */
 	public static StatsSet addNobleStats(int charId, StatsSet data)
 	{
-		return NOBLES.put(Integer.valueOf(charId), data);
+		return NOBLES.put(charId, data);
 	}
 	
 	public static Olympiad getInstance()

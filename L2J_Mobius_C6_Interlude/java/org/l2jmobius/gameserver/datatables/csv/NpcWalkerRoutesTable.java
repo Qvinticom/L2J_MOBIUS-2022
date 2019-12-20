@@ -119,7 +119,7 @@ public class NpcWalkerRoutesTable
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with NpcWalkerRoutesTable: " + e1.getMessage());
 				}
 			}
 			
@@ -131,7 +131,7 @@ public class NpcWalkerRoutesTable
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with NpcWalkerRoutesTable: " + e1.getMessage());
 				}
 			}
 			
@@ -143,7 +143,7 @@ public class NpcWalkerRoutesTable
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with NpcWalkerRoutesTable: " + e1.getMessage());
 				}
 			}
 		}
@@ -151,15 +151,15 @@ public class NpcWalkerRoutesTable
 	
 	public List<NpcWalkerNode> getRouteForNpc(int id)
 	{
-		final List<NpcWalkerNode> _return = new ArrayList<>();
+		final List<NpcWalkerNode> result = new ArrayList<>();
 		for (NpcWalkerNode node : _routes)
 		{
 			if (node.getNpcId() == id)
 			{
-				_return.add(node);
+				result.add(node);
 			}
 		}
-		return _return;
+		return result;
 	}
 	
 	public static NpcWalkerRoutesTable getInstance()

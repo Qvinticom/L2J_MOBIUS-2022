@@ -49,7 +49,7 @@ public class ServerList extends LoginServerPacket
 		protected int _status;
 		protected int _serverId;
 		
-		ServerData(String pIp, int pPort, boolean pPvp, boolean pTestServer, int pCurrentPlayers, int pMaxPlayers, boolean pBrackets, boolean pClock, int pStatus, int pServer_id)
+		ServerData(String pIp, int pPort, boolean pPvp, boolean pTestServer, int pCurrentPlayers, int pMaxPlayers, boolean pBrackets, boolean pClock, int pStatus, int pServerId)
 		{
 			_ip = pIp;
 			_port = pPort;
@@ -60,7 +60,7 @@ public class ServerList extends LoginServerPacket
 			_brackets = pBrackets;
 			_clock = pClock;
 			_status = pStatus;
-			_serverId = pServer_id;
+			_serverId = pServerId;
 		}
 	}
 	
@@ -89,9 +89,9 @@ public class ServerList extends LoginServerPacket
 		}
 	}
 	
-	public void addServer(String ip, int port, boolean pvp, boolean testServer, int currentPlayer, int maxPlayer, boolean brackets, boolean clock, int status, int server_id)
+	public void addServer(String ip, int port, boolean pvp, boolean testServer, int currentPlayer, int maxPlayer, boolean brackets, boolean clock, int status, int serverId)
 	{
-		_servers.add(new ServerData(ip, port, pvp, testServer, currentPlayer, maxPlayer, brackets, clock, status, server_id));
+		_servers.add(new ServerData(ip, port, pvp, testServer, currentPlayer, maxPlayer, brackets, clock, status, serverId));
 	}
 	
 	@Override

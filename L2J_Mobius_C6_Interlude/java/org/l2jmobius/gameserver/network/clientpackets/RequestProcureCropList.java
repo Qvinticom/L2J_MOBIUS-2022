@@ -151,7 +151,6 @@ public class RequestProcureCropList extends GameClientPacket
 			}
 			catch (NullPointerException e)
 			{
-				continue;
 			}
 		}
 		

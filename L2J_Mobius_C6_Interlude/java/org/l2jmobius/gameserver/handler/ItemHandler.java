@@ -20,7 +20,6 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.handler.itemhandlers.BeastSoulShot;
 import org.l2jmobius.gameserver.handler.itemhandlers.BeastSpice;
 import org.l2jmobius.gameserver.handler.itemhandlers.BeastSpiritShot;
@@ -66,7 +65,7 @@ import org.l2jmobius.gameserver.handler.itemhandlers.SummonItems;
 
 public class ItemHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(GameServer.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ItemHandler.class.getName());
 	
 	private final Map<Integer, IItemHandler> _datatable;
 	

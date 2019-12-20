@@ -39,6 +39,8 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class TradeList
 {
+	private static final Logger LOGGER = Logger.getLogger(TradeList.class.getName());
+	
 	public class TradeItem
 	{
 		private int _objectId;
@@ -139,11 +141,9 @@ public class TradeList
 		 */
 		public boolean isAugmented()
 		{
-			return _augmentation == null ? false : true;
+			return _augmentation != null;
 		}
 	}
-	
-	private static Logger LOGGER = Logger.getLogger(TradeList.class.getName());
 	
 	private final PlayerInstance _owner;
 	private PlayerInstance _partner;
@@ -339,7 +339,7 @@ public class TradeList
 		
 		WorldObject o = World.getInstance().findObject(objectId);
 		
-		if ((o == null) || !(o instanceof ItemInstance))
+		if (!(o instanceof ItemInstance))
 		{
 			Util.handleIllegalPlayerAction(_owner, "Player " + _owner.getName() + " Attempt to add invalid item to TradeList! ", Config.DEFAULT_PUNISH);
 			LOGGER.warning(_owner.getName() + ": Attempt to add invalid item to TradeList!");
@@ -625,8 +625,8 @@ public class TradeList
 			return false;
 		}
 		
-		final PlayerInstance _worldInstance = (PlayerInstance) World.getInstance().findObject(_owner.getObjectId());
-		if ((_worldInstance == null) || (_worldInstance.get_instanceLoginTime() != _owner.get_instanceLoginTime()))
+		final PlayerInstance player = (PlayerInstance) World.getInstance().findObject(_owner.getObjectId());
+		if ((player == null) || (player.get_instanceLoginTime() != _owner.get_instanceLoginTime()))
 		{
 			LOGGER.warning("Invalid owner of TradeList");
 			return false;
@@ -810,7 +810,6 @@ public class TradeList
 			StatusUpdate playerSU = new StatusUpdate(_owner.getObjectId());
 			playerSU.addAttribute(StatusUpdate.CUR_LOAD, _owner.getCurrentLoad());
 			_owner.sendPacket(playerSU);
-			playerSU = null;
 			
 			playerSU = new StatusUpdate(_partner.getObjectId());
 			playerSU.addAttribute(StatusUpdate.CUR_LOAD, _partner.getCurrentLoad());
@@ -1138,7 +1137,7 @@ public class TradeList
 					}
 					
 					final WorldObject obj = World.getInstance().findObject(item.getObjectId());
-					if ((obj == null) || (!(obj instanceof ItemInstance)))
+					if (!(obj instanceof ItemInstance))
 					{
 						final String msgErr = "[RequestPrivateStoreSell] player " + _owner.getName() + " tried to sell null item in a private store (buy), ban this player!";
 						Util.handleIllegalPlayerAction(_owner, msgErr, Config.DEFAULT_PUNISH);

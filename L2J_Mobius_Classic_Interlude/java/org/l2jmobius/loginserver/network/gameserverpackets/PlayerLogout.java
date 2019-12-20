@@ -26,7 +26,7 @@ import org.l2jmobius.loginserver.GameServerThread;
  */
 public class PlayerLogout extends BaseRecievePacket
 {
-	protected static Logger LOGGER = Logger.getLogger(PlayerLogout.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(PlayerLogout.class.getName());
 	
 	/**
 	 * @param decrypt

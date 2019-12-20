@@ -44,7 +44,6 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminDoorControl implements IAdminCommandHandler
 {
-	private static DoorTable _doorTable;
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_open",
@@ -56,7 +55,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
-		_doorTable = DoorTable.getInstance();
+		final DoorTable doorTable = DoorTable.getInstance();
 		
 		WorldObject target2 = null;
 		
@@ -66,9 +65,9 @@ public class AdminDoorControl implements IAdminCommandHandler
 			{
 				final int doorId = Integer.parseInt(command.substring(12));
 				
-				if (_doorTable.getDoor(doorId) != null)
+				if (doorTable.getDoor(doorId) != null)
 				{
-					_doorTable.getDoor(doorId).closeMe();
+					doorTable.getDoor(doorId).closeMe();
 				}
 				else
 				{
@@ -84,7 +83,6 @@ public class AdminDoorControl implements IAdminCommandHandler
 			catch (Exception e)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Wrong ID door.");
-				e.printStackTrace();
 				return false;
 			}
 		}
@@ -107,9 +105,9 @@ public class AdminDoorControl implements IAdminCommandHandler
 			{
 				final int doorId = Integer.parseInt(command.substring(11));
 				
-				if (_doorTable.getDoor(doorId) != null)
+				if (doorTable.getDoor(doorId) != null)
 				{
-					_doorTable.getDoor(doorId).openMe();
+					doorTable.getDoor(doorId).openMe();
 				}
 				else
 				{
@@ -125,7 +123,6 @@ public class AdminDoorControl implements IAdminCommandHandler
 			catch (Exception e)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Wrong ID door.");
-				e.printStackTrace();
 				return false;
 			}
 		}
@@ -148,7 +145,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 		{
 			try
 			{
-				for (DoorInstance door : _doorTable.getDoors())
+				for (DoorInstance door : doorTable.getDoors())
 				{
 					door.closeMe();
 				}
@@ -163,7 +160,6 @@ public class AdminDoorControl implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
 				return false;
 			}
 		}
@@ -173,7 +169,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 			// set limits on the PH door to do a cycle of opening doors.
 			try
 			{
-				for (DoorInstance door : _doorTable.getDoors())
+				for (DoorInstance door : doorTable.getDoors())
 				{
 					door.openMe();
 				}
@@ -188,7 +184,6 @@ public class AdminDoorControl implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
 				return false;
 			}
 		}

@@ -21,9 +21,11 @@ import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
@@ -42,15 +44,15 @@ public class GameEvent
 {
 	protected static final Logger LOGGER = Logger.getLogger(GameEvent.class.getName());
 	
+	public static final Map<Integer, LinkedList<String>> players = new ConcurrentHashMap<>();
+	public static final Map<String, EventData> connectionLossData = new ConcurrentHashMap<>();
+	public static final Map<Integer, String> names = new ConcurrentHashMap<>();
+	public static final List<String> participatingPlayers = new LinkedList<>();
+	public static final List<String> npcs = new LinkedList<>();
 	public static String eventName = "";
 	public static int teamsNumber = 0;
-	public static final HashMap<Integer, String> names = new HashMap<>();
-	public static final LinkedList<String> participatingPlayers = new LinkedList<>();
-	public static final HashMap<Integer, LinkedList<String>> players = new HashMap<>();
-	public static int id = 12760;
-	public static final LinkedList<String> npcs = new LinkedList<>();
 	public static boolean active = false;
-	public static final HashMap<String, EventData> connectionLossData = new HashMap<>();
+	public static int id = 12760;
 	
 	public static int getTeamOfPlayer(String name)
 	{
@@ -70,17 +72,17 @@ public class GameEvent
 		return 0;
 	}
 	
-	public static String[] getTopNKillers(int N)
+	public static String[] getTopNKillers(int n)
 	{
 		// this will return top N players sorted by kills, first element in the array will be the one with more kills
-		final String[] killers = new String[N];
+		final String[] killers = new String[n];
 		String playerTemp = "";
 		
 		int kills = 0;
 		
 		final LinkedList<String> killersTemp = new LinkedList<>();
 		
-		for (int k = 0; k < N; k++)
+		for (int k = 0; k < n; k++)
 		{
 			kills = 0;
 			
@@ -94,14 +96,10 @@ public class GameEvent
 					try
 					{
 						PlayerInstance player = World.getInstance().getPlayer(it.next());
-						
-						if (!killersTemp.contains(player.getName()))
+						if (!killersTemp.contains(player.getName()) && (player.kills.size() > kills))
 						{
-							if (player.kills.size() > kills)
-							{
-								kills = player.kills.size();
-								playerTemp = player.getName();
-							}
+							kills = player.kills.size();
+							playerTemp = player.getName();
 						}
 					}
 					catch (Exception e)
@@ -113,7 +111,7 @@ public class GameEvent
 			killersTemp.add(playerTemp);
 		}
 		
-		for (int i = 0; i < N; i++)
+		for (int i = 0; i < n; i++)
 		{
 			kills = 0;
 			Iterator<String> it = killersTemp.iterator();
@@ -191,7 +189,7 @@ public class GameEvent
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning(e1.toString());
 				}
 			}
 			
@@ -203,7 +201,7 @@ public class GameEvent
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning(e1.toString());
 				}
 			}
 			
@@ -215,7 +213,7 @@ public class GameEvent
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning(e1.toString());
 				}
 			}
 			
@@ -227,7 +225,7 @@ public class GameEvent
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning(e1.toString());
 				}
 			}
 			
@@ -239,7 +237,7 @@ public class GameEvent
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning(e1.toString());
 				}
 			}
 		}

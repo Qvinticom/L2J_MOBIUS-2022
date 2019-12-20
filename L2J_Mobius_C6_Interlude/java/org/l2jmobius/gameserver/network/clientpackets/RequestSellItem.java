@@ -94,8 +94,8 @@ public class RequestSellItem extends GameClientPacket
 		}
 		
 		final WorldObject target = player.getTarget();
-		if (!player.isGM() && ((target == null // No target (ie GM Shop)
-		) || !(target instanceof MerchantInstance) // Target not a merchant and not mercmanager
+		if (!player.isGM() && ((target == null) // No target (ie GM Shop)
+			|| !(target instanceof MerchantInstance) // Target not a merchant and not mercmanager
 			|| !player.isInsideRadius(target, NpcInstance.INTERACTION_DISTANCE, false, false)))
 		{
 			return; // Distance is too far
@@ -118,13 +118,10 @@ public class RequestSellItem extends GameClientPacket
 			return;
 		}
 		
-		if (_listId > 1000000) // lease
+		if ((_listId > 1000000) && (merchant.getTemplate().npcId != (_listId - 1000000)))
 		{
-			if (merchant.getTemplate().npcId != (_listId - 1000000))
-			{
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return;
 		}
 		
 		long totalPrice = 0;
@@ -175,14 +172,6 @@ public class RequestSellItem extends GameClientPacket
 			}
 			
 			item = player.getInventory().destroyItem("Sell", objectId, count, player, null);
-			
-			/*
-			 * TODO: Disabled until Leaseholders are rewritten ;-) int price = item.getReferencePrice()*(int)count/2; ItemInstance li = null; ItemInstance la = null; if (_listId > 1000000) { li = merchant.findLeaseItem(item.getItemId(),item.getEnchantLevel()); la = merchant.getLeaseAdena(); if
-			 * (li == null || la == null) continue; price = li.getPriceToBuy()*(int)count; // player sells, thus merchant buys. if (price > la.getCount()) continue; }
-			 */
-			/*
-			 * TODO: Disabled until Leaseholders are rewritten ;-) if (item != null && _listId > 1000000) { li.setCount(li.getCount()+(int)count); li.updateDatabase(); la.setCount(la.getCount()-price); la.updateDatabase(); }
-			 */
 		}
 		player.addAdena("Sell", (int) totalPrice, merchant, false);
 		
@@ -191,7 +180,7 @@ public class RequestSellItem extends GameClientPacket
 		if (html != null)
 		{
 			final NpcHtmlMessage soldMsg = new NpcHtmlMessage(merchant.getObjectId());
-			soldMsg.setHtml(html.replaceAll("%objectId%", String.valueOf(merchant.getObjectId())));
+			soldMsg.setHtml(html.replace("%objectId%", String.valueOf(merchant.getObjectId())));
 			player.sendPacket(soldMsg);
 		}
 		

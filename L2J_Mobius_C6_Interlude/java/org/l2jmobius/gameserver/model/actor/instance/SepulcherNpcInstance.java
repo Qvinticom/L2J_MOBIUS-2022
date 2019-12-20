@@ -324,7 +324,7 @@ public class SepulcherNpcInstance extends NpcInstance
 					case 31944:
 					{
 						FourSepulchersManager.getInstance().spawnShadow(getNpcId());
-						// break;
+						// break; fallthrou
 					}
 					default:
 					{
@@ -356,9 +356,7 @@ public class SepulcherNpcInstance extends NpcInstance
 	public void openNextDoor(int npcId)
 	{
 		final int doorId = FourSepulchersManager.getInstance().getHallGateKeepers().get(npcId).intValue();
-		final DoorTable _doorTable = DoorTable.getInstance();
-		_doorTable.getDoor(doorId).openMe();
-		
+		DoorTable.getInstance().getDoor(doorId).openMe();
 		if (_closeTask != null)
 		{
 			_closeTask.cancel(true);
@@ -383,7 +381,6 @@ public class SepulcherNpcInstance extends NpcInstance
 		}
 		
 		@Override
-		@SuppressWarnings("synthetic-access")
 		public void run()
 		{
 			try

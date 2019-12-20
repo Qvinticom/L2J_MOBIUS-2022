@@ -26,6 +26,7 @@ public class RequestShortCutReg extends GameClientPacket
 	private int _id;
 	private int _slot;
 	private int _page;
+	@SuppressWarnings("unused")
 	private int _unk;
 	
 	@Override
@@ -56,7 +57,7 @@ public class RequestShortCutReg extends GameClientPacket
 			case 0x04: // macro
 			case 0x05: // recipe
 			{
-				final ShortCut sc = new ShortCut(_slot, _page, _type, _id, -1, _unk);
+				final ShortCut sc = new ShortCut(_slot, _page, _type, _id, -1);
 				sendPacket(new ShortCutRegister(sc));
 				player.registerShortCut(sc);
 				break;
@@ -66,7 +67,7 @@ public class RequestShortCutReg extends GameClientPacket
 				final int level = player.getSkillLevel(_id);
 				if (level > 0)
 				{
-					final ShortCut sc = new ShortCut(_slot, _page, _type, _id, level, _unk);
+					final ShortCut sc = new ShortCut(_slot, _page, _type, _id, level);
 					sendPacket(new ShortCutRegister(sc));
 					player.registerShortCut(sc);
 				}

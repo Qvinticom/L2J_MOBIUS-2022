@@ -459,7 +459,7 @@ public class GameServerThread extends Thread
 		}
 		catch (IOException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 		
 		final KeyPair pair = GameServerTable.getInstance().getKeyPair();
@@ -497,7 +497,7 @@ public class GameServerThread extends Thread
 		}
 		catch (IOException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	

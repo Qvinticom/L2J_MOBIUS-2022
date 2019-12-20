@@ -103,7 +103,7 @@ public class ClanBBSManager extends BaseBBSManager
 	{
 		if (ar1.equalsIgnoreCase("intro"))
 		{
-			if (Integer.valueOf(ar2) != activeChar.getClanId())
+			if (Integer.parseInt(ar2) != activeChar.getClanId())
 			{
 				return;
 			}
@@ -115,7 +115,7 @@ public class ClanBBSManager extends BaseBBSManager
 			}
 			
 			clan.setIntroduction(ar3, true);
-			sendClanManagement(activeChar, Integer.valueOf(ar2));
+			sendClanManagement(activeChar, Integer.parseInt(ar2));
 		}
 		else if (ar1.equals("notice"))
 		{
@@ -124,7 +124,7 @@ public class ClanBBSManager extends BaseBBSManager
 		}
 		else if (ar1.equalsIgnoreCase("mail"))
 		{
-			if (Integer.valueOf(ar2) != activeChar.getClanId())
+			if (Integer.parseInt(ar2) != activeChar.getClanId())
 			{
 				return;
 			}
@@ -136,7 +136,7 @@ public class ClanBBSManager extends BaseBBSManager
 			}
 			
 			// Retrieve clans members, and store them under a String.
-			final StringBuffer membersList = new StringBuffer();
+			final StringBuilder membersList = new StringBuilder();
 			
 			for (ClanMember player : clan.getMembers())
 			{
@@ -181,8 +181,8 @@ public class ClanBBSManager extends BaseBBSManager
 		}
 		
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "clan/clanhome-mail.htm");
-		content = content.replaceAll("%clanid%", Integer.toString(clanId));
-		content = content.replaceAll("%clanName%", clan.getName());
+		content = content.replace("%clanid%", Integer.toString(clanId));
+		content = content.replace("%clanName%", clan.getName());
 		separateAndSend(content, activeChar);
 	}
 	
@@ -202,7 +202,7 @@ public class ClanBBSManager extends BaseBBSManager
 		}
 		
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "clan/clanhome-management.htm");
-		content = content.replaceAll("%clanid%", Integer.toString(clan.getClanId()));
+		content = content.replace("%clanid%", Integer.toString(clan.getClanId()));
 		send1001(content, activeChar);
 		send1002(activeChar, clan.getIntroduction(), "", "");
 	}
@@ -223,7 +223,7 @@ public class ClanBBSManager extends BaseBBSManager
 		}
 		
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "clan/clanhome-notice.htm");
-		content = content.replaceAll("%clanid%", Integer.toString(clan.getClanId()));
+		content = content.replace("%clanid%", Integer.toString(clan.getClanId()));
 		content = content.replace("%enabled%", "[" + String.valueOf(clan.isNoticeEnabled()) + "]");
 		content = content.replace("%flag%", String.valueOf(!clan.isNoticeEnabled()));
 		send1001(content, activeChar);
@@ -278,7 +278,6 @@ public class ClanBBSManager extends BaseBBSManager
 			StringUtil.append(sb, "<td><button action=\"_bbsclan;clan;", index - 1, "\" back=\"l2ui_ch3.prev1_down\" fore=\"l2ui_ch3.prev1\" width=16 height=16 ></td>");
 		}
 		
-		i = 0;
 		int nbp = ClanTable.getInstance().getClans().length / 8;
 		if ((nbp * 8) != ClanTable.getInstance().getClans().length)
 		{
@@ -327,7 +326,7 @@ public class ClanBBSManager extends BaseBBSManager
 			return;
 		}
 		
-		// Load different HTM following player case, 3 possibilites : randomer, member, clan leader.
+		// Load different HTM following player case, 3 possibilities : randomer, member, clan leader.
 		String content;
 		if (activeChar.getClanId() != clanId)
 		{
@@ -342,12 +341,12 @@ public class ClanBBSManager extends BaseBBSManager
 			content = HtmCache.getInstance().getHtm(CB_PATH + "clan/clanhome-member.htm");
 		}
 		
-		content = content.replaceAll("%clanid%", Integer.toString(clan.getClanId()));
+		content = content.replace("%clanid%", Integer.toString(clan.getClanId()));
 		content = content.replace("%clanIntro%", clan.getIntroduction());
 		content = content.replace("%clanName%", clan.getName());
 		content = content.replace("%clanLvL%", Integer.toString(clan.getLevel()));
 		content = content.replace("%clanMembers%", Integer.toString(clan.getMembersCount()));
-		content = content.replaceAll("%clanLeader%", clan.getLeaderName());
+		content = content.replace("%clanLeader%", clan.getLeaderName());
 		content = content.replace("%allyName%", (clan.getAllyId() > 0) ? clan.getAllyName() : "");
 		separateAndSend(content, activeChar);
 	}

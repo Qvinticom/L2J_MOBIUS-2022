@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.util;
 
-import java.util.Collection;
-
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -60,9 +58,7 @@ public class Broadcast
 	 */
 	public static void toKnownPlayers(Creature creature, GameServerPacket mov)
 	{
-		final Collection<PlayerInstance> knownlist_players = creature.getKnownList().getKnownPlayers().values();
-		
-		for (PlayerInstance player : knownlist_players)
+		for (PlayerInstance player : creature.getKnownList().getKnownPlayers().values())
 		{
 			if (player == null)
 			{

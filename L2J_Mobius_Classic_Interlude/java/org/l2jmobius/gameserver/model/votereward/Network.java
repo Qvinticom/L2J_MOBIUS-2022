@@ -58,7 +58,7 @@ public class Network extends VoteSystem
 			{
 				if (line.contains("<div class=\"tls-in-sts\"><b style"))
 				{
-					int votes = Integer.valueOf(line.split(">")[2].replace("</b", ""));
+					int votes = Integer.parseInt(line.split(">")[2].replace("</b", ""));
 					return votes;
 				}
 			}

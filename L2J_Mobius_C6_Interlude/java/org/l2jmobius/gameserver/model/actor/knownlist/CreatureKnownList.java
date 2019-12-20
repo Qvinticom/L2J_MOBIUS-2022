@@ -136,7 +136,7 @@ public class CreatureKnownList extends WorldObjectKnownList
 		
 		for (WorldObject obj : getKnownObjects().values())
 		{
-			if ((obj != null) && (obj instanceof Creature))
+			if (obj instanceof Creature)
 			{
 				result.add((Creature) obj);
 			}

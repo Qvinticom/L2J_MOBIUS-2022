@@ -56,7 +56,6 @@ public class AdminTownWar implements IAdminCommandHandler
 		return true;
 	}
 	
-	@SuppressWarnings("deprecation")
 	private void startTW(PlayerInstance activeChar)
 	{
 		// All Towns will become War Zones
@@ -93,7 +92,7 @@ public class AdminTownWar implements IAdminCommandHandler
 			int x;
 			int y;
 			int z;
-			TownZone Town;
+			TownZone town;
 			
 			for (PlayerInstance onlinePlayer : pls)
 			{
@@ -103,10 +102,10 @@ public class AdminTownWar implements IAdminCommandHandler
 					y = onlinePlayer.getY();
 					z = onlinePlayer.getZ();
 					
-					Town = TownManager.getInstance().getTown(x, y, z);
-					if (Town != null)
+					town = TownManager.getInstance().getTown(x, y, z);
+					if (town != null)
 					{
-						if ((Town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
+						if ((town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
 						{
 							onlinePlayer.setInsideZone(ZoneId.PVP, false);
 							onlinePlayer.revalidateZone(true);
@@ -137,7 +136,6 @@ public class AdminTownWar implements IAdminCommandHandler
 		}
 	}
 	
-	@SuppressWarnings("deprecation")
 	private void endTW(PlayerInstance activeChar)
 	{
 		// All Towns will become Peace Zones
@@ -171,23 +169,23 @@ public class AdminTownWar implements IAdminCommandHandler
 		
 		final Collection<PlayerInstance> pls = World.getInstance().getAllPlayers();
 		{
-			int xx;
-			int yy;
-			int zz;
-			TownZone Town;
+			int x;
+			int y;
+			int z;
+			TownZone town;
 			
 			for (PlayerInstance onlinePlayer : pls)
 			{
 				if (onlinePlayer.isOnline() == 1)
 				{
-					xx = onlinePlayer.getX();
-					yy = onlinePlayer.getY();
-					zz = onlinePlayer.getZ();
+					x = onlinePlayer.getX();
+					y = onlinePlayer.getY();
+					z = onlinePlayer.getZ();
 					
-					Town = TownManager.getInstance().getTown(xx, yy, zz);
-					if (Town != null)
+					town = TownManager.getInstance().getTown(x, y, z);
+					if (town != null)
 					{
-						if ((Town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
+						if ((town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
 						{
 							onlinePlayer.setInsideZone(ZoneId.PVP, true);
 							onlinePlayer.revalidateZone(true);

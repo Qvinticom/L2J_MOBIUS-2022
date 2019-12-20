@@ -60,13 +60,13 @@ public class Q504_CompetitionForTheBanditStronghold extends Quest
 			return htmltext;
 		}
 		
-		if (event == "a2.htm")
+		if (event.equals("a2.htm"))
 		{
 			qs.set("cond", "1");
 			qs.setState(State.STARTED);
 			qs.playSound("ItemSound.quest_accept");
 		}
-		if (event == "a4.htm")
+		if (event.equals("a4.htm"))
 		{
 			if (qs.getQuestItemsCount(TARLK_AMULET) == 30)
 			{
@@ -105,7 +105,7 @@ public class Q504_CompetitionForTheBanditStronghold extends Quest
 		{
 			return "a6.htm";
 		}
-		if (clan.getLeaderName() != player.getName())
+		if (!clan.getLeaderName().equals(player.getName()))
 		{
 			return "a6.htm";
 		}

@@ -91,7 +91,7 @@ public class Q645_GhostsOfBatur extends Quest
 			htmltext = "32017-07.htm";
 			st.takeItems(CURSED_GRAVE_GOODS, -1);
 			
-			final int reward[] = REWARDS[Integer.parseInt(event)];
+			final int[] reward = REWARDS[Integer.parseInt(event)];
 			st.giveItems(reward[0], reward[1]);
 			
 			st.playSound(QuestState.SOUND_FINISH);

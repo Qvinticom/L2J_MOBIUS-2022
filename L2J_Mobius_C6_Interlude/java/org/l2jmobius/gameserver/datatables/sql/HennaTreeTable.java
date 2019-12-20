@@ -20,7 +20,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -33,14 +33,14 @@ import org.l2jmobius.gameserver.model.items.Henna;
 
 public class HennaTreeTable
 {
-	private static Logger LOGGER = Logger.getLogger(HennaTreeTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(HennaTreeTable.class.getName());
 	
 	private final Map<ClassId, List<HennaInstance>> _hennaTrees;
 	private final boolean _initialized = true;
 	
 	private HennaTreeTable()
 	{
-		_hennaTrees = new HashMap<>();
+		_hennaTrees = new EnumMap<>(ClassId.class);
 		int classId = 0;
 		int count = 0;
 		
@@ -50,7 +50,7 @@ public class HennaTreeTable
 			final ResultSet classlist = statement.executeQuery();
 			List<HennaInstance> list;
 			
-			classlist: while (classlist.next())
+			CLASSLIST: while (classlist.next())
 			{
 				list = new ArrayList<>();
 				classId = classlist.getInt("id");
@@ -70,7 +70,7 @@ public class HennaTreeTable
 						statement2.close();
 						classlist.close();
 						statement.close();
-						continue classlist;
+						continue CLASSLIST;
 					}
 					
 					final HennaInstance temp = new HennaInstance(template);

@@ -66,7 +66,7 @@ public class AdminAio implements IAdminCommandHandler
 		{
 			case admin_setaio:
 			{
-				boolean no_token = false;
+				boolean noToken = false;
 				if (st.hasMoreTokens())
 				{ // char_name not specified
 					final String char_name = st.nextToken();
@@ -101,28 +101,29 @@ public class AdminAio implements IAdminCommandHandler
 						}
 						else
 						{
-							no_token = true;
+							noToken = true;
 						}
 					}
 					else
 					{
 						BuilderUtil.sendSysMessage(activeChar, "Player must be online to set AIO status");
-						no_token = true;
+						noToken = true;
 					}
 				}
 				else
 				{
-					no_token = true;
+					noToken = true;
 				}
-				if (no_token)
+				if (noToken)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Usage: //setaio <char_name> [time](in days)");
 					return false;
 				}
+				break;
 			}
 			case admin_removeaio:
 			{
-				boolean no_token = false;
+				boolean noToken = false;
 				if (st.hasMoreTokens())
 				{ // char_name
 					final String char_name = st.nextToken();
@@ -138,14 +139,14 @@ public class AdminAio implements IAdminCommandHandler
 					else
 					{
 						BuilderUtil.sendSysMessage(activeChar, "Player must be online to remove AIO status");
-						no_token = true;
+						noToken = true;
 					}
 				}
 				else
 				{
-					no_token = true;
+					noToken = true;
 				}
-				if (no_token)
+				if (noToken)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Usage: //removeaio <char_name>");
 					return false;
@@ -156,46 +157,46 @@ public class AdminAio implements IAdminCommandHandler
 		return true;
 	}
 	
-	public void doAio(PlayerInstance activeChar, PlayerInstance _player, String _playername, String _time)
+	public void doAio(PlayerInstance activeChar, PlayerInstance player, String playerName, String time)
 	{
-		final int days = Integer.parseInt(_time);
-		if (_player == null)
+		final int days = Integer.parseInt(time);
+		if (player == null)
 		{
-			BuilderUtil.sendSysMessage(activeChar, "not found char" + _playername);
+			BuilderUtil.sendSysMessage(activeChar, "not found char" + playerName);
 			return;
 		}
 		
 		if (days > 0)
 		{
-			_player.setAio(true);
-			_player.setEndTime("aio", days);
-			_player.getStat().addExp(_player.getStat().getExpForLevel(81));
+			player.setAio(true);
+			player.setEndTime("aio", days);
+			player.getStat().addExp(player.getStat().getExpForLevel(81));
 			
 			try (Connection con = DatabaseFactory.getConnection())
 			{
 				final PreparedStatement statement = con.prepareStatement("UPDATE characters SET aio=1, aio_end=? WHERE obj_id=?");
-				statement.setLong(1, _player.getAioEndTime());
-				statement.setInt(2, _player.getObjectId());
+				statement.setLong(1, player.getAioEndTime());
+				statement.setInt(2, player.getObjectId());
 				statement.execute();
 				statement.close();
 				
 				if (Config.ALLOW_AIO_NCOLOR && activeChar.isAio())
 				{
-					_player.getAppearance().setNameColor(Config.AIO_NCOLOR);
+					player.getAppearance().setNameColor(Config.AIO_NCOLOR);
 				}
 				
 				if (Config.ALLOW_AIO_TCOLOR && activeChar.isAio())
 				{
-					_player.getAppearance().setTitleColor(Config.AIO_TCOLOR);
+					player.getAppearance().setTitleColor(Config.AIO_TCOLOR);
 				}
 				
-				_player.rewardAioSkills();
-				_player.broadcastUserInfo();
-				_player.sendPacket(new EtcStatusUpdate(_player));
-				_player.sendSkillList();
-				AdminData.broadcastMessageToGMs("GM " + activeChar.getName() + " set Aio stat for player " + _playername + " for " + _time + " day(s)");
-				_player.sendMessage("You are now an Aio, Congratulations!");
-				_player.broadcastUserInfo();
+				player.rewardAioSkills();
+				player.broadcastUserInfo();
+				player.sendPacket(new EtcStatusUpdate(player));
+				player.sendSkillList();
+				AdminData.broadcastMessageToGMs("GM " + activeChar.getName() + " set Aio stat for player " + playerName + " for " + time + " day(s)");
+				player.sendMessage("You are now an Aio, Congratulations!");
+				player.broadcastUserInfo();
 			}
 			catch (Exception e)
 			{
@@ -204,31 +205,31 @@ public class AdminAio implements IAdminCommandHandler
 		}
 		else
 		{
-			removeAio(activeChar, _player, _playername);
+			removeAio(activeChar, player, playerName);
 		}
 	}
 	
-	public void removeAio(PlayerInstance activeChar, PlayerInstance _player, String _playername)
+	public void removeAio(PlayerInstance activeChar, PlayerInstance player, String playerName)
 	{
-		_player.setAio(false);
-		_player.setAioEndTime(0);
+		player.setAio(false);
+		player.setAioEndTime(0);
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET Aio=0, Aio_end=0 WHERE obj_id=?");
-			statement.setInt(1, _player.getObjectId());
+			statement.setInt(1, player.getObjectId());
 			statement.execute();
 			statement.close();
 			
-			_player.lostAioSkills();
-			_player.getAppearance().setNameColor(0xFFFFFF);
-			_player.getAppearance().setTitleColor(0xFFFFFF);
-			_player.broadcastUserInfo();
-			_player.sendPacket(new EtcStatusUpdate(_player));
-			_player.sendSkillList();
-			AdminData.broadcastMessageToGMs("GM " + activeChar.getName() + " remove Aio stat of player " + _playername);
-			_player.sendMessage("Now You are not an Aio..");
-			_player.broadcastUserInfo();
+			player.lostAioSkills();
+			player.getAppearance().setNameColor(0xFFFFFF);
+			player.getAppearance().setTitleColor(0xFFFFFF);
+			player.broadcastUserInfo();
+			player.sendPacket(new EtcStatusUpdate(player));
+			player.sendSkillList();
+			AdminData.broadcastMessageToGMs("GM " + activeChar.getName() + " remove Aio stat of player " + playerName);
+			player.sendMessage("Now You are not an Aio..");
+			player.broadcastUserInfo();
 		}
 		catch (Exception e)
 		{

@@ -30,19 +30,19 @@ public class FishData
 	private final int _waitTime;
 	private final int _combatTime;
 	
-	public FishData(int id, int lvl, String name, int HP, int HpRegen, int type, int group, int fish_guts, int guts_check_time, int wait_time, int combat_time)
+	public FishData(int id, int lvl, String name, int hp, int hpRegen, int type, int group, int fishGuts, int gutsCheckTime, int waitTime, int combatTime)
 	{
 		_id = id;
 		_level = lvl;
 		_name = name.intern();
-		_hp = HP;
-		_hpRegen = HpRegen;
+		_hp = hp;
+		_hpRegen = hpRegen;
 		_type = type;
 		_group = group;
-		_fishGuts = fish_guts;
-		_gutsCheckTime = guts_check_time;
-		_waitTime = wait_time;
-		_combatTime = combat_time;
+		_fishGuts = fishGuts;
+		_gutsCheckTime = gutsCheckTime;
+		_waitTime = waitTime;
+		_combatTime = combatTime;
 	}
 	
 	public FishData(FishData copyOf)
@@ -60,25 +60,16 @@ public class FishData
 		_combatTime = copyOf.getCombatTime();
 	}
 	
-	/**
-	 * @return Returns the id.
-	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
-	/**
-	 * @return Returns the level.
-	 */
 	public int getLevel()
 	{
 		return _level;
 	}
 	
-	/**
-	 * @return Returns the name.
-	 */
 	public String getName()
 	{
 		return _name;

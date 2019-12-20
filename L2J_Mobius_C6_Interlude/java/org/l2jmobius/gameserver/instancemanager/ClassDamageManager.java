@@ -20,9 +20,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Hashtable;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
-import java.util.Set;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -36,13 +36,13 @@ public class ClassDamageManager
 {
 	private static final Logger LOGGER = Logger.getLogger(ClassDamageManager.class.getName());
 	
-	private static Hashtable<Integer, Double> damage_to_mage = new Hashtable<>();
-	private static Hashtable<Integer, Double> damage_to_fighter = new Hashtable<>();
-	private static Hashtable<Integer, Double> damage_by_mage = new Hashtable<>();
-	private static Hashtable<Integer, Double> damage_by_fighter = new Hashtable<>();
+	private static final Map<Integer, Double> DAMAGE_TO_MAGE = new HashMap<>();
+	private static final Map<Integer, Double> DAMAGE_TO_FIGHTER = new HashMap<>();
+	private static final Map<Integer, Double> DAMAGE_BY_MAGE = new HashMap<>();
+	private static final Map<Integer, Double> DAMAGE_BY_FIGHTER = new HashMap<>();
 	
-	private static Hashtable<Integer, String> id_to_name = new Hashtable<>();
-	private static Hashtable<String, Integer> name_to_id = new Hashtable<>();
+	private static final Map<Integer, String> ID_TO_NAME = new HashMap<>();
+	private static final Map<String, Integer> NAME_TO_ID = new HashMap<>();
 	
 	public static void loadConfig()
 	{
@@ -56,51 +56,48 @@ public class ClassDamageManager
 			is = new FileInputStream(file);
 			scriptSetting.load(is);
 			
-			final Set<Object> key_set = scriptSetting.keySet();
-			
-			for (Object key : key_set)
+			for (Object key : scriptSetting.keySet())
 			{
-				final String key_string = (String) key;
+				final String keyString = (String) key;
+				final String[] classAndType = keyString.split("__");
 				
-				final String[] class_and_type = key_string.split("__");
+				String className = classAndType[0].replace("_", " ");
 				
-				String class_name = class_and_type[0].replace("_", " ");
-				
-				if (class_name.equals("Eva s Saint"))
+				if (className.equals("Eva s Saint"))
 				{
-					class_name = "Eva's Saint";
+					className = "Eva's Saint";
 				}
 				
-				final String type = class_and_type[1];
+				final String type = classAndType[1];
 				
-				final Integer class_id = CharTemplateTable.getClassIdByName(class_name) - 1;
+				final Integer classId = CharTemplateTable.getClassIdByName(className) - 1;
 				
-				id_to_name.put(class_id, class_name);
-				name_to_id.put(class_name, class_id);
+				ID_TO_NAME.put(classId, className);
+				NAME_TO_ID.put(className, classId);
 				
 				if (type.equals("ToFighter"))
 				{
-					damage_to_fighter.put(class_id, Double.parseDouble(scriptSetting.getProperty(key_string)));
+					DAMAGE_TO_FIGHTER.put(classId, Double.parseDouble(scriptSetting.getProperty(keyString)));
 				}
 				else if (type.equals("ToMage"))
 				{
-					damage_to_mage.put(class_id, Double.parseDouble(scriptSetting.getProperty(key_string)));
+					DAMAGE_TO_MAGE.put(classId, Double.parseDouble(scriptSetting.getProperty(keyString)));
 				}
 				else if (type.equals("ByFighter"))
 				{
-					damage_by_fighter.put(class_id, Double.parseDouble(scriptSetting.getProperty(key_string)));
+					DAMAGE_BY_FIGHTER.put(classId, Double.parseDouble(scriptSetting.getProperty(keyString)));
 				}
 				else if (type.equals("ByMage"))
 				{
-					damage_by_mage.put(class_id, Double.parseDouble(scriptSetting.getProperty(key_string)));
+					DAMAGE_BY_MAGE.put(classId, Double.parseDouble(scriptSetting.getProperty(keyString)));
 				}
 			}
 			
-			LOGGER.info("Loaded " + id_to_name.size() + " classes Damages configurations");
+			LOGGER.info("Loaded " + ID_TO_NAME.size() + " classes Damages configurations");
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning("Problem with ClassDamageManager: " + e.getMessage());
 		}
 		finally
 		{
@@ -112,7 +109,7 @@ public class ClassDamageManager
 				}
 				catch (IOException e)
 				{
-					e.printStackTrace();
+					LOGGER.warning("Problem with ClassDamageManager: " + e.getMessage());
 				}
 			}
 		}
@@ -120,7 +117,7 @@ public class ClassDamageManager
 	
 	public static double getClassDamageToMage(int id)
 	{
-		final Double multiplier = damage_to_mage.get(id);
+		final Double multiplier = DAMAGE_TO_MAGE.get(id);
 		
 		if (multiplier != null)
 		{
@@ -131,7 +128,7 @@ public class ClassDamageManager
 	
 	public static double getClassDamageToFighter(int id)
 	{
-		final Double multiplier = damage_to_fighter.get(id);
+		final Double multiplier = DAMAGE_TO_FIGHTER.get(id);
 		if (multiplier != null)
 		{
 			return multiplier;
@@ -141,7 +138,7 @@ public class ClassDamageManager
 	
 	public static double getClassDamageByMage(int id)
 	{
-		final Double multiplier = damage_by_mage.get(id);
+		final Double multiplier = DAMAGE_BY_MAGE.get(id);
 		if (multiplier != null)
 		{
 			return multiplier;
@@ -151,7 +148,7 @@ public class ClassDamageManager
 	
 	public static double getClassDamageByFighter(int id)
 	{
-		final Double multiplier = damage_by_fighter.get(id);
+		final Double multiplier = DAMAGE_BY_FIGHTER.get(id);
 		if (multiplier != null)
 		{
 			return multiplier;
@@ -161,7 +158,7 @@ public class ClassDamageManager
 	
 	public static int getIdByName(String name)
 	{
-		final Integer id = name_to_id.get(name);
+		final Integer id = NAME_TO_ID.get(name);
 		if (id != null)
 		{
 			return id;
@@ -171,7 +168,7 @@ public class ClassDamageManager
 	
 	public static String getNameById(int id)
 	{
-		final String name = id_to_name.get(id);
+		final String name = ID_TO_NAME.get(id);
 		if (name != null)
 		{
 			return name;

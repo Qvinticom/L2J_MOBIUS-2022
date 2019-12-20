@@ -69,7 +69,6 @@ public class WyvernManagerInstance extends CastleChamberlainInstance
 					sm.addString("Summon your Strider first.");
 					player.sendPacket(sm);
 				}
-				return;
 			}
 			else if ((player.getPet().getNpcId() == 12526) || (player.getPet().getNpcId() == 12527) || (player.getPet().getNpcId() == 12528))
 			{
@@ -105,7 +104,6 @@ public class WyvernManagerInstance extends CastleChamberlainInstance
 					sm.addString("You need 10 Crystals: B Grade.");
 					player.sendPacket(sm);
 				}
-				return;
 			}
 			else
 			{
@@ -217,20 +215,17 @@ public class WyvernManagerInstance extends CastleChamberlainInstance
 				return COND_CLAN_OWNER; // Owner of the clanhall
 			}
 		}
-		else if ((super.getCastle() != null) && (super.getCastle().getCastleId() > 0))
+		else if ((super.getCastle() != null) && (super.getCastle().getCastleId() > 0) && (player.getClan() != null))
 		{
-			if (player.getClan() != null)
+			// Checks if player is in Sieage Zone, he can't use wyvern!!
+			if (super.isInsideZone(ZoneId.SIEGE) || super.getCastle().getSiege().getIsInProgress())
 			{
-				// Checks if player is in Sieage Zone, he can't use wyvern!!
-				if (super.isInsideZone(ZoneId.SIEGE) || super.getCastle().getSiege().getIsInProgress())
-				{
-					return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
-				}
-				else if ((super.getCastle().getOwnerId() == player.getClanId() // Clan owns castle
-				) && player.isClanLeader())
-				{
-					return COND_OWNER; // Owner
-				}
+				return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
+			}
+			else if ((super.getCastle().getOwnerId() == player.getClanId()) // Clan owns castle
+				&& player.isClanLeader())
+			{
+				return COND_OWNER; // Owner
 			}
 		}
 		

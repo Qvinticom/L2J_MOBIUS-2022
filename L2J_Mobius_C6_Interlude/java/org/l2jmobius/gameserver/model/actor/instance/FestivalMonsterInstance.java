@@ -66,12 +66,7 @@ public class FestivalMonsterInstance extends MonsterInstance
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
-		if (attacker instanceof FestivalMonsterInstance)
-		{
-			return false;
-		}
-		
-		return true;
+		return !(attacker instanceof FestivalMonsterInstance);
 	}
 	
 	/**

@@ -73,7 +73,7 @@ public class AutoAnnouncementHandler
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.info("Problem with AutoAnnouncementHandler: " + e.getMessage());
 		}
 	}
 	
@@ -201,6 +201,7 @@ public class AutoAnnouncementHandler
 		}
 		catch (Exception e)
 		{
+			LOGGER.info("Problem with AutoAnnouncementHandler: " + e.getMessage());
 		}
 		return nextId;
 	}

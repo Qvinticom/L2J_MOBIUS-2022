@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.gameserverpackets;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @author -Wooden-
@@ -69,7 +70,7 @@ public abstract class GameServerBasePacket
 		{
 			if (text != null)
 			{
-				_bao.write(text.getBytes("UTF-16LE"));
+				_bao.write(text.getBytes(StandardCharsets.UTF_16LE));
 			}
 		}
 		catch (Exception e)
@@ -89,7 +90,6 @@ public abstract class GameServerBasePacket
 		}
 		catch (IOException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

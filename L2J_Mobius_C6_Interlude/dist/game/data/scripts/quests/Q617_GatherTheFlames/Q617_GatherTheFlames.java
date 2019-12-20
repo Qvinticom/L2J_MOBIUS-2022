@@ -70,7 +70,7 @@ public class Q617_GatherTheFlames extends Quest
 	}
 	
 	// Rewards
-	private static final int REWARD[] =
+	private static final int[] REWARD =
 	{
 		6881,
 		6883,
@@ -135,7 +135,7 @@ public class Q617_GatherTheFlames extends Quest
 			{
 				htmltext = "32049-03.htm";
 				st.takeItems(TORCH, 1200);
-				st.giveItems(Integer.valueOf(event), 1);
+				st.giveItems(Integer.parseInt(event), 1);
 			}
 			else
 			{

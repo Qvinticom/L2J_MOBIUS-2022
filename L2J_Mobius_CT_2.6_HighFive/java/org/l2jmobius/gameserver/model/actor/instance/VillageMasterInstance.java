@@ -67,7 +67,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class VillageMasterInstance extends NpcInstance
 {
-	private static Logger LOGGER = Logger.getLogger(VillageMasterInstance.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(VillageMasterInstance.class.getName());
 	
 	private static final Set<ClassId> mainSubclassSet;
 	private static final Set<ClassId> neverSubclassed = EnumSet.of(ClassId.OVERLORD, ClassId.WARSMITH);

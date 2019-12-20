@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.model.holders.FakePlayerHolder;
  */
 public class FakePlayerData implements IXmlReader
 {
-	private static Logger LOGGER = Logger.getLogger(FakePlayerData.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FakePlayerData.class.getName());
 	
 	private final Map<Integer, FakePlayerHolder> _fakePlayerInfos = new HashMap<>();
 	private final Map<String, String> _fakePlayerNames = new HashMap<>();

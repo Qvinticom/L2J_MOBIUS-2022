@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
  */
 public class FortUpdater implements Runnable
 {
-	private static Logger LOGGER = Logger.getLogger(FortUpdater.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FortUpdater.class.getName());
 	private final Clan _clan;
 	private final Fort _fort;
 	private int _runCount;

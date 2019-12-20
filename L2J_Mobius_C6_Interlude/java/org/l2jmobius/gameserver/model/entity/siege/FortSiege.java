@@ -370,12 +370,10 @@ public class FortSiege
 			}
 			
 			// owner as defender
-			SiegeClan sc_newowner = getAttackerClan(getFort().getOwnerId());
-			removeAttacker(sc_newowner);
-			addDefender(sc_newowner, SiegeClanType.OWNER);
+			SiegeClan scNewOwner = getAttackerClan(getFort().getOwnerId());
+			removeAttacker(scNewOwner);
+			addDefender(scNewOwner, SiegeClanType.OWNER);
 			endSiege();
-			
-			return;
 		}
 	}
 	
@@ -388,10 +386,9 @@ public class FortSiege
 	{
 		if (!_isInProgress)
 		{
-			if (getAttackerClans().size() <= 0)
+			if (getAttackerClans().isEmpty())
 			{
 				SystemMessage sm;
-				
 				if (getFort().getOwnerId() <= 0)
 				{
 					sm = new SystemMessage(SystemMessageId.SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST);
@@ -403,7 +400,6 @@ public class FortSiege
 				
 				sm.addString(getFort().getName());
 				Announcements.getInstance().announceToAll(sm);
-				
 				return;
 			}
 			
@@ -621,8 +617,7 @@ public class FortSiege
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Exception: clearSiegeClan(): " + e.getMessage());
-			e.printStackTrace();
+			LOGGER.warning("Exception: clearSiegeClan(): " + e);
 		}
 	}
 	
@@ -649,8 +644,7 @@ public class FortSiege
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Exception: clearSiegeWaitingClan(): " + e.getMessage());
-			e.printStackTrace();
+			LOGGER.warning("Exception: clearSiegeWaitingClan(): " + e);
 		}
 	}
 	
@@ -791,8 +785,7 @@ public class FortSiege
 		if (_commanders != null)
 		{
 			_commanders.remove(ct);
-			
-			if (_commanders.size() == 0)
+			if (_commanders.isEmpty())
 			{
 				spawnFlag(getFort().getFortId());
 			}
@@ -858,13 +851,10 @@ public class FortSiege
 			allyId = ClanTable.getInstance().getClan(getFort().getOwnerId()).getAllyId();
 		}
 		
-		if (allyId != 0)
+		if ((allyId != 0) && (player.getClan().getAllyId() == allyId) && !force)
 		{
-			if ((player.getClan().getAllyId() == allyId) && !force)
-			{
-				player.sendMessage("You cannot register as an attacker because your alliance owns the fort");
-				return;
-			}
+			player.sendMessage("You cannot register as an attacker because your alliance owns the fort");
+			return;
 		}
 		
 		if ((player.getInventory().getItemByItemId(57) != null) && (player.getInventory().getItemByItemId(57).getCount() < 250000))
@@ -951,7 +941,7 @@ public class FortSiege
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -1221,8 +1211,7 @@ public class FortSiege
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Exception: loadSiegeClan(): " + e.getMessage());
-			e.printStackTrace();
+			LOGGER.warning("Exception: loadSiegeClan(): " + e);
 		}
 	}
 	
@@ -1284,8 +1273,7 @@ public class FortSiege
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Exception: saveSiegeDate(): " + e.getMessage());
-			e.printStackTrace();
+			LOGGER.warning("Exception: saveSiegeDate(): " + e);
 		}
 	}
 	
@@ -1355,16 +1343,15 @@ public class FortSiege
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Exception: saveSiegeClan(Pledge clan, int typeId, boolean isUpdateRegistration): " + e.getMessage());
-			e.printStackTrace();
+			LOGGER.warning("Exception: saveSiegeClan(Pledge clan, int typeId, boolean isUpdateRegistration): " + e);
 		}
 	}
 	
 	/**
 	 * Spawn artifact.
-	 * @param Id the id
+	 * @param id the id
 	 */
-	private void spawnCommander(int Id)
+	private void spawnCommander(int id)
 	{
 		// Set commanders array size if one does not exist
 		if (_commanders == null)
@@ -1372,7 +1359,7 @@ public class FortSiege
 			_commanders = new ArrayList<>();
 		}
 		
-		for (SiegeSpawn _sp : FortSiegeManager.getInstance().getCommanderSpawnList(Id))
+		for (SiegeSpawn _sp : FortSiegeManager.getInstance().getCommanderSpawnList(id))
 		{
 			CommanderInstance commander;
 			
@@ -1387,16 +1374,16 @@ public class FortSiege
 	
 	/**
 	 * Spawn flag.
-	 * @param Id the id
+	 * @param id the id
 	 */
-	private void spawnFlag(int Id)
+	private void spawnFlag(int id)
 	{
 		if (_combatflag == null)
 		{
 			_combatflag = new ArrayList<>();
 		}
 		
-		for (SiegeSpawn _sp : FortSiegeManager.getInstance().getFlagList(Id))
+		for (SiegeSpawn _sp : FortSiegeManager.getInstance().getFlagList(id))
 		{
 			ArtefactInstance combatflag;
 			

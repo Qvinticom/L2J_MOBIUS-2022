@@ -126,13 +126,13 @@ public class Q620_FourGoblets extends Quest
 				htmltext = "31453-14.htm";
 			}
 		}
-		else if (event.equals("31453-13.htm"))
-		{
-			if (st.getInt("cond") == 2)
-			{
-				htmltext = "31453-19.htm";
-			}
-		}
+		// else if (event.equals("31453-13.htm"))
+		// {
+		// if (st.getInt("cond") == 2)
+		// {
+		// htmltext = "31453-19.htm";
+		// }
+		// }
 		else if (event.equals("31453-18.htm"))
 		{
 			st.playSound(QuestState.SOUND_GIVEUP);

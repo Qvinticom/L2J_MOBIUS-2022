@@ -98,11 +98,11 @@ public class AdminPolymorph implements IAdminCommandHandler
 			// animation
 			if (obj instanceof Creature)
 			{
-				Creature Char = (Creature) obj;
-				MagicSkillUse msk = new MagicSkillUse(Char, 1008, 1, 4000, 0);
-				Char.broadcastPacket(msk);
+				Creature creature = (Creature) obj;
+				MagicSkillUse msk = new MagicSkillUse(creature, 1008, 1, 4000, 0);
+				creature.broadcastPacket(msk);
 				SetupGauge sg = new SetupGauge(0, 4000);
-				Char.sendPacket(sg);
+				creature.sendPacket(sg);
 			}
 			
 			// end of animation

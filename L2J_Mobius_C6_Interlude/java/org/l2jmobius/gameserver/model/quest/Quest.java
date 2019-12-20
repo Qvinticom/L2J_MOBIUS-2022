@@ -157,7 +157,7 @@ public class Quest extends ManagedScript
 		// That is, if a script is in DATAPACK_PATH/scripts/quests/abc the result will be quests.abc
 		// Similarly, for a script in DATAPACK_PATH/scripts/ai/individual/myClass.py the result will be ai.individual.myClass
 		// All quests are to be indexed, processed, and reloaded by this form of pathname.
-		StringBuffer temp = new StringBuffer(getClass().getCanonicalName());
+		StringBuilder temp = new StringBuilder(getClass().getCanonicalName());
 		temp.delete(0, temp.indexOf(".scripts.") + 9);
 		temp.delete(temp.indexOf(getClass().getSimpleName()), temp.length());
 		_prefixPath = temp.toString();
@@ -171,13 +171,13 @@ public class Quest extends ManagedScript
 			_allEventsS.put(getName(), this);
 		}
 		
-		init_LoadGlobalData();
+		initGlobalData();
 	}
 	
 	/**
 	 * The function init_LoadGlobalData is, by default, called by the constructor of all quests. Children of this class can implement this function in order to define what variables to load and what structures to save them in. By default, nothing is loaded.
 	 */
-	protected void init_LoadGlobalData()
+	protected void initGlobalData()
 	{
 	}
 	
@@ -1069,7 +1069,7 @@ public class Quest extends ManagedScript
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 			return null;
 		}
 	}
@@ -1494,7 +1494,7 @@ public class Quest extends ManagedScript
 			return null;
 		}
 		
-		if ((player.getParty() == null) || (player.getParty().getPartyMembers().size() == 0))
+		if ((player.getParty() == null) || player.getParty().getPartyMembers().isEmpty())
 		{
 			return player;
 		}
@@ -1604,7 +1604,7 @@ public class Quest extends ManagedScript
 		Party party = player.getParty();
 		
 		// if this player is not in a party, just check if this player instance matches the conditions itself
-		if ((party == null) || (party.getPartyMembers().size() == 0))
+		if ((party == null) || party.getPartyMembers().isEmpty())
 		{
 			temp = player.getQuestState(getName());
 			if ((temp != null) && (temp.get(var) != null) && ((String) temp.get(var)).equalsIgnoreCase(value))
@@ -1709,7 +1709,7 @@ public class Quest extends ManagedScript
 		QuestState temp = null;
 		Party party = player.getParty();
 		// if this player is not in a party, just check if this player instance matches the conditions itself
-		if ((party == null) || (party.getPartyMembers().size() == 0))
+		if ((party == null) || party.getPartyMembers().isEmpty())
 		{
 			temp = player.getQuestState(getName());
 			if ((temp != null) && (temp.getState() == state))
@@ -1741,7 +1741,7 @@ public class Quest extends ManagedScript
 		}
 		
 		// if there was no match, return null...
-		if (candidates.size() == 0)
+		if (candidates.isEmpty())
 		{
 			return null;
 		}
@@ -1770,7 +1770,7 @@ public class Quest extends ManagedScript
 		{
 			if (player.getTarget() != null)
 			{
-				content = content.replaceAll("%objectId%", String.valueOf(player.getTarget().getObjectId()));
+				content = content.replace("%objectId%", String.valueOf(player.getTarget().getObjectId()));
 			}
 			
 			// Send message to client if message not empty

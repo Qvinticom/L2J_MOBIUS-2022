@@ -275,8 +275,7 @@ public class CursedWeaponsManager
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Could not check CursedWeapons data: ");
-			e.printStackTrace();
+			LOGGER.warning("Could not check CursedWeapons data: " + e.getMessage());
 		}
 	}
 	

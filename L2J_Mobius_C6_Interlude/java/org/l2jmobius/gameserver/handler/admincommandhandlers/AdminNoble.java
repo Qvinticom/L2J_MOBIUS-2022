@@ -60,7 +60,7 @@ public class AdminNoble implements IAdminCommandHandler
 					targetPlayer.setNoble(true);
 					targetPlayer.sendMessage("You are now a noblesse.");
 					updateDatabase(targetPlayer, true);
-					sendMessages(true, targetPlayer, activeChar, true, true);
+					sendMessages(true, targetPlayer, activeChar, true);
 					targetPlayer.broadcastPacket(new SocialAction(targetPlayer.getObjectId(), 16));
 				}
 				else
@@ -68,7 +68,7 @@ public class AdminNoble implements IAdminCommandHandler
 					targetPlayer.setNoble(false);
 					targetPlayer.sendMessage("You are no longer a noblesse.");
 					updateDatabase(targetPlayer, false);
-					sendMessages(false, targetPlayer, activeChar, true, true);
+					sendMessages(false, targetPlayer, activeChar, true);
 				}
 			}
 			else
@@ -83,7 +83,7 @@ public class AdminNoble implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void sendMessages(boolean forNewNoble, PlayerInstance player, PlayerInstance gm, boolean announce, boolean notifyGmList)
+	private void sendMessages(boolean forNewNoble, PlayerInstance player, PlayerInstance gm, boolean notifyGmList)
 	{
 		if (forNewNoble)
 		{

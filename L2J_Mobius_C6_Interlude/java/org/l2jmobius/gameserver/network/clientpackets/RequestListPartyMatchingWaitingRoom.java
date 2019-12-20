@@ -41,12 +41,12 @@ public class RequestListPartyMatchingWaitingRoom extends GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final PlayerInstance _player = getClient().getPlayer();
-		if (_player == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		_player.sendPacket(new ExListPartyMatchingWaitingRoom(_player, _page, _minlvl, _maxlvl, _mode));
+		player.sendPacket(new ExListPartyMatchingWaitingRoom(player, _page, _minlvl, _maxlvl, _mode));
 	}
 }

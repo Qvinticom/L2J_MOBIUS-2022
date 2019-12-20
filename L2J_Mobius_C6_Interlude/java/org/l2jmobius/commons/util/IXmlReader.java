@@ -95,12 +95,10 @@ public interface IXmlReader
 		catch (SAXParseException e)
 		{
 			LOGGER.log(Level.WARNING, "Could not parse file: " + f.getName() + " at line: " + e.getLineNumber() + ", column: " + e.getColumnNumber() + " :", e);
-			return;
 		}
 		catch (Exception e)
 		{
 			LOGGER.log(Level.WARNING, "Could not parse file: " + f.getName(), e);
-			return;
 		}
 	}
 	

@@ -29,8 +29,8 @@ import org.l2jmobius.gameserver.model.quest.State;
 public class Q373_SupplierOfReagents extends Quest
 {
 	// Variables
-	private static final String _ingredient = "ingredient";
-	private static final String _catalyst = "catalyst";
+	private static final String INGREDIENT = "ingredient";
+	private static final String CATALYST = "catalyst";
 	
 	// NPCs
 	private static final int WESLEY = 30166;
@@ -322,7 +322,7 @@ public class Q373_SupplierOfReagents extends Quest
 					break;
 				}
 				
-				st.set(_ingredient, Integer.toString(regentId));
+				st.set(INGREDIENT, Integer.toString(regentId));
 				return htmltext;
 			}
 			htmltext = "31149-04.htm";
@@ -337,12 +337,12 @@ public class Q373_SupplierOfReagents extends Quest
 				return "31149-04.htm";
 			}
 			
-			st.set(_catalyst, Integer.toString(catalyst));
+			st.set(CATALYST, Integer.toString(catalyst));
 		}
 		else if (event.startsWith("31149-12-"))
 		{
-			int regent = st.getInt(_ingredient);
-			int catalyst = st.getInt(_catalyst);
+			int regent = st.getInt(INGREDIENT);
+			int catalyst = st.getInt(CATALYST);
 			
 			for (int[] formula : FORMULAS)
 			{
@@ -367,7 +367,7 @@ public class Q373_SupplierOfReagents extends Quest
 				st.takeItems(catalyst, 1);
 				
 				int tempIndex = Integer.parseInt(event.substring(9, 10));
-				for (int temperature[] : TEMPERATURES)
+				for (int[] temperature : TEMPERATURES)
 				{
 					if (temperature[0] != tempIndex)
 					{

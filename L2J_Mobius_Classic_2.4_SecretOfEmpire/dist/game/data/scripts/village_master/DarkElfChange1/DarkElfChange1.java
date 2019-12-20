@@ -65,7 +65,7 @@ public class DarkElfChange1 extends AbstractNpcAI
 	{
 		if (Util.isDigit(event))
 		{
-			final int i = Integer.valueOf(event);
+			final int i = Integer.parseInt(event);
 			final ClassId cid = player.getClassId();
 			if ((cid.getRace() == Race.DARK_ELF) && (cid.getId() == CLASSES[i][1]))
 			{

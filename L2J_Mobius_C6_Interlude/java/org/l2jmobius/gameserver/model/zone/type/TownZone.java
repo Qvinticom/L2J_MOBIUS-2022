@@ -87,7 +87,7 @@ public class TownZone extends ZoneType
 	@Override
 	public void setSpawnLocs(Node node)
 	{
-		final int ai[] = new int[3];
+		final int[] ai = new int[3];
 		
 		Node node1 = node.getAttributes().getNamedItem("X");
 		
@@ -115,14 +115,11 @@ public class TownZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		if (creature instanceof PlayerInstance)
+		// PVP possible during siege, now for siege participants only
+		// Could also check if this town is in siege, or if any siege is going on
+		if ((creature instanceof PlayerInstance) && (((PlayerInstance) creature).getSiegeState() != 0) && (Config.ZONE_TOWN == 1))
 		{
-			// PVP possible during siege, now for siege participants only
-			// Could also check if this town is in siege, or if any siege is going on
-			if ((((PlayerInstance) creature).getSiegeState() != 0) && (Config.ZONE_TOWN == 1))
-			{
-				return;
-			}
+			return;
 		}
 		
 		if (!_noPeace && (Config.ZONE_TOWN != 2))
@@ -155,7 +152,6 @@ public class TownZone extends ZoneType
 	 * Returns this town zones name
 	 * @return
 	 */
-	@Deprecated
 	public String getName()
 	{
 		return _townName;
@@ -186,10 +182,8 @@ public class TownZone extends ZoneType
 	 */
 	public int[] getSpawnLoc()
 	{
-		int ai[] = new int[3];
-		
+		int[] ai = new int[3];
 		ai = _spawnLoc.get(Rnd.get(_spawnLoc.size()));
-		
 		return ai;
 	}
 	

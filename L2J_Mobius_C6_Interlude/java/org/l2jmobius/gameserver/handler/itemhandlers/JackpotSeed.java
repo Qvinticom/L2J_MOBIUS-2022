@@ -31,15 +31,13 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class JackpotSeed implements IItemHandler
 {
-	private GourdInstance _gourd = null;
-	
-	private static int[] _itemIds =
+	private static final int[] ITEM_IDS =
 	{
 		6389, // small seed
 		6390, // large seed
 	};
 	
-	private static int[] _npcIds =
+	private static final int[] NPC_IDS =
 	{
 		12774, // Young Pumpkin
 		12777, // Large Young Pumpkin
@@ -51,11 +49,11 @@ public class JackpotSeed implements IItemHandler
 		PlayerInstance player = (PlayerInstance) playable;
 		NpcTemplate template1 = null;
 		final int itemId = item.getItemId();
-		for (int i = 0; i < _itemIds.length; i++)
+		for (int i = 0; i < ITEM_IDS.length; i++)
 		{
-			if (_itemIds[i] == itemId)
+			if (ITEM_IDS[i] == itemId)
 			{
-				template1 = NpcTable.getInstance().getTemplate(_npcIds[i]);
+				template1 = NpcTable.getInstance().getTemplate(NPC_IDS[i]);
 				break;
 			}
 		}
@@ -72,9 +70,9 @@ public class JackpotSeed implements IItemHandler
 			spawn.setX(player.getX());
 			spawn.setY(player.getY());
 			spawn.setZ(player.getZ());
-			_gourd = (GourdInstance) spawn.doSpawn();
-			World.getInstance().storeObject(_gourd);
-			_gourd.setOwner(player.getName());
+			final GourdInstance gourd = (GourdInstance) spawn.doSpawn();
+			World.getInstance().storeObject(gourd);
+			gourd.setOwner(player.getName());
 			player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 			SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 			sm.addString("Created " + template1.name + " at x: " + spawn.getX() + " y: " + spawn.getY() + " z: " + spawn.getZ());
@@ -91,6 +89,6 @@ public class JackpotSeed implements IItemHandler
 	@Override
 	public int[] getItemIds()
 	{
-		return _itemIds;
+		return ITEM_IDS;
 	}
 }

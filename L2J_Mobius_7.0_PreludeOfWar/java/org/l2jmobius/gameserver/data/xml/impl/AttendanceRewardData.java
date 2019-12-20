@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.holders.ItemHolder;
  */
 public class AttendanceRewardData implements IXmlReader
 {
-	private static Logger LOGGER = Logger.getLogger(AttendanceRewardData.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AttendanceRewardData.class.getName());
 	private final List<ItemHolder> _rewards = new ArrayList<>();
 	private int _rewardsCount = 0;
 	

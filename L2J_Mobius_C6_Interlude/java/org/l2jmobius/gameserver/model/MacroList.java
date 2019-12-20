@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SendMacroList;
  */
 public class MacroList
 {
-	private static Logger LOGGER = Logger.getLogger(MacroList.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(MacroList.class.getName());
 	
 	private final PlayerInstance _owner;
 	private int _revision;
@@ -152,22 +152,22 @@ public class MacroList
 			
 			for (MacroCmd cmd : macro.commands)
 			{
-				final StringBuilder cmd_sb = new StringBuilder();
+				final StringBuilder cmdSb = new StringBuilder();
 				
-				cmd_sb.append(cmd.type).append(',');
-				cmd_sb.append(cmd.d1).append(',');
-				cmd_sb.append(cmd.d2);
+				cmdSb.append(cmd.type).append(',');
+				cmdSb.append(cmd.d1).append(',');
+				cmdSb.append(cmd.d2);
 				
 				if ((cmd.cmd != null) && (cmd.cmd.length() > 0))
 				{
-					cmd_sb.append(',').append(cmd.cmd);
+					cmdSb.append(',').append(cmd.cmd);
 				}
 				
-				cmd_sb.append(';');
+				cmdSb.append(';');
 				
-				if ((sb.toString().length() + cmd_sb.toString().length()) < 255)
+				if ((sb.toString().length() + cmdSb.toString().length()) < 255)
 				{
-					sb.append(cmd_sb.toString());
+					sb.append(cmdSb.toString());
 				}
 				else
 				{

@@ -21,12 +21,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
  */
 public class ActionFailed extends GameServerPacket
 {
-	public static final String _S__25_ACTIONFAILED = "[S] 25 ActionFailed";
 	public static final ActionFailed STATIC_PACKET = new ActionFailed();
-	
-	public ActionFailed()
-	{
-	}
 	
 	@Override
 	protected void writeImpl()

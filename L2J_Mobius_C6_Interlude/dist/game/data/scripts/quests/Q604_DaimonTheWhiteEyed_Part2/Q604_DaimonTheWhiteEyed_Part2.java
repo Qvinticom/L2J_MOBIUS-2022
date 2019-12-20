@@ -41,7 +41,7 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 	private static final int UNFINISHED_SUMMON_CRYSTAL = 7192;
 	private static final int SUMMON_CRYSTAL = 7193;
 	private static final int ESSENCE_OF_DAIMON = 7194;
-	private static final int REWARD_DYE[] =
+	private static final int[] REWARD_DYE =
 	{
 		4595,
 		4596,
@@ -78,6 +78,8 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 			
 			case ALIVE:
 				spawnNpc();
+				// fallthrough
+				
 			case DEAD:
 				startQuestTimer("check", CHECK_INTERVAL, null, null, true);
 				break;

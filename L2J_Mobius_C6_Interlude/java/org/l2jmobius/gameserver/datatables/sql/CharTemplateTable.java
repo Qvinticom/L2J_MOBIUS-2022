@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.base.ClassId;
  */
 public class CharTemplateTable
 {
-	private static Logger LOGGER = Logger.getLogger(CharTemplateTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(CharTemplateTable.class.getName());
 	
 	private static final String[] CHAR_CLASSES =
 	{

@@ -63,12 +63,12 @@ public class CTFCmd implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (!CTF.is_joining())
+		if (!CTF.isJoining())
 		{
 			activeChar.sendMessage("There is no CTF Event in progress.");
 			return false;
 		}
-		else if (CTF.is_joining() && activeChar._inEventCTF)
+		else if (CTF.isJoining() && activeChar._inEventCTF)
 		{
 			activeChar.sendMessage("You are already registered.");
 			return false;
@@ -88,7 +88,7 @@ public class CTFCmd implements IVoicedCommandHandler
 			activeChar.sendMessage("You are not allowed to participate to the event because your level is too low.");
 			return false;
 		}
-		else if (activeChar.getLevel() > CTF.get_maxlvl())
+		else if (activeChar.getLevel() > CTF.getMaxlvl())
 		{
 			activeChar.sendMessage("You are not allowed to participate to the event because your level is too high.");
 			return false;
@@ -98,7 +98,7 @@ public class CTFCmd implements IVoicedCommandHandler
 			activeChar.sendMessage("You are not allowed to participate to the event because you have Karma.");
 			return false;
 		}
-		else if (CTF.is_teleport() || CTF.is_started())
+		else if (CTF.isTeleport() || CTF.isStarted())
 		{
 			activeChar.sendMessage("CTF Event registration period is over. You can't register now.");
 			return false;
@@ -118,17 +118,17 @@ public class CTFCmd implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (!CTF.is_joining())
+		if (!CTF.isJoining())
 		{
 			activeChar.sendMessage("There is no CTF Event in progress.");
 			return false;
 		}
-		else if ((CTF.is_teleport() || CTF.is_started()) && activeChar._inEventCTF)
+		else if ((CTF.isTeleport() || CTF.isStarted()) && activeChar._inEventCTF)
 		{
 			activeChar.sendMessage("You can not leave now because CTF event has started.");
 			return false;
 		}
-		else if (CTF.is_joining() && !activeChar._inEventCTF)
+		else if (CTF.isJoining() && !activeChar._inEventCTF)
 		{
 			activeChar.sendMessage("You aren't registered in the CTF Event.");
 			return false;
@@ -147,12 +147,12 @@ public class CTFCmd implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (!CTF.is_joining())
+		if (!CTF.isJoining())
 		{
 			activeChar.sendMessage("There is no CTF Event in progress.");
 			return false;
 		}
-		else if (CTF.is_teleport() || CTF.is_started())
+		else if (CTF.isTeleport() || CTF.isStarted())
 		{
 			activeChar.sendMessage("I can't provide you this info. Command available only in joining period.");
 			return false;
@@ -164,14 +164,14 @@ public class CTFCmd implements IVoicedCommandHandler
 				activeChar.sendMessage("There is " + CTF._playersShuffle.size() + " player participating in this event.");
 				activeChar.sendMessage("Reward: " + CTF.get_rewardAmount() + " " + ItemTable.getInstance().getTemplate(CTF.get_rewardId()).getName() + " !");
 				activeChar.sendMessage("Player Min lvl: " + CTF.get_minlvl() + ".");
-				activeChar.sendMessage("Player Max lvl: " + CTF.get_maxlvl() + ".");
+				activeChar.sendMessage("Player Max lvl: " + CTF.getMaxlvl() + ".");
 			}
 			else
 			{
 				activeChar.sendMessage("There are " + CTF._playersShuffle.size() + " players participating in this event.");
 				activeChar.sendMessage("Reward: " + CTF.get_rewardAmount() + " " + ItemTable.getInstance().getTemplate(CTF.get_rewardId()).getName() + " !");
 				activeChar.sendMessage("Player Min lvl: " + CTF.get_minlvl() + ".");
-				activeChar.sendMessage("Player Max lvl: " + CTF.get_maxlvl() + ".");
+				activeChar.sendMessage("Player Max lvl: " + CTF.getMaxlvl() + ".");
 			}
 			return true;
 		}

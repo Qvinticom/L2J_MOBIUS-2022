@@ -223,6 +223,7 @@ public class AdminPledge implements IAdminCommandHandler
 						}
 					}
 				}
+				return false;
 			}
 			default:
 			{

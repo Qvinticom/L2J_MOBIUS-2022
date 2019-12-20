@@ -256,17 +256,17 @@ public class AdminAdmin implements IAdminCommandHandler
 				{
 					case "RateXp":
 					{
-						Config.RATE_XP = Float.valueOf(pValue);
+						Config.RATE_XP = Float.parseFloat(pValue);
 						break;
 					}
 					case "RateSp":
 					{
-						Config.RATE_SP = Float.valueOf(pValue);
+						Config.RATE_SP = Float.parseFloat(pValue);
 						break;
 					}
 					case "RateDropSpoil":
 					{
-						Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER = Float.valueOf(pValue);
+						Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER = Float.parseFloat(pValue);
 						break;
 					}
 				}

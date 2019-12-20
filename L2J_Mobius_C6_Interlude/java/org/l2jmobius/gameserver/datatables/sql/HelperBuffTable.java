@@ -24,7 +24,6 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.datatables.csv.HennaTable;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.holders.HelperBuffHolder;
 
@@ -33,7 +32,7 @@ import org.l2jmobius.gameserver.model.holders.HelperBuffHolder;
  */
 public class HelperBuffTable
 {
-	private static final Logger LOGGER = Logger.getLogger(HennaTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(HelperBuffTable.class.getName());
 	
 	public List<HelperBuffHolder> helperBuff = new ArrayList<>();
 	private final boolean _initialized = true;
@@ -78,46 +77,46 @@ public class HelperBuffTable
 	
 	/**
 	 * Load the Newbie Helper Buff list from SQL Table helper_buff_list
-	 * @param HelperBuffData
+	 * @param helperBuffData
 	 * @throws Exception
 	 */
-	private void fillHelperBuffTable(ResultSet HelperBuffData) throws Exception
+	private void fillHelperBuffTable(ResultSet helperBuffData) throws Exception
 	{
-		while (HelperBuffData.next())
+		while (helperBuffData.next())
 		{
 			final StatsSet helperBuffDat = new StatsSet();
-			final int id = HelperBuffData.getInt("id");
+			final int id = helperBuffData.getInt("id");
 			
 			helperBuffDat.set("id", id);
-			helperBuffDat.set("skillID", HelperBuffData.getInt("skill_id"));
-			helperBuffDat.set("skillLevel", HelperBuffData.getInt("skill_level"));
-			helperBuffDat.set("lowerLevel", HelperBuffData.getInt("lower_level"));
-			helperBuffDat.set("upperLevel", HelperBuffData.getInt("upper_level"));
-			helperBuffDat.set("isMagicClass", HelperBuffData.getString("is_magic_class"));
+			helperBuffDat.set("skillID", helperBuffData.getInt("skill_id"));
+			helperBuffDat.set("skillLevel", helperBuffData.getInt("skill_level"));
+			helperBuffDat.set("lowerLevel", helperBuffData.getInt("lower_level"));
+			helperBuffDat.set("upperLevel", helperBuffData.getInt("upper_level"));
+			helperBuffDat.set("isMagicClass", helperBuffData.getString("is_magic_class"));
 			
 			// Calulate the range level in wich player must be to obtain buff from Newbie Helper
-			if ("false".equals(HelperBuffData.getString("is_magic_class")))
+			if ("false".equals(helperBuffData.getString("is_magic_class")))
 			{
-				if (HelperBuffData.getInt("lower_level") < _physicClassLowestLevel)
+				if (helperBuffData.getInt("lower_level") < _physicClassLowestLevel)
 				{
-					_physicClassLowestLevel = HelperBuffData.getInt("lower_level");
+					_physicClassLowestLevel = helperBuffData.getInt("lower_level");
 				}
 				
-				if (HelperBuffData.getInt("upper_level") > _physicClassHighestLevel)
+				if (helperBuffData.getInt("upper_level") > _physicClassHighestLevel)
 				{
-					_physicClassHighestLevel = HelperBuffData.getInt("upper_level");
+					_physicClassHighestLevel = helperBuffData.getInt("upper_level");
 				}
 			}
 			else
 			{
-				if (HelperBuffData.getInt("lower_level") < _magicClassLowestLevel)
+				if (helperBuffData.getInt("lower_level") < _magicClassLowestLevel)
 				{
-					_magicClassLowestLevel = HelperBuffData.getInt("lower_level");
+					_magicClassLowestLevel = helperBuffData.getInt("lower_level");
 				}
 				
-				if (HelperBuffData.getInt("upper_level") > _magicClassHighestLevel)
+				if (helperBuffData.getInt("upper_level") > _magicClassHighestLevel)
 				{
-					_magicClassHighestLevel = HelperBuffData.getInt("upper_level");
+					_magicClassHighestLevel = helperBuffData.getInt("upper_level");
 				}
 			}
 			

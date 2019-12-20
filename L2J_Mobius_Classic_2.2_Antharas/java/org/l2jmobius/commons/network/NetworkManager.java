@@ -32,7 +32,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  */
 public class NetworkManager
 {
-	private final Logger LOGGER = Logger.getLogger(getClass().getName());
+	private static final Logger LOGGER = Logger.getLogger(NetworkManager.class.getName());
 	
 	private final ServerBootstrap _serverBootstrap;
 	private final String _host;

@@ -26,7 +26,7 @@ public class Q080_SagaOfTheWindRider extends SagasSuperClass
 	public Q080_SagaOfTheWindRider()
 	{
 		super(80, "Saga of the Wind Rider");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			31603,
 			31624,
@@ -41,7 +41,7 @@ public class Q080_SagaOfTheWindRider extends SagasSuperClass
 			31659,
 			31616
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7517,
@@ -56,39 +56,39 @@ public class Q080_SagaOfTheWindRider extends SagasSuperClass
 			7103,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27300,
 			27229,
 			27303
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			101
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x17
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			161719,
 			124314,
 			124355
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-92823,
 			82155,
 			82155
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-1893,
 			-2803,
 			-2803
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

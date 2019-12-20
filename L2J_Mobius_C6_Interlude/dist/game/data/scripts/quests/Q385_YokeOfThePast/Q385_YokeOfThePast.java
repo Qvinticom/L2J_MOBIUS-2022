@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.State;
 public class Q385_YokeOfThePast extends Quest
 {
 	// NPCs
-	private static final int GATEKEEPER_ZIGGURAT[] =
+	private static final int[] GATEKEEPER_ZIGGURAT =
 	{
 		31095,
 		31096,

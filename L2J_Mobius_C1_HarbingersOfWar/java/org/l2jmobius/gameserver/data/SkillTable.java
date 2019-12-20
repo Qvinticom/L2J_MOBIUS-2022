@@ -154,7 +154,7 @@ public class SkillTable
 		{
 			skill.setOperateType(Skill.OP_TOGGLE);
 		}
-		skill.setMagic(Boolean.valueOf(st.nextToken())); // ?
+		skill.setMagic(Boolean.parseBoolean(st.nextToken())); // ?
 		skill.setMpConsume(Integer.parseInt(st.nextToken()));
 		skill.setHpConsume(Integer.parseInt(st.nextToken()));
 		skill.setItemConsumeId(Integer.parseInt(st.nextToken()));

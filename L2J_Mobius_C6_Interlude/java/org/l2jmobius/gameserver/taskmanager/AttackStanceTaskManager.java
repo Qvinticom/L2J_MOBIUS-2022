@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.taskmanager;
 
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
@@ -104,9 +105,10 @@ public class AttackStanceTaskManager
 				{
 					synchronized (this)
 					{
-						for (Creature actor : _attackStanceTasks.keySet())
+						for (Entry<Creature, Long> entry : _attackStanceTasks.entrySet())
 						{
-							if ((current - _attackStanceTasks.get(actor)) > 15000)
+							final Creature actor = entry.getKey();
+							if ((current - entry.getValue()) > 15000)
 							{
 								actor.broadcastPacket(new AutoAttackStop(actor.getObjectId()));
 								if ((actor instanceof PlayerInstance) && (((PlayerInstance) actor).getPet() != null))

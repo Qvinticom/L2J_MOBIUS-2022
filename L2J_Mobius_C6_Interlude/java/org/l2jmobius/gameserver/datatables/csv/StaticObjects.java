@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 
 public class StaticObjects
 {
-	private static Logger LOGGER = Logger.getLogger(StaticObjects.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(StaticObjects.class.getName());
 	
 	private final Map<Integer, StaticObjectInstance> _staticObjects;
 	
@@ -75,7 +75,7 @@ public class StaticObjects
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("error while creating StaticObjects table " + e);
+			LOGGER.warning("Error while creating StaticObjects table " + e);
 		}
 		finally
 		{
@@ -87,7 +87,7 @@ public class StaticObjects
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with StaticObjects: " + e1.getMessage());
 				}
 			}
 			
@@ -99,7 +99,7 @@ public class StaticObjects
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with StaticObjects: " + e1.getMessage());
 				}
 			}
 			
@@ -111,7 +111,7 @@ public class StaticObjects
 				}
 				catch (Exception e1)
 				{
-					e1.printStackTrace();
+					LOGGER.warning("Problem with StaticObjects: " + e1.getMessage());
 				}
 			}
 		}

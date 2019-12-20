@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class Say2 extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(Say2.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Say2.class.getName());
 	private static Logger _logChat = Logger.getLogger("chat");
 	
 	public static final int ALL = 0;
@@ -135,13 +135,10 @@ public class Say2 extends GameClientPacket
 			return;
 		}
 		
-		if (player.isInJail() && Config.JAIL_DISABLE_CHAT)
+		if (player.isInJail() && Config.JAIL_DISABLE_CHAT && ((_type == TELL) || (_type == SHOUT) || (_type == TRADE) || (_type == HERO_VOICE)))
 		{
-			if ((_type == TELL) || (_type == SHOUT) || (_type == TRADE) || (_type == HERO_VOICE))
-			{
-				player.sendMessage("You can not chat with players outside of the jail.");
-				return;
-			}
+			player.sendMessage("You can not chat with players outside of the jail.");
+			return;
 		}
 		
 		if (!getClient().getFloodProtectors().getSayAction().tryPerformAction("Say2"))
@@ -216,7 +213,7 @@ public class Say2 extends GameClientPacket
 			final CreatureSay cs = new CreatureSay(actor, _type, name, _text);
 			for (WorldObject obj : list)
 			{
-				if ((obj == null) || !(obj instanceof Creature))
+				if (!(obj instanceof Creature))
 				{
 					continue;
 				}
@@ -523,23 +520,17 @@ public class Say2 extends GameClientPacket
 			}
 			case PARTYROOM_ALL:
 			{
-				if (player.isInParty())
+				if (player.isInParty() && player.getParty().isInCommandChannel() && player.getParty().isLeader(player))
 				{
-					if (player.getParty().isInCommandChannel() && player.getParty().isLeader(player))
-					{
-						player.getParty().getCommandChannel().broadcastCSToChannelMembers(cs, player);
-					}
+					player.getParty().getCommandChannel().broadcastCSToChannelMembers(cs, player);
 				}
 				break;
 			}
 			case PARTYROOM_COMMANDER:
 			{
-				if (player.isInParty())
+				if (player.isInParty() && player.getParty().isInCommandChannel() && player.getParty().getCommandChannel().getChannelLeader().equals(player))
 				{
-					if (player.getParty().isInCommandChannel() && player.getParty().getCommandChannel().getChannelLeader().equals(player))
-					{
-						player.getParty().getCommandChannel().broadcastCSToChannelMembers(cs, player);
-					}
+					player.getParty().getCommandChannel().broadcastCSToChannelMembers(cs, player);
 				}
 				break;
 			}

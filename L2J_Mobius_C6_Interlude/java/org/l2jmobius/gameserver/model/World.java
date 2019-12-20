@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class World
 {
-	private static Logger LOGGER = Logger.getLogger(World.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(World.class.getName());
 	
 	public static final int SHIFT_BY = 12;
 	
@@ -343,16 +343,12 @@ public class World
 				object.getKnownList().addKnownObject(wo);
 			}
 			
-			if (!player.isTeleporting())
+			if (!player.isTeleporting() && (tmp != null))
 			{
-				// PlayerInstance tmp = _allPlayers.get(player.getName().toLowerCase());
-				if (tmp != null)
-				{
-					LOGGER.warning("Teleporting: Duplicate character!? Closing both characters (" + player.getName() + ")");
-					player.closeNetConnection();
-					tmp.closeNetConnection();
-					return;
-				}
+				LOGGER.warning("Teleporting: Duplicate character!? Closing both characters (" + player.getName() + ")");
+				player.closeNetConnection();
+				tmp.closeNetConnection();
+				return;
 			}
 			
 			synchronized (_allPlayers)
@@ -725,8 +721,6 @@ public class World
 				}
 				
 				result.add(playable);
-				
-				playable = null;
 			}
 		}
 		

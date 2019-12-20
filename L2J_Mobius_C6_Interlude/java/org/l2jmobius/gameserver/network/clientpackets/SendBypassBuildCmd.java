@@ -76,7 +76,6 @@ public class SendBypassBuildCmd extends GameClientPacket
 		{
 			player.sendMessage("The command " + _command + " doesn't exists!");
 			LOGGER.warning("No handler registered for admin command '" + _command + "'");
-			return;
 		}
 	}
 }

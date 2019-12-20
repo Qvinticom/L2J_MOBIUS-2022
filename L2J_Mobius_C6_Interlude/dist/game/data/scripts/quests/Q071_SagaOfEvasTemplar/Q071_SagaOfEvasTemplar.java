@@ -26,7 +26,7 @@ public class Q071_SagaOfEvasTemplar extends SagasSuperClass
 	public Q071_SagaOfEvasTemplar()
 	{
 		super(71, "Saga of Eva's Templar");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			30852,
 			31624,
@@ -41,7 +41,7 @@ public class Q071_SagaOfEvasTemplar extends SagasSuperClass
 			31658,
 			31281
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7535,
@@ -56,39 +56,39 @@ public class Q071_SagaOfEvasTemplar extends SagasSuperClass
 			7094,
 			6482
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27287,
 			27220,
 			27279
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			99
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x14
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			119518,
 			181215,
 			181227
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-28658,
 			36676,
 			36703
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-3811,
 			-4812,
 			-4816
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

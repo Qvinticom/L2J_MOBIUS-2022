@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class RequestPrivateStoreSell extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestPrivateStoreSell.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestPrivateStoreSell.class.getName());
 	
 	private int _storePlayerId;
 	private int _count;
@@ -97,7 +97,7 @@ public class RequestPrivateStoreSell extends GameClientPacket
 		}
 		
 		final WorldObject object = World.getInstance().findObject(_storePlayerId);
-		if ((object == null) || !(object instanceof PlayerInstance))
+		if (!(object instanceof PlayerInstance))
 		{
 			return;
 		}

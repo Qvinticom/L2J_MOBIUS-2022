@@ -182,23 +182,23 @@ public class WeddingManagerInstance extends NpcInstance
 			}
 			
 			// wedding march
-			MagicSkillUse MSU = new MagicSkillUse(player, player, 2230, 1, 1, 0);
-			player.broadcastPacket(MSU);
-			MSU = new MagicSkillUse(ptarget, ptarget, 2230, 1, 1, 0);
-			ptarget.broadcastPacket(MSU);
+			MagicSkillUse msu = new MagicSkillUse(player, player, 2230, 1, 1, 0);
+			player.broadcastPacket(msu);
+			msu = new MagicSkillUse(ptarget, ptarget, 2230, 1, 1, 0);
+			ptarget.broadcastPacket(msu);
 			
 			// fireworks
 			Skill skill = SkillTable.getInstance().getInfo(2025, 1);
 			if (skill != null)
 			{
-				MSU = new MagicSkillUse(player, player, 2025, 1, 1, 0);
-				player.sendPacket(MSU);
-				player.broadcastPacket(MSU);
+				msu = new MagicSkillUse(player, player, 2025, 1, 1, 0);
+				player.sendPacket(msu);
+				player.broadcastPacket(msu);
 				player.useMagic(skill, false, false);
 				
-				MSU = new MagicSkillUse(ptarget, ptarget, 2025, 1, 1, 0);
-				ptarget.sendPacket(MSU);
-				ptarget.broadcastPacket(MSU);
+				msu = new MagicSkillUse(ptarget, ptarget, 2025, 1, 1, 0);
+				ptarget.sendPacket(msu);
+				ptarget.broadcastPacket(msu);
 				ptarget.useMagic(skill, false, false);
 			}
 			
@@ -243,14 +243,7 @@ public class WeddingManagerInstance extends NpcInstance
 					String strItem = Integer.toString(item3.getItemId());
 					String frmWear = Integer.toString(6408);
 					player.sendMessage(strItem);
-					if (strItem.equals(frmWear))
-					{
-						player.setIsWearingFormalWear(true);
-					}
-					else
-					{
-						player.setIsWearingFormalWear(false);
-					}
+					player.setIsWearingFormalWear(strItem.equals(frmWear));
 				}
 			}
 			
@@ -285,15 +278,7 @@ public class WeddingManagerInstance extends NpcInstance
 					String frmWear = Integer.toString(6408);
 					String strItem = null;
 					strItem = Integer.toString(item3.getItemId());
-					
-					if ((null != strItem) && strItem.equals(frmWear))
-					{
-						player.setIsWearingFormalWear(true);
-					}
-					else
-					{
-						player.setIsWearingFormalWear(false);
-					}
+					player.setIsWearingFormalWear((null != strItem) && strItem.equals(frmWear));
 				}
 			}
 			

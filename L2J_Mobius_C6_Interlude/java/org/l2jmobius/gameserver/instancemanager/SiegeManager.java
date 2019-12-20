@@ -90,7 +90,7 @@ public class SiegeManager
 	 */
 	public boolean checkIfOkToSummon(Creature creature, boolean isCheckOnly)
 	{
-		if ((creature == null) || !(creature instanceof PlayerInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return false;
 		}
@@ -177,7 +177,6 @@ public class SiegeManager
 		catch (Exception e)
 		{
 			LOGGER.info("Exception: checkIsRegistered(): " + e.getMessage());
-			e.printStackTrace();
 		}
 		return register;
 	}
@@ -218,18 +217,17 @@ public class SiegeManager
 			
 			for (Castle castle : CastleManager.getInstance().getCastles())
 			{
-				List<SiegeSpawn> _controlTowersSpawns = new ArrayList<>();
+				List<SiegeSpawn> controlTowersSpawns = new ArrayList<>();
 				
 				for (int i = 1; i < 0xFF; i++)
 				{
-					String _spawnParams = siegeSettings.getProperty(castle.getName() + "ControlTower" + i, "");
-					
-					if (_spawnParams.length() == 0)
+					String spawnParams = siegeSettings.getProperty(castle.getName() + "ControlTower" + i, "");
+					if (spawnParams.isEmpty())
 					{
 						break;
 					}
 					
-					StringTokenizer st = new StringTokenizer(_spawnParams.trim(), ",");
+					StringTokenizer st = new StringTokenizer(spawnParams.trim(), ",");
 					
 					try
 					{
@@ -239,7 +237,7 @@ public class SiegeManager
 						final int npc_id = Integer.parseInt(st.nextToken());
 						final int hp = Integer.parseInt(st.nextToken());
 						
-						_controlTowersSpawns.add(new SiegeSpawn(castle.getCastleId(), x, y, z, 0, npc_id, hp));
+						controlTowersSpawns.add(new SiegeSpawn(castle.getCastleId(), x, y, z, 0, npc_id, hp));
 					}
 					catch (Exception e)
 					{
@@ -247,18 +245,17 @@ public class SiegeManager
 					}
 				}
 				
-				List<SiegeSpawn> _artefactSpawns = new ArrayList<>();
+				List<SiegeSpawn> artefactSpawns = new ArrayList<>();
 				
 				for (int i = 1; i < 0xFF; i++)
 				{
-					String _spawnParams = siegeSettings.getProperty(castle.getName() + "Artefact" + i, "");
-					
-					if (_spawnParams.length() == 0)
+					String spawnParams = siegeSettings.getProperty(castle.getName() + "Artefact" + i, "");
+					if (spawnParams.isEmpty())
 					{
 						break;
 					}
 					
-					StringTokenizer st = new StringTokenizer(_spawnParams.trim(), ",");
+					StringTokenizer st = new StringTokenizer(spawnParams.trim(), ",");
 					
 					try
 					{
@@ -268,7 +265,7 @@ public class SiegeManager
 						final int heading = Integer.parseInt(st.nextToken());
 						final int npc_id = Integer.parseInt(st.nextToken());
 						
-						_artefactSpawns.add(new SiegeSpawn(castle.getCastleId(), x, y, z, heading, npc_id));
+						artefactSpawns.add(new SiegeSpawn(castle.getCastleId(), x, y, z, heading, npc_id));
 					}
 					catch (Exception e)
 					{
@@ -276,15 +273,13 @@ public class SiegeManager
 					}
 				}
 				
-				_controlTowerSpawnList.put(castle.getCastleId(), _controlTowersSpawns);
-				_artefactSpawnList.put(castle.getCastleId(), _artefactSpawns);
+				_controlTowerSpawnList.put(castle.getCastleId(), controlTowersSpawns);
+				_artefactSpawnList.put(castle.getCastleId(), artefactSpawns);
 			}
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Error while loading siege data.");
-			e.printStackTrace();
-			
+			LOGGER.warning("Error while loading siege data: " + e.getMessage());
 		}
 		finally
 		{
@@ -297,26 +292,26 @@ public class SiegeManager
 				}
 				catch (IOException e)
 				{
-					e.printStackTrace();
+					LOGGER.warning("Error while loading siege data: " + e.getMessage());
 				}
 			}
 		}
 	}
 	
-	public List<SiegeSpawn> getArtefactSpawnList(int _castleId)
+	public List<SiegeSpawn> getArtefactSpawnList(int castleId)
 	{
-		if (_artefactSpawnList.containsKey(_castleId))
+		if (_artefactSpawnList.containsKey(castleId))
 		{
-			return _artefactSpawnList.get(_castleId);
+			return _artefactSpawnList.get(castleId);
 		}
 		return null;
 	}
 	
-	public List<SiegeSpawn> getControlTowerSpawnList(int _castleId)
+	public List<SiegeSpawn> getControlTowerSpawnList(int castleId)
 	{
-		if (_controlTowerSpawnList.containsKey(_castleId))
+		if (_controlTowerSpawnList.containsKey(castleId))
 		{
-			return _controlTowerSpawnList.get(_castleId);
+			return _controlTowerSpawnList.get(castleId);
 		}
 		return null;
 	}
@@ -380,12 +375,12 @@ public class SiegeManager
 	
 	public List<Siege> getSieges()
 	{
-		final List<Siege> _sieges = new ArrayList<>();
+		final List<Siege> sieges = new ArrayList<>();
 		for (Castle castle : CastleManager.getInstance().getCastles())
 		{
-			_sieges.add(castle.getSiege());
+			sieges.add(castle.getSiege());
 		}
-		return _sieges;
+		return sieges;
 	}
 	
 	/**
@@ -412,20 +407,20 @@ public class SiegeManager
 		private final int _castleId;
 		private int _hp;
 		
-		public SiegeSpawn(int castle_id, int x, int y, int z, int heading, int npc_id)
+		public SiegeSpawn(int castleId, int x, int y, int z, int heading, int npcId)
 		{
-			_castleId = castle_id;
+			_castleId = castleId;
 			_location = new Location(x, y, z, heading);
 			_heading = heading;
-			_npcId = npc_id;
+			_npcId = npcId;
 		}
 		
-		public SiegeSpawn(int castle_id, int x, int y, int z, int heading, int npc_id, int hp)
+		public SiegeSpawn(int castleId, int x, int y, int z, int heading, int npcId, int hp)
 		{
-			_castleId = castle_id;
+			_castleId = castleId;
 			_location = new Location(x, y, z, heading);
 			_heading = heading;
-			_npcId = npc_id;
+			_npcId = npcId;
 			_hp = hp;
 		}
 		

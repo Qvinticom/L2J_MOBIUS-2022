@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 public class MonsterRace
 {
 	private final NpcInstance[] _monsters;
-	private Constructor<?> _constructor;
 	private int[][] _speeds;
 	private final int[] _first;
 	private final int[] _second;
@@ -55,7 +54,6 @@ public class MonsterRace
 					if (_monsters[j].getTemplate().npcId == (id + random))
 					{
 						random = Rnd.get(24);
-						continue;
 					}
 				}
 				break;
@@ -63,9 +61,9 @@ public class MonsterRace
 			try
 			{
 				final NpcTemplate template = NpcTable.getInstance().getTemplate(id + random);
-				_constructor = Class.forName("org.l2jmobius.gameserver.model.actor.instance." + template.type + "Instance").getConstructors()[0];
+				Constructor<?> constructor = Class.forName("org.l2jmobius.gameserver.model.actor.instance." + template.type + "Instance").getConstructors()[0];
 				final int objectId = IdFactory.getInstance().getNextId();
-				_monsters[i] = (NpcInstance) _constructor.newInstance(objectId, template);
+				_monsters[i] = (NpcInstance) constructor.newInstance(objectId, template);
 			}
 			catch (Exception e)
 			{

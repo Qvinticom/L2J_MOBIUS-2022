@@ -18,6 +18,7 @@ package org.l2jmobius.loginserver.network.serverpackets;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:30:11 $
@@ -69,7 +70,7 @@ public abstract class ServerBasePacket
 		{
 			if (text != null)
 			{
-				_bao.write(text.getBytes("UTF-16LE"));
+				_bao.write(text.getBytes(StandardCharsets.UTF_16LE));
 			}
 		}
 		catch (Exception e)

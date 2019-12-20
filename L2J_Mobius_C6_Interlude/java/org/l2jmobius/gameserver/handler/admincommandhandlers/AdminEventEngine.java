@@ -279,7 +279,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				
 				int i = 0;
 				
-				while (GameEvent.participatingPlayers.size() > 0)
+				while (!GameEvent.participatingPlayers.isEmpty())
 				{
 					String target = getMaxLeveledPlayer();
 					
@@ -443,9 +443,9 @@ public class AdminEventEngine implements IAdminCommandHandler
 			
 			muestraNpcConInfoAPlayers(activeChar, GameEvent.id);
 			
-			PlaySound _snd = new PlaySound(1, "B03_F", 0, 0, 0, 0, 0);
-			activeChar.sendPacket(_snd);
-			activeChar.broadcastPacket(_snd);
+			PlaySound snd = new PlaySound(1, "B03_F", 0, 0, 0, 0, 0);
+			activeChar.sendPacket(snd);
+			activeChar.broadcastPacket(snd);
 			
 			NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 			
@@ -682,11 +682,11 @@ public class AdminEventEngine implements IAdminCommandHandler
 	void destroyEventNpcs()
 	{
 		NpcInstance npc;
-		while (GameEvent.npcs.size() > 0)
+		while (!GameEvent.npcs.isEmpty())
 		{
 			try
 			{
-				npc = (NpcInstance) World.getInstance().findObject(Integer.parseInt(GameEvent.npcs.getFirst()));
+				npc = (NpcInstance) World.getInstance().findObject(Integer.parseInt(GameEvent.npcs.get(0)));
 				Spawn spawn = npc.getSpawn();
 				
 				if (spawn != null)
@@ -696,11 +696,11 @@ public class AdminEventEngine implements IAdminCommandHandler
 				}
 				
 				npc.deleteMe();
-				GameEvent.npcs.removeFirst();
+				GameEvent.npcs.remove(0);
 			}
 			catch (Exception e)
 			{
-				GameEvent.npcs.removeFirst();
+				GameEvent.npcs.remove(0);
 			}
 		}
 	}

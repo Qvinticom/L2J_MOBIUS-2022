@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.actor.Playable;
 
 public class KnownListUpdateTaskManager
 {
-	protected static final Logger LOGGER = Logger.getLogger(DecayTaskManager.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(KnownListUpdateTaskManager.class.getName());
 	
 	public KnownListUpdateTaskManager()
 	{
@@ -89,7 +89,7 @@ public class KnownListUpdateTaskManager
 			}
 			if (forgetObjects)
 			{
-				object.getKnownList().forgetObjects(); // TODO
+				object.getKnownList().forgetObjects();
 				continue;
 			}
 			if ((object instanceof Playable) || fullUpdate)

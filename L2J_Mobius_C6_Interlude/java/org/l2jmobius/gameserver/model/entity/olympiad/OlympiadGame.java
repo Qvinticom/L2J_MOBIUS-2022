@@ -78,7 +78,7 @@ class OlympiadGame
 	public PlayerInstance _playerOne;
 	public PlayerInstance _playerTwo;
 	protected List<PlayerInstance> _players;
-	private int[] _stadiumPort;
+	private final int[] _stadiumPort;
 	private int x1;
 	private int y1;
 	private int z1;
@@ -86,9 +86,6 @@ class OlympiadGame
 	private int y2;
 	private int z2;
 	public int _stadiumID;
-	private SystemMessage _sm;
-	private SystemMessage _sm2;
-	private SystemMessage _sm3;
 	
 	protected OlympiadGame(int id, COMP_TYPE type, List<PlayerInstance> list)
 	{
@@ -125,7 +122,6 @@ class OlympiadGame
 		{
 			_aborted = true;
 			clearPlayers();
-			return;
 		}
 	}
 	
@@ -474,22 +470,23 @@ class OlympiadGame
 	
 	protected void sendMessageToPlayers(boolean toBattleBegin, int nsecond)
 	{
+		SystemMessage sm;
 		if (!toBattleBegin)
 		{
-			_sm = new SystemMessage(SystemMessageId.YOU_WILL_ENTER_THE_OLYMPIAD_STADIUM_IN_S1_SECOND_S);
+			sm = new SystemMessage(SystemMessageId.YOU_WILL_ENTER_THE_OLYMPIAD_STADIUM_IN_S1_SECOND_S);
 		}
 		else
 		{
-			_sm = new SystemMessage(SystemMessageId.THE_GAME_WILL_START_IN_S1_SECOND_S);
+			sm = new SystemMessage(SystemMessageId.THE_GAME_WILL_START_IN_S1_SECOND_S);
 		}
 		
-		_sm.addNumber(nsecond);
+		sm.addNumber(nsecond);
 		
 		for (PlayerInstance player : _players)
 		{
 			try
 			{
-				player.sendPacket(_sm);
+				player.sendPacket(sm);
 			}
 			catch (Exception e)
 			{
@@ -584,7 +581,7 @@ class OlympiadGame
 		
 		try
 		{
-			if ((_playerOne != null) && (_playerOne.getOlympiadGameId() != -1))
+			if (_playerOne.getOlympiadGameId() != -1)
 			{
 				playerOneHp = _playerOne.getCurrentHp();
 			}
@@ -598,7 +595,7 @@ class OlympiadGame
 		double playerTwoHp = 0;
 		try
 		{
-			if ((_playerTwo != null) && (_playerTwo.getOlympiadGameId() != -1))
+			if (_playerTwo.getOlympiadGameId() != -1)
 			{
 				playerTwoHp = _playerTwo.getCurrentHp();
 			}
@@ -609,12 +606,7 @@ class OlympiadGame
 			playerTwoHp = 0;
 		}
 		
-		if ((playerTwoHp <= 0) || (playerOneHp <= 0))
-		{
-			return true;
-		}
-		
-		return false;
+		return (playerTwoHp <= 0) || (playerOneHp <= 0);
 	}
 	
 	protected void validateWinner()
@@ -627,23 +619,23 @@ class OlympiadGame
 		final boolean _pOneCrash = ((_playerOne == null) || _playerOneDisconnected);
 		final boolean _pTwoCrash = ((_playerTwo == null) || _playerTwoDisconnected);
 		
-		int _div;
-		int _gpreward;
+		int div;
+		int gpReward;
 		
 		String classed;
 		switch (_type)
 		{
 			case NON_CLASSED:
 			{
-				_div = 5;
-				_gpreward = Config.ALT_OLY_NONCLASSED_RITEM_C;
+				div = 5;
+				gpReward = Config.ALT_OLY_NONCLASSED_RITEM_C;
 				classed = "no";
 				break;
 			}
 			default:
 			{
-				_div = 3;
-				_gpreward = Config.ALT_OLY_CLASSED_RITEM_C;
+				div = 3;
+				gpReward = Config.ALT_OLY_CLASSED_RITEM_C;
 				classed = "yes";
 				break;
 			}
@@ -663,7 +655,7 @@ class OlympiadGame
 		
 		final int playerOnePoints = playerOneStat.getInt(POINTS);
 		final int playerTwoPoints = playerTwoStat.getInt(POINTS);
-		final int pointDiff = Math.min(playerOnePoints, playerTwoPoints) / _div;
+		final int pointDiff = Math.min(playerOnePoints, playerTwoPoints) / div;
 		
 		// Check for if a player defaulted before battle started
 		if (_playerOneDefaulted || _playerTwoDefaulted)
@@ -710,13 +702,13 @@ class OlympiadGame
 					playerTwoStat.set(POINTS, playerTwoPoints + pointDiff);
 					playerTwoStat.set(COMP_WON, playerTwoWon + 1);
 					
-					_sm = new SystemMessage(SystemMessageId.S1_HAS_WON_THE_GAME);
-					_sm2 = new SystemMessage(SystemMessageId.S1_HAS_GAINED_S2_OLYMPIAD_POINTS);
-					_sm.addString(_playerTwoName);
-					broadcastMessage(_sm, true);
-					_sm2.addString(_playerTwoName);
-					_sm2.addNumber(pointDiff);
-					broadcastMessage(_sm2, false);
+					SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_WON_THE_GAME);
+					SystemMessage sm2 = new SystemMessage(SystemMessageId.S1_HAS_GAINED_S2_OLYMPIAD_POINTS);
+					sm.addString(_playerTwoName);
+					broadcastMessage(sm, true);
+					sm2.addString(_playerTwoName);
+					sm2.addNumber(pointDiff);
+					broadcastMessage(sm2, false);
 				}
 				catch (Exception e)
 				{
@@ -735,13 +727,13 @@ class OlympiadGame
 					playerOneStat.set(POINTS, playerOnePoints + pointDiff);
 					playerOneStat.set(COMP_WON, playerOneWon + 1);
 					
-					_sm = new SystemMessage(SystemMessageId.S1_HAS_WON_THE_GAME);
-					_sm2 = new SystemMessage(SystemMessageId.S1_HAS_GAINED_S2_OLYMPIAD_POINTS);
-					_sm.addString(_playerOneName);
-					broadcastMessage(_sm, true);
-					_sm2.addString(_playerOneName);
-					_sm2.addNumber(pointDiff);
-					broadcastMessage(_sm2, false);
+					SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_WON_THE_GAME);
+					SystemMessage sm2 = new SystemMessage(SystemMessageId.S1_HAS_GAINED_S2_OLYMPIAD_POINTS);
+					sm.addString(_playerOneName);
+					broadcastMessage(sm, true);
+					sm2.addString(_playerOneName);
+					sm2.addNumber(pointDiff);
+					broadcastMessage(sm2, false);
 				}
 				catch (Exception e)
 				{
@@ -786,9 +778,9 @@ class OlympiadGame
 			playerTwoHp = _playerTwo.getCurrentHp() + _playerTwo.getCurrentCp();
 		}
 		
-		_sm = new SystemMessage(SystemMessageId.S1_HAS_WON_THE_GAME);
-		_sm2 = new SystemMessage(SystemMessageId.S1_HAS_GAINED_S2_OLYMPIAD_POINTS);
-		_sm3 = new SystemMessage(SystemMessageId.S1_HAS_LOST_S2_OLYMPIAD_POINTS);
+		SystemMessage sm1 = new SystemMessage(SystemMessageId.S1_HAS_WON_THE_GAME);
+		SystemMessage sm2 = new SystemMessage(SystemMessageId.S1_HAS_GAINED_S2_OLYMPIAD_POINTS);
+		SystemMessage sm3 = new SystemMessage(SystemMessageId.S1_HAS_LOST_S2_OLYMPIAD_POINTS);
 		
 		String winner = "draw";
 		
@@ -796,8 +788,8 @@ class OlympiadGame
 		{
 			playerOneStat.set(COMP_DRAWN, playerOneDrawn + 1);
 			playerTwoStat.set(COMP_DRAWN, playerTwoDrawn + 1);
-			_sm = new SystemMessage(SystemMessageId.THE_GAME_ENDED_IN_A_TIE);
-			broadcastMessage(_sm, true);
+			sm1 = new SystemMessage(SystemMessageId.THE_GAME_ENDED_IN_A_TIE);
+			broadcastMessage(sm1, true);
 		}
 		else if ((_playerTwo == null) || (_playerTwo.isOnline() == 0) || ((playerTwoHp == 0) && (playerOneHp != 0)) || ((_damageP1 > _damageP2) && (playerTwoHp != 0) && (playerOneHp != 0)))
 		{
@@ -806,26 +798,26 @@ class OlympiadGame
 			playerOneStat.set(COMP_WON, playerOneWon + 1);
 			playerTwoStat.set(COMP_LOST, playerTwoLost + 1);
 			
-			_sm.addString(_playerOneName);
-			broadcastMessage(_sm, true);
-			_sm2.addString(_playerOneName);
-			_sm2.addNumber(pointDiff);
-			broadcastMessage(_sm2, false);
-			_sm3.addString(_playerTwoName);
-			_sm3.addNumber(pointDiff);
-			broadcastMessage(_sm3, false);
+			sm1.addString(_playerOneName);
+			broadcastMessage(sm1, true);
+			sm2.addString(_playerOneName);
+			sm2.addNumber(pointDiff);
+			broadcastMessage(sm2, false);
+			sm3.addString(_playerTwoName);
+			sm3.addNumber(pointDiff);
+			broadcastMessage(sm3, false);
 			winner = _playerOneName + " won";
 			
 			try
 			{
-				final ItemInstance item = _playerOne.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, _gpreward, _playerOne, null);
+				final ItemInstance item = _playerOne.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, gpReward, _playerOne, null);
 				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addModifiedItem(item);
 				_playerOne.sendPacket(iu);
 				
 				final SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
 				sm.addItemName(item.getItemId());
-				sm.addNumber(_gpreward);
+				sm.addNumber(gpReward);
 				_playerOne.sendPacket(sm);
 			}
 			catch (Exception e)
@@ -840,26 +832,26 @@ class OlympiadGame
 			playerTwoStat.set(COMP_WON, playerTwoWon + 1);
 			playerOneStat.set(COMP_LOST, playerOneLost + 1);
 			
-			_sm.addString(_playerTwoName);
-			broadcastMessage(_sm, true);
-			_sm2.addString(_playerTwoName);
-			_sm2.addNumber(pointDiff);
-			broadcastMessage(_sm2, false);
-			_sm3.addString(_playerOneName);
-			_sm3.addNumber(pointDiff);
-			broadcastMessage(_sm3, false);
+			sm1.addString(_playerTwoName);
+			broadcastMessage(sm1, true);
+			sm2.addString(_playerTwoName);
+			sm2.addNumber(pointDiff);
+			broadcastMessage(sm2, false);
+			sm3.addString(_playerOneName);
+			sm3.addNumber(pointDiff);
+			broadcastMessage(sm3, false);
 			winner = _playerTwoName + " won";
 			
 			try
 			{
-				final ItemInstance item = _playerTwo.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, _gpreward, _playerTwo, null);
+				final ItemInstance item = _playerTwo.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, gpReward, _playerTwo, null);
 				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addModifiedItem(item);
 				_playerTwo.sendPacket(iu);
 				
 				final SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
 				sm.addItemName(item.getItemId());
-				sm.addNumber(_gpreward);
+				sm.addNumber(gpReward);
 				_playerTwo.sendPacket(sm);
 			}
 			catch (Exception e)
@@ -869,22 +861,22 @@ class OlympiadGame
 		}
 		else
 		{
-			_sm = new SystemMessage(SystemMessageId.THE_GAME_ENDED_IN_A_TIE);
-			broadcastMessage(_sm, true);
+			sm1 = new SystemMessage(SystemMessageId.THE_GAME_ENDED_IN_A_TIE);
+			broadcastMessage(sm1, true);
 			final int pointOneDiff = playerOnePoints / 5;
 			final int pointTwoDiff = playerTwoPoints / 5;
 			playerOneStat.set(POINTS, playerOnePoints - pointOneDiff);
 			playerTwoStat.set(POINTS, playerTwoPoints - pointTwoDiff);
 			playerOneStat.set(COMP_DRAWN, playerOneDrawn + 1);
 			playerTwoStat.set(COMP_DRAWN, playerTwoDrawn + 1);
-			_sm2 = new SystemMessage(SystemMessageId.S1_HAS_LOST_S2_OLYMPIAD_POINTS);
-			_sm2.addString(_playerOneName);
-			_sm2.addNumber(pointOneDiff);
-			broadcastMessage(_sm2, false);
-			_sm3 = new SystemMessage(SystemMessageId.S1_HAS_LOST_S2_OLYMPIAD_POINTS);
-			_sm3.addString(_playerTwoName);
-			_sm3.addNumber(pointTwoDiff);
-			broadcastMessage(_sm3, false);
+			sm2 = new SystemMessage(SystemMessageId.S1_HAS_LOST_S2_OLYMPIAD_POINTS);
+			sm2.addString(_playerOneName);
+			sm2.addNumber(pointOneDiff);
+			broadcastMessage(sm2, false);
+			sm3 = new SystemMessage(SystemMessageId.S1_HAS_LOST_S2_OLYMPIAD_POINTS);
+			sm3.addString(_playerTwoName);
+			sm3.addNumber(pointTwoDiff);
+			broadcastMessage(sm3, false);
 		}
 		
 		playerOneStat.set(COMP_DONE, playerOnePlayed + 1);
@@ -897,9 +889,9 @@ class OlympiadGame
 		
 		for (int i = 15; i > 5; i -= 5)
 		{
-			_sm = new SystemMessage(SystemMessageId.YOU_WILL_GO_BACK_TO_THE_VILLAGE_IN_S1_SECOND_S);
-			_sm.addNumber(i);
-			broadcastMessage(_sm, false);
+			sm1 = new SystemMessage(SystemMessageId.YOU_WILL_GO_BACK_TO_THE_VILLAGE_IN_S1_SECOND_S);
+			sm1.addNumber(i);
+			broadcastMessage(sm1, false);
 			try
 			{
 				Thread.sleep(5000);
@@ -910,9 +902,9 @@ class OlympiadGame
 		}
 		for (int i = 5; i > 0; i--)
 		{
-			_sm = new SystemMessage(SystemMessageId.YOU_WILL_GO_BACK_TO_THE_VILLAGE_IN_S1_SECOND_S);
-			_sm.addNumber(i);
-			broadcastMessage(_sm, false);
+			sm1 = new SystemMessage(SystemMessageId.YOU_WILL_GO_BACK_TO_THE_VILLAGE_IN_S1_SECOND_S);
+			sm1.addNumber(i);
+			broadcastMessage(sm1, false);
 			try
 			{
 				Thread.sleep(1000);
@@ -930,8 +922,8 @@ class OlympiadGame
 			return false;
 		}
 		
-		_sm = new SystemMessage(SystemMessageId.STARTS_THE_GAME);
-		broadcastMessage(_sm, true);
+		SystemMessage sm = new SystemMessage(SystemMessageId.STARTS_THE_GAME);
+		broadcastMessage(sm, true);
 		
 		for (PlayerInstance player : _players)
 		{
@@ -1105,7 +1097,7 @@ class OlympiadGameTask implements Runnable
 		}
 		catch (InterruptedException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 		
 		// Put the status back to 2 (fighting mode on olympiad)
@@ -1118,14 +1110,9 @@ class OlympiadGameTask implements Runnable
 	
 	protected boolean checkBattleStatus()
 	{
-		final boolean _pOneCrash = ((_game._playerOne == null) || _game._playerOneDisconnected);
-		final boolean _pTwoCrash = ((_game._playerTwo == null) || _game._playerTwoDisconnected);
-		if (_pOneCrash || _pTwoCrash || _game._aborted)
-		{
-			return false;
-		}
-		
-		return true;
+		final boolean pOneCrash = ((_game._playerOne == null) || _game._playerOneDisconnected);
+		final boolean pTwoCrash = ((_game._playerTwo == null) || _game._playerTwoDisconnected);
+		return !pOneCrash && !pTwoCrash && !_game._aborted;
 	}
 	
 	protected boolean checkDefaulted()
@@ -1219,7 +1206,7 @@ class OlympiadGameTask implements Runnable
 				}
 				catch (Exception e)
 				{
-					e.printStackTrace();
+					LOGGER.warning(e.toString());
 				}
 			}
 			

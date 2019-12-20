@@ -31,7 +31,7 @@ import org.l2jmobius.Config;
  */
 public abstract class FloodProtectedListener extends Thread
 {
-	private final Logger LOGGER = Logger.getLogger(FloodProtectedListener.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FloodProtectedListener.class.getName());
 	private final Map<String, ForeignConnection> _floodProtection = new HashMap<>();
 	private final String _listenIp;
 	private final int _port;
@@ -180,7 +180,7 @@ public abstract class FloodProtectedListener extends Thread
 		}
 		catch (IOException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 }

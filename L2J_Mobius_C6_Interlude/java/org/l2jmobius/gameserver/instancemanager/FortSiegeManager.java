@@ -88,7 +88,7 @@ public class FortSiegeManager
 	 */
 	public boolean checkIfOkToSummon(Creature creature, boolean isCheckOnly)
 	{
-		if ((creature == null) || !(creature instanceof PlayerInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return false;
 		}
@@ -197,8 +197,8 @@ public class FortSiegeManager
 			
 			for (Fort fort : FortManager.getInstance().getForts())
 			{
-				final List<SiegeSpawn> _commanderSpawns = new ArrayList<>();
-				final List<SiegeSpawn> _flagSpawns = new ArrayList<>();
+				final List<SiegeSpawn> commanderSpawns = new ArrayList<>();
+				final List<SiegeSpawn> flagSpawns = new ArrayList<>();
 				
 				for (int i = 1; i < 5; i++)
 				{
@@ -219,7 +219,7 @@ public class FortSiegeManager
 						final int heading = Integer.parseInt(st.nextToken());
 						final int npc_id = Integer.parseInt(st.nextToken());
 						
-						_commanderSpawns.add(new SiegeSpawn(fort.getFortId(), x, y, z, heading, npc_id));
+						commanderSpawns.add(new SiegeSpawn(fort.getFortId(), x, y, z, heading, npc_id));
 					}
 					catch (Exception e)
 					{
@@ -227,7 +227,7 @@ public class FortSiegeManager
 					}
 				}
 				
-				_commanderSpawnList.put(fort.getFortId(), _commanderSpawns);
+				_commanderSpawnList.put(fort.getFortId(), commanderSpawns);
 				
 				for (int i = 1; i < 4; i++)
 				{
@@ -247,20 +247,19 @@ public class FortSiegeManager
 						final int z = Integer.parseInt(st.nextToken());
 						final int flag_id = Integer.parseInt(st.nextToken());
 						
-						_flagSpawns.add(new SiegeSpawn(fort.getFortId(), x, y, z, 0, flag_id));
+						flagSpawns.add(new SiegeSpawn(fort.getFortId(), x, y, z, 0, flag_id));
 					}
 					catch (Exception e)
 					{
 						LOGGER.warning("Error while loading flag(s) for " + fort.getName() + " fort.");
 					}
 				}
-				_flagList.put(fort.getFortId(), _flagSpawns);
+				_flagList.put(fort.getFortId(), flagSpawns);
 			}
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Error while loading fortsiege data.");
-			e.printStackTrace();
+			LOGGER.warning("Error while loading fortsiege data. " + e.getMessage());
 		}
 		finally
 		{
@@ -272,26 +271,26 @@ public class FortSiegeManager
 				}
 				catch (IOException e)
 				{
-					e.printStackTrace();
+					LOGGER.warning("Error while loading fortsiege data. " + e.getMessage());
 				}
 			}
 		}
 	}
 	
-	public List<SiegeSpawn> getCommanderSpawnList(int _fortId)
+	public List<SiegeSpawn> getCommanderSpawnList(int fortId)
 	{
-		if (_commanderSpawnList.containsKey(_fortId))
+		if (_commanderSpawnList.containsKey(fortId))
 		{
-			return _commanderSpawnList.get(_fortId);
+			return _commanderSpawnList.get(fortId);
 		}
 		return null;
 	}
 	
-	public List<SiegeSpawn> getFlagList(int _fortId)
+	public List<SiegeSpawn> getFlagList(int fortId)
 	{
-		if (_flagList.containsKey(_fortId))
+		if (_flagList.containsKey(fortId))
 		{
-			return _flagList.get(_fortId);
+			return _flagList.get(fortId);
 		}
 		return null;
 	}
@@ -393,20 +392,20 @@ public class FortSiegeManager
 		private final int _fortId;
 		private int _hp;
 		
-		public SiegeSpawn(int fort_id, int x, int y, int z, int heading, int npc_id)
+		public SiegeSpawn(int fortId, int x, int y, int z, int heading, int npcId)
 		{
-			_fortId = fort_id;
+			_fortId = fortId;
 			_location = new Location(x, y, z, heading);
 			_heading = heading;
-			_npcId = npc_id;
+			_npcId = npcId;
 		}
 		
-		public SiegeSpawn(int fort_id, int x, int y, int z, int heading, int npc_id, int hp)
+		public SiegeSpawn(int fortId, int x, int y, int z, int heading, int npcId, int hp)
 		{
-			_fortId = fort_id;
+			_fortId = fortId;
 			_location = new Location(x, y, z, heading);
 			_heading = heading;
-			_npcId = npc_id;
+			_npcId = npcId;
 			_hp = hp;
 		}
 		

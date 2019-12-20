@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminCreateItem implements IAdminCommandHandler
 {
-	private static Logger LOGGER = Logger.getLogger(AdminCreateItem.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AdminCreateItem.class.getName());
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_l2jmobius",
@@ -214,7 +214,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			}
 		}
 		
-		PlayerInstance Player = null;
+		PlayerInstance player = null;
 		
 		if (activeChar.getTarget() != null)
 		{
@@ -222,7 +222,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			{
 				if (activeChar.getAccessLevel().getLevel() > 70)
 				{
-					Player = (PlayerInstance) activeChar.getTarget();
+					player = (PlayerInstance) activeChar.getTarget();
 				}
 				else
 				{
@@ -237,23 +237,23 @@ public class AdminCreateItem implements IAdminCommandHandler
 			}
 		}
 		
-		if (Player == null)
+		if (player == null)
 		{
 			activeChar.setTarget(activeChar);
-			Player = activeChar;
+			player = activeChar;
 		}
 		
-		Player.getInventory().addItem("Admin", id, num, Player, null);
-		ItemList il = new ItemList(Player, true);
-		Player.sendPacket(il);
-		if (activeChar.getName().equalsIgnoreCase(Player.getName()))
+		player.getInventory().addItem("Admin", id, num, player, null);
+		ItemList il = new ItemList(player, true);
+		player.sendPacket(il);
+		if (activeChar.getName().equalsIgnoreCase(player.getName()))
 		{
 			BuilderUtil.sendSysMessage(activeChar, "You have spawned " + num + " item(s) number " + id + " in your inventory.");
 		}
 		else
 		{
-			BuilderUtil.sendSysMessage(activeChar, "You have spawned " + num + " item(s) number " + id + " in " + Player.getName() + "'s inventory.");
-			Player.sendMessage("Admin has spawned " + num + " item(s) number " + id + " in your inventory.");
+			BuilderUtil.sendSysMessage(activeChar, "You have spawned " + num + " item(s) number " + id + " in " + player.getName() + "'s inventory.");
+			player.sendMessage("Admin has spawned " + num + " item(s) number " + id + " in your inventory.");
 		}
 	}
 	

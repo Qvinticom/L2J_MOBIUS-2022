@@ -19,6 +19,7 @@ package org.l2jmobius.commons.crypt;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.concurrent.ScheduledFuture;
+import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -30,6 +31,8 @@ import org.l2jmobius.gameserver.network.serverpackets.GameGuardQuery;
  */
 public class nProtect
 {
+	private static final Logger LOGGER = Logger.getLogger(nProtect.class.getName());
+	
 	public enum RestrictionType
 	{
 		RESTRICT_ENTER,
@@ -40,10 +43,6 @@ public class nProtect
 	
 	public class nProtectAccessor
 	{
-		public nProtectAccessor()
-		{
-		}
-		
 		public void setCheckGameGuardQuery(Method m)
 		{
 			_checkGameGuardQuery = m;
@@ -107,7 +106,7 @@ public class nProtect
 		}
 		catch (SecurityException | InvocationTargetException | IllegalAccessException | IllegalArgumentException | NoSuchMethodException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning("Ptoblem with nProtect: " + e.getMessage());
 		}
 	}
 	
@@ -122,7 +121,7 @@ public class nProtect
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning("Ptoblem with nProtect: " + e.getMessage());
 		}
 	}
 	
@@ -137,7 +136,7 @@ public class nProtect
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning("Ptoblem with nProtect: " + e.getMessage());
 		}
 		return true;
 	}
@@ -153,7 +152,7 @@ public class nProtect
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning("Ptoblem with nProtect: " + e.getMessage());
 		}
 		return null;
 	}
@@ -168,7 +167,7 @@ public class nProtect
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
+				LOGGER.warning("Ptoblem with nProtect: " + e.getMessage());
 			}
 		}
 	}
@@ -183,6 +182,7 @@ public class nProtect
 			}
 			catch (Exception e)
 			{
+				// Ignore.
 			}
 		}
 	}
@@ -198,7 +198,7 @@ public class nProtect
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning("Ptoblem with nProtect: " + e.getMessage());
 		}
 		return true;
 	}

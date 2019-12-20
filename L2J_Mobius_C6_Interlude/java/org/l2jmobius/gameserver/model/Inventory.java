@@ -87,7 +87,7 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyUnequiped(int slot, ItemInstance item)
 		{
-			if (((getOwner() == null) || !(getOwner() instanceof PlayerInstance)))
+			if (!(getOwner() instanceof PlayerInstance))
 			{
 				return;
 			}
@@ -102,7 +102,7 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyEquiped(int slot, ItemInstance item)
 		{
-			if (((getOwner() == null) || !(getOwner() instanceof PlayerInstance)))
+			if (!(getOwner() instanceof PlayerInstance))
 			{
 				return;
 			}
@@ -125,10 +125,10 @@ public abstract class Inventory extends ItemContainer
 				unEquipItemInSlot(PAPERDOLL_LHAND);
 				unEquipItemInSlot(PAPERDOLL_LRHAND);
 			}
-			else if (!owner.isWearingFormalWear())
-			{
-				return;
-			}
+			// else if (!owner.isWearingFormalWear())
+			// {
+			// return;
+			// }
 		}
 	}
 	
@@ -206,16 +206,13 @@ public abstract class Inventory extends ItemContainer
 				
 				PlayerInstance player = null;
 				Skill skill = null;
-				if (item.getItemId() == 9140)
+				if ((item.getItemId() == 9140) && (getOwner() instanceof PlayerInstance))
 				{
-					if (getOwner() instanceof PlayerInstance)
-					{
-						player = (PlayerInstance) getOwner();
-						
-						skill = SkillTable.getInstance().getInfo(3261, 1);
-						player.removeSkill(skill);
-						player.sendSkillList();
-					}
+					player = (PlayerInstance) getOwner();
+					
+					skill = SkillTable.getInstance().getInfo(3261, 1);
+					player.removeSkill(skill);
+					player.sendSkillList();
 				}
 			}
 		}
@@ -239,16 +236,13 @@ public abstract class Inventory extends ItemContainer
 				
 				PlayerInstance player = null;
 				Skill skill = null;
-				if (item.getItemId() == 9140)
+				if ((item.getItemId() == 9140) && (getOwner() instanceof PlayerInstance))
 				{
-					if (getOwner() instanceof PlayerInstance)
-					{
-						player = (PlayerInstance) getOwner();
-						
-						skill = SkillTable.getInstance().getInfo(3261, 1);
-						player.addSkill(skill, false);
-						player.sendSkillList();
-					}
+					player = (PlayerInstance) getOwner();
+					
+					skill = SkillTable.getInstance().getInfo(3261, 1);
+					player.addSkill(skill, false);
+					player.sendSkillList();
 				}
 			}
 		}
@@ -368,22 +362,16 @@ public abstract class Inventory extends ItemContainer
 				passiveSkill = ((Armor) it).getSkill();
 			}
 			
-			if (passiveSkill != null)
+			if ((passiveSkill != null) && (!passiveSkill.isSingleEffect() || (player.getInventory().checkHowManyEquipped(item.getItemId()) == 1)))
 			{
-				if (!passiveSkill.is_singleEffect() || (player.getInventory().checkHowManyEquipped(item.getItemId()) == 1))
-				{
-					player.addSkill(passiveSkill, false);
-					player.sendSkillList();
-				}
+				player.addSkill(passiveSkill, false);
+				player.sendSkillList();
 			}
 			
-			if (enchant4Skill != null)
+			if ((enchant4Skill != null) && (!enchant4Skill.isSingleEffect() || (player.getInventory().checkHowManyEquipped(item.getItemId()) == 1)))
 			{
-				if (!enchant4Skill.is_singleEffect() || (player.getInventory().checkHowManyEquipped(item.getItemId()) == 1))
-				{
-					player.addSkill(enchant4Skill, false);
-					player.sendSkillList();
-				}
+				player.addSkill(enchant4Skill, false);
+				player.sendSkillList();
 			}
 		}
 	}
@@ -935,12 +923,9 @@ public abstract class Inventory extends ItemContainer
 					listener.notifyUnequiped(slot, old);
 				}
 				
-				if (old.isAugmented())
+				if (old.isAugmented() && (getOwner() != null) && (getOwner() instanceof PlayerInstance))
 				{
-					if ((getOwner() != null) && (getOwner() instanceof PlayerInstance))
-					{
-						old.getAugmentation().removeBonus((PlayerInstance) getOwner());
-					}
+					old.getAugmentation().removeBonus((PlayerInstance) getOwner());
 				}
 				
 				old.updateDatabase();
@@ -1293,16 +1278,12 @@ public abstract class Inventory extends ItemContainer
 			final PlayerInstance player = (PlayerInstance) getOwner();
 			
 			// Like L2OFF weapon hero and crown aren't removed after restart
-			if (!player.isGM())
+			if (!player.isGM() && !player.isHero())
 			{
-				if (!player.isHero())
+				final int itemId = item.getItemId();
+				if (((itemId >= 6611) && (itemId <= 6621)) || (itemId == 6842))
 				{
-					final int itemId = item.getItemId();
-					
-					if (((itemId >= 6611) && (itemId <= 6621)) || (itemId == 6842))
-					{
-						return;
-					}
+					return;
 				}
 			}
 		}
@@ -1615,17 +1596,12 @@ public abstract class Inventory extends ItemContainer
 				if (getOwner() instanceof PlayerInstance)
 				{
 					PlayerInstance player = (PlayerInstance) getOwner();
-					
-					if (!player.isGM())
+					if (!player.isGM() && !player.isHero())
 					{
-						if (!player.isHero())
+						final int itemId = item.getItemId();
+						if (((itemId >= 6611) && (itemId <= 6621)) || (itemId == 6842))
 						{
-							final int itemId = item.getItemId();
-							
-							if (((itemId >= 6611) && (itemId <= 6621)) || (itemId == 6842))
-							{
-								item.setLocation(ItemLocation.INVENTORY);
-							}
+							item.setLocation(ItemLocation.INVENTORY);
 						}
 					}
 				}
@@ -1649,8 +1625,7 @@ public abstract class Inventory extends ItemContainer
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Could not restore inventory : ");
-			e.printStackTrace();
+			LOGGER.warning("Could not restore inventory : " + e);
 		}
 	}
 	

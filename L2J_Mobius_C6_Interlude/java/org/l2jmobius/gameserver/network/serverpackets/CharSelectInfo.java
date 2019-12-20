@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  */
 public class CharSelectInfo extends GameServerPacket
 {
-	private static Logger LOGGER = Logger.getLogger(CharSelectInfo.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(CharSelectInfo.class.getName());
 	
 	private final String _loginName;
 	
@@ -239,7 +239,7 @@ public class CharSelectInfo extends GameServerPacket
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 		
 		return characterList.toArray(new CharSelectInfoPackage[characterList.size()]);
@@ -247,12 +247,12 @@ public class CharSelectInfo extends GameServerPacket
 		// return new CharSelectInfoPackage[0];
 	}
 	
-	private void loadCharacterSubclassInfo(CharSelectInfoPackage charInfopackage, int ObjectId, int activeClassId)
+	private void loadCharacterSubclassInfo(CharSelectInfoPackage charInfopackage, int objectId, int activeClassId)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT exp, sp, level FROM character_subclasses WHERE char_obj_id=? && class_id=? ORDER BY char_obj_id");
-			statement.setInt(1, ObjectId);
+			statement.setInt(1, objectId);
 			statement.setInt(2, activeClassId);
 			final ResultSet charList = statement.executeQuery();
 			
@@ -268,7 +268,7 @@ public class CharSelectInfo extends GameServerPacket
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -278,20 +278,17 @@ public class CharSelectInfo extends GameServerPacket
 		
 		// See if the char must be deleted
 		final long deletetime = chardata.getLong("deletetime");
-		if (deletetime > 0)
+		if ((deletetime > 0) && (System.currentTimeMillis() > deletetime))
 		{
-			if (System.currentTimeMillis() > deletetime)
+			final PlayerInstance cha = PlayerInstance.load(objectId);
+			final Clan clan = cha.getClan();
+			if (clan != null)
 			{
-				final PlayerInstance cha = PlayerInstance.load(objectId);
-				final Clan clan = cha.getClan();
-				if (clan != null)
-				{
-					clan.removeClanMember(cha.getName(), 0);
-				}
-				
-				GameClient.deleteCharByObjId(objectId);
-				return null;
+				clan.removeClanMember(cha.getName(), 0);
 			}
+			
+			GameClient.deleteCharByObjId(objectId);
+			return null;
 		}
 		
 		final String name = chardata.getString("char_name");

@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.communitybbs.Manager.TopicBBSManager;
 
 public class Topic
 {
-	private static Logger LOGGER = Logger.getLogger(Topic.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Topic.class.getName());
 	public static final int MORMAL = 0;
 	public static final int MEMO = 1;
 	
@@ -47,9 +47,9 @@ public class Topic
 	 * @param oname
 	 * @param oid
 	 * @param type
-	 * @param Creply
+	 * @param cReply
 	 */
-	public Topic(ConstructorType ct, int id, int fid, String name, long date, String oname, int oid, int type, int Creply)
+	public Topic(ConstructorType ct, int id, int fid, String name, long date, String oname, int oid, int type, int cReply)
 	{
 		_id = id;
 		_forumId = fid;
@@ -58,7 +58,7 @@ public class Topic
 		_ownerName = oname;
 		_ownerId = oid;
 		_type = type;
-		_cReply = Creply;
+		_cReply = cReply;
 		TopicBBSManager.getInstance().addTopic(this);
 		
 		if (ct == ConstructorType.CREATE)

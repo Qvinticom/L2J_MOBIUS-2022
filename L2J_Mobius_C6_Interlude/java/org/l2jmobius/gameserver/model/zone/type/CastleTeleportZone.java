@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.model.zone.type;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Rnd;
@@ -30,10 +29,7 @@ import org.l2jmobius.gameserver.model.zone.ZoneType;
 
 public class CastleTeleportZone extends ZoneType
 {
-	
-	private final int _spawnLoc[];
-	private int _castleId;
-	private Castle _castle;
+	private final int[] _spawnLoc;
 	
 	public CastleTeleportZone(int id)
 	{
@@ -48,9 +44,9 @@ public class CastleTeleportZone extends ZoneType
 		{
 			case "castleId":
 			{
-				_castleId = Integer.parseInt(value);
-				_castle = CastleManager.getInstance().getCastleById(_castleId);
-				_castle.setTeleZone(this);
+				int castleId = Integer.parseInt(value);
+				Castle castle = CastleManager.getInstance().getCastleById(castleId);
+				castle.setTeleZone(this);
 				break;
 			}
 			case "spawnMinX":
@@ -111,18 +107,13 @@ public class CastleTeleportZone extends ZoneType
 	public List<Creature> getAllPlayers()
 	{
 		final List<Creature> players = new ArrayList<>();
-		Iterator<Creature> i$ = _characterList.values().iterator();
-		
-		while (i$.hasNext())
+		for (Creature creature : _characterList.values())
 		{
-			Creature temp = i$.next();
-			
-			if (temp instanceof PlayerInstance)
+			if (creature instanceof PlayerInstance)
 			{
-				players.add(temp);
+				players.add(creature);
 			}
 		}
-		
 		return players;
 	}
 	
@@ -138,11 +129,8 @@ public class CastleTeleportZone extends ZoneType
 			return;
 		}
 		
-		Iterator<Creature> i$ = _characterList.values().iterator();
-		while (i$.hasNext())
+		for (Creature creature : _characterList.values())
 		{
-			Creature creature = i$.next();
-			
 			if ((creature != null) && (creature instanceof PlayerInstance))
 			{
 				PlayerInstance player = (PlayerInstance) creature;

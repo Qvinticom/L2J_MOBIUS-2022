@@ -203,7 +203,7 @@ public class FortressOfResistance
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 		final RunBossSpawn rbs = new RunBossSpawn();
 		ThreadPool.schedule(rbs, 3600000); // 60 * 60 * 1000
@@ -241,7 +241,7 @@ public class FortressOfResistance
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 		
 		LOGGER.info("Fortress of Resistanse: Boss spawned!");
@@ -270,11 +270,7 @@ public class FortressOfResistance
 	
 	public boolean Conditions(PlayerInstance player)
 	{
-		if ((player != null) && (player.getClan() != null) && player.isClanLeader() && (player.getClan().getAuctionBiddedAt() <= 0) && (ClanHallManager.getInstance().getClanHallByOwner(player.getClan()) == null) && (player.getClan().getLevel() > 2))
-		{
-			return true;
-		}
-		return false;
+		return (player != null) && (player.getClan() != null) && player.isClanLeader() && (player.getClan().getAuctionBiddedAt() <= 0) && (ClanHallManager.getInstance().getClanHallByOwner(player.getClan()) == null) && (player.getClan().getLevel() > 2);
 	}
 	
 	protected class AnnounceInfo implements Runnable
@@ -304,13 +300,10 @@ public class FortressOfResistance
 		long tempMaxDamage = 0;
 		for (DamageInfo damageInfo : _clansDamageInfo.values())
 		{
-			if (damageInfo != null)
+			if ((damageInfo != null) && (damageInfo._damage > tempMaxDamage))
 			{
-				if (damageInfo._damage > tempMaxDamage)
-				{
-					tempMaxDamage = damageInfo._damage;
-					clanIdMaxDamage = damageInfo._clan;
-				}
+				tempMaxDamage = damageInfo._damage;
+				clanIdMaxDamage = damageInfo._clan;
 			}
 		}
 		if (clanIdMaxDamage != null)
@@ -363,7 +356,7 @@ public class FortressOfResistance
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	

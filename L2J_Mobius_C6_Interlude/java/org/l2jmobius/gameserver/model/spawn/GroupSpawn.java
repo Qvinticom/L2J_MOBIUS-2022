@@ -32,7 +32,7 @@ public class GroupSpawn extends Spawn
 	private final Constructor<?> _constructor;
 	private final NpcTemplate _template;
 	
-	public GroupSpawn(NpcTemplate mobTemplate) throws SecurityException, ClassNotFoundException, NoSuchMethodException
+	public GroupSpawn(NpcTemplate mobTemplate) throws ClassNotFoundException, NoSuchMethodException
 	{
 		super(mobTemplate);
 		_constructor = Class.forName("org.l2jmobius.gameserver.model.actor.instance.ControllableMobInstance").getConstructors()[0];
@@ -77,7 +77,7 @@ public class GroupSpawn extends Spawn
 					return null;
 				}
 				
-				final int p[] = TerritoryTable.getInstance().getRandomPoint(getLocation());
+				final int[] p = TerritoryTable.getInstance().getRandomPoint(getLocation());
 				newlocx = p[0];
 				newlocy = p[1];
 				newlocz = p[2];

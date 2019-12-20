@@ -26,7 +26,7 @@ public class Q076_SagaOfTheGrandKhavatari extends SagasSuperClass
 	public Q076_SagaOfTheGrandKhavatari()
 	{
 		super(76, "Saga of the Grand Khavatari");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			31339,
 			31624,
@@ -41,7 +41,7 @@ public class Q076_SagaOfTheGrandKhavatari extends SagasSuperClass
 			31659,
 			31290
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7539,
@@ -56,39 +56,39 @@ public class Q076_SagaOfTheGrandKhavatari extends SagasSuperClass
 			7099,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27293,
 			27226,
 			27284
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			114
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x30
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			161719,
 			124355,
 			124376
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-92823,
 			82155,
 			82127
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-1893,
 			-2803,
 			-2796
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

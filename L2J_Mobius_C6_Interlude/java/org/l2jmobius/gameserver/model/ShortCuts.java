@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
  */
 public class ShortCuts
 {
-	private static Logger LOGGER = Logger.getLogger(ShortCuts.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ShortCuts.class.getName());
 	
 	private final PlayerInstance _owner;
 	private final Map<Integer, ShortCut> _shortCuts = new TreeMap<>();
@@ -53,16 +53,11 @@ public class ShortCuts
 	public ShortCut getShortCut(int slot, int page)
 	{
 		ShortCut sc = _shortCuts.get(slot + (page * 12));
-		
 		// verify shortcut
-		if ((sc != null) && (sc.getType() == ShortCut.TYPE_ITEM))
+		if ((sc != null) && (sc.getType() == ShortCut.TYPE_ITEM) && (_owner.getInventory().getItemByObjectId(sc.getId()) == null))
 		{
-			if (_owner.getInventory().getItemByObjectId(sc.getId()) == null)
-			{
-				deleteShortCut(sc.getSlot(), sc.getPage());
-			}
+			deleteShortCut(sc.getSlot(), sc.getPage());
 		}
-		
 		return sc;
 	}
 	
@@ -191,7 +186,7 @@ public class ShortCuts
 				final int id = rset.getInt("shortcut_id");
 				final int level = rset.getInt("level");
 				
-				ShortCut sc = new ShortCut(slot, page, type, id, level, 1);
+				ShortCut sc = new ShortCut(slot, page, type, id, level);
 				_shortCuts.put(slot + (page * 12), sc);
 			}
 			
@@ -206,12 +201,9 @@ public class ShortCuts
 		// verify shortcuts
 		for (ShortCut sc : getAllShortCuts())
 		{
-			if (sc.getType() == ShortCut.TYPE_ITEM)
+			if ((sc.getType() == ShortCut.TYPE_ITEM) && (_owner.getInventory().getItemByObjectId(sc.getId()) == null))
 			{
-				if (_owner.getInventory().getItemByObjectId(sc.getId()) == null)
-				{
-					deleteShortCut(sc.getSlot(), sc.getPage());
-				}
+				deleteShortCut(sc.getSlot(), sc.getPage());
 			}
 		}
 	}

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
  */
 public class CharacterDelete extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(CharacterDelete.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(CharacterDelete.class.getName());
 	private int _charSlot;
 	
 	@Override

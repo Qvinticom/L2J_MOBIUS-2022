@@ -246,7 +246,7 @@ public class ArmorSet
 		final Inventory inv = player.getInventory();
 		
 		final ItemInstance shieldItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
-		return ((shieldItem != null) && _shield.contains(Integer.valueOf(shieldItem.getId())));
+		return ((shieldItem != null) && _shield.contains(shieldItem.getId()));
 	}
 	
 	public boolean containShield(int shieldId)
@@ -256,7 +256,7 @@ public class ArmorSet
 			return false;
 		}
 		
-		return _shield.contains(Integer.valueOf(shieldId));
+		return _shield.contains(shieldId);
 	}
 	
 	public List<SkillHolder> getShieldSkillId()

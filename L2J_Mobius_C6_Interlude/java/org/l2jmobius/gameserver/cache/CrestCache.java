@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.model.clan.Clan;
  */
 public class CrestCache
 {
-	private static Logger LOGGER = Logger.getLogger(CrestCache.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(CrestCache.class.getName());
 	
 	private final Map<Integer, byte[]> _cachePledge = new HashMap<>();
 	private final Map<Integer, byte[]> _cachePledgeLarge = new HashMap<>();
@@ -84,15 +84,15 @@ public class CrestCache
 					
 					if (file.getName().startsWith("Crest_Large_"))
 					{
-						_cachePledgeLarge.put(Integer.valueOf(file.getName().substring(12, file.getName().length() - 4)), content);
+						_cachePledgeLarge.put(Integer.parseInt(file.getName().substring(12, file.getName().length() - 4)), content);
 					}
 					else if (file.getName().startsWith("Crest_"))
 					{
-						_cachePledge.put(Integer.valueOf(file.getName().substring(6, file.getName().length() - 4)), content);
+						_cachePledge.put(Integer.parseInt(file.getName().substring(6, file.getName().length() - 4)), content);
 					}
 					else if (file.getName().startsWith("AllyCrest_"))
 					{
-						_cacheAlly.put(Integer.valueOf(file.getName().substring(10, file.getName().length() - 4)), content);
+						_cacheAlly.put(Integer.parseInt(file.getName().substring(10, file.getName().length() - 4)), content);
 					}
 					
 					_loadedFiles++;
@@ -112,7 +112,7 @@ public class CrestCache
 						}
 						catch (Exception e1)
 						{
-							e1.printStackTrace();
+							LOGGER.warning("Problem with CrestCache: " + e1.getMessage());
 						}
 					}
 				}
@@ -283,7 +283,7 @@ public class CrestCache
 				}
 				catch (IOException e)
 				{
-					e.printStackTrace();
+					LOGGER.warning("Problem with CrestCache: " + e.getMessage());
 				}
 			}
 		}
@@ -318,7 +318,7 @@ public class CrestCache
 				}
 				catch (IOException e)
 				{
-					e.printStackTrace();
+					LOGGER.warning("Problem with CrestCache: " + e.getMessage());
 				}
 			}
 		}
@@ -353,7 +353,7 @@ public class CrestCache
 				}
 				catch (IOException e)
 				{
-					e.printStackTrace();
+					LOGGER.warning("Problem with CrestCache: " + e.getMessage());
 				}
 			}
 		}

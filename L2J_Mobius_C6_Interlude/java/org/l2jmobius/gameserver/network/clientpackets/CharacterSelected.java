@@ -27,7 +27,8 @@ import org.l2jmobius.gameserver.network.serverpackets.CharSelected;
 @SuppressWarnings("unused")
 public class CharacterSelected extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(CharacterSelected.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(CharacterSelected.class.getName());
+	
 	private int _charSlot;
 	private int _unk1; // new in C4
 	private int _unk2;
@@ -90,7 +91,7 @@ public class CharacterSelected extends GameClientPacket
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
+				LOGGER.warning(e.toString());
 			}
 			finally
 			{

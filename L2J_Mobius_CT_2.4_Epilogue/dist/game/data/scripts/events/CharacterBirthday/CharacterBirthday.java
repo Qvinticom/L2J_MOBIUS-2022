@@ -95,7 +95,7 @@ public class CharacterBirthday extends AbstractNpcAI
 			now.setTimeInMillis(System.currentTimeMillis());
 			// Check if already received reward
 			String nextBirthday = st.get("Birthday");
-			if ((nextBirthday != null) && (Integer.valueOf(nextBirthday) > now.get(Calendar.YEAR)))
+			if ((nextBirthday != null) && (Integer.parseInt(nextBirthday) > now.get(Calendar.YEAR)))
 			{
 				htmltext = "32600-already.htm";
 			}

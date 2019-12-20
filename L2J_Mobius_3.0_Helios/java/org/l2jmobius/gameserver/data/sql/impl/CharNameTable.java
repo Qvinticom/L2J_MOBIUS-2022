@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class CharNameTable
 {
-	private static Logger LOGGER = Logger.getLogger(CharNameTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(CharNameTable.class.getName());
 	
 	private final Map<Integer, String> _chars = new ConcurrentHashMap<>();
 	private final Map<Integer, Integer> _accessLevels = new ConcurrentHashMap<>();

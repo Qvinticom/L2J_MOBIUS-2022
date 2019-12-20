@@ -91,11 +91,6 @@ public class SiegeNpcInstance extends FolkInstance
 	
 	private boolean validateCondition(PlayerInstance player)
 	{
-		if (getCastle().getSiege().getIsInProgress())
-		{
-			return false; // Busy because of siege
-		}
-		
-		return true;
+		return getCastle().getSiege().getIsInProgress();
 	}
 }

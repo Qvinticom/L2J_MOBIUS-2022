@@ -64,12 +64,9 @@ public class SiegeGuardKnownList extends AttackableKnownList
 			}
 			
 			// Check if player is not the defender
-			if ((player != null) && ((player.getClan() == null) || (getActiveChar().getCastle().getSiege().getAttackerClan(player.getClan()) != null)))
+			if ((player != null) && ((player.getClan() == null) || (getActiveChar().getCastle().getSiege().getAttackerClan(player.getClan()) != null)) && (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 			{
-				if (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
-				{
-					getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
-				}
+				getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
 			}
 		}
 		

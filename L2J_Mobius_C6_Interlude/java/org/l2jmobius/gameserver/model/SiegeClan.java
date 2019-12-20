@@ -67,9 +67,7 @@ public class SiegeClan
 		// delete false duplicates: if this flag got deleted, delete its copies too.
 		if (ret)
 		{
-			while (getFlag().remove(flag))
-			{
-			}
+			getFlag().remove(flag);
 		}
 		
 		// now delete nulls

@@ -165,9 +165,9 @@ public class QueenAnt extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		final Event event_enum = Event.valueOf(event);
+		final Event eventEnum = Event.valueOf(event);
 		
-		switch (event_enum)
+		switch (eventEnum)
 		{
 			case QUEEN_SPAWN:
 			{
@@ -179,13 +179,13 @@ public class QueenAnt extends Quest
 				GrandBossManager.getInstance().setBossStatus(QUEEN, LIVE);
 				GrandBossManager.getInstance().addBoss(queen);
 				spawnBoss(queen);
-			}
 				break;
+			}
 			case LARVA_DESPAWN:
 			{
 				_larva.decayMe();
-			}
 				break;
+			}
 			case NURSES_SPAWN:
 			{
 				final int radius = 400;
@@ -196,8 +196,8 @@ public class QueenAnt extends Quest
 					_nurses.add((MonsterInstance) addSpawn(NURSE, npc.getX() + x, npc.getY() + y, npc.getZ(), 0, false, 0));
 					_nurses.get(i).setIsAttackDisabled(true);
 				}
-			}
 				break;
+			}
 			case SPAWN_ROYAL:
 			{
 				final int radius = 400;
@@ -207,17 +207,18 @@ public class QueenAnt extends Quest
 					final int y = (int) (radius * Math.sin(i * .7854));
 					_minions.add((MonsterInstance) addSpawn(ROYAL, npc.getX() + x, npc.getY() + y, npc.getZ(), 0, false, 0));
 				}
-			}
 				break;
+			}
 			case RESPAWN_ROYAL:
 			{
 				_minions.add((MonsterInstance) addSpawn(ROYAL, npc.getX(), npc.getY(), npc.getZ(), 0, true, 0));
+				break;
 			}
 			case RESPAWN_NURSE:
 			{
 				_nurses.add((MonsterInstance) addSpawn(NURSE, npc.getX(), npc.getY(), npc.getZ(), 0, true, 0));
-			}
 				break;
+			}
 			case DESPAWN_MINIONS:
 			{
 				for (int i = 0; i < _minions.size(); i++)
@@ -230,16 +231,16 @@ public class QueenAnt extends Quest
 				}
 				for (int k = 0; k < _nurses.size(); k++)
 				{
-					final MonsterInstance _nurse = _nurses.get(k);
-					if (_nurse != null)
+					final MonsterInstance nurse = _nurses.get(k);
+					if (nurse != null)
 					{
-						_nurse.decayMe();
+						nurse.decayMe();
 					}
 				}
 				_nurses.clear();
 				_minions.clear();
-			}
 				break;
+			}
 			case CHECK_MINIONS_ZONE:
 			{
 				for (int i = 0; i < _minions.size(); i++)
@@ -250,8 +251,8 @@ public class QueenAnt extends Quest
 						mob.teleToLocation(npc.getX(), npc.getY(), npc.getZ());
 					}
 				}
-			}
 				break;
+			}
 			case CHECK_NURSE_ALIVE:
 			{
 				int deadNurses = 0;
@@ -266,11 +267,8 @@ public class QueenAnt extends Quest
 				{
 					startQuestTimer("RESPAWN_NURSE", Config.QA_RESP_NURSE * 1000, npc, null);
 				}
-			}
 				break;
-			/*
-			 * case CHECK_QA_ZONE:{ int loc_x = -21610; int loc_y = 181594; int loc_z = -5734; if(!npc.isInsideRadius(loc_x,loc_y,3000,false)){ npc.teleToLocation(loc_x, loc_y, loc_z); } startQuestTimer("CHECK_MINIONS_ZONE", 1000, npc, null); } break;
-			 */
+			}
 			case ACTION:
 			{
 				if (Rnd.get(3) == 0)
@@ -284,12 +282,8 @@ public class QueenAnt extends Quest
 						npc.broadcastPacket(new SocialAction(npc.getObjectId(), 4));
 					}
 				}
-				/*
-				 * if(Math.abs(npc.getX() + 21610) > 1000 || Math.abs(npc.getY() - 181594) > 2500) { ((Attackable) npc).clearAggroList(); npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE); npc.teleToLocation(-21610, 181594, -5740); }
-				 */
-				// startQuestTimer("ACTION", 10000, npc, null);
-			}
 				break;
+			}
 			case HEAL:
 			{
 				boolean notCasting;
@@ -325,16 +319,13 @@ public class QueenAnt extends Quest
 						}
 						continue;
 					}
-					if (nurseNeedHeal)
+					if (nurseNeedHeal && ((nurse.getTarget() != nurse) || notCasting))
 					{
-						if ((nurse.getTarget() != nurse) || notCasting)
+						for (int k = 0; k < _nurses.size(); k++)
 						{
-							for (int k = 0; k < _nurses.size(); k++)
-							{
-								getIntoPosition(_nurses.get(k), nurse);
-								_nurses.get(k).setTarget(nurse);
-								_nurses.get(k).doCast(SkillTable.getInstance().getInfo(4020, 1));
-							}
+							getIntoPosition(_nurses.get(k), nurse);
+							_nurses.get(k).setTarget(nurse);
+							_nurses.get(k).doCast(SkillTable.getInstance().getInfo(4020, 1));
 						}
 					}
 					if (notCasting && (nurse.getTarget() != null))
@@ -342,8 +333,8 @@ public class QueenAnt extends Quest
 						nurse.setTarget(null);
 					}
 				}
-			}
 				break;
+			}
 			default:
 			{
 				LOGGER.info("QUEEN: Not defined event: " + event + "!");
@@ -397,28 +388,25 @@ public class QueenAnt extends Quest
 			
 			startQuestTimer("DESPAWN_MINIONS", 10000, null, null);
 		}
-		else if (status == LIVE)
+		else if ((status == LIVE) && ((npcId == ROYAL) || (npcId == NURSE)))
 		{
-			if ((npcId == ROYAL) || (npcId == NURSE))
+			npc.decayMe();
+			if (_minions.contains(npc))
 			{
-				npc.decayMe();
-				if (_minions.contains(npc))
-				{
-					_minions.remove(npc);
-				}
-				else
-				{
-					_nurses.remove(npc);
-				}
-				
-				if (npcId == ROYAL)
-				{
-					startQuestTimer("RESPAWN_ROYAL", (Config.QA_RESP_ROYAL + Rnd.get(40)) * 1000, npc, null);
-				}
-				else if (npcId == NURSE)
-				{
-					startQuestTimer("CHECK_NURSE_ALIVE", 1000, npc, null);
-				}
+				_minions.remove(npc);
+			}
+			else
+			{
+				_nurses.remove(npc);
+			}
+			
+			if (npcId == ROYAL)
+			{
+				startQuestTimer("RESPAWN_ROYAL", (Config.QA_RESP_ROYAL + Rnd.get(40)) * 1000, npc, null);
+			}
+			else // if (npcId == NURSE)
+			{
+				startQuestTimer("CHECK_NURSE_ALIVE", 1000, npc, null);
 			}
 		}
 		return super.onKill(npc, killer, isPet);

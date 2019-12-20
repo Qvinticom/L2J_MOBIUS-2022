@@ -21,10 +21,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
  */
 public class ExClosePartyRoom extends GameServerPacket
 {
-	public ExClosePartyRoom()
-	{
-	}
-	
 	@Override
 	protected void writeImpl()
 	{

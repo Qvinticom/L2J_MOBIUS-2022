@@ -29,10 +29,6 @@ public class OlympiadStadiaManager
 	
 	private List<OlympiadStadiumZone> _olympiadStadias;
 	
-	public OlympiadStadiaManager()
-	{
-	}
-	
 	public void addStadium(OlympiadStadiumZone arena)
 	{
 		if (_olympiadStadias == null)

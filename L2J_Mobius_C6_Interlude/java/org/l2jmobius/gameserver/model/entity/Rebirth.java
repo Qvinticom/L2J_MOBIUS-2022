@@ -27,7 +27,6 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.datatables.xml.ItemTable;
-import org.l2jmobius.gameserver.idfactory.BitSetIDFactory;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -45,7 +44,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
  */
 public class Rebirth
 {
-	private static Logger LOGGER = Logger.getLogger(BitSetIDFactory.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Rebirth.class.getName());
 	
 	private final HashMap<Integer, Integer> _playersRebirthInfo = new HashMap<>();
 	
@@ -103,7 +102,7 @@ public class Rebirth
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -157,14 +156,10 @@ public class Rebirth
 			loopBirth++;
 		}
 		
-		// Their is an item required
-		if (itemNeeded != 0)
+		// Checks if there is an item required. If player has required items, and takes them if so.
+		if ((itemNeeded != 0) && !playerIsEligible(player, itemNeeded, itemAmount))
 		{
-			// Checks to see if player has required items, and takes them if so.
-			if (!playerIsEligible(player, itemNeeded, itemAmount))
-			{
-				return;
-			}
+			return;
 		}
 		
 		// Check and see if its the player's first Rebirth calling.
@@ -183,14 +178,14 @@ public class Rebirth
 	{
 		try
 		{
-			final double actual_hp = player.getCurrentHp();
-			final double actual_cp = player.getCurrentCp();
+			final double hp = player.getCurrentHp();
+			final double cp = player.getCurrentCp();
 			
-			int max_level = ExperienceData.getInstance().getMaxLevel();
+			int maxLevel = ExperienceData.getInstance().getMaxLevel();
 			
 			if (player.isSubClassActive())
 			{
-				max_level = Config.MAX_SUBCLASS_LEVEL;
+				maxLevel = Config.MAX_SUBCLASS_LEVEL;
 			}
 			
 			// Protections
@@ -199,9 +194,9 @@ public class Rebirth
 			{
 				returnToLevel = 1;
 			}
-			if (returnToLevel > max_level)
+			if (returnToLevel > maxLevel)
 			{
-				returnToLevel = max_level;
+				returnToLevel = maxLevel;
 			}
 			
 			// Resets character to first class.
@@ -232,9 +227,9 @@ public class Rebirth
 			player.giveAvailableSkills();
 			
 			// restore Hp-Mp-Cp
-			player.setCurrentCp(actual_cp);
+			player.setCurrentCp(cp);
 			player.setCurrentMp(player.getMaxMp());
-			player.setCurrentHp(actual_hp);
+			player.setCurrentHp(hp);
 			player.broadcastStatusUpdate();
 			
 			// Updates the player's information in the Character Database.
@@ -260,7 +255,7 @@ public class Rebirth
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -416,7 +411,7 @@ public class Rebirth
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 		_playersRebirthInfo.put(playerId, rebirthCount);
 	}
@@ -437,7 +432,7 @@ public class Rebirth
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -461,7 +456,7 @@ public class Rebirth
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	

@@ -67,7 +67,7 @@ public class GrandBossTeleporters extends Quest
 			st = newQuestState(player);
 		}
 		
-		if (event == "31540")
+		if (event.equals("31540"))
 		{
 			if (st.getQuestItemsCount(7267) > 0)
 			{

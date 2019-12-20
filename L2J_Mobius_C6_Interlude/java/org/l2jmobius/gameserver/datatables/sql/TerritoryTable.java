@@ -24,12 +24,11 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.TradeController;
 import org.l2jmobius.gameserver.model.Territory;
 
 public class TerritoryTable
 {
-	private static final Logger LOGGER = Logger.getLogger(TradeController.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(TerritoryTable.class.getName());
 	private static Map<Integer, Territory> _territory = new HashMap<>();
 	
 	public TerritoryTable()

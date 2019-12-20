@@ -35,7 +35,6 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class FortZone extends ZoneType
 {
-	private int _fortId;
 	private Fort _fort;
 	private final int[] _spawnLoc;
 	
@@ -53,9 +52,9 @@ public class FortZone extends ZoneType
 		{
 			case "fortId":
 			{
-				_fortId = Integer.parseInt(value);
+				int fortId = Integer.parseInt(value);
 				// Register self to the correct fort
-				_fort = FortManager.getInstance().getFortById(_fortId);
+				_fort = FortManager.getInstance().getFortById(fortId);
 				_fort.setZone(this);
 				break;
 			}

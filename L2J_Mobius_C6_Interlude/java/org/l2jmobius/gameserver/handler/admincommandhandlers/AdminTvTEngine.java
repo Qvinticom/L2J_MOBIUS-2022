@@ -73,7 +73,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_tvt_name "))
 		{
-			if (TvT.set_eventName(command.substring(15)))
+			if (TvT.setEventName(command.substring(15)))
 			{
 				showMainPage(activeChar);
 			}
@@ -84,7 +84,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_tvt_desc "))
 		{
-			if (TvT.set_eventDesc(command.substring(15)))
+			if (TvT.setEventDesc(command.substring(15)))
 			{
 				showMainPage(activeChar);
 			}
@@ -95,12 +95,12 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_tvt_minlvl "))
 		{
-			if (!TvT.checkMinLevel(Integer.valueOf(command.substring(17))))
+			if (!TvT.checkMinLevel(Integer.parseInt(command.substring(17))))
 			{
 				return false;
 			}
 			
-			if (TvT.set_minlvl(Integer.valueOf(command.substring(17))))
+			if (TvT.setMinlvl(Integer.parseInt(command.substring(17))))
 			{
 				showMainPage(activeChar);
 			}
@@ -111,12 +111,12 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_tvt_maxlvl "))
 		{
-			if (!TvT.checkMaxLevel(Integer.valueOf(command.substring(17))))
+			if (!TvT.checkMaxLevel(Integer.parseInt(command.substring(17))))
 			{
 				return false;
 			}
 			
-			if (TvT.set_maxlvl(Integer.valueOf(command.substring(17))))
+			if (TvT.setMaxlvl(Integer.parseInt(command.substring(17))))
 			{
 				showMainPage(activeChar);
 			}
@@ -127,7 +127,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_tvt_minplayers "))
 		{
-			if (TvT.set_minPlayers(Integer.valueOf(command.substring(21))))
+			if (TvT.setMinPlayers(Integer.parseInt(command.substring(21))))
 			{
 				showMainPage(activeChar);
 			}
@@ -138,7 +138,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_tvt_maxplayers "))
 		{
-			if (TvT.set_maxPlayers(Integer.valueOf(command.substring(21))))
+			if (TvT.setMaxPlayers(Integer.parseInt(command.substring(21))))
 			{
 				showMainPage(activeChar);
 			}
@@ -149,7 +149,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_tvt_join_loc "))
 		{
-			if (TvT.set_joiningLocationName(command.substring(19)))
+			if (TvT.setJoiningLocationName(command.substring(19)))
 			{
 				showMainPage(activeChar);
 			}
@@ -160,7 +160,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_tvt_npc "))
 		{
-			if (TvT.set_npcId(Integer.valueOf(command.substring(14))))
+			if (TvT.setNpcId(Integer.parseInt(command.substring(14))))
 			{
 				showMainPage(activeChar);
 			}
@@ -176,7 +176,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_tvt_reward "))
 		{
-			if (TvT.set_rewardId(Integer.valueOf(command.substring(17))))
+			if (TvT.setRewardId(Integer.parseInt(command.substring(17))))
 			{
 				showMainPage(activeChar);
 			}
@@ -187,7 +187,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_tvt_reward_amount "))
 		{
-			if (TvT.set_rewardAmount(Integer.valueOf(command.substring(24))))
+			if (TvT.setRewardAmount(Integer.parseInt(command.substring(24))))
 			{
 				showMainPage(activeChar);
 			}
@@ -198,7 +198,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_tvt_jointime "))
 		{
-			if (TvT.set_joinTime(Integer.valueOf(command.substring(19))))
+			if (TvT.setJoinTime(Integer.parseInt(command.substring(19))))
 			{
 				showMainPage(activeChar);
 			}
@@ -209,7 +209,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_tvt_eventtime "))
 		{
-			if (TvT.set_eventTime(Integer.valueOf(command.substring(20))))
+			if (TvT.setEventTime(Integer.parseInt(command.substring(20))))
 			{
 				showMainPage(activeChar);
 			}
@@ -220,7 +220,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_tvt_interval "))
 		{
-			if (TvT.set_intervalBetweenMatchs(Integer.valueOf(command.substring(20))))
+			if (TvT.setIntervalBetweenMatches(Integer.parseInt(command.substring(20))))
 			{
 				showMainPage(activeChar);
 			}
@@ -320,7 +320,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_tvt_autoevent"))
 		{
-			if ((TvT.get_joinTime() > 0) && (TvT.get_eventTime() > 0))
+			if ((TvT.getJoinTime() > 0) && (TvT.getEventTime() > 0))
 			{
 				TvT.autoEvent();
 			}
@@ -422,22 +422,22 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		replyMSG.append("<td width=\"100\"><button value=\"Auto Event\" action=\"bypass -h admin_tvt_autoevent\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 		replyMSG.append("</tr></table><br><br>");
 		replyMSG.append("Current event:<br1>");
-		replyMSG.append("Name:&nbsp;<font color=\"00FF00\">" + TvT.get_eventName() + "</font><br1>");
-		replyMSG.append("Description:&nbsp;<font color=\"00FF00\">" + TvT.get_eventDesc() + "</font><br1>");
-		replyMSG.append("Joining location name:&nbsp;<font color=\"00FF00\">" + TvT.get_joiningLocationName() + "</font><br1>");
+		replyMSG.append("Name:&nbsp;<font color=\"00FF00\">" + TvT.getEventName() + "</font><br1>");
+		replyMSG.append("Description:&nbsp;<font color=\"00FF00\">" + TvT.getEventDesc() + "</font><br1>");
+		replyMSG.append("Joining location name:&nbsp;<font color=\"00FF00\">" + TvT.getJoiningLocationName() + "</font><br1>");
 		
-		final Location npc_loc = TvT.get_npcLocation();
+		final Location npcLoc = TvT.getNpcLocation();
 		
-		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + TvT.get_npcId() + " on pos " + npc_loc.getX() + "," + npc_loc.getY() + "," + npc_loc.getZ() + "</font><br1>");
-		replyMSG.append("Reward ID:&nbsp;<font color=\"00FF00\">" + TvT.get_rewardId() + "</font><br1>");
-		replyMSG.append("Reward Amount:&nbsp;<font color=\"00FF00\">" + TvT.get_rewardAmount() + "</font><br><br>");
-		replyMSG.append("Min lvl:&nbsp;<font color=\"00FF00\">" + TvT.get_minlvl() + "</font><br>");
-		replyMSG.append("Max lvl:&nbsp;<font color=\"00FF00\">" + TvT.get_maxlvl() + "</font><br><br>");
-		replyMSG.append("Min Players:&nbsp;<font color=\"00FF00\">" + TvT.get_minPlayers() + "</font><br>");
-		replyMSG.append("Max Players:&nbsp;<font color=\"00FF00\">" + TvT.get_maxPlayers() + "</font><br><br>");
-		replyMSG.append("Joining Time:&nbsp;<font color=\"00FF00\">" + TvT.get_joinTime() + "</font><br>");
-		replyMSG.append("Event Timer:&nbsp;<font color=\"00FF00\">" + TvT.get_eventTime() + "</font><br><br>");
-		replyMSG.append("Interval Time:&nbsp;<font color=\"00FF00\">" + TvT.get_intervalBetweenMatchs() + "</font><br><br>");
+		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + TvT.getNpcId() + " on pos " + npcLoc.getX() + "," + npcLoc.getY() + "," + npcLoc.getZ() + "</font><br1>");
+		replyMSG.append("Reward ID:&nbsp;<font color=\"00FF00\">" + TvT.getRewardId() + "</font><br1>");
+		replyMSG.append("Reward Amount:&nbsp;<font color=\"00FF00\">" + TvT.getRewardAmount() + "</font><br><br>");
+		replyMSG.append("Min lvl:&nbsp;<font color=\"00FF00\">" + TvT.getMinlvl() + "</font><br>");
+		replyMSG.append("Max lvl:&nbsp;<font color=\"00FF00\">" + TvT.getMaxlvl() + "</font><br><br>");
+		replyMSG.append("Min Players:&nbsp;<font color=\"00FF00\">" + TvT.getMinPlayers() + "</font><br>");
+		replyMSG.append("Max Players:&nbsp;<font color=\"00FF00\">" + TvT.getMaxPlayers() + "</font><br><br>");
+		replyMSG.append("Joining Time:&nbsp;<font color=\"00FF00\">" + TvT.getJoinTime() + "</font><br>");
+		replyMSG.append("Event Timer:&nbsp;<font color=\"00FF00\">" + TvT.getEventTime() + "</font><br><br>");
+		replyMSG.append("Interval Time:&nbsp;<font color=\"00FF00\">" + TvT.get_intervalBetweenMatches() + "</font><br><br>");
 		replyMSG.append("Current teams:<br1>");
 		replyMSG.append("<center><table border=\"0\">");
 		
@@ -451,7 +451,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			}
 			else if (Config.TVT_EVEN_TEAMS.equals("SHUFFLE"))
 			{
-				if (TvT.is_teleport() || TvT.is_started())
+				if (TvT.isTeleport() || TvT.isStarted())
 				{
 					replyMSG.append("&nbsp;(" + TvT.teamPlayersCount(team) + " in)");
 				}
@@ -468,7 +468,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		
 		if (Config.TVT_EVEN_TEAMS.equals("SHUFFLE"))
 		{
-			if (!TvT.is_started())
+			if (!TvT.isStarted())
 			{
 				replyMSG.append("<br1>");
 				replyMSG.append(TvT._playersShuffle.size() + " players participating. Waiting to shuffle in teams(done on teleport)!");

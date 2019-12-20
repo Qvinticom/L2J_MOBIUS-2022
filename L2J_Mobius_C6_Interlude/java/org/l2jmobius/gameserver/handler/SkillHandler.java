@@ -20,7 +20,6 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.handler.skillhandlers.BalanceLife;
 import org.l2jmobius.gameserver.handler.skillhandlers.BeastFeed;
 import org.l2jmobius.gameserver.handler.skillhandlers.Blow;
@@ -59,7 +58,7 @@ import org.l2jmobius.gameserver.model.Skill.SkillType;
 
 public class SkillHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(GameServer.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SkillHandler.class.getName());
 	
 	private final Map<SkillType, ISkillHandler> _datatable;
 	

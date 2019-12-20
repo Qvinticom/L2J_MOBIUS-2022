@@ -59,7 +59,7 @@ public class FaenorQuestParser extends FaenorParser
 		}
 	}
 	
-	private void parseQuestDropList(Node dropList, String questID) throws NullPointerException
+	private void parseQuestDropList(Node dropList, String questID)
 	{
 		for (Node node = dropList.getFirstChild(); node != null; node = node.getNextSibling())
 		{

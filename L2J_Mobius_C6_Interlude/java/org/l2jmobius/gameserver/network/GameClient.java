@@ -611,8 +611,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		try
 		{
 			InetAddress address = getConnection().getInetAddress();
-			String ip = "N/A";
-			
+			String ip;
 			if (address == null)
 			{
 				ip = "disconnected";
@@ -701,7 +700,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 					}
 					
 					// Decrease boxes number
-					if (player._active_boxes != -1)
+					if (player._activeBoxes != -1)
 					{
 						player.decreaseBoxes();
 					}
@@ -786,7 +785,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 					}
 					
 					// Decrease boxes number
-					if (player._active_boxes != -1)
+					if (player._activeBoxes != -1)
 					{
 						player.decreaseBoxes();
 					}
@@ -876,11 +875,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	 */
 	public boolean dropPacket()
 	{
-		if (_isDetached)
-		{
-			return true;
-		}
-		return false;
+		return _isDetached;
 	}
 	
 	/**

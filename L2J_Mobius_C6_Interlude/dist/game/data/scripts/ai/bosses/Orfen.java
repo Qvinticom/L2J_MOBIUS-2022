@@ -71,11 +71,7 @@ public class Orfen extends Quest
 				}
 				else
 				{
-					final int loc_x = 55024;
-					final int loc_y = 17368;
-					final int loc_z = -5412;
-					final int heading = 0;
-					_orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
+					_orfen = (GrandBossInstance) addSpawn(ORFEN, 55024, 17368, -5412, 0, false, 0);
 					if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 					{
 						Announcements.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
@@ -126,9 +122,9 @@ public class Orfen extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		final Event event_enum = Event.valueOf(event.toUpperCase());
+		final Event eventEnum = Event.valueOf(event.toUpperCase());
 		
-		switch (event_enum)
+		switch (eventEnum)
 		{
 			case ORFEN_SPAWN:
 			{
@@ -152,13 +148,13 @@ public class Orfen extends Quest
 					cancelQuestTimer("ORFEN_REFRESH", npc, null);
 					break;
 				}
-				double saved_hp = -1;
+				double hp = -1;
 				if ((npc.getNpcId() == ORFEN) && !npc.getSpawn().is_customBossInstance())
 				{
-					saved_hp = GrandBossManager.getInstance().getStatsSet(ORFEN).getDouble("currentHP");
-					if (saved_hp < npc.getCurrentHp())
+					hp = GrandBossManager.getInstance().getStatsSet(ORFEN).getDouble("currentHP");
+					if (hp < npc.getCurrentHp())
 					{
-						npc.setCurrentHp(saved_hp);
+						npc.setCurrentHp(hp);
 						GrandBossManager.getInstance().getStatsSet(ORFEN).set("currentHP", npc.getMaxHp());
 					}
 				}

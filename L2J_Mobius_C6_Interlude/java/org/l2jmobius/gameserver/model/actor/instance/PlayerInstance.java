@@ -29,6 +29,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
@@ -264,6 +265,13 @@ public class PlayerInstance extends Playable
 	private static final String RESTORE_SKILL_SAVE = "SELECT skill_id,skill_level,effect_count,effect_cur_time, reuse_delay, systime FROM character_skills_save WHERE char_obj_id=? AND class_index=? AND restore_type=? ORDER BY buff_index ASC";
 	private static final String DELETE_SKILL_SAVE = "DELETE FROM character_skills_save WHERE char_obj_id=? AND class_index=?";
 	
+	public static final int REQUEST_TIMEOUT = 15;
+	public static final int STORE_PRIVATE_NONE = 0;
+	public static final int STORE_PRIVATE_SELL = 1;
+	public static final int STORE_PRIVATE_BUY = 3;
+	public static final int STORE_PRIVATE_MANUFACTURE = 5;
+	public static final int STORE_PRIVATE_PACKAGE_SELL = 8;
+	
 	public boolean _isVIP = false;
 	public boolean _inEventVIP = false;
 	public boolean _isNotVIP = false;
@@ -271,18 +279,12 @@ public class PlayerInstance extends Playable
 	public int _originalNameColourVIP;
 	public int _originalKarmaVIP;
 	private long _voteTimestamp = 0;
-	private PlayerStatsHolder saved_status = null;
+	private PlayerStatsHolder savedStatus = null;
 	private final long _instanceLoginTime;
 	private long _lastTeleportAction = 0;
 	protected long TOGGLE_USE = 0;
-	public int _active_boxes = -1;
-	public List<String> active_boxes_characters = new ArrayList<>();
-	public static final int REQUEST_TIMEOUT = 15;
-	public static final int STORE_PRIVATE_NONE = 0;
-	public static final int STORE_PRIVATE_SELL = 1;
-	public static final int STORE_PRIVATE_BUY = 3;
-	public static final int STORE_PRIVATE_MANUFACTURE = 5;
-	public static final int STORE_PRIVATE_PACKAGE_SELL = 8;
+	public int _activeBoxes = -1;
+	public List<String> _activeBoxeCharacters = new ArrayList<>();
 	private GameClient _client;
 	private String _accountName;
 	private long _deleteTimer;
@@ -294,7 +296,7 @@ public class PlayerInstance extends Playable
 	protected int _baseClass;
 	protected int _activeClass;
 	protected int _classIndex = 0;
-	private boolean _first_log;
+	private boolean _firstLog;
 	private int pcBangPoint = 0;
 	private final Map<Integer, SubClass> _subClasses = new ConcurrentHashMap<>();
 	private PlayerAppearance _appearance;
@@ -303,21 +305,22 @@ public class PlayerInstance extends Playable
 	private int _pvpKills;
 	private int _pkKills;
 	private int _lastKill = 0;
-	private int count = 0;
+	private int _count = 0;
 	private byte _pvpFlag;
 	private byte _siegeState = 0;
 	private int _curWeightPenalty = 0;
 	private int _lastCompassZone; // the last compass zone update send to the client
 	private byte _zoneValidateCounter = 4;
 	private boolean _isIn7sDungeon = false;
-	private int heroConsecutiveKillCount = 0;
-	private boolean isPVPHero = false;
+	private int _heroConsecutiveKillCount = 0;
+	private boolean _isPvpHero = false;
 	private boolean _awaying = false;
 	private boolean _isAway = false;
 	public int _originalTitleColorAway;
 	public String _originalTitleAway;
 	private boolean _isAio = false;
-	private long _aio_endTime = 0;
+	private long _aioEndTime = 0;
+	
 	public int eventX;
 	public int eventY;
 	public int eventZ;
@@ -355,8 +358,8 @@ public class PlayerInstance extends Playable
 	public int _eventKills;
 	public boolean _inEvent = false;
 	private boolean _inOlympiadMode = false;
-	private boolean _OlympiadStart = false;
-	private int[] _OlympiadPosition;
+	private boolean _olympiadStart = false;
+	private int[] _olympiadPosition;
 	private int _olympiadGameId = -1;
 	private int _olympiadSide = -1;
 	private boolean _isInDuel = false;
@@ -401,7 +404,7 @@ public class PlayerInstance extends Playable
 	private boolean _donator = false;
 	private FolkInstance _lastFolkNpc = null;
 	private int _questNpcObject = 0;
-	private int _party_find = 0;
+	private int _partyFind = 0;
 	private final SummonRequest _summonRequest = new SummonRequest();
 	private final Map<String, QuestState> _quests = new HashMap<>();
 	private final ShortCuts _shortCuts = new ShortCuts(this);
@@ -449,9 +452,6 @@ public class PlayerInstance extends Playable
 	private final Map<Integer, String> _chars = new HashMap<>();
 	private int _expertiseIndex; // index in EXPERTISE_LEVELS
 	private int _expertisePenalty = 0;
-	private boolean _heavy_mastery = false;
-	private boolean _light_mastery = false;
-	private boolean _robe_mastery = false;
 	private int _masteryPenalty = 0;
 	private ItemInstance _activeEnchantItem = null;
 	protected boolean _inventoryDisable = false;
@@ -459,17 +459,17 @@ public class PlayerInstance extends Playable
 	protected Map<Integer, Integer> _activeSoulShots = new ConcurrentHashMap<>();
 	public ReentrantLock soulShotLock = new ReentrantLock();
 	public Quest dialog = null;
-	private final int _loto[] = new int[5];
-	private final int _race[] = new int[2];
+	private final int[] _loto = new int[5];
+	private final int[] _race = new int[2];
 	private final BlockList _blockList = new BlockList(this);
 	private int _team = 0;
 	private int _alliedVarkaKetra = 0;
 	private int _hasCoupon = 0;
 	private Fishing _fishCombat;
 	private boolean _fishing = false;
-	private int _fishx = 0;
-	private int _fishy = 0;
-	private int _fishz = 0;
+	private int _fishX = 0;
+	private int _fishY = 0;
+	private int _fishZ = 0;
 	private ScheduledFuture<?> _taskRentPet;
 	private ScheduledFuture<?> _taskWater;
 	private final List<String> _validBypass = new ArrayList<>();
@@ -480,7 +480,7 @@ public class PlayerInstance extends Playable
 	private SkillDat _currentSkill;
 	private SkillDat _currentPetSkill;
 	private SkillDat _queuedSkill;
-	private boolean _IsWearingFormalWear = false;
+	private boolean _isWearingFormalWear = false;
 	private Location _currentSkillWorldPosition;
 	private int _cursedWeaponEquipedId = 0;
 	private int _reviveRequested = 0;
@@ -492,7 +492,7 @@ public class PlayerInstance extends Playable
 	private double _mpUpdateIncCheck = .0;
 	private double _mpUpdateDecCheck = .0;
 	private double _mpUpdateInterval = .0;
-	private long timerToAttack;
+	private long _timerToAttack;
 	private boolean _isInOfflineMode = false;
 	private boolean _isTradeOff = false;
 	private long _offlineShopStart = 0;
@@ -509,14 +509,6 @@ public class PlayerInstance extends Playable
 	private int quakeSystem = 0;
 	private boolean _isLocked = false;
 	private boolean _isStored = false;
-	private boolean _blunt_mastery = false;
-	private boolean _pole_mastery = false;
-	private boolean _dagger_mastery = false;
-	private boolean _sword_mastery = false;
-	private boolean _bow_mastery = false;
-	private boolean _fist_mastery = false;
-	private boolean _dual_mastery = false;
-	private boolean _2hands_mastery = false;
 	private int _masteryWeapPenalty = 0;
 	private boolean _learningSkill = false;
 	private ScheduledFuture<?> _taskWarnUserTakeBreak;
@@ -528,10 +520,10 @@ public class PlayerInstance extends Playable
 	private int _mailPosition;
 	private FishData _fish;
 	private final Map<Integer, Timestamp> _reuseTimestamps = new ConcurrentHashMap<>();
-	boolean _gmStatus = true; // true by default since this is used by GMS
+	boolean _gmStatus = true; // true by default since this is used by GMs
 	public WorldObject _saymode = null;
 	String Dropzor = "Coin of Luck";
-	private boolean isintwtown = false;
+	private boolean _isInsideTWTown = false;
 	private static final int FALLING_VALIDATION_DELAY = 1000;
 	private long _fallingTimestamp = 0;
 	private volatile int _fallingDamage = 0;
@@ -569,7 +561,7 @@ public class PlayerInstance extends Playable
 		62
 	};
 	
-	private volatile Map<String, Object> _scripts = new ConcurrentHashMap<>();
+	private final Map<String, Object> _scripts = new ConcurrentHashMap<>();
 	
 	/**
 	 * Create a new PlayerInstance and add it in the characters table of the database.<BR>
@@ -622,7 +614,7 @@ public class PlayerInstance extends Playable
 	 * Creates the dummy player.
 	 * @param objectId the object id
 	 * @param name the name
-	 * @return the l2 pc instance
+	 * @return the player instance
 	 */
 	public static PlayerInstance createDummyPlayer(int objectId, String name)
 	{
@@ -638,13 +630,6 @@ public class PlayerInstance extends Playable
 	 */
 	public class AIAccessor extends Creature.AIAccessor
 	{
-		/**
-		 * Instantiates a new aI accessor.
-		 */
-		protected AIAccessor()
-		{
-		}
-		
 		/**
 		 * Gets the player.
 		 * @return the player
@@ -682,7 +667,7 @@ public class PlayerInstance extends Playable
 			}
 			
 			// during teleport phase, players cant do any attack
-			if ((TvT.is_teleport() && _inEventTvT) || (CTF.is_teleport() && _inEventCTF) || (DM.is_teleport() && _inEventDM))
+			if ((TvT.isTeleport() && _inEventTvT) || (CTF.isTeleport() && _inEventCTF) || (DM.isTeleport() && _inEventDM))
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
@@ -730,7 +715,7 @@ public class PlayerInstance extends Playable
 			}
 			
 			// during teleport phase, players cant do any attack
-			if ((TvT.is_teleport() && _inEventTvT) || (CTF.is_teleport() && _inEventCTF) || (DM.is_teleport() && _inEventDM))
+			if ((TvT.isTeleport() && _inEventTvT) || (CTF.isTeleport() && _inEventCTF) || (DM.isTeleport() && _inEventDM))
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
@@ -752,7 +737,7 @@ public class PlayerInstance extends Playable
 				default:
 				{
 					WorldObject mainTarget = skill.getFirstOfTargetList(PlayerInstance.this);
-					if ((mainTarget == null) || !(mainTarget instanceof Creature))
+					if (!(mainTarget instanceof Creature))
 					{
 						return;
 					}
@@ -776,8 +761,8 @@ public class PlayerInstance extends Playable
 	 */
 	public PlayerStatsHolder getActualStatus()
 	{
-		saved_status = new PlayerStatsHolder(this);
-		return saved_status;
+		savedStatus = new PlayerStatsHolder(this);
+		return savedStatus;
 	}
 	
 	/**
@@ -786,7 +771,7 @@ public class PlayerInstance extends Playable
 	 */
 	public PlayerStatsHolder getLastSavedStatus()
 	{
-		return saved_status;
+		return savedStatus;
 	}
 	
 	/**
@@ -1111,15 +1096,12 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
-		if ((getClan() != null) && (target.getClan() != null))
+		if ((getClan() != null) && (target.getClan() != null) && (target.getPledgeType() != Clan.SUBUNIT_ACADEMY) && (getPledgeType() != Clan.SUBUNIT_ACADEMY) && target.getClan().isAtWarWith(getClan().getClanId()))
 		{
-			if ((target.getPledgeType() != Clan.SUBUNIT_ACADEMY) && (getPledgeType() != Clan.SUBUNIT_ACADEMY) && target.getClan().isAtWarWith(getClan().getClanId()))
+			result |= RelationChanged.RELATION_1SIDED_WAR;
+			if (getClan().isAtWarWith(target.getClan().getClanId()))
 			{
-				result |= RelationChanged.RELATION_1SIDED_WAR;
-				if (getClan().isAtWarWith(target.getClan().getClanId()))
-				{
-					result |= RelationChanged.RELATION_MUTUAL_WAR;
-				}
+				result |= RelationChanged.RELATION_MUTUAL_WAR;
 			}
 		}
 		return result;
@@ -1220,7 +1202,7 @@ public class PlayerInstance extends Playable
 	@Override
 	public PlayerKnownList getKnownList()
 	{
-		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof PlayerKnownList))
+		if (!(super.getKnownList() instanceof PlayerKnownList))
 		{
 			setKnownList(new PlayerKnownList(this));
 		}
@@ -1230,7 +1212,7 @@ public class PlayerInstance extends Playable
 	@Override
 	public PlayerStat getStat()
 	{
-		if ((super.getStat() == null) || !(super.getStat() instanceof PlayerStat))
+		if (!(super.getStat() instanceof PlayerStat))
 		{
 			setStat(new PlayerStat(this));
 		}
@@ -1240,7 +1222,7 @@ public class PlayerInstance extends Playable
 	@Override
 	public PlayerStatus getStatus()
 	{
-		if ((super.getStatus() == null) || !(super.getStatus() instanceof PlayerStatus))
+		if (!(super.getStatus() instanceof PlayerStatus))
 		{
 			setStatus(new PlayerStatus(this));
 		}
@@ -1287,12 +1269,12 @@ public class PlayerInstance extends Playable
 	
 	public void setTimerToAttack(long time)
 	{
-		timerToAttack = time;
+		_timerToAttack = time;
 	}
 	
 	public long getTimerToAttack()
 	{
-		return timerToAttack;
+		return _timerToAttack;
 	}
 	
 	/**
@@ -1321,17 +1303,13 @@ public class PlayerInstance extends Playable
 	public int getLevel()
 	{
 		int level = getStat().getLevel();
-		
 		if (level == -1)
 		{
-			
-			final PlayerInstance local_char = restore(getObjectId());
-			
-			if (local_char != null)
+			final PlayerInstance localChar = restore(getObjectId());
+			if (localChar != null)
 			{
-				level = local_char.getLevel();
+				level = localChar.getLevel();
 			}
-			
 		}
 		
 		if (level < 0)
@@ -1506,18 +1484,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean hasRecipeList(int recipeId)
 	{
-		if (_dwarvenRecipeBook.containsKey(recipeId))
-		{
-			return true;
-		}
-		else if (_commonRecipeBook.containsKey(recipeId))
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+		return _dwarvenRecipeBook.containsKey(recipeId) || _commonRecipeBook.containsKey(recipeId);
 	}
 	
 	/**
@@ -1744,22 +1711,19 @@ public class PlayerInstance extends Playable
 		{
 			for (Quest quest : quests)
 			{
-				if (quest != null)
+				// Copy the current PlayerInstance QuestState in the QuestState table
+				if ((quest != null) && (getQuestState(quest.getName()) != null))
 				{
-					// Copy the current PlayerInstance QuestState in the QuestState table
-					if (getQuestState(quest.getName()) != null)
+					if (states == null)
 					{
-						if (states == null)
+						states = new QuestState[]
 						{
-							states = new QuestState[]
-							{
-								getQuestState(quest.getName())
-							};
-						}
-						else
-						{
-							states = addToQuestStateArray(states, getQuestState(quest.getName()));
-						}
+							getQuestState(quest.getName())
+						};
+					}
+					else
+					{
+						states = addToQuestStateArray(states, getQuestState(quest.getName()));
 					}
 				}
 			}
@@ -1808,32 +1772,29 @@ public class PlayerInstance extends Playable
 			}
 			qs = q.newQuestState(this);
 		}
-		if (qs != null)
+		if ((qs != null) && (getLastQuestNpcObject() > 0))
 		{
-			if (getLastQuestNpcObject() > 0)
+			final WorldObject object = World.getInstance().findObject(getLastQuestNpcObject());
+			if ((object instanceof NpcInstance) && isInsideRadius(object, NpcInstance.INTERACTION_DISTANCE, false, false))
 			{
-				final WorldObject object = World.getInstance().findObject(getLastQuestNpcObject());
-				if ((object instanceof NpcInstance) && isInsideRadius(object, NpcInstance.INTERACTION_DISTANCE, false, false))
+				final NpcInstance npc = (NpcInstance) object;
+				final QuestState[] states = getQuestsForTalk(npc.getNpcId());
+				
+				if (states != null)
 				{
-					final NpcInstance npc = (NpcInstance) object;
-					final QuestState[] states = getQuestsForTalk(npc.getNpcId());
-					
-					if (states != null)
+					for (QuestState state : states)
 					{
-						for (QuestState state : states)
+						if ((state.getQuest().getQuestIntId() == qs.getQuest().getQuestIntId()) && !qs.isCompleted())
 						{
-							if ((state.getQuest().getQuestIntId() == qs.getQuest().getQuestIntId()) && !qs.isCompleted())
+							if (qs.getQuest().notifyEvent(event, npc, this))
 							{
-								if (qs.getQuest().notifyEvent(event, npc, this))
-								{
-									showQuestWindow(quest, State.getStateName(qs.getState()));
-								}
-								
-								retval = qs;
+								showQuestWindow(quest, State.getStateName(qs.getState()));
 							}
+							
+							retval = qs;
 						}
-						sendPacket(new QuestList());
 					}
+					sendPacket(new QuestList());
 				}
 			}
 		}
@@ -2345,7 +2306,7 @@ public class PlayerInstance extends Playable
 		{
 			for (WorldObject object : getKnownList().getKnownObjects().values())
 			{
-				if ((object == null) || !(object instanceof GuardInstance))
+				if (!(object instanceof GuardInstance))
 				{
 					continue;
 				}
@@ -2512,33 +2473,30 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		_heavy_mastery = false;
-		_light_mastery = false;
-		_robe_mastery = false;
+		boolean heavyMastery = false;
+		boolean lightMastery = false;
+		boolean robeMastery = false;
 		
-		final Skill[] char_skills = getAllSkills();
-		
-		for (Skill actual_skill : char_skills)
+		for (Skill skill : getAllSkills())
 		{
-			if (actual_skill.getName().contains("Heavy Armor Mastery"))
+			if (skill.getName().contains("Heavy Armor Mastery"))
 			{
-				_heavy_mastery = true;
+				heavyMastery = true;
 			}
 			
-			if (actual_skill.getName().contains("Light Armor Mastery"))
+			if (skill.getName().contains("Light Armor Mastery"))
 			{
-				_light_mastery = true;
+				lightMastery = true;
 			}
 			
-			if (actual_skill.getName().contains("Robe Mastery"))
+			if (skill.getName().contains("Robe Mastery"))
 			{
-				_robe_mastery = true;
+				robeMastery = true;
 			}
 		}
 		
 		int newMasteryPenalty = 0;
-		
-		if (!_heavy_mastery && !_light_mastery && !_robe_mastery)
+		if (!heavyMastery && !lightMastery && !robeMastery)
 		{
 			// not completed 1st class transfer or not acquired yet the mastery skills
 			newMasteryPenalty = 0;
@@ -2555,34 +2513,33 @@ public class PlayerInstance extends Playable
 						continue;
 					}
 					
-					final Armor armor_item = (Armor) item.getItem();
-					
-					switch (armor_item.getItemType())
+					final Armor armorItem = (Armor) item.getItem();
+					switch (armorItem.getItemType())
 					{
 						case HEAVY:
 						{
-							if (!_heavy_mastery)
+							if (!heavyMastery)
 							{
 								newMasteryPenalty++;
 							}
-						}
 							break;
+						}
 						case LIGHT:
 						{
-							if (!_light_mastery)
+							if (!lightMastery)
 							{
 								newMasteryPenalty++;
 							}
-						}
 							break;
+						}
 						case MAGIC:
 						{
-							if (!_robe_mastery)
+							if (!robeMastery)
 							{
 								newMasteryPenalty++;
 							}
-						}
 							break;
+						}
 					}
 				}
 			}
@@ -2613,16 +2570,11 @@ public class PlayerInstance extends Playable
 	 */
 	protected boolean canInteract(PlayerInstance player)
 	{
-		if (!isInsideRadius(player, 50, false, false))
-		{
-			return false;
-		}
-		
-		return true;
+		return isInsideRadius(player, 50, false, false);
 	}
 	
 	/**
-	 * Refresh mastery weap penality.
+	 * Refresh mastery weapon penality.
 	 */
 	public void refreshMasteryWeapPenality()
 	{
@@ -2631,73 +2583,70 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		_blunt_mastery = false;
-		_bow_mastery = false;
-		_dagger_mastery = false;
-		_fist_mastery = false;
-		_dual_mastery = false;
-		_pole_mastery = false;
-		_sword_mastery = false;
-		_2hands_mastery = false;
+		boolean bluntMastery = false;
+		boolean bowMastery = false;
+		boolean daggerMastery = false;
+		boolean fistMastery = false;
+		boolean dualMastery = false;
+		boolean poleMastery = false;
+		boolean swordMastery = false;
+		boolean twoHandMastery = false;
 		
-		final Skill[] char_skills = getAllSkills();
-		
-		for (Skill actual_skill : char_skills)
+		for (Skill skill : getAllSkills())
 		{
-			
-			if (actual_skill.getName().contains("Sword Blunt Mastery"))
+			if (skill.getName().contains("Sword Blunt Mastery"))
 			{
-				_sword_mastery = true;
-				_blunt_mastery = true;
+				swordMastery = true;
+				bluntMastery = true;
 				continue;
 			}
 			
-			if (actual_skill.getName().contains("Blunt Mastery"))
+			if (skill.getName().contains("Blunt Mastery"))
 			{
-				_blunt_mastery = true;
+				bluntMastery = true;
 				continue;
 			}
 			
-			if (actual_skill.getName().contains("Bow Mastery"))
+			if (skill.getName().contains("Bow Mastery"))
 			{
-				_bow_mastery = true;
+				bowMastery = true;
 				continue;
 			}
 			
-			if (actual_skill.getName().contains("Dagger Mastery"))
+			if (skill.getName().contains("Dagger Mastery"))
 			{
-				_dagger_mastery = true;
+				daggerMastery = true;
 				continue;
 			}
 			
-			if (actual_skill.getName().contains("Fist Mastery"))
+			if (skill.getName().contains("Fist Mastery"))
 			{
-				_fist_mastery = true;
+				fistMastery = true;
 				continue;
 			}
 			
-			if (actual_skill.getName().contains("Dual Weapon Mastery"))
+			if (skill.getName().contains("Dual Weapon Mastery"))
 			{
-				_dual_mastery = true;
+				dualMastery = true;
 				continue;
 			}
 			
-			if (actual_skill.getName().contains("Polearm Mastery"))
+			if (skill.getName().contains("Polearm Mastery"))
 			{
-				_pole_mastery = true;
+				poleMastery = true;
 				continue;
 			}
 			
-			if (actual_skill.getName().contains("Two-handed Weapon Mastery"))
+			if (skill.getName().contains("Two-handed Weapon Mastery"))
 			{
-				_2hands_mastery = true;
+				twoHandMastery = true;
 				continue;
 			}
 		}
 		
 		int newMasteryPenalty = 0;
 		
-		if (!_bow_mastery && !_blunt_mastery && !_dagger_mastery && !_fist_mastery && !_dual_mastery && !_pole_mastery && !_sword_mastery && !_2hands_mastery)
+		if (!bowMastery && !bluntMastery && !daggerMastery && !fistMastery && !dualMastery && !poleMastery && !swordMastery && !twoHandMastery)
 		{
 			// not completed 1st class transfer or not acquired yet the mastery skills
 			newMasteryPenalty = 0;
@@ -2714,15 +2663,15 @@ public class PlayerInstance extends Playable
 						continue;
 					}
 					
-					final Weapon weap_item = (Weapon) item.getItem();
+					final Weapon weaponItem = (Weapon) item.getItem();
 					
-					switch (weap_item.getItemType())
+					switch (weaponItem.getItemType())
 					{
 						
 						case BIGBLUNT:
 						case BIGSWORD:
 						{
-							if (!_2hands_mastery)
+							if (!twoHandMastery)
 							{
 								newMasteryPenalty++;
 							}
@@ -2730,7 +2679,7 @@ public class PlayerInstance extends Playable
 						}
 						case BLUNT:
 						{
-							if (!_blunt_mastery)
+							if (!bluntMastery)
 							{
 								newMasteryPenalty++;
 							}
@@ -2738,7 +2687,7 @@ public class PlayerInstance extends Playable
 						}
 						case BOW:
 						{
-							if (!_bow_mastery)
+							if (!bowMastery)
 							{
 								newMasteryPenalty++;
 							}
@@ -2746,7 +2695,7 @@ public class PlayerInstance extends Playable
 						}
 						case DAGGER:
 						{
-							if (!_dagger_mastery)
+							if (!daggerMastery)
 							{
 								newMasteryPenalty++;
 							}
@@ -2754,7 +2703,7 @@ public class PlayerInstance extends Playable
 						}
 						case DUAL:
 						{
-							if (!_dual_mastery)
+							if (!dualMastery)
 							{
 								newMasteryPenalty++;
 							}
@@ -2763,7 +2712,7 @@ public class PlayerInstance extends Playable
 						case DUALFIST:
 						case FIST:
 						{
-							if (!_fist_mastery)
+							if (!fistMastery)
 							{
 								newMasteryPenalty++;
 							}
@@ -2771,7 +2720,7 @@ public class PlayerInstance extends Playable
 						}
 						case POLE:
 						{
-							if (!_pole_mastery)
+							if (!poleMastery)
 							{
 								newMasteryPenalty++;
 							}
@@ -2779,7 +2728,7 @@ public class PlayerInstance extends Playable
 						}
 						case SWORD:
 						{
-							if (!_sword_mastery)
+							if (!swordMastery)
 							{
 								newMasteryPenalty++;
 							}
@@ -2895,16 +2844,12 @@ public class PlayerInstance extends Playable
 		{
 			final Skill effectSkill = currenteffect.getSkill();
 			// Ignore all buff skills that are party related (ie. songs, dances) while still remaining weapon dependant on cast though.
-			if (!effectSkill.isOffensive() && ((effectSkill.getTargetType() != SkillTargetType.TARGET_PARTY) || (effectSkill.getSkillType() != SkillType.BUFF)))
+			// Check to rest to assure current effect meets weapon requirements.
+			if (!effectSkill.isOffensive() && ((effectSkill.getTargetType() != SkillTargetType.TARGET_PARTY) || (effectSkill.getSkillType() != SkillType.BUFF)) && !effectSkill.getWeaponDependancy(this))
 			{
-				// Check to rest to assure current effect meets weapon requirements.
-				if (!effectSkill.getWeaponDependancy(this))
-				{
-					sendMessage(effectSkill.getName() + " cannot be used with this weapon.");
-					currenteffect.exit();
-				}
+				sendMessage(effectSkill.getName() + " cannot be used with this weapon.");
+				currenteffect.exit();
 			}
-			continue;
 		}
 	}
 	
@@ -2920,7 +2865,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if ((unequipped.getItem().getType2() == Item.TYPE2_WEAPON) && (equipped == null ? true : equipped.getItem().getCrystalType() != unequipped.getItem().getCrystalType()))
+		if ((unequipped.getItem().getType2() == Item.TYPE2_WEAPON) && ((equipped == null) || (equipped.getItem().getCrystalType() != unequipped.getItem().getCrystalType())))
 		{
 			for (ItemInstance ss : getInventory().getItems())
 			{
@@ -2969,11 +2914,11 @@ public class PlayerInstance extends Playable
 	/**
 	 * Set the template of the PlayerInstance.<BR>
 	 * <BR>
-	 * @param Id The Identifier of the PlayerTemplate to set to the PlayerInstance
+	 * @param id The Identifier of the PlayerTemplate to set to the PlayerInstance
 	 */
-	public void setClassId(int Id)
+	public void setClassId(int id)
 	{
-		if ((getLvlJoinedAcademy() != 0) && (_clan != null) && (PlayerClass.values()[Id].getLevel() == ClassLevel.THIRD))
+		if ((getLvlJoinedAcademy() != 0) && (_clan != null) && (PlayerClass.values()[id].getLevel() == ClassLevel.THIRD))
 		{
 			if (getLvlJoinedAcademy() <= 16)
 			{
@@ -3004,10 +2949,10 @@ public class PlayerInstance extends Playable
 		}
 		if (isSubClassActive())
 		{
-			getSubClasses().get(_classIndex).setClassId(Id);
+			getSubClasses().get(_classIndex).setClassId(id);
 		}
 		doCast(SkillTable.getInstance().getInfo(5103, 1));
-		setClassTemplate(Id);
+		setClassTemplate(id);
 	}
 	
 	/**
@@ -3150,8 +3095,7 @@ public class PlayerInstance extends Playable
 		// Remove beginner Lucky skill
 		if (lvl == 10)
 		{
-			Skill skill = SkillTable.getInstance().getInfo(194, 1);
-			skill = removeSkill(skill);
+			removeSkill(SkillTable.getInstance().getInfo(194, 1));
 		}
 		
 		// Calculate the current higher Expertise of the PlayerInstance
@@ -3200,12 +3144,9 @@ public class PlayerInstance extends Playable
 		}
 		sendSkillList();
 		
-		if (_clan != null)
+		if ((_clan != null) && (_clan.getLevel() > 3) && isClanLeader())
 		{
-			if ((_clan.getLevel() > 3) && isClanLeader())
-			{
-				SiegeManager.getInstance().addSiegeSkills(this);
-			}
+			SiegeManager.getInstance().addSiegeSkills(this);
 		}
 		
 		// This function gets called on login, so not such a bad place to check weight
@@ -3575,7 +3516,7 @@ public class PlayerInstance extends Playable
 		{
 			sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up ...");
 		}
-		else if ((TvT.is_sitForced() && _inEventTvT) || (CTF.is_sitForced() && _inEventCTF) || (DM.is_sitForced() && _inEventDM))
+		else if ((TvT.isSitForced() && _inEventTvT) || (CTF.isSitForced() && _inEventCTF) || (DM.isSitForced() && _inEventDM))
 		{
 			sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
 		}
@@ -4105,11 +4046,11 @@ public class PlayerInstance extends Playable
 		// Sends message to client if requested
 		if (sendMessage)
 		{
-			if (count > 1)
+			if (_count > 1)
 			{
 				SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
 				sm.addItemName(item.getItemId());
-				sm.addNumber(count);
+				sm.addNumber(_count);
 				sendPacket(sm);
 			}
 			else
@@ -4605,23 +4546,13 @@ public class PlayerInstance extends Playable
 		
 		item.dropMe(this, x, y, z);
 		
-		if ((Config.AUTODESTROY_ITEM_AFTER > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getItemId()))
+		if ((Config.AUTODESTROY_ITEM_AFTER > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getItemId()) && ((item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !item.isEquipable()))
 		{
-			if ((item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !item.isEquipable())
-			{
-				ItemsAutoDestroy.getInstance().addItem(item);
-			}
+			ItemsAutoDestroy.getInstance().addItem(item);
 		}
 		if (Config.DESTROY_DROPPED_PLAYER_ITEM)
 		{
-			if (!item.isEquipable() || (item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM))
-			{
-				item.setProtected(false);
-			}
-			else
-			{
-				item.setProtected(true);
-			}
+			item.setProtected(item.isEquipable() && (!item.isEquipable() || !Config.DESTROY_EQUIPABLE_PLAYER_ITEM));
 		}
 		else
 		{
@@ -4869,7 +4800,7 @@ public class PlayerInstance extends Playable
 	public void onAction(PlayerInstance player)
 	{
 		// no Interaction with not participant to events
-		if (((TvT.is_started() || TvT.is_teleport()) && !Config.TVT_ALLOW_INTERFERENCE) || ((CTF.is_started() || CTF.is_teleport()) && !Config.CTF_ALLOW_INTERFERENCE) || ((DM.is_started() || DM.is_teleport()) && !Config.DM_ALLOW_INTERFERENCE))
+		if (((TvT.isStarted() || TvT.isTeleport()) && !Config.TVT_ALLOW_INTERFERENCE) || ((CTF.isStarted() || CTF.isTeleport()) && !Config.CTF_ALLOW_INTERFERENCE) || ((DM.is_started() || DM.isTeleport()) && !Config.DM_ALLOW_INTERFERENCE))
 		{
 			if ((_inEventTvT && !player._inEventTvT) || (!_inEventTvT && player._inEventTvT))
 			{
@@ -5056,7 +4987,7 @@ public class PlayerInstance extends Playable
 		}
 		else // Like L2OFF set the target of the PlayerInstance player
 		{
-			if (((TvT.is_started() || TvT.is_teleport()) && !Config.TVT_ALLOW_INTERFERENCE) || ((CTF.is_started() || CTF.is_teleport()) && !Config.CTF_ALLOW_INTERFERENCE) || ((DM.is_started() || DM.is_teleport()) && !Config.DM_ALLOW_INTERFERENCE))
+			if (((TvT.isStarted() || TvT.isTeleport()) && !Config.TVT_ALLOW_INTERFERENCE) || ((CTF.isStarted() || CTF.isTeleport()) && !Config.CTF_ALLOW_INTERFERENCE) || ((DM.is_started() || DM.isTeleport()) && !Config.DM_ALLOW_INTERFERENCE))
 			{
 				if ((_inEventTvT && !player._inEventTvT) || (!_inEventTvT && player._inEventTvT))
 				{
@@ -5275,7 +5206,7 @@ public class PlayerInstance extends Playable
 	
 	public boolean isInStartedTVTEvent()
 	{
-		return (TvT.is_started() && _inEventTvT);
+		return (TvT.isStarted() && _inEventTvT);
 	}
 	
 	public boolean isRegisteredInTVTEvent()
@@ -5295,7 +5226,7 @@ public class PlayerInstance extends Playable
 	
 	public boolean isInStartedCTFEvent()
 	{
-		return (CTF.is_started() && _inEventCTF);
+		return (CTF.isStarted() && _inEventCTF);
 	}
 	
 	public boolean isRegisteredInCTFEvent()
@@ -5322,7 +5253,6 @@ public class PlayerInstance extends Playable
 		return (atEvent || (_inEventTvT) || (_inEventDM) || (_inEventCTF) || (_inEventVIP) || Olympiad.getInstance().isRegistered(this));
 	}
 	
-	// To Avoid Offensive skills when locked (during oly start or TODO other events start)
 	/**
 	 * Are player offensive skills locked.
 	 * @return true, if successful
@@ -5892,15 +5822,9 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Prevents /target exploiting
-		if (newTarget != null)
+		if ((newTarget != null) && (!(newTarget instanceof PlayerInstance) || !isInParty() || !((PlayerInstance) newTarget).isInParty() || (getParty().getPartyLeaderOID() != ((PlayerInstance) newTarget).getParty().getPartyLeaderOID())) && (Math.abs(newTarget.getZ() - getZ()) > Config.DIFFERENT_Z_NEW_MOVIE))
 		{
-			if (!(newTarget instanceof PlayerInstance) || !isInParty() || !((PlayerInstance) newTarget).isInParty() || (getParty().getPartyLeaderOID() != ((PlayerInstance) newTarget).getParty().getPartyLeaderOID()))
-			{
-				if (Math.abs(newTarget.getZ() - getZ()) > Config.DIFFERENT_Z_NEW_MOVIE)
-				{
-					newTarget = null;
-				}
-			}
+			newTarget = null;
 		}
 		
 		if (!isGM())
@@ -5924,7 +5848,6 @@ public class PlayerInstance extends Playable
 		
 		// Get the current target
 		WorldObject oldTarget = getTarget();
-		
 		if (oldTarget != null)
 		{
 			if (oldTarget.equals(newTarget))
@@ -5938,10 +5861,9 @@ public class PlayerInstance extends Playable
 				((Creature) oldTarget).removeStatusListener(this);
 			}
 		}
-		oldTarget = null;
 		
 		// Add the PlayerInstance to the _statusListener of the new target if it's a Creature
-		if ((newTarget != null) && (newTarget instanceof Creature))
+		if (newTarget instanceof Creature)
 		{
 			((Creature) newTarget).addStatusListener(this);
 			TargetSelected my = new TargetSelected(getObjectId(), newTarget.getObjectId(), getX(), getY(), getZ());
@@ -6049,19 +5971,13 @@ public class PlayerInstance extends Playable
 		final ItemInstance legs = getLegsArmorInstance();
 		final ItemInstance armor = getChestArmorInstance();
 		
-		if ((armor != null) && (legs != null))
+		if ((armor != null) && (legs != null) && ((ArmorType) legs.getItemType() == ArmorType.HEAVY) && ((ArmorType) armor.getItemType() == ArmorType.HEAVY))
 		{
-			if (((ArmorType) legs.getItemType() == ArmorType.HEAVY) && ((ArmorType) armor.getItemType() == ArmorType.HEAVY))
-			{
-				return true;
-			}
+			return true;
 		}
-		if (armor != null)
+		if ((armor != null) && ((getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == Item.SLOT_FULL_ARMOR) && ((ArmorType) armor.getItemType() == ArmorType.HEAVY)))
 		{
-			if (((getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == Item.SLOT_FULL_ARMOR) && ((ArmorType) armor.getItemType() == ArmorType.HEAVY)))
-			{
-				return true;
-			}
+			return true;
 		}
 		return false;
 	}
@@ -6075,19 +5991,13 @@ public class PlayerInstance extends Playable
 		final ItemInstance legs = getLegsArmorInstance();
 		final ItemInstance armor = getChestArmorInstance();
 		
-		if ((armor != null) && (legs != null))
+		if ((armor != null) && (legs != null) && ((ArmorType) legs.getItemType() == ArmorType.LIGHT) && ((ArmorType) armor.getItemType() == ArmorType.LIGHT))
 		{
-			if (((ArmorType) legs.getItemType() == ArmorType.LIGHT) && ((ArmorType) armor.getItemType() == ArmorType.LIGHT))
-			{
-				return true;
-			}
+			return true;
 		}
-		if (armor != null)
+		if ((armor != null) && ((getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == Item.SLOT_FULL_ARMOR) && ((ArmorType) armor.getItemType() == ArmorType.LIGHT)))
 		{
-			if (((getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == Item.SLOT_FULL_ARMOR) && ((ArmorType) armor.getItemType() == ArmorType.LIGHT)))
-			{
-				return true;
-			}
+			return true;
 		}
 		return false;
 	}
@@ -6101,19 +6011,13 @@ public class PlayerInstance extends Playable
 		final ItemInstance legs = getLegsArmorInstance();
 		final ItemInstance armor = getChestArmorInstance();
 		
-		if ((armor != null) && (legs != null))
+		if ((armor != null) && (legs != null) && ((ArmorType) legs.getItemType() == ArmorType.MAGIC) && ((ArmorType) armor.getItemType() == ArmorType.MAGIC))
 		{
-			if (((ArmorType) legs.getItemType() == ArmorType.MAGIC) && ((ArmorType) armor.getItemType() == ArmorType.MAGIC))
-			{
-				return true;
-			}
+			return true;
 		}
-		if (armor != null)
+		if ((armor != null) && ((getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == Item.SLOT_FULL_ARMOR) && ((ArmorType) armor.getItemType() == ArmorType.MAGIC)))
 		{
-			if (((getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == Item.SLOT_FULL_ARMOR) && ((ArmorType) armor.getItemType() == ArmorType.MAGIC)))
-			{
-				return true;
-			}
+			return true;
 		}
 		return false;
 	}
@@ -6124,7 +6028,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean isWearingFormalWear()
 	{
-		return _IsWearingFormalWear;
+		return _isWearingFormalWear;
 	}
 	
 	/**
@@ -6133,7 +6037,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void setIsWearingFormalWear(boolean value)
 	{
-		_IsWearingFormalWear = value;
+		_isWearingFormalWear = value;
 	}
 	
 	/**
@@ -6279,29 +6183,23 @@ public class PlayerInstance extends Playable
 	 */
 	public void EngageAnswer(int answer)
 	{
-		if (!_engagerequest)
+		if (!_engagerequest || (_engageid == 0))
 		{
 			return;
 		}
-		else if (_engageid == 0)
+		
+		PlayerInstance ptarget = (PlayerInstance) World.getInstance().findObject(_engageid);
+		setEngageRequest(false, 0);
+		if (ptarget != null)
 		{
-			return;
-		}
-		else
-		{
-			PlayerInstance ptarget = (PlayerInstance) World.getInstance().findObject(_engageid);
-			setEngageRequest(false, 0);
-			if (ptarget != null)
+			if (answer == 1)
 			{
-				if (answer == 1)
-				{
-					CoupleManager.getInstance().createCouple(ptarget, PlayerInstance.this);
-					ptarget.sendMessage("Request to Engage has been >ACCEPTED<");
-				}
-				else
-				{
-					ptarget.sendMessage("Request to Engage has been >DENIED<!");
-				}
+				CoupleManager.getInstance().createCouple(ptarget, PlayerInstance.this);
+				ptarget.sendMessage("Request to Engage has been >ACCEPTED<");
+			}
+			else
+			{
+				ptarget.sendMessage("Request to Engage has been >DENIED<!");
 			}
 		}
 	}
@@ -6367,11 +6265,11 @@ public class PlayerInstance extends Playable
 			x1 = getX();
 			y1 = getY();
 			z1 = getZ();
-			TownZone Town;
-			Town = TownManager.getInstance().getTown(x1, y1, z1);
-			if ((Town != null) && isinTownWar())
+			TownZone town;
+			town = TownManager.getInstance().getTown(x1, y1, z1);
+			if ((town != null) && isinTownWar())
 			{
-				if ((Town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
+				if ((town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
 				{
 					reviveRequest(this, null, false);
 				}
@@ -6414,7 +6312,7 @@ public class PlayerInstance extends Playable
 				
 				if (_inEventTvT && pk._inEventTvT)
 				{
-					if (TvT.is_teleport() || TvT.is_started())
+					if (TvT.isTeleport() || TvT.isStarted())
 					{
 						if (!(pk._teamNameTvT.equals(_teamNameTvT)))
 						{
@@ -6441,7 +6339,7 @@ public class PlayerInstance extends Playable
 				}
 				else if (_inEventTvT)
 				{
-					if (TvT.is_teleport() || TvT.is_started())
+					if (TvT.isTeleport() || TvT.isStarted())
 					{
 						sendMessage("You will be revived and teleported to team spot in " + (Config.TVT_REVIVE_DELAY / 1000) + " seconds!");
 						ThreadPool.schedule(() ->
@@ -6454,7 +6352,7 @@ public class PlayerInstance extends Playable
 				}
 				else if (_inEventCTF)
 				{
-					if (CTF.is_teleport() || CTF.is_started())
+					if (CTF.isTeleport() || CTF.isStarted())
 					{
 						sendMessage("You will be revived and teleported to team flag in 20 seconds!");
 						if (_haveFlagCTF)
@@ -6470,7 +6368,7 @@ public class PlayerInstance extends Playable
 				}
 				else if (_inEventDM && pk._inEventDM)
 				{
-					if (DM.is_teleport() || DM.is_started())
+					if (DM.isTeleport() || DM.is_started())
 					{
 						pk._countDMkills++;
 						final PlaySound ps = new PlaySound(0, "ItemSound.quest_itemget", 1, getObjectId(), getX(), getY(), getZ());
@@ -6490,21 +6388,21 @@ public class PlayerInstance extends Playable
 						sendMessage("You will be revived and teleported to spot in 20 seconds!");
 						ThreadPool.schedule(() ->
 						{
-							final Location p_loc = DM.get_playersSpawnLocation();
-							teleToLocation(p_loc.getX(), p_loc.getY(), p_loc.getZ(), false);
+							final Location ploc = DM.get_playersSpawnLocation();
+							teleToLocation(ploc.getX(), ploc.getY(), ploc.getZ(), false);
 							doRevive();
 						}, Config.DM_REVIVE_DELAY);
 					}
 				}
 				else if (_inEventDM)
 				{
-					if (DM.is_teleport() || DM.is_started())
+					if (DM.isTeleport() || DM.is_started())
 					{
 						sendMessage("You will be revived and teleported to spot in 20 seconds!");
 						ThreadPool.schedule(() ->
 						{
-							final Location players_loc = DM.get_playersSpawnLocation();
-							teleToLocation(players_loc.getX(), players_loc.getY(), players_loc.getZ(), false);
+							final Location ploc = DM.get_playersSpawnLocation();
+							teleToLocation(ploc.getX(), ploc.getY(), ploc.getZ(), false);
 							doRevive();
 						}, 20000);
 					}
@@ -6595,12 +6493,9 @@ public class PlayerInstance extends Playable
 		
 		for (Creature creature : getKnownList().getKnownCharacters())
 		{
-			if (creature.getTarget() == this)
+			if ((creature.getTarget() == this) && creature.isCastingNow())
 			{
-				if (creature.isCastingNow())
-				{
-					creature.abortCast();
-				}
+				creature.abortCast();
 			}
 		}
 		
@@ -6617,8 +6512,8 @@ public class PlayerInstance extends Playable
 		quakeSystem = 0;
 		
 		// leave war legend aura if enabled
-		heroConsecutiveKillCount = 0;
-		if (Config.WAR_LEGEND_AURA && !_hero && isPVPHero)
+		_heroConsecutiveKillCount = 0;
+		if (Config.WAR_LEGEND_AURA && !_hero && _isPvpHero)
 		{
 			setHeroAura(false);
 			sendMessage("You leaved War Legend State");
@@ -6640,7 +6535,7 @@ public class PlayerInstance extends Playable
 		CTF.removeFlagFromPlayer(this);
 		broadcastUserInfo();
 		_haveFlagCTF = false;
-		Announcements.getInstance().gameAnnounceToAll(CTF.get_eventName() + "(CTF): " + _teamNameHaveFlagCTF + "'s flag returned.");
+		Announcements.getInstance().gameAnnounceToAll(CTF.getEventName() + "(CTF): " + _teamNameHaveFlagCTF + "'s flag returned.");
 	}
 	
 	/**
@@ -6649,7 +6544,7 @@ public class PlayerInstance extends Playable
 	 */
 	private void onDieDropItem(Creature killer)
 	{
-		if (atEvent || (TvT.is_started() && _inEventTvT) || (DM.is_started() && _inEventDM) || (CTF.is_started() && _inEventCTF) || (VIP._started && _inEventVIP) || (killer == null))
+		if (atEvent || (TvT.isStarted() && _inEventTvT) || (DM.is_started() && _inEventDM) || (CTF.isStarted() && _inEventCTF) || (VIP._started && _inEventVIP) || (killer == null))
 		{
 			return;
 		}
@@ -6693,12 +6588,6 @@ public class PlayerInstance extends Playable
 			while ((dropPercent > 0) && (Rnd.get(100) < dropPercent) && (dropCount < dropLimit))
 			{
 				int itemDropPercent = 0;
-				List<Integer> nonDroppableList = new ArrayList<>();
-				List<Integer> nonDroppableListPet = new ArrayList<>();
-				
-				nonDroppableList = Config.KARMA_LIST_NONDROPPABLE_ITEMS;
-				nonDroppableListPet = Config.KARMA_LIST_NONDROPPABLE_ITEMS;
-				
 				for (ItemInstance itemDrop : getInventory().getItems())
 				{
 					// Don't drop
@@ -6706,8 +6595,8 @@ public class PlayerInstance extends Playable
 						itemDrop.isShadowItem() || // Dont drop Shadow Items
 						(itemDrop.getItemId() == 57) || // Adena
 						(itemDrop.getItem().getType2() == Item.TYPE2_QUEST) || // Quest Items
-						nonDroppableList.contains(itemDrop.getItemId()) || // Item listed in the non droppable item list
-						nonDroppableListPet.contains(itemDrop.getItemId()) || // Item listed in the non droppable pet item list
+						Config.KARMA_LIST_NONDROPPABLE_ITEMS.contains(itemDrop.getItemId()) || // Item listed in the non droppable item list
+						Config.KARMA_LIST_NONDROPPABLE_PET_ITEMS.contains(itemDrop.getItemId()) || // Item listed in the non droppable pet item list
 						((getPet() != null) && (getPet().getControlItemId() == itemDrop.getItemId() // Control Item of active pet
 						)))
 					{
@@ -6728,15 +6617,7 @@ public class PlayerInstance extends Playable
 					// NOTE: Each time an item is dropped, the chance of another item being dropped gets lesser (dropCount * 2)
 					if (Rnd.get(100) < itemDropPercent)
 					{
-						if (isKarmaDrop)
-						{
-							dropItem("DieDrop", itemDrop, killer, true, false);
-						}
-						else
-						{
-							dropItem("DieDrop", itemDrop, killer, true, true);
-						}
-						
+						dropItem("DieDrop", itemDrop, killer, true, !isKarmaDrop);
 						dropCount++;
 						break;
 					}
@@ -6786,7 +6667,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if ((_inEventCTF && CTF.is_started()) || (_inEventTvT && TvT.is_started()) || (_inEventVIP && VIP._started) || (_inEventDM && DM.is_started()))
+		if ((_inEventCTF && CTF.isStarted()) || (_inEventTvT && TvT.isStarted()) || (_inEventVIP && VIP._started) || (_inEventDM && DM.is_started()))
 		{
 			return;
 		}
@@ -6849,12 +6730,9 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if (Config.ANTI_FARM_SUMMON)
+		if (Config.ANTI_FARM_SUMMON && (target instanceof SummonInstance))
 		{
-			if (target instanceof SummonInstance)
-			{
-				return;
-			}
+			return;
 		}
 		
 		// Check if it's pvp
@@ -6865,30 +6743,24 @@ public class PlayerInstance extends Playable
 		else
 		{
 			// check about wars
-			if ((targetPlayer.getClan() != null) && (getClan() != null))
+			if ((targetPlayer.getClan() != null) && (getClan() != null) && getClan().isAtWarWith(targetPlayer.getClanId()) && targetPlayer.getClan().isAtWarWith(getClanId()))
 			{
-				if (getClan().isAtWarWith(targetPlayer.getClanId()))
+				// 'Both way war' -> 'PvP Kill'
+				increasePvpKills();
+				if ((target instanceof PlayerInstance) && Config.ANNOUNCE_PVP_KILL)
 				{
-					if (targetPlayer.getClan().isAtWarWith(getClanId()))
-					{
-						// 'Both way war' -> 'PvP Kill'
-						increasePvpKills();
-						if ((target instanceof PlayerInstance) && Config.ANNOUNCE_PVP_KILL)
-						{
-							Announcements.getInstance().announceToAll("Player " + getName() + " hunted Player " + target.getName());
-						}
-						else if ((target instanceof PlayerInstance) && Config.ANNOUNCE_ALL_KILL)
-						{
-							Announcements.getInstance().announceToAll("Player " + getName() + " killed Player " + target.getName());
-						}
-						addItemReward(targetPlayer);
-						return;
-					}
+					Announcements.getInstance().announceToAll("Player " + getName() + " hunted Player " + target.getName());
 				}
+				else if ((target instanceof PlayerInstance) && Config.ANNOUNCE_ALL_KILL)
+				{
+					Announcements.getInstance().announceToAll("Player " + getName() + " killed Player " + target.getName());
+				}
+				addItemReward(targetPlayer);
+				return;
 			}
 			
 			// 'No war' or 'One way war' -> 'Normal PK'
-			if ((!_inEventTvT || !TvT.is_started()) || (!_inEventCTF || !CTF.is_started()) || (!_inEventVIP || !VIP._started) || (!_inEventDM || !DM.is_started()))
+			if ((!_inEventTvT || !TvT.isStarted()) || (!_inEventCTF || !CTF.isStarted()) || (!_inEventVIP || !VIP._started) || (!_inEventDM || !DM.is_started()))
 			{
 				if (targetPlayer.getKarma() > 0) // Target player has karma
 				{
@@ -6924,15 +6796,15 @@ public class PlayerInstance extends Playable
 		
 		if (targetPlayer.getObjectId() == _lastKill)
 		{
-			count += 1;
+			_count += 1;
 		}
 		else
 		{
-			count = 1;
+			_count = 1;
 			_lastKill = targetPlayer.getObjectId();
 		}
 		
-		if ((Config.REWARD_PROTECT == 0) || (count <= Config.REWARD_PROTECT))
+		if ((Config.REWARD_PROTECT == 0) || (_count <= Config.REWARD_PROTECT))
 		{
 			addItemReward(targetPlayer);
 		}
@@ -6990,19 +6862,16 @@ public class PlayerInstance extends Playable
 			}
 			
 			// Anti FARM same IP
-			if (Config.ANTI_FARM_IP_ENABLED)
+			if (Config.ANTI_FARM_IP_ENABLED && (_client != null) && (targetPlayer.getClient() != null))
 			{
-				if ((_client != null) && (targetPlayer.getClient() != null))
+				final String ip1 = _client.getConnection().getInetAddress().getHostAddress();
+				final String ip2 = targetPlayer.getClient().getConnection().getInetAddress().getHostAddress();
+				
+				if (ip1.equals(ip2))
 				{
-					final String ip1 = _client.getConnection().getInetAddress().getHostAddress();
-					final String ip2 = targetPlayer.getClient().getConnection().getInetAddress().getHostAddress();
-					
-					if (ip1.equals(ip2))
-					{
-						sendMessage("Farm is punishable with Ban! Gm informed.");
-						LOGGER.info("PVP POINT FARM ATTEMPT: " + getName() + " and " + targetPlayer.getName() + ". SAME IP.");
-						return false;
-					}
+					sendMessage("Farm is punishable with Ban! Gm informed.");
+					LOGGER.info("PVP POINT FARM ATTEMPT: " + getName() + " and " + targetPlayer.getName() + ". SAME IP.");
+					return false;
 				}
 			}
 			return true;
@@ -7080,11 +6949,11 @@ public class PlayerInstance extends Playable
 		x = getX();
 		y = getY();
 		z = getZ();
-		TownZone Town;
-		Town = TownManager.getInstance().getTown(x, y, z);
-		if ((Town != null) && isinTownWar())
+		TownZone town;
+		town = TownManager.getInstance().getTown(x, y, z);
+		if ((town != null) && isinTownWar())
 		{
-			if ((Town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
+			if ((town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
 			{
 				getInventory().addItem("TownWar", Config.TW_ITEM_ID, Config.TW_ITEM_AMOUNT, this, this);
 				sendMessage("You received your prize for a town war kill!");
@@ -7096,7 +6965,7 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
-		if ((TvT.is_started() && _inEventTvT) || (DM.is_started() && _inEventDM) || (CTF.is_started() && _inEventCTF) || (VIP._started && _inEventVIP))
+		if ((TvT.isStarted() && _inEventTvT) || (DM.is_started() && _inEventDM) || (CTF.isStarted() && _inEventCTF) || (VIP._started && _inEventVIP))
 		{
 			return;
 		}
@@ -7105,10 +6974,10 @@ public class PlayerInstance extends Playable
 		setPvpKills(getPvpKills() + 1);
 		
 		// Increase the kill count for a special hero aura
-		heroConsecutiveKillCount++;
+		_heroConsecutiveKillCount++;
 		
 		// If heroConsecutiveKillCount == 30 give hero aura
-		if ((heroConsecutiveKillCount == Config.KILLS_TO_GET_WAR_LEGEND_AURA) && Config.WAR_LEGEND_AURA)
+		if ((_heroConsecutiveKillCount == Config.KILLS_TO_GET_WAR_LEGEND_AURA) && Config.WAR_LEGEND_AURA)
 		{
 			setHeroAura(true);
 			Announcements.getInstance().gameAnnounceToAll(getName() + " becames War Legend with " + Config.KILLS_TO_GET_WAR_LEGEND_AURA + " PvP!!");
@@ -7151,18 +7020,11 @@ public class PlayerInstance extends Playable
 				if (Config.ENABLE_ANTI_PVP_FARM_MSG)
 				{
 					final CreatureSay cs12 = new CreatureSay(0, 15, "", getName() + " 5 consecutive kill! Only Gm."); // 8D
-					
 					for (PlayerInstance player : World.getInstance().getAllPlayers())
 					{
-						if (player != null)
+						if ((player != null) && (player.isOnline() != 0) && player.isGM())
 						{
-							if (player.isOnline() != 0)
-							{
-								if (player.isGM())
-								{
-									player.sendPacket(cs12);
-								}
-							}
+							player.sendPacket(cs12);
 						}
 					}
 				}
@@ -7173,12 +7035,9 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs = new CreatureSay(0, 15, "", getName() + " is Dominating!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if (player != null)
+					if ((player != null) && (player.isOnline() != 0))
 					{
-						if (player.isOnline() != 0)
-						{
-							player.sendPacket(cs);
-						}
+						player.sendPacket(cs);
 					}
 				}
 				break;
@@ -7188,12 +7047,9 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs2 = new CreatureSay(0, 15, "", getName() + " is on a Rampage!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if (player != null)
+					if ((player != null) && (player.isOnline() != 0))
 					{
-						if (player.isOnline() != 0)
-						{
-							player.sendPacket(cs2);
-						}
+						player.sendPacket(cs2);
 					}
 				}
 				break;
@@ -7203,12 +7059,9 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs3 = new CreatureSay(0, 15, "", getName() + " is on a Killing Spree!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if (player != null)
+					if ((player != null) && (player.isOnline() != 0))
 					{
-						if (player.isOnline() != 0)
-						{
-							player.sendPacket(cs3);
-						}
+						player.sendPacket(cs3);
 					}
 				}
 				break;
@@ -7218,12 +7071,9 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs4 = new CreatureSay(0, 15, "", getName() + " is on a Monster Kill!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if (player != null)
+					if ((player != null) && (player.isOnline() != 0))
 					{
-						if (player.isOnline() != 0)
-						{
-							player.sendPacket(cs4);
-						}
+						player.sendPacket(cs4);
 					}
 				}
 				break;
@@ -7233,12 +7083,9 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs5 = new CreatureSay(0, 15, "", getName() + " is Unstoppable!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if (player != null)
+					if ((player != null) && (player.isOnline() != 0))
 					{
-						if (player.isOnline() != 0)
-						{
-							player.sendPacket(cs5);
-						}
+						player.sendPacket(cs5);
 					}
 				}
 				break;
@@ -7248,12 +7095,9 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs6 = new CreatureSay(0, 15, "", getName() + " is on an Ultra Kill!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if (player != null)
+					if ((player != null) && (player.isOnline() != 0))
 					{
-						if (player.isOnline() != 0)
-						{
-							player.sendPacket(cs6);
-						}
+						player.sendPacket(cs6);
 					}
 				}
 				break;
@@ -7263,12 +7107,9 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs7 = new CreatureSay(0, 15, "", getName() + " God Blessed!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if (player != null)
+					if ((player != null) && (player.isOnline() != 0))
 					{
-						if (player.isOnline() != 0)
-						{
-							player.sendPacket(cs7);
-						}
+						player.sendPacket(cs7);
 					}
 				}
 				break;
@@ -7278,12 +7119,9 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs8 = new CreatureSay(0, 15, "", getName() + " is Wicked Sick!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if (player != null)
+					if ((player != null) && (player.isOnline() != 0))
 					{
-						if (player.isOnline() != 0)
-						{
-							player.sendPacket(cs8);
-						}
+						player.sendPacket(cs8);
 					}
 				}
 				break;
@@ -7293,12 +7131,9 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs9 = new CreatureSay(0, 15, "", getName() + " is on a Ludricrous Kill!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if (player != null)
+					if ((player != null) && (player.isOnline() != 0))
 					{
-						if (player.isOnline() != 0)
-						{
-							player.sendPacket(cs9);
-						}
+						player.sendPacket(cs9);
 					}
 				}
 				break;
@@ -7308,12 +7143,9 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs10 = new CreatureSay(0, 15, "", getName() + " is GodLike!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if (player != null)
+					if ((player != null) && (player.isOnline() != 0))
 					{
-						if (player.isOnline() != 0)
-						{
-							player.sendPacket(cs10);
-						}
+						player.sendPacket(cs10);
 					}
 				}
 			}
@@ -7322,13 +7154,13 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Get info on pk's from pk table.
-	 * @param PlayerWhoKilled the player who killed
+	 * @param playerWhoKilled the player who killed
 	 */
-	public void doPkInfo(PlayerInstance PlayerWhoKilled)
+	public void doPkInfo(PlayerInstance playerWhoKilled)
 	{
-		String killer = PlayerWhoKilled.getName();
+		String killer = playerWhoKilled.getName();
 		String killed = getName();
-		int kills = 0;
+		int killCount = 0;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT kills FROM pkkills WHERE killerId=? AND killedId=?");
@@ -7337,24 +7169,23 @@ public class PlayerInstance extends Playable
 			final ResultSet rset = statement.executeQuery();
 			if (rset.next())
 			{
-				kills = rset.getInt("kills");
+				killCount = rset.getInt("kills");
 			}
 			rset.close();
 			statement.close();
 		}
 		catch (SQLException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 		
-		if (kills >= 1)
+		if (killCount >= 1)
 		{
-			kills++;
-			String UPDATE_PKKILLS = "UPDATE pkkills SET kills=? WHERE killerId=? AND killedId=?";
+			killCount++;
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement(UPDATE_PKKILLS);
-				statement.setInt(1, kills);
+				PreparedStatement statement = con.prepareStatement("UPDATE pkkills SET kills=? WHERE killerId=? AND killedId=?");
+				statement.setInt(1, killCount);
 				statement.setString(2, killer);
 				statement.setString(3, killed);
 				statement.execute();
@@ -7364,15 +7195,14 @@ public class PlayerInstance extends Playable
 			{
 				LOGGER.info("Could not update pkKills, got: " + e.getMessage());
 			}
-			sendMessage("You have been killed " + kills + " times by " + PlayerWhoKilled.getName() + ".");
-			PlayerWhoKilled.sendMessage("You have killed " + getName() + " " + kills + " times.");
+			sendMessage("You have been killed " + kills + " times by " + playerWhoKilled.getName() + ".");
+			playerWhoKilled.sendMessage("You have killed " + getName() + " " + kills + " times.");
 		}
 		else
 		{
-			String ADD_PKKILLS = "INSERT INTO pkkills (killerId,killedId,kills) VALUES (?,?,?)";
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement(ADD_PKKILLS);
+				PreparedStatement statement = con.prepareStatement("INSERT INTO pkkills (killerId,killedId,kills) VALUES (?,?,?)");
 				statement.setString(1, killer);
 				statement.setString(2, killed);
 				statement.setInt(3, 1);
@@ -7383,8 +7213,8 @@ public class PlayerInstance extends Playable
 			{
 				LOGGER.info("Could not add pkKills, got: " + e.getMessage());
 			}
-			sendMessage("This is the first time you have been killed by " + PlayerWhoKilled.getName() + ".");
-			PlayerWhoKilled.sendMessage("You have killed " + getName() + " for the first time.");
+			sendMessage("This is the first time you have been killed by " + playerWhoKilled.getName() + ".");
+			playerWhoKilled.sendMessage("You have killed " + getName() + " for the first time.");
 		}
 	}
 	
@@ -7394,7 +7224,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void increasePkKillsAndKarma(int targLVL)
 	{
-		if ((TvT.is_started() && _inEventTvT) || (DM.is_started() && _inEventDM) || (CTF.is_started() && _inEventCTF) || (VIP._started && _inEventVIP))
+		if ((TvT.isStarted() && _inEventTvT) || (DM.is_started() && _inEventDM) || (CTF.isStarted() && _inEventCTF) || (VIP._started && _inEventVIP))
 		{
 			return;
 		}
@@ -7469,23 +7299,23 @@ public class PlayerInstance extends Playable
 		z = getZ();
 		
 		// get local town
-		final TownZone Town = TownManager.getInstance().getTown(x, y, z);
+		final TownZone town = TownManager.getInstance().getTown(x, y, z);
 		
 		setPkKills(getPkKills() + 1);
 		
-		if ((Town == null) || (isinTownWar() && Config.TW_ALLOW_KARMA))
+		if ((town == null) || (isinTownWar() && Config.TW_ALLOW_KARMA))
 		{
 			setKarma(getKarma() + newKarma);
 		}
 		
-		if ((Town != null) && isinTownWar())
+		if ((town != null) && isinTownWar())
 		{
-			if ((Town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
+			if ((town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
 			{
 				getInventory().addItem("TownWar", Config.TW_ITEM_ID, Config.TW_ITEM_AMOUNT, this, this);
 				sendMessage("You received your prize for a town war kill!");
 			}
-			else if (Config.TW_ALL_TOWNS && (Town.getTownId() != 0))
+			else if (Config.TW_ALL_TOWNS && (town.getTownId() != 0))
 			{
 				getInventory().addItem("TownWar", Config.TW_ITEM_ID, Config.TW_ITEM_AMOUNT, this, this);
 				sendMessage("You received your prize for a town war kill!");
@@ -7548,7 +7378,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void updatePvPStatus()
 	{
-		if ((TvT.is_started() && _inEventTvT) || (CTF.is_started() && _inEventCTF) || (DM.is_started() && _inEventDM) || (VIP._started && _inEventVIP))
+		if ((TvT.isStarted() && _inEventTvT) || (CTF.isStarted() && _inEventCTF) || (DM.is_started() && _inEventDM) || (VIP._started && _inEventVIP))
 		{
 			return;
 		}
@@ -7572,35 +7402,35 @@ public class PlayerInstance extends Playable
 	 */
 	public void updatePvPStatus(Creature target)
 	{
-		PlayerInstance player_target = null;
+		PlayerInstance targetPlayer = null;
 		
 		if (target instanceof PlayerInstance)
 		{
-			player_target = (PlayerInstance) target;
+			targetPlayer = (PlayerInstance) target;
 		}
 		else if (target instanceof Summon)
 		{
-			player_target = ((Summon) target).getOwner();
+			targetPlayer = ((Summon) target).getOwner();
 		}
 		
-		if (player_target == null)
+		if (targetPlayer == null)
 		{
 			return;
 		}
 		
-		if ((TvT.is_started() && _inEventTvT && player_target._inEventTvT) || (DM.is_started() && _inEventDM && player_target._inEventDM) || (CTF.is_started() && _inEventCTF && player_target._inEventCTF) || (VIP._started && _inEventVIP && player_target._inEventVIP))
+		if ((TvT.isStarted() && _inEventTvT && targetPlayer._inEventTvT) || (DM.is_started() && _inEventDM && targetPlayer._inEventDM) || (CTF.isStarted() && _inEventCTF && targetPlayer._inEventCTF) || (VIP._started && _inEventVIP && targetPlayer._inEventVIP))
 		{
 			return;
 		}
 		
-		if (isInDuel() && (player_target.getDuelId() == getDuelId()))
+		if (isInDuel() && (targetPlayer.getDuelId() == getDuelId()))
 		{
 			return;
 		}
 		
-		if ((!isInsideZone(ZoneId.PVP) || !player_target.isInsideZone(ZoneId.PVP)) && (player_target.getKarma() == 0))
+		if ((!isInsideZone(ZoneId.PVP) || !targetPlayer.isInsideZone(ZoneId.PVP)) && (targetPlayer.getKarma() == 0))
 		{
-			if (checkIfPvP(player_target))
+			if (checkIfPvP(targetPlayer))
 			{
 				setPvpFlagLasts(System.currentTimeMillis() + Config.PVP_PVP_TIME);
 			}
@@ -7679,7 +7509,7 @@ public class PlayerInstance extends Playable
 		
 		// Calculate the Experience loss
 		long lostExp = 0;
-		if (!atEvent && (!_inEventTvT || !TvT.is_started()) && (!_inEventDM || !DM.is_started()) && (!_inEventCTF || !CTF.is_started()) && (!_inEventVIP || !VIP._started))
+		if (!atEvent && (!_inEventTvT || !TvT.isStarted()) && (!_inEventDM || !DM.is_started()) && (!_inEventCTF || !CTF.isStarted()) && (!_inEventVIP || !VIP._started))
 		{
 			final byte maxLvl = ExperienceData.getInstance().getMaxLevel();
 			if (lvl < maxLvl)
@@ -7816,12 +7646,9 @@ public class PlayerInstance extends Playable
 	public synchronized PlayerInstance getActiveRequester()
 	{
 		final PlayerInstance requester = _activeRequester;
-		if (requester != null)
+		if ((requester != null) && requester.isRequestExpired() && (_activeTradeList == null))
 		{
-			if (requester.isRequestExpired() && (_activeTradeList == null))
-			{
-				_activeRequester = null;
-			}
+			_activeRequester = null;
 		}
 		return _activeRequester;
 	}
@@ -7995,7 +7822,6 @@ public class PlayerInstance extends Playable
 		if (partner != null)
 		{
 			partner.onTradeCancel(this);
-			partner = null;
 		}
 		onTradeCancel(this);
 	}
@@ -8151,14 +7977,7 @@ public class PlayerInstance extends Playable
 		_clanId = clan.getClanId();
 		
 		// Add clan leader skills if clanleader
-		if (isClanLeader() && (clan.getLevel() >= 4))
-		{
-			addClanLeaderSkills(true);
-		}
-		else
-		{
-			addClanLeaderSkills(false);
-		}
+		addClanLeaderSkills(isClanLeader() && (clan.getLevel() >= 4));
 	}
 	
 	/**
@@ -8532,22 +8351,22 @@ public class PlayerInstance extends Playable
 		return _party;
 	}
 	
-	public void setFirstLog(int first_log)
+	public void setFirstLog(int firstLog)
 	{
-		_first_log = false;
-		if (first_log == 1)
+		_firstLog = false;
+		if (firstLog == 1)
 		{
-			_first_log = true;
+			_firstLog = true;
 		}
 	}
 	
 	/**
 	 * Sets the first LOGGER.
-	 * @param first_log the new first LOGGER
+	 * @param firstLog the new first LOGGER
 	 */
-	public void setFirstLog(boolean first_log)
+	public void setFirstLog(boolean firstLog)
 	{
-		_first_log = first_log;
+		_firstLog = firstLog;
 	}
 	
 	/**
@@ -8556,7 +8375,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean getFirstLog()
 	{
-		return _first_log;
+		return _firstLog;
 	}
 	
 	/**
@@ -8823,16 +8642,16 @@ public class PlayerInstance extends Playable
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET first_log=? WHERE obj_id=?");
 			
-			int _fl;
+			int fl;
 			if (getFirstLog())
 			{
-				_fl = 1;
+				fl = 1;
 			}
 			else
 			{
-				_fl = 0;
+				fl = 0;
 			}
-			statement.setInt(1, _fl);
+			statement.setInt(1, fl);
 			statement.setInt(2, getObjectId());
 			statement.execute();
 			statement.close();
@@ -9054,16 +8873,13 @@ public class PlayerInstance extends Playable
 				}
 				
 				// Restore Subclass Data (cannot be done earlier in function)
-				if (restoreSubClassData(player))
+				if (restoreSubClassData(player) && (activeClassId != player.getBaseClass()))
 				{
-					if (activeClassId != player.getBaseClass())
+					for (SubClass subClass : player.getSubClasses().values())
 					{
-						for (SubClass subClass : player.getSubClasses().values())
+						if (subClass.getClassId() == activeClassId)
 						{
-							if (subClass.getClassId() == activeClassId)
-							{
-								player._classIndex = subClass.getClassIndex();
-							}
+							player._classIndex = subClass.getClassIndex();
 						}
 					}
 				}
@@ -9082,7 +8898,7 @@ public class PlayerInstance extends Playable
 				player.setApprentice(rset.getInt("apprentice"));
 				player.setSponsor(rset.getInt("sponsor"));
 				player.setLvlJoinedAcademy(rset.getInt("lvl_joined_academy"));
-				player.setIsIn7sDungeon(rset.getInt("isin7sdungeon") == 1 ? true : false);
+				player.setIsIn7sDungeon(rset.getInt("isin7sdungeon") == 1);
 				
 				player.setPunishLevel(rset.getInt("punish_level"));
 				if (player.getPunishLevel() != PunishLevel.NONE)
@@ -9109,7 +8925,7 @@ public class PlayerInstance extends Playable
 				player.setAllianceWithVarkaKetra(rset.getInt("varka_ketra_ally"));
 				
 				player.setDeathPenaltyBuffLevel(rset.getInt("death_penalty_level"));
-				player.setAio(rset.getInt("aio") == 1 ? true : false);
+				player.setAio(rset.getInt("aio") == 1);
 				player.setAioEndTime(rset.getLong("aio_end"));
 				
 				// Set the x,y,z position of the PlayerInstance and make it invisible
@@ -9167,7 +8983,6 @@ public class PlayerInstance extends Playable
 		catch (Exception e)
 		{
 			LOGGER.warning("Could not restore char data " + e);
-			e.printStackTrace();
 		}
 		
 		if (player != null)
@@ -9178,7 +8993,7 @@ public class PlayerInstance extends Playable
 			}
 			catch (InterruptedException e)
 			{
-				e.printStackTrace();
+				LOGGER.warning(e.toString());
 			}
 			
 			// once restored all the skill status, update current CP, MP and HP
@@ -9280,7 +9095,6 @@ public class PlayerInstance extends Playable
 		catch (Exception e)
 		{
 			LOGGER.warning("Could not restore classes for " + player.getName() + ": " + e);
-			e.printStackTrace();
 		}
 		
 		return true;
@@ -9363,7 +9177,6 @@ public class PlayerInstance extends Playable
 		catch (Exception e)
 		{
 			LOGGER.warning("Could not store recipe book data: " + e);
-			e.printStackTrace();
 		}
 	}
 	
@@ -9399,7 +9212,6 @@ public class PlayerInstance extends Playable
 		catch (Exception e)
 		{
 			LOGGER.warning("Could not restore recipe book data:" + e);
-			e.printStackTrace();
 		}
 	}
 	
@@ -9422,7 +9234,7 @@ public class PlayerInstance extends Playable
 	@SuppressWarnings("unchecked")
 	public <T> T removeScript(Class<T> script)
 	{
-		return _scripts == null ? null : (T) _scripts.remove(script.getName());
+		return (T) _scripts.remove(script.getName());
 	}
 	
 	/**
@@ -9433,7 +9245,7 @@ public class PlayerInstance extends Playable
 	@SuppressWarnings("unchecked")
 	public <T> T getScript(Class<T> script)
 	{
-		return _scripts == null ? null : (T) _scripts.get(script.getName());
+		return (T) _scripts.get(script.getName());
 	}
 	
 	/**
@@ -9506,14 +9318,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// If char is in Offline trade, setStored must be true
-		if (isInOfflineMode())
-		{
-			setStored(true);
-		}
-		else
-		{
-			setStored(false);
-		}
+		setStored(isInOfflineMode());
 	}
 	
 	/**
@@ -9633,8 +9438,7 @@ public class PlayerInstance extends Playable
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Could not store char base data: ");
-			e.printStackTrace();
+			LOGGER.warning("Could not store char base data: " + e);
 		}
 	}
 	
@@ -9667,7 +9471,6 @@ public class PlayerInstance extends Playable
 		catch (Exception e)
 		{
 			LOGGER.warning("Could not store sub class data for " + getName() + ": " + e);
-			e.printStackTrace();
 		}
 	}
 	
@@ -9693,7 +9496,7 @@ public class PlayerInstance extends Playable
 			final Effect[] effects = getAllEffects();
 			statement = con.prepareStatement(ADD_SKILL_SAVE);
 			
-			int buff_index = 0;
+			int buffIndex = 0;
 			final List<Integer> storedSkills = new ArrayList<>();
 			final long currentTime = System.currentTimeMillis();
 			
@@ -9727,7 +9530,7 @@ public class PlayerInstance extends Playable
 					}
 					statement.setInt(8, 0);
 					statement.setInt(9, getClassIndex());
-					statement.setInt(10, ++buff_index);
+					statement.setInt(10, ++buffIndex);
 					statement.execute();
 				}
 			}
@@ -9753,7 +9556,7 @@ public class PlayerInstance extends Playable
 					statement.setLong(7, t.getStamp());
 					statement.setInt(8, 1);
 					statement.setInt(9, getClassIndex());
-					statement.setInt(10, ++buff_index);
+					statement.setInt(10, ++buffIndex);
 					statement.execute();
 				}
 			}
@@ -9761,8 +9564,7 @@ public class PlayerInstance extends Playable
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Could not store char effect data: ");
-			e.printStackTrace();
+			LOGGER.warning("Could not store char effect data: " + e);
 		}
 	}
 	
@@ -9852,7 +9654,7 @@ public class PlayerInstance extends Playable
 	 * @return The Skill removed
 	 */
 	@Override
-	public Skill removeSkill(Skill skill)
+	public synchronized Skill removeSkill(Skill skill)
 	{
 		// Remove a skill from the Creature and its Func objects from calculator set of the Creature
 		final Skill oldSkill = super.removeSkill(skill);
@@ -9998,12 +9800,9 @@ public class PlayerInstance extends Playable
 				}
 				
 				// exclude seal of ruler / build siege hq
-				if ((getClan() != null) && ((skillid == 246) || (skillid == 247)))
+				if ((getClan() != null) && ((skillid == 246) || (skillid == 247)) && (getClan().getLeaderId() == getObjectId()))
 				{
-					if (getClan().getLeaderId() == getObjectId())
-					{
-						foundskill = true;
-					}
+					foundskill = true;
 				}
 				
 				// exclude fishing skills and common skills + dwarfen craft
@@ -10630,11 +10429,7 @@ public class PlayerInstance extends Playable
 		{
 			if (isInOlympiadMode() && isOlympiadStart() && (((PlayerInstance) attacker).getOlympiadGameId() == getOlympiadGameId()))
 			{
-				if (isFakeDeath())
-				{
-					return false;
-				}
-				return true;
+				return !isFakeDeath();
 			}
 			return false;
 		}
@@ -10667,7 +10462,6 @@ public class PlayerInstance extends Playable
 		
 		if ((attacker instanceof Playable) && isInFunEvent())
 		{
-			
 			PlayerInstance player = null;
 			if (attacker instanceof PlayerInstance)
 			{
@@ -10680,16 +10474,10 @@ public class PlayerInstance extends Playable
 			
 			if (player != null)
 			{
-				
+				// checks for events
 				if (player.isInFunEvent())
 				{
-					
-					// checks for events
-					if ((_inEventTvT && player._inEventTvT && TvT.is_started() && !_teamNameTvT.equals(player._teamNameTvT)) || (_inEventCTF && player._inEventCTF && CTF.is_started() && !_teamNameCTF.equals(player._teamNameCTF)) || (_inEventDM && player._inEventDM && DM.is_started()) || (_inEventVIP && player._inEventVIP && VIP._started))
-					{
-						return true;
-					}
-					return false;
+					return (_inEventTvT && player._inEventTvT && TvT.isStarted() && !_teamNameTvT.equals(player._teamNameTvT)) || (_inEventCTF && player._inEventCTF && CTF.isStarted() && !_teamNameCTF.equals(player._teamNameCTF)) || (_inEventDM && player._inEventDM && DM.is_started()) || (_inEventVIP && player._inEventVIP && VIP._started);
 				}
 				return false;
 			}
@@ -10759,7 +10547,6 @@ public class PlayerInstance extends Playable
 					return true;
 				}
 			}
-			
 		}
 		else if (attacker instanceof SiegeGuardInstance)
 		{
@@ -10821,12 +10608,12 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		final int skill_id = skill.getId();
-		int curr_skill_id = -1;
+		final int skillId = skill.getId();
+		int currSkillId = -1;
 		SkillDat current = getCurrentSkill();
 		if (current != null)
 		{
-			curr_skill_id = current.getSkillId();
+			currSkillId = current.getSkillId();
 		}
 		
 		if (inObserverMode())
@@ -10921,7 +10708,7 @@ public class PlayerInstance extends Playable
 		
 		// Check if it's ok to summon
 		// siege golem (13), Wild Hog Cannon (299), Swoop Cannon (448)
-		if (((skill_id == 13) || (skill_id == 299) || (skill_id == 448)) && !SiegeManager.getInstance().checkIfOkToSummon(this, false) && !FortSiegeManager.getInstance().checkIfOkToSummon(this, false))
+		if (((skillId == 13) || (skillId == 299) || (skillId == 448)) && !SiegeManager.getInstance().checkIfOkToSummon(this, false) && !FortSiegeManager.getInstance().checkIfOkToSummon(this, false))
 		{
 			return;
 		}
@@ -10931,7 +10718,7 @@ public class PlayerInstance extends Playable
 		// If a skill is currently being used, queue this one if this is not the same
 		// Note that this check is currently imperfect: getCurrentSkill() isn't always null when a skill has
 		// failed to cast, or the casting is not yet in progress when this is rechecked
-		if ((curr_skill_id != -1) && (isCastingNow() || isCastingPotionNow()))
+		if ((currSkillId != -1) && (isCastingNow() || isCastingPotionNow()))
 		{
 			final SkillDat currentSkill = getCurrentSkill();
 			// Check if new skill different from current skill in progress
@@ -10958,13 +10745,10 @@ public class PlayerInstance extends Playable
 		}
 		
 		// triggered skills cannot be used directly
-		if (_triggeredSkills.size() > 0)
+		if ((_triggeredSkills.size() > 0) && (_triggeredSkills.get(skill.getId()) != null))
 		{
-			if (_triggeredSkills.get(skill.getId()) != null)
-			{
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return;
 		}
 		
 		// ************************************* Check Target *******************************************
@@ -10977,23 +10761,32 @@ public class PlayerInstance extends Playable
 		{
 			// Target the player if skill type is AURA, PARTY, CLAN or SELF
 			case TARGET_AURA:
+			{
 				if (isInOlympiadMode() && !isOlympiadStart())
 				{
 					setTarget(this);
 				}
+				// fallthough?
+			}
 			case TARGET_PARTY:
 			case TARGET_ALLY:
 			case TARGET_CLAN:
 			case TARGET_GROUND:
 			case TARGET_SELF:
+			{
 				target = this;
 				break;
+			}
 			case TARGET_PET:
+			{
 				target = getPet();
 				break;
+			}
 			default:
+			{
 				target = getTarget();
 				break;
+			}
 		}
 		
 		// Check the validity of the target
@@ -11035,14 +10828,11 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Are the target and the player in the same duel?
-		if (isInDuel())
+		if (isInDuel() && (!(target instanceof PlayerInstance) || (((PlayerInstance) target).getDuelId() != getDuelId())) && (!(target instanceof SummonInstance) || (((Summon) target).getOwner().getDuelId() != getDuelId())))
 		{
-			if ((!(target instanceof PlayerInstance) || (((PlayerInstance) target).getDuelId() != getDuelId())) && (!(target instanceof SummonInstance) || (((Summon) target).getOwner().getDuelId() != getDuelId())))
-			{
-				sendMessage("You cannot do this while duelling.");
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
+			sendMessage("You cannot do this while duelling.");
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return;
 		}
 		
 		// Pk protection config
@@ -11064,15 +10854,12 @@ public class PlayerInstance extends Playable
 		}
 		
 		// prevent casting signets to peace zone
-		if ((skill.getSkillType() == SkillType.SIGNET) || (skill.getSkillType() == SkillType.SIGNET_CASTTIME))
+		if (((skill.getSkillType() == SkillType.SIGNET) || (skill.getSkillType() == SkillType.SIGNET_CASTTIME)) && isInsidePeaceZone(this))
 		{
-			if (isInsidePeaceZone(this))
-			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
-				sm.addSkillName(skill_id);
-				sendPacket(sm);
-				return;
-			}
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+			sm.addSkillName(skillId);
+			sendPacket(sm);
+			return;
 		}
 		
 		// ************************************* Check Consumables *******************************************
@@ -11126,23 +10913,17 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Like L2OFF if you are mounted on wyvern you can't use own skills
-		if (isFlying())
+		if (isFlying() && (skillId != 327) && (skillId != 4289) && !skill.isPotion())
 		{
-			if ((skill_id != 327) && (skill_id != 4289) && !skill.isPotion())
-			{
-				sendMessage("You cannot use skills while riding a wyvern.");
-				return;
-			}
+			sendMessage("You cannot use skills while riding a wyvern.");
+			return;
 		}
 		
 		// Like L2OFF if you have a summon you can't summon another one (ignore cubics)
-		if ((sklType == SkillType.SUMMON) && (skill instanceof SkillSummon) && !((SkillSummon) skill).isCubic())
+		if ((sklType == SkillType.SUMMON) && (skill instanceof SkillSummon) && !((SkillSummon) skill).isCubic() && ((getPet() != null) || isMounted()))
 		{
-			if ((getPet() != null) || isMounted())
-			{
-				sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
-				return;
-			}
+			sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
+			return;
 		}
 		
 		if ((skill.getNumCharges() > 0) && (skill.getSkillType() != SkillType.CHARGE) && (skill.getSkillType() != SkillType.CHARGEDAM) && (skill.getSkillType() != SkillType.CHARGE_EFFECT) && (skill.getSkillType() != SkillType.PDAM))
@@ -11150,7 +10931,7 @@ public class PlayerInstance extends Playable
 			final EffectCharge effect = (EffectCharge) getFirstEffect(Effect.EffectType.CHARGE);
 			if ((effect == null) || (effect.numCharges < skill.getNumCharges()))
 			{
-				sendPacket(new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE).addSkillName(skill_id));
+				sendPacket(new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE).addSkillName(skillId));
 				return;
 			}
 			
@@ -11205,10 +10986,8 @@ public class PlayerInstance extends Playable
 		// Check if this is offensive magic skill
 		if (skill.isOffensive())
 		{
-			final Boolean peace = isInsidePeaceZone(this, target);
-			
-			if (peace && ((skill.getId() != 3261 // Like L2OFF you can use cupid bow skills on peace zone
-			) && (skill.getId() != 3260) && (skill.getId() != 3262) && (sklTargetType != SkillTargetType.TARGET_AURA))) // Like L2OFF people can use TARGET_AURE skills on peace zone
+			if (isInsidePeaceZone(this, target) && ((skill.getId() != 3261) // Like L2OFF you can use cupid bow skills on peace zone
+				&& (skill.getId() != 3260) && (skill.getId() != 3262) && (sklTargetType != SkillTargetType.TARGET_AURA))) // Like L2OFF people can use TARGET_AURE skills on peace zone
 			{
 				// If Creature or target is in a peace zone, send a system message TARGET_IN_PEACEZONE a Server->Client packet ActionFailed
 				sendPacket(SystemMessageId.TARGET_IN_PEACEZONE);
@@ -11229,7 +11008,7 @@ public class PlayerInstance extends Playable
 			}
 			
 			// Check if a Forced ATTACK is in progress on non-attackable target
-			if (!target.isAutoAttackable(this) && (!forceUse && ((skill.getId() != 3261) && (skill.getId() != 3260) && (skill.getId() != 3262))) && (!_inEventTvT || !TvT.is_started()) && (!_inEventDM || !DM.is_started()) && (!_inEventCTF || !CTF.is_started()) && (!_inEventVIP || !VIP._started) && (sklTargetType != SkillTargetType.TARGET_AURA) && (sklTargetType != SkillTargetType.TARGET_CLAN) && (sklTargetType != SkillTargetType.TARGET_ALLY) && (sklTargetType != SkillTargetType.TARGET_PARTY) && (sklTargetType != SkillTargetType.TARGET_SELF) && (sklTargetType != SkillTargetType.TARGET_GROUND))
+			if (!target.isAutoAttackable(this) && (!forceUse && ((skill.getId() != 3261) && (skill.getId() != 3260) && (skill.getId() != 3262))) && (!_inEventTvT || !TvT.isStarted()) && (!_inEventDM || !DM.is_started()) && (!_inEventCTF || !CTF.isStarted()) && (!_inEventVIP || !VIP._started) && (sklTargetType != SkillTargetType.TARGET_AURA) && (sklTargetType != SkillTargetType.TARGET_CLAN) && (sklTargetType != SkillTargetType.TARGET_ALLY) && (sklTargetType != SkillTargetType.TARGET_PARTY) && (sklTargetType != SkillTargetType.TARGET_SELF) && (sklTargetType != SkillTargetType.TARGET_GROUND))
 			
 			{
 				// Send a Server->Client packet ActionFailed to the PlayerInstance
@@ -11263,43 +11042,34 @@ public class PlayerInstance extends Playable
 					return;
 				}
 			}
-			else if (sklType == SkillType.SIGNET) // Check range for SIGNET skills
+			// Check range for SIGNET skills
+			else if ((sklType == SkillType.SIGNET) && !isInsideRadius(getCurrentSkillWorldPosition().getX(), getCurrentSkillWorldPosition().getY(), getCurrentSkillWorldPosition().getZ(), (int) (skill.getCastRange() + getTemplate().getCollisionRadius()), false, false))
 			{
-				if (!isInsideRadius(getCurrentSkillWorldPosition().getX(), getCurrentSkillWorldPosition().getY(), getCurrentSkillWorldPosition().getZ(), (int) (skill.getCastRange() + getTemplate().getCollisionRadius()), false, false))
-				{
-					// Send a System Message to the caster
-					sendPacket(SystemMessageId.TARGET_TOO_FAR);
-					
-					// Send a Server->Client packet ActionFailed to the PlayerInstance
-					sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-			}
-		}
-		// Check if the skill is defensive
-		if (!skill.isOffensive())
-		{
-			// check if the target is a monster and if force attack is set.. if not then we don't want to cast.
-			if ((target instanceof MonsterInstance) && !forceUse && (sklTargetType != SkillTargetType.TARGET_PET) && (sklTargetType != SkillTargetType.TARGET_AURA) && (sklTargetType != SkillTargetType.TARGET_CLAN) && (sklTargetType != SkillTargetType.TARGET_SELF) && (sklTargetType != SkillTargetType.TARGET_PARTY) && (sklTargetType != SkillTargetType.TARGET_ALLY) && (sklTargetType != SkillTargetType.TARGET_CORPSE_MOB) && (sklTargetType != SkillTargetType.TARGET_AREA_CORPSE_MOB) && (sklTargetType != SkillTargetType.TARGET_GROUND) && (sklType != SkillType.BEAST_FEED) && (sklType != SkillType.DELUXE_KEY_UNLOCK) && (sklType != SkillType.UNLOCK))
-			{
-				// send the action failed so that the skill doens't go off.
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-		}
-		
-		// Check if the skill is Spoil type and if the target isn't already spoiled
-		if (sklType == SkillType.SPOIL)
-		{
-			if (!(target instanceof MonsterInstance))
-			{
-				// Send a System Message to the PlayerInstance
-				sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+				// Send a System Message to the caster
+				sendPacket(SystemMessageId.TARGET_TOO_FAR);
 				
 				// Send a Server->Client packet ActionFailed to the PlayerInstance
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
+		}
+		// Check if the skill is defensive and if the target is a monster and if force attack is set.. if not then we don't want to cast.
+		if (!skill.isOffensive() && (target instanceof MonsterInstance) && !forceUse && (sklTargetType != SkillTargetType.TARGET_PET) && (sklTargetType != SkillTargetType.TARGET_AURA) && (sklTargetType != SkillTargetType.TARGET_CLAN) && (sklTargetType != SkillTargetType.TARGET_SELF) && (sklTargetType != SkillTargetType.TARGET_PARTY) && (sklTargetType != SkillTargetType.TARGET_ALLY) && (sklTargetType != SkillTargetType.TARGET_CORPSE_MOB) && (sklTargetType != SkillTargetType.TARGET_AREA_CORPSE_MOB) && (sklTargetType != SkillTargetType.TARGET_GROUND) && (sklType != SkillType.BEAST_FEED) && (sklType != SkillType.DELUXE_KEY_UNLOCK) && (sklType != SkillType.UNLOCK))
+		{
+			// send the action failed so that the skill doens't go off.
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		// Check if the skill is Spoil type and if the target isn't already spoiled
+		if ((sklType == SkillType.SPOIL) && !(target instanceof MonsterInstance))
+		{
+			// Send a System Message to the PlayerInstance
+			sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			
+			// Send a Server->Client packet ActionFailed to the PlayerInstance
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return;
 		}
 		
 		// Check if the skill is Sweep type and if conditions not apply
@@ -11332,17 +11102,14 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Check if the skill is Drain Soul (Soul Crystals) and if the target is a MOB
-		if (sklType == SkillType.DRAIN_SOUL)
+		if ((sklType == SkillType.DRAIN_SOUL) && !(target instanceof MonsterInstance))
 		{
-			if (!(target instanceof MonsterInstance))
-			{
-				// Send a System Message to the PlayerInstance
-				sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
-				
-				// Send a Server->Client packet ActionFailed to the PlayerInstance
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
+			// Send a System Message to the PlayerInstance
+			sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			
+			// Send a Server->Client packet ActionFailed to the PlayerInstance
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return;
 		}
 		
 		if ((sklTargetType == SkillTargetType.TARGET_GROUND) && (getCurrentSkillWorldPosition() == null))
@@ -11360,8 +11127,11 @@ public class PlayerInstance extends Playable
 			case TARGET_AURA:
 			case TARGET_SELF:
 			case TARGET_GROUND:
+			{
 				break;
+			}
 			default:
+			{
 				// if pvp skill is not allowed for given target
 				if (!checkPvpSkill(target, skill) && !getAccessLevel().allowPeaceAttack() && ((skill.getId() != 3261) && (skill.getId() != 3260) && (skill.getId() != 3262)))
 				{
@@ -11372,6 +11142,7 @@ public class PlayerInstance extends Playable
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
+			}
 		}
 		
 		if ((sklTargetType == SkillTargetType.TARGET_HOLY) && !TakeCastle.checkIfOkToCastSealOfRule(this, false))
@@ -11395,15 +11166,12 @@ public class PlayerInstance extends Playable
 		}
 		
 		// TEMPFIX: Check client Z coordinate instead of server z to avoid exploit killing Zaken from others floor
-		if ((target instanceof GrandBossInstance) && (((GrandBossInstance) target).getNpcId() == 29022))
+		if ((target instanceof GrandBossInstance) && (((GrandBossInstance) target).getNpcId() == 29022) && (Math.abs(getClientZ() - target.getZ()) > 200))
 		{
-			if (Math.abs(getClientZ() - target.getZ()) > 200)
-			{
-				sendPacket(SystemMessageId.CANT_SEE_TARGET);
-				getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
+			sendPacket(SystemMessageId.CANT_SEE_TARGET);
+			getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return;
 		}
 		
 		// GeoData Los Check here
@@ -11423,12 +11191,12 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Checks if is in looter party.
-	 * @param LooterId the looter id
+	 * @param looterId the looter id
 	 * @return true, if is in looter party
 	 */
-	public boolean isInLooterParty(int LooterId)
+	public boolean isInLooterParty(int looterId)
 	{
-		final PlayerInstance looter = World.getInstance().getPlayer(LooterId);
+		final PlayerInstance looter = World.getInstance().getPlayer(looterId);
 		
 		// if PlayerInstance is in a CommandChannel
 		if (isInParty() && getParty().isInCommandChannel() && (looter != null))
@@ -11467,7 +11235,7 @@ public class PlayerInstance extends Playable
 		// Check if player and target are in events and on the same team.
 		if (target instanceof PlayerInstance)
 		{
-			if ((skill.isOffensive() && (_inEventTvT && ((PlayerInstance) target)._inEventTvT && TvT.is_started() && !_teamNameTvT.equals(((PlayerInstance) target)._teamNameTvT))) || (_inEventCTF && ((PlayerInstance) target)._inEventCTF && CTF.is_started() && !_teamNameCTF.equals(((PlayerInstance) target)._teamNameCTF)) || (_inEventDM && ((PlayerInstance) target)._inEventDM && DM.is_started()) || (_inEventVIP && ((PlayerInstance) target)._inEventVIP && VIP._started))
+			if ((skill.isOffensive() && (_inEventTvT && ((PlayerInstance) target)._inEventTvT && TvT.isStarted() && !_teamNameTvT.equals(((PlayerInstance) target)._teamNameTvT))) || (_inEventCTF && ((PlayerInstance) target)._inEventCTF && CTF.isStarted() && !_teamNameCTF.equals(((PlayerInstance) target)._teamNameCTF)) || (_inEventDM && ((PlayerInstance) target)._inEventDM && DM.is_started()) || (_inEventVIP && ((PlayerInstance) target)._inEventVIP && VIP._started))
 			{
 				return true;
 			}
@@ -11495,32 +11263,24 @@ public class PlayerInstance extends Playable
 			// SkillDat skilldatpet = getCurrentPetSkill();
 			if (skill.isPvpSkill()) // pvp skill
 			{
-				if ((getClan() != null) && (((PlayerInstance) target).getClan() != null))
+				if ((getClan() != null) && (((PlayerInstance) target).getClan() != null) && getClan().isAtWarWith(((PlayerInstance) target).getClan().getClanId()) && ((PlayerInstance) target).getClan().isAtWarWith(getClan().getClanId()))
 				{
-					if (getClan().isAtWarWith(((PlayerInstance) target).getClan().getClanId()) && ((PlayerInstance) target).getClan().isAtWarWith(getClan().getClanId()))
-					{
-						return true; // in clan war player can attack whites even with sleep etc.
-					}
+					return true; // in clan war player can attack whites even with sleep etc.
 				}
 				if ((((PlayerInstance) target).getPvpFlag() == 0) && // target's pvp flag is not set and
-					(((PlayerInstance) target).getKarma() == 0 // target has no karma
-					))
+					(((PlayerInstance) target).getKarma() == 0)) // target has no karma
 				{
 					return false;
 				}
 			}
 			else if ((skilldat != null) && !skilldat.isCtrlPressed() && skill.isOffensive() && !srcIsSummon)
 			{
-				if ((getClan() != null) && (((PlayerInstance) target).getClan() != null))
+				if ((getClan() != null) && (((PlayerInstance) target).getClan() != null) && getClan().isAtWarWith(((PlayerInstance) target).getClan().getClanId()) && ((PlayerInstance) target).getClan().isAtWarWith(getClan().getClanId()))
 				{
-					if (getClan().isAtWarWith(((PlayerInstance) target).getClan().getClanId()) && ((PlayerInstance) target).getClan().isAtWarWith(getClan().getClanId()))
-					{
-						return true; // in clan war player can attack whites even without ctrl
-					}
+					return true; // in clan war player can attack whites even without ctrl
 				}
 				if ((((PlayerInstance) target).getPvpFlag() == 0) && // target's pvp flag is not set and
-					(((PlayerInstance) target).getKarma() == 0 // target has no karma
-					))
+					(((PlayerInstance) target).getKarma() == 0)) // target has no karma
 				{
 					return false;
 				}
@@ -11700,9 +11460,10 @@ public class PlayerInstance extends Playable
 	public Map<Integer, CubicInstance> getCubics()
 	{
 		// clean cubics instances
-		for (Integer id : _cubics.keySet())
+		for (Entry<Integer, CubicInstance> entry : _cubics.entrySet())
 		{
-			if ((id == null) || (_cubics.get(id) == null))
+			final Integer id = entry.getKey();
+			if ((id == null) || (entry.getValue() == null))
 			{
 				try
 				{
@@ -11714,7 +11475,6 @@ public class PlayerInstance extends Playable
 				}
 			}
 		}
-		
 		return _cubics;
 	}
 	
@@ -12112,11 +11872,11 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Sets the apprentice.
-	 * @param apprentice_id the new apprentice
+	 * @param apprenticeId the new apprentice id
 	 */
-	public void setApprentice(int apprentice_id)
+	public void setApprentice(int apprenticeId)
 	{
-		_apprentice = apprentice_id;
+		_apprentice = apprenticeId;
 	}
 	
 	/**
@@ -12130,11 +11890,11 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Sets the sponsor.
-	 * @param sponsor_id the new sponsor
+	 * @param sponsorId the new sponsor id
 	 */
-	public void setSponsor(int sponsor_id)
+	public void setSponsor(int sponsorId)
 	{
-		_sponsor = sponsor_id;
+		_sponsor = sponsorId;
 	}
 	
 	/**
@@ -12608,8 +12368,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void setHeroAura(boolean heroAura)
 	{
-		isPVPHero = heroAura;
-		return;
+		_isPvpHero = heroAura;
 	}
 	
 	/**
@@ -12618,7 +12377,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean getIsPVPHero()
 	{
-		return isPVPHero;
+		return _isPvpHero;
 	}
 	
 	/**
@@ -12627,17 +12386,15 @@ public class PlayerInstance extends Playable
 	 */
 	public int getCount()
 	{
-		
-		final String HERO_COUNT = "SELECT count FROM heroes WHERE char_name=?";
-		int _count = 0;
+		int count = 0;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(HERO_COUNT);
+			PreparedStatement statement = con.prepareStatement("SELECT count FROM heroes WHERE char_name=?");
 			statement.setString(1, getName());
 			ResultSet rset = statement.executeQuery();
 			while (rset.next())
 			{
-				_count = rset.getInt("count");
+				count = rset.getInt("count");
 			}
 			
 			rset.close();
@@ -12645,12 +12402,12 @@ public class PlayerInstance extends Playable
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 		
-		if (_count != 0)
+		if (count != 0)
 		{
-			return _count;
+			return count;
 		}
 		return 0;
 	}
@@ -12714,7 +12471,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void setIsOlympiadStart(boolean b)
 	{
-		_OlympiadStart = b;
+		_olympiadStart = b;
 	}
 	
 	/**
@@ -12723,7 +12480,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean isOlympiadStart()
 	{
-		return _OlympiadStart;
+		return _olympiadStart;
 	}
 	
 	/**
@@ -12732,7 +12489,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void setOlympiadPosition(int[] pos)
 	{
-		_OlympiadPosition = pos;
+		_olympiadPosition = pos;
 	}
 	
 	/**
@@ -12741,7 +12498,7 @@ public class PlayerInstance extends Playable
 	 */
 	public int[] getOlympiadPosition()
 	{
-		return _OlympiadPosition;
+		return _olympiadPosition;
 	}
 	
 	/**
@@ -13459,7 +13216,7 @@ public class PlayerInstance extends Playable
 			getParty().recalculatePartyLevel();
 		}
 		
-		if ((getPet() != null) && (getPet() instanceof SummonInstance))
+		if (getPet() instanceof SummonInstance)
 		{
 			getPet().unSummon(this);
 		}
@@ -13565,7 +13322,6 @@ public class PlayerInstance extends Playable
 		if (st != null)
 		{
 			st.exitQuest(true);
-			st = null;
 		}
 		
 		for (int i = 0; i < 3; i++)
@@ -13705,12 +13461,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean isRentedPet()
 	{
-		if (_taskRentPet != null)
-		{
-			return true;
-		}
-		
-		return false;
+		return _taskRentPet != null;
 	}
 	
 	/**
@@ -13919,15 +13670,12 @@ public class PlayerInstance extends Playable
 		_reviveRequested = 0;
 		_revivePower = 0;
 		
-		if (isInParty() && getParty().isInDimensionalRift())
+		if (isInParty() && getParty().isInDimensionalRift() && !DimensionalRiftManager.getInstance().checkIfInPeaceZone(getX(), getY(), getZ()))
 		{
-			if (!DimensionalRiftManager.getInstance().checkIfInPeaceZone(getX(), getY(), getZ()))
-			{
-				getParty().getDimensionalRift().memberRessurected(this);
-			}
+			getParty().getDimensionalRift().memberRessurected(this);
 		}
 		
-		if ((_inEventTvT && TvT.is_started() && Config.TVT_REVIVE_RECOVERY) || (_inEventCTF && CTF.is_started() && Config.CTF_REVIVE_RECOVERY) || (_inEventDM && DM.is_started() && Config.DM_REVIVE_RECOVERY))
+		if ((_inEventTvT && TvT.isStarted() && Config.TVT_REVIVE_RECOVERY) || (_inEventCTF && CTF.isStarted() && Config.CTF_REVIVE_RECOVERY) || (_inEventDM && DM.is_started() && Config.DM_REVIVE_RECOVERY))
 		{
 			getStatus().setCurrentHp(getMaxHp());
 			getStatus().setCurrentMp(getMaxMp());
@@ -13945,29 +13693,29 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Revive request.
-	 * @param Reviver the reviver
+	 * @param reviver the reviver
 	 * @param skill the skill
-	 * @param Pet the pet
+	 * @param pet the pet
 	 */
-	public void reviveRequest(PlayerInstance Reviver, Skill skill, boolean Pet)
+	public void reviveRequest(PlayerInstance reviver, Skill skill, boolean pet)
 	{
 		if (_reviveRequested == 1)
 		{
-			if (_revivePet == Pet)
+			if (_revivePet == pet)
 			{
-				Reviver.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
+				reviver.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
 			}
-			else if (Pet)
+			else if (pet)
 			{
-				Reviver.sendPacket(SystemMessageId.PET_CANNOT_RES); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
+				reviver.sendPacket(SystemMessageId.PET_CANNOT_RES); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
 			}
 			else
 			{
-				Reviver.sendPacket(SystemMessageId.MASTER_CANNOT_RES); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
+				reviver.sendPacket(SystemMessageId.MASTER_CANNOT_RES); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
 			}
 			return;
 		}
-		if ((Pet && (getPet() != null) && getPet().isDead()) || (!Pet && isDead()))
+		if ((pet && (getPet() != null) && getPet().isDead()) || (!pet && isDead()))
 		{
 			_reviveRequested = 1;
 			if (isPhoenixBlessed())
@@ -13976,15 +13724,15 @@ public class PlayerInstance extends Playable
 			}
 			else if (skill != null)
 			{
-				_revivePower = Formulas.getInstance().calculateSkillResurrectRestorePercent(skill.getPower(), Reviver);
+				_revivePower = Formulas.getInstance().calculateSkillResurrectRestorePercent(skill.getPower(), reviver);
 			}
 			else
 			{
 				_revivePower = 0;
 			}
-			_revivePet = Pet;
+			_revivePet = pet;
 			ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.RESSURECTION_REQUEST.getId());
-			dlg.addString(Reviver.getName());
+			dlg.addString(reviver.getName());
 			sendPacket(dlg);
 		}
 	}
@@ -14440,7 +14188,7 @@ public class PlayerInstance extends Playable
 	 */
 	public static boolean checkSummonTargetStatus(WorldObject target, PlayerInstance summonerChar)
 	{
-		if ((target == null) || !(target instanceof PlayerInstance))
+		if (!(target instanceof PlayerInstance))
 		{
 			return false;
 		}
@@ -14505,11 +14253,11 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	public void broadcastSnoop(int type, String name, String _text, CreatureSay cs)
+	public void broadcastSnoop(int type, String name, String text, CreatureSay cs)
 	{
-		if (_snoopListener.size() > 0)
+		if (!_snoopListener.isEmpty())
 		{
-			final Snoop sn = new Snoop(this, type, name, _text);
+			final Snoop sn = new Snoop(this, type, name, text);
 			for (PlayerInstance pci : _snoopListener)
 			{
 				if (pci != null)
@@ -14861,7 +14609,7 @@ public class PlayerInstance extends Playable
 			}
 			catch (InterruptedException e)
 			{
-				e.printStackTrace();
+				LOGGER.warning(e.toString());
 			}
 			onTeleported();
 		}
@@ -15261,25 +15009,25 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Start fishing.
-	 * @param _x the _x
-	 * @param _y the _y
-	 * @param _z the _z
+	 * @param x the fish x
+	 * @param y the fish y
+	 * @param z the fish z
 	 */
-	public void startFishing(int _x, int _y, int _z)
+	public void startFishing(int x, int y, int z)
 	{
 		stopMove(null);
 		setIsImobilised(true);
 		_fishing = true;
-		_fishx = _x;
-		_fishy = _y;
-		_fishz = _z;
+		_fishX = x;
+		_fishY = y;
+		_fishZ = z;
 		broadcastUserInfo();
 		// Starts fishing
 		final int lvl = GetRandomFishLvl();
 		final int group = GetRandomGroup();
 		final int type = GetRandomFishType(group);
 		List<FishData> fishs = FishTable.getInstance().getfish(lvl, type, group);
-		if ((fishs == null) || (fishs.size() == 0))
+		if ((fishs == null) || fishs.isEmpty())
 		{
 			sendMessage("Error - Fishes are not definied");
 			EndFishing(false);
@@ -15289,7 +15037,6 @@ public class PlayerInstance extends Playable
 		// Use a copy constructor else the fish data may be over-written below
 		_fish = new FishData(fishs.get(check));
 		fishs.clear();
-		fishs = null;
 		sendPacket(SystemMessageId.CAST_LINE_AND_START_FISHING);
 		ExFishingStart efs = null;
 		
@@ -15298,7 +15045,7 @@ public class PlayerInstance extends Playable
 			_fish.setType(-1);
 		}
 		
-		efs = new ExFishingStart(this, _fish.getType(), _x, _y, _z, _lure.isNightLure());
+		efs = new ExFishingStart(this, _fish.getType(), x, y, z, _lure.isNightLure());
 		broadcastPacket(efs);
 		StartLookingForFishTask();
 	}
@@ -15695,9 +15442,9 @@ public class PlayerInstance extends Playable
 		ExFishingEnd efe = new ExFishingEnd(win, this);
 		broadcastPacket(efe);
 		_fishing = false;
-		_fishx = 0;
-		_fishy = 0;
-		_fishz = 0;
+		_fishX = 0;
+		_fishY = 0;
+		_fishZ = 0;
 		broadcastUserInfo();
 		
 		if (_fishCombat == null)
@@ -15728,7 +15475,7 @@ public class PlayerInstance extends Playable
 	 */
 	public int GetFishx()
 	{
-		return _fishx;
+		return _fishX;
 	}
 	
 	/**
@@ -15737,7 +15484,7 @@ public class PlayerInstance extends Playable
 	 */
 	public int GetFishy()
 	{
-		return _fishy;
+		return _fishY;
 	}
 	
 	/**
@@ -15746,17 +15493,17 @@ public class PlayerInstance extends Playable
 	 */
 	public int GetFishz()
 	{
-		return _fishz;
+		return _fishZ;
 	}
 	
 	public void SetPartyFind(int find)
 	{
-		_party_find = find;
+		_partyFind = find;
 	}
 	
 	public int GetPartyFind()
 	{
-		return _party_find;
+		return _partyFind;
 	}
 	
 	/**
@@ -16138,7 +15885,7 @@ public class PlayerInstance extends Playable
 		int hero = 0;
 		int noble = 0;
 		int donator = 0;
-		long hero_end = 0;
+		long heroEnd = 0;
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -16152,7 +15899,7 @@ public class PlayerInstance extends Playable
 				hero = rset.getInt("hero");
 				noble = rset.getInt("noble");
 				donator = rset.getInt("donator");
-				hero_end = rset.getLong("hero_end_date");
+				heroEnd = rset.getLong("hero_end_date");
 			}
 			rset.close();
 			statement.close();
@@ -16163,7 +15910,7 @@ public class PlayerInstance extends Playable
 			LOGGER.warning("Error: could not restore char custom data info: " + e);
 		}
 		
-		if ((hero > 0) && ((hero_end == 0) || (hero_end > System.currentTimeMillis())))
+		if ((hero > 0) && ((heroEnd == 0) || (heroEnd > System.currentTimeMillis())))
 		{
 			setHero(true);
 		}
@@ -16837,25 +16584,21 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Checks if is inside tw town.
-	 * @return true, if is inside tw town
+	 * Checks if is inside TW town.
+	 * @return true, if is inside TW town
 	 */
 	public boolean isInsideTWTown()
 	{
-		if (isintwtown)
-		{
-			return true;
-		}
-		return false;
+		return _isInsideTWTown;
 	}
 	
 	/**
-	 * Sets the inside tw town.
-	 * @param b the new inside tw town
+	 * Sets the inside TW town.
+	 * @param b the new inside TW town
 	 */
 	public void setInsideTWTown(boolean b)
 	{
-		isintwtown = true;
+		_isInsideTWTown = true;
 	}
 	
 	/**
@@ -16864,43 +16607,28 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean checkMultiBox()
 	{
-		
 		boolean output = true;
-		
-		int boxes_number = 0;
-		final List<String> active_boxes = new ArrayList<>();
+		int boxCount = 0;
+		final List<String> activeBoxes = new ArrayList<>();
 		
 		if ((_client != null) && (_client.getConnection() != null) && !_client.getConnection().isClosed() && (_client.getConnection().getInetAddress() != null))
 		{
-			
 			final String thisip = _client.getConnection().getInetAddress().getHostAddress();
 			final Collection<PlayerInstance> allPlayers = World.getInstance().getAllPlayers();
 			for (PlayerInstance player : allPlayers)
 			{
-				if (player != null)
+				if ((player != null) && (player.isOnline() == 1) && (player.getClient() != null) && (player.getClient().getConnection() != null) && !player.getClient().getConnection().isClosed() && (player.getClient().getConnection().getInetAddress() != null) && !player.getName().equals(getName()))
 				{
-					if ((player.isOnline() == 1) && (player.getClient() != null) && (player.getClient().getConnection() != null) && !player.getClient().getConnection().isClosed() && (player.getClient().getConnection().getInetAddress() != null) && !player.getName().equals(getName()))
+					final String ip = player.getClient().getConnection().getInetAddress().getHostAddress();
+					if (thisip.equals(ip) && (this != player))
 					{
-						
-						final String ip = player.getClient().getConnection().getInetAddress().getHostAddress();
-						if (thisip.equals(ip) && (this != player))
+						if (!Config.ALLOW_DUALBOX || ((boxCount + 1) > Config.ALLOWED_BOXES)) // actual count + actual player one
 						{
-							if (!Config.ALLOW_DUALBOX)
-							{
-								
-								output = false;
-								break;
-								
-							}
-							
-							if ((boxes_number + 1) > Config.ALLOWED_BOXES) // actual count + actual player one
-							{
-								output = false;
-								break;
-							}
-							boxes_number++;
-							active_boxes.add(player.getName());
+							output = false;
+							break;
 						}
+						boxCount++;
+						activeBoxes.add(player.getName());
 					}
 				}
 			}
@@ -16908,12 +16636,11 @@ public class PlayerInstance extends Playable
 		
 		if (output)
 		{
-			_active_boxes = boxes_number + 1; // current number of boxes+this one
-			if (!active_boxes.contains(getName()))
+			_activeBoxes = boxCount + 1; // current number of boxes+this one
+			if (!activeBoxes.contains(getName()))
 			{
-				active_boxes.add(getName());
-				
-				active_boxes_characters = active_boxes;
+				activeBoxes.add(getName());
+				_activeBoxeCharacters = activeBoxes;
 			}
 			refreshOtherBoxes();
 		}
@@ -16926,32 +16653,25 @@ public class PlayerInstance extends Playable
 	 */
 	public void refreshOtherBoxes()
 	{
-		
 		if ((_client != null) && (_client.getConnection() != null) && !_client.getConnection().isClosed() && (_client.getConnection().getInetAddress() != null))
 		{
-			
 			final String thisip = _client.getConnection().getInetAddress().getHostAddress();
 			final Collection<PlayerInstance> allPlayers = World.getInstance().getAllPlayers();
 			final PlayerInstance[] players = allPlayers.toArray(new PlayerInstance[allPlayers.size()]);
 			
 			for (PlayerInstance player : players)
 			{
-				if ((player != null) && (player.isOnline() == 1))
+				if ((player != null) && (player.isOnline() == 1) && (player.getClient() != null) && (player.getClient().getConnection() != null) && !player.getClient().getConnection().isClosed() && !player.getName().equals(getName()))
 				{
-					if ((player.getClient() != null) && (player.getClient().getConnection() != null) && !player.getClient().getConnection().isClosed() && !player.getName().equals(getName()))
+					final String ip = player.getClient().getConnection().getInetAddress().getHostAddress();
+					if (thisip.equals(ip) && (this != player))
 					{
-						
-						final String ip = player.getClient().getConnection().getInetAddress().getHostAddress();
-						if (thisip.equals(ip) && (this != player))
-						{
-							player._active_boxes = _active_boxes;
-							player.active_boxes_characters = active_boxes_characters;
-						}
+						player._activeBoxes = _activeBoxes;
+						player._activeBoxeCharacters = _activeBoxeCharacters;
 					}
 				}
 			}
 		}
-		
 	}
 	
 	/**
@@ -16959,9 +16679,8 @@ public class PlayerInstance extends Playable
 	 */
 	public void decreaseBoxes()
 	{
-		_active_boxes = _active_boxes - 1;
-		active_boxes_characters.remove(getName());
-		
+		_activeBoxes = _activeBoxes - 1;
+		_activeBoxeCharacters.remove(getName());
 		refreshOtherBoxes();
 	}
 	
@@ -17022,7 +16741,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void setAioEndTime(long val)
 	{
-		_aio_endTime = val;
+		_aioEndTime = val;
 	}
 	
 	/**
@@ -17034,7 +16753,7 @@ public class PlayerInstance extends Playable
 	{
 		if (val > 0)
 		{
-			long end_day;
+			long endDay;
 			final Calendar calendar = Calendar.getInstance();
 			if (val >= 30)
 			{
@@ -17063,34 +16782,32 @@ public class PlayerInstance extends Playable
 							calendar.roll(Calendar.YEAR, true);
 						}
 						calendar.roll(Calendar.MONTH, true);
-						
 					}
 					calendar.roll(Calendar.DATE, true);
 					val--;
 				}
 			}
 			
-			end_day = calendar.getTimeInMillis();
+			endDay = calendar.getTimeInMillis();
 			if (process.equals("aio"))
 			{
-				_aio_endTime = end_day;
+				_aioEndTime = endDay;
 			}
 			else
 			{
 				LOGGER.info("process " + process + "no Known while try set end date");
 				return;
 			}
-			final Date dt = new Date(end_day);
+			final Date dt = new Date(endDay);
 			LOGGER.info("" + process + " end time for player " + getName() + " is " + dt);
 		}
 		else if (process.equals("aio"))
 		{
-			_aio_endTime = 0;
+			_aioEndTime = 0;
 		}
 		else
 		{
 			LOGGER.info("process " + process + "no Known while try set end date");
-			return;
 		}
 	}
 	
@@ -17100,7 +16817,7 @@ public class PlayerInstance extends Playable
 	 */
 	public long getAioEndTime()
 	{
-		return _aio_endTime;
+		return _aioEndTime;
 	}
 	
 	/**
@@ -17217,11 +16934,11 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Sets the _awaying.
-	 * @param _awaying the _awaying to set
+	 * @param awaying the _awaying to set
 	 */
-	public void set_awaying(boolean _awaying)
+	public void set_awaying(boolean awaying)
 	{
-		this._awaying = _awaying;
+		this._awaying = awaying;
 	}
 	
 	/**
@@ -17296,10 +17013,6 @@ public class PlayerInstance extends Playable
 	private static class GatesRequest
 	{
 		private DoorInstance _target = null;
-		
-		public GatesRequest()
-		{
-		}
 		
 		public void setTarget(DoorInstance door)
 		{
@@ -17592,13 +17305,10 @@ public class PlayerInstance extends Playable
 				_punishTask = ThreadPool.schedule(new PunishTask(this), _punishTimer);
 				sendMessage("You are still " + getPunishLevel().string() + " for " + (_punishTimer / 60000) + " minutes.");
 			}
-			if (getPunishLevel() == PunishLevel.JAIL)
+			// If player escaped, put him back in jail
+			if ((getPunishLevel() == PunishLevel.JAIL) && !isInsideZone(ZoneId.JAIL))
 			{
-				// If player escaped, put him back in jail
-				if (!isInsideZone(ZoneId.JAIL))
-				{
-					teleToLocation(-114356, -249645, -2984, true);
-				}
+				teleToLocation(-114356, -249645, -2984, true);
 			}
 		}
 	}
@@ -17675,11 +17385,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean isInventoryUnder80()
 	{
-		if (getInventory().getSize() <= (getInventoryLimit() * 0.8))
-		{
-			return true;
-		}
-		return false;
+		return getInventory().getSize() <= (getInventoryLimit() * 0.8);
 	}
 	
 	/**
@@ -17738,22 +17444,22 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Checks if is item equipped by item id.
-	 * @param item_id the item_id
+	 * @param itemId the item_id
 	 * @return true, if is item equipped by item id
 	 */
-	public boolean isItemEquippedByItemId(int item_id)
+	public boolean isItemEquippedByItemId(int itemId)
 	{
 		if (_inventory == null)
 		{
 			return false;
 		}
 		
-		if ((_inventory.getAllItemsByItemId(item_id) == null) || (_inventory.getAllItemsByItemId(item_id).length == 0))
+		if ((_inventory.getAllItemsByItemId(itemId) == null) || (_inventory.getAllItemsByItemId(itemId).length == 0))
 		{
 			return false;
 		}
 		
-		return _inventory.checkIfEquipped(item_id);
+		return _inventory.checkIfEquipped(itemId);
 	}
 	
 	/**

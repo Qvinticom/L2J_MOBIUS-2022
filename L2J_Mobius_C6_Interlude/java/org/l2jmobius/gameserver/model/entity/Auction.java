@@ -39,8 +39,8 @@ public class Auction
 	protected static final Logger LOGGER = Logger.getLogger(Auction.class.getName());
 	
 	public static final long MAX_ADENA = 99900000000L;
+	private static final int ADENA_ID = 57;
 	private int _id = 0;
-	private final int _adenaId = 57;
 	private long _endDate;
 	private int _highestBidderId = 0;
 	private String _highestBidderName = "";
@@ -147,11 +147,6 @@ public class Auction
 	
 	public class AutoEndTask implements Runnable
 	{
-		
-		public AutoEndTask()
-		{
-		}
-		
 		@Override
 		public void run()
 		{
@@ -175,21 +170,21 @@ public class Auction
 	/**
 	 * Instantiates a new auction.
 	 * @param itemId the item id
-	 * @param Clan the clan
+	 * @param clan the clan
 	 * @param delay the delay
 	 * @param bid the bid
 	 * @param name the name
 	 */
-	public Auction(int itemId, Clan Clan, long delay, int bid, String name)
+	public Auction(int itemId, Clan clan, long delay, int bid, String name)
 	{
 		_id = itemId;
 		_endDate = System.currentTimeMillis() + delay;
 		_itemId = itemId;
 		_itemName = name;
 		_itemType = "ClanHall";
-		_sellerId = Clan.getLeaderId();
-		_sellerName = Clan.getLeaderName();
-		_sellerClanName = Clan.getName();
+		_sellerId = clan.getLeaderId();
+		_sellerName = clan.getLeaderName();
+		_sellerClanName = clan.getName();
 		_startingBid = bid;
 	}
 	
@@ -227,7 +222,7 @@ public class Auction
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -262,7 +257,7 @@ public class Auction
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -331,14 +326,11 @@ public class Auction
 			requiredAdena = bid - _highestBidderMaxBid;
 		}
 		
-		if (((_highestBidderId > 0) && (bid > _highestBidderMaxBid)) || ((_highestBidderId == 0) && (bid >= _startingBid)))
+		if ((((_highestBidderId > 0) && (bid > _highestBidderMaxBid)) || ((_highestBidderId == 0) && (bid >= _startingBid))) && takeItem(bidder, requiredAdena))
 		{
-			if (takeItem(bidder, requiredAdena))
-			{
-				updateInDB(bidder, bid);
-				bidder.getClan().setAuctionBiddedAt(_id, true);
-				return;
-			}
+			updateInDB(bidder, bid);
+			bidder.getClan().setAuctionBiddedAt(_id, true);
+			return;
 		}
 		if ((bid < _startingBid) || (bid <= _highestBidderMaxBid))
 		{
@@ -348,11 +340,11 @@ public class Auction
 	
 	/**
 	 * Return Item in WHC.
-	 * @param Clan the clan
+	 * @param clan the clan
 	 * @param quantity the quantity
 	 * @param penalty the penalty
 	 */
-	private void returnItem(String Clan, int quantity, boolean penalty)
+	private void returnItem(String clan, int quantity, boolean penalty)
 	{
 		if (penalty)
 		{
@@ -360,10 +352,10 @@ public class Auction
 		}
 		
 		// avoid overflow on return
-		final long limit = MAX_ADENA - ClanTable.getInstance().getClanByName(Clan).getWarehouse().getAdena();
+		final long limit = MAX_ADENA - ClanTable.getInstance().getClanByName(clan).getWarehouse().getAdena();
 		quantity = (int) Math.min(quantity, limit);
 		
-		ClanTable.getInstance().getClanByName(Clan).getWarehouse().addItem("Outbidded", _adenaId, quantity, null, null);
+		ClanTable.getInstance().getClanByName(clan).getWarehouse().addItem("Outbidded", ADENA_ID, quantity, null, null);
 	}
 	
 	/**
@@ -376,7 +368,7 @@ public class Auction
 	{
 		if ((bidder.getClan() != null) && (bidder.getClan().getWarehouse().getAdena() >= quantity))
 		{
-			bidder.getClan().getWarehouse().destroyItemByItemId("Buy", _adenaId, quantity, bidder, bidder);
+			bidder.getClan().getWarehouse().destroyItemByItemId("Buy", ADENA_ID, quantity, bidder, bidder);
 			return true;
 		}
 		bidder.sendMessage("You do not have enough adena");
@@ -443,7 +435,6 @@ public class Auction
 		catch (Exception e)
 		{
 			LOGGER.warning("Exception: Auction.updateInDB(PlayerInstance bidder, int bid): " + e.getMessage());
-			e.printStackTrace();
 		}
 	}
 	
@@ -533,11 +524,11 @@ public class Auction
 			}
 			
 			deleteAuctionFromDB();
-			Clan Clan = ClanTable.getInstance().getClanByName(_bidders.get(_highestBidderId).getClanName());
+			Clan clan = ClanTable.getInstance().getClanByName(_bidders.get(_highestBidderId).getClanName());
 			_bidders.remove(_highestBidderId);
-			Clan.setAuctionBiddedAt(0, true);
+			clan.setAuctionBiddedAt(0, true);
 			removeBids();
-			ClanHallManager.getInstance().setOwner(_itemId, Clan);
+			ClanHallManager.getInstance().setOwner(_itemId, clan);
 		}
 		else
 		{

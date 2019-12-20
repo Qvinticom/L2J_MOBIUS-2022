@@ -173,29 +173,27 @@ public class Q386_StolenDignity extends Quest
 		}
 		
 		final Integer chance = DROP_CHANCES.get(npc.getNpcId());
-		if (chance != null)
+		if ((chance != null) && (Rnd.get(100) < chance))
 		{
-			if (Rnd.get(100) < chance)
-			{
-				st.giveItems(STOLEN_INFERIUM_ORE, 1);
-			}
+			st.giveItems(STOLEN_INFERIUM_ORE, 1);
 		}
 		return null;
 	}
 	
 	public static class Bingo extends ai.others.Bingo
 	{
-		protected static final String msg_begin = "I've arranged the numbers 1 through 9 on the grid. Don't peek!<br>Let me have the " + REQUIRED_STOLEN_INFERIUM_ORE + " Infernium Ores. Too many players try to run away without paying when it becomes obvious that they're losing...<br>OK, select six numbers between 1 and 9. Choose the %choicenum% number.";
-		protected static final String msg_again = "You've already chosen that number. Make your %choicenum% choice again.";
-		protected static final String msg_0lines = "Wow! How unlucky can you get? Your choices are highlighted in red below. As you can see, your choices didn't make a single line! Losing this badly is actually quite rare!<br>You look so sad, I feel bad for you... Wait here... <br>.<br>.<br>.<br>Take this... I hope it will bring you better luck in the future.";
-		protected static final String msg_3lines = "Excellent! As you can see, you've formed three lines! Congratulations! As promised, I'll give you some unclaimed merchandise from the warehouse. Wait here...<br>.<br>.<br>.<br>Whew, it's dusty! OK, here you go. Do you like it?";
-		protected static final String msg_lose = "Oh, too bad. Your choices didn't form three lines. You should try again... Your choices are highlighted in red.";
-		// private static final String template_choice = "<a action=\"bypass -h Quest Q386_StolenDignity choice-%n%\">%n%</a>&nbsp;&nbsp;&nbsp;&nbsp; ";
+		protected static final String MSG_BEGIN = "I've arranged the numbers 1 through 9 on the grid. Don't peek!<br>Let me have the " + REQUIRED_STOLEN_INFERIUM_ORE + " Infernium Ores. Too many players try to run away without paying when it becomes obvious that they're losing...<br>OK, select six numbers between 1 and 9. Choose the %choicenum% number.";
+		protected static final String MSG_AGAIN = "You've already chosen that number. Make your %choicenum% choice again.";
+		protected static final String MSG_ZERO_LINES = "Wow! How unlucky can you get? Your choices are highlighted in red below. As you can see, your choices didn't make a single line! Losing this badly is actually quite rare!<br>You look so sad, I feel bad for you... Wait here... <br>.<br>.<br>.<br>Take this... I hope it will bring you better luck in the future.";
+		protected static final String MSG_THREE_LINES = "Excellent! As you can see, you've formed three lines! Congratulations! As promised, I'll give you some unclaimed merchandise from the warehouse. Wait here...<br>.<br>.<br>.<br>Whew, it's dusty! OK, here you go. Do you like it?";
+		protected static final String MSG_LOSE = "Oh, too bad. Your choices didn't form three lines. You should try again... Your choices are highlighted in red.";
+		private static final String TEMPLATE_CHOICE = "<a action=\"bypass -h Quest Q386_StolenDignity choice-%n%\">%n%</a>&nbsp;&nbsp;&nbsp;&nbsp;  ";
+		
 		private final QuestState _qs;
 		
 		public Bingo(QuestState qs)
 		{
-			super("<a action=\"bypass -h Quest Q386_StolenDignity choice-%n%\">%n%</a>&nbsp;&nbsp;&nbsp;&nbsp;  ");
+			super(TEMPLATE_CHOICE);
 			_qs = qs;
 		}
 		

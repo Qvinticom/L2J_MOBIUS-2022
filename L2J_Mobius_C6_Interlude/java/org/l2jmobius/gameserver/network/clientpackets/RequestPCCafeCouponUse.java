@@ -24,7 +24,7 @@ import java.util.logging.Logger;
  */
 public class RequestPCCafeCouponUse extends GameClientPacket
 {
-	private final Logger LOGGER = Logger.getLogger(RequestPCCafeCouponUse.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestPCCafeCouponUse.class.getName());
 	private String _str;
 	
 	@Override

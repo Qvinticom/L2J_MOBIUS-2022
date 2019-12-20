@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -74,7 +75,7 @@ public class MinionList
 	
 	public boolean hasMinions()
 	{
-		return minionReferences.size() > 0;
+		return !minionReferences.isEmpty();
 	}
 	
 	public List<MinionInstance> getSpawnedMinions()
@@ -153,13 +154,13 @@ public class MinionList
 		
 		if (_respawnTasks != null)
 		{
-			for (long deathTime : _respawnTasks.keySet())
+			for (Entry<Long, Integer> entry : _respawnTasks.entrySet())
 			{
+				final long deathTime = entry.getKey();
 				final double delay = Config.RAID_MINION_RESPAWN_TIMER;
-				
 				if ((current - deathTime) > delay)
 				{
-					spawnSingleMinion(_respawnTasks.get(deathTime));
+					spawnSingleMinion(entry.getValue());
 					_respawnTasks.remove(deathTime);
 				}
 			}

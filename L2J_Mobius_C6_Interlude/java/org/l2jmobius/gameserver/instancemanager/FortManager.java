@@ -93,7 +93,6 @@ public class FortManager
 		catch (Exception e)
 		{
 			LOGGER.warning("Exception: loadFortData(): " + e.getMessage());
-			e.printStackTrace();
 		}
 	}
 	

@@ -51,17 +51,16 @@ public class RequestRecordInfo extends GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final PlayerInstance _player = getClient().getPlayer();
-		
-		if (_player == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		_player.getKnownList().updateKnownObjects();
-		_player.sendPacket(new UserInfo(_player));
+		player.getKnownList().updateKnownObjects();
+		player.sendPacket(new UserInfo(player));
 		
-		for (WorldObject object : _player.getKnownList().getKnownObjects().values())
+		for (WorldObject object : player.getKnownList().getKnownObjects().values())
 		{
 			if (object == null)
 			{
@@ -70,59 +69,59 @@ public class RequestRecordInfo extends GameClientPacket
 			
 			if (object.getPoly().isMorphed() && object.getPoly().getPolyType().equals("item"))
 			{
-				_player.sendPacket(new SpawnItemPoly(object));
+				player.sendPacket(new SpawnItemPoly(object));
 			}
 			else
 			{
 				if (object instanceof ItemInstance)
 				{
-					_player.sendPacket(new SpawnItem((ItemInstance) object));
+					player.sendPacket(new SpawnItem((ItemInstance) object));
 				}
 				else if (object instanceof DoorInstance)
 				{
 					if (((DoorInstance) object).getCastle() != null)
 					{
-						_player.sendPacket(new DoorInfo((DoorInstance) object, true));
+						player.sendPacket(new DoorInfo((DoorInstance) object, true));
 					}
 					else
 					{
-						_player.sendPacket(new DoorInfo((DoorInstance) object, false));
+						player.sendPacket(new DoorInfo((DoorInstance) object, false));
 					}
-					_player.sendPacket(new DoorStatusUpdate((DoorInstance) object));
+					player.sendPacket(new DoorStatusUpdate((DoorInstance) object));
 				}
 				else if (object instanceof BoatInstance)
 				{
-					if (!_player.isInBoat() && (object != _player.getBoat()))
+					if (!player.isInBoat() && (object != player.getBoat()))
 					{
-						_player.sendPacket(new VehicleInfo((BoatInstance) object));
-						((BoatInstance) object).sendVehicleDeparture(_player);
+						player.sendPacket(new VehicleInfo((BoatInstance) object));
+						((BoatInstance) object).sendVehicleDeparture(player);
 					}
 				}
 				else if (object instanceof StaticObjectInstance)
 				{
-					_player.sendPacket(new StaticObject((StaticObjectInstance) object));
+					player.sendPacket(new StaticObject((StaticObjectInstance) object));
 				}
 				else if (object instanceof NpcInstance)
 				{
-					_player.sendPacket(new NpcInfo((NpcInstance) object, _player));
+					player.sendPacket(new NpcInfo((NpcInstance) object, player));
 				}
 				else if (object instanceof Summon)
 				{
 					final Summon summon = (Summon) object;
 					
 					// Check if the PlayerInstance is the owner of the Pet
-					if (_player.equals(summon.getOwner()))
+					if (player.equals(summon.getOwner()))
 					{
-						_player.sendPacket(new PetInfo(summon));
+						player.sendPacket(new PetInfo(summon));
 						
 						if (summon instanceof PetInstance)
 						{
-							_player.sendPacket(new PetItemList((PetInstance) summon));
+							player.sendPacket(new PetItemList((PetInstance) summon));
 						}
 					}
 					else
 					{
-						_player.sendPacket(new NpcInfo(summon, _player));
+						player.sendPacket(new NpcInfo(summon, player));
 					}
 					
 					// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
@@ -135,24 +134,24 @@ public class RequestRecordInfo extends GameClientPacket
 					if (otherPlayer.isInBoat())
 					{
 						otherPlayer.getPosition().setWorldPosition(otherPlayer.getBoat().getPosition().getWorldPosition());
-						_player.sendPacket(new CharInfo(otherPlayer));
-						final int relation = otherPlayer.getRelation(_player);
+						player.sendPacket(new CharInfo(otherPlayer));
+						final int relation = otherPlayer.getRelation(player);
 						
-						if ((otherPlayer.getKnownList().getKnownRelations().get(_player.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(_player.getObjectId()) != relation))
+						if ((otherPlayer.getKnownList().getKnownRelations().get(player.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(player.getObjectId()) != relation))
 						{
-							_player.sendPacket(new RelationChanged(otherPlayer, relation, _player.isAutoAttackable(otherPlayer)));
+							player.sendPacket(new RelationChanged(otherPlayer, relation, player.isAutoAttackable(otherPlayer)));
 						}
 						
-						_player.sendPacket(new GetOnVehicle(otherPlayer, otherPlayer.getBoat(), otherPlayer.getInBoatPosition().getX(), otherPlayer.getInBoatPosition().getY(), otherPlayer.getInBoatPosition().getZ()));
+						player.sendPacket(new GetOnVehicle(otherPlayer, otherPlayer.getBoat(), otherPlayer.getInBoatPosition().getX(), otherPlayer.getInBoatPosition().getY(), otherPlayer.getInBoatPosition().getZ()));
 					}
 					else
 					{
-						_player.sendPacket(new CharInfo(otherPlayer));
-						final int relation = otherPlayer.getRelation(_player);
+						player.sendPacket(new CharInfo(otherPlayer));
+						final int relation = otherPlayer.getRelation(player);
 						
-						if ((otherPlayer.getKnownList().getKnownRelations().get(_player.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(_player.getObjectId()) != relation))
+						if ((otherPlayer.getKnownList().getKnownRelations().get(player.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(player.getObjectId()) != relation))
 						{
-							_player.sendPacket(new RelationChanged(otherPlayer, relation, _player.isAutoAttackable(otherPlayer)));
+							player.sendPacket(new RelationChanged(otherPlayer, relation, player.isAutoAttackable(otherPlayer)));
 						}
 					}
 				}
@@ -161,7 +160,7 @@ public class RequestRecordInfo extends GameClientPacket
 				{
 					// Update the state of the Creature object client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance
 					final Creature obj = (Creature) object;
-					obj.getAI().describeStateToPlayer(_player);
+					obj.getAI().describeStateToPlayer(player);
 				}
 			}
 		}

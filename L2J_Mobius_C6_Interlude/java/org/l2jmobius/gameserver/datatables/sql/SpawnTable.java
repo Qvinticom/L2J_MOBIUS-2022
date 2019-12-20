@@ -379,11 +379,6 @@ public class SpawnTable
 		}
 	}
 	
-	public Map<Integer, Spawn> getAllTemplates()
-	{
-		return _spawntable;
-	}
-	
 	public static SpawnTable getInstance()
 	{
 		return SingletonHolder.INSTANCE;

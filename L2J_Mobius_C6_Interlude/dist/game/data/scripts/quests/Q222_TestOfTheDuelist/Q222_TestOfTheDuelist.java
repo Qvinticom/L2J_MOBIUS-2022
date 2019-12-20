@@ -233,102 +233,72 @@ public class Q222_TestOfTheDuelist extends Quest
 			switch (npc.getNpcId())
 			{
 				case PUNCHER:
-					if (st.dropItemsAlways(PUNCHER_SHARD, 1, 10))
+					if (st.dropItemsAlways(PUNCHER_SHARD, 1, 10) && (st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
 					{
-						if ((st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
-						{
-							st.set("cond", "3");
-						}
+						st.set("cond", "3");
 					}
 					break;
 				
 				case NOBLE_ANT_LEADER:
-					if (st.dropItemsAlways(NOBLE_ANT_FEELER, 1, 10))
+					if (st.dropItemsAlways(NOBLE_ANT_FEELER, 1, 10) && (st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
 					{
-						if ((st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
-						{
-							st.set("cond", "3");
-						}
+						st.set("cond", "3");
 					}
 					break;
 				
 				case MARSH_STAKATO_DRONE:
-					if (st.dropItemsAlways(DRONE_CHITIN, 1, 10))
+					if (st.dropItemsAlways(DRONE_CHITIN, 1, 10) && (st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
 					{
-						if ((st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
-						{
-							st.set("cond", "3");
-						}
+						st.set("cond", "3");
 					}
 					break;
 				
 				case DEAD_SEEKER:
-					if (st.dropItemsAlways(DEAD_SEEKER_FANG, 1, 10))
+					if (st.dropItemsAlways(DEAD_SEEKER_FANG, 1, 10) && (st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
 					{
-						if ((st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
-						{
-							st.set("cond", "3");
-						}
+						st.set("cond", "3");
 					}
 					break;
 				
 				case BREKA_ORC_OVERLORD:
-					if (st.dropItemsAlways(OVERLORD_NECKLACE, 1, 10))
+					if (st.dropItemsAlways(OVERLORD_NECKLACE, 1, 10) && (st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
 					{
-						if ((st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
-						{
-							st.set("cond", "3");
-						}
+						st.set("cond", "3");
 					}
 					break;
 				
 				case FETTERED_SOUL:
-					if (st.dropItemsAlways(FETTERED_SOUL_CHAIN, 1, 10))
+					if (st.dropItemsAlways(FETTERED_SOUL_CHAIN, 1, 10) && (st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
 					{
-						if ((st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
-						{
-							st.set("cond", "3");
-						}
+						st.set("cond", "3");
 					}
 					break;
 				
 				case LETO_LIZARDMAN_OVERLORD:
-					if (st.dropItemsAlways(CHIEF_AMULET, 1, 10))
+					if (st.dropItemsAlways(CHIEF_AMULET, 1, 10) && (st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
 					{
-						if ((st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
-						{
-							st.set("cond", "3");
-						}
+						st.set("cond", "3");
 					}
 					break;
 				
 				case ENCHANTED_MONSTEREYE:
-					if (st.dropItemsAlways(ENCHANTED_EYE_MEAT, 1, 10))
+					if (st.dropItemsAlways(ENCHANTED_EYE_MEAT, 1, 10) && (st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
 					{
-						if ((st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
-						{
-							st.set("cond", "3");
-						}
+						st.set("cond", "3");
 					}
 					break;
 				
 				case TAMLIN_ORC:
-					if (st.dropItemsAlways(TAMRIN_ORC_RING, 1, 10))
+					if (st.dropItemsAlways(TAMRIN_ORC_RING, 1, 10) && (st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
 					{
-						if ((st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_ARROW) >= 10))
-						{
-							st.set("cond", "3");
-						}
+						st.set("cond", "3");
 					}
 					break;
 				
 				case TAMLIN_ORC_ARCHER:
-					if (st.dropItemsAlways(TAMRIN_ORC_ARROW, 1, 10))
+					if (st.dropItemsAlways(TAMRIN_ORC_ARROW, 1, 10) && (st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10))
 					{
-						if ((st.getQuestItemsCount(PUNCHER_SHARD) >= 10) && (st.getQuestItemsCount(NOBLE_ANT_FEELER) >= 10) && (st.getQuestItemsCount(DRONE_CHITIN) >= 10) && (st.getQuestItemsCount(DEAD_SEEKER_FANG) >= 10) && (st.getQuestItemsCount(OVERLORD_NECKLACE) >= 10) && (st.getQuestItemsCount(FETTERED_SOUL_CHAIN) >= 10) && (st.getQuestItemsCount(CHIEF_AMULET) >= 10) && (st.getQuestItemsCount(ENCHANTED_EYE_MEAT) >= 10) && (st.getQuestItemsCount(TAMRIN_ORC_RING) >= 10))
-						{
-							st.set("cond", "3");
-						}
+						st.set("cond", "3");
 					}
 					break;
 			}
@@ -338,52 +308,37 @@ public class Q222_TestOfTheDuelist extends Quest
 			switch (npc.getNpcId())
 			{
 				case EXCURO:
-					if (st.dropItemsAlways(EXCURO_SKIN, 1, 3))
+					if (st.dropItemsAlways(EXCURO_SKIN, 1, 3) && (st.getQuestItemsCount(KRATOR_SHARD) >= 3) && (st.getQuestItemsCount(LAKIN_MACE) >= 3) && (st.getQuestItemsCount(GRANDIS_SKIN) >= 3) && (st.getQuestItemsCount(TIMAK_ORC_BELT) >= 3))
 					{
-						if ((st.getQuestItemsCount(KRATOR_SHARD) >= 3) && (st.getQuestItemsCount(LAKIN_MACE) >= 3) && (st.getQuestItemsCount(GRANDIS_SKIN) >= 3) && (st.getQuestItemsCount(TIMAK_ORC_BELT) >= 3))
-						{
-							st.set("cond", "5");
-						}
+						st.set("cond", "5");
 					}
 					break;
 				
 				case KRATOR:
-					if (st.dropItemsAlways(KRATOR_SHARD, 1, 3))
+					if (st.dropItemsAlways(KRATOR_SHARD, 1, 3) && (st.getQuestItemsCount(EXCURO_SKIN) >= 3) && (st.getQuestItemsCount(LAKIN_MACE) >= 3) && (st.getQuestItemsCount(GRANDIS_SKIN) >= 3) && (st.getQuestItemsCount(TIMAK_ORC_BELT) >= 3))
 					{
-						if ((st.getQuestItemsCount(EXCURO_SKIN) >= 3) && (st.getQuestItemsCount(LAKIN_MACE) >= 3) && (st.getQuestItemsCount(GRANDIS_SKIN) >= 3) && (st.getQuestItemsCount(TIMAK_ORC_BELT) >= 3))
-						{
-							st.set("cond", "5");
-						}
+						st.set("cond", "5");
 					}
 					break;
 				
 				case LAKIN:
-					if (st.dropItemsAlways(LAKIN_MACE, 1, 3))
+					if (st.dropItemsAlways(LAKIN_MACE, 1, 3) && (st.getQuestItemsCount(EXCURO_SKIN) >= 3) && (st.getQuestItemsCount(KRATOR_SHARD) >= 3) && (st.getQuestItemsCount(GRANDIS_SKIN) >= 3) && (st.getQuestItemsCount(TIMAK_ORC_BELT) >= 3))
 					{
-						if ((st.getQuestItemsCount(EXCURO_SKIN) >= 3) && (st.getQuestItemsCount(KRATOR_SHARD) >= 3) && (st.getQuestItemsCount(GRANDIS_SKIN) >= 3) && (st.getQuestItemsCount(TIMAK_ORC_BELT) >= 3))
-						{
-							st.set("cond", "5");
-						}
+						st.set("cond", "5");
 					}
 					break;
 				
 				case GRANDIS:
-					if (st.dropItemsAlways(GRANDIS_SKIN, 1, 3))
+					if (st.dropItemsAlways(GRANDIS_SKIN, 1, 3) && (st.getQuestItemsCount(EXCURO_SKIN) >= 3) && (st.getQuestItemsCount(KRATOR_SHARD) >= 3) && (st.getQuestItemsCount(LAKIN_MACE) >= 3) && (st.getQuestItemsCount(TIMAK_ORC_BELT) >= 3))
 					{
-						if ((st.getQuestItemsCount(EXCURO_SKIN) >= 3) && (st.getQuestItemsCount(KRATOR_SHARD) >= 3) && (st.getQuestItemsCount(LAKIN_MACE) >= 3) && (st.getQuestItemsCount(TIMAK_ORC_BELT) >= 3))
-						{
-							st.set("cond", "5");
-						}
+						st.set("cond", "5");
 					}
 					break;
 				
 				case TIMAK_ORC_OVERLORD:
-					if (st.dropItemsAlways(TIMAK_ORC_BELT, 1, 3))
+					if (st.dropItemsAlways(TIMAK_ORC_BELT, 1, 3) && (st.getQuestItemsCount(EXCURO_SKIN) >= 3) && (st.getQuestItemsCount(KRATOR_SHARD) >= 3) && (st.getQuestItemsCount(LAKIN_MACE) >= 3) && (st.getQuestItemsCount(GRANDIS_SKIN) >= 3))
 					{
-						if ((st.getQuestItemsCount(EXCURO_SKIN) >= 3) && (st.getQuestItemsCount(KRATOR_SHARD) >= 3) && (st.getQuestItemsCount(LAKIN_MACE) >= 3) && (st.getQuestItemsCount(GRANDIS_SKIN) >= 3))
-						{
-							st.set("cond", "5");
-						}
+						st.set("cond", "5");
 					}
 					break;
 			}

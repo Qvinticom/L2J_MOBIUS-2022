@@ -26,7 +26,7 @@ public class Q086_SagaOfTheHierophant extends SagasSuperClass
 	public Q086_SagaOfTheHierophant()
 	{
 		super(86, "Saga of the Hierophant");
-		NPC = new int[]
+		_npc = new int[]
 		{
 			30191,
 			31626,
@@ -41,7 +41,7 @@ public class Q086_SagaOfTheHierophant extends SagasSuperClass
 			31659,
 			31280
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7523,
@@ -56,39 +56,39 @@ public class Q086_SagaOfTheHierophant extends SagasSuperClass
 			7089,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27269,
 			27235,
 			27275
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			98
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x11
 		};
-		X = new int[]
+		_x = new int[]
 		{
 			161719,
 			124355,
 			124376
 		};
-		Y = new int[]
+		_y = new int[]
 		{
 			-92823,
 			82155,
 			82127
 		};
-		Z = new int[]
+		_z = new int[]
 		{
 			-1893,
 			-2803,
 			-2796
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

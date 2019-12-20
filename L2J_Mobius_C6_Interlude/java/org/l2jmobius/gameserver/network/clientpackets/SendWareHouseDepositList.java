@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 
 public class SendWareHouseDepositList extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(SendWareHouseDepositList.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SendWareHouseDepositList.class.getName());
 	
 	private int _count;
 	private int[] _items;

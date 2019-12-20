@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class DrainSoul implements ISkillHandler
 {
-	private static Logger LOGGER = Logger.getLogger(DrainSoul.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(DrainSoul.class.getName());
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.DRAIN_SOUL

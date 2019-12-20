@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
@@ -107,6 +108,8 @@ import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
  */
 public class NpcInstance extends Creature
 {
+	protected static final Logger LOGGER = Logger.getLogger(NpcInstance.class.getName());
+	
 	public static final int INTERACTION_DISTANCE = 150;
 	private CustomNpcInstance _customNpcInstance;
 	private Spawn _spawn;
@@ -180,7 +183,7 @@ public class NpcInstance extends Creature
 			}
 			catch (Throwable t)
 			{
-				t.printStackTrace();
+				LOGGER.warning(t.toString());
 			}
 		}
 	}
@@ -253,7 +256,7 @@ public class NpcInstance extends Creature
 	@Override
 	public NpcKnownList getKnownList()
 	{
-		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof NpcKnownList))
+		if (!(super.getKnownList() instanceof NpcKnownList))
 		{
 			setKnownList(new NpcKnownList(this));
 		}
@@ -264,7 +267,7 @@ public class NpcInstance extends Creature
 	@Override
 	public NpcStat getStat()
 	{
-		if ((super.getStat() == null) || !(super.getStat() instanceof NpcStat))
+		if (!(super.getStat() instanceof NpcStat))
 		{
 			setStat(new NpcStat(this));
 		}
@@ -275,7 +278,7 @@ public class NpcInstance extends Creature
 	@Override
 	public NpcStatus getStatus()
 	{
-		if ((super.getStatus() == null) || !(super.getStatus() instanceof NpcStatus))
+		if (!(super.getStatus() instanceof NpcStatus))
 		{
 			setStatus(new NpcStatus(this));
 		}
@@ -306,12 +309,7 @@ public class NpcInstance extends Creature
 	@Override
 	public boolean isAttackable()
 	{
-		if (Config.NPC_ATTACKABLE || (this instanceof Attackable))
-		{
-			return true;
-		}
-		
-		return false;
+		return Config.NPC_ATTACKABLE || (this instanceof Attackable);
 	}
 	
 	/**
@@ -1682,7 +1680,7 @@ public class NpcInstance extends Creature
 	public void insertObjectIdAndShowChatWindow(PlayerInstance player, String content)
 	{
 		// Send a Server->Client packet NpcHtmlMessage to the PlayerInstance in order to display the message of the NpcInstance
-		content = content.replaceAll("%objectId%", String.valueOf(getObjectId()));
+		content = content.replace("%objectId%", String.valueOf(getObjectId()));
 		NpcHtmlMessage npcReply = new NpcHtmlMessage(getObjectId());
 		npcReply.setHtml(content);
 		player.sendPacket(npcReply);
@@ -1889,12 +1887,9 @@ public class NpcInstance extends Creature
 		{
 			for (QuestState x : awaits)
 			{
-				if (!options.contains(x.getQuest()))
+				if (!options.contains(x.getQuest()) && (x.getQuest().getQuestIntId() > 0) && (x.getQuest().getQuestIntId() < 1000))
 				{
-					if ((x.getQuest().getQuestIntId() > 0) && (x.getQuest().getQuestIntId() < 1000))
-					{
-						options.add(x.getQuest());
-					}
+					options.add(x.getQuest());
 				}
 			}
 		}
@@ -1903,12 +1898,9 @@ public class NpcInstance extends Creature
 		{
 			for (Quest x : starts)
 			{
-				if (!options.contains(x))
+				if (!options.contains(x) && (x.getQuestIntId() > 0) && (x.getQuestIntId() < 1000))
 				{
-					if ((x.getQuestIntId() > 0) && (x.getQuestIntId() < 1000))
-					{
-						options.add(x);
-					}
+					options.add(x);
 				}
 			}
 		}
@@ -2309,21 +2301,18 @@ public class NpcInstance extends Creature
 		// Go through the Helper Buff list define in sql table helper_buff_list and cast skill
 		for (HelperBuffHolder helperBuffItem : HelperBuffTable.getInstance().getHelperBuffTable())
 		{
-			if (helperBuffItem.isMagicClassBuff() == player.isMageClass())
+			if ((helperBuffItem.isMagicClassBuff() == player.isMageClass()) && (playerLevel >= helperBuffItem.getLowerLevel()) && (playerLevel <= helperBuffItem.getUpperLevel()))
 			{
-				if ((playerLevel >= helperBuffItem.getLowerLevel()) && (playerLevel <= helperBuffItem.getUpperLevel()))
+				skill = SkillTable.getInstance().getInfo(helperBuffItem.getSkillID(), helperBuffItem.getSkillLevel());
+				
+				if (skill.getSkillType() == SkillType.SUMMON)
 				{
-					skill = SkillTable.getInstance().getInfo(helperBuffItem.getSkillID(), helperBuffItem.getSkillLevel());
-					
-					if (skill.getSkillType() == SkillType.SUMMON)
-					{
-						player.doCast(skill);
-					}
-					else
-					{
-						broadcastPacket(new MagicSkillUse(this, player, skill.getId(), skill.getLevel(), 0, 0));
-						skill.getEffects(this, player);
-					}
+					player.doCast(skill);
+				}
+				else
+				{
+					broadcastPacket(new MagicSkillUse(this, player, skill.getId(), skill.getLevel(), 0, 0));
+					skill.getEffects(this, player);
 				}
 			}
 		}
@@ -2882,12 +2871,9 @@ public class NpcInstance extends Creature
 		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(filename);
 		
-		if (this instanceof MerchantInstance)
+		if ((this instanceof MerchantInstance) && Config.LIST_PET_RENT_NPC.contains(npcId))
 		{
-			if (Config.LIST_PET_RENT_NPC.contains(npcId))
-			{
-				html.replace("_Quest", "_RentPet\">Rent Pet</a><br><a action=\"bypass -h npc_%objectId%_Quest");
-			}
+			html.replace("_Quest", "_RentPet\">Rent Pet</a><br><a action=\"bypass -h npc_%objectId%_Quest");
 		}
 		html.replace("%npcname%", getName());
 		html.replace("%playername%", player.getName());
@@ -2987,12 +2973,9 @@ public class NpcInstance extends Creature
 	{
 		_spawn = spawn;
 		// Does this Npc morph into a PcInstance?
-		if (_spawn != null)
+		if ((_spawn != null) && CustomNpcInstanceManager.getInstance().isCustomNpcInstance(_spawn.getId(), getNpcId()))
 		{
-			if (CustomNpcInstanceManager.getInstance().isCustomNpcInstance(_spawn.getId(), getNpcId()))
-			{
-				new CustomNpcInstance(this);
-			}
+			new CustomNpcInstance(this);
 		}
 	}
 	

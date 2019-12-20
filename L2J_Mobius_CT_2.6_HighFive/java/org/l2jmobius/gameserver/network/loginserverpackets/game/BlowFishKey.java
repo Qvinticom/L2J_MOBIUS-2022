@@ -29,7 +29,7 @@ import org.l2jmobius.commons.network.BaseSendablePacket;
  */
 public class BlowFishKey extends BaseSendablePacket
 {
-	private static Logger LOGGER = Logger.getLogger(BlowFishKey.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(BlowFishKey.class.getName());
 	
 	/**
 	 * @param blowfishKey

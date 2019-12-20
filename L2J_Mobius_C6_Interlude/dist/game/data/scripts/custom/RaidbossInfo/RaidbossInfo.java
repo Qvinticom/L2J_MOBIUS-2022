@@ -128,7 +128,7 @@ public class RaidbossInfo extends Quest
 		}
 		
 		// Add all Raid Bosses locations.
-		for (Spawn spawn : SpawnTable.getInstance().getAllTemplates().values())
+		for (Spawn spawn : SpawnTable.getInstance().getSpawnTable().values())
 		{
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(spawn.getNpcId());
 			if ((template != null) && template.type.equals(BOSS_CLASS_TYPE))

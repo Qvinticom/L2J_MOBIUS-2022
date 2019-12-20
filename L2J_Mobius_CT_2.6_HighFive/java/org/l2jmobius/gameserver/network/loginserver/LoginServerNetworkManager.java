@@ -31,7 +31,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
  */
 public class LoginServerNetworkManager
 {
-	private final Logger LOGGER = Logger.getLogger(getClass().getName());
+	private static final Logger LOGGER = Logger.getLogger(LoginServerNetworkManager.class.getName());
 	
 	private final Bootstrap _bootstrap;
 	

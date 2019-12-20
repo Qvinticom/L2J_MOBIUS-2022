@@ -364,31 +364,22 @@ public class Q662_AGameOfCards extends Quest
 					{
 						if ((i8 % 16) < 8)
 						{
-							if ((i8 % 8) < 4)
+							if (((i8 % 8) < 4) && (i2 == i3))
 							{
-								if (i2 == i3)
-								{
-									i6 = i6 + 10;
-									i8 = i8 + 4;
-								}
+								i6 = i6 + 10;
+								i8 = i8 + 4;
 							}
 							
-							if ((i8 % 4) < 2)
+							if (((i8 % 4) < 2) && (i2 == i4))
 							{
-								if (i2 == i4)
-								{
-									i6 = i6 + 10;
-									i8 = i8 + 2;
-								}
+								i6 = i6 + 10;
+								i8 = i8 + 2;
 							}
 							
-							if ((i8 % 2) < 1)
+							if (((i8 % 2) < 1) && (i2 == i5))
 							{
-								if (i2 == i5)
-								{
-									i6 = i6 + 10;
-									i8 = i8 + 1;
-								}
+								i6 = i6 + 10;
+								i8 = i8 + 1;
 							}
 						}
 					}
@@ -396,31 +387,22 @@ public class Q662_AGameOfCards extends Quest
 					{
 						if ((i8 % 16) < 8)
 						{
-							if ((i8 % 8) < 4)
+							if (((i8 % 8) < 4) && (i2 == i3))
 							{
-								if (i2 == i3)
-								{
-									i6 = i6 + 1;
-									i8 = i8 + 4;
-								}
+								i6 = i6 + 1;
+								i8 = i8 + 4;
 							}
 							
-							if ((i8 % 4) < 2)
+							if (((i8 % 4) < 2) && (i2 == i4))
 							{
-								if (i2 == i4)
-								{
-									i6 = i6 + 1;
-									i8 = i8 + 2;
-								}
+								i6 = i6 + 1;
+								i8 = i8 + 2;
 							}
 							
-							if ((i8 % 2) < 1)
+							if (((i8 % 2) < 1) && (i2 == i5))
 							{
-								if (i2 == i5)
-								{
-									i6 = i6 + 1;
-									i8 = i8 + 1;
-								}
+								i6 = i6 + 1;
+								i8 = i8 + 1;
 							}
 						}
 					}
@@ -429,22 +411,16 @@ public class Q662_AGameOfCards extends Quest
 					{
 						if ((i8 % 8) < 4)
 						{
-							if ((i8 % 4) < 2)
+							if (((i8 % 4) < 2) && (i3 == i4))
 							{
-								if (i3 == i4)
-								{
-									i6 = i6 + 10;
-									i8 = i8 + 2;
-								}
+								i6 = i6 + 10;
+								i8 = i8 + 2;
 							}
 							
-							if ((i8 % 2) < 1)
+							if (((i8 % 2) < 1) && (i3 == i5))
 							{
-								if (i3 == i5)
-								{
-									i6 = i6 + 10;
-									i8 = i8 + 1;
-								}
+								i6 = i6 + 10;
+								i8 = i8 + 1;
 							}
 						}
 					}
@@ -452,22 +428,16 @@ public class Q662_AGameOfCards extends Quest
 					{
 						if ((i8 % 8) < 4)
 						{
-							if ((i8 % 4) < 2)
+							if (((i8 % 4) < 2) && (i3 == i4))
 							{
-								if (i3 == i4)
-								{
-									i6 = i6 + 1;
-									i8 = i8 + 2;
-								}
+								i6 = i6 + 1;
+								i8 = i8 + 2;
 							}
 							
-							if ((i8 % 2) < 1)
+							if (((i8 % 2) < 1) && (i3 == i5))
 							{
-								if (i3 == i5)
-								{
-									i6 = i6 + 1;
-									i8 = i8 + 1;
-								}
+								i6 = i6 + 1;
+								i8 = i8 + 1;
 							}
 						}
 					}
@@ -476,13 +446,10 @@ public class Q662_AGameOfCards extends Quest
 					{
 						if ((i8 % 4) < 2)
 						{
-							if ((i8 % 2) < 1)
+							if (((i8 % 2) < 1) && (i4 == i5))
 							{
-								if (i4 == i5)
-								{
-									i6 = i6 + 10;
-									i8 = i8 + 1;
-								}
+								i6 = i6 + 10;
+								i8 = i8 + 1;
 							}
 						}
 					}
@@ -490,13 +457,10 @@ public class Q662_AGameOfCards extends Quest
 					{
 						if ((i8 % 4) < 2)
 						{
-							if ((i8 % 2) < 1)
+							if (((i8 % 2) < 1) && (i4 == i5))
 							{
-								if (i4 == i5)
-								{
-									i6 = i6 + 1;
-									i8 = i8 + 1;
-								}
+								i6 = i6 + 1;
+								i8 = i8 + 1;
 							}
 						}
 					}

@@ -73,9 +73,9 @@ public class Remedy implements IItemHandler
 					break;
 				}
 			}
-			MagicSkillUse MSU = new MagicSkillUse(playable, playable, 2042, 1, 0, 0);
-			player.sendPacket(MSU);
-			player.broadcastPacket(MSU);
+			MagicSkillUse msu = new MagicSkillUse(playable, playable, 2042, 1, 0, 0);
+			player.sendPacket(msu);
+			player.broadcastPacket(msu);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 		else if (itemId == 1832) // advanced antidote
@@ -89,9 +89,9 @@ public class Remedy implements IItemHandler
 					break;
 				}
 			}
-			MagicSkillUse MSU = new MagicSkillUse(playable, playable, 2043, 1, 0, 0);
-			player.sendPacket(MSU);
-			player.broadcastPacket(MSU);
+			MagicSkillUse msu = new MagicSkillUse(playable, playable, 2043, 1, 0, 0);
+			player.sendPacket(msu);
+			player.broadcastPacket(msu);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 		else if (itemId == 1833) // bandage
@@ -105,9 +105,9 @@ public class Remedy implements IItemHandler
 					break;
 				}
 			}
-			MagicSkillUse MSU = new MagicSkillUse(playable, playable, 34, 1, 0, 0);
-			player.sendPacket(MSU);
-			player.broadcastPacket(MSU);
+			MagicSkillUse msu = new MagicSkillUse(playable, playable, 34, 1, 0, 0);
+			player.sendPacket(msu);
+			player.broadcastPacket(msu);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 		else if (itemId == 1834) // emergency dressing
@@ -121,9 +121,9 @@ public class Remedy implements IItemHandler
 					break;
 				}
 			}
-			MagicSkillUse MSU = new MagicSkillUse(playable, playable, 2045, 1, 0, 0);
-			player.sendPacket(MSU);
-			player.broadcastPacket(MSU);
+			MagicSkillUse msu = new MagicSkillUse(playable, playable, 2045, 1, 0, 0);
+			player.sendPacket(msu);
+			player.broadcastPacket(msu);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 		else if (itemId == 3889) // potion of recovery
@@ -144,9 +144,9 @@ public class Remedy implements IItemHandler
 				player.stopRooting(null);
 			}
 			
-			MagicSkillUse MSU = new MagicSkillUse(playable, playable, 2042, 1, 0, 0);
-			player.sendPacket(MSU);
-			player.broadcastPacket(MSU);
+			MagicSkillUse msu = new MagicSkillUse(playable, playable, 2042, 1, 0, 0);
+			player.sendPacket(msu);
+			player.broadcastPacket(msu);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 	}

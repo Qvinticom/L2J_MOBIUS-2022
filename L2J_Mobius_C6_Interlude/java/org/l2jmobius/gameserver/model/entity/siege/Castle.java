@@ -50,7 +50,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 
 public class Castle
 {
-	protected static Logger LOGGER = Logger.getLogger(Castle.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(Castle.class.getName());
 	
 	private List<CropProcure> _procure = new ArrayList<>();
 	private List<SeedProduction> _production = new ArrayList<>();
@@ -221,7 +221,7 @@ public class Castle
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 		return true;
 	}
@@ -428,7 +428,7 @@ public class Castle
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -489,7 +489,6 @@ public class Castle
 			door.setCurrentHpDirect(door.getMaxHp() + hp);
 			
 			saveDoorUpgrade(doorId, hp, pDef, mDef);
-			return;
 		}
 	}
 	
@@ -555,7 +554,7 @@ public class Castle
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -584,7 +583,7 @@ public class Castle
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -607,7 +606,7 @@ public class Castle
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -622,7 +621,7 @@ public class Castle
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -640,7 +639,7 @@ public class Castle
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -689,7 +688,7 @@ public class Castle
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -887,7 +886,7 @@ public class Castle
 				int count = 0;
 				
 				String query = "INSERT INTO castle_manor_production VALUES ";
-				String values[] = new String[_production.size()];
+				String[] values = new String[_production.size()];
 				
 				for (SeedProduction s : _production)
 				{
@@ -913,7 +912,7 @@ public class Castle
 				int count = 0;
 				
 				String query = "INSERT INTO castle_manor_production VALUES ";
-				String values[] = new String[_productionNext.size()];
+				String[] values = new String[_productionNext.size()];
 				
 				for (SeedProduction s : _productionNext)
 				{
@@ -962,7 +961,7 @@ public class Castle
 				int count = 0;
 				
 				String query = "INSERT INTO castle_manor_production VALUES ";
-				String values[] = new String[prod.size()];
+				String[] values = new String[prod.size()];
 				
 				for (SeedProduction s : prod)
 				{
@@ -1004,7 +1003,7 @@ public class Castle
 				int count = 0;
 				
 				String query = "INSERT INTO castle_manor_procure VALUES ";
-				String values[] = new String[_procure.size()];
+				String[] values = new String[_procure.size()];
 				
 				for (CropProcure cp : _procure)
 				{
@@ -1032,7 +1031,7 @@ public class Castle
 				int count = 0;
 				
 				String query = "INSERT INTO castle_manor_procure VALUES ";
-				String values[] = new String[_procureNext.size()];
+				String[] values = new String[_procureNext.size()];
 				
 				for (CropProcure cp : _procureNext)
 				{
@@ -1079,7 +1078,7 @@ public class Castle
 				int count = 0;
 				
 				String query = "INSERT INTO castle_manor_procure VALUES ";
-				final String values[] = new String[proc.size()];
+				final String[] values = new String[proc.size()];
 				
 				for (CropProcure cp : proc)
 				{

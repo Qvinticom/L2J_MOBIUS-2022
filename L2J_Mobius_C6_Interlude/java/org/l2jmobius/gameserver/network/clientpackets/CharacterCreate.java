@@ -46,24 +46,29 @@ import org.l2jmobius.gameserver.network.serverpackets.CharCreateOk;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
 import org.l2jmobius.gameserver.util.Util;
 
-@SuppressWarnings("unused")
 public class CharacterCreate extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(CharacterCreate.class.getName());
-	private static final Object CREATION_LOCK = new Object();
+	private static final Logger LOGGER = Logger.getLogger(CharacterCreate.class.getName());
 	
 	private String _name;
 	private byte _sex;
 	private byte _hairStyle;
 	private byte _hairColor;
 	private byte _face;
+	@SuppressWarnings("unused")
 	private int _race;
 	private int _classId;
+	@SuppressWarnings("unused")
 	private int _int;
+	@SuppressWarnings("unused")
 	private int _str;
+	@SuppressWarnings("unused")
 	private int _con;
+	@SuppressWarnings("unused")
 	private int _men;
+	@SuppressWarnings("unused")
 	private int _dex;
+	@SuppressWarnings("unused")
 	private int _wit;
 	
 	@Override
@@ -240,45 +245,36 @@ public class CharacterCreate extends GameClientPacket
 		}
 		
 		// Shortcuts
-		newChar.registerShortCut(new ShortCut(0, 0, 3, 2, -1, 1)); // Attack
-		newChar.registerShortCut(new ShortCut(3, 0, 3, 5, -1, 1)); // Take
-		newChar.registerShortCut(new ShortCut(10, 0, 3, 0, -1, 1)); // Sit
+		newChar.registerShortCut(new ShortCut(0, 0, 3, 2, -1)); // Attack
+		newChar.registerShortCut(new ShortCut(3, 0, 3, 5, -1)); // Take
+		newChar.registerShortCut(new ShortCut(10, 0, 3, 0, -1)); // Sit
 		
-		final ItemTable itemTable = ItemTable.getInstance();
-		final Item[] items = template.getItems();
-		
-		for (Item item2 : items)
+		for (Item item : template.getItems())
 		{
-			final ItemInstance item = newChar.getInventory().addItem("Init", item2.getItemId(), 1, newChar, null);
-			
-			if (item.getItemId() == 5588)
+			final ItemInstance itemInstance = newChar.getInventory().addItem("Init", item.getItemId(), 1, newChar, null);
+			if (itemInstance.getItemId() == 5588)
 			{
-				newChar.registerShortCut(new ShortCut(11, 0, 1, item.getObjectId(), -1, 1)); // Tutorial Book shortcut
+				newChar.registerShortCut(new ShortCut(11, 0, 1, itemInstance.getObjectId(), -1)); // Tutorial Book shortcut
 			}
 			
-			if (item.isEquipable())
+			if (itemInstance.isEquipable() && ((newChar.getActiveWeaponItem() == null) || (itemInstance.getItem().getType2() == Item.TYPE2_WEAPON)))
 			{
-				if ((newChar.getActiveWeaponItem() == null) || (item.getItem().getType2() == Item.TYPE2_WEAPON))
-				{
-					newChar.getInventory().equipItemAndRecord(item);
-				}
+				newChar.getInventory().equipItemAndRecord(itemInstance);
 			}
 		}
 		
-		final SkillLearn[] startSkills = SkillTreeTable.getInstance().getAvailableSkills(newChar, newChar.getClassId());
-		
-		for (SkillLearn startSkill : startSkills)
+		for (SkillLearn startSkill : SkillTreeTable.getInstance().getAvailableSkills(newChar, newChar.getClassId()))
 		{
 			newChar.addSkill(SkillTable.getInstance().getInfo(startSkill.getId(), startSkill.getLevel()), true);
 			
 			if ((startSkill.getId() == 1001) || (startSkill.getId() == 1177))
 			{
-				newChar.registerShortCut(new ShortCut(1, 0, 2, startSkill.getId(), 1, 1));
+				newChar.registerShortCut(new ShortCut(1, 0, 2, startSkill.getId(), 1));
 			}
 			
 			if (startSkill.getId() == 1216)
 			{
-				newChar.registerShortCut(new ShortCut(10, 0, 2, startSkill.getId(), 1, 1));
+				newChar.registerShortCut(new ShortCut(10, 0, 2, startSkill.getId(), 1));
 			}
 		}
 		

@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.instancemanager.CustomNpcInstanceManager;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
@@ -34,9 +33,9 @@ public class CustomNpcInstance
 	private String _name;
 	private String _title;
 	
-	private int _int[]; // PcInstance integer stats
+	private int[] _int; // PcInstance integer stats
 	private boolean _boolean[]; // PcInstance booolean stats
-	private NpcInstance _NpcInstance; // Reference to Npc with this stats
+	private NpcInstance _npcInstance; // Reference to Npc with this stats
 	private ClassId _classId; // ClassId of this (N)Pc
 	
 	/**
@@ -45,16 +44,8 @@ public class CustomNpcInstance
 	 */
 	public CustomNpcInstance(NpcInstance myNpc)
 	{
-		_NpcInstance = myNpc;
-		if (_NpcInstance == null)
-		{
-			return;
-		}
-		else if (_NpcInstance.getSpawn() == null)
-		{
-			return;
-		}
-		else
+		_npcInstance = myNpc;
+		if ((_npcInstance != null) && (_npcInstance.getSpawn() != null))
 		{
 			initialize();
 		}
@@ -75,16 +66,16 @@ public class CustomNpcInstance
 		_boolean = new boolean[4]; // pvp=0 , noble=1, hero=2, isFemaleSex=3
 		
 		// load the Pc Morph Data
-		CustomNpcInstanceManager.customInfo ci = CustomNpcInstanceManager.getInstance().getCustomData(_NpcInstance.getSpawn().getId(), _NpcInstance.getNpcId());
+		CustomNpcInstanceManager.customInfo ci = CustomNpcInstanceManager.getInstance().getCustomData(_npcInstance.getSpawn().getId(), _npcInstance.getNpcId());
 		
 		if (ci == null)
 		{
-			_NpcInstance.setCustomNpcInstance(null);
-			_NpcInstance = null;
+			_npcInstance.setCustomNpcInstance(null);
+			_npcInstance = null;
 			return;
 		}
 		
-		_NpcInstance.setCustomNpcInstance(this);
+		_npcInstance.setCustomNpcInstance(this);
 		
 		setPcInstanceData(ci);
 		
@@ -107,7 +98,7 @@ public class CustomNpcInstance
 	 */
 	public String getName()
 	{
-		return _name == null ? _NpcInstance.getName() : _name;
+		return _name == null ? _npcInstance.getName() : _name;
 	}
 	
 	/**
@@ -115,7 +106,7 @@ public class CustomNpcInstance
 	 */
 	public String getTitle()
 	{
-		return _title == null ? _NpcInstance.getTitle() : _NpcInstance.isChampion() ? "The Champion " + _title : _title;
+		return _title == null ? _npcInstance.getTitle() : _npcInstance.isChampion() ? "The Champion " + _title : _title;
 	}
 	
 	/**
@@ -123,7 +114,7 @@ public class CustomNpcInstance
 	 */
 	public int getKarma()
 	{
-		return _int[1] > 0 ? _int[1] : _NpcInstance.getAggroRange();
+		return _int[1] > 0 ? _int[1] : _npcInstance.getAggroRange();
 	}
 	
 	/**
@@ -188,7 +179,7 @@ public class CustomNpcInstance
 	 */
 	public int getPledgeClass()
 	{
-		return _NpcInstance.isChampion() ? 8 : _int[9];
+		return _npcInstance.isChampion() ? 8 : _int[9];
 	}
 	
 	/**
@@ -204,7 +195,7 @@ public class CustomNpcInstance
 	 */
 	public int PAPERDOLL_RHAND()
 	{
-		return _int[11] != 0 ? _int[11] : _NpcInstance.getRightHandItem();
+		return _int[11] != 0 ? _int[11] : _npcInstance.getRightHandItem();
 	}
 	
 	/**
@@ -212,7 +203,7 @@ public class CustomNpcInstance
 	 */
 	public int PAPERDOLL_LHAND()
 	{
-		return _int[12] > 0 ? _int[12] : _int[12] == 0 ? _NpcInstance.getLeftHandItem() : 0;
+		return _int[12] > 0 ? _int[12] : _int[12] == 0 ? _npcInstance.getLeftHandItem() : 0;
 	}
 	
 	/**
@@ -316,7 +307,7 @@ public class CustomNpcInstance
 	 */
 	public int getHeading()
 	{
-		return _NpcInstance.getHeading();
+		return _npcInstance.getHeading();
 	}
 	
 	/**
@@ -333,7 +324,7 @@ public class CustomNpcInstance
 	 */
 	public boolean isHero()
 	{
-		return _NpcInstance.isChampion() ? true : _boolean[2];
+		return _npcInstance.isChampion() ? true : _boolean[2];
 	}
 	
 	/**
@@ -353,33 +344,19 @@ public class CustomNpcInstance
 	 */
 	private final void chooseRandomWeapon()
 	{
-		WeaponType wpnType = null;
+		WeaponType wpnType = WeaponType.BOW;
+		while (true) // Choose correct weapon TYPE
 		{
-			wpnType = Rnd.get(100) > 40 ? WeaponType.BOW : WeaponType.BOW;
+			wpnType = WeaponType.values()[Rnd.get(WeaponType.values().length)];
+			if (wpnType == null)
 			{
-				wpnType = WeaponType.BOW;
+				continue;
 			}
-		}
-		{
-			while (true) // Choose correct weapon TYPE
+			else if (wpnType == WeaponType.BOW)
 			{
-				wpnType = WeaponType.values()[Rnd.get(WeaponType.values().length)];
-				if (wpnType == null)
-				{
-					continue;
-				}
-				else if ((wpnType == WeaponType.BOW) || (wpnType == WeaponType.BOW))
-				{
-					continue;
-				}
-				else if (_classId.getRace() == Race.HUMAN)
-				{
-				}
-				break;
+				continue;
 			}
-		}
-		if (Rnd.get(100) < 10)
-		{
+			break;
 		}
 	}
 	
@@ -391,11 +368,7 @@ public class CustomNpcInstance
 		while (true)
 		{
 			_classId = ClassId.getClassId(Rnd.get(ClassId.values().length));
-			if (_classId == null)
-			{
-				continue;
-			}
-			else if ((_classId.getRace() != null) && (_classId.getParent() != null))
+			if ((_classId != null) && (_classId.getRace() != null) && (_classId.getParent() != null))
 			{
 				break;
 			}
@@ -515,11 +488,7 @@ public class CustomNpcInstance
 		{
 			for (ClassId id : ids)
 			{
-				if (id == null)
-				{
-					continue;
-				}
-				else if (id.getId() == _int[7])
+				if ((id != null) && (id.getId() == _int[7]))
 				{
 					_classId = id;
 					_int[6] = id.getRace().ordinal();

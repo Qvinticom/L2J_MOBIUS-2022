@@ -81,7 +81,7 @@ public class PetDataTable implements IXmlReader
 						{
 							for (String foodId : attrs.getNamedItem("val").getNodeValue().split(";"))
 							{
-								data.addFood(Integer.valueOf(foodId));
+								data.addFood(Integer.parseInt(foodId));
 							}
 						}
 						else if ("load".equals(type))

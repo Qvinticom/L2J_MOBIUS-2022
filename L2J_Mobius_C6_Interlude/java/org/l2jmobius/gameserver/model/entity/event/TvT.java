@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.entity.event;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -55,9 +55,9 @@ public class TvT implements EventTask
 {
 	protected static final Logger LOGGER = Logger.getLogger(TvT.class.getName());
 	
-	protected static String _eventName = new String();
-	protected static String _eventDesc = new String();
-	protected static String _joiningLocationName = new String();
+	protected static String _eventName = "";
+	protected static String _eventDesc = "";
+	protected static String _joiningLocationName = "";
 	private static Spawn _npcSpawn;
 	protected static boolean _joining = false;
 	protected static boolean _teleport = false;
@@ -78,21 +78,21 @@ public class TvT implements EventTask
 	protected static int _eventTime = 0;
 	protected static int _minPlayers = 0;
 	protected static int _maxPlayers = 0;
-	protected static long _intervalBetweenMatchs = 0;
+	protected static long _intervalBetweenMatches = 0;
 	private String startEventTime;
 	private static boolean _teamEvent = true; // TODO to be integrated
-	public static Vector<PlayerInstance> _players = new Vector<>();
-	private static String _topTeam = new String();
-	public static Vector<PlayerInstance> _playersShuffle = new Vector<>();
-	public static Vector<String> _teams = new Vector<>();
-	public static Vector<String> _savePlayers = new Vector<>();
-	public static Vector<String> _savePlayerTeams = new Vector<>();
-	public static Vector<Integer> _teamPlayersCount = new Vector<>();
-	public static Vector<Integer> _teamColors = new Vector<>();
-	public static Vector<Integer> _teamsX = new Vector<>();
-	public static Vector<Integer> _teamsY = new Vector<>();
-	public static Vector<Integer> _teamsZ = new Vector<>();
-	public static Vector<Integer> _teamPointsCount = new Vector<>();
+	public static List<PlayerInstance> _players = new ArrayList<>();
+	private static String _topTeam = "";
+	public static List<PlayerInstance> _playersShuffle = new ArrayList<>();
+	public static List<String> _teams = new ArrayList<>();
+	public static List<String> _savePlayers = new ArrayList<>();
+	public static List<String> _savePlayerTeams = new ArrayList<>();
+	public static List<Integer> _teamPlayersCount = new ArrayList<>();
+	public static List<Integer> _teamColors = new ArrayList<>();
+	public static List<Integer> _teamsX = new ArrayList<>();
+	public static List<Integer> _teamsY = new ArrayList<>();
+	public static List<Integer> _teamsZ = new ArrayList<>();
+	public static List<Integer> _teamPointsCount = new ArrayList<>();
 	public static int _topKills = 0;
 	
 	/**
@@ -115,21 +115,21 @@ public class TvT implements EventTask
 	 * Gets the _event name.
 	 * @return the _eventName
 	 */
-	public static String get_eventName()
+	public static String getEventName()
 	{
 		return _eventName;
 	}
 	
 	/**
 	 * Set_event name.
-	 * @param _eventName the _eventName to set
+	 * @param eventName the _eventName to set
 	 * @return true, if successful
 	 */
-	public static boolean set_eventName(String _eventName)
+	public static boolean setEventName(String eventName)
 	{
 		if (!_inProgress)
 		{
-			TvT._eventName = _eventName;
+			TvT._eventName = eventName;
 			return true;
 		}
 		return false;
@@ -139,21 +139,21 @@ public class TvT implements EventTask
 	 * Gets the _event desc.
 	 * @return the _eventDesc
 	 */
-	public static String get_eventDesc()
+	public static String getEventDesc()
 	{
 		return _eventDesc;
 	}
 	
 	/**
 	 * Set_event desc.
-	 * @param _eventDesc the _eventDesc to set
+	 * @param eventDesc the _eventDesc to set
 	 * @return true, if successful
 	 */
-	public static boolean set_eventDesc(String _eventDesc)
+	public static boolean setEventDesc(String eventDesc)
 	{
 		if (!_inProgress)
 		{
-			TvT._eventDesc = _eventDesc;
+			TvT._eventDesc = eventDesc;
 			return true;
 		}
 		return false;
@@ -163,21 +163,21 @@ public class TvT implements EventTask
 	 * Gets the _joining location name.
 	 * @return the _joiningLocationName
 	 */
-	public static String get_joiningLocationName()
+	public static String getJoiningLocationName()
 	{
 		return _joiningLocationName;
 	}
 	
 	/**
 	 * Set_joining location name.
-	 * @param _joiningLocationName the _joiningLocationName to set
+	 * @param joiningLocationName the _joiningLocationName to set
 	 * @return true, if successful
 	 */
-	public static boolean set_joiningLocationName(String _joiningLocationName)
+	public static boolean setJoiningLocationName(String joiningLocationName)
 	{
 		if (!_inProgress)
 		{
-			TvT._joiningLocationName = _joiningLocationName;
+			TvT._joiningLocationName = joiningLocationName;
 			return true;
 		}
 		return false;
@@ -187,21 +187,21 @@ public class TvT implements EventTask
 	 * Gets the _npc id.
 	 * @return the _npcId
 	 */
-	public static int get_npcId()
+	public static int getNpcId()
 	{
 		return _npcId;
 	}
 	
 	/**
 	 * Set_npc id.
-	 * @param _npcId the _npcId to set
+	 * @param npcId the _npcId to set
 	 * @return true, if successful
 	 */
-	public static boolean set_npcId(int _npcId)
+	public static boolean setNpcId(int npcId)
 	{
 		if (!_inProgress)
 		{
-			TvT._npcId = _npcId;
+			TvT._npcId = npcId;
 			return true;
 		}
 		return false;
@@ -211,32 +211,30 @@ public class TvT implements EventTask
 	 * Gets the _npc location.
 	 * @return the _npc location
 	 */
-	public static Location get_npcLocation()
+	public static Location getNpcLocation()
 	{
-		final Location npc_loc = new Location(_npcX, _npcY, _npcZ, _npcHeading);
-		
-		return npc_loc;
+		return new Location(_npcX, _npcY, _npcZ, _npcHeading);
 	}
 	
 	/**
 	 * Gets the _reward id.
 	 * @return the _rewardId
 	 */
-	public static int get_rewardId()
+	public static int getRewardId()
 	{
 		return _rewardId;
 	}
 	
 	/**
 	 * Set_reward id.
-	 * @param _rewardId the _rewardId to set
+	 * @param rewardId the _rewardId to set
 	 * @return true, if successful
 	 */
-	public static boolean set_rewardId(int _rewardId)
+	public static boolean setRewardId(int rewardId)
 	{
 		if (!_inProgress)
 		{
-			TvT._rewardId = _rewardId;
+			TvT._rewardId = rewardId;
 			return true;
 		}
 		return false;
@@ -246,21 +244,21 @@ public class TvT implements EventTask
 	 * Gets the _reward amount.
 	 * @return the _rewardAmount
 	 */
-	public static int get_rewardAmount()
+	public static int getRewardAmount()
 	{
 		return _rewardAmount;
 	}
 	
 	/**
 	 * Set_reward amount.
-	 * @param _rewardAmount the _rewardAmount to set
+	 * @param rewardAmount the _rewardAmount to set
 	 * @return true, if successful
 	 */
-	public static boolean set_rewardAmount(int _rewardAmount)
+	public static boolean setRewardAmount(int rewardAmount)
 	{
 		if (!_inProgress)
 		{
-			TvT._rewardAmount = _rewardAmount;
+			TvT._rewardAmount = rewardAmount;
 			return true;
 		}
 		return false;
@@ -270,21 +268,21 @@ public class TvT implements EventTask
 	 * Gets the _minlvl.
 	 * @return the _minlvl
 	 */
-	public static int get_minlvl()
+	public static int getMinlvl()
 	{
 		return _minlvl;
 	}
 	
 	/**
 	 * Set_minlvl.
-	 * @param _minlvl the _minlvl to set
+	 * @param minlvl the _minlvl to set
 	 * @return true, if successful
 	 */
-	public static boolean set_minlvl(int _minlvl)
+	public static boolean setMinlvl(int minlvl)
 	{
 		if (!_inProgress)
 		{
-			TvT._minlvl = _minlvl;
+			TvT._minlvl = minlvl;
 			return true;
 		}
 		return false;
@@ -294,21 +292,21 @@ public class TvT implements EventTask
 	 * Gets the _maxlvl.
 	 * @return the _maxlvl
 	 */
-	public static int get_maxlvl()
+	public static int getMaxlvl()
 	{
 		return _maxlvl;
 	}
 	
 	/**
 	 * Set_maxlvl.
-	 * @param _maxlvl the _maxlvl to set
+	 * @param maxlvl the _maxlvl to set
 	 * @return true, if successful
 	 */
-	public static boolean set_maxlvl(int _maxlvl)
+	public static boolean setMaxlvl(int maxlvl)
 	{
 		if (!_inProgress)
 		{
-			TvT._maxlvl = _maxlvl;
+			TvT._maxlvl = maxlvl;
 			return true;
 		}
 		return false;
@@ -318,21 +316,21 @@ public class TvT implements EventTask
 	 * Gets the _join time.
 	 * @return the _joinTime
 	 */
-	public static int get_joinTime()
+	public static int getJoinTime()
 	{
 		return _joinTime;
 	}
 	
 	/**
 	 * Set_join time.
-	 * @param _joinTime the _joinTime to set
+	 * @param joinTime the _joinTime to set
 	 * @return true, if successful
 	 */
-	public static boolean set_joinTime(int _joinTime)
+	public static boolean setJoinTime(int joinTime)
 	{
 		if (!_inProgress)
 		{
-			TvT._joinTime = _joinTime;
+			TvT._joinTime = joinTime;
 			return true;
 		}
 		return false;
@@ -342,21 +340,21 @@ public class TvT implements EventTask
 	 * Gets the _event time.
 	 * @return the _eventTime
 	 */
-	public static int get_eventTime()
+	public static int getEventTime()
 	{
 		return _eventTime;
 	}
 	
 	/**
 	 * Set_event time.
-	 * @param _eventTime the _eventTime to set
+	 * @param eventTime the _eventTime to set
 	 * @return true, if successful
 	 */
-	public static boolean set_eventTime(int _eventTime)
+	public static boolean setEventTime(int eventTime)
 	{
 		if (!_inProgress)
 		{
-			TvT._eventTime = _eventTime;
+			TvT._eventTime = eventTime;
 			return true;
 		}
 		return false;
@@ -366,21 +364,21 @@ public class TvT implements EventTask
 	 * Gets the _min players.
 	 * @return the _minPlayers
 	 */
-	public static int get_minPlayers()
+	public static int getMinPlayers()
 	{
 		return _minPlayers;
 	}
 	
 	/**
 	 * Set_min players.
-	 * @param _minPlayers the _minPlayers to set
+	 * @param minPlayers the _minPlayers to set
 	 * @return true, if successful
 	 */
-	public static boolean set_minPlayers(int _minPlayers)
+	public static boolean setMinPlayers(int minPlayers)
 	{
 		if (!_inProgress)
 		{
-			TvT._minPlayers = _minPlayers;
+			TvT._minPlayers = minPlayers;
 			return true;
 		}
 		return false;
@@ -390,45 +388,45 @@ public class TvT implements EventTask
 	 * Gets the _max players.
 	 * @return the _maxPlayers
 	 */
-	public static int get_maxPlayers()
+	public static int getMaxPlayers()
 	{
 		return _maxPlayers;
 	}
 	
 	/**
 	 * Set_max players.
-	 * @param _maxPlayers the _maxPlayers to set
+	 * @param maxPlayers the _maxPlayers to set
 	 * @return true, if successful
 	 */
-	public static boolean set_maxPlayers(int _maxPlayers)
+	public static boolean setMaxPlayers(int maxPlayers)
 	{
 		if (!_inProgress)
 		{
-			TvT._maxPlayers = _maxPlayers;
+			TvT._maxPlayers = maxPlayers;
 			return true;
 		}
 		return false;
 	}
 	
 	/**
-	 * Gets the _interval between matchs.
-	 * @return the _intervalBetweenMatchs
+	 * Gets the _interval between matches.
+	 * @return the _intervalBetweenMatches
 	 */
-	public static long get_intervalBetweenMatchs()
+	public static long get_intervalBetweenMatches()
 	{
-		return _intervalBetweenMatchs;
+		return _intervalBetweenMatches;
 	}
 	
 	/**
-	 * Set_interval between matchs.
-	 * @param _intervalBetweenMatchs the _intervalBetweenMatchs to set
+	 * Set_interval between matches.
+	 * @param intervalBetweenMatches the _intervalBetweenMatches to set
 	 * @return true, if successful
 	 */
-	public static boolean set_intervalBetweenMatchs(long _intervalBetweenMatchs)
+	public static boolean setIntervalBetweenMatches(long intervalBetweenMatches)
 	{
 		if (!_inProgress)
 		{
-			TvT._intervalBetweenMatchs = _intervalBetweenMatchs;
+			TvT._intervalBetweenMatches = intervalBetweenMatches;
 			return true;
 		}
 		return false;
@@ -462,7 +460,7 @@ public class TvT implements EventTask
 	 * Checks if is _joining.
 	 * @return the _joining
 	 */
-	public static boolean is_joining()
+	public static boolean isJoining()
 	{
 		return _joining;
 	}
@@ -471,7 +469,7 @@ public class TvT implements EventTask
 	 * Checks if is _teleport.
 	 * @return the _teleport
 	 */
-	public static boolean is_teleport()
+	public static boolean isTeleport()
 	{
 		return _teleport;
 	}
@@ -480,7 +478,7 @@ public class TvT implements EventTask
 	 * Checks if is _started.
 	 * @return the _started
 	 */
-	public static boolean is_started()
+	public static boolean isStarted()
 	{
 		return _started;
 	}
@@ -489,7 +487,7 @@ public class TvT implements EventTask
 	 * Checks if is _aborted.
 	 * @return the _aborted
 	 */
-	public static boolean is_aborted()
+	public static boolean isAborted()
 	{
 		return _aborted;
 	}
@@ -498,7 +496,7 @@ public class TvT implements EventTask
 	 * Checks if is _sit forced.
 	 * @return the _sitForced
 	 */
-	public static boolean is_sitForced()
+	public static boolean isSitForced()
 	{
 		return _sitForced;
 	}
@@ -507,7 +505,7 @@ public class TvT implements EventTask
 	 * Checks if is _in progress.
 	 * @return the _inProgress
 	 */
-	public static boolean is_inProgress()
+	public static boolean isInProgress()
 	{
 		return _inProgress;
 	}
@@ -519,12 +517,7 @@ public class TvT implements EventTask
 	 */
 	public static boolean checkMaxLevel(int maxlvl)
 	{
-		if (_minlvl >= maxlvl)
-		{
-			return false;
-		}
-		
-		return true;
+		return _minlvl < maxlvl;
 	}
 	
 	/**
@@ -534,12 +527,7 @@ public class TvT implements EventTask
 	 */
 	public static boolean checkMinLevel(int minlvl)
 	{
-		if (_maxlvl <= minlvl)
-		{
-			return false;
-		}
-		
-		return true;
+		return _maxlvl > minlvl;
 	}
 	
 	/**
@@ -549,12 +537,7 @@ public class TvT implements EventTask
 	 */
 	public static boolean checkMinPlayers(int players)
 	{
-		if (_minPlayers <= players)
-		{
-			return true;
-		}
-		
-		return false;
+		return _minPlayers > players;
 	}
 	
 	/**
@@ -564,12 +547,7 @@ public class TvT implements EventTask
 	 */
 	public static boolean checkMaxPlayers(int players)
 	{
-		if (_maxPlayers > players)
-		{
-			return true;
-		}
-		
-		return false;
+		return _maxPlayers <= players;
 	}
 	
 	/**
@@ -622,12 +600,7 @@ public class TvT implements EventTask
 	 */
 	private static boolean checkStartJoinTeamInfo()
 	{
-		if ((_teams.size() < 2) || _teamsX.contains(0) || _teamsY.contains(0) || _teamsZ.contains(0))
-		{
-			return false;
-		}
-		
-		return true;
+		return (_teams.size() >= 2) && !_teamsX.contains(0) && !_teamsY.contains(0) && !_teamsZ.contains(0);
 	}
 	
 	/**
@@ -646,12 +619,7 @@ public class TvT implements EventTask
 	 */
 	protected static boolean checkAutoEventStartJoinOk()
 	{
-		if ((_joinTime == 0) || (_eventTime == 0))
-		{
-			return false;
-		}
-		
-		return true;
+		return (_joinTime != 0) && (_eventTime != 0);
 	}
 	
 	/**
@@ -799,19 +767,16 @@ public class TvT implements EventTask
 				{
 					if (player != null)
 					{
-						if (Config.TVT_ON_START_UNSUMMON_PET)
+						// Remove Summon's buffs
+						if (Config.TVT_ON_START_UNSUMMON_PET && (player.getPet() != null))
 						{
-							// Remove Summon's buffs
-							if (player.getPet() != null)
+							final Summon summon = player.getPet();
+							
+							summon.stopAllEffects();
+							
+							if (summon instanceof PetInstance)
 							{
-								final Summon summon = player.getPet();
-								
-								summon.stopAllEffects();
-								
-								if (summon instanceof PetInstance)
-								{
-									summon.unSummon(player);
-								}
+								summon.unSummon(player);
 							}
 						}
 						
@@ -877,9 +842,9 @@ public class TvT implements EventTask
 		_started = false;
 		_inProgress = false;
 		_aborted = false;
-		final long delay = _intervalBetweenMatchs;
+		final long delay = _intervalBetweenMatches;
 		
-		Announcements.getInstance().gameAnnounceToAll(_eventName + ": joining period will be avaible again in " + _intervalBetweenMatchs + " minute(s)!");
+		Announcements.getInstance().gameAnnounceToAll(_eventName + ": joining period will be avaible again in " + _intervalBetweenMatches + " minute(s)!");
 		
 		waiter(delay);
 		
@@ -897,7 +862,6 @@ public class TvT implements EventTask
 		catch (Exception e)
 		{
 			LOGGER.warning(_eventName + ": Error While Trying to restart Event... " + e);
-			e.printStackTrace();
 		}
 	}
 	
@@ -1127,7 +1091,7 @@ public class TvT implements EventTask
 						if (!_started && !_aborted) // if is not already started and it's not aborted
 						{
 							
-							LOGGER.info(_eventName + ": waiting.....delay for restart event  " + _intervalBetweenMatchs + " minutes.");
+							LOGGER.info(_eventName + ": waiting.....delay for restart event  " + _intervalBetweenMatches + " minutes.");
 							waiter(60000); // just a give a delay to next restart
 							
 							try
@@ -1140,7 +1104,6 @@ public class TvT implements EventTask
 							catch (Exception e)
 							{
 								LOGGER.warning("Error while tying to Restart Event " + e);
-								e.printStackTrace();
 							}
 						}
 					}
@@ -1250,6 +1213,7 @@ public class TvT implements EventTask
 					case 10: // 10 seconds left
 					{
 						removeOfflinePlayers();
+						// fallthrough?
 					}
 					case 3: // 3 seconds left
 					case 2: // 2 seconds left
@@ -1281,7 +1245,7 @@ public class TvT implements EventTask
 				{
 					Thread.sleep(1);
 				}
-				catch (InterruptedException ie)
+				catch (InterruptedException e)
 				{
 				}
 			}
@@ -1339,29 +1303,22 @@ public class TvT implements EventTask
 			{
 				return;
 			}
-			else if (_playersShuffle.size() > 0)
+			
+			for (PlayerInstance player : _playersShuffle)
 			{
-				for (PlayerInstance player : _playersShuffle)
+				if (player == null)
 				{
-					if (player == null)
-					{
-						_playersShuffle.remove(player);
-					}
-					else if ((player.isOnline() == 0) || player.isInJail() || player.isInOfflineMode())
-					{
-						removePlayer(player);
-					}
-					if ((_playersShuffle.size() == 0) || _playersShuffle.isEmpty())
-					{
-						break;
-					}
+					_playersShuffle.remove(player);
+				}
+				else if ((player.isOnline() == 0) || player.isInJail() || player.isInOfflineMode())
+				{
+					removePlayer(player);
 				}
 			}
 		}
 		catch (Exception e)
 		{
 			LOGGER.warning(e.getMessage());
-			return;
 		}
 	}
 	
@@ -1385,7 +1342,7 @@ public class TvT implements EventTask
 		}
 		else if (Config.TVT_EVEN_TEAMS.equals("SHUFFLE"))
 		{
-			final Vector<PlayerInstance> playersShuffleTemp = new Vector<>();
+			final List<PlayerInstance> playersShuffleTemp = new ArrayList<>();
 			int loopCount = 0;
 			
 			loopCount = _playersShuffle.size();
@@ -1407,12 +1364,7 @@ public class TvT implements EventTask
 	 */
 	private static boolean finishEventOk()
 	{
-		if (!_started)
-		{
-			return false;
-		}
-		
-		return true;
+		return _started;
 	}
 	
 	/**
@@ -1445,16 +1397,14 @@ public class TvT implements EventTask
 			return false;
 		}
 		
-		if ((eventPlayer._active_boxes > 1) && !Config.ALLOW_DUALBOX_EVENT)
+		if ((eventPlayer._activeBoxes > 1) && !Config.ALLOW_DUALBOX_EVENT)
 		{
-			final List<String> players_in_boxes = eventPlayer.active_boxes_characters;
-			
-			if ((players_in_boxes != null) && (players_in_boxes.size() > 1))
+			final List<String> playerBoxes = eventPlayer._activeBoxeCharacters;
+			if ((playerBoxes != null) && (playerBoxes.size() > 1))
 			{
-				for (String character_name : players_in_boxes)
+				for (String character_name : playerBoxes)
 				{
 					final PlayerInstance player = World.getInstance().getPlayer(character_name);
-					
 					if ((player != null) && player._inEventTvT)
 					{
 						eventPlayer.sendMessage("You already participated in event with another char!");
@@ -1527,7 +1477,7 @@ public class TvT implements EventTask
 				}
 			}
 			
-			final Vector<String> joinableTeams = new Vector<>();
+			final List<String> joinableTeams = new ArrayList<>();
 			
 			for (String team : _teams)
 			{
@@ -1566,27 +1516,21 @@ public class TvT implements EventTask
 				player.getAppearance().setNameColor(_teamColors.get(_teams.indexOf(player._teamNameTvT)));
 				player.setKarma(0);
 				player.setTitle("Kills: " + player._countTvTkills);
-				if (Config.TVT_AURA)
+				if (Config.TVT_AURA && (_teams.size() >= 2))
 				{
-					if (_teams.size() >= 2)
-					{
-						player.setTeam(_teams.indexOf(player._teamNameTvT) + 1);
-					}
+					player.setTeam(_teams.indexOf(player._teamNameTvT) + 1);
 				}
 				
-				if (player.isMounted())
+				if (player.isMounted() && player.setMountType(0))
 				{
-					if (player.setMountType(0))
+					if (player.isFlying())
 					{
-						if (player.isFlying())
-						{
-							player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
-						}
-						
-						final Ride dismount = new Ride(player.getObjectId(), Ride.ACTION_DISMOUNT, 0);
-						player.broadcastPacket(dismount);
-						player.setMountObjectID(0);
+						player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
 					}
+					
+					final Ride dismount = new Ride(player.getObjectId(), Ride.ACTION_DISMOUNT, 0);
+					player.broadcastPacket(dismount);
+					player.setMountObjectID(0);
 				}
 				player.broadcastUserInfo();
 			}
@@ -1633,7 +1577,7 @@ public class TvT implements EventTask
 		LOGGER.info("Max lvl: " + _maxlvl);
 		LOGGER.info("");
 		LOGGER.info("##########################");
-		LOGGER.info("# _teams(Vector<String>) #");
+		LOGGER.info("# _teams(List<String>) #");
 		LOGGER.info("##########################");
 		
 		for (String team : _teams)
@@ -1645,7 +1589,7 @@ public class TvT implements EventTask
 		{
 			LOGGER.info("");
 			LOGGER.info("#########################################");
-			LOGGER.info("# _playersShuffle(Vector<PlayerInstance>) #");
+			LOGGER.info("# _playersShuffle(List<PlayerInstance>) #");
 			LOGGER.info("#########################################");
 			
 			for (PlayerInstance player : _playersShuffle)
@@ -1659,7 +1603,7 @@ public class TvT implements EventTask
 		
 		LOGGER.info("");
 		LOGGER.info("##################################");
-		LOGGER.info("# _players(Vector<PlayerInstance>) #");
+		LOGGER.info("# _players(List<PlayerInstance>) #");
 		LOGGER.info("##################################");
 		
 		synchronized (_players)
@@ -1675,7 +1619,7 @@ public class TvT implements EventTask
 		
 		LOGGER.info("");
 		LOGGER.info("#####################################################################");
-		LOGGER.info("# _savePlayers(Vector<String>) and _savePlayerTeams(Vector<String>) #");
+		LOGGER.info("# _savePlayers(List<String>) and _savePlayerTeams(List<String>) #");
 		LOGGER.info("#####################################################################");
 		
 		for (String player : _savePlayers)
@@ -1701,22 +1645,22 @@ public class TvT implements EventTask
 	 */
 	public static void loadData()
 	{
-		_eventName = new String();
-		_eventDesc = new String();
-		_joiningLocationName = new String();
-		_savePlayers = new Vector<>();
-		_players = new Vector<>();
+		_eventName = "";
+		_eventDesc = "";
+		_joiningLocationName = "";
+		_savePlayers = new ArrayList<>();
+		_players = new ArrayList<>();
 		
-		_topTeam = new String();
-		_teams = new Vector<>();
-		_savePlayerTeams = new Vector<>();
-		_playersShuffle = new Vector<>();
-		_teamPlayersCount = new Vector<>();
-		_teamPointsCount = new Vector<>();
-		_teamColors = new Vector<>();
-		_teamsX = new Vector<>();
-		_teamsY = new Vector<>();
-		_teamsZ = new Vector<>();
+		_topTeam = "";
+		_teams = new ArrayList<>();
+		_savePlayerTeams = new ArrayList<>();
+		_playersShuffle = new ArrayList<>();
+		_teamPlayersCount = new ArrayList<>();
+		_teamPointsCount = new ArrayList<>();
+		_teamColors = new ArrayList<>();
+		_teamsX = new ArrayList<>();
+		_teamsY = new ArrayList<>();
+		_teamsZ = new ArrayList<>();
 		
 		_joining = false;
 		_teleport = false;
@@ -1739,7 +1683,7 @@ public class TvT implements EventTask
 		_eventTime = 0;
 		_minPlayers = 0;
 		_maxPlayers = 0;
-		_intervalBetweenMatchs = 0;
+		_intervalBetweenMatches = 0;
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -1770,7 +1714,7 @@ public class TvT implements EventTask
 				_eventTime = rs.getInt("eventTime");
 				_minPlayers = rs.getInt("minPlayers");
 				_maxPlayers = rs.getInt("maxPlayers");
-				_intervalBetweenMatchs = rs.getLong("delayForNextEvent");
+				_intervalBetweenMatches = rs.getLong("delayForNextEvent");
 			}
 			statement.close();
 			
@@ -1839,7 +1783,7 @@ public class TvT implements EventTask
 			statement.setInt(15, _eventTime);
 			statement.setInt(16, _minPlayers);
 			statement.setInt(17, _maxPlayers);
-			statement.setLong(18, _intervalBetweenMatchs);
+			statement.setLong(18, _intervalBetweenMatches);
 			statement.execute();
 			statement.close();
 			
@@ -2034,12 +1978,9 @@ public class TvT implements EventTask
 				player.getAppearance().setNameColor(player._originalNameColorTvT);
 				player.setTitle(player._originalTitleTvT);
 				player.setKarma(player._originalKarmaTvT);
-				if (Config.TVT_AURA)
+				if (Config.TVT_AURA && (_teams.size() >= 2))
 				{
-					if (_teams.size() >= 2)
-					{
-						player.setTeam(0); // clear aura :P
-					}
+					player.setTeam(0); // clear aura :P
 				}
 				player.broadcastUserInfo();
 			}
@@ -2048,7 +1989,7 @@ public class TvT implements EventTask
 			player._originalNameColorTvT = 0;
 			player._originalTitleTvT = null;
 			player._originalKarmaTvT = 0;
-			player._teamNameTvT = new String();
+			player._teamNameTvT = "";
 			player._countTvTkills = 0;
 			player._inEventTvT = false;
 			
@@ -2104,14 +2045,14 @@ public class TvT implements EventTask
 		}
 		
 		_topKills = 0;
-		_topTeam = new String();
-		_players = new Vector<>();
-		_playersShuffle = new Vector<>();
-		_savePlayers = new Vector<>();
-		_savePlayerTeams = new Vector<>();
+		_topTeam = "";
+		_players = new ArrayList<>();
+		_playersShuffle = new ArrayList<>();
+		_savePlayers = new ArrayList<>();
+		_savePlayerTeams = new ArrayList<>();
 		
-		_teamPointsCount = new Vector<>();
-		_teamPlayersCount = new Vector<>();
+		_teamPointsCount = new ArrayList<>();
+		_teamPlayersCount = new ArrayList<>();
 		
 		cleanLocalEventInfo();
 		
@@ -2160,8 +2101,9 @@ public class TvT implements EventTask
 					{
 						continue;
 					}
+					
 					// check by name incase player got new objectId
-					else if (p.getName().equals(player.getName()))
+					if (p.getName().equals(player.getName()))
 					{
 						player._originalNameColorTvT = player.getAppearance().getNameColor();
 						player._originalTitleTvT = player.getTitle();
@@ -2177,12 +2119,9 @@ public class TvT implements EventTask
 			
 			player.getAppearance().setNameColor(_teamColors.get(_teams.indexOf(player._teamNameTvT)));
 			player.setKarma(0);
-			if (Config.TVT_AURA)
+			if (Config.TVT_AURA && (_teams.size() >= 2))
 			{
-				if (_teams.size() >= 2)
-				{
-					player.setTeam(_teams.indexOf(player._teamNameTvT) + 1);
-				}
+				player.setTeam(_teams.indexOf(player._teamNameTvT) + 1);
 			}
 			player.broadcastUserInfo();
 			
@@ -2305,19 +2244,18 @@ public class TvT implements EventTask
 					}
 					else if (teamName == null)
 					{
-						
-						int minus_reward = 0;
+						int minusReward = 0;
 						if (_topKills != 0)
 						{
-							minus_reward = _rewardAmount / 2;
+							minusReward = _rewardAmount / 2;
 						}
 						else
 						{
 							// nobody killed
-							minus_reward = _rewardAmount / 4;
+							minusReward = _rewardAmount / 4;
 						}
 						
-						player.addItem(_eventName + " Event: " + _eventName, _rewardId, minus_reward, player, true);
+						player.addItem(_eventName + " Event: " + _eventName, _rewardId, minusReward, player, true);
 						
 						final NpcHtmlMessage nhm = new NpcHtmlMessage(5);
 						final StringBuilder replyMSG = new StringBuilder("");
@@ -2556,7 +2494,6 @@ public class TvT implements EventTask
 				{
 					_playersShuffle.remove(player);
 					eventPlayer._inEventTvT = false;
-					continue;
 				}
 				else if (player.getObjectId() == eventPlayer.getObjectId())
 				{
@@ -2564,7 +2501,6 @@ public class TvT implements EventTask
 					eventPlayer._countTvTkills = 0;
 					return true;
 				}
-				
 				// This 1 is incase player got new objectid after DC or reconnect
 				else if (player.getName().equals(eventPlayer.getName()))
 				{
@@ -2600,7 +2536,7 @@ public class TvT implements EventTask
 	public static int getIntervalBetweenMatchs()
 	{
 		final long actualTime = System.currentTimeMillis();
-		final long totalTime = actualTime + _intervalBetweenMatchs;
+		final long totalTime = actualTime + _intervalBetweenMatches;
 		final long interval = totalTime - actualTime;
 		final int seconds = (int) (interval / 1000);
 		
@@ -2727,7 +2663,7 @@ public class TvT implements EventTask
 	 * @param players the players
 	 * @return the l2 pc instance
 	 */
-	public static PlayerInstance findBestKiller(Vector<PlayerInstance> players)
+	public static PlayerInstance findBestKiller(List<PlayerInstance> players)
 	{
 		if (players == null)
 		{
@@ -2749,7 +2685,7 @@ public class TvT implements EventTask
 	 * @param players the players
 	 * @return the l2 pc instance
 	 */
-	public static PlayerInstance findLooser(Vector<PlayerInstance> players)
+	public static PlayerInstance findLooser(List<PlayerInstance> players)
 	{
 		if (players == null)
 		{

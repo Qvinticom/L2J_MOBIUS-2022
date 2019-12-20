@@ -16,7 +16,8 @@
  */
 package org.l2jmobius.gameserver.script;
 
-import java.util.Hashtable;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.l2jmobius.gameserver.script.faenor.FaenorInterface;
 
@@ -26,7 +27,7 @@ import org.l2jmobius.gameserver.script.faenor.FaenorInterface;
 public class ScriptEngine
 {
 	protected EngineInterface _utils = FaenorInterface.getInstance();
-	public static final Hashtable<String, ParserFactory> parserFactories = new Hashtable<>();
+	public static final Map<String, ParserFactory> parserFactories = new HashMap<>();
 	
 	protected static Parser createParser(String name) throws ParserNotCreatedException
 	{

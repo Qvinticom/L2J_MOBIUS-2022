@@ -37,7 +37,7 @@ public class Q359_ForSleeplessDeadmen extends Quest
 	private static final int DOOM_ARCHER = 21008;
 	
 	// Reward
-	private static final int REWARD[] =
+	private static final int[] REWARD =
 	{
 		6341,
 		6342,

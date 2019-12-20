@@ -154,20 +154,17 @@ public class PoisonZone extends ZoneType
 			{
 				for (Creature temp : _characterList.values())
 				{
-					if ((temp != null) && !temp.isDead())
+					if ((temp != null) && !temp.isDead() && (((temp instanceof Playable) && _target.equalsIgnoreCase("pc")) || ((temp instanceof PlayerInstance) && _target.equalsIgnoreCase("pc_only")) || ((temp instanceof MonsterInstance) && _target.equalsIgnoreCase("npc"))) && (Rnd.get(100) < _chance))
 					{
-						if ((((temp instanceof Playable) && _target.equalsIgnoreCase("pc")) || ((temp instanceof PlayerInstance) && _target.equalsIgnoreCase("pc_only")) || ((temp instanceof MonsterInstance) && _target.equalsIgnoreCase("npc"))) && (Rnd.get(100) < _chance))
+						Skill skill = getSkill();
+						if (skill == null)
 						{
-							Skill skill = getSkill();
-							if (skill == null)
-							{
-								LOGGER.warning("ATTENTION: error on zone with id " + getId());
-								LOGGER.warning("Skill " + _skillId + "," + _skillLvl + " not present between skills");
-							}
-							else
-							{
-								skill.getEffects(temp, temp, false, false, false);
-							}
+							LOGGER.warning("ATTENTION: error on zone with id " + getId());
+							LOGGER.warning("Skill " + _skillId + "," + _skillLvl + " not present between skills");
+						}
+						else
+						{
+							skill.getEffects(temp, temp, false, false, false);
 						}
 					}
 				}

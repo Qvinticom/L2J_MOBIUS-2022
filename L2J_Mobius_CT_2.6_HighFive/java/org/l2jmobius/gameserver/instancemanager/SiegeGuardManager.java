@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.entity.Castle;
 
 public class SiegeGuardManager
 {
-	private static Logger LOGGER = Logger.getLogger(SiegeGuardManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SiegeGuardManager.class.getName());
 	
 	private final Castle _castle;
 	private final List<Spawn> _siegeGuardSpawn = new ArrayList<>();

@@ -18,10 +18,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class NormalCamera extends GameServerPacket
 {
-	public NormalCamera()
-	{
-	}
-	
 	@Override
 	public void writeImpl()
 	{

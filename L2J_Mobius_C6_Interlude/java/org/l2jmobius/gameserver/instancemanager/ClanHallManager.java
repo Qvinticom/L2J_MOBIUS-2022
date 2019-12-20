@@ -65,9 +65,9 @@ public class ClanHallManager
 			int ownerId;
 			int lease;
 			int grade = 0;
-			String Name;
-			String Desc;
-			String Location;
+			String name;
+			String desc;
+			String location;
 			long paidUntil = 0;
 			boolean paid = false;
 			
@@ -78,16 +78,16 @@ public class ClanHallManager
 			while (rs.next())
 			{
 				id = rs.getInt("id");
-				Name = rs.getString("name");
+				name = rs.getString("name");
 				ownerId = rs.getInt("ownerId");
 				lease = rs.getInt("lease");
-				Desc = rs.getString("desc");
-				Location = rs.getString("location");
+				desc = rs.getString("desc");
+				location = rs.getString("location");
 				paidUntil = rs.getLong("paidUntil");
 				grade = rs.getInt("Grade");
 				paid = rs.getBoolean("paid");
 				
-				final ClanHall ch = new ClanHall(id, Name, ownerId, lease, Desc, Location, paidUntil, grade, paid);
+				final ClanHall ch = new ClanHall(id, name, ownerId, lease, desc, location, paidUntil, grade, paid);
 				if (ownerId == 0)
 				{
 					_freeClanHall.put(id, ch);

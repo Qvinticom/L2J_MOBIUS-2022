@@ -48,7 +48,7 @@ import org.l2jmobius.gameserver.model.spawn.Spawn;
  */
 public class RaidBossSpawnManager
 {
-	private static Logger LOGGER = Logger.getLogger(RaidBossSpawnManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RaidBossSpawnManager.class.getName());
 	
 	protected static final Map<Integer, RaidBossInstance> _bosses = new ConcurrentHashMap<>();
 	protected static final Map<Integer, Spawn> _spawns = new ConcurrentHashMap<>();
@@ -423,10 +423,8 @@ public class RaidBossSpawnManager
 		
 		int index = 0;
 		
-		for (int i : _bosses.keySet())
+		for (RaidBossInstance boss : _bosses.values())
 		{
-			final RaidBossInstance boss = _bosses.get(i);
-			
 			msg[index++] = boss.getName() + ": " + boss.getRaidStatus().name();
 		}
 		
@@ -560,14 +558,11 @@ public class RaidBossSpawnManager
 		
 		_bosses.clear();
 		
-		if (_schedules != null)
+		for (ScheduledFuture<?> schedule : _schedules.values())
 		{
-			for (Integer bossId : _schedules.keySet())
-			{
-				_schedules.get(bossId).cancel(true);
-			}
-			_schedules.clear();
+			schedule.cancel(true);
 		}
+		_schedules.clear();
 		
 		_storedInfo.clear();
 		_spawns.clear();

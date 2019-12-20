@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.taskmanager.RandomAnimationTaskManager;
 
 public class WorldRegion
 {
-	private static Logger LOGGER = Logger.getLogger(WorldRegion.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(WorldRegion.class.getName());
 	
 	private final Collection<PlayerInstance> _playerObjects = ConcurrentHashMap.newKeySet();
 	private final Collection<WorldObject> _visibleObjects = ConcurrentHashMap.newKeySet();
@@ -82,11 +82,7 @@ public class WorldRegion
 		{
 			return;
 		}
-		
-		if (_zoneManager != null)
-		{
-			_zoneManager.revalidateZones(creature);
-		}
+		_zoneManager.revalidateZones(creature);
 	}
 	
 	public void removeFromZones(Creature creature)
@@ -95,11 +91,7 @@ public class WorldRegion
 		{
 			return;
 		}
-		
-		if (_zoneManager != null)
-		{
-			_zoneManager.removeCharacter(creature);
-		}
+		_zoneManager.removeCharacter(creature);
 	}
 	
 	public void onDeath(Creature creature)
@@ -108,11 +100,7 @@ public class WorldRegion
 		{
 			return;
 		}
-		
-		if (_zoneManager != null)
-		{
-			_zoneManager.onDeath(creature);
-		}
+		_zoneManager.onDeath(creature);
 	}
 	
 	public void onRevive(Creature creature)
@@ -121,11 +109,7 @@ public class WorldRegion
 		{
 			return;
 		}
-		
-		if (_zoneManager != null)
-		{
-			_zoneManager.onRevive(creature);
-		}
+		_zoneManager.onRevive(creature);
 	}
 	
 	private void switchAI(Boolean isOn)

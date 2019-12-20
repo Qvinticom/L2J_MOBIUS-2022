@@ -35,7 +35,7 @@ import org.l2jmobius.Config;
  */
 public class ExperienceData
 {
-	private static Logger LOGGER = Logger.getLogger(ExperienceData.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ExperienceData.class.getName());
 	
 	private byte MAX_LEVEL;
 	private byte MAX_PET_LEVEL;
@@ -86,8 +86,8 @@ public class ExperienceData
 			if (experience.getNodeName().equals("experience"))
 			{
 				attrs = experience.getAttributes();
-				level = Integer.valueOf(attrs.getNamedItem("level").getNodeValue());
-				exp = Long.valueOf(attrs.getNamedItem("tolevel").getNodeValue());
+				level = Integer.parseInt(attrs.getNamedItem("level").getNodeValue());
+				exp = Long.parseLong(attrs.getNamedItem("tolevel").getNodeValue());
 				_expTable.put(level, exp);
 			}
 		}

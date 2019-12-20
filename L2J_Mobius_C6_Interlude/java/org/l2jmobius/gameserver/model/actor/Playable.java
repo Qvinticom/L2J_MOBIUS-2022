@@ -60,7 +60,7 @@ public abstract class Playable extends Creature
 	@Override
 	public PlayableKnownList getKnownList()
 	{
-		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof PlayableKnownList))
+		if (!(super.getKnownList() instanceof PlayableKnownList))
 		{
 			setKnownList(new PlayableKnownList(this));
 		}
@@ -70,7 +70,7 @@ public abstract class Playable extends Creature
 	@Override
 	public PlayableStat getStat()
 	{
-		if ((super.getStat() == null) || !(super.getStat() instanceof PlayableStat))
+		if (!(super.getStat() instanceof PlayableStat))
 		{
 			setStat(new PlayableStat(this));
 		}
@@ -80,7 +80,7 @@ public abstract class Playable extends Creature
 	@Override
 	public PlayableStatus getStatus()
 	{
-		if ((super.getStatus() == null) || !(super.getStatus() instanceof PlayableStatus))
+		if (!(super.getStatus() instanceof PlayableStatus))
 		{
 			setStatus(new PlayableStatus(this));
 		}
@@ -454,8 +454,7 @@ public abstract class Playable extends Creature
 	public boolean isInFunEvent()
 	{
 		final PlayerInstance player = getActingPlayer();
-		
-		return player == null ? false : player.isInFunEvent();
+		return (player != null) && player.isInFunEvent();
 	}
 	
 	/**

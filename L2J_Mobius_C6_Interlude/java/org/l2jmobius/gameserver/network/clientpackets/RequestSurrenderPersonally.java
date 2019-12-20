@@ -27,11 +27,9 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestSurrenderPersonally extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestSurrenderPledgeWar.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestSurrenderPersonally.class.getName());
 	
 	private String _pledgeName;
-	private Clan _clan;
-	private PlayerInstance _player;
 	
 	@Override
 	protected void readImpl()
@@ -42,39 +40,39 @@ public class RequestSurrenderPersonally extends GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		_player = getClient().getPlayer();
-		if (_player == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		LOGGER.info("RequestSurrenderPersonally by " + getClient().getPlayer().getName() + " with " + _pledgeName);
-		_clan = getClient().getPlayer().getClan();
+		final Clan playerClan = getClient().getPlayer().getClan();
 		final Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
-		if (_clan == null)
+		if (playerClan == null)
 		{
 			return;
 		}
 		
 		if (clan == null)
 		{
-			_player.sendMessage("No such clan.");
-			_player.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendMessage("No such clan.");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (!_clan.isAtWarWith(clan.getClanId()) || (_player.getWantsPeace() == 1))
+		if (!playerClan.isAtWarWith(clan.getClanId()) || (player.getWantsPeace() == 1))
 		{
-			_player.sendMessage("You aren't at war with this clan.");
-			_player.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendMessage("You aren't at war with this clan.");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		_player.setWantsPeace(1);
-		_player.deathPenalty(false);
+		player.setWantsPeace(1);
+		player.deathPenalty(false);
 		SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_PERSONALLY_SURRENDERED_TO_THE_S1_CLAN);
 		msg.addString(_pledgeName);
-		_player.sendPacket(msg);
-		ClanTable.getInstance().checkSurrender(_clan, clan);
+		player.sendPacket(msg);
+		ClanTable.getInstance().checkSurrender(playerClan, clan);
 	}
 }

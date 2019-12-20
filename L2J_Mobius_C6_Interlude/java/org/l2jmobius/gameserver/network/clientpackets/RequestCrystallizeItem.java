@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class RequestCrystallizeItem extends GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestCrystallizeItem.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestCrystallizeItem.class.getName());
 	
 	private int _objectId;
 	private int _count;

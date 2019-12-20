@@ -97,15 +97,15 @@ public class PlayerKnownList extends PlayableKnownList
 			return false;
 		}
 		
-		final PlayerInstance active_char = getActiveChar();
-		if (active_char == null)
+		final PlayerInstance activeChar = getActiveChar();
+		if (activeChar == null)
 		{
 			return false;
 		}
 		
 		if (object.getPoly().isMorphed() && object.getPoly().getPolyType().equals("item"))
 		{
-			active_char.sendPacket(new SpawnItemPoly(object));
+			activeChar.sendPacket(new SpawnItemPoly(object));
 		}
 		else
 		{
@@ -113,67 +113,64 @@ public class PlayerKnownList extends PlayableKnownList
 			{
 				if (dropper != null)
 				{
-					active_char.sendPacket(new DropItem((ItemInstance) object, dropper.getObjectId()));
+					activeChar.sendPacket(new DropItem((ItemInstance) object, dropper.getObjectId()));
 				}
 				else
 				{
-					active_char.sendPacket(new SpawnItem((ItemInstance) object));
+					activeChar.sendPacket(new SpawnItem((ItemInstance) object));
 				}
 			}
 			else if (object instanceof DoorInstance)
 			{
 				if (((DoorInstance) object).getCastle() != null)
 				{
-					active_char.sendPacket(new DoorInfo((DoorInstance) object, true));
+					activeChar.sendPacket(new DoorInfo((DoorInstance) object, true));
 				}
 				else
 				{
-					active_char.sendPacket(new DoorInfo((DoorInstance) object, false));
+					activeChar.sendPacket(new DoorInfo((DoorInstance) object, false));
 				}
-				active_char.sendPacket(new DoorStatusUpdate((DoorInstance) object));
+				activeChar.sendPacket(new DoorStatusUpdate((DoorInstance) object));
 			}
 			else if (object instanceof FenceInstance)
 			{
-				((FenceInstance) object).sendInfo(active_char);
+				((FenceInstance) object).sendInfo(activeChar);
 			}
 			else if (object instanceof BoatInstance)
 			{
-				if (!active_char.isInBoat())
+				if (!activeChar.isInBoat() && (object != activeChar.getBoat()))
 				{
-					if (object != active_char.getBoat())
-					{
-						active_char.sendPacket(new VehicleInfo((BoatInstance) object));
-						((BoatInstance) object).sendVehicleDeparture(active_char);
-					}
+					activeChar.sendPacket(new VehicleInfo((BoatInstance) object));
+					((BoatInstance) object).sendVehicleDeparture(activeChar);
 				}
 			}
 			else if (object instanceof StaticObjectInstance)
 			{
-				active_char.sendPacket(new StaticObject((StaticObjectInstance) object));
+				activeChar.sendPacket(new StaticObject((StaticObjectInstance) object));
 			}
 			else if (object instanceof NpcInstance)
 			{
-				active_char.sendPacket(new NpcInfo((NpcInstance) object, active_char));
+				activeChar.sendPacket(new NpcInfo((NpcInstance) object, activeChar));
 			}
 			else if (object instanceof Summon)
 			{
 				Summon summon = (Summon) object;
 				
 				// Check if the PlayerInstance is the owner of the Pet
-				if (active_char.equals(summon.getOwner()))
+				if (activeChar.equals(summon.getOwner()))
 				{
-					active_char.sendPacket(new PetInfo(summon));
+					activeChar.sendPacket(new PetInfo(summon));
 					// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
 					summon.updateEffectIcons(true);
 					
 					if (summon instanceof PetInstance)
 					{
-						active_char.sendPacket(new PetItemList((PetInstance) summon));
+						activeChar.sendPacket(new PetItemList((PetInstance) summon));
 					}
 				}
 				else
 				{
-					active_char.sendPacket(new NpcInfo(summon, active_char));
+					activeChar.sendPacket(new NpcInfo(summon, activeChar));
 				}
 			}
 			else if (object instanceof PlayerInstance)
@@ -182,41 +179,41 @@ public class PlayerKnownList extends PlayableKnownList
 				if (otherPlayer.isInBoat())
 				{
 					otherPlayer.getPosition().setWorldPosition(otherPlayer.getBoat().getPosition().getWorldPosition());
-					active_char.sendPacket(new CharInfo(otherPlayer));
+					activeChar.sendPacket(new CharInfo(otherPlayer));
 					
-					final int relation = otherPlayer.getRelation(active_char);
+					final int relation = otherPlayer.getRelation(activeChar);
 					
-					if ((otherPlayer.getKnownList().getKnownRelations().get(active_char.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(active_char.getObjectId()) != relation))
+					if ((otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != relation))
 					{
-						active_char.sendPacket(new RelationChanged(otherPlayer, relation, active_char.isAutoAttackable(otherPlayer)));
+						activeChar.sendPacket(new RelationChanged(otherPlayer, relation, activeChar.isAutoAttackable(otherPlayer)));
 					}
 					
-					active_char.sendPacket(new GetOnVehicle(otherPlayer, otherPlayer.getBoat(), otherPlayer.getInBoatPosition().getX(), otherPlayer.getInBoatPosition().getY(), otherPlayer.getInBoatPosition().getZ()));
+					activeChar.sendPacket(new GetOnVehicle(otherPlayer, otherPlayer.getBoat(), otherPlayer.getInBoatPosition().getX(), otherPlayer.getInBoatPosition().getY(), otherPlayer.getInBoatPosition().getZ()));
 					
 				}
 				else
 				{
-					active_char.sendPacket(new CharInfo(otherPlayer));
+					activeChar.sendPacket(new CharInfo(otherPlayer));
 					
-					final int relation = otherPlayer.getRelation(active_char);
+					final int relation = otherPlayer.getRelation(activeChar);
 					
-					if ((otherPlayer.getKnownList().getKnownRelations().get(active_char.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(active_char.getObjectId()) != relation))
+					if ((otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != relation))
 					{
-						active_char.sendPacket(new RelationChanged(otherPlayer, relation, active_char.isAutoAttackable(otherPlayer)));
+						activeChar.sendPacket(new RelationChanged(otherPlayer, relation, activeChar.isAutoAttackable(otherPlayer)));
 					}
 				}
 				
 				if (otherPlayer.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_SELL)
 				{
-					active_char.sendPacket(new PrivateStoreMsgSell(otherPlayer));
+					activeChar.sendPacket(new PrivateStoreMsgSell(otherPlayer));
 				}
 				else if (otherPlayer.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_BUY)
 				{
-					active_char.sendPacket(new PrivateStoreMsgBuy(otherPlayer));
+					activeChar.sendPacket(new PrivateStoreMsgBuy(otherPlayer));
 				}
 				else if (otherPlayer.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_MANUFACTURE)
 				{
-					active_char.sendPacket(new RecipeShopMsg(otherPlayer));
+					activeChar.sendPacket(new RecipeShopMsg(otherPlayer));
 				}
 			}
 			
@@ -225,10 +222,10 @@ public class PlayerKnownList extends PlayableKnownList
 				// Update the state of the Creature object client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance
 				Creature obj = (Creature) object;
 				
-				final CreatureAI obj_ai = obj.getAI();
-				if (obj_ai != null)
+				final CreatureAI objAi = obj.getAI();
+				if (objAi != null)
 				{
-					obj_ai.describeStateToPlayer(active_char);
+					objAi.describeStateToPlayer(activeChar);
 				}
 			}
 		}
@@ -249,34 +246,34 @@ public class PlayerKnownList extends PlayableKnownList
 			return false;
 		}
 		
-		final PlayerInstance active_char = getActiveChar();
+		final PlayerInstance activeChar = getActiveChar();
 		
-		PlayerInstance object_char = null;
+		PlayerInstance player = null;
 		if (object instanceof PlayerInstance)
 		{
-			object_char = (PlayerInstance) object;
+			player = (PlayerInstance) object;
 		}
 		
 		// TEMP FIX: If player is not visible don't send packets broadcast to all his KnowList. This will avoid GM detection with l2net and olympiad's crash. We can now find old problems with invisible mode.
-		if ((object_char != null) && !active_char.isGM())
+		if ((player != null) && !activeChar.isGM())
 		{ // GM has to receive remove however because he can see any invisible or inobservermode player
 			
-			if (!object_char.getAppearance().isInvisible() && !object_char.inObserverMode())
+			if (!player.getAppearance().isInvisible() && !player.inObserverMode())
 			{
 				// Send Server-Client Packet DeleteObject to the PlayerInstance
-				active_char.sendPacket(new DeleteObject(object));
+				activeChar.sendPacket(new DeleteObject(object));
 			}
-			else if (object_char.isGM() && object_char.getAppearance().isInvisible() && !object_char.isTeleporting())
+			else if (player.isGM() && player.getAppearance().isInvisible() && !player.isTeleporting())
 			{
 				// Send Server-Client Packet DeleteObject to the PlayerInstance
-				active_char.sendPacket(new DeleteObject(object));
+				activeChar.sendPacket(new DeleteObject(object));
 			}
 		}
 		else // All other objects has to be removed
 		{
 			
 			// Send Server-Client Packet DeleteObject to the PlayerInstance
-			active_char.sendPacket(new DeleteObject(object));
+			activeChar.sendPacket(new DeleteObject(object));
 		}
 		
 		return true;

@@ -85,10 +85,6 @@ public class DoorInstance extends Creature
 	 */
 	public class AIAccessor extends Creature.AIAccessor
 	{
-		protected AIAccessor()
-		{
-		}
-		
 		@Override
 		public DoorInstance getActor()
 		{
@@ -208,7 +204,7 @@ public class DoorInstance extends Creature
 	@Override
 	public DoorKnownList getKnownList()
 	{
-		if ((super.getKnownList() == null) || !(super.getKnownList() instanceof DoorKnownList))
+		if (!(super.getKnownList() instanceof DoorKnownList))
 		{
 			setKnownList(new DoorKnownList(this));
 		}
@@ -219,7 +215,7 @@ public class DoorInstance extends Creature
 	@Override
 	public DoorStat getStat()
 	{
-		if ((super.getStat() == null) || !(super.getStat() instanceof DoorStat))
+		if (!(super.getStat() instanceof DoorStat))
 		{
 			setStat(new DoorStat(this));
 		}
@@ -230,7 +226,7 @@ public class DoorInstance extends Creature
 	@Override
 	public DoorStatus getStatus()
 	{
-		if ((super.getStatus() == null) || !(super.getStatus() instanceof DoorStatus))
+		if (!(super.getStatus() instanceof DoorStatus))
 		{
 			setStatus(new DoorStatus(this));
 		}
@@ -396,7 +392,7 @@ public class DoorInstance extends Creature
 		}
 		
 		// Doors can't be attacked by NPCs
-		if ((attacker == null) || !(attacker instanceof Playable))
+		if (!(attacker instanceof Playable))
 		{
 			return false;
 		}
@@ -454,6 +450,7 @@ public class DoorInstance extends Creature
 	@Override
 	public void updateAbnormalEffect()
 	{
+		// No effects.
 	}
 	
 	/**

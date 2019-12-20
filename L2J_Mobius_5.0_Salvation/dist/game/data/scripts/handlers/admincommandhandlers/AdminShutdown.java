@@ -50,7 +50,7 @@ public class AdminShutdown implements IAdminCommandHandler
 				final String val = command.substring(22);
 				if (Util.isDigit(val))
 				{
-					serverShutdown(activeChar, Integer.valueOf(val), false);
+					serverShutdown(activeChar, Integer.parseInt(val), false);
 				}
 				else
 				{

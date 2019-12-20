@@ -48,8 +48,8 @@ public class EffectZone extends ZoneType
 	private int _reuse;
 	boolean _enabled;
 	private boolean _isShowDangerIcon;
-	private volatile Future<?> _task;
-	protected volatile Map<Integer, Integer> _skills;
+	private Future<?> _task;
+	protected Map<Integer, Integer> _skills;
 	
 	public EffectZone(int id)
 	{
@@ -130,16 +130,13 @@ public class EffectZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		if (_skills != null)
+		if ((_skills != null) && (_task == null))
 		{
-			if (_task == null)
+			synchronized (this)
 			{
-				synchronized (this)
+				if (_task == null)
 				{
-					if (_task == null)
-					{
-						_task = ThreadPool.scheduleAtFixedRate(new ApplySkill(), _initialDelay, _reuse);
-					}
+					_task = ThreadPool.scheduleAtFixedRate(new ApplySkill(), _initialDelay, _reuse);
 				}
 			}
 		}

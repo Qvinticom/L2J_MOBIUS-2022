@@ -36,17 +36,17 @@ public class ArmorSet
 	
 	private final int _enchant6Skill;
 	
-	public ArmorSet(int chest, int legs, int head, int gloves, int feet, int skill_id, int shield, int shield_skill_id, int enchant6skill)
+	public ArmorSet(int chest, int legs, int head, int gloves, int feet, int skillId, int shield, int shieldSkillId, int enchant6skill)
 	{
 		_chest = chest;
 		_legs = legs;
 		_head = head;
 		_gloves = gloves;
 		_feet = feet;
-		_skillId = skill_id;
+		_skillId = skillId;
 		
 		_shield = shield;
-		_shieldSkillId = shield_skill_id;
+		_shieldSkillId = shieldSkillId;
 		
 		_enchant6Skill = enchant6skill;
 	}
@@ -166,14 +166,14 @@ public class ArmorSet
 		return false;
 	}
 	
-	public boolean containShield(int shield_id)
+	public boolean containShield(int shieldId)
 	{
 		if (_shield == 0)
 		{
 			return false;
 		}
 		
-		return _shield == shield_id;
+		return _shield == shieldId;
 	}
 	
 	public int getShieldSkillId()

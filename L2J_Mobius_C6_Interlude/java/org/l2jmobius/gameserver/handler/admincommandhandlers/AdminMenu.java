@@ -345,12 +345,12 @@ public class AdminMenu implements IAdminCommandHandler
 			
 			if (result.next())
 			{
-				String acc_name = result.getString(1);
+				String accName = result.getString(1);
 				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				
-				if (acc_name.length() > 0)
+				if (accName.length() > 0)
 				{
-					LoginServerThread.getInstance().sendAccessLevel(acc_name, banLevel);
+					LoginServerThread.getInstance().sendAccessLevel(accName, banLevel);
 					sm.addString("Account Access Level for " + player + " set to " + banLevel + ".");
 				}
 				else

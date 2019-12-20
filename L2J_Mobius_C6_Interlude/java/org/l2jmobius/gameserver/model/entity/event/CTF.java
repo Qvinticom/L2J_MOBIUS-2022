@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.entity.event;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -62,9 +62,9 @@ public class CTF implements EventTask
 {
 	protected static final Logger LOGGER = Logger.getLogger(CTF.class.getName());
 	
-	protected static String _eventName = new String();
-	protected static String _eventDesc = new String();
-	protected static String _joiningLocationName = new String();
+	protected static String _eventName = "";
+	protected static String _eventDesc = "";
+	protected static String _joiningLocationName = "";
 	private static Spawn _npcSpawn;
 	protected static boolean _joining = false;
 	protected static boolean _teleport = false;
@@ -88,18 +88,18 @@ public class CTF implements EventTask
 	protected static long _intervalBetweenMatches = 0;
 	private String startEventTime;
 	protected static boolean _teamEvent = true; // TODO to be integrated
-	public static Vector<PlayerInstance> _players = new Vector<>();
-	private static String _topTeam = new String();
-	public static Vector<PlayerInstance> _playersShuffle = new Vector<>();
-	public static Vector<String> _teams = new Vector<>();
-	public static Vector<String> _savePlayers = new Vector<>();
-	public static Vector<String> _savePlayerTeams = new Vector<>();
-	public static Vector<Integer> _teamPlayersCount = new Vector<>();
-	public static Vector<Integer> _teamColors = new Vector<>();
-	public static Vector<Integer> _teamsX = new Vector<>();
-	public static Vector<Integer> _teamsY = new Vector<>();
-	public static Vector<Integer> _teamsZ = new Vector<>();
-	public static Vector<Integer> _teamPointsCount = new Vector<>();
+	public static List<PlayerInstance> _players = new ArrayList<>();
+	private static String _topTeam = "";
+	public static List<PlayerInstance> _playersShuffle = new ArrayList<>();
+	public static List<String> _teams = new ArrayList<>();
+	public static List<String> _savePlayers = new ArrayList<>();
+	public static List<String> _savePlayerTeams = new ArrayList<>();
+	public static List<Integer> _teamPlayersCount = new ArrayList<>();
+	public static List<Integer> _teamColors = new ArrayList<>();
+	public static List<Integer> _teamsX = new ArrayList<>();
+	public static List<Integer> _teamsY = new ArrayList<>();
+	public static List<Integer> _teamsZ = new ArrayList<>();
+	public static List<Integer> _teamPointsCount = new ArrayList<>();
 	public static int _topScore = 0;
 	public static int _eventCenterX = 0;
 	public static int _eventCenterY = 0;
@@ -107,13 +107,13 @@ public class CTF implements EventTask
 	public static int _eventOffset = 0;
 	private static int _FlagNPC = 35062;
 	private static int _FLAG_IN_HAND_ITEM_ID = 6718;
-	public static Vector<Integer> _flagIds = new Vector<>();
-	public static Vector<Integer> _flagsX = new Vector<>();
-	public static Vector<Integer> _flagsY = new Vector<>();
-	public static Vector<Integer> _flagsZ = new Vector<>();
-	public static Vector<Spawn> _flagSpawns = new Vector<>();
-	public static Vector<Spawn> _throneSpawns = new Vector<>();
-	public static Vector<Boolean> _flagsTaken = new Vector<>();
+	public static List<Integer> _flagIds = new ArrayList<>();
+	public static List<Integer> _flagsX = new ArrayList<>();
+	public static List<Integer> _flagsY = new ArrayList<>();
+	public static List<Integer> _flagsZ = new ArrayList<>();
+	public static List<Spawn> _flagSpawns = new ArrayList<>();
+	public static List<Spawn> _throneSpawns = new ArrayList<>();
+	public static List<Boolean> _flagsTaken = new ArrayList<>();
 	
 	/**
 	 * Instantiates a new cTF.
@@ -135,21 +135,21 @@ public class CTF implements EventTask
 	 * Gets the _event name.
 	 * @return the _eventName
 	 */
-	public static String get_eventName()
+	public static String getEventName()
 	{
 		return _eventName;
 	}
 	
 	/**
 	 * Set_event name.
-	 * @param _eventName the _eventName to set
+	 * @param eventName the _eventName to set
 	 * @return true, if successful
 	 */
-	public static boolean set_eventName(String _eventName)
+	public static boolean setEventName(String eventName)
 	{
 		if (!_inProgress)
 		{
-			CTF._eventName = _eventName;
+			CTF._eventName = eventName;
 			return true;
 		}
 		return false;
@@ -159,21 +159,21 @@ public class CTF implements EventTask
 	 * Gets the _event desc.
 	 * @return the _eventDesc
 	 */
-	public static String get_eventDesc()
+	public static String getEventDesc()
 	{
 		return _eventDesc;
 	}
 	
 	/**
 	 * Set_event desc.
-	 * @param _eventDesc the _eventDesc to set
+	 * @param eventDesc the _eventDesc to set
 	 * @return true, if successful
 	 */
-	public static boolean set_eventDesc(String _eventDesc)
+	public static boolean setEventDesc(String eventDesc)
 	{
 		if (!_inProgress)
 		{
-			CTF._eventDesc = _eventDesc;
+			CTF._eventDesc = eventDesc;
 			return true;
 		}
 		return false;
@@ -183,21 +183,21 @@ public class CTF implements EventTask
 	 * Gets the _joining location name.
 	 * @return the _joiningLocationName
 	 */
-	public static String get_joiningLocationName()
+	public static String getJoiningLocationName()
 	{
 		return _joiningLocationName;
 	}
 	
 	/**
 	 * Set_joining location name.
-	 * @param _joiningLocationName the _joiningLocationName to set
+	 * @param joiningLocationName the _joiningLocationName to set
 	 * @return true, if successful
 	 */
-	public static boolean set_joiningLocationName(String _joiningLocationName)
+	public static boolean setJoiningLocationName(String joiningLocationName)
 	{
 		if (!_inProgress)
 		{
-			CTF._joiningLocationName = _joiningLocationName;
+			CTF._joiningLocationName = joiningLocationName;
 			return true;
 		}
 		return false;
@@ -207,21 +207,21 @@ public class CTF implements EventTask
 	 * Gets the _npc id.
 	 * @return the _npcId
 	 */
-	public static int get_npcId()
+	public static int getNpcId()
 	{
 		return _npcId;
 	}
 	
 	/**
 	 * Set_npc id.
-	 * @param _npcId the _npcId to set
+	 * @param npcId the _npcId to set
 	 * @return true, if successful
 	 */
-	public static boolean set_npcId(int _npcId)
+	public static boolean setNpcId(int npcId)
 	{
 		if (!_inProgress)
 		{
-			CTF._npcId = _npcId;
+			CTF._npcId = npcId;
 			return true;
 		}
 		return false;
@@ -231,11 +231,9 @@ public class CTF implements EventTask
 	 * Gets the _npc location.
 	 * @return the _npc location
 	 */
-	public static Location get_npcLocation()
+	public static Location getNpcLocation()
 	{
-		final Location npc_loc = new Location(_npcX, _npcY, _npcZ, _npcHeading);
-		
-		return npc_loc;
+		return new Location(_npcX, _npcY, _npcZ, _npcHeading);
 	}
 	
 	/**
@@ -249,14 +247,14 @@ public class CTF implements EventTask
 	
 	/**
 	 * Set_reward id.
-	 * @param _rewardId the _rewardId to set
+	 * @param rewardId the _rewardId to set
 	 * @return true, if successful
 	 */
-	public static boolean set_rewardId(int _rewardId)
+	public static boolean set_rewardId(int rewardId)
 	{
 		if (!_inProgress)
 		{
-			CTF._rewardId = _rewardId;
+			CTF._rewardId = rewardId;
 			return true;
 		}
 		return false;
@@ -273,14 +271,14 @@ public class CTF implements EventTask
 	
 	/**
 	 * Set_reward amount.
-	 * @param _rewardAmount the _rewardAmount to set
+	 * @param rewardAmount the _rewardAmount to set
 	 * @return true, if successful
 	 */
-	public static boolean set_rewardAmount(int _rewardAmount)
+	public static boolean set_rewardAmount(int rewardAmount)
 	{
 		if (!_inProgress)
 		{
-			CTF._rewardAmount = _rewardAmount;
+			CTF._rewardAmount = rewardAmount;
 			return true;
 		}
 		return false;
@@ -297,14 +295,14 @@ public class CTF implements EventTask
 	
 	/**
 	 * Set_minlvl.
-	 * @param _minlvl the _minlvl to set
+	 * @param minlvl the _minlvl to set
 	 * @return true, if successful
 	 */
-	public static boolean set_minlvl(int _minlvl)
+	public static boolean set_minlvl(int minlvl)
 	{
 		if (!_inProgress)
 		{
-			CTF._minlvl = _minlvl;
+			CTF._minlvl = minlvl;
 			return true;
 		}
 		return false;
@@ -314,21 +312,21 @@ public class CTF implements EventTask
 	 * Gets the _maxlvl.
 	 * @return the _maxlvl
 	 */
-	public static int get_maxlvl()
+	public static int getMaxlvl()
 	{
 		return _maxlvl;
 	}
 	
 	/**
 	 * Set_maxlvl.
-	 * @param _maxlvl the _maxlvl to set
+	 * @param maxlvl the _maxlvl to set
 	 * @return true, if successful
 	 */
-	public static boolean set_maxlvl(int _maxlvl)
+	public static boolean setMaxlvl(int maxlvl)
 	{
 		if (!_inProgress)
 		{
-			CTF._maxlvl = _maxlvl;
+			CTF._maxlvl = maxlvl;
 			return true;
 		}
 		return false;
@@ -338,21 +336,21 @@ public class CTF implements EventTask
 	 * Gets the _join time.
 	 * @return the _joinTime
 	 */
-	public static int get_joinTime()
+	public static int getJoinTime()
 	{
 		return _joinTime;
 	}
 	
 	/**
 	 * Set_join time.
-	 * @param _joinTime the _joinTime to set
+	 * @param joinTime the _joinTime to set
 	 * @return true, if successful
 	 */
-	public static boolean set_joinTime(int _joinTime)
+	public static boolean setJoinTime(int joinTime)
 	{
 		if (!_inProgress)
 		{
-			CTF._joinTime = _joinTime;
+			CTF._joinTime = joinTime;
 			return true;
 		}
 		return false;
@@ -362,21 +360,21 @@ public class CTF implements EventTask
 	 * Gets the _event time.
 	 * @return the _eventTime
 	 */
-	public static int get_eventTime()
+	public static int getEventTime()
 	{
 		return _eventTime;
 	}
 	
 	/**
 	 * Set_event time.
-	 * @param _eventTime the _eventTime to set
+	 * @param eventTime the _eventTime to set
 	 * @return true, if successful
 	 */
-	public static boolean set_eventTime(int _eventTime)
+	public static boolean setEventTime(int eventTime)
 	{
 		if (!_inProgress)
 		{
-			CTF._eventTime = _eventTime;
+			CTF._eventTime = eventTime;
 			return true;
 		}
 		return false;
@@ -386,21 +384,21 @@ public class CTF implements EventTask
 	 * Gets the _min players.
 	 * @return the _minPlayers
 	 */
-	public static int get_minPlayers()
+	public static int getMinPlayers()
 	{
 		return _minPlayers;
 	}
 	
 	/**
 	 * Set_min players.
-	 * @param _minPlayers the _minPlayers to set
+	 * @param minPlayers the _minPlayers to set
 	 * @return true, if successful
 	 */
-	public static boolean set_minPlayers(int _minPlayers)
+	public static boolean setMinPlayers(int minPlayers)
 	{
 		if (!_inProgress)
 		{
-			CTF._minPlayers = _minPlayers;
+			CTF._minPlayers = minPlayers;
 			return true;
 		}
 		return false;
@@ -410,45 +408,45 @@ public class CTF implements EventTask
 	 * Gets the _max players.
 	 * @return the _maxPlayers
 	 */
-	public static int get_maxPlayers()
+	public static int getMaxPlayers()
 	{
 		return _maxPlayers;
 	}
 	
 	/**
 	 * Set_max players.
-	 * @param _maxPlayers the _maxPlayers to set
+	 * @param maxPlayers the _maxPlayers to set
 	 * @return true, if successful
 	 */
-	public static boolean set_maxPlayers(int _maxPlayers)
+	public static boolean setMaxPlayers(int maxPlayers)
 	{
 		if (!_inProgress)
 		{
-			CTF._maxPlayers = _maxPlayers;
+			CTF._maxPlayers = maxPlayers;
 			return true;
 		}
 		return false;
 	}
 	
 	/**
-	 * Gets the _interval between matchs.
+	 * Gets the _interval between matches.
 	 * @return the _intervalBetweenMatches
 	 */
-	public static long get_intervalBetweenMatches()
+	public static long getIntervalBetweenMatches()
 	{
 		return _intervalBetweenMatches;
 	}
 	
 	/**
-	 * Set_interval between matchs.
-	 * @param _intervalBetweenMatches the _intervalBetweenMatches to set
+	 * Set_interval between matches.
+	 * @param intervalBetweenMatches the _intervalBetweenMatches to set
 	 * @return true, if successful
 	 */
-	public static boolean set_intervalBetweenMatches(long _intervalBetweenMatches)
+	public static boolean setIntervalBetweenMatches(long intervalBetweenMatches)
 	{
 		if (!_inProgress)
 		{
-			CTF._intervalBetweenMatches = _intervalBetweenMatches;
+			CTF._intervalBetweenMatches = intervalBetweenMatches;
 			return true;
 		}
 		return false;
@@ -482,7 +480,7 @@ public class CTF implements EventTask
 	 * Checks if is _joining.
 	 * @return the _joining
 	 */
-	public static boolean is_joining()
+	public static boolean isJoining()
 	{
 		return _joining;
 	}
@@ -491,7 +489,7 @@ public class CTF implements EventTask
 	 * Checks if is _teleport.
 	 * @return the _teleport
 	 */
-	public static boolean is_teleport()
+	public static boolean isTeleport()
 	{
 		return _teleport;
 	}
@@ -500,7 +498,7 @@ public class CTF implements EventTask
 	 * Checks if is _started.
 	 * @return the _started
 	 */
-	public static boolean is_started()
+	public static boolean isStarted()
 	{
 		return _started;
 	}
@@ -509,7 +507,7 @@ public class CTF implements EventTask
 	 * Checks if is _aborted.
 	 * @return the _aborted
 	 */
-	public static boolean is_aborted()
+	public static boolean isAborted()
 	{
 		return _aborted;
 	}
@@ -518,7 +516,7 @@ public class CTF implements EventTask
 	 * Checks if is _sit forced.
 	 * @return the _sitForced
 	 */
-	public static boolean is_sitForced()
+	public static boolean isSitForced()
 	{
 		return _sitForced;
 	}
@@ -527,7 +525,7 @@ public class CTF implements EventTask
 	 * Checks if is _in progress.
 	 * @return the _inProgress
 	 */
-	public static boolean is_inProgress()
+	public static boolean isInProgress()
 	{
 		return _inProgress;
 	}
@@ -539,12 +537,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean checkMaxLevel(int maxlvl)
 	{
-		if (_minlvl >= maxlvl)
-		{
-			return false;
-		}
-		
-		return true;
+		return _minlvl < maxlvl;
 	}
 	
 	/**
@@ -554,12 +547,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean checkMinLevel(int minlvl)
 	{
-		if (_maxlvl <= minlvl)
-		{
-			return false;
-		}
-		
-		return true;
+		return _maxlvl > minlvl;
 	}
 	
 	/**
@@ -569,12 +557,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean checkMinPlayers(int players)
 	{
-		if (_minPlayers <= players)
-		{
-			return true;
-		}
-		
-		return false;
+		return _minPlayers > players;
 	}
 	
 	/**
@@ -584,12 +567,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean checkMaxPlayers(int players)
 	{
-		if (_maxPlayers > players)
-		{
-			return true;
-		}
-		
-		return false;
+		return _maxPlayers <= players;
 	}
 	
 	/**
@@ -642,12 +620,7 @@ public class CTF implements EventTask
 	 */
 	private static boolean checkStartJoinTeamInfo()
 	{
-		if ((_teams.size() < 2) || _teamsX.contains(0) || _teamsY.contains(0) || _teamsZ.contains(0))
-		{
-			return false;
-		}
-		
-		return true;
+		return (_teams.size() >= 2) && !_teamsX.contains(0) && !_teamsY.contains(0) && !_teamsZ.contains(0);
 	}
 	
 	/**
@@ -666,12 +639,7 @@ public class CTF implements EventTask
 	 */
 	protected static boolean checkAutoEventStartJoinOk()
 	{
-		if ((_joinTime == 0) || (_eventTime == 0))
-		{
-			return false;
-		}
-		
-		return true;
+		return (_joinTime != 0) && (_eventTime != 0);
 	}
 	
 	/**
@@ -847,24 +815,21 @@ public class CTF implements EventTask
 				{
 					if (player != null)
 					{
-						if (Config.CTF_ON_START_UNSUMMON_PET)
+						// Remove Summon's buffs
+						if (Config.CTF_ON_START_UNSUMMON_PET && (player.getPet() != null))
 						{
-							// Remove Summon's buffs
-							if (player.getPet() != null)
+							final Summon summon = player.getPet();
+							for (Effect e1 : summon.getAllEffects())
 							{
-								final Summon summon = player.getPet();
-								for (Effect e1 : summon.getAllEffects())
+								if (e1 != null)
 								{
-									if (e1 != null)
-									{
-										e1.exit(true);
-									}
+									e1.exit(true);
 								}
-								
-								if (summon instanceof PetInstance)
-								{
-									summon.unSummon(player);
-								}
+							}
+							
+							if (summon instanceof PetInstance)
+							{
+								summon.unSummon(player);
 							}
 						}
 						
@@ -978,7 +943,6 @@ public class CTF implements EventTask
 		catch (Exception e)
 		{
 			LOGGER.warning(_eventName + ": Error While Trying to restart Event... " + e);
-			e.printStackTrace();
 		}
 	}
 	
@@ -1201,7 +1165,6 @@ public class CTF implements EventTask
 							catch (Exception e)
 							{
 								LOGGER.warning("Error while tying to Restart Event " + e);
-								e.printStackTrace();
 							}
 						}
 					}
@@ -1312,6 +1275,7 @@ public class CTF implements EventTask
 					case 10: // 10 seconds left
 					{
 						removeOfflinePlayers();
+						// fallthrou?
 					}
 					case 3: // 3 seconds left
 					case 2: // 2 seconds left
@@ -1401,29 +1365,22 @@ public class CTF implements EventTask
 			{
 				return;
 			}
-			else if (_playersShuffle.size() > 0)
+			
+			for (PlayerInstance player : _playersShuffle)
 			{
-				for (PlayerInstance player : _playersShuffle)
+				if (player == null)
 				{
-					if (player == null)
-					{
-						_playersShuffle.remove(player);
-					}
-					else if ((player.isOnline() == 0) || player.isInJail() || player.isInOfflineMode())
-					{
-						removePlayer(player);
-					}
-					if ((_playersShuffle.size() == 0) || _playersShuffle.isEmpty())
-					{
-						break;
-					}
+					_playersShuffle.remove(player);
+				}
+				else if ((player.isOnline() == 0) || player.isInJail() || player.isInOfflineMode())
+				{
+					removePlayer(player);
 				}
 			}
 		}
 		catch (Exception e)
 		{
 			LOGGER.warning(e.getMessage());
-			return;
 		}
 	}
 	
@@ -1447,7 +1404,7 @@ public class CTF implements EventTask
 		}
 		else if (Config.CTF_EVEN_TEAMS.equals("SHUFFLE"))
 		{
-			final Vector<PlayerInstance> playersShuffleTemp = new Vector<>();
+			final List<PlayerInstance> playersShuffleTemp = new ArrayList<>();
 			int loopCount = 0;
 			
 			loopCount = _playersShuffle.size();
@@ -1469,12 +1426,7 @@ public class CTF implements EventTask
 	 */
 	private static boolean finishEventOk()
 	{
-		if (!_started)
-		{
-			return false;
-		}
-		
-		return true;
+		return _started;
 	}
 	
 	/**
@@ -1507,16 +1459,15 @@ public class CTF implements EventTask
 			return false;
 		}
 		
-		if ((eventPlayer._active_boxes > 1) && !Config.ALLOW_DUALBOX_EVENT)
+		if ((eventPlayer._activeBoxes > 1) && !Config.ALLOW_DUALBOX_EVENT)
 		{
-			final List<String> players_in_boxes = eventPlayer.active_boxes_characters;
+			final List<String> playerBoxes = eventPlayer._activeBoxeCharacters;
 			
-			if ((players_in_boxes != null) && (players_in_boxes.size() > 1))
+			if ((playerBoxes != null) && (playerBoxes.size() > 1))
 			{
-				for (String character_name : players_in_boxes)
+				for (String characterName : playerBoxes)
 				{
-					final PlayerInstance player = World.getInstance().getPlayer(character_name);
-					
+					final PlayerInstance player = World.getInstance().getPlayer(characterName);
 					if ((player != null) && player._inEventCTF)
 					{
 						eventPlayer.sendMessage("You already participated in event with another char!");
@@ -1595,7 +1546,7 @@ public class CTF implements EventTask
 				}
 			}
 			
-			final Vector<String> joinableTeams = new Vector<>();
+			final List<String> joinableTeams = new ArrayList<>();
 			
 			for (String team : _teams)
 			{
@@ -1633,27 +1584,21 @@ public class CTF implements EventTask
 				player._originalTitleCTF = player.getTitle();
 				player.getAppearance().setNameColor(_teamColors.get(_teams.indexOf(player._teamNameCTF)));
 				player.setKarma(0);
-				if (Config.CTF_AURA)
+				if (Config.CTF_AURA && (_teams.size() >= 2))
 				{
-					if (_teams.size() >= 2)
-					{
-						player.setTeam(_teams.indexOf(player._teamNameCTF) + 1);
-					}
+					player.setTeam(_teams.indexOf(player._teamNameCTF) + 1);
 				}
 				
-				if (player.isMounted())
+				if (player.isMounted() && player.setMountType(0))
 				{
-					if (player.setMountType(0))
+					if (player.isFlying())
 					{
-						if (player.isFlying())
-						{
-							player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
-						}
-						
-						final Ride dismount = new Ride(player.getObjectId(), Ride.ACTION_DISMOUNT, 0);
-						player.broadcastPacket(dismount);
-						player.setMountObjectID(0);
+						player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
 					}
+					
+					final Ride dismount = new Ride(player.getObjectId(), Ride.ACTION_DISMOUNT, 0);
+					player.broadcastPacket(dismount);
+					player.setMountObjectID(0);
 				}
 				player.broadcastUserInfo();
 			}
@@ -1700,7 +1645,7 @@ public class CTF implements EventTask
 		LOGGER.info("Max lvl: " + _maxlvl);
 		LOGGER.info("");
 		LOGGER.info("##########################");
-		LOGGER.info("# _teams(Vector<String>) #");
+		LOGGER.info("# _teams(List<String>) #");
 		LOGGER.info("##########################");
 		
 		for (String team : _teams)
@@ -1712,7 +1657,7 @@ public class CTF implements EventTask
 		{
 			LOGGER.info("");
 			LOGGER.info("#########################################");
-			LOGGER.info("# _playersShuffle(Vector<PlayerInstance>) #");
+			LOGGER.info("# _playersShuffle(List<PlayerInstance>) #");
 			LOGGER.info("#########################################");
 			
 			for (PlayerInstance player : _playersShuffle)
@@ -1726,7 +1671,7 @@ public class CTF implements EventTask
 		
 		LOGGER.info("");
 		LOGGER.info("##################################");
-		LOGGER.info("# _players(Vector<PlayerInstance>) #");
+		LOGGER.info("# _players(List<PlayerInstance>) #");
 		LOGGER.info("##################################");
 		
 		synchronized (_players)
@@ -1742,7 +1687,7 @@ public class CTF implements EventTask
 		
 		LOGGER.info("");
 		LOGGER.info("#####################################################################");
-		LOGGER.info("# _savePlayers(Vector<String>) and _savePlayerTeams(Vector<String>) #");
+		LOGGER.info("# _savePlayers(List<String>) and _savePlayerTeams(List<String>) #");
 		LOGGER.info("#####################################################################");
 		
 		for (String player : _savePlayers)
@@ -1779,33 +1724,33 @@ public class CTF implements EventTask
 	 */
 	public static void loadData()
 	{
-		_eventName = new String();
-		_eventDesc = new String();
-		_joiningLocationName = new String();
-		_savePlayers = new Vector<>();
+		_eventName = "";
+		_eventDesc = "";
+		_joiningLocationName = "";
+		_savePlayers = new ArrayList<>();
 		synchronized (_players)
 		{
-			_players = new Vector<>();
+			_players = new ArrayList<>();
 		}
 		
-		_topTeam = new String();
-		_teams = new Vector<>();
-		_savePlayerTeams = new Vector<>();
-		_playersShuffle = new Vector<>();
-		_teamPlayersCount = new Vector<>();
-		_teamPointsCount = new Vector<>();
-		_teamColors = new Vector<>();
-		_teamsX = new Vector<>();
-		_teamsY = new Vector<>();
-		_teamsZ = new Vector<>();
+		_topTeam = "";
+		_teams = new ArrayList<>();
+		_savePlayerTeams = new ArrayList<>();
+		_playersShuffle = new ArrayList<>();
+		_teamPlayersCount = new ArrayList<>();
+		_teamPointsCount = new ArrayList<>();
+		_teamColors = new ArrayList<>();
+		_teamsX = new ArrayList<>();
+		_teamsY = new ArrayList<>();
+		_teamsZ = new ArrayList<>();
 		
-		_throneSpawns = new Vector<>();
-		_flagSpawns = new Vector<>();
-		_flagsTaken = new Vector<>();
-		_flagIds = new Vector<>();
-		_flagsX = new Vector<>();
-		_flagsY = new Vector<>();
-		_flagsZ = new Vector<>();
+		_throneSpawns = new ArrayList<>();
+		_flagSpawns = new ArrayList<>();
+		_flagsTaken = new ArrayList<>();
+		_flagIds = new ArrayList<>();
+		_flagsX = new ArrayList<>();
+		_flagsY = new ArrayList<>();
+		_flagsZ = new ArrayList<>();
 		
 		_joining = false;
 		_teleport = false;
@@ -2136,12 +2081,9 @@ public class CTF implements EventTask
 				player.getAppearance().setNameColor(player._originalNameColorCTF);
 				player.setTitle(player._originalTitleCTF);
 				player.setKarma(player._originalKarmaCTF);
-				if (Config.CTF_AURA)
+				if (Config.CTF_AURA && (_teams.size() >= 2))
 				{
-					if (_teams.size() >= 2)
-					{
-						player.setTeam(0); // clear aura :P
-					}
+					player.setTeam(0); // clear aura :P
 				}
 				player.broadcastUserInfo();
 			}
@@ -2150,7 +2092,7 @@ public class CTF implements EventTask
 			player._originalNameColorCTF = 0;
 			player._originalTitleCTF = null;
 			player._originalKarmaCTF = 0;
-			player._teamNameCTF = new String();
+			player._teamNameCTF = "";
 			player._countCTFflags = 0;
 			player._inEventCTF = false;
 			
@@ -2206,18 +2148,18 @@ public class CTF implements EventTask
 		}
 		
 		_topScore = 0;
-		_topTeam = new String();
+		_topTeam = "";
 		synchronized (_players)
 		{
-			_players = new Vector<>();
+			_players = new ArrayList<>();
 		}
 		
-		_playersShuffle = new Vector<>();
-		_savePlayers = new Vector<>();
-		_savePlayerTeams = new Vector<>();
+		_playersShuffle = new ArrayList<>();
+		_savePlayers = new ArrayList<>();
+		_savePlayerTeams = new ArrayList<>();
 		
-		_teamPointsCount = new Vector<>();
-		_teamPlayersCount = new Vector<>();
+		_teamPointsCount = new ArrayList<>();
+		_teamPlayersCount = new ArrayList<>();
 		
 		cleanLocalEventInfo();
 		
@@ -2231,8 +2173,8 @@ public class CTF implements EventTask
 	 */
 	private static void cleanLocalEventInfo()
 	{
-		_flagSpawns = new Vector<>();
-		_flagsTaken = new Vector<>();
+		_flagSpawns = new ArrayList<>();
+		_flagsTaken = new ArrayList<>();
 	}
 	
 	/**
@@ -2271,12 +2213,8 @@ public class CTF implements EventTask
 			{
 				for (PlayerInstance p : _players)
 				{
-					if (p == null)
-					{
-						continue;
-					}
 					// check by name incase player got new objectId
-					else if (p.getName().equals(player.getName()))
+					if ((p != null) && p.getName().equals(player.getName()))
 					{
 						player._originalNameColorCTF = player.getAppearance().getNameColor();
 						player._originalTitleCTF = player.getTitle();
@@ -2292,12 +2230,9 @@ public class CTF implements EventTask
 			
 			player.getAppearance().setNameColor(_teamColors.get(_teams.indexOf(player._teamNameCTF)));
 			player.setKarma(0);
-			if (Config.CTF_AURA)
+			if (Config.CTF_AURA && (_teams.size() >= 2))
 			{
-				if (_teams.size() >= 2)
-				{
-					player.setTeam(_teams.indexOf(player._teamNameCTF) + 1);
-				}
+				player.setTeam(_teams.indexOf(player._teamNameCTF) + 1);
 			}
 			player.broadcastUserInfo();
 			
@@ -2417,18 +2352,18 @@ public class CTF implements EventTask
 					else if (teamName == null)
 					{
 						
-						int minus_reward = 0;
+						int minusReward = 0;
 						if (_topScore != 0)
 						{
-							minus_reward = _rewardAmount / 2;
+							minusReward = _rewardAmount / 2;
 						}
 						else
 						{
 							// nobody took flags
-							minus_reward = _rewardAmount / 4;
+							minusReward = _rewardAmount / 4;
 						}
 						
-						player.addItem(_eventName + " Event: " + _eventName, _rewardId, minus_reward, player, true);
+						player.addItem(_eventName + " Event: " + _eventName, _rewardId, minusReward, player, true);
 						
 						final NpcHtmlMessage nhm = new NpcHtmlMessage(5);
 						final StringBuilder replyMSG = new StringBuilder("");
@@ -2674,7 +2609,6 @@ public class CTF implements EventTask
 				{
 					_playersShuffle.remove(player);
 					eventPlayer._inEventCTF = false;
-					continue;
 				}
 				else if (player.getObjectId() == eventPlayer.getObjectId())
 				{
@@ -2682,7 +2616,6 @@ public class CTF implements EventTask
 					eventPlayer._countCTFflags = 0;
 					return true;
 				}
-				
 				// This 1 is incase player got new objectid after DC or reconnect
 				else if (player.getName().equals(eventPlayer.getName()))
 				{
@@ -2804,21 +2737,21 @@ public class CTF implements EventTask
 	 * Gets the _event offset.
 	 * @return the _eventOffset
 	 */
-	public static int get_eventOffset()
+	public static int getEventOffset()
 	{
 		return _eventOffset;
 	}
 	
 	/**
 	 * Set_event offset.
-	 * @param _eventOffset the _eventOffset to set
+	 * @param eventOffset the _eventOffset to set
 	 * @return true, if successful
 	 */
-	public static boolean set_eventOffset(int _eventOffset)
+	public static boolean setEventOffset(int eventOffset)
 	{
 		if (!_inProgress)
 		{
-			CTF._eventOffset = _eventOffset;
+			CTF._eventOffset = eventOffset;
 			return true;
 		}
 		return false;
@@ -2875,7 +2808,7 @@ public class CTF implements EventTask
 	 */
 	public static void checkRestoreFlags()
 	{
-		final Vector<Integer> teamsTakenFlag = new Vector<>();
+		final List<Integer> teamsTakenFlag = new ArrayList<>();
 		try
 		{
 			synchronized (_players)
@@ -2888,14 +2821,11 @@ public class CTF implements EventTask
 						{ // logged off with a flag in his hands
 							Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + player.getName() + " logged off with a CTF flag!");
 							player._haveFlagCTF = false;
-							if (_teams.indexOf(player._teamNameHaveFlagCTF) >= 0)
+							if ((_teams.indexOf(player._teamNameHaveFlagCTF) >= 0) && _flagsTaken.get(_teams.indexOf(player._teamNameHaveFlagCTF)))
 							{
-								if (_flagsTaken.get(_teams.indexOf(player._teamNameHaveFlagCTF)))
-								{
-									_flagsTaken.set(_teams.indexOf(player._teamNameHaveFlagCTF), false);
-									spawnFlag(player._teamNameHaveFlagCTF);
-									Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + player._teamNameHaveFlagCTF + " flag now returned to place.");
-								}
+								_flagsTaken.set(_teams.indexOf(player._teamNameHaveFlagCTF), false);
+								spawnFlag(player._teamNameHaveFlagCTF);
+								Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + player._teamNameHaveFlagCTF + " flag now returned to place.");
 							}
 							removeFlagFromPlayer(player);
 							player._teamNameHaveFlagCTF = null;
@@ -2917,14 +2847,11 @@ public class CTF implements EventTask
 					continue;
 				}
 				final int index = _teams.indexOf(team);
-				if (!teamsTakenFlag.contains(index))
+				if (!teamsTakenFlag.contains(index) && _flagsTaken.get(index))
 				{
-					if (_flagsTaken.get(index))
-					{
-						_flagsTaken.set(index, false);
-						spawnFlag(team);
-						Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + team + " flag returned due to player error.");
-					}
+					_flagsTaken.set(index, false);
+					spawnFlag(team);
+					Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + team + " flag returned due to player error.");
 				}
 			}
 			// Check if a player ran away from the event holding a flag:
@@ -2932,27 +2859,21 @@ public class CTF implements EventTask
 			{
 				for (PlayerInstance player : _players)
 				{
-					if ((player != null) && player._haveFlagCTF)
+					if ((player != null) && player._haveFlagCTF && isOutsideCTFArea(player))
 					{
-						if (isOutsideCTFArea(player))
+						Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + player.getName() + " escaped from the event holding a flag!");
+						player._haveFlagCTF = false;
+						if ((_teams.indexOf(player._teamNameHaveFlagCTF) >= 0) && _flagsTaken.get(_teams.indexOf(player._teamNameHaveFlagCTF)))
 						{
-							Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + player.getName() + " escaped from the event holding a flag!");
-							player._haveFlagCTF = false;
-							if (_teams.indexOf(player._teamNameHaveFlagCTF) >= 0)
-							{
-								if (_flagsTaken.get(_teams.indexOf(player._teamNameHaveFlagCTF)))
-								{
-									_flagsTaken.set(_teams.indexOf(player._teamNameHaveFlagCTF), false);
-									spawnFlag(player._teamNameHaveFlagCTF);
-									Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + player._teamNameHaveFlagCTF + " flag now returned to place.");
-								}
-							}
-							removeFlagFromPlayer(player);
-							player._teamNameHaveFlagCTF = null;
-							player.teleToLocation(_teamsX.get(_teams.indexOf(player._teamNameCTF)), _teamsY.get(_teams.indexOf(player._teamNameCTF)), _teamsZ.get(_teams.indexOf(player._teamNameCTF)));
-							player.sendMessage("You have been returned to your team spawn");
-							return;
+							_flagsTaken.set(_teams.indexOf(player._teamNameHaveFlagCTF), false);
+							spawnFlag(player._teamNameHaveFlagCTF);
+							Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + player._teamNameHaveFlagCTF + " flag now returned to place.");
 						}
+						removeFlagFromPlayer(player);
+						player._teamNameHaveFlagCTF = null;
+						player.teleToLocation(_teamsX.get(_teams.indexOf(player._teamNameCTF)), _teamsY.get(_teams.indexOf(player._teamNameCTF)), _teamsZ.get(_teams.indexOf(player._teamNameCTF)));
+						player.sendMessage("You have been returned to your team spawn");
+						return;
 					}
 				}
 			}
@@ -2960,43 +2881,42 @@ public class CTF implements EventTask
 		catch (Exception e)
 		{
 			LOGGER.info("CTF.restoreFlags() Error:" + e);
-			return;
 		}
 	}
 	
 	/**
 	 * Adds the flag to player.
-	 * @param _player the _player
+	 * @param player the player
 	 */
-	public static void addFlagToPlayer(PlayerInstance _player)
+	public static void addFlagToPlayer(PlayerInstance player)
 	{
 		// Remove items from the player hands (right, left, both)
 		// This is NOT a BUG, I don't want them to see the icon they have 8D
-		ItemInstance wpn = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+		ItemInstance wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 		if (wpn == null)
 		{
-			wpn = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND);
+			wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND);
 			if (wpn != null)
 			{
-				_player.getInventory().unEquipItemInBodySlotAndRecord(Inventory.PAPERDOLL_LRHAND);
+				player.getInventory().unEquipItemInBodySlotAndRecord(Inventory.PAPERDOLL_LRHAND);
 			}
 		}
 		else
 		{
-			_player.getInventory().unEquipItemInBodySlotAndRecord(Inventory.PAPERDOLL_RHAND);
-			wpn = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+			player.getInventory().unEquipItemInBodySlotAndRecord(Inventory.PAPERDOLL_RHAND);
+			wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 			if (wpn != null)
 			{
-				_player.getInventory().unEquipItemInBodySlotAndRecord(Inventory.PAPERDOLL_LHAND);
+				player.getInventory().unEquipItemInBodySlotAndRecord(Inventory.PAPERDOLL_LHAND);
 			}
 		}
 		// Add the flag in his hands
-		_player.getInventory().equipItem(ItemTable.getInstance().createItem("", _FLAG_IN_HAND_ITEM_ID, 1, _player, null));
-		_player.broadcastPacket(new SocialAction(_player.getObjectId(), 16)); // Amazing glow
-		_player._haveFlagCTF = true;
-		_player.broadcastUserInfo();
-		final CreatureSay cs = new CreatureSay(_player.getObjectId(), 15, ":", "You got it! Run back! ::"); // 8D
-		_player.sendPacket(cs);
+		player.getInventory().equipItem(ItemTable.getInstance().createItem("", _FLAG_IN_HAND_ITEM_ID, 1, player, null));
+		player.broadcastPacket(new SocialAction(player.getObjectId(), 16)); // Amazing glow
+		player._haveFlagCTF = true;
+		player.broadcastUserInfo();
+		final CreatureSay cs = new CreatureSay(player.getObjectId(), 15, ":", "You got it! Run back! ::"); // 8D
+		player.sendPacket(cs);
 	}
 	
 	/**
@@ -3101,8 +3021,7 @@ public class CTF implements EventTask
 			}
 			catch (Exception e)
 			{
-				LOGGER.info("CTF Engine[spawnAllFlags()]: exception: ");
-				e.printStackTrace();
+				LOGGER.info("CTF Engine[spawnAllFlags()]: exception: " + e);
 			}
 		}
 	}
@@ -3134,12 +3053,11 @@ public class CTF implements EventTask
 					SpawnTable.getInstance().deleteSpawn(_flagSpawns.get(index), true);
 				}
 			}
-			_throneSpawns.removeAllElements();
+			_throneSpawns.clear();
 		}
 		catch (Exception e)
 		{
-			LOGGER.info("CTF Engine[unspawnAllFlags()]: exception: ");
-			e.printStackTrace();
+			LOGGER.info("CTF Engine[unspawnAllFlags()]: exception: " + e);
 		}
 	}
 	
@@ -3188,73 +3106,67 @@ public class CTF implements EventTask
 		}
 		catch (Exception e)
 		{
-			LOGGER.info("CTF Engine[spawnFlag(" + teamName + ")]: exception: ");
-			e.printStackTrace();
+			LOGGER.info("CTF Engine[spawnFlag(" + teamName + ")]: exception: " + e);
 		}
 	}
 	
 	/**
 	 * In range of flag.
-	 * @param _player the _player
+	 * @param player the _player
 	 * @param flagIndex the flag index
 	 * @param offset the offset
 	 * @return true, if successful
 	 */
-	public static boolean InRangeOfFlag(PlayerInstance _player, int flagIndex, int offset)
+	public static boolean inRangeOfFlag(PlayerInstance player, int flagIndex, int offset)
 	{
-		if ((_player.getX() > (_flagsX.get(flagIndex) - offset)) && (_player.getX() < (_flagsX.get(flagIndex) + offset)) && (_player.getY() > (_flagsY.get(flagIndex) - offset)) && (_player.getY() < (_flagsY.get(flagIndex) + offset)) && (_player.getZ() > (_flagsZ.get(flagIndex) - offset)) && (_player.getZ() < (_flagsZ.get(flagIndex) + offset)))
-		{
-			return true;
-		}
-		return false;
+		return (player.getX() > (_flagsX.get(flagIndex) - offset)) && (player.getX() < (_flagsX.get(flagIndex) + offset)) && (player.getY() > (_flagsY.get(flagIndex) - offset)) && (player.getY() < (_flagsY.get(flagIndex) + offset)) && (player.getZ() > (_flagsZ.get(flagIndex) - offset)) && (player.getZ() < (_flagsZ.get(flagIndex) + offset));
 	}
 	
 	/**
 	 * Process in flag range.
-	 * @param _player the _player
+	 * @param player the _player
 	 */
-	public static void processInFlagRange(PlayerInstance _player)
+	public static void processInFlagRange(PlayerInstance player)
 	{
 		try
 		{
 			checkRestoreFlags();
 			for (String team : _teams)
 			{
-				if (team.equals(_player._teamNameCTF))
+				if (team.equals(player._teamNameCTF))
 				{
-					final int indexOwn = _teams.indexOf(_player._teamNameCTF);
-					
+					final int indexOwn = _teams.indexOf(player._teamNameCTF);
 					// If player is near his team flag holding the enemy flag
-					if (InRangeOfFlag(_player, indexOwn, 100) && !_flagsTaken.get(indexOwn) && _player._haveFlagCTF)
+					if (inRangeOfFlag(player, indexOwn, 100) && !_flagsTaken.get(indexOwn) && player._haveFlagCTF)
 					{
-						final int indexEnemy = _teams.indexOf(_player._teamNameHaveFlagCTF);
+						final int indexEnemy = _teams.indexOf(player._teamNameHaveFlagCTF);
 						// Return enemy flag to place
 						_flagsTaken.set(indexEnemy, false);
-						spawnFlag(_player._teamNameHaveFlagCTF);
+						spawnFlag(player._teamNameHaveFlagCTF);
 						// Remove the flag from this player
-						_player.broadcastPacket(new SocialAction(_player.getObjectId(), 16)); // Amazing glow
-						_player.broadcastUserInfo();
-						_player.broadcastPacket(new SocialAction(_player.getObjectId(), 3)); // Victory
-						_player.broadcastUserInfo();
-						removeFlagFromPlayer(_player);
+						player.broadcastPacket(new SocialAction(player.getObjectId(), 16)); // Amazing glow
+						player.broadcastUserInfo();
+						player.broadcastPacket(new SocialAction(player.getObjectId(), 3)); // Victory
+						player.broadcastUserInfo();
+						removeFlagFromPlayer(player);
 						_teamPointsCount.set(indexOwn, teamPointsCount(team) + 1);
-						Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + _player.getName() + " scores for " + _player._teamNameCTF + ".");
+						Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + player.getName() + " scores for " + player._teamNameCTF + ".");
 					}
 				}
 				else
 				{
 					final int indexEnemy = _teams.indexOf(team);
 					// If the player is near a enemy flag
-					if (InRangeOfFlag(_player, indexEnemy, 100) && !_flagsTaken.get(indexEnemy) && !_player._haveFlagCTF && !_player.isDead())
+					if (inRangeOfFlag(player, indexEnemy, 100) && !_flagsTaken.get(indexEnemy) && !player._haveFlagCTF && !player.isDead())
 					{
 						_flagsTaken.set(indexEnemy, true);
 						unspawnFlag(team);
-						_player._teamNameHaveFlagCTF = team;
-						addFlagToPlayer(_player);
-						_player.broadcastUserInfo();
-						_player._haveFlagCTF = true;
-						Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + team + " flag taken by " + _player.getName() + "...");
-						pointTeamTo(_player, team);
+						player._teamNameHaveFlagCTF = team;
+						addFlagToPlayer(player);
+						player.broadcastUserInfo();
+						player._haveFlagCTF = true;
+						Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + team + " flag taken by " + player.getName() + "...");
+						pointTeamTo(player, team);
 						break;
 					}
 				}
@@ -3262,8 +3174,7 @@ public class CTF implements EventTask
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
-			return;
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -3280,23 +3191,20 @@ public class CTF implements EventTask
 			{
 				for (PlayerInstance player : _players)
 				{
-					if ((player != null) && (player.isOnline() != 0))
+					if ((player != null) && (player.isOnline() != 0) && player._teamNameCTF.equals(ourFlag))
 					{
-						if (player._teamNameCTF.equals(ourFlag))
+						player.sendMessage(hasFlag.getName() + " took your flag!");
+						if (player._haveFlagCTF)
 						{
-							player.sendMessage(hasFlag.getName() + " took your flag!");
-							if (player._haveFlagCTF)
-							{
-								player.sendMessage("You can not return the flag to headquarters, until your flag is returned to it's place.");
-								player.sendPacket(new RadarControl(1, 1, player.getX(), player.getY(), player.getZ()));
-							}
-							else
-							{
-								player.sendPacket(new RadarControl(0, 1, hasFlag.getX(), hasFlag.getY(), hasFlag.getZ()));
-								final Radar rdr = new Radar(player);
-								final Radar.RadarOnPlayer radar = rdr.new RadarOnPlayer(hasFlag, player);
-								ThreadPool.schedule(radar, 10000 + Rnd.get(30000));
-							}
+							player.sendMessage("You can not return the flag to headquarters, until your flag is returned to it's place.");
+							player.sendPacket(new RadarControl(1, 1, player.getX(), player.getY(), player.getZ()));
+						}
+						else
+						{
+							player.sendPacket(new RadarControl(0, 1, hasFlag.getX(), hasFlag.getY(), hasFlag.getZ()));
+							final Radar rdr = new Radar(player);
+							final Radar.RadarOnPlayer radar = rdr.new RadarOnPlayer(hasFlag, player);
+							ThreadPool.schedule(radar, 10000 + Rnd.get(30000));
 						}
 					}
 				}
@@ -3304,8 +3212,7 @@ public class CTF implements EventTask
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
-			return;
+			LOGGER.warning(e.toString());
 		}
 	}
 	
@@ -3430,19 +3337,11 @@ public class CTF implements EventTask
 	
 	/**
 	 * Checks if is outside ctf area.
-	 * @param _player the _player
+	 * @param player the player
 	 * @return true, if is outside ctf area
 	 */
-	public static boolean isOutsideCTFArea(PlayerInstance _player)
+	public static boolean isOutsideCTFArea(PlayerInstance player)
 	{
-		if ((_player == null) || (_player.isOnline() == 0))
-		{
-			return true;
-		}
-		if (((_player.getX() <= (_eventCenterX - _eventOffset)) || (_player.getX() >= (_eventCenterX + _eventOffset)) || (_player.getY() <= (_eventCenterY - _eventOffset)) || (_player.getY() >= (_eventCenterY + _eventOffset)) || (_player.getZ() <= (_eventCenterZ - _eventOffset)) || (_player.getZ() >= (_eventCenterZ + _eventOffset))))
-		{
-			return true;
-		}
-		return false;
+		return (player == null) || (player.isOnline() == 0) || (player.getX() <= (_eventCenterX - _eventOffset)) || (player.getX() >= (_eventCenterX + _eventOffset)) || (player.getY() <= (_eventCenterY - _eventOffset)) || (player.getY() >= (_eventCenterY + _eventOffset)) || (player.getZ() <= (_eventCenterZ - _eventOffset)) || (player.getZ() >= (_eventCenterZ + _eventOffset));
 	}
 }

@@ -152,7 +152,7 @@ public class ControllableMobAI extends AttackableAI
 		if (!_actor.isMuted())
 		{
 			// check distant skills
-			int max_range = 0;
+			int maxRange = 0;
 			for (Skill sk : _actor.getAllSkills())
 			{
 				if (Util.checkIfInRange(sk.getCastRange(), _actor, getAttackTarget(), true) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() > _actor.getStat().getMpConsume(sk)))
@@ -160,14 +160,13 @@ public class ControllableMobAI extends AttackableAI
 					_accessor.doCast(sk);
 					return;
 				}
-				max_range = Math.max(max_range, sk.getCastRange());
+				maxRange = Math.max(maxRange, sk.getCastRange());
 			}
 			
 			if (!_isNotMoving)
 			{
-				moveToPawn(getAttackTarget(), max_range);
+				moveToPawn(getAttackTarget(), maxRange);
 			}
-			return;
 		}
 	}
 	
@@ -195,7 +194,7 @@ public class ControllableMobAI extends AttackableAI
 		final Skill[] skills = _actor.getAllSkills();
 		final double dist2 = _actor.getPlanDistanceSq(target.getX(), target.getY());
 		final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().collisionRadius + target.getTemplate().collisionRadius;
-		int max_range = range;
+		int maxRange = range;
 		
 		if (!_actor.isMuted() && (dist2 > ((range + 20) * (range + 20))))
 		{
@@ -208,7 +207,7 @@ public class ControllableMobAI extends AttackableAI
 					_accessor.doCast(sk);
 					return;
 				}
-				max_range = Math.max(max_range, castRange);
+				maxRange = Math.max(maxRange, castRange);
 			}
 			
 			if (!_isNotMoving)
@@ -233,7 +232,7 @@ public class ControllableMobAI extends AttackableAI
 		final Skill[] skills = _actor.getAllSkills();
 		final double dist2 = _actor.getPlanDistanceSq(getForcedTarget().getX(), getForcedTarget().getY());
 		final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().collisionRadius + getForcedTarget().getTemplate().collisionRadius;
-		int max_range = range;
+		int maxRange = range;
 		
 		if (!_actor.isMuted() && (dist2 > ((range + 20) * (range + 20))))
 		{
@@ -247,7 +246,7 @@ public class ControllableMobAI extends AttackableAI
 					_accessor.doCast(sk);
 					return;
 				}
-				max_range = Math.max(max_range, castRange);
+				maxRange = Math.max(maxRange, castRange);
 			}
 			
 			if (!_isNotMoving)
@@ -285,9 +284,9 @@ public class ControllableMobAI extends AttackableAI
 					}
 					
 					NpcInstance npc = (NpcInstance) obj;
-					String faction_id = ((NpcInstance) _actor).getFactionId();
+					String factionId = ((NpcInstance) _actor).getFactionId();
 					
-					if (!faction_id.equalsIgnoreCase(npc.getFactionId()))
+					if (!factionId.equalsIgnoreCase(npc.getFactionId()))
 					{
 						continue;
 					}
@@ -303,7 +302,7 @@ public class ControllableMobAI extends AttackableAI
 			final Skill[] skills = _actor.getAllSkills();
 			final double dist2 = _actor.getPlanDistanceSq(getAttackTarget().getX(), getAttackTarget().getY());
 			final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().collisionRadius + getAttackTarget().getTemplate().collisionRadius;
-			int max_range = range;
+			int maxRange = range;
 			
 			if (!_actor.isMuted() && (dist2 > ((range + 20) * (range + 20))))
 			{
@@ -316,7 +315,7 @@ public class ControllableMobAI extends AttackableAI
 						_accessor.doCast(sk);
 						return;
 					}
-					max_range = Math.max(max_range, castRange);
+					maxRange = Math.max(maxRange, castRange);
 				}
 				moveToPawn(getAttackTarget(), range);
 				return;
@@ -380,7 +379,6 @@ public class ControllableMobAI extends AttackableAI
 			_actor.setRunning();
 			setIntention(AI_INTENTION_ATTACK, hated);
 		}
-		return;
 	}
 	
 	private boolean autoAttackCondition(Creature target)
@@ -408,14 +406,10 @@ public class ControllableMobAI extends AttackableAI
 			return false;
 		}
 		
-		// Check if the target is a PlayerInstance
-		if (target instanceof PlayerInstance)
+		// Check if the target is a PlayerInstance and if the target isn't in silent move mode
+		if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isSilentMoving())
 		{
-			// Check if the target isn't in silent move mode
-			if (((PlayerInstance) target).isSilentMoving())
-			{
-				return false;
-			}
+			return false;
 		}
 		
 		if (target instanceof NpcInstance)
@@ -470,7 +464,7 @@ public class ControllableMobAI extends AttackableAI
 			}
 		}
 		
-		if (potentialTarget.size() == 0)
+		if (potentialTarget.isEmpty())
 		{
 			return null;
 		}
@@ -478,9 +472,7 @@ public class ControllableMobAI extends AttackableAI
 		// we choose a random target
 		final int choice = Rnd.get(potentialTarget.size());
 		
-		final Creature target = potentialTarget.get(choice);
-		
-		return target;
+		return potentialTarget.get(choice);
 	}
 	
 	private ControllableMobInstance findNextGroupTarget()
@@ -499,9 +491,9 @@ public class ControllableMobAI extends AttackableAI
 		return _alternateAI;
 	}
 	
-	public void setAlternateAI(int _alternateai)
+	public void setAlternateAI(int alternateAI)
 	{
-		_alternateAI = _alternateai;
+		_alternateAI = alternateAI;
 	}
 	
 	public void forceAttack(Creature target)

@@ -111,25 +111,25 @@ public class Firework implements IItemHandler
 		
 		if (itemId == 6403) // elven_firecracker, xml: 2023
 		{
-			MagicSkillUse MSU = new MagicSkillUse(playable, player, 2023, 1, 1, 0);
-			player.sendPacket(MSU);
-			player.broadcastPacket(MSU);
+			MagicSkillUse msu = new MagicSkillUse(playable, player, 2023, 1, 1, 0);
+			player.sendPacket(msu);
+			player.broadcastPacket(msu);
 			useFw(player, 2023, 1);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 		else if (itemId == 6406) // firework, xml: 2024
 		{
-			MagicSkillUse MSU = new MagicSkillUse(playable, player, 2024, 1, 1, 0);
-			player.sendPacket(MSU);
-			player.broadcastPacket(MSU);
+			MagicSkillUse msu = new MagicSkillUse(playable, player, 2024, 1, 1, 0);
+			player.sendPacket(msu);
+			player.broadcastPacket(msu);
 			useFw(player, 2024, 1);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 		else if (itemId == 6407) // large_firework, xml: 2025
 		{
-			MagicSkillUse MSU = new MagicSkillUse(playable, player, 2025, 1, 1, 0);
-			player.sendPacket(MSU);
-			player.broadcastPacket(MSU);
+			MagicSkillUse msu = new MagicSkillUse(playable, player, 2025, 1, 1, 0);
+			player.sendPacket(msu);
+			player.broadcastPacket(msu);
 			useFw(player, 2025, 1);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}

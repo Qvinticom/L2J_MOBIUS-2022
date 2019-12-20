@@ -49,10 +49,10 @@ public class BossZone extends ZoneType
 	
 	private final int _bossId;
 	
-	public BossZone(int id, int boss_id)
+	public BossZone(int id, int bossId)
 	{
 		super(id);
-		_bossId = boss_id;
+		_bossId = bossId;
 		_playerAllowedReEntryTimes = new HashMap<>();
 		_playersAllowed = new ArrayList<>();
 	}
@@ -90,73 +90,70 @@ public class BossZone extends ZoneType
 	 */
 	protected void onEnter(Creature creature)
 	{
-		if (_enabled)
+		if (_enabled && (creature instanceof PlayerInstance))
 		{
-			if (creature instanceof PlayerInstance)
+			PlayerInstance player = (PlayerInstance) creature;
+			
+			if (player.isGM() || Config.ALLOW_DIRECT_TP_TO_BOSS_ROOM)
 			{
-				PlayerInstance player = (PlayerInstance) creature;
+				player.sendMessage("You entered " + _zoneName);
+				return;
+			}
+			
+			// Ignore the check for Van Halter zone id 12014 if player got marks
+			if (getId() == 12014)
+			{
+				final ItemInstance visitorsMark = player.getInventory().getItemByItemId(8064);
+				final ItemInstance fadedVisitorsMark = player.getInventory().getItemByItemId(8065);
+				final ItemInstance pagansMark = player.getInventory().getItemByItemId(8067);
 				
-				if (player.isGM() || Config.ALLOW_DIRECT_TP_TO_BOSS_ROOM)
+				final long mark1 = visitorsMark == null ? 0 : visitorsMark.getCount();
+				final long mark2 = fadedVisitorsMark == null ? 0 : fadedVisitorsMark.getCount();
+				final long mark3 = pagansMark == null ? 0 : pagansMark.getCount();
+				
+				if ((mark1 != 0) || (mark2 != 0) || (mark3 != 0))
 				{
-					player.sendMessage("You entered " + _zoneName);
 					return;
 				}
+			}
+			
+			if (!player.isGM() && player.isFlying() && !_IsFlyingEnable)
+			{
+				player.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+				return;
+			}
+			
+			// if player has been (previously) cleared by npc/ai for entry and the zone is set to receive players (aka not waiting for boss to respawn)
+			if (_playersAllowed.contains(creature.getObjectId()))
+			{
+				// Get the information about this player's last logout-exit from this zone.
+				final Long expirationTime = _playerAllowedReEntryTimes.get(creature.getObjectId());
 				
-				// Ignore the check for Van Halter zone id 12014 if player got marks
-				if (getId() == 12014)
+				// with legal entries, do nothing.
+				if (expirationTime == null) // legal null expirationTime entries
 				{
-					final ItemInstance VisitorsMark = player.getInventory().getItemByItemId(8064);
-					final ItemInstance FadedVisitorsMark = player.getInventory().getItemByItemId(8065);
-					final ItemInstance PagansMark = player.getInventory().getItemByItemId(8067);
+					final long serverStartTime = GameServer.dateTimeServerStarted.getTimeInMillis();
 					
-					final long mark1 = VisitorsMark == null ? 0 : VisitorsMark.getCount();
-					final long mark2 = FadedVisitorsMark == null ? 0 : FadedVisitorsMark.getCount();
-					final long mark3 = PagansMark == null ? 0 : PagansMark.getCount();
-					
-					if ((mark1 != 0) || (mark2 != 0) || (mark3 != 0))
+					if (serverStartTime > (System.currentTimeMillis() - _timeInvade))
 					{
 						return;
 					}
 				}
-				
-				if (!player.isGM() && player.isFlying() && !_IsFlyingEnable)
+				else
 				{
-					player.teleToLocation(MapRegionTable.TeleportWhereType.Town);
-					return;
-				}
-				
-				// if player has been (previously) cleared by npc/ai for entry and the zone is set to receive players (aka not waiting for boss to respawn)
-				if (_playersAllowed.contains(creature.getObjectId()))
-				{
-					// Get the information about this player's last logout-exit from this zone.
-					final Long expirationTime = _playerAllowedReEntryTimes.get(creature.getObjectId());
+					// legal non-null logoutTime entries
+					_playerAllowedReEntryTimes.remove(creature.getObjectId());
 					
-					// with legal entries, do nothing.
-					if (expirationTime == null) // legal null expirationTime entries
+					if (expirationTime.longValue() > System.currentTimeMillis())
 					{
-						final long serverStartTime = GameServer.dateTimeServerStarted.getTimeInMillis();
-						
-						if (serverStartTime > (System.currentTimeMillis() - _timeInvade))
-						{
-							return;
-						}
+						return;
 					}
-					else
-					{
-						// legal non-null logoutTime entries
-						_playerAllowedReEntryTimes.remove(creature.getObjectId());
-						
-						if (expirationTime.longValue() > System.currentTimeMillis())
-						{
-							return;
-						}
-					}
-					_playersAllowed.remove(_playersAllowed.indexOf(creature.getObjectId()));
 				}
-				
-				// teleport out all players who attempt "illegal" (re-)entry
-				player.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+				_playersAllowed.remove(_playersAllowed.indexOf(creature.getObjectId()));
 			}
+			
+			// teleport out all players who attempt "illegal" (re-)entry
+			player.teleToLocation(MapRegionTable.TeleportWhereType.Town);
 		}
 	}
 	
@@ -190,25 +187,22 @@ public class BossZone extends ZoneType
 	@Override
 	protected void onExit(Creature creature)
 	{
-		if (_enabled)
+		if (_enabled && (creature instanceof PlayerInstance))
 		{
-			if (creature instanceof PlayerInstance)
+			// Thread.dumpStack();
+			PlayerInstance player = (PlayerInstance) creature;
+			
+			if (player.isGM())
 			{
-				// Thread.dumpStack();
-				PlayerInstance player = (PlayerInstance) creature;
-				
-				if (player.isGM())
-				{
-					player.sendMessage("You left " + _zoneName);
-					return;
-				}
-				
-				// if the player just got disconnected/logged out, store the dc time so that decisions can be made later about allowing or not the player to LOGGER into the zone
-				if ((player.isOnline() == 0) && _playersAllowed.contains(creature.getObjectId()))
-				{
-					// mark the time that the player left the zone
-					_playerAllowedReEntryTimes.put(creature.getObjectId(), System.currentTimeMillis() + _timeInvade);
-				}
+				player.sendMessage("You left " + _zoneName);
+				return;
+			}
+			
+			// if the player just got disconnected/logged out, store the dc time so that decisions can be made later about allowing or not the player to LOGGER into the zone
+			if ((player.isOnline() == 0) && _playersAllowed.contains(creature.getObjectId()))
+			{
+				// mark the time that the player left the zone
+				_playerAllowedReEntryTimes.put(creature.getObjectId(), System.currentTimeMillis() + _timeInvade);
 			}
 		}
 	}
@@ -350,7 +344,6 @@ public class BossZone extends ZoneType
 				}
 			}
 		}
-		return;
 	}
 	
 	public int getBossId()
