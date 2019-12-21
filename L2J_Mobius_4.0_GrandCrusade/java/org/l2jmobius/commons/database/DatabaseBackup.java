@@ -60,11 +60,13 @@ public class DatabaseBackup
 					}
 					catch (Exception ex)
 					{
+						// Ignore.
 					}
 				});
 			}
 			catch (Exception e)
 			{
+				// Ignore.
 			}
 		}
 		
@@ -77,6 +79,7 @@ public class DatabaseBackup
 		}
 		catch (Exception e)
 		{
+			// Ignore.
 		}
 	}
 }

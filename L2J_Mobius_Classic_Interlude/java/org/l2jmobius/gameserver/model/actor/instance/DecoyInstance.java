@@ -81,10 +81,10 @@ public class DecoyInstance extends Creature
 		
 		private final DecoyInstance _Decoy;
 		
-		DecoyLifetime(PlayerInstance player, DecoyInstance Decoy)
+		DecoyLifetime(PlayerInstance player, DecoyInstance decoy)
 		{
 			_player = player;
-			_Decoy = Decoy;
+			_Decoy = decoy;
 		}
 		
 		@Override
@@ -111,10 +111,10 @@ public class DecoyInstance extends Creature
 		private final DecoyInstance _player;
 		private final Skill _skill;
 		
-		HateSpam(DecoyInstance player, Skill Hate)
+		HateSpam(DecoyInstance player, Skill hate)
 		{
 			_player = player;
-			_skill = Hate;
+			_skill = hate;
 		}
 		
 		@Override

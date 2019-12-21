@@ -23,6 +23,7 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
@@ -400,8 +401,9 @@ public class DBSpawnManager
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("UPDATE npc_respawns SET respawnTime = ?, currentHP = ?, currentMP = ? WHERE id = ?"))
 		{
-			for (Integer npcId : _storedInfo.keySet())
+			for (Entry<Integer, StatsSet> entry : _storedInfo.entrySet())
 			{
+				Integer npcId = entry.getKey();
 				if (npcId == null)
 				{
 					continue;
@@ -418,7 +420,7 @@ public class DBSpawnManager
 					updateStatus(npc, false);
 				}
 				
-				final StatsSet info = _storedInfo.get(npcId);
+				final StatsSet info = entry.getValue();
 				if (info == null)
 				{
 					continue;
@@ -452,7 +454,6 @@ public class DBSpawnManager
 	public String[] getAllNpcsStatus()
 	{
 		final String[] msg = new String[(_npcs == null) ? 0 : _npcs.size()];
-		
 		if (_npcs == null)
 		{
 			msg[0] = "None";
@@ -460,10 +461,8 @@ public class DBSpawnManager
 		}
 		
 		int index = 0;
-		
-		for (int i : _npcs.keySet())
+		for (Npc npc : _npcs.values())
 		{
-			final Npc npc = _npcs.get(i);
 			msg[index++] = npc.getName() + ": " + npc.getDBStatus().name();
 		}
 		
@@ -478,7 +477,6 @@ public class DBSpawnManager
 	public String getNpcsStatus(int npcId)
 	{
 		String msg = "NPC Status..." + Config.EOL;
-		
 		if (_npcs == null)
 		{
 			msg += "None";
@@ -488,7 +486,6 @@ public class DBSpawnManager
 		if (_npcs.containsKey(npcId))
 		{
 			final Npc npc = _npcs.get(npcId);
-			
 			msg += npc.getName() + ": " + npc.getDBStatus().name();
 		}
 		
@@ -589,15 +586,11 @@ public class DBSpawnManager
 		
 		_npcs.clear();
 		
-		if (_schedules != null)
+		for (ScheduledFuture<?> shedule : _schedules.values())
 		{
-			for (Integer npcId : _schedules.keySet())
-			{
-				final ScheduledFuture<?> f = _schedules.get(npcId);
-				f.cancel(true);
-			}
-			_schedules.clear();
+			shedule.cancel(true);
 		}
+		_schedules.clear();
 		
 		_storedInfo.clear();
 		_spawns.clear();

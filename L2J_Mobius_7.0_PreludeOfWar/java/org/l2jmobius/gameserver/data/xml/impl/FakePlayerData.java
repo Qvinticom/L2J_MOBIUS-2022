@@ -103,7 +103,7 @@ public class FakePlayerData implements IXmlReader
 		return _fakePlayerNames.get(name.toLowerCase());
 	}
 	
-	public Boolean isTalkable(String name)
+	public boolean isTalkable(String name)
 	{
 		return _talkableFakePlayerNames.contains(name.toLowerCase());
 	}

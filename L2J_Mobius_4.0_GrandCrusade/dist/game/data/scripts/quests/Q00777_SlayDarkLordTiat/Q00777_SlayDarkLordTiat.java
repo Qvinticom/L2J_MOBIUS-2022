@@ -103,6 +103,7 @@ public class Q00777_SlayDarkLordTiat extends Quest
 						break;
 					}
 					qs.setState(State.CREATED);
+					// fallthrough
 				}
 				case State.CREATED:
 				{

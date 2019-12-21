@@ -154,41 +154,38 @@ public class FriendlyNpcAI extends AttackableAI
 			}
 		}
 		// Dodge if its needed
-		if (!npc.isMovementDisabled() && (npc.getTemplate().getDodge() > 0))
+		if (!npc.isMovementDisabled() && (npc.getTemplate().getDodge() > 0) && (Rnd.get(100) <= npc.getTemplate().getDodge()))
 		{
-			if (Rnd.get(100) <= npc.getTemplate().getDodge())
+			final double distance2 = npc.calculateDistanceSq2D(originalAttackTarget);
+			if (Math.sqrt(distance2) <= (60 + combinedCollision))
 			{
-				final double distance2 = npc.calculateDistanceSq2D(originalAttackTarget);
-				if (Math.sqrt(distance2) <= (60 + combinedCollision))
+				int posX = npc.getX();
+				int posY = npc.getY();
+				final int posZ = npc.getZ() + 30;
+				
+				if (originalAttackTarget.getX() < posX)
 				{
-					int posX = npc.getX();
-					int posY = npc.getY();
-					final int posZ = npc.getZ() + 30;
-					
-					if (originalAttackTarget.getX() < posX)
-					{
-						posX += 300;
-					}
-					else
-					{
-						posX -= 300;
-					}
-					
-					if (originalAttackTarget.getY() < posY)
-					{
-						posY += 300;
-					}
-					else
-					{
-						posY -= 300;
-					}
-					
-					if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), posX, posY, posZ, npc.getInstanceWorld()))
-					{
-						setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(posX, posY, posZ, 0));
-					}
-					return;
+					posX += 300;
 				}
+				else
+				{
+					posX -= 300;
+				}
+				
+				if (originalAttackTarget.getY() < posY)
+				{
+					posY += 300;
+				}
+				else
+				{
+					posY -= 300;
+				}
+				
+				if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), posX, posY, posZ, npc.getInstanceWorld()))
+				{
+					setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(posX, posY, posZ, 0));
+				}
+				return;
 			}
 		}
 		

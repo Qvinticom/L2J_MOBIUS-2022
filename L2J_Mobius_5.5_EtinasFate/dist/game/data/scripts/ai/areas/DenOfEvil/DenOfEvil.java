@@ -207,16 +207,13 @@ public class DenOfEvil extends AbstractNpcAI
 					final Skill skill = SkillData.getInstance().getSkill(6149, 1);
 					skill.applyEffects(creature, creature);
 				}
-				else if (creature.doDie(null)) // mobs die
+				else if (creature.doDie(null) && creature.isNpc())
 				{
-					if (creature.isNpc())
+					// respawn eye
+					final Npc npc = (Npc) creature;
+					if (CommonUtil.contains(EYE_IDS, npc.getId()))
 					{
-						// respawn eye
-						final Npc npc = (Npc) creature;
-						if (CommonUtil.contains(EYE_IDS, npc.getId()))
-						{
-							ThreadPool.schedule(new RespawnNewEye(npc.getLocation()), 15000);
-						}
+						ThreadPool.schedule(new RespawnNewEye(npc.getLocation()), 15000);
 					}
 				}
 			}

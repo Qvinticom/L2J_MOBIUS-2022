@@ -114,29 +114,26 @@ public class Q10826_LuckBefittingOfTheStatus extends Quest
 			}
 		}
 		
-		if (event.startsWith("reward_"))
+		if (event.startsWith("reward_") && qs.isCond(1) && (getEnchantLevel(player, LADY_KNIFE) >= 7))
 		{
-			if (qs.isCond(1) && (getEnchantLevel(player, LADY_KNIFE) >= 7))
+			if ((player.getLevel() >= MIN_LEVEL))
 			{
-				if ((player.getLevel() >= MIN_LEVEL))
+				if (hasQuestItems(player, KURTIZ_CERTIFICATE, MERLOT_SERTIFICATE, GUSTAV_CERTIFICATE))
 				{
-					if (hasQuestItems(player, KURTIZ_CERTIFICATE, MERLOT_SERTIFICATE, GUSTAV_CERTIFICATE))
-					{
-						htmltext = "31126-15.html";
-					}
-					else
-					{
-						htmltext = "31126-14.html";
-					}
-					giveItems(player, WEAPON_REWARDS.get(event), 1);
-					giveItems(player, MAMMON_CERTIFICATE, 1);
-					giveItems(player, SPELLBOOK_FATE_OF_THE_EXALTED, 1);
-					qs.exitQuest(false, true);
+					htmltext = "31126-15.html";
 				}
 				else
 				{
-					htmltext = getNoQuestLevelRewardMsg(player);
+					htmltext = "31126-14.html";
 				}
+				giveItems(player, WEAPON_REWARDS.get(event), 1);
+				giveItems(player, MAMMON_CERTIFICATE, 1);
+				giveItems(player, SPELLBOOK_FATE_OF_THE_EXALTED, 1);
+				qs.exitQuest(false, true);
+			}
+			else
+			{
+				htmltext = getNoQuestLevelRewardMsg(player);
 			}
 		}
 		return htmltext;

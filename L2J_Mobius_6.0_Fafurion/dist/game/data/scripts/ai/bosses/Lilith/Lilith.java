@@ -580,15 +580,9 @@ public class Lilith extends AbstractNpcAI
 				}
 			}
 		}
-		if (npc.getId() == REMNANT)
+		if ((npc.getId() == REMNANT) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.30)) && !npc.isCastingNow() && (Rnd.get(100) > 95))
 		{
-			if (npc.getCurrentHp() < (npc.getMaxHp() * 0.30))
-			{
-				if (!npc.isCastingNow() && (Rnd.get(100) > 95))
-				{
-					npc.doCast(REMANT_TELE);
-				}
-			}
+			npc.doCast(REMANT_TELE);
 		}
 		
 		return super.onAttack(npc, attacker, damage, isPet);
@@ -625,12 +619,9 @@ public class Lilith extends AbstractNpcAI
 	@Override
 	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
-		if ((npc.getId() == REMNANT) && PRE_LILITH_ZONE.isInsideZone(npc))
+		if ((npc.getId() == REMNANT) && PRE_LILITH_ZONE.isInsideZone(npc) && (skill == REMANT_TELE))
 		{
-			if (skill == REMANT_TELE)
-			{
-				notifyEvent("spawn_remant", npc, null);
-			}
+			notifyEvent("spawn_remant", npc, null);
 		}
 		return super.onSpellFinished(npc, player, skill);
 	}
@@ -638,18 +629,12 @@ public class Lilith extends AbstractNpcAI
 	@Override
 	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isPet)
 	{
-		if (CommonUtil.contains(LILITH_MINIONS, npc.getId()) && Rnd.nextBoolean())
+		if (CommonUtil.contains(LILITH_MINIONS, npc.getId()) && Rnd.nextBoolean() && (skill.getAbnormalType() == AbnormalType.HP_RECOVER) && !npc.isCastingNow() && (npc.getTarget() != npc) && (npc.getTarget() != caster) && (npc.getTarget() != _lilithBoss))
 		{
-			if (skill.getAbnormalType() == AbnormalType.HP_RECOVER)
-			{
-				if (!npc.isCastingNow() && (npc.getTarget() != npc) && (npc.getTarget() != caster) && (npc.getTarget() != _lilithBoss))
-				{
-					((Attackable) npc).clearAggroList();
-					npc.setTarget(caster);
-					((Attackable) npc).addDamageHate(caster, 500, 99999);
-					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, caster);
-				}
-			}
+			((Attackable) npc).clearAggroList();
+			npc.setTarget(caster);
+			((Attackable) npc).addDamageHate(caster, 500, 99999);
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, caster);
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isPet);
 	}

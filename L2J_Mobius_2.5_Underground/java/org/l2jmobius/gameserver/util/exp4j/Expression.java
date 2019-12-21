@@ -180,7 +180,7 @@ public class Expression
 		{
 			errors.add("Too many operands");
 		}
-		return errors.size() == 0 ? ValidationResult.SUCCESS : new ValidationResult(false, errors);
+		return errors.isEmpty() ? ValidationResult.SUCCESS : new ValidationResult(false, errors);
 		
 	}
 	
@@ -191,7 +191,7 @@ public class Expression
 	
 	public Future<Double> evaluateAsync(ExecutorService executor)
 	{
-		return executor.submit(() -> evaluate());
+		return executor.submit(this::evaluate);
 	}
 	
 	public double evaluate()

@@ -54,7 +54,7 @@ public class BuffInfo
 	private final List<AbstractEffect> _effects = new ArrayList<>(1);
 	// Tasks
 	/** Effect tasks for ticks. */
-	private volatile Map<AbstractEffect, EffectTaskInfo> _tasks;
+	private Map<AbstractEffect, EffectTaskInfo> _tasks;
 	// Time and ticks
 	/** Abnormal time. */
 	private int _abnormalTime;

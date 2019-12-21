@@ -258,7 +258,7 @@ public class KartiasLabyrinth extends AbstractInstance
 							{
 								npc.setScriptValue(1);
 								instance.openCloseDoor(instance.getTemplateParameters().getInt("firstDoorId"), true);
-								instance.spawnGroup("HELPERS").stream().filter(n -> n.getId() == instance.getTemplateParameters().getInt(event.replace("send", "helper"))).forEach(n -> n.deleteMe());
+								instance.spawnGroup("HELPERS").stream().filter(n -> n.getId() == instance.getTemplateParameters().getInt(event.replace("send", "helper"))).forEach(Npc::deleteMe);
 								getTimers().addTimer("TELEPORT_PLAYER", 3000, npc, player);
 								return "adolph-04.html";
 							}
@@ -663,18 +663,15 @@ public class KartiasLabyrinth extends AbstractInstance
 							{
 								param.set("WAVE", 4);
 								
-								getTimers().addTimer("PRISONERS_ESCAPE", 5000, n ->
+								getTimers().addTimer("PRISONERS_ESCAPE", 5000, n -> instance.getAliveNpcs(PRISONERS).forEach(prisoner ->
 								{
-									instance.getAliveNpcs(PRISONERS).forEach(prisoner ->
-									{
-										param.set("SURVIVOR_COUNT", param.getInt("SURVIVOR_COUNT", 0) + 1);
-										prisoner.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.I_AM_SAFE_THANKS_TO_YOU_I_WILL_BEGIN_SUPPORTING_AS_SOON_AS_PREPARATIONS_ARE_COMPLETE);
-										prisoner.setTargetable(false);
-										PRISONER_CLEANSE.getSkill().applyEffects(prisoner, prisoner);
-										final Location loc = instance.getTemplateParameters().getLocation("prisonerEscapeLoc");
-										addMoveToDesire(prisoner, loc, 23);
-									});
-								});
+									param.set("SURVIVOR_COUNT", param.getInt("SURVIVOR_COUNT", 0) + 1);
+									prisoner.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.I_AM_SAFE_THANKS_TO_YOU_I_WILL_BEGIN_SUPPORTING_AS_SOON_AS_PREPARATIONS_ARE_COMPLETE);
+									prisoner.setTargetable(false);
+									PRISONER_CLEANSE.getSkill().applyEffects(prisoner, prisoner);
+									final Location loc = instance.getTemplateParameters().getLocation("prisonerEscapeLoc");
+									addMoveToDesire(prisoner, loc, 23);
+								}));
 							}
 							else
 							{
@@ -688,7 +685,7 @@ public class KartiasLabyrinth extends AbstractInstance
 						{
 							showOnScreenMsg(instance, NpcStringId.THE_LIFE_PLUNDERER_S_TRUE_FORM_IS_REVEALED, ExShowScreenMessage.TOP_CENTER, 5000, true);
 							instance.spawnGroup("ROOM1_STAGE3_WAVE4");
-							instance.getAliveNpcs(BOZ_ENERGY).forEach(npc -> npc.deleteMe());
+							instance.getAliveNpcs(BOZ_ENERGY).forEach(Npc::deleteMe);
 							instance.getAliveNpcs(MIRRORS).forEach(npc -> getTimers().addTimer("MIRROR_DESPAWN", 180000, npc, null));
 							param.set("ROOM", 2);
 							param.set("STAGE", 1);
@@ -751,18 +748,15 @@ public class KartiasLabyrinth extends AbstractInstance
 							param.set("WAVE", 1);
 							param.set("CONTINUE_AFTER_KILL", true);
 							
-							getTimers().addTimer("PRISONERS_ESCAPE", 5000, n ->
+							getTimers().addTimer("PRISONERS_ESCAPE", 5000, n -> instance.getAliveNpcs(PRISONERS).forEach(prisoner ->
 							{
-								instance.getAliveNpcs(PRISONERS).forEach(prisoner ->
-								{
-									param.set("SURVIVOR_COUNT", param.getInt("SURVIVOR_COUNT", 0) + 1);
-									prisoner.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.I_AM_SAFE_THANKS_TO_YOU_I_WILL_BEGIN_SUPPORTING_AS_SOON_AS_PREPARATIONS_ARE_COMPLETE);
-									prisoner.setTargetable(false);
-									PRISONER_CLEANSE.getSkill().applyEffects(prisoner, prisoner);
-									final Location loc = instance.getTemplateParameters().getLocation("prisonerEscapeLoc");
-									addMoveToDesire(prisoner, loc, 23);
-								});
-							});
+								param.set("SURVIVOR_COUNT", param.getInt("SURVIVOR_COUNT", 0) + 1);
+								prisoner.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.I_AM_SAFE_THANKS_TO_YOU_I_WILL_BEGIN_SUPPORTING_AS_SOON_AS_PREPARATIONS_ARE_COMPLETE);
+								prisoner.setTargetable(false);
+								PRISONER_CLEANSE.getSkill().applyEffects(prisoner, prisoner);
+								final Location loc = instance.getTemplateParameters().getLocation("prisonerEscapeLoc");
+								addMoveToDesire(prisoner, loc, 23);
+							}));
 							break;
 						}
 					}

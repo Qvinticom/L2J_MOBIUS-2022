@@ -559,7 +559,7 @@ public class Formulas
 	public static byte calcShldUse(Creature attacker, Creature target, boolean sendSysMsg)
 	{
 		final Item item = target.getSecondaryWeaponItem();
-		if ((item == null) || !(item instanceof Armor) || (((Armor) item).getItemType() == ArmorType.SIGIL))
+		if (!(item instanceof Armor) || (((Armor) item).getItemType() == ArmorType.SIGIL))
 		{
 			return 0;
 		}

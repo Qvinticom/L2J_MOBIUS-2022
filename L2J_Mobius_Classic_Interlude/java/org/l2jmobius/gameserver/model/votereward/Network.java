@@ -58,8 +58,7 @@ public class Network extends VoteSystem
 			{
 				if (line.contains("<div class=\"tls-in-sts\"><b style"))
 				{
-					int votes = Integer.parseInt(line.split(">")[2].replace("</b", ""));
-					return votes;
+					return Integer.parseInt(line.split(">")[2].replace("</b", ""));
 				}
 			}
 			
@@ -68,8 +67,7 @@ public class Network extends VoteSystem
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
-			LOGGER.warning("VoteSystem: Error while getting server vote count from " + getSiteName() + ".");
+			LOGGER.warning("VoteSystem: Error while getting server vote count from " + getSiteName() + ". " + e);
 		}
 		
 		return -1;

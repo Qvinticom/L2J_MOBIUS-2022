@@ -314,12 +314,9 @@ public class Elementals
 			return false;
 		}
 		
-		if (TABLE.get(stoneId)._type == ElementalItemType.Jewel)
+		if ((TABLE.get(stoneId)._type == ElementalItemType.Jewel) && (targetItem.getItem().getCrystalType() != CrystalType.R110))
 		{
-			if (targetItem.getItem().getCrystalType() != CrystalType.R110)
-			{
-				return false;
-			}
+			return false;
 		}
 		
 		return true;

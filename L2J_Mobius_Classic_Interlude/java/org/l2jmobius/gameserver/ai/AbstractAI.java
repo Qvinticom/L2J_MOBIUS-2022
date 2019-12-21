@@ -406,7 +406,7 @@ public abstract class AbstractAI implements Ctrl
 	
 	protected abstract void onEvtArrivedRevalidate();
 	
-	protected abstract void onEvtArrivedBlocked(Location blocked_at_pos);
+	protected abstract void onEvtArrivedBlocked(Location location);
 	
 	protected abstract void onEvtForgetObject(WorldObject object);
 	
@@ -456,13 +456,10 @@ public abstract class AbstractAI implements Ctrl
 						return;
 					}
 				}
-				else if (_actor.isOnGeodataPath())
+				// minimum time to calculate new route is 2 seconds
+				else if (_actor.isOnGeodataPath() && (GameTimeController.getInstance().getGameTicks() < (_moveToPawnTimeout + 10)))
 				{
-					// minimum time to calculate new route is 2 seconds
-					if (GameTimeController.getInstance().getGameTicks() < (_moveToPawnTimeout + 10))
-					{
-						return;
-					}
+					return;
 				}
 			}
 			
@@ -688,20 +685,17 @@ public abstract class AbstractAI implements Ctrl
 	 */
 	public void describeStateToPlayer(PlayerInstance player)
 	{
-		if (_actor.isVisibleFor(player))
+		if (_actor.isVisibleFor(player) && _clientMoving)
 		{
-			if (_clientMoving)
+			if ((_clientMovingToPawnOffset != 0) && isFollowing())
 			{
-				if ((_clientMovingToPawnOffset != 0) && isFollowing())
-				{
-					// Send a Server->Client packet MoveToPawn to the actor and all PlayerInstance in its _knownPlayers
-					player.sendPacket(new MoveToPawn(_actor, _target, _clientMovingToPawnOffset));
-				}
-				else
-				{
-					// Send a Server->Client packet CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
-					player.sendPacket(new MoveToLocation(_actor));
-				}
+				// Send a Server->Client packet MoveToPawn to the actor and all PlayerInstance in its _knownPlayers
+				player.sendPacket(new MoveToPawn(_actor, _target, _clientMovingToPawnOffset));
+			}
+			else
+			{
+				// Send a Server->Client packet CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
+				player.sendPacket(new MoveToLocation(_actor));
 			}
 		}
 	}

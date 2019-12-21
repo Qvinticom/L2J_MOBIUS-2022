@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.pledgeV2.ExPledgeMasteryIn
  */
 public class RequestExPledgeMasteryReset implements IClientIncomingPacket
 {
-	private final static int REPUTATION_COST = 10000;
+	private static final int REPUTATION_COST = 10000;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

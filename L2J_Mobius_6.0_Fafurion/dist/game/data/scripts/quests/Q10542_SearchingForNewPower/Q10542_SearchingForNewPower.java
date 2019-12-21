@@ -167,7 +167,6 @@ public class Q10542_SearchingForNewPower extends Quest
 				{
 					if (qs.isCond(2))
 					{
-						htmltext = "33004-01.html";
 						qs.setCond(3, true);
 						player.sendPacket(new ExTutorialShowId(15));
 						htmltext = "33004-01.html";

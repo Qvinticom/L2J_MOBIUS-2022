@@ -317,22 +317,16 @@ public class LongTimeEvent extends Quest
 	protected void startEvent()
 	{
 		// Add drop.
-		if (_dropList != null)
+		for (EventDropHolder drop : _dropList)
 		{
-			for (EventDropHolder drop : _dropList)
-			{
-				EventDroplist.getInstance().addGlobalDrop(_dropPeriod, drop);
-			}
+			EventDroplist.getInstance().addGlobalDrop(_dropPeriod, drop);
 		}
 		
 		// Add spawns.
 		final Long millisToEventEnd = _eventPeriod.getEndDate().getTime() - System.currentTimeMillis();
-		if (_spawnList != null)
+		for (NpcSpawn spawn : _spawnList)
 		{
-			for (NpcSpawn spawn : _spawnList)
-			{
-				addSpawn(spawn.npcId, spawn.loc.getX(), spawn.loc.getY(), spawn.loc.getZ(), spawn.loc.getHeading(), false, millisToEventEnd, false);
-			}
+			addSpawn(spawn.npcId, spawn.loc.getX(), spawn.loc.getY(), spawn.loc.getZ(), spawn.loc.getHeading(), false, millisToEventEnd, false);
 		}
 		
 		// Enable town shrines.
@@ -441,7 +435,7 @@ public class LongTimeEvent extends Quest
 				}
 				catch (SQLException e)
 				{
-					e.printStackTrace();
+					LOGGER.warning(e.toString());
 				}
 			}
 		}

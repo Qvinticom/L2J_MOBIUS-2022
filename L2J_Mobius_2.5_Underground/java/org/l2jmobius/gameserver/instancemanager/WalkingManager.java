@@ -208,7 +208,7 @@ public class WalkingManager implements IXmlReader
 						}
 					}
 				}
-				_routes.put(routeName, new WalkRoute(routeName, list, repeat, false, repeatType));
+				_routes.put(routeName, new WalkRoute(routeName, list, repeat, repeatType));
 			}
 		}
 	}

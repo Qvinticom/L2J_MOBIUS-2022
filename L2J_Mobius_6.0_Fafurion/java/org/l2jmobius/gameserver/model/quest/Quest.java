@@ -90,12 +90,12 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public static final Logger LOGGER = Logger.getLogger(Quest.class.getName());
 	
 	/** Map containing lists of timers from the name of the timer. */
-	private volatile Map<String, List<QuestTimer>> _questTimers = null;
+	private Map<String, List<QuestTimer>> _questTimers = null;
 	private final ReentrantReadWriteLock _rwLock = new ReentrantReadWriteLock();
 	private final WriteLock _writeLock = _rwLock.writeLock();
 	private final ReadLock _readLock = _rwLock.readLock();
 	/** Map containing all the start conditions. */
-	private volatile Set<QuestCondition> _startCondition = null;
+	private Set<QuestCondition> _startCondition = null;
 	
 	private final int _questId;
 	private final byte _initialState = State.CREATED;
@@ -332,12 +332,9 @@ public class Quest extends AbstractScript implements IIdentifiable
 			{
 				for (QuestTimer timer : timers)
 				{
-					if (timer != null)
+					if ((timer != null) && timer.isMatch(this, name, npc, player))
 					{
-						if (timer.isMatch(this, name, npc, player))
-						{
-							return timer;
-						}
+						return timer;
 					}
 				}
 			}
@@ -741,12 +738,9 @@ public class Quest extends AbstractScript implements IIdentifiable
 		try
 		{
 			res = onItemEvent(item, player, event);
-			if (res != null)
+			if ((res != null) && (res.equalsIgnoreCase("true") || res.equalsIgnoreCase("false")))
 			{
-				if (res.equalsIgnoreCase("true") || res.equalsIgnoreCase("false"))
-				{
-					return;
-				}
+				return;
 			}
 		}
 		catch (Exception e)
@@ -2726,7 +2720,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		{
 			if (npc != null)
 			{
-				content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
+				content = content.replace("%objectId%", String.valueOf(npc.getObjectId()));
 			}
 			
 			if (questwindow && (_questId > 0) && (_questId < 20000) && (_questId != 999))

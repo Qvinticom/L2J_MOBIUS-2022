@@ -23,11 +23,12 @@ import org.l2jmobius.gameserver.network.GameClient;
 /**
  * @author UnAfraid
  */
-@SuppressWarnings("unused")
 public class RequestMagicSkillList implements IClientIncomingPacket
 {
 	private int _objectId;
+	@SuppressWarnings("unused")
 	private int _charId;
+	@SuppressWarnings("unused")
 	private int _unk;
 	
 	@Override

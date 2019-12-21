@@ -140,12 +140,9 @@ public class Q10456_OperationRescue extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1) && (npc.getTitleString() == NpcStringId.ABNORMAL_MAGIC_CIRCLE))
+		if ((qs != null) && qs.isCond(1) && (npc.getTitleString() == NpcStringId.ABNORMAL_MAGIC_CIRCLE) && (getRandom(100) < 5))
 		{
-			if (getRandom(100) < 5)
-			{
-				qs.setCond(2, true);
-			}
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

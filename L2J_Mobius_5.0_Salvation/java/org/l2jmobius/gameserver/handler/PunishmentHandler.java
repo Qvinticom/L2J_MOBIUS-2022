@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.punishment.PunishmentType;
  */
 public class PunishmentHandler implements IHandler<IPunishmentHandler, PunishmentType>
 {
-	private final Map<PunishmentType, IPunishmentHandler> _handlers = new HashMap<>();
+	private final Map<PunishmentType, IPunishmentHandler> _handlers = new EnumMap<>(PunishmentType.class);
 	
 	protected PunishmentHandler()
 	{

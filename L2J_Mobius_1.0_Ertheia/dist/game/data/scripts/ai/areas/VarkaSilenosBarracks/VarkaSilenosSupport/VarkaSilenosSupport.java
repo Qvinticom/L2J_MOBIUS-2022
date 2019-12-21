@@ -235,7 +235,7 @@ public class VarkaSilenosSupport extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public static void main(String args[])
+	public static void main(String[] args)
 	{
 		new VarkaSilenosSupport();
 	}

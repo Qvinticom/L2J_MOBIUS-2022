@@ -91,12 +91,11 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	 * <li>Create the generic constructor of NpcInstance managed by this Spawn</li>
 	 * </ul>
 	 * @param template The NpcTemplate to link to this Spawn
-	 * @throws SecurityException
 	 * @throws ClassNotFoundException
 	 * @throws NoSuchMethodException
 	 * @throws ClassCastException when template type is not subclass of Npc
 	 */
-	public Spawn(NpcTemplate template) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException
+	public Spawn(NpcTemplate template) throws ClassNotFoundException, NoSuchMethodException, ClassCastException
 	{
 		super(0, 0, -10000);
 		// Set the _template of the Spawn
@@ -116,12 +115,11 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	/**
 	 * Creates a new spawn.
 	 * @param npcId the NPC ID
-	 * @throws SecurityException
 	 * @throws ClassNotFoundException
 	 * @throws NoSuchMethodException
 	 * @throws ClassCastException
 	 */
-	public Spawn(int npcId) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException
+	public Spawn(int npcId) throws ClassNotFoundException, NoSuchMethodException, ClassCastException
 	{
 		super(0, 0, -10000);
 		_template = Objects.requireNonNull(NpcData.getInstance().getTemplate(npcId), "NpcTemplate not found for NPC ID: " + npcId);

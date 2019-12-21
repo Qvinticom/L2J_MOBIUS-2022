@@ -81,8 +81,8 @@ public class AdminPunishment implements IAdminCommandHandler
 					String content = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/punishment.htm");
 					if (content != null)
 					{
-						content = content.replaceAll("%punishments%", CommonUtil.implode(PunishmentType.values(), ";"));
-						content = content.replaceAll("%affects%", CommonUtil.implode(PunishmentAffect.values(), ";"));
+						content = content.replace("%punishments%", CommonUtil.implode(PunishmentType.values(), ";"));
+						content = content.replace("%affects%", CommonUtil.implode(PunishmentAffect.values(), ";"));
 						activeChar.sendPacket(new NpcHtmlMessage(0, 1, content));
 					}
 					else
@@ -142,10 +142,10 @@ public class AdminPunishment implements IAdminCommandHandler
 									}
 								}
 								
-								content = content.replaceAll("%player_name%", name);
-								content = content.replaceAll("%punishments%", sb.toString());
-								content = content.replaceAll("%affects%", CommonUtil.implode(PunishmentAffect.values(), ";"));
-								content = content.replaceAll("%affect_type%", affect.name());
+								content = content.replace("%player_name%", name);
+								content = content.replace("%punishments%", sb.toString());
+								content = content.replace("%affects%", CommonUtil.implode(PunishmentAffect.values(), ";"));
+								content = content.replace("%affect_type%", affect.name());
 								activeChar.sendPacket(new NpcHtmlMessage(0, 1, content));
 							}
 							else
@@ -178,11 +178,11 @@ public class AdminPunishment implements IAdminCommandHandler
 							String content = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/punishment-player.htm");
 							if (content != null)
 							{
-								content = content.replaceAll("%player_name%", target.getName());
-								content = content.replaceAll("%punishments%", CommonUtil.implode(PunishmentType.values(), ";"));
-								content = content.replaceAll("%acc%", target.getAccountName());
-								content = content.replaceAll("%char%", target.getName());
-								content = content.replaceAll("%ip%", target.getIPAddress());
+								content = content.replace("%player_name%", target.getName());
+								content = content.replace("%punishments%", CommonUtil.implode(PunishmentType.values(), ";"));
+								content = content.replace("%acc%", target.getAccountName());
+								content = content.replace("%char%", target.getName());
+								content = content.replace("%ip%", target.getIPAddress());
 								activeChar.sendPacket(new NpcHtmlMessage(0, 1, content));
 							}
 							else
@@ -332,6 +332,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				{
 					return useAdminCommand(String.format("admin_punishment_add %s %s %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.BAN, 0, "Banned by admin"), activeChar);
 				}
+				break;
 			}
 			case "admin_unban_char":
 			{
@@ -339,6 +340,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				{
 					return useAdminCommand(String.format("admin_punishment_remove %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.BAN), activeChar);
 				}
+				break;
 			}
 			case "admin_ban_acc":
 			{
@@ -346,6 +348,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				{
 					return useAdminCommand(String.format("admin_punishment_add %s %s %s %s %s", st.nextToken(), PunishmentAffect.ACCOUNT, PunishmentType.BAN, 0, "Banned by admin"), activeChar);
 				}
+				break;
 			}
 			case "admin_unban_acc":
 			{
@@ -353,6 +356,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				{
 					return useAdminCommand(String.format("admin_punishment_remove %s %s %s", st.nextToken(), PunishmentAffect.ACCOUNT, PunishmentType.BAN), activeChar);
 				}
+				break;
 			}
 			case "admin_ban_chat":
 			{
@@ -360,6 +364,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				{
 					return useAdminCommand(String.format("admin_punishment_add %s %s %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, 0, "Chat banned by admin"), activeChar);
 				}
+				break;
 			}
 			case "admin_unban_chat":
 			{
@@ -367,6 +372,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				{
 					return useAdminCommand(String.format("admin_punishment_remove %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN), activeChar);
 				}
+				break;
 			}
 			case "admin_jail":
 			{
@@ -374,6 +380,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				{
 					return useAdminCommand(String.format("admin_punishment_add %s %s %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.JAIL, 0, "Jailed by admin"), activeChar);
 				}
+				break;
 			}
 			case "admin_unjail":
 			{
@@ -381,6 +388,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				{
 					return useAdminCommand(String.format("admin_punishment_remove %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.JAIL), activeChar);
 				}
+				break;
 			}
 		}
 		return true;

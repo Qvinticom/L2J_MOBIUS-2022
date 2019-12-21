@@ -87,7 +87,7 @@ public class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 			}
 			case "spawn_owl":
 			{
-				if (qs.isCond(1) && !World.getInstance().getVisibleObjectsInRange(player, Npc.class, 700).stream().anyMatch(n -> n.getId() == MAGIC_OWL))
+				if (qs.isCond(1) && World.getInstance().getVisibleObjectsInRange(player, Npc.class, 700).stream().noneMatch(n -> n.getId() == MAGIC_OWL))
 				{
 					addSpawn(MAGIC_OWL, OWL_LOC, true, 20000);
 				}

@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.instancemanager;
 
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.model.Location;
@@ -29,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class WarpedSpaceManager
 {
-	private volatile ConcurrentHashMap<Creature, WarpedSpaceHolder> _warpedSpace = null;
+	private Map<Creature, WarpedSpaceHolder> _warpedSpace = null;
 	
 	public void addWarpedSpace(Creature creature, int radius)
 	{

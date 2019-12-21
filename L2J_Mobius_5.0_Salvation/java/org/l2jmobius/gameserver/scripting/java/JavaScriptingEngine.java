@@ -33,8 +33,8 @@ public class JavaScriptingEngine
 {
 	private static final Logger LOGGER = Logger.getLogger(JavaScriptingEngine.class.getName());
 	
-	private final static Map<String, String> _properties = new HashMap<>();
-	private final static JavaCompiler _compiler = ToolProvider.getSystemJavaCompiler();
+	private static final Map<String, String> _properties = new HashMap<>();
+	private static final JavaCompiler _compiler = ToolProvider.getSystemJavaCompiler();
 	
 	public JavaScriptingEngine()
 	{
@@ -58,7 +58,7 @@ public class JavaScriptingEngine
 	
 	public JavaExecutionContext createExecutionContext()
 	{
-		return new JavaExecutionContext(this);
+		return new JavaExecutionContext();
 	}
 	
 	public String getProperty(String key)

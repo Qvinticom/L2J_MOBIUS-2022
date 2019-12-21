@@ -398,7 +398,7 @@ public class CastleChamberlain extends AbstractNpcAI
 		final Castle castle = npc.getCastle();
 		final StringTokenizer st = new StringTokenizer(event, " ");
 		String htmltext = null;
-		final boolean isMyLord = player.isClanLeader() ? (player.getClan().getCastleId() == (npc.getCastle() != null ? npc.getCastle().getResidenceId() : -1)) : false;
+		final boolean isMyLord = player.isClanLeader() && (player.getClan().getCastleId() == (npc.getCastle() != null ? npc.getCastle().getResidenceId() : -1));
 		
 		switch (st.nextToken())
 		{
@@ -959,13 +959,13 @@ public class CastleChamberlain extends AbstractNpcAI
 			{
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_USE_FUNCTIONS))
 				{
-					final CastleFunction HP = castle.getCastleFunction(Castle.FUNC_RESTORE_HP);
-					final CastleFunction MP = castle.getCastleFunction(Castle.FUNC_RESTORE_MP);
-					final CastleFunction XP = castle.getCastleFunction(Castle.FUNC_RESTORE_EXP);
+					final CastleFunction hp = castle.getCastleFunction(Castle.FUNC_RESTORE_HP);
+					final CastleFunction mp = castle.getCastleFunction(Castle.FUNC_RESTORE_MP);
+					final CastleFunction xp = castle.getCastleFunction(Castle.FUNC_RESTORE_EXP);
 					final NpcHtmlMessage html = getHtmlPacket(player, npc, "castledecofunction.html");
-					html.replace("%HPDepth%", (HP == null) ? "0" : Integer.toString(HP.getLvl()));
-					html.replace("%MPDepth%", (MP == null) ? "0" : Integer.toString(MP.getLvl()));
-					html.replace("%XPDepth%", (XP == null) ? "0" : Integer.toString(XP.getLvl()));
+					html.replace("%HPDepth%", (hp == null) ? "0" : Integer.toString(hp.getLvl()));
+					html.replace("%MPDepth%", (mp == null) ? "0" : Integer.toString(mp.getLvl()));
+					html.replace("%XPDepth%", (xp == null) ? "0" : Integer.toString(xp.getLvl()));
 					player.sendPacket(html);
 				}
 				else

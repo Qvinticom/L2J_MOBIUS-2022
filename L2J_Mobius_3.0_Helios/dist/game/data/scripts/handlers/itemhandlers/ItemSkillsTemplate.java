@@ -149,13 +149,10 @@ public class ItemSkillsTemplate implements IItemHandler
 			}
 		}
 		
-		if (successfulUse && checkConsume(item, hasConsumeSkill))
+		if (successfulUse && checkConsume(item, hasConsumeSkill) && !playable.destroyItem("Consume", item.getObjectId(), 1, playable, false))
 		{
-			if (!playable.destroyItem("Consume", item.getObjectId(), 1, playable, false))
-			{
-				playable.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
-				return false;
-			}
+			playable.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+			return false;
 		}
 		
 		return successfulUse;
@@ -197,56 +194,53 @@ public class ItemSkillsTemplate implements IItemHandler
 	{
 		final long remainingTime = (skill != null) ? playable.getSkillRemainingReuseTime(skill.getReuseHashCode()) : playable.getItemRemainingReuseTime(item.getObjectId());
 		final boolean isAvailable = remainingTime <= 0;
-		if (playable.isPlayer())
+		if (playable.isPlayer() && !isAvailable)
 		{
-			if (!isAvailable)
+			final int hours = (int) (remainingTime / 3600000);
+			final int minutes = (int) (remainingTime % 3600000) / 60000;
+			final int seconds = (int) ((remainingTime / 1000) % 60);
+			SystemMessage sm = null;
+			if (hours > 0)
 			{
-				final int hours = (int) (remainingTime / 3600000);
-				final int minutes = (int) (remainingTime % 3600000) / 60000;
-				final int seconds = (int) ((remainingTime / 1000) % 60);
-				SystemMessage sm = null;
-				if (hours > 0)
+				sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+				if ((skill == null) || skill.isStatic())
 				{
-					sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
-					if ((skill == null) || skill.isStatic())
-					{
-						sm.addItemName(item);
-					}
-					else
-					{
-						sm.addSkillName(skill);
-					}
-					sm.addInt(hours);
-					sm.addInt(minutes);
-				}
-				else if (minutes > 0)
-				{
-					sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
-					if ((skill == null) || skill.isStatic())
-					{
-						sm.addItemName(item);
-					}
-					else
-					{
-						sm.addSkillName(skill);
-					}
-					sm.addInt(minutes);
+					sm.addItemName(item);
 				}
 				else
 				{
-					sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
-					if ((skill == null) || skill.isStatic())
-					{
-						sm.addItemName(item);
-					}
-					else
-					{
-						sm.addSkillName(skill);
-					}
+					sm.addSkillName(skill);
 				}
-				sm.addInt(seconds);
-				playable.sendPacket(sm);
+				sm.addInt(hours);
+				sm.addInt(minutes);
 			}
+			else if (minutes > 0)
+			{
+				sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+				if ((skill == null) || skill.isStatic())
+				{
+					sm.addItemName(item);
+				}
+				else
+				{
+					sm.addSkillName(skill);
+				}
+				sm.addInt(minutes);
+			}
+			else
+			{
+				sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+				if ((skill == null) || skill.isStatic())
+				{
+					sm.addItemName(item);
+				}
+				else
+				{
+					sm.addSkillName(skill);
+				}
+			}
+			sm.addInt(seconds);
+			playable.sendPacket(sm);
 		}
 		return isAvailable;
 	}

@@ -85,7 +85,7 @@ public class Q10777_ReportsFromCrumaTowerPart2 extends Quest
 			}
 			case "summon":
 			{
-				if (qs.isCond(1) && !World.getInstance().getVisibleObjectsInRange(player, Npc.class, 700).stream().anyMatch(n -> n.getId() == MAGIC_OWL))
+				if (qs.isCond(1) && World.getInstance().getVisibleObjectsInRange(player, Npc.class, 700).stream().noneMatch(n -> n.getId() == MAGIC_OWL))
 				{
 					final Npc owl = addSpawn(MAGIC_OWL, OWL_LOC);
 					getTimers().addTimer("DESPAWN_OWL", 20000, owl, null);

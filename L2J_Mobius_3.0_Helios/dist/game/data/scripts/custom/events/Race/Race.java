@@ -41,6 +41,21 @@ import org.l2jmobius.gameserver.util.Broadcast;
  */
 public class Race extends Event
 {
+	// 5 min for register
+	private static final int REGISTER_TIME = 5;
+	// 5 min for race
+	private static final int RACE_TIME = 10;
+	// NPCs
+	private static final int START_NPC = 900103;
+	private static final int STOP_NPC = 900104;
+	// Locations
+	private static final String[] LOCATIONS =
+	{
+		"Heretic catacomb enterance",
+		"Dion castle bridge",
+		"Floran village enterance",
+		"Floran fort gate"
+	};
 	// Event NPCs list
 	private List<Npc> _npclist;
 	// Npc
@@ -53,28 +68,13 @@ public class Race extends Event
 	private static boolean _isactive = false;
 	// Race state
 	private static boolean _isRaceStarted = false;
-	// 5 min for register
-	private static final int _time_register = 5;
-	// 5 min for race
-	private static final int _time_race = 10;
-	// NPCs
-	private static final int _start_npc = 900103;
-	private static final int _stop_npc = 900104;
 	// Skills (Frog by default)
 	private static int _skill = 6201;
 	// We must keep second NPC spawn for radar
 	private static int[] _randspawn = null;
-	// Locations
-	private static final String[] _locations =
-	{
-		"Heretic catacomb enterance",
-		"Dion castle bridge",
-		"Floran village enterance",
-		"Floran fort gate"
-	};
 	
 	// @formatter:off
-	private static final int[][] _coords =
+	private static final int[][] COORDS =
 	{
 		// x, y, z, heading
 		{ 39177, 144345, -3650, 0 },
@@ -82,7 +82,7 @@ public class Race extends Event
 		{ 16537, 169937, -3500, 0 },
 		{  7644, 150898, -2890, 0 }
 	};
-	private static final int[][] _rewards =
+	private static final int[][] REWARDS =
 	{
 		{ 6622, 2 }, // Giant's Codex
 		{ 9625, 2 }, // Giant's Codex -
@@ -103,12 +103,12 @@ public class Race extends Event
 	
 	private Race()
 	{
-		addStartNpc(_start_npc);
-		addFirstTalkId(_start_npc);
-		addTalkId(_start_npc);
-		addStartNpc(_stop_npc);
-		addFirstTalkId(_stop_npc);
-		addTalkId(_stop_npc);
+		addStartNpc(START_NPC);
+		addFirstTalkId(START_NPC);
+		addTalkId(START_NPC);
+		addStartNpc(STOP_NPC);
+		addFirstTalkId(STOP_NPC);
+		addTalkId(STOP_NPC);
 	}
 	
 	@Override
@@ -132,14 +132,14 @@ public class Race extends Event
 		// Set Event active
 		_isactive = true;
 		// Spawn Manager
-		_npc = recordSpawn(_start_npc, 18429, 145861, -3090, 0, false, 0);
+		_npc = recordSpawn(START_NPC, 18429, 145861, -3090, 0, false, 0);
 		
 		// Announce event start
 		Broadcast.toAllOnlinePlayers("* Race Event started! *");
-		Broadcast.toAllOnlinePlayers("Visit Event Manager in Dion village and signup, you have " + _time_register + " min before Race Start...");
+		Broadcast.toAllOnlinePlayers("Visit Event Manager in Dion village and signup, you have " + REGISTER_TIME + " min before Race Start...");
 		
 		// Schedule Event end
-		_eventTask = ThreadPool.schedule(() -> StartRace(), _time_register * 60 * 1000);
+		_eventTask = ThreadPool.schedule(this::StartRace, REGISTER_TIME * 60 * 1000);
 		
 		return true;
 		
@@ -159,10 +159,10 @@ public class Race extends Event
 		// Announce
 		Broadcast.toAllOnlinePlayers("Race started!");
 		// Get random Finish
-		final int location = getRandom(0, _locations.length - 1);
-		_randspawn = _coords[location];
+		final int location = getRandom(0, LOCATIONS.length - 1);
+		_randspawn = COORDS[location];
 		// And spawn NPC
-		recordSpawn(_stop_npc, _randspawn[0], _randspawn[1], _randspawn[2], _randspawn[3], false, 0);
+		recordSpawn(STOP_NPC, _randspawn[0], _randspawn[1], _randspawn[2], _randspawn[3], false, 0);
 		// Transform players and send message
 		for (PlayerInstance player : _players)
 		{
@@ -170,7 +170,7 @@ public class Race extends Event
 			{
 				if (player.isInsideRadius2D(_npc, 500))
 				{
-					sendMessage(player, "Race started! Go find Finish NPC as fast as you can... He is located near " + _locations[location]);
+					sendMessage(player, "Race started! Go find Finish NPC as fast as you can... He is located near " + LOCATIONS[location]);
 					transformPlayer(player);
 					player.getRadar().addMarker(_randspawn[0], _randspawn[1], _randspawn[2]);
 				}
@@ -182,7 +182,7 @@ public class Race extends Event
 			}
 		}
 		// Schedule timeup for Race
-		_eventTask = ThreadPool.schedule(() -> timeUp(), _time_race * 60 * 1000);
+		_eventTask = ThreadPool.schedule(this::timeUp, RACE_TIME * 60 * 1000);
 	}
 	
 	@Override
@@ -215,11 +215,11 @@ public class Race extends Event
 			}
 		}
 		// Despawn NPCs
-		for (Npc _npc : _npclist)
+		for (Npc npc : _npclist)
 		{
-			if (_npc != null)
+			if (npc != null)
 			{
-				_npc.deleteMe();
+				npc.deleteMe();
 			}
 		}
 		_npclist.clear();
@@ -241,13 +241,13 @@ public class Race extends Event
 			}
 			else
 			{
-				final int _number = Integer.parseInt(bypass.substring(5));
-				final Skill _sk = SkillData.getInstance().getSkill(_number, 1);
-				if (_sk != null)
+				final int number = Integer.parseInt(bypass.substring(5));
+				final Skill skill = SkillData.getInstance().getSkill(number, 1);
+				if (skill != null)
 				{
-					_skill = _number;
+					_skill = number;
 					player.sendMessage("Transform skill set to:");
-					player.sendMessage(_sk.getName());
+					player.sendMessage(skill.getName());
 				}
 				else
 				{
@@ -331,17 +331,17 @@ public class Race extends Event
 	{
 		getQuestState(player, true);
 		
-		if (npc.getId() == _start_npc)
+		if (npc.getId() == START_NPC)
 		{
 			if (_isRaceStarted)
 			{
-				return _start_npc + "-started-" + isRacing(player) + ".htm";
+				return START_NPC + "-started-" + isRacing(player) + ".htm";
 			}
-			return _start_npc + "-" + isRacing(player) + ".htm";
+			return START_NPC + "-" + isRacing(player) + ".htm";
 		}
-		else if ((npc.getId() == _stop_npc) && _isRaceStarted)
+		else if ((npc.getId() == STOP_NPC) && _isRaceStarted)
 		{
-			return _stop_npc + "-" + isRacing(player) + ".htm";
+			return STOP_NPC + "-" + isRacing(player) + ".htm";
 		}
 		return npc.getId() + ".htm";
 	}
@@ -399,8 +399,8 @@ public class Race extends Event
 	
 	private void winRace(PlayerInstance player)
 	{
-		final int[] _reward = _rewards[getRandom(_rewards.length - 1)];
-		player.addItem("eventModRace", _reward[0], _reward[1], _npc, true);
+		final int[] reward = REWARDS[getRandom(REWARDS.length - 1)];
+		player.addItem("eventModRace", reward[0], reward[1], _npc, true);
 		Broadcast.toAllOnlinePlayers(player.getName() + " is a winner!");
 		eventStop();
 	}

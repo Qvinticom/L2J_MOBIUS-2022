@@ -160,12 +160,9 @@ public class Q10363_RequestOfTheSeeker extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if (CommonUtil.contains(MONSTERS, npc.getId()))
+		if (CommonUtil.contains(MONSTERS, npc.getId()) && (qs != null) && qs.isCond(1) && giveItemRandomly(killer, npc, HUSK_DISTRIBUTION_REPORT, 1, 15, 0.8, true))
 		{
-			if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, npc, HUSK_DISTRIBUTION_REPORT, 1, 15, 0.8, true))
-			{
-				qs.setCond(2, true);
-			}
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

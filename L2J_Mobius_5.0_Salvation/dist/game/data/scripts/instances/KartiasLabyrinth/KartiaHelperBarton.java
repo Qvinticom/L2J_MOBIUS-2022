@@ -127,12 +127,9 @@ public class KartiaHelperBarton extends AbstractNpcAI
 		}
 		else if ((instance != null) && event.equals("USE_SKILL"))
 		{
-			if (npc.isInCombat() || npc.isAttackingNow() || (npc.getTarget() != null))
+			if ((npc.isInCombat() || npc.isAttackingNow() || (npc.getTarget() != null)) && (npc.getCurrentMpPercent() > 25) && !CommonUtil.contains(KARTIA_FRIENDS, npc.getTargetId()))
 			{
-				if ((npc.getCurrentMpPercent() > 25) && !CommonUtil.contains(KARTIA_FRIENDS, npc.getTargetId()))
-				{
-					useRandomSkill(npc);
-				}
+				useRandomSkill(npc);
 			}
 		}
 	}
@@ -174,11 +171,11 @@ public class KartiaHelperBarton extends AbstractNpcAI
 		if ((instance != null) && !npc.isCastingNow() && (!CommonUtil.contains(KARTIA_FRIENDS, target.getId())))
 		{
 			final StatsSet instParams = instance.getTemplateParameters();
-			final SkillHolder skill_01 = instParams.getSkillHolder("bartonInfinity");
-			final SkillHolder skill_02 = instParams.getSkillHolder("bartonBerserker");
-			final SkillHolder skill_03 = instParams.getSkillHolder("bartonHurricane");
-			final SkillHolder skill_04 = instParams.getSkillHolder("bartonPowerBomber");
-			final SkillHolder skill_05 = instParams.getSkillHolder("bartonSonicStar");
+			final SkillHolder skill01 = instParams.getSkillHolder("bartonInfinity");
+			final SkillHolder skill02 = instParams.getSkillHolder("bartonBerserker");
+			final SkillHolder skill03 = instParams.getSkillHolder("bartonHurricane");
+			final SkillHolder skill04 = instParams.getSkillHolder("bartonPowerBomber");
+			final SkillHolder skill05 = instParams.getSkillHolder("bartonSonicStar");
 			final int numberOfActiveSkills = 5;
 			final int randomSkill = getRandom(numberOfActiveSkills + 1);
 			
@@ -187,46 +184,46 @@ public class KartiaHelperBarton extends AbstractNpcAI
 				case 0:
 				case 1:
 				{
-					if ((skill_01 != null) && SkillCaster.checkUseConditions(npc, skill_01.getSkill()))
+					if ((skill01 != null) && SkillCaster.checkUseConditions(npc, skill01.getSkill()))
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_WILL_SHOW_YOU_THE_JUSTICE_OF_ADEN);
-						npc.doCast(skill_01.getSkill(), null, true, false);
+						npc.doCast(skill01.getSkill(), null, true, false);
 					}
 					break;
 				}
 				case 2:
 				{
-					if ((skill_02 != null) && SkillCaster.checkUseConditions(npc, skill_02.getSkill()))
+					if ((skill02 != null) && SkillCaster.checkUseConditions(npc, skill02.getSkill()))
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DIE_3);
-						npc.doCast(skill_02.getSkill(), null, true, false);
+						npc.doCast(skill02.getSkill(), null, true, false);
 					}
 					break;
 				}
 				case 3:
 				{
-					if ((skill_03 != null) && SkillCaster.checkUseConditions(npc, skill_03.getSkill()))
+					if ((skill03 != null) && SkillCaster.checkUseConditions(npc, skill03.getSkill()))
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.FOR_THE_GODDESS);
-						npc.doCast(skill_03.getSkill(), null, true, false);
+						npc.doCast(skill03.getSkill(), null, true, false);
 					}
 					break;
 				}
 				case 4:
 				{
-					if ((skill_04 != null) && SkillCaster.checkUseConditions(npc, skill_04.getSkill()))
+					if ((skill04 != null) && SkillCaster.checkUseConditions(npc, skill04.getSkill()))
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_WILL_BE_DESTROYED);
-						npc.doCast(skill_04.getSkill(), null, true, false);
+						npc.doCast(skill04.getSkill(), null, true, false);
 					}
 					break;
 				}
 				case 5:
 				{
-					if ((skill_05 != null) && SkillCaster.checkUseConditions(npc, skill_05.getSkill()))
+					if ((skill05 != null) && SkillCaster.checkUseConditions(npc, skill05.getSkill()))
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_WILL_DIE);
-						npc.doCast(skill_05.getSkill(), null, true, false);
+						npc.doCast(skill05.getSkill(), null, true, false);
 					}
 					break;
 				}

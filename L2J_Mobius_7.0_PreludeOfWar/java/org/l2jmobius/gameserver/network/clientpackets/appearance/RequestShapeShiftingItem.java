@@ -203,14 +203,11 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 			player.removeRequest(ShapeShiftingItemRequest.class);
 			return;
 		}
-		if (appearanceStone.getType() == AppearanceType.NORMAL)
+		if ((appearanceStone.getType() == AppearanceType.NORMAL) && (inventory.destroyItem(getClass().getSimpleName(), extractItem, 1, player, this) == null))
 		{
-			if (inventory.destroyItem(getClass().getSimpleName(), extractItem, 1, player, this) == null)
-			{
-				client.sendPacket(ExShapeShiftingResult.FAILED);
-				player.removeRequest(ShapeShiftingItemRequest.class);
-				return;
-			}
+			client.sendPacket(ExShapeShiftingResult.FAILED);
+			player.removeRequest(ShapeShiftingItemRequest.class);
+			return;
 		}
 		
 		inventory.destroyItem(getClass().getSimpleName(), stone, 1, player, this);

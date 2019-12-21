@@ -217,13 +217,10 @@ public class NpcViewMod implements IBypassHandler
 			{
 				final long minTimeFromMillis = tu.convert(npcSpawn.getRespawnMinDelay(), TimeUnit.MILLISECONDS);
 				final long maxTimeFromMillis = tu.convert(npcSpawn.getRespawnMaxDelay(), TimeUnit.MILLISECONDS);
-				if ((TimeUnit.MILLISECONDS.convert(minTimeFromMillis, tu) == npcSpawn.getRespawnMinDelay()) && (TimeUnit.MILLISECONDS.convert(maxTimeFromMillis, tu) == npcSpawn.getRespawnMaxDelay()))
+				if ((TimeUnit.MILLISECONDS.convert(minTimeFromMillis, tu) == npcSpawn.getRespawnMinDelay()) && (TimeUnit.MILLISECONDS.convert(maxTimeFromMillis, tu) == npcSpawn.getRespawnMaxDelay()) && (min > minTimeFromMillis))
 				{
-					if (min > minTimeFromMillis)
-					{
-						min = minTimeFromMillis;
-						timeUnit = tu;
-					}
+					min = minTimeFromMillis;
+					timeUnit = tu;
 				}
 			}
 			final long minRespawnDelay = timeUnit.convert(npcSpawn.getRespawnMinDelay(), TimeUnit.MILLISECONDS);
@@ -574,10 +571,10 @@ public class NpcViewMod implements IBypassHandler
 			LOGGER.warning(NpcViewMod.class.getSimpleName() + ": The html file data/html/mods/NpcView/DropList.htm could not be found.");
 			return;
 		}
-		html = html.replaceAll("%name%", npc.getName());
-		html = html.replaceAll("%dropListButtons%", getDropListButtons(npc));
-		html = html.replaceAll("%pages%", pagesSb.toString());
-		html = html.replaceAll("%items%", bodySb.toString() + limitReachedMsg);
+		html = html.replace("%name%", npc.getName());
+		html = html.replace("%dropListButtons%", getDropListButtons(npc));
+		html = html.replace("%pages%", pagesSb.toString());
+		html = html.replace("%items%", bodySb.toString() + limitReachedMsg);
 		Util.sendCBHtml(player, html);
 	}
 }

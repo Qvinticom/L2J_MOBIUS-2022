@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.attributechange;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 
 import org.l2jmobius.commons.network.PacketWriter;
@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExChangeAttributeInfo implements IClientOutgoingPacket
 {
-	private static final Map<AttributeType, Byte> ATTRIBUTE_MASKS = new HashMap<>();
+	private static final Map<AttributeType, Byte> ATTRIBUTE_MASKS = new EnumMap<>(AttributeType.class);
 	static
 	{
 		ATTRIBUTE_MASKS.put(AttributeType.FIRE, (byte) 1);

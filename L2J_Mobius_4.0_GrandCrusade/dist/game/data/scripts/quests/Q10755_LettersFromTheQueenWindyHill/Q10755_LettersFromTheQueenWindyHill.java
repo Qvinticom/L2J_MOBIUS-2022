@@ -93,10 +93,6 @@ public class Q10755_LettersFromTheQueenWindyHill extends LetterQuest
 				}
 				break;
 			}
-			default:
-			{
-				htmltext = event;
-			}
 		}
 		return htmltext;
 	}

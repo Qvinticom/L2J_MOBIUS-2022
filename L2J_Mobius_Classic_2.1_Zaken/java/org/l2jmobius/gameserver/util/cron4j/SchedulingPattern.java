@@ -293,7 +293,7 @@ public class SchedulingPattern
 				}
 			}
 		}
-		if (values.size() == 0)
+		if (values.isEmpty())
 		{
 			throw new Exception("invalid field \"" + str + "\"");
 		}

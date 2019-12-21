@@ -84,6 +84,7 @@ public class AppearanceStone
 				case ALL:
 				{
 					addCrystalType(CrystalType.NONE);
+					// fallthrough
 				}
 				case WEAPON:
 				case ARMOR:

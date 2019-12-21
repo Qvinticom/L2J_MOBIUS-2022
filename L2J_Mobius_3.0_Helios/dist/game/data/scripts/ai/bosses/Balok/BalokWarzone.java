@@ -89,9 +89,9 @@ public class BalokWarzone extends AbstractInstance
         {153608, 140371, -12712}
 	};
 	//@formatter:on	
-	private final List<Npc> minionList = new ArrayList<>();
-	private Npc currentMinion;
-	private Npc balok;
+	private final List<Npc> _minionList = new ArrayList<>();
+	private Npc _currentMinion;
+	private Npc _balok;
 	
 	public BalokWarzone()
 	{
@@ -143,19 +143,19 @@ public class BalokWarzone extends AbstractInstance
 				}
 				case "stage_1_spawn_balok":
 				{
-					balok = addSpawn(BALOK, 153573, 142071, -12738, 16565, false, 0, false, world.getId());
+					_balok = addSpawn(BALOK, 153573, 142071, -12738, 16565, false, 0, false, world.getId());
 					world.setStatus(1);
 					break;
 				}
 				case "stage_last_send_minions":
 				{
 					
-					Npc minion = minionList.get(Rnd.get(minionList.size()));
+					Npc minion = _minionList.get(Rnd.get(_minionList.size()));
 					if (minion != null)
 					{
 						minion.setRunning();
 						((Attackable) minion).setCanReturnToSpawnPoint(false);
-						currentMinion = minion;
+						_currentMinion = minion;
 						getTimers().addTimer("stage_last_minion_walk", 2000, minion, player);
 					}
 					
@@ -165,16 +165,16 @@ public class BalokWarzone extends AbstractInstance
 				{
 					if (npc.getId() == MINION)
 					{
-						if (npc.calculateDistanceSq2D(balok) > 113125)
+						if (npc.calculateDistanceSq2D(_balok) > 113125)
 						{
-							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(balok.getX() + 100, balok.getY() + 50, balok.getZ(), balok.getHeading()));
+							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_balok.getX() + 100, _balok.getY() + 50, _balok.getZ(), _balok.getHeading()));
 							getTimers().addTimer("stage_last_minion_walk", 2000, npc, player);
 						}
 						else
 						{
 							npc.stopSkillEffects(INVINCIBILITY_ACTIVATION.getSkill());
-							balok.setTarget(npc);
-							balok.doCast(DARKNESS_DRAIN.getSkill());
+							_balok.setTarget(npc);
+							_balok.doCast(DARKNESS_DRAIN.getSkill());
 						}
 					}
 					break;
@@ -203,46 +203,43 @@ public class BalokWarzone extends AbstractInstance
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
-		if (isInInstance(world))
+		if (isInInstance(world) && (npc.getId() == BALOK))
 		{
-			if (npc.getId() == BALOK)
+			if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.85)) && (world.getStatus() == 1))
 			{
-				if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.85)) && (world.getStatus() == 1))
+				for (int[] a : MINION_SPAWN)
 				{
-					for (int[] a : MINION_SPAWN)
+					Npc minion = addSpawn(MINION, a[0], a[1], a[2], a[3], false, 0, false, world.getId());
+					_minionList.add(minion);
+					INVINCIBILITY_ACTIVATION.getSkill().applyEffects(minion, minion);
+					world.setStatus(2);
+				}
+			}
+			if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.50)) && (world.getStatus() == 2))
+			{
+				if (npc.isScriptValue(0))
+				{
+					INVINCIBILITY_ACTIVATION.getSkill().applyEffects(npc, npc);
+					npc.setScriptValue(1);
+				}
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 300, instPlayer ->
+				{
+					if ((instPlayer == null) || (Rnd.get(100) > 2))
 					{
-						Npc minion = addSpawn(MINION, a[0], a[1], a[2], a[3], false, 0, false, world.getId());
-						minionList.add(minion);
-						INVINCIBILITY_ACTIVATION.getSkill().applyEffects(minion, minion);
-						world.setStatus(2);
+						return;
 					}
-				}
-				if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.50)) && (world.getStatus() == 2))
-				{
-					if (npc.isScriptValue(0))
-					{
-						INVINCIBILITY_ACTIVATION.getSkill().applyEffects(npc, npc);
-						npc.setScriptValue(1);
-					}
-					World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 300, instPlayer ->
-					{
-						if ((instPlayer == null) || (Rnd.get(100) > 2))
-						{
-							return;
-						}
-						npc.setTarget(instPlayer);
-						npc.doCast(IMPRISION.getSkill());
-						getTimers().addTimer("imprission_minions", 4000, npc, instPlayer);
-					});
-					getTimers().addTimer("stage_last_send_minions", 2000, npc, null);
-				}
-				if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.25)) && npc.isScriptValue(1))
-				{
-					npc.setScriptValue(2);
-					npc.doCast(EARTH_DEMOLITION.getSkill());
-					addSpawn(HELLS_GATE, npc.getX() + 100, npc.getY() + 50, npc.getZ(), npc.getHeading(), false, 0, false, world.getId());
-					getTimers().addTimer("stage_spawn_apostols", 2000, npc, attacker);
-				}
+					npc.setTarget(instPlayer);
+					npc.doCast(IMPRISION.getSkill());
+					getTimers().addTimer("imprission_minions", 4000, npc, instPlayer);
+				});
+				getTimers().addTimer("stage_last_send_minions", 2000, npc, null);
+			}
+			if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.25)) && npc.isScriptValue(1))
+			{
+				npc.setScriptValue(2);
+				npc.doCast(EARTH_DEMOLITION.getSkill());
+				addSpawn(HELLS_GATE, npc.getX() + 100, npc.getY() + 50, npc.getZ(), npc.getHeading(), false, 0, false, world.getId());
+				getTimers().addTimer("stage_spawn_apostols", 2000, npc, attacker);
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
@@ -252,18 +249,9 @@ public class BalokWarzone extends AbstractInstance
 	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		final Instance world = npc.getInstanceWorld();
-		if (isInInstance(world))
+		if (isInInstance(world) && (world != null) && (skill.getId() == DARKNESS_DRAIN.getSkillId()) && !_currentMinion.isDead())
 		{
-			if (world != null)
-			{
-				if (skill.getId() == DARKNESS_DRAIN.getSkillId())
-				{
-					if (!currentMinion.isDead())
-					{
-						balok.setCurrentHp(balok.getCurrentHp() + currentMinion.getMaxHp());
-					}
-				}
-			}
+			_balok.setCurrentHp(_balok.getCurrentHp() + _currentMinion.getMaxHp());
 		}
 		return super.onSpellFinished(npc, player, skill);
 	}
@@ -273,7 +261,7 @@ public class BalokWarzone extends AbstractInstance
 	{
 		final Instance world = npc.getInstanceWorld();
 		
-		if (npc == balok)
+		if (npc == _balok)
 		{
 			if (world.getAliveNpcs(BALOK).isEmpty())
 			{
@@ -287,21 +275,21 @@ public class BalokWarzone extends AbstractInstance
 				world.setReenterTime();
 			}
 		}
-		else if (npc == currentMinion)
+		else if (npc == _currentMinion)
 		{
-			synchronized (minionList)
+			synchronized (_minionList)
 			{
-				if (minionList.contains(npc))
+				if (_minionList.contains(npc))
 				{
-					minionList.remove(npc);
+					_minionList.remove(npc);
 					
-					if (minionList.size() > 0)
+					if (!_minionList.isEmpty())
 					{
 						startQuestTimer("stage_last_send_minions", 2000, npc, null);
 					}
 					else
 					{
-						balok.stopSkillEffects(INVINCIBILITY_ACTIVATION.getSkill());
+						_balok.stopSkillEffects(INVINCIBILITY_ACTIVATION.getSkill());
 					}
 				}
 			}

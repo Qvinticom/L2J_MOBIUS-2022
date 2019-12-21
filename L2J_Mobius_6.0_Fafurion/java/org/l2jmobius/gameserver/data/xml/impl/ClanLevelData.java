@@ -22,7 +22,7 @@ package org.l2jmobius.gameserver.data.xml.impl;
 public class ClanLevelData
 {
 	// TODO: Move to XML.
-	private final static int[] CLAN_LEVEL_REQUIREMENTS =
+	private static final int[] CLAN_LEVEL_REQUIREMENTS =
 	{
 		35000,
 		80000,
@@ -41,7 +41,7 @@ public class ClanLevelData
 		46410000,
 		0
 	};
-	private final static int[] COMMON_CLAN_MEMBER_LIMIT =
+	private static final int[] COMMON_CLAN_MEMBER_LIMIT =
 	{
 		10,
 		15,
@@ -60,7 +60,7 @@ public class ClanLevelData
 		145,
 		171
 	};
-	private final static int[] ELITE_CLAN_MEMBER_LIMIT =
+	private static final int[] ELITE_CLAN_MEMBER_LIMIT =
 	{
 		0,
 		0,

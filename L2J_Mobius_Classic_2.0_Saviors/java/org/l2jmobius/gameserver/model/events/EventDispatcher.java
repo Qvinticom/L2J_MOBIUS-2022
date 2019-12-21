@@ -226,7 +226,7 @@ public class EventDispatcher
 				{
 					continue;
 				}
-				else if ((callback == null) || rb.override()) // Let's check if this listener wants to override previous return object or we simply don't have one
+				if ((callback == null) || rb.override()) // Let's check if this listener wants to override previous return object or we simply don't have one
 				{
 					callback = rb;
 				}

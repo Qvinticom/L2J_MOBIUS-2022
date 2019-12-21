@@ -171,7 +171,7 @@ public class DimensionalWrap extends AbstractInstance
 					if (!player.isInParty())
 					{
 						_count = 12;
-						CheckCrystallCount(world, player, npc);
+						checkCrystallCount(world, npc);
 						break;
 					}
 					else if (player.isInParty() && !player.getParty().isLeader(player))
@@ -184,19 +184,19 @@ public class DimensionalWrap extends AbstractInstance
 						case 2:
 						{
 							_count = 6;
-							CheckCrystallCount(world, player, npc);
+							checkCrystallCount(world, npc);
 							break;
 						}
 						case 3:
 						{
 							_count = 4;
-							CheckCrystallCount(world, player, npc);
+							checkCrystallCount(world, npc);
 							break;
 						}
 						case 4:
 						{
 							_count = 3;
-							CheckCrystallCount(world, player, npc);
+							checkCrystallCount(world, npc);
 							break;
 						}
 					}
@@ -208,7 +208,7 @@ public class DimensionalWrap extends AbstractInstance
 					if (!player.isInParty())
 					{
 						_count = 240;
-						CheckCrystallCount(world, player, npc);
+						checkCrystallCount(world, npc);
 						break;
 					}
 					else if (player.isInParty() && !player.getParty().isLeader(player))
@@ -221,19 +221,19 @@ public class DimensionalWrap extends AbstractInstance
 						case 2:
 						{
 							_count = 120;
-							CheckCrystallCount(world, player, npc);
+							checkCrystallCount(world, npc);
 							break;
 						}
 						case 3:
 						{
 							_count = 80;
-							CheckCrystallCount(world, player, npc);
+							checkCrystallCount(world, npc);
 							break;
 						}
 						case 4:
 						{
 							_count = 60;
-							CheckCrystallCount(world, player, npc);
+							checkCrystallCount(world, npc);
 							break;
 						}
 					}
@@ -245,7 +245,7 @@ public class DimensionalWrap extends AbstractInstance
 					if (!player.isInParty())
 					{
 						_count = 1200;
-						CheckCrystallCount(world, player, npc);
+						checkCrystallCount(world, npc);
 						break;
 					}
 					else if (player.isInParty() && !player.getParty().isLeader(player))
@@ -258,19 +258,19 @@ public class DimensionalWrap extends AbstractInstance
 						case 2:
 						{
 							_count = 600;
-							CheckCrystallCount(world, player, npc);
+							checkCrystallCount(world, npc);
 							break;
 						}
 						case 3:
 						{
 							_count = 400;
-							CheckCrystallCount(world, player, npc);
+							checkCrystallCount(world, npc);
 							break;
 						}
 						case 4:
 						{
 							_count = 300;
-							CheckCrystallCount(world, player, npc);
+							checkCrystallCount(world, npc);
 							break;
 						}
 					}
@@ -514,7 +514,7 @@ public class DimensionalWrap extends AbstractInstance
 				}
 				case "CHANGE_LOCATION":
 				{
-					world.getAliveNpcs(TRAPS).forEach(t -> t.deleteMe());
+					world.getAliveNpcs(TRAPS).forEach(Npc::deleteMe);
 					world.spawnGroup(_worldState + "_trap_spawn");
 					startQuestTimer("CHANGE_LOCATION", 60000 - (_worldState * 1430), npc, null);
 					break;
@@ -526,7 +526,7 @@ public class DimensionalWrap extends AbstractInstance
 						world.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_SURROUNDING_ENERGY_HAS_DISSIPATED, ExShowScreenMessage.TOP_CENTER, 5000, true));
 						world.broadcastPacket(new Earthquake(npc, 50, 5));
 						world.openCloseDoor(world.getTemplateParameters().getInt(_worldState + "_st_door"), true);
-						Clean();
+						clean();
 						if (_worldState < 35)
 						{
 							startQuestTimer("NEXT_STAGE", 5000, npc, null);
@@ -581,7 +581,7 @@ public class DimensionalWrap extends AbstractInstance
 			{
 				world.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_INSTANCED_ZONE_WILL_CLOSE_SOON, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				world.finishInstance(3);
-				Clean();
+				clean();
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -626,7 +626,7 @@ public class DimensionalWrap extends AbstractInstance
 		return super.onSpawn(npc);
 	}
 	
-	public void CheckCrystallCount(Instance world, PlayerInstance player, Npc npc)
+	public void checkCrystallCount(Instance world, Npc npc)
 	{
 		boolean canStart = true;
 		for (PlayerInstance p : world.getPlayers())
@@ -656,7 +656,7 @@ public class DimensionalWrap extends AbstractInstance
 		}
 	}
 	
-	protected void Clean()
+	protected void clean()
 	{
 		cancelQuestTimers("SWITCH_STAGE");
 		cancelQuestTimers("SALAMANDRA_SPAWN");

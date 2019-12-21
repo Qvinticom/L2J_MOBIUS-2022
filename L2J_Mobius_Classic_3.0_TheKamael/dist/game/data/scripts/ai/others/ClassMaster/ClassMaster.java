@@ -62,6 +62,8 @@ import ai.AbstractNpcAI;
  */
 public class ClassMaster extends AbstractNpcAI implements IXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(ClassMaster.class.getName());
+	
 	// NPCs
 	private static final List<Integer> CLASS_MASTERS = new ArrayList<>();
 	static
@@ -73,7 +75,6 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 	private boolean _isEnabled;
 	private boolean _spawnClassMasters;
 	private boolean _showPopupWindow;
-	private static final Logger LOGGER = Logger.getLogger(ClassMaster.class.getName());
 	private final List<ClassChangeData> _classChangeData = new LinkedList<>();
 	
 	public ClassMaster()
@@ -329,15 +330,12 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 						classDataIndex = Integer.parseInt(st.nextToken());
 					}
 					
-					if (checkIfClassChangeHasOptions(player))
+					if (checkIfClassChangeHasOptions(player) && (classDataIndex == -1))
 					{
-						if (classDataIndex == -1)
-						{
-							htmltext = getHtm(player, "cc_options.html");
-							htmltext = htmltext.replace("%name%", ClassListData.getInstance().getClass(classId).getClassName()); // getEscapedClientCode());
-							htmltext = htmltext.replace("%options%", getClassChangeOptions(player, classId));
-							return htmltext;
-						}
+						htmltext = getHtm(player, "cc_options.html");
+						htmltext = htmltext.replace("%name%", ClassListData.getInstance().getClass(classId).getClassName()); // getEscapedClientCode());
+						htmltext = htmltext.replace("%options%", getClassChangeOptions(player, classId));
+						return htmltext;
 					}
 					
 					final ClassChangeData data = getClassChangeData(classDataIndex);
@@ -902,7 +900,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 		for (int i = 0; i < _classChangeData.size(); i++)
 		{
 			final ClassChangeData option = getClassChangeData(i);
-			if ((option == null) || !option.getCategories().stream().anyMatch(ct -> player.isInCategory(ct)))
+			if ((option == null) || option.getCategories().stream().noneMatch(player::isInCategory))
 			{
 				continue;
 			}
@@ -918,10 +916,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 			}
 			else
 			{
-				option.getItemsRequired().forEach(ih ->
-				{
-					sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemTable.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30></td></tr>");
-				});
+				option.getItemsRequired().forEach(ih -> sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemTable.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30></td></tr>"));
 			}
 			sb.append("<tr><td>Rewards:</td></tr>");
 			if (option.getItemsRewarded().isEmpty())
@@ -943,10 +938,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 			}
 			else
 			{
-				option.getItemsRewarded().forEach(ih ->
-				{
-					sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemTable.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30></td></tr>");
-				});
+				option.getItemsRewarded().forEach(ih -> sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemTable.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30></td></tr>"));
 				
 				if (option.isRewardNoblesse())
 				{

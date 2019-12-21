@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExBuySellList extends AbstractItemPacket
 {
-	private Collection<ItemInstance> _sellList;
+	private final Collection<ItemInstance> _sellList;
 	private Collection<ItemInstance> _refundList = null;
 	private final boolean _done;
 	private final int _inventorySlots;
@@ -39,7 +39,7 @@ public class ExBuySellList extends AbstractItemPacket
 	{
 		final Summon pet = player.getPet();
 		_sellList = player.getInventory().getItems(item -> !item.isEquipped() && item.isSellable() && ((pet == null) || (item.getObjectId() != pet.getControlObjectId())));
-		_inventorySlots = player.getInventory().getItems((item) -> !item.isQuestItem()).size();
+		_inventorySlots = player.getInventory().getItems(item -> !item.isQuestItem()).size();
 		if (player.hasRefund())
 		{
 			_refundList = player.getRefund().getItems();
@@ -69,13 +69,13 @@ public class ExBuySellList extends AbstractItemPacket
 				writeItem(packet, item);
 				packet.writeQ((long) ((item.getItem().getReferencePrice() / 2) * _castleTaxRate));
 			}
-		} 
+		}
 		else
 		{
 			packet.writeH(0x00);
 		}
 		
-		if ((_refundList != null) && !_refundList.isEmpty()) 
+		if ((_refundList != null) && !_refundList.isEmpty())
 		{
 			packet.writeH(_refundList.size());
 			int i = 0;

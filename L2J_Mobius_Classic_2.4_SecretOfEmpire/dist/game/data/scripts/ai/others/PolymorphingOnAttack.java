@@ -86,23 +86,20 @@ public class PolymorphingOnAttack extends AbstractNpcAI
 		if (npc.isSpawned() && !npc.isDead())
 		{
 			final List<Integer> tmp = MOBSPAWNS.get(npc.getId());
-			if (tmp != null)
+			if ((tmp != null) && (npc.getCurrentHp() <= ((npc.getMaxHp() * tmp.get(1)) / 100.0)) && (getRandom(100) < tmp.get(2)))
 			{
-				if ((npc.getCurrentHp() <= ((npc.getMaxHp() * tmp.get(1)) / 100.0)) && (getRandom(100) < tmp.get(2)))
+				if (tmp.get(3) >= 0)
 				{
-					if (tmp.get(3) >= 0)
-					{
-						final NpcStringId npcString = MOBTEXTS[tmp.get(3)][getRandom(MOBTEXTS[tmp.get(3)].length)];
-						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getName(), npcString));
-						
-					}
-					npc.deleteMe();
-					final Attackable newNpc = (Attackable) addSpawn(tmp.get(0), npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
-					final Creature originalAttacker = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : attacker;
-					newNpc.setRunning();
-					newNpc.addDamageHate(originalAttacker, 0, 500);
-					newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalAttacker);
+					final NpcStringId npcString = MOBTEXTS[tmp.get(3)][getRandom(MOBTEXTS[tmp.get(3)].length)];
+					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getName(), npcString));
+					
 				}
+				npc.deleteMe();
+				final Attackable newNpc = (Attackable) addSpawn(tmp.get(0), npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
+				final Creature originalAttacker = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : attacker;
+				newNpc.setRunning();
+				newNpc.addDamageHate(originalAttacker, 0, 500);
+				newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalAttacker);
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);

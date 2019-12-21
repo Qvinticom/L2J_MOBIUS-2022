@@ -73,7 +73,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		String cmd = "";
-		String params = "";
+		StringBuilder params = new StringBuilder();
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		
 		if (st.hasMoreTokens())
@@ -83,14 +83,14 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 		
 		while (st.hasMoreTokens())
 		{
-			params += st.nextToken() + (st.hasMoreTokens() ? " " : "");
+			params.append(st.nextToken() + (st.hasMoreTokens() ? " " : ""));
 		}
 		
 		if (cmd.isEmpty())
 		{
 			return false;
 		}
-		return useBypass(cmd, player, params);
+		return useBypass(cmd, player, params.toString());
 	}
 	
 	@Override
@@ -130,11 +130,12 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 				}
 				else
 				{
-					String title = "BUFF SELL: ";
+					StringBuilder title = new StringBuilder();
+					title.append("BUFF SELL: ");
 					final StringTokenizer st = new StringTokenizer(params, " ");
 					while (st.hasMoreTokens())
 					{
-						title += st.nextToken() + " ";
+						title.append(st.nextToken() + " ");
 					}
 					
 					if (title.length() > 40)
@@ -143,7 +144,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						return false;
 					}
 					
-					SellBuffsManager.getInstance().startSellBuffs(player, title);
+					SellBuffsManager.getInstance().startSellBuffs(player, title.toString());
 				}
 				break;
 			}

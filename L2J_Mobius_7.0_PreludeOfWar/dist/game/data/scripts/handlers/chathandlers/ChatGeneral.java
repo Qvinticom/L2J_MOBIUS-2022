@@ -45,7 +45,7 @@ public class ChatGeneral implements IChatHandler
 	@Override
 	public void handleChat(ChatType type, PlayerInstance activeChar, String params, String text)
 	{
-		boolean vcd_used = false;
+		boolean vcdUsed = false;
 		if (text.startsWith("."))
 		{
 			final StringTokenizer st = new StringTokenizer(text);
@@ -65,15 +65,15 @@ public class ChatGeneral implements IChatHandler
 			if (vch != null)
 			{
 				vch.useVoicedCommand(command, activeChar, params);
-				vcd_used = true;
+				vcdUsed = true;
 			}
 			else
 			{
-				vcd_used = false;
+				vcdUsed = false;
 			}
 		}
 		
-		if (!vcd_used)
+		if (!vcdUsed)
 		{
 			if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
 			{

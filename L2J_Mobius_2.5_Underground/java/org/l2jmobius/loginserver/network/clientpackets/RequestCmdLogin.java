@@ -44,9 +44,6 @@ public class RequestCmdLogin implements IIncomingPacket<LoginClient>
 	
 	private final byte[] _raw = new byte[128];
 	
-	private String _user;
-	private String _password;
-	
 	@Override
 	public boolean read(LoginClient client, PacketReader packet)
 	{
@@ -80,10 +77,12 @@ public class RequestCmdLogin implements IIncomingPacket<LoginClient>
 			return;
 		}
 		
+		String user;
+		String password;
 		try
 		{
-			_user = new String(decrypted, 0x40, 14).trim();
-			_password = new String(decrypted, 0x60, 16).trim();
+			user = new String(decrypted, 0x40, 14).trim();
+			password = new String(decrypted, 0x60, 16).trim();
 		}
 		catch (Exception e)
 		{
@@ -93,7 +92,7 @@ public class RequestCmdLogin implements IIncomingPacket<LoginClient>
 		
 		final InetAddress clientAddr = client.getConnectionAddress();
 		final LoginController lc = LoginController.getInstance();
-		final AccountInfo info = lc.retriveAccountInfo(clientAddr, _user, _password);
+		final AccountInfo info = lc.retriveAccountInfo(clientAddr, user, password);
 		if (info == null)
 		{
 			// user or pass wrong

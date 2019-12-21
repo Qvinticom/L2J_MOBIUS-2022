@@ -170,9 +170,8 @@ public class CommonUtil
 	 * @param hour the hour
 	 * @param min the min
 	 * @return the next or same date from the days of week at specified time
-	 * @throws IllegalArgumentException if the {@code daysOfWeek Array} is empty.
 	 */
-	public static LocalDateTime getNextClosestDateTime(DayOfWeek[] daysOfWeek, int hour, int min) throws IllegalArgumentException
+	public static LocalDateTime getNextClosestDateTime(DayOfWeek[] daysOfWeek, int hour, int min)
 	{
 		return getNextClosestDateTime(Arrays.asList(daysOfWeek), hour, min);
 	}
@@ -183,9 +182,8 @@ public class CommonUtil
 	 * @param hour the hour
 	 * @param min the min
 	 * @return the next or same date from the days of week at specified time
-	 * @throws IllegalArgumentException if the {@code daysOfWeek List} is empty.
 	 */
-	public static LocalDateTime getNextClosestDateTime(List<DayOfWeek> daysOfWeek, int hour, int min) throws IllegalArgumentException
+	public static LocalDateTime getNextClosestDateTime(List<DayOfWeek> daysOfWeek, int hour, int min)
 	{
 		if (daysOfWeek.isEmpty())
 		{

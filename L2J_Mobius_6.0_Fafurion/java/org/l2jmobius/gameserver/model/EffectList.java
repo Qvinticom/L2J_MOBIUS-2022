@@ -65,17 +65,17 @@ public class EffectList
 {
 	private static final Logger LOGGER = Logger.getLogger(EffectList.class.getName());
 	/** Queue containing all effects from buffs for this effect list. */
-	private volatile Queue<BuffInfo> _actives = new ConcurrentLinkedQueue<>();
+	private final Queue<BuffInfo> _actives = new ConcurrentLinkedQueue<>();
 	/** List containing all passives for this effect list. They bypass most of the actions and they are not included in most operations. */
-	private volatile Set<BuffInfo> _passives = ConcurrentHashMap.newKeySet();
+	private final Set<BuffInfo> _passives = ConcurrentHashMap.newKeySet();
 	/** List containing all options for this effect list. They bypass most of the actions and they are not included in most operations. */
-	private volatile Set<BuffInfo> _options = ConcurrentHashMap.newKeySet();
+	private final Set<BuffInfo> _options = ConcurrentHashMap.newKeySet();
 	/** Map containing the all stacked effect in progress for each {@code AbnormalType}. */
-	private volatile Set<AbnormalType> _stackedEffects = EnumSet.noneOf(AbnormalType.class);
+	private Set<AbnormalType> _stackedEffects = EnumSet.noneOf(AbnormalType.class);
 	/** Set containing all {@code AbnormalType}s that shouldn't be added to this creature effect list. */
-	private volatile Set<AbnormalType> _blockedAbnormalTypes = EnumSet.noneOf(AbnormalType.class);
+	private final Set<AbnormalType> _blockedAbnormalTypes = EnumSet.noneOf(AbnormalType.class);
 	/** Set containing all abnormal visual effects this creature currently displays. */
-	private volatile Set<AbnormalVisualEffect> _abnormalVisualEffects = EnumSet.noneOf(AbnormalVisualEffect.class);
+	private Set<AbnormalVisualEffect> _abnormalVisualEffects = EnumSet.noneOf(AbnormalVisualEffect.class);
 	/** Short buff skill ID. */
 	private BuffInfo _shortBuff = null;
 	/** Count of specific types of buffs. */
@@ -556,6 +556,7 @@ public class EffectList
 					{
 						return true;
 					}
+					break;
 				}
 				case DANCE:
 				{
@@ -563,6 +564,7 @@ public class EffectList
 					{
 						return true;
 					}
+					break;
 				}
 				// case TOGGLE: Do toggles have limit?
 				case DEBUFF:
@@ -571,6 +573,7 @@ public class EffectList
 					{
 						return true;
 					}
+					break;
 				}
 				case BUFF:
 				{
@@ -578,6 +581,7 @@ public class EffectList
 					{
 						return true;
 					}
+					break;
 				}
 			}
 		}
@@ -809,12 +813,9 @@ public class EffectList
 		if (skill.isTriggeredSkill())
 		{
 			final BuffInfo triggerInfo = info.getEffected().getEffectList().getBuffInfoBySkillId(skill.getId());
-			if (triggerInfo != null)
+			if ((triggerInfo != null) && (triggerInfo.getSkill().getLevel() >= skill.getLevel()))
 			{
-				if (triggerInfo.getSkill().getLevel() >= skill.getLevel())
-				{
-					return;
-				}
+				return;
 			}
 		}
 		
@@ -853,12 +854,10 @@ public class EffectList
 				if ((skill.getAbnormalType().isNone() && (existingSkill.getId() == skill.getId())) || (!skill.getAbnormalType().isNone() && (existingSkill.getAbnormalType() == skill.getAbnormalType())))
 				{
 					// Check if there is subordination abnormal. Skills with subordination abnormal stack with each other, unless the caster is the same.
-					if (!skill.getSubordinationAbnormalType().isNone() && (skill.getSubordinationAbnormalType() == existingSkill.getSubordinationAbnormalType()))
+					if (!skill.getSubordinationAbnormalType().isNone() && (skill.getSubordinationAbnormalType() == existingSkill.getSubordinationAbnormalType()) //
+						&& ((info.getEffectorObjectId() == 0) || (existingInfo.getEffectorObjectId() == 0) || (info.getEffectorObjectId() != existingInfo.getEffectorObjectId())))
 					{
-						if ((info.getEffectorObjectId() == 0) || (existingInfo.getEffectorObjectId() == 0) || (info.getEffectorObjectId() != existingInfo.getEffectorObjectId()))
-						{
-							continue;
-						}
+						continue;
 					}
 					
 					// The effect we are adding overrides the existing effect. Delete or disable the existing effect.

@@ -44,7 +44,6 @@ import org.l2jmobius.gameserver.util.Broadcast;
  */
 public class AdminEventEngine implements IAdminCommandHandler
 {
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_event",
@@ -128,11 +127,8 @@ public class AdminEventEngine implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
-					
 					e.printStackTrace();
-					
 				}
-				
 			}
 			else if (actualCommand.startsWith("admin_event_del"))
 			{
@@ -214,9 +210,9 @@ public class AdminEventEngine implements IAdminCommandHandler
 				activeChar.sendMessage(GameEvent.startEventParticipation());
 				Broadcast.toAllOnlinePlayers(activeChar.getName() + " has started an event. You will find a participation NPC somewhere around you.");
 				
-				final PlaySound _snd = new PlaySound(1, "B03_F", 0, 0, 0, 0, 0);
-				activeChar.sendPacket(_snd);
-				activeChar.broadcastPacket(_snd);
+				final PlaySound snd = new PlaySound(1, "B03_F", 0, 0, 0, 0, 0);
+				activeChar.sendPacket(snd);
+				activeChar.broadcastPacket(snd);
 				
 				final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 				
@@ -374,7 +370,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
 			AdminData.getInstance().broadcastMessageToGMs("EventEngine: Error! Possible blank boxes while executing a command which requires a value in the box?");
 		}
 		return true;

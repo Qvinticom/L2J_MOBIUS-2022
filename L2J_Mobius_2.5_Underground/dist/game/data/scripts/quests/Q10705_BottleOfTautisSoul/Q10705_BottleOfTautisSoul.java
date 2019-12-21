@@ -105,16 +105,16 @@ public class Q10705_BottleOfTautisSoul extends Quest
 				if (getQuestItemsCount(player, BOTTLE_OF_TAUTIS_SOUL) >= 1)
 				{
 					htmltext = "33681-01.html";
-					break;
 				}
+				break;
 			}
 			case State.STARTED:
 			{
 				if (qs.isCond(1))
 				{
 					htmltext = "33681-05.html";
-					break;
 				}
+				break;
 			}
 			case State.COMPLETED:
 			{

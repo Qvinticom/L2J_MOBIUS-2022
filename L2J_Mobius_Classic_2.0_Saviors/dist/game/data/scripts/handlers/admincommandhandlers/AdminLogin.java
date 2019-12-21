@@ -233,18 +233,12 @@ public class AdminLogin implements IAdminCommandHandler
 		return nameType;
 	}
 	
-	/**
-	 *
-	 */
 	private void allowToAll()
 	{
 		LoginServerThread.getInstance().setServerStatus(ServerStatus.STATUS_AUTO);
 		Config.SERVER_GMONLY = false;
 	}
 	
-	/**
-	 *
-	 */
 	private void gmOnly()
 	{
 		LoginServerThread.getInstance().setServerStatus(ServerStatus.STATUS_GM_ONLY);

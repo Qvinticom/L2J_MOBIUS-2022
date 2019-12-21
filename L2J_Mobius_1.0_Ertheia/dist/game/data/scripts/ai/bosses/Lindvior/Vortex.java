@@ -162,7 +162,7 @@ public class Vortex extends AbstractNpcAI
 			{
 				return;
 			}
-			if (players.size() > 0)
+			if (!players.isEmpty())
 			{
 				addAttackPlayerDesire(npc, players.stream().findAny().get());
 			}

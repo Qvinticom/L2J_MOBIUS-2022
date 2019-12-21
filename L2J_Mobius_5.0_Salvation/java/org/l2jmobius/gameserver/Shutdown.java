@@ -209,6 +209,7 @@ public class Shutdown extends Thread
 			}
 			catch (Throwable t)
 			{
+				// ignore
 			}
 			
 			// Backup database.
@@ -400,7 +401,7 @@ public class Shutdown extends Thread
 				Thread.sleep(delay);
 			}
 		}
-		catch (InterruptedException e)
+		catch (Exception e)
 		{
 			// this will never happen
 		}
@@ -488,9 +489,9 @@ public class Shutdown extends Thread
 		{
 			Thread.sleep(5000);
 		}
-		catch (InterruptedException e)
+		catch (Exception e)
 		{
-			// never happens :p
+			// this will never happen
 		}
 	}
 	

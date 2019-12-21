@@ -72,31 +72,22 @@ public class Relax extends AbstractEffect
 			return false;
 		}
 		
-		if (effected.isPlayer())
+		if (effected.isPlayer() && !effected.getActingPlayer().isSitting())
 		{
-			if (!effected.getActingPlayer().isSitting())
-			{
-				return false;
-			}
+			return false;
 		}
 		
-		if ((effected.getCurrentHp() + 1) > effected.getMaxRecoverableHp())
+		if (((effected.getCurrentHp() + 1) > effected.getMaxRecoverableHp()) && skill.isToggle())
 		{
-			if (skill.isToggle())
-			{
-				effected.sendPacket(SystemMessageId.THAT_SKILL_HAS_BEEN_DE_ACTIVATED_AS_HP_WAS_FULLY_RECOVERED);
-				return false;
-			}
+			effected.sendPacket(SystemMessageId.THAT_SKILL_HAS_BEEN_DE_ACTIVATED_AS_HP_WAS_FULLY_RECOVERED);
+			return false;
 		}
 		
 		final double manaDam = _power * getTicksMultiplier();
-		if (manaDam > effected.getCurrentMp())
+		if ((manaDam > effected.getCurrentMp()) && skill.isToggle())
 		{
-			if (skill.isToggle())
-			{
-				effected.sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
-				return false;
-			}
+			effected.sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
+			return false;
 		}
 		
 		effected.reduceCurrentMp(manaDam);

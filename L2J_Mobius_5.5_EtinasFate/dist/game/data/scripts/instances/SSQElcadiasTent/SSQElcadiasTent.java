@@ -51,15 +51,15 @@ public class SSQElcadiasTent extends AbstractInstance
 	{
 		if (npc.getId() == GRUFF_LOOKING_MAN)
 		{
-			final QuestState GirlOfDoubt = talker.getQuestState(Q10292_SevenSignsGirlOfDoubt.class.getSimpleName());
-			final QuestState ForbiddenBook = talker.getQuestState(Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName());
-			final QuestState Monastery = talker.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName());
-			final QuestState PowerOfSeal = talker.getQuestState(Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.class.getSimpleName());
-			if (((GirlOfDoubt != null) && GirlOfDoubt.isStarted()) //
-				|| ((GirlOfDoubt != null) && GirlOfDoubt.isCompleted() && (ForbiddenBook == null)) //
-				|| ((ForbiddenBook != null) && ForbiddenBook.isStarted()) //
-				|| ((ForbiddenBook != null) && ForbiddenBook.isCompleted() && (Monastery == null)) //
-				|| ((PowerOfSeal != null) && PowerOfSeal.isStarted()))
+			final QuestState girlOfDoubt = talker.getQuestState(Q10292_SevenSignsGirlOfDoubt.class.getSimpleName());
+			final QuestState forbiddenBook = talker.getQuestState(Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName());
+			final QuestState monastery = talker.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName());
+			final QuestState powerOfSeal = talker.getQuestState(Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.class.getSimpleName());
+			if (((girlOfDoubt != null) && girlOfDoubt.isStarted()) //
+				|| ((girlOfDoubt != null) && girlOfDoubt.isCompleted() && (forbiddenBook == null)) //
+				|| ((forbiddenBook != null) && forbiddenBook.isStarted()) //
+				|| ((forbiddenBook != null) && forbiddenBook.isCompleted() && (monastery == null)) //
+				|| ((powerOfSeal != null) && powerOfSeal.isStarted()))
 			{
 				enterInstance(talker, npc, TEMPLATE_ID);
 			}

@@ -34,10 +34,10 @@ import org.l2jmobius.gameserver.model.StatsSet;
  */
 public class SendMessageLocalisationData implements IXmlReader
 {
-	private final static Logger LOGGER = Logger.getLogger(SendMessageLocalisationData.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SendMessageLocalisationData.class.getName());
 	
-	private final static String SPLIT_STRING = "XXX";
-	private final static Map<String, Map<String[], String[]>> SEND_MESSAGE_LOCALISATIONS = new ConcurrentHashMap<>();
+	private static final String SPLIT_STRING = "XXX";
+	private static final Map<String, Map<String[], String[]>> SEND_MESSAGE_LOCALISATIONS = new ConcurrentHashMap<>();
 	private static String _lang;
 	
 	protected SendMessageLocalisationData()

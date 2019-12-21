@@ -80,14 +80,11 @@ public class PetFood implements IItemHandler
 				if (player.isMounted())
 				{
 					final List<Integer> foodIds = PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood();
-					if (foodIds.contains(item.getId()))
+					if (foodIds.contains(item.getId()) && player.destroyItem("Consume", item.getObjectId(), 1, null, false))
 					{
-						if (player.destroyItem("Consume", item.getObjectId(), 1, null, false))
-						{
-							player.broadcastPacket(new MagicSkillUse(player, player, skillId, skillLevel, 0, 0));
-							skill.applyEffects(player, player);
-							return true;
-						}
+						player.broadcastPacket(new MagicSkillUse(player, player, skillId, skillLevel, 0, 0));
+						skill.applyEffects(player, player);
+						return true;
 					}
 				}
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);

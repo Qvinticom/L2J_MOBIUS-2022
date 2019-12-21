@@ -212,7 +212,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		else if (command.startsWith("admin_removereuse"))
 		{
 			final StringTokenizer st = new StringTokenizer(command, " ");
-			command = st.nextToken();
+			st.nextToken();
 			
 			PlayerInstance player = null;
 			if (st.hasMoreTokens())

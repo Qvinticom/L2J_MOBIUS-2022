@@ -198,6 +198,7 @@ public class Q00842_CaptiveDemons extends Quest
 			case State.CREATED:
 			{
 				htmltext = "34219-01.htm";
+				// fallthrough?
 			}
 			case State.STARTED:
 			{

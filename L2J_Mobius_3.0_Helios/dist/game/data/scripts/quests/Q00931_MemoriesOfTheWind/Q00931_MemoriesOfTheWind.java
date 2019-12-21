@@ -208,6 +208,7 @@ public class Q00931_MemoriesOfTheWind extends Quest
 			case State.CREATED:
 			{
 				htmltext = "34055-01.htm";
+				// fallthrough?
 			}
 			case State.STARTED:
 			{

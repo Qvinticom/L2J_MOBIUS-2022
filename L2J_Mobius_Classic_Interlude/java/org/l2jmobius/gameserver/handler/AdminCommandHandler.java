@@ -73,7 +73,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 		String command = adminCommand;
 		if (adminCommand.contains(" "))
 		{
-			command = adminCommand.substring(0, adminCommand.indexOf(" "));
+			command = adminCommand.substring(0, adminCommand.indexOf(' '));
 		}
 		return _datatable.get(command);
 	}
@@ -135,13 +135,10 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 				finally
 				{
 					final long runtime = System.currentTimeMillis() - begin;
-					
-					if (runtime < 5000)
+					if (runtime > 5000)
 					{
-						return;
+						player.sendMessage("The execution of '" + fullCommand + "' took " + TimeAmountInterpreter.consolidateMillis(runtime) + ".");
 					}
-					
-					player.sendMessage("The execution of '" + fullCommand + "' took " + TimeAmountInterpreter.consolidateMillis(runtime) + ".");
 				}
 			});
 		}

@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.impl.BeautyShopData;
@@ -87,11 +88,11 @@ public class ExBeautyItemList implements IClientOutgoingPacket
 		
 		packet.writeD(COLOR_TYPE);
 		packet.writeD(_colorCount);
-		for (int hairId : _colorData.keySet())
+		for (Entry<Integer, List<BeautyItem>> entry : _colorData.entrySet())
 		{
-			for (BeautyItem color : _colorData.get(hairId))
+			for (BeautyItem color : entry.getValue())
 			{
-				packet.writeD(hairId);
+				packet.writeD(entry.getKey());
 				packet.writeD(color.getId());
 				packet.writeD(color.getAdena());
 				packet.writeD(color.getResetAdena());

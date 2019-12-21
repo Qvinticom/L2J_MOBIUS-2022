@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.GameClient;
  */
 public class RequestChangeNicknameColor implements IClientIncomingPacket
 {
-	private static final int COLORS[] =
+	private static final int[] COLORS =
 	{
 		0x9393FF, // Pink
 		0x7C49FC, // Rose Pink

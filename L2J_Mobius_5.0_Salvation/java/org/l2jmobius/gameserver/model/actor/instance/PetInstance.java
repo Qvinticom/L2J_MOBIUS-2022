@@ -997,7 +997,7 @@ public class PetInstance extends Summon
 			ps1.setInt(1, _controlObjectId);
 			ps1.execute();
 			
-			int buff_index = 0;
+			int buffIndex = 0;
 			
 			final Set<Long> storedSkills = new HashSet<>();
 			
@@ -1047,7 +1047,7 @@ public class PetInstance extends Summon
 					ps2.setInt(3, skill.getLevel());
 					ps2.setInt(4, skill.getSubLevel());
 					ps2.setInt(5, info.getTime());
-					ps2.setInt(6, ++buff_index);
+					ps2.setInt(6, ++buffIndex);
 					ps2.addBatch();
 					
 					SummonEffectsTable.getInstance().getPetEffects().computeIfAbsent(getControlObjectId(), k -> ConcurrentHashMap.newKeySet()).add(new SummonEffect(skill, info.getTime()));
@@ -1100,16 +1100,14 @@ public class PetInstance extends Summon
 		}
 		finally
 		{
-			if (SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId()) == null)
+			if (SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId()) != null)
 			{
-				return;
-			}
-			
-			for (SummonEffect se : SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId()))
-			{
-				if (se != null)
+				for (SummonEffect se : SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId()))
 				{
-					se.getSkill().applyEffects(this, this, false, se.getEffectCurTime());
+					if (se != null)
+					{
+						se.getSkill().applyEffects(this, this, false, se.getEffectCurTime());
+					}
 				}
 			}
 		}
@@ -1189,11 +1187,11 @@ public class PetInstance extends Summon
 	{
 		if (getId() == 12564) // TODO: Remove this stupid hardcode.
 		{
-			getStat().addExpAndSp(addToExp * Config.SINEATER_XP_RATE, addToSp);
+			getStat().addExpAndSp(addToExp * Config.SINEATER_XP_RATE);
 		}
 		else
 		{
-			getStat().addExpAndSp(addToExp * Config.PET_XP_RATE, addToSp);
+			getStat().addExpAndSp(addToExp * Config.PET_XP_RATE);
 		}
 	}
 	

@@ -707,13 +707,10 @@ public class LastImperialTomb extends AbstractInstance
 				startQuestTimer("SCARLET_SECOND_MORPH", 1000, npc, null, false);
 			}
 		}
-		if (skill != null)
+		// When Dewdrop of Destruction is used on Portraits they suicide.
+		if ((skill != null) && CommonUtil.contains(PORTRAITS, npc.getId()) && (skill.getId() == DEWDROP_OF_DESTRUCTION_SKILL_ID))
 		{
-			// When Dewdrop of Destruction is used on Portraits they suicide.
-			if (CommonUtil.contains(PORTRAITS, npc.getId()) && (skill.getId() == DEWDROP_OF_DESTRUCTION_SKILL_ID))
-			{
-				npc.doDie(attacker);
-			}
+			npc.doDie(attacker);
 		}
 		return null;
 	}

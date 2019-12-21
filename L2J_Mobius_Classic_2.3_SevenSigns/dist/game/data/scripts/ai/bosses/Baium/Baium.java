@@ -119,6 +119,7 @@ public class Baium extends AbstractNpcAI
 			case WAITING:
 			{
 				setStatus(ALIVE);
+				// fallthrough
 			}
 			case ALIVE:
 			{
@@ -301,11 +302,11 @@ public class Baium extends AbstractNpcAI
 				}
 				else
 				{
-					for (Creature creature : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 2000))
+					for (PlayerInstance creature : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 2000))
 					{
 						if (zone.isInsideZone(creature) && !creature.isDead())
 						{
-							addAttackPlayerDesire(npc, (Playable) creature);
+							addAttackPlayerDesire(npc, creature);
 							break;
 						}
 					}
@@ -487,13 +488,10 @@ public class Baium extends AbstractNpcAI
 		
 		if (npc.getId() == BAIUM)
 		{
-			if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()))
+			if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()) && !npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
 			{
-				if (!npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
-				{
-					npc.setTarget(attacker);
-					npc.doCast(ANTI_STRIDER.getSkill());
-				}
+				npc.setTarget(attacker);
+				npc.doCast(ANTI_STRIDER.getSkill());
 			}
 			
 			if (skill == null)

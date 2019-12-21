@@ -27,6 +27,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 /**
@@ -228,7 +229,7 @@ public class CronParser
 	 */
 	public static TaskTable parse(InputStream stream) throws IOException
 	{
-		return parse(new InputStreamReader(stream, "UTF-8"));
+		return parse(new InputStreamReader(stream, StandardCharsets.UTF_8));
 	}
 	
 	/**
@@ -258,7 +259,6 @@ public class CronParser
 				catch (Exception e)
 				{
 					e.printStackTrace();
-					continue;
 				}
 			}
 		}
@@ -302,7 +302,7 @@ public class CronParser
 		size = line.length();
 		// Splitting the line
 		ArrayList<String> splitted = new ArrayList<>();
-		StringBuffer current = null;
+		StringBuilder current = null;
 		boolean quotes = false;
 		for (int i = 0; i < size; i++)
 		{
@@ -311,12 +311,12 @@ public class CronParser
 			{
 				if (c == '"')
 				{
-					current = new StringBuffer();
+					current = new StringBuilder();
 					quotes = true;
 				}
 				else if (c > ' ')
 				{
-					current = new StringBuffer();
+					current = new StringBuilder();
 					current.append(c);
 					quotes = false;
 				}
@@ -521,73 +521,70 @@ public class CronParser
 	private static String escape(String str)
 	{
 		int size = str.length();
-		StringBuffer b = new StringBuffer();
+		StringBuilder b = new StringBuilder();
 		for (int i = 0; i < size; i++)
 		{
 			int skip = 0;
 			char c = str.charAt(i);
-			if (c == '\\')
+			if ((c == '\\') && (i < (size - 1)))
 			{
-				if (i < (size - 1))
+				char d = str.charAt(i + 1);
+				if (d == '"')
 				{
-					char d = str.charAt(i + 1);
-					if (d == '"')
+					b.append('"');
+					skip = 2;
+				}
+				else if (d == '\\')
+				{
+					b.append('\\');
+					skip = 2;
+				}
+				else if (d == '/')
+				{
+					b.append('/');
+					skip = 2;
+				}
+				else if (d == 'b')
+				{
+					b.append('\b');
+					skip = 2;
+				}
+				else if (d == 'f')
+				{
+					b.append('\f');
+					skip = 2;
+				}
+				else if (d == 'n')
+				{
+					b.append('\n');
+					skip = 2;
+				}
+				else if (d == 'r')
+				{
+					b.append('\r');
+					skip = 2;
+				}
+				else if (d == 't')
+				{
+					b.append('\t');
+					skip = 2;
+				}
+				else if (d == 'u')
+				{
+					if (i < (size - 5))
 					{
-						b.append('"');
-						skip = 2;
-					}
-					else if (d == '\\')
-					{
-						b.append('\\');
-						skip = 2;
-					}
-					else if (d == '/')
-					{
-						b.append('/');
-						skip = 2;
-					}
-					else if (d == 'b')
-					{
-						b.append('\b');
-						skip = 2;
-					}
-					else if (d == 'f')
-					{
-						b.append('\f');
-						skip = 2;
-					}
-					else if (d == 'n')
-					{
-						b.append('\n');
-						skip = 2;
-					}
-					else if (d == 'r')
-					{
-						b.append('\r');
-						skip = 2;
-					}
-					else if (d == 't')
-					{
-						b.append('\t');
-						skip = 2;
-					}
-					else if (d == 'u')
-					{
-						if (i < (size - 5))
+						String hex = str.substring(i + 2, i + 6);
+						try
 						{
-							String hex = str.substring(i + 2, i + 6);
-							try
+							int code = Integer.parseInt(hex, 16);
+							if (code >= 0)
 							{
-								int code = Integer.parseInt(hex, 16);
-								if (code >= 0)
-								{
-									b.append((char) code);
-									skip = 6;
-								}
+								b.append((char) code);
+								skip = 6;
 							}
-							catch (NumberFormatException e)
-							{
-							}
+						}
+						catch (NumberFormatException e)
+						{
 						}
 					}
 				}

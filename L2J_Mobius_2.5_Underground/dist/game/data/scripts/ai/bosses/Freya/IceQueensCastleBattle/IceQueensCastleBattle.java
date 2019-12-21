@@ -622,10 +622,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 						final Attackable mob = (Attackable) npc;
 						mob.clearAggroList();
 						
-						World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, characters ->
-						{
-							mob.addDamageHate(characters, 0, getRandom(10000, 20000));
-						});
+						World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, characters -> mob.addDamageHate(characters, 0, getRandom(10000, 20000)));
 						startQuestTimer("LEADER_RANDOMIZE", 25000, npc, null);
 						break;
 					}
@@ -762,13 +759,10 @@ public class IceQueensCastleBattle extends AbstractInstance
 					}
 					else
 					{
-						if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()) && !npc.isCastingNow(SkillCaster::isAnyNormalType))
+						if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()) && !npc.isCastingNow(SkillCaster::isAnyNormalType) && !npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
 						{
-							if (!npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
-							{
-								npc.setTarget(attacker);
-								npc.doCast(ANTI_STRIDER.getSkill());
-							}
+							npc.setTarget(attacker);
+							npc.doCast(ANTI_STRIDER.getSkill());
 						}
 						
 						final Creature mostHated = ((Attackable) npc).getMostHated();
@@ -846,13 +840,10 @@ public class IceQueensCastleBattle extends AbstractInstance
 						startQuestTimer("SPAWN_SUPPORT", 27000, controller, null);
 					}
 					
-					if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()) && !npc.isCastingNow(SkillCaster::isAnyNormalType))
+					if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()) && !npc.isCastingNow(SkillCaster::isAnyNormalType) && !npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
 					{
-						if (!npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
-						{
-							npc.setTarget(attacker);
-							npc.doCast(ANTI_STRIDER.getSkill());
-						}
+						npc.setTarget(attacker);
+						npc.doCast(ANTI_STRIDER.getSkill());
 					}
 					
 					final Creature mostHated = ((Attackable) npc).getMostHated();

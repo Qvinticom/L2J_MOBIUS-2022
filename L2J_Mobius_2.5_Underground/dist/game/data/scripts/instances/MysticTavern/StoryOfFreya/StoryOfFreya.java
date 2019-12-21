@@ -195,9 +195,7 @@ public class StoryOfFreya extends AbstractInstance
 					}
 					world.openCloseDoor(world.getTemplateParameters().getInt("1_st_door"), true);
 					startQuestTimer("closeDoor", 60000, npc, null);
-					break;
 				}
-				
 				else if (world.getStatus() > 0)
 				{
 					if (player.getInventory().getInventoryItemCount(ICE_CRYSTAL_SHARD, -1) == 10)
@@ -207,8 +205,8 @@ public class StoryOfFreya extends AbstractInstance
 						break;
 					}
 					htmltext = "34173-03.html";
-					break;
 				}
+				break;
 			}
 			case "closeDoor":
 			{

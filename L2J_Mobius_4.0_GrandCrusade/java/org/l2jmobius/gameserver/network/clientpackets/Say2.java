@@ -168,13 +168,10 @@ public class Say2 implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.isJailed() && Config.JAIL_DISABLE_CHAT)
+		if (player.isJailed() && Config.JAIL_DISABLE_CHAT && ((chatType == ChatType.WHISPER) || (chatType == ChatType.SHOUT) || (chatType == ChatType.TRADE) || (chatType == ChatType.HERO_VOICE)))
 		{
-			if ((chatType == ChatType.WHISPER) || (chatType == ChatType.SHOUT) || (chatType == ChatType.TRADE) || (chatType == ChatType.HERO_VOICE))
-			{
-				player.sendMessage("You can not chat with players outside of the jail.");
-				return;
-			}
+			player.sendMessage("You can not chat with players outside of the jail.");
+			return;
 		}
 		
 		if ((chatType == ChatType.PETITION_PLAYER) && player.isGM())
@@ -195,12 +192,9 @@ public class Say2 implements IClientIncomingPacket
 			
 		}
 		
-		if (_text.indexOf(8) >= 0)
+		if ((_text.indexOf(8) >= 0) && !parseAndPublishItem(client, player))
 		{
-			if (!parseAndPublishItem(client, player))
-			{
-				return;
-			}
+			return;
 		}
 		
 		final ChatFilterReturn filter = EventDispatcher.getInstance().notifyEvent(new OnPlayerChat(player, _target, _text, chatType), player, ChatFilterReturn.class);

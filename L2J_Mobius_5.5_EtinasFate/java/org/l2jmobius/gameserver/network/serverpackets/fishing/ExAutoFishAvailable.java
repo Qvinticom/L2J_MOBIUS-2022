@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExAutoFishAvailable implements IClientOutgoingPacket
 {
-	public static ExAutoFishAvailable YES = new ExAutoFishAvailable(true);
-	public static ExAutoFishAvailable NO = new ExAutoFishAvailable(false);
+	public static final ExAutoFishAvailable YES = new ExAutoFishAvailable(true);
+	public static final ExAutoFishAvailable NO = new ExAutoFishAvailable(false);
 	
 	private final boolean _available;
 	

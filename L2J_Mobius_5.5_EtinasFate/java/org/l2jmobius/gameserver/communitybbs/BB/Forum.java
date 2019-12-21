@@ -58,13 +58,13 @@ public class Forum
 	
 	/**
 	 * Creates new instance of Forum. When you create new forum, use {@link org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager# addForum(org.l2jmobius.gameserver.communitybbs.BB.Forum)} to add forum to the forums manager.
-	 * @param Forumid
-	 * @param FParent
+	 * @param forumId
+	 * @param fParent
 	 */
-	public Forum(int Forumid, Forum FParent)
+	public Forum(int forumId, Forum fParent)
 	{
-		_forumId = Forumid;
-		_fParent = FParent;
+		_forumId = forumId;
+		_fParent = fParent;
 		_children = ConcurrentHashMap.newKeySet();
 	}
 	
@@ -73,9 +73,9 @@ public class Forum
 	 * @param parent
 	 * @param type
 	 * @param perm
-	 * @param OwnerID
+	 * @param ownerId
 	 */
-	public Forum(String name, Forum parent, int type, int perm, int OwnerID)
+	public Forum(String name, Forum parent, int type, int perm, int ownerId)
 	{
 		_forumName = name;
 		_forumId = ForumsBBSManager.getInstance().getANewID();
@@ -83,7 +83,7 @@ public class Forum
 		_forumPost = 0;
 		_forumPerm = perm;
 		_fParent = parent;
-		_ownerID = OwnerID;
+		_ownerID = ownerId;
 		_children = ConcurrentHashMap.newKeySet();
 		parent._children.add(this);
 		ForumsBBSManager.getInstance().addForum(this);

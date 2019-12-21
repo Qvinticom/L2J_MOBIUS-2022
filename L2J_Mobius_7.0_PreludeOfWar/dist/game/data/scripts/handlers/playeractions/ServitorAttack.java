@@ -32,10 +32,7 @@ public class ServitorAttack implements IPlayerActionHandler
 	{
 		if (player.hasServitors())
 		{
-			player.getServitors().values().stream().filter(s -> s.canAttack(player.getTarget(), ctrlPressed)).forEach(s ->
-			{
-				s.doAttack(player.getTarget());
-			});
+			player.getServitors().values().stream().filter(s -> s.canAttack(player.getTarget(), ctrlPressed)).forEach(s -> s.doAttack(player.getTarget()));
 		}
 		else
 		{

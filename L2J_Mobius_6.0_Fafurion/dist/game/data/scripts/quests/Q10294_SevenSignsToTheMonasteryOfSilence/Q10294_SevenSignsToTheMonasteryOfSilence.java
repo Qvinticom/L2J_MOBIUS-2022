@@ -317,12 +317,9 @@ public class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 				{
 					htmltext = "32784-01.htm";
 				}
-				else if (qs.isStarted())
+				else if (qs.isStarted() && qs.isCond(1))
 				{
-					if (qs.isCond(1))
-					{
-						htmltext = "32784-06.html";
-					}
+					htmltext = "32784-06.html";
 				}
 				break;
 			}

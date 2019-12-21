@@ -58,8 +58,7 @@ public class Hopzone extends VoteSystem
 			{
 				if (line.contains("<li><span class=\"rank anonymous tooltip\" title"))
 				{
-					int votes = Integer.parseInt(line.split(">")[2].replace("</span", ""));
-					return votes;
+					return Integer.parseInt(line.split(">")[2].replace("</span", ""));
 				}
 			}
 			
@@ -68,8 +67,7 @@ public class Hopzone extends VoteSystem
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
-			LOGGER.warning("VoteSystem: Error while getting server vote count from " + getSiteName() + ".");
+			LOGGER.warning("VoteSystem: Error while getting server vote count from " + getSiteName() + ". " + e);
 		}
 		
 		return -1;

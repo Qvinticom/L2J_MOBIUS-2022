@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.loginserver.network.gameserverpackets;
 
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -72,7 +73,7 @@ public class ChangePassword extends BaseRecievePacket
 			{
 				final MessageDigest md = MessageDigest.getInstance("SHA");
 				
-				final byte[] raw = md.digest(curpass.getBytes("UTF-8"));
+				final byte[] raw = md.digest(curpass.getBytes(StandardCharsets.UTF_8));
 				final String curpassEnc = Base64.getEncoder().encodeToString(raw);
 				String pass = null;
 				int passUpdated = 0;
@@ -93,7 +94,7 @@ public class ChangePassword extends BaseRecievePacket
 				
 				if (curpassEnc.equals(pass))
 				{
-					final byte[] password = md.digest(newpass.getBytes("UTF-8"));
+					final byte[] password = md.digest(newpass.getBytes(StandardCharsets.UTF_8));
 					// SQL connection
 					try (Connection con = DatabaseFactory.getConnection();
 						PreparedStatement ps = con.prepareStatement("UPDATE accounts SET password=? WHERE login=?"))

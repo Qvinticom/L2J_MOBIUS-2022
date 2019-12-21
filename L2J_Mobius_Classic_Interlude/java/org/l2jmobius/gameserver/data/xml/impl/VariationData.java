@@ -68,126 +68,117 @@ public class VariationData implements IXmlReader
 	{
 		forEach(doc, "list", listNode ->
 		{
-			forEach(listNode, "variations", variationsNode ->
+			forEach(listNode, "variations", variationsNode -> forEach(variationsNode, "variation", variationNode ->
 			{
-				forEach(variationsNode, "variation", variationNode ->
+				final int mineralId = parseInteger(variationNode.getAttributes(), "mineralId");
+				if (ItemTable.getInstance().getTemplate(mineralId) == null)
 				{
-					final int mineralId = parseInteger(variationNode.getAttributes(), "mineralId");
-					if (ItemTable.getInstance().getTemplate(mineralId) == null)
-					{
-						LOGGER.warning(getClass().getSimpleName() + ": Mineral with item id " + mineralId + " was not found.");
-					}
-					final Variation variation = new Variation(mineralId);
+					LOGGER.warning(getClass().getSimpleName() + ": Mineral with item id " + mineralId + " was not found.");
+				}
+				final Variation variation = new Variation(mineralId);
+				
+				forEach(variationNode, "optionGroup", groupNode ->
+				{
+					final String weaponTypeString = parseString(groupNode.getAttributes(), "weaponType").toUpperCase();
+					final VariationWeaponType weaponType = VariationWeaponType.valueOf(weaponTypeString);
+					final int order = parseInteger(groupNode.getAttributes(), "order");
 					
-					forEach(variationNode, "optionGroup", groupNode ->
+					final List<OptionDataCategory> sets = new ArrayList<>();
+					forEach(groupNode, "optionCategory", categoryNode ->
 					{
-						final String weaponTypeString = parseString(groupNode.getAttributes(), "weaponType").toUpperCase();
-						final VariationWeaponType weaponType = VariationWeaponType.valueOf(weaponTypeString);
-						final int order = parseInteger(groupNode.getAttributes(), "order");
-						
-						final List<OptionDataCategory> sets = new ArrayList<>();
-						forEach(groupNode, "optionCategory", categoryNode ->
+						final double chance = parseDouble(categoryNode.getAttributes(), "chance");
+						final Map<Options, Double> options = new HashMap<>();
+						forEach(categoryNode, "option", optionNode ->
 						{
-							final double chance = parseDouble(categoryNode.getAttributes(), "chance");
-							final Map<Options, Double> options = new HashMap<>();
-							forEach(categoryNode, "option", optionNode ->
+							final double optionChance = parseDouble(optionNode.getAttributes(), "chance");
+							final int optionId = parseInteger(optionNode.getAttributes(), "id");
+							final Options opt = OptionData.getInstance().getOptions(optionId);
+							if (opt == null)
 							{
-								final double optionChance = parseDouble(optionNode.getAttributes(), "chance");
-								final int optionId = parseInteger(optionNode.getAttributes(), "id");
-								final Options opt = OptionData.getInstance().getOptions(optionId);
-								if (opt == null)
+								LOGGER.warning(getClass().getSimpleName() + ": Null option for id " + optionId);
+								return;
+							}
+							options.put(opt, optionChance);
+						});
+						forEach(categoryNode, "optionRange", optionNode ->
+						{
+							final double optionChance = parseDouble(optionNode.getAttributes(), "chance");
+							final int fromId = parseInteger(optionNode.getAttributes(), "from");
+							final int toId = parseInteger(optionNode.getAttributes(), "to");
+							for (int id = fromId; id <= toId; id++)
+							{
+								final Options op = OptionData.getInstance().getOptions(id);
+								if (op == null)
 								{
-									LOGGER.warning(getClass().getSimpleName() + ": Null option for id " + optionId);
+									LOGGER.warning(getClass().getSimpleName() + ": Null option for id " + id);
 									return;
 								}
-								options.put(opt, optionChance);
-							});
-							forEach(categoryNode, "optionRange", optionNode ->
-							{
-								final double optionChance = parseDouble(optionNode.getAttributes(), "chance");
-								final int fromId = parseInteger(optionNode.getAttributes(), "from");
-								final int toId = parseInteger(optionNode.getAttributes(), "to");
-								for (int id = fromId; id <= toId; id++)
-								{
-									final Options op = OptionData.getInstance().getOptions(id);
-									if (op == null)
-									{
-										LOGGER.warning(getClass().getSimpleName() + ": Null option for id " + id);
-										return;
-									}
-									options.put(op, optionChance);
-								}
-							});
-							
-							sets.add(new OptionDataCategory(options, chance));
+								options.put(op, optionChance);
+							}
 						});
 						
-						variation.setEffectGroup(weaponType, order, new OptionDataGroup(sets));
+						sets.add(new OptionDataCategory(options, chance));
 					});
 					
-					_variations.put(mineralId, variation);
+					variation.setEffectGroup(weaponType, order, new OptionDataGroup(sets));
 				});
-			});
+				
+				_variations.put(mineralId, variation);
+			}));
 			
 			final Map<Integer, List<Integer>> itemGroups = new HashMap<>();
-			forEach(listNode, "itemGroups", variationsNode ->
+			forEach(listNode, "itemGroups", variationsNode -> forEach(variationsNode, "itemGroup", variationNode ->
 			{
-				forEach(variationsNode, "itemGroup", variationNode ->
+				final int id = parseInteger(variationNode.getAttributes(), "id");
+				final List<Integer> items = new ArrayList<>();
+				forEach(variationNode, "item", itemNode ->
 				{
-					final int id = parseInteger(variationNode.getAttributes(), "id");
-					final List<Integer> items = new ArrayList<>();
-					forEach(variationNode, "item", itemNode ->
-					{
-						final int itemId = parseInteger(itemNode.getAttributes(), "id");
-						if (ItemTable.getInstance().getTemplate(itemId) == null)
-						{
-							LOGGER.warning(getClass().getSimpleName() + ": Item with id " + itemId + " was not found.");
-						}
-						items.add(itemId);
-					});
-					
-					itemGroups.put(id, items);
-				});
-			});
-			
-			forEach(listNode, "fees", variationNode ->
-			{
-				forEach(variationNode, "fee", feeNode ->
-				{
-					final int itemGroupId = parseInteger(feeNode.getAttributes(), "itemGroup");
-					final List<Integer> itemGroup = itemGroups.get(itemGroupId);
-					final int itemId = parseInteger(feeNode.getAttributes(), "itemId");
-					final int itemCount = parseInteger(feeNode.getAttributes(), "itemCount");
-					final int cancelFee = parseInteger(feeNode.getAttributes(), "cancelFee");
+					final int itemId = parseInteger(itemNode.getAttributes(), "id");
 					if (ItemTable.getInstance().getTemplate(itemId) == null)
 					{
 						LOGGER.warning(getClass().getSimpleName() + ": Item with id " + itemId + " was not found.");
 					}
-					
-					final VariationFee fee = new VariationFee(itemId, itemCount, cancelFee);
-					final Map<Integer, VariationFee> feeByMinerals = new HashMap<>();
-					forEach(feeNode, "mineral", mineralNode ->
+					items.add(itemId);
+				});
+				
+				itemGroups.put(id, items);
+			}));
+			
+			forEach(listNode, "fees", variationNode -> forEach(variationNode, "fee", feeNode ->
+			{
+				final int itemGroupId = parseInteger(feeNode.getAttributes(), "itemGroup");
+				final List<Integer> itemGroup = itemGroups.get(itemGroupId);
+				final int itemId = parseInteger(feeNode.getAttributes(), "itemId");
+				final int itemCount = parseInteger(feeNode.getAttributes(), "itemCount");
+				final int cancelFee = parseInteger(feeNode.getAttributes(), "cancelFee");
+				if (ItemTable.getInstance().getTemplate(itemId) == null)
+				{
+					LOGGER.warning(getClass().getSimpleName() + ": Item with id " + itemId + " was not found.");
+				}
+				
+				final VariationFee fee = new VariationFee(itemId, itemCount, cancelFee);
+				final Map<Integer, VariationFee> feeByMinerals = new HashMap<>();
+				forEach(feeNode, "mineral", mineralNode ->
+				{
+					final int mId = parseInteger(mineralNode.getAttributes(), "id");
+					feeByMinerals.put(mId, fee);
+				});
+				forEach(feeNode, "mineralRange", mineralNode ->
+				{
+					final int fromId = parseInteger(mineralNode.getAttributes(), "from");
+					final int toId = parseInteger(mineralNode.getAttributes(), "to");
+					for (int id = fromId; id <= toId; id++)
 					{
-						final int mId = parseInteger(mineralNode.getAttributes(), "id");
-						feeByMinerals.put(mId, fee);
-					});
-					forEach(feeNode, "mineralRange", mineralNode ->
-					{
-						final int fromId = parseInteger(mineralNode.getAttributes(), "from");
-						final int toId = parseInteger(mineralNode.getAttributes(), "to");
-						for (int id = fromId; id <= toId; id++)
-						{
-							feeByMinerals.put(id, fee);
-						}
-					});
-					
-					for (int item : itemGroup)
-					{
-						Map<Integer, VariationFee> fees = _fees.computeIfAbsent(item, k -> new HashMap<>());
-						fees.putAll(feeByMinerals);
+						feeByMinerals.put(id, fee);
 					}
 				});
-			});
+				
+				for (int item : itemGroup)
+				{
+					Map<Integer, VariationFee> fees = _fees.computeIfAbsent(item, k -> new HashMap<>());
+					fees.putAll(feeByMinerals);
+				}
+			}));
 		});
 	}
 	

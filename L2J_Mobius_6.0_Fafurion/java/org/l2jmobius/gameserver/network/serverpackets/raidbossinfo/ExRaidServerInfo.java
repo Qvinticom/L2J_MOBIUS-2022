@@ -25,10 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExRaidServerInfo implements IClientOutgoingPacket
 {
-	public ExRaidServerInfo()
-	{
-	}
-	
 	@Override
 	public boolean write(PacketWriter packet)
 	{

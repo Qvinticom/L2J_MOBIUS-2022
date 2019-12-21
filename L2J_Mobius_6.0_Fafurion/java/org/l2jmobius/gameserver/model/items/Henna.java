@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.items;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
@@ -36,7 +36,7 @@ public class Henna
 	private final int _dyeId;
 	private final int _dyeItemId;
 	private final boolean _isPremium;
-	private final Map<BaseStats, Integer> _baseStats = new HashMap<>();
+	private final Map<BaseStats, Integer> _baseStats = new EnumMap<>(BaseStats.class);
 	private final int _wear_fee;
 	private final int _wear_count;
 	private final int _cancel_fee;

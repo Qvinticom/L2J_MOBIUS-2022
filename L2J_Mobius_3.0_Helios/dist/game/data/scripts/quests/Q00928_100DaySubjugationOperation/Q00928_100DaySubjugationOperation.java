@@ -132,6 +132,7 @@ public class Q00928_100DaySubjugationOperation extends Quest
 					break;
 				}
 				qs.setState(State.CREATED);
+				// fallthrough
 			}
 			case State.CREATED:
 			{

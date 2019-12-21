@@ -148,8 +148,8 @@ public class PrisonOfDarkness extends AbstractInstance
 								break;
 						}
 						getTimers().addTimer("CHANGE_POSITION", (60000 * npcVars.getInt("TIME_MULTIPLER", 5)), npc, null);
-						break;
 					}
+					break;
 				}
 				case "START_BOSS":
 				{
@@ -397,12 +397,9 @@ public class PrisonOfDarkness extends AbstractInstance
 	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isInInstance(instance))
+		if (isInInstance(instance) && (skill == TELEPORT.getSkill()) && (player != null) && (npc.calculateDistance3D(player) < 1000) && (npc.getCurrentHpPercent() > 10))
 		{
-			if ((skill == TELEPORT.getSkill()) && (player != null) && (npc.calculateDistance3D(player) < 1000) && (npc.getCurrentHpPercent() > 10))
-			{
-				player.teleToLocation(getRandomEntry(PLAYERS_TELEPORT_RANDOM_LOCS));
-			}
+			player.teleToLocation(getRandomEntry(PLAYERS_TELEPORT_RANDOM_LOCS));
 		}
 		return super.onSpellFinished(npc, player, skill);
 	}

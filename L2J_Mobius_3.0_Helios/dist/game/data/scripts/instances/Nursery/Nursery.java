@@ -167,7 +167,7 @@ public class Nursery extends AbstractInstance
 			final BuffInfo energyInfo = player.getEffectList().getFirstBuffInfoByAbnormalType(ENERGY_SKILL_1.getSkill().getAbnormalType());
 			final int energyLv = energyInfo == null ? 0 : energyInfo.getSkill().getAbnormalLvl();
 			
-			if ((energyLv > 0) && (gameStage == 1) && (energyInfo != null))
+			if ((energyLv > 0) && (gameStage == 1))
 			{
 				int addPoints = 0;
 				if (energyLv == 10)

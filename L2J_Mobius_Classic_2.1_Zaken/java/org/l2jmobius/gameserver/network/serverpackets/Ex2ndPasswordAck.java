@@ -28,8 +28,8 @@ public class Ex2ndPasswordAck implements IClientOutgoingPacket
 	private final int _response;
 	
 	// TODO: Enum
-	public static int SUCCESS = 0x00;
-	public static int WRONG_PATTERN = 0x01;
+	public static final int SUCCESS = 0x00;
+	public static final int WRONG_PATTERN = 0x01;
 	
 	public Ex2ndPasswordAck(int status, int response)
 	{

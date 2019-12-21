@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
  */
 public class ControlTowerInstance extends Tower
 {
-	private volatile Set<Spawn> _guards;
+	private Set<Spawn> _guards;
 	
 	public ControlTowerInstance(NpcTemplate template)
 	{

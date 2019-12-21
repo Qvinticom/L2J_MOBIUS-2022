@@ -165,8 +165,6 @@ public class Q10825_ForVictory extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	private void OnCastleSiegeFinish(OnCastleSiegeFinish event)
 	{
-		event.getSiege().getPlayersInZone().forEach(player -> manageQuestProgress(player));
+		event.getSiege().getPlayersInZone().forEach(this::manageQuestProgress);
 	}
-	
-	// TODO: Dimensional Raid - https://l2wiki.com/Dimensional_Raid
 }

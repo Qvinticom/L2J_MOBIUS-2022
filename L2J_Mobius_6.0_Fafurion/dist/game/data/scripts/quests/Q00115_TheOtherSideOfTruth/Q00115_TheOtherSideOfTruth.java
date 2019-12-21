@@ -502,7 +502,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 										giveAdena(player, 193350, true);
 										addExpAndSp(player, 956590, 229);
 										qs.exitQuest(false, true);
-										htmltext = "32020-30.html";
+										// htmltext = "32020-30.html";
 									}
 									else
 									{

@@ -48,23 +48,23 @@ public class Post
 	private final Collection<CPost> _post;
 	
 	/**
-	 * @param _PostOwner
-	 * @param _PostOwnerID
+	 * @param postOwner
+	 * @param postOwnerId
 	 * @param date
 	 * @param tid
-	 * @param _PostForumID
+	 * @param postForumId
 	 * @param txt
 	 */
-	public Post(String _PostOwner, int _PostOwnerID, long date, int tid, int _PostForumID, String txt)
+	public Post(String postOwner, int postOwnerId, long date, int tid, int postForumId, String txt)
 	{
 		_post = ConcurrentHashMap.newKeySet();
 		final CPost cp = new CPost();
 		cp.postId = 0;
-		cp.postOwner = _PostOwner;
-		cp.postOwnerId = _PostOwnerID;
+		cp.postOwner = postOwner;
+		cp.postOwnerId = postOwnerId;
 		cp.postDate = date;
 		cp.postTopicId = tid;
-		cp.postForumId = _PostForumID;
+		cp.postForumId = postForumId;
 		cp.postTxt = txt;
 		_post.add(cp);
 		insertindb(cp);

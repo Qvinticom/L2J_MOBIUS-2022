@@ -224,16 +224,13 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(attacker, false);
-		if ((qs != null) && qs.isCond(2))
+		if ((qs != null) && qs.isCond(2) && (getRandom(1000) < 300))
 		{
-			if (getRandom(1000) < 300)
-			{
-				showOnScreenMsg(attacker, NpcStringId.YOU_VE_CAPTURED_A_WISP_SUCCESSFULLY, ExShowScreenMessage.TOP_CENTER, 10000);
-				giveItems(attacker, SPIRIT_ITEM, 1);
-				takeItems(attacker, GLIMMER_CRYSTAL, -1);
-				qs.setCond(1);
-				qs.setCond(3, true);
-			}
+			showOnScreenMsg(attacker, NpcStringId.YOU_VE_CAPTURED_A_WISP_SUCCESSFULLY, ExShowScreenMessage.TOP_CENTER, 10000);
+			giveItems(attacker, SPIRIT_ITEM, 1);
+			takeItems(attacker, GLIMMER_CRYSTAL, -1);
+			qs.setCond(1);
+			qs.setCond(3, true);
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}

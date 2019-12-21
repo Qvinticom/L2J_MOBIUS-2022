@@ -446,7 +446,7 @@ public abstract class AbstractOlympiadGame
 	
 	public abstract void sendOlympiadInfo(Creature creature);
 	
-	public abstract void broadcastOlympiadInfo(OlympiadStadium _stadium);
+	public abstract void broadcastOlympiadInfo(OlympiadStadium stadium);
 	
 	protected abstract void broadcastPacket(IClientOutgoingPacket packet);
 	

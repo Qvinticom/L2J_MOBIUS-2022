@@ -103,12 +103,7 @@ public class Friend implements IAffectObjectHandler
 				if (target.isInsideZone(ZoneId.SIEGE))
 				{
 					// Players in the same siege side at the same castle are considered friends.
-					if (player.isSiegeFriend(targetPlayer))
-					{
-						return true;
-					}
-					
-					return false;
+					return player.isSiegeFriend(targetPlayer);
 				}
 				
 				// By default any neutral non-flagged player is considered a friend.

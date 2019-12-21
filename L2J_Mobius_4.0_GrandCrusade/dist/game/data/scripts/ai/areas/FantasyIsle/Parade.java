@@ -171,10 +171,6 @@ public class Parade extends AbstractNpcAI
 	
 	private class Start implements Runnable
 	{
-		public Start()
-		{
-		}
-		
 		@Override
 		public void run()
 		{
@@ -187,10 +183,6 @@ public class Parade extends AbstractNpcAI
 	
 	private class Spawn implements Runnable
 	{
-		public Spawn()
-		{
-		}
-		
 		@Override
 		public void run()
 		{
@@ -221,14 +213,10 @@ public class Parade extends AbstractNpcAI
 	
 	private class Delete implements Runnable
 	{
-		public Delete()
-		{
-		}
-		
 		@Override
 		public void run()
 		{
-			if (spawns.size() <= 0)
+			if (spawns.isEmpty())
 			{
 				return;
 			}
@@ -247,7 +235,7 @@ public class Parade extends AbstractNpcAI
 					}
 				}
 			}
-			if ((spawns.size() == 0) && (deleteTask != null))
+			if ((spawns.isEmpty()) && (deleteTask != null))
 			{
 				deleteTask.cancel(false);
 			}
@@ -256,10 +244,6 @@ public class Parade extends AbstractNpcAI
 	
 	private class Clean implements Runnable
 	{
-		public Clean()
-		{
-		}
-		
 		@Override
 		public void run()
 		{

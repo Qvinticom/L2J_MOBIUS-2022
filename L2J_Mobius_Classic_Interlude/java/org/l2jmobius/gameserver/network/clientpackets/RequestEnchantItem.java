@@ -145,16 +145,13 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		}
 		
 		// attempting to destroy support if exist
-		if (support != null)
+		if ((support != null) && (player.getInventory().destroyItem("Enchant", support.getObjectId(), 1, player, item) == null))
 		{
-			if (player.getInventory().destroyItem("Enchant", support.getObjectId(), 1, player, item) == null)
-			{
-				client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
-				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to enchant with a support item he doesn't have", Config.DEFAULT_PUNISH);
-				player.removeRequest(request.getClass());
-				client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
-				return;
-			}
+			client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to enchant with a support item he doesn't have", Config.DEFAULT_PUNISH);
+			player.removeRequest(request.getClass());
+			client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
+			return;
 		}
 		
 		final InventoryUpdate iu = new InventoryUpdate();
@@ -409,12 +406,9 @@ public class RequestEnchantItem implements IClientIncomingPacket
 								client.sendPacket(sm);
 							}
 							
-							if (!Config.FORCE_INVENTORY_UPDATE)
+							if (!Config.FORCE_INVENTORY_UPDATE && (crystals != null))
 							{
-								if (crystals != null)
-								{
-									iu.addItem(crystals);
-								}
+								iu.addItem(crystals);
 							}
 							
 							if (crystalId == 0)

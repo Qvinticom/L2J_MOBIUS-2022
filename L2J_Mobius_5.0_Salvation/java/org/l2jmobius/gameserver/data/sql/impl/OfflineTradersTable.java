@@ -62,7 +62,7 @@ public class OfflineTradersTable
 			PreparedStatement stm1 = con.prepareStatement(CLEAR_OFFLINE_TABLE);
 			PreparedStatement stm2 = con.prepareStatement(CLEAR_OFFLINE_TABLE_ITEMS);
 			PreparedStatement stm3 = con.prepareStatement(SAVE_OFFLINE_STATUS);
-			PreparedStatement stm_items = con.prepareStatement(SAVE_ITEMS))
+			PreparedStatement stmItems = con.prepareStatement(SAVE_ITEMS))
 		{
 			stm1.execute();
 			stm2.execute();
@@ -90,12 +90,12 @@ public class OfflineTradersTable
 								title = pc.getBuyList().getTitle();
 								for (TradeItem i : pc.getBuyList().getItems())
 								{
-									stm_items.setInt(1, pc.getObjectId());
-									stm_items.setInt(2, i.getItem().getId());
-									stm_items.setLong(3, i.getCount());
-									stm_items.setLong(4, i.getPrice());
-									stm_items.executeUpdate();
-									stm_items.clearParameters();
+									stmItems.setInt(1, pc.getObjectId());
+									stmItems.setInt(2, i.getItem().getId());
+									stmItems.setLong(3, i.getCount());
+									stmItems.setLong(4, i.getPrice());
+									stmItems.executeUpdate();
+									stmItems.clearParameters();
 								}
 								break;
 							}
@@ -111,24 +111,24 @@ public class OfflineTradersTable
 								{
 									for (SellBuffHolder holder : pc.getSellingBuffs())
 									{
-										stm_items.setInt(1, pc.getObjectId());
-										stm_items.setInt(2, holder.getSkillId());
-										stm_items.setLong(3, 0);
-										stm_items.setLong(4, holder.getPrice());
-										stm_items.executeUpdate();
-										stm_items.clearParameters();
+										stmItems.setInt(1, pc.getObjectId());
+										stmItems.setInt(2, holder.getSkillId());
+										stmItems.setLong(3, 0);
+										stmItems.setLong(4, holder.getPrice());
+										stmItems.executeUpdate();
+										stmItems.clearParameters();
 									}
 								}
 								else
 								{
 									for (TradeItem i : pc.getSellList().getItems())
 									{
-										stm_items.setInt(1, pc.getObjectId());
-										stm_items.setInt(2, i.getObjectId());
-										stm_items.setLong(3, i.getCount());
-										stm_items.setLong(4, i.getPrice());
-										stm_items.executeUpdate();
-										stm_items.clearParameters();
+										stmItems.setInt(1, pc.getObjectId());
+										stmItems.setInt(2, i.getObjectId());
+										stmItems.setLong(3, i.getCount());
+										stmItems.setLong(4, i.getPrice());
+										stmItems.executeUpdate();
+										stmItems.clearParameters();
 									}
 								}
 								break;
@@ -142,12 +142,12 @@ public class OfflineTradersTable
 								title = pc.getStoreName();
 								for (Entry<Integer, Long> entry : pc.getManufactureItems().entrySet())
 								{
-									stm_items.setInt(1, pc.getObjectId());
-									stm_items.setInt(2, entry.getKey());
-									stm_items.setLong(3, 0);
-									stm_items.setLong(4, entry.getValue());
-									stm_items.executeUpdate();
-									stm_items.clearParameters();
+									stmItems.setInt(1, pc.getObjectId());
+									stmItems.setInt(2, entry.getKey());
+									stmItems.setLong(3, 0);
+									stmItems.setLong(4, entry.getValue());
+									stmItems.executeUpdate();
+									stmItems.clearParameters();
 								}
 								break;
 							}
@@ -233,10 +233,10 @@ public class OfflineTradersTable
 					}
 					
 					player.spawnMe(player.getX(), player.getY(), player.getZ());
-					try (PreparedStatement stm_items = con.prepareStatement(LOAD_OFFLINE_ITEMS))
+					try (PreparedStatement stmItems = con.prepareStatement(LOAD_OFFLINE_ITEMS))
 					{
-						stm_items.setInt(1, player.getObjectId());
-						try (ResultSet items = stm_items.executeQuery())
+						stmItems.setInt(1, player.getObjectId());
+						try (ResultSet items = stmItems.executeQuery())
 						{
 							switch (type)
 							{

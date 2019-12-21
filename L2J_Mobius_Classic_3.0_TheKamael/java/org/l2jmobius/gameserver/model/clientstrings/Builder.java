@@ -44,7 +44,7 @@ public abstract class Builder
 		char c;
 		char c2;
 		char c3;
-		LOOP: for (; index1 < arrayLength; index1++)
+		for (; index1 < arrayLength; index1++)
 		{
 			c = array[index1];
 			if ((c == '$') && (index1 < (arrayLength - 2)))
@@ -65,7 +65,6 @@ public abstract class Builder
 						builders.add(new BuilderObject(paramId));
 						index1 += 2;
 						index2 = index1 + 1;
-						continue LOOP;
 					}
 				}
 			}

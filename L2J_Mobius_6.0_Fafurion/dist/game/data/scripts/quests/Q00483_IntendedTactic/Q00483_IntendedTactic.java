@@ -162,19 +162,13 @@ public class Q00483_IntendedTactic extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1) && (CommonUtil.contains(MOBS, npc.getId())))
+		if ((qs != null) && qs.isCond(1) && (CommonUtil.contains(MOBS, npc.getId())) && giveItemRandomly(killer, npc, LOYAL_SERVANS_BLOOD, 1, 10, 0.10, true))
 		{
-			if (giveItemRandomly(killer, npc, LOYAL_SERVANS_BLOOD, 1, 10, 0.10, true))
-			{
-				qs.setCond(2, true);
-			}
+			qs.setCond(2, true);
 		}
-		if ((qs != null) && qs.isCond(2) && (CommonUtil.contains(BOSSES, npc.getId())))
+		if ((qs != null) && qs.isCond(2) && (CommonUtil.contains(BOSSES, npc.getId())) && giveItemRandomly(killer, npc, TRUTTHFUL_ONES_BLOOD, 1, 10, 1.0, true))
 		{
-			if (giveItemRandomly(killer, npc, TRUTTHFUL_ONES_BLOOD, 1, 10, 1.0, true))
-			{
-				qs.setCond(2, true);
-			}
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

@@ -97,16 +97,13 @@ public class Q00738_DimensionalExplorationOfTheUnworldlyVisitors extends Quest
 			}
 			case "34360-07.html":
 			{
-				if (qs.isCond(2))
+				if (qs.isCond(2) && (player.getLevel() >= MIN_LEVEL))
 				{
-					if (player.getLevel() >= MIN_LEVEL)
-					{
-						giveItems(player, DIMENSIONAL_EXPLORATION_REPORT, 1);
-						addExpAndSp(player, 5_379_299_640L, 5_379_210);
-						addFactionPoints(player, Faction.UNWORLDLY_VISITORS, 100);
-						qs.exitQuest(QuestType.DAILY, true);
-						htmltext = event;
-					}
+					giveItems(player, DIMENSIONAL_EXPLORATION_REPORT, 1);
+					addExpAndSp(player, 5_379_299_640L, 5_379_210);
+					addFactionPoints(player, Faction.UNWORLDLY_VISITORS, 100);
+					qs.exitQuest(QuestType.DAILY, true);
+					htmltext = event;
 				}
 				break;
 			}
@@ -130,6 +127,7 @@ public class Q00738_DimensionalExplorationOfTheUnworldlyVisitors extends Quest
 					break;
 				}
 				qs.setState(State.CREATED);
+				// fallthrough
 			}
 			case State.CREATED:
 			{
@@ -154,12 +152,9 @@ public class Q00738_DimensionalExplorationOfTheUnworldlyVisitors extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && (qs.isCond(1)))
+		if ((qs != null) && (qs.isCond(1)) && giveItemRandomly(killer, npc, DIMENSIONAL_ENERGY_FRAGMENT, 1, 50, 0.5, true))
 		{
-			if (giveItemRandomly(killer, npc, DIMENSIONAL_ENERGY_FRAGMENT, 1, 50, 0.5, true))
-			{
-				qs.setCond(2, true);
-			}
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

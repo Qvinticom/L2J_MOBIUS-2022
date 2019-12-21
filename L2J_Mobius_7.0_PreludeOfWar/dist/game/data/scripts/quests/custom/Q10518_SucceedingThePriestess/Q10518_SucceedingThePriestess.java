@@ -243,15 +243,12 @@ public class Q10518_SucceedingThePriestess extends Quest
 	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if (qs != null)
+		if ((qs != null) && qs.isCond(KILLING_COND_1))
 		{
-			if (qs.isCond(KILLING_COND_1))
-			{
-				final Set<NpcLogListHolder> holder = new HashSet<>();
-				holder.add(new NpcLogListHolder(KILLING_NPCSTRING_ID_1, true, qs.getInt(KILL_COUNT_VAR)));
-				holder.add(new NpcLogListHolder(KILLING_NPCSTRING_ID_2, true, (int) getQuestItemsCount(player, MONSTER_DROP_1)));
-				return holder;
-			}
+			final Set<NpcLogListHolder> holder = new HashSet<>();
+			holder.add(new NpcLogListHolder(KILLING_NPCSTRING_ID_1, true, qs.getInt(KILL_COUNT_VAR)));
+			holder.add(new NpcLogListHolder(KILLING_NPCSTRING_ID_2, true, (int) getQuestItemsCount(player, MONSTER_DROP_1)));
+			return holder;
 		}
 		return super.getNpcLogList(player);
 	}

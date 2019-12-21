@@ -101,7 +101,7 @@ public class Q10742_AFurryFriend extends Quest
 						showOnScreenMsg(player, NpcStringId.RICKY_IS_NOT_HERE_NTRY_SEARCHING_ANOTHER_KIKU_S_CAVE, ExShowScreenMessage.TOP_CENTER, 8000);
 						htmltext = "33995-02.html";
 					}
-					else if (!World.getInstance().getVisibleObjectsInRange(player, Npc.class, 500).stream().anyMatch(n -> (n.getId() == RICKY) && (n.getSummoner() == player)))
+					else if (World.getInstance().getVisibleObjectsInRange(player, Npc.class, 500).stream().noneMatch(n -> (n.getId() == RICKY) && (n.getSummoner() == player)))
 					{
 						showOnScreenMsg(player, NpcStringId.TAKE_RICKY_TO_LEIRA_IN_UNDER_2_MINUTES, ExShowScreenMessage.MIDDLE_CENTER, 5000);
 						player.sendPacket(new ExSendUIEvent(player, false, false, 120, 0, NpcStringId.REMAINING_TIME));
@@ -227,6 +227,6 @@ public class Q10742_AFurryFriend extends Quest
 	public void onRouteFinished(Npc npc)
 	{
 		WalkingManager.getInstance().cancelMoving(npc);
-		ThreadPool.schedule(() -> npc.deleteMe(), 1000);
+		ThreadPool.schedule(npc::deleteMe, 1000);
 	}
 }

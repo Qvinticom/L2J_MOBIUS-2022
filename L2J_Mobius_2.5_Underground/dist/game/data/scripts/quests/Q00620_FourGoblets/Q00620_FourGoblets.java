@@ -122,7 +122,7 @@ public class Q00620_FourGoblets extends Quest
 		{
 			case "accept":
 			{
-				if ((qs.getPlayer().getLevel() >= 74) && ((qs.getPlayer().getLevel() <= 80)))
+				if ((qs.getPlayer().getLevel() >= 74) && (qs.getPlayer().getLevel() <= 80))
 				{
 					qs.startQuest();
 					htmltext = "31453-13.htm";
@@ -1015,7 +1015,7 @@ public class Q00620_FourGoblets extends Quest
 			{
 				if (qs.isCreated())
 				{
-					if ((qs.getPlayer().getLevel() >= 74) && ((qs.getPlayer().getLevel() <= 80)))
+					if ((qs.getPlayer().getLevel() >= 74) && (qs.getPlayer().getLevel() <= 80))
 					{
 						htmltext = "31453-1.htm";
 					}

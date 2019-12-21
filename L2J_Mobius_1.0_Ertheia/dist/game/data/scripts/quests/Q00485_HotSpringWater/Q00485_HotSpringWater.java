@@ -152,13 +152,9 @@ public class Q00485_HotSpringWater extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
-		if ((qs != null) && qs.isCond(1))
+		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, WATER, 1, 40, 0.4, true))
 		{
-			if (giveItemRandomly(killer, WATER, 1, 40, 0.4, true))
-			{
-				qs.setCond(2, true);
-			}
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

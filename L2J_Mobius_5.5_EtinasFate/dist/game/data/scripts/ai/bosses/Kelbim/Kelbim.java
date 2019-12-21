@@ -221,7 +221,7 @@ public class Kelbim extends AbstractNpcAI
 					if (_kelbimBoss.isInCombat())
 					{
 						Skill randomAttackSkill = AREA_SKILLS[Rnd.get(AREA_SKILLS.length)];
-						ArrayList<Npc> _skillNpcs = new ArrayList<>();
+						List<Npc> skillNpcs = new ArrayList<>();
 						for (PlayerInstance pl : ZONE.getPlayersInside())
 						{
 							if (pl == null)
@@ -231,11 +231,11 @@ public class Kelbim extends AbstractNpcAI
 							if (Rnd.get(100) > 40)
 							{
 								Npc skillMob = addSpawn(KELBIM_SHOUT, pl.getX(), pl.getY(), pl.getZ() + 10, 0, true, 60000, false, 0);
-								_skillNpcs.add(skillMob);
+								skillNpcs.add(skillMob);
 								_minions.add(skillMob);
 							}
 						}
-						for (Npc skillNpc : _skillNpcs)
+						for (Npc skillNpc : skillNpcs)
 						{
 							if (skillNpc == null)
 							{

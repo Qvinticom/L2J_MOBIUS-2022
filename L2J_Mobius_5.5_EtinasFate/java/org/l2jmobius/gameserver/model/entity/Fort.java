@@ -67,7 +67,7 @@ public class Fort extends AbstractResidence
 	
 	private final List<DoorInstance> _doors = new ArrayList<>();
 	private StaticObjectInstance _flagPole = null;
-	private volatile FortSiege _siege = null;
+	private FortSiege _siege = null;
 	private Calendar _siegeDate;
 	private Calendar _lastOwnedTime;
 	private SiegeZone _zone;
@@ -208,6 +208,7 @@ public class Fort extends AbstractResidence
 				}
 				catch (Throwable t)
 				{
+					// Ignore.
 				}
 			}
 		}
@@ -386,12 +387,9 @@ public class Fort extends AbstractResidence
 			try
 			{
 				final PlayerInstance oldleader = oldowner.getLeader().getPlayerInstance();
-				if (oldleader != null)
+				if ((oldleader != null) && (oldleader.getMountType() == MountType.WYVERN))
 				{
-					if (oldleader.getMountType() == MountType.WYVERN)
-					{
-						oldleader.dismount();
-					}
+					oldleader.dismount();
 				}
 			}
 			catch (Exception e)

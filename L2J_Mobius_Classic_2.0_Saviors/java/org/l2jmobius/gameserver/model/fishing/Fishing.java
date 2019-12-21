@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.model.fishing;
 
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -58,7 +57,7 @@ import org.l2jmobius.gameserver.util.Util;
 public class Fishing
 {
 	protected static final Logger LOGGER = Logger.getLogger(Fishing.class.getName());
-	private volatile ILocational _baitLocation = new Location(0, 0, 0);
+	private ILocational _baitLocation = new Location(0, 0, 0);
 	
 	private final PlayerInstance _player;
 	private ScheduledFuture<?> _reelInTask;
@@ -300,13 +299,10 @@ public class Fishing
 		try
 		{
 			final ItemInstance bait = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
-			if (consumeBait)
+			if (consumeBait && ((bait == null) || !_player.getInventory().updateItemCount(null, bait, -1, _player, null)))
 			{
-				if ((bait == null) || !_player.getInventory().updateItemCount(null, bait, -1, _player, null))
-				{
-					reason = FishingEndReason.LOSE; // no bait - no reward
-					return;
-				}
+				reason = FishingEndReason.LOSE; // no bait - no reward
+				return;
 			}
 			
 			if ((reason == FishingEndReason.WIN) && (bait != null))
@@ -329,7 +325,7 @@ public class Fishing
 				}
 				else
 				{
-					LOGGER.log(Level.WARNING, "Could not find fishing rewards for bait ", bait.getId());
+					LOGGER.warning("Could not find fishing rewards for bait " + bait.getId());
 				}
 			}
 			else if (reason == FishingEndReason.LOSE)

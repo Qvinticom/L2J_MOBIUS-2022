@@ -189,7 +189,6 @@ public class GeoEngine
 			// an error occured while loading, load null blocks
 			LOGGER.warning("GeoEngine: Error while loading " + filename + " region file.");
 			LOGGER.warning(e.getMessage());
-			e.printStackTrace();
 			
 			// replace whole region file with null blocks
 			loadNullBlocks(regionX, regionY);

@@ -153,6 +153,7 @@ public class Q00757_TriolsMovement extends Quest
 						break;
 					}
 					qs.setState(State.CREATED);
+					// fallthrough
 				}
 				case State.CREATED:
 				{

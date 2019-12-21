@@ -26,11 +26,18 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerClanLvlUp implements IBaseEvent
 {
+	private final PlayerInstance _player;
 	private final Clan _clan;
 	
 	public OnPlayerClanLvlUp(PlayerInstance player, Clan clan)
 	{
+		_player = player;
 		_clan = clan;
+	}
+	
+	public PlayerInstance getPlayer()
+	{
+		return _player;
 	}
 	
 	public Clan getClan()

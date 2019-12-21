@@ -376,6 +376,7 @@ public class LoginServerThread extends Thread
 				}
 				catch (Exception e)
 				{
+					// Ignore.
 				}
 			}
 			
@@ -383,9 +384,9 @@ public class LoginServerThread extends Thread
 			{
 				Thread.sleep(5000); // 5 seconds tempo.
 			}
-			catch (InterruptedException e)
+			catch (Exception e)
 			{
-				return; // never swallow an interrupt!
+				// Ignore.
 			}
 		}
 	}
@@ -487,6 +488,7 @@ public class LoginServerThread extends Thread
 		}
 		catch (IOException e)
 		{
+			// Ignore.
 		}
 	}
 	
@@ -504,6 +506,7 @@ public class LoginServerThread extends Thread
 		}
 		catch (IOException e)
 		{
+			// Ignore.
 		}
 	}
 	
@@ -522,6 +525,7 @@ public class LoginServerThread extends Thread
 		}
 		catch (IOException e)
 		{
+			// Ignore.
 		}
 	}
 	
@@ -540,6 +544,7 @@ public class LoginServerThread extends Thread
 		}
 		catch (IOException e)
 		{
+			// Ignore.
 		}
 	}
 	
@@ -616,6 +621,7 @@ public class LoginServerThread extends Thread
 		}
 		catch (IOException e)
 		{
+			// Ignore.
 		}
 	}
 	
@@ -679,6 +685,7 @@ public class LoginServerThread extends Thread
 		}
 		catch (IOException e)
 		{
+			// Ignore.
 		}
 	}
 	
@@ -695,6 +702,7 @@ public class LoginServerThread extends Thread
 		}
 		catch (IOException e)
 		{
+			// Ignore.
 		}
 	}
 	
@@ -714,6 +722,7 @@ public class LoginServerThread extends Thread
 		}
 		catch (IOException e)
 		{
+			// Ignore.
 		}
 	}
 	

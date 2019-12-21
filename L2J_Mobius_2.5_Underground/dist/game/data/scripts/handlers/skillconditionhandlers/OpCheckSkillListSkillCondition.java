@@ -54,6 +54,7 @@ public class OpCheckSkillListSkillCondition implements ISkillCondition
 						return true;
 					}
 				}
+				break;
 			}
 			case TARGET:
 			{

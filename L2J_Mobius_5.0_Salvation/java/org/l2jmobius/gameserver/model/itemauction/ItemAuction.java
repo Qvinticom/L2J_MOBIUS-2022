@@ -20,6 +20,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,7 +28,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.instancemanager.ItemAuctionManager;
 import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class ItemAuction
 {
-	private static final Logger LOGGER = Logger.getLogger(ItemAuctionManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ItemAuction.class.getName());
 	private static final long ENDING_TIME_EXTEND_5 = TimeUnit.MILLISECONDS.convert(5, TimeUnit.MINUTES);
 	private static final long ENDING_TIME_EXTEND_3 = TimeUnit.MILLISECONDS.convert(3, TimeUnit.MINUTES);
 	
@@ -50,12 +50,12 @@ public class ItemAuction
 	private final long _startingTime;
 	private volatile long _endingTime;
 	private final AuctionItem _auctionItem;
-	private final ArrayList<ItemAuctionBid> _auctionBids;
+	private final List<ItemAuctionBid> _auctionBids;
 	private final Object _auctionStateLock;
 	
-	private volatile ItemAuctionState _auctionState;
-	private volatile ItemAuctionExtendState _scheduledAuctionEndingExtendState;
-	private volatile ItemAuctionExtendState _auctionEndingExtendState;
+	private ItemAuctionState _auctionState;
+	private ItemAuctionExtendState _scheduledAuctionEndingExtendState;
+	private ItemAuctionExtendState _auctionEndingExtendState;
 	
 	private final ItemInfo _itemInfo;
 	
@@ -71,7 +71,7 @@ public class ItemAuction
 		this(auctionId, instanceId, startingTime, endingTime, auctionItem, new ArrayList<>(), ItemAuctionState.CREATED);
 	}
 	
-	public ItemAuction(int auctionId, int instanceId, long startingTime, long endingTime, AuctionItem auctionItem, ArrayList<ItemAuctionBid> auctionBids, ItemAuctionState auctionState)
+	public ItemAuction(int auctionId, int instanceId, long startingTime, long endingTime, AuctionItem auctionItem, List<ItemAuctionBid> auctionBids, ItemAuctionState auctionState)
 	{
 		_auctionId = auctionId;
 		_instanceId = instanceId;
@@ -218,7 +218,6 @@ public class ItemAuction
 	
 	private void updatePlayerBid(ItemAuctionBid bid, boolean delete)
 	{
-		// TODO nBd maybe move such stuff to you db updater :D
 		updatePlayerBidInternal(bid, delete);
 	}
 	
@@ -363,37 +362,28 @@ public class ItemAuction
 				}
 				case EXTEND_BY_3_MIN:
 				{
-					if (Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID > 0)
+					if ((Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID > 0) && (getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId()))
 					{
-						if (getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId())
-						{
-							_auctionEndingExtendState = ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_A;
-							_endingTime += Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
-						}
+						_auctionEndingExtendState = ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_A;
+						_endingTime += Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
 					}
 					break;
 				}
 				case EXTEND_BY_CONFIG_PHASE_A:
 				{
-					if (getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId())
+					if ((getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId()) && (_scheduledAuctionEndingExtendState == ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_B))
 					{
-						if (_scheduledAuctionEndingExtendState == ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_B)
-						{
-							_auctionEndingExtendState = ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_B;
-							_endingTime += Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
-						}
+						_auctionEndingExtendState = ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_B;
+						_endingTime += Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
 					}
 					break;
 				}
 				case EXTEND_BY_CONFIG_PHASE_B:
 				{
-					if (getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId())
+					if ((getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId()) && (_scheduledAuctionEndingExtendState == ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_A))
 					{
-						if (_scheduledAuctionEndingExtendState == ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_A)
-						{
-							_endingTime += Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
-							_auctionEndingExtendState = ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_A;
-						}
+						_endingTime += Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
+						_auctionEndingExtendState = ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_A;
 					}
 				}
 			}

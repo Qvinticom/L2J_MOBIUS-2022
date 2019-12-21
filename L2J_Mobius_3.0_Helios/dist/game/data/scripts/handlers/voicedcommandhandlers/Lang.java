@@ -73,10 +73,7 @@ public class Lang implements IVoicedCommandHandler
 					if (obj.isNpc() && NpcNameLocalisationData.getInstance().hasLocalisation(obj.getId()))
 					{
 						activeChar.sendPacket(new DeleteObject(obj));
-						ThreadPool.schedule(() ->
-						{
-							activeChar.sendPacket(new NpcInfo((Npc) obj));
-						}, 1000);
+						ThreadPool.schedule(() -> activeChar.sendPacket(new NpcInfo((Npc) obj)), 1000);
 					}
 				}
 				activeChar.setTarget(null);

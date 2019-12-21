@@ -108,7 +108,7 @@ public class BuyListData implements IXmlReader
 		try
 		{
 			final int buyListId = Integer.parseInt(f.getName().replaceAll(".xml", ""));
-			forEach(doc, "list", (list) ->
+			forEach(doc, "list", list ->
 			{
 				final int defaultBaseTax = parseInteger(list.getAttributes(), "baseTax", 0);
 				final ProductList buyList = new ProductList(buyListId);
@@ -146,7 +146,7 @@ public class BuyListData implements IXmlReader
 						}
 						case "npcs":
 						{
-							forEach(node, "npc", (npcNode) -> buyList.addAllowedNpc(Integer.parseInt(npcNode.getTextContent())));
+							forEach(node, "npc", npcNode -> buyList.addAllowedNpc(Integer.parseInt(npcNode.getTextContent())));
 							break;
 						}
 					}

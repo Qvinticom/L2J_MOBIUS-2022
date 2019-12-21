@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.ai.CtrlEvent;
@@ -55,7 +55,7 @@ public class KnockBack extends AbstractEffect
 	private final FlyType _type;
 	
 	// skill data
-	private static final Map<ClassId, Integer> _chainKnockSkills = new HashMap<>(36);
+	private static final Map<ClassId, Integer> _chainKnockSkills = new EnumMap<>(ClassId.class);
 	static
 	{
 		_chainKnockSkills.put(ClassId.SIGEL_PHOENIX_KNIGHT, 10250); // Heavy Hit

@@ -78,10 +78,9 @@ public class TimeAmountInterpreter
 	 * @param maxConsolidationUnit largest unit to be included within the description
 	 * @param noTimeUsedIndicator text to be written if the amount is not positive
 	 * @return {@code textBuilder}
-	 * @throws RuntimeException if {@code textBuilder} throws an {@link IOException}
 	 */
 	@SuppressWarnings("unchecked")
-	private static <T extends Appendable & CharSequence> T appendConsolidated(T textBuilder, long timeAmount, TimeUnit timeUnit, TimeUnit minConsolidationUnit, TimeUnit maxConsolidationUnit, String noTimeUsedIndicator) throws RuntimeException
+	private static <T extends Appendable & CharSequence> T appendConsolidated(T textBuilder, long timeAmount, TimeUnit timeUnit, TimeUnit minConsolidationUnit, TimeUnit maxConsolidationUnit, String noTimeUsedIndicator)
 	{
 		try
 		{

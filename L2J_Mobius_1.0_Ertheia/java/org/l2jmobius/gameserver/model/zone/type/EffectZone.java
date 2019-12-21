@@ -44,7 +44,7 @@ public class EffectZone extends ZoneType
 	private int _reuse;
 	protected boolean _bypassConditions;
 	private boolean _isShowDangerIcon;
-	protected volatile Map<Integer, Integer> _skills;
+	protected Map<Integer, Integer> _skills;
 	
 	public EffectZone(int id)
 	{

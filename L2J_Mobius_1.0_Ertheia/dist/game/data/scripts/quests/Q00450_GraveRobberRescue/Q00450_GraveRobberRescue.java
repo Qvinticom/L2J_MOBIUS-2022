@@ -111,6 +111,7 @@ public class Q00450_GraveRobberRescue extends Quest
 						break;
 					}
 					qs.setState(State.CREATED);
+					// fallthrough
 				}
 				case State.CREATED:
 				{

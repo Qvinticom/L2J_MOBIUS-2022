@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.conditions;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -29,13 +29,13 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerInstanceId extends Condition
 {
-	private final ArrayList<Integer> _instanceIds;
+	private final List<Integer> _instanceIds;
 	
 	/**
 	 * Instantiates a new condition player instance id.
 	 * @param instanceIds the instance ids
 	 */
-	public ConditionPlayerInstanceId(ArrayList<Integer> instanceIds)
+	public ConditionPlayerInstanceId(List<Integer> instanceIds)
 	{
 		_instanceIds = instanceIds;
 	}
@@ -50,6 +50,6 @@ public class ConditionPlayerInstanceId extends Condition
 		}
 		
 		final Instance instance = player.getInstanceWorld();
-		return (instance == null) ? false : _instanceIds.contains(instance.getTemplateId());
+		return (instance != null) && _instanceIds.contains(instance.getTemplateId());
 	}
 }

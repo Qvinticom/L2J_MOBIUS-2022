@@ -136,7 +136,7 @@ public class MobGroup
 	
 	public void spawnGroup(int x, int y, int z)
 	{
-		if (getMobs().size() > 0)
+		if (!getMobs().isEmpty())
 		{
 			return;
 		}
@@ -198,7 +198,7 @@ public class MobGroup
 	{
 		removeDead();
 		
-		if (getMobs().size() == 0)
+		if (getMobs().isEmpty())
 		{
 			return null;
 		}
@@ -218,7 +218,7 @@ public class MobGroup
 	{
 		removeDead();
 		
-		if (getMobs().size() == 0)
+		if (getMobs().isEmpty())
 		{
 			return;
 		}

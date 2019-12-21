@@ -27,10 +27,6 @@ public class ExChangeAttributeOk implements IClientOutgoingPacket
 {
 	public static final IClientOutgoingPacket STATIC = new ExChangeAttributeOk();
 	
-	public ExChangeAttributeOk()
-	{
-	}
-	
 	@Override
 	public boolean write(PacketWriter packet)
 	{

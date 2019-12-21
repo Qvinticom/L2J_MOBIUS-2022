@@ -424,16 +424,17 @@ public class NpcData implements IXmlReader
 								}
 								case "droplists":
 								{
-									for (Node drop_lists_node = npcNode.getFirstChild(); drop_lists_node != null; drop_lists_node = drop_lists_node.getNextSibling())
+									for (Node dropListsNode = npcNode.getFirstChild(); dropListsNode != null; dropListsNode = dropListsNode.getNextSibling())
 									{
 										DropType dropType = null;
 										
 										try
 										{
-											dropType = Enum.valueOf(DropType.class, drop_lists_node.getNodeName().toUpperCase());
+											dropType = Enum.valueOf(DropType.class, dropListsNode.getNodeName().toUpperCase());
 										}
 										catch (Exception e)
 										{
+											// Handled bellow.
 										}
 										
 										if (dropType != null)
@@ -443,15 +444,15 @@ public class NpcData implements IXmlReader
 												dropLists = new ArrayList<>();
 											}
 											
-											for (Node drop_node = drop_lists_node.getFirstChild(); drop_node != null; drop_node = drop_node.getNextSibling())
+											for (Node dropNode = dropListsNode.getFirstChild(); dropNode != null; dropNode = dropNode.getNextSibling())
 											{
-												final NamedNodeMap drop_attrs = drop_node.getAttributes();
-												if ("item".equals(drop_node.getNodeName().toLowerCase()))
+												final NamedNodeMap dropAttrs = dropNode.getAttributes();
+												if ("item".equalsIgnoreCase(dropNode.getNodeName()))
 												{
-													final DropHolder dropItem = new DropHolder(dropType, parseInteger(drop_attrs, "id"), parseLong(drop_attrs, "min"), parseLong(drop_attrs, "max"), parseDouble(drop_attrs, "chance"));
-													if (ItemTable.getInstance().getTemplate(parseInteger(drop_attrs, "id")) == null)
+													final DropHolder dropItem = new DropHolder(dropType, parseInteger(dropAttrs, "id"), parseLong(dropAttrs, "min"), parseLong(dropAttrs, "max"), parseDouble(dropAttrs, "chance"));
+													if (ItemTable.getInstance().getTemplate(parseInteger(dropAttrs, "id")) == null)
 													{
-														LOGGER.warning("DropListItem: Could not find item with id " + parseInteger(drop_attrs, "id") + ".");
+														LOGGER.warning("DropListItem: Could not find item with id " + parseInteger(dropAttrs, "id") + ".");
 													}
 													else
 													{
@@ -466,10 +467,7 @@ public class NpcData implements IXmlReader
 								case "extenddrop":
 								{
 									final List<Integer> extendDrop = new ArrayList<>();
-									forEach(npcNode, "id", idNode ->
-									{
-										extendDrop.add(Integer.parseInt(idNode.getTextContent()));
-									});
+									forEach(npcNode, "id", idNode -> extendDrop.add(Integer.parseInt(idNode.getTextContent())));
 									set.set("extendDrop", extendDrop);
 									break;
 								}
@@ -645,12 +643,9 @@ public class NpcData implements IXmlReader
 							}
 						}
 						
-						if (!template.getParameters().getMinionList("Privates").isEmpty())
+						if (!template.getParameters().getMinionList("Privates").isEmpty() && (template.getParameters().getSet().get("SummonPrivateRate") == null))
 						{
-							if (template.getParameters().getSet().get("SummonPrivateRate") == null)
-							{
-								_masterMonsterIDs.add(template.getId());
-							}
+							_masterMonsterIDs.add(template.getId());
 						}
 					}
 				}

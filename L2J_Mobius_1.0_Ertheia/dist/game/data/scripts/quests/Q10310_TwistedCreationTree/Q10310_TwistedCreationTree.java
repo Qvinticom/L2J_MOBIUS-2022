@@ -118,8 +118,8 @@ public class Q10310_TwistedCreationTree extends Quest
 				if (npc.getId() == SELINA)
 				{
 					htmltext = "33032-01.htm";
-					break;
 				}
+				break;
 			}
 			case State.STARTED:
 			{

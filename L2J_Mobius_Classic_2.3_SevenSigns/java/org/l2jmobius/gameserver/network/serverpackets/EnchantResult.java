@@ -22,12 +22,13 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class EnchantResult implements IClientOutgoingPacket
 {
-	public static int SUCCESS = 0;
-	public static int FAIL = 1;
-	public static int ERROR = 2;
-	public static int BLESSED_FAIL = 3;
-	public static int NO_CRYSTAL = 4;
-	public static int SAFE_FAIL = 5;
+	public static final int SUCCESS = 0;
+	public static final int FAIL = 1;
+	public static final int ERROR = 2;
+	public static final int BLESSED_FAIL = 3;
+	public static final int NO_CRYSTAL = 4;
+	public static final int SAFE_FAIL = 5;
+	
 	private final int _result;
 	private final int _crystal;
 	private final int _count;

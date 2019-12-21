@@ -214,12 +214,12 @@ public class Q00454_CompletelyLost extends Quest
 							qs.startQuest();
 							qs.setMemoState(1);
 							htmltext = getHtm(player, "32738-04a.htm");
-							htmltext = htmltext.replaceAll("leader", leader.getName());
+							htmltext = htmltext.replace("%leader%", leader.getName());
 						}
 						else
 						{
 							htmltext = getHtm(player, "32738-01b.htm");
-							htmltext = htmltext.replaceAll("leader", leader.getName());
+							htmltext = htmltext.replace("%leader%", leader.getName());
 						}
 					}
 				}
@@ -254,20 +254,17 @@ public class Q00454_CompletelyLost extends Quest
 					htmltext = "32738-06.html";
 					npc.sendScriptEvent("SCE_A_SEED_ESCORT_QUEST_START", npc, null);
 					final PlayerInstance leader = npc.getVariables().getObject("leader", PlayerInstance.class);
-					if (leader != null)
+					if ((leader != null) && leader.isInParty())
 					{
-						if (leader.isInParty())
+						for (PlayerInstance member : leader.getParty().getMembers())
 						{
-							for (PlayerInstance member : leader.getParty().getMembers())
+							if (member != null)
 							{
-								if (member != null)
+								final QuestState qsMember = getQuestState(member, false);
+								if ((qsMember != null) && qsMember.isMemoState(1) //
+									&& (npc.getVariables().getInt("partyId", 0) == leader.getParty().getLeaderObjectId()))
 								{
-									final QuestState qsMember = getQuestState(member, false);
-									if ((qsMember != null) && qsMember.isMemoState(1) //
-										&& (npc.getVariables().getInt("partyId", 0) == leader.getParty().getLeaderObjectId()))
-									{
-										qsMember.setMemoState(2);
-									}
+									qsMember.setMemoState(2);
 								}
 							}
 						}
@@ -435,6 +432,7 @@ public class Q00454_CompletelyLost extends Quest
 					break;
 				}
 				qs.setState(State.CREATED);
+				// break; fallthrough
 			}
 			case State.CREATED:
 			{
@@ -455,13 +453,13 @@ public class Q00454_CompletelyLost extends Quest
 						if (leader.isInParty() && leader.getParty().containsPlayer(player))
 						{
 							htmltext = getHtm(player, "32738-01a.htm");
-							htmltext = htmltext.replaceAll("leader", leader.getName());
-							htmltext = htmltext.replaceAll("name", player.getName());
+							htmltext = htmltext.replace("%leader%", leader.getName());
+							htmltext = htmltext.replace("%name%", player.getName());
 						}
 						else
 						{
 							htmltext = getHtm(player, "32738-01b.htm");
-							htmltext = htmltext.replaceAll("leader", leader.getName());
+							htmltext = htmltext.replace("%leader%", leader.getName());
 						}
 					}
 				}

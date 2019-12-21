@@ -44,7 +44,7 @@ public class SQLAccountManager
 		Config.load(ServerMode.LOGIN);
 		DatabaseFactory.init();
 		
-		try (Scanner _scn = new Scanner(System.in))
+		try (Scanner scn = new Scanner(System.in))
 		{
 			while (true)
 			{
@@ -58,7 +58,7 @@ public class SQLAccountManager
 				while (!_mode.equals("1") && !_mode.equals("2") && !_mode.equals("3") && !_mode.equals("4") && !_mode.equals("5"))
 				{
 					System.out.print("Your choice: ");
-					_mode = _scn.next();
+					_mode = scn.next();
 				}
 				
 				if (_mode.equals("1") || _mode.equals("2") || _mode.equals("3"))
@@ -66,7 +66,7 @@ public class SQLAccountManager
 					while (_uname.trim().isEmpty())
 					{
 						System.out.print("Username: ");
-						_uname = _scn.next().toLowerCase();
+						_uname = scn.next().toLowerCase();
 					}
 					
 					if (_mode.equals("1"))
@@ -74,7 +74,7 @@ public class SQLAccountManager
 						while (_pass.trim().isEmpty())
 						{
 							System.out.print("Password: ");
-							_pass = _scn.next();
+							_pass = scn.next();
 						}
 					}
 					
@@ -83,7 +83,7 @@ public class SQLAccountManager
 						while (_level.trim().isEmpty())
 						{
 							System.out.print("Access level: ");
-							_level = _scn.next();
+							_level = scn.next();
 						}
 					}
 				}
@@ -105,7 +105,7 @@ public class SQLAccountManager
 					System.out.print(" it will only delete the account login server data.");
 					System.out.println();
 					System.out.print("Do you really want to delete this account? Y/N: ");
-					final String yesno = _scn.next();
+					final String yesno = scn.next();
 					if ((yesno != null) && yesno.equalsIgnoreCase("Y"))
 					{
 						deleteAccount(_uname.trim());
@@ -129,7 +129,7 @@ public class SQLAccountManager
 					while (!_mode.equals("1") && !_mode.equals("2") && !_mode.equals("3") && !_mode.equals("4"))
 					{
 						System.out.print("Your choice: ");
-						_mode = _scn.next();
+						_mode = scn.next();
 					}
 					System.out.println();
 					printAccInfo(_mode);

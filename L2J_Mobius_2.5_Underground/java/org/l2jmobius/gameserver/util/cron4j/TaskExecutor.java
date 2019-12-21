@@ -306,7 +306,6 @@ public class TaskExecutor
 				}
 				catch (InterruptedException e)
 				{
-					continue;
 				}
 			}
 			while (true);

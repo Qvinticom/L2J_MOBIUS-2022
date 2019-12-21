@@ -68,20 +68,20 @@ public class BlockList
 		OFFLINE_LIST.put(_owner.getObjectId(), _blockList);
 	}
 	
-	private static List<Integer> loadList(int ObjId)
+	private static List<Integer> loadList(int objId)
 	{
 		final List<Integer> list = new ArrayList<>();
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT friendId FROM character_friends WHERE charId=? AND relation=1"))
 		{
-			statement.setInt(1, ObjId);
+			statement.setInt(1, objId);
 			try (ResultSet rset = statement.executeQuery())
 			{
 				int friendId;
 				while (rset.next())
 				{
 					friendId = rset.getInt("friendId");
-					if (friendId == ObjId)
+					if (friendId == objId)
 					{
 						continue;
 					}
@@ -91,7 +91,7 @@ public class BlockList
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Error found in " + ObjId + " FriendList while loading BlockList: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error found in " + objId + " FriendList while loading BlockList: " + e.getMessage(), e);
 		}
 		return list;
 	}

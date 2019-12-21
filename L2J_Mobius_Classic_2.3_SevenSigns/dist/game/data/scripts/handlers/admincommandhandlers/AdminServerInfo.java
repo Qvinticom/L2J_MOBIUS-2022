@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class AdminServerInfo implements IAdminCommandHandler
 {
-	private static final SimpleDateFormat fmt = new SimpleDateFormat("hh:mm a");
+	private static final SimpleDateFormat SDF = new SimpleDateFormat("hh:mm a");
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -51,7 +51,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 		if (command.equals("admin_serverinfo"))
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage();
-			final Runtime RunTime = Runtime.getRuntime();
+			final Runtime runTime = Runtime.getRuntime();
 			final int mb = 1024 * 1024;
 			html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/serverinfo.htm"));
 			
@@ -61,14 +61,14 @@ public class AdminServerInfo implements IAdminCommandHandler
 			html.replace("%gameTime%", GameTimeController.getInstance().getGameHour() + ":" + GameTimeController.getInstance().getGameMinute());
 			html.replace("%dayNight%", GameTimeController.getInstance().isNight() ? "Night" : "Day");
 			html.replace("%geodata%", Config.PATHFINDING ? "Enabled" : "Disabled");
-			html.replace("%serverTime%", fmt.format(new Date(System.currentTimeMillis())));
+			html.replace("%serverTime%", SDF.format(new Date(System.currentTimeMillis())));
 			html.replace("%serverUpTime%", getServerUpTime());
 			html.replace("%onlineAll%", getPlayersCount("ALL"));
 			html.replace("%offlineTrade%", getPlayersCount("OFF_TRADE"));
 			html.replace("%onlineGM%", getPlayersCount("GM"));
 			html.replace("%onlineReal%", getPlayersCount("ALL_REAL"));
-			html.replace("%usedMem%", (RunTime.maxMemory() / mb) - (((RunTime.maxMemory() - RunTime.totalMemory()) + RunTime.freeMemory()) / mb));
-			html.replace("%freeMem%", ((RunTime.maxMemory() - RunTime.totalMemory()) + RunTime.freeMemory()) / mb);
+			html.replace("%usedMem%", (runTime.maxMemory() / mb) - (((runTime.maxMemory() - runTime.totalMemory()) + runTime.freeMemory()) / mb));
+			html.replace("%freeMem%", ((runTime.maxMemory() - runTime.totalMemory()) + runTime.freeMemory()) / mb);
 			html.replace("%totalMem%", Runtime.getRuntime().maxMemory() / 1048576);
 			activeChar.sendPacket(html);
 		}

@@ -118,12 +118,9 @@ public class PetInventory extends Inventory
 		// check for equiped items from other pets
 		for (ItemInstance item : _items.values())
 		{
-			if (item.isEquipped())
+			if (item.isEquipped() && !item.getItem().checkCondition(_owner, _owner, false))
 			{
-				if (!item.getItem().checkCondition(_owner, _owner, false))
-				{
-					unEquipItemInSlot(item.getLocationSlot());
-				}
+				unEquipItemInSlot(item.getLocationSlot());
 			}
 		}
 	}

@@ -25,9 +25,9 @@ public class IPSubnet
 	private final byte[] _mask;
 	private final boolean _isIPv4;
 	
-	public IPSubnet(String input) throws UnknownHostException, NumberFormatException, ArrayIndexOutOfBoundsException
+	public IPSubnet(String input) throws UnknownHostException
 	{
-		final int idx = input.indexOf("/");
+		final int idx = input.indexOf('/');
 		if (idx > 0)
 		{
 			_addr = InetAddress.getByName(input.substring(0, idx)).getAddress();

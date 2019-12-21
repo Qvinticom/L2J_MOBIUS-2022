@@ -46,7 +46,6 @@ import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
-import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -68,14 +67,10 @@ import instances.AbstractInstance;
  */
 public class Stage1 extends AbstractInstance implements IXmlReader
 {
-	Logger LOGGER = Logger.getLogger(Stage1.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Stage1.class.getName());
 	
 	private static class SODSpawn
 	{
-		public SODSpawn()
-		{
-		}
-		
 		boolean isZone = false;
 		boolean isNeededNextFlag = false;
 		int npcId;
@@ -94,10 +89,6 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 	private static final Location ENTER_TELEPORT_2 = new Location(-245800, 220488, -12112);
 	private static final Location CENTER_TELEPORT = new Location(-245802, 220528, -12104);
 	// Traps/Skills
-	private static final SkillHolder TRAP_HOLD = new SkillHolder(4186, 9); // 18720-18728
-	private static final SkillHolder TRAP_STUN = new SkillHolder(4072, 10); // 18729-18736
-	private static final SkillHolder TRAP_DAMAGE = new SkillHolder(5340, 4); // 18737-18770
-	private static final SkillHolder TRAP_SPAWN = new SkillHolder(10002, 1); // 18771-18774 : handled in this script
 	private static final int[] TRAP_18771_NPCS =
 	{
 		22541,
@@ -427,24 +418,7 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 		// traps
 		if ((npcId >= 18720) && (npcId <= 18774))
 		{
-			Skill skill = null;
-			if (npcId <= 18728)
-			{
-				skill = TRAP_HOLD.getSkill();
-			}
-			else if (npcId <= 18736)
-			{
-				skill = TRAP_STUN.getSkill();
-			}
-			else if (npcId <= 18770)
-			{
-				skill = TRAP_DAMAGE.getSkill();
-			}
-			else
-			{
-				skill = TRAP_SPAWN.getSkill();
-			}
-			addTrap(npcId, x, y, z, h, skill, world.getId());
+			addTrap(npcId, x, y, z, h, world.getId());
 			return;
 		}
 		final Npc npc = addSpawn(npcId, x, y, z, h, false, 0, false, world.getId());

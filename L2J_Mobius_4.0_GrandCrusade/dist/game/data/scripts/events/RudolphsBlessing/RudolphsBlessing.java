@@ -60,18 +60,15 @@ public class RudolphsBlessing extends LongTimeEvent
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		if (event.equals("rudolph_eat"))
+		if (event.equals("rudolph_eat") && (player != null) && player.isOnline())
 		{
-			if ((player != null) && player.isOnline())
+			if (takeItems(player, ITEM_REQUIREMENT.getId(), ITEM_REQUIREMENT.getCount()))
 			{
-				if (takeItems(player, ITEM_REQUIREMENT.getId(), ITEM_REQUIREMENT.getCount()))
-				{
-					SkillCaster.triggerCast(player, player, RUDOLPH_TRYUCK.getSkill());
-					Skill RudolphsBlessing = SkillData.getInstance().getSkill(23297, 1);
-					RudolphsBlessing.applyEffects(player, player);
-				}
-				startQuestTimer("rudolph_eat", 10 * 60 * 1000, null, player);
+				SkillCaster.triggerCast(player, player, RUDOLPH_TRYUCK.getSkill());
+				Skill rudolphsBlessing = SkillData.getInstance().getSkill(23297, 1);
+				rudolphsBlessing.applyEffects(player, player);
 			}
+			startQuestTimer("rudolph_eat", 10 * 60 * 1000, null, player);
 		}
 		if (player == null)
 		{

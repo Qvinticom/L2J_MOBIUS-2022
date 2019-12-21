@@ -57,7 +57,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	private WorldRegion _worldRegion;
 	/** Instance type */
 	private InstanceType _instanceType;
-	private volatile Map<String, Object> _scripts;
+	private Map<String, Object> _scripts;
 	/** X coordinate */
 	private volatile int _x = 0;
 	/** Y coordinate */

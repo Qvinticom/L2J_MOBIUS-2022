@@ -123,6 +123,7 @@ public class Q00752_UncoverTheSecret extends Quest
 						break;
 					}
 					qs.setState(State.CREATED);
+					// fallthrough
 				}
 				case State.CREATED:
 				{

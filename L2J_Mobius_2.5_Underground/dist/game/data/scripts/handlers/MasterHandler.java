@@ -136,7 +136,6 @@ import handlers.admincommandhandlers.AdminTargetSay;
 import handlers.admincommandhandlers.AdminTeleport;
 import handlers.admincommandhandlers.AdminTest;
 import handlers.admincommandhandlers.AdminTransform;
-import handlers.admincommandhandlers.AdminUnblockIp;
 import handlers.admincommandhandlers.AdminVitality;
 import handlers.admincommandhandlers.AdminZone;
 import handlers.admincommandhandlers.AdminZones;
@@ -474,7 +473,6 @@ public class MasterHandler
 			AdminTeleport.class,
 			AdminTest.class,
 			AdminTransform.class,
-			AdminUnblockIp.class,
 			AdminVitality.class,
 			AdminZone.class,
 		},
@@ -709,12 +707,9 @@ public class MasterHandler
 			}
 		}
 		
-		registerHandlerMethods.entrySet().stream().filter(e -> e.getValue() == null).forEach(e ->
-		{
-			LOGGER.warning("Failed loading handlers of: " + e.getKey().getClass().getSimpleName() + " seems registerHandler function does not exist.");
-		});
+		registerHandlerMethods.entrySet().stream().filter(e -> e.getValue() == null).forEach(e -> LOGGER.warning("Failed loading handlers of: " + e.getKey().getClass().getSimpleName() + " seems registerHandler function does not exist."));
 		
-		for (Class<?> classes[] : HANDLERS)
+		for (Class<?>[] classes : HANDLERS)
 		{
 			for (Class<?> c : classes)
 			{

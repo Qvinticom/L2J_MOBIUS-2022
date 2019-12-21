@@ -43,12 +43,10 @@ import ai.AbstractNpcAI;
 
 public abstract class AirShipController extends AbstractNpcAI
 {
+	private static final Logger LOGGER = Logger.getLogger(AirShipController.class.getName());
+	
 	private final class DecayTask implements Runnable
 	{
-		public DecayTask()
-		{
-		}
-		
 		@Override
 		public void run()
 		{
@@ -61,10 +59,6 @@ public abstract class AirShipController extends AbstractNpcAI
 	
 	private final class DepartTask implements Runnable
 	{
-		public DepartTask()
-		{
-		}
-		
 		@Override
 		public void run()
 		{
@@ -82,7 +76,6 @@ public abstract class AirShipController extends AbstractNpcAI
 		}
 	}
 	
-	private static final Logger LOGGER = Logger.getLogger(AirShipController.class.getName());
 	protected int _dockZone = 0;
 	protected int _shipSpawnX = 0;
 	protected int _shipSpawnY = 0;

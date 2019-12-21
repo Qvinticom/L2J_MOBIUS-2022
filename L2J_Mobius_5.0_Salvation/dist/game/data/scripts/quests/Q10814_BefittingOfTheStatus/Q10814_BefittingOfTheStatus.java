@@ -119,8 +119,8 @@ public class Q10814_BefittingOfTheStatus extends Quest
 						break;
 					}
 					htmltext = getNoQuestLevelRewardMsg(player);
-					break;
 				}
+				break;
 			}
 			case "showItemList":
 			{

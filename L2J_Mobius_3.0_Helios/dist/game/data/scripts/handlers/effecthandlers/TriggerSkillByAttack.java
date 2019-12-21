@@ -131,12 +131,9 @@ public class TriggerSkillByAttack extends AbstractEffect
 			return;
 		}
 		
-		if (_allowWeapons > 0)
+		if ((_allowWeapons > 0) && ((event.getAttacker().getActiveWeaponItem() == null) || ((event.getAttacker().getActiveWeaponItem().getItemType().mask() & _allowWeapons) == 0)))
 		{
-			if ((event.getAttacker().getActiveWeaponItem() == null) || ((event.getAttacker().getActiveWeaponItem().getItemType().mask() & _allowWeapons) == 0))
-			{
-				return;
-			}
+			return;
 		}
 		
 		final Skill triggerSkill = _skill.getSkill();

@@ -29,12 +29,12 @@ import org.l2jmobius.gameserver.model.quest.State;
  */
 public class Q00756_TopQualityPetra extends Quest
 {
-	// Npcs
-	private final int AKU = 33671;
+	// NPCs
+	private static final int AKU = 33671;
 	// Items
-	private final int AKU_MARK = 34910;
-	private final int TOP_QUALITY_PETRA = 35703;
-	private final int ZAHAK_PETRA = 35702;
+	private static final int AKU_MARK = 34910;
+	private static final int TOP_QUALITY_PETRA = 35703;
+	private static final int ZAHAK_PETRA = 35702;
 	// Other
 	private static final int MIN_LEVEL = 97;
 	
@@ -60,6 +60,7 @@ public class Q00756_TopQualityPetra extends Quest
 				qs.startQuest();
 				takeItems(player, ZAHAK_PETRA, 1);
 				giveItems(player, TOP_QUALITY_PETRA, 1);
+				break;
 			}
 			case "sofa_aku_q0756_02.html":
 			{
@@ -67,6 +68,7 @@ public class Q00756_TopQualityPetra extends Quest
 				addExpAndSp(player, 570676680, 26102484);
 				giveItems(player, AKU_MARK, 1);
 				qs.exitQuest(QuestType.DAILY, true);
+				break;
 			}
 		}
 		return htmltext;
@@ -118,7 +120,7 @@ public class Q00756_TopQualityPetra extends Quest
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
+		String htmltext; // = getNoQuestMsg(player);
 		
 		if (qs.isCond(1) && hasQuestItems(player, TOP_QUALITY_PETRA))
 		{

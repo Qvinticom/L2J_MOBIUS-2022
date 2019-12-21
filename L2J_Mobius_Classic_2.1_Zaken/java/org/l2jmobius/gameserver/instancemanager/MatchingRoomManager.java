@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.matching.MatchingRoom;
  */
 public class MatchingRoomManager
 {
-	private volatile Set<PlayerInstance> _waitingList;
+	private Set<PlayerInstance> _waitingList;
 	
 	private static final Map<MatchingRoomType, Map<Integer, MatchingRoom>> _rooms = new ConcurrentHashMap<>(2);
 	

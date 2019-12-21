@@ -120,6 +120,7 @@ public class Q00926_30DaySearchOperation extends Quest
 					break;
 				}
 				qs.setState(State.CREATED);
+				// fallthrough
 			}
 			case State.CREATED:
 			{

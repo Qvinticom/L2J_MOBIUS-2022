@@ -182,21 +182,18 @@ public class SiegeZone extends ZoneType
 		creature.setInsideZone(ZoneId.PVP, false);
 		creature.setInsideZone(ZoneId.SIEGE, false);
 		creature.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false); // FIXME: Custom ?
-		if (getSettings().isActiveSiege())
+		if (getSettings().isActiveSiege() && creature.isPlayer())
 		{
-			if (creature.isPlayer())
+			final PlayerInstance player = creature.getActingPlayer();
+			creature.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
+			if (player.getMountType() == MountType.WYVERN)
 			{
-				final PlayerInstance player = creature.getActingPlayer();
-				creature.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
-				if (player.getMountType() == MountType.WYVERN)
-				{
-					player.exitedNoLanding();
-				}
-				// Set pvp flag
-				if (player.getPvpFlag() == 0)
-				{
-					player.startPvPFlag();
-				}
+				player.exitedNoLanding();
+			}
+			// Set pvp flag
+			if (player.getPvpFlag() == 0)
+			{
+				player.startPvPFlag();
 			}
 		}
 		if (creature.isPlayer())
@@ -240,23 +237,20 @@ public class SiegeZone extends ZoneType
 	@Override
 	public void onDieInside(Creature creature)
 	{
-		if (getSettings().isActiveSiege())
+		// debuff participants only if they die inside siege zone
+		if (getSettings().isActiveSiege() && creature.isPlayer() && creature.getActingPlayer().isRegisteredOnThisSiegeField(getSettings().getSiegeableId()))
 		{
-			// debuff participants only if they die inside siege zone
-			if (creature.isPlayer() && creature.getActingPlayer().isRegisteredOnThisSiegeField(getSettings().getSiegeableId()))
+			int lvl = 1;
+			final BuffInfo info = creature.getEffectList().getBuffInfoBySkillId(5660);
+			if (info != null)
 			{
-				int lvl = 1;
-				final BuffInfo info = creature.getEffectList().getBuffInfoBySkillId(5660);
-				if (info != null)
-				{
-					lvl = Math.min(lvl + info.getSkill().getLevel(), 5);
-				}
-				
-				final Skill skill = SkillData.getInstance().getSkill(5660, lvl);
-				if (skill != null)
-				{
-					skill.applyEffects(creature, creature);
-				}
+				lvl = Math.min(lvl + info.getSkill().getLevel(), 5);
+			}
+			
+			final Skill skill = SkillData.getInstance().getSkill(5660, lvl);
+			if (skill != null)
+			{
+				skill.applyEffects(creature, creature);
 			}
 		}
 	}

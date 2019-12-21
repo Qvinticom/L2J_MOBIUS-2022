@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 
 import org.w3c.dom.Document;
@@ -36,8 +36,8 @@ import org.l2jmobius.gameserver.model.beautyshop.BeautyItem;
  */
 public class BeautyShopData implements IXmlReader
 {
-	private final Map<Race, Map<Sex, BeautyData>> _beautyList = new HashMap<>();
-	private final Map<Sex, BeautyData> _beautyData = new HashMap<>();
+	private final Map<Race, Map<Sex, BeautyData>> _beautyList = new EnumMap<>(Race.class);
+	private final Map<Sex, BeautyData> _beautyData = new EnumMap<>(Sex.class);
 	
 	protected BeautyShopData()
 	{

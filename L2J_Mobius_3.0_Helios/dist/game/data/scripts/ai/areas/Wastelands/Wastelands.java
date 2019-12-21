@@ -97,10 +97,7 @@ public class Wastelands extends AbstractNpcAI
 				npc.broadcastSocialAction(4);
 				npc.broadcastSay(ChatType.NPC_GENERAL, GUARD_SHOUT[getRandom(2)], 1000);
 				
-				World.getInstance().getVisibleObjectsInRange(npc, Npc.class, 500).stream().filter(n -> n.getId() == GUARD).forEach(guard ->
-				{
-					startQuestTimer("SOCIAL_ACTION", getRandom(2500, 3500), guard, null);
-				});
+				World.getInstance().getVisibleObjectsInRange(npc, Npc.class, 500).stream().filter(n -> n.getId() == GUARD).forEach(guard -> startQuestTimer("SOCIAL_ACTION", getRandom(2500, 3500), guard, null));
 				break;
 			}
 			case "SOCIAL_ACTION":

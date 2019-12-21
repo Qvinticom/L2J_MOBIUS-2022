@@ -93,10 +93,6 @@ public class Q10760_LettersFromTheQueenOrcBarracks extends LetterQuest
 				}
 				break;
 			}
-			default:
-			{
-				htmltext = event;
-			}
 		}
 		return htmltext;
 	}

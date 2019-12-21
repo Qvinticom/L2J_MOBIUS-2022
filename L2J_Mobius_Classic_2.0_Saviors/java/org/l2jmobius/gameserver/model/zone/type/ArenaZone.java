@@ -35,28 +35,20 @@ public class ArenaZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		if (creature.isPlayer())
+		if (creature.isPlayer() && !creature.isInsideZone(ZoneId.PVP))
 		{
-			if (!creature.isInsideZone(ZoneId.PVP))
-			{
-				creature.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
-			}
+			creature.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
 		}
-		
 		creature.setInsideZone(ZoneId.PVP, true);
 	}
 	
 	@Override
 	protected void onExit(Creature creature)
 	{
-		if (creature.isPlayer())
+		if (creature.isPlayer() && !creature.isInsideZone(ZoneId.PVP))
 		{
-			if (!creature.isInsideZone(ZoneId.PVP))
-			{
-				creature.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
-			}
+			creature.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 		}
-		
 		creature.setInsideZone(ZoneId.PVP, false);
 	}
 }

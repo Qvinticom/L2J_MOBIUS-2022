@@ -150,6 +150,8 @@ public class Q00254_LegendaryTales extends Quest
 			case "30754-05.html":
 			{
 				qs.startQuest();
+				htmltext = event;
+				break;
 			}
 			case "30754-02.html":
 			case "30754-03.html":

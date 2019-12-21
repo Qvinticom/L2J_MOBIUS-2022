@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.enums.Race;
@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
  */
 public class RespawnZone extends ZoneRespawn
 {
-	private final Map<Race, String> _raceRespawnPoint = new HashMap<>();
+	private final Map<Race, String> _raceRespawnPoint = new EnumMap<>(Race.class);
 	
 	public RespawnZone(int id)
 	{

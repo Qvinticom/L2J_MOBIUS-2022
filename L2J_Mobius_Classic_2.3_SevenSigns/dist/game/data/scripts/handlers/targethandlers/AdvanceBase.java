@@ -40,12 +40,9 @@ public class AdvanceBase implements ITargetTypeHandler
 	public WorldObject getTarget(Creature creature, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
 		final WorldObject target = creature.getTarget();
-		if ((target != null) && target.isNpc() && (target.getId() == 36590))
+		if ((target != null) && target.isNpc() && (target.getId() == 36590) && !((Npc) target).isDead())
 		{
-			if (!((Npc) target).isDead())
-			{
-				return target;
-			}
+			return target;
 		}
 		
 		if (sendMessage)

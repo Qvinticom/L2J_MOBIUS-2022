@@ -295,8 +295,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			final StringTokenizer st = new StringTokenizer(command, " ");
 			try
 			{
-				@SuppressWarnings("unused")
-				final String cmd = st.nextToken();
+				st.nextToken();
 				final String id = st.nextToken();
 				final String x = st.nextToken();
 				final String y = st.nextToken();

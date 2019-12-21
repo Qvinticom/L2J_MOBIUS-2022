@@ -106,6 +106,7 @@ public class Q00474_WaitingForTheSummer extends Quest
 						break;
 					}
 					qs.setState(State.CREATED);
+					// fallthrough
 				}
 				case State.CREATED:
 				{

@@ -490,12 +490,7 @@ public class FortSiege implements Siegable
 	@Override
 	public boolean checkIsDefender(Clan clan)
 	{
-		if ((clan != null) && (_fort.getOwnerClan() == clan))
-		{
-			return true;
-		}
-		
-		return false;
+		return (clan != null) && (_fort.getOwnerClan() == clan);
 	}
 	
 	/** Clear all registered siege clans from database for fort */
@@ -1122,9 +1117,9 @@ public class FortSiege implements Siegable
 		}
 	}
 	
-	private void spawnFlag(int Id)
+	private void spawnFlag(int id)
 	{
-		for (CombatFlag cf : FortSiegeManager.getInstance().getFlagList(Id))
+		for (CombatFlag cf : FortSiegeManager.getInstance().getFlagList(id))
 		{
 			cf.spawnMe();
 		}

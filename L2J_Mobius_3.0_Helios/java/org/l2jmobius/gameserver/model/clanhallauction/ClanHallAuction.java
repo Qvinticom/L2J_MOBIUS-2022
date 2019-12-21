@@ -77,7 +77,7 @@ public class ClanHallAuction
 		}
 	}
 	
-	private volatile Map<Integer, Bidder> _bidders;
+	private Map<Integer, Bidder> _bidders;
 	
 	public Map<Integer, Bidder> getBids()
 	{

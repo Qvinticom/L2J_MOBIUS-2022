@@ -354,11 +354,10 @@ public abstract class Inventory extends ItemContainer
 			
 			it.forEachSkill(ItemSkillType.NORMAL, holder ->
 			{
-				final Skill Skill = holder.getSkill();
-				
-				if (Skill != null)
+				final Skill skill = holder.getSkill();
+				if (skill != null)
 				{
-					player.removeSkill(Skill, false, Skill.isPassive());
+					player.removeSkill(skill, false, skill.isPassive());
 					update.compareAndSet(false, true);
 				}
 				else
@@ -387,19 +386,15 @@ public abstract class Inventory extends ItemContainer
 						if (skill != null)
 						{
 							player.addSkill(skill, false);
-							
-							if (skill.isActive())
+							if (skill.isActive() && !player.hasSkillReuse(skill.getReuseHashCode()))
 							{
-								if (!player.hasSkillReuse(skill.getReuseHashCode()))
+								final int equipDelay = item.getEquipReuseDelay();
+								if (equipDelay > 0)
 								{
-									final int equipDelay = item.getEquipReuseDelay();
-									if (equipDelay > 0)
-									{
-										player.addTimeStamp(skill, equipDelay);
-										player.disableSkill(skill, equipDelay);
-									}
-									updateTimestamp.compareAndSet(false, true);
+									player.addTimeStamp(skill, equipDelay);
+									player.disableSkill(skill, equipDelay);
 								}
+								updateTimestamp.compareAndSet(false, true);
 							}
 							update.compareAndSet(false, true);
 						}
@@ -515,19 +510,15 @@ public abstract class Inventory extends ItemContainer
 					}
 					
 					player.addSkill(skill, false);
-					
-					if (skill.isActive())
+					if (skill.isActive() && !player.hasSkillReuse(skill.getReuseHashCode()))
 					{
-						if (!player.hasSkillReuse(skill.getReuseHashCode()))
+						final int equipDelay = item.getEquipReuseDelay();
+						if (equipDelay > 0)
 						{
-							final int equipDelay = item.getEquipReuseDelay();
-							if (equipDelay > 0)
-							{
-								player.addTimeStamp(skill, equipDelay);
-								player.disableSkill(skill, equipDelay);
-							}
-							updateTimestamp.compareAndSet(false, true);
+							player.addTimeStamp(skill, equipDelay);
+							player.disableSkill(skill, equipDelay);
 						}
+						updateTimestamp.compareAndSet(false, true);
 					}
 					update.compareAndSet(false, true);
 				}
@@ -602,12 +593,9 @@ public abstract class Inventory extends ItemContainer
 			if (itemVisualId > 0)
 			{
 				final AppearanceStone stone = AppearanceItemData.getInstance().getStone(itemVisualId);
-				if (stone != null)
+				if ((stone != null) && (stone.getType() == AppearanceType.FIXED) && verifyAndApply(player, item, ItemInstance::getVisualId))
 				{
-					if ((stone.getType() == AppearanceType.FIXED) && verifyAndApply(player, item, ItemInstance::getVisualId))
-					{
-						update = true;
-					}
+					update = true;
 				}
 			}
 			
@@ -881,7 +869,6 @@ public abstract class Inventory extends ItemContainer
 				inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT19);
 				inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT20);
 				inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT21);
-				
 			}
 		}
 		
@@ -1684,12 +1671,9 @@ public abstract class Inventory extends ItemContainer
 		if (pdollSlot >= 0)
 		{
 			final ItemInstance old = setPaperdollItem(pdollSlot, null);
-			if (old != null)
+			if ((old != null) && getOwner().isPlayer())
 			{
-				if (getOwner().isPlayer())
-				{
-					((PlayerInstance) getOwner()).refreshExpertisePenalty();
-				}
+				((PlayerInstance) getOwner()).refreshExpertisePenalty();
 			}
 			return old;
 		}
@@ -2089,14 +2073,11 @@ public abstract class Inventory extends ItemContainer
 		// find same (or incompatible) talisman type
 		for (int i = PAPERDOLL_DECO1; i < (PAPERDOLL_DECO1 + getTalismanSlots()); i++)
 		{
-			if (_paperdoll[i] != null)
+			if ((_paperdoll[i] != null) && (getPaperdollItemId(i) == item.getId()))
 			{
-				if (getPaperdollItemId(i) == item.getId())
-				{
-					// overwrite
-					setPaperdollItem(i, item);
-					return;
-				}
+				// overwrite
+				setPaperdollItem(i, item);
+				return;
 			}
 		}
 		

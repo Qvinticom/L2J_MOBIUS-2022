@@ -36,7 +36,7 @@ public class Q00138_TempleChampionPart2 extends Quest
 	private static final int PUPINA = 30118;
 	private static final int ANGUS = 30474;
 	private static final int SLA = 30666;
-	private static final int MOBS[] =
+	private static final int[] MOBS =
 	{
 		20176, // Wyrm
 		20550, // Guardian Basilisk

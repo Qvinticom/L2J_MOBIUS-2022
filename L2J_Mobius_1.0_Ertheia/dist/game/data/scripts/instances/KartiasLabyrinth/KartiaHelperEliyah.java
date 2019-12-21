@@ -129,7 +129,7 @@ public class KartiaHelperEliyah extends AbstractNpcAI
 		if (status == 1)
 		{
 			instance.getAliveNpcs(KARTIA_ELIYAH).forEach(eliyah -> getTimers().addRepeatingTimer("CHECK_ACTION", 3000, eliyah, null));
-			if ((instance.getAliveNpcs(KARTIA_ELIYAH) != null) && (instance.getAliveNpcs(KARTIA_ELIYAH).size() > 0))
+			if ((instance.getAliveNpcs(KARTIA_ELIYAH) != null) && !instance.getAliveNpcs(KARTIA_ELIYAH).isEmpty())
 			{
 				instance.spawnGroup("GUARDIANS");
 			}

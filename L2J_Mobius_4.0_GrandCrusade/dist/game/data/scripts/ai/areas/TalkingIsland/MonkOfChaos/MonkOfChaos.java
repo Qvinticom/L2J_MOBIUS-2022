@@ -93,7 +93,7 @@ public class MonkOfChaos extends AbstractNpcAI
 				if (player.isDualClassActive())
 				{
 					final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableRevelationSkills(player, SubclassType.DUALCLASS);
-					if (skills.size() > 0)
+					if (!skills.isEmpty())
 					{
 						player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.REVELATION_DUALCLASS));
 					}
@@ -105,7 +105,7 @@ public class MonkOfChaos extends AbstractNpcAI
 				else
 				{
 					final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableRevelationSkills(player, SubclassType.BASECLASS);
-					if (skills.size() > 0)
+					if (!skills.isEmpty())
 					{
 						player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.REVELATION));
 					}

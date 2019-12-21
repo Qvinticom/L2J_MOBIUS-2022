@@ -289,10 +289,10 @@ public class Q10385_RedThreadOfFate extends Quest
 					giveItems(player, SCROLL_OF_ESCAPE_DWARVEN_VILLAGE, 1);
 					htmltext = event;
 				}
-				else if (qs.isCond(13))
-				{
-					player.teleToLocation(VULCUN_TELEPORT);
-				}
+				// else if (qs.isCond(13))
+				// {
+				// player.teleToLocation(VULCUN_TELEPORT);
+				// }
 				break;
 			}
 			case "33748-03.html":
@@ -660,10 +660,10 @@ public class Q10385_RedThreadOfFate extends Quest
 						{
 							htmltext = "30031-01.html";
 						}
-						else if (qs.isCond(21))
-						{
-							htmltext = "30031-04.html";
-						}
+						// else if (qs.isCond(21))
+						// {
+						// htmltext = "30031-04.html";
+						// }
 						break;
 					}
 				}

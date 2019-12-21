@@ -242,6 +242,7 @@ public class Q00924_GiantOfTheRestorationRoom extends Quest
 			case State.CREATED:
 			{
 				htmltext = "34217-01.htm";
+				// fallthrough?
 			}
 			case State.STARTED:
 			{

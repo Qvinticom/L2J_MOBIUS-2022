@@ -125,15 +125,9 @@ public class ItemsOnGroundManager implements Runnable
 					_items.add(item);
 					count++;
 					// add to ItemsAutoDestroy only items not protected
-					if (!Config.LIST_PROTECTED_ITEMS.contains(item.getId()))
+					if (!Config.LIST_PROTECTED_ITEMS.contains(item.getId()) && (dropTime > -1) && (((Config.AUTODESTROY_ITEM_AFTER > 0) && !item.getItem().hasExImmediateEffect()) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && item.getItem().hasExImmediateEffect())))
 					{
-						if (dropTime > -1)
-						{
-							if (((Config.AUTODESTROY_ITEM_AFTER > 0) && !item.getItem().hasExImmediateEffect()) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && item.getItem().hasExImmediateEffect()))
-							{
-								ItemsAutoDestroy.getInstance().addItem(item);
-							}
-						}
+						ItemsAutoDestroy.getInstance().addItem(item);
 					}
 				}
 			}

@@ -206,7 +206,7 @@ public enum Stats
 	DARK_RES("darkRes", new AttributeFinalizer(AttributeType.DARK, false)),
 	BASE_ATTRIBUTE_RES("baseAttrRes"),
 	MAGIC_SUCCESS_RES("magicSuccRes"),
-	// BUFF_IMMUNITY("buffImmunity"), //TODO: Implement me
+	// BUFF_IMMUNITY("buffImmunity"), // TODO: Implement me
 	ABNORMAL_RESIST_PHYSICAL("abnormalResPhysical"),
 	ABNORMAL_RESIST_MAGICAL("abnormalResMagical"),
 	

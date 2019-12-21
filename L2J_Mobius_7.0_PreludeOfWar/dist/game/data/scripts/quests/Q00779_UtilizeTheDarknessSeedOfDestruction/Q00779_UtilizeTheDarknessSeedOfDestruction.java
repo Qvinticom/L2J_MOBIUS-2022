@@ -124,6 +124,7 @@ public class Q00779_UtilizeTheDarknessSeedOfDestruction extends Quest
 					break;
 				}
 				qs.setState(State.CREATED);
+				// fallthrough
 			}
 			case State.CREATED:
 			{

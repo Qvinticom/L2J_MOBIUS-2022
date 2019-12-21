@@ -226,28 +226,17 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 				double distance = npc.calculateDistance3D(singleMember);
 				if ((qsPartyMember != null) && (distance <= 1000))
 				{
-					if (qsPartyMember.isCond(2))
+					if (qsPartyMember.isCond(2) && giveItemRandomly(singleMember, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
 					{
-						if (giveItemRandomly(singleMember, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
-						{
-							qsPartyMember.setCond(5, true);
-						}
-						
+						qsPartyMember.setCond(5, true);
 					}
-					if (qsPartyMember.isCond(3))
+					if (qsPartyMember.isCond(3) && giveItemRandomly(singleMember, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
 					{
-						if (giveItemRandomly(singleMember, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
-						{
-							qsPartyMember.setCond(6, true);
-						}
-						
+						qsPartyMember.setCond(6, true);
 					}
-					if (qsPartyMember.isCond(4))
+					if (qsPartyMember.isCond(4) && giveItemRandomly(singleMember, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
 					{
-						if (giveItemRandomly(singleMember, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
-						{
-							qsPartyMember.setCond(7, true);
-						}
+						qsPartyMember.setCond(7, true);
 					}
 				}
 			}
@@ -257,26 +246,17 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 			final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
 			if (qs != null)
 			{
-				if (qs.isCond(2))
+				if (qs.isCond(2) && giveItemRandomly(killer, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
 				{
-					if (giveItemRandomly(killer, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
-					{
-						qs.setCond(5, true);
-					}
+					qs.setCond(5, true);
 				}
-				if (qs.isCond(3))
+				if (qs.isCond(3) && giveItemRandomly(killer, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
 				{
-					if (giveItemRandomly(killer, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
-					{
-						qs.setCond(6, true);
-					}
+					qs.setCond(6, true);
 				}
-				if (qs.isCond(4))
+				if (qs.isCond(4) && giveItemRandomly(killer, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
 				{
-					if (giveItemRandomly(killer, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
-					{
-						qs.setCond(7, true);
-					}
+					qs.setCond(7, true);
 				}
 			}
 		}

@@ -72,7 +72,6 @@ public class ChatWorld implements IChatHandler
 		else if (Config.JAIL_DISABLE_CHAT && activeChar.isJailed() && !activeChar.canOverrideCond(PlayerCondOverride.CHAT_CONDITIONS))
 		{
 			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
-			return;
 		}
 		else if (activeChar.getWorldChatUsed() >= activeChar.getWorldChatPoints())
 		{

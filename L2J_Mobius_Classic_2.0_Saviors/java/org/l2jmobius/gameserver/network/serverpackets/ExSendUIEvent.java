@@ -27,15 +27,15 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExSendUIEvent implements IClientOutgoingPacket
 {
 	// UI Types
-	public static int TYPE_COUNT_DOWN = 0;
-	public static int TYPE_REMOVE = 1;
-	public static int TYPE_ISTINA = 2;
-	public static int TYPE_COUNTER = 3;
-	public static int TYPE_GP_TIMER = 4;
-	public static int TYPE_NORNIL = 5;
-	public static int TYPE_DRACO_INCUBATION_1 = 6;
-	public static int TYPE_DRACO_INCUBATION_2 = 7;
-	public static int TYPE_CLAN_PROGRESS_BAR = 8;
+	public static final int TYPE_COUNT_DOWN = 0;
+	public static final int TYPE_REMOVE = 1;
+	public static final int TYPE_ISTINA = 2;
+	public static final int TYPE_COUNTER = 3;
+	public static final int TYPE_GP_TIMER = 4;
+	public static final int TYPE_NORNIL = 5;
+	public static final int TYPE_DRACO_INCUBATION_1 = 6;
+	public static final int TYPE_DRACO_INCUBATION_2 = 7;
+	public static final int TYPE_CLAN_PROGRESS_BAR = 8;
 	
 	private final int _objectId;
 	private final int _type;

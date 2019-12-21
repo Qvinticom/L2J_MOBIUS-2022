@@ -50,12 +50,6 @@ public class Jinia extends AbstractNpcAI
 		String htmltext = event;
 		switch (event)
 		{
-			case "32781-10.html":
-			case "32781-11.html":
-			{
-				htmltext = event;
-				break;
-			}
 			case "check":
 			{
 				if (hasAtLeastOneQuestItem(player, FROZEN_CORE, BLACK_FROZEN_CORE))

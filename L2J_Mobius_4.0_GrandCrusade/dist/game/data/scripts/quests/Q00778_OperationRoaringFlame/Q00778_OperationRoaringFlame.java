@@ -135,6 +135,7 @@ public class Q00778_OperationRoaringFlame extends Quest
 						break;
 					}
 					qs.setState(State.CREATED);
+					// fallthrough
 				}
 				case State.CREATED:
 				{

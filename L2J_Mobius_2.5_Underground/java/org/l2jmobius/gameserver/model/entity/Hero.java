@@ -191,11 +191,11 @@ public class Hero
 		}
 	}
 	
-	private String calcFightTime(long FightTime)
+	private String calcFightTime(long fightTime)
 	{
 		final String format = String.format("%%0%dd", 2);
-		FightTime /= 1000;
-		return String.format(format, (FightTime % 3600) / 60) + ":" + String.format(format, FightTime % 60);
+		fightTime /= 1000;
+		return String.format(format, (fightTime % 3600) / 60) + ":" + String.format(format, fightTime % 60);
 	}
 	
 	/**
@@ -234,36 +234,36 @@ public class Hero
 			{
 				while (rset.next())
 				{
-					final StatsSet _diaryentry = new StatsSet();
+					final StatsSet diaryEntry = new StatsSet();
 					
 					final long time = rset.getLong("time");
 					final int action = rset.getInt("action");
 					final int param = rset.getInt("param");
 					
 					final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(time));
-					_diaryentry.set("date", date);
+					diaryEntry.set("date", date);
 					
 					if (action == ACTION_RAID_KILLED)
 					{
 						final NpcTemplate template = NpcData.getInstance().getTemplate(param);
 						if (template != null)
 						{
-							_diaryentry.set("action", template.getName() + " was defeated");
+							diaryEntry.set("action", template.getName() + " was defeated");
 						}
 					}
 					else if (action == ACTION_HERO_GAINED)
 					{
-						_diaryentry.set("action", "Gained Hero status");
+						diaryEntry.set("action", "Gained Hero status");
 					}
 					else if (action == ACTION_CASTLE_TAKEN)
 					{
 						final Castle castle = CastleManager.getInstance().getCastleById(param);
 						if (castle != null)
 						{
-							_diaryentry.set("action", castle.getName() + " Castle was successfuly taken");
+							diaryEntry.set("action", castle.getName() + " Castle was successfuly taken");
 						}
 					}
-					diary.add(_diaryentry);
+					diary.add(diaryEntry);
 					diaryentries++;
 				}
 			}
@@ -289,9 +289,9 @@ public class Hero
 		
 		final long from = data.getTimeInMillis();
 		int numberoffights = 0;
-		int _victorys = 0;
-		int _losses = 0;
-		int _draws = 0;
+		int victories = 0;
+		int losses = 0;
+		int draws = 0;
 		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM olympiad_fights WHERE (charOneId=? OR charTwoId=?) AND start<? ORDER BY start ASC"))
@@ -338,17 +338,17 @@ public class Hero
 							if (winner == 1)
 							{
 								fight.set("result", "<font color=\"00ff00\">victory</font>");
-								_victorys++;
+								victories++;
 							}
 							else if (winner == 2)
 							{
 								fight.set("result", "<font color=\"ff0000\">loss</font>");
-								_losses++;
+								losses++;
 							}
 							else if (winner == 0)
 							{
 								fight.set("result", "<font color=\"ffff00\">draw</font>");
-								_draws++;
+								draws++;
 							}
 							
 							fights.add(fight);
@@ -374,17 +374,17 @@ public class Hero
 							if (winner == 1)
 							{
 								fight.set("result", "<font color=\"ff0000\">loss</font>");
-								_losses++;
+								losses++;
 							}
 							else if (winner == 2)
 							{
 								fight.set("result", "<font color=\"00ff00\">victory</font>");
-								_victorys++;
+								victories++;
 							}
 							else if (winner == 0)
 							{
 								fight.set("result", "<font color=\"ffff00\">draw</font>");
-								_draws++;
+								draws++;
 							}
 							
 							fights.add(fight);
@@ -395,9 +395,9 @@ public class Hero
 				}
 			}
 			
-			heroCountData.set("victory", _victorys);
-			heroCountData.set("draw", _draws);
-			heroCountData.set("loss", _losses);
+			heroCountData.set("victory", victories);
+			heroCountData.set("draw", draws);
+			heroCountData.set("loss", losses);
 			
 			HERO_COUNTS.put(charId, heroCountData);
 			HERO_FIGHTS.put(charId, fights);
@@ -520,28 +520,28 @@ public class Hero
 	public void showHeroFights(PlayerInstance player, int heroclass, int charid, int page)
 	{
 		final int perpage = 20;
-		int _win = 0;
-		int _loss = 0;
-		int _draw = 0;
+		int win = 0;
+		int loss = 0;
+		int draw = 0;
 		
 		final List<StatsSet> heroFights = HERO_FIGHTS.get(charid);
 		if (heroFights != null)
 		{
-			final NpcHtmlMessage FightReply = new NpcHtmlMessage();
+			final NpcHtmlMessage fightReply = new NpcHtmlMessage();
 			final String htmContent = HtmCache.getInstance().getHtm(player, "data/html/olympiad/herohistory.htm");
 			if (htmContent != null)
 			{
-				FightReply.setHtml(htmContent);
-				FightReply.replace("%heroname%", CharNameTable.getInstance().getNameById(charid));
+				fightReply.setHtml(htmContent);
+				fightReply.replace("%heroname%", CharNameTable.getInstance().getNameById(charid));
 				
 				if (!heroFights.isEmpty())
 				{
 					final StatsSet heroCount = HERO_COUNTS.get(charid);
 					if (heroCount != null)
 					{
-						_win = heroCount.getInt("victory");
-						_loss = heroCount.getInt("loss");
-						_draw = heroCount.getInt("draw");
+						win = heroCount.getInt("victory");
+						loss = heroCount.getInt("loss");
+						draw = heroCount.getInt("draw");
 					}
 					
 					boolean color = true;
@@ -575,36 +575,36 @@ public class Hero
 					
 					if (breakat < (heroFights.size() - 1))
 					{
-						FightReply.replace("%buttprev%", "<button value=\"Prev\" action=\"bypass _match?class=" + heroclass + "&page=" + (page + 1) + "\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+						fightReply.replace("%buttprev%", "<button value=\"Prev\" action=\"bypass _match?class=" + heroclass + "&page=" + (page + 1) + "\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 					}
 					else
 					{
-						FightReply.replace("%buttprev%", "");
+						fightReply.replace("%buttprev%", "");
 					}
 					
 					if (page > 1)
 					{
-						FightReply.replace("%buttnext%", "<button value=\"Next\" action=\"bypass _match?class=" + heroclass + "&page=" + (page - 1) + "\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+						fightReply.replace("%buttnext%", "<button value=\"Next\" action=\"bypass _match?class=" + heroclass + "&page=" + (page - 1) + "\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 					}
 					else
 					{
-						FightReply.replace("%buttnext%", "");
+						fightReply.replace("%buttnext%", "");
 					}
 					
-					FightReply.replace("%list%", fList.toString());
+					fightReply.replace("%list%", fList.toString());
 				}
 				else
 				{
-					FightReply.replace("%list%", "");
-					FightReply.replace("%buttprev%", "");
-					FightReply.replace("%buttnext%", "");
+					fightReply.replace("%list%", "");
+					fightReply.replace("%buttprev%", "");
+					fightReply.replace("%buttnext%", "");
 				}
 				
-				FightReply.replace("%win%", String.valueOf(_win));
-				FightReply.replace("%draw%", String.valueOf(_draw));
-				FightReply.replace("%loos%", String.valueOf(_loss));
+				fightReply.replace("%win%", String.valueOf(win));
+				fightReply.replace("%draw%", String.valueOf(draw));
+				fightReply.replace("%loos%", String.valueOf(loss));
 				
-				player.sendPacket(FightReply);
+				player.sendPacket(fightReply);
 			}
 		}
 	}

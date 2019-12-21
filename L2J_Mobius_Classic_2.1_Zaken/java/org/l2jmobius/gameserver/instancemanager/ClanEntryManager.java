@@ -397,18 +397,12 @@ public class ClanEntryManager
 	
 	private void lockPlayer(int playerId)
 	{
-		_playerLocked.put(playerId, ThreadPool.schedule(() ->
-		{
-			_playerLocked.remove(playerId);
-		}, LOCK_TIME));
+		_playerLocked.put(playerId, ThreadPool.schedule(() -> _playerLocked.remove(playerId), LOCK_TIME));
 	}
 	
 	private void lockClan(int clanId)
 	{
-		_clanLocked.put(clanId, ThreadPool.schedule(() ->
-		{
-			_clanLocked.remove(clanId);
-		}, LOCK_TIME));
+		_clanLocked.put(clanId, ThreadPool.schedule(() -> _clanLocked.remove(clanId), LOCK_TIME));
 	}
 	
 	public static ClanEntryManager getInstance()

@@ -327,7 +327,7 @@ public class ClassMasterInstance extends MerchantInstance
 		}
 		
 		String msg = HtmCache.getInstance().getHtm(player, "data/html/classmaster/tutorialtemplate.htm");
-		msg = msg.replace("%name%", ClassListData.getInstance().getClass(currentClassId).getEscapedClientCode());
+		msg = msg.replace("%name%", ClassListData.getInstance().getClass(currentClassId).getClassName()); // getEscapedClientCode());
 		
 		final StringBuilder menu = new StringBuilder(100);
 		for (ClassId cid : ClassId.values())
@@ -338,7 +338,7 @@ public class ClassMasterInstance extends MerchantInstance
 			}
 			if (validateClassId(currentClassId, cid))
 			{
-				menu.append("<a action=\"link CO" + cid.getId() + "\">" + ClassListData.getInstance().getClass(cid).getEscapedClientCode() + "</a><br>");
+				menu.append("<a action=\"link CO" + cid.getId() + "\">" + ClassListData.getInstance().getClass(cid).getClassName() + "</a><br>"); // getEscapedClientCode());
 			}
 		}
 		

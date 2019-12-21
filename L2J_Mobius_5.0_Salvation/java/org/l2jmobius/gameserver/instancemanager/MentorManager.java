@@ -241,11 +241,8 @@ public class MentorManager
 		{
 			if (men.isOnline() && (men.getObjectId() != menteeId))
 			{
-				if (isAllMenteesOffline)
-				{
-					isAllMenteesOffline = false;
-					break;
-				}
+				isAllMenteesOffline = false;
+				break;
 			}
 		}
 		return isAllMenteesOffline;

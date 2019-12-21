@@ -60,13 +60,13 @@ public class Q10851_ElvenBotany extends Quest
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
+		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return null;
+			return htmltext;
 		}
 		
-		String htmltext = event;
 		switch (event)
 		{
 			case "guardian_follower_q10851_04.htm":

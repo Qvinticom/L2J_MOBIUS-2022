@@ -16,8 +16,9 @@
  */
 package ai.others.AdventureGuildsman;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.data.xml.impl.MultisellData;
@@ -73,7 +74,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 	};
 	// Misc
 	//@formatter:off
-	private static final Map<CategoryType, Integer> R_CLASS_TALISMAN = new HashMap<>();
+	private static final Map<CategoryType, Integer> R_CLASS_TALISMAN = new EnumMap<>(CategoryType.class);
 	static
 	{
 		R_CLASS_TALISMAN.put(CategoryType.SIXTH_SIGEL_GROUP, 735);
@@ -87,7 +88,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 		R_CLASS_TALISMAN.put(CategoryType.ERTHEIA_FIGHTER_GROUP, 736);
 		R_CLASS_TALISMAN.put(CategoryType.ERTHEIA_WIZARD_GROUP, 741);
 	}
-	private static final Map<CategoryType, Integer> R90_CLASS_TALISMAN = new HashMap<>();
+	private static final Map<CategoryType, Integer> R90_CLASS_TALISMAN = new EnumMap<>(CategoryType.class);
 	static
 	{
 		R90_CLASS_TALISMAN.put(CategoryType.SIXTH_SIGEL_GROUP, 743);
@@ -101,7 +102,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 		R90_CLASS_TALISMAN.put(CategoryType.ERTHEIA_FIGHTER_GROUP, 744);
 		R90_CLASS_TALISMAN.put(CategoryType.ERTHEIA_WIZARD_GROUP, 749);
 	}
-	private static final Map<CategoryType, Integer> R95_CLASS_TALISMAN = new HashMap<>();
+	private static final Map<CategoryType, Integer> R95_CLASS_TALISMAN = new EnumMap<>(CategoryType.class);
 	static
 	{
 		R95_CLASS_TALISMAN.put(CategoryType.SIXTH_SIGEL_GROUP, 751);
@@ -115,7 +116,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 		R95_CLASS_TALISMAN.put(CategoryType.ERTHEIA_FIGHTER_GROUP, 752);
 		R95_CLASS_TALISMAN.put(CategoryType.ERTHEIA_WIZARD_GROUP, 757);
 	}
-	private static final Map<CategoryType, Integer> R99_CLASS_TALISMAN = new HashMap<>();
+	private static final Map<CategoryType, Integer> R99_CLASS_TALISMAN = new EnumMap<>(CategoryType.class);
 	static
 	{
 		R99_CLASS_TALISMAN.put(CategoryType.SIXTH_SIGEL_GROUP, 759);
@@ -204,7 +205,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 			}
 			case "buff_group":
 			{
-				htmltext = player.getPcCafePoints() >= 120 ? applyBuffsGroup(npc, player, GROUP_MELODY.length) : "pccafe_buff_1001.htm";
+				htmltext = player.getPcCafePoints() >= 120 ? applyBuffsGroup(npc, player) : "pccafe_buff_1001.htm";
 				break;
 			}
 			case "knight":
@@ -348,11 +349,11 @@ public class AdventureGuildsman extends AbstractNpcAI
 			{
 				int multisellId = -1;
 				
-				for (CategoryType type : R_CLASS_TALISMAN.keySet())
+				for (Entry<CategoryType, Integer> entry : R_CLASS_TALISMAN.entrySet())
 				{
-					if (player.isInCategory(type))
+					if (player.isInCategory(entry.getKey()))
 					{
-						multisellId = R_CLASS_TALISMAN.get(type);
+						multisellId = entry.getValue();
 						break;
 					}
 				}
@@ -367,11 +368,11 @@ public class AdventureGuildsman extends AbstractNpcAI
 			{
 				int multisellId = -1;
 				
-				for (CategoryType type : R90_CLASS_TALISMAN.keySet())
+				for (Entry<CategoryType, Integer> entry : R90_CLASS_TALISMAN.entrySet())
 				{
-					if (player.isInCategory(type))
+					if (player.isInCategory(entry.getKey()))
 					{
-						multisellId = R90_CLASS_TALISMAN.get(type);
+						multisellId = entry.getValue();
 						break;
 					}
 				}
@@ -385,11 +386,11 @@ public class AdventureGuildsman extends AbstractNpcAI
 			case "give_talismanR95_by_class":
 			{
 				int multisellId = -1;
-				for (CategoryType type : R95_CLASS_TALISMAN.keySet())
+				for (Entry<CategoryType, Integer> entry : R95_CLASS_TALISMAN.entrySet())
 				{
-					if (player.isInCategory(type))
+					if (player.isInCategory(entry.getKey()))
 					{
-						multisellId = R95_CLASS_TALISMAN.get(type);
+						multisellId = entry.getValue();
 						break;
 					}
 				}
@@ -405,11 +406,11 @@ public class AdventureGuildsman extends AbstractNpcAI
 			{
 				int multisellId = -1;
 				
-				for (CategoryType type : R99_CLASS_TALISMAN.keySet())
+				for (Entry<CategoryType, Integer> entry : R99_CLASS_TALISMAN.entrySet())
 				{
-					if (player.isInCategory(type))
+					if (player.isInCategory(entry.getKey()))
 					{
-						multisellId = R99_CLASS_TALISMAN.get(type);
+						multisellId = entry.getValue();
 						break;
 					}
 				}
@@ -423,7 +424,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 		}
 		if (event.startsWith("melody"))
 		{
-			final int buffOffset = CommonUtil.constrain(Integer.parseInt(event.substring(event.indexOf(" ") + 1)), 0, GROUP_MELODY.length);
+			final int buffOffset = CommonUtil.constrain(Integer.parseInt(event.substring(event.indexOf(' ') + 1)), 0, GROUP_MELODY.length);
 			if (player.getPcCafePoints() >= 20)
 			{
 				npc.setTarget(player);
@@ -455,7 +456,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 		return null;
 	}
 	
-	private String applyBuffsGroup(Npc npc, PlayerInstance player, int length)
+	private String applyBuffsGroup(Npc npc, PlayerInstance player)
 	{
 		for (SkillHolder holder : GROUP_MELODY)
 		{

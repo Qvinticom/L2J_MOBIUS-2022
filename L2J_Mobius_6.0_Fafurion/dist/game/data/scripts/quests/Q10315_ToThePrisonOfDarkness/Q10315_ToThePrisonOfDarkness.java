@@ -119,16 +119,16 @@ public class Q10315_ToThePrisonOfDarkness extends Quest
 						if (qs.isCond(1))
 						{
 							htmltext = "32893-05.html";
-							break;
 						}
+						break;
 					}
 					case OPERA:
 					{
 						if (qs.isCond(1))
 						{
 							htmltext = "32946-01.html";
-							break;
 						}
+						break;
 					}
 				}
 				break;

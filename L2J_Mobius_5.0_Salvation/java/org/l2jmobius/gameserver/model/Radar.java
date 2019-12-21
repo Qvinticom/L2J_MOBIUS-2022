@@ -125,11 +125,7 @@ public class Radar
 				return false;
 			}
 			final RadarMarker other = (RadarMarker) obj;
-			if ((_type != other._type) || (_x != other._x) || (_y != other._y) || (_z != other._z))
-			{
-				return false;
-			}
-			return true;
+			return (_type == other._type) && (_x == other._x) && (_y == other._y) && (_z == other._z);
 		}
 	}
 }

@@ -144,7 +144,7 @@ public class TeleportHolder
 		
 		// Build html
 		final StringBuilder sb = new StringBuilder();
-		final StringBuilder sb_f = new StringBuilder();
+		final StringBuilder sbF = new StringBuilder();
 		for (TeleportLocation loc : _teleportData)
 		{
 			String finalName = loc.getName();
@@ -168,19 +168,19 @@ public class TeleportHolder
 			final boolean isQuestTeleport = (questZoneId >= 0) && (loc.getQuestZoneId() == questZoneId);
 			if (isQuestTeleport)
 			{
-				sb_f.append("<button align=left icon=\"quest\" action=\"bypass -h " + bypass + " " + _name + " " + loc.getId() + "\" msg=\"811;" + confirmDesc + "\">" + finalName + "</button>");
+				sbF.append("<button align=left icon=\"quest\" action=\"bypass -h " + bypass + " " + _name + " " + loc.getId() + "\" msg=\"811;" + confirmDesc + "\">" + finalName + "</button>");
 			}
 			else
 			{
 				sb.append("<button align=left icon=\"teleport\" action=\"bypass -h " + bypass + " " + _name + " " + loc.getId() + "\" msg=\"811;" + confirmDesc + "\">" + finalName + "</button>");
 			}
 		}
-		sb_f.append(sb.toString());
+		sbF.append(sb.toString());
 		
 		// Send html message
 		final NpcHtmlMessage msg = new NpcHtmlMessage(npc.getObjectId());
 		msg.setFile(player, "data/html/teleporter/teleports.htm");
-		msg.replace("%locations%", sb_f.toString());
+		msg.replace("%locations%", sbF.toString());
 		player.sendPacket(msg);
 	}
 	

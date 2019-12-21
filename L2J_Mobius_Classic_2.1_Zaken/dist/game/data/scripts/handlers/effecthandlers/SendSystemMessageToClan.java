@@ -37,11 +37,6 @@ public class SendSystemMessageToClan extends AbstractEffect
 	{
 		final int id = params.getInt("id", 0);
 		_message = new SystemMessage(id);
-		
-		if (_message == null)
-		{
-			throw new IllegalArgumentException("SystemMessageId not found for id: " + id);
-		}
 	}
 	
 	@Override

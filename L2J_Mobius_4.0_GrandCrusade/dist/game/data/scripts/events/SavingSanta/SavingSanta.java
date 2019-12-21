@@ -307,12 +307,9 @@ public class SavingSanta extends LongTimeEvent
 		if (event.equalsIgnoreCase("ThomasQuest"))
 		{
 			startQuestTimer("ThomasQuest", 14400000, null, null);
-			Npc ThomasDTurkey = addSpawn(THOMAS_D_TURKEY_ID, THOMAS_SPAWN.getX(), THOMAS_SPAWN.getY(), THOMAS_SPAWN.getZ(), THOMAS_SPAWN.getHeading(), false, 1800000);
-			
+			final Npc thomas = addSpawn(THOMAS_D_TURKEY_ID, THOMAS_SPAWN.getX(), THOMAS_SPAWN.getY(), THOMAS_SPAWN.getZ(), THOMAS_SPAWN.getHeading(), false, 1800000);
 			Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.THOMAS_D_TURKEY_HAS_APPEARED_PLEASE_SAVE_SANTA));
-			
-			startQuestTimer("ThomasCast1", 15000, ThomasDTurkey, null);
-			
+			startQuestTimer("ThomasCast1", 15000, thomas, null);
 			_isSantaFree = false;
 		}
 		else if (event.equalsIgnoreCase("SantaSpawn"))

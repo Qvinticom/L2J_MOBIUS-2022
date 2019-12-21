@@ -324,12 +324,9 @@ public class Q00177_SplitDestiny extends Quest
 				}
 				case 2:
 				{
-					if (npc.getId() == VAMPIRICE_BERISE)
+					if ((npc.getId() == VAMPIRICE_BERISE) && giveItemRandomly(killer, npc, PETRIFIED_GIANTS_HAND_PIECE, 1, 10, 1.0, true))
 					{
-						if (giveItemRandomly(killer, npc, PETRIFIED_GIANTS_HAND_PIECE, 1, 10, 1.0, true))
-						{
-							qs.setCond(3, true);
-						}
+						qs.setCond(3, true);
 					}
 					break;
 				}
@@ -344,12 +341,9 @@ public class Q00177_SplitDestiny extends Quest
 				}
 				case 5:
 				{
-					if (CommonUtil.contains(GIANTS_FOOT_MONSTERS, npc.getId()))
+					if (CommonUtil.contains(GIANTS_FOOT_MONSTERS, npc.getId()) && giveItemRandomly(killer, npc, PETRIFIED_GIANTS_FOOT_PIECE, 1, 10, 1.0, true))
 					{
-						if (giveItemRandomly(killer, npc, PETRIFIED_GIANTS_FOOT_PIECE, 1, 10, 1.0, true))
-						{
-							qs.setCond(6, true);
-						}
+						qs.setCond(6, true);
 					}
 					break;
 				}

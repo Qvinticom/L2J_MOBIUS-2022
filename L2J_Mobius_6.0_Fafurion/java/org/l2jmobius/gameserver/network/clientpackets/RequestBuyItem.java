@@ -173,14 +173,11 @@ public class RequestBuyItem implements IClientIncomingPacket
 				return;
 			}
 			
-			if (product.hasLimitedStock())
+			// trying to buy more then available
+			if (product.hasLimitedStock() && (i.getCount() > product.getCount()))
 			{
-				// trying to buy more then available
-				if (i.getCount() > product.getCount())
-				{
-					client.sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
+				client.sendPacket(ActionFailed.STATIC_PACKET);
+				return;
 			}
 			
 			if ((MAX_ADENA / i.getCount()) < price)

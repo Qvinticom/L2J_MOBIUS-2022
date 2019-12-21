@@ -88,24 +88,18 @@ public class Mentee
 	
 	public int getClassId()
 	{
-		if (isOnline())
+		if (isOnline() && (getPlayerInstance().getClassId().getId() != _classId))
 		{
-			if (getPlayerInstance().getClassId().getId() != _classId)
-			{
-				_classId = getPlayerInstance().getClassId().getId();
-			}
+			_classId = getPlayerInstance().getClassId().getId();
 		}
 		return _classId;
 	}
 	
 	public int getLevel()
 	{
-		if (isOnline())
+		if (isOnline() && (getPlayerInstance().getLevel() != _currentLevel))
 		{
-			if (getPlayerInstance().getLevel() != _currentLevel)
-			{
-				_currentLevel = getPlayerInstance().getLevel();
-			}
+			_currentLevel = getPlayerInstance().getLevel();
 		}
 		return _currentLevel;
 	}

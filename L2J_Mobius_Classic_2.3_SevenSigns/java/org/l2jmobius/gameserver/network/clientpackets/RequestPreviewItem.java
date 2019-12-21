@@ -135,8 +135,8 @@ public class RequestPreviewItem implements IClientIncomingPacket
 		
 		// Check current target of the player and the INTERACTION_DISTANCE
 		final WorldObject target = player.getTarget();
-		if (!player.isGM() && ((target == null // No target (i.e. GM Shop)
-		) || !((target instanceof MerchantInstance)) // Target not a merchant
+		if (!player.isGM() && ((target == null) // No target (i.e. GM Shop)
+			|| !(target instanceof MerchantInstance) // Target not a merchant
 			|| !player.isInsideRadius2D(target, Npc.INTERACTION_DISTANCE) // Distance is too far
 		))
 		{
@@ -206,12 +206,9 @@ public class RequestPreviewItem implements IClientIncomingPacket
 			}
 			else if (template instanceof Armor)
 			{
-				if (player.getRace() == Race.KAMAEL)
+				if ((player.getRace() == Race.KAMAEL) && ((template.getItemType() == ArmorType.HEAVY) || (template.getItemType() == ArmorType.MAGIC)))
 				{
-					if ((template.getItemType() == ArmorType.HEAVY) || (template.getItemType() == ArmorType.MAGIC))
-					{
-						continue;
-					}
+					continue;
 				}
 			}
 			

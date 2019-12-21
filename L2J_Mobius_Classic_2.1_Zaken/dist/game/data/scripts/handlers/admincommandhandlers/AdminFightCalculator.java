@@ -43,7 +43,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		"admin_fcs",
 	};
 	
-	// TODO: remove from gm list etc etc
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
@@ -64,6 +63,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		}
 		catch (StringIndexOutOfBoundsException e)
 		{
+			// Do nothing.
 		}
 		return true;
 	}
@@ -212,66 +212,66 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		
 		for (int i = 0; i < 10000; i++)
 		{
-			final boolean _miss1 = Formulas.calcHitMiss(npc1, npc2);
-			if (_miss1)
+			final boolean calcMiss1 = Formulas.calcHitMiss(npc1, npc2);
+			if (calcMiss1)
 			{
 				miss1++;
 			}
-			final byte _shld1 = Formulas.calcShldUse(npc1, npc2, false);
-			if (_shld1 > 0)
+			final byte calcShld1 = Formulas.calcShldUse(npc1, npc2, false);
+			if (calcShld1 > 0)
 			{
 				shld1++;
 			}
-			final boolean _crit1 = Formulas.calcCrit(npc1.getCriticalHit(), npc1, npc2, null);
-			if (_crit1)
+			final boolean calcCrit1 = Formulas.calcCrit(npc1.getCriticalHit(), npc1, npc2, null);
+			if (calcCrit1)
 			{
 				crit1++;
 			}
 			
-			double _patk1 = npc1.getPAtk();
-			_patk1 += npc1.getRandomDamageMultiplier();
-			patk1 += _patk1;
+			double npcPatk1 = npc1.getPAtk();
+			npcPatk1 += npc1.getRandomDamageMultiplier();
+			patk1 += npcPatk1;
 			
-			final double _pdef1 = npc1.getPDef();
-			pdef1 += _pdef1;
+			final double npcPdef1 = npc1.getPDef();
+			pdef1 += npcPdef1;
 			
-			if (!_miss1)
+			if (!calcMiss1)
 			{
-				final double _dmg1 = Formulas.calcAutoAttackDamage(npc1, npc2, _shld1, _crit1, false);
-				dmg1 += _dmg1;
+				final double calcDmg1 = Formulas.calcAutoAttackDamage(npc1, npc2, calcShld1, calcCrit1, false);
+				dmg1 += calcDmg1;
 				npc1.abortAttack();
 			}
 		}
 		
 		for (int i = 0; i < 10000; i++)
 		{
-			final boolean _miss2 = Formulas.calcHitMiss(npc2, npc1);
-			if (_miss2)
+			final boolean calcMiss2 = Formulas.calcHitMiss(npc2, npc1);
+			if (calcMiss2)
 			{
 				miss2++;
 			}
-			final byte _shld2 = Formulas.calcShldUse(npc2, npc1, false);
-			if (_shld2 > 0)
+			final byte calcShld2 = Formulas.calcShldUse(npc2, npc1, false);
+			if (calcShld2 > 0)
 			{
 				shld2++;
 			}
-			final boolean _crit2 = Formulas.calcCrit(npc2.getCriticalHit(), npc2, npc1, null);
-			if (_crit2)
+			final boolean calcCrit2 = Formulas.calcCrit(npc2.getCriticalHit(), npc2, npc1, null);
+			if (calcCrit2)
 			{
 				crit2++;
 			}
 			
-			double _patk2 = npc2.getPAtk();
-			_patk2 *= npc2.getRandomDamageMultiplier();
-			patk2 += _patk2;
+			double npcPatk2 = npc2.getPAtk();
+			npcPatk2 *= npc2.getRandomDamageMultiplier();
+			patk2 += npcPatk2;
 			
-			final double _pdef2 = npc2.getPDef();
-			pdef2 += _pdef2;
+			final double npcPdef2 = npc2.getPDef();
+			pdef2 += npcPdef2;
 			
-			if (!_miss2)
+			if (!calcMiss2)
 			{
-				final double _dmg2 = Formulas.calcAutoAttackDamage(npc2, npc1, _shld2, _crit2, false);
-				dmg2 += _dmg2;
+				final double calcDmg2 = Formulas.calcAutoAttackDamage(npc2, npc1, calcShld2, calcCrit2, false);
+				dmg2 += calcDmg2;
 				npc2.abortAttack();
 			}
 		}

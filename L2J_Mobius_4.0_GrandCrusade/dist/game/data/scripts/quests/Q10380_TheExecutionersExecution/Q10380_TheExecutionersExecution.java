@@ -69,11 +69,11 @@ public class Q10380_TheExecutionersExecution extends Quest
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		String htmltext = event;
+		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return getNoQuestMsg(player);
+			return htmltext;
 		}
 		
 		switch (event)

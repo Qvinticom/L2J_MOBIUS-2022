@@ -74,12 +74,9 @@ public class BeastSpiritShot implements IItemHandler
 		final ShotType shotType = isBlessed ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS;
 		
 		short shotConsumption = 0;
-		if (pet != null)
+		if ((pet != null) && !pet.isChargedShot(shotType))
 		{
-			if (!pet.isChargedShot(shotType))
-			{
-				shotConsumption += pet.getSpiritShotsPerHit();
-			}
+			shotConsumption += pet.getSpiritShotsPerHit();
 		}
 		
 		for (Summon servitors : aliveServitor)
@@ -117,21 +114,18 @@ public class BeastSpiritShot implements IItemHandler
 		}
 		
 		// Pet uses the power of spirit.
-		if (pet != null)
+		if ((pet != null) && !pet.isChargedShot(shotType))
 		{
-			if (!pet.isChargedShot(shotType))
+			activeOwner.sendMessage(isBlessed ? "Your pet uses blessed spiritshot." : "Your pet uses spiritshot."); // activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
+			pet.chargeShot(shotType);
+			// Visual effect change if player has equipped Sapphire lvl 3 or higher
+			if (activeOwner.getActiveShappireJewel() != null)
 			{
-				activeOwner.sendMessage(isBlessed ? "Your pet uses blessed spiritshot." : "Your pet uses spiritshot."); // activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
-				pet.chargeShot(shotType);
-				// Visual effect change if player has equipped Sapphire lvl 3 or higher
-				if (activeOwner.getActiveShappireJewel() != null)
-				{
-					Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, activeOwner.getActiveShappireJewel().getEffectId(), 2, 0, 0), 600);
-				}
-				else
-				{
-					skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
-				}
+				Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, activeOwner.getActiveShappireJewel().getEffectId(), 2, 0, 0), 600);
+			}
+			else
+			{
+				skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
 			}
 		}
 		

@@ -42,11 +42,7 @@ public class LoginWeekendDailyMissionHandler extends AbstractDailyMissionHandler
 	public boolean isAvailable(PlayerInstance player)
 	{
 		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
-		if ((entry != null) && (entry.getStatus() == DailyMissionStatus.AVAILABLE))
-		{
-			return true;
-		}
-		return false;
+		return (entry != null) && (entry.getStatus() == DailyMissionStatus.AVAILABLE);
 	}
 	
 	@Override

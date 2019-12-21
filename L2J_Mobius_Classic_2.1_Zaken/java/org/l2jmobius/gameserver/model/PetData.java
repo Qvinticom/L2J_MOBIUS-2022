@@ -222,12 +222,9 @@ public class PetData
 				}
 				break;
 			}
-			else if (temp.getMinLevel() <= petLvl)
+			else if ((temp.getMinLevel() <= petLvl) && (temp.getSkillLevel() > lvl))
 			{
-				if (temp.getSkillLevel() > lvl)
-				{
-					lvl = temp.getSkillLevel();
-				}
+				lvl = temp.getSkillLevel();
 			}
 		}
 		if (found && (lvl == 0))

@@ -61,10 +61,7 @@ public class ListenerTest extends AbstractNpcAI
 		setAttackableAttackId(this::onAttackableAttack, ELPIES);
 		
 		// Manual listener registration
-		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_DLG_ANSWER, (OnPlayerDlgAnswer event) ->
-		{
-			LOGGER.info(getClass().getSimpleName() + ": " + event.getPlayer() + " OnPlayerDlgAnswer: Answer: " + event.getAnswer() + " MessageId: " + event.getMessageId());
-		}, this));
+		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_DLG_ANSWER, (OnPlayerDlgAnswer event) -> LOGGER.info(getClass().getSimpleName() + ": " + event.getPlayer() + " OnPlayerDlgAnswer: Answer: " + event.getAnswer() + " MessageId: " + event.getMessageId()), this));
 	}
 	
 	/**

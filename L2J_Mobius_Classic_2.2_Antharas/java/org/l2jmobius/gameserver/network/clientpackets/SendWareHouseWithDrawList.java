@@ -38,7 +38,7 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 12; // length of the one item
 	
-	private ItemHolder _items[] = null;
+	private ItemHolder[] _items = null;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

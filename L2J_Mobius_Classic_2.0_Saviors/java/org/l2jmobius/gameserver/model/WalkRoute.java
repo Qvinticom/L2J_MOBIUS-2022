@@ -29,7 +29,7 @@ public class WalkRoute
 	private boolean _stopAfterCycle; // Make only one cycle or endlessly
 	private final byte _repeatType; // Repeat style: 0 - go back, 1 - go to first point (circle style), 2 - teleport to first point (conveyor style), 3 - random walking between points
 	
-	public WalkRoute(String name, List<NpcWalkerNode> route, boolean repeat, boolean once, byte repeatType)
+	public WalkRoute(String name, List<NpcWalkerNode> route, boolean repeat, byte repeatType)
 	{
 		_name = name;
 		_nodeList = route;

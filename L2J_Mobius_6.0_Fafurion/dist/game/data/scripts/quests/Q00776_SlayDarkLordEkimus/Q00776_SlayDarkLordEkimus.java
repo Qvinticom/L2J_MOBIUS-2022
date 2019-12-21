@@ -102,6 +102,7 @@ public class Q00776_SlayDarkLordEkimus extends Quest
 						break;
 					}
 					qs.setState(State.CREATED);
+					// fallthrough
 				}
 				case State.CREATED:
 				{

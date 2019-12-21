@@ -252,6 +252,7 @@ public class TaskManager
 				}
 				catch (Exception e)
 				{
+					// Ignore.
 				}
 				break;
 			}

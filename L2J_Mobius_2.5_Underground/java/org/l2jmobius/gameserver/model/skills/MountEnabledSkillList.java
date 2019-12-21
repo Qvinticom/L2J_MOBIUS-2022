@@ -24,7 +24,7 @@ import java.util.List;
  */
 public class MountEnabledSkillList
 {
-	private final static List<Integer> ENABLED_SKILLS = new ArrayList<>(2);
+	private static final List<Integer> ENABLED_SKILLS = new ArrayList<>(2);
 	static
 	{
 		ENABLED_SKILLS.add(4289); // Wyvern Breath

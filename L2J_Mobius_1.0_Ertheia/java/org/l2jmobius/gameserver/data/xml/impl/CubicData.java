@@ -61,10 +61,7 @@ public class CubicData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		forEach(doc, "list", listNode -> forEach(listNode, "cubic", cubicNode ->
-		{
-			parseTemplate(cubicNode, new CubicTemplate(new StatsSet(parseAttributes(cubicNode))));
-		}));
+		forEach(doc, "list", listNode -> forEach(listNode, "cubic", cubicNode -> parseTemplate(cubicNode, new CubicTemplate(new StatsSet(parseAttributes(cubicNode))))));
 	}
 	
 	/**

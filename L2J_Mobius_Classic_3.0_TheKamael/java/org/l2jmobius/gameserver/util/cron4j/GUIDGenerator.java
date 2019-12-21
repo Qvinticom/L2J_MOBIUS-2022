@@ -41,7 +41,7 @@ class GUIDGenerator
 	 */
 	public static String generate()
 	{
-		StringBuffer id = new StringBuffer();
+		StringBuilder id = new StringBuilder();
 		encode(id, MACHINE_DESCRIPTOR);
 		encode(id, Runtime.getRuntime());
 		encode(id, Thread.currentThread());
@@ -56,7 +56,7 @@ class GUIDGenerator
 	 */
 	private static String getMachineDescriptor()
 	{
-		StringBuffer descriptor = new StringBuffer();
+		StringBuilder descriptor = new StringBuilder();
 		descriptor.append(System.getProperty("os.name"));
 		descriptor.append("::");
 		descriptor.append(System.getProperty("os.arch"));
@@ -65,7 +65,7 @@ class GUIDGenerator
 		descriptor.append("::");
 		descriptor.append(System.getProperty("user.name"));
 		descriptor.append("::");
-		StringBuffer b = buildNetworkInterfaceDescriptor();
+		StringBuilder b = buildNetworkInterfaceDescriptor();
 		if (b != null)
 		{
 			descriptor.append(b);
@@ -90,7 +90,7 @@ class GUIDGenerator
 	 * Builds a descriptor fragment using the {@link NetworkInterface} class, available since Java 1.4.
 	 * @return A descriptor fragment, or null if the method fails.
 	 */
-	private static StringBuffer buildNetworkInterfaceDescriptor()
+	private static StringBuilder buildNetworkInterfaceDescriptor()
 	{
 		Enumeration<?> e1;
 		try
@@ -102,13 +102,13 @@ class GUIDGenerator
 			// not available
 			return null;
 		}
-		StringBuffer b = new StringBuffer();
+		StringBuilder b = new StringBuilder();
 		while (e1.hasMoreElements())
 		{
 			NetworkInterface ni = (NetworkInterface) e1.nextElement();
-			StringBuffer b1 = getMACAddressDescriptor(ni);
-			StringBuffer b2 = getInetAddressDescriptor(ni);
-			StringBuffer b3 = new StringBuffer();
+			StringBuilder b1 = getMACAddressDescriptor(ni);
+			StringBuilder b2 = getInetAddressDescriptor(ni);
+			StringBuilder b3 = new StringBuilder();
 			if (b1 != null)
 			{
 				b3.append(b1);
@@ -138,7 +138,7 @@ class GUIDGenerator
 	 * @param ni NetworkInterface
 	 * @return A descriptor fragment, or null if the method fails.
 	 */
-	private static StringBuffer getMACAddressDescriptor(NetworkInterface ni)
+	private static StringBuilder getMACAddressDescriptor(NetworkInterface ni)
 	{
 		byte[] haddr;
 		try
@@ -150,7 +150,7 @@ class GUIDGenerator
 			// not available.
 			haddr = null;
 		}
-		StringBuffer b = new StringBuffer();
+		StringBuilder b = new StringBuilder();
 		if (haddr != null)
 		{
 			for (byte element : haddr)
@@ -175,9 +175,9 @@ class GUIDGenerator
 	 * @param ni NetworkInterface
 	 * @return A descriptor fragment, or null if the method fails.
 	 */
-	private static StringBuffer getInetAddressDescriptor(NetworkInterface ni)
+	private static StringBuilder getInetAddressDescriptor(NetworkInterface ni)
 	{
-		StringBuffer b = new StringBuffer();
+		StringBuilder b = new StringBuilder();
 		Enumeration<?> e2 = ni.getInetAddresses();
 		while (e2.hasMoreElements())
 		{
@@ -205,7 +205,7 @@ class GUIDGenerator
 	 * @param b The buffer.
 	 * @param obj The object.
 	 */
-	private static void encode(StringBuffer b, Object obj)
+	private static void encode(StringBuilder b, Object obj)
 	{
 		encode(b, obj.hashCode());
 	}
@@ -215,7 +215,7 @@ class GUIDGenerator
 	 * @param b The buffer.
 	 * @param value The value.
 	 */
-	private static void encode(StringBuffer b, int value)
+	private static void encode(StringBuilder b, int value)
 	{
 		String hex = Integer.toHexString(value);
 		int hexSize = hex.length();
@@ -231,7 +231,7 @@ class GUIDGenerator
 	 * @param b The buffer.
 	 * @param value The value.
 	 */
-	private static void encode(StringBuffer b, long value)
+	private static void encode(StringBuilder b, long value)
 	{
 		String hex = Long.toHexString(value);
 		int hexSize = hex.length();

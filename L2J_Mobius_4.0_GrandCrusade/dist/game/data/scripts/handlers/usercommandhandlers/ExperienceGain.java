@@ -42,7 +42,7 @@ public class ExperienceGain implements IVoicedCommandHandler
 		{
 			if (!player.getVariables().getBoolean("EXPOFF", false))
 			{
-				player.addListener(new FunctionEventListener(player, EventType.ON_PLAYABLE_EXP_CHANGED, (OnPlayableExpChanged event) -> onExperienceReceived(event.getPlayable(), event.getNewExp() - event.getOldExp()), this));
+				player.addListener(new FunctionEventListener(player, EventType.ON_PLAYABLE_EXP_CHANGED, (OnPlayableExpChanged event) -> onExperienceReceived(event.getPlayable()), this));
 				player.getVariables().set("EXPOFF", true);
 				player.sendMessage("Experience gain is disabled.");
 			}
@@ -59,7 +59,7 @@ public class ExperienceGain implements IVoicedCommandHandler
 		return true;
 	}
 	
-	private TerminateReturn onExperienceReceived(Playable playable, long exp)
+	private TerminateReturn onExperienceReceived(Playable playable)
 	{
 		if (playable.isPlayer() && playable.getActingPlayer().isDead())
 		{

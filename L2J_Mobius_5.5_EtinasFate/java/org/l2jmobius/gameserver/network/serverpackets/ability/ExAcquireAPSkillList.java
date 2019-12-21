@@ -47,12 +47,9 @@ public class ExAcquireAPSkillList implements IClientOutgoingPacket
 		for (SkillLearn sk : SkillTreesData.getInstance().getAbilitySkillTree().values())
 		{
 			final Skill knownSkill = player.getKnownSkill(sk.getSkillId());
-			if (knownSkill != null)
+			if ((knownSkill != null) && (knownSkill.getLevel() == sk.getSkillLevel()))
 			{
-				if (knownSkill.getLevel() == sk.getSkillLevel())
-				{
-					_skills.add(knownSkill);
-				}
+				_skills.add(knownSkill);
 			}
 		}
 		_enable = (!player.isSubClassActive() || player.isDualClassActive()) && (player.getLevel() >= 85);

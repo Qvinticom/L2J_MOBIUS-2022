@@ -144,12 +144,9 @@ public class ImprovedBabyPets extends AbstractNpcAI
 			
 			if (!owner.hasAbnormalType(skill.getSkill().getAbnormalType()) && SkillCaster.checkUseConditions(summon, skill.getSkill()) && !owner.isDead())
 			{
-				if (mergedSkill != null)
+				if ((mergedSkill != null) && owner.hasAbnormalType(mergedSkill.getSkill().getAbnormalType()))
 				{
-					if (owner.hasAbnormalType(mergedSkill.getSkill().getAbnormalType()))
-					{
-						return false;
-					}
+					return false;
 				}
 				
 				if (!previousFollowStatus && !summon.isInsideRadius3D(owner, skill.getSkill().getCastRange()))
@@ -188,17 +185,14 @@ public class ImprovedBabyPets extends AbstractNpcAI
 				return;
 			}
 			
-			if (!owner.hasAbnormalType(skill.getSkill().getAbnormalType()))
+			if (!owner.hasAbnormalType(skill.getSkill().getAbnormalType()) && (targetType >= 0) && (targetType <= 2))
 			{
-				if ((targetType >= 0) && (targetType <= 2))
+				summon.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill.getSkill(), (targetType == 1) ? summon : owner);
+				summon.sendPacket(new SystemMessage(SystemMessageId.YOUR_PET_USES_S1).addSkillName(skill.getSkill()));
+				
+				if (previousFollowStatus != summon.getFollowStatus())
 				{
-					summon.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill.getSkill(), (targetType == 1) ? summon : owner);
-					summon.sendPacket(new SystemMessage(SystemMessageId.YOUR_PET_USES_S1).addSkillName(skill.getSkill()));
-					
-					if (previousFollowStatus != summon.getFollowStatus())
-					{
-						summon.setFollowStatus(previousFollowStatus);
-					}
+					summon.setFollowStatus(previousFollowStatus);
 				}
 			}
 		}

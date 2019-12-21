@@ -121,6 +121,7 @@ public class IstinaCavern extends AbstractInstance
 					{
 						htmltext = "33293-07.html";
 					}
+					break;
 				}
 				case "giveReward":
 				{
@@ -221,7 +222,7 @@ public class IstinaCavern extends AbstractInstance
 				case "LOW_ERUPTION_TIMER":
 				{
 					final Attackable istina = (Attackable) npc;
-					if ((istina.getHateList() != null) && (istina.getHateList().size() > 0))
+					if ((istina.getHateList() != null) && !istina.getHateList().isEmpty())
 					{
 						final Creature target = istina.getHateList().stream().sorted((o1, o2) -> (int) o1.calculateDistance3D(o2)).findFirst().orElse(null);
 						if (target != null)

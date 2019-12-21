@@ -72,12 +72,9 @@ public class BeastSoulShot implements IItemHandler
 		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
 		short shotConsumption = 0;
 		
-		if (pet != null)
+		if ((pet != null) && !pet.isChargedShot(ShotType.SOULSHOTS))
 		{
-			if (!pet.isChargedShot(ShotType.SOULSHOTS))
-			{
-				shotConsumption += pet.getSoulShotsPerHit();
-			}
+			shotConsumption += pet.getSoulShotsPerHit();
 		}
 		
 		for (Summon servitors : aliveServitor)
@@ -115,21 +112,18 @@ public class BeastSoulShot implements IItemHandler
 		}
 		
 		// Pet uses the power of spirit.
-		if (pet != null)
+		if ((pet != null) && !pet.isChargedShot(ShotType.SOULSHOTS))
 		{
-			if (!pet.isChargedShot(ShotType.SOULSHOTS))
+			activeOwner.sendMessage("Your pet uses soulshot."); // activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
+			pet.chargeShot(ShotType.SOULSHOTS);
+			// Visual effect change if player has equipped Ruby lvl 3 or higher
+			if (activeOwner.getActiveRubyJewel() != null)
 			{
-				activeOwner.sendMessage("Your pet uses soulshot."); // activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
-				pet.chargeShot(ShotType.SOULSHOTS);
-				// Visual effect change if player has equipped Ruby lvl 3 or higher
-				if (activeOwner.getActiveRubyJewel() != null)
-				{
-					Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, activeOwner.getActiveRubyJewel().getEffectId(), 1, 0, 0), 600);
-				}
-				else
-				{
-					skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
-				}
+				Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, activeOwner.getActiveRubyJewel().getEffectId(), 1, 0, 0), 600);
+			}
+			else
+			{
+				skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
 			}
 		}
 		

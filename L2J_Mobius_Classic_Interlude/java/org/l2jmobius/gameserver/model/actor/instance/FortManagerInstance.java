@@ -861,7 +861,7 @@ public class FortManagerInstance extends MerchantInstance
 				
 				try
 				{
-					final int skill_id = Integer.parseInt(val);
+					final int skillId = Integer.parseInt(val);
 					try
 					{
 						if (getFort().getFortFunction(Fort.FUNC_SUPPORT) == null)
@@ -873,17 +873,17 @@ public class FortManagerInstance extends MerchantInstance
 							return;
 						}
 						final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-						int skill_lvl = 0;
+						int skillLvl = 0;
 						if (st.countTokens() >= 1)
 						{
-							skill_lvl = Integer.parseInt(st.nextToken());
+							skillLvl = Integer.parseInt(st.nextToken());
 						}
-						skill = SkillData.getInstance().getSkill(skill_id, skill_lvl);
+						skill = SkillData.getInstance().getSkill(skillId, skillLvl);
 						if (skill.hasEffectType(EffectType.SUMMON))
 						{
 							player.doCast(skill);
 						}
-						else if (!((skill.getMpConsume() + skill.getMpInitialConsume()) > getCurrentMp()))
+						else if ((skill.getMpConsume() + skill.getMpInitialConsume()) <= getCurrentMp())
 						{
 							doCast(skill);
 						}
@@ -972,18 +972,15 @@ public class FortManagerInstance extends MerchantInstance
 	
 	protected int validateCondition(PlayerInstance player)
 	{
-		if ((getFort() != null) && (getFort().getResidenceId() > 0))
+		if ((getFort() != null) && (getFort().getResidenceId() > 0) && (player.getClan() != null))
 		{
-			if (player.getClan() != null)
+			if (getFort().getZone().isActive())
 			{
-				if (getFort().getZone().isActive())
-				{
-					return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
-				}
-				else if ((getFort().getOwnerClan() != null) && (getFort().getOwnerClan().getId() == player.getClanId()))
-				{
-					return COND_OWNER; // Owner
-				}
+				return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
+			}
+			else if ((getFort().getOwnerClan() != null) && (getFort().getOwnerClan().getId() == player.getClanId()))
+			{
+				return COND_OWNER; // Owner
 			}
 		}
 		return COND_ALL_FALSE;

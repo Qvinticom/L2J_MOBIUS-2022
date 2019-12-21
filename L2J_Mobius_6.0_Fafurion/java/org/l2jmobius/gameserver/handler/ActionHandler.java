@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.enums.InstanceType;
@@ -35,7 +35,7 @@ public class ActionHandler implements IHandler<IActionHandler, InstanceType>
 	
 	protected ActionHandler()
 	{
-		_actions = new HashMap<>();
+		_actions = new EnumMap<>(InstanceType.class);
 	}
 	
 	@Override

@@ -48,13 +48,12 @@ public class Q10701_TheRoadToDestruction extends Quest
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
+		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return null;
+			return htmltext;
 		}
-		
-		String htmltext = event;
 		
 		switch (event)
 		{

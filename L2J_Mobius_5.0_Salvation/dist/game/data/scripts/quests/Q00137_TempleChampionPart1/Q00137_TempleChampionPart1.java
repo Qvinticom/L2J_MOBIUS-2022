@@ -34,7 +34,7 @@ public class Q00137_TempleChampionPart1 extends Quest
 {
 	// NPCs
 	private static final int SYLVAIN = 30070;
-	private static final int MOBS[] =
+	private static final int[] MOBS =
 	{
 		20055, // Monster Eye Watchman
 		20147, // Hobgoblin

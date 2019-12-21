@@ -90,7 +90,7 @@ public class RequestBRPresentBuyProduct implements IClientIncomingPacket
 		if (validatePlayer(item, _count, player))
 		{
 			final int price = (item.getPrice() * _count);
-			final int paymentId = validatePaymentId(player, item, price);
+			final int paymentId = validatePaymentId(item, price);
 			
 			if (paymentId < 0)
 			{
@@ -211,7 +211,7 @@ public class RequestBRPresentBuyProduct implements IClientIncomingPacket
 		return true;
 	}
 	
-	private static int validatePaymentId(PlayerInstance player, PrimeShopGroup item, long amount)
+	private static int validatePaymentId(PrimeShopGroup item, long amount)
 	{
 		switch (item.getPaymentType())
 		{

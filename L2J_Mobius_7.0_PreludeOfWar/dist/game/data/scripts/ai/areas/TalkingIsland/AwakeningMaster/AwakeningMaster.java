@@ -16,7 +16,7 @@
  */
 package ai.areas.TalkingIsland.AwakeningMaster;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -64,7 +64,7 @@ public class AwakeningMaster extends AbstractNpcAI
 	private static final int SCROLL_OF_AFTERLIFE = 17600;
 	private static final int CHAOS_POMANDER = 37374;
 	private static final int CHAOS_POMANDER_DUAL_CLASS = 37375;
-	private static final Map<CategoryType, Integer> AWAKE_POWER = new HashMap<>();
+	private static final Map<CategoryType, Integer> AWAKE_POWER = new EnumMap<>(CategoryType.class);
 	static
 	{
 		AWAKE_POWER.put(CategoryType.SIXTH_SIGEL_GROUP, 32264);
@@ -312,10 +312,7 @@ public class AwakeningMaster extends AbstractNpcAI
 		}
 		player.sendSkillList();
 		
-		ThreadPool.schedule(() ->
-		{
-			player.sendPacket(ExShowUsm.AWAKENING_END);
-		}, 10000);
+		ThreadPool.schedule(() -> player.sendPacket(ExShowUsm.AWAKENING_END), 10000);
 	}
 	
 	public static void main(String[] args)

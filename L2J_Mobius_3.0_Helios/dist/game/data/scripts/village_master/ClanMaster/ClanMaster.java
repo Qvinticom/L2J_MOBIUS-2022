@@ -81,12 +81,9 @@ public class ClanMaster extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		if (LEADER_REQUIRED.containsKey(event))
+		if (LEADER_REQUIRED.containsKey(event) && !player.isClanLeader())
 		{
-			if (!player.isClanLeader())
-			{
-				return LEADER_REQUIRED.get(event);
-			}
+			return LEADER_REQUIRED.get(event);
 		}
 		return event;
 	}

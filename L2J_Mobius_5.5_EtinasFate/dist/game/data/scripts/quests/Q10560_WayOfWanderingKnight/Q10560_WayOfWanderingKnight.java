@@ -156,7 +156,7 @@ public class Q10560_WayOfWanderingKnight extends Quest
 				}
 				else
 				{
-					htmltext = getHtm(player, "noAmity.html").replaceAll("%name%", "Herphah");
+					htmltext = getHtm(player, "noAmity.html").replace("%name%", "Herphah");
 				}
 				break;
 			}
@@ -164,15 +164,15 @@ public class Q10560_WayOfWanderingKnight extends Quest
 			{
 				if (CategoryData.getInstance().isInCategory(CategoryType.MAGE_GROUP, classId.getId()))
 				{
-					htmltext = getHtm(player, "32327-03.html").replaceAll("%classbuff%", "Wizard");
+					htmltext = getHtm(player, "32327-03.html").replace("%classbuff%", "Wizard");
 				}
 				else if (CategoryData.getInstance().isInCategory(CategoryType.ATTACKER_GROUP, classId.getId()))
 				{
-					htmltext = getHtm(player, "32327-03.html").replaceAll("%classbuff%", "Warrior");
+					htmltext = getHtm(player, "32327-03.html").replace("%classbuff%", "Warrior");
 				}
 				else if (CategoryData.getInstance().isInCategory(CategoryType.TANKER_GROUP, classId.getId()))
 				{
-					htmltext = getHtm(player, "32327-03.html").replaceAll("%classbuff%", "Knight");
+					htmltext = getHtm(player, "32327-03.html").replace("%classbuff%", "Knight");
 				}
 				// Show Service/Help/Adventurer's Guide page
 				player.sendPacket(new ExTutorialShowId(25));
@@ -213,7 +213,7 @@ public class Q10560_WayOfWanderingKnight extends Quest
 				}
 				else
 				{
-					htmltext = getHtm(player, "noAmity.html").replaceAll("%name%", "Penny");
+					htmltext = getHtm(player, "noAmity.html").replace("%name%", "Penny");
 				}
 				break;
 			}

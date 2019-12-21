@@ -229,20 +229,13 @@ public class BeastFarm extends AbstractNpcAI
 	public void spawnNext(Npc npc, PlayerInstance player, int nextNpcId, int food)
 	{
 		// remove the feedinfo of the mob that got despawned, if any
-		if (_feedInfo.containsKey(npc.getObjectId()))
+		if (_feedInfo.containsKey(npc.getObjectId()) && (_feedInfo.get(npc.getObjectId()) == player.getObjectId()))
 		{
-			if (_feedInfo.get(npc.getObjectId()) == player.getObjectId())
-			{
-				_feedInfo.remove(npc.getObjectId());
-			}
+			_feedInfo.remove(npc.getObjectId());
 		}
+		
 		// despawn the old mob
-		// TODO: same code? FIXED?
-		/*
-		 * if (_GrowthCapableMobs.get(npc.getNpcId()).getGrowthLevel() == 0) { npc.deleteMe(); } else {
-		 */
 		npc.deleteMe();
-		// }
 		
 		// if this is finally a trained mob, then despawn any other trained mobs that the
 		// player might have and initialize the Tamed Beast.

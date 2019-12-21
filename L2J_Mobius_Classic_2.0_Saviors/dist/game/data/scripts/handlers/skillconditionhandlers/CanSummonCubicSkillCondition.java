@@ -41,11 +41,6 @@ public class CanSummonCubicSkillCondition implements ISkillCondition
 		}
 		
 		final PlayerInstance player = caster.getActingPlayer();
-		if (player.inObserverMode() || player.isMounted() || player.isSpawnProtected() || player.isTeleportProtected())
-		{
-			return false;
-		}
-		
-		return true;
+		return !player.inObserverMode() && !player.isMounted() && !player.isSpawnProtected() && !player.isTeleportProtected();
 	}
 }

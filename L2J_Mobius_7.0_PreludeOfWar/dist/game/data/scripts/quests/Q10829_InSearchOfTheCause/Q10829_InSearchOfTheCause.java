@@ -116,8 +116,8 @@ public class Q10829_InSearchOfTheCause extends Quest
 						if (qs.isCond(1))
 						{
 							htmltext = "30657-05.html";
-							break;
 						}
+						break;
 					}
 					case BELAS:
 					{

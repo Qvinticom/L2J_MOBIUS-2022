@@ -461,12 +461,9 @@ public class CreatureStat
 		}
 		double mpConsume = skill.getMpConsume();
 		final double nextDanceMpCost = Math.ceil(skill.getMpConsume() / 2.);
-		if (skill.isDance())
+		if (skill.isDance() && Config.DANCE_CONSUME_ADDITIONAL_MP && (_creature != null) && (_creature.getDanceCount() > 0))
 		{
-			if (Config.DANCE_CONSUME_ADDITIONAL_MP && (_creature != null) && (_creature.getDanceCount() > 0))
-			{
-				mpConsume += _creature.getDanceCount() * nextDanceMpCost;
-			}
+			mpConsume += _creature.getDanceCount() * nextDanceMpCost;
 		}
 		
 		return (int) (mpConsume * getMpConsumeTypeValue(skill.getMagicType()));
@@ -497,7 +494,7 @@ public class CreatureStat
 		
 		// temp fix starts
 		int tempVal = 0;
-		final int stats[] =
+		final int[] stats =
 		{
 			getAttackElementValue(AttributeType.FIRE),
 			getAttackElementValue(AttributeType.WATER),

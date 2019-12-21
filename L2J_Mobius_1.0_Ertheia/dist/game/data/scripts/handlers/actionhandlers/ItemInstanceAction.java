@@ -33,15 +33,12 @@ public class ItemInstanceAction implements IActionHandler
 	public boolean action(PlayerInstance player, WorldObject target, boolean interact)
 	{
 		final Castle castle = CastleManager.getInstance().getCastle(target);
-		if ((castle != null) && (SiegeGuardManager.getInstance().getSiegeGuardByItem(castle.getResidenceId(), target.getId()) != null))
+		if ((castle != null) && (SiegeGuardManager.getInstance().getSiegeGuardByItem(castle.getResidenceId(), target.getId()) != null) && ((player.getClan() == null) || (castle.getOwnerId() != player.getClanId()) || !player.hasClanPrivilege(ClanPrivilege.CS_MERCENARIES)))
 		{
-			if ((player.getClan() == null) || (castle.getOwnerId() != player.getClanId()) || !player.hasClanPrivilege(ClanPrivilege.CS_MERCENARIES))
-			{
-				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_AUTHORITY_TO_CANCEL_MERCENARY_POSITIONING);
-				player.setTarget(target);
-				player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-				return false;
-			}
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_AUTHORITY_TO_CANCEL_MERCENARY_POSITIONING);
+			player.setTarget(target);
+			player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			return false;
 		}
 		
 		if (!player.isFlying())

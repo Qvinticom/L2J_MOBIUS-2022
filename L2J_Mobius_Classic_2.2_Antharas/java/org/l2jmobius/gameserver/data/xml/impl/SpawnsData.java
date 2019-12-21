@@ -344,10 +344,7 @@ public class SpawnsData implements IXmlReader
 	 */
 	private void parseMinions(Node n, NpcSpawnTemplate npcTemplate)
 	{
-		forEach(n, "minion", minionNode ->
-		{
-			npcTemplate.addMinion(new MinionHolder(new StatsSet(parseAttributes(minionNode))));
-		});
+		forEach(n, "minion", minionNode -> npcTemplate.addMinion(new MinionHolder(new StatsSet(parseAttributes(minionNode)))));
 	}
 	
 	/**

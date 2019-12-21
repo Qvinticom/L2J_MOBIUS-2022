@@ -402,20 +402,17 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 								npc.doCast(DRYAD_ROOT.getSkill());
 							}
 						}
-						else if (getRandom(100) < 2)
+						else if ((getRandom(100) < 2) && hasQuestItems(attacker, FAIRY_LEAF))
 						{
-							if (hasQuestItems(attacker, FAIRY_LEAF))
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.GIVE_ME_A_FAIRY_LEAF);
+							takeItems(attacker, FAIRY_LEAF, 1);
+							qs.setMemoState(qs.getMemoState() + data.memoStateValue);
+							qs.unset("hits");
+							playSound(attacker, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							
+							if (qs.getMemoState() == 15)
 							{
-								npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.GIVE_ME_A_FAIRY_LEAF);
-								takeItems(attacker, FAIRY_LEAF, 1);
-								qs.setMemoState(qs.getMemoState() + data.memoStateValue);
-								qs.unset("hits");
-								playSound(attacker, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-								
-								if (qs.getMemoState() == 15)
-								{
-									qs.setCond(3);
-								}
+								qs.setCond(3);
 							}
 						}
 					}

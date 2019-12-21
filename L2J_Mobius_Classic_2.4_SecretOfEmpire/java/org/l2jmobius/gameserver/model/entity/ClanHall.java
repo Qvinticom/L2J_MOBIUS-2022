@@ -32,7 +32,6 @@ import java.util.stream.Collectors;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import org.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import org.l2jmobius.gameserver.enums.ClanHallGrade;
 import org.l2jmobius.gameserver.enums.ClanHallType;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -54,6 +53,8 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class ClanHall extends AbstractResidence
 {
+	private static final Logger LOGGER = Logger.getLogger(ClanHall.class.getName());
+	
 	// Static parameters
 	private final ClanHallGrade _grade;
 	private final ClanHallType _type;
@@ -73,7 +74,6 @@ public class ClanHall extends AbstractResidence
 	private static final String INSERT_CLANHALL = "INSERT INTO clanhall (id, ownerId, paidUntil) VALUES (?,?,?)";
 	private static final String LOAD_CLANHALL = "SELECT * FROM clanhall WHERE id=?";
 	private static final String UPDATE_CLANHALL = "UPDATE clanhall SET ownerId=?,paidUntil=? WHERE id=?";
-	private static final Logger LOGGER = Logger.getLogger(ClanHallData.class.getName());
 	
 	public ClanHall(StatsSet params)
 	{
@@ -143,7 +143,7 @@ public class ClanHall extends AbstractResidence
 		}
 		catch (SQLException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	

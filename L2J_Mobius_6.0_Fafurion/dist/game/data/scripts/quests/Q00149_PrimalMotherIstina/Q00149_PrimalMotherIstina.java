@@ -82,7 +82,7 @@ public class Q00149_PrimalMotherIstina extends Quest
 			{
 				if (qs.isCond(2) && (getQuestItemsCount(player, SHILENS_MARK) >= 1))
 				{
-					final int stoneId = Integer.parseInt(event.replaceAll("reward_", ""));
+					final int stoneId = Integer.parseInt(event.replace("reward_", ""));
 					takeItems(player, SHILENS_MARK, 1);
 					addExpAndSp(player, 833065000, 199935);
 					giveItems(player, ISTHINA_BRACELET, 1);

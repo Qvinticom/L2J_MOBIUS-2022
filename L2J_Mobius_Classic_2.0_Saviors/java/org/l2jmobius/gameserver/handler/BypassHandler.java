@@ -54,7 +54,7 @@ public class BypassHandler implements IHandler<IBypassHandler, String>
 	{
 		if (command.contains(" "))
 		{
-			command = command.substring(0, command.indexOf(" "));
+			command = command.substring(0, command.indexOf(' '));
 		}
 		return _datatable.get(command.toLowerCase());
 	}

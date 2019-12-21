@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.enums.InstanceType;
@@ -30,7 +30,7 @@ public class ActionShiftHandler implements IHandler<IActionShiftHandler, Instanc
 	
 	protected ActionShiftHandler()
 	{
-		_actionsShift = new HashMap<>();
+		_actionsShift = new EnumMap<>(InstanceType.class);
 	}
 	
 	@Override

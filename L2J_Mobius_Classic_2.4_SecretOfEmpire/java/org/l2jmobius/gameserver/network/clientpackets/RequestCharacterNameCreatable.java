@@ -30,13 +30,12 @@ import org.l2jmobius.gameserver.util.Util;
 public class RequestCharacterNameCreatable implements IClientIncomingPacket
 {
 	private String _name;
-	private int result;
 	
-	public static int CHARACTER_CREATE_FAILED = 1;
-	public static int NAME_ALREADY_EXISTS = 2;
-	public static int INVALID_LENGTH = 3;
-	public static int INVALID_NAME = 4;
-	public static int CANNOT_CREATE_SERVER = 5;
+	public static final int CHARACTER_CREATE_FAILED = 1;
+	public static final int NAME_ALREADY_EXISTS = 2;
+	public static final int INVALID_LENGTH = 3;
+	public static final int INVALID_NAME = 4;
+	public static final int CANNOT_CREATE_SERVER = 5;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
@@ -50,6 +49,7 @@ public class RequestCharacterNameCreatable implements IClientIncomingPacket
 	{
 		final int charId = CharNameTable.getInstance().getIdByName(_name);
 		
+		int result;
 		if (!Util.isAlphaNumeric(_name) || !isValidName(_name))
 		{
 			result = INVALID_NAME;

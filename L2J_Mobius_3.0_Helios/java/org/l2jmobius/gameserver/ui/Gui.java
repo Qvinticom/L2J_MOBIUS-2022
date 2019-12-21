@@ -280,10 +280,7 @@ public class Gui
 		{
 			JMenuItem mntmFont = new JMenuItem(font);
 			mntmFont.setFont(new Font("Segoe UI", Font.PLAIN, 13));
-			mntmFont.addActionListener(arg0 ->
-			{
-				txtrConsole.setFont(new Font("Monospaced", Font.PLAIN, Integer.parseInt(font)));
-			});
+			mntmFont.addActionListener(arg0 -> txtrConsole.setFont(new Font("Monospaced", Font.PLAIN, Integer.parseInt(font))));
 			mnFont.add(mntmFont);
 		}
 		
@@ -293,10 +290,7 @@ public class Gui
 		
 		JMenuItem mntmAbout = new JMenuItem("About");
 		mntmAbout.setFont(new Font("Segoe UI", Font.PLAIN, 13));
-		mntmAbout.addActionListener(arg0 ->
-		{
-			new frmAbout();
-		});
+		mntmAbout.addActionListener(arg0 -> new frmAbout());
 		mnHelp.add(mntmAbout);
 		
 		// Set icons.

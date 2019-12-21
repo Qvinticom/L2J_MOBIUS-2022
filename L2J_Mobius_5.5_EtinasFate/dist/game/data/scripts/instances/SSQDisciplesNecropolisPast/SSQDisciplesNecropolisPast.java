@@ -120,7 +120,7 @@ public class SSQDisciplesNecropolisPast extends AbstractInstance
 		addTalkId(PROMISE_OF_MAMMON, SHUNAIMAN, LEON, DISCIPLES_GATEKEEPER);
 	}
 	
-	private void checkDoors(Npc npc, Instance world, int count)
+	private void checkDoors(Instance world, int count)
 	{
 		switch (count)
 		{
@@ -321,16 +321,13 @@ public class SSQDisciplesNecropolisPast extends AbstractInstance
 		final Instance world = player.getInstanceWorld();
 		if (world != null)
 		{
-			if (npc.isScriptValue(0))
+			if (npc.isScriptValue(0) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.1)))
 			{
-				if (npc.getCurrentHp() < (npc.getMaxHp() * 0.1))
-				{
-					giveItems(player, SEAL_OF_BINDING, 1);
-					player.sendPacket(SystemMessageId.THE_SEALING_DEVICE_GLITTERS_AND_MOVES_ACTIVATION_COMPLETE_NORMALLY);
-					npc.setScriptValue(1);
-					startQuestTimer("FINISH", 1000, npc, player);
-					cancelQuestTimer("FIGHT", npc, player);
-				}
+				giveItems(player, SEAL_OF_BINDING, 1);
+				player.sendPacket(SystemMessageId.THE_SEALING_DEVICE_GLITTERS_AND_MOVES_ACTIVATION_COMPLETE_NORMALLY);
+				npc.setScriptValue(1);
+				startQuestTimer("FINISH", 1000, npc, player);
+				cancelQuestTimer("FIGHT", npc, player);
 			}
 			if (getRandom(100) < 50)
 			{
@@ -356,7 +353,7 @@ public class SSQDisciplesNecropolisPast extends AbstractInstance
 			{
 				final int count = world.getParameters().getInt("countKill", 0) + 1;
 				world.setParameter("countKill", count);
-				checkDoors(npc, world, count);
+				checkDoors(world, count);
 			}
 		}
 		

@@ -134,13 +134,10 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 				}
 				case "CANNON_LOOP_ATTACK":
 				{
-					if (npc.getCurrentHpPercent() > 30)
+					if ((npc.getCurrentHpPercent() > 30) && (npcVars.getBoolean("IS_DESTROY_ACTIVATED", false) || (getRandom(10) < 2)))
 					{
-						if (npcVars.getBoolean("IS_DESTROY_ACTIVATED", false) || (getRandom(10) < 2))
-						{
-							final Npc cannonSkill = addSpawn(WATER_CANNON_SKILL, npc, true, 0, false, instance.getId());
-							addSkillCastDesire(cannonSkill, cannonSkill, WATER_CANNON_SKILL_ATTACK, 23);
-						}
+						final Npc cannonSkill = addSpawn(WATER_CANNON_SKILL, npc, true, 0, false, instance.getId());
+						addSkillCastDesire(cannonSkill, cannonSkill, WATER_CANNON_SKILL_ATTACK, 23);
 					}
 					break;
 				}
@@ -172,6 +169,7 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 						npcVars.set("CLOSED_DOORS", true);
 						instance.openCloseDoor(RAID_DOOR_2, false);
 					}
+					break; // fallthrou?
 				}
 				case WATER_CANNON:
 				{

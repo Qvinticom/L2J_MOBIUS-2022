@@ -79,12 +79,9 @@ public class AntiFeedManager
 			return false;
 		}
 		
-		if ((Config.ANTIFEED_INTERVAL > 0) && _lastDeathTimes.containsKey(targetPlayer.getObjectId()))
+		if ((Config.ANTIFEED_INTERVAL > 0) && _lastDeathTimes.containsKey(targetPlayer.getObjectId()) && ((System.currentTimeMillis() - _lastDeathTimes.get(targetPlayer.getObjectId())) < Config.ANTIFEED_INTERVAL))
 		{
-			if ((System.currentTimeMillis() - _lastDeathTimes.get(targetPlayer.getObjectId())) < Config.ANTIFEED_INTERVAL)
-			{
-				return false;
-			}
+			return false;
 		}
 		
 		if (Config.ANTIFEED_DUALBOX && (attacker != null))
@@ -233,10 +230,7 @@ public class AntiFeedManager
 			return;
 		}
 		
-		_eventIPs.forEach((k, v) ->
-		{
-			removeClient(k, client);
-		});
+		_eventIPs.forEach((k, v) -> removeClient(k, client));
 	}
 	
 	/**

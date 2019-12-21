@@ -10207,7 +10207,7 @@ public class PlayerInstance extends Playable
 		restoreExp(revivePower);
 	}
 	
-	public void reviveRequest(PlayerInstance reviver, Skill skill, boolean isPet, int power)
+	public void reviveRequest(PlayerInstance reviver, boolean isPet, int power)
 	{
 		if (isResurrectionBlocked())
 		{
@@ -11393,10 +11393,9 @@ public class PlayerInstance extends Playable
 	/**
 	 * Decreases existing Souls.
 	 * @param count
-	 * @param skill
 	 * @return
 	 */
-	public boolean decreaseSouls(int count, Skill skill)
+	public boolean decreaseSouls(int count)
 	{
 		_souls -= count;
 		

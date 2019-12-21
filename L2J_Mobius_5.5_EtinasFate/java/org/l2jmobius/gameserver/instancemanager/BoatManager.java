@@ -131,6 +131,7 @@ public class BoatManager
 		}
 		catch (ArrayIndexOutOfBoundsException e)
 		{
+			// Ignore.
 		}
 	}
 	

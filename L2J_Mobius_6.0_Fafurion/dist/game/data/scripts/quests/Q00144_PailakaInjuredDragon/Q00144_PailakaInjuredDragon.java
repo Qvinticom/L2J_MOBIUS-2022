@@ -209,29 +209,26 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				break;
 			}
 		}
-		if (event.startsWith("buff"))
+		if (event.startsWith("buff") && npc.isScriptValue(0))
 		{
-			if (npc.isScriptValue(0))
+			final int currentBuffCount = npc.getVariables().getInt("buff_count");
+			if (currentBuffCount < 5)
 			{
-				final int currentBuffCount = npc.getVariables().getInt("buff_count");
-				if (currentBuffCount < 5)
+				final int buffOffset = CommonUtil.constrain(Integer.parseInt(event.substring(event.indexOf(' ') + 1)), 0, BUFFS.length);
+				npc.setTarget(player);
+				npc.doCast(BUFFS[buffOffset].getSkill());
+				npc.getVariables().set("buff_count", currentBuffCount + 1);
+				htmltext = "32509-10.html";
+				if ((currentBuffCount + 1) >= 5)
 				{
-					final int buffOffset = CommonUtil.constrain(Integer.parseInt(event.substring(event.indexOf(" ") + 1)), 0, BUFFS.length);
-					npc.setTarget(player);
-					npc.doCast(BUFFS[buffOffset].getSkill());
-					npc.getVariables().set("buff_count", currentBuffCount + 1);
-					htmltext = "32509-10.html";
-					if ((currentBuffCount + 1) >= 5)
-					{
-						htmltext = "32509-09.html";
-						npc.setScriptValue(1);
-					}
-				}
-				else
-				{
-					htmltext = "32509-07.html";
+					htmltext = "32509-09.html";
 					npc.setScriptValue(1);
 				}
+			}
+			else
+			{
+				htmltext = "32509-07.html";
+				npc.setScriptValue(1);
 			}
 		}
 		return htmltext;
@@ -294,7 +291,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if (qs != null && qs.isCond(3))
+		if ((qs != null) && qs.isCond(3))
 		{
 			qs.setCond(4, true);
 		}

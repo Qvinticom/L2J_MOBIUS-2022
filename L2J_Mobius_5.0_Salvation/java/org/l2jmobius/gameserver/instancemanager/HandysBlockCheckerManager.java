@@ -246,9 +246,8 @@ public class HandysBlockCheckerManager
 	 * Will change the player from one team to other (if possible) and will send the needed packets
 	 * @param player
 	 * @param arena
-	 * @param team
 	 */
-	public void changePlayerToTeam(PlayerInstance player, int arena, int team)
+	public void changePlayerToTeam(PlayerInstance player, int arena)
 	{
 		final ArenaParticipantsHolder holder = _arenaPlayers[arena];
 		

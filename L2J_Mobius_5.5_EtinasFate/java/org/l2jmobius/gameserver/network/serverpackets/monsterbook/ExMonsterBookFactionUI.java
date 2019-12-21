@@ -25,10 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExMonsterBookFactionUI implements IClientOutgoingPacket
 {
-	public ExMonsterBookFactionUI()
-	{
-	}
-	
 	@Override
 	public boolean write(PacketWriter packet)
 	{

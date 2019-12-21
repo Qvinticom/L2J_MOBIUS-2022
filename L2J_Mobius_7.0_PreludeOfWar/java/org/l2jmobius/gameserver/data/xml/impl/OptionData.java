@@ -72,10 +72,7 @@ public class OptionData implements IXmlReader
 						{
 							final String name = parseString(effectNode.getAttributes(), "name");
 							final StatsSet params = new StatsSet();
-							forEach(effectNode, IXmlReader::isNode, paramNode ->
-							{
-								params.set(paramNode.getNodeName(), SkillData.getInstance().parseValue(paramNode, true, false, Collections.emptyMap()));
-							});
+							forEach(effectNode, IXmlReader::isNode, paramNode -> params.set(paramNode.getNodeName(), SkillData.getInstance().parseValue(paramNode, true, false, Collections.emptyMap())));
 							option.addEffect(EffectHandler.getInstance().getHandlerFactory(name).apply(params));
 						});
 						break;

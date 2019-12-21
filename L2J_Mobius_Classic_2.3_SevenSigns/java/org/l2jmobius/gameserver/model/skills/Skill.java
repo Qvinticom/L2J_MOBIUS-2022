@@ -1151,7 +1151,7 @@ public class Skill implements IIdentifiable
 			try
 			{
 				final List<WorldObject> result = new LinkedList<>();
-				handler.forEachAffected(creature, target, this, o -> result.add(o));
+				handler.forEachAffected(creature, target, this, result::add);
 				return result;
 			}
 			catch (Exception e)
@@ -1362,12 +1362,9 @@ public class Skill implements IIdentifiable
 			}
 			
 			// Support for buff sharing feature including healing herbs.
-			if (_isSharedWithSummon && effected.isPlayer() && effected.hasServitors() && !isTransformation())
+			if (_isSharedWithSummon && effected.isPlayer() && effected.hasServitors() && !isTransformation() && ((addContinuousEffects && isContinuous() && !_isDebuff) || _isRecoveryHerb))
 			{
-				if ((addContinuousEffects && isContinuous() && !_isDebuff) || _isRecoveryHerb)
-				{
-					effected.getServitors().values().forEach(s -> applyEffects(effector, s, _isRecoveryHerb, 0));
-				}
+				effected.getServitors().values().forEach(s -> applyEffects(effector, s, _isRecoveryHerb, 0));
 			}
 		}
 		

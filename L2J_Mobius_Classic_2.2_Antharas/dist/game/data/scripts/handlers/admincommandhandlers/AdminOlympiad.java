@@ -105,8 +105,8 @@ public class AdminOlympiad implements IAdminCommandHandler
 				final PlayerInstance player = target != null ? target.getActingPlayer() : null;
 				if (player != null)
 				{
-					final int val = parseInt(st, Integer.MIN_VALUE);
-					if (val == Integer.MIN_VALUE)
+					final int val = parseInt(st);
+					if (val == -1)
 					{
 						BuilderUtil.sendSysMessage(activeChar, "Syntax: //addolypoints <points>");
 						return false;
@@ -146,8 +146,8 @@ public class AdminOlympiad implements IAdminCommandHandler
 				final PlayerInstance player = target != null ? target.getActingPlayer() : null;
 				if (player != null)
 				{
-					final int val = parseInt(st, Integer.MIN_VALUE);
-					if (val == Integer.MIN_VALUE)
+					final int val = parseInt(st);
+					if (val == -1)
 					{
 						BuilderUtil.sendSysMessage(activeChar, "Syntax: //removeolypoints <points>");
 						return false;
@@ -188,8 +188,8 @@ public class AdminOlympiad implements IAdminCommandHandler
 				final PlayerInstance player = target != null ? target.getActingPlayer() : null;
 				if (player != null)
 				{
-					final int val = parseInt(st, Integer.MIN_VALUE);
-					if (val == Integer.MIN_VALUE)
+					final int val = parseInt(st);
+					if (val == -1)
 					{
 						BuilderUtil.sendSysMessage(activeChar, "Syntax: //setolypoints <points>");
 						return false;
@@ -227,7 +227,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 		return false;
 	}
 	
-	private int parseInt(StringTokenizer st, int defaultVal)
+	private int parseInt(StringTokenizer st)
 	{
 		final String token = st.nextToken();
 		if (!Util.isDigit(token))

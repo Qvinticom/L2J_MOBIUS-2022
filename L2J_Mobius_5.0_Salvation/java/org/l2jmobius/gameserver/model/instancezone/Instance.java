@@ -1160,7 +1160,7 @@ public class Instance implements IIdentifiable, INamable
 	@Override
 	public boolean equals(Object obj)
 	{
-		return (obj != null) && (obj instanceof Instance) && (((Instance) obj).getId() == getId());
+		return (obj instanceof Instance) && (((Instance) obj).getId() == getId());
 	}
 	
 	@Override

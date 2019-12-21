@@ -360,18 +360,18 @@ public class AdminTeleport implements IAdminCommandHandler
 		player.teleToLocation(MapRegionManager.getInstance().getMapRegionByName(regionName).getSpawnLoc(), true, null);
 	}
 	
-	private void teleportTo(PlayerInstance activeChar, String Coords)
+	private void teleportTo(PlayerInstance activeChar, String coords)
 	{
 		try
 		{
-			final StringTokenizer st = new StringTokenizer(Coords);
+			final StringTokenizer st = new StringTokenizer(coords);
 			final int x = Integer.parseInt(st.nextToken());
 			final int y = Integer.parseInt(st.nextToken());
 			final int z = Integer.parseInt(st.nextToken());
 			
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			activeChar.teleToLocation(x, y, z, null);
-			BuilderUtil.sendSysMessage(activeChar, "You have been teleported to " + Coords);
+			BuilderUtil.sendSysMessage(activeChar, "You have been teleported to " + coords);
 		}
 		catch (NoSuchElementException nsee)
 		{
@@ -404,7 +404,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void teleportCharacter(PlayerInstance activeChar, String Cords)
+	private void teleportCharacter(PlayerInstance activeChar, String coords)
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
@@ -426,7 +426,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		{
 			try
 			{
-				final StringTokenizer st = new StringTokenizer(Cords);
+				final StringTokenizer st = new StringTokenizer(coords);
 				final String x1 = st.nextToken();
 				final int x = Integer.parseInt(x1);
 				final String y1 = st.nextToken();

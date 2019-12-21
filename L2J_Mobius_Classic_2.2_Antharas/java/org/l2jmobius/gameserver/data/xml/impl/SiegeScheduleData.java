@@ -79,12 +79,9 @@ public class SiegeScheduleData implements IXmlReader
 								final Node node = attrs.item(i);
 								final String key = node.getNodeName();
 								String val = node.getNodeValue();
-								if ("day".equals(key))
+								if ("day".equals(key) && !Util.isDigit(val))
 								{
-									if (!Util.isDigit(val))
-									{
-										val = Integer.toString(getValueForField(val));
-									}
+									val = Integer.toString(getValueForField(val));
 								}
 								set.set(key, val);
 							}

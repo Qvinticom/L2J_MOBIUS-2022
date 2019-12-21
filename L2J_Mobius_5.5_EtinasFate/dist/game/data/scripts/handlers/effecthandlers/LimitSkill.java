@@ -28,15 +28,15 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class LimitSkill extends AbstractEffect
 {
-	private final static int LIMIT_OF_AEORE = 11833;
-	private final static int LIMIT_OF_SIGEL = 19526;
-	private final static int LIMIT_OF_ISS = 19527;
-	private final static int BATTLE_RAPSODY = 11544;
-	private final static int OVERLORDS_DIGNITY = 19439;
-	private final static int PROTECTION_OF_FATE = 10019;
-	private final static int NINE_AEGIS = 10024;
-	private final static int CELESTIAL_PROTECTION = 11758;
-	private final static int CELESTIAL_PARTY_PROTECTION = 11759;
+	private static final int LIMIT_OF_AEORE = 11833;
+	private static final int LIMIT_OF_SIGEL = 19526;
+	private static final int LIMIT_OF_ISS = 19527;
+	private static final int BATTLE_RAPSODY = 11544;
+	private static final int OVERLORDS_DIGNITY = 19439;
+	private static final int PROTECTION_OF_FATE = 10019;
+	private static final int NINE_AEGIS = 10024;
+	private static final int CELESTIAL_PROTECTION = 11758;
+	private static final int CELESTIAL_PARTY_PROTECTION = 11759;
 	
 	public LimitSkill(StatsSet params)
 	{
@@ -121,12 +121,9 @@ public class LimitSkill extends AbstractEffect
 	{
 		for (BuffInfo buff : effected.getEffectList().getEffects())
 		{
-			if (buff.getSkill().getId() == skillId)
+			if ((buff.getSkill().getId() == skillId) && (duration > 0))
 			{
-				if (duration > 0)
-				{
-					buff.setAbnormalTime(duration);
-				}
+				buff.setAbnormalTime(duration);
 			}
 		}
 	}

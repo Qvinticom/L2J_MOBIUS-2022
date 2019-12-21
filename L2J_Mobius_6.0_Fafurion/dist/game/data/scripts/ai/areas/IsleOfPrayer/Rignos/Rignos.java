@@ -67,10 +67,7 @@ public class Rignos extends AbstractNpcAI
 					{
 						TIMER.getSkill().applyEffects(pet, pet);
 					}
-					player.getServitors().values().forEach(s ->
-					{
-						TIMER.getSkill().applyEffects(s, s);
-					});
+					player.getServitors().values().forEach(s -> TIMER.getSkill().applyEffects(s, s));
 					
 					if (hasQuestItems(player, STAMP))
 					{

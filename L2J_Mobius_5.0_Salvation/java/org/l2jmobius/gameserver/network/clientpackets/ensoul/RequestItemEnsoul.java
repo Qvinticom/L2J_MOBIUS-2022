@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  */
 public class RequestItemEnsoul implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(IClientIncomingPacket.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestItemEnsoul.class.getName());
 	private int _itemObjectId;
 	private EnsoulItemOption[] _options;
 	
@@ -189,24 +189,18 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 			{
 				// Normal Soul Crystal
 				fee = EnsoulData.getInstance().getEnsoulFee(item.getItem().getCrystalType(), position);
-				if ((itemOption.getPosition() == 1) || (itemOption.getPosition() == 2))
+				if (((itemOption.getPosition() == 1) || (itemOption.getPosition() == 2)) && (item.getSpecialAbility(position) != null))
 				{
-					if (item.getSpecialAbility(position) != null)
-					{
-						fee = EnsoulData.getInstance().getResoulFee(item.getItem().getCrystalType(), position);
-					}
+					fee = EnsoulData.getInstance().getResoulFee(item.getItem().getCrystalType(), position);
 				}
 			}
 			else if (itemOption.getType() == 2)
 			{
 				// Mystic Soul Crystal
 				fee = EnsoulData.getInstance().getEnsoulFee(item.getItem().getCrystalType(), position);
-				if (itemOption.getPosition() == 1)
+				if ((itemOption.getPosition() == 1) && (item.getAdditionalSpecialAbility(position) != null))
 				{
-					if (item.getAdditionalSpecialAbility(position) != null)
-					{
-						fee = EnsoulData.getInstance().getResoulFee(item.getItem().getCrystalType(), position);
-					}
+					fee = EnsoulData.getInstance().getResoulFee(item.getItem().getCrystalType(), position);
 				}
 			}
 			else

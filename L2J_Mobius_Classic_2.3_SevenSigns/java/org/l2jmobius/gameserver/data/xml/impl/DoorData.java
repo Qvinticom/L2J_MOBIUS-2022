@@ -118,7 +118,7 @@ public class DoorData implements IXmlReader
 	private void applyCollisions(StatsSet set)
 	{
 		// Insert Collision data
-		if (set.contains("nodeX_0") && set.contains("nodeY_0") && set.contains("nodeX_1") && set.contains("nodeX_1"))
+		if (set.contains("nodeX_0") && set.contains("nodeY_0") && set.contains("nodeX_1") && set.contains("nodeY_1"))
 		{
 			final int height = set.getInt("height", 150);
 			final int nodeX = set.getInt("nodeX_0");

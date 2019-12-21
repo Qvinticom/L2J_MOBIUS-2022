@@ -18,6 +18,7 @@ package ai.others;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -305,11 +306,11 @@ public class EnergySeeds extends AbstractNpcAI
 	
 	public void stopAI(GraciaSeeds type)
 	{
-		for (Npc seed : _spawnedNpcs.keySet())
+		for (Entry<Npc, Integer> entry : _spawnedNpcs.entrySet())
 		{
-			if (type == _spawns.get(_spawnedNpcs.get(seed))._seedId)
+			if (type == _spawns.get(entry.getValue())._seedId)
 			{
-				seed.deleteMe();
+				entry.getKey().deleteMe();
 			}
 		}
 	}

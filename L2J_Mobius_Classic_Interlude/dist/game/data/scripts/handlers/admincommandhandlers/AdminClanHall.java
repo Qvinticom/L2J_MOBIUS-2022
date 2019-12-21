@@ -154,7 +154,7 @@ public class AdminClanHall implements IAdminCommandHandler
 		useAdminCommand("admin_clanhall id=" + clanHallId, player);
 	}
 	
-	private void sendClanHallList(PlayerInstance player, int page, BypassParser parser)
+	private void sendClanHallList(PlayerInstance player, int page)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(player, "data/html/admin/clanhall_list.htm");
@@ -271,7 +271,7 @@ public class AdminClanHall implements IAdminCommandHandler
 		}
 		else
 		{
-			sendClanHallList(player, page, parser);
+			sendClanHallList(player, page);
 		}
 	}
 	

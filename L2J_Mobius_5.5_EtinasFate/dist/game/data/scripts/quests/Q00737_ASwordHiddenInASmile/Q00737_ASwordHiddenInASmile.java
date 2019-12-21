@@ -240,6 +240,7 @@ public class Q00737_ASwordHiddenInASmile extends Quest
 			case State.CREATED:
 			{
 				htmltext = "34243-01.htm";
+				break;
 			}
 			case State.STARTED:
 			{

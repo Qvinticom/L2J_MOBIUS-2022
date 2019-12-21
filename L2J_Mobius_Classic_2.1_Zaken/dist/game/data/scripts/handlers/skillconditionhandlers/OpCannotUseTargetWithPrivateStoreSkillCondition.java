@@ -35,10 +35,6 @@ public class OpCannotUseTargetWithPrivateStoreSkillCondition implements ISkillCo
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		if ((target != null) && target.isPlayer() && (target.getActingPlayer().getPrivateStoreType() != PrivateStoreType.NONE))
-		{
-			return false;
-		}
-		return true;
+		return (target == null) || !target.isPlayer() || (target.getActingPlayer().getPrivateStoreType() == PrivateStoreType.NONE);
 	}
 }

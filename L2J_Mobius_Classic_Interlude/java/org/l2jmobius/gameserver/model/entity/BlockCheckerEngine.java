@@ -115,7 +115,7 @@ public class BlockCheckerEngine
 		}
 	};
 	// Common z coordinate
-	private static final int _zCoord = -2405;
+	private static final int Z_COORD = -2405;
 	// List of dropped items in event (for later deletion)
 	protected Set<ItemInstance> _drops = ConcurrentHashMap.newKeySet();
 	// Default arena
@@ -369,7 +369,7 @@ public class BlockCheckerEngine
 				// Get x and y coordinates
 				final int x = _arenaCoordinates[_arena][tc];
 				final int y = _arenaCoordinates[_arena][tc + 1];
-				player.teleToLocation(x, y, _zCoord);
+				player.teleToLocation(x, y, Z_COORD);
 				// Set the player team
 				if (isRed)
 				{
@@ -484,7 +484,7 @@ public class BlockCheckerEngine
 				for (int i = 0; i < _numOfBoxes; i++)
 				{
 					final Spawn spawn = new Spawn(template);
-					spawn.setXYZ(_arenaCoordinates[_arena][4] + Rnd.get(-400, 400), _arenaCoordinates[_arena][5] + Rnd.get(-400, 400), _zCoord);
+					spawn.setXYZ(_arenaCoordinates[_arena][4] + Rnd.get(-400, 400), _arenaCoordinates[_arena][5] + Rnd.get(-400, 400), Z_COORD);
 					spawn.setAmount(1);
 					spawn.setHeading(1);
 					spawn.setRespawnDelay(1);
@@ -492,14 +492,7 @@ public class BlockCheckerEngine
 					spawn.init();
 					final BlockInstance block = (BlockInstance) spawn.getLastSpawn();
 					// switch color
-					if ((random % 2) == 0)
-					{
-						block.setRed(true);
-					}
-					else
-					{
-						block.setRed(false);
-					}
+					block.setRed((random % 2) == 0);
 					
 					block.disableCoreAI(true);
 					_spawns.add(spawn);
@@ -517,7 +510,7 @@ public class BlockCheckerEngine
 				try
 				{
 					final Spawn girlSpawn = new Spawn(18676);
-					girlSpawn.setXYZ(_arenaCoordinates[_arena][4] + Rnd.get(-400, 400), _arenaCoordinates[_arena][5] + Rnd.get(-400, 400), _zCoord);
+					girlSpawn.setXYZ(_arenaCoordinates[_arena][4] + Rnd.get(-400, 400), _arenaCoordinates[_arena][5] + Rnd.get(-400, 400), Z_COORD);
 					girlSpawn.setAmount(1);
 					girlSpawn.setHeading(1);
 					girlSpawn.setRespawnDelay(1);

@@ -92,6 +92,7 @@ public class Q00460_PreciousResearchMaterial extends Quest
 							break;
 						}
 						qs.setState(State.CREATED);
+						// fallthrough
 					}
 					case State.CREATED:
 					{
@@ -122,12 +123,9 @@ public class Q00460_PreciousResearchMaterial extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
-		if (qs != null)
+		if ((qs != null) && giveItemRandomly(killer, TEREDOR_EGG_FRAGMENT, 1, 20, 0.7, true))
 		{
-			if (giveItemRandomly(killer, TEREDOR_EGG_FRAGMENT, 1, 20, 0.7, true))
-			{
-				qs.setCond(2, true);
-			}
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

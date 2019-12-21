@@ -90,13 +90,12 @@ public class Q10752_WindsOfFateAPromise extends Quest
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
+		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return null;
+			return htmltext;
 		}
-		
-		String htmltext = event;
 		
 		switch (event)
 		{
@@ -274,7 +273,6 @@ public class Q10752_WindsOfFateAPromise extends Quest
 						break;
 					}
 					htmltext = "33943-12.html";
-					break;
 				}
 				else if (npc.getId() == AYANTHE)
 				{
@@ -284,8 +282,8 @@ public class Q10752_WindsOfFateAPromise extends Quest
 						break;
 					}
 					htmltext = "33942-09.html";
-					break;
 				}
+				break;
 			}
 			case State.STARTED:
 			{

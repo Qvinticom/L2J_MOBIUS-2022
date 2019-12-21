@@ -103,6 +103,7 @@ public class Q00451_LuciensAltar extends Quest
 						break;
 					}
 					qs.setState(State.CREATED);
+					// fallthrough
 				}
 				case State.CREATED:
 				{

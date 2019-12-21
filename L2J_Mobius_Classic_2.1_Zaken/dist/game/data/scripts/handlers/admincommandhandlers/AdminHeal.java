@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminHeal implements IAdminCommandHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(AdminRes.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AdminHeal.class.getName());
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_heal"

@@ -93,15 +93,12 @@ public class Q10571_StrategicReconciliation extends Quest
 			}
 			case "34360-07.html":
 			{
-				if (qs.isCond(2))
+				if (qs.isCond(2) && (player.getLevel() >= MIN_LEVEL))
 				{
-					if (player.getLevel() >= MIN_LEVEL)
-					{
-						addExpAndSp(player, 10_758_599_280L, 10_758_420);
-						addFactionPoints(player, Faction.UNWORLDLY_VISITORS, 100);
-						qs.exitQuest(QuestType.ONE_TIME, true);
-						htmltext = event;
-					}
+					addExpAndSp(player, 10_758_599_280L, 10_758_420);
+					addFactionPoints(player, Faction.UNWORLDLY_VISITORS, 100);
+					qs.exitQuest(QuestType.ONE_TIME, true);
+					htmltext = event;
 				}
 				break;
 			}
@@ -140,12 +137,9 @@ public class Q10571_StrategicReconciliation extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && (qs.isCond(1)))
+		if ((qs != null) && (qs.isCond(1)) && giveItemRandomly(killer, npc, DIMENSIONAL_TRACES, 1, 50, 0.5, true))
 		{
-			if (giveItemRandomly(killer, npc, DIMENSIONAL_TRACES, 1, 50, 0.5, true))
-			{
-				qs.setCond(2, true);
-			}
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

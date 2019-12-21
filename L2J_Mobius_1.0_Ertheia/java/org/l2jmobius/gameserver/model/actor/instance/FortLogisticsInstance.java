@@ -71,7 +71,7 @@ public class FortLogisticsInstance extends MerchantInstance
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken(); // Get actual command
 		
-		final boolean isMyLord = player.isClanLeader() ? (player.getClan().getFortId() == (getFort() != null ? getFort().getResidenceId() : -1)) : false;
+		final boolean isMyLord = player.isClanLeader() && (player.getClan().getFortId() == (getFort() != null ? getFort().getResidenceId() : -1));
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		if (actualCommand.equalsIgnoreCase("rewards"))
 		{
@@ -145,8 +145,8 @@ public class FortLogisticsInstance extends MerchantInstance
 					if (level > 0)
 					{
 						// spawn box
-						final NpcTemplate BoxTemplate = NpcData.getInstance().getTemplate(SUPPLY_BOX_IDS[level - 1]);
-						final MonsterInstance box = new MonsterInstance(BoxTemplate);
+						final NpcTemplate boxTemplate = NpcData.getInstance().getTemplate(SUPPLY_BOX_IDS[level - 1]);
+						final MonsterInstance box = new MonsterInstance(boxTemplate);
 						box.setCurrentHp(box.getMaxHp());
 						box.setCurrentMp(box.getMaxMp());
 						box.setHeading(0);

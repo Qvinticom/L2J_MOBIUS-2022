@@ -56,19 +56,16 @@ public class KartiaSupportTroop extends AbstractNpcAI
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DEFEAT_ALL_THE_MONSTERS);
 			getTimers().addTimer("NPC_SAY", 20000, npc, null);
 		}
-		else if (event.equals("CHECK_TARGET"))
+		else if (event.equals("CHECK_TARGET") && (!npc.isInCombat() || !npc.isAttackingNow() || (npc.getTarget() == null)))
 		{
-			if (!npc.isInCombat() || !npc.isAttackingNow() || (npc.getTarget() == null))
+			final List<MonsterInstance> monsterList = World.getInstance().getVisibleObjects(npc, MonsterInstance.class);
+			if (!monsterList.isEmpty())
 			{
-				final List<MonsterInstance> monsterList = World.getInstance().getVisibleObjects(npc, MonsterInstance.class);
-				if (!monsterList.isEmpty())
+				final MonsterInstance monster = monsterList.get(getRandom(monsterList.size()));
+				
+				if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster))
 				{
-					final MonsterInstance monster = monsterList.get(getRandom(monsterList.size()));
-					
-					if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster))
-					{
-						addAttackDesire(npc, monster);
-					}
+					addAttackDesire(npc, monster);
 				}
 			}
 		}

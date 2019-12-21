@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExCloseAPListWnd implements IClientOutgoingPacket
 {
-	public static ExCloseAPListWnd STATIC_PACKET = new ExCloseAPListWnd();
+	public static final ExCloseAPListWnd STATIC_PACKET = new ExCloseAPListWnd();
 	
 	private ExCloseAPListWnd()
 	{

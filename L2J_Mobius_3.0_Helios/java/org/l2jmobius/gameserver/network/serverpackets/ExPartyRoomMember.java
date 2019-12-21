@@ -57,9 +57,9 @@ public class ExPartyRoomMember implements IClientOutgoingPacket
 			packet.writeD(member.getLevel());
 			packet.writeD(MapRegionManager.getInstance().getBBs(member.getLocation()));
 			packet.writeD(_room.getMemberType(member).ordinal());
-			final Map<Integer, Long> _instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(member);
-			packet.writeD(_instanceTimes.size());
-			for (Entry<Integer, Long> entry : _instanceTimes.entrySet())
+			final Map<Integer, Long> instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(member);
+			packet.writeD(instanceTimes.size());
+			for (Entry<Integer, Long> entry : instanceTimes.entrySet())
 			{
 				final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
 				packet.writeD(entry.getKey());

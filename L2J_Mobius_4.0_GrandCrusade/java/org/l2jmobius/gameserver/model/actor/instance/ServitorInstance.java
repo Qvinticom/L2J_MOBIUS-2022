@@ -302,7 +302,7 @@ public class ServitorInstance extends Summon implements Runnable
 			statement.setInt(3, _referenceSkill);
 			statement.execute();
 			
-			int buff_index = 0;
+			int buffIndex = 0;
 			
 			final Collection<Long> storedSkills = ConcurrentHashMap.newKeySet();
 			
@@ -357,7 +357,7 @@ public class ServitorInstance extends Summon implements Runnable
 						ps2.setInt(4, skill.getId());
 						ps2.setInt(5, skill.getLevel());
 						ps2.setInt(6, info.getTime());
-						ps2.setInt(7, ++buff_index);
+						ps2.setInt(7, ++buffIndex);
 						ps2.addBatch();
 						
 						// XXX: Rework me!
@@ -452,16 +452,14 @@ public class ServitorInstance extends Summon implements Runnable
 		}
 		finally
 		{
-			if (!SummonEffectsTable.getInstance().getServitorEffectsOwner().containsKey(getOwner().getObjectId()) || !SummonEffectsTable.getInstance().getServitorEffectsOwner().get(getOwner().getObjectId()).containsKey(getOwner().getClassIndex()) || !SummonEffectsTable.getInstance().getServitorEffects(getOwner()).containsKey(getReferenceSkill()))
+			if (SummonEffectsTable.getInstance().getServitorEffectsOwner().containsKey(getOwner().getObjectId()) && SummonEffectsTable.getInstance().getServitorEffectsOwner().get(getOwner().getObjectId()).containsKey(getOwner().getClassIndex()) && SummonEffectsTable.getInstance().getServitorEffects(getOwner()).containsKey(getReferenceSkill()))
 			{
-				return;
-			}
-			
-			for (SummonEffect se : SummonEffectsTable.getInstance().getServitorEffects(getOwner()).get(getReferenceSkill()))
-			{
-				if (se != null)
+				for (SummonEffect se : SummonEffectsTable.getInstance().getServitorEffects(getOwner()).get(getReferenceSkill()))
 				{
-					se.getSkill().applyEffects(this, this, false, se.getEffectCurTime());
+					if (se != null)
+					{
+						se.getSkill().applyEffects(this, this, false, se.getEffectCurTime());
+					}
 				}
 			}
 		}

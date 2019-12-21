@@ -38,7 +38,6 @@ public class AdminRide implements IAdminCommandHandler
 		"admin_ride_wolf",
 		"admin_unride_wolf",
 	};
-	private int _petRideId;
 	
 	private static final int PURPLE_MANED_HORSE_TRANSFORMATION_ID = 106;
 	
@@ -60,17 +59,19 @@ public class AdminRide implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Target already have a summon.");
 				return false;
 			}
+			
+			int petRideId;
 			if (command.startsWith("admin_ride_wyvern"))
 			{
-				_petRideId = 12621;
+				petRideId = 12621;
 			}
 			else if (command.startsWith("admin_ride_strider"))
 			{
-				_petRideId = 12526;
+				petRideId = 12526;
 			}
 			else if (command.startsWith("admin_ride_wolf"))
 			{
-				_petRideId = 16041;
+				petRideId = 16041;
 			}
 			else if (command.startsWith("admin_ride_horse")) // handled using transformation
 			{
@@ -104,7 +105,7 @@ public class AdminRide implements IAdminCommandHandler
 				return false;
 			}
 			
-			player.mount(_petRideId, 0, false);
+			player.mount(petRideId, 0, false);
 			
 			return false;
 		}

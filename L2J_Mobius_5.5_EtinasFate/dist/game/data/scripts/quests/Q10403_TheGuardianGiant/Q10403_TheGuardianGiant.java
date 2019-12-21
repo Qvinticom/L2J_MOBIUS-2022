@@ -148,7 +148,6 @@ public class Q10403_TheGuardianGiant extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isStarted())
 		{
 			if (qs.isCond(2) && (npc.getId() == AKUM))
@@ -157,15 +156,12 @@ public class Q10403_TheGuardianGiant extends Quest
 				takeItems(killer, FRAGMENT, -1);
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_WITH_THE_POWER_OF_THE_GODS_CEASE_YOUR_MASQUERADING_AS_OUR_MASTERS_OR_ELSE);
 			}
-			else if (qs.isCond(1))
+			else if (qs.isCond(1) && giveItemRandomly(killer, FRAGMENT, 1, 200, 1, true))
 			{
-				if (giveItemRandomly(killer, FRAGMENT, 1, 200, 1, true))
-				{
-					qs.setCond(2, true);
-					final Npc akum = addSpawn(AKUM, npc);
-					akum.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WHO_IS_IT_THAT_THREATENS_US_YOU_WITH_THE_POWER_OF_THE_GODS_WHY_DO_YOU_COVET_OUR_POWERS);
-					addAttackPlayerDesire(akum, killer);
-				}
+				qs.setCond(2, true);
+				final Npc akum = addSpawn(AKUM, npc);
+				akum.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WHO_IS_IT_THAT_THREATENS_US_YOU_WITH_THE_POWER_OF_THE_GODS_WHY_DO_YOU_COVET_OUR_POWERS);
+				addAttackPlayerDesire(akum, killer);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

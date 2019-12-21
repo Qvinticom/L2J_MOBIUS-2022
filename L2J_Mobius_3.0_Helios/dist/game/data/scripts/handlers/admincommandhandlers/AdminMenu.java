@@ -86,6 +86,7 @@ public class AdminMenu implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
+				// Not important.
 			}
 		}
 		else if (command.startsWith("admin_recall_party_menu"))
@@ -153,6 +154,7 @@ public class AdminMenu implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
+				// Not important.
 			}
 		}
 		else if (command.equals("admin_kill_menu"))

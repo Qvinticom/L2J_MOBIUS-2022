@@ -69,16 +69,16 @@ public class FavoriteBoard implements IParseBoardHandler
 				{
 					while (rs.next())
 					{
-						String link = list.replaceAll("%fav_bypass%", rs.getString("favBypass"));
-						link = link.replaceAll("%fav_title%", rs.getString("favTitle"));
+						String link = list.replace("%fav_bypass%", rs.getString("favBypass"));
+						link = link.replace("%fav_title%", rs.getString("favTitle"));
 						final SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-						link = link.replaceAll("%fav_add_date%", date.format(rs.getTimestamp("favAddDate")));
-						link = link.replaceAll("%fav_id%", String.valueOf(rs.getInt("favId")));
+						link = link.replace("%fav_add_date%", date.format(rs.getTimestamp("favAddDate")));
+						link = link.replace("%fav_id%", String.valueOf(rs.getInt("favId")));
 						sb.append(link);
 					}
 				}
 				String html = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/favorite.html");
-				html = html.replaceAll("%fav_list%", sb.toString());
+				html = html.replace("%fav_list%", sb.toString());
 				CommunityBoardHandler.separateAndSend(html, player);
 			}
 			catch (Exception e)
@@ -116,7 +116,7 @@ public class FavoriteBoard implements IParseBoardHandler
 		}
 		else if (command.startsWith("_bbsdelfav_"))
 		{
-			final String favId = command.replaceAll("_bbsdelfav_", "");
+			final String favId = command.replace("_bbsdelfav_", "");
 			if (!Util.isDigit(favId))
 			{
 				LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't delete favorite link, " + favId + " it's not a valid ID!");

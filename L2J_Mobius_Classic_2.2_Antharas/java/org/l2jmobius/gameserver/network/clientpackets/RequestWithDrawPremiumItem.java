@@ -77,23 +77,23 @@ public class RequestWithDrawPremiumItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final PremiumItem _item = player.getPremiumItemList().get(_itemNum);
-		if (_item == null)
+		final PremiumItem item = player.getPremiumItemList().get(_itemNum);
+		if (item == null)
 		{
 			return;
 		}
-		else if (_item.getCount() < _itemCount)
+		else if (item.getCount() < _itemCount)
 		{
 			return;
 		}
 		
-		final long itemsLeft = (_item.getCount() - _itemCount);
+		final long itemsLeft = (item.getCount() - _itemCount);
 		
-		player.addItem("PremiumItem", _item.getItemId(), _itemCount, player.getTarget(), true);
+		player.addItem("PremiumItem", item.getItemId(), _itemCount, player.getTarget(), true);
 		
 		if (itemsLeft > 0)
 		{
-			_item.updateCount(itemsLeft);
+			item.updateCount(itemsLeft);
 			player.updatePremiumItem(_itemNum, itemsLeft);
 		}
 		else

@@ -318,7 +318,7 @@ public class Q00663_SeductiveWhispers extends Quest
 				isPlayerWin = true;
 				htmltext = getHtm(player, isPractice ? "30846-07.html" : "30846-18.html");
 				htmltext = htmltext.replace("%table%", table);
-				htmltext = htmltext.replaceAll("%win_count%", Integer.toString(winCount));
+				htmltext = htmltext.replace("%win_count%", Integer.toString(winCount));
 			}
 			else
 			{
@@ -338,9 +338,9 @@ public class Q00663_SeductiveWhispers extends Quest
 			htmltext = htmltext.replace("%table%", table);
 		}
 		
-		htmltext = htmltext.replaceAll("%player_name%", player.getName());
-		htmltext = htmltext.replaceAll("%player_card%", playerCard.toString());
-		htmltext = npcCard == null ? htmltext.replaceAll("%npc_card%", "No such card") : htmltext.replaceAll("%npc_card%", npcCard.toString());
+		htmltext = htmltext.replace("%player_name%", player.getName());
+		htmltext = htmltext.replace("%player_card%", playerCard.toString());
+		htmltext = npcCard == null ? htmltext.replace("%npc_card%", "No such card") : htmltext.replace("%npc_card%", npcCard.toString());
 		
 		if (isPlayerWin)
 		{

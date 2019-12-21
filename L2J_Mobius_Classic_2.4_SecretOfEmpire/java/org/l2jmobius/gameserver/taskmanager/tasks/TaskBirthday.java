@@ -44,7 +44,7 @@ public class TaskBirthday extends Task
 {
 	private static final String NAME = "birthday";
 	private static final String QUERY = "SELECT charId, createDate FROM characters WHERE createDate LIKE ?";
-	private static final Calendar _today = Calendar.getInstance();
+	private static final Calendar TODAY = Calendar.getInstance();
 	private int _count = 0;
 	
 	@Override
@@ -64,9 +64,9 @@ public class TaskBirthday extends Task
 			lastExecDate.setTimeInMillis(lastActivation);
 		}
 		
-		final String rangeDate = "[" + Util.getDateString(lastExecDate.getTime()) + "] - [" + Util.getDateString(_today.getTime()) + "]";
+		final String rangeDate = "[" + Util.getDateString(lastExecDate.getTime()) + "] - [" + Util.getDateString(TODAY.getTime()) + "]";
 		
-		for (; !_today.before(lastExecDate); lastExecDate.add(Calendar.DATE, 1))
+		for (; !TODAY.before(lastExecDate); lastExecDate.add(Calendar.DATE, 1))
 		{
 			checkBirthday(lastExecDate.get(Calendar.YEAR), lastExecDate.get(Calendar.MONTH), lastExecDate.get(Calendar.DATE));
 		}
@@ -122,7 +122,7 @@ public class TaskBirthday extends Task
 		
 		// If character birthday is 29-Feb and year isn't leap, send gift on 28-feb
 		final GregorianCalendar calendar = new GregorianCalendar();
-		if ((month == Calendar.FEBRUARY) && (day == 28) && !calendar.isLeapYear(_today.get(Calendar.YEAR)))
+		if ((month == Calendar.FEBRUARY) && (day == 28) && !calendar.isLeapYear(TODAY.get(Calendar.YEAR)))
 		{
 			checkBirthday(year, Calendar.FEBRUARY, 29);
 		}

@@ -179,6 +179,7 @@ public class Minigame extends AbstractNpcAI
 			{
 				// Removed with Etina's Fate.
 				// npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TOO_LATE_THE_TORCH_HAS_RUN_OUT_MAYBE_NEXT_TIME);
+				// fallthrough?
 			}
 			case "end":
 			{
@@ -388,7 +389,7 @@ public class Minigame extends AbstractNpcAI
 		private boolean _started;
 		private int _attemptNumber;
 		private int _currentPot;
-		private final int _order[];
+		private final int[] _order;
 		
 		public MinigameRoom(Npc[] burners, Npc manager)
 		{

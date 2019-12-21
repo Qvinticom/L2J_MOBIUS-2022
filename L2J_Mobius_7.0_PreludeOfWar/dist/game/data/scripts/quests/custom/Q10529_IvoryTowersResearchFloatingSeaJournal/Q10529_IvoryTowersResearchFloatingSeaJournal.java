@@ -218,14 +218,11 @@ public class Q10529_IvoryTowersResearchFloatingSeaJournal extends Quest
 	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if (qs != null)
+		if ((qs != null) && qs.isCond(KILLING_COND_1))
 		{
-			if (qs.isCond(KILLING_COND_1))
-			{
-				final Set<NpcLogListHolder> holder = new HashSet<>();
-				holder.add(new NpcLogListHolder(KILLING_NPCSTRING_ID, false, (int) getQuestItemsCount(player, MONSTER_DROP_1)));
-				return holder;
-			}
+			final Set<NpcLogListHolder> holder = new HashSet<>();
+			holder.add(new NpcLogListHolder(KILLING_NPCSTRING_ID, false, (int) getQuestItemsCount(player, MONSTER_DROP_1)));
+			return holder;
 		}
 		return super.getNpcLogList(player);
 	}

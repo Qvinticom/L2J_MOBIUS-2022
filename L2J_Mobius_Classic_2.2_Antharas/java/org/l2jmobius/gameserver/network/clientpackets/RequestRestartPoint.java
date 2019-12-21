@@ -56,17 +56,17 @@ public class RequestRestartPoint implements IClientIncomingPacket
 	
 	class DeathTask implements Runnable
 	{
-		final PlayerInstance player;
+		final PlayerInstance _player;
 		
-		DeathTask(PlayerInstance _player)
+		DeathTask(PlayerInstance player)
 		{
-			player = _player;
+			_player = player;
 		}
 		
 		@Override
 		public void run()
 		{
-			portPlayer(player);
+			portPlayer(_player);
 		}
 	}
 	
@@ -109,18 +109,15 @@ public class RequestRestartPoint implements IClientIncomingPacket
 		}
 		
 		final Castle castle = CastleManager.getInstance().getCastle(player.getX(), player.getY(), player.getZ());
-		if ((castle != null) && castle.getSiege().isInProgress())
+		if ((castle != null) && castle.getSiege().isInProgress() && (player.getClan() != null) && castle.getSiege().checkIsAttacker(player.getClan()))
 		{
-			if ((player.getClan() != null) && castle.getSiege().checkIsAttacker(player.getClan()))
+			// Schedule respawn delay for attacker
+			ThreadPool.schedule(new DeathTask(player), castle.getSiege().getAttackerRespawnDelay());
+			if (castle.getSiege().getAttackerRespawnDelay() > 0)
 			{
-				// Schedule respawn delay for attacker
-				ThreadPool.schedule(new DeathTask(player), castle.getSiege().getAttackerRespawnDelay());
-				if (castle.getSiege().getAttackerRespawnDelay() > 0)
-				{
-					player.sendMessage("You will be re-spawned in " + (castle.getSiege().getAttackerRespawnDelay() / 1000) + " seconds");
-				}
-				return;
+				player.sendMessage("You will be re-spawned in " + (castle.getSiege().getAttackerRespawnDelay() / 1000) + " seconds");
 			}
+			return;
 		}
 		
 		portPlayer(player);

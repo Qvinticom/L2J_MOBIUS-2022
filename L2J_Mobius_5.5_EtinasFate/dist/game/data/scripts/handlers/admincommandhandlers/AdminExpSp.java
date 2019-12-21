@@ -108,7 +108,7 @@ public class AdminExpSp implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private boolean adminAddExpSp(PlayerInstance activeChar, String ExpSp)
+	private boolean adminAddExpSp(PlayerInstance activeChar, String expSp)
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
@@ -121,7 +121,7 @@ public class AdminExpSp implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return false;
 		}
-		final StringTokenizer st = new StringTokenizer(ExpSp);
+		final StringTokenizer st = new StringTokenizer(expSp);
 		if (st.countTokens() != 2)
 		{
 			return false;
@@ -151,7 +151,7 @@ public class AdminExpSp implements IAdminCommandHandler
 		return true;
 	}
 	
-	private boolean adminRemoveExpSP(PlayerInstance activeChar, String ExpSp)
+	private boolean adminRemoveExpSP(PlayerInstance activeChar, String expSp)
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
@@ -164,7 +164,7 @@ public class AdminExpSp implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return false;
 		}
-		final StringTokenizer st = new StringTokenizer(ExpSp);
+		final StringTokenizer st = new StringTokenizer(expSp);
 		if (st.countTokens() != 2)
 		{
 			return false;

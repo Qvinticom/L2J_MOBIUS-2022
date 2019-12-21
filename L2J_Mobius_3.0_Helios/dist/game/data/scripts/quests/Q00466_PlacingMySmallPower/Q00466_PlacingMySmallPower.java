@@ -146,6 +146,7 @@ public class Q00466_PlacingMySmallPower extends Quest
 					break;
 				}
 				qs.setState(State.CREATED);
+				// fallthrough
 			}
 			case State.CREATED:
 			{

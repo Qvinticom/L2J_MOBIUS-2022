@@ -245,7 +245,7 @@ public class Venom extends AbstractNpcAI
 			{
 				teleportTarget(player);
 				((Attackable) npc).stopHating(player);
-				if ((_targets != null) && (_targets.size() > 0))
+				if ((_targets != null) && !_targets.isEmpty())
 				{
 					for (PlayerInstance target : _targets)
 					{

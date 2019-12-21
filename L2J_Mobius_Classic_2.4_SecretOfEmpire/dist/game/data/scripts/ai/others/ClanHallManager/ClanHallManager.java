@@ -164,9 +164,9 @@ public class ClanHallManager extends AbstractNpcAI
 							final ResidenceFunction mpFunc = clanHall.getFunction(ResidenceFunctionType.MP_REGEN);
 							final ResidenceFunction xpFunc = clanHall.getFunction(ResidenceFunctionType.EXP_RESTORE);
 							htmltext = getHtm(player, "ClanHallManager-09.html");
-							htmltext = htmltext.replaceAll("%hpFunction%", hpFunc != null ? String.valueOf((int) hpFunc.getValue()) : "0");
-							htmltext = htmltext.replaceAll("%mpFunction%", mpFunc != null ? String.valueOf((int) mpFunc.getValue()) : "0");
-							htmltext = htmltext.replaceAll("%resFunction%", xpFunc != null ? String.valueOf((int) xpFunc.getValue()) : "0");
+							htmltext = htmltext.replace("%hpFunction%", hpFunc != null ? String.valueOf((int) hpFunc.getValue()) : "0");
+							htmltext = htmltext.replace("%mpFunction%", mpFunc != null ? String.valueOf((int) mpFunc.getValue()) : "0");
+							htmltext = htmltext.replace("%resFunction%", xpFunc != null ? String.valueOf((int) xpFunc.getValue()) : "0");
 						}
 						else
 						{
@@ -209,7 +209,7 @@ public class ClanHallManager extends AbstractNpcAI
 										if (!st.hasMoreTokens())
 										{
 											htmltext = getHtm(player, "ClanHallManager-funcBuffs_" + buffLevel + ".html");
-											htmltext = htmltext.replaceAll("%manaLeft%", Integer.toString((int) npc.getCurrentMp()));
+											htmltext = htmltext.replace("%manaLeft%", Integer.toString((int) npc.getCurrentMp()));
 										}
 										else
 										{
@@ -230,7 +230,7 @@ public class ClanHallManager extends AbstractNpcAI
 													castSkill(npc, player, skill);
 													htmltext = getHtm(player, "ClanHallManager-funcBuffsDone.html");
 												}
-												htmltext = htmltext.replaceAll("%manaLeft%", Integer.toString((int) npc.getCurrentMp()));
+												htmltext = htmltext.replace("%manaLeft%", Integer.toString((int) npc.getCurrentMp()));
 											}
 										}
 									}
@@ -271,8 +271,8 @@ public class ClanHallManager extends AbstractNpcAI
 				case "warehouse":
 				{
 					htmltext = getHtm(player, "ClanHallManager-10.html");
-					htmltext = htmltext.replaceAll("%lease%", String.valueOf(clanHall.getLease()));
-					htmltext = htmltext.replaceAll("%payDate%", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(clanHall.getNextPayment())));
+					htmltext = htmltext.replace("%lease%", String.valueOf(clanHall.getLease()));
+					htmltext = htmltext.replace("%payDate%", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(clanHall.getNextPayment())));
 					break;
 				}
 				case "manageFunctions":
@@ -322,7 +322,7 @@ public class ClanHallManager extends AbstractNpcAI
 										{
 											final int funcVal = (int) oldFunc.getTemplate().getValue();
 											htmltext = getHtm(player, "ClanHallManager-manageFuncAlreadySet.html");
-											htmltext = htmltext.replaceAll("%funcEffect%", "<fstring p1=\"" + (funcVal > 0 ? funcVal : oldFunc.getLevel()) + "\">" + (funcVal > 0 ? NpcStringId.S1.getId() : NpcStringId.STAGE_S1.getId()) + "</fstring>");
+											htmltext = htmltext.replace("%funcEffect%", "<fstring p1=\"" + (funcVal > 0 ? funcVal : oldFunc.getLevel()) + "\">" + (funcVal > 0 ? NpcStringId.S1.getId() : NpcStringId.STAGE_S1.getId()) + "</fstring>");
 										}
 										else if ((funcId >= 1) && (funcId <= 8))
 										{
@@ -330,9 +330,9 @@ public class ClanHallManager extends AbstractNpcAI
 											if (template != null)
 											{
 												htmltext = getHtm(player, "ClanHallManager-funcConfirm" + funcId + ".html");
-												htmltext = htmltext.replaceAll("%funcId%", String.valueOf(funcId));
-												htmltext = htmltext.replaceAll("%funcLv%", String.valueOf(funcLv));
-												htmltext = htmltext.replaceAll("%funcCost%", "<fstring p1=\"" + template.getCost().getCount() + "\" p2=\"" + template.getDurationAsDays() + "\">" + NpcStringId.FONT_COLOR_FFAABB_S1_FONT_ADENA_S2_DAY_S.getId() + "</fstring>");
+												htmltext = htmltext.replace("%funcId%", String.valueOf(funcId));
+												htmltext = htmltext.replace("%funcLv%", String.valueOf(funcLv));
+												htmltext = htmltext.replace("%funcCost%", "<fstring p1=\"" + template.getCost().getCount() + "\" p2=\"" + template.getDurationAsDays() + "\">" + NpcStringId.FONT_COLOR_FFAABB_S1_FONT_ADENA_S2_DAY_S.getId() + "</fstring>");
 											}
 										}
 									}
@@ -376,7 +376,7 @@ public class ClanHallManager extends AbstractNpcAI
 											if (act.equals("confirm"))
 											{
 												htmltext = getHtm(player, "ClanHallManager-removeFunctionConfirm.html");
-												htmltext = htmltext.replaceAll("%FUNC_TYPE%", funcType.toString());
+												htmltext = htmltext.replace("%FUNC_TYPE%", funcType.toString());
 											}
 											else if (act.equals("remove"))
 											{
@@ -437,7 +437,7 @@ public class ClanHallManager extends AbstractNpcAI
 			else
 			{
 				htmltext = getHtm(player, "ClanHallManager-02.html");
-				htmltext = htmltext.replaceAll("%costFailDayLeft%", Integer.toString((8 - clanHall.getCostFailDay())));
+				htmltext = htmltext.replace("%costFailDayLeft%", Integer.toString((8 - clanHall.getCostFailDay())));
 			}
 		}
 		else

@@ -21,6 +21,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Level;
 
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
@@ -410,7 +411,7 @@ public class Kamaloka extends AbstractInstance
 	 * @param index (0-18) index of the kamaloka in arrays
 	 * @return true if party allowed to enter
 	 */
-	private static final boolean checkPartyConditions(PlayerInstance player, int index)
+	private static boolean checkPartyConditions(PlayerInstance player, int index)
 	{
 		final Party party = player.getParty();
 		// player must be in party
@@ -461,16 +462,15 @@ public class Kamaloka extends AbstractInstance
 			instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(partyMember);
 			if (instanceTimes != null)
 			{
-				for (int id : instanceTimes.keySet())
+				for (Entry<Integer, Long> entry : instanceTimes.entrySet())
 				{
 					// find instance with same name (kamaloka or labyrinth)
-					// TODO: Zoey76: Don't use instance name, use other system.
-					if (!instanceName.equals(InstanceManager.getInstance().getInstanceName(id)))
+					if (!instanceName.equals(InstanceManager.getInstance().getInstanceName(entry.getKey())))
 					{
 						continue;
 					}
 					// if found instance still can't be reentered - exit
-					if (System.currentTimeMillis() < instanceTimes.get(id))
+					if (System.currentTimeMillis() < entry.getValue())
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
 						sm.addPcName(partyMember);
@@ -507,7 +507,8 @@ public class Kamaloka extends AbstractInstance
 		}
 		catch (ArrayIndexOutOfBoundsException e)
 		{
-			throw e;
+			LOGGER.warning("Problem with Kamaloka: " + e.getMessage());
+			return;
 		}
 		
 		// check for existing instances for this player
@@ -562,7 +563,6 @@ public class Kamaloka extends AbstractInstance
 			removeBuffs(partyMember);
 			partyMember.teleToLocation(TELEPORTS[index], world);
 		}
-		return;
 	}
 	
 	/**

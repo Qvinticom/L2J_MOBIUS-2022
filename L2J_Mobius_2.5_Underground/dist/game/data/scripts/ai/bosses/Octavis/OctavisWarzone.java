@@ -309,10 +309,7 @@ public class OctavisWarzone extends AbstractInstance
 					final PlayerInstance mostHated = ((Attackable) npc).getMostHated().getActingPlayer();
 					if ((mostHated != null) && (mostHated.calculateDistance3D(npc) < 5000))
 					{
-						World.getInstance().getVisibleObjectsInRange(npc, Attackable.class, 4000, obj -> CommonUtil.contains(BEASTS_MINIONS, obj.getId()) || CommonUtil.contains(GLADIATORS, obj.getId())).forEach(minion ->
-						{
-							addAttackPlayerDesire(minion, mostHated, 23);
-						});
+						World.getInstance().getVisibleObjectsInRange(npc, Attackable.class, 4000, obj -> CommonUtil.contains(BEASTS_MINIONS, obj.getId()) || CommonUtil.contains(GLADIATORS, obj.getId())).forEach(minion -> addAttackPlayerDesire(minion, mostHated, 23));
 					}
 					getTimers().addTimer("MINION_CALL", 5000 + (getRandom(5) * 1000), npc, null);
 					break;
@@ -523,12 +520,9 @@ public class OctavisWarzone extends AbstractInstance
 	public String onEnterZone(Creature creature, ZoneType zone)
 	{
 		final Instance world = creature.getInstanceWorld();
-		if (creature.isPlayer() && isInInstance(world))
+		if (creature.isPlayer() && isInInstance(world) && world.getParameters().getBoolean("TELEPORT_ACTIVE", false))
 		{
-			if (world.getParameters().getBoolean("TELEPORT_ACTIVE", false))
-			{
-				creature.teleToLocation(BATTLE_LOC);
-			}
+			creature.teleToLocation(BATTLE_LOC);
 		}
 		return super.onEnterZone(creature, zone);
 	}

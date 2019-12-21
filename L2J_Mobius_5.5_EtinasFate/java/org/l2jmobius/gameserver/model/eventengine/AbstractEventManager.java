@@ -42,10 +42,10 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout
 public abstract class AbstractEventManager<T extends AbstractEvent<?>>extends AbstractScript
 {
 	private String _name;
-	private volatile StatsSet _variables = StatsSet.EMPTY_STATSET;
-	private volatile Set<EventScheduler> _schedulers = Collections.emptySet();
-	private volatile Set<IConditionalEventScheduler> _conditionalSchedulers = Collections.emptySet();
-	private volatile Map<String, IEventDrop> _rewards = Collections.emptyMap();
+	private StatsSet _variables = StatsSet.EMPTY_STATSET;
+	private Set<EventScheduler> _schedulers = Collections.emptySet();
+	private Set<IConditionalEventScheduler> _conditionalSchedulers = Collections.emptySet();
+	private Map<String, IEventDrop> _rewards = Collections.emptyMap();
 	
 	private final Set<T> _events = ConcurrentHashMap.newKeySet();
 	private final Queue<PlayerInstance> _registeredPlayers = new ConcurrentLinkedDeque<>();

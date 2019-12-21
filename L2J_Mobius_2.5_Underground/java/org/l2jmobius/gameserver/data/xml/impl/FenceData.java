@@ -165,27 +165,20 @@ public class FenceData implements IXmlReader
 			{
 				return false;
 			}
-			if ((x > xMin) && (tx > xMin) && (x < xMax) && (tx < xMax))
+			if ((x > xMin) && (tx > xMin) && (x < xMax) && (tx < xMax) && (y > yMin) && (ty > yMin) && (y < yMax) && (ty < yMax))
 			{
-				if ((y > yMin) && (ty > yMin) && (y < yMax) && (ty < yMax))
-				{
-					return false;
-				}
+				return false;
 			}
-			
-			if (crossLinePart(xMin, yMin, xMax, yMin, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMax, yMin, xMax, yMax, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMax, yMax, xMin, yMax, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMin, yMax, xMin, yMin, x, y, tx, ty, xMin, yMin, xMax, yMax))
+			if ((crossLinePart(xMin, yMin, xMax, yMin, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMax, yMin, xMax, yMax, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMax, yMax, xMin, yMax, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMin, yMax, xMin, yMin, x, y, tx, ty, xMin, yMin, xMax, yMax)) && (z > (fence.getZ() - MAX_Z_DIFF)) && (z < (fence.getZ() + MAX_Z_DIFF)))
 			{
-				if ((z > (fence.getZ() - MAX_Z_DIFF)) && (z < (fence.getZ() + MAX_Z_DIFF)))
-				{
-					return true;
-				}
+				return true;
 			}
 			
 			return false;
 		};
 		
 		final WorldRegion region = World.getInstance().getRegion(x, y); // Should never be null.
-		return region == null ? false : _regions.getOrDefault(region, Collections.emptyList()).stream().anyMatch(filter);
+		return (region != null) && _regions.getOrDefault(region, Collections.emptyList()).stream().anyMatch(filter);
 	}
 	
 	private boolean crossLinePart(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4, double xMin, double yMin, double xMax, double yMax)

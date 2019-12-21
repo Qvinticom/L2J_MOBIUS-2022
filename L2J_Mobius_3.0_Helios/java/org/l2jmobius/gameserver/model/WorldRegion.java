@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.taskmanager.RandomAnimationTaskManager;
 public class WorldRegion
 {
 	/** Map containing visible objects in this world region. */
-	private volatile Map<Integer, WorldObject> _visibleObjects = new ConcurrentHashMap<>();
+	private final Map<Integer, WorldObject> _visibleObjects = new ConcurrentHashMap<>();
 	/** Map containing nearby regions forming this world region's effective area. */
 	private WorldRegion[] _surroundingRegions;
 	private final int _regionX;
@@ -208,13 +208,10 @@ public class WorldRegion
 		
 		_visibleObjects.put(object.getObjectId(), object);
 		
-		if (object.isPlayable())
+		// If this is the first player to enter the region, activate self and neighbors.
+		if (object.isPlayable() && !_active && !Config.GRIDS_ALWAYS_ON)
 		{
-			// If this is the first player to enter the region, activate self and neighbors.
-			if (!_active && !Config.GRIDS_ALWAYS_ON)
-			{
-				startActivation();
-			}
+			startActivation();
 		}
 	}
 	
@@ -235,12 +232,9 @@ public class WorldRegion
 		}
 		_visibleObjects.remove(object.getObjectId());
 		
-		if (object.isPlayable())
+		if (object.isPlayable() && areNeighborsEmpty() && !Config.GRIDS_ALWAYS_ON)
 		{
-			if (areNeighborsEmpty() && !Config.GRIDS_ALWAYS_ON)
-			{
-				startDeactivation();
-			}
+			startDeactivation();
 		}
 	}
 	

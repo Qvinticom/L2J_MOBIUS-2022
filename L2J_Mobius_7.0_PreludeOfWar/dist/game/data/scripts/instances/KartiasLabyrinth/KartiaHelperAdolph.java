@@ -103,13 +103,13 @@ public class KartiaHelperAdolph extends AbstractNpcAI
 		if ((instance != null) && event.equals("CHECK_ACTION"))
 		{
 			final StatsSet npcVars = npc.getVariables();
-			player = npcVars.getObject("PLAYER_OBJECT", PlayerInstance.class);
-			if (player != null)
+			final PlayerInstance plr = npcVars.getObject("PLAYER_OBJECT", PlayerInstance.class);
+			if (plr != null)
 			{
-				final double distance = npc.calculateDistance2D(player);
+				final double distance = npc.calculateDistance2D(plr);
 				if (distance > 300)
 				{
-					final Location loc = new Location(player.getX(), player.getY(), player.getZ() + 50);
+					final Location loc = new Location(plr.getX(), plr.getY(), plr.getZ() + 50);
 					final Location randLoc = new Location(loc.getX() + getRandom(-100, 100), loc.getY() + getRandom(-100, 100), loc.getZ());
 					if (distance > 600)
 					{

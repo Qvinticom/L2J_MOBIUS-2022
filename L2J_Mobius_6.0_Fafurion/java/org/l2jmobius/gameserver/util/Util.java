@@ -605,7 +605,7 @@ public class Util
 	 */
 	public static void fillMultiEditContent(PlayerInstance player, String text)
 	{
-		player.sendPacket(new ShowBoard(Arrays.asList("0", "0", "0", "0", "0", "0", player.getName(), Integer.toString(player.getObjectId()), player.getAccountName(), "9", " ", " ", text.replaceAll("<br>", Config.EOL), "0", "0", "0", "0")));
+		player.sendPacket(new ShowBoard(Arrays.asList("0", "0", "0", "0", "0", "0", player.getName(), Integer.toString(player.getObjectId()), player.getAccountName(), "9", " ", " ", text.replace("<br>", Config.EOL), "0", "0", "0", "0")));
 	}
 	
 	public static boolean isInsideRangeOfObjectId(WorldObject obj, int targetObjId, int radius)

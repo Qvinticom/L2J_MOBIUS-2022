@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.conditions;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -29,13 +29,13 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerHasClanHall extends Condition
 {
-	private final ArrayList<Integer> _clanHall;
+	private final List<Integer> _clanHall;
 	
 	/**
 	 * Instantiates a new condition player has clan hall.
 	 * @param clanHall the clan hall
 	 */
-	public ConditionPlayerHasClanHall(ArrayList<Integer> clanHall)
+	public ConditionPlayerHasClanHall(List<Integer> clanHall)
 	{
 		_clanHall = clanHall;
 	}

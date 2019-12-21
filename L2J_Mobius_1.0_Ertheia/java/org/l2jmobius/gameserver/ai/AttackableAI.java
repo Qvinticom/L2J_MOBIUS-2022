@@ -128,14 +128,10 @@ public class AttackableAI extends CreatureAI
 			return false;
 		}
 		
-		// Check if the target is a Playable
-		if (target.isPlayable())
+		// Check if the target is a Playable and if the AI isn't a Raid Boss, can See Silent Moving players and the target isn't in silent move mode
+		if (target.isPlayable() && !(me.isRaid()) && !(me.canSeeThroughSilentMove()) && ((Playable) target).isSilentMovingAffected())
 		{
-			// Check if the AI isn't a Raid Boss, can See Silent Moving players and the target isn't in silent move mode
-			if (!(me.isRaid()) && !(me.canSeeThroughSilentMove()) && ((Playable) target).isSilentMovingAffected())
-			{
-				return false;
-			}
+			return false;
 		}
 		
 		// Gets the player if there is any.
@@ -453,10 +449,7 @@ public class AttackableAI extends CreatureAI
 							}
 							if (npc instanceof GuardInstance)
 							{
-								World.getInstance().forEachVisibleObjectInRange(npc, GuardInstance.class, 500, guard ->
-								{
-									guard.addDamageHate(t, 0, 10);
-								});
+								World.getInstance().forEachVisibleObjectInRange(npc, GuardInstance.class, 500, guard -> guard.addDamageHate(t, 0, 10));
 							}
 						}
 					}
@@ -565,7 +558,6 @@ public class AttackableAI extends CreatureAI
 				
 				// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
 				moveTo(x1, y1, leader.getZ());
-				return;
 			}
 			else if (Rnd.get(RANDOM_WALK_RATE) == 0)
 			{
@@ -576,7 +568,6 @@ public class AttackableAI extends CreatureAI
 					{
 						setTarget(target);
 						npc.doCast(sk);
-						return;
 					}
 				}
 			}
@@ -696,22 +687,19 @@ public class AttackableAI extends CreatureAI
 					}
 					
 					// Check if the WorldObject is inside the Faction Range of the actor
-					if (called.hasAI())
+					if (called.hasAI() && (Math.abs(finalTarget.getZ() - called.getZ()) < 600) && npc.getAttackByList().stream().anyMatch(o -> o.get() == finalTarget) && ((called.getAI()._intention == CtrlIntention.AI_INTENTION_IDLE) || (called.getAI()._intention == CtrlIntention.AI_INTENTION_ACTIVE)))
 					{
-						if ((Math.abs(finalTarget.getZ() - called.getZ()) < 600) && npc.getAttackByList().stream().anyMatch(o -> o.get() == finalTarget) && ((called.getAI()._intention == CtrlIntention.AI_INTENTION_IDLE) || (called.getAI()._intention == CtrlIntention.AI_INTENTION_ACTIVE)))
+						if (finalTarget.isPlayable())
 						{
-							if (finalTarget.isPlayable())
-							{
-								// By default, when a faction member calls for help, attack the caller's attacker.
-								// Notify the AI with EVT_AGGRESSION
-								called.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, finalTarget, 1);
-								EventDispatcher.getInstance().notifyEventAsync(new OnAttackableFactionCall(called, getActiveChar(), finalTarget.getActingPlayer(), finalTarget.isSummon()), called);
-							}
-							else if (called.isAttackable() && (called.getAI()._intention != CtrlIntention.AI_INTENTION_ATTACK))
-							{
-								((Attackable) called).addDamageHate(finalTarget, 0, npc.getHating(finalTarget));
-								called.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, finalTarget);
-							}
+							// By default, when a faction member calls for help, attack the caller's attacker.
+							// Notify the AI with EVT_AGGRESSION
+							called.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, finalTarget, 1);
+							EventDispatcher.getInstance().notifyEventAsync(new OnAttackableFactionCall(called, getActiveChar(), finalTarget.getActingPlayer(), finalTarget.isSummon()), called);
+						}
+						else if (called.isAttackable() && (called.getAI()._intention != CtrlIntention.AI_INTENTION_ATTACK))
+						{
+							((Attackable) called).addDamageHate(finalTarget, 0, npc.getHating(finalTarget));
+							called.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, finalTarget);
 						}
 					}
 				});
@@ -782,42 +770,39 @@ public class AttackableAI extends CreatureAI
 			}
 		}
 		// Dodge if its needed
-		if (!npc.isMovementDisabled() && (npc.getTemplate().getDodge() > 0))
+		if (!npc.isMovementDisabled() && (npc.getTemplate().getDodge() > 0) && (Rnd.get(100) <= npc.getTemplate().getDodge()))
 		{
-			if (Rnd.get(100) <= npc.getTemplate().getDodge())
+			// Micht: kepping this one otherwise we should do 2 sqrt
+			final double distance2 = npc.calculateDistanceSq2D(target);
+			if (Math.sqrt(distance2) <= (60 + combinedCollision))
 			{
-				// Micht: kepping this one otherwise we should do 2 sqrt
-				final double distance2 = npc.calculateDistanceSq2D(target);
-				if (Math.sqrt(distance2) <= (60 + combinedCollision))
+				int posX = npc.getX();
+				int posY = npc.getY();
+				final int posZ = npc.getZ() + 30;
+				
+				if (target.getX() < posX)
 				{
-					int posX = npc.getX();
-					int posY = npc.getY();
-					final int posZ = npc.getZ() + 30;
-					
-					if (target.getX() < posX)
-					{
-						posX += 300;
-					}
-					else
-					{
-						posX -= 300;
-					}
-					
-					if (target.getY() < posY)
-					{
-						posY += 300;
-					}
-					else
-					{
-						posY -= 300;
-					}
-					
-					if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), posX, posY, posZ, npc.getInstanceWorld()))
-					{
-						setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(posX, posY, posZ, 0));
-					}
-					return;
+					posX += 300;
 				}
+				else
+				{
+					posX -= 300;
+				}
+				
+				if (target.getY() < posY)
+				{
+					posY += 300;
+				}
+				else
+				{
+					posY -= 300;
+				}
+				
+				if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), posX, posY, posZ, npc.getInstanceWorld()))
+				{
+					setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(posX, posY, posZ, 0));
+				}
+				return;
 			}
 		}
 		

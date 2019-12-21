@@ -77,7 +77,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 						final Npc npc = (Npc) obj;
 						if ((npc.getLocation().getX() > topLeftX) && (npc.getLocation().getX() < bottomRightX) && (npc.getLocation().getY() > topLeftY) && (npc.getLocation().getY() < bottomRightY) && npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK))
 						{
-							if ((npc.getHtmlPath(npc.getId(), 0, null) == "data/html/npcdefault.htm") //
+							if ((npc.getHtmlPath(npc.getId(), 0, null).equals("data/html/npcdefault.htm"))//
 								|| ((obj instanceof FishermanInstance) && (HtmCache.getInstance().getHtm(null, "data/html/fisherman/" + npc.getId() + ".htm") == null)) //
 								|| ((obj instanceof WarehouseInstance) && (HtmCache.getInstance().getHtm(null, "data/html/warehouse/" + npc.getId() + ".htm") == null)) //
 								|| (((obj instanceof MerchantInstance) && !(obj instanceof FishermanInstance)) && (HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm") == null)) //
@@ -112,7 +112,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 						final Npc npc = (Npc) obj;
 						if (npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK))
 						{
-							if ((npc.getHtmlPath(npc.getId(), 0, null) == "data/html/npcdefault.htm") //
+							if ((npc.getHtmlPath(npc.getId(), 0, null).equals("data/html/npcdefault.htm")) //
 								|| ((obj instanceof FishermanInstance) && (HtmCache.getInstance().getHtm(null, "data/html/fisherman/" + npc.getId() + ".htm") == null)) //
 								|| ((obj instanceof WarehouseInstance) && (HtmCache.getInstance().getHtm(null, "data/html/warehouse/" + npc.getId() + ".htm") == null)) //
 								|| (((obj instanceof MerchantInstance) && !(obj instanceof FishermanInstance)) && (HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm") == null)) //
@@ -144,7 +144,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 						final Npc npc = (Npc) obj;
 						if (npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK))
 						{
-							if ((npc.getHtmlPath(npc.getId(), 0, null) == "data/html/npcdefault.htm") //
+							if ((npc.getHtmlPath(npc.getId(), 0, null).equals("data/html/npcdefault.htm")) //
 								|| ((obj instanceof FishermanInstance) && (HtmCache.getInstance().getHtm(null, "data/html/fisherman/" + npc.getId() + ".htm") == null)) //
 								|| ((obj instanceof WarehouseInstance) && (HtmCache.getInstance().getHtm(null, "data/html/warehouse/" + npc.getId() + ".htm") == null)) //
 								|| (((obj instanceof MerchantInstance) && !(obj instanceof FishermanInstance)) && (HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm") == null)) //

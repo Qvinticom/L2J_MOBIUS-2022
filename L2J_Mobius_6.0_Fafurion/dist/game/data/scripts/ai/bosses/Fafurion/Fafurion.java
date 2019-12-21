@@ -52,7 +52,6 @@ public class Fafurion extends AbstractNpcAI
 	private static final int DEAD = 3;
 	// Misc
 	private static final int RAID_DURATION = 5; // hours
-	private static Npc bossInstance;
 	
 	private Fafurion()
 	{
@@ -109,7 +108,7 @@ public class Fafurion extends AbstractNpcAI
 				if (GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID) == WAITING)
 				{
 					GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, FIGHTING);
-					bossInstance = addSpawn(FAFURION_FINAL_FORM, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+					final Npc bossInstance = addSpawn(FAFURION_FINAL_FORM, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
 					startQuestTimer("resetRaid", RAID_DURATION * 60 * 60 * 1000, bossInstance, null);
 				}
 				break;

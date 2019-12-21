@@ -385,7 +385,7 @@ public class ProcessTask extends Task
 		{
 			return "null";
 		}
-		StringBuffer b = new StringBuffer();
+		StringBuilder b = new StringBuilder();
 		b.append('[');
 		for (int i = 0; i < arr.length; i++)
 		{
@@ -405,7 +405,7 @@ public class ProcessTask extends Task
 	@Override
 	public String toString()
 	{
-		StringBuffer b = new StringBuffer();
+		StringBuilder b = new StringBuilder();
 		b.append("Task[");
 		b.append("cmd=");
 		b.append(listStrings(command));

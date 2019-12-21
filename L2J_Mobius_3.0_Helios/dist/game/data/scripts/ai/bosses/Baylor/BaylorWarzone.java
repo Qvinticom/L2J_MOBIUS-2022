@@ -336,10 +336,7 @@ public class BaylorWarzone extends AbstractInstance
 	private void broadcastSocialAction(Creature creature, int actionId)
 	{
 		final SocialAction action = new SocialAction(creature.getObjectId(), actionId);
-		World.getInstance().forEachVisibleObject(creature, PlayerInstance.class, player ->
-		{
-			player.sendPacket(action);
-		});
+		World.getInstance().forEachVisibleObject(creature, PlayerInstance.class, player -> player.sendPacket(action));
 	}
 	
 	public static void main(String[] args)

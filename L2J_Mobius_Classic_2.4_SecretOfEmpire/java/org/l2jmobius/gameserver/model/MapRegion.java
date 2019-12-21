@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
@@ -41,7 +41,7 @@ public class MapRegion
 	private List<Location> _chaoticSpawnLocs = null;
 	private List<Location> _banishSpawnLocs = null;
 	
-	private final Map<Race, String> _bannedRace = new HashMap<>();
+	private final Map<Race, String> _bannedRace = new EnumMap<>(Race.class);
 	
 	public MapRegion(String name, String town, int locId, int bbs)
 	{

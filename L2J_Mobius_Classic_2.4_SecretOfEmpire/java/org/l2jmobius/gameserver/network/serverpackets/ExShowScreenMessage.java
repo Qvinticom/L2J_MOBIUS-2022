@@ -288,7 +288,7 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 						packet.writeD(_time);
 						packet.writeD(_fade ? 0x01 : 0x00);
 						packet.writeD(-1);
-						packet.writeS(sml.getLocalisation(_parameters != null ? _parameters : Collections.EMPTY_LIST));
+						packet.writeS(sml.getLocalisation(_parameters != null ? _parameters : Collections.emptyList()));
 						return true;
 					}
 				}
@@ -312,7 +312,7 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 						packet.writeD(_time);
 						packet.writeD(_fade ? 0x01 : 0x00);
 						packet.writeD(-1);
-						packet.writeS(nsl.getLocalisation(_parameters != null ? _parameters : Collections.EMPTY_LIST));
+						packet.writeS(nsl.getLocalisation(_parameters != null ? _parameters : Collections.emptyList()));
 						return true;
 					}
 				}

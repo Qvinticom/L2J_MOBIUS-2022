@@ -25,6 +25,7 @@ import java.sql.Statement;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -133,6 +134,7 @@ public class BotReportTable
 			}
 			catch (Exception e)
 			{
+				// Ignore.
 			}
 			
 			while (rset.next())
@@ -348,11 +350,12 @@ public class BotReportTable
 		punishBot(bot, _punishments.get(rcd.getReportCount()));
 		
 		// Range punishments
-		for (int key : _punishments.keySet())
+		for (Entry<Integer, PunishHolder> entry : _punishments.entrySet())
 		{
+			final int key = entry.getKey();
 			if ((key < 0) && (Math.abs(key) <= rcd.getReportCount()))
 			{
-				punishBot(bot, _punishments.get(key));
+				punishBot(bot, entry.getValue());
 			}
 		}
 	}
@@ -590,7 +593,7 @@ public class BotReportTable
 				}
 				catch (Exception e)
 				{
-					e.printStackTrace();
+					LOGGER.warning("Problem with BotReportTable: " + e.getMessage());
 				}
 				
 				addPunishment(reportCount, skillId, skillLevel, sysMessage);
@@ -612,10 +615,6 @@ public class BotReportTable
 	
 	private class ResetPointTask implements Runnable
 	{
-		public ResetPointTask()
-		{
-		}
-		
 		@Override
 		public void run()
 		{

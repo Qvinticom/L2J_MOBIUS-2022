@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
 import java.util.Collections;
+import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -246,8 +247,8 @@ public class SkillData implements IXmlReader
 						parseAttributes(attributes, "", generalSkillInfo);
 						
 						final Map<String, Map<Integer, Map<Integer, Object>>> variableValues = new HashMap<>();
-						final Map<EffectScope, List<NamedParamInfo>> effectParamInfo = new HashMap<>();
-						final Map<SkillConditionScope, List<NamedParamInfo>> conditionParamInfo = new HashMap<>();
+						final Map<EffectScope, List<NamedParamInfo>> effectParamInfo = new EnumMap<>(EffectScope.class);
+						final Map<SkillConditionScope, List<NamedParamInfo>> conditionParamInfo = new EnumMap<>(SkillConditionScope.class);
 						for (Node skillNode = listNode.getFirstChild(); skillNode != null; skillNode = skillNode.getNextSibling())
 						{
 							final String skillNodeName = skillNode.getNodeName();
@@ -330,109 +331,103 @@ public class SkillData implements IXmlReader
 							});
 						});
 						
-						Stream.concat(effectParamInfo.values().stream(), conditionParamInfo.values().stream()).forEach(namedParamInfos ->
+						Stream.concat(effectParamInfo.values().stream(), conditionParamInfo.values().stream()).forEach(namedParamInfos -> namedParamInfos.forEach(namedParamInfo ->
 						{
-							namedParamInfos.forEach(namedParamInfo ->
+							namedParamInfo.getInfo().forEach((level, subLevelMap) ->
 							{
-								namedParamInfo.getInfo().forEach((level, subLevelMap) ->
+								if (level == -1)
 								{
-									if (level == -1)
+									return;
+								}
+								subLevelMap.forEach((subLevel, statsSet) ->
+								{
+									if (subLevel == -1)
 									{
 										return;
 									}
-									subLevelMap.forEach((subLevel, statsSet) ->
-									{
-										if (subLevel == -1)
-										{
-											return;
-										}
-										levels.computeIfAbsent(level, k -> new HashSet<>()).add(subLevel);
-									});
+									levels.computeIfAbsent(level, k -> new HashSet<>()).add(subLevel);
 								});
-								
-								if ((namedParamInfo.getFromLevel() != null) && (namedParamInfo.getToLevel() != null))
-								{
-									for (int i = namedParamInfo.getFromLevel(); i <= namedParamInfo.getToLevel(); i++)
-									{
-										if ((namedParamInfo.getFromSubLevel() != null) && (namedParamInfo.getToSubLevel() != null))
-										{
-											for (int j = namedParamInfo.getFromSubLevel(); j <= namedParamInfo.getToSubLevel(); j++)
-											{
-												
-												levels.computeIfAbsent(i, k -> new HashSet<>()).add(j);
-											}
-										}
-										else
-										{
-											levels.computeIfAbsent(i, k -> new HashSet<>()).add(0);
-										}
-									}
-								}
 							});
-						});
-						
-						levels.forEach((level, subLevels) ->
-						{
-							subLevels.forEach(subLevel ->
+							
+							if ((namedParamInfo.getFromLevel() != null) && (namedParamInfo.getToLevel() != null))
 							{
-								final StatsSet statsSet = Optional.ofNullable(skillInfo.getOrDefault(level, Collections.emptyMap()).get(subLevel)).orElseGet(StatsSet::new);
-								skillInfo.getOrDefault(level, Collections.emptyMap()).getOrDefault(-1, StatsSet.EMPTY_STATSET).getSet().forEach(statsSet.getSet()::putIfAbsent);
-								skillInfo.getOrDefault(-1, Collections.emptyMap()).getOrDefault(-1, StatsSet.EMPTY_STATSET).getSet().forEach(statsSet.getSet()::putIfAbsent);
-								statsSet.set(".level", level);
-								statsSet.set(".subLevel", subLevel);
-								final Skill skill = new Skill(statsSet);
-								forEachNamedParamInfoParam(effectParamInfo, level, subLevel, ((effectScope, params) ->
+								for (int i = namedParamInfo.getFromLevel(); i <= namedParamInfo.getToLevel(); i++)
 								{
-									final String effectName = params.getString(".name");
-									params.remove(".name");
-									try
+									if ((namedParamInfo.getFromSubLevel() != null) && (namedParamInfo.getToSubLevel() != null))
 									{
-										final Function<StatsSet, AbstractEffect> effectFunction = EffectHandler.getInstance().getHandlerFactory(effectName);
-										if (effectFunction != null)
+										for (int j = namedParamInfo.getFromSubLevel(); j <= namedParamInfo.getToSubLevel(); j++)
 										{
-											skill.addEffect(effectScope, effectFunction.apply(params));
-										}
-										else
-										{
-											LOGGER.warning(getClass().getSimpleName() + ": Missing effect for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + effectScope + "] Effect Name[" + effectName + "]");
+											
+											levels.computeIfAbsent(i, k -> new HashSet<>()).add(j);
 										}
 									}
-									catch (Exception e)
+									else
 									{
-										LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading effect for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + effectScope + "] Effect Name[" + effectName + "]", e);
+										levels.computeIfAbsent(i, k -> new HashSet<>()).add(0);
 									}
-								}));
-								
-								forEachNamedParamInfoParam(conditionParamInfo, level, subLevel, ((skillConditionScope, params) ->
-								{
-									final String conditionName = params.getString(".name");
-									params.remove(".name");
-									try
-									{
-										final Function<StatsSet, ISkillCondition> conditionFunction = SkillConditionHandler.getInstance().getHandlerFactory(conditionName);
-										if (conditionFunction != null)
-										{
-											skill.addCondition(skillConditionScope, conditionFunction.apply(params));
-										}
-										else
-										{
-											LOGGER.warning(getClass().getSimpleName() + ": Missing condition for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + skillConditionScope + "] Effect Name[" + conditionName + "]");
-										}
-									}
-									catch (Exception e)
-									{
-										LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading condition for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Condition Scope[" + skillConditionScope + "] Condition Name[" + conditionName + "]", e);
-									}
-								}));
-								
-								_skills.put(getSkillHashCode(skill), skill);
-								_skillsMaxLevel.merge(skill.getId(), skill.getLevel(), Integer::max);
-								if ((skill.getSubLevel() % 1000) == 1)
-								{
-									EnchantSkillGroupsData.getInstance().addRouteForSkill(skill.getId(), skill.getLevel(), skill.getSubLevel());
 								}
-							});
-						});
+							}
+						}));
+						
+						levels.forEach((level, subLevels) -> subLevels.forEach(subLevel ->
+						{
+							final StatsSet statsSet = Optional.ofNullable(skillInfo.getOrDefault(level, Collections.emptyMap()).get(subLevel)).orElseGet(StatsSet::new);
+							skillInfo.getOrDefault(level, Collections.emptyMap()).getOrDefault(-1, StatsSet.EMPTY_STATSET).getSet().forEach(statsSet.getSet()::putIfAbsent);
+							skillInfo.getOrDefault(-1, Collections.emptyMap()).getOrDefault(-1, StatsSet.EMPTY_STATSET).getSet().forEach(statsSet.getSet()::putIfAbsent);
+							statsSet.set(".level", level);
+							statsSet.set(".subLevel", subLevel);
+							final Skill skill = new Skill(statsSet);
+							forEachNamedParamInfoParam(effectParamInfo, level, subLevel, ((effectScope, params) ->
+							{
+								final String effectName = params.getString(".name");
+								params.remove(".name");
+								try
+								{
+									final Function<StatsSet, AbstractEffect> effectFunction = EffectHandler.getInstance().getHandlerFactory(effectName);
+									if (effectFunction != null)
+									{
+										skill.addEffect(effectScope, effectFunction.apply(params));
+									}
+									else
+									{
+										LOGGER.warning(getClass().getSimpleName() + ": Missing effect for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + effectScope + "] Effect Name[" + effectName + "]");
+									}
+								}
+								catch (Exception e)
+								{
+									LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading effect for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + effectScope + "] Effect Name[" + effectName + "]", e);
+								}
+							}));
+							
+							forEachNamedParamInfoParam(conditionParamInfo, level, subLevel, ((skillConditionScope, params) ->
+							{
+								final String conditionName = params.getString(".name");
+								params.remove(".name");
+								try
+								{
+									final Function<StatsSet, ISkillCondition> conditionFunction = SkillConditionHandler.getInstance().getHandlerFactory(conditionName);
+									if (conditionFunction != null)
+									{
+										skill.addCondition(skillConditionScope, conditionFunction.apply(params));
+									}
+									else
+									{
+										LOGGER.warning(getClass().getSimpleName() + ": Missing condition for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + skillConditionScope + "] Effect Name[" + conditionName + "]");
+									}
+								}
+								catch (Exception e)
+								{
+									LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading condition for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Condition Scope[" + skillConditionScope + "] Condition Name[" + conditionName + "]", e);
+								}
+							}));
+							
+							_skills.put(getSkillHashCode(skill), skill);
+							_skillsMaxLevel.merge(skill.getId(), skill.getLevel(), Integer::max);
+							if ((skill.getSubLevel() % 1000) == 1)
+							{
+								EnchantSkillGroupsData.getInstance().addRouteForSkill(skill.getId(), skill.getLevel(), skill.getSubLevel());
+							}
+						}));
 					}
 				}
 			}
@@ -441,23 +436,18 @@ public class SkillData implements IXmlReader
 	
 	private <T> void forEachNamedParamInfoParam(Map<T, List<NamedParamInfo>> paramInfo, int level, int subLevel, BiConsumer<T, StatsSet> consumer)
 	{
-		paramInfo.forEach((scope, namedParamInfos) ->
+		paramInfo.forEach((scope, namedParamInfos) -> namedParamInfos.forEach(namedParamInfo ->
 		{
-			namedParamInfos.forEach(namedParamInfo ->
+			if ((((namedParamInfo.getFromLevel() == null) && (namedParamInfo.getToLevel() == null)) || ((namedParamInfo.getFromLevel() <= level) && (namedParamInfo.getToLevel() >= level))) //
+				&& (((namedParamInfo.getFromSubLevel() == null) && (namedParamInfo.getToSubLevel() == null)) || ((namedParamInfo.getFromSubLevel() <= subLevel) && (namedParamInfo.getToSubLevel() >= subLevel))))
 			{
-				if (((namedParamInfo.getFromLevel() == null) && (namedParamInfo.getToLevel() == null)) || ((namedParamInfo.getFromLevel() <= level) && (namedParamInfo.getToLevel() >= level)))
-				{
-					if (((namedParamInfo.getFromSubLevel() == null) && (namedParamInfo.getToSubLevel() == null)) || ((namedParamInfo.getFromSubLevel() <= subLevel) && (namedParamInfo.getToSubLevel() >= subLevel)))
-					{
-						final StatsSet params = Optional.ofNullable(namedParamInfo.getInfo().getOrDefault(level, Collections.emptyMap()).get(subLevel)).orElseGet(StatsSet::new);
-						namedParamInfo.getInfo().getOrDefault(level, Collections.emptyMap()).getOrDefault(-1, StatsSet.EMPTY_STATSET).getSet().forEach(params.getSet()::putIfAbsent);
-						namedParamInfo.getInfo().getOrDefault(-1, Collections.emptyMap()).getOrDefault(-1, StatsSet.EMPTY_STATSET).getSet().forEach(params.getSet()::putIfAbsent);
-						params.set(".name", namedParamInfo.getName());
-						consumer.accept(scope, params);
-					}
-				}
-			});
-		});
+				final StatsSet params = Optional.ofNullable(namedParamInfo.getInfo().getOrDefault(level, Collections.emptyMap()).get(subLevel)).orElseGet(StatsSet::new);
+				namedParamInfo.getInfo().getOrDefault(level, Collections.emptyMap()).getOrDefault(-1, StatsSet.EMPTY_STATSET).getSet().forEach(params.getSet()::putIfAbsent);
+				namedParamInfo.getInfo().getOrDefault(-1, Collections.emptyMap()).getOrDefault(-1, StatsSet.EMPTY_STATSET).getSet().forEach(params.getSet()::putIfAbsent);
+				params.set(".name", namedParamInfo.getName());
+				consumer.accept(scope, params);
+			}
+		}));
 	}
 	
 	private NamedParamInfo parseNamedParamInfo(Node node, Map<String, Map<Integer, Map<Integer, Object>>> variableValues)
@@ -502,13 +492,7 @@ public class SkillData implements IXmlReader
 			}
 		}
 		
-		values.forEach((level, subLevelMap) ->
-		{
-			subLevelMap.forEach((subLevel, value) ->
-			{
-				info.computeIfAbsent(level, k -> new HashMap<>()).computeIfAbsent(subLevel, k -> new StatsSet()).set(node.getNodeName(), value);
-			});
-		});
+		values.forEach((level, subLevelMap) -> subLevelMap.forEach((subLevel, value) -> info.computeIfAbsent(level, k -> new HashMap<>()).computeIfAbsent(subLevel, k -> new StatsSet()).set(node.getNodeName(), value)));
 	}
 	
 	private Map<Integer, Map<Integer, Object>> parseValues(Node node)
@@ -613,6 +597,7 @@ public class SkillData implements IXmlReader
 					{
 						break;
 					}
+					// fallthrough
 				}
 				default:
 				{

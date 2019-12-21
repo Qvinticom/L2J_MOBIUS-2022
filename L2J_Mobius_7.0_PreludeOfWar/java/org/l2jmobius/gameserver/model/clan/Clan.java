@@ -150,7 +150,7 @@ public class Clan implements IIdentifiable, INamable
 	
 	private final Collection<ScheduledFuture<?>> masterySkillTasks = ConcurrentHashMap.newKeySet();
 	
-	private volatile ClanVariables _vars;
+	private ClanVariables _vars;
 	
 	/**
 	 * Called if a clan is referenced only by id. In this case all other data needs to be fetched from db
@@ -166,46 +166,31 @@ public class Clan implements IIdentifiable, INamable
 		final int masteryTime19538 = getMasterySkillRemainingTime(19538);
 		if (masteryTime19538 > 0)
 		{
-			final ScheduledFuture<?> task = ThreadPool.schedule(() ->
-			{
-				removeMasterySkill(19538);
-			}, masteryTime19538);
+			final ScheduledFuture<?> task = ThreadPool.schedule(() -> removeMasterySkill(19538), masteryTime19538);
 			masterySkillTasks.add(task);
 		}
 		final int masteryTime19539 = getMasterySkillRemainingTime(19539);
 		if (masteryTime19539 > 0)
 		{
-			final ScheduledFuture<?> task = ThreadPool.schedule(() ->
-			{
-				removeMasterySkill(19539);
-			}, masteryTime19539);
+			final ScheduledFuture<?> task = ThreadPool.schedule(() -> removeMasterySkill(19539), masteryTime19539);
 			masterySkillTasks.add(task);
 		}
 		final int masteryTime19540 = getMasterySkillRemainingTime(19540);
 		if (masteryTime19540 > 0)
 		{
-			final ScheduledFuture<?> task = ThreadPool.schedule(() ->
-			{
-				removeMasterySkill(19540);
-			}, masteryTime19540);
+			final ScheduledFuture<?> task = ThreadPool.schedule(() -> removeMasterySkill(19540), masteryTime19540);
 			masterySkillTasks.add(task);
 		}
 		final int masteryTime19541 = getMasterySkillRemainingTime(19541);
 		if (masteryTime19541 > 0)
 		{
-			final ScheduledFuture<?> task = ThreadPool.schedule(() ->
-			{
-				removeMasterySkill(19541);
-			}, masteryTime19541);
+			final ScheduledFuture<?> task = ThreadPool.schedule(() -> removeMasterySkill(19541), masteryTime19541);
 			masterySkillTasks.add(task);
 		}
 		final int masteryTime19542 = getMasterySkillRemainingTime(19542);
 		if (masteryTime19542 > 0)
 		{
-			final ScheduledFuture<?> task = ThreadPool.schedule(() ->
-			{
-				removeMasterySkill(19542);
-			}, masteryTime19542);
+			final ScheduledFuture<?> task = ThreadPool.schedule(() -> removeMasterySkill(19542), masteryTime19542);
 			masterySkillTasks.add(task);
 		}
 	}
@@ -1214,11 +1199,6 @@ public class Clan implements IIdentifiable, INamable
 	 */
 	public Skill[] getAllSkills()
 	{
-		if (_skills == null)
-		{
-			return new Skill[0];
-		}
-		
 		return _skills.values().toArray(new Skill[_skills.values().size()]);
 	}
 	
@@ -1355,12 +1335,9 @@ public class Clan implements IIdentifiable, INamable
 			{
 				try
 				{
-					if ((temp != null) && temp.isOnline())
+					if ((temp != null) && temp.isOnline() && (skill.getMinPledgeClass() <= temp.getPlayerInstance().getPledgeClass()))
 					{
-						if (skill.getMinPledgeClass() <= temp.getPlayerInstance().getPledgeClass())
-						{
-							temp.getPlayerInstance().addSkill(skill, false); // Skill is not saved to player DB
-						}
+						temp.getPlayerInstance().addSkill(skill, false); // Skill is not saved to player DB
 					}
 				}
 				catch (NullPointerException e)
@@ -1754,7 +1731,7 @@ public class Clan implements IIdentifiable, INamable
 	 */
 	public SubPledge getSubPledge(int pledgeType)
 	{
-		return _subPledges == null ? null : _subPledges.get(pledgeType);
+		return _subPledges.get(pledgeType);
 	}
 	
 	/**
@@ -1764,11 +1741,6 @@ public class Clan implements IIdentifiable, INamable
 	 */
 	public SubPledge getSubPledge(String pledgeName)
 	{
-		if (_subPledges == null)
-		{
-			return null;
-		}
-		
 		for (SubPledge sp : _subPledges.values())
 		{
 			if (sp.getName().equalsIgnoreCase(pledgeName))
@@ -1785,11 +1757,6 @@ public class Clan implements IIdentifiable, INamable
 	 */
 	public SubPledge[] getAllSubPledges()
 	{
-		if (_subPledges == null)
-		{
-			return new SubPledge[0];
-		}
-		
 		return _subPledges.values().toArray(new SubPledge[_subPledges.values().size()]);
 	}
 	
@@ -1910,16 +1877,10 @@ public class Clan implements IIdentifiable, INamable
 			
 			for (ClanMember cm : _members.values())
 			{
-				if (cm.isOnline())
+				if (cm.isOnline() && (cm.getPowerGrade() == rank) && (cm.getPlayerInstance() != null))
 				{
-					if (cm.getPowerGrade() == rank)
-					{
-						if (cm.getPlayerInstance() != null)
-						{
-							cm.getPlayerInstance().getClanPrivileges().setBitmask(privs);
-							cm.getPlayerInstance().sendPacket(new UserInfo(cm.getPlayerInstance()));
-						}
-					}
+					cm.getPlayerInstance().getClanPrivileges().setBitmask(privs);
+					cm.getPlayerInstance().sendPacket(new UserInfo(cm.getPlayerInstance()));
 				}
 			}
 			broadcastClanStatus();
@@ -1950,7 +1911,7 @@ public class Clan implements IIdentifiable, INamable
 	 */
 	public RankPrivs[] getAllRankPrivs()
 	{
-		return _privs == null ? new RankPrivs[0] : _privs.values().toArray(new RankPrivs[_privs.values().size()]);
+		return _privs.values().toArray(new RankPrivs[_privs.values().size()]);
 	}
 	
 	public int getLeaderSubPledge(int leaderId)
@@ -2142,13 +2103,10 @@ public class Clan implements IIdentifiable, INamable
 			return false;
 		}
 		final Clan leaderClan = player.getClan();
-		if (leaderClan.getAllyPenaltyExpiryTime() > System.currentTimeMillis())
+		if ((leaderClan.getAllyPenaltyExpiryTime() > System.currentTimeMillis()) && (leaderClan.getAllyPenaltyType() == PENALTY_TYPE_DISMISS_CLAN))
 		{
-			if (leaderClan.getAllyPenaltyType() == PENALTY_TYPE_DISMISS_CLAN)
-			{
-				player.sendPacket(SystemMessageId.YOU_MAY_NOT_ACCEPT_ANY_CLAN_WITHIN_A_DAY_AFTER_EXPELLING_ANOTHER_CLAN);
-				return false;
-			}
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_ACCEPT_ANY_CLAN_WITHIN_A_DAY_AFTER_EXPELLING_ANOTHER_CLAN);
+			return false;
 		}
 		if (target == null)
 		{
@@ -2744,10 +2702,7 @@ public class Clan implements IIdentifiable, INamable
 	public void addMasterySkill(int id)
 	{
 		getVariables().set(ClanVariables.CLAN_MASTERY_SKILL_TIME + id, System.currentTimeMillis() + 1296000000);
-		final ScheduledFuture<?> task = ThreadPool.schedule(() ->
-		{
-			removeMasterySkill(id);
-		}, 1296000000); // 1296000000 = 15 days
+		final ScheduledFuture<?> task = ThreadPool.schedule(() -> removeMasterySkill(id), 1296000000); // 1296000000 = 15 days
 		masterySkillTasks.add(task);
 		addNewSkill(SkillData.getInstance().getSkill(id, 1));
 	}

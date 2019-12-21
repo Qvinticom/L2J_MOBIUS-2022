@@ -57,10 +57,7 @@ public class CommandChannelMatchingRoom extends MatchingRoom
 	protected void notifyNewMember(PlayerInstance player)
 	{
 		// Update others player
-		getMembers().stream().filter(p -> p != player).forEach(p ->
-		{
-			p.sendPacket(new ExManageMpccRoomMember(p, this, ExManagePartyRoomMemberType.ADD_MEMBER));
-		});
+		getMembers().stream().filter(p -> p != player).forEach(p -> p.sendPacket(new ExManageMpccRoomMember(p, this, ExManagePartyRoomMemberType.ADD_MEMBER)));
 		
 		// Send SystemMessage to others player
 		final SystemMessage sm = new SystemMessage(SystemMessageId.C1_ENTERED_THE_COMMAND_CHANNEL_MATCHING_ROOM);

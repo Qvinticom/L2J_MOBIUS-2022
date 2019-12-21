@@ -63,14 +63,14 @@ public class ZoneNPoly extends ZoneForm
 	@Override
 	public double getDistanceToZone(int x, int y)
 	{
-		final int[] _x = _p.xpoints;
-		final int[] _y = _p.ypoints;
+		final int[] xPoints = _p.xpoints;
+		final int[] yPoints = _p.ypoints;
 		double test;
-		double shortestDist = Math.pow(_x[0] - x, 2) + Math.pow(_y[0] - y, 2);
+		double shortestDist = Math.pow(xPoints[0] - x, 2) + Math.pow(yPoints[0] - y, 2);
 		
 		for (int i = 1; i < _p.npoints; i++)
 		{
-			test = Math.pow(_x[i] - x, 2) + Math.pow(_y[i] - y, 2);
+			test = Math.pow(xPoints[i] - x, 2) + Math.pow(yPoints[i] - y, 2);
 			if (test < shortestDist)
 			{
 				shortestDist = test;
@@ -112,19 +112,19 @@ public class ZoneNPoly extends ZoneForm
 	@Override
 	public Location getRandomPoint()
 	{
-		final int _minX = _p.getBounds().x;
-		final int _maxX = _p.getBounds().x + _p.getBounds().width;
-		final int _minY = _p.getBounds().y;
-		final int _maxY = _p.getBounds().y + _p.getBounds().height;
+		final int minX = _p.getBounds().x;
+		final int maxX = _p.getBounds().x + _p.getBounds().width;
+		final int minY = _p.getBounds().y;
+		final int maxY = _p.getBounds().y + _p.getBounds().height;
 		
-		int x = Rnd.get(_minX, _maxX);
-		int y = Rnd.get(_minY, _maxY);
+		int x = Rnd.get(minX, maxX);
+		int y = Rnd.get(minY, maxY);
 		
 		int antiBlocker = 0;
 		while (!_p.contains(x, y) && (antiBlocker++ < 1000))
 		{
-			x = Rnd.get(_minX, _maxX);
-			y = Rnd.get(_minY, _maxY);
+			x = Rnd.get(minX, maxX);
+			y = Rnd.get(minY, maxY);
 		}
 		
 		return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, _z1));

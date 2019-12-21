@@ -578,8 +578,8 @@ public class TvT extends Event
 			}
 			// Start inactivity check.
 			if (creature.isPlayer() && //
-				((((zone == BLUE_PEACE_ZONE) && (creature.getTeam() == Team.BLUE)) || //
-					((zone == RED_PEACE_ZONE) && (creature.getTeam() == Team.RED)))))
+				(((zone == BLUE_PEACE_ZONE) && (creature.getTeam() == Team.BLUE)) || //
+					((zone == RED_PEACE_ZONE) && (creature.getTeam() == Team.RED))))
 			{
 				resetActivityTimers(creature.getActingPlayer());
 			}

@@ -139,7 +139,6 @@ import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
-import org.l2jmobius.gameserver.model.skills.EffectScope;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stats;
 import org.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
@@ -196,11 +195,6 @@ public abstract class DocumentBase
 	}
 	
 	protected void parseTemplate(Node n, Object template)
-	{
-		parseTemplate(n, template, null);
-	}
-	
-	protected void parseTemplate(Node n, Object template, EffectScope effectScope)
 	{
 		Condition condition = null;
 		n = n.getFirstChild();

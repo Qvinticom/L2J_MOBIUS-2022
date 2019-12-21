@@ -195,12 +195,12 @@ public class ArmorSet
 	}
 	
 	/**
-	 * @param shield_id
+	 * @param shieldId
 	 * @return {@code true} if player has the shield of this set equipped, {@code false} in case set doesn't have a shield or player doesn't
 	 */
-	public boolean containOptionalItem(int shield_id)
+	public boolean containOptionalItem(int shieldId)
 	{
-		return _optionalItems.contains(shield_id);
+		return _optionalItems.contains(shieldId);
 	}
 	
 	/**
@@ -220,12 +220,9 @@ public class ArmorSet
 		for (int armorSlot : ARMORSET_SLOTS)
 		{
 			final ItemInstance itemPart = inv.getPaperdollItem(armorSlot);
-			if ((itemPart != null) && _requiredItems.contains(itemPart.getId()))
+			if ((itemPart != null) && _requiredItems.contains(itemPart.getId()) && (enchantLevel > itemPart.getEnchantLevel()))
 			{
-				if (enchantLevel > itemPart.getEnchantLevel())
-				{
-					enchantLevel = itemPart.getEnchantLevel();
-				}
+				enchantLevel = itemPart.getEnchantLevel();
 			}
 		}
 		if (enchantLevel == Byte.MAX_VALUE)

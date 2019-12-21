@@ -17,6 +17,7 @@
 package handlers.admincommandhandlers;
 
 import java.awt.Color;
+import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.xml.impl.DoorData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
@@ -36,7 +37,10 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminDoorControl implements IAdminCommandHandler
 {
+	private static final Logger LOGGER = Logger.getLogger(AdminDoorControl.class.getName());
+	
 	private static DoorData _doorTable = DoorData.getInstance();
+	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_open",
@@ -168,7 +172,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning("Problem with AdminDoorControl: " + e.getMessage());
 		}
 		return true;
 	}

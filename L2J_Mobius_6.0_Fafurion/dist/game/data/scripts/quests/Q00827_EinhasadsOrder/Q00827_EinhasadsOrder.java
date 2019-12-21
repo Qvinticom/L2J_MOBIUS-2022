@@ -188,12 +188,9 @@ public class Q00827_EinhasadsOrder extends Quest
 		for (PlayerInstance member : members)
 		{
 			final QuestState qs = getQuestState(member, false);
-			if ((qs != null) && qs.isCond(1) && member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
+			if ((qs != null) && qs.isCond(1) && member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE) && giveItemRandomly(member, npc, REVOLUTIONARIES_MARK_PIECE, 1, 30, 1.0, true))
 			{
-				if (giveItemRandomly(member, npc, REVOLUTIONARIES_MARK_PIECE, 1, 30, 1.0, true))
-				{
-					qs.setCond(2, true);
-				}
+				qs.setCond(2, true);
 			}
 		}
 		return super.onKill(npc, player, isSummon);

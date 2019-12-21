@@ -25,11 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExEnchantOneOK implements IClientOutgoingPacket
 {
-	public static ExEnchantOneOK STATIC_PACKET = new ExEnchantOneOK();
-	
-	private ExEnchantOneOK()
-	{
-	}
+	public static final ExEnchantOneOK STATIC_PACKET = new ExEnchantOneOK();
 	
 	@Override
 	public boolean write(PacketWriter packet)

@@ -113,19 +113,19 @@ public class QueenAnt extends AbstractNpcAI
 		}
 		else
 		{
-			int loc_x = info.getInt("loc_x");
-			int loc_y = info.getInt("loc_y");
-			int loc_z = info.getInt("loc_z");
+			int locX = info.getInt("loc_x");
+			int locY = info.getInt("loc_y");
+			int locZ = info.getInt("loc_z");
 			final int heading = info.getInt("heading");
 			final double hp = info.getDouble("currentHP");
 			final double mp = info.getDouble("currentMP");
-			if (!_zone.isInsideZone(loc_x, loc_y, loc_z))
+			if (!_zone.isInsideZone(locX, locY, locZ))
 			{
-				loc_x = QUEEN_X;
-				loc_y = QUEEN_Y;
-				loc_z = QUEEN_Z;
+				locX = QUEEN_X;
+				locY = QUEEN_Y;
+				locZ = QUEEN_Z;
 			}
-			final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN, loc_x, loc_y, loc_z, heading, false, 0);
+			final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN, locX, locY, locZ, heading, false, 0);
 			queen.setCurrentHpMp(hp, mp);
 			spawnBoss(queen);
 		}
@@ -291,13 +291,10 @@ public class QueenAnt extends AbstractNpcAI
 			return super.onFactionCall(npc, caller, attacker, isSummon);
 		}
 		
-		if (!npc.isCastingNow(SkillCaster::isAnyNormalType) && (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST))
+		if (!npc.isCastingNow(SkillCaster::isAnyNormalType) && (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST) && (caller.getCurrentHp() < caller.getMaxHp()))
 		{
-			if (caller.getCurrentHp() < caller.getMaxHp())
-			{
-				npc.setTarget(caller);
-				((Attackable) npc).useMagic(HEAL1.getSkill());
-			}
+			npc.setTarget(caller);
+			((Attackable) npc).useMagic(HEAL1.getSkill());
 		}
 		return null;
 	}

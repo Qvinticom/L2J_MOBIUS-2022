@@ -25,6 +25,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
+import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -42,7 +43,8 @@ import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
  */
 public class PremiumManager
 {
-	// SQL Statement
+	private static final Logger LOGGER = Logger.getLogger(PremiumManager.class.getName());
+	
 	private static final String LOAD_SQL = "SELECT account_name,enddate FROM account_premium WHERE account_name = ?";
 	private static final String UPDATE_SQL = "REPLACE INTO account_premium (account_name,enddate) VALUE (?,?)";
 	private static final String DELETE_SQL = "DELETE FROM account_premium WHERE account_name = ?";
@@ -72,7 +74,7 @@ public class PremiumManager
 	// Listeners
 	private final ListenersContainer listenerContainer = Containers.Players();
 	
-	private final Consumer<OnPlayerLogin> playerLoginEvent = (event) ->
+	private final Consumer<OnPlayerLogin> playerLoginEvent = event ->
 	{
 		final PlayerInstance player = event.getPlayer();
 		final String accountName = player.getAccountName();
@@ -91,7 +93,7 @@ public class PremiumManager
 		}
 	};
 	
-	private final Consumer<OnPlayerLogout> playerLogoutEvent = (event) ->
+	private final Consumer<OnPlayerLogout> playerLogoutEvent = event ->
 	{
 		PlayerInstance player = event.getPlayer();
 		stopExpireTask(player);
@@ -142,7 +144,7 @@ public class PremiumManager
 		}
 		catch (SQLException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning("Problem with PremiumManager: " + e.getMessage());
 		}
 	}
 	
@@ -169,7 +171,7 @@ public class PremiumManager
 		}
 		catch (SQLException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning("Problem with PremiumManager: " + e.getMessage());
 		}
 		
 		// UPDATE CACHE
@@ -213,7 +215,7 @@ public class PremiumManager
 		}
 		catch (SQLException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning("Problem with PremiumManager: " + e.getMessage());
 		}
 	}
 	

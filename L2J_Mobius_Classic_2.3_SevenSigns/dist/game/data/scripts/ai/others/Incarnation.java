@@ -37,10 +37,6 @@ import ai.AbstractNpcAI;
  */
 public class Incarnation extends AbstractNpcAI
 {
-	public Incarnation()
-	{
-	}
-	
 	@RegisterEvent(EventType.ON_NPC_SPAWN)
 	@RegisterType(ListenerRegisterType.NPC)
 	@Id(13302)

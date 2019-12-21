@@ -924,7 +924,7 @@ public class PlayerInventory extends Inventory
 				}
 				case BLACKLIST:
 				{
-					return !blockedItems.stream().anyMatch(id -> id == itemId);
+					return blockedItems.stream().noneMatch(id -> id == itemId);
 				}
 			}
 		}

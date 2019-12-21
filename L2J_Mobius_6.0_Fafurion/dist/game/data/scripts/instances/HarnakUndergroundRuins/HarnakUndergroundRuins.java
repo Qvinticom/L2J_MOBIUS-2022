@@ -16,7 +16,7 @@
  */
 package instances.HarnakUndergroundRuins;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -80,7 +80,7 @@ public class HarnakUndergroundRuins extends AbstractInstance
 	private static final int ZONE_ROOM_3 = 200033;
 	private static final int DOOR_ONE = 16240100;
 	private static final int DOOR_TWO = 16240102;
-	private static final Map<CategoryType, Integer> MOB_CATEGORY = new HashMap<>();
+	private static final Map<CategoryType, Integer> MOB_CATEGORY = new EnumMap<>(CategoryType.class);
 	static
 	{
 		MOB_CATEGORY.put(CategoryType.TANKER_CATEGORY, RAKZAN);
@@ -205,7 +205,7 @@ public class HarnakUndergroundRuins extends AbstractInstance
 				{
 					world.setStatus(1);
 					world.spawnGroup("first_room");
-					moveNpcRoom1(RAKZAN, NpcStringId.ARE_YOU_AGAINST_THE_WILL_OF_LIGHT, "razkan_say", world);
+					moveNpcRoom1(RAKZAN, NpcStringId.ARE_YOU_AGAINST_THE_WILL_OF_LIGHT, world);
 				}
 				break;
 			}
@@ -523,37 +523,37 @@ public class HarnakUndergroundRuins extends AbstractInstance
 					{
 						case RAKZAN:
 						{
-							moveNpcRoom1(KRAKIA_BATHUS, NpcStringId.ARE_YOU_PLANNING_TO_BETRAY_THE_GODS_AND_FOLLOW_A_GIANT, "bathus_say", world);
+							moveNpcRoom1(KRAKIA_BATHUS, NpcStringId.ARE_YOU_PLANNING_TO_BETRAY_THE_GODS_AND_FOLLOW_A_GIANT, world);
 							break;
 						}
 						case KRAKIA_BATHUS:
 						{
-							moveNpcRoom1(BAMONTI, NpcStringId.HAHA, "bamonti_say", world);
+							moveNpcRoom1(BAMONTI, NpcStringId.HAHA, world);
 							break;
 						}
 						case BAMONTI:
 						{
-							moveNpcRoom1(KRAKIA_CARCASS, NpcStringId.HAHA, "carcass_say", world);
+							moveNpcRoom1(KRAKIA_CARCASS, NpcStringId.HAHA, world);
 							break;
 						}
 						case KRAKIA_CARCASS:
 						{
-							moveNpcRoom1(WEISS_KHAN, NpcStringId.YOU_WILL_NOT_FREE_HERMUNCUS, "khan_say", world);
+							moveNpcRoom1(WEISS_KHAN, NpcStringId.YOU_WILL_NOT_FREE_HERMUNCUS, world);
 							break;
 						}
 						case WEISS_KHAN:
 						{
-							moveNpcRoom1(SEKNUS, NpcStringId.MORTAL, "seknus_say", world);
+							moveNpcRoom1(SEKNUS, NpcStringId.MORTAL, world);
 							break;
 						}
 						case SEKNUS:
 						{
-							moveNpcRoom1(KRAKIA_LOTUS, NpcStringId.TRYING_TO_FREE_HERMUNCUS, "lotus_say", world);
+							moveNpcRoom1(KRAKIA_LOTUS, NpcStringId.TRYING_TO_FREE_HERMUNCUS, world);
 							break;
 						}
 						case KRAKIA_LOTUS:
 						{
-							moveNpcRoom1(WEISS_ELE, NpcStringId.YOU_WILL_NEVER_BREAK_THE_SEAL, "ele_say", world);
+							moveNpcRoom1(WEISS_ELE, NpcStringId.YOU_WILL_NEVER_BREAK_THE_SEAL, world);
 							break;
 						}
 						case WEISS_ELE:
@@ -606,7 +606,7 @@ public class HarnakUndergroundRuins extends AbstractInstance
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private void moveNpcRoom1(int npcId, NpcStringId message, String timer, Instance world)
+	private void moveNpcRoom1(int npcId, NpcStringId message, Instance world)
 	{
 		final Npc npc = world.getNpc(npcId);
 		if (npc != null)

@@ -140,8 +140,8 @@ public class FortSiegeManager
 		
 		for (Fort fort : FortManager.getInstance().getForts())
 		{
-			final List<FortSiegeSpawn> _commanderSpawns = new CopyOnWriteArrayList<>();
-			final List<CombatFlag> _flagSpawns = new CopyOnWriteArrayList<>();
+			final List<FortSiegeSpawn> commanderSpawns = new CopyOnWriteArrayList<>();
+			final List<CombatFlag> flagSpawns = new CopyOnWriteArrayList<>();
 			for (int i = 1; i < 5; i++)
 			{
 				final String _spawnParams = siegeSettings.getProperty(fort.getName().replace(" ", "") + "Commander" + i, "");
@@ -159,7 +159,7 @@ public class FortSiegeManager
 					final int heading = Integer.parseInt(st.nextToken());
 					final int npc_id = Integer.parseInt(st.nextToken());
 					
-					_commanderSpawns.add(new FortSiegeSpawn(fort.getResidenceId(), x, y, z, heading, npc_id, i));
+					commanderSpawns.add(new FortSiegeSpawn(fort.getResidenceId(), x, y, z, heading, npc_id, i));
 				}
 				catch (Exception e)
 				{
@@ -167,7 +167,7 @@ public class FortSiegeManager
 				}
 			}
 			
-			_commanderSpawnList.put(fort.getResidenceId(), _commanderSpawns);
+			_commanderSpawnList.put(fort.getResidenceId(), commanderSpawns);
 			
 			for (int i = 1; i < 4; i++)
 			{
@@ -185,25 +185,25 @@ public class FortSiegeManager
 					final int z = Integer.parseInt(st.nextToken());
 					final int flag_id = Integer.parseInt(st.nextToken());
 					
-					_flagSpawns.add(new CombatFlag(fort.getResidenceId(), x, y, z, 0, flag_id));
+					flagSpawns.add(new CombatFlag(fort.getResidenceId(), x, y, z, 0, flag_id));
 				}
 				catch (Exception e)
 				{
 					LOGGER.warning("Error while loading flag(s) for " + fort.getName() + " fort.");
 				}
 			}
-			_flagList.put(fort.getResidenceId(), _flagSpawns);
+			_flagList.put(fort.getResidenceId(), flagSpawns);
 		}
 	}
 	
-	public List<FortSiegeSpawn> getCommanderSpawnList(int _fortId)
+	public List<FortSiegeSpawn> getCommanderSpawnList(int fortId)
 	{
-		return _commanderSpawnList.get(_fortId);
+		return _commanderSpawnList.get(fortId);
 	}
 	
-	public List<CombatFlag> getFlagList(int _fortId)
+	public List<CombatFlag> getFlagList(int fortId)
 	{
-		return _flagList.get(_fortId);
+		return _flagList.get(fortId);
 	}
 	
 	public int getAttackerMaxClans()

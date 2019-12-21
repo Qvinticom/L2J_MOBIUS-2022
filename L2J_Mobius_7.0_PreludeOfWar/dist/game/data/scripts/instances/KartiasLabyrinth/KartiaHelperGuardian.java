@@ -99,7 +99,12 @@ public class KartiaHelperGuardian extends AbstractNpcAI
 	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if ((instance != null) && event.equals("CHECK_ACTION"))
+		if (instance == null)
+		{
+			return;
+		}
+		
+		if (event.equals("CHECK_ACTION"))
 		{
 			final FriendlyNpcInstance eliyah = npc.getVariables().getObject("ELIYAH_OBJECT", FriendlyNpcInstance.class);
 			if (eliyah != null)
@@ -129,14 +134,11 @@ public class KartiaHelperGuardian extends AbstractNpcAI
 				}
 			}
 		}
-		else if ((instance != null) && event.equals("USE_SKILL"))
+		else if (event.equals("USE_SKILL"))
 		{
-			if (npc.isInCombat() || npc.isAttackingNow() || (npc.getTarget() != null))
+			if ((npc.isInCombat() || npc.isAttackingNow() || (npc.getTarget() != null)) && (npc.getCurrentMpPercent() > 25) && !CommonUtil.contains(KARTIA_FRIENDS, npc.getTargetId()))
 			{
-				if ((npc.getCurrentMpPercent() > 25) && !CommonUtil.contains(KARTIA_FRIENDS, npc.getTargetId()))
-				{
-					useRandomSkill(npc);
-				}
+				useRandomSkill(npc);
 			}
 		}
 	}
@@ -182,8 +184,8 @@ public class KartiaHelperGuardian extends AbstractNpcAI
 		if ((instance != null) && !npc.isCastingNow() && (!CommonUtil.contains(KARTIA_FRIENDS, target.getId())))
 		{
 			final StatsSet instParams = instance.getTemplateParameters();
-			final SkillHolder skill_01 = instParams.getSkillHolder("guardianSpiritsBlow");
-			final SkillHolder skill_02 = instParams.getSkillHolder("guardianSpiritsWrath");
+			final SkillHolder skill01 = instParams.getSkillHolder("guardianSpiritsBlow");
+			final SkillHolder skill02 = instParams.getSkillHolder("guardianSpiritsWrath");
 			final int numberOfActiveSkills = 2;
 			final int randomSkill = getRandom(numberOfActiveSkills + 1);
 			
@@ -192,17 +194,17 @@ public class KartiaHelperGuardian extends AbstractNpcAI
 				case 0:
 				case 1:
 				{
-					if ((skill_01 != null) && SkillCaster.checkUseConditions(npc, skill_01.getSkill()))
+					if ((skill01 != null) && SkillCaster.checkUseConditions(npc, skill01.getSkill()))
 					{
-						npc.doCast(skill_01.getSkill(), null, true, false);
+						npc.doCast(skill01.getSkill(), null, true, false);
 					}
 					break;
 				}
 				case 2:
 				{
-					if ((skill_02 != null) && SkillCaster.checkUseConditions(npc, skill_02.getSkill()))
+					if ((skill02 != null) && SkillCaster.checkUseConditions(npc, skill02.getSkill()))
 					{
-						npc.doCast(skill_02.getSkill(), null, true, false);
+						npc.doCast(skill02.getSkill(), null, true, false);
 					}
 					break;
 				}

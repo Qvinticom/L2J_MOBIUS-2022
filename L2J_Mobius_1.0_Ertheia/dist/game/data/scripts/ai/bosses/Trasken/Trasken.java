@@ -72,7 +72,7 @@ public class Trasken extends AbstractNpcAI
 	// Zone
 	private static final int ZONE_ID = 12108;
 	private static final int ZONE_ID_HEART = 12109;
-	private final int[] eventTriggers = new int[]
+	private static final int[] EVENT_TRIGGERS = new int[]
 	{
 		22120840,
 		22120842,
@@ -101,20 +101,20 @@ public class Trasken extends AbstractNpcAI
 	private static final int ALIVE = 0;
 	private static final int DEAD = 3;
 	// Others
-	protected double hp_tail;
-	protected double hp_trasken;
-	private static Npc tie_trasken;
-	private static Npc trasken;
+	protected double _hpTail;
+	protected double _hpTrasken;
+	private static Npc _tieTrasken;
+	private static Npc _trasken;
 	private static NoSummonFriendZone _zoneLair;
 	private static NoSummonFriendZone _zoneLair2;
-	private int playersToEnter;
+	private int _playersToEnter;
 	protected int _statusZone = 0;
 	protected ScheduledFuture<?> _collapseTask;
 	protected AtomicInteger _killsTie = new AtomicInteger(0);
 	protected AtomicInteger _killsTradjan = new AtomicInteger(0);
 	// Spawns
-	private static final Location Spawn_Heart = new Location(88292, -173758, -15965);
-	private static final Location[] Spawn_Tie = new Location[]
+	private static final Location HEART_SPAWN = new Location(88292, -173758, -15965);
+	private static final Location[] TIE_SPAWN = new Location[]
 	{
 		new Location(79075, -180963, -9897, 4527),
 		new Location(81047, -182282, -9897, 33582),
@@ -139,7 +139,7 @@ public class Trasken extends AbstractNpcAI
 		new Location(83150, -183279, -9897, 62418),
 		new Location(79795, -182271, -9897, 5870)
 	};
-	private static final Location[] Spawn_Big_Tie = new Location[]
+	private static final Location[] BIG_TIE_SPAWN = new Location[]
 	{
 		new Location(83235, -182070, -9897, 31663),
 		new Location(83913, -183256, -9897, 4038),
@@ -161,7 +161,7 @@ public class Trasken extends AbstractNpcAI
 		new Location(83222, -184038, -9897, 13689),
 		new Location(82093, -184188, -9897, 61993)
 	};
-	private static final Location[] Spawn_Larva_1 = new Location[]
+	private static final Location[] LARVA_SPAWN_1 = new Location[]
 	{
 		new Location(81869, -181917, -9897, 59394),
 		new Location(82831, -182837, -9897, 19463),
@@ -172,7 +172,7 @@ public class Trasken extends AbstractNpcAI
 		new Location(78883, -183839, -9897, 5843),
 		new Location(80014, -182944, -9897, 6195)
 	};
-	private static final Location[] Spawn_Larva_2 = new Location[]
+	private static final Location[] LARVA_SPAWN_2 = new Location[]
 	{
 		new Location(81869, -181917, -9897, 20701),
 		new Location(82831, -182837, -9897, 6257),
@@ -183,7 +183,7 @@ public class Trasken extends AbstractNpcAI
 		new Location(78883, -183839, -9897, 23282),
 		new Location(80014, -182944, -9897, 9306)
 	};
-	private static final Location[] Spawn_Larva_3 = new Location[]
+	private static final Location[] LARVA_SPAWN_3 = new Location[]
 	{
 		new Location(79785, -181954, -9897, 65516),
 		new Location(81727, -184036, -9897, 63858),
@@ -215,26 +215,26 @@ public class Trasken extends AbstractNpcAI
 		new Location(81255, -182176, -9897, 53943),
 		new Location(78796, -184218, -9897, 40593)
 	};
-	private static final Location[] Spawn_Victim_1 = new Location[]
+	private static final Location[] VICTIM_SPAWN_1 = new Location[]
 	{
 		new Location(87891, -173888, 0, 14559),
 		new Location(87777, -172808, 0, 54130),
 		new Location(88896, -174206, 0, 4641)
 	};
-	private static final Location[] Spawn_Victim_2 = new Location[]
+	private static final Location[] VICTIM_SPAWN_2 = new Location[]
 	{
 		new Location(88085, -174105, 0, 39106),
 		new Location(88949, -174227, 0, 58094),
 		new Location(89000, -172909, 0, 55350),
 		new Location(87941, -173185, 0, 22119)
 	};
-	private static final Location[] Spawn_Victim_3 = new Location[]
+	private static final Location[] VICTIM_SPAWN_3 = new Location[]
 	{
 		new Location(88247, -174298, 0, 4884),
 		new Location(88924, -173858, 0, 44289),
 		new Location(88204, -172812, 0, 24052)
 	};
-	private static final Location[] Spawn_Tradjan = new Location[]
+	private static final Location[] TRADJAN_SPAWN = new Location[]
 	{
 		new Location(79785, -181954, -9897, 65516),
 		new Location(81727, -184036, -9897, 63858),
@@ -266,7 +266,7 @@ public class Trasken extends AbstractNpcAI
 		new Location(81255, -182176, -9897, 53943),
 		new Location(78796, -184218, -9897, 40593)
 	};
-	private static final Location[] Spawn_Digestive = new Location[]
+	private static final Location[] DIGESTIVE_SPAWN = new Location[]
 	{
 		new Location(88114, -173387, -15980),
 		new Location(88640, -173491, -15980),
@@ -274,14 +274,14 @@ public class Trasken extends AbstractNpcAI
 		new Location(87913, -173950, -15981)
 	};
 	// @formatter:off
-	private static final int[][] Rnd_Spawn_Tail = new int[][]
+	private static final int[][] TAIL_RANDOM_SPAWN = new int[][]
     {
         {80966, -183780, -9896},
         {82949, -181947, -9899},
         {81688, -181059, -9895},
         {81208, -182095, -9895}
     };
-    private static final int[][] Rnd_Spawn_Trasken = new int[][]
+    private static final int[][] TRASKEN_RANDOM_SPAWN = new int[][]
     {
         {82564, -180742, -9896},
         {82379, -183532, -9896},
@@ -347,19 +347,19 @@ public class Trasken extends AbstractNpcAI
 		int size = _zoneLair.getPlayersInside().size();
 		if ((size >= 14) && (size <= 28))
 		{
-			playersToEnter = 7;
+			_playersToEnter = 7;
 		}
 		else if ((size >= 28) && (size <= 56))
 		{
-			playersToEnter = 14;
+			_playersToEnter = 14;
 		}
 		else if ((size >= 56) && (size <= 102))
 		{
-			playersToEnter = 21;
+			_playersToEnter = 21;
 		}
 		else
 		{
-			playersToEnter = 1;
+			_playersToEnter = 1;
 		}
 	}
 	
@@ -407,7 +407,7 @@ public class Trasken extends AbstractNpcAI
 		{
 			case TAIL_TRASKEN:
 			{
-				hp_tail = npc.getCurrentHp();
+				_hpTail = npc.getCurrentHp();
 				break;
 			}
 			case TRASKEN:
@@ -429,7 +429,7 @@ public class Trasken extends AbstractNpcAI
 					doom.setTarget(doom);
 					doom.isCastingNow();
 					doom.doCast(SKILL_1.getSkill());
-					ThreadPool.schedule(() -> doom.deleteMe(), 15000);
+					ThreadPool.schedule(doom::deleteMe, 15000);
 				}
 				final double percent = ((npc.getCurrentHp() - damage) / npc.getMaxHp()) * 100.0;
 				if ((percent <= 30) && (_statusZone == 4))
@@ -461,7 +461,7 @@ public class Trasken extends AbstractNpcAI
 				{
 					npc.doCast(SKILL_5.getSkill());
 				}
-				hp_trasken = npc.getCurrentHp();
+				_hpTrasken = npc.getCurrentHp();
 				break;
 			}
 		}
@@ -490,10 +490,7 @@ public class Trasken extends AbstractNpcAI
 			case TIE:
 			case BIG_TIE:
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 600, cha ->
-				{
-					npc.setTarget(cha);
-				});
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 600, npc::setTarget);
 				npc.setIsOverloaded(true);
 				npc.setRandomWalking(true);
 				npc.getSpawn().setRespawnDelay(60);
@@ -502,10 +499,7 @@ public class Trasken extends AbstractNpcAI
 			case TRADJAN:
 			{
 				npc.getSpawn().setRespawnDelay(120);
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 3500, cha ->
-				{
-					npc.setTarget(cha);
-				});
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 3500, npc::setTarget);
 				break;
 			}
 			case LAVRA_1:
@@ -513,10 +507,7 @@ public class Trasken extends AbstractNpcAI
 			case LAVRA_3:
 			{
 				npc.getSpawn().setRespawnDelay(200);
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 3500, cha ->
-				{
-					npc.setTarget(cha);
-				});
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 3500, npc::setTarget);
 				break;
 			}
 			case VICTIM_EARTWORMS_1:
@@ -524,10 +515,7 @@ public class Trasken extends AbstractNpcAI
 			case VICTIM_EARTWORMS_3:
 			{
 				npc.getSpawn().setRespawnDelay(30);
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, cha ->
-				{
-					npc.setTarget(cha);
-				});
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, npc::setTarget);
 				break;
 			}
 			case DIGISTIVE:
@@ -535,10 +523,7 @@ public class Trasken extends AbstractNpcAI
 				npc.setIsOverloaded(true);
 				npc.setRandomWalking(true);
 				npc.getSpawn().setRespawnDelay(60);
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, cha ->
-				{
-					npc.setTarget(cha);
-				});
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, npc::setTarget);
 				break;
 			}
 			case HEART_ERTHWYRM:
@@ -600,23 +585,20 @@ public class Trasken extends AbstractNpcAI
 			}
 			case "finish":
 			{
-				trasken.doDie(player);
-				trasken.setIsDead(true);
+				_trasken.doDie(player);
+				_trasken.setIsDead(true);
 				_zoneLair2.getPlayersInside().forEach(players -> players.teleToLocation(CENTER_LOCATION));
-				_zoneLair2.getPlayersInside().forEach(p ->
-				{
-					playMovie(p, Movie.SC_EARTHWORM_ENDING);
-				});
+				_zoneLair2.getPlayersInside().forEach(p -> playMovie(p, Movie.SC_EARTHWORM_ENDING));
 				if (_collapseTask != null)
 				{
 					_collapseTask.cancel(true);
 					_collapseTask = null;
 				}
-				_zoneLair.getCharactersInside().stream().filter(Creature::isNpc).forEach(mob -> mob.deleteMe());
+				_zoneLair.getCharactersInside().stream().filter(Creature::isNpc).forEach(Creature::deleteMe);
 				_zoneLair.getCharactersInside().stream().filter(WorldObject::isMonster).forEach(cha -> ((MonsterInstance) cha).getSpawn().stopRespawn());
-				_zoneLair2.getCharactersInside().stream().filter(Creature::isNpc).forEach(mob -> mob.deleteMe());
+				_zoneLair2.getCharactersInside().stream().filter(Creature::isNpc).forEach(Creature::deleteMe);
 				_zoneLair2.getCharactersInside().stream().filter(WorldObject::isMonster).forEach(cha -> ((MonsterInstance) cha).getSpawn().stopRespawn());
-				ThreadPool.schedule(() -> npc.decayMe(), 10000);
+				ThreadPool.schedule(npc::decayMe, 10000);
 				cancelQuestTimer("finish", npc, null);
 				
 				GrandBossManager.getInstance().setBossStatus(TRASKEN, DEAD);
@@ -635,20 +617,20 @@ public class Trasken extends AbstractNpcAI
 					{
 						if (_statusZone == 2)
 						{
-							tie_trasken.doCast(SKILL_TAIL_2.getSkill());
-							tie_trasken.getSpawn().stopRespawn();
-							tie_trasken.decayMe();
+							_tieTrasken.doCast(SKILL_TAIL_2.getSkill());
+							_tieTrasken.getSpawn().stopRespawn();
+							_tieTrasken.decayMe();
 							
-							final int[] spawn = Rnd_Spawn_Tail[Rnd.get(Rnd_Spawn_Tail.length)];
+							final int[] spawn = TAIL_RANDOM_SPAWN[Rnd.get(TAIL_RANDOM_SPAWN.length)];
 							if (SpawnTable.getInstance().getSpawns(TAIL_TRASKEN) == null)
 							{
 								ThreadPool.schedule(() ->
 								{
-									tie_trasken = addSpawn(TAIL_TRASKEN, spawn[0], spawn[1], spawn[2], 0, false, 0, true);
-									tie_trasken.setCurrentHp(hp_tail);
+									_tieTrasken = addSpawn(TAIL_TRASKEN, spawn[0], spawn[1], spawn[2], 0, false, 0, true);
+									_tieTrasken.setCurrentHp(_hpTail);
 								}, 5000);
 							}
-							startQuestTimer("spawn_rnd", 30000, tie_trasken, null);
+							startQuestTimer("spawn_rnd", 30000, _tieTrasken, null);
 						}
 						break;
 					}
@@ -656,21 +638,21 @@ public class Trasken extends AbstractNpcAI
 					{
 						if (_statusZone == 3)
 						{
-							trasken.doCast(SKILL_TRASKEN_FIRST.getSkill());
-							trasken.getSpawn().stopRespawn();
-							trasken.decayMe();
+							_trasken.doCast(SKILL_TRASKEN_FIRST.getSkill());
+							_trasken.getSpawn().stopRespawn();
+							_trasken.decayMe();
 							
-							final int[] spawn1 = Rnd_Spawn_Trasken[Rnd.get(Rnd_Spawn_Trasken.length)];
+							final int[] spawn1 = TRASKEN_RANDOM_SPAWN[Rnd.get(TRASKEN_RANDOM_SPAWN.length)];
 							if (SpawnTable.getInstance().getSpawns(TRASKEN) == null)
 							{
 								ThreadPool.schedule(() ->
 								{
-									trasken = addSpawn(TRASKEN, spawn1[0], spawn1[1], spawn1[2], 0, false, 0, true);
-									trasken.doCast(SKILL_TRASKEN_UP.getSkill());
-									trasken.setCurrentHp(hp_trasken);
+									_trasken = addSpawn(TRASKEN, spawn1[0], spawn1[1], spawn1[2], 0, false, 0, true);
+									_trasken.doCast(SKILL_TRASKEN_UP.getSkill());
+									_trasken.setCurrentHp(_hpTrasken);
 								}, 10000);
 							}
-							startQuestTimer("spawn_rnd", 70000, trasken, null);
+							startQuestTimer("spawn_rnd", 70000, _trasken, null);
 						}
 						break;
 					}
@@ -718,7 +700,7 @@ public class Trasken extends AbstractNpcAI
 			{
 				_zoneLair.getPlayersInside().forEach(p -> p.broadcastPacket(new ExShowScreenMessage(NpcStringId.HEART_OF_EARTH_WYRM_HAS_BEEN_DESTROYED, 5, 4000, true)));
 				_zoneLair2.getPlayersInside().forEach(p -> p.broadcastPacket(new ExShowScreenMessage(NpcStringId.HEART_OF_EARTH_WYRM_HAS_BEEN_DESTROYED, 5, 4000, true)));
-				cancelQuestTimer("spawn_rnd", trasken, null);
+				cancelQuestTimer("spawn_rnd", _trasken, null);
 				startQuestTimer("finish", 5000, npc, killer);
 				break;
 			}
@@ -750,7 +732,7 @@ public class Trasken extends AbstractNpcAI
 	{
 		if ((zone.getId() == ZONE_ID) && creature.isPlayer())
 		{
-			for (int info : eventTriggers)
+			for (int info : EVENT_TRIGGERS)
 			{
 				creature.broadcastPacket(new OnEventTrigger(info, true));
 			}
@@ -787,7 +769,7 @@ public class Trasken extends AbstractNpcAI
 			_collapseTask = ThreadPool.schedule(() ->
 			{
 				Fail(true);
-				for (int info : eventTriggers)
+				for (int info : EVENT_TRIGGERS)
 				{
 					creature.broadcastPacket(new OnEventTrigger(info, false));
 				}
@@ -802,34 +784,34 @@ public class Trasken extends AbstractNpcAI
 		{
 			case 0:
 			{
-				for (Location loc : Spawn_Tie)
+				for (Location loc : TIE_SPAWN)
 				{
 					addSpawn(TIE, loc, false, 0, true);
 				}
 				
-				for (Location loc : Spawn_Big_Tie)
+				for (Location loc : BIG_TIE_SPAWN)
 				{
 					addSpawn(BIG_TIE, loc, false, 0, true);
 				}
 				
-				addSpawn(HEART_ERTHWYRM, Spawn_Heart, false, 0, true);
+				addSpawn(HEART_ERTHWYRM, HEART_SPAWN, false, 0, true);
 				
-				for (Location loc : Spawn_Victim_1)
+				for (Location loc : VICTIM_SPAWN_1)
 				{
 					addSpawn(VICTIM_EARTWORMS_1, loc, false, 0, true);
 				}
 				
-				for (Location loc : Spawn_Victim_2)
+				for (Location loc : VICTIM_SPAWN_2)
 				{
 					addSpawn(VICTIM_EARTWORMS_2, loc, false, 0, true);
 				}
 				
-				for (Location loc : Spawn_Victim_3)
+				for (Location loc : VICTIM_SPAWN_3)
 				{
 					addSpawn(VICTIM_EARTWORMS_3, loc, false, 0, true);
 				}
 				
-				for (Location loc : Spawn_Digestive)
+				for (Location loc : DIGESTIVE_SPAWN)
 				{
 					addSpawn(DIGISTIVE, loc, false, 0, true);
 				}
@@ -837,7 +819,7 @@ public class Trasken extends AbstractNpcAI
 			}
 			case 1:
 			{
-				for (Location loc : Spawn_Tradjan)
+				for (Location loc : TRADJAN_SPAWN)
 				{
 					addSpawn(TRADJAN, loc, false, 0, true);
 				}
@@ -845,31 +827,31 @@ public class Trasken extends AbstractNpcAI
 			}
 			case 2:
 			{
-				tie_trasken = addSpawn(TAIL_TRASKEN, CENTER_LOCATION, false, 0, true);
-				hp_tail = tie_trasken.getCurrentHp();
-				startQuestTimer("spawn_rnd", 3000000, tie_trasken, null);
+				_tieTrasken = addSpawn(TAIL_TRASKEN, CENTER_LOCATION, false, 0, true);
+				_hpTail = _tieTrasken.getCurrentHp();
+				startQuestTimer("spawn_rnd", 3000000, _tieTrasken, null);
 				break;
 			}
 			case 3:
 			{
-				cancelQuestTimer("spawn_rnd", tie_trasken, null);
+				cancelQuestTimer("spawn_rnd", _tieTrasken, null);
 				
-				trasken = addSpawn(TRASKEN, CENTER_LOCATION, false, 0, true);
-				trasken.doCast(SKILL_TRASKEN_UP.getSkill());
-				hp_trasken = trasken.getCurrentHp();
+				_trasken = addSpawn(TRASKEN, CENTER_LOCATION, false, 0, true);
+				_trasken.doCast(SKILL_TRASKEN_UP.getSkill());
+				_hpTrasken = _trasken.getCurrentHp();
 				
-				startQuestTimer("spawn_rnd", 9000000, trasken, null);
-				for (Location loc : Spawn_Larva_1)
+				startQuestTimer("spawn_rnd", 9000000, _trasken, null);
+				for (Location loc : LARVA_SPAWN_1)
 				{
 					addSpawn(LAVRA_1, loc, false, 0, true);
 				}
 				
-				for (Location loc : Spawn_Larva_2)
+				for (Location loc : LARVA_SPAWN_2)
 				{
 					addSpawn(LAVRA_2, loc, false, 0, true);
 				}
 				
-				for (Location loc : Spawn_Larva_3)
+				for (Location loc : LARVA_SPAWN_3)
 				{
 					addSpawn(LAVRA_3, loc, false, 0, true);
 				}
@@ -882,7 +864,7 @@ public class Trasken extends AbstractNpcAI
 	{
 		creature.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_EARTH_WYRM_HAS_LOST_CONSCIOUSNESS, 5, 4600, true));
 		creature.doCast(SKILL_TRASKEN_BUFF.getSkill()); // 12 sec combo
-		if (playersToEnter == _zoneLair2.getPlayersInside().size())
+		if (_playersToEnter == _zoneLair2.getPlayersInside().size())
 		{
 			final BuffInfo traskenBuff = creature.getEffectList().getBuffInfoBySkillId(SKILL_TRASKEN_BUFF.getSkillId());
 			if (traskenBuff != null)

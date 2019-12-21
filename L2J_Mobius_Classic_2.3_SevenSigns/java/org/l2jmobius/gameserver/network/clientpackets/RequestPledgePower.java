@@ -54,23 +54,20 @@ public class RequestPledgePower implements IClientIncomingPacket
 		}
 		
 		player.sendPacket(new ManagePledgePower(client.getPlayer().getClan(), _action, _rank));
-		if (_action == 2)
+		if ((_action == 2) && player.isClanLeader())
 		{
-			if (player.isClanLeader())
+			if (_rank == 9)
 			{
-				if (_rank == 9)
-				{
-					// The rights below cannot be bestowed upon Academy members:
-					// Join a clan or be dismissed
-					// Title management, crest management, master management, level management,
-					// bulletin board administration
-					// Clan war, right to dismiss, set functions
-					// Auction, manage taxes, attack/defend registration, mercenary management
-					// => Leaves only CP_CL_VIEW_WAREHOUSE, CP_CH_OPEN_DOOR, CP_CS_OPEN_DOOR?
-					_privs &= ClanPrivilege.CL_VIEW_WAREHOUSE.getBitmask() | ClanPrivilege.CH_OPEN_DOOR.getBitmask() | ClanPrivilege.CS_OPEN_DOOR.getBitmask();
-				}
-				player.getClan().setRankPrivs(_rank, _privs);
+				// The rights below cannot be bestowed upon Academy members:
+				// Join a clan or be dismissed
+				// Title management, crest management, master management, level management,
+				// bulletin board administration
+				// Clan war, right to dismiss, set functions
+				// Auction, manage taxes, attack/defend registration, mercenary management
+				// => Leaves only CP_CL_VIEW_WAREHOUSE, CP_CH_OPEN_DOOR, CP_CS_OPEN_DOOR?
+				_privs &= ClanPrivilege.CL_VIEW_WAREHOUSE.getBitmask() | ClanPrivilege.CH_OPEN_DOOR.getBitmask() | ClanPrivilege.CS_OPEN_DOOR.getBitmask();
 			}
+			player.getClan().setRankPrivs(_rank, _privs);
 		}
 	}
 }

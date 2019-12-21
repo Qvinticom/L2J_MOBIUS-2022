@@ -95,7 +95,6 @@ public class RequestHardWareInfo implements IClientIncomingPacket
 			if (count >= Config.MAX_PLAYERS_PER_HWID)
 			{
 				Disconnection.of(client).defaultSequence(false);
-				return;
 			}
 		}
 	}

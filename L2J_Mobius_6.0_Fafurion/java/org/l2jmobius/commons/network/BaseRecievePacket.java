@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.commons.network;
 
+import java.nio.charset.StandardCharsets;
 import java.util.logging.Logger;
 
 /**
@@ -71,7 +72,7 @@ public abstract class BaseRecievePacket
 		String result = null;
 		try
 		{
-			result = new String(_decrypt, _off, _decrypt.length - _off, "UTF-16LE");
+			result = new String(_decrypt, _off, _decrypt.length - _off, StandardCharsets.UTF_16LE);
 			result = result.substring(0, result.indexOf(0x00));
 			_off += (result.length() * 2) + 2;
 		}

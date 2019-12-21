@@ -249,6 +249,7 @@ public class Q00790_ObtainingFerinsTrust extends Quest
 			case State.CREATED:
 			{
 				htmltext = "34055-01.htm";
+				// fallthrough?
 			}
 			case State.STARTED:
 			{

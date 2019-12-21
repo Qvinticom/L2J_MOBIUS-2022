@@ -204,30 +204,27 @@ public class DarkWaterDragon extends AbstractNpcAI
 	{
 		final int npcId = npc.getId();
 		final int npcObjId = npc.getObjectId();
-		if (npcId == FAFURION)
+		if ((npcId == FAFURION) && MY_TRACKING_SET.add(npcObjId))
 		{
-			if (MY_TRACKING_SET.add(npcObjId))
-			{
-				// Spawn 4 Detractors on spawn of Fafurion
-				final int x = npc.getX();
-				final int y = npc.getY();
-				addSpawn(DETRACTOR2, x + 100, y + 100, npc.getZ(), 0, false, 40000);
-				addSpawn(DETRACTOR1, x + 100, y - 100, npc.getZ(), 0, false, 40000);
-				addSpawn(DETRACTOR2, x - 100, y + 100, npc.getZ(), 0, false, 40000);
-				addSpawn(DETRACTOR1, x - 100, y - 100, npc.getZ(), 0, false, 40000);
-				cancelQuestTimer("first_spawn", npc, null);
-				cancelQuestTimer("second_spawn", npc, null);
-				cancelQuestTimer("third_spawn", npc, null);
-				cancelQuestTimer("fourth_spawn", npc, null);
-				cancelQuestTimer("fafurion_poison", npc, null);
-				cancelQuestTimer("fafurion_despawn", npc, null);
-				startQuestTimer("first_spawn", 2000, npc, null); // timer to delay timer "1"
-				startQuestTimer("second_spawn", 4000, npc, null); // timer to delay timer "2"
-				startQuestTimer("third_spawn", 8000, npc, null); // timer to delay timer "3"
-				startQuestTimer("fourth_spawn", 10000, npc, null); // timer to delay timer "4"
-				startQuestTimer("fafurion_poison", 3000, npc, null, true); // Every three seconds reduces Fafurions hp like it is poisoned
-				startQuestTimer("fafurion_despawn", 120000, npc, null); // Fafurion Kindred disappears after two minutes
-			}
+			// Spawn 4 Detractors on spawn of Fafurion
+			final int x = npc.getX();
+			final int y = npc.getY();
+			addSpawn(DETRACTOR2, x + 100, y + 100, npc.getZ(), 0, false, 40000);
+			addSpawn(DETRACTOR1, x + 100, y - 100, npc.getZ(), 0, false, 40000);
+			addSpawn(DETRACTOR2, x - 100, y + 100, npc.getZ(), 0, false, 40000);
+			addSpawn(DETRACTOR1, x - 100, y - 100, npc.getZ(), 0, false, 40000);
+			cancelQuestTimer("first_spawn", npc, null);
+			cancelQuestTimer("second_spawn", npc, null);
+			cancelQuestTimer("third_spawn", npc, null);
+			cancelQuestTimer("fourth_spawn", npc, null);
+			cancelQuestTimer("fafurion_poison", npc, null);
+			cancelQuestTimer("fafurion_despawn", npc, null);
+			startQuestTimer("first_spawn", 2000, npc, null); // timer to delay timer "1"
+			startQuestTimer("second_spawn", 4000, npc, null); // timer to delay timer "2"
+			startQuestTimer("third_spawn", 8000, npc, null); // timer to delay timer "3"
+			startQuestTimer("fourth_spawn", 10000, npc, null); // timer to delay timer "4"
+			startQuestTimer("fafurion_poison", 3000, npc, null, true); // Every three seconds reduces Fafurions hp like it is poisoned
+			startQuestTimer("fafurion_despawn", 120000, npc, null); // Fafurion Kindred disappears after two minutes
 		}
 		return super.onSpawn(npc);
 	}

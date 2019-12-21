@@ -50,6 +50,7 @@ public class AdminPetition implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
+			// Managed above?
 		}
 		
 		if (command.equals("admin_view_petitions"))

@@ -96,13 +96,10 @@ public class RequestShowResetShopList implements IClientIncomingPacket
 			return;
 		}
 		
-		if (requiredAdena > 0)
+		if ((requiredAdena > 0) && !player.reduceAdena(getClass().getSimpleName(), requiredAdena, null, true))
 		{
-			if (!player.reduceAdena(getClass().getSimpleName(), requiredAdena, null, true))
-			{
-				player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.RESTORE, ExResponseBeautyRegistReset.FAILURE));
-				return;
-			}
+			player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.RESTORE, ExResponseBeautyRegistReset.FAILURE));
+			return;
 		}
 		
 		player.getVariables().remove("visualHairId");

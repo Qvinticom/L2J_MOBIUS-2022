@@ -75,10 +75,7 @@ public class DailyMissionData implements IXmlReader
 			set.set("items", items);
 			
 			final List<ClassId> classRestriction = new ArrayList<>(1);
-			forEach(rewardNode, "classId", classRestrictionNode ->
-			{
-				classRestriction.add(ClassId.getClassId(Integer.parseInt(classRestrictionNode.getTextContent())));
-			});
+			forEach(rewardNode, "classId", classRestrictionNode -> classRestriction.add(ClassId.getClassId(Integer.parseInt(classRestrictionNode.getTextContent()))));
 			set.set("classRestriction", classRestriction);
 			
 			// Initial values in case handler doesn't exists

@@ -57,10 +57,7 @@ public class ClanWar
 		_startTime = System.currentTimeMillis();
 		_state = ClanWarState.BLOOD_DECLARATION;
 		
-		_cancelTask = ThreadPool.schedule(() ->
-		{
-			clanWarTimeout();
-		}, (_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) - System.currentTimeMillis());
+		_cancelTask = ThreadPool.schedule(this::clanWarTimeout, (_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) - System.currentTimeMillis());
 		
 		attacker.addWar(attacked.getId(), this);
 		attacked.addWar(attacker.getId(), this);
@@ -89,10 +86,7 @@ public class ClanWar
 		
 		if ((_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) > System.currentTimeMillis())
 		{
-			_cancelTask = ThreadPool.schedule(() ->
-			{
-				clanWarTimeout();
-			}, (_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) - System.currentTimeMillis());
+			_cancelTask = ThreadPool.schedule(this::clanWarTimeout, (_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) - System.currentTimeMillis());
 		}
 		
 		if (_endTime > 0)
@@ -101,17 +95,11 @@ public class ClanWar
 			
 			if (endTimePeriod > System.currentTimeMillis())
 			{
-				ThreadPool.schedule(() ->
-				{
-					ClanTable.getInstance().deleteClanWars(_attackerClanId, _attackedClanId);
-				}, 10000);
+				ThreadPool.schedule(() -> ClanTable.getInstance().deleteClanWars(_attackerClanId, _attackedClanId), 10000);
 			}
 			else
 			{
-				ThreadPool.schedule(() ->
-				{
-					ClanTable.getInstance().deleteClanWars(_attackerClanId, _attackedClanId);
-				}, endTimePeriod);
+				ThreadPool.schedule(() -> ClanTable.getInstance().deleteClanWars(_attackerClanId, _attackedClanId), endTimePeriod);
 			}
 		}
 	}
@@ -203,10 +191,7 @@ public class ClanWar
 		_winnerClanId = winnerClan.getId();
 		_endTime = System.currentTimeMillis();
 		
-		ThreadPool.schedule(() ->
-		{
-			ClanTable.getInstance().deleteClanWars(cancelor.getId(), winnerClan.getId());
-		}, (_endTime + TIME_TO_DELETION_AFTER_DEFEAT) - System.currentTimeMillis());
+		ThreadPool.schedule(() -> ClanTable.getInstance().deleteClanWars(cancelor.getId(), winnerClan.getId()), (_endTime + TIME_TO_DELETION_AFTER_DEFEAT) - System.currentTimeMillis());
 	}
 	
 	public void clanWarTimeout()
@@ -227,10 +212,7 @@ public class ClanWar
 			_state = ClanWarState.TIE;
 			_endTime = System.currentTimeMillis();
 			
-			ThreadPool.schedule(() ->
-			{
-				ClanTable.getInstance().deleteClanWars(attackerClan.getId(), attackedClan.getId());
-			}, (_endTime + TIME_TO_DELETION_AFTER_CANCELLATION) - System.currentTimeMillis());
+			ThreadPool.schedule(() -> ClanTable.getInstance().deleteClanWars(attackerClan.getId(), attackedClan.getId()), (_endTime + TIME_TO_DELETION_AFTER_CANCELLATION) - System.currentTimeMillis());
 		}
 	}
 	

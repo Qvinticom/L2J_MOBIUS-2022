@@ -37,7 +37,7 @@ import ai.AbstractNpcAI;
 public class AlchemistManager extends AbstractNpcAI
 {
 	// NPCs
-	private static final int ALCHEMISTS[] =
+	private static final int[] ALCHEMISTS =
 	{
 		33978, // Zephyra
 		33977, // Veruti

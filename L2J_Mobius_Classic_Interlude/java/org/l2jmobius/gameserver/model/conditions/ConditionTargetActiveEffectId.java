@@ -54,10 +54,6 @@ public class ConditionTargetActiveEffectId extends Condition
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		final BuffInfo info = effected.getEffectList().getBuffInfoBySkillId(_effectId);
-		if ((info != null) && ((_effectLvl == -1) || (_effectLvl <= info.getSkill().getLevel())))
-		{
-			return true;
-		}
-		return false;
+		return (info != null) && ((_effectLvl == -1) || (_effectLvl <= info.getSkill().getLevel()));
 	}
 }

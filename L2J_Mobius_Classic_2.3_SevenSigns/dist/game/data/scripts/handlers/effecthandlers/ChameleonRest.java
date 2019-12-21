@@ -59,12 +59,9 @@ public class ChameleonRest extends AbstractEffect
 			return false;
 		}
 		
-		if (effected.isPlayer())
+		if (effected.isPlayer() && !effected.getActingPlayer().isSitting())
 		{
-			if (!effected.getActingPlayer().isSitting())
-			{
-				return false;
-			}
+			return false;
 		}
 		
 		final double manaDam = _power * getTicksMultiplier();

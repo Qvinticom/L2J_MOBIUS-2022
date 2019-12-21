@@ -67,12 +67,12 @@ public class Unstuck implements IUserCommandHandler
 		}
 		
 		final Skill escape = SkillData.getInstance().getSkill(2099, 1); // 5 minutes escape
-		final Skill GM_escape = SkillData.getInstance().getSkill(2100, 1); // 1 second escape
+		final Skill gmEscape = SkillData.getInstance().getSkill(2100, 1); // 1 second escape
 		if (player.getAccessLevel().isGm())
 		{
-			if (GM_escape != null)
+			if (gmEscape != null)
 			{
-				player.doCast(GM_escape);
+				player.doCast(gmEscape);
 				return true;
 			}
 			player.sendMessage("You use Escape: 1 second.");

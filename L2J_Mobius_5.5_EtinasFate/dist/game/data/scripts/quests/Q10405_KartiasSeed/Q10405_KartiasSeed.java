@@ -138,13 +138,9 @@ public class Q10405_KartiasSeed extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
-		if ((qs != null) && qs.isStarted() && qs.isCond(1))
+		if ((qs != null) && qs.isStarted() && qs.isCond(1) && giveItemRandomly(killer, KARTIA_SEED, 1, 100, 1, true))
 		{
-			if (giveItemRandomly(killer, KARTIA_SEED, 1, 100, 1, true))
-			{
-				qs.setCond(2);
-			}
+			qs.setCond(2);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

@@ -609,15 +609,11 @@ public class Beleth extends AbstractNpcAI
 	@Override
 	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		if (!npc.isDead() && !npc.isCastingNow())
+		if (!npc.isDead() && !npc.isCastingNow() && (getRandom(100) < 40) && !World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 200).isEmpty())
 		{
-			if ((getRandom(100) < 40) && !World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 200).isEmpty())
-			{
-				npc.setTarget(player);
-				npc.doCast(FIREBALL.getSkill());
-			}
+			npc.setTarget(player);
+			npc.doCast(FIREBALL.getSkill());
 		}
-		
 		return null;
 	}
 	

@@ -54,14 +54,11 @@ public class CannotMoveAnymoreInShuttle implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.isInShuttle())
+		if (player.isInShuttle() && (player.getShuttle().getObjectId() == _boatId))
 		{
-			if (player.getShuttle().getObjectId() == _boatId)
-			{
-				player.setInVehiclePosition(new Location(_x, _y, _z));
-				player.setHeading(_heading);
-				player.broadcastPacket(new ExStopMoveInShuttle(player, _boatId));
-			}
+			player.setInVehiclePosition(new Location(_x, _y, _z));
+			player.setHeading(_heading);
+			player.broadcastPacket(new ExStopMoveInShuttle(player, _boatId));
 		}
 	}
 }

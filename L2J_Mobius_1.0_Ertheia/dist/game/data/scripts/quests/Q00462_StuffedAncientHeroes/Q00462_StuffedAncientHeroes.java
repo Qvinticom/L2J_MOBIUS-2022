@@ -132,6 +132,7 @@ public class Q00462_StuffedAncientHeroes extends Quest
 						break;
 					}
 					qs.setState(State.CREATED);
+					// fallthrough
 				}
 				case State.CREATED:
 				{

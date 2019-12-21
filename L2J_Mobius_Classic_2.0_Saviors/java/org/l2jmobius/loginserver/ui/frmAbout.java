@@ -91,6 +91,7 @@ public class frmAbout
 					}
 					catch (IOException e)
 					{
+						// Ignore.
 					}
 				}
 			}

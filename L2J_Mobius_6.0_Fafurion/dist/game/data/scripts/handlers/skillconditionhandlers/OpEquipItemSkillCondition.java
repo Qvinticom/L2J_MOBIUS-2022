@@ -45,21 +45,23 @@ public class OpEquipItemSkillCondition implements ISkillCondition
 		{
 			case CASTER:
 			{
-				return caster.getInventory().getItems(ItemInstance::isEquipped, i -> i.getId() == _itemId).size() > 0;
+				return !caster.getInventory().getItems(ItemInstance::isEquipped, i -> i.getId() == _itemId).isEmpty();
 			}
 			case TARGET:
 			{
 				if ((target != null) && target.isPlayer())
 				{
-					return target.getActingPlayer().getInventory().getItems(ItemInstance::isEquipped, i -> i.getId() == _itemId).size() > 0;
+					return !target.getActingPlayer().getInventory().getItems(ItemInstance::isEquipped, i -> i.getId() == _itemId).isEmpty();
 				}
+				break;
 			}
 			case BOTH:
 			{
 				if ((target != null) && target.isPlayer())
 				{
-					return (caster.getInventory().getItems(ItemInstance::isEquipped, i -> i.getId() == _itemId).size() > 0) && (target.getActingPlayer().getInventory().getItems(ItemInstance::isEquipped, i -> i.getId() == _itemId).size() > 0);
+					return !caster.getInventory().getItems(ItemInstance::isEquipped, i -> i.getId() == _itemId).isEmpty() && target.getActingPlayer().getInventory().getItems(ItemInstance::isEquipped, i -> i.getId() == _itemId).isEmpty();
 				}
+				break;
 			}
 		}
 		return false;

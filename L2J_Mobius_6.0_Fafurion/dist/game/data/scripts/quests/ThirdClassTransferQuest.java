@@ -16,7 +16,7 @@
  */
 package quests;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -59,7 +59,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 		33169,
 	};
 	// Items
-	private static final Map<Race, Integer> RACE_TAGS = new HashMap<>();
+	private static final Map<Race, Integer> RACE_TAGS = new EnumMap<>(Race.class);
 	static
 	{
 		RACE_TAGS.put(Race.HUMAN, 17748);

@@ -57,47 +57,44 @@ public class TeleportersData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		forEach(doc, "list", (list) ->
+		forEach(doc, "list", list -> forEach(list, "npc", npc ->
 		{
-			forEach(list, "npc", (npc) ->
+			final Map<String, TeleportHolder> teleList = new HashMap<>();
+			// Parse npc node child
+			final int npcId = parseInteger(npc.getAttributes(), "id");
+			forEach(npc, node ->
 			{
-				final Map<String, TeleportHolder> teleList = new HashMap<>();
-				// Parse npc node child
-				final int npcId = parseInteger(npc.getAttributes(), "id");
-				forEach(npc, (node) ->
+				switch (node.getNodeName())
 				{
-					switch (node.getNodeName())
+					case "teleport":
 					{
-						case "teleport":
+						final NamedNodeMap nodeAttrs = node.getAttributes();
+						// Parse attributes
+						final TeleportType type = parseEnum(nodeAttrs, TeleportType.class, "type");
+						final String name = parseString(nodeAttrs, "name", type.name());
+						// Parse locations
+						final TeleportHolder holder = new TeleportHolder(name, type);
+						forEach(node, "location", location -> holder.registerLocation(new StatsSet(parseAttributes(location))));
+						// Register holder
+						if (teleList.putIfAbsent(name, holder) != null)
 						{
-							final NamedNodeMap nodeAttrs = node.getAttributes();
-							// Parse attributes
-							final TeleportType type = parseEnum(nodeAttrs, TeleportType.class, "type");
-							final String name = parseString(nodeAttrs, "name", type.name());
-							// Parse locations
-							final TeleportHolder holder = new TeleportHolder(name, type);
-							forEach(node, "location", (location) -> holder.registerLocation(new StatsSet(parseAttributes(location))));
-							// Register holder
-							if (teleList.putIfAbsent(name, holder) != null)
-							{
-								LOGGER.warning("Duplicate teleport list (" + name + ") has been found for NPC: " + npcId);
-							}
-							break;
+							LOGGER.warning("Duplicate teleport list (" + name + ") has been found for NPC: " + npcId);
 						}
-						case "npcs":
-						{
-							forEach(node, "npc", (npcNode) ->
-							{
-								final int id = parseInteger(npcNode.getAttributes(), "id");
-								registerTeleportList(id, teleList);
-							});
-							break;
-						}
+						break;
 					}
-				});
-				registerTeleportList(npcId, teleList);
+					case "npcs":
+					{
+						forEach(node, "npc", npcNode ->
+						{
+							final int id = parseInteger(npcNode.getAttributes(), "id");
+							registerTeleportList(id, teleList);
+						});
+						break;
+					}
+				}
 			});
-		});
+			registerTeleportList(npcId, teleList);
+		}));
 	}
 	
 	public int getTeleporterCount()

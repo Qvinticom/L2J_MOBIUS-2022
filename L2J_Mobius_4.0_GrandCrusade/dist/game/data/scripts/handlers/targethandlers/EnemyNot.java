@@ -60,17 +60,14 @@ public class EnemyNot implements ITargetTypeHandler
 		if (!target.isAutoAttackable(creature))
 		{
 			// Check for cast range if character cannot move. TODO: char will start follow until within castrange, but if his moving is blocked by geodata, this msg will be sent.
-			if (dontMove)
+			if (dontMove && (creature.calculateDistance2D(target) > skill.getCastRange()))
 			{
-				if (creature.calculateDistance2D(target) > skill.getCastRange())
+				if (sendMessage)
 				{
-					if (sendMessage)
-					{
-						creature.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
-					}
-					
-					return null;
+					creature.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
 				}
+				
+				return null;
 			}
 			
 			if ((skill.isFlyType()) && !GeoEngine.getInstance().canMoveToTarget(creature.getX(), creature.getY(), creature.getZ(), target.getX(), target.getY(), target.getZ(), creature.getInstanceWorld()))

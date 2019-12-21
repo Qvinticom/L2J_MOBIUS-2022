@@ -113,16 +113,16 @@ public class Q10303_CrossroadsBetweenLightAndDarkness extends Quest
 				if (npc.getId() == JONAH)
 				{
 					npc.setScriptValue(0);
-					break;
 				}
+				break;
 			}
 			case "PRIEST":
 			{
 				if (npc.getId() == MYSTERIUS_PRIEST)
 				{
 					npc.setScriptValue(0);
-					break;
 				}
+				break;
 			}
 			case "32909-03.html":
 			{

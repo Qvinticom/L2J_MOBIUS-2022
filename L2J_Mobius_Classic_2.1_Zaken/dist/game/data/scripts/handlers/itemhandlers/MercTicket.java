@@ -47,10 +47,6 @@ public class MercTicket extends AbstractNpcAI implements IItemHandler
 {
 	private final Map<Integer, ItemInstance> _items = new ConcurrentHashMap<>();
 	
-	public MercTicket()
-	{
-	}
-	
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{

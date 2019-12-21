@@ -66,10 +66,7 @@ public class StatsVCmd implements IVoicedCommandHandler
 		
 		final StringBuilder replyMSG = new StringBuilder(300 + (pc.getEventStatus().getKills().size() * 50));
 		replyMSG.append("<html><body><center><font color=\"LEVEL\">[ L2J EVENT ENGINE ]</font></center><br><br>Statistics for player <font color=\"LEVEL\">" + pc.getName() + "</font><br>Total kills <font color=\"FF0000\">" + pc.getEventStatus().getKills().size() + "</font><br><br>Detailed list: <br>");
-		pc.getEventStatus().getKills().forEach((p, k) ->
-		{
-			replyMSG.append("<font color=\"FF0000\">" + p.getName() + "</font> killed " + k + " times.<br>");
-		});
+		pc.getEventStatus().getKills().forEach((p, k) -> replyMSG.append("<font color=\"FF0000\">" + p.getName() + "</font> killed " + k + " times.<br>"));
 		replyMSG.append("</body></html>");
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setHtml(replyMSG.toString());

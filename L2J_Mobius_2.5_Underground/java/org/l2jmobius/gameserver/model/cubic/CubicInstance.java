@@ -224,12 +224,9 @@ public class CubicInstance
 				return;
 			}
 			
-			if (_template.validateConditions(this, _owner, target) && cubicSkill.validateConditions(this, _owner, target))
+			if (_template.validateConditions(this, _owner, target) && cubicSkill.validateConditions(this, _owner, target) && (Rnd.get(100) < cubicSkill.getSuccessRate()))
 			{
-				if (Rnd.get(100) < cubicSkill.getSuccessRate())
-				{
-					activateCubicSkill(skill, target);
-				}
+				activateCubicSkill(skill, target);
 			}
 		}
 	}

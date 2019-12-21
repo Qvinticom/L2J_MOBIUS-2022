@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
 public class YeSagiraGuards extends AbstractNpcAI
 {
 	// NPCs
-	private static final int GUARDS[] =
+	private static final int[] GUARDS =
 	{
 		19152,
 		19153

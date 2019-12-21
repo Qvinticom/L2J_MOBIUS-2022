@@ -650,7 +650,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
+				LOGGER.warning(e.toString());
 			}
 		}
 		else if (command.startsWith("admin_find_dualbox"))
@@ -1231,9 +1231,9 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	/**
 	 * @param activeChar
-	 * @param CharacterToFind
+	 * @param characterToFind
 	 */
-	private void findCharacter(PlayerInstance activeChar, String CharacterToFind)
+	private void findCharacter(PlayerInstance activeChar, String characterToFind)
 	{
 		int CharactersFound = 0;
 		String name;
@@ -1247,7 +1247,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		for (PlayerInstance player : players)
 		{ // Add player info into new Table row
 			name = player.getName();
-			if (name.toLowerCase().contains(CharacterToFind.toLowerCase()))
+			if (name.toLowerCase().contains(characterToFind.toLowerCase()))
 			{
 				CharactersFound += 1;
 				replyMSG.append("<tr><td width=80><a action=\"bypass -h admin_character_info ");
@@ -1294,23 +1294,22 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	/**
 	 * @param activeChar
-	 * @param IpAdress
-	 * @throws IllegalArgumentException
+	 * @param ipAdress
 	 */
-	private void findCharactersPerIp(PlayerInstance activeChar, String IpAdress) throws IllegalArgumentException
+	private void findCharactersPerIp(PlayerInstance activeChar, String ipAdress)
 	{
 		boolean findDisconnected = false;
 		
-		if (IpAdress.equals("disconnected"))
+		if (ipAdress.equals("disconnected"))
 		{
 			findDisconnected = true;
 		}
-		else if (!IpAdress.matches("^(?:(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))\\.){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))$"))
+		else if (!ipAdress.matches("^(?:(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))\\.){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))$"))
 		{
 			throw new IllegalArgumentException("Malformed IPv4 number");
 		}
 		
-		int CharactersFound = 0;
+		int charactersFound = 0;
 		GameClient client;
 		String ip = "0.0.0.0";
 		final StringBuilder replyMSG = new StringBuilder(1000);
@@ -1342,14 +1341,14 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				
 				ip = client.getConnectionAddress().getHostAddress();
-				if (!ip.equals(IpAdress))
+				if (!ip.equals(ipAdress))
 				{
 					continue;
 				}
 			}
 			
 			final String name = player.getName();
-			CharactersFound += 1;
+			charactersFound += 1;
 			replyMSG.append("<tr><td width=80><a action=\"bypass -h admin_character_info ");
 			replyMSG.append(name);
 			replyMSG.append("\">");
@@ -1360,7 +1359,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			replyMSG.append(player.getLevel());
 			replyMSG.append("</td></tr>");
 			
-			if (CharactersFound > 20)
+			if (charactersFound > 20)
 			{
 				break;
 			}
@@ -1369,16 +1368,16 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		final String replyMSG2;
 		
-		if (CharactersFound == 0)
+		if (charactersFound == 0)
 		{
 			replyMSG2 = "s. Maybe they got d/c? :)";
 		}
-		else if (CharactersFound > 20)
+		else if (charactersFound > 20)
 		{
-			adminReply.replace("%number%", " more than " + CharactersFound);
+			adminReply.replace("%number%", " more than " + charactersFound);
 			replyMSG2 = "s.<br>In order to avoid you a client crash I won't <br1>display results beyond the 20th character.";
 		}
-		else if (CharactersFound == 1)
+		else if (charactersFound == 1)
 		{
 			replyMSG2 = ".";
 		}
@@ -1386,8 +1385,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			replyMSG2 = "s.";
 		}
-		adminReply.replace("%ip%", IpAdress);
-		adminReply.replace("%number%", String.valueOf(CharactersFound));
+		adminReply.replace("%ip%", ipAdress);
+		adminReply.replace("%number%", String.valueOf(charactersFound));
 		adminReply.replace("%end%", replyMSG2);
 		activeChar.sendPacket(adminReply);
 	}
@@ -1395,9 +1394,8 @@ public class AdminEditChar implements IAdminCommandHandler
 	/**
 	 * @param activeChar
 	 * @param characterName
-	 * @throws IllegalArgumentException
 	 */
-	private void findCharactersPerAccount(PlayerInstance activeChar, String characterName) throws IllegalArgumentException
+	private void findCharactersPerAccount(PlayerInstance activeChar, String characterName)
 	{
 		final PlayerInstance player = World.getInstance().getPlayer(characterName);
 		if (player == null)
@@ -1460,7 +1458,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		
 		final List<String> keys = new ArrayList<>(dualboxIPs.keySet());
-		keys.sort(Comparator.comparing(s -> dualboxIPs.get(s)).reversed());
+		keys.sort(Comparator.comparing(dualboxIPs::get).reversed());
 		
 		final StringBuilder results = new StringBuilder();
 		for (String dualboxIP : keys)
@@ -1514,7 +1512,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		
 		final List<IpPack> keys = new ArrayList<>(dualboxIPs.keySet());
-		keys.sort(Comparator.comparing(s -> dualboxIPs.get(s)).reversed());
+		keys.sort(Comparator.comparing(dualboxIPs::get).reversed());
 		
 		final StringBuilder results = new StringBuilder();
 		for (IpPack dualboxIP : keys)

@@ -120,7 +120,7 @@ public class MuseumDungeon extends AbstractInstance
 					
 					if (instance.getNpcs(THIEF).isEmpty())
 					{
-						instance.spawnGroup("thiefs").forEach(npc -> npc.setRunning());
+						instance.spawnGroup("thiefs").forEach(Npc::setRunning);
 					}
 				}
 			}

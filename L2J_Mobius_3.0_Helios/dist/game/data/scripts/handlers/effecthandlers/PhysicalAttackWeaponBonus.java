@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 
 import org.l2jmobius.Config;
@@ -45,7 +45,7 @@ public class PhysicalAttackWeaponBonus extends AbstractEffect
 	private final boolean _overHit;
 	private final double _pDefMod;
 	
-	private final Map<WeaponType, Double> _weaponBonus = new HashMap<>();
+	private final Map<WeaponType, Double> _weaponBonus = new EnumMap<>(WeaponType.class);
 	
 	public PhysicalAttackWeaponBonus(StatsSet params)
 	{

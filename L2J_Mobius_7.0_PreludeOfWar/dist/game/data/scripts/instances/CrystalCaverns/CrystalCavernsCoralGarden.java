@@ -80,9 +80,8 @@ public class CrystalCavernsCoralGarden extends AbstractInstance
 				}
 				case "LOOP_TIMER":
 				{
-					player = npcVars.getObject("PLAYER_OBJECT", PlayerInstance.class);
-					
-					if ((player != null) && (npc.calculateDistance3D(player) > PLAYER_MAX_DISTANCE) && npcVars.getBoolean("NPC_FOLLOWING", true))
+					final PlayerInstance plr = npcVars.getObject("PLAYER_OBJECT", PlayerInstance.class);
+					if ((plr != null) && (npc.calculateDistance3D(plr) > PLAYER_MAX_DISTANCE) && npcVars.getBoolean("NPC_FOLLOWING", true))
 					{
 						WalkingManager.getInstance().cancelMoving(npc);
 						addMoveToDesire(npc, new Location(npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-150, 150), npc.getZ()), 23);
@@ -143,19 +142,16 @@ public class CrystalCavernsCoralGarden extends AbstractInstance
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isInInstance(instance))
+		if (isInInstance(instance) && npc.isScriptValue(0))
 		{
-			if (npc.isScriptValue(0))
-			{
-				npc.setScriptValue(1);
-				npc.getVariables().set("PLAYER_OBJECT", player);
-				npc.setNameString(NpcStringId.TRAITOR_CRYSTALLINE_GOLEM);
-				npc.setTitleString(NpcStringId.GIVEN_TO_S1);
-				npc.setTitle(player.getName());
-				npc.broadcastInfo();
-				WalkingManager.getInstance().startMoving(npc, npc.getId() == GOLEM_1 ? "gd_golem_1" : "gd_golem_2");
-				getTimers().addRepeatingTimer("LOOP_TIMER", 500, npc, null);
-			}
+			npc.setScriptValue(1);
+			npc.getVariables().set("PLAYER_OBJECT", player);
+			npc.setNameString(NpcStringId.TRAITOR_CRYSTALLINE_GOLEM);
+			npc.setTitleString(NpcStringId.GIVEN_TO_S1);
+			npc.setTitle(player.getName());
+			npc.broadcastInfo();
+			WalkingManager.getInstance().startMoving(npc, npc.getId() == GOLEM_1 ? "gd_golem_1" : "gd_golem_2");
+			getTimers().addRepeatingTimer("LOOP_TIMER", 500, npc, null);
 		}
 		return null;
 	}

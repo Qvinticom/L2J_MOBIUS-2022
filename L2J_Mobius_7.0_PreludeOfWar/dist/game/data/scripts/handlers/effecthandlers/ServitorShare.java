@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
  */
 public class ServitorShare extends AbstractEffect
 {
-	private final Map<Stats, Float> _sharedStats = new HashMap<>();
+	private final Map<Stats, Float> _sharedStats = new EnumMap<>(Stats.class);
 	
 	public ServitorShare(StatsSet params)
 	{

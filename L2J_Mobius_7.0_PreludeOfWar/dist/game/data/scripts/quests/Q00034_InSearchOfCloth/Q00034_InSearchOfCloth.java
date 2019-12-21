@@ -182,8 +182,8 @@ public class Q00034_InSearchOfCloth extends Quest
 				if (npc.getId() == RADIA)
 				{
 					htmltext = "30088-01.htm";
-					break;
 				}
+				break;
 			}
 			case State.STARTED:
 			{

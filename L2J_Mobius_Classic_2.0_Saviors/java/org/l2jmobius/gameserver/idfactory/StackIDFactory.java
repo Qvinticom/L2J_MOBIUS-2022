@@ -45,17 +45,17 @@ public class StackIDFactory extends IdFactory
 		{
 			// con.createStatement().execute("drop table if exists tmp_obj_id");
 			
-			final Integer[] tmp_obj_ids = extractUsedObjectIDTable();
-			if (tmp_obj_ids.length > 0)
+			final Integer[] tmpObjIds = extractUsedObjectIDTable();
+			if (tmpObjIds.length > 0)
 			{
-				_curOID = tmp_obj_ids[tmp_obj_ids.length - 1];
+				_curOID = tmpObjIds[tmpObjIds.length - 1];
 			}
 			LOGGER.info("Max Id = " + _curOID);
 			
-			int N = tmp_obj_ids.length;
-			for (int idx = 0; idx < N; idx++)
+			int n = tmpObjIds.length;
+			for (int idx = 0; idx < n; idx++)
 			{
-				N = insertUntil(tmp_obj_ids, idx, N, con);
+				n = insertUntil(tmpObjIds, idx, n, con);
 			}
 			
 			_curOID++;
@@ -68,13 +68,13 @@ public class StackIDFactory extends IdFactory
 		}
 	}
 	
-	private int insertUntil(Integer[] tmp_obj_ids, int idx, int N, Connection con) throws SQLException
+	private int insertUntil(Integer[] tmpObjIds, int idx, int n, Connection con) throws SQLException
 	{
-		final int id = tmp_obj_ids[idx];
+		final int id = tmpObjIds[idx];
 		if (id == _tempOID)
 		{
 			_tempOID++;
-			return N;
+			return n;
 		}
 		// check these IDs not present in DB
 		if (Config.BAD_ID_CHECKING)
@@ -100,17 +100,17 @@ public class StackIDFactory extends IdFactory
 		}
 		
 		// int hole = id - _curOID;
-		final int hole = (id - _tempOID) > (N - idx) ? N - idx : id - _tempOID;
+		final int hole = (id - _tempOID) > (n - idx) ? n - idx : id - _tempOID;
 		for (int i = 1; i <= hole; i++)
 		{
 			_freeOIDStack.push(_tempOID);
 			_tempOID++;
 		}
-		if (hole < (N - idx))
+		if (hole < (n - idx))
 		{
 			_tempOID++;
 		}
-		return N - hole;
+		return n - hole;
 	}
 	
 	public static IdFactory getInstance()

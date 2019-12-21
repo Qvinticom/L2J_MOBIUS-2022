@@ -23,7 +23,6 @@ import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -239,7 +238,7 @@ public class EvilIncubator extends AbstractInstance
 							if (helperCount == 2)
 							{
 								st.setCond(7, true);
-								World.getInstance().getVisibleObjectsInRange(world.getNpc(ADOLPH), FriendlyNpcInstance.class, 1000).forEach(c -> c.deleteMe());
+								World.getInstance().getVisibleObjectsInRange(world.getNpc(ADOLPH), FriendlyNpcInstance.class, 1000).forEach(FriendlyNpcInstance::deleteMe);
 							}
 						}
 						break;
@@ -336,6 +335,8 @@ public class EvilIncubator extends AbstractInstance
 						{
 							st.setCond(13, true);
 							giveItems(player, SOE, 1);
+							htmltext = "33170-08.html";
+							break;
 						}
 						case 13:
 						{
@@ -436,21 +437,12 @@ public class EvilIncubator extends AbstractInstance
 				
 				st.setCond(12, true);
 			}
-			else if (waveId < 8)
+			else if ((waveId < 8) && world.getAliveNpcs(MONSTERS).isEmpty())
 			{
-				if (world.getAliveNpcs(MONSTERS).isEmpty())
-				{
-					getTimers().addTimer("SPAWN_WAVE", 5000, e -> manageWaveSpawn(world));
-				}
+				getTimers().addTimer("SPAWN_WAVE", 5000, e -> manageWaveSpawn(world));
 			}
 			getTimers().addTimer("WORLD_ATTACK", 1000, e -> managerWorldAttack(world, null));
 		}
-	}
-	
-	@Override
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
-	{
-		
 	}
 	
 	private void manageWaveSpawn(Instance world)

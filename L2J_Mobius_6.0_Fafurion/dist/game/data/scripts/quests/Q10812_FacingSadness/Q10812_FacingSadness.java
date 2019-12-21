@@ -138,8 +138,8 @@ public class Q10812_FacingSadness extends Quest
 				{
 					qs.startQuest();
 					htmltext = event;
-					break;
 				}
+				break;
 			}
 			case "31620-08.html":
 			{

@@ -54,7 +54,7 @@ public class TwoHandedSwordBonus extends AbstractEffect
 	@Override
 	public void pump(Creature effected, Skill skill)
 	{
-		if (((_weaponTypeCondition == null) || _weaponTypeCondition.test(effected, effected, skill)) && ((_slotCondition == null) || _slotCondition.test(effected, effected, skill)))
+		if (_weaponTypeCondition.test(effected, effected, skill) && _slotCondition.test(effected, effected, skill))
 		{
 			switch (_pAtkmode)
 			{

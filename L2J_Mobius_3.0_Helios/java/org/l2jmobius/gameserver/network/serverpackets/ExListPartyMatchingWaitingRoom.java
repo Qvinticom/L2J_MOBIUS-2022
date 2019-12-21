@@ -39,7 +39,7 @@ public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 	private final int _size;
 	private final List<PlayerInstance> _players = new LinkedList<>();
 	
-	public ExListPartyMatchingWaitingRoom(PlayerInstance player, int page, int minLevel, int maxLevel, List<ClassId> classIds, String query)
+	public ExListPartyMatchingWaitingRoom(int page, int minLevel, int maxLevel, List<ClassId> classIds, String query)
 	{
 		final List<PlayerInstance> players = MatchingRoomManager.getInstance().getPlayerInWaitingList(minLevel, maxLevel, classIds, query);
 		
@@ -70,9 +70,9 @@ public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 			packet.writeD(player.getLevel());
 			final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
 			packet.writeD((instance != null) && (instance.getTemplateId() >= 0) ? instance.getTemplateId() : -1);
-			final Map<Integer, Long> _instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player);
-			packet.writeD(_instanceTimes.size());
-			for (Entry<Integer, Long> entry : _instanceTimes.entrySet())
+			final Map<Integer, Long> instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player);
+			packet.writeD(instanceTimes.size());
+			for (Entry<Integer, Long> entry : instanceTimes.entrySet())
 			{
 				final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
 				packet.writeD(entry.getKey());

@@ -16,8 +16,6 @@
  */
 package events.MasterOfEnchanting;
 
-import java.util.Date;
-
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -62,9 +60,6 @@ public class MasterOfEnchanting extends LongTimeEvent
 		9572
 	};
 	
-	@SuppressWarnings("deprecation")
-	private static final Date EVENT_START = new Date(2011, 7, 1);
-	
 	private MasterOfEnchanting()
 	{
 		addStartNpc(MASTER_YOGI);
@@ -93,8 +88,8 @@ public class MasterOfEnchanting extends LongTimeEvent
 		{
 			final long curTime = System.currentTimeMillis();
 			final String value = player.getVariables().getString("MasterOfEnchanting");
-			final long reuse = value == "" ? 0 : Long.parseLong(value);
-			if (player.getCreateDate().after(EVENT_START))
+			final long reuse = value.equals("") ? 0 : Long.parseLong(value);
+			if (player.getCreateDate().after(getEventPeriod().getStartDate()))
 			{
 				return "32599-bidth.htm";
 			}

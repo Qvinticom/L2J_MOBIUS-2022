@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EnumMap;
 import java.util.EnumSet;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -99,7 +98,7 @@ public class Raina extends AbstractNpcAI
 		subclassSetMap.put(ClassId.SPELLHOWLER, subclasseSet5);
 	}
 	
-	private static final Map<CategoryType, Integer> classCloak = new HashMap<>();
+	private static final Map<CategoryType, Integer> classCloak = new EnumMap<>(CategoryType.class);
 	static
 	{
 		classCloak.put(CategoryType.SIXTH_SIGEL_GROUP, 30310); // Abelius Cloak
@@ -112,7 +111,7 @@ public class Raina extends AbstractNpcAI
 		classCloak.put(CategoryType.SIXTH_EOLH_GROUP, 30317); // Laksis Cloak Grade
 	}
 	
-	private static final Map<CategoryType, Integer> powerItem = new HashMap<>();
+	private static final Map<CategoryType, Integer> powerItem = new EnumMap<>(CategoryType.class);
 	static
 	{
 		powerItem.put(CategoryType.SIXTH_SIGEL_GROUP, 32264); // Abelius Power
@@ -260,7 +259,7 @@ public class Raina extends AbstractNpcAI
 				}
 				break;
 			}
-			case "changeSubclass": // TODO: Finish me
+			case "changeSubclass":
 			{
 				if (player.isTransformed())
 				{

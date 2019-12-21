@@ -63,7 +63,7 @@ public class QuestLink implements IBypassHandler
 		}
 		else
 		{
-			final int questNameEnd = quest.indexOf(" ");
+			final int questNameEnd = quest.indexOf(' ');
 			if (questNameEnd == -1)
 			{
 				showQuestWindow(player, (Npc) target, quest);
@@ -133,7 +133,7 @@ public class QuestLink implements IBypassHandler
 							final NSLocalisation nsl = ns.getLocalisation(player.getLang());
 							if (nsl != null)
 							{
-								localisation = nsl.getLocalisation(Collections.EMPTY_LIST);
+								localisation = nsl.getLocalisation(Collections.emptyList());
 							}
 						}
 					}
@@ -153,7 +153,7 @@ public class QuestLink implements IBypassHandler
 							final NSLocalisation nsl = ns.getLocalisation(player.getLang());
 							if (nsl != null)
 							{
-								localisation = nsl.getLocalisation(Collections.EMPTY_LIST);
+								localisation = nsl.getLocalisation(Collections.emptyList());
 							}
 						}
 					}
@@ -178,7 +178,7 @@ public class QuestLink implements IBypassHandler
 						final NSLocalisation nsl = ns.getLocalisation(player.getLang());
 						if (nsl != null)
 						{
-							localisation = nsl.getLocalisation(Collections.EMPTY_LIST);
+							localisation = nsl.getLocalisation(Collections.emptyList());
 						}
 					}
 				}
@@ -198,7 +198,7 @@ public class QuestLink implements IBypassHandler
 						final NSLocalisation nsl = ns.getLocalisation(player.getLang());
 						if (nsl != null)
 						{
-							localisation = nsl.getLocalisation(Collections.EMPTY_LIST);
+							localisation = nsl.getLocalisation(Collections.emptyList());
 						}
 					}
 				}
@@ -225,7 +225,7 @@ public class QuestLink implements IBypassHandler
 		}
 		
 		// Send a Server->Client packet NpcHtmlMessage to the PlayerInstance in order to display the message of the NpcInstance
-		content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
+		content = content.replace("%objectId%", String.valueOf(npc.getObjectId()));
 		player.sendPacket(new NpcHtmlMessage(npc.getObjectId(), content));
 	}
 	
@@ -258,19 +258,12 @@ public class QuestLink implements IBypassHandler
 				return;
 			}
 			
-			if (qs == null)
+			if ((qs == null) && (q.getId() >= 1) && (q.getId() < 20000) && (player.getAllActiveQuests().size() > 40))
 			{
-				if ((q.getId() >= 1) && (q.getId() < 20000))
-				{
-					// Too many ongoing quests.
-					if (player.getAllActiveQuests().size() > 40)
-					{
-						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-						html.setFile(player, "data/html/fullquest.html");
-						player.sendPacket(html);
-						return;
-					}
-				}
+				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+				html.setFile(player, "data/html/fullquest.html");
+				player.sendPacket(html);
+				return;
 			}
 			
 			q.notifyTalk(npc, player);
@@ -283,7 +276,7 @@ public class QuestLink implements IBypassHandler
 		// Send a Server->Client packet NpcHtmlMessage to the PlayerInstance in order to display the message of the NpcInstance
 		if (content != null)
 		{
-			content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
+			content = content.replace("%objectId%", String.valueOf(npc.getObjectId()));
 			player.sendPacket(new NpcHtmlMessage(npc.getObjectId(), content));
 		}
 		

@@ -187,7 +187,7 @@ public class Disconnection
 	{
 		if (_player != null)
 		{
-			ThreadPool.schedule(() -> defaultSequence(), _player.canLogout() ? 0 : AttackStanceTaskManager.COMBAT_TIME);
+			ThreadPool.schedule(this::defaultSequence, _player.canLogout() ? 0 : AttackStanceTaskManager.COMBAT_TIME);
 		}
 	}
 }

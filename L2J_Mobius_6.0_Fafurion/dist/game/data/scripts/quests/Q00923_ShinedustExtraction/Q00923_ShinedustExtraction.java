@@ -245,6 +245,7 @@ public class Q00923_ShinedustExtraction extends Quest
 			case State.CREATED:
 			{
 				htmltext = "34217-01.htm";
+				// fallthrough?
 			}
 			case State.STARTED:
 			{

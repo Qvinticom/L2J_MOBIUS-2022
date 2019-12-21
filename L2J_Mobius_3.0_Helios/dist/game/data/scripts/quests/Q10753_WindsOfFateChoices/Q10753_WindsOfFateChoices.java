@@ -418,7 +418,6 @@ public class Q10753_WindsOfFateChoices extends Quest
 						break;
 					}
 					htmltext = "33943-00.html";
-					break;
 				}
 				else if (npc.getId() == AYANTHE)
 				{
@@ -428,8 +427,8 @@ public class Q10753_WindsOfFateChoices extends Quest
 						break;
 					}
 					htmltext = "33942-00.html";
-					break;
 				}
+				break;
 			}
 			case State.STARTED:
 			{
@@ -621,44 +620,44 @@ public class Q10753_WindsOfFateChoices extends Quest
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(2))
 		{
-			int EyeCount = qs.getInt(CRYSTAL_EYE_VAR);
-			int PurityCount = qs.getInt(BROKEN_STONE_OF_PURITY_VAR);
-			int FlaskCount = qs.getInt(EMPTY_REGEANT_FLASK_VAR);
+			int eyeCount = qs.getInt(CRYSTAL_EYE_VAR);
+			int purityCount = qs.getInt(BROKEN_STONE_OF_PURITY_VAR);
+			int flaskCount = qs.getInt(EMPTY_REGEANT_FLASK_VAR);
 			
 			switch (npc.getId())
 			{
 				case QUEST_MONSTER_NEBULITE_EYE:
 				{
-					if ((EyeCount < 3) && (getRandom(100) > 50))
+					if ((eyeCount < 3) && (getRandom(100) > 50))
 					{
 						giveItems(killer, CRYSTAL_EYE, 1);
-						qs.set(CRYSTAL_EYE_VAR, ++EyeCount);
+						qs.set(CRYSTAL_EYE_VAR, ++eyeCount);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
 				}
 				case QUEST_MONSTER_NEBULITE_WATCH:
 				{
-					if ((PurityCount < 3) && (getRandom(100) > 50))
+					if ((purityCount < 3) && (getRandom(100) > 50))
 					{
 						giveItems(killer, BROKEN_STONE_OF_PURITY, 1);
-						qs.set(BROKEN_STONE_OF_PURITY_VAR, ++PurityCount);
+						qs.set(BROKEN_STONE_OF_PURITY_VAR, ++purityCount);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
 				}
 				case QUEST_MONSTER_NEBULITE_GOLEM:
 				{
-					if ((FlaskCount < 3) && (getRandom(100) > 50))
+					if ((flaskCount < 3) && (getRandom(100) > 50))
 					{
 						giveItems(killer, MIRACLE_DRUG_OF_ENCHANTMENT, 1);
-						qs.set(EMPTY_REGEANT_FLASK_VAR, ++FlaskCount);
+						qs.set(EMPTY_REGEANT_FLASK_VAR, ++flaskCount);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
 				}
 			}
-			if ((EyeCount >= 3) && (PurityCount >= 3) && (FlaskCount >= 3))
+			if ((eyeCount >= 3) && (purityCount >= 3) && (flaskCount >= 3))
 			{
 				qs.setCond(0);
 				qs.setCond(3, true);

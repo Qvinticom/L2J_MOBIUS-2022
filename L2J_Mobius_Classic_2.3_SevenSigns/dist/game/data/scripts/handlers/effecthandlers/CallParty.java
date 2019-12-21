@@ -51,12 +51,9 @@ public class CallParty extends AbstractEffect
 		
 		for (PlayerInstance partyMember : party.getMembers())
 		{
-			if (CallPc.checkSummonTargetStatus(partyMember, effector.getActingPlayer()))
+			if (CallPc.checkSummonTargetStatus(partyMember, effector.getActingPlayer()) && (effector != partyMember))
 			{
-				if (effector != partyMember)
-				{
-					partyMember.teleToLocation(effector.getLocation(), true);
-				}
+				partyMember.teleToLocation(effector.getLocation(), true);
 			}
 		}
 	}

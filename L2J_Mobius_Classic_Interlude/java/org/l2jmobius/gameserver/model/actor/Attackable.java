@@ -615,7 +615,7 @@ public class Attackable extends Npc
 						// Distribute Experience and SP rewards to PlayerInstance Party members in the known area of the last attacker
 						if (partyDmg > 0)
 						{
-							attackerParty.distributeXpAndSp(exp, sp, rewardedMembers, partyLvl, partyDmg, this);
+							attackerParty.distributeXpAndSp(exp, sp, rewardedMembers, partyLvl, this);
 						}
 					}
 				}

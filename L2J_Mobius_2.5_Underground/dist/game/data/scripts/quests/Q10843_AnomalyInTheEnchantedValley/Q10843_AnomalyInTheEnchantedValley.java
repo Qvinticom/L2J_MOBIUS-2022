@@ -99,8 +99,8 @@ public class Q10843_AnomalyInTheEnchantedValley extends Quest
 				if (npc.getId() == CRONOS)
 				{
 					htmltext = "30610-01.htm";
-					break;
 				}
+				break;
 			}
 			case State.STARTED:
 			{
@@ -111,16 +111,16 @@ public class Q10843_AnomalyInTheEnchantedValley extends Quest
 						if (qs.isCond(1))
 						{
 							htmltext = "30610-06.html";
-							break;
 						}
+						break;
 					}
 					case MIMYU:
 					{
 						if (qs.isCond(1))
 						{
 							htmltext = "30747-01.html";
-							break;
 						}
+						break;
 					}
 				}
 				break;

@@ -64,7 +64,7 @@ public class ChatShout implements IChatHandler
 			final int region = MapRegionManager.getInstance().getMapRegionLocId(activeChar);
 			for (PlayerInstance player : World.getInstance().getPlayers())
 			{
-				if ((region == MapRegionManager.getInstance().getMapRegionLocId(player)) && !BlockList.isBlocked(player, activeChar) && (player.getInstanceId() == activeChar.getInstanceId()) && !BlockList.isBlocked(player, activeChar))
+				if ((region == MapRegionManager.getInstance().getMapRegionLocId(player)) && !BlockList.isBlocked(player, activeChar) && (player.getInstanceId() == activeChar.getInstanceId()) && !BlockList.isBlocked(activeChar, player))
 				{
 					if (Config.FACTION_SYSTEM_ENABLED)
 					{

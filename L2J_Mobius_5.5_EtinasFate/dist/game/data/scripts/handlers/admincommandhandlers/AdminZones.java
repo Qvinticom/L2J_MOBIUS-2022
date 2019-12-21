@@ -65,17 +65,14 @@ import ai.AbstractNpcAI;
  */
 public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(AdminPathNode.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AdminZones.class.getName());
+	
 	private final Map<Integer, ZoneNodeHolder> _zones = new ConcurrentHashMap<>();
 	
 	private static final String[] COMMANDS =
 	{
 		"admin_zones",
 	};
-	
-	public AdminZones()
-	{
-	}
 	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)

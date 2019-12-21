@@ -206,35 +206,29 @@ public class KimerianCommon extends AbstractInstance
 	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isInInstance(instance))
+		if (isInInstance(instance) && (npc.getId() == KIMERIAN) && (npc.getCurrentHpPercent() <= 50) && npc.getVariables().getBoolean("CAN_ACTIVATE_INVUL", true))
 		{
-			if (npc.getId() == KIMERIAN)
+			npc.getVariables().set("CAN_ACTIVATE_INVUL", false);
+			npc.setTargetable(false);
+			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.PHANTOM_IMAGE);
+			getTimers().addRepeatingTimer("KIMERIAN_INVUL_END", 60000, npc, player);
+			
+			for (int i = 0; i < 5; i++)
 			{
-				if ((npc.getCurrentHpPercent() <= 50) && npc.getVariables().getBoolean("CAN_ACTIVATE_INVUL", true))
-				{
-					npc.getVariables().set("CAN_ACTIVATE_INVUL", false);
-					npc.setTargetable(false);
-					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.PHANTOM_IMAGE);
-					getTimers().addRepeatingTimer("KIMERIAN_INVUL_END", 60000, npc, player);
-					
-					for (int i = 0; i < 5; i++)
-					{
-						final Npc ghost = addSpawn(KIMERIAN_GHOST, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, player), false, 0, false, instance.getId());
-						addAttackPlayerDesire(ghost, player, 23);
-					}
-					
-					npc.disableCoreAI(true);
-					npc.breakAttack();
-					npc.breakCast();
-					((Attackable) npc).clearAggroList();
-					
-					getTimers().addTimer("KIMERIAN_INVUL_START", 6000, n ->
-					{
-						addSkillCastDesire(npc, npc, INVUL_SKILL, 23);
-						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.FOOLISH_INSIGNIFICANT_CREATURES_HOW_DARE_YOU_CHALLENGE_ME);
-					});
-				}
+				final Npc ghost = addSpawn(KIMERIAN_GHOST, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, player), false, 0, false, instance.getId());
+				addAttackPlayerDesire(ghost, player, 23);
 			}
+			
+			npc.disableCoreAI(true);
+			npc.breakAttack();
+			npc.breakCast();
+			((Attackable) npc).clearAggroList();
+			
+			getTimers().addTimer("KIMERIAN_INVUL_START", 6000, n ->
+			{
+				addSkillCastDesire(npc, npc, INVUL_SKILL, 23);
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.FOOLISH_INSIGNIFICANT_CREATURES_HOW_DARE_YOU_CHALLENGE_ME);
+			});
 		}
 		return super.onAttack(npc, player, damage, isSummon);
 	}

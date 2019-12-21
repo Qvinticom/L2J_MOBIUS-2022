@@ -56,7 +56,6 @@ public class MonsterRace
 					if (_monsters[j].getTemplate().getId() == (id + random))
 					{
 						random = Rnd.get(24);
-						continue;
 					}
 				}
 				break;

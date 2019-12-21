@@ -258,6 +258,7 @@ public class Q00775_RetrievingTheChaosFragment extends Quest
 			case State.CREATED:
 			{
 				htmltext = "31595-01.htm";
+				// fallthrough?
 			}
 			case State.STARTED:
 			{

@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import java.util.Collections;
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.model.StatsSet;
@@ -42,7 +42,7 @@ public class DispelBySlot extends AbstractEffect
 		_dispel = params.getString("dispel");
 		if ((_dispel != null) && !_dispel.isEmpty())
 		{
-			_dispelAbnormals = new HashMap<>();
+			_dispelAbnormals = new EnumMap<>(AbnormalType.class);
 			for (String ngtStack : _dispel.split(";"))
 			{
 				final String[] ngt = ngtStack.split(",");

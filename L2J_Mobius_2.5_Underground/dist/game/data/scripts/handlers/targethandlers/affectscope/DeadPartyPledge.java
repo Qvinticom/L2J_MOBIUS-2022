@@ -66,15 +66,12 @@ public class DeadPartyPledge implements IAffectScopeHandler
 					return false;
 				}
 				
-				if (p != player)
+				if ((p != player) && ((p.getClanId() == 0) || (p.getClanId() != player.getClanId())))
 				{
-					if ((p.getClanId() == 0) || (p.getClanId() != player.getClanId()))
+					final Party targetParty = p.getParty();
+					if ((party == null) || (targetParty == null) || (party.getLeaderObjectId() != targetParty.getLeaderObjectId()))
 					{
-						final Party targetParty = p.getParty();
-						if ((party == null) || (targetParty == null) || (party.getLeaderObjectId() != targetParty.getLeaderObjectId()))
-						{
-							return false;
-						}
+						return false;
 					}
 				}
 				if ((affectObject != null) && !affectObject.checkAffectedObject(creature, p))

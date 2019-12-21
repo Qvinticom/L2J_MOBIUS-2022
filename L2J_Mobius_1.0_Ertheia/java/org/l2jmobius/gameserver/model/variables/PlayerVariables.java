@@ -195,7 +195,7 @@ public class PlayerVariables extends AbstractVariables
 			{
 				continue;
 			}
-			else if (result.isEmpty())
+			if (result.isEmpty())
 			{
 				result = s;
 			}

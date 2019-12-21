@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -38,7 +38,7 @@ public class CategoryData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(CategoryData.class.getName());
 	
-	private final Map<CategoryType, Set<Integer>> _categories = new HashMap<>();
+	private final Map<CategoryType, Set<Integer>> _categories = new EnumMap<>(CategoryType.class);
 	
 	protected CategoryData()
 	{

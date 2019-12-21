@@ -42,7 +42,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		"admin_fcs",
 	};
 	
-	// TODO: remove from gm list etc etc
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
@@ -212,8 +211,8 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		
 		for (int i = 0; i < 10000; i++)
 		{
-			final boolean isMiss1 = Formulas.calcHitMiss(npc1, npc2);
-			if (isMiss1)
+			final boolean calcMiss1 = Formulas.calcHitMiss(npc1, npc2);
+			if (calcMiss1)
 			{
 				miss1++;
 			}
@@ -228,14 +227,14 @@ public class AdminFightCalculator implements IAdminCommandHandler
 				crit1++;
 			}
 			
-			double npc1Patk1 = npc1.getPAtk(npc2);
-			npc1Patk1 += npc1.getRandomDamageMultiplier();
-			patk1 += npc1Patk1;
+			double npcPatk1 = npc1.getPAtk(npc2);
+			npcPatk1 += npc1.getRandomDamageMultiplier();
+			patk1 += npcPatk1;
 			
-			final double npc1Pdef1 = npc1.getPDef(npc2);
-			pdef1 += npc1Pdef1;
+			final double npcPdef1 = npc1.getPDef(npc2);
+			pdef1 += npcPdef1;
 			
-			if (!isMiss1)
+			if (!calcMiss1)
 			{
 				final double calcDmg1 = Formulas.calcPhysDam(npc1, npc2, null, calcShld1, calcCrit1, false);
 				dmg1 += calcDmg1;
@@ -261,9 +260,9 @@ public class AdminFightCalculator implements IAdminCommandHandler
 				crit2++;
 			}
 			
-			double npc2Patk2 = npc2.getPAtk(npc1);
-			npc2Patk2 *= npc2.getRandomDamageMultiplier();
-			patk2 += npc2Patk2;
+			double npcPatk2 = npc2.getPAtk(npc1);
+			npcPatk2 *= npc2.getRandomDamageMultiplier();
+			patk2 += npcPatk2;
 			
 			final double npcPdef2 = npc2.getPDef(npc1);
 			pdef2 += npcPdef2;

@@ -33,9 +33,9 @@ import org.l2jmobius.gameserver.model.StatsSet;
  */
 public class NpcNameLocalisationData implements IXmlReader
 {
-	private final static Logger LOGGER = Logger.getLogger(NpcNameLocalisationData.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(NpcNameLocalisationData.class.getName());
 	
-	private final static Map<String, Map<Integer, String[]>> NPC_NAME_LOCALISATIONS = new ConcurrentHashMap<>();
+	private static final Map<String, Map<Integer, String[]>> NPC_NAME_LOCALISATIONS = new ConcurrentHashMap<>();
 	private static String _lang;
 	
 	protected NpcNameLocalisationData()

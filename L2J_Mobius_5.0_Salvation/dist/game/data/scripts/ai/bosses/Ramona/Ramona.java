@@ -49,7 +49,7 @@ import ai.AbstractNpcAI;
 public class Ramona extends AbstractNpcAI
 {
 	// Status
-	private static enum Status
+	private enum Status
 	{
 		ALIVE,
 		IN_FIGHT,

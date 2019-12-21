@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.ai.CtrlEvent;
@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExAlterSkillRequest;
 public class AirBind extends AbstractEffect
 {
 	// skill data
-	private static final Map<ClassId, Integer> _chainedAirSkills = new HashMap<>(36);
+	private static final Map<ClassId, Integer> _chainedAirSkills = new EnumMap<>(ClassId.class);
 	static
 	{
 		_chainedAirSkills.put(ClassId.SIGEL_PHOENIX_KNIGHT, 10249); // Heavy Hit

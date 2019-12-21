@@ -531,12 +531,9 @@ public class Castle extends AbstractResidence
 				try
 				{
 					final PlayerInstance oldleader = oldOwner.getLeader().getPlayerInstance();
-					if (oldleader != null)
+					if ((oldleader != null) && (oldleader.getMountType() == MountType.WYVERN))
 					{
-						if (oldleader.getMountType() == MountType.WYVERN)
-						{
-							oldleader.dismount();
-						}
+						oldleader.dismount();
 					}
 				}
 				catch (Exception e)
@@ -733,12 +730,9 @@ public class Castle extends AbstractResidence
 		{
 			return false;
 		}
-		if (lease > 0)
+		if ((lease > 0) && !player.destroyItemByItemId("Consume", Inventory.ADENA_ID, lease, null, true))
 		{
-			if (!player.destroyItemByItemId("Consume", Inventory.ADENA_ID, lease, null, true))
-			{
-				return false;
-			}
+			return false;
 		}
 		if (addNew)
 		{

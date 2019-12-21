@@ -205,7 +205,7 @@ public class Q00684_DisturbedFields extends Quest
 				{
 					qs.setCond(FINISH_COND, true);
 				}
-				else if (killCount < REQUIRED_KILL_COUNT)
+				else // if (killCount < REQUIRED_KILL_COUNT)
 				{
 					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					sendNpcLogList(player);

@@ -83,7 +83,7 @@ public class Q10421_AssassinationOfTheVarkaSilenosCommander extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					final int stoneId = Integer.parseInt(event.replaceAll("reward_", ""));
+					final int stoneId = Integer.parseInt(event.replace("reward_", ""));
 					qs.exitQuest(false, true);
 					giveItems(player, stoneId, 15);
 					giveStoryQuestReward(npc, player);

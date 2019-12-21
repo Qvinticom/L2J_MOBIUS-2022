@@ -125,6 +125,7 @@ public class Q00751_LiberatingTheSpirits extends Quest
 						break;
 					}
 					qs.setState(State.CREATED);
+					// fallthrough
 				}
 				case State.CREATED:
 				{

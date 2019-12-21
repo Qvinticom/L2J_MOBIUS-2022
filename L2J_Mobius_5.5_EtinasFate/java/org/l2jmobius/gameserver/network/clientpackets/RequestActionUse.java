@@ -90,7 +90,7 @@ public class RequestActionUse implements IClientIncomingPacket
 		if (player.isTransformed())
 		{
 			final int[] allowedActions = player.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
-			if (!(Arrays.binarySearch(allowedActions, _actionId) >= 0))
+			if (Arrays.binarySearch(allowedActions, _actionId) < 0)
 			{
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				LOGGER.warning("Player " + player + " used action which he does not have! Id = " + _actionId + " transform: " + player.getTransformation().get().getId());

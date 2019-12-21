@@ -92,8 +92,8 @@ public class Hardin extends AbstractNpcAI
 					}
 					if (Config.HARDIN_SAME_AWAKEN_GROUP)
 					{
-						final String original = c.toString().contains("_") ? c.toString().substring(0, c.toString().indexOf("_") - 1) : c.toString();
-						final String search = player.getClassId().toString().contains("_") ? player.getClassId().toString().substring(0, player.getClassId().toString().indexOf("_") - 1) : player.getClassId().toString();
+						final String original = c.toString().contains("_") ? c.toString().substring(0, c.toString().indexOf('_') - 1) : c.toString();
+						final String search = player.getClassId().toString().contains("_") ? player.getClassId().toString().substring(0, player.getClassId().toString().indexOf('_') - 1) : player.getClassId().toString();
 						if (!original.equals(search))
 						{
 							continue;

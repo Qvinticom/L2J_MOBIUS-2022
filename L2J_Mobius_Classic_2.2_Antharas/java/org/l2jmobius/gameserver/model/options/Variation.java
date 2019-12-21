@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.options;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -28,7 +28,7 @@ public class Variation
 	private static final Logger LOGGER = Logger.getLogger(Variation.class.getSimpleName());
 	
 	private final int _mineralId;
-	private final Map<VariationWeaponType, OptionDataGroup[]> _effects = new HashMap<>();
+	private final Map<VariationWeaponType, OptionDataGroup[]> _effects = new EnumMap<>(VariationWeaponType.class);
 	
 	public Variation(int mineralId)
 	{

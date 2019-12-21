@@ -48,7 +48,7 @@ import org.l2jmobius.gameserver.model.zone.type.SpawnTerritory;
  */
 public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 {
-	private static final Logger LOGGER = Logger.getLogger(SpawnTemplate.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(NpcSpawnTemplate.class.getName());
 	
 	private final int _id;
 	private final int _count;
@@ -346,9 +346,8 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 	 * @throws ClassCastException
 	 * @throws NoSuchMethodException
 	 * @throws ClassNotFoundException
-	 * @throws SecurityException
 	 */
-	private void spawnNpc(NpcTemplate npcTemplate, Instance instance) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException
+	private void spawnNpc(NpcTemplate npcTemplate, Instance instance) throws ClassNotFoundException, NoSuchMethodException, ClassCastException
 	{
 		final Spawn spawn = new Spawn(npcTemplate);
 		final Location loc = getSpawnLocation();

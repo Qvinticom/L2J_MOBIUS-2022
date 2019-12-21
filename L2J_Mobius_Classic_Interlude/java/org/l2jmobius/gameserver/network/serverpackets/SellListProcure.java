@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
@@ -53,12 +54,13 @@ public class SellListProcure implements IClientOutgoingPacket
 		packet.writeD(0x00); // lease ?
 		packet.writeH(_sellList.size()); // list size
 		
-		for (ItemInstance item : _sellList.keySet())
+		for (Entry<ItemInstance, Long> entry : _sellList.entrySet())
 		{
+			ItemInstance item = entry.getKey();
 			packet.writeH(item.getItem().getType1());
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getDisplayId());
-			packet.writeQ(_sellList.get(item)); // count
+			packet.writeQ(entry.getValue()); // count
 			packet.writeH(item.getItem().getType2());
 			packet.writeH(0); // unknown
 			packet.writeQ(0); // price, u shouldnt get any adena for crops, only raw materials

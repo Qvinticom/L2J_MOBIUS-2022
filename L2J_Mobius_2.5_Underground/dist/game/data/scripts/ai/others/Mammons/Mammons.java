@@ -38,7 +38,7 @@ import ai.AbstractNpcAI;
 public class Mammons extends AbstractNpcAI
 {
 	// NPCs
-	private static final int MAMMONS[] =
+	private static final int[] MAMMONS =
 	{
 		31126, // Blacksmith of Mammon
 		33739, // Priest of Mammon

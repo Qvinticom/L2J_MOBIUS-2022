@@ -180,7 +180,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 {
 	public static final Logger LOGGER = Logger.getLogger(Creature.class.getName());
 	
-	private volatile Set<WeakReference<Creature>> _attackByList;
+	private Set<WeakReference<Creature>> _attackByList;
 	
 	private boolean _isDead = false;
 	private boolean _isImmobilized = false;
@@ -194,7 +194,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	private boolean _isFlying = false;
 	
 	private boolean _blockActions = false;
-	private volatile Map<Integer, AtomicInteger> _blockActionsAllowedSkills = new ConcurrentHashMap<>();
+	private final Map<Integer, AtomicInteger> _blockActionsAllowedSkills = new ConcurrentHashMap<>();
 	
 	private CreatureStat _stat;
 	private CreatureStatus _status;
@@ -230,16 +230,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	private boolean _lethalable = true;
 	
-	private volatile Map<Integer, OptionsSkillHolder> _triggerSkills;
+	private Map<Integer, OptionsSkillHolder> _triggerSkills;
 	
-	private volatile Map<Integer, IgnoreSkillHolder> _ignoreSkillEffects;
+	private Map<Integer, IgnoreSkillHolder> _ignoreSkillEffects;
 	/** Creatures effect list. */
 	private final EffectList _effectList = new EffectList(this);
 	/** The creature that summons this character. */
 	private Creature _summoner = null;
 	
 	/** Map of summoned NPCs by this creature. */
-	private volatile Map<Integer, Npc> _summonedNpcs = null;
+	private Map<Integer, Npc> _summonedNpcs = null;
 	
 	private SkillChannelizer _channelizer = null;
 	
@@ -261,7 +261,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	private volatile long _attackEndTime;
 	private volatile long _disableRangedAttackEndTime;
 	
-	private volatile CreatureAI _ai = null;
+	private CreatureAI _ai = null;
 	
 	/** Future Skill Cast */
 	protected Map<SkillCastingType, SkillCaster> _skillCasters = new ConcurrentHashMap<>();
@@ -270,12 +270,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	private final Map<Integer, Integer> _knownRelations = new ConcurrentHashMap<>();
 	
-	private volatile CreatureContainer _seenCreatures;
+	private CreatureContainer _seenCreatures;
 	
 	private final Map<StatusUpdateType, Integer> _statusUpdates = new ConcurrentHashMap<>();
 	
 	/** A map holding info about basic property mesmerizing system. */
-	private volatile Map<BasicProperty, BasicPropertyResist> _basicPropertyResists;
+	private Map<BasicProperty, BasicPropertyResist> _basicPropertyResists;
 	
 	private ScheduledFuture<?> _hitTask = null;
 	/** A set containing the shot types currently charged. */
@@ -687,7 +687,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * <li>Send the Server->Client packet StatusUpdate with current HP and MP to all Creature called _statusListener that must be informed of HP/MP updates of this Creature</li>
 	 * </ul>
 	 * <FONT COLOR=#FF0000><B><U>Caution</U>: This method DOESN'T SEND CP information</B></FONT>
-	 * @param caster TODO
+	 * @param caster
 	 */
 	public void broadcastStatusUpdate(Creature caster)
 	{
@@ -921,14 +921,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
-				else if (isPlayer())
+				else if (isPlayer() && target.isDead())
 				{
-					if (target.isDead())
-					{
-						getAI().setIntention(AI_INTENTION_ACTIVE);
-						sendPacket(ActionFailed.STATIC_PACKET);
-						return;
-					}
+					getAI().setIntention(AI_INTENTION_ACTIVE);
+					sendPacket(ActionFailed.STATIC_PACKET);
+					return;
 				}
 				
 				if (checkTransformed(transform -> !transform.canAttack()))
@@ -1092,6 +1089,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				case TWOHANDCROSSBOW:
 				{
 					crossbow = true;
+					// fallthough
 				}
 				case BOW:
 				{
@@ -1130,6 +1128,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 						_hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
 						break;
 					}
+					// fallthrough
 				}
 				case DUAL:
 				case DUALFIST:
@@ -1200,7 +1199,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		// H5 Changes: without Polearm Mastery (skill 216) max simultaneous attacks is 3 (1 by default + 2 in skill 3599).
 		int attackCountMax = (int) _stat.getValue(Stats.ATTACK_COUNT_MAX, 1);
-		if ((attackCountMax > 1) && !(_stat.getValue(Stats.PHYSICAL_POLEARM_TARGET_SINGLE, 0) > 0))
+		if ((attackCountMax > 1) && (_stat.getValue(Stats.PHYSICAL_POLEARM_TARGET_SINGLE, 0) <= 0))
 		{
 			final double headingAngle = Util.convertHeadingToDegree(getHeading());
 			final int maxRadius = _stat.getPhysicalAttackRadius();
@@ -3779,12 +3778,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			for (OptionsSkillHolder holder : _triggerSkills.values())
 			{
-				if ((!hit.isCritical() && (holder.getSkillType() == OptionsSkillType.ATTACK)) || ((holder.getSkillType() == OptionsSkillType.CRITICAL) && hit.isCritical()))
+				if (((!hit.isCritical() && (holder.getSkillType() == OptionsSkillType.ATTACK)) || ((holder.getSkillType() == OptionsSkillType.CRITICAL) && hit.isCritical())) && (Rnd.get(100) < holder.getChance()))
 				{
-					if (Rnd.get(100) < holder.getChance())
-					{
-						SkillCaster.triggerCast(this, target, holder.getSkill(), null, false);
-					}
+					SkillCaster.triggerCast(this, target, holder.getSkill(), null, false);
 				}
 			}
 		}

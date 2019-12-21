@@ -346,13 +346,10 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 			// Conditions for Quest 454
 			World.getInstance().forEachVisibleObjectInRange(creature, Npc.class, 500, npc ->
 			{
-				if ((npc.getId() == 32738) && (npc.getTarget() != null))
+				if ((npc.getId() == 32738) && (npc.getTarget() != null) && (npc.getTarget().getObjectId() == creature.getObjectId()))
 				{
-					if (npc.getTarget().getObjectId() == creature.getObjectId())
-					{
-						npc.teleToLocation(teleLoc, false);
-						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, creature, 150);
-					}
+					npc.teleToLocation(teleLoc, false);
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, creature, 150);
 				}
 			});
 			creature.teleToLocation(teleLoc, false);

@@ -154,18 +154,12 @@ public class SiegeFlagInstance extends Npc
 	public void reduceCurrentHp(double damage, Creature attacker, Skill skill)
 	{
 		super.reduceCurrentHp(damage, attacker, skill);
-		if (canTalk())
+		if (canTalk() && (((getCastle() != null) && getCastle().getSiege().isInProgress()) || ((getFort() != null) && getFort().getSiege().isInProgress())) && (_clan != null))
 		{
-			if (((getCastle() != null) && getCastle().getSiege().isInProgress()) || ((getFort() != null) && getFort().getSiege().isInProgress()))
-			{
-				if (_clan != null)
-				{
-					// send warning to owners of headquarters that theirs base is under attack
-					_clan.broadcastToOnlineMembers(new SystemMessage(SystemMessageId.YOUR_BASE_IS_BEING_ATTACKED));
-					setCanTalk(false);
-					ThreadPool.schedule(new ScheduleTalkTask(), 20000);
-				}
-			}
+			// send warning to owners of headquarters that theirs base is under attack
+			_clan.broadcastToOnlineMembers(new SystemMessage(SystemMessageId.YOUR_BASE_IS_BEING_ATTACKED));
+			setCanTalk(false);
+			ThreadPool.schedule(new ScheduleTalkTask(), 20000);
 		}
 	}
 	

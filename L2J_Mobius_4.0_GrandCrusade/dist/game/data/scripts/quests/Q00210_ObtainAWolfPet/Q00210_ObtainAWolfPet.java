@@ -49,7 +49,7 @@ public class Q00210_ObtainAWolfPet extends Quest
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		String htmltext = event;
+		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{

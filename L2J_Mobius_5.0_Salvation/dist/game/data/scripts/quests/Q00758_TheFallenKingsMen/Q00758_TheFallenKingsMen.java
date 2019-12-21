@@ -153,6 +153,7 @@ public class Q00758_TheFallenKingsMen extends Quest
 						break;
 					}
 					qs.setState(State.CREATED);
+					// fallthrough
 				}
 				case State.CREATED:
 				{

@@ -24,7 +24,7 @@ import java.util.logging.FileHandler;
  */
 public class AuditLogHandler extends FileHandler
 {
-	public AuditLogHandler() throws IOException, SecurityException
+	public AuditLogHandler() throws IOException
 	{
 		super();
 	}

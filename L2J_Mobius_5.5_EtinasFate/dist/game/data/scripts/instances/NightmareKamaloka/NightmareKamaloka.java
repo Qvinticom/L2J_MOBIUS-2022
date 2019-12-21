@@ -88,12 +88,9 @@ public class NightmareKamaloka extends AbstractInstance
 	public String onSpawn(Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isInInstance(instance))
+		if (isInInstance(instance) && (npc.getId() == INVISIBLE_NPC))
 		{
-			if (npc.getId() == INVISIBLE_NPC)
-			{
-				startQuestTimer("SPAWN_BOSSES", 10000, npc, null);
-			}
+			startQuestTimer("SPAWN_BOSSES", 10000, npc, null);
 		}
 		return super.onSpawn(npc);
 	}

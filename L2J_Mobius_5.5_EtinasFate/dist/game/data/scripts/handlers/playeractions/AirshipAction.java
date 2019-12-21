@@ -47,12 +47,9 @@ public class AirshipAction implements IPlayerActionHandler
 			}
 			case 2: // Cancel Control
 			{
-				if (player.getAirShip().isCaptain(player))
+				if (player.getAirShip().isCaptain(player) && player.getAirShip().setCaptain(null))
 				{
-					if (player.getAirShip().setCaptain(null))
-					{
-						player.broadcastUserInfo();
-					}
+					player.broadcastUserInfo();
 				}
 				break;
 			}

@@ -44,9 +44,9 @@ public class ChatLink implements IBypassHandler
 		{
 			val = Integer.parseInt(command.substring(5));
 		}
-		catch (Exception ioobe)
+		catch (Exception e)
 		{
-			
+			// Handled above.
 		}
 		
 		final Npc npc = (Npc) target;

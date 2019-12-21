@@ -45,10 +45,7 @@ public class DefenderInstance extends Attackable
 	public void addDamage(Creature attacker, int damage, Skill skill)
 	{
 		super.addDamage(attacker, damage, skill);
-		World.getInstance().forEachVisibleObjectInRange(this, DefenderInstance.class, 500, defender ->
-		{
-			defender.addDamageHate(attacker, 0, 10);
-		});
+		World.getInstance().forEachVisibleObjectInRange(this, DefenderInstance.class, 500, defender -> defender.addDamageHate(attacker, 0, 10));
 	}
 	
 	/**
@@ -72,7 +69,7 @@ public class DefenderInstance extends Attackable
 			final int activeSiegeId = (_fort != null) ? _fort.getResidenceId() : _castle.getResidenceId();
 			
 			// Check if player is an enemy of this defender npc
-			if ((player != null) && (((player.getSiegeState() == 2) && !player.isRegisteredOnThisSiegeField(activeSiegeId)) || ((player.getSiegeState() == 1)) || (player.getSiegeState() == 0)))
+			if ((player != null) && (((player.getSiegeState() == 2) && !player.isRegisteredOnThisSiegeField(activeSiegeId)) || (player.getSiegeState() == 1) || (player.getSiegeState() == 0)))
 			{
 				return true;
 			}
@@ -146,20 +143,15 @@ public class DefenderInstance extends Attackable
 		}
 		else if (interact)
 		{
-			if (isAutoAttackable(player) && !isAlikeDead())
+			// this max heigth difference might need some tweaking
+			if (isAutoAttackable(player) && !isAlikeDead() && (Math.abs(player.getZ() - getZ()) < 600))
 			{
-				if (Math.abs(player.getZ() - getZ()) < 600) // this max heigth difference might need some tweaking
-				{
-					player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
-				}
+				player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
 			}
-			if (!isAutoAttackable(player))
+			// Notify the PlayerInstance AI with AI_INTENTION_INTERACT
+			if (!isAutoAttackable(player) && !canInteract(player))
 			{
-				if (!canInteract(player))
-				{
-					// Notify the PlayerInstance AI with AI_INTENTION_INTERACT
-					player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
-				}
+				player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
 			}
 		}
 		// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet

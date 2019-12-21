@@ -174,13 +174,9 @@ public class Q10392_FailureAndItsConsequences extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
-		if ((qs != null) && qs.isStarted() && qs.isCond(1))
+		if ((qs != null) && qs.isStarted() && qs.isCond(1) && giveItemRandomly(killer, npc, FRAGMENT, 1, 4, 30, 0.8, true))
 		{
-			if (giveItemRandomly(killer, npc, FRAGMENT, 1, 4, 30, 0.8, true))
-			{
-				qs.setCond(2);
-			}
+			qs.setCond(2);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

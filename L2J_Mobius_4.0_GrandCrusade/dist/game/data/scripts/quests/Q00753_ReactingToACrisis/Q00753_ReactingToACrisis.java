@@ -126,6 +126,7 @@ public class Q00753_ReactingToACrisis extends Quest
 						break;
 					}
 					qs.setState(State.CREATED);
+					// fallthrough
 				}
 				case State.CREATED:
 				{
@@ -164,20 +165,14 @@ public class Q00753_ReactingToACrisis extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if (CommonUtil.contains(MOBS, npc.getId()))
+		if (CommonUtil.contains(MOBS, npc.getId()) && (qs != null) && qs.isCond(1) && (giveItemRandomly(killer, RED_GATE_KEY, 1, 30, 0.2, true)))
 		{
-			if ((qs != null) && qs.isCond(1) && (giveItemRandomly(killer, RED_GATE_KEY, 1, 30, 0.2, true)))
-			{
-				qs.setMemoState(1);
-			}
+			qs.setMemoState(1);
 		}
-		if ((npc.getId() == 23275) || (npc.getId() == 23276) || (npc.getId() == 23274))
+		if (((npc.getId() == 23275) || (npc.getId() == 23276) || (npc.getId() == 23274)) && (getRandom(100) < 10))
 		{
-			if ((getRandom(100) < 10))
-			{
-				addSpawn(GOLEM_GENERATOR, npc.getX() + 30, npc.getY() + 30, npc.getZ(), 0, false, 60000);
-				showOnScreenMsg(killer, NpcStringId.THE_GOLEM_GENERATOR_HAS_APPEARED, ExShowScreenMessage.TOP_CENTER, 6000);
-			}
+			addSpawn(GOLEM_GENERATOR, npc.getX() + 30, npc.getY() + 30, npc.getZ(), 0, false, 60000);
+			showOnScreenMsg(killer, NpcStringId.THE_GOLEM_GENERATOR_HAS_APPEARED, ExShowScreenMessage.TOP_CENTER, 6000);
 		}
 		if ((qs != null) && qs.isCond(1) && (npc.getId() == GOLEM_GENERATOR))
 		{

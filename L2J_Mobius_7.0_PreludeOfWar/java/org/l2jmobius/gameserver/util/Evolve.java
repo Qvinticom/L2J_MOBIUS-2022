@@ -256,6 +256,7 @@ public class Evolve
 		}
 		catch (Exception e)
 		{
+			// Ignore.
 		}
 		return true;
 	}

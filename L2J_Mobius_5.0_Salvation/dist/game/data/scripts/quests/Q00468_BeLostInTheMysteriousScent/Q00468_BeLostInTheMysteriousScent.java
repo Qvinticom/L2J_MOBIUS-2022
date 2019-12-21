@@ -105,6 +105,7 @@ public class Q00468_BeLostInTheMysteriousScent extends Quest
 						break;
 					}
 					qs.setState(State.CREATED);
+					// fallthrough
 				}
 				case State.CREATED:
 				{

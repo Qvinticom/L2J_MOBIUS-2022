@@ -152,7 +152,7 @@ public class ControllableMobAI extends AttackableAI
 		
 		if (!_actor.isMuted())
 		{
-			int max_range = 0;
+			int maxRange = 0;
 			// check distant skills
 			
 			for (Skill sk : _actor.getAllSkills())
@@ -162,16 +162,13 @@ public class ControllableMobAI extends AttackableAI
 					_actor.doCast(sk);
 					return;
 				}
-				
-				max_range = Math.max(max_range, sk.getCastRange());
+				maxRange = Math.max(maxRange, sk.getCastRange());
 			}
 			
 			if (!_isNotMoving)
 			{
-				moveToPawn(target, max_range);
+				moveToPawn(target, maxRange);
 			}
-			
-			return;
 		}
 	}
 	
@@ -198,7 +195,7 @@ public class ControllableMobAI extends AttackableAI
 		
 		final double dist2 = _actor.calculateDistanceSq2D(target);
 		final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + target.getTemplate().getCollisionRadius();
-		int max_range = range;
+		int maxRange = range;
 		
 		if (!_actor.isMuted() && (dist2 > ((range + 20) * (range + 20))))
 		{
@@ -213,7 +210,7 @@ public class ControllableMobAI extends AttackableAI
 					return;
 				}
 				
-				max_range = Math.max(max_range, castRange);
+				maxRange = Math.max(maxRange, castRange);
 			}
 			
 			if (!_isNotMoving)
@@ -238,7 +235,7 @@ public class ControllableMobAI extends AttackableAI
 		setTarget(getForcedTarget());
 		final double dist2 = _actor.calculateDistanceSq2D(getForcedTarget());
 		final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + getForcedTarget().getTemplate().getCollisionRadius();
-		int max_range = range;
+		int maxRange = range;
 		
 		if (!_actor.isMuted() && (dist2 > ((range + 20) * (range + 20))))
 		{
@@ -253,7 +250,7 @@ public class ControllableMobAI extends AttackableAI
 					return;
 				}
 				
-				max_range = Math.max(max_range, castRange);
+				maxRange = Math.max(maxRange, castRange);
 			}
 			
 			if (!_isNotMoving)
@@ -305,7 +302,7 @@ public class ControllableMobAI extends AttackableAI
 			setTarget(target);
 			final double dist2 = _actor.calculateDistanceSq2D(target);
 			final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + target.getTemplate().getCollisionRadius();
-			int max_range = range;
+			int maxRange = range;
 			
 			if (!_actor.isMuted() && (dist2 > ((range + 20) * (range + 20))))
 			{
@@ -320,7 +317,7 @@ public class ControllableMobAI extends AttackableAI
 						return;
 					}
 					
-					max_range = Math.max(max_range, castRange);
+					maxRange = Math.max(maxRange, castRange);
 				}
 				
 				moveToPawn(target, range);
@@ -420,14 +417,10 @@ public class ControllableMobAI extends AttackableAI
 			return false;
 		}
 		
-		// Check if the target is a Playable
-		if (target.isPlayable())
+		// Check if the target is a Playable and if the target isn't in silent move mode
+		if (target.isPlayable() && ((Playable) target).isSilentMovingAffected())
 		{
-			// Check if the target isn't in silent move mode
-			if (((Playable) target).isSilentMovingAffected())
-			{
-				return false;
-			}
+			return false;
 		}
 		
 		if (target.isNpc())
@@ -468,9 +461,9 @@ public class ControllableMobAI extends AttackableAI
 		return _alternateAI;
 	}
 	
-	public void setAlternateAI(int _alternateai)
+	public void setAlternateAI(int alternateAi)
 	{
-		_alternateAI = _alternateai;
+		_alternateAI = alternateAi;
 	}
 	
 	public void forceAttack(Creature target)

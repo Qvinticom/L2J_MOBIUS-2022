@@ -27,10 +27,6 @@ public class ExChangeAttributeFail implements IClientOutgoingPacket
 {
 	public static final IClientOutgoingPacket STATIC = new ExChangeAttributeFail();
 	
-	public ExChangeAttributeFail()
-	{
-	}
-	
 	@Override
 	public boolean write(PacketWriter packet)
 	{

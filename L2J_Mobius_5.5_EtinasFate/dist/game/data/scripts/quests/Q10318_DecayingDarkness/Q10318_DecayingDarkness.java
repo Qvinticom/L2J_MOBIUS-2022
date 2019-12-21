@@ -149,54 +149,51 @@ public class Q10318_DecayingDarkness extends Quest
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(attacker, false);
-		if ((qs != null) && qs.isCond(1))
+		if ((qs != null) && qs.isCond(1) && (getRandom(100) < 5))
 		{
-			if (getRandom(100) < 5)
+			switch (npc.getId())
 			{
-				switch (npc.getId())
+				case ORBIS_VICTIM:
 				{
-					case ORBIS_VICTIM:
-					{
-						final Npc mob = addSpawn(18978, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
-						addAttackPlayerDesire(mob, attacker, 5);
-						npc.deleteMe();
-						break;
-					}
-					case ORBIS_CURATOR:
-					{
-						final Npc mob1 = addSpawn(18981, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
-						addAttackPlayerDesire(mob1, attacker, 5);
-						npc.deleteMe();
-						break;
-					}
-					case ORBIS_THROWER:
-					{
-						final Npc mob2 = addSpawn(18980, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
-						addAttackPlayerDesire(mob2, attacker, 5);
-						npc.deleteMe();
-						break;
-					}
-					case ORBIS_ANCIENT_HERO:
-					{
-						final Npc mob3 = addSpawn(18982, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
-						addAttackPlayerDesire(mob3, attacker, 5);
-						npc.deleteMe();
-						break;
-					}
-					case ORBIS_GUARD:
-					{
-						final Npc mob4 = addSpawn(18979, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
-						addAttackPlayerDesire(mob4, attacker, 5);
-						npc.deleteMe();
-						break;
-					}
-					case ORBIS_CHIEF:
-					{
-						final Npc mob5 = addSpawn(18983, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
-						addAttackPlayerDesire(mob5, attacker, 5);
-						npc.deleteMe();
-						break;
-					}
+					final Npc mob = addSpawn(18978, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
+					addAttackPlayerDesire(mob, attacker, 5);
+					npc.deleteMe();
+					break;
+				}
+				case ORBIS_CURATOR:
+				{
+					final Npc mob1 = addSpawn(18981, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
+					addAttackPlayerDesire(mob1, attacker, 5);
+					npc.deleteMe();
+					break;
+				}
+				case ORBIS_THROWER:
+				{
+					final Npc mob2 = addSpawn(18980, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
+					addAttackPlayerDesire(mob2, attacker, 5);
+					npc.deleteMe();
+					break;
+				}
+				case ORBIS_ANCIENT_HERO:
+				{
+					final Npc mob3 = addSpawn(18982, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
+					addAttackPlayerDesire(mob3, attacker, 5);
+					npc.deleteMe();
+					break;
+				}
+				case ORBIS_GUARD:
+				{
+					final Npc mob4 = addSpawn(18979, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
+					addAttackPlayerDesire(mob4, attacker, 5);
+					npc.deleteMe();
+					break;
+				}
+				case ORBIS_CHIEF:
+				{
+					final Npc mob5 = addSpawn(18983, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
+					addAttackPlayerDesire(mob5, attacker, 5);
+					npc.deleteMe();
+					break;
 				}
 			}
 		}

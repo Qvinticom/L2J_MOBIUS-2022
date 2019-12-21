@@ -25,10 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExMonsterBookCloseForce implements IClientOutgoingPacket
 {
-	public ExMonsterBookCloseForce()
-	{
-	}
-	
 	@Override
 	public boolean write(PacketWriter packet)
 	{

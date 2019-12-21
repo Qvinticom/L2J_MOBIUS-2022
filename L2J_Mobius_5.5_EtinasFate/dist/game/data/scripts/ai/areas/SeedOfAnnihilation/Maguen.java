@@ -169,13 +169,13 @@ public class Maguen extends AbstractNpcAI
 	@Override
 	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
-		final BuffInfo b_info = player.getEffectList().getFirstBuffInfoByAbnormalType(B_PLASMA1.getSkill().getAbnormalType());
-		final BuffInfo c_info = player.getEffectList().getFirstBuffInfoByAbnormalType(C_PLASMA1.getSkill().getAbnormalType());
-		final BuffInfo r_info = player.getEffectList().getFirstBuffInfoByAbnormalType(R_PLASMA1.getSkill().getAbnormalType());
+		final BuffInfo bInfo = player.getEffectList().getFirstBuffInfoByAbnormalType(B_PLASMA1.getSkill().getAbnormalType());
+		final BuffInfo cInfo = player.getEffectList().getFirstBuffInfoByAbnormalType(C_PLASMA1.getSkill().getAbnormalType());
+		final BuffInfo rInfo = player.getEffectList().getFirstBuffInfoByAbnormalType(R_PLASMA1.getSkill().getAbnormalType());
 		
-		final int b = b_info == null ? 0 : b_info.getSkill().getAbnormalLvl();
-		final int c = c_info == null ? 0 : c_info.getSkill().getAbnormalLvl();
-		final int r = r_info == null ? 0 : r_info.getSkill().getAbnormalLvl();
+		final int b = bInfo == null ? 0 : bInfo.getSkill().getAbnormalLvl();
+		final int c = cInfo == null ? 0 : cInfo.getSkill().getAbnormalLvl();
+		final int r = rInfo == null ? 0 : rInfo.getSkill().getAbnormalLvl();
 		
 		if ((b == 3) && (c == 0) && (r == 0))
 		{
@@ -259,103 +259,100 @@ public class Maguen extends AbstractNpcAI
 	@Override
 	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
-		if ((skill == MACHINE.getSkill()) && (caster == npc.getVariables().getObject("SUMMON_PLAYER", PlayerInstance.class)))
+		if ((skill == MACHINE.getSkill()) && (caster == npc.getVariables().getObject("SUMMON_PLAYER", PlayerInstance.class)) && (npc.getVariables().getInt("NPC_EFFECT") != 0) && (npc.getVariables().getInt("BLOCKED_SKILLSEE") == 0))
 		{
-			if ((npc.getVariables().getInt("NPC_EFFECT") != 0) && (npc.getVariables().getInt("BLOCKED_SKILLSEE") == 0))
+			final BuffInfo i1Info = caster.getEffectList().getFirstBuffInfoByAbnormalType(B_PLASMA1.getSkill().getAbnormalType());
+			final BuffInfo i2Info = caster.getEffectList().getFirstBuffInfoByAbnormalType(C_PLASMA1.getSkill().getAbnormalType());
+			final BuffInfo i3Info = caster.getEffectList().getFirstBuffInfoByAbnormalType(R_PLASMA1.getSkill().getAbnormalType());
+			
+			final int i1 = i1Info == null ? 0 : i1Info.getSkill().getAbnormalLvl();
+			final int i2 = i2Info == null ? 0 : i2Info.getSkill().getAbnormalLvl();
+			final int i3 = i3Info == null ? 0 : i3Info.getSkill().getAbnormalLvl();
+			
+			caster.getEffectList().stopEffects(B_PLASMA1.getSkill().getAbnormalType());
+			caster.getEffectList().stopEffects(C_PLASMA1.getSkill().getAbnormalType());
+			caster.getEffectList().stopEffects(R_PLASMA1.getSkill().getAbnormalType());
+			cancelQuestTimer("FIRST_TIMER", npc, caster);
+			cancelQuestTimer("SECOND_TIMER", npc, caster);
+			cancelQuestTimer("THIRD_TIMER", npc, caster);
+			cancelQuestTimer("FORTH_TIMER", npc, caster);
+			npc.getVariables().set("BLOCKED_SKILLSEE", 1);
+			
+			SkillHolder skillToCast = null;
+			switch (npc.getVariables().getInt("NPC_EFFECT"))
 			{
-				final BuffInfo i1_info = caster.getEffectList().getFirstBuffInfoByAbnormalType(B_PLASMA1.getSkill().getAbnormalType());
-				final BuffInfo i2_info = caster.getEffectList().getFirstBuffInfoByAbnormalType(C_PLASMA1.getSkill().getAbnormalType());
-				final BuffInfo i3_info = caster.getEffectList().getFirstBuffInfoByAbnormalType(R_PLASMA1.getSkill().getAbnormalType());
-				
-				final int i1 = i1_info == null ? 0 : i1_info.getSkill().getAbnormalLvl();
-				final int i2 = i2_info == null ? 0 : i2_info.getSkill().getAbnormalLvl();
-				final int i3 = i3_info == null ? 0 : i3_info.getSkill().getAbnormalLvl();
-				
-				caster.getEffectList().stopEffects(B_PLASMA1.getSkill().getAbnormalType());
-				caster.getEffectList().stopEffects(C_PLASMA1.getSkill().getAbnormalType());
-				caster.getEffectList().stopEffects(R_PLASMA1.getSkill().getAbnormalType());
-				cancelQuestTimer("FIRST_TIMER", npc, caster);
-				cancelQuestTimer("SECOND_TIMER", npc, caster);
-				cancelQuestTimer("THIRD_TIMER", npc, caster);
-				cancelQuestTimer("FORTH_TIMER", npc, caster);
-				npc.getVariables().set("BLOCKED_SKILLSEE", 1);
-				
-				SkillHolder skillToCast = null;
-				switch (npc.getVariables().getInt("NPC_EFFECT"))
+				case 1:
 				{
-					case 1:
+					switch (i1)
 					{
-						switch (i1)
+						case 0:
 						{
-							case 0:
-							{
-								skillToCast = B_PLASMA1;
-								break;
-							}
-							case 1:
-							{
-								skillToCast = B_PLASMA2;
-								break;
-							}
-							case 2:
-							{
-								skillToCast = B_PLASMA3;
-								break;
-							}
+							skillToCast = B_PLASMA1;
+							break;
 						}
-						break;
-					}
-					case 2:
-					{
-						switch (i2)
+						case 1:
 						{
-							case 0:
-							{
-								skillToCast = C_PLASMA1;
-								break;
-							}
-							case 1:
-							{
-								skillToCast = C_PLASMA2;
-								break;
-							}
-							case 2:
-							{
-								skillToCast = C_PLASMA3;
-								break;
-							}
+							skillToCast = B_PLASMA2;
+							break;
 						}
-						break;
-					}
-					case 3:
-					{
-						switch (i3)
+						case 2:
 						{
-							case 0:
-							{
-								skillToCast = R_PLASMA1;
-								break;
-							}
-							case 1:
-							{
-								skillToCast = R_PLASMA2;
-								break;
-							}
-							case 2:
-							{
-								skillToCast = R_PLASMA3;
-								break;
-							}
+							skillToCast = B_PLASMA3;
+							break;
 						}
-						break;
 					}
+					break;
 				}
-				
-				if (skillToCast != null)
+				case 2:
 				{
-					npc.setTarget(caster);
-					npc.doCast(skillToCast.getSkill());
+					switch (i2)
+					{
+						case 0:
+						{
+							skillToCast = C_PLASMA1;
+							break;
+						}
+						case 1:
+						{
+							skillToCast = C_PLASMA2;
+							break;
+						}
+						case 2:
+						{
+							skillToCast = C_PLASMA3;
+							break;
+						}
+					}
+					break;
 				}
+				case 3:
+				{
+					switch (i3)
+					{
+						case 0:
+						{
+							skillToCast = R_PLASMA1;
+							break;
+						}
+						case 1:
+						{
+							skillToCast = R_PLASMA2;
+							break;
+						}
+						case 2:
+						{
+							skillToCast = R_PLASMA3;
+							break;
+						}
+					}
+					break;
+				}
+			}
+			
+			if (skillToCast != null)
+			{
+				npc.setTarget(caster);
+				npc.doCast(skillToCast.getSkill());
 			}
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);
@@ -385,7 +382,7 @@ public class Maguen extends AbstractNpcAI
 		{
 			giveItems(player, MAGUEN_PET, 1);
 		}
-		else if ((chance1 == 0) && (chance2 == 0))
+		else if (chance1 == 0)
 		{
 			giveItems(player, ELITE_MAGUEN_PET, 1);
 		}

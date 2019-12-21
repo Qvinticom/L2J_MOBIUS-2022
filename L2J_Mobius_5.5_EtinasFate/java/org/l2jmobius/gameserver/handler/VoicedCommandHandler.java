@@ -52,7 +52,7 @@ public class VoicedCommandHandler implements IHandler<IVoicedCommandHandler, Str
 	@Override
 	public IVoicedCommandHandler getHandler(String voicedCommand)
 	{
-		return _datatable.get(voicedCommand.contains(" ") ? voicedCommand.substring(0, voicedCommand.indexOf(" ")) : voicedCommand);
+		return _datatable.get(voicedCommand.contains(" ") ? voicedCommand.substring(0, voicedCommand.indexOf(' ')) : voicedCommand);
 	}
 	
 	@Override

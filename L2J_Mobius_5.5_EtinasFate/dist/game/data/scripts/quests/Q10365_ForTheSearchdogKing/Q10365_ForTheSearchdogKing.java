@@ -98,14 +98,11 @@ public class Q10365_ForTheSearchdogKing extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1))
+		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, npc, KINGS_TONIC, 1, 20, 0.5, true))
 		{
-			if (giveItemRandomly(killer, npc, KINGS_TONIC, 1, 20, 0.5, true))
-			{
-				qs.setCond(0);
-				qs.setCond(2);
-				showOnScreenMsg(killer, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_SHINING_WITH_A_RED_SHIMMER_TO_GO_TO_EXPLORATION_AREA_5, ExShowScreenMessage.TOP_CENTER, 4500);
-			}
+			qs.setCond(0);
+			qs.setCond(2);
+			showOnScreenMsg(killer, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_SHINING_WITH_A_RED_SHIMMER_TO_GO_TO_EXPLORATION_AREA_5, ExShowScreenMessage.TOP_CENTER, 4500);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

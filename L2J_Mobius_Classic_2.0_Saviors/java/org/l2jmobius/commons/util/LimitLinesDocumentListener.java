@@ -91,11 +91,13 @@ public class LimitLinesDocumentListener implements DocumentListener
 	@Override
 	public void removeUpdate(DocumentEvent e)
 	{
+		// Ignore.
 	}
 	
 	@Override
 	public void changedUpdate(DocumentEvent e)
 	{
+		// Ignore.
 	}
 	
 	/*

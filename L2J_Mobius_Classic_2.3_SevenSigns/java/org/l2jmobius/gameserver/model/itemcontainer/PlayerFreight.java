@@ -28,10 +28,10 @@ public class PlayerFreight extends ItemContainer
 	private final PlayerInstance _owner;
 	private final int _ownerId;
 	
-	public PlayerFreight(int object_id)
+	public PlayerFreight(int objectId)
 	{
 		_owner = null;
-		_ownerId = object_id;
+		_ownerId = objectId;
 		restore();
 	}
 	
@@ -68,8 +68,7 @@ public class PlayerFreight extends ItemContainer
 	@Override
 	public boolean validateCapacity(long slots)
 	{
-		final int curSlots = _owner == null ? Config.ALT_FREIGHT_SLOTS : Config.ALT_FREIGHT_SLOTS;
-		return ((getSize() + slots) <= curSlots);
+		return ((getSize() + slots) <= Config.ALT_FREIGHT_SLOTS);
 	}
 	
 	@Override

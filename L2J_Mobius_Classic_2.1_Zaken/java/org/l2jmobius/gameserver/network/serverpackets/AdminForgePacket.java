@@ -42,11 +42,6 @@ public class AdminForgePacket implements IClientOutgoingPacket
 		}
 	}
 	
-	public AdminForgePacket()
-	{
-		
-	}
-	
 	@Override
 	public boolean write(PacketWriter packet)
 	{

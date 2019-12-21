@@ -488,7 +488,7 @@ public class SkillCaster implements Runnable
 		if (caster.isPlayer())
 		{
 			// Consume Souls if necessary.
-			if ((_skill.getMaxSoulConsumeCount() > 0) && !caster.getActingPlayer().decreaseSouls(_skill.getMaxSoulConsumeCount(), _skill))
+			if ((_skill.getMaxSoulConsumeCount() > 0) && !caster.getActingPlayer().decreaseSouls(_skill.getMaxSoulConsumeCount()))
 			{
 				return false;
 			}
@@ -501,12 +501,9 @@ public class SkillCaster implements Runnable
 		}
 		
 		// Consume skill reduced item on success.
-		if ((_item != null) && (_item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS) && (_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0))
+		if ((_item != null) && (_item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS) && (_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0) && !caster.destroyItem(_skill.toString(), _item.getObjectId(), _skill.getItemConsumeCount(), target, true))
 		{
-			if (!caster.destroyItem(_skill.toString(), _item.getObjectId(), _skill.getItemConsumeCount(), target, true))
-			{
-				return false;
-			}
+			return false;
 		}
 		
 		// Notify skill is casted.
@@ -516,12 +513,9 @@ public class SkillCaster implements Runnable
 		callSkill(caster, target, _targets, _skill, _item);
 		
 		// Start attack stance.
-		if (!_skill.isWithoutAction())
+		if (!_skill.isWithoutAction() && _skill.isBad() && (_skill.getTargetType() != TargetType.DOOR_TREASURE))
 		{
-			if (_skill.isBad() && (_skill.getTargetType() != TargetType.DOOR_TREASURE))
-			{
-				caster.getAI().clientStartAutoAttack();
-			}
+			caster.getAI().clientStartAutoAttack();
 		}
 		
 		// Notify DP Scripts
@@ -561,17 +555,14 @@ public class SkillCaster implements Runnable
 				final Creature creature = (Creature) obj;
 				
 				// Check raid monster/minion attack and check buffing characters who attack raid monsters. Raid is still affected by skills.
-				if (!Config.RAID_DISABLE_CURSE && creature.isRaid() && creature.giveRaidCurse() && (caster.getLevel() >= (creature.getLevel() + 9)))
+				if (!Config.RAID_DISABLE_CURSE && creature.isRaid() && creature.giveRaidCurse() && (caster.getLevel() >= (creature.getLevel() + 9)) && (skill.isBad() || ((creature.getTarget() == caster) && ((Attackable) creature).getAggroList().containsKey(caster))))
 				{
-					if (skill.isBad() || ((creature.getTarget() == caster) && ((Attackable) creature).getAggroList().containsKey(caster)))
+					// Skills such as Summon Battle Scar too can trigger magic silence.
+					final CommonSkill curse = skill.isBad() ? CommonSkill.RAID_CURSE2 : CommonSkill.RAID_CURSE;
+					final Skill curseSkill = curse.getSkill();
+					if (curseSkill != null)
 					{
-						// Skills such as Summon Battle Scar too can trigger magic silence.
-						final CommonSkill curse = skill.isBad() ? CommonSkill.RAID_CURSE2 : CommonSkill.RAID_CURSE;
-						final Skill curseSkill = curse.getSkill();
-						if (curseSkill != null)
-						{
-							curseSkill.applyEffects(creature, caster);
-						}
+						curseSkill.applyEffects(creature, caster);
 					}
 				}
 				
@@ -589,12 +580,9 @@ public class SkillCaster implements Runnable
 					{
 						for (OptionsSkillHolder holder : caster.getTriggerSkills().values())
 						{
-							if ((skill.isMagic() && (holder.getSkillType() == OptionsSkillType.MAGIC)) || (skill.isPhysical() && (holder.getSkillType() == OptionsSkillType.ATTACK)))
+							if (((skill.isMagic() && (holder.getSkillType() == OptionsSkillType.MAGIC)) || (skill.isPhysical() && (holder.getSkillType() == OptionsSkillType.ATTACK))) && (Rnd.get(100) < holder.getChance()))
 							{
-								if (Rnd.get(100) < holder.getChance())
-								{
-									triggerCast(caster, creature, holder.getSkill(), null, false);
-								}
+								triggerCast(caster, creature, holder.getSkill(), null, false);
 							}
 						}
 					}
@@ -671,19 +659,15 @@ public class SkillCaster implements Runnable
 					if (npcMob.isAttackable() && !npcMob.isFakePlayer())
 					{
 						final Attackable attackable = (Attackable) npcMob;
-						
-						if (skill.getEffectPoint() > 0)
+						if ((skill.getEffectPoint() > 0) && attackable.hasAI() && (attackable.getAI().getIntention() == AI_INTENTION_ATTACK))
 						{
-							if (attackable.hasAI() && (attackable.getAI().getIntention() == AI_INTENTION_ATTACK))
+							final WorldObject npcTarget = attackable.getTarget();
+							for (WorldObject skillTarget : targets)
 							{
-								final WorldObject npcTarget = attackable.getTarget();
-								for (WorldObject skillTarget : targets)
+								if ((npcTarget == skillTarget) || (npcMob == skillTarget))
 								{
-									if ((npcTarget == skillTarget) || (npcMob == skillTarget))
-									{
-										final Creature originalCaster = caster.isSummon() ? caster : player;
-										attackable.addDamageHate(originalCaster, 0, (skill.getEffectPoint() * 150) / (attackable.getLevel() + 7));
-									}
+									final Creature originalCaster = caster.isSummon() ? caster : player;
+									attackable.addDamageHate(originalCaster, 0, (skill.getEffectPoint() * 150) / (attackable.getLevel() + 7));
 								}
 							}
 						}
@@ -945,7 +929,7 @@ public class SkillCaster implements Runnable
 			return false;
 		}
 		
-		if ((skill == null) || caster.isSkillDisabled(skill) || ((skill.isFlyType() && caster.isMovementDisabled())))
+		if ((skill == null) || caster.isSkillDisabled(skill) || (skill.isFlyType() && caster.isMovementDisabled()))
 		{
 			caster.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
@@ -1005,7 +989,7 @@ public class SkillCaster implements Runnable
 		if ((weapon != null) && weapon.useWeaponSkillsOnly() && !caster.canOverrideCond(PlayerCondOverride.SKILL_CONDITIONS))
 		{
 			final List<ItemSkillHolder> weaponSkills = weapon.getSkills(ItemSkillType.NORMAL);
-			if ((weaponSkills != null) && !weaponSkills.stream().anyMatch(sh -> sh.getSkillId() == skill.getId()))
+			if ((weaponSkills != null) && weaponSkills.stream().noneMatch(sh -> sh.getSkillId() == skill.getId()))
 			{
 				caster.sendPacket(SystemMessageId.THAT_WEAPON_CANNOT_USE_ANY_OTHER_SKILL_EXCEPT_THE_WEAPON_S_SKILL);
 				return false;

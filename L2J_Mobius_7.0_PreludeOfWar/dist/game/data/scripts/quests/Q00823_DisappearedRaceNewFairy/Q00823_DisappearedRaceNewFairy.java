@@ -242,6 +242,7 @@ public class Q00823_DisappearedRaceNewFairy extends Quest
 			case State.CREATED:
 			{
 				htmltext = "30747-01.htm";
+				// fallthrough?
 			}
 			case State.STARTED:
 			{

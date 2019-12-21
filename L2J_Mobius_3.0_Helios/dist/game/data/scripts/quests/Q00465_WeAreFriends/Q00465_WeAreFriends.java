@@ -112,6 +112,7 @@ public class Q00465_WeAreFriends extends Quest
 					break;
 				}
 				qs.setState(State.CREATED);
+				// fallthrough
 			}
 			case State.CREATED:
 			{
@@ -139,7 +140,7 @@ public class Q00465_WeAreFriends extends Quest
 					}
 					case FAIRY_CITIZEN_SPAWN:
 					{
-						if (qs.isCond(1) && (npc.getTitle() == player.getName()))
+						if (qs.isCond(1) && npc.getTitle().equals(player.getName()))
 						{
 							htmltext = "32923-01.html";
 							break;

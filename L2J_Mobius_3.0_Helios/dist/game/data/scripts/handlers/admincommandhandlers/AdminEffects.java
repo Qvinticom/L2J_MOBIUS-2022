@@ -758,9 +758,9 @@ public class AdminEffects implements IAdminCommandHandler
 	
 	private void playAdminSound(PlayerInstance activeChar, String sound)
 	{
-		final PlaySound _snd = new PlaySound(1, sound, 0, 0, 0, 0, 0);
-		activeChar.sendPacket(_snd);
-		activeChar.broadcastPacket(_snd);
+		final PlaySound snd = new PlaySound(1, sound, 0, 0, 0, 0, 0);
+		activeChar.sendPacket(snd);
+		activeChar.broadcastPacket(snd);
 		BuilderUtil.sendSysMessage(activeChar, "Playing " + sound + ".");
 	}
 	

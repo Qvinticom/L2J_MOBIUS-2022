@@ -39,7 +39,7 @@ public abstract class MatchingRoom implements IIdentifiable
 	private int _minLvl;
 	private int _maxLvl;
 	private int _maxCount;
-	private volatile Set<PlayerInstance> _members;
+	private Set<PlayerInstance> _members;
 	private PlayerInstance _leader;
 	
 	public MatchingRoom(String title, int loot, int minlvl, int maxlvl, int maxmem, PlayerInstance leader)

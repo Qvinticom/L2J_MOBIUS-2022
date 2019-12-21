@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets.luckygame;
 
 import java.util.EnumMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 
 import org.l2jmobius.commons.network.PacketWriter;
@@ -40,7 +41,7 @@ public class ExBettingLuckyGameResult implements IClientOutgoingPacket
 	
 	private final LuckyGameResultType _result;
 	private final LuckyGameType _type;
-	private final EnumMap<LuckyGameItemType, List<ItemHolder>> _rewards;
+	private final Map<LuckyGameItemType, List<ItemHolder>> _rewards;
 	private final int _ticketCount;
 	private final int _size;
 	
@@ -53,7 +54,7 @@ public class ExBettingLuckyGameResult implements IClientOutgoingPacket
 		_size = 0;
 	}
 	
-	public ExBettingLuckyGameResult(LuckyGameResultType result, LuckyGameType type, EnumMap<LuckyGameItemType, List<ItemHolder>> rewards, int ticketCount)
+	public ExBettingLuckyGameResult(LuckyGameResultType result, LuckyGameType type, Map<LuckyGameItemType, List<ItemHolder>> rewards, int ticketCount)
 	{
 		_result = result;
 		_type = type;

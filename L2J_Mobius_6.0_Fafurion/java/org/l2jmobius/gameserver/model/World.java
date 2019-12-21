@@ -332,12 +332,9 @@ public class World
 					if (ai != null)
 					{
 						ai.describeStateToPlayer((PlayerInstance) object);
-						if (wo.isMonster())
+						if (wo.isMonster() && (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 						{
-							if (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE)
-							{
-								ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-							}
+							ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 						}
 					}
 				}
@@ -352,12 +349,9 @@ public class World
 					if (ai != null)
 					{
 						ai.describeStateToPlayer((PlayerInstance) wo);
-						if (object.isMonster())
+						if (object.isMonster() && (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 						{
-							if (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE)
-							{
-								ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-							}
+							ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 						}
 					}
 				}
@@ -550,12 +544,9 @@ public class World
 						if (ai != null)
 						{
 							ai.describeStateToPlayer((PlayerInstance) object);
-							if (wo.isMonster())
+							if (wo.isMonster() && (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 							{
-								if (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE)
-								{
-									ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-								}
+								ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 							}
 						}
 					}
@@ -570,12 +561,9 @@ public class World
 						if (ai != null)
 						{
 							ai.describeStateToPlayer((PlayerInstance) wo);
-							if (object.isMonster())
+							if (object.isMonster() && (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 							{
-								if (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE)
-								{
-									ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-								}
+								ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 							}
 						}
 					}

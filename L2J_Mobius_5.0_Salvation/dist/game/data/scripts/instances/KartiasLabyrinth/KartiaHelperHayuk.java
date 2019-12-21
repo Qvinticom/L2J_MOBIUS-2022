@@ -96,7 +96,12 @@ public class KartiaHelperHayuk extends AbstractNpcAI
 	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if ((instance != null) && event.equals("CHECK_ACTION"))
+		if (instance == null)
+		{
+			return;
+		}
+		
+		if (event.equals("CHECK_ACTION"))
 		{
 			final FriendlyNpcInstance adolph = npc.getVariables().getObject("ADOLPH_OBJECT", FriendlyNpcInstance.class);
 			if (adolph != null)
@@ -126,14 +131,11 @@ public class KartiaHelperHayuk extends AbstractNpcAI
 				}
 			}
 		}
-		else if ((instance != null) && event.equals("USE_SKILL"))
+		else if (event.equals("USE_SKILL"))
 		{
-			if (npc.isInCombat() || npc.isAttackingNow() || (npc.getTarget() != null))
+			if ((npc.isInCombat() || npc.isAttackingNow() || (npc.getTarget() != null)) && (npc.getCurrentMpPercent() > 25) && !CommonUtil.contains(KARTIA_FRIENDS, npc.getTargetId()))
 			{
-				if ((npc.getCurrentMpPercent() > 25) && !CommonUtil.contains(KARTIA_FRIENDS, npc.getTargetId()))
-				{
-					useRandomSkill(npc);
-				}
+				useRandomSkill(npc);
 			}
 		}
 	}
@@ -175,9 +177,9 @@ public class KartiaHelperHayuk extends AbstractNpcAI
 		if ((instance != null) && !npc.isCastingNow() && (!CommonUtil.contains(KARTIA_FRIENDS, target.getId())))
 		{
 			final StatsSet instParams = instance.getTemplateParameters();
-			final SkillHolder skill_01 = instParams.getSkillHolder("hayukPinpointShot");
-			final SkillHolder skill_02 = instParams.getSkillHolder("hayukRecoilShot");
-			final SkillHolder skill_03 = instParams.getSkillHolder("hayukMultipleArrow");
+			final SkillHolder skill01 = instParams.getSkillHolder("hayukPinpointShot");
+			final SkillHolder skill02 = instParams.getSkillHolder("hayukRecoilShot");
+			final SkillHolder skill03 = instParams.getSkillHolder("hayukMultipleArrow");
 			final int numberOfActiveSkills = 3;
 			final int randomSkill = getRandom(numberOfActiveSkills + 1);
 			
@@ -186,28 +188,28 @@ public class KartiaHelperHayuk extends AbstractNpcAI
 				case 0:
 				case 1:
 				{
-					if ((skill_01 != null) && SkillCaster.checkUseConditions(npc, skill_01.getSkill()))
+					if ((skill01 != null) && SkillCaster.checkUseConditions(npc, skill01.getSkill()))
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_WILL_SHOW_YOU_THE_JUSTICE_OF_ADEN);
-						npc.doCast(skill_01.getSkill(), null, true, false);
+						npc.doCast(skill01.getSkill(), null, true, false);
 					}
 					break;
 				}
 				case 2:
 				{
-					if ((skill_02 != null) && SkillCaster.checkUseConditions(npc, skill_02.getSkill()))
+					if ((skill02 != null) && SkillCaster.checkUseConditions(npc, skill02.getSkill()))
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DIE_3);
-						npc.doCast(skill_02.getSkill(), null, true, false);
+						npc.doCast(skill02.getSkill(), null, true, false);
 					}
 					break;
 				}
 				case 3:
 				{
-					if ((skill_03 != null) && SkillCaster.checkUseConditions(npc, skill_03.getSkill()))
+					if ((skill03 != null) && SkillCaster.checkUseConditions(npc, skill03.getSkill()))
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.FOR_THE_GODDESS);
-						npc.doCast(skill_03.getSkill(), null, true, false);
+						npc.doCast(skill03.getSkill(), null, true, false);
 					}
 					break;
 				}

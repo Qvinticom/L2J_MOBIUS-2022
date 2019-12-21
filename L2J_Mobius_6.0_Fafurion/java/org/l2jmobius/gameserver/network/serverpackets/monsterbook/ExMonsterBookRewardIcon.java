@@ -25,10 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExMonsterBookRewardIcon implements IClientOutgoingPacket
 {
-	public ExMonsterBookRewardIcon()
-	{
-	}
-	
 	@Override
 	public boolean write(PacketWriter packet)
 	{

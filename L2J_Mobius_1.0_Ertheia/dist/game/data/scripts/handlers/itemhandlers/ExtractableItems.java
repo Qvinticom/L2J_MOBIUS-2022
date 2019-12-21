@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
@@ -199,9 +200,9 @@ public class ExtractableItems implements IItemHandler
 			player.sendPacket(playerIU);
 		}
 		
-		for (ItemInstance i : extractedItems.keySet())
+		for (Entry<ItemInstance, Long> entry : extractedItems.entrySet())
 		{
-			sendMessage(player, i, extractedItems.get(i));
+			sendMessage(player, entry.getKey(), entry.getValue());
 		}
 		
 		return true;

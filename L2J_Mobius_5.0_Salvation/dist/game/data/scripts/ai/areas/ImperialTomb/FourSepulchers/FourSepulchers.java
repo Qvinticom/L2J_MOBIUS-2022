@@ -58,7 +58,7 @@ import quests.Q00620_FourGoblets.Q00620_FourGoblets;
  */
 public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 {
-	Logger LOGGER = Logger.getLogger(FourSepulchers.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FourSepulchers.class.getName());
 	
 	// NPCs
 	private static final int CONQUEROR_MANAGER = 31921;
@@ -259,10 +259,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 							if ((doorInfo[0] == sepulcherId) && (doorInfo[1] == currentWave))
 							{
 								openDoor(doorInfo[2], 0);
-								ThreadPool.schedule(() ->
-								{
-									closeDoor(doorInfo[2], 0);
-								}, 15000);
+								ThreadPool.schedule(() -> closeDoor(doorInfo[2], 0), 15000);
 								break;
 							}
 						}
@@ -582,10 +579,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 		showHtmlFile(player, npcId + "-OK.html", npc, null);
 		
 		// Kick all players when/if time is over
-		ThreadPool.schedule(() ->
-		{
-			ZoneManager.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).oustAllPlayers();
-		}, TIME_ATTACK * 60 * 1000);
+		ThreadPool.schedule(() -> ZoneManager.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).oustAllPlayers(), TIME_ATTACK * 60 * 1000);
 		
 		// Save attack time
 		vars.set("FourSepulchers" + npcId, System.currentTimeMillis());

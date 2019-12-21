@@ -212,7 +212,7 @@ public class Q00129_PailakaDevilsLegacy extends Quest
 						takeItems(player, ENH_SWORD1, -1);
 						takeItems(player, SCROLL_2, -1);
 						giveItems(player, ENH_SWORD2, 1);
-						htmltext = "32508-05.htm";
+						// htmltext = "32508-05.htm";
 					}
 					htmltext = "32508-04.htm";
 				}

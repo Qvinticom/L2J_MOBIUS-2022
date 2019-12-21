@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -123,7 +124,7 @@ public class KartiaHelperElise extends AbstractNpcAI
 			final FriendlyNpcInstance adolph = npcVars.getObject("ADOLPH_OBJECT", FriendlyNpcInstance.class);
 			if (!npc.isCastingNow())
 			{
-				healFriends(npc, player);
+				healFriends(npc);
 			}
 			if (adolph != null)
 			{
@@ -147,7 +148,7 @@ public class KartiaHelperElise extends AbstractNpcAI
 		}
 	}
 	
-	private void healFriends(Npc npc, PlayerInstance player)
+	private void healFriends(Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (instance != null)
@@ -156,7 +157,7 @@ public class KartiaHelperElise extends AbstractNpcAI
 			final StatsSet instParams = instance.getTemplateParameters();
 			if (!npc.isCastingNow())
 			{
-				player = npcVars.getObject("PLAYER_OBJECT", PlayerInstance.class);
+				final PlayerInstance plr = npcVars.getObject("PLAYER_OBJECT", PlayerInstance.class);
 				final SkillHolder progressiveHeal = instParams.getSkillHolder("eliseProgressiveHeal"); // AOE heal
 				final SkillHolder radiantHeal = instParams.getSkillHolder("eliseRadiantHeal"); // Single target heal
 				final SkillHolder recharge = instParams.getSkillHolder("eliseRecharge");
@@ -164,21 +165,22 @@ public class KartiaHelperElise extends AbstractNpcAI
 				// Get HP percentage for all friends
 				final Map<WorldObject, Integer> hpMap = new HashMap<>();
 				instance.getAliveNpcs(KARTIA_FRIENDS).forEach(friend -> hpMap.put(friend, friend != null ? friend.getCurrentHpPercent() : 100));
-				hpMap.put(player, player != null ? player.getCurrentHpPercent() : 100);
-				Map<WorldObject, Integer> sortedHpMap = new HashMap<>();
-				sortedHpMap = Util.sortByValue(hpMap, false);
+				hpMap.put(plr, plr != null ? plr.getCurrentHpPercent() : 100);
+				Map<WorldObject, Integer> sortedHpMap = Util.sortByValue(hpMap, false);
 				
 				// See if any friends are below 80% HP and add to list of people to heal.
 				final List<WorldObject> peopleToHeal = new ArrayList<>();
-				for (WorldObject friend : sortedHpMap.keySet())
+				for (Entry<WorldObject, Integer> entry : sortedHpMap.entrySet())
 				{
-					if ((friend != null) && (sortedHpMap.get(friend) < 80) && (sortedHpMap.get(friend) > 1))
+					final WorldObject friend = entry.getKey();
+					final int percent = entry.getValue();
+					if ((friend != null) && (percent < 80) && (percent > 1))
 					{
 						peopleToHeal.add(friend);
 					}
 				}
 				
-				if (peopleToHeal.size() > 0)
+				if (!peopleToHeal.isEmpty())
 				{
 					// At least one friend was below 80% HP.
 					if (peopleToHeal.size() > 1)
@@ -218,9 +220,9 @@ public class KartiaHelperElise extends AbstractNpcAI
 				else
 				{
 					// No one needs healing. Check if player character needs recharge.
-					if ((player != null) && !player.isDead() && (player.getCurrentMpPercent() < 50))
+					if ((plr != null) && !plr.isDead() && (plr.getCurrentMpPercent() < 50))
 					{
-						npc.setTarget(player);
+						npc.setTarget(plr);
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ELECTRIFYING_RECHARGE);
 						npc.doCast(recharge.getSkill(), null, true, false);
 						npc.setTarget(npc);

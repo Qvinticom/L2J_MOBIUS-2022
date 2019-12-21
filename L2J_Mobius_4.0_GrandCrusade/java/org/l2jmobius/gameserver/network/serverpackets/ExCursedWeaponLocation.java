@@ -66,12 +66,11 @@ public class ExCursedWeaponLocation implements IClientOutgoingPacket
 		public int id;
 		public int activated; // 0 - not activated ? 1 - activated
 		
-		public CursedWeaponInfo(Location p, int ID, int status)
+		public CursedWeaponInfo(Location p, int cwId, int status)
 		{
 			pos = p;
-			id = ID;
+			id = cwId;
 			activated = status;
 		}
-		
 	}
 }

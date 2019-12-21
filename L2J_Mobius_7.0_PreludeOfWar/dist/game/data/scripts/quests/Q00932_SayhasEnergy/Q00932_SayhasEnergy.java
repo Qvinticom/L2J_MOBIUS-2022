@@ -199,6 +199,7 @@ public class Q00932_SayhasEnergy extends Quest
 			case State.CREATED:
 			{
 				htmltext = "34056-01.htm";
+				// fallthrough?
 			}
 			case State.STARTED:
 			{

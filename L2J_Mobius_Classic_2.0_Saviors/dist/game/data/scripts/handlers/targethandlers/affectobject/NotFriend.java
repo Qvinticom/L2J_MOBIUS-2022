@@ -112,12 +112,7 @@ public class NotFriend implements IAffectObjectHandler
 			if (target.isInsideZone(ZoneId.SIEGE))
 			{
 				// Players in the same siege side at the same castle are considered friends.
-				if (player.isSiegeFriend(targetPlayer))
-				{
-					return false;
-				}
-				
-				return true;
+				return !player.isSiegeFriend(targetPlayer);
 			}
 			
 			// At this point summon should be prevented from attacking friendly targets.

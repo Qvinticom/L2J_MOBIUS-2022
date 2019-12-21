@@ -189,7 +189,7 @@ public class Debug implements ITelnetCommand
 					sb.append("-------------------\r\n");
 					for (Thread thread : threads)
 					{
-						System.err.println(thread);
+						System.out.println(thread);
 						for (StackTraceElement ste : thread.getStackTrace())
 						{
 							sb.append("\t" + ste);
@@ -271,7 +271,7 @@ public class Debug implements ITelnetCommand
 		int detachedCount = 0;
 		int doorCount = 0;
 		int summonCount = 0;
-		int AICount = 0;
+		int aiCount = 0;
 		
 		for (WorldObject obj : World.getInstance().getVisibleObjects())
 		{
@@ -279,12 +279,9 @@ public class Debug implements ITelnetCommand
 			{
 				continue;
 			}
-			if (obj.isCreature())
+			if (obj.isCreature() && ((Creature) obj).hasAI())
 			{
-				if (((Creature) obj).hasAI())
-				{
-					AICount++;
-				}
+				aiCount++;
 			}
 			if (obj.isItem())
 			{
@@ -336,7 +333,7 @@ public class Debug implements ITelnetCommand
 		sb.append("\r\n  --->  Player Count: " + playerCount + "/" + max);
 		sb.append("\r\n  ---> Offline Count: " + detachedCount + "/" + playerCount);
 		sb.append("\r\n  +-->  Object Count: " + objectCount);
-		sb.append("\r\n  +-->      AI Count: " + AICount);
+		sb.append("\r\n  +-->      AI Count: " + aiCount);
 		sb.append("\r\n  +.... Item(Void): " + itemVoidCount);
 		sb.append("\r\n  +.......... Item: " + itemCount);
 		sb.append("\r\n  +....... Monster: " + monsterCount);

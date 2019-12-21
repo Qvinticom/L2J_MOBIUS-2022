@@ -189,6 +189,7 @@ public class PaulinasSupportBox implements IItemHandler
 							player.addItem(getClass().getSimpleName(), BOX_D_HEAVY, 1, player, true);
 							player.addItem(getClass().getSimpleName(), WEAPON_BLUNT_D, 1, player, true);
 						}
+						break;
 					}
 					case ORC:
 					{
@@ -689,6 +690,7 @@ public class PaulinasSupportBox implements IItemHandler
 							player.addItem(getClass().getSimpleName(), WEAPON_GSWORD_R, 1, player, true);
 							break;
 						}
+						break;
 					}
 					case ERTHEIA:
 					{

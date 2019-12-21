@@ -91,7 +91,7 @@ public enum TraitType
 	SPIRIT_WEAKNESS(2);
 	
 	private final int _type; // 1 = weapon, 2 = weakness, 3 = resistance
-	private final static List<TraitType> _weaknesses = new ArrayList<>();
+	private static final List<TraitType> _weaknesses = new ArrayList<>();
 	static
 	{
 		_weaknesses.add(BUG_WEAKNESS);

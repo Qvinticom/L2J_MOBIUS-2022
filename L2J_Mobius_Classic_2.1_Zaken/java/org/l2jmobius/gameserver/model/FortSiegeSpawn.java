@@ -28,11 +28,11 @@ public class FortSiegeSpawn extends Location implements IIdentifiable
 	private final int _fortId;
 	private final int _id;
 	
-	public FortSiegeSpawn(int fort_id, int x, int y, int z, int heading, int npc_id, int id)
+	public FortSiegeSpawn(int fortId, int x, int y, int z, int heading, int npcId, int id)
 	{
 		super(x, y, z, heading);
-		_fortId = fort_id;
-		_npcId = npc_id;
+		_fortId = fortId;
+		_npcId = npcId;
 		_id = id;
 	}
 	

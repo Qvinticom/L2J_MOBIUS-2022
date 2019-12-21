@@ -25,10 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
  */
 public class ExShowUpgradeSystem extends AbstractItemPacket
 {
-	public ExShowUpgradeSystem()
-	{
-	}
-	
 	@Override
 	public boolean write(PacketWriter packet)
 	{

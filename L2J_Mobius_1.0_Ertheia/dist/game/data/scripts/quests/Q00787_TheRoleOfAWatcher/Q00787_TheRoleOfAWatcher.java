@@ -208,6 +208,7 @@ public class Q00787_TheRoleOfAWatcher extends Quest
 						break;
 					}
 					qs.setState(State.CREATED);
+					// fallthrough
 				}
 				case State.CREATED:
 				{
@@ -235,20 +236,13 @@ public class Q00787_TheRoleOfAWatcher extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
-		if ((qs != null) && (qs.isCond(1)))
+		if ((qs != null) && (qs.isCond(1)) && giveItemRandomly(killer, npc, DRAGON_BONE_DUST, 1, 50, 0.15, true))
 		{
-			if (giveItemRandomly(killer, npc, DRAGON_BONE_DUST, 1, 50, 0.15, true))
-			{
-				qs.setCond(2, true);
-			}
+			qs.setCond(2, true);
 		}
-		if ((qs != null) && (qs.isCond(2)))
+		if ((qs != null) && (qs.isCond(2)) && giveItemRandomly(killer, npc, DRAGON_BONE_FRAGMENT, 1, 900, 0.25, true))
 		{
-			if (giveItemRandomly(killer, npc, DRAGON_BONE_FRAGMENT, 1, 900, 0.25, true))
-			{
-				qs.setCond(2, true);
-			}
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

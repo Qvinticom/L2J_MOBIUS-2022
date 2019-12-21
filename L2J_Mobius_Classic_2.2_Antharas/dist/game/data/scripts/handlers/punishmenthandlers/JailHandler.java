@@ -169,8 +169,8 @@ public class JailHandler implements IPunishmentHandler
 		String content = HtmCache.getInstance().getHtm(player, "data/html/jail_in.htm");
 		if (content != null)
 		{
-			content = content.replaceAll("%reason%", task != null ? task.getReason() : "");
-			content = content.replaceAll("%punishedBy%", task != null ? task.getPunishedBy() : "");
+			content = content.replace("%reason%", task != null ? task.getReason() : "");
+			content = content.replace("%punishedBy%", task != null ? task.getPunishedBy() : "");
 			msg.setHtml(content);
 		}
 		else

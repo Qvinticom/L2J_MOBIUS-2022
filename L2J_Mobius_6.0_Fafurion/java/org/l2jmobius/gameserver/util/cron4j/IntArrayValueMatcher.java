@@ -18,7 +18,7 @@
  */
 package org.l2jmobius.gameserver.util.cron4j;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -35,9 +35,9 @@ class IntArrayValueMatcher implements ValueMatcher
 	
 	/**
 	 * Builds the ValueMatcher.
-	 * @param integers An ArrayList of Integer elements, one for every value accepted by the matcher. The match() method will return true only if its parameter will be one of this list.
+	 * @param integers An List of Integer elements, one for every value accepted by the matcher. The match() method will return true only if its parameter will be one of this list.
 	 */
-	public IntArrayValueMatcher(ArrayList<?> integers)
+	public IntArrayValueMatcher(List<?> integers)
 	{
 		int size = integers.size();
 		values = new int[size];

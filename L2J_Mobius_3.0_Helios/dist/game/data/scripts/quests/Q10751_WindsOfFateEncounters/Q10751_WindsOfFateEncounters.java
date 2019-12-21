@@ -434,7 +434,7 @@ public class Q10751_WindsOfFateEncounters extends Quest
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			
-			if ((killCount >= 5) && !World.getInstance().getVisibleObjectsInRange(npc, Npc.class, 1000).stream().anyMatch(n -> ((n.getId() == TELESHA) && (n.getSummoner() == killer))))
+			if ((killCount >= 5) && World.getInstance().getVisibleObjectsInRange(npc, Npc.class, 1000).stream().noneMatch(n -> ((n.getId() == TELESHA) && (n.getSummoner() == killer))))
 			{
 				final Npc telsha = addSpawn(TELESHA, npc, false, 30000);
 				telsha.setSummoner(killer);

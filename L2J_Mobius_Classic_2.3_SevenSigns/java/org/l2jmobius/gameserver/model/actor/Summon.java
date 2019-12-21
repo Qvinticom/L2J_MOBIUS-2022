@@ -123,10 +123,7 @@ public abstract class Summon extends Playable
 		setFollowStatus(true);
 		updateAndBroadcastStatus(0);
 		sendPacket(new RelationChanged(this, _owner.getRelation(_owner), false));
-		World.getInstance().forEachVisibleObject(getOwner(), PlayerInstance.class, player ->
-		{
-			player.sendPacket(new RelationChanged(this, _owner.getRelation(player), isAutoAttackable(player)));
-		});
+		World.getInstance().forEachVisibleObject(getOwner(), PlayerInstance.class, player -> player.sendPacket(new RelationChanged(this, _owner.getRelation(player), isAutoAttackable(player))));
 		final Party party = _owner.getParty();
 		if (party != null)
 		{
@@ -322,17 +319,17 @@ public abstract class Summon extends Playable
 		
 		if (_owner != null)
 		{
-			World.getInstance().forEachVisibleObject(this, Attackable.class, TgMob ->
+			World.getInstance().forEachVisibleObject(this, Attackable.class, target ->
 			{
-				if (TgMob.isDead())
+				if (target.isDead())
 				{
 					return;
 				}
 				
-				final AggroInfo info = TgMob.getAggroList().get(this);
+				final AggroInfo info = target.getAggroList().get(this);
 				if (info != null)
 				{
-					TgMob.addDamageHate(_owner, info.getDamage(), info.getHate());
+					target.addDamageHate(_owner, info.getDamage(), info.getHate());
 				}
 			});
 		}
@@ -691,15 +688,11 @@ public abstract class Summon extends Playable
 			return false;
 		}
 		
-		// Check if this is bad magic skill
-		if (skill.isBad())
+		// Check if this is bad magic skill and if PlayerInstance is in Olympiad and the match isn't already start, send a Server->Client packet ActionFailed
+		if (skill.isBad() && _owner.isInOlympiadMode() && !_owner.isOlympiadStart())
 		{
-			// If PlayerInstance is in Olympiad and the match isn't already start, send a Server->Client packet ActionFailed
-			if (_owner.isInOlympiadMode() && !_owner.isOlympiadStart())
-			{
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return false;
-			}
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return false;
 		}
 		
 		// Notify the AI with AI_INTENTION_CAST and target
@@ -934,16 +927,13 @@ public abstract class Summon extends Playable
 	 */
 	public void doAttack(WorldObject target)
 	{
-		if (_owner != null)
+		if ((_owner != null) && (target != null))
 		{
-			if (target != null)
+			setTarget(target);
+			getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+			if (target.isFakePlayer())
 			{
-				setTarget(target);
-				getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-				if (target.isFakePlayer())
-				{
-					_owner.updatePvPStatus();
-				}
+				_owner.updatePvPStatus();
 			}
 		}
 	}
@@ -1082,27 +1072,21 @@ public abstract class Summon extends Playable
 			
 			if (item != null)
 			{
-				if (magic)
+				if (magic && (item.getItem().getDefaultAction() == ActionType.SUMMON_SPIRITSHOT))
 				{
-					if (item.getItem().getDefaultAction() == ActionType.SUMMON_SPIRITSHOT)
+					handler = ItemHandler.getInstance().getHandler(item.getEtcItem());
+					if (handler != null)
 					{
-						handler = ItemHandler.getInstance().getHandler(item.getEtcItem());
-						if (handler != null)
-						{
-							handler.useItem(_owner, item, false);
-						}
+						handler.useItem(_owner, item, false);
 					}
 				}
 				
-				if (physical)
+				if (physical && (item.getItem().getDefaultAction() == ActionType.SUMMON_SOULSHOT))
 				{
-					if (item.getItem().getDefaultAction() == ActionType.SUMMON_SOULSHOT)
+					handler = ItemHandler.getInstance().getHandler(item.getEtcItem());
+					if (handler != null)
 					{
-						handler = ItemHandler.getInstance().getHandler(item.getEtcItem());
-						if (handler != null)
-						{
-							handler.useItem(_owner, item, false);
-						}
+						handler.useItem(_owner, item, false);
 					}
 				}
 			}

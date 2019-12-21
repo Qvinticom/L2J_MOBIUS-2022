@@ -55,6 +55,6 @@ public class ConditionQuest extends Condition
 		}
 		
 		final int cond = getParameters().getInt("cond", -1);
-		return (cond != -1) ? qs.isCond(cond) : true;
+		return (cond == -1) || qs.isCond(cond);
 	}
 }

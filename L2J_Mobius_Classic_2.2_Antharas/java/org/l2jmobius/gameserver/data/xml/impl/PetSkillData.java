@@ -128,12 +128,9 @@ public class PetSkillData implements IXmlReader
 				}
 				break;
 			}
-			else if (1 <= pet.getLevel())
+			else if ((1 <= pet.getLevel()) && (skillHolder.getSkillLevel() > lvl))
 			{
-				if (skillHolder.getSkillLevel() > lvl)
-				{
-					lvl = skillHolder.getSkillLevel();
-				}
+				lvl = skillHolder.getSkillLevel();
 			}
 		}
 		

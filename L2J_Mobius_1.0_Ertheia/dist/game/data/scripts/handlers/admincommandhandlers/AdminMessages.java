@@ -82,9 +82,9 @@ public class AdminMessages implements IAdminCommandHandler
 					}
 					else if (val.startsWith("zone:"))
 					{
-						final int x = Integer.parseInt(val.substring(5, val.indexOf(",")));
-						final int y = Integer.parseInt(val.substring(val.indexOf(",") + 1, val.lastIndexOf(",")));
-						final int z = Integer.parseInt(val.substring(val.lastIndexOf(",") + 1, val.length()));
+						final int x = Integer.parseInt(val.substring(5, val.indexOf(',')));
+						final int y = Integer.parseInt(val.substring(val.indexOf(',') + 1, val.lastIndexOf(',')));
+						final int z = Integer.parseInt(val.substring(val.lastIndexOf(',') + 1, val.length()));
 						sm.addZoneName(x, y, z);
 					}
 					else if (val.startsWith("castle:"))
@@ -101,7 +101,6 @@ public class AdminMessages implements IAdminCommandHandler
 				catch (Exception e)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Exception: " + e.getMessage());
-					continue;
 				}
 			}
 			activeChar.sendPacket(sm);

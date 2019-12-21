@@ -234,7 +234,6 @@ public class ClanBoard implements IWriteBoardHandler
 			html.append("\" back=\"l2ui_ch3.prev1_down\" fore=\"l2ui_ch3.prev1\" width=16 height=16 ></td>");
 		}
 		
-		i = 0;
 		int nbp = ClanTable.getInstance().getClanCount() / 8;
 		if ((nbp * 8) != ClanTable.getInstance().getClanCount())
 		{

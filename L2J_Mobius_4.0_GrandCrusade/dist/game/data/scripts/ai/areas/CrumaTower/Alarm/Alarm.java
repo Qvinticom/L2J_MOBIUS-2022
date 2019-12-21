@@ -75,22 +75,19 @@ public class Alarm extends AbstractNpcAI
 			}
 			case "RECORDER_CRUSHED":
 			{
-				if (npc0 != null)
+				if ((npc0 != null) && npc0.getVariables().getBoolean("SPAWNED"))
 				{
-					if (npc0.getVariables().getBoolean("SPAWNED"))
+					npc0.getVariables().set("SPAWNED", false);
+					if (player0 != null)
 					{
-						npc0.getVariables().set("SPAWNED", false);
-						if (player0 != null)
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.RECORDER_CRUSHED);
+						if (verifyMemoState(player0, ART_OF_PERSUASION_ID, -1))
 						{
-							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.RECORDER_CRUSHED);
-							if (verifyMemoState(player0, ART_OF_PERSUASION_ID, -1))
-							{
-								setMemoState(player0, ART_OF_PERSUASION_ID, 5);
-							}
-							else if (verifyMemoState(player0, NIKOLAS_COOPERATION_ID, -1))
-							{
-								setMemoState(player0, NIKOLAS_COOPERATION_ID, 5);
-							}
+							setMemoState(player0, ART_OF_PERSUASION_ID, 5);
+						}
+						else if (verifyMemoState(player0, NIKOLAS_COOPERATION_ID, -1))
+						{
+							setMemoState(player0, NIKOLAS_COOPERATION_ID, 5);
 						}
 					}
 				}

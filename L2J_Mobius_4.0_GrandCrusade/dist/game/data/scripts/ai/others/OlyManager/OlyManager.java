@@ -19,9 +19,10 @@ package ai.others.OlyManager;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.temporal.WeekFields;
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -52,10 +53,12 @@ import ai.AbstractNpcAI;
  */
 public class OlyManager extends AbstractNpcAI implements IBypassHandler
 {
+	private static final Logger LOGGER = Logger.getLogger(OlyManager.class.getName());
+	
 	// NPC
 	private static final int MANAGER = 31688;
 	// Misc
-	private static final Map<CategoryType, Integer> EQUIPMENT_MULTISELL = new HashMap<>();
+	private static final Map<CategoryType, Integer> EQUIPMENT_MULTISELL = new EnumMap<>(CategoryType.class);
 	static
 	{
 		EQUIPMENT_MULTISELL.put(CategoryType.SIXTH_SIGEL_GROUP, 917);
@@ -73,7 +76,6 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 		"watchmatch",
 		"arenachange"
 	};
-	private static final Logger LOGGER = Logger.getLogger(OlyManager.class.getName());
 	
 	private OlyManager()
 	{
@@ -212,11 +214,11 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 				}
 				else
 				{
-					for (CategoryType type : EQUIPMENT_MULTISELL.keySet())
+					for (Entry<CategoryType, Integer> entry : EQUIPMENT_MULTISELL.entrySet())
 					{
-						if (player.isInCategory(type))
+						if (player.isInCategory(entry.getKey()))
 						{
-							multisellId = EQUIPMENT_MULTISELL.get(type);
+							multisellId = entry.getValue();
 							break;
 						}
 					}

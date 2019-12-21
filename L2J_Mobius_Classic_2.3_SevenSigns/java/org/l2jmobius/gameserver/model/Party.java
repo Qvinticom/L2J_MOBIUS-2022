@@ -89,10 +89,10 @@ public class Party extends AbstractPlayerGroup
 	private boolean _pendingInvitation = false;
 	private long _pendingInviteTimeout;
 	private int _partyLvl = 0;
-	private volatile PartyDistributionType _distributionType = PartyDistributionType.FINDERS_KEEPERS;
-	private volatile PartyDistributionType _changeRequestDistributionType;
-	private volatile Future<?> _changeDistributionTypeRequestTask = null;
-	private volatile Set<Integer> _changeDistributionTypeAnswers = null;
+	private PartyDistributionType _distributionType = PartyDistributionType.FINDERS_KEEPERS;
+	private PartyDistributionType _changeRequestDistributionType;
+	private Future<?> _changeDistributionTypeRequestTask = null;
+	private Set<Integer> _changeDistributionTypeAnswers = null;
 	private int _itemLastLoot = 0;
 	private CommandChannel _commandChannel = null;
 	private Future<?> _positionBroadcastTask = null;
@@ -183,11 +183,11 @@ public class Party extends AbstractPlayerGroup
 	
 	/**
 	 * get next item looter
-	 * @param ItemId
+	 * @param itemId
 	 * @param target
 	 * @return
 	 */
-	private PlayerInstance getCheckedNextLooter(int ItemId, Creature target)
+	private PlayerInstance getCheckedNextLooter(int itemId, Creature target)
 	{
 		for (int i = 0; i < getMemberCount(); i++)
 		{
@@ -199,7 +199,7 @@ public class Party extends AbstractPlayerGroup
 			try
 			{
 				member = _members.get(_itemLastLoot);
-				if (member.getInventory().validateCapacityByItemId(ItemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
+				if (member.getInventory().validateCapacityByItemId(itemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
 				{
 					return member;
 				}
@@ -216,12 +216,12 @@ public class Party extends AbstractPlayerGroup
 	/**
 	 * get next item looter
 	 * @param player
-	 * @param ItemId
+	 * @param itemId
 	 * @param spoil
 	 * @param target
 	 * @return
 	 */
-	private PlayerInstance getActualLooter(PlayerInstance player, int ItemId, boolean spoil, Creature target)
+	private PlayerInstance getActualLooter(PlayerInstance player, int itemId, boolean spoil, Creature target)
 	{
 		PlayerInstance looter = null;
 		
@@ -231,26 +231,26 @@ public class Party extends AbstractPlayerGroup
 			{
 				if (!spoil)
 				{
-					looter = getCheckedRandomMember(ItemId, target);
+					looter = getCheckedRandomMember(itemId, target);
 				}
 				break;
 			}
 			case RANDOM_INCLUDING_SPOIL:
 			{
-				looter = getCheckedRandomMember(ItemId, target);
+				looter = getCheckedRandomMember(itemId, target);
 				break;
 			}
 			case BY_TURN:
 			{
 				if (!spoil)
 				{
-					looter = getCheckedNextLooter(ItemId, target);
+					looter = getCheckedNextLooter(itemId, target);
 				}
 				break;
 			}
 			case BY_TURN_INCLUDING_SPOIL:
 			{
-				looter = getCheckedNextLooter(ItemId, target);
+				looter = getCheckedNextLooter(itemId, target);
 				break;
 			}
 		}
@@ -516,13 +516,10 @@ public class Party extends AbstractPlayerGroup
 		if (_members.contains(player))
 		{
 			final boolean isLeader = isLeader(player);
-			if (!_disbanding)
+			if (!_disbanding && ((_members.size() == 2) || (isLeader && !Config.ALT_LEAVE_PARTY_LEADER && (type != MessageType.DISCONNECTED))))
 			{
-				if ((_members.size() == 2) || (isLeader && !Config.ALT_LEAVE_PARTY_LEADER && (type != MessageType.DISCONNECTED)))
-				{
-					disbandParty();
-					return;
-				}
+				disbandParty();
+				return;
 			}
 			
 			_members.remove(player);
@@ -636,15 +633,12 @@ public class Party extends AbstractPlayerGroup
 	public void disbandParty()
 	{
 		_disbanding = true;
-		if (_members != null)
+		broadcastPacket(new SystemMessage(SystemMessageId.THE_PARTY_HAS_DISPERSED));
+		for (PlayerInstance member : _members)
 		{
-			broadcastPacket(new SystemMessage(SystemMessageId.THE_PARTY_HAS_DISPERSED));
-			for (PlayerInstance member : _members)
+			if (member != null)
 			{
-				if (member != null)
-				{
-					removePartyMember(member, MessageType.NONE);
-				}
+				removePartyMember(member, MessageType.NONE);
 			}
 		}
 		World.getInstance().decrementParty();
@@ -842,10 +836,9 @@ public class Party extends AbstractPlayerGroup
 	 * @param spReward The SP reward to distribute
 	 * @param rewardedMembers The list of PlayerInstance to reward
 	 * @param topLvl
-	 * @param partyDmg
 	 * @param target
 	 */
-	public void distributeXpAndSp(double xpReward, double spReward, List<PlayerInstance> rewardedMembers, int topLvl, long partyDmg, Attackable target)
+	public void distributeXpAndSp(double xpReward, double spReward, List<PlayerInstance> rewardedMembers, int topLvl, Attackable target)
 	{
 		final List<PlayerInstance> validMembers = getValidMembers(rewardedMembers, topLvl);
 		

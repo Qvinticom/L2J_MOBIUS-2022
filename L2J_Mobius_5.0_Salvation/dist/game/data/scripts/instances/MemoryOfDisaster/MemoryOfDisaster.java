@@ -392,12 +392,9 @@ public class MemoryOfDisaster extends AbstractInstance
 					}
 					case TEREDOR:
 					{
-						if (!npc.isScriptValue(2))
+						if (!npc.isScriptValue(2) && ((creature.getId() == SOLDIER) || (creature.getId() == SOLDIER2)))
 						{
-							if ((creature.getId() == SOLDIER) || (creature.getId() == SOLDIER2))
-							{
-								addAttackDesire(npc, creature);
-							}
+							addAttackDesire(npc, creature);
 						}
 						break;
 					}
@@ -674,16 +671,13 @@ public class MemoryOfDisaster extends AbstractInstance
 	@Override
 	public void onInstanceCreated(Instance instance, PlayerInstance player)
 	{
-		getTimers().addTimer("OPENING_SCENE", 1000, e ->
+		getTimers().addTimer("OPENING_SCENE", 1000, e -> instance.getPlayers().forEach(p ->
 		{
-			instance.getPlayers().forEach(p ->
-			{
-				p.sendPacket(new OnEventTrigger(FIRE_IN_DWARVEN_VILLAGE, true));
-				playMovie(p, Movie.SC_AWAKENING_OPENING);
-				getTimers().addTimer("EARTHQUAKE", 10000, null, p);
-				getTimers().addTimer("END_OF_OPENING_SCENE", 32000, null, p);
-			});
-		});
+			p.sendPacket(new OnEventTrigger(FIRE_IN_DWARVEN_VILLAGE, true));
+			playMovie(p, Movie.SC_AWAKENING_OPENING);
+			getTimers().addTimer("EARTHQUAKE", 10000, null, p);
+			getTimers().addTimer("END_OF_OPENING_SCENE", 32000, null, p);
+		}));
 	}
 	
 	@Override
@@ -762,119 +756,116 @@ public class MemoryOfDisaster extends AbstractInstance
 	private void onCreatureAttacked(OnCreatureAttacked event)
 	{
 		final Instance world = event.getTarget().getInstanceWorld();
-		if (isInInstance(world))
+		if (isInInstance(world) && !event.getAttacker().isPlayable())
 		{
-			if (!event.getAttacker().isPlayable())
+			final Npc npc = (Npc) event.getTarget();
+			final Npc attacker = (Npc) event.getAttacker();
+			if (CommonUtil.contains(DWARVES, npc.getId()))
 			{
-				final Npc npc = (Npc) event.getTarget();
-				final Npc attacker = (Npc) event.getAttacker();
-				if (CommonUtil.contains(DWARVES, npc.getId()))
+				final int attackCount = npc.getVariables().getInt("attackCount", 0) + 1;
+				if (attackCount == 10)
+				{
+					npc.doDie(attacker);
+				}
+				else
+				{
+					npc.getVariables().set("attackCount", attackCount);
+				}
+			}
+			switch (npc.getId())
+			{
+				case BRONK:
+				{
+					npc.doDie(attacker);
+					break;
+				}
+				case SOLDIER:
+				case SOLDIER2:
 				{
 					final int attackCount = npc.getVariables().getInt("attackCount", 0) + 1;
 					if (attackCount == 10)
 					{
 						npc.doDie(attacker);
+						addSpawn((Npc) npc.getSummoner(), SOLDIER, npc.getLocation(), true, world.getId());
 					}
 					else
 					{
 						npc.getVariables().set("attackCount", attackCount);
 					}
+					break;
 				}
-				switch (npc.getId())
+				case TENTACLE:
 				{
-					case BRONK:
+					final int attackCount = npc.getVariables().getInt("attackCount", 0) + 1;
+					final boolean isBronKiller = npc.getVariables().getBoolean("isLeaderKiller", false);
+					final int killCount = isBronKiller ? 5 : 20;
+					if (attackCount == killCount)
 					{
 						npc.doDie(attacker);
-						break;
+						if (!isBronKiller)
+						{
+							addSpawn((Npc) npc.getSummoner(), npc.getId(), npc.getLocation(), true, world.getId());
+						}
 					}
-					case SOLDIER:
-					case SOLDIER2:
+					else
+					{
+						npc.getVariables().set("attackCount", attackCount);
+						addAttackDesire(npc, attacker);
+					}
+					break;
+				}
+				case TEREDOR:
+				{
+					if (npc.isScriptValue(0))
 					{
 						final int attackCount = npc.getVariables().getInt("attackCount", 0) + 1;
-						if (attackCount == 10)
+						if (attackCount == 20)
 						{
 							npc.doDie(attacker);
-							addSpawn((Npc) npc.getSummoner(), SOLDIER, npc.getLocation(), true, world.getId());
-						}
-						else
-						{
-							npc.getVariables().set("attackCount", attackCount);
-						}
-						break;
-					}
-					case TENTACLE:
-					{
-						final int attackCount = npc.getVariables().getInt("attackCount", 0) + 1;
-						final boolean isBronKiller = npc.getVariables().getBoolean("isLeaderKiller", false);
-						final int killCount = isBronKiller ? 5 : 20;
-						if (attackCount == killCount)
-						{
-							npc.doDie(attacker);
-							if (!isBronKiller)
-							{
-								addSpawn((Npc) npc.getSummoner(), npc.getId(), npc.getLocation(), true, world.getId());
-							}
+							addSpawn((Npc) npc.getSummoner(), npc.getId(), npc.getLocation(), true, world.getId());
 						}
 						else
 						{
 							npc.getVariables().set("attackCount", attackCount);
 							addAttackDesire(npc, attacker);
 						}
-						break;
 					}
-					case TEREDOR:
+					else if (npc.isScriptValue(2))
 					{
-						if (npc.isScriptValue(0))
+						final int attackCount = npc.getVariables().getInt("attackCount", 0) + 1;
+						if ((attackCount == 80) || (attacker.getId() == SIEGE_GOLEM))
 						{
-							final int attackCount = npc.getVariables().getInt("attackCount", 0) + 1;
-							if (attackCount == 20)
-							{
-								npc.doDie(attacker);
-								addSpawn((Npc) npc.getSummoner(), npc.getId(), npc.getLocation(), true, world.getId());
-							}
-							else
-							{
-								npc.getVariables().set("attackCount", attackCount);
-								addAttackDesire(npc, attacker);
-							}
+							npc.doDie(attacker);
+							final Npc golem = world.getNpc(SIEGE_GOLEM);
+							golem.abortAttack();
+							golem.abortCast();
+							world.getNpc(SIEGE_GOLEM).getAI().moveTo(GOLEM_MOVE);
 						}
-						else if (npc.isScriptValue(2))
-						{
-							final int attackCount = npc.getVariables().getInt("attackCount", 0) + 1;
-							if ((attackCount == 80) || (attacker.getId() == SIEGE_GOLEM))
-							{
-								npc.doDie(attacker);
-								final Npc golem = world.getNpc(SIEGE_GOLEM);
-								golem.abortAttack();
-								golem.abortCast();
-								world.getNpc(SIEGE_GOLEM).getAI().moveTo(GOLEM_MOVE);
-							}
-							addAttackDesire(npc, attacker);
-						}
-						break;
+						addAttackDesire(npc, attacker);
 					}
-					case SIEGE_GOLEM:
+					break;
+				}
+				case SIEGE_GOLEM:
+				{
+					if (npc.isScriptValue(0))
 					{
-						if (npc.isScriptValue(0))
-						{
-							addSkillCastDesire(npc, attacker, SIEGE_GOLEM_SKILL_2, 1000000);
-						}
-						break;
+						addSkillCastDesire(npc, attacker, SIEGE_GOLEM_SKILL_2, 1000000);
 					}
-					case WIRPHY:
-					{
-						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.NO_WAY_2);
-						npc.doDie(null);
-						attacker.doAutoAttack(world.getNpc(SILVERA));
-						break;
-					}
-					case SILVERA:
-					{
-						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.MY_GOD);
-						npc.doDie(null);
-						world.getNpc(SIEGE_GOLEM).doAutoAttack(attacker);
-						break;
-					}
+					break;
+				}
+				case WIRPHY:
+				{
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.NO_WAY_2);
+					npc.doDie(null);
+					attacker.doAutoAttack(world.getNpc(SILVERA));
+					break;
+				}
+				case SILVERA:
+				{
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.MY_GOD);
+					npc.doDie(null);
+					world.getNpc(SIEGE_GOLEM).doAutoAttack(attacker);
+					break;
 				}
 			}
 		}
@@ -997,12 +988,9 @@ public class MemoryOfDisaster extends AbstractInstance
 	public String onEventReceived(String event, Npc sender, Npc receiver, WorldObject reference)
 	{
 		final Instance instance = receiver.getInstanceWorld();
-		if (isInInstance(instance))
+		if (isInInstance(instance) && event.equals("SCE_J4D_DARK_ELF_START"))
 		{
-			if (event.equals("SCE_J4D_DARK_ELF_START"))
-			{
-				getTimers().addTimer("TIMER_ID_DIE", Rnd.get(60000) + 5000, receiver, null);
-			}
+			getTimers().addTimer("TIMER_ID_DIE", Rnd.get(60000) + 5000, receiver, null);
 		}
 		return super.onEventReceived(event, sender, receiver, reference);
 	}

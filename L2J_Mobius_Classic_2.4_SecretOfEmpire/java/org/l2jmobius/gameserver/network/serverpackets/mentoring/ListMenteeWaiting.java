@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ListMenteeWaiting implements IClientOutgoingPacket
 {
-	private final int PLAYERS_PER_PAGE = 64;
+	private static final int PLAYERS_PER_PAGE = 64;
 	private final List<PlayerInstance> _possibleCandiates = new ArrayList<>();
 	private final int _page;
 	

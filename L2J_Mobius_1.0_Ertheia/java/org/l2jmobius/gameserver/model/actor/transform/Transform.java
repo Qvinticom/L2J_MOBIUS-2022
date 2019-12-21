@@ -407,21 +407,15 @@ public class Transform implements IIdentifiable
 	
 	public void onLevelUp(PlayerInstance player)
 	{
+		// Add skills depending on level.
 		final TransformTemplate template = getTemplate(player);
-		if (template != null)
+		if ((template != null) && !template.getAdditionalSkills().isEmpty())
 		{
-			// Add skills depending on level.
-			if (!template.getAdditionalSkills().isEmpty())
+			for (AdditionalSkillHolder holder : template.getAdditionalSkills())
 			{
-				for (AdditionalSkillHolder holder : template.getAdditionalSkills())
+				if ((player.getLevel() >= holder.getMinLevel()) && (player.getSkillLevel(holder.getSkillId()) < holder.getSkillLevel()))
 				{
-					if (player.getLevel() >= holder.getMinLevel())
-					{
-						if (player.getSkillLevel(holder.getSkillId()) < holder.getSkillLevel())
-						{
-							player.addTransformSkill(holder.getSkill());
-						}
-					}
+					player.addTransformSkill(holder.getSkill());
 				}
 			}
 		}

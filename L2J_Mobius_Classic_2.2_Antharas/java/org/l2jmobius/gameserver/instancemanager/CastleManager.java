@@ -43,7 +43,7 @@ public class CastleManager implements InstanceListManager
 	private final Map<Integer, Castle> _castles = new ConcurrentSkipListMap<>();
 	private final Map<Integer, Long> _castleSiegeDate = new ConcurrentHashMap<>();
 	
-	private static final int _castleCirclets[] =
+	private static final int[] _castleCirclets =
 	{
 		0,
 		6838,

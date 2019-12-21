@@ -246,6 +246,7 @@ public class Q00792_TheSuperionGiants extends Quest
 			case State.CREATED:
 			{
 				htmltext = "34243-01.htm";
+				// fallthrough?
 			}
 			case State.STARTED:
 			{

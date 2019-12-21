@@ -105,7 +105,7 @@ public class NextAction
 	/**
 	 * @param event the event to set.
 	 */
-	public void setEvents(ArrayList<CtrlEvent> event)
+	public void setEvents(List<CtrlEvent> event)
 	{
 		_events = event;
 	}
@@ -170,7 +170,7 @@ public class NextAction
 	/**
 	 * @param intentions the intention to set.
 	 */
-	public void setIntentions(ArrayList<CtrlIntention> intentions)
+	public void setIntentions(List<CtrlIntention> intentions)
 	{
 		_intentions = intentions;
 	}

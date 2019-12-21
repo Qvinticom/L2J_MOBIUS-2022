@@ -68,6 +68,6 @@ public class RequestListPartyMatchingWaitingRoom implements IClientIncomingPacke
 			return;
 		}
 		
-		client.sendPacket(new ExListPartyMatchingWaitingRoom(player, _page, _minLevel, _maxLevel, _classId, _query));
+		client.sendPacket(new ExListPartyMatchingWaitingRoom(_page, _minLevel, _maxLevel, _classId, _query));
 	}
 }

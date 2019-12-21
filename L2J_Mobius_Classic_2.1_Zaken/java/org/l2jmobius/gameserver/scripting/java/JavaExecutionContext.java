@@ -46,7 +46,7 @@ public class JavaExecutionContext extends JavaScriptingEngine
 	private static final List<String> _options = new ArrayList<>();
 	private static Path _currentExecutingScript;
 	
-	JavaExecutionContext(JavaScriptingEngine engine)
+	JavaExecutionContext()
 	{
 		// Set options.
 		addOptionIfNotNull(_options, getProperty("source"), "-source");

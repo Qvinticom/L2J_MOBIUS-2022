@@ -164,14 +164,11 @@ public class GainakSiege extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerDeath(OnCreatureDeath event)
 	{
-		if (_isInSiege && GAINAK_SIEGE_ZONE.getCharactersInside().contains(event.getTarget()))
+		if (_isInSiege && GAINAK_SIEGE_ZONE.getCharactersInside().contains(event.getTarget()) && event.getAttacker().isPlayer() && event.getTarget().isPlayer())
 		{
-			if (event.getAttacker().isPlayer() && event.getTarget().isPlayer())
-			{
-				final PlayerInstance attackerPlayer = event.getAttacker().getActingPlayer();
-				attackerPlayer.setPvpKills(attackerPlayer.getPvpKills() + 1);
-				attackerPlayer.sendPacket(new UserInfo(attackerPlayer));
-			}
+			final PlayerInstance attackerPlayer = event.getAttacker().getActingPlayer();
+			attackerPlayer.setPvpKills(attackerPlayer.getPvpKills() + 1);
+			attackerPlayer.sendPacket(new UserInfo(attackerPlayer));
 		}
 	}
 	

@@ -153,7 +153,7 @@ public class Q00553_OlympiadUndefeated extends Quest
 	@Override
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
+		String htmltext; // = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
 		
 		if ((player.getLevel() < 75) || (player.getNobleLevel() == 0))

@@ -58,13 +58,13 @@ public class Q10789_LettersFromTheQueenSwampOfScreams extends LetterQuest
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
+		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return null;
+			return htmltext;
 		}
 		
-		String htmltext = event;
 		switch (event)
 		{
 			case "31328-02.html":
@@ -94,10 +94,6 @@ public class Q10789_LettersFromTheQueenSwampOfScreams extends LetterQuest
 					htmltext = event;
 				}
 				break;
-			}
-			default:
-			{
-				htmltext = null;
 			}
 		}
 		return htmltext;

@@ -1396,12 +1396,9 @@ public class SkillTreesData implements IXmlReader
 		{
 			for (SkillLearn s : skillTree.values())
 			{
-				if (player.getLevel() < s.getGetLevel())
+				if ((player.getLevel() < s.getGetLevel()) && ((minLevel == 0) || (minLevel > s.getGetLevel())))
 				{
-					if ((minLevel == 0) || (minLevel > s.getGetLevel()))
-					{
-						minLevel = s.getGetLevel();
-					}
+					minLevel = s.getGetLevel();
 				}
 			}
 		}

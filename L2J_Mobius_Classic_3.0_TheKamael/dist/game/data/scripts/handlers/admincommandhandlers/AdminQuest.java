@@ -377,7 +377,7 @@ public class AdminQuest implements IAdminCommandHandler
 	
 	private String getUpPath(String full)
 	{
-		final int index = full.lastIndexOf("/");
+		final int index = full.lastIndexOf('/');
 		if (index == -1)
 		{
 			return "";

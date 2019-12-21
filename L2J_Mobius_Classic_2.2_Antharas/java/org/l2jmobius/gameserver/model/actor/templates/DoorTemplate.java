@@ -27,8 +27,8 @@ import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 public class DoorTemplate extends CreatureTemplate implements IIdentifiable
 {
 	private final int _doorId;
-	private final int _nodeX[];
-	private final int _nodeY[];
+	private final int[] _nodeX;
+	private final int[] _nodeY;
 	private final int _nodeZ;
 	private final int _height;
 	private final int _posX;
