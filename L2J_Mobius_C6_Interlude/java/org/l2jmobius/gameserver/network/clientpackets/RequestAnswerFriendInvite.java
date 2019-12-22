@@ -57,7 +57,7 @@ public class RequestAnswerFriendInvite extends GameClientPacket
 			{
 				try (Connection con = DatabaseFactory.getConnection())
 				{
-					PreparedStatement statement = con.prepareStatement("INSERT INTO character_friends (char_id, friend_id) VALUES (?,?), (?,?)");
+					final PreparedStatement statement = con.prepareStatement("INSERT INTO character_friends (char_id, friend_id) VALUES (?,?), (?,?)");
 					statement.setInt(1, requestor.getObjectId());
 					statement.setInt(2, player.getObjectId());
 					statement.setInt(3, player.getObjectId());

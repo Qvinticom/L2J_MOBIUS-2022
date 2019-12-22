@@ -39,9 +39,9 @@ public class AuraFriendly implements ITargetTypeHandler
 	@Override
 	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		List<Creature> targetList = new ArrayList<>();
-		PlayerInstance player = creature.getActingPlayer();
-		int maxTargets = skill.getAffectLimit();
+		final List<Creature> targetList = new ArrayList<>();
+		final PlayerInstance player = creature.getActingPlayer();
+		final int maxTargets = skill.getAffectLimit();
 		World.getInstance().forEachVisibleObject(player, Creature.class, obj ->
 		{
 			if ((obj == creature) || !checkTarget(player, obj))
@@ -79,7 +79,7 @@ public class AuraFriendly implements ITargetTypeHandler
 		
 		if (target.isPlayable())
 		{
-			PlayerInstance targetPlayer = target.getActingPlayer();
+			final PlayerInstance targetPlayer = target.getActingPlayer();
 			
 			if (player.isInDuelWith(target))
 			{

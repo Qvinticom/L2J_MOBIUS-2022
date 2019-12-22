@@ -123,7 +123,7 @@ public class Lottery
 			try (Connection con = DatabaseFactory.getConnection())
 			{
 				statement = con.prepareStatement(SELECT_LAST_LOTTERY);
-				ResultSet rset = statement.executeQuery();
+				final ResultSet rset = statement.executeQuery();
 				
 				if (rset.next())
 				{
@@ -177,7 +177,7 @@ public class Lottery
 			_isStarted = true;
 			
 			Announcements.getInstance().announceToAll("Lottery tickets are now available for Lucky Lottery #" + getId() + ".");
-			Calendar finishtime = Calendar.getInstance();
+			final Calendar finishtime = Calendar.getInstance();
 			finishtime.setTimeInMillis(_enddate);
 			finishtime.set(Calendar.MINUTE, 0);
 			finishtime.set(Calendar.SECOND, 0);
@@ -288,7 +288,7 @@ public class Lottery
 			{
 				statement = con.prepareStatement(SELECT_LOTTERY_ITEM);
 				statement.setInt(1, _number);
-				ResultSet rset = statement.executeQuery();
+				final ResultSet rset = statement.executeQuery();
 				
 				while (rset.next())
 				{
@@ -467,7 +467,7 @@ public class Lottery
 		{
 			statement = con.prepareStatement(SELECT_LOTTERY_TICKET);
 			statement.setInt(1, id);
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			
 			if (rset.next())
 			{

@@ -163,12 +163,9 @@ public class SevenSignsRBs extends AbstractInstance
 			{
 				for (Creature charInside : _anakim_zone.getCharactersInside())
 				{
-					if (charInside != null)
+					if ((charInside != null) && charInside.isPlayer())
 					{
-						if (charInside.isPlayer())
-						{
-							charInside.teleToLocation(-20185 + getRandom(50), 13476 + getRandom(50), -4901);
-						}
+						charInside.teleToLocation(-20185 + getRandom(50), 13476 + getRandom(50), -4901);
 					}
 				}
 				break;
@@ -177,12 +174,9 @@ public class SevenSignsRBs extends AbstractInstance
 			{
 				for (Creature charInside : _lilith_zone.getCharactersInside())
 				{
-					if (charInside != null)
+					if ((charInside != null) && charInside.isPlayer())
 					{
-						if (charInside.isPlayer())
-						{
-							charInside.teleToLocation(171346 + getRandom(50), -17599 + getRandom(50), -4901);
-						}
+						charInside.teleToLocation(171346 + getRandom(50), -17599 + getRandom(50), -4901);
 					}
 				}
 				break;

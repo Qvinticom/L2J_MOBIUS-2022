@@ -85,7 +85,7 @@ public class Q374_WhisperOfDreams_Part1 extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -106,7 +106,7 @@ public class Q374_WhisperOfDreams_Part1 extends Quest
 				htmltext = "30515-06.htm";
 				st.playSound(QuestState.SOUND_MIDDLE);
 				
-				int[] reward = REWARDS[Integer.parseInt(event.substring(9, 10))];
+				final int[] reward = REWARDS[Integer.parseInt(event.substring(9, 10))];
 				
 				st.takeItems(CAVE_BEAST_TOOTH, -1);
 				st.takeItems(DEATH_WAVE_LIGHT, -1);
@@ -146,7 +146,7 @@ public class Q374_WhisperOfDreams_Part1 extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

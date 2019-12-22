@@ -54,7 +54,7 @@ public class ExtractableItems implements IItemHandler
 		}
 		while (count-- > 0)
 		{
-			ExtractableItem exitem = ExtractableItemsData.getInstance().getExtractableItem(itemID);
+			final ExtractableItem exitem = ExtractableItemsData.getInstance().getExtractableItem(itemID);
 			if (exitem == null)
 			{
 				return;

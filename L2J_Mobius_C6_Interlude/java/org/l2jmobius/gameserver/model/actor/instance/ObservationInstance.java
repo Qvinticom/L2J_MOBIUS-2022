@@ -68,12 +68,12 @@ public class ObservationInstance extends FolkInstance
 		
 		if (command.startsWith("observeSiege"))
 		{
-			StringTokenizer st = new StringTokenizer(command);
+			final StringTokenizer st = new StringTokenizer(command);
 			st.nextToken(); // Command
 			
-			int x = Integer.parseInt(st.nextToken()); // X location
-			int y = Integer.parseInt(st.nextToken()); // Y location
-			int z = Integer.parseInt(st.nextToken()); // Z location
+			final int x = Integer.parseInt(st.nextToken()); // X location
+			final int y = Integer.parseInt(st.nextToken()); // Y location
+			final int z = Integer.parseInt(st.nextToken()); // Z location
 			
 			if (SiegeManager.getInstance().getSiege(x, y, z) != null)
 			{
@@ -117,12 +117,12 @@ public class ObservationInstance extends FolkInstance
 	 */
 	private void doObserve(PlayerInstance player, String val)
 	{
-		StringTokenizer st = new StringTokenizer(val);
+		final StringTokenizer st = new StringTokenizer(val);
 		st.nextToken(); // Command
-		int x = Integer.parseInt(st.nextToken());
-		int y = Integer.parseInt(st.nextToken());
-		int z = Integer.parseInt(st.nextToken());
-		int cost = Integer.parseInt(st.nextToken());
+		final int x = Integer.parseInt(st.nextToken());
+		final int y = Integer.parseInt(st.nextToken());
+		final int z = Integer.parseInt(st.nextToken());
+		final int cost = Integer.parseInt(st.nextToken());
 		
 		if (player.reduceAdena("Broadcast", cost, this, true))
 		{

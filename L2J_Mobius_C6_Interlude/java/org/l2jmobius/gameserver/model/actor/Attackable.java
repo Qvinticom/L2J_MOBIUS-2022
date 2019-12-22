@@ -77,7 +77,6 @@ import org.l2jmobius.gameserver.util.Util;
  * <li>MonsterInstance</li>
  * <li>SiegeGuardInstance</li>
  * @version $Revision: 1.24.2.3.2.16 $ $Date: 2009/04/13 02:11:03 $
- * @author scoria dev
  */
 public class Attackable extends NpcInstance
 {
@@ -1026,7 +1025,7 @@ public class Attackable extends NpcInstance
 			{
 				if ((attacker instanceof PlayerInstance) || (attacker instanceof Summon))
 				{
-					PlayerInstance player = attacker instanceof PlayerInstance ? (PlayerInstance) attacker : ((Summon) attacker).getOwner();
+					final PlayerInstance player = attacker instanceof PlayerInstance ? (PlayerInstance) attacker : ((Summon) attacker).getOwner();
 					
 					for (Quest quest : getTemplate().getEventQuests(Quest.QuestEventType.ON_ATTACK))
 					{
@@ -1054,7 +1053,7 @@ public class Attackable extends NpcInstance
 		}
 		if (target == null) // whole aggrolist
 		{
-			Creature mostHated = getMostHated();
+			final Creature mostHated = getMostHated();
 			
 			if (mostHated == null) // makes target passive for a moment more
 			{
@@ -1082,7 +1081,7 @@ public class Attackable extends NpcInstance
 			return;
 		}
 		
-		AggroInfo ai = _aggroList.get(target);
+		final AggroInfo ai = _aggroList.get(target);
 		if (ai == null)
 		{
 			return;
@@ -1111,7 +1110,7 @@ public class Attackable extends NpcInstance
 			return;
 		}
 		
-		AggroInfo ai = _aggroList.get(target);
+		final AggroInfo ai = _aggroList.get(target);
 		
 		if (ai == null)
 		{
@@ -1570,7 +1569,7 @@ public class Attackable extends NpcInstance
 		// Check if an Item from this category must be dropped
 		if (Rnd.get(DropData.MAX_CHANCE) < categoryDropChance)
 		{
-			DropData drop = categoryDrops.dropOne(isRaid());
+			final DropData drop = categoryDrops.dropOne(isRaid());
 			
 			if (drop == null)
 			{
@@ -1863,7 +1862,7 @@ public class Attackable extends NpcInstance
 				// according to sh1ny, seeded mobs CAN be spoiled and swept.
 				if (isSpoil()/* && !_seeded */)
 				{
-					List<RewardItem> sweepList = new ArrayList<>();
+					final List<RewardItem> sweepList = new ArrayList<>();
 					for (DropData drop : cat.getAllDrops())
 					{
 						item = calculateRewardItem(player, drop, levelModifier, true);
@@ -1886,7 +1885,7 @@ public class Attackable extends NpcInstance
 			{
 				if (_seeded)
 				{
-					DropData drop = cat.dropSeedAllowedDropsOnly();
+					final DropData drop = cat.dropSeedAllowedDropsOnly();
 					if (drop == null)
 					{
 						continue;
@@ -1944,7 +1943,7 @@ public class Attackable extends NpcInstance
 			champqty++; // quantity should actually vary between 1 and whatever admin specified as max, inclusive.
 			
 			// Give this or these Item(s) to the PlayerInstance that has killed the Attackable
-			RewardItem item = new RewardItem(Config.L2JMOD_CHAMPION_REWARD_ID, champqty);
+			final RewardItem item = new RewardItem(Config.L2JMOD_CHAMPION_REWARD_ID, champqty);
 			if (Config.AUTO_LOOT)
 			{
 				final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
@@ -1975,7 +1974,7 @@ public class Attackable extends NpcInstance
 			int random = Rnd.get(1000); // note *10
 			if ((random < Config.RATE_DROP_SPECIAL_HERBS) && !spec) // && !_spec useless yet
 			{
-				RewardItem item = new RewardItem(8612, 1); // Herb of Warrior
+				final RewardItem item = new RewardItem(8612, 1); // Herb of Warrior
 				if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 				{
 					final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
@@ -2045,7 +2044,7 @@ public class Attackable extends NpcInstance
 			random = Rnd.get(1000); // note *10
 			if ((random < Config.RATE_DROP_SPECIAL_HERBS) && !spec)
 			{
-				RewardItem item = new RewardItem(8613, 1); // Herb of Mystic
+				final RewardItem item = new RewardItem(8613, 1); // Herb of Mystic
 				if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 				{
 					final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
@@ -2109,7 +2108,7 @@ public class Attackable extends NpcInstance
 			random = Rnd.get(1000); // note *10
 			if ((random < Config.RATE_DROP_SPECIAL_HERBS) && !spec)
 			{
-				RewardItem item = new RewardItem(8614, 1); // Herb of Recovery
+				final RewardItem item = new RewardItem(8614, 1); // Herb of Recovery
 				if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 				{
 					final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
@@ -2138,7 +2137,7 @@ public class Attackable extends NpcInstance
 				random = Rnd.get(100);
 				if (random < Config.RATE_DROP_MP_HP_HERBS)
 				{
-					RewardItem item = new RewardItem(8600, 1); // Herb of Life
+					final RewardItem item = new RewardItem(8600, 1); // Herb of Life
 					if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 					{
 						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
@@ -2163,7 +2162,7 @@ public class Attackable extends NpcInstance
 				random = Rnd.get(100);
 				if (random < Config.RATE_DROP_GREATER_HERBS)
 				{
-					RewardItem item = new RewardItem(8601, 1); // Greater Herb of Life
+					final RewardItem item = new RewardItem(8601, 1); // Greater Herb of Life
 					if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 					{
 						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
@@ -2188,7 +2187,7 @@ public class Attackable extends NpcInstance
 				random = Rnd.get(1000); // note *10
 				if (random < Config.RATE_DROP_SUPERIOR_HERBS)
 				{
-					RewardItem item = new RewardItem(8602, 1); // Superior Herb of Life
+					final RewardItem item = new RewardItem(8602, 1); // Superior Herb of Life
 					if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 					{
 						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
@@ -2214,7 +2213,7 @@ public class Attackable extends NpcInstance
 				random = Rnd.get(100);
 				if (random < Config.RATE_DROP_MP_HP_HERBS)
 				{
-					RewardItem item = new RewardItem(8603, 1); // Herb of Mana
+					final RewardItem item = new RewardItem(8603, 1); // Herb of Mana
 					if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 					{
 						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
@@ -2239,7 +2238,7 @@ public class Attackable extends NpcInstance
 				random = Rnd.get(100);
 				if (random < Config.RATE_DROP_GREATER_HERBS)
 				{
-					RewardItem item = new RewardItem(8604, 1); // Greater Herb of Mana
+					final RewardItem item = new RewardItem(8604, 1); // Greater Herb of Mana
 					if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 					{
 						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
@@ -2264,7 +2263,7 @@ public class Attackable extends NpcInstance
 				random = Rnd.get(1000); // note *10
 				if (random < Config.RATE_DROP_SUPERIOR_HERBS)
 				{
-					RewardItem item = new RewardItem(8605, 1); // Superior Herb of Mana
+					final RewardItem item = new RewardItem(8605, 1); // Superior Herb of Mana
 					if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 					{
 						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
@@ -2288,7 +2287,7 @@ public class Attackable extends NpcInstance
 			random = Rnd.get(100);
 			if (random < Config.RATE_DROP_COMMON_HERBS)
 			{
-				RewardItem item = new RewardItem(8611, 1); // Herb of Speed
+				final RewardItem item = new RewardItem(8611, 1); // Herb of Speed
 				if (Config.AUTO_LOOT && Config.AUTO_LOOT_HERBS)
 				{
 					final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
@@ -2354,7 +2353,7 @@ public class Attackable extends NpcInstance
 		{
 			if (Rnd.get(DropData.MAX_CHANCE) < drop.chance)
 			{
-				RewardItem item = new RewardItem(drop.items[Rnd.get(drop.items.length)], Rnd.get(drop.min, drop.max));
+				final RewardItem item = new RewardItem(drop.items[Rnd.get(drop.items.length)], Rnd.get(drop.min, drop.max));
 				
 				if (Config.AUTO_LOOT)
 				{
@@ -2672,7 +2671,7 @@ public class Attackable extends NpcInstance
 		
 		final NpcTemplate.AbsorbCrystalType absorbType = getTemplate().absorbType;
 		
-		PlayerInstance killer = attacker instanceof Summon ? ((Summon) attacker).getOwner() : (PlayerInstance) attacker;
+		final PlayerInstance killer = attacker instanceof Summon ? ((Summon) attacker).getOwner() : (PlayerInstance) attacker;
 		
 		// If this mob is a boss, then skip some checkings
 		if (!isBossMob)
@@ -2685,7 +2684,7 @@ public class Attackable extends NpcInstance
 			}
 			
 			// Fail if the killer isn't in the _absorbersList of this Attackable and mob is not boss
-			AbsorberInfo ai = _absorbersList.get(killer);
+			final AbsorberInfo ai = _absorbersList.get(killer);
 			if ((ai == null) || (ai._absorber.getObjectId() != killer.getObjectId()))
 			{
 				isSuccess = false;
@@ -2748,7 +2747,7 @@ public class Attackable extends NpcInstance
 			
 			crystalQTY = 0;
 			
-			ItemInstance[] inv = player.getInventory().getItems();
+			final ItemInstance[] inv = player.getInventory().getItems();
 			for (ItemInstance item : inv)
 			{
 				final int itemId = item.getItemId();
@@ -2909,7 +2908,7 @@ public class Attackable extends NpcInstance
 		if (item != null)
 		{
 			// Prepare inventory update packet
-			InventoryUpdate playerIU = new InventoryUpdate();
+			final InventoryUpdate playerIU = new InventoryUpdate();
 			playerIU.addRemovedItem(item);
 			
 			// Add new crystal to the killer's inventory
@@ -2927,7 +2926,7 @@ public class Attackable extends NpcInstance
 			}
 			
 			// Send system message
-			SystemMessage sms = new SystemMessage(SystemMessageId.EARNED_ITEM);
+			final SystemMessage sms = new SystemMessage(SystemMessageId.EARNED_ITEM);
 			sms.addItemName(giveid);
 			player.sendPacket(sms);
 			
@@ -3165,7 +3164,7 @@ public class Attackable extends NpcInstance
 			count += diff;
 		}
 		
-		List<RewardItem> harvested = new ArrayList<>();
+		final List<RewardItem> harvested = new ArrayList<>();
 		
 		harvested.add(new RewardItem(Manor.getInstance().getCropType(_seedType), count * Config.RATE_DROP_MANOR));
 		

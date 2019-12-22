@@ -102,7 +102,7 @@ public class HomeBoard implements IParseBoardHandler
 	@Override
 	public String[] getCommunityBoardCommands()
 	{
-		List<String> commands = new ArrayList<>();
+		final List<String> commands = new ArrayList<>();
 		commands.addAll(Arrays.asList(COMMANDS));
 		commands.addAll(Arrays.asList(CUSTOM_COMMANDS));
 		return commands.stream().filter(Objects::nonNull).toArray(String[]::new);
@@ -204,7 +204,7 @@ public class HomeBoard implements IParseBoardHandler
 			{
 				player.destroyItemByItemId("CB_Buff", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_BUFF_PRICE * buffCount, player, true);
 				final PetInstance pet = player.getPet();
-				List<Creature> targets = new ArrayList<>(4);
+				final List<Creature> targets = new ArrayList<>(4);
 				targets.add(player);
 				if (pet != null)
 				{

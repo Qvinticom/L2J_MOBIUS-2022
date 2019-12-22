@@ -299,7 +299,7 @@ public class Auction
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("Update auction set endDate = ? where id = ?");
+			final PreparedStatement statement = con.prepareStatement("Update auction set endDate = ? where id = ?");
 			statement.setLong(1, _endDate);
 			statement.setInt(2, _id);
 			statement.execute();
@@ -524,7 +524,7 @@ public class Auction
 			}
 			
 			deleteAuctionFromDB();
-			Clan clan = ClanTable.getInstance().getClanByName(_bidders.get(_highestBidderId).getClanName());
+			final Clan clan = ClanTable.getInstance().getClanByName(_bidders.get(_highestBidderId).getClanName());
 			_bidders.remove(_highestBidderId);
 			clan.setAuctionBiddedAt(0, true);
 			removeBids();

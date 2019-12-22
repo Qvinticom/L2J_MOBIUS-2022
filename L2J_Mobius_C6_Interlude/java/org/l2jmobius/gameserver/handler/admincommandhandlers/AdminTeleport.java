@@ -172,7 +172,7 @@ public class AdminTeleport implements IAdminCommandHandler
 					BuilderUtil.sendSysMessage(activeChar, "Usage: //teleportto <char_name>");
 					return false;
 				}
-				PlayerInstance player = World.getInstance().getPlayer(val);
+				final PlayerInstance player = World.getInstance().getPlayer(val);
 				if (player == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "ATTENTION: char_name must be valid character");
@@ -399,9 +399,9 @@ public class AdminTeleport implements IAdminCommandHandler
 				int z = activeChar.getZ();
 				try
 				{
-					String val = command.substring(8);
+					final String val = command.substring(8);
 					st = new StringTokenizer(val);
-					String dir = st.nextToken();
+					final String dir = st.nextToken();
 					if (st.hasMoreTokens())
 					{
 						intVal = Integer.parseInt(st.nextToken());
@@ -506,7 +506,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		activeChar.teleToLocation(x, y, z, false);
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 		sm.addString("You have been teleported to " + x + " " + y + " " + z);
 		activeChar.sendPacket(sm);
 	}
@@ -518,7 +518,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	
 	private void showTeleportCharWindow(PlayerInstance activeChar)
 	{
-		WorldObject target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
 		
 		if (target instanceof PlayerInstance)
@@ -531,9 +531,9 @@ public class AdminTeleport implements IAdminCommandHandler
 			return;
 		}
 		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		
-		StringBuilder replyMSG = new StringBuilder("<html><title>Teleport Character</title>");
+		final StringBuilder replyMSG = new StringBuilder("<html><title>Teleport Character</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("The character you will teleport is " + player.getName() + ".");
 		replyMSG.append("<br>");
@@ -585,14 +585,14 @@ public class AdminTeleport implements IAdminCommandHandler
 	
 	private void recallNPC(PlayerInstance activeChar)
 	{
-		WorldObject obj = activeChar.getTarget();
+		final WorldObject obj = activeChar.getTarget();
 		if (obj instanceof NpcInstance)
 		{
-			NpcInstance target = (NpcInstance) obj;
+			final NpcInstance target = (NpcInstance) obj;
 			
 			final int monsterTemplate = target.getTemplate().npcId;
 			
-			NpcTemplate template1 = NpcTable.getInstance().getTemplate(monsterTemplate);
+			final NpcTemplate template1 = NpcTable.getInstance().getTemplate(monsterTemplate);
 			
 			if (template1 == null)
 			{
@@ -631,7 +631,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				SpawnTable.getInstance().addNewSpawn(spawn, !custom_boss_spawn);
 				spawn.init();
 				
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				sm.addString("Created " + template1.name + " on " + target.getObjectId() + ".");
 				activeChar.sendPacket(sm);
 			}

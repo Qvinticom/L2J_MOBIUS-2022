@@ -64,7 +64,7 @@ public class MissQueen extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		
 		if (event.equals("newbie_coupon"))
 		{

@@ -57,7 +57,7 @@ public class Q00075_SagaOfTheTitan extends Quest
 	private static final int FIERY_IFRIT = 21652;
 	private static final int IKEDIT = 21653;
 	private static final int WATCHER_OF_THE_ANCIENT_PLEDGE = 27216;
-	private static final int FALLEN_NOBLE_ORC__MUHAKR = 27292;
+	private static final int FALLEN_NOBLE_ORC_MUHAKR = 27292;
 	private static final int HALISHA_ARCHON = 27219;
 	private static final int GRANPAPA_ASKALIUS = 27283;
 	// Items
@@ -78,7 +78,7 @@ public class Q00075_SagaOfTheTitan extends Quest
 		super(75);
 		addStartNpc(LADANZA);
 		addTalkId(LADANZA, GARVARENTZ, RIFKEN, LAZENBY, SAKE_DUN_ZU_HESTUI, TABLET_OF_VISION_1, TABLET_OF_VISION_2, TABLET_OF_VISION_3, TABLET_OF_VISION_4);
-		addKillId(ICE_MONSTER, SPIRIT_OF_A_DROWNED, SOUL_OF_COLD, GHOST_OF_SOLITUDE, FIEND_OF_COLD, SPIRIT_OF_COLD, SPAMPLAND_WATCHMAN, FLAME_DRAKE, FIERY_IFRIT, IKEDIT, WATCHER_OF_THE_ANCIENT_PLEDGE, FALLEN_NOBLE_ORC__MUHAKR, HALISHA_ARCHON, GRANPAPA_ASKALIUS);
+		addKillId(ICE_MONSTER, SPIRIT_OF_A_DROWNED, SOUL_OF_COLD, GHOST_OF_SOLITUDE, FIEND_OF_COLD, SPIRIT_OF_COLD, SPAMPLAND_WATCHMAN, FLAME_DRAKE, FIERY_IFRIT, IKEDIT, WATCHER_OF_THE_ANCIENT_PLEDGE, FALLEN_NOBLE_ORC_MUHAKR, HALISHA_ARCHON, GRANPAPA_ASKALIUS);
 		registerQuestItems(BITTER_COLD_VODKA, ICE_CRYSTAL_FRAGMENT, HALISHA_BADGE);
 		addCondMinLevel(76, "aiken02.htm");
 		addCondClassId(ClassId.DESTROYER, "aiken03.htm");
@@ -157,7 +157,7 @@ public class Q00075_SagaOfTheTitan extends Quest
 			{
 				if (qs.isCond(8))
 				{
-					addSpawn(FALLEN_NOBLE_ORC__MUHAKR, npc, true, 0, true);
+					addSpawn(FALLEN_NOBLE_ORC_MUHAKR, npc, true, 0, true);
 					qs.setCond(9);
 				}
 				break;
@@ -447,16 +447,13 @@ public class Q00075_SagaOfTheTitan extends Quest
 				case GHOST_OF_SOLITUDE:
 				case SPIRIT_OF_COLD:
 				{
-					if (qs.isCond(3))
+					if (qs.isCond(3) && giveItemRandomly(killer, npc, ICE_CRYSTAL_FRAGMENT, 1, 50, 0.5, true))
 					{
-						if (giveItemRandomly(killer, npc, ICE_CRYSTAL_FRAGMENT, 1, 50, 0.5, true))
-						{
-							qs.setCond(4);
-						}
+						qs.setCond(4);
 					}
 					break;
 				}
-				case FALLEN_NOBLE_ORC__MUHAKR:
+				case FALLEN_NOBLE_ORC_MUHAKR:
 				{
 					if (qs.isCond(9))
 					{
@@ -469,13 +466,10 @@ public class Q00075_SagaOfTheTitan extends Quest
 				case FIERY_IFRIT:
 				case IKEDIT:
 				{
-					if (qs.isCond(12))
+					if (qs.isCond(12) && giveItemRandomly(killer, npc, HALISHA_BADGE, 1, 700, 0.5, true))
 					{
-						if (giveItemRandomly(killer, npc, HALISHA_BADGE, 1, 700, 0.5, true))
-						{
-							addSpawn(HALISHA_ARCHON, npc, true, 0, true);
-							qs.setCond(13);
-						}
+						addSpawn(HALISHA_ARCHON, npc, true, 0, true);
+						qs.setCond(13);
 					}
 					break;
 				}

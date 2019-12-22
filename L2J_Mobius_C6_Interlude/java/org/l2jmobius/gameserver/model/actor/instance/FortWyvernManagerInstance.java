@@ -72,7 +72,7 @@ public class FortWyvernManagerInstance extends NpcInstance
 			if ((petItemId == 0) || !player.isMounted())
 			{
 				player.sendMessage("Ride your strider first...");
-				NpcHtmlMessage html = new NpcHtmlMessage(1);
+				final NpcHtmlMessage html = new NpcHtmlMessage(1);
 				html.setFile("data/html/fortress/wyvernmanager-explain.htm");
 				html.replace("%count%", String.valueOf(10));
 				player.sendPacket(html);
@@ -80,7 +80,7 @@ public class FortWyvernManagerInstance extends NpcInstance
 			}
 			else if (player.isMounted() && (petItem != null) && (petItem.getEnchantLevel() < 55))
 			{
-				NpcHtmlMessage html = new NpcHtmlMessage(1);
+				final NpcHtmlMessage html = new NpcHtmlMessage(1);
 				html.setFile("data/html/fortress/wyvernmanager-explain.htm");
 				html.replace("%count%", String.valueOf(10));
 				player.sendPacket(html);
@@ -118,7 +118,7 @@ public class FortWyvernManagerInstance extends NpcInstance
 			}
 			else
 			{
-				NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				html.setFile("data/html/fortress/wyvernmanager-explain.htm");
 				html.replace("%count%", String.valueOf(10));
 				player.sendPacket(html);
@@ -169,7 +169,7 @@ public class FortWyvernManagerInstance extends NpcInstance
 			filename = "data/html/fortress/wyvernmanager.htm";
 		}
 		
-		NpcHtmlMessage html = new NpcHtmlMessage(1);
+		final NpcHtmlMessage html = new NpcHtmlMessage(1);
 		html.setFile(filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%count%", String.valueOf(10));

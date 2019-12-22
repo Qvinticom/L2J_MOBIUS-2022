@@ -279,7 +279,7 @@ public class Lindvior extends AbstractNpcAI
 			LOGGER.warning(getName() + ": Character: " + attacker.getName() + " attacked: " + npc.getName() + " wich is out of the boss zone!");
 		}
 		
-		double percent = ((npc.getCurrentHp() - damage) / npc.getMaxHp()) * 100;
+		final double percent = ((npc.getCurrentHp() - damage) / npc.getMaxHp()) * 100;
 		if ((percent <= 80) && (_status == 0))
 		{
 			_zoneLair.broadcastPacket(new OnEventTrigger(RED_ZONE_EFFECT, true));
@@ -466,7 +466,7 @@ public class Lindvior extends AbstractNpcAI
 		{
 			synchronized (_chargedValues)
 			{
-				int index = npc.getScriptValue();
+				final int index = npc.getScriptValue();
 				if (!hasFlag(_chargedMask, 1 << index))
 				{
 					_chargedValues[index] += caster.isGM() ? (30 / 4) + 2 : (1 / 4) + 2;
@@ -707,7 +707,7 @@ public class Lindvior extends AbstractNpcAI
 			}
 			case "stage_1_activate_generator":
 			{
-				int index = npc.getScriptValue();
+				final int index = npc.getScriptValue();
 				if (!hasFlag(_activeMask, 1 << index))
 				{
 					_activeMask |= 1 << index;
@@ -740,7 +740,7 @@ public class Lindvior extends AbstractNpcAI
 			{
 				_skillCastTask = ThreadPool.scheduleAtFixedRate(() -> _generatorSpawn.forEach(generators ->
 				{
-					int index = generators.getScriptValue();
+					final int index = generators.getScriptValue();
 					if (!generators.isCastingNow() && (generators.getEffectList().getBuffInfoBySkillId(SKILL_RECHARGE_POSIBLE.getSkillId()) == null) && !hasFlag(_chargedMask, 1 << index))
 					{
 						// TODO Need core implemented combo skill packet.
@@ -878,7 +878,7 @@ public class Lindvior extends AbstractNpcAI
 	
 	private void sendEventTrigger(boolean status, int... triggers)
 	{
-		IClientOutgoingPacket[] pakets = new IClientOutgoingPacket[triggers.length];
+		final IClientOutgoingPacket[] pakets = new IClientOutgoingPacket[triggers.length];
 		for (int i = 0; i < triggers.length; i++)
 		{
 			pakets[i] = new OnEventTrigger(triggers[i], status);

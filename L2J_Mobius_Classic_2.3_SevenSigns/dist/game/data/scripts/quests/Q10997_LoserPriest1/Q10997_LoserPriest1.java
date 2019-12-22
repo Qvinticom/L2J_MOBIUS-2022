@@ -190,34 +190,28 @@ public class Q10997_LoserPriest1 extends Quest
 			{
 				case HUNTER_TARANTULA:
 				{
-					if (qs.isCond(2) && (getQuestItemsCount(killer, HUNTER_TARANTULA_VENOM) < 20))
+					if (qs.isCond(2) && (getQuestItemsCount(killer, HUNTER_TARANTULA_VENOM) < 20) && (getRandom(100) < 94))
 					{
-						if (getRandom(100) < 94)
+						giveItems(killer, HUNTER_TARANTULA_VENOM, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, HUNTER_TARANTULA_VENOM) >= 20)
 						{
-							giveItems(killer, HUNTER_TARANTULA_VENOM, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, HUNTER_TARANTULA_VENOM) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_HUNTER_TARANTULAS_N_GO_HUNTING_AND_KILL_PLUNDER_TARANTULAS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(3);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_HUNTER_TARANTULAS_N_GO_HUNTING_AND_KILL_PLUNDER_TARANTULAS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(3);
 						}
 					}
 					break;
 				}
 				case PLUNDER_TARANTULA:
 				{
-					if (qs.isCond(3) && (getQuestItemsCount(killer, PLUNDER_TARANTULA_KIDNEY) < 20))
+					if (qs.isCond(3) && (getQuestItemsCount(killer, PLUNDER_TARANTULA_KIDNEY) < 20) && (getRandom(100) < 94))
 					{
-						if (getRandom(100) < 94)
+						giveItems(killer, PLUNDER_TARANTULA_KIDNEY, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, PLUNDER_TARANTULA_KIDNEY) >= 20)
 						{
-							giveItems(killer, PLUNDER_TARANTULA_KIDNEY, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, PLUNDER_TARANTULA_KIDNEY) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_PLUNDER_TARANTULAS_NRETURN_TO_PRIEST_OF_THE_EARTH_GERALD, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(4);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_PLUNDER_TARANTULAS_NRETURN_TO_PRIEST_OF_THE_EARTH_GERALD, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(4);
 						}
 					}
 					break;

@@ -40,7 +40,7 @@ public class CombatPointHeal implements ISkillHandler
 		// check for other effects
 		try
 		{
-			ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(SkillType.BUFF);
+			final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(SkillType.BUFF);
 			
 			if (handler != null)
 			{

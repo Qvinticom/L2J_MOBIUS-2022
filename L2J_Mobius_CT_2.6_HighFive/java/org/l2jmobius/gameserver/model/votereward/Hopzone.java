@@ -48,7 +48,7 @@ public class Hopzone extends VoteSystem
 		
 		try
 		{
-			URLConnection con = new URL(Config.HOPZONE_SERVER_LINK).openConnection();
+			final URLConnection con = new URL(Config.HOPZONE_SERVER_LINK).openConnection();
 			con.addRequestProperty("User-Agent", "Mozilla/5.0");
 			isr = new InputStreamReader(con.getInputStream());
 			br = new BufferedReader(isr);

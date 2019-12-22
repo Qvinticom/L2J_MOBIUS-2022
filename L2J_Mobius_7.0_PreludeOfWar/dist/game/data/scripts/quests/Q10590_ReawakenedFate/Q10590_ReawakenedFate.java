@@ -141,37 +141,31 @@ public class Q10590_ReawakenedFate extends Quest
 			}
 			case "34513-10.html":
 			{
-				if (qs.isCond(7))
+				if (qs.isCond(7) && (player.getLevel() >= 99))
 				{
-					if (player.getLevel() >= 99)
-					{
-						// Reward №1
-						takeItems(player, VAMPIRE_ICHOR, -1);
-						giveItems(player, ACHIEVEMENT_BOX, 1);
-						giveItems(player, RUBIN_LV2, 1);
-						showOnScreenMsg(player, NpcStringId.YOU_ARE_READY_TO_ADD_A_DUAL_CLASS_NTALK_TO_THE_DUAL_CLASS_MASTER, ExShowScreenMessage.TOP_CENTER, 10000);
-						qs.exitQuest(false, true);
-						htmltext = event;
-					}
-					break;
+					// Reward №1
+					takeItems(player, VAMPIRE_ICHOR, -1);
+					giveItems(player, ACHIEVEMENT_BOX, 1);
+					giveItems(player, RUBIN_LV2, 1);
+					showOnScreenMsg(player, NpcStringId.YOU_ARE_READY_TO_ADD_A_DUAL_CLASS_NTALK_TO_THE_DUAL_CLASS_MASTER, ExShowScreenMessage.TOP_CENTER, 10000);
+					qs.exitQuest(false, true);
+					htmltext = event;
 				}
+				break;
 			}
 			case "34513-11.html":
 			{
-				if (qs.isCond(7))
+				if (qs.isCond(7) && (player.getLevel() >= 99))
 				{
-					if (player.getLevel() >= 99)
-					{
-						// Reward №2
-						takeItems(player, VAMPIRE_ICHOR, -1);
-						giveItems(player, ACHIEVEMENT_BOX, 1);
-						giveItems(player, SAPPHIRE_LV2, 1);
-						showOnScreenMsg(player, NpcStringId.YOU_ARE_READY_TO_ADD_A_DUAL_CLASS_NTALK_TO_THE_DUAL_CLASS_MASTER, ExShowScreenMessage.TOP_CENTER, 10000);
-						qs.exitQuest(false, true);
-						htmltext = event;
-					}
-					break;
+					// Reward №2
+					takeItems(player, VAMPIRE_ICHOR, -1);
+					giveItems(player, ACHIEVEMENT_BOX, 1);
+					giveItems(player, SAPPHIRE_LV2, 1);
+					showOnScreenMsg(player, NpcStringId.YOU_ARE_READY_TO_ADD_A_DUAL_CLASS_NTALK_TO_THE_DUAL_CLASS_MASTER, ExShowScreenMessage.TOP_CENTER, 10000);
+					qs.exitQuest(false, true);
+					htmltext = event;
 				}
+				break;
 			}
 			case "34513-12.html":
 			{

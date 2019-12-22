@@ -48,7 +48,7 @@ public class ClanWarsList implements IUserCommandHandler
 			return false;
 		}
 		
-		Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		
 		if (clan == null)
 		{
@@ -84,7 +84,7 @@ public class ClanWarsList implements IUserCommandHandler
 				statement.setInt(2, clan.getClanId());
 			}
 			
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			while (rset.next())
 			{
 				final String clanName = rset.getString("clan_name");

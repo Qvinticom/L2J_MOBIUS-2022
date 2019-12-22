@@ -97,7 +97,7 @@ public abstract class ExclusiveTask
 			return !_isRunning;
 		}
 		
-		Thread currentThread = Thread.currentThread();
+		final Thread currentThread = Thread.currentThread();
 		
 		for (;;)
 		{

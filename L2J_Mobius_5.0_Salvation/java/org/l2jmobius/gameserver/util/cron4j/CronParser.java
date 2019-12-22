@@ -245,8 +245,8 @@ public class CronParser
 	 */
 	public static TaskTable parse(Reader reader) throws IOException
 	{
-		TaskTable table = new TaskTable();
-		BufferedReader bufferedReader = new BufferedReader(reader);
+		final TaskTable table = new TaskTable();
+		final BufferedReader bufferedReader = new BufferedReader(reader);
 		try
 		{
 			String line;
@@ -287,7 +287,7 @@ public class CronParser
 		String pattern = null;
 		for (int i = size; i >= 0; i--)
 		{
-			String aux = line.substring(0, i);
+			final String aux = line.substring(0, i);
 			if (SchedulingPattern.validate(aux))
 			{
 				pattern = aux;
@@ -301,12 +301,12 @@ public class CronParser
 		line = line.substring(pattern.length());
 		size = line.length();
 		// Splitting the line
-		ArrayList<String> splitted = new ArrayList<>();
+		final ArrayList<String> splitted = new ArrayList<>();
 		StringBuilder current = null;
 		boolean quotes = false;
 		for (int i = 0; i < size; i++)
 		{
-			char c = line.charAt(i);
+			final char c = line.charAt(i);
 			if (current == null)
 			{
 				if (c == '"')
@@ -371,12 +371,12 @@ public class CronParser
 		File stdinFile = null;
 		File stdoutFile = null;
 		File stderrFile = null;
-		ArrayList<String> envsList = new ArrayList<>();
+		final ArrayList<String> envsList = new ArrayList<>();
 		String command = null;
-		ArrayList<String> argsList = new ArrayList<>();
+		final ArrayList<String> argsList = new ArrayList<>();
 		for (int i = 0; i < size; i++)
 		{
-			String tk = splitted.get(i);
+			final String tk = splitted.get(i);
 			// Check the local status.
 			if (status == 0)
 			{
@@ -441,7 +441,7 @@ public class CronParser
 				throw new Exception("Invalid Java class name on line: " + line);
 			}
 			String methodName;
-			int sep = className.indexOf('#');
+			final int sep = className.indexOf('#');
 			if (sep == -1)
 			{
 				methodName = "main";
@@ -455,7 +455,7 @@ public class CronParser
 					throw new Exception("Invalid Java method name on line: " + line);
 				}
 			}
-			String[] args = new String[argsList.size()];
+			final String[] args = new String[argsList.size()];
 			for (int i = 0; i < argsList.size(); i++)
 			{
 				args[i] = argsList.get(i);
@@ -465,7 +465,7 @@ public class CronParser
 		else
 		{
 			// External command.
-			String[] cmdarray = new String[1 + argsList.size()];
+			final String[] cmdarray = new String[1 + argsList.size()];
 			cmdarray[0] = command;
 			for (int i = 0; i < argsList.size(); i++)
 			{
@@ -493,7 +493,7 @@ public class CronParser
 				}
 			}
 			// Builds the task.
-			ProcessTask process = new ProcessTask(cmdarray, envs, dir);
+			final ProcessTask process = new ProcessTask(cmdarray, envs, dir);
 			// Channels.
 			if (stdinFile != null)
 			{
@@ -520,15 +520,15 @@ public class CronParser
 	 */
 	private static String escape(String str)
 	{
-		int size = str.length();
-		StringBuilder b = new StringBuilder();
+		final int size = str.length();
+		final StringBuilder b = new StringBuilder();
 		for (int i = 0; i < size; i++)
 		{
 			int skip = 0;
-			char c = str.charAt(i);
+			final char c = str.charAt(i);
 			if ((c == '\\') && (i < (size - 1)))
 			{
-				char d = str.charAt(i + 1);
+				final char d = str.charAt(i + 1);
 				if (d == '"')
 				{
 					b.append('"');
@@ -573,10 +573,10 @@ public class CronParser
 				{
 					if (i < (size - 5))
 					{
-						String hex = str.substring(i + 2, i + 6);
+						final String hex = str.substring(i + 2, i + 6);
 						try
 						{
-							int code = Integer.parseInt(hex, 16);
+							final int code = Integer.parseInt(hex, 16);
 							if (code >= 0)
 							{
 								b.append((char) code);

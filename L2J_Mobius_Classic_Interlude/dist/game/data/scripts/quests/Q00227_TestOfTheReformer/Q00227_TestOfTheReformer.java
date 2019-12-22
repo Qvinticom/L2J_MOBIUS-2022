@@ -55,7 +55,7 @@ public class Q00227_TestOfTheReformer extends Quest
 	private static final int LETTER_OF_INTRODUCTION = 2823;
 	private static final int SLAS_LETTER = 2824;
 	private static final int GREETINGS = 2825;
-	private static final int Ol_MAHUM_MONEY = 2826;
+	private static final int OL_MAHUM_MONEY = 2826;
 	private static final int KATARIS_LETTER = 2827;
 	private static final int NYAKURIS_LETTER = 2828;
 	private static final int UNDEAD_LIST = 2829;
@@ -110,7 +110,7 @@ public class Q00227_TestOfTheReformer extends Quest
 		addAttackId(NAMELESS_REVENANT, CRIMSON_WEREWOLF);
 		addKillId(MISERY_SKELETON, SKELETON_ARCHER, SKELETON_MARKSMAN, SKELETON_LORD, SILENT_HORROR, NAMELESS_REVENANT, ARURAUNE, OL_MAHUM_INSPECTOR, OL_MAHUM_BETRAYER, OL_MAHUM_BETRAYER, CRIMSON_WEREWOLF, KRUDEL_LIZARDMAN);
 		addSpawnId(OL_MAHUM_PILGRIM, OL_MAHUM_INSPECTOR, OL_MAHUM_BETRAYER, CRIMSON_WEREWOLF, KRUDEL_LIZARDMAN);
-		registerQuestItems(BOOK_OF_REFORM, LETTER_OF_INTRODUCTION, SLAS_LETTER, GREETINGS, Ol_MAHUM_MONEY, KATARIS_LETTER, NYAKURIS_LETTER, UNDEAD_LIST, RAMUSS_LETTER, RAMUSS_LETTER, RIPPED_DIARY, HUGE_NAIL, LETTER_OF_BETRAYER, BONE_FRAGMENT4, BONE_FRAGMENT5, BONE_FRAGMENT6, BONE_FRAGMENT7, BONE_FRAGMENT8, KAKANS_LETTER, LETTER_GREETINGS1, LETTER_GREETINGS2);
+		registerQuestItems(BOOK_OF_REFORM, LETTER_OF_INTRODUCTION, SLAS_LETTER, GREETINGS, OL_MAHUM_MONEY, KATARIS_LETTER, NYAKURIS_LETTER, UNDEAD_LIST, RAMUSS_LETTER, RAMUSS_LETTER, RIPPED_DIARY, HUGE_NAIL, LETTER_OF_BETRAYER, BONE_FRAGMENT4, BONE_FRAGMENT5, BONE_FRAGMENT6, BONE_FRAGMENT7, BONE_FRAGMENT8, KAKANS_LETTER, LETTER_GREETINGS1, LETTER_GREETINGS2);
 	}
 	
 	@Override
@@ -186,8 +186,8 @@ public class Q00227_TestOfTheReformer extends Quest
 				qs.setCond(12, true);
 				if (npc.getSummonedNpcCount() < 1)
 				{
-					Npc pilgrim = addSpawn(OL_MAHUM_PILGRIM, -9282, -89975, -2331, 0, false, 0);
-					Npc wolf = addSpawn(CRIMSON_WEREWOLF, -9382, -89852, -2333, 0, false, 0);
+					final Npc pilgrim = addSpawn(OL_MAHUM_PILGRIM, -9282, -89975, -2331, 0, false, 0);
+					final Npc wolf = addSpawn(CRIMSON_WEREWOLF, -9382, -89852, -2333, 0, false, 0);
 					((Attackable) wolf).addDamageHate(pilgrim, 99999, 99999);
 					wolf.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, pilgrim);
 				}
@@ -199,8 +199,8 @@ public class Q00227_TestOfTheReformer extends Quest
 				qs.setCond(15, true);
 				if (npc.getSummonedNpcCount() < 1)
 				{
-					Npc pilgrim = addSpawn(OL_MAHUM_PILGRIM, 125947, -180049, -1778, 0, false, 0);
-					Npc lizard = addSpawn(KRUDEL_LIZARDMAN, 126019, -179983, -1781, 0, false, 0);
+					final Npc pilgrim = addSpawn(OL_MAHUM_PILGRIM, 125947, -180049, -1778, 0, false, 0);
+					final Npc lizard = addSpawn(KRUDEL_LIZARDMAN, 126019, -179983, -1781, 0, false, 0);
 					((Attackable) lizard).addDamageHate(pilgrim, 99999, 99999);
 					lizard.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, pilgrim);
 				}
@@ -475,9 +475,9 @@ public class Q00227_TestOfTheReformer extends Quest
 					}
 					else if (memoState == 10)
 					{
-						if (hasQuestItems(player, Ol_MAHUM_MONEY))
+						if (hasQuestItems(player, OL_MAHUM_MONEY))
 						{
-							takeItems(player, Ol_MAHUM_MONEY, 1);
+							takeItems(player, OL_MAHUM_MONEY, 1);
 							giveItems(player, GREETINGS, 1);
 							giveItems(player, LETTER_GREETINGS1, 1);
 							giveItems(player, LETTER_GREETINGS2, 1);
@@ -553,8 +553,8 @@ public class Q00227_TestOfTheReformer extends Quest
 						qs.setCond(6, true);
 						if (npc.getSummonedNpcCount() < 1)
 						{
-							Npc pilgrim = addSpawn(OL_MAHUM_PILGRIM, -4015, 40141, -3664, 0, false, 0);
-							Npc inspector = addSpawn(OL_MAHUM_INSPECTOR, -4034, 40201, -3665, 0, false, 0);
+							final Npc pilgrim = addSpawn(OL_MAHUM_PILGRIM, -4015, 40141, -3664, 0, false, 0);
+							final Npc inspector = addSpawn(OL_MAHUM_INSPECTOR, -4034, 40201, -3665, 0, false, 0);
 							((Attackable) inspector).addDamageHate(pilgrim, 99999, 99999);
 							inspector.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, pilgrim);
 						}
@@ -638,7 +638,7 @@ public class Q00227_TestOfTheReformer extends Quest
 				{
 					if (memoState == 7)
 					{
-						giveItems(player, Ol_MAHUM_MONEY, 1);
+						giveItems(player, OL_MAHUM_MONEY, 1);
 						qs.setMemoState(8);
 						htmltext = "30732-01.html";
 					}

@@ -261,7 +261,7 @@ public class Frintezza extends AbstractNpcAI
 	
 	private Frintezza()
 	{
-		int[] mob =
+		final int[] mob =
 		{
 			SCARLET1,
 			SCARLET2,
@@ -289,11 +289,11 @@ public class Frintezza extends AbstractNpcAI
 		addTalkId(GUIDE);
 		addStartNpc(CUBE);
 		addTalkId(CUBE);
-		StatsSet info = GrandBossManager.getInstance().getStatsSet(FRINTEZZA);
-		int status = GrandBossManager.getInstance().getBossStatus(FRINTEZZA);
+		final StatsSet info = GrandBossManager.getInstance().getStatsSet(FRINTEZZA);
+		final int status = GrandBossManager.getInstance().getBossStatus(FRINTEZZA);
 		if (status == DEAD)
 		{
-			long temp = (info.getLong("respawn_time") - System.currentTimeMillis());
+			final long temp = (info.getLong("respawn_time") - System.currentTimeMillis());
 			if (temp > 0)
 			{
 				startQuestTimer("frintezza_unlock", temp, null, null);
@@ -330,7 +330,7 @@ public class Frintezza extends AbstractNpcAI
 		{
 			for (int i = 0; i <= 17; i++)
 			{
-				Npc mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
+				final Npc mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
 				_room1Mobs.add(mob);
 			}
 		}
@@ -338,7 +338,7 @@ public class Frintezza extends AbstractNpcAI
 		{
 			for (int i = 18; i <= 26; i++)
 			{
-				Npc mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
+				final Npc mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
 				_room1Mobs.add(mob);
 			}
 		}
@@ -346,7 +346,7 @@ public class Frintezza extends AbstractNpcAI
 		{
 			for (int i = 27; i <= 32; i++)
 			{
-				Npc mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
+				final Npc mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
 				_room1Mobs.add(mob);
 			}
 		}
@@ -354,7 +354,7 @@ public class Frintezza extends AbstractNpcAI
 		{
 			for (int i = 33; i <= 40; i++)
 			{
-				Npc mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
+				final Npc mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
 				_room1Mobs.add(mob);
 			}
 		}
@@ -362,7 +362,7 @@ public class Frintezza extends AbstractNpcAI
 		{
 			for (int i = 41; i <= 44; i++)
 			{
-				Npc mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
+				final Npc mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
 				_room2Mobs.add(mob);
 			}
 		}
@@ -370,7 +370,7 @@ public class Frintezza extends AbstractNpcAI
 		{
 			for (int i = 45; i <= 131; i++)
 			{
-				Npc mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
+				final Npc mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
 				_room2Mobs.add(mob);
 			}
 		}
@@ -806,7 +806,7 @@ public class Frintezza extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("stop_npc"))
 		{
-			int heading = npc.getHeading();
+			final int heading = npc.getHeading();
 			if (heading < 32768)
 			{
 				_angle = Math.abs(180 - (int) (heading / 182.044444444));
@@ -854,7 +854,7 @@ public class Frintezza extends AbstractNpcAI
 		else if (event.equalsIgnoreCase("morph_04"))
 		{
 			_zone.broadcastPacket(new SocialAction(_weakScarlet.getObjectId(), 4));
-			Skill skill = SkillData.getInstance().getSkill(5017, 1);
+			final Skill skill = SkillData.getInstance().getSkill(5017, 1);
 			if (skill != null)
 			{
 				skill.applyEffects(_weakScarlet, _weakScarlet);
@@ -955,7 +955,7 @@ public class Frintezza extends AbstractNpcAI
 		else if (event.equalsIgnoreCase("morph_15"))
 		{
 			_zone.broadcastPacket(new SocialAction(_strongScarlet.getObjectId(), 2));
-			Skill skill = SkillData.getInstance().getSkill(5017, 1);
+			final Skill skill = SkillData.getInstance().getSkill(5017, 1);
 			if (skill != null)
 			{
 				skill.applyEffects(_strongScarlet, _strongScarlet);
@@ -1039,7 +1039,7 @@ public class Frintezza extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("songs_effect"))
 		{
-			Skill skill = SkillData.getInstance().getSkill(5008, _onSong);
+			final Skill skill = SkillData.getInstance().getSkill(5008, _onSong);
 			if (skill == null)
 			{
 				return null;
@@ -1139,8 +1139,8 @@ public class Frintezza extends AbstractNpcAI
 		{
 			if ((_weakScarlet != null) && !_weakScarlet.isDead() && (_secondMorph == 0) && (_thirdMorph == 0) && (_onMorph == 0))
 			{
-				int i = Rnd.get(0, 1);
-				Skill skill = SkillData.getInstance().getSkill(_skill[i][0], _skill[i][1]);
+				final int i = Rnd.get(0, 1);
+				final Skill skill = SkillData.getInstance().getSkill(_skill[i][0], _skill[i][1]);
 				if (skill != null)
 				{
 					_weakScarlet.stopMove(null);
@@ -1164,7 +1164,7 @@ public class Frintezza extends AbstractNpcAI
 					i = Rnd.get(2, 4);
 				}
 				
-				Skill skill = SkillData.getInstance().getSkill(_skill[i][0], _skill[i][1]);
+				final Skill skill = SkillData.getInstance().getSkill(_skill[i][0], _skill[i][1]);
 				if (skill != null)
 				{
 					_weakScarlet.stopMove(null);
@@ -1194,7 +1194,7 @@ public class Frintezza extends AbstractNpcAI
 					i = Rnd.get(6, 9);
 				}
 				
-				Skill skill = SkillData.getInstance().getSkill(_skill[i][0], _skill[i][1]);
+				final Skill skill = SkillData.getInstance().getSkill(_skill[i][0], _skill[i][1]);
 				if (skill != null)
 				{
 					_strongScarlet.stopMove(null);
@@ -1285,7 +1285,7 @@ public class Frintezza extends AbstractNpcAI
 		{
 			for (int i = 0; i < _minions.size(); i++)
 			{
-				Attackable mob = _minions.get(i);
+				final Attackable mob = _minions.get(i);
 				if (mob != null)
 				{
 					mob.decayMe();
@@ -1297,7 +1297,7 @@ public class Frintezza extends AbstractNpcAI
 		{
 			if ((npc != null) && !npc.isDead() && (_frintezza != null) && !_frintezza.isDead())
 			{
-				Npc mob = addSpawn(npc.getId() + 2, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
+				final Npc mob = addSpawn(npc.getId() + 2, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				// mob.setIsRaidMinion(true);
 				_minions.add((Attackable) mob);
 				
@@ -1326,8 +1326,8 @@ public class Frintezza extends AbstractNpcAI
 	{
 		if (npc.getId() == CUBE)
 		{
-			int x = 150037 + Rnd.get(500);
-			int y = -57720 + Rnd.get(500);
+			final int x = 150037 + Rnd.get(500);
+			final int y = -57720 + Rnd.get(500);
 			player.teleToLocation(x, y, -2976);
 			return null;
 		}
@@ -1368,7 +1368,7 @@ public class Frintezza extends AbstractNpcAI
 				else
 				{
 					player.destroyItemByItemId("Quest", 8073, 1, player, true);
-					CommandChannel cc = player.getParty().getCommandChannel();
+					final CommandChannel cc = player.getParty().getCommandChannel();
 					GrandBossManager.getInstance().setBossStatus(FRINTEZZA, WAITING);
 					
 					startQuestTimer("close", 0, npc, null);
@@ -1466,7 +1466,7 @@ public class Frintezza extends AbstractNpcAI
 			_bomber = 1;
 			startQuestTimer("bomber", 3000, npc, null);
 			
-			Skill skill = SkillData.getInstance().getSkill(5011, 1);
+			final Skill skill = SkillData.getInstance().getSkill(5011, 1);
 			if (skill != null)
 			{
 				npc.setIsCastingNow(true);
@@ -1508,7 +1508,7 @@ public class Frintezza extends AbstractNpcAI
 			
 			startQuestTimer("frintezza_unlock", respawnTime, npc, null);
 			// also save the respawn time so that the info is maintained past reboots
-			StatsSet info = GrandBossManager.getInstance().getStatsSet(FRINTEZZA);
+			final StatsSet info = GrandBossManager.getInstance().getStatsSet(FRINTEZZA);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatsSet(FRINTEZZA, info);
 		}

@@ -640,13 +640,13 @@ public class Olympiad extends ListenersContainer
 		}
 		else
 		{
-			Calendar currentTime = Calendar.getInstance();
+			final Calendar currentTime = Calendar.getInstance();
 			currentTime.set(Calendar.AM_PM, Calendar.AM);
 			currentTime.set(Calendar.HOUR, 12);
 			currentTime.set(Calendar.MINUTE, 0);
 			currentTime.set(Calendar.SECOND, 0);
 			
-			Calendar nextChange = Calendar.getInstance();
+			final Calendar nextChange = Calendar.getInstance();
 			
 			switch (Config.ALT_OLY_PERIOD)
 			{
@@ -999,26 +999,23 @@ public class Olympiad extends ListenersContainer
 			return Collections.emptyList();
 		}
 		
-		if (NOBLES != null)
+		LOGGER_OLYMPIAD.info("Noble,charid,classid,compDone,points");
+		StatsSet nobleInfo;
+		for (Entry<Integer, StatsSet> entry : NOBLES.entrySet())
 		{
-			LOGGER_OLYMPIAD.info("Noble,charid,classid,compDone,points");
-			StatsSet nobleInfo;
-			for (Entry<Integer, StatsSet> entry : NOBLES.entrySet())
+			nobleInfo = entry.getValue();
+			if (nobleInfo == null)
 			{
-				nobleInfo = entry.getValue();
-				if (nobleInfo == null)
-				{
-					continue;
-				}
-				
-				final int charId = entry.getKey();
-				final int classId = nobleInfo.getInt(CLASS_ID);
-				final String charName = nobleInfo.getString(CHAR_NAME);
-				final int points = nobleInfo.getInt(POINTS);
-				final int compDone = nobleInfo.getInt(COMP_DONE);
-				
-				LOGGER_OLYMPIAD.info(charName + "," + charId + "," + classId + "," + compDone + "," + points);
+				continue;
 			}
+			
+			final int charId = entry.getKey();
+			final int classId = nobleInfo.getInt(CLASS_ID);
+			final String charName = nobleInfo.getString(CHAR_NAME);
+			final int points = nobleInfo.getInt(POINTS);
+			final int compDone = nobleInfo.getInt(COMP_DONE);
+			
+			LOGGER_OLYMPIAD.info(charName + "," + charId + "," + classId + "," + compDone + "," + points);
 		}
 		
 		final List<StatsSet> heroesToBe = new LinkedList<>();
@@ -1181,7 +1178,7 @@ public class Olympiad extends ListenersContainer
 	
 	public int getCompetitionDone(int objId)
 	{
-		if ((NOBLES == null) || !NOBLES.containsKey(objId))
+		if (!NOBLES.containsKey(objId))
 		{
 			return 0;
 		}
@@ -1190,7 +1187,7 @@ public class Olympiad extends ListenersContainer
 	
 	public int getCompetitionWon(int objId)
 	{
-		if ((NOBLES == null) || !NOBLES.containsKey(objId))
+		if (!NOBLES.containsKey(objId))
 		{
 			return 0;
 		}
@@ -1199,7 +1196,7 @@ public class Olympiad extends ListenersContainer
 	
 	public int getCompetitionLost(int objId)
 	{
-		if ((NOBLES == null) || !NOBLES.containsKey(objId))
+		if (!NOBLES.containsKey(objId))
 		{
 			return 0;
 		}
@@ -1213,7 +1210,7 @@ public class Olympiad extends ListenersContainer
 	 */
 	public int getCompetitionDoneWeek(int objId)
 	{
-		if ((NOBLES == null) || !NOBLES.containsKey(objId))
+		if (!NOBLES.containsKey(objId))
 		{
 			return 0;
 		}

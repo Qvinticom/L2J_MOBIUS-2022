@@ -818,7 +818,7 @@ public class AttackableAI extends CreatureAI
 		
 		// Handle all WorldObject of its Faction inside the Faction Range
 		
-		Set<Integer> clans = getActiveChar().getTemplate().getClans();
+		final Set<Integer> clans = getActiveChar().getTemplate().getClans();
 		if ((clans != null) && !clans.isEmpty())
 		{
 			final int factionRange = npc.getTemplate().getClanHelpRange() + collision;
@@ -839,8 +839,8 @@ public class AttackableAI extends CreatureAI
 						{
 							if (originalAttackTarget.isInParty() && originalAttackTarget.getParty().isInDimensionalRift())
 							{
-								byte riftType = originalAttackTarget.getParty().getDimensionalRift().getType();
-								byte riftRoom = originalAttackTarget.getParty().getDimensionalRift().getCurrentRoom();
+								final byte riftType = originalAttackTarget.getParty().getDimensionalRift().getType();
+								final byte riftRoom = originalAttackTarget.getParty().getDimensionalRift().getCurrentRoom();
 								
 								if ((npc instanceof RiftInvaderInstance) && !DimensionalRiftManager.getInstance().getRoom(riftType, riftRoom).checkIfInZone(npc.getX(), npc.getY(), npc.getZ()))
 								{
@@ -911,12 +911,12 @@ public class AttackableAI extends CreatureAI
 		if (!npc.isMovementDisabled() && (npc.getDodge() > 0) && (Rnd.get(100) <= npc.getDodge()))
 		{
 			// Micht: Keeping this one otherwise we should do 2 sqrt
-			double distance2 = npc.calculateDistanceSq2D(mostHate);
+			final double distance2 = npc.calculateDistanceSq2D(mostHate);
 			if (Math.sqrt(distance2) <= (60 + combinedCollision))
 			{
 				int posX = npc.getX();
 				int posY = npc.getY();
-				int posZ = npc.getZ() + 30;
+				final int posZ = npc.getZ() + 30;
 				
 				if (originalAttackTarget.getX() < posX)
 				{
@@ -973,7 +973,7 @@ public class AttackableAI extends CreatureAI
 			{
 				if (_chaosTime > Config.GRAND_CHAOS_TIME)
 				{
-					double chaosRate = 100 - ((npc.getCurrentHp() * 300) / npc.getMaxHp());
+					final double chaosRate = 100 - ((npc.getCurrentHp() * 300) / npc.getMaxHp());
 					if (((chaosRate <= 10) && (Rnd.get(100) <= 10)) || ((chaosRate > 10) && (Rnd.get(100) <= chaosRate)))
 					{
 						aggroReconsider();
@@ -1107,7 +1107,7 @@ public class AttackableAI extends CreatureAI
 			{
 				if (npc.isMinion())
 				{
-					Creature leader = npc.getLeader();
+					final Creature leader = npc.getLeader();
 					if ((leader != null) && leader.isDead())
 					{
 						for (Skill sk : aiResSkills)
@@ -1350,7 +1350,7 @@ public class AttackableAI extends CreatureAI
 				}
 				else if (sk.getTargetType() == TargetType.ONE)
 				{
-					Creature target = effectTargetReconsider(sk, false);
+					final Creature target = effectTargetReconsider(sk, false);
 					if (target != null)
 					{
 						clientStopMoving(null);
@@ -1483,7 +1483,7 @@ public class AttackableAI extends CreatureAI
 					return true;
 				}
 				
-				Creature target = skillTargetReconsider(sk);
+				final Creature target = skillTargetReconsider(sk);
 				if (target != null)
 				{
 					clientStopMoving(null);
@@ -1512,7 +1512,7 @@ public class AttackableAI extends CreatureAI
 					return true;
 				}
 				
-				Creature target = effectTargetReconsider(sk, false);
+				final Creature target = effectTargetReconsider(sk, false);
 				if (target != null)
 				{
 					clientStopMoving(null);
@@ -1565,7 +1565,7 @@ public class AttackableAI extends CreatureAI
 			}
 			else if (sk.getTargetType() == TargetType.ONE)
 			{
-				Creature target = effectTargetReconsider(sk, false);
+				final Creature target = effectTargetReconsider(sk, false);
 				if (target != null)
 				{
 					clientStopMoving(null);
@@ -1603,7 +1603,7 @@ public class AttackableAI extends CreatureAI
 			}
 			else if (sk.getTargetType() == TargetType.ONE)
 			{
-				Creature target = effectTargetReconsider(sk, false);
+				final Creature target = effectTargetReconsider(sk, false);
 				if (target != null)
 				{
 					clientStopMoving(null);
@@ -1619,7 +1619,7 @@ public class AttackableAI extends CreatureAI
 			{
 				if (caster.isMinion() && (sk.getTargetType() != TargetType.SELF))
 				{
-					Creature leader = caster.getLeader();
+					final Creature leader = caster.getLeader();
 					if (leader != null)
 					{
 						if (leader.isDead() && !Util.checkIfInRange((sk.getCastRange() + caster.getTemplate().getCollisionRadius() + leader.getTemplate().getCollisionRadius()), caster, leader, false) && !isParty(sk) && !caster.isMovementDisabled())
@@ -1684,7 +1684,7 @@ public class AttackableAI extends CreatureAI
 				return true;
 			}
 			
-			Creature target = skillTargetReconsider(sk);
+			final Creature target = skillTargetReconsider(sk);
 			if (target != null)
 			{
 				clientStopMoving(null);

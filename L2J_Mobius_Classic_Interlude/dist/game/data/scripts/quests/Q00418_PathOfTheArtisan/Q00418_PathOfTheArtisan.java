@@ -413,36 +413,30 @@ public class Q00418_PathOfTheArtisan extends Quest
 			{
 				case VUKU_ORC_FIGHTER:
 				{
-					if (hasQuestItems(killer, FOOTPRINT_OF_THIEF) && !hasQuestItems(killer, STOLEN_SECRET_BOX))
+					if (hasQuestItems(killer, FOOTPRINT_OF_THIEF) && !hasQuestItems(killer, STOLEN_SECRET_BOX) && (getRandom(10) < 2))
 					{
-						if (getRandom(10) < 2)
-						{
-							giveItems(killer, STOLEN_SECRET_BOX, 1);
-							qs.setCond(6, true);
-						}
+						giveItems(killer, STOLEN_SECRET_BOX, 1);
+						qs.setCond(6, true);
 					}
 					break;
 				}
 				case BOOGLE_RATMAN:
 				{
-					if (hasQuestItems(killer, SILVERYS_RING) && (getQuestItemsCount(killer, BOOGLE_RATMAN_TOOTH) < 10))
+					if (hasQuestItems(killer, SILVERYS_RING) && (getQuestItemsCount(killer, BOOGLE_RATMAN_TOOTH) < 10) && (getRandom(10) < 7))
 					{
-						if (getRandom(10) < 7)
+						if (getQuestItemsCount(killer, BOOGLE_RATMAN_TOOTH) == 9)
 						{
-							if (getQuestItemsCount(killer, BOOGLE_RATMAN_TOOTH) == 9)
+							giveItems(killer, BOOGLE_RATMAN_TOOTH, 1);
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							if (getQuestItemsCount(killer, BOOGLE_RATMAN_LEADERS_TOOTH) >= 2)
 							{
-								giveItems(killer, BOOGLE_RATMAN_TOOTH, 1);
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-								if (getQuestItemsCount(killer, BOOGLE_RATMAN_LEADERS_TOOTH) >= 2)
-								{
-									qs.setCond(2);
-								}
+								qs.setCond(2);
 							}
-							else
-							{
-								giveItems(killer, BOOGLE_RATMAN_TOOTH, 1);
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+						}
+						else
+						{
+							giveItems(killer, BOOGLE_RATMAN_TOOTH, 1);
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;

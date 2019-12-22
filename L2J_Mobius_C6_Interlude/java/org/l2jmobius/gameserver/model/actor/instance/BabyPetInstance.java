@@ -136,7 +136,7 @@ public class BabyPetInstance extends PetInstance
 		@Override
 		public void run()
 		{
-			PlayerInstance owner = _baby.getOwner();
+			final PlayerInstance owner = _baby.getOwner();
 			
 			// if the owner is dead, merely wait for the owner to be resurrected
 			// if the pet is still casting from the previous iteration, allow the cast to complete...

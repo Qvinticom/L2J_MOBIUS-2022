@@ -46,7 +46,7 @@ public class PenaltyMonsterInstance extends MonsterInstance
 		// Monster kill player and can by deleted
 		deleteMe();
 		
-		Spawn spawn = getSpawn();
+		final Spawn spawn = getSpawn();
 		if (spawn != null)
 		{
 			spawn.stopRespawn();
@@ -58,7 +58,7 @@ public class PenaltyMonsterInstance extends MonsterInstance
 	{
 		if (Rnd.get(100) <= 80)
 		{
-			CreatureSay cs = new CreatureSay(getObjectId(), Say2.ALL, getName(), "mmm your bait was delicious");
+			final CreatureSay cs = new CreatureSay(getObjectId(), Say2.ALL, getName(), "mmm your bait was delicious");
 			broadcastPacket(cs);
 		}
 		_ptk = ptk;
@@ -77,7 +77,7 @@ public class PenaltyMonsterInstance extends MonsterInstance
 		
 		if (Rnd.get(100) <= 75)
 		{
-			CreatureSay cs = new CreatureSay(getObjectId(), Say2.ALL, getName(), "I will tell fishes not to take your bait");
+			final CreatureSay cs = new CreatureSay(getObjectId(), Say2.ALL, getName(), "I will tell fishes not to take your bait");
 			broadcastPacket(cs);
 		}
 		return true;

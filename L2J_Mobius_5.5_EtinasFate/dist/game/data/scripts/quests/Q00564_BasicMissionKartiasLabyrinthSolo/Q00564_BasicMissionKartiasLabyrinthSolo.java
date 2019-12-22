@@ -92,7 +92,7 @@ public class Q00564_BasicMissionKartiasLabyrinthSolo extends Quest
 			}
 			case "34413-09.html":
 			{
-				StringBuilder str = new StringBuilder("000");
+				final StringBuilder str = new StringBuilder("000");
 				checkQuestCompleted(player, str); // Initialize the array with all quests completed
 				
 				if (str.indexOf("1") == -1) // verify if no quest completed
@@ -153,7 +153,7 @@ public class Q00564_BasicMissionKartiasLabyrinthSolo extends Quest
 					{
 						if (qs.isCond(2))
 						{
-							StringBuilder str = new StringBuilder("000");
+							final StringBuilder str = new StringBuilder("000");
 							checkQuestCompleted(player, str); // Initialize the array with all quests completed
 							
 							if (str.indexOf("1") != -1) // verify if any quest completed
@@ -183,7 +183,7 @@ public class Q00564_BasicMissionKartiasLabyrinthSolo extends Quest
 	private StringBuilder checkQuestCompleted(PlayerInstance player, StringBuilder string)
 	{
 		int index = 0;
-		char ch = '1';
+		final char ch = '1';
 		final QuestState st1 = player.getQuestState("Q00497_IncarnationOfGreedZellakaSolo");
 		if ((st1 != null) && st1.isCompleted())
 		{

@@ -24,10 +24,8 @@ import java.util.ArrayList;
 
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DecoyInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.util.Util;
@@ -52,7 +50,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	private Creature _target;
 	private Skill _skill;
 	private long _lastRangedSkillTime;
-	private final int _rangedSkillMinCoolTime = 60000; // 1 minute
+	private static final int RANGED_SKILL_MIN_COOLTIME = 60000; // 1 minute
 	
 	public ScarletVanHalisha()
 	{
@@ -144,11 +142,11 @@ public class ScarletVanHalisha extends AbstractNpcAI
 				{
 					return SkillData.getInstance().getSkill(FRINTEZZA_DAEMON_CHARGE, 2);
 				}
-				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < System.currentTimeMillis()) && (getRandom(100) < 10))
+				else if (((_lastRangedSkillTime + RANGED_SKILL_MIN_COOLTIME) < System.currentTimeMillis()) && (getRandom(100) < 10))
 				{
 					return SkillData.getInstance().getSkill(FRINTEZZA_DAEMON_FIELD, 1);
 				}
-				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < System.currentTimeMillis()) && (getRandom(100) < 10))
+				else if (((_lastRangedSkillTime + RANGED_SKILL_MIN_COOLTIME) < System.currentTimeMillis()) && (getRandom(100) < 10))
 				{
 					return SkillData.getInstance().getSkill(FRINTEZZA_DAEMON_MORPH, 1);
 				}
@@ -215,55 +213,50 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	{
 		final ArrayList<Creature> result = new ArrayList<>();
 		{
-			for (WorldObject obj : npc.getInstanceWorld().getPlayers())
+			for (PlayerInstance obj : npc.getInstanceWorld().getPlayers())
 			{
-				if (obj.isPlayable() || (obj instanceof DecoyInstance))
+				if (obj.isPlayer() && obj.getActingPlayer().isInvisible())
 				{
-					if (obj.isPlayer() && obj.getActingPlayer().isInvisible())
-					{
-						continue;
-					}
-					
-					if (((((Creature) obj).getZ() < (npc.getZ() - 100)) && (((Creature) obj).getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
-					{
-						continue;
-					}
+					continue;
 				}
-				if (obj.isPlayable() || (obj instanceof DecoyInstance))
+				
+				if (((obj.getZ() < (npc.getZ() - 100)) && (obj.getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
 				{
-					int skillRange = 150;
-					if (skill != null)
+					continue;
+				}
+				
+				int skillRange = 150;
+				if (skill != null)
+				{
+					switch (skill.getId())
 					{
-						switch (skill.getId())
+						case FRINTEZZA_DAEMON_ATTACK:
 						{
-							case FRINTEZZA_DAEMON_ATTACK:
-							{
-								skillRange = 150;
-								break;
-							}
-							case FRINTEZZA_DAEMON_CHARGE:
-							{
-								skillRange = 400;
-								break;
-							}
-							case YOKE_OF_SCARLET:
-							{
-								skillRange = 200;
-								break;
-							}
-							case FRINTEZZA_DAEMON_MORPH:
-							case FRINTEZZA_DAEMON_FIELD:
-							{
-								_lastRangedSkillTime = System.currentTimeMillis();
-								skillRange = 550;
-								break;
-							}
+							skillRange = 150;
+							break;
+						}
+						case FRINTEZZA_DAEMON_CHARGE:
+						{
+							skillRange = 400;
+							break;
+						}
+						case YOKE_OF_SCARLET:
+						{
+							skillRange = 200;
+							break;
+						}
+						case FRINTEZZA_DAEMON_MORPH:
+						case FRINTEZZA_DAEMON_FIELD:
+						{
+							_lastRangedSkillTime = System.currentTimeMillis();
+							skillRange = 550;
+							break;
 						}
 					}
-					if (Util.checkIfInRange(skillRange, npc, obj, true) && !((Creature) obj).isDead())
-					{
-						result.add((Creature) obj);
-					}
+				}
+				if (Util.checkIfInRange(skillRange, npc, obj, true) && !((Creature) obj).isDead())
+				{
+					result.add(obj);
 				}
 			}
 		}

@@ -99,7 +99,7 @@ public class AdminTest implements IAdminCommandHandler
 		{
 			try
 			{
-				StringTokenizer st = new StringTokenizer(command);
+				final StringTokenizer st = new StringTokenizer(command);
 				st.nextToken();
 				
 				final int id = Integer.parseInt(st.nextToken());
@@ -179,7 +179,7 @@ public class AdminTest implements IAdminCommandHandler
 	private void adminTestSkill(PlayerInstance activeChar, int id)
 	{
 		Creature creature;
-		WorldObject target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		
 		if (!(target instanceof Creature))
 		{

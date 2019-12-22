@@ -49,15 +49,15 @@ public class TakeCastle implements ISkillHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) creature;
+		final PlayerInstance player = (PlayerInstance) creature;
 		
 		if ((player.getClan() == null) || (player.getClan().getLeaderId() != player.getObjectId()))
 		{
 			return;
 		}
 		
-		Castle castle = CastleManager.getInstance().getCastle(player);
-		Fort fort = FortManager.getInstance().getFort(player);
+		final Castle castle = CastleManager.getInstance().getCastle(player);
+		final Fort fort = FortManager.getInstance().getFort(player);
 		
 		if ((castle != null) && (fort == null))
 		{
@@ -127,8 +127,8 @@ public class TakeCastle implements ISkillHandler
 			return false;
 		}
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-		PlayerInstance player = (PlayerInstance) creature;
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+		final PlayerInstance player = (PlayerInstance) creature;
 		
 		if ((castle == null) || (castle.getCastleId() <= 0))
 		{
@@ -179,8 +179,8 @@ public class TakeCastle implements ISkillHandler
 			return false;
 		}
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-		PlayerInstance player = (PlayerInstance) creature;
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+		final PlayerInstance player = (PlayerInstance) creature;
 		
 		if ((fort == null) || (fort.getFortId() <= 0))
 		{

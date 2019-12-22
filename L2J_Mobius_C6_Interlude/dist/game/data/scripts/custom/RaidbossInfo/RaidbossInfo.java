@@ -141,7 +141,7 @@ public class RaidbossInfo extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return event;
@@ -149,11 +149,11 @@ public class RaidbossInfo extends Quest
 		
 		if (Util.isDigit(event))
 		{
-			int rbid = Integer.parseInt(event);
+			final int rbid = Integer.parseInt(event);
 			
 			if (RADARS.containsKey(rbid))
 			{
-				Location loc = RADARS.get(rbid);
+				final Location loc = RADARS.get(rbid);
 				st.addRadar(loc.getX(), loc.getY(), loc.getZ());
 			}
 			st.exitQuest(true);

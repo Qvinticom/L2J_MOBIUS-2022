@@ -60,7 +60,7 @@ public class RequestGiveNickName extends GameClientPacket
 		{
 			if (player.getClan().getLevel() < 3)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_LVL_3_NEEDED_TO_ENDOWE_TITLE);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_LVL_3_NEEDED_TO_ENDOWE_TITLE);
 				player.sendPacket(sm);
 				return;
 			}
@@ -73,20 +73,20 @@ public class RequestGiveNickName extends GameClientPacket
 				{
 					// is target from the same clan?
 					member.setTitle(_title);
-					SystemMessage sm = new SystemMessage(SystemMessageId.TITLE_CHANGED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.TITLE_CHANGED);
 					member.sendPacket(sm);
 					member.broadcastTitleInfo();
 				}
 				else
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 					sm.addString("Target needs to be online to get a title");
 					player.sendPacket(sm);
 				}
 			}
 			else
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				sm.addString("Target does not belong to your clan");
 				player.sendPacket(sm);
 			}

@@ -46,7 +46,7 @@ public class TradeStart extends ServerBasePacket
 			}
 			_tradelist.add(item);
 		}
-		int count = _tradelist.size();
+		final int count = _tradelist.size();
 		writeH(count);
 		for (int i = 0; i < count; ++i)
 		{

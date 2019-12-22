@@ -43,7 +43,7 @@ public class ShuntingYard
 		final Tokenizer tokenizer = new Tokenizer(expression, userFunctions, userOperators, variableNames, implicitMultiplication);
 		while (tokenizer.hasNext())
 		{
-			Token token = tokenizer.nextToken();
+			final Token token = tokenizer.nextToken();
 			switch (token.getType())
 			{
 				case Token.TOKEN_NUMBER:
@@ -73,8 +73,8 @@ public class ShuntingYard
 				{
 					while (!stack.empty() && (stack.peek().getType() == Token.TOKEN_OPERATOR))
 					{
-						OperatorToken o1 = (OperatorToken) token;
-						OperatorToken o2 = (OperatorToken) stack.peek();
+						final OperatorToken o1 = (OperatorToken) token;
+						final OperatorToken o2 = (OperatorToken) stack.peek();
 						if ((o1.getOperator().getNumOperands() == 1) && (o2.getOperator().getNumOperands() == 2))
 						{
 							break;
@@ -117,7 +117,7 @@ public class ShuntingYard
 		}
 		while (!stack.empty())
 		{
-			Token t = stack.pop();
+			final Token t = stack.pop();
 			if ((t.getType() == Token.TOKEN_PARENTHESES_CLOSE) || (t.getType() == Token.TOKEN_PARENTHESES_OPEN))
 			{
 				throw new IllegalArgumentException("Mismatched parentheses detected. Please check the expression");

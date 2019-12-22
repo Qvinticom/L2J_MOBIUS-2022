@@ -50,7 +50,7 @@ public class Q299_GatherIngredientsForPie extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -108,7 +108,7 @@ public class Q299_GatherIngredientsForPie extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -122,7 +122,7 @@ public class Q299_GatherIngredientsForPie extends Quest
 				break;
 			
 			case State.STARTED:
-				int cond = st.getInt("cond");
+				final int cond = st.getInt("cond");
 				switch (npc.getNpcId())
 				{
 					case EMILY:
@@ -199,13 +199,13 @@ public class Q299_GatherIngredientsForPie extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		PlayerInstance partyMember = getRandomPartyMember(player, npc, "1");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "1");
 		if (partyMember == null)
 		{
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

@@ -221,38 +221,32 @@ public class Q00228_TestOfMagus extends Quest
 				}
 				case WYRM:
 				{
-					if (hasQuestItems(killer, SCORE_OF_ELEMENTS, SYLPH_CHARM) && (getQuestItemsCount(killer, WYRMS_WINGBONE) < 10))
+					if (hasQuestItems(killer, SCORE_OF_ELEMENTS, SYLPH_CHARM) && (getQuestItemsCount(killer, WYRMS_WINGBONE) < 10) && getRandomBoolean())
 					{
-						if (getRandom(100) < 50)
+						giveItems(killer, WYRMS_WINGBONE, 1);
+						if (getQuestItemsCount(killer, WYRMS_WINGBONE) >= 10)
 						{
-							giveItems(killer, WYRMS_WINGBONE, 1);
-							if (getQuestItemsCount(killer, WYRMS_WINGBONE) >= 10)
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
 				}
 				case WINDSUS:
 				{
-					if (hasQuestItems(killer, SCORE_OF_ELEMENTS, SYLPH_CHARM) && (getQuestItemsCount(killer, WINDSUS_MANE) < 10))
+					if (hasQuestItems(killer, SCORE_OF_ELEMENTS, SYLPH_CHARM) && (getQuestItemsCount(killer, WINDSUS_MANE) < 10) && getRandomBoolean())
 					{
-						if (getRandom(100) < 50)
+						giveItems(killer, WINDSUS_MANE, 1);
+						if (getQuestItemsCount(killer, WINDSUS_MANE) >= 10)
 						{
-							giveItems(killer, WINDSUS_MANE, 1);
-							if (getQuestItemsCount(killer, WINDSUS_MANE) >= 10)
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -349,19 +343,16 @@ public class Q00228_TestOfMagus extends Quest
 				}
 				case GHOST_FIRE:
 				{
-					if (hasQuestItems(killer, SCORE_OF_ELEMENTS, SALAMANDER_CHARM) && (getQuestItemsCount(killer, FLAME_CRYSTAL) < 5))
+					if (hasQuestItems(killer, SCORE_OF_ELEMENTS, SALAMANDER_CHARM) && (getQuestItemsCount(killer, FLAME_CRYSTAL) < 5) && getRandomBoolean())
 					{
-						if (getRandom(100) < 50)
+						giveItems(killer, FLAME_CRYSTAL, 1);
+						if (getQuestItemsCount(killer, FLAME_CRYSTAL) >= 5)
 						{
-							giveItems(killer, FLAME_CRYSTAL, 1);
-							if (getQuestItemsCount(killer, FLAME_CRYSTAL) >= 5)
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -380,7 +371,7 @@ public class Q00228_TestOfMagus extends Quest
 		{
 			if (npc.getId() == BARD_RUKAL)
 			{
-				if ((player.getClassId() == ClassId.WIZARD) || (player.getClassId() == ClassId.ELVEN_WIZARD) || ((player.getClassId() == ClassId.DARK_WIZARD)))
+				if ((player.getClassId() == ClassId.WIZARD) || (player.getClassId() == ClassId.ELVEN_WIZARD) || (player.getClassId() == ClassId.DARK_WIZARD))
 				{
 					if (player.getLevel() < MIN_LVL)
 					{

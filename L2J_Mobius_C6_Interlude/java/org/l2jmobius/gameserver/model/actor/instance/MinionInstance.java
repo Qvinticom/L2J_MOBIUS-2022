@@ -75,7 +75,7 @@ public class MinionInstance extends MonsterInstance
 		_master.notifyMinionSpawned(this);
 		
 		// check the region where this mob is, do not activate the AI if region is inactive.
-		WorldRegion region = World.getInstance().getRegion(getX(), getY());
+		final WorldRegion region = World.getInstance().getRegion(getX(), getY());
 		if ((region != null) && !region.isActive())
 		{
 			((AttackableAI) getAI()).stopAITask();

@@ -73,7 +73,7 @@ public class RequestAuthLogin implements IIncomingPacket<LoginClient>
 	@Override
 	public void run(LoginClient client)
 	{
-		byte[] decrypted = new byte[_newAuthMethod ? 256 : 128];
+		final byte[] decrypted = new byte[_newAuthMethod ? 256 : 128];
 		try
 		{
 			final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");

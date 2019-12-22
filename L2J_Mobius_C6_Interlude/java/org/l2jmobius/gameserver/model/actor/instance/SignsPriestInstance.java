@@ -58,7 +58,7 @@ public class SignsPriestInstance extends FolkInstance
 			String path;
 			int cabal = SevenSigns.CABAL_NULL;
 			int stoneType = 0;
-			ItemInstance ancientAdena = player.getInventory().getItemByItemId(SevenSigns.ANCIENT_ADENA_ID);
+			final ItemInstance ancientAdena = player.getInventory().getItemByItemId(SevenSigns.ANCIENT_ADENA_ID);
 			final int ancientAdenaAmount = ancientAdena == null ? 0 : ancientAdena.getCount();
 			int val = Integer.parseInt(command.substring(11, 12).trim());
 			
@@ -83,7 +83,7 @@ public class SignsPriestInstance extends FolkInstance
 					{
 						try
 						{
-							StringTokenizer st = new StringTokenizer(command.trim());
+							final StringTokenizer st = new StringTokenizer(command.trim());
 							st.nextToken();
 							cabal = Integer.parseInt(st.nextToken());
 						}
@@ -222,11 +222,11 @@ public class SignsPriestInstance extends FolkInstance
 				case 6: // Contribute Seal Stones - SevenSigns 6 x
 				{
 					stoneType = Integer.parseInt(command.substring(13));
-					ItemInstance redStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_RED_ID);
+					final ItemInstance redStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_RED_ID);
 					final int redStoneCount = redStones == null ? 0 : redStones.getCount();
-					ItemInstance greenStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_GREEN_ID);
+					final ItemInstance greenStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_GREEN_ID);
 					final int greenStoneCount = greenStones == null ? 0 : greenStones.getCount();
-					ItemInstance blueStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_BLUE_ID);
+					final ItemInstance blueStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_BLUE_ID);
 					final int blueStoneCount = blueStones == null ? 0 : blueStones.getCount();
 					int contribScore = SevenSigns.getInstance().getPlayerContribScore(player);
 					boolean stonesFound = false;
@@ -382,8 +382,8 @@ public class SignsPriestInstance extends FolkInstance
 				{
 					try
 					{
-						String portInfo = command.substring(14).trim();
-						StringTokenizer st = new StringTokenizer(portInfo);
+						final String portInfo = command.substring(14).trim();
+						final StringTokenizer st = new StringTokenizer(portInfo);
 						final int x = Integer.parseInt(st.nextToken());
 						final int y = Integer.parseInt(st.nextToken());
 						final int z = Integer.parseInt(st.nextToken());
@@ -433,7 +433,7 @@ public class SignsPriestInstance extends FolkInstance
 						}
 					}
 					
-					ItemInstance stoneInstance = player.getInventory().getItemByItemId(stoneId);
+					final ItemInstance stoneInstance = player.getInventory().getItemByItemId(stoneId);
 					
 					if (stoneInstance != null)
 					{
@@ -451,7 +451,7 @@ public class SignsPriestInstance extends FolkInstance
 						content = content.replace("%stoneItemId%", String.valueOf(stoneId));
 						content = content.replace("%objectId%", String.valueOf(getObjectId()));
 						
-						NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+						final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 						html.setHtml(content);
 						player.sendPacket(html);
 					}
@@ -475,7 +475,7 @@ public class SignsPriestInstance extends FolkInstance
 						player.sendMessage("You must enter an integer amount.");
 						break;
 					}
-					ItemInstance convertItem = player.getInventory().getItemByItemId(convertStoneId);
+					final ItemInstance convertItem = player.getInventory().getItemByItemId(convertStoneId);
 					if (convertItem == null)
 					{
 						player.sendMessage("You do not have any seal stones of that type.");
@@ -529,13 +529,13 @@ public class SignsPriestInstance extends FolkInstance
 				case 19: // Seal Information (for when joining a cabal)
 				{
 					final int chosenSeal = Integer.parseInt(command.substring(16));
-					String fileSuffix = SevenSigns.getSealName(chosenSeal, true) + "_" + SevenSigns.getCabalShortName(cabal);
+					final String fileSuffix = SevenSigns.getSealName(chosenSeal, true) + "_" + SevenSigns.getCabalShortName(cabal);
 					showChatWindow(player, val, fileSuffix, false);
 					break;
 				}
 				case 20: // Seal Status (for when joining a cabal)
 				{
-					StringBuilder contentBuffer = new StringBuilder("<html><body><font color=\"LEVEL\">[ Seal Status ]</font><br>");
+					final StringBuilder contentBuffer = new StringBuilder("<html><body><font color=\"LEVEL\">[ Seal Status ]</font><br>");
 					for (int i = 1; i < 4; i++)
 					{
 						final int sealOwner = SevenSigns.getInstance().getSealOwner(i);
@@ -549,7 +549,7 @@ public class SignsPriestInstance extends FolkInstance
 						}
 					}
 					contentBuffer.append("<a action=\"bypass -h npc_" + getObjectId() + "_SevenSigns 3 " + cabal + "\">Go back.</a></body></html>");
-					NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+					final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 					html.setHtml(contentBuffer.toString());
 					player.sendPacket(html);
 					break;
@@ -589,7 +589,7 @@ public class SignsPriestInstance extends FolkInstance
 			if (allyId != 0)
 			{
 				// Check if another clan in the same alliance owns a castle, by traversing the list of clans and act accordingly.
-				Clan[] clanList = ClanTable.getInstance().getClans();
+				final Clan[] clanList = ClanTable.getInstance().getClans();
 				
 				for (Clan clan : clanList)
 				{

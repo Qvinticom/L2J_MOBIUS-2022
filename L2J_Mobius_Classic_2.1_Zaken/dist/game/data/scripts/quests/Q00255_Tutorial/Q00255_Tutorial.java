@@ -417,7 +417,7 @@ public class Q00255_Tutorial extends Quest
 			return;
 		}
 		
-		QuestState qs = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		if ((qs != null) && (qs.getMemoState() < 4) && STARTING_VOICE_HTML.containsKey(player.getClassId().getId()))
 		{
 			startQuestTimer("start_newbie_tutorial", 5000, null, player);

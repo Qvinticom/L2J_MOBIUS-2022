@@ -182,7 +182,7 @@ public class Q230_TestOfTheSummoner extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
@@ -357,7 +357,7 @@ public class Q230_TestOfTheSummoner extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -452,7 +452,7 @@ public class Q230_TestOfTheSummoner extends Quest
 						break;
 					
 					case ALMORS:
-						int almorsStat = st.getInt("Almors");
+						final int almorsStat = st.getInt("Almors");
 						if (almorsStat == 1)
 						{
 							htmltext = "30635-01.htm";
@@ -497,7 +497,7 @@ public class Q230_TestOfTheSummoner extends Quest
 						break;
 					
 					case CAMONIELL:
-						int camoniellStat = st.getInt("Camoniell");
+						final int camoniellStat = st.getInt("Camoniell");
 						if (camoniellStat == 1)
 						{
 							htmltext = "30636-01.htm";
@@ -542,7 +542,7 @@ public class Q230_TestOfTheSummoner extends Quest
 						break;
 					
 					case BELTHUS:
-						int belthusStat = st.getInt("Belthus");
+						final int belthusStat = st.getInt("Belthus");
 						if (belthusStat == 1)
 						{
 							htmltext = "30637-01.htm";
@@ -587,7 +587,7 @@ public class Q230_TestOfTheSummoner extends Quest
 						break;
 					
 					case BASILLA:
-						int basillaStat = st.getInt("Basilla");
+						final int basillaStat = st.getInt("Basilla");
 						if (basillaStat == 1)
 						{
 							htmltext = "30638-01.htm";
@@ -632,7 +632,7 @@ public class Q230_TestOfTheSummoner extends Quest
 						break;
 					
 					case CELESTIEL:
-						int celestielStat = st.getInt("Celestiel");
+						final int celestielStat = st.getInt("Celestiel");
 						if (celestielStat == 1)
 						{
 							htmltext = "30639-01.htm";
@@ -677,7 +677,7 @@ public class Q230_TestOfTheSummoner extends Quest
 						break;
 					
 					case BRYNTHEA:
-						int bryntheaStat = st.getInt("Brynthea");
+						final int bryntheaStat = st.getInt("Brynthea");
 						if (bryntheaStat == 1)
 						{
 							htmltext = "30640-01.htm";
@@ -807,7 +807,7 @@ public class Q230_TestOfTheSummoner extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerState(player, npc, State.STARTED);
+		final QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)
 		{
 			return null;
@@ -1025,11 +1025,11 @@ public class Q230_TestOfTheSummoner extends Quest
 				}
 				else if ((st.getInt("Almors") == 3) && _duelsInProgress.containsKey(npcId))
 				{
-					ProgressDuelMob duel = _duelsInProgress.get(npcId);
+					final ProgressDuelMob duel = _duelsInProgress.get(npcId);
 					// check if the attacker is the same pet as the one that attacked before.
 					if (!isPet || (attacker.getPet() != duel.getPet())) // if a foul occured find the player who had the duel in progress and give a foul crystal
 					{
-						PlayerInstance foulPlayer = duel.getAttacker();
+						final PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
 							st = foulPlayer.getQuestState(getName());
@@ -1060,10 +1060,10 @@ public class Q230_TestOfTheSummoner extends Quest
 				}
 				else if ((st.getInt("Camoniell") == 3) && _duelsInProgress.containsKey(npcId))
 				{
-					ProgressDuelMob duel = _duelsInProgress.get(npcId);
+					final ProgressDuelMob duel = _duelsInProgress.get(npcId);
 					if (!isPet || (attacker.getPet() != duel.getPet()))
 					{
-						PlayerInstance foulPlayer = duel.getAttacker();
+						final PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
 							st = foulPlayer.getQuestState(getName());
@@ -1094,10 +1094,10 @@ public class Q230_TestOfTheSummoner extends Quest
 				}
 				else if ((st.getInt("Belthus") == 3) && _duelsInProgress.containsKey(npcId))
 				{
-					ProgressDuelMob duel = _duelsInProgress.get(npcId);
+					final ProgressDuelMob duel = _duelsInProgress.get(npcId);
 					if (!isPet || (attacker.getPet() != duel.getPet()))
 					{
-						PlayerInstance foulPlayer = duel.getAttacker();
+						final PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
 							st = foulPlayer.getQuestState(getName());
@@ -1128,10 +1128,10 @@ public class Q230_TestOfTheSummoner extends Quest
 				}
 				else if ((st.getInt("Basilla") == 3) && _duelsInProgress.containsKey(npcId))
 				{
-					ProgressDuelMob duel = _duelsInProgress.get(npcId);
+					final ProgressDuelMob duel = _duelsInProgress.get(npcId);
 					if (!isPet || (attacker.getPet() != duel.getPet()))
 					{
-						PlayerInstance foulPlayer = duel.getAttacker();
+						final PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
 							st = foulPlayer.getQuestState(getName());
@@ -1162,10 +1162,10 @@ public class Q230_TestOfTheSummoner extends Quest
 				}
 				else if ((st.getInt("Celestiel") == 3) && _duelsInProgress.containsKey(npcId))
 				{
-					ProgressDuelMob duel = _duelsInProgress.get(npcId);
+					final ProgressDuelMob duel = _duelsInProgress.get(npcId);
 					if (!isPet || (attacker.getPet() != duel.getPet()))
 					{
-						PlayerInstance foulPlayer = duel.getAttacker();
+						final PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
 							st = foulPlayer.getQuestState(getName());
@@ -1196,10 +1196,10 @@ public class Q230_TestOfTheSummoner extends Quest
 				}
 				else if ((st.getInt("Brynthea") == 3) && _duelsInProgress.containsKey(npcId))
 				{
-					ProgressDuelMob duel = _duelsInProgress.get(npcId);
+					final ProgressDuelMob duel = _duelsInProgress.get(npcId);
 					if (!isPet || (attacker.getPet() != duel.getPet()))
 					{
-						PlayerInstance foulPlayer = duel.getAttacker();
+						final PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
 							st = foulPlayer.getQuestState(getName());

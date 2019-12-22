@@ -80,7 +80,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_spawn_index"))
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
+			final StringTokenizer st = new StringTokenizer(command, " ");
 			
 			try
 			{
@@ -110,12 +110,12 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_npc_index"))
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
+			final StringTokenizer st = new StringTokenizer(command, " ");
 			
 			try
 			{
 				st.nextToken();
-				String letter = st.nextToken();
+				final String letter = st.nextToken();
 				
 				int from = 0;
 				
@@ -138,11 +138,11 @@ public class AdminSpawn implements IAdminCommandHandler
 		// With command '//spawn name' the respawnTime will be 10 seconds.
 		else if (command.startsWith("admin_spawn") || command.startsWith("admin_spawn_monster"))
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
+			final StringTokenizer st = new StringTokenizer(command, " ");
 			try
 			{
-				String cmd = st.nextToken();
-				String id = st.nextToken();
+				final String cmd = st.nextToken();
+				final String id = st.nextToken();
 				int mobCount = 1;
 				int respawnTime = 10;
 				if (st.hasMoreTokens())
@@ -296,7 +296,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		
 		try
 		{
-			Spawn spawn = new Spawn(template1);
+			final Spawn spawn = new Spawn(template1);
 			if (Config.SAVE_GMSPAWN_ON_CUSTOM)
 			{
 				spawn.setCustom(true);
@@ -343,20 +343,20 @@ public class AdminSpawn implements IAdminCommandHandler
 	
 	private void showMonsters(PlayerInstance activeChar, int level, int from)
 	{
-		StringBuilder tb = new StringBuilder();
+		final StringBuilder tb = new StringBuilder();
 		
-		NpcTemplate[] mobs = NpcTable.getInstance().getAllMonstersOfLevel(level);
+		final NpcTemplate[] mobs = NpcTable.getInstance().getAllMonstersOfLevel(level);
 		
 		// Start
 		tb.append("<html><title>Spawn Monster:</title><body><p> Level " + level + ":<br>Total NPCs : " + mobs.length + "<br>");
 		String end1 = "<br><center><button value=\"Next\" action=\"bypass -h admin_spawn_index " + level + " $from$\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center></body></html>";
-		String end2 = "<br><center><button value=\"Back\" action=\"bypass -h admin_show_spawns\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center></body></html>";
+		final String end2 = "<br><center><button value=\"Back\" action=\"bypass -h admin_show_spawns\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center></body></html>";
 		
 		// Loop
 		boolean ended = true;
 		for (int i = from; i < mobs.length; i++)
 		{
-			String txt = "<a action=\"bypass -h admin_spawn_monster " + mobs[i].npcId + "\">" + mobs[i].name + "</a><br1>";
+			final String txt = "<a action=\"bypass -h admin_spawn_monster " + mobs[i].npcId + "\">" + mobs[i].name + "</a><br1>";
 			
 			if ((tb.length() + txt.length() + end2.length()) > 8192)
 			{
@@ -384,19 +384,19 @@ public class AdminSpawn implements IAdminCommandHandler
 	
 	private void showNpcs(PlayerInstance activeChar, String starting, int from)
 	{
-		StringBuilder tb = new StringBuilder();
-		NpcTemplate[] mobs = NpcTable.getInstance().getAllNpcStartingWith(starting);
+		final StringBuilder tb = new StringBuilder();
+		final NpcTemplate[] mobs = NpcTable.getInstance().getAllNpcStartingWith(starting);
 		
 		// Start
 		tb.append("<html><title>Spawn Monster:</title><body><p> There are " + mobs.length + " Npcs whose name starts with " + starting + ":<br>");
 		String end1 = "<br><center><button value=\"Next\" action=\"bypass -h admin_npc_index " + starting + " $from$\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center></body></html>";
-		String end2 = "<br><center><button value=\"Back\" action=\"bypass -h admin_show_npcs\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center></body></html>";
+		final String end2 = "<br><center><button value=\"Back\" action=\"bypass -h admin_show_npcs\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center></body></html>";
 		
 		// Loop
 		boolean ended = true;
 		for (int i = from; i < mobs.length; i++)
 		{
-			String txt = "<a action=\"bypass -h admin_spawn_monster " + mobs[i].npcId + "\">" + mobs[i].name + "</a><br1>";
+			final String txt = "<a action=\"bypass -h admin_spawn_monster " + mobs[i].npcId + "\">" + mobs[i].name + "</a><br1>";
 			
 			if ((tb.length() + txt.length() + end2.length()) > 8192)
 			{

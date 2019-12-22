@@ -42,7 +42,7 @@ public class LoginPacketHandler implements IPacketHandler<LoginClient>
 		final int opcode = buf.get() & 0xFF;
 		
 		ReceivablePacket<LoginClient> packet = null;
-		LoginClientState state = client.getState();
+		final LoginClientState state = client.getState();
 		
 		switch (state)
 		{

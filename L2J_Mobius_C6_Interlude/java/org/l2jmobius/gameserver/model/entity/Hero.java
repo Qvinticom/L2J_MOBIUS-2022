@@ -476,7 +476,7 @@ public class Hero
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(DELETE_ITEMS);
+			final PreparedStatement statement = con.prepareStatement(DELETE_ITEMS);
 			statement.execute();
 			statement.close();
 		}

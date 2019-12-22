@@ -71,7 +71,7 @@ public class LimitLinesDocumentListener implements DocumentListener
 	{
 		if (maximumLines < 1)
 		{
-			String message = "Maximum lines must be greater than 0";
+			final String message = "Maximum lines must be greater than 0";
 			throw new IllegalArgumentException(message);
 		}
 		
@@ -106,8 +106,8 @@ public class LimitLinesDocumentListener implements DocumentListener
 	private void removeLines(DocumentEvent e)
 	{
 		// The root Element of the Document will tell us the total number of line in the Document.
-		Document document = e.getDocument();
-		Element root = document.getDefaultRootElement();
+		final Document document = e.getDocument();
+		final Element root = document.getDefaultRootElement();
 		
 		while (root.getElementCount() > _maximumLines)
 		{
@@ -127,8 +127,8 @@ public class LimitLinesDocumentListener implements DocumentListener
 	 */
 	private void removeFromStart(Document document, Element root)
 	{
-		Element line = root.getElement(0);
-		int end = line.getEndOffset();
+		final Element line = root.getElement(0);
+		final int end = line.getEndOffset();
 		
 		try
 		{
@@ -147,9 +147,9 @@ public class LimitLinesDocumentListener implements DocumentListener
 	{
 		// We use start minus 1 to make sure we remove the newline character of the previous line.
 		
-		Element line = root.getElement(root.getElementCount() - 1);
-		int start = line.getStartOffset();
-		int end = line.getEndOffset();
+		final Element line = root.getElement(root.getElementCount() - 1);
+		final int start = line.getStartOffset();
+		final int end = line.getEndOffset();
 		
 		try
 		{

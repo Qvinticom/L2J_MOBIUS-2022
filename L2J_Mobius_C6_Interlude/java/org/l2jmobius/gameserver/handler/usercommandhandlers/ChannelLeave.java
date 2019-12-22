@@ -50,8 +50,8 @@ public class ChannelLeave implements IUserCommandHandler
 		{
 			if (player.getParty().isLeader(player) && player.getParty().isInCommandChannel())
 			{
-				CommandChannel channel = player.getParty().getCommandChannel();
-				Party party = player.getParty();
+				final CommandChannel channel = player.getParty().getCommandChannel();
+				final Party party = player.getParty();
 				channel.removeParty(party);
 				
 				party.getLeader().sendPacket(SystemMessageId.LEFT_COMMAND_CHANNEL);

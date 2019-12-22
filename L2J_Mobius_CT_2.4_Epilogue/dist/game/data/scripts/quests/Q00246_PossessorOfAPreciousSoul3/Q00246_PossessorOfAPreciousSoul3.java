@@ -66,7 +66,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -159,7 +159,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 					break;
 				}
 				
-				int cond = st.getInt("cond");
+				final int cond = st.getInt("cond");
 				switch (npc.getId())
 				{
 					case CARADINE:
@@ -269,7 +269,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 				return null;
 			}
 			
-			QuestState st = player.getQuestState(getName());
+			final QuestState st = player.getQuestState(getName());
 			if ((st != null) && !st.isCond(2))
 			{
 				return null;

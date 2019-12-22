@@ -44,7 +44,7 @@ final class EffectCancel extends Effect
 		final int landrate = (int) getEffector().calcStat(Stats.CANCEL_VULN, 90, getEffected(), null);
 		if (Rnd.get(100) < landrate)
 		{
-			Effect[] effects = getEffected().getAllEffects();
+			final Effect[] effects = getEffected().getAllEffects();
 			int maxdisp = (int) getSkill().getNegatePower();
 			if (maxdisp == 0)
 			{
@@ -97,7 +97,7 @@ final class EffectCancel extends Effect
 		}
 		else if (getEffector() instanceof PlayerInstance)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 			sm.addString(getEffected().getName());
 			sm.addSkillName(getSkill().getDisplayId());
 			getEffector().sendPacket(sm);

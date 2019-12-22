@@ -49,7 +49,7 @@ public class Q688_DefeatTheElrokianRaiders extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -100,7 +100,7 @@ public class Q688_DefeatTheElrokianRaiders extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -123,13 +123,13 @@ public class Q688_DefeatTheElrokianRaiders extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		PlayerInstance partyMember = getRandomPartyMemberState(player, npc, State.STARTED);
+		final PlayerInstance partyMember = getRandomPartyMemberState(player, npc, State.STARTED);
 		if (partyMember == null)
 		{
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

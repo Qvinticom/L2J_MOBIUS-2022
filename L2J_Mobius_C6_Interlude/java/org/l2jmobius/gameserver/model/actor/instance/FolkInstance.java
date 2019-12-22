@@ -69,8 +69,8 @@ public class FolkInstance extends NpcInstance
 		{
 			if (player.isGM())
 			{
-				NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				StringBuilder sb = new StringBuilder();
+				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+				final StringBuilder sb = new StringBuilder();
 				sb.append("<html><body>");
 				sb.append("I cannot teach you. My class list is empty.<br> Ask admin to fix it. Need add my npcid and classes to skill_learn.sql.<br>NpcId:" + npcId + ", Your classId:" + player.getClassId().getId() + "<br>");
 				sb.append("</body></html>");
@@ -85,8 +85,8 @@ public class FolkInstance extends NpcInstance
 		
 		if (!getTemplate().canTeach(classId))
 		{
-			NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			StringBuilder sb = new StringBuilder();
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			final StringBuilder sb = new StringBuilder();
 			sb.append("<html><body>");
 			sb.append("I cannot teach you any skills.<br> You must find your current class teachers.");
 			sb.append("</body></html>");
@@ -95,8 +95,8 @@ public class FolkInstance extends NpcInstance
 			return;
 		}
 		
-		SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player, classId);
-		AquireSkillList asl = new AquireSkillList(AquireSkillList.skillType.Usual);
+		final SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player, classId);
+		final AquireSkillList asl = new AquireSkillList(AquireSkillList.skillType.Usual);
 		int counts = 0;
 		
 		for (SkillLearn s : skills)
@@ -120,13 +120,13 @@ public class FolkInstance extends NpcInstance
 			
 			if (minlevel > 0)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.DO_NOT_HAVE_FURTHER_SKILLS_TO_LEARN);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.DO_NOT_HAVE_FURTHER_SKILLS_TO_LEARN);
 				sm.addNumber(minlevel);
 				player.sendPacket(sm);
 			}
 			else
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
 				player.sendPacket(sm);
 			}
 		}
@@ -151,8 +151,8 @@ public class FolkInstance extends NpcInstance
 		{
 			if (player.isGM())
 			{
-				NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				StringBuilder sb = new StringBuilder();
+				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+				final StringBuilder sb = new StringBuilder();
 				sb.append("<html><body>");
 				sb.append("I cannot teach you. My class list is empty.<br> Ask admin to fix it. Need add my npcid and classes to skill_learn.sql.<br>NpcId:" + npcId + ", Your classId:" + player.getClassId().getId() + "<br>");
 				sb.append("</body></html>");
@@ -167,8 +167,8 @@ public class FolkInstance extends NpcInstance
 		
 		if (!getTemplate().canTeach(classId))
 		{
-			NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			StringBuilder sb = new StringBuilder();
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			final StringBuilder sb = new StringBuilder();
 			sb.append("<html><body>");
 			sb.append("I cannot teach you any skills.<br> You must find your current class teachers.");
 			sb.append("</body></html>");
@@ -178,8 +178,8 @@ public class FolkInstance extends NpcInstance
 		}
 		if (player.getClassId().getId() < 88)
 		{
-			NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			StringBuilder sb = new StringBuilder();
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			final StringBuilder sb = new StringBuilder();
 			sb.append("<html><body>");
 			sb.append("You must have 3rd class change quest completed.");
 			sb.append("</body></html>");
@@ -188,8 +188,8 @@ public class FolkInstance extends NpcInstance
 			return;
 		}
 		
-		EnchantSkillLearn[] skills = SkillTreeTable.getInstance().getAvailableEnchantSkills(player);
-		ExEnchantSkillList esl = new ExEnchantSkillList();
+		final EnchantSkillLearn[] skills = SkillTreeTable.getInstance().getAvailableEnchantSkills(player);
+		final ExEnchantSkillList esl = new ExEnchantSkillList();
 		int counts = 0;
 		
 		for (EnchantSkillLearn s : skills)
@@ -205,7 +205,7 @@ public class FolkInstance extends NpcInstance
 		if (counts == 0)
 		{
 			player.sendPacket(SystemMessageId.THERE_IS_NO_SKILL_THAT_ENABLES_ENCHANT);
-			NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			final int level = player.getLevel();
 			
 			if (level < 74)
@@ -216,7 +216,7 @@ public class FolkInstance extends NpcInstance
 			}
 			else
 			{
-				StringBuilder sb = new StringBuilder();
+				final StringBuilder sb = new StringBuilder();
 				sb.append("<html><body>");
 				sb.append("You've learned all skills for your class.<br>");
 				sb.append("</body></html>");

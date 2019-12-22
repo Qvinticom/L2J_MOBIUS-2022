@@ -48,7 +48,7 @@ public class AdminManor implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
-		StringTokenizer st = new StringTokenizer(command);
+		final StringTokenizer st = new StringTokenizer(command);
 		command = st.nextToken();
 		
 		switch (command)
@@ -136,8 +136,8 @@ public class AdminManor implements IAdminCommandHandler
 	
 	private void showMainPage(PlayerInstance activeChar)
 	{
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		StringBuilder replyMSG = new StringBuilder("<html><body>");
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final StringBuilder replyMSG = new StringBuilder("<html><body>");
 		
 		replyMSG.append("<center><font color=\"LEVEL\"> [Manor System] </font></center><br>");
 		replyMSG.append("<table width=\"100%\"><tr><td>");

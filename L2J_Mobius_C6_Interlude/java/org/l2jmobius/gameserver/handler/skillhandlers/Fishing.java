@@ -77,13 +77,13 @@ public class Fishing implements ISkillHandler
 			return;
 		}
 		
-		Weapon weaponItem = player.getActiveWeaponItem();
+		final Weapon weaponItem = player.getActiveWeaponItem();
 		if (((weaponItem == null) || (weaponItem.getItemType() != WeaponType.ROD)))
 		{
 			return;
 		}
 		
-		ItemInstance lure = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+		final ItemInstance lure = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		if (lure == null)
 		{
 			// Bait not equiped.
@@ -129,8 +129,8 @@ public class Fishing implements ISkillHandler
 		final int y = player.getY() + y1;
 		int z = player.getZ() - 30;
 		// ...and if the spot is in a fishing zone. If it is, it will then position the hook on the water surface. If not, you have to be GM to proceed past here... in that case, the hook will be positioned using the old Z lookup method.
-		FishingZone aimingTo = FishingZoneManager.getInstance().isInsideFishingZone(x, y, z);
-		WaterZone water = FishingZoneManager.getInstance().isInsideWaterZone(x, y, z);
+		final FishingZone aimingTo = FishingZoneManager.getInstance().isInsideFishingZone(x, y, z);
+		final WaterZone water = FishingZoneManager.getInstance().isInsideWaterZone(x, y, z);
 		if ((water != null))
 		{
 			final Location waterLocation = new Location(x, y, water.getWaterZ() - 50);
@@ -162,7 +162,7 @@ public class Fishing implements ISkillHandler
 		}
 		// Has enough bait, consume 1 and update inventory. Start fishing follows.
 		lure2 = player.getInventory().destroyItem("Consume", player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LHAND), 1, player, null);
-		InventoryUpdate iu = new InventoryUpdate();
+		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(lure2);
 		player.sendPacket(iu);
 		// If everything else checks out, actually cast the hook and start fishing... :P

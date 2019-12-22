@@ -63,7 +63,7 @@ public class Iris extends AbstractNpcAI
 	{
 		if (npc.getId() == SOUL_TRACKER_IRIS)
 		{
-			QuestState qs = player.getQuestState("Q00935_ExploringTheEastWingOfTheDungeonOfAbyss");
+			final QuestState qs = player.getQuestState("Q00935_ExploringTheEastWingOfTheDungeonOfAbyss");
 			switch (event)
 			{
 				case "1":

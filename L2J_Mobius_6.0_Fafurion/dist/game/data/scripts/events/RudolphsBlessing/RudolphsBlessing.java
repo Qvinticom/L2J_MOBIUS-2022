@@ -65,7 +65,7 @@ public class RudolphsBlessing extends LongTimeEvent
 			if (takeItems(player, ITEM_REQUIREMENT.getId(), ITEM_REQUIREMENT.getCount()))
 			{
 				SkillCaster.triggerCast(player, player, RUDOLPH_TRYUCK.getSkill());
-				Skill rudolphsBlessing = SkillData.getInstance().getSkill(23297, 1);
+				final Skill rudolphsBlessing = SkillData.getInstance().getSkill(23297, 1);
 				rudolphsBlessing.applyEffects(player, player);
 			}
 			startQuestTimer("rudolph_eat", 10 * 60 * 1000, null, player);

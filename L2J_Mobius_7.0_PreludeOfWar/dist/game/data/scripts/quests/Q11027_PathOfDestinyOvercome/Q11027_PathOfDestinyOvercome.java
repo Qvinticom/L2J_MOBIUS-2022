@@ -16,7 +16,7 @@
  */
 package quests.Q11027_PathOfDestinyOvercome;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -58,7 +58,7 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 	private static final int ATELIA = 39542;
 	// Reward
 	private static final int CHAOS_POMANDER = 37374;
-	private static final Map<CategoryType, Integer> AWAKE_POWER = new HashMap<>();
+	private static final Map<CategoryType, Integer> AWAKE_POWER = new EnumMap<>(CategoryType.class);
 	static
 	{
 		AWAKE_POWER.put(CategoryType.SIXTH_SIGEL_GROUP, 32264);

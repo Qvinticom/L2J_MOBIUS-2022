@@ -51,7 +51,7 @@ public class ForceBuff
 		_forceId = skill.getTriggeredId();
 		_forceLevel = skill.getTriggeredLevel();
 		
-		Effect effect = _target.getFirstEffect(_forceId);
+		final Effect effect = _target.getFirstEffect(_forceId);
 		if (effect != null)
 		{
 			((EffectForce) effect).increaseForce();
@@ -73,7 +73,7 @@ public class ForceBuff
 	public void onCastAbort()
 	{
 		_caster.setForceBuff(null);
-		Effect effect = _target.getFirstEffect(_forceId);
+		final Effect effect = _target.getFirstEffect(_forceId);
 		if (effect != null)
 		{
 			if (effect instanceof EffectForce)

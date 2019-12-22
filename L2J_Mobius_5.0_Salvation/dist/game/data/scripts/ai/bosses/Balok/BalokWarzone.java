@@ -150,7 +150,7 @@ public class BalokWarzone extends AbstractInstance
 				case "stage_last_send_minions":
 				{
 					
-					Npc minion = _minionList.get(Rnd.get(_minionList.size()));
+					final Npc minion = _minionList.get(Rnd.get(_minionList.size()));
 					if (minion != null)
 					{
 						minion.setRunning();
@@ -183,14 +183,14 @@ public class BalokWarzone extends AbstractInstance
 				{
 					for (int i = 0; i < 4; i++)
 					{
-						Npc disciple = addSpawn(HELL_DISCIPLE, npc.getX(), npc.getY(), npc.getZ(), 0, true, 600000, false, world.getId());
+						final Npc disciple = addSpawn(HELL_DISCIPLE, npc.getX(), npc.getY(), npc.getZ(), 0, true, 600000, false, world.getId());
 						addAttackPlayerDesire(disciple, player);
 					}
 					break;
 				}
 				case "imprission_minions":
 				{
-					int[] randomJail = PRISONS_SPAWN[Rnd.get(PRISONS_SPAWN.length)]; // Random jail
+					final int[] randomJail = PRISONS_SPAWN[Rnd.get(PRISONS_SPAWN.length)]; // Random jail
 					player.teleToLocation(randomJail[0], randomJail[1], randomJail[2]);
 					world.broadcastPacket(new ExShowScreenMessage("$s1, locked away in the prison.".replace("$s1", player.getName()), 5000));
 					break;
@@ -209,7 +209,7 @@ public class BalokWarzone extends AbstractInstance
 			{
 				for (int[] a : MINION_SPAWN)
 				{
-					Npc minion = addSpawn(MINION, a[0], a[1], a[2], a[3], false, 0, false, world.getId());
+					final Npc minion = addSpawn(MINION, a[0], a[1], a[2], a[3], false, 0, false, world.getId());
 					_minionList.add(minion);
 					INVINCIBILITY_ACTIVATION.getSkill().applyEffects(minion, minion);
 					world.setStatus(2);

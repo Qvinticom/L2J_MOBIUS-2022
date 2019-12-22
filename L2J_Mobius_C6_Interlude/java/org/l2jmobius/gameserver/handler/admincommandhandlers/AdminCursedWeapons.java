@@ -66,7 +66,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 				
 				if (cw.isActivated())
 				{
-					PlayerInstance pl = cw.getPlayer();
+					final PlayerInstance pl = cw.getPlayer();
 					BuilderUtil.sendSysMessage(activeChar, "  Player holding: " + (pl == null ? "null" : pl.getName()));
 					BuilderUtil.sendSysMessage(activeChar, "    Player karma: " + cw.getPlayerKarma());
 					BuilderUtil.sendSysMessage(activeChar, "    Time Remaining: " + (cw.getTimeLeft() / 60000) + " min.");

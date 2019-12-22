@@ -85,10 +85,10 @@ public class WeddingManagerInstance extends NpcInstance
 	 */
 	private void showMessageWindow(PlayerInstance player)
 	{
-		String filename = "data/html/mods/Wedding_start.htm";
-		String replace = String.valueOf(Config.L2JMOD_WEDDING_PRICE);
+		final String filename = "data/html/mods/Wedding_start.htm";
+		final String replace = String.valueOf(Config.L2JMOD_WEDDING_PRICE);
 		
-		NpcHtmlMessage html = new NpcHtmlMessage(1);
+		final NpcHtmlMessage html = new NpcHtmlMessage(1);
 		html.setFile(filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%replace%", replace);
@@ -111,7 +111,7 @@ public class WeddingManagerInstance extends NpcInstance
 			return;
 		}
 		
-		PlayerInstance ptarget = (PlayerInstance) World.getInstance().findObject(player.getPartnerId());
+		final PlayerInstance ptarget = (PlayerInstance) World.getInstance().findObject(player.getPartnerId());
 		// partner online ?
 		if ((ptarget == null) || (ptarget.isOnline() == 0))
 		{
@@ -188,7 +188,7 @@ public class WeddingManagerInstance extends NpcInstance
 			ptarget.broadcastPacket(msu);
 			
 			// fireworks
-			Skill skill = SkillTable.getInstance().getInfo(2025, 1);
+			final Skill skill = SkillTable.getInstance().getInfo(2025, 1);
 			if (skill != null)
 			{
 				msu = new MagicSkillUse(player, player, 2025, 1, 1, 0);
@@ -232,16 +232,16 @@ public class WeddingManagerInstance extends NpcInstance
 			// check for formalwear
 			if (Config.L2JMOD_WEDDING_FORMALWEAR)
 			{
-				Inventory inv3 = player.getInventory();
-				ItemInstance item3 = inv3.getPaperdollItem(10);
+				final Inventory inv3 = player.getInventory();
+				final ItemInstance item3 = inv3.getPaperdollItem(10);
 				if (item3 == null)
 				{
 					player.setIsWearingFormalWear(false);
 				}
 				else
 				{
-					String strItem = Integer.toString(item3.getItemId());
-					String frmWear = Integer.toString(6408);
+					final String strItem = Integer.toString(item3.getItemId());
+					final String frmWear = Integer.toString(6408);
 					player.sendMessage(strItem);
 					player.setIsWearingFormalWear(strItem.equals(frmWear));
 				}
@@ -266,8 +266,8 @@ public class WeddingManagerInstance extends NpcInstance
 			// check for formalwear
 			if (Config.L2JMOD_WEDDING_FORMALWEAR)
 			{
-				Inventory inv3 = player.getInventory();
-				ItemInstance item3 = inv3.getPaperdollItem(10);
+				final Inventory inv3 = player.getInventory();
+				final ItemInstance item3 = inv3.getPaperdollItem(10);
 				
 				if (null == item3)
 				{
@@ -275,7 +275,7 @@ public class WeddingManagerInstance extends NpcInstance
 				}
 				else
 				{
-					String frmWear = Integer.toString(6408);
+					final String frmWear = Integer.toString(6408);
 					String strItem = null;
 					strItem = Integer.toString(item3.getItemId());
 					player.setIsWearingFormalWear((null != strItem) && strItem.equals(frmWear));
@@ -317,7 +317,7 @@ public class WeddingManagerInstance extends NpcInstance
 	 */
 	private void sendHtmlMessage(PlayerInstance player, String filename, String replace)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(1);
+		final NpcHtmlMessage html = new NpcHtmlMessage(1);
 		html.setFile(filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%replace%", replace);

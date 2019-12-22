@@ -147,7 +147,7 @@ public class RaceManagerInstance extends NpcInstance
 	
 	public void makeAnnouncement(SystemMessageId type)
 	{
-		SystemMessage sm = new SystemMessage(type);
+		final SystemMessage sm = new SystemMessage(type);
 		switch (type.getId())
 		{
 			case 816: // SystemMessageId.MONSRACE_TICKETS_AVAILABLE_FOR_S1_RACE
@@ -220,12 +220,12 @@ public class RaceManagerInstance extends NpcInstance
 	
 	private void startRace()
 	{
-		MonsterRace race = MonsterRace.getInstance();
+		final MonsterRace race = MonsterRace.getInstance();
 		if (_state == STARTING_RACE)
 		{
-			PlaySound sRace = new PlaySound(1, "S_Race", 0, 0, 0, 0, 0);
+			final PlaySound sRace = new PlaySound(1, "S_Race", 0, 0, 0, 0, 0);
 			broadcast(sRace);
-			PlaySound sRace2 = new PlaySound(0, "ItemSound2.race_start", 1, 121209259, 12125, 182487, -3559);
+			final PlaySound sRace2 = new PlaySound(0, "ItemSound2.race_start", 1, 121209259, 12125, 182487, -3559);
 			broadcast(sRace2);
 			_packet = new MonRaceInfo(_codes[1][0], _codes[1][1], race.getMonsters(), race.getSpeeds());
 			sendMonsterInfo();
@@ -300,7 +300,7 @@ public class RaceManagerInstance extends NpcInstance
 		final int npcId = getTemplate().npcId;
 		String filename;
 		String search;
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		filename = getHtmlPath(npcId, 5);
 		html.setFile(filename);
 		for (int i = 0; i < 8; i++)
@@ -320,7 +320,7 @@ public class RaceManagerInstance extends NpcInstance
 		final int npcId = getTemplate().npcId;
 		String filename;
 		String search;
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		filename = getHtmlPath(npcId, 6);
 		html.setFile(filename);
 		for (int i = 0; i < 8; i++)
@@ -345,7 +345,7 @@ public class RaceManagerInstance extends NpcInstance
 		String filename;
 		String search;
 		String replace;
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		if (val < 10)
 		{
 			filename = getHtmlPath(npcId, 2);
@@ -430,13 +430,13 @@ public class RaceManagerInstance extends NpcInstance
 			sm.addNumber(_raceNumber);
 			sm.addItemName(4443);
 			player.sendPacket(sm);
-			ItemInstance item = new ItemInstance(IdFactory.getInstance().getNextId(), 4443);
+			final ItemInstance item = new ItemInstance(IdFactory.getInstance().getNextId(), 4443);
 			item.setCount(1);
 			item.setEnchantLevel(_raceNumber);
 			item.setCustomType1(ticket);
 			item.setCustomType2(_cost[priceId - 1] / 100);
 			player.getInventory().addItem("Race", item, player, this);
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addItem(item);
 			final ItemInstance adenaupdate = player.getInventory().getItemByItemId(57);
 			iu.addModifiedItem(adenaupdate);

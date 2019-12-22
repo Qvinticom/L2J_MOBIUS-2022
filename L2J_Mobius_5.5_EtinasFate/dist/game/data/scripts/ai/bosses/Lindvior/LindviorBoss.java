@@ -68,7 +68,7 @@ public class LindviorBoss extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
-		double percent = ((npc.getCurrentHp() - damage) / npc.getMaxHp()) * 100;
+		final double percent = ((npc.getCurrentHp() - damage) / npc.getMaxHp()) * 100;
 		final int chance = getRandom(100);
 		switch (npc.getId())
 		{

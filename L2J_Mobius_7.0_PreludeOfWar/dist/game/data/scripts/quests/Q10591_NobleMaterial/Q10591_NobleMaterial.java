@@ -158,41 +158,35 @@ public class Q10591_NobleMaterial extends Quest
 			}
 			case "33907-05.html":
 			{
-				if (qs.isCond(7))
+				if (qs.isCond(7) && (player.getLevel() >= MIN_LEVEL))
 				{
-					if (player.getLevel() >= MIN_LEVEL)
-					{
-						// Reward №1
-						addExpAndSp(player, EXP, SP);
-						giveAdena(player, ADENA_AMOUNT, false);
-						giveItems(player, ACHIEVEMENT_BOX_LV_100, 1);
-						giveItems(player, ACQUIRE_NOBLESSE_PRIVILEGES, 1);
-						giveItems(player, WARRIOR_CICLET_BOX_LV5, 1);
-						showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
-						qs.exitQuest(false, true);
-						htmltext = event;
-					}
-					break;
+					// Reward №1
+					addExpAndSp(player, EXP, SP);
+					giveAdena(player, ADENA_AMOUNT, false);
+					giveItems(player, ACHIEVEMENT_BOX_LV_100, 1);
+					giveItems(player, ACQUIRE_NOBLESSE_PRIVILEGES, 1);
+					giveItems(player, WARRIOR_CICLET_BOX_LV5, 1);
+					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
+					qs.exitQuest(false, true);
+					htmltext = event;
 				}
+				break;
 			}
 			case "33907-06.html":
 			{
-				if (qs.isCond(7))
+				if (qs.isCond(7) && (player.getLevel() >= MIN_LEVEL))
 				{
-					if (player.getLevel() >= MIN_LEVEL)
-					{
-						// Reward №2
-						addExpAndSp(player, EXP, SP);
-						giveAdena(player, ADENA_AMOUNT, false);
-						giveItems(player, ACHIEVEMENT_BOX_LV_100, 1);
-						giveItems(player, ACQUIRE_NOBLESSE_PRIVILEGES, 1);
-						giveItems(player, WIZARD_CICLET_BOX_LV5, 1);
-						showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
-						qs.exitQuest(false, true);
-						htmltext = event;
-					}
-					break;
+					// Reward №2
+					addExpAndSp(player, EXP, SP);
+					giveAdena(player, ADENA_AMOUNT, false);
+					giveItems(player, ACHIEVEMENT_BOX_LV_100, 1);
+					giveItems(player, ACQUIRE_NOBLESSE_PRIVILEGES, 1);
+					giveItems(player, WIZARD_CICLET_BOX_LV5, 1);
+					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
+					qs.exitQuest(false, true);
+					htmltext = event;
 				}
+				break;
 			}
 			case "33907-07.html":
 			{

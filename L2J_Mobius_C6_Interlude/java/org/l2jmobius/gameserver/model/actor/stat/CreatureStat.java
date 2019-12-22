@@ -70,7 +70,7 @@ public class CreatureStat
 		
 		final int id = stat.ordinal();
 		
-		Calculator c = _creature.getCalculators()[id];
+		final Calculator c = _creature.getCalculators()[id];
 		
 		// If no Func object found, no modifier is applied
 		if ((c == null) || (c.size() == 0))
@@ -376,7 +376,7 @@ public class CreatureStat
 		double attack = _creature.getTemplate().baseMAtk * bonusAtk;
 		
 		// Get the skill type to calculate its effect in function of base stats of the Creature target.
-		Stats stat = skill == null ? null : skill.getStat();
+		final Stats stat = skill == null ? null : skill.getStat();
 		
 		if (stat != null)
 		{

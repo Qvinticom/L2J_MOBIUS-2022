@@ -84,7 +84,7 @@ public class FindPvP implements IBypassHandler
 			// Check if the player's clan is already outnumbering the PvP
 			if (player.getClan() != null)
 			{
-				Map<Integer, Integer> clanNumbers = new HashMap<>();
+				final Map<Integer, Integer> clanNumbers = new HashMap<>();
 				int allyId = player.getAllyId();
 				if (allyId == 0)
 				{

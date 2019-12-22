@@ -133,7 +133,7 @@ public class WyvernManagerInstance extends CastleChamberlainInstance
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
@@ -175,7 +175,7 @@ public class WyvernManagerInstance extends CastleChamberlainInstance
 				filename = "data/html/wyvernmanager/wyvernmanager-clan.htm";
 			}
 		}
-		NpcHtmlMessage html = new NpcHtmlMessage(1);
+		final NpcHtmlMessage html = new NpcHtmlMessage(1);
 		html.setFile(filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcname%", getName());
@@ -190,7 +190,7 @@ public class WyvernManagerInstance extends CastleChamberlainInstance
 	{
 		if (_clanHallId < 0)
 		{
-			ClanHall temp = ClanHallManager.getInstance().getNearbyClanHall(getX(), getY(), 500);
+			final ClanHall temp = ClanHallManager.getInstance().getNearbyClanHall(getX(), getY(), 500);
 			
 			if (temp != null)
 			{

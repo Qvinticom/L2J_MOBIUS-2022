@@ -45,7 +45,7 @@ class TimerThread extends Thread
 	{
 		this.scheduler = scheduler;
 		// Thread name.
-		String name = "cron4j::scheduler[" + scheduler.getGuid() + "]::timer[" + guid + "]";
+		final String name = "cron4j::scheduler[" + scheduler.getGuid() + "]::timer[" + guid + "]";
 		setName(name);
 	}
 	
@@ -69,9 +69,9 @@ class TimerThread extends Thread
 		long done = 0;
 		do
 		{
-			long before = System.currentTimeMillis();
+			final long before = System.currentTimeMillis();
 			sleep(millis - done);
-			long after = System.currentTimeMillis();
+			final long after = System.currentTimeMillis();
 			done += (after - before);
 		}
 		while (done < millis);
@@ -91,7 +91,7 @@ class TimerThread extends Thread
 		for (;;)
 		{
 			// Coffee break 'till next minute comes!
-			long sleepTime = (nextMinute - System.currentTimeMillis());
+			final long sleepTime = (nextMinute - System.currentTimeMillis());
 			if (sleepTime > 0)
 			{
 				try

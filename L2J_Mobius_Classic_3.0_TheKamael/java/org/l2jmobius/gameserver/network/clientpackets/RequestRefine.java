@@ -109,7 +109,7 @@ public class RequestRefine extends AbstractRefinePacket
 		final InventoryUpdate iu = new InventoryUpdate();
 		if (targetItem.isEquipped())
 		{
-			ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot());
+			final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot());
 			for (ItemInstance itm : unequiped)
 			{
 				iu.addModifiedItem(itm);

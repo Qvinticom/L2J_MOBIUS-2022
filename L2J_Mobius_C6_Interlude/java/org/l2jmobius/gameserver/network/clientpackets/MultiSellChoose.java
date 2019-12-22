@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * @author programmos
+ * The Class MultiSellChoose.
  */
 public class MultiSellChoose extends GameClientPacket
 {
@@ -136,7 +136,7 @@ public class MultiSellChoose extends GameClientPacket
 		
 		// Generate a list of distinct ingredients and counts in order to check if the correct item-counts
 		// are possessed by the player
-		List<MultiSellIngredient> ingredientsList = new ArrayList<>();
+		final List<MultiSellIngredient> ingredientsList = new ArrayList<>();
 		boolean newIng = true;
 		
 		for (MultiSellIngredient e : entry.getIngredients())

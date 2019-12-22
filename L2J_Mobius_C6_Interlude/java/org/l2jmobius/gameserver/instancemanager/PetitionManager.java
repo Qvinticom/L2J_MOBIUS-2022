@@ -247,7 +247,7 @@ public class PetitionManager
 			return false;
 		}
 		
-		Petition currPetition = _pendingPetitions.get(petitionId);
+		final Petition currPetition = _pendingPetitions.get(petitionId);
 		
 		if (currPetition.getResponder() != null)
 		{
@@ -566,7 +566,7 @@ public class PetitionManager
 		
 		htmlContent.append("</table><br><button value=\"Refresh\" action=\"bypass -h admin_view_petitions\" width=\"50\" height=\"15\" back=\"sek.cbui94\" fore=\"sek.cbui92\"><br><button value=\"Back\" action=\"bypass -h admin_admin\" width=\"40\" height=\"15\" back=\"sek.cbui94\" fore=\"sek.cbui92\"></center></body></html>");
 		
-		NpcHtmlMessage htmlMsg = new NpcHtmlMessage(0);
+		final NpcHtmlMessage htmlMsg = new NpcHtmlMessage(0);
 		htmlMsg.setHtml(htmlContent.toString());
 		player.sendPacket(htmlMsg);
 	}
@@ -574,12 +574,12 @@ public class PetitionManager
 	public int submitPetition(PlayerInstance petitioner, String petitionText, int petitionType)
 	{
 		// Create a new petition instance and add it to the list of pending petitions.
-		Petition newPetition = new Petition(petitioner, petitionText, petitionType);
+		final Petition newPetition = new Petition(petitioner, petitionText, petitionType);
 		final int newPetitionId = newPetition.getId();
 		_pendingPetitions.put(newPetitionId, newPetition);
 		
 		// Notify all GMs that a new petition has been submitted.
-		String msgContent = petitioner.getName() + " has submitted a new petition."; // (ID: " + newPetitionId + ").";
+		final String msgContent = petitioner.getName() + " has submitted a new petition."; // (ID: " + newPetitionId + ").";
 		AdminData.broadcastToGMs(new CreatureSay(petitioner.getObjectId(), 17, "Petition System", msgContent));
 		
 		return newPetitionId;
@@ -597,9 +597,9 @@ public class PetitionManager
 			return;
 		}
 		
-		Petition currPetition = _pendingPetitions.get(petitionId);
-		StringBuilder htmlContent = new StringBuilder("<html><body>");
-		SimpleDateFormat dateFormat = new SimpleDateFormat("EEE dd MMM HH:mm z");
+		final Petition currPetition = _pendingPetitions.get(petitionId);
+		final StringBuilder htmlContent = new StringBuilder("<html><body>");
+		final SimpleDateFormat dateFormat = new SimpleDateFormat("EEE dd MMM HH:mm z");
 		
 		htmlContent.append("<center><br><font color=\"LEVEL\">Petition #" + currPetition.getId() + "</font><br1>");
 		htmlContent.append("<img src=\"L2UI.SquareGray\" width=\"200\" height=\"1\"></center><br>");
@@ -611,7 +611,7 @@ public class PetitionManager
 		htmlContent.append("<button value=\"Back\" action=\"bypass -h admin_view_petitions\" width=\"40\" height=\"15\" back=\"sek.cbui94\" fore=\"sek.cbui92\"></center>");
 		htmlContent.append("</body></html>");
 		
-		NpcHtmlMessage htmlMsg = new NpcHtmlMessage(0);
+		final NpcHtmlMessage htmlMsg = new NpcHtmlMessage(0);
 		htmlMsg.setHtml(htmlContent.toString());
 		player.sendPacket(htmlMsg);
 	}

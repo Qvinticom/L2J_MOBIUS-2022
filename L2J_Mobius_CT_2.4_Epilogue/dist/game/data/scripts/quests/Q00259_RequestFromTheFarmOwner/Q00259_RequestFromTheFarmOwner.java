@@ -126,7 +126,7 @@ public class Q00259_RequestFromTheFarmOwner extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if(qs != null)
+		if (qs != null)
 		{
 			giveItems(killer, SPIDER_SKIN, 1);
 			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);

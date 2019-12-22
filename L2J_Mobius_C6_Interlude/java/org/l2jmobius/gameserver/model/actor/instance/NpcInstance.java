@@ -104,7 +104,6 @@ import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
  * <li>BoxInstance</li>
  * <li>FolkInstance</li>
  * @version $Revision: 1.32.2.7.2.24 $ $Date: 2009/04/13 09:17:09 $
- * @author programmos, scoria dev
  */
 public class NpcInstance extends Creature
 {
@@ -672,11 +671,11 @@ public class NpcInstance extends Creature
 			{
 				// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
 				// The player.getLevel() - getLevel() permit to display the correct color in the select window
-				MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
+				final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 				player.sendPacket(my);
 				
 				// Send a Server->Client packet StatusUpdate of the NpcInstance to the PlayerInstance to update its HP bar
-				StatusUpdate su = new StatusUpdate(getObjectId());
+				final StatusUpdate su = new StatusUpdate(getObjectId());
 				su.addAttribute(StatusUpdate.CUR_HP, (int) getCurrentHp());
 				su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
 				player.sendPacket(su);
@@ -684,7 +683,7 @@ public class NpcInstance extends Creature
 			else
 			{
 				// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-				MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
+				final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 				player.sendPacket(my);
 			}
 			
@@ -812,7 +811,7 @@ public class NpcInstance extends Creature
 	public void onActionShift(GameClient client)
 	{
 		// Get the PlayerInstance corresponding to the thread
-		PlayerInstance player = client.getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -828,23 +827,23 @@ public class NpcInstance extends Creature
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
 			// The player.getLevel() - getLevel() permit to display the correct color in the select window
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 			player.sendPacket(my);
 			
 			// Check if the player is attackable (without a forced attack)
 			if (isAutoAttackable(player))
 			{
 				// Send a Server->Client packet StatusUpdate of the NpcInstance to the PlayerInstance to update its HP bar
-				StatusUpdate su = new StatusUpdate(getObjectId());
+				final StatusUpdate su = new StatusUpdate(getObjectId());
 				su.addAttribute(StatusUpdate.CUR_HP, (int) getCurrentHp());
 				su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
 				player.sendPacket(su);
 			}
 			
 			// Send a Server->Client NpcHtmlMessage() containing the GM console about this NpcInstance
-			NpcHtmlMessage html = new NpcHtmlMessage(0);
-			StringBuilder html1 = new StringBuilder("<html><body><center><font color=\"LEVEL\">NPC Information</font></center>");
-			String className = getClass().getSimpleName();
+			final NpcHtmlMessage html = new NpcHtmlMessage(0);
+			final StringBuilder html1 = new StringBuilder("<html><body><center><font color=\"LEVEL\">NPC Information</font></center>");
+			final String className = getClass().getSimpleName();
 			html1.append("<br>");
 			
 			html1.append("Instance Type: " + className + "<br1>Faction: " + getTemplate().factionId + "<br1>Location ID: " + (_spawn != null ? _spawn.getLocation() : 0) + "<br1>");
@@ -899,21 +898,21 @@ public class NpcInstance extends Creature
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
 			// The player.getLevel() - getLevel() permit to display the correct color in the select window
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 			player.sendPacket(my);
 			
 			// Check if the player is attackable (without a forced attack)
 			if (isAutoAttackable(player))
 			{
 				// Send a Server->Client packet StatusUpdate of the NpcInstance to the PlayerInstance to update its HP bar
-				StatusUpdate su = new StatusUpdate(getObjectId());
+				final StatusUpdate su = new StatusUpdate(getObjectId());
 				su.addAttribute(StatusUpdate.CUR_HP, (int) getCurrentHp());
 				su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
 				player.sendPacket(su);
 			}
 			
-			NpcHtmlMessage html = new NpcHtmlMessage(0);
-			StringBuilder html1 = new StringBuilder("<html><body>");
+			final NpcHtmlMessage html = new NpcHtmlMessage(0);
+			final StringBuilder html1 = new StringBuilder("<html><body>");
 			
 			html1.append("<br><center><font color=\"LEVEL\">[Combat Stats]</font></center>");
 			html1.append("<table border=0 width=\"100%\">");
@@ -985,11 +984,11 @@ public class NpcInstance extends Creature
 				{
 					// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
 					// The player.getLevel() - getLevel() permit to display the correct color in the select window
-					MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
+					final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 					player.sendPacket(my);
 					
 					// Send a Server->Client packet StatusUpdate of the NpcInstance to the PlayerInstance to update its HP bar
-					StatusUpdate su = new StatusUpdate(getObjectId());
+					final StatusUpdate su = new StatusUpdate(getObjectId());
 					su.addAttribute(StatusUpdate.CUR_HP, (int) getCurrentHp());
 					su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
 					player.sendPacket(su);
@@ -997,7 +996,7 @@ public class NpcInstance extends Creature
 				else
 				{
 					// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-					MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
+					final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 					player.sendPacket(my);
 				}
 				
@@ -1212,7 +1211,7 @@ public class NpcInstance extends Creature
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			
-			NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			html.setFile("/data/html/npcbusy.htm");
 			html.replace("%busymessage%", _busyMessage);
 			html.replace("%npcname%", getName());
@@ -1221,7 +1220,7 @@ public class NpcInstance extends Creature
 		}
 		else if (command.equalsIgnoreCase("TerritoryStatus"))
 		{
-			NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			{
 				if (getCastle().getOwnerId() > 0)
 				{
@@ -1288,8 +1287,8 @@ public class NpcInstance extends Creature
 			{
 				return;
 			}
-			String filename = "/data/html/" + path;
-			NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			final String filename = "/data/html/" + path;
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			html.setFile(filename);
 			html.replace("%objectId%", String.valueOf(getObjectId()));
 			player.sendPacket(html);
@@ -1298,8 +1297,8 @@ public class NpcInstance extends Creature
 		{
 			if (!player.isNoble())
 			{
-				String filename = "/data/html/teleporter/nobleteleporter-no.htm";
-				NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+				final String filename = "/data/html/teleporter/nobleteleporter-no.htm";
+				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				html.setFile(filename);
 				html.replace("%objectId%", String.valueOf(getObjectId()));
 				html.replace("%npcname%", getName());
@@ -1379,7 +1378,7 @@ public class NpcInstance extends Creature
 		{
 			try
 			{
-				Spawn spawn = SpawnTable.getInstance().getTemplate(Integer.parseInt(command.substring(12).trim()));
+				final Spawn spawn = SpawnTable.getInstance().getTemplate(Integer.parseInt(command.substring(12).trim()));
 				
 				if (spawn != null)
 				{
@@ -1531,7 +1530,7 @@ public class NpcInstance extends Creature
 		{
 			try
 			{
-				Byte b1 = Byte.parseByte(command.substring(10)); // Selected Area: Recruit, Soldier etc
+				final Byte b1 = Byte.parseByte(command.substring(10)); // Selected Area: Recruit, Soldier etc
 				DimensionalRiftManager.getInstance().start(player, b1, this);
 			}
 			catch (Exception e)
@@ -1623,11 +1622,11 @@ public class NpcInstance extends Creature
 		// If the player is too high level, display a message and return
 		if ((playerLevel > 39) || (player.getClassId().level() >= 2))
 		{
-			String content = "<html><body>Newbie Guide:<br>I'm sorry, but you are not eligible to receive the protection blessing.<br1>It can only be bestowed on <font color=\"LEVEL\">characters below level 39 who have not made a seccond transfer.</font></body></html>";
+			final String content = "<html><body>Newbie Guide:<br>I'm sorry, but you are not eligible to receive the protection blessing.<br1>It can only be bestowed on <font color=\"LEVEL\">characters below level 39 who have not made a seccond transfer.</font></body></html>";
 			insertObjectIdAndShowChatWindow(player, content);
 			return;
 		}
-		Skill skill = SkillTable.getInstance().getInfo(5182, 1);
+		final Skill skill = SkillTable.getInstance().getInfo(5182, 1);
 		broadcastPacket(new MagicSkillUse(this, player, skill.getId(), skill.getLevel(), 0, 0));
 		skill.getEffects(this, player);
 	}
@@ -1681,7 +1680,7 @@ public class NpcInstance extends Creature
 	{
 		// Send a Server->Client packet NpcHtmlMessage to the PlayerInstance in order to display the message of the NpcInstance
 		content = content.replace("%objectId%", String.valueOf(getObjectId()));
-		NpcHtmlMessage npcReply = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage npcReply = new NpcHtmlMessage(getObjectId());
 		npcReply.setHtml(content);
 		player.sendPacket(npcReply);
 	}
@@ -1952,7 +1951,7 @@ public class NpcInstance extends Creature
 		final int npcId = getTemplate().npcId;
 		String filename;
 		SystemMessage sm;
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		
 		if (val == 0) // 0 - first buy lottery ticket window
 		{
@@ -2085,14 +2084,14 @@ public class NpcInstance extends Creature
 			sm.addItemName(4442);
 			player.sendPacket(sm);
 			
-			ItemInstance item = new ItemInstance(IdFactory.getInstance().getNextId(), 4442);
+			final ItemInstance item = new ItemInstance(IdFactory.getInstance().getNextId(), 4442);
 			item.setCount(1);
 			item.setCustomType1(lotonumber);
 			item.setEnchantLevel(enchant);
 			item.setCustomType2(type2);
 			player.getInventory().addItem("Loto", item, player, this);
 			
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addItem(item);
 			final ItemInstance adenaupdate = player.getInventory().getItemByItemId(57);
 			iu.addModifiedItem(adenaupdate);
@@ -2335,7 +2334,7 @@ public class NpcInstance extends Creature
 	 */
 	private boolean showPkDenyChatWindow(PlayerInstance player, String type)
 	{
-		String html = HtmCache.getInstance().getHtm("data/html/" + type + "/" + getNpcId() + "-pk.htm");
+		final String html = HtmCache.getInstance().getHtm("data/html/" + type + "/" + getNpcId() + "-pk.htm");
 		
 		if (html != null)
 		{
@@ -2868,7 +2867,7 @@ public class NpcInstance extends Creature
 		}
 		
 		// Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(filename);
 		
 		if ((this instanceof MerchantInstance) && Config.LIST_PET_RENT_NPC.contains(npcId))
@@ -2896,7 +2895,7 @@ public class NpcInstance extends Creature
 	public void showChatWindow(PlayerInstance player, String filename)
 	{
 		// Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		player.sendPacket(html);

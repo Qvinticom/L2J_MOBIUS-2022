@@ -79,7 +79,7 @@ class OlympiadManager implements Runnable
 			return;
 		}
 		
-		Map<Integer, OlympiadGameTask> gamesQueue = new HashMap<>();
+		final Map<Integer, OlympiadGameTask> gamesQueue = new HashMap<>();
 		while (Olympiad.getInstance().inCompPeriod())
 		{
 			if (Olympiad.getNobleCount() == 0)
@@ -98,8 +98,8 @@ class OlympiadManager implements Runnable
 			int gamesQueueSize = 0;
 			
 			// _compStarted = true;
-			List<Integer> readyClasses = Olympiad.hasEnoughRegisteredClassed();
-			boolean readyNonClassed = Olympiad.hasEnoughRegisteredNonClassed();
+			final List<Integer> readyClasses = Olympiad.hasEnoughRegisteredClassed();
+			final boolean readyNonClassed = Olympiad.hasEnoughRegisteredNonClassed();
 			if ((readyClasses != null) || readyNonClassed)
 			{
 				// set up the games queue
@@ -276,7 +276,7 @@ class OlympiadManager implements Runnable
 					if ((gamesQueue.get(i) != null) && !gamesQueue.get(i).isTerminated() && !gamesQueue.get(i).isStarted())
 					{
 						// start new games
-						Thread thread = new Thread(gamesQueue.get(i));
+						final Thread thread = new Thread(gamesQueue.get(i));
 						thread.start();
 					}
 					
@@ -378,12 +378,12 @@ class OlympiadManager implements Runnable
 	
 	protected List<PlayerInstance> nextOpponents(List<PlayerInstance> list)
 	{
-		List<PlayerInstance> opponents = new ArrayList<>();
+		final List<PlayerInstance> opponents = new ArrayList<>();
 		if (list.isEmpty())
 		{
 			return opponents;
 		}
-		int loopCount = (list.size() / 2);
+		final int loopCount = (list.size() / 2);
 		
 		int first;
 		int second;
@@ -414,7 +414,7 @@ class OlympiadManager implements Runnable
 		{
 			return false;
 		}
-		int loopCount = list.size() >> 1;
+		final int loopCount = list.size() >> 1;
 		
 		if (loopCount < 1)
 		{
@@ -426,7 +426,7 @@ class OlympiadManager implements Runnable
 	
 	protected Map<Integer, String> getAllTitles()
 	{
-		Map<Integer, String> titles = new HashMap<>();
+		final Map<Integer, String> titles = new HashMap<>();
 		
 		for (OlympiadGame instance : _olympiadInstances.values())
 		{

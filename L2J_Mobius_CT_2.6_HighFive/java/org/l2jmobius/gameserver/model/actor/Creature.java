@@ -1996,7 +1996,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			boolean canCast = true;
 			if ((skill.getTargetType() == TargetType.GROUND) && isPlayer())
 			{
-				Location wp = getActingPlayer().getCurrentSkillWorldPosition();
+				final Location wp = getActingPlayer().getCurrentSkillWorldPosition();
 				if (!zoneRegion.checkEffectRangeInsidePeaceZone(skill, wp.getX(), wp.getY(), wp.getZ()))
 				{
 					canCast = false;
@@ -3908,7 +3908,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		final int xPrev = getX();
 		final int yPrev = getY();
-		int zPrev = getZ(); // the z coordinate may be modified by coordinate synchronizations
+		final int zPrev = getZ(); // the z coordinate may be modified by coordinate synchronizations
 		
 		double dx;
 		double dy;
@@ -5726,12 +5726,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 						
 						if ((skillEffectPoint > 0) && attackable.hasAI() && (attackable.getAI().getIntention() == AI_INTENTION_ATTACK))
 						{
-							WorldObject npcTarget = attackable.getTarget();
+							final WorldObject npcTarget = attackable.getTarget();
 							for (WorldObject skillTarget : targets)
 							{
 								if ((npcTarget == skillTarget) || (npcMob == skillTarget))
 								{
-									Creature originalCaster = isSummon() ? this : player;
+									final Creature originalCaster = isSummon() ? this : player;
 									attackable.addDamageHate(originalCaster, 0, (skillEffectPoint * 150) / (attackable.getLevel() + 7));
 								}
 							}

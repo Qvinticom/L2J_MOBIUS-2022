@@ -19,9 +19,6 @@ package org.l2jmobius.log.filter;
 import java.util.logging.Filter;
 import java.util.logging.LogRecord;
 
-/**
- * @author ProGramMoS
- */
 public class ErrorFilter implements Filter
 {
 	@Override

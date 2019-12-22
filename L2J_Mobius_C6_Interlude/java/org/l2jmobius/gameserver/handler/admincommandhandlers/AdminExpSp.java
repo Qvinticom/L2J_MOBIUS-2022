@@ -48,7 +48,7 @@ public class AdminExpSp implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(16);
+				final String val = command.substring(16);
 				
 				if (!adminAddExpSp(activeChar, val))
 				{
@@ -65,7 +65,7 @@ public class AdminExpSp implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(19);
+				final String val = command.substring(19);
 				
 				if (!adminRemoveExpSP(activeChar, val))
 				{
@@ -92,7 +92,7 @@ public class AdminExpSp implements IAdminCommandHandler
 	
 	private void addExpSp(PlayerInstance activeChar)
 	{
-		WorldObject target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
 		
 		if (target instanceof PlayerInstance)
@@ -105,7 +105,7 @@ public class AdminExpSp implements IAdminCommandHandler
 			return;
 		}
 		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/expsp.htm");
 		adminReply.replace("%name%", player.getName());
 		adminReply.replace("%level%", String.valueOf(player.getLevel()));
@@ -117,7 +117,7 @@ public class AdminExpSp implements IAdminCommandHandler
 	
 	private boolean adminAddExpSp(PlayerInstance activeChar, String expSp)
 	{
-		WorldObject target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
 		
 		if (target instanceof PlayerInstance)
@@ -130,15 +130,15 @@ public class AdminExpSp implements IAdminCommandHandler
 			return false;
 		}
 		
-		StringTokenizer st = new StringTokenizer(expSp);
+		final StringTokenizer st = new StringTokenizer(expSp);
 		
 		if (st.countTokens() != 2)
 		{
 			return false;
 		}
 		
-		String exp = st.nextToken();
-		String sp = st.nextToken();
+		final String exp = st.nextToken();
+		final String sp = st.nextToken();
 		
 		long expval = 0;
 		int spval = 0;
@@ -167,7 +167,7 @@ public class AdminExpSp implements IAdminCommandHandler
 	
 	private boolean adminRemoveExpSP(PlayerInstance activeChar, String expSp)
 	{
-		WorldObject target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
 		
 		if (target instanceof PlayerInstance)
@@ -180,15 +180,15 @@ public class AdminExpSp implements IAdminCommandHandler
 			return false;
 		}
 		
-		StringTokenizer st = new StringTokenizer(expSp);
+		final StringTokenizer st = new StringTokenizer(expSp);
 		
 		if (st.countTokens() != 2)
 		{
 			return false;
 		}
 		
-		String exp = st.nextToken();
-		String sp = st.nextToken();
+		final String exp = st.nextToken();
+		final String sp = st.nextToken();
 		
 		long expval = 0;
 		int spval = 0;

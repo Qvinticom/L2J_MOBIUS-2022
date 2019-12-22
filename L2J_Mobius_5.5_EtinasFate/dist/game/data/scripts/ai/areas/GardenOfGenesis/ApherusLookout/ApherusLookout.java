@@ -42,7 +42,7 @@ public class ApherusLookout extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		String htmltext = null;
+		final String htmltext = null;
 		if (event.equals("open_bag"))
 		{
 			if (getRandom(100) < 7)
@@ -58,11 +58,11 @@ public class ApherusLookout extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
 	{
-		Npc aPackage = addSpawn(APHERUS_PACKAGE, npc.getX(), npc.getY(), npc.getZ(), 0, true, 120000, false);
+		final Npc aPackage = addSpawn(APHERUS_PACKAGE, npc.getX(), npc.getY(), npc.getZ(), 0, true, 120000, false);
 		aPackage.setIsImmobilized(true);
-		Npc bPackage = addSpawn(APHERUS_PACKAGE1, npc.getX(), npc.getY(), npc.getZ(), 0, true, 120000, false);
+		final Npc bPackage = addSpawn(APHERUS_PACKAGE1, npc.getX(), npc.getY(), npc.getZ(), 0, true, 120000, false);
 		bPackage.setIsImmobilized(true);
-		Npc cPackage = addSpawn(APHERUS_PACKAGE2, npc.getX(), npc.getY(), npc.getZ(), 0, true, 120000, false);
+		final Npc cPackage = addSpawn(APHERUS_PACKAGE2, npc.getX(), npc.getY(), npc.getZ(), 0, true, 120000, false);
 		cPackage.setIsImmobilized(true);
 		return super.onKill(npc, killer, isPet);
 	}

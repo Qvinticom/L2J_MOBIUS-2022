@@ -73,7 +73,7 @@ public class AwayManager
 		player.broadcastPacket(new SocialAction(player.getObjectId(), 9));
 		player.sendMessage("Your status is Away in " + Config.AWAY_TIMER + " Sec.");
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		SetupGauge sg = new SetupGauge(SetupGauge.BLUE, Config.AWAY_TIMER * 1000);
+		final SetupGauge sg = new SetupGauge(SetupGauge.BLUE, Config.AWAY_TIMER * 1000);
 		player.sendPacket(sg);
 		player.setIsImobilised(true);
 		ThreadPool.schedule(new setPlayerAwayTask(player, text), Config.AWAY_TIMER * 1000);
@@ -82,7 +82,7 @@ public class AwayManager
 	public void setBack(PlayerInstance player)
 	{
 		player.sendMessage("You are back from Away Status in " + Config.BACK_TIMER + " Sec.");
-		SetupGauge sg = new SetupGauge(SetupGauge.BLUE, Config.BACK_TIMER * 1000);
+		final SetupGauge sg = new SetupGauge(SetupGauge.BLUE, Config.BACK_TIMER * 1000);
 		player.sendPacket(sg);
 		ThreadPool.schedule(new setPlayerBackTask(player), Config.BACK_TIMER * 1000);
 	}
@@ -93,7 +93,7 @@ public class AwayManager
 		{
 			return;
 		}
-		RestoreData rd = _awayPlayers.get(player);
+		final RestoreData rd = _awayPlayers.get(player);
 		if (rd == null)
 		{
 			return;
@@ -180,7 +180,7 @@ public class AwayManager
 			{
 				return;
 			}
-			RestoreData rd = _awayPlayers.get(_player);
+			final RestoreData rd = _awayPlayers.get(_player);
 			
 			if (rd == null)
 			{

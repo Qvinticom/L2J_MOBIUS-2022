@@ -48,7 +48,7 @@ public class Q00110_ToThePrimevalIsle extends Quest
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		QuestState qs = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return getNoQuestMsg(player);

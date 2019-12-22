@@ -88,12 +88,12 @@ public class SoulCrystals implements IItemHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) playable;
-		WorldObject target = player.getTarget();
+		final PlayerInstance player = (PlayerInstance) playable;
+		final WorldObject target = player.getTarget();
 		if (!(target instanceof MonsterInstance))
 		{
 			// Send a System Message to the caster
-			SystemMessage sm = new SystemMessage(SystemMessageId.INCORRECT_TARGET);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.INCORRECT_TARGET);
 			player.sendPacket(sm);
 			
 			// Send a Server->Client packet ActionFailed to the PlayerInstance
@@ -124,7 +124,7 @@ public class SoulCrystals implements IItemHandler
 		// End Soul Crystal Casting section
 		
 		// Continue execution later
-		CrystalFinalizer cf = new CrystalFinalizer(player, target, crystalId);
+		final CrystalFinalizer cf = new CrystalFinalizer(player, target, crystalId);
 		ThreadPool.schedule(cf, skill.getHitTime());
 	}
 	

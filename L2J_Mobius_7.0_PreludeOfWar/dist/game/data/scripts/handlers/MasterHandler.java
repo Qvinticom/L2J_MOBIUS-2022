@@ -736,7 +736,6 @@ public class MasterHandler
 				catch (Exception e)
 				{
 					LOGGER.log(Level.WARNING, "Failed loading handler: " + c.getSimpleName(), e);
-					continue;
 				}
 			}
 		}

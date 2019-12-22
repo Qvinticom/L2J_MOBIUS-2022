@@ -44,7 +44,7 @@ public class RequestDeleteMacro extends GameClientPacket
 		}
 		
 		getClient().getPlayer().deleteMacro(_id);
-		SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 		sm.addString("Delete macro id=" + _id);
 		sendPacket(sm);
 	}

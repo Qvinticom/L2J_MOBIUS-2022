@@ -316,7 +316,7 @@ public class AdminQuest implements IAdminCommandHandler
 				{
 					continue;
 				}
-				else if (n.isDirectory())
+				if (n.isDirectory())
 				{
 					sb.append("<a action=\"bypass -h admin_script_dir " + c + "\">" + c + "</a><br1>");
 				}
@@ -348,7 +348,7 @@ public class AdminQuest implements IAdminCommandHandler
 				{
 					continue;
 				}
-				else if (n.isDirectory())
+				if (n.isDirectory())
 				{
 					sb.append("<a action=\"bypass -h admin_script_dir " + currentPath + "/" + c + "\">" + (questReducedNames ? getQuestName(c) : c) + "</a><br1>");
 				}

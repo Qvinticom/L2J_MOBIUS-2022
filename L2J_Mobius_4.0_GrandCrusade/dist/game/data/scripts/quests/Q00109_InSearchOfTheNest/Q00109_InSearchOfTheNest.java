@@ -49,13 +49,13 @@ public class Q00109_InSearchOfTheNest extends Quest
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		QuestState qs = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
-		String htmltext = null;
+		final String htmltext = null;
 		
 		switch (event)
 		{

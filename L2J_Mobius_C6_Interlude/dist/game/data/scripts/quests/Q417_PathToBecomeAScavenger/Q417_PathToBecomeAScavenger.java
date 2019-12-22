@@ -79,7 +79,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -135,7 +135,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 		}
 		else if (event.equals("30519-09.htm"))
 		{
-			int id = st.getInt("id");
+			final int id = st.getInt("id");
 			if ((id / 10) < 2)
 			{
 				htmltext = "30519-07.htm";
@@ -210,7 +210,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -244,7 +244,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 						}
 						else if (st.hasAtLeastOneQuestItem(BRONK_INGOT, SHARI_AXE, ZIMENF_POTION))
 						{
-							int id = st.getInt("id");
+							final int id = st.getInt("id");
 							if ((id / 10) == 0)
 							{
 								htmltext = "30519-05.htm";
@@ -256,7 +256,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 						}
 						else if (st.hasAtLeastOneQuestItem(BRONK_PAY, SHARI_PAY, ZIMENF_PAY))
 						{
-							int id = st.getInt("id");
+							final int id = st.getInt("id");
 							if (id < 50)
 							{
 								htmltext = "30519-12.htm";
@@ -285,7 +285,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 					case SHARI:
 						if (st.hasQuestItems(SHARI_AXE))
 						{
-							int id = st.getInt("id");
+							final int id = st.getInt("id");
 							if (id < 20)
 							{
 								htmltext = "30517-01.htm";
@@ -309,7 +309,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 					case BRONK:
 						if (st.hasQuestItems(BRONK_INGOT))
 						{
-							int id = st.getInt("id");
+							final int id = st.getInt("id");
 							if (id < 20)
 							{
 								htmltext = "30525-01.htm";
@@ -333,7 +333,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 					case ZIMENF:
 						if (st.hasQuestItems(ZIMENF_POTION))
 						{
-							int id = st.getInt("id");
+							final int id = st.getInt("id");
 							if (id < 20)
 							{
 								htmltext = "30538-01.htm";
@@ -442,7 +442,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerState(player, npc, State.STARTED);
+		final QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)
 		{
 			return null;
@@ -453,7 +453,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 			case HUNTER_BEAR:
 				if (st.getInt("cond") == 5)
 				{
-					int step = st.getInt("step");
+					final int step = st.getInt("step");
 					if (step > 20)
 					{
 						if (((step - 20) * 10) >= Rnd.get(100))

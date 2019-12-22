@@ -238,12 +238,12 @@ public class Q00662_AGameOfCards extends Quest
 			{
 				final int cond = qs.getInt("v1");
 				int i1 = qs.getInt("ExMemoState");
-				int i5 = i1 % 100;
+				final int i5 = i1 % 100;
 				int i9 = i1 / 100;
 				i1 = cond % 100;
-				int i2 = (cond % 10000) / 100;
-				int i3 = (cond % 1000000) / 10000;
-				int i4 = (cond % 100000000) / 1000000;
+				final int i2 = (cond % 10000) / 100;
+				final int i3 = (cond % 1000000) / 10000;
+				final int i4 = (cond % 100000000) / 1000000;
 				switch (event)
 				{
 					case "turncard1":
@@ -531,52 +531,52 @@ public class Q00662_AGameOfCards extends Quest
 				{
 					if ((i9 % 2) < 1)
 					{
-						htmltext = htmltext.replaceAll("FontColor1", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell1", "?");
+						htmltext = htmltext.replace("FontColor1", "FFFF00");
+						htmltext = htmltext.replace("Cell1", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor1", "FF6F6F");
+						htmltext = htmltext.replace("FontColor1", "FF6F6F");
 						htmltext = setHtml(htmltext, i1, "Cell1");
 					}
 					if ((i9 % 4) < 2)
 					{
-						htmltext = htmltext.replaceAll("FontColor2", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell2", "?");
+						htmltext = htmltext.replace("FontColor2", "FFFF00");
+						htmltext = htmltext.replace("Cell2", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor2", "FF6F6F");
+						htmltext = htmltext.replace("FontColor2", "FF6F6F");
 						htmltext = setHtml(htmltext, i2, "Cell2");
 					}
 					if ((i9 % 8) < 4)
 					{
-						htmltext = htmltext.replaceAll("FontColor3", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell3", "?");
+						htmltext = htmltext.replace("FontColor3", "FFFF00");
+						htmltext = htmltext.replace("Cell3", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor3", "FF6F6F");
+						htmltext = htmltext.replace("FontColor3", "FF6F6F");
 						htmltext = setHtml(htmltext, i3, "Cell3");
 					}
 					if ((i9 % 16) < 8)
 					{
-						htmltext = htmltext.replaceAll("FontColor4", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell4", "?");
+						htmltext = htmltext.replace("FontColor4", "FFFF00");
+						htmltext = htmltext.replace("Cell4", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor4", "FF6F6F");
+						htmltext = htmltext.replace("FontColor4", "FF6F6F");
 						htmltext = setHtml(htmltext, i4, "Cell4");
 					}
 					if ((i9 % 32) < 16)
 					{
-						htmltext = htmltext.replaceAll("FontColor5", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell5", "?");
+						htmltext = htmltext.replace("FontColor5", "FFFF00");
+						htmltext = htmltext.replace("Cell5", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor5", "FF6F6F");
+						htmltext = htmltext.replace("FontColor5", "FF6F6F");
 						htmltext = setHtml(htmltext, i5, "Cell5");
 					}
 				}
@@ -612,66 +612,66 @@ public class Q00662_AGameOfCards extends Quest
 				}
 				else if (qs.getInt("ExMemoState") != 0)
 				{
-					int i0 = qs.getInt("v1");
+					final int i0 = qs.getInt("v1");
 					int i1 = qs.getInt("ExMemoState");
-					int i5 = i1 % 100;
-					int i9 = i1 / 100;
+					final int i5 = i1 % 100;
+					final int i9 = i1 / 100;
 					i1 = i0 % 100;
-					int i2 = (i0 % 10000) / 100;
-					int i3 = (i0 % 1000000) / 10000;
-					int i4 = (i0 % 100000000) / 1000000;
+					final int i2 = (i0 % 10000) / 100;
+					final int i3 = (i0 % 1000000) / 10000;
+					final int i4 = (i0 % 100000000) / 1000000;
 					htmltext = getHtm(player, "30845-11a.html");
 					
 					if ((i9 % 2) < 1)
 					{
-						htmltext = htmltext.replaceAll("FontColor1", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell1", "?");
+						htmltext = htmltext.replace("FontColor1", "FFFF00");
+						htmltext = htmltext.replace("Cell1", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor1", "FF6F6F");
+						htmltext = htmltext.replace("FontColor1", "FF6F6F");
 						htmltext = setHtml(htmltext, i1, "Cell1");
 					}
 					
 					if ((i9 % 4) < 2)
 					{
-						htmltext = htmltext.replaceAll("FontColor2", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell2", "?");
+						htmltext = htmltext.replace("FontColor2", "FFFF00");
+						htmltext = htmltext.replace("Cell2", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor2", "FF6F6F");
+						htmltext = htmltext.replace("FontColor2", "FF6F6F");
 						htmltext = setHtml(htmltext, i2, "Cell2");
 					}
 					
 					if ((i9 % 8) < 4)
 					{
-						htmltext = htmltext.replaceAll("FontColor3", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell3", "?");
+						htmltext = htmltext.replace("FontColor3", "FFFF00");
+						htmltext = htmltext.replace("Cell3", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor3", "FF6F6F");
+						htmltext = htmltext.replace("FontColor3", "FF6F6F");
 						htmltext = setHtml(htmltext, i3, "Cell3");
 					}
 					if ((i9 % 16) < 8)
 					{
-						htmltext = htmltext.replaceAll("FontColor4", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell4", "?");
+						htmltext = htmltext.replace("FontColor4", "FFFF00");
+						htmltext = htmltext.replace("Cell4", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor4", "FF6F6F");
+						htmltext = htmltext.replace("FontColor4", "FF6F6F");
 						htmltext = setHtml(htmltext, i4, "Cell4");
 					}
 					if ((i9 % 32) < 16)
 					{
-						htmltext = htmltext.replaceAll("FontColor5", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell5", "?");
+						htmltext = htmltext.replace("FontColor5", "FFFF00");
+						htmltext = htmltext.replace("Cell5", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor5", "FF6F6F");
+						htmltext = htmltext.replace("FontColor5", "FF6F6F");
 						htmltext = setHtml(htmltext, i5, "Cell5");
 					}
 				}
@@ -710,7 +710,7 @@ public class Q00662_AGameOfCards extends Quest
 			if (MONSTERS.get(npc.getId()) < getRandom(1000))
 			{
 				final QuestState qs = getQuestState(player, false);
-				if(qs != null)
+				if (qs != null)
 				{
 					giveItemRandomly(qs.getPlayer(), npc, RED_GEM, 1, 0, MONSTERS.get(npc.getId()), true);
 				}

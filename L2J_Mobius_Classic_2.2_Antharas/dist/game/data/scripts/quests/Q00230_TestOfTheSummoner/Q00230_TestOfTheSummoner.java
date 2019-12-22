@@ -520,6 +520,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 						break;
 					}
 				}
+				break;
 			}
 			case SHADOW_TUREN:
 			{
@@ -563,6 +564,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 						break;
 					}
 				}
+				break;
 			}
 			case MIMI_THE_CAT:
 			{
@@ -606,6 +608,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 						break;
 					}
 				}
+				break;
 			}
 			case UNICORN_PHANTASM:
 			{
@@ -649,6 +652,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 						break;
 					}
 				}
+				break;
 			}
 			case SILHOUETTE_TILFO:
 			{
@@ -692,6 +696,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 						break;
 					}
 				}
+				break;
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);

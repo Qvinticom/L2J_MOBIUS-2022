@@ -46,7 +46,7 @@ public class RequestEvaluate implements IClientIncomingPacket
 			return;
 		}
 		
-		PlayerInstance target = (PlayerInstance) player.getTarget();
+		final PlayerInstance target = (PlayerInstance) player.getTarget();
 		if (target == null)
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.SELECT_TARGET));

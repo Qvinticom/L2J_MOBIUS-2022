@@ -47,8 +47,8 @@ public class Q654_JourneyToASettlement extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final String htmltext = event;
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -80,7 +80,7 @@ public class Q654_JourneyToASettlement extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -89,7 +89,7 @@ public class Q654_JourneyToASettlement extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				QuestState prevSt = player.getQuestState(Q119_LastImperialPrince.class.getSimpleName());
+				final QuestState prevSt = player.getQuestState(Q119_LastImperialPrince.class.getSimpleName());
 				htmltext = ((prevSt == null) || !prevSt.isCompleted() || (player.getLevel() < 74)) ? "31453-00.htm" : "31453-01.htm";
 				break;
 			
@@ -116,7 +116,7 @@ public class Q654_JourneyToASettlement extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerCondition(player, npc, "cond", "2");
+		final QuestState st = checkPlayerCondition(player, npc, "cond", "2");
 		if (st == null)
 		{
 			return null;

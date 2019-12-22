@@ -45,7 +45,7 @@ public class SummonTreasureKey implements ISkillHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) creature;
+		final PlayerInstance player = (PlayerInstance) creature;
 		
 		try
 		{

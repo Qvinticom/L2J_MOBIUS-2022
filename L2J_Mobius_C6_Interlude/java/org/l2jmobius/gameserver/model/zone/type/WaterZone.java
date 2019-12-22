@@ -71,7 +71,7 @@ public class WaterZone extends ZoneType
 		}
 		else if (creature instanceof NpcInstance)
 		{
-			Collection<PlayerInstance> plrs = creature.getKnownList().getKnownPlayers().values();
+			final Collection<PlayerInstance> plrs = creature.getKnownList().getKnownPlayers().values();
 			for (PlayerInstance player : plrs)
 			{
 				player.sendPacket(new NpcInfo((NpcInstance) creature, player));

@@ -199,16 +199,16 @@ public class SchedulingPattern
 	 */
 	public SchedulingPattern(String pattern) throws InvalidPatternException
 	{
-		this.asString = pattern;
-		StringTokenizer st1 = new StringTokenizer(pattern, "|");
+		asString = pattern;
+		final StringTokenizer st1 = new StringTokenizer(pattern, "|");
 		if (st1.countTokens() < 1)
 		{
 			throw new InvalidPatternException("invalid pattern: \"" + pattern + "\"");
 		}
 		while (st1.hasMoreTokens())
 		{
-			String localPattern = st1.nextToken();
-			StringTokenizer st2 = new StringTokenizer(localPattern, " \t");
+			final String localPattern = st1.nextToken();
+			final StringTokenizer st2 = new StringTokenizer(localPattern, " \t");
 			if (st2.countTokens() != 5)
 			{
 				throw new InvalidPatternException("invalid pattern: \"" + localPattern + "\"");
@@ -270,11 +270,11 @@ public class SchedulingPattern
 		{
 			return new AlwaysTrueValueMatcher();
 		}
-		ArrayList<Object> values = new ArrayList<>();
-		StringTokenizer st = new StringTokenizer(str, ",");
+		final ArrayList<Object> values = new ArrayList<>();
+		final StringTokenizer st = new StringTokenizer(str, ",");
 		while (st.hasMoreTokens())
 		{
-			String element = st.nextToken();
+			final String element = st.nextToken();
 			ArrayList<Integer> local;
 			try
 			{
@@ -286,7 +286,7 @@ public class SchedulingPattern
 			}
 			for (Integer integer : local)
 			{
-				Object value = integer;
+				final Object value = integer;
 				if (!values.contains(value))
 				{
 					values.add(value);
@@ -313,8 +313,8 @@ public class SchedulingPattern
 	 */
 	private ArrayList<Integer> parseListElement(String str, ValueParser parser) throws Exception
 	{
-		StringTokenizer st = new StringTokenizer(str, "/");
-		int size = st.countTokens();
+		final StringTokenizer st = new StringTokenizer(str, "/");
+		final int size = st.countTokens();
 		if ((size < 1) || (size > 2))
 		{
 			throw new Exception("syntax error");
@@ -330,7 +330,7 @@ public class SchedulingPattern
 		}
 		if (size == 2)
 		{
-			String dStr = st.nextToken();
+			final String dStr = st.nextToken();
 			int div;
 			try
 			{
@@ -344,7 +344,7 @@ public class SchedulingPattern
 			{
 				throw new Exception("non positive divisor \"" + div + "\"");
 			}
-			ArrayList<Integer> values2 = new ArrayList<>();
+			final ArrayList<Integer> values2 = new ArrayList<>();
 			for (int i = 0; i < values.size(); i += div)
 			{
 				values2.add(values.get(i));
@@ -365,22 +365,22 @@ public class SchedulingPattern
 	{
 		if (str.equals("*"))
 		{
-			int min = parser.getMinValue();
-			int max = parser.getMaxValue();
-			ArrayList<Integer> values = new ArrayList<>();
+			final int min = parser.getMinValue();
+			final int max = parser.getMaxValue();
+			final ArrayList<Integer> values = new ArrayList<>();
 			for (int i = min; i <= max; i++)
 			{
 				values.add(i);
 			}
 			return values;
 		}
-		StringTokenizer st = new StringTokenizer(str, "-");
-		int size = st.countTokens();
+		final StringTokenizer st = new StringTokenizer(str, "-");
+		final int size = st.countTokens();
 		if ((size < 1) || (size > 2))
 		{
 			throw new Exception("syntax error");
 		}
-		String v1Str = st.nextToken();
+		final String v1Str = st.nextToken();
 		int v1;
 		try
 		{
@@ -392,11 +392,11 @@ public class SchedulingPattern
 		}
 		if (size == 1)
 		{
-			ArrayList<Integer> values = new ArrayList<>();
+			final ArrayList<Integer> values = new ArrayList<>();
 			values.add(v1);
 			return values;
 		}
-		String v2Str = st.nextToken();
+		final String v2Str = st.nextToken();
 		int v2;
 		try
 		{
@@ -406,7 +406,7 @@ public class SchedulingPattern
 		{
 			throw new Exception("invalid value \"" + v2Str + "\", " + e.getMessage());
 		}
-		ArrayList<Integer> values = new ArrayList<>();
+		final ArrayList<Integer> values = new ArrayList<>();
 		if (v1 < v2)
 		{
 			for (int i = v1; i <= v2; i++)
@@ -416,8 +416,8 @@ public class SchedulingPattern
 		}
 		else if (v1 > v2)
 		{
-			int min = parser.getMinValue();
-			int max = parser.getMaxValue();
+			final int min = parser.getMinValue();
+			final int max = parser.getMaxValue();
 			for (int i = v1; i <= max; i++)
 			{
 				values.add(i);
@@ -443,23 +443,23 @@ public class SchedulingPattern
 	 */
 	public boolean match(TimeZone timezone, long millis)
 	{
-		GregorianCalendar gc = new GregorianCalendar();
+		final GregorianCalendar gc = new GregorianCalendar();
 		gc.setTimeInMillis(millis);
 		gc.setTimeZone(timezone);
-		int minute = gc.get(Calendar.MINUTE);
-		int hour = gc.get(Calendar.HOUR_OF_DAY);
-		int dayOfMonth = gc.get(Calendar.DAY_OF_MONTH);
-		int month = gc.get(Calendar.MONTH) + 1;
-		int dayOfWeek = gc.get(Calendar.DAY_OF_WEEK) - 1;
-		int year = gc.get(Calendar.YEAR);
+		final int minute = gc.get(Calendar.MINUTE);
+		final int hour = gc.get(Calendar.HOUR_OF_DAY);
+		final int dayOfMonth = gc.get(Calendar.DAY_OF_MONTH);
+		final int month = gc.get(Calendar.MONTH) + 1;
+		final int dayOfWeek = gc.get(Calendar.DAY_OF_WEEK) - 1;
+		final int year = gc.get(Calendar.YEAR);
 		for (int i = 0; i < matcherSize; i++)
 		{
-			ValueMatcher minuteMatcher = minuteMatchers.get(i);
-			ValueMatcher hourMatcher = hourMatchers.get(i);
-			ValueMatcher dayOfMonthMatcher = dayOfMonthMatchers.get(i);
-			ValueMatcher monthMatcher = monthMatchers.get(i);
-			ValueMatcher dayOfWeekMatcher = dayOfWeekMatchers.get(i);
-			boolean eval = minuteMatcher.match(minute) && hourMatcher.match(hour) && ((dayOfMonthMatcher instanceof DayOfMonthValueMatcher) ? ((DayOfMonthValueMatcher) dayOfMonthMatcher).match(dayOfMonth, month, gc.isLeapYear(year)) : dayOfMonthMatcher.match(dayOfMonth)) && monthMatcher.match(month) && dayOfWeekMatcher.match(dayOfWeek);
+			final ValueMatcher minuteMatcher = minuteMatchers.get(i);
+			final ValueMatcher hourMatcher = hourMatchers.get(i);
+			final ValueMatcher dayOfMonthMatcher = dayOfMonthMatchers.get(i);
+			final ValueMatcher monthMatcher = monthMatchers.get(i);
+			final ValueMatcher dayOfWeekMatcher = dayOfWeekMatchers.get(i);
+			final boolean eval = minuteMatcher.match(minute) && hourMatcher.match(hour) && ((dayOfMonthMatcher instanceof DayOfMonthValueMatcher) ? ((DayOfMonthValueMatcher) dayOfMonthMatcher).match(dayOfMonth, month, gc.isLeapYear(year)) : dayOfMonthMatcher.match(dayOfMonth)) && monthMatcher.match(month) && dayOfWeekMatcher.match(dayOfWeek);
 			if (eval)
 			{
 				return true;

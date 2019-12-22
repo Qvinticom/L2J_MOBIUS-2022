@@ -73,7 +73,7 @@ public class FishingChampionshipManager
 	
 	protected void setEndOfChamp()
 	{
-		Calendar finishtime = Calendar.getInstance();
+		final Calendar finishtime = Calendar.getInstance();
 		finishtime.setTimeInMillis(_enddate);
 		finishtime.set(Calendar.MINUTE, 0);
 		finishtime.set(Calendar.SECOND, 0);
@@ -89,11 +89,11 @@ public class FishingChampionshipManager
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(SELECT);
-			ResultSet rs = statement.executeQuery();
+			final PreparedStatement statement = con.prepareStatement(SELECT);
+			final ResultSet rs = statement.executeQuery();
 			while (rs.next())
 			{
-				int rewarded = rs.getInt("rewarded");
+				final int rewarded = rs.getInt("rewarded");
 				if (rewarded == 0)
 				{
 					_tmpPlayers.add(new Fisher(rs.getString("player_name"), rs.getDouble("fish_length"), 0));

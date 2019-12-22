@@ -269,7 +269,7 @@ public class ItemInstance extends WorldObject
 		
 		if (Config.LOG_ITEMS)
 		{
-			LogRecord record = new LogRecord(Level.INFO, "CHANGE:" + process);
+			final LogRecord record = new LogRecord(Level.INFO, "CHANGE:" + process);
 			record.setLoggerName("item");
 			record.setParameters(new Object[]
 			{
@@ -790,7 +790,7 @@ public class ItemInstance extends WorldObject
 			_consumingMana = false;
 		}
 		
-		PlayerInstance player = (PlayerInstance) World.getInstance().findObject(getOwnerId());
+		final PlayerInstance player = (PlayerInstance) World.getInstance().findObject(getOwnerId());
 		if (player != null)
 		{
 			SystemMessage sm;
@@ -828,8 +828,8 @@ public class ItemInstance extends WorldObject
 				// unequip
 				if (isEquipped())
 				{
-					ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(getEquipSlot());
-					InventoryUpdate iu = new InventoryUpdate();
+					final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(getEquipSlot());
+					final InventoryUpdate iu = new InventoryUpdate();
 					
 					for (ItemInstance element : unequiped)
 					{
@@ -846,11 +846,11 @@ public class ItemInstance extends WorldObject
 					player.getInventory().destroyItem("ItemInstance", this, player, null);
 					
 					// send update
-					InventoryUpdate iu = new InventoryUpdate();
+					final InventoryUpdate iu = new InventoryUpdate();
 					iu.addRemovedItem(this);
 					player.sendPacket(iu);
 					
-					StatusUpdate su = new StatusUpdate(player.getObjectId());
+					final StatusUpdate su = new StatusUpdate(player.getObjectId());
 					su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
 					player.sendPacket(su);
 				}
@@ -872,7 +872,7 @@ public class ItemInstance extends WorldObject
 				
 				if (_loc != ItemLocation.WAREHOUSE)
 				{
-					InventoryUpdate iu = new InventoryUpdate();
+					final InventoryUpdate iu = new InventoryUpdate();
 					iu.addModifiedItem(this);
 					player.sendPacket(iu);
 				}
@@ -1032,7 +1032,7 @@ public class ItemInstance extends WorldObject
 				final int item_id = rs.getInt("item_id");
 				final int count = rs.getInt("count");
 				
-				ItemLocation loc = ItemLocation.valueOf(rs.getString("loc"));
+				final ItemLocation loc = ItemLocation.valueOf(rs.getString("loc"));
 				
 				final int loc_data = rs.getInt("loc_data");
 				final int enchant_level = rs.getInt("enchant_level");
@@ -1042,7 +1042,7 @@ public class ItemInstance extends WorldObject
 				final int price_buy = rs.getInt("price_buy");
 				final int manaLeft = rs.getInt("mana_left");
 				
-				Item item = ItemTable.getInstance().getTemplate(item_id);
+				final Item item = ItemTable.getInstance().getTemplate(item_id);
 				
 				if (item == null)
 				{
@@ -1150,7 +1150,7 @@ public class ItemInstance extends WorldObject
 	{
 		if (Config.PATHFINDING && (dropper != null))
 		{
-			Location dropDest = GeoEngine.getInstance().canMoveToTargetLoc(dropper.getX(), dropper.getY(), dropper.getZ(), x, y, z, dropper.getInstanceId());
+			final Location dropDest = GeoEngine.getInstance().canMoveToTargetLoc(dropper.getX(), dropper.getY(), dropper.getZ(), x, y, z, dropper.getInstanceId());
 			
 			if ((dropDest != null) && (dropDest.getX() != 0) && (dropDest.getY() != 0))
 			{
@@ -1200,7 +1200,7 @@ public class ItemInstance extends WorldObject
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,price_sell=?,price_buy=?,custom_type1=?,custom_type2=?,mana_left=? WHERE object_id = ?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,price_sell=?,price_buy=?,custom_type1=?,custom_type2=?,mana_left=? WHERE object_id = ?");
 			statement.setInt(1, _ownerId);
 			statement.setInt(2, _count);
 			statement.setString(3, _loc.name());
@@ -1235,7 +1235,7 @@ public class ItemInstance extends WorldObject
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("INSERT INTO items (owner_id,item_id,count,loc,loc_data,enchant_level,price_sell,price_buy,object_id,custom_type1,custom_type2,mana_left) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
+			final PreparedStatement statement = con.prepareStatement("INSERT INTO items (owner_id,item_id,count,loc,loc_data,enchant_level,price_sell,price_buy,object_id,custom_type1,custom_type2,mana_left) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
 			statement.setInt(1, _ownerId);
 			statement.setInt(2, _itemId);
 			statement.setInt(3, _count);
@@ -1278,7 +1278,7 @@ public class ItemInstance extends WorldObject
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("DELETE FROM items WHERE object_id=?");
+			final PreparedStatement statement = con.prepareStatement("DELETE FROM items WHERE object_id=?");
 			statement.setInt(1, getObjectId());
 			statement.executeUpdate();
 			_existsInDb = false;

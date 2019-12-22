@@ -655,7 +655,7 @@ public class DarkCloudMansion extends AbstractInstance
 		DMCNpc thisNpc;
 		
 		int idx = 0;
-		int[] temp = Beleths[getRandom(Beleths.length)];
+		final int[] temp = Beleths[getRandom(Beleths.length)];
 		
 		fifthRoom.reset = 0;
 		fifthRoom.founded = 0;

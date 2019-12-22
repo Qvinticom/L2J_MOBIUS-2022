@@ -221,6 +221,7 @@ public class Q00336_CoinsOfMagic extends Quest
 				{
 					return "30702-02a.html";
 				}
+				break;
 			}
 			case WAREHOUSE_KEEPER_SORINT:
 			{
@@ -1345,28 +1346,28 @@ public class Q00336_CoinsOfMagic extends Quest
 	 * @param npcId
 	 * @param weightPoint
 	 * @param base
-	 * @param ITEM_1_1
-	 * @param ITEM_1_2
-	 * @param ITEM_1_MUL
-	 * @param ITEM_2
-	 * @param ITEM_3
-	 * @param ITEM_4
+	 * @param item1a
+	 * @param item1b
+	 * @param item1Mul
+	 * @param item2
+	 * @param item3
+	 * @param item4
 	 * @return
 	 */
-	private String shortFirstSteps(QuestState qs, int npcId, int weightPoint, int base, int ITEM_1_1, int ITEM_1_2, int ITEM_1_MUL, int ITEM_2, int ITEM_3, int ITEM_4)
+	private String shortFirstSteps(QuestState qs, int npcId, int weightPoint, int base, int item1a, int item1b, int item1Mul, int item2, int item3, int item4)
 	{
 		final PlayerInstance player = qs.getPlayer();
 		switch (qs.getInt(PARAM_2))
 		{
 			case 42:
 			{
-				if ((getQuestItemsCount(player, ITEM_1_1) >= (base * ITEM_1_MUL)) && ((ITEM_1_2 == 0) || (getQuestItemsCount(player, ITEM_1_2) >= base)))
+				if ((getQuestItemsCount(player, item1a) >= (base * item1Mul)) && ((item1b == 0) || (getQuestItemsCount(player, item1b) >= base)))
 				{
 					qs.set(FLAG, 1);
-					takeItems(player, ITEM_1_1, base * ITEM_1_MUL);
-					if (ITEM_1_2 > 0)
+					takeItems(player, item1a, base * item1Mul);
+					if (item1b > 0)
 					{
-						takeItems(player, ITEM_1_2, base);
+						takeItems(player, item1b, base);
 					}
 					qs.set(WEIGHT_POINT, weightPoint);
 					int param1 = getRandom(3) + 1;
@@ -1379,10 +1380,10 @@ public class Q00336_CoinsOfMagic extends Quest
 			}
 			case 31:
 			{
-				if (getQuestItemsCount(player, ITEM_2) >= base)
+				if (getQuestItemsCount(player, item2) >= base)
 				{
 					qs.set(FLAG, 1);
-					takeItems(player, ITEM_2, base);
+					takeItems(player, item2, base);
 					qs.set(WEIGHT_POINT, weightPoint);
 					int param1 = getRandom(3) + 1;
 					param1 += (getRandom(3) + 1) * 4;
@@ -1394,10 +1395,10 @@ public class Q00336_CoinsOfMagic extends Quest
 			}
 			case 21:
 			{
-				if (getQuestItemsCount(player, ITEM_3) >= base)
+				if (getQuestItemsCount(player, item3) >= base)
 				{
 					qs.set(FLAG, 1);
-					takeItems(player, ITEM_3, base);
+					takeItems(player, item3, base);
 					qs.set(WEIGHT_POINT, weightPoint);
 					int param1 = getRandom(3) + 1;
 					param1 += (getRandom(3) + 1) * 4;
@@ -1409,10 +1410,10 @@ public class Q00336_CoinsOfMagic extends Quest
 			}
 			case 11:
 			{
-				if (getQuestItemsCount(player, ITEM_4) >= base)
+				if (getQuestItemsCount(player, item4) >= base)
 				{
 					qs.set(FLAG, 1);
-					takeItems(player, ITEM_4, base);
+					takeItems(player, item4, base);
 					qs.set(WEIGHT_POINT, weightPoint);
 					int param1 = getRandom(3) + 1;
 					param1 += (getRandom(3) + 1) * 4;
@@ -1430,28 +1431,28 @@ public class Q00336_CoinsOfMagic extends Quest
 	 * @param qs
 	 * @param npcId
 	 * @param mul
-	 * @param ITEM_1
-	 * @param ITEM_1_MUL
-	 * @param REWARD_1
-	 * @param ITEM_2
-	 * @param REWARD_2
-	 * @param ITEM_3
-	 * @param REWARD_3
-	 * @param ITEM_4
-	 * @param REWARD_4
+	 * @param item1
+	 * @param item1Mul
+	 * @param reward1
+	 * @param item2
+	 * @param reward2
+	 * @param item3
+	 * @param reward3
+	 * @param item4
+	 * @param reward4
 	 * @return
 	 */
-	private String shortSecondStepOneItem(QuestState qs, int npcId, int mul, int ITEM_1, int ITEM_1_MUL, int REWARD_1, int ITEM_2, int REWARD_2, int ITEM_3, int REWARD_3, int ITEM_4, int REWARD_4)
+	private String shortSecondStepOneItem(QuestState qs, int npcId, int mul, int item1, int item1Mul, int reward1, int item2, int reward2, int item3, int reward3, int item4, int reward4)
 	{
 		final PlayerInstance player = qs.getPlayer();
 		switch (qs.getInt(PARAM_2))
 		{
 			case 42:
 			{
-				if (getQuestItemsCount(player, ITEM_1) >= (10 * mul * ITEM_1_MUL))
+				if (getQuestItemsCount(player, item1) >= (10 * mul * item1Mul))
 				{
-					takeItems(player, ITEM_1, 10 * mul * ITEM_1_MUL);
-					giveItems(player, REWARD_1, 1 * mul);
+					takeItems(player, item1, 10 * mul * item1Mul);
+					giveItems(player, reward1, 1 * mul);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					return npcId + "-07.html";
 				}
@@ -1459,10 +1460,10 @@ public class Q00336_CoinsOfMagic extends Quest
 			}
 			case 31:
 			{
-				if (getQuestItemsCount(player, ITEM_2) >= (5 * mul))
+				if (getQuestItemsCount(player, item2) >= (5 * mul))
 				{
-					takeItems(player, ITEM_2, 5 * mul);
-					giveItems(player, REWARD_2, 1 * mul);
+					takeItems(player, item2, 5 * mul);
+					giveItems(player, reward2, 1 * mul);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					return npcId + "-07.html";
 				}
@@ -1470,10 +1471,10 @@ public class Q00336_CoinsOfMagic extends Quest
 			}
 			case 21:
 			{
-				if (getQuestItemsCount(player, ITEM_3) >= (5 * mul))
+				if (getQuestItemsCount(player, item3) >= (5 * mul))
 				{
-					takeItems(player, ITEM_3, 5 * mul);
-					giveItems(player, REWARD_3, 1 * mul);
+					takeItems(player, item3, 5 * mul);
+					giveItems(player, reward3, 1 * mul);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					return npcId + "-07.html";
 				}
@@ -1481,10 +1482,10 @@ public class Q00336_CoinsOfMagic extends Quest
 			}
 			case 11:
 			{
-				if (getQuestItemsCount(player, ITEM_4) >= (5 * mul))
+				if (getQuestItemsCount(player, item4) >= (5 * mul))
 				{
-					takeItems(player, ITEM_4, 5 * mul);
-					giveItems(player, REWARD_4, 1 * mul);
+					takeItems(player, item4, 5 * mul);
+					giveItems(player, reward4, 1 * mul);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					return npcId + "-07.html";
 				}
@@ -1498,32 +1499,32 @@ public class Q00336_CoinsOfMagic extends Quest
 	 * @param qs
 	 * @param npcId
 	 * @param mul
-	 * @param ITEM_1_1
-	 * @param ITEM_1_2
-	 * @param REWARD_1
-	 * @param ITEM_2_1
-	 * @param ITEM_2_2
-	 * @param REWARD_2
-	 * @param ITEM_3_1
-	 * @param ITEM_3_2
-	 * @param REWARD_3
-	 * @param ITEM_4_1
-	 * @param ITEM_4_2
-	 * @param REWARD_4
+	 * @param item1a
+	 * @param item1b
+	 * @param reward1
+	 * @param item2a
+	 * @param item2b
+	 * @param reward2
+	 * @param item3a
+	 * @param item3b
+	 * @param reward3
+	 * @param item4a
+	 * @param item4b
+	 * @param reward4
 	 * @return
 	 */
-	private String shortSecondStepTwoItems(QuestState qs, int npcId, int mul, int ITEM_1_1, int ITEM_1_2, int REWARD_1, int ITEM_2_1, int ITEM_2_2, int REWARD_2, int ITEM_3_1, int ITEM_3_2, int REWARD_3, int ITEM_4_1, int ITEM_4_2, int REWARD_4)
+	private String shortSecondStepTwoItems(QuestState qs, int npcId, int mul, int item1a, int item1b, int reward1, int item2a, int item2b, int reward2, int item3a, int item3b, int reward3, int item4a, int item4b, int reward4)
 	{
 		final PlayerInstance player = qs.getPlayer();
 		switch (qs.getInt(PARAM_2))
 		{
 			case 42:
 			{
-				if ((getQuestItemsCount(player, ITEM_1_1) >= (10 * mul)) && (getQuestItemsCount(player, ITEM_1_2) >= (10 * mul)))
+				if ((getQuestItemsCount(player, item1a) >= (10 * mul)) && (getQuestItemsCount(player, item1b) >= (10 * mul)))
 				{
-					takeItems(player, ITEM_1_1, 10 * mul);
-					takeItems(player, ITEM_1_2, 10 * mul);
-					giveItems(player, REWARD_1, 1 * mul);
+					takeItems(player, item1a, 10 * mul);
+					takeItems(player, item1b, 10 * mul);
+					giveItems(player, reward1, 1 * mul);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					return npcId + "-07.html";
 				}
@@ -1531,11 +1532,11 @@ public class Q00336_CoinsOfMagic extends Quest
 			}
 			case 31:
 			{
-				if ((getQuestItemsCount(player, ITEM_2_1) >= (5 * mul)) && (getQuestItemsCount(player, ITEM_2_2) >= (5 * mul)))
+				if ((getQuestItemsCount(player, item2a) >= (5 * mul)) && (getQuestItemsCount(player, item2b) >= (5 * mul)))
 				{
-					takeItems(player, ITEM_2_1, 5 * mul);
-					takeItems(player, ITEM_2_2, 5 * mul);
-					giveItems(player, REWARD_2, 1 * mul);
+					takeItems(player, item2a, 5 * mul);
+					takeItems(player, item2b, 5 * mul);
+					giveItems(player, reward2, 1 * mul);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					return npcId + "-07.html";
 				}
@@ -1543,11 +1544,11 @@ public class Q00336_CoinsOfMagic extends Quest
 			}
 			case 21:
 			{
-				if ((getQuestItemsCount(player, ITEM_3_1) >= (5 * mul)) && (getQuestItemsCount(player, ITEM_3_2) >= (5 * mul)))
+				if ((getQuestItemsCount(player, item3a) >= (5 * mul)) && (getQuestItemsCount(player, item3b) >= (5 * mul)))
 				{
-					takeItems(player, ITEM_3_1, 5 * mul);
-					takeItems(player, ITEM_3_2, 5 * mul);
-					giveItems(player, REWARD_3, 1 * mul);
+					takeItems(player, item3a, 5 * mul);
+					takeItems(player, item3b, 5 * mul);
+					giveItems(player, reward3, 1 * mul);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					return npcId + "-07.html";
 				}
@@ -1555,11 +1556,11 @@ public class Q00336_CoinsOfMagic extends Quest
 			}
 			case 11:
 			{
-				if ((getQuestItemsCount(player, ITEM_4_1) >= (5 * mul)) && (getQuestItemsCount(player, ITEM_4_2) >= (5 * mul)))
+				if ((getQuestItemsCount(player, item4a) >= (5 * mul)) && (getQuestItemsCount(player, item4b) >= (5 * mul)))
 				{
-					takeItems(player, ITEM_4_1, 5 * mul);
-					takeItems(player, ITEM_4_2, 5 * mul);
-					giveItems(player, REWARD_4, 1 * mul);
+					takeItems(player, item4a, 5 * mul);
+					takeItems(player, item4b, 5 * mul);
+					giveItems(player, reward4, 1 * mul);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					return npcId + "-07.html";
 				}
@@ -1573,13 +1574,13 @@ public class Q00336_CoinsOfMagic extends Quest
 	 * @param qs
 	 * @param npcId
 	 * @param flag
-	 * @param ITEM_1
-	 * @param ITEM_2
-	 * @param ITEM_3
-	 * @param ITEM_4
+	 * @param item1
+	 * @param item2
+	 * @param item3
+	 * @param item4
 	 * @return
 	 */
-	private String shortThirdStep(QuestState qs, int npcId, int flag, int ITEM_1, int ITEM_2, int ITEM_3, int ITEM_4)
+	private String shortThirdStep(QuestState qs, int npcId, int flag, int item1, int item2, int item3, int item4)
 	{
 		final PlayerInstance player = qs.getPlayer();
 		qs.set(PARAM_3, 0);
@@ -1591,22 +1592,22 @@ public class Q00336_CoinsOfMagic extends Quest
 			{
 				case 42:
 				{
-					giveItems(player, ITEM_1, 1);
+					giveItems(player, item1, 1);
 					break;
 				}
 				case 31:
 				{
-					giveItems(player, ITEM_2, 1);
+					giveItems(player, item2, 1);
 					break;
 				}
 				case 21:
 				{
-					giveItems(player, ITEM_3, 1);
+					giveItems(player, item3, 1);
 					break;
 				}
 				case 11:
 				{
-					giveItems(player, ITEM_4, 1);
+					giveItems(player, item4, 1);
 					break;
 				}
 			}

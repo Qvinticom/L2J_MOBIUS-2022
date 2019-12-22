@@ -223,7 +223,7 @@ public class Q00403_PathOfTheRogue extends Quest
 				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.I_MUST_DO_SOMETHING_ABOUT_THIS_SHAMEFUL_INCIDENT));
 				if (hasQuestItems(killer, MOST_WANTED_LIST))
 				{
-					int randomItem = STOLEN_ITEMS[getRandom(STOLEN_ITEMS.length)];
+					final int randomItem = STOLEN_ITEMS[getRandom(STOLEN_ITEMS.length)];
 					if (!hasQuestItems(killer, randomItem))
 					{
 						giveItems(killer, randomItem, 1);
@@ -261,7 +261,7 @@ public class Q00403_PathOfTheRogue extends Quest
 	
 	private boolean checkWeapon(PlayerInstance player)
 	{
-		ItemInstance weapon = player.getActiveWeaponInstance();
+		final ItemInstance weapon = player.getActiveWeaponInstance();
 		return ((weapon != null) && ((weapon.getId() == NETIS_BOW) || (weapon.getId() == NETIS_DAGGER)));
 	}
 	

@@ -101,7 +101,7 @@ public class Fishing implements Runnable
 		
 		_mode = Rnd.get(100) >= 80 ? 1 : 0;
 		
-		ExFishingStartCombat efsc = new ExFishingStartCombat(_fisher, _time, _fishMaxHp, _mode, _lureType, _deceptiveMode);
+		final ExFishingStartCombat efsc = new ExFishingStartCombat(_fisher, _time, _fishMaxHp, _mode, _lureType, _deceptiveMode);
 		_fisher.broadcastPacket(efsc);
 		_fisher.sendPacket(new PlaySound(1, "SF_S_01", 0, 0, 0, 0, 0));
 		// Succeeded in getting a bite
@@ -121,7 +121,7 @@ public class Fishing implements Runnable
 			_fishCurHp = 0;
 		}
 		
-		ExFishingHpRegen efhr = new ExFishingHpRegen(_fisher, _time, _fishCurHp, _mode, _goodUse, _anim, pen, _deceptiveMode);
+		final ExFishingHpRegen efhr = new ExFishingHpRegen(_fisher, _time, _fishCurHp, _mode, _goodUse, _anim, pen, _deceptiveMode);
 		_fisher.broadcastPacket(efhr);
 		_anim = 0;
 		if (_fishCurHp > (_fishMaxHp * 2))
@@ -216,7 +216,7 @@ public class Fishing implements Runnable
 		finally
 		{
 			_thinking = false;
-			ExFishingHpRegen efhr = new ExFishingHpRegen(_fisher, _time, _fishCurHp, _mode, 0, _anim, 0, _deceptiveMode);
+			final ExFishingHpRegen efhr = new ExFishingHpRegen(_fisher, _time, _fishCurHp, _mode, 0, _anim, 0, _deceptiveMode);
 			if (_anim != 0)
 			{
 				_fisher.broadcastPacket(efhr);
@@ -266,7 +266,7 @@ public class Fishing implements Runnable
 			else
 			{
 				// Reeling failed, Damage: $s1
-				SystemMessage sm = new SystemMessage(SystemMessageId.FISH_RESISTED_REELING_S1_HP_REGAINED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.FISH_RESISTED_REELING_S1_HP_REGAINED);
 				sm.addNumber(dmg);
 				_fisher.sendPacket(sm);
 				_goodUse = 2;
@@ -276,7 +276,7 @@ public class Fishing implements Runnable
 		else if (_deceptiveMode == 0)
 		{
 			// Reeling failed, Damage: $s1
-			SystemMessage sm = new SystemMessage(SystemMessageId.FISH_RESISTED_REELING_S1_HP_REGAINED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.FISH_RESISTED_REELING_S1_HP_REGAINED);
 			sm.addNumber(dmg);
 			_fisher.sendPacket(sm);
 			_goodUse = 2;
@@ -340,7 +340,7 @@ public class Fishing implements Runnable
 			else
 			{
 				// Pumping failed, Regained: $s1
-				SystemMessage sm = new SystemMessage(SystemMessageId.FISH_RESISTED_PUMPING_S1_HP_REGAINED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.FISH_RESISTED_PUMPING_S1_HP_REGAINED);
 				sm.addNumber(dmg);
 				_fisher.sendPacket(sm);
 				_goodUse = 2;
@@ -350,7 +350,7 @@ public class Fishing implements Runnable
 		else if (_deceptiveMode == 0)
 		{
 			// Pumping failed, Regained: $s1
-			SystemMessage sm = new SystemMessage(SystemMessageId.FISH_RESISTED_PUMPING_S1_HP_REGAINED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.FISH_RESISTED_PUMPING_S1_HP_REGAINED);
 			sm.addNumber(dmg);
 			_fisher.sendPacket(sm);
 			_goodUse = 2;
@@ -439,7 +439,7 @@ public class Fishing implements Runnable
 		{
 			try
 			{
-				Spawn spawn = new Spawn(temp);
+				final Spawn spawn = new Spawn(temp);
 				spawn.setX(_fisher.GetFishx());
 				spawn.setY(_fisher.GetFishy());
 				spawn.setZ(_fisher.GetFishz());

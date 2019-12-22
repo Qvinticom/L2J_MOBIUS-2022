@@ -34,7 +34,7 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_TIME_RESTRICT_FIELD_LIST.writeId(packet);
 		
-		List<TimeRestrictedFieldInfo> infos = new ArrayList<>();
+		final List<TimeRestrictedFieldInfo> infos = new ArrayList<>();
 		
 		addField(infos);
 		

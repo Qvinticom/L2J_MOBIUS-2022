@@ -85,9 +85,9 @@ public class Pdam implements ISkillHandler
 				continue;
 			}
 			
-			Creature target = (Creature) target2;
-			Formulas f = Formulas.getInstance();
-			ItemInstance weapon = creature.getActiveWeaponInstance();
+			final Creature target = (Creature) target2;
+			final Formulas f = Formulas.getInstance();
+			final ItemInstance weapon = creature.getActiveWeaponInstance();
 			
 			if ((creature instanceof PlayerInstance) && (target instanceof PlayerInstance) && target.isAlikeDead() && target.isFakeDeath())
 			{
@@ -155,7 +155,7 @@ public class Pdam implements ISkillHandler
 						creature.stopSkillEffects(skill.getId());
 						
 						skill.getEffects(null, creature, ss, sps, bss);
-						SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 						sm.addSkillName(skill.getId());
 						creature.sendPacket(sm);
 					}
@@ -163,13 +163,13 @@ public class Pdam implements ISkillHandler
 					{
 						// Like L2OFF must remove the first effect if the second effect lands
 						skill.getEffects(creature, target, ss, sps, bss);
-						SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 						sm.addSkillName(skill.getId());
 						target.sendPacket(sm);
 					}
 					else
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
 						creature.sendPacket(sm);
@@ -185,7 +185,7 @@ public class Pdam implements ISkillHandler
 					{
 						if (target instanceof PlayerInstance)
 						{
-							PlayerInstance player = (PlayerInstance) target;
+							final PlayerInstance player = (PlayerInstance) target;
 							if (!player.isInvul())
 							{
 								player.setCurrentCp(1); // Set CP to 1
@@ -209,7 +209,7 @@ public class Pdam implements ISkillHandler
 						}
 						else if (target instanceof PlayerInstance) // If is a active player set his HP and CP to 1
 						{
-							PlayerInstance player = (PlayerInstance) target;
+							final PlayerInstance player = (PlayerInstance) target;
 							if (!player.isInvul())
 							{
 								player.setCurrentHp(1);
@@ -225,7 +225,7 @@ public class Pdam implements ISkillHandler
 				{
 					if (target instanceof PlayerInstance)
 					{
-						PlayerInstance player = (PlayerInstance) target;
+						final PlayerInstance player = (PlayerInstance) target;
 						if (!player.isInvul())
 						{
 							if (damage >= player.getCurrentHp())
@@ -254,7 +254,7 @@ public class Pdam implements ISkillHandler
 								player.setCurrentHp(player.getCurrentHp() - damage);
 							}
 						}
-						SystemMessage smsg = new SystemMessage(SystemMessageId.S1_GAVE_YOU_S2_DMG);
+						final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_GAVE_YOU_S2_DMG);
 						smsg.addString(creature.getName());
 						smsg.addNumber(damage);
 						player.sendPacket(smsg);
@@ -297,7 +297,7 @@ public class Pdam implements ISkillHandler
 			
 			if ((skill.getId() == 345) || (skill.getId() == 346)) // Sonic Rage or Raging Force
 			{
-				EffectCharge effect = (EffectCharge) creature.getFirstEffect(Effect.EffectType.CHARGE);
+				final EffectCharge effect = (EffectCharge) creature.getFirstEffect(Effect.EffectType.CHARGE);
 				if (effect != null)
 				{
 					int effectcharge = effect.getLevel();
@@ -319,17 +319,17 @@ public class Pdam implements ISkillHandler
 				}
 				else if (skill.getId() == 345) // Sonic Rage
 				{
-					Skill dummy = SkillTable.getInstance().getInfo(8, 7); // Lv7 Sonic Focus
+					final Skill dummy = SkillTable.getInstance().getInfo(8, 7); // Lv7 Sonic Focus
 					dummy.getEffects(creature, creature, ss, sps, bss);
 				}
 				else if (skill.getId() == 346) // Raging Force
 				{
-					Skill dummy = SkillTable.getInstance().getInfo(50, 7); // Lv7 Focused Force
+					final Skill dummy = SkillTable.getInstance().getInfo(50, 7); // Lv7 Focused Force
 					dummy.getEffects(creature, creature, ss, sps, bss);
 				}
 			}
 			// self Effect :]
-			Effect effect = creature.getFirstEffect(skill.getId());
+			final Effect effect = creature.getFirstEffect(skill.getId());
 			if ((effect != null) && effect.isSelfEffect())
 			{
 				// Replace old effect with new one.

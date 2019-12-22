@@ -107,7 +107,7 @@ public class Q00269_InventionAmbition extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if(qs != null)
+		if (qs != null)
 		{
 			giveItemRandomly(qs.getPlayer(), npc, ENERGY_ORE, 1, 0, MONSTERS.get(npc.getId()), true);
 		}

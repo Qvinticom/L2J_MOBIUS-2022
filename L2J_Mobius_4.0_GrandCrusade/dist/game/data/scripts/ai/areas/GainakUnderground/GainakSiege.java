@@ -103,7 +103,7 @@ public class GainakSiege extends AbstractNpcAI
 				startQuestTimer("GAINAK_WAR", getTimeBetweenSieges() * 60000, null, null);
 				if (Config.ANNOUNCE_GAINAK_SIEGE)
 				{
-					SystemMessage s = new SystemMessage(SystemMessageId.PROGRESS_EVENT_STAGE_S1);
+					final SystemMessage s = new SystemMessage(SystemMessageId.PROGRESS_EVENT_STAGE_S1);
 					s.addString("Gainak is now in peace.");
 					Broadcast.toAllOnlinePlayers(s);
 				}
@@ -123,7 +123,7 @@ public class GainakSiege extends AbstractNpcAI
 				startQuestTimer("GAINAK_WAR", SIEGE_DURATION * 60000, null, null);
 				if (Config.ANNOUNCE_GAINAK_SIEGE)
 				{
-					SystemMessage s = new SystemMessage(SystemMessageId.PROGRESS_EVENT_STAGE_S1);
+					final SystemMessage s = new SystemMessage(SystemMessageId.PROGRESS_EVENT_STAGE_S1);
 					s.addString("Gainak is now under siege.");
 					Broadcast.toAllOnlinePlayers(s);
 				}

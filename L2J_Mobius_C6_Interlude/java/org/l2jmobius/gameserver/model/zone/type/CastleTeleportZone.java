@@ -44,8 +44,8 @@ public class CastleTeleportZone extends ZoneType
 		{
 			case "castleId":
 			{
-				int castleId = Integer.parseInt(value);
-				Castle castle = CastleManager.getInstance().getCastleById(castleId);
+				final int castleId = Integer.parseInt(value);
+				final Castle castle = CastleManager.getInstance().getCastleById(castleId);
 				castle.setTeleZone(this);
 				break;
 			}
@@ -133,7 +133,7 @@ public class CastleTeleportZone extends ZoneType
 		{
 			if ((creature != null) && (creature instanceof PlayerInstance))
 			{
-				PlayerInstance player = (PlayerInstance) creature;
+				final PlayerInstance player = (PlayerInstance) creature;
 				
 				if (player.isOnline() == 1)
 				{

@@ -130,14 +130,14 @@ public class AdminShutdown implements IAdminCommandHandler
 	
 	private void sendHtmlForm(PlayerInstance activeChar)
 	{
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		
 		final int t = GameTimeController.getInstance().getGameTime();
 		final int h = t / 60;
 		final int m = t % 60;
 		
-		SimpleDateFormat format = new SimpleDateFormat("h:mm a");
-		Calendar cal = Calendar.getInstance();
+		final SimpleDateFormat format = new SimpleDateFormat("h:mm a");
+		final Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.HOUR_OF_DAY, h);
 		cal.set(Calendar.MINUTE, m);
 		adminReply.setFile("data/html/admin/shutdown.htm");

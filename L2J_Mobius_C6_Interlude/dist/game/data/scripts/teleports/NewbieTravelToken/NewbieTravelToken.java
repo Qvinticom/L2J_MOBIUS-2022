@@ -82,9 +82,9 @@ public class NewbieTravelToken extends Quest
 		
 		if (data.containsKey(event))
 		{
-			int x = data.get(event)[0];
-			int y = data.get(event)[1];
-			int z = data.get(event)[2];
+			final int x = data.get(event)[0];
+			final int y = data.get(event)[1];
+			final int z = data.get(event)[2];
 			
 			if (st.getQuestItemsCount(TOKEN) != 0)
 			{
@@ -104,8 +104,8 @@ public class NewbieTravelToken extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
-		int npcId = npc.getNpcId();
+		final QuestState st = player.getQuestState(getName());
+		final int npcId = npc.getNpcId();
 		
 		if (player.getLevel() >= 20)
 		{

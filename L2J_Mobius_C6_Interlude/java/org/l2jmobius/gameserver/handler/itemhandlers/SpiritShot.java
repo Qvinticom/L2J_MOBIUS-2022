@@ -60,9 +60,9 @@ public class SpiritShot implements IItemHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) playable;
-		ItemInstance weaponInst = player.getActiveWeaponInstance();
-		Weapon weaponItem = player.getActiveWeaponItem();
+		final PlayerInstance player = (PlayerInstance) playable;
+		final ItemInstance weaponInst = player.getActiveWeaponInstance();
+		final Weapon weaponItem = player.getActiveWeaponItem();
 		final int itemId = item.getItemId();
 		
 		// Check if Spiritshot can be used

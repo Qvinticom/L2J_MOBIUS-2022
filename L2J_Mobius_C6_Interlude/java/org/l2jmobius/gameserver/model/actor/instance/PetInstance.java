@@ -159,7 +159,7 @@ public class PetInstance extends Summon
 						setCurrentFed(_curFed + 100);
 						if (getOwner() != null)
 						{
-							SystemMessage sm = new SystemMessage(SystemMessageId.PET_TOOK_S1_BECAUSE_HE_WAS_HUNGRY);
+							final SystemMessage sm = new SystemMessage(SystemMessageId.PET_TOOK_S1_BECAUSE_HE_WAS_HUNGRY);
 							sm.addItemName(foodId);
 							getOwner().sendPacket(sm);
 						}
@@ -286,7 +286,7 @@ public class PetInstance extends Summon
 		else
 		{
 			player.setTarget(this);
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 			player.sendPacket(my);
 		}
 	}
@@ -395,7 +395,7 @@ public class PetInstance extends Summon
 	@Override
 	public boolean destroyItem(String process, int objectId, int count, WorldObject reference, boolean sendMessage)
 	{
-		ItemInstance item = _inventory.destroyItem(process, objectId, count, getOwner(), reference);
+		final ItemInstance item = _inventory.destroyItem(process, objectId, count, getOwner(), reference);
 		
 		if (item == null)
 		{
@@ -408,13 +408,13 @@ public class PetInstance extends Summon
 		}
 		
 		// Send Pet inventory update packet
-		PetInventoryUpdate petIU = new PetInventoryUpdate();
+		final PetInventoryUpdate petIU = new PetInventoryUpdate();
 		petIU.addItem(item);
 		getOwner().sendPacket(petIU);
 		
 		if (sendMessage)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
 			sm.addNumber(count);
 			sm.addItemName(item.getItemId());
 			getOwner().sendPacket(sm);
@@ -435,7 +435,7 @@ public class PetInstance extends Summon
 	@Override
 	public boolean destroyItemByItemId(String process, int itemId, int count, WorldObject reference, boolean sendMessage)
 	{
-		ItemInstance item = _inventory.destroyItemByItemId(process, itemId, count, getOwner(), reference);
+		final ItemInstance item = _inventory.destroyItemByItemId(process, itemId, count, getOwner(), reference);
 		
 		if (item == null)
 		{
@@ -447,13 +447,13 @@ public class PetInstance extends Summon
 		}
 		
 		// Send Pet inventory update packet
-		PetInventoryUpdate petIU = new PetInventoryUpdate();
+		final PetInventoryUpdate petIU = new PetInventoryUpdate();
 		petIU.addItem(item);
 		getOwner().sendPacket(petIU);
 		
 		if (sendMessage)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
 			sm.addNumber(count);
 			sm.addItemName(itemId);
 			getOwner().sendPacket(sm);
@@ -476,12 +476,12 @@ public class PetInstance extends Summon
 			return;
 		}
 		
-		ItemInstance target = (ItemInstance) object;
+		final ItemInstance target = (ItemInstance) object;
 		
 		// Herbs
 		if ((target.getItemId() > 8599) && (target.getItemId() < 8615))
 		{
-			SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1);
 			smsg.addItemName(target.getItemId());
 			getOwner().sendPacket(smsg);
 			return;
@@ -489,7 +489,7 @@ public class PetInstance extends Summon
 		// Cursed weapons
 		if (CursedWeaponsManager.getInstance().isCursed(target.getItemId()))
 		{
-			SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1);
 			smsg.addItemName(target.getItemId());
 			getOwner().sendPacket(smsg);
 			return;
@@ -518,20 +518,20 @@ public class PetInstance extends Summon
 				
 				if (target.getItemId() == 57)
 				{
-					SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1_ADENA);
+					final SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1_ADENA);
 					smsg.addNumber(target.getCount());
 					getOwner().sendPacket(smsg);
 				}
 				else if (target.getCount() > 1)
 				{
-					SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S2_S1_S);
+					final SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S2_S1_S);
 					smsg.addItemName(target.getItemId());
 					smsg.addNumber(target.getCount());
 					getOwner().sendPacket(smsg);
 				}
 				else
 				{
-					SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1);
+					final SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1);
 					smsg.addItemName(target.getItemId());
 					getOwner().sendPacket(smsg);
 				}
@@ -553,7 +553,7 @@ public class PetInstance extends Summon
 		
 		_inventory.addItem("Pickup", target, getOwner(), this);
 		// FIXME Just send the updates if possible (old way wasn't working though)
-		PetItemList iu = new PetItemList(this);
+		final PetItemList iu = new PetItemList(this);
 		getOwner().sendPacket(iu);
 		
 		getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
@@ -621,7 +621,7 @@ public class PetInstance extends Summon
 	 */
 	public ItemInstance transferItem(String process, int objectId, int count, Inventory target, PlayerInstance actor, WorldObject reference)
 	{
-		ItemInstance oldItem = _inventory.getItemByObjectId(objectId);
+		final ItemInstance oldItem = _inventory.getItemByObjectId(objectId);
 		final ItemInstance newItem = _inventory.transferItem(process, objectId, count, target, actor, reference);
 		
 		if (newItem == null)
@@ -645,8 +645,8 @@ public class PetInstance extends Summon
 		// Send target update packet
 		if (target instanceof PlayerInventory)
 		{
-			PlayerInstance targetPlayer = ((PlayerInventory) target).getOwner();
-			InventoryUpdate playerUI = new InventoryUpdate();
+			final PlayerInstance targetPlayer = ((PlayerInventory) target).getOwner();
+			final InventoryUpdate playerUI = new InventoryUpdate();
 			if (newItem.getCount() > count)
 			{
 				playerUI.addModifiedItem(newItem);
@@ -658,7 +658,7 @@ public class PetInstance extends Summon
 			targetPlayer.sendPacket(playerUI);
 			
 			// Update current load as well
-			StatusUpdate playerSU = new StatusUpdate(targetPlayer.getObjectId());
+			final StatusUpdate playerSU = new StatusUpdate(targetPlayer.getObjectId());
 			playerSU.addAttribute(StatusUpdate.CUR_LOAD, targetPlayer.getCurrentLoad());
 			targetPlayer.sendPacket(playerSU);
 		}
@@ -683,11 +683,11 @@ public class PetInstance extends Summon
 	{
 		try
 		{
-			Inventory petInventory = _inventory;
-			ItemInstance[] items = petInventory.getItems();
+			final Inventory petInventory = _inventory;
+			final ItemInstance[] items = petInventory.getItems();
 			for (ItemInstance item : items)
 			{
-				ItemInstance giveit = item;
+				final ItemInstance giveit = item;
 				if (((giveit.getItem().getWeight() * giveit.getCount()) + getOwner().getInventory().getTotalWeight()) < getOwner().getMaxLoad())
 				{
 					// If the owner can carry it give it to them
@@ -715,8 +715,8 @@ public class PetInstance extends Summon
 		try
 		{
 			getInventory().transferItem("PetTransfer", item.getObjectId(), item.getCount(), getOwner().getInventory(), getOwner(), this);
-			PetInventoryUpdate petiu = new PetInventoryUpdate();
-			ItemList playerUI = new ItemList(getOwner(), false);
+			final PetInventoryUpdate petiu = new PetInventoryUpdate();
+			final ItemList playerUI = new ItemList(getOwner(), false);
 			petiu.addRemovedItem(item);
 			getOwner().sendPacket(petiu);
 			getOwner().sendPacket(playerUI);
@@ -739,19 +739,19 @@ public class PetInstance extends Summon
 		// delete from inventory
 		try
 		{
-			ItemInstance removedItem = owner.getInventory().destroyItem("PetDestroy", _controlItemId, 1, getOwner(), this);
+			final ItemInstance removedItem = owner.getInventory().destroyItem("PetDestroy", _controlItemId, 1, getOwner(), this);
 			
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addRemovedItem(removedItem);
 			owner.sendPacket(iu);
 			
-			StatusUpdate su = new StatusUpdate(owner.getObjectId());
+			final StatusUpdate su = new StatusUpdate(owner.getObjectId());
 			su.addAttribute(StatusUpdate.CUR_LOAD, owner.getCurrentLoad());
 			owner.sendPacket(su);
 			
 			owner.broadcastUserInfo();
 			
-			World world = World.getInstance();
+			final World world = World.getInstance();
 			world.removeObject(removedItem);
 		}
 		catch (Exception e)
@@ -762,7 +762,7 @@ public class PetInstance extends Summon
 		// pet control item no longer exists, delete the pet from the db
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?");
+			final PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?");
 			statement.setInt(1, _controlItemId);
 			statement.execute();
 			statement.close();
@@ -780,7 +780,7 @@ public class PetInstance extends Summon
 	{
 		try
 		{
-			ItemInstance[] items = _inventory.getItems();
+			final ItemInstance[] items = _inventory.getItems();
 			for (ItemInstance item : items)
 			{
 				dropItemHere(item);
@@ -854,9 +854,9 @@ public class PetInstance extends Summon
 				pet = new PetInstance(IdFactory.getInstance().getNextId(), template, owner, control);
 			}
 			
-			PreparedStatement statement = con.prepareStatement("SELECT item_obj_id, name, level, curHp, curMp, exp, sp, karma, pkkills, fed FROM pets WHERE item_obj_id=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT item_obj_id, name, level, curHp, curMp, exp, sp, karma, pkkills, fed FROM pets WHERE item_obj_id=?");
 			statement.setInt(1, control.getObjectId());
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			if (!rset.next())
 			{
 				rset.close();
@@ -912,7 +912,7 @@ public class PetInstance extends Summon
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(req);
+			final PreparedStatement statement = con.prepareStatement(req);
 			statement.setString(1, getName());
 			statement.setInt(2, getStat().getLevel());
 			statement.setDouble(3, getStatus().getCurrentHp());
@@ -932,7 +932,7 @@ public class PetInstance extends Summon
 			LOGGER.warning("could not store pet data " + e);
 		}
 		
-		ItemInstance itemInst = getControlItem();
+		final ItemInstance itemInst = getControlItem();
 		if ((itemInst != null) && (itemInst.getEnchantLevel() != getStat().getLevel()))
 		{
 			itemInst.setEnchantLevel(getStat().getLevel());
@@ -1170,7 +1170,7 @@ public class PetInstance extends Summon
 				getOwner().sendPacket(SystemMessageId.CRITICAL_HIT_BY_PET);
 			}
 			
-			SystemMessage sm = new SystemMessage(SystemMessageId.PET_HIT_FOR_S1_DAMAGE);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.PET_HIT_FOR_S1_DAMAGE);
 			sm.addNumber(damage);
 			getOwner().sendPacket(sm);
 		}

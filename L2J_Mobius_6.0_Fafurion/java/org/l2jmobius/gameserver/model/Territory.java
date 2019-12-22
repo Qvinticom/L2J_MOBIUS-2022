@@ -170,7 +170,7 @@ public class Territory
 				int zmin = _zMin;
 				for (Point p1 : _points)
 				{
-					double distance = Math.hypot(p1._x - x, p1._y - y);
+					final double distance = Math.hypot(p1._x - x, p1._y - y);
 					if ((curdistance == 0) || (distance < curdistance))
 					{
 						curdistance = distance;

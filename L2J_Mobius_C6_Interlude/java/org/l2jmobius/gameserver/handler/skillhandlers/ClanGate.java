@@ -58,10 +58,10 @@ public class ClanGate implements ISkillHandler
 			return;
 		}
 		
-		Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		if ((clan != null) && (CastleManager.getInstance().getCastleByOwner(clan) != null))
 		{
-			Castle castle = CastleManager.getInstance().getCastleByOwner(clan);
+			final Castle castle = CastleManager.getInstance().getCastleByOwner(clan);
 			if (player.isCastleLord(castle.getCastleId()))
 			{
 				// please note clan gate expires in two minutes WHATEVER happens to the clan leader.

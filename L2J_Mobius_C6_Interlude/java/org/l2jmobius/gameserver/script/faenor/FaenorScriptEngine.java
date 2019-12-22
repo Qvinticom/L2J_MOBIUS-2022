@@ -64,8 +64,8 @@ public class FaenorScriptEngine extends ScriptEngine
 	
 	public void parseScript(ScriptDocument script, ScriptContext context)
 	{
-		Node node = script.getDocument().getFirstChild();
-		String parserClass = "faenor.Faenor" + node.getNodeName() + "Parser";
+		final Node node = script.getDocument().getFirstChild();
+		final String parserClass = "faenor.Faenor" + node.getNodeName() + "Parser";
 		
 		Parser parser = null;
 		try

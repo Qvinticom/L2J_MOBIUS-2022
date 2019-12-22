@@ -51,7 +51,7 @@ public class FatalBlow extends AbstractEffect
 		_criticalChance = params.getDouble("criticalChance", 0);
 		_overHit = params.getBoolean("overHit", false);
 		
-		String abnormals = params.getString("abnormalType", null);
+		final String abnormals = params.getString("abnormalType", null);
 		if ((abnormals != null) && !abnormals.isEmpty())
 		{
 			_abnormals = new HashSet<>();

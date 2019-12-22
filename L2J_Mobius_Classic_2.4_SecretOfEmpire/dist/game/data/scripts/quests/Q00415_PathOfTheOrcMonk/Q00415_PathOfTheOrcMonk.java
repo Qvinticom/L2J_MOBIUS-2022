@@ -389,19 +389,16 @@ public class Q00415_PathOfTheOrcMonk extends Quest
 				}
 				case KASHA_FANG_SPIDER:
 				{
-					if (qs.isMemoState(3) && (getQuestItemsCount(killer, KASHA_SPIDERS_TOOTH) < 6))
+					if (qs.isMemoState(3) && (getQuestItemsCount(killer, KASHA_SPIDERS_TOOTH) < 6) && (getRandom(100) < 70))
 					{
-						if (getRandom(100) < 70)
+						giveItems(killer, KASHA_SPIDERS_TOOTH, 1);
+						if (getQuestItemsCount(killer, KASHA_SPIDERS_TOOTH) >= 6)
 						{
-							giveItems(killer, KASHA_SPIDERS_TOOTH, 1);
-							if (getQuestItemsCount(killer, KASHA_SPIDERS_TOOTH) >= 6)
-							{
-								qs.setCond(16, true);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							qs.setCond(16, true);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -423,19 +420,16 @@ public class Q00415_PathOfTheOrcMonk extends Quest
 							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
-					else if (qs.isMemoState(3) && (getQuestItemsCount(killer, KASHA_SPIDERS_TOOTH) < 6))
+					else if (qs.isMemoState(3) && (getQuestItemsCount(killer, KASHA_SPIDERS_TOOTH) < 6) && (getRandom(100) < 70))
 					{
-						if (getRandom(100) < 70)
+						giveItems(killer, KASHA_SPIDERS_TOOTH, 1);
+						if (getQuestItemsCount(killer, KASHA_SPIDERS_TOOTH) == 6)
 						{
-							giveItems(killer, KASHA_SPIDERS_TOOTH, 1);
-							if (getQuestItemsCount(killer, KASHA_SPIDERS_TOOTH) == 6)
-							{
-								qs.setCond(16, true);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							qs.setCond(16, true);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -461,13 +455,10 @@ public class Q00415_PathOfTheOrcMonk extends Quest
 				}
 				case BAAR_DRE_VANUL:
 				{
-					if (qs.isMemoState(4) && !hasQuestItems(killer, HORN_OF_BAAR_DRE_VANUL))
+					if (qs.isMemoState(4) && !hasQuestItems(killer, HORN_OF_BAAR_DRE_VANUL) && (getRandom(100) < 90))
 					{
-						if (getRandom(100) < 90)
-						{
-							giveItems(killer, HORN_OF_BAAR_DRE_VANUL, 1);
-							qs.setCond(18, true);
-						}
+						giveItems(killer, HORN_OF_BAAR_DRE_VANUL, 1);
+						qs.setCond(18, true);
 					}
 					break;
 				}
@@ -658,7 +649,7 @@ public class Q00415_PathOfTheOrcMonk extends Quest
 	
 	private static boolean checkWeapon(PlayerInstance player)
 	{
-		ItemInstance weapon = player.getActiveWeaponInstance();
+		final ItemInstance weapon = player.getActiveWeaponInstance();
 		return ((weapon == null) || (weapon.getItemType() == WeaponType.FIST) || (weapon.getItemType() == WeaponType.DUALFIST));
 	}
 }

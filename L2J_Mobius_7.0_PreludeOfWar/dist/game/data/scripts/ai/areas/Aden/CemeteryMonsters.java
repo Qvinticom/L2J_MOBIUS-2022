@@ -124,7 +124,7 @@ public class CemeteryMonsters extends AbstractNpcAI
 				{
 					for (int i = 0; i < 6; i++)
 					{
-						Npc raider = addSpawn(ADEN_RAIDER, killer, true, 180000, false);
+						final Npc raider = addSpawn(ADEN_RAIDER, killer, true, 180000, false);
 						addAttackPlayerDesire(raider, killer);
 					}
 					break;

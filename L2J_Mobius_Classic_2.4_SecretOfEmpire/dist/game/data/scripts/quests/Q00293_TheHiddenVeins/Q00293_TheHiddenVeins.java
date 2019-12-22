@@ -107,7 +107,7 @@ public class Q00293_TheHiddenVeins extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if(qs != null)
+		if (qs != null)
 		{
 			final int chance = getRandom(100);
 			if (chance > 50)

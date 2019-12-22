@@ -199,19 +199,16 @@ public class Q00223_TestOfTheChampion extends Quest
 						case 0:
 						{
 							npc.getVariables().set("lastAttacker", attacker.getObjectId());
-							if (hasQuestItems(attacker, WHITE_ROSE_INSIGNIA) && (getQuestItemsCount(attacker, HARPYS_EGG) < 30))
+							if (hasQuestItems(attacker, WHITE_ROSE_INSIGNIA) && (getQuestItemsCount(attacker, HARPYS_EGG) < 30) && getRandomBoolean())
 							{
-								if (getRandomBoolean())
+								if (getRandom(10) < 7)
 								{
-									if (getRandom(10) < 7)
-									{
-										addAttackPlayerDesire(addSpawn(HARPY_MATRIARCH, npc, true, 0, false), attacker);
-									}
-									else
-									{
-										addAttackPlayerDesire(addSpawn(HARPY_MATRIARCH, npc, true, 0, false), attacker);
-										addAttackPlayerDesire(addSpawn(HARPY_MATRIARCH, npc, true, 0, false), attacker);
-									}
+									addAttackPlayerDesire(addSpawn(HARPY_MATRIARCH, npc, true, 0, false), attacker);
+								}
+								else
+								{
+									addAttackPlayerDesire(addSpawn(HARPY_MATRIARCH, npc, true, 0, false), attacker);
+									addAttackPlayerDesire(addSpawn(HARPY_MATRIARCH, npc, true, 0, false), attacker);
 								}
 							}
 							npc.setScriptValue(1);
@@ -232,19 +229,16 @@ public class Q00223_TestOfTheChampion extends Quest
 						case 0:
 						{
 							npc.getVariables().set("lastAttacker", attacker.getObjectId());
-							if (hasQuestItems(attacker, MOUENS_1ST_ORDER) && (getQuestItemsCount(attacker, ROAD_RATMAN_HEAD) < 10))
+							if (hasQuestItems(attacker, MOUENS_1ST_ORDER) && (getQuestItemsCount(attacker, ROAD_RATMAN_HEAD) < 10) && getRandomBoolean())
 							{
-								if (getRandomBoolean())
+								if (getRandom(10) < 7)
 								{
-									if (getRandom(10) < 7)
-									{
-										addAttackPlayerDesire(addSpawn(ROAD_COLLECTOR, npc, true, 0, false), attacker);
-									}
-									else
-									{
-										addAttackPlayerDesire(addSpawn(ROAD_COLLECTOR, npc, true, 0, false), attacker);
-										addAttackPlayerDesire(addSpawn(ROAD_COLLECTOR, npc, true, 0, false), attacker);
-									}
+									addAttackPlayerDesire(addSpawn(ROAD_COLLECTOR, npc, true, 0, false), attacker);
+								}
+								else
+								{
+									addAttackPlayerDesire(addSpawn(ROAD_COLLECTOR, npc, true, 0, false), attacker);
+									addAttackPlayerDesire(addSpawn(ROAD_COLLECTOR, npc, true, 0, false), attacker);
 								}
 							}
 							npc.setScriptValue(1);
@@ -265,12 +259,9 @@ public class Q00223_TestOfTheChampion extends Quest
 						case 0:
 						{
 							npc.getVariables().set("lastAttacker", attacker.getObjectId());
-							if (hasQuestItems(attacker, IRON_ROSE_RING) && (getQuestItemsCount(attacker, BLOODY_AXE_HEAD) < 10))
+							if (hasQuestItems(attacker, IRON_ROSE_RING) && (getQuestItemsCount(attacker, BLOODY_AXE_HEAD) < 10) && getRandomBoolean())
 							{
-								if (getRandomBoolean())
-								{
-									addAttackPlayerDesire(addSpawn(BLOODY_AXE_ELITE, npc, true, 0, false), attacker);
-								}
+								addAttackPlayerDesire(addSpawn(BLOODY_AXE_ELITE, npc, true, 0, false), attacker);
 							}
 							npc.setScriptValue(1);
 							break;

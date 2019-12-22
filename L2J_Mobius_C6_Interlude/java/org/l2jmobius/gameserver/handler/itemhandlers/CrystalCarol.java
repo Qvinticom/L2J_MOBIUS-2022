@@ -58,7 +58,7 @@ public class CrystalCarol implements IItemHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) playable;
+		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
 		
 		if (itemId == 5562) // crystal_carol_01

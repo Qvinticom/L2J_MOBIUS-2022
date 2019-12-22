@@ -154,7 +154,7 @@ public class Q00255_Tutorial extends Quest
 			return null;
 		}
 		
-		String htmltext = null;
+		final String htmltext = null;
 		switch (event)
 		{
 			case "start_newbie_tutorial":

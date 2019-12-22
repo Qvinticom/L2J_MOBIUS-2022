@@ -58,7 +58,7 @@ public class Q00551_OlympiadStarter extends Quest
 		{
 			return getNoQuestMsg(player);
 		}
-		String htmltext = event;
+		final String htmltext = event;
 		
 		switch (event)
 		{

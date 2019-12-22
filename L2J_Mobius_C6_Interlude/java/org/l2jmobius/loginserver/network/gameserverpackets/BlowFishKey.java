@@ -41,13 +41,13 @@ public class BlowFishKey extends ClientBasePacket
 		super(decrypt);
 		final int size = readD();
 		
-		byte[] tempKey = readB(size);
+		final byte[] tempKey = readB(size);
 		
 		try
 		{
 			byte[] tempDecryptKey;
 			
-			Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
+			final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
 			rsaCipher.init(Cipher.DECRYPT_MODE, privateKey);
 			tempDecryptKey = rsaCipher.doFinal(tempKey);
 			

@@ -52,7 +52,7 @@ public class CastleZone extends ZoneType
 		{
 			case "castleId":
 			{
-				int castleId = Integer.parseInt(value);
+				final int castleId = Integer.parseInt(value);
 				// Register self to the correct castle
 				_castle = CastleManager.getInstance().getCastleById(castleId);
 				_castle.setZone(this);

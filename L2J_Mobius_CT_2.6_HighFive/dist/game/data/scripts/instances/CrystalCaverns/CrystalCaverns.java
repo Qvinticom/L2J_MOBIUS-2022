@@ -1616,7 +1616,7 @@ public class CrystalCaverns extends AbstractInstance
 				{
 					world.setStatus(8);
 					// first door opener trap
-					Npc trap = addTrap(DOOR_OPENING_TRAP[0], DOOR_OPENING_TRAP[1], DOOR_OPENING_TRAP[2], DOOR_OPENING_TRAP[3], DOOR_OPENING_TRAP[4], world.getInstanceId());
+					final Npc trap = addTrap(DOOR_OPENING_TRAP[0], DOOR_OPENING_TRAP[1], DOOR_OPENING_TRAP[2], DOOR_OPENING_TRAP[3], DOOR_OPENING_TRAP[4], world.getInstanceId());
 					trap.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.YOU_HAVE_FINALLY_COME_HERE_BUT_YOU_WILL_NOT_BE_ABLE_TO_FIND_THE_SECRET_ROOM);
 				}
 			}

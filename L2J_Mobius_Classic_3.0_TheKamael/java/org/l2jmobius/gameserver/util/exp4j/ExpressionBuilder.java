@@ -146,7 +146,7 @@ public class ExpressionBuilder
 	
 	private void checkOperatorSymbol(Operator op)
 	{
-		String name = op.getSymbol();
+		final String name = op.getSymbol();
 		for (char ch : name.toCharArray())
 		{
 			if (!Operator.isAllowedOperatorChar(ch))

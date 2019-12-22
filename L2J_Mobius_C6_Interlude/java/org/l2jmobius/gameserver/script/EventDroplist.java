@@ -66,7 +66,7 @@ public class EventDroplist
 	 */
 	public void addGlobalDrop(int[] items, int[] count, int chance, DateRange range)
 	{
-		DateDrop date = new DateDrop();
+		final DateDrop date = new DateDrop();
 		
 		date.dateRange = range;
 		date.items = items;
@@ -85,7 +85,7 @@ public class EventDroplist
 		final List<DateDrop> list = new ArrayList<>();
 		for (DateDrop drop : _allNpcDateDrops)
 		{
-			Date currentDate = new Date();
+			final Date currentDate = new Date();
 			if (drop.dateRange.isWithinRange(currentDate))
 			{
 				list.add(drop);

@@ -162,7 +162,7 @@ public class Expression
 				}
 				case Token.TOKEN_OPERATOR:
 				{
-					Operator op = ((OperatorToken) tok).getOperator();
+					final Operator op = ((OperatorToken) tok).getOperator();
 					if (op.getNumOperands() == 2)
 					{
 						count--;
@@ -215,7 +215,7 @@ public class Expression
 			}
 			else if (t.getType() == Token.TOKEN_OPERATOR)
 			{
-				OperatorToken op = (OperatorToken) t;
+				final OperatorToken op = (OperatorToken) t;
 				if (output.size() < op.getOperator().getNumOperands())
 				{
 					throw new IllegalArgumentException("Invalid number of operands available for '" + op.getOperator().getSymbol() + "' operator");
@@ -223,27 +223,27 @@ public class Expression
 				if (op.getOperator().getNumOperands() == 2)
 				{
 					/* pop the operands and push the result of the operation */
-					double rightArg = output.pop();
-					double leftArg = output.pop();
+					final double rightArg = output.pop();
+					final double leftArg = output.pop();
 					output.push(op.getOperator().apply(leftArg, rightArg));
 				}
 				else if (op.getOperator().getNumOperands() == 1)
 				{
 					/* pop the operand and push the result of the operation */
-					double arg = output.pop();
+					final double arg = output.pop();
 					output.push(op.getOperator().apply(arg));
 				}
 			}
 			else if (t.getType() == Token.TOKEN_FUNCTION)
 			{
-				FunctionToken func = (FunctionToken) t;
+				final FunctionToken func = (FunctionToken) t;
 				final int numArguments = func.getFunction().getNumArguments();
 				if (output.size() < numArguments)
 				{
 					throw new IllegalArgumentException("Invalid number of arguments available for '" + func.getFunction().getName() + "' function");
 				}
 				/* collect the arguments from the stack */
-				double[] args = new double[numArguments];
+				final double[] args = new double[numArguments];
 				for (int j = numArguments - 1; j >= 0; j--)
 				{
 					args[j] = output.pop();

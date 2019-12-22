@@ -192,7 +192,7 @@ public class Q00684_DisturbedFields extends Quest
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		QuestState qs = PARTY_QUEST ? getRandomPartyMemberState(killer, -1, 3, npc) : getQuestState(killer, false);
+		final QuestState qs = PARTY_QUEST ? getRandomPartyMemberState(killer, -1, 3, npc) : getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(KILLING_COND))
 		{
 			final PlayerInstance player = qs.getPlayer();

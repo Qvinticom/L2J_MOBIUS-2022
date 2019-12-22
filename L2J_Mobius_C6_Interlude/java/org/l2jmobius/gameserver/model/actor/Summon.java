@@ -193,11 +193,11 @@ public abstract class Summon extends Playable
 		else if (player.getTarget() != this)
 		{
 			player.setTarget(this);
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 			player.sendPacket(my);
 			
 			// update status hp and mp
-			StatusUpdate su = new StatusUpdate(getObjectId());
+			final StatusUpdate su = new StatusUpdate(getObjectId());
 			su.addAttribute(StatusUpdate.CUR_HP, (int) getCurrentHp());
 			su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
 			su.addAttribute(StatusUpdate.CUR_MP, (int) getCurrentMp());
@@ -648,7 +648,7 @@ public abstract class Summon extends Playable
 		// Check if this skill is enabled (ex : reuse time)
 		if (isSkillDisabled(skill) && (_owner != null) && _owner.getAccessLevel().allowPeaceAttack())
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
 			sm.addString(skill.getName());
 			_owner.sendPacket(sm);
 			return;
@@ -826,7 +826,7 @@ public abstract class Summon extends Playable
 			}
 		}
 		
-		Skill skillToCast = SkillTable.getInstance().getInfo(skill.getId(), skillLevel);
+		final Skill skillToCast = SkillTable.getInstance().getInfo(skill.getId(), skillLevel);
 		
 		if (skillToCast != null)
 		{

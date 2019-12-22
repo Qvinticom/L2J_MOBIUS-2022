@@ -103,13 +103,13 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 			{
 				case "HP_REGEN_TIMER":
 				{
-					int value = ((baseId == 5) || (baseId == 6)) ? 5 : baseId;
+					final int value = ((baseId == 5) || (baseId == 6)) ? 5 : baseId;
 					npc.getStat().addFixedValue(Stats.REGENERATE_HP_RATE, Double.valueOf(value * 1000));
 					break;
 				}
 				case "SUPPORT_SPAWN_TIMER":
 				{
-					int supportVal = npcVars.getInt("SUPPORT_VALUE", 0);
+					final int supportVal = npcVars.getInt("SUPPORT_VALUE", 0);
 					
 					if (supportVal > 3)
 					{

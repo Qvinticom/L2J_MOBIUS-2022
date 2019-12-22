@@ -198,34 +198,28 @@ public class Q10996_TemplesDecorations extends Quest
 			{
 				case BARBED_BATS:
 				{
-					if (qs.isCond(2) && (getQuestItemsCount(killer, BARBED_BAT_WING_SAC) < 20))
+					if (qs.isCond(2) && (getQuestItemsCount(killer, BARBED_BAT_WING_SAC) < 20) && (getRandom(100) < 90))
 					{
-						if (getRandom(100) < 90)
+						giveItems(killer, BARBED_BAT_WING_SAC, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, BARBED_BAT_WING_SAC) >= 20)
 						{
-							giveItems(killer, BARBED_BAT_WING_SAC, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, BARBED_BAT_WING_SAC) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_BARBED_BATS_N_GO_HUNTING_AND_KILL_CRYSTAL_PUMAS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(3);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_BARBED_BATS_N_GO_HUNTING_AND_KILL_CRYSTAL_PUMAS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(3);
 						}
 					}
 					break;
 				}
 				case CRYSTAL_PUMA:
 				{
-					if (qs.isCond(3) && (getQuestItemsCount(killer, PUMA_FUR) < 20))
+					if (qs.isCond(3) && (getQuestItemsCount(killer, PUMA_FUR) < 20) && (getRandom(100) < 90))
 					{
-						if (getRandom(100) < 90)
+						giveItems(killer, PUMA_FUR, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, PUMA_FUR) >= 20)
 						{
-							giveItems(killer, PUMA_FUR, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, PUMA_FUR) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_CRYSTAL_PUMAS_N_GO_HUNTING_AND_KILL_GOBLIN_LORDS_AND_GOBLIN_BRIGAND_LEADERS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(4);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_CRYSTAL_PUMAS_N_GO_HUNTING_AND_KILL_GOBLIN_LORDS_AND_GOBLIN_BRIGAND_LEADERS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(4);
 						}
 					}
 					break;
@@ -233,17 +227,14 @@ public class Q10996_TemplesDecorations extends Quest
 				case GOBLIN_LORD:
 				case GOBLIN_BRIGAND_LEADER:
 				{
-					if (qs.isCond(4) && (getQuestItemsCount(killer, GOBLIN_JEWEL) < 20))
+					if (qs.isCond(4) && (getQuestItemsCount(killer, GOBLIN_JEWEL) < 20) && (getRandom(100) < 90))
 					{
-						if (getRandom(100) < 90)
+						giveItems(killer, GOBLIN_JEWEL, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if ((getQuestItemsCount(killer, GOBLIN_JEWEL) >= 20))
 						{
-							giveItems(killer, GOBLIN_JEWEL, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if ((getQuestItemsCount(killer, GOBLIN_JEWEL) >= 20))
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GOBLIN_LORDS_AND_GOBLIN_BRIGAND_LEADERS_N_GO_HUNTING_AND_KILL_WHINSTONE_GOLEM_AND_OBSIDIAN_GOLEMS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(5);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GOBLIN_LORDS_AND_GOBLIN_BRIGAND_LEADERS_N_GO_HUNTING_AND_KILL_WHINSTONE_GOLEM_AND_OBSIDIAN_GOLEMS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(5);
 						}
 					}
 					break;
@@ -251,17 +242,14 @@ public class Q10996_TemplesDecorations extends Quest
 				case WINSTONE_GOLEM:
 				case OBSIDIAN_GOLEM:
 				{
-					if (qs.isCond(5) && (getQuestItemsCount(killer, GOLEM_ORE) < 20))
+					if (qs.isCond(5) && (getQuestItemsCount(killer, GOLEM_ORE) < 20) && (getRandom(100) < 90))
 					{
-						if (getRandom(100) < 90)
+						giveItems(killer, GOLEM_ORE, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if ((getQuestItemsCount(killer, GOLEM_ORE) >= 20))
 						{
-							giveItems(killer, GOLEM_ORE, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if ((getQuestItemsCount(killer, GOLEM_ORE) >= 20))
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_WHINSTONE_GOLEM_AND_OBSIDIAN_GOLEMS_NRETURN_TO_PRIEST_OF_THE_EARTH_ZIMENF, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(6);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_WHINSTONE_GOLEM_AND_OBSIDIAN_GOLEMS_NRETURN_TO_PRIEST_OF_THE_EARTH_ZIMENF, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(6);
 						}
 					}
 					break;

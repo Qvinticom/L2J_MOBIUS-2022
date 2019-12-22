@@ -72,8 +72,8 @@ public class Q367_ElectrifyingRecharge extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final String htmltext = event;
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -109,7 +109,7 @@ public class Q367_ElectrifyingRecharge extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -167,7 +167,7 @@ public class Q367_ElectrifyingRecharge extends Quest
 	@Override
 	public String onSpellFinished(NpcInstance npc, PlayerInstance player, Skill skill)
 	{
-		QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
 		if (st == null)
 		{
 			return null;
@@ -177,7 +177,7 @@ public class Q367_ElectrifyingRecharge extends Quest
 		{
 			if (st.hasQuestItems(LORAIN_LAMP))
 			{
-				int randomItem = Rnd.get(5876, 5880);
+				final int randomItem = Rnd.get(5876, 5880);
 				
 				st.takeItems(LORAIN_LAMP, 1);
 				st.giveItems(randomItem, 1);

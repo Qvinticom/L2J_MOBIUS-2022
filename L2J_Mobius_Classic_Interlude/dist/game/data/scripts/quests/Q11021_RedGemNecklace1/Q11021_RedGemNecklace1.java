@@ -192,17 +192,14 @@ public class Q11021_RedGemNecklace1 extends Quest
 			{
 				case KASHA_BEAR:
 				{
-					if (qs.isCond(2) && (getQuestItemsCount(killer, BEARS_SHIN_BONE) < 20))
+					if (qs.isCond(2) && (getQuestItemsCount(killer, BEARS_SHIN_BONE) < 20) && (getRandom(100) < 92))
 					{
-						if (getRandom(100) < 92)
+						giveItems(killer, BEARS_SHIN_BONE, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, BEARS_SHIN_BONE) >= 20)
 						{
-							giveItems(killer, BEARS_SHIN_BONE, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, BEARS_SHIN_BONE) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_KASHA_BEARS_N_GO_HUNTING_AND_KILL_KASHA_SPIDERS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(3);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_KASHA_BEARS_N_GO_HUNTING_AND_KILL_KASHA_SPIDERS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(3);
 						}
 					}
 					break;
@@ -211,17 +208,14 @@ public class Q11021_RedGemNecklace1 extends Quest
 				case KASHA_FANG_SPIDER:
 				case KASHA_BLADE_SPIDER:
 				{
-					if (qs.isCond(3) && (getQuestItemsCount(killer, SHARP_SPIDER_LEG) < 30))
+					if (qs.isCond(3) && (getQuestItemsCount(killer, SHARP_SPIDER_LEG) < 30) && (getRandom(100) < 89))
 					{
-						if (getRandom(100) < 89)
+						giveItems(killer, SHARP_SPIDER_LEG, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, SHARP_SPIDER_LEG) >= 30)
 						{
-							giveItems(killer, SHARP_SPIDER_LEG, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, SHARP_SPIDER_LEG) >= 30)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_KASHA_SPIDERS_NRETURN_TO_ACCESSORY_MERCHANT_USKA, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(4);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_KASHA_SPIDERS_NRETURN_TO_ACCESSORY_MERCHANT_USKA, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(4);
 						}
 					}
 					break;

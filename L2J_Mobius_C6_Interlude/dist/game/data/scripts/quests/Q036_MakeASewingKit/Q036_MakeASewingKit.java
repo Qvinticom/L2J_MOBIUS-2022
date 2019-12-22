@@ -50,7 +50,7 @@ public class Q036_MakeASewingKit extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -90,7 +90,7 @@ public class Q036_MakeASewingKit extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -102,7 +102,7 @@ public class Q036_MakeASewingKit extends Quest
 			case State.CREATED:
 				if (player.getLevel() >= 60)
 				{
-					QuestState fwear = player.getQuestState(Q037_MakeFormalWear.class.getSimpleName());
+					final QuestState fwear = player.getQuestState(Q037_MakeFormalWear.class.getSimpleName());
 					if ((fwear != null) && (fwear.getInt("cond") == 6))
 					{
 						htmltext = "30847-0.htm";
@@ -119,7 +119,7 @@ public class Q036_MakeASewingKit extends Quest
 				break;
 			
 			case State.STARTED:
-				int cond = st.getInt("cond");
+				final int cond = st.getInt("cond");
 				if (cond == 1)
 				{
 					htmltext = "30847-1a.htm";
@@ -145,7 +145,7 @@ public class Q036_MakeASewingKit extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
 		if (st == null)
 		{
 			return null;

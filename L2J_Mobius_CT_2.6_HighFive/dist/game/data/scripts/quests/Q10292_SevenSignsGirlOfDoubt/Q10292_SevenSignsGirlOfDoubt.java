@@ -197,7 +197,7 @@ public class Q10292_SevenSignsGirlOfDoubt extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
-		if(qs != null)
+		if (qs != null)
 		{
 			if (CommonUtil.contains(MOBS, npc.getId()))
 			{

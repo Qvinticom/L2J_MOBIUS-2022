@@ -46,8 +46,8 @@ public class SchemeBufferInstance extends FolkInstance
 		// Simple hack to use createscheme bypass with a space.
 		command = command.replace("createscheme ", "createscheme;");
 		
-		StringTokenizer st = new StringTokenizer(command, ";");
-		String currentCommand = st.nextToken();
+		final StringTokenizer st = new StringTokenizer(command, ";");
+		final String currentCommand = st.nextToken();
 		
 		if (currentCommand.startsWith("menu"))
 		{

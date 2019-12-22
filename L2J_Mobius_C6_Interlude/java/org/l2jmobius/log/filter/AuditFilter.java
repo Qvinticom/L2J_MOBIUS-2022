@@ -20,7 +20,7 @@ import java.util.logging.Filter;
 import java.util.logging.LogRecord;
 
 /**
- * @author ProGramMoS, Lets drink to code!
+ * @author zabbix
  */
 public class AuditFilter implements Filter
 {

@@ -70,7 +70,7 @@ public class AttributeMaster extends AbstractNpcAI
 					spirit.upgrade();
 				}
 			}
-			UserInfo userInfo = new UserInfo(player);
+			final UserInfo userInfo = new UserInfo(player);
 			userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
 			player.sendPacket(userInfo);
 			player.sendPacket(new ElementalSpiritInfo(player, player.getActiveElementalSpiritType(), (byte) 0x01));

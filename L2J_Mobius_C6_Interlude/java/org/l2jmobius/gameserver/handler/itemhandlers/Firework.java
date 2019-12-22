@@ -44,7 +44,7 @@ public class Firework implements IItemHandler
 			return; // prevent Class cast exception
 		}
 		
-		PlayerInstance player = (PlayerInstance) playable;
+		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
 		
 		if (!player.getFloodProtectors().getFirework().tryPerformAction("firework"))
@@ -111,7 +111,7 @@ public class Firework implements IItemHandler
 		
 		if (itemId == 6403) // elven_firecracker, xml: 2023
 		{
-			MagicSkillUse msu = new MagicSkillUse(playable, player, 2023, 1, 1, 0);
+			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2023, 1, 1, 0);
 			player.sendPacket(msu);
 			player.broadcastPacket(msu);
 			useFw(player, 2023, 1);
@@ -119,7 +119,7 @@ public class Firework implements IItemHandler
 		}
 		else if (itemId == 6406) // firework, xml: 2024
 		{
-			MagicSkillUse msu = new MagicSkillUse(playable, player, 2024, 1, 1, 0);
+			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2024, 1, 1, 0);
 			player.sendPacket(msu);
 			player.broadcastPacket(msu);
 			useFw(player, 2024, 1);
@@ -127,7 +127,7 @@ public class Firework implements IItemHandler
 		}
 		else if (itemId == 6407) // large_firework, xml: 2025
 		{
-			MagicSkillUse msu = new MagicSkillUse(playable, player, 2025, 1, 1, 0);
+			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2025, 1, 1, 0);
 			player.sendPacket(msu);
 			player.broadcastPacket(msu);
 			useFw(player, 2025, 1);
@@ -137,7 +137,7 @@ public class Firework implements IItemHandler
 	
 	public void useFw(PlayerInstance player, int magicId, int level)
 	{
-		Skill skill = SkillTable.getInstance().getInfo(magicId, level);
+		final Skill skill = SkillTable.getInstance().getInfo(magicId, level);
 		if (skill != null)
 		{
 			player.useMagic(skill, false, false);

@@ -147,7 +147,7 @@ public class MobGroup
 		{
 			for (int i = 0; i < _maxMobCount; i++)
 			{
-				GroupSpawn spawn = new GroupSpawn(_npcTemplate);
+				final GroupSpawn spawn = new GroupSpawn(_npcTemplate);
 				
 				final int signX = Rnd.nextBoolean() ? -1 : 1;
 				final int signY = Rnd.nextBoolean() ? -1 : 1;
@@ -195,7 +195,7 @@ public class MobGroup
 				final int y = player.getY() + Rnd.get(50);
 				
 				mobInst.teleToLocation(x, y, player.getZ(), true);
-				ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
+				final ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
 				ai.follow(player);
 			}
 		}
@@ -275,7 +275,7 @@ public class MobGroup
 				continue;
 			}
 			
-			ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
+			final ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
 			ai.setAlternateAI(ControllableMobAI.AI_NORMAL);
 			ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		}
@@ -292,7 +292,7 @@ public class MobGroup
 				continue;
 			}
 			
-			ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
+			final ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
 			ai.forceAttack(target);
 		}
 	}
@@ -308,7 +308,7 @@ public class MobGroup
 				continue;
 			}
 			
-			ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
+			final ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
 			ai.stop();
 		}
 	}
@@ -329,7 +329,7 @@ public class MobGroup
 			final int randX = Rnd.get(MobGroupTable.RANDOM_RANGE);
 			final int randY = Rnd.get(MobGroupTable.RANDOM_RANGE);
 			
-			ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
+			final ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
 			ai.move(creature.getX() + (signX * randX), creature.getY() + (signY * randY), creature.getZ());
 		}
 	}
@@ -345,7 +345,7 @@ public class MobGroup
 				continue;
 			}
 			
-			ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
+			final ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
 			ai.follow(creature);
 		}
 	}
@@ -361,7 +361,7 @@ public class MobGroup
 				continue;
 			}
 			
-			ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
+			final ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
 			ai.setAlternateAI(ControllableMobAI.AI_CAST);
 		}
 	}
@@ -377,14 +377,14 @@ public class MobGroup
 				continue;
 			}
 			
-			ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
+			final ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
 			ai.setNotMoving(enabled);
 		}
 	}
 	
 	protected void removeDead()
 	{
-		List<ControllableMobInstance> deadMobs = new ArrayList<>();
+		final List<ControllableMobInstance> deadMobs = new ArrayList<>();
 		
 		for (ControllableMobInstance mobInst : getMobs())
 		{
@@ -421,7 +421,7 @@ public class MobGroup
 				continue;
 			}
 			
-			ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
+			final ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
 			ai.forceAttackGroup(otherGrp);
 			ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		}

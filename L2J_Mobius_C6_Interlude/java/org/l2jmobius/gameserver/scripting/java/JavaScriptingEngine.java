@@ -39,7 +39,7 @@ public class JavaScriptingEngine
 	public JavaScriptingEngine()
 	{
 		// Load config.
-		Properties props = new Properties();
+		final Properties props = new Properties();
 		try (FileInputStream fis = new FileInputStream("config/protected/ScriptEngine.ini"))
 		{
 			props.load(fis);

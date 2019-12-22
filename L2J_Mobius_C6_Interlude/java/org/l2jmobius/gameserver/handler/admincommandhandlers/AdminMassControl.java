@@ -43,7 +43,7 @@ public class AdminMassControl implements IAdminCommandHandler
 		{
 			try
 			{
-				StringTokenizer st = new StringTokenizer(command);
+				final StringTokenizer st = new StringTokenizer(command);
 				st.nextToken();
 				
 				if (st.nextToken().equalsIgnoreCase("kill"))

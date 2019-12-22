@@ -65,7 +65,7 @@ public class StaticObjects
 					continue;
 				}
 				
-				StaticObjectInstance obj = parse(line);
+				final StaticObjectInstance obj = parse(line);
 				_staticObjects.put(obj.getStaticObjectId(), obj);
 			}
 		}
@@ -119,7 +119,7 @@ public class StaticObjects
 	
 	public static StaticObjectInstance parse(String line)
 	{
-		StringTokenizer st = new StringTokenizer(line, ";");
+		final StringTokenizer st = new StringTokenizer(line, ";");
 		
 		st.nextToken(); // Pass over static object name (not used in server)
 		

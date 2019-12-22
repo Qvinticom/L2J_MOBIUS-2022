@@ -79,7 +79,7 @@ public class Q00262_TradeWithTheIvoryTower extends Quest
 		}
 		
 		final QuestState qs = getQuestState(partyMember, false);
-		float chance = (MOBS_SAC.get(npc.getId()) * Config.RATE_QUEST_DROP);
+		final float chance = (MOBS_SAC.get(npc.getId()) * Config.RATE_QUEST_DROP);
 		if (getRandom(10) < chance)
 		{
 			rewardItems(partyMember, SPORE_SAC, 1);

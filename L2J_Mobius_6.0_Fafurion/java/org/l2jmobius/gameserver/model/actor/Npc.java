@@ -698,7 +698,7 @@ public class Npc extends Creature
 		String html = HtmCache.getInstance().getHtm(player, "data/html/" + type + "/" + getId() + "-pk.htm");
 		if (html != null)
 		{
-			html = html.replaceAll("%objectId%", String.valueOf(getObjectId()));
+			html = html.replace("%objectId%", String.valueOf(getObjectId()));
 			player.sendPacket(new NpcHtmlMessage(getObjectId(), html));
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return true;
@@ -1551,12 +1551,9 @@ public class Npc extends Creature
 			item.dropMe(this, newX, newY, newZ);
 			
 			// Add drop to auto destroy item task.
-			if (!Config.LIST_PROTECTED_ITEMS.contains(itemId))
+			if (!Config.LIST_PROTECTED_ITEMS.contains(itemId) && (((Config.AUTODESTROY_ITEM_AFTER > 0) && !item.getItem().hasExImmediateEffect()) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && item.getItem().hasExImmediateEffect())))
 			{
-				if (((Config.AUTODESTROY_ITEM_AFTER > 0) && !item.getItem().hasExImmediateEffect()) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && item.getItem().hasExImmediateEffect()))
-				{
-					ItemsAutoDestroy.getInstance().addItem(item);
-				}
+				ItemsAutoDestroy.getInstance().addItem(item);
 			}
 			item.setProtected(false);
 			

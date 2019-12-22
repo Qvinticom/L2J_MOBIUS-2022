@@ -113,7 +113,7 @@ public class SiegeGuardManager
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("Delete From castle_siege_guards Where npcId = ? And x = ? AND y = ? AND z = ? AND isHired = 1");
+			final PreparedStatement statement = con.prepareStatement("Delete From castle_siege_guards Where npcId = ? And x = ? AND y = ? AND z = ? AND isHired = 1");
 			statement.setInt(1, npcId);
 			statement.setInt(2, x);
 			statement.setInt(3, y);
@@ -135,7 +135,7 @@ public class SiegeGuardManager
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("Delete From castle_siege_guards Where castleId = ? And isHired = 1");
+			final PreparedStatement statement = con.prepareStatement("Delete From castle_siege_guards Where castleId = ? And isHired = 1");
 			statement.setInt(1, _castle.getCastleId());
 			statement.execute();
 			statement.close();
@@ -190,7 +190,7 @@ public class SiegeGuardManager
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT * FROM castle_siege_guards Where castleId = ? And isHired = ?");
+			final PreparedStatement statement = con.prepareStatement("SELECT * FROM castle_siege_guards Where castleId = ? And isHired = ?");
 			statement.setInt(1, _castle.getCastleId());
 			if (_castle.getOwnerId() > 0)
 			{
@@ -200,7 +200,7 @@ public class SiegeGuardManager
 			{
 				statement.setInt(2, 0);
 			}
-			ResultSet rs = statement.executeQuery();
+			final ResultSet rs = statement.executeQuery();
 			
 			Spawn spawn1;
 			NpcTemplate template1;
@@ -249,7 +249,7 @@ public class SiegeGuardManager
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("Insert Into castle_siege_guards (castleId, npcId, x, y, z, heading, respawnDelay, isHired) Values (?, ?, ?, ?, ?, ?, ?, ?)");
+			final PreparedStatement statement = con.prepareStatement("Insert Into castle_siege_guards (castleId, npcId, x, y, z, heading, respawnDelay, isHired) Values (?, ?, ?, ?, ?, ?, ?, ?)");
 			statement.setInt(1, _castle.getCastleId());
 			statement.setInt(2, npcId);
 			statement.setInt(3, x);

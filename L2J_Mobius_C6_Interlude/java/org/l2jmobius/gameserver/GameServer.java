@@ -41,10 +41,10 @@ import org.l2jmobius.commons.util.Util;
 import org.l2jmobius.gameserver.cache.CrestCache;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
-import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import org.l2jmobius.gameserver.datatables.HeroSkillTable;
 import org.l2jmobius.gameserver.datatables.NobleSkillTable;
 import org.l2jmobius.gameserver.datatables.OfflineTradeTable;
+import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.csv.DoorTable;
 import org.l2jmobius.gameserver.datatables.csv.ExtractableItemsData;
@@ -400,7 +400,7 @@ public class GameServer
 		
 		try
 		{
-			DoorTable doorTable = DoorTable.getInstance();
+			final DoorTable doorTable = DoorTable.getInstance();
 			
 			// Opened by players like L2OFF
 			doorTable.getDoor(19160012).openMe();

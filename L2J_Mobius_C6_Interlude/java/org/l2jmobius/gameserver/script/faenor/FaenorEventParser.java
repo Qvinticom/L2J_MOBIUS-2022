@@ -43,10 +43,10 @@ public class FaenorEventParser extends FaenorParser
 	@Override
 	public void parseScript(Node eventNode, ScriptContext context)
 	{
-		String id = attribute(eventNode, "ID");
+		final String id = attribute(eventNode, "ID");
 		_eventDates = DateRange.parse(attribute(eventNode, "Active"), DATE_FORMAT);
 		
-		Date currentDate = new Date();
+		final Date currentDate = new Date();
 		if (_eventDates.getEndDate().before(currentDate))
 		{
 			_log.info("Event ID: (" + id + ") has passed... Ignored.");
@@ -82,8 +82,8 @@ public class FaenorEventParser extends FaenorParser
 	{
 		try
 		{
-			String type = attribute(sysMsg, "Type");
-			String[] message = attribute(sysMsg, "Msg").split(Config.EOL);
+			final String type = attribute(sysMsg, "Type");
+			final String[] message = attribute(sysMsg, "Msg").split(Config.EOL);
 			
 			if (type.equalsIgnoreCase("OnJoin"))
 			{
@@ -111,9 +111,9 @@ public class FaenorEventParser extends FaenorParser
 	{
 		try
 		{
-			int[] items = IntList.parse(attribute(drop, "Items"));
-			int[] count = IntList.parse(attribute(drop, "Count"));
-			double chance = getPercent(attribute(drop, "Chance"));
+			final int[] items = IntList.parse(attribute(drop, "Items"));
+			final int[] count = IntList.parse(attribute(drop, "Count"));
+			final double chance = getPercent(attribute(drop, "Chance"));
 			
 			_bridge.addEventDrop(items, count, chance, _eventDates);
 		}

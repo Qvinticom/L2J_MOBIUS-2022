@@ -58,7 +58,7 @@ public class Q023_LidiasHeart extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -171,7 +171,7 @@ public class Q023_LidiasHeart extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -180,7 +180,7 @@ public class Q023_LidiasHeart extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				QuestState st2 = player.getQuestState(Q022_TragedyInVonHellmannForest.class.getSimpleName());
+				final QuestState st2 = player.getQuestState(Q022_TragedyInVonHellmannForest.class.getSimpleName());
 				if ((st2 != null) && st2.isCompleted())
 				{
 					if (player.getLevel() >= 64)
@@ -199,7 +199,7 @@ public class Q023_LidiasHeart extends Quest
 				break;
 			
 			case State.STARTED:
-				int cond = st.getInt("cond");
+				final int cond = st.getInt("cond");
 				switch (npc.getNpcId())
 				{
 					case INNOCENTIN:

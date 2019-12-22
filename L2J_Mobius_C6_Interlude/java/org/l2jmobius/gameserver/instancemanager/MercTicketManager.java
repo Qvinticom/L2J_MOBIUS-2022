@@ -700,7 +700,7 @@ public class MercTicketManager
 				x = rs.getInt("x");
 				y = rs.getInt("y");
 				z = rs.getInt("z");
-				Castle castle = CastleManager.getInstance().getCastle(x, y, z);
+				final Castle castle = CastleManager.getInstance().getCastle(x, y, z);
 				if (castle != null)
 				{
 					startindex = 10 * (castle.getCastleId() - 1);
@@ -716,7 +716,7 @@ public class MercTicketManager
 						{
 							itemId = ITEM_IDS[i];
 							// create the ticket in the gameworld
-							ItemInstance dropticket = new ItemInstance(IdFactory.getInstance().getNextId(), itemId);
+							final ItemInstance dropticket = new ItemInstance(IdFactory.getInstance().getNextId(), itemId);
 							dropticket.setLocation(ItemInstance.ItemLocation.VOID);
 							dropticket.dropMe(null, x, y, z);
 							dropticket.setDropTime(0); // avoids it from beeing removed by the auto item destroyer
@@ -823,7 +823,7 @@ public class MercTicketManager
 		final int z = player.getZ();
 		final int heading = player.getHeading();
 		
-		Castle castle = CastleManager.getInstance().getCastle(player);
+		final Castle castle = CastleManager.getInstance().getCastle(player);
 		if (castle == null)
 		{
 			return -1;
@@ -840,7 +840,7 @@ public class MercTicketManager
 				castle.getSiege().getSiegeGuardManager().hireMerc(x, y, z, heading, NPC_IDS[i]);
 				
 				// create the ticket in the gameworld
-				ItemInstance dropticket = new ItemInstance(IdFactory.getInstance().getNextId(), itemId);
+				final ItemInstance dropticket = new ItemInstance(IdFactory.getInstance().getNextId(), itemId);
 				dropticket.setLocation(ItemInstance.ItemLocation.INVENTORY);
 				dropticket.dropMe(null, x, y, z);
 				dropticket.setDropTime(0); // avoids it from beeing removed by the auto item destroyer
@@ -856,7 +856,7 @@ public class MercTicketManager
 	
 	private void spawnMercenary(int npcId, int x, int y, int z, int despawnDelay, String[] messages, int chatDelay)
 	{
-		NpcTemplate template = NpcTable.getInstance().getTemplate(npcId);
+		final NpcTemplate template = NpcTable.getInstance().getTemplate(npcId);
 		if (template != null)
 		{
 			final SiegeGuardInstance npc = new SiegeGuardInstance(IdFactory.getInstance().getNextId(), template);
@@ -885,7 +885,7 @@ public class MercTicketManager
 		int i = 0;
 		while (i < _droppedTickets.size())
 		{
-			ItemInstance item = _droppedTickets.get(i);
+			final ItemInstance item = _droppedTickets.get(i);
 			if ((item != null) && (getTicketCastleId(item.getItemId()) == castleId))
 			{
 				item.decayMe();
@@ -920,7 +920,7 @@ public class MercTicketManager
 			}
 		}
 		// find the castle where this item is
-		Castle castle = CastleManager.getInstance().getCastleById(getTicketCastleId(itemId));
+		final Castle castle = CastleManager.getInstance().getCastleById(getTicketCastleId(itemId));
 		
 		if ((npcId > 0) && (castle != null))
 		{

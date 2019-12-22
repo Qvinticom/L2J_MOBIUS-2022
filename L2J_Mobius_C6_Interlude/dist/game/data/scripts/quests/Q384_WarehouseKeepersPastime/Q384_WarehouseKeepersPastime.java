@@ -227,7 +227,7 @@ public class Q384_WarehouseKeepersPastime extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -282,10 +282,10 @@ public class Q384_WarehouseKeepersPastime extends Quest
 		else if (event.startsWith("select_2-")) // pick #2-5
 		{
 			// Stores the current event for future use.
-			String number = event.substring(9);
+			final String number = event.substring(9);
 			
 			// Restore the player array.
-			String playerArray = st.getString("playerArray");
+			final String playerArray = st.getString("playerArray");
 			
 			// Verify if the given number is already on the player array, if yes, it's invalid, otherwise register it.
 			if (Util.contains(playerArray.split(""), number))
@@ -303,10 +303,10 @@ public class Q384_WarehouseKeepersPastime extends Quest
 		else if (event.startsWith("select_3-")) // pick #6
 		{
 			// Stores the current event for future use.
-			String number = event.substring(9);
+			final String number = event.substring(9);
 			
 			// Restore the player array.
-			String playerArray = st.getString("playerArray");
+			final String playerArray = st.getString("playerArray");
 			
 			// Verify if the given number is already on the player array, if yes, it's invalid, otherwise calculate reward.
 			if (Util.contains(playerArray.split(""), number))
@@ -393,7 +393,7 @@ public class Q384_WarehouseKeepersPastime extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -425,7 +425,7 @@ public class Q384_WarehouseKeepersPastime extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		PlayerInstance partyMember = getRandomPartyMemberState(player, npc, State.STARTED);
+		final PlayerInstance partyMember = getRandomPartyMemberState(player, npc, State.STARTED);
 		if (partyMember == null)
 		{
 			return null;

@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.util.logging.FileHandler;
 
 /**
- * @author ProGramMoS
+ * @author Advi
  */
 public class ItemLogHandler extends FileHandler
 {

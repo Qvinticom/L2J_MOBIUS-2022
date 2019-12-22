@@ -66,7 +66,7 @@ class MemoryTaskCollector implements TaskCollector
 	 */
 	public synchronized String add(SchedulingPattern pattern, Task task)
 	{
-		String id = GUIDGenerator.generate();
+		final String id = GUIDGenerator.generate();
 		patterns.add(pattern);
 		tasks.add(task);
 		ids.add(id);
@@ -80,7 +80,7 @@ class MemoryTaskCollector implements TaskCollector
 	 */
 	public synchronized void update(String id, SchedulingPattern pattern)
 	{
-		int index = ids.indexOf(id);
+		final int index = ids.indexOf(id);
 		if (index > -1)
 		{
 			patterns.set(index, pattern);
@@ -94,7 +94,7 @@ class MemoryTaskCollector implements TaskCollector
 	 */
 	public synchronized void remove(String id) throws IndexOutOfBoundsException
 	{
-		int index = ids.indexOf(id);
+		final int index = ids.indexOf(id);
 		if (index > -1)
 		{
 			tasks.remove(index);
@@ -110,7 +110,7 @@ class MemoryTaskCollector implements TaskCollector
 	 */
 	public synchronized Task getTask(String id)
 	{
-		int index = ids.indexOf(id);
+		final int index = ids.indexOf(id);
 		if (index > -1)
 		{
 			return tasks.get(index);
@@ -125,7 +125,7 @@ class MemoryTaskCollector implements TaskCollector
 	 */
 	public synchronized SchedulingPattern getSchedulingPattern(String id)
 	{
-		int index = ids.indexOf(id);
+		final int index = ids.indexOf(id);
 		if (index > -1)
 		{
 			return patterns.get(index);
@@ -139,12 +139,12 @@ class MemoryTaskCollector implements TaskCollector
 	@Override
 	public synchronized TaskTable getTasks()
 	{
-		TaskTable ret = new TaskTable();
-		int size = tasks.size();
+		final TaskTable ret = new TaskTable();
+		final int size = tasks.size();
 		for (int i = 0; i < size; i++)
 		{
-			Task t = tasks.get(i);
-			SchedulingPattern p = patterns.get(i);
+			final Task t = tasks.get(i);
+			final SchedulingPattern p = patterns.get(i);
 			ret.add(p, t);
 		}
 		return ret;

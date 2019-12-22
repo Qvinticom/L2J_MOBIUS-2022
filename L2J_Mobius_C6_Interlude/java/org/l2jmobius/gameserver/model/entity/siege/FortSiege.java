@@ -370,7 +370,7 @@ public class FortSiege
 			}
 			
 			// owner as defender
-			SiegeClan scNewOwner = getAttackerClan(getFort().getOwnerId());
+			final SiegeClan scNewOwner = getAttackerClan(getFort().getOwnerId());
 			removeAttacker(scNewOwner);
 			addDefender(scNewOwner, SiegeClanType.OWNER);
 			endSiege();
@@ -598,14 +598,14 @@ public class FortSiege
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("DELETE FROM fortsiege_clans WHERE fort_id=?");
+			final PreparedStatement statement = con.prepareStatement("DELETE FROM fortsiege_clans WHERE fort_id=?");
 			statement.setInt(1, getFort().getFortId());
 			statement.execute();
 			statement.close();
 			
 			if (getFort().getOwnerId() > 0)
 			{
-				PreparedStatement statement2 = con.prepareStatement("DELETE FROM fortsiege_clans WHERE clan_id=?");
+				final PreparedStatement statement2 = con.prepareStatement("DELETE FROM fortsiege_clans WHERE clan_id=?");
 				statement2.setInt(1, getFort().getOwnerId());
 				statement2.execute();
 				statement2.close();
@@ -635,7 +635,7 @@ public class FortSiege
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("DELETE FROM fortsiege_clans WHERE fort_id=? and type = 2");
+			final PreparedStatement statement = con.prepareStatement("DELETE FROM fortsiege_clans WHERE fort_id=? and type = 2");
 			statement.setInt(1, getFort().getFortId());
 			statement.execute();
 			statement.close();
@@ -1158,7 +1158,7 @@ public class FortSiege
 	 */
 	private void setSiegeDateTime()
 	{
-		Calendar newDate = Calendar.getInstance();
+		final Calendar newDate = Calendar.getInstance();
 		newDate.add(Calendar.MINUTE, 60);
 		getFort().setSiegeDate(newDate);
 		saveSiegeDate();
@@ -1264,7 +1264,7 @@ public class FortSiege
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("Update fort set siegeDate = ? where id = ?");
+			final PreparedStatement statement = con.prepareStatement("Update fort set siegeDate = ? where id = ?");
 			statement.setLong(1, getFort().getSiegeDate().getTimeInMillis());
 			statement.setInt(2, getFort().getFortId());
 			statement.execute();

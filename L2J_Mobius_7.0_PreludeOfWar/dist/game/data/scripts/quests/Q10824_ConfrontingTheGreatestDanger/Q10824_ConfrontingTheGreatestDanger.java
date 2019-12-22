@@ -212,23 +212,20 @@ public class Q10824_ConfrontingTheGreatestDanger extends Quest
 				if (qs.isCond(1))
 				{
 					htmltext = "34018-07.html";
-					break;
 				}
 				else if (qs.isCond(2))
 				{
 					htmltext = "34018-08.html";
-					break;
 				}
 				else if (qs.isCond(3))
 				{
 					htmltext = "34018-11.htm";
-					break;
 				}
 				else if (qs.isCond(4))
 				{
 					htmltext = "34018-12.html";
-					break;
 				}
+				break;
 			}
 			case State.COMPLETED:
 			{
@@ -271,5 +268,4 @@ public class Q10824_ConfrontingTheGreatestDanger extends Quest
 			}
 		}
 	}
-	// TODO: Dimensional Raid - https://l2wiki.com/Dimensional_Raid
 }

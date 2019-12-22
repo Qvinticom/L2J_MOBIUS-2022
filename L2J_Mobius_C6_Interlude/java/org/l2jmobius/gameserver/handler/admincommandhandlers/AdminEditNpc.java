@@ -85,7 +85,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	{
 		if (command.startsWith("admin_showShop "))
 		{
-			String[] args = command.split(" ");
+			final String[] args = command.split(" ");
 			
 			if (args.length > 1)
 			{
@@ -94,7 +94,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_showShopList "))
 		{
-			String[] args = command.split(" ");
+			final String[] args = command.split(" ");
 			if (args.length > 2)
 			{
 				showShopList(activeChar, Integer.parseInt(command.split(" ")[1]), Integer.parseInt(command.split(" ")[2]));
@@ -106,11 +106,11 @@ public class AdminEditNpc implements IAdminCommandHandler
 			{
 				try
 				{
-					String[] commandSplit = command.split(" ");
+					final String[] commandSplit = command.split(" ");
 					
 					final int npcId = Integer.parseInt(commandSplit[1]);
 					
-					NpcTemplate npc = NpcTable.getInstance().getTemplate(npcId);
+					final NpcTemplate npc = NpcTable.getInstance().getTemplate(npcId);
 					Show_Npc_Property(activeChar, npc);
 				}
 				catch (Exception e)
@@ -122,7 +122,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			{
 				final int npcId = ((NpcInstance) activeChar.getTarget()).getNpcId();
 				
-				NpcTemplate npc = NpcTable.getInstance().getTemplate(npcId);
+				final NpcTemplate npc = NpcTable.getInstance().getTemplate(npcId);
 				Show_Npc_Property(activeChar, npc);
 			}
 		}
@@ -167,7 +167,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_addShopItem "))
 		{
-			String[] args = command.split(" ");
+			final String[] args = command.split(" ");
 			
 			if (args.length > 1)
 			{
@@ -176,7 +176,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_delShopItem "))
 		{
-			String[] args = command.split(" ");
+			final String[] args = command.split(" ");
 			
 			if (args.length > 2)
 			{
@@ -185,7 +185,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_editShopItem "))
 		{
-			String[] args = command.split(" ");
+			final String[] args = command.split(" ");
 			
 			if (args.length > 2)
 			{
@@ -367,7 +367,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			int category = -1000;
 			try
 			{
-				StringTokenizer st = new StringTokenizer(command.substring(16).trim());
+				final StringTokenizer st = new StringTokenizer(command.substring(16).trim());
 				if (st.countTokens() == 3)
 				{
 					try
@@ -414,12 +414,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 			int npcId = -1;
 			try
 			{
-				StringTokenizer st = new StringTokenizer(command.substring(15).trim());
+				final StringTokenizer st = new StringTokenizer(command.substring(15).trim());
 				if (st.countTokens() == 1)
 				{
 					try
 					{
-						String[] input = command.substring(15).split(" ");
+						final String[] input = command.substring(15).split(" ");
 						
 						if (input.length < 1)
 						{
@@ -434,7 +434,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 					
 					if (npcId > 0)
 					{
-						NpcTemplate npcData = NpcTable.getInstance().getTemplate(npcId);
+						final NpcTemplate npcData = NpcTable.getInstance().getTemplate(npcId);
 						showAddDropData(activeChar, npcData);
 					}
 				}
@@ -474,7 +474,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			
 			try
 			{
-				String[] input = command.substring(15).split(" ");
+				final String[] input = command.substring(15).split(" ");
 				if (input.length >= 3)
 				{
 					npcId = Integer.parseInt(input[0]);
@@ -497,12 +497,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_box_access"))
 		{
-			WorldObject target = activeChar.getTarget();
-			String[] players = command.split(" ");
+			final WorldObject target = activeChar.getTarget();
+			final String[] players = command.split(" ");
 			
 			if (target instanceof BoxInstance)
 			{
-				BoxInstance box = (BoxInstance) target;
+				final BoxInstance box = (BoxInstance) target;
 				
 				if (players.length > 1)
 				{
@@ -546,8 +546,8 @@ public class AdminEditNpc implements IAdminCommandHandler
 		final int tradeListID = Integer.parseInt(args[1]);
 		final int itemId = Integer.parseInt(args[2]);
 		
-		StoreTradeList tradeList = TradeController.getInstance().getBuyList(tradeListID);
-		Item item = ItemTable.getInstance().getTemplate(itemId);
+		final StoreTradeList tradeList = TradeController.getInstance().getBuyList(tradeListID);
+		final Item item = ItemTable.getInstance().getTemplate(itemId);
 		
 		if (tradeList.getPriceForItemId(itemId) < 0)
 		{
@@ -567,9 +567,9 @@ public class AdminEditNpc implements IAdminCommandHandler
 			return;
 		}
 		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		
-		StringBuilder replyMSG = new StringBuilder();
+		final StringBuilder replyMSG = new StringBuilder();
 		replyMSG.append("<html><title>Merchant Shop Item Edit</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<br>Edit an entry in merchantList.");
@@ -594,7 +594,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		final int tradeListID = Integer.parseInt(args[1]);
 		final int itemID = Integer.parseInt(args[2]);
 		
-		StoreTradeList tradeList = TradeController.getInstance().getBuyList(tradeListID);
+		final StoreTradeList tradeList = TradeController.getInstance().getBuyList(tradeListID);
 		
 		if (tradeList.getPriceForItemId(itemID) < 0)
 		{
@@ -613,9 +613,9 @@ public class AdminEditNpc implements IAdminCommandHandler
 			return;
 		}
 		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		
-		StringBuilder replyMSG = new StringBuilder();
+		final StringBuilder replyMSG = new StringBuilder();
 		replyMSG.append("<html><title>Merchant Shop Item Delete</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<br>Delete entry in merchantList.");
@@ -639,7 +639,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	{
 		final int tradeListID = Integer.parseInt(args[1]);
 		
-		StoreTradeList tradeList = TradeController.getInstance().getBuyList(tradeListID);
+		final StoreTradeList tradeList = TradeController.getInstance().getBuyList(tradeListID);
 		
 		if (tradeList == null)
 		{
@@ -653,7 +653,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			final int itemID = Integer.parseInt(args[2]);
 			int price = Integer.parseInt(args[3]);
 			
-			ItemInstance newItem = ItemTable.getInstance().createDummyItem(itemID);
+			final ItemInstance newItem = ItemTable.getInstance().createDummyItem(itemID);
 			
 			if (price < newItem.getReferencePrice())
 			{
@@ -671,9 +671,9 @@ public class AdminEditNpc implements IAdminCommandHandler
 			return;
 		}
 		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		
-		StringBuilder replyMSG = new StringBuilder();
+		final StringBuilder replyMSG = new StringBuilder();
 		replyMSG.append("<html><title>Merchant Shop Item Add</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<br>Add a new entry in merchantList.");
@@ -695,15 +695,15 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void showShopList(PlayerInstance activeChar, int tradeListID, int page)
 	{
-		StoreTradeList tradeList = TradeController.getInstance().getBuyList(tradeListID);
+		final StoreTradeList tradeList = TradeController.getInstance().getBuyList(tradeListID);
 		
 		if ((page > ((tradeList.getItems().size() / PAGE_LIMIT) + 1)) || (page < 1))
 		{
 			return;
 		}
 		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		StringBuilder html = itemListHtml(tradeList, page);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final StringBuilder html = itemListHtml(tradeList, page);
 		
 		adminReply.setHtml(html.toString());
 		activeChar.sendPacket(adminReply);
@@ -762,7 +762,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void showShop(PlayerInstance activeChar, int merchantID)
 	{
-		List<StoreTradeList> tradeLists = getTradeLists(merchantID);
+		final List<StoreTradeList> tradeLists = getTradeLists(merchantID);
 		
 		if (tradeLists == null)
 		{
@@ -770,9 +770,9 @@ public class AdminEditNpc implements IAdminCommandHandler
 			return;
 		}
 		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		
-		StringBuilder replyMSG = new StringBuilder("<html><title>Merchant Shop Lists</title>");
+		final StringBuilder replyMSG = new StringBuilder("<html><title>Merchant Shop Lists</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<br>Select a list to view");
 		replyMSG.append("<table>");
@@ -799,7 +799,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement stmt = con.prepareStatement("INSERT INTO merchant_buylists (`item_id`,`price`,`shop_id`,`order`) values (" + itemId + "," + price + "," + tradeListID + "," + order + ")");
+			final PreparedStatement stmt = con.prepareStatement("INSERT INTO merchant_buylists (`item_id`,`price`,`shop_id`,`order`) values (" + itemId + "," + price + "," + tradeListID + "," + order + ")");
 			stmt.execute();
 			stmt.close();
 		}
@@ -813,7 +813,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement stmt = con.prepareStatement("UPDATE merchant_buylists SET `price`='" + price + "' WHERE `shop_id`='" + tradeListID + "' AND `order`='" + order + "'");
+			final PreparedStatement stmt = con.prepareStatement("UPDATE merchant_buylists SET `price`='" + price + "' WHERE `shop_id`='" + tradeListID + "' AND `order`='" + order + "'");
 			stmt.execute();
 			stmt.close();
 		}
@@ -827,7 +827,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement stmt = con.prepareStatement("DELETE FROM merchant_buylists WHERE `shop_id`='" + tradeListId + "' AND `order`='" + order + "'");
+			final PreparedStatement stmt = con.prepareStatement("DELETE FROM merchant_buylists WHERE `shop_id`='" + tradeListId + "' AND `order`='" + order + "'");
 			stmt.execute();
 			stmt.close();
 		}
@@ -842,8 +842,8 @@ public class AdminEditNpc implements IAdminCommandHandler
 		int order = 0;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement stmt = con.prepareStatement("SELECT * FROM merchant_buylists WHERE `shop_id`='" + tradeListId + "' AND `item_id` ='" + itemId + "' AND `price` = '" + price + "'");
-			ResultSet rs = stmt.executeQuery();
+			final PreparedStatement stmt = con.prepareStatement("SELECT * FROM merchant_buylists WHERE `shop_id`='" + tradeListId + "' AND `item_id` ='" + itemId + "' AND `price` = '" + price + "'");
+			final ResultSet rs = stmt.executeQuery();
 			rs.first();
 			
 			order = rs.getInt("order");
@@ -860,7 +860,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private List<StoreTradeList> getTradeLists(int merchantId)
 	{
-		String target = "npc_%objectId%_Buy";
+		final String target = "npc_%objectId%_Buy";
 		
 		String content = HtmCache.getInstance().getHtm("data/html/merchant/" + merchantId + ".htm");
 		
@@ -875,7 +875,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		
 		final List<StoreTradeList> tradeLists = new ArrayList<>();
-		String[] lines = content.split("\n");
+		final String[] lines = content.split("\n");
 		
 		int pos = 0;
 		
@@ -907,8 +907,8 @@ public class AdminEditNpc implements IAdminCommandHandler
 			BuilderUtil.sendSysMessage(activeChar, "You are going to modify Custom NPC");
 		}
 		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		String content = HtmCache.getInstance().getHtm("data/html/admin/editnpc.htm");
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final String content = HtmCache.getInstance().getHtm("data/html/admin/editnpc.htm");
 		
 		if (content != null)
 		{
@@ -964,12 +964,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void save_npc_property(PlayerInstance activeChar, String[] commandSplit)
 	{
-		StatsSet newNpcData = new StatsSet();
+		final StatsSet newNpcData = new StatsSet();
 		
 		try
 		{
 			newNpcData.set("npcId", commandSplit[1]);
-			String statToSet = commandSplit[2];
+			final String statToSet = commandSplit[2];
 			String value = "";
 			
 			for (int i = 3; i < commandSplit.length; i++)
@@ -1203,7 +1203,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void showNpcDropList(PlayerInstance activeChar, int npcId)
 	{
-		NpcTemplate npcData = NpcTable.getInstance().getTemplate(npcId);
+		final NpcTemplate npcData = NpcTable.getInstance().getTemplate(npcId);
 		
 		if (npcData == null)
 		{
@@ -1211,9 +1211,9 @@ public class AdminEditNpc implements IAdminCommandHandler
 			return;
 		}
 		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		
-		StringBuilder replyMSG = new StringBuilder("<html><title>NPC: " + npcData.name + "(" + npcData.npcId + ") 's drop manage</title>");
+		final StringBuilder replyMSG = new StringBuilder("<html><title>NPC: " + npcData.name + "(" + npcData.npcId + ") 's drop manage</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<br>Notes: click[drop_id]to show the detail of drop data,click[del] to delete the drop data!");
 		replyMSG.append("<table>");
@@ -1247,12 +1247,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT mobId, itemId, min, max, category, chance FROM droplist WHERE mobId=" + npcId + " AND itemId=" + itemId + " AND category=" + category);
-			ResultSet dropData = statement.executeQuery();
+			final PreparedStatement statement = con.prepareStatement("SELECT mobId, itemId, min, max, category, chance FROM droplist WHERE mobId=" + npcId + " AND itemId=" + itemId + " AND category=" + category);
+			final ResultSet dropData = statement.executeQuery();
 			
-			NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 			
-			StringBuilder replyMSG = new StringBuilder("<html><title>the detail of dropdata: (" + npcId + " " + itemId + " " + category + ")</title>");
+			final StringBuilder replyMSG = new StringBuilder("<html><title>the detail of dropdata: (" + npcId + " " + itemId + " " + category + ")</title>");
 			replyMSG.append("<body>");
 			
 			if (dropData.next())
@@ -1286,9 +1286,9 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void showAddDropData(PlayerInstance activeChar, NpcTemplate npcData)
 	{
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		
-		StringBuilder replyMSG = new StringBuilder("<html><title>Add dropdata to " + npcData.name + "(" + npcData.npcId + ")</title>");
+		final StringBuilder replyMSG = new StringBuilder("<html><title>Add dropdata to " + npcData.name + "(" + npcData.npcId + ")</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<table>");
 		replyMSG.append("<tr><td>Item-Id</td><td><edit var=\"itemId\" width=80></td></tr>");
@@ -1311,7 +1311,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("UPDATE droplist SET min=?, max=?, chance=? WHERE mobId=? AND itemId=? AND category=?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE droplist SET min=?, max=?, chance=? WHERE mobId=? AND itemId=? AND category=?");
 			statement.setInt(1, min);
 			statement.setInt(2, max);
 			statement.setInt(3, chance);
@@ -1322,12 +1322,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 			statement.execute();
 			statement.close();
 			
-			PreparedStatement statement2 = con.prepareStatement("SELECT mobId FROM droplist WHERE mobId=? AND itemId=? AND category=?");
+			final PreparedStatement statement2 = con.prepareStatement("SELECT mobId FROM droplist WHERE mobId=? AND itemId=? AND category=?");
 			statement2.setInt(1, npcId);
 			statement2.setInt(2, itemId);
 			statement2.setInt(3, category);
 			
-			ResultSet npcIdRs = statement2.executeQuery();
+			final ResultSet npcIdRs = statement2.executeQuery();
 			
 			if (npcIdRs.next())
 			{
@@ -1341,8 +1341,8 @@ public class AdminEditNpc implements IAdminCommandHandler
 			{
 				reLoadNpcDropList(npcId);
 				
-				NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-				StringBuilder replyMSG = new StringBuilder("<html><title>Drop data modify complete!</title>");
+				final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+				final StringBuilder replyMSG = new StringBuilder("<html><title>Drop data modify complete!</title>");
 				replyMSG.append("<body>");
 				replyMSG.append("<center><button value=\"DropList\" action=\"bypass -h admin_show_droplist " + npcId + "\" width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center>");
 				replyMSG.append("</body></html>");
@@ -1365,7 +1365,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("INSERT INTO droplist(mobId, itemId, min, max, category, chance) values(?,?,?,?,?,?)");
+			final PreparedStatement statement = con.prepareStatement("INSERT INTO droplist(mobId, itemId, min, max, category, chance) values(?,?,?,?,?,?)");
 			statement.setInt(1, npcId);
 			statement.setInt(2, itemId);
 			statement.setInt(3, min);
@@ -1377,8 +1377,8 @@ public class AdminEditNpc implements IAdminCommandHandler
 			
 			reLoadNpcDropList(npcId);
 			
-			NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-			StringBuilder replyMSG = new StringBuilder("<html><title>Add drop data complete!</title>");
+			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+			final StringBuilder replyMSG = new StringBuilder("<html><title>Add drop data complete!</title>");
 			replyMSG.append("<body>");
 			replyMSG.append("<center><button value=\"Continue add\" action=\"bypass -h admin_add_drop " + npcId + "\" width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 			replyMSG.append("<br><br><button value=\"DropList\" action=\"bypass -h admin_show_droplist " + npcId + "\" width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
@@ -1398,7 +1398,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		{
 			if (npcId > 0)
 			{
-				PreparedStatement statement2 = con.prepareStatement("DELETE FROM droplist WHERE mobId=? AND itemId=? AND category=?");
+				final PreparedStatement statement2 = con.prepareStatement("DELETE FROM droplist WHERE mobId=? AND itemId=? AND category=?");
 				statement2.setInt(1, npcId);
 				statement2.setInt(2, itemId);
 				statement2.setInt(3, category);
@@ -1407,8 +1407,8 @@ public class AdminEditNpc implements IAdminCommandHandler
 				
 				reLoadNpcDropList(npcId);
 				
-				NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-				StringBuilder replyMSG = new StringBuilder("<html><title>Delete drop data(" + npcId + ", " + itemId + ", " + category + ")complete</title>");
+				final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+				final StringBuilder replyMSG = new StringBuilder("<html><title>Delete drop data(" + npcId + ", " + itemId + ", " + category + ")complete</title>");
 				replyMSG.append("<body>");
 				replyMSG.append("<center><button value=\"DropList\" action=\"bypass -h admin_show_droplist " + npcId + "\" width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center>");
 				replyMSG.append("</body></html>");
@@ -1424,7 +1424,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void reLoadNpcDropList(int npcId)
 	{
-		NpcTemplate npcData = NpcTable.getInstance().getTemplate(npcId);
+		final NpcTemplate npcData = NpcTable.getInstance().getTemplate(npcId);
 		
 		if (npcData == null)
 		{
@@ -1441,9 +1441,9 @@ public class AdminEditNpc implements IAdminCommandHandler
 			
 			npcData.getDropData().clear();
 			
-			PreparedStatement statement = con.prepareStatement("SELECT mobId,itemId,min,max,category,chance FROM droplist WHERE mobId=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT mobId,itemId,min,max,category,chance FROM droplist WHERE mobId=?");
 			statement.setInt(1, npcId);
-			ResultSet dropDataList = statement.executeQuery();
+			final ResultSet dropDataList = statement.executeQuery();
 			
 			while (dropDataList.next())
 			{

@@ -53,14 +53,14 @@ public class SiegeFlag implements ISkillHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) creature;
+		final PlayerInstance player = (PlayerInstance) creature;
 		if ((player.getClan() == null) || (player.getClan().getLeaderId() != player.getObjectId()))
 		{
 			return;
 		}
 		
-		Castle castle = CastleManager.getInstance().getCastle(player);
-		Fort fort = FortManager.getInstance().getFort(player);
+		final Castle castle = CastleManager.getInstance().getCastle(player);
+		final Fort fort = FortManager.getInstance().getFort(player);
 		if ((castle == null) && (fort == null))
 		{
 			return;
@@ -81,7 +81,7 @@ public class SiegeFlag implements ISkillHandler
 		try
 		{
 			// Spawn a new flag
-			SiegeFlagInstance flag = new SiegeFlagInstance(player, IdFactory.getInstance().getNextId(), NpcTable.getInstance().getTemplate(35062));
+			final SiegeFlagInstance flag = new SiegeFlagInstance(player, IdFactory.getInstance().getNextId(), NpcTable.getInstance().getTemplate(35062));
 			
 			if (skill.isAdvancedFlag())
 			{

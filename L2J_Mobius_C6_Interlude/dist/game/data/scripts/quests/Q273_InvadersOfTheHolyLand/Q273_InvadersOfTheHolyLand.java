@@ -48,8 +48,8 @@ public class Q273_InvadersOfTheHolyLand extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final String htmltext = event;
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -74,7 +74,7 @@ public class Q273_InvadersOfTheHolyLand extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -98,8 +98,8 @@ public class Q273_InvadersOfTheHolyLand extends Quest
 				break;
 			
 			case State.STARTED:
-				int red = st.getQuestItemsCount(RED_SOULSTONE);
-				int black = st.getQuestItemsCount(BLACK_SOULSTONE);
+				final int red = st.getQuestItemsCount(RED_SOULSTONE);
+				final int black = st.getQuestItemsCount(BLACK_SOULSTONE);
 				
 				if ((red + black) == 0)
 				{
@@ -116,7 +116,7 @@ public class Q273_InvadersOfTheHolyLand extends Quest
 						htmltext = "30566-06.htm";
 					}
 					
-					int reward = (black * 3) + (red * 10) + ((black >= 10) ? ((red >= 1) ? 1800 : 1500) : 0);
+					final int reward = (black * 3) + (red * 10) + ((black >= 10) ? ((red >= 1) ? 1800 : 1500) : 0);
 					
 					st.takeItems(BLACK_SOULSTONE, -1);
 					st.takeItems(RED_SOULSTONE, -1);
@@ -138,7 +138,7 @@ public class Q273_InvadersOfTheHolyLand extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerState(player, npc, State.STARTED);
+		final QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)
 		{
 			return null;

@@ -163,8 +163,8 @@ public class Q10962_NewHorizons extends Quest
 						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 					}
 					htmltext = event;
-					break;
 				}
+				break;
 			}
 			case "LightArmor.html":
 			{
@@ -186,8 +186,8 @@ public class Q10962_NewHorizons extends Quest
 						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 					}
 					htmltext = event;
-					break;
 				}
+				break;
 			}
 			case "Robe.html":
 			{
@@ -209,8 +209,8 @@ public class Q10962_NewHorizons extends Quest
 						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 					}
 					htmltext = event;
-					break;
 				}
+				break;
 			}
 		}
 		return htmltext;

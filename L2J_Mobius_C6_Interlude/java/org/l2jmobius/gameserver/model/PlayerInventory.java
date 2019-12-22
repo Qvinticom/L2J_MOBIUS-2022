@@ -672,9 +672,9 @@ public class PlayerInventory extends Inventory
 		final int[][] paperdoll = new int[0x12][3];
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement2 = con.prepareStatement("SELECT object_id,item_id,loc_data,enchant_level FROM items WHERE owner_id=? AND loc='PAPERDOLL'");
+			final PreparedStatement statement2 = con.prepareStatement("SELECT object_id,item_id,loc_data,enchant_level FROM items WHERE owner_id=? AND loc='PAPERDOLL'");
 			statement2.setInt(1, objectId);
-			ResultSet invdata = statement2.executeQuery();
+			final ResultSet invdata = statement2.executeQuery();
 			
 			while (invdata.next())
 			{
@@ -724,7 +724,7 @@ public class PlayerInventory extends Inventory
 	public boolean validateCapacityByItemId(int itemId)
 	{
 		int slots = 0;
-		ItemInstance invItem = getItemByItemId(itemId);
+		final ItemInstance invItem = getItemByItemId(itemId);
 		if (((invItem == null) || !invItem.isStackable()))
 		{
 			slots++;

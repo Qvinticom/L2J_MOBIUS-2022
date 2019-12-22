@@ -217,7 +217,7 @@ public class Q00355_FamilyHonor extends Quest
 	@Override
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		QuestState qs = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		if (qs.isCreated())
 		{

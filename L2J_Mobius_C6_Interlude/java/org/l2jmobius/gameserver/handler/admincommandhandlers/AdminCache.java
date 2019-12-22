@@ -90,7 +90,7 @@ public class AdminCache implements IAdminCommandHandler
 			{
 				if (st.hasMoreTokens())
 				{
-					String path = st.nextToken();
+					final String path = st.nextToken();
 					if (HtmCache.getInstance().loadFile(new File(Config.DATAPACK_ROOT, path)) != null)
 					{
 						BuilderUtil.sendSysMessage(activeChar, "Cache[HTML]: file was loaded");

@@ -124,11 +124,11 @@ public class RecipeTable extends RecipeController
 	{
 		try
 		{
-			StringTokenizer st = new StringTokenizer(line, ";");
+			final StringTokenizer st = new StringTokenizer(line, ";");
 			final List<RecipeInstance> recipePartList = new ArrayList<>();
 			
 			// we use common/dwarf for easy reading of the recipes.csv file
-			String recipeTypeString = st.nextToken();
+			final String recipeTypeString = st.nextToken();
 			
 			// now parse the string into a boolean
 			boolean isDwarvenRecipe;
@@ -147,19 +147,19 @@ public class RecipeTable extends RecipeController
 				return;
 			}
 			
-			String recipeName = st.nextToken();
+			final String recipeName = st.nextToken();
 			final int id = Integer.parseInt(st.nextToken());
 			final int recipeId = Integer.parseInt(st.nextToken());
 			final int level = Integer.parseInt(st.nextToken());
 			
 			// material
-			StringTokenizer st2 = new StringTokenizer(st.nextToken(), "[],");
+			final StringTokenizer st2 = new StringTokenizer(st.nextToken(), "[],");
 			while (st2.hasMoreTokens())
 			{
-				StringTokenizer st3 = new StringTokenizer(st2.nextToken(), "()");
+				final StringTokenizer st3 = new StringTokenizer(st2.nextToken(), "()");
 				final int rpItemId = Integer.parseInt(st3.nextToken());
 				final int quantity = Integer.parseInt(st3.nextToken());
-				RecipeInstance rp = new RecipeInstance(rpItemId, quantity);
+				final RecipeInstance rp = new RecipeInstance(rpItemId, quantity);
 				recipePartList.add(rp);
 			}
 			
@@ -172,7 +172,7 @@ public class RecipeTable extends RecipeController
 			final int mpCost = Integer.parseInt(st.nextToken());
 			final int successRate = Integer.parseInt(st.nextToken());
 			
-			RecipeList recipeList = new RecipeList(id, level, recipeId, recipeName, successRate, mpCost, itemId, count, isDwarvenRecipe);
+			final RecipeList recipeList = new RecipeList(id, level, recipeId, recipeName, successRate, mpCost, itemId, count, isDwarvenRecipe);
 			
 			for (RecipeInstance recipePart : recipePartList)
 			{

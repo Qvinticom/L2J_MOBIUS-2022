@@ -108,7 +108,7 @@ public class Q00368_TrespassingIntoTheHolyGround extends Quest
 		}
 		
 		final QuestState qs = getRandomPartyMemberState(player, -1, i, npc);
-		if(qs != null)
+		if (qs != null)
 		{
 			giveItemRandomly(player, npc, BLADE_STAKATO_FANG, 1, 0, MOBS.get(npc.getId()), true);
 		}

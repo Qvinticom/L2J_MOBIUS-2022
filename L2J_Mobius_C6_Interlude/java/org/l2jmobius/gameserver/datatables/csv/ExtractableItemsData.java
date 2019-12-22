@@ -79,7 +79,7 @@ public class ExtractableItemsData
 				final List<ExtractableProductItem> productTemp = new ArrayList<>(lineSplit.length);
 				for (int i = 0; i < (lineSplit.length - 1); i++)
 				{
-					String[] lineSplit2 = lineSplit[i + 1].split(",");
+					final String[] lineSplit2 = lineSplit[i + 1].split(",");
 					if (lineSplit2.length != 3)
 					{
 						LOGGER.info("Extractable items data: Error in line " + lineCount + " -> wrong seperator!");

@@ -85,14 +85,14 @@ public class Gui
 		txtrConsole.getDocument().addDocumentListener(new LimitLinesDocumentListener(500));
 		
 		// Initialize menu items.
-		JMenuBar menuBar = new JMenuBar();
+		final JMenuBar menuBar = new JMenuBar();
 		menuBar.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		
-		JMenu mnActions = new JMenu("Actions");
+		final JMenu mnActions = new JMenu("Actions");
 		mnActions.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		menuBar.add(mnActions);
 		
-		JMenuItem mntmShutdown = new JMenuItem("Shutdown");
+		final JMenuItem mntmShutdown = new JMenuItem("Shutdown");
 		mntmShutdown.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		mntmShutdown.addActionListener(arg0 ->
 		{
@@ -103,7 +103,7 @@ public class Gui
 		});
 		mnActions.add(mntmShutdown);
 		
-		JMenuItem mntmRestart = new JMenuItem("Restart");
+		final JMenuItem mntmRestart = new JMenuItem("Restart");
 		mntmRestart.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		mntmRestart.addActionListener(arg0 ->
 		{
@@ -114,11 +114,11 @@ public class Gui
 		});
 		mnActions.add(mntmRestart);
 		
-		JMenu mnReload = new JMenu("Reload");
+		final JMenu mnReload = new JMenu("Reload");
 		mnReload.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		menuBar.add(mnReload);
 		
-		JMenuItem mntmBannedIps = new JMenuItem("Banned IPs");
+		final JMenuItem mntmBannedIps = new JMenuItem("Banned IPs");
 		mntmBannedIps.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		mntmBannedIps.addActionListener(arg0 ->
 		{
@@ -127,7 +127,7 @@ public class Gui
 		});
 		mnReload.add(mntmBannedIps);
 		
-		JMenu mnStatus = new JMenu("Status");
+		final JMenu mnStatus = new JMenu("Status");
 		mnStatus.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		menuBar.add(mnStatus);
 		
@@ -180,11 +180,11 @@ public class Gui
 		});
 		mnStatus.add(chckbxmntmGmOnly);
 		
-		JMenu mnFont = new JMenu("Font");
+		final JMenu mnFont = new JMenu("Font");
 		mnFont.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		menuBar.add(mnFont);
 		
-		String[] fonts =
+		final String[] fonts =
 		{
 			"16",
 			"21",
@@ -193,33 +193,33 @@ public class Gui
 		};
 		for (String font : fonts)
 		{
-			JMenuItem mntmFont = new JMenuItem(font);
+			final JMenuItem mntmFont = new JMenuItem(font);
 			mntmFont.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 			mntmFont.addActionListener(arg0 -> txtrConsole.setFont(new Font("Monospaced", Font.PLAIN, Integer.parseInt(font))));
 			mnFont.add(mntmFont);
 		}
 		
-		JMenu mnHelp = new JMenu("Help");
+		final JMenu mnHelp = new JMenu("Help");
 		mnHelp.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		menuBar.add(mnHelp);
 		
-		JMenuItem mntmAbout = new JMenuItem("About");
+		final JMenuItem mntmAbout = new JMenuItem("About");
 		mntmAbout.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		mntmAbout.addActionListener(arg0 -> new frmAbout());
 		mnHelp.add(mntmAbout);
 		
 		// Set icons.
-		List<Image> icons = new ArrayList<>();
+		final List<Image> icons = new ArrayList<>();
 		icons.add(new ImageIcon("..\\images\\l2jmobius_16x16.png").getImage());
 		icons.add(new ImageIcon("..\\images\\l2jmobius_32x32.png").getImage());
 		icons.add(new ImageIcon("..\\images\\l2jmobius_64x64.png").getImage());
 		icons.add(new ImageIcon("..\\images\\l2jmobius_128x128.png").getImage());
 		
-		JScrollPane scrollPanel = new JScrollPane(txtrConsole);
+		final JScrollPane scrollPanel = new JScrollPane(txtrConsole);
 		scrollPanel.setBounds(0, 0, 800, 550);
 		
 		// Set frame.
-		JFrame frame = new JFrame("Mobius - LoginServer");
+		final JFrame frame = new JFrame("Mobius - LoginServer");
 		frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		frame.addWindowListener(new WindowAdapter()
 		{
@@ -267,7 +267,7 @@ public class Gui
 	// Method that manages the redirect.
 	private void redirectSystemStreams()
 	{
-		OutputStream out = new OutputStream()
+		final OutputStream out = new OutputStream()
 		{
 			@Override
 			public void write(int b)

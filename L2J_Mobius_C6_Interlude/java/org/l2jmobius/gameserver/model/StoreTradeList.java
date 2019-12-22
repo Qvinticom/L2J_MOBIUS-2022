@@ -73,7 +73,7 @@ public class StoreTradeList
 	{
 		for (int i = 0; i < _items.size(); i++)
 		{
-			ItemInstance item = _items.get(i);
+			final ItemInstance item = _items.get(i);
 			
 			if (item.getItemId() == itemID)
 			{
@@ -91,7 +91,7 @@ public class StoreTradeList
 	{
 		for (int i = 0; i < _items.size(); i++)
 		{
-			ItemInstance item = _items.get(i);
+			final ItemInstance item = _items.get(i);
 			
 			if (item.getItemId() == itemID)
 			{
@@ -109,7 +109,7 @@ public class StoreTradeList
 	{
 		for (int i = 0; i < _items.size(); i++)
 		{
-			ItemInstance item = _items.get(i);
+			final ItemInstance item = _items.get(i);
 			
 			if (item.getCountDecrease() && (item.getTime() == time))
 			{
@@ -122,7 +122,7 @@ public class StoreTradeList
 	{
 		for (int i = 0; i < _items.size(); i++)
 		{
-			ItemInstance item = _items.get(i);
+			final ItemInstance item = _items.get(i);
 			if (item.getItemId() == itemId)
 			{
 				_items.remove(item);
@@ -175,7 +175,7 @@ public class StoreTradeList
 	{
 		for (int i = 0; i < _items.size(); i++)
 		{
-			ItemInstance item = _items.get(i);
+			final ItemInstance item = _items.get(i);
 			
 			if (item.getItemId() == itemId)
 			{
@@ -189,7 +189,7 @@ public class StoreTradeList
 	{
 		for (int i = 0; i < _items.size(); i++)
 		{
-			ItemInstance item = _items.get(i);
+			final ItemInstance item = _items.get(i);
 			
 			if (item.getItemId() == itemId)
 			{
@@ -216,7 +216,7 @@ public class StoreTradeList
 	{
 		for (int i = 0; i < _items.size(); i++)
 		{
-			ItemInstance item = _items.get(i);
+			final ItemInstance item = _items.get(i);
 			
 			if (item.getObjectId() == objectId)
 			{
@@ -280,7 +280,7 @@ public class StoreTradeList
 	{
 		TradeItem temp;
 		int count;
-		Inventory playersInv = player.getInventory();
+		final Inventory playersInv = player.getInventory();
 		ItemInstance temp2;
 		count = 0;
 		
@@ -305,7 +305,7 @@ public class StoreTradeList
 	
 	public void updateSellList(PlayerInstance player, List<TradeItem> list)
 	{
-		Inventory playersInv = player.getInventory();
+		final Inventory playersInv = player.getInventory();
 		TradeItem temp;
 		ItemInstance temp2;
 		

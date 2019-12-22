@@ -90,7 +90,7 @@ public class Rebirth
 			// Returns true if BASE CLASS is a mage.
 			final boolean isMage = player.getBaseTemplate().classId.isMage();
 			// Returns the skill based on next Birth and if isMage.
-			Skill skill = getRebirthSkill((currBirth + 1), isMage);
+			final Skill skill = getRebirthSkill((currBirth + 1), isMage);
 			
 			String icon = "" + skill.getId(); // Returns the skill's id.
 			
@@ -280,8 +280,8 @@ public class Rebirth
 	 */
 	public boolean playerIsEligible(PlayerInstance player, int itemId, int itemAmount)
 	{
-		String itemName = ItemTable.getInstance().getTemplate(itemId).getName();
-		ItemInstance itemNeeded = player.getInventory().getItemByItemId(itemId);
+		final String itemName = ItemTable.getInstance().getTemplate(itemId).getName();
+		final ItemInstance itemNeeded = player.getInventory().getItemByItemId(itemId);
 		
 		if ((itemNeeded == null) || (itemNeeded.getCount() < itemAmount))
 		{
@@ -397,7 +397,7 @@ public class Rebirth
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			ResultSet rset;
-			PreparedStatement statement = con.prepareStatement("SELECT * FROM `rebirth_manager` WHERE playerId = ?");
+			final PreparedStatement statement = con.prepareStatement("SELECT * FROM `rebirth_manager` WHERE playerId = ?");
 			statement.setInt(1, playerId);
 			rset = statement.executeQuery();
 			
@@ -424,7 +424,7 @@ public class Rebirth
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("INSERT INTO `rebirth_manager` (playerId,rebirthCount) VALUES (?,1)");
+			final PreparedStatement statement = con.prepareStatement("INSERT INTO `rebirth_manager` (playerId,rebirthCount) VALUES (?,1)");
 			statement.setInt(1, player.getObjectId());
 			statement.execute();
 			
@@ -447,7 +447,7 @@ public class Rebirth
 		{
 			final int playerId = player.getObjectId();
 			
-			PreparedStatement statement = con.prepareStatement("UPDATE `rebirth_manager` SET rebirthCount = ? WHERE playerId = ?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE `rebirth_manager` SET rebirthCount = ? WHERE playerId = ?");
 			statement.setInt(1, newRebirthCount);
 			statement.setInt(2, playerId);
 			statement.execute();

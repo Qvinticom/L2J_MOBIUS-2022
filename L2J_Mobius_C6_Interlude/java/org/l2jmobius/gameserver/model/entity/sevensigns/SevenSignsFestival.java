@@ -3291,7 +3291,7 @@ public class SevenSignsFestival implements SpawnListener
 	protected void startFestivalManager()
 	{
 		// Start the Festival Manager for the first time after the server has started at the specified time, then invoke it automatically after every cycle.
-		FestivalManager fm = new FestivalManager();
+		final FestivalManager fm = new FestivalManager();
 		setNextFestivalStart(Config.ALT_FESTIVAL_MANAGER_START + FESTIVAL_SIGNUP_TIME);
 		_managerScheduledTask = ThreadPool.scheduleAtFixedRate(fm, Config.ALT_FESTIVAL_MANAGER_START, Config.ALT_FESTIVAL_CYCLE_LENGTH);
 		
@@ -3312,7 +3312,7 @@ public class SevenSignsFestival implements SpawnListener
 			{
 				final int festivalCycle = rset.getInt("cycle");
 				int festivalId = rset.getInt("festivalId");
-				String cabal = rset.getString("cabal");
+				final String cabal = rset.getString("cabal");
 				
 				final StatsSet festivalDat = new StatsSet();
 				festivalDat.set("festivalId", festivalId);
@@ -3391,7 +3391,7 @@ public class SevenSignsFestival implements SpawnListener
 				{
 					final int festivalCycle = festivalDat.getInt("cycle");
 					final int festivalId = festivalDat.getInt("festivalId");
-					String cabal = festivalDat.getString("cabal");
+					final String cabal = festivalDat.getString("cabal");
 					
 					// Try to update an existing record.
 					statement = con.prepareStatement("UPDATE seven_signs_festival SET date=?, score=?, members=? WHERE cycle=? AND cabal=? AND festivalId=?");
@@ -3505,7 +3505,7 @@ public class SevenSignsFestival implements SpawnListener
 			{
 				player.getClan().setReputationScore(player.getClan().getReputationScore() + 100, true);
 				player.getClan().broadcastToOnlineMembers(new PledgeShowInfoUpdate(player.getClan()));
-				SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_WAS_IN_HIGHEST_RANKED_PARTY_IN_FESTIVAL_OF_DARKNESS_AND_GAINED_S2_REPUTATION);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_WAS_IN_HIGHEST_RANKED_PARTY_IN_FESTIVAL_OF_DARKNESS_AND_GAINED_S2_REPUTATION);
 				sm.addString(partyMemberName);
 				sm.addNumber(100);
 				player.getClan().broadcastToOnlineMembers(sm);
@@ -3515,20 +3515,20 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement(GET_CLAN_NAME);
+				final PreparedStatement statement = con.prepareStatement(GET_CLAN_NAME);
 				statement.setString(1, partyMemberName);
-				ResultSet rset = statement.executeQuery();
+				final ResultSet rset = statement.executeQuery();
 				if (rset.next())
 				{
-					String clanName = rset.getString("clan_name");
+					final String clanName = rset.getString("clan_name");
 					if (clanName != null)
 					{
-						Clan clan = ClanTable.getInstance().getClanByName(clanName);
+						final Clan clan = ClanTable.getInstance().getClanByName(clanName);
 						if (clan != null)
 						{
 							clan.setReputationScore(clan.getReputationScore() + 100, true);
 							clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
-							SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_WAS_IN_HIGHEST_RANKED_PARTY_IN_FESTIVAL_OF_DARKNESS_AND_GAINED_S2_REPUTATION);
+							final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_WAS_IN_HIGHEST_RANKED_PARTY_IN_FESTIVAL_OF_DARKNESS_AND_GAINED_S2_REPUTATION);
 							sm.addString(partyMemberName);
 							sm.addNumber(100);
 							clan.broadcastToOnlineMembers(sm);
@@ -3570,7 +3570,7 @@ public class SevenSignsFestival implements SpawnListener
 		_duskFestivalScores.clear();
 		
 		// Set up a new data set for the current cycle of festivals
-		Map<Integer, StatsSet> newData = new HashMap<>();
+		final Map<Integer, StatsSet> newData = new HashMap<>();
 		
 		for (int i = 0; i < (FESTIVAL_COUNT * 2); i++)
 		{
@@ -3611,7 +3611,7 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			try
 			{
-				ItemInstance bloodOfferings = onlinePlayer.getInventory().getItemByItemId(FESTIVAL_OFFERING_ID);
+				final ItemInstance bloodOfferings = onlinePlayer.getInventory().getItemByItemId(FESTIVAL_OFFERING_ID);
 				
 				if (bloodOfferings != null)
 				{
@@ -3868,7 +3868,7 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			if (_festivalInitialized)
 			{
-				DarknessFestival festivalInst = _managerInstance.getFestivalInstance(oracle, festivalId);
+				final DarknessFestival festivalInst = _managerInstance.getFestivalInstance(oracle, festivalId);
 				
 				if (festivalParty == null)
 				{
@@ -4024,7 +4024,7 @@ public class SevenSignsFestival implements SpawnListener
 			}
 			
 			partyMembers = new ArrayList<>();
-			List<PlayerInstance> prevParticipants = getPreviousParticipants(oracle, festivalId);
+			final List<PlayerInstance> prevParticipants = getPreviousParticipants(oracle, festivalId);
 			
 			// Record a string list of the party members involved.
 			for (PlayerInstance partyMember : prevParticipants)
@@ -4129,7 +4129,7 @@ public class SevenSignsFestival implements SpawnListener
 	public int distribAccumulatedBonus(PlayerInstance player)
 	{
 		int playerBonus = 0;
-		String playerName = player.getName();
+		final String playerName = player.getName();
 		final int playerCabal = SevenSigns.getInstance().getPlayerCabal(player);
 		
 		if (playerCabal != SevenSigns.getInstance().getCabalHighestScore())
@@ -4551,7 +4551,7 @@ public class SevenSignsFestival implements SpawnListener
 			// Spawn the festival witch for this arena
 			try
 			{
-				Spawn npcSpawn = new Spawn(witchTemplate);
+				final Spawn npcSpawn = new Spawn(witchTemplate);
 				
 				npcSpawn.setX(_witchSpawn._x);
 				npcSpawn.setY(_witchSpawn._y);
@@ -4626,7 +4626,7 @@ public class SevenSignsFestival implements SpawnListener
 					y -= Rnd.get(FESTIVAL_MAX_OFFSET_Y);
 				}
 				
-				Location moveTo = new Location(x, y, _startLocation._z, Rnd.get(65536));
+				final Location moveTo = new Location(x, y, _startLocation._z, Rnd.get(65536));
 				
 				festivalMob.setRunning();
 				festivalMob.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, moveTo);
@@ -4747,7 +4747,7 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			if (!_participants.isEmpty())
 			{
-				CreatureSay cs = new CreatureSay(_witchInst.getObjectId(), 0, "Festival Witch", message);
+				final CreatureSay cs = new CreatureSay(_witchInst.getObjectId(), 0, "Festival Witch", message);
 				for (PlayerInstance participant : _participants)
 				{
 					try
@@ -4825,7 +4825,7 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			try
 			{
-				FestivalSpawn origPosition = _originalLocations.get(participant);
+				final FestivalSpawn origPosition = _originalLocations.get(participant);
 				
 				if (isRemoving)
 				{

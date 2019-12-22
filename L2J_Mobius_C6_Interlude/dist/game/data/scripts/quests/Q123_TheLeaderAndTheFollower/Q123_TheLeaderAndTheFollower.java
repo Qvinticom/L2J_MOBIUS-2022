@@ -66,7 +66,7 @@ public class Q123_TheLeaderAndTheFollower extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -160,7 +160,7 @@ public class Q123_TheLeaderAndTheFollower extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -171,7 +171,7 @@ public class Q123_TheLeaderAndTheFollower extends Quest
 			case State.CREATED:
 				if (player.getSponsor() > 0)
 				{
-					QuestState st2 = player.getQuestState(Q118_ToLeadAndBeLed.class.getSimpleName());
+					final QuestState st2 = player.getQuestState(Q118_ToLeadAndBeLed.class.getSimpleName());
 					if (st2 != null)
 					{
 						htmltext = (st2.isCompleted()) ? "31961-02a.htm" : "31961-02b.htm";
@@ -316,7 +316,7 @@ public class Q123_TheLeaderAndTheFollower extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerState(player, npc, State.STARTED);
+		final QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)
 		{
 			return null;

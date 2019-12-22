@@ -55,14 +55,14 @@ public class XmassTreeInstance extends NpcInstance
 		
 		private boolean handleCast(PlayerInstance player, int skillId)
 		{
-			Skill skill = SkillTable.getInstance().getInfo(skillId, 1);
+			final Skill skill = SkillTable.getInstance().getInfo(skillId, 1);
 			
 			if (player.getFirstEffect(skill) == null)
 			{
 				setTarget(player);
 				doCast(skill);
 				
-				MagicSkillUse msu = new MagicSkillUse(_caster, player, skill.getId(), 1, skill.getHitTime(), 0);
+				final MagicSkillUse msu = new MagicSkillUse(_caster, player, skill.getId(), 1, skill.getHitTime(), 0);
 				broadcastPacket(msu);
 				return true;
 			}

@@ -39,7 +39,7 @@ public class MotherTreeZone extends ZoneType
 	{
 		if (creature instanceof PlayerInstance)
 		{
-			PlayerInstance player = (PlayerInstance) creature;
+			final PlayerInstance player = (PlayerInstance) creature;
 			
 			if (player.isInParty())
 			{

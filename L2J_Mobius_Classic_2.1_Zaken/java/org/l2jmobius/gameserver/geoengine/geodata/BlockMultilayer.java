@@ -86,7 +86,7 @@ public class BlockMultilayer extends ABlock
 				if (format != GeoFormat.L2D)
 				{
 					// get data
-					short data = bb.getShort();
+					final short data = bb.getShort();
 					
 					// add nswe and height
 					_temp.put((byte) (data & 0x000F));
@@ -453,7 +453,7 @@ public class BlockMultilayer extends ABlock
 		for (int i = 0; i < GeoStructure.BLOCK_CELLS; i++)
 		{
 			// write layers count
-			byte layers = _buffer[index++];
+			final byte layers = _buffer[index++];
 			stream.write(layers);
 			
 			// write cell data

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation.Cur
 
 /**
  * Format: (ch)
- * @author ProGramMoS
+ * @author -Wooden-
  */
 public class RequestCursedWeaponLocation extends GameClientPacket
 {

@@ -531,7 +531,7 @@ public class MapRegionTable
 					if ((teleportWhere == TeleportWhereType.SiegeFlag) && castle.getSiege().getIsInProgress())
 					{
 						// Check if player's clan is attacker
-						List<NpcInstance> flags = castle.getSiege().getFlag(player.getClan());
+						final List<NpcInstance> flags = castle.getSiege().getFlag(player.getClan());
 						if ((flags != null) && !flags.isEmpty())
 						{
 							// Spawn to flag - Need more work to get player to the nearest flag
@@ -554,7 +554,7 @@ public class MapRegionTable
 					if ((teleportWhere == TeleportWhereType.SiegeFlag) && fort.getSiege().getIsInProgress())
 					{
 						// check if player's clan is attacker
-						List<NpcInstance> flags = fort.getSiege().getFlag(player.getClan());
+						final List<NpcInstance> flags = fort.getSiege().getFlag(player.getClan());
 						
 						if ((flags != null) && !flags.isEmpty())
 						{

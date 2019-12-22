@@ -74,8 +74,8 @@ public class TeleporterInstance extends FolkInstance
 		
 		final int condition = validateCondition(player);
 		
-		StringTokenizer st = new StringTokenizer(command, " ");
-		String actualCommand = st.nextToken(); // Get actual command
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		final String actualCommand = st.nextToken(); // Get actual command
 		
 		if (actualCommand.equalsIgnoreCase("goto"))
 		{
@@ -195,7 +195,7 @@ public class TeleporterInstance extends FolkInstance
 			}
 		}
 		
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcname%", getName());
@@ -209,7 +209,7 @@ public class TeleporterInstance extends FolkInstance
 	 */
 	private void doTeleport(PlayerInstance player, int val)
 	{
-		TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
+		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
 		if (list != null)
 		{
 			// you cannot teleport to village that is in siege
@@ -235,15 +235,15 @@ public class TeleporterInstance extends FolkInstance
 			}
 			else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (player.getKarma() > 0)) // karma
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				sm.addString("Go away, you're not welcome here.");
 				player.sendPacket(sm);
 				return;
 			}
 			else if (list.getIsForNoble() && !player.isNoble())
 			{
-				String filename = "data/html/teleporter/nobleteleporter-no.htm";
-				NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+				final String filename = "data/html/teleporter/nobleteleporter-no.htm";
+				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				html.setFile(filename);
 				html.replace("%objectId%", String.valueOf(getObjectId()));
 				html.replace("%npcname%", getName());
@@ -265,8 +265,8 @@ public class TeleporterInstance extends FolkInstance
 				// Chars level XX can't enter in Cruma Tower. Retail: level 56 and above
 				final int maxlvl = Config.CRUMA_TOWER_LEVEL_RESTRICT;
 				
-				String filename = "data/html/teleporter/30483-biglvl.htm";
-				NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+				final String filename = "data/html/teleporter/30483-biglvl.htm";
+				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				html.setFile(filename);
 				html.replace("%allowedmaxlvl%", "" + maxlvl + "");
 				player.sendPacket(html);

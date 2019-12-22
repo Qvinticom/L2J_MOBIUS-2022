@@ -52,7 +52,7 @@ public class SummonItems implements IItemHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) playable;
+		final PlayerInstance player = (PlayerInstance) playable;
 		
 		if (!player.getFloodProtectors().getItemPetSummon().tryPerformAction("summon pet"))
 		{
@@ -105,7 +105,7 @@ public class SummonItems implements IItemHandler
 			return;
 		}
 		
-		SummonItem sitem = SummonItemsData.getInstance().getSummonItem(item.getItemId());
+		final SummonItem sitem = SummonItemsData.getInstance().getSummonItem(item.getItemId());
 		
 		if (((player.getPet() != null) || player.isMounted()) && sitem.isPetSummon())
 		{
@@ -133,7 +133,7 @@ public class SummonItems implements IItemHandler
 			return;
 		}
 		
-		NpcTemplate npcTemplate = NpcTable.getInstance().getTemplate(npcID);
+		final NpcTemplate npcTemplate = NpcTable.getInstance().getTemplate(npcID);
 		
 		if (npcTemplate == null)
 		{
@@ -146,7 +146,7 @@ public class SummonItems implements IItemHandler
 			{
 				try
 				{
-					Spawn spawn = new Spawn(npcTemplate);
+					final Spawn spawn = new Spawn(npcTemplate);
 					spawn.setId(IdFactory.getInstance().getNextId());
 					spawn.setX(player.getX());
 					spawn.setY(player.getY());

@@ -132,7 +132,7 @@ public class GeoEngine
 			FileChannel fc = raf.getChannel())
 		{
 			// initialize file buffer
-			MappedByteBuffer buffer = fc.map(FileChannel.MapMode.READ_ONLY, 0, fc.size()).load();
+			final MappedByteBuffer buffer = fc.map(FileChannel.MapMode.READ_ONLY, 0, fc.size()).load();
 			buffer.order(ByteOrder.LITTLE_ENDIAN);
 			
 			// get block indexes
@@ -553,7 +553,7 @@ public class GeoEngine
 			dirt = 0;
 			
 			// calculate next point coordinates
-			int e2 = 2 * d;
+			final int e2 = 2 * d;
 			if ((e2 > -dy) && (e2 < dx))
 			{
 				// calculate next point XY coordinates
@@ -703,7 +703,7 @@ public class GeoEngine
 		}
 		
 		// perform geodata check
-		GeoLocation loc = checkMove(gox, goy, goz, gtx, gty, gtz, instanceId);
+		final GeoLocation loc = checkMove(gox, goy, goz, gtx, gty, gtz, instanceId);
 		return (loc.getGeoX() == gtx) && (loc.getGeoY() == gty);
 	}
 	
@@ -829,7 +829,7 @@ public class GeoEngine
 			direction = 0;
 			
 			// calculate next point coordinates
-			int e2 = 2 * d;
+			final int e2 = 2 * d;
 			if ((e2 > -dy) && (e2 < dx))
 			{
 				d -= dy;

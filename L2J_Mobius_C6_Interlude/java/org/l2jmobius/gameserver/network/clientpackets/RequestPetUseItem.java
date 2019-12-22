@@ -78,7 +78,7 @@ public class RequestPetUseItem extends GameClientPacket
 		
 		if (player.isAlikeDead() || pet.isDead())
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
 			sm.addItemName(item.getItemId());
 			player.sendPacket(sm);
 			return;

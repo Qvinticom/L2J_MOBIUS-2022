@@ -47,12 +47,12 @@ public class AdminHeal implements IAdminCommandHandler
 		{
 			try
 			{
-				String healTarget = command.substring(11);
+				final String healTarget = command.substring(11);
 				handleRes(activeChar, healTarget);
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				sm.addString("Incorrect target/radius specified.");
 				activeChar.sendPacket(sm);
 			}
@@ -77,7 +77,7 @@ public class AdminHeal implements IAdminCommandHandler
 		
 		if (player != null)
 		{
-			PlayerInstance plyr = World.getInstance().getPlayer(player);
+			final PlayerInstance plyr = World.getInstance().getPlayer(player);
 			
 			if (plyr != null)
 			{
@@ -92,7 +92,7 @@ public class AdminHeal implements IAdminCommandHandler
 					{
 						if (object instanceof Creature)
 						{
-							Creature creature = (Creature) object;
+							final Creature creature = (Creature) object;
 							creature.setCurrentHpMp(creature.getMaxHp(), creature.getMaxMp());
 							
 							if (object instanceof PlayerInstance)

@@ -154,7 +154,7 @@ public class PlayerKnownList extends PlayableKnownList
 			}
 			else if (object instanceof Summon)
 			{
-				Summon summon = (Summon) object;
+				final Summon summon = (Summon) object;
 				
 				// Check if the PlayerInstance is the owner of the Pet
 				if (activeChar.equals(summon.getOwner()))
@@ -175,7 +175,7 @@ public class PlayerKnownList extends PlayableKnownList
 			}
 			else if (object instanceof PlayerInstance)
 			{
-				PlayerInstance otherPlayer = (PlayerInstance) object;
+				final PlayerInstance otherPlayer = (PlayerInstance) object;
 				if (otherPlayer.isInBoat())
 				{
 					otherPlayer.getPosition().setWorldPosition(otherPlayer.getBoat().getPosition().getWorldPosition());
@@ -220,7 +220,7 @@ public class PlayerKnownList extends PlayableKnownList
 			if (object instanceof Creature)
 			{
 				// Update the state of the Creature object client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance
-				Creature obj = (Creature) object;
+				final Creature obj = (Creature) object;
 				
 				final CreatureAI objAi = obj.getAI();
 				if (objAi != null)

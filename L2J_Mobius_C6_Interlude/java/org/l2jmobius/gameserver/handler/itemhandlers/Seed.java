@@ -314,8 +314,8 @@ public class Seed implements IItemHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) playable;
-		WorldObject target = player.getTarget();
+		final PlayerInstance player = (PlayerInstance) playable;
+		final WorldObject target = player.getTarget();
 		
 		if (!(target instanceof NpcInstance))
 		{
@@ -331,7 +331,7 @@ public class Seed implements IItemHandler
 			return;
 		}
 		
-		MonsterInstance monster = (MonsterInstance) target;
+		final MonsterInstance monster = (MonsterInstance) target;
 		
 		if (monster.isDead())
 		{
@@ -352,7 +352,7 @@ public class Seed implements IItemHandler
 		{
 			// TODO: get right skill level
 			monster.setSeeded(_seedId, player);
-			Skill skill = SkillTable.getInstance().getInfo(2097, 3); // sowing skill
+			final Skill skill = SkillTable.getInstance().getInfo(2097, 3); // sowing skill
 			player.useMagic(skill, false, false);
 		}
 		else

@@ -434,7 +434,7 @@ public class Lilith extends AbstractNpcAI
 						randomSpawn = _spawns.get(Rnd.get(_spawns.size()));
 						if (randomSpawn != null)
 						{
-							Npc remnant = addSpawn(REMNANT, randomSpawn.getX(), randomSpawn.getY(), randomSpawn.getZ(), randomSpawn.getHeading(), true, 0, false, 0);
+							final Npc remnant = addSpawn(REMNANT, randomSpawn.getX(), randomSpawn.getY(), randomSpawn.getZ(), randomSpawn.getHeading(), true, 0, false, 0);
 							_remnants.add(remnant);
 						}
 					}
@@ -452,13 +452,13 @@ public class Lilith extends AbstractNpcAI
 			}
 			case "cancel_timers":
 			{
-				QuestTimer activityTimer = getQuestTimer("check_activity_task", null, null);
+				final QuestTimer activityTimer = getQuestTimer("check_activity_task", null, null);
 				if (activityTimer != null)
 				{
 					activityTimer.cancel();
 				}
 				
-				QuestTimer forceEnd = getQuestTimer("end_lilith", null, null);
+				final QuestTimer forceEnd = getQuestTimer("end_lilith", null, null);
 				if (forceEnd != null)
 				{
 					forceEnd.cancel();
@@ -604,7 +604,7 @@ public class Lilith extends AbstractNpcAI
 			}
 			if (!BOSS_ZONE.isInsideZone(npc)) // Npc moved out of the zone
 			{
-				Spawn spawn = npc.getSpawn();
+				final Spawn spawn = npc.getSpawn();
 				if (spawn != null)
 				{
 					npc.teleToLocation(spawn.getX(), spawn.getY(), spawn.getZ());
@@ -677,13 +677,13 @@ public class Lilith extends AbstractNpcAI
 	
 	private long calcReuseFromDays(int day1Minute, int day1Hour, int day1Day, int day2Minute, int day2Hour, int day2Day)
 	{
-		Calendar now = Calendar.getInstance();
-		Calendar day1 = (Calendar) now.clone();
+		final Calendar now = Calendar.getInstance();
+		final Calendar day1 = (Calendar) now.clone();
 		day1.set(Calendar.MINUTE, day1Minute);
 		day1.set(Calendar.HOUR_OF_DAY, day1Hour);
 		day1.set(Calendar.DAY_OF_WEEK, day1Day);
 		
-		Calendar day2 = (Calendar) day1.clone();
+		final Calendar day2 = (Calendar) day1.clone();
 		day2.set(Calendar.MINUTE, day2Minute);
 		day2.set(Calendar.HOUR_OF_DAY, day2Hour);
 		day2.set(Calendar.DAY_OF_WEEK, day2Day);

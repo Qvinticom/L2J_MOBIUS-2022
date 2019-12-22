@@ -908,7 +908,7 @@ public class VillageMasterInstance extends NpcInstance
 				}
 			}
 			
-			Set<ClassId> unavailableClasses = subclassSetMap.get(pClass);
+			final Set<ClassId> unavailableClasses = subclassSetMap.get(pClass);
 			if (unavailableClasses != null)
 			{
 				subclasses.removeAll(unavailableClasses);

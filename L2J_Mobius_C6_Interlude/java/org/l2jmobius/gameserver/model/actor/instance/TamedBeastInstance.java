@@ -425,9 +425,9 @@ public class TamedBeastInstance extends FeedableBeastInstance
 			// if the owner has enough food, call the item handler (use the food and triffer all necessary actions)
 			if ((item != null) && (item.getCount() >= 1))
 			{
-				WorldObject oldTarget = owner.getTarget();
+				final WorldObject oldTarget = owner.getTarget();
 				owner.setTarget(_tamedBeast);
-				WorldObject[] targets =
+				final WorldObject[] targets =
 				{
 					_tamedBeast
 				};

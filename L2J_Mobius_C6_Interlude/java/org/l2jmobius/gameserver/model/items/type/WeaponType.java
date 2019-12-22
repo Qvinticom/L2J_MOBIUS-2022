@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.model.items.type;
 
 /**
- * @author mkizub <BR>
- *         Description of Weapon Type
+ * Weapon Type enumerated.
+ * @author mkizub
  */
 public enum WeaponType
 {

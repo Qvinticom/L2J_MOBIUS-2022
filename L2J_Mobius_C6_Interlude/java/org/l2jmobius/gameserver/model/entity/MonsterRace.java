@@ -61,7 +61,7 @@ public class MonsterRace
 			try
 			{
 				final NpcTemplate template = NpcTable.getInstance().getTemplate(id + random);
-				Constructor<?> constructor = Class.forName("org.l2jmobius.gameserver.model.actor.instance." + template.type + "Instance").getConstructors()[0];
+				final Constructor<?> constructor = Class.forName("org.l2jmobius.gameserver.model.actor.instance." + template.type + "Instance").getConstructors()[0];
 				final int objectId = IdFactory.getInstance().getNextId();
 				_monsters[i] = (NpcInstance) constructor.newInstance(objectId, template);
 			}

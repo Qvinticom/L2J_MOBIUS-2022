@@ -93,7 +93,7 @@ public class ItemCrystallizationData implements IXmlReader
 								{
 									if ("item".equalsIgnoreCase(c.getNodeName()))
 									{
-										NamedNodeMap attrs = c.getAttributes();
+										final NamedNodeMap attrs = c.getAttributes();
 										final int itemId = parseInteger(attrs, "id");
 										final long itemCount = parseLong(attrs, "count");
 										final double itemChance = parseDouble(attrs, "chance");
@@ -117,7 +117,7 @@ public class ItemCrystallizationData implements IXmlReader
 								{
 									if ("item".equalsIgnoreCase(c.getNodeName()))
 									{
-										NamedNodeMap attrs = c.getAttributes();
+										final NamedNodeMap attrs = c.getAttributes();
 										final int itemId = parseInteger(attrs, "id");
 										final long itemCount = parseLong(attrs, "count");
 										final double itemChance = parseDouble(attrs, "chance");
@@ -154,7 +154,7 @@ public class ItemCrystallizationData implements IXmlReader
 			
 			if (chance > 100.)
 			{
-				double countMul = Math.ceil(chance / 100.);
+				final double countMul = Math.ceil(chance / 100.);
 				chance /= countMul;
 				count *= countMul;
 			}

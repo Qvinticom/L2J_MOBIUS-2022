@@ -232,7 +232,7 @@ public class Ramona extends AbstractNpcAI
 				{
 					addSpawn(MP_CONTROL, RAMONA_SPAWN_LOC, false, 0, false);
 				}
-				QuestTimer activityTimer = getQuestTimer("CHECK_ACTIVITY_TASK", null, null);
+				final QuestTimer activityTimer = getQuestTimer("CHECK_ACTIVITY_TASK", null, null);
 				if (activityTimer != null)
 				{
 					activityTimer.cancel();
@@ -341,7 +341,7 @@ public class Ramona extends AbstractNpcAI
 			case RAMONA_3:
 			{
 				_boss = Status.DEAD;
-				long respawnTime = (Config.RAMONA_SPAWN_INTERVAL + getRandom(-Config.RAMONA_SPAWN_RANDOM, Config.RAMONA_SPAWN_RANDOM)) * 3600000;
+				final long respawnTime = (Config.RAMONA_SPAWN_INTERVAL + getRandom(-Config.RAMONA_SPAWN_RANDOM, Config.RAMONA_SPAWN_RANDOM)) * 3600000;
 				GlobalVariablesManager.getInstance().set(RAMONA_RESPAWN_VAR, System.currentTimeMillis() + respawnTime);
 				startQuestTimer("RAMONA_UNLOCK", respawnTime, null, null);
 				startQuestTimer("END_RAMONA", 90000, null, null);

@@ -53,8 +53,8 @@ public class RestoreSymbolSeal extends AbstractEffect
 			return;
 		}
 		
-		PlayerInstance player = effected.getActingPlayer();
-		int basicAmount = _amount;
+		final PlayerInstance player = effected.getActingPlayer();
+		final int basicAmount = _amount;
 		double amount = 0;
 		switch (_mode)
 		{

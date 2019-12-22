@@ -50,9 +50,9 @@ public class HeroWeapon extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		
-		int weaponId = Integer.parseInt(event);
+		final int weaponId = Integer.parseInt(event);
 		if (Util.contains(WEAPON_IDS, weaponId))
 		{
 			st.giveItems(weaponId, 1);
@@ -66,7 +66,7 @@ public class HeroWeapon extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			newQuestState(player);

@@ -63,7 +63,7 @@ public class Rosammy extends AbstractNpcAI
 	{
 		if (npc.getId() == SOUL_TRACKER_ROSAMMY)
 		{
-			QuestState qs = player.getQuestState("Q00935_ExploringTheEastWingOfTheDungeonOfAbyss");
+			final QuestState qs = player.getQuestState("Q00935_ExploringTheEastWingOfTheDungeonOfAbyss");
 			switch (event)
 			{
 				case "1":

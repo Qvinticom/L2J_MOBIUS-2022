@@ -95,7 +95,7 @@ public class Q386_StolenDignity extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return event;
@@ -144,8 +144,8 @@ public class Q386_StolenDignity extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final String htmltext = getNoQuestMsg();
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -166,7 +166,7 @@ public class Q386_StolenDignity extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

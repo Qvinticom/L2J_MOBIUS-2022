@@ -162,7 +162,7 @@ public class Scheduler
 			{
 				throw new IllegalStateException("Scheduler already started");
 			}
-			this.daemon = on;
+			daemon = on;
 		}
 	}
 	
@@ -238,8 +238,8 @@ public class Scheduler
 		synchronized (collectors)
 		{
 			// Discard the first 2 elements in the list.
-			int size = collectors.size() - 2;
-			TaskCollector[] ret = new TaskCollector[size];
+			final int size = collectors.size() - 2;
+			final TaskCollector[] ret = new TaskCollector[size];
 			for (int i = 0; i < size; i++)
 			{
 				ret[i] = collectors.get(i + 2);
@@ -280,8 +280,8 @@ public class Scheduler
 	{
 		synchronized (listeners)
 		{
-			int size = listeners.size();
-			SchedulerListener[] ret = new SchedulerListener[size];
+			final int size = listeners.size();
+			final SchedulerListener[] ret = new SchedulerListener[size];
 			for (int i = 0; i < size; i++)
 			{
 				ret[i] = listeners.get(i);
@@ -299,8 +299,8 @@ public class Scheduler
 	{
 		synchronized (executors)
 		{
-			int size = executors.size();
-			TaskExecutor[] ret = new TaskExecutor[size];
+			final int size = executors.size();
+			final TaskExecutor[] ret = new TaskExecutor[size];
 			for (int i = 0; i < size; i++)
 			{
 				ret[i] = executors.get(i);
@@ -432,10 +432,10 @@ public class Scheduler
 	@Deprecated
 	public Runnable getTaskRunnable(Object id)
 	{
-		Task task = getTask((String) id);
+		final Task task = getTask((String) id);
 		if (task instanceof RunnableTask)
 		{
-			RunnableTask rt = (RunnableTask) task;
+			final RunnableTask rt = (RunnableTask) task;
 			return rt.getRunnable();
 		}
 		return null;
@@ -564,14 +564,14 @@ public class Scheduler
 		TaskCollector[] nowCollectors;
 		synchronized (collectors)
 		{
-			int size = collectors.size();
+			final int size = collectors.size();
 			nowCollectors = new TaskCollector[size];
 			for (int i = 0; i < size; i++)
 			{
 				nowCollectors[i] = collectors.get(i);
 			}
 		}
-		LauncherThread l = new LauncherThread(this, nowCollectors, referenceTimeInMillis);
+		final LauncherThread l = new LauncherThread(this, nowCollectors, referenceTimeInMillis);
 		synchronized (launchers)
 		{
 			launchers.add(l);
@@ -588,7 +588,7 @@ public class Scheduler
 	 */
 	TaskExecutor spawnExecutor(Task task)
 	{
-		TaskExecutor e = new TaskExecutor(this, task);
+		final TaskExecutor e = new TaskExecutor(this, task);
 		synchronized (executors)
 		{
 			executors.add(e);
@@ -629,10 +629,10 @@ public class Scheduler
 	{
 		synchronized (listeners)
 		{
-			int size = listeners.size();
+			final int size = listeners.size();
 			for (int i = 0; i < size; i++)
 			{
-				SchedulerListener l = listeners.get(i);
+				final SchedulerListener l = listeners.get(i);
 				l.taskLaunching(executor);
 			}
 		}
@@ -646,10 +646,10 @@ public class Scheduler
 	{
 		synchronized (listeners)
 		{
-			int size = listeners.size();
+			final int size = listeners.size();
 			for (int i = 0; i < size; i++)
 			{
-				SchedulerListener l = listeners.get(i);
+				final SchedulerListener l = listeners.get(i);
 				l.taskSucceeded(executor);
 			}
 		}
@@ -664,12 +664,12 @@ public class Scheduler
 	{
 		synchronized (listeners)
 		{
-			int size = listeners.size();
+			final int size = listeners.size();
 			if (size > 0)
 			{
 				for (int i = 0; i < size; i++)
 				{
-					SchedulerListener l = listeners.get(i);
+					final SchedulerListener l = listeners.get(i);
 					l.taskFailed(executor, exception);
 				}
 			}

@@ -105,7 +105,7 @@ public class Q00338_AlligatorHunter extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if(qs != null)
+		if (qs != null)
 		{
 			giveItems(player, ALLIGATOR_LEATHER, 1);
 			if (getRandom(100) < SECOND_CHANCE)

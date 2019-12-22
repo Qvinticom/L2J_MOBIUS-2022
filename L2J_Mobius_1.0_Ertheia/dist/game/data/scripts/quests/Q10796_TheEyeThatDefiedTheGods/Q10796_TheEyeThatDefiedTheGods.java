@@ -55,7 +55,7 @@ public class Q10796_TheEyeThatDefiedTheGods extends Quest
 		{
 			return null;
 		}
-		String htmltext = event;
+		final String htmltext = event;
 		switch (event)
 		{
 			case "31616-02.htm":

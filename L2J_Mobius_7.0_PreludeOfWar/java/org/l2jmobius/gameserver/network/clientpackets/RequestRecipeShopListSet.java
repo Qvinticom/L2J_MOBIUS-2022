@@ -50,7 +50,7 @@ public class RequestRecipeShopListSet implements IClientIncomingPacket
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		int count = packet.readD();
+		final int count = packet.readD();
 		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
 			return false;
@@ -59,8 +59,8 @@ public class RequestRecipeShopListSet implements IClientIncomingPacket
 		_manufactureRecipes = new HashMap<>(count);
 		for (int i = 0; i < count; i++)
 		{
-			int id = packet.readD();
-			long cost = packet.readQ();
+			final int id = packet.readD();
+			final long cost = packet.readQ();
 			if (cost < 0)
 			{
 				_manufactureRecipes = null;

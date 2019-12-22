@@ -80,7 +80,7 @@ public class CharacterBirthday extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		QuestState st = getQuestState(player, false);
+		final QuestState st = getQuestState(player, false);
 		htmltext = event;
 		
 		if (event.equalsIgnoreCase("despawn_npc"))
@@ -91,10 +91,10 @@ public class CharacterBirthday extends AbstractNpcAI
 		}
 		if (event.equalsIgnoreCase("receive_reward"))
 		{
-			Calendar now = Calendar.getInstance();
+			final Calendar now = Calendar.getInstance();
 			now.setTimeInMillis(System.currentTimeMillis());
 			// Check if already received reward
-			String nextBirthday = st.get("Birthday");
+			final String nextBirthday = st.get("Birthday");
 			if ((nextBirthday != null) && (Integer.parseInt(nextBirthday) > now.get(Calendar.YEAR)))
 			{
 				htmltext = "32600-already.htm";
@@ -135,12 +135,12 @@ public class CharacterBirthday extends AbstractNpcAI
 			return null;
 		}
 		
-		QuestState st = getQuestState(player, true);
+		final QuestState st = getQuestState(player, true);
 		
 		if ((st != null) && (player.checkBirthDay() == 0))
 		{
 			player.sendPacket(new PlaySound(1, "HB01", 0, 0, 0, 0, 0));
-			Npc spawned = addSpawn(32600, player.getX() + 10, player.getY() + 10, player.getZ() + 10, 0, false, 0, true);
+			final Npc spawned = addSpawn(32600, player.getX() + 10, player.getY() + 10, player.getZ() + 10, 0, false, 0, true);
 			st.setState(State.STARTED);
 			startQuestTimer("despawn_npc", 60000, spawned, null);
 			HAS_SPAWNED = true;
@@ -160,7 +160,7 @@ public class CharacterBirthday extends AbstractNpcAI
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
-			Quest q = QuestManager.getInstance().getQuest(getName());
+			final Quest q = QuestManager.getInstance().getQuest(getName());
 			st = q.newQuestState(player);
 		}
 		if (player.checkBirthDay() == 0)

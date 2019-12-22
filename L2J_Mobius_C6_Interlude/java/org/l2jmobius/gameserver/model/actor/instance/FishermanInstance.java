@@ -67,11 +67,11 @@ public class FishermanInstance extends FolkInstance
 			taxRate = getCastle().getTaxRate();
 		}
 		player.tempInvetoryDisable();
-		StoreTradeList list = TradeController.getInstance().getBuyList(val);
+		final StoreTradeList list = TradeController.getInstance().getBuyList(val);
 		
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 		{
-			BuyList bl = new BuyList(list, player.getAdena(), taxRate);
+			final BuyList bl = new BuyList(list, player.getAdena(), taxRate);
 			player.sendPacket(bl);
 		}
 		else
@@ -127,8 +127,8 @@ public class FishermanInstance extends FolkInstance
 			}
 		}
 		
-		StringTokenizer st = new StringTokenizer(command, " ");
-		String command2 = st.nextToken();
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		final String command2 = st.nextToken();
 		
 		if (command2.equalsIgnoreCase("Buy"))
 		{
@@ -152,8 +152,8 @@ public class FishermanInstance extends FolkInstance
 	
 	public void showSkillList(PlayerInstance player)
 	{
-		SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player);
-		AquireSkillList asl = new AquireSkillList(AquireSkillList.skillType.Fishing);
+		final SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player);
+		final AquireSkillList asl = new AquireSkillList(AquireSkillList.skillType.Fishing);
 		
 		int counts = 0;
 		
@@ -172,19 +172,19 @@ public class FishermanInstance extends FolkInstance
 		
 		if (counts == 0)
 		{
-			NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			final int minlevel = SkillTreeTable.getInstance().getMinLevelForNewSkill(player);
 			
 			if (minlevel > 0)
 			{
 				// No more skills to learn, come back when you level.
-				SystemMessage sm = new SystemMessage(SystemMessageId.DO_NOT_HAVE_FURTHER_SKILLS_TO_LEARN);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.DO_NOT_HAVE_FURTHER_SKILLS_TO_LEARN);
 				sm.addNumber(minlevel);
 				player.sendPacket(sm);
 			}
 			else
 			{
-				StringBuilder sb = new StringBuilder();
+				final StringBuilder sb = new StringBuilder();
 				sb.append("<html><head><body>");
 				sb.append("You've learned all skills.<br>");
 				sb.append("</body></html>");

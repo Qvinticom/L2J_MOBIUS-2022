@@ -111,7 +111,7 @@ public class Q376_ExplorationOfTheGiantsCave_Part1 extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -151,7 +151,7 @@ public class Q376_ExplorationOfTheGiantsCave_Part1 extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -227,7 +227,7 @@ public class Q376_ExplorationOfTheGiantsCave_Part1 extends Quest
 	{
 		if (st.hasQuestItems(MYSTERIOUS_BOOK))
 		{
-			int cond = st.getInt("cond");
+			final int cond = st.getInt("cond");
 			if (cond == 1)
 			{
 				st.set("cond", "2");

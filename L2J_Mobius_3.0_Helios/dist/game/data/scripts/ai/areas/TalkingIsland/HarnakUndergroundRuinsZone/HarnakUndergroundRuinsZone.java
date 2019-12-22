@@ -64,9 +64,9 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 		{
 			for (int zoneId = 60142; zoneId <= 60165; zoneId++)
 			{
-				ZoneType zone = ZoneManager.getInstance().getZoneById(zoneId);
+				final ZoneType zone = ZoneManager.getInstance().getZoneById(zoneId);
 				_roomInfo.put(zone, new zoneInfo());
-				String zoneName = zone.getName().toLowerCase().replace(" ", "_");
+				final String zoneName = zone.getName().toLowerCase().replace(" ", "_");
 				_templates.stream().forEach(t -> t.spawn(g -> String.valueOf(g.getName()).equalsIgnoreCase(zoneName), null));
 			}
 		}
@@ -131,7 +131,7 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 		{
 			try
 			{
-				zoneInfo currentInfo = _roomInfo.get(_zone);
+				final zoneInfo currentInfo = _roomInfo.get(_zone);
 				switch (currentInfo.getZoneStage())
 				{
 					case 0:
@@ -169,7 +169,7 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 						if (currentInfo.getCurrentMonitorizedDamage() >= 10)
 						{
 							_zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.DEMONIC_SYSTEM_WILL_ACTIVATE, ExShowScreenMessage.TOP_CENTER, 3000));
-							String zoneName = _zone.getName().toLowerCase().replace(" ", "_");
+							final String zoneName = _zone.getName().toLowerCase().replace(" ", "_");
 							_templates.stream().forEach(t -> t.despawn(g -> String.valueOf(g.getName()).equalsIgnoreCase(zoneName)));
 							_templates.stream().forEach(t -> t.spawn(g -> String.valueOf(g.getName()).equalsIgnoreCase(zoneName + "_demonic"), null));
 							_zone.getPlayersInside().forEach(temp -> temp.sendPacket(new ExSendUIEvent(temp, false, false, 600, 0, NpcStringId.DEMONIC_SYSTEM_ACTIVATED)));
@@ -193,7 +193,7 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 								player.sendPacket(new ExSendUIEvent(player));
 							}
 						}
-						String zoneName = _zone.getName().toLowerCase().replace(" ", "_");
+						final String zoneName = _zone.getName().toLowerCase().replace(" ", "_");
 						_templates.stream().forEach(t -> t.despawn(g -> String.valueOf(g.getName()).equalsIgnoreCase(zoneName + "_demonic")));
 						_templates.stream().forEach(t -> t.spawn(g -> String.valueOf(g.getName()).equalsIgnoreCase(zoneName), null));
 						return;
@@ -219,14 +219,14 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 			if (currentZone.getKey().isInsideZone(npc))
 			{
 				final zoneInfo currentInfo = currentZone.getValue();
-				int currentPoints = currentInfo.getCurrentPoints();
+				final int currentPoints = currentInfo.getCurrentPoints();
 				if (currentPoints == 300)
 				{
 					if (currentInfo.getZoneStage() < 1)
 					{
 						return super.onKill(npc, killer, isSummon);
 					}
-					int currentDamage = currentInfo.getCurrentMonitorizedDamage();
+					final int currentDamage = currentInfo.getCurrentMonitorizedDamage();
 					int calcDamage = currentDamage + 1;
 					if (calcDamage >= 10)
 					{
@@ -262,7 +262,7 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 		
 		if (npc.getDisplayEffect() > 0)
 		{
-			MonsterInstance copy = (MonsterInstance) addSpawn(npc.getId(), npc.getX(), npc.getY(), npc.getZ(), 0, true, 0, false);
+			final MonsterInstance copy = (MonsterInstance) addSpawn(npc.getId(), npc.getX(), npc.getY(), npc.getZ(), 0, true, 0, false);
 			copy.setTarget(killer);
 			copy.addDamageHate(killer, 500, 99999);
 			copy.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, killer);

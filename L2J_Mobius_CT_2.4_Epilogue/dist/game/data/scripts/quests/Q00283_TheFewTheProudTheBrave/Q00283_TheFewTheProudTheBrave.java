@@ -103,7 +103,7 @@ public class Q00283_TheFewTheProudTheBrave extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if(qs != null)
+		if (qs != null)
 		{
 			giveItemRandomly(killer, npc, CRIMSON_SPIDER_CLAW, 1, 0, 0.6, true);
 		}

@@ -93,9 +93,9 @@ public class FortSiegeManager
 			return false;
 		}
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-		PlayerInstance player = (PlayerInstance) creature;
-		Fort fort = FortManager.getInstance().getFort(player);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+		final PlayerInstance player = (PlayerInstance) creature;
+		final Fort fort = FortManager.getInstance().getFort(player);
 		
 		if ((fort == null) || (fort.getFortId() <= 0))
 		{
@@ -144,10 +144,10 @@ public class FortSiegeManager
 		boolean register = false;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT clan_id FROM fortsiege_clans where clan_id=? and fort_id=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT clan_id FROM fortsiege_clans where clan_id=? and fort_id=?");
 			statement.setInt(1, clan.getClanId());
 			statement.setInt(2, fortid);
-			ResultSet rs = statement.executeQuery();
+			final ResultSet rs = statement.executeQuery();
 			
 			while (rs.next())
 			{

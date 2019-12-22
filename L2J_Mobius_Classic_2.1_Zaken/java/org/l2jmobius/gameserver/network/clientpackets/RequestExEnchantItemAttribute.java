@@ -300,7 +300,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			return -1;
 		}
 		
-		boolean success = Elementals.isSuccess(item, stone.getId());
+		final boolean success = Elementals.isSuccess(item, stone.getId());
 		
 		if (success)
 		{

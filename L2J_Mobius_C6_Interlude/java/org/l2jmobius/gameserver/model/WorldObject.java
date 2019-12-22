@@ -178,10 +178,10 @@ public abstract class WorldObject
 	 */
 	public void pickupMe(Creature creature) // NOTE: Should move this function into ItemInstance because it does not apply to Creature
 	{
-		WorldRegion oldregion = getPosition().getWorldRegion();
+		final WorldRegion oldregion = getPosition().getWorldRegion();
 		
 		// Create a server->client GetItem packet to pick up the ItemInstance
-		GetItem gi = new GetItem((ItemInstance) this, creature.getObjectId());
+		final GetItem gi = new GetItem((ItemInstance) this, creature.getObjectId());
 		creature.broadcastPacket(gi);
 		
 		synchronized (this)

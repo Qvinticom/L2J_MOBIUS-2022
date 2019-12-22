@@ -175,7 +175,7 @@ public class VariationData implements IXmlReader
 				
 				for (int item : itemGroup)
 				{
-					Map<Integer, VariationFee> fees = _fees.computeIfAbsent(item, k -> new HashMap<>());
+					final Map<Integer, VariationFee> fees = _fees.computeIfAbsent(item, k -> new HashMap<>());
 					fees.putAll(feeByMinerals);
 				}
 			}));
@@ -206,8 +206,8 @@ public class VariationData implements IXmlReader
 	
 	private VariationInstance generateRandomVariation(Variation variation, VariationWeaponType weaponType)
 	{
-		Options option1 = variation.getRandomEffect(weaponType, 0);
-		Options option2 = variation.getRandomEffect(weaponType, 1);
+		final Options option1 = variation.getRandomEffect(weaponType, 0);
+		final Options option2 = variation.getRandomEffect(weaponType, 1);
 		return ((option1 != null) && (option2 != null)) ? new VariationInstance(variation.getMineralId(), option1, option2) : null;
 	}
 	
@@ -246,7 +246,7 @@ public class VariationData implements IXmlReader
 	
 	public boolean hasFeeData(int itemId)
 	{
-		Map<Integer, VariationFee> itemFees = _fees.get(itemId);
+		final Map<Integer, VariationFee> itemFees = _fees.get(itemId);
 		return (itemFees != null) && !itemFees.isEmpty();
 	}
 	

@@ -196,68 +196,56 @@ public class Q11020_BlacksmithsRequest extends Quest
 			{
 				case BLACKWING_BAT:
 				{
-					if (qs.isCond(2) && (getQuestItemsCount(killer, BLACKWING_BAT_WING) < 20))
+					if (qs.isCond(2) && (getQuestItemsCount(killer, BLACKWING_BAT_WING) < 20) && (getRandom(100) < 90))
 					{
-						if (getRandom(100) < 90)
+						giveItems(killer, BLACKWING_BAT_WING, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, BLACKWING_BAT_WING) >= 20)
 						{
-							giveItems(killer, BLACKWING_BAT_WING, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, BLACKWING_BAT_WING) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_BLACKWING_BATS_N_GO_HUNTING_AND_KILL_GOBLIN_TOMB_RAIDER_LEADERS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(3);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_BLACKWING_BATS_N_GO_HUNTING_AND_KILL_GOBLIN_TOMB_RAIDER_LEADERS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(3);
 						}
 					}
 					break;
 				}
 				case TOMB_RAIDER_LEADER:
 				{
-					if (qs.isCond(3) && (getQuestItemsCount(killer, GRAVE_ROBBERS_BELT) < 20))
+					if (qs.isCond(3) && (getQuestItemsCount(killer, GRAVE_ROBBERS_BELT) < 20) && (getRandom(100) < 90))
 					{
-						if (getRandom(100) < 90)
+						giveItems(killer, GRAVE_ROBBERS_BELT, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, GRAVE_ROBBERS_BELT) >= 20)
 						{
-							giveItems(killer, GRAVE_ROBBERS_BELT, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, GRAVE_ROBBERS_BELT) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GOBLIN_TOMB_RAIDER_LEADERS_N_GO_HUNTING_AND_KILL_GREYSTONE_GOLEMS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(4);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GOBLIN_TOMB_RAIDER_LEADERS_N_GO_HUNTING_AND_KILL_GREYSTONE_GOLEMS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(4);
 						}
 					}
 					break;
 				}
 				case GREYSTONE_GOLEM:
 				{
-					if (qs.isCond(4) && (getQuestItemsCount(killer, GOLEM_ORE) < 20))
+					if (qs.isCond(4) && (getQuestItemsCount(killer, GOLEM_ORE) < 20) && (getRandom(100) < 90))
 					{
-						if (getRandom(100) < 90)
+						giveItems(killer, GOLEM_ORE, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if ((getQuestItemsCount(killer, GOLEM_ORE) >= 20))
 						{
-							giveItems(killer, GOLEM_ORE, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if ((getQuestItemsCount(killer, GOLEM_ORE) >= 20))
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GREYSTONE_GOLEMS_N_GO_HUNTING_AND_KILL_EVIL_EYE_PATROLS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(5);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_GREYSTONE_GOLEMS_N_GO_HUNTING_AND_KILL_EVIL_EYE_PATROLS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(5);
 						}
 					}
 					break;
 				}
 				case EVIL_EYE_PATROL:
 				{
-					if (qs.isCond(5) && (getQuestItemsCount(killer, EVIL_EYE_PATROL_HIDE) < 20))
+					if (qs.isCond(5) && (getQuestItemsCount(killer, EVIL_EYE_PATROL_HIDE) < 20) && (getRandom(100) < 90))
 					{
-						if (getRandom(100) < 90)
+						giveItems(killer, EVIL_EYE_PATROL_HIDE, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if ((getQuestItemsCount(killer, EVIL_EYE_PATROL_HIDE) >= 20))
 						{
-							giveItems(killer, EVIL_EYE_PATROL_HIDE, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if ((getQuestItemsCount(killer, EVIL_EYE_PATROL_HIDE) >= 20))
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_EVIL_EYE_PATROLS_NRETURN_TO_BLACKSMITH_SUMARI, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(6);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_EVIL_EYE_PATROLS_NRETURN_TO_BLACKSMITH_SUMARI, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(6);
 						}
 					}
 					break;

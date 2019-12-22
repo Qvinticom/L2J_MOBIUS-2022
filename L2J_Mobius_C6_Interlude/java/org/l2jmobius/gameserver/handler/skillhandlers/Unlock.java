@@ -41,7 +41,7 @@ public class Unlock implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		WorldObject[] targetList = skill.getTargetList(creature);
+		final WorldObject[] targetList = skill.getTargetList(creature);
 		
 		if (targetList == null)
 		{
@@ -50,12 +50,12 @@ public class Unlock implements ISkillHandler
 		
 		for (WorldObject element : targetList)
 		{
-			WorldObject target = element;
+			final WorldObject target = element;
 			
 			final boolean success = Formulas.getInstance().calculateUnlockChance(skill);
 			if (target instanceof DoorInstance)
 			{
-				DoorInstance door = (DoorInstance) target;
+				final DoorInstance door = (DoorInstance) target;
 				if (!door.isUnlockable())
 				{
 					creature.sendPacket(new SystemMessage(SystemMessageId.UNABLE_TO_UNLOCK_DOOR));
@@ -67,7 +67,7 @@ public class Unlock implements ISkillHandler
 				{
 					door.openMe();
 					door.onOpen();
-					SystemMessage msg = new SystemMessage(SystemMessageId.S1_S2);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.S1_S2);
 					msg.addString("Unlock the door!");
 					creature.sendPacket(msg);
 				}
@@ -78,7 +78,7 @@ public class Unlock implements ISkillHandler
 			}
 			else if (target instanceof ChestInstance)
 			{
-				ChestInstance chest = (ChestInstance) element;
+				final ChestInstance chest = (ChestInstance) element;
 				
 				if ((chest.getCurrentHp() <= 0) || chest.isInteracted())
 				{

@@ -658,8 +658,8 @@ public class GameStatusThread extends Thread
 				else if (usrCommand.startsWith("debug") && (usrCommand.length() > 6))
 				{
 					final StringTokenizer st = new StringTokenizer(usrCommand.substring(6));
-					FileOutputStream fos = null;
-					OutputStreamWriter out = null;
+					final FileOutputStream fos = null;
+					final OutputStreamWriter out = null;
 					try
 					{
 						final String dbg = st.nextToken();

@@ -109,7 +109,7 @@ public class BoxInstance extends NpcInstance
 	@Override
 	public void onBypassFeedback(PlayerInstance player, String command)
 	{
-		String playerName = player.getName();
+		final String playerName = player.getName();
 		final boolean access = hasAccess(playerName);
 		
 		if (command.startsWith("Withdraw"))
@@ -172,10 +172,10 @@ public class BoxInstance extends NpcInstance
 		boolean result = false;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement st = con.prepareStatement("SELECT spawn, charname FROM boxaccess WHERE charname=? AND spawn=?");
+			final PreparedStatement st = con.prepareStatement("SELECT spawn, charname FROM boxaccess WHERE charname=? AND spawn=?");
 			st.setString(1, player);
 			st.setInt(2, getSpawn().getId());
-			ResultSet rs = st.executeQuery();
+			final ResultSet rs = st.executeQuery();
 			
 			if (rs.next())
 			{
@@ -197,9 +197,9 @@ public class BoxInstance extends NpcInstance
 		final List<String> acl = new ArrayList<>();
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement st = con.prepareStatement(LIST_GRANT);
+			final PreparedStatement st = con.prepareStatement(LIST_GRANT);
 			st.setInt(1, getSpawn().getId());
-			ResultSet rs = st.executeQuery();
+			final ResultSet rs = st.executeQuery();
 			
 			while (rs.next())
 			{
@@ -229,7 +229,7 @@ public class BoxInstance extends NpcInstance
 				query = DELETE_GRANT;
 			}
 			
-			PreparedStatement st = con.prepareStatement(query);
+			final PreparedStatement st = con.prepareStatement(query);
 			st.setString(1, player);
 			st.setInt(2, getSpawn().getId());
 			st.execute();
@@ -249,7 +249,7 @@ public class BoxInstance extends NpcInstance
 			return;
 		}
 		
-		String[] cmd = command.split(" ");
+		final String[] cmd = command.split(" ");
 		int startPos = 0;
 		
 		if (cmd != null)
@@ -261,9 +261,9 @@ public class BoxInstance extends NpcInstance
 			}
 		}
 		
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		int nitems = 0;
-		Set<BoxItem> items = getItems(drawername);
+		final Set<BoxItem> items = getItems(drawername);
 		
 		if (startPos >= items.size())
 		{
@@ -271,8 +271,8 @@ public class BoxInstance extends NpcInstance
 		}
 		
 		String button = "<button value=\"Withdraw\" width=80 height=15 action=\"bypass -h npc_" + getObjectId() + "_OutBox " + drawername;
-		String next = "<button value=\"next\" width=50 height=15 action=\"bypass -h npc_" + getObjectId() + "_Withdraw " + drawername + " " + (startPos + MAX_ITEMS_PER_PAGE) + "\">";
-		String back = "<button value=\"back\" width=50 height=15 action=\"bypass -h npc_" + getObjectId() + "_Chat 0\">";
+		final String next = "<button value=\"next\" width=50 height=15 action=\"bypass -h npc_" + getObjectId() + "_Withdraw " + drawername + " " + (startPos + MAX_ITEMS_PER_PAGE) + "\">";
+		final String back = "<button value=\"back\" width=50 height=15 action=\"bypass -h npc_" + getObjectId() + "_Chat 0\">";
 		String content = "<html><body>Drawer " + drawername + ":<br>" + next + " " + back + "<table width=\"100%\">";
 		content += "<tr><td>Item</td><td>Count</td><td>Withdraw</td></tr>";
 		for (BoxItem i : items)
@@ -310,7 +310,7 @@ public class BoxInstance extends NpcInstance
 			return;
 		}
 		
-		String[] cmd = command.split(" ");
+		final String[] cmd = command.split(" ");
 		int startPos = 0;
 		
 		if (cmd != null)
@@ -322,9 +322,9 @@ public class BoxInstance extends NpcInstance
 			}
 		}
 		
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		int nitems = 0;
-		Set<BoxItem> items = new HashSet<>();
+		final Set<BoxItem> items = new HashSet<>();
 		for (ItemInstance i : player.getInventory().getItems())
 		{
 			if ((i.getItemId() == 57) || i.isEquipped())
@@ -342,8 +342,8 @@ public class BoxInstance extends NpcInstance
 		}
 		
 		String button = "<button value=\"Deposit\" width=80 height=15 action=\"bypass -h npc_" + getObjectId() + "_InBox " + drawername;
-		String next = "<button value=\"next\" width=50 height=15 action=\"bypass -h npc_" + getObjectId() + "_Deposit " + drawername + " " + (startPos + MAX_ITEMS_PER_PAGE) + "\">";
-		String back = "<button value=\"back\" width=50 height=15 action=\"bypass -h npc_" + getObjectId() + "_Chat 0\">";
+		final String next = "<button value=\"next\" width=50 height=15 action=\"bypass -h npc_" + getObjectId() + "_Deposit " + drawername + " " + (startPos + MAX_ITEMS_PER_PAGE) + "\">";
+		final String back = "<button value=\"back\" width=50 height=15 action=\"bypass -h npc_" + getObjectId() + "_Chat 0\">";
 		String content = "<html><body>Drawer " + drawername + ":<br>" + next + " " + back + "<table width=\"100%\">";
 		content += "<tr><td>Item</td><td>Count</td><td>Deposit</td></tr>";
 		
@@ -379,11 +379,11 @@ public class BoxInstance extends NpcInstance
 		final Set<BoxItem> it = new HashSet<>();
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT id, spawn, npcid, drawer, itemid, name, count, enchant FROM boxes where spawn=? and npcid=? and drawer=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT id, spawn, npcid, drawer, itemid, name, count, enchant FROM boxes where spawn=? and npcid=? and drawer=?");
 			statement.setInt(1, getSpawn().getId());
 			statement.setInt(2, getNpcId());
 			statement.setString(3, drawer);
-			ResultSet rs = statement.executeQuery();
+			final ResultSet rs = statement.executeQuery();
 			while (rs.next())
 			{
 				LOGGER.info("found: itemid=" + rs.getInt("itemid") + ", count=" + rs.getInt("count"));

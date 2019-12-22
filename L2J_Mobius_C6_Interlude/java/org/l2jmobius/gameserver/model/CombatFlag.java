@@ -91,14 +91,14 @@ public class CombatFlag
 		_item = item;
 		_player.getInventory().equipItemAndRecord(_item);
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.S1_EQUIPPED);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_EQUIPPED);
 		sm.addItemName(_item.getItemId());
 		_player.sendPacket(sm);
 		
 		// Refresh inventory
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addItem(_item);
 			_player.sendPacket(iu);
 		}

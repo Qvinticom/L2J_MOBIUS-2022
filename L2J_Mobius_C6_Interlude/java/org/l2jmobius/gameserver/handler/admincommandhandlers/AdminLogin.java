@@ -58,11 +58,11 @@ public class AdminLogin implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_server_max_player"))
 		{
-			StringTokenizer st = new StringTokenizer(command);
+			final StringTokenizer st = new StringTokenizer(command);
 			if (st.countTokens() > 1)
 			{
 				st.nextToken();
-				String number = st.nextToken();
+				final String number = st.nextToken();
 				try
 				{
 					LoginServerThread.getInstance().setMaxPlayer(Integer.parseInt(number));
@@ -81,12 +81,12 @@ public class AdminLogin implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_server_list_clock"))
 		{
-			StringTokenizer st = new StringTokenizer(command);
+			final StringTokenizer st = new StringTokenizer(command);
 			
 			if (st.countTokens() > 1)
 			{
 				st.nextToken();
-				String mode = st.nextToken();
+				final String mode = st.nextToken();
 				
 				switch (mode)
 				{
@@ -130,7 +130,7 @@ public class AdminLogin implements IAdminCommandHandler
 	 */
 	private void showMainPage(PlayerInstance activeChar)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(1);
+		final NpcHtmlMessage html = new NpcHtmlMessage(1);
 		html.setFile("data/html/admin/login.htm");
 		html.replace("%server_name%", LoginServerThread.getInstance().getServerName());
 		html.replace("%status%", LoginServerThread.getInstance().getStatusString());

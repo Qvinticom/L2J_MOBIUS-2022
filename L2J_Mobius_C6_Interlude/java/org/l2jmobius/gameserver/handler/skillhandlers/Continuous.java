@@ -235,7 +235,7 @@ public class Continuous implements ISkillHandler
 			// if this is a debuff let the duel manager know about it so the debuff can be removed after the duel (player & target must be in the same duel)
 			if ((target instanceof PlayerInstance) && (player != null) && ((PlayerInstance) target).isInDuel() && ((skill.getSkillType() == SkillType.DEBUFF) || (skill.getSkillType() == SkillType.BUFF)) && (player.getDuelId() == ((PlayerInstance) target).getDuelId()))
 			{
-				DuelManager dm = DuelManager.getInstance();
+				final DuelManager dm = DuelManager.getInstance();
 				if (dm != null)
 				{
 					final Effect[] effects = skill.getEffects(creature, target, ss, sps, bss);

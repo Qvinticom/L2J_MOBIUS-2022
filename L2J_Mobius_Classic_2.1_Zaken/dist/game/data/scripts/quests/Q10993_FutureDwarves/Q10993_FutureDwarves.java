@@ -146,6 +146,7 @@ public class Q10993_FutureDwarves extends Quest
 					}
 					break;
 				}
+				break;
 			}
 			case State.COMPLETED:
 			{

@@ -68,13 +68,13 @@ public class BlockList
 	
 	private static List<Integer> loadList(int objId)
 	{
-		List<Integer> list = new ArrayList<>();
+		final List<Integer> list = new ArrayList<>();
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT friend_id FROM character_friends WHERE char_id = ? AND relation = 1");
+			final PreparedStatement statement = con.prepareStatement("SELECT friend_id FROM character_friends WHERE char_id = ? AND relation = 1");
 			statement.setInt(1, objId);
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			
 			int friendId;
 			while (rset.next())
@@ -142,13 +142,13 @@ public class BlockList
 	
 	public static boolean isBlocked(PlayerInstance listOwner, PlayerInstance target)
 	{
-		BlockList blockList = listOwner.getBlockList();
+		final BlockList blockList = listOwner.getBlockList();
 		return blockList.isBlockAll() || blockList.isInBlockList(target);
 	}
 	
 	public static boolean isBlocked(PlayerInstance listOwner, int targetId)
 	{
-		BlockList blockList = listOwner.getBlockList();
+		final BlockList blockList = listOwner.getBlockList();
 		return blockList.isBlockAll() || blockList.isInBlockList(targetId);
 	}
 	
@@ -169,11 +169,11 @@ public class BlockList
 			return;
 		}
 		
-		String charName = CharNameTable.getInstance().getPlayerName(targetId);
+		final String charName = CharNameTable.getInstance().getPlayerName(targetId);
 		
 		if (listOwner.getFriendList().contains(targetId))
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_IN_FRIENDS_LIST);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_IN_FRIENDS_LIST);
 			sm.addString(charName);
 			listOwner.sendPacket(sm);
 			return;
@@ -191,7 +191,7 @@ public class BlockList
 		sm.addString(charName);
 		listOwner.sendPacket(sm);
 		
-		PlayerInstance player = World.getInstance().getPlayer(targetId);
+		final PlayerInstance player = World.getInstance().getPlayer(targetId);
 		
 		if (player != null)
 		{
@@ -209,7 +209,7 @@ public class BlockList
 		}
 		
 		SystemMessage sm;
-		String charName = CharNameTable.getInstance().getPlayerName(targetId);
+		final String charName = CharNameTable.getInstance().getPlayerName(targetId);
 		
 		if (!listOwner.getBlockList().getBlockList().contains(targetId))
 		{
@@ -260,7 +260,7 @@ public class BlockList
 	 */
 	public static boolean isInBlockList(int ownerId, int targetId)
 	{
-		PlayerInstance player = World.getInstance().getPlayer(ownerId);
+		final PlayerInstance player = World.getInstance().getPlayer(ownerId);
 		
 		if (player != null)
 		{

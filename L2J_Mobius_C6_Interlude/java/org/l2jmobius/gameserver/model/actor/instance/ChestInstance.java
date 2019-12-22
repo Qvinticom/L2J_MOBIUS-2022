@@ -211,7 +211,7 @@ public class ChestInstance extends MonsterInstance
 			return false;
 		}
 		
-		Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
+		final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
 		
 		if (creature.getFirstEffect(skill) == null)
 		{

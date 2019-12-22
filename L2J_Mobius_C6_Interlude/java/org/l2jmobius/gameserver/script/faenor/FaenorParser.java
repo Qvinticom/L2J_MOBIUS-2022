@@ -67,10 +67,10 @@ public abstract class FaenorParser extends Parser
 	{
 		try
 		{
-			NodeList list = parentNode.getChildNodes();
+			final NodeList list = parentNode.getChildNodes();
 			for (int i = 0; i < list.getLength(); i++)
 			{
-				Node node = list.item(i);
+				final Node node = list.item(i);
 				if (node.getNodeName().equalsIgnoreCase(elementName))
 				{
 					return node.getTextContent();

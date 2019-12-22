@@ -52,7 +52,7 @@ public class FortZone extends ZoneType
 		{
 			case "fortId":
 			{
-				int fortId = Integer.parseInt(value);
+				final int fortId = Integer.parseInt(value);
 				// Register self to the correct fort
 				_fort = FortManager.getInstance().getFortById(fortId);
 				_fort.setZone(this);

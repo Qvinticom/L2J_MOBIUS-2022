@@ -40,7 +40,7 @@ public class TopBBSManager extends BaseBBSManager
 		}
 		else if (command.startsWith("_bbshome;"))
 		{
-			StringTokenizer st = new StringTokenizer(command, ";");
+			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			
 			loadStaticHtm(st.nextToken(), player);

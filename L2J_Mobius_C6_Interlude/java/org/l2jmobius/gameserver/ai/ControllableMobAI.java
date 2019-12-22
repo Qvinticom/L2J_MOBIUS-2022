@@ -265,7 +265,7 @@ public class ControllableMobAI extends AttackableAI
 			if (getAttackTarget() != null)
 			{
 				// stop hating
-				Attackable npc = (Attackable) _actor;
+				final Attackable npc = (Attackable) _actor;
 				npc.stopHating(getAttackTarget());
 			}
 			
@@ -283,8 +283,8 @@ public class ControllableMobAI extends AttackableAI
 						continue;
 					}
 					
-					NpcInstance npc = (NpcInstance) obj;
-					String factionId = ((NpcInstance) _actor).getFactionId();
+					final NpcInstance npc = (NpcInstance) obj;
+					final String factionId = ((NpcInstance) _actor).getFactionId();
 					
 					if (!factionId.equalsIgnoreCase(npc.getFactionId()))
 					{
@@ -424,7 +424,7 @@ public class ControllableMobAI extends AttackableAI
 	{
 		final int aggroRange = ((Attackable) _actor).getAggroRange();
 		
-		Attackable npc = (Attackable) _actor;
+		final Attackable npc = (Attackable) _actor;
 		
 		int npcX;
 		int npcY;

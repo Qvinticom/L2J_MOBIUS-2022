@@ -45,7 +45,7 @@ public class BeastFeed implements ISkillHandler
 			return;
 		}
 		
-		WorldObject[] targetList = skill.getTargetList(creature);
+		final WorldObject[] targetList = skill.getTargetList(creature);
 		
 		if (targetList == null)
 		{

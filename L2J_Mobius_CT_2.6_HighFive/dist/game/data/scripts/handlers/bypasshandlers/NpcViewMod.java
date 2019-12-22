@@ -282,7 +282,7 @@ public class NpcViewMod implements IBypassHandler
 		{
 			final StringBuilder sb = new StringBuilder();
 			
-			int height = 64;
+			final int height = 64;
 			final DropHolder dropItem = dropList.get(i);
 			final Item item = ItemTable.getInstance().getTemplate(dropItem.getItemId());
 			

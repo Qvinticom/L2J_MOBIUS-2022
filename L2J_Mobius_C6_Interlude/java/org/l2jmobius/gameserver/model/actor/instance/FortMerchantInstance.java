@@ -50,7 +50,7 @@ public class FortMerchantInstance extends NpcWalkerInstance
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
@@ -72,8 +72,8 @@ public class FortMerchantInstance extends NpcWalkerInstance
 	@Override
 	public void onBypassFeedback(PlayerInstance player, String command)
 	{
-		StringTokenizer st = new StringTokenizer(command, " ");
-		String actualCommand = st.nextToken(); // Get actual command
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		final String actualCommand = st.nextToken(); // Get actual command
 		
 		String par = "";
 		if (st.countTokens() >= 1)
@@ -123,7 +123,7 @@ public class FortMerchantInstance extends NpcWalkerInstance
 			filename = "data/html/fortress/merchant-" + val + ".htm";
 		}
 		
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcId%", String.valueOf(getNpcId()));
@@ -153,7 +153,7 @@ public class FortMerchantInstance extends NpcWalkerInstance
 		}
 		else
 		{
-			NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			html.setFile("data/html/fortress/merchant-busy.htm");
 			html.replace("%fortname%", getFort().getName());
 			html.replace("%objectId%", String.valueOf(getObjectId()));

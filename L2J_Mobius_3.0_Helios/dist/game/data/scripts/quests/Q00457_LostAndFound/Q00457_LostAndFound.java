@@ -205,7 +205,7 @@ public class Q00457_LostAndFound extends Quest
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState qs = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		switch (qs.getState())
 		{

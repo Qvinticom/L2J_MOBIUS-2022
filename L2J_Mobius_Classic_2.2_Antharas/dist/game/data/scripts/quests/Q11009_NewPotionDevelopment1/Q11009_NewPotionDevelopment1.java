@@ -192,34 +192,28 @@ public class Q11009_NewPotionDevelopment1 extends Quest
 				case SCAVENGER_SPIDER:
 				case RED_SCAVENGER_SPIDER:
 				{
-					if (qs.isCond(2) && (getQuestItemsCount(killer, SPIDER_ICHOR) < 20))
+					if (qs.isCond(2) && (getQuestItemsCount(killer, SPIDER_ICHOR) < 20) && (getRandom(100) < 92))
 					{
-						if (getRandom(100) < 92)
+						giveItems(killer, SPIDER_ICHOR, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, SPIDER_ICHOR) >= 20)
 						{
-							giveItems(killer, SPIDER_ICHOR, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, SPIDER_ICHOR) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_SCAVENGER_SPIDERS_AND_RED_SCAVENGER_SPIDERS_N_GO_HUNTING_AND_KILL_MOONSTONE_BEASTS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(3);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_SCAVENGER_SPIDERS_AND_RED_SCAVENGER_SPIDERS_N_GO_HUNTING_AND_KILL_MOONSTONE_BEASTS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(3);
 						}
 					}
 					break;
 				}
 				case MOONSTONE_BEAST:
 				{
-					if (qs.isCond(3) && (getQuestItemsCount(killer, MOONSTONE_BEAST_SCALES) < 20))
+					if (qs.isCond(3) && (getQuestItemsCount(killer, MOONSTONE_BEAST_SCALES) < 20) && (getRandom(100) < 92))
 					{
-						if (getRandom(100) < 92)
+						giveItems(killer, MOONSTONE_BEAST_SCALES, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, MOONSTONE_BEAST_SCALES) >= 20)
 						{
-							giveItems(killer, MOONSTONE_BEAST_SCALES, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, MOONSTONE_BEAST_SCALES) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.RETURN_TO_GROCER_HERBIEL, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(4);
-							}
+							showOnScreenMsg(killer, NpcStringId.RETURN_TO_GROCER_HERBIEL, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(4);
 						}
 					}
 					break;

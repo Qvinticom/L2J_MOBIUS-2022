@@ -1021,9 +1021,9 @@ public class ItemInstance extends WorldObject
 			{
 				if (rs.next())
 				{
-					int mineralId = rs.getInt("mineralId");
-					int option1 = rs.getInt("option1");
-					int option2 = rs.getInt("option2");
+					final int mineralId = rs.getInt("mineralId");
+					final int option1 = rs.getInt("option1");
+					final int option2 = rs.getInt("option2");
 					if ((option1 != -1) && (option2 != -1))
 					{
 						_augmentation = new VariationInstance(mineralId, option1, option2);
@@ -1786,7 +1786,7 @@ public class ItemInstance extends WorldObject
 		{
 			return true;
 		}
-		Creature owner = getActingPlayer();
+		final Creature owner = getActingPlayer();
 		if (owner != null)
 		{
 			for (Condition condition : _item.getConditions())

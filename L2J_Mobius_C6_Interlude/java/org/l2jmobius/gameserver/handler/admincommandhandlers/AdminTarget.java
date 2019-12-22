@@ -55,8 +55,8 @@ public class AdminTarget implements IAdminCommandHandler
 	{
 		try
 		{
-			String targetName = command.substring(13);
-			WorldObject obj = World.getInstance().getPlayer(targetName);
+			final String targetName = command.substring(13);
+			final WorldObject obj = World.getInstance().getPlayer(targetName);
 			
 			if (obj instanceof PlayerInstance)
 			{
@@ -71,7 +71,7 @@ public class AdminTarget implements IAdminCommandHandler
 		}
 		catch (IndexOutOfBoundsException e)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 			sm.addString("Please specify correct name.");
 			activeChar.sendPacket(sm);
 		}

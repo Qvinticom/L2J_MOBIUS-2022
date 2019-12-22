@@ -44,7 +44,7 @@ public class ClanPenalty implements IUserCommandHandler
 		boolean penalty = false;
 		
 		final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-		StringBuilder htmlContent = new StringBuilder("<html><body>");
+		final StringBuilder htmlContent = new StringBuilder("<html><body>");
 		
 		htmlContent.append("<center><table width=270 border=0 bgcolor=111111>");
 		htmlContent.append("<tr><td width=170>Penalty</td>");
@@ -80,7 +80,7 @@ public class ClanPenalty implements IUserCommandHandler
 		htmlContent.append("</tr></table><img src=\"L2UI.SquareWhite\" width=270 height=1>");
 		htmlContent.append("</center></body></html>");
 		
-		NpcHtmlMessage penaltyHtml = new NpcHtmlMessage(0);
+		final NpcHtmlMessage penaltyHtml = new NpcHtmlMessage(0);
 		penaltyHtml.setHtml(htmlContent.toString());
 		player.sendPacket(penaltyHtml);
 		

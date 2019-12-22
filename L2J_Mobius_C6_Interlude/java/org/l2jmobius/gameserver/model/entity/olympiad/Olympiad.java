@@ -250,8 +250,8 @@ public class Olympiad
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(OLYMPIAD_LOAD_NOBLES);
-			ResultSet rset = statement.executeQuery();
+			final PreparedStatement statement = con.prepareStatement(OLYMPIAD_LOAD_NOBLES);
+			final ResultSet rset = statement.executeQuery();
 			
 			while (rset.next())
 			{
@@ -279,8 +279,8 @@ public class Olympiad
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(OLYMPIAD_LOAD_OLD_NOBLES);
-			ResultSet rset = statement.executeQuery();
+			final PreparedStatement statement = con.prepareStatement(OLYMPIAD_LOAD_OLD_NOBLES);
+			final ResultSet rset = statement.executeQuery();
 			
 			while (rset.next())
 			{

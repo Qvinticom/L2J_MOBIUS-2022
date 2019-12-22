@@ -62,15 +62,15 @@ public class BlessedSpiritShot implements IItemHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) playable;
-		ItemInstance weaponInst = player.getActiveWeaponInstance();
-		Weapon weaponItem = player.getActiveWeaponItem();
+		final PlayerInstance player = (PlayerInstance) playable;
+		final ItemInstance weaponInst = player.getActiveWeaponInstance();
+		final Weapon weaponItem = player.getActiveWeaponItem();
 		
 		final int itemId = item.getItemId();
 		
 		if (player.isInOlympiadMode())
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 			sm.addString(item.getItemName());
 			player.sendPacket(sm);
 			
@@ -112,7 +112,7 @@ public class BlessedSpiritShot implements IItemHandler
 			{
 				player.removeAutoSoulShot(itemId);
 				player.sendPacket(new ExAutoSoulShot(itemId, 0));
-				SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
 				sm.addString(item.getItem().getName());
 				player.sendPacket(sm);
 				

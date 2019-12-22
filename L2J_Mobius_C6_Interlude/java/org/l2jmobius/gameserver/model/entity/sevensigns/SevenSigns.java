@@ -42,8 +42,8 @@ import org.l2jmobius.gameserver.network.serverpackets.SignsSky;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Seven Signs Engine TODO: - Implementation of the Seal of Strife for sieges.
- * @author programmos
+ * Seven Signs engine.
+ * @author Tempy
  */
 public class SevenSigns
 {
@@ -164,7 +164,7 @@ public class SevenSigns
 			setCalendarForNextPeriodChange();
 			final long milliToChange = getMilliToPeriodChange();
 			
-			SevenSignsPeriodChange sspc = new SevenSignsPeriodChange();
+			final SevenSignsPeriodChange sspc = new SevenSignsPeriodChange();
 			ThreadPool.schedule(sspc, milliToChange);
 			
 			final double numSecs = (milliToChange / 1000) % 60;
@@ -738,7 +738,7 @@ public class SevenSigns
 	public int getTotalMembers(int cabal)
 	{
 		int cabalMembers = 0;
-		String cabalName = getCabalShortName(cabal);
+		final String cabalName = getCabalShortName(cabal);
 		
 		for (StatsSet sevenDat : _signsPlayerData.values())
 		{
@@ -780,7 +780,7 @@ public class SevenSigns
 		
 		int stoneCount = 0;
 		
-		StatsSet currPlayer = getPlayerData(player);
+		final StatsSet currPlayer = getPlayerData(player);
 		
 		stoneCount += currPlayer.getInt("red_stones");
 		stoneCount += currPlayer.getInt("green_stones");
@@ -848,7 +848,7 @@ public class SevenSigns
 			return CABAL_NULL;
 		}
 		
-		String playerCabal = getPlayerData(player).getString("cabal");
+		final String playerCabal = getPlayerData(player).getString("cabal");
 		
 		if (playerCabal.equalsIgnoreCase("dawn"))
 		{
@@ -1124,7 +1124,7 @@ public class SevenSigns
 	 */
 	public int getAncientAdenaReward(PlayerInstance player, boolean removeReward)
 	{
-		StatsSet currPlayer = getPlayerData(player);
+		final StatsSet currPlayer = getPlayerData(player);
 		final int rewardAmount = currPlayer.getInt("ancient_adena_amount");
 		
 		currPlayer.set("red_stones", 0);
@@ -1151,7 +1151,7 @@ public class SevenSigns
 	 */
 	public int addPlayerStoneContrib(PlayerInstance player, int blueCount, int greenCount, int redCount)
 	{
-		StatsSet currPlayer = getPlayerData(player);
+		final StatsSet currPlayer = getPlayerData(player);
 		
 		final int contribScore = calcContributionScore(blueCount, greenCount, redCount);
 		final int totalAncientAdena = currPlayer.getInt("ancient_adena_amount") + calcAncientAdenaReward(blueCount, greenCount, redCount);
@@ -1257,7 +1257,7 @@ public class SevenSigns
 	 */
 	public void sendMessageToAll(SystemMessageId sysMsgId)
 	{
-		SystemMessage sm = new SystemMessage(sysMsgId);
+		final SystemMessage sm = new SystemMessage(sysMsgId);
 		
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
@@ -1516,7 +1516,7 @@ public class SevenSigns
 	{
 		for (PlayerInstance onlinePlayer : World.getInstance().getAllPlayers())
 		{
-			StatsSet currPlayer = getPlayerData(onlinePlayer);
+			final StatsSet currPlayer = getPlayerData(onlinePlayer);
 			
 			if (isSealValidationPeriod() || isCompResultsPeriod())
 			{
@@ -1619,7 +1619,7 @@ public class SevenSigns
 			
 			teleLosingCabalFromDungeons(getCabalShortName(getCabalHighestScore()));
 			
-			SignsSky ss = new SignsSky();
+			final SignsSky ss = new SignsSky();
 			
 			for (PlayerInstance player : World.getInstance().getAllPlayers())
 			{
@@ -1632,7 +1632,7 @@ public class SevenSigns
 			
 			setCalendarForNextPeriodChange();
 			
-			SevenSignsPeriodChange sspc = new SevenSignsPeriodChange();
+			final SevenSignsPeriodChange sspc = new SevenSignsPeriodChange();
 			ThreadPool.schedule(sspc, getMilliToPeriodChange());
 		}
 	}

@@ -133,7 +133,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		// Get the owner if the target is a summon
 		if (target instanceof Summon)
 		{
-			PlayerInstance owner = ((Summon) target).getOwner();
+			final PlayerInstance owner = ((Summon) target).getOwner();
 			if (_actor.isInsideRadius(owner, 1000, true, false))
 			{
 				target = owner;
@@ -169,7 +169,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 			// Check if actor is not dead
 			if (!_actor.isAlikeDead())
 			{
-				Attackable npc = (Attackable) _actor;
+				final Attackable npc = (Attackable) _actor;
 				
 				// If its _knownPlayer isn't empty set the Intention to AI_INTENTION_ACTIVE
 				if (npc.getKnownList().getKnownPlayers().size() > 0)
@@ -238,7 +238,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	 */
 	private void thinkActive()
 	{
-		Attackable npc = (Attackable) _actor;
+		final Attackable npc = (Attackable) _actor;
 		
 		// Update every 1s the _globalAggro counter to come close to 0
 		if (_globalAggro != 0)
@@ -322,7 +322,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		Skill[] skills = null;
 		double dist2 = 0;
 		int range = 0;
-		SiegeGuardInstance sGuard = (SiegeGuardInstance) _actor;
+		final SiegeGuardInstance sGuard = (SiegeGuardInstance) _actor;
 		
 		final Creature attackTarget = getAttackTarget();
 		
@@ -383,7 +383,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 							}
 							if (sk.getSkillType() == Skill.SkillType.BUFF)
 							{
-								Effect[] effects = _actor.getAllEffects();
+								final Effect[] effects = _actor.getAllEffects();
 								
 								for (int i = 0; (effects != null) && (i < effects.length); i++)
 								{
@@ -402,7 +402,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 							}
 						}
 						
-						WorldObject oldTarget = _actor.getTarget();
+						final WorldObject oldTarget = _actor.getTarget();
 						
 						clientStopMoving(null);
 						_accessor.doCast(sk);
@@ -525,7 +525,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 							}
 						}
 						
-						WorldObject oldTarget = _actor.getTarget();
+						final WorldObject oldTarget = _actor.getTarget();
 						
 						clientStopMoving(null);
 						_accessor.doCast(sk);
@@ -571,7 +571,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 			// Stop hating this target after the attack timeout or if target is dead
 			if (attackTarget != null)
 			{
-				Attackable npc = (Attackable) _actor;
+				final Attackable npc = (Attackable) _actor;
 				
 				npc.stopHating(attackTarget);
 			}
@@ -620,9 +620,9 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 				continue;
 			}
 			
-			NpcInstance npc = (NpcInstance) creature;
+			final NpcInstance npc = (NpcInstance) creature;
 			
-			String factionId = ((NpcInstance) actor).getFactionId();
+			final String factionId = ((NpcInstance) actor).getFactionId();
 			
 			if (!factionId.equalsIgnoreCase(npc.getFactionId()))
 			{
@@ -752,7 +752,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 			return;
 		}
 		
-		Attackable me = (Attackable) _actor;
+		final Attackable me = (Attackable) _actor;
 		
 		if (target != null)
 		{
@@ -782,7 +782,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 					_actor.setRunning();
 				}
 				
-				SiegeGuardInstance sGuard = (SiegeGuardInstance) _actor;
+				final SiegeGuardInstance sGuard = (SiegeGuardInstance) _actor;
 				
 				final double homeX = target.getX() - sGuard.getHomeX();
 				final double homeY = target.getY() - sGuard.getHomeY();
@@ -802,7 +802,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 				return;
 			}
 			
-			Creature mostHated = me.getMostHated();
+			final Creature mostHated = me.getMostHated();
 			if (mostHated == null)
 			{
 				_globalAggro = -25;

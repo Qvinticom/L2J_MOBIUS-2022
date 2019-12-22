@@ -25,15 +25,15 @@ public class ExUseSharedGroupItem extends GameServerPacket
 	/** The _unk4. */
 	private final int _unk1;
 	/**
-	 * The _unk4. 
+	 * The _unk4.
 	 */
 	private final int _unk2;
 	/**
-	 * The _unk4. 
+	 * The _unk4.
 	 */
 	private final int _unk3;
 	/**
-	 * The _unk4. 
+	 * The _unk4.
 	 */
 	private final int _unk4;
 	

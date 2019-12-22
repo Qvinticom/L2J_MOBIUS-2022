@@ -90,7 +90,7 @@ public class Q00454_CompletelyLost extends Quest
 				final PlayerInstance leader = npc.getVariables().getObject("leader", PlayerInstance.class);
 				if (leader != null)
 				{
-					double dist = Util.calculateDistance(npc, leader, false, false);
+					final double dist = Util.calculateDistance(npc, leader, false, false);
 					if (dist > 1000)
 					{
 						if (((dist > 5000) && (dist < 6900)) || ((dist > 31000) && (dist < 32000)))

@@ -114,7 +114,7 @@ public class RequestExTryEnchantArtifact implements IClientIncomingPacket
 			return;
 		}
 		
-		int chance = ENCHANT_CHANCES[enchantLevel];
+		final int chance = ENCHANT_CHANCES[enchantLevel];
 		if (chance == 0)
 		{
 			player.sendPacket(ExTryEnchantArtifactResult.ERROR_PACKET);

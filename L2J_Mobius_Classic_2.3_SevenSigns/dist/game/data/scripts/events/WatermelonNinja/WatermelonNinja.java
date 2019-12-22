@@ -540,12 +540,12 @@ public class WatermelonNinja extends LongTimeEvent
 			{
 				case 13271: // Watermelon Seed
 				{
-					randomSpawn(13274, 13273, 13272, npc, true);
+					randomSpawn(13274, 13273, 13272, npc);
 					break;
 				}
 				case 13275: // Honey Watermelon Seed
 				{
-					randomSpawn(13278, 13277, 13276, npc, true);
+					randomSpawn(13278, 13277, 13276, npc);
 					break;
 				}
 			}
@@ -575,20 +575,10 @@ public class WatermelonNinja extends LongTimeEvent
 		final int chance = Rnd.get(100);
 		for (int[] drop : DROPLIST)
 		{
-			if (npcId == drop[0])
+			if ((npcId == drop[0]) && (chance < drop[2]))
 			{
-				if (chance < drop[2])
-				{
-					if (drop[1] > 6000)
-					{
-						((MonsterInstance) mob).dropItem(player, drop[1], 1);
-					}
-					else
-					{
-						((MonsterInstance) mob).dropItem(player, drop[1], 1);
-					}
-					continue;
-				}
+				((MonsterInstance) mob).dropItem(player, drop[1], 1);
+				continue;
 			}
 			if (npcId < drop[0])
 			{
@@ -597,18 +587,18 @@ public class WatermelonNinja extends LongTimeEvent
 		}
 	}
 	
-	private void randomSpawn(int low, int medium, int high, Npc npc, boolean delete)
+	private void randomSpawn(int low, int medium, int high, Npc npc)
 	{
-		final int _random = Rnd.get(100);
-		if (_random < 5)
+		final int random = Rnd.get(100);
+		if (random < 5)
 		{
 			spawnNext(low, npc);
 		}
-		if (_random < 10)
+		if (random < 10)
 		{
 			spawnNext(medium, npc);
 		}
-		else if (_random < 30)
+		else if (random < 30)
 		{
 			spawnNext(high, npc);
 		}

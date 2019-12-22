@@ -80,7 +80,7 @@ public class TradeDone extends GameClientPacket
 			{
 				// Trade partner not found, cancel trade
 				player.cancelActiveTrade();
-				SystemMessage msg = new SystemMessage(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
 				player.sendPacket(msg);
 				return;
 			}

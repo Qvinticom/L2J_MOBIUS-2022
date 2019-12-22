@@ -1144,7 +1144,7 @@ public class CreatureAI extends AbstractAI
 		// check if player is fakedeath
 		if (target instanceof PlayerInstance)
 		{
-			PlayerInstance target2 = (PlayerInstance) target; // convert object to chara
+			final PlayerInstance target2 = (PlayerInstance) target; // convert object to chara
 			
 			if (target2.isFakeDeath())
 			{
@@ -1196,7 +1196,7 @@ public class CreatureAI extends AbstractAI
 	
 	public synchronized void setSkill(Skill skill)
 	{
-		this._skill = skill;
+		_skill = skill;
 	}
 	
 	public IntentionCommand getNextIntention()

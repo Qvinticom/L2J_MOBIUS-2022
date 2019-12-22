@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.util.logging.FileHandler;
 
 /**
- * @author ProGramMoS, Lets drink to code!
+ * @author zabbix
  */
 public class AuditLogHandler extends FileHandler
 {

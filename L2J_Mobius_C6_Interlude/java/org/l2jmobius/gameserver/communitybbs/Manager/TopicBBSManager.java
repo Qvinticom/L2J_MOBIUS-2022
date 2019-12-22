@@ -54,7 +54,7 @@ public class TopicBBSManager extends BaseBBSManager
 	{
 		if (ar1.equals("crea"))
 		{
-			Forum f = ForumsBBSManager.getInstance().getForumByID(Integer.parseInt(ar2));
+			final Forum f = ForumsBBSManager.getInstance().getForumByID(Integer.parseInt(ar2));
 			if (f == null)
 			{
 				separateAndSend("<html><body><br><br><center>The forum named '" + ar2 + "' doesn't exist.</center></body></html>", player);
@@ -62,32 +62,32 @@ public class TopicBBSManager extends BaseBBSManager
 			}
 			
 			f.vload();
-			Topic t = new Topic(Topic.ConstructorType.CREATE, getInstance().getMaxID(f) + 1, Integer.parseInt(ar2), ar5, Calendar.getInstance().getTimeInMillis(), player.getName(), player.getObjectId(), Topic.MEMO, 0);
+			final Topic t = new Topic(Topic.ConstructorType.CREATE, getInstance().getMaxID(f) + 1, Integer.parseInt(ar2), ar5, Calendar.getInstance().getTimeInMillis(), player.getName(), player.getObjectId(), Topic.MEMO, 0);
 			f.addTopic(t);
 			getInstance().setMaxID(t.getID(), f);
 			
-			Post p = new Post(player.getName(), player.getObjectId(), Calendar.getInstance().getTimeInMillis(), t.getID(), f.getID(), ar4);
+			final Post p = new Post(player.getName(), player.getObjectId(), Calendar.getInstance().getTimeInMillis(), t.getID(), f.getID(), ar4);
 			PostBBSManager.getInstance().addPostByTopic(p, t);
 			
 			parseCmd("_bbsmemo", player);
 		}
 		else if (ar1.equals("del"))
 		{
-			Forum f = ForumsBBSManager.getInstance().getForumByID(Integer.parseInt(ar2));
+			final Forum f = ForumsBBSManager.getInstance().getForumByID(Integer.parseInt(ar2));
 			if (f == null)
 			{
 				separateAndSend("<html><body><br><br><center>The forum named '" + ar2 + "' doesn't exist.</center></body></html>", player);
 				return;
 			}
 			
-			Topic t = f.getTopic(Integer.parseInt(ar3));
+			final Topic t = f.getTopic(Integer.parseInt(ar3));
 			if (t == null)
 			{
 				separateAndSend("<html><body><br><br><center>The topic named '" + ar3 + "' doesn't exist.</center></body></html>", player);
 				return;
 			}
 			
-			Post p = PostBBSManager.getInstance().getPostByTopic(t);
+			final Post p = PostBBSManager.getInstance().getPostByTopic(t);
 			if (p != null)
 			{
 				p.deleteMe(t);
@@ -115,11 +115,11 @@ public class TopicBBSManager extends BaseBBSManager
 		{
 			CommunityBoard.getInstance().addBypass(player, "Topics Command", command);
 			
-			StringTokenizer st = new StringTokenizer(command, ";");
+			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			st.nextToken();
 			
-			int idf = Integer.parseInt(st.nextToken());
+			final int idf = Integer.parseInt(st.nextToken());
 			
 			String index = null;
 			if (st.hasMoreTokens())
@@ -141,38 +141,38 @@ public class TopicBBSManager extends BaseBBSManager
 		}
 		else if (command.startsWith("_bbstopics;crea"))
 		{
-			StringTokenizer st = new StringTokenizer(command, ";");
+			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			st.nextToken();
 			
-			int idf = Integer.parseInt(st.nextToken());
+			final int idf = Integer.parseInt(st.nextToken());
 			
 			showNewTopic(ForumsBBSManager.getInstance().getForumByID(idf), player, idf);
 		}
 		else if (command.startsWith("_bbstopics;del"))
 		{
-			StringTokenizer st = new StringTokenizer(command, ";");
+			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			st.nextToken();
 			
-			int idf = Integer.parseInt(st.nextToken());
-			int idt = Integer.parseInt(st.nextToken());
+			final int idf = Integer.parseInt(st.nextToken());
+			final int idt = Integer.parseInt(st.nextToken());
 			
-			Forum f = ForumsBBSManager.getInstance().getForumByID(idf);
+			final Forum f = ForumsBBSManager.getInstance().getForumByID(idf);
 			if (f == null)
 			{
 				separateAndSend("<html><body><br><br><center>The forum named '" + idf + "' doesn't exist.</center></body></html>", player);
 				return;
 			}
 			
-			Topic t = f.getTopic(idt);
+			final Topic t = f.getTopic(idt);
 			if (t == null)
 			{
 				separateAndSend("<html><body><br><br><center>The topic named '" + idt + "' doesn't exist.</center></body></html>", player);
 				return;
 			}
 			
-			Post p = PostBBSManager.getInstance().getPostByTopic(t);
+			final Post p = PostBBSManager.getInstance().getPostByTopic(t);
 			if (p != null)
 			{
 				p.deleteMe(t);
@@ -204,7 +204,7 @@ public class TopicBBSManager extends BaseBBSManager
 	
 	public int getMaxID(Forum f)
 	{
-		Integer i = _maxId.get(f);
+		final Integer i = _maxId.get(f);
 		if (i == null)
 		{
 			return 0;
@@ -281,7 +281,7 @@ public class TopicBBSManager extends BaseBBSManager
 				break;
 			}
 			
-			Topic t = forum.getTopic(j);
+			final Topic t = forum.getTopic(j);
 			if ((t != null) && (i++ >= (12 * (index - 1))))
 			{
 				StringUtil.append(sb, "<table border=0 cellspacing=0 cellpadding=5 WIDTH=610><tr><td FIXWIDTH=5></td><td FIXWIDTH=415><a action=\"bypass _bbsposts;read;", forum.getID(), ";", t.getID(), "\">", t.getName(), "</a></td><td FIXWIDTH=120 align=center></td><td FIXWIDTH=70 align=center>", dateFormat.format(new Date(t.getDate())), "</td></tr></table><img src=\"L2UI.Squaregray\" width=\"610\" height=\"1\">");

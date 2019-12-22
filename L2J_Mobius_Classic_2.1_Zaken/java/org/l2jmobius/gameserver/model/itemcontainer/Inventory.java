@@ -1557,12 +1557,9 @@ public abstract class Inventory extends ItemContainer
 		if (pdollSlot >= 0)
 		{
 			final ItemInstance old = setPaperdollItem(pdollSlot, null);
-			if (old != null)
+			if ((old != null) && getOwner().isPlayer())
 			{
-				if (getOwner().isPlayer())
-				{
-					((PlayerInstance) getOwner()).refreshExpertisePenalty();
-				}
+				((PlayerInstance) getOwner()).refreshExpertisePenalty();
 			}
 			return old;
 		}
@@ -1990,14 +1987,11 @@ public abstract class Inventory extends ItemContainer
 		// find same (or incompatible) talisman type
 		for (int i = PAPERDOLL_DECO1; i < (PAPERDOLL_DECO1 + getTalismanSlots()); i++)
 		{
-			if (_paperdoll[i] != null)
+			if ((_paperdoll[i] != null) && (getPaperdollItemId(i) == item.getId()))
 			{
-				if (getPaperdollItemId(i) == item.getId())
-				{
-					// overwtite
-					setPaperdollItem(i, item);
-					return;
-				}
+				// overwrite
+				setPaperdollItem(i, item);
+				return;
 			}
 		}
 		

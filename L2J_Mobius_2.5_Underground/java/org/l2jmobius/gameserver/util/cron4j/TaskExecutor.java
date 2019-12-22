@@ -100,7 +100,7 @@ public class TaskExecutor
 	{
 		this.scheduler = scheduler;
 		this.task = task;
-		this.context = new MyContext();
+		context = new MyContext();
 	}
 	
 	/**
@@ -135,8 +135,8 @@ public class TaskExecutor
 	{
 		synchronized (listeners)
 		{
-			int size = listeners.size();
-			TaskExecutorListener[] ret = new TaskExecutorListener[size];
+			final int size = listeners.size();
+			final TaskExecutorListener[] ret = new TaskExecutorListener[size];
 			for (int i = 0; i < size; i++)
 			{
 				ret[i] = listeners.get(i);
@@ -226,7 +226,7 @@ public class TaskExecutor
 		synchronized (lock)
 		{
 			startTime = System.currentTimeMillis();
-			String name = "cron4j::scheduler[" + scheduler.getGuid() + "]::executor[" + guid + "]";
+			final String name = "cron4j::scheduler[" + scheduler.getGuid() + "]::executor[" + guid + "]";
 			thread = new Thread(new Runner());
 			thread.setDaemon(daemon);
 			thread.setName(name);
@@ -393,7 +393,7 @@ public class TaskExecutor
 		{
 			for (TaskExecutorListener taskExecutorListener : listeners)
 			{
-				TaskExecutorListener l = taskExecutorListener;
+				final TaskExecutorListener l = taskExecutorListener;
 				l.executionPausing(this);
 			}
 		}
@@ -408,7 +408,7 @@ public class TaskExecutor
 		{
 			for (TaskExecutorListener taskExecutorListener : listeners)
 			{
-				TaskExecutorListener l = taskExecutorListener;
+				final TaskExecutorListener l = taskExecutorListener;
 				l.executionResuming(this);
 			}
 		}
@@ -423,7 +423,7 @@ public class TaskExecutor
 		{
 			for (TaskExecutorListener taskExecutorListener : listeners)
 			{
-				TaskExecutorListener l = taskExecutorListener;
+				final TaskExecutorListener l = taskExecutorListener;
 				l.executionStopping(this);
 			}
 		}
@@ -439,7 +439,7 @@ public class TaskExecutor
 		{
 			for (TaskExecutorListener taskExecutorListener : listeners)
 			{
-				TaskExecutorListener l = taskExecutorListener;
+				final TaskExecutorListener l = taskExecutorListener;
 				l.executionTerminated(this, exception);
 			}
 		}
@@ -455,7 +455,7 @@ public class TaskExecutor
 		{
 			for (TaskExecutorListener taskExecutorListener : listeners)
 			{
-				TaskExecutorListener l = taskExecutorListener;
+				final TaskExecutorListener l = taskExecutorListener;
 				l.statusMessageChanged(this, statusMessage);
 			}
 		}
@@ -471,7 +471,7 @@ public class TaskExecutor
 		{
 			for (TaskExecutorListener taskExecutorListener : listeners)
 			{
-				TaskExecutorListener l = taskExecutorListener;
+				final TaskExecutorListener l = taskExecutorListener;
 				l.completenessValueChanged(this, completenessValue);
 			}
 		}

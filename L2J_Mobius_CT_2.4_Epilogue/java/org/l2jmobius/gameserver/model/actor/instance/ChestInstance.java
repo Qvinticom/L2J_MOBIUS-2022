@@ -113,7 +113,7 @@ public class ChestInstance extends MonsterInstance
 	public void chestTrap(Creature player)
 	{
 		int trapSkillId = 0;
-		int rnd = Rnd.get(120);
+		final int rnd = Rnd.get(120);
 		
 		if (getTemplate().getLevel() >= 61)
 		{
@@ -198,7 +198,7 @@ public class ChestInstance extends MonsterInstance
 	private boolean handleCast(Creature player, int skillId)
 	{
 		int skillLevel = 1;
-		byte lvl = getTemplate().getLevel();
+		final byte lvl = getTemplate().getLevel();
 		if ((lvl > 20) && (lvl <= 40))
 		{
 			skillLevel = 3;
@@ -217,7 +217,7 @@ public class ChestInstance extends MonsterInstance
 			return false;
 		}
 		
-		Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
+		final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 		
 		if (!player.isAffectedBySkill(skillId))
 		{

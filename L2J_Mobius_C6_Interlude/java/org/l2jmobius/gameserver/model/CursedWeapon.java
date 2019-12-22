@@ -166,7 +166,7 @@ public class CursedWeapon
 			LOGGER.info(_name + " item has been removed from World.");
 		}
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 		sm.addItemName(_itemId);
 		CursedWeaponsManager.announce(sm);
 		
@@ -226,8 +226,8 @@ public class CursedWeapon
 			_item.setDropTime(0); // Prevent item from being removed by ItemsAutoDestroy
 			
 			// RedSky and Earthquake
-			ExRedSky packet = new ExRedSky(10);
-			Earthquake eq = new Earthquake(player.getX(), player.getY(), player.getZ(), 14, 3);
+			final ExRedSky packet = new ExRedSky(10);
+			final Earthquake eq = new Earthquake(player.getX(), player.getY(), player.getZ(), 14, 3);
 			
 			for (PlayerInstance aPlayer : World.getInstance().getAllPlayers())
 			{
@@ -351,7 +351,7 @@ public class CursedWeapon
 		{
 			if (_player.setMountType(0))
 			{
-				Ride dismount = new Ride(_player.getObjectId(), Ride.ACTION_DISMOUNT, 0);
+				final Ride dismount = new Ride(_player.getObjectId(), Ride.ACTION_DISMOUNT, 0);
 				_player.broadcastPacket(dismount);
 				_player.setMountObjectID(0);
 			}
@@ -422,7 +422,7 @@ public class CursedWeapon
 		// Refresh player stats
 		_player.broadcastUserInfo();
 		
-		SocialAction atk = new SocialAction(_player.getObjectId(), 17);
+		final SocialAction atk = new SocialAction(_player.getObjectId(), 17);
 		
 		_player.broadcastPacket(atk);
 		

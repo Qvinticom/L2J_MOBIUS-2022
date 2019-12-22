@@ -173,7 +173,7 @@ public class AdminPledge implements IAdminCommandHandler
 								showMainPage(activeChar);
 								return false;
 							}
-							Clan clan = player.getClan();
+							final Clan clan = player.getClan();
 							if (clan.getLevel() < 5)
 							{
 								BuilderUtil.sendSysMessage(activeChar, "Only clans of level 5 or above may receive reputation points.");

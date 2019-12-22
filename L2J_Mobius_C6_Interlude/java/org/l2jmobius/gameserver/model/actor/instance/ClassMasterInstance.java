@@ -68,7 +68,7 @@ public class ClassMasterInstance extends FolkInstance
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
@@ -81,10 +81,10 @@ public class ClassMasterInstance extends FolkInstance
 		}
 		else
 		{
-			ClassId classId = player.getClassId();
+			final ClassId classId = player.getClassId();
 			int jobLevel = 0;
 			final int level = player.getLevel();
-			ClassLevel lvl = PlayerClass.values()[classId.getId()].getLevel();
+			final ClassLevel lvl = PlayerClass.values()[classId.getId()].getLevel();
 			switch (lvl)
 			{
 				case FIRST:
@@ -237,14 +237,14 @@ public class ClassMasterInstance extends FolkInstance
 			final int val = Integer.parseInt(command.substring(13));
 			
 			// Exploit prevention
-			ClassId classId = player.getClassId();
+			final ClassId classId = player.getClassId();
 			final int level = player.getLevel();
 			int jobLevel = 0;
 			int newJobLevel = 0;
 			
 			player.setTarget(player);
 			
-			ClassLevel lvlnow = PlayerClass.values()[classId.getId()].getLevel();
+			final ClassLevel lvlnow = PlayerClass.values()[classId.getId()].getLevel();
 			
 			if (player.isGM())
 			{
@@ -260,8 +260,8 @@ public class ClassMasterInstance extends FolkInstance
 					player.sendPacket(SystemMessageId.CLASS_TRANSFER); // system sound for 1st and 2nd occupation
 				}
 				
-				NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				StringBuilder sb = new StringBuilder();
+				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+				final StringBuilder sb = new StringBuilder();
 				sb.append("<html><title>Class Manager</title><body><center><img src=L2Font-e.replay_logo-e width=258 height=60><br><br><br><img src=L2UI_CH3.herotower_deco width=256 height=32></center><br><br>");
 				sb.append("You have now become a <font color=\"LEVEL\">" + CharTemplateTable.getClassNameById(player.getClassId().getId()) + "</font>.");
 				sb.append("<br><center><img src=L2UI_CH3.herotower_deco width=256 height=32></center></body></html>");
@@ -298,7 +298,7 @@ public class ClassMasterInstance extends FolkInstance
 				return; // no more job changes
 			}
 			
-			ClassLevel lvlnext = PlayerClass.values()[val].getLevel();
+			final ClassLevel lvlnext = PlayerClass.values()[val].getLevel();
 			switch (lvlnext)
 			{
 				case FIRST:
@@ -401,8 +401,8 @@ public class ClassMasterInstance extends FolkInstance
 				player.sendPacket(SystemMessageId.CLASS_TRANSFER); // system sound for 1st and 2nd occupation
 			}
 			
-			NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			StringBuilder sb = new StringBuilder();
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			final StringBuilder sb = new StringBuilder();
 			sb.append("<html><title>Class Manager</title><body><center><img src=L2Font-e.replay_logo-e width=258 height=60><br><br><br><img src=L2UI_CH3.herotower_deco width=256 height=32></center><br><br>");
 			sb.append("You have now become a <font color=\"LEVEL\">" + CharTemplateTable.getClassNameById(player.getClassId().getId()) + "</font>.");
 			sb.append("<br><center><img src=L2UI_CH3.herotower_deco width=256 height=32></center></body></html>");
@@ -481,8 +481,8 @@ public class ClassMasterInstance extends FolkInstance
 	 */
 	private void showChatWindowChooseClass(PlayerInstance player)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		StringBuilder sb = new StringBuilder();
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final StringBuilder sb = new StringBuilder();
 		sb.append("<html>");
 		sb.append("<body>");
 		sb.append("<table width=200>");
@@ -506,8 +506,8 @@ public class ClassMasterInstance extends FolkInstance
 	 */
 	private void showChatWindow1st(PlayerInstance player)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		StringBuilder sb = new StringBuilder();
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final StringBuilder sb = new StringBuilder();
 		sb.append("<html>");
 		sb.append("<body>");
 		sb.append("<table width=200>");
@@ -544,8 +544,8 @@ public class ClassMasterInstance extends FolkInstance
 	 */
 	private void showChatWindow2nd(PlayerInstance player)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		StringBuilder sb = new StringBuilder();
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final StringBuilder sb = new StringBuilder();
 		sb.append("<html>");
 		sb.append("<body>");
 		sb.append("<table width=200>");
@@ -595,8 +595,8 @@ public class ClassMasterInstance extends FolkInstance
 	 */
 	private void showChatWindow3rd(PlayerInstance player)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		StringBuilder sb = new StringBuilder();
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final StringBuilder sb = new StringBuilder();
 		sb.append("<html>");
 		sb.append("<body>");
 		sb.append("<table width=200>");
@@ -646,8 +646,8 @@ public class ClassMasterInstance extends FolkInstance
 	 */
 	private void showChatWindowBase(PlayerInstance player)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		StringBuilder sb = new StringBuilder();
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final StringBuilder sb = new StringBuilder();
 		sb.append("<html>");
 		sb.append("<body>");
 		sb.append("<table width=200>");

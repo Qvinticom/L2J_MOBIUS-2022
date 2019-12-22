@@ -324,12 +324,9 @@ public class Q00233_TestOfTheWarSpirit extends Quest
 				case TAMLIN_ORC:
 				case TAMLIN_ORC_ARCHER:
 				{
-					if (hasQuestItems(killer, VENDETTA_TOTEM))
+					if (hasQuestItems(killer, VENDETTA_TOTEM) && giveItemRandomly(killer, npc, TAMLIN_ORC_HEAD, 1, 13, 1.0, true))
 					{
-						if (giveItemRandomly(killer, npc, TAMLIN_ORC_HEAD, 1, 13, 1.0, true))
-						{
-							qs.setCond(4, true);
-						}
+						qs.setCond(4, true);
 					}
 					break;
 				}

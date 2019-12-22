@@ -42,7 +42,7 @@ public class BeastSpice implements IItemHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) playable;
+		final PlayerInstance player = (PlayerInstance) playable;
 		
 		if (!(player.getTarget() instanceof FeedableBeastInstance))
 		{

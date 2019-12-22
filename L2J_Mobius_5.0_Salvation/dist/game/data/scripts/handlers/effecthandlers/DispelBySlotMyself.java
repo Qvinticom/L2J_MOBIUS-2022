@@ -38,7 +38,7 @@ public class DispelBySlotMyself extends AbstractEffect
 	
 	public DispelBySlotMyself(StatsSet params)
 	{
-		String dispel = params.getString("dispel");
+		final String dispel = params.getString("dispel");
 		if ((dispel != null) && !dispel.isEmpty())
 		{
 			_dispelAbnormals = new HashSet<>();

@@ -61,9 +61,9 @@ public class FishShots implements IItemHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) playable;
-		ItemInstance weaponInst = player.getActiveWeaponInstance();
-		Weapon weaponItem = player.getActiveWeaponItem();
+		final PlayerInstance player = (PlayerInstance) playable;
+		final ItemInstance weaponInst = player.getActiveWeaponInstance();
+		final Weapon weaponItem = player.getActiveWeaponItem();
 		
 		if ((weaponInst == null) || (weaponItem.getItemType() != WeaponType.ROD))
 		{
@@ -97,7 +97,7 @@ public class FishShots implements IItemHandler
 		final WorldObject oldTarget = player.getTarget();
 		player.setTarget(player);
 		
-		MagicSkillUse msu = new MagicSkillUse(player, SKILL_IDS[grade], 1, 0, 0);
+		final MagicSkillUse msu = new MagicSkillUse(player, SKILL_IDS[grade], 1, 0, 0);
 		Broadcast.toSelfAndKnownPlayers(player, msu);
 		player.setTarget(oldTarget);
 	}

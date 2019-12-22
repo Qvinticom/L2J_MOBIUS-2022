@@ -874,7 +874,7 @@ public class Party extends AbstractPlayerGroup
 				
 				// Add the XP/SP points to the requested party member
 				double exp = member.getStat().getValue(Stats.EXPSP_RATE, xpReward * preCalculation);
-				double sp = member.getStat().getValue(Stats.EXPSP_RATE, spReward * preCalculation);
+				final double sp = member.getStat().getValue(Stats.EXPSP_RATE, spReward * preCalculation);
 				
 				exp = calculateExpSpPartyCutoff(member.getActingPlayer(), topLvl, exp, sp, target.useVitalityRate());
 				if (exp > 0)

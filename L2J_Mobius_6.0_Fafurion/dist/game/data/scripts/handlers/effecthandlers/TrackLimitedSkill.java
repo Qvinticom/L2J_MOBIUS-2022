@@ -75,7 +75,7 @@ public class TrackLimitedSkill extends AbstractEffect
 	private void trackAeoreLimit(Creature effector, Creature effected, int limitSkillId)
 	{
 		limitAeoreLevel = 0;
-		EffectList effectList = effected.getEffectList();
+		final EffectList effectList = effected.getEffectList();
 		for (BuffInfo debuff : effectList.getDebuffs())
 		{
 			if (debuff.getSkill().getId() == limitSkillId)
@@ -98,7 +98,7 @@ public class TrackLimitedSkill extends AbstractEffect
 	private void trackSigelLimit(Creature effector, Creature effected, int limitSkillId)
 	{
 		limitSigelLevel = 0;
-		EffectList effectList = effected.getEffectList();
+		final EffectList effectList = effected.getEffectList();
 		for (BuffInfo debuff : effectList.getDebuffs())
 		{
 			if (debuff.getSkill().getId() == limitSkillId)
@@ -121,7 +121,7 @@ public class TrackLimitedSkill extends AbstractEffect
 	private void trackIssLimit(Creature effector, Creature effected, int limitSkillId)
 	{
 		limitIssLevel = 0;
-		EffectList effectList = effected.getEffectList();
+		final EffectList effectList = effected.getEffectList();
 		for (BuffInfo debuff : effectList.getDebuffs())
 		{
 			if (debuff.getSkill().getId() == limitSkillId)

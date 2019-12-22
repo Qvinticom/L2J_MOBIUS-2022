@@ -84,7 +84,7 @@ public class DoormanInstance extends FolkInstance
 				}
 				else if (condition == COND_CASTLE_OWNER)
 				{
-					StringTokenizer st = new StringTokenizer(command.substring(10), ", ");
+					final StringTokenizer st = new StringTokenizer(command.substring(10), ", ");
 					st.nextToken(); // Bypass first value since its castleid/hallid
 					
 					while (st.hasMoreTokens())
@@ -96,7 +96,7 @@ public class DoormanInstance extends FolkInstance
 				}
 				else // if (condition == COND_FORT_OWNER)
 				{
-					StringTokenizer st = new StringTokenizer(command.substring(10), ", ");
+					final StringTokenizer st = new StringTokenizer(command.substring(10), ", ");
 					st.nextToken(); // Bypass first value since its castleid/hallid/fortid
 					
 					while (st.hasMoreTokens())
@@ -169,7 +169,7 @@ public class DoormanInstance extends FolkInstance
 				}
 				else
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 					sm.addString("Unsummon your pet.");
 					player.sendPacket(sm);
 					return;
@@ -184,7 +184,7 @@ public class DoormanInstance extends FolkInstance
 				}
 				else if (condition == COND_CASTLE_OWNER)
 				{
-					StringTokenizer st = new StringTokenizer(command.substring(11), ", ");
+					final StringTokenizer st = new StringTokenizer(command.substring(11), ", ");
 					st.nextToken(); // Bypass first value since its castleid/hallid
 					
 					while (st.hasMoreTokens())
@@ -196,7 +196,7 @@ public class DoormanInstance extends FolkInstance
 				}
 				else if (condition == COND_FORT_OWNER)
 				{
-					StringTokenizer st = new StringTokenizer(command.substring(10), ", ");
+					final StringTokenizer st = new StringTokenizer(command.substring(10), ", ");
 					st.nextToken(); // Bypass first value since its castleid/hallid/fortid
 					
 					while (st.hasMoreTokens())
@@ -231,7 +231,7 @@ public class DoormanInstance extends FolkInstance
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
@@ -274,7 +274,7 @@ public class DoormanInstance extends FolkInstance
 		}
 		
 		// Prepare doorman for clan hall
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		String str;
 		if (getClanHall() != null)
 		{

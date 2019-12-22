@@ -48,11 +48,11 @@ public class AdminDonator implements IAdminCommandHandler
 		
 		if (command.startsWith("admin_setdonator"))
 		{
-			WorldObject target = activeChar.getTarget();
+			final WorldObject target = activeChar.getTarget();
 			
 			if (target instanceof PlayerInstance)
 			{
-				PlayerInstance targetPlayer = (PlayerInstance) target;
+				final PlayerInstance targetPlayer = (PlayerInstance) target;
 				final boolean newDonator = !targetPlayer.isDonator();
 				
 				if (newDonator)
@@ -131,7 +131,7 @@ public class AdminDonator implements IAdminCommandHandler
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement stmt = con.prepareStatement(newDonator ? INSERT_DATA : DEL_DATA);
+			final PreparedStatement stmt = con.prepareStatement(newDonator ? INSERT_DATA : DEL_DATA);
 			
 			// if it is a new donator insert proper data
 			if (newDonator)

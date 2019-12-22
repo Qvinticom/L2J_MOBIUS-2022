@@ -86,7 +86,7 @@ public class Q620_FourGoblets extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -226,16 +226,16 @@ public class Q620_FourGoblets extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		int npcId = npc.getNpcId();
-		int id = st.getState();
-		int cond = st.getInt("cond");
+		final int npcId = npc.getNpcId();
+		final int id = st.getState();
+		final int cond = st.getInt("cond");
 		
 		if (id == State.CREATED)
 		{
@@ -307,7 +307,7 @@ public class Q620_FourGoblets extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		PlayerInstance partyMember = getRandomPartyMemberState(player, npc, State.STARTED);
+		final PlayerInstance partyMember = getRandomPartyMemberState(player, npc, State.STARTED);
 		if (partyMember == null)
 		{
 			return null;
@@ -325,7 +325,7 @@ public class Q620_FourGoblets extends Quest
 	private static boolean calculateBoxReward(QuestState st)
 	{
 		boolean reward = false;
-		int rnd = Rnd.get(5);
+		final int rnd = Rnd.get(5);
 		
 		if (rnd == 0)
 		{
@@ -337,7 +337,7 @@ public class Q620_FourGoblets extends Quest
 			if (Rnd.get(1000) < 848)
 			{
 				reward = true;
-				int i = Rnd.get(1000);
+				final int i = Rnd.get(1000);
 				
 				if (i < 43)
 				{
@@ -384,7 +384,7 @@ public class Q620_FourGoblets extends Quest
 			if (Rnd.get(1000) < 323)
 			{
 				reward = true;
-				int i = Rnd.get(1000);
+				final int i = Rnd.get(1000);
 				
 				if (i < 335)
 				{
@@ -421,7 +421,7 @@ public class Q620_FourGoblets extends Quest
 			if (Rnd.get(1000) < 847)
 			{
 				reward = true;
-				int i = Rnd.get(1000);
+				final int i = Rnd.get(1000);
 				
 				if (i < 148)
 				{
@@ -468,7 +468,7 @@ public class Q620_FourGoblets extends Quest
 			if (Rnd.get(1000) < 251)
 			{
 				reward = true;
-				int i = Rnd.get(1000);
+				final int i = Rnd.get(1000);
 				
 				if (i < 350)
 				{
@@ -505,7 +505,7 @@ public class Q620_FourGoblets extends Quest
 			if (Rnd.get(1000) < 31)
 			{
 				reward = true;
-				int i = Rnd.get(1000);
+				final int i = Rnd.get(1000);
 				
 				if (i < 223)
 				{
@@ -524,7 +524,7 @@ public class Q620_FourGoblets extends Quest
 			if (Rnd.get(1000) < 5)
 			{
 				reward = true;
-				int i = Rnd.get(1000);
+				final int i = Rnd.get(1000);
 				
 				if (i < 202)
 				{
@@ -545,7 +545,7 @@ public class Q620_FourGoblets extends Quest
 			if (Rnd.get(1000) < 329)
 			{
 				reward = true;
-				int i = Rnd.get(1000);
+				final int i = Rnd.get(1000);
 				
 				if (i < 88)
 				{
@@ -620,7 +620,7 @@ public class Q620_FourGoblets extends Quest
 			if (Rnd.get(1000) < 54)
 			{
 				reward = true;
-				int i = Rnd.get(1000);
+				final int i = Rnd.get(1000);
 				
 				if (i < 100)
 				{

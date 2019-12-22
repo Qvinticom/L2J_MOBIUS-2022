@@ -113,7 +113,7 @@ public class FortressOfResistance
 			setCalendarForNextCaprture();
 			final long milliToCapture = getMilliToCapture();
 			
-			RunMessengerSpawn rms = new RunMessengerSpawn();
+			final RunMessengerSpawn rms = new RunMessengerSpawn();
 			ThreadPool.schedule(rms, milliToCapture);
 			
 			final long total_millis = System.currentTimeMillis() + milliToCapture;
@@ -192,7 +192,7 @@ public class FortressOfResistance
 		NpcInstance result = null;
 		try
 		{
-			NpcTemplate template = NpcTable.getInstance().getTemplate(MESSENGER_ID);
+			final NpcTemplate template = NpcTable.getInstance().getTemplate(MESSENGER_ID);
 			
 			final Spawn spawn = new Spawn(template);
 			spawn.setX(50335);
@@ -230,7 +230,7 @@ public class FortressOfResistance
 		NpcInstance result = null;
 		try
 		{
-			NpcTemplate template = NpcTable.getInstance().getTemplate(BOSS_ID);
+			final NpcTemplate template = NpcTable.getInstance().getTemplate(BOSS_ID);
 			
 			final Spawn spawn = new Spawn(template);
 			spawn.setX(44525);

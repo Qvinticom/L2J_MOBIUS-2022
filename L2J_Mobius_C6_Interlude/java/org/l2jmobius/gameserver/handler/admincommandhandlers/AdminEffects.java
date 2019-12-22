@@ -143,9 +143,9 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			try
 			{
-				String val1 = st.nextToken();
+				final String val1 = st.nextToken();
 				final int intensity = Integer.parseInt(val1);
-				String val2 = st.nextToken();
+				final String val2 = st.nextToken();
 				final int duration = Integer.parseInt(val2);
 				final Earthquake eq = new Earthquake(activeChar.getX(), activeChar.getY(), activeChar.getZ(), intensity, duration);
 				activeChar.broadcastPacket(eq);
@@ -159,8 +159,8 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			try
 			{
-				String type = st.nextToken();
-				String state = st.nextToken();
+				final String type = st.nextToken();
+				final String state = st.nextToken();
 				adminAtmosphere(type, state, activeChar);
 			}
 			catch (Exception ex)
@@ -171,7 +171,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			try
 			{
-				WorldObject target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				
 				if (activeChar.getSayMode() != null)
 				{
@@ -308,7 +308,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			try
 			{
-				WorldObject target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				Creature creature = null;
 				
 				if (target instanceof Creature)
@@ -325,7 +325,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			try
 			{
-				WorldObject target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				Creature creature = null;
 				
 				if (target instanceof Creature)
@@ -342,14 +342,14 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			try
 			{
-				String id = st.nextToken();
+				final String id = st.nextToken();
 				
 				activeChar.getPoly().setPolyInfo("npc", id);
 				activeChar.teleToLocation(activeChar.getX(), activeChar.getY(), activeChar.getZ(), false);
 				
-				CharInfo info1 = new CharInfo(activeChar);
+				final CharInfo info1 = new CharInfo(activeChar);
 				activeChar.broadcastPacket(info1);
-				UserInfo info2 = new UserInfo(activeChar);
+				final UserInfo info2 = new UserInfo(activeChar);
 				activeChar.sendPacket(info2);
 			}
 			catch (Exception e)
@@ -364,9 +364,9 @@ public class AdminEffects implements IAdminCommandHandler
 				activeChar.decayMe();
 				activeChar.spawnMe(activeChar.getX(), activeChar.getY(), activeChar.getZ());
 				
-				CharInfo info1 = new CharInfo(activeChar);
+				final CharInfo info1 = new CharInfo(activeChar);
 				activeChar.broadcastPacket(info1);
-				UserInfo info2 = new UserInfo(activeChar);
+				final UserInfo info2 = new UserInfo(activeChar);
 				activeChar.sendPacket(info2);
 			}
 			catch (Exception e)
@@ -391,7 +391,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = st.nextToken();
+				final String val = st.nextToken();
 				
 				final int teamVal = Integer.parseInt(val);
 				
@@ -403,7 +403,7 @@ public class AdminEffects implements IAdminCommandHandler
 						
 						if (teamVal != 0)
 						{
-							SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+							final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 							sm.addString("You have joined team " + teamVal);
 							player.sendPacket(sm);
 						}
@@ -418,11 +418,11 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_setteam"))
 		{
-			String val = command.substring(14);
+			final String val = command.substring(14);
 			
 			final int teamVal = Integer.parseInt(val);
 			
-			WorldObject target = activeChar.getTarget();
+			final WorldObject target = activeChar.getTarget();
 			PlayerInstance player = null;
 			
 			if (target instanceof PlayerInstance)
@@ -438,7 +438,7 @@ public class AdminEffects implements IAdminCommandHandler
 			
 			if (teamVal != 0)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				sm.addString("You have joined team " + teamVal);
 				player.sendPacket(sm);
 			}
@@ -460,7 +460,7 @@ public class AdminEffects implements IAdminCommandHandler
 					
 					if (target != null)
 					{
-						PlayerInstance player = World.getInstance().getPlayer(target);
+						final PlayerInstance player = World.getInstance().getPlayer(target);
 						
 						if (player != null)
 						{
@@ -523,7 +523,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			try
 			{
-				WorldObject target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				Creature creature = null;
 				
 				if (target instanceof Creature)
@@ -546,7 +546,7 @@ public class AdminEffects implements IAdminCommandHandler
 				
 				if (st.countTokens() == 2)
 				{
-					String parm = st.nextToken();
+					final String parm = st.nextToken();
 					
 					final int abnormal = Integer.decode("0x" + parm);
 					
@@ -554,7 +554,7 @@ public class AdminEffects implements IAdminCommandHandler
 					
 					if (target != null)
 					{
-						PlayerInstance player = World.getInstance().getPlayer(target);
+						final PlayerInstance player = World.getInstance().getPlayer(target);
 						
 						if (player != null)
 						{
@@ -678,7 +678,7 @@ public class AdminEffects implements IAdminCommandHandler
 	{
 		if (target instanceof Creature)
 		{
-			Creature creature = (Creature) target;
+			final Creature creature = (Creature) target;
 			
 			if ((creature.getAbnormalEffect() & action) == action)
 			{
@@ -721,7 +721,7 @@ public class AdminEffects implements IAdminCommandHandler
 					return false;
 				}
 				
-				Creature creature = (Creature) target;
+				final Creature creature = (Creature) target;
 				creature.broadcastPacket(new SocialAction(target.getObjectId(), action));
 			}
 			else
@@ -792,7 +792,7 @@ public class AdminEffects implements IAdminCommandHandler
 	
 	private void playAdminSound(PlayerInstance activeChar, String sound)
 	{
-		PlaySound snd = new PlaySound(1, sound, 0, 0, 0, 0, 0);
+		final PlaySound snd = new PlaySound(1, sound, 0, 0, 0, 0, 0);
 		activeChar.sendPacket(snd);
 		activeChar.broadcastPacket(snd);
 		BuilderUtil.sendSysMessage(activeChar, "Playing " + sound + ".");

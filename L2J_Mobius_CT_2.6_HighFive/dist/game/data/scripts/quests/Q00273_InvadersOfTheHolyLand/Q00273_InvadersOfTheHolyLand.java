@@ -65,7 +65,7 @@ public class Q00273_InvadersOfTheHolyLand extends Quest
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if(qs != null)
+		if (qs != null)
 		{
 			switch (event)
 			{
@@ -95,7 +95,7 @@ public class Q00273_InvadersOfTheHolyLand extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if(qs != null)
+		if (qs != null)
 		{
 			if (getRandom(100) <= MONSTERS.get(npc.getId()))
 			{

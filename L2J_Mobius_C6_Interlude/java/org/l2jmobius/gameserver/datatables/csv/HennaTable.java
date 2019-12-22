@@ -70,7 +70,7 @@ public class HennaTable
 				
 				final StringTokenizer st = new StringTokenizer(line, ";");
 				
-				StatsSet hennaDat = new StatsSet();
+				final StatsSet hennaDat = new StatsSet();
 				final int id = Integer.parseInt(st.nextToken());
 				hennaDat.set("symbol_id", id);
 				st.nextToken(); // next token...ignore name
@@ -84,7 +84,7 @@ public class HennaTable
 				hennaDat.set("stat_DEX", Integer.parseInt(st.nextToken()));
 				hennaDat.set("stat_WIT", Integer.parseInt(st.nextToken()));
 				
-				Henna template = new Henna(hennaDat);
+				final Henna template = new Henna(hennaDat);
 				_henna.put(id, template);
 			}
 			

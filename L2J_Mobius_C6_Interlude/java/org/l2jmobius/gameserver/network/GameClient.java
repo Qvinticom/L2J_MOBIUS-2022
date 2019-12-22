@@ -284,7 +284,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT clanId from characters WHERE obj_Id=?");
 			statement.setInt(1, objid);
-			ResultSet rs = statement.executeQuery();
+			final ResultSet rs = statement.executeQuery();
 			
 			rs.next();
 			
@@ -294,7 +294,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 			
 			if (clanId != 0)
 			{
-				Clan clan = ClanTable.getInstance().getClan(clanId);
+				final Clan clan = ClanTable.getInstance().getClan(clanId);
 				
 				if (clan == null)
 				{
@@ -355,7 +355,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("UPDATE characters SET deletetime=0 WHERE obj_id=?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET deletetime=0 WHERE obj_id=?");
 			statement.setInt(1, objid);
 			statement.execute();
 			statement.close();
@@ -610,7 +610,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	{
 		try
 		{
-			InetAddress address = getConnection().getInetAddress();
+			final InetAddress address = getConnection().getInetAddress();
 			String ip;
 			if (address == null)
 			{
@@ -663,7 +663,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 					// we store all data from players who are disconnected while in an event in order to restore it in the next login
 					if (player.atEvent)
 					{
-						EventData data = new EventData(player.eventX, player.eventY, player.eventZ, player.eventKarma, player.eventPvpKills, player.eventPkKills, player.eventTitle, player.kills, player.eventSitForced);
+						final EventData data = new EventData(player.eventX, player.eventY, player.eventZ, player.eventKarma, player.eventPvpKills, player.eventPkKills, player.eventTitle, player.kills, player.eventSitForced);
 						
 						GameEvent.connectionLossData.put(player.getName(), data);
 					}
@@ -742,13 +742,13 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 			{
 				// we are going to manually save the char bellow thus we can force the cancel
 				
-				PlayerInstance player = _player;
+				final PlayerInstance player = _player;
 				if (player != null) // this should only happen on connection loss
 				{
 					// we store all data from players who are disconnected while in an event in order to restore it in the next login
 					if (player.atEvent)
 					{
-						EventData data = new EventData(player.eventX, player.eventY, player.eventZ, player.eventKarma, player.eventPvpKills, player.eventPkKills, player.eventTitle, player.kills, player.eventSitForced);
+						final EventData data = new EventData(player.eventX, player.eventY, player.eventZ, player.eventKarma, player.eventPvpKills, player.eventPkKills, player.eventTitle, player.kills, player.eventSitForced);
 						
 						GameEvent.connectionLossData.put(player.getName(), data);
 					}

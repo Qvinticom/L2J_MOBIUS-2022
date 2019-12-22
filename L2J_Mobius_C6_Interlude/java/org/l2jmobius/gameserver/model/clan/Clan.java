@@ -300,7 +300,7 @@ public class Clan
 		
 		if (setLeader(member))
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_LEADER_PRIVILEGES_HAVE_BEEN_TRANSFERRED_TO_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_LEADER_PRIVILEGES_HAVE_BEEN_TRANSFERRED_TO_S1);
 			sm.addString(member.getName());
 			broadcastToOnlineMembers(sm);
 		}
@@ -337,7 +337,7 @@ public class Clan
 	
 	public void addClanMember(PlayerInstance player)
 	{
-		ClanMember member = new ClanMember(this, player.getName(), player.getLevel(), player.getClassId().getId(), player.getObjectId(), player.getPledgeType(), player.getPowerGrade(), player.getTitle());
+		final ClanMember member = new ClanMember(this, player.getName(), player.getLevel(), player.getClassId().getId(), player.getObjectId(), player.getPledgeType(), player.getPowerGrade(), player.getTitle());
 		
 		// store in memory
 		addClanMember(member);
@@ -351,7 +351,7 @@ public class Clan
 	
 	public void updateClanMember(PlayerInstance player)
 	{
-		ClanMember member = new ClanMember(player);
+		final ClanMember member = new ClanMember(player);
 		addClanMember(member);
 	}
 	
@@ -375,7 +375,7 @@ public class Clan
 	
 	public void removeClanMember(String name, long clanJoinExpiryTime)
 	{
-		ClanMember exMember = _members.remove(name);
+		final ClanMember exMember = _members.remove(name);
 		
 		if (exMember == null)
 		{
@@ -394,7 +394,7 @@ public class Clan
 		
 		if (exMember.getApprentice() != 0)
 		{
-			ClanMember apprentice = getClanMember(exMember.getApprentice());
+			final ClanMember apprentice = getClanMember(exMember.getApprentice());
 			
 			if (apprentice != null)
 			{
@@ -413,7 +413,7 @@ public class Clan
 		
 		if (exMember.getSponsor() != 0)
 		{
-			ClanMember sponsor = getClanMember(exMember.getSponsor());
+			final ClanMember sponsor = getClanMember(exMember.getSponsor());
 			
 			if (sponsor != null)
 			{
@@ -439,7 +439,7 @@ public class Clan
 		
 		if (exMember.isOnline())
 		{
-			PlayerInstance player = exMember.getPlayerInstance();
+			final PlayerInstance player = exMember.getPlayerInstance();
 			
 			player.setTitle("");
 			player.setApprentice(0);
@@ -477,7 +477,7 @@ public class Clan
 	
 	public Integer[] getOfflineMembersIds()
 	{
-		List<Integer> list = new ArrayList<>();
+		final List<Integer> list = new ArrayList<>();
 		
 		for (ClanMember temp : _members.values())
 		{
@@ -714,7 +714,7 @@ public class Clan
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET leader_id=?,ally_id=?,ally_name=?,reputation_score=?,ally_penalty_expiry_time=?,ally_penalty_type=?,char_penalty_expiry_time=?,dissolving_expiry_time=? WHERE clan_id=?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET leader_id=?,ally_id=?,ally_name=?,reputation_score=?,ally_penalty_expiry_time=?,ally_penalty_type=?,char_penalty_expiry_time=?,dissolving_expiry_time=? WHERE clan_id=?");
 			statement.setInt(1, getLeaderId());
 			statement.setInt(2, _allyId);
 			statement.setString(3, _allyName);
@@ -737,7 +737,7 @@ public class Clan
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("INSERT INTO clan_data (clan_id,clan_name,clan_level,hasCastle,ally_id,ally_name,leader_id,crest_id,crest_large_id,ally_crest_id) values (?,?,?,?,?,?,?,?,?,?)");
+			final PreparedStatement statement = con.prepareStatement("INSERT INTO clan_data (clan_id,clan_name,clan_level,hasCastle,ally_id,ally_name,leader_id,crest_id,crest_large_id,ally_crest_id) values (?,?,?,?,?,?,?,?,?,?)");
 			statement.setInt(1, _clanId);
 			statement.setString(2, _name);
 			statement.setInt(3, _level);
@@ -791,9 +791,9 @@ public class Clan
 		{
 			ClanMember member;
 			
-			PreparedStatement statement = con.prepareStatement("SELECT clan_name,clan_level,hasCastle,ally_id,ally_name,leader_id,crest_id,crest_large_id,ally_crest_id,reputation_score,auction_bid_at,ally_penalty_expiry_time,ally_penalty_type,char_penalty_expiry_time,dissolving_expiry_time FROM clan_data where clan_id=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT clan_name,clan_level,hasCastle,ally_id,ally_name,leader_id,crest_id,crest_large_id,ally_crest_id,reputation_score,auction_bid_at,ally_penalty_expiry_time,ally_penalty_type,char_penalty_expiry_time,dissolving_expiry_time FROM clan_data where clan_id=?");
 			statement.setInt(1, _clanId);
-			ResultSet clanData = statement.executeQuery();
+			final ResultSet clanData = statement.executeQuery();
 			
 			if (clanData.next())
 			{
@@ -838,9 +838,9 @@ public class Clan
 				
 				final int leaderId = clanData.getInt("leader_id");
 				
-				PreparedStatement statement2 = con.prepareStatement("SELECT char_name,level,classid,obj_Id,title,power_grade,subpledge,apprentice,sponsor FROM characters WHERE clanid=?");
+				final PreparedStatement statement2 = con.prepareStatement("SELECT char_name,level,classid,obj_Id,title,power_grade,subpledge,apprentice,sponsor FROM characters WHERE clanid=?");
 				statement2.setInt(1, _clanId);
-				ResultSet clanMembers = statement2.executeQuery();
+				final ResultSet clanMembers = statement2.executeQuery();
 				
 				while (clanMembers.next())
 				{
@@ -887,7 +887,7 @@ public class Clan
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET enabled=?,notice=? WHERE clan_id=?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET enabled=?,notice=? WHERE clan_id=?");
 			statement.setString(1, (enabled) ? "true" : "false");
 			statement.setString(2, notice);
 			statement.setInt(3, _clanId);
@@ -973,10 +973,10 @@ public class Clan
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT skill_id,skill_level FROM clan_skills WHERE clan_id=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT skill_id,skill_level FROM clan_skills WHERE clan_id=?");
 			statement.setInt(1, _clanId);
 			
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			
 			// Go though the recordset of this SQL query
 			while (rset.next())
@@ -985,7 +985,7 @@ public class Clan
 				final int level = rset.getInt("skill_level");
 				
 				// Create a Skill object for each record
-				Skill skill = SkillTable.getInstance().getInfo(id, level);
+				final Skill skill = SkillTable.getInstance().getInfo(id, level);
 				
 				// Add the Skill object to the Clan _skills
 				_skills.put(skill.getId(), skill);
@@ -1224,7 +1224,7 @@ public class Clan
 	
 	public void setEnemyClan(Clan clan)
 	{
-		Integer id = clan.getClanId();
+		final Integer id = clan.getClanId();
 		_atWarWith.add(id);
 	}
 	
@@ -1235,7 +1235,7 @@ public class Clan
 	
 	public void setAttackerClan(Clan clan)
 	{
-		Integer id = clan.getClanId();
+		final Integer id = clan.getClanId();
 		_atWarAttackers.add(id);
 	}
 	
@@ -1246,13 +1246,13 @@ public class Clan
 	
 	public void deleteEnemyClan(Clan clan)
 	{
-		Integer id = clan.getClanId();
+		final Integer id = clan.getClanId();
 		_atWarWith.remove(id);
 	}
 	
 	public void deleteAttackerClan(Clan clan)
 	{
-		Integer id = clan.getClanId();
+		final Integer id = clan.getClanId();
 		_atWarAttackers.remove(id);
 	}
 	
@@ -1389,18 +1389,18 @@ public class Clan
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT sub_pledge_id,name,leader_name FROM clan_subpledges WHERE clan_id=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT sub_pledge_id,name,leader_name FROM clan_subpledges WHERE clan_id=?");
 			statement.setInt(1, _clanId);
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			
 			while (rset.next())
 			{
 				final int id = rset.getInt("sub_pledge_id");
 				
-				String name = rset.getString("name");
-				String leaderName = rset.getString("leader_name");
+				final String name = rset.getString("name");
+				final String leaderName = rset.getString("leader_name");
 				// Create a SubPledge object for each record
-				SubPledge pledge = new SubPledge(id, name, leaderName);
+				final SubPledge pledge = new SubPledge(id, name, leaderName);
 				_subPledges.put(id, pledge);
 			}
 			
@@ -1477,7 +1477,7 @@ public class Clan
 		// Order of Knights 10000 points per each
 		if ((pledgeType != -1) && (((_reputationScore < 5000) && (pledgeType < SUBUNIT_KNIGHT1)) || ((_reputationScore < 10000) && (pledgeType > SUBUNIT_ROYAL2))))
 		{
-			SystemMessage sp = new SystemMessage(SystemMessageId.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW);
+			final SystemMessage sp = new SystemMessage(SystemMessageId.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW);
 			player.sendPacket(sp);
 			
 			return null;
@@ -1485,7 +1485,7 @@ public class Clan
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("INSERT INTO clan_subpledges (clan_id,sub_pledge_id,name,leader_name) values (?,?,?,?)");
+			final PreparedStatement statement = con.prepareStatement("INSERT INTO clan_subpledges (clan_id,sub_pledge_id,name,leader_name) values (?,?,?,?)");
 			statement.setInt(1, _clanId);
 			statement.setInt(2, pledgeType);
 			statement.setString(3, subPledgeName);
@@ -1568,7 +1568,7 @@ public class Clan
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("UPDATE clan_subpledges SET leader_name=?, name=? WHERE clan_id=? AND sub_pledge_id=?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE clan_subpledges SET leader_name=?, name=? WHERE clan_id=? AND sub_pledge_id=?");
 			statement.setString(1, getSubPledge(pledgeType).getLeaderName());
 			statement.setString(2, getSubPledge(pledgeType).getName());
 			statement.setInt(3, _clanId);
@@ -1587,9 +1587,9 @@ public class Clan
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT privs,`rank`,party FROM clan_privs WHERE clan_id=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT privs,`rank`,party FROM clan_privs WHERE clan_id=?");
 			statement.setInt(1, _clanId);
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			
 			// Go though the recordset of this SQL query
 			while (rset.next())
@@ -1638,7 +1638,7 @@ public class Clan
 			
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement("REPLACE INTO clan_privs (clan_id,`rank`,party,privs) VALUES (?,?,?,?)");
+				final PreparedStatement statement = con.prepareStatement("REPLACE INTO clan_privs (clan_id,`rank`,party,privs) VALUES (?,?,?,?)");
 				statement.setInt(1, _clanId);
 				statement.setInt(2, rank);
 				statement.setInt(3, 0);
@@ -1667,7 +1667,7 @@ public class Clan
 			
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement("REPLACE INTO clan_privs (clan_id,`rank`,party,privs) VALUES (?,?,?,?)");
+				final PreparedStatement statement = con.prepareStatement("REPLACE INTO clan_privs (clan_id,`rank`,party,privs) VALUES (?,?,?,?)");
 				statement.setInt(1, _clanId);
 				statement.setInt(2, rank);
 				statement.setInt(3, 0);
@@ -1711,7 +1711,7 @@ public class Clan
 		if ((_reputationScore >= 0) && (value < 0))
 		{
 			broadcastToOnlineMembers(new SystemMessage(SystemMessageId.REPUTATION_POINTS_0_OR_LOWER_CLAN_SKILLS_DEACTIVATED));
-			Skill[] skills = getAllSkills();
+			final Skill[] skills = getAllSkills();
 			
 			for (ClanMember member : _members.values())
 			{
@@ -1727,7 +1727,7 @@ public class Clan
 		else if ((_reputationScore < 0) && (value >= 0))
 		{
 			broadcastToOnlineMembers(new SystemMessage(SystemMessageId.CLAN_SKILLS_WILL_BE_ACTIVATED_SINCE_REPUTATION_IS_0_OR_HIGHER));
-			Skill[] skills = getAllSkills();
+			final Skill[] skills = getAllSkills();
 			
 			for (ClanMember member : _members.values())
 			{
@@ -1789,7 +1789,7 @@ public class Clan
 		{
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET auction_bid_at=? WHERE clan_id=?");
+				final PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET auction_bid_at=? WHERE clan_id=?");
 				statement.setInt(1, id);
 				statement.setInt(2, _clanId);
 				statement.execute();
@@ -1836,7 +1836,7 @@ public class Clan
 		
 		if (_charPenaltyExpiryTime > System.currentTimeMillis())
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.YOU_MUST_WAIT_BEFORE_ACCEPTING_A_NEW_MEMBER);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_MUST_WAIT_BEFORE_ACCEPTING_A_NEW_MEMBER);
 			sm.addString(target.getName());
 			player.sendPacket(sm);
 			return false;
@@ -1844,7 +1844,7 @@ public class Clan
 		
 		if (target.getClanId() != 0)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_WORKING_WITH_ANOTHER_CLAN);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WORKING_WITH_ANOTHER_CLAN);
 			sm.addString(target.getName());
 			player.sendPacket(sm);
 			return false;
@@ -1852,7 +1852,7 @@ public class Clan
 		
 		if (target.getClanJoinExpiryTime() > System.currentTimeMillis())
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_MUST_WAIT_BEFORE_JOINING_ANOTHER_CLAN);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_MUST_WAIT_BEFORE_JOINING_ANOTHER_CLAN);
 			sm.addString(target.getName());
 			player.sendPacket(sm);
 			return false;
@@ -1860,7 +1860,7 @@ public class Clan
 		
 		if (((target.getLevel() > 40) || (target.getClassId().level() >= 2)) && (pledgeType == -1))
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_DOESNOT_MEET_REQUIREMENTS_TO_JOIN_ACADEMY);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DOESNOT_MEET_REQUIREMENTS_TO_JOIN_ACADEMY);
 			sm.addString(target.getName());
 			player.sendPacket(sm);
 			player.sendPacket(SystemMessageId.ACADEMY_REQUIREMENTS);
@@ -1871,7 +1871,7 @@ public class Clan
 		{
 			if (pledgeType == 0)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_CLAN_IS_FULL);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CLAN_IS_FULL);
 				sm.addString(_name);
 				player.sendPacket(sm);
 			}
@@ -1904,7 +1904,7 @@ public class Clan
 			return false;
 		}
 		
-		Clan leaderClan = player.getClan();
+		final Clan leaderClan = player.getClan();
 		if ((leaderClan.getAllyPenaltyExpiryTime() > System.currentTimeMillis()) && (leaderClan.getAllyPenaltyType() == PENALTY_TYPE_DISMISS_CLAN))
 		{
 			player.sendPacket(SystemMessageId.CANT_INVITE_CLAN_WITHIN_1_DAY);
@@ -1931,17 +1931,17 @@ public class Clan
 		
 		if (!target.isClanLeader())
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER);
 			sm.addString(target.getName());
 			player.sendPacket(sm);
 			return false;
 		}
 		
-		Clan targetClan = target.getClan();
+		final Clan targetClan = target.getClan();
 		
 		if (target.getAllyId() != 0)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_CLAN_ALREADY_MEMBER_OF_S2_ALLIANCE);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CLAN_ALREADY_MEMBER_OF_S2_ALLIANCE);
 			sm.addString(targetClan.getName());
 			sm.addString(targetClan.getAllyName());
 			player.sendPacket(sm);
@@ -1952,7 +1952,7 @@ public class Clan
 		{
 			if (targetClan.getAllyPenaltyType() == PENALTY_TYPE_CLAN_LEAVED)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANT_ENTER_ALLIANCE_WITHIN_1_DAY);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANT_ENTER_ALLIANCE_WITHIN_1_DAY);
 				sm.addString(target.getClan().getName());
 				sm.addString(target.getClan().getAllyName());
 				player.sendPacket(sm);
@@ -2179,7 +2179,7 @@ public class Clan
 				if ((player.getSp() >= 30000) && (player.getAdena() >= 650000) && player.reduceAdena("ClanLvl", 650000, player.getTarget(), true))
 				{
 					player.setSp(player.getSp() - 30000);
-					SystemMessage sp = new SystemMessage(SystemMessageId.SP_DECREASED_S1);
+					final SystemMessage sp = new SystemMessage(SystemMessageId.SP_DECREASED_S1);
 					sp.addNumber(30000);
 					player.sendPacket(sp);
 					increaseClanLevel = true;
@@ -2192,7 +2192,7 @@ public class Clan
 				if ((player.getSp() >= 150000) && (player.getAdena() >= 2500000) && player.reduceAdena("ClanLvl", 2500000, player.getTarget(), true))
 				{
 					player.setSp(player.getSp() - 150000);
-					SystemMessage sp = new SystemMessage(SystemMessageId.SP_DECREASED_S1);
+					final SystemMessage sp = new SystemMessage(SystemMessageId.SP_DECREASED_S1);
 					sp.addNumber(150000);
 					player.sendPacket(sp);
 					increaseClanLevel = true;
@@ -2205,10 +2205,10 @@ public class Clan
 				if ((player.getSp() >= 500000) && (player.getInventory().getItemByItemId(1419) != null) && player.destroyItemByItemId("ClanLvl", 1419, 1, player.getTarget(), false))
 				{
 					player.setSp(player.getSp() - 500000);
-					SystemMessage sp = new SystemMessage(SystemMessageId.SP_DECREASED_S1);
+					final SystemMessage sp = new SystemMessage(SystemMessageId.SP_DECREASED_S1);
 					sp.addNumber(500000);
 					player.sendPacket(sp);
-					SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
 					sm.addItemName(1419);
 					sm.addNumber(1);
 					player.sendPacket(sm);
@@ -2222,10 +2222,10 @@ public class Clan
 				if ((player.getSp() >= 1400000) && (player.getInventory().getItemByItemId(3874) != null) && player.destroyItemByItemId("ClanLvl", 3874, 1, player.getTarget(), false))
 				{
 					player.setSp(player.getSp() - 1400000);
-					SystemMessage sp = new SystemMessage(SystemMessageId.SP_DECREASED_S1);
+					final SystemMessage sp = new SystemMessage(SystemMessageId.SP_DECREASED_S1);
 					sp.addNumber(1400000);
 					player.sendPacket(sp);
-					SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
 					sm.addItemName(3874);
 					sm.addNumber(1);
 					player.sendPacket(sm);
@@ -2239,10 +2239,10 @@ public class Clan
 				if ((player.getSp() >= 3500000) && (player.getInventory().getItemByItemId(3870) != null) && player.destroyItemByItemId("ClanLvl", 3870, 1, player.getTarget(), false))
 				{
 					player.setSp(player.getSp() - 3500000);
-					SystemMessage sp = new SystemMessage(SystemMessageId.SP_DECREASED_S1);
+					final SystemMessage sp = new SystemMessage(SystemMessageId.SP_DECREASED_S1);
 					sp.addNumber(3500000);
 					player.sendPacket(sp);
-					SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
 					sm.addItemName(3870);
 					sm.addNumber(1);
 					player.sendPacket(sm);
@@ -2255,7 +2255,7 @@ public class Clan
 				if ((_reputationScore >= 10000) && (_members.size() >= 30))
 				{
 					setReputationScore(_reputationScore - 10000, true);
-					SystemMessage cr = new SystemMessage(SystemMessageId.S1_DEDUCTED_FROM_CLAN_REP);
+					final SystemMessage cr = new SystemMessage(SystemMessageId.S1_DEDUCTED_FROM_CLAN_REP);
 					cr.addNumber(10000);
 					player.sendPacket(cr);
 					increaseClanLevel = true;
@@ -2267,7 +2267,7 @@ public class Clan
 				if ((_reputationScore >= 20000) && (_members.size() >= 80))
 				{
 					setReputationScore(_reputationScore - 20000, true);
-					SystemMessage cr = new SystemMessage(SystemMessageId.S1_DEDUCTED_FROM_CLAN_REP);
+					final SystemMessage cr = new SystemMessage(SystemMessageId.S1_DEDUCTED_FROM_CLAN_REP);
 					cr.addNumber(20000);
 					player.sendPacket(cr);
 					increaseClanLevel = true;
@@ -2279,7 +2279,7 @@ public class Clan
 				if ((_reputationScore >= 40000) && (_members.size() >= 120))
 				{
 					setReputationScore(_reputationScore - 40000, true);
-					SystemMessage cr = new SystemMessage(SystemMessageId.S1_DEDUCTED_FROM_CLAN_REP);
+					final SystemMessage cr = new SystemMessage(SystemMessageId.S1_DEDUCTED_FROM_CLAN_REP);
 					cr.addNumber(40000);
 					player.sendPacket(cr);
 					increaseClanLevel = true;
@@ -2294,17 +2294,17 @@ public class Clan
 		
 		if (!increaseClanLevel)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.FAILED_TO_INCREASE_CLAN_LEVEL);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.FAILED_TO_INCREASE_CLAN_LEVEL);
 			player.sendPacket(sm);
 			return;
 		}
 		
 		// the player should know that he has less sp now :p
-		StatusUpdate su = new StatusUpdate(player.getObjectId());
+		final StatusUpdate su = new StatusUpdate(player.getObjectId());
 		su.addAttribute(StatusUpdate.SP, player.getSp());
 		player.sendPacket(su);
 		
-		ItemList il = new ItemList(player, false);
+		final ItemList il = new ItemList(player, false);
 		player.sendPacket(il);
 		
 		changeLevel(_level + 1);
@@ -2314,7 +2314,7 @@ public class Clan
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET clan_level = ? WHERE clan_id = ?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET clan_level = ? WHERE clan_id = ?");
 			statement.setInt(1, level);
 			statement.setInt(2, _clanId);
 			statement.execute();
@@ -2329,7 +2329,7 @@ public class Clan
 		
 		if (_leader.isOnline())
 		{
-			PlayerInstance leader = _leader.getPlayerInstance();
+			final PlayerInstance leader = _leader.getPlayerInstance();
 			
 			if (3 < level)
 			{
@@ -2356,7 +2356,7 @@ public class Clan
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			setAllyCrestId(crestId);
-			PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET ally_crest_id = ? WHERE clan_id = ?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET ally_crest_id = ? WHERE clan_id = ?");
 			statement.setInt(1, crestId);
 			statement.setInt(2, _clanId);
 			statement.executeUpdate();

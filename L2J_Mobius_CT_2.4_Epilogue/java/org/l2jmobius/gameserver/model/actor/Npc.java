@@ -151,7 +151,7 @@ public class Npc extends Creature
 	private int _shotsMask = 0;
 	private int _killingBlowWeaponId;
 	/** Map of summoned NPCs by this NPC. */
-	private volatile Map<Integer, Npc> _summonedNpcs = null;
+	private Map<Integer, Npc> _summonedNpcs = null;
 	
 	/**
 	 * Creates a NPC.

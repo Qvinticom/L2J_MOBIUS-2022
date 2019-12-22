@@ -187,6 +187,7 @@ public class Q11018_FutureDarkElves extends Quest
 					}
 					break;
 				}
+				break;
 			}
 			case State.COMPLETED:
 			{

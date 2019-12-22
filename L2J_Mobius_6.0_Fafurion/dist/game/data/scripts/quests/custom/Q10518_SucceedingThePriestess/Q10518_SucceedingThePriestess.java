@@ -204,7 +204,7 @@ public class Q10518_SucceedingThePriestess extends Quest
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		QuestState qs = PARTY_QUEST ? getRandomPartyMemberState(killer, -1, 3, npc) : getQuestState(killer, false);
+		final QuestState qs = PARTY_QUEST ? getRandomPartyMemberState(killer, -1, 3, npc) : getQuestState(killer, false);
 		if (qs != null)
 		{
 			if (qs.isCond(KILLING_COND_1) && CommonUtil.contains(MONSTERS_1, npc.getId()))

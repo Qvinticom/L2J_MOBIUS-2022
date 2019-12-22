@@ -39,6 +39,7 @@ import ai.AbstractNpcAI;
 public class EilhalderVonHellmann extends AbstractNpcAI
 {
 	private static final Logger LOGGER = Logger.getLogger(EilhalderVonHellmann.class.getName());
+	
 	private static final int EILHALDER_VON_HELLMANN = 25328;
 	private NpcSpawnTemplate _template;
 	

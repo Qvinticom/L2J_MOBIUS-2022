@@ -48,7 +48,7 @@ public class RollingDice implements IItemHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) playable;
+		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
 		
 		if (!player.getFloodProtectors().getRollDice().tryPerformAction("RollDice"))
@@ -87,7 +87,7 @@ public class RollingDice implements IItemHandler
 			
 			Broadcast.toSelfAndKnownPlayers(player, new Dice(player.getObjectId(), item.getItemId(), number, destination.getX(), destination.getY(), destination.getZ()));
 			
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_ROLLED_S2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_ROLLED_S2);
 			sm.addString(player.getName());
 			sm.addNumber(number);
 			player.sendPacket(sm);

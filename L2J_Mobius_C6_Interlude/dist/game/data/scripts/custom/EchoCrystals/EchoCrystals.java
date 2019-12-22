@@ -59,17 +59,17 @@ public class EchoCrystals extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		
 		if ((st != null) && Util.isDigit(event))
 		{
-			int score = Integer.parseInt(event);
+			final int score = Integer.parseInt(event);
 			if (SCORES.containsKey(score))
 			{
-				int crystal = SCORES.get(score).getCrystalId();
-				String ok = SCORES.get(score).getOkMsg();
-				String noadena = SCORES.get(score).getNoAdenaMsg();
-				String noscore = SCORES.get(score).getNoScoreMsg();
+				final int crystal = SCORES.get(score).getCrystalId();
+				final String ok = SCORES.get(score).getOkMsg();
+				final String noadena = SCORES.get(score).getNoAdenaMsg();
+				final String noscore = SCORES.get(score).getNoScoreMsg();
 				
 				if (st.getQuestItemsCount(score) == 0)
 				{

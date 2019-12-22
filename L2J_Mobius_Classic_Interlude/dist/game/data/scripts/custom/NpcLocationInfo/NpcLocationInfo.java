@@ -224,7 +224,9 @@ public class NpcLocationInfo extends AbstractNpcAI
 			final int npcId = Integer.parseInt(event);
 			if (NPCRADAR.contains(npcId))
 			{
-				int x = 0, y = 0, z = 0;
+				int x = 0;
+				int y = 0;
+				int z = 0;
 				final Spawn spawn = SpawnTable.getInstance().getAnySpawn(npcId);
 				if (spawn != null)
 				{
@@ -243,7 +245,7 @@ public class NpcLocationInfo extends AbstractNpcAI
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		if (NPC.contains(npcId))
 		{
 			htmltext = npcId + ".htm";
@@ -257,7 +259,7 @@ public class NpcLocationInfo extends AbstractNpcAI
 		addTalkId(NPC);
 	}
 	
-	public static void main(String args[])
+	public static void main(String[] args)
 	{
 		new NpcLocationInfo();
 	}

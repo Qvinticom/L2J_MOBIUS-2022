@@ -131,8 +131,8 @@ public class PastPredictor
 			return _time;
 		}
 		// Go through the matcher groups.
-		int size = _schedulingPattern.matcherSize;
-		long[] times = new long[size];
+		final int size = _schedulingPattern.matcherSize;
+		final long[] times = new long[size];
 		for (int k = 0; k < size; k++)
 		{
 			// Ok, split the time!
@@ -145,11 +145,11 @@ public class PastPredictor
 			int month = c.get(Calendar.MONTH);
 			int year = c.get(Calendar.YEAR);
 			// Gets the matchers.
-			ValueMatcher minuteMatcher = _schedulingPattern.minuteMatchers.get(k);
-			ValueMatcher hourMatcher = _schedulingPattern.hourMatchers.get(k);
-			ValueMatcher dayOfMonthMatcher = _schedulingPattern.dayOfMonthMatchers.get(k);
-			ValueMatcher dayOfWeekMatcher = _schedulingPattern.dayOfWeekMatchers.get(k);
-			ValueMatcher monthMatcher = _schedulingPattern.monthMatchers.get(k);
+			final ValueMatcher minuteMatcher = _schedulingPattern.minuteMatchers.get(k);
+			final ValueMatcher hourMatcher = _schedulingPattern.hourMatchers.get(k);
+			final ValueMatcher dayOfMonthMatcher = _schedulingPattern.dayOfMonthMatchers.get(k);
+			final ValueMatcher dayOfWeekMatcher = _schedulingPattern.dayOfWeekMatchers.get(k);
+			final ValueMatcher monthMatcher = _schedulingPattern.monthMatchers.get(k);
 			for (;;)
 			{ // day of week
 				for (;;)
@@ -195,7 +195,7 @@ public class PastPredictor
 						}
 						if (dayOfMonthMatcher instanceof DayOfMonthValueMatcher)
 						{
-							DayOfMonthValueMatcher aux = (DayOfMonthValueMatcher) dayOfMonthMatcher;
+							final DayOfMonthValueMatcher aux = (DayOfMonthValueMatcher) dayOfMonthMatcher;
 							if (aux.match(dayOfMonth, month + 1, c.isLeapYear(year)))
 							{
 								break;
@@ -267,7 +267,7 @@ public class PastPredictor
 					continue;
 				}
 				// Day of week.
-				int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
+				final int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
 				if (dayOfWeekMatcher.match(dayOfWeek - 1))
 				{
 					break;

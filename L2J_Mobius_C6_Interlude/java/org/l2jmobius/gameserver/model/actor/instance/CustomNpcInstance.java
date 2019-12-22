@@ -66,7 +66,7 @@ public class CustomNpcInstance
 		_boolean = new boolean[4]; // pvp=0 , noble=1, hero=2, isFemaleSex=3
 		
 		// load the Pc Morph Data
-		CustomNpcInstanceManager.customInfo ci = CustomNpcInstanceManager.getInstance().getCustomData(_npcInstance.getSpawn().getId(), _npcInstance.getNpcId());
+		final CustomNpcInstanceManager.customInfo ci = CustomNpcInstanceManager.getInstance().getCustomData(_npcInstance.getSpawn().getId(), _npcInstance.getNpcId());
 		
 		if (ci == null)
 		{

@@ -82,7 +82,7 @@ public abstract class BaseBBSManager
 	
 	protected static void send1002(PlayerInstance player, String string, String string2, String string3)
 	{
-		List<String> arg = new ArrayList<>();
+		final List<String> arg = new ArrayList<>();
 		arg.add("0");
 		arg.add("0");
 		arg.add("0");

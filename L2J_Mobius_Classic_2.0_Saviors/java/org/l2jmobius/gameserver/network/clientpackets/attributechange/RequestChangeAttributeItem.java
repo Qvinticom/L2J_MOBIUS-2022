@@ -83,7 +83,7 @@ public class RequestChangeAttributeItem implements IClientIncomingPacket
 		msg.addAttribute(oldElementId);
 		msg.addAttribute(_newElementId);
 		player.sendPacket(msg);
-		InventoryUpdate iu = new InventoryUpdate();
+		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(item);
 		player.sendPacket(iu);
 		player.broadcastUserInfo();

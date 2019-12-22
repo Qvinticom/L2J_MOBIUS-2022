@@ -131,7 +131,7 @@ public class Q662_AGameOfCards extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -147,8 +147,8 @@ public class Q662_AGameOfCards extends Quest
 		}
 		else if (event.equals("30845-04.htm"))
 		{
-			int state = st.getInt("state");
-			int stateEx = st.getInt("stateEx");
+			final int state = st.getInt("state");
+			final int stateEx = st.getInt("stateEx");
 			
 			if ((state == 0) && (stateEx == 0) && (st.getQuestItemsCount(RED_GEM) >= 50))
 			{
@@ -162,8 +162,8 @@ public class Q662_AGameOfCards extends Quest
 		}
 		else if (event.equals("30845-11.htm"))
 		{
-			int state = st.getInt("state");
-			int stateEx = st.getInt("stateEx");
+			final int state = st.getInt("state");
+			final int stateEx = st.getInt("stateEx");
 			
 			if ((state == 0) && (stateEx == 0) && (st.getQuestItemsCount(RED_GEM) >= 50))
 			{
@@ -266,8 +266,8 @@ public class Q662_AGameOfCards extends Quest
 		}
 		else if (event.equals("First") || event.equals("Second") || event.equals("Third") || event.equals("Fourth") || event.equals("Fifth")) // reply 11 12 13 14 15
 		{
-			int state = st.getInt("state");
-			int stateEx = st.getInt("stateEx");
+			final int state = st.getInt("state");
+			final int stateEx = st.getInt("stateEx");
 			
 			int i0;
 			int i1;
@@ -531,7 +531,7 @@ public class Q662_AGameOfCards extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -544,8 +544,8 @@ public class Q662_AGameOfCards extends Quest
 				break;
 			
 			case State.STARTED:
-				int state = st.getInt("state");
-				int stateEx = st.getInt("stateEx");
+				final int state = st.getInt("state");
+				final int stateEx = st.getInt("stateEx");
 				
 				if ((state == 0) && (stateEx == 0))
 				{
@@ -586,7 +586,7 @@ public class Q662_AGameOfCards extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		PlayerInstance partyMember = getRandomPartyMemberState(player, npc, State.STARTED);
+		final PlayerInstance partyMember = getRandomPartyMemberState(player, npc, State.STARTED);
 		if (partyMember == null)
 		{
 			return null;

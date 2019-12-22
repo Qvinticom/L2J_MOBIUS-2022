@@ -48,7 +48,7 @@ public class Topzone extends VoteSystem
 		
 		try
 		{
-			URLConnection con = new URL(Config.TOPZONE_SERVER_LINK).openConnection();
+			final URLConnection con = new URL(Config.TOPZONE_SERVER_LINK).openConnection();
 			con.addRequestProperty("User-Agent", "L2TopZone");
 			isr = new InputStreamReader(con.getInputStream());
 			br = new BufferedReader(isr);

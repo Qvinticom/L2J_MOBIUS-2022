@@ -413,7 +413,7 @@ public class Potions implements IItemHandler
 					}
 					else
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.INCOMPATIBLE_ITEM_GRADE); // INCOMPATIBLE_ITEM_GRADE
+						final SystemMessage sm = new SystemMessage(SystemMessageId.INCOMPATIBLE_ITEM_GRADE); // INCOMPATIBLE_ITEM_GRADE
 						sm.addItemName(itemId);
 						activeChar.sendPacket(sm);
 					}
@@ -437,7 +437,7 @@ public class Potions implements IItemHandler
 					}
 					else
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.INCOMPATIBLE_ITEM_GRADE); // INCOMPATIBLE_ITEM_GRADE
+						final SystemMessage sm = new SystemMessage(SystemMessageId.INCOMPATIBLE_ITEM_GRADE); // INCOMPATIBLE_ITEM_GRADE
 						sm.addItemName(itemId);
 						activeChar.sendPacket(sm);
 					}
@@ -461,7 +461,7 @@ public class Potions implements IItemHandler
 					}
 					else
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.INCOMPATIBLE_ITEM_GRADE); // INCOMPATIBLE_ITEM_GRADE
+						final SystemMessage sm = new SystemMessage(SystemMessageId.INCOMPATIBLE_ITEM_GRADE); // INCOMPATIBLE_ITEM_GRADE
 						sm.addItemName(itemId);
 						activeChar.sendPacket(sm);
 					}
@@ -758,7 +758,7 @@ public class Potions implements IItemHandler
 				{
 					return true;
 				}
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
 				sm.addItemName(itemId);
 				activeChar.sendPacket(sm);
 				

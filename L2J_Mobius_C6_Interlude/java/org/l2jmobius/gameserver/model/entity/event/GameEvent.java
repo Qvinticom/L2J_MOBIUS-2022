@@ -58,8 +58,8 @@ public class GameEvent
 	{
 		for (int i = 1; i <= players.size(); i++)
 		{
-			LinkedList<String> temp = players.get(i);
-			Iterator<String> it = temp.iterator();
+			final LinkedList<String> temp = players.get(i);
+			final Iterator<String> it = temp.iterator();
 			
 			while (it.hasNext())
 			{
@@ -88,14 +88,14 @@ public class GameEvent
 			
 			for (int i = 1; i <= teamsNumber; i++)
 			{
-				LinkedList<String> temp = players.get(i);
-				Iterator<String> it = temp.iterator();
+				final LinkedList<String> temp = players.get(i);
+				final Iterator<String> it = temp.iterator();
 				
 				while (it.hasNext())
 				{
 					try
 					{
-						PlayerInstance player = World.getInstance().getPlayer(it.next());
+						final PlayerInstance player = World.getInstance().getPlayer(it.next());
 						if (!killersTemp.contains(player.getName()) && (player.kills.size() > kills))
 						{
 							kills = player.kills.size();
@@ -114,13 +114,13 @@ public class GameEvent
 		for (int i = 0; i < n; i++)
 		{
 			kills = 0;
-			Iterator<String> it = killersTemp.iterator();
+			final Iterator<String> it = killersTemp.iterator();
 			
 			while (it.hasNext())
 			{
 				try
 				{
-					PlayerInstance player = World.getInstance().getPlayer(it.next());
+					final PlayerInstance player = World.getInstance().getPlayer(it.next());
 					
 					if (player.kills.size() > kills)
 					{
@@ -245,11 +245,11 @@ public class GameEvent
 	
 	public static void spawn(PlayerInstance target, int npcid)
 	{
-		NpcTemplate template1 = NpcTable.getInstance().getTemplate(npcid);
+		final NpcTemplate template1 = NpcTable.getInstance().getTemplate(npcid);
 		
 		try
 		{
-			Spawn spawn = new Spawn(template1);
+			final Spawn spawn = new Spawn(template1);
 			
 			spawn.setX(target.getX() + 50);
 			spawn.setY(target.getY() + 50);
@@ -281,7 +281,7 @@ public class GameEvent
 	
 	public static void announceAllPlayers(String text)
 	{
-		CreatureSay cs = new CreatureSay(0, Say2.ANNOUNCEMENT, "", text);
+		final CreatureSay cs = new CreatureSay(0, Say2.ANNOUNCEMENT, "", text);
 		
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
@@ -293,7 +293,7 @@ public class GameEvent
 	{
 		for (int k = 0; k < teamsNumber; k++)
 		{
-			Iterator<String> it = players.get(k + 1).iterator();
+			final Iterator<String> it = players.get(k + 1).iterator();
 			
 			boolean temp = false;
 			

@@ -86,7 +86,7 @@ public class GeoDataConverter
 			{
 				final String input = String.format(_format.getFilename(), rx, ry);
 				final String filepath = Config.GEODATA_PATH;
-				File f = new File(filepath + input);
+				final File f = new File(filepath + input);
 				if (f.exists() && !f.isDirectory())
 				{
 					// load geodata
@@ -133,7 +133,7 @@ public class GeoDataConverter
 		try (RandomAccessFile raf = new RandomAccessFile(Config.GEODATA_PATH + filename, "r");
 			FileChannel fc = raf.getChannel())
 		{
-			MappedByteBuffer buffer = fc.map(FileChannel.MapMode.READ_ONLY, 0, fc.size()).load();
+			final MappedByteBuffer buffer = fc.map(FileChannel.MapMode.READ_ONLY, 0, fc.size()).load();
 			buffer.order(ByteOrder.LITTLE_ENDIAN);
 			
 			// load 18B header for L2off geodata (1st and 2nd byte...region X and Y)
@@ -235,7 +235,7 @@ public class GeoDataConverter
 				for (int y = 0; y < GeoStructure.REGION_CELLS_Y; y++)
 				{
 					// get block
-					ABlock block = _blocks[x / GeoStructure.BLOCK_CELLS_X][y / GeoStructure.BLOCK_CELLS_Y];
+					final ABlock block = _blocks[x / GeoStructure.BLOCK_CELLS_X][y / GeoStructure.BLOCK_CELLS_Y];
 					
 					// skip flat blocks
 					if (block instanceof BlockFlat)
@@ -280,13 +280,13 @@ public class GeoDataConverter
 	private static byte updateNsweBelow(int x, int y, short z, byte nswe)
 	{
 		// calculate virtual layer height
-		short height = (short) (z + GeoStructure.CELL_IGNORE_HEIGHT);
+		final short height = (short) (z + GeoStructure.CELL_IGNORE_HEIGHT);
 		
 		// get NSWE of neighbor cells below virtual layer (NPC/PC can fall down of clif, but can not climb it -> NSWE of cell below)
-		byte nsweN = getNsweBelow(x, y - 1, height);
-		byte nsweS = getNsweBelow(x, y + 1, height);
-		byte nsweW = getNsweBelow(x - 1, y, height);
-		byte nsweE = getNsweBelow(x + 1, y, height);
+		final byte nsweN = getNsweBelow(x, y - 1, height);
+		final byte nsweS = getNsweBelow(x, y + 1, height);
+		final byte nsweW = getNsweBelow(x - 1, y, height);
+		final byte nsweE = getNsweBelow(x + 1, y, height);
 		
 		// north-west
 		if ((((nswe & GeoStructure.CELL_FLAG_N) != 0) && ((nsweN & GeoStructure.CELL_FLAG_W) != 0)) || (((nswe & GeoStructure.CELL_FLAG_W) != 0) && ((nsweW & GeoStructure.CELL_FLAG_N) != 0)))

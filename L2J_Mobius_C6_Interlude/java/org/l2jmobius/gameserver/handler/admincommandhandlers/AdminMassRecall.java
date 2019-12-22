@@ -45,9 +45,9 @@ public class AdminMassRecall implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(17).trim();
+				final String val = command.substring(17).trim();
 				
-				Clan clan = ClanTable.getInstance().getClanByName(val);
+				final Clan clan = ClanTable.getInstance().getClanByName(val);
 				
 				if (clan == null)
 				{
@@ -55,7 +55,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 					return true;
 				}
 				
-				PlayerInstance[] m = clan.getOnlineMembers();
+				final PlayerInstance[] m = clan.getOnlineMembers();
 				
 				for (PlayerInstance element : m)
 				{
@@ -71,8 +71,8 @@ public class AdminMassRecall implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(17).trim();
-				Clan clan = ClanTable.getInstance().getClanByName(val);
+				final String val = command.substring(17).trim();
+				final Clan clan = ClanTable.getInstance().getClanByName(val);
 				
 				if (clan == null)
 				{
@@ -84,7 +84,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 				
 				if (ally == 0)
 				{
-					PlayerInstance[] m = clan.getOnlineMembers();
+					final PlayerInstance[] m = clan.getOnlineMembers();
 					
 					for (PlayerInstance element : m)
 					{
@@ -97,7 +97,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 					{
 						if (aclan.getAllyId() == ally)
 						{
-							PlayerInstance[] m = aclan.getOnlineMembers();
+							final PlayerInstance[] m = aclan.getOnlineMembers();
 							
 							for (PlayerInstance element : m)
 							{
@@ -116,8 +116,8 @@ public class AdminMassRecall implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(18).trim();
-				PlayerInstance player = World.getInstance().getPlayer(val);
+				final String val = command.substring(18).trim();
+				final PlayerInstance player = World.getInstance().getPlayer(val);
 				
 				if (player == null)
 				{
@@ -131,7 +131,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 					return true;
 				}
 				
-				Party p = player.getParty();
+				final Party p = player.getParty();
 				
 				for (PlayerInstance ppl : p.getPartyMembers())
 				{

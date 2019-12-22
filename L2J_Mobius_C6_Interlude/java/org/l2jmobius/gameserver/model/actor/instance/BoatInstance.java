@@ -114,7 +114,7 @@ public class BoatInstance extends Creature
 		public void parseLine(String line)
 		{
 			_path = new HashMap<>();
-			StringTokenizer st = new StringTokenizer(line, ";");
+			final StringTokenizer st = new StringTokenizer(line, ";");
 			st.nextToken();
 			max = Integer.parseInt(st.nextToken());
 			for (int i = 0; i < max; i++)
@@ -225,7 +225,7 @@ public class BoatInstance extends Creature
 				boat._vd = new VehicleDeparture(boat, bp.speed1, bp.speed2, bp.x, bp.y, bp.z);
 				boatSpeed = bp.speed1;
 				boat.moveToLocation(bp.x, bp.y, bp.z, (float) bp.speed1);
-				Collection<PlayerInstance> knownPlayers = boat.getKnownList().getKnownPlayers().values();
+				final Collection<PlayerInstance> knownPlayers = boat.getKnownList().getKnownPlayers().values();
 				if ((knownPlayers == null) || knownPlayers.isEmpty())
 				{
 					return bp.time;
@@ -282,7 +282,7 @@ public class BoatInstance extends Creature
 		final double cos = dx / distance;
 		final double sin = dy / distance;
 		// Create and Init a MoveData object
-		MoveData m = new MoveData();
+		final MoveData m = new MoveData();
 		
 		// Calculate and set the heading of the Creature
 		getPosition().setHeading((int) (Math.atan2(-sin, -cos) * 10430.378350470452724949566316381) + 32768);
@@ -373,14 +373,14 @@ public class BoatInstance extends Creature
 				if (time > 0)
 				{
 					_state++;
-					Boatrun bc = new Boatrun(_state, _boat);
+					final Boatrun bc = new Boatrun(_state, _boat);
 					ThreadPool.schedule(bc, time);
 				}
 				else if (time == 0)
 				{
 					_boat._cycle = 2;
 					_boat.say(10);
-					BoatCaptain bc = new BoatCaptain(1, _boat);
+					final BoatCaptain bc = new BoatCaptain(1, _boat);
 					ThreadPool.schedule(bc, 300000);
 				}
 				else
@@ -396,14 +396,14 @@ public class BoatInstance extends Creature
 				if (time > 0)
 				{
 					_state++;
-					Boatrun bc = new Boatrun(_state, _boat);
+					final Boatrun bc = new Boatrun(_state, _boat);
 					ThreadPool.schedule(bc, time);
 				}
 				else if (time == 0)
 				{
 					_boat._cycle = 1;
 					_boat.say(10);
-					BoatCaptain bc = new BoatCaptain(1, _boat);
+					final BoatCaptain bc = new BoatCaptain(1, _boat);
 					ThreadPool.schedule(bc, 300000);
 				}
 				else
@@ -422,7 +422,7 @@ public class BoatInstance extends Creature
 	{
 		if (_runstate != 0)
 		{
-			Boatrun bc = new Boatrun(_runstate, this);
+			final Boatrun bc = new Boatrun(_runstate, this);
 			ThreadPool.schedule(bc, 10);
 			_runstate = 0;
 		}
@@ -444,7 +444,7 @@ public class BoatInstance extends Creature
 	public void beginCycle()
 	{
 		say(10);
-		BoatCaptain bc = new BoatCaptain(1, this);
+		final BoatCaptain bc = new BoatCaptain(1, this);
 		ThreadPool.schedule(bc, 300000);
 	}
 	
@@ -490,7 +490,7 @@ public class BoatInstance extends Creature
 	{
 		if (_cycle == 1)
 		{
-			Collection<PlayerInstance> knownPlayers = getKnownList().getKnownPlayers().values();
+			final Collection<PlayerInstance> knownPlayers = getKnownList().getKnownPlayers().values();
 			if ((knownPlayers != null) && !knownPlayers.isEmpty())
 			{
 				_inboat = new HashMap<>();
@@ -522,12 +522,12 @@ public class BoatInstance extends Creature
 					}
 				}
 			}
-			Boatrun bc = new Boatrun(0, this);
+			final Boatrun bc = new Boatrun(0, this);
 			ThreadPool.schedule(bc, 0);
 		}
 		else if (_cycle == 2)
 		{
-			Collection<PlayerInstance> knownPlayers = getKnownList().getKnownPlayers().values();
+			final Collection<PlayerInstance> knownPlayers = getKnownList().getKnownPlayers().values();
 			if ((knownPlayers != null) && !knownPlayers.isEmpty())
 			{
 				_inboat = new HashMap<>();
@@ -559,14 +559,14 @@ public class BoatInstance extends Creature
 					}
 				}
 			}
-			Boatrun bc = new Boatrun(0, this);
+			final Boatrun bc = new Boatrun(0, this);
 			ThreadPool.schedule(bc, 0);
 		}
 	}
 	
 	public void say(int id)
 	{
-		Collection<PlayerInstance> knownPlayers = getKnownList().getKnownPlayers().values();
+		final Collection<PlayerInstance> knownPlayers = getKnownList().getKnownPlayers().values();
 		CreatureSay sm;
 		PlaySound ps;
 		switch (id)
@@ -684,7 +684,7 @@ public class BoatInstance extends Creature
 	
 	public void spawn()
 	{
-		Collection<PlayerInstance> knownPlayers = getKnownList().getKnownPlayers().values();
+		final Collection<PlayerInstance> knownPlayers = getKnownList().getKnownPlayers().values();
 		_cycle = 1;
 		beginCycle();
 		if ((knownPlayers == null) || knownPlayers.isEmpty())

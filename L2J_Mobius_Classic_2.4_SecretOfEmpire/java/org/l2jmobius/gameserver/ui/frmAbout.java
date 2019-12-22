@@ -59,30 +59,30 @@ public class frmAbout
 		frmAbout.setType(Type.UTILITY);
 		frmAbout.getContentPane().setLayout(null);
 		
-		JLabel lblLjmobius = new JLabel("L2jMobius");
+		final JLabel lblLjmobius = new JLabel("L2jMobius");
 		lblLjmobius.setFont(new Font("Tahoma", Font.PLAIN, 32));
 		lblLjmobius.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLjmobius.setBounds(10, 11, 271, 39);
 		frmAbout.getContentPane().add(lblLjmobius);
 		
-		JLabel lblData = new JLabel("2013-" + Calendar.getInstance().get(Calendar.YEAR));
+		final JLabel lblData = new JLabel("2013-" + Calendar.getInstance().get(Calendar.YEAR));
 		lblData.setHorizontalAlignment(SwingConstants.CENTER);
 		lblData.setBounds(10, 44, 271, 14);
 		frmAbout.getContentPane().add(lblData);
 		
-		JLabel lblSupports = new JLabel("Server Protocol");
+		final JLabel lblSupports = new JLabel("Server Protocol");
 		lblSupports.setHorizontalAlignment(SwingConstants.CENTER);
 		lblSupports.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblSupports.setBounds(10, 78, 271, 23);
 		frmAbout.getContentPane().add(lblSupports);
 		
-		JLabel lblProtocols = new JLabel("Protocol Number");
+		final JLabel lblProtocols = new JLabel("Protocol Number");
 		lblProtocols.setHorizontalAlignment(SwingConstants.CENTER);
 		lblProtocols.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblProtocols.setBounds(10, 92, 271, 23);
 		frmAbout.getContentPane().add(lblProtocols);
 		
-		JLabel site = new JLabel(URL);
+		final JLabel site = new JLabel(URL);
 		site.setText("<HTML><FONT color=\"#000099\"><U>" + URL + "</U></FONT></HTML>");
 		site.setHorizontalAlignment(SwingConstants.CENTER);
 		site.setBounds(76, 128, 140, 14);

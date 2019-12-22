@@ -416,7 +416,7 @@ public class ClanHall
 		
 		for (int i = 0; i < getDoors().size(); i++)
 		{
-			DoorInstance door = getDoors().get(i);
+			final DoorInstance door = getDoors().get(i);
 			
 			if (door.getDoorId() == doorId)
 			{
@@ -789,7 +789,7 @@ public class ClanHall
 					return;
 				}
 				
-				Clan clan = ClanTable.getInstance().getClan(getOwnerId());
+				final Clan clan = ClanTable.getInstance().getClan(getOwnerId());
 				
 				if (ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().getAdena() >= getLease())
 				{
@@ -829,7 +829,7 @@ public class ClanHall
 					else
 					{
 						updateDb();
-						SystemMessage sm = new SystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
 						sm.addNumber(getLease());
 						clan.broadcastToOnlineMembers(sm);
 						
@@ -858,16 +858,16 @@ public class ClanHall
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("Select * from castle_door where castleId = ?");
+			final PreparedStatement statement = con.prepareStatement("Select * from castle_door where castleId = ?");
 			statement.setInt(1, _clanHallId);
-			ResultSet rs = statement.executeQuery();
+			final ResultSet rs = statement.executeQuery();
 			
 			while (rs.next())
 			{
 				// Create list of the door default for use when respawning dead doors
 				_doorDefault.add(rs.getString("name") + ";" + rs.getInt("id") + ";" + rs.getInt("x") + ";" + rs.getInt("y") + ";" + rs.getInt("z") + ";" + rs.getInt("range_xmin") + ";" + rs.getInt("range_ymin") + ";" + rs.getInt("range_zmin") + ";" + rs.getInt("range_xmax") + ";" + rs.getInt("range_ymax") + ";" + rs.getInt("range_zmax") + ";" + rs.getInt("hp") + ";" + rs.getInt("pDef") + ";" + rs.getInt("mDef"));
 				
-				DoorInstance door = DoorTable.parseList(_doorDefault.get(_doorDefault.size() - 1));
+				final DoorInstance door = DoorTable.parseList(_doorDefault.get(_doorDefault.size() - 1));
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
 				_doors.add(door);
 				DoorTable.getInstance().putDoor(door);

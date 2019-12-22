@@ -51,7 +51,7 @@ public class StrSiegeAssault implements ISkillHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) creature;
+		final PlayerInstance player = (PlayerInstance) creature;
 		
 		if (!creature.isRiding())
 		{
@@ -63,8 +63,8 @@ public class StrSiegeAssault implements ISkillHandler
 			return;
 		}
 		
-		Castle castle = CastleManager.getInstance().getCastle(player);
-		Fort fort = FortManager.getInstance().getFort(player);
+		final Castle castle = CastleManager.getInstance().getCastle(player);
+		final Fort fort = FortManager.getInstance().getFort(player);
 		if ((castle == null) && (fort == null))
 		{
 			return;
@@ -84,7 +84,7 @@ public class StrSiegeAssault implements ISkillHandler
 		
 		try
 		{
-			ItemInstance itemToTake = player.getInventory().getItemByItemId(skill.getItemConsumeId());
+			final ItemInstance itemToTake = player.getInventory().getItemByItemId(skill.getItemConsumeId());
 			
 			if (!player.destroyItem("Consume", itemToTake.getObjectId(), skill.getItemConsume(), null, true))
 			{
@@ -101,8 +101,8 @@ public class StrSiegeAssault implements ISkillHandler
 					continue;
 				}
 				
-				Creature target = (Creature) target2;
-				ItemInstance weapon = creature.getActiveWeaponInstance();
+				final Creature target = (Creature) target2;
+				final ItemInstance weapon = creature.getActiveWeaponInstance();
 				if ((creature instanceof PlayerInstance) && (target instanceof PlayerInstance) && target.isAlikeDead() && target.isFakeDeath())
 				{
 					target.stopFakeDeath(null);
@@ -185,8 +185,8 @@ public class StrSiegeAssault implements ISkillHandler
 			return false;
 		}
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-		PlayerInstance player = (PlayerInstance) creature;
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+		final PlayerInstance player = (PlayerInstance) creature;
 		
 		if ((castle == null) || (castle.getCastleId() <= 0))
 		{
@@ -224,8 +224,8 @@ public class StrSiegeAssault implements ISkillHandler
 			return false;
 		}
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-		PlayerInstance player = (PlayerInstance) creature;
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+		final PlayerInstance player = (PlayerInstance) creature;
 		
 		if ((fort == null) || (fort.getFortId() <= 0))
 		{

@@ -114,7 +114,7 @@ public class FarmPvpCmd implements IVoicedCommandHandler
 			activeChar.sendMessage("Sorry, you can't use this command while registered in Olympiad");
 			return false;
 		}
-		SetupGauge sg = new SetupGauge(SetupGauge.BLUE, 15000);
+		final SetupGauge sg = new SetupGauge(SetupGauge.BLUE, 15000);
 		activeChar.sendPacket(sg);
 		activeChar.setIsImobilised(true);
 		

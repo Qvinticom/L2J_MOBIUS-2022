@@ -39,7 +39,7 @@ public class AdminHelpPage implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(11);
+				final String val = command.substring(11);
 				showHelpPage(activeChar, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -61,8 +61,8 @@ public class AdminHelpPage implements IAdminCommandHandler
 	// PUBLIC & STATIC so other classes from package can include it directly
 	public static void showHelpPage(PlayerInstance targetChar, String filename)
 	{
-		String content = HtmCache.getInstance().getHtmForce("data/html/admin/" + filename);
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final String content = HtmCache.getInstance().getHtmForce("data/html/admin/" + filename);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setHtml(content);
 		targetChar.sendPacket(adminReply);
 	}

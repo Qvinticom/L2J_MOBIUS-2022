@@ -60,7 +60,7 @@ public class Q345_MethodToRaiseTheDead extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -130,7 +130,7 @@ public class Q345_MethodToRaiseTheDead extends Quest
 		{
 			if (st.hasQuestItems(USELESS_BONE_PIECES))
 			{
-				int amount = st.getQuestItemsCount(USELESS_BONE_PIECES) * 104;
+				final int amount = st.getQuestItemsCount(USELESS_BONE_PIECES) * 104;
 				st.takeItems(USELESS_BONE_PIECES, -1);
 				st.rewardItems(57, amount);
 			}
@@ -147,7 +147,7 @@ public class Q345_MethodToRaiseTheDead extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -160,7 +160,7 @@ public class Q345_MethodToRaiseTheDead extends Quest
 				break;
 			
 			case State.STARTED:
-				int cond = st.getInt("cond");
+				final int cond = st.getInt("cond");
 				switch (npc.getNpcId())
 				{
 					case DOROTHY:
@@ -179,7 +179,7 @@ public class Q345_MethodToRaiseTheDead extends Quest
 						else
 						{
 							// Shared part between cond 6 and 7.
-							int amount = st.getQuestItemsCount(USELESS_BONE_PIECES) * 70;
+							final int amount = st.getQuestItemsCount(USELESS_BONE_PIECES) * 70;
 							st.takeItems(USELESS_BONE_PIECES, -1);
 							
 							// Scaried little girl
@@ -238,7 +238,7 @@ public class Q345_MethodToRaiseTheDead extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
 		if (st == null)
 		{
 			return null;

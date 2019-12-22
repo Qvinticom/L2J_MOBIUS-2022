@@ -56,7 +56,7 @@ public class MercManagerInstance extends FolkInstance
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
@@ -90,8 +90,8 @@ public class MercManagerInstance extends FolkInstance
 		}
 		else if (condition == COND_OWNER)
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
-			String actualCommand = st.nextToken(); // Get actual command
+			final StringTokenizer st = new StringTokenizer(command, " ");
+			final String actualCommand = st.nextToken(); // Get actual command
 			
 			String val = "";
 			if (st.countTokens() >= 1)
@@ -117,10 +117,10 @@ public class MercManagerInstance extends FolkInstance
 	private void showBuyWindow(PlayerInstance player, int val)
 	{
 		player.tempInvetoryDisable();
-		StoreTradeList list = TradeController.getInstance().getBuyList(val);
+		final StoreTradeList list = TradeController.getInstance().getBuyList(val);
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 		{
-			BuyList bl = new BuyList(list, player.getAdena(), 0);
+			final BuyList bl = new BuyList(list, player.getAdena(), 0);
 			player.sendPacket(bl);
 		}
 		else
@@ -144,7 +144,7 @@ public class MercManagerInstance extends FolkInstance
 			filename = "data/html/mercmanager/mercmanager.htm"; // Owner message window
 		}
 		
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcId%", String.valueOf(getNpcId()));

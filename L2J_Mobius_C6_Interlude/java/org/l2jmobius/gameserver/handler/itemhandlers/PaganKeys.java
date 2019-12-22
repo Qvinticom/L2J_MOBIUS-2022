@@ -52,8 +52,8 @@ public class PaganKeys implements IItemHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) playable;
-		WorldObject target = player.getTarget();
+		final PlayerInstance player = (PlayerInstance) playable;
+		final WorldObject target = player.getTarget();
 		
 		if (!(target instanceof DoorInstance))
 		{

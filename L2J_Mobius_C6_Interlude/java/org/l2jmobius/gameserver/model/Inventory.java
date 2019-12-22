@@ -92,7 +92,7 @@ public abstract class Inventory extends ItemContainer
 				return;
 			}
 			
-			PlayerInstance owner = (PlayerInstance) getOwner();
+			final PlayerInstance owner = (PlayerInstance) getOwner();
 			if (item.getItemId() == 6408)
 			{
 				owner.setIsWearingFormalWear(false);
@@ -107,7 +107,7 @@ public abstract class Inventory extends ItemContainer
 				return;
 			}
 			
-			PlayerInstance owner = (PlayerInstance) getOwner();
+			final PlayerInstance owner = (PlayerInstance) getOwner();
 			
 			// If player equip Formal Wear unequip weapons and abort cast/attack
 			if (item.getItemId() == 6408)
@@ -197,7 +197,7 @@ public abstract class Inventory extends ItemContainer
 			
 			if (item.getItemType() == WeaponType.BOW)
 			{
-				ItemInstance arrow = getPaperdollItem(PAPERDOLL_LHAND);
+				final ItemInstance arrow = getPaperdollItem(PAPERDOLL_LHAND);
 				
 				if (arrow != null)
 				{
@@ -227,7 +227,7 @@ public abstract class Inventory extends ItemContainer
 			
 			if (item.getItemType() == WeaponType.BOW)
 			{
-				ItemInstance arrow = findArrowForBow(item.getItem());
+				final ItemInstance arrow = findArrowForBow(item.getItem());
 				if (arrow != null)
 				{
 					setPaperdollItem(PAPERDOLL_LHAND, arrow);
@@ -407,7 +407,7 @@ public abstract class Inventory extends ItemContainer
 			{
 				if (armorSet.containAll(player))
 				{
-					Skill skill = SkillTable.getInstance().getInfo(armorSet.getSkillId(), 1);
+					final Skill skill = SkillTable.getInstance().getInfo(armorSet.getSkillId(), 1);
 					
 					if (skill != null)
 					{
@@ -421,7 +421,7 @@ public abstract class Inventory extends ItemContainer
 					
 					if (armorSet.containShield(player)) // has shield from set
 					{
-						Skill skills = SkillTable.getInstance().getInfo(armorSet.getShieldSkillId(), 1);
+						final Skill skills = SkillTable.getInstance().getInfo(armorSet.getShieldSkillId(), 1);
 						
 						if (skills != null)
 						{
@@ -440,7 +440,7 @@ public abstract class Inventory extends ItemContainer
 						
 						if (skillId > 0)
 						{
-							Skill skille = SkillTable.getInstance().getInfo(skillId, 1);
+							final Skill skille = SkillTable.getInstance().getInfo(skillId, 1);
 							
 							if (skille != null)
 							{
@@ -459,7 +459,7 @@ public abstract class Inventory extends ItemContainer
 			{
 				if (armorSet.containAll(player))
 				{
-					Skill skills = SkillTable.getInstance().getInfo(armorSet.getShieldSkillId(), 1);
+					final Skill skills = SkillTable.getInstance().getInfo(armorSet.getShieldSkillId(), 1);
 					
 					if (skills != null)
 					{
@@ -482,7 +482,7 @@ public abstract class Inventory extends ItemContainer
 				return;
 			}
 			
-			PlayerInstance player = (PlayerInstance) getOwner();
+			final PlayerInstance player = (PlayerInstance) getOwner();
 			
 			boolean remove = false;
 			int removeSkillId1 = 0; // set skill
@@ -491,7 +491,7 @@ public abstract class Inventory extends ItemContainer
 			
 			if (slot == PAPERDOLL_CHEST)
 			{
-				ArmorSet armorSet = ArmorSetsTable.getInstance().getSet(item.getItemId());
+				final ArmorSet armorSet = ArmorSetsTable.getInstance().getSet(item.getItemId());
 				if (armorSet == null)
 				{
 					return;
@@ -504,13 +504,13 @@ public abstract class Inventory extends ItemContainer
 			}
 			else
 			{
-				ItemInstance chestItem = getPaperdollItem(PAPERDOLL_CHEST);
+				final ItemInstance chestItem = getPaperdollItem(PAPERDOLL_CHEST);
 				if (chestItem == null)
 				{
 					return;
 				}
 				
-				ArmorSet armorSet = ArmorSetsTable.getInstance().getSet(chestItem.getItemId());
+				final ArmorSet armorSet = ArmorSetsTable.getInstance().getSet(chestItem.getItemId());
 				if (armorSet == null)
 				{
 					return;
@@ -534,7 +534,7 @@ public abstract class Inventory extends ItemContainer
 			{
 				if (removeSkillId1 != 0)
 				{
-					Skill skill = SkillTable.getInstance().getInfo(removeSkillId1, 1);
+					final Skill skill = SkillTable.getInstance().getInfo(removeSkillId1, 1);
 					
 					if (skill != null)
 					{
@@ -548,7 +548,7 @@ public abstract class Inventory extends ItemContainer
 				
 				if (removeSkillId2 != 0)
 				{
-					Skill skill = SkillTable.getInstance().getInfo(removeSkillId2, 1);
+					final Skill skill = SkillTable.getInstance().getInfo(removeSkillId2, 1);
 					
 					if (skill != null)
 					{
@@ -562,7 +562,7 @@ public abstract class Inventory extends ItemContainer
 				
 				if (removeSkillId3 != 0)
 				{
-					Skill skill = SkillTable.getInstance().getInfo(removeSkillId3, 1);
+					final Skill skill = SkillTable.getInstance().getInfo(removeSkillId3, 1);
 					
 					if (skill != null)
 					{
@@ -902,7 +902,7 @@ public abstract class Inventory extends ItemContainer
 				
 				for (int i = 0; i < PAPERDOLL_LRHAND; i++)
 				{
-					ItemInstance pi = _paperdoll[i];
+					final ItemInstance pi = _paperdoll[i];
 					
 					if (pi != null)
 					{
@@ -1394,7 +1394,7 @@ public abstract class Inventory extends ItemContainer
 			case Item.SLOT_LEGS:
 			{
 				// handle full armor
-				ItemInstance chest = getPaperdollItem(PAPERDOLL_CHEST);
+				final ItemInstance chest = getPaperdollItem(PAPERDOLL_CHEST);
 				if ((chest != null) && (chest.getItem().getBodyPart() == Item.SLOT_FULL_ARMOR))
 				{
 					setPaperdollItem(PAPERDOLL_CHEST, null);
@@ -1574,11 +1574,11 @@ public abstract class Inventory extends ItemContainer
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT object_id FROM items WHERE owner_id=? AND (loc=? OR loc=?) ORDER BY object_id DESC");
+			final PreparedStatement statement = con.prepareStatement("SELECT object_id FROM items WHERE owner_id=? AND (loc=? OR loc=?) ORDER BY object_id DESC");
 			statement.setInt(1, getOwner().getObjectId());
 			statement.setString(2, getBaseLocation().name());
 			statement.setString(3, getEquipLocation().name());
-			ResultSet inv = statement.executeQuery();
+			final ResultSet inv = statement.executeQuery();
 			
 			ItemInstance item;
 			
@@ -1595,7 +1595,7 @@ public abstract class Inventory extends ItemContainer
 				
 				if (getOwner() instanceof PlayerInstance)
 				{
-					PlayerInstance player = (PlayerInstance) getOwner();
+					final PlayerInstance player = (PlayerInstance) getOwner();
 					if (!player.isGM() && !player.isHero())
 					{
 						final int itemId = item.getItemId();

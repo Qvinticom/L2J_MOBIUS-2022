@@ -60,7 +60,7 @@ public class Q10797_CrossingFate extends Quest
 		{
 			return null;
 		}
-		String htmltext = event;
+		final String htmltext = event;
 		switch (event)
 		{
 			case "31683-02.htm":

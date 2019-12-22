@@ -112,7 +112,7 @@ public class Q378_MagnificentFeast extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -181,7 +181,7 @@ public class Q378_MagnificentFeast extends Quest
 		}
 		else
 		{
-			int score = st.getInt("score");
+			final int score = st.getInt("score");
 			if (event.equals("30594-8a.htm"))
 			{
 				if (st.hasQuestItems(SALAD_RECIPE))
@@ -232,7 +232,7 @@ public class Q378_MagnificentFeast extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -269,7 +269,7 @@ public class Q378_MagnificentFeast extends Quest
 						st.takeItems(RITRON_DESSERT, 1);
 						st.giveItems(REWARDS.get(score)[0], REWARDS.get(score)[1]);
 						
-						int adena = REWARDS.get(score)[2];
+						final int adena = REWARDS.get(score)[2];
 						if (adena > 0)
 						{
 							st.rewardItems(57, adena);

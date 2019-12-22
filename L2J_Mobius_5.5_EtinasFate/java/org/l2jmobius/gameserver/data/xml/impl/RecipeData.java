@@ -106,8 +106,8 @@ public class RecipeData implements IXmlReader
 								{
 									if ("stat".equalsIgnoreCase(b.getNodeName()))
 									{
-										StatusUpdateType stat = StatusUpdateType.valueOf(b.getAttributes().getNamedItem("name").getNodeValue());
-										double value = Double.parseDouble(b.getAttributes().getNamedItem("val").getNodeValue());
+										final StatusUpdateType stat = StatusUpdateType.valueOf(b.getAttributes().getNamedItem("name").getNodeValue());
+										final double value = Double.parseDouble(b.getAttributes().getNamedItem("val").getNodeValue());
 										statUse.put(stat, value);
 									}
 								}
@@ -128,12 +128,12 @@ public class RecipeData implements IXmlReader
 		{
 			if ("item".equalsIgnoreCase(b.getNodeName()))
 			{
-				int itemId = Integer.parseInt(b.getAttributes().getNamedItem("id").getNodeValue());
-				long itemCount = Long.parseLong(b.getAttributes().getNamedItem("count").getNodeValue());
+				final int itemId = Integer.parseInt(b.getAttributes().getNamedItem("id").getNodeValue());
+				final long itemCount = Long.parseLong(b.getAttributes().getNamedItem("count").getNodeValue());
 				
 				if (b.getAttributes().getNamedItem("chance") != null)
 				{
-					double chance = Double.parseDouble(b.getAttributes().getNamedItem("chance").getNodeValue());
+					final double chance = Double.parseDouble(b.getAttributes().getNamedItem("chance").getNodeValue());
 					items.add(new ItemChanceHolder(itemId, chance, itemCount));
 				}
 				else

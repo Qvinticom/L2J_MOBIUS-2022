@@ -138,7 +138,7 @@ public class Loc implements IUserCommandHandler
 			}
 		}
 		
-		SystemMessage sm = new SystemMessage(msg);
+		final SystemMessage sm = new SystemMessage(msg);
 		sm.addNumber(player.getX());
 		sm.addNumber(player.getY());
 		sm.addNumber(player.getZ());

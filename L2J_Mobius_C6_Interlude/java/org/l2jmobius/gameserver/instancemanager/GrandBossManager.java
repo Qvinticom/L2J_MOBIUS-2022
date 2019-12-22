@@ -87,7 +87,7 @@ public class GrandBossManager
 			while (rset.next())
 			{
 				// Read all info from DB, and store it for AI to read and decide what to do faster than accessing DB in real time
-				StatsSet info = new StatsSet();
+				final StatsSet info = new StatsSet();
 				final int bossId = rset.getInt("boss_id");
 				info.set("loc_x", rset.getInt("loc_x"));
 				info.set("loc_y", rset.getInt("loc_y"));

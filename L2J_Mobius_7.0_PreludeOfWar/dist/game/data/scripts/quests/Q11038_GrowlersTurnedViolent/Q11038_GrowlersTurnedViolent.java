@@ -159,14 +159,11 @@ public class Q11038_GrowlersTurnedViolent extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1))
+		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, CORRUPTED_ENERGY, 1, 15, 0.5, true))
 		{
-			if (giveItemRandomly(killer, CORRUPTED_ENERGY, 1, 15, 0.5, true))
-			{
-				qs.setCond(2, true);
-				giveItems(killer, SOE_PIO);
-				showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_PIO_IN_YOUR_INVENTORY_NTALK_TO_PIO_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
-			}
+			qs.setCond(2, true);
+			giveItems(killer, SOE_PIO);
+			showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_PIO_IN_YOUR_INVENTORY_NTALK_TO_PIO_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

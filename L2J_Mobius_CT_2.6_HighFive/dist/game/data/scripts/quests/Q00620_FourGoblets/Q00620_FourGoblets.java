@@ -457,7 +457,7 @@ public class Q00620_FourGoblets extends Quest
 				final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
 				if (qs != null)
 				{
-					int npcId = npc.getId();
+					final int npcId = npc.getId();
 					if (MOB1.containsKey(npcId))
 					{
 						giveItemRandomly(qs.getPlayer(), npc, SEALED_BOX, 1, 0, MOB1.get(npcId), true);
@@ -631,7 +631,7 @@ public class Q00620_FourGoblets extends Quest
 				if (getRandom(1000) < 848)
 				{
 					i2 = true;
-					int i1 = getRandom(1000);
+					final int i1 = getRandom(1000);
 					if (i1 < 43)
 					{
 						giveItems(player, CORD);
@@ -677,7 +677,7 @@ public class Q00620_FourGoblets extends Quest
 				if (getRandom(1000) < 323)
 				{
 					i2 = true;
-					int i1 = getRandom(1000);
+					final int i1 = getRandom(1000);
 					if (i1 < 335)
 					{
 						giveItems(player, SYNTETHIC_COKES);
@@ -714,7 +714,7 @@ public class Q00620_FourGoblets extends Quest
 				if (getRandom(1000) < 847)
 				{
 					i2 = true;
-					int i1 = getRandom(1000);
+					final int i1 = getRandom(1000);
 					if (i1 < 148)
 					{
 						giveItems(player, BRAIDED_HEMP);
@@ -760,7 +760,7 @@ public class Q00620_FourGoblets extends Quest
 				if (getRandom(1000) < 251)
 				{
 					i2 = true;
-					int i1 = getRandom(1000);
+					final int i1 = getRandom(1000);
 					if (i1 < 350)
 					{
 						giveItems(player, VARNISH_OF_PURITY);
@@ -797,7 +797,7 @@ public class Q00620_FourGoblets extends Quest
 				if (getRandom(1000) < 31)
 				{
 					i2 = true;
-					int i1 = getRandom(1000);
+					final int i1 = getRandom(1000);
 					if (i1 < 223)
 					{
 						giveItems(player, ENCHANT_ARMOR_A_GRADE);
@@ -815,7 +815,7 @@ public class Q00620_FourGoblets extends Quest
 				if (getRandom(1000) < 5)
 				{
 					i2 = true;
-					int i1 = getRandom(1000);
+					final int i1 = getRandom(1000);
 					if (i1 < 202)
 					{
 						giveItems(player, ENCHANT_WEAPON_A_GRADE);
@@ -836,7 +836,7 @@ public class Q00620_FourGoblets extends Quest
 				if (getRandom(1000) < 329)
 				{
 					i2 = true;
-					int i1 = getRandom(1000);
+					final int i1 = getRandom(1000);
 					if (i1 < 88)
 					{
 						giveItems(player, SEALED_TATEOSSIAN_EARRING_PART);
@@ -910,7 +910,7 @@ public class Q00620_FourGoblets extends Quest
 				if (getRandom(1000) < 54)
 				{
 					i2 = true;
-					int i1 = getRandom(1000);
+					final int i1 = getRandom(1000);
 					if (i1 < 100)
 					{
 						giveItems(player, FORGOTTEN_BLADE_EDGE);

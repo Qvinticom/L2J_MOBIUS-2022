@@ -58,9 +58,9 @@ public class Harvest implements ISkillHandler
 		
 		_player = (PlayerInstance) creature;
 		
-		WorldObject[] targetList = skill.getTargetList(creature);
+		final WorldObject[] targetList = skill.getTargetList(creature);
 		
-		InventoryUpdate iu = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+		final InventoryUpdate iu = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 		
 		if (targetList == null)
 		{
@@ -78,7 +78,7 @@ public class Harvest implements ISkillHandler
 			
 			if (_player != _target.getSeeder())
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_HARVEST);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_HARVEST);
 				_player.sendPacket(sm);
 				continue;
 			}
@@ -92,7 +92,7 @@ public class Harvest implements ISkillHandler
 			{
 				if (calcSuccess())
 				{
-					Attackable.RewardItem[] items = _target.takeHarvest();
+					final Attackable.RewardItem[] items = _target.takeHarvest();
 					if ((items != null) && (items.length > 0))
 					{
 						for (Attackable.RewardItem ritem : items)
@@ -104,7 +104,7 @@ public class Harvest implements ISkillHandler
 							}
 							else
 							{
-								ItemInstance item = _player.getInventory().addItem("Manor", ritem.getItemId(), ritem.getCount(), _player, _target);
+								final ItemInstance item = _player.getInventory().addItem("Manor", ritem.getItemId(), ritem.getCount(), _player, _target);
 								if (iu != null)
 								{
 									iu.addItem(item);

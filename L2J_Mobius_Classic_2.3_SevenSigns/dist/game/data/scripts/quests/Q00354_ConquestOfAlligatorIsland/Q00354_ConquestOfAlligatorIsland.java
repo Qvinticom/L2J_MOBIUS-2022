@@ -112,9 +112,9 @@ public class Q00354_ConquestOfAlligatorIsland extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
-		if(qs != null)
+		if (qs != null)
 		{
-			int npcId = npc.getId();
+			final int npcId = npc.getId();
 			if (MOB1.containsKey(npcId))
 			{
 				giveItemRandomly(qs.getPlayer(), npc, ALLIGATOR_TOOTH, 1, 0, MOB1.get(npcId), true);

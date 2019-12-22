@@ -52,7 +52,7 @@ public class AttackableKnownList extends NpcKnownList
 		final Collection<PlayerInstance> known = getKnownPlayers().values();
 		
 		// FIXME: This is a temporary solution
-		CreatureAI ai = getActiveChar().getAI();
+		final CreatureAI ai = getActiveChar().getAI();
 		if ((ai != null) && ((known == null) || known.isEmpty()))
 		{
 			ai.setIntention(CtrlIntention.AI_INTENTION_IDLE);

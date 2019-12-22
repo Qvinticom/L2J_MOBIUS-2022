@@ -198,51 +198,48 @@ public class MonsterArena extends AbstractInstance
 			case "supply_reward":
 			{
 				final Instance world = npc.getInstanceWorld();
-				if ((world != null) && (npc.getId() == SUPPLIES) && (player.getLevel() > 39))
+				if ((world != null) && (npc.getId() == SUPPLIES) && (player.getLevel() > 39) && !REWARDED_PLAYERS.contains(player) && npc.isScriptValue(0))
 				{
-					if (!REWARDED_PLAYERS.contains(player) && npc.isScriptValue(0))
+					npc.setScriptValue(1);
+					npc.doDie(npc);
+					REWARDED_PLAYERS.add(player);
+					ThreadPool.schedule(() ->
 					{
-						npc.setScriptValue(1);
-						npc.doDie(npc);
-						REWARDED_PLAYERS.add(player);
-						ThreadPool.schedule(() ->
-						{
-							REWARDED_PLAYERS.remove(player);
-						}, 60000);
-						
-						// Mandatory reward.
-						final Npc machine = world.getNpc(MACHINE);
-						final int progress = GlobalVariablesManager.getInstance().getInt(MONSTER_ARENA_VARIABLE + machine.getScriptValue());
-						if (progress > 16)
-						{
-							giveItems(player, BATTLE_BOX_4, 1);
-						}
-						else if (progress > 11)
-						{
-							giveItems(player, BATTLE_BOX_3, 1);
-						}
-						else if (progress > 6)
-						{
-							giveItems(player, BATTLE_BOX_2, 1);
-						}
-						else
-						{
-							giveItems(player, BATTLE_BOX_1, 1);
-						}
-						
-						// Rare reward.
-						if (getRandom(100) < 1) // 1% chance.
-						{
-							giveItems(player, TICKET_L, 1);
-						}
-						else if (getRandom(100) < 1) // 1% chance.
-						{
-							giveItems(player, TICKET_M, 1);
-						}
-						else if (getRandom(100) < 1) // 1% chance.
-						{
-							giveItems(player, TICKET_H, 1);
-						}
+						REWARDED_PLAYERS.remove(player);
+					}, 60000);
+					
+					// Mandatory reward.
+					final Npc machine = world.getNpc(MACHINE);
+					final int progress = GlobalVariablesManager.getInstance().getInt(MONSTER_ARENA_VARIABLE + machine.getScriptValue());
+					if (progress > 16)
+					{
+						giveItems(player, BATTLE_BOX_4, 1);
+					}
+					else if (progress > 11)
+					{
+						giveItems(player, BATTLE_BOX_3, 1);
+					}
+					else if (progress > 6)
+					{
+						giveItems(player, BATTLE_BOX_2, 1);
+					}
+					else
+					{
+						giveItems(player, BATTLE_BOX_1, 1);
+					}
+					
+					// Rare reward.
+					if (getRandom(100) < 1) // 1% chance.
+					{
+						giveItems(player, TICKET_L, 1);
+					}
+					else if (getRandom(100) < 1) // 1% chance.
+					{
+						giveItems(player, TICKET_M, 1);
+					}
+					else if (getRandom(100) < 1) // 1% chance.
+					{
+						giveItems(player, TICKET_H, 1);
 					}
 				}
 				break;

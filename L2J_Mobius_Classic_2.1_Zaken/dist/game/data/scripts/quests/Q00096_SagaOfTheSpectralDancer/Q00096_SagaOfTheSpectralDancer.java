@@ -444,12 +444,9 @@ public class Q00096_SagaOfTheSpectralDancer extends Quest
 				case GHOST_OF_SOLITUDE:
 				case SPIRIT_OF_COLD:
 				{
-					if (qs.isCond(3))
+					if (qs.isCond(3) && giveItemRandomly(killer, npc, ICE_CRYSTAL_FRAGMENT, 1, 50, 0.5, true))
 					{
-						if (giveItemRandomly(killer, npc, ICE_CRYSTAL_FRAGMENT, 1, 50, 0.5, true))
-						{
-							qs.setCond(4);
-						}
+						qs.setCond(4);
 					}
 					break;
 				}
@@ -466,13 +463,10 @@ public class Q00096_SagaOfTheSpectralDancer extends Quest
 				case FIERY_IFRIT:
 				case IKEDIT:
 				{
-					if (qs.isCond(12))
+					if (qs.isCond(12) && giveItemRandomly(killer, npc, HALISHA_BADGE, 1, 700, 0.5, true))
 					{
-						if (giveItemRandomly(killer, npc, HALISHA_BADGE, 1, 700, 0.5, true))
-						{
-							addSpawn(HALISHA_ARCHON, npc, true, 0, true);
-							qs.setCond(13);
-						}
+						addSpawn(HALISHA_ARCHON, npc, true, 0, true);
+						qs.setCond(13);
 					}
 					break;
 				}

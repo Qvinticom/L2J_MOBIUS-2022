@@ -45,7 +45,7 @@ public class PartyInfo implements IUserCommandHandler
 			return false;
 		}
 		
-		Party playerParty = player.getParty();
+		final Party playerParty = player.getParty();
 		final int memberCount = playerParty.getMemberCount();
 		final int lootDistribution = playerParty.getLootDistribution();
 		final String partyLeader = playerParty.getPartyMembers().get(0).getName();

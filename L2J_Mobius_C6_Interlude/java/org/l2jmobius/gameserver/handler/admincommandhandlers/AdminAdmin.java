@@ -77,7 +77,7 @@ public class AdminAdmin implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
-		StringTokenizer st = new StringTokenizer(command);
+		final StringTokenizer st = new StringTokenizer(command);
 		
 		final CommandEnum comm = CommandEnum.valueOf(st.nextToken());
 		
@@ -182,16 +182,16 @@ public class AdminAdmin implements IAdminCommandHandler
 			case admin_set:
 			{
 				boolean noToken = false;
-				String[] cmd = st.nextToken().split("_");
+				final String[] cmd = st.nextToken().split("_");
 				if ((cmd != null) && (cmd.length > 1))
 				{
 					if (st.hasMoreTokens())
 					{
-						String[] parameter = st.nextToken().split("=");
+						final String[] parameter = st.nextToken().split("=");
 						if (parameter.length > 1)
 						{
-							String pName = parameter[0].trim();
-							String pValue = parameter[1].trim();
+							final String pName = parameter[0].trim();
+							final String pValue = parameter[1].trim();
 							if (Float.valueOf(pValue) == null)
 							{
 								BuilderUtil.sendSysMessage(activeChar, "Invalid parameter!");

@@ -81,7 +81,7 @@ public class Recall implements ISkillHandler
 					continue;
 				}
 				
-				Creature target = (Creature) target1;
+				final Creature target = (Creature) target1;
 				
 				if (target instanceof PlayerInstance)
 				{
@@ -113,7 +113,7 @@ public class Recall implements ISkillHandler
 					
 					if (targetChar.isAlikeDead())
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_DEAD_AT_THE_MOMENT_AND_CANNOT_BE_SUMMONED);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_DEAD_AT_THE_MOMENT_AND_CANNOT_BE_SUMMONED);
 						sm.addString(targetChar.getName());
 						creature.sendPacket(sm);
 						continue;
@@ -121,7 +121,7 @@ public class Recall implements ISkillHandler
 					
 					if (targetChar.isInStoreMode())
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S1_CURRENTLY_TRADING_OR_OPERATING_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CURRENTLY_TRADING_OR_OPERATING_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED);
 						sm.addString(targetChar.getName());
 						creature.sendPacket(sm);
 						continue;

@@ -53,7 +53,7 @@ public class ExEnchantSkillInfo implements IClientOutgoingPacket
 		packet.writeD(_routes.size());
 		_routes.forEach(route ->
 		{
-			int subLevel = (_currentSubLevel > 0 ? (route + (_currentSubLevel % 1000)) - 1 : route);
+			final int subLevel = (_currentSubLevel > 0 ? (route + (_currentSubLevel % 1000)) - 1 : route);
 			packet.writeD(subLevel > 1000 ? SkillEnchantConverter.levelToErtheia(subLevel) : subLevel);
 		});
 		return true;

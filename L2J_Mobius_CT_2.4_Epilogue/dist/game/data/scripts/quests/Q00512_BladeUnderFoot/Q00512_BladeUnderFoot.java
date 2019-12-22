@@ -100,7 +100,7 @@ public class Q00512_BladeUnderFoot extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
-			int playerCount = player.getParty().getMemberCount();
+			final int playerCount = player.getParty().getMemberCount();
 			int itemCount = RAID_BOSSES.get(npc.getId()).getSecondChance();
 			
 			if (playerCount > 0)
@@ -164,7 +164,7 @@ public class Q00512_BladeUnderFoot extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if(qs != null)
+		if (qs != null)
 		{
 			if (player.getParty() != null)
 			{

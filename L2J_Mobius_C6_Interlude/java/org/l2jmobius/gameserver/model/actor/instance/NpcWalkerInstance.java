@@ -81,7 +81,7 @@ public class NpcWalkerInstance extends NpcInstance
 		// we send message to known players only!
 		if (!knownPlayers.isEmpty())
 		{
-			CreatureSay cs = new CreatureSay(getObjectId(), 0, getName(), chat);
+			final CreatureSay cs = new CreatureSay(getObjectId(), 0, getName(), chat);
 			
 			// we interact and list players here
 			for (PlayerInstance players : knownPlayers.values())

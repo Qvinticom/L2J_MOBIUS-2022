@@ -40,10 +40,10 @@ public class TeleportWithCharm extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = "";
 		
-		int npcId = npc.getNpcId();
+		final int npcId = npc.getNpcId();
 		if (npcId == WHIRPY)
 		{
 			if (st.getQuestItemsCount(DWARF_GATEKEEPER_TOKEN) >= 1)

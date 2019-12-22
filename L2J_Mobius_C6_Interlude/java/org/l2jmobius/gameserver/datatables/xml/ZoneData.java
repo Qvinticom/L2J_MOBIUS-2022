@@ -92,14 +92,14 @@ public class ZoneData
 		// Load the zone xml
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
 			
-			File file = new File(Config.DATAPACK_ROOT + "/data/zones/zone.xml");
+			final File file = new File(Config.DATAPACK_ROOT + "/data/zones/zone.xml");
 			if (file.exists())
 			{
-				Document doc = factory.newDocumentBuilder().parse(file);
+				final Document doc = factory.newDocumentBuilder().parse(file);
 				
 				int effectZoneId = 150000; // FIXME: Temporally workaround to avoid zone.xml modification
 				for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
@@ -121,8 +121,8 @@ public class ZoneData
 								final int minZ = Integer.parseInt(attrs.getNamedItem("minZ").getNodeValue());
 								final int maxZ = Integer.parseInt(attrs.getNamedItem("maxZ").getNodeValue());
 								
-								String zoneType = attrs.getNamedItem("type").getNodeValue();
-								String zoneShape = attrs.getNamedItem("shape").getNodeValue();
+								final String zoneType = attrs.getNamedItem("type").getNodeValue();
+								final String zoneShape = attrs.getNamedItem("shape").getNodeValue();
 								
 								// Create the zone
 								ZoneType temp = null;
@@ -294,7 +294,7 @@ public class ZoneData
 										statement = con.prepareStatement("SELECT x,y FROM zone_vertices WHERE id=? ORDER BY 'order' ASC ");
 										
 										statement.setInt(1, zoneId);
-										ResultSet rset = statement.executeQuery();
+										final ResultSet rset = statement.executeQuery();
 										
 										// Create this zone. Parsing for cuboids is a bit different than for other polygons
 										// cuboids need exactly 2 points to be defined. Other polygons need at least 3 (one per vertex)
@@ -341,7 +341,7 @@ public class ZoneData
 											}
 											case "NPoly":
 											{
-												List<Integer> flX = new ArrayList<>();
+												final List<Integer> flX = new ArrayList<>();
 												final List<Integer> flY = new ArrayList<>();
 												// Load the rest
 												while (rset.next())
@@ -451,8 +451,8 @@ public class ZoneData
 									if ("stat".equalsIgnoreCase(cd.getNodeName()))
 									{
 										attrs = cd.getAttributes();
-										String name = attrs.getNamedItem("name").getNodeValue();
-										String val = attrs.getNamedItem("val").getNodeValue();
+										final String name = attrs.getNamedItem("name").getNodeValue();
+										final String val = attrs.getNamedItem("val").getNodeValue();
 										
 										temp.setParameter(name, val);
 									}

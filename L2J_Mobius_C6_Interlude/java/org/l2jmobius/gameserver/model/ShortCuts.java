@@ -52,7 +52,7 @@ public class ShortCuts
 	
 	public ShortCut getShortCut(int slot, int page)
 	{
-		ShortCut sc = _shortCuts.get(slot + (page * 12));
+		final ShortCut sc = _shortCuts.get(slot + (page * 12));
 		// verify shortcut
 		if ((sc != null) && (sc.getType() == ShortCut.TYPE_ITEM) && (_owner.getInventory().getItemByObjectId(sc.getId()) == null))
 		{
@@ -63,7 +63,7 @@ public class ShortCuts
 	
 	public synchronized void registerShortCut(ShortCut shortcut)
 	{
-		ShortCut oldShortCut = _shortCuts.put(shortcut.getSlot() + (12 * shortcut.getPage()), shortcut);
+		final ShortCut oldShortCut = _shortCuts.put(shortcut.getSlot() + (12 * shortcut.getPage()), shortcut);
 		registerShortCutInDb(shortcut, oldShortCut);
 	}
 	
@@ -76,7 +76,7 @@ public class ShortCuts
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("REPLACE INTO character_shortcuts (char_obj_id,slot,page,type,shortcut_id,level,class_index) values(?,?,?,?,?,?,?)");
+			final PreparedStatement statement = con.prepareStatement("REPLACE INTO character_shortcuts (char_obj_id,slot,page,type,shortcut_id,level,class_index) values(?,?,?,?,?,?,?)");
 			statement.setInt(1, _owner.getObjectId());
 			statement.setInt(2, shortcut.getSlot());
 			statement.setInt(3, shortcut.getPage());
@@ -99,7 +99,7 @@ public class ShortCuts
 	 */
 	public synchronized void deleteShortCut(int slot, int page)
 	{
-		ShortCut old = _shortCuts.remove(slot + (page * 12));
+		final ShortCut old = _shortCuts.remove(slot + (page * 12));
 		
 		if ((old == null) || (_owner == null))
 		{
@@ -110,7 +110,7 @@ public class ShortCuts
 		
 		if (old.getType() == ShortCut.TYPE_ITEM)
 		{
-			ItemInstance item = _owner.getInventory().getItemByObjectId(old.getId());
+			final ItemInstance item = _owner.getInventory().getItemByObjectId(old.getId());
 			
 			if ((item != null) && (item.getItemType() == EtcItemType.SHOT))
 			{
@@ -153,7 +153,7 @@ public class ShortCuts
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("DELETE FROM character_shortcuts WHERE char_obj_id=? AND slot=? AND page=? AND class_index=?");
+			final PreparedStatement statement = con.prepareStatement("DELETE FROM character_shortcuts WHERE char_obj_id=? AND slot=? AND page=? AND class_index=?");
 			statement.setInt(1, _owner.getObjectId());
 			statement.setInt(2, shortcut.getSlot());
 			statement.setInt(3, shortcut.getPage());
@@ -172,11 +172,11 @@ public class ShortCuts
 		_shortCuts.clear();
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT char_obj_id, slot, page, type, shortcut_id, level FROM character_shortcuts WHERE char_obj_id=? AND class_index=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT char_obj_id, slot, page, type, shortcut_id, level FROM character_shortcuts WHERE char_obj_id=? AND class_index=?");
 			statement.setInt(1, _owner.getObjectId());
 			statement.setInt(2, _owner.getClassIndex());
 			
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			
 			while (rset.next())
 			{
@@ -186,7 +186,7 @@ public class ShortCuts
 				final int id = rset.getInt("shortcut_id");
 				final int level = rset.getInt("level");
 				
-				ShortCut sc = new ShortCut(slot, page, type, id, level);
+				final ShortCut sc = new ShortCut(slot, page, type, id, level);
 				_shortCuts.put(slot + (page * 12), sc);
 			}
 			

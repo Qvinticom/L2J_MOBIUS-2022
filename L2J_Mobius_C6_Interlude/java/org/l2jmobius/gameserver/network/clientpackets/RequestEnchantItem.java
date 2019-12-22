@@ -772,7 +772,7 @@ public class RequestEnchantItem extends GameClientPacket
 			}
 		}
 		
-		StatusUpdate su = new StatusUpdate(player.getObjectId());
+		final StatusUpdate su = new StatusUpdate(player.getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
 		player.sendPacket(su);
 		

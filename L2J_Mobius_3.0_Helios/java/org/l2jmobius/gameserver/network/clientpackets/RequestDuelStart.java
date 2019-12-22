@@ -50,7 +50,7 @@ public class RequestDuelStart implements IClientIncomingPacket
 	{
 		if (player != null)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_DECLINED_YOUR_CHALLENGE_TO_A_DUEL);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_DECLINED_YOUR_CHALLENGE_TO_A_DUEL);
 			sm.addString(name);
 			player.sendPacket(sm);
 			player.onTransactionResponse();

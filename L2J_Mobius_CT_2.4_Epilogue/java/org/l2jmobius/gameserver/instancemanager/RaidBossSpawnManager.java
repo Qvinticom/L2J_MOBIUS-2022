@@ -326,7 +326,7 @@ public class RaidBossSpawnManager
 		{
 			for (Entry<Integer, StatsSet> entry : _storedInfo.entrySet())
 			{
-				Integer bossId = entry.getKey();
+				final Integer bossId = entry.getKey();
 				if (bossId == null)
 				{
 					continue;

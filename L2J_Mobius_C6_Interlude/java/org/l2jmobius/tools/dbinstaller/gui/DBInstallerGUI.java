@@ -50,7 +50,7 @@ public class DBInstallerGUI extends JFrame implements DBOutputInterface
 		setDefaultLookAndFeelDecorated(true);
 		
 		// Set icons.
-		List<Image> icons = new ArrayList<>();
+		final List<Image> icons = new ArrayList<>();
 		icons.add(new ImageIcon("..\\images\\l2jmobius_16x16.png").getImage());
 		icons.add(new ImageIcon("..\\images\\l2jmobius_32x32.png").getImage());
 		icons.add(new ImageIcon("..\\images\\l2jmobius_64x64.png").getImage());

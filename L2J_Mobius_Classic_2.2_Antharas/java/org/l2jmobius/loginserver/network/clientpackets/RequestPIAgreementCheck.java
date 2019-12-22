@@ -33,9 +33,9 @@ public class RequestPIAgreementCheck implements IIncomingPacket<LoginClient>
 	public boolean read(LoginClient client, PacketReader packet)
 	{
 		_accountId = packet.readD();
-		byte[] padding0 = new byte[3];
-		byte[] checksum = new byte[4];
-		byte[] padding1 = new byte[12];
+		final byte[] padding0 = new byte[3];
+		final byte[] checksum = new byte[4];
+		final byte[] padding1 = new byte[12];
 		packet.readB(padding0, 0, padding0.length);
 		packet.readB(checksum, 0, checksum.length);
 		packet.readB(padding1, 0, padding1.length);

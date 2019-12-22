@@ -51,9 +51,9 @@ public class AdminBuffs implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
-		StringTokenizer st = new StringTokenizer(command, " ");
+		final StringTokenizer st = new StringTokenizer(command, " ");
 		
-		CommandEnum comm = CommandEnum.valueOf(st.nextToken());
+		final CommandEnum comm = CommandEnum.valueOf(st.nextToken());
 		
 		if (comm == null)
 		{
@@ -67,7 +67,7 @@ public class AdminBuffs implements IAdminCommandHandler
 				if (st.hasMoreTokens())
 				{
 					PlayerInstance player = null;
-					String playername = st.nextToken();
+					final String playername = st.nextToken();
 					player = World.getInstance().getPlayer(playername);
 					if (player != null)
 					{
@@ -91,7 +91,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			{
 				if (st.hasMoreTokens())
 				{
-					String playername = st.nextToken();
+					final String playername = st.nextToken();
 					if (st.hasMoreTokens())
 					{
 						int skillId = 0;
@@ -125,7 +125,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			{
 				if (st.hasMoreTokens())
 				{
-					String playername = st.nextToken();
+					final String playername = st.nextToken();
 					if (playername != null)
 					{
 						removeAllBuffs(activeChar, playername);
@@ -141,7 +141,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			{
 				if (st.hasMoreTokens())
 				{
-					String val = st.nextToken();
+					final String val = st.nextToken();
 					int radius = 0;
 					try
 					{
@@ -183,13 +183,13 @@ public class AdminBuffs implements IAdminCommandHandler
 	
 	public void showBuffs(PlayerInstance player, PlayerInstance activeChar)
 	{
-		StringBuilder html = new StringBuilder();
+		final StringBuilder html = new StringBuilder();
 		
 		html.append("<html><center><font color=\"LEVEL\">Effects of " + player.getName() + "</font><center><br>");
 		html.append("<table>");
 		html.append("<tr><td width=200>Skill</td><td width=70>Action</td></tr>");
 		
-		Effect[] effects = player.getAllEffects();
+		final Effect[] effects = player.getAllEffects();
 		
 		for (Effect e : effects)
 		{
@@ -203,7 +203,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		html.append("<button value=\"Remove All\" action=\"bypass -h admin_stopallbuffs " + player.getName() + "\" width=60 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 		html.append("</html>");
 		
-		NpcHtmlMessage ms = new NpcHtmlMessage(1);
+		final NpcHtmlMessage ms = new NpcHtmlMessage(1);
 		ms.setHtml(html.toString());
 		
 		activeChar.sendPacket(ms);
@@ -211,11 +211,11 @@ public class AdminBuffs implements IAdminCommandHandler
 	
 	private void removeBuff(PlayerInstance remover, String playername, int SkillId)
 	{
-		PlayerInstance player = World.getInstance().getPlayer(playername);
+		final PlayerInstance player = World.getInstance().getPlayer(playername);
 		
 		if ((player != null) && (SkillId > 0))
 		{
-			Effect[] effects = player.getAllEffects();
+			final Effect[] effects = player.getAllEffects();
 			
 			for (Effect e : effects)
 			{

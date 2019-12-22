@@ -345,7 +345,7 @@ public class Q00327_RecoverTheFarmland extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if(qs != null)
+		if (qs != null)
 		{
 			if ((npc.getId() == TUREK_ORK_SHAMAN) || (npc.getId() == TUREK_ORK_WARLORD))
 			{

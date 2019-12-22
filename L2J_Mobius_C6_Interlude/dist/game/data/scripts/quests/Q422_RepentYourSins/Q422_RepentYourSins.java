@@ -68,7 +68,7 @@ public class Q422_RepentYourSins extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -104,7 +104,7 @@ public class Q422_RepentYourSins extends Quest
 		{
 			if (!st.hasQuestItems(PENITENT_MANACLES))
 			{
-				int cond = st.getInt("cond");
+				final int cond = st.getInt("cond");
 				
 				// Case you return back the qitem to Black Judge. She rewards you with the pet item.
 				if (cond == 15)
@@ -148,7 +148,7 @@ public class Q422_RepentYourSins extends Quest
 				st.takeItems(PENITENT_MANACLES, 1);
 				st.giveItems(LEFT_PENITENT_MANACLES, 1);
 				
-				int removePkAmount = Rnd.get(10) + 1;
+				final int removePkAmount = Rnd.get(10) + 1;
 				
 				// Player's PKs are lower than random amount ; finish the quest.
 				if (player.getPkKills() <= removePkAmount)
@@ -196,7 +196,7 @@ public class Q422_RepentYourSins extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getAlreadyCompletedMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -398,7 +398,7 @@ public class Q422_RepentYourSins extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerState(player, npc, State.STARTED);
+		final QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)
 		{
 			return null;

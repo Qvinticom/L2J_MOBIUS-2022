@@ -73,8 +73,8 @@ public class OlympiadManagerInstance extends Npc
 	{
 		if (command.startsWith("OlympiadDesc"))
 		{
-			int val = Integer.parseInt(command.substring(13, 14));
-			String suffix = command.substring(14);
+			final int val = Integer.parseInt(command.substring(13, 14));
+			final String suffix = command.substring(14);
 			showChatWindow(player, val, suffix);
 		}
 		else if (command.startsWith("OlympiadNoble"))
@@ -84,7 +84,7 @@ public class OlympiadManagerInstance extends Npc
 				return;
 			}
 			
-			int val = Integer.parseInt(command.substring(14));
+			final int val = Integer.parseInt(command.substring(14));
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			
 			switch (val)
@@ -98,7 +98,7 @@ public class OlympiadManagerInstance extends Npc
 				{
 					int classed = 0;
 					int nonClassed = 0;
-					int[] array = Olympiad.getInstance().getWaitingList();
+					final int[] array = Olympiad.getInstance().getWaitingList();
 					
 					if (array != null)
 					{
@@ -124,7 +124,7 @@ public class OlympiadManagerInstance extends Npc
 				}
 				case 3:
 				{
-					int points = Olympiad.getInstance().getNoblePoints(player.getObjectId());
+					final int points = Olympiad.getInstance().getNoblePoints(player.getObjectId());
 					html.setFile(player, Olympiad.OLYMPIAD_HTML_PATH + "noble_points1.htm");
 					html.replace("%points%", String.valueOf(points));
 					html.replace("%objectId%", String.valueOf(getObjectId()));
@@ -169,7 +169,7 @@ public class OlympiadManagerInstance extends Npc
 				}
 				case 9:
 				{
-					int point = Olympiad.getInstance().getLastNobleOlympiadPoints(player.getObjectId());
+					final int point = Olympiad.getInstance().getLastNobleOlympiadPoints(player.getObjectId());
 					html.setFile(player, Olympiad.OLYMPIAD_HTML_PATH + "noble_points2.htm");
 					html.replace("%points%", String.valueOf(point));
 					html.replace("%objectId%", String.valueOf(getObjectId()));
@@ -196,7 +196,7 @@ public class OlympiadManagerInstance extends Npc
 		else if (command.startsWith("OlyBuff"))
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			String[] params = command.split(" ");
+			final String[] params = command.split(" ");
 			
 			if (!Util.isDigit(params[1]))
 			{
@@ -242,20 +242,20 @@ public class OlympiadManagerInstance extends Npc
 		}
 		else if (command.startsWith("Olympiad"))
 		{
-			int val = Integer.parseInt(command.substring(9, 10));
+			final int val = Integer.parseInt(command.substring(9, 10));
 			
-			NpcHtmlMessage reply = new NpcHtmlMessage(getObjectId());
+			final NpcHtmlMessage reply = new NpcHtmlMessage(getObjectId());
 			
 			switch (val)
 			{
 				case 1:
 				{
-					Map<Integer, String> matches = Olympiad.getInstance().getMatchList();
+					final Map<Integer, String> matches = Olympiad.getInstance().getMatchList();
 					reply.setFile(player, Olympiad.OLYMPIAD_HTML_PATH + "olympiad_observe1.htm");
 					
 					for (int i = 0; i < Olympiad.getStadiumCount(); i++)
 					{
-						int arenaID = i + 1;
+						final int arenaID = i + 1;
 						
 						// &$906; -> \\&\\$906;
 						reply.replace("%title" + arenaID + "%", matches.containsKey(i) ? matches.get(i) : "\\&$906;");
@@ -267,10 +267,10 @@ public class OlympiadManagerInstance extends Npc
 				case 2:
 				{
 					// for example >> Olympiad 1_88
-					int classId = Integer.parseInt(command.substring(11));
+					final int classId = Integer.parseInt(command.substring(11));
 					if (((classId >= 88) && (classId <= 118)) || ((classId >= 131) && (classId <= 134)) || (classId == 136))
 					{
-						List<String> names = Olympiad.getInstance().getClassLeaderBoard(classId);
+						final List<String> names = Olympiad.getInstance().getClassLeaderBoard(classId);
 						reply.setFile(player, Olympiad.OLYMPIAD_HTML_PATH + "olympiad_ranking.htm");
 						
 						int index = 1;
@@ -297,7 +297,7 @@ public class OlympiadManagerInstance extends Npc
 				}
 				case 3:
 				{
-					int id = Integer.parseInt(command.substring(11));
+					final int id = Integer.parseInt(command.substring(11));
 					Olympiad.addSpectator(id, player, true);
 					break;
 				}

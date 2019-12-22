@@ -115,7 +115,7 @@ public class QuestSpawn
 					offset *= Rnd.get(50, 100);
 					y += offset;
 				}
-				Spawn spawn = new Spawn(template);
+				final Spawn spawn = new Spawn(template);
 				spawn.setHeading(heading);
 				spawn.setX(x);
 				spawn.setY(y);

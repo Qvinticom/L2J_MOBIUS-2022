@@ -981,7 +981,7 @@ public class Duel
 		
 		if (_partyDuel)
 		{
-			boolean teamdefeated = player.getParty().getMembers().stream().anyMatch(member -> member.getDuelState() == DUELSTATE_DUELLING);
+			final boolean teamdefeated = player.getParty().getMembers().stream().anyMatch(member -> member.getDuelState() == DUELSTATE_DUELLING);
 			
 			if (teamdefeated)
 			{

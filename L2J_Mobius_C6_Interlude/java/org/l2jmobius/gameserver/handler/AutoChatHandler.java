@@ -61,14 +61,14 @@ public class AutoChatHandler implements SpawnListener
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT * FROM auto_chat ORDER BY groupId ASC");
+			final PreparedStatement statement = con.prepareStatement("SELECT * FROM auto_chat ORDER BY groupId ASC");
 			final ResultSet rs = statement.executeQuery();
 			
 			while (rs.next())
 			{
-				PreparedStatement statement2 = con.prepareStatement("SELECT * FROM auto_chat_text WHERE groupId=?");
+				final PreparedStatement statement2 = con.prepareStatement("SELECT * FROM auto_chat_text WHERE groupId=?");
 				statement2.setInt(1, rs.getInt("groupId"));
-				ResultSet rs2 = statement2.executeQuery();
+				final ResultSet rs2 = statement2.executeQuery();
 				
 				rs2.last();
 				final String[] chatTexts = new String[rs2.getRow()];
@@ -241,7 +241,7 @@ public class AutoChatHandler implements SpawnListener
 			
 			if (_registeredChats.containsKey(npcId))
 			{
-				AutoChatInstance chatInst = _registeredChats.get(npcId);
+				final AutoChatInstance chatInst = _registeredChats.get(npcId);
 				
 				if ((chatInst != null) && chatInst.isGlobal())
 				{
@@ -315,7 +315,7 @@ public class AutoChatHandler implements SpawnListener
 		{
 			final int objectId = npcInst.getObjectId();
 			
-			AutoChatDefinition chatDef = new AutoChatDefinition(this, npcInst, chatTexts, chatDelay);
+			final AutoChatDefinition chatDef = new AutoChatDefinition(this, npcInst, chatTexts, chatDelay);
 			
 			if (npcInst instanceof SiegeGuardInstance)
 			{
@@ -339,7 +339,7 @@ public class AutoChatHandler implements SpawnListener
 				return false;
 			}
 			
-			AutoChatDefinition chatDefinition = _chatDefinitions.get(objectId);
+			final AutoChatDefinition chatDefinition = _chatDefinitions.get(objectId);
 			chatDefinition.setActive(false);
 			
 			_chatDefinitions.remove(objectId);
@@ -459,7 +459,7 @@ public class AutoChatHandler implements SpawnListener
 		 */
 		public void setChatDelay(int objectId, long delayValue)
 		{
-			AutoChatDefinition chatDef = getChatDefinition(objectId);
+			final AutoChatDefinition chatDef = getChatDefinition(objectId);
 			
 			if (chatDef != null)
 			{
@@ -474,7 +474,7 @@ public class AutoChatHandler implements SpawnListener
 		 */
 		public void setChatTexts(int objectId, String[] textsValue)
 		{
-			AutoChatDefinition chatDef = getChatDefinition(objectId);
+			final AutoChatDefinition chatDef = getChatDefinition(objectId);
 			
 			if (chatDef != null)
 			{
@@ -489,7 +489,7 @@ public class AutoChatHandler implements SpawnListener
 		 */
 		public void setRandomChat(int objectId, boolean randValue)
 		{
-			AutoChatDefinition chatDef = getChatDefinition(objectId);
+			final AutoChatDefinition chatDef = getChatDefinition(objectId);
 			
 			if (chatDef != null)
 			{
@@ -522,7 +522,7 @@ public class AutoChatHandler implements SpawnListener
 			
 			if (isActive())
 			{
-				AutoChatRunner acr = new AutoChatRunner(_npcId, -1);
+				final AutoChatRunner acr = new AutoChatRunner(_npcId, -1);
 				_chatTask = ThreadPool.scheduleAtFixedRate(acr, _defaultDelay, _defaultDelay);
 			}
 			else
@@ -619,7 +619,7 @@ public class AutoChatHandler implements SpawnListener
 				
 				if (activeValue)
 				{
-					AutoChatRunner acr = new AutoChatRunner(_npcId, _npcInstance.getObjectId());
+					final AutoChatRunner acr = new AutoChatRunner(_npcId, _npcInstance.getObjectId());
 					
 					if (getChatDelay() == 0)
 					{
@@ -660,7 +660,7 @@ public class AutoChatHandler implements SpawnListener
 			@Override
 			public synchronized void run()
 			{
-				AutoChatInstance chatInst = _registeredChats.get(_runnerNpcId);
+				final AutoChatInstance chatInst = _registeredChats.get(_runnerNpcId);
 				AutoChatDefinition[] chatDefinitions;
 				
 				if (chatInst.isGlobal())
@@ -669,7 +669,7 @@ public class AutoChatHandler implements SpawnListener
 				}
 				else
 				{
-					AutoChatDefinition chatDef = chatInst.getChatDefinition(_objectId);
+					final AutoChatDefinition chatDef = chatInst.getChatDefinition(_objectId);
 					
 					if (chatDef == null)
 					{
@@ -687,9 +687,9 @@ public class AutoChatHandler implements SpawnListener
 				{
 					try
 					{
-						NpcInstance chatNpc = chatDef._npcInstance;
-						List<PlayerInstance> nearbyPlayers = new ArrayList<>();
-						List<PlayerInstance> nearbyGMs = new ArrayList<>();
+						final NpcInstance chatNpc = chatDef._npcInstance;
+						final List<PlayerInstance> nearbyPlayers = new ArrayList<>();
+						final List<PlayerInstance> nearbyGMs = new ArrayList<>();
 						
 						for (Creature creature : chatNpc.getKnownList().getKnownCharactersInRadius(1500))
 						{
@@ -711,7 +711,7 @@ public class AutoChatHandler implements SpawnListener
 						final int maxIndex = chatDef.getChatTexts().length;
 						int lastIndex = Rnd.get(maxIndex);
 						
-						String creatureName = chatNpc.getName();
+						final String creatureName = chatNpc.getName();
 						String text;
 						
 						if (!chatDef.isRandomChat())
@@ -738,7 +738,7 @@ public class AutoChatHandler implements SpawnListener
 						{
 							final int randomPlayerIndex = Rnd.get(nearbyPlayers.size());
 							
-							PlayerInstance randomPlayer = nearbyPlayers.get(randomPlayerIndex);
+							final PlayerInstance randomPlayer = nearbyPlayers.get(randomPlayerIndex);
 							
 							final int winningCabal = SevenSigns.getInstance().getCabalHighestScore();
 							int losingCabal = SevenSigns.CABAL_NULL;
@@ -792,7 +792,7 @@ public class AutoChatHandler implements SpawnListener
 							return;
 						}
 						
-						CreatureSay cs = new CreatureSay(chatNpc.getObjectId(), 0, creatureName, text);
+						final CreatureSay cs = new CreatureSay(chatNpc.getObjectId(), 0, creatureName, text);
 						
 						for (PlayerInstance nearbyPlayer : nearbyPlayers)
 						{

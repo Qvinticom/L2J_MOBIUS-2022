@@ -115,7 +115,7 @@ public class ClanTable
 	
 	public int getTopRate(int clanId)
 	{
-		Clan clan = getClan(clanId);
+		final Clan clan = getClan(clanId);
 		if (clan.getLevel() < 3)
 		{
 			return 0;

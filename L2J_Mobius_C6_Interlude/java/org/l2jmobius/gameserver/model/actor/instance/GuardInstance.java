@@ -147,7 +147,7 @@ public class GuardInstance extends Attackable
 		_homeZ = getZ();
 		
 		// check the region where this mob is, do not activate the AI if region is inactive.
-		WorldRegion region = World.getInstance().getRegion(getX(), getY());
+		final WorldRegion region = World.getInstance().getRegion(getX(), getY());
 		if ((region != null) && !region.isActive())
 		{
 			((AttackableAI) getAI()).stopAITask();
@@ -218,7 +218,7 @@ public class GuardInstance extends Attackable
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
 			// The color to display in the select window is White
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
@@ -239,7 +239,7 @@ public class GuardInstance extends Attackable
 		{
 			// Send a Server->Client packet SocialAction to the all PlayerInstance on the _knownPlayer of the NpcInstance
 			// to display a social action of the GuardInstance on their client
-			SocialAction sa = new SocialAction(getObjectId(), Rnd.get(8));
+			final SocialAction sa = new SocialAction(getObjectId(), Rnd.get(8));
 			broadcastPacket(sa);
 			
 			// Open a chat window on client with the text of the GuardInstance

@@ -66,7 +66,7 @@ public class AdminSiege implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
-		StringTokenizer st = new StringTokenizer(command, " ");
+		final StringTokenizer st = new StringTokenizer(command, " ");
 		command = st.nextToken(); // Get actual command
 		
 		// Get castle
@@ -97,7 +97,7 @@ public class AdminSiege implements IAdminCommandHandler
 		}
 		else
 		{
-			WorldObject target = activeChar.getTarget();
+			final WorldObject target = activeChar.getTarget();
 			PlayerInstance player = null;
 			
 			if (target instanceof PlayerInstance)
@@ -174,7 +174,7 @@ public class AdminSiege implements IAdminCommandHandler
 			}
 			else if (command.equalsIgnoreCase("admin_removecastle"))
 			{
-				Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
+				final Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
 				
 				if (clan != null)
 				{
@@ -231,7 +231,7 @@ public class AdminSiege implements IAdminCommandHandler
 			}
 			else if (command.equalsIgnoreCase("admin_clanhallteleportself"))
 			{
-				ClanHallZone zone = clanhall.getZone();
+				final ClanHallZone zone = clanhall.getZone();
 				
 				if (zone != null)
 				{
@@ -264,7 +264,7 @@ public class AdminSiege implements IAdminCommandHandler
 	{
 		int i = 0;
 		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/castles.htm");
 		StringBuilder cList = new StringBuilder();
 		
@@ -272,7 +272,7 @@ public class AdminSiege implements IAdminCommandHandler
 		{
 			if (castle != null)
 			{
-				String name = castle.getName();
+				final String name = castle.getName();
 				cList.append("<td fixwidth=90><a action=\"bypass -h admin_siege " + name + "\">" + name + "</a></td>");
 				i++;
 			}
@@ -329,7 +329,7 @@ public class AdminSiege implements IAdminCommandHandler
 	
 	private void showSiegePage(PlayerInstance activeChar, String castleName)
 	{
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/castle.htm");
 		adminReply.replace("%castleName%", castleName);
 		activeChar.sendPacket(adminReply);
@@ -337,11 +337,11 @@ public class AdminSiege implements IAdminCommandHandler
 	
 	private void showClanHallPage(PlayerInstance activeChar, ClanHall clanhall)
 	{
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/clanhall.htm");
 		adminReply.replace("%clanhallName%", clanhall.getName());
 		adminReply.replace("%clanhallId%", String.valueOf(clanhall.getId()));
-		Clan owner = ClanTable.getInstance().getClan(clanhall.getOwnerId());
+		final Clan owner = ClanTable.getInstance().getClan(clanhall.getOwnerId());
 		
 		if (owner == null)
 		{

@@ -46,7 +46,7 @@ public class CastleUpdater implements Runnable
 		try
 		{
 			// Move current castle treasury to clan warehouse every 2 hour
-			ItemContainer warehouse = _clan.getWarehouse();
+			final ItemContainer warehouse = _clan.getWarehouse();
 			if ((warehouse != null) && (_clan.getHasCastle() > 0))
 			{
 				final Castle castle = CastleManager.getInstance().getCastleById(_clan.getHasCastle());

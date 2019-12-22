@@ -174,34 +174,28 @@ public class Q11023_RedGemNecklace3 extends Quest
 			{
 				case EVIL_EYE_SEER:
 				{
-					if (qs.isCond(2) && (getQuestItemsCount(killer, HARD_LENS) < 20))
+					if (qs.isCond(2) && (getQuestItemsCount(killer, HARD_LENS) < 20) && (getRandom(100) < 92))
 					{
-						if (getRandom(100) < 92)
+						giveItems(killer, HARD_LENS, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, HARD_LENS) >= 20)
 						{
-							giveItems(killer, HARD_LENS, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, HARD_LENS) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_EVIL_EYE_SEERS_N_GO_HUNTING_AND_KILL_KASHA_IMPS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(3);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_EVIL_EYE_SEERS_N_GO_HUNTING_AND_KILL_KASHA_IMPS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(3);
 						}
 					}
 					break;
 				}
 				case KASHA_IMP:
 				{
-					if (qs.isCond(3) && (getQuestItemsCount(killer, RED_STONE) < 20))
+					if (qs.isCond(3) && (getQuestItemsCount(killer, RED_STONE) < 20) && (getRandom(100) < 91))
 					{
-						if (getRandom(100) < 91)
+						giveItems(killer, RED_STONE, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, RED_STONE) >= 20)
 						{
-							giveItems(killer, RED_STONE, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, RED_STONE) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_KASHA_IMPS_NRETURN_TO_ACCESSORY_MERCHANT_USKA, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(4);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_KASHA_IMPS_NRETURN_TO_ACCESSORY_MERCHANT_USKA, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(4);
 						}
 					}
 					break;

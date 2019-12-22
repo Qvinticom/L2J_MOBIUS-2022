@@ -80,14 +80,14 @@ public class AdminMonsterRace implements IAdminCommandHandler
 				0
 			}
 		};
-		MonsterRace race = MonsterRace.getInstance();
+		final MonsterRace race = MonsterRace.getInstance();
 		
 		if (state == -1)
 		{
 			state++;
 			race.newRace();
 			race.newSpeeds();
-			MonRaceInfo spk = new MonRaceInfo(codes[state][0], codes[state][1], race.getMonsters(), race.getSpeeds());
+			final MonRaceInfo spk = new MonRaceInfo(codes[state][0], codes[state][1], race.getMonsters(), race.getSpeeds());
 			activeChar.sendPacket(spk);
 			activeChar.broadcastPacket(spk);
 		}
@@ -95,19 +95,19 @@ public class AdminMonsterRace implements IAdminCommandHandler
 		{
 			state++;
 			
-			SystemMessage sm = new SystemMessage(SystemMessageId.MONSRACE_RACE_START);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.MONSRACE_RACE_START);
 			sm.addNumber(0);
 			activeChar.sendPacket(sm);
 			
-			PlaySound sRace = new PlaySound(1, "S_Race", 0, 0, 0, 0, 0);
+			final PlaySound sRace = new PlaySound(1, "S_Race", 0, 0, 0, 0, 0);
 			activeChar.sendPacket(sRace);
 			activeChar.broadcastPacket(sRace);
 			
-			PlaySound sRace2 = new PlaySound(0, "ItemSound2.race_start", 1, 121209259, 12125, 182487, -3559);
+			final PlaySound sRace2 = new PlaySound(0, "ItemSound2.race_start", 1, 121209259, 12125, 182487, -3559);
 			activeChar.sendPacket(sRace2);
 			activeChar.broadcastPacket(sRace2);
 			
-			MonRaceInfo spk = new MonRaceInfo(codes[state][0], codes[state][1], race.getMonsters(), race.getSpeeds());
+			final MonRaceInfo spk = new MonRaceInfo(codes[state][0], codes[state][1], race.getMonsters(), race.getSpeeds());
 			activeChar.sendPacket(spk);
 			activeChar.broadcastPacket(spk);
 			
@@ -129,7 +129,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 		@Override
 		public void run()
 		{
-			MonRaceInfo spk = new MonRaceInfo(codes[2][0], codes[2][1], MonsterRace.getInstance().getMonsters(), MonsterRace.getInstance().getSpeeds());
+			final MonRaceInfo spk = new MonRaceInfo(codes[2][0], codes[2][1], MonsterRace.getInstance().getMonsters(), MonsterRace.getInstance().getSpeeds());
 			activeChar.sendPacket(spk);
 			activeChar.broadcastPacket(spk);
 			ThreadPool.schedule(new RunEnd(activeChar), 30000);

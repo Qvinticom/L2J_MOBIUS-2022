@@ -94,7 +94,7 @@ public class PlayerStatus extends PlayableStatus
 		if ((attacker != null) && (attacker != getActiveChar()))
 		{
 			// Check and calculate transfered damage
-			Summon summon = getActiveChar().getPet();
+			final Summon summon = getActiveChar().getPet();
 			
 			// TODO correct range
 			if ((summon instanceof SummonInstance) && Util.checkIfInRange(900, getActiveChar(), summon, true))
@@ -151,7 +151,7 @@ public class PlayerStatus extends PlayableStatus
 		if ((attacker != null) && (attacker != getActiveChar()) && (fullValue > 0))
 		{
 			// Send a System Message to the PlayerInstance
-			SystemMessage smsg = new SystemMessage(SystemMessageId.S1_GAVE_YOU_S2_DMG);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_GAVE_YOU_S2_DMG);
 			
 			if (attacker instanceof NpcInstance)
 			{

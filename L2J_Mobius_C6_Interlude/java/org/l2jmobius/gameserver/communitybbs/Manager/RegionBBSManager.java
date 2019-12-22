@@ -54,7 +54,7 @@ public class RegionBBSManager extends BaseBBSManager
 		{
 			CommunityBoard.getInstance().addBypass(player, "Region>", command);
 			
-			StringTokenizer st = new StringTokenizer(command, ";");
+			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			
 			showRegion(player, Integer.parseInt(st.nextToken()));

@@ -146,7 +146,7 @@ public class Q419_GetAPet extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -225,7 +225,7 @@ public class Q419_GetAPet extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -288,7 +288,7 @@ public class Q419_GetAPet extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerState(player, npc, State.STARTED);
+		final QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)
 		{
 			return null;
@@ -309,9 +309,9 @@ public class Q419_GetAPet extends Quest
 		final int answers = st.getInt("correct") + (st.getInt("wrong"));
 		if (answers < 10)
 		{
-			String[] questions = st.getString("quiz").split(" ");
-			int index = Rnd.get(questions.length - 1);
-			String question = questions[index];
+			final String[] questions = st.getString("quiz").split(" ");
+			final int index = Rnd.get(questions.length - 1);
+			final String question = questions[index];
 			
 			if (questions.length > (10 - answers))
 			{

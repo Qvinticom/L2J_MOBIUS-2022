@@ -32,13 +32,12 @@ public class VillageMasterDwarfInstance extends VillageMasterInstance
 	}
 	
 	@Override
-	protected final boolean checkVillageMasterRace(ClassId pclass)
+	protected final boolean checkVillageMasterRace(ClassId pClass)
 	{
-		if (pclass == null)
+		if (pClass == null)
 		{
 			return false;
 		}
-		
-		return pclass.getRace() == Race.DWARF;
+		return pClass.getRace() == Race.DWARF;
 	}
 }

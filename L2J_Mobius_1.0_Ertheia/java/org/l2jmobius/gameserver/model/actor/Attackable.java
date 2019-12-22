@@ -89,7 +89,7 @@ public class Attackable extends Npc
 	private boolean _isRaidMinion = false;
 	//
 	private boolean _champion = false;
-	private volatile Map<Creature, AggroInfo> _aggroList = new ConcurrentHashMap<>();
+	private final Map<Creature, AggroInfo> _aggroList = new ConcurrentHashMap<>();
 	private boolean _isReturningToSpawnPoint = false;
 	private boolean _canReturnToSpawnPoint = true;
 	private boolean _seeThroughSilentMove = false;
@@ -107,7 +107,7 @@ public class Attackable extends Npc
 	private double _overhitDamage;
 	private Creature _overhitAttacker;
 	// Command channel
-	private volatile CommandChannel _firstCommandChannelAttacked = null;
+	private CommandChannel _firstCommandChannelAttacked = null;
 	private CommandChannelTimer _commandChannelTimer = null;
 	private long _commandChannelLastAttack = 0;
 	// Soul crystal

@@ -182,7 +182,7 @@ public abstract class ItemContainer
 	 */
 	public ItemInstance addItem(String process, ItemInstance item, PlayerInstance actor, WorldObject reference)
 	{
-		ItemInstance olditem = getItemByItemId(item.getItemId());
+		final ItemInstance olditem = getItemByItemId(item.getItemId());
 		
 		// If stackable item is found in inventory just add to current quantity
 		if ((olditem != null) && olditem.isStackable())
@@ -267,7 +267,7 @@ public abstract class ItemContainer
 		{
 			for (int i = 0; i < count; i++)
 			{
-				Item template = ItemTable.getInstance().getTemplate(itemId);
+				final Item template = ItemTable.getInstance().getTemplate(itemId);
 				
 				if (template == null)
 				{
@@ -363,7 +363,7 @@ public abstract class ItemContainer
 			return null;
 		}
 		
-		ItemInstance sourceitem = getItemByObjectId(objectId);
+		final ItemInstance sourceitem = getItemByObjectId(objectId);
 		if (sourceitem == null)
 		{
 			return null;
@@ -622,7 +622,7 @@ public abstract class ItemContainer
 			LOGGER.warning("deletedMe() " + t);
 		}
 		
-		List<WorldObject> items = new ArrayList<>(_items);
+		final List<WorldObject> items = new ArrayList<>(_items);
 		_items.clear();
 		
 		World.getInstance().removeObjects(items);
@@ -660,10 +660,10 @@ public abstract class ItemContainer
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT object_id FROM items WHERE owner_id=? AND (loc=?) ORDER BY object_id DESC");
+			final PreparedStatement statement = con.prepareStatement("SELECT object_id FROM items WHERE owner_id=? AND (loc=?) ORDER BY object_id DESC");
 			statement.setInt(1, ownerid);
 			statement.setString(2, baseLocation);
-			ResultSet inv = statement.executeQuery();
+			final ResultSet inv = statement.executeQuery();
 			
 			ItemInstance item;
 			

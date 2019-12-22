@@ -108,7 +108,7 @@ public class TerritoryWarSuperClass extends Quest
 	
 	private void handleKillTheQuest(PlayerInstance player)
 	{
-		QuestState qs = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		int kill = 1;
 		int max = 10;
 		if (!qs.isCompleted())

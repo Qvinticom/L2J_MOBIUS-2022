@@ -41,8 +41,8 @@ public class ForumsBBSManager extends BaseBBSManager
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT forum_id FROM forums WHERE forum_type=0");
-			ResultSet result = statement.executeQuery();
+			final PreparedStatement statement = con.prepareStatement("SELECT forum_id FROM forums WHERE forum_type=0");
+			final ResultSet result = statement.executeQuery();
 			
 			while (result.next())
 			{
@@ -97,7 +97,7 @@ public class ForumsBBSManager extends BaseBBSManager
 	
 	public Forum createNewForum(String name, Forum parent, int type, int perm, int oid)
 	{
-		Forum forum = new Forum(name, parent, type, perm, oid);
+		final Forum forum = new Forum(name, parent, type, perm, oid);
 		forum.insertIntoDb();
 		
 		return forum;

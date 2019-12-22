@@ -47,21 +47,21 @@ public class MysteryPotion implements IItemHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) playable;
+		final PlayerInstance player = (PlayerInstance) playable;
 		
 		// Use a summon skill effect for fun ;)
-		MagicSkillUse msu = new MagicSkillUse(playable, playable, 2103, 1, 0, 0);
+		final MagicSkillUse msu = new MagicSkillUse(playable, playable, 2103, 1, 0, 0);
 		player.sendPacket(msu);
 		player.broadcastPacket(msu);
 		
 		player.startAbnormalEffect(BIGHEAD_EFFECT);
 		player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.USE_S1);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.USE_S1);
 		sm.addSkillName(MYSTERY_POTION_SKILL);
 		player.sendPacket(sm);
 		
-		MysteryPotionStop mp = new MysteryPotionStop(playable);
+		final MysteryPotionStop mp = new MysteryPotionStop(playable);
 		ThreadPool.schedule(mp, EFFECT_DURATION);
 	}
 	

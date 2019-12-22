@@ -162,7 +162,7 @@ public class SummonMinions extends Quest
 						HasSpawned = 0;
 						if (Rnd.get(100) < 33) // mobs that summon minions only on certain chance
 						{
-							Integer[] minions = MINIONS.get(npcId);
+							final Integer[] minions = MINIONS.get(npcId);
 							for (Integer minion : minions)
 							{
 								final Attackable newNpc = (Attackable) addSpawn(minion, (npc.getX() + Rnd.get(-150, 150)), (npc.getY() + Rnd.get(-150, 150)), npc.getZ(), 0, false, 0);
@@ -208,7 +208,7 @@ public class SummonMinions extends Quest
 					if (((attacker.getParty() != null) && (attacker.getParty().getMemberCount() > 2)) || (_attackersList.get(npcObjId).size() > 2)) // Just to make sure..
 					{
 						HasSpawned = 0;
-						Integer[] minions = MINIONS.get(npcId);
+						final Integer[] minions = MINIONS.get(npcId);
 						for (Integer minion : minions)
 						{
 							final Attackable newNpc = (Attackable) addSpawn(minion, npc.getX() + Rnd.get(-150, 150), npc.getY() + Rnd.get(-150, 150), npc.getZ(), 0, false, 0);
@@ -222,7 +222,7 @@ public class SummonMinions extends Quest
 				// mobs without special conditions
 				{
 					HasSpawned = 0;
-					Integer[] minions = MINIONS.get(npcId);
+					final Integer[] minions = MINIONS.get(npcId);
 					if (npcId != 20767)
 					{
 						for (Integer minion : minions)

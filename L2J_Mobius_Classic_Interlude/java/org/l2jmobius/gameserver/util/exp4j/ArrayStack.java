@@ -48,7 +48,7 @@ class ArrayStack
 	{
 		if ((idx + 1) == data.length)
 		{
-			double[] temp = new double[(int) (data.length * 1.2) + 1];
+			final double[] temp = new double[(int) (data.length * 1.2) + 1];
 			System.arraycopy(data, 0, temp, 0, data.length);
 			data = temp;
 		}

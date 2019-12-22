@@ -77,7 +77,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 			return;
 		}
 		
-		ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
+		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
 		ItemInstance scroll = player.getInventory().getItemByObjectId(player.getActiveEnchantItemId());
 		ItemInstance support = player.getInventory().getItemByObjectId(player.getActiveEnchantSupportItemId());
 		

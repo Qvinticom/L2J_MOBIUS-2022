@@ -222,8 +222,8 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 			
 			for (PlayerInstance singleMember : partyMember)
 			{
-				QuestState qsPartyMember = getQuestState(singleMember, false);
-				double distance = npc.calculateDistance3D(singleMember);
+				final QuestState qsPartyMember = getQuestState(singleMember, false);
+				final double distance = npc.calculateDistance3D(singleMember);
 				if ((qsPartyMember != null) && (distance <= 1000))
 				{
 					if (qsPartyMember.isCond(2) && giveItemRandomly(singleMember, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))

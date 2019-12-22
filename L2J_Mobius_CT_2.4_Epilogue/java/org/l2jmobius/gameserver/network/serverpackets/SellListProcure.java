@@ -55,7 +55,7 @@ public class SellListProcure implements IClientOutgoingPacket
 		
 		for (Entry<ItemInstance, Long> entry : _sellList.entrySet())
 		{
-			ItemInstance item = entry.getKey();
+			final ItemInstance item = entry.getKey();
 			packet.writeH(item.getItem().getType1());
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getDisplayId());

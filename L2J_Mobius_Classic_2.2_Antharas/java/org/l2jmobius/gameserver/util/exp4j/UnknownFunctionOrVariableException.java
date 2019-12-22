@@ -14,15 +14,15 @@ public class UnknownFunctionOrVariableException extends IllegalArgumentException
 	public UnknownFunctionOrVariableException(String expression, int position, int length)
 	{
 		this.expression = expression;
-		this.token = token(expression, position, length);
+		token = token(expression, position, length);
 		this.position = position;
-		this.message = "Unknown function or variable '" + token + "' at pos " + position + " in expression '" + expression + "'";
+		message = "Unknown function or variable '" + token + "' at pos " + position + " in expression '" + expression + "'";
 	}
 	
 	private static String token(String expression, int position, int length)
 	{
 		
-		int len = expression.length();
+		final int len = expression.length();
 		int end = (position + length) - 1;
 		
 		if (len < end)

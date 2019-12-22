@@ -61,7 +61,7 @@ public class RequestVoteNew implements IClientIncomingPacket
 					return;
 				}
 				
-				SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_RECOMMENDED_C1_YOU_HAVE_S2_RECOMMENDATIONS_LEFT);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_RECOMMENDED_C1_YOU_HAVE_S2_RECOMMENDATIONS_LEFT);
 				sm.addString(FakePlayerData.getInstance().getProperName(object.getName()));
 				sm.addInt(player.getRecomLeft());
 				client.sendPacket(sm);

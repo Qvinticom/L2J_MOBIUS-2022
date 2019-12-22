@@ -72,7 +72,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		}
 		else
 		{
-			WorldObject target = activeChar.getTarget();
+			final WorldObject target = activeChar.getTarget();
 			PlayerInstance player = null;
 			
 			if (target instanceof PlayerInstance)
@@ -133,7 +133,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 			}
 			else if (command.equalsIgnoreCase("admin_removefort"))
 			{
-				Clan clan = ClanTable.getInstance().getClan(fort.getOwnerId());
+				final Clan clan = ClanTable.getInstance().getClan(fort.getOwnerId());
 				
 				if (clan != null)
 				{
@@ -163,15 +163,15 @@ public class AdminFortSiege implements IAdminCommandHandler
 	{
 		int i = 0;
 		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/forts.htm");
-		StringBuilder cList = new StringBuilder();
+		final StringBuilder cList = new StringBuilder();
 		
 		for (Fort fort : FortManager.getInstance().getForts())
 		{
 			if (fort != null)
 			{
-				String name = fort.getName();
+				final String name = fort.getName();
 				cList.append("<td fixwidth=90><a action=\"bypass -h admin_fortsiege " + name + "\">" + name + "</a></td>");
 				i++;
 			}
@@ -189,7 +189,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 	
 	private void showFortSiegePage(PlayerInstance activeChar, String fortName)
 	{
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/fort.htm");
 		adminReply.replace("%fortName%", fortName);
 		activeChar.sendPacket(adminReply);

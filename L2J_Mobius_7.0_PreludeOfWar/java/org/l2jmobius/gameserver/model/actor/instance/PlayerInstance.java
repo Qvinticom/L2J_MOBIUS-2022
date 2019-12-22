@@ -1042,7 +1042,7 @@ public class PlayerInstance extends Playable
 		}
 		if ((clan != null) && (targetClan != null))
 		{
-			ClanWar war = clan.getWarWith(target.getClan().getId());
+			final ClanWar war = clan.getWarWith(target.getClan().getId());
 			if (war != null)
 			{
 				switch (war.getState())
@@ -4062,7 +4062,7 @@ public class PlayerInstance extends Playable
 				
 				// Update relation.
 				final int relation = getRelation(player);
-				Integer oldrelation = getKnownRelations().get(player.getObjectId());
+				final Integer oldrelation = getKnownRelations().get(player.getObjectId());
 				if ((oldrelation == null) || (oldrelation != relation))
 				{
 					final RelationChanged rc = new RelationChanged();
@@ -6898,7 +6898,7 @@ public class PlayerInstance extends Playable
 				_dwarvenRecipeBook.clear();
 				
 				RecipeHolder recipe;
-				RecipeData rd = RecipeData.getInstance();
+				final RecipeData rd = RecipeData.getInstance();
 				while (rset.next())
 				{
 					recipe = rd.getRecipe(rset.getInt("id"));

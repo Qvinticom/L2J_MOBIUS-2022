@@ -70,7 +70,7 @@ public class DuelManager
 		}
 		
 		// return if a player has PvPFlag
-		String engagedInPvP = "The duel was canceled because a duelist engaged in PvP combat.";
+		final String engagedInPvP = "The duel was canceled because a duelist engaged in PvP combat.";
 		if (partyDuel == 1)
 		{
 			boolean playerInPvP = false;
@@ -114,7 +114,7 @@ public class DuelManager
 			return;
 		}
 		
-		Duel duel = new Duel(playerA, playerB, partyDuel, getNextDuelId());
+		final Duel duel = new Duel(playerA, playerB, partyDuel, getNextDuelId());
 		_duels.add(duel);
 	}
 	
@@ -129,7 +129,7 @@ public class DuelManager
 		{
 			return;
 		}
-		Duel duel = getDuel(player.getDuelId());
+		final Duel duel = getDuel(player.getDuelId());
 		duel.doSurrender(player);
 	}
 	
@@ -143,7 +143,7 @@ public class DuelManager
 		{
 			return;
 		}
-		Duel duel = getDuel(player.getDuelId());
+		final Duel duel = getDuel(player.getDuelId());
 		if (duel != null)
 		{
 			duel.onPlayerDefeat(player);
@@ -161,7 +161,7 @@ public class DuelManager
 		{
 			return;
 		}
-		Duel duel = getDuel(player.getDuelId());
+		final Duel duel = getDuel(player.getDuelId());
 		if (duel != null)
 		{
 			duel.onBuff(player, buff);
@@ -178,7 +178,7 @@ public class DuelManager
 		{
 			return;
 		}
-		Duel duel = getDuel(player.getDuelId());
+		final Duel duel = getDuel(player.getDuelId());
 		if (duel != null)
 		{
 			duel.onRemoveFromParty(player);
@@ -196,7 +196,7 @@ public class DuelManager
 		{
 			return;
 		}
-		Duel duel = getDuel(player.getDuelId());
+		final Duel duel = getDuel(player.getDuelId());
 		
 		if (duel == null)
 		{

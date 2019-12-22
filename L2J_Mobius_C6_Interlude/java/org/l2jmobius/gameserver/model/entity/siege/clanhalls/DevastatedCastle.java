@@ -127,7 +127,7 @@ public class DevastatedCastle
 			setCalendarForNextSiege();
 			final long milliToSiege = getMilliToSiege();
 			
-			RunMessengerSpawn rms = new RunMessengerSpawn();
+			final RunMessengerSpawn rms = new RunMessengerSpawn();
 			ThreadPool.schedule(rms, milliToSiege);
 			
 			final long total_millis = System.currentTimeMillis() + milliToSiege;
@@ -206,7 +206,7 @@ public class DevastatedCastle
 		NpcInstance result = null;
 		try
 		{
-			NpcTemplate template = NpcTable.getInstance().getTemplate(MESSENGER_ID);
+			final NpcTemplate template = NpcTable.getInstance().getTemplate(MESSENGER_ID);
 			
 			final Spawn spawn = new Spawn(template);
 			spawn.setX(179040);
@@ -220,7 +220,7 @@ public class DevastatedCastle
 			LOGGER.warning(e.toString());
 		}
 		
-		RunSiege rs = new RunSiege();
+		final RunSiege rs = new RunSiege();
 		ThreadPool.schedule(rs, 14400000); // 4 * 60 * 60 * 1000
 		
 		ThreadPool.schedule(new DeSpawnTimer(result), 7200000); // 2 * 60 * 60 * 1000
@@ -827,7 +827,7 @@ public class DevastatedCastle
 		_mikhail.cancel(true);
 		_monsterdespawn.cancel(true);
 		
-		ClanHall ch = ClanHallManager.getInstance().getClanHallById(34);
+		final ClanHall ch = ClanHallManager.getInstance().getClanHallById(34);
 		ch.banishForeigners();
 		ch.spawnDoor();
 	}

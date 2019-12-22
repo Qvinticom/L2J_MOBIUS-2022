@@ -84,11 +84,11 @@ public class Manadam implements ISkillHandler
 					target.stopSleeping(null);
 				}
 				
-				StatusUpdate sump = new StatusUpdate(target.getObjectId());
+				final StatusUpdate sump = new StatusUpdate(target.getObjectId());
 				sump.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
 				target.sendPacket(sump);
 				
-				SystemMessage sm = new SystemMessage(SystemMessageId.S2_MP_HAS_BEEN_DRAINED_BY_S1);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_MP_HAS_BEEN_DRAINED_BY_S1);
 				
 				if (creature instanceof NpcInstance)
 				{

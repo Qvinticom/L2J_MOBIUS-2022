@@ -339,38 +339,32 @@ public class Q00229_TestOfWitchcraft extends Quest
 			{
 				case DIRE_WYRM:
 				{
-					if (hasQuestItems(killer, ALEXANDRIAS_BOOK, IKERS_LIST))
+					if (hasQuestItems(killer, ALEXANDRIAS_BOOK, IKERS_LIST) && (getQuestItemsCount(killer, DIRE_WYRM_FANG) < 20))
 					{
-						if (getQuestItemsCount(killer, DIRE_WYRM_FANG) < 20)
+						giveItems(killer, DIRE_WYRM_FANG, 1);
+						if (getQuestItemsCount(killer, DIRE_WYRM_FANG) >= 20)
 						{
-							giveItems(killer, DIRE_WYRM_FANG, 1);
-							if (getQuestItemsCount(killer, DIRE_WYRM_FANG) >= 20)
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
 				}
 				case ENCHANTED_STONE_GOLEM:
 				{
-					if (hasQuestItems(killer, ALEXANDRIAS_BOOK, IKERS_LIST))
+					if (hasQuestItems(killer, ALEXANDRIAS_BOOK, IKERS_LIST) && (getQuestItemsCount(killer, ENCHANTED_STONE_GOLEM_HEARTSTONE) < 20))
 					{
-						if (getQuestItemsCount(killer, ENCHANTED_STONE_GOLEM_HEARTSTONE) < 20)
+						giveItems(killer, ENCHANTED_STONE_GOLEM_HEARTSTONE, 1);
+						if (getQuestItemsCount(killer, ENCHANTED_STONE_GOLEM_HEARTSTONE) >= 20)
 						{
-							giveItems(killer, ENCHANTED_STONE_GOLEM_HEARTSTONE, 1);
-							if (getQuestItemsCount(killer, ENCHANTED_STONE_GOLEM_HEARTSTONE) >= 20)
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -382,19 +376,16 @@ public class Q00229_TestOfWitchcraft extends Quest
 				case LETO_LIZARDMAN_SHAMAN:
 				case LETO_LIZARDMAN_OVERLORD:
 				{
-					if (hasQuestItems(killer, ALEXANDRIAS_BOOK, IKERS_LIST))
+					if (hasQuestItems(killer, ALEXANDRIAS_BOOK, IKERS_LIST) && (getQuestItemsCount(killer, LETO_LIZARDMAN_CHARM) < 20))
 					{
-						if (getQuestItemsCount(killer, LETO_LIZARDMAN_CHARM) < 20)
+						giveItems(killer, LETO_LIZARDMAN_CHARM, 1);
+						if (getQuestItemsCount(killer, LETO_LIZARDMAN_CHARM) >= 20)
 						{
-							giveItems(killer, LETO_LIZARDMAN_CHARM, 1);
-							if (getQuestItemsCount(killer, LETO_LIZARDMAN_CHARM) >= 20)
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -402,19 +393,16 @@ public class Q00229_TestOfWitchcraft extends Quest
 				case TAMLIN_ORC:
 				case TAMLIN_ORC_ARCHER:
 				{
-					if (hasQuestItems(killer, VADINS_CRUCIFIX))
+					if (hasQuestItems(killer, VADINS_CRUCIFIX) && (getRandom(100) < 50) && (getQuestItemsCount(killer, TAMLIN_ORC_AMULET) < 20))
 					{
-						if ((getRandom(100) < 50) && (getQuestItemsCount(killer, TAMLIN_ORC_AMULET) < 20))
+						giveItems(killer, TAMLIN_ORC_AMULET, 1);
+						if (getQuestItemsCount(killer, TAMLIN_ORC_AMULET) >= 20)
 						{
-							giveItems(killer, TAMLIN_ORC_AMULET, 1);
-							if (getQuestItemsCount(killer, TAMLIN_ORC_AMULET) >= 20)
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -462,18 +450,15 @@ public class Q00229_TestOfWitchcraft extends Quest
 				}
 				case DREVANUL_PRINCE_ZERUEL:
 				{
-					if (hasQuestItems(killer, ORIMS_INSTRUCTIONS, BRIMSTONE_2ND, SWORD_OF_BINDING, SOULTRAP_CRYSTAL))
+					if (hasQuestItems(killer, ORIMS_INSTRUCTIONS, BRIMSTONE_2ND, SWORD_OF_BINDING, SOULTRAP_CRYSTAL) && (npc.getKillingBlowWeapon() == SWORD_OF_BINDING))
 					{
-						if (npc.getKillingBlowWeapon() == SWORD_OF_BINDING)
-						{
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.NO_I_HAVEN_T_COMPLETELY_FINISHED_THE_COMMAND_FOR_DESTRUCTION_AND_SLAUGHTER_YET));
-							takeItems(killer, SOULTRAP_CRYSTAL, 1);
-							giveItems(killer, PURGATORY_KEY, 1);
-							giveItems(killer, ZERUEL_BIND_CRYSTAL, 1);
-							takeItems(killer, BRIMSTONE_2ND, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							qs.setCond(10);
-						}
+						npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.NO_I_HAVEN_T_COMPLETELY_FINISHED_THE_COMMAND_FOR_DESTRUCTION_AND_SLAUGHTER_YET));
+						takeItems(killer, SOULTRAP_CRYSTAL, 1);
+						giveItems(killer, PURGATORY_KEY, 1);
+						giveItems(killer, ZERUEL_BIND_CRYSTAL, 1);
+						takeItems(killer, BRIMSTONE_2ND, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						qs.setCond(10);
 					}
 					break;
 				}
@@ -822,7 +807,7 @@ public class Q00229_TestOfWitchcraft extends Quest
 	
 	private boolean checkWeapon(PlayerInstance player)
 	{
-		ItemInstance weapon = player.getActiveWeaponInstance();
-		return ((weapon != null) && ((weapon.getId() == SWORD_OF_BINDING)));
+		final ItemInstance weapon = player.getActiveWeaponInstance();
+		return ((weapon != null) && (weapon.getId() == SWORD_OF_BINDING));
 	}
 }

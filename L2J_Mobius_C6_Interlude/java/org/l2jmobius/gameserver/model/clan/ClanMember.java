@@ -212,7 +212,7 @@ public class ClanMember
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("UPDATE characters SET subpledge=? WHERE obj_id=?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET subpledge=? WHERE obj_id=?");
 			statement.setLong(1, _pledgeType);
 			statement.setInt(2, getObjectId());
 			statement.execute();
@@ -336,7 +336,7 @@ public class ClanMember
 			return pledgeClass;
 		}
 		
-		Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		
 		if (clan != null)
 		{
@@ -541,7 +541,7 @@ public class ClanMember
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("UPDATE characters SET apprentice=?,sponsor=? WHERE obj_Id=?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET apprentice=?,sponsor=? WHERE obj_Id=?");
 			statement.setInt(1, apprentice);
 			statement.setInt(2, sponsor);
 			statement.setInt(3, getObjectId());

@@ -185,6 +185,7 @@ public class Q11012_FutureElves extends Quest
 					}
 					break;
 				}
+				break;
 			}
 			case State.COMPLETED:
 			{

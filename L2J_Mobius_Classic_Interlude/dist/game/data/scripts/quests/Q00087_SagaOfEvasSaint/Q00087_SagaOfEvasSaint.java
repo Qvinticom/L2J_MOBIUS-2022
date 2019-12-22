@@ -36,40 +36,40 @@ import org.l2jmobius.gameserver.util.Util;
 public class Q00087_SagaOfEvasSaint extends Quest
 {
 	// NPCs
-	public final int ORVEN = 30857;
-	public final int SERESIN = 30657;
-	public final int RIFKEN = 34268;
-	public final int VIVIAN = 30859;
-	public final int TABLET_OF_VISION_1 = 31646;
-	public final int TABLET_OF_VISION_2 = 31648;
-	public final int TABLET_OF_VISION_3 = 31650;
-	public final int TABLET_OF_VISION_4 = 31655;
-	public final int ELIKIA = 31620;
+	public static final int ORVEN = 30857;
+	public static final int SERESIN = 30657;
+	public static final int RIFKEN = 34268;
+	public static final int VIVIAN = 30859;
+	public static final int TABLET_OF_VISION_1 = 31646;
+	public static final int TABLET_OF_VISION_2 = 31648;
+	public static final int TABLET_OF_VISION_3 = 31650;
+	public static final int TABLET_OF_VISION_4 = 31655;
+	public static final int ELIKIA = 31620;
 	// Monsters
-	public final int ICE_MONSTER = 27316;
-	public final int SPIRIT_OF_A_DROWNED = 27317;
-	public final int SOUL_OF_COLD = 27318;
-	public final int GHOST_OF_SOLITUDE = 27319;
-	public final int FIEND_OF_COLD = 27320;
-	public final int SPIRIT_OF_COLD = 27321;
-	public final int SPAMPLAND_WATCHMAN = 21650;
-	public final int FLAME_DRAKE = 21651;
-	public final int FIERY_IFRIT = 21652;
-	public final int IKEDIT = 21653;
-	public final int GATEKEEPER_OF_THE_HOLY_EDICT = 27215;
-	public final int FALLEN_ANGEL_NAVERIUS = 27266;
-	public final int HALISHA_ARCHON = 27219;
-	public final int FALLEN_ANGEL_TANAKIA = 27274;
+	public static final int ICE_MONSTER = 27316;
+	public static final int SPIRIT_OF_A_DROWNED = 27317;
+	public static final int SOUL_OF_COLD = 27318;
+	public static final int GHOST_OF_SOLITUDE = 27319;
+	public static final int FIEND_OF_COLD = 27320;
+	public static final int SPIRIT_OF_COLD = 27321;
+	public static final int SPAMPLAND_WATCHMAN = 21650;
+	public static final int FLAME_DRAKE = 21651;
+	public static final int FIERY_IFRIT = 21652;
+	public static final int IKEDIT = 21653;
+	public static final int GATEKEEPER_OF_THE_HOLY_EDICT = 27215;
+	public static final int FALLEN_ANGEL_NAVERIUS = 27266;
+	public static final int HALISHA_ARCHON = 27219;
+	public static final int FALLEN_ANGEL_TANAKIA = 27274;
 	// Items
-	public final int ICE_CRYSTAL_FRAGMENT = 49821;
-	public final int HALISHA_BADGE = 7502;
-	public final int RESONANCE_AMULET = 7285;
-	public final int RESONANCE_AMULET_2 = 7316;
-	public final int RESONANCE_AMULET_3 = 7347;
-	public final int RESONANCE_AMULET_4 = 7378;
-	public final int FOOD_SACK = 49837;
+	public static final int ICE_CRYSTAL_FRAGMENT = 49821;
+	public static final int HALISHA_BADGE = 7502;
+	public static final int RESONANCE_AMULET = 7285;
+	public static final int RESONANCE_AMULET_2 = 7316;
+	public static final int RESONANCE_AMULET_3 = 7347;
+	public static final int RESONANCE_AMULET_4 = 7378;
+	public static final int FOOD_SACK = 49837;
 	// Reward
-	public final int BOOK_PEGASUS = 90039;
+	public static final int BOOK_PEGASUS = 90039;
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
 	
@@ -447,12 +447,9 @@ public class Q00087_SagaOfEvasSaint extends Quest
 				case GHOST_OF_SOLITUDE:
 				case SPIRIT_OF_COLD:
 				{
-					if (qs.isCond(3))
+					if (qs.isCond(3) && giveItemRandomly(killer, npc, ICE_CRYSTAL_FRAGMENT, 1, 50, 0.5, true))
 					{
-						if (giveItemRandomly(killer, npc, ICE_CRYSTAL_FRAGMENT, 1, 50, 0.5, true))
-						{
-							qs.setCond(4);
-						}
+						qs.setCond(4);
 					}
 					break;
 				}
@@ -469,13 +466,10 @@ public class Q00087_SagaOfEvasSaint extends Quest
 				case FIERY_IFRIT:
 				case IKEDIT:
 				{
-					if (qs.isCond(12))
+					if (qs.isCond(12) && giveItemRandomly(killer, npc, HALISHA_BADGE, 1, 700, 0.5, true))
 					{
-						if (giveItemRandomly(killer, npc, HALISHA_BADGE, 1, 700, 0.5, true))
-						{
-							addSpawn(HALISHA_ARCHON, npc, true, 0, true);
-							qs.setCond(13);
-						}
+						addSpawn(HALISHA_ARCHON, npc, true, 0, true);
+						qs.setCond(13);
 					}
 					break;
 				}

@@ -344,7 +344,7 @@ public class AttackableAI extends CreatureAI
 			// Check if actor is not dead
 			if (!_actor.isAlikeDead())
 			{
-				Attackable npc = (Attackable) _actor;
+				final Attackable npc = (Attackable) _actor;
 				
 				// If its _knownPlayer isn't empty set the Intention to AI_INTENTION_ACTIVE
 				if (npc.getKnownList().getKnownPlayers().size() > 0)
@@ -403,7 +403,7 @@ public class AttackableAI extends CreatureAI
 	 */
 	private void thinkActive()
 	{
-		Attackable npc = (Attackable) _actor;
+		final Attackable npc = (Attackable) _actor;
 		
 		// Update every 1s the _globalAggro counter to come close to 0
 		if (_globalAggro != 0)
@@ -432,14 +432,14 @@ public class AttackableAI extends CreatureAI
 					continue;
 				}
 				
-				Creature target = (Creature) obj;
+				final Creature target = (Creature) obj;
 				
 				/*
 				 * Check to see if this is a festival mob spawn. If it is, then check to see if the aggro trigger is a festival participant...if so, move to attack it.
 				 */
 				if ((_actor instanceof FestivalMonsterInstance) && (obj instanceof PlayerInstance))
 				{
-					PlayerInstance targetPlayer = (PlayerInstance) obj;
+					final PlayerInstance targetPlayer = (PlayerInstance) obj;
 					if (!targetPlayer.isFestivalParticipant())
 					{
 						continue;
@@ -690,8 +690,8 @@ public class AttackableAI extends CreatureAI
 			{
 				if (obj instanceof NpcInstance)
 				{
-					NpcInstance npc = (NpcInstance) obj;
-					String factionId = ((NpcInstance) _actor).getFactionId();
+					final NpcInstance npc = (NpcInstance) obj;
+					final String factionId = ((NpcInstance) _actor).getFactionId();
 					
 					if (!factionId.equalsIgnoreCase(npc.getFactionId()) || (npc.getFactionRange() == 0))
 					{
@@ -759,7 +759,7 @@ public class AttackableAI extends CreatureAI
 			return;
 		}
 		
-		Weapon weapon = _actor.getActiveWeaponItem();
+		final Weapon weapon = _actor.getActiveWeaponItem();
 		final int collision = _actor.getTemplate().collisionRadius;
 		final int combinedCollision = collision + originalAttackTarget.getTemplate().collisionRadius;
 		
@@ -899,7 +899,7 @@ public class AttackableAI extends CreatureAI
 							
 							if (sk.getSkillType() == Skill.SkillType.BUFF)
 							{
-								Effect[] effects = _actor.getAllEffects();
+								final Effect[] effects = _actor.getAllEffects();
 								
 								for (int i = 0; (effects != null) && (i < effects.length); i++)
 								{
@@ -918,7 +918,7 @@ public class AttackableAI extends CreatureAI
 							}
 						}
 						
-						WorldObject oldTarget = _actor.getTarget();
+						final WorldObject oldTarget = _actor.getTarget();
 						
 						clientStopMoving(null);
 						
@@ -967,7 +967,7 @@ public class AttackableAI extends CreatureAI
 						
 						if (sk.getSkillType() == Skill.SkillType.BUFF)
 						{
-							Effect[] effects = _actor.getAllEffects();
+							final Effect[] effects = _actor.getAllEffects();
 							
 							for (int i = 0; (effects != null) && (i < effects.length); i++)
 							{
@@ -991,7 +991,7 @@ public class AttackableAI extends CreatureAI
 						return;
 					}
 					
-					WorldObject oldTarget = _actor.getTarget();
+					final WorldObject oldTarget = _actor.getTarget();
 					
 					clientStopMoving(null);
 					_accessor.doCast(sk);
@@ -1103,7 +1103,7 @@ public class AttackableAI extends CreatureAI
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
-		Attackable me = (Attackable) _actor;
+		final Attackable me = (Attackable) _actor;
 		
 		// To avoid lag issue
 		if (me.isDead())

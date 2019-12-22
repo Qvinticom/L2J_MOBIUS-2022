@@ -419,7 +419,7 @@ public class Instance
 	 */
 	public List<Npc> spawnGroup(String groupName)
 	{
-		List<Npc> spawnedNpcs = new ArrayList<>();
+		final List<Npc> spawnedNpcs = new ArrayList<>();
 		for (StatsSet set : _spawnTemplates)
 		{
 			if (set.getString("spawnGroup").equals(groupName))

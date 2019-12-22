@@ -44,7 +44,7 @@ public class GetPlayer implements ISkillHandler
 		{
 			if (target instanceof PlayerInstance)
 			{
-				PlayerInstance trg = (PlayerInstance) target;
+				final PlayerInstance trg = (PlayerInstance) target;
 				if (trg.isAlikeDead())
 				{
 					continue;

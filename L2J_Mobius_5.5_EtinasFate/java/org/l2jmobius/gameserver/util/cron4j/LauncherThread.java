@@ -57,7 +57,7 @@ class LauncherThread extends Thread
 		this.collectors = collectors;
 		this.referenceTimeInMillis = referenceTimeInMillis;
 		// Thread name.
-		String name = "cron4j::scheduler[" + scheduler.getGuid() + "]::launcher[" + guid + "]";
+		final String name = "cron4j::scheduler[" + scheduler.getGuid() + "]::launcher[" + guid + "]";
 		setName(name);
 	}
 	
@@ -78,18 +78,18 @@ class LauncherThread extends Thread
 	{
 		outer: for (TaskCollector collector : collectors)
 		{
-			TaskTable taskTable = collector.getTasks();
-			int size = taskTable.size();
+			final TaskTable taskTable = collector.getTasks();
+			final int size = taskTable.size();
 			for (int j = 0; j < size; j++)
 			{
 				if (isInterrupted())
 				{
 					break outer;
 				}
-				SchedulingPattern pattern = taskTable.getSchedulingPattern(j);
+				final SchedulingPattern pattern = taskTable.getSchedulingPattern(j);
 				if (pattern.match(scheduler.getTimeZone(), referenceTimeInMillis))
 				{
-					Task task = taskTable.getTask(j);
+					final Task task = taskTable.getTask(j);
 					scheduler.spawnExecutor(task);
 				}
 			}

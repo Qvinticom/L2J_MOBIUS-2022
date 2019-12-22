@@ -42,7 +42,7 @@ public class AdminQuest implements IAdminCommandHandler
 		// Example: //quest_reload 12
 		if (command.startsWith("admin_quest_reload"))
 		{
-			String[] parts = command.split(" ");
+			final String[] parts = command.split(" ");
 			
 			if (parts.length < 2)
 			{

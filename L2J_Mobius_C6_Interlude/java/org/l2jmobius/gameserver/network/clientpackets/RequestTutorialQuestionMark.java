@@ -19,9 +19,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
-/**
- * @author ProGramMoS
- */
 public class RequestTutorialQuestionMark extends GameClientPacket
 {
 	int _number = 0;

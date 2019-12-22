@@ -268,7 +268,7 @@ public class Q00619_RelicsOfTheOldEmpire extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
-		if(qs != null)
+		if (qs != null)
 		{
 			final int npcId = npc.getId();
 			if (CommonUtil.contains(ARCHON_OF_HALISHA, npcId))

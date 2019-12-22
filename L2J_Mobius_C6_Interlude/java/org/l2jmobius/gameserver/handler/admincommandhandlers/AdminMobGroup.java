@@ -102,7 +102,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		{
 			if (activeChar.getTarget() instanceof Creature)
 			{
-				Creature target = (Creature) activeChar.getTarget();
+				final Creature target = (Creature) activeChar.getTarget();
 				attack(command, activeChar, target);
 			}
 		}
@@ -170,7 +170,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
+		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
 		
 		if (group == null)
 		{
@@ -195,7 +195,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
+		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
 		
 		if (group == null)
 		{
@@ -220,7 +220,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
+		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
 		
 		if (group == null)
 		{
@@ -245,7 +245,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
+		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
 		
 		if (group == null)
 		{
@@ -270,7 +270,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
+		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
 		
 		if (group == null)
 		{
@@ -289,7 +289,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		
 		try
 		{
-			String[] cmdParams = command.split(" ");
+			final String[] cmdParams = command.split(" ");
 			
 			groupId = Integer.parseInt(cmdParams[1]);
 			templateId = Integer.parseInt(cmdParams[2]);
@@ -307,7 +307,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		NpcTemplate template = NpcTable.getInstance().getTemplate(templateId);
+		final NpcTemplate template = NpcTable.getInstance().getTemplate(templateId);
 		
 		if (template == null)
 		{
@@ -315,7 +315,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		MobGroup group = new MobGroup(groupId, template, mobCount);
+		final MobGroup group = new MobGroup(groupId, template, mobCount);
 		MobGroupTable.getInstance().addGroup(groupId, group);
 		
 		BuilderUtil.sendSysMessage(activeChar, "Mob group " + groupId + " created.");
@@ -335,7 +335,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
+		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
 		
 		if (group == null)
 		{
@@ -362,7 +362,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		
 		try
 		{
-			String[] cmdParams = command.split(" ");
+			final String[] cmdParams = command.split(" ");
 			groupId = Integer.parseInt(cmdParams[1]);
 			
 			try
@@ -384,7 +384,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
+		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
 		
 		if (group == null)
 		{
@@ -420,7 +420,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
+		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
 		
 		if (group == null)
 		{
@@ -448,7 +448,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
+		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
 		
 		if (group == null)
 		{
@@ -474,7 +474,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
+		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
 		
 		if (group == null)
 		{
@@ -546,7 +546,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
+		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
 		
 		if (group == null)
 		{
@@ -554,7 +554,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		MobGroup othGroup = MobGroupTable.getInstance().getGroup(othGroupId);
+		final MobGroup othGroup = MobGroupTable.getInstance().getGroup(othGroupId);
 		
 		if (othGroup == null)
 		{
@@ -582,7 +582,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
+		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
 		
 		if (group == null)
 		{
@@ -631,7 +631,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return;
 		}
 		
-		MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
+		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
 		
 		if (group == null)
 		{
@@ -644,7 +644,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 	
 	private void showGroupList(PlayerInstance activeChar)
 	{
-		MobGroup[] mobGroupList = MobGroupTable.getInstance().getGroups();
+		final MobGroup[] mobGroupList = MobGroupTable.getInstance().getGroups();
 		
 		BuilderUtil.sendSysMessage(activeChar, "======= <Mob Groups> =======");
 		

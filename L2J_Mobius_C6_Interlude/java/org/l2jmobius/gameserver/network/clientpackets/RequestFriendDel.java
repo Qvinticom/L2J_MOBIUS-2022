@@ -58,7 +58,7 @@ public class RequestFriendDel extends GameClientPacket
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("DELETE FROM character_friends WHERE (char_id = ? AND friend_id = ?) OR (char_id = ? AND friend_id = ?)");
+			final PreparedStatement statement = con.prepareStatement("DELETE FROM character_friends WHERE (char_id = ? AND friend_id = ?) OR (char_id = ? AND friend_id = ?)");
 			statement.setInt(1, player.getObjectId());
 			statement.setInt(2, id);
 			statement.setInt(3, id);
@@ -72,7 +72,7 @@ public class RequestFriendDel extends GameClientPacket
 			player.getFriendList().remove(Integer.valueOf(id));
 			player.sendPacket(new FriendList(player)); // update friendList *heavy method*
 			
-			PlayerInstance target = World.getInstance().getPlayer(_name);
+			final PlayerInstance target = World.getInstance().getPlayer(_name);
 			if (target != null)
 			{
 				target.getFriendList().remove(Integer.valueOf(player.getObjectId()));

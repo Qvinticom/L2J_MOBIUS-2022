@@ -77,7 +77,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		String text = "";
 		int index = 0;
 		
-		CommandEnum comm = CommandEnum.valueOf(comm_s);
+		final CommandEnum comm = CommandEnum.valueOf(comm_s);
 		
 		if (comm == null)
 		{

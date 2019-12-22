@@ -103,7 +103,8 @@ public class Q00699_GuardianOfTheSkies extends Quest
 		{
 			if (npc.getId() == VALDSTONE)
 			{
-				int amount = 0, chance = getRandom(1000);
+				int amount = 0;
+				final int chance = getRandom(1000);
 				if (chance < 215)
 				{
 					amount = getRandom(10) + 90;

@@ -57,7 +57,7 @@ public class Post
 	public Post(String postOwner, int postOwnerId, long date, int tid, int postForumId, String txt)
 	{
 		_post = new ArrayList<>();
-		CPost cp = new CPost();
+		final CPost cp = new CPost();
 		cp.postId = 0;
 		cp.postOwner = postOwner;
 		cp.postOwnerId = postOwnerId;
@@ -73,7 +73,7 @@ public class Post
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("INSERT INTO posts (post_id,post_owner_name,post_ownerid,post_date,post_topic_id,post_forum_id,post_txt) values (?,?,?,?,?,?,?)");
+			final PreparedStatement statement = con.prepareStatement("INSERT INTO posts (post_id,post_owner_name,post_ownerid,post_date,post_topic_id,post_forum_id,post_txt) values (?,?,?,?,?,?,?)");
 			statement.setInt(1, cp.postId);
 			statement.setString(2, cp.postOwner);
 			statement.setInt(3, cp.postOwnerId);
@@ -114,7 +114,7 @@ public class Post
 		PostBBSManager.getInstance().delPostByTopic(t);
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("DELETE FROM posts WHERE post_forum_id=? AND post_topic_id=?");
+			final PreparedStatement statement = con.prepareStatement("DELETE FROM posts WHERE post_forum_id=? AND post_topic_id=?");
 			statement.setInt(1, t.getForumID());
 			statement.setInt(2, t.getID());
 			statement.execute();
@@ -130,13 +130,13 @@ public class Post
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT * FROM posts WHERE post_forum_id=? AND post_topic_id=? ORDER BY post_id ASC");
+			final PreparedStatement statement = con.prepareStatement("SELECT * FROM posts WHERE post_forum_id=? AND post_topic_id=? ORDER BY post_id ASC");
 			statement.setInt(1, t.getForumID());
 			statement.setInt(2, t.getID());
-			ResultSet result = statement.executeQuery();
+			final ResultSet result = statement.executeQuery();
 			while (result.next())
 			{
-				CPost cp = new CPost();
+				final CPost cp = new CPost();
 				cp.postId = result.getInt("post_id");
 				cp.postOwner = result.getString("post_owner_name");
 				cp.postOwnerId = result.getInt("post_ownerid");
@@ -159,8 +159,8 @@ public class Post
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			CPost cp = getCPost(i);
-			PreparedStatement statement = con.prepareStatement("UPDATE posts SET post_txt=? WHERE post_id=? AND post_topic_id=? AND post_forum_id=?");
+			final CPost cp = getCPost(i);
+			final PreparedStatement statement = con.prepareStatement("UPDATE posts SET post_txt=? WHERE post_id=? AND post_topic_id=? AND post_forum_id=?");
 			statement.setString(1, cp.postTxt);
 			statement.setInt(2, cp.postId);
 			statement.setInt(3, cp.postTopicId);

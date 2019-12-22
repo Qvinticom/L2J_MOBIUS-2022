@@ -199,17 +199,14 @@ public class Q11008_PreparationForDungeon extends Quest
 				case KABOO_ORC_WARRIOR_CAPTAIN:
 				case KABOO_ORC_WARRIOR_LIEUTENANT:
 				{
-					if (qs.isCond(2) && (getQuestItemsCount(killer, ORCS_BANDAGE) < 20))
+					if (qs.isCond(2) && (getQuestItemsCount(killer, ORCS_BANDAGE) < 20) && (getRandom(100) < 90))
 					{
-						if (getRandom(100) < 90)
+						giveItems(killer, ORCS_BANDAGE, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, ORCS_BANDAGE) >= 20)
 						{
-							giveItems(killer, ORCS_BANDAGE, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, ORCS_BANDAGE) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_KABOO_ORC_WARRIOR_LIEUTENANTS_AND_KABOO_ORC_WARRIOR_CAPTAINS_N_GO_HUNTING_AND_KILL_DRYADS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(3);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_KABOO_ORC_WARRIOR_LIEUTENANTS_AND_KABOO_ORC_WARRIOR_CAPTAINS_N_GO_HUNTING_AND_KILL_DRYADS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(3);
 						}
 					}
 					break;
@@ -217,17 +214,14 @@ public class Q11008_PreparationForDungeon extends Quest
 				case DRYAD:
 				case DRYAD_ELDER:
 				{
-					if (qs.isCond(3) && (getQuestItemsCount(killer, DRYADS_CRIMSON_HERB) < 20))
+					if (qs.isCond(3) && (getQuestItemsCount(killer, DRYADS_CRIMSON_HERB) < 20) && (getRandom(100) < 90))
 					{
-						if (getRandom(100) < 90)
+						giveItems(killer, DRYADS_CRIMSON_HERB, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, DRYADS_CRIMSON_HERB) >= 20)
 						{
-							giveItems(killer, DRYADS_CRIMSON_HERB, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, DRYADS_CRIMSON_HERB) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_DRYADS_N_GO_HUNTING_AND_KILL_CRIMSON_SPIDERS_HOOK_SPIDERS_AND_PINCER_SPIDERS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(4);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_DRYADS_N_GO_HUNTING_AND_KILL_CRIMSON_SPIDERS_HOOK_SPIDERS_AND_PINCER_SPIDERS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(4);
 						}
 					}
 					break;
@@ -236,17 +230,14 @@ public class Q11008_PreparationForDungeon extends Quest
 				case CRIMSON_SPIDER:
 				case PINCER_SPIDER:
 				{
-					if (qs.isCond(4) && (getQuestItemsCount(killer, SPIDER_VENOM) < 20))
+					if (qs.isCond(4) && (getQuestItemsCount(killer, SPIDER_VENOM) < 20) && (getRandom(100) < 90))
 					{
-						if (getRandom(100) < 90)
+						giveItems(killer, SPIDER_VENOM, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if ((getQuestItemsCount(killer, SPIDER_VENOM) >= 20))
 						{
-							giveItems(killer, SPIDER_VENOM, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if ((getQuestItemsCount(killer, SPIDER_VENOM) >= 20))
-							{
-								showOnScreenMsg(killer, NpcStringId.RETURN_TO_SENTINEL_STARDEN, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(5);
-							}
+							showOnScreenMsg(killer, NpcStringId.RETURN_TO_SENTINEL_STARDEN, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(5);
 						}
 					}
 					break;

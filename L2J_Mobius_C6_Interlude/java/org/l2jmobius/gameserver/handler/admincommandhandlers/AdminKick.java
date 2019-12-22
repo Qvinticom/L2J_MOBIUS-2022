@@ -37,7 +37,7 @@ public class AdminKick implements IAdminCommandHandler
 	{
 		if (command.startsWith("admin_kick"))
 		{
-			StringTokenizer st = new StringTokenizer(command);
+			final StringTokenizer st = new StringTokenizer(command);
 			
 			if (activeChar.getTarget() != null)
 			{

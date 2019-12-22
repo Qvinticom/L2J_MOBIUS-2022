@@ -19,9 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * Format: ch ddcdc.
  * @author KenM
- * @author ProGramMoS
  */
 public class ExPCCafePointInfo extends GameServerPacket
 {

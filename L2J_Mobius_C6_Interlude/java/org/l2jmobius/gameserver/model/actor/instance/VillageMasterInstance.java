@@ -65,8 +65,8 @@ public class VillageMasterInstance extends FolkInstance
 	@Override
 	public void onBypassFeedback(PlayerInstance player, String command)
 	{
-		String[] commandStr = command.split(" ");
-		String actualCommand = commandStr[0]; // Get actual command
+		final String[] commandStr = command.split(" ");
+		final String actualCommand = commandStr[0]; // Get actual command
 		
 		String cmdParams = "";
 		String cmdParams2 = "";
@@ -222,8 +222,8 @@ public class VillageMasterInstance extends FolkInstance
 				return;
 			}
 			
-			StringBuilder content = new StringBuilder("<html><body>");
-			NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			final StringBuilder content = new StringBuilder("<html><body>");
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			Set<PlayerClass> subsAvailable;
 			
 			int paramOne = 0;
@@ -394,7 +394,7 @@ public class VillageMasterInstance extends FolkInstance
 					}
 					if (allowAddition)
 					{
-						String className = CharTemplateTable.getClassNameById(paramOne);
+						final String className = CharTemplateTable.getClassNameById(paramOne);
 						if (!player.addSubClass(paramOne, player.getTotalSubClasses() + 1))
 						{
 							player.sendMessage("The sub class could not be added.");
@@ -575,7 +575,7 @@ public class VillageMasterInstance extends FolkInstance
 			return;
 		}
 		
-		Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		if (clan.getAllyId() != 0)
 		{
 			player.sendPacket(SystemMessageId.CANNOT_DISPERSE_THE_CLANS_IN_ALLY);
@@ -645,7 +645,7 @@ public class VillageMasterInstance extends FolkInstance
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return;
 		}
-		Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		
 		clan.setDissolvingExpiryTime(0);
 		clan.updateClanInDB();
@@ -681,11 +681,11 @@ public class VillageMasterInstance extends FolkInstance
 			return;
 		}
 		
-		Clan clan = player.getClan();
-		ClanMember member = clan.getClanMember(target);
+		final Clan clan = player.getClan();
+		final ClanMember member = clan.getClanMember(target);
 		if (member == null)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_DOES_NOT_EXIST);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DOES_NOT_EXIST);
 			sm.addString(target);
 			player.sendPacket(sm);
 			return;
@@ -735,7 +735,7 @@ public class VillageMasterInstance extends FolkInstance
 			return;
 		}
 		
-		Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		if (clan.getLevel() < minClanLvl)
 		{
 			if (pledgeType == Clan.SUBUNIT_ACADEMY)
@@ -766,7 +766,7 @@ public class VillageMasterInstance extends FolkInstance
 			{
 				if (pledgeType == Clan.SUBUNIT_ACADEMY)
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.S1_ALREADY_EXISTS);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_ALREADY_EXISTS);
 					sm.addString(clanName);
 					player.sendPacket(sm);
 				}
@@ -896,8 +896,8 @@ public class VillageMasterInstance extends FolkInstance
 			return;
 		}
 		
-		Clan clan = player.getClan();
-		SubPledge subPledge = player.getClan().getSubPledge(clanName);
+		final Clan clan = player.getClan();
+		final SubPledge subPledge = player.getClan().getSubPledge(clanName);
 		if (null == subPledge)
 		{
 			player.sendPacket(SystemMessageId.CLAN_NAME_INCORRECT);
@@ -925,14 +925,14 @@ public class VillageMasterInstance extends FolkInstance
 		
 		subPledge.setLeaderName(leaderName);
 		clan.updateSubPledgeInDB(subPledge.getId());
-		ClanMember leaderSubPledge = clan.getClanMember(leaderName);
+		final ClanMember leaderSubPledge = clan.getClanMember(leaderName);
 		
 		if (leaderSubPledge.getPlayerInstance() != null)
 		{
 			leaderSubPledge.getPlayerInstance().setPledgeClass(leaderSubPledge.calculatePledgeClass(leaderSubPledge.getPlayerInstance()));
 			leaderSubPledge.getPlayerInstance().sendPacket(new UserInfo(leaderSubPledge.getPlayerInstance()));
 			clan.broadcastClanStatus();
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_SELECTED_AS_CAPTAIN_OF_S2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_SELECTED_AS_CAPTAIN_OF_S2);
 			sm.addString(leaderName);
 			sm.addString(clanName);
 			clan.broadcastToOnlineMembers(sm);
@@ -956,7 +956,7 @@ public class VillageMasterInstance extends FolkInstance
 		final Race npcRace = getVillageMasterRace();
 		final ClassType npcTeachType = getVillageMasterTeachType();
 		
-		PlayerClass currClass = PlayerClass.values()[charClassId];
+		final PlayerClass currClass = PlayerClass.values()[charClassId];
 		
 		/**
 		 * If the race of your main class is Elf or Dark Elf, you may not select each class as a subclass to the other class, and you may not select Overlord and Warsmith class as a subclass. You may not select a similar class as the subclass. The occupations classified as similar classes are as
@@ -1024,8 +1024,8 @@ public class VillageMasterInstance extends FolkInstance
 			return;
 		}
 		
-		PledgeSkillLearn[] skills = SkillTreeTable.getInstance().getAvailablePledgeSkills(player);
-		AquireSkillList asl = new AquireSkillList(AquireSkillList.skillType.Clan);
+		final PledgeSkillLearn[] skills = SkillTreeTable.getInstance().getAvailablePledgeSkills(player);
+		final AquireSkillList asl = new AquireSkillList(AquireSkillList.skillType.Clan);
 		int counts = 0;
 		
 		for (PledgeSkillLearn s : skills)
@@ -1038,17 +1038,17 @@ public class VillageMasterInstance extends FolkInstance
 		
 		if (counts == 0)
 		{
-			NpcHtmlMessage html = new NpcHtmlMessage(1);
+			final NpcHtmlMessage html = new NpcHtmlMessage(1);
 			
 			if (player.getClan().getLevel() < 8)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.DO_NOT_HAVE_FURTHER_SKILLS_TO_LEARN);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.DO_NOT_HAVE_FURTHER_SKILLS_TO_LEARN);
 				sm.addNumber(player.getClan().getLevel() + 1);
 				player.sendPacket(sm);
 			}
 			else
 			{
-				StringBuilder sb = new StringBuilder();
+				final StringBuilder sb = new StringBuilder();
 				sb.append("<html><body>");
 				sb.append("You've learned all skills available for your Clan.<br>");
 				sb.append("</body></html>");

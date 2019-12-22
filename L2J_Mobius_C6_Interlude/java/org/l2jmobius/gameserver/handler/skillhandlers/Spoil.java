@@ -58,7 +58,7 @@ public class Spoil implements ISkillHandler
 				continue;
 			}
 			
-			MonsterInstance target = (MonsterInstance) target1;
+			final MonsterInstance target = (MonsterInstance) target1;
 			
 			if (target.isSpoil())
 			{
@@ -79,7 +79,7 @@ public class Spoil implements ISkillHandler
 				}
 				else
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 					sm.addString(target.getName());
 					sm.addSkillName(skill.getDisplayId());
 					creature.sendPacket(sm);

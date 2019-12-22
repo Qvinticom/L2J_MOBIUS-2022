@@ -90,7 +90,7 @@ public class GrandBossManager implements IStorable
 				info.set("respawn_time", rs.getLong("respawn_time"));
 				info.set("currentHP", rs.getDouble("currentHP"));
 				info.set("currentMP", rs.getDouble("currentMP"));
-				int status = rs.getInt("status");
+				final int status = rs.getInt("status");
 				_bossStatus.put(bossId, status);
 				_storedInfo.put(bossId, info);
 				LOGGER.info(getClass().getSimpleName() + ": " + NpcData.getInstance().getTemplate(bossId).getName() + "(" + bossId + ") status is " + status + ".");

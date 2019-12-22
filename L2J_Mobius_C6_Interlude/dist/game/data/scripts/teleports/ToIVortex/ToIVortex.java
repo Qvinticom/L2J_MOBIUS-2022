@@ -40,7 +40,7 @@ public class ToIVortex extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		
 		if (event.equalsIgnoreCase("blue"))
 		{

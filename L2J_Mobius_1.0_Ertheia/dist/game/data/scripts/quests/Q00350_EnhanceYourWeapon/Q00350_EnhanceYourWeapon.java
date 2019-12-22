@@ -149,8 +149,8 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		String htmltext = event;
-		QuestState qs = getQuestState(player, false);
+		final String htmltext = event;
+		final QuestState qs = getQuestState(player, false);
 		if (event.endsWith("-04.htm"))
 		{
 			qs.startQuest();
@@ -257,7 +257,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		if (Item != null)
 		{
 			// Prepare inventory update packet
-			InventoryUpdate playerIU = new InventoryUpdate();
+			final InventoryUpdate playerIU = new InventoryUpdate();
 			playerIU.addRemovedItem(Item);
 			
 			// Add new crystal to the killer's inventory
@@ -275,7 +275,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 			}
 			
 			// Send system message
-			SystemMessage sms = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+			final SystemMessage sms = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 			sms.addItemName(giveid);
 			player.sendPacket(sms);
 			
@@ -295,7 +295,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		SoulCrystal ret = null;
 		for (ItemInstance item : player.getInventory().getItems())
 		{
-			int itemId = item.getId();
+			final int itemId = item.getId();
 			if (!SOUL_CRYSTALS.containsKey(itemId))
 			{
 				continue;
@@ -360,7 +360,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 			return;
 		}
 		
-		Map<PlayerInstance, SoulCrystal> players = new HashMap<>();
+		final Map<PlayerInstance, SoulCrystal> players = new HashMap<>();
 		int maxSCLevel = 0;
 		
 		// TODO: what if mob support last_hit + party?
@@ -374,7 +374,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 					continue;
 				}
 				
-				SoulCrystal sc = getSCForPlayer(pl);
+				final SoulCrystal sc = getSCForPlayer(pl);
 				if (sc == null)
 				{
 					continue;
@@ -389,7 +389,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		}
 		else
 		{
-			SoulCrystal sc = getSCForPlayer(killer);
+			final SoulCrystal sc = getSCForPlayer(killer);
 			if (sc != null)
 			{
 				players.put(killer, sc);
@@ -400,7 +400,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 			}
 		}
 		// Init some useful vars
-		LevelingInfo mainlvlInfo = NPC_LEVELING_INFO.get(mob.getId()).get(maxSCLevel);
+		final LevelingInfo mainlvlInfo = NPC_LEVELING_INFO.get(mob.getId()).get(maxSCLevel);
 		
 		if (mainlvlInfo == null)
 		{
@@ -419,7 +419,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 			}
 			
 			// Fail if the killer isn't in the _absorbersList of this Attackable and mob is not boss
-			AbsorberInfo ai = mob.getAbsorbersList().get(killer.getObjectId());
+			final AbsorberInfo ai = mob.getAbsorbersList().get(killer.getObjectId());
 			boolean isSuccess = true;
 			if ((ai == null) || (ai.getObjectId() != killer.getObjectId()))
 			{
@@ -448,7 +448,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 				// among those who have crystals, only. However, this might actually be correct (same as retail).
 				if (killer.getParty() != null)
 				{
-					PlayerInstance lucky = killer.getParty().getMembers().get(getRandom(killer.getParty().getMemberCount()));
+					final PlayerInstance lucky = killer.getParty().getMembers().get(getRandom(killer.getParty().getMemberCount()));
 					levelCrystal(lucky, players.get(lucky), mob);
 				}
 				else
@@ -461,11 +461,11 @@ public class Q00350_EnhanceYourWeapon extends Quest
 			{
 				if (killer.getParty() != null)
 				{
-					List<PlayerInstance> luckyParty = new ArrayList<>();
+					final List<PlayerInstance> luckyParty = new ArrayList<>();
 					luckyParty.addAll(killer.getParty().getMembers());
 					while ((getRandom(100) < 33) && !luckyParty.isEmpty())
 					{
-						PlayerInstance lucky = luckyParty.remove(getRandom(luckyParty.size()));
+						final PlayerInstance lucky = luckyParty.remove(getRandom(luckyParty.size()));
 						if (players.containsKey(lucky))
 						{
 							levelCrystal(lucky, players.get(lucky), mob);
@@ -508,19 +508,19 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	{
 		try
 		{
-			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
 			
-			File file = new File(Config.DATAPACK_ROOT, "data/LevelUpCrystalData.xml");
+			final File file = new File(Config.DATAPACK_ROOT, "data/LevelUpCrystalData.xml");
 			if (!file.exists())
 			{
 				LOGGER.severe("[EnhanceYourWeapon] Missing LevelUpCrystalData.xml. The quest wont work without it!");
 				return;
 			}
 			
-			Document doc = factory.newDocumentBuilder().parse(file);
-			Node first = doc.getFirstChild();
+			final Document doc = factory.newDocumentBuilder().parse(file);
+			final Node first = doc.getFirstChild();
 			if ((first != null) && "list".equalsIgnoreCase(first.getNodeName()))
 			{
 				for (Node n = first.getFirstChild(); n != null; n = n.getNextSibling())
@@ -531,14 +531,14 @@ public class Q00350_EnhanceYourWeapon extends Quest
 						{
 							if ("item".equalsIgnoreCase(d.getNodeName()))
 							{
-								NamedNodeMap attrs = d.getAttributes();
+								final NamedNodeMap attrs = d.getAttributes();
 								Node att = attrs.getNamedItem("itemId");
 								if (att == null)
 								{
 									LOGGER.severe("[EnhanceYourWeapon] Missing itemId in Crystal List, skipping");
 									continue;
 								}
-								int itemId = Integer.parseInt(attrs.getNamedItem("itemId").getNodeValue());
+								final int itemId = Integer.parseInt(attrs.getNamedItem("itemId").getNodeValue());
 								
 								att = attrs.getNamedItem("level");
 								if (att == null)
@@ -546,7 +546,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 									LOGGER.severe("[EnhanceYourWeapon] Missing level in Crystal List itemId: " + itemId + ", skipping");
 									continue;
 								}
-								int level = Integer.parseInt(attrs.getNamedItem("level").getNodeValue());
+								final int level = Integer.parseInt(attrs.getNamedItem("level").getNodeValue());
 								
 								att = attrs.getNamedItem("leveledItemId");
 								if (att == null)
@@ -554,7 +554,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 									LOGGER.severe("[EnhanceYourWeapon] Missing leveledItemId in Crystal List itemId: " + itemId + ", skipping");
 									continue;
 								}
-								int leveledItemId = Integer.parseInt(attrs.getNamedItem("leveledItemId").getNodeValue());
+								final int leveledItemId = Integer.parseInt(attrs.getNamedItem("leveledItemId").getNodeValue());
 								
 								SOUL_CRYSTALS.put(itemId, new SoulCrystal(level, itemId, leveledItemId));
 							}
@@ -574,8 +574,8 @@ public class Q00350_EnhanceYourWeapon extends Quest
 									continue;
 								}
 								
-								int npcId = Integer.parseInt(att.getNodeValue());
-								Map<Integer, LevelingInfo> temp = new HashMap<>();
+								final int npcId = Integer.parseInt(att.getNodeValue());
+								final Map<Integer, LevelingInfo> temp = new HashMap<>();
 								for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 								{
 									boolean isSkillNeeded = false;
@@ -604,17 +604,17 @@ public class Q00350_EnhanceYourWeapon extends Quest
 											isSkillNeeded = Boolean.parseBoolean(att.getNodeValue());
 										}
 										
-										Node att1 = attrs.getNamedItem("maxLevel");
-										Node att2 = attrs.getNamedItem("levelList");
+										final Node att1 = attrs.getNamedItem("maxLevel");
+										final Node att2 = attrs.getNamedItem("levelList");
 										if ((att1 == null) && (att2 == null))
 										{
 											LOGGER.severe("[EnhanceYourWeapon] Missing maxlevel/levelList in NPC List npcId: " + npcId + ", skipping");
 											continue;
 										}
-										LevelingInfo info = new LevelingInfo(absorbType, isSkillNeeded, chance);
+										final LevelingInfo info = new LevelingInfo(absorbType, isSkillNeeded, chance);
 										if (att1 != null)
 										{
-											int maxLevel = Integer.parseInt(att1.getNodeValue());
+											final int maxLevel = Integer.parseInt(att1.getNodeValue());
 											for (int i = 0; i <= maxLevel; i++)
 											{
 												temp.put(i, info);
@@ -622,8 +622,8 @@ public class Q00350_EnhanceYourWeapon extends Quest
 										}
 										else if (att2 != null)
 										{
-											StringTokenizer st = new StringTokenizer(att2.getNodeValue(), ",");
-											int tokenCount = st.countTokens();
+											final StringTokenizer st = new StringTokenizer(att2.getNodeValue(), ",");
+											final int tokenCount = st.countTokens();
 											for (int i = 0; i < tokenCount; i++)
 											{
 												Integer value = Integer.decode(st.nextToken().trim());

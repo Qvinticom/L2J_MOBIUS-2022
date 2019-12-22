@@ -121,9 +121,9 @@ public class MailBBSManager extends BaseBBSManager
 		}
 		else if (command.startsWith("_bbsmail"))
 		{
-			StringTokenizer st = new StringTokenizer(command, ";");
+			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
-			String action = st.nextToken();
+			final String action = st.nextToken();
 			
 			if (action.equals("inbox") || action.equals("sentbox") || action.equals("archive") || action.equals("temparchive"))
 			{
@@ -141,7 +141,7 @@ public class MailBBSManager extends BaseBBSManager
 			{
 				final int letterId = (st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : -1;
 				
-				Mail letter = getLetter(activeChar, letterId);
+				final Mail letter = getLetter(activeChar, letterId);
 				if (letter == null)
 				{
 					showLastForum(activeChar);
@@ -159,7 +159,7 @@ public class MailBBSManager extends BaseBBSManager
 			{
 				final int letterId = (st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : -1;
 				
-				Mail letter = getLetter(activeChar, letterId);
+				final Mail letter = getLetter(activeChar, letterId);
 				if (letter == null)
 				{
 					showLastForum(activeChar);
@@ -173,7 +173,7 @@ public class MailBBSManager extends BaseBBSManager
 			{
 				final int letterId = (st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : -1;
 				
-				Mail letter = getLetter(activeChar, letterId);
+				final Mail letter = getLetter(activeChar, letterId);
 				if (letter != null)
 				{
 					deleteLetter(activeChar, letter.letterId);
@@ -185,7 +185,7 @@ public class MailBBSManager extends BaseBBSManager
 			{
 				final int letterId = (st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : -1;
 				
-				Mail letter = getLetter(activeChar, letterId);
+				final Mail letter = getLetter(activeChar, letterId);
 				if (letter != null)
 				{
 					setLetterLocation(activeChar, letter.letterId, MailType.ARCHIVE);
@@ -210,7 +210,7 @@ public class MailBBSManager extends BaseBBSManager
 		}
 		else if (ar1.startsWith("Search"))
 		{
-			StringTokenizer st = new StringTokenizer(ar1, ";");
+			final StringTokenizer st = new StringTokenizer(ar1, ";");
 			st.nextToken();
 			
 			showMailList(activeChar, 1, Enum.valueOf(MailType.class, st.nextToken().toUpperCase()), ar4, ar5);
@@ -225,8 +225,8 @@ public class MailBBSManager extends BaseBBSManager
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(SELECT_LAST_ID);
-			ResultSet result = statement.executeQuery();
+			final PreparedStatement statement = con.prepareStatement(SELECT_LAST_ID);
+			final ResultSet result = statement.executeQuery();
 			while (result.next())
 			{
 				if (result.getInt(1) > _lastid)
@@ -257,12 +257,12 @@ public class MailBBSManager extends BaseBBSManager
 			letters = new ArrayList<>();
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement(SELECT_CHAR_MAILS);
+				final PreparedStatement statement = con.prepareStatement(SELECT_CHAR_MAILS);
 				statement.setInt(1, objId);
-				ResultSet result = statement.executeQuery();
+				final ResultSet result = statement.executeQuery();
 				while (result.next())
 				{
-					Mail letter = new Mail();
+					final Mail letter = new Mail();
 					letter.charId = result.getInt("charId");
 					letter.letterId = result.getInt("letterId");
 					letter.senderId = result.getInt("senderId");
@@ -329,7 +329,7 @@ public class MailBBSManager extends BaseBBSManager
 		{
 			letters = new ArrayList<>();
 			
-			boolean byTitle = sType.equalsIgnoreCase("title");
+			final boolean byTitle = sType.equalsIgnoreCase("title");
 			
 			for (Mail letter : getPlayerMails(activeChar.getObjectId()))
 			{
@@ -339,7 +339,7 @@ public class MailBBSManager extends BaseBBSManager
 				}
 				else if (!byTitle)
 				{
-					String writer = getCharName(letter.senderId);
+					final String writer = getCharName(letter.senderId);
 					if (writer.toLowerCase().contains(search.toLowerCase()))
 					{
 						letters.add(letter);
@@ -508,7 +508,7 @@ public class MailBBSManager extends BaseBBSManager
 		
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "mail/mail-show.htm");
 		
-		String link = letter.location.getBypass() + "&nbsp;&gt;&nbsp;" + letter.subject;
+		final String link = letter.location.getBypass() + "&nbsp;&gt;&nbsp;" + letter.subject;
 		content = content.replace("%maillink%", link);
 		
 		content = content.replace("%writer%", getCharName(letter.senderId));
@@ -523,7 +523,7 @@ public class MailBBSManager extends BaseBBSManager
 	
 	private void showWriteView(PlayerInstance activeChar)
 	{
-		String content = HtmCache.getInstance().getHtm(CB_PATH + "mail/mail-write.htm");
+		final String content = HtmCache.getInstance().getHtm(CB_PATH + "mail/mail-write.htm");
 		separateAndSend(content, activeChar);
 	}
 	
@@ -531,7 +531,7 @@ public class MailBBSManager extends BaseBBSManager
 	{
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "mail/mail-reply.htm");
 		
-		String link = letter.location.getBypass() + "&nbsp;&gt;&nbsp;<a action=\"bypass _bbsmail;view;" + letter.letterId + "\">" + letter.subject + "</a>&nbsp;&gt;&nbsp;";
+		final String link = letter.location.getBypass() + "&nbsp;&gt;&nbsp;<a action=\"bypass _bbsmail;view;" + letter.letterId + "\">" + letter.subject + "</a>&nbsp;&gt;&nbsp;";
 		content = content.replace("%maillink%", link);
 		
 		content = content.replace("%recipients%", letter.senderId == activeChar.getObjectId() ? letter.recipientNames : getCharName(letter.senderId));
@@ -697,7 +697,7 @@ public class MailBBSManager extends BaseBBSManager
 		int count = 0;
 		if (!sType.equals("") && !search.equals(""))
 		{
-			boolean byTitle = sType.equalsIgnoreCase("title");
+			final boolean byTitle = sType.equalsIgnoreCase("title");
 			for (Mail letter : getPlayerMails(objId))
 			{
 				if (!letter.location.equals(location))
@@ -711,7 +711,7 @@ public class MailBBSManager extends BaseBBSManager
 				}
 				else if (!byTitle)
 				{
-					String writer = getCharName(letter.senderId);
+					final String writer = getCharName(letter.senderId);
 					if (writer.toLowerCase().contains(search.toLowerCase()))
 					{
 						count++;
@@ -757,7 +757,7 @@ public class MailBBSManager extends BaseBBSManager
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(DELETE_MAIL);
+			final PreparedStatement statement = con.prepareStatement(DELETE_MAIL);
 			statement.setInt(1, letterId);
 			statement.execute();
 			statement.close();
@@ -774,7 +774,7 @@ public class MailBBSManager extends BaseBBSManager
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(MARK_MAIL_READ);
+			final PreparedStatement statement = con.prepareStatement(MARK_MAIL_READ);
 			statement.setInt(1, 0);
 			statement.setInt(2, letterId);
 			statement.execute();
@@ -792,7 +792,7 @@ public class MailBBSManager extends BaseBBSManager
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(SET_LETTER_LOC);
+			final PreparedStatement statement = con.prepareStatement(SET_LETTER_LOC);
 			statement.setString(1, location.toString().toLowerCase());
 			statement.setInt(2, letterId);
 			statement.execute();
@@ -806,7 +806,7 @@ public class MailBBSManager extends BaseBBSManager
 	
 	private static String getCharName(int charId)
 	{
-		String name = CharNameTable.getInstance().getPlayerName(charId);
+		final String name = CharNameTable.getInstance().getPlayerName(charId);
 		return name == null ? "Unknown" : name;
 	}
 	
@@ -815,9 +815,9 @@ public class MailBBSManager extends BaseBBSManager
 		boolean isGM = false;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT accesslevel FROM characters WHERE obj_Id = ?");
+			final PreparedStatement statement = con.prepareStatement("SELECT accesslevel FROM characters WHERE obj_Id = ?");
 			statement.setInt(1, charId);
-			ResultSet result = statement.executeQuery();
+			final ResultSet result = statement.executeQuery();
 			result.next();
 			isGM = result.getInt(1) > 0;
 			result.close();

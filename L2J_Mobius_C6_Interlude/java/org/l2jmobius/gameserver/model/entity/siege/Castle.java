@@ -146,7 +146,7 @@ public class Castle
 		
 		if (_name.equalsIgnoreCase("Schuttgart") || _name.equalsIgnoreCase("Goddard"))
 		{
-			Castle rune = CastleManager.getInstance().getCastle("rune");
+			final Castle rune = CastleManager.getInstance().getCastle("rune");
 			if (rune != null)
 			{
 				final int runeTax = (int) (amount * rune.getTaxRate());
@@ -161,7 +161,7 @@ public class Castle
 		}
 		if (!_name.equalsIgnoreCase("aden") && !_name.equalsIgnoreCase("Rune") && !_name.equalsIgnoreCase("Schuttgart") && !_name.equalsIgnoreCase("Goddard")) // If current castle instance is not Aden, Rune, Goddard or Schuttgart.
 		{
-			Castle aden = CastleManager.getInstance().getCastle("aden");
+			final Castle aden = CastleManager.getInstance().getCastle("aden");
 			
 			if (aden != null)
 			{
@@ -213,7 +213,7 @@ public class Castle
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("Update castle set treasury = ? where id = ?");
+			final PreparedStatement statement = con.prepareStatement("Update castle set treasury = ? where id = ?");
 			statement.setInt(1, _treasury);
 			statement.setInt(2, _castleId);
 			statement.execute();
@@ -297,7 +297,7 @@ public class Castle
 			return;
 		}
 		
-		DoorInstance door = getDoor(doorId);
+		final DoorInstance door = getDoor(doorId);
 		if (door != null)
 		{
 			if (open)
@@ -323,7 +323,7 @@ public class Castle
 		// Remove old owner
 		if ((_ownerId > 0) && ((clan == null) || (clan.getClanId() != _ownerId)))
 		{
-			Clan oldOwner = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
+			final Clan oldOwner = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
 			
 			if (oldOwner != null)
 			{
@@ -420,7 +420,7 @@ public class Castle
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("Update castle set taxPercent = ? where id = ?");
+			final PreparedStatement statement = con.prepareStatement("Update castle set taxPercent = ? where id = ?");
 			statement.setInt(1, taxPercent);
 			statement.setInt(2, _castleId);
 			statement.execute();
@@ -545,7 +545,7 @@ public class Castle
 			
 			if (_ownerId > 0)
 			{
-				Clan clan = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
+				final Clan clan = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
 				ThreadPool.schedule(new CastleUpdater(clan, 1), 3600000); // Schedule owner tasks to start running
 			}
 			
@@ -563,16 +563,16 @@ public class Castle
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("Select * from castle_door where castleId = ?");
+			final PreparedStatement statement = con.prepareStatement("Select * from castle_door where castleId = ?");
 			statement.setInt(1, _castleId);
-			ResultSet rs = statement.executeQuery();
+			final ResultSet rs = statement.executeQuery();
 			
 			while (rs.next())
 			{
 				// Create list of the door default for use when respawning dead doors
 				_doorDefault.add(rs.getString("name") + ";" + rs.getInt("id") + ";" + rs.getInt("x") + ";" + rs.getInt("y") + ";" + rs.getInt("z") + ";" + rs.getInt("range_xmin") + ";" + rs.getInt("range_ymin") + ";" + rs.getInt("range_zmin") + ";" + rs.getInt("range_xmax") + ";" + rs.getInt("range_ymax") + ";" + rs.getInt("range_zmax") + ";" + rs.getInt("hp") + ";" + rs.getInt("pDef") + ";" + rs.getInt("mDef"));
 				
-				DoorInstance door = DoorTable.parseList(_doorDefault.get(_doorDefault.size() - 1));
+				final DoorInstance door = DoorTable.parseList(_doorDefault.get(_doorDefault.size() - 1));
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
 				_doors.add(door);
 				DoorTable.getInstance().putDoor(door);
@@ -592,9 +592,9 @@ public class Castle
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("Select * from castle_doorupgrade where doorId in (Select Id from castle_door where castleId = ?)");
+			final PreparedStatement statement = con.prepareStatement("Select * from castle_doorupgrade where doorId in (Select Id from castle_door where castleId = ?)");
 			statement.setInt(1, _castleId);
-			ResultSet rs = statement.executeQuery();
+			final ResultSet rs = statement.executeQuery();
 			
 			while (rs.next())
 			{
@@ -614,7 +614,7 @@ public class Castle
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("delete from castle_doorupgrade where doorId in (select id from castle_door where castleId=?)");
+			final PreparedStatement statement = con.prepareStatement("delete from castle_doorupgrade where doorId in (select id from castle_door where castleId=?)");
 			statement.setInt(1, _castleId);
 			statement.execute();
 			statement.close();
@@ -629,7 +629,7 @@ public class Castle
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("INSERT INTO castle_doorupgrade (doorId, hp, pDef, mDef) values (?,?,?,?)");
+			final PreparedStatement statement = con.prepareStatement("INSERT INTO castle_doorupgrade (doorId, hp, pDef, mDef) values (?,?,?,?)");
 			statement.setInt(1, doorId);
 			statement.setInt(2, hp);
 			statement.setInt(3, pDef);
@@ -706,7 +706,7 @@ public class Castle
 		
 		for (int i = 0; i < _doors.size(); i++)
 		{
-			DoorInstance door = _doors.get(i);
+			final DoorInstance door = _doors.get(i);
 			
 			if (door.getDoorId() == doorId)
 			{
@@ -886,7 +886,7 @@ public class Castle
 				int count = 0;
 				
 				String query = "INSERT INTO castle_manor_production VALUES ";
-				String[] values = new String[_production.size()];
+				final String[] values = new String[_production.size()];
 				
 				for (SeedProduction s : _production)
 				{
@@ -912,7 +912,7 @@ public class Castle
 				int count = 0;
 				
 				String query = "INSERT INTO castle_manor_production VALUES ";
-				String[] values = new String[_productionNext.size()];
+				final String[] values = new String[_productionNext.size()];
 				
 				for (SeedProduction s : _productionNext)
 				{
@@ -961,7 +961,7 @@ public class Castle
 				int count = 0;
 				
 				String query = "INSERT INTO castle_manor_production VALUES ";
-				String[] values = new String[prod.size()];
+				final String[] values = new String[prod.size()];
 				
 				for (SeedProduction s : prod)
 				{
@@ -1003,7 +1003,7 @@ public class Castle
 				int count = 0;
 				
 				String query = "INSERT INTO castle_manor_procure VALUES ";
-				String[] values = new String[_procure.size()];
+				final String[] values = new String[_procure.size()];
 				
 				for (CropProcure cp : _procure)
 				{
@@ -1031,7 +1031,7 @@ public class Castle
 				int count = 0;
 				
 				String query = "INSERT INTO castle_manor_procure VALUES ";
-				String[] values = new String[_procureNext.size()];
+				final String[] values = new String[_procureNext.size()];
 				
 				for (CropProcure cp : _procureNext)
 				{
@@ -1164,7 +1164,7 @@ public class Castle
 				final int maxreward = Math.max(0, _formerOwner.getReputationScore());
 				_formerOwner.setReputationScore(_formerOwner.getReputationScore() - 1000, true);
 				
-				Clan owner = ClanTable.getInstance().getClan(getOwnerId());
+				final Clan owner = ClanTable.getInstance().getClan(getOwnerId());
 				
 				if (owner != null)
 				{
@@ -1181,7 +1181,7 @@ public class Castle
 		}
 		else
 		{
-			Clan owner = ClanTable.getInstance().getClan(getOwnerId());
+			final Clan owner = ClanTable.getInstance().getClan(getOwnerId());
 			
 			if (owner != null)
 			{

@@ -68,7 +68,7 @@ public class RequestJoinAlly extends GameClientPacket
 			return;
 		}
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.S2_ALLIANCE_LEADER_OF_S1_REQUESTED_ALLIANCE);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S2_ALLIANCE_LEADER_OF_S1_REQUESTED_ALLIANCE);
 		sm.addString(player.getClan().getAllyName());
 		sm.addString(player.getName());
 		target.sendPacket(sm);

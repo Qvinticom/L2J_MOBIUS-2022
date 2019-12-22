@@ -180,6 +180,7 @@ public class ResidenceOfQueenNebula extends AbstractInstance
 				{
 					world.finishInstance();
 				}
+				break;
 			}
 			case WATER_SLIME:
 			{
@@ -217,6 +218,7 @@ public class ResidenceOfQueenNebula extends AbstractInstance
 						skill.applyEffects(player, player);
 					}
 				}
+				break;
 			}
 		}
 		

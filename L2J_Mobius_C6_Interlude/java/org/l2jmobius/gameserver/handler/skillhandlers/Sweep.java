@@ -85,7 +85,7 @@ public class Sweep implements ISkillHandler
 					}
 					else
 					{
-						ItemInstance item = player.getInventory().addItem("Sweep", ritem.getItemId(), ritem.getCount(), player, target);
+						final ItemInstance item = player.getInventory().addItem("Sweep", ritem.getItemId(), ritem.getCount(), player, target);
 						if (iu != null)
 						{
 							iu.addItem(item);

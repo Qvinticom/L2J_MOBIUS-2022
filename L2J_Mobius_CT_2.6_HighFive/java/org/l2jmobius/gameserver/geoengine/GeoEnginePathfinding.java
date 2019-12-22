@@ -39,18 +39,18 @@ final class GeoEnginePathfinding extends GeoEngine
 	{
 		super();
 		
-		String[] array = Config.PATHFIND_BUFFERS.split(";");
+		final String[] array = Config.PATHFIND_BUFFERS.split(";");
 		_buffers = new BufferHolder[array.length];
 		
 		int count = 0;
 		for (int i = 0; i < array.length; i++)
 		{
-			String buf = array[i];
-			String[] args = buf.split("x");
+			final String buf = array[i];
+			final String[] args = buf.split("x");
 			
 			try
 			{
-				int size = Integer.parseInt(args[1]);
+				final int size = Integer.parseInt(args[1]);
 				count += size;
 				_buffers[i] = new BufferHolder(Integer.parseInt(args[0]), size);
 			}
@@ -67,24 +67,24 @@ final class GeoEnginePathfinding extends GeoEngine
 	public List<Location> findPath(int ox, int oy, int oz, int tx, int ty, int tz, int instance)
 	{
 		// get origin and check existing geo coords
-		int gox = getGeoX(ox);
-		int goy = getGeoY(oy);
+		final int gox = getGeoX(ox);
+		final int goy = getGeoY(oy);
 		if (!hasGeoPos(gox, goy))
 		{
 			return null;
 		}
 		
-		short goz = getHeightNearest(gox, goy, oz);
+		final short goz = getHeightNearest(gox, goy, oz);
 		
 		// get target and check existing geo coords
-		int gtx = getGeoX(tx);
-		int gty = getGeoY(ty);
+		final int gtx = getGeoX(tx);
+		final int gty = getGeoY(ty);
 		if (!hasGeoPos(gtx, gty))
 		{
 			return null;
 		}
 		
-		short gtz = getHeightNearest(gtx, gty, tz);
+		final short gtz = getHeightNearest(gtx, gty, tz);
 		
 		// Prepare buffer for pathfinding calculations
 		final NodeBuffer buffer = getBuffer(64 + (2 * Math.max(Math.abs(gox - gtx), Math.abs(goy - gty))));
@@ -97,7 +97,7 @@ final class GeoEnginePathfinding extends GeoEngine
 		List<Location> path = null;
 		try
 		{
-			Node result = buffer.findPath(gox, goy, goz, gtx, gty, gtz);
+			final Node result = buffer.findPath(gox, goy, goz, gtx, gty, gtz);
 			
 			if (result == null)
 			{
@@ -123,7 +123,7 @@ final class GeoEnginePathfinding extends GeoEngine
 		}
 		
 		// get path list iterator
-		ListIterator<Location> point = path.listIterator();
+		final ListIterator<Location> point = path.listIterator();
 		
 		// get node A (origin)
 		int nodeAx = gox;
@@ -138,10 +138,10 @@ final class GeoEnginePathfinding extends GeoEngine
 		while (point.hasNext() && (count++ < Config.MAX_ITERATIONS))
 		{
 			// get node C
-			GeoLocation nodeC = (GeoLocation) path.get(point.nextIndex());
+			final GeoLocation nodeC = (GeoLocation) path.get(point.nextIndex());
 			
 			// check movement from node A to node C
-			GeoLocation loc = checkMove(nodeAx, nodeAy, nodeAz, nodeC.getGeoX(), nodeC.getGeoY(), nodeC.getZ(), instance);
+			final GeoLocation loc = checkMove(nodeAx, nodeAy, nodeAz, nodeC.getGeoX(), nodeC.getGeoY(), nodeC.getZ(), instance);
 			if ((loc.getGeoX() == nodeC.getGeoX()) && (loc.getGeoY() == nodeC.getGeoY()))
 			{
 				// can move from node A to node C
@@ -174,7 +174,7 @@ final class GeoEnginePathfinding extends GeoEngine
 	private static List<Location> constructPath(Node target)
 	{
 		// create empty list
-		LinkedList<Location> list = new LinkedList<>();
+		final LinkedList<Location> list = new LinkedList<>();
 		
 		// set direction X/Y
 		int dx = 0;

@@ -139,7 +139,7 @@ public class StaticObjectInstance extends WorldObject
 		}
 		else
 		{
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
 			
 			// Calculate the distance between the PlayerInstance and the NpcInstance
@@ -155,9 +155,9 @@ public class StaticObjectInstance extends WorldObject
 			{
 				if (_type == 2)
 				{
-					String filename = "data/html/signboard.htm";
-					String content = HtmCache.getInstance().getHtm(filename);
-					NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+					final String filename = "data/html/signboard.htm";
+					final String content = HtmCache.getInstance().getHtm(filename);
+					final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 					
 					if (content == null)
 					{

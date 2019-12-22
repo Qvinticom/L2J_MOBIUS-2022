@@ -25,7 +25,7 @@ public class ChatLogFormatter extends AbstractFormatter
 	@Override
 	public String format(LogRecord record)
 	{
-		Object[] params = record.getParameters();
+		final Object[] params = record.getParameters();
 		final StringBuilder output = new StringBuilder(32 + record.getMessage().length() + (params != null ? 10 * params.length : 0));
 		output.append(super.format(record));
 		

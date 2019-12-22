@@ -459,9 +459,9 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 				{
 					if (result.next())
 					{
-						int mineralId = result.getInt("mineralId");
-						int option1 = result.getInt("option1");
-						int option2 = result.getInt("option2");
+						final int mineralId = result.getInt("mineralId");
+						final int option1 = result.getInt("option1");
+						final int option2 = result.getInt("option2");
 						if ((option1 != -1) && (option2 != -1))
 						{
 							charInfopackage.setAugmentation(new VariationInstance(mineralId, option1, option2));

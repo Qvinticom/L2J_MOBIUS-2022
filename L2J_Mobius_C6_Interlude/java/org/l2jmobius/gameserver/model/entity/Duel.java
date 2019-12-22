@@ -108,7 +108,7 @@ public class Duel
 			// increase countdown so that start task can teleport players
 			_countdown++;
 			// inform players that they will be portet shortly
-			SystemMessage sm = new SystemMessage(SystemMessageId.IN_A_MOMENT_YOU_WILL_BE_TRANSPORTED_TO_THE_SITE_WHERE_THE_DUEL_WILL_TAKE_PLACE);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.IN_A_MOMENT_YOU_WILL_BE_TRANSPORTED_TO_THE_SITE_WHERE_THE_DUEL_WILL_TAKE_PLACE);
 			broadcastToTeam1(sm);
 			broadcastToTeam2(sm);
 		}
@@ -259,7 +259,7 @@ public class Duel
 		{
 			try
 			{
-				DuelResultEnum status = _duel.checkEndDuelCondition();
+				final DuelResultEnum status = _duel.checkEndDuelCondition();
 				
 				if (status == DuelResultEnum.Canceled)
 				{
@@ -381,7 +381,7 @@ public class Duel
 	 */
 	private void stopFighting()
 	{
-		ActionFailed af = ActionFailed.STATIC_PACKET;
+		final ActionFailed af = ActionFailed.STATIC_PACKET;
 		if (_partyDuel)
 		{
 			for (PlayerInstance temp : _playerA.getParty().getPartyMembers())
@@ -475,8 +475,8 @@ public class Duel
 			}
 			
 			// Send duel Start packets
-			ExDuelReady ready = new ExDuelReady(1);
-			ExDuelStart start = new ExDuelStart(1);
+			final ExDuelReady ready = new ExDuelReady(1);
+			final ExDuelStart start = new ExDuelStart(1);
 			
 			broadcastToTeam1(ready);
 			broadcastToTeam2(ready);
@@ -492,8 +492,8 @@ public class Duel
 			_playerB.setTeam(2);
 			
 			// Send duel Start packets
-			ExDuelReady ready = new ExDuelReady(0);
-			ExDuelStart start = new ExDuelStart(0);
+			final ExDuelReady ready = new ExDuelReady(0);
+			final ExDuelStart start = new ExDuelStart(0);
 			
 			broadcastToTeam1(ready);
 			broadcastToTeam2(ready);
@@ -509,7 +509,7 @@ public class Duel
 		}
 		
 		// play sound
-		PlaySound ps = new PlaySound(1, "B04_S01", 0, 0, 0, 0, 0);
+		final PlaySound ps = new PlaySound(1, "B04_S01", 0, 0, 0, 0, 0);
 		broadcastToTeam1(ps);
 		broadcastToTeam2(ps);
 		
@@ -781,7 +781,7 @@ public class Duel
 	 */
 	public void playKneelAnimation()
 	{
-		PlayerInstance looser = getLooser();
+		final PlayerInstance looser = getLooser();
 		
 		if (looser == null)
 		{

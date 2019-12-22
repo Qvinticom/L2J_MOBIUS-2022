@@ -440,7 +440,7 @@ public class Party
 			if (sendMessage)
 			{
 				player.sendPacket(SystemMessageId.YOU_LEFT_PARTY);
-				SystemMessage msg = new SystemMessage(SystemMessageId.S1_LEFT_PARTY);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_LEFT_PARTY);
 				msg.addString(player.getName());
 				broadcastToPartyMembers(msg);
 			}
@@ -463,7 +463,7 @@ public class Party
 			
 			if (isLeader && (_members.size() > 1))
 			{
-				SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_BECOME_A_PARTY_LEADER);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_BECOME_A_PARTY_LEADER);
 				msg.addString(getLeader().getName());
 				broadcastToPartyMembers(msg);
 				broadcastToPartyMembersNewLeader();
@@ -588,13 +588,13 @@ public class Party
 			return;
 		}
 		
-		PlayerInstance target = getActualLooter(player, item.getItemId(), false, player);
+		final PlayerInstance target = getActualLooter(player, item.getItemId(), false, player);
 		target.addItem("Party", item, player, true);
 		
 		// Send messages to other party members about reward
 		if (item.getCount() > 1)
 		{
-			SystemMessage msg = new SystemMessage(SystemMessageId.S1_PICKED_UP_S2_S3);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.S1_PICKED_UP_S2_S3);
 			msg.addString(target.getName());
 			msg.addItemName(item.getItemId());
 			msg.addNumber(item.getCount());
@@ -602,7 +602,7 @@ public class Party
 		}
 		else
 		{
-			SystemMessage msg = new SystemMessage(SystemMessageId.S1_PICKED_UP_S2);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.S1_PICKED_UP_S2);
 			msg.addString(target.getName());
 			msg.addItemName(item.getItemId());
 			broadcastToPartyMembers(target, msg);
@@ -629,14 +629,14 @@ public class Party
 			return;
 		}
 		
-		PlayerInstance looter = getActualLooter(player, item.getItemId(), spoil, target);
+		final PlayerInstance looter = getActualLooter(player, item.getItemId(), spoil, target);
 		
 		looter.addItem(spoil ? "Sweep" : "Party", item.getItemId(), item.getCount(), player, true);
 		
 		// Send messages to other aprty members about reward
 		if (item.getCount() > 1)
 		{
-			SystemMessage msg = spoil ? new SystemMessage(SystemMessageId.S1_SWEEPED_UP_S2_S3) : new SystemMessage(SystemMessageId.S1_PICKED_UP_S2_S3);
+			final SystemMessage msg = spoil ? new SystemMessage(SystemMessageId.S1_SWEEPED_UP_S2_S3) : new SystemMessage(SystemMessageId.S1_PICKED_UP_S2_S3);
 			msg.addString(looter.getName());
 			msg.addItemName(item.getItemId());
 			msg.addNumber(item.getCount());
@@ -644,7 +644,7 @@ public class Party
 		}
 		else
 		{
-			SystemMessage msg = spoil ? new SystemMessage(SystemMessageId.S1_SWEEPED_UP_S2) : new SystemMessage(SystemMessageId.S1_PICKED_UP_S2);
+			final SystemMessage msg = spoil ? new SystemMessage(SystemMessageId.S1_SWEEPED_UP_S2) : new SystemMessage(SystemMessageId.S1_PICKED_UP_S2);
 			msg.addString(looter.getName());
 			msg.addItemName(item.getItemId());
 			broadcastToPartyMembers(looter, msg);
@@ -708,7 +708,7 @@ public class Party
 	public void distributeXpAndSp(long xpReward, int spReward, List<Playable> rewardedMembers, int topLvl)
 	{
 		SummonInstance summon = null;
-		List<Playable> validMembers = getValidMembers(rewardedMembers, topLvl);
+		final List<Playable> validMembers = getValidMembers(rewardedMembers, topLvl);
 		
 		float penalty;
 		double sqLevel;

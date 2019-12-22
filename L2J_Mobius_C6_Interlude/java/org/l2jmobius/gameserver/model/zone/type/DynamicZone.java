@@ -48,7 +48,7 @@ public class DynamicZone extends ZoneType
 		_owner = owner;
 		_skill = skill;
 		
-		Runnable r = this::remove;
+		final Runnable r = this::remove;
 		setTask(ThreadPool.schedule(r, skill.getBuffDuration()));
 	}
 	

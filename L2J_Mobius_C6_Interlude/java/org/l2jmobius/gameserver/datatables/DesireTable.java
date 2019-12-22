@@ -90,7 +90,7 @@ public class DesireTable
 		
 		public void addValue(DesireType type, float value)
 		{
-			DesireValue temp = getDesireValue(type);
+			final DesireValue temp = getDesireValue(type);
 			
 			if (temp != null)
 			{
@@ -144,7 +144,7 @@ public class DesireTable
 	
 	public void addDesireValue(WorldObject object, DesireType type, float value)
 	{
-		Desires desireList = _objectDesireTable.get(object);
+		final Desires desireList = _objectDesireTable.get(object);
 		
 		if (desireList != null)
 		{
@@ -164,7 +164,7 @@ public class DesireTable
 	
 	public void createDesire(WorldObject object, DesireType type)
 	{
-		Desires desireList = _objectDesireTable.get(object);
+		final Desires desireList = _objectDesireTable.get(object);
 		
 		if (desireList != null)
 		{
@@ -174,7 +174,7 @@ public class DesireTable
 	
 	public void deleteDesire(WorldObject object, DesireType type)
 	{
-		Desires desireList = _objectDesireTable.get(object);
+		final Desires desireList = _objectDesireTable.get(object);
 		
 		if (desireList != null)
 		{

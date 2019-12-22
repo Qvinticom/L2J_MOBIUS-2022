@@ -199,7 +199,7 @@ public class SavingSanta extends LongTimeEvent
 					continue;
 				}
 				
-				int result = pl.getEffectList().getBuffInfoBySkillId(23019).getSkill().getLevel() - skill.getLevel();
+				final int result = pl.getEffectList().getBuffInfoBySkillId(23019).getSkill().getLevel() - skill.getLevel();
 				
 				if (result == 0)
 				{
@@ -216,7 +216,7 @@ public class SavingSanta extends LongTimeEvent
 				}
 				else if ((result == 1) || (result == -2))
 				{
-					int level = (pl.isAffectedBySkill(23022) ? (pl.getEffectList().getBuffInfoBySkillId(23022).getSkill().getLevel() + 1) : 1);
+					final int level = (pl.isAffectedBySkill(23022) ? (pl.getEffectList().getBuffInfoBySkillId(23022).getSkill().getLevel() + 1) : 1);
 					pl.broadcastPacket(new MagicSkillUse(pl, pl, 23022, level, 3000, 1));
 					SkillData.getInstance().getSkill(23022, level).applyEffects(pl, pl);
 					
@@ -324,7 +324,7 @@ public class SavingSanta extends LongTimeEvent
 					{
 						if (_rewardedPlayers.containsKey(pl.getAccountName()))
 						{
-							long elapsedTimeSinceLastRewarded = System.currentTimeMillis() - _rewardedPlayers.get(pl.getAccountName());
+							final long elapsedTimeSinceLastRewarded = System.currentTimeMillis() - _rewardedPlayers.get(pl.getAccountName());
 							if (elapsedTimeSinceLastRewarded < MIN_TIME_BETWEEN_2_REWARDS)
 							{
 								continue;
@@ -339,10 +339,10 @@ public class SavingSanta extends LongTimeEvent
 								continue;
 							}
 						}
-						int locx = (int) (pl.getX() + (Math.pow(-1, getRandom(1, 2)) * 50));
-						int locy = (int) (pl.getY() + (Math.pow(-1, getRandom(1, 2)) * 50));
-						int heading = Util.calculateHeadingFrom(locx, locy, pl.getX(), pl.getY());
-						Npc santa = addSpawn(HOLIDAY_SANTA_ID, locx, locy, pl.getZ(), heading, false, 30000);
+						final int locx = (int) (pl.getX() + (Math.pow(-1, getRandom(1, 2)) * 50));
+						final int locy = (int) (pl.getY() + (Math.pow(-1, getRandom(1, 2)) * 50));
+						final int heading = Util.calculateHeadingFrom(locx, locy, pl.getX(), pl.getY());
+						final Npc santa = addSpawn(HOLIDAY_SANTA_ID, locx, locy, pl.getZ(), heading, false, 30000);
 						_rewardedPlayers.put(pl.getAccountName(), System.currentTimeMillis());
 						player.getVariables().set("LAST_SANTA_REWARD", System.currentTimeMillis());
 						startQuestTimer("SantaRewarding0", 500, santa, pl);
@@ -446,7 +446,7 @@ public class SavingSanta extends LongTimeEvent
 					{
 						if (_blessedPlayers.containsKey(plb.getAccountName()))
 						{
-							long elapsedTimeSinceLastBlessed = currentTime - _blessedPlayers.get(plb.getAccountName());
+							final long elapsedTimeSinceLastBlessed = currentTime - _blessedPlayers.get(plb.getAccountName());
 							if (elapsedTimeSinceLastBlessed < MIN_TIME_BETWEEN_2_BLESSINGS)
 							{
 								continue;
@@ -504,12 +504,12 @@ public class SavingSanta extends LongTimeEvent
 			{
 				for (PlayerInstance playerr : World.getInstance().getVisibleObjects(tree, PlayerInstance.class))
 				{
-					int xxMin = tree.getX() - 60;
-					int yyMin = tree.getY() - 60;
-					int xxMax = tree.getX() + 60;
-					int yyMax = tree.getY() + 60;
-					int playerX = playerr.getX();
-					int playerY = playerr.getY();
+					final int xxMin = tree.getX() - 60;
+					final int yyMin = tree.getY() - 60;
+					final int xxMax = tree.getX() + 60;
+					final int yyMax = tree.getY() + 60;
+					final int playerX = playerr.getX();
+					final int playerY = playerr.getY();
 					
 					if ((playerX > xxMin) && (playerX < xxMax) && (playerY > yyMin) && (playerY < yyMax))
 					{
@@ -528,7 +528,7 @@ public class SavingSanta extends LongTimeEvent
 				
 				for (ItemHolder item : TREE_REQUIRED_ITEMS)
 				{
-					long pieceCount = player.getInventory().getInventoryItemCount(item.getId(), -1);
+					final long pieceCount = player.getInventory().getInventoryItemCount(item.getId(), -1);
 					if (pieceCount >= item.getCount())
 					{
 						itemsOk = itemsOk + 1;
@@ -573,7 +573,7 @@ public class SavingSanta extends LongTimeEvent
 			else if (event.equalsIgnoreCase("SpecialTree"))
 			{
 				htmltext = "<html><title>Christmas Event</title><body><br><br><table width=260><tr><td></td><td width=40></td><td width=40></td></tr><tr><td><font color=LEVEL>Special Christmas Tree</font></td><td width=40><img src=\"Icon.etc_x_mas_tree_i00\" width=32 height=32></td><td width=40></td></tr></table><br><br><table width=260>";
-				long pieceCount = player.getInventory().getInventoryItemCount(X_MAS_TREE1, -1);
+				final long pieceCount = player.getInventory().getInventoryItemCount(X_MAS_TREE1, -1);
 				int itemsOk = 0;
 				
 				if (pieceCount >= 10)
@@ -613,7 +613,7 @@ public class SavingSanta extends LongTimeEvent
 			else if (event.equalsIgnoreCase("SantaHat"))
 			{
 				htmltext = "<html><title>Christmas Event</title><body><br><br><table width=260><tr><td></td><td width=40></td><td width=40></td></tr><tr><td><font color=LEVEL>Santa's Hat</font></td><td width=40><img src=\"Icon.Accessory_santas_cap_i00\" width=32 height=32></td><td width=40></td></tr></table><br><br><table width=260>";
-				long pieceCount = player.getInventory().getInventoryItemCount(X_MAS_TREE1, -1);
+				final long pieceCount = player.getInventory().getInventoryItemCount(X_MAS_TREE1, -1);
 				int itemsOk = 0;
 				
 				if (pieceCount >= 10)
@@ -651,7 +651,7 @@ public class SavingSanta extends LongTimeEvent
 			else if (event.equalsIgnoreCase("SavingSantaHat"))
 			{
 				htmltext = "<html><title>Christmas Event</title><body><br><br><table width=260><tr><td></td><td width=40></td><td width=40></td></tr><tr><td><font color=LEVEL>Saving Santa's Hat</font></td><td width=40><img src=\"Icon.Accessory_santas_cap_i00\" width=32 height=32></td><td width=40></td></tr></table><br><br><table width=260>";
-				long pieceCount = player.getInventory().getAdena();
+				final long pieceCount = player.getInventory().getAdena();
 				int itemsOk = 0;
 				
 				if (pieceCount >= 50000)

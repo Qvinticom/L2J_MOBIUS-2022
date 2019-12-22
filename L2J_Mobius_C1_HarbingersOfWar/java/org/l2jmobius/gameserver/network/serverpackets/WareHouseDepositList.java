@@ -49,7 +49,7 @@ public class WareHouseDepositList extends ServerBasePacket
 			}
 			itemlist.add(item);
 		}
-		int count = itemlist.size();
+		final int count = itemlist.size();
 		writeH(count);
 		for (i = 0; i < count; ++i)
 		{

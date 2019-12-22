@@ -76,7 +76,7 @@ class StaticMethodTask extends Task
 		Method methodObject;
 		try
 		{
-			Class<?>[] argTypes = new Class[]
+			final Class<?>[] argTypes = new Class[]
 			{
 				String[].class
 			};
@@ -86,7 +86,7 @@ class StaticMethodTask extends Task
 		{
 			throw new RuntimeException("Cannot find a " + methodName + "(String[]) method in class " + className, e);
 		}
-		int modifiers = methodObject.getModifiers();
+		final int modifiers = methodObject.getModifiers();
 		if (!Modifier.isStatic(modifiers))
 		{
 			throw new RuntimeException("The method " + methodName + "(String[]) of the class " + className + " is not static");

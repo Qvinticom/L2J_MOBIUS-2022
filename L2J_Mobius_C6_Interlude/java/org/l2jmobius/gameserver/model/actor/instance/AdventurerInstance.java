@@ -46,7 +46,7 @@ public class AdventurerInstance extends FolkInstance
 					case ALIVE:
 					case DEAD:
 					{
-						Spawn spawn = RaidBossSpawnManager.getInstance().getSpawns().get(bossId);
+						final Spawn spawn = RaidBossSpawnManager.getInstance().getSpawns().get(bossId);
 						player.sendPacket(new RadarControl(0, 1, spawn.getX(), spawn.getY(), spawn.getZ()));
 						break;
 					}

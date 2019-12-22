@@ -29,8 +29,8 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
- * This class handles following admin commands: - kill = kills target Creature - kill_monster = kills target non-player - kill <radius> = If radius is specified, then ALL players only in that radius will be killed. - kill_monster <radius> = If radius is specified, then ALL non-players only in
- * that radius will be killed.
+ * This class handles following admin commands: - kill = kills target Creature - kill_monster = kills target non-player - kill <radius> = If radius is specified, then ALL players only in that radius will be killed. - kill_monster <radius> = If radius is specified, then ALL non-players only in that
+ * radius will be killed.
  * @version $Revision: 1.2.4.5 $ $Date: 2007/07/31 10:06:06 $
  */
 public class AdminKill implements IAdminCommandHandler
@@ -46,13 +46,13 @@ public class AdminKill implements IAdminCommandHandler
 	{
 		if (command.startsWith("admin_kill"))
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
+			final StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken(); // skip command
 			
 			if (st.hasMoreTokens())
 			{
-				String firstParam = st.nextToken();
-				PlayerInstance plyr = World.getInstance().getPlayer(firstParam);
+				final String firstParam = st.nextToken();
+				final PlayerInstance plyr = World.getInstance().getPlayer(firstParam);
 				
 				if (plyr != null)
 				{
@@ -113,7 +113,7 @@ public class AdminKill implements IAdminCommandHandler
 			}
 			else
 			{
-				WorldObject obj = activeChar.getTarget();
+				final WorldObject obj = activeChar.getTarget();
 				
 				if ((obj == null) || (obj instanceof ControllableMobInstance) || !(obj instanceof Creature))
 				{

@@ -296,7 +296,7 @@ public class Trasken extends AbstractNpcAI
 		super();
 		_zoneLair = ZoneManager.getInstance().getZoneById(ZONE_ID, NoSummonFriendZone.class);
 		_zoneLair2 = ZoneManager.getInstance().getZoneById(ZONE_ID_HEART, NoSummonFriendZone.class);
-		int[] creature = new int[]
+		final int[] creature = new int[]
 		{
 			TRASKEN,
 			TIE,
@@ -344,7 +344,7 @@ public class Trasken extends AbstractNpcAI
 	
 	private void init()
 	{
-		int size = _zoneLair.getPlayersInside().size();
+		final int size = _zoneLair.getPlayersInside().size();
 		if ((size >= 14) && (size <= 28))
 		{
 			_playersToEnter = 7;

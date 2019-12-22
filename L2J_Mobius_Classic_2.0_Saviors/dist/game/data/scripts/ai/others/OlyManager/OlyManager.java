@@ -46,6 +46,8 @@ import ai.AbstractNpcAI;
  */
 public class OlyManager extends AbstractNpcAI implements IBypassHandler
 {
+	private static final Logger LOGGER = Logger.getLogger(OlyManager.class.getName());
+	
 	// NPC
 	private static final int MANAGER = 31688;
 	// Misc
@@ -56,7 +58,6 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 		"watchmatch",
 		"arenachange"
 	};
-	private static final Logger LOGGER = Logger.getLogger(OlyManager.class.getName());
 	
 	private OlyManager()
 	{

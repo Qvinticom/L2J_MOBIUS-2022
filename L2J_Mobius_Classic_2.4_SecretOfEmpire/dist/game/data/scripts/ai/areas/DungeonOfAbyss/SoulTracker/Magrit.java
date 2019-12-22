@@ -63,7 +63,7 @@ public class Magrit extends AbstractNpcAI
 	{
 		if (npc.getId() == SOUL_TRACKER_MARGIT)
 		{
-			QuestState qs = player.getQuestState("Q00933_ExploringTheWestWingOfTheDungeonOfAbyss");
+			final QuestState qs = player.getQuestState("Q00933_ExploringTheWestWingOfTheDungeonOfAbyss");
 			switch (event)
 			{
 				case "1":

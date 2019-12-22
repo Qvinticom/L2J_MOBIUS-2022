@@ -181,8 +181,8 @@ public class NewbieHelper extends Quest
 		String htmltext = event;
 		player = qs1.getPlayer();
 		
-		int ex = qs2.getInt("Ex");
-		int classId = qs1.getPlayer().getClassId().getId();
+		final int ex = qs2.getInt("Ex");
+		final int classId = qs1.getPlayer().getClassId().getId();
 		
 		if (event.equalsIgnoreCase("TimerEx_NewbieHelper"))
 		{
@@ -210,7 +210,7 @@ public class NewbieHelper extends Quest
 		}
 		else
 		{
-			Event ev = _events.get(event);
+			final Event ev = _events.get(event);
 			if (ev != null)
 			{
 				if (ev._radarX != 0)
@@ -250,7 +250,7 @@ public class NewbieHelper extends Quest
 	{
 		String htmltext = "";
 		QuestState qs1 = player.getQuestState(getName());
-		QuestState qs2 = player.getQuestState(Tutorial.class.getSimpleName());
+		final QuestState qs2 = player.getQuestState(Tutorial.class.getSimpleName());
 		if (qs1 == null)
 		{
 			qs1 = newQuestState(player);
@@ -262,16 +262,16 @@ public class NewbieHelper extends Quest
 			return null;
 		}
 		
-		int npcId = npc.getNpcId();
-		int level = player.getLevel();
-		boolean isMage = player.isMageClass();
-		boolean isOrcMage = player.getClassId().getId() == 49;
+		final int npcId = npc.getNpcId();
+		final int level = player.getLevel();
+		final boolean isMage = player.isMageClass();
+		final boolean isOrcMage = player.getClassId().getId() == 49;
 		
 		int npcType = 0;
 		int raceId = 0;
 		int item = 0;
 		String[] htmlfiles = {};
-		Talk talk = _talks.get(npcId);
+		final Talk talk = _talks.get(npcId);
 		try
 		{
 			if (talk != null)
@@ -343,7 +343,7 @@ public class NewbieHelper extends Quest
 					}
 					else if (npcType == 0)
 					{
-						int step = qs1.getInt("step");
+						final int step = qs1.getInt("step");
 						if (step == 1)
 						{
 							htmltext = htmlfiles[0];

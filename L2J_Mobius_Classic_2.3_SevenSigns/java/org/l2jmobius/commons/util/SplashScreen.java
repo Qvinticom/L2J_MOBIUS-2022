@@ -44,7 +44,7 @@ public class SplashScreen extends JWindow
 	{
 		setBackground(new Color(0, 255, 0, 0)); // Transparency.
 		image = Toolkit.getDefaultToolkit().getImage(path);
-		ImageIcon imageIcon = new ImageIcon(image);
+		final ImageIcon imageIcon = new ImageIcon(image);
 		setSize(imageIcon.getIconWidth(), imageIcon.getIconHeight());
 		setLocationRelativeTo(null);
 		setAlwaysOnTop(true);

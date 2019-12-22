@@ -37,8 +37,8 @@ public class CastleCmd implements IVoicedCommandHandler
 	{
 		if (command.startsWith("open doors") && target.equals("castle") && activeChar.isClanLeader())
 		{
-			DoorInstance door = (DoorInstance) activeChar.getTarget();
-			Castle castle = CastleManager.getInstance().getCastleById(activeChar.getClan().getHasCastle());
+			final DoorInstance door = (DoorInstance) activeChar.getTarget();
+			final Castle castle = CastleManager.getInstance().getCastleById(activeChar.getClan().getHasCastle());
 			
 			if ((door == null) || (castle == null))
 			{
@@ -52,8 +52,8 @@ public class CastleCmd implements IVoicedCommandHandler
 		}
 		else if (command.startsWith("close doors") && target.equals("castle") && activeChar.isClanLeader())
 		{
-			DoorInstance door = (DoorInstance) activeChar.getTarget();
-			Castle castle = CastleManager.getInstance().getCastleById(activeChar.getClan().getHasCastle());
+			final DoorInstance door = (DoorInstance) activeChar.getTarget();
+			final Castle castle = CastleManager.getInstance().getCastleById(activeChar.getClan().getHasCastle());
 			
 			if ((door == null) || (castle == null))
 			{
@@ -72,7 +72,7 @@ public class CastleCmd implements IVoicedCommandHandler
 				return false;
 			}
 			
-			Ride mount = new Ride(activeChar.getObjectId(), Ride.ACTION_MOUNT, 12621);
+			final Ride mount = new Ride(activeChar.getObjectId(), Ride.ACTION_MOUNT, 12621);
 			activeChar.sendPacket(mount);
 			activeChar.broadcastPacket(mount);
 			activeChar.setMountType(mount.getMountType());

@@ -288,7 +288,7 @@ public class DoorInstance extends Creature
 		
 		if (actionDelay > -1)
 		{
-			AutoOpenClose ao = new AutoOpenClose();
+			final AutoOpenClose ao = new AutoOpenClose();
 			ThreadPool.scheduleAtFixedRate(ao, actionDelay, actionDelay);
 		}
 		else if (_autoActionTask != null)
@@ -532,10 +532,10 @@ public class DoorInstance extends Creature
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
 			
-			DoorStatusUpdate su = new DoorStatusUpdate(this);
+			final DoorStatusUpdate su = new DoorStatusUpdate(this);
 			player.sendPacket(su);
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
@@ -575,7 +575,7 @@ public class DoorInstance extends Creature
 	@Override
 	public void onActionShift(GameClient client)
 	{
-		PlayerInstance player = client.getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -584,17 +584,17 @@ public class DoorInstance extends Creature
 		if (player.getAccessLevel().isGm())
 		{
 			player.setTarget(this);
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel());
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel());
 			player.sendPacket(my);
 			
 			if (isAutoAttackable(player))
 			{
-				DoorStatusUpdate su = new DoorStatusUpdate(this);
+				final DoorStatusUpdate su = new DoorStatusUpdate(this);
 				player.sendPacket(su);
 			}
 			
-			NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			StringBuilder html1 = new StringBuilder("<html><body><table border=0>");
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			final StringBuilder html1 = new StringBuilder("<html><body><table border=0>");
 			html1.append("<tr><td>S.Y.L. Says:</td></tr>");
 			html1.append("<tr><td>Current HP  " + getCurrentHp() + "</td></tr>");
 			html1.append("<tr><td>Max HP       " + getMaxHp() + "</td></tr>");
@@ -621,12 +621,12 @@ public class DoorInstance extends Creature
 		{
 			// ATTACK the mob without moving?
 			player.setTarget(this);
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel());
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel());
 			player.sendPacket(my);
 			
 			if (isAutoAttackable(player))
 			{
-				DoorStatusUpdate su = new DoorStatusUpdate(this);
+				final DoorStatusUpdate su = new DoorStatusUpdate(this);
 				player.sendPacket(su);
 			}
 			

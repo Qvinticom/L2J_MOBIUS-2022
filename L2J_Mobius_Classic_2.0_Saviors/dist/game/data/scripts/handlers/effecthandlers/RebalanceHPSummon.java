@@ -70,7 +70,7 @@ public class RebalanceHPSummon extends AbstractEffect
 		fullHP += effector.getMaxHp();
 		currentHPs += effector.getCurrentHp();
 		
-		double percentHP = currentHPs / fullHP;
+		final double percentHP = currentHPs / fullHP;
 		for (Summon summon : effector.getServitors().values())
 		{
 			if (!summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true))

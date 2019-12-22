@@ -74,7 +74,7 @@ public class CastleChamberlainInstance extends FolkInstance
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
@@ -102,8 +102,8 @@ public class CastleChamberlainInstance extends FolkInstance
 			return;
 		}
 		
-		StringTokenizer st = new StringTokenizer(command, " ");
-		String actualCommand = st.nextToken(); // Get actual command
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		final String actualCommand = st.nextToken(); // Get actual command
 		
 		final int condition = validateCondition(player);
 		if (condition <= COND_ALL_FALSE)
@@ -289,7 +289,7 @@ public class CastleChamberlainInstance extends FolkInstance
 							buy = Integer.parseInt(val + "2");
 						}
 					}
-					StoreTradeList list = TradeController.getInstance().getBuyList(buy);
+					final StoreTradeList list = TradeController.getInstance().getBuyList(buy);
 					if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 					{
 						final BuyList bl = new BuyList(list, player.getAdena(), 0);
@@ -305,7 +305,7 @@ public class CastleChamberlainInstance extends FolkInstance
 				}
 				else
 				{
-					NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+					final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 					html.setFile("data/html/chamberlain/chamberlain-noprivs.htm");
 					html.replace("%objectId%", String.valueOf(getObjectId()));
 					player.sendPacket(html);
@@ -412,7 +412,7 @@ public class CastleChamberlainInstance extends FolkInstance
 					}
 					if (filename.length() != 0)
 					{
-						NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+						final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 						html.setFile(filename);
 						html.replace("%objectId%", String.valueOf(getObjectId()));
 						html.replace("%npcname%", getName());
@@ -439,8 +439,8 @@ public class CastleChamberlainInstance extends FolkInstance
 						return;
 					}
 					
-					String params = command.substring(command.indexOf('?') + 1);
-					StringTokenizer str = new StringTokenizer(params, "&");
+					final String params = command.substring(command.indexOf('?') + 1);
+					final StringTokenizer str = new StringTokenizer(params, "&");
 					final int ask = Integer.parseInt(str.nextToken().split("=")[1]);
 					final int state = Integer.parseInt(str.nextToken().split("=")[1]);
 					final int time = Integer.parseInt(str.nextToken().split("=")[1]);
@@ -515,7 +515,7 @@ public class CastleChamberlainInstance extends FolkInstance
 				}
 				else
 				{
-					NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+					final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 					html.setFile("data/html/chamberlain/chamberlain-noprivs.htm");
 					html.replace("%objectId%", String.valueOf(getObjectId()));
 					player.sendPacket(html);
@@ -559,7 +559,7 @@ public class CastleChamberlainInstance extends FolkInstance
 						getCastle().setTaxPercent(player, Integer.parseInt(val));
 					}
 					
-					StringBuilder msg = new StringBuilder("<html><body>");
+					final StringBuilder msg = new StringBuilder("<html><body>");
 					msg.append(getName() + ":<br>");
 					msg.append("Current tax rate: " + getCastle().getTaxPercent() + "%<br>");
 					msg.append("<table>");
@@ -590,7 +590,7 @@ public class CastleChamberlainInstance extends FolkInstance
 	
 	private void sendHtmlMessage(PlayerInstance player, String htmlMessage)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setHtml(htmlMessage);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcname%", getName());
@@ -615,7 +615,7 @@ public class CastleChamberlainInstance extends FolkInstance
 			}
 		}
 		
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcId%", String.valueOf(getNpcId()));

@@ -33,7 +33,7 @@ public class ShowBoard implements IClientOutgoingPacket
 	
 	public ShowBoard(List<String> arg)
 	{
-		StringBuilder builder = new StringBuilder(256).append("1002\u0008");
+		final StringBuilder builder = new StringBuilder(256).append("1002\u0008");
 		for (String str : arg)
 		{
 			builder.append(str).append("\u0008");

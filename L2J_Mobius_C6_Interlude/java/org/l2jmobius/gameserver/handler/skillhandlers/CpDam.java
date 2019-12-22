@@ -59,7 +59,7 @@ public class CpDam implements ISkillHandler
 				continue;
 			}
 			
-			Creature target = (Creature) target2;
+			final Creature target = (Creature) target2;
 			
 			if ((creature instanceof PlayerInstance) && (target instanceof PlayerInstance) && target.isAlikeDead() && target.isFakeDeath())
 			{

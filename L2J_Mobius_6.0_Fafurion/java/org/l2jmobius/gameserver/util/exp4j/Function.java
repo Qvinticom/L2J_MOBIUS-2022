@@ -86,7 +86,7 @@ public abstract class Function
 	@Deprecated
 	public static char[] getAllowedFunctionCharacters()
 	{
-		char[] chars = new char[53];
+		final char[] chars = new char[53];
 		int count = 0;
 		for (int i = 65; i < 91; i++)
 		{

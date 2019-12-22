@@ -585,14 +585,14 @@ public class EnterWorld implements IClientIncomingPacket
 		final int birthday = player.checkBirthDay();
 		if (birthday == 0)
 		{
-			QuestState qs = player.getQuestState("CharacterBirthday");
+			final QuestState qs = player.getQuestState("CharacterBirthday");
 			String NextBirthday = null;
 			if (qs != null)
 			{
 				NextBirthday = qs.get("Birthday");
 			}
 			
-			Calendar now = Calendar.getInstance();
+			final Calendar now = Calendar.getInstance();
 			now.setTimeInMillis(System.currentTimeMillis());
 			if ((NextBirthday == null) || (Integer.parseInt(NextBirthday) == now.get(Calendar.YEAR)))
 			{

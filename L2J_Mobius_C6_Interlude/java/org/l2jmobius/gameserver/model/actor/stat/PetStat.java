@@ -56,7 +56,7 @@ public class PetStat extends SummonStat
 			return false;
 		}
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.PET_EARNED_S1_EXP);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.PET_EARNED_S1_EXP);
 		sm.addNumber((int) addToExp);
 		
 		getActiveChar().getOwner().sendPacket(sm);
@@ -85,7 +85,7 @@ public class PetStat extends SummonStat
 			getActiveChar().getOwner().sendMessage("Your pet has increased it's level.");
 		}
 		
-		StatusUpdate su = new StatusUpdate(getActiveChar().getObjectId());
+		final StatusUpdate su = new StatusUpdate(getActiveChar().getObjectId());
 		su.addAttribute(StatusUpdate.LEVEL, getLevel());
 		su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
 		su.addAttribute(StatusUpdate.MAX_MP, getMaxMp());
@@ -162,7 +162,7 @@ public class PetStat extends SummonStat
 	public int getMAtk(Creature target, Skill skill)
 	{
 		double attack = getActiveChar().getPetData().getPetMAtk();
-		Stats stat = skill == null ? null : skill.getStat();
+		final Stats stat = skill == null ? null : skill.getStat();
 		
 		if (stat != null)
 		{

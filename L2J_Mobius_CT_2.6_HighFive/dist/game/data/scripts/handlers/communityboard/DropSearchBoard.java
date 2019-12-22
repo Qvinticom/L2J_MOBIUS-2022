@@ -141,35 +141,35 @@ public class DropSearchBoard implements IParseBoardHandler
 	public boolean parseCommunityBoardCommand(String command, PlayerInstance player)
 	{
 		final String navigation = HtmCache.getInstance().getHtm(player, NAVIGATION_PATH);
-		String[] params = command.split(" ");
+		final String[] params = command.split(" ");
 		String html = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/dropsearch/main.html");
 		switch (params[0])
 		{
 			case "_bbs_search_item":
 			{
-				String itemName = buildItemName(params);
-				String result = buildItemSearchResult(itemName);
+				final String itemName = buildItemName(params);
+				final String result = buildItemSearchResult(itemName);
 				html = html.replace("%searchResult%", result);
 				break;
 			}
 			case "_bbs_search_drop":
 			{
 				final DecimalFormat chanceFormat = new DecimalFormat("0.00##");
-				int itemId = Integer.parseInt(params[1]);
+				final int itemId = Integer.parseInt(params[1]);
 				int page = Integer.parseInt(params[2]);
-				List<CBDropHolder> list = DROP_INDEX_CACHE.get(itemId);
+				final List<CBDropHolder> list = DROP_INDEX_CACHE.get(itemId);
 				int pages = list.size() / 14;
 				if (pages == 0)
 				{
 					pages++;
 				}
 				
-				int start = (page - 1) * 14;
-				int end = Math.min(list.size() - 1, start + 14);
-				StringBuilder builder = new StringBuilder();
+				final int start = (page - 1) * 14;
+				final int end = Math.min(list.size() - 1, start + 14);
+				final StringBuilder builder = new StringBuilder();
 				for (int index = start; index <= end; index++)
 				{
-					CBDropHolder cbDropHolder = list.get(index);
+					final CBDropHolder cbDropHolder = list.get(index);
 					
 					// real time server rate calculations
 					double rateChance = 1;
@@ -286,8 +286,8 @@ public class DropSearchBoard implements IParseBoardHandler
 			}
 			case "_bbs_npc_trace":
 			{
-				int npcId = Integer.parseInt(params[1]);
-				Spawn spawn = SpawnTable.getInstance().getAnySpawn(npcId);
+				final int npcId = Integer.parseInt(params[1]);
+				final Spawn spawn = SpawnTable.getInstance().getAnySpawn(npcId);
 				if (spawn == null)
 				{
 					player.sendMessage("Cannot find any spawn. Maybe dropped by a boss or instance monster.");
@@ -316,8 +316,8 @@ public class DropSearchBoard implements IParseBoardHandler
 	private String buildItemSearchResult(String itemName)
 	{
 		int limit = 0;
-		Set<Integer> existInDropData = DROP_INDEX_CACHE.keySet();
-		List<Item> items = new ArrayList<>();
+		final Set<Integer> existInDropData = DROP_INDEX_CACHE.keySet();
+		final List<Item> items = new ArrayList<>();
 		for (Item item : ItemTable.getInstance().getAllItems())
 		{
 			if (item == null)
@@ -349,7 +349,7 @@ public class DropSearchBoard implements IParseBoardHandler
 		
 		int line = 0;
 		
-		StringBuilder builder = new StringBuilder(items.size() * 28);
+		final StringBuilder builder = new StringBuilder(items.size() * 28);
 		int i = 0;
 		for (Item item : items)
 		{
@@ -402,7 +402,7 @@ public class DropSearchBoard implements IParseBoardHandler
 	 */
 	private String buildItemName(String[] params)
 	{
-		StringJoiner joiner = new StringJoiner(" ");
+		final StringJoiner joiner = new StringJoiner(" ");
 		for (int i = 1; i < params.length; i++)
 		{
 			joiner.add(params[i]);

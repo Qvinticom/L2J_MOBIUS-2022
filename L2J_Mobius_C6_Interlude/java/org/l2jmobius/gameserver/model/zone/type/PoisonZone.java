@@ -156,7 +156,7 @@ public class PoisonZone extends ZoneType
 				{
 					if ((temp != null) && !temp.isDead() && (((temp instanceof Playable) && _target.equalsIgnoreCase("pc")) || ((temp instanceof PlayerInstance) && _target.equalsIgnoreCase("pc_only")) || ((temp instanceof MonsterInstance) && _target.equalsIgnoreCase("npc"))) && (Rnd.get(100) < _chance))
 					{
-						Skill skill = getSkill();
+						final Skill skill = getSkill();
 						if (skill == null)
 						{
 							LOGGER.warning("ATTENTION: error on zone with id " + getId());

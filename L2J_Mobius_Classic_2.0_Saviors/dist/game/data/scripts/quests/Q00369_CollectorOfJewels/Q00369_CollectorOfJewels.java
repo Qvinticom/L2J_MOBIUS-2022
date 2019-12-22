@@ -116,7 +116,7 @@ public class Q00369_CollectorOfJewels extends Quest
 		final QuestItemHolder item = MOBS_DROP_CHANCES.get(npc.getId());
 		if (getRandom(100) < item.getChance())
 		{
-			PlayerInstance luckyPlayer = getRandomPartyMember(player, npc);
+			final PlayerInstance luckyPlayer = getRandomPartyMember(player, npc);
 			if (luckyPlayer != null)
 			{
 				final QuestState qs = getQuestState(luckyPlayer, false);

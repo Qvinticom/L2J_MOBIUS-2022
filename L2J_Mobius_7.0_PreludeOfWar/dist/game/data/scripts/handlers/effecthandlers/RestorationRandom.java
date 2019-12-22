@@ -109,7 +109,7 @@ public class RestorationRandom extends AbstractEffect
 				continue;
 			}
 			
-			long itemCount = (long) (createdItem.getCount() * Config.RATE_EXTRACTABLE);
+			final long itemCount = (long) (createdItem.getCount() * Config.RATE_EXTRACTABLE);
 			final ItemInstance newItem = player.addItem("Extract", createdItem.getId(), itemCount, effector, false);
 			
 			if (createdItem.getMaxEnchant() > 0)

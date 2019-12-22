@@ -151,9 +151,9 @@ final class DocumentItem extends DocumentBase
 	
 	protected void parseItem(Node n)
 	{
-		int itemId = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
-		String className = n.getAttributes().getNamedItem("type").getNodeValue();
-		String itemName = n.getAttributes().getNamedItem("name").getNodeValue();
+		final int itemId = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
+		final String className = n.getAttributes().getNamedItem("type").getNodeValue();
+		final String itemName = n.getAttributes().getNamedItem("name").getNodeValue();
 		
 		_currentItem.id = itemId;
 		_currentItem.name = itemName;
@@ -161,7 +161,7 @@ final class DocumentItem extends DocumentBase
 		_currentItem.set.set("item_id", itemId);
 		_currentItem.set.set("name", itemName);
 		
-		Node first = n.getFirstChild();
+		final Node first = n.getFirstChild();
 		for (n = first; n != null; n = n.getNextSibling())
 		{
 			if ("set".equals(n.getNodeName()))

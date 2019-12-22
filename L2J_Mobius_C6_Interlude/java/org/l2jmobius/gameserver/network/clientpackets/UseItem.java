@@ -145,7 +145,7 @@ public class UseItem extends GameClientPacket
 		
 		if (item.getItem().getType2() == Item.TYPE2_QUEST)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.CANNOT_USE_QUEST_ITEMS);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.CANNOT_USE_QUEST_ITEMS);
 			player.sendPacket(sm);
 			return;
 		}
@@ -184,7 +184,7 @@ public class UseItem extends GameClientPacket
 		if (player.isFishing() && ((itemId < 6535) || (itemId > 6540)))
 		{
 			// You cannot do anything else while fishing
-			SystemMessage sm = new SystemMessage(SystemMessageId.CANNOT_DO_WHILE_FISHING_3);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.CANNOT_DO_WHILE_FISHING_3);
 			getClient().getPlayer().sendPacket(sm);
 			return;
 		}
@@ -266,7 +266,7 @@ public class UseItem extends GameClientPacket
 		// Char cannot use item when dead
 		if (player.isDead())
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
 			sm.addItemName(itemId);
 			getClient().getPlayer().sendPacket(sm);
 			return;
@@ -275,7 +275,7 @@ public class UseItem extends GameClientPacket
 		// Char cannot use pet items
 		if (item.getItem().isForWolf() || item.getItem().isForHatchling() || item.getItem().isForStrider() || item.getItem().isForBabyPet())
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.CANNOT_EQUIP_PET_ITEM); // You cannot equip a pet item.
+			final SystemMessage sm = new SystemMessage(SystemMessageId.CANNOT_EQUIP_PET_ITEM); // You cannot equip a pet item.
 			sm.addItemName(itemId);
 			getClient().getPlayer().sendPacket(sm);
 			return;

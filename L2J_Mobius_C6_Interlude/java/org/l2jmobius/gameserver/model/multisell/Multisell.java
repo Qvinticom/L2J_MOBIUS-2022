@@ -91,7 +91,7 @@ public class Multisell
 	 */
 	private MultiSellListContainer generateMultiSell(int listId, boolean inventoryOnly, PlayerInstance player, double taxRate)
 	{
-		MultiSellListContainer listTemplate = getInstance().getList(listId);
+		final MultiSellListContainer listTemplate = getInstance().getList(listId);
 		MultiSellListContainer list = new MultiSellListContainer();
 		
 		if (listTemplate == null)
@@ -178,7 +178,7 @@ public class Multisell
 		for (MultiSellIngredient ing : templateEntry.getIngredients())
 		{
 			// load the ingredient from the template
-			MultiSellIngredient newIngredient = new MultiSellIngredient(ing);
+			final MultiSellIngredient newIngredient = new MultiSellIngredient(ing);
 			
 			// if taxes are to be applied, modify/add the adena count based on the template adena/ancient adena count
 			if ((ing.getItemId() == 57) && ing.isTaxIngredient())
@@ -197,7 +197,7 @@ public class Multisell
 			// if it is an armor/weapon, modify the enchantment level appropriately, if necessary
 			else if (maintainEnchantment)
 			{
-				Item tempItem = ItemTable.getInstance().createDummyItem(ing.getItemId()).getItem();
+				final Item tempItem = ItemTable.getInstance().createDummyItem(ing.getItemId()).getItem();
 				if ((tempItem instanceof Armor) || (tempItem instanceof Weapon))
 				{
 					newIngredient.setEnchantmentLevel(enchantLevel);
@@ -218,7 +218,7 @@ public class Multisell
 		for (MultiSellIngredient ing : templateEntry.getProducts())
 		{
 			// load the ingredient from the template
-			MultiSellIngredient newIngredient = new MultiSellIngredient(ing);
+			final MultiSellIngredient newIngredient = new MultiSellIngredient(ing);
 			
 			if (maintainEnchantment)
 			{
@@ -239,7 +239,7 @@ public class Multisell
 	
 	public void SeparateAndSend(int listId, PlayerInstance player, boolean inventoryOnly, double taxRate)
 	{
-		MultiSellListContainer list = generateMultiSell(listId, inventoryOnly, player, taxRate);
+		final MultiSellListContainer list = generateMultiSell(listId, inventoryOnly, player, taxRate);
 		MultiSellListContainer temp = new MultiSellListContainer();
 		
 		int page = 1;
@@ -292,7 +292,7 @@ public class Multisell
 		
 		int id = 0;
 		
-		List<File> files = new ArrayList<>();
+		final List<File> files = new ArrayList<>();
 		hashFiles("multisell", files);
 		
 		for (File f : files)
@@ -301,7 +301,7 @@ public class Multisell
 			try
 			{
 				
-				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+				final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 				factory.setValidating(false);
 				factory.setIgnoringComments(true);
 				doc = factory.newDocumentBuilder().parse(f);
@@ -312,7 +312,7 @@ public class Multisell
 			}
 			try
 			{
-				MultiSellListContainer list = parseDocument(doc);
+				final MultiSellListContainer list = parseDocument(doc);
 				list.setListId(id);
 				
 				updateReferencePrice(list);
@@ -380,7 +380,7 @@ public class Multisell
 	{
 		final int entryId = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
 		
-		Node first = n.getFirstChild();
+		final Node first = n.getFirstChild();
 		final MultiSellEntry entry = new MultiSellEntry();
 		
 		for (n = first; n != null; n = n.getNextSibling())
@@ -409,7 +409,7 @@ public class Multisell
 					mantainIngredient = Boolean.parseBoolean(attribute.getNodeValue());
 				}
 				
-				MultiSellIngredient e = new MultiSellIngredient(id, count, isTaxIngredient, mantainIngredient);
+				final MultiSellIngredient e = new MultiSellIngredient(id, count, isTaxIngredient, mantainIngredient);
 				entry.addIngredient(e);
 			}
 			else if ("production".equalsIgnoreCase(n.getNodeName()))
@@ -428,7 +428,7 @@ public class Multisell
 				{
 					enchant = Integer.parseInt(n.getAttributes().getNamedItem("enchant").getNodeValue());
 				}
-				MultiSellIngredient e = new MultiSellIngredient(id, count, enchant, false, false);
+				final MultiSellIngredient e = new MultiSellIngredient(id, count, enchant, false, false);
 				entry.addProduct(e);
 			}
 		}

@@ -1249,13 +1249,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		int damage = 0;
 		byte shld = 0;
 		boolean crit = false;
-		boolean miss = Formulas.calcHitMiss(this, target);
+		final boolean miss = Formulas.calcHitMiss(this, target);
 		if (!shotConsumed)
 		{
 			shotConsumed = !miss && unchargeShot(ShotType.SOULSHOTS);
 		}
 		
-		int ssGrade = (shotConsumed && (weapon != null)) ? weapon.getItemGrade().ordinal() : 0;
+		final int ssGrade = (shotConsumed && (weapon != null)) ? weapon.getItemGrade().ordinal() : 0;
 		
 		// Check if hit isn't missed
 		if (!miss)
@@ -2955,7 +2955,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		final int xPrev = getX();
 		final int yPrev = getY();
-		int zPrev = getZ(); // the z coordinate may be modified by coordinate synchronizations
+		final int zPrev = getZ(); // the z coordinate may be modified by coordinate synchronizations
 		
 		double dx;
 		double dy;
@@ -4414,7 +4414,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			int reflectedDamage = 0;
 			
 			// Reduce HP of the target and calculate reflection damage to reduce HP of attacker if necessary
-			double reflectPercent = target.getStat().getValue(Stats.REFLECT_DAMAGE_PERCENT, 0) - getStat().getValue(Stats.REFLECT_DAMAGE_PERCENT_DEFENSE, 0);
+			final double reflectPercent = target.getStat().getValue(Stats.REFLECT_DAMAGE_PERCENT, 0) - getStat().getValue(Stats.REFLECT_DAMAGE_PERCENT_DEFENSE, 0);
 			if (reflectPercent > 0)
 			{
 				reflectedDamage = (int) ((reflectPercent / 100.) * damage);

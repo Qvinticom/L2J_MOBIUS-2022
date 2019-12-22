@@ -117,7 +117,7 @@ public class RequestExSetPledgeCrestLarge extends GameClientPacket
 			
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET crest_large_id = ? WHERE clan_id = ?");
+				final PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET crest_large_id = ? WHERE clan_id = ?");
 				statement.setInt(1, newId);
 				statement.setInt(2, clan.getClanId());
 				statement.executeUpdate();

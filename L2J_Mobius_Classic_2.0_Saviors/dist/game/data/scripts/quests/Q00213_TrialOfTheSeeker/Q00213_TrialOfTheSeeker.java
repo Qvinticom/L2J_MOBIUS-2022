@@ -286,13 +286,10 @@ public class Q00213_TrialOfTheSeeker extends Quest
 				}
 				case NEER_GHOUL_BERSERKER:
 				{
-					if (hasQuestItems(killer, TERRYS_1ST_ORDER) && !hasQuestItems(killer, MYSTERIOUS_SPIRIT_ORE))
+					if (hasQuestItems(killer, TERRYS_1ST_ORDER) && !hasQuestItems(killer, MYSTERIOUS_SPIRIT_ORE) && getRandomBoolean())
 					{
-						if (getRandom(100) < 50)
-						{
-							giveItems(killer, MYSTERIOUS_SPIRIT_ORE, 1);
-							qs.setCond(3, true);
-						}
+						giveItems(killer, MYSTERIOUS_SPIRIT_ORE, 1);
+						qs.setCond(3, true);
 					}
 					break;
 				}
@@ -388,7 +385,7 @@ public class Q00213_TrialOfTheSeeker extends Quest
 		{
 			if (npc.getId() == MASTER_DUFNER)
 			{
-				if ((player.getClassId() == ClassId.ROGUE) || (player.getClassId() == ClassId.ELVEN_SCOUT) || ((player.getClassId() == ClassId.ASSASSIN)))
+				if ((player.getClassId() == ClassId.ROGUE) || (player.getClassId() == ClassId.ELVEN_SCOUT) || (player.getClassId() == ClassId.ASSASSIN))
 				{
 					if (player.getLevel() < MIN_LVL)
 					{

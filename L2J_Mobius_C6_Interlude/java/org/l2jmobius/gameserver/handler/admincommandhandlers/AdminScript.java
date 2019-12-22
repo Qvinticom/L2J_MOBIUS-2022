@@ -44,7 +44,7 @@ public class AdminScript implements IAdminCommandHandler
 		if (command.startsWith("admin_load_script"))
 		{
 			File file;
-			StringTokenizer st = new StringTokenizer(command, " ");
+			final StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken();
 			final String line = st.nextToken();
 			

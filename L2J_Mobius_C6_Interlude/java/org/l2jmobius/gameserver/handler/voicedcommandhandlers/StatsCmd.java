@@ -68,9 +68,9 @@ public class StatsCmd implements IVoicedCommandHandler
 					activeChar.sendMessage("You can only get the info of a player.");
 					return false;
 				}
-				NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-				PlayerInstance targetp = (PlayerInstance) activeChar.getTarget();
-				StringBuilder replyMSG = new StringBuilder("<html><body><center>");
+				final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+				final PlayerInstance targetp = (PlayerInstance) activeChar.getTarget();
+				final StringBuilder replyMSG = new StringBuilder("<html><body><center>");
 				replyMSG.append("<br><br><font color=\"00FF00\">=========>>" + targetp.getName() + "<<=========</font><br>");
 				replyMSG.append("<font color=\"FF0000\">Level: " + targetp.getLevel() + "</font><br>");
 				if (targetp.getClan() != null)
@@ -142,8 +142,8 @@ public class StatsCmd implements IVoicedCommandHandler
 				final PlayerInstance targetp = (PlayerInstance) activeChar.getTarget();
 				if (targetp != null)
 				{
-					NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-					StringBuilder replyMSG = new StringBuilder("<html><body>");
+					final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+					final StringBuilder replyMSG = new StringBuilder("<html><body>");
 					replyMSG.append("<center><font color=\"LEVEL\">[ L2J EVENT ENGINE ]</font></center><br>");
 					replyMSG.append("<br>Statistics for player <font color=\"LEVEL\">" + targetp.getName() + "</font><br>");
 					replyMSG.append("Total kills <font color=\"FF0000\">" + targetp.kills.size() + "</font><br>");

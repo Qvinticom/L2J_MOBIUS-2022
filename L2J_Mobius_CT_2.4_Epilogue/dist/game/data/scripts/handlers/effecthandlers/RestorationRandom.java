@@ -111,7 +111,7 @@ public class RestorationRandom extends AbstractEffect
 				continue;
 			}
 			
-			long itemCount = (long) (item.getCount() * Config.RATE_EXTRACTABLE);
+			final long itemCount = (long) (item.getCount() * Config.RATE_EXTRACTABLE);
 			final Item template = ItemTable.getInstance().getTemplate(item.getId());
 			if (template.isStackable())
 			{

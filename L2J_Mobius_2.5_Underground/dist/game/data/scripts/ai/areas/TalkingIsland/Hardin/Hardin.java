@@ -70,7 +70,7 @@ public class Hardin extends AbstractNpcAI
 		
 		if (event.equals("list"))
 		{
-			StringBuilder classes = new StringBuilder();
+			final StringBuilder classes = new StringBuilder();
 			for (ClassId c : ClassId.values())
 			{
 				if ((((c.level() != 4) && (c.getRace() != Race.ERTHEIA)) //

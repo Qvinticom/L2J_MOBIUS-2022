@@ -104,7 +104,7 @@ public class SkillHandler
 	
 	public void registerSkillHandler(ISkillHandler handler)
 	{
-		SkillType[] types = handler.getSkillIds();
+		final SkillType[] types = handler.getSkillIds();
 		
 		for (SkillType t : types)
 		{

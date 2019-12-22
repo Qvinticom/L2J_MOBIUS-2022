@@ -33,7 +33,7 @@ public class PvpBookList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_PVPBOOK_LIST.writeId(packet);
 		
-		int size = 1;
+		final int size = 1;
 		packet.writeD(4); // show killer's location count
 		packet.writeD(5); // teleport count
 		packet.writeD(size); // killer count

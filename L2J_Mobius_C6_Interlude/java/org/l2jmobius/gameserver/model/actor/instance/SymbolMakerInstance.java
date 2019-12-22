@@ -59,7 +59,7 @@ public class SymbolMakerInstance extends FolkInstance
 	
 	private void showRemoveChat(PlayerInstance player)
 	{
-		StringBuilder html1 = new StringBuilder("<html><body>");
+		final StringBuilder html1 = new StringBuilder("<html><body>");
 		html1.append("Select symbol you would like to remove:<br><br>");
 		boolean hasHennas = false;
 		

@@ -163,7 +163,7 @@ public class Clan implements IIdentifiable, INamable
 	private ClanRewardBonus _lastMembersOnlineBonus = null;
 	private ClanRewardBonus _lastHuntingBonus = null;
 	
-	private volatile ClanVariables _vars;
+	private ClanVariables _vars;
 	
 	/**
 	 * Called if a clan is referenced only by id. In this case all other data needs to be fetched from db
@@ -1290,11 +1290,6 @@ public class Clan implements IIdentifiable, INamable
 	 */
 	public Skill[] getAllSkills()
 	{
-		if (_skills == null)
-		{
-			return new Skill[0];
-		}
-		
 		return _skills.values().toArray(new Skill[_skills.values().size()]);
 	}
 	
@@ -1431,12 +1426,9 @@ public class Clan implements IIdentifiable, INamable
 			{
 				try
 				{
-					if ((temp != null) && temp.isOnline())
+					if ((temp != null) && temp.isOnline() && (skill.getMinPledgeClass() <= temp.getPlayerInstance().getPledgeClass()))
 					{
-						if (skill.getMinPledgeClass() <= temp.getPlayerInstance().getPledgeClass())
-						{
-							temp.getPlayerInstance().addSkill(skill, false); // Skill is not saved to player DB
-						}
+						temp.getPlayerInstance().addSkill(skill, false); // Skill is not saved to player DB
 					}
 				}
 				catch (NullPointerException e)
@@ -1803,7 +1795,7 @@ public class Clan implements IIdentifiable, INamable
 	 */
 	public SubPledge getSubPledge(int pledgeType)
 	{
-		return _subPledges == null ? null : _subPledges.get(pledgeType);
+		return _subPledges.get(pledgeType);
 	}
 	
 	/**
@@ -1813,11 +1805,6 @@ public class Clan implements IIdentifiable, INamable
 	 */
 	public SubPledge getSubPledge(String pledgeName)
 	{
-		if (_subPledges == null)
-		{
-			return null;
-		}
-		
 		for (SubPledge sp : _subPledges.values())
 		{
 			if (sp.getName().equalsIgnoreCase(pledgeName))
@@ -1834,11 +1821,6 @@ public class Clan implements IIdentifiable, INamable
 	 */
 	public SubPledge[] getAllSubPledges()
 	{
-		if (_subPledges == null)
-		{
-			return new SubPledge[0];
-		}
-		
 		return _subPledges.values().toArray(new SubPledge[_subPledges.values().size()]);
 	}
 	
@@ -2038,16 +2020,10 @@ public class Clan implements IIdentifiable, INamable
 			
 			for (ClanMember cm : _members.values())
 			{
-				if (cm.isOnline())
+				if (cm.isOnline() && (cm.getPowerGrade() == rank) && (cm.getPlayerInstance() != null))
 				{
-					if (cm.getPowerGrade() == rank)
-					{
-						if (cm.getPlayerInstance() != null)
-						{
-							cm.getPlayerInstance().getClanPrivileges().setBitmask(privs);
-							cm.getPlayerInstance().sendPacket(new UserInfo(cm.getPlayerInstance()));
-						}
-					}
+					cm.getPlayerInstance().getClanPrivileges().setBitmask(privs);
+					cm.getPlayerInstance().sendPacket(new UserInfo(cm.getPlayerInstance()));
 				}
 			}
 			broadcastClanStatus();
@@ -2078,7 +2054,7 @@ public class Clan implements IIdentifiable, INamable
 	 */
 	public RankPrivs[] getAllRankPrivs()
 	{
-		return _privs == null ? new RankPrivs[0] : _privs.values().toArray(new RankPrivs[_privs.values().size()]);
+		return _privs.values().toArray(new RankPrivs[_privs.values().size()]);
 	}
 	
 	public int getLeaderSubPledge(int leaderId)
@@ -2277,13 +2253,10 @@ public class Clan implements IIdentifiable, INamable
 			return false;
 		}
 		final Clan leaderClan = player.getClan();
-		if (leaderClan.getAllyPenaltyExpiryTime() > System.currentTimeMillis())
+		if ((leaderClan.getAllyPenaltyExpiryTime() > System.currentTimeMillis()) && (leaderClan.getAllyPenaltyType() == PENALTY_TYPE_DISMISS_CLAN))
 		{
-			if (leaderClan.getAllyPenaltyType() == PENALTY_TYPE_DISMISS_CLAN)
-			{
-				player.sendPacket(SystemMessageId.YOU_MAY_NOT_ACCEPT_ANY_CLAN_WITHIN_A_DAY_AFTER_EXPELLING_ANOTHER_CLAN);
-				return false;
-			}
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_ACCEPT_ANY_CLAN_WITHIN_A_DAY_AFTER_EXPELLING_ANOTHER_CLAN);
+			return false;
 		}
 		if (target == null)
 		{
@@ -2507,92 +2480,74 @@ public class Clan implements IIdentifiable, INamable
 			case 0:
 			{
 				// Upgrade to 1
-				if ((player.getSp() >= 1000) && (player.getAdena() >= 150000) && (_members.size() >= 1))
+				if ((player.getSp() >= 1000) && (player.getAdena() >= 150000) && (_members.size() >= 1) && player.reduceAdena("ClanLvl", 150000, player.getTarget(), true))
 				{
-					if (player.reduceAdena("ClanLvl", 150000, player.getTarget(), true))
-					{
-						player.setSp(player.getSp() - 1000);
-						final SystemMessage sp = new SystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-						sp.addInt(1000);
-						player.sendPacket(sp);
-						increaseClanLevel = true;
-					}
+					player.setSp(player.getSp() - 1000);
+					final SystemMessage sp = new SystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
+					sp.addInt(1000);
+					player.sendPacket(sp);
+					increaseClanLevel = true;
 				}
 				break;
 			}
 			case 1:
 			{
 				// Upgrade to 2
-				if ((player.getSp() >= 15000) && (player.getAdena() >= 300000) && (_members.size() >= 1))
+				if ((player.getSp() >= 15000) && (player.getAdena() >= 300000) && (_members.size() >= 1) && player.reduceAdena("ClanLvl", 300000, player.getTarget(), true))
 				{
-					if (player.reduceAdena("ClanLvl", 300000, player.getTarget(), true))
-					{
-						player.setSp(player.getSp() - 15000);
-						final SystemMessage sp = new SystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-						sp.addInt(15000);
-						player.sendPacket(sp);
-						increaseClanLevel = true;
-					}
+					player.setSp(player.getSp() - 15000);
+					final SystemMessage sp = new SystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
+					sp.addInt(15000);
+					player.sendPacket(sp);
+					increaseClanLevel = true;
 				}
 				break;
 			}
 			case 2:
 			{
-				// Upgrade to 3
-				if ((player.getSp() >= 100000) && (player.getInventory().getItemByItemId(1419) != null) && (_members.size() >= 1))
+				// Upgrade to 3 (itemId 1419 == Blood Mark)
+				if ((player.getSp() >= 100000) && (player.getInventory().getItemByItemId(1419) != null) && (_members.size() >= 1) && player.destroyItemByItemId("ClanLvl", 1419, 100, player.getTarget(), true))
 				{
-					// itemId 1419 == Blood Mark
-					if (player.destroyItemByItemId("ClanLvl", 1419, 100, player.getTarget(), true))
-					{
-						player.setSp(player.getSp() - 100000);
-						final SystemMessage sp = new SystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-						sp.addInt(100000);
-						player.sendPacket(sp);
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
-						sm.addItemName(1419);
-						player.sendPacket(sm);
-						increaseClanLevel = true;
-					}
+					player.setSp(player.getSp() - 100000);
+					final SystemMessage sp = new SystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
+					sp.addInt(100000);
+					player.sendPacket(sp);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
+					sm.addItemName(1419);
+					player.sendPacket(sm);
+					increaseClanLevel = true;
 				}
 				break;
 			}
 			case 3:
 			{
-				// Upgrade to 4
-				if ((player.getSp() >= 1000000) && (player.getInventory().getItemByItemId(1419) != null) && (_members.size() >= 1))
+				// Upgrade to 4 (itemId 1419 == Blood Mark)
+				if ((player.getSp() >= 1000000) && (player.getInventory().getItemByItemId(1419) != null) && (_members.size() >= 1) && player.destroyItemByItemId("ClanLvl", 1419, 5000, player.getTarget(), true))
 				{
-					// itemId 1419 == Blood Mark
-					if (player.destroyItemByItemId("ClanLvl", 1419, 5000, player.getTarget(), true))
-					{
-						player.setSp(player.getSp() - 1000000);
-						final SystemMessage sp = new SystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-						sp.addInt(1000000);
-						player.sendPacket(sp);
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
-						sm.addItemName(1419);
-						player.sendPacket(sm);
-						increaseClanLevel = true;
-					}
+					player.setSp(player.getSp() - 1000000);
+					final SystemMessage sp = new SystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
+					sp.addInt(1000000);
+					player.sendPacket(sp);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
+					sm.addItemName(1419);
+					player.sendPacket(sm);
+					increaseClanLevel = true;
 				}
 				break;
 			}
 			case 4:
 			{
-				// Upgrade to 5
-				if ((player.getSp() >= 5000000) && (player.getInventory().getItemByItemId(1419) != null) && (_members.size() >= 1))
+				// Upgrade to 5 (itemId 1419 == Blood Mark)
+				if ((player.getSp() >= 5000000) && (player.getInventory().getItemByItemId(1419) != null) && (_members.size() >= 1) && player.destroyItemByItemId("ClanLvl", 1419, 10000, player.getTarget(), true))
 				{
-					// itemId 1419 == Blood Mark
-					if (player.destroyItemByItemId("ClanLvl", 1419, 10000, player.getTarget(), true))
-					{
-						player.setSp(player.getSp() - 5000000);
-						final SystemMessage sp = new SystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-						sp.addInt(5000000);
-						player.sendPacket(sp);
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
-						sm.addItemName(1419);
-						player.sendPacket(sm);
-						increaseClanLevel = true;
-					}
+					player.setSp(player.getSp() - 5000000);
+					final SystemMessage sp = new SystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
+					sp.addInt(5000000);
+					player.sendPacket(sp);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
+					sm.addItemName(1419);
+					player.sendPacket(sm);
+					increaseClanLevel = true;
 				}
 				break;
 			}

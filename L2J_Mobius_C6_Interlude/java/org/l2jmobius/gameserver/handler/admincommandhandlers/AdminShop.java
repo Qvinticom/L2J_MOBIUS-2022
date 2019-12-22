@@ -81,7 +81,7 @@ public class AdminShop implements IAdminCommandHandler
 			LOGGER.warning("admin buylist failed:" + command);
 		}
 		
-		StoreTradeList list = TradeController.getInstance().getBuyList(val);
+		final StoreTradeList list = TradeController.getInstance().getBuyList(val);
 		
 		if (list != null)
 		{

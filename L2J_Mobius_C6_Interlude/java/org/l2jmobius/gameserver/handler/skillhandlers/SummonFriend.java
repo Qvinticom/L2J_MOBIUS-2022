@@ -48,7 +48,7 @@ public class SummonFriend implements ISkillHandler
 			return;
 		}
 		
-		PlayerInstance activePlayer = (PlayerInstance) creature;
+		final PlayerInstance activePlayer = (PlayerInstance) creature;
 		
 		if (!PlayerInstance.checkSummonerStatus(activePlayer))
 		{
@@ -116,7 +116,7 @@ public class SummonFriend implements ISkillHandler
 					continue;
 				}
 				
-				Creature target = (Creature) target1;
+				final Creature target = (Creature) target1;
 				if (creature == target)
 				{
 					continue;
@@ -124,7 +124,7 @@ public class SummonFriend implements ISkillHandler
 				
 				if (target instanceof PlayerInstance)
 				{
-					PlayerInstance targetChar = (PlayerInstance) target;
+					final PlayerInstance targetChar = (PlayerInstance) target;
 					
 					if (!PlayerInstance.checkSummonTargetStatus(targetChar, activePlayer))
 					{
@@ -133,7 +133,7 @@ public class SummonFriend implements ISkillHandler
 					
 					if (targetChar.isAlikeDead())
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_DEAD_AT_THE_MOMENT_AND_CANNOT_BE_SUMMONED);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_DEAD_AT_THE_MOMENT_AND_CANNOT_BE_SUMMONED);
 						sm.addString(targetChar.getName());
 						creature.sendPacket(sm);
 						continue;
@@ -167,7 +167,7 @@ public class SummonFriend implements ISkillHandler
 					
 					if (targetChar.isInStoreMode())
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S1_CURRENTLY_TRADING_OR_OPERATING_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CURRENTLY_TRADING_OR_OPERATING_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED);
 						sm.addString(targetChar.getName());
 						creature.sendPacket(sm);
 						continue;
@@ -176,7 +176,7 @@ public class SummonFriend implements ISkillHandler
 					// Target cannot be in combat (or dead, but that's checked by TARGET_PARTY)
 					if (targetChar.isRooted() || targetChar.isInCombat())
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_ENGAGED_IN_COMBAT_AND_CANNOT_BE_SUMMONED);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_ENGAGED_IN_COMBAT_AND_CANNOT_BE_SUMMONED);
 						sm.addString(targetChar.getName());
 						creature.sendPacket(sm);
 						continue;

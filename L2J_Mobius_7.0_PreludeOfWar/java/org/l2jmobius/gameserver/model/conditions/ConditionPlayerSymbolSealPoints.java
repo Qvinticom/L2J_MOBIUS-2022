@@ -40,7 +40,7 @@ public class ConditionPlayerSymbolSealPoints extends Condition
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		PlayerInstance player = effector.getActingPlayer();
+		final PlayerInstance player = effector.getActingPlayer();
 		return (player != null) && (player.getSymbolSealPoints() < _points);
 	}
 }

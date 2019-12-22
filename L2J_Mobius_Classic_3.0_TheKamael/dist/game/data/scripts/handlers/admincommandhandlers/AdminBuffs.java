@@ -72,7 +72,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			}
 			
 			final StringTokenizer st = new StringTokenizer(command, " ");
-			command = st.nextToken();
+			st.nextToken();
 			if (!st.hasMoreTokens())
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Skill Id and level are not specified.");
@@ -176,9 +176,9 @@ public class AdminBuffs implements IAdminCommandHandler
 		{
 			try
 			{
-				StringTokenizer st = new StringTokenizer(command, " ");
+				final StringTokenizer st = new StringTokenizer(command, " ");
 				st.nextToken();
-				int objectId = Integer.parseInt(st.nextToken());
+				final int objectId = Integer.parseInt(st.nextToken());
 				viewBlockedEffects(activeChar, objectId);
 				return true;
 			}
@@ -362,6 +362,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
+			// Checked bellow.
 		}
 		
 		if ((target != null) && (skillId > 0))
@@ -389,6 +390,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
+			// Checked bellow.
 		}
 		
 		if (target != null)

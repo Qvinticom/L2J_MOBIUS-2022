@@ -227,7 +227,7 @@ public class InstanceManager implements IXmlReader
 				}
 				case "instance":
 				{
-					NamedNodeMap attrs = n.getAttributes();
+					final NamedNodeMap attrs = n.getAttributes();
 					_instanceTemplates.put(parseInteger(attrs, "id"), new File("data/instances/").toURI().relativize(f.toURI()).getPath());
 					break;
 				}

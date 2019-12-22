@@ -168,8 +168,8 @@ public class Tutorial extends Quest
 		
 		String html = "";
 		
-		int classId = player.getClassId().getId();
-		int ex = qs.getInt("Ex");
+		final int classId = player.getClassId().getId();
+		final int ex = qs.getInt("Ex");
 		
 		if (event.startsWith("UC"))
 		{

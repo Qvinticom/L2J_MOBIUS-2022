@@ -277,7 +277,7 @@ public class Q373_SupplierOfReagents extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -308,7 +308,7 @@ public class Q373_SupplierOfReagents extends Quest
 		}
 		else if (event.startsWith("31149-03-"))
 		{
-			int regentId = Integer.parseInt(event.substring(9, 13));
+			final int regentId = Integer.parseInt(event.substring(9, 13));
 			for (int[] formula : FORMULAS)
 			{
 				if (formula[1] != regentId)
@@ -329,7 +329,7 @@ public class Q373_SupplierOfReagents extends Quest
 		}
 		else if (event.startsWith("31149-06-"))
 		{
-			int catalyst = Integer.parseInt(event.substring(9, 13));
+			final int catalyst = Integer.parseInt(event.substring(9, 13));
 			
 			// Not enough items, cancel the operation.
 			if (!st.hasQuestItems(catalyst))
@@ -341,8 +341,8 @@ public class Q373_SupplierOfReagents extends Quest
 		}
 		else if (event.startsWith("31149-12-"))
 		{
-			int regent = st.getInt(INGREDIENT);
-			int catalyst = st.getInt(CATALYST);
+			final int regent = st.getInt(INGREDIENT);
+			final int catalyst = st.getInt(CATALYST);
 			
 			for (int[] formula : FORMULAS)
 			{
@@ -366,7 +366,7 @@ public class Q373_SupplierOfReagents extends Quest
 				st.takeItems(regent, formula[0]);
 				st.takeItems(catalyst, 1);
 				
-				int tempIndex = Integer.parseInt(event.substring(9, 10));
+				final int tempIndex = Integer.parseInt(event.substring(9, 10));
 				for (int[] temperature : TEMPERATURES)
 				{
 					if (temperature[0] != tempIndex)
@@ -391,7 +391,7 @@ public class Q373_SupplierOfReagents extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = Quest.getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -420,13 +420,13 @@ public class Q373_SupplierOfReagents extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		PlayerInstance partyMember = getRandomPartyMemberState(player, npc, State.STARTED);
+		final PlayerInstance partyMember = getRandomPartyMemberState(player, npc, State.STARTED);
 		if (partyMember == null)
 		{
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

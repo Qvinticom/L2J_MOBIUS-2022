@@ -140,13 +140,13 @@ public class Q663_SeductiveWhispers extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		int state = st.getInt("state");
+		final int state = st.getInt("state");
 		
 		if (event.equals("30846-03.htm"))
 		{
@@ -178,21 +178,21 @@ public class Q663_SeductiveWhispers extends Quest
 		}
 		else if (event.equals("30846-14.htm") && ((state % 10) == 5) && ((state / 1000) == 0))
 		{
-			int i0 = st.getInt("stateEx");
+			final int i0 = st.getInt("stateEx");
 			
-			int i1 = i0 % 10;
-			int i2 = (i0 - i1) / 10;
+			final int i1 = i0 % 10;
+			final int i2 = (i0 - i1) / 10;
 			
-			int param1 = Rnd.get(2) + 1;
-			int param2 = Rnd.get(5) + 1;
+			final int param1 = Rnd.get(2) + 1;
+			final int param2 = Rnd.get(5) + 1;
 			
-			int i5 = state / 10;
+			final int i5 = state / 10;
 			
-			int param3 = (param1 * 10) + param2;
+			final int param3 = (param1 * 10) + param2;
 			
 			if (param1 == i2)
 			{
-				int i3 = param2 + i1;
+				final int i3 = param2 + i1;
 				
 				if (((i3 % 5) == 0) && (i3 != 10))
 				{
@@ -247,18 +247,18 @@ public class Q663_SeductiveWhispers extends Quest
 		}
 		else if (event.equals("30846-19.htm") && ((state % 10) == 6) && ((state / 1000) == 0))
 		{
-			int i0 = st.getInt("stateEx");
+			final int i0 = st.getInt("stateEx");
 			
-			int i1 = i0 % 10;
-			int i2 = (i0 - i1) / 10;
+			final int i1 = i0 % 10;
+			final int i2 = (i0 - i1) / 10;
 			
-			int param1 = Rnd.get(2) + 1;
-			int param2 = Rnd.get(5) + 1;
-			int param3 = (param1 * 10) + param2;
+			final int param1 = Rnd.get(2) + 1;
+			final int param2 = Rnd.get(5) + 1;
+			final int param3 = (param1 * 10) + param2;
 			
 			if (param1 == i2)
 			{
-				int i3 = param1 + i1;
+				final int i3 = param1 + i1;
 				
 				if (((i3 % 5) == 0) && (i3 != 10))
 				{
@@ -295,7 +295,7 @@ public class Q663_SeductiveWhispers extends Quest
 		}
 		else if (event.equals("30846-21.htm") && ((state % 10) == 7) && ((state / 1000) == 0))
 		{
-			int round = state / 10;
+			final int round = state / 10;
 			
 			if (round == 0)
 			{
@@ -351,18 +351,18 @@ public class Q663_SeductiveWhispers extends Quest
 		}
 		else if (event.equals("30846-25.htm") && (state == 1005))
 		{
-			int i0 = st.getInt("stateEx");
+			final int i0 = st.getInt("stateEx");
 			
-			int i1 = i0 % 10;
-			int i2 = (i0 - i1) / 10;
+			final int i1 = i0 % 10;
+			final int i2 = (i0 - i1) / 10;
 			
-			int param1 = Rnd.get(2) + 1;
-			int param2 = Rnd.get(5) + 1;
-			int param3 = (param1 * 10) + param2;
+			final int param1 = Rnd.get(2) + 1;
+			final int param2 = Rnd.get(5) + 1;
+			final int param3 = (param1 * 10) + param2;
 			
 			if (param1 == i2)
 			{
-				int i3 = param2 + i1;
+				final int i3 = param2 + i1;
 				
 				if (((i3 % 5) == 0) && (i3 != 10))
 				{
@@ -397,18 +397,18 @@ public class Q663_SeductiveWhispers extends Quest
 		}
 		else if (event.equals("30846-29.htm") && (state == 1006))
 		{
-			int i0 = st.getInt("stateEx");
+			final int i0 = st.getInt("stateEx");
 			
-			int i1 = i0 % 10;
-			int i2 = (i0 - i1) / 10;
+			final int i1 = i0 % 10;
+			final int i2 = (i0 - i1) / 10;
 			
-			int param1 = Rnd.get(2) + 1;
-			int param2 = Rnd.get(5) + 1;
-			int param3 = (param1 * 10) + param2;
+			final int param1 = Rnd.get(2) + 1;
+			final int param2 = Rnd.get(5) + 1;
+			final int param3 = (param1 * 10) + param2;
 			
 			if (param1 == i2)
 			{
-				int i3 = param2 + i1;
+				final int i3 = param2 + i1;
 				
 				if (((i3 % 5) == 0) && (i3 != 10))
 				{
@@ -452,7 +452,7 @@ public class Q663_SeductiveWhispers extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -466,7 +466,7 @@ public class Q663_SeductiveWhispers extends Quest
 				break;
 			
 			case State.STARTED:
-				int state = st.getInt("state");
+				final int state = st.getInt("state");
 				
 				if (state < 4)
 				{
@@ -493,7 +493,7 @@ public class Q663_SeductiveWhispers extends Quest
 				}
 				else if ((state % 10) == 7)
 				{
-					int round = (state % 100) / 10;
+					final int round = (state % 100) / 10;
 					
 					if (round >= 7)
 					{
@@ -526,7 +526,7 @@ public class Q663_SeductiveWhispers extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		PlayerInstance partyMember = getRandomPartyMemberState(player, npc, State.STARTED);
+		final PlayerInstance partyMember = getRandomPartyMemberState(player, npc, State.STARTED);
 		if (partyMember == null)
 		{
 			return null;

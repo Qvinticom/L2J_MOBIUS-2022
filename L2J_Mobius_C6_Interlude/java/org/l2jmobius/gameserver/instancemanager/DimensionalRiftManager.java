@@ -102,8 +102,8 @@ public class DimensionalRiftManager
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement s = con.prepareStatement("SELECT * FROM dimensional_rift");
-			ResultSet rs = s.executeQuery();
+			final PreparedStatement s = con.prepareStatement("SELECT * FROM dimensional_rift");
+			final ResultSet rs = s.executeQuery();
 			
 			while (rs.next())
 			{
@@ -223,7 +223,7 @@ public class DimensionalRiftManager
 											
 											for (int i = 0; i < count; i++)
 											{
-												DimensionalRiftRoom riftRoom = _rooms.get(type).get(roomId);
+												final DimensionalRiftRoom riftRoom = _rooms.get(type).get(roomId);
 												x = riftRoom.getRandomX();
 												y = riftRoom.getRandomY();
 												z = riftRoom.getTeleportCoords()[2];
@@ -367,7 +367,7 @@ public class DimensionalRiftManager
 		
 		if (!canPass)
 		{
-			NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+			final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 			html.setFile("data/html/seven_signs/rift/NoFragments.htm");
 			html.replace("%npc_name%", npc.getName());
 			html.replace("%count%", String.valueOf(getNeededItems(type)));
@@ -572,7 +572,7 @@ public class DimensionalRiftManager
 	
 	public void showHtmlFile(PlayerInstance player, String file, NpcInstance npc)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		html.setFile(file);
 		html.replace("%npc_name%", npc.getName());
 		player.sendPacket(html);

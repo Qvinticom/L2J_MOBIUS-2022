@@ -61,12 +61,13 @@ public class Q00348_AnArrogantSearch extends Quest
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
+		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return null;
+			return htmltext;
 		}
-		String htmltext = event;
+		
 		switch (event)
 		{
 			case "30864.htm":
@@ -282,24 +283,18 @@ public class Q00348_AnArrogantSearch extends Quest
 				case PLATINUM_TRIBE_SHAMAN:
 				case PLATINUM_TRIBE_PREFECT:
 				{
-					if (qs.isCond(8))
+					if (qs.isCond(8) && giveItemRandomly(killer, npc, WHITE_CLOTH_PLATINUM, 1, 100, 0.5, true))
 					{
-						if (giveItemRandomly(killer, npc, WHITE_CLOTH_PLATINUM, 1, 100, 0.5, true))
-						{
-							qs.setCond(10);
-						}
+						qs.setCond(10);
 					}
 					break;
 				}
 				case GUARDIAN_ANGEL:
 				case SEAL_ANGEL:
 				{
-					if (qs.isCond(9))
+					if (qs.isCond(9) && giveItemRandomly(killer, npc, WHITE_CLOTH_ANGLE, 1, 1000, 0.5, true))
 					{
-						if (giveItemRandomly(killer, npc, WHITE_CLOTH_ANGLE, 1, 1000, 0.5, true))
-						{
-							qs.setCond(11);
-						}
+						qs.setCond(11);
 					}
 					break;
 				}

@@ -389,7 +389,7 @@ public class SSQMonasteryOfSilence extends AbstractInstance
 					
 					for (Location LOC : SLAVE_SPAWN_1_LOC)
 					{
-						Attackable mob = (Attackable) addSpawn(TRAINEE_OF_REST, LOC, false, 0, false, world.getInstanceId());
+						final Attackable mob = (Attackable) addSpawn(TRAINEE_OF_REST, LOC, false, 0, false, world.getInstanceId());
 						mob.setRunning();
 						mob.addDamageHate(player, 0, 999);
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -399,7 +399,7 @@ public class SSQMonasteryOfSilence extends AbstractInstance
 					
 					for (Location LOC : SLAVE_SPAWN_2_LOC)
 					{
-						Attackable mob = (Attackable) addSpawn(TRAINEE_OF_REST, LOC, false, 0, false, world.getInstanceId());
+						final Attackable mob = (Attackable) addSpawn(TRAINEE_OF_REST, LOC, false, 0, false, world.getInstanceId());
 						mob.setRunning();
 						mob.addDamageHate(player, 0, 999);
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -409,7 +409,7 @@ public class SSQMonasteryOfSilence extends AbstractInstance
 					
 					for (Location LOC : SLAVE_SPAWN_3_LOC)
 					{
-						Attackable mob = (Attackable) addSpawn(SUPPLICANT_OF_REST, LOC, false, 0, false, world.getInstanceId());
+						final Attackable mob = (Attackable) addSpawn(SUPPLICANT_OF_REST, LOC, false, 0, false, world.getInstanceId());
 						mob.setRunning();
 						mob.addDamageHate(player, 0, 999);
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -419,7 +419,7 @@ public class SSQMonasteryOfSilence extends AbstractInstance
 					
 					for (Location LOC : SLAVE_SPAWN_4_LOC)
 					{
-						Attackable mob = (Attackable) addSpawn(SUPPLICANT_OF_REST, LOC, false, 0, false, world.getInstanceId());
+						final Attackable mob = (Attackable) addSpawn(SUPPLICANT_OF_REST, LOC, false, 0, false, world.getInstanceId());
 						mob.setRunning();
 						mob.addDamageHate(player, 0, 999);
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -453,7 +453,7 @@ public class SSQMonasteryOfSilence extends AbstractInstance
 	@Override
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
+		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
 		{
 			switch (npc.getId())

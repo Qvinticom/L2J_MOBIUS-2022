@@ -675,13 +675,13 @@ public class Olympiad extends ListenersContainer
 		}
 		else
 		{
-			Calendar currentTime = Calendar.getInstance();
+			final Calendar currentTime = Calendar.getInstance();
 			currentTime.set(Calendar.AM_PM, Calendar.AM);
 			currentTime.set(Calendar.HOUR, 12);
 			currentTime.set(Calendar.MINUTE, 0);
 			currentTime.set(Calendar.SECOND, 0);
 			
-			Calendar nextChange = Calendar.getInstance();
+			final Calendar nextChange = Calendar.getInstance();
 			
 			switch (Config.ALT_OLY_PERIOD)
 			{

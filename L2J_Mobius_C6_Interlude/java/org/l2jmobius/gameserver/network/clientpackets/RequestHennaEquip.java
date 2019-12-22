@@ -86,7 +86,7 @@ public class RequestHennaEquip extends GameClientPacket
 		
 		if (!cheater && (count >= temp.getAmountDyeRequire()) && (player.getAdena() >= temp.getPrice()) && player.addHenna(temp))
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
 			sm.addItemName(temp.getItemIdDye());
 			player.sendPacket(sm);
 			player.sendPacket(SystemMessageId.SYMBOL_ADDED);

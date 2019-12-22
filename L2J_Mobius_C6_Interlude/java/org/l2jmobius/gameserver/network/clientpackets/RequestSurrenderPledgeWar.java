@@ -69,7 +69,7 @@ public class RequestSurrenderPledgeWar extends GameClientPacket
 			return;
 		}
 		
-		SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_SURRENDERED_TO_THE_S1_CLAN);
+		final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_SURRENDERED_TO_THE_S1_CLAN);
 		msg.addString(_pledgeName);
 		player.sendPacket(msg);
 		player.deathPenalty(false);

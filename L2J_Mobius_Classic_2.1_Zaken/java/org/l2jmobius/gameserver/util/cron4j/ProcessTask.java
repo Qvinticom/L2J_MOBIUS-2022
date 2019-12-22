@@ -241,22 +241,22 @@ public class ProcessTask extends Task
 		{
 			throw new RuntimeException(toString() + " cannot be started", e);
 		}
-		InputStream in = buildInputStream(stdinFile);
-		OutputStream out = buildOutputStream(stdoutFile);
-		OutputStream err = buildOutputStream(stderrFile);
+		final InputStream in = buildInputStream(stdinFile);
+		final OutputStream out = buildOutputStream(stdoutFile);
+		final OutputStream err = buildOutputStream(stderrFile);
 		if (in != null)
 		{
-			StreamBridge b = new StreamBridge(in, p.getOutputStream());
+			final StreamBridge b = new StreamBridge(in, p.getOutputStream());
 			b.start();
 		}
 		if (out != null)
 		{
-			StreamBridge b = new StreamBridge(p.getInputStream(), out);
+			final StreamBridge b = new StreamBridge(p.getInputStream(), out);
 			b.start();
 		}
 		if (err != null)
 		{
-			StreamBridge b = new StreamBridge(p.getErrorStream(), err);
+			final StreamBridge b = new StreamBridge(p.getErrorStream(), err);
 			b.start();
 		}
 		int r;
@@ -315,7 +315,7 @@ public class ProcessTask extends Task
 	 */
 	private Process exec() throws IOException
 	{
-		Runtime rt = Runtime.getRuntime();
+		final Runtime rt = Runtime.getRuntime();
 		Process p;
 		try
 		{
@@ -385,7 +385,7 @@ public class ProcessTask extends Task
 		{
 			return "null";
 		}
-		StringBuilder b = new StringBuilder();
+		final StringBuilder b = new StringBuilder();
 		b.append('[');
 		for (int i = 0; i < arr.length; i++)
 		{
@@ -405,7 +405,7 @@ public class ProcessTask extends Task
 	@Override
 	public String toString()
 	{
-		StringBuilder b = new StringBuilder();
+		final StringBuilder b = new StringBuilder();
 		b.append("Task[");
 		b.append("cmd=");
 		b.append(listStrings(command));

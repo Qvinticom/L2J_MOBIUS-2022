@@ -171,7 +171,7 @@ public class Q10417_DaimonTheWhiteEyed extends Quest
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		int npcHolder = npc.getId();
+		final int npcHolder = npc.getId();
 		if (killer.isInParty())
 		{
 			final Party party = killer.getParty();
@@ -179,8 +179,8 @@ public class Q10417_DaimonTheWhiteEyed extends Quest
 			
 			for (PlayerInstance singleMember : partyMember)
 			{
-				QuestState qsPartyMember = getQuestState(singleMember, false);
-				double distance = npc.calculateDistance3D(singleMember);
+				final QuestState qsPartyMember = getQuestState(singleMember, false);
+				final double distance = npc.calculateDistance3D(singleMember);
 				if ((qsPartyMember != null) && qsPartyMember.isCond(1) && (distance <= 1000))
 				{
 					int mobCount = qsPartyMember.getInt("KillCount_MOBS");

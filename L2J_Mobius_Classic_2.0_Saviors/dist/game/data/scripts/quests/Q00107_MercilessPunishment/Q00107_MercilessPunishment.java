@@ -211,13 +211,10 @@ public class Q00107_MercilessPunishment extends Quest
 			}
 			case CENTURION_PARUGON:
 			{
-				if (qs.isStarted())
+				if (qs.isStarted() && qs.isCond(1) && hasQuestItems(talker, HATOSS_ORDER_1))
 				{
-					if (qs.isCond(1) && hasQuestItems(talker, HATOSS_ORDER_1))
-					{
-						qs.setCond(2, true);
-						htmltext = "30580-01.html";
-					}
+					qs.setCond(2, true);
+					htmltext = "30580-01.html";
 				}
 				break;
 			}

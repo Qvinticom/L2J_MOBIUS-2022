@@ -66,7 +66,7 @@ public class Q00624_TheFinestIngredientsPart1 extends Quest
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if(qs != null)
+		if (qs != null)
 		{
 			switch (event)
 			{

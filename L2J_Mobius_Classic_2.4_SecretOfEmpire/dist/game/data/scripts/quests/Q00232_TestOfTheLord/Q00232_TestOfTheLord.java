@@ -258,38 +258,32 @@ public class Q00232_TestOfTheLord extends Quest
 				case BREKA_ORC_SHAMAN:
 				case BREKA_ORC_OVERLORD:
 				{
-					if (hasQuestItems(killer, ORDEAL_NECKLACE, VARKEES_CHARM, MANAKIAS_ORDERS) && !hasAtLeastOneQuestItem(killer, HUGE_ORC_FANG, MANAKIAS_AMULET))
+					if (hasQuestItems(killer, ORDEAL_NECKLACE, VARKEES_CHARM, MANAKIAS_ORDERS) && !hasAtLeastOneQuestItem(killer, HUGE_ORC_FANG, MANAKIAS_AMULET) && (getQuestItemsCount(killer, BREKA_ORC_FANG) < 20))
 					{
-						if (getQuestItemsCount(killer, BREKA_ORC_FANG) < 20)
+						giveItems(killer, BREKA_ORC_FANG, 2);
+						if (getQuestItemsCount(killer, BREKA_ORC_FANG) >= 20)
 						{
-							giveItems(killer, BREKA_ORC_FANG, 2);
-							if (getQuestItemsCount(killer, BREKA_ORC_FANG) >= 20)
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
 				}
 				case ENCHANTED_MONSTEREYE:
 				{
-					if (hasQuestItems(killer, ORDEAL_NECKLACE, CHIANTA_CHARM) && !hasQuestItems(killer, MONSTER_EYE_WOODCARVING))
+					if (hasQuestItems(killer, ORDEAL_NECKLACE, CHIANTA_CHARM) && !hasQuestItems(killer, MONSTER_EYE_WOODCARVING) && (getQuestItemsCount(killer, ENCHANTED_MONSTER_CORNEA) < 20))
 					{
-						if (getQuestItemsCount(killer, ENCHANTED_MONSTER_CORNEA) < 20)
+						giveItems(killer, ENCHANTED_MONSTER_CORNEA, 1);
+						if (getQuestItemsCount(killer, ENCHANTED_MONSTER_CORNEA) >= 20)
 						{
-							giveItems(killer, ENCHANTED_MONSTER_CORNEA, 1);
-							if (getQuestItemsCount(killer, ENCHANTED_MONSTER_CORNEA) >= 20)
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -301,19 +295,16 @@ public class Q00232_TestOfTheLord extends Quest
 				case TIMAK_ORC_SHAMAN:
 				case TIMAK_ORC_OVERLORD:
 				{
-					if (hasQuestItems(killer, ORDEAL_NECKLACE, HATOS_CHARM) && !hasQuestItems(killer, SWORD_INTO_SKULL))
+					if (hasQuestItems(killer, ORDEAL_NECKLACE, HATOS_CHARM) && !hasQuestItems(killer, SWORD_INTO_SKULL) && (getQuestItemsCount(killer, TIMAK_ORC_SKULL) < 10))
 					{
-						if (getQuestItemsCount(killer, TIMAK_ORC_SKULL) < 10)
+						giveItems(killer, TIMAK_ORC_SKULL, 1);
+						if (getQuestItemsCount(killer, TIMAK_ORC_SKULL) >= 10)
 						{
-							giveItems(killer, TIMAK_ORC_SKULL, 1);
-							if (getQuestItemsCount(killer, TIMAK_ORC_SKULL) >= 10)
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;

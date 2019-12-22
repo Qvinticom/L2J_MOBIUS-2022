@@ -81,7 +81,7 @@ public class MonasteryOfSilence extends AbstractNpcAI
 					case 22124:
 					case 22126:
 					{
-						Skill skill = SkillData.getInstance().getSkill(4589, 8);
+						final Skill skill = SkillData.getInstance().getSkill(4589, 8);
 						npc.doCast(skill);
 						break;
 					}
@@ -129,7 +129,7 @@ public class MonasteryOfSilence extends AbstractNpcAI
 	{
 		if (CommonUtil.contains(mobs1, npc.getId()))
 		{
-			ArrayList<Playable> result = new ArrayList<>();
+			final ArrayList<Playable> result = new ArrayList<>();
 			for (WorldObject obj : World.getInstance().getVisibleObjects(npc, WorldObject.class))
 			{
 				if ((obj instanceof PlayerInstance) || (obj instanceof PetInstance))
@@ -142,10 +142,10 @@ public class MonasteryOfSilence extends AbstractNpcAI
 			}
 			if (!result.isEmpty() && (result.size() != 0))
 			{
-				Object[] characters = result.toArray();
+				final Object[] characters = result.toArray();
 				for (Object obj : characters)
 				{
-					Playable target = (Playable) (obj instanceof PlayerInstance ? obj : ((Summon) obj).getOwner());
+					final Playable target = (Playable) (obj instanceof PlayerInstance ? obj : ((Summon) obj).getOwner());
 					if ((target.getActiveWeaponInstance() != null) && !npc.isInCombat() && (npc.getTarget() == null))
 					{
 						npc.setTarget(target);
@@ -156,7 +156,7 @@ public class MonasteryOfSilence extends AbstractNpcAI
 							case 22126:
 							case 22127:
 							{
-								Skill skill = SkillData.getInstance().getSkill(4589, 8);
+								final Skill skill = SkillData.getInstance().getSkill(4589, 8);
 								npc.doCast(skill);
 								break;
 							}

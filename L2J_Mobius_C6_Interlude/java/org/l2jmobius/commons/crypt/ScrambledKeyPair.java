@@ -37,7 +37,7 @@ public class ScrambledKeyPair
 		
 		if ((scrambledMod.length == 0x81) && (scrambledMod[0] == 0x00))
 		{
-			byte[] temp = new byte[0x80];
+			final byte[] temp = new byte[0x80];
 			System.arraycopy(scrambledMod, 1, temp, 0, 0x80);
 			scrambledMod = temp;
 		}

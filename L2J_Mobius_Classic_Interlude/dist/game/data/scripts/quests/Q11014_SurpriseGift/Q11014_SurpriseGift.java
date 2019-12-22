@@ -200,17 +200,14 @@ public class Q11014_SurpriseGift extends Quest
 				case ZOMBIE_FOREST_ELF:
 				case ZOMBIE_FOREST_ELF_RESEARCHER:
 				{
-					if (qs.isCond(2) && (getQuestItemsCount(killer, ZOMBIE_FOREST_ELF_TOOTH) < 10))
+					if (qs.isCond(2) && (getQuestItemsCount(killer, ZOMBIE_FOREST_ELF_TOOTH) < 10) && (getRandom(100) < 85))
 					{
-						if (getRandom(100) < 85)
+						giveItems(killer, ZOMBIE_FOREST_ELF_TOOTH, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, ZOMBIE_FOREST_ELF_TOOTH) >= 10)
 						{
-							giveItems(killer, ZOMBIE_FOREST_ELF_TOOTH, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, ZOMBIE_FOREST_ELF_TOOTH) >= 10)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_ZOMBIE_FOREST_ELVES_AND_ZOMBIE_FOREST_ELF_RESEARCHERS_N_GO_HUNTING_AND_KILL_FESTERING_BATS_AND_RED_EYE_BATS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(3);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_ZOMBIE_FOREST_ELVES_AND_ZOMBIE_FOREST_ELF_RESEARCHERS_N_GO_HUNTING_AND_KILL_FESTERING_BATS_AND_RED_EYE_BATS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(3);
 						}
 					}
 					break;
@@ -218,17 +215,14 @@ public class Q11014_SurpriseGift extends Quest
 				case FESTERING_BAT:
 				case RED_EYE_BAT:
 				{
-					if (qs.isCond(3) && (getQuestItemsCount(killer, BAT_SKIN) < 10))
+					if (qs.isCond(3) && (getQuestItemsCount(killer, BAT_SKIN) < 10) && (getRandom(100) < 85))
 					{
-						if (getRandom(100) < 85)
+						giveItems(killer, BAT_SKIN, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, BAT_SKIN) >= 10)
 						{
-							giveItems(killer, BAT_SKIN, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, BAT_SKIN) >= 10)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_FESTERING_BATS_AND_RED_EYE_BATS_N_GO_HUNTING_AND_KILL_STONE_GIANT_SOLDIERS_AND_STONE_GIANT_GUARDIANS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(4);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_FESTERING_BATS_AND_RED_EYE_BATS_N_GO_HUNTING_AND_KILL_STONE_GIANT_SOLDIERS_AND_STONE_GIANT_GUARDIANS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(4);
 						}
 					}
 					break;
@@ -236,34 +230,28 @@ public class Q11014_SurpriseGift extends Quest
 				case GIANT_STONE_SOLDIER:
 				case GIANT_STONE_GUARDIAN:
 				{
-					if (qs.isCond(4) && (getQuestItemsCount(killer, STONE_GIANTS_SHINY_ROCK) < 10))
+					if (qs.isCond(4) && (getQuestItemsCount(killer, STONE_GIANTS_SHINY_ROCK) < 10) && (getRandom(100) < 85))
 					{
-						if (getRandom(100) < 85)
+						giveItems(killer, STONE_GIANTS_SHINY_ROCK, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if ((getQuestItemsCount(killer, STONE_GIANTS_SHINY_ROCK) >= 10))
 						{
-							giveItems(killer, STONE_GIANTS_SHINY_ROCK, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if ((getQuestItemsCount(killer, STONE_GIANTS_SHINY_ROCK) >= 10))
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_STONE_GIANT_SOLDIERS_AND_STONE_GIANT_GUARDIANS_N_GO_HUNTING_AND_KILL_DARK_HORRORS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(5);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_STONE_GIANT_SOLDIERS_AND_STONE_GIANT_GUARDIANS_N_GO_HUNTING_AND_KILL_DARK_HORRORS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(5);
 						}
 					}
 					break;
 				}
 				case DARK_HORROR:
 				{
-					if (qs.isCond(5) && (getQuestItemsCount(killer, OLD_BONE_FRAGMENT) < 20))
+					if (qs.isCond(5) && (getQuestItemsCount(killer, OLD_BONE_FRAGMENT) < 20) && (getRandom(100) < 90))
 					{
-						if (getRandom(100) < 90)
+						giveItems(killer, OLD_BONE_FRAGMENT, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if ((getQuestItemsCount(killer, OLD_BONE_FRAGMENT) >= 20))
 						{
-							giveItems(killer, OLD_BONE_FRAGMENT, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if ((getQuestItemsCount(killer, OLD_BONE_FRAGMENT) >= 20))
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_DARK_HORRORS_NRETURN_TO_ARMOR_MERCHANT_PAYNE, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(6);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_DARK_HORRORS_NRETURN_TO_ARMOR_MERCHANT_PAYNE, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(6);
 						}
 					}
 					break;

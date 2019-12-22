@@ -49,8 +49,8 @@ public class Q274_SkirmishWithTheWerewolves extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
-		String htmltext = event;
+		final QuestState st = player.getQuestState(getName());
+		final String htmltext = event;
 		if (st == null)
 		{
 			return htmltext;
@@ -70,7 +70,7 @@ public class Q274_SkirmishWithTheWerewolves extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -106,7 +106,7 @@ public class Q274_SkirmishWithTheWerewolves extends Quest
 				{
 					htmltext = "30569-05.htm";
 					
-					int amount = 3500 + (st.getQuestItemsCount(MARAKU_WOLFMEN_TOTEM) * 600);
+					final int amount = 3500 + (st.getQuestItemsCount(MARAKU_WOLFMEN_TOTEM) * 600);
 					
 					st.takeItems(MARAKU_WEREWOLF_HEAD, -1);
 					st.takeItems(MARAKU_WOLFMEN_TOTEM, -1);
@@ -124,7 +124,7 @@ public class Q274_SkirmishWithTheWerewolves extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
 		if (st == null)
 		{
 			return null;

@@ -41,7 +41,7 @@ public class SpecialXMas implements IItemHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) playable;
+		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
 		
 		if (player.isParalyzed())
@@ -53,7 +53,7 @@ public class SpecialXMas implements IItemHandler
 		
 		if (itemId == 5555) // Token of Love
 		{
-			ShowXMasSeal sxs = new ShowXMasSeal(5555);
+			final ShowXMasSeal sxs = new ShowXMasSeal(5555);
 			player.sendPacket(sxs);
 		}
 	}

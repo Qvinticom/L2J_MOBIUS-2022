@@ -133,7 +133,7 @@ public class NodeBuffer
 	private final void expand()
 	{
 		// can't move anywhere, don't expand
-		byte nswe = _current.getLoc().getNSWE();
+		final byte nswe = _current.getLoc().getNSWE();
 		if (nswe == 0)
 		{
 			return;
@@ -217,7 +217,7 @@ public class NodeBuffer
 		}
 		
 		// get node
-		Node result = _buffer[ix][iy];
+		final Node result = _buffer[ix][iy];
 		
 		// check and update
 		if (result.getLoc() == null)
@@ -239,7 +239,7 @@ public class NodeBuffer
 	private final void addNode(int x, int y, short z, int weight)
 	{
 		// get node to be expanded
-		Node node = getNode(x, y, z);
+		final Node node = getNode(x, y, z);
 		if (node == null)
 		{
 			return;

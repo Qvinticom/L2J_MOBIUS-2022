@@ -44,12 +44,12 @@ public class Charge implements ISkillHandler
 			{
 				continue;
 			}
-			PlayerInstance target = (PlayerInstance) target1;
+			final PlayerInstance target = (PlayerInstance) target1;
 			skill.getEffects(creature, target, false, false, false);
 		}
 		// self Effect :]
 		
-		Effect effect = creature.getFirstEffect(skill.getId());
+		final Effect effect = creature.getFirstEffect(skill.getId());
 		if ((effect != null) && effect.isSelfEffect())
 		{
 			// Replace old effect with new one.

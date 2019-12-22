@@ -47,7 +47,7 @@ public class SummonItemsData
 			{
 				lineCount++;
 				
-				String line = s.nextLine();
+				final String line = s.nextLine();
 				
 				if (line.startsWith("#"))
 				{
@@ -83,7 +83,7 @@ public class SummonItemsData
 					continue;
 				}
 				
-				SummonItem summonitem = new SummonItem(itemID, npcID, summonType);
+				final SummonItem summonitem = new SummonItem(itemID, npcID, summonType);
 				_summonitems.put(itemID, summonitem);
 			}
 		}

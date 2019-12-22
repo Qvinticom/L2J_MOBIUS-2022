@@ -101,6 +101,7 @@ public class AdminSkill implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
+				// Not important.
 			}
 		}
 		else if (command.startsWith("admin_skill_list"))
@@ -116,6 +117,7 @@ public class AdminSkill implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
+				// Not important.
 			}
 		}
 		else if (command.startsWith("admin_add_skill"))

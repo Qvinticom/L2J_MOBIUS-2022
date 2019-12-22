@@ -307,10 +307,10 @@ public class Q00482_RecertificationOfValue extends Quest
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(1))
 		{
-			int npcId = npc.getId();
+			final int npcId = npc.getId();
 			
-			String variable = String.valueOf(npcId); // i3
-			int currentValue = qs.getInt(variable);
+			final String variable = String.valueOf(npcId); // i3
+			final int currentValue = qs.getInt(variable);
 			if (currentValue < 10)
 			{
 				qs.set(variable, String.valueOf(currentValue + 1)); // IncreaseNPCLogByID

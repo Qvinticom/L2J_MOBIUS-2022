@@ -169,14 +169,11 @@ public class Q11035_DeathlyMischief extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1))
+		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, BREATH_OF_DEATH, 1, 15, 0.5, true))
 		{
-			if (giveItemRandomly(killer, BREATH_OF_DEATH, 1, 15, 0.5, true))
-			{
-				qs.setCond(2, true);
-				giveItems(killer, SOE_TARTI);
-				showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_TARTI_IN_YOUR_INVENTORY_NTALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
-			}
+			qs.setCond(2, true);
+			giveItems(killer, SOE_TARTI);
+			showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_TARTI_IN_YOUR_INVENTORY_NTALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

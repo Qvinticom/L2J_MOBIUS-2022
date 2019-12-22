@@ -70,7 +70,7 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if(qs != null)
+		if (qs != null)
 		{
 			switch (event)
 			{
@@ -115,22 +115,19 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 					}
 				}
 			}
-			else if (MONSTERS_BONES.containsKey(npc.getId()))
+			else if (MONSTERS_BONES.containsKey(npc.getId()) && (getRandom(100) < MONSTERS_BONES.get(npc.getId())))
 			{
-				if (getRandom(100) < MONSTERS_BONES.get(npc.getId()))
+				long bones = getQuestItemsCount(killer, BONE_FRAGMENT);
+				if (bones < 10)
 				{
-					long bones = getQuestItemsCount(killer, BONE_FRAGMENT);
-					if (bones < 10)
+					giveItems(killer, BONE_FRAGMENT, 1);
+					if (((++bones) >= 10) && (getQuestItemsCount(killer, ELF_SKULL) >= 3))
 					{
-						giveItems(killer, BONE_FRAGMENT, 1);
-						if (((++bones) >= 10) && (getQuestItemsCount(killer, ELF_SKULL) >= 3))
-						{
-							qs.setCond(2, true);
-						}
-						else
-						{
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						}
+						qs.setCond(2, true);
+					}
+					else
+					{
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 				}
 			}

@@ -130,7 +130,7 @@ public class GameServer extends Thread
 		if (!Config.SERVER_HOST_NAME.equals("*"))
 		{
 			final InetAddress adr = InetAddress.getByName(Config.SERVER_HOST_NAME);
-			String ip = adr.getHostAddress();
+			final String ip = adr.getHostAddress();
 			_serverSocket = new ServerSocket(Config.SERVER_PORT, 50, adr);
 			_log.config("GameServer listening on IP:" + ip + " Port " + Config.SERVER_PORT);
 		}

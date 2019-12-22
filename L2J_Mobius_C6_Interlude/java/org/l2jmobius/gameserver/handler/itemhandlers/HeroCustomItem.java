@@ -44,7 +44,7 @@ public class HeroCustomItem implements IItemHandler
 				return;
 			}
 			
-			PlayerInstance player = (PlayerInstance) playable;
+			final PlayerInstance player = (PlayerInstance) playable;
 			
 			if (player.isInOlympiadMode())
 			{
@@ -83,7 +83,7 @@ public class HeroCustomItem implements IItemHandler
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement stmt = con.prepareStatement(INSERT_DATA);
+			final PreparedStatement stmt = con.prepareStatement(INSERT_DATA);
 			
 			stmt.setInt(1, player.getObjectId());
 			stmt.setString(2, player.getName());

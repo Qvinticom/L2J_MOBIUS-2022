@@ -46,7 +46,7 @@ public class JackpotSeed implements IItemHandler
 	@Override
 	public void useItem(Playable playable, ItemInstance item)
 	{
-		PlayerInstance player = (PlayerInstance) playable;
+		final PlayerInstance player = (PlayerInstance) playable;
 		NpcTemplate template1 = null;
 		final int itemId = item.getItemId();
 		for (int i = 0; i < ITEM_IDS.length; i++)
@@ -74,13 +74,13 @@ public class JackpotSeed implements IItemHandler
 			World.getInstance().storeObject(gourd);
 			gourd.setOwner(player.getName());
 			player.destroyItem("Consume", item.getObjectId(), 1, null, false);
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 			sm.addString("Created " + template1.name + " at x: " + spawn.getX() + " y: " + spawn.getY() + " z: " + spawn.getZ());
 			player.sendPacket(sm);
 		}
 		catch (Exception e)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 			sm.addString("Target is not ingame.");
 			player.sendPacket(sm);
 		}

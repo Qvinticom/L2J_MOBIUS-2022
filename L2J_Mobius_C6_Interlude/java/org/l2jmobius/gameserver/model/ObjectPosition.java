@@ -138,7 +138,7 @@ public class ObjectPosition
 			return;
 		}
 		
-		WorldRegion newRegion = World.getInstance().getRegion(getWorldPosition());
+		final WorldRegion newRegion = World.getInstance().getRegion(getWorldPosition());
 		if (newRegion != getWorldRegion())
 		{
 			getWorldRegion().removeVisibleObject(_activeObject);

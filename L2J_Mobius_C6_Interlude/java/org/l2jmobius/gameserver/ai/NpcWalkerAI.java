@@ -133,7 +133,7 @@ public class NpcWalkerAI extends CreatureAI implements Runnable
 		
 		if ((getActor().getX() == destinationX) && (getActor().getY() == destinationY) && (getActor().getZ() == destinationZ))
 		{
-			String chat = _route.get(_currentPos).getChatText();
+			final String chat = _route.get(_currentPos).getChatText();
 			
 			if ((chat != null) && !chat.equals("NULL"))
 			{

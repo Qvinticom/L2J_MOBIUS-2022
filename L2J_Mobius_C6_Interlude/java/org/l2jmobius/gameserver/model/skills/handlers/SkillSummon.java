@@ -85,7 +85,7 @@ public class SkillSummon extends Skill
 				{
 					return true; // Player is always able to cast mass cubic skill
 				}
-				int mastery = player.getSkillLevel(SKILL_CUBIC_MASTERY);
+				final int mastery = player.getSkillLevel(SKILL_CUBIC_MASTERY);
 				final int count = player.getCubics().size();
 				if (count > mastery)
 				{
@@ -154,7 +154,7 @@ public class SkillSummon extends Skill
 						continue;
 					}
 					final PlayerInstance player = ((PlayerInstance) obj);
-					int mastery = player.getSkillLevel(SKILL_CUBIC_MASTERY);
+					final int mastery = player.getSkillLevel(SKILL_CUBIC_MASTERY);
 					if ((mastery == 0) && !player.getCubics().isEmpty())
 					{
 						// Player can have only 1 cubic - we shuld replace old cubic with new one
@@ -178,7 +178,7 @@ public class SkillSummon extends Skill
 				return;
 			}
 			
-			int mastery = activeChar.getSkillLevel(SKILL_CUBIC_MASTERY);
+			final int mastery = activeChar.getSkillLevel(SKILL_CUBIC_MASTERY);
 			if (activeChar.getCubics().containsKey(_npcId))
 			{
 				final CubicInstance cubic = activeChar.getCubic(_npcId);

@@ -673,7 +673,7 @@ public class Raina extends AbstractNpcAI
 	{
 		final int currentBaseId = player.getBaseClass();
 		final ClassId baseCID = ClassId.getClassId(currentBaseId);
-		int baseClassId = (CategoryData.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, baseCID.getId()) || CategoryData.getInstance().isInCategory(CategoryType.FIFTH_CLASS_GROUP, baseCID.getId()) || CategoryData.getInstance().isInCategory(CategoryType.SIXTH_CLASS_GROUP, baseCID.getId())) ? baseCID.getParent().getId() : currentBaseId;
+		final int baseClassId = (CategoryData.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, baseCID.getId()) || CategoryData.getInstance().isInCategory(CategoryType.FIFTH_CLASS_GROUP, baseCID.getId()) || CategoryData.getInstance().isInCategory(CategoryType.SIXTH_CLASS_GROUP, baseCID.getId())) ? baseCID.getParent().getId() : currentBaseId;
 		
 		final Set<ClassId> availSubs = getSubclasses(player, baseClassId);
 		
@@ -832,7 +832,7 @@ public class Raina extends AbstractNpcAI
 				}
 			}
 			
-			Set<ClassId> unavailableClasses = subclassSetMap.get(pClass);
+			final Set<ClassId> unavailableClasses = subclassSetMap.get(pClass);
 			if (unavailableClasses != null)
 			{
 				subclasses.removeAll(unavailableClasses);

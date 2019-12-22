@@ -64,7 +64,7 @@ public class RequestPetitionCancel extends GameClientPacket
 			{
 				final int numRemaining = Config.MAX_PETITIONS_PER_PLAYER - PetitionManager.getInstance().getPlayerTotalPetitionCount(player);
 				
-				SystemMessage sm = new SystemMessage(SystemMessageId.PETITION_CANCELED_SUBMIT_S1_MORE_TODAY);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.PETITION_CANCELED_SUBMIT_S1_MORE_TODAY);
 				sm.addString(String.valueOf(numRemaining));
 				player.sendPacket(sm);
 				

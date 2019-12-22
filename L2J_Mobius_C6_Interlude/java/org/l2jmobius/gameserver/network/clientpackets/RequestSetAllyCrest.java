@@ -95,7 +95,7 @@ public class RequestSetAllyCrest extends GameClientPacket
 			
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET ally_crest_id = ? WHERE ally_id = ?");
+				final PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET ally_crest_id = ? WHERE ally_id = ?");
 				statement.setInt(1, newId);
 				statement.setInt(2, leaderclan.getAllyId());
 				statement.executeUpdate();

@@ -835,7 +835,7 @@ public class Q10753_WindsOfFateChoices extends Quest
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		
-		if ((qs == null) && player.getRace() == Race.ERTHEIA && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)))
+		if ((qs == null) && (player.getRace() == Race.ERTHEIA) && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)))
 		{
 			if (player.isMageClass())
 			{

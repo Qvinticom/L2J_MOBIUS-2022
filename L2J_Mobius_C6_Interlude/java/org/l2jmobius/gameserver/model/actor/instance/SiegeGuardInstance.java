@@ -145,11 +145,11 @@ public class SiegeGuardInstance extends Attackable
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 			player.sendPacket(my);
 			
 			// Send a Server->Client packet StatusUpdate of the NpcInstance to the PlayerInstance to update its HP bar
-			StatusUpdate su = new StatusUpdate(getObjectId());
+			final StatusUpdate su = new StatusUpdate(getObjectId());
 			su.addAttribute(StatusUpdate.CUR_HP, (int) getStatus().getCurrentHp());
 			su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
 			player.sendPacket(su);
@@ -180,7 +180,7 @@ public class SiegeGuardInstance extends Attackable
 				}
 				else
 				{
-					SocialAction sa = new SocialAction(getObjectId(), Rnd.get(8));
+					final SocialAction sa = new SocialAction(getObjectId(), Rnd.get(8));
 					broadcastPacket(sa);
 					sendPacket(sa);
 					showChatWindow(player, 0);

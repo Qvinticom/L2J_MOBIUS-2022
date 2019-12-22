@@ -150,9 +150,9 @@ public class DoorTable
 	
 	public static DoorInstance parseList(String line)
 	{
-		StringTokenizer st = new StringTokenizer(line, ";");
+		final StringTokenizer st = new StringTokenizer(line, ";");
 		
-		String name = st.nextToken();
+		final String name = st.nextToken();
 		final int id = Integer.parseInt(st.nextToken());
 		final int x = Integer.parseInt(st.nextToken());
 		final int y = Integer.parseInt(st.nextToken());
@@ -206,7 +206,7 @@ public class DoorTable
 			collisionRadius = rangeXMax - rangeXMin;
 		}
 		
-		StatsSet npcDat = new StatsSet();
+		final StatsSet npcDat = new StatsSet();
 		npcDat.set("npcId", id);
 		npcDat.set("level", 0);
 		npcDat.set("jClass", "door");
@@ -251,7 +251,7 @@ public class DoorTable
 		npcDat.set("basePDef", pdef);
 		npcDat.set("baseMDef", mdef);
 		
-		CreatureTemplate template = new CreatureTemplate(npcDat);
+		final CreatureTemplate template = new CreatureTemplate(npcDat);
 		final DoorInstance door = new DoorInstance(IdFactory.getInstance().getNextId(), template, id, name, unlockable);
 		door.setRange(rangeXMin, rangeYMin, rangeZMin, rangeXMax, rangeYMax, rangeZMax);
 		try
@@ -369,7 +369,7 @@ public class DoorTable
 						final int m = ty - y;
 						final int n = tz - z;
 						
-						int dk = ((doorInst.getA() * l) + (doorInst.getB() * m) + (doorInst.getC() * n));
+						final int dk = ((doorInst.getA() * l) + (doorInst.getB() * m) + (doorInst.getC() * n));
 						
 						if (dk == 0)
 						{

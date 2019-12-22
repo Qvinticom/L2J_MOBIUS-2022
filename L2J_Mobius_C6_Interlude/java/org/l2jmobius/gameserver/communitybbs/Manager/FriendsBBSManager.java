@@ -63,9 +63,9 @@ public class FriendsBBSManager extends BaseBBSManager
 		}
 		else if (command.startsWith("_friend"))
 		{
-			StringTokenizer st = new StringTokenizer(command, ";");
+			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
-			String action = st.nextToken();
+			final String action = st.nextToken();
 			
 			if (action.equals("select"))
 			{
@@ -81,7 +81,7 @@ public class FriendsBBSManager extends BaseBBSManager
 			{
 				try (Connection con = DatabaseFactory.getConnection())
 				{
-					PreparedStatement statement = con.prepareStatement("DELETE FROM character_friends WHERE char_id = ? OR friend_id = ?");
+					final PreparedStatement statement = con.prepareStatement("DELETE FROM character_friends WHERE char_id = ? OR friend_id = ?");
 					statement.setInt(1, activeChar.getObjectId());
 					statement.setInt(2, activeChar.getObjectId());
 					statement.execute();
@@ -94,7 +94,7 @@ public class FriendsBBSManager extends BaseBBSManager
 				
 				for (int friendId : activeChar.getFriendList())
 				{
-					PlayerInstance player = World.getInstance().getPlayer(friendId);
+					final PlayerInstance player = World.getInstance().getPlayer(friendId);
 					if (player != null)
 					{
 						player.getFriendList().remove(Integer.valueOf(activeChar.getObjectId()));
@@ -121,7 +121,7 @@ public class FriendsBBSManager extends BaseBBSManager
 				{
 					for (int friendId : activeChar.getSelectedFriendList())
 					{
-						PreparedStatement statement = con.prepareStatement("DELETE FROM character_friends WHERE (char_id = ? AND friend_id = ?) OR (char_id = ? AND friend_id = ?)");
+						final PreparedStatement statement = con.prepareStatement("DELETE FROM character_friends WHERE (char_id = ? AND friend_id = ?) OR (char_id = ? AND friend_id = ?)");
 						statement.setInt(1, activeChar.getObjectId());
 						statement.setInt(2, friendId);
 						statement.setInt(3, friendId);
@@ -129,9 +129,9 @@ public class FriendsBBSManager extends BaseBBSManager
 						statement.execute();
 						statement.close();
 						
-						String name = CharNameTable.getInstance().getPlayerName(friendId);
+						final String name = CharNameTable.getInstance().getPlayerName(friendId);
 						
-						PlayerInstance player = World.getInstance().getPlayer(friendId);
+						final PlayerInstance player = World.getInstance().getPlayer(friendId);
 						if (player != null)
 						{
 							player.getFriendList().remove(Integer.valueOf(activeChar.getObjectId()));
@@ -164,9 +164,9 @@ public class FriendsBBSManager extends BaseBBSManager
 		}
 		else if (command.startsWith("_block"))
 		{
-			StringTokenizer st = new StringTokenizer(command, ";");
+			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
-			String action = st.nextToken();
+			final String action = st.nextToken();
 			
 			if (action.equals("select"))
 			{
@@ -180,7 +180,7 @@ public class FriendsBBSManager extends BaseBBSManager
 			}
 			else if (action.equals("delall"))
 			{
-				List<Integer> list = new ArrayList<>();
+				final List<Integer> list = new ArrayList<>();
 				list.addAll(activeChar.getBlockList().getBlockList());
 				
 				for (Integer blockId : list)
@@ -349,7 +349,7 @@ public class FriendsBBSManager extends BaseBBSManager
 		final StringBuilder sb = new StringBuilder();
 		for (int id : activeChar.getSelectedFriendList())
 		{
-			String friendName = CharNameTable.getInstance().getPlayerName(id);
+			final String friendName = CharNameTable.getInstance().getPlayerName(id);
 			if (friendName == null)
 			{
 				continue;

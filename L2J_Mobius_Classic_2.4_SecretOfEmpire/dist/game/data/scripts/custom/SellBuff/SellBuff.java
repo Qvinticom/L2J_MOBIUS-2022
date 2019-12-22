@@ -73,7 +73,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		String cmd = "";
-		StringBuilder params = new StringBuilder();
+		final StringBuilder params = new StringBuilder();
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		
 		if (st.hasMoreTokens())
@@ -130,7 +130,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 				}
 				else
 				{
-					StringBuilder title = new StringBuilder();
+					final StringBuilder title = new StringBuilder();
 					title.append("BUFF SELL: ");
 					final StringTokenizer st = new StringTokenizer(params, " ");
 					while (st.hasMoreTokens())

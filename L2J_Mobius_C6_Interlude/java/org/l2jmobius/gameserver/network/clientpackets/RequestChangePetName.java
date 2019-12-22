@@ -64,7 +64,7 @@ public class RequestChangePetName extends GameClientPacket
 		}
 		else if ((_name.length() < 3) || (_name.length() > 16))
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 			sm.addString("Your pet's name can be up to 16 characters.");
 			// SystemMessage sm = new SystemMessage(SystemMessage.NAMING_PETNAME_UP_TO_8CHARS);
 			player.sendPacket(sm);

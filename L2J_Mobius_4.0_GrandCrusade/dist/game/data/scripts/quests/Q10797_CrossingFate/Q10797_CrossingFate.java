@@ -73,12 +73,13 @@ public class Q10797_CrossingFate extends Quest
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
+		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return null;
+			return htmltext;
 		}
-		String htmltext = event;
+		
 		switch (event)
 		{
 			case "31683-02.htm":

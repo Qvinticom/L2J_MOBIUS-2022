@@ -80,7 +80,7 @@ public class ProtectorInstance extends NpcInstance
 				return false;
 			}
 			
-			Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
+			final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
 			
 			if (player.getFirstEffect(skill) == null)
 			{
@@ -103,7 +103,7 @@ public class ProtectorInstance extends NpcInstance
 				return false;
 			}
 			
-			Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
+			final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
 			if (player.getFirstEffect(skill) == null)
 			{
 				final int objId = _caster.getObjectId();

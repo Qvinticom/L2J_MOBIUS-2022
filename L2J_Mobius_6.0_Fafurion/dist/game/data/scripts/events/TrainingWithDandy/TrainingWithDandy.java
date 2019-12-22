@@ -57,7 +57,7 @@ public class TrainingWithDandy extends LongTimeEvent
 			}
 			case "dandy_buff":
 			{
-				Calendar calendar = Calendar.getInstance();
+				final Calendar calendar = Calendar.getInstance();
 				calendar.set(Calendar.MINUTE, 30);
 				calendar.set(Calendar.HOUR_OF_DAY, 6);
 				final long resetTime = calendar.getTimeInMillis();

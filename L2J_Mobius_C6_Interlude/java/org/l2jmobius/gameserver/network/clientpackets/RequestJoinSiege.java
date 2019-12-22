@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.entity.siege.Fort;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
- * @author ProGramMoS
+ * @author KenM
  */
 public class RequestJoinSiege extends GameClientPacket
 {

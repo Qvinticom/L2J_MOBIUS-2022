@@ -73,7 +73,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 			}
 			player.sendPacket(new UserInfo(player));
 			
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(targetItem);
 			player.sendPacket(iu);
 			

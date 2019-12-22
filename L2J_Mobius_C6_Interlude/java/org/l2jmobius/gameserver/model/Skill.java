@@ -617,7 +617,7 @@ public abstract class Skill
 		_minChance = set.getInt("minChance", 1);
 		_maxChance = set.getInt("maxChance", 99);
 		
-		String canLearn = set.getString("canLearn", null);
+		final String canLearn = set.getString("canLearn", null);
 		if (canLearn == null)
 		{
 			_canLearn = null;
@@ -625,11 +625,11 @@ public abstract class Skill
 		else
 		{
 			_canLearn = new ArrayList<>();
-			StringTokenizer st = new StringTokenizer(canLearn, " \r\n\t,;");
+			final StringTokenizer st = new StringTokenizer(canLearn, " \r\n\t,;");
 			
 			while (st.hasMoreTokens())
 			{
-				String cls = st.nextToken();
+				final String cls = st.nextToken();
 				try
 				{
 					_canLearn.add(ClassId.valueOf(cls));
@@ -641,7 +641,7 @@ public abstract class Skill
 			}
 		}
 		
-		String teachers = set.getString("teachers", null);
+		final String teachers = set.getString("teachers", null);
 		if (teachers == null)
 		{
 			_teachers = null;
@@ -649,10 +649,10 @@ public abstract class Skill
 		else
 		{
 			_teachers = new ArrayList<>();
-			StringTokenizer st = new StringTokenizer(teachers, " \r\n\t,;");
+			final StringTokenizer st = new StringTokenizer(teachers, " \r\n\t,;");
 			while (st.hasMoreTokens())
 			{
-				String npcid = st.nextToken();
+				final String npcid = st.nextToken();
 				try
 				{
 					_teachers.add(Integer.parseInt(npcid));
@@ -1374,7 +1374,7 @@ public abstract class Skill
 			return true;
 		}
 		
-		Env env = new Env();
+		final Env env = new Env();
 		env.player = creature;
 		if (target instanceof Creature)
 		{
@@ -1384,10 +1384,10 @@ public abstract class Skill
 		env.skill = this;
 		if (!preCondition.test(env))
 		{
-			String msg = preCondition.getMessage();
+			final String msg = preCondition.getMessage();
 			if (msg != null)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				sm.addString(msg);
 				creature.sendPacket(sm);
 			}
@@ -1688,7 +1688,7 @@ public abstract class Skill
 						}
 						if (nearby instanceof Summon)
 						{
-							PlayerInstance trg = ((Summon) nearby).getOwner();
+							final PlayerInstance trg = ((Summon) nearby).getOwner();
 							if (trg == null)
 							{
 								continue;
@@ -1843,7 +1843,7 @@ public abstract class Skill
 							}
 							if (obj instanceof PlayerInstance)
 							{
-								PlayerInstance trg = (PlayerInstance) obj;
+								final PlayerInstance trg = (PlayerInstance) obj;
 								if (trg == src)
 								{
 									continue;
@@ -1874,7 +1874,7 @@ public abstract class Skill
 							}
 							if (obj instanceof Summon)
 							{
-								PlayerInstance trg = ((Summon) obj).getOwner();
+								final PlayerInstance trg = ((Summon) obj).getOwner();
 								if (trg == null)
 								{
 									continue;
@@ -2011,7 +2011,7 @@ public abstract class Skill
 					};
 				}
 				targetList.add(creature);
-				PlayerInstance player = creature.getActingPlayer();
+				final PlayerInstance player = creature.getActingPlayer();
 				if (player == null)
 				{
 					return new Creature[]
@@ -2034,7 +2034,7 @@ public abstract class Skill
 				{
 					// Get all visible objects in a spheric area near the Creature
 					// Get a list of Party Members
-					List<PlayerInstance> partyList = creature.getParty().getPartyMembers();
+					final List<PlayerInstance> partyList = creature.getParty().getPartyMembers();
 					for (PlayerInstance partyMember : partyList)
 					{
 						if (partyMember == null)
@@ -2121,8 +2121,8 @@ public abstract class Skill
 				if (creature instanceof PlayerInstance)
 				{
 					final int radius = _skillRadius;
-					PlayerInstance player = (PlayerInstance) creature;
-					Clan clan = player.getClan();
+					final PlayerInstance player = (PlayerInstance) creature;
+					final Clan clan = player.getClan();
 					if (_targetType != SkillTargetType.TARGET_CORPSE_ALLY) // if corpose, the caster is not included
 					{
 						if (player.isInOlympiadMode())
@@ -2194,7 +2194,7 @@ public abstract class Skill
 									continue;
 								}
 							}
-							Summon pet = ((PlayerInstance) newTarget).getPet();
+							final Summon pet = ((PlayerInstance) newTarget).getPet();
 							if ((pet != null) && Util.checkIfInRange(radius, creature, pet, true) && !onlyFirst && (((_targetType == SkillTargetType.TARGET_CORPSE_ALLY) && pet.isDead()) || ((_targetType == SkillTargetType.TARGET_ALLY) && !pet.isDead())) && player.checkPvpSkill(newTarget, this))
 							{
 								targetList.add(pet);
@@ -2241,8 +2241,8 @@ public abstract class Skill
 				if (creature instanceof PlayerInstance)
 				{
 					final int radius = _skillRadius;
-					PlayerInstance player = (PlayerInstance) creature;
-					Clan clan = player.getClan();
+					final PlayerInstance player = (PlayerInstance) creature;
+					final Clan clan = player.getClan();
 					if (_targetType != SkillTargetType.TARGET_CORPSE_CLAN)
 					{
 						if (player.isInOlympiadMode())
@@ -2270,7 +2270,7 @@ public abstract class Skill
 						// Get Clan Members
 						for (ClanMember member : clan.getMembers())
 						{
-							PlayerInstance newTarget = member.getPlayerInstance();
+							final PlayerInstance newTarget = member.getPlayerInstance();
 							if ((newTarget == null) || (newTarget == player))
 							{
 								continue;
@@ -2287,7 +2287,7 @@ public abstract class Skill
 							{
 								continue;
 							}
-							Summon pet = newTarget.getPet();
+							final Summon pet = newTarget.getPet();
 							if ((pet != null) && Util.checkIfInRange(radius, creature, pet, true) && !onlyFirst && (((_targetType == SkillTargetType.TARGET_CORPSE_CLAN) && pet.isDead()) || ((_targetType == SkillTargetType.TARGET_CLAN) && !pet.isDead())) && player.checkPvpSkill(newTarget, this))
 							{
 								targetList.add(pet);
@@ -2301,7 +2301,7 @@ public abstract class Skill
 								if (_skillType == SkillType.RESURRECT)
 								{
 									// check target is not in a active siege zone
-									Siege siege = SiegeManager.getInstance().getSiege(newTarget);
+									final Siege siege = SiegeManager.getInstance().getSiege(newTarget);
 									if ((siege != null) && siege.getIsInProgress())
 									{
 										continue;
@@ -2589,7 +2589,7 @@ public abstract class Skill
 			}
 			case TARGET_ITEM:
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				sm.addString("Target type of skill is not currently handled");
 				creature.sendPacket(sm);
 				return null;
@@ -2700,7 +2700,7 @@ public abstract class Skill
 			{
 				if (target instanceof Summon)
 				{
-					Summon targetSummon = (Summon) target;
+					final Summon targetSummon = (Summon) target;
 					if (((creature instanceof PlayerInstance) && (creature.getPet() != targetSummon) && !targetSummon.isDead() && ((targetSummon.getOwner().getPvpFlag() != 0) || (targetSummon.getOwner().getKarma() > 0) || targetSummon.getOwner().isInDuel())) || (targetSummon.getOwner().isInsideZone(ZoneId.PVP) && ((PlayerInstance) creature).isInsideZone(ZoneId.PVP)))
 					{
 						return new Creature[]
@@ -2789,7 +2789,7 @@ public abstract class Skill
 			}
 			default:
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				sm.addString("Target type of skill is not currently handled");
 				creature.sendPacket(sm);
 				return null;
@@ -2905,7 +2905,7 @@ public abstract class Skill
 			
 			if (success)
 			{
-				Effect e = et.getEffect(env);
+				final Effect e = et.getEffect(env);
 				if (e != null)
 				{
 					// e.scheduleEffect();
@@ -2943,7 +2943,7 @@ public abstract class Skill
 		
 		for (EffectTemplate et : _effectTemplatesSelf)
 		{
-			Effect e = et.getEffect(env);
+			final Effect e = et.getEffect(env);
 			if (e != null)
 			{
 				// Implements effect charge
@@ -2961,7 +2961,7 @@ public abstract class Skill
 							if (env.target instanceof PlayerInstance)
 							{
 								env.target.sendPacket(new EtcStatusUpdate((PlayerInstance) env.target));
-								SystemMessage sm = new SystemMessage(SystemMessageId.FORCE_INCREASED_TO_S1);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.FORCE_INCREASED_TO_S1);
 								sm.addNumber(effectcharge);
 								env.target.sendPacket(sm);
 							}
@@ -2998,7 +2998,7 @@ public abstract class Skill
 		else
 		{
 			final int len = _funcTemplates.length;
-			FuncTemplate[] tmp = new FuncTemplate[len + 1];
+			final FuncTemplate[] tmp = new FuncTemplate[len + 1];
 			System.arraycopy(_funcTemplates, 0, tmp, 0, len);
 			tmp[len] = f;
 			_funcTemplates = tmp;
@@ -3017,7 +3017,7 @@ public abstract class Skill
 		else
 		{
 			final int len = _effectTemplates.length;
-			EffectTemplate[] tmp = new EffectTemplate[len + 1];
+			final EffectTemplate[] tmp = new EffectTemplate[len + 1];
 			System.arraycopy(_effectTemplates, 0, tmp, 0, len);
 			tmp[len] = effect;
 			setEffectTemplates(tmp);
@@ -3036,7 +3036,7 @@ public abstract class Skill
 		else
 		{
 			final int len = _effectTemplatesSelf.length;
-			EffectTemplate[] tmp = new EffectTemplate[len + 1];
+			final EffectTemplate[] tmp = new EffectTemplate[len + 1];
 			System.arraycopy(_effectTemplatesSelf, 0, tmp, 0, len);
 			tmp[len] = effect;
 			_effectTemplatesSelf = tmp;
@@ -3082,8 +3082,8 @@ public abstract class Skill
 	{
 		if ((creature instanceof PlayerInstance) && (target instanceof PlayerInstance))
 		{
-			PlayerInstance targetChar = (PlayerInstance) target;
-			PlayerInstance activeCh = (PlayerInstance) creature;
+			final PlayerInstance targetChar = (PlayerInstance) target;
+			final PlayerInstance activeCh = (PlayerInstance) creature;
 			
 			if (activeCh.isInOlympiadMode() && activeCh.isOlympiadStart() && targetChar.isInOlympiadMode() && targetChar.isOlympiadStart())
 			{

@@ -87,7 +87,7 @@ public class RecipeList
 	public void addRecipe(RecipeInstance recipe)
 	{
 		final int len = _recipes.length;
-		RecipeInstance[] tmp = new RecipeInstance[len + 1];
+		final RecipeInstance[] tmp = new RecipeInstance[len + 1];
 		System.arraycopy(_recipes, 0, tmp, 0, len);
 		tmp[len] = recipe;
 		_recipes = tmp;

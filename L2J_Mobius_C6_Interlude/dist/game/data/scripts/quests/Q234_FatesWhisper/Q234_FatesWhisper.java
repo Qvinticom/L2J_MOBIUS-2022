@@ -96,7 +96,7 @@ public class Q234_FatesWhisper extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -131,7 +131,7 @@ public class Q234_FatesWhisper extends Quest
 				return null;
 			}
 			
-			String bGradeId = event.replace("selectBGrade_", "");
+			final String bGradeId = event.replace("selectBGrade_", "");
 			st.set("weaponId", bGradeId);
 			htmltext = getHtmlText("31002-13.htm").replace("%weaponname%", WEAPONS.get(st.getInt("weaponId")));
 		}
@@ -147,7 +147,7 @@ public class Q234_FatesWhisper extends Quest
 				final int itemId = st.getInt("weaponId");
 				if (st.hasQuestItems(itemId))
 				{
-					int aGradeItemId = Integer.parseInt(event.replace("selectAGrade_", ""));
+					final int aGradeItemId = Integer.parseInt(event.replace("selectAGrade_", ""));
 					
 					htmltext = getHtmlText("31002-12.htm").replace("%weaponname%", ItemTable.getInstance().getTemplate(aGradeItemId).getName());
 					st.takeItems(itemId, 1);
@@ -174,7 +174,7 @@ public class Q234_FatesWhisper extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -188,7 +188,7 @@ public class Q234_FatesWhisper extends Quest
 				break;
 			
 			case State.STARTED:
-				int cond = st.getInt("cond");
+				final int cond = st.getInt("cond");
 				switch (npc.getNpcId())
 				{
 					case 31002:
@@ -391,7 +391,7 @@ public class Q234_FatesWhisper extends Quest
 	@Override
 	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
-		QuestState st = checkPlayerCondition(attacker, npc, "cond", "7");
+		final QuestState st = checkPlayerCondition(attacker, npc, "cond", "7");
 		if (st == null)
 		{
 			return null;

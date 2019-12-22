@@ -167,6 +167,7 @@ public class Q10994_FutureOrcs extends Quest
 					}
 					break;
 				}
+				break;
 			}
 			case State.COMPLETED:
 			{

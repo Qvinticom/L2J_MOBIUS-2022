@@ -97,7 +97,7 @@ public class VoicedCommandHandler
 	
 	public void registerVoicedCommandHandler(IVoicedCommandHandler handler)
 	{
-		String[] ids = handler.getVoicedCommandList();
+		final String[] ids = handler.getVoicedCommandList();
 		for (String id : ids)
 		{
 			_datatable.put(id, handler);

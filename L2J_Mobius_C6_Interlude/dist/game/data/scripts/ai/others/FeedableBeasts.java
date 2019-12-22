@@ -343,7 +343,7 @@ public class FeedableBeasts extends Quest
 	
 	private void spawnNext(NpcInstance npc, int growthLevel, PlayerInstance player, int food)
 	{
-		int npcId = npc.getNpcId();
+		final int npcId = npc.getNpcId();
 		int nextNpcId = 0;
 		
 		// Find the next mob to spawn, based on the current npcId, growthlevel, and food.
@@ -405,7 +405,7 @@ public class FeedableBeasts extends Quest
 			nextNpc.setRunning();
 			
 			// If player has Q020 going, give quest item
-			QuestState st = player.getQuestState(Q020_BringUpWithLove.class.getSimpleName());
+			final QuestState st = player.getQuestState(Q020_BringUpWithLove.class.getSimpleName());
 			if ((st != null) && (Rnd.get(100) < 5) && !st.hasQuestItems(7185))
 			{
 				st.giveItems(7185, 1);
@@ -413,7 +413,7 @@ public class FeedableBeasts extends Quest
 			}
 			
 			// Also, perform a rare random chat
-			int rand = Rnd.get(20);
+			final int rand = Rnd.get(20);
 			if (rand < 5)
 			{
 				npc.broadcastPacket(new CreatureSay(nextNpc.getObjectId(), 0, nextNpc.getName(), SPAWN_CHATS[rand].replace("$s1", player.getName())));
@@ -423,7 +423,7 @@ public class FeedableBeasts extends Quest
 		{
 			// If not trained, the newly spawned mob will automatically be aggro against its feeder
 			// (what happened to "never bite the hand that feeds you" anyway?!)
-			Attackable nextNpc = (Attackable) addSpawn(nextNpcId, npc);
+			final Attackable nextNpc = (Attackable) addSpawn(nextNpcId, npc);
 			
 			if (MAD_COW_POLYMORPH.containsKey(nextNpcId))
 			{
@@ -454,7 +454,7 @@ public class FeedableBeasts extends Quest
 			npc.deleteMe();
 			
 			// spawn the new mob
-			Attackable nextNpc = (Attackable) addSpawn(MAD_COW_POLYMORPH.get(npc.getNpcId()), npc);
+			final Attackable nextNpc = (Attackable) addSpawn(MAD_COW_POLYMORPH.get(npc.getNpcId()), npc);
 			
 			// register the player in the feedinfo for the mob that just spawned
 			FEED_INFO.put(nextNpc.getObjectId(), player.getObjectId());
@@ -471,8 +471,8 @@ public class FeedableBeasts extends Quest
 	public String onSkillUse(NpcInstance npc, PlayerInstance caster, Skill skill)
 	{
 		// Gather some values on local variables
-		int npcId = npc.getNpcId();
-		int skillId = skill.getId();
+		final int npcId = npc.getNpcId();
+		final int skillId = skill.getId();
 		
 		// Check if the npc and skills used are valid for this script. Exit if invalid.
 		if (!Util.contains(FEEDABLE_BEASTS, npcId) || ((skillId != SKILL_GOLDEN_SPICE) && (skillId != SKILL_CRYSTAL_SPICE)))
@@ -481,7 +481,7 @@ public class FeedableBeasts extends Quest
 		}
 		
 		// First gather some values on local variables
-		int objectId = npc.getObjectId();
+		final int objectId = npc.getObjectId();
 		int growthLevel = 3; // if a mob is in FEEDABLE_BEASTS but not in GROWTH_CAPABLE_MOBS, then it's at max growth (3)
 		
 		if (GROWTH_CAPABLE_MONSTERS.containsKey(npcId))

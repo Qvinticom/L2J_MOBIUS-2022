@@ -75,7 +75,7 @@ public class Q602_ShadowOfLight extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -125,7 +125,7 @@ public class Q602_ShadowOfLight extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -138,7 +138,7 @@ public class Q602_ShadowOfLight extends Quest
 				break;
 			
 			case State.STARTED:
-				int cond = st.getInt("cond");
+				final int cond = st.getInt("cond");
 				if (cond == 1)
 				{
 					htmltext = "31683-03.htm";
@@ -156,13 +156,13 @@ public class Q602_ShadowOfLight extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		PlayerInstance partyMember = getRandomPartyMember(player, npc, "cond", "1");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "cond", "1");
 		if (partyMember == null)
 		{
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

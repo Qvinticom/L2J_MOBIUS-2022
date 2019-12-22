@@ -94,7 +94,7 @@ public class Q225_TestOfTheSearcher extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -192,7 +192,7 @@ public class Q225_TestOfTheSearcher extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -443,7 +443,7 @@ public class Q225_TestOfTheSearcher extends Quest
 	@Override
 	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
-		QuestState st = checkPlayerState(attacker, npc, State.STARTED);
+		final QuestState st = checkPlayerState(attacker, npc, State.STARTED);
 		if (st == null)
 		{
 			return null;

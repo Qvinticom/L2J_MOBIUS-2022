@@ -108,7 +108,7 @@ public class Disablers implements ISkillHandler
 					}
 					else
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getId());
 						creature.sendPacket(sm);
@@ -148,7 +148,7 @@ public class Disablers implements ISkillHandler
 					}
 					else if (creature instanceof PlayerInstance)
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
 						creature.sendPacket(sm);
@@ -168,7 +168,7 @@ public class Disablers implements ISkillHandler
 					}
 					else if (creature instanceof PlayerInstance)
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
 						creature.sendPacket(sm);
@@ -188,7 +188,7 @@ public class Disablers implements ISkillHandler
 					}
 					else if (creature instanceof PlayerInstance)
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
 						creature.sendPacket(sm);
@@ -212,7 +212,7 @@ public class Disablers implements ISkillHandler
 					}
 					else if (creature instanceof PlayerInstance)
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						creature.sendPacket(sm);
 					}
 					break; // Used to be fallthrough.
@@ -252,7 +252,7 @@ public class Disablers implements ISkillHandler
 					{
 						if (target instanceof Attackable)
 						{
-							Attackable attackable = (Attackable) target;
+							final Attackable attackable = (Attackable) target;
 							attackable.stopHating(creature);
 							if (attackable.getMostHated() == null)
 							{
@@ -269,7 +269,7 @@ public class Disablers implements ISkillHandler
 					{
 						if (target instanceof Attackable)
 						{
-							Attackable targ = (Attackable) target;
+							final Attackable targ = (Attackable) target;
 							targ.stopHating(creature);
 							if (targ.getMostHated() == null)
 							{
@@ -283,7 +283,7 @@ public class Disablers implements ISkillHandler
 					}
 					else if (creature instanceof PlayerInstance)
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getId());
 						creature.sendPacket(sm);
@@ -311,7 +311,7 @@ public class Disablers implements ISkillHandler
 						}
 						else if (creature instanceof PlayerInstance)
 						{
-							SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+							final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 							sm.addString(target.getName());
 							sm.addSkillName(skill.getId());
 							creature.sendPacket(sm);
@@ -340,12 +340,12 @@ public class Disablers implements ISkillHandler
 						summonOwner = ((Summon) target).getOwner();
 						summonPet = summonOwner.getPet();
 						summonPet.unSummon(summonOwner);
-						SystemMessage sm = new SystemMessage(SystemMessageId.LETHAL_STRIKE);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.LETHAL_STRIKE);
 						summonOwner.sendPacket(sm);
 					}
 					else if (creature instanceof PlayerInstance)
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getId());
 						creature.sendPacket(sm);
@@ -413,7 +413,7 @@ public class Disablers implements ISkillHandler
 						{
 							if (creature instanceof PlayerInstance)
 							{
-								SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 								sm.addString(target.getName());
 								sm.addSkillName(skill.getDisplayId());
 								creature.sendPacket(sm);
@@ -424,7 +424,7 @@ public class Disablers implements ISkillHandler
 						{
 							if (creature instanceof PlayerInstance)
 							{
-								SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 								sm.addString(target.getName());
 								sm.addSkillName(skill.getDisplayId());
 								creature.sendPacket(sm);
@@ -444,7 +444,7 @@ public class Disablers implements ISkillHandler
 						landrate = (int) target.calcStat(Stats.CANCEL_VULN, landrate, target, null);
 						if (Rnd.get(100) < landrate)
 						{
-							Effect[] effects = target.getAllEffects();
+							final Effect[] effects = target.getAllEffects();
 							int maxfive = 5;
 							for (Effect e : effects)
 							{
@@ -497,7 +497,7 @@ public class Disablers implements ISkillHandler
 						}
 						else if (creature instanceof PlayerInstance)
 						{
-							SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+							final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 							sm.addString(target.getName());
 							sm.addSkillName(skill.getDisplayId());
 							creature.sendPacket(sm);
@@ -558,7 +558,7 @@ public class Disablers implements ISkillHandler
 					}
 					else if (creature instanceof PlayerInstance)
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
 						creature.sendPacket(sm);
@@ -571,13 +571,13 @@ public class Disablers implements ISkillHandler
 					if (skill.getId() == 2275) // fishing potion
 					{
 						negatePower = skill.getNegatePower();
-						int negateId = skill.getNegateId();
+						final int negateId = skill.getNegateId();
 						negateEffect(target, SkillType.BUFF, negatePower, negateId);
 					}
 					else // all others negate type skills
 					{
-						String[] negateSkillTypes = skill.getNegateSkillTypes();
-						String[] negateEffectTypes = skill.getNegateEffectTypes();
+						final String[] negateSkillTypes = skill.getNegateSkillTypes();
+						final String[] negateEffectTypes = skill.getNegateEffectTypes();
 						negatePower = skill.getNegatePower();
 						for (String stat : negateSkillTypes)
 						{
@@ -650,7 +650,7 @@ public class Disablers implements ISkillHandler
 							}
 							if (stat.equals("heal"))
 							{
-								ISkillHandler healhandler = SkillHandler.getInstance().getSkillHandler(SkillType.HEAL);
+								final ISkillHandler healhandler = SkillHandler.getInstance().getSkillHandler(SkillType.HEAL);
 								if (healhandler == null)
 								{
 									LOGGER.warning("Couldn't find skill handler for HEAL.");
@@ -734,7 +734,7 @@ public class Disablers implements ISkillHandler
 		}
 		
 		// self Effect :]
-		Effect effect = creature.getFirstEffect(skill.getId());
+		final Effect effect = creature.getFirstEffect(skill.getId());
 		if ((effect != null) && effect.isSelfEffect())
 		{
 			// Replace old effect with new one.
@@ -750,7 +750,7 @@ public class Disablers implements ISkillHandler
 	
 	private void negateEffect(Creature target, SkillType type, double power, int skillId)
 	{
-		Effect[] effects = target.getAllEffects();
+		final Effect[] effects = target.getAllEffects();
 		for (Effect e : effects)
 		{
 			if (((e.getSkill() != null) && (e.getSkill().getId() == 4215)) || (e.getSkill().getId() == 4515))

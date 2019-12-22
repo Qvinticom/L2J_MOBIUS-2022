@@ -398,15 +398,12 @@ public class Q00218_TestimonyOfLife extends Quest
 				}
 				case UNICORN_OF_EVA:
 				{
-					if (!hasQuestItems(killer, TEARS_OF_UNICORN) && hasQuestItems(killer, MOONFLOWER_CHARM, TALINS_SPEAR, GRAIL_OF_PURITY))
+					if (!hasQuestItems(killer, TEARS_OF_UNICORN) && hasQuestItems(killer, MOONFLOWER_CHARM, TALINS_SPEAR, GRAIL_OF_PURITY) && (npc.getKillingBlowWeapon() == TALINS_SPEAR))
 					{
-						if (npc.getKillingBlowWeapon() == TALINS_SPEAR)
-						{
-							takeItems(killer, TALINS_SPEAR, 1);
-							takeItems(killer, GRAIL_OF_PURITY, 1);
-							giveItems(killer, TEARS_OF_UNICORN, 1);
-							qs.setCond(19, true);
-						}
+						takeItems(killer, TALINS_SPEAR, 1);
+						takeItems(killer, GRAIL_OF_PURITY, 1);
+						giveItems(killer, TEARS_OF_UNICORN, 1);
+						qs.setCond(19, true);
 					}
 					break;
 				}

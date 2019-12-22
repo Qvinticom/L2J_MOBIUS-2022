@@ -95,7 +95,7 @@ public class PremiumManager
 	
 	private final Consumer<OnPlayerLogout> playerLogoutEvent = event ->
 	{
-		PlayerInstance player = event.getPlayer();
+		final PlayerInstance player = event.getPlayer();
 		stopExpireTask(player);
 	};
 	
@@ -111,7 +111,7 @@ public class PremiumManager
 	 */
 	private void startExpireTask(PlayerInstance player, long delay)
 	{
-		ScheduledFuture<?> task = ThreadPool.schedule(new PremiumExpireTask(player), delay);
+		final ScheduledFuture<?> task = ThreadPool.schedule(new PremiumExpireTask(player), delay);
 		expiretasks.put(player.getAccountName(), task);
 	}
 	
@@ -155,11 +155,11 @@ public class PremiumManager
 	
 	public void addPremiumTime(String accountName, int timeValue, TimeUnit timeUnit)
 	{
-		long addTime = timeUnit.toMillis(timeValue);
-		long now = System.currentTimeMillis();
+		final long addTime = timeUnit.toMillis(timeValue);
+		final long now = System.currentTimeMillis();
 		// new premium task at least from now
-		long oldPremiumExpiration = Math.max(now, getPremiumExpiration(accountName));
-		long newPremiumExpiration = oldPremiumExpiration + addTime;
+		final long oldPremiumExpiration = Math.max(now, getPremiumExpiration(accountName));
+		final long newPremiumExpiration = oldPremiumExpiration + addTime;
 		
 		// UPDATE DATABASE
 		try (Connection con = DatabaseFactory.getConnection();
@@ -178,7 +178,7 @@ public class PremiumManager
 		premiumData.put(accountName, newPremiumExpiration);
 		
 		// UPDATE PlAYER PREMIUMSTATUS
-		PlayerInstance playerOnline = World.getInstance().getPlayers().stream().filter(p -> accountName.equals(p.getAccountName())).findFirst().orElse(null);
+		final PlayerInstance playerOnline = World.getInstance().getPlayers().stream().filter(p -> accountName.equals(p.getAccountName())).findFirst().orElse(null);
 		if (playerOnline != null)
 		{
 			stopExpireTask(playerOnline);
@@ -195,7 +195,7 @@ public class PremiumManager
 	{
 		if (checkOnline)
 		{
-			PlayerInstance playerOnline = World.getInstance().getPlayers().stream().filter(p -> accountName.equals(p.getAccountName())).findFirst().orElse(null);
+			final PlayerInstance playerOnline = World.getInstance().getPlayers().stream().filter(p -> accountName.equals(p.getAccountName())).findFirst().orElse(null);
 			if ((playerOnline != null) && playerOnline.hasPremiumStatus())
 			{
 				playerOnline.setPremiumStatus(false);

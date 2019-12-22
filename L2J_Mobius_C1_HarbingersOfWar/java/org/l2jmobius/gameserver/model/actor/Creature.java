@@ -707,7 +707,7 @@ public abstract class Creature extends WorldObject
 	
 	public void setTitle(String title)
 	{
-		this._title = title;
+		_title = title;
 	}
 	
 	public int getRunSpeed()

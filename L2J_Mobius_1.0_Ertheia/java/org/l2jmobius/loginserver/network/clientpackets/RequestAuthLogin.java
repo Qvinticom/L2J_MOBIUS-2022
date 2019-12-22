@@ -75,7 +75,7 @@ public class RequestAuthLogin implements IIncomingPacket<LoginClient>
 			return;
 		}
 		
-		byte[] decrypted = new byte[_newAuthMethod ? 256 : 128];
+		final byte[] decrypted = new byte[_newAuthMethod ? 256 : 128];
 		try
 		{
 			final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");

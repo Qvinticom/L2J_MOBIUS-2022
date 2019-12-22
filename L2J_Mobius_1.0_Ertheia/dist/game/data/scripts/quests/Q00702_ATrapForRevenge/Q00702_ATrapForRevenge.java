@@ -160,8 +160,8 @@ public class Q00702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32555-15.html"))
 		{
-			int i0 = getRandom(1000);
-			int i1 = getRandom(1000);
+			final int i0 = getRandom(1000);
+			final int i1 = getRandom(1000);
 			
 			if ((i0 >= 500) && (i1 >= 600))
 			{
@@ -194,6 +194,7 @@ public class Q00702_ATrapForRevenge extends Quest
 				giveAdena(player, getRandom(49917) + 125000, false);
 				if (i1 < 210)
 				{
+					// Do nothing.
 				}
 				else if (i1 < 340)
 				{
@@ -241,6 +242,7 @@ public class Q00702_ATrapForRevenge extends Quest
 				giveAdena(player, getRandom(49917) + 25000, false);
 				if (i1 < 210)
 				{
+					// Do nothing.
 				}
 				else if (i1 < 340)
 				{

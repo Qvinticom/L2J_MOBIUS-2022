@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author KenM
- * @author UnAfraid
  */
 public class ExPCCafePointInfo implements IClientOutgoingPacket
 {

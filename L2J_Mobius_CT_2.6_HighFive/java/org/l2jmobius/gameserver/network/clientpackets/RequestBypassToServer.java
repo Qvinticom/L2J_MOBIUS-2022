@@ -235,7 +235,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 				{
 					if (bypassOriginId > 0)
 					{
-						WorldObject bypassOrigin = World.getInstance().findObject(bypassOriginId);
+						final WorldObject bypassOrigin = World.getInstance().findObject(bypassOriginId);
 						if ((bypassOrigin != null) && bypassOrigin.isCreature())
 						{
 							handler.useBypass(_command, player, (Creature) bypassOrigin);

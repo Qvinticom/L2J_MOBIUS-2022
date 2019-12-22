@@ -57,24 +57,24 @@ public class frmAbout
 		frmAbout.setType(Type.UTILITY);
 		frmAbout.getContentPane().setLayout(null);
 		
-		JLabel lblLjmobius = new JLabel("L2jMobius");
+		final JLabel lblLjmobius = new JLabel("L2jMobius");
 		lblLjmobius.setFont(new Font("Tahoma", Font.PLAIN, 32));
 		lblLjmobius.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLjmobius.setBounds(10, 11, 271, 39);
 		frmAbout.getContentPane().add(lblLjmobius);
 		
-		JLabel lblData = new JLabel("2013-" + Calendar.getInstance().get(Calendar.YEAR));
+		final JLabel lblData = new JLabel("2013-" + Calendar.getInstance().get(Calendar.YEAR));
 		lblData.setHorizontalAlignment(SwingConstants.CENTER);
 		lblData.setBounds(10, 44, 271, 14);
 		frmAbout.getContentPane().add(lblData);
 		
-		JLabel lblLoginServer = new JLabel("Login Server");
+		final JLabel lblLoginServer = new JLabel("Login Server");
 		lblLoginServer.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLoginServer.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblLoginServer.setBounds(10, 86, 271, 23);
 		frmAbout.getContentPane().add(lblLoginServer);
 		
-		JLabel site = new JLabel(URL);
+		final JLabel site = new JLabel(URL);
 		site.setText("<HTML><FONT color=\"#000099\"><U>" + URL + "</U></FONT></HTML>");
 		site.setHorizontalAlignment(SwingConstants.CENTER);
 		site.setBounds(76, 148, 140, 14);

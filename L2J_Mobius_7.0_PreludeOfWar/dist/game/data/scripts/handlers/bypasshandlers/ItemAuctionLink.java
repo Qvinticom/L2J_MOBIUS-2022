@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExItemAuctionInfoPacket;
 
 public class ItemAuctionLink implements IBypassHandler
 {
-	private static final SimpleDateFormat fmt = new SimpleDateFormat("HH:mm:ss dd.MM.yyyy");
+	private static final SimpleDateFormat SDF = new SimpleDateFormat("HH:mm:ss dd.MM.yyyy");
 	
 	private static final String[] COMMANDS =
 	{
@@ -91,7 +91,7 @@ public class ItemAuctionLink implements IBypassHandler
 					
 					if (nextAuction != null)
 					{
-						player.sendMessage("The next auction will begin on the " + fmt.format(new Date(nextAuction.getStartingTime())) + ".");
+						player.sendMessage("The next auction will begin on the " + SDF.format(new Date(nextAuction.getStartingTime())) + ".");
 					}
 					return true;
 				}

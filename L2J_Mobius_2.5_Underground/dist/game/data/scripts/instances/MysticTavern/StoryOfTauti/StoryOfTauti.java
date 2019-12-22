@@ -225,7 +225,7 @@ public class StoryOfTauti extends AbstractInstance
 			{
 				if (!npc.isDead())
 				{
-					for (final Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpcInstance.class, 1000))
+					for (Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpcInstance.class, 1000))
 					{
 						if ((nearby.getId() == FLAME_FLOWER) && npc.isScriptValue(0) && nearby.isScriptValue(0))
 						{
@@ -786,7 +786,7 @@ public class StoryOfTauti extends AbstractInstance
 				case FLAME_FLOWER:
 				{
 					npc.setCurrentHp(npc.getMaxHp() * 0.20);
-					for (final Npc tombstone : World.getInstance().getVisibleObjectsInRange(npc, MonsterInstance.class, 500))
+					for (Npc tombstone : World.getInstance().getVisibleObjectsInRange(npc, MonsterInstance.class, 500))
 					{
 						if (tombstone.getId() == SEAL_TOMBSTONE)
 						{
@@ -863,7 +863,7 @@ public class StoryOfTauti extends AbstractInstance
 				}
 				case NPC_1:
 				{
-					for (final PlayerInstance nearby : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 2000))
+					for (PlayerInstance nearby : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 2000))
 					{
 						if (npc.isScriptValue(0) && (nearby != null))
 						{

@@ -141,7 +141,7 @@ public class RequestDestroyItem extends GameClientPacket
 				}
 				
 				// if it's a pet control item, delete the pet
-				PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?");
+				final PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?");
 				statement.setInt(1, _objectId);
 				statement.execute();
 				statement.close();

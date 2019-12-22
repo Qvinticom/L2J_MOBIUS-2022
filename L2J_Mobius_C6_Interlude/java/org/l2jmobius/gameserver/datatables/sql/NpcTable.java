@@ -60,7 +60,7 @@ public class NpcTable
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT * FROM npc");
+			final PreparedStatement statement = con.prepareStatement("SELECT * FROM npc");
 			final ResultSet npcdata = statement.executeQuery();
 			fillNpcTable(npcdata, false);
 			npcdata.close();
@@ -75,7 +75,7 @@ public class NpcTable
 		{
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement("SELECT * FROM custom_npc");
+				final PreparedStatement statement = con.prepareStatement("SELECT * FROM custom_npc");
 				final ResultSet npcdata = statement.executeQuery();
 				fillNpcTable(npcdata, true);
 				npcdata.close();
@@ -89,7 +89,7 @@ public class NpcTable
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT npcid, skillid, level FROM npcskills");
+			final PreparedStatement statement = con.prepareStatement("SELECT npcid, skillid, level FROM npcskills");
 			final ResultSet npcskills = statement.executeQuery();
 			NpcTemplate npcDat = null;
 			Skill npcSkill = null;
@@ -135,7 +135,7 @@ public class NpcTable
 		{
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement("SELECT * FROM custom_droplist ORDER BY mobId, chance DESC");
+				final PreparedStatement statement = con.prepareStatement("SELECT * FROM custom_droplist ORDER BY mobId, chance DESC");
 				final ResultSet dropData = statement.executeQuery();
 				
 				int cCount = 0;
@@ -175,7 +175,7 @@ public class NpcTable
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT * FROM droplist ORDER BY mobId, chance DESC");
+			final PreparedStatement statement = con.prepareStatement("SELECT * FROM droplist ORDER BY mobId, chance DESC");
 			final ResultSet dropData = statement.executeQuery();
 			DropData dropDat = null;
 			NpcTemplate npcDat = null;
@@ -214,7 +214,7 @@ public class NpcTable
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT * FROM skill_learn");
+			final PreparedStatement statement = con.prepareStatement("SELECT * FROM skill_learn");
 			final ResultSet learndata = statement.executeQuery();
 			
 			while (learndata.next())
@@ -249,7 +249,7 @@ public class NpcTable
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT * FROM minions");
+			final PreparedStatement statement = con.prepareStatement("SELECT * FROM minions");
 			final ResultSet minionData = statement.executeQuery();
 			MinionData minionDat = null;
 			NpcTemplate npcDat = null;

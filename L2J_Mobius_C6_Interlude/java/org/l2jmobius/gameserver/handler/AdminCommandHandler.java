@@ -175,7 +175,7 @@ public class AdminCommandHandler
 	
 	public void registerAdminCommandHandler(IAdminCommandHandler handler)
 	{
-		String[] ids = handler.getAdminCommandList();
+		final String[] ids = handler.getAdminCommandList();
 		for (String element : ids)
 		{
 			if (_datatable.keySet().contains(element))

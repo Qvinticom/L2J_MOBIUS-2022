@@ -97,7 +97,7 @@ public class DropCategory
 	 */
 	public synchronized DropData dropSeedAllowedDropsOnly()
 	{
-		List<DropData> drops = new ArrayList<>();
+		final List<DropData> drops = new ArrayList<>();
 		int subCatChance = 0;
 		for (DropData drop : _drops)
 		{

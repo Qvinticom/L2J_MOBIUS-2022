@@ -34,24 +34,22 @@ public class VillageMasterPriestInstance extends VillageMasterInstance
 	}
 	
 	@Override
-	protected final boolean checkVillageMasterRace(ClassId pclass)
+	protected final boolean checkVillageMasterRace(ClassId pClass)
 	{
-		if (pclass == null)
+		if (pClass == null)
 		{
 			return false;
 		}
-		
-		return (pclass.getRace() == Race.HUMAN) || (pclass.getRace() == Race.ELF);
+		return (pClass.getRace() == Race.HUMAN) || (pClass.getRace() == Race.ELF);
 	}
 	
 	@Override
-	protected final boolean checkVillageMasterTeachType(ClassId pclass)
+	protected final boolean checkVillageMasterTeachType(ClassId pClass)
 	{
-		if (pclass == null)
+		if (pClass == null)
 		{
 			return false;
 		}
-		
-		return CategoryData.getInstance().isInCategory(CategoryType.CLERIC_GROUP, pclass.getId());
+		return CategoryData.getInstance().isInCategory(CategoryType.CLERIC_GROUP, pClass.getId());
 	}
 }

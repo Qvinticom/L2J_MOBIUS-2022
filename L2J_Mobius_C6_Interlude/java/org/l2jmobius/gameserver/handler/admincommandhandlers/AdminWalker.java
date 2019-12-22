@@ -52,7 +52,7 @@ public class AdminWalker implements IAdminCommandHandler
 	{
 		try
 		{
-			String[] parts = command.split(" ");
+			final String[] parts = command.split(" ");
 			
 			if (command.startsWith("admin_walker_menu"))
 			{
@@ -77,7 +77,7 @@ public class AdminWalker implements IAdminCommandHandler
 						else
 						{
 							statement = con.prepareStatement("SELECT MAX(`route_id`) AS max FROM `walker_routes`;");
-							ResultSet rset1 = statement.executeQuery();
+							final ResultSet rset1 = statement.executeQuery();
 							
 							if (rset1.next())
 							{

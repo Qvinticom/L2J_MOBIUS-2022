@@ -65,7 +65,7 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(20);
+				final String val = command.substring(20);
 				removeSkillsPage(activeChar, Integer.parseInt(val));
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -80,7 +80,7 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(18);
+				final String val = command.substring(18);
 				AdminHelpPage.showHelpPage(activeChar, "skills/" + val + ".htm");
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -91,7 +91,7 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(15);
+				final String val = command.substring(15);
 				
 				if ((activeChar == activeChar.getTarget()) || activeChar.getAccessLevel().isGm())
 				{
@@ -107,7 +107,7 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			try
 			{
-				String id = command.substring(19);
+				final String id = command.substring(19);
 				
 				final int idval = Integer.parseInt(id);
 				
@@ -144,7 +144,7 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			if (activeChar.getTarget() instanceof PlayerInstance)
 			{
-				PlayerInstance player = (PlayerInstance) activeChar.getTarget();
+				final PlayerInstance player = (PlayerInstance) activeChar.getTarget();
 				
 				for (Skill skill : player.getAllSkills())
 				{
@@ -160,7 +160,7 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			try
 			{
-				String[] val = command.split(" ");
+				final String[] val = command.split(" ");
 				
 				if ((activeChar == activeChar.getTarget()) || activeChar.getAccessLevel().isGm())
 				{
@@ -181,7 +181,7 @@ public class AdminSkill implements IAdminCommandHandler
 	 */
 	private void adminGiveAllSkills(PlayerInstance activeChar)
 	{
-		WorldObject target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
 		
 		if (target instanceof PlayerInstance)
@@ -204,7 +204,7 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			for (SkillLearn s : skills)
 			{
-				Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
+				final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
 				
 				if ((sk == null) || !sk.getCanLearn(player.getClassId()))
 				{
@@ -243,7 +243,7 @@ public class AdminSkill implements IAdminCommandHandler
 	private void removeSkillsPage(PlayerInstance activeChar, int page)
 	{
 		// TODO: Externalize HTML
-		WorldObject target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
 		
 		if (target instanceof PlayerInstance)
@@ -256,7 +256,7 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		
-		Skill[] skills = player.getAllSkills();
+		final Skill[] skills = player.getAllSkills();
 		
 		final int maxSkillsPerPage = 10;
 		int maxPages = skills.length / maxSkillsPerPage;
@@ -279,8 +279,8 @@ public class AdminSkill implements IAdminCommandHandler
 			skillsEnd = SkillsStart + maxSkillsPerPage;
 		}
 		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		StringBuilder replyMSG = new StringBuilder("<html><body>");
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final StringBuilder replyMSG = new StringBuilder("<html><body>");
 		replyMSG.append("<table width=260><tr>");
 		replyMSG.append("<td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 		replyMSG.append("<td width=180><center>Character Selection Menu</center></td>");
@@ -326,7 +326,7 @@ public class AdminSkill implements IAdminCommandHandler
 	
 	private void showMainPage(PlayerInstance activeChar)
 	{
-		WorldObject target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
 		
 		if (target instanceof PlayerInstance)
@@ -339,7 +339,7 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/charskills.htm");
 		adminReply.replace("%name%", player.getName());
 		adminReply.replace("%level%", String.valueOf(player.getLevel()));
@@ -349,7 +349,7 @@ public class AdminSkill implements IAdminCommandHandler
 	
 	private void adminGetSkills(PlayerInstance activeChar)
 	{
-		WorldObject target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
 		
 		if (target instanceof PlayerInstance)
@@ -368,7 +368,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			Skill[] skills = player.getAllSkills();
+			final Skill[] skills = player.getAllSkills();
 			adminSkills = activeChar.getAllSkills();
 			
 			for (Skill adminSkill : adminSkills)
@@ -390,7 +390,7 @@ public class AdminSkill implements IAdminCommandHandler
 	
 	private void adminResetSkills(PlayerInstance activeChar)
 	{
-		WorldObject target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
 		
 		if (target instanceof PlayerInstance)
@@ -409,7 +409,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			Skill[] skills = player.getAllSkills();
+			final Skill[] skills = player.getAllSkills();
 			
 			for (Skill skill : skills)
 			{
@@ -441,7 +441,7 @@ public class AdminSkill implements IAdminCommandHandler
 	
 	private void adminAddSkill(PlayerInstance activeChar, String val)
 	{
-		WorldObject target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
 		
 		if (target instanceof PlayerInstance)
@@ -464,7 +464,7 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		
-		StringTokenizer st = new StringTokenizer(val);
+		final StringTokenizer st = new StringTokenizer(val);
 		
 		if (st.countTokens() != 2)
 		{
@@ -476,8 +476,8 @@ public class AdminSkill implements IAdminCommandHandler
 			
 			try
 			{
-				String id = st.nextToken();
-				String level = st.nextToken();
+				final String id = st.nextToken();
+				final String level = st.nextToken();
 				
 				final int idval = Integer.parseInt(id);
 				final int levelval = Integer.parseInt(level);
@@ -490,7 +490,7 @@ public class AdminSkill implements IAdminCommandHandler
 			
 			if (skill != null)
 			{
-				String name = skill.getName();
+				final String name = skill.getName();
 				player.sendMessage("Admin gave you the skill " + name + ".");
 				player.addSkill(skill, true);
 				// Admin information
@@ -508,7 +508,7 @@ public class AdminSkill implements IAdminCommandHandler
 	
 	private void adminRemoveSkill(PlayerInstance activeChar, int idval)
 	{
-		WorldObject target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
 		
 		if (target instanceof PlayerInstance)
@@ -521,7 +521,7 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		
-		Skill skill = SkillTable.getInstance().getInfo(idval, player.getSkillLevel(idval));
+		final Skill skill = SkillTable.getInstance().getInfo(idval, player.getSkillLevel(idval));
 		
 		if (skill != null)
 		{
@@ -543,7 +543,7 @@ public class AdminSkill implements IAdminCommandHandler
 	
 	private void adminAddClanSkill(PlayerInstance activeChar, int id, int level)
 	{
-		WorldObject target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
 		
 		if (target instanceof PlayerInstance)
@@ -577,7 +577,7 @@ public class AdminSkill implements IAdminCommandHandler
 		final Skill skill = SkillTable.getInstance().getInfo(id, level);
 		if (skill != null)
 		{
-			String skillname = skill.getName();
+			final String skillname = skill.getName();
 			final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_SKILL_S1_ADDED);
 			sm.addSkillName(id);
 			player.sendPacket(sm);

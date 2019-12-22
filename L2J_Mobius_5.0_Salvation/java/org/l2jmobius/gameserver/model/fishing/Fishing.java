@@ -382,13 +382,13 @@ public class Fishing
 		// calculate a position in front of the player with a random distance
 		final int distMin = FishingData.getInstance().getBaitDistanceMin();
 		final int distMax = FishingData.getInstance().getBaitDistanceMax();
-		int distance = Rnd.get(distMin, distMax);
+		final int distance = Rnd.get(distMin, distMax);
 		final double angle = Util.convertHeadingToDegree(_player.getHeading());
 		final double radian = Math.toRadians(angle);
 		final double sin = Math.sin(radian);
 		final double cos = Math.cos(radian);
-		int baitX = (int) (_player.getX() + (cos * distance));
-		int baitY = (int) (_player.getY() + (sin * distance));
+		final int baitX = (int) (_player.getX() + (cos * distance));
+		final int baitY = (int) (_player.getY() + (sin * distance));
 		
 		// search for fishing zone
 		FishingZone fishingZone = null;
@@ -411,7 +411,7 @@ public class Fishing
 			}
 		}
 		
-		int baitZ = computeBaitZ(_player, baitX, baitY, fishingZone, waterZone);
+		final int baitZ = computeBaitZ(_player, baitX, baitY, fishingZone, waterZone);
 		if (baitZ == Integer.MIN_VALUE)
 		{
 			_player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE_YOUR_CHARACTER_IS_NOT_FACING_WATER_OR_YOU_ARE_NOT_IN_A_FISHING_GROUND);

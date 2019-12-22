@@ -58,7 +58,7 @@ public class Q024_InhabitantsOfTheForrestOfTheDead extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		String htmltext = event;
+		final String htmltext = event;
 		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{

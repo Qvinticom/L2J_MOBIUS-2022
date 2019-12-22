@@ -51,7 +51,7 @@ public class Q650_ABrokenDream extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -82,7 +82,7 @@ public class Q650_ABrokenDream extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -92,7 +92,7 @@ public class Q650_ABrokenDream extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				QuestState st2 = player.getQuestState(Q117_TheOceanOfDistantStars.class.getSimpleName());
+				final QuestState st2 = player.getQuestState(Q117_TheOceanOfDistantStars.class.getSimpleName());
 				if ((st2 != null) && st2.isCompleted() && (player.getLevel() >= 39))
 				{
 					htmltext = "32054-01.htm";
@@ -115,7 +115,7 @@ public class Q650_ABrokenDream extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerState(player, npc, State.STARTED);
+		final QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)
 		{
 			return null;

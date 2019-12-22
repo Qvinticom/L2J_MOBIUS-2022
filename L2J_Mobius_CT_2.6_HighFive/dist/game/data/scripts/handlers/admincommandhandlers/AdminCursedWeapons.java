@@ -100,7 +100,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 					
 					if (cw.isActivated())
 					{
-						PlayerInstance pl = cw.getPlayer();
+						final PlayerInstance pl = cw.getPlayer();
 						replyMSG.append("<tr><td>Weilder:</td><td>");
 						replyMSG.append(pl == null ? "null" : pl.getName());
 						replyMSG.append("</td></tr>");

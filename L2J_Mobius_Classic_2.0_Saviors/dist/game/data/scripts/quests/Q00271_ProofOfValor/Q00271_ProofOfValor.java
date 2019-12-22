@@ -70,7 +70,7 @@ public class Q00271_ProofOfValor extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final long count = getQuestItemsCount(killer, KASHA_WOLF_FANG);
-			int amount = ((getRandom(100) < 25) && (count < 49)) ? 2 : 1;
+			final int amount = ((getRandom(100) < 25) && (count < 49)) ? 2 : 1;
 			giveItems(killer, KASHA_WOLF_FANG, amount);
 			if ((count + amount) >= 50)
 			{

@@ -109,7 +109,7 @@ public class ServerList extends LoginServerPacket
 			{
 				final InetAddress i4 = InetAddress.getByName(server._ip);
 				
-				byte[] raw = i4.getAddress();
+				final byte[] raw = i4.getAddress();
 				
 				writeC(raw[0] & 0xff);
 				writeC(raw[1] & 0xff);

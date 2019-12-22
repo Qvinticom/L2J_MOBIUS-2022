@@ -53,7 +53,7 @@ public class AwayCmd implements IVoicedCommandHandler
 	
 	private boolean away(PlayerInstance activeChar, String text)
 	{
-		Siege siege = SiegeManager.getInstance().getSiege(activeChar);
+		final Siege siege = SiegeManager.getInstance().getSiege(activeChar);
 		
 		// check char is all ready in away mode
 		if (activeChar.isAway() || activeChar.isAwaying())

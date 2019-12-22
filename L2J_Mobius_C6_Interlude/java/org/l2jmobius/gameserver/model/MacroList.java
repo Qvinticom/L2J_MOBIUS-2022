@@ -81,7 +81,7 @@ public class MacroList
 		}
 		else
 		{
-			Macro old = _macroses.put(macro.id, macro);
+			final Macro old = _macroses.put(macro.id, macro);
 			
 			if (old != null)
 			{
@@ -95,7 +95,7 @@ public class MacroList
 	
 	public void deleteMacro(int id)
 	{
-		Macro toRemove = _macroses.get(id);
+		final Macro toRemove = _macroses.get(id);
 		
 		if (toRemove != null)
 		{
@@ -121,7 +121,7 @@ public class MacroList
 	{
 		_revision++;
 		
-		Macro[] all = getAllMacroses();
+		final Macro[] all = getAllMacroses();
 		
 		if (all.length == 0)
 		{
@@ -140,7 +140,7 @@ public class MacroList
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("INSERT INTO character_macroses (char_obj_id,id,icon,name,descr,acronym,commands) values(?,?,?,?,?,?,?)");
+			final PreparedStatement statement = con.prepareStatement("INSERT INTO character_macroses (char_obj_id,id,icon,name,descr,acronym,commands) values(?,?,?,?,?,?,?)");
 			statement.setInt(1, _owner.getObjectId());
 			statement.setInt(2, macro.id);
 			statement.setInt(3, macro.icon);
@@ -148,7 +148,7 @@ public class MacroList
 			statement.setString(5, macro.descr);
 			statement.setString(6, macro.acronym);
 			
-			StringBuilder sb = new StringBuilder();
+			final StringBuilder sb = new StringBuilder();
 			
 			for (MacroCmd cmd : macro.commands)
 			{
@@ -193,7 +193,7 @@ public class MacroList
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("DELETE FROM character_macroses WHERE char_obj_id=? AND id=?");
+			final PreparedStatement statement = con.prepareStatement("DELETE FROM character_macroses WHERE char_obj_id=? AND id=?");
 			statement.setInt(1, _owner.getObjectId());
 			statement.setInt(2, macro.id);
 			statement.execute();
@@ -210,24 +210,24 @@ public class MacroList
 		_macroses.clear();
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT char_obj_id, id, icon, name, descr, acronym, commands FROM character_macroses WHERE char_obj_id=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT char_obj_id, id, icon, name, descr, acronym, commands FROM character_macroses WHERE char_obj_id=?");
 			statement.setInt(1, _owner.getObjectId());
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			
 			while (rset.next())
 			{
 				final int id = rset.getInt("id");
 				final int icon = rset.getInt("icon");
 				
-				String name = rset.getString("name");
-				String descr = rset.getString("descr");
-				String acronym = rset.getString("acronym");
-				List<MacroCmd> commands = new ArrayList<>();
-				StringTokenizer st1 = new StringTokenizer(rset.getString("commands"), ";");
+				final String name = rset.getString("name");
+				final String descr = rset.getString("descr");
+				final String acronym = rset.getString("acronym");
+				final List<MacroCmd> commands = new ArrayList<>();
+				final StringTokenizer st1 = new StringTokenizer(rset.getString("commands"), ";");
 				
 				while (st1.hasMoreTokens())
 				{
-					StringTokenizer st = new StringTokenizer(st1.nextToken(), ",");
+					final StringTokenizer st = new StringTokenizer(st1.nextToken(), ",");
 					
 					if (st.countTokens() < 3)
 					{
@@ -245,11 +245,11 @@ public class MacroList
 						cmd = st.nextToken();
 					}
 					
-					MacroCmd mcmd = new MacroCmd(commands.size(), type, d1, d2, cmd);
+					final MacroCmd mcmd = new MacroCmd(commands.size(), type, d1, d2, cmd);
 					commands.add(mcmd);
 				}
 				
-				Macro m = new Macro(id, icon, name, descr, acronym, commands.toArray(new MacroCmd[commands.size()]));
+				final Macro m = new Macro(id, icon, name, descr, acronym, commands.toArray(new MacroCmd[commands.size()]));
 				_macroses.put(m.id, m);
 			}
 			rset.close();

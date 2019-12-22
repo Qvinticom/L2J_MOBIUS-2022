@@ -62,7 +62,7 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -334,7 +334,7 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -344,13 +344,13 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				QuestState pavelReq = player.getQuestState(Q121_PavelTheGiant.class.getSimpleName());
+				final QuestState pavelReq = player.getQuestState(Q121_PavelTheGiant.class.getSimpleName());
 				htmltext = ((pavelReq == null) || !pavelReq.isCompleted() || (player.getLevel() < 49)) ? "32041-00.htm" : "32041-01.htm";
 				break;
 			
 			case State.STARTED:
-				int cond = st.getInt("cond");
-				int talk = st.getInt("talk");
+				final int cond = st.getInt("cond");
+				final int talk = st.getInt("talk");
 				
 				switch (npc.getNpcId())
 				{
@@ -611,7 +611,7 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerCondition(player, npc, "cond", "10");
+		final QuestState st = checkPlayerCondition(player, npc, "cond", "10");
 		if (st == null)
 		{
 			return null;

@@ -51,8 +51,8 @@ public class Q350_EnhanceYourWeapon extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		String htmltext = event;
-		QuestState qs = player.getQuestState(getName());
+		final String htmltext = event;
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
@@ -104,7 +104,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState qs = player.getQuestState(getName());
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;

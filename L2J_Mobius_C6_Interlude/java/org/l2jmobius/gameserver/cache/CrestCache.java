@@ -124,9 +124,9 @@ public class CrestCache
 	
 	public void convertOldPedgeFiles()
 	{
-		File dir = new File(Config.DATAPACK_ROOT, "data/crests/");
+		final File dir = new File(Config.DATAPACK_ROOT, "data/crests/");
 		
-		File[] files = dir.listFiles(new OldPledgeFilter());
+		final File[] files = dir.listFiles(new OldPledgeFilter());
 		
 		if (files == null)
 		{
@@ -142,7 +142,7 @@ public class CrestCache
 			
 			final int newId = IdFactory.getInstance().getNextId();
 			
-			Clan clan = ClanTable.getInstance().getClan(clanId);
+			final Clan clan = ClanTable.getInstance().getClan(clanId);
 			
 			if (clan != null)
 			{
@@ -153,7 +153,7 @@ public class CrestCache
 				
 				try (Connection con = DatabaseFactory.getConnection())
 				{
-					PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET crest_id = ? WHERE clan_id = ?");
+					final PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET crest_id = ? WHERE clan_id = ?");
 					statement.setInt(1, newId);
 					statement.setInt(2, clan.getClanId());
 					statement.executeUpdate();
@@ -202,7 +202,7 @@ public class CrestCache
 	
 	public void removePledgeCrest(int id)
 	{
-		File crestFile = new File(Config.DATAPACK_ROOT, "data/crests/Crest_" + id + ".bmp");
+		final File crestFile = new File(Config.DATAPACK_ROOT, "data/crests/Crest_" + id + ".bmp");
 		_cachePledge.remove(id);
 		
 		try
@@ -216,7 +216,7 @@ public class CrestCache
 	
 	public void removePledgeCrestLarge(int id)
 	{
-		File crestFile = new File(Config.DATAPACK_ROOT, "data/crests/Crest_Large_" + id + ".bmp");
+		final File crestFile = new File(Config.DATAPACK_ROOT, "data/crests/Crest_Large_" + id + ".bmp");
 		_cachePledgeLarge.remove(id);
 		
 		try
@@ -230,7 +230,7 @@ public class CrestCache
 	
 	public void removeOldPledgeCrest(int id)
 	{
-		File crestFile = new File(Config.DATAPACK_ROOT, "data/crests/Pledge_" + id + ".bmp");
+		final File crestFile = new File(Config.DATAPACK_ROOT, "data/crests/Pledge_" + id + ".bmp");
 		
 		try
 		{
@@ -243,7 +243,7 @@ public class CrestCache
 	
 	public void removeAllyCrest(int id)
 	{
-		File crestFile = new File(Config.DATAPACK_ROOT, "data/crests/AllyCrest_" + id + ".bmp");
+		final File crestFile = new File(Config.DATAPACK_ROOT, "data/crests/AllyCrest_" + id + ".bmp");
 		_cacheAlly.remove(id);
 		
 		try

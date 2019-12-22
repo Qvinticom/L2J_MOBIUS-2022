@@ -89,7 +89,7 @@ public class ScrollOfEscape implements IItemHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) playable;
+		final PlayerInstance player = (PlayerInstance) playable;
 		
 		if (checkConditions(player))
 		{
@@ -186,23 +186,23 @@ public class ScrollOfEscape implements IItemHandler
 		player.disableAllSkills();
 		
 		// fix soe
-		WorldObject oldtarget = player.getTarget();
+		final WorldObject oldtarget = player.getTarget();
 		player.setTarget(player);
 		
 		final Skill skill = SkillTable.getInstance().getInfo(escapeSkill, 1);
 		final MagicSkillUse msu = new MagicSkillUse(player, escapeSkill, 1, skill.getHitTime(), 0);
 		player.broadcastPacket(msu);
 		player.setTarget(oldtarget);
-		SetupGauge sg = new SetupGauge(0, skill.getHitTime());
+		final SetupGauge sg = new SetupGauge(0, skill.getHitTime());
 		player.sendPacket(sg);
 		// End SoE Animation section
 		player.setTarget(null);
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
 		sm.addItemName(itemId);
 		player.sendPacket(sm);
 		
-		EscapeFinalizer ef = new EscapeFinalizer(player, itemId);
+		final EscapeFinalizer ef = new EscapeFinalizer(player, itemId);
 		// continue execution later
 		player.setSkillCast(ThreadPool.schedule(ef, skill.getHitTime()));
 		player.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (skill.getHitTime() / GameTimeController.MILLIS_IN_TICK));

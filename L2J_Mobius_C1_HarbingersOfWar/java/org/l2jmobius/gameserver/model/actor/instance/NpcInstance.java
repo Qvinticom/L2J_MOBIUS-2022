@@ -266,7 +266,7 @@ public class NpcInstance extends Creature
 		{
 			try
 			{
-				FileInputStream fis = new FileInputStream(file);
+				final FileInputStream fis = new FileInputStream(file);
 				final byte[] raw = new byte[fis.available()];
 				fis.read(raw);
 				final String content = new String(raw, StandardCharsets.UTF_8);

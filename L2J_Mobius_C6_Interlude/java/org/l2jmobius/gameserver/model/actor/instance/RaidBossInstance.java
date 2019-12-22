@@ -81,7 +81,7 @@ public class RaidBossInstance extends MonsterInstance
 		
 		if (player != null)
 		{
-			SystemMessage msg = new SystemMessage(SystemMessageId.RAID_WAS_SUCCESSFUL);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.RAID_WAS_SUCCESSFUL);
 			broadcastPacket(msg);
 			if (player.getParty() != null)
 			{
@@ -114,7 +114,7 @@ public class RaidBossInstance extends MonsterInstance
 		_minionMaintainTask = ThreadPool.scheduleAtFixedRate(() ->
 		{
 			// teleport raid boss home if it's too far from home location
-			Spawn bossSpawn = getSpawn();
+			final Spawn bossSpawn = getSpawn();
 			
 			int rbLockRange = Config.RBLOCKRAGE;
 			if (Config.RBS_SPECIFIC_LOCK_RAGE.get(bossSpawn.getNpcId()) != null)

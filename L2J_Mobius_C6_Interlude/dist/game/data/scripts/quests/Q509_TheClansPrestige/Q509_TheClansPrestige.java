@@ -128,7 +128,7 @@ public class Q509_TheClansPrestige extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -136,13 +136,13 @@ public class Q509_TheClansPrestige extends Quest
 		
 		if (Util.isDigit(event))
 		{
-			int evt = Integer.parseInt(event);
+			final int evt = Integer.parseInt(event);
 			st.set("raid", event);
 			htmltext = "31331-" + event + ".htm";
 			
-			int x = radar[evt - 1][0];
-			int y = radar[evt - 1][1];
-			int z = radar[evt - 1][2];
+			final int x = radar[evt - 1][0];
+			final int y = radar[evt - 1][1];
+			final int z = radar[evt - 1][2];
 			
 			if ((x + y + z) > 0)
 			{
@@ -165,14 +165,14 @@ public class Q509_TheClansPrestige extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		
 		switch (st.getState())
 		{
@@ -194,12 +194,12 @@ public class Q509_TheClansPrestige extends Quest
 				break;
 			
 			case State.STARTED:
-				int raid = st.getInt("raid");
+				final int raid = st.getInt("raid");
 				if (st.getInt("cond") == 1)
 				{
-					int item = REWARD_LIST[raid - 1][1];
-					int count = st.getQuestItemsCount(item);
-					int reward = Rnd.get(REWARD_LIST[raid - 1][2], REWARD_LIST[raid - 1][3]);
+					final int item = REWARD_LIST[raid - 1][1];
+					final int count = st.getQuestItemsCount(item);
+					final int reward = Rnd.get(REWARD_LIST[raid - 1][2], REWARD_LIST[raid - 1][3]);
 					
 					if (count == 0)
 					{
@@ -224,17 +224,17 @@ public class Q509_TheClansPrestige extends Quest
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		// Retrieve the qs of the clan leader.
-		QuestState st = getClanLeaderQuestState(player, npc);
+		final QuestState st = getClanLeaderQuestState(player, npc);
 		if ((st == null) || !st.isStarted())
 		{
 			return null;
 		}
 		
 		// Reward only if quest is setup on good index.
-		int raid = st.getInt("raid");
+		final int raid = st.getInt("raid");
 		if (REWARD_LIST[raid - 1][0] == npc.getNpcId())
 		{
-			int item = REWARD_LIST[raid - 1][1];
+			final int item = REWARD_LIST[raid - 1][1];
 			if (!st.hasQuestItems(item))
 			{
 				st.giveItems(item, 1);

@@ -50,8 +50,8 @@ public class Q291_RevengeOfTheRedbonnet extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final String htmltext = event;
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -70,7 +70,7 @@ public class Q291_RevengeOfTheRedbonnet extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -84,7 +84,7 @@ public class Q291_RevengeOfTheRedbonnet extends Quest
 				break;
 			
 			case State.STARTED:
-				int cond = st.getInt("cond");
+				final int cond = st.getInt("cond");
 				if (cond == 1)
 				{
 					htmltext = "30553-04.htm";
@@ -94,7 +94,7 @@ public class Q291_RevengeOfTheRedbonnet extends Quest
 					htmltext = "30553-05.htm";
 					st.takeItems(BLACK_WOLF_PELT, -1);
 					
-					int random = Rnd.get(100);
+					final int random = Rnd.get(100);
 					if (random < 3)
 					{
 						st.rewardItems(GRANDMA_PEARL, 1);
@@ -125,7 +125,7 @@ public class Q291_RevengeOfTheRedbonnet extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
 		if (st == null)
 		{
 			return null;

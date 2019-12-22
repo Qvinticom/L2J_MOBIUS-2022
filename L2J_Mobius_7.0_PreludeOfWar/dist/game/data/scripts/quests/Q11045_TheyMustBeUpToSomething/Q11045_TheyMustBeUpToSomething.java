@@ -162,14 +162,11 @@ public class Q11045_TheyMustBeUpToSomething extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1))
+		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, KETRA_ORDER, 1, 15, 0.5, true))
 		{
-			if (giveItemRandomly(killer, KETRA_ORDER, 1, 15, 0.5, true))
-			{
-				qs.setCond(2, true);
-				giveItems(killer, SOE_RECLOUS);
-				showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_RECLOUS_IN_YOUR_INVENTORY_NTALK_TO_RECLOUS_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
-			}
+			qs.setCond(2, true);
+			giveItems(killer, SOE_RECLOUS);
+			showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_RECLOUS_IN_YOUR_INVENTORY_NTALK_TO_RECLOUS_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

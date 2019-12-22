@@ -64,7 +64,7 @@ public class Remedy implements IItemHandler
 		final int itemId = item.getItemId();
 		if (itemId == 1831) // antidote
 		{
-			Effect[] effects = player.getAllEffects();
+			final Effect[] effects = player.getAllEffects();
 			for (Effect e : effects)
 			{
 				if ((e.getSkill().getSkillType() == Skill.SkillType.POISON) && (e.getSkill().getLevel() <= 3))
@@ -73,14 +73,14 @@ public class Remedy implements IItemHandler
 					break;
 				}
 			}
-			MagicSkillUse msu = new MagicSkillUse(playable, playable, 2042, 1, 0, 0);
+			final MagicSkillUse msu = new MagicSkillUse(playable, playable, 2042, 1, 0, 0);
 			player.sendPacket(msu);
 			player.broadcastPacket(msu);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 		else if (itemId == 1832) // advanced antidote
 		{
-			Effect[] effects = player.getAllEffects();
+			final Effect[] effects = player.getAllEffects();
 			for (Effect e : effects)
 			{
 				if ((e.getSkill().getSkillType() == Skill.SkillType.POISON) && (e.getSkill().getLevel() <= 7))
@@ -89,14 +89,14 @@ public class Remedy implements IItemHandler
 					break;
 				}
 			}
-			MagicSkillUse msu = new MagicSkillUse(playable, playable, 2043, 1, 0, 0);
+			final MagicSkillUse msu = new MagicSkillUse(playable, playable, 2043, 1, 0, 0);
 			player.sendPacket(msu);
 			player.broadcastPacket(msu);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 		else if (itemId == 1833) // bandage
 		{
-			Effect[] effects = player.getAllEffects();
+			final Effect[] effects = player.getAllEffects();
 			for (Effect e : effects)
 			{
 				if ((e.getSkill().getSkillType() == Skill.SkillType.BLEED) && (e.getSkill().getLevel() <= 3))
@@ -105,14 +105,14 @@ public class Remedy implements IItemHandler
 					break;
 				}
 			}
-			MagicSkillUse msu = new MagicSkillUse(playable, playable, 34, 1, 0, 0);
+			final MagicSkillUse msu = new MagicSkillUse(playable, playable, 34, 1, 0, 0);
 			player.sendPacket(msu);
 			player.broadcastPacket(msu);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 		else if (itemId == 1834) // emergency dressing
 		{
-			Effect[] effects = player.getAllEffects();
+			final Effect[] effects = player.getAllEffects();
 			for (Effect e : effects)
 			{
 				if ((e.getSkill().getSkillType() == Skill.SkillType.BLEED) && (e.getSkill().getLevel() <= 7))
@@ -121,14 +121,14 @@ public class Remedy implements IItemHandler
 					break;
 				}
 			}
-			MagicSkillUse msu = new MagicSkillUse(playable, playable, 2045, 1, 0, 0);
+			final MagicSkillUse msu = new MagicSkillUse(playable, playable, 2045, 1, 0, 0);
 			player.sendPacket(msu);
 			player.broadcastPacket(msu);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 		else if (itemId == 3889) // potion of recovery
 		{
-			Effect[] effects = player.getAllEffects();
+			final Effect[] effects = player.getAllEffects();
 			for (Effect e : effects)
 			{
 				if (e.getSkill().getId() == 4082)
@@ -144,7 +144,7 @@ public class Remedy implements IItemHandler
 				player.stopRooting(null);
 			}
 			
-			MagicSkillUse msu = new MagicSkillUse(playable, playable, 2042, 1, 0, 0);
+			final MagicSkillUse msu = new MagicSkillUse(playable, playable, 2042, 1, 0, 0);
 			player.sendPacket(msu);
 			player.broadcastPacket(msu);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);

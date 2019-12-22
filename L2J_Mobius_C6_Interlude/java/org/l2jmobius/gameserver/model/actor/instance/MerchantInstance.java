@@ -70,11 +70,11 @@ public class MerchantInstance extends FolkInstance
 	private void showWearWindow(PlayerInstance player, int val)
 	{
 		player.tempInvetoryDisable();
-		StoreTradeList list = TradeController.getInstance().getBuyList(val);
+		final StoreTradeList list = TradeController.getInstance().getBuyList(val);
 		
 		if (list != null)
 		{
-			WearList bl = new WearList(list, player.getAdena(), player.getExpertiseIndex());
+			final WearList bl = new WearList(list, player.getAdena(), player.getExpertiseIndex());
 			player.sendPacket(bl);
 		}
 		else
@@ -100,10 +100,10 @@ public class MerchantInstance extends FolkInstance
 		
 		player.tempInvetoryDisable();
 		
-		StoreTradeList list = TradeController.getInstance().getBuyList(val);
+		final StoreTradeList list = TradeController.getInstance().getBuyList(val);
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 		{
-			BuyList bl = new BuyList(list, player.getAdena(), taxRate);
+			final BuyList bl = new BuyList(list, player.getAdena(), taxRate);
 			player.sendPacket(bl);
 		}
 		else
@@ -128,8 +128,8 @@ public class MerchantInstance extends FolkInstance
 	@Override
 	public void onBypassFeedback(PlayerInstance player, String command)
 	{
-		StringTokenizer st = new StringTokenizer(command, " ");
-		String actualCommand = st.nextToken(); // Get actual command
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		final String actualCommand = st.nextToken(); // Get actual command
 		
 		if (actualCommand.equalsIgnoreCase("Buy"))
 		{
@@ -208,7 +208,7 @@ public class MerchantInstance extends FolkInstance
 			return;
 		}
 		
-		StringBuilder html1 = new StringBuilder("<html><body>Pet Manager:<br>");
+		final StringBuilder html1 = new StringBuilder("<html><body>Pet Manager:<br>");
 		html1.append("You can rent a wyvern or strider for adena.<br>My prices:<br1>");
 		html1.append("<table border=0><tr><td>Ride</td></tr>");
 		html1.append("<tr><td>Wyvern</td><td>Strider</td></tr>");
@@ -279,7 +279,7 @@ public class MerchantInstance extends FolkInstance
 			return;
 		}
 		
-		Ride mount = new Ride(player.getObjectId(), Ride.ACTION_MOUNT, petId);
+		final Ride mount = new Ride(player.getObjectId(), Ride.ACTION_MOUNT, petId);
 		player.broadcastPacket(mount);
 		
 		player.setMountType(mount.getMountType());
@@ -289,7 +289,7 @@ public class MerchantInstance extends FolkInstance
 	@Override
 	public void onActionShift(GameClient client)
 	{
-		PlayerInstance player = client.getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -299,19 +299,19 @@ public class MerchantInstance extends FolkInstance
 		{
 			player.setTarget(this);
 			
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 			player.sendPacket(my);
 			
 			if (isAutoAttackable(player))
 			{
-				StatusUpdate su = new StatusUpdate(getObjectId());
+				final StatusUpdate su = new StatusUpdate(getObjectId());
 				su.addAttribute(StatusUpdate.CUR_HP, (int) getCurrentHp());
 				su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
 				player.sendPacket(su);
 			}
 			
-			NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			StringBuilder html1 = new StringBuilder("<html><body><table border=0>");
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			final StringBuilder html1 = new StringBuilder("<html><body><table border=0>");
 			html1.append("<tr><td>Current Target:</td></tr>");
 			html1.append("<tr><td><br></td></tr>");
 			

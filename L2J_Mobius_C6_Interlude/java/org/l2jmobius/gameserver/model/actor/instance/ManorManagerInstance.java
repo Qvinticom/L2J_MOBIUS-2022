@@ -64,7 +64,7 @@ public class ManorManagerInstance extends MerchantInstance
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
@@ -78,7 +78,7 @@ public class ManorManagerInstance extends MerchantInstance
 		else // If player is a lord of this manor, alternative message from NPC
 		if (CastleManorManager.getInstance().isDisabled())
 		{
-			NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			html.setFile("data/html/npcdefault.htm");
 			html.replace("%objectId%", String.valueOf(getObjectId()));
 			html.replace("%npcname%", getName());
@@ -106,7 +106,7 @@ public class ManorManagerInstance extends MerchantInstance
 		final double taxRate = 0;
 		player.tempInvetoryDisable();
 		
-		StoreTradeList list = TradeController.getInstance().getBuyList(Integer.parseInt(val));
+		final StoreTradeList list = TradeController.getInstance().getBuyList(Integer.parseInt(val));
 		
 		if (list != null)
 		{
@@ -141,8 +141,8 @@ public class ManorManagerInstance extends MerchantInstance
 				return;
 			}
 			
-			String params = command.substring(command.indexOf('?') + 1);
-			StringTokenizer st = new StringTokenizer(params, "&");
+			final String params = command.substring(command.indexOf('?') + 1);
+			final StringTokenizer st = new StringTokenizer(params, "&");
 			final int ask = Integer.parseInt(st.nextToken().split("=")[1]);
 			final int state = Integer.parseInt(st.nextToken().split("=")[1]);
 			final int time = Integer.parseInt(st.nextToken().split("=")[1]);
@@ -168,8 +168,8 @@ public class ManorManagerInstance extends MerchantInstance
 					}
 					else
 					{
-						StoreTradeList tradeList = new StoreTradeList(0);
-						List<SeedProduction> seeds = getCastle().getSeedProduction(CastleManorManager.PERIOD_CURRENT);
+						final StoreTradeList tradeList = new StoreTradeList(0);
+						final List<SeedProduction> seeds = getCastle().getSeedProduction(CastleManorManager.PERIOD_CURRENT);
 						for (SeedProduction s : seeds)
 						{
 							final ItemInstance item = ItemTable.getInstance().createDummyItem(s.getId());
@@ -186,7 +186,7 @@ public class ManorManagerInstance extends MerchantInstance
 								tradeList.addItem(item);
 							}
 						}
-						BuyListSeed bl = new BuyListSeed(tradeList, castleId, player.getAdena());
+						final BuyListSeed bl = new BuyListSeed(tradeList, castleId, player.getAdena());
 						player.sendPacket(bl);
 					}
 					break;
@@ -239,9 +239,9 @@ public class ManorManagerInstance extends MerchantInstance
 		}
 		else if (command.startsWith("help"))
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
+			final StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken(); // discard first
-			String filename = "manor_client_help00" + st.nextToken() + ".htm";
+			final String filename = "manor_client_help00" + st.nextToken() + ".htm";
 			showMessageWindow(player, filename);
 		}
 		else
@@ -263,7 +263,7 @@ public class ManorManagerInstance extends MerchantInstance
 	
 	private void showMessageWindow(PlayerInstance player, String filename)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(getHtmlPath() + filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcId%", String.valueOf(getNpcId()));

@@ -87,7 +87,7 @@ public class ClanHallZone extends ZoneType
 			// Set as in clan hall
 			creature.setInsideZone(ZoneId.CLAN_HALL, true);
 			
-			ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(_clanHallId);
+			final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(_clanHallId);
 			
 			if (clanHall == null)
 			{

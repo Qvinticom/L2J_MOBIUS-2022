@@ -59,7 +59,7 @@ public class Kekropus extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		String htmltext = null;
+		final String htmltext = null;
 		switch (event)
 		{
 			case "teleport":

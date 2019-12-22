@@ -59,7 +59,7 @@ public class WarehouseCacheManager
 			{
 				if ((cTime - entry.getValue()) > _cacheTime)
 				{
-					PlayerInstance player = entry.getKey();
+					final PlayerInstance player = entry.getKey();
 					player.clearWarehouse();
 					_cachedWh.remove(player);
 				}

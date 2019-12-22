@@ -73,7 +73,7 @@ public class Q00225_TestOfTheSearcher extends Quest
 	private static final int HANGMAN_TREE = 20144;
 	private static final int ROAD_SCAVENGER = 20551;
 	private static final int GIANT_FUNGUS = 20555;
-	private static final int DELU_lIZARDMAN_SHAMAN = 20781;
+	private static final int DELU_LIZARDMAN_SHAMAN = 20781;
 	// Quest Monster
 	private static final int NEER_BODYGUARD = 27092;
 	private static final int DELU_CHIEF_KALKIS = 27093;
@@ -85,8 +85,8 @@ public class Q00225_TestOfTheSearcher extends Quest
 		super(225);
 		addStartNpc(MASTER_LUTHER);
 		addTalkId(MASTER_LUTHER, CAPTAIN_ALEX, TYRA, TREE, STRONG_WOODEN_CHEST, MILITIAMAN_LEIRYNN, DRUNKARD_BORYS, BODYGUARD_JAX);
-		addKillId(HANGMAN_TREE, ROAD_SCAVENGER, GIANT_FUNGUS, DELU_lIZARDMAN_SHAMAN, NEER_BODYGUARD, DELU_CHIEF_KALKIS);
-		addAttackId(DELU_lIZARDMAN_SHAMAN);
+		addKillId(HANGMAN_TREE, ROAD_SCAVENGER, GIANT_FUNGUS, DELU_LIZARDMAN_SHAMAN, NEER_BODYGUARD, DELU_CHIEF_KALKIS);
+		addAttackId(DELU_LIZARDMAN_SHAMAN);
 		registerQuestItems(LUTHERS_LETTER, ALEXS_WARRANT, LEIRYNNS_1ST_ORDER, DELU_TOTEM, LEIRYNNS_2ND_ORDER, CHIEF_KALKIS_FANG, LEIRYNNS_REPORT, STRINGE_MAP, LAMBERTS_MAP, ALEXS_LETTER, ALEXS_ORDER, WINE_CATALOG, TYRAS_CONTRACT, RED_SPORE_DUST, MALRUKIAN_WINE, OLD_ORDER, JAXS_DIARY, TORN_MAP_PIECE_1ST, TORN_MAP_PIECE_2ND, SOLTS_MAP, MAKELS_MAP, COMBINED_MAP, RUSTED_KEY, GOLD_BAR, ALEXS_RECOMMEND);
 	}
 	
@@ -190,13 +190,10 @@ public class Q00225_TestOfTheSearcher extends Quest
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(attacker, false);
-		if ((qs != null) && qs.isStarted())
+		if ((qs != null) && qs.isStarted() && npc.isScriptValue(0) && hasQuestItems(attacker, LEIRYNNS_1ST_ORDER))
 		{
-			if (npc.isScriptValue(0) && hasQuestItems(attacker, LEIRYNNS_1ST_ORDER))
-			{
-				npc.setScriptValue(1);
-				addAttackPlayerDesire(addSpawn(NEER_BODYGUARD, npc, true, 200000), attacker);
-			}
+			npc.setScriptValue(1);
+			addAttackPlayerDesire(addSpawn(NEER_BODYGUARD, npc, true, 200000), attacker);
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
@@ -272,7 +269,7 @@ public class Q00225_TestOfTheSearcher extends Quest
 					}
 					break;
 				}
-				case DELU_lIZARDMAN_SHAMAN:
+				case DELU_LIZARDMAN_SHAMAN:
 				{
 					if (hasQuestItems(killer, LEIRYNNS_1ST_ORDER) && (getQuestItemsCount(killer, DELU_TOTEM) < 10))
 					{

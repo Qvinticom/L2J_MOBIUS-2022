@@ -58,7 +58,7 @@ public class RaceTrack extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		
 		if (RETURN_LOCATIONS.containsKey(npc.getNpcId()))
 		{

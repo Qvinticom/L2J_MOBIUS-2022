@@ -98,8 +98,8 @@ public class HtmCache
 	
 	private void parseDir(File dir)
 	{
-		FileFilter filter = new HtmFilter();
-		File[] files = dir.listFiles(filter);
+		final FileFilter filter = new HtmFilter();
+		final File[] files = dir.listFiles(filter);
 		
 		for (File file : files)
 		{
@@ -226,8 +226,8 @@ public class HtmCache
 	 */
 	public boolean isLoadable(String path)
 	{
-		File file = new File(path);
-		HtmFilter filter = new HtmFilter();
+		final File file = new File(path);
+		final HtmFilter filter = new HtmFilter();
 		return file.exists() && filter.accept(file) && !file.isDirectory();
 	}
 	

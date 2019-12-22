@@ -70,7 +70,7 @@ public class Territory
 	
 	public void add(int x, int y, int zmin, int zmax, int proc)
 	{
-		Point[] newPoints = new Point[_points.length + 1];
+		final Point[] newPoints = new Point[_points.length + 1];
 		System.arraycopy(_points, 0, newPoints, 0, _points.length);
 		newPoints[_points.length] = new Point(x, y, zmin, zmax, proc);
 		_points = newPoints;

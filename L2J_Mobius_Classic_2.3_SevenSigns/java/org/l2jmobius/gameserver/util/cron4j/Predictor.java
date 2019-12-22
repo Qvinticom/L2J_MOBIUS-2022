@@ -69,7 +69,7 @@ public class Predictor
 	public Predictor(String schedulingPattern, long start) throws InvalidPatternException
 	{
 		this.schedulingPattern = new SchedulingPattern(schedulingPattern);
-		this.time = (start / (1000 * 60)) * 1000 * 60;
+		time = (start / (1000 * 60)) * 1000 * 60;
 	}
 	
 	/**
@@ -102,7 +102,7 @@ public class Predictor
 	public Predictor(SchedulingPattern schedulingPattern, long start)
 	{
 		this.schedulingPattern = schedulingPattern;
-		this.time = (start / (1000 * 60)) * 1000 * 60;
+		time = (start / (1000 * 60)) * 1000 * 60;
 	}
 	
 	/**
@@ -150,8 +150,8 @@ public class Predictor
 			return time;
 		}
 		// Go through the matcher groups.
-		int size = schedulingPattern.matcherSize;
-		long[] times = new long[size];
+		final int size = schedulingPattern.matcherSize;
+		final long[] times = new long[size];
 		for (int k = 0; k < size; k++)
 		{
 			// Ok, split the time!
@@ -164,11 +164,11 @@ public class Predictor
 			int month = c.get(Calendar.MONTH);
 			int year = c.get(Calendar.YEAR);
 			// Gets the matchers.
-			ValueMatcher minuteMatcher = schedulingPattern.minuteMatchers.get(k);
-			ValueMatcher hourMatcher = schedulingPattern.hourMatchers.get(k);
-			ValueMatcher dayOfMonthMatcher = schedulingPattern.dayOfMonthMatchers.get(k);
-			ValueMatcher dayOfWeekMatcher = schedulingPattern.dayOfWeekMatchers.get(k);
-			ValueMatcher monthMatcher = schedulingPattern.monthMatchers.get(k);
+			final ValueMatcher minuteMatcher = schedulingPattern.minuteMatchers.get(k);
+			final ValueMatcher hourMatcher = schedulingPattern.hourMatchers.get(k);
+			final ValueMatcher dayOfMonthMatcher = schedulingPattern.dayOfMonthMatchers.get(k);
+			final ValueMatcher dayOfWeekMatcher = schedulingPattern.dayOfWeekMatchers.get(k);
+			final ValueMatcher monthMatcher = schedulingPattern.monthMatchers.get(k);
 			for (;;)
 			{ // day of week
 				for (;;)
@@ -214,7 +214,7 @@ public class Predictor
 						}
 						if (dayOfMonthMatcher instanceof DayOfMonthValueMatcher)
 						{
-							DayOfMonthValueMatcher aux = (DayOfMonthValueMatcher) dayOfMonthMatcher;
+							final DayOfMonthValueMatcher aux = (DayOfMonthValueMatcher) dayOfMonthMatcher;
 							if (aux.match(dayOfMonth, month + 1, c.isLeapYear(year)))
 							{
 								break;
@@ -252,9 +252,9 @@ public class Predictor
 				c.set(Calendar.MONTH, month);
 				c.set(Calendar.YEAR, year);
 				// Day-of-month/month/year compatibility check.
-				int oldDayOfMonth = dayOfMonth;
-				int oldMonth = month;
-				int oldYear = year;
+				final int oldDayOfMonth = dayOfMonth;
+				final int oldMonth = month;
+				final int oldYear = year;
 				dayOfMonth = c.get(Calendar.DAY_OF_MONTH);
 				month = c.get(Calendar.MONTH);
 				year = c.get(Calendar.YEAR);
@@ -264,7 +264,7 @@ public class Predictor
 					continue;
 				}
 				// Day of week.
-				int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
+				final int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
 				if (dayOfWeekMatcher.match(dayOfWeek - 1))
 				{
 					break;

@@ -49,7 +49,7 @@ public class CompSpiritShotPacks implements IItemHandler
 		{
 			return;
 		}
-		PlayerInstance player = (PlayerInstance) playable;
+		final PlayerInstance player = (PlayerInstance) playable;
 		
 		final int itemId = item.getItemId();
 		int itemToCreateId;
@@ -69,12 +69,12 @@ public class CompSpiritShotPacks implements IItemHandler
 		player.getInventory().destroyItem("Extract", item, player, null);
 		player.getInventory().addItem("Extract", itemToCreateId, amount, player, item);
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
 		sm.addItemName(itemToCreateId);
 		sm.addNumber(amount);
 		player.sendPacket(sm);
 		
-		ItemList playerUI = new ItemList(player, false);
+		final ItemList playerUI = new ItemList(player, false);
 		player.sendPacket(playerUI);
 	}
 	

@@ -98,7 +98,7 @@ public class Sow implements ISkillHandler
 				continue;
 			}
 			
-			ItemInstance item = _player.getInventory().getItemByItemId(_seedId);
+			final ItemInstance item = _player.getInventory().getItemByItemId(_seedId);
 			if (item == null)
 			{
 				_player.sendPacket(ActionFailed.STATIC_PACKET);

@@ -63,7 +63,7 @@ public class ServerStatus extends ClientBasePacket
 	{
 		super(decrypt);
 		
-		GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(serverId);
+		final GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(serverId);
 		if (gsi != null)
 		{
 			final int size = readD();

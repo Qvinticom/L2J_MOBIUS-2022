@@ -103,13 +103,13 @@ public class AugmentationData
 			
 			int badAugmantData = 0;
 			
-			File file = new File(Config.DATAPACK_ROOT + "/data/stats/augmentation/augmentation_skillmap.xml");
+			final File file = new File(Config.DATAPACK_ROOT + "/data/stats/augmentation/augmentation_skillmap.xml");
 			if (!file.exists())
 			{
 				return;
 			}
 			
-			Document doc = factory.newDocumentBuilder().parse(file);
+			final Document doc = factory.newDocumentBuilder().parse(file);
 			
 			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 			{
@@ -194,18 +194,18 @@ public class AugmentationData
 		{
 			try
 			{
-				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+				final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 				factory.setValidating(false);
 				factory.setIgnoringComments(true);
 				
-				File file = new File(Config.DATAPACK_ROOT + "/data/stats/augmentation/augmentation_stats" + i + ".xml");
+				final File file = new File(Config.DATAPACK_ROOT + "/data/stats/augmentation/augmentation_stats" + i + ".xml");
 				
 				if (!file.exists())
 				{
 					return;
 				}
 				
-				Document doc = factory.newDocumentBuilder().parse(file);
+				final Document doc = factory.newDocumentBuilder().parse(file);
 				
 				for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 				{
@@ -216,7 +216,7 @@ public class AugmentationData
 							if ("stat".equalsIgnoreCase(d.getNodeName()))
 							{
 								NamedNodeMap attrs = d.getAttributes();
-								String statName = attrs.getNamedItem("name").getNodeValue();
+								final String statName = attrs.getNamedItem("name").getNodeValue();
 								
 								float[] soloValues = null;
 								float[] combinedValues = null;
@@ -226,7 +226,7 @@ public class AugmentationData
 									if ("table".equalsIgnoreCase(cd.getNodeName()))
 									{
 										attrs = cd.getAttributes();
-										String tableName = attrs.getNamedItem("name").getNodeValue();
+										final String tableName = attrs.getNamedItem("name").getNodeValue();
 										
 										final StringTokenizer data = new StringTokenizer(cd.getFirstChild().getNodeValue());
 										final List<Float> array = new ArrayList<>();

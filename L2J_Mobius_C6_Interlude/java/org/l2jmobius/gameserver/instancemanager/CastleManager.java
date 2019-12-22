@@ -291,7 +291,7 @@ public class CastleManager
 			return;
 		}
 		
-		PlayerInstance player = member.getPlayerInstance();
+		final PlayerInstance player = member.getPlayerInstance();
 		final int circletId = getCircletByCastleId(castleId);
 		
 		if (circletId != 0)
@@ -303,7 +303,7 @@ public class CastleManager
 				{
 					if (player.isClanLeader())
 					{
-						ItemInstance crown = player.getInventory().getItemByItemId(6841);
+						final ItemInstance crown = player.getInventory().getItemByItemId(6841);
 						
 						if (crown != null)
 						{
@@ -315,7 +315,7 @@ public class CastleManager
 						}
 					}
 					
-					ItemInstance circlet = player.getInventory().getItemByItemId(circletId);
+					final ItemInstance circlet = player.getInventory().getItemByItemId(circletId);
 					if (circlet != null)
 					{
 						if (circlet.isEquipped())

@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.util.IllegalPlayerAction;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
- * @author programmos
+ * @version $Revision: 1.7.2.3.2.6 $ $Date: 2005/03/27 15:29:30 $
  */
 public class RequestRestartPoint extends GameClientPacket
 {

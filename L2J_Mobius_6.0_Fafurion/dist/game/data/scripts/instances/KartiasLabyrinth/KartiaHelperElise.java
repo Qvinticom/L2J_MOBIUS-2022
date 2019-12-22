@@ -166,7 +166,7 @@ public class KartiaHelperElise extends AbstractNpcAI
 				final Map<WorldObject, Integer> hpMap = new HashMap<>();
 				instance.getAliveNpcs(KARTIA_FRIENDS).forEach(friend -> hpMap.put(friend, friend != null ? friend.getCurrentHpPercent() : 100));
 				hpMap.put(plr, plr != null ? plr.getCurrentHpPercent() : 100);
-				Map<WorldObject, Integer> sortedHpMap = Util.sortByValue(hpMap, false);
+				final Map<WorldObject, Integer> sortedHpMap = Util.sortByValue(hpMap, false);
 				
 				// See if any friends are below 80% HP and add to list of people to heal.
 				final List<WorldObject> peopleToHeal = new ArrayList<>();
@@ -195,12 +195,12 @@ public class KartiaHelperElise extends AbstractNpcAI
 						{
 							if (personToHeal.getInstanceType() == InstanceType.PlayerInstance)
 							{
-								PlayerInstance thePlayer = (PlayerInstance) personToHeal;
+								final PlayerInstance thePlayer = (PlayerInstance) personToHeal;
 								thePlayer.setCurrentHp((thePlayer.getMaxHp() * .20) + thePlayer.getCurrentHp());
 							}
 							else
 							{
-								Npc npcToHeal = (Npc) personToHeal;
+								final Npc npcToHeal = (Npc) personToHeal;
 								npcToHeal.setCurrentHp((npcToHeal.getMaxHp() * .20) + npcToHeal.getCurrentHp());
 							}
 						}

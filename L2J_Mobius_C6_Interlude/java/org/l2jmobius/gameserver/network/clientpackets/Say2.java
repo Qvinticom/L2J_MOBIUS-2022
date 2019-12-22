@@ -231,7 +231,7 @@ public class Say2 extends GameClientPacket
 				final PlayerInstance receiver = World.getInstance().getPlayer(_target);
 				if (receiver == null)
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_NOT_ONLINE);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_NOT_ONLINE);
 					sm.addString(_target);
 					player.sendPacket(sm);
 					return;
@@ -269,7 +269,7 @@ public class Say2 extends GameClientPacket
 				}
 				else if (receiver.getBlockList().isInBlockList(player))
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_ADDED_YOU_TO_IGNORE_LIST);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_ADDED_YOU_TO_IGNORE_LIST);
 					sm.addString(_target);
 					player.sendPacket(sm);
 				}

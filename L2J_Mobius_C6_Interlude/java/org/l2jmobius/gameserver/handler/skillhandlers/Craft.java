@@ -41,7 +41,7 @@ public class Craft implements ISkillHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) creature;
+		final PlayerInstance player = (PlayerInstance) creature;
 		
 		if (!player.getFloodProtectors().getManufacture().tryPerformAction("craft"))
 		{

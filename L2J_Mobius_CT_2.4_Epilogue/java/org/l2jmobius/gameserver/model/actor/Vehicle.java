@@ -289,14 +289,14 @@ public abstract class Vehicle extends Creature
 			{
 				if (itemId > 0)
 				{
-					ItemInstance ticket = player.getInventory().getItemByItemId(itemId);
+					final ItemInstance ticket = player.getInventory().getItemByItemId(itemId);
 					if ((ticket == null) || (player.getInventory().destroyItem("Boat", ticket, count, player, this) == null))
 					{
 						player.sendPacket(SystemMessageId.YOU_DO_NOT_POSSESS_THE_CORRECT_TICKET_TO_BOARD_THE_BOAT);
 						player.teleToLocation(new Location(oustX, oustY, oustZ), true);
 						return;
 					}
-					InventoryUpdate iu = new InventoryUpdate();
+					final InventoryUpdate iu = new InventoryUpdate();
 					iu.addModifiedItem(ticket);
 					player.sendPacket(iu);
 				}

@@ -476,7 +476,7 @@ public abstract class Effect
 			
 			if (_skill.isPvpSkill() && (_effected != null) && (_effected instanceof PlayerInstance) && _template.showIcon)
 			{
-				SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+				final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 				smsg.addString(_skill.getName());
 				_effected.sendPacket(smsg);
 			}
@@ -529,13 +529,13 @@ public abstract class Effect
 				}
 				else if (_cancelEffect)
 				{
-					SystemMessage smsg3 = new SystemMessage(SystemMessageId.EFFECT_S1_DISAPPEARED);
+					final SystemMessage smsg3 = new SystemMessage(SystemMessageId.EFFECT_S1_DISAPPEARED);
 					smsg3.addString(_skill.getName());
 					_effected.sendPacket(smsg3);
 				}
 				else if (_count == 0)
 				{
-					SystemMessage smsg3 = new SystemMessage(SystemMessageId.S1_HAS_WORN_OFF);
+					final SystemMessage smsg3 = new SystemMessage(SystemMessageId.S1_HAS_WORN_OFF);
 					smsg3.addString(_skill.getName());
 					_effected.sendPacket(smsg3);
 				}
@@ -574,8 +574,8 @@ public abstract class Effect
 	
 	public void addIcon(MagicEffectIcons mi)
 	{
-		EffectTask task = _currentTask;
-		ScheduledFuture<?> future = _currentFuture;
+		final EffectTask task = _currentTask;
+		final ScheduledFuture<?> future = _currentFuture;
 		
 		if ((task == null) || (future == null))
 		{
@@ -615,8 +615,8 @@ public abstract class Effect
 	
 	public void addPartySpelledIcon(PartySpelled ps)
 	{
-		EffectTask task = _currentTask;
-		ScheduledFuture<?> future = _currentFuture;
+		final EffectTask task = _currentTask;
+		final ScheduledFuture<?> future = _currentFuture;
 		
 		if ((task == null) || (future == null))
 		{
@@ -633,8 +633,8 @@ public abstract class Effect
 	
 	public void addOlympiadSpelledIcon(ExOlympiadSpelledInfo os)
 	{
-		EffectTask task = _currentTask;
-		ScheduledFuture<?> future = _currentFuture;
+		final EffectTask task = _currentTask;
+		final ScheduledFuture<?> future = _currentFuture;
 		
 		if ((task == null) || (future == null))
 		{

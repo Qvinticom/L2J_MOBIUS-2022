@@ -1944,7 +1944,7 @@ public class PlayerInstance extends Playable
 			PreparedStatement ps = con.prepareStatement(RESTORE_CHAR_RECOMS))
 		{
 			ps.setInt(1, getObjectId());
-			ResultSet rset = ps.executeQuery();
+			final ResultSet rset = ps.executeQuery();
 			while (rset.next())
 			{
 				_recomChars.add(rset.getInt("target_id"));
@@ -1958,11 +1958,11 @@ public class PlayerInstance extends Playable
 	
 	private void checkRecom(int recsHave, int recsLeft)
 	{
-		Calendar check = Calendar.getInstance();
+		final Calendar check = Calendar.getInstance();
 		check.setTimeInMillis(_lastRecomUpdate);
 		check.add(Calendar.DAY_OF_MONTH, 1);
 		
-		Calendar min = Calendar.getInstance();
+		final Calendar min = Calendar.getInstance();
 		
 		_recomHave = recsHave;
 		_recomLeft = recsLeft;
@@ -2014,7 +2014,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// If we have to update last update time, but it's now before 13, we should set it to yesterday
-		Calendar update = Calendar.getInstance();
+		final Calendar update = Calendar.getInstance();
 		if (update.get(Calendar.HOUR_OF_DAY) < 13)
 		{
 			update.add(Calendar.DAY_OF_MONTH, -1);
@@ -4176,7 +4176,7 @@ public class PlayerInstance extends Playable
 			
 			if ((players != null) && !players.isEmpty())
 			{
-				ExOlympiadUserInfo olyInfo = new ExOlympiadUserInfo(this);
+				final ExOlympiadUserInfo olyInfo = new ExOlympiadUserInfo(this);
 				
 				for (PlayerInstance player : players)
 				{
@@ -4190,7 +4190,7 @@ public class PlayerInstance extends Playable
 			players = Olympiad.getInstance().getSpectators(_olympiadGameId);
 			if ((players != null) && !players.isEmpty())
 			{
-				ExOlympiadUserInfo olyInfo = new ExOlympiadUserInfo(this);
+				final ExOlympiadUserInfo olyInfo = new ExOlympiadUserInfo(this);
 				
 				for (PlayerInstance spectator : players)
 				{

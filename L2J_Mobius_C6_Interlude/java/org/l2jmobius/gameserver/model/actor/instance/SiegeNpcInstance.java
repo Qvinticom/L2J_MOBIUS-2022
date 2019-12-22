@@ -49,7 +49,7 @@ public class SiegeNpcInstance extends FolkInstance
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
 			
 			player.sendPacket(new ValidateLocation(this));
@@ -80,7 +80,7 @@ public class SiegeNpcInstance extends FolkInstance
 		}
 		else
 		{
-			NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			html.setFile("data/html/siege/" + getTemplate().npcId + "-busy.htm");
 			html.replace("%castlename%", getCastle().getName());
 			html.replace("%objectId%", String.valueOf(getObjectId()));

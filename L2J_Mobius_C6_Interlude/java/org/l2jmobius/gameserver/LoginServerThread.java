@@ -307,7 +307,7 @@ public class LoginServerThread extends Thread
 							{
 								if (par.isAuthed())
 								{
-									PlayerInGame pig = new PlayerInGame(par.getAccount());
+									final PlayerInGame pig = new PlayerInGame(par.getAccount());
 									sendPacket(pig);
 									wcToRemove.gameClient.setState(GameClientState.AUTHED);
 									wcToRemove.gameClient.setSessionId(wcToRemove.session);
@@ -319,7 +319,7 @@ public class LoginServerThread extends Thread
 									}
 									else
 									{
-										CharSelectInfo cl = new CharSelectInfo(wcToRemove.account, wcToRemove.gameClient.getSessionId().playOkID1);
+										final CharSelectInfo cl = new CharSelectInfo(wcToRemove.account, wcToRemove.gameClient.getSessionId().playOkID1);
 										wcToRemove.gameClient.getConnection().sendPacket(cl);
 										wcToRemove.gameClient.setCharSelection(cl.getCharInfo());
 									}
@@ -336,7 +336,7 @@ public class LoginServerThread extends Thread
 						}
 						case 0x04:
 						{
-							KickPlayer kp = new KickPlayer(decrypt);
+							final KickPlayer kp = new KickPlayer(decrypt);
 							doKickPlayer(kp.getAccount());
 							break;
 						}
@@ -398,7 +398,7 @@ public class LoginServerThread extends Thread
 			_waitingClients.add(wc);
 		}
 		
-		PlayerAuthRequest par = new PlayerAuthRequest(acc, key);
+		final PlayerAuthRequest par = new PlayerAuthRequest(acc, key);
 		
 		try
 		{
@@ -437,7 +437,7 @@ public class LoginServerThread extends Thread
 		{
 			return;
 		}
-		PlayerLogout pl = new PlayerLogout(account);
+		final PlayerLogout pl = new PlayerLogout(account);
 		try
 		{
 			sendPacket(pl);
@@ -471,7 +471,7 @@ public class LoginServerThread extends Thread
 	
 	public void sendAccessLevel(String account, int level)
 	{
-		ChangeAccessLevel cal = new ChangeAccessLevel(account, level);
+		final ChangeAccessLevel cal = new ChangeAccessLevel(account, level);
 		try
 		{
 			sendPacket(cal);
@@ -554,7 +554,7 @@ public class LoginServerThread extends Thread
 	 */
 	public void sendServerStatus(int id, int value)
 	{
-		ServerStatus ss = new ServerStatus();
+		final ServerStatus ss = new ServerStatus();
 		ss.addAttribute(id, value);
 		try
 		{

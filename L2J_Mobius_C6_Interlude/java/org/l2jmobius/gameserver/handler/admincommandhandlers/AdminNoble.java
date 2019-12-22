@@ -47,11 +47,11 @@ public class AdminNoble implements IAdminCommandHandler
 		
 		if (command.startsWith("admin_setnoble"))
 		{
-			WorldObject target = activeChar.getTarget();
+			final WorldObject target = activeChar.getTarget();
 			
 			if (target instanceof PlayerInstance)
 			{
-				PlayerInstance targetPlayer = (PlayerInstance) target;
+				final PlayerInstance targetPlayer = (PlayerInstance) target;
 				
 				final boolean newNoble = !targetPlayer.isNoble();
 				
@@ -116,7 +116,7 @@ public class AdminNoble implements IAdminCommandHandler
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement stmt = con.prepareStatement(newNoble ? INSERT_DATA : DEL_DATA);
+			final PreparedStatement stmt = con.prepareStatement(newNoble ? INSERT_DATA : DEL_DATA);
 			if (newNoble)
 			{
 				stmt.setInt(1, player.getObjectId());

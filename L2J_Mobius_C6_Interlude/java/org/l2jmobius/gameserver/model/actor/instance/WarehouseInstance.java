@@ -104,7 +104,7 @@ public class WarehouseInstance extends FolkInstance
 				player.setActiveWarehouse(player.getClan().getWarehouse());
 				player.tempInvetoryDisable();
 				
-				WareHouseDepositList dl = new WareHouseDepositList(player, WareHouseDepositList.CLAN);
+				final WareHouseDepositList dl = new WareHouseDepositList(player, WareHouseDepositList.CLAN);
 				player.sendPacket(dl);
 			}
 		}
@@ -142,7 +142,7 @@ public class WarehouseInstance extends FolkInstance
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		
-		PlayerFreight freight = player.getFreight();
+		final PlayerFreight freight = player.getFreight();
 		if (freight != null)
 		{
 			if (freight.getSize() > 0)
@@ -178,7 +178,7 @@ public class WarehouseInstance extends FolkInstance
 		}
 		else // One or more chars other than this player for this account
 		{
-			Map<Integer, String> chars = player.getAccountChars();
+			final Map<Integer, String> chars = player.getAccountChars();
 			
 			if (chars.size() < 1)
 			{
@@ -198,14 +198,14 @@ public class WarehouseInstance extends FolkInstance
 	private void showDepositWindowFreight(PlayerInstance player, int objId)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
-		PlayerInstance destChar = PlayerInstance.load(objId);
+		final PlayerInstance destChar = PlayerInstance.load(objId);
 		if (destChar == null)
 		{
 			// Something went wrong!
 			return;
 		}
 		
-		PlayerFreight freight = destChar.getFreight();
+		final PlayerFreight freight = destChar.getFreight();
 		if (Config.ALT_GAME_FREIGHTS)
 		{
 			freight.setActiveLocation(0);

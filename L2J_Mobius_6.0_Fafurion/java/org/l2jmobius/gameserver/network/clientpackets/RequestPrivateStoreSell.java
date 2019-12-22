@@ -40,7 +40,7 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_storePlayerId = packet.readD();
-		int itemsCount = packet.readD();
+		final int itemsCount = packet.readD();
 		if ((itemsCount <= 0) || (itemsCount > Config.MAX_ITEM_IN_PACKET))
 		{
 			return false;
@@ -58,12 +58,12 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 			packet.readD(); // visual id
 			packet.readD(); // option 1
 			packet.readD(); // option 2
-			int soulCrystals = packet.readC();
+			final int soulCrystals = packet.readC();
 			for (int s = 0; s < soulCrystals; s++)
 			{
 				packet.readD(); // soul crystal option
 			}
-			int soulCrystals2 = packet.readC();
+			final int soulCrystals2 = packet.readC();
 			for (int s = 0; s < soulCrystals2; s++)
 			{
 				packet.readD(); // sa effect

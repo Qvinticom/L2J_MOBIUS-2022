@@ -99,7 +99,7 @@ public abstract class VoteSystem implements Runnable
 	
 	protected void reward()
 	{
-		int currentVotes = getVotes();
+		final int currentVotes = getVotes();
 		
 		if (currentVotes == -1)
 		{
@@ -122,7 +122,7 @@ public abstract class VoteSystem implements Runnable
 		
 		if (currentVotes >= (lastVotes + votesDiff))
 		{
-			Collection<PlayerInstance> pls = World.getInstance().getPlayers();
+			final Collection<PlayerInstance> pls = World.getInstance().getPlayers();
 			if (allowReport)
 			{
 				LOGGER.info("VoteSystem: Server votes on " + getSiteName() + ": " + currentVotes);
@@ -139,10 +139,10 @@ public abstract class VoteSystem implements Runnable
 				}
 				
 				boolean canReward = false;
-				String pIp = p.getClient().getConnectionAddress().getHostAddress();
+				final String pIp = p.getClient().getConnectionAddress().getHostAddress();
 				if (playerIps.containsKey(pIp))
 				{
-					int count = playerIps.get(pIp);
+					final int count = playerIps.get(pIp);
 					if (count < boxes)
 					{
 						playerIps.remove(pIp);
@@ -185,7 +185,7 @@ public abstract class VoteSystem implements Runnable
 	
 	private void announce(String msg)
 	{
-		CreatureSay cs = new CreatureSay(0, ChatType.CRITICAL_ANNOUNCE, "", msg);
+		final CreatureSay cs = new CreatureSay(0, ChatType.CRITICAL_ANNOUNCE, "", msg);
 		Broadcast.toAllOnlinePlayers(cs);
 	}
 	

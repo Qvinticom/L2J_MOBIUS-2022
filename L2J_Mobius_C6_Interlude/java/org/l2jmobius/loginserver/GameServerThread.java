@@ -87,7 +87,7 @@ public class GameServerThread extends Thread
 			return;
 		}
 		
-		InitLS startPacket = new InitLS(_publicKey.getModulus().toByteArray());
+		final InitLS startPacket = new InitLS(_publicKey.getModulus().toByteArray());
 		try
 		{
 			sendPacket(startPacket);
@@ -201,8 +201,8 @@ public class GameServerThread extends Thread
 		}
 		catch (IOException e)
 		{
-			String serverName = getServerId() != -1 ? "[" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) : "(" + _connectionIPAddress + ")";
-			String msg = "GameServer " + serverName + ": Connection lost: " + e.getMessage();
+			final String serverName = getServerId() != -1 ? "[" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) : "(" + _connectionIPAddress + ")";
+			final String msg = "GameServer " + serverName + ": Connection lost: " + e.getMessage();
 			LOGGER.info(msg);
 		}
 		finally
@@ -220,7 +220,7 @@ public class GameServerThread extends Thread
 	
 	private void onReceiveBlowfishKey(byte[] data)
 	{
-		BlowFishKey bfk = new BlowFishKey(data, _privateKey);
+		final BlowFishKey bfk = new BlowFishKey(data, _privateKey);
 		_blowfishKey = bfk.getKey();
 		_blowfish = new NewCrypt(_blowfishKey);
 	}
@@ -231,7 +231,7 @@ public class GameServerThread extends Thread
 		
 		if (isAuthed())
 		{
-			AuthResponse ar = new AuthResponse(_gsi.getId());
+			final AuthResponse ar = new AuthResponse(_gsi.getId());
 			sendPacket(ar);
 		}
 	}
@@ -240,8 +240,8 @@ public class GameServerThread extends Thread
 	{
 		if (isAuthed())
 		{
-			PlayerInGame pig = new PlayerInGame(data);
-			List<String> newAccounts = pig.getAccounts();
+			final PlayerInGame pig = new PlayerInGame(data);
+			final List<String> newAccounts = pig.getAccounts();
 			
 			for (String account : newAccounts)
 			{
@@ -258,7 +258,7 @@ public class GameServerThread extends Thread
 	{
 		if (isAuthed())
 		{
-			PlayerLogout plo = new PlayerLogout(data);
+			final PlayerLogout plo = new PlayerLogout(data);
 			_accountsOnGameServer.remove(plo.getAccount());
 		}
 		else
@@ -271,7 +271,7 @@ public class GameServerThread extends Thread
 	{
 		if (isAuthed())
 		{
-			ChangeAccessLevel cal = new ChangeAccessLevel(data);
+			final ChangeAccessLevel cal = new ChangeAccessLevel(data);
 			LoginController.getInstance().setAccountAccessLevel(cal.getAccount(), cal.getLevel());
 			LOGGER.info("Changed " + cal.getAccount() + " access level to " + cal.getLevel());
 		}
@@ -285,9 +285,9 @@ public class GameServerThread extends Thread
 	{
 		if (isAuthed())
 		{
-			PlayerAuthRequest par = new PlayerAuthRequest(data);
+			final PlayerAuthRequest par = new PlayerAuthRequest(data);
 			PlayerAuthResponse authResponse;
-			SessionKey key = LoginController.getInstance().getKeyForAccount(par.getAccount());
+			final SessionKey key = LoginController.getInstance().getKeyForAccount(par.getAccount());
 			
 			if ((key != null) && key.equals(par.getKey()))
 			{
@@ -320,7 +320,7 @@ public class GameServerThread extends Thread
 	
 	private void handleRegProcess(GameServerAuth gameServerAuth)
 	{
-		GameServerTable gameServerTable = GameServerTable.getInstance();
+		final GameServerTable gameServerTable = GameServerTable.getInstance();
 		
 		final int id = gameServerAuth.getDesiredID();
 		final byte[] hexId = gameServerAuth.getHexID();
@@ -418,7 +418,7 @@ public class GameServerThread extends Thread
 	
 	private void forceClose(int reason)
 	{
-		LoginServerFail lsf = new LoginServerFail(reason);
+		final LoginServerFail lsf = new LoginServerFail(reason);
 		
 		try
 		{
@@ -490,7 +490,7 @@ public class GameServerThread extends Thread
 	
 	public void kickPlayer(String account)
 	{
-		KickPlayer kp = new KickPlayer(account);
+		final KickPlayer kp = new KickPlayer(account);
 		try
 		{
 			sendPacket(kp);
@@ -507,8 +507,8 @@ public class GameServerThread extends Thread
 	 */
 	public void setGameHosts(String gameExternalHost, String gameInternalHost)
 	{
-		String oldInternal = _gsi.getInternalHost();
-		String oldExternal = _gsi.getExternalHost();
+		final String oldInternal = _gsi.getInternalHost();
+		final String oldExternal = _gsi.getExternalHost();
 		
 		_gsi.setExternalHost(gameExternalHost);
 		_gsi.setInternalIp(gameInternalHost);

@@ -72,7 +72,7 @@ public class RetreatOnAttack extends Quest
 			}
 			int posX = npc.getX();
 			int posY = npc.getY();
-			int posZ = npc.getZ();
+			final int posZ = npc.getZ();
 			int signX = -500;
 			int signY = -500;
 			if (npc.getX() > attacker.getX())

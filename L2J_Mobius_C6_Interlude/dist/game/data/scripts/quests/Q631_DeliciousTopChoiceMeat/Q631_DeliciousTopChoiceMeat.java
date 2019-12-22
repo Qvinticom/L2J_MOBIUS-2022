@@ -112,7 +112,7 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -139,7 +139,7 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 				htmltext = "31537-06.htm";
 				st.takeItems(TOP_QUALITY_MEAT, -1);
 				
-				int[] reward = REWARDS[Integer.parseInt(event)];
+				final int[] reward = REWARDS[Integer.parseInt(event)];
 				st.rewardItems(reward[0], reward[1]);
 				
 				st.playSound(QuestState.SOUND_FINISH);
@@ -159,7 +159,7 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -198,13 +198,13 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		PlayerInstance partyMember = getRandomPartyMember(player, npc, "1");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "1");
 		if (partyMember == null)
 		{
 			return null;
 		}
 		
-		QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

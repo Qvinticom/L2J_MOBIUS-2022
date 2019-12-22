@@ -702,8 +702,8 @@ class OlympiadGame
 					playerTwoStat.set(POINTS, playerTwoPoints + pointDiff);
 					playerTwoStat.set(COMP_WON, playerTwoWon + 1);
 					
-					SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_WON_THE_GAME);
-					SystemMessage sm2 = new SystemMessage(SystemMessageId.S1_HAS_GAINED_S2_OLYMPIAD_POINTS);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_WON_THE_GAME);
+					final SystemMessage sm2 = new SystemMessage(SystemMessageId.S1_HAS_GAINED_S2_OLYMPIAD_POINTS);
 					sm.addString(_playerTwoName);
 					broadcastMessage(sm, true);
 					sm2.addString(_playerTwoName);
@@ -727,8 +727,8 @@ class OlympiadGame
 					playerOneStat.set(POINTS, playerOnePoints + pointDiff);
 					playerOneStat.set(COMP_WON, playerOneWon + 1);
 					
-					SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_WON_THE_GAME);
-					SystemMessage sm2 = new SystemMessage(SystemMessageId.S1_HAS_GAINED_S2_OLYMPIAD_POINTS);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_WON_THE_GAME);
+					final SystemMessage sm2 = new SystemMessage(SystemMessageId.S1_HAS_GAINED_S2_OLYMPIAD_POINTS);
 					sm.addString(_playerOneName);
 					broadcastMessage(sm, true);
 					sm2.addString(_playerOneName);
@@ -922,7 +922,7 @@ class OlympiadGame
 			return false;
 		}
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.STARTS_THE_GAME);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.STARTS_THE_GAME);
 		broadcastMessage(sm, true);
 		
 		for (PlayerInstance player : _players)

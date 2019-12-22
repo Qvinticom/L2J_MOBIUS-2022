@@ -73,19 +73,19 @@ public class Announcements
 	{
 		for (String _announcement : _announcements)
 		{
-			CreatureSay cs = new CreatureSay(0, Say2.ANNOUNCEMENT, player.getName(), _announcement.replace("%name%", player.getName()));
+			final CreatureSay cs = new CreatureSay(0, Say2.ANNOUNCEMENT, player.getName(), _announcement.replace("%name%", player.getName()));
 			player.sendPacket(cs);
 		}
 		
 		for (List<Object> entry : _eventAnnouncements)
 		{
-			DateRange validDateRange = (DateRange) entry.get(0);
-			String[] msg = (String[]) entry.get(1);
-			Date currentDate = new Date();
+			final DateRange validDateRange = (DateRange) entry.get(0);
+			final String[] msg = (String[]) entry.get(1);
+			final Date currentDate = new Date();
 			
 			if (!validDateRange.isValid() || validDateRange.isWithinRange(currentDate))
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				
 				for (String element : msg)
 				{
@@ -99,7 +99,7 @@ public class Announcements
 	
 	public void addEventAnnouncement(DateRange validDateRange, String[] msg)
 	{
-		List<Object> entry = new ArrayList<>();
+		final List<Object> entry = new ArrayList<>();
 		entry.add(validDateRange);
 		entry.add(msg);
 		_eventAnnouncements.add(entry);
@@ -107,10 +107,10 @@ public class Announcements
 	
 	public void listAnnouncements(PlayerInstance player)
 	{
-		String content = HtmCache.getInstance().getHtmForce("data/html/admin/announce.htm");
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final String content = HtmCache.getInstance().getHtmForce("data/html/admin/announce.htm");
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setHtml(content);
-		StringBuilder replyMSG = new StringBuilder("<br>");
+		final StringBuilder replyMSG = new StringBuilder("<br>");
 		
 		for (int i = 0; i < _announcements.size(); i++)
 		{
@@ -228,7 +228,7 @@ public class Announcements
 	
 	public void announceToAll(String text)
 	{
-		CreatureSay cs = new CreatureSay(0, Say2.ANNOUNCEMENT, "", text);
+		final CreatureSay cs = new CreatureSay(0, Say2.ANNOUNCEMENT, "", text);
 		
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
@@ -240,7 +240,7 @@ public class Announcements
 	// Used for events
 	public void gameAnnounceToAll(String text)
 	{
-		CreatureSay cs = new CreatureSay(0, 18, null, text);
+		final CreatureSay cs = new CreatureSay(0, 18, null, text);
 		
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
@@ -265,7 +265,7 @@ public class Announcements
 		try
 		{
 			// Announce string to everyone on server
-			String text = command.substring(lengthToTrim);
+			final String text = command.substring(lengthToTrim);
 			getInstance().announceToAll(text);
 		}
 		// No body cares!

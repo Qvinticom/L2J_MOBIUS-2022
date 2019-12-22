@@ -200,14 +200,14 @@ public class Kelbim extends AbstractNpcAI
 			{
 				for (int i = 0; i < Rnd.get((_bossStage * 5) / 2, _bossStage * 5); i++)
 				{
-					Npc minion = addSpawn(KELBIM_GUARD, _kelbimBoss.getX(), _kelbimBoss.getY(), _kelbimBoss.getZ(), 0, true, 0, true, 0);
+					final Npc minion = addSpawn(KELBIM_GUARD, _kelbimBoss.getX(), _kelbimBoss.getY(), _kelbimBoss.getZ(), 0, true, 0, true, 0);
 					minion.setRunning();
 					((Attackable) minion).setIsRaidMinion(true);
 					_minions.add(minion);
 				}
 				for (int i = 0; i < Rnd.get((_bossStage * 2) / 2, _bossStage * 2); i++)
 				{
-					Npc minion = addSpawn(KELBIM_GUARDIANS[Rnd.get(KELBIM_GUARDIANS.length)], _kelbimBoss.getX(), _kelbimBoss.getY(), _kelbimBoss.getZ(), 0, true, 0, true, 0);
+					final Npc minion = addSpawn(KELBIM_GUARDIANS[Rnd.get(KELBIM_GUARDIANS.length)], _kelbimBoss.getX(), _kelbimBoss.getY(), _kelbimBoss.getZ(), 0, true, 0, true, 0);
 					minion.setRunning();
 					((Attackable) minion).setIsRaidMinion(true);
 					_minions.add(minion);
@@ -220,8 +220,8 @@ public class Kelbim extends AbstractNpcAI
 				{
 					if (_kelbimBoss.isInCombat())
 					{
-						Skill randomAttackSkill = AREA_SKILLS[Rnd.get(AREA_SKILLS.length)];
-						List<Npc> skillNpcs = new ArrayList<>();
+						final Skill randomAttackSkill = AREA_SKILLS[Rnd.get(AREA_SKILLS.length)];
+						final List<Npc> skillNpcs = new ArrayList<>();
 						for (PlayerInstance pl : ZONE.getPlayersInside())
 						{
 							if (pl == null)
@@ -230,7 +230,7 @@ public class Kelbim extends AbstractNpcAI
 							}
 							if (Rnd.get(100) > 40)
 							{
-								Npc skillMob = addSpawn(KELBIM_SHOUT, pl.getX(), pl.getY(), pl.getZ() + 10, 0, true, 60000, false, 0);
+								final Npc skillMob = addSpawn(KELBIM_SHOUT, pl.getX(), pl.getY(), pl.getZ() + 10, 0, true, 60000, false, 0);
 								skillNpcs.add(skillMob);
 								_minions.add(skillMob);
 							}
@@ -250,7 +250,7 @@ public class Kelbim extends AbstractNpcAI
 			}
 			case "cancel_timers":
 			{
-				QuestTimer activityTimer = getQuestTimer("check_activity_task", null, null);
+				final QuestTimer activityTimer = getQuestTimer("check_activity_task", null, null);
 				if (activityTimer != null)
 				{
 					activityTimer.cancel();
@@ -306,7 +306,7 @@ public class Kelbim extends AbstractNpcAI
 	{
 		if (npc.getId() == ENTER_DEVICE)
 		{
-			int status = GrandBossManager.getInstance().getBossStatus(KELBIM);
+			final int status = GrandBossManager.getInstance().getBossStatus(KELBIM);
 			if (status > ALIVE)
 			{
 				return "34052-1.html";

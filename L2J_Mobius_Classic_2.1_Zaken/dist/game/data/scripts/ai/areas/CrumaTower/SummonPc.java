@@ -71,14 +71,12 @@ public class SummonPc extends AbstractNpcAI
 			final Attackable monster = (Attackable) npc;
 			if (monster.getMostHated() != null)
 			{
-				if (((monster.getMostHated() == attacker) && (chance < 50)) || (chance < 10))
+				if ((((monster.getMostHated() == attacker) && (chance < 50)) || (chance < 10)) //
+					&& ((SUMMON_PC.getSkill().getMpConsume() < npc.getCurrentMp()) && (SUMMON_PC.getSkill().getHpConsume() < npc.getCurrentHp()) && !npc.isSkillDisabled(SUMMON_PC.getSkill())))
 				{
-					if ((SUMMON_PC.getSkill().getMpConsume() < npc.getCurrentMp()) && (SUMMON_PC.getSkill().getHpConsume() < npc.getCurrentHp()) && !npc.isSkillDisabled(SUMMON_PC.getSkill()))
-					{
-						npc.setTarget(attacker);
-						npc.doCast(SUMMON_PC.getSkill());
-						npc.getVariables().set("attacked", true);
-					}
+					npc.setTarget(attacker);
+					npc.doCast(SUMMON_PC.getSkill());
+					npc.getVariables().set("attacked", true);
 				}
 			}
 		}

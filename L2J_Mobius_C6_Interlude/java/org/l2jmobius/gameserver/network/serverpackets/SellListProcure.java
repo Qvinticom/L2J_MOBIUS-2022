@@ -61,7 +61,7 @@ public class SellListProcure extends GameServerPacket
 		
 		for (Entry<ItemInstance, Integer> entry : _sellList.entrySet())
 		{
-			ItemInstance item = entry.getKey();
+			final ItemInstance item = entry.getKey();
 			writeH(item.getItem().getType1());
 			writeD(item.getObjectId());
 			writeD(item.getItemId());

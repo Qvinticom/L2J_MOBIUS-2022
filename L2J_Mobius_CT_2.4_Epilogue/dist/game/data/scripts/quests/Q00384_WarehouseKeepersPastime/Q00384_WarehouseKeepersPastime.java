@@ -101,7 +101,7 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
+		final String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
@@ -387,7 +387,7 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 	{
 		for (int i0 = 0; i0 < 9; i0 += 1)
 		{
-			int i1 = getNumberFromBingoBoard(qs, i0);
+			final int i1 = getNumberFromBingoBoard(qs, i0);
 			if (isSelectedBingoNumber(qs, i1))
 			{
 				html = html.replace("<?Cell" + (i0 + 1) + "?>", Integer.toString(i1));
@@ -404,7 +404,7 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 	{
 		for (int i0 = 0; i0 < 9; i0 += 1)
 		{
-			int i1 = getNumberFromBingoBoard(qs, i0);
+			final int i1 = getNumberFromBingoBoard(qs, i0);
 			html = html.replace("<?FontColor" + (i0 + 1) + "?>", (isSelectedBingoNumber(qs, i1)) ? "ff0000" : "ffffff");
 			html = html.replace("<?Cell" + (i0 + 1) + "?>", Integer.toString(i1));
 		}
@@ -416,7 +416,7 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 		if (!isSelectedBingoNumber(qs, num))
 		{
 			selectBingoNumber(qs, num);
-			int i3 = getMatchedBingoLineCount(qs);
+			final int i3 = getMatchedBingoLineCount(qs);
 			String html;
 			if ((i3 == 3) && ((getBingoSelectCount(qs)) == 6))
 			{
@@ -443,7 +443,7 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 		{
 			if (qs.getMemoState() == 10)
 			{
-				int random = getRandom(100);
+				final int random = getRandom(100);
 				if (random < 16)
 				{
 					giveItems(player, SYNTHESIS_COKES, 1);
@@ -476,7 +476,7 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 			}
 			else if (qs.getMemoState() == 20)
 			{
-				int random = getRandom(100);
+				final int random = getRandom(100);
 				
 				if (random < 50)
 				{
@@ -500,7 +500,7 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 		{
 			if (qs.getMemoState() == 10)
 			{
-				int random = getRandom(100);
+				final int random = getRandom(100);
 				
 				if (random < 50)
 				{
@@ -521,7 +521,7 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 			}
 			else if (qs.getMemoState() == 20)
 			{
-				int random = getRandom(100);
+				final int random = getRandom(100);
 				
 				if (random < 50)
 				{
@@ -550,7 +550,7 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 	private void createBingoBoard(QuestState qs)
 	{
 		//@formatter:off
-		Integer[] arr = {1,2,3,4,5,6,7,8,9};
+		final Integer[] arr = {1,2,3,4,5,6,7,8,9};
 		//@formatter:on
 		Collections.shuffle(Arrays.asList(arr));
 		qs.set("numbers", Arrays.asList(arr).toString().replaceAll("[^\\d ]", ""));
@@ -563,7 +563,7 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 	 */
 	private int getMatchedBingoLineCount(QuestState qs)
 	{
-		String[] q = qs.get("selected").split(" ");
+		final String[] q = qs.get("selected").split(" ");
 		int found = 0;
 		// Horizontal
 		if ((q[0] + q[1] + q[2]).matches("\\d+"))
@@ -609,7 +609,7 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 	 */
 	private void selectBingoNumber(QuestState qs, int num)
 	{
-		String[] numbers = qs.get("numbers").split(" ");
+		final String[] numbers = qs.get("numbers").split(" ");
 		int pos = 0;
 		for (int i = 0; i < numbers.length; i++)
 		{
@@ -619,7 +619,7 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 				break;
 			}
 		}
-		String[] selected = qs.get("selected").split(" ");
+		final String[] selected = qs.get("selected").split(" ");
 		for (int i = 0; i < selected.length; i++)
 		{
 			if (i == pos)
@@ -661,7 +661,7 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 	 */
 	private int getBingoSelectCount(QuestState qs)
 	{
-		String current = qs.get("selected");
+		final String current = qs.get("selected");
 		return current.replaceAll("\\D", "").length();
 	}
 	
@@ -889,7 +889,7 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 	
 	private QuestState getRandomPlayerFromParty(PlayerInstance player, Npc npc)
 	{
-		QuestState qs = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		final List<QuestState> candidates = new ArrayList<>();
 		
 		if ((qs != null) && qs.isStarted())
@@ -903,7 +903,7 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 			player.getParty().getMembers().stream().forEach(pm ->
 			{
 				
-				QuestState qss = getQuestState(pm, false);
+				final QuestState qss = getQuestState(pm, false);
 				if ((qss != null) && qss.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, pm, true))
 				{
 					candidates.add(qss);

@@ -70,7 +70,7 @@ public class BeastSoulShot implements IItemHandler
 			return;
 		}
 		
-		Summon activePet = activeOwner.getPet();
+		final Summon activePet = activeOwner.getPet();
 		
 		if (activePet == null)
 		{
@@ -107,7 +107,7 @@ public class BeastSoulShot implements IItemHandler
 				return;
 			}
 			
-			int shotCount = item.getCount();
+			final int shotCount = item.getCount();
 			shotConsumption = weaponItem.getSoulShotCount();
 			
 			if (shotConsumption == 0)
@@ -142,7 +142,7 @@ public class BeastSoulShot implements IItemHandler
 			{
 				activeOwner.removeAutoSoulShot(itemId);
 				activeOwner.sendPacket(new ExAutoSoulShot(itemId, 0));
-				SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
 				sm.addString(item.getItem().getName());
 				activeOwner.sendPacket(sm);
 				

@@ -67,7 +67,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -75,7 +75,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 		
 		if (event.equals("31334-03.htm"))
 		{
-			QuestState st2 = player.getQuestState(Q021_HiddenTruth.class.getSimpleName());
+			final QuestState st2 = player.getQuestState(Q021_HiddenTruth.class.getSimpleName());
 			if ((st2 != null) && st2.isCompleted() && (player.getLevel() >= 63))
 			{
 				htmltext = "31334-02.htm";
@@ -198,7 +198,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -210,7 +210,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 				switch (npc.getNpcId())
 				{
 					case INNOCENTIN:
-						QuestState st2 = player.getQuestState(Q021_HiddenTruth.class.getSimpleName());
+						final QuestState st2 = player.getQuestState(Q021_HiddenTruth.class.getSimpleName());
 						if ((st2 != null) && st2.isCompleted())
 						{
 							if (!st.hasQuestItems(CROSS_OF_EINHASAD))
@@ -233,7 +233,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 				break;
 			
 			case State.STARTED:
-				int cond = st.getInt("cond");
+				final int cond = st.getInt("cond");
 				switch (npc.getNpcId())
 				{
 					case TIFAREN:
@@ -421,7 +421,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	@Override
 	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
-		QuestState st = attacker.getQuestState(getName());
+		final QuestState st = attacker.getQuestState(getName());
 		if ((st == null) || !st.isStarted() || isPet)
 		{
 			return null;
@@ -443,7 +443,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerState(player, npc, State.STARTED);
+		final QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)
 		{
 			return null;

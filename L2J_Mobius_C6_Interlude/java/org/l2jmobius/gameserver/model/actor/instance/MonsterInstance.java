@@ -77,7 +77,7 @@ public class MonsterInstance extends Attackable
 	{
 		ThreadPool.schedule(() ->
 		{
-			Spawn mobSpawn = getSpawn();
+			final Spawn mobSpawn = getSpawn();
 			if (!isInCombat() && !isAlikeDead() && !isDead() && (mobSpawn != null) && !isInsideRadius(mobSpawn.getX(), mobSpawn.getY(), Config.MAX_DRIFT_RANGE, false))
 			{
 				teleToLocation(mobSpawn.getX(), mobSpawn.getY(), mobSpawn.getZ(), false);
@@ -143,7 +143,7 @@ public class MonsterInstance extends Attackable
 			{
 				case 12372: // baium
 				{
-					SocialAction sa = new SocialAction(getObjectId(), 2);
+					final SocialAction sa = new SocialAction(getObjectId(), 2);
 					broadcastPacket(sa);
 				}
 			}
@@ -200,7 +200,7 @@ public class MonsterInstance extends Attackable
 	{
 		if (_minionList.hasMinions())
 		{
-			List<MinionInstance> spawnedMinions = _minionList.getSpawnedMinions();
+			final List<MinionInstance> spawnedMinions = _minionList.getSpawnedMinions();
 			if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
 			{
 				final Iterator<MinionInstance> itr = spawnedMinions.iterator();

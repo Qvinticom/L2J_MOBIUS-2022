@@ -58,14 +58,14 @@ public class AdminDelete implements IAdminCommandHandler
 	// TODO: add possibility to delete any WorldObject (except PlayerInstance)
 	private void handleDelete(PlayerInstance activeChar)
 	{
-		WorldObject obj = activeChar.getTarget();
+		final WorldObject obj = activeChar.getTarget();
 		
 		if (obj instanceof NpcInstance)
 		{
 			final NpcInstance target = (NpcInstance) obj;
 			target.deleteMe();
 			
-			Spawn spawn = target.getSpawn();
+			final Spawn spawn = target.getSpawn();
 			if (spawn != null)
 			{
 				spawn.stopRespawn();
@@ -86,13 +86,13 @@ public class AdminDelete implements IAdminCommandHandler
 				}
 			}
 			
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 			sm.addString("Deleted " + target.getName() + " from " + target.getObjectId() + ".");
 			activeChar.sendPacket(sm);
 		}
 		else
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 			sm.addString("Incorrect target.");
 			activeChar.sendPacket(sm);
 		}

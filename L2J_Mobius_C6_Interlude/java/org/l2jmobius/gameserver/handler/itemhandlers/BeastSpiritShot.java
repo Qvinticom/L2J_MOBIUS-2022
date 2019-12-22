@@ -70,7 +70,7 @@ public class BeastSpiritShot implements IItemHandler
 			return;
 		}
 		
-		Summon activePet = activeOwner.getPet();
+		final Summon activePet = activeOwner.getPet();
 		if (activePet == null)
 		{
 			activeOwner.sendPacket(SystemMessageId.PETS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
@@ -155,7 +155,7 @@ public class BeastSpiritShot implements IItemHandler
 			{
 				activeOwner.removeAutoSoulShot(itemId);
 				activeOwner.sendPacket(new ExAutoSoulShot(itemId, 0));
-				SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
 				sm.addString(item.getItem().getName());
 				activeOwner.sendPacket(sm);
 				

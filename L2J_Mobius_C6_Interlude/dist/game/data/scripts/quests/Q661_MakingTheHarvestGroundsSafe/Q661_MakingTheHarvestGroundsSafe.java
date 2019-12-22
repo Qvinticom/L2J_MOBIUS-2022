@@ -55,8 +55,8 @@ public class Q661_MakingTheHarvestGroundsSafe extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final String htmltext = event;
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -70,9 +70,9 @@ public class Q661_MakingTheHarvestGroundsSafe extends Quest
 		}
 		else if (event.equals("30210-04.htm"))
 		{
-			int item1 = st.getQuestItemsCount(STING_OF_GIANT_POISON_BEE);
-			int item2 = st.getQuestItemsCount(CLOUDY_GEM);
-			int item3 = st.getQuestItemsCount(TALON_OF_YOUNG_ARANEID);
+			final int item1 = st.getQuestItemsCount(STING_OF_GIANT_POISON_BEE);
+			final int item2 = st.getQuestItemsCount(CLOUDY_GEM);
+			final int item3 = st.getQuestItemsCount(TALON_OF_YOUNG_ARANEID);
 			int sum = 0;
 			
 			sum = (item1 * 57) + (item2 * 56) + (item3 * 60);
@@ -98,7 +98,7 @@ public class Q661_MakingTheHarvestGroundsSafe extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -122,7 +122,7 @@ public class Q661_MakingTheHarvestGroundsSafe extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerState(player, npc, State.STARTED);
+		final QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)
 		{
 			return null;

@@ -84,7 +84,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		
 		while (st.hasMoreTokens())
 		{
-			String s = st.nextToken();
+			final String s = st.nextToken();
 			
 			if (s.equals("lvl1"))
 			{
@@ -125,9 +125,9 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			npc2 = NpcTable.getInstance().getTemplate(mid2);
 		}
 		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		
-		StringBuilder replyMSG = new StringBuilder();
+		final StringBuilder replyMSG = new StringBuilder();
 		
 		if ((npc1 != null) && (npc2 != null))
 		{
@@ -149,7 +149,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			replyMSG.append("<html><title>Select first mob to fight</title>");
 			replyMSG.append("<body><table>");
 			
-			NpcTemplate[] npcs = NpcTable.getInstance().getAllOfLevel(lvl1);
+			final NpcTemplate[] npcs = NpcTable.getInstance().getAllOfLevel(lvl1);
 			
 			for (NpcTemplate n : npcs)
 			{
@@ -163,7 +163,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			replyMSG.append("<html><title>Select second mob to fight</title>");
 			replyMSG.append("<body><table>");
 			
-			NpcTemplate[] npcs = NpcTable.getInstance().getAllOfLevel(lvl2);
+			final NpcTemplate[] npcs = NpcTable.getInstance().getAllOfLevel(lvl2);
 			
 			for (NpcTemplate n : npcs)
 			{
@@ -212,7 +212,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			int mid1 = 0;
 			int mid2 = 0;
 			
-			StringTokenizer st = new StringTokenizer(params);
+			final StringTokenizer st = new StringTokenizer(params);
 			mid1 = Integer.parseInt(st.nextToken());
 			mid2 = Integer.parseInt(st.nextToken());
 			
@@ -356,9 +356,9 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		final double maxHp2 = npc2.getMaxHp();
 		final int hp2 = (int) ((Formulas.calcHpRegen(npc2) * 100000) / Formulas.getRegeneratePeriod(npc2));
 		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		
-		StringBuilder replyMSG = new StringBuilder();
+		final StringBuilder replyMSG = new StringBuilder();
 		replyMSG.append("<html><title>Selected mobs to fight</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<table>");

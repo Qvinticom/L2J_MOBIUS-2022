@@ -76,7 +76,7 @@ public class BoatManager
 					continue;
 				}
 				
-				BoatInstance boat = parseLine(line);
+				final BoatInstance boat = parseLine(line);
 				boat.spawn();
 				_staticItems.put(boat.getObjectId(), boat);
 			}
@@ -132,16 +132,16 @@ public class BoatManager
 	private BoatInstance parseLine(String line)
 	{
 		BoatInstance boat;
-		StringTokenizer st = new StringTokenizer(line, ";");
+		final StringTokenizer st = new StringTokenizer(line, ";");
 		
-		String name = st.nextToken();
+		final String name = st.nextToken();
 		final int id = Integer.parseInt(st.nextToken());
 		final int xspawn = Integer.parseInt(st.nextToken());
 		final int yspawn = Integer.parseInt(st.nextToken());
 		final int zspawn = Integer.parseInt(st.nextToken());
 		final int heading = Integer.parseInt(st.nextToken());
 		
-		StatsSet npcDat = new StatsSet();
+		final StatsSet npcDat = new StatsSet();
 		npcDat.set("npcId", id);
 		npcDat.set("level", 0);
 		npcDat.set("jClass", "boat");
@@ -184,7 +184,7 @@ public class BoatManager
 		npcDat.set("baseMpReg", 3.e-3f);
 		npcDat.set("basePDef", 100);
 		npcDat.set("baseMDef", 100);
-		CreatureTemplate template = new CreatureTemplate(npcDat);
+		final CreatureTemplate template = new CreatureTemplate(npcDat);
 		boat = new BoatInstance(IdFactory.getInstance().getNextId(), template, name);
 		boat.getPosition().setHeading(heading);
 		boat.setXYZ(xspawn, yspawn, zspawn);

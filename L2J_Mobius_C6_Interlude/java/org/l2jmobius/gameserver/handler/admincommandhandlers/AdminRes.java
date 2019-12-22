@@ -79,7 +79,7 @@ public class AdminRes implements IAdminCommandHandler
 		if (resParam != null)
 		{
 			// Check if a player name was specified as a param.
-			PlayerInstance plyr = World.getInstance().getPlayer(resParam);
+			final PlayerInstance plyr = World.getInstance().getPlayer(resParam);
 			
 			if (plyr != null)
 			{
@@ -129,7 +129,7 @@ public class AdminRes implements IAdminCommandHandler
 	
 	private void handleNonPlayerRes(PlayerInstance activeChar, String radiusStr)
 	{
-		WorldObject obj = activeChar.getTarget();
+		final WorldObject obj = activeChar.getTarget();
 		
 		try
 		{

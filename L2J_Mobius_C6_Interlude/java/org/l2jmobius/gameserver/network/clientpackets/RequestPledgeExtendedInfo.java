@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 /**
- * @author programmos
+ * @author -Wooden-
  */
 public class RequestPledgeExtendedInfo extends GameClientPacket
 {

@@ -45,32 +45,32 @@ public class Mount implements IUserCommandHandler
 			return false;
 		}
 		
-		Summon pet = player.getPet();
+		final Summon pet = player.getPet();
 		
 		if ((pet != null) && pet.isMountable() && !player.isMounted())
 		{
 			if (player.isDead())
 			{
 				// A strider cannot be ridden when player is dead.
-				SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_DEAD);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_DEAD);
 				player.sendPacket(msg);
 			}
 			else if (pet.isDead())
 			{
 				// A dead strider cannot be ridden.
-				SystemMessage msg = new SystemMessage(SystemMessageId.DEAD_STRIDER_CANT_BE_RIDDEN);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.DEAD_STRIDER_CANT_BE_RIDDEN);
 				player.sendPacket(msg);
 			}
 			else if (pet.isInCombat())
 			{
 				// A strider in battle cannot be ridden.
-				SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_IN_BATLLE_CANT_BE_RIDDEN);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_IN_BATLLE_CANT_BE_RIDDEN);
 				player.sendPacket(msg);
 			}
 			else if (player.isInCombat())
 			{
 				// A pet cannot be ridden while player is in battle.
-				SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE);
 				player.sendPacket(msg);
 			}
 			else if (!player.isInsideRadius(pet, 60, true, false))
@@ -87,7 +87,7 @@ public class Mount implements IUserCommandHandler
 			else if (player.isSitting() || player.isMoving())
 			{
 				// A strider can be ridden only when player is standing.
-				SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CAN_BE_RIDDEN_ONLY_WHILE_STANDING);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CAN_BE_RIDDEN_ONLY_WHILE_STANDING);
 				player.sendPacket(msg);
 			}
 			else if (!pet.isDead() && !player.isMounted())
@@ -97,7 +97,7 @@ public class Mount implements IUserCommandHandler
 					return false;
 				}
 				
-				Ride mount = new Ride(player.getObjectId(), Ride.ACTION_MOUNT, pet.getTemplate().npcId);
+				final Ride mount = new Ride(player.getObjectId(), Ride.ACTION_MOUNT, pet.getTemplate().npcId);
 				Broadcast.toSelfAndKnownPlayersInRadius(player, mount, 810000/* 900 */);
 				player.setMountType(mount.getMountType());
 				player.setMountObjectID(pet.getControlItemId());

@@ -67,7 +67,7 @@ public class ElementalSpiritData implements IXmlReader
 		final int npcId = parseInteger(attributes, "npcId");
 		final int extractItem = parseInteger(attributes, "extractItem");
 		final int maxCharacteristics = parseInteger(attributes, "maxCharacteristics");
-		ElementalSpiritTemplateHolder template = new ElementalSpiritTemplateHolder(type, stage, npcId, extractItem, maxCharacteristics);
+		final ElementalSpiritTemplateHolder template = new ElementalSpiritTemplateHolder(type, stage, npcId, extractItem, maxCharacteristics);
 		SPIRIT_DATA.computeIfAbsent(type, HashMap::new).put(stage, template);
 		
 		forEach(spiritNode, "level", levelNode ->

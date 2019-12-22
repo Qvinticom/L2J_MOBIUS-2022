@@ -143,7 +143,7 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		PlayerInstance ptarget = (PlayerInstance) activeChar.getTarget();
+		final PlayerInstance ptarget = (PlayerInstance) activeChar.getTarget();
 		
 		// check if player is already engaged
 		if (activeChar.getPartnerId() != 0)
@@ -171,11 +171,11 @@ public class Wedding implements IVoicedCommandHandler
 					skillId = 4362;
 				}
 				
-				Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
+				final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
 				if (activeChar.getFirstEffect(skill) == null)
 				{
 					skill.getEffects(activeChar, activeChar, false, false, false);
-					SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 					sm.addSkillName(skillId);
 					activeChar.sendPacket(sm);
 				}
@@ -221,7 +221,7 @@ public class Wedding implements IVoicedCommandHandler
 		}
 		
 		ptarget.setEngageRequest(true, activeChar.getObjectId());
-		ConfirmDlg dlg = new ConfirmDlg(614);
+		final ConfirmDlg dlg = new ConfirmDlg(614);
 		dlg.addString(activeChar.getName() + " asking you to engage. Do you want to start a new relationship?");
 		ptarget.sendPacket(dlg);
 		
@@ -389,13 +389,13 @@ public class Wedding implements IVoicedCommandHandler
 		activeChar.setTarget(activeChar);
 		activeChar.disableAllSkills();
 		
-		MagicSkillUse msk = new MagicSkillUse(activeChar, 1050, 1, teleportTimer, 0);
+		final MagicSkillUse msk = new MagicSkillUse(activeChar, 1050, 1, teleportTimer, 0);
 		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, msk, 810000/* 900 */);
-		SetupGauge sg = new SetupGauge(0, teleportTimer);
+		final SetupGauge sg = new SetupGauge(0, teleportTimer);
 		activeChar.sendPacket(sg);
 		// End SoE Animation section
 		
-		EscapeFinalizer ef = new EscapeFinalizer(activeChar, partner.getX(), partner.getY(), partner.getZ(), partner.isIn7sDungeon());
+		final EscapeFinalizer ef = new EscapeFinalizer(activeChar, partner.getX(), partner.getY(), partner.getZ(), partner.isIn7sDungeon());
 		// continue execution later
 		activeChar.setSkillCast(ThreadPool.schedule(ef, teleportTimer));
 		activeChar.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (teleportTimer / GameTimeController.MILLIS_IN_TICK));

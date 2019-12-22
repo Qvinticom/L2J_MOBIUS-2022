@@ -117,7 +117,7 @@ public class Q503_PursuitOfClanAmbition extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -234,9 +234,9 @@ public class Q503_PursuitOfClanAmbition extends Quest
 		{
 			st.set("cond", "9");
 			npc.broadcastNpcSay("Blood and Honor");
-			NpcInstance sister1 = addSpawn(KALIS, 160665, 21209, -3710, npc.getHeading(), false, 180000);
+			final NpcInstance sister1 = addSpawn(KALIS, 160665, 21209, -3710, npc.getHeading(), false, 180000);
 			sister1.broadcastNpcSay("Ambition and Power");
-			NpcInstance sister2 = addSpawn(ATHREA, 160665, 21291, -3710, npc.getHeading(), false, 180000);
+			final NpcInstance sister2 = addSpawn(ATHREA, 160665, 21291, -3710, npc.getHeading(), false, 180000);
 			sister2.broadcastNpcSay("War and Death");
 		}
 		// Coffer
@@ -262,7 +262,7 @@ public class Q503_PursuitOfClanAmbition extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -301,7 +301,7 @@ public class Q503_PursuitOfClanAmbition extends Quest
 				break;
 			
 			case State.STARTED:
-				int cond = st.getInt("cond");
+				final int cond = st.getInt("cond");
 				int memberCond = 0;
 				if (getClanLeaderQuestState(player, npc) != null)
 				{
@@ -650,12 +650,12 @@ public class Q503_PursuitOfClanAmbition extends Quest
 		{
 			if (element[0] == npc.getNpcId())
 			{
-				int cond = element[1];
-				int maxCount = element[2];
-				int chance = element[3];
-				int item1 = element[4];
-				int item2 = element[5];
-				int item3 = element[6];
+				final int cond = element[1];
+				final int maxCount = element[2];
+				final int chance = element[3];
+				final int item1 = element[4];
+				final int item2 = element[5];
+				final int item3 = element[6];
 				
 				if (st.getInt("cond") == cond)
 				{
@@ -667,7 +667,7 @@ public class Q503_PursuitOfClanAmbition extends Quest
 					{
 						if (element[0] == IMPERIAL_GRAVEKEEPER)
 						{
-							NpcInstance coffer = addSpawn(COFFER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 180000);
+							final NpcInstance coffer = addSpawn(COFFER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 180000);
 							coffer.broadcastNpcSay("Curse of the gods on the one that defiles the property of the empire!");
 						}
 						else if ((element[0] == GRAVE_GUARD) && (st.getQuestItemsCount(IMP_KEYS) < 6) && (Rnd.get(50) < chance))

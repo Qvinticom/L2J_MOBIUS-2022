@@ -341,7 +341,7 @@ public class FourSepulchersManager extends GrandBossManager
 	
 	protected void timeCalculator()
 	{
-		Calendar tmp = Calendar.getInstance();
+		final Calendar tmp = Calendar.getInstance();
 		if (tmp.get(Calendar.MINUTE) < _newCycleMin)
 		{
 			tmp.set(Calendar.HOUR, Calendar.getInstance().get(Calendar.HOUR) - 1);
@@ -379,7 +379,7 @@ public class FourSepulchersManager extends GrandBossManager
 		
 		if (_archonSpawned.size() != 0)
 		{
-			Set<Integer> npcIdSet = _archonSpawned.keySet();
+			final Set<Integer> npcIdSet = _archonSpawned.keySet();
 			for (int npcId : npcIdSet)
 			{
 				_archonSpawned.put(npcId, false);
@@ -553,9 +553,9 @@ public class FourSepulchersManager extends GrandBossManager
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY id");
+			final PreparedStatement statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY id");
 			statement.setInt(1, 0);
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			
 			Spawn spawnDat;
 			NpcTemplate template1;
@@ -633,17 +633,17 @@ public class FourSepulchersManager extends GrandBossManager
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement1 = con.prepareStatement("SELECT Distinct key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY key_npc_id");
+			final PreparedStatement statement1 = con.prepareStatement("SELECT Distinct key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY key_npc_id");
 			statement1.setInt(1, 1);
-			ResultSet rset1 = statement1.executeQuery();
+			final ResultSet rset1 = statement1.executeQuery();
 			while (rset1.next())
 			{
 				final int keyNpcId = rset1.getInt("key_npc_id");
 				
-				PreparedStatement statement2 = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, key_npc_id FROM four_sepulchers_spawnlist Where key_npc_id = ? and spawntype = ? ORDER BY id");
+				final PreparedStatement statement2 = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, key_npc_id FROM four_sepulchers_spawnlist Where key_npc_id = ? and spawntype = ? ORDER BY id");
 				statement2.setInt(1, keyNpcId);
 				statement2.setInt(2, 1);
-				ResultSet rset2 = statement2.executeQuery();
+				final ResultSet rset2 = statement2.executeQuery();
 				
 				Spawn spawnDat;
 				NpcTemplate template1;
@@ -692,17 +692,17 @@ public class FourSepulchersManager extends GrandBossManager
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement1 = con.prepareStatement("SELECT Distinct key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY key_npc_id");
+			final PreparedStatement statement1 = con.prepareStatement("SELECT Distinct key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY key_npc_id");
 			statement1.setInt(1, 2);
-			ResultSet rset1 = statement1.executeQuery();
+			final ResultSet rset1 = statement1.executeQuery();
 			while (rset1.next())
 			{
 				final int keyNpcId = rset1.getInt("key_npc_id");
 				
-				PreparedStatement statement2 = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, key_npc_id FROM four_sepulchers_spawnlist Where key_npc_id = ? and spawntype = ? ORDER BY id");
+				final PreparedStatement statement2 = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, key_npc_id FROM four_sepulchers_spawnlist Where key_npc_id = ? and spawntype = ? ORDER BY id");
 				statement2.setInt(1, keyNpcId);
 				statement2.setInt(2, 2);
-				ResultSet rset2 = statement2.executeQuery();
+				final ResultSet rset2 = statement2.executeQuery();
 				
 				Spawn spawnDat;
 				NpcTemplate template1;
@@ -752,17 +752,17 @@ public class FourSepulchersManager extends GrandBossManager
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement1 = con.prepareStatement("SELECT Distinct key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY key_npc_id");
+			final PreparedStatement statement1 = con.prepareStatement("SELECT Distinct key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY key_npc_id");
 			statement1.setInt(1, 5);
-			ResultSet rset1 = statement1.executeQuery();
+			final ResultSet rset1 = statement1.executeQuery();
 			while (rset1.next())
 			{
 				final int keyNpcId = rset1.getInt("key_npc_id");
 				
-				PreparedStatement statement2 = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, key_npc_id FROM four_sepulchers_spawnlist Where key_npc_id = ? and spawntype = ? ORDER BY id");
+				final PreparedStatement statement2 = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, key_npc_id FROM four_sepulchers_spawnlist Where key_npc_id = ? and spawntype = ? ORDER BY id");
 				statement2.setInt(1, keyNpcId);
 				statement2.setInt(2, 5);
-				ResultSet rset2 = statement2.executeQuery();
+				final ResultSet rset2 = statement2.executeQuery();
 				
 				Spawn spawnDat;
 				NpcTemplate template1;
@@ -812,17 +812,17 @@ public class FourSepulchersManager extends GrandBossManager
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement1 = con.prepareStatement("SELECT Distinct key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY key_npc_id");
+			final PreparedStatement statement1 = con.prepareStatement("SELECT Distinct key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY key_npc_id");
 			statement1.setInt(1, 6);
-			ResultSet rset1 = statement1.executeQuery();
+			final ResultSet rset1 = statement1.executeQuery();
 			while (rset1.next())
 			{
 				final int keyNpcId = rset1.getInt("key_npc_id");
 				
-				PreparedStatement statement2 = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, key_npc_id FROM four_sepulchers_spawnlist Where key_npc_id = ? and spawntype = ? ORDER BY id");
+				final PreparedStatement statement2 = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, key_npc_id FROM four_sepulchers_spawnlist Where key_npc_id = ? and spawntype = ? ORDER BY id");
 				statement2.setInt(1, keyNpcId);
 				statement2.setInt(2, 6);
-				ResultSet rset2 = statement2.executeQuery();
+				final ResultSet rset2 = statement2.executeQuery();
 				
 				Spawn spawnDat;
 				NpcTemplate template1;
@@ -1092,7 +1092,7 @@ public class FourSepulchersManager extends GrandBossManager
 		
 		if (Config.FS_PARTY_MEMBER_COUNT > 1)
 		{
-			List<PlayerInstance> members = new ArrayList<>();
+			final List<PlayerInstance> members = new ArrayList<>();
 			for (PlayerInstance mem : player.getParty().getPartyMembers())
 			{
 				if (!mem.isDead() && Util.checkIfInRange(700, player, mem, true))
@@ -1128,7 +1128,7 @@ public class FourSepulchersManager extends GrandBossManager
 		}
 		else if ((Config.FS_PARTY_MEMBER_COUNT <= 1) && player.isInParty())
 		{
-			List<PlayerInstance> members = new ArrayList<>();
+			final List<PlayerInstance> members = new ArrayList<>();
 			for (PlayerInstance mem : player.getParty().getPartyMembers())
 			{
 				if (!mem.isDead() && Util.checkIfInRange(700, player, mem, true))
@@ -1174,7 +1174,7 @@ public class FourSepulchersManager extends GrandBossManager
 				player.addItem("Quest", USED_PASS, 1, player, true);
 			}
 			
-			ItemInstance hallsKey = player.getInventory().getItemByItemId(CHAPEL_KEY);
+			final ItemInstance hallsKey = player.getInventory().getItemByItemId(CHAPEL_KEY);
 			if (hallsKey != null)
 			{
 				player.destroyItemByItemId("Quest", CHAPEL_KEY, hallsKey.getCount(), player, true);
@@ -1195,7 +1195,7 @@ public class FourSepulchersManager extends GrandBossManager
 			return;
 		}
 		
-		Spawn spawnDat = _mysteriousBoxSpawns.get(npcId);
+		final Spawn spawnDat = _mysteriousBoxSpawns.get(npcId);
 		if (spawnDat != null)
 		{
 			_allMobs.add(spawnDat.doSpawn());
@@ -1211,7 +1211,7 @@ public class FourSepulchersManager extends GrandBossManager
 		}
 		
 		List<Spawn> monsterList;
-		List<SepulcherMonsterInstance> mobs = new ArrayList<>();
+		final List<SepulcherMonsterInstance> mobs = new ArrayList<>();
 		Spawn keyBoxMobSpawn;
 		
 		if (Rnd.nextBoolean())
@@ -1339,7 +1339,7 @@ public class FourSepulchersManager extends GrandBossManager
 	
 	public synchronized boolean isViscountMobsAnnihilated(int npcId)
 	{
-		List<SepulcherMonsterInstance> mobs = _viscountMobs.get(npcId);
+		final List<SepulcherMonsterInstance> mobs = _viscountMobs.get(npcId);
 		
 		if (mobs == null)
 		{
@@ -1359,7 +1359,7 @@ public class FourSepulchersManager extends GrandBossManager
 	
 	public synchronized boolean isDukeMobsAnnihilated(int npcId)
 	{
-		List<SepulcherMonsterInstance> mobs = _dukeMobs.get(npcId);
+		final List<SepulcherMonsterInstance> mobs = _dukeMobs.get(npcId);
 		
 		if (mobs == null)
 		{
@@ -1384,7 +1384,7 @@ public class FourSepulchersManager extends GrandBossManager
 			return;
 		}
 		
-		Spawn spawnDat = _keyBoxSpawns.get(activeChar.getNpcId());
+		final Spawn spawnDat = _keyBoxSpawns.get(activeChar.getNpcId());
 		
 		if (spawnDat != null)
 		{
@@ -1406,7 +1406,7 @@ public class FourSepulchersManager extends GrandBossManager
 			return;
 		}
 		
-		Spawn spawnDat = _executionerSpawns.get(activeChar.getNpcId());
+		final Spawn spawnDat = _executionerSpawns.get(activeChar.getNpcId());
 		
 		if (spawnDat != null)
 		{
@@ -1433,7 +1433,7 @@ public class FourSepulchersManager extends GrandBossManager
 			return;
 		}
 		
-		List<Spawn> monsterList = _dukeFinalMobs.get(npcId);
+		final List<Spawn> monsterList = _dukeFinalMobs.get(npcId);
 		
 		if (monsterList != null)
 		{
@@ -1459,7 +1459,7 @@ public class FourSepulchersManager extends GrandBossManager
 			return;
 		}
 		
-		List<Spawn> monsterList = _emperorsGraveNpcs.get(npcId);
+		final List<Spawn> monsterList = _emperorsGraveNpcs.get(npcId);
 		
 		if (monsterList != null)
 		{
@@ -1503,7 +1503,7 @@ public class FourSepulchersManager extends GrandBossManager
 			return;
 		}
 		
-		Spawn spawnDat = _shadowSpawns.get(npcId);
+		final Spawn spawnDat = _shadowSpawns.get(npcId);
 		if (spawnDat != null)
 		{
 			final SepulcherMonsterInstance mob = (SepulcherMonsterInstance) spawnDat.doSpawn();
@@ -1726,7 +1726,7 @@ public class FourSepulchersManager extends GrandBossManager
 		{
 			if (_inAttackTime)
 			{
-				Calendar tmp = Calendar.getInstance();
+				final Calendar tmp = Calendar.getInstance();
 				tmp.setTimeInMillis(Calendar.getInstance().getTimeInMillis() - _warmUpTimeEnd);
 				if ((tmp.get(Calendar.MINUTE) + 5) < Config.FS_TIME_ATTACK)
 				{
@@ -1881,7 +1881,7 @@ public class FourSepulchersManager extends GrandBossManager
 			
 			clean();
 			
-			Calendar time = Calendar.getInstance();
+			final Calendar time = Calendar.getInstance();
 			// one hour = 55th min to 55 min of next hour, so we check for this, also check for first launch
 			if ((Calendar.getInstance().get(Calendar.MINUTE) > _newCycleMin) && !_firstTimeRun)
 			{
@@ -1911,7 +1911,7 @@ public class FourSepulchersManager extends GrandBossManager
 	
 	public void showHtmlFile(PlayerInstance player, String file, NpcInstance npc, PlayerInstance member)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		html.setFile("data/html/SepulcherNpc/" + file);
 		if (member != null)
 		{

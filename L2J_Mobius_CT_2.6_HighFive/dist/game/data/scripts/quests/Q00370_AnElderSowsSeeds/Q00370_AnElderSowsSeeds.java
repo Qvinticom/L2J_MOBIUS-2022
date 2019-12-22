@@ -143,7 +143,7 @@ public class Q00370_AnElderSowsSeeds extends Quest
 		else
 		{
 			final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
-			if(qs != null)
+			if (qs != null)
 			{
 				giveItemRandomly(qs.getPlayer(), npc, SPELLBOOK_PAGE, 1, 0, MOBS2.get(npcId), true);
 			}

@@ -50,12 +50,12 @@ public class PostBBSManager extends BaseBBSManager
 		{
 			CommunityBoard.getInstance().addBypass(player, "Posts Command", command);
 			
-			StringTokenizer st = new StringTokenizer(command, ";");
+			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			st.nextToken();
 			
-			int idf = Integer.parseInt(st.nextToken());
-			int idp = Integer.parseInt(st.nextToken());
+			final int idf = Integer.parseInt(st.nextToken());
+			final int idp = Integer.parseInt(st.nextToken());
 			
 			String index = null;
 			if (st.hasMoreTokens())
@@ -77,13 +77,13 @@ public class PostBBSManager extends BaseBBSManager
 		}
 		else if (command.startsWith("_bbsposts;edit;"))
 		{
-			StringTokenizer st = new StringTokenizer(command, ";");
+			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			st.nextToken();
 			
-			int idf = Integer.parseInt(st.nextToken());
-			int idt = Integer.parseInt(st.nextToken());
-			int idp = Integer.parseInt(st.nextToken());
+			final int idf = Integer.parseInt(st.nextToken());
+			final int idt = Integer.parseInt(st.nextToken());
+			final int idp = Integer.parseInt(st.nextToken());
 			
 			showEditPost((TopicBBSManager.getInstance().getTopicByID(idt)), ForumsBBSManager.getInstance().getForumByID(idf), player, idp);
 		}
@@ -96,10 +96,10 @@ public class PostBBSManager extends BaseBBSManager
 	@Override
 	public void parseWrite(String ar1, String ar2, String ar3, String ar4, String ar5, PlayerInstance player)
 	{
-		StringTokenizer st = new StringTokenizer(ar1, ";");
-		int idf = Integer.parseInt(st.nextToken());
-		int idt = Integer.parseInt(st.nextToken());
-		int idp = Integer.parseInt(st.nextToken());
+		final StringTokenizer st = new StringTokenizer(ar1, ";");
+		final int idf = Integer.parseInt(st.nextToken());
+		final int idt = Integer.parseInt(st.nextToken());
+		final int idp = Integer.parseInt(st.nextToken());
 		
 		final Forum forum = ForumsBBSManager.getInstance().getForumByID(idf);
 		if (forum == null)
@@ -164,7 +164,7 @@ public class PostBBSManager extends BaseBBSManager
 			return;
 		}
 		
-		Post p = getPostByTopic(topic);
+		final Post p = getPostByTopic(topic);
 		if (p == null)
 		{
 			separateAndSend("<html><body><br><br><center>This post doesn't exist.</center></body></html>", player);
@@ -199,9 +199,9 @@ public class PostBBSManager extends BaseBBSManager
 	
 	private void showMemoPost(Topic topic, PlayerInstance player, Forum forum)
 	{
-		Post p = getPostByTopic(topic);
-		Locale locale = Locale.getDefault();
-		DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.FULL, locale);
+		final Post p = getPostByTopic(topic);
+		final Locale locale = Locale.getDefault();
+		final DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.FULL, locale);
 		
 		String mes = p.getCPost(0).postTxt.replace(">", "&gt;");
 		mes = mes.replace("<", "&lt;");

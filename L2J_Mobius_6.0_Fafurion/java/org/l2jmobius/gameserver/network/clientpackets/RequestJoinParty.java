@@ -77,7 +77,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 		
 		if (FakePlayerData.getInstance().isTalkable(_name))
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_BEEN_INVITED_TO_THE_PARTY);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_BEEN_INVITED_TO_THE_PARTY);
 			sm.addString(FakePlayerData.getInstance().getProperName(_name));
 			requestor.sendPacket(sm);
 			if (!requestor.isProcessingRequest())

@@ -441,7 +441,7 @@ public class Siege
 			if ((getDefenderClans().isEmpty()) && // If defender doesn't exist (Pc vs Npc)
 				(getAttackerClans().size() == 1)) // Only 1 attacker
 			{
-				SiegeClan scNewOwner = getAttackerClan(getCastle().getOwnerId());
+				final SiegeClan scNewOwner = getAttackerClan(getCastle().getOwnerId());
 				removeAttacker(scNewOwner);
 				addDefender(scNewOwner, SiegeClanType.OWNER);
 				endSiege();
@@ -466,7 +466,7 @@ public class Siege
 					}
 					if (allinsamealliance)
 					{
-						SiegeClan scNewOwner = getAttackerClan(getCastle().getOwnerId());
+						final SiegeClan scNewOwner = getAttackerClan(getCastle().getOwnerId());
 						removeAttacker(scNewOwner);
 						addDefender(scNewOwner, SiegeClanType.OWNER);
 						endSiege();
@@ -483,20 +483,20 @@ public class Siege
 					}
 				}
 				
-				SiegeClan scNewOwner = getAttackerClan(getCastle().getOwnerId());
+				final SiegeClan scNewOwner = getAttackerClan(getCastle().getOwnerId());
 				removeAttacker(scNewOwner);
 				addDefender(scNewOwner, SiegeClanType.OWNER);
 				
 				// The player's clan is in an alliance
 				if (allyId != 0)
 				{
-					Clan[] clanList = ClanTable.getInstance().getClans();
+					final Clan[] clanList = ClanTable.getInstance().getClans();
 					
 					for (Clan clan : clanList)
 					{
 						if (clan.getAllyId() == allyId)
 						{
-							SiegeClan sc = getAttackerClan(clan.getClanId());
+							final SiegeClan sc = getAttackerClan(clan.getClanId());
 							
 							if (sc != null)
 							{
@@ -778,14 +778,14 @@ public class Siege
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=?");
+			final PreparedStatement statement = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=?");
 			statement.setInt(1, getCastle().getCastleId());
 			statement.execute();
 			statement.close();
 			
 			if (getCastle().getOwnerId() > 0)
 			{
-				PreparedStatement statement2 = con.prepareStatement("DELETE FROM siege_clans WHERE clan_id=?");
+				final PreparedStatement statement2 = con.prepareStatement("DELETE FROM siege_clans WHERE clan_id=?");
 				statement2.setInt(1, getCastle().getOwnerId());
 				statement2.execute();
 				statement2.close();
@@ -808,7 +808,7 @@ public class Siege
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=? and type = 2");
+			final PreparedStatement statement = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=? and type = 2");
 			statement.setInt(1, getCastle().getCastleId());
 			statement.execute();
 			statement.close();
@@ -1079,7 +1079,7 @@ public class Siege
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=? and clan_id=?");
+			final PreparedStatement statement = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=? and clan_id=?");
 			statement.setInt(1, getCastle().getCastleId());
 			statement.setInt(2, clanId);
 			statement.execute();
@@ -1481,7 +1481,7 @@ public class Siege
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("Update castle set siegeDate = ? where id = ?");
+			final PreparedStatement statement = con.prepareStatement("Update castle set siegeDate = ? where id = ?");
 			statement.setLong(1, getCastle().getSiegeDate().getTimeInMillis());
 			statement.setInt(2, getCastle().getCastleId());
 			statement.execute();
@@ -1620,7 +1620,7 @@ public class Siege
 		{
 			ControlTowerInstance ct;
 			
-			NpcTemplate template = NpcTable.getInstance().getTemplate(_sp.getNpcId());
+			final NpcTemplate template = NpcTable.getInstance().getTemplate(_sp.getNpcId());
 			
 			template.getStatsSet().set("baseHpMax", _sp.getHp());
 			

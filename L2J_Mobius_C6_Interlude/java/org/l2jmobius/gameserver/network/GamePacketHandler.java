@@ -61,7 +61,7 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 		}
 		
 		ReceivablePacket<GameClient> msg = null;
-		GameClientState state = client.getState();
+		final GameClientState state = client.getState();
 		
 		switch (state)
 		{
@@ -1311,7 +1311,7 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 		LOGGER.warning("Unknown Packet: " + Integer.toHexString(opcode) + " on State: " + state.name() + " Client: " + client);
 		
 		final int size = buf.remaining();
-		byte[] array = new byte[size];
+		final byte[] array = new byte[size];
 		buf.get(array);
 		LOGGER.warning(Util.printData(array, size));
 	}
@@ -1326,7 +1326,7 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 		LOGGER.warning("Unknown Packet: " + Integer.toHexString(opcode) + ":" + Integer.toHexString(id2) + " on State: " + state.name() + " Client: " + client);
 		
 		final int size = buf.remaining();
-		byte[] array = new byte[size];
+		final byte[] array = new byte[size];
 		buf.get(array);
 		LOGGER.warning(Util.printData(array, size));
 	}

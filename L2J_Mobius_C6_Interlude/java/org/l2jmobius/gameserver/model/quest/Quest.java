@@ -157,7 +157,7 @@ public class Quest extends ManagedScript
 		// That is, if a script is in DATAPACK_PATH/scripts/quests/abc the result will be quests.abc
 		// Similarly, for a script in DATAPACK_PATH/scripts/ai/individual/myClass.py the result will be ai.individual.myClass
 		// All quests are to be indexed, processed, and reloaded by this form of pathname.
-		StringBuilder temp = new StringBuilder(getClass().getCanonicalName());
+		final StringBuilder temp = new StringBuilder(getClass().getCanonicalName());
 		temp.delete(0, temp.indexOf(".scripts.") + 9);
 		temp.delete(temp.indexOf(getClass().getSimpleName()), temp.length());
 		_prefixPath = temp.toString();
@@ -253,7 +253,7 @@ public class Quest extends ManagedScript
 	 */
 	public QuestState newQuestState(PlayerInstance player)
 	{
-		QuestState qs = new QuestState(this, player, _initialState);
+		final QuestState qs = new QuestState(this, player, _initialState);
 		createQuestInDb(qs);
 		return qs;
 	}
@@ -845,7 +845,7 @@ public class Quest extends ManagedScript
 		
 		if (object instanceof PlayerInstance)
 		{
-			PlayerInstance player = (PlayerInstance) object;
+			final PlayerInstance player = (PlayerInstance) object;
 			
 			if (res.endsWith(".htm"))
 			{
@@ -853,14 +853,14 @@ public class Quest extends ManagedScript
 			}
 			else if (res.startsWith("<html>"))
 			{
-				NpcHtmlMessage npcReply = new NpcHtmlMessage(5);
+				final NpcHtmlMessage npcReply = new NpcHtmlMessage(5);
 				npcReply.setHtml(res);
 				npcReply.replace("%playername%", player.getName());
 				player.sendPacket(npcReply);
 			}
 			else
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				sm.addString(res);
 				player.sendPacket(sm);
 			}
@@ -1093,7 +1093,7 @@ public class Quest extends ManagedScript
 			PreparedStatement statement;
 			
 			final PreparedStatement invalidQuestData = con.prepareStatement("DELETE FROM character_quests WHERE char_id=? and name=?");
-			PreparedStatement invalidQuestDataVar = con.prepareStatement("delete FROM character_quests WHERE char_id=? and name=? and var=?");
+			final PreparedStatement invalidQuestDataVar = con.prepareStatement("delete FROM character_quests WHERE char_id=? and name=? and var=?");
 			
 			statement = con.prepareStatement("SELECT name,value FROM character_quests WHERE char_id=? AND var=?");
 			statement.setInt(1, player.getObjectId());
@@ -1138,12 +1138,12 @@ public class Quest extends ManagedScript
 			
 			while (rs.next())
 			{
-				String questId = rs.getString("name");
-				String var = rs.getString("var");
-				String value = rs.getString("value");
+				final String questId = rs.getString("name");
+				final String var = rs.getString("var");
+				final String value = rs.getString("value");
 				
 				// Get the QuestState saved in the loop before
-				QuestState qs = player.getQuestState(questId);
+				final QuestState qs = player.getQuestState(questId);
 				
 				if (qs == null)
 				{
@@ -1215,7 +1215,7 @@ public class Quest extends ManagedScript
 			statement = con.prepareStatement("SELECT value FROM quest_global_data WHERE quest_name = ? AND var = ?");
 			statement.setString(1, getName());
 			statement.setString(2, var);
-			ResultSet rs = statement.executeQuery();
+			final ResultSet rs = statement.executeQuery();
 			
 			if (rs.first())
 			{
@@ -1405,7 +1405,7 @@ public class Quest extends ManagedScript
 	 */
 	public static void updateQuestInDb(QuestState qs)
 	{
-		String val = State.getStateName(qs.getState());
+		final String val = State.getStateName(qs.getState());
 		updateQuestVarInDb(qs, "<state>", val);
 	}
 	
@@ -1601,7 +1601,7 @@ public class Quest extends ManagedScript
 		
 		// normal cases...if the player is not in a party, check the player's state
 		QuestState temp = null;
-		Party party = player.getParty();
+		final Party party = player.getParty();
 		
 		// if this player is not in a party, just check if this player instance matches the conditions itself
 		if ((party == null) || party.getPartyMembers().isEmpty())
@@ -1707,7 +1707,7 @@ public class Quest extends ManagedScript
 		
 		// normal cases...if the player is not in a partym check the player's state
 		QuestState temp = null;
-		Party party = player.getParty();
+		final Party party = player.getParty();
 		// if this player is not in a party, just check if this player instance matches the conditions itself
 		if ((party == null) || party.getPartyMembers().isEmpty())
 		{
@@ -1930,14 +1930,14 @@ public class Quest extends ManagedScript
 		}
 		
 		// Verify if the player got a clan
-		Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		if (clan == null)
 		{
 			return null;
 		}
 		
 		// Verify if the leader is online
-		PlayerInstance leader = clan.getLeader().getPlayerInstance();
+		final PlayerInstance leader = clan.getLeader().getPlayerInstance();
 		if (leader == null)
 		{
 			return null;
@@ -1961,7 +1961,7 @@ public class Quest extends ManagedScript
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement stm = con.prepareStatement("INSERT INTO character_quests (char_id,name,var,value) VALUES (?,?,?,?)");
+			final PreparedStatement stm = con.prepareStatement("INSERT INTO character_quests (char_id,name,var,value) VALUES (?,?,?,?)");
 			
 			for (Integer charId : objectsId)
 			{
@@ -1987,7 +1987,7 @@ public class Quest extends ManagedScript
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement stm = con.prepareStatement("DELETE FROM character_quests WHERE name = ? and char_id IN (SELECT obj_Id FROM characters WHERE clanid = ? AND online = 0)");
+			final PreparedStatement stm = con.prepareStatement("DELETE FROM character_quests WHERE name = ? and char_id IN (SELECT obj_Id FROM characters WHERE clanid = ? AND online = 0)");
 			
 			stm.setString(1, getName());
 			stm.setInt(2, clanId);
@@ -2012,8 +2012,8 @@ public class Quest extends ManagedScript
 	{
 		if (player.isClanLeader())
 		{
-			PlayerInstance[] onlineMembers = player.getClan().getOnlineMembers();
-			Integer[] offlineMembersIds = player.getClan().getOfflineMembersIds();
+			final PlayerInstance[] onlineMembers = player.getClan().getOnlineMembers();
+			final Integer[] offlineMembersIds = player.getClan().getOfflineMembersIds();
 			
 			// Setting it for online members...
 			for (PlayerInstance onlineMember : onlineMembers)
@@ -2037,7 +2037,7 @@ public class Quest extends ManagedScript
 	{
 		if (player.isClanLeader())
 		{
-			PlayerInstance[] onlineMembers = player.getClan().getOnlineMembers();
+			final PlayerInstance[] onlineMembers = player.getClan().getOnlineMembers();
 			
 			// Deleting it for online members...
 			for (PlayerInstance onlineMember : onlineMembers)

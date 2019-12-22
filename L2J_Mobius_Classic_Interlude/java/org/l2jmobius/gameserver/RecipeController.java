@@ -366,8 +366,9 @@ public class RecipeController
 					{
 						Thread.sleep(_delay);
 					}
-					catch (InterruptedException e)
+					catch (Exception e)
 					{
+						// Ignore.
 					}
 					finally
 					{

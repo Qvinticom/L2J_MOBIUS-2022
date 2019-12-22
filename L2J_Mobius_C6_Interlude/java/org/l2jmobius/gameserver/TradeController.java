@@ -158,20 +158,20 @@ public class TradeController
 			
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement1 = con.prepareStatement("SELECT * FROM merchant_shopids");
+				final PreparedStatement statement1 = con.prepareStatement("SELECT * FROM merchant_shopids");
 				
-				ResultSet rset1 = statement1.executeQuery();
+				final ResultSet rset1 = statement1.executeQuery();
 				
 				while (rset1.next())
 				{
-					PreparedStatement statement = con.prepareStatement("SELECT * FROM merchant_buylists WHERE shop_id=? ORDER BY `order` ASC");
+					final PreparedStatement statement = con.prepareStatement("SELECT * FROM merchant_buylists WHERE shop_id=? ORDER BY `order` ASC");
 					
 					statement.setString(1, String.valueOf(rset1.getInt("shop_id")));
-					ResultSet rset = statement.executeQuery();
+					final ResultSet rset = statement.executeQuery();
 					if (rset.next())
 					{
 						limitedItem = false;
-						StoreTradeList buy1 = new StoreTradeList(rset1.getInt("shop_id"));
+						final StoreTradeList buy1 = new StoreTradeList(rset1.getInt("shop_id"));
 						
 						int itemId = rset.getInt("item_id");
 						int price = rset.getInt("price");
@@ -179,7 +179,7 @@ public class TradeController
 						int currentCount = rset.getInt("currentCount");
 						int time = rset.getInt("time");
 						
-						ItemInstance item = ItemTable.getInstance().createDummyItem(itemId);
+						final ItemInstance item = ItemTable.getInstance().createDummyItem(itemId);
 						
 						if (item == null)
 						{
@@ -293,8 +293,8 @@ public class TradeController
 					long savetimer = 0;
 					final long currentMillis = System.currentTimeMillis();
 					
-					PreparedStatement statement2 = con.prepareStatement("SELECT DISTINCT time, savetimer FROM merchant_buylists WHERE time <> 0 ORDER BY time");
-					ResultSet rset2 = statement2.executeQuery();
+					final PreparedStatement statement2 = con.prepareStatement("SELECT DISTINCT time, savetimer FROM merchant_buylists WHERE time <> 0 ORDER BY time");
+					final ResultSet rset2 = statement2.executeQuery();
 					
 					while (rset2.next())
 					{
@@ -332,27 +332,27 @@ public class TradeController
 				{
 					final int initialSize = _lists.size();
 					
-					PreparedStatement statement1 = con.prepareStatement("SELECT * FROM custom_merchant_shopids");
+					final PreparedStatement statement1 = con.prepareStatement("SELECT * FROM custom_merchant_shopids");
 					
-					ResultSet rset1 = statement1.executeQuery();
+					final ResultSet rset1 = statement1.executeQuery();
 					
 					while (rset1.next())
 					{
-						PreparedStatement statement = con.prepareStatement("SELECT * FROM custom_merchant_buylists WHERE shop_id=? ORDER BY `order` ASC");
+						final PreparedStatement statement = con.prepareStatement("SELECT * FROM custom_merchant_buylists WHERE shop_id=? ORDER BY `order` ASC");
 						
 						statement.setString(1, String.valueOf(rset1.getInt("shop_id")));
-						ResultSet rset = statement.executeQuery();
+						final ResultSet rset = statement.executeQuery();
 						
 						if (rset.next())
 						{
 							limitedItem = false;
-							StoreTradeList buy1 = new StoreTradeList(rset1.getInt("shop_id"));
+							final StoreTradeList buy1 = new StoreTradeList(rset1.getInt("shop_id"));
 							int itemId = rset.getInt("item_id");
 							int price = rset.getInt("price");
 							int count = rset.getInt("count");
 							int currentCount = rset.getInt("currentCount");
 							int time = rset.getInt("time");
-							ItemInstance item = ItemTable.getInstance().createDummyItem(itemId);
+							final ItemInstance item = ItemTable.getInstance().createDummyItem(itemId);
 							if (item == null)
 							{
 								rset.close();
@@ -397,7 +397,7 @@ public class TradeController
 									count = rset.getInt("count");
 									time = rset.getInt("time");
 									currentCount = rset.getInt("currentCount");
-									ItemInstance item2 = ItemTable.getInstance().createDummyItem(itemId);
+									final ItemInstance item2 = ItemTable.getInstance().createDummyItem(itemId);
 									if (item2 == null)
 									{
 										continue;
@@ -460,8 +460,8 @@ public class TradeController
 						long savetimer = 0;
 						final long currentMillis = System.currentTimeMillis();
 						
-						PreparedStatement statement2 = con.prepareStatement("SELECT DISTINCT time, savetimer FROM custom_merchant_buylists WHERE time <> 0 ORDER BY time");
-						ResultSet rset2 = statement2.executeQuery();
+						final PreparedStatement statement2 = con.prepareStatement("SELECT DISTINCT time, savetimer FROM custom_merchant_buylists WHERE time <> 0 ORDER BY time");
+						final ResultSet rset2 = statement2.executeQuery();
 						
 						while (rset2.next())
 						{
@@ -552,7 +552,7 @@ public class TradeController
 		final long timerSave = System.currentTimeMillis() + (time * 60 * 60 * 1000);
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("UPDATE merchant_buylists SET savetimer =? WHERE time =?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE merchant_buylists SET savetimer =? WHERE time =?");
 			statement.setLong(1, timerSave);
 			statement.setInt(2, time);
 			statement.executeUpdate();

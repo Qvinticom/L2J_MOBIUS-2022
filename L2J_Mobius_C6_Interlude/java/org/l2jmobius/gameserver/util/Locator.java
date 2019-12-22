@@ -45,7 +45,7 @@ public class Locator
 	 */
 	public static File getClassSource(Class<?> c)
 	{
-		String classResource = c.getName().replace('.', '/') + ".class";
+		final String classResource = c.getName().replace('.', '/') + ".class";
 		return getResourceSource(c.getClassLoader(), classResource);
 	}
 	
@@ -73,17 +73,17 @@ public class Locator
 		}
 		if (url != null)
 		{
-			String u = url.toString();
+			final String u = url.toString();
 			if (u.startsWith("jar:file:"))
 			{
-				int pling = u.indexOf('!');
-				String jarName = u.substring(4, pling);
+				final int pling = u.indexOf('!');
+				final String jarName = u.substring(4, pling);
 				return new File(fromURI(jarName));
 			}
 			else if (u.startsWith("file:"))
 			{
-				int tail = u.indexOf(resource);
-				String dirName = u.substring(0, tail);
+				final int tail = u.indexOf(resource);
+				final String dirName = u.substring(0, tail);
 				return new File(fromURI(dirName));
 			}
 		}
@@ -117,13 +117,13 @@ public class Locator
 		{
 			throw new IllegalArgumentException("Can only handle valid file: URIs");
 		}
-		StringBuilder buf = new StringBuilder(url.getHost());
+		final StringBuilder buf = new StringBuilder(url.getHost());
 		if (buf.length() > 0)
 		{
 			buf.insert(0, File.separatorChar).insert(0, File.separatorChar);
 		}
-		String file = url.getFile();
-		int queryPos = file.indexOf('?');
+		final String file = url.getFile();
+		final int queryPos = file.indexOf('?');
 		buf.append((queryPos < 0) ? file : file.substring(0, queryPos));
 		
 		uri = buf.toString().replace('/', File.separatorChar);
@@ -146,20 +146,20 @@ public class Locator
 		{
 			return uri;
 		}
-		StringBuilder sb = new StringBuilder();
-		CharacterIterator iter = new StringCharacterIterator(uri);
+		final StringBuilder sb = new StringBuilder();
+		final CharacterIterator iter = new StringCharacterIterator(uri);
 		for (char c = iter.first(); c != CharacterIterator.DONE; c = iter.next())
 		{
 			if (c == '%')
 			{
-				char c1 = iter.next();
+				final char c1 = iter.next();
 				if (c1 != CharacterIterator.DONE)
 				{
-					int i1 = Character.digit(c1, 16);
-					char c2 = iter.next();
+					final int i1 = Character.digit(c1, 16);
+					final char c2 = iter.next();
 					if (c2 != CharacterIterator.DONE)
 					{
-						int i2 = Character.digit(c2, 16);
+						final int i2 = Character.digit(c2, 16);
 						sb.append((char) ((i1 << 4) + i2));
 					}
 				}
@@ -208,7 +208,7 @@ public class Locator
 		{
 			javaHome = javaHome.substring(0, javaHome.length() - 4);
 		}
-		File toolsJar = new File(javaHome + "/lib/tools.jar");
+		final File toolsJar = new File(javaHome + "/lib/tools.jar");
 		if (!toolsJar.exists())
 		{
 			System.out.println("Unable to locate tools.jar. " + "Expected to find it in " + toolsJar.getPath());
@@ -250,7 +250,7 @@ public class Locator
 		if (!location.isDirectory())
 		{
 			urls = new URL[1];
-			String path = location.getPath();
+			final String path = location.getPath();
 			for (String extension : extensions)
 			{
 				if (path.toLowerCase().endsWith(extension))
@@ -261,7 +261,7 @@ public class Locator
 			}
 			return urls;
 		}
-		File[] matches = location.listFiles((FilenameFilter) (dir, name) ->
+		final File[] matches = location.listFiles((FilenameFilter) (dir, name) ->
 		{
 			for (String extension : extensions)
 			{

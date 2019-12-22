@@ -98,7 +98,7 @@ public class CoupleManager
 			final int playerId1 = player1.getObjectId();
 			final int playerId2 = player2.getObjectId();
 			
-			Wedding wedding = new Wedding(player1, player2);
+			final Wedding wedding = new Wedding(player1, player2);
 			_couples.add(wedding);
 			player1.setPartnerId(playerId2);
 			player2.setPartnerId(playerId1);
@@ -110,12 +110,12 @@ public class CoupleManager
 	public void deleteCouple(int coupleId)
 	{
 		final int index = getCoupleIndex(coupleId);
-		Wedding wedding = _couples.get(index);
+		final Wedding wedding = _couples.get(index);
 		
 		if (wedding != null)
 		{
-			PlayerInstance player1 = (PlayerInstance) World.getInstance().findObject(wedding.getPlayer1Id());
-			PlayerInstance player2 = (PlayerInstance) World.getInstance().findObject(wedding.getPlayer2Id());
+			final PlayerInstance player1 = (PlayerInstance) World.getInstance().findObject(wedding.getPlayer1Id());
+			final PlayerInstance player2 = (PlayerInstance) World.getInstance().findObject(wedding.getPlayer2Id());
 			if (player1 != null)
 			{
 				player1.setPartnerId(0);

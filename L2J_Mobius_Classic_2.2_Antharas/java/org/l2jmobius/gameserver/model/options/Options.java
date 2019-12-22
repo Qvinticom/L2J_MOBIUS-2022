@@ -134,7 +134,7 @@ public class Options
 	
 	public List<OptionsSkillHolder> getActivationsSkills(OptionsSkillType type)
 	{
-		List<OptionsSkillHolder> temp = new ArrayList<>();
+		final List<OptionsSkillHolder> temp = new ArrayList<>();
 		if (_activationSkills != null)
 		{
 			for (OptionsSkillHolder holder : _activationSkills)

@@ -305,8 +305,8 @@ public class World
 		{
 			PlayerCountManager.getInstance().incConnectedCount();
 			
-			PlayerInstance player = (PlayerInstance) object;
-			PlayerInstance tmp = _allPlayers.get(player.getName().toLowerCase());
+			final PlayerInstance player = (PlayerInstance) object;
+			final PlayerInstance tmp = _allPlayers.get(player.getName().toLowerCase());
 			if ((tmp != null) && (tmp != player)) // just kick the player previous instance
 			{
 				tmp.store(); // Store character and items

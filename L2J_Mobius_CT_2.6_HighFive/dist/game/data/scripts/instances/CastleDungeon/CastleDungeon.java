@@ -142,7 +142,7 @@ public class CastleDungeon extends AbstractInstance
 	@Override
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
+		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
 		{
 			if (CommonUtil.contains(RAIDS3, npc.getId()))

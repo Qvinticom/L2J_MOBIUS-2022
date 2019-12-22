@@ -76,7 +76,7 @@ public class Functions
 			@Override
 			public double apply(double... args)
 			{
-				double tan = Math.tan(args[0]);
+				final double tan = Math.tan(args[0]);
 				if (tan == 0d)
 				{
 					throw new ArithmeticException("Division by zero in cotangent!");

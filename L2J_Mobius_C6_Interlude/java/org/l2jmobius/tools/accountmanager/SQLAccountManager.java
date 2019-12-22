@@ -59,7 +59,7 @@ public class SQLAccountManager
 			System.out.println("3 - Delete existing account.");
 			System.out.println("4 - List accounts & access levels.");
 			System.out.println("5 - Exit.");
-			LineNumberReader _in = new LineNumberReader(new InputStreamReader(System.in));
+			final LineNumberReader _in = new LineNumberReader(new InputStreamReader(System.in));
 			while ((!_mode.equals("1") && !_mode.equals("2") && !_mode.equals("3") && !_mode.equals("4") && !_mode.equals("5")))
 			{
 				System.out.print("Your choice: ");
@@ -116,7 +116,7 @@ public class SQLAccountManager
 			{
 				// Delete
 				System.out.print("Do you really want to delete this account ? Y/N : ");
-				String yesno = _in.readLine();
+				final String yesno = _in.readLine();
 				if (yesno.equalsIgnoreCase("Y"))
 				{
 					deleteAccount(_uname.trim());
@@ -178,8 +178,8 @@ public class SQLAccountManager
 		}
 		q += " ORDER BY login ASC";
 		
-		PreparedStatement statement = con.prepareStatement(q);
-		ResultSet rset = statement.executeQuery();
+		final PreparedStatement statement = con.prepareStatement(q);
+		final ResultSet rset = statement.executeQuery();
 		while (rset.next())
 		{
 			System.out.println(rset.getString("login") + " -> " + rset.getInt("accessLevel"));
@@ -194,7 +194,7 @@ public class SQLAccountManager
 	private static void addOrUpdateAccount(String account, String password, String level) throws IOException, SQLException, NoSuchAlgorithmException
 	{
 		// Encode Password
-		MessageDigest md = MessageDigest.getInstance("SHA");
+		final MessageDigest md = MessageDigest.getInstance("SHA");
 		byte[] newpass;
 		newpass = password.getBytes("UTF-8");
 		newpass = md.digest(newpass);
@@ -202,7 +202,7 @@ public class SQLAccountManager
 		// Add to Base
 		Connection con = null;
 		con = DatabaseFactory.getConnection();
-		PreparedStatement statement = con.prepareStatement("REPLACE accounts (login, password, accessLevel) VALUES (?,?,?)");
+		final PreparedStatement statement = con.prepareStatement("REPLACE accounts (login, password, accessLevel) VALUES (?,?,?)");
 		statement.setString(1, account);
 		statement.setString(2, Base64.getEncoder().encodeToString(newpass));
 		statement.setString(3, level);
@@ -219,7 +219,7 @@ public class SQLAccountManager
 		// Check Account Exist
 		PreparedStatement statement = con.prepareStatement("SELECT COUNT(*) FROM accounts WHERE login=?;");
 		statement.setString(1, account);
-		ResultSet rset = statement.executeQuery();
+		final ResultSet rset = statement.executeQuery();
 		if (!rset.next())
 		{
 			System.out.println("False");
@@ -271,9 +271,9 @@ public class SQLAccountManager
 			statement.setString(1, account);
 			rset = statement.executeQuery();
 			
-			List<String> objIds = new ArrayList<>();
-			List<String> charNames = new ArrayList<>();
-			List<String> clanIds = new ArrayList<>();
+			final List<String> objIds = new ArrayList<>();
+			final List<String> charNames = new ArrayList<>();
+			final List<String> clanIds = new ArrayList<>();
 			
 			while (rset.next())
 			{
@@ -305,7 +305,7 @@ public class SQLAccountManager
 					rcln = statement.executeQuery();
 					rcln.next();
 					
-					String clanName = rcln.getString("clan_name");
+					final String clanName = rcln.getString("clan_name");
 					
 					System.out.println("Deleting clan " + clanName + ".");
 					

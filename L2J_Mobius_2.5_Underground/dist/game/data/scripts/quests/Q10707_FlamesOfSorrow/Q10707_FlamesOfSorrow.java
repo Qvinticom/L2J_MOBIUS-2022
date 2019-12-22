@@ -183,6 +183,6 @@ public class Q10707_FlamesOfSorrow extends Quest
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		return(qs != null) && qs.isCond(1) ? "19545.html" : "19545-no.html";
+		return (qs != null) && qs.isCond(1) ? "19545.html" : "19545-no.html";
 	}
 }

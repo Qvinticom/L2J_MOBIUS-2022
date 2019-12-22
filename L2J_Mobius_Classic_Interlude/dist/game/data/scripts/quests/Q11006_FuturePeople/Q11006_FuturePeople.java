@@ -206,6 +206,7 @@ public class Q11006_FuturePeople extends Quest
 					}
 					break;
 				}
+				break;
 			}
 			case State.COMPLETED:
 			{

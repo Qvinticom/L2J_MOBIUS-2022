@@ -92,7 +92,7 @@ public class BossZone extends ZoneType
 	{
 		if (_enabled && (creature instanceof PlayerInstance))
 		{
-			PlayerInstance player = (PlayerInstance) creature;
+			final PlayerInstance player = (PlayerInstance) creature;
 			
 			if (player.isGM() || Config.ALLOW_DIRECT_TP_TO_BOSS_ROOM)
 			{
@@ -190,7 +190,7 @@ public class BossZone extends ZoneType
 		if (_enabled && (creature instanceof PlayerInstance))
 		{
 			// Thread.dumpStack();
-			PlayerInstance player = (PlayerInstance) creature;
+			final PlayerInstance player = (PlayerInstance) creature;
 			
 			if (player.isGM())
 			{
@@ -282,7 +282,7 @@ public class BossZone extends ZoneType
 			
 			if (creature instanceof PlayerInstance)
 			{
-				PlayerInstance player = (PlayerInstance) creature;
+				final PlayerInstance player = (PlayerInstance) creature;
 				
 				if (player.isOnline() == 1)
 				{

@@ -708,7 +708,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 		@Override
 		public void run()
 		{
-			Map<Npc, Integer> portraits = _world.getParameters().getMap("portraits", Npc.class, Integer.class);
+			final Map<Npc, Integer> portraits = _world.getParameters().getMap("portraits", Npc.class, Integer.class);
 			if ((InstanceManager.getInstance().getWorld(_world.getInstanceId()) != _world) || (portraits == null) || portraits.isEmpty())
 			{
 				if (DEBUG)
@@ -1522,7 +1522,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 			}
 			else if (CommonUtil.contains(PORTRAITS, npc.getId()))
 			{
-				Map<Npc, Integer> portraits = world.getParameters().getMap("portraits", Npc.class, Integer.class);
+				final Map<Npc, Integer> portraits = world.getParameters().getMap("portraits", Npc.class, Integer.class);
 				portraits.remove(npc);
 				world.setParameter("portraits", portraits);
 			}

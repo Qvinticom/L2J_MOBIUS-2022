@@ -188,7 +188,7 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 			extracItemId = extractItem.getId();
 		}
 		
-		long cost = appearanceStone.getCost();
+		final long cost = appearanceStone.getCost();
 		if (cost > player.getAdena())
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_MODIFY_AS_YOU_DO_NOT_HAVE_ENOUGH_ADENA);

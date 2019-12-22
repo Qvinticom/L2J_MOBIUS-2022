@@ -205,7 +205,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 	{
 		if (num > 20)
 		{
-			Item template = ItemTable.getInstance().getTemplate(id);
+			final Item template = ItemTable.getInstance().getTemplate(id);
 			
 			if ((template != null) && !template.isStackable())
 			{
@@ -244,7 +244,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 		}
 		
 		player.getInventory().addItem("Admin", id, num, player, null);
-		ItemList il = new ItemList(player, true);
+		final ItemList il = new ItemList(player, true);
 		player.sendPacket(il);
 		if (activeChar.getName().equalsIgnoreCase(player.getName()))
 		{

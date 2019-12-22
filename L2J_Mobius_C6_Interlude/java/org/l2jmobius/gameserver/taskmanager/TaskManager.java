@@ -49,7 +49,7 @@ import org.l2jmobius.gameserver.taskmanager.tasks.TaskSevenSignsUpdate;
 import org.l2jmobius.gameserver.taskmanager.tasks.TaskShutdown;
 
 /**
- * @author ProGramMoS
+ * @author Layane
  */
 public class TaskManager
 {
@@ -98,7 +98,7 @@ public class TaskManager
 			
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[1]);
+				final PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[1]);
 				statement.setLong(1, lastActivation);
 				statement.setInt(2, id);
 				statement.executeUpdate();
@@ -202,8 +202,8 @@ public class TaskManager
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[0]);
-			ResultSet rset = statement.executeQuery();
+			final PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[0]);
+			final ResultSet rset = statement.executeQuery();
 			
 			while (rset.next())
 			{
@@ -340,7 +340,7 @@ public class TaskManager
 		{
 			PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[2]);
 			statement.setString(1, task);
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			
 			if (!rset.next())
 			{
@@ -378,7 +378,7 @@ public class TaskManager
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[3]);
+			final PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[3]);
 			statement.setString(1, task);
 			statement.setString(2, type.toString());
 			statement.setLong(3, lastActivation);

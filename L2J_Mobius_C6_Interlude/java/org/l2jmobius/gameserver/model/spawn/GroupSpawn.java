@@ -52,12 +52,12 @@ public class GroupSpawn extends Spawn
 				return null;
 			}
 			
-			Object[] parameters =
+			final Object[] parameters =
 			{
 				IdFactory.getInstance().getNextId(),
 				_template
 			};
-			Object tmp = _constructor.newInstance(parameters);
+			final Object tmp = _constructor.newInstance(parameters);
 			
 			if (!(tmp instanceof NpcInstance))
 			{

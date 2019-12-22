@@ -228,7 +228,7 @@ public class QuestState
 		}
 		
 		// Map.put() returns previous value associated with specified key, or null if there was no mapping for key.
-		String old = _vars.put(var, val);
+		final String old = _vars.put(var, val);
 		
 		if (old != null)
 		{
@@ -341,7 +341,7 @@ public class QuestState
 		}
 		
 		// send a packet to the client to inform it of the quest progress (step change)
-		QuestList ql = new QuestList();
+		final QuestList ql = new QuestList();
 		_player.sendPacket(ql);
 		
 		final int questId = getQuest().getQuestIntId();
@@ -578,27 +578,27 @@ public class QuestState
 		// If item for reward is gold, send message of gold reward to client
 		if (itemId == 57)
 		{
-			SystemMessage smsg = new SystemMessage(SystemMessageId.EARNED_ADENA);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.EARNED_ADENA);
 			smsg.addNumber(count);
 			_player.sendPacket(smsg);
 		}
 		// Otherwise, send message of object reward to client
 		else if (count > 1)
 		{
-			SystemMessage smsg = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
 			smsg.addItemName(item.getItemId());
 			smsg.addNumber(count);
 			_player.sendPacket(smsg);
 		}
 		else
 		{
-			SystemMessage smsg = new SystemMessage(SystemMessageId.EARNED_ITEM);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.EARNED_ITEM);
 			smsg.addItemName(item.getItemId());
 			_player.sendPacket(smsg);
 		}
 		_player.sendPacket(new ItemList(_player, false));
 		
-		StatusUpdate su = new StatusUpdate(_player.getObjectId());
+		final StatusUpdate su = new StatusUpdate(_player.getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, _player.getCurrentLoad());
 		_player.sendPacket(su);
 	}
@@ -957,7 +957,7 @@ public class QuestState
 	public void takeItems(int itemId, int count)
 	{
 		// Get object item from player's inventory list
-		ItemInstance item = _player.getInventory().getItemByItemId(itemId);
+		final ItemInstance item = _player.getInventory().getItemByItemId(itemId);
 		
 		if (item == null)
 		{
@@ -1198,7 +1198,7 @@ public class QuestState
 		setState(State.COMPLETED);
 		
 		// Clean registered quest items
-		int[] itemIdList = getQuest().getRegisteredItemIds();
+		final int[] itemIdList = getQuest().getRegisteredItemIds();
 		if (itemIdList != null)
 		{
 			for (int element : itemIdList)

@@ -48,9 +48,9 @@ import ai.AbstractNpcAI;
 public class ClanHallManager extends AbstractNpcAI
 {
 	// NPCs
-	//	35461, 35463, 35465, 35467, // Goddard
-	//	35566, 35568, 35570, 35572, 35574, 35576, 35578, // Rune
-	//	35580, 35582, 35584, 35586, // Schuttgart
+	// 35461, 35463, 35465, 35467, // Goddard
+	// 35566, 35568, 35570, 35572, 35574, 35576, 35578, // Rune
+	// 35580, 35582, 35584, 35586, // Schuttgart
 	// @formatter:off
 	private static final int[] CLANHALL_MANAGERS =
 	{

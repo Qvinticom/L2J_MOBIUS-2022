@@ -135,7 +135,7 @@ public class Q10462_TemperARustingBlade extends Quest
 	{
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		ItemInstance item = qs.getPlayer().getInventory().getItemByItemId(PRACTICE_WEAPON);
+		final ItemInstance item = qs.getPlayer().getInventory().getItemByItemId(PRACTICE_WEAPON);
 		if ((item != null) && qs.isCond(1) && item.isAugmented())
 		{
 			qs.setCond(2, true);

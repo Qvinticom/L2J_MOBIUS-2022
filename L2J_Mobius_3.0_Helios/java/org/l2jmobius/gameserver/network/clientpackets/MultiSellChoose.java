@@ -122,7 +122,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			return;
 		}
 		
-		PreparedMultisellListHolder list = player.getMultiSell();
+		final PreparedMultisellListHolder list = player.getMultiSell();
 		if ((list == null) || (list.getId() != _listId))
 		{
 			player.setMultiSell(null);
@@ -265,7 +265,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			// Check for enchanted item if its present in the inventory.
 			if ((itemEnchantment != null) && (inventory.getItemByObjectId(itemEnchantment.getObjectId()) == null))
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.YOU_NEED_A_N_S1);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_NEED_A_N_S1);
 				sm.addItemName(itemEnchantment.getItem().getId());
 				player.sendPacket(sm);
 				return;
@@ -322,7 +322,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 							if (clan != null)
 							{
 								clan.takeReputationScore((int) totalCount, true);
-								SystemMessage smsg = new SystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
+								final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
 								smsg.addLong(totalCount);
 								player.sendPacket(smsg);
 							}
@@ -366,7 +366,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 					}
 					else
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.YOU_NEED_A_N_S1);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_NEED_A_N_S1);
 						sm.addItemName(ingredient.getId());
 						player.sendPacket(sm);
 						return;
@@ -383,7 +383,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 					}
 					else
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.YOU_NEED_A_N_S1);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_NEED_A_N_S1);
 						sm.addItemName(ingredient.getId());
 						player.sendPacket(sm);
 						return;
@@ -399,7 +399,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 					}
 					else
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.YOU_NEED_S2_S1_S);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_NEED_S2_S1_S);
 						sm.addItemName(ingredient.getId());
 						sm.addLong(totalCount);
 						player.sendPacket(sm);
@@ -648,7 +648,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 		// Check if the necessary items are there. If list maintains enchantment, allow all enchanted items, otherwise only unenchanted. TODO: Check how retail does it.
 		else if (inventory.getInventoryItemCount(ingredientId, list.isMaintainEnchantment() ? -1 : 0, false) < totalCount)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.YOU_NEED_S2_S1_S);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_NEED_S2_S1_S);
 			sm.addItemName(ingredientId);
 			sm.addLong(totalCount);
 			player.sendPacket(sm);

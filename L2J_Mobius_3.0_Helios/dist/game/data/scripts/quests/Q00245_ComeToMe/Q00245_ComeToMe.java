@@ -81,7 +81,7 @@ public class Q00245_ComeToMe extends Quest
 	{
 		if (player.isMentor() && event.equals("30847-13.html"))
 		{
-			PlayerInstance mentee = getCurrentMentee(player);
+			final PlayerInstance mentee = getCurrentMentee(player);
 			if (mentee != null)
 			{
 				if (player.destroyItemByItemId("quest_245", CRYSTAL_A, 100, npc, true))
@@ -94,7 +94,7 @@ public class Q00245_ComeToMe extends Quest
 			return "30847-12.html";
 		}
 		
-		QuestState qs = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return event;
@@ -151,7 +151,7 @@ public class Q00245_ComeToMe extends Quest
 							}
 							else if (player.isMentee())
 							{
-								PlayerInstance mentor = MentorManager.getInstance().getMentor(player.getObjectId()).getPlayerInstance();
+								final PlayerInstance mentor = MentorManager.getInstance().getMentor(player.getObjectId()).getPlayerInstance();
 								if ((mentor != null) && mentor.isOnline() && Util.checkIfInRange(200, npc, mentor, true))
 								{
 									htmltext = "30847-10.html";
@@ -239,7 +239,7 @@ public class Q00245_ComeToMe extends Quest
 			{
 				if (killer.isMentee())
 				{
-					PlayerInstance mentor = MentorManager.getInstance().getMentor(killer.getObjectId()).getPlayerInstance();
+					final PlayerInstance mentor = MentorManager.getInstance().getMentor(killer.getObjectId()).getPlayerInstance();
 					if ((mentor != null) && Util.checkIfInRange(500, killer, mentor, false))
 					{
 						giveItems(killer, CRYSTALS_OF_EXPERIENCE, 1);

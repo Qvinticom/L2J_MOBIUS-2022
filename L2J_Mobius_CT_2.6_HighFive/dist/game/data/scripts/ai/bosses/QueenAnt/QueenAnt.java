@@ -114,8 +114,8 @@ public class QueenAnt extends AbstractNpcAI
 			final int loc_y = QUEEN_Y;
 			final int loc_z = QUEEN_Z;
 			final int heading = info.getInt("heading");
-			double hp = info.getDouble("currentHP");
-			double mp = info.getDouble("currentMP");
+			final double hp = info.getDouble("currentHP");
+			final double mp = info.getDouble("currentMP");
 			final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN, loc_x, loc_y, loc_z, heading, false, 0);
 			queen.setCurrentHpMp(hp, mp);
 			spawnBoss(queen);

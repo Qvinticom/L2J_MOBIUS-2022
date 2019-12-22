@@ -57,7 +57,7 @@ public class Heal implements ISkillHandler
 		// check for other effects
 		try
 		{
-			ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(SkillType.BUFF);
+			final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(SkillType.BUFF);
 			
 			if (handler != null)
 			{
@@ -143,7 +143,7 @@ public class Heal implements ISkillHandler
 			
 			target.setCurrentHp(hp + target.getCurrentHp());
 			target.setLastHealAmount((int) hp);
-			StatusUpdate su = new StatusUpdate(target.getObjectId());
+			final StatusUpdate su = new StatusUpdate(target.getObjectId());
 			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
 			target.sendPacket(su);
 			
@@ -151,19 +151,19 @@ public class Heal implements ISkillHandler
 			{
 				if (skill.getId() == 4051)
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.REJUVENATING_HP);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.REJUVENATING_HP);
 					target.sendPacket(sm);
 				}
 				else if ((creature instanceof PlayerInstance) && (creature != target))
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.S2_HP_RESTORED_BY_S1);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S2_HP_RESTORED_BY_S1);
 					sm.addString(creature.getName());
 					sm.addNumber((int) hp);
 					target.sendPacket(sm);
 				}
 				else
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.S1_HP_RESTORED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HP_RESTORED);
 					sm.addNumber((int) hp);
 					target.sendPacket(sm);
 				}

@@ -47,7 +47,7 @@ public class ChristmasTree implements IItemHandler
 	@Override
 	public void useItem(Playable playable, ItemInstance item)
 	{
-		PlayerInstance player = (PlayerInstance) playable;
+		final PlayerInstance player = (PlayerInstance) playable;
 		
 		NpcTemplate template1 = null;
 		
@@ -74,7 +74,7 @@ public class ChristmasTree implements IItemHandler
 		
 		try
 		{
-			Spawn spawn = new Spawn(template1);
+			final Spawn spawn = new Spawn(template1);
 			spawn.setId(IdFactory.getInstance().getNextId());
 			spawn.setX(target.getX());
 			spawn.setY(target.getY());
@@ -83,14 +83,14 @@ public class ChristmasTree implements IItemHandler
 			
 			player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 			
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 			player.sendPacket(sm);
 			
 			ThreadPool.schedule(new DeSpawn(result), 3600000);
 		}
 		catch (Exception e)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 			sm.addString("Target is not ingame.");
 			player.sendPacket(sm);
 		}

@@ -67,7 +67,7 @@ public class PreparedListContainer extends ListContainer
 			{
 				if (!entry.getIngredients().isEmpty())
 				{
-					int ingredientId = entry.getIngredients().get(0).getItemId();
+					final int ingredientId = entry.getIngredients().get(0).getItemId();
 					for (ItemInstance item : items)
 					{
 						if (!item.isEquipped() && (item.getId() == ingredientId))

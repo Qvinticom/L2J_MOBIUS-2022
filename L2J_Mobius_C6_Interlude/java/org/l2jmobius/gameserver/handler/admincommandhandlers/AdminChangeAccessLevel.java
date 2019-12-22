@@ -50,7 +50,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 			return;
 		}
 		
-		String[] parts = command.split(" ");
+		final String[] parts = command.split(" ");
 		
 		if (parts.length == 2)
 		{

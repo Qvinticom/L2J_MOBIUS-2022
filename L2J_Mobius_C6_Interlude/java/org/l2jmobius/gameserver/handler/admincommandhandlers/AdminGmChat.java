@@ -83,7 +83,7 @@ public class AdminGmChat implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
-		PlayerInstance player = (PlayerInstance) target;
+		final PlayerInstance player = (PlayerInstance) target;
 		player.addSnooper(activeChar);
 		activeChar.addSnooped(player);
 	}
@@ -116,7 +116,7 @@ public class AdminGmChat implements IAdminCommandHandler
 			}
 			
 			text = command.substring(offset);
-			CreatureSay cs = new CreatureSay(0, 9, activeChar.getName(), text);
+			final CreatureSay cs = new CreatureSay(0, 9, activeChar.getName(), text);
 			AdminData.broadcastToGMs(cs);
 		}
 		catch (StringIndexOutOfBoundsException e)

@@ -82,7 +82,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 		// global quest timer has player==null -> cannot get QuestState
 		if (event.equals("check"))
 		{
-			RaidBossInstance raid = RaidBossSpawnManager.getInstance().getBosses().get(SOUL_OF_FIRE_NASTRON);
+			final RaidBossInstance raid = RaidBossSpawnManager.getInstance().getBosses().get(SOUL_OF_FIRE_NASTRON);
 			if ((raid != null) && (raid.getRaidStatus() == RaidBossStatus.ALIVE))
 			{
 				if ((_status >= 0) && (_status-- == 0))
@@ -97,7 +97,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 		}
 		
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -163,7 +163,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -234,7 +234,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 	{
 		for (PlayerInstance partyMember : getPartyMembers(player, npc, "cond", "2"))
 		{
-			QuestState st = partyMember.getQuestState(getName());
+			final QuestState st = partyMember.getQuestState(getName());
 			if (st == null)
 			{
 				continue;
@@ -269,7 +269,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 	
 	private boolean spawnRaid()
 	{
-		RaidBossInstance raid = RaidBossSpawnManager.getInstance().getBosses().get(SOUL_OF_FIRE_NASTRON);
+		final RaidBossInstance raid = RaidBossSpawnManager.getInstance().getBosses().get(SOUL_OF_FIRE_NASTRON);
 		if ((raid != null) && (raid.getRaidStatus() == RaidBossStatus.ALIVE))
 		{
 			// set temporarily spawn location (to provide correct behavior of RaidBossInstance.checkAndReturnToSpawn())

@@ -180,7 +180,7 @@ public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 		if (manufactureRecipeCost > 0)
 		{
 			// Attempt to pay the required manufacturing price by the manufacturer.
-			ItemInstance paidAdena = player.transferItem("PayManufacture", player.getInventory().getAdenaInstance().getObjectId(), manufactureRecipeCost, manufacturer.getInventory(), manufacturer);
+			final ItemInstance paidAdena = player.transferItem("PayManufacture", player.getInventory().getAdenaInstance().getObjectId(), manufactureRecipeCost, manufacturer.getInventory(), manufacturer);
 			
 			if (paidAdena == null)
 			{

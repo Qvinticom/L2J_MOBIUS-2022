@@ -55,7 +55,7 @@ public class ExOlympiadHeroAndLegendInfo implements IClientOutgoingPacket
 				try (ResultSet rset = statement.executeQuery())
 				{
 					int i = 1;
-					boolean writedCount = false;
+					final boolean writedCount = false;
 					while (rset.next())
 					{
 						if (i == 1)
@@ -64,7 +64,7 @@ public class ExOlympiadHeroAndLegendInfo implements IClientOutgoingPacket
 							packet.writeC(1); // ?? shows 0 on JP
 							
 							packet.writeString(rset.getString("char_name"));
-							int clanId = rset.getInt("clanid");
+							final int clanId = rset.getInt("clanid");
 							if (clanId > 0)
 							{
 								packet.writeString(ClanTable.getInstance().getClan(clanId).getName());
@@ -76,7 +76,7 @@ public class ExOlympiadHeroAndLegendInfo implements IClientOutgoingPacket
 							packet.writeD(Config.SERVER_ID);
 							packet.writeD(rset.getInt("race"));
 							// a stupid, client uses 0 for female and 1 for male, while server no.
-							int sex = rset.getInt("sex");
+							final int sex = rset.getInt("sex");
 							if (sex == 1)
 							{
 								packet.writeD(0);
@@ -110,7 +110,7 @@ public class ExOlympiadHeroAndLegendInfo implements IClientOutgoingPacket
 							if (Hero.getInstance().getHeroes().size() > 1)
 							{
 								packet.writeString(rset.getString("char_name"));
-								int clanId = rset.getInt("clanid");
+								final int clanId = rset.getInt("clanid");
 								if (clanId > 0)
 								{
 									packet.writeString(ClanTable.getInstance().getClan(clanId).getName());
@@ -122,7 +122,7 @@ public class ExOlympiadHeroAndLegendInfo implements IClientOutgoingPacket
 								packet.writeD(Config.SERVER_ID);
 								packet.writeD(rset.getInt("race"));
 								// a stupid, client uses 0 for female and 1 for male, while server no.
-								int sex = rset.getInt("sex");
+								final int sex = rset.getInt("sex");
 								if (sex == 1)
 								{
 									packet.writeD(0);

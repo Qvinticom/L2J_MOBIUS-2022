@@ -266,7 +266,7 @@ public class DayNightSpawnManager
 		{
 			if ((onlinePlayer.getRace().ordinal() == 2) && (onlinePlayer.getSkillLevel(294) > 0))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(msg);
+				final SystemMessage sm = SystemMessage.getSystemMessage(msg);
 				sm.addSkillName(294);
 				onlinePlayer.sendPacket(sm);
 			}

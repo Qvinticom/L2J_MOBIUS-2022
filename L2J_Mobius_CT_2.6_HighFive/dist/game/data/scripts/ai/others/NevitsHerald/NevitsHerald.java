@@ -138,7 +138,7 @@ public class NevitsHerald extends AbstractNpcAI
 		{
 			for (Location loc : NEVITS_HERALD_LOC)
 			{
-				Npc herald = addSpawn(NEVITS_HERALD, loc, false, 0);
+				final Npc herald = addSpawn(NEVITS_HERALD, loc, false, 0);
 				startQuestTimer("text_spam", 3000, herald, null);
 				SPAWNS.add(herald);
 			}

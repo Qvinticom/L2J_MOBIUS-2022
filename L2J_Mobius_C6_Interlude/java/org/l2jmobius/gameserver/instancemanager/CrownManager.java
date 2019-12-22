@@ -58,7 +58,7 @@ public class CrownManager
 		boolean isLeader = false;
 		int crownId = -1;
 		
-		Clan playerClan = player.getClan();
+		final Clan playerClan = player.getClan();
 		ClanMember playerClanLeader;
 		
 		if (playerClan != null)
@@ -72,7 +72,7 @@ public class CrownManager
 		
 		if (playerClan != null)
 		{
-			Castle playerCastle = CastleManager.getInstance().getCastleByOwner(playerClan);
+			final Castle playerCastle = CastleManager.getInstance().getCastleByOwner(playerClan);
 			
 			if (playerCastle != null)
 			{

@@ -52,7 +52,7 @@ public class SevenSignsRecord implements IItemHandler
 			return;
 		}
 		
-		SSQStatus ssqs = new SSQStatus(player, 1);
+		final SSQStatus ssqs = new SSQStatus(player, 1);
 		player.sendPacket(ssqs);
 	}
 	

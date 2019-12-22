@@ -585,7 +585,7 @@ public class PlayerInstance extends Playable
 	public static PlayerInstance create(int objectId, PlayerTemplate template, String accountName, String name, byte hairStyle, byte hairColor, byte face, boolean sex)
 	{
 		// Create a new PlayerInstance with an account name
-		PlayerAppearance app = new PlayerAppearance(face, hairColor, hairStyle, sex);
+		final PlayerAppearance app = new PlayerAppearance(face, hairColor, hairStyle, sex);
 		final PlayerInstance player = new PlayerInstance(objectId, template, accountName, app);
 		
 		// Set the name of the PlayerInstance
@@ -736,7 +736,7 @@ public class PlayerInstance extends Playable
 				}
 				default:
 				{
-					WorldObject mainTarget = skill.getFirstOfTargetList(PlayerInstance.this);
+					final WorldObject mainTarget = skill.getFirstOfTargetList(PlayerInstance.this);
 					if (!(mainTarget instanceof Creature))
 					{
 						return;
@@ -805,7 +805,7 @@ public class PlayerInstance extends Playable
 			statement = con.prepareStatement("select votePoints from accounts where login=?");
 			statement.setString(1, _accountName);
 			
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			while (rset.next())
 			{
 				votePoints = rset.getInt("votePoints");
@@ -850,7 +850,7 @@ public class PlayerInstance extends Playable
 			statement = con.prepareStatement("select lastVote from accounts where login=?");
 			statement.setString(1, _accountName);
 			
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			while (rset.next())
 			{
 				lastVote = rset.getInt("lastVote");
@@ -1508,7 +1508,7 @@ public class PlayerInstance extends Playable
 			LOGGER.warning("Attempted to remove unknown RecipeList: " + recipeId);
 		}
 		
-		ShortCut[] allShortCuts = getAllShortCuts();
+		final ShortCut[] allShortCuts = getAllShortCuts();
 		
 		for (ShortCut sc : allShortCuts)
 		{
@@ -1706,7 +1706,7 @@ public class PlayerInstance extends Playable
 		QuestState[] states = null;
 		
 		// Go through the QuestState of the PlayerInstance quests
-		Quest[] quests = NpcTable.getInstance().getTemplate(npcId).getEventQuests(Quest.QuestEventType.QUEST_TALK);
+		final Quest[] quests = NpcTable.getInstance().getTemplate(npcId).getEventQuests(Quest.QuestEventType.QUEST_TALK);
 		if (quests != null)
 		{
 			for (Quest quest : quests)
@@ -1804,12 +1804,12 @@ public class PlayerInstance extends Playable
 	
 	private void showQuestWindow(String questId, String stateId)
 	{
-		String path = "data/scripts/quests/" + questId + "/" + stateId + ".htm";
-		String content = HtmCache.getInstance().getHtm(path);
+		final String path = "data/scripts/quests/" + questId + "/" + stateId + ".htm";
+		final String content = HtmCache.getInstance().getHtm(path);
 		
 		if (content != null)
 		{
-			NpcHtmlMessage npcReply = new NpcHtmlMessage(5);
+			final NpcHtmlMessage npcReply = new NpcHtmlMessage(5);
 			npcReply.setHtml(content);
 			sendPacket(npcReply);
 		}
@@ -2006,7 +2006,7 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			_lastCompassZone = ExSetCompassZoneCode.SIEGEWARZONE2;
-			ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.SIEGEWARZONE2);
+			final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.SIEGEWARZONE2);
 			sendPacket(cz);
 		}
 		else if (isInsideZone(ZoneId.PVP))
@@ -2016,7 +2016,7 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			_lastCompassZone = ExSetCompassZoneCode.PVPZONE;
-			ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.PVPZONE);
+			final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.PVPZONE);
 			sendPacket(cz);
 		}
 		else if (isIn7sDungeon())
@@ -2026,7 +2026,7 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			_lastCompassZone = ExSetCompassZoneCode.SEVENSIGNSZONE;
-			ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.SEVENSIGNSZONE);
+			final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.SEVENSIGNSZONE);
 			sendPacket(cz);
 		}
 		else if (isInsideZone(ZoneId.PEACE))
@@ -2036,7 +2036,7 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			_lastCompassZone = ExSetCompassZoneCode.PEACEZONE;
-			ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.PEACEZONE);
+			final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.PEACEZONE);
 			sendPacket(cz);
 		}
 		else
@@ -2050,7 +2050,7 @@ public class PlayerInstance extends Playable
 				updatePvPStatus();
 			}
 			_lastCompassZone = ExSetCompassZoneCode.GENERALZONE;
-			ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.GENERALZONE);
+			final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.GENERALZONE);
 			sendPacket(cz);
 		}
 	}
@@ -2236,7 +2236,7 @@ public class PlayerInstance extends Playable
 		{
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement(ADD_CHAR_RECOM);
+				final PreparedStatement statement = con.prepareStatement(ADD_CHAR_RECOM);
 				statement.setInt(1, getObjectId());
 				statement.setInt(2, target.getObjectId());
 				statement.execute();
@@ -2936,7 +2936,7 @@ public class PlayerInstance extends Playable
 			_clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(_clan));
 			setLvlJoinedAcademy(0);
 			// oust pledge member from the academy, cuz he has finished his 2nd class transfer
-			SystemMessage msg = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_EXPELLED);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_EXPELLED);
 			msg.addString(getName());
 			_clan.broadcastToOnlineMembers(msg);
 			_clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(getName()));
@@ -3014,55 +3014,55 @@ public class PlayerInstance extends Playable
 		if ((classId >= 0x00) && (classId <= 0x09))
 		{
 			// human fighter fists
-			Item temp = ItemTable.getInstance().getTemplate(246);
+			final Item temp = ItemTable.getInstance().getTemplate(246);
 			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 0x0a) && (classId <= 0x11))
 		{
 			// human mage fists
-			Item temp = ItemTable.getInstance().getTemplate(251);
+			final Item temp = ItemTable.getInstance().getTemplate(251);
 			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 0x12) && (classId <= 0x18))
 		{
 			// elven fighter fists
-			Item temp = ItemTable.getInstance().getTemplate(244);
+			final Item temp = ItemTable.getInstance().getTemplate(244);
 			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 0x19) && (classId <= 0x1e))
 		{
 			// elven mage fists
-			Item temp = ItemTable.getInstance().getTemplate(249);
+			final Item temp = ItemTable.getInstance().getTemplate(249);
 			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 0x1f) && (classId <= 0x25))
 		{
 			// dark elven fighter fists
-			Item temp = ItemTable.getInstance().getTemplate(245);
+			final Item temp = ItemTable.getInstance().getTemplate(245);
 			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 0x26) && (classId <= 0x2b))
 		{
 			// dark elven mage fists
-			Item temp = ItemTable.getInstance().getTemplate(250);
+			final Item temp = ItemTable.getInstance().getTemplate(250);
 			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 0x2c) && (classId <= 0x30))
 		{
 			// orc fighter fists
-			Item temp = ItemTable.getInstance().getTemplate(248);
+			final Item temp = ItemTable.getInstance().getTemplate(248);
 			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 0x31) && (classId <= 0x34))
 		{
 			// orc mage fists
-			Item temp = ItemTable.getInstance().getTemplate(252);
+			final Item temp = ItemTable.getInstance().getTemplate(252);
 			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 0x35) && (classId <= 0x39))
 		{
 			// dwarven fists
-			Item temp = ItemTable.getInstance().getTemplate(247);
+			final Item temp = ItemTable.getInstance().getTemplate(247);
 			weaponItem = (Weapon) temp;
 		}
 		
@@ -3110,21 +3110,21 @@ public class PlayerInstance extends Playable
 		// Add the Expertise skill corresponding to its Expertise level
 		if (getExpertiseIndex() > 0)
 		{
-			Skill skill = SkillTable.getInstance().getInfo(239, getExpertiseIndex());
+			final Skill skill = SkillTable.getInstance().getInfo(239, getExpertiseIndex());
 			addSkill(skill, !restore);
 		}
 		
 		// Active skill dwarven craft
 		if ((getSkillLevel(1321) < 1) && (getRace() == Race.DWARF))
 		{
-			Skill skill = SkillTable.getInstance().getInfo(1321, 1);
+			final Skill skill = SkillTable.getInstance().getInfo(1321, 1);
 			addSkill(skill, !restore);
 		}
 		
 		// Active skill common craft
 		if (getSkillLevel(1322) < 1)
 		{
-			Skill skill = SkillTable.getInstance().getInfo(1322, 1);
+			final Skill skill = SkillTable.getInstance().getInfo(1322, 1);
 			addSkill(skill, !restore);
 		}
 		
@@ -3132,7 +3132,7 @@ public class PlayerInstance extends Playable
 		{
 			if ((lvl >= COMMON_CRAFT_LEVELS[i]) && (getSkillLevel(1320) < (i + 1)))
 			{
-				Skill skill = SkillTable.getInstance().getInfo(1320, (i + 1));
+				final Skill skill = SkillTable.getInstance().getInfo(1320, (i + 1));
 				addSkill(skill, !restore);
 			}
 		}
@@ -3181,7 +3181,7 @@ public class PlayerInstance extends Playable
 		// Add clan skills
 		if ((getClan() != null) && (getClan().getReputationScore() >= 0))
 		{
-			Skill[] skills = getClan().getAllSkills();
+			final Skill[] skills = getClan().getAllSkills();
 			for (Skill sk : skills)
 			{
 				if (sk.getMinPledgeClass() <= getPledgeClass())
@@ -3203,7 +3203,7 @@ public class PlayerInstance extends Playable
 	{
 		int skillCounter = 0;
 		
-		Collection<Skill> skills = SkillTreeTable.getInstance().getAllAvailableSkills(this, getClassId());
+		final Collection<Skill> skills = SkillTreeTable.getInstance().getAllAvailableSkills(this, getClassId());
 		for (Skill sk : skills)
 		{
 			if (getSkillLevel(sk.getId()) == 0)
@@ -3292,13 +3292,13 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean isCastleLord(int castleId)
 	{
-		Clan clan = getClan();
+		final Clan clan = getClan();
 		
 		// player has clan and is the clan leader, check the castle info
 		if ((clan != null) && (clan.getLeader().getPlayerInstance() == this))
 		{
 			// if the clan has a castle and it is actually the queried castle, return true
-			Castle castle = CastleManager.getInstance().getCastleByOwner(clan);
+			final Castle castle = CastleManager.getInstance().getCastleByOwner(clan);
 			if ((castle != null) && (castle == CastleManager.getInstance().getCastleById(castleId)))
 			{
 				return true;
@@ -3651,7 +3651,7 @@ public class PlayerInstance extends Playable
 			}
 			if (sendMessage)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_ADENA);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_ADENA);
 				sm.addNumber(count);
 				sendPacket(sm);
 			}
@@ -3659,7 +3659,7 @@ public class PlayerInstance extends Playable
 			// Send update packet
 			if (!Config.FORCE_INVENTORY_UPDATE)
 			{
-				InventoryUpdate iu = new InventoryUpdate();
+				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addItem(_inventory.getAdenaInstance());
 				sendPacket(iu);
 			}
@@ -3699,13 +3699,13 @@ public class PlayerInstance extends Playable
 		
 		if (count > 0)
 		{
-			ItemInstance adenaItem = _inventory.getAdenaInstance();
+			final ItemInstance adenaItem = _inventory.getAdenaInstance();
 			_inventory.reduceAdena(process, count, this, reference);
 			
 			// Send update packet
 			if (!Config.FORCE_INVENTORY_UPDATE)
 			{
-				InventoryUpdate iu = new InventoryUpdate();
+				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addItem(adenaItem);
 				sendPacket(iu);
 			}
@@ -3716,7 +3716,7 @@ public class PlayerInstance extends Playable
 			
 			if (sendMessage)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ADENA);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ADENA);
 				sm.addNumber(count);
 				sendPacket(sm);
 			}
@@ -3736,7 +3736,7 @@ public class PlayerInstance extends Playable
 	{
 		if (sendMessage)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
 			sm.addItemName(PlayerInventory.ANCIENT_ADENA_ID);
 			sm.addNumber(count);
 			sendPacket(sm);
@@ -3748,7 +3748,7 @@ public class PlayerInstance extends Playable
 			
 			if (!Config.FORCE_INVENTORY_UPDATE)
 			{
-				InventoryUpdate iu = new InventoryUpdate();
+				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addItem(_inventory.getAncientAdenaInstance());
 				sendPacket(iu);
 			}
@@ -3781,12 +3781,12 @@ public class PlayerInstance extends Playable
 		
 		if (count > 0)
 		{
-			ItemInstance ancientAdenaItem = _inventory.getAncientAdenaInstance();
+			final ItemInstance ancientAdenaItem = _inventory.getAncientAdenaInstance();
 			_inventory.reduceAncientAdena(process, count, this, reference);
 			
 			if (!Config.FORCE_INVENTORY_UPDATE)
 			{
-				InventoryUpdate iu = new InventoryUpdate();
+				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addItem(ancientAdenaItem);
 				sendPacket(iu);
 			}
@@ -3797,7 +3797,7 @@ public class PlayerInstance extends Playable
 			
 			if (sendMessage)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
 				sm.addNumber(count);
 				sm.addItemName(PlayerInventory.ANCIENT_ADENA_ID);
 				sendPacket(sm);
@@ -3825,13 +3825,13 @@ public class PlayerInstance extends Playable
 				{
 					if (item.isStackable() && !Config.MULTIPLE_ITEM_DROP)
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.YOU_PICKED_UP_S1);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_PICKED_UP_S1);
 						sm.addItemName(item.getItemId());
 						sendPacket(sm);
 					}
 					else
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.YOU_PICKED_UP_S1_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_PICKED_UP_S1_S2);
 						sm.addItemName(item.getItemId());
 						sm.addNumber(item.getCount());
 						sendPacket(sm);
@@ -3840,26 +3840,26 @@ public class PlayerInstance extends Playable
 				}
 				else if (item.getEnchantLevel() > 0)
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.YOU_PICKED_UP_A_S1_S2);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_PICKED_UP_A_S1_S2);
 					sm.addNumber(item.getEnchantLevel());
 					sm.addItemName(item.getItemId());
 					sendPacket(sm);
 				}
 				else
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.YOU_PICKED_UP_S1);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_PICKED_UP_S1);
 					sm.addItemName(item.getItemId());
 					sendPacket(sm);
 				}
 			}
 			
 			// Add the item to inventory
-			ItemInstance newitem = _inventory.addItem(process, item, this, reference);
+			final ItemInstance newitem = _inventory.addItem(process, item, this, reference);
 			
 			// Send inventory update packet
 			if (!Config.FORCE_INVENTORY_UPDATE)
 			{
-				InventoryUpdate playerIU = new InventoryUpdate();
+				final InventoryUpdate playerIU = new InventoryUpdate();
 				playerIU.addItem(newitem);
 				sendPacket(playerIU);
 			}
@@ -3869,7 +3869,7 @@ public class PlayerInstance extends Playable
 			}
 			
 			// Update current load as well
-			StatusUpdate su = new StatusUpdate(getObjectId());
+			final StatusUpdate su = new StatusUpdate(getObjectId());
 			su.addAttribute(StatusUpdate.CUR_LOAD, getCurrentLoad());
 			sendPacket(su);
 			
@@ -3915,14 +3915,14 @@ public class PlayerInstance extends Playable
 				{
 					if (process.equalsIgnoreCase("sweep") || process.equalsIgnoreCase("Quest"))
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
 						sm.addItemName(itemId);
 						sm.addNumber(count);
 						sendPacket(sm);
 					}
 					else
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.YOU_PICKED_UP_S1_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_PICKED_UP_S1_S2);
 						sm.addItemName(itemId);
 						sm.addNumber(count);
 						sendPacket(sm);
@@ -3930,13 +3930,13 @@ public class PlayerInstance extends Playable
 				}
 				else if (process.equalsIgnoreCase("sweep") || process.equalsIgnoreCase("Quest"))
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_ITEM);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_ITEM);
 					sm.addItemName(itemId);
 					sendPacket(sm);
 				}
 				else
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.YOU_PICKED_UP_S1);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_PICKED_UP_S1);
 					sm.addItemName(itemId);
 					sendPacket(sm);
 				}
@@ -3946,8 +3946,8 @@ public class PlayerInstance extends Playable
 			{
 				if (!isCastingNow() && !isCastingPotionNow())
 				{
-					ItemInstance herb = new ItemInstance(getObjectId(), itemId);
-					IItemHandler handler = ItemHandler.getInstance().getItemHandler(herb.getItemId());
+					final ItemInstance herb = new ItemInstance(getObjectId(), itemId);
+					final IItemHandler handler = ItemHandler.getInstance().getItemHandler(herb.getItemId());
 					
 					if (handler == null)
 					{
@@ -3972,12 +3972,12 @@ public class PlayerInstance extends Playable
 			else
 			{
 				// Add the item to inventory
-				ItemInstance item = _inventory.addItem(process, itemId, count, this, reference);
+				final ItemInstance item = _inventory.addItem(process, itemId, count, this, reference);
 				
 				// Send inventory update packet
 				if (!Config.FORCE_INVENTORY_UPDATE)
 				{
-					InventoryUpdate playerIU = new InventoryUpdate();
+					final InventoryUpdate playerIU = new InventoryUpdate();
 					playerIU.addItem(item);
 					sendPacket(playerIU);
 				}
@@ -3987,7 +3987,7 @@ public class PlayerInstance extends Playable
 				}
 				
 				// Update current load as well
-				StatusUpdate su = new StatusUpdate(getObjectId());
+				final StatusUpdate su = new StatusUpdate(getObjectId());
 				su.addAttribute(StatusUpdate.CUR_LOAD, getCurrentLoad());
 				sendPacket(su);
 				
@@ -4029,7 +4029,7 @@ public class PlayerInstance extends Playable
 		// Send inventory update packet
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
-			InventoryUpdate playerIU = new InventoryUpdate();
+			final InventoryUpdate playerIU = new InventoryUpdate();
 			playerIU.addItem(item);
 			sendPacket(playerIU);
 		}
@@ -4039,7 +4039,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Update current load as well
-		StatusUpdate su = new StatusUpdate(getObjectId());
+		final StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, getCurrentLoad());
 		sendPacket(su);
 		
@@ -4048,14 +4048,14 @@ public class PlayerInstance extends Playable
 		{
 			if (_count > 1)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
 				sm.addItemName(item.getItemId());
 				sm.addNumber(_count);
 				sendPacket(sm);
 			}
 			else
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 				sm.addItemName(item.getItemId());
 				sendPacket(sm);
 			}
@@ -4076,7 +4076,7 @@ public class PlayerInstance extends Playable
 	@Override
 	public boolean destroyItem(String process, int objectId, int count, WorldObject reference, boolean sendMessage)
 	{
-		ItemInstance item = _inventory.getItemByObjectId(objectId);
+		final ItemInstance item = _inventory.getItemByObjectId(objectId);
 		
 		if ((item == null) || (item.getCount() < count) || (_inventory.destroyItem(process, objectId, count, this, reference) == null))
 		{
@@ -4091,7 +4091,7 @@ public class PlayerInstance extends Playable
 		// Send inventory update packet
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
-			InventoryUpdate playerIU = new InventoryUpdate();
+			final InventoryUpdate playerIU = new InventoryUpdate();
 			playerIU.addItem(item);
 			sendPacket(playerIU);
 		}
@@ -4101,7 +4101,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Update current load as well
-		StatusUpdate su = new StatusUpdate(getObjectId());
+		final StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, getCurrentLoad());
 		sendPacket(su);
 		
@@ -4110,14 +4110,14 @@ public class PlayerInstance extends Playable
 		{
 			if (count > 1)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
 				sm.addItemName(item.getItemId());
 				sm.addNumber(count);
 				sendPacket(sm);
 			}
 			else
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 				sm.addItemName(item.getItemId());
 				sendPacket(sm);
 			}
@@ -4137,7 +4137,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean destroyItemWithoutTrace(String process, int objectId, int count, WorldObject reference, boolean sendMessage)
 	{
-		ItemInstance item = _inventory.getItemByObjectId(objectId);
+		final ItemInstance item = _inventory.getItemByObjectId(objectId);
 		
 		if ((item == null) || (item.getCount() < count))
 		{
@@ -4173,7 +4173,7 @@ public class PlayerInstance extends Playable
 		// Send inventory update packet
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
-			InventoryUpdate playerIU = new InventoryUpdate();
+			final InventoryUpdate playerIU = new InventoryUpdate();
 			playerIU.addItem(item);
 			sendPacket(playerIU);
 		}
@@ -4183,14 +4183,14 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Update current load as well
-		StatusUpdate su = new StatusUpdate(getObjectId());
+		final StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, getCurrentLoad());
 		sendPacket(su);
 		
 		// Sends message to client if requested
 		if (sendMessage)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 			sm.addNumber(count);
 			sm.addItemName(item.getItemId());
 			sendPacket(sm);
@@ -4211,7 +4211,7 @@ public class PlayerInstance extends Playable
 	@Override
 	public boolean destroyItemByItemId(String process, int itemId, int count, WorldObject reference, boolean sendMessage)
 	{
-		ItemInstance item = _inventory.getItemByItemId(itemId);
+		final ItemInstance item = _inventory.getItemByItemId(itemId);
 		
 		if ((item == null) || (item.getCount() < count) || (_inventory.destroyItemByItemId(process, itemId, count, this, reference) == null))
 		{
@@ -4226,7 +4226,7 @@ public class PlayerInstance extends Playable
 		// Send inventory update packet
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
-			InventoryUpdate playerIU = new InventoryUpdate();
+			final InventoryUpdate playerIU = new InventoryUpdate();
 			playerIU.addItem(item);
 			sendPacket(playerIU);
 		}
@@ -4236,7 +4236,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Update current load as well
-		StatusUpdate su = new StatusUpdate(getObjectId());
+		final StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, getCurrentLoad());
 		sendPacket(su);
 		
@@ -4245,14 +4245,14 @@ public class PlayerInstance extends Playable
 		{
 			if (count > 1)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
 				sm.addItemName(item.getItemId());
 				sm.addNumber(count);
 				sendPacket(sm);
 			}
 			else
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 				sm.addItemName(item.getItemId());
 				sendPacket(sm);
 			}
@@ -4287,19 +4287,19 @@ public class PlayerInstance extends Playable
 				}
 				
 				// Send an Unequipped Message in system window of the player for each Item
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISARMED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISARMED);
 				sm.addItemName(item.getItemId());
 				sendPacket(sm);
 			}
 		}
 		
 		// Send the StatusUpdate Server->Client Packet to the player with new CUR_LOAD (0x0e) information
-		StatusUpdate su = new StatusUpdate(getObjectId());
+		final StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, getCurrentLoad());
 		sendPacket(su);
 		
 		// Send the ItemList Server->Client Packet to the player in order to refresh its Inventory
-		ItemList il = new ItemList(getInventory().getItems(), true);
+		final ItemList il = new ItemList(getInventory().getItems(), true);
 		sendPacket(il);
 		
 		// Send a Server->Client packet UserInfo to this PlayerInstance and CharInfo to all PlayerInstance in its _KnownPlayers
@@ -4320,7 +4320,7 @@ public class PlayerInstance extends Playable
 	 */
 	public ItemInstance transferItem(String process, int objectId, int count, Inventory target, WorldObject reference)
 	{
-		ItemInstance oldItem = checkItemManipulation(objectId, count, "transfer");
+		final ItemInstance oldItem = checkItemManipulation(objectId, count, "transfer");
 		if (oldItem == null)
 		{
 			return null;
@@ -4335,7 +4335,7 @@ public class PlayerInstance extends Playable
 		// Send inventory update packet
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
-			InventoryUpdate playerIU = new InventoryUpdate();
+			final InventoryUpdate playerIU = new InventoryUpdate();
 			
 			if ((oldItem.getCount() > 0) && (oldItem != newItem))
 			{
@@ -4361,7 +4361,7 @@ public class PlayerInstance extends Playable
 		// Send target update packet
 		if (target instanceof PlayerInventory)
 		{
-			PlayerInstance targetPlayer = ((PlayerInventory) target).getOwner();
+			final PlayerInstance targetPlayer = ((PlayerInventory) target).getOwner();
 			
 			if (!Config.FORCE_INVENTORY_UPDATE)
 			{
@@ -4390,7 +4390,7 @@ public class PlayerInstance extends Playable
 		}
 		else if (target instanceof PetInventory)
 		{
-			PetInventoryUpdate petIU = new PetInventoryUpdate();
+			final PetInventoryUpdate petIU = new PetInventoryUpdate();
 			
 			if (newItem.getCount() > count)
 			{
@@ -4480,7 +4480,7 @@ public class PlayerInstance extends Playable
 		// Send inventory update packet
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
-			InventoryUpdate playerIU = new InventoryUpdate();
+			final InventoryUpdate playerIU = new InventoryUpdate();
 			playerIU.addItem(item);
 			sendPacket(playerIU);
 		}
@@ -4490,14 +4490,14 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Update current load as well
-		StatusUpdate su = new StatusUpdate(getObjectId());
+		final StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, getCurrentLoad());
 		sendPacket(su);
 		
 		// Sends message to client if requested
 		if (sendMessage)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DROPPED_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DROPPED_S1);
 			sm.addItemName(item.getItemId());
 			sendPacket(sm);
 		}
@@ -4531,7 +4531,7 @@ public class PlayerInstance extends Playable
 			
 		}
 		
-		ItemInstance invitem = _inventory.getItemByObjectId(objectId);
+		final ItemInstance invitem = _inventory.getItemByObjectId(objectId);
 		final ItemInstance item = _inventory.dropItem(process, objectId, count, this, reference);
 		
 		if (item == null)
@@ -4567,7 +4567,7 @@ public class PlayerInstance extends Playable
 		// Send inventory update packet
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
-			InventoryUpdate playerIU = new InventoryUpdate();
+			final InventoryUpdate playerIU = new InventoryUpdate();
 			playerIU.addItem(invitem);
 			sendPacket(playerIU);
 		}
@@ -4577,14 +4577,14 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Update current load as well
-		StatusUpdate su = new StatusUpdate(getObjectId());
+		final StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, getCurrentLoad());
 		sendPacket(su);
 		
 		// Sends message to client if requested
 		if (sendMessage)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DROPPED_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DROPPED_S1);
 			sm.addItemName(item.getItemId());
 			sendPacket(sm);
 		}
@@ -4864,7 +4864,7 @@ public class PlayerInstance extends Playable
 				
 				if (Config.ALLOW_CHAR_KILL_PROTECT)
 				{
-					Siege siege = SiegeManager.getInstance().getSiege(player);
+					final Siege siege = SiegeManager.getInstance().getSiege(player);
 					
 					if ((siege != null) && siege.getIsInProgress())
 					{
@@ -5052,7 +5052,7 @@ public class PlayerInstance extends Playable
 					
 					if (Config.ALLOW_CHAR_KILL_PROTECT)
 					{
-						Siege siege = SiegeManager.getInstance().getSiege(player);
+						final Siege siege = SiegeManager.getInstance().getSiege(player);
 						
 						if ((siege != null) && siege.getIsInProgress())
 						{
@@ -5355,12 +5355,12 @@ public class PlayerInstance extends Playable
 		// Send the Server->Client packet StatusUpdate with current HP, MP and CP to this PlayerInstance
 		if (Config.FORCE_COMPLETE_STATUS_UPDATE)
 		{
-			StatusUpdate su = new StatusUpdate(this);
+			final StatusUpdate su = new StatusUpdate(this);
 			sendPacket(su);
 		}
 		else
 		{
-			StatusUpdate su = new StatusUpdate(getObjectId());
+			final StatusUpdate su = new StatusUpdate(getObjectId());
 			su.addAttribute(StatusUpdate.CUR_HP, (int) getCurrentHp());
 			su.addAttribute(StatusUpdate.CUR_MP, (int) getCurrentMp());
 			su.addAttribute(StatusUpdate.CUR_CP, (int) getCurrentCp());
@@ -5372,7 +5372,7 @@ public class PlayerInstance extends Playable
 		if (isInParty() && (needCpUpdate(352) || super.needHpUpdate(352) || needMpUpdate(352)))
 		{
 			// Send the Server->Client packet PartySmallWindowUpdate with current HP, MP and Level to all other PlayerInstance of the Party
-			PartySmallWindowUpdate update = new PartySmallWindowUpdate(this);
+			final PartySmallWindowUpdate update = new PartySmallWindowUpdate(this);
 			getParty().broadcastToPartyMembers(this, update);
 		}
 		
@@ -5400,7 +5400,7 @@ public class PlayerInstance extends Playable
 		}
 		if (isInDuel())
 		{
-			ExDuelUpdateUserInfo update = new ExDuelUpdateUserInfo(this);
+			final ExDuelUpdateUserInfo update = new ExDuelUpdateUserInfo(this);
 			DuelManager.getInstance().broadcastToOppositTeam(this, update);
 		}
 	}
@@ -5545,7 +5545,7 @@ public class PlayerInstance extends Playable
 	{
 		if (target instanceof PlayerInstance)
 		{
-			PlayerInstance temp = (PlayerInstance) target;
+			final PlayerInstance temp = (PlayerInstance) target;
 			sendPacket(ActionFailed.STATIC_PACKET);
 			
 			if ((temp.getPrivateStoreType() == STORE_PRIVATE_SELL) || (temp.getPrivateStoreType() == STORE_PRIVATE_PACKAGE_SELL))
@@ -5632,7 +5632,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		ItemInstance target = (ItemInstance) object;
+		final ItemInstance target = (ItemInstance) object;
 		
 		// Send a Server->Client packet ActionFailed to this PlayerInstance
 		sendPacket(ActionFailed.STATIC_PACKET);
@@ -5675,7 +5675,7 @@ public class PlayerInstance extends Playable
 			if (isInvul() && !isGM())
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
-				SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1);
+				final SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1);
 				smsg.addItemName(target.getItemId());
 				sendPacket(smsg);
 				return;
@@ -5686,20 +5686,20 @@ public class PlayerInstance extends Playable
 				
 				if (target.getItemId() == 57)
 				{
-					SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1_ADENA);
+					final SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1_ADENA);
 					smsg.addNumber(target.getCount());
 					sendPacket(smsg);
 				}
 				else if (target.getCount() > 1)
 				{
-					SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S2_S1_S);
+					final SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S2_S1_S);
 					smsg.addItemName(target.getItemId());
 					smsg.addNumber(target.getCount());
 					sendPacket(smsg);
 				}
 				else
 				{
-					SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1);
+					final SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1);
 					smsg.addItemName(target.getItemId());
 					sendPacket(smsg);
 				}
@@ -5735,7 +5735,7 @@ public class PlayerInstance extends Playable
 		// Auto use herbs - pick up
 		if (target.getItemType() == EtcItemType.HERB)
 		{
-			IItemHandler handler = ItemHandler.getInstance().getItemHandler(target.getItemId());
+			final IItemHandler handler = ItemHandler.getInstance().getItemHandler(target.getItemId());
 			if (handler == null)
 			{
 				LOGGER.info("No item handler registered for item ID " + target.getItemId() + ".");
@@ -5847,7 +5847,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Get the current target
-		WorldObject oldTarget = getTarget();
+		final WorldObject oldTarget = getTarget();
 		if (oldTarget != null)
 		{
 			if (oldTarget.equals(newTarget))
@@ -5866,7 +5866,7 @@ public class PlayerInstance extends Playable
 		if (newTarget instanceof Creature)
 		{
 			((Creature) newTarget).addStatusListener(this);
-			TargetSelected my = new TargetSelected(getObjectId(), newTarget.getObjectId(), getX(), getY(), getZ());
+			final TargetSelected my = new TargetSelected(getObjectId(), newTarget.getObjectId(), getX(), getY(), getZ());
 			
 			// Send packet just to me and to party, not to any other that does not use the information
 			if (!isInParty())
@@ -6188,7 +6188,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		PlayerInstance ptarget = (PlayerInstance) World.getInstance().findObject(_engageid);
+		final PlayerInstance ptarget = (PlayerInstance) World.getInstance().findObject(_engageid);
 		setEngageRequest(false, 0);
 		if (ptarget != null)
 		{
@@ -6223,7 +6223,7 @@ public class PlayerInstance extends Playable
 	@Override
 	public Weapon getSecondaryWeaponItem()
 	{
-		ItemInstance weapon = getSecondaryWeaponInstance();
+		final ItemInstance weapon = getSecondaryWeaponInstance();
 		
 		if (weapon == null)
 		{
@@ -6906,7 +6906,7 @@ public class PlayerInstance extends Playable
 					
 					if (!Config.FORCE_INVENTORY_UPDATE)
 					{
-						InventoryUpdate iu = new InventoryUpdate();
+						final InventoryUpdate iu = new InventoryUpdate();
 						iu.addItem(_inventory.getItemByItemId(Config.PVP_REWARD_ID));
 						sendPacket(iu);
 					}
@@ -6924,7 +6924,7 @@ public class PlayerInstance extends Playable
 					
 					if (!Config.FORCE_INVENTORY_UPDATE)
 					{
-						InventoryUpdate iu = new InventoryUpdate();
+						final InventoryUpdate iu = new InventoryUpdate();
 						iu.addItem(_inventory.getItemByItemId(Config.PK_REWARD_ID));
 						sendPacket(iu);
 					}
@@ -7158,8 +7158,8 @@ public class PlayerInstance extends Playable
 	 */
 	public void doPkInfo(PlayerInstance playerWhoKilled)
 	{
-		String killer = playerWhoKilled.getName();
-		String killed = getName();
+		final String killer = playerWhoKilled.getName();
+		final String killed = getName();
 		int killCount = 0;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -7184,7 +7184,7 @@ public class PlayerInstance extends Playable
 			killCount++;
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement("UPDATE pkkills SET kills=? WHERE killerId=? AND killedId=?");
+				final PreparedStatement statement = con.prepareStatement("UPDATE pkkills SET kills=? WHERE killerId=? AND killedId=?");
 				statement.setInt(1, killCount);
 				statement.setString(2, killer);
 				statement.setString(3, killed);
@@ -7202,7 +7202,7 @@ public class PlayerInstance extends Playable
 		{
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement("INSERT INTO pkkills (killerId,killedId,kills) VALUES (?,?,?)");
+				final PreparedStatement statement = con.prepareStatement("INSERT INTO pkkills (killerId,killedId,kills) VALUES (?,?,?)");
 				statement.setString(1, killer);
 				statement.setString(2, killed);
 				statement.setInt(3, 1);
@@ -7745,7 +7745,7 @@ public class PlayerInstance extends Playable
 		_activeTradeList = new TradeList(this);
 		_activeTradeList.setPartner(partner);
 		
-		SystemMessage msg = new SystemMessage(SystemMessageId.BEGIN_TRADE_WITH_S1);
+		final SystemMessage msg = new SystemMessage(SystemMessageId.BEGIN_TRADE_WITH_S1);
 		msg.addString(partner.getName());
 		sendPacket(msg);
 		sendPacket(new TradeStart(this));
@@ -7757,7 +7757,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void onTradeConfirm(PlayerInstance partner)
 	{
-		SystemMessage msg = new SystemMessage(SystemMessageId.S1_CONFIRMED_TRADE);
+		final SystemMessage msg = new SystemMessage(SystemMessageId.S1_CONFIRMED_TRADE);
 		msg.addString(partner.getName());
 		sendPacket(msg);
 		partner.sendPacket(TradePressOwnOk.STATIC_PACKET);
@@ -7779,7 +7779,7 @@ public class PlayerInstance extends Playable
 		_activeTradeList = null;
 		
 		sendPacket(new SendTradeDone(0));
-		SystemMessage msg = new SystemMessage(SystemMessageId.S1_CANCELED_TRADE);
+		final SystemMessage msg = new SystemMessage(SystemMessageId.S1_CANCELED_TRADE);
 		msg.addString(partner.getName());
 		sendPacket(msg);
 	}
@@ -7818,7 +7818,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		PlayerInstance partner = _activeTradeList.getPartner();
+		final PlayerInstance partner = _activeTradeList.getPartner();
 		if (partner != null)
 		{
 			partner.onTradeCancel(this);
@@ -8011,7 +8011,7 @@ public class PlayerInstance extends Playable
 	@Override
 	protected void reduceArrowCount()
 	{
-		ItemInstance arrows = getInventory().destroyItem("Consume", getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LHAND), 1, this, null);
+		final ItemInstance arrows = getInventory().destroyItem("Consume", getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LHAND), 1, this, null);
 		if ((arrows == null) || (arrows.getCount() == 0))
 		{
 			getInventory().unEquipItemInSlot(Inventory.PAPERDOLL_LHAND);
@@ -8098,8 +8098,8 @@ public class PlayerInstance extends Playable
 				wpn.getAugmentation().removeBonus(this);
 			}
 			
-			ItemInstance[] unequiped = getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
-			InventoryUpdate iu = new InventoryUpdate();
+			final ItemInstance[] unequiped = getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
+			final InventoryUpdate iu = new InventoryUpdate();
 			for (ItemInstance element : unequiped)
 			{
 				iu.addModifiedItem(element);
@@ -8129,7 +8129,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Unequip the shield
-		ItemInstance sld = getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+		final ItemInstance sld = getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		if (sld != null)
 		{
 			if (sld.isWear())
@@ -8137,8 +8137,8 @@ public class PlayerInstance extends Playable
 				return false;
 			}
 			
-			ItemInstance[] unequiped = getInventory().unEquipItemInBodySlotAndRecord(sld.getItem().getBodyPart());
-			InventoryUpdate iu = new InventoryUpdate();
+			final ItemInstance[] unequiped = getInventory().unEquipItemInBodySlotAndRecord(sld.getItem().getBodyPart());
+			final InventoryUpdate iu = new InventoryUpdate();
 			for (ItemInstance element : unequiped)
 			{
 				iu.addModifiedItem(element);
@@ -8397,7 +8397,7 @@ public class PlayerInstance extends Playable
 		enableAllSkills();
 		
 		// Send a Server->Client Packet MagicSkillCanceld to the PlayerInstance and all PlayerInstance in the _KnownPlayers of the Creature (broadcast)
-		MagicSkillCanceld msc = new MagicSkillCanceld(getObjectId());
+		final MagicSkillCanceld msc = new MagicSkillCanceld(getObjectId());
 		
 		// Broadcast the packet to self and known players.
 		Broadcast.toSelfAndKnownPlayersInRadius(this, msc, 810000/* 900 */);
@@ -8425,7 +8425,7 @@ public class PlayerInstance extends Playable
 			{
 				LOGGER.warning("Access level " + level + " set for character " + getName() + "! Just a warning ;)");
 			}
-			AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
+			final AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
 			
 			if (accessLevel == null)
 			{
@@ -8600,7 +8600,7 @@ public class PlayerInstance extends Playable
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("UPDATE characters SET online=?, lastAccess=? WHERE obj_id=?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET online=?, lastAccess=? WHERE obj_id=?");
 			statement.setInt(1, isOnline());
 			statement.setLong(2, System.currentTimeMillis());
 			statement.setInt(3, getObjectId());
@@ -8620,7 +8620,7 @@ public class PlayerInstance extends Playable
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("UPDATE characters SET isIn7sDungeon=?, lastAccess=? WHERE obj_id=?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET isIn7sDungeon=?, lastAccess=? WHERE obj_id=?");
 			statement.setInt(1, isIn7sDungeon() ? 1 : 0);
 			statement.setLong(2, System.currentTimeMillis());
 			statement.setInt(3, getObjectId());
@@ -8782,7 +8782,7 @@ public class PlayerInstance extends Playable
 				final int activeClassId = rset.getInt("classid");
 				final boolean female = rset.getInt("sex") != 0;
 				final PlayerTemplate template = CharTemplateTable.getInstance().getTemplate(activeClassId);
-				PlayerAppearance app = new PlayerAppearance(rset.getByte("face"), rset.getByte("hairColor"), rset.getByte("hairStyle"), female);
+				final PlayerAppearance app = new PlayerAppearance(rset.getByte("face"), rset.getByte("hairColor"), rset.getByte("hairStyle"), female);
 				
 				player = new PlayerInstance(objectId, template, rset.getString("account_name"), app);
 				player.setName(rset.getString("char_name"));
@@ -8936,10 +8936,10 @@ public class PlayerInstance extends Playable
 				player.setLastServerPosition(x, y, z);
 				
 				// Retrieve the name and ID of the other characters assigned to this account.
-				PreparedStatement stmt = con.prepareStatement("SELECT obj_Id, char_name FROM characters WHERE account_name=? AND obj_Id<>?");
+				final PreparedStatement stmt = con.prepareStatement("SELECT obj_Id, char_name FROM characters WHERE account_name=? AND obj_Id<>?");
 				stmt.setString(1, player._accountName);
 				stmt.setInt(2, objectId);
-				ResultSet chars = stmt.executeQuery();
+				final ResultSet chars = stmt.executeQuery();
 				
 				while (chars.next())
 				{
@@ -9071,10 +9071,10 @@ public class PlayerInstance extends Playable
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(RESTORE_CHAR_SUBCLASSES);
+			final PreparedStatement statement = con.prepareStatement(RESTORE_CHAR_SUBCLASSES);
 			statement.setInt(1, player.getObjectId());
 			
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			
 			while (rset.next())
 			{
@@ -9187,9 +9187,9 @@ public class PlayerInstance extends Playable
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT id, type FROM character_recipebook WHERE char_id=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT id, type FROM character_recipebook WHERE char_id=?");
 			statement.setInt(1, getObjectId());
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			
 			RecipeList recipe;
 			while (rset.next())
@@ -9678,7 +9678,7 @@ public class PlayerInstance extends Playable
 			LOGGER.warning("Error could not delete skill: " + e);
 		}
 		
-		ShortCut[] allShortCuts = getAllShortCuts();
+		final ShortCut[] allShortCuts = getAllShortCuts();
 		
 		for (ShortCut sc : allShortCuts)
 		{
@@ -9747,7 +9747,7 @@ public class PlayerInstance extends Playable
 		boolean foundskill = false;
 		if (!isGM())
 		{
-			Collection<SkillLearn> skillTree = SkillTreeTable.getInstance().getAllowedSkills(getClassId());
+			final Collection<SkillLearn> skillTree = SkillTreeTable.getInstance().getAllowedSkills(getClassId());
 			// loop through all skills of player
 			for (Skill skill : getAllSkills())
 			{
@@ -9862,10 +9862,10 @@ public class PlayerInstance extends Playable
 		{
 			if (!Config.KEEP_SUBCLASS_SKILLS)
 			{
-				PreparedStatement statement = con.prepareStatement(RESTORE_SKILLS_FOR_CHAR);
+				final PreparedStatement statement = con.prepareStatement(RESTORE_SKILLS_FOR_CHAR);
 				statement.setInt(1, getObjectId());
 				statement.setInt(2, getClassIndex());
-				ResultSet rset = statement.executeQuery();
+				final ResultSet rset = statement.executeQuery();
 				
 				// Go though the recordset of this SQL query
 				while (rset.next())
@@ -9890,9 +9890,9 @@ public class PlayerInstance extends Playable
 			}
 			else
 			{
-				PreparedStatement statement = con.prepareStatement(RESTORE_SKILLS_FOR_CHAR_ALT_SUBCLASS);
+				final PreparedStatement statement = con.prepareStatement(RESTORE_SKILLS_FOR_CHAR_ALT_SUBCLASS);
 				statement.setInt(1, getObjectId());
-				ResultSet rset = statement.executeQuery();
+				final ResultSet rset = statement.executeQuery();
 				
 				// Go though the recordset of this SQL query
 				while (rset.next())
@@ -9964,7 +9964,7 @@ public class PlayerInstance extends Playable
 				
 				if (activateEffects)
 				{
-					Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
+					final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
 					
 					skill.getEffects(this, this, false, false, false);
 					
@@ -10046,10 +10046,10 @@ public class PlayerInstance extends Playable
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(RESTORE_CHAR_HENNAS);
+			final PreparedStatement statement = con.prepareStatement(RESTORE_CHAR_HENNAS);
 			statement.setInt(1, getObjectId());
 			statement.setInt(2, getClassIndex());
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			
 			for (int i = 0; i < 3; i++)
 			{
@@ -10071,7 +10071,7 @@ public class PlayerInstance extends Playable
 				
 				if (symbol_id != 0)
 				{
-					Henna tpl = HennaTable.getInstance().getTemplate(symbol_id);
+					final Henna tpl = HennaTable.getInstance().getTemplate(symbol_id);
 					
 					if (tpl != null)
 					{
@@ -10101,9 +10101,9 @@ public class PlayerInstance extends Playable
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(RESTORE_CHAR_RECOMS);
+			final PreparedStatement statement = con.prepareStatement(RESTORE_CHAR_RECOMS);
 			statement.setInt(1, getObjectId());
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			while (rset.next())
 			{
 				_recomChars.add(rset.getInt("target_id"));
@@ -10191,7 +10191,7 @@ public class PlayerInstance extends Playable
 		// Add the recovered dyes to the player's inventory and notify them.
 		_inventory.addItem("Henna", henna.getItemIdDye(), henna.getAmountDyeRequire() / 2, this, null);
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
 		sm.addItemName(henna.getItemIdDye());
 		sm.addNumber(henna.getAmountDyeRequire() / 2);
 		sendPacket(sm);
@@ -10225,7 +10225,7 @@ public class PlayerInstance extends Playable
 				
 				try (Connection con = DatabaseFactory.getConnection())
 				{
-					PreparedStatement statement = con.prepareStatement(ADD_CHAR_HENNA);
+					final PreparedStatement statement = con.prepareStatement(ADD_CHAR_HENNA);
 					statement.setInt(1, getObjectId());
 					statement.setInt(2, henna.getSymbolId());
 					statement.setInt(3, i + 1);
@@ -10239,11 +10239,11 @@ public class PlayerInstance extends Playable
 				}
 				
 				// Send Server->Client HennaInfo packet to this PlayerInstance
-				HennaInfo hi = new HennaInfo(this);
+				final HennaInfo hi = new HennaInfo(this);
 				sendPacket(hi);
 				
 				// Send Server->Client UserInfo packet to this PlayerInstance
-				UserInfo ui = new UserInfo(this);
+				final UserInfo ui = new UserInfo(this);
 				sendPacket(ui);
 				
 				getInventory().refreshWeight();
@@ -10510,8 +10510,8 @@ public class PlayerInstance extends Playable
 			
 			if (getClan() != null)
 			{
-				Siege siege = SiegeManager.getInstance().getSiege(getX(), getY(), getZ());
-				FortSiege fortsiege = FortSiegeManager.getInstance().getSiege(getX(), getY(), getZ());
+				final Siege siege = SiegeManager.getInstance().getSiege(getX(), getY(), getZ());
+				final FortSiege fortsiege = FortSiegeManager.getInstance().getSiege(getX(), getY(), getZ());
 				if (siege != null)
 				{
 					// Check if a siege is in progress and if attacker and the PlayerInstance aren't in the Defender clan
@@ -10610,7 +10610,7 @@ public class PlayerInstance extends Playable
 		
 		final int skillId = skill.getId();
 		int currSkillId = -1;
-		SkillDat current = getCurrentSkill();
+		final SkillDat current = getCurrentSkill();
 		if (current != null)
 		{
 			currSkillId = current.getSkillId();
@@ -10685,7 +10685,7 @@ public class PlayerInstance extends Playable
 		{
 			if ((skill.getId() != 2166))
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
 				sm.addSkillName(skill.getId(), skill.getLevel());
 				sendPacket(sm);
 			}
@@ -11387,7 +11387,7 @@ public class PlayerInstance extends Playable
 		_mountType = mountType;
 		
 		// Send a Server->Client packet InventoryUpdate to the PlayerInstance in order to update speed
-		UserInfo ui = new UserInfo(this);
+		final UserInfo ui = new UserInfo(this);
 		sendPacket(ui);
 		return true;
 	}
@@ -11719,7 +11719,7 @@ public class PlayerInstance extends Playable
 		{
 			if (isOnline() == 1)
 			{
-				SystemMessage msg = new SystemMessage(SystemMessageId.PLAYING_FOR_LONG_TIME);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.PLAYING_FOR_LONG_TIME);
 				PlayerInstance.this.sendPacket(msg);
 			}
 			else
@@ -11754,7 +11754,7 @@ public class PlayerInstance extends Playable
 			
 			reduceCurrentHp(reduceHp, PlayerInstance.this, false);
 			// reduced hp, becouse not rest
-			SystemMessage sm = new SystemMessage(SystemMessageId.DROWN_DAMAGE_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.DROWN_DAMAGE_S1);
 			sm.addNumber((int) reduceHp);
 			sendPacket(sm);
 		}
@@ -12389,9 +12389,9 @@ public class PlayerInstance extends Playable
 		int count = 0;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT count FROM heroes WHERE char_name=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT count FROM heroes WHERE char_name=?");
 			statement.setString(1, getName());
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			while (rset.next())
 			{
 				count = rset.getInt("count");
@@ -12863,7 +12863,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void sendSkillList(PlayerInstance player)
 	{
-		SkillList sl = new SkillList();
+		final SkillList sl = new SkillList();
 		if (player != null)
 		{
 			for (Skill s : player.getAllSkills())
@@ -12976,7 +12976,7 @@ public class PlayerInstance extends Playable
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(ADD_CHAR_SUBCLASS);
+			final PreparedStatement statement = con.prepareStatement(ADD_CHAR_SUBCLASS);
 			statement.setInt(1, getObjectId());
 			statement.setInt(2, newClass.getClassId());
 			statement.setLong(3, newClass.getExp());
@@ -12998,15 +12998,15 @@ public class PlayerInstance extends Playable
 			// Commit after database INSERT incase exception is thrown.
 			getSubClasses().put(newClass.getClassIndex(), newClass);
 			
-			ClassId subTemplate = ClassId.getClassId(classId);
-			Collection<SkillLearn> skillTree = SkillTreeTable.getInstance().getAllowedSkills(subTemplate);
+			final ClassId subTemplate = ClassId.getClassId(classId);
+			final Collection<SkillLearn> skillTree = SkillTreeTable.getInstance().getAllowedSkills(subTemplate);
 			
 			if (skillTree == null)
 			{
 				return true;
 			}
 			
-			Map<Integer, Skill> prevSkillList = new HashMap<>();
+			final Map<Integer, Skill> prevSkillList = new HashMap<>();
 			
 			for (SkillLearn skillInfo : skillTree)
 			{
@@ -13158,7 +13158,7 @@ public class PlayerInstance extends Playable
 	{
 		_activeClass = classId;
 		
-		PlayerTemplate t = CharTemplateTable.getInstance().getTemplate(classId);
+		final PlayerTemplate t = CharTemplateTable.getInstance().getTemplate(classId);
 		
 		if (t == null)
 		{
@@ -13317,7 +13317,7 @@ public class PlayerInstance extends Playable
 		sendPacket(new EtcStatusUpdate(this));
 		
 		// if player has quest 422: Repent Your Sins, remove it
-		QuestState st = getQuestState("422_RepentYourSins");
+		final QuestState st = getQuestState("422_RepentYourSins");
 		
 		if (st != null)
 		{
@@ -13436,7 +13436,7 @@ public class PlayerInstance extends Playable
 			{
 				_taskRentPet.cancel(true);
 				_taskRentPet = null;
-				Ride dismount = new Ride(getObjectId(), Ride.ACTION_DISMOUNT, 0);
+				final Ride dismount = new Ride(getObjectId(), Ride.ACTION_DISMOUNT, 0);
 				sendPacket(dismount);
 				broadcastPacket(dismount);
 			}
@@ -13616,7 +13616,7 @@ public class PlayerInstance extends Playable
 		{
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				PreparedStatement statement = con.prepareStatement(DELETE_CHAR_RECOMS);
+				final PreparedStatement statement = con.prepareStatement(DELETE_CHAR_RECOMS);
 				statement.setInt(1, getObjectId());
 				statement.execute();
 				statement.close();
@@ -13731,7 +13731,7 @@ public class PlayerInstance extends Playable
 				_revivePower = 0;
 			}
 			_revivePet = pet;
-			ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.RESSURECTION_REQUEST.getId());
+			final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.RESSURECTION_REQUEST.getId());
 			dlg.addString(reviver.getName());
 			sendPacket(dlg);
 		}
@@ -14377,7 +14377,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean validateItemManipulationByItemId(int itemId, String action)
 	{
-		ItemInstance item = getInventory().getItemByItemId(itemId);
+		final ItemInstance item = getInventory().getItemByItemId(itemId);
 		
 		if ((item == null) || (item.getOwnerId() != getObjectId()))
 		{
@@ -14413,7 +14413,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean validateItemManipulation(int objectId, String action)
 	{
-		ItemInstance item = getInventory().getItemByObjectId(objectId);
+		final ItemInstance item = getInventory().getItemByObjectId(objectId);
 		
 		if ((item == null) || (item.getOwnerId() != getObjectId()))
 		{
@@ -14746,7 +14746,7 @@ public class PlayerInstance extends Playable
 			// set the status for pledge member list to OFFLINE
 			try
 			{
-				ClanMember clanMember = getClan().getClanMember(getName());
+				final ClanMember clanMember = getClan().getClanMember(getName());
 				if (clanMember != null)
 				{
 					clanMember.setPlayerInstance(null);
@@ -14928,9 +14928,9 @@ public class PlayerInstance extends Playable
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT friend_id FROM character_friends WHERE char_id = ? AND relation = 0");
+			final PreparedStatement statement = con.prepareStatement("SELECT friend_id FROM character_friends WHERE char_id = ? AND relation = 0");
 			statement.setInt(1, getObjectId());
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			
 			int friendId;
 			while (rset.next())
@@ -14957,7 +14957,7 @@ public class PlayerInstance extends Playable
 	{
 		for (int id : _friendList)
 		{
-			PlayerInstance friend = World.getInstance().getPlayer(id);
+			final PlayerInstance friend = World.getInstance().getPlayer(id);
 			if (friend != null)
 			{
 				friend.sendPacket(new FriendList(friend));
@@ -15026,7 +15026,7 @@ public class PlayerInstance extends Playable
 		final int lvl = GetRandomFishLvl();
 		final int group = GetRandomGroup();
 		final int type = GetRandomFishType(group);
-		List<FishData> fishs = FishTable.getInstance().getfish(lvl, type, group);
+		final List<FishData> fishs = FishTable.getInstance().getfish(lvl, type, group);
 		if ((fishs == null) || fishs.isEmpty())
 		{
 			sendMessage("Error - Fishes are not definied");
@@ -15383,7 +15383,7 @@ public class PlayerInstance extends Playable
 	 */
 	private int GetRandomFishLvl()
 	{
-		Effect[] effects = getAllEffects();
+		final Effect[] effects = getAllEffects();
 		int skilllvl = getSkillLevel(1315);
 		for (Effect e : effects)
 		{
@@ -15439,7 +15439,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void EndFishing(boolean win)
 	{
-		ExFishingEnd efe = new ExFishingEnd(win, this);
+		final ExFishingEnd efe = new ExFishingEnd(win, this);
 		broadcastPacket(efe);
 		_fishing = false;
 		_fishX = 0;
@@ -15823,7 +15823,7 @@ public class PlayerInstance extends Playable
 		
 		if (getDeathPenaltyBuffLevel() != 0)
 		{
-			Skill skill = SkillTable.getInstance().getInfo(5076, getDeathPenaltyBuffLevel());
+			final Skill skill = SkillTable.getInstance().getInfo(5076, getDeathPenaltyBuffLevel());
 			
 			if (skill != null)
 			{
@@ -15835,7 +15835,7 @@ public class PlayerInstance extends Playable
 		
 		addSkill(SkillTable.getInstance().getInfo(5076, getDeathPenaltyBuffLevel()), false);
 		sendPacket(new EtcStatusUpdate(this));
-		SystemMessage sm = new SystemMessage(SystemMessageId.DEATH_PENALTY_LEVEL_S1_ADDED);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.DEATH_PENALTY_LEVEL_S1_ADDED);
 		sm.addNumber(getDeathPenaltyBuffLevel());
 		sendPacket(sm);
 		sendSkillList();
@@ -15851,7 +15851,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		Skill skill = SkillTable.getInstance().getInfo(5076, getDeathPenaltyBuffLevel());
+		final Skill skill = SkillTable.getInstance().getInfo(5076, getDeathPenaltyBuffLevel());
 		
 		if (skill != null)
 		{
@@ -15865,7 +15865,7 @@ public class PlayerInstance extends Playable
 		{
 			addSkill(SkillTable.getInstance().getInfo(5076, getDeathPenaltyBuffLevel()), false);
 			sendPacket(new EtcStatusUpdate(this));
-			SystemMessage sm = new SystemMessage(SystemMessageId.DEATH_PENALTY_LEVEL_S1_ADDED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.DEATH_PENALTY_LEVEL_S1_ADDED);
 			sm.addNumber(getDeathPenaltyBuffLevel());
 			sendPacket(sm);
 			sendSkillList();
@@ -15889,10 +15889,10 @@ public class PlayerInstance extends Playable
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement(STATUS_DATA_GET);
+			final PreparedStatement statement = con.prepareStatement(STATUS_DATA_GET);
 			statement.setInt(1, getObjectId());
 			
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			
 			while (rset.next())
 			{
@@ -15936,7 +15936,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void restoreDeathPenaltyBuffLevel()
 	{
-		Skill skill = SkillTable.getInstance().getInfo(5076, getDeathPenaltyBuffLevel());
+		final Skill skill = SkillTable.getInstance().getInfo(5076, getDeathPenaltyBuffLevel());
 		
 		if (skill != null)
 		{
@@ -15946,7 +15946,7 @@ public class PlayerInstance extends Playable
 		if (getDeathPenaltyBuffLevel() > 0)
 		{
 			addSkill(SkillTable.getInstance().getInfo(5076, getDeathPenaltyBuffLevel()), false);
-			SystemMessage sm = new SystemMessage(SystemMessageId.DEATH_PENALTY_LEVEL_S1_ADDED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.DEATH_PENALTY_LEVEL_S1_ADDED);
 			sm.addNumber(getDeathPenaltyBuffLevel());
 			sendPacket(sm);
 		}
@@ -16032,7 +16032,7 @@ public class PlayerInstance extends Playable
 		
 		if (this != target)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DID_S1_DMG);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DID_S1_DMG);
 			sm.addNumber(damage);
 			sendPacket(sm);
 		}
@@ -16176,7 +16176,7 @@ public class PlayerInstance extends Playable
 		{
 			removeSkill(SkillTable.getInstance().getInfo(4289, 1));
 		}
-		Ride dismount = new Ride(getObjectId(), Ride.ACTION_DISMOUNT, 0);
+		final Ride dismount = new Ride(getObjectId(), Ride.ACTION_DISMOUNT, 0);
 		broadcastPacket(dismount);
 		setMountObjectID(0);
 		broadcastUserInfo();
@@ -16938,7 +16938,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void set_awaying(boolean awaying)
 	{
-		this._awaying = awaying;
+		_awaying = awaying;
 	}
 	
 	/**

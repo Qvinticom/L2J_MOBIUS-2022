@@ -133,7 +133,7 @@ public class Q327_RecoverTheFarmland extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -287,7 +287,7 @@ public class Q327_RecoverTheFarmland extends Quest
 			
 			for (int i = 1852; i < 1856; i++)
 			{
-				int n = st.getQuestItemsCount(i);
+				final int n = st.getQuestItemsCount(i);
 				if (n > 0)
 				{
 					st.takeItems(i, n);
@@ -373,7 +373,7 @@ public class Q327_RecoverTheFarmland extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -453,7 +453,7 @@ public class Q327_RecoverTheFarmland extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerState(player, npc, State.STARTED);
+		final QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)
 		{
 			return null;

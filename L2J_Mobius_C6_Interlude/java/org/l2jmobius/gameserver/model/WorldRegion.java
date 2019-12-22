@@ -364,9 +364,9 @@ public class WorldRegion
 		{
 			if (obj instanceof NpcInstance)
 			{
-				NpcInstance target = (NpcInstance) obj;
+				final NpcInstance target = (NpcInstance) obj;
 				target.deleteMe();
-				Spawn spawn = target.getSpawn();
+				final Spawn spawn = target.getSpawn();
 				
 				if (spawn != null)
 				{

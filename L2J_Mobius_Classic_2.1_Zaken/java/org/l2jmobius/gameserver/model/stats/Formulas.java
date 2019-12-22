@@ -243,7 +243,7 @@ public class Formulas
 			final double statBonus;
 			
 			// There is a chance that activeChar has altered base stat for skill critical.
-			byte skillCritRateStat = (byte) creature.getStat().getValue(Stats.STAT_BONUS_SKILL_CRITICAL);
+			final byte skillCritRateStat = (byte) creature.getStat().getValue(Stats.STAT_BONUS_SKILL_CRITICAL);
 			if ((skillCritRateStat >= 0) && (skillCritRateStat < BaseStats.values().length))
 			{
 				// Best tested.
@@ -471,11 +471,11 @@ public class Formulas
 	
 	public static double calcAtkSpdMultiplier(Creature creature)
 	{
-		double armorBonus = 1; // EquipedArmorSpeedByCrystal TODO: Implement me!
-		double dexBonus = BaseStats.DEX.calcBonus(creature);
-		double weaponAttackSpeed = Stats.weaponBaseValue(creature, Stats.PHYSICAL_ATTACK_SPEED) / armorBonus; // unk868
-		double attackSpeedPerBonus = creature.getStat().getMul(Stats.PHYSICAL_ATTACK_SPEED);
-		double attackSpeedDiffBonus = creature.getStat().getAdd(Stats.PHYSICAL_ATTACK_SPEED);
+		final double armorBonus = 1; // EquipedArmorSpeedByCrystal TODO: Implement me!
+		final double dexBonus = BaseStats.DEX.calcBonus(creature);
+		final double weaponAttackSpeed = Stats.weaponBaseValue(creature, Stats.PHYSICAL_ATTACK_SPEED) / armorBonus; // unk868
+		final double attackSpeedPerBonus = creature.getStat().getMul(Stats.PHYSICAL_ATTACK_SPEED);
+		final double attackSpeedDiffBonus = creature.getStat().getAdd(Stats.PHYSICAL_ATTACK_SPEED);
 		return (dexBonus * (weaponAttackSpeed / 333) * attackSpeedPerBonus) + (attackSpeedDiffBonus / 333);
 	}
 	
@@ -513,7 +513,7 @@ public class Formulas
 		
 		if (creature.isNpc())
 		{
-			double npcFactor = ((Npc) creature).getTemplate().getHitTimeFactorSkill();
+			final double npcFactor = ((Npc) creature).getTemplate().getHitTimeFactorSkill();
 			if (npcFactor > 0)
 			{
 				factor /= npcFactor;

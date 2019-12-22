@@ -36,7 +36,7 @@ public class DisableSkill extends AbstractEffect
 	
 	public DisableSkill(StatsSet params)
 	{
-		String disable = params.getString("disable");
+		final String disable = params.getString("disable");
 		if ((disable != null) && !disable.isEmpty())
 		{
 			disableSkills = new HashSet<>();

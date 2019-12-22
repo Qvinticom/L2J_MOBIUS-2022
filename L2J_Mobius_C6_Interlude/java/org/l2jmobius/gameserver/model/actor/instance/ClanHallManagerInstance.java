@@ -66,7 +66,7 @@ public class ClanHallManagerInstance extends FolkInstance
 	@Override
 	public void onBypassFeedback(PlayerInstance player, String command)
 	{
-		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+		final SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 		final int condition = validateCondition(player);
 		if (condition <= COND_ALL_FALSE)
 		{
@@ -74,8 +74,8 @@ public class ClanHallManagerInstance extends FolkInstance
 		}
 		else if (condition == COND_OWNER)
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
-			String actualCommand = st.nextToken(); // Get actual command
+			final StringTokenizer st = new StringTokenizer(command, " ");
+			final String actualCommand = st.nextToken(); // Get actual command
 			String val = "";
 			if (st.countTokens() >= 1)
 			{
@@ -88,21 +88,21 @@ public class ClanHallManagerInstance extends FolkInstance
 				{
 					if (val.equalsIgnoreCase("list"))
 					{
-						NpcHtmlMessage html = new NpcHtmlMessage(1);
+						final NpcHtmlMessage html = new NpcHtmlMessage(1);
 						html.setFile("data/html/clanHallManager/banish-list.htm");
 						sendHtmlMessage(player, html);
 					}
 					else if (val.equalsIgnoreCase("banish"))
 					{
 						getClanHall().banishForeigners();
-						NpcHtmlMessage html = new NpcHtmlMessage(1);
+						final NpcHtmlMessage html = new NpcHtmlMessage(1);
 						html.setFile("data/html/clanHallManager/banish.htm");
 						sendHtmlMessage(player, html);
 					}
 				}
 				else
 				{
-					NpcHtmlMessage html = new NpcHtmlMessage(1);
+					final NpcHtmlMessage html = new NpcHtmlMessage(1);
 					html.setFile("data/html/clanHallManager/not_authorized.htm");
 					sendHtmlMessage(player, html);
 				}
@@ -122,7 +122,7 @@ public class ClanHallManagerInstance extends FolkInstance
 					}
 					else
 					{
-						NpcHtmlMessage html = new NpcHtmlMessage(1);
+						final NpcHtmlMessage html = new NpcHtmlMessage(1);
 						html.setFile("data/html/clanHallManager/vault.htm");
 						sendHtmlMessage(player, html);
 					}
@@ -147,7 +147,7 @@ public class ClanHallManagerInstance extends FolkInstance
 					}
 					else
 					{
-						NpcHtmlMessage html = new NpcHtmlMessage(1);
+						final NpcHtmlMessage html = new NpcHtmlMessage(1);
 						html.setFile("data/html/clanHallManager/door.htm");
 						sendHtmlMessage(player, html);
 					}
@@ -176,7 +176,7 @@ public class ClanHallManagerInstance extends FolkInstance
 				{
 					if (getClanHall().getFunction(ClanHall.FUNC_ITEM_CREATE) == null)
 					{
-						NpcHtmlMessage html = new NpcHtmlMessage(1);
+						final NpcHtmlMessage html = new NpcHtmlMessage(1);
 						html.setFile("data/html/clanHallManager/chamberlain-nac.htm");
 						sendHtmlMessage(player, html);
 						return;
@@ -190,7 +190,7 @@ public class ClanHallManagerInstance extends FolkInstance
 				}
 				else if (val.equalsIgnoreCase("support"))
 				{
-					NpcHtmlMessage html = new NpcHtmlMessage(1);
+					final NpcHtmlMessage html = new NpcHtmlMessage(1);
 					if (getClanHall().getFunction(ClanHall.FUNC_SUPPORT) == null)
 					{
 						html.setFile("data/html/clanHallManager/chamberlain-nac.htm");
@@ -208,7 +208,7 @@ public class ClanHallManagerInstance extends FolkInstance
 				}
 				else
 				{
-					NpcHtmlMessage html = new NpcHtmlMessage(1);
+					final NpcHtmlMessage html = new NpcHtmlMessage(1);
 					html.setFile("data/html/clanHallManager/functions.htm");
 					if (getClanHall().getFunction(ClanHall.FUNC_RESTORE_EXP) != null)
 					{
@@ -452,7 +452,7 @@ public class ClanHallManagerInstance extends FolkInstance
 								}
 							}
 						}
-						NpcHtmlMessage html = new NpcHtmlMessage(1);
+						final NpcHtmlMessage html = new NpcHtmlMessage(1);
 						html.setFile("data/html/clanHallManager/edit_recovery" + getClanHall().getGrade() + ".htm");
 						if (getClanHall().getFunction(ClanHall.FUNC_RESTORE_HP) != null)
 						{
@@ -654,7 +654,7 @@ public class ClanHallManagerInstance extends FolkInstance
 								}
 							}
 						}
-						NpcHtmlMessage html = new NpcHtmlMessage(1);
+						final NpcHtmlMessage html = new NpcHtmlMessage(1);
 						html.setFile("data/html/clanHallManager/edit_other" + getClanHall().getGrade() + ".htm");
 						if (getClanHall().getFunction(ClanHall.FUNC_TELEPORT) != null)
 						{
@@ -819,7 +819,7 @@ public class ClanHallManagerInstance extends FolkInstance
 					}
 					else
 					{
-						NpcHtmlMessage html = new NpcHtmlMessage(1);
+						final NpcHtmlMessage html = new NpcHtmlMessage(1);
 						html.setFile("data/html/clanHallManager/manage.htm");
 						sendHtmlMessage(player, html);
 					}
@@ -866,7 +866,7 @@ public class ClanHallManagerInstance extends FolkInstance
 						{
 							return;
 						}
-						NpcHtmlMessage html = new NpcHtmlMessage(1);
+						final NpcHtmlMessage html = new NpcHtmlMessage(1);
 						if (getClanHall().getFunction(ClanHall.FUNC_SUPPORT).getLvl() == 0)
 						{
 							return;
@@ -917,7 +917,7 @@ public class ClanHallManagerInstance extends FolkInstance
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
@@ -969,7 +969,7 @@ public class ClanHallManagerInstance extends FolkInstance
 		{
 			filename = "data/html/clanHallManager/chamberlain-of.htm";
 		}
-		NpcHtmlMessage html = new NpcHtmlMessage(1);
+		final NpcHtmlMessage html = new NpcHtmlMessage(1);
 		html.setFile(filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcId%", String.valueOf(getNpcId()));
@@ -1007,7 +1007,7 @@ public class ClanHallManagerInstance extends FolkInstance
 	{
 		if (_clanHallId < 0)
 		{
-			ClanHall temp = ClanHallManager.getInstance().getNearbyClanHall(getX(), getY(), 500);
+			final ClanHall temp = ClanHallManager.getInstance().getNearbyClanHall(getX(), getY(), 500);
 			
 			if (temp != null)
 			{
@@ -1051,7 +1051,7 @@ public class ClanHallManagerInstance extends FolkInstance
 	 */
 	private void doTeleport(PlayerInstance player, int val)
 	{
-		TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
+		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
 		if (list != null)
 		{
 			// you cannot teleport to village that is in siege Not sure about this one though
@@ -1088,11 +1088,11 @@ public class ClanHallManagerInstance extends FolkInstance
 		
 		player.tempInvetoryDisable();
 		
-		StoreTradeList list = TradeController.getInstance().getBuyList(val);
+		final StoreTradeList list = TradeController.getInstance().getBuyList(val);
 		
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 		{
-			BuyList bl = new BuyList(list, player.getAdena(), taxRate);
+			final BuyList bl = new BuyList(list, player.getAdena(), taxRate);
 			player.sendPacket(bl);
 		}
 		else
@@ -1110,7 +1110,7 @@ public class ClanHallManagerInstance extends FolkInstance
 	 */
 	private void revalidateDeco(PlayerInstance player)
 	{
-		ClanHallDecoration bl = new ClanHallDecoration(ClanHallManager.getInstance().getClanHallByOwner(player.getClan()));
+		final ClanHallDecoration bl = new ClanHallDecoration(ClanHallManager.getInstance().getClanHallByOwner(player.getClan()));
 		player.sendPacket(bl);
 	}
 }

@@ -129,7 +129,7 @@ public class LoginClient extends MMOClient<MMOConnection<LoginClient>>
 		
 		if (!ret)
 		{
-			byte[] dump = new byte[size];
+			final byte[] dump = new byte[size];
 			System.arraycopy(buf.array(), buf.position(), dump, 0, size);
 			LOGGER.warning("Wrong checksum from client: " + this);
 			super.getConnection().close((SendablePacket<LoginClient>) null);

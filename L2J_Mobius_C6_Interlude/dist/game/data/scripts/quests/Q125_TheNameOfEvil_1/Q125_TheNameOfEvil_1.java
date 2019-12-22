@@ -85,8 +85,8 @@ public class Q125_TheNameOfEvil_1 extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final String htmltext = event;
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -138,7 +138,7 @@ public class Q125_TheNameOfEvil_1 extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -148,7 +148,7 @@ public class Q125_TheNameOfEvil_1 extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				QuestState first = player.getQuestState(Q124_MeetingTheElroki.class.getSimpleName());
+				final QuestState first = player.getQuestState(Q124_MeetingTheElroki.class.getSimpleName());
 				if ((first != null) && first.isCompleted() && (player.getLevel() >= 76))
 				{
 					htmltext = "32114-01.htm";
@@ -160,7 +160,7 @@ public class Q125_TheNameOfEvil_1 extends Quest
 				break;
 			
 			case State.STARTED:
-				int cond = st.getInt("cond");
+				final int cond = st.getInt("cond");
 				switch (npc.getNpcId())
 				{
 					case MUSHIKA:
@@ -272,7 +272,7 @@ public class Q125_TheNameOfEvil_1 extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerCondition(player, npc, "cond", "3");
+		final QuestState st = checkPlayerCondition(player, npc, "cond", "3");
 		if (st == null)
 		{
 			return null;

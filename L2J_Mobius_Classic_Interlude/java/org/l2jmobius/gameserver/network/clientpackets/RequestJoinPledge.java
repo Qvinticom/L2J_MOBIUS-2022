@@ -47,7 +47,7 @@ public class RequestJoinPledge implements IClientIncomingPacket
 	{
 		if (player != null)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_DID_NOT_RESPOND_INVITATION_TO_THE_CLAN_HAS_BEEN_CANCELLED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DID_NOT_RESPOND_INVITATION_TO_THE_CLAN_HAS_BEEN_CANCELLED);
 			sm.addString(name);
 			player.sendPacket(sm);
 			player.onTransactionResponse();

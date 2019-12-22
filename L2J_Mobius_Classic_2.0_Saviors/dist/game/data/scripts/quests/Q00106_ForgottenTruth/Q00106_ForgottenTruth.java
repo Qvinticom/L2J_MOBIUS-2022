@@ -94,20 +94,17 @@ public class Q00106_ForgottenTruth extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(2) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
+		if ((qs != null) && qs.isCond(2) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true) && (getRandom(100) < 20) && hasQuestItems(killer, ONYX_TALISMAN2))
 		{
-			if ((getRandom(100) < 20) && hasQuestItems(killer, ONYX_TALISMAN2))
+			if (!hasQuestItems(killer, ANCIENT_SCROLL))
 			{
-				if (!hasQuestItems(killer, ANCIENT_SCROLL))
-				{
-					giveItems(killer, ANCIENT_SCROLL, 1);
-					playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-				}
-				else if (!hasQuestItems(killer, ANCIENT_CLAY_TABLET))
-				{
-					qs.setCond(3, true);
-					giveItems(killer, ANCIENT_CLAY_TABLET, 1);
-				}
+				giveItems(killer, ANCIENT_SCROLL, 1);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+			}
+			else if (!hasQuestItems(killer, ANCIENT_CLAY_TABLET))
+			{
+				qs.setCond(3, true);
+				giveItems(killer, ANCIENT_CLAY_TABLET, 1);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

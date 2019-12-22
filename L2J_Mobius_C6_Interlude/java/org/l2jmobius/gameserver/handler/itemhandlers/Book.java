@@ -75,11 +75,11 @@ public class Book implements IItemHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) playable;
+		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
 		
-		String filename = "data/html/help/" + itemId + ".htm";
-		String content = HtmCache.getInstance().getHtm(filename);
+		final String filename = "data/html/help/" + itemId + ".htm";
+		final String content = HtmCache.getInstance().getHtm(filename);
 		
 		// Quest item: Lidia's diary
 		if (itemId == 7064)
@@ -90,13 +90,13 @@ public class Book implements IItemHandler
 		
 		if (content == null)
 		{
-			NpcHtmlMessage html = new NpcHtmlMessage(1);
+			final NpcHtmlMessage html = new NpcHtmlMessage(1);
 			html.setHtml("<html><body>My Text is missing:<br>" + filename + "</body></html>");
 			player.sendPacket(html);
 		}
 		else
 		{
-			NpcHtmlMessage itemReply = new NpcHtmlMessage(5);
+			final NpcHtmlMessage itemReply = new NpcHtmlMessage(5);
 			itemReply.setHtml(content);
 			player.sendPacket(itemReply);
 		}

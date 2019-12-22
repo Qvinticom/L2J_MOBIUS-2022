@@ -64,7 +64,7 @@ public class RequestCmdLogin implements IIncomingPacket<LoginClient>
 			return;
 		}
 		
-		byte[] decrypted = new byte[128];
+		final byte[] decrypted = new byte[128];
 		try
 		{
 			final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");

@@ -53,7 +53,7 @@ public class GuardInstance extends Attackable
 		}
 		if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && attacker.isPlayable())
 		{
-			PlayerInstance player = attacker.getActingPlayer();
+			final PlayerInstance player = attacker.getActingPlayer();
 			if ((player.isGood() && getTemplate().isClan(Config.FACTION_EVIL_TEAM_NAME)) || (player.isEvil() && getTemplate().isClan(Config.FACTION_GOOD_TEAM_NAME)))
 			{
 				return true;

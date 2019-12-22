@@ -53,8 +53,8 @@ public class AdminMammon implements IAdminCommandHandler
 		int npcId = 0;
 		int teleportIndex = -1;
 		
-		AutoSpawnInstance blackSpawnInst = AutoSpawn.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_BLACKSMITH_ID, false);
-		AutoSpawnInstance merchSpawnInst = AutoSpawn.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_MERCHANT_ID, false);
+		final AutoSpawnInstance blackSpawnInst = AutoSpawn.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_BLACKSMITH_ID, false);
+		final AutoSpawnInstance merchSpawnInst = AutoSpawn.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_MERCHANT_ID, false);
 		
 		if (command.startsWith("admin_mammon_find"))
 		{
@@ -78,7 +78,7 @@ public class AdminMammon implements IAdminCommandHandler
 			
 			if (blackSpawnInst != null)
 			{
-				NpcInstance[] blackInst = blackSpawnInst.getNPCInstanceList();
+				final NpcInstance[] blackInst = blackSpawnInst.getNPCInstanceList();
 				if (blackInst.length > 0)
 				{
 					final int x1 = blackInst[0].getX();
@@ -99,7 +99,7 @@ public class AdminMammon implements IAdminCommandHandler
 			
 			if (merchSpawnInst != null)
 			{
-				NpcInstance[] merchInst = merchSpawnInst.getNPCInstanceList();
+				final NpcInstance[] merchInst = merchSpawnInst.getNPCInstanceList();
 				
 				if (merchInst.length > 0)
 				{
@@ -155,9 +155,9 @@ public class AdminMammon implements IAdminCommandHandler
 			try
 			{
 				// admin_list_spawns x[xxxx] x[xx]
-				String[] params = command.split(" ");
-				Pattern pattern = Pattern.compile("[0-9]*");
-				Matcher regexp = pattern.matcher(params[1]);
+				final String[] params = command.split(" ");
+				final Pattern pattern = Pattern.compile("[0-9]*");
+				final Matcher regexp = pattern.matcher(params[1]);
 				
 				if (regexp.matches())
 				{

@@ -72,7 +72,7 @@ public class Recipes implements IItemHandler
 				else if (player.getDwarvenRecipeBook().length >= player.GetDwarfRecipeLimit())
 				{
 					// Up to $s1 recipes can be registered.
-					SystemMessage sm = new SystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_REGISTER);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_REGISTER);
 					sm.addNumber(player.GetDwarfRecipeLimit());
 					player.sendPacket(sm);
 				}
@@ -80,7 +80,7 @@ public class Recipes implements IItemHandler
 				{
 					player.registerDwarvenRecipeList(rp);
 					player.destroyItem("Consume", item.getObjectId(), 1, null, false);
-					SystemMessage sm = new SystemMessage(SystemMessageId.S1_ADDED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_ADDED);
 					sm.addString(item.getItemName());
 					player.sendPacket(sm);
 				}
@@ -100,7 +100,7 @@ public class Recipes implements IItemHandler
 			else if (player.getCommonRecipeBook().length >= player.GetCommonRecipeLimit())
 			{
 				// Up to $s1 recipes can be registered.
-				SystemMessage sm = new SystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_REGISTER);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_REGISTER);
 				sm.addNumber(player.GetCommonRecipeLimit());
 				player.sendPacket(sm);
 			}
@@ -108,7 +108,7 @@ public class Recipes implements IItemHandler
 			{
 				player.registerCommonRecipeList(rp);
 				player.destroyItem("Consume", item.getObjectId(), 1, null, false);
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_ADDED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_ADDED);
 				sm.addString(item.getItemName());
 				player.sendPacket(sm);
 			}

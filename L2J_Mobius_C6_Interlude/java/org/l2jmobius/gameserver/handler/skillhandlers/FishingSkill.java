@@ -46,9 +46,9 @@ public class FishingSkill implements ISkillHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) creature;
+		final PlayerInstance player = (PlayerInstance) creature;
 		
-		Fishing fish = player.GetFishCombat();
+		final Fishing fish = player.GetFishCombat();
 		if (fish == null)
 		{
 			if (skill.getSkillType() == SkillType.PUMPING)
@@ -65,11 +65,11 @@ public class FishingSkill implements ISkillHandler
 			return;
 		}
 		
-		Weapon weaponItem = player.getActiveWeaponItem();
-		ItemInstance weaponInst = creature.getActiveWeaponInstance();
+		final Weapon weaponItem = player.getActiveWeaponItem();
+		final ItemInstance weaponInst = creature.getActiveWeaponInstance();
 		if ((weaponInst == null) || (weaponItem == null) || (weaponItem.getItemType() != WeaponType.ROD))
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
 			creature.sendPacket(sm);
 			return;
 		}

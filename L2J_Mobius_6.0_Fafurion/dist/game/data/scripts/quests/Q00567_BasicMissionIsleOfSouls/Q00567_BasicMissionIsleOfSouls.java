@@ -101,7 +101,7 @@ public class Q00567_BasicMissionIsleOfSouls extends Quest
 			}
 			case "34413-07.html":
 			{
-				StringBuilder str = new StringBuilder("00");
+				final StringBuilder str = new StringBuilder("00");
 				checkQuestCompleted(player, str); // Initialize the array with all quests completed
 				
 				if (str.indexOf("11") != -1) // verify if all quests completed
@@ -220,7 +220,7 @@ public class Q00567_BasicMissionIsleOfSouls extends Quest
 						}
 						else
 						{
-							StringBuilder str = new StringBuilder("00");
+							final StringBuilder str = new StringBuilder("00");
 							checkQuestCompleted(player, str); // Initialize the array with all quests completed
 							if (str.indexOf("11") != -1) // verify if all quests completed
 							{
@@ -258,7 +258,7 @@ public class Q00567_BasicMissionIsleOfSouls extends Quest
 	private StringBuilder checkQuestCompleted(PlayerInstance player, StringBuilder string)
 	{
 		int index = 0;
-		char ch = '1';
+		final char ch = '1';
 		final QuestState st1 = player.getQuestState("Q00752_UncoverTheSecret");
 		if ((st1 != null) && st1.isCompleted())
 		{

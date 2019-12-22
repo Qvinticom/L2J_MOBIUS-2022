@@ -53,7 +53,7 @@ public class Q615_MagicalPowerOfFire_Part1 extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -97,7 +97,7 @@ public class Q615_MagicalPowerOfFire_Part1 extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -172,7 +172,7 @@ public class Q615_MagicalPowerOfFire_Part1 extends Quest
 	@Override
 	public String onAggro(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
@@ -184,7 +184,7 @@ public class Q615_MagicalPowerOfFire_Part1 extends Quest
 			st.set("spawned", "1");
 			
 			// Spawn Udan's eye.
-			NpcInstance udanEye = addSpawn(EYE, player, true, 10000);
+			final NpcInstance udanEye = addSpawn(EYE, player, true, 10000);
 			if (udanEye != null)
 			{
 				startQuestTimer("UdanEyeDespawn", 9000, udanEye, player, false);

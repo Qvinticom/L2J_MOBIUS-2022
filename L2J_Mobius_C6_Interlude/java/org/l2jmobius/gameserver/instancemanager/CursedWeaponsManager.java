@@ -122,9 +122,9 @@ public class CursedWeaponsManager
 							NamedNodeMap attrs = d.getAttributes();
 							final int id = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
 							final int skillId = Integer.parseInt(attrs.getNamedItem("skillId").getNodeValue());
-							String name = attrs.getNamedItem("name").getNodeValue();
+							final String name = attrs.getNamedItem("name").getNodeValue();
 							
-							CursedWeapon cw = new CursedWeapon(id, skillId, name);
+							final CursedWeapon cw = new CursedWeapon(id, skillId, name);
 							
 							int val;
 							for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
@@ -177,8 +177,8 @@ public class CursedWeaponsManager
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT itemId, playerId, playerKarma, playerPkKills, nbKills, endTime FROM cursed_weapons");
-			ResultSet rset = statement.executeQuery();
+			final PreparedStatement statement = con.prepareStatement("SELECT itemId, playerId, playerKarma, playerPkKills, nbKills, endTime FROM cursed_weapons");
+			final ResultSet rset = statement.executeQuery();
 			
 			if (rset.next())
 			{
@@ -189,7 +189,7 @@ public class CursedWeaponsManager
 				final int nbKills = rset.getInt("nbKills");
 				final long endTime = rset.getLong("endTime");
 				
-				CursedWeapon cw = _cursedWeapons.get(itemId);
+				final CursedWeapon cw = _cursedWeapons.get(itemId);
 				cw.setPlayerId(playerId);
 				cw.setPlayerKarma(playerKarma);
 				cw.setPlayerPkKills(playerPkKills);
@@ -307,7 +307,7 @@ public class CursedWeaponsManager
 	
 	public void activate(PlayerInstance player, ItemInstance item)
 	{
-		CursedWeapon cw = _cursedWeapons.get(item.getItemId());
+		final CursedWeapon cw = _cursedWeapons.get(item.getItemId());
 		if (player.isCursedWeaponEquiped()) // cannot own 2 cursed swords
 		{
 			final CursedWeapon cw2 = _cursedWeapons.get(player.getCursedWeaponEquipedId());
@@ -331,14 +331,14 @@ public class CursedWeaponsManager
 	
 	public void drop(int itemId, Creature killer)
 	{
-		CursedWeapon cw = _cursedWeapons.get(itemId);
+		final CursedWeapon cw = _cursedWeapons.get(itemId);
 		
 		cw.dropIt(killer);
 	}
 	
 	public void increaseKills(int itemId)
 	{
-		CursedWeapon cw = _cursedWeapons.get(itemId);
+		final CursedWeapon cw = _cursedWeapons.get(itemId);
 		
 		cw.increaseKills();
 	}
@@ -399,7 +399,7 @@ public class CursedWeaponsManager
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("DELETE FROM cursed_weapons WHERE itemId = ?");
+			final PreparedStatement statement = con.prepareStatement("DELETE FROM cursed_weapons WHERE itemId = ?");
 			statement.setInt(1, itemId);
 			statement.executeUpdate();
 			

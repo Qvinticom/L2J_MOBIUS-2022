@@ -376,7 +376,7 @@ public class Manor
 					continue;
 				}
 				
-				SeedData seed = parseList(line);
+				final SeedData seed = parseList(line);
 				_seeds.put(seed.getId(), seed);
 			}
 			
@@ -433,7 +433,7 @@ public class Manor
 	
 	private SeedData parseList(String line)
 	{
-		StringTokenizer st = new StringTokenizer(line, ";");
+		final StringTokenizer st = new StringTokenizer(line, ";");
 		
 		final int seedId = Integer.parseInt(st.nextToken()); // seed id
 		final int level = Integer.parseInt(st.nextToken()); // seed level

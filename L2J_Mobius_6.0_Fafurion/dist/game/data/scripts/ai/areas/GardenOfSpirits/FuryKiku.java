@@ -52,7 +52,7 @@ public class FuryKiku extends AbstractNpcAI
 		{
 			case "SPAWN":
 			{
-				Party party = player.getParty();
+				final Party party = player.getParty();
 				if (party != null)
 				{
 					party.getMembers().forEach(p -> addSpawn(FURYKIKU, p, true, 180000, true, 0));

@@ -138,22 +138,18 @@ import org.l2jmobius.gameserver.network.serverpackets.ValidateLocationInVehicle;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
- * Mother class of all character objects of the world (PC, NPC...)<BR>
- * <BR>
- * Creature :<BR>
- * <BR>
- * <li>CastleGuardInstance</li>
+ * Mother class of all character objects of the world (PC, NPC...)<br>
+ * Creature:<br>
+ * <ul>
  * <li>DoorInstance</li>
  * <li>NpcInstance</li>
  * <li>PlayableInstance</li><BR>
- * <BR>
- * <B><U> Concept of CreatureTemplate</U> :</B><BR>
- * <BR>
- * Each Creature owns generic and static properties (ex : all Keltir have the same number of HP...). All of those properties are stored in a different template for each type of Creature. Each template is loaded once in the server cache memory (reduce memory use). When a new instance of Creature is
- * spawned, server just create a link between the instance and the template. This link is stored in <B>_template</B><BR>
- * <BR>
+ * <br>
+ * <b>Concept of CreatureTemplate:</b><br>
+ * Each Creature owns generic and static properties (ex : all Keltir have the same number of HP...).<br>
+ * All of those properties are stored in a different template for each type of Creature.<br>
+ * When a new instance of Creature is spawned, server just create a link between the instance and the template.<br>
  * @version $Revision: 1.5.5 $ $Date: 2009/05/12 19:45:27 $
- * @authors eX1steam, programmos, L2Scoria dev&sword dev
  */
 public abstract class Creature extends WorldObject implements ISkillsHolder
 {
@@ -331,7 +327,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void onDecay()
 	{
-		WorldRegion reg = getWorldRegion();
+		final WorldRegion reg = getWorldRegion();
 		
 		if (reg != null)
 		{
@@ -778,7 +774,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		if ((this instanceof PlayerInstance) && DimensionalRiftManager.getInstance().checkIfInRiftZone(getX(), getY(), getZ(), true)) // true -> ignore waiting room :)
 		{
-			PlayerInstance player = (PlayerInstance) this;
+			final PlayerInstance player = (PlayerInstance) this;
 			player.sendMessage("You have been sent to the waiting room.");
 			
 			if (player.isInParty() && player.getParty().isInDimensionalRift())
@@ -939,10 +935,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// Get the active weapon instance (always equiped in the right hand)
-		ItemInstance weaponInst = getActiveWeaponInstance();
+		final ItemInstance weaponInst = getActiveWeaponInstance();
 		
 		// Get the active weapon item corresponding to the active weapon instance (always equiped in the right hand)
-		Weapon weaponItem = getActiveWeaponItem();
+		final Weapon weaponItem = getActiveWeaponItem();
 		
 		if ((weaponItem != null) && (weaponItem.getItemType() == WeaponType.ROD))
 		{
@@ -1088,7 +1084,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// Create a Server->Client packet Attack
-		Attack attack = new Attack(this, wasSSCharged, ssGrade);
+		final Attack attack = new Attack(this, wasSSCharged, ssGrade);
 		
 		boolean hitted;
 		
@@ -1262,7 +1258,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			sendPacket(new SystemMessage(SystemMessageId.GETTING_READY_TO_SHOOT_AN_ARROW));
 			
 			// Send a Server->Client packet SetupGauge
-			SetupGauge sg = new SetupGauge(SetupGauge.RED, sAtk + reuse);
+			final SetupGauge sg = new SetupGauge(SetupGauge.RED, sAtk + reuse);
 			sendPacket(sg);
 		}
 		
@@ -1561,7 +1557,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// Can't use Hero and resurrect skills during Olympiad
 		if ((creature instanceof PlayerInstance) && ((PlayerInstance) creature).isInOlympiadMode() && (skill.isHeroSkill() || (skill.getSkillType() == SkillType.RESURRECT)))
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 			sendPacket(sm);
 			return;
 		}
@@ -1790,7 +1786,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			if (skill.isPotion())
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.USE_S1_);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.USE_S1_);
 				if (magicId == 2005)
 				{
 					sm.addItemName(728);
@@ -1815,7 +1811,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 			else
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.USE_S1);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.USE_S1);
 				if (magicId == 2005)
 				{
 					sm.addItemName(728);
@@ -1856,7 +1852,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		if (initmpcons > 0)
 		{
-			StatusUpdate su = new StatusUpdate(getObjectId());
+			final StatusUpdate su = new StatusUpdate(getObjectId());
 			
 			if (skill.isDance())
 			{
@@ -1893,7 +1889,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			// Send a Server->Client packet SetupGauge with the color of the gauge and the casting time
 			if ((creature instanceof PlayerInstance) && !forceBuff)
 			{
-				SetupGauge sg = new SetupGauge(SetupGauge.BLUE, hitTime);
+				final SetupGauge sg = new SetupGauge(SetupGauge.BLUE, hitTime);
 				sendPacket(sg);
 			}
 			
@@ -2246,7 +2242,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void setAI(CreatureAI newAI)
 	{
-		CreatureAI oldAI = _ai;
+		final CreatureAI oldAI = _ai;
 		if ((oldAI != null) && (oldAI != newAI) && (oldAI instanceof AttackableAI))
 		{
 			((AttackableAI) oldAI).stopAITask();
@@ -3453,7 +3449,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	private List<Effect> effectQueueInsert(Effect newStackedEffect, List<Effect> stackQueue)
 	{
 		// Create an Iterator to go through the list of stacked effects in progress on the Creature
-		Iterator<Effect> queueIterator = stackQueue.iterator();
+		final Iterator<Effect> queueIterator = stackQueue.iterator();
 		
 		int i = 0;
 		while (queueIterator.hasNext())
@@ -3971,7 +3967,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			((PlayerInstance) this).setRecentFakeDeath(true);
 		}
 		
-		ChangeWaitType revive = new ChangeWaitType(this, ChangeWaitType.WT_STOP_FAKEDEATH);
+		final ChangeWaitType revive = new ChangeWaitType(this, ChangeWaitType.WT_STOP_FAKEDEATH);
 		broadcastPacket(revive);
 		broadcastPacket(new Revive(this));
 		getAI().notifyEvent(CtrlEvent.EVT_THINK, null);
@@ -4801,7 +4797,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public synchronized void addStatFuncs(Func[] funcs)
 	{
-		List<Stats> modifiedStats = new ArrayList<>();
+		final List<Stats> modifiedStats = new ArrayList<>();
 		
 		for (Func f : funcs)
 		{
@@ -4891,7 +4887,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public synchronized void removeStatFuncs(Func[] funcs)
 	{
-		List<Stats> modifiedStats = new ArrayList<>();
+		final List<Stats> modifiedStats = new ArrayList<>();
 		
 		for (Func f : funcs)
 		{
@@ -5470,7 +5466,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		final int xPrev = getX();
 		final int yPrev = getY();
-		int zPrev = getZ(); // the z coordinate may be modified by coordinate synchronizations
+		final int zPrev = getZ(); // the z coordinate may be modified by coordinate synchronizations
 		
 		double dx;
 		double dy;
@@ -6122,7 +6118,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			m._zDestination = md.geoPath.get(m.onGeodataPathIndex).getZ();
 		}
 		
-		double distance = Math.hypot(m._xDestination - super.getX(), m._yDestination - super.getY());
+		final double distance = Math.hypot(m._xDestination - super.getX(), m._yDestination - super.getY());
 		// Calculate and set the heading of the Creature
 		if (distance != 0)
 		{
@@ -6479,7 +6475,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			if (target instanceof PlayerInstance)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.AVOIDED_S1S_ATTACK);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.AVOIDED_S1S_ATTACK);
 				
 				if (this instanceof Summon)
 				{
@@ -6558,7 +6554,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				
 				if (toBeCursed)
 				{
-					Skill skill = SkillTable.getInstance().getInfo(4515, 1);
+					final Skill skill = SkillTable.getInstance().getInfo(4515, 1);
 					
 					if (skill != null)
 					{
@@ -6588,10 +6584,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					{
 						((MinionInstance) target).getLeader().stopHating(this);
 						
-						List<MinionInstance> spawnedMinions = ((MinionInstance) target).getLeader().getSpawnedMinions();
+						final List<MinionInstance> spawnedMinions = ((MinionInstance) target).getLeader().getSpawnedMinions();
 						if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
 						{
-							Iterator<MinionInstance> itr = spawnedMinions.iterator();
+							final Iterator<MinionInstance> itr = spawnedMinions.iterator();
 							MinionInstance minion;
 							while (itr.hasNext())
 							{
@@ -6616,10 +6612,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					else
 					{
 						((Attackable) target).stopHating(this);
-						List<MinionInstance> spawnedMinions = ((MonsterInstance) target).getSpawnedMinions();
+						final List<MinionInstance> spawnedMinions = ((MonsterInstance) target).getSpawnedMinions();
 						if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
 						{
-							Iterator<MinionInstance> itr = spawnedMinions.iterator();
+							final Iterator<MinionInstance> itr = spawnedMinions.iterator();
 							MinionInstance minion;
 							while (itr.hasNext())
 							{
@@ -6651,7 +6647,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			// If Creature target is a PlayerInstance, send a system message
 			if (target instanceof PlayerInstance)
 			{
-				PlayerInstance enemy = (PlayerInstance) target;
+				final PlayerInstance enemy = (PlayerInstance) target;
 				
 				// Check if shield is efficient
 				if (shld)
@@ -6661,9 +6657,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 			else if (target instanceof Summon)
 			{
-				Summon activeSummon = (Summon) target;
+				final Summon activeSummon = (Summon) target;
 				
-				SystemMessage sm = new SystemMessage(SystemMessageId.PET_RECEIVED_S2_DAMAGE_BY_S1);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.PET_RECEIVED_S2_DAMAGE_BY_S1);
 				sm.addString(getName());
 				sm.addNumber(damage);
 				activeSummon.getOwner().sendPacket(sm);
@@ -6671,7 +6667,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			if (!miss && (damage > 0))
 			{
-				Weapon weapon = getActiveWeaponItem();
+				final Weapon weapon = getActiveWeaponItem();
 				final boolean isBow = (weapon != null) && weapon.getItemType().toString().equalsIgnoreCase("Bow");
 				
 				if (!isBow) // Do not reflect or absorb if weapon is of type bow
@@ -6739,7 +6735,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 			
 			// Launch weapon Special ability effect if available
-			Weapon activeWeapon = getActiveWeaponItem();
+			final Weapon activeWeapon = getActiveWeaponItem();
 			
 			if (activeWeapon != null)
 			{
@@ -7702,7 +7698,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		if (escapeRange > 0)
 		{
-			List<Creature> targetList = new ArrayList<>();
+			final List<Creature> targetList = new ArrayList<>();
 			
 			for (int i = 0; (targets != null) && (i < targets.length); i++)
 			{
@@ -7862,7 +7858,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					
 					if (target2 instanceof Playable)
 					{
-						Creature target = (Creature) target2;
+						final Creature target = (Creature) target2;
 						
 						// If the skill is type STEALTH(ex: Dance of Shadow)
 						if (skill.isAbnormalEffectByName(ABNORMAL_EFFECT_STEALTH))
@@ -7876,7 +7872,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 						
 						if ((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.SEED))
 						{
-							SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+							final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 							smsg.addString(skill.getName());
 							target.sendPacket(smsg);
 						}
@@ -7900,7 +7896,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		try
 		{
-			StatusUpdate su = new StatusUpdate(getObjectId());
+			final StatusUpdate su = new StatusUpdate(getObjectId());
 			boolean isSendStatus = false;
 			
 			// Consume MP of the Creature and Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
@@ -8064,8 +8060,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			// If character is a player, then wipe their current cast state and check if a skill is queued. If there is a queued skill, launch it and wipe the queue.
 			if (this instanceof PlayerInstance)
 			{
-				PlayerInstance currPlayer = (PlayerInstance) this;
-				SkillDat queuedSkill = currPlayer.getQueuedSkill();
+				final PlayerInstance currPlayer = (PlayerInstance) this;
+				final SkillDat queuedSkill = currPlayer.getQueuedSkill();
 				
 				currPlayer.setCurrentSkill(null, false, false);
 				
@@ -8304,7 +8300,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				if (target instanceof Creature)
 				{
 					// Set some values inside target's instance for later use
-					Creature creature = (Creature) target;
+					final Creature creature = (Creature) target;
 					
 					if ((skill.getEffectType() == SkillType.BUFF) && creature.isBlockBuff())
 					{
@@ -8392,7 +8388,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 						{
 							if (skill.isMagic())
 							{
-								Skill tempSkill = SkillTable.getInstance().getInfo(4215, 1);
+								final Skill tempSkill = SkillTable.getInstance().getInfo(4215, 1);
 								if (tempSkill != null)
 								{
 									abortAttack();
@@ -8419,7 +8415,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 							}
 							else
 							{
-								Skill tempSkill = SkillTable.getInstance().getInfo(4515, 1);
+								final Skill tempSkill = SkillTable.getInstance().getInfo(4515, 1);
 								if (tempSkill != null)
 								{
 									tempSkill.getEffects(creature, this, false, false, false);
@@ -8432,10 +8428,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 								if (creature instanceof MinionInstance)
 								{
 									((MinionInstance) creature).getLeader().stopHating(this);
-									List<MinionInstance> spawnedMinions = ((MonsterInstance) creature).getSpawnedMinions();
+									final List<MinionInstance> spawnedMinions = ((MonsterInstance) creature).getSpawnedMinions();
 									if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
 									{
-										Iterator<MinionInstance> itr = spawnedMinions.iterator();
+										final Iterator<MinionInstance> itr = spawnedMinions.iterator();
 										MinionInstance minion;
 										while (itr.hasNext())
 										{
@@ -8460,10 +8456,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 								else
 								{
 									((Attackable) creature).stopHating(this);
-									List<MinionInstance> spawnedMinions = ((MonsterInstance) creature).getSpawnedMinions();
+									final List<MinionInstance> spawnedMinions = ((MonsterInstance) creature).getSpawnedMinions();
 									if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
 									{
-										Iterator<MinionInstance> itr = spawnedMinions.iterator();
+										final Iterator<MinionInstance> itr = spawnedMinions.iterator();
 										MinionInstance minion;
 										while (itr.hasNext())
 										{
@@ -8593,7 +8589,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				// Set the "over-hit enabled" flag on each of the possible targets
 				for (WorldObject target : targets)
 				{
-					Creature creature = (Creature) target;
+					final Creature creature = (Creature) target;
 					if (creature instanceof Attackable)
 					{
 						((Attackable) creature).overhitEnabled(true);
@@ -8622,12 +8618,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			if ((this instanceof PlayerInstance) || (this instanceof Summon))
 			{
-				PlayerInstance caster = this instanceof PlayerInstance ? (PlayerInstance) this : ((Summon) this).getOwner();
+				final PlayerInstance caster = this instanceof PlayerInstance ? (PlayerInstance) this : ((Summon) this).getOwner();
 				for (WorldObject target : targets)
 				{
 					if (target instanceof NpcInstance)
 					{
-						NpcInstance npc = (NpcInstance) target;
+						final NpcInstance npc = (NpcInstance) target;
 						
 						for (Quest quest : npc.getTemplate().getEventQuests(Quest.QuestEventType.ON_SKILL_USE))
 						{
@@ -8642,11 +8638,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					{
 						if (spMob instanceof NpcInstance)
 						{
-							NpcInstance npcMob = (NpcInstance) spMob;
+							final NpcInstance npcMob = (NpcInstance) spMob;
 							
 							if (npcMob.isInsideRadius(caster, 1000, true, true) && npcMob.hasAI() && (npcMob.getAI().getIntention() == AI_INTENTION_ATTACK))
 							{
-								WorldObject npcTarget = npcMob.getTarget();
+								final WorldObject npcTarget = npcMob.getTarget();
 								
 								for (WorldObject target : targets)
 								{
@@ -8704,7 +8700,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			((Creature) target).sendPacket(new ValidateLocation(this));
 			sendPacket(new ValidateLocation(((Creature) target)));
 			
-			Creature target1 = (Creature) target;
+			final Creature target1 = (Creature) target;
 			angleChar = Util.calculateAngleFrom(target1, this);
 			angleTarget = Util.convertHeadingToDegree(target1.getHeading());
 			angleDiff = angleChar - angleTarget;
@@ -8795,7 +8791,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			((Creature) target).sendPacket(new ValidateLocation(this));
 			sendPacket(new ValidateLocation(((Creature) target)));
 			
-			Creature target1 = (Creature) target;
+			final Creature target1 = (Creature) target;
 			angleChar = Util.calculateAngleFrom(target1, this);
 			angleTarget = Util.convertHeadingToDegree(target1.getHeading());
 			angleDiff = angleChar - angleTarget;
@@ -10160,11 +10156,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
 		// The player.getLevel() - getLevel() permit to display the correct color in the select window
-		MyTargetSelected my = new MyTargetSelected(trasformedNpc.getObjectId(), getLevel() - trasformedNpc.getLevel());
+		final MyTargetSelected my = new MyTargetSelected(trasformedNpc.getObjectId(), getLevel() - trasformedNpc.getLevel());
 		sendPacket(my);
 		
 		// Send a Server->Client packet StatusUpdate of the NpcInstance to the PlayerInstance to update its HP bar
-		StatusUpdate su = new StatusUpdate(trasformedNpc.getObjectId());
+		final StatusUpdate su = new StatusUpdate(trasformedNpc.getObjectId());
 		su.addAttribute(StatusUpdate.CUR_HP, (int) trasformedNpc.getCurrentHp());
 		su.addAttribute(StatusUpdate.MAX_HP, trasformedNpc.getMaxHp());
 		sendPacket(su);

@@ -49,8 +49,8 @@ public class SchemeBufferInstance extends Npc
 		// Simple hack to use createscheme bypass with a space.
 		command = command.replace("createscheme ", "createscheme;");
 		
-		StringTokenizer st = new StringTokenizer(command, ";");
-		String currentCommand = st.nextToken();
+		final StringTokenizer st = new StringTokenizer(command, ";");
+		final String currentCommand = st.nextToken();
 		
 		if (currentCommand.startsWith("menu"))
 		{
@@ -189,7 +189,7 @@ public class SchemeBufferInstance extends Npc
 					return;
 				}
 				
-				final Map<String, ArrayList<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
+				final Map<String, List<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
 				if (schemes != null)
 				{
 					if (schemes.size() == Config.BUFFER_MAX_SCHEMES)
@@ -218,7 +218,7 @@ public class SchemeBufferInstance extends Npc
 			try
 			{
 				final String schemeName = st.nextToken();
-				final Map<String, ArrayList<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
+				final Map<String, List<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
 				
 				if ((schemes != null) && schemes.containsKey(schemeName))
 				{
@@ -257,14 +257,14 @@ public class SchemeBufferInstance extends Npc
 	{
 		final StringBuilder sb = new StringBuilder(200);
 		
-		final Map<String, ArrayList<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
+		final Map<String, List<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
 		if ((schemes == null) || schemes.isEmpty())
 		{
 			sb.append("<font color=\"LEVEL\">You haven't defined any scheme.</font>");
 		}
 		else
 		{
-			for (Map.Entry<String, ArrayList<Integer>> scheme : schemes.entrySet())
+			for (Map.Entry<String, List<Integer>> scheme : schemes.entrySet())
 			{
 				final int cost = getFee(scheme.getValue());
 				sb.append("<font color=\"LEVEL\">" + scheme.getKey() + " [" + scheme.getValue().size() + " skill(s)]" + ((cost > 0) ? " - cost: " + NumberFormat.getInstance(Locale.ENGLISH).format(cost) : "") + "</font><br1>");
@@ -429,7 +429,7 @@ public class SchemeBufferInstance extends Npc
 	 * @param list : A list of skill ids.
 	 * @return a global fee for all skills contained in list.
 	 */
-	private static int getFee(ArrayList<Integer> list)
+	private static int getFee(List<Integer> list)
 	{
 		if (Config.BUFFER_STATIC_BUFF_COST > 0)
 		{

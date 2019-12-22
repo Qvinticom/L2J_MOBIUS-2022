@@ -140,7 +140,7 @@ public enum ClassId implements IIdentifiable
 	
 	FORTUNE_SEEKER(117, false, Race.DWARF, BOUNTY_HUNTER),
 	MAESTRO(118, false, Race.DWARF, WARSMITH),
-
+	
 	MALE_SOLDIER(123, false, Race.KAMAEL, null),
 	FEMALE_SOLDIER(124, false, Race.KAMAEL, null),
 	TROOPER(125, false, Race.KAMAEL, MALE_SOLDIER),

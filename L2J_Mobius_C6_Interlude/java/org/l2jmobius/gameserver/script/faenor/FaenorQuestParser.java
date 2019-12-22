@@ -36,7 +36,7 @@ public class FaenorQuestParser extends FaenorParser
 	@Override
 	public void parseScript(Node questNode, ScriptContext context)
 	{
-		String questID = attribute(questNode, "ID");
+		final String questID = attribute(questNode, "ID");
 		
 		for (Node node = questNode.getFirstChild(); node != null; node = node.getNextSibling())
 		{

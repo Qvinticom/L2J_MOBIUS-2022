@@ -120,7 +120,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 		{
 			int hours = 0;
 			int minutes = 0;
-			int id = entry.getKey();
+			final int id = entry.getKey();
 			final long remainingTime = (entry.getValue() - System.currentTimeMillis()) / 1000;
 			if (remainingTime > 0)
 			{

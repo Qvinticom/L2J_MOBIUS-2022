@@ -110,7 +110,7 @@ public class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 					}
 				}
 				
-				InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
+				final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 				if (world != null)
 				{
 					boolean teleported = false;

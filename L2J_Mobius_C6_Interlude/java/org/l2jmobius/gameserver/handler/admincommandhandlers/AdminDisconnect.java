@@ -52,7 +52,7 @@ public class AdminDisconnect implements IAdminCommandHandler
 	
 	private void disconnectCharacter(PlayerInstance activeChar)
 	{
-		WorldObject target = activeChar.getTarget();
+		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
 		
 		if (target instanceof PlayerInstance)
@@ -66,7 +66,7 @@ public class AdminDisconnect implements IAdminCommandHandler
 		
 		if (player.getObjectId() == activeChar.getObjectId())
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 			sm.addString("You cannot logout your character.");
 			activeChar.sendPacket(sm);
 		}
@@ -77,7 +77,7 @@ public class AdminDisconnect implements IAdminCommandHandler
 			activeChar.sendPacket(sm);
 			
 			// Logout Character
-			LeaveWorld ql = new LeaveWorld();
+			final LeaveWorld ql = new LeaveWorld();
 			player.sendPacket(ql);
 			
 			player.closeNetConnection();

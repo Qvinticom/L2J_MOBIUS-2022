@@ -121,11 +121,11 @@ public class BalanceLife implements ISkillHandler
 				target.setLastHealAmount((int) totalHeal);
 			}
 			
-			StatusUpdate su = new StatusUpdate(target.getObjectId());
+			final StatusUpdate su = new StatusUpdate(target.getObjectId());
 			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
 			target.sendPacket(su);
 			
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 			sm.addString("HP of the party has been balanced.");
 			target.sendPacket(sm);
 		}

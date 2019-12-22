@@ -120,7 +120,7 @@ public class HtmCache
 			BufferedInputStream bis = new BufferedInputStream(fis))
 		{
 			final int bytes = bis.available();
-			byte[] raw = new byte[bytes];
+			final byte[] raw = new byte[bytes];
 			
 			bis.read(raw);
 			content = new String(raw, StandardCharsets.UTF_8);

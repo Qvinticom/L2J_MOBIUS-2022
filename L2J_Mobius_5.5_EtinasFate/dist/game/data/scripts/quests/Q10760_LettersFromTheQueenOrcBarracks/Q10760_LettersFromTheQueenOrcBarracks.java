@@ -64,7 +64,7 @@ public class Q10760_LettersFromTheQueenOrcBarracks extends LetterQuest
 			return null;
 		}
 		
-		String htmltext = event;
+		final String htmltext = event;
 		switch (event)
 		{
 			case "30037-02.html":

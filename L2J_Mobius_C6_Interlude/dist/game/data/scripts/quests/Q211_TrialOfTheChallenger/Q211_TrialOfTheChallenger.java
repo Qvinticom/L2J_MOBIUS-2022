@@ -76,7 +76,7 @@ public class Q211_TrialOfTheChallenger extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -120,7 +120,7 @@ public class Q211_TrialOfTheChallenger extends Quest
 					htmltext = "30647-03.htm";
 					st.playSound(QuestState.SOUND_JACKPOT);
 					st.takeItems(BROKEN_KEY, 1);
-					int chance = Rnd.get(100);
+					final int chance = Rnd.get(100);
 					if (chance > 90)
 					{
 						st.rewardItems(BRIGANDINE_GAUNTLETS_PATTERN, 1);
@@ -159,7 +159,7 @@ public class Q211_TrialOfTheChallenger extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -183,7 +183,7 @@ public class Q211_TrialOfTheChallenger extends Quest
 				break;
 			
 			case State.STARTED:
-				int cond = st.getInt("cond");
+				final int cond = st.getInt("cond");
 				switch (npc.getNpcId())
 				{
 					case KASH:
@@ -302,7 +302,7 @@ public class Q211_TrialOfTheChallenger extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerState(player, npc, State.STARTED);
+		final QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)
 		{
 			return null;

@@ -55,7 +55,7 @@ public class GuardNoHTMLKnownList extends AttackableKnownList
 		if (object instanceof PlayerInstance)
 		{
 			// Check if the object added is a PlayerInstance that owns Karma
-			PlayerInstance player = (PlayerInstance) object;
+			final PlayerInstance player = (PlayerInstance) object;
 			
 			// Set the GuardInstance Intention to AI_INTENTION_ACTIVE
 			if ((player.getKarma() > 0) && (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
@@ -66,7 +66,7 @@ public class GuardNoHTMLKnownList extends AttackableKnownList
 		else if (Config.ALLOW_GUARDS && (object instanceof MonsterInstance))
 		{
 			// Check if the object added is an aggressive MonsterInstance
-			MonsterInstance mob = (MonsterInstance) object;
+			final MonsterInstance mob = (MonsterInstance) object;
 			
 			// Set the GuardInstance Intention to AI_INTENTION_ACTIVE
 			if (mob.isAggressive() && (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))

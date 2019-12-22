@@ -107,7 +107,7 @@ public class FestivalMonsterInstance extends MonsterInstance
 		}
 		
 		killingChar = (PlayerInstance) lastAttacker;
-		Party associatedParty = killingChar.getParty();
+		final Party associatedParty = killingChar.getParty();
 		
 		if (associatedParty == null)
 		{
@@ -115,9 +115,9 @@ public class FestivalMonsterInstance extends MonsterInstance
 		}
 		
 		final PlayerInstance partyLeader = associatedParty.getPartyMembers().get(0);
-		ItemInstance addedOfferings = partyLeader.getInventory().addItem("Sign", SevenSignsFestival.FESTIVAL_OFFERING_ID, _bonusMultiplier, partyLeader, this);
+		final ItemInstance addedOfferings = partyLeader.getInventory().addItem("Sign", SevenSignsFestival.FESTIVAL_OFFERING_ID, _bonusMultiplier, partyLeader, this);
 		
-		InventoryUpdate iu = new InventoryUpdate();
+		final InventoryUpdate iu = new InventoryUpdate();
 		
 		if (addedOfferings.getCount() != _bonusMultiplier)
 		{

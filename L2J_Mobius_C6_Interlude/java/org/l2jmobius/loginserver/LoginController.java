@@ -136,7 +136,7 @@ public class LoginController
 		KeyPairGenerator keygen = null;
 		
 		keygen = KeyPairGenerator.getInstance("RSA");
-		RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(1024, RSAKeyGenParameterSpec.F4);
+		final RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(1024, RSAKeyGenParameterSpec.F4);
 		keygen.initialize(spec);
 		
 		// generate the initial set of keys
@@ -164,7 +164,7 @@ public class LoginController
 	private void testCipher(RSAPrivateKey key) throws GeneralSecurityException
 	{
 		// avoid worst-case execution, KenM
-		Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
+		final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
 		rsaCipher.init(Cipher.DECRYPT_MODE, key);
 	}
 	
@@ -317,7 +317,7 @@ public class LoginController
 	 */
 	public void addBanForAddress(String address, long expiration) throws UnknownHostException
 	{
-		InetAddress netAddress = InetAddress.getByName(address);
+		final InetAddress netAddress = InetAddress.getByName(address);
 		_bannedIps.put(netAddress, new BanInfo(netAddress, expiration));
 	}
 	
@@ -392,7 +392,7 @@ public class LoginController
 	
 	public int getOnlinePlayerCount(int serverId)
 	{
-		GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(serverId);
+		final GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(serverId);
 		
 		if ((gsi != null) && gsi.isAuthed())
 		{
@@ -404,11 +404,11 @@ public class LoginController
 	
 	public boolean isAccountInAnyGameServer(String account)
 	{
-		Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
+		final Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
 		
 		for (GameServerInfo gsi : serverList)
 		{
-			GameServerThread gst = gsi.getGameServerThread();
+			final GameServerThread gst = gsi.getGameServerThread();
 			
 			if ((gst != null) && gst.hasAccountOnGameServer(account))
 			{
@@ -421,11 +421,11 @@ public class LoginController
 	
 	public GameServerInfo getAccountOnGameServer(String account)
 	{
-		Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
+		final Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
 		
 		for (GameServerInfo gsi : serverList)
 		{
-			GameServerThread gst = gsi.getGameServerThread();
+			final GameServerThread gst = gsi.getGameServerThread();
 			
 			if ((gst != null) && gst.hasAccountOnGameServer(account))
 			{
@@ -439,7 +439,7 @@ public class LoginController
 	public int getTotalOnlinePlayerCount()
 	{
 		int total = 0;
-		Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
+		final Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
 		
 		for (GameServerInfo gsi : serverList)
 		{
@@ -481,7 +481,7 @@ public class LoginController
 				try (Connection con = DatabaseFactory.getConnection())
 				{
 					final String stmt = "UPDATE accounts SET lastServer = ? WHERE login = ?";
-					PreparedStatement statement = con.prepareStatement(stmt);
+					final PreparedStatement statement = con.prepareStatement(stmt);
 					statement.setInt(1, serverId);
 					statement.setString(2, client.getAccount());
 					statement.executeUpdate();
@@ -502,7 +502,7 @@ public class LoginController
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final String stmt = "UPDATE accounts SET accessLevel=? WHERE login=?";
-			PreparedStatement statement = con.prepareStatement(stmt);
+			final PreparedStatement statement = con.prepareStatement(stmt);
 			statement.setInt(1, banLevel);
 			statement.setString(2, account);
 			statement.executeUpdate();
@@ -519,9 +519,9 @@ public class LoginController
 		boolean ok = false;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT accessLevel FROM accounts WHERE login=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT accessLevel FROM accounts WHERE login=?");
 			statement.setString(1, user);
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			
 			if (rset.next())
 			{
@@ -565,7 +565,7 @@ public class LoginController
 	public synchronized boolean loginValid(String user, String password, LoginClient client)
 	{
 		boolean ok = false;
-		InetAddress address = client.getConnection().getInetAddress();
+		final InetAddress address = client.getConnection().getInetAddress();
 		
 		// player disconnected meanwhile
 		if (address == null)
@@ -575,7 +575,7 @@ public class LoginController
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			MessageDigest md = MessageDigest.getInstance("SHA");
+			final MessageDigest md = MessageDigest.getInstance("SHA");
 			final byte[] raw = password.getBytes(StandardCharsets.UTF_8);
 			final byte[] hash = md.digest(raw);
 			
@@ -672,7 +672,7 @@ public class LoginController
 		
 		if (!ok)
 		{
-			FailedLoginAttempt failedAttempt = _hackProtection.get(address);
+			final FailedLoginAttempt failedAttempt = _hackProtection.get(address);
 			
 			int failedCount;
 			if (failedAttempt == null)
@@ -706,9 +706,9 @@ public class LoginController
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT accessLevel FROM accounts WHERE login=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT accessLevel FROM accounts WHERE login=?");
 			statement.setString(1, user);
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			
 			if (rset.next())
 			{
@@ -824,7 +824,7 @@ public class LoginController
 				{
 					for (Entry<String, LoginClient> e : _loginServerClients.entrySet())
 					{
-						LoginClient client = e.getValue();
+						final LoginClient client = e.getValue();
 						if ((client.getConnectionStartTime() + LOGIN_TIMEOUT) >= System.currentTimeMillis())
 						{
 							client.close(LoginFailReason.REASON_ACCESS_FAILED);

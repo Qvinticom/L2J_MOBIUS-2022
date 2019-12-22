@@ -45,7 +45,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(22);
+				final String val = command.substring(22);
 				if (!addGamePoints(activeChar, val))
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Usage: //add_game_points count");
@@ -60,7 +60,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 		{
 			if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 			{
-				PlayerInstance target = (PlayerInstance) activeChar.getTarget();
+				final PlayerInstance target = (PlayerInstance) activeChar.getTarget();
 				activeChar.sendMessage(target.getName() + " has a total of " + target.getGamePoints() + " game points.");
 			}
 			else
@@ -76,7 +76,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(22);
+				final String val = command.substring(22);
 				if (!setGamePoints(activeChar, val))
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Usage: //set_game_points count");
@@ -91,7 +91,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(27);
+				final String val = command.substring(27);
 				if (!subtractGamePoints(activeChar, val))
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Usage: //subtract_game_points count");
@@ -114,7 +114,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 	
 	private boolean addGamePoints(PlayerInstance admin, String val)
 	{
-		WorldObject target = admin.getTarget();
+		final WorldObject target = admin.getTarget();
 		PlayerInstance player = null;
 		if (target.isPlayer())
 		{
@@ -150,7 +150,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 	
 	private boolean setGamePoints(PlayerInstance admin, String val)
 	{
-		WorldObject target = admin.getTarget();
+		final WorldObject target = admin.getTarget();
 		PlayerInstance player = null;
 		if (target.isPlayer())
 		{
@@ -176,7 +176,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 	
 	private boolean subtractGamePoints(PlayerInstance admin, String val)
 	{
-		WorldObject target = admin.getTarget();
+		final WorldObject target = admin.getTarget();
 		PlayerInstance player = null;
 		if (target.isPlayer())
 		{

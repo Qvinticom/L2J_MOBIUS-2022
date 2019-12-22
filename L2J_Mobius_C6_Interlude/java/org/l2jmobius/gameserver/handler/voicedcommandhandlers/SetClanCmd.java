@@ -36,11 +36,11 @@ public class SetClanCmd implements IVoicedCommandHandler
 		if (command.startsWith("set privileges"))
 		{
 			final int n = Integer.parseInt(command.substring(15));
-			PlayerInstance pc = (PlayerInstance) activeChar.getTarget();
+			final PlayerInstance pc = (PlayerInstance) activeChar.getTarget();
 			if ((pc != null) && (((activeChar.getClan().getClanId() == pc.getClan().getClanId()) && (activeChar.getClanPrivileges() > n)) || activeChar.isClanLeader()))
 			{
 				pc.setClanPrivileges(n);
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				sm.addString("Your clan privileges have been set to " + n + " by " + activeChar.getName());
 				activeChar.sendPacket(sm);
 			}

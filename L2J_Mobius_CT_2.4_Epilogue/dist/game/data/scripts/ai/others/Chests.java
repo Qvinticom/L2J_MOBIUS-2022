@@ -79,7 +79,7 @@ public class Chests extends AbstractNpcAI
 			{
 				return super.onSkillSee(npc, caster, skill, targets, isSummon);
 			}
-			ChestInstance chest = ((ChestInstance) npc);
+			final ChestInstance chest = ((ChestInstance) npc);
 			
 			// if this has already been interacted, no further ai decisions are needed
 			// if it's the first interaction, check if this is a box or mimic
@@ -96,7 +96,7 @@ public class Chests extends AbstractNpcAI
 					{
 						keyLevelNeeded *= -1;
 					}
-					int chance = BASE_CHANCE - (keyLevelNeeded * LEVEL_DECREASE);
+					final int chance = BASE_CHANCE - (keyLevelNeeded * LEVEL_DECREASE);
 					
 					// success, pretend-death with rewards: chest.reduceCurrentHp(99999999, player)
 					if (getRandom(100) < chance)
@@ -111,7 +111,7 @@ public class Chests extends AbstractNpcAI
 				}
 				else
 				{
-					Creature originalCaster = isSummon ? caster.getSummon() : caster;
+					final Creature originalCaster = isSummon ? caster.getSummon() : caster;
 					chest.setRunning();
 					chest.addDamageHate(originalCaster, 0, 999);
 					chest.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalCaster);
@@ -126,7 +126,7 @@ public class Chests extends AbstractNpcAI
 	{
 		if (npc instanceof ChestInstance)
 		{
-			ChestInstance chest = ((ChestInstance) npc);
+			final ChestInstance chest = ((ChestInstance) npc);
 			// if this was a mimic, set the target, start the skills and become agro
 			if (!chest.isInteracted())
 			{
@@ -139,7 +139,7 @@ public class Chests extends AbstractNpcAI
 				{
 					// if this weren't a box, upon interaction start the mimic behaviors...
 					// TODO: perhaps a self-buff (skill id 4245) with random chance goes here?
-					Creature originalAttacker = isSummon ? attacker.getSummon() : attacker;
+					final Creature originalAttacker = isSummon ? attacker.getSummon() : attacker;
 					chest.setRunning();
 					chest.addDamageHate(originalAttacker, 0, (damage * 100) / (chest.getLevel() + 7));
 					chest.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalAttacker);

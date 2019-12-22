@@ -25,12 +25,12 @@ import org.l2jmobius.gameserver.model.actor.status.PlayableStatus;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 
 /**
- * This class represents all Playable characters in the world.<BR>
- * <BR>
- * PlayableInstance :<BR>
- * <BR>
+ * This class represents all Playable characters in the world.<br>
+ * Playable:
+ * <ul>
  * <li>PlayerInstance</li>
- * <li>Summon</li><BR>
+ * <li>Summon</li>
+ * </ul>
  */
 public abstract class Playable extends Creature
 {

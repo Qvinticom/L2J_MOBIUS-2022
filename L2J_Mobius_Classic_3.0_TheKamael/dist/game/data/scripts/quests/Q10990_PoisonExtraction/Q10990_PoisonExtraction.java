@@ -46,7 +46,7 @@ public class Q10990_PoisonExtraction extends Quest
 	private static final ItemHolder SOE_TO_CAPTAIN_BATHIS = new ItemHolder(91651, 1);
 	private static final ItemHolder SOE_NOVICE = new ItemHolder(10650, 20);
 	private static final ItemHolder SPIRIT_ORE = new ItemHolder(3031, 50);
-	private static final ItemHolder HP_POTS = new ItemHolder(91912, 50);// TODO: Finish Item
+	private static final ItemHolder HP_POTS = new ItemHolder(91912, 50); // TODO: Finish Item
 	private static final ItemHolder RICE_CAKE_OF_FLAMING_FIGHTING_SPIRIT_EVENT = new ItemHolder(91840, 1);
 	// HELMET FOR ALL ARMORS
 	private static final ItemHolder MOON_HELMET = new ItemHolder(7850, 1);
@@ -148,8 +148,8 @@ public class Q10990_PoisonExtraction extends Quest
 					player.sendPacket(new ExShowScreenMessage("Completed the tutorial.#Now try the first class transfer and as instructed by Bathis carry out the Adventurers Journey misions to grow your character.", 5000));
 					qs.exitQuest(false, true);
 					htmltext = event;
-					break;
 				}
+				break;
 			}
 			case "LightArmor.html":
 			{
@@ -167,8 +167,8 @@ public class Q10990_PoisonExtraction extends Quest
 					player.sendPacket(new ExShowScreenMessage("Completed the tutorial.#Now try the first class transfer and as instructed by Bathis carry out the Adventurers Journey misions to grow your character.", 5000));
 					qs.exitQuest(false, true);
 					htmltext = event;
-					break;
 				}
+				break;
 			}
 			case "Robe.html":
 			{
@@ -186,8 +186,8 @@ public class Q10990_PoisonExtraction extends Quest
 					player.sendPacket(new ExShowScreenMessage("Completed the tutorial.#Now try the first class transfer and as instructed by Bathis carry out the Adventurers Journey misions to grow your character.", 5000));
 					qs.exitQuest(false, true);
 					htmltext = event;
-					break;
 				}
+				break;
 			}
 		}
 		return htmltext;

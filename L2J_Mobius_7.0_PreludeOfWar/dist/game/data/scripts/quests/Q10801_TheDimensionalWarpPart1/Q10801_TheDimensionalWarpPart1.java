@@ -131,7 +131,7 @@ public class Q10801_TheDimensionalWarpPart1 extends Quest
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		Party party = killer.getParty();
+		final Party party = killer.getParty();
 		if (party != null)
 		{
 			party.getMembers().forEach(p -> onKill(npc, p));

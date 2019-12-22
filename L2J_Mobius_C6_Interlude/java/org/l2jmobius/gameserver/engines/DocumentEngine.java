@@ -108,10 +108,10 @@ public class DocumentEngine
 	 */
 	public List<Item> loadItems()
 	{
-		List<Item> list = new ArrayList<>();
+		final List<Item> list = new ArrayList<>();
 		for (File f : _itemFiles)
 		{
-			DocumentItem document = new DocumentItem(f);
+			final DocumentItem document = new DocumentItem(f);
 			document.parse();
 			list.addAll(document.getItemList());
 		}

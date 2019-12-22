@@ -149,7 +149,7 @@ public class KetraOrcSupport extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -444,7 +444,7 @@ public class KetraOrcSupport extends Quest
 			// Drop by 1 the level of that alliance (symbolized by a quest item).
 			for (int i = 7215; i >= 7211; i--)
 			{
-				ItemInstance item = inventory.getItemByItemId(i);
+				final ItemInstance item = inventory.getItemByItemId(i);
 				if (item != null)
 				{
 					// Destroy the badge.
@@ -462,7 +462,7 @@ public class KetraOrcSupport extends Quest
 			
 			for (String mission : ketraMissions)
 			{
-				QuestState pst = player.getQuestState(mission);
+				final QuestState pst = player.getQuestState(mission);
 				if (pst != null)
 				{
 					pst.exitQuest(true);

@@ -146,13 +146,13 @@ public class RequestSellItem implements IClientIncomingPacket
 		// Proceed the sell
 		for (UniqueItemHolder i : _items)
 		{
-			ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "sell");
+			final ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "sell");
 			if ((item == null) || (!item.isSellable()))
 			{
 				continue;
 			}
 			
-			long price = item.getReferencePrice() / 2;
+			final long price = item.getReferencePrice() / 2;
 			totalPrice += price * i.getCount();
 			if (((MAX_ADENA / i.getCount()) < price) || (totalPrice > MAX_ADENA))
 			{

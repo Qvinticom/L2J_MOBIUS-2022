@@ -79,8 +79,8 @@ public class GameServerTable
 	{
 		try
 		{
-			KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
-			RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(512, RSAKeyGenParameterSpec.F4);
+			final KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
+			final RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(512, RSAKeyGenParameterSpec.F4);
 			keyGen.initialize(spec);
 			
 			_keyPairs = new KeyPair[KEYS_SIZE];
@@ -99,19 +99,19 @@ public class GameServerTable
 	{
 		try
 		{
-			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-			DocumentBuilder db = dbf.newDocumentBuilder();
-			Document doc = db.parse(new File(Config.SERVER_NAME_FILE));
+			final DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			final DocumentBuilder db = dbf.newDocumentBuilder();
+			final Document doc = db.parse(new File(Config.SERVER_NAME_FILE));
 			
-			Node n = doc.getFirstChild();
+			final Node n = doc.getFirstChild();
 			for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 			{
 				if (d.getNodeName().equalsIgnoreCase("server"))
 				{
-					NamedNodeMap attrs = d.getAttributes();
+					final NamedNodeMap attrs = d.getAttributes();
 					
-					int id = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
-					String name = attrs.getNamedItem("name").getNodeValue();
+					final int id = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
+					final String name = attrs.getNamedItem("name").getNodeValue();
 					
 					_serverNames.put(id, name);
 				}
@@ -131,7 +131,7 @@ public class GameServerTable
 		{
 			int id;
 			statement = con.prepareStatement("SELECT * FROM gameservers");
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			GameServerInfo gsi;
 			
 			while (rset.next())

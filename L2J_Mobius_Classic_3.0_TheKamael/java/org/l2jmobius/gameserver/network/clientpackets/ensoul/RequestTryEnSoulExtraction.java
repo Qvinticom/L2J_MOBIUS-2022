@@ -51,7 +51,7 @@ public class RequestTryEnSoulExtraction implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		PlayerInstance player = client.getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

@@ -179,34 +179,28 @@ public class Q10999_LoserPriest3 extends Quest
 			{
 				case RED_EYE_BARBED_BAT:
 				{
-					if (qs.isCond(2) && (getQuestItemsCount(killer, BAT_BRISTLE) < 20))
+					if (qs.isCond(2) && (getQuestItemsCount(killer, BAT_BRISTLE) < 20) && (getRandom(100) < 90))
 					{
-						if (getRandom(100) < 90)
+						giveItems(killer, BAT_BRISTLE, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, BAT_BRISTLE) >= 20)
 						{
-							giveItems(killer, BAT_BRISTLE, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, BAT_BRISTLE) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_RED_EYE_BARBED_BATS_NGO_HUNTING_AND_KILL_NORTHERN_TRIMDENS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(3);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_RED_EYE_BARBED_BATS_NGO_HUNTING_AND_KILL_NORTHERN_TRIMDENS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(3);
 						}
 					}
 					break;
 				}
 				case NORTHERN_TRIMDEN:
 				{
-					if (qs.isCond(3) && (getQuestItemsCount(killer, TRIMDEN_WEB) < 20))
+					if (qs.isCond(3) && (getQuestItemsCount(killer, TRIMDEN_WEB) < 20) && (getRandom(100) < 90))
 					{
-						if (getRandom(100) < 90)
+						giveItems(killer, TRIMDEN_WEB, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, TRIMDEN_WEB) >= 20)
 						{
-							giveItems(killer, TRIMDEN_WEB, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, TRIMDEN_WEB) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_NORTHERN_TRIMDENS_N_GO_HUNTING_AND_KILL_KEROPE_WEREWOLVES, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(4);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_NORTHERN_TRIMDENS_N_GO_HUNTING_AND_KILL_KEROPE_WEREWOLVES, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(4);
 						}
 					}
 					break;
@@ -214,17 +208,14 @@ public class Q10999_LoserPriest3 extends Quest
 				case KEROPE_WEREWOLF_CHIEFTAIN:
 				case KEROPE_WEREWOLF:
 				{
-					if (qs.isCond(4) && (getQuestItemsCount(killer, KEROPE_WEREWOLF_TWIG_CHARM) < 20))
+					if (qs.isCond(4) && (getQuestItemsCount(killer, KEROPE_WEREWOLF_TWIG_CHARM) < 20) && (getRandom(100) < 90))
 					{
-						if (getRandom(100) < 90)
+						giveItems(killer, KEROPE_WEREWOLF_TWIG_CHARM, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, KEROPE_WEREWOLF_TWIG_CHARM) >= 20)
 						{
-							giveItems(killer, KEROPE_WEREWOLF_TWIG_CHARM, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, KEROPE_WEREWOLF_TWIG_CHARM) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_KEROPE_WEREWOLVES_NRETURN_TO_PRIEST_OF_THE_EARTH_GERALD, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(5);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_KEROPE_WEREWOLVES_NRETURN_TO_PRIEST_OF_THE_EARTH_GERALD, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(5);
 						}
 					}
 					break;

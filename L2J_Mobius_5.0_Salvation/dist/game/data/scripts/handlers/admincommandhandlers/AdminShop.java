@@ -69,7 +69,7 @@ public class AdminShop implements IAdminCommandHandler
 		{
 			try
 			{
-				int listId = Integer.parseInt(command.substring(16).trim());
+				final int listId = Integer.parseInt(command.substring(16).trim());
 				MultisellData.getInstance().separateAndSend(listId, activeChar, null, false);
 			}
 			catch (NumberFormatException | IndexOutOfBoundsException e)
@@ -81,7 +81,7 @@ public class AdminShop implements IAdminCommandHandler
 		{
 			try
 			{
-				int listId = Integer.parseInt(command.substring(20).trim());
+				final int listId = Integer.parseInt(command.substring(20).trim());
 				MultisellData.getInstance().separateAndSend(listId, activeChar, null, true);
 			}
 			catch (NumberFormatException | IndexOutOfBoundsException e)

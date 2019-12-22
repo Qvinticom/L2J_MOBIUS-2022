@@ -48,7 +48,7 @@ public class Variation
 	
 	public Options getRandomEffect(VariationWeaponType type, int order)
 	{
-		OptionDataGroup[] effects = _effects.get(type);
+		final OptionDataGroup[] effects = _effects.get(type);
 		if ((effects == null) || (effects[order] == null))
 		{
 			LOGGER.warning("Null effect: " + type + ", " + order);

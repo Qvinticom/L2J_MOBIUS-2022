@@ -52,8 +52,8 @@ public class Q510_AClansReputation extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final String htmltext = event;
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -77,7 +77,7 @@ public class Q510_AClansReputation extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -106,12 +106,12 @@ public class Q510_AClansReputation extends Quest
 			case State.STARTED:
 				if (st.getInt("cond") == 1)
 				{
-					int count = st.getQuestItemsCount(CLAW);
+					final int count = st.getQuestItemsCount(CLAW);
 					if (count > 0)
 					{
-						int reward = (CLAN_POINTS_REWARD * count);
+						final int reward = (CLAN_POINTS_REWARD * count);
 						st.takeItems(CLAW, -1);
-						Clan clan = player.getClan();
+						final Clan clan = player.getClan();
 						clan.setReputationScore(clan.getReputationScore() + reward, true);
 						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_QUEST_COMPLETED_AND_S1_POINTS_GAINED).addNumber(reward));
 						clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
@@ -133,7 +133,7 @@ public class Q510_AClansReputation extends Quest
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		// Retrieve the qs of the clan leader.
-		QuestState st = getClanLeaderQuestState(player, npc);
+		final QuestState st = getClanLeaderQuestState(player, npc);
 		if ((st == null) || !st.isStarted())
 		{
 			return null;

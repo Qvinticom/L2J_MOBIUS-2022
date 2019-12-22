@@ -166,7 +166,7 @@ public class Q00348_AnArrogantSearch extends Quest
 			}
 			case "30864-08.html":
 			{
-				int memoState = qs.getMemoState();
+				final int memoState = qs.getMemoState();
 				if (((memoState == 1) && hasAtLeastOneQuestItem(player, TITANS_POWERSTONE, SHELL_OF_MONSTERS)) || (memoState == 2))
 				{
 					qs.setMemoStateEx(0, 4);
@@ -565,7 +565,7 @@ public class Q00348_AnArrogantSearch extends Quest
 				{
 					if ((qs.getMemoStateEx(0) == 17) && hasQuestItems(qs.getPlayer(), WHITE_FABRIC_1))
 					{
-						int i0 = qs.getMemoStateEx(1) + getRandom(100) + 100;
+						final int i0 = qs.getMemoStateEx(1) + getRandom(100) + 100;
 						qs.setMemoStateEx(1, i0);
 						if ((qs.getMemoStateEx(1) + i0) > 750)
 						{
@@ -630,7 +630,7 @@ public class Q00348_AnArrogantSearch extends Quest
 						case 1:
 						case 2:
 						{
-							int memoState = qs.getMemoState();
+							final int memoState = qs.getMemoState();
 							if ((memoState == 1) && !hasQuestItems(player, TITANS_POWERSTONE) && !hasQuestItems(player, SHELL_OF_MONSTERS))
 							{
 								htmltext = "30864-06.html";
@@ -1239,7 +1239,7 @@ public class Q00348_AnArrogantSearch extends Quest
 				{
 					if (hasQuestItems(player, HANELLINS_2ND_LETTER))
 					{
-						int i0 = qs.getMemoStateEx(1) + 100;
+						final int i0 = qs.getMemoStateEx(1) + 100;
 						if ((i0 % 10) == 0)
 						{
 							addRadar(player, 181472, 7158, -2725);
@@ -1282,7 +1282,7 @@ public class Q00348_AnArrogantSearch extends Quest
 				{
 					if (hasQuestItems(player, HANELLINS_1ST_LETTER))
 					{
-						int i0 = qs.getMemoStateEx(1) + 10;
+						final int i0 = qs.getMemoStateEx(1) + 10;
 						if ((i0 % 10) == 0)
 						{
 							addRadar(player, 2908, 44128, -2712);
@@ -1325,7 +1325,7 @@ public class Q00348_AnArrogantSearch extends Quest
 				{
 					if (hasQuestItems(player, HANELLINS_3RD_LETTER))
 					{
-						int i0 = qs.getMemoStateEx(1) + 1000;
+						final int i0 = qs.getMemoStateEx(1) + 1000;
 						if ((i0 % 10) == 0)
 						{
 							addRadar(player, 50693, 158674, 376);

@@ -54,7 +54,7 @@ public class DimensionalMerchant extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		String htmltext = null;
+		final String htmltext = null;
 		switch (event)
 		{
 			case "package_deposit":

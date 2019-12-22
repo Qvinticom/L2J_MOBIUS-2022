@@ -44,7 +44,7 @@ public class SiegeFlagInstance extends NpcInstance
 		}
 		else
 		{
-			SiegeClan sc = _siege.getAttackerClan(_player.getClan());
+			final SiegeClan sc = _siege.getAttackerClan(_player.getClan());
 			if (sc == null)
 			{
 				deleteMe();
@@ -77,7 +77,7 @@ public class SiegeFlagInstance extends NpcInstance
 		{
 			return false;
 		}
-		SiegeClan sc = _siege.getAttackerClan(_player.getClan());
+		final SiegeClan sc = _siege.getAttackerClan(_player.getClan());
 		if (sc != null)
 		{
 			sc.removeFlag(this);
@@ -107,11 +107,11 @@ public class SiegeFlagInstance extends NpcInstance
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 			player.sendPacket(my);
 			
 			// Send a Server->Client packet StatusUpdate of the NpcInstance to the PlayerInstance to update its HP bar
-			StatusUpdate su = new StatusUpdate(getObjectId());
+			final StatusUpdate su = new StatusUpdate(getObjectId());
 			su.addAttribute(StatusUpdate.CUR_HP, (int) getStatus().getCurrentHp());
 			su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
 			player.sendPacket(su);

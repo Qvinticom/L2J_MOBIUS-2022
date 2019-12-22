@@ -190,7 +190,7 @@ public class Q10339_FightingTheForgotten extends Quest
 	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if(qs != null)
+		if (qs != null)
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(1);
 			npcLogList.add(new NpcLogListHolder(NpcStringId.ELIMINATING_THE_ANCIENT_GHOSTS, qs.getMemoState()));

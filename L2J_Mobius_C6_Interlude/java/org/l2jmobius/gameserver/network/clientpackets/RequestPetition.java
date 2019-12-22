@@ -81,7 +81,7 @@ public class RequestPetition extends GameClientPacket
 		
 		if (totalPetitions > Config.MAX_PETITIONS_PER_PLAYER)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.WE_HAVE_RECEIVED_S1_PETITIONS_TODAY);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.WE_HAVE_RECEIVED_S1_PETITIONS_TODAY);
 			sm.addNumber(totalPetitions);
 			player.sendPacket(sm);
 			return;

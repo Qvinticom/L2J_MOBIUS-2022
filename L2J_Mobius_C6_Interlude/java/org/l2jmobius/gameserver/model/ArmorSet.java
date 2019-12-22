@@ -60,10 +60,10 @@ public class ArmorSet
 	{
 		final Inventory inv = player.getInventory();
 		
-		ItemInstance legsItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
-		ItemInstance headItem = inv.getPaperdollItem(Inventory.PAPERDOLL_HEAD);
-		ItemInstance glovesItem = inv.getPaperdollItem(Inventory.PAPERDOLL_GLOVES);
-		ItemInstance feetItem = inv.getPaperdollItem(Inventory.PAPERDOLL_FEET);
+		final ItemInstance legsItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
+		final ItemInstance headItem = inv.getPaperdollItem(Inventory.PAPERDOLL_HEAD);
+		final ItemInstance glovesItem = inv.getPaperdollItem(Inventory.PAPERDOLL_GLOVES);
+		final ItemInstance feetItem = inv.getPaperdollItem(Inventory.PAPERDOLL_FEET);
 		
 		int legs = 0;
 		int head = 0;
@@ -154,9 +154,9 @@ public class ArmorSet
 	
 	public boolean containShield(PlayerInstance player)
 	{
-		Inventory inv = player.getInventory();
+		final Inventory inv = player.getInventory();
 		
-		ItemInstance shieldItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+		final ItemInstance shieldItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		
 		if ((shieldItem != null) && (shieldItem.getItemId() == _shield))
 		{
@@ -201,11 +201,11 @@ public class ArmorSet
 		
 		final Inventory inv = player.getInventory();
 		
-		ItemInstance chestItem = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
-		ItemInstance legsItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
-		ItemInstance headItem = inv.getPaperdollItem(Inventory.PAPERDOLL_HEAD);
-		ItemInstance glovesItem = inv.getPaperdollItem(Inventory.PAPERDOLL_GLOVES);
-		ItemInstance feetItem = inv.getPaperdollItem(Inventory.PAPERDOLL_FEET);
+		final ItemInstance chestItem = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
+		final ItemInstance legsItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
+		final ItemInstance headItem = inv.getPaperdollItem(Inventory.PAPERDOLL_HEAD);
+		final ItemInstance glovesItem = inv.getPaperdollItem(Inventory.PAPERDOLL_GLOVES);
+		final ItemInstance feetItem = inv.getPaperdollItem(Inventory.PAPERDOLL_FEET);
 		
 		if (chestItem.getEnchantLevel() < 6)
 		{

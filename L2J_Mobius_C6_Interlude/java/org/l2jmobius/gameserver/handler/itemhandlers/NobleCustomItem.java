@@ -40,7 +40,7 @@ public class NobleCustomItem implements IItemHandler
 				return;
 			}
 			
-			PlayerInstance player = (PlayerInstance) playable;
+			final PlayerInstance player = (PlayerInstance) playable;
 			
 			if (player.isInOlympiadMode())
 			{

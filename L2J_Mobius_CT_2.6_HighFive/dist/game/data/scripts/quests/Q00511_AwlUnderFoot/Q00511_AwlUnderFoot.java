@@ -414,7 +414,7 @@ public class Q00511_AwlUnderFoot extends Quest
 		{
 			return ret;
 		}
-		else if(qs != null)
+		else if (qs != null)
 		{
 			final int npcId = npc.getId();
 			int cond = 0;

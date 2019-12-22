@@ -151,8 +151,8 @@ public class Q11025_PathOfDestinyProving extends Quest
 					addSpawn(MYSTERIOUS_MAGE, npc, true, 300000);
 					showOnScreenMsg(player, NpcStringId.TALK_TO_THE_MYSTERIOUS_WIZARD_2, ExShowScreenMessage.TOP_CENTER, 10000);
 					npc.deleteMe();
-					break;
 				}
+				break;
 			}
 			case "falver":
 			{

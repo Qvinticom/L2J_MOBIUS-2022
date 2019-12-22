@@ -48,7 +48,7 @@ public class ScrollOfResurrection implements IItemHandler
 			return;
 		}
 		
-		PlayerInstance player = (PlayerInstance) playable;
+		final PlayerInstance player = (PlayerInstance) playable;
 		
 		if (player.isSitting())
 		{
@@ -71,7 +71,7 @@ public class ScrollOfResurrection implements IItemHandler
 		final boolean petScroll = (itemId == 6387) || (itemId == 737);
 		
 		// SoR Animation section
-		Creature target = (Creature) player.getTarget();
+		final Creature target = (Creature) player.getTarget();
 		
 		if ((target != null) && target.isDead())
 		{

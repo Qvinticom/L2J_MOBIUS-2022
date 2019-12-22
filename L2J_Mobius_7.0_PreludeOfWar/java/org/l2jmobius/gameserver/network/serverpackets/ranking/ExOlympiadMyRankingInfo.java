@@ -55,8 +55,8 @@ public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_OLYMPIAD_MY_RANKING_INFO.writeId(packet);
 		
-		Date date = new Date();
-		Calendar calendar = new GregorianCalendar();
+		final Date date = new Date();
+		final Calendar calendar = new GregorianCalendar();
 		calendar.setTime(date);
 		int year = calendar.get(Calendar.YEAR);
 		// Add one to month {0 - 11}

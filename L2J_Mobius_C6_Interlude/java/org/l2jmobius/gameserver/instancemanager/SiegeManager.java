@@ -95,9 +95,9 @@ public class SiegeManager
 			return false;
 		}
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-		PlayerInstance player = (PlayerInstance) creature;
-		Castle castle = CastleManager.getInstance().getCastle(player);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+		final PlayerInstance player = (PlayerInstance) creature;
+		final Castle castle = CastleManager.getInstance().getCastle(player);
 		
 		if ((castle == null) || (castle.getCastleId() <= 0))
 		{
@@ -160,10 +160,10 @@ public class SiegeManager
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT clan_id FROM siege_clans where clan_id=? and castle_id=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT clan_id FROM siege_clans where clan_id=? and castle_id=?");
 			statement.setInt(1, clan.getClanId());
 			statement.setInt(2, castleid);
-			ResultSet rs = statement.executeQuery();
+			final ResultSet rs = statement.executeQuery();
 			
 			while (rs.next())
 			{
@@ -194,7 +194,7 @@ public class SiegeManager
 		try
 		{
 			is = new FileInputStream(new File(Config.SIEGE_CONFIG_FILE));
-			Properties siegeSettings = new Properties();
+			final Properties siegeSettings = new Properties();
 			siegeSettings.load(is);
 			
 			// Siege setting
@@ -217,17 +217,17 @@ public class SiegeManager
 			
 			for (Castle castle : CastleManager.getInstance().getCastles())
 			{
-				List<SiegeSpawn> controlTowersSpawns = new ArrayList<>();
+				final List<SiegeSpawn> controlTowersSpawns = new ArrayList<>();
 				
 				for (int i = 1; i < 0xFF; i++)
 				{
-					String spawnParams = siegeSettings.getProperty(castle.getName() + "ControlTower" + i, "");
+					final String spawnParams = siegeSettings.getProperty(castle.getName() + "ControlTower" + i, "");
 					if (spawnParams.isEmpty())
 					{
 						break;
 					}
 					
-					StringTokenizer st = new StringTokenizer(spawnParams.trim(), ",");
+					final StringTokenizer st = new StringTokenizer(spawnParams.trim(), ",");
 					
 					try
 					{
@@ -245,17 +245,17 @@ public class SiegeManager
 					}
 				}
 				
-				List<SiegeSpawn> artefactSpawns = new ArrayList<>();
+				final List<SiegeSpawn> artefactSpawns = new ArrayList<>();
 				
 				for (int i = 1; i < 0xFF; i++)
 				{
-					String spawnParams = siegeSettings.getProperty(castle.getName() + "Artefact" + i, "");
+					final String spawnParams = siegeSettings.getProperty(castle.getName() + "Artefact" + i, "");
 					if (spawnParams.isEmpty())
 					{
 						break;
 					}
 					
-					StringTokenizer st = new StringTokenizer(spawnParams.trim(), ",");
+					final StringTokenizer st = new StringTokenizer(spawnParams.trim(), ",");
 					
 					try
 					{

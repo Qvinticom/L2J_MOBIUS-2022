@@ -54,7 +54,7 @@ public class ClanBBSManager extends BaseBBSManager
 		}
 		else if (command.startsWith("_bbsclan"))
 		{
-			StringTokenizer st = new StringTokenizer(command, ";");
+			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			
 			final String clanCommand = st.nextToken();

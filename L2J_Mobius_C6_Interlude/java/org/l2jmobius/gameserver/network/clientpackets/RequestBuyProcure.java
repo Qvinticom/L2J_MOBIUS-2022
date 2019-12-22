@@ -197,7 +197,7 @@ public class RequestBuyProcure extends GameClientPacket
 			}
 			
 			// Send Char Buy Messages
-			SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
 			sm.addItemName(rewradItemId);
 			sm.addNumber(rewradItemCount);
 			player.sendPacket(sm);

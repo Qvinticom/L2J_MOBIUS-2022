@@ -90,7 +90,7 @@ public class Attackable extends Npc
 	private boolean _isRaidMinion = false;
 	//
 	private boolean _champion = false;
-	private volatile Map<Creature, AggroInfo> _aggroList = new ConcurrentHashMap<>();
+	private final Map<Creature, AggroInfo> _aggroList = new ConcurrentHashMap<>();
 	private boolean _isReturningToSpawnPoint = false;
 	private boolean _canReturnToSpawnPoint = true;
 	private boolean _seeThroughSilentMove = false;
@@ -108,7 +108,7 @@ public class Attackable extends Npc
 	private double _overhitDamage;
 	private Creature _overhitAttacker;
 	// Command channel
-	private volatile CommandChannel _firstCommandChannelAttacked = null;
+	private CommandChannel _firstCommandChannelAttacked = null;
 	private CommandChannelTimer _commandChannelTimer = null;
 	private long _commandChannelLastAttack = 0;
 	// Misc
@@ -241,15 +241,12 @@ public class Attackable extends Npc
 			addDamage(attacker, (int) value, skill);
 			
 			// Check Raidboss attack. Character will be petrified if attacking a raid that's more than 8 levels lower. In retail you deal damage to raid before curse.
-			if (_isRaid && giveRaidCurse() && !Config.RAID_DISABLE_CURSE)
+			if (_isRaid && giveRaidCurse() && !Config.RAID_DISABLE_CURSE && (attacker.getLevel() > (getLevel() + 8)))
 			{
-				if (attacker.getLevel() > (getLevel() + 8))
+				final Skill raidCurse = CommonSkill.RAID_CURSE2.getSkill();
+				if (raidCurse != null)
 				{
-					final Skill raidCurse = CommonSkill.RAID_CURSE2.getSkill();
-					if (raidCurse != null)
-					{
-						raidCurse.applyEffects(this, attacker);
-					}
+					raidCurse.applyEffects(this, attacker);
 				}
 			}
 		}
@@ -1458,19 +1455,16 @@ public class Attackable extends Npc
 		// Reset champion state
 		_champion = false;
 		
-		if (Config.CHAMPION_ENABLE)
+		// Set champion on next spawn
+		if (Config.CHAMPION_ENABLE && isMonster() && !isQuestMonster() && !getTemplate().isUndying() && !_isRaid && !_isRaidMinion && (Config.CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.CHAMP_MIN_LVL) && (getLevel() <= Config.CHAMP_MAX_LVL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
 		{
-			// Set champion on next spawn
-			if (isMonster() && !isQuestMonster() && !getTemplate().isUndying() && !_isRaid && !_isRaidMinion && (Config.CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.CHAMP_MIN_LVL) && (getLevel() <= Config.CHAMP_MAX_LVL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
+			if (Rnd.get(100) < Config.CHAMPION_FREQUENCY)
 			{
-				if (Rnd.get(100) < Config.CHAMPION_FREQUENCY)
-				{
-					_champion = true;
-				}
-				if (Config.SHOW_CHAMPION_AURA)
-				{
-					setTeam(_champion ? Team.RED : Team.NONE, false);
-				}
+				_champion = true;
+			}
+			if (Config.SHOW_CHAMPION_AURA)
+			{
+				setTeam(_champion ? Team.RED : Team.NONE, false);
 			}
 		}
 		
@@ -1770,12 +1764,9 @@ public class Attackable extends Npc
 		{
 			final WorldObject target = getTarget();
 			final Map<Creature, AggroInfo> aggroList = _aggroList;
-			if (target != null)
+			if ((target != null) && (aggroList != null))
 			{
-				if (aggroList != null)
-				{
-					aggroList.remove(target);
-				}
+				aggroList.remove(target);
 			}
 			if ((aggroList != null) && aggroList.isEmpty())
 			{

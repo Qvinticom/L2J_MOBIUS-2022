@@ -168,7 +168,7 @@ public class FestivalGuideInstance extends FolkInstance
 		}
 		else if (command.startsWith("Festival"))
 		{
-			Party playerParty = player.getParty();
+			final Party playerParty = player.getParty();
 			final int val = Integer.parseInt(command.substring(9, 10));
 			
 			switch (val)
@@ -275,7 +275,7 @@ public class FestivalGuideInstance extends FolkInstance
 						showChatWindow(player, 3, "b", false);
 						return;
 					}
-					List<PlayerInstance> prevParticipants = SevenSignsFestival.getInstance().getPreviousParticipants(_festivalOracle, _festivalType);
+					final List<PlayerInstance> prevParticipants = SevenSignsFestival.getInstance().getPreviousParticipants(_festivalOracle, _festivalType);
 					// Check if there are any past participants.
 					if (prevParticipants == null)
 					{
@@ -293,7 +293,7 @@ public class FestivalGuideInstance extends FolkInstance
 						showChatWindow(player, 3, "b", false);
 						return;
 					}
-					ItemInstance bloodOfferings = player.getInventory().getItemByItemId(SevenSignsFestival.FESTIVAL_OFFERING_ID);
+					final ItemInstance bloodOfferings = player.getInventory().getItemByItemId(SevenSignsFestival.FESTIVAL_OFFERING_ID);
 					int offeringCount = 0;
 					// Check if the player collected any blood offerings during the festival.
 					if (bloodOfferings == null)
@@ -306,7 +306,7 @@ public class FestivalGuideInstance extends FolkInstance
 					final boolean isHighestScore = SevenSignsFestival.getInstance().setFinalScore(player, _festivalOracle, _festivalType, offeringScore);
 					player.destroyItem("SevenSigns", bloodOfferings, this, false);
 					// Send message that the contribution score has increased.
-					SystemMessage sm = new SystemMessage(SystemMessageId.CONTRIB_SCORE_INCREASED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.CONTRIB_SCORE_INCREASED);
 					sm.addNumber(offeringScore);
 					player.sendPacket(sm);
 					if (isHighestScore)
@@ -321,7 +321,7 @@ public class FestivalGuideInstance extends FolkInstance
 				}
 				case 4: // Current High Scores
 				{
-					StringBuilder strBuffer = new StringBuilder("<html><body>Festival Guide:<br>These are the top scores of the week, for the ");
+					final StringBuilder strBuffer = new StringBuilder("<html><body>Festival Guide:<br>These are the top scores of the week, for the ");
 					final StatsSet dawnData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DAWN, _festivalType);
 					final StatsSet duskData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DUSK, _festivalType);
 					final StatsSet overallData = SevenSignsFestival.getInstance().getOverallHighestScoreData(_festivalType);
@@ -364,7 +364,7 @@ public class FestivalGuideInstance extends FolkInstance
 						strBuffer.append("Consecutive top scores: No record exists. Score 0<br>");
 					}
 					strBuffer.append("<a action=\"bypass -h npc_" + getObjectId() + "_Chat 0\">Go back.</a></body></html>");
-					NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+					final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 					html.setHtml(strBuffer.toString());
 					player.sendPacket(html);
 					break;
@@ -457,7 +457,7 @@ public class FestivalGuideInstance extends FolkInstance
 		filename += suffix != null ? val + suffix + ".htm" : val + ".htm";
 		
 		// Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%festivalType%", SevenSignsFestival.getFestivalName(_festivalType));

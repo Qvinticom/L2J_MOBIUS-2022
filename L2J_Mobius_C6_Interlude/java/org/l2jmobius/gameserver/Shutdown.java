@@ -174,7 +174,7 @@ public class Shutdown extends Thread
 	 */
 	public void startShutdown(PlayerInstance player, int seconds, boolean restart)
 	{
-		Announcements announcements = Announcements.getInstance();
+		final Announcements announcements = Announcements.getInstance();
 		
 		LOGGER.warning((player != null ? "GM: " + player.getName() + "(" + player.getObjectId() + ")" : "Server") + " issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
 		
@@ -214,7 +214,7 @@ public class Shutdown extends Thread
 	 */
 	public void abort(PlayerInstance player)
 	{
-		Announcements announcements = Announcements.getInstance();
+		final Announcements announcements = Announcements.getInstance();
 		
 		LOGGER.warning((player != null ? "GM: " + player.getName() + "(" + player.getObjectId() + ")" : "Server") + " issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
 		
@@ -257,7 +257,7 @@ public class Shutdown extends Thread
 				// announce only every minute after 10 minutes left and every second after 20 seconds
 				if (((seconds <= 20) || (seconds == (minutes * 10))) && (seconds <= 600) && (hours <= 1))
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.THE_SERVER_WILL_BE_COMING_DOWN_IN_S1_SECONDS);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_SERVER_WILL_BE_COMING_DOWN_IN_S1_SECONDS);
 					sm.addString(Integer.toString(seconds));
 					Announcements.getInstance().announceToAll(sm);
 				}
@@ -370,7 +370,7 @@ public class Shutdown extends Thread
 	 */
 	private synchronized void saveData()
 	{
-		Announcements _an = Announcements.getInstance();
+		final Announcements _an = Announcements.getInstance();
 		switch (_shutdownMode)
 		{
 			case SIGTERM:

@@ -258,7 +258,7 @@ public class AutoSpawn
 			
 			if (isActive)
 			{
-				AutoSpawner rs = new AutoSpawner(objectId);
+				final AutoSpawner rs = new AutoSpawner(objectId);
 				
 				if (spawnInst._desDelay > 0)
 				{
@@ -276,7 +276,7 @@ public class AutoSpawn
 			}
 			else
 			{
-				AutoDespawner rd = new AutoDespawner(objectId);
+				final AutoDespawner rd = new AutoDespawner(objectId);
 				
 				synchronized (_runningSpawns)
 				{
@@ -459,7 +459,7 @@ public class AutoSpawn
 					return;
 				}
 				
-				Location[] locationList = spawnInst.getLocationList();
+				final Location[] locationList = spawnInst.getLocationList();
 				
 				// If there are no set co-ordinates, cancel the spawn task.
 				if (locationList.length == 0)
@@ -492,7 +492,7 @@ public class AutoSpawn
 				final int heading = locationList[locationIndex].getHeading();
 				
 				// Fetch the template for this NPC ID and create a new spawn.
-				NpcTemplate npcTemp = NpcTable.getInstance().getTemplate(spawnInst.getNpcId());
+				final NpcTemplate npcTemp = NpcTable.getInstance().getTemplate(spawnInst.getNpcId());
 				
 				if (npcTemp == null)
 				{
@@ -500,7 +500,7 @@ public class AutoSpawn
 					return;
 				}
 				
-				Spawn newSpawn = new Spawn(npcTemp);
+				final Spawn newSpawn = new Spawn(npcTemp);
 				
 				newSpawn.setX(x);
 				newSpawn.setY(y);
@@ -542,7 +542,7 @@ public class AutoSpawn
 					}
 				}
 				
-				String nearestTown = MapRegionTable.getInstance().getClosestTownName(npcInst);
+				final String nearestTown = MapRegionTable.getInstance().getClosestTownName(npcInst);
 				
 				// Announce to all players that the spawn has taken place, with the nearest town location.
 				if (spawnInst.isBroadcasting() && (npcInst != null))
@@ -553,7 +553,7 @@ public class AutoSpawn
 				// If there is no despawn time, do not create a despawn task.
 				if (spawnInst.getDespawnDelay() > 0)
 				{
-					AutoDespawner rd = new AutoDespawner(_objectId);
+					final AutoDespawner rd = new AutoDespawner(_objectId);
 					ThreadPool.schedule(rd, spawnInst.getDespawnDelay() - 1000);
 				}
 			}

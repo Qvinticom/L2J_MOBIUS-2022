@@ -196,17 +196,14 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 				case ORC_CAPTAIN:
 				case ORC_LIEUTENANT:
 				{
-					if (qs.isCond(2) && (getQuestItemsCount(killer, WOODEN_POLE) < 20))
+					if (qs.isCond(2) && (getQuestItemsCount(killer, WOODEN_POLE) < 20) && (getRandom(100) < 84))
 					{
-						if (getRandom(100) < 84)
+						giveItems(killer, WOODEN_POLE, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, WOODEN_POLE) >= 20)
 						{
-							giveItems(killer, WOODEN_POLE, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, WOODEN_POLE) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_ORC_LIEUTENANTS_AND_ORC_CAPTAINS_N_GO_HUNTING_AND_KILL_WEREWOLF_HUNTERS_AND_WEREWOLF_CHIEFTAINS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(3);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_ORC_LIEUTENANTS_AND_ORC_CAPTAINS_N_GO_HUNTING_AND_KILL_WEREWOLF_HUNTERS_AND_WEREWOLF_CHIEFTAINS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(3);
 						}
 					}
 					break;
@@ -214,17 +211,14 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 				case WEREWOLF_HUMTER:
 				case WEREWOLF_CHIEFTAIN:
 				{
-					if (qs.isCond(3) && (getQuestItemsCount(killer, WOODEN_DOOR_PANEL) < 25))
+					if (qs.isCond(3) && (getQuestItemsCount(killer, WOODEN_DOOR_PANEL) < 25) && (getRandom(100) < 87))
 					{
-						if (getRandom(100) < 87)
+						giveItems(killer, WOODEN_DOOR_PANEL, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if (getQuestItemsCount(killer, WOODEN_DOOR_PANEL) >= 25)
 						{
-							giveItems(killer, WOODEN_DOOR_PANEL, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, WOODEN_DOOR_PANEL) >= 25)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_WEREWOLF_HUNTERS_AND_WEREWOLF_CHIEFTAINS_N_GO_HUNTING_AND_KILL_STONE_GOLEMS_AND_CRASHERS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(4);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_WEREWOLF_HUNTERS_AND_WEREWOLF_CHIEFTAINS_N_GO_HUNTING_AND_KILL_STONE_GOLEMS_AND_CRASHERS, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(4);
 						}
 					}
 					break;
@@ -232,17 +226,14 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 				case CRASHER:
 				case STONE_GOLEM:
 				{
-					if (qs.isCond(4) && (getQuestItemsCount(killer, STONE_POWDER) < 20))
+					if (qs.isCond(4) && (getQuestItemsCount(killer, STONE_POWDER) < 20) && (getRandom(100) < 84))
 					{
-						if (getRandom(100) < 84)
+						giveItems(killer, STONE_POWDER, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						if ((getQuestItemsCount(killer, STONE_POWDER) >= 20) && (getQuestItemsCount(killer, STONE_POWDER) >= 10))
 						{
-							giveItems(killer, STONE_POWDER, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if ((getQuestItemsCount(killer, STONE_POWDER) >= 20) && (getQuestItemsCount(killer, STONE_POWDER) >= 10))
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_ALL_OF_THE_ITEMS_HARRYS_REQUESTED_RETURN_TO_HIM, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(5);
-							}
+							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_ALL_OF_THE_ITEMS_HARRYS_REQUESTED_RETURN_TO_HIM, ExShowScreenMessage.TOP_CENTER, 10000);
+							qs.setCond(5);
 						}
 					}
 					break;

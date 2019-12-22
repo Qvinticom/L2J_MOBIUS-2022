@@ -52,8 +52,8 @@ public class Q004_LongliveThePaagrioLord extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final String htmltext = event;
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -73,7 +73,7 @@ public class Q004_LongliveThePaagrioLord extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -97,8 +97,8 @@ public class Q004_LongliveThePaagrioLord extends Quest
 				break;
 			
 			case State.STARTED:
-				int cond = st.getInt("cond");
-				int npcId = npc.getNpcId();
+				final int cond = st.getInt("cond");
+				final int npcId = npc.getNpcId();
 				
 				if (npcId == 30578)
 				{
@@ -121,7 +121,7 @@ public class Q004_LongliveThePaagrioLord extends Quest
 				}
 				else
 				{
-					int i = NPC_GIFTS.get(npcId);
+					final int i = NPC_GIFTS.get(npcId);
 					if (st.hasQuestItems(i))
 					{
 						htmltext = npcId + "-02.htm";

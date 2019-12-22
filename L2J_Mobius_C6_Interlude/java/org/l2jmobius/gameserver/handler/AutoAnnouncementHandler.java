@@ -82,9 +82,9 @@ public class AutoAnnouncementHandler
 	 */
 	public void listAutoAnnouncements(PlayerInstance player)
 	{
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		
-		StringBuilder replyMSG = new StringBuilder("<html><body>");
+		final StringBuilder replyMSG = new StringBuilder("<html><body>");
 		replyMSG.append("<table width=260><tr>");
 		replyMSG.append("<td width=40></td>");
 		replyMSG.append("<button value=\"Main\" action=\"bypass -h admin_admin\" width=50 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><br>");
@@ -157,7 +157,7 @@ public class AutoAnnouncementHandler
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("INSERT INTO auto_announcements (id,announcement,delay) VALUES (?,?,?)");
+			final PreparedStatement statement = con.prepareStatement("INSERT INTO auto_announcements (id,announcement,delay) VALUES (?,?,?)");
 			statement.setInt(1, nextId);
 			statement.setString(2, announcementTexts);
 			statement.setLong(3, announcementDelay);
@@ -254,7 +254,7 @@ public class AutoAnnouncementHandler
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("DELETE FROM auto_announcements WHERE id=?");
+			final PreparedStatement statement = con.prepareStatement("DELETE FROM auto_announcements WHERE id=?");
 			statement.setInt(1, announcementInst.getDefaultId());
 			statement.executeUpdate();
 			statement.close();
@@ -413,7 +413,7 @@ public class AutoAnnouncementHandler
 			
 			if (_isActive)
 			{
-				AutoAnnouncementRunner acr = new AutoAnnouncementRunner(_defaultId);
+				final AutoAnnouncementRunner acr = new AutoAnnouncementRunner(_defaultId);
 				_chatTask = ThreadPool.scheduleAtFixedRate(acr, _defaultDelay, _defaultDelay);
 			}
 			else
@@ -440,7 +440,7 @@ public class AutoAnnouncementHandler
 			@Override
 			public synchronized void run()
 			{
-				AutoAnnouncementInstance announcementInst = _registeredAnnouncements.get(id);
+				final AutoAnnouncementInstance announcementInst = _registeredAnnouncements.get(id);
 				
 				String text;
 				

@@ -257,21 +257,21 @@ public class OracleTeleport extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		
-		int npcId = npc.getNpcId();
+		final int npcId = npc.getNpcId();
 		if (event.equalsIgnoreCase("Return"))
 		{
 			if (Util.contains(TEMPLE_PRIEST, npcId) && (st.getState() == State.STARTED))
 			{
-				Location loc = RETURN_LOCS[st.getInt("id")];
+				final Location loc = RETURN_LOCS[st.getInt("id")];
 				player.teleToLocation(loc.getX(), loc.getY(), loc.getZ());
 				player.setIsIn7sDungeon(false);
 				st.exitQuest(true);
 			}
 			else if (Util.contains(RIFT_POSTERS, npcId) && (st.getState() == State.STARTED))
 			{
-				Location loc = RETURN_LOCS[st.getInt("id")];
+				final Location loc = RETURN_LOCS[st.getInt("id")];
 				player.teleToLocation(loc.getX(), loc.getY(), loc.getZ());
 				htmltext = "rift_back.htm";
 				st.exitQuest(true);
@@ -279,7 +279,7 @@ public class OracleTeleport extends Quest
 		}
 		else if (event.equalsIgnoreCase("Festival"))
 		{
-			int id = st.getInt("id");
+			final int id = st.getInt("id");
 			if (Util.contains(TOWN_DAWN, id))
 			{
 				player.teleToLocation(-80157, 111344, -4901);
@@ -302,7 +302,7 @@ public class OracleTeleport extends Quest
 		}
 		else if (event.equalsIgnoreCase("5.htm"))
 		{
-			int id = st.getInt("id");
+			final int id = st.getInt("id");
 			if (id > -1)
 			{
 				htmltext = "5a.htm";
@@ -329,7 +329,7 @@ public class OracleTeleport extends Quest
 		}
 		else if (event.equalsIgnoreCase("zigurratDimensional"))
 		{
-			int playerLevel = player.getLevel();
+			final int playerLevel = player.getLevel();
 			if ((playerLevel >= 20) && (playerLevel < 30))
 			{
 				st.takeItems(57, 2000);
@@ -379,9 +379,9 @@ public class OracleTeleport extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		
-		int npcId = npc.getNpcId();
+		final int npcId = npc.getNpcId();
 		
 		if (Util.contains(TOWN_DAWN, npcId))
 		{
@@ -446,7 +446,7 @@ public class OracleTeleport extends Quest
 		}
 		else if (((npcId >= 31095) && (npcId <= 31111)) || ((npcId >= 31114) && (npcId <= 31126)))
 		{
-			int playerLevel = player.getLevel();
+			final int playerLevel = player.getLevel();
 			if (playerLevel < 20)
 			{
 				htmltext = "ziggurat_lowlevel.htm";

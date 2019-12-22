@@ -24,8 +24,8 @@ import java.util.Set;
 import java.util.logging.Logger;
 
 /**
- * @author ProGramMoS
- * @version 0.4 Stable
+ * Thread to check for deadlocked threads.
+ * @author -Nemesiss- L2M
  */
 public class DeadlockDetector implements Runnable
 {

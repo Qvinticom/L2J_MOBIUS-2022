@@ -52,7 +52,7 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public boolean addExp(long value)
 	{
-		PlayerInstance player = getActiveChar();
+		final PlayerInstance player = getActiveChar();
 		
 		// Player is Gm and access level is below or equal to canGainExp and is in party, don't give XP
 		if (!getActiveChar().getAccessLevel().canGainExp() && getActiveChar().isInParty())
@@ -101,7 +101,7 @@ public class PlayerStat extends PlayableStat
 		float ratioTakenByPet = 0;
 		
 		// Player is Gm and acces level is below or equal to GM_DONT_TAKE_EXPSP and is in party, don't give Xp/Sp
-		PlayerInstance player = getActiveChar();
+		final PlayerInstance player = getActiveChar();
 		if (!player.getAccessLevel().canGainExp() && player.isInParty())
 		{
 			return false;
@@ -111,7 +111,7 @@ public class PlayerStat extends PlayableStat
 		
 		if (player.getPet() instanceof PetInstance)
 		{
-			PetInstance pet = (PetInstance) player.getPet();
+			final PetInstance pet = (PetInstance) player.getPet();
 			ratioTakenByPet = pet.getPetData().getOwnerExpTaken();
 			
 			// only give exp/sp to the pet by taking from the owner if the pet has a non-zero, positive ratio
@@ -137,7 +137,7 @@ public class PlayerStat extends PlayableStat
 		}
 		
 		// Send a Server->Client System Message to the PlayerInstance
-		SystemMessage sm = new SystemMessage(SystemMessageId.YOU_EARNED_S1_EXP_AND_S2_SP);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_EARNED_S1_EXP_AND_S2_SP);
 		sm.addNumber((int) addToExp);
 		sm.addNumber(addToSp);
 		getActiveChar().sendPacket(sm);
@@ -210,7 +210,7 @@ public class PlayerStat extends PlayableStat
 				getActiveChar().setNewbie(false);
 			}
 			
-			QuestState qs = getActiveChar().getQuestState("Tutorial");
+			final QuestState qs = getActiveChar().getQuestState("Tutorial");
 			
 			if ((qs != null) && (qs.getQuest() != null))
 			{
@@ -244,7 +244,7 @@ public class PlayerStat extends PlayableStat
 			getActiveChar().getParty().recalculatePartyLevel(); // Recalculate the party level
 		}
 		
-		StatusUpdate su = new StatusUpdate(getActiveChar().getObjectId());
+		final StatusUpdate su = new StatusUpdate(getActiveChar().getObjectId());
 		su.addAttribute(StatusUpdate.LEVEL, getLevel());
 		su.addAttribute(StatusUpdate.MAX_CP, getMaxCp());
 		su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
@@ -269,7 +269,7 @@ public class PlayerStat extends PlayableStat
 			return false;
 		}
 		
-		StatusUpdate su = new StatusUpdate(getActiveChar().getObjectId());
+		final StatusUpdate su = new StatusUpdate(getActiveChar().getObjectId());
 		su.addAttribute(StatusUpdate.SP, getSp());
 		getActiveChar().sendPacket(su);
 		return true;
@@ -293,7 +293,7 @@ public class PlayerStat extends PlayableStat
 		final PlayerInstance player = getActiveChar();
 		if ((player != null) && player.isSubClassActive())
 		{
-			SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
+			final SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
 			if (playerSubclass != null)
 			{
 				return playerSubclass.getExp();
@@ -308,7 +308,7 @@ public class PlayerStat extends PlayableStat
 		final PlayerInstance player = getActiveChar();
 		if (player.isSubClassActive())
 		{
-			SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
+			final SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
 			if (playerSubclass != null)
 			{
 				playerSubclass.setExp(value);
@@ -328,7 +328,7 @@ public class PlayerStat extends PlayableStat
 			final PlayerInstance player = getActiveChar();
 			if (player.isSubClassActive())
 			{
-				SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
+				final SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
 				if (playerSubclass != null)
 				{
 					return playerSubclass.getLevel();
@@ -353,7 +353,7 @@ public class PlayerStat extends PlayableStat
 		final PlayerInstance player = getActiveChar();
 		if (player.isSubClassActive())
 		{
-			SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
+			final SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
 			if (playerSubclass != null)
 			{
 				playerSubclass.setLevel(value);
@@ -434,7 +434,7 @@ public class PlayerStat extends PlayableStat
 		final PlayerInstance player = getActiveChar();
 		if (player.isSubClassActive())
 		{
-			SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
+			final SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
 			if (playerSubclass != null)
 			{
 				return playerSubclass.getSp();
@@ -450,7 +450,7 @@ public class PlayerStat extends PlayableStat
 		final PlayerInstance player = getActiveChar();
 		if (player.isSubClassActive())
 		{
-			SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
+			final SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
 			if (playerSubclass != null)
 			{
 				playerSubclass.setSp(value);

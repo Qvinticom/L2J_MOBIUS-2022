@@ -49,7 +49,7 @@ public class RequestUserCommand extends GameClientPacket
 		
 		if (handler == null)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 			sm.addString("user commandID " + _command + " not implemented yet");
 			player.sendPacket(sm);
 		}

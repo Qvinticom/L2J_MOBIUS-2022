@@ -403,7 +403,7 @@ public class DBSpawnManager
 		{
 			for (Entry<Integer, StatsSet> entry : _storedInfo.entrySet())
 			{
-				Integer npcId = entry.getKey();
+				final Integer npcId = entry.getKey();
 				if (npcId == null)
 				{
 					continue;

@@ -337,7 +337,7 @@ public class TradeList
 			return null;
 		}
 		
-		WorldObject o = World.getInstance().findObject(objectId);
+		final WorldObject o = World.getInstance().findObject(objectId);
 		
 		if (!(o instanceof ItemInstance))
 		{
@@ -353,7 +353,7 @@ public class TradeList
 			return null;
 		}
 		
-		ItemInstance item = (ItemInstance) o;
+		final ItemInstance item = (ItemInstance) o;
 		
 		if (!item.isTradeable() || (item.getItemType() == EtcItemType.QUEST))
 		{
@@ -418,7 +418,7 @@ public class TradeList
 			return null;
 		}
 		
-		Item item = ItemTable.getInstance().getTemplate(itemId);
+		final Item item = ItemTable.getInstance().getTemplate(itemId);
 		if (item == null)
 		{
 			Util.handleIllegalPlayerAction(_owner, "Player " + _owner.getName() + " Attempt to add invalid item to TradeList! Banned ", Config.DEFAULT_PUNISH);
@@ -470,7 +470,7 @@ public class TradeList
 				// If Partner has already confirmed this trade, invalidate the confirmation
 				if (_partner != null)
 				{
-					TradeList partnerList = _partner.getActiveTradeList();
+					final TradeList partnerList = _partner.getActiveTradeList();
 					if (partnerList == null)
 					{
 						LOGGER.warning(_partner.getName() + ": Trading partner (" + _partner.getName() + ") is invalid in this trade!");
@@ -503,7 +503,7 @@ public class TradeList
 	{
 		for (TradeItem titem : _items)
 		{
-			ItemInstance item = _owner.getInventory().getItemByObjectId(titem.getObjectId());
+			final ItemInstance item = _owner.getInventory().getItemByObjectId(titem.getObjectId());
 			
 			if ((item == null) || (titem.getCount() < 1))
 			{
@@ -547,7 +547,7 @@ public class TradeList
 		// If Partner has already confirmed this trade, proceed exchange
 		if (_partner != null)
 		{
-			TradeList partnerList = _partner.getActiveTradeList();
+			final TradeList partnerList = _partner.getActiveTradeList();
 			if (partnerList == null)
 			{
 				LOGGER.warning(_partner.getName() + ": Trading partner (" + _partner.getName() + ") is invalid in this trade!");
@@ -635,7 +635,7 @@ public class TradeList
 		// Check for Item validity
 		for (TradeItem titem : _items)
 		{
-			ItemInstance item = _owner.checkItemManipulation(titem.getObjectId(), titem.getCount(), "transfer");
+			final ItemInstance item = _owner.checkItemManipulation(titem.getObjectId(), titem.getCount(), "transfer");
 			
 			if ((item == null) || (titem.getCount() < 1))
 			{
@@ -657,13 +657,13 @@ public class TradeList
 	{
 		for (TradeItem titem : _items)
 		{
-			ItemInstance oldItem = _owner.getInventory().getItemByObjectId(titem.getObjectId());
+			final ItemInstance oldItem = _owner.getInventory().getItemByObjectId(titem.getObjectId());
 			if (oldItem == null)
 			{
 				return false;
 			}
 			
-			ItemInstance newItem = _owner.getInventory().transferItem("Trade", titem.getObjectId(), titem.getCount(), partner.getInventory(), _owner, _partner);
+			final ItemInstance newItem = _owner.getInventory().transferItem("Trade", titem.getObjectId(), titem.getCount(), partner.getInventory(), _owner, _partner);
 			if (newItem == null)
 			{
 				return false;
@@ -713,7 +713,7 @@ public class TradeList
 				continue;
 			}
 			
-			Item template = ItemTable.getInstance().getTemplate(item.getItem().getItemId());
+			final Item template = ItemTable.getInstance().getTemplate(item.getItem().getItemId());
 			if (template == null)
 			{
 				continue;
@@ -747,7 +747,7 @@ public class TradeList
 				continue;
 			}
 			
-			Item template = ItemTable.getInstance().getTemplate(item.getItem().getItemId());
+			final Item template = ItemTable.getInstance().getTemplate(item.getItem().getItemId());
 			if (template == null)
 			{
 				continue;
@@ -780,8 +780,8 @@ public class TradeList
 		else
 		{
 			// Prepare inventory update packet
-			InventoryUpdate ownerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-			InventoryUpdate partnerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+			final InventoryUpdate ownerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+			final InventoryUpdate partnerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 			
 			// Transfer items
 			partnerList.TransferItems(_owner, partnerIU, ownerIU);
@@ -857,7 +857,7 @@ public class TradeList
 				continue;
 			}
 			
-			Item template = ItemTable.getInstance().getTemplate(item.getItemId());
+			final Item template = ItemTable.getInstance().getTemplate(item.getItemId());
 			if (template == null)
 			{
 				continue;
@@ -880,7 +880,7 @@ public class TradeList
 			// store is not selling that item...
 			if (!found)
 			{
-				String msg = "Requested Item is not available to buy... You are perfoming illegal operation, it has been segnalated";
+				final String msg = "Requested Item is not available to buy... You are perfoming illegal operation, it has been segnalated";
 				LOGGER.warning("ATTENTION: Player " + player.getName() + " has performed buy illegal operation..");
 				player.sendMessage(msg);
 				return false;
@@ -909,12 +909,12 @@ public class TradeList
 			return false;
 		}
 		
-		PlayerInventory ownerInventory = _owner.getInventory();
-		PlayerInventory playerInventory = player.getInventory();
+		final PlayerInventory ownerInventory = _owner.getInventory();
+		final PlayerInventory playerInventory = player.getInventory();
 		
 		// Prepare inventory update packets
-		InventoryUpdate ownerIU = new InventoryUpdate();
-		InventoryUpdate playerIU = new InventoryUpdate();
+		final InventoryUpdate ownerIU = new InventoryUpdate();
+		final InventoryUpdate playerIU = new InventoryUpdate();
 		
 		if (Config.SELL_BY_ITEM)
 		{
@@ -974,7 +974,7 @@ public class TradeList
 			}
 			
 			// Send messages about the transaction to both players
-			SystemMessage msg = SystemMessage.sendString("You obtained " + price + " " + item.getItemName());
+			final SystemMessage msg = SystemMessage.sendString("You obtained " + price + " " + item.getItemName());
 			_owner.sendPacket(msg);
 			
 			final SystemMessage msg2 = SystemMessage.sendString("You spent " + price + " " + item.getItemName());
@@ -1007,7 +1007,7 @@ public class TradeList
 			}
 			
 			// Check if requested item is available for manipulation
-			ItemInstance oldItem = _owner.checkItemManipulation(item.getObjectId(), item.getCount(), "sell");
+			final ItemInstance oldItem = _owner.checkItemManipulation(item.getObjectId(), item.getCount(), "sell");
 			if (oldItem == null)
 			{
 				lock();
@@ -1015,7 +1015,7 @@ public class TradeList
 			}
 			
 			// Proceed with item transfer
-			ItemInstance newItem = ownerInventory.transferItem("PrivateStore", item.getObjectId(), item.getCount(), playerInventory, _owner, player);
+			final ItemInstance newItem = ownerInventory.transferItem("PrivateStore", item.getObjectId(), item.getCount(), playerInventory, _owner, player);
 			if (newItem == null)
 			{
 				return false;
@@ -1102,19 +1102,19 @@ public class TradeList
 			return false;
 		}
 		
-		PlayerInventory ownerInventory = _owner.getInventory();
-		PlayerInventory playerInventory = player.getInventory();
+		final PlayerInventory ownerInventory = _owner.getInventory();
+		final PlayerInventory playerInventory = player.getInventory();
 		
 		// Prepare inventory update packet
-		InventoryUpdate ownerIU = new InventoryUpdate();
-		InventoryUpdate playerIU = new InventoryUpdate();
+		final InventoryUpdate ownerIU = new InventoryUpdate();
+		final InventoryUpdate playerIU = new InventoryUpdate();
 		
 		// we must check item are available before begining transaction, TODO: should we remove that check when transfering items as it's done here? (there might be synchro problems if player clicks fast if we remove it)
 		// also check if augmented items are traded. If so, cancel it...
 		for (ItemRequest item : items)
 		{
 			// Check if requested item is available for manipulation
-			ItemInstance oldItem = player.checkItemManipulation(item.getObjectId(), item.getCount(), "sell");
+			final ItemInstance oldItem = player.checkItemManipulation(item.getObjectId(), item.getCount(), "sell");
 			if (oldItem == null)
 			{
 				return false;
@@ -1160,7 +1160,7 @@ public class TradeList
 			// store is not buying that item...
 			if (!found)
 			{
-				String msg = "Requested Item is not available to sell... You are perfoming illegal operation, it has been segnalated";
+				final String msg = "Requested Item is not available to sell... You are perfoming illegal operation, it has been segnalated";
 				LOGGER.warning("ATTENTION: Player " + player.getName() + " has performed sell illegal operation..");
 				player.sendMessage(msg);
 				return false;
@@ -1168,7 +1168,7 @@ public class TradeList
 			
 			if (oldItem.getAugmentation() != null)
 			{
-				String msg = "Transaction failed. Augmented items may not be exchanged.";
+				final String msg = "Transaction failed. Augmented items may not be exchanged.";
 				_owner.sendMessage(msg);
 				player.sendMessage(msg);
 				return false;
@@ -1186,7 +1186,7 @@ public class TradeList
 			}
 			
 			// Check if requested item is available for manipulation
-			ItemInstance oldItem = player.checkItemManipulation(item.getObjectId(), item.getCount(), "sell");
+			final ItemInstance oldItem = player.checkItemManipulation(item.getObjectId(), item.getCount(), "sell");
 			if (oldItem == null)
 			{
 				return false;
@@ -1200,7 +1200,7 @@ public class TradeList
 			}
 			
 			// Proceed with item transfer
-			ItemInstance newItem = playerInventory.transferItem("PrivateStore", item.getObjectId(), item.getCount(), ownerInventory, player, _owner);
+			final ItemInstance newItem = playerInventory.transferItem("PrivateStore", item.getObjectId(), item.getCount(), ownerInventory, player, _owner);
 			if (newItem == null)
 			{
 				return false;
@@ -1308,7 +1308,7 @@ public class TradeList
 			}
 			
 			// Send messages about the transaction to both players
-			SystemMessage msg = SystemMessage.sendString("You obtained " + price + " " + item.getItemName());
+			final SystemMessage msg = SystemMessage.sendString("You obtained " + price + " " + item.getItemName());
 			player.sendPacket(msg);
 			
 			final SystemMessage msg2 = SystemMessage.sendString("You spent " + price + " " + item.getItemName());

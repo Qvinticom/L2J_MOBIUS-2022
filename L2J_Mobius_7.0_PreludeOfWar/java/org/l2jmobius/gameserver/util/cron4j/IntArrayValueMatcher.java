@@ -39,7 +39,7 @@ class IntArrayValueMatcher implements ValueMatcher
 	 */
 	public IntArrayValueMatcher(List<?> integers)
 	{
-		int size = integers.size();
+		final int size = integers.size();
 		values = new int[size];
 		for (int i = 0; i < size; i++)
 		{

@@ -53,7 +53,7 @@ public class CabaleBufferInstance extends NpcInstance
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
 			// The color to display in the select window is White
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
 			
 			// Send a Server->Client packet ValidateLocation to correct the ArtefactInstance position and heading on the client
@@ -162,7 +162,7 @@ public class CabaleBufferInstance extends NpcInstance
 				return false;
 			}
 			
-			Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
+			final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
 			if (player.getFirstEffect(skill) == null)
 			{
 				skill.getEffects(_caster, player, false, false, false);

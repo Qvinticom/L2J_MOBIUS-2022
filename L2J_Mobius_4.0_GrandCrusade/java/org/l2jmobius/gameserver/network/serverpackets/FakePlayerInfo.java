@@ -105,7 +105,7 @@ public class FakePlayerInfo implements IClientOutgoingPacket
 		packet.writeD(_fpcHolder.getEquipHair2());
 		
 		for (@SuppressWarnings("unused")
-		int slot : getPaperdollOrderAugument())
+		final int slot : getPaperdollOrderAugument())
 		{
 			packet.writeD(0x00);
 			packet.writeD(0x00);
@@ -114,7 +114,7 @@ public class FakePlayerInfo implements IClientOutgoingPacket
 		packet.writeC(_fpcHolder.getArmorEnchantLevel());
 		
 		for (@SuppressWarnings("unused")
-		int slot : getPaperdollOrderVisualId())
+		final int slot : getPaperdollOrderVisualId())
 		{
 			packet.writeD(0x00);
 		}

@@ -85,7 +85,7 @@ public class RequestAuthLogin extends LoginClientPacket
 		byte[] decrypted = null;
 		try
 		{
-			Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
+			final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
 			rsaCipher.init(Cipher.DECRYPT_MODE, getClient().getRSAPrivateKey());
 			decrypted = rsaCipher.doFinal(_raw, 0x00, 0x80);
 		}
@@ -103,8 +103,8 @@ public class RequestAuthLogin extends LoginClientPacket
 		_ncotp |= decrypted[0x7e] << 16;
 		_ncotp |= decrypted[0x7f] << 24;
 		
-		LoginController lc = LoginController.getInstance();
-		LoginClient client = getClient();
+		final LoginController lc = LoginController.getInstance();
+		final LoginClient client = getClient();
 		final InetAddress address = getClient().getConnection().getInetAddress();
 		if (address == null)
 		{
@@ -112,7 +112,7 @@ public class RequestAuthLogin extends LoginClientPacket
 			client.close(LoginFailReason.REASON_SYSTEM_ERROR);
 			return;
 		}
-		AuthLoginResult result = lc.tryAuthLogin(_user, _password, getClient());
+		final AuthLoginResult result = lc.tryAuthLogin(_user, _password, getClient());
 		
 		switch (result)
 		{
@@ -143,7 +143,7 @@ public class RequestAuthLogin extends LoginClientPacket
 			}
 			case ALREADY_ON_LS:
 			{
-				LoginClient oldClient = lc.getAuthedClient(_user);
+				final LoginClient oldClient = lc.getAuthedClient(_user);
 				if (oldClient != null)
 				{
 					// kick the other client
@@ -154,7 +154,7 @@ public class RequestAuthLogin extends LoginClientPacket
 			}
 			case ALREADY_ON_GS:
 			{
-				GameServerInfo gsi = lc.getAccountOnGameServer(_user);
+				final GameServerInfo gsi = lc.getAccountOnGameServer(_user);
 				if (gsi != null)
 				{
 					client.close(LoginFailReason.REASON_ACCOUNT_IN_USE);

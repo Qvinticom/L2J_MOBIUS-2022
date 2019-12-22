@@ -60,8 +60,8 @@ class FileTaskCollector implements TaskCollector
 	 */
 	public synchronized File[] getFiles()
 	{
-		int size = files.size();
-		File[] ret = new File[size];
+		final int size = files.size();
+		final File[] ret = new File[size];
 		for (int i = 0; i < size; i++)
 		{
 			ret[i] = files.get(i);
@@ -75,11 +75,11 @@ class FileTaskCollector implements TaskCollector
 	@Override
 	public synchronized TaskTable getTasks()
 	{
-		TaskTable ret = new TaskTable();
-		int size = files.size();
+		final TaskTable ret = new TaskTable();
+		final int size = files.size();
 		for (int i = 0; i < size; i++)
 		{
-			File f = files.get(i);
+			final File f = files.get(i);
 			TaskTable aux = null;
 			try
 			{
@@ -87,12 +87,12 @@ class FileTaskCollector implements TaskCollector
 			}
 			catch (IOException e)
 			{
-				Exception e1 = new Exception("Cannot parse cron file: " + f.getAbsolutePath(), e);
+				final Exception e1 = new Exception("Cannot parse cron file: " + f.getAbsolutePath(), e);
 				e1.printStackTrace();
 			}
 			if (aux != null)
 			{
-				int auxSize = aux.size();
+				final int auxSize = aux.size();
 				for (int j = 0; j < auxSize; j++)
 				{
 					ret.add(aux.getSchedulingPattern(j), aux.getTask(j));

@@ -65,7 +65,7 @@ public class AdminQuest implements IAdminCommandHandler
 	{
 		if (command.startsWith("admin_quest_reload"))
 		{
-			StringTokenizer st = new StringTokenizer(command);
+			final StringTokenizer st = new StringTokenizer(command);
 			st.nextToken(); // skip command token
 			
 			if (!st.hasMoreTokens())
@@ -74,8 +74,8 @@ public class AdminQuest implements IAdminCommandHandler
 				return false;
 			}
 			
-			String script = st.nextToken();
-			Quest quest = findScript(script);
+			final String script = st.nextToken();
+			final Quest quest = findScript(script);
 			if (quest == null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "The script " + script + " couldn't be found!");
@@ -92,7 +92,7 @@ public class AdminQuest implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_script_load"))
 		{
-			StringTokenizer st = new StringTokenizer(command);
+			final StringTokenizer st = new StringTokenizer(command);
 			st.nextToken(); // skip command token
 			
 			if (!st.hasMoreTokens())
@@ -101,7 +101,7 @@ public class AdminQuest implements IAdminCommandHandler
 				return false;
 			}
 			
-			String script = st.nextToken();
+			final String script = st.nextToken();
 			try
 			{
 				ScriptEngineManager.getInstance().executeScript(Paths.get(script));
@@ -115,7 +115,7 @@ public class AdminQuest implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_script_unload"))
 		{
-			StringTokenizer st = new StringTokenizer(command);
+			final StringTokenizer st = new StringTokenizer(command);
 			st.nextToken(); // skip command token
 			
 			if (!st.hasMoreTokens())
@@ -124,8 +124,8 @@ public class AdminQuest implements IAdminCommandHandler
 				return false;
 			}
 			
-			String script = st.nextToken();
-			Quest quest = findScript(script);
+			final String script = st.nextToken();
+			final Quest quest = findScript(script);
 			if (quest == null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "The script " + script + " couldn't be found!");

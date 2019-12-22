@@ -148,7 +148,7 @@ public class VarkaSilenosSupport extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -443,7 +443,7 @@ public class VarkaSilenosSupport extends Quest
 			// Drop by 1 the level of that alliance (symbolized by a quest item).
 			for (int i = 7225; i >= 7221; i--)
 			{
-				ItemInstance item = inventory.getItemByItemId(i);
+				final ItemInstance item = inventory.getItemByItemId(i);
 				if (item != null)
 				{
 					// Destroy the badge.
@@ -461,7 +461,7 @@ public class VarkaSilenosSupport extends Quest
 			
 			for (String mission : varkaMissions)
 			{
-				QuestState pst = player.getQuestState(mission);
+				final QuestState pst = player.getQuestState(mission);
 				if (pst != null)
 				{
 					pst.exitQuest(true);

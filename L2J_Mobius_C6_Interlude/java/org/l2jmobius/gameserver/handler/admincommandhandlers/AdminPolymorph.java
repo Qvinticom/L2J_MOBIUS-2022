@@ -47,17 +47,17 @@ public class AdminPolymorph implements IAdminCommandHandler
 	{
 		if (command.startsWith("admin_polymorph"))
 		{
-			StringTokenizer st = new StringTokenizer(command);
-			WorldObject target = activeChar.getTarget();
+			final StringTokenizer st = new StringTokenizer(command);
+			final WorldObject target = activeChar.getTarget();
 			
 			try
 			{
 				st.nextToken();
-				String p1 = st.nextToken();
+				final String p1 = st.nextToken();
 				
 				if (st.hasMoreTokens())
 				{
-					String p2 = st.nextToken();
+					final String p2 = st.nextToken();
 					doPolymorph(activeChar, target, p2, p1);
 				}
 				else
@@ -98,10 +98,10 @@ public class AdminPolymorph implements IAdminCommandHandler
 			// animation
 			if (obj instanceof Creature)
 			{
-				Creature creature = (Creature) obj;
-				MagicSkillUse msk = new MagicSkillUse(creature, 1008, 1, 4000, 0);
+				final Creature creature = (Creature) obj;
+				final MagicSkillUse msk = new MagicSkillUse(creature, 1008, 1, 4000, 0);
 				creature.broadcastPacket(msk);
-				SetupGauge sg = new SetupGauge(0, 4000);
+				final SetupGauge sg = new SetupGauge(0, 4000);
 				creature.sendPacket(sg);
 			}
 			

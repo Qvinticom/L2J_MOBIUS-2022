@@ -177,7 +177,7 @@ public class SummonInstance extends Summon
 	public void reduceCurrentHp(int damage, Creature attacker)
 	{
 		super.reduceCurrentHp(damage, attacker);
-		SystemMessage sm = new SystemMessage(SystemMessageId.SUMMON_RECEIVED_DAMAGE_S2_BY_S1);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.SUMMON_RECEIVED_DAMAGE_S2_BY_S1);
 		
 		if (attacker instanceof NpcInstance)
 		{
@@ -314,7 +314,7 @@ public class SummonInstance extends Summon
 				Olympiad.getInstance().notifyCompetitorDamage(getOwner(), damage, getOwner().getOlympiadGameId());
 			}
 			
-			SystemMessage sm = new SystemMessage(SystemMessageId.SUMMON_GAVE_DAMAGE_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.SUMMON_GAVE_DAMAGE_S1);
 			sm.addNumber(damage);
 			getOwner().sendPacket(sm);
 		}

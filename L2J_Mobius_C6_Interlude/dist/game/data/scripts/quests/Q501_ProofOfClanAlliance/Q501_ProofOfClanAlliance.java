@@ -141,8 +141,8 @@ public class Q501_ProofOfClanAlliance extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
-		QuestState st2 = getClanLeaderQuestState(player, npc);
+		final QuestState st = player.getQuestState(getName());
+		final QuestState st2 = getClanLeaderQuestState(player, npc);
 		
 		if (st == null)
 		{
@@ -265,8 +265,8 @@ public class Q501_ProofOfClanAlliance extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
-		QuestState cl = getClanLeaderQuestState(player, npc);
+		final QuestState st = player.getQuestState(getName());
+		final QuestState cl = getClanLeaderQuestState(player, npc);
 		
 		if (st == null)
 		{
@@ -335,7 +335,7 @@ public class Q501_ProofOfClanAlliance extends Quest
 				break;
 			
 			case State.STARTED:
-				int state = st.getInt("state");
+				final int state = st.getInt("state");
 				switch (npc.getNpcId())
 				{
 					case SIR_KRISTOF_RODEMAI:
@@ -452,21 +452,21 @@ public class Q501_ProofOfClanAlliance extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = player.getQuestState(getName());
-		QuestState cl = getClanLeaderQuestState(player, npc);
+		final QuestState st = player.getQuestState(getName());
+		final QuestState cl = getClanLeaderQuestState(player, npc);
 		
 		if ((st == null) || (cl == null))
 		{
 			return null;
 		}
 		
-		int npcId = npc.getNpcId();
+		final int npcId = npc.getNpcId();
 		
 		if (DROP.containsKey(npcId) && (cl.getInt("state") == 3))
 		{
-			int itemId = DROP.get(npcId);
+			final int itemId = DROP.get(npcId);
 			
-			List<Integer> herbs = getHerbs(cl.getString("herbs"));
+			final List<Integer> herbs = getHerbs(cl.getString("herbs"));
 			
 			if ((Rnd.get(10) == 1) && !st.hasQuestItems(itemId) && !hasOtherItems(st, itemId) && !herbs.contains(itemId))
 			{
@@ -484,8 +484,8 @@ public class Q501_ProofOfClanAlliance extends Quest
 		}
 		else if (CHESTS_ID.contains(npcId) && (cl.getInt("state") == 4))
 		{
-			int chests = cl.getInt("chests");
-			int bingo = cl.getInt("bingo");
+			final int chests = cl.getInt("chests");
+			final int bingo = cl.getInt("bingo");
 			
 			if ((((chests == 15) && (bingo == 3)) || ((chests == 14) && (bingo == 2)) || ((chests == 13) && (bingo == 1)) || ((chests == 12) && (bingo == 0))) || ((bingo < 4) && (Rnd.get(4) == 0)))
 			{
@@ -542,11 +542,11 @@ public class Q501_ProofOfClanAlliance extends Quest
 	
 	private static List<Integer> getHerbs(String list)
 	{
-		List<Integer> array = new ArrayList<>();
+		final List<Integer> array = new ArrayList<>();
 		
 		if (list != null)
 		{
-			String[] herbs = list.split(";");
+			final String[] herbs = list.split(";");
 			
 			for (String herb : herbs)
 			{
@@ -561,7 +561,7 @@ public class Q501_ProofOfClanAlliance extends Quest
 	{
 		if (list != null)
 		{
-			String[] herbs = list.split(";");
+			final String[] herbs = list.split(";");
 			
 			if (st.hasQuestItems(Integer.parseInt(herbs[0])))
 			{

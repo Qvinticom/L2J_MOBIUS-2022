@@ -47,15 +47,15 @@ public class ShadowWeapon extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		boolean hasD = st.hasQuestItems(D_COUPON);
-		boolean hasC = st.hasQuestItems(C_COUPON);
+		final boolean hasD = st.hasQuestItems(D_COUPON);
+		final boolean hasC = st.hasQuestItems(C_COUPON);
 		
 		if (hasD || hasC)
 		{

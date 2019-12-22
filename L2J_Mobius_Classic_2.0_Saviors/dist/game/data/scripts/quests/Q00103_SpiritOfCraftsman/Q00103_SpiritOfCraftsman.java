@@ -137,8 +137,8 @@ public class Q00103_SpiritOfCraftsman extends Quest
 				else if (qs.isCompleted())
 				{
 					htmltext = getAlreadyCompletedMsg(talker);
-					break;
 				}
+				break;
 			}
 			case CECON:
 			{

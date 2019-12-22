@@ -345,14 +345,14 @@ public class Q00663_SeductiveWhispers extends Quest
 				if (qs.isStarted() && ((qs.getMemoState() % 10) == 6) && ((qs.getMemoState() / 1000) == 0))
 				{
 					final int card1pic = Math.max(qs.getMemoStateEx(1), 0);
-					int i1 = card1pic % 10;
-					int i2 = (card1pic - i1) / 10;
-					int rnd1 = getRandom(2) + 1;
-					int rnd2 = getRandom(5) + 1;
-					int card2pic = (rnd1 * 10) + rnd2;
+					final int i1 = card1pic % 10;
+					final int i2 = (card1pic - i1) / 10;
+					final int rnd1 = getRandom(2) + 1;
+					final int rnd2 = getRandom(5) + 1;
+					final int card2pic = (rnd1 * 10) + rnd2;
 					if (rnd1 == i2)
 					{
-						int i3 = rnd2 + i1;
+						final int i3 = rnd2 + i1;
 						if (((i3 % 5) == 0) && (i3 != 10))
 						{
 							qs.setMemoState(1);
@@ -397,7 +397,7 @@ public class Q00663_SeductiveWhispers extends Quest
 			{
 				if (qs.isStarted() && ((qs.getMemoState() % 10) == 7) && ((qs.getMemoState() / 1000) == 0))
 				{
-					int i0 = qs.getMemoState() / 10;
+					final int i0 = qs.getMemoState() / 10;
 					if (i0 == 0)
 					{
 						giveAdena(player, 40000, true);
@@ -616,14 +616,14 @@ public class Q00663_SeductiveWhispers extends Quest
 					{
 						card1pic = 0;
 					}
-					int card1 = card1pic % 10;
-					int i2 = (card1pic - card1) / 10;
-					int rnd1 = getRandom(2) + 1;
-					int rnd2 = getRandom(5) + 1;
-					int card2pic = (rnd1 * 10) + rnd2;
+					final int card1 = card1pic % 10;
+					final int i2 = (card1pic - card1) / 10;
+					final int rnd1 = getRandom(2) + 1;
+					final int rnd2 = getRandom(5) + 1;
+					final int card2pic = (rnd1 * 10) + rnd2;
 					if (rnd1 == i2)
 					{
-						int i3 = rnd2 + card1;
+						final int i3 = rnd2 + card1;
 						if (((i3 % 5) == 0) && (i3 != 10))
 						{
 							qs.setMemoState(1);
@@ -662,11 +662,11 @@ public class Q00663_SeductiveWhispers extends Quest
 				if (qs.isStarted() && qs.isMemoState(1006))
 				{
 					final int card1pic = Math.max(qs.getMemoStateEx(1), 0);
-					int i1 = card1pic % 10;
-					int i2 = (card1pic - i1) / 10;
-					int rnd1 = getRandom(2) + 1;
-					int rnd2 = getRandom(5) + 1;
-					int card2pic = (rnd1 * 10) + rnd2;
+					final int i1 = card1pic % 10;
+					final int i2 = (card1pic - i1) / 10;
+					final int rnd1 = getRandom(2) + 1;
+					final int rnd2 = getRandom(5) + 1;
+					final int card2pic = (rnd1 * 10) + rnd2;
 					if (rnd1 == i2)
 					{
 						final int i3 = rnd2 + i1;

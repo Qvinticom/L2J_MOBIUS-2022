@@ -102,8 +102,8 @@ public class FortManagerInstance extends MerchantInstance
 		
 		if (condition == COND_OWNER)
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
-			String actualCommand = st.nextToken(); // Get actual command
+			final StringTokenizer st = new StringTokenizer(command, " ");
+			final String actualCommand = st.nextToken(); // Get actual command
 			
 			String val = "";
 			if (st.countTokens() >= 1)
@@ -113,7 +113,7 @@ public class FortManagerInstance extends MerchantInstance
 			
 			if (actualCommand.equalsIgnoreCase("banish_foreigner"))
 			{
-				NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				
 				if ((player.getClanPrivileges() & Clan.CP_CS_DISMISS) == Clan.CP_CS_DISMISS)
 				{
@@ -149,14 +149,14 @@ public class FortManagerInstance extends MerchantInstance
 					}
 					else
 					{
-						NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+						final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 						html.setFile("data/html/fortress/foreman-vault.htm");
 						sendHtmlMessage(player, html);
 					}
 				}
 				else
 				{
-					NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+					final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 					html.setFile("data/html/fortress/foreman-noprivs.htm");
 					html.replace("%objectId%", String.valueOf(getObjectId()));
 					player.sendPacket(html);
@@ -214,7 +214,7 @@ public class FortManagerInstance extends MerchantInstance
 			}
 		}
 		
-		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcname%", getName());
@@ -238,7 +238,7 @@ public class FortManagerInstance extends MerchantInstance
 		}
 		else
 		{
-			NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			html.setFile("data/html/fortress/foreman-noprivs.htm");
 			html.replace("%objectId%", String.valueOf(getObjectId()));
 			player.sendPacket(html);

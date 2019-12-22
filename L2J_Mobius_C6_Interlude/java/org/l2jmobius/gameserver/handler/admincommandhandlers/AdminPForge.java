@@ -48,9 +48,9 @@ public class AdminPForge implements IAdminCommandHandler
 		{
 			try
 			{
-				StringTokenizer st = new StringTokenizer(command);
+				final StringTokenizer st = new StringTokenizer(command);
 				st.nextToken();
-				String format = st.nextToken();
+				final String format = st.nextToken();
 				showPage2(activeChar, format);
 			}
 			catch (Exception ex)
@@ -62,7 +62,7 @@ public class AdminPForge implements IAdminCommandHandler
 		{
 			try
 			{
-				StringTokenizer st = new StringTokenizer(command);
+				final StringTokenizer st = new StringTokenizer(command);
 				st.nextToken();
 				String format = st.nextToken();
 				
@@ -74,7 +74,7 @@ public class AdminPForge implements IAdminCommandHandler
 					broadcast = true;
 				}
 				
-				AdminForgePacket sp = new AdminForgePacket();
+				final AdminForgePacket sp = new AdminForgePacket();
 				
 				for (int i = 0; i < format.length(); i++)
 				{
@@ -171,7 +171,7 @@ public class AdminPForge implements IAdminCommandHandler
 	
 	private void showPage2(PlayerInstance activeChar, String format)
 	{
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/pforge2.htm");
 		adminReply.replace("%format%", format);
 		StringBuilder replyMSG = new StringBuilder();
@@ -195,7 +195,7 @@ public class AdminPForge implements IAdminCommandHandler
 	
 	private void showPage3(PlayerInstance activeChar, String format, String command)
 	{
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/pforge3.htm");
 		adminReply.replace("%format%", format);
 		adminReply.replace("%command%", command);

@@ -195,7 +195,7 @@ public class BanditStrongholdSiege extends ClanHallSiege
 	
 	public void teleportPlayers()
 	{
-		ClanHallZone zone = clanhall.getZone();
+		final ClanHallZone zone = clanhall.getZone();
 		for (Creature creature : zone.getCharactersInside().values())
 		{
 			if (creature instanceof PlayerInstance)

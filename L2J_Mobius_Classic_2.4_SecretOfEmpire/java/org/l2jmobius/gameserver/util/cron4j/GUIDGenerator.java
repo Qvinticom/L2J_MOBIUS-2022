@@ -41,7 +41,7 @@ class GUIDGenerator
 	 */
 	public static String generate()
 	{
-		StringBuilder id = new StringBuilder();
+		final StringBuilder id = new StringBuilder();
 		encode(id, MACHINE_DESCRIPTOR);
 		encode(id, Runtime.getRuntime());
 		encode(id, Thread.currentThread());
@@ -56,7 +56,7 @@ class GUIDGenerator
 	 */
 	private static String getMachineDescriptor()
 	{
-		StringBuilder descriptor = new StringBuilder();
+		final StringBuilder descriptor = new StringBuilder();
 		descriptor.append(System.getProperty("os.name"));
 		descriptor.append("::");
 		descriptor.append(System.getProperty("os.arch"));
@@ -65,7 +65,7 @@ class GUIDGenerator
 		descriptor.append("::");
 		descriptor.append(System.getProperty("user.name"));
 		descriptor.append("::");
-		StringBuilder b = buildNetworkInterfaceDescriptor();
+		final StringBuilder b = buildNetworkInterfaceDescriptor();
 		if (b != null)
 		{
 			descriptor.append(b);
@@ -102,13 +102,13 @@ class GUIDGenerator
 			// not available
 			return null;
 		}
-		StringBuilder b = new StringBuilder();
+		final StringBuilder b = new StringBuilder();
 		while (e1.hasMoreElements())
 		{
-			NetworkInterface ni = (NetworkInterface) e1.nextElement();
-			StringBuilder b1 = getMACAddressDescriptor(ni);
-			StringBuilder b2 = getInetAddressDescriptor(ni);
-			StringBuilder b3 = new StringBuilder();
+			final NetworkInterface ni = (NetworkInterface) e1.nextElement();
+			final StringBuilder b1 = getMACAddressDescriptor(ni);
+			final StringBuilder b2 = getInetAddressDescriptor(ni);
+			final StringBuilder b3 = new StringBuilder();
 			if (b1 != null)
 			{
 				b3.append(b1);
@@ -150,7 +150,7 @@ class GUIDGenerator
 			// not available.
 			haddr = null;
 		}
-		StringBuilder b = new StringBuilder();
+		final StringBuilder b = new StringBuilder();
 		if (haddr != null)
 		{
 			for (byte element : haddr)
@@ -159,7 +159,7 @@ class GUIDGenerator
 				{
 					b.append("-");
 				}
-				String hex = Integer.toHexString(0xff & element);
+				final String hex = Integer.toHexString(0xff & element);
 				if (hex.length() == 1)
 				{
 					b.append('0');
@@ -177,11 +177,11 @@ class GUIDGenerator
 	 */
 	private static StringBuilder getInetAddressDescriptor(NetworkInterface ni)
 	{
-		StringBuilder b = new StringBuilder();
-		Enumeration<?> e2 = ni.getInetAddresses();
+		final StringBuilder b = new StringBuilder();
+		final Enumeration<?> e2 = ni.getInetAddresses();
 		while (e2.hasMoreElements())
 		{
-			InetAddress addr = (InetAddress) e2.nextElement();
+			final InetAddress addr = (InetAddress) e2.nextElement();
 			if (b.length() > 0)
 			{
 				b.append(',');
@@ -217,8 +217,8 @@ class GUIDGenerator
 	 */
 	private static void encode(StringBuilder b, int value)
 	{
-		String hex = Integer.toHexString(value);
-		int hexSize = hex.length();
+		final String hex = Integer.toHexString(value);
+		final int hexSize = hex.length();
 		for (int i = 8; i > hexSize; i--)
 		{
 			b.append('0');
@@ -233,8 +233,8 @@ class GUIDGenerator
 	 */
 	private static void encode(StringBuilder b, long value)
 	{
-		String hex = Long.toHexString(value);
-		int hexSize = hex.length();
+		final String hex = Long.toHexString(value);
+		final int hexSize = hex.length();
 		for (int i = 16; i > hexSize; i--)
 		{
 			b.append('0');

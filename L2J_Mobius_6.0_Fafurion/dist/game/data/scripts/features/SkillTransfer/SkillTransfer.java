@@ -86,9 +86,9 @@ public class SkillTransfer extends AbstractNpcAI
 			return;
 		}
 		
-		int pomanderId = PORMANDERS[index].getId();
+		final int pomanderId = PORMANDERS[index].getId();
 		// remove unsused HolyPomander
-		PlayerInventory inv = player.getInventory();
+		final PlayerInventory inv = player.getInventory();
 		for (ItemInstance itemI : inv.getAllItemsByItemId(pomanderId))
 		{
 			inv.destroyItem("[HolyPomander - remove]", itemI, player, null);

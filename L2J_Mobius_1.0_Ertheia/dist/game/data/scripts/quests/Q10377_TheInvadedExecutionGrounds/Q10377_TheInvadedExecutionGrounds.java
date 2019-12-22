@@ -120,7 +120,7 @@ public class Q10377_TheInvadedExecutionGrounds extends Quest
 	@Override
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
-		QuestState qs = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		if (qs != null)
 		{
 			switch (npc.getId())

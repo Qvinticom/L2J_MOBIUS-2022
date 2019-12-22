@@ -72,7 +72,7 @@ public class Augmentation
 		public augmentationStatBonus(int augmentationId)
 		{
 			_active = false;
-			List<AugmentationData.AugStat> as = AugmentationData.getInstance().getAugStatsById(augmentationId);
+			final List<AugmentationData.AugStat> as = AugmentationData.getInstance().getAugStatsById(augmentationId);
 			
 			_stats = new Stats[as.size()];
 			_values = new float[as.size()];
@@ -120,7 +120,7 @@ public class Augmentation
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("INSERT INTO augmentations (item_id,attributes,skill,level) VALUES (?,?,?,?)");
+			final PreparedStatement statement = con.prepareStatement("INSERT INTO augmentations (item_id,attributes,skill,level) VALUES (?,?,?,?)");
 			statement.setInt(1, _item.getObjectId());
 			statement.setInt(2, _effectsId);
 			
@@ -154,7 +154,7 @@ public class Augmentation
 		// delete the augmentation from the database
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("DELETE FROM augmentations WHERE item_id=?");
+			final PreparedStatement statement = con.prepareStatement("DELETE FROM augmentations WHERE item_id=?");
 			statement.setInt(1, _item.getObjectId());
 			statement.executeUpdate();
 			statement.close();

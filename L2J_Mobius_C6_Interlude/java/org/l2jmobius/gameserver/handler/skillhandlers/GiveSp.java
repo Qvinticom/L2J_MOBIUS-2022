@@ -37,7 +37,7 @@ public class GiveSp implements ISkillHandler
 	{
 		for (WorldObject obj : targets)
 		{
-			Creature target = (Creature) obj;
+			final Creature target = (Creature) obj;
 			if (target != null)
 			{
 				final int spToAdd = (int) skill.getPower();

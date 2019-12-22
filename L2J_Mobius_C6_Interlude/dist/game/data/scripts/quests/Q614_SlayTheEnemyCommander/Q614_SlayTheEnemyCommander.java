@@ -45,7 +45,7 @@ public class Q614_SlayTheEnemyCommander extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -82,7 +82,7 @@ public class Q614_SlayTheEnemyCommander extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -123,7 +123,7 @@ public class Q614_SlayTheEnemyCommander extends Quest
 		{
 			if (partyMember.getAllianceWithVarkaKetra() <= -4)
 			{
-				QuestState st = partyMember.getQuestState(getName());
+				final QuestState st = partyMember.getQuestState(getName());
 				if (st == null)
 				{
 					continue;

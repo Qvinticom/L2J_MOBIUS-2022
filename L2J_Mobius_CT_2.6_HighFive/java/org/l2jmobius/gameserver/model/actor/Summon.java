@@ -307,7 +307,7 @@ public abstract class Summon extends Playable
 					return;
 				}
 				
-				AggroInfo info = targetMob.getAggroList().get(this);
+				final AggroInfo info = targetMob.getAggroList().get(this);
 				if (info != null)
 				{
 					targetMob.addDamageHate(_owner, info.getDamage(), info.getHate());

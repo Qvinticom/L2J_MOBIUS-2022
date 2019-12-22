@@ -42,7 +42,7 @@ public class ItemLogFormatter extends AbstractFormatter
 			output.append(", ");
 			if (p instanceof ItemInstance)
 			{
-				ItemInstance item = (ItemInstance) p;
+				final ItemInstance item = (ItemInstance) p;
 				output.append("item ");
 				output.append(item.getObjectId());
 				output.append(":");

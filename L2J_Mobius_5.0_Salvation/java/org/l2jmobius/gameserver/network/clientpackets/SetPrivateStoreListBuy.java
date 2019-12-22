@@ -56,7 +56,7 @@ public class SetPrivateStoreListBuy implements IClientIncomingPacket
 		_items = new TradeItem[count];
 		for (int i = 0; i < count; i++)
 		{
-			int itemId = packet.readD();
+			final int itemId = packet.readD();
 			
 			final Item template = ItemTable.getInstance().getTemplate(itemId);
 			if (template == null)
@@ -68,8 +68,8 @@ public class SetPrivateStoreListBuy implements IClientIncomingPacket
 			final int enchantLevel = packet.readH();
 			packet.readH(); // TODO analyse this
 			
-			long cnt = packet.readQ();
-			long price = packet.readQ();
+			final long cnt = packet.readQ();
+			final long price = packet.readQ();
 			
 			if ((itemId < 1) || (cnt < 1) || (price < 0))
 			{
@@ -159,7 +159,7 @@ public class SetPrivateStoreListBuy implements IClientIncomingPacket
 			return;
 		}
 		
-		TradeList tradeList = player.getBuyList();
+		final TradeList tradeList = player.getBuyList();
 		tradeList.clear();
 		
 		// Check maximum number of allowed slots for pvt shops

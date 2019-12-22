@@ -41,7 +41,7 @@ public class AdminRideWyvern implements IAdminCommandHandler
 		{
 			if (activeChar.isMounted() || (activeChar.getPet() != null))
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				sm.addString("Already Have a Pet or Mounted.");
 				activeChar.sendPacket(sm);
 				
@@ -63,7 +63,7 @@ public class AdminRideWyvern implements IAdminCommandHandler
 			}
 			else
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				sm.addString("Command '" + command + "' not recognized");
 				activeChar.sendPacket(sm);
 				
@@ -75,7 +75,7 @@ public class AdminRideWyvern implements IAdminCommandHandler
 				return false;
 			}
 			
-			Ride mount = new Ride(activeChar.getObjectId(), Ride.ACTION_MOUNT, petRideId);
+			final Ride mount = new Ride(activeChar.getObjectId(), Ride.ACTION_MOUNT, petRideId);
 			activeChar.sendPacket(mount);
 			activeChar.broadcastPacket(mount);
 			activeChar.setMountType(mount.getMountType());

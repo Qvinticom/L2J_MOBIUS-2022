@@ -123,8 +123,8 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 							{
 								found = true;
 								
-								int first = id > 10 ? (id - 9) : 1;
-								int last = _playerList.size() >= (id + 10) ? id + 10 : id + (_playerList.size() - id);
+								final int first = id > 10 ? (id - 9) : 1;
+								final int last = _playerList.size() >= (id + 10) ? id + 10 : id + (_playerList.size() - id);
 								if (first == 1)
 								{
 									packet.writeD(last - (first - 1));
@@ -267,8 +267,8 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 							if (player.getInt("charId") == _player.getObjectId())
 							{
 								found = true;
-								int first = id > 10 ? (id - 9) : 1;
-								int last = classList.size() >= (id + 10) ? id + 10 : id + (classList.size() - id);
+								final int first = id > 10 ? (id - 9) : 1;
+								final int last = classList.size() >= (id + 10) ? id + 10 : id + (classList.size() - id);
 								if (first == 1)
 								{
 									packet.writeD(last - (first - 1));

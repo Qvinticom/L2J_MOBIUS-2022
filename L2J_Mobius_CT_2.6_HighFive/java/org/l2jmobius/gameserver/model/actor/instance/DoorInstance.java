@@ -417,7 +417,7 @@ public class DoorInstance extends Creature
 	@Override
 	public void broadcastStatusUpdate()
 	{
-		Collection<PlayerInstance> knownPlayers = World.getInstance().getVisibleObjects(this, PlayerInstance.class);
+		final Collection<PlayerInstance> knownPlayers = World.getInstance().getVisibleObjects(this, PlayerInstance.class);
 		if ((knownPlayers == null) || knownPlayers.isEmpty())
 		{
 			return;

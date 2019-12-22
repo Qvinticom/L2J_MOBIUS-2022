@@ -60,7 +60,7 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -133,7 +133,7 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -154,7 +154,7 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 					break;
 				}
 				
-				int cond = st.getInt("cond");
+				final int cond = st.getInt("cond");
 				switch (npc.getNpcId())
 				{
 					case CARADINE:
@@ -226,7 +226,7 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 					continue;
 				}
 				
-				QuestState st = plr.getQuestState(getName());
+				final QuestState st = plr.getQuestState(getName());
 				if (!st.hasQuestItems(RAIN_SONG))
 				{
 					st.set("cond", "5");
@@ -242,7 +242,7 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 				return null;
 			}
 			
-			QuestState st = checkPlayerCondition(player, npc, "cond", "2");
+			final QuestState st = checkPlayerCondition(player, npc, "cond", "2");
 			if (st == null)
 			{
 				return null;

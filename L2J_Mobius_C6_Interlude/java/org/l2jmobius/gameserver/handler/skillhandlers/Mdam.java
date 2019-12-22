@@ -54,7 +54,7 @@ public class Mdam implements ISkillHandler
 				continue;
 			}
 			
-			Creature target = (Creature) target2;
+			final Creature target = (Creature) target2;
 			
 			if ((creature instanceof PlayerInstance) && (target instanceof PlayerInstance) && target.isAlikeDead() && target.isFakeDeath())
 			{
@@ -96,7 +96,7 @@ public class Mdam implements ISkillHandler
 					{
 						creature.stopSkillEffects(skill.getId());
 						skill.getEffects(null, creature, false, sps, bss);
-						SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 						sm.addSkillName(skill.getId());
 						creature.sendPacket(sm);
 					}
@@ -108,7 +108,7 @@ public class Mdam implements ISkillHandler
 					}
 					else
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
 						creature.sendPacket(sm);
@@ -129,7 +129,7 @@ public class Mdam implements ISkillHandler
 		}
 		
 		// self Effect :]
-		Effect effect = creature.getFirstEffect(skill.getId());
+		final Effect effect = creature.getFirstEffect(skill.getId());
 		if ((effect != null) && effect.isSelfEffect())
 		{
 			// Replace old effect with new one.

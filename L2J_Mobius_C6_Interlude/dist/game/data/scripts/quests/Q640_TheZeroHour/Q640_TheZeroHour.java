@@ -99,7 +99,7 @@ public class Q640_TheZeroHour extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -125,7 +125,7 @@ public class Q640_TheZeroHour extends Quest
 		}
 		else if (Util.isDigit(event))
 		{
-			int[] reward = REWARDS[Integer.parseInt(event)];
+			final int[] reward = REWARDS[Integer.parseInt(event)];
 			
 			if (st.getQuestItemsCount(FANG_OF_STAKATO) >= reward[0])
 			{
@@ -145,7 +145,7 @@ public class Q640_TheZeroHour extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -161,7 +161,7 @@ public class Q640_TheZeroHour extends Quest
 				}
 				else
 				{
-					QuestState st2 = player.getQuestState(Q109_InSearchOfTheNest.class.getSimpleName());
+					final QuestState st2 = player.getQuestState(Q109_InSearchOfTheNest.class.getSimpleName());
 					htmltext = ((st2 != null) && st2.isCompleted()) ? "31554-01.htm" : "31554-10.htm";
 				}
 				break;
@@ -177,7 +177,7 @@ public class Q640_TheZeroHour extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		PlayerInstance partyMember = getRandomPartyMemberState(player, npc, State.STARTED);
+		final PlayerInstance partyMember = getRandomPartyMemberState(player, npc, State.STARTED);
 		if (partyMember == null)
 		{
 			return null;

@@ -107,7 +107,7 @@ public class Q233_TestOfTheWarSpirit extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -179,7 +179,7 @@ public class Q233_TestOfTheWarSpirit extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (st == null)
 		{
@@ -470,7 +470,7 @@ public class Q233_TestOfTheWarSpirit extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		QuestState st = checkPlayerState(player, npc, State.STARTED);
+		final QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)
 		{
 			return null;
@@ -503,7 +503,7 @@ public class Q233_TestOfTheWarSpirit extends Quest
 			case NOBLE_ANT_LEADER:
 				if (st.hasQuestItems(INSECT_DIAGRAM_BOOK))
 				{
-					int rndAnt = Rnd.get(100);
+					final int rndAnt = Rnd.get(100);
 					if (rndAnt > 70)
 					{
 						if (st.hasQuestItems(KIRUNA_THIGHBONE))

@@ -184,7 +184,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -241,7 +241,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -254,7 +254,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 				break;
 			
 			case State.STARTED:
-				int cond = st.getInt("cond");
+				final int cond = st.getInt("cond");
 				switch (npc.getNpcId())
 				{
 					case GABRIELLE:
@@ -528,7 +528,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 	@Override
 	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
-		QuestState st = checkPlayerState(attacker, npc, State.STARTED);
+		final QuestState st = checkPlayerState(attacker, npc, State.STARTED);
 		if (st == null)
 		{
 			return null;
@@ -555,7 +555,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 			{
 				if ((Rnd.get(100) < 33) && (st.getInt("drop" + npcInfo[2]) == 1))
 				{
-					int itemId = npcInfo[3];
+					final int itemId = npcInfo[3];
 					if (!st.hasQuestItems(itemId))
 					{
 						st.giveItems(itemId, 1);
@@ -586,7 +586,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 					{
 						for (int i = 0; i < npcInfo[4]; i++)
 						{
-							NpcInstance mob = addSpawn(npcInfo[5], npc.getX() + Rnd.get(-150, 150), npc.getY() + Rnd.get(-150, 150), npc.getZ(), npc.getHeading(), true, 60000);
+							final NpcInstance mob = addSpawn(npcInfo[5], npc.getX() + Rnd.get(-150, 150), npc.getY() + Rnd.get(-150, 150), npc.getZ(), npc.getHeading(), true, 60000);
 							mob.setRunning();
 							((Attackable) mob).addDamageHate(attacker, 0, 500);
 							mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
@@ -661,7 +661,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 					
 					if ((npcInfo[1] == cond) && (st.getInt("drop" + npcInfo[2]) == 1))
 					{
-						int itemId = npcInfo[3];
+						final int itemId = npcInfo[3];
 						if (!st.hasQuestItems(itemId))
 						{
 							st.giveItems(itemId, 1);

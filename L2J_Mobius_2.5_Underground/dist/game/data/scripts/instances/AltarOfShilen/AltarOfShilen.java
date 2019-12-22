@@ -279,7 +279,7 @@ public class AltarOfShilen extends AbstractInstance
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
 		{
-			int npcId = npc.getId();
+			final int npcId = npc.getId();
 			if (!killedMonsters.containsKey(npcId))
 			{
 				killedMonsters.put(npcId, 1);
@@ -412,7 +412,7 @@ public class AltarOfShilen extends AbstractInstance
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final Instance world = npc.getInstanceWorld();
-		String htmltext = null;
+		final String htmltext = null;
 		if (isInInstance(world))
 		{
 			switch (npc.getId())

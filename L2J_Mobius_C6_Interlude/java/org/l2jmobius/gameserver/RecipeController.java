@@ -70,13 +70,13 @@ public class RecipeController
 		
 		if (maker == null)
 		{
-			RecipeBookItemList response = new RecipeBookItemList(isDwarvenCraft, player.getMaxMp());
+			final RecipeBookItemList response = new RecipeBookItemList(isDwarvenCraft, player.getMaxMp());
 			response.addRecipes(isDwarvenCraft ? player.getDwarvenRecipeBook() : player.getCommonRecipeBook());
 			player.sendPacket(response);
 			return;
 		}
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.CANT_ALTER_RECIPEBOOK_WHILE_CRAFTING);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.CANT_ALTER_RECIPEBOOK_WHILE_CRAFTING);
 		player.sendPacket(sm);
 	}
 	
@@ -87,15 +87,15 @@ public class RecipeController
 	
 	public synchronized void requestManufactureItem(PlayerInstance manufacturer, int recipeListId, PlayerInstance player)
 	{
-		RecipeList recipeList = getValidRecipeList(player, recipeListId);
+		final RecipeList recipeList = getValidRecipeList(player, recipeListId);
 		
 		if (recipeList == null)
 		{
 			return;
 		}
 		
-		List<RecipeList> dwarfRecipes = Arrays.asList(manufacturer.getDwarvenRecipeBook());
-		List<RecipeList> commonRecipes = Arrays.asList(manufacturer.getCommonRecipeBook());
+		final List<RecipeList> dwarfRecipes = Arrays.asList(manufacturer.getDwarvenRecipeBook());
+		final List<RecipeList> commonRecipes = Arrays.asList(manufacturer.getCommonRecipeBook());
 		
 		if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList))
 		{
@@ -134,15 +134,15 @@ public class RecipeController
 			return;
 		}
 		
-		RecipeList recipeList = getValidRecipeList(player, recipeListId);
+		final RecipeList recipeList = getValidRecipeList(player, recipeListId);
 		
 		if (recipeList == null)
 		{
 			return;
 		}
 		
-		List<RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
-		List<RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
+		final List<RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
+		final List<RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
 		
 		if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList))
 		{
@@ -380,7 +380,7 @@ public class RecipeController
 					_delay = (int) ((Config.ALT_GAME_CREATION_SPEED * _player.getMReuseRate(_skill) * GameTimeController.TICKS_PER_SECOND) / Config.RATE_CONSUMABLE_COST) * GameTimeController.MILLIS_IN_TICK;
 					
 					// FIXME: please fix this packet to show crafting animation (somebody)
-					MagicSkillUse msk = new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0);
+					final MagicSkillUse msk = new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0);
 					_player.broadcastPacket(msk);
 					
 					_player.sendPacket(new SetupGauge(0, _delay));
@@ -423,7 +423,7 @@ public class RecipeController
 			if ((_target != _player) && (_price > 0)) // customer must pay for services
 			{
 				// attempt to pay for item
-				ItemInstance adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
+				final ItemInstance adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
 				
 				if (adenatransfer == null)
 				{
@@ -477,14 +477,14 @@ public class RecipeController
 		
 		private void updateCurLoad()
 		{
-			StatusUpdate su = new StatusUpdate(_target.getObjectId());
+			final StatusUpdate su = new StatusUpdate(_target.getObjectId());
 			su.addAttribute(StatusUpdate.CUR_LOAD, _target.getCurrentLoad());
 			_target.sendPacket(su);
 		}
 		
 		private void updateCurMp()
 		{
-			StatusUpdate su = new StatusUpdate(_target.getObjectId());
+			final StatusUpdate su = new StatusUpdate(_target.getObjectId());
 			su.addAttribute(StatusUpdate.CUR_MP, (int) _target.getCurrentMp());
 			_target.sendPacket(su);
 		}
@@ -495,7 +495,7 @@ public class RecipeController
 			
 			while ((numItems > 0) && !_items.isEmpty())
 			{
-				TempItem item = _items.get(0);
+				final TempItem item = _items.get(0);
 				
 				int count = item.getQuantity();
 				
@@ -519,7 +519,7 @@ public class RecipeController
 				if (_target == _player)
 				{
 					// you equipped ...
-					SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2_EQUIPPED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2_EQUIPPED);
 					sm.addNumber(count);
 					sm.addItemName(item.getItemId());
 					_player.sendPacket(sm);
@@ -554,8 +554,8 @@ public class RecipeController
 		
 		private List<TempItem> listItems(boolean remove)
 		{
-			RecipeInstance[] recipes = _recipeList.getRecipes();
-			Inventory inv = _target.getInventory();
+			final RecipeInstance[] recipes = _recipeList.getRecipes();
+			final Inventory inv = _target.getInventory();
 			final List<TempItem> materials = new ArrayList<>();
 			
 			for (RecipeInstance recipe : recipes)
@@ -576,7 +576,7 @@ public class RecipeController
 					
 					// make new temporary object, just for counting puroses
 					
-					TempItem temp = new TempItem(item, quantity);
+					final TempItem temp = new TempItem(item, quantity);
 					materials.add(temp);
 				}
 			}

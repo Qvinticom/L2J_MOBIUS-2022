@@ -57,7 +57,7 @@ public class Q115_TheOtherSideOfTruth extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		QuestState qs = player.getQuestState(getName());
+		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
 			return htmltext;
@@ -190,7 +190,7 @@ public class Q115_TheOtherSideOfTruth extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		QuestState qs = player.getQuestState(getName());
+		final QuestState qs = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
 		if (qs == null)
 		{

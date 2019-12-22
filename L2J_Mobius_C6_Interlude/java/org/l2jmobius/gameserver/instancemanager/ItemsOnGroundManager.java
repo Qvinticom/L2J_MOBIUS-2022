@@ -95,7 +95,7 @@ public class ItemsOnGroundManager
 					str = "update itemsonground set drop_time=? where drop_time=-1";
 				}
 				
-				PreparedStatement statement = con.prepareStatement(str);
+				final PreparedStatement statement = con.prepareStatement(str);
 				statement.setLong(1, System.currentTimeMillis());
 				statement.execute();
 				statement.close();
@@ -109,13 +109,13 @@ public class ItemsOnGroundManager
 		// Add items to world
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			Statement s = con.createStatement();
+			final Statement s = con.createStatement();
 			ResultSet result;
 			int count = 0;
 			result = s.executeQuery("select object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable from itemsonground");
 			while (result.next())
 			{
-				ItemInstance item = new ItemInstance(result.getInt(1), result.getInt(2));
+				final ItemInstance item = new ItemInstance(result.getInt(1), result.getInt(2));
 				World.getInstance().storeObject(item);
 				if (item.isStackable() && (result.getInt(3) > 1))
 				{
@@ -205,7 +205,7 @@ public class ItemsOnGroundManager
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement del = con.prepareStatement("delete from itemsonground");
+			final PreparedStatement del = con.prepareStatement("delete from itemsonground");
 			del.execute();
 			del.close();
 		}
@@ -237,7 +237,7 @@ public class ItemsOnGroundManager
 				
 				try (Connection con = DatabaseFactory.getConnection())
 				{
-					PreparedStatement statement = con.prepareStatement("insert into itemsonground(object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable) values(?,?,?,?,?,?,?,?,?)");
+					final PreparedStatement statement = con.prepareStatement("insert into itemsonground(object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable) values(?,?,?,?,?,?,?,?,?)");
 					statement.setInt(1, item.getObjectId());
 					statement.setInt(2, item.getItemId());
 					statement.setInt(3, item.getCount());

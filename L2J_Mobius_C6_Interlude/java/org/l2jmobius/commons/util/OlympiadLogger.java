@@ -29,7 +29,7 @@ public class OlympiadLogger
 	
 	public static void add(String text, String cat)
 	{
-		String date = new SimpleDateFormat("yy.MM.dd H:mm:ss").format(new Date());
+		final String date = new SimpleDateFormat("yy.MM.dd H:mm:ss").format(new Date());
 		
 		new File("log/game").mkdirs();
 		final File file = new File("log/game/" + (cat != null ? cat : "_all") + ".txt");
