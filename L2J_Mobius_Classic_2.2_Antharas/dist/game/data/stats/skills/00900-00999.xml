@@ -1325,10 +1325,6 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Hide" />
-			<effect name="Speed">
-				<amount>-30</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="SilentMove">
 				<chance>100</chance>
 			</effect>

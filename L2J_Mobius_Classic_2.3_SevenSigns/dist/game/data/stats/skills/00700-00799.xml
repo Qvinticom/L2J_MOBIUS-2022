@@ -301,7 +301,7 @@
 			</effect>
 			<effect name="VampiricAttack">
 				<amount>5</amount>
-				<chance>30</chance>
+				<chance>80</chance>
 			</effect>
 			<effect name="PAtk">
 				<amount>10</amount>
@@ -915,7 +915,7 @@
 		<effects>
 			<effect name="VampiricAttack">
 				<amount>15</amount>
-				<chance>30</chance>
+				<chance>80</chance>
 			</effect>
 		</effects>
 	</skill>
@@ -2405,8 +2405,8 @@
 			</effect>
 			<effect name="DispelByCategory">
 				<slot>BUFF</slot>
-				<rate>10</rate>
-				<max>1</max>
+				<rate>25</rate>
+				<max>3</max>
 			</effect>
 			<effect name="MaxCp">
 				<amount>-90</amount>
@@ -3361,7 +3361,7 @@
 		<effects>
 			<effect name="VampiricAttack">
 				<amount>40</amount>
-				<chance>30</chance>
+				<chance>80</chance>
 			</effect>
 			<effect name="PAtk">
 				<amount>30</amount>

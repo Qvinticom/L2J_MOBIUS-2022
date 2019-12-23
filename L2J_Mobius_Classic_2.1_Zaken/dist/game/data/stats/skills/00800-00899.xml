@@ -1078,15 +1078,24 @@
 		<hitTime>100</hitTime>
 		<magicLvl>40</magicLvl>
 		<mpConsume>50</mpConsume>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<lvlBonusRate>20</lvlBonusRate>
+		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="TeleportToTarget" />
 			<effect name="TargetCancel" />
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="822" toLevel="3" name="Repair Golem">

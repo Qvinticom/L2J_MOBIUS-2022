@@ -1071,11 +1071,6 @@
 	<skill id="821" toLevel="8" name="Shadow Step">
 		<!-- Moves a character behind enemy's back. Cancels the target and Stuns. -->
 		<icon>icon.skill0821</icon>
-		<abnormalLvl>2</abnormalLvl>
-		<abnormalTime>1</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>70</activateRate> <!-- Seven Signs -->
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>-1</effectPoint>
@@ -1101,10 +1096,17 @@
 			<value level="7">80</value>
 			<value level="8">85</value>
 		</mpConsume>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>70</activateRate> <!-- Seven Signs -->
+		<basicProperty>PHYSICAL</basicProperty>
+		<lvlBonusRate>20</lvlBonusRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
