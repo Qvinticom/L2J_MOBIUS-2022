@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stats;
 
 /**
- * @author Sdw
+ * @author Sdw, Mobius
  */
 public class TwoHandedSwordBonus extends AbstractEffect
 {
@@ -37,18 +37,72 @@ public class TwoHandedSwordBonus extends AbstractEffect
 	private static final Condition _slotCondition = new ConditionUsingSlotType(Item.SLOT_LR_HAND);
 	
 	private final double _pAtkAmount;
-	private final StatModifierType _pAtkmode;
+	private final StatModifierType _pAtkMode;
 	
-	private final double _accuracyAmount;
-	private final StatModifierType _accuracyMode;
+	private final double _mAtkAmount;
+	private final StatModifierType _mAtkMode;
+	
+	private final double _pAtkSpeedAmount;
+	private final StatModifierType _pAtkSpeedMode;
+	
+	private final double _mAtkSpeedAmount;
+	private final StatModifierType _mAtkSpeedMode;
+	
+	private final double _pAccuracyAmount;
+	private final StatModifierType _pAccuracyMode;
+	
+	private final double _mpAccuracyAmount;
+	private final StatModifierType _mpAccuracyMode;
+	
+	private final double _pCritRateAmount;
+	private final StatModifierType _pCritRateMode;
+	
+	private final double _mCritRateAmount;
+	private final StatModifierType _mCritRateMode;
+	
+	private final double _pCritDamageAmount;
+	private final StatModifierType _pCritDamageMode;
+	
+	private final double _mCritDamageAmount;
+	private final StatModifierType _mCritDamageMode;
+	
+	private final double _speedAmount;
+	private final StatModifierType _speedMode;
 	
 	public TwoHandedSwordBonus(StatsSet params)
 	{
 		_pAtkAmount = params.getDouble("pAtkAmount", 0);
-		_pAtkmode = params.getEnum("pAtkmode", StatModifierType.class, StatModifierType.DIFF);
+		_pAtkMode = params.getEnum("pAtkMode", StatModifierType.class, StatModifierType.DIFF);
 		
-		_accuracyAmount = params.getDouble("accuracyAmount", 0);
-		_accuracyMode = params.getEnum("accuracyMode", StatModifierType.class, StatModifierType.DIFF);
+		_mAtkAmount = params.getDouble("mAtkAmount", 0);
+		_mAtkMode = params.getEnum("mAtkMode", StatModifierType.class, StatModifierType.DIFF);
+		
+		_pAtkSpeedAmount = params.getDouble("pAtkSpeedAmount", 0);
+		_pAtkSpeedMode = params.getEnum("pAtkSpeedMode", StatModifierType.class, StatModifierType.DIFF);
+		
+		_mAtkSpeedAmount = params.getDouble("mAtkSpeedAmount", 0);
+		_mAtkSpeedMode = params.getEnum("mAtkSpeedMode", StatModifierType.class, StatModifierType.DIFF);
+		
+		_pAccuracyAmount = params.getDouble("pAccuracyAmount", 0);
+		_pAccuracyMode = params.getEnum("pAccuracyMode", StatModifierType.class, StatModifierType.DIFF);
+		
+		_mpAccuracyAmount = params.getDouble("mpAccuracyAmount", 0);
+		_mpAccuracyMode = params.getEnum("mpAccuracyMode", StatModifierType.class, StatModifierType.DIFF);
+		
+		_pCritRateAmount = params.getDouble("pCritRateAmount", 0);
+		_pCritRateMode = params.getEnum("pCritRateMode", StatModifierType.class, StatModifierType.DIFF);
+		
+		_mCritRateAmount = params.getDouble("mCritRateAmount", 0);
+		_mCritRateMode = params.getEnum("mCritRateMode", StatModifierType.class, StatModifierType.DIFF);
+		
+		_pCritDamageAmount = params.getDouble("pCritDamageAmount", 0);
+		_pCritDamageMode = params.getEnum("pCritDamageMode", StatModifierType.class, StatModifierType.DIFF);
+		
+		_mCritDamageAmount = params.getDouble("mCritDamageAmount", 0);
+		_mCritDamageMode = params.getEnum("mCritDamageMode", StatModifierType.class, StatModifierType.DIFF);
+		
+		_speedAmount = params.getDouble("speedAmount", 0);
+		_speedMode = params.getEnum("speedMode", StatModifierType.class, StatModifierType.DIFF);
 	}
 	
 	@Override
@@ -56,7 +110,7 @@ public class TwoHandedSwordBonus extends AbstractEffect
 	{
 		if (_weaponTypeCondition.test(effected, effected, skill) && _slotCondition.test(effected, effected, skill))
 		{
-			switch (_pAtkmode)
+			switch (_pAtkMode)
 			{
 				case DIFF:
 				{
@@ -70,16 +124,268 @@ public class TwoHandedSwordBonus extends AbstractEffect
 				}
 			}
 			
-			switch (_accuracyMode)
+			switch (_mAtkMode)
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.ACCURACY_COMBAT, _accuracyAmount);
+					effected.getStat().mergeAdd(Stats.MAGIC_ATTACK, _mAtkAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.ACCURACY_COMBAT, (_accuracyAmount / 100) + 1);
+					effected.getStat().mergeMul(Stats.MAGIC_ATTACK, (_mAtkAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_pAtkSpeedMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.PHYSICAL_ATTACK_SPEED, _pAtkSpeedAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.PHYSICAL_ATTACK_SPEED, (_pAtkSpeedAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_mAtkSpeedMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.MAGIC_ATTACK_SPEED, _mAtkSpeedAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.MAGIC_ATTACK_SPEED, (_mAtkSpeedAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_mAtkMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.MAGIC_ATTACK, _mAtkAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.MAGIC_ATTACK, (_mAtkAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_pAtkSpeedMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.PHYSICAL_ATTACK_SPEED, _pAtkSpeedAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.PHYSICAL_ATTACK_SPEED, (_pAtkSpeedAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_mAtkSpeedMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.MAGIC_ATTACK_SPEED, _mAtkSpeedAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.MAGIC_ATTACK_SPEED, (_mAtkSpeedAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_pAccuracyMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.ACCURACY_COMBAT, _pAccuracyAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.ACCURACY_COMBAT, (_pAccuracyAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_mpAccuracyMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.ACCURACY_MAGIC, _mpAccuracyAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.ACCURACY_MAGIC, (_mpAccuracyAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_pCritRateMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.CRITICAL_RATE, _pCritRateAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.CRITICAL_RATE, (_pCritRateAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_mCritRateMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.MAGIC_CRITICAL_RATE, _mCritRateAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.MAGIC_CRITICAL_RATE, (_mCritRateAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_pCritDamageMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.CRITICAL_DAMAGE_ADD, _pCritDamageAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.CRITICAL_DAMAGE, (_pCritDamageAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_mCritDamageMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.MAGIC_CRITICAL_DAMAGE_ADD, _mCritDamageAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.MAGIC_CRITICAL_DAMAGE, (_mCritDamageAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_speedMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.MOVE_SPEED, _speedAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.MOVE_SPEED, (_speedAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_mpAccuracyMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.ACCURACY_MAGIC, _mpAccuracyAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.ACCURACY_MAGIC, (_mpAccuracyAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_pCritRateMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.CRITICAL_RATE, _pCritRateAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.CRITICAL_RATE, (_pCritRateAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_mCritRateMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.MAGIC_CRITICAL_RATE, _mCritRateAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.MAGIC_CRITICAL_RATE, (_mCritRateAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_pCritDamageMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.CRITICAL_DAMAGE_ADD, _pCritDamageAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.CRITICAL_DAMAGE, (_pCritDamageAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_mCritDamageMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.MAGIC_CRITICAL_DAMAGE_ADD, _mCritDamageAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.MAGIC_CRITICAL_DAMAGE, (_mCritDamageAmount / 100) + 1);
+					break;
+				}
+			}
+			
+			switch (_speedMode)
+			{
+				case DIFF:
+				{
+					effected.getStat().mergeAdd(Stats.MOVE_SPEED, _speedAmount);
+					break;
+				}
+				case PER:
+				{
+					effected.getStat().mergeMul(Stats.MOVE_SPEED, (_speedAmount / 100) + 1);
 					break;
 				}
 			}

@@ -429,7 +429,7 @@
 			</effect>
 			<effect name="TwoHandedBluntBonus">
 				<pAtkAmount>120</pAtkAmount>
-				<pAtkmode>PER</pAtkmode>
+				<pAtkMode>PER</pAtkMode>
 			</effect>
 			<effect name="TwoHandedBluntBonus">
 				<pAtkAmount>
@@ -444,11 +444,11 @@
 					<value level="9">1786</value>
 					<value level="10">1894</value>
 				</pAtkAmount>
-				<pAtkmode>DIFF</pAtkmode>
+				<pAtkMode>DIFF</pAtkMode>
 			</effect>
 			<effect name="TwoHandedBluntBonus">
-				<accuracyAmount>4</accuracyAmount>
-				<accuracyMode>DIFF</accuracyMode>
+				<pAccuracyAmount>4</pAccuracyAmount>
+				<pAccuracyMode>DIFF</pAccuracyMode>
 			</effect>
 			<effect name="StatUp">
 				<amount>2</amount>

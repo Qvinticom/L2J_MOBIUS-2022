@@ -1492,14 +1492,9 @@
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
 		<reuseDelay>300000</reuseDelay>
-		<targetType>OTHERS</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND_PC</affectObject>
-		<conditions>
-			<condition name="TargetMyParty">
-				<includeMe>false</includeMe>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="TransferDamageToPlayer">
 				<amount>

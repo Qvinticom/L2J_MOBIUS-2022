@@ -655,9 +655,9 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="PhysicalAttackSpeed">
-				<amount>5</amount>
-				<mode>PER</mode>
+			<effect name="TwoHandedSwordBonus">
+				<pAtkSpeedAmount>5</pAtkSpeedAmount>
+				<pAtkSpeedMode>PER</pAtkSpeedMode>
 			</effect>
 		</effects>
 	</skill>
@@ -668,9 +668,9 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="Accuracy">
-				<amount>3.9</amount>
-				<mode>DIFF</mode>
+			<effect name="TwoHandedSwordBonus">
+				<pAccuracyAmount>3.9</pAccuracyAmount>
+				<pAccuracyMode>DIFF</pAccuracyMode>
 			</effect>
 		</effects>
 	</skill>
@@ -707,9 +707,9 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="CriticalDamage">
-				<amount>340</amount>
-				<mode>DIFF</mode>
+			<effect name="TwoHandedSwordBonus">
+				<pCritDamageAmount>340</pCritDamageAmount>
+				<pCritDamageMode>DIFF</pCritDamageMode>
 			</effect>
 		</effects>
 	</skill>
@@ -723,9 +723,9 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="CriticalRate">
-				<amount>54.4</amount>
-				<mode>DIFF</mode>
+			<effect name="TwoHandedSwordBonus">
+				<pCritRateAmount>54.4</pCritRateAmount>
+				<pCritRateMode>DIFF</pCritRateMode>
 			</effect>
 		</effects>
 	</skill>

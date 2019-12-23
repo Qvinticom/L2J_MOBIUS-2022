@@ -239,16 +239,27 @@
 			<value level="2">76</value>
 		</magicLvl>
 		<effects>
+			<effect name="TwoHandedSwordBonus">
+				<pAtkAmount>1</pAtkAmount>
+				<pAtkMode>PER</pAtkMode>
+			</effect>
+			<effect name="TwoHandedSwordBonus">
+				<pAtkAmount>
+					<value level="1">51</value>
+					<value level="2">102</value>
+				</pAtkAmount>
+				<pAtkMode>DIFF</pAtkMode>
+			</effect>
 			<effect name="TwoHandedBluntBonus">
 				<pAtkAmount>1</pAtkAmount>
-				<pAtkmode>PER</pAtkmode>
+				<pAtkMode>PER</pAtkMode>
 			</effect>
 			<effect name="TwoHandedBluntBonus">
 				<pAtkAmount>
 					<value level="1">51</value>
 					<value level="2">102</value>
 				</pAtkAmount>
-				<pAtkmode>DIFF</pAtkmode>
+				<pAtkMode>DIFF</pAtkMode>
 			</effect>
 		</effects>
 	</skill>
@@ -1513,6 +1524,47 @@
 			<effect name="StatUp">
 				<amount>1</amount>
 				<stat>INT</stat>
+			</effect>
+			<effect name="TwoHandedBluntBonus">
+				<pAtkAmount>
+					<value level="1">51</value>
+					<value level="2">112</value>
+				</pAtkAmount>
+				<pAtkMode>DIFF</pAtkMode>
+				<mAtkAmount>
+					<value level="1">70</value>
+					<value level="2">140</value>
+				</mAtkAmount>
+				<mAtkMode>DIFF</mAtkMode>
+				<pAccuracyAmount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</pAccuracyAmount>
+				<pAccuracyMode>DIFF</pAccuracyMode>
+			</effect>
+			<effect name="TwoHandedBluntBonus">
+				<pAtkAmount>
+					<value level="1">80</value>
+					<value level="2">100</value>
+				</pAtkAmount>
+				<pAtkMode>PER</pAtkMode>
+				<mAtkAmount>
+					<value level="1">8</value>
+					<value level="2">12</value>
+				</mAtkAmount>
+				<mAtkMode>PER</mAtkMode>
+			</effect>
+			<effect name="TwoHandedBluntBonus">
+				<mAtkSpeedAmount>
+					<value level="1">12</value>
+					<value level="2">15</value>
+				</mAtkSpeedAmount>
+				<mAtkSpeedMode>PER</mAtkSpeedMode>
+				<mCritRateAmount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+				</mCritRateAmount>
+				<mCritRateMode>PER</mCritRateMode>
 			</effect>
 		</effects>
 	</skill>
@@ -3221,7 +3273,7 @@
 					<value level="3">15</value>
 					<value level="4">20</value>
 				</pAtkAmount>
-				<pAtkmode>PER</pAtkmode>
+				<pAtkMode>PER</pAtkMode>
 			</effect>
 			<effect name="TwoHandedBluntBonus">
 				<pAtkAmount>
@@ -3230,7 +3282,7 @@
 					<value level="3">15</value>
 					<value level="4">20</value>
 				</pAtkAmount>
-				<pAtkmode>PER</pAtkmode>
+				<pAtkMode>PER</pAtkMode>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -3473,15 +3525,15 @@
 			</effect>
 			<effect name="TwoHandedSwordBonus">
 				<pAtkAmount>10</pAtkAmount>
-				<pAtkmode>PER</pAtkmode>
-				<accuracyAmount>8</accuracyAmount>
-				<accuracyMode>DIFF</accuracyMode>
+				<pAtkMode>PER</pAtkMode>
+				<pAccuracyAmount>8</pAccuracyAmount>
+				<pAccuracyMode>DIFF</pAccuracyMode>
 			</effect>
 			<effect name="TwoHandedBluntBonus">
 				<pAtkAmount>10</pAtkAmount>
-				<pAtkmode>PER</pAtkmode>
-				<accuracyAmount>8</accuracyAmount>
-				<accuracyMode>DIFF</accuracyMode>
+				<pAtkMode>PER</pAtkMode>
+				<pAccuracyAmount>8</pAccuracyAmount>
+				<pAccuracyMode>DIFF</pAccuracyMode>
 			</effect>
 			<effect name="PAtk">
 				<amount>10</amount>
@@ -4863,6 +4915,7 @@
 				<SWORD>-5</SWORD>
 				<BLUNT>-5</BLUNT>
 				<DUAL>-5</DUAL>
+				<DUALBLUNT>-5</DUALBLUNT>
 			</effect>
 		</pvpEffects>
 		<pveEffects>
@@ -4896,6 +4949,7 @@
 				<SWORD>-5</SWORD>
 				<BLUNT>-5</BLUNT>
 				<DUAL>-5</DUAL>
+				<DUALBLUNT>-5</DUALBLUNT>
 			</effect>
 		</pveEffects>
 	</skill>

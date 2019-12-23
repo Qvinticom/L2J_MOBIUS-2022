@@ -77,7 +77,7 @@
 		</effects>
 	</skill>
 	<skill id="10608" toLevel="4" name="Superior Haste">
-		<!-- P. Skill Cooldown -$s1, Infection Atk. Rate +$s2. Also doubles the duration of Shadow Dash. -->
+		<!-- P. Skill Cooldown -5%, Infection Atk. Rate +10%. Also doubles the duration of Shadow Dash. -->
 		<icon>icon.skill10608</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -87,14 +87,13 @@
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="Speed">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">6</value>
-					<value level="3">7</value>
-					<value level="4">10</value>
-				</amount>
-				<mode>DIFF</mode>
+			<effect name="AttackTrait">
+				<BLEED>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">13</value>
+					<value level="4">15</value>
+				</BLEED>
 			</effect>
 			<effect name="Reuse">
 				<amount>

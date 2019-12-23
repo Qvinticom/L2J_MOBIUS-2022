@@ -910,7 +910,7 @@
 					<value level="5">7.4</value>
 					<value level="6">8.3</value>
 				</pAtkAmount>
-				<pAtkmode>PER</pAtkmode>
+				<pAtkMode>PER</pAtkMode>
 			</effect>
 			<effect name="TwoHandedBluntBonus">
 				<pAtkAmount>
@@ -921,7 +921,7 @@
 					<value level="5">7.4</value>
 					<value level="6">8.3</value>
 				</pAtkAmount>
-				<pAtkmode>PER</pAtkmode>
+				<pAtkMode>PER</pAtkMode>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -1225,11 +1225,11 @@
 			</effect>
 			<effect name="TwoHandedSwordBonus">
 				<pAtkAmount>5</pAtkAmount>
-				<pAtkmode>DIFF</pAtkmode>
+				<pAtkMode>DIFF</pAtkMode>
 			</effect>
 			<effect name="TwoHandedBluntBonus">
 				<pAtkAmount>5</pAtkAmount>
-				<pAtkmode>DIFF</pAtkmode>
+				<pAtkMode>DIFF</pAtkMode>
 			</effect>
 		</effects>
 	</skill>

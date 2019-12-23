@@ -101,7 +101,7 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceCriticalDamage">
-				<amount>25</amount>
+				<amount>-25</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait">
@@ -390,30 +390,11 @@
 			<effect name="SkillCritical">
 				<stat>INT</stat>
 			</effect>
-			<effect name="PAtk">
-				<amount>105</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="MAtk">
 				<amount>24</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="PAtk">
-				<amount>
-					<value level="1">822</value>
-					<value level="2">953</value>
-					<value level="3">1105</value>
-					<value level="4">1244</value>
-					<value level="5">1409</value>
-					<value level="6">1495</value>
-					<value level="7">1586</value>
-					<value level="8">1683</value>
-					<value level="9">1786</value>
-					<value level="10">1894</value>
-				</amount>
-				<mode>DIFF</mode>
 				<weaponType>
-					<item>DUALBLUNT</item>
+					<item>BLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="MAtk">
@@ -430,25 +411,50 @@
 					<value level="10">2478</value>
 				</amount>
 				<mode>DIFF</mode>
-			</effect>
-			<effect name="Accuracy">
-				<amount>4</amount>
-				<mode>DIFF</mode>
 				<weaponType>
-					<item>DUALBLUNT</item>
+					<item>BLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="MagicalAttackSpeed">
 				<amount>23</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>BLUNT</item>
+				</weaponType>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>6</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BLUNT</item>
+				</weaponType>
+			</effect>
+			<effect name="TwoHandedBluntBonus">
+				<pAtkAmount>120</pAtkAmount>
+				<pAtkMode>PER</pAtkMode>
+			</effect>
+			<effect name="TwoHandedBluntBonus">
+				<pAtkAmount>
+					<value level="1">822</value>
+					<value level="2">953</value>
+					<value level="3">1105</value>
+					<value level="4">1244</value>
+					<value level="5">1409</value>
+					<value level="6">1495</value>
+					<value level="7">1586</value>
+					<value level="8">1683</value>
+					<value level="9">1786</value>
+					<value level="10">1894</value>
+				</pAtkAmount>
+				<pAtkMode>DIFF</pAtkMode>
+			</effect>
+			<effect name="TwoHandedBluntBonus">
+				<pAccuracyAmount>4</pAccuracyAmount>
+				<pAccuracyMode>DIFF</pAccuracyMode>
 			</effect>
 			<effect name="StatUp">
 				<amount>2</amount>
 				<stat>INT</stat>
-			</effect>
-			<effect name="MagicCriticalRate">
-				<amount>6</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -2515,7 +2521,6 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="PhysicalAttack" />
 			<effect name="Speed">
 				<amount>-100</amount>
 				<mode>DIFF</mode>
@@ -3446,7 +3451,7 @@
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
 		<isMagic>1</isMagic>
 		<targetType>SUMMON</targetType>
-		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
+		<affectScope>SINGLE</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="RebalanceHPSummon" />

@@ -87,14 +87,13 @@
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="Speed">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">6</value>
-					<value level="3">7</value>
-					<value level="4">10</value>
-				</amount>
-				<mode>DIFF</mode>
+			<effect name="AttackTrait">
+				<BLEED>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">13</value>
+					<value level="4">15</value>
+				</BLEED>
 			</effect>
 			<effect name="Reuse">
 				<amount>

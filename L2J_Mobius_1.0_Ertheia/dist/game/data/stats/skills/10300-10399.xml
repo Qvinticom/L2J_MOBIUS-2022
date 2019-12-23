@@ -471,7 +471,7 @@
 					<value level="3">4</value>
 					<value level="4">5</value>
 				</pAtkAmount>
-				<pAtkmode>PER</pAtkmode>
+				<pAtkMode>PER</pAtkMode>
 			</effect>
 			<effect name="TwoHandedBluntBonus">
 				<pAtkAmount>
@@ -480,7 +480,7 @@
 					<value level="3">4</value>
 					<value level="4">5</value>
 				</pAtkAmount>
-				<pAtkmode>PER</pAtkmode>
+				<pAtkMode>PER</pAtkMode>
 			</effect>
 			<effect name="TwoHandedSwordBonus">
 				<pAtkAmount>
@@ -1483,11 +1483,11 @@
 		<effects>
 			<effect name="TwoHandedSwordBonus">
 				<pAtkAmount>30</pAtkAmount>
-				<pAtkmode>PER</pAtkmode>
+				<pAtkMode>PER</pAtkMode>
 			</effect>
 			<effect name="TwoHandedBluntBonus">
 				<pAtkAmount>30</pAtkAmount>
-				<pAtkmode>PER</pAtkmode>
+				<pAtkMode>PER</pAtkMode>
 			</effect>
 			<effect name="HitNumber">
 				<amount>5</amount>
