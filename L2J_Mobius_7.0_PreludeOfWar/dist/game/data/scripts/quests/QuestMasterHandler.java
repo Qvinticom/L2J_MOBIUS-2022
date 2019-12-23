@@ -91,6 +91,7 @@ import quests.Q00831_SayhasScheme.Q00831_SayhasScheme;
 import quests.Q00833_DevilsTreasureTauti.Q00833_DevilsTreasureTauti;
 import quests.Q00835_PitiableMelisa.Q00835_PitiableMelisa;
 import quests.Q00842_CaptiveDemons.Q00842_CaptiveDemons;
+import quests.Q00844_GiantsTreasure.Q00844_GiantsTreasure;
 import quests.Q00901_HowLavasaurusesAreMade.Q00901_HowLavasaurusesAreMade;
 import quests.Q00903_TheCallOfAntharas.Q00903_TheCallOfAntharas;
 import quests.Q00905_RefinedDragonBlood.Q00905_RefinedDragonBlood;
@@ -125,8 +126,13 @@ import quests.Q10459_ASickAmbition.Q10459_ASickAmbition;
 import quests.Q10501_ZakenEmbroideredSoulCloak.Q10501_ZakenEmbroideredSoulCloak;
 import quests.Q10502_FreyaEmbroideredSoulCloak.Q10502_FreyaEmbroideredSoulCloak;
 import quests.Q10503_FrintezzaEmbroideredSoulCloak.Q10503_FrintezzaEmbroideredSoulCloak;
+import quests.Q10537_KamaelDisarray.Q10537_KamaelDisarray;
+import quests.Q10538_GiantsEvolution.Q10538_GiantsEvolution;
+import quests.Q10539_EnergySupplyCutoffPlan.Q10539_EnergySupplyCutoffPlan;
 import quests.Q10540_ThwartingMimirsPlan.Q10540_ThwartingMimirsPlan;
 import quests.Q10566_BestChoice.Q10566_BestChoice;
+import quests.Q10568_KamaelsTechnologicalAdvancement.Q10568_KamaelsTechnologicalAdvancement;
+import quests.Q10569_DeclarationOfWar.Q10569_DeclarationOfWar;
 import quests.Q10571_StrategicReconciliation.Q10571_StrategicReconciliation;
 import quests.Q10575_LetsGoFishing.Q10575_LetsGoFishing;
 import quests.Q10576_GlitteringWeapons.Q10576_GlitteringWeapons;
@@ -175,6 +181,8 @@ import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedVal
 import quests.Q10849_TrialsForAdaptation.Q10849_TrialsForAdaptation;
 import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
 import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
+import quests.Q10857_SecretTeleport.Q10857_SecretTeleport;
+import quests.Q10891_AtANewPlace.Q10891_AtANewPlace;
 import quests.Q11025_PathOfDestinyProving.Q11025_PathOfDestinyProving;
 import quests.Q11026_PathOfDestinyConviction.Q11026_PathOfDestinyConviction;
 import quests.Q11027_PathOfDestinyOvercome.Q11027_PathOfDestinyOvercome;
@@ -345,7 +353,7 @@ public class QuestMasterHandler
 		Q00840_RequestFromTheKingdomsRoyalGuard.class, // TODO: Not done.
 		Q00842_CaptiveDemons.class,
 		Q00843_GiantEvolutionControl.class, // TODO: Not done.
-		Q00844_GiantsTreasure.class, // TODO: Not done.
+		Q00844_GiantsTreasure.class,
 		Q00845_SabotageTheEmbryoSupplies.class, // TODO: Not done.
 		Q00846_BuildingUpStrength.class, // TODO: Not done.
 		Q00901_HowLavasaurusesAreMade.class,
@@ -409,14 +417,14 @@ public class QuestMasterHandler
 		Q10529_IvoryTowersResearchFloatingSeaJournal.class, // FIXME: Custom.
 		Q10533_OrfensAmbition.class, // FIXME: Custom.
 		Q10535_BlacksmithsSoul3.class, // TODO: Not done.
-		Q10537_KamaelDisarray.class, // TODO: Not done.
-		Q10538_GiantsEvolution.class, // TODO: Not done.
-		Q10539_EnergySupplyCutoffPlan.class, // TODO: Not done.
+		Q10537_KamaelDisarray.class,
+		Q10538_GiantsEvolution.class,
+		Q10539_EnergySupplyCutoffPlan.class,
 		Q10540_ThwartingMimirsPlan.class,
 		Q10566_BestChoice.class,
 		Q10567_SpecialMissionNornilsGarden.class, // TODO: Not done.
-		Q10568_KamaelsTechnologicalAdvancement.class, // TODO: Not done.
-		Q10569_DeclarationOfWar.class, // TODO: Not done.
+		Q10568_KamaelsTechnologicalAdvancement.class,
+		Q10569_DeclarationOfWar.class,
 		Q10570_HurrahForKamaelsIndependence.class, // TODO: Not done.
 		Q10571_StrategicReconciliation.class,
 		Q10572_ToExpelTheEmbryosForces.class, // TODO: Not done.
@@ -483,7 +491,7 @@ public class QuestMasterHandler
 		Q10853_ToWeakenTheGiants.class, // TODO: Not done.
 		Q10854_ToSeizeTheFortress.class, // TODO: Not done.
 		Q10856_SuperionAppears.class,
-		Q10857_SecretTeleport.class, // TODO: Not done.
+		Q10857_SecretTeleport.class,
 		Q10873_ExaltedReachingAnotherLevel.class, // TODO: Not done.
 		Q10874_AgainstTheNewEnemy.class, // TODO: Not done.
 		Q10875_ForReputation.class, // TODO: Not done.
@@ -499,7 +507,7 @@ public class QuestMasterHandler
 		Q10888_SaviorsPathDefeatTheEmbryo.class, // TODO: Not done.
 		Q10889_SaviorsPathFallenEmperorsThrone.class, // TODO: Not done.
 		Q10890_SaviorsPathFallOfEtina.class, // TODO: Not done.
-		Q10891_AtANewPlace.class, // TODO: Not done.
+		Q10891_AtANewPlace.class,
 		Q10892_RevengeOneStepAtATime.class, // TODO: Not done.
 		Q10893_EndOfTwistedFate.class, // TODO: Not done.
 		Q10896_VisitTheAdventureGuild.class, // TODO: Not done.

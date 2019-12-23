@@ -206,6 +206,7 @@ import quests.Q00831_SayhasScheme.Q00831_SayhasScheme;
 import quests.Q00833_DevilsTreasureTauti.Q00833_DevilsTreasureTauti;
 import quests.Q00835_PitiableMelisa.Q00835_PitiableMelisa;
 import quests.Q00842_CaptiveDemons.Q00842_CaptiveDemons;
+import quests.Q00844_GiantsTreasure.Q00844_GiantsTreasure;
 import quests.Q00901_HowLavasaurusesAreMade.Q00901_HowLavasaurusesAreMade;
 import quests.Q00902_ReclaimOurEra.Q00902_ReclaimOurEra;
 import quests.Q00903_TheCallOfAntharas.Q00903_TheCallOfAntharas;
@@ -360,6 +361,9 @@ import quests.Q10527_TheAssassinationOfTheKetraOrcCommander.Q10527_TheAssassinat
 import quests.Q10528_TheAssassinationOfTheKetraOrcChief.Q10528_TheAssassinationOfTheKetraOrcChief;
 import quests.Q10530_KekropusLetterTheDragonsTransition.Q10530_KekropusLetterTheDragonsTransition;
 import quests.Q10534_HatchlingResearch.Q10534_HatchlingResearch;
+import quests.Q10537_KamaelDisarray.Q10537_KamaelDisarray;
+import quests.Q10538_GiantsEvolution.Q10538_GiantsEvolution;
+import quests.Q10539_EnergySupplyCutoffPlan.Q10539_EnergySupplyCutoffPlan;
 import quests.Q10540_ThwartingMimirsPlan.Q10540_ThwartingMimirsPlan;
 import quests.Q10541_TrainLikeTheRealThing.Q10541_TrainLikeTheRealThing;
 import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
@@ -369,6 +373,8 @@ import quests.Q10560_WayOfWanderingKnight.Q10560_WayOfWanderingKnight;
 import quests.Q10561_AcrossTheDeathLine.Q10561_AcrossTheDeathLine;
 import quests.Q10562_TakeUpArms.Q10562_TakeUpArms;
 import quests.Q10566_BestChoice.Q10566_BestChoice;
+import quests.Q10568_KamaelsTechnologicalAdvancement.Q10568_KamaelsTechnologicalAdvancement;
+import quests.Q10569_DeclarationOfWar.Q10569_DeclarationOfWar;
 import quests.Q10571_StrategicReconciliation.Q10571_StrategicReconciliation;
 import quests.Q10575_LetsGoFishing.Q10575_LetsGoFishing;
 import quests.Q10576_GlitteringWeapons.Q10576_GlitteringWeapons;
@@ -480,6 +486,7 @@ import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedVal
 import quests.Q10849_TrialsForAdaptation.Q10849_TrialsForAdaptation;
 import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
 import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
+import quests.Q10857_SecretTeleport.Q10857_SecretTeleport;
 import quests.not_done.*;
 
 /**
@@ -726,7 +733,7 @@ public class QuestMasterHandler
 		Q00841_ContaminationContainment.class, // TODO: Not done.
 		Q00842_CaptiveDemons.class,
 		Q00843_GiantEvolutionControl.class, // TODO: Not done.
-		Q00844_GiantsTreasure.class, // TODO: Not done.
+		Q00844_GiantsTreasure.class,
 		Q00845_SabotageTheEmbryoSupplies.class, // TODO: Not done.
 		Q00846_BuildingUpStrength.class, // TODO: Not done.
 		Q00901_HowLavasaurusesAreMade.class,
@@ -903,9 +910,9 @@ public class QuestMasterHandler
 		Q10532_UncoveringTheConspiracy.class, // TODO: Not done.
 		Q10534_HatchlingResearch.class,
 		Q10535_BlacksmithsSoul3.class, // TODO: Not done.
-		Q10537_KamaelDisarray.class, // TODO: Not done.
-		Q10538_GiantsEvolution.class, // TODO: Not done.
-		Q10539_EnergySupplyCutoffPlan.class, // TODO: Not done.
+		Q10537_KamaelDisarray.class,
+		Q10538_GiantsEvolution.class,
+		Q10539_EnergySupplyCutoffPlan.class,
 		Q10540_ThwartingMimirsPlan.class,
 		Q10541_TrainLikeTheRealThing.class,
 		Q10542_SearchingForNewPower.class,
@@ -927,8 +934,8 @@ public class QuestMasterHandler
 		Q10565_NothingIsImpossible.class, // TODO: Not done.
 		Q10566_BestChoice.class,
 		Q10567_SpecialMissionNornilsGarden.class, // TODO: Not done.
-		Q10568_KamaelsTechnologicalAdvancement.class, // TODO: Not done.
-		Q10569_DeclarationOfWar.class, // TODO: Not done.
+		Q10568_KamaelsTechnologicalAdvancement.class,
+		Q10569_DeclarationOfWar.class,
 		Q10570_HurrahForKamaelsIndependence.class, // TODO: Not done.
 		Q10571_StrategicReconciliation.class,
 		Q10572_ToExpelTheEmbryosForces.class, // TODO: Not done.
@@ -1059,7 +1066,7 @@ public class QuestMasterHandler
 		Q10853_ToWeakenTheGiants.class, // TODO: Not done.
 		Q10854_ToSeizeTheFortress.class, // TODO: Not done.
 		Q10856_SuperionAppears.class,
-		Q10857_SecretTeleport.class, // TODO: Not done.
+		Q10857_SecretTeleport.class,
 		Q10858_QueenRamonaControllerOfTheVessel.class, // TODO: Not done.
 		Q10859_OwnTheEarthAndTheHeavens.class, // TODO: Not done.
 		Q10873_ExaltedReachingAnotherLevel.class, // TODO: Not done.

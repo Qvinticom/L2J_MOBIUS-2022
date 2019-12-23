@@ -197,6 +197,7 @@ import quests.Q00831_SayhasScheme.Q00831_SayhasScheme;
 import quests.Q00833_DevilsTreasureTauti.Q00833_DevilsTreasureTauti;
 import quests.Q00835_PitiableMelisa.Q00835_PitiableMelisa;
 import quests.Q00842_CaptiveDemons.Q00842_CaptiveDemons;
+import quests.Q00844_GiantsTreasure.Q00844_GiantsTreasure;
 import quests.Q00901_HowLavasaurusesAreMade.Q00901_HowLavasaurusesAreMade;
 import quests.Q00902_ReclaimOurEra.Q00902_ReclaimOurEra;
 import quests.Q00903_TheCallOfAntharas.Q00903_TheCallOfAntharas;
@@ -359,6 +360,9 @@ import quests.Q10527_TheAssassinationOfTheKetraOrcCommander.Q10527_TheAssassinat
 import quests.Q10528_TheAssassinationOfTheKetraOrcChief.Q10528_TheAssassinationOfTheKetraOrcChief;
 import quests.Q10530_KekropusLetterTheDragonsTransition.Q10530_KekropusLetterTheDragonsTransition;
 import quests.Q10534_HatchlingResearch.Q10534_HatchlingResearch;
+import quests.Q10537_KamaelDisarray.Q10537_KamaelDisarray;
+import quests.Q10538_GiantsEvolution.Q10538_GiantsEvolution;
+import quests.Q10539_EnergySupplyCutoffPlan.Q10539_EnergySupplyCutoffPlan;
 import quests.Q10540_ThwartingMimirsPlan.Q10540_ThwartingMimirsPlan;
 import quests.Q10541_TrainLikeTheRealThing.Q10541_TrainLikeTheRealThing;
 import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
@@ -469,6 +473,7 @@ import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedVal
 import quests.Q10849_TrialsForAdaptation.Q10849_TrialsForAdaptation;
 import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
 import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
+import quests.Q10857_SecretTeleport.Q10857_SecretTeleport;
 import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
 import quests.not_done.Q00655_AGrandPlanForTamingWildBeasts;
 import quests.not_done.Q00744_TheAlligatorHunterReturns;
@@ -494,7 +499,6 @@ import quests.not_done.Q00839_RequestFromTheUnworldlyVisitors;
 import quests.not_done.Q00840_RequestFromTheKingdomsRoyalGuard;
 import quests.not_done.Q00841_ContaminationContainment;
 import quests.not_done.Q00843_GiantEvolutionControl;
-import quests.not_done.Q00844_GiantsTreasure;
 import quests.not_done.Q00845_SabotageTheEmbryoSupplies;
 import quests.not_done.Q00846_BuildingUpStrength;
 import quests.not_done.Q00910_RedLibraRequestLv1;
@@ -514,9 +518,6 @@ import quests.not_done.Q10457_KefensisIllusion;
 import quests.not_done.Q10506_DianasRequest;
 import quests.not_done.Q10531_OddHappeningsAtDragonValley;
 import quests.not_done.Q10532_UncoveringTheConspiracy;
-import quests.not_done.Q10537_KamaelDisarray;
-import quests.not_done.Q10538_GiantsEvolution;
-import quests.not_done.Q10539_EnergySupplyCutoffPlan;
 import quests.not_done.Q10748_MysteriousSuggestion1;
 import quests.not_done.Q10749_MysteriousSuggestion2;
 import quests.not_done.Q10844_BloodyBattleSeizingSupplies;
@@ -526,7 +527,6 @@ import quests.not_done.Q10848_TrialsBeforeTheBattle;
 import quests.not_done.Q10852_TheMotherTreeRevivalProject;
 import quests.not_done.Q10853_ToWeakenTheGiants;
 import quests.not_done.Q10854_ToSeizeTheFortress;
-import quests.not_done.Q10857_SecretTeleport;
 import quests.not_done.Q10858_QueenRamonaControllerOfTheVessel;
 import quests.not_done.Q10859_OwnTheEarthAndTheHeavens;
 
@@ -742,7 +742,7 @@ public class QuestMasterHandler
 		Q00841_ContaminationContainment.class, // TODO: Not done.
 		Q00842_CaptiveDemons.class,
 		Q00843_GiantEvolutionControl.class, // TODO: Not done.
-		Q00844_GiantsTreasure.class, // TODO: Not done.
+		Q00844_GiantsTreasure.class,
 		Q00845_SabotageTheEmbryoSupplies.class, // TODO: Not done.
 		Q00846_BuildingUpStrength.class, // TODO: Not done.
 		Q00901_HowLavasaurusesAreMade.class,
@@ -924,9 +924,9 @@ public class QuestMasterHandler
 		Q10531_OddHappeningsAtDragonValley.class, // TODO: Not done.
 		Q10532_UncoveringTheConspiracy.class, // TODO: Not done.
 		Q10534_HatchlingResearch.class,
-		Q10537_KamaelDisarray.class, // TODO: Not done.
-		Q10538_GiantsEvolution.class, // TODO: Not done.
-		Q10539_EnergySupplyCutoffPlan.class, // TODO: Not done.
+		Q10537_KamaelDisarray.class,
+		Q10538_GiantsEvolution.class,
+		Q10539_EnergySupplyCutoffPlan.class,
 		Q10540_ThwartingMimirsPlan.class,
 		Q10541_TrainLikeTheRealThing.class,
 		Q10542_SearchingForNewPower.class,
@@ -1046,7 +1046,7 @@ public class QuestMasterHandler
 		Q10853_ToWeakenTheGiants.class, // TODO: Not done.
 		Q10854_ToSeizeTheFortress.class, // TODO: Not done.
 		Q10856_SuperionAppears.class,
-		Q10857_SecretTeleport.class, // TODO: Not done.
+		Q10857_SecretTeleport.class,
 		Q10858_QueenRamonaControllerOfTheVessel.class, // TODO: Not done.
 		Q10859_OwnTheEarthAndTheHeavens.class, // TODO: Not done.
 	};
