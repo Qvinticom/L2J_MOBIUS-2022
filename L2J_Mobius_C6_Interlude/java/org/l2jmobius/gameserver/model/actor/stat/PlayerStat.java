@@ -23,8 +23,6 @@ import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.model.actor.instance.ClassMasterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.ClassLevel;
-import org.l2jmobius.gameserver.model.base.PlayerClass;
 import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.entity.event.TvT;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -178,24 +176,22 @@ public class PlayerStat extends PlayableStat
 		if (Config.ALLOW_CLASS_MASTERS && Config.ALLOW_REMOTE_CLASS_MASTERS)
 		{
 			final ClassMasterInstance masterInstance = ClassMasterInstance.getInstance();
-			
 			if (masterInstance != null)
 			{
 				
-				final ClassLevel curLevel = PlayerClass.values()[getActiveChar().getClassId().getId()].getLevel();
-				if ((getLevel() >= 20) && (curLevel == ClassLevel.FIRST))
+				final int curLevel = getActiveChar().getClassId().level();
+				if ((getLevel() >= 20) && (curLevel == 0))
 				{
 					ClassMasterInstance.getInstance().onAction(getActiveChar());
 				}
-				else if ((getLevel() >= 40) && (curLevel == ClassLevel.SECOND))
+				else if ((getLevel() >= 40) && (curLevel == 1))
 				{
 					ClassMasterInstance.getInstance().onAction(getActiveChar());
 				}
-				else if ((getLevel() >= 76) && (curLevel == ClassLevel.THIRD))
+				else if ((getLevel() >= 76) && (curLevel == 2))
 				{
 					ClassMasterInstance.getInstance().onAction(getActiveChar());
 				}
-				
 			}
 			else
 			{

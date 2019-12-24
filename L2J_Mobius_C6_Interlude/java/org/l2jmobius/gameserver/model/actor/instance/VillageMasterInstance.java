@@ -963,9 +963,7 @@ public class VillageMasterInstance extends FolkInstance
 		 * follows: Treasure Hunter, Plainswalker and Abyss Walker Hawkeye, Silver Ranger and Phantom Ranger Paladin, Dark Avenger, Temple Knight and Shillien Knight Warlocks, Elemental Summoner and Phantom Summoner Elder and Shillien Elder Swordsinger and Bladedancer Sorcerer, Spellsinger and
 		 * Spellhowler
 		 */
-		
 		final Set<PlayerClass> availSubs = currClass.getAvailableSubclasses(player);
-		
 		if (availSubs != null)
 		{
 			for (PlayerClass availSub : availSubs)

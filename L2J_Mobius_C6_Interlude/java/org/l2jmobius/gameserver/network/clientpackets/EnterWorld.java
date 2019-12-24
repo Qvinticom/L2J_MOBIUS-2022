@@ -49,8 +49,6 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.ClassMasterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.ClassLevel;
-import org.l2jmobius.gameserver.model.base.PlayerClass;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.model.entity.ClanHall;
@@ -465,17 +463,16 @@ public class EnterWorld extends GameClientPacket
 			final ClassMasterInstance master = ClassMasterInstance.getInstance();
 			if (master != null)
 			{
-				final ClassLevel lvlnow = PlayerClass.values()[player.getClassId().getId()].getLevel();
-				
-				if ((player.getLevel() >= 20) && (lvlnow == ClassLevel.FIRST))
+				final int lvlnow = player.getClassId().level();
+				if ((player.getLevel() >= 20) && (lvlnow == 0))
 				{
 					ClassMasterInstance.getInstance().onAction(player);
 				}
-				else if ((player.getLevel() >= 40) && (lvlnow == ClassLevel.SECOND))
+				else if ((player.getLevel() >= 40) && (lvlnow == 1))
 				{
 					ClassMasterInstance.getInstance().onAction(player);
 				}
-				else if ((player.getLevel() >= 76) && (lvlnow == ClassLevel.THIRD))
+				else if ((player.getLevel() >= 76) && (lvlnow == 2))
 				{
 					ClassMasterInstance.getInstance().onAction(player);
 				}

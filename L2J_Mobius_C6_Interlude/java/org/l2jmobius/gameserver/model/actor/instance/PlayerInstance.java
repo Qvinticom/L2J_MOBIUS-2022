@@ -129,8 +129,6 @@ import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
 import org.l2jmobius.gameserver.model.actor.status.PlayerStatus;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.model.base.ClassLevel;
-import org.l2jmobius.gameserver.model.base.PlayerClass;
 import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
@@ -2918,7 +2916,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void setClassId(int id)
 	{
-		if ((getLvlJoinedAcademy() != 0) && (_clan != null) && (PlayerClass.values()[id].getLevel() == ClassLevel.THIRD))
+		if ((getLvlJoinedAcademy() != 0) && (_clan != null) && (ClassId.getClassId(id).level() == 2))
 		{
 			if (getLvlJoinedAcademy() <= 16)
 			{

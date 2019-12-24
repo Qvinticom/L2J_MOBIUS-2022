@@ -125,9 +125,8 @@ public class RequestBypassToServer extends GameClientPacket
 					return;
 				}
 				
-				final int endOfId = _command.indexOf('_', 5);
 				String id;
-				
+				final int endOfId = _command.indexOf('_', 5);
 				if (endOfId > 0)
 				{
 					id = _command.substring(4, endOfId);
@@ -139,8 +138,6 @@ public class RequestBypassToServer extends GameClientPacket
 				
 				try
 				{
-					final WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
-					
 					if (_command.substring(endOfId + 1).startsWith("event_participate"))
 					{
 						GameEvent.inscribePlayer(player);
@@ -158,7 +155,6 @@ public class RequestBypassToServer extends GameClientPacket
 							player.sendMessage("The event is already started. You can not join now!");
 						}
 					}
-					
 					else if (_command.substring(endOfId + 1).startsWith("tvt_player_leave"))
 					{
 						if (TvT.isJoining())
@@ -170,7 +166,6 @@ public class RequestBypassToServer extends GameClientPacket
 							player.sendMessage("The event is already started. You can not leave now!");
 						}
 					}
-					
 					else if (_command.substring(endOfId + 1).startsWith("dmevent_player_join"))
 					{
 						if (DM.isJoining())
@@ -182,7 +177,6 @@ public class RequestBypassToServer extends GameClientPacket
 							player.sendMessage("The event is already started. You can't join now!");
 						}
 					}
-					
 					else if (_command.substring(endOfId + 1).startsWith("dmevent_player_leave"))
 					{
 						if (DM.isJoining())
@@ -194,7 +188,6 @@ public class RequestBypassToServer extends GameClientPacket
 							player.sendMessage("The event is already started. You can't leave now!");
 						}
 					}
-					
 					else if (_command.substring(endOfId + 1).startsWith("ctf_player_join "))
 					{
 						final String teamName = _command.substring(endOfId + 1).substring(16);
@@ -207,7 +200,6 @@ public class RequestBypassToServer extends GameClientPacket
 							player.sendMessage("The event is already started. You can't join now!");
 						}
 					}
-					
 					else if (_command.substring(endOfId + 1).startsWith("ctf_player_leave"))
 					{
 						if (CTF.isJoining())
@@ -240,9 +232,11 @@ public class RequestBypassToServer extends GameClientPacket
 						GameEvent.inscribePlayer(player);
 					}
 					
-					else if ((Config.ALLOW_CLASS_MASTERS && Config.ALLOW_REMOTE_CLASS_MASTERS && (object instanceof ClassMasterInstance)) || ((object instanceof NpcInstance) && (endOfId > 0) && player.isInsideRadius(object, NpcInstance.INTERACTION_DISTANCE, false, false)))
+					final WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
+					if ((Config.ALLOW_CLASS_MASTERS && Config.ALLOW_REMOTE_CLASS_MASTERS && (object instanceof ClassMasterInstance)) //
+						|| ((object instanceof NpcInstance) && (endOfId > 0) && player.isInsideRadius(object, NpcInstance.INTERACTION_DISTANCE, false, false)))
 					{
-						((NpcInstance) object).onBypassFeedback(player, _command.substring(endOfId + 1));
+						((NpcInstance) object).onBypassFeedback(player, _command.replace("npc_" + object.getObjectId() + "_", ""));
 					}
 					
 					player.sendPacket(ActionFailed.STATIC_PACKET);
