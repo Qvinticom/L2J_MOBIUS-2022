@@ -50,6 +50,7 @@ import org.l2jmobius.commons.util.crypt.NewCrypt;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ConnectionState;
+import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.loginserverpackets.game.AuthRequest;
@@ -572,12 +573,13 @@ public class LoginServerThread extends Thread
 				{
 					client.getPlayer().deleteMe();
 				}
+				client.close(new SystemMessage(SystemMessageId.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT));
 			}
 			else
 			{
+				Disconnection.of(client).defaultSequence(new SystemMessage(SystemMessageId.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT));
 				ACCOUNTING_LOGGER.info("Kicked by login, " + client);
 			}
-			client.close(new SystemMessage(SystemMessageId.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT));
 		}
 		sendLogout(account);
 	}
