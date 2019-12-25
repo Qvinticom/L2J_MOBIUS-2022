@@ -28,6 +28,12 @@ public class NonLethalableNpcs extends AbstractNpcAI
 	private static final int[] NPCS =
 	{
 		35062, // Headquarters
+		// Conquerable Hall bosses.
+		35410, // Gustav
+		35375, // Nurka
+		35629, // Lidia
+		35630, // Alfred
+		35631, // Giselle
 	};
 	
 	public NonLethalableNpcs()

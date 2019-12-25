@@ -44,8 +44,7 @@ public class FortressOfResistance extends ClanHallSiegeEngine
 	{
 		new Location(45109, 112124, -1900), // 30%
 		new Location(47653, 110816, -2110), // 40%
-		new Location(47247, 109396, -2000)
-		// 30%
+		new Location(47247, 109396, -2000), // 30%
 	};
 	
 	private Spawn _nurka;
