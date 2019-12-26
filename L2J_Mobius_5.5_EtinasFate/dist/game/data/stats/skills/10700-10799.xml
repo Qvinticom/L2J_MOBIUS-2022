@@ -1853,7 +1853,7 @@
 			<value level="11">167</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<castRange>900</castRange>
+		<castRange>1100</castRange>
 		<effectRange>1500</effectRange>
 		<hitTime>2900</hitTime>
 		<coolTime>350</coolTime>
@@ -2471,7 +2471,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-706</effectPoint>
 		<reuseDelay>30000</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<magicLvl>93</magicLvl>
 		<targetType>GROUND</targetType>
 		<affectScope>RANGE</affectScope>
