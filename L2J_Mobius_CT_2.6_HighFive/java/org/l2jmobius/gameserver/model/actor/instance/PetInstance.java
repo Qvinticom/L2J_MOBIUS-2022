@@ -1109,7 +1109,6 @@ public class PetInstance extends Summon
 	public synchronized void unSummon(PlayerInstance owner)
 	{
 		stopFeed();
-		stopHpMpRegeneration();
 		super.unSummon(owner);
 		
 		if (!isDead())

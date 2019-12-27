@@ -379,6 +379,8 @@ public abstract class Summon extends Playable
 	{
 		if (isSpawned() && !isDead())
 		{
+			stopHpMpRegeneration();
+			
 			getAI().stopFollow();
 			if (owner != null)
 			{
