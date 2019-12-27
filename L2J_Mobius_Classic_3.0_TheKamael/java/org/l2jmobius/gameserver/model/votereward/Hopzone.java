@@ -56,7 +56,7 @@ public class Hopzone extends VoteSystem
 			String line;
 			while ((line = br.readLine()) != null)
 			{
-				if (line.contains("<li><span class=\"rank anonymous tooltip\" title"))
+				if (line.contains("<span class=\"rank tooltip\" title"))
 				{
 					return Integer.parseInt(line.split(">")[2].replace("</span", ""));
 				}
