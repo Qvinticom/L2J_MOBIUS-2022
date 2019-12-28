@@ -108,7 +108,7 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 		}
 		final EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLvl);
 		final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
-		if (beforeEnchantSkillLevel == -1)
+		if (beforeEnchantSkillLevel != s.getMinSkillLevel(_skillLvl))
 		{
 			return;
 		}

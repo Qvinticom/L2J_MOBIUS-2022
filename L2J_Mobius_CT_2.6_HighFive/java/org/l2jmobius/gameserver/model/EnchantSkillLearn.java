@@ -82,7 +82,7 @@ public class EnchantSkillLearn
 	
 	public int getMinSkillLevel(int level)
 	{
-		return (level % 1000) == 1 ? _baseLvl : level - 1;
+		return (level % 100) == 1 ? _baseLvl : level - 1;
 	}
 	
 	public boolean isMaxEnchant(int level)
