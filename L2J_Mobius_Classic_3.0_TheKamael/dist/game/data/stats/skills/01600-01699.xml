@@ -427,7 +427,7 @@
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<overHit>true</overHit>
-				<pDefMod>0.8</pDefMod>
+				<pDefMod>0.7</pDefMod>
 			</effect>
 		</effects>
 	</skill>
@@ -1245,13 +1245,86 @@
 			<effect name="PhysicalMute" />
 			<effect name="BlockTarget" />
 			<effect name="BlockMove" />
-			<effect name="ReduceDamage">
+			<effect name="PveMagicalSkillDefenceBonus">
 				<amount>
-					<value level="1" >50</value>
-					<value level="2" >40</value>
-					<value level="3" >30</value>
-					<value level="4" >20</value>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
 				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1434,7 +1507,7 @@
 		<!-- Throws a dagger at an enemy with bonus $s1 Power and injures their wrist. For $s2, there is a chance the wound will interrupt the target's skill casting. Requires a dagger. -->
 		<icon>icon.skill1629</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>60</abnormalTime>
 		<activateRate>80</activateRate>
 		<lvlBonusRate>20</lvlBonusRate>
 		<basicProperty>MAGIC</basicProperty>
@@ -1472,7 +1545,7 @@
 		<!-- Throws a dagger at an enemy with $s1 Power added to P. Atk. For $s2, with a certain probability, decreases target's HP when it tries to use skills. Requires a dagger. Over-hit. -->
 		<icon>icon.skill1630</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>40</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<activateRate>80</activateRate>
 		<lvlBonusRate>20</lvlBonusRate>

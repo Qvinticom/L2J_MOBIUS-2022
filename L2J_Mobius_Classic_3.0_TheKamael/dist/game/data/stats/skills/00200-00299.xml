@@ -7324,6 +7324,14 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BLUNT</item>
+					<item>POLE</item>
+				</weaponType>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="DefenceTrait">
 				<POLE>

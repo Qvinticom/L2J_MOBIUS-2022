@@ -4781,7 +4781,7 @@
 		<!-- Attacks the enemy by throwing a dagger with 3488 Power added to P. Atk. and Speed -80% for 10 sec. Requires a dagger to be equipped. -->
 		<icon>icon.skill0991</icon>
 		<abnormalLvl>3</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
@@ -4876,7 +4876,7 @@
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<chance>15</chance>
+				<chance>20</chance>
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<!-- Focus Sonic -->
@@ -4894,7 +4894,7 @@
 				</skillLevel>
 				<allowWeapons>DUAL,SWORD,BLUNT</allowWeapons>
 				<minDamage>1</minDamage>
-				<chance>30</chance>
+				<chance>40</chance>
 				<targetType>SELF</targetType>
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
@@ -5001,18 +5001,6 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>SWORD</item>
-					<item>BLUNT</item>
-					<item>DAGGER</item>
-					<item>POLE</item>
-					<item>DUALFIST</item>
-					<item>DUAL</item>
-					<item>DUALDAGGER</item>
-					<item>DUALBLUNT</item>
-				</weaponType>
-			</condition>
 			<condition name="OpCheckCastRange">
 				<distance>200</distance>
 			</condition>
