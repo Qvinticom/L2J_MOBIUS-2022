@@ -799,7 +799,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1332" levels="10" name="Summon Unicorn Seraphim" enchantGroup1="1">
-		<!-- Summon the servitor Seraphim the Unicorn. Requires 1 Spirit Ore and consumes 2 Spirit Ore at regular intervals up to 14 times. -->
+		<!-- Summon the servitor Seraphim the Unicorn. Requires 1 Crystal C and consumes 2 Crystals C at regular intervals up to 14 times. -->
 		<table name="#itemConsumeCount">1 1 2 2 4 1 1 4 1 2</table>
 		<table name="#itemConsumeCountOT">2 2 2 2 2 4 4 4 6 6</table>
 		<table name="#magicLvl">56 58 60 62 64 66 68 70 72 74</table>
@@ -809,7 +809,7 @@
 		<table name="#enchNpcId">14449 14450 14451 14452 14453 14454 14455 14456 14457 14458 14459 14460 14461 14462 14463 14464 14465 14466 14467 14468 14469 14470 14471 14472 14473 14474 14475 14476 14477 14478</table>
 		<set name="icon" val="icon.skill1332" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeId" val="1459" /> <!-- Epilogue -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -825,14 +825,14 @@
 		<for>
 			<effect name="Summon">
 				<param npcId="#npcIds" />
-				<param consumeItemId="3031" consumeItemCount="#itemConsumeCountOT" />
+				<param consumeItemId="1459" consumeItemCount="#itemConsumeCountOT" /> <!-- Epilogue -->
 				<param lifeTime="3600" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Summon">
 				<param npcId="#enchNpcId" />
-				<param consumeItemId="3031" consumeItemCount="6" />
+				<param consumeItemId="1459" consumeItemCount="6" /> <!-- Epilogue -->
 				<param lifeTime="3600" />
 			</effect>
 		</enchant1for>

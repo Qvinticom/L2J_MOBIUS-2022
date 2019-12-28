@@ -2684,14 +2684,14 @@
 		<for>
 			<effect name="Summon">
 				<param npcId="#npcIds" />
-				<param consumeItemId="3031" consumeItemCount="#itemConsumeCountOT" />
+				<param consumeItemId="1459" consumeItemCount="#itemConsumeCountOT" /> <!-- Epilogue -->
 				<param lifeTime="3600" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Summon">
 				<param npcId="#enchNpcId" />
-				<param consumeItemId="3031" consumeItemCount="6" />
+				<param consumeItemId="1459" consumeItemCount="6" /> <!-- Epilogue -->
 				<param lifeTime="3600" />
 			</effect>
 		</enchant1for>
