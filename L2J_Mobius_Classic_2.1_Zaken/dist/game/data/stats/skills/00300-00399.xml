@@ -1092,10 +1092,6 @@
 			<effect name="Bluff">
 				<chance>80</chance>
 			</effect>
-			<effect name="Lethal">
-				<fullLethal>0</fullLethal>
-				<halfLethal>5</halfLethal>
-			</effect>
 		</effects>
 		<!-- TODO : Move to effects after A3 skills rework -->
 		<selfEffects>
@@ -1617,9 +1613,6 @@
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>
-			<effect name="Lethal">
-				<halfLethal>10</halfLethal>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="344" toLevel="1" name="Lethal Blow">
@@ -1651,10 +1644,6 @@
 				<criticalChance>20</criticalChance>
 				<chanceBoost>300</chanceBoost>
 				<overHit>true</overHit>
-			</effect>
-			<effect name="Lethal">
-				<fullLethal>0</fullLethal>
-				<halfLethal>15</halfLethal>
 			</effect>
 		</effects>
 	</skill>
