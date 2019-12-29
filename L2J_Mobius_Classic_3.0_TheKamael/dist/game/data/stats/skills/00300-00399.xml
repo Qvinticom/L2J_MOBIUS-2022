@@ -641,8 +641,8 @@
 					<value level="5">-80</value>
 					<value level="6">-80</value>
 					<value level="7">-60</value>
-					<value level="8">-60</value>
-					<value level="9">-40</value>
+					<value level="8">-30</value>
+					<value level="9">-30</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -1739,7 +1739,8 @@
 					<value level="9">8233</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>15</criticalChance>
+				<criticalChance>25</criticalChance>
+				<pDefMod>0.8</pDefMod>
 			</effect>
 		</effects>
 	</skill>
