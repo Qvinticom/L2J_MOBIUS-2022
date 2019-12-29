@@ -14093,7 +14093,7 @@ public class PlayerInstance extends Playable
 					removeAutoSkill(skillId);
 					continue;
 				}
-				if (!hasSkillReuse(skill.getReuseHashCode()))
+				if (!isAffectedBySkill(skillId) && !isInsideZone(ZoneId.PEACE))
 				{
 					doCast(skill);
 				}
