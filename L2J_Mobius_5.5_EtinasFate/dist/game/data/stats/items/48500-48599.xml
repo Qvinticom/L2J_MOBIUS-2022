@@ -389,8 +389,9 @@
 		<!-- Fishing time: 105 sec. Standby time: 15 sec. Fishing bait available from level 102. Fishing with this bait has a low chance of yielding a Reddish Box. -->
 		<set name="icon" val="icon.etc_huge_lure" />
 		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="bodypart" val="lhand" />
 		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -398,8 +399,9 @@
 		<!-- Fishing time: 105 sec. Standby time: 15 sec. Fishing bait available from level 105. Fishing with this bait has a low chance of yielding a Reddish Box. -->
 		<set name="icon" val="icon.etc_huge_lure" />
 		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="bodypart" val="lhand" />
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -407,29 +409,81 @@
 		<!-- When used, increases P. Atk. by 3% or by 4% for 10 min. Even if different types of fish dishes are used, only one effect applies. -->
 		<set name="icon" val="icon.fishing_buff_p_dmg" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39209" level="1" /> <!-- Fried Fish -->
+		</skills>
 	</item>
 	<item id="48541" name="Steamed Fish" additionalName="M. Atk." type="EtcItem">
 		<!-- When used, increases M. Atk. by 4% or by 5% for 10 min. Even if different types of fish dishes are used, only one effect applies. -->
 		<set name="icon" val="icon.fishing_buff_m_dmg" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39210" level="1" /> <!-- Steamed Fish -->
+		</skills>
 	</item>
 	<item id="48542" name="Grilled Fish" additionalName="Combat Speed" type="EtcItem">
 		<!-- When used, increases Atk. Spd./ Casting Spd. by 3%, Speed by 4 or Atk. Spd./ Casting Spd. by 4%, Speed by 6 for 10 min. Even if different types of fish dishes are used, only one effect applies. -->
 		<set name="icon" val="icon.fishing_buff_pm_speed" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39211" level="1" /> <!-- Grilled Fish -->
+		</skills>
 	</item>
 	<item id="48543" name="Braised Fish" additionalName="Max HP/ MP" type="EtcItem">
 		<!-- When used, increases Max HP/ MP by 6% or by 8% for 10 min. Even if different types of fish dishes are used, only one effect applies. -->
 		<set name="icon" val="icon.fishing_buff_hp_mp" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39212" level="1" /> <!-- Braised Fish -->
+		</skills>
 	</item>
 	<item id="48544" name="Royal Fish Soup" additionalName="Combat Prowess" type="EtcItem">
 		<!-- When used, increases P. Atk./ M. Atk. by 2%, Atk. Spd./ Casting Spd. by 2%, Max HP/ MP by 2% or P. Atk./ M. Atk. by 3%, Atk. Spd./ Casting Spd. by 3%, and Max HP/ MP by 3% for 10 min. Even if different types of fish dishes are used, only one effect applies. -->

@@ -25,6 +25,18 @@
 			<catch itemId="47552" chance="3" multiplier="1968" /> <!-- Powerful Fish -->
 			<catch itemId="47554" chance="2" multiplier="1" /> <!-- Reddish Box -->
 		</bait>
+		<bait itemId="48538" minPlayerLevel="102" chance="40" timeMin="105000" waitMin="15000"> <!-- Bait(R102) -->
+			<catch itemId="47550" chance="70" multiplier="1476" /> <!-- Ugly Fish -->
+			<catch itemId="47551" chance="25" multiplier="1804" /> <!-- Nimble Fish -->
+			<catch itemId="47552" chance="3" multiplier="1968" /> <!-- Powerful Fish -->
+			<catch itemId="47554" chance="2" multiplier="1" /> <!-- Reddish Box -->
+		</bait>
+		<bait itemId="48539" minPlayerLevel="105" chance="40" timeMin="105000" waitMin="15000"> <!-- Bait(R105) -->
+			<catch itemId="47550" chance="70" multiplier="1476" /> <!-- Ugly Fish -->
+			<catch itemId="47551" chance="25" multiplier="1804" /> <!-- Nimble Fish -->
+			<catch itemId="47552" chance="3" multiplier="1968" /> <!-- Powerful Fish -->
+			<catch itemId="47554" chance="2" multiplier="1" /> <!-- Reddish Box -->
+		</bait>
 		<bait itemId="47549" minPlayerLevel="85" chance="40" timeMin="105000" waitMin="15000"> <!-- PA Bait -->
 			<catch itemId="47550" chance="70" multiplier="1" /> <!-- Ugly Fish -->
 			<catch itemId="47551" chance="25" multiplier="1" /> <!-- Nimble Fish -->
