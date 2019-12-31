@@ -408,10 +408,10 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeD(0x00);
 		}
 		
-		if (containsMask(UserInfoType.UNKNOWN_196)) // 196
+		if (containsMask(UserInfoType.RANKING)) // 196
 		{
-			packet.writeH(6); // 196
-			packet.writeD(0x00); // 196
+			packet.writeH(6);
+			packet.writeD(0x00);
 		}
 		
 		if (isProtocol235)

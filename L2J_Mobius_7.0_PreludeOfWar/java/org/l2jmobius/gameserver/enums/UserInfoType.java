@@ -51,7 +51,7 @@ public enum UserInfoType implements IUpdateTypeComponent
 	
 	ATT_SPIRITS(0x17, 26),
 	
-	UNKNOWN_196(0x18, 6);
+	RANKING(0x18, 6);
 	
 	/** Int mask. */
 	private final int _mask;
