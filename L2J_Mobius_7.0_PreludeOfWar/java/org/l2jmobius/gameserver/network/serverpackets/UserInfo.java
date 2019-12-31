@@ -138,13 +138,11 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			return false;
 		}
 		
-		final boolean isProtocol235 = (_player.getClient() != null) && (_player.getClient().getProtocolVersion() == 235);
-		
 		OutgoingPackets.USER_INFO.writeId(packet);
 		
 		packet.writeD(_player.getObjectId());
 		packet.writeD(_initSize);
-		packet.writeH(isProtocol235 ? 27 : 25); // 196 - 25, 235 - 27
+		packet.writeH(25); // 196 - 25
 		packet.writeB(_masks);
 		
 		if (containsMask(UserInfoType.RELATION))
@@ -412,16 +410,6 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		{
 			packet.writeH(6);
 			packet.writeD(0x00);
-		}
-		
-		if (isProtocol235)
-		{
-			// 1
-			packet.writeH(6);
-			packet.writeC(0);
-			// 2
-			packet.writeH(6);
-			packet.writeC(0);
 		}
 		
 		return true;
