@@ -21,6 +21,7 @@ import java.util.Set;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
+import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.model.VariationInstance;
 import org.l2jmobius.gameserver.model.actor.instance.DecoyInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -259,6 +260,11 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeC(cocPlayer != null ? cocPlayer.getPosition() : _player.isTrueHero() ? 100 : 0);
 		packet.writeC(_player.isHairAccessoryEnabled() ? 0x01 : 0x00); // Hair accessory
 		packet.writeC(_player.getAbilityPointsUsed()); // Used Ability Points
+		
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeC(RankManager.getInstance().getPlayerGlobalRank(_player) == 1 ? 1 : RankManager.getInstance().getPlayerRaceRank(_player) == 1 ? 2 : 0);
+		
 		return true;
 	}
 	

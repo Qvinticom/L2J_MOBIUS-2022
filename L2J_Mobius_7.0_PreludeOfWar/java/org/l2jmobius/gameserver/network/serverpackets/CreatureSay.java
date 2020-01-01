@@ -22,6 +22,8 @@ import java.util.List;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.MentorManager;
+import org.l2jmobius.gameserver.instancemanager.RankManager;
+import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -31,7 +33,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 public class CreatureSay implements IClientOutgoingPacket
 {
 	private final int _objectId;
-	private final ChatType _textType;
+	private final ChatType _chatType;
 	private String _charName = null;
 	private int _charId = 0;
 	private String _text = null;
@@ -52,7 +54,7 @@ public class CreatureSay implements IClientOutgoingPacket
 		_objectId = sender.getObjectId();
 		_charName = name;
 		_charLevel = sender.getLevel();
-		_textType = messageType;
+		_chatType = messageType;
 		_text = text;
 		if (receiver != null)
 		{
@@ -93,7 +95,7 @@ public class CreatureSay implements IClientOutgoingPacket
 		_objectId = sender.getObjectId();
 		_charName = name;
 		_charLevel = sender.getLevel();
-		_textType = messageType;
+		_chatType = messageType;
 		_text = text;
 	}
 	
@@ -106,7 +108,7 @@ public class CreatureSay implements IClientOutgoingPacket
 	public CreatureSay(int objectId, ChatType messageType, String charName, String text)
 	{
 		_objectId = objectId;
-		_textType = messageType;
+		_chatType = messageType;
 		_charName = charName;
 		_text = text;
 	}
@@ -114,7 +116,7 @@ public class CreatureSay implements IClientOutgoingPacket
 	public CreatureSay(PlayerInstance player, ChatType messageType, String text)
 	{
 		_objectId = player.getObjectId();
-		_textType = messageType;
+		_chatType = messageType;
 		_charName = player.getAppearance().getVisibleName();
 		_text = text;
 	}
@@ -122,7 +124,7 @@ public class CreatureSay implements IClientOutgoingPacket
 	public CreatureSay(int objectId, ChatType messageType, int charId, NpcStringId npcString)
 	{
 		_objectId = objectId;
-		_textType = messageType;
+		_chatType = messageType;
 		_charId = charId;
 		_npcString = npcString.getId();
 	}
@@ -130,7 +132,7 @@ public class CreatureSay implements IClientOutgoingPacket
 	public CreatureSay(int objectId, ChatType messageType, String charName, NpcStringId npcString)
 	{
 		_objectId = objectId;
-		_textType = messageType;
+		_chatType = messageType;
 		_charName = charName;
 		_npcString = npcString.getId();
 	}
@@ -138,7 +140,7 @@ public class CreatureSay implements IClientOutgoingPacket
 	public CreatureSay(int objectId, ChatType messageType, int charId, SystemMessageId sysString)
 	{
 		_objectId = objectId;
-		_textType = messageType;
+		_chatType = messageType;
 		_charId = charId;
 		_npcString = sysString.getId();
 	}
@@ -162,7 +164,7 @@ public class CreatureSay implements IClientOutgoingPacket
 		OutgoingPackets.SAY2.writeId(packet);
 		
 		packet.writeD(_objectId);
-		packet.writeD(_textType.getClientId());
+		packet.writeD(_chatType.getClientId());
 		if (_charName != null)
 		{
 			packet.writeS(_charName);
@@ -175,7 +177,7 @@ public class CreatureSay implements IClientOutgoingPacket
 		if (_text != null)
 		{
 			packet.writeS(_text);
-			if ((_charLevel > 0) && (_textType == ChatType.WHISPER))
+			if ((_charLevel > 0) && (_chatType == ChatType.WHISPER))
 			{
 				packet.writeC(_mask);
 				if ((_mask & 0x10) == 0)
@@ -191,6 +193,39 @@ public class CreatureSay implements IClientOutgoingPacket
 				packet.writeS(s);
 			}
 		}
+		
+		// Rank
+		final PlayerInstance player = World.getInstance().getPlayer(_objectId);
+		if (player != null)
+		{
+			if (((_chatType == ChatType.CLAN) || (_chatType == ChatType.ALLIANCE)) && (player.getClan() != null))
+			{
+				packet.writeC(player.getClan().getCastleId());
+			}
+			
+			final int rank = RankManager.getInstance().getPlayerGlobalRank(player);
+			if ((rank == 0) || (rank > 100))
+			{
+				packet.writeC(0);
+			}
+			else if (rank <= 10)
+			{
+				packet.writeC(1);
+			}
+			else if (rank <= 50)
+			{
+				packet.writeC(2);
+			}
+			else if (rank <= 100)
+			{
+				packet.writeC(3);
+			}
+		}
+		else
+		{
+			packet.writeC(0);
+		}
+		
 		return true;
 	}
 	
@@ -199,7 +234,7 @@ public class CreatureSay implements IClientOutgoingPacket
 	{
 		if (player != null)
 		{
-			player.broadcastSnoop(_textType, _charName, _text);
+			player.broadcastSnoop(_chatType, _charName, _text);
 		}
 	}
 }

@@ -20,6 +20,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -28,6 +29,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Hero;
 
 /**
@@ -239,6 +241,35 @@ public class RankManager
 	public Map<Integer, StatsSet> getSnapshotOlyList()
 	{
 		return _snapshotOlyList;
+	}
+	
+	public int getPlayerGlobalRank(PlayerInstance player)
+	{
+		final int playerOid = player.getObjectId();
+		for (Entry<Integer, StatsSet> entry : _mainList.entrySet())
+		{
+			final StatsSet stats = entry.getValue();
+			if (stats.getInt("charId") != playerOid)
+			{
+				continue;
+			}
+			return entry.getKey();
+		}
+		return 0;
+	}
+	
+	public int getPlayerRaceRank(PlayerInstance player)
+	{
+		final int playerOid = player.getObjectId();
+		for (StatsSet stats : _mainList.values())
+		{
+			if (stats.getInt("charId") != playerOid)
+			{
+				continue;
+			}
+			return stats.getInt("raceRank");
+		}
+		return 0;
 	}
 	
 	public static RankManager getInstance()
