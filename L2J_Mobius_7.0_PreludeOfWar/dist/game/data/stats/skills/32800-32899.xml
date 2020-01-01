@@ -1114,59 +1114,360 @@
 	<skill id="32877" toLevel="1" name="Human Level Ranking 1st Class">
 		<!-- Benefits for ranks 1-10 amongst Humans. P. Atk. / M. Atk. / P. Def. / M. Def. / Max HP / Max MP +1% -->
 		<icon>icon.race_ranking_1</icon>
-		<operateType>A1</operateType>
-		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<canBeDispelled>false</canBeDispelled>
+		<affectRange>1000</affectRange>
+		<affectLimit>50-50</affectLimit>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="MaxHp">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PsysicalDefence">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32878" toLevel="1" name="Elf Level Ranking 1st Class">
 		<!-- Benefits for ranks 1-10 amongst Elves. Speed while not in combat +8, Damage received -1% -->
 		<icon>icon.race_ranking_1</icon>
-		<operateType>A1</operateType>
-		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<canBeDispelled>false</canBeDispelled>
+		<affectRange>1000</affectRange>
+		<affectLimit>50-50</affectLimit>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+				<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>-1</amount>
+				<mode>PER</mode>
+			</effect>
+				<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>-1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>-1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>-1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>-1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="32879" toLevel="1" name="Dark Elf Level Ranking 1st Class">
+	<skill id="32879" toLevel="1" name="Dark Elf Level Ranking 1st Class"> 
 		<!-- Benefits for ranks 1-10 amongst Dark Elves. CHA +1, STR/DEX/CON/INT/WIT/MEN +2 at night -->
 		<icon>icon.race_ranking_1</icon>
-		<operateType>A1</operateType>
-		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<canBeDispelled>false</canBeDispelled>
+		<affectRange>1000</affectRange>
+		<affectLimit>50-50</affectLimit>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CHA</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32880" toLevel="1" name="Orc Level Ranking 1st Class">
 		<!-- Benefits for ranks 1-10 amongst Orcs. P. Atk. / Max HP +2% -->
 		<icon>icon.race_ranking_1</icon>
-		<operateType>A1</operateType>
-		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<canBeDispelled>false</canBeDispelled>
+		<affectRange>1000</affectRange>
+		<affectLimit>50-50</affectLimit>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="MaxHp">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+	  		<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32881" toLevel="1" name="Dwarf Level Ranking 1st Class">
 		<!-- Benefits for ranks 1-10 amongst Dwarves. Weapon/Armor Enchant Rate +1%, Max HP / P. Def. / M. Def. +2% -->
 		<icon>icon.race_ranking_1</icon>
-		<operateType>A1</operateType>
-		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<canBeDispelled>false</canBeDispelled>
+		<affectRange>1000</affectRange>
+		<affectLimit>50-50</affectLimit>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+		 	<effect name="MaxHp">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		 	<effect name="PhysicalDefence">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32882" toLevel="1" name="Kamael Level Ranking 1st Class">
 		<!-- Benefits for ranks 1-10 amongst Kamaels. PvP Damage +2% -->
 		<icon>icon.race_ranking_1</icon>
-		<operateType>A1</operateType>
-		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<canBeDispelled>false</canBeDispelled>
+		<affectRange>1000</affectRange>
+		<affectLimit>50-50</affectLimit>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32883" toLevel="1" name="Ertheia Level Ranking 1st Class">
 		<!-- Benefits for ranks 1-10 amongst Ertheias. P./M. Skill Power +1%, Skill Cooldown - 1% -->
 		<icon>icon.race_ranking_1</icon>
-		<operateType>A1</operateType>
-		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<canBeDispelled>false</canBeDispelled>
+		<affectRange>1000</affectRange>
+		<affectLimit>50-50</affectLimit>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalSkillPower">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32884" toLevel="1" name="Server Ranking Benefit 1">
 		<!-- All Stats +1, Recovery Potion / Elixir Effect +500 -->
 		<icon>icon.UI_server_ranking_1</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="HealEffect">
+				<amount>+500</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32885" toLevel="1" name="Server Ranking Benefit 2">
 		<!-- Normal Attack/M. Critical Rate Limit +50, Speed Limit +20 -->
 		<icon>icon.UI_server_ranking_2</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32886" toLevel="1" name="Server Ranking Benefit 3">
 		<!-- Max HP Limit +30000, Max HP +15000 -->
 		<icon>icon.UI_server_ranking_3</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>15000</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32887" toLevel="1" name="Race Ranking Benefit">
 		<!-- Humans: P. Atk. / M. Atk. / P. Def. / M. Def. / Max HP / Max MP +1% Elves: Speed when not in combat +8, Damage received -1% Dark Elves: CHA +1, STR/DEX/CON/INT/WIT/MEN +2 at night Orcs: P. Atk. / Max HP +2% Dwarves: Weapon/Armor Enchant Rate +1%, Max HP / P. Def. / M. Def. +2% Kamaels: PvP Damage +2% Ertheias: P./M. Skill Power +1%, Skill Cooldown - 1% -->
