@@ -89,8 +89,8 @@ public class Q00419_GetAPet extends Quest
 		LINKS.put(1110010, "<a action=\"bypass -h Quest Q00419_GetAPet 30731-14.html\">None of the above.</a><br>");
 		LINKS.put(1110011, "<a action=\"bypass -h Quest Q00419_GetAPet 30731-14.html\">10 hours</a><br>");
 		LINKS.put(1110012, "<a action=\"bypass -h Quest Q00419_GetAPet 30731-14.html\">15 hours</a><br>");
-		LINKS.put(1110013, "<a action=\"bypass -h Quest Q00419_GetAPet QUESTIONS\">It won't disappear.</a><br>");
-		LINKS.put(1110014, "<a action=\"bypass -h Quest Q00419_GetAPet 30731-14.html\">25 hours</a><br>");
+		LINKS.put(1110013, "<a action=\"bypass -h Quest Q00419_GetAPet 30731-14.html\">It won't disappear.</a><br>");
+		LINKS.put(1110014, "<a action=\"bypass -h Quest Q00419_GetAPet QUESTIONS\">24 hours</a><br>"); // Epilogue Modification
 		LINKS.put(1110015, "<a action=\"bypass -h Quest Q00419_GetAPet 30731-14.html\">None of the above.</a><br>");
 		LINKS.put(1110016, "<a action=\"bypass -h Quest Q00419_GetAPet QUESTIONS\">Dire Wolf</a><br>");
 		LINKS.put(1110017, "<a action=\"bypass -h Quest Q00419_GetAPet 30731-14.html\">Air Wolf</a><br>");
