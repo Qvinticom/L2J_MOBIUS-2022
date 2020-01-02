@@ -23,6 +23,7 @@ import java.util.concurrent.ScheduledFuture;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -249,6 +250,13 @@ public class MinionList
 			{
 				_minion.refreshID();
 				initializeNpcInstance(_master, _minion);
+				
+				// assist master
+				if (!_master.getAggroList().isEmpty())
+				{
+					_minion.getAggroList().putAll(_master.getAggroList());
+					_minion.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _minion.getAggroList().keySet().stream().findFirst().get());
+				}
 			}
 		}
 	}

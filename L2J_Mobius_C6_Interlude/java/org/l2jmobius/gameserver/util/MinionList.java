@@ -26,6 +26,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.MinionData;
@@ -256,5 +257,12 @@ public class MinionList
 		final int newY = master.getY() + spawnConstant;
 		
 		monster.spawnMe(newX, newY, master.getZ());
+		
+		// Assist master
+		if (!master.getAggroList().isEmpty())
+		{
+			monster.getAggroList().putAll(master.getAggroList());
+			monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, monster.getAggroList().keySet().stream().findFirst().get());
+		}
 	}
 }
