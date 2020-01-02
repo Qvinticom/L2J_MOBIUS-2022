@@ -58,7 +58,9 @@ public class RequestShortCutDel implements IClientIncomingPacket
 		if (_slot > 263)
 		{
 			player.removeAutoSupplyItem(_id);
-			player.removeAutoPotionItem(_id);
+		}
+		else
+		{
 			player.removeAutoSkill(_id);
 		}
 	}
