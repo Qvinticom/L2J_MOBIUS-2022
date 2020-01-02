@@ -198,9 +198,9 @@ public class CreatureSay implements IClientOutgoingPacket
 		final PlayerInstance player = World.getInstance().getPlayer(_objectId);
 		if (player != null)
 		{
-			if (((_chatType == ChatType.CLAN) || (_chatType == ChatType.ALLIANCE)) && (player.getClan() != null))
+			if ((player.getClan() != null) && ((_chatType == ChatType.CLAN) || (_chatType == ChatType.ALLIANCE)))
 			{
-				packet.writeC(player.getClan().getCastleId());
+				packet.writeC(0); // unknown clan byte
 			}
 			
 			final int rank = RankManager.getInstance().getPlayerGlobalRank(player);
@@ -219,6 +219,15 @@ public class CreatureSay implements IClientOutgoingPacket
 			else if (rank <= 100)
 			{
 				packet.writeC(3);
+			}
+			
+			if (player.getClan() != null)
+			{
+				packet.writeC(player.getClan().getCastleId());
+			}
+			else
+			{
+				packet.writeC(0);
 			}
 		}
 		else
