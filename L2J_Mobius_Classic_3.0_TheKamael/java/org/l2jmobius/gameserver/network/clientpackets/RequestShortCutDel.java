@@ -55,8 +55,11 @@ public class RequestShortCutDel implements IClientIncomingPacket
 		player.deleteShortCut(_slot, _page);
 		
 		// Remove auto used ids.
-		player.removeAutoSupplyItem(_id);
-		player.removeAutoPotionItem(_id);
-		player.removeAutoSkill(_id);
+		if (_slot > 263)
+		{
+			player.removeAutoSupplyItem(_id);
+			player.removeAutoPotionItem(_id);
+			player.removeAutoSkill(_id);
+		}
 	}
 }
