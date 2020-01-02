@@ -55,30 +55,30 @@ public class Recipes implements IItemHandler
 			return;
 		}
 		
-		final RecipeList rp = RecipeTable.getInstance().getRecipeByItemId(item.getItemId());
-		if (player.hasRecipeList(rp.getId()))
+		final RecipeList recipe = RecipeTable.getInstance().getRecipeByItemId(item.getItemId());
+		if (player.hasRecipeList(recipe.getId()))
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.RECIPE_ALREADY_REGISTERED));
 		}
-		else if (rp.isDwarvenRecipe())
+		else if (recipe.isDwarvenRecipe())
 		{
 			if (player.hasDwarvenCraft())
 			{
-				if (rp.getLevel() > player.getDwarvenCraft())
+				if (recipe.getLevel() > player.getDwarvenCraft())
 				{
 					// can't add recipe, becouse create item level too low
 					player.sendPacket(new SystemMessage(SystemMessageId.CREATE_LVL_TOO_LOW_TO_REGISTER));
 				}
 				else if (player.getDwarvenRecipeBook().length >= player.GetDwarfRecipeLimit())
 				{
-					// Up to $s1 recipes can be registered.
 					final SystemMessage sm = new SystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_REGISTER);
 					sm.addNumber(player.GetDwarfRecipeLimit());
 					player.sendPacket(sm);
 				}
 				else
 				{
-					player.registerDwarvenRecipeList(rp);
+					player.registerDwarvenRecipeList(recipe);
+					player.saveRecipeIntoDB(recipe);
 					player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_ADDED);
 					sm.addString(item.getItemName());
@@ -92,21 +92,21 @@ public class Recipes implements IItemHandler
 		}
 		else if (player.hasCommonCraft())
 		{
-			if (rp.getLevel() > player.getCommonCraft())
+			if (recipe.getLevel() > player.getCommonCraft())
 			{
 				// can't add recipe, becouse create item level too low
 				player.sendPacket(new SystemMessage(SystemMessageId.CREATE_LVL_TOO_LOW_TO_REGISTER));
 			}
 			else if (player.getCommonRecipeBook().length >= player.GetCommonRecipeLimit())
 			{
-				// Up to $s1 recipes can be registered.
 				final SystemMessage sm = new SystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_REGISTER);
 				sm.addNumber(player.GetCommonRecipeLimit());
 				player.sendPacket(sm);
 			}
 			else
 			{
-				player.registerCommonRecipeList(rp);
+				player.registerCommonRecipeList(recipe);
+				player.saveRecipeIntoDB(recipe);
 				player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_ADDED);
 				sm.addString(item.getItemName());

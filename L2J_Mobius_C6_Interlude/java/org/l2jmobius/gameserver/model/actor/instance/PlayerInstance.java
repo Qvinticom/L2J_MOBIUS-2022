@@ -254,6 +254,8 @@ public class PlayerInstance extends Playable
 	private static final String RESTORE_CHAR_RECOMS = "SELECT char_id,target_id FROM character_recommends WHERE char_id=?";
 	private static final String ADD_CHAR_RECOM = "INSERT INTO character_recommends (char_id,target_id) VALUES (?,?)";
 	private static final String DELETE_CHAR_RECOMS = "DELETE FROM character_recommends WHERE char_id=?";
+	private static final String INSERT_CHARACTER_RECIPEBOOK = "INSERT INTO character_recipebook (char_id, id, type) VALUES(?,?,?)";
+	private static final String DELETE_CHARARACTER_RECIPEBOOK = "DELETE FROM character_recipebook WHERE char_id=? AND id=?";
 	private static final String RESTORE_SKILLS_FOR_CHAR = "SELECT skill_id,skill_level FROM character_skills WHERE char_obj_id=? AND class_index=?";
 	private static final String ADD_NEW_SKILL = "INSERT INTO character_skills (char_obj_id,skill_id,skill_level,skill_name,class_index) VALUES (?,?,?,?,?)";
 	private static final String UPDATE_CHARACTER_SKILL_LEVEL = "UPDATE character_skills SET skill_level=? WHERE skill_id=? AND char_obj_id=? AND class_index=?";
@@ -1506,9 +1508,19 @@ public class PlayerInstance extends Playable
 			LOGGER.warning("Attempted to remove unknown RecipeList: " + recipeId);
 		}
 		
-		final ShortCut[] allShortCuts = getAllShortCuts();
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement deleteRecipe = con.prepareStatement(DELETE_CHARARACTER_RECIPEBOOK))
+		{
+			deleteRecipe.setInt(1, getObjectId());
+			deleteRecipe.setInt(2, recipeId); // 0 = Normal recipe, 1 Dwarven recipe
+			deleteRecipe.executeUpdate();
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning("PlayerInstance.unregisterRecipeList : Could not delete recipe book data " + e);
+		}
 		
-		for (ShortCut sc : allShortCuts)
+		for (ShortCut sc : getAllShortCuts())
 		{
 			if ((sc != null) && (sc.getId() == recipeId) && (sc.getType() == ShortCut.TYPE_RECIPE))
 			{
@@ -9128,53 +9140,19 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	/**
-	 * Store recipe book data for this PlayerInstance, if not on an active sub-class.
-	 */
-	private synchronized void storeRecipeBook()
+	public void saveRecipeIntoDB(RecipeList recipe)
 	{
-		// If the player is on a sub-class don't even attempt to store a recipe book.
-		if (isSubClassActive())
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement insertRecipe = con.prepareStatement(INSERT_CHARACTER_RECIPEBOOK))
 		{
-			return;
-		}
-		
-		if ((getCommonRecipeBook().length == 0) && (getDwarvenRecipeBook().length == 0))
-		{
-			return;
-		}
-		
-		try (Connection con = DatabaseFactory.getConnection())
-		{
-			PreparedStatement statement = con.prepareStatement("DELETE FROM character_recipebook WHERE char_id=?");
-			statement.setInt(1, getObjectId());
-			statement.execute();
-			statement.close();
-			
-			RecipeList[] recipes = getCommonRecipeBook();
-			
-			for (RecipeList recipe : recipes)
-			{
-				statement = con.prepareStatement("INSERT INTO character_recipebook (char_id, id, type) values(?,?,0)");
-				statement.setInt(1, getObjectId());
-				statement.setInt(2, recipe.getId());
-				statement.execute();
-				statement.close();
-			}
-			
-			recipes = getDwarvenRecipeBook();
-			for (RecipeList recipe : recipes)
-			{
-				statement = con.prepareStatement("INSERT INTO character_recipebook (char_id, id, type) values(?,?,1)");
-				statement.setInt(1, getObjectId());
-				statement.setInt(2, recipe.getId());
-				statement.execute();
-				statement.close();
-			}
+			insertRecipe.setInt(1, getObjectId());
+			insertRecipe.setInt(2, recipe.getId());
+			insertRecipe.setBoolean(3, recipe.isDwarvenRecipe()); // 0 = Normal recipe, 1 Dwarven recipe
+			insertRecipe.executeUpdate();
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Could not store recipe book data: " + e);
+			LOGGER.warning("PlayerInstance.saveRecipeIntoDB : Could not store recipe book data " + e);
 		}
 	}
 	
@@ -9300,8 +9278,6 @@ public class PlayerInstance extends Playable
 		{
 			storeEffect();
 		}
-		
-		storeRecipeBook();
 		
 		final PlayerVariables vars = getScript(PlayerVariables.class);
 		if (vars != null)
