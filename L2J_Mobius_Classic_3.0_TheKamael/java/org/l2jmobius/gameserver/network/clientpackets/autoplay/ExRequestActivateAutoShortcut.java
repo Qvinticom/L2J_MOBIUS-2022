@@ -72,7 +72,7 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 			if (item != null)
 			{
 				// auto supply
-				if (_room == -1)
+				if (_room > 263)
 				{
 					player.removeAutoSupplyItem(item.getId());
 				}
@@ -81,7 +81,7 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 					player.removeAutoPotionItem(item.getId());
 				}
 			}
-			// TODO: auto skill
+			// auto skill
 			if (skill != null)
 			{
 				player.removeAutoSkill(skill.getId());
@@ -90,13 +90,12 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 		}
 		
 		// start
-		if (_room == -1)
+		if (_room > 263)
 		{
 			// auto supply
 			if (item != null)
 			{
 				player.addAutoSupplyItem(item.getId());
-				return;
 			}
 		}
 		else
@@ -110,7 +109,7 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 					return;
 				}
 			}
-			// TODO: auto skill
+			// auto skill
 			if (skill != null)
 			{
 				player.addAutoSkill(skill.getId());

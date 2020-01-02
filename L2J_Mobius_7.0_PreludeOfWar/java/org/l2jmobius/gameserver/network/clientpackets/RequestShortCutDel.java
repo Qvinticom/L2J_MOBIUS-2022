@@ -25,15 +25,16 @@ import org.l2jmobius.gameserver.network.GameClient;
  */
 public class RequestShortCutDel implements IClientIncomingPacket
 {
+	private int _id;
 	private int _slot;
 	private int _page;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		final int id = packet.readD();
-		_slot = id % 12;
-		_page = id / 12;
+		_id = packet.readD();
+		_slot = _id % 12;
+		_page = _id / 12;
 		return true;
 	}
 	
@@ -52,6 +53,10 @@ public class RequestShortCutDel implements IClientIncomingPacket
 		}
 		
 		player.deleteShortCut(_slot, _page);
-		// client needs no confirmation. this packet is just to inform the server
+		
+		// Remove auto used ids.
+		player.removeAutoSupplyItem(_id);
+		player.removeAutoPotionItem(_id);
+		player.removeAutoSkill(_id);
 	}
 }
