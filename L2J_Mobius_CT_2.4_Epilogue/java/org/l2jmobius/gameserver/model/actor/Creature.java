@@ -1022,6 +1022,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				{
 					if (!isPlayer())
 					{
+						_attackEndTime = System.nanoTime() + TimeUnit.NANOSECONDS.convert(timeAtk, TimeUnit.MILLISECONDS);
 						hitted = doAttackHitSimple(attack, target, timeToHit);
 						break;
 					}
