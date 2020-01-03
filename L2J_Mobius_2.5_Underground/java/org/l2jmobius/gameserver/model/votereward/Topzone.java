@@ -56,7 +56,7 @@ public class Topzone extends VoteSystem
 			String line;
 			while ((line = br.readLine()) != null)
 			{
-				return Integer.parseInt(line);
+				return Integer.parseInt(line.split("fa-thumbs-up\"></i>")[1].split("</span>")[0]);
 			}
 			
 			br.close();
