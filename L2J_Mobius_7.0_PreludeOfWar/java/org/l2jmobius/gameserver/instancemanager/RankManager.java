@@ -41,8 +41,8 @@ public class RankManager
 	
 	public static final int PLAYER_LIMIT = 100;
 	
-	private static final String SELECT_CHARACTERS = "SELECT charId,char_name,level,race,base_class, clanid FROM characters WHERE level > 84 ORDER BY exp DESC LIMIT " + PLAYER_LIMIT;
-	private static final String SELECT_CHARACTERS_BY_RACE = "SELECT charId FROM characters WHERE level > 84 AND race = ? ORDER BY exp DESC LIMIT " + PLAYER_LIMIT;
+	private static final String SELECT_CHARACTERS = "SELECT charId,char_name,level,race,base_class, clanid FROM characters WHERE accesslevel = 0 AND level > 84 ORDER BY exp DESC LIMIT " + PLAYER_LIMIT;
+	private static final String SELECT_CHARACTERS_BY_RACE = "SELECT charId FROM characters WHERE accesslevel = 0 AND level > 84 AND race = ? ORDER BY exp DESC LIMIT " + PLAYER_LIMIT;
 	
 	private static final String GET_CURRENT_CYCLE_DATA = "SELECT characters.char_name, characters.level, characters.base_class, characters.clanid, olympiad_nobles.charId, olympiad_nobles.olympiad_points, olympiad_nobles.competitions_won, olympiad_nobles.competitions_lost FROM characters, olympiad_nobles WHERE characters.charId = olympiad_nobles.charId ORDER BY olympiad_nobles.olympiad_points DESC LIMIT " + PLAYER_LIMIT;
 	private static final String GET_CHARACTERS_BY_CLASS = "SELECT characters.charId, olympiad_nobles.olympiad_points FROM characters, olympiad_nobles WHERE olympiad_nobles.charId = characters.charId AND characters.base_class = ? ORDER BY olympiad_nobles.olympiad_points DESC LIMIT " + PLAYER_LIMIT;
