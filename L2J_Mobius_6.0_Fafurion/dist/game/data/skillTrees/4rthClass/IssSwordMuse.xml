@@ -537,7 +537,9 @@
 		<skill skillName="Superior HP Boost" skillId="11506" skillLvl="6" getLevel="102" levelUpSp="507455418" />
 		
 		<skill skillName="Dissonance Wave" skillId="11536" skillLvl="8" getLevel="103" levelUpSp="608946501" />
-		<skill skillName="Wizard's Harmony" skillId="11525" skillLvl="2" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Wizard's Harmony" skillId="11525" skillLvl="2" getLevel="103" levelUpSp="608946501">
+			<item id="39738" count="4" /> <!-- Rune Stone -->
+		</skill>
 		<skill skillName="Giant Root" skillId="11561" skillLvl="6" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Sforzando Sting" skillId="19431" skillLvl="8" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Transform" skillId="11537" skillLvl="9" getLevel="103" levelUpSp="608946501" />
