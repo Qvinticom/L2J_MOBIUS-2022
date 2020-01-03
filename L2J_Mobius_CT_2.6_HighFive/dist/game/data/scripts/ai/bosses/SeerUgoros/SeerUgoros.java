@@ -172,13 +172,13 @@ public class SeerUgoros extends AbstractNpcAI
 			{
 				if ((player != null) && (_state == ALIVE))
 				{
-					if (player.getInventory().getItemByItemId(SEER_UGOROS_PASS) != null)
+					if (hasAtLeastOneQuestItem(player, SEER_UGOROS_PASS))
 					{
 						_state = FIGHTING;
 						_attacker = player;
 						_killedOneWeed = false;
+						takeItems(player, SEER_UGOROS_PASS, 1);
 						player.teleToLocation(ENTER_LOCATION);
-						player.destroyItemByItemId("SeerUgoros", SEER_UGOROS_PASS, 1, npc, true);
 						startQuestTimer("ugoros_attack", 2000, null, null);
 						
 						final QuestState qs = player.getQuestState(Q00288_HandleWithCare.class.getSimpleName());
@@ -270,13 +270,13 @@ public class SeerUgoros extends AbstractNpcAI
 		{
 			if (_killedOneWeed)
 			{
-				killer.addItem("SeerUgoros", MIDDLE_GRADE_LIZARD_SCALE, 1, npc, true);
-				qs.set("cond", "2");
+				giveItems(killer, MIDDLE_GRADE_LIZARD_SCALE, 1);
+				qs.setCond(2, true);
 			}
 			else
 			{
-				killer.addItem("SeerUgoros", HIGH_GRADE_LIZARD_SCALE, 1, npc, true);
-				qs.set("cond", "3");
+				giveItems(killer, HIGH_GRADE_LIZARD_SCALE, 1);
+				qs.setCond(3, true);
 			}
 			qs.unset("drop");
 		}
