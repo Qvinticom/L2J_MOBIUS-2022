@@ -91,7 +91,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 		if (player.getAdena() > 10000)
 		{
 			player.reduceAdena("TimedHuntingZone", 10000, player, true);
-			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME, System.currentTimeMillis() + 64800000); // 64800000 = 18 hours
+			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME, System.currentTimeMillis() + 18000000); // 300 minutes
 			player.teleToLocation(13181, -78651, -5977); // Ancient Pirates' Tomb
 			player.startTimedHuntingZone(18000000); // 300 minutes
 		}
