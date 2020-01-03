@@ -88,7 +88,7 @@ public class CallPc extends AbstractEffect
 		}
 	}
 	
-	public static boolean checkSummonTargetStatus(PlayerInstance target, Creature effector)
+	public static boolean checkSummonTargetStatus(PlayerInstance target, PlayerInstance effector)
 	{
 		if (target == effector)
 		{
@@ -125,7 +125,7 @@ public class CallPc extends AbstractEffect
 			return false;
 		}
 		
-		if (target.isFlyingMounted() || target.isCombatFlagEquipped() || target.isInTraingCamp())
+		if (target.isFlyingMounted() || target.isCombatFlagEquipped() || target.isInTraingCamp() || target.isInTimedHuntingZone() || effector.isInTimedHuntingZone())
 		{
 			effector.sendPacket(SystemMessageId.YOU_CANNOT_USE_SUMMONING_OR_TELEPORTING_IN_THIS_AREA);
 			return false;
