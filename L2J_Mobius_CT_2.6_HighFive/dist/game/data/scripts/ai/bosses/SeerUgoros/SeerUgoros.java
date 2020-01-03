@@ -57,7 +57,7 @@ public class SeerUgoros extends AbstractNpcAI
 	private static final Location UGOROS_SPAWN_LOCATION = new Location(96804, 85604, -3720, 34360);
 	private static final Location BATRACOS_SPAWN_LOCATION = new Location(96782, 85918, -3720, 34360);
 	private static final Location ENTER_LOCATION = new Location(95984, 85692, -3720);
-	private static final Location EXIT_LOCATION = new Location(94701, 83053, -3580);
+	private static final Location EXIT_LOCATION = new Location(94763, 83562, -3425);
 	// State
 	private static final byte ALIVE = 0;
 	private static final byte FIGHTING = 1;
@@ -106,7 +106,7 @@ public class SeerUgoros extends AbstractNpcAI
 					{
 						_state = ALIVE;
 					}
-					else if ((_ugoros == null) || (_attacker.calculateDistance2D(_ugoros) > 3000))
+					else if ((_ugoros == null) || (_attacker.calculateDistance2D(_ugoros) > 2000))
 					{
 						_state = ALIVE;
 						_attacker = null;
