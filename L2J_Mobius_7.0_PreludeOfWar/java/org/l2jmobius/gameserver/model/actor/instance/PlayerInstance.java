@@ -116,6 +116,7 @@ import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
+import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
 import org.l2jmobius.gameserver.instancemanager.MentorManager;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
@@ -341,6 +342,7 @@ import org.l2jmobius.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBook;
 import org.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBookCloseForce;
 import org.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBookRewardIcon;
+import org.l2jmobius.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.EnumIntBitmask;
@@ -862,6 +864,8 @@ public class PlayerInstance extends Playable
 	private final Collection<Integer> _autoSupplyItems = ConcurrentHashMap.newKeySet();
 	private final Collection<Integer> _autoPotionItems = ConcurrentHashMap.newKeySet();
 	private final Collection<Integer> _autoSkills = ConcurrentHashMap.newKeySet();
+	
+	private ScheduledFuture<?> _timedHuntingZoneFinishTask = null;
 	
 	// Selling buffs system
 	private boolean _isSellingBuffs = false;
@@ -10312,10 +10316,16 @@ public class PlayerInstance extends Playable
 			s.updateAndBroadcastStatus(0);
 		});
 		
-		// show movie if available
+		// Show movie if available
 		if (_movieHolder != null)
 		{
 			sendPacket(new ExStartScenePlayer(_movieHolder.getMovie()));
+		}
+		
+		// Close time limited zone window.
+		if (!isInTimedHuntingZone())
+		{
+			stopTimedHuntingZoneTask();
 		}
 		
 		// send info to nearby players
@@ -14194,5 +14204,45 @@ public class PlayerInstance extends Playable
 	{
 		_autoSkills.remove(skillId);
 		stopAutoUseTask();
+	}
+	
+	public boolean isInTimedHuntingZone()
+	{
+		final int x = ((getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
+		final int y = ((getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
+		if ((x == 25) && (y == 23)) // Storm Isle.
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	public void startTimedHuntingZone(long delay)
+	{
+		// TODO: Delay window.
+		// sendPacket(new TimedHuntingZoneEnter((int) (delay / 60 / 1000)));
+		// For now close window.
+		sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
+		
+		_timedHuntingZoneFinishTask = ThreadPool.schedule(() ->
+		{
+			if ((isOnlineInt() > 0) && isInTimedHuntingZone())
+			{
+				sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
+				abortCast();
+				stopMove(null);
+				teleToLocation(MapRegionManager.getInstance().getTeleToLocation(this, TeleportWhereType.TOWN));
+			}
+		}, delay);
+	}
+	
+	public void stopTimedHuntingZoneTask()
+	{
+		if ((_timedHuntingZoneFinishTask != null) && !_timedHuntingZoneFinishTask.isCancelled() && !_timedHuntingZoneFinishTask.isDone())
+		{
+			_timedHuntingZoneFinishTask.cancel(true);
+			_timedHuntingZoneFinishTask = null;
+			sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
+		}
 	}
 }

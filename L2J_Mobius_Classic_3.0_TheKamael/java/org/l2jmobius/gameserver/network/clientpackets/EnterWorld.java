@@ -35,6 +35,7 @@ import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
+import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
@@ -622,6 +623,17 @@ public class EnterWorld implements IClientIncomingPacket
 		if (!player.getEffectList().getCurrentAbnormalVisualEffects().isEmpty())
 		{
 			player.updateAbnormalVisualEffects();
+		}
+		
+		// Check if in time limited hunting zone.
+		final long exitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME, 0) - 3600000;
+		if (exitTime > System.currentTimeMillis())
+		{
+			player.startTimedHuntingZone(exitTime - System.currentTimeMillis());
+		}
+		else if (player.isInTimedHuntingZone())
+		{
+			player.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN));
 		}
 		
 		if (Config.ENABLE_ATTENDANCE_REWARDS)

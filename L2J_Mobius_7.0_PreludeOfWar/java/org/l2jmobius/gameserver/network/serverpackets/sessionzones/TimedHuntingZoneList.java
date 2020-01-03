@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.serverpackets.timedhunting;
+package org.l2jmobius.gameserver.network.serverpackets.sessionzones;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,9 +69,9 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 	{
 		final TimeRestrictedFieldInfo field = new TimeRestrictedFieldInfo();
 		field.resetCycle = 1;
-		field.fieldId = 2;
-		field.minLevel = 78;
-		field.maxLevel = 999;
+		field.fieldId = 1;
+		field.minLevel = 100;
+		field.maxLevel = 120;
 		field.remainTimeBase = 3600;
 		field.remainTime = 3600;
 		field.remainTimeMax = 21600;
@@ -81,7 +81,7 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		
 		final FieldRequiredItem item = new FieldRequiredItem();
 		item.itemId = 57;
-		item.count = 10000;
+		item.count = 150000;
 		
 		field.requiredItems = List.of(item);
 		infos.add(field);

@@ -116,6 +116,7 @@ public class Disconnection
 		{
 			if (_player != null)
 			{
+				_player.stopTimedHuntingZoneTask();
 				_player.stopAutoPlayTask();
 				_player.stopAutoUseTask();
 				_player.storeMe();

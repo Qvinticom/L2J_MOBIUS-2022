@@ -111,6 +111,7 @@ import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestRankingChar
 import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestRankingCharRankers;
 import org.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMove;
 import org.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMoveStart;
+import org.l2jmobius.gameserver.network.clientpackets.sessionzones.ExTimedHuntingZoneEnter;
 import org.l2jmobius.gameserver.network.clientpackets.sessionzones.ExTimedHuntingZoneList;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.CannotMoveAnymoreInShuttle;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.MoveToLocationInShuttle;
@@ -508,7 +509,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_GACHA_SHOP_GACHA_GROUP(0x17D, null, ConnectionState.IN_GAME),
 	EX_GACHA_SHOP_GACHA_ITEM(0x17E, null, ConnectionState.IN_GAME),
 	EX_TIME_RESTRICT_FIELD_LIST(0x17F, ExTimedHuntingZoneList::new, ConnectionState.IN_GAME),
-	EX_TIME_RESTRICT_FIELD_USER_ENTER(0x180, null, ConnectionState.IN_GAME),
+	EX_TIME_RESTRICT_FIELD_USER_ENTER(0x180, ExTimedHuntingZoneEnter::new, ConnectionState.IN_GAME),
 	EX_RANKING_CHAR_INFO(0x181, RequestRankingCharInfo::new, ConnectionState.IN_GAME),
 	EX_RANKING_CHAR_HISTORY(0x182, null, ConnectionState.IN_GAME),
 	EX_RANKING_CHAR_RANKERS(0x183, RequestRankingCharRankers::new, ConnectionState.IN_GAME),

@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.timedhunting.TimedHuntingZoneList;
+import org.l2jmobius.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneList;
 
 public class ExTimedHuntingZoneList implements IClientIncomingPacket
 {
