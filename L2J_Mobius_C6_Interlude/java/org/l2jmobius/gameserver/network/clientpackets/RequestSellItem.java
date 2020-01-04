@@ -129,8 +129,6 @@ public class RequestSellItem extends GameClientPacket
 		for (int i = 0; i < _count; i++)
 		{
 			final int objectId = _items[(i * 3) + 0];
-			@SuppressWarnings("unused")
-			final int itemId = _items[(i * 3) + 1];
 			final int count = _items[(i * 3) + 2];
 			
 			// Check count
@@ -171,12 +169,15 @@ public class RequestSellItem extends GameClientPacket
 				return;
 			}
 			
-			item = player.getInventory().destroyItem("Sell", objectId, count, player, null);
+			player.getInventory().destroyItem("Sell", objectId, count, player, null);
 		}
-		player.addAdena("Sell", (int) totalPrice, merchant, false);
+		
+		if (!Config.MERCHANT_ZERO_SELL_PRICE)
+		{
+			player.addAdena("Sell", (int) totalPrice, merchant, false);
+		}
 		
 		final String html = HtmCache.getInstance().getHtm("data/html/" + htmlFolder + "/" + merchant.getNpcId() + "-sold.htm");
-		
 		if (html != null)
 		{
 			final NpcHtmlMessage soldMsg = new NpcHtmlMessage(merchant.getObjectId());

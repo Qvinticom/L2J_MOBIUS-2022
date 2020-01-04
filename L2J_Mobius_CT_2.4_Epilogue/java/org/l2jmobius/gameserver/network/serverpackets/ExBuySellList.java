@@ -148,7 +148,7 @@ public class ExBuySellList implements IClientOutgoingPacket
 				packet.writeH(item.getEnchantLevel());
 				packet.writeH(0x00);
 				packet.writeH(0x00);
-				packet.writeQ(item.getItem().getReferencePrice() / 2);
+				packet.writeQ(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : item.getItem().getReferencePrice() / 2);
 				
 				// T1
 				packet.writeH(item.getAttackElementType());
@@ -180,7 +180,7 @@ public class ExBuySellList implements IClientOutgoingPacket
 				packet.writeH(0x00); // ?
 				packet.writeH(item.getEnchantLevel());
 				packet.writeH(0x00); // ?
-				packet.writeQ((item.getCount() * item.getItem().getReferencePrice()) / 2);
+				packet.writeQ(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : (item.getItem().getReferencePrice() / 2) * item.getCount());
 				
 				// T1
 				packet.writeH(item.getAttackElementType());

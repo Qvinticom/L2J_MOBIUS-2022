@@ -90,7 +90,8 @@ public class Config
 	// custom
 	private static final String AWAY_CONFIG_FILE = "./config/custom/Away.ini";
 	private static final String BANK_CONFIG_FILE = "./config/custom/Bank.ini";
-	private static final String EVENT_CHAMPION_CONFIG_FILE = "./config/custom/Champion.ini";
+	private static final String CHAMPION_CONFIG_FILE = "./config/custom/Champion.ini";
+	private static final String MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE = "./config/custom/MerchantZeroSellPrice.ini";
 	private static final String OFFLINE_CONFIG_FILE = "./config/custom/Offline.ini";
 	private static final String OTHER_CONFIG_FILE = "./config/custom/Other.ini";
 	private static final String SCHEME_BUFFER_CONFIG_FILE = "./config/custom/SchemeBuffer.ini";
@@ -481,6 +482,8 @@ public class Config
 	public static int L2JMOD_CHAMPION_REWARD_ID;
 	public static int L2JMOD_CHAMPION_REWARD_QTY;
 	public static String L2JMOD_CHAMP_TITLE;
+	
+	public static boolean MERCHANT_ZERO_SELL_PRICE;
 	
 	public static boolean L2JMOD_ALLOW_WEDDING;
 	public static int L2JMOD_WEDDING_PRICE;
@@ -1854,7 +1857,7 @@ public class Config
 		try
 		{
 			final Properties ChampionSettings = new Properties();
-			final InputStream is = new FileInputStream(new File(EVENT_CHAMPION_CONFIG_FILE));
+			final InputStream is = new FileInputStream(new File(CHAMPION_CONFIG_FILE));
 			ChampionSettings.load(is);
 			is.close();
 			
@@ -1877,7 +1880,25 @@ public class Config
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			throw new Error("Failed to Load " + EVENT_CHAMPION_CONFIG_FILE + " File.");
+			throw new Error("Failed to Load " + CHAMPION_CONFIG_FILE + " File.");
+		}
+	}
+	
+	public static void loadMerchantZeroPriceConfig()
+	{
+		try
+		{
+			final Properties MerchantZeroSellPrice = new Properties();
+			final InputStream is = new FileInputStream(new File(MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE));
+			MerchantZeroSellPrice.load(is);
+			is.close();
+			
+			MERCHANT_ZERO_SELL_PRICE = Boolean.parseBoolean(MerchantZeroSellPrice.getProperty("MerchantZeroSellPrice", "false"));
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+			throw new Error("Failed to Load " + CHAMPION_CONFIG_FILE + " File.");
 		}
 	}
 	
@@ -3838,6 +3859,7 @@ public class Config
 			
 			// Custom
 			loadChampionConfig();
+			loadMerchantZeroPriceConfig();
 			loadWeddingConfig();
 			loadREBIRTHConfig();
 			loadAWAYConfig();

@@ -25,7 +25,6 @@ import java.util.List;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.impl.BuyListData;
-import org.l2jmobius.gameserver.enums.TaxType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -170,16 +169,10 @@ public class RequestSellItem implements IClientIncomingPacket
 			}
 		}
 		
-		// add to castle treasury
-		if (merchant != null)
+		if (!Config.MERCHANT_ZERO_SELL_PRICE)
 		{
-			// Keep here same formula as in {@link ExBuySellList} to produce same result.
-			final long profit = (long) (totalPrice * (1.0 - merchant.getCastleTaxRate(TaxType.SELL)));
-			merchant.handleTaxPayment(totalPrice - profit);
-			totalPrice = profit;
+			player.addAdena("Sell", totalPrice, merchant, false);
 		}
-		
-		player.addAdena("Sell", totalPrice, merchant, false);
 		
 		// Update current load as well
 		client.sendPacket(new ExUserInfoInvenWeight(player));

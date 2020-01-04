@@ -124,6 +124,7 @@ public class Config
 	private static final String CUSTOM_FACTION_SYSTEM_CONFIG_FILE = "./config/Custom/FactionSystem.ini";
 	private static final String CUSTOM_FAKE_PLAYERS_CONFIG_FILE = "./config/Custom/FakePlayers.ini";
 	private static final String CUSTOM_FIND_PVP_CONFIG_FILE = "./config/Custom/FindPvP.ini";
+	private static final String CUSTOM_MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE = "./config/Custom/MerchantZeroSellPrice.ini";
 	private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
 	private static final String CUSTOM_NPC_STAT_MULTIPLIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
 	private static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
@@ -1174,6 +1175,7 @@ public class Config
 	public static boolean FAKE_PLAYER_CAN_DROP_ITEMS;
 	public static boolean FAKE_PLAYER_CAN_PICKUP;
 	public static boolean ENABLE_FIND_PVP;
+	public static boolean MERCHANT_ZERO_SELL_PRICE;
 	public static boolean PREMIUM_SYSTEM_ENABLED;
 	public static float PREMIUM_RATE_XP;
 	public static float PREMIUM_RATE_SP;
@@ -3037,6 +3039,10 @@ public class Config
 			// Load FindPvP config file (if exists)
 			final PropertiesParser FindPvP = new PropertiesParser(CUSTOM_FIND_PVP_CONFIG_FILE);
 			ENABLE_FIND_PVP = FindPvP.getBoolean("EnableFindPvP", false);
+			
+			// Load MerchantZeroSellPrice config file (if exists)
+			final PropertiesParser MerchantZeroSellPrice = new PropertiesParser(CUSTOM_MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE);
+			MERCHANT_ZERO_SELL_PRICE = MerchantZeroSellPrice.getBoolean("MerchantZeroSellPrice", false);
 			
 			// Load MultilingualSupport config file (if exists)
 			final PropertiesParser MultilingualSupport = new PropertiesParser(CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE);

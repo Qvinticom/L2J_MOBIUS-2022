@@ -157,7 +157,7 @@ public class RequestRefundItem implements IClientIncomingPacket
 			
 			final long count = item.getCount();
 			weight += count * template.getWeight();
-			adena += (count * template.getReferencePrice()) / 2;
+			adena += count * (template.getReferencePrice() / 2);
 			if (!template.isStackable())
 			{
 				slots += count;
@@ -182,7 +182,7 @@ public class RequestRefundItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((adena < 0) || !player.reduceAdena("Refund", adena, player.getLastFolkNPC(), false))
+		if (!Config.MERCHANT_ZERO_SELL_PRICE && ((adena < 0) || !player.reduceAdena("Refund", adena, player.getLastFolkNPC(), false)))
 		{
 			client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			client.sendPacket(ActionFailed.STATIC_PACKET);

@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
@@ -29,40 +29,23 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 public class SellList extends GameServerPacket
 {
 	private final PlayerInstance _player;
-	private final MerchantInstance _lease;
 	private final int _money;
 	private final List<ItemInstance> _selllist = new ArrayList<>();
 	
 	public SellList(PlayerInstance player)
 	{
 		_player = player;
-		_lease = null;
 		_money = _player.getAdena();
-		doLease();
-	}
-	
-	public SellList(PlayerInstance player, MerchantInstance lease)
-	{
-		_player = player;
-		_lease = lease;
-		_money = _player.getAdena();
-		doLease();
-	}
-	
-	private void doLease()
-	{
-		if (_lease == null)
+		
+		for (ItemInstance item : _player.getInventory().getItems())
 		{
-			for (ItemInstance item : _player.getInventory().getItems())
+			if ((item != null) && !item.isEquipped() && // Not equipped
+				item.getItem().isSellable() && // Item is sellable
+				(item.getItem().getItemId() != 57) && // Adena is not sellable
+				((_player.getPet() == null) || // Pet not summoned or
+					(item.getObjectId() != _player.getPet().getControlItemId()))) // Pet is summoned and not the item that summoned the pet
 			{
-				if ((item != null) && !item.isEquipped() && // Not equipped
-					item.getItem().isSellable() && // Item is sellable
-					(item.getItem().getItemId() != 57) && // Adena is not sellable
-					((_player.getPet() == null) || // Pet not summoned or
-						(item.getObjectId() != _player.getPet().getControlItemId()))) // Pet is summoned and not the item that summoned the pet
-				{
-					_selllist.add(item);
-				}
+				_selllist.add(item);
 			}
 		}
 	}
@@ -72,7 +55,7 @@ public class SellList extends GameServerPacket
 	{
 		writeC(0x10);
 		writeD(_money);
-		writeD(_lease == null ? 0x00 : 1000000 + _lease.getTemplate().npcId);
+		writeD(0x00);
 		
 		writeH(_selllist.size());
 		
@@ -88,11 +71,7 @@ public class SellList extends GameServerPacket
 			writeH(item.getEnchantLevel());
 			writeH(0x00);
 			writeH(0x00);
-			
-			if (_lease == null)
-			{
-				writeD(item.getItem().getReferencePrice() / 2); // wtf??? there is no conditional part in SellList!! this d should allways be here 0.o! fortunately the lease stuff are never ever use so the if allways exectues
-			}
+			writeD(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : item.getItem().getReferencePrice() / 2);
 		}
 	}
 }

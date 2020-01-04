@@ -146,7 +146,7 @@ public class RequestSellItem implements IClientIncomingPacket
 		// Proceed the sell
 		for (UniqueItemHolder i : _items)
 		{
-			ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "sell");
+			final ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "sell");
 			if ((item == null) || (!item.isSellable()))
 			{
 				continue;
@@ -162,14 +162,18 @@ public class RequestSellItem implements IClientIncomingPacket
 			
 			if (Config.ALLOW_REFUND)
 			{
-				item = player.getInventory().transferItem("Sell", i.getObjectId(), i.getCount(), player.getRefund(), player, merchant);
+				player.getInventory().transferItem("Sell", i.getObjectId(), i.getCount(), player.getRefund(), player, merchant);
 			}
 			else
 			{
-				item = player.getInventory().destroyItem("Sell", i.getObjectId(), i.getCount(), player, merchant);
+				player.getInventory().destroyItem("Sell", i.getObjectId(), i.getCount(), player, merchant);
 			}
 		}
-		player.addAdena("Sell", totalPrice, merchant, false);
+		
+		if (!Config.MERCHANT_ZERO_SELL_PRICE)
+		{
+			player.addAdena("Sell", totalPrice, merchant, false);
+		}
 		
 		// Update current load as well
 		final StatusUpdate su = new StatusUpdate(player);
