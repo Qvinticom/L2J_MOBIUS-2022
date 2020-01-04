@@ -372,6 +372,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>SWORD</item>
+					<item>BLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -426,7 +427,7 @@
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<overHit>true</overHit>
-				<pDefMod>0.8</pDefMod>
+				<pDefMod>0.7</pDefMod>
 			</effect>
 		</effects>
 	</skill>
@@ -664,11 +665,11 @@
 		<effects>
 			<effect name="HealOverTime">
 				<power>
-					<value level="1">12</value>
-					<value level="2">15</value>
-					<value level="3">17</value>
-					<value level="4">20</value>
-					<value level="5">22</value>
+					<value level="1">19</value>
+					<value level="2">24</value>
+					<value level="3">28</value>
+					<value level="4">33</value>
+					<value level="5">36</value>
 					<value level="6">41</value>
 					<value level="7">46</value>
 					<value level="8">49</value>
@@ -731,7 +732,7 @@
 					<value level="2">-11</value>
 					<value level="3">-12</value>
 					<value level="4">-13</value>
-					<value level="5">-15</value>
+					<value level="5">-14</value>
 					<value level="6">-15</value>
 				</amount>
 				<mode>PER</mode>
@@ -743,9 +744,17 @@
 		<icon>icon.skill0210</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
 		<castRange>400</castRange>
 		<hitTime>1000</hitTime>
 		<effectPoint>-204</effectPoint>
+		<effects>
+			<effect name="Speed">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="1613" toLevel="11" name="Body Impale">
 		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicts Stun for $s2 and dispels $s3 buff(s) from a stunned target. Requires a blunt weapon. Ignores Shield Defense. Over-hit. -->
@@ -813,6 +822,8 @@
 				<weaponType>
 					<item>BLUNT</item>
 					<item>DUALBLUNT</item>
+					<item>SWORD</item>
+					<item>POLE</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -987,7 +998,7 @@
 					<value level="1">188</value>
 					<value level="2">289</value>
 					<value level="3">361</value>
-					<value level="4">361</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">431</value>
 				</power>
 			</effect>
 		</effects>
@@ -1224,22 +1235,94 @@
 					<item>DUAL</item>
 				</weaponType>
 			</condition>
+			<condition name="EnergySaved">
+				<amount>5</amount>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="Mute" />
 			<effect name="PhysicalMute" />
 			<effect name="BlockTarget" />
 			<effect name="BlockMove" />
-			<effect name="PvpPhysicalAttackDamageBonus">
-				<amount>-50</amount>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus">
-				<amount>-50</amount>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus">
-				<amount>-50</amount>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1419,11 +1502,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1629" toLevel="9" name="Throw Dagger in Wrist">
+	<skill id="1629" toLevel="1" name="Throw Dagger in Wrist">
 		<!-- Throw Dagger in Wrist Throws a dagger at the enemy with $s1 Power added to P. Atk., and injures their wrist. Due to the wound, for $s2 there's a certain probability to interrupt target's skill casting. Requires a dagger. -->
 		<icon>icon.skill1629</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>60</abnormalTime>
 		<activateRate>80</activateRate>
 		<lvlBonusRate>20</lvlBonusRate>
 		<basicProperty>MAGIC</basicProperty>
@@ -1437,17 +1520,7 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
-		<effectPoint>
-			<value level="1">-707</value>
-			<value level="2">-724</value>
-			<value level="3">-742</value>
-			<value level="4">-760</value>
-			<value level="5">-779</value>
-			<value level="6">-798</value>
-			<value level="7">-817</value>
-			<value level="8">-837</value>
-			<value level="9">-857</value>
-		</effectPoint>
+		<effectPoint>-707</effectPoint>
 		<isDebuff>true</isDebuff>
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
@@ -1471,7 +1544,7 @@
 		<!-- Throws a dagger at an enemy with $s1 Power added to P. Atk. For $s2, with a certain probability, decreases target's HP when it tries to use skills. Requires a dagger. Over-hit. -->
 		<icon>icon.skill1630</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>40</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<activateRate>80</activateRate>
 		<lvlBonusRate>20</lvlBonusRate>

@@ -1728,7 +1728,8 @@
 					<value level="9">8233</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>15</criticalChance>
+				<criticalChance>25</criticalChance>
+				<pDefMod>0.8</pDefMod>
 			</effect>
 		</effects>
 	</skill>
@@ -1773,6 +1774,10 @@
 				<criticalChance>20</criticalChance>
 				<chanceBoost>300</chanceBoost>
 				<overHit>true</overHit>
+			</effect>
+			<effect name="Lethal">
+				<fullLethal>0</fullLethal>
+				<halfLethal>15</halfLethal>
 			</effect>
 		</effects>
 	</skill>

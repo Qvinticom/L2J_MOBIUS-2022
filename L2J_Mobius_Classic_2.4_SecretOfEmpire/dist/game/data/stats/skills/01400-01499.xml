@@ -450,7 +450,7 @@
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>100</itemConsumeCount>
+		<itemConsumeCount>20</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLvl>77</magicLvl>
 		<mpConsume>58</mpConsume>
@@ -479,7 +479,7 @@
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>200</itemConsumeCount>
+		<itemConsumeCount>100</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLvl>79</magicLvl>
 		<mpConsume>87</mpConsume>
@@ -1174,7 +1174,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>5000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>200</itemConsumeCount>
+		<itemConsumeCount>100</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLvl>80</magicLvl>
 		<mpConsume>72</mpConsume>
@@ -1239,16 +1239,16 @@
 		<hitTime>5000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
-			<value level="1">5</value>
-			<value level="2">5</value>
-			<value level="3">5</value>
-			<value level="4">5</value>
-			<value level="5">5</value>
-			<value level="6">7</value>
-			<value level="7">7</value>
-			<value level="8">7</value>
-			<value level="9">7</value>
-			<value level="10">7</value>
+			<value level="1">2</value>
+			<value level="2">2</value>
+			<value level="3">2</value>
+			<value level="4">2</value>
+			<value level="5">2</value>
+			<value level="6">3</value>
+			<value level="7">3</value>
+			<value level="8">3</value>
+			<value level="9">3</value>
+			<value level="10">3</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLvl>
@@ -1286,16 +1286,16 @@
 		<effects>
 			<effect name="ManaHealByLevel">
 				<power>
-					<value level="1">240</value>
-					<value level="2">252</value>
-					<value level="3">265</value>
-					<value level="4">278</value>
-					<value level="5">292</value>
-					<value level="6">312</value>
-					<value level="7">334</value>
-					<value level="8">357</value>
-					<value level="9">382</value>
-					<value level="10">409</value>
+					<value level="1">264</value>
+					<value level="2">277</value>
+					<value level="3">292</value>
+					<value level="4">306</value>
+					<value level="5">321</value>
+					<value level="6">343</value>
+					<value level="7">367</value>
+					<value level="8">393</value>
+					<value level="9">420</value>
+					<value level="10">450</value>
 				</power>
 			</effect>
 		</effects>

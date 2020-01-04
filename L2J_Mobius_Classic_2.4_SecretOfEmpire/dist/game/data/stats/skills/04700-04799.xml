@@ -91,39 +91,11 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="PAtk">
-				<amount>
-					<value level="1">6</value>
-					<value level="2">8</value>
-					<value level="3">10</value>
-					<value level="4">10</value>
-					<value level="5">10</value>
-					<value level="6">10</value>
-					<value level="7">10</value>
-					<value level="8">10</value>
-					<value level="9">10</value>
-					<value level="10">10</value>
-					<value level="11">10</value>
-					<value level="12">10</value>
-					<value level="13">10</value>
-				</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Accuracy">
-				<amount>
-					<value level="1">2</value>
-					<value level="2">2</value>
-					<value level="3">3</value>
-					<value level="4">3</value>
-					<value level="5">3</value>
-					<value level="6">3</value>
-					<value level="7">3</value>
-					<value level="8">3</value>
-					<value level="9">3</value>
-					<value level="10">3</value>
-					<value level="11">3</value>
-					<value level="12">3</value>
-					<value level="13">3</value>
-				</amount>
+				<amount>3</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -189,18 +161,18 @@
 				<dispel>ATTACK_TIME_UP;HIT_DOWN;PA_DOWN</dispel>
 				<rate>
 					<value level="1">40</value>
-					<value level="2">45</value>
-					<value level="3">50</value>
-					<value level="4">55</value>
-					<value level="5">60</value>
-					<value level="6">65</value>
-					<value level="7">70</value>
-					<value level="8">75</value>
-					<value level="9">80</value>
-					<value level="10">85</value>
+					<value level="2">50</value>
+					<value level="3">60</value>
+					<value level="4">70</value>
+					<value level="5">80</value>
+					<value level="6">90</value>
+					<value level="7">90</value>
+					<value level="8">90</value>
+					<value level="9">90</value>
+					<value level="10">90</value>
 					<value level="11">90</value>
-					<value level="12">95</value>
-					<value level="13">100</value>
+					<value level="12">90</value>
+					<value level="13">90</value>
 				</rate>
 			</effect>
 		</effects>
@@ -296,21 +268,11 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="MpRegen">
-				<amount>
-					<value level="1">30</value>
-					<value level="2">32</value>
-					<value level="3">35</value>
-					<value level="4">35</value>
-					<value level="5">35</value>
-					<value level="6">35</value>
-					<value level="7">35</value>
-					<value level="8">35</value>
-					<value level="9">35</value>
-					<value level="10">35</value>
-					<value level="11">35</value>
-					<value level="12">35</value>
-					<value level="13">35</value>
-				</amount>
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>25</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -406,23 +368,13 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="Reuse">
-				<amount>
-					<value level="1">-30</value>
-					<value level="2">-32</value>
-					<value level="3">-35</value>
-					<value level="4">-35</value>
-					<value level="5">-35</value>
-					<value level="6">-35</value>
-					<value level="7">-35</value>
-					<value level="8">-35</value>
-					<value level="9">-35</value>
-					<value level="10">-35</value>
-					<value level="11">-35</value>
-					<value level="12">-35</value>
-					<value level="13">-35</value>
-				</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="MAtk">
+				<amount>30</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -487,18 +439,18 @@
 				<dispel>SLEEP;ROOT_MAGICALLY;STUN;PARALYZE;SILENCE</dispel>
 				<rate>
 					<value level="1">40</value>
-					<value level="2">45</value>
-					<value level="3">50</value>
-					<value level="4">55</value>
-					<value level="5">60</value>
-					<value level="6">65</value>
-					<value level="7">70</value>
-					<value level="8">75</value>
-					<value level="9">80</value>
-					<value level="10">85</value>
+					<value level="2">50</value>
+					<value level="3">60</value>
+					<value level="4">70</value>
+					<value level="5">80</value>
+					<value level="6">90</value>
+					<value level="7">90</value>
+					<value level="8">90</value>
+					<value level="9">90</value>
+					<value level="10">90</value>
 					<value level="11">90</value>
-					<value level="12">95</value>
-					<value level="13">100</value>
+					<value level="12">90</value>
+					<value level="13">90</value>
 				</rate>
 			</effect>
 		</effects>
@@ -618,9 +570,9 @@
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
-					<value level="1">-6</value>
-					<value level="2">-8</value>
-					<value level="3">-10</value>
+					<value level="1">-5</value>
+					<value level="2">-6</value>
+					<value level="3">-8</value>
 					<value level="4">-10</value>
 					<value level="5">-10</value>
 					<value level="6">-10</value>
@@ -636,9 +588,9 @@
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">-6</value>
-					<value level="2">-8</value>
-					<value level="3">-10</value>
+					<value level="1">-5</value>
+					<value level="2">-6</value>
+					<value level="3">-8</value>
 					<value level="4">-10</value>
 					<value level="5">-10</value>
 					<value level="6">-10</value>
@@ -771,9 +723,9 @@
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
-					<value level="1">-6</value>
-					<value level="2">-8</value>
-					<value level="3">-10</value>
+					<value level="1">-5</value>
+					<value level="2">-6</value>
+					<value level="3">-8</value>
 					<value level="4">-10</value>
 					<value level="5">-10</value>
 					<value level="6">-10</value>
@@ -789,9 +741,9 @@
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">-6</value>
-					<value level="2">-8</value>
-					<value level="3">-10</value>
+					<value level="1">-5</value>
+					<value level="2">-6</value>
+					<value level="3">-8</value>
 					<value level="4">-10</value>
 					<value level="5">-10</value>
 					<value level="6">-10</value>
