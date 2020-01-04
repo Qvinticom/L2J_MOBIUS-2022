@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -29,65 +29,35 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 
 public class CreatureSay implements IClientOutgoingPacket
 {
-	private final int _objectId;
-	private final ChatType _textType;
-	private String _charName = null;
-	private int _charId = 0;
+	private final Creature _sender;
+	private final ChatType _chatType;
+	private String _senderName = null;
 	private String _text = null;
-	private int _msgId = 0;
+	private int _charId = 0;
+	private int _messageId = 0;
 	private List<String> _parameters;
 	
-	/**
-	 * Used by fake players.
-	 * @param sender
-	 * @param name
-	 * @param messageType
-	 * @param text
-	 */
-	public CreatureSay(Npc sender, String name, ChatType messageType, String text)
+	public CreatureSay(Creature sender, ChatType chatType, String senderName, String text)
 	{
-		_objectId = sender.getObjectId();
-		_textType = messageType;
-		_charName = name;
+		_sender = sender;
+		_chatType = chatType;
+		_senderName = senderName;
 		_text = text;
 	}
 	
-	/**
-	 * @param objectId
-	 * @param messageType
-	 * @param charName
-	 * @param text
-	 */
-	public CreatureSay(int objectId, ChatType messageType, String charName, String text)
+	public CreatureSay(Creature sender, ChatType chatType, NpcStringId npcStringId)
 	{
-		_objectId = objectId;
-		_textType = messageType;
-		_charName = charName;
-		_text = text;
+		_sender = sender;
+		_chatType = chatType;
+		_messageId = npcStringId.getId();
 	}
 	
-	public CreatureSay(int objectId, ChatType messageType, int charId, NpcStringId npcString)
+	public CreatureSay(ChatType chatType, int charId, SystemMessageId systemMessageId)
 	{
-		_objectId = objectId;
-		_textType = messageType;
+		_sender = null;
+		_chatType = chatType;
 		_charId = charId;
-		_text = npcString.getText();
-	}
-	
-	public CreatureSay(int objectId, ChatType messageType, String charName, NpcStringId npcString)
-	{
-		_objectId = objectId;
-		_textType = messageType;
-		_charName = charName;
-		_text = npcString.getText();
-	}
-	
-	public CreatureSay(int objectId, ChatType messageType, int charId, SystemMessageId sysString)
-	{
-		_objectId = objectId;
-		_textType = messageType;
-		_charId = charId;
-		_msgId = sysString.getId();
+		_messageId = systemMessageId.getId();
 	}
 	
 	/**
@@ -107,19 +77,20 @@ public class CreatureSay implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SAY2.writeId(packet);
-		packet.writeD(_objectId);
-		packet.writeD(_textType.getClientId());
-		if (_charName != null)
+		
+		packet.writeD(_sender == null ? 0 : _sender.getObjectId());
+		packet.writeD(_chatType.getClientId());
+		if (_senderName != null)
 		{
-			packet.writeS(_charName);
+			packet.writeS(_senderName);
 		}
 		else
 		{
 			packet.writeD(_charId);
 		}
-		if (_msgId != 0)
+		if (_messageId != 0)
 		{
-			packet.writeD(_msgId);
+			packet.writeD(_messageId);
 		}
 		else if (_text != null)
 		{
@@ -140,7 +111,7 @@ public class CreatureSay implements IClientOutgoingPacket
 	{
 		if (player != null)
 		{
-			player.broadcastSnoop(_textType, _charName, _text);
+			player.broadcastSnoop(_chatType, _senderName, _text);
 		}
 	}
 }

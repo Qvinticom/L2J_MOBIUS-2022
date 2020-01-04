@@ -1687,28 +1687,26 @@ public class SevenSignsFestival implements SpawnListener
 	/**
 	 * Used to send a "shout" message to all players currently present in an Oracle.<br>
 	 * Primarily used for Festival Guide and Witch related speech.
-	 * @param senderName
 	 * @param npcString
 	 */
-	public void sendMessageToAll(String senderName, NpcStringId npcString)
+	public void sendMessageToAll(NpcStringId npcString)
 	{
 		if ((_dawnChatGuide == null) || (_duskChatGuide == null))
 		{
 			return;
 		}
 		
-		sendMessageToAll(senderName, npcString, _dawnChatGuide);
-		sendMessageToAll(senderName, npcString, _duskChatGuide);
+		sendMessageToAll(npcString, _dawnChatGuide);
+		sendMessageToAll(npcString, _duskChatGuide);
 	}
 	
 	/**
-	 * @param senderName
 	 * @param npcString
 	 * @param npc
 	 */
-	public void sendMessageToAll(String senderName, NpcStringId npcString, Npc npc)
+	public void sendMessageToAll(NpcStringId npcString, Npc npc)
 	{
-		final CreatureSay cs = new CreatureSay(npc.getObjectId(), ChatType.NPC_SHOUT, senderName, npcString);
+		final CreatureSay cs = new CreatureSay(npc, ChatType.NPC_SHOUT, npcString);
 		if (npcString.getParamCount() == 1)
 		{
 			cs.addStringParameter(String.valueOf(getMinsToNextFestival()));
@@ -1795,7 +1793,7 @@ public class SevenSignsFestival implements SpawnListener
 				}
 				else if (getMinsToNextFestival() == 2)
 				{
-					sendMessageToAll("Festival Guide", NpcStringId.THE_MAIN_EVENT_WILL_START_IN_2_MINUTES_PLEASE_REGISTER_NOW);
+					sendMessageToAll(NpcStringId.THE_MAIN_EVENT_WILL_START_IN_2_MINUTES_PLEASE_REGISTER_NOW);
 				}
 				
 				// Stand by until the allowed signup period has elapsed.
@@ -1872,7 +1870,7 @@ public class SevenSignsFestival implements SpawnListener
 				_festivalInitialized = true;
 				
 				setNextFestivalStart(Config.ALT_FESTIVAL_CYCLE_LENGTH);
-				sendMessageToAll("Festival Guide", NpcStringId.THE_MAIN_EVENT_IS_NOW_STARTING);
+				sendMessageToAll(NpcStringId.THE_MAIN_EVENT_IS_NOW_STARTING);
 				
 				// Stand by for a short length of time before starting the festival.
 				try
@@ -2007,7 +2005,7 @@ public class SevenSignsFestival implements SpawnListener
 				// Allow signups for the next festival cycle.
 				_festivalInitialized = false;
 				
-				sendMessageToAll("Festival Witch", NpcStringId.THAT_WILL_DO_I_LL_MOVE_YOU_TO_THE_OUTSIDE_SOON);
+				sendMessageToAll(NpcStringId.THAT_WILL_DO_I_LL_MOVE_YOU_TO_THE_OUTSIDE_SOON);
 			}
 			catch (Exception e)
 			{
@@ -2315,7 +2313,7 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			if ((_participants != null) && !_participants.isEmpty())
 			{
-				_witchInst.broadcastPacket(new CreatureSay(_witchInst.getObjectId(), ChatType.NPC_GENERAL, "Festival Witch", npcStringId));
+				_witchInst.broadcastPacket(new CreatureSay(_witchInst, ChatType.NPC_GENERAL, npcStringId));
 			}
 		}
 		
@@ -2323,7 +2321,7 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			if ((_participants != null) && !_participants.isEmpty())
 			{
-				_witchInst.broadcastPacket(new CreatureSay(_witchInst.getObjectId(), ChatType.NPC_GENERAL, "Festival Witch", npcString));
+				_witchInst.broadcastPacket(new CreatureSay(_witchInst, ChatType.NPC_GENERAL, "Festival Witch", npcString));
 			}
 		}
 		

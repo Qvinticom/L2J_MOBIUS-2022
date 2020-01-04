@@ -371,7 +371,7 @@ public class Race extends Event
 	
 	private void sendMessage(PlayerInstance player, String text)
 	{
-		player.sendPacket(new CreatureSay(_npc.getObjectId(), ChatType.BATTLEFIELD, _npc.getName(), text));
+		player.sendPacket(new CreatureSay(_npc, ChatType.BATTLEFIELD, _npc.getName(), text));
 	}
 	
 	private void showMenu(PlayerInstance player)

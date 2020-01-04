@@ -625,7 +625,7 @@ public class MerrySquashmas extends LongTimeEvent
 	{
 		if (Rnd.get(100) < 20)
 		{
-			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getName(), _CHRONO_TEXT[Rnd.get(_CHRONO_TEXT.length)]));
+			npc.broadcastPacket(new CreatureSay(npc, ChatType.NPC_GENERAL, npc.getName(), _CHRONO_TEXT[Rnd.get(_CHRONO_TEXT.length)]));
 		}
 	}
 	
@@ -633,7 +633,7 @@ public class MerrySquashmas extends LongTimeEvent
 	{
 		if (Rnd.get(100) < 20)
 		{
-			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getName(), _NOCHRONO_TEXT[Rnd.get(_NOCHRONO_TEXT.length)]));
+			npc.broadcastPacket(new CreatureSay(npc, ChatType.NPC_GENERAL, npc.getName(), _NOCHRONO_TEXT[Rnd.get(_NOCHRONO_TEXT.length)]));
 		}
 	}
 	
@@ -641,7 +641,7 @@ public class MerrySquashmas extends LongTimeEvent
 	{
 		if (Rnd.get(100) < 30)
 		{
-			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getName(), _NECTAR_TEXT[Rnd.get(_NECTAR_TEXT.length)]));
+			npc.broadcastPacket(new CreatureSay(npc, ChatType.NPC_GENERAL, npc.getName(), _NECTAR_TEXT[Rnd.get(_NECTAR_TEXT.length)]));
 		}
 	}
 	

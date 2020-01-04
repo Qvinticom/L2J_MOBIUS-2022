@@ -430,7 +430,7 @@ public class SepulcherNpcInstance extends Npc
 			return; // wrong usage
 		}
 		
-		final CreatureSay creatureSay = new CreatureSay(0, ChatType.NPC_SHOUT, getName(), msg);
+		final CreatureSay creatureSay = new CreatureSay(this, ChatType.NPC_SHOUT, msg);
 		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
 			if (Util.checkIfInRange(15000, player, this, true))

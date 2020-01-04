@@ -23,39 +23,38 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.MentorManager;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 public class CreatureSay implements IClientOutgoingPacket
 {
-	private final int _objectId;
+	private final Creature _sender;
 	private final ChatType _chatType;
-	private String _charName = null;
-	private int _charId = 0;
+	private String _senderName = null;
 	private String _text = null;
-	private int _npcString = -1;
+	private int _charId = 0;
+	private int _messageId = -1;
 	private int _mask;
-	private int _charLevel = -1;
 	private List<String> _parameters;
 	
 	/**
 	 * @param sender
 	 * @param receiver
 	 * @param name
-	 * @param messageType
+	 * @param chatType
 	 * @param text
 	 */
-	public CreatureSay(PlayerInstance sender, PlayerInstance receiver, String name, ChatType messageType, String text)
+	public CreatureSay(PlayerInstance sender, PlayerInstance receiver, String name, ChatType chatType, String text)
 	{
-		_objectId = sender.getObjectId();
-		_charName = name;
-		_charLevel = sender.getLevel();
-		_chatType = messageType;
+		_sender = sender;
+		_senderName = name;
+		_chatType = chatType;
 		_text = text;
+		
 		if (receiver != null)
 		{
 			if (receiver.getFriendList().contains(sender.getObjectId()))
@@ -83,66 +82,27 @@ public class CreatureSay implements IClientOutgoingPacket
 		}
 	}
 	
-	/**
-	 * Used by fake players.
-	 * @param sender
-	 * @param name
-	 * @param messageType
-	 * @param text
-	 */
-	public CreatureSay(Npc sender, String name, ChatType messageType, String text)
+	public CreatureSay(Creature sender, ChatType chatType, String senderName, String text)
 	{
-		_objectId = sender.getObjectId();
-		_charName = name;
-		_charLevel = sender.getLevel();
-		_chatType = messageType;
+		_sender = sender;
+		_chatType = chatType;
+		_senderName = senderName;
 		_text = text;
 	}
 	
-	/**
-	 * @param objectId
-	 * @param messageType
-	 * @param charName
-	 * @param text
-	 */
-	public CreatureSay(int objectId, ChatType messageType, String charName, String text)
+	public CreatureSay(Creature sender, ChatType chatType, NpcStringId npcStringId)
 	{
-		_objectId = objectId;
-		_chatType = messageType;
-		_charName = charName;
-		_text = text;
+		_sender = sender;
+		_chatType = chatType;
+		_messageId = npcStringId.getId();
 	}
 	
-	public CreatureSay(PlayerInstance player, ChatType messageType, String text)
+	public CreatureSay(ChatType chatType, int charId, SystemMessageId systemMessageId)
 	{
-		_objectId = player.getObjectId();
-		_chatType = messageType;
-		_charName = player.getAppearance().getVisibleName();
-		_text = text;
-	}
-	
-	public CreatureSay(int objectId, ChatType messageType, int charId, NpcStringId npcString)
-	{
-		_objectId = objectId;
-		_chatType = messageType;
+		_sender = null;
+		_chatType = chatType;
 		_charId = charId;
-		_npcString = npcString.getId();
-	}
-	
-	public CreatureSay(int objectId, ChatType messageType, String charName, NpcStringId npcString)
-	{
-		_objectId = objectId;
-		_chatType = messageType;
-		_charName = charName;
-		_npcString = npcString.getId();
-	}
-	
-	public CreatureSay(int objectId, ChatType messageType, int charId, SystemMessageId sysString)
-	{
-		_objectId = objectId;
-		_chatType = messageType;
-		_charId = charId;
-		_npcString = sysString.getId();
+		_messageId = systemMessageId.getId();
 	}
 	
 	/**
@@ -163,26 +123,26 @@ public class CreatureSay implements IClientOutgoingPacket
 	{
 		OutgoingPackets.SAY2.writeId(packet);
 		
-		packet.writeD(_objectId);
+		packet.writeD(_sender == null ? 0 : _sender.getObjectId());
 		packet.writeD(_chatType.getClientId());
-		if (_charName != null)
+		if (_senderName != null)
 		{
-			packet.writeS(_charName);
+			packet.writeS(_senderName);
 		}
 		else
 		{
 			packet.writeD(_charId);
 		}
-		packet.writeD(_npcString); // High Five NPCString ID
+		packet.writeD(_messageId); // High Five NPCString ID
 		if (_text != null)
 		{
 			packet.writeS(_text);
-			if ((_charLevel > 0) && (_chatType == ChatType.WHISPER))
+			if ((_sender != null) && (_sender.isPlayer() || _sender.isFakePlayer()) && (_chatType == ChatType.WHISPER))
 			{
 				packet.writeC(_mask);
 				if ((_mask & 0x10) == 0)
 				{
-					packet.writeC(_charLevel);
+					packet.writeC(_sender.getLevel());
 				}
 			}
 		}
@@ -195,15 +155,15 @@ public class CreatureSay implements IClientOutgoingPacket
 		}
 		
 		// Rank
-		final PlayerInstance player = World.getInstance().getPlayer(_objectId);
-		if (player != null)
+		if ((_sender != null) && _sender.isPlayer())
 		{
-			if ((player.getClan() != null) && ((_chatType == ChatType.CLAN) || (_chatType == ChatType.ALLIANCE)))
+			final Clan clan = _sender.getClan();
+			if ((clan != null) && ((_chatType == ChatType.CLAN) || (_chatType == ChatType.ALLIANCE)))
 			{
 				packet.writeC(0); // unknown clan byte
 			}
 			
-			final int rank = RankManager.getInstance().getPlayerGlobalRank(player);
+			final int rank = RankManager.getInstance().getPlayerGlobalRank(_sender.getActingPlayer());
 			if ((rank == 0) || (rank > 100))
 			{
 				packet.writeC(0);
@@ -221,9 +181,9 @@ public class CreatureSay implements IClientOutgoingPacket
 				packet.writeC(3);
 			}
 			
-			if (player.getClan() != null)
+			if (clan != null)
 			{
-				packet.writeC(player.getClan().getCastleId());
+				packet.writeC(_sender.getClan().getCastleId());
 			}
 			else
 			{
@@ -243,7 +203,7 @@ public class CreatureSay implements IClientOutgoingPacket
 	{
 		if (player != null)
 		{
-			player.broadcastSnoop(_chatType, _charName, _text);
+			player.broadcastSnoop(_chatType, _senderName, _text);
 		}
 	}
 }

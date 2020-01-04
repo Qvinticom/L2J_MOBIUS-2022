@@ -86,8 +86,8 @@ public class ChatGeneral implements IChatHandler
 				return;
 			}
 			
-			final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), text);
-			final CreatureSay csRandom = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), ChatRandomizer.randomize(text));
+			final CreatureSay cs = new CreatureSay(activeChar, type, activeChar.getAppearance().getVisibleName(), text);
+			final CreatureSay csRandom = new CreatureSay(activeChar, type, activeChar.getAppearance().getVisibleName(), ChatRandomizer.randomize(text));
 			World.getInstance().forEachVisibleObjectInRange(activeChar, PlayerInstance.class, 1250, player ->
 			{
 				if ((player != null) && !BlockList.isBlocked(player, activeChar))

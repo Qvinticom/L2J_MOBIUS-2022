@@ -123,7 +123,7 @@ public class FreyaCelebration extends LongTimeEvent
 		{
 			if (getRandom(100) < 5)
 			{
-				final CreatureSay cs = new CreatureSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getName(), NpcStringId.DEAR_S1_THINK_OF_THIS_AS_MY_APPRECIATION_FOR_THE_GIFT_TAKE_THIS_WITH_YOU_THERE_S_NOTHING_STRANGE_ABOUT_IT_IT_S_JUST_A_BIT_OF_MY_CAPRICIOUSNESS);
+				final CreatureSay cs = new CreatureSay(npc, ChatType.NPC_GENERAL, NpcStringId.DEAR_S1_THINK_OF_THIS_AS_MY_APPRECIATION_FOR_THE_GIFT_TAKE_THIS_WITH_YOU_THERE_S_NOTHING_STRANGE_ABOUT_IT_IT_S_JUST_A_BIT_OF_MY_CAPRICIOUSNESS);
 				cs.addStringParameter(caster.getName());
 				
 				npc.broadcastPacket(cs);
@@ -132,7 +132,7 @@ public class FreyaCelebration extends LongTimeEvent
 			}
 			else if (getRandom(10) < 2)
 			{
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getName(), getRandomEntry(FREYA_TEXT)));
+				npc.broadcastPacket(new CreatureSay(npc, ChatType.NPC_GENERAL, getRandomEntry(FREYA_TEXT)));
 			}
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);

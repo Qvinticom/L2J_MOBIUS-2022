@@ -67,7 +67,7 @@ public class ChatWhisper implements IChatHandler
 				if (Config.FAKE_PLAYER_CHAT)
 				{
 					final String name = FakePlayerData.getInstance().getProperName(target);
-					activeChar.sendPacket(new CreatureSay(activeChar.getObjectId(), type, "->" + name, text));
+					activeChar.sendPacket(new CreatureSay(activeChar, type, "->" + name, text));
 					FakePlayerChatManager.getInstance().manageChat(activeChar, name, text);
 				}
 				else
@@ -114,8 +114,8 @@ public class ChatWhisper implements IChatHandler
 					activeChar.addSilenceModeExcluded(receiver.getObjectId());
 				}
 				
-				receiver.sendPacket(new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text));
-				activeChar.sendPacket(new CreatureSay(activeChar.getObjectId(), type, "->" + receiver.getName(), text));
+				receiver.sendPacket(new CreatureSay(activeChar, type, activeChar.getName(), text));
+				activeChar.sendPacket(new CreatureSay(activeChar, type, "->" + receiver.getName(), text));
 			}
 			else
 			{

@@ -60,7 +60,7 @@ public class ChatPartyMatchRoom implements IChatHandler
 			return;
 		}
 		
-		final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
+		final CreatureSay cs = new CreatureSay(activeChar, type, activeChar.getName(), text);
 		for (PlayerInstance member : room.getPartyMembers())
 		{
 			if (Config.FACTION_SYSTEM_ENABLED)

@@ -93,7 +93,7 @@ public class ChatWorld implements IChatHandler
 				}
 			}
 			
-			final CreatureSay cs = new CreatureSay(activeChar, type, text);
+			final CreatureSay cs = new CreatureSay(activeChar, type, activeChar.getName(), text);
 			if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_SPECIFIC_CHAT)
 			{
 				if (activeChar.isGood())

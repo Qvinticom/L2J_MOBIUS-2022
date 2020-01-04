@@ -1083,7 +1083,7 @@ class OlympiadGame
 			final Npc manager = spawn.getLastSpawn();
 			if (manager != null)
 			{
-				manager.broadcastPacket(new CreatureSay(manager.getObjectId(), ChatType.NPC_SHOUT, manager.getName(), "Olympiad " + gameType + " is going to begin in Arena " + (_stadiumID + 1) + " in a moment."));
+				manager.broadcastPacket(new CreatureSay(manager, ChatType.NPC_SHOUT, manager.getName(), "Olympiad " + gameType + " is going to begin in Arena " + (_stadiumID + 1) + " in a moment."));
 			}
 		}
 	}

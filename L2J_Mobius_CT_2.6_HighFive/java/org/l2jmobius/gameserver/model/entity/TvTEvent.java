@@ -827,7 +827,7 @@ public class TvTEvent
 			
 			killerTeam.increasePoints();
 			
-			final CreatureSay cs = new CreatureSay(killerPlayerInstance.getObjectId(), ChatType.WHISPER, killerPlayerInstance.getName(), "I have killed " + killedPlayerInstance.getName() + "!");
+			final CreatureSay cs = new CreatureSay(killerPlayerInstance, ChatType.WHISPER, killerPlayerInstance.getName(), "I have killed " + killedPlayerInstance.getName() + "!");
 			
 			for (PlayerInstance playerInstance : _teams[killerTeamId].getParticipatedPlayers().values())
 			{

@@ -52,7 +52,7 @@ public class GMChat implements ITelnetCommand
 		{
 			sb.append(str + " ");
 		}
-		AdminData.getInstance().broadcastToGMs(new CreatureSay(0, ChatType.ALLIANCE, "Telnet GM Broadcast", sb.toString()));
+		AdminData.getInstance().broadcastToGMs(new CreatureSay(null, ChatType.ALLIANCE, "Telnet GM Broadcast", sb.toString()));
 		return "GMChat sent!";
 	}
 }

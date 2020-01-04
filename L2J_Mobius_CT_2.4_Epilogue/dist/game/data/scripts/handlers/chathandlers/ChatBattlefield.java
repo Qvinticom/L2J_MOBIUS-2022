@@ -47,7 +47,7 @@ public class ChatBattlefield implements IChatHandler
 				return;
 			}
 			
-			final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
+			final CreatureSay cs = new CreatureSay(activeChar, type, activeChar.getName(), text);
 			for (PlayerInstance player : World.getInstance().getPlayers())
 			{
 				if (player.getSiegeSide() == activeChar.getSiegeSide())

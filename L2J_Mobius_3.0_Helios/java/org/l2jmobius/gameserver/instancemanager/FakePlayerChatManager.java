@@ -179,7 +179,7 @@ public class FakePlayerChatManager implements IXmlReader
 			final Npc npc = spawn.getLastSpawn();
 			if (npc != null)
 			{
-				player.sendPacket(new CreatureSay(npc, fpcName, ChatType.WHISPER, message));
+				player.sendPacket(new CreatureSay(npc, ChatType.WHISPER, fpcName, message));
 			}
 		}
 	}

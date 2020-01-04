@@ -93,7 +93,7 @@ public class PolymorphingOnAttack extends AbstractNpcAI
 				if (tmp.get(3) >= 0)
 				{
 					final NpcStringId npcString = MOBTEXTS[tmp.get(3)][getRandom(MOBTEXTS[tmp.get(3)].length)];
-					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getName(), npcString));
+					npc.broadcastPacket(new CreatureSay(npc, ChatType.NPC_GENERAL, npcString));
 				}
 				npc.deleteMe();
 				final Attackable newNpc = (Attackable) addSpawn(tmp.get(0), npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);

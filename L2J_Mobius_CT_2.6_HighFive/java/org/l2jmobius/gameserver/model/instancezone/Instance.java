@@ -826,14 +826,14 @@ public class Instance
 		{
 			timeLeft = remaining / 1000;
 			interval = 30000;
-			cs = new CreatureSay(0, ChatType.ALLIANCE, "Notice", timeLeft + " seconds left.");
+			cs = new CreatureSay(null, ChatType.ALLIANCE, "Notice", timeLeft + " seconds left.");
 			remaining -= 30000;
 		}
 		else
 		{
 			timeLeft = remaining / 1000;
 			interval = 10000;
-			cs = new CreatureSay(0, ChatType.ALLIANCE, "Notice", timeLeft + " seconds left.");
+			cs = new CreatureSay(null, ChatType.ALLIANCE, "Notice", timeLeft + " seconds left.");
 			remaining -= 10000;
 		}
 		if (cs != null)

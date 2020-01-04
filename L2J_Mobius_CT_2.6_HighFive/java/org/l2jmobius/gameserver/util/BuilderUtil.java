@@ -40,7 +40,7 @@ public class BuilderUtil
 	{
 		if (Config.GM_STARTUP_BUILDER_HIDE)
 		{
-			player.sendPacket(new CreatureSay(0, ChatType.GENERAL, "SYS", message));
+			player.sendPacket(new CreatureSay(null, ChatType.GENERAL, "SYS", message));
 		}
 		else
 		{
@@ -55,7 +55,7 @@ public class BuilderUtil
 	 */
 	public static void sendHtmlMessage(PlayerInstance player, String message)
 	{
-		player.sendPacket(new CreatureSay(0, ChatType.GENERAL, "HTML", message));
+		player.sendPacket(new CreatureSay(null, ChatType.GENERAL, "HTML", message));
 	}
 	
 	/**

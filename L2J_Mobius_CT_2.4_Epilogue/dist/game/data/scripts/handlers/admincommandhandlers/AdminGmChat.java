@@ -113,7 +113,7 @@ public class AdminGmChat implements IAdminCommandHandler
 				offset = 13;
 			}
 			text = command.substring(offset);
-			final CreatureSay cs = new CreatureSay(0, ChatType.ALLIANCE, activeChar.getName(), text);
+			final CreatureSay cs = new CreatureSay(null, ChatType.ALLIANCE, activeChar.getName(), text);
 			AdminData.getInstance().broadcastToGMs(cs);
 		}
 		catch (StringIndexOutOfBoundsException e)

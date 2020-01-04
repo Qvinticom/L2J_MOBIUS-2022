@@ -380,7 +380,7 @@ public class Race extends Event
 	
 	private void sendMessage(PlayerInstance player, String text)
 	{
-		player.sendPacket(new CreatureSay(_npc.getObjectId(), ChatType.MPCC_ROOM, _npc.getName(), text));
+		player.sendPacket(new CreatureSay(_npc, ChatType.MPCC_ROOM, _npc.getName(), text));
 	}
 	
 	private void showMenu(PlayerInstance player)
