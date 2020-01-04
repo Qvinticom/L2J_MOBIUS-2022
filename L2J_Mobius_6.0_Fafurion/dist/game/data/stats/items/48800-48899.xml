@@ -394,6 +394,8 @@
 	<item id="48841" name="Angel's Earring" type="Armor">
 		<!-- An Angel's earring. Enchanting increases Stun/ Mental/ Sleep Resistance and Atk. Rate, Received Healing, Vampiric Rage, P./ M. Atk., decreases Skill MP Consumption, Received P./ M. Critical Damage, depending on the enchantment level. These effects do not stack with identical earrings. -->
 		<set name="icon" val="icon.accessary_angel_of_earing" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="78" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />

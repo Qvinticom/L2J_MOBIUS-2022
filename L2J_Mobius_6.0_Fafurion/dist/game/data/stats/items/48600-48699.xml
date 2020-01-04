@@ -705,6 +705,8 @@
 	<item id="48669" name="Angel's Necklace" type="Armor">
 		<!-- Angel's Necklace. Enchantment increases Stun/ Paralysis/ Bleed Resistance and Atk. Rate, Speed, Damage Reflection, P./ M. Def., Skill Power, decreases Skill Cooldown, depending on the enchantment level. -->
 		<set name="icon" val="icon.elemental_necklace_wind_i00" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
