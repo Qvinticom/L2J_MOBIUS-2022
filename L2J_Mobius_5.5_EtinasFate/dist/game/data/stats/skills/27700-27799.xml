@@ -1177,41 +1177,122 @@
 		<!-- Teleport to the Town of Aden. Usable only when Agathion's Seal is released. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<reuseDelay>600000</reuseDelay>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<reuseDelay>1800000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>147450</x>
+				<y>27064</y>
+				<z>-2208</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27780" toLevel="1" name="Hut on Chicken Legs Teleport - Town of Rune">
 		<!-- Teleport to the Town of Rune. Usable only when Agathion's Seal is released. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<reuseDelay>600000</reuseDelay>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<reuseDelay>1800000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>44070</x>
+				<y>-50243</y>
+				<z>-791</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27781" toLevel="1" name="Hut on Chicken Legs Teleport - Town of Giran">
 		<!-- Teleport to the Town of Giran. Usable only when Agathion's Seal is released. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<reuseDelay>600000</reuseDelay>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<reuseDelay>1800000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>82698</x>
+				<y>148638</y>
+				<z>-3468</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27782" toLevel="1" name="Agathion's Blessing: Dash">
 		<!-- For 10 sec., a Hut on Chicken Legs's power boosts Speed by 100%. -->
 		<icon>icon.skill_transform_buff</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<operateType>A2</operateType>
+		<abnormalTime>10</abnormalTime>
+		<magicLvl>1</magicLvl>
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>689</effectPoint>
+		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27783" toLevel="1" name="Agathion's Blessing: Meditation">
 		<!-- For 30 sec., P. Def. -90% and restores MP by 134 per sec. Effect removed when hit. Cooldown is 30 min. -->
 		<icon>icon.skill1430</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>FORCE_MEDITATION</abnormalType>
+		<magicLvl>1</magicLvl>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<hitTime>2000</hitTime>
 		<reuseDelay>1800000</reuseDelay>
-		<effectPoint>1</effectPoint>
+		<effectPoint>489</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ManaHealOverTime">
+				<power>134</power>
+				<ticks>1</ticks>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-90</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27784" toLevel="1" name="Agathion's Blessing: Featherweight">
 		<!-- Weight Limit +9000, and Inventory Slots +9. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="WeightLimit">
+				<amount>9000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>9</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27785" toLevel="1" name="Agathion Cute Trick - Hut on Chicken Legs">
 		<!-- See the summoned spirit perform cute tricks. -->

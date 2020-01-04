@@ -1463,9 +1463,14 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
-			<skill id="21194" level="1" /> <!-- Release Agathion's Seal - Three-headed Dragon -->
-			<skill id="23181" level="1" /> <!-- Three-headed Dragon Agathion Cute Trick -->
-			<skill id="23182" level="1" /> <!-- Three-headed Dragon Agathion Special Skill: Wind Walk -->
+			<skill id="21194" level="1" /> <!-- Release Agathion's Seal - Babayaga -->
+			<skill id="27779" level="1" /> <!-- Babayaga Teleport - Town of Aden -->
+			<skill id="27780" level="1" /> <!-- Babayaga Teleport - Town of Rune -->
+			<skill id="27781" level="1" /> <!-- Babayaga Teleport - Town of Giran -->
+			<skill id="27782" level="1" /> <!-- Agathion's Blessing: Dash -->
+			<skill id="27783" level="1" /> <!-- Agathion's Blessing: Meditation -->
+			<skill id="27784" level="1" /> <!-- Agathion's Blessing: Featherweight -->
+			<skill id="27785" level="1" /> <!-- Agathion Cute Trick - Babayaga -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
