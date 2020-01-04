@@ -183,7 +183,7 @@ public class CreatureSay implements IClientOutgoingPacket
 			
 			if (clan != null)
 			{
-				packet.writeC(_sender.getClan().getCastleId());
+				packet.writeC(clan.getCastleId());
 			}
 			else
 			{
