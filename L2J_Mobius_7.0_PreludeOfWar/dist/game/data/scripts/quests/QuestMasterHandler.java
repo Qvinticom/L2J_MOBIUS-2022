@@ -60,6 +60,8 @@ import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
 import quests.Q00620_FourGoblets.Q00620_FourGoblets;
 import quests.Q00670_DefeatingTheLordOfSeed.Q00670_DefeatingTheLordOfSeed;
+import quests.Q00674_ChangesInTheShadowOfTheMotherTree.Q00674_ChangesInTheShadowOfTheMotherTree;
+import quests.Q00675_WhatTheThreadOfThePastShows.Q00675_WhatTheThreadOfThePastShows;
 import quests.Q00726_LightWithinTheDarkness.Q00726_LightWithinTheDarkness;
 import quests.Q00727_HopeWithinTheDarkness.Q00727_HopeWithinTheDarkness;
 import quests.Q00737_ASwordHiddenInASmile.Q00737_ASwordHiddenInASmile;
@@ -81,6 +83,7 @@ import quests.Q00779_UtilizeTheDarknessSeedOfDestruction.Q00779_UtilizeTheDarkne
 import quests.Q00783_VestigeOfTheMagicPower.Q00783_VestigeOfTheMagicPower;
 import quests.Q00790_ObtainingFerinsTrust.Q00790_ObtainingFerinsTrust;
 import quests.Q00792_TheSuperionGiants.Q00792_TheSuperionGiants;
+import quests.Q00816_PlansToRepairTheStronghold.Q00816_PlansToRepairTheStronghold;
 import quests.Q00823_DisappearedRaceNewFairy.Q00823_DisappearedRaceNewFairy;
 import quests.Q00826_InSearchOfTheSecretWeapon.Q00826_InSearchOfTheSecretWeapon;
 import quests.Q00827_EinhasadsOrder.Q00827_EinhasadsOrder;
@@ -142,6 +145,7 @@ import quests.Q10579_ContainingTheAttributePower.Q10579_ContainingTheAttributePo
 import quests.Q10589_WhereFatesIntersect.Q10589_WhereFatesIntersect;
 import quests.Q10590_ReawakenedFate.Q10590_ReawakenedFate;
 import quests.Q10591_NobleMaterial.Q10591_NobleMaterial;
+import quests.Q10597_EscapeToTheShadowOfTheMotherTree.Q10597_EscapeToTheShadowOfTheMotherTree;
 import quests.Q10658_MakkumInTheDimension.Q10658_MakkumInTheDimension;
 import quests.Q10701_TheRoadToDestruction.Q10701_TheRoadToDestruction;
 import quests.Q10702_TheRoadToInfinity.Q10702_TheRoadToInfinity;
@@ -178,8 +182,10 @@ import quests.Q10838_TheReasonForNotBeingAbleToGetOut.Q10838_TheReasonForNotBein
 import quests.Q10839_BlackbirdsNameValue.Q10839_BlackbirdsNameValue;
 import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
+import quests.Q10844_BloodyBattleSeizingSupplies.Q10844_BloodyBattleSeizingSupplies;
 import quests.Q10849_TrialsForAdaptation.Q10849_TrialsForAdaptation;
 import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
+import quests.Q10852_TheMotherTreeRevivalProject.Q10852_TheMotherTreeRevivalProject;
 import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.Q10857_SecretTeleport.Q10857_SecretTeleport;
 import quests.Q10891_AtANewPlace.Q10891_AtANewPlace;
@@ -302,8 +308,8 @@ public class QuestMasterHandler
 		Q00671_PathToFindingThePast.class, // TODO: Not done.
 		Q00672_ArchenemyEmbryo.class, // TODO: Not done.
 		Q00673_BelethAmbition.class, // TODO: Not done.
-		Q00674_ChangesInTheShadowOfTheMotherTree.class, // TODO: Not done.
-		Q00675_WhatTheThreadOfThePastShows.class, // TODO: Not done.
+		Q00674_ChangesInTheShadowOfTheMotherTree.class,
+		Q00675_WhatTheThreadOfThePastShows.class,
 		Q00682_TheStrongInTheClosedSpace.class, // TODO: Not done.
 		Q00683_AdventOfKrofinSubspecies.class, // FIXME: Custom.
 		Q00684_DisturbedFields.class, // FIXME: Custom.
@@ -335,7 +341,7 @@ public class QuestMasterHandler
 		Q00783_VestigeOfTheMagicPower.class,
 		Q00790_ObtainingFerinsTrust.class,
 		Q00792_TheSuperionGiants.class,
-		Q00816_PlansToRepairTheStronghold.class, // TODO: Not done.
+		Q00816_PlansToRepairTheStronghold.class,
 		Q00823_DisappearedRaceNewFairy.class,
 		Q00824_AttackTheCommandPost.class, // TODO: Not done.
 		Q00826_InSearchOfTheSecretWeapon.class,
@@ -439,7 +445,7 @@ public class QuestMasterHandler
 		Q10594_FergasonsScheme.class, // TODO: Not done.
 		Q10595_TheDimensionalWarpPart8.class, // TODO: Not done.
 		Q10596_TheDimensionalWarpPart9.class, // TODO: Not done.
-		Q10597_EscapeToTheShadowOfTheMotherTree.class, // TODO: Not done.
+		Q10597_EscapeToTheShadowOfTheMotherTree.class,
 		Q10598_WithAllYourMight.class, // TODO: Not done.
 		Q10599_ThreadOfFateHangingOnTheMotherTree.class, // TODO: Not done.
 		Q10658_MakkumInTheDimension.class,
@@ -481,13 +487,13 @@ public class QuestMasterHandler
 		Q10839_BlackbirdsNameValue.class,
 		Q10840_TimeToRecover.class,
 		Q10843_AnomalyInTheEnchantedValley.class,
-		Q10844_BloodyBattleSeizingSupplies.class, // TODO: Not done.
+		Q10844_BloodyBattleSeizingSupplies.class,
 		Q10845_BloodyBattleRescueTheSmiths.class, // TODO: Not done.
 		Q10846_BloodyBattleMeetingTheCommander.class, // TODO: Not done.
 		Q10848_TrialsBeforeTheBattle.class, // TODO: Not done.
 		Q10849_TrialsForAdaptation.class,
 		Q10851_ElvenBotany.class,
-		Q10852_TheMotherTreeRevivalProject.class, // TODO: Not done.
+		Q10852_TheMotherTreeRevivalProject.class,
 		Q10853_ToWeakenTheGiants.class, // TODO: Not done.
 		Q10854_ToSeizeTheFortress.class, // TODO: Not done.
 		Q10856_SuperionAppears.class,

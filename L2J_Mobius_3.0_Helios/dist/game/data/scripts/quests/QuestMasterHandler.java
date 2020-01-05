@@ -186,6 +186,7 @@ import quests.Q00783_VestigeOfTheMagicPower.Q00783_VestigeOfTheMagicPower;
 import quests.Q00787_TheRoleOfAWatcher.Q00787_TheRoleOfAWatcher;
 import quests.Q00790_ObtainingFerinsTrust.Q00790_ObtainingFerinsTrust;
 import quests.Q00792_TheSuperionGiants.Q00792_TheSuperionGiants;
+import quests.Q00816_PlansToRepairTheStronghold.Q00816_PlansToRepairTheStronghold;
 import quests.Q00817_BlackAteliaResearch.Q00817_BlackAteliaResearch;
 import quests.Q00823_DisappearedRaceNewFairy.Q00823_DisappearedRaceNewFairy;
 import quests.Q00826_InSearchOfTheSecretWeapon.Q00826_InSearchOfTheSecretWeapon;
@@ -470,8 +471,10 @@ import quests.Q10839_BlackbirdsNameValue.Q10839_BlackbirdsNameValue;
 import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
+import quests.Q10844_BloodyBattleSeizingSupplies.Q10844_BloodyBattleSeizingSupplies;
 import quests.Q10849_TrialsForAdaptation.Q10849_TrialsForAdaptation;
 import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
+import quests.Q10852_TheMotherTreeRevivalProject.Q10852_TheMotherTreeRevivalProject;
 import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.Q10857_SecretTeleport.Q10857_SecretTeleport;
 import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
@@ -490,7 +493,6 @@ import quests.not_done.Q00780_UtilizeTheDarknessSeedOfInfinity;
 import quests.not_done.Q00781_UtilizeTheDarknessSeedOfAnnihilation;
 import quests.not_done.Q00782_UtilizeTheDarknessSeedOfHellfire;
 import quests.not_done.Q00789_WaitingForPaagrio;
-import quests.not_done.Q00816_PlansToRepairTheStronghold;
 import quests.not_done.Q00824_AttackTheCommandPost;
 import quests.not_done.Q00836_RequestFromTheBlackbirdClan;
 import quests.not_done.Q00837_RequestFromTheGiantTrackers;
@@ -520,11 +522,9 @@ import quests.not_done.Q10531_OddHappeningsAtDragonValley;
 import quests.not_done.Q10532_UncoveringTheConspiracy;
 import quests.not_done.Q10748_MysteriousSuggestion1;
 import quests.not_done.Q10749_MysteriousSuggestion2;
-import quests.not_done.Q10844_BloodyBattleSeizingSupplies;
 import quests.not_done.Q10845_BloodyBattleRescueTheSmiths;
 import quests.not_done.Q10846_BloodyBattleMeetingTheCommander;
 import quests.not_done.Q10848_TrialsBeforeTheBattle;
-import quests.not_done.Q10852_TheMotherTreeRevivalProject;
 import quests.not_done.Q10853_ToWeakenTheGiants;
 import quests.not_done.Q10854_ToSeizeTheFortress;
 import quests.not_done.Q10858_QueenRamonaControllerOfTheVessel;
@@ -722,7 +722,7 @@ public class QuestMasterHandler
 		Q00789_WaitingForPaagrio.class, // TODO: Not done.
 		Q00790_ObtainingFerinsTrust.class,
 		Q00792_TheSuperionGiants.class,
-		Q00816_PlansToRepairTheStronghold.class, // TODO: Not done.
+		Q00816_PlansToRepairTheStronghold.class,
 		Q00817_BlackAteliaResearch.class,
 		Q00823_DisappearedRaceNewFairy.class,
 		Q00824_AttackTheCommandPost.class, // TODO: Not done.
@@ -1036,13 +1036,13 @@ public class QuestMasterHandler
 		Q10840_TimeToRecover.class,
 		Q10841_DeepInsideAteliaFortress.class,
 		Q10843_AnomalyInTheEnchantedValley.class,
-		Q10844_BloodyBattleSeizingSupplies.class, // TODO: Not done.
+		Q10844_BloodyBattleSeizingSupplies.class,
 		Q10845_BloodyBattleRescueTheSmiths.class, // TODO: Not done.
 		Q10846_BloodyBattleMeetingTheCommander.class, // TODO: Not done.
 		Q10848_TrialsBeforeTheBattle.class, // TODO: Not done.
 		Q10849_TrialsForAdaptation.class,
 		Q10851_ElvenBotany.class,
-		Q10852_TheMotherTreeRevivalProject.class, // TODO: Not done.
+		Q10852_TheMotherTreeRevivalProject.class,
 		Q10853_ToWeakenTheGiants.class, // TODO: Not done.
 		Q10854_ToSeizeTheFortress.class, // TODO: Not done.
 		Q10856_SuperionAppears.class,
