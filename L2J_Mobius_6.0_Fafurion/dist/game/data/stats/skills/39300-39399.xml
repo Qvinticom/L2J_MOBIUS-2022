@@ -253,15 +253,141 @@
 		<!-- An enchant scroll for Freya Staff. Failure to enchant destroys the weapon. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39350" toLevel="3" name="Freya's Ice Rose">
-		<!-- Increases Max HP/ MP/ CP by $s2, P. Atk./ M. Atk./ P. Def./ M. Def. by $s3, Atk. Spd./ Casting Spd. by $s4, Speed by $s5, Attack Attribute/ Attribute Resistance by $s6, Damage by $s7, P./ M. Skill Power by $s8, Acquired XP/ SP by $s9, and decreases Damage Received by $s10 and Skill MP Consumption by $s11 for $s1. Buffs persist after death. -->
+	<skill id="39350" toLevel="1" name="Freya's Ice Rose">
+		<!-- Increases Max HP/ MP/ CP by 30%, P. Atk./ M. Atk./ P. Def./ M. Def. by 30%, Atk. Spd./ Casting Spd. by 10%, Speed by 20, Attack Attribute/ Attribute Resistance by 100, Damage by 10%, P./ M. Skill Power by 10%, Acquired XP/ SP by 30%, and decreases Damage Received by 30 min.0 and Skill MP Consumption by 30 min.1 for 30 min. Buffs persist after death. -->
 		<icon>icon.bm_freya_ice_rose</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<hitTime>1000</hitTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<effects>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="AttackAttributeAdd">
+				<amount>100</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>ENEMY_ALL</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39351" toLevel="1" name="Merkios' Altar Entrance Pass">
 		<operateType>A1</operateType>
@@ -282,12 +408,138 @@
 	<skill id="39355" toLevel="1" name="Freya's Ice Rose - Event">
 		<!-- Increases Max HP/ MP/ CP by 30%, P. Atk./ M. Atk./ P. Def./ M. Def. by 30%, Atk. Spd./ Casting Spd. by 10%, Speed by 20, Attack Attribute/ Attribute Resistance by 100, Damage by 10%, P./ M. Skill Power by 10%, Acquired XP/ SP by 30%, and decreases Damage Received by 30 min.0 and Skill MP Consumption by 30 min.1 for 30 min. Buffs persist after death. -->
 		<icon>icon.bm_freya_ice_rose</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<hitTime>1000</hitTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<effects>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="AttackAttributeAdd">
+				<amount>100</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>ENEMY_ALL</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39356" toLevel="1" name="Shining Dragon Attribute Tonic (XP)">
 		<!-- Increases Attack Attribute by 70, all Attribute Resistance by 70, and Acquired XP/ SP by 30% for 30 min. Buffs persist after death. -->

@@ -285,10 +285,21 @@
 		<!-- Dimensional item. When used, increases Max HP/ MP/ CP by 30%, P. Atk./ M. Atk./ P. Def./ M. Def. by 30%, Atk. Spd./ Casting Spd. by 10%, Speed by 20, Attack/ Attribute Resistance by 100, Damage by 10%, P./ M. Skill Power by 10%, Acquired XP/ SP by 30%, and decreases Damage Received by 10% and Skill MP Consumption by 15% for 30 min. Buffs persist after death. Cooldown is 5 min. Cannot stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_freya_ice_rose" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39350" level="1" /> <!-- Freya's Ice Rose -->
+		</skills>
 	</item>
 	<item id="48831" name="Jewel Energy" type="EtcItem">
 		<!-- Combine it with a Greater Jewel to increase the jewel's power. Can be used with any Greater Jewel. -->
@@ -486,13 +497,21 @@
 		<!-- Dimensional item. When used, increases Max HP/ MP/ CP by 30%, P. Atk./ M. Atk./ P. Def./ M. Def. by 30%, Atk. Spd./ Casting Spd. by 10%, Speed by 20, Attack/ Attribute Resistance by 100, Damage by 10%, P./ M. Skill Power by 10%, Acquired XP/ SP by 30%, and decreases Damage Received by 10% and Skill MP Consumption by 15% for 30 min. Buffs persist after death. Cooldown is 5 min. Cannot stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_freya_ice_rose" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39355" level="1" /> <!-- Freya's Ice Rose -->
+		</skills>
 	</item>
 	<item id="48849" name="Chronicle Token" additionalName="30-day" type="EtcItem">
 		<!-- A rune item. If stored in the inventory, increases P. Atk./ M. Atk./ P. Def./ M. Def./ Atk. Spd./ Casting Spd./ P. Critical Rate/ M. Increases Critical Rate/ Max HP&MP&CP by 5% and Vitality by 14%. Cannot be used in Olympiad. -->
