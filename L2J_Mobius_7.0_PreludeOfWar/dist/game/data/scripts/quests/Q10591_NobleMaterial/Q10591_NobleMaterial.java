@@ -309,12 +309,12 @@ public class Q10591_NobleMaterial extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(2) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
-			if ((getQuestItemsCount(player, FLAME_ENERGY) < 10) && (getRandom(100) < 90))
+			if ((getQuestItemsCount(player, FLAME_ENERGY) < 1000) && (getRandom(100) < 90))
 			{
 				giveItems(player, FLAME_ENERGY, 1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
-			if ((getQuestItemsCount(player, FLAME_ENERGY) >= 10) && (player.getLevel() >= MIN_LEVEL))
+			if ((getQuestItemsCount(player, FLAME_ENERGY) >= 1000) && (player.getLevel() >= MIN_LEVEL))
 			{
 				qs.setCond(3, true);
 			}
