@@ -15,25 +15,25 @@
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">5</value>
-					<value level="2">10</value>
-					<value level="3">15</value>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+					<value level="3">-15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
-					<value level="1">5</value>
-					<value level="2">10</value>
-					<value level="3">15</value>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+					<value level="3">-15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed">
 				<amount>
-					<value level="1">5</value>
-					<value level="2">10</value>
-					<value level="3">30</value>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+					<value level="3">-30</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
