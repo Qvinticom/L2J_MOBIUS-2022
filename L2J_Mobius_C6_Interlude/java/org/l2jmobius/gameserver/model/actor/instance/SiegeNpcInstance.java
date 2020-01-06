@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.entity.siege.Siege;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -74,11 +75,8 @@ public class SiegeNpcInstance extends FolkInstance
 	 */
 	public void showSiegeInfoWindow(PlayerInstance player)
 	{
-		if (validateCondition(player))
-		{
-			getCastle().getSiege().listRegisterClan(player);
-		}
-		else
+		final Siege siege = getCastle().getSiege();
+		if (siege.getIsInProgress())
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			html.setFile("data/html/siege/" + getTemplate().npcId + "-busy.htm");
@@ -87,10 +85,9 @@ public class SiegeNpcInstance extends FolkInstance
 			player.sendPacket(html);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 		}
-	}
-	
-	private boolean validateCondition(PlayerInstance player)
-	{
-		return getCastle().getSiege().getIsInProgress();
+		else
+		{
+			siege.listRegisterClan(player);
+		}
 	}
 }

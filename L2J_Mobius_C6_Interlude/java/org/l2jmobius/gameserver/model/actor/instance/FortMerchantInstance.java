@@ -20,6 +20,7 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.entity.siege.FortSiege;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -147,11 +148,8 @@ public class FortMerchantInstance extends NpcWalkerInstance
 	 */
 	public void showSiegeInfoWindow(PlayerInstance player)
 	{
-		if (validateCondition(player))
-		{
-			getFort().getSiege().listRegisterClan(player);
-		}
-		else
+		final FortSiege siege = getFort().getSiege();
+		if (siege.getIsInProgress())
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			html.setFile("data/html/fortress/merchant-busy.htm");
@@ -160,10 +158,9 @@ public class FortMerchantInstance extends NpcWalkerInstance
 			player.sendPacket(html);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 		}
-	}
-	
-	private boolean validateCondition(PlayerInstance player)
-	{
-		return !getFort().getSiege().getIsInProgress();
+		else
+		{
+			siege.listRegisterClan(player);
+		}
 	}
 }
