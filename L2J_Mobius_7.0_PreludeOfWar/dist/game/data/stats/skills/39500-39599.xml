@@ -339,6 +339,30 @@
 	<skill id="39551" toLevel="1" name="Spellbook: Renewed Energy of Power">
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80924</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>105</minLevel>
+				<maxLevel>127</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>30820</skillId> <!-- Dual Class - Renewed Energy of Power -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>30820</skillId> <!-- Dual Class - Renewed Energy of Power -->
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39552" toLevel="1" name="Potion of Protection: Confusion (Low-grade)">
 		<!-- Confusion Resistance +5%. Cannot be used in the Olympiad. -->
