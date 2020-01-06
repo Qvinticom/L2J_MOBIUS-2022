@@ -314,6 +314,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="30820" level="1" /> <!-- Dual Class - Renewed Energy of Power -->
+		</skills>
 	</item>
 	<item id="80925" name="Potion of Protection: Confusion" type="EtcItem">
 		<!-- When used, Confusion Resistance +5%, Received PvP Damage -3%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->

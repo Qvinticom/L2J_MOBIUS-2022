@@ -174,10 +174,6 @@ public class Raina extends AbstractNpcAI
 				{
 					htmltext = "noSummon.html";
 				}
-				else if (player.getRace() == Race.ERTHEIA)
-				{
-					htmltext = "noErtheia.html";
-				}
 				else if (!haveDoneQuest(player, false))
 				{
 					htmltext = "noQuest.html";
@@ -225,10 +221,6 @@ public class Raina extends AbstractNpcAI
 				{
 					htmltext = "noSummon.html";
 				}
-				else if (player.getRace() == Race.ERTHEIA)
-				{
-					htmltext = "noErtheia.html";
-				}
 				else if (!player.isInventoryUnder90(true) || (player.getWeightPenalty() >= 2))
 				{
 					htmltext = "inventoryLimit.html";
@@ -265,10 +257,6 @@ public class Raina extends AbstractNpcAI
 				else if (player.hasSummon())
 				{
 					htmltext = "noSummon.html";
-				}
-				else if (player.getRace() == Race.ERTHEIA)
-				{
-					htmltext = "noErtheia.html";
 				}
 				else if (!player.isInventoryUnder80(true) || (player.getWeightPenalty() >= 2))
 				{
@@ -310,7 +298,7 @@ public class Raina extends AbstractNpcAI
 			case "addDualClass_SIXTH_WYNN_GROUP":
 			case "addDualClass_SIXTH_EOLH_GROUP":
 			{
-				if ((player.getRace() != Race.ERTHEIA) || (player.getLevel() < 85) || !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) || player.hasDualClass() || !haveDoneQuest(player, true))
+				if ((player.getLevel() < 85) || !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) || player.hasDualClass() || !haveDoneQuest(player, true))
 				{
 					htmltext = "addDualClassErtheiaFailed.html";
 					break;
@@ -433,10 +421,6 @@ public class Raina extends AbstractNpcAI
 					else if (player.hasSummon())
 					{
 						htmltext = "noSummon.html";
-					}
-					else if (player.getRace() == Race.ERTHEIA)
-					{
-						htmltext = "noErtheia.html";
 					}
 					else if (!player.isInventoryUnder90(true) || (player.getWeightPenalty() >= 2))
 					{
