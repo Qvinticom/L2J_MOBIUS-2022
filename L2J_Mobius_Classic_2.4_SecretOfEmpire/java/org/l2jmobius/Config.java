@@ -1092,6 +1092,8 @@ public class Config
 	public static Map<ClassId, Float> PVP_BLOW_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PLAYER_HEALING_SKILL_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> SKILL_MASTERY_CHANCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> EXP_AMOUNT_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> SP_AMOUNT_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static boolean MULTILANG_ENABLE;
 	public static List<String> MULTILANG_ALLOWED = new ArrayList<>();
 	public static String MULTILANG_DEFAULT;
@@ -2929,6 +2931,34 @@ public class Config
 					{
 						final String id = classInfo[0].trim();
 						SKILL_MASTERY_CHANCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] expAmountMultipliers = ClassBalance.getString("ExpAmountMultipliers", "").trim().split(";");
+			EXP_AMOUNT_MULTIPLIERS.clear();
+			if (expAmountMultipliers.length > 0)
+			{
+				for (String info : expAmountMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						EXP_AMOUNT_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] spAmountMultipliers = ClassBalance.getString("SpAmountMultipliers", "").trim().split(";");
+			SP_AMOUNT_MULTIPLIERS.clear();
+			if (spAmountMultipliers.length > 0)
+			{
+				for (String info : spAmountMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						SP_AMOUNT_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
 					}
 				}
 			}

@@ -903,6 +903,9 @@ public class Party extends AbstractPlayerGroup
 	
 	private double calculateExpSpPartyCutoff(PlayerInstance player, int topLvl, double addExp, double addSp, boolean vit)
 	{
+		addExp *= Config.EXP_AMOUNT_MULTIPLIERS.getOrDefault(player.getClassId(), 1f);
+		addSp *= Config.SP_AMOUNT_MULTIPLIERS.getOrDefault(player.getClassId(), 1f);
+		
 		double xp = addExp;
 		double sp = addSp;
 		if (Config.PARTY_XP_CUTOFF_METHOD.equalsIgnoreCase("highfive"))
