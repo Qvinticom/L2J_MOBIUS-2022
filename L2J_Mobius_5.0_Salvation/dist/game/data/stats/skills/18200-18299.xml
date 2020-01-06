@@ -612,6 +612,16 @@
 		<!-- When placed in the inventory, acquired XP/ SP through hunting increases by 7%. -->
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="ExpModify">
+				<amount>7</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>7</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18264" toLevel="1" name="Red Devils' Fighting Spirit">
 		<!-- Speed increases by 16 and XP/ SP increase by 16% for 90 minutes. -->

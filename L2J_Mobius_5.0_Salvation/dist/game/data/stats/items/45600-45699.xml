@@ -643,6 +643,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="18263" level="1" /> <!-- Rodemai's Rune -->
+		</skills>
 	</item>
 	<item id="45642" name="Rodemai's Rune Pack (15-day)" type="EtcItem">
 		<!-- Wrapped Pack containing 1 Rodemai's Rune (15-day). -->
@@ -655,6 +658,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="100" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45641" min="1" max="1" chance="100" /> <!-- Rodemai's Rune -->
+		</capsuled_items>
 	</item>
 	<item id="45643" name="Recipe: Citrine Pendant (10%)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for a Citrine Pendant. Requires Create Item - Skill Lv. 14. The success rate is 10%. -->
