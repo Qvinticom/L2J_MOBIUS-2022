@@ -1335,180 +1335,277 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="24334" level="85" type="Npc" name="Tanta Lizardman Scout">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="98" />
+	<npc id="24334" level="103" type="Monster" name="Tanta Lizardman Scout">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="98" /> 
+		<acquire exp="1408114244" sp="1267196" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="140" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="35" />
-		</collision>
-	</npc>
-	<npc id="24335" level="85" type="Npc" name="Tanta Lizardman Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="8682" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
+			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8049" magical="4676" />
 			<speed>
 				<walk ground="53" />
 				<run ground="140" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="13" />
+			<height normal="35" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="24335" level="103" type="Monster" name="Tanta Lizardman Warrior">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="8682" /> 
+		<acquire exp="1408114244" sp="1267196" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
+			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8049" magical="4676" />
+			<speed>
+				<walk ground="53" />
+				<run ground="140" />
+			</speed>
+		</stats>
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24336" level="85" type="Npc" name="Tanta Lizardman Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24336" level="103" type="Monster" name="Tanta Lizardman Soldier">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1408114244" sp="1267196" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
+			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8049" magical="4676" />
 			<speed>
-				<walk ground="40" />
-				<run ground="120" />
+				<walk ground="53" />
+				<run ground="140" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40.25" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24337" level="85" type="Npc" name="Tanta Lizardman Berserker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24337" level="103" type="Monster" name="Tanta Lizardman Berserker">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1408114244" sp="1267196" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
+			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8049" magical="4676" />
 			<speed>
-				<walk ground="58" />
-				<run ground="150" />
+				<walk ground="53" />
+				<run ground="140" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="28" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24338" level="85" type="Npc" name="Tanta Lizardman Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24338" level="103" type="Monster" name="Tanta Lizardman Archer">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="15302" /> 
+		<acquire exp="1408114244" sp="1267196" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
+			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8049" magical="4676" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40.25" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24339" level="85" type="Npc" name="Tanta Lizardman Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="7" />
+	<npc id="24339" level="103" type="Monster" name="Tanta Lizardman Wizard">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="7" /> 
+		<acquire exp="1453199724" sp="1307788" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
+			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8405" magical="4883" />
 			<speed>
 				<walk ground="43" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="35" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24340" level="85" type="Npc" name="Tanta Lizardman Summoner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24340" level="103" type="Monster" name="Tanta Lizardman Summoner">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1453199724" sp="1307788" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
+			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8405" magical="4883" />
 			<speed>
-				<walk ground="75" />
-				<run ground="150" />
+				<walk ground="43" />
+				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="29" />
 			<height normal="44" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24341" level="85" type="Npc" name="Tanta Lizardman Guard" title="Ugoros' Escort">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="98" />
+	<npc id="24341" level="103" type="Monster" name="Tanta Lizardman Guard" title="Ugoros' Escort">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="98" /> 
+		<acquire exp="1408114244" sp="1267196" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
+			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8049" magical="4676" />
 			<speed>
-				<walk ground="40" />
+				<walk ground="53" />
 				<run ground="140" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="35" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24342" level="85" type="Npc" name="Priest Ugoros" title="Tanta Lizardmen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24342" level="104" type="Monster" name="Priest Ugoros" title="Tanta Lizardmen">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<minions name="Privates">
+				<npc id="24341" count="5" respawnTime="0" weightPoint="1" />
+			</minions>
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="PhysicalSpecial" id="4073" level="6" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="10172398068" sp="9155033" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1665362.603085" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
+			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8405" magical="4883" />
 			<speed>
 				<walk ground="90" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="60" />
 			<height normal="81.75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="24343" level="85" type="Npc" name="Sel Mahum Drill Sergeant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
