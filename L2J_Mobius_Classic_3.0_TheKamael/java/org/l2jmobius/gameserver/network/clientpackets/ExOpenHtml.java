@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 /**
  * @author Mobius
  */
-public class ExOpenDimensionalHtml implements IClientIncomingPacket
+public class ExOpenHtml implements IClientIncomingPacket
 {
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

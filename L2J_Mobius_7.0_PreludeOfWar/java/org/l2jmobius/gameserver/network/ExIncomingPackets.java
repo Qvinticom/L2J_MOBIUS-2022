@@ -481,7 +481,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_PURCHASE_LIMIT_SHOP_ITEM_LIST(0x162, null, ConnectionState.IN_GAME),
 	EX_PURCHASE_LIMIT_SHOP_ITEM_BUY(0x163, null, ConnectionState.IN_GAME),
 	// 228
-	EX_OPEN_HTML(0x164, ExOpenDimensionalHtml::new, ConnectionState.IN_GAME),
+	EX_OPEN_HTML(0x164, ExOpenHtml::new, ConnectionState.IN_GAME),
 	EX_REQUEST_CLASS_CHANGE(0x165, ExRequestClassChange::new, ConnectionState.IN_GAME),
 	EX_REQUEST_CLASS_CHANGE_VERIFYING(0x166, null, ConnectionState.IN_GAME),
 	EX_REQUEST_TELEPORT(0x167, ExRequestTeleport::new, ConnectionState.IN_GAME),
