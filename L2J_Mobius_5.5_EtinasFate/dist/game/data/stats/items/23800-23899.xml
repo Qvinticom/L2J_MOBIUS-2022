@@ -91,6 +91,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="22588" level="1" /> <!-- High-grade Drop Rate Rune -->
+		</skills>
 	</item>
 	<item id="23808" name="Prestige Rune 50%" additionalName="30-day" type="EtcItem">
 		<!-- When stored in the inventory, item acquisition through drops, Adena, and spoils in hunt +50%. -->
@@ -104,6 +107,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="22588" level="2" /> <!-- High-grade Drop Rate Rune -->
+		</skills>
 	</item>
 	<item id="23809" name="Prestige Rune 100%" additionalName="30-day" type="EtcItem">
 		<!-- When stored in the inventory, item acquisition through drops, Adena, and spoils in hunt +100%. -->
@@ -117,6 +123,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="22588" level="3" /> <!-- High-grade Drop Rate Rune -->
+		</skills>
 	</item>
 	<item id="23810" name="Prestige Rune 30% Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Prestige Rune 30%. -->
@@ -131,6 +140,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="22588" level="1" /> <!-- High-grade Drop Rate Rune -->
+		</skills>
 	</item>
 	<item id="23811" name="Prestige Rune 50% Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Prestige Rune 50%. -->
@@ -145,6 +157,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="22588" level="2" /> <!-- High-grade Drop Rate Rune -->
+		</skills>
 	</item>
 	<item id="23812" name="Prestige Rune 100% Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Prestige Rune 100%. -->
@@ -159,6 +174,12 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="immediate_effect" val="true" />
+		<capsuled_items>
+			<item id="23809" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 100% - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="23813" name="Prestige Cube Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Prestige Cube (30-day). -->
