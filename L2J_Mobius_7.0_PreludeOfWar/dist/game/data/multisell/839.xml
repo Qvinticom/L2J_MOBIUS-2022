@@ -3,149 +3,63 @@
 	<npcs>
 		<npc>33587</npc> <!-- Mentor Guide -->
 	</npcs>
+	<!-- TODO: Part 3
 	<item>
-		<ingredient id="33804" count="2141"/> <!-- Mentee's Mark --> 
-		<production id="48937" count="1"/> <!-- Mentee's Vitality Potion of Gratitude --> 
-	</item>
+		<ingredient id="33804" count="100000"/> --> <!-- Mentee's Mark --> 
+	<!--	<production id="48937" count="1"/> --> <!-- Atlas' Earring --> 
+	<!--</item>-->
+	<!-- TODO: Part 3
 	<item>
-		<ingredient id="33804" count="1600"/> <!-- Mentee's Mark --> 
-		<production id="33863" count="1"/> <!-- Fire Stone (+ 60) - Event --> 
-	</item>
+		<ingredient id="33804" count="10000"/> --> <!-- Mentee's Mark --> 
+	<!--	<production id="48937" count="1"/> --> <!-- Mask Expert's --> 
+	<!--</item>-->
+	<!-- TODO: Part 3
 	<item>
-		<ingredient id="33804" count="1600"/> <!-- Mentee's Mark --> 
-		<production id="33864" count="1"/> <!-- Water Stone (+ 60) - Event --> 
-	</item>
+		<ingredient id="33804" count="10000"/> --> <!-- Mentee's Mark --> 
+	<!--	<production id="48937" count="1"/> --> <!-- Scroll: Enchant Expert's Mask --> 
+	<!--</item>-->
 	<item>
-		<ingredient id="33804" count="1600"/> <!-- Mentee's Mark --> 
-		<production id="33865" count="1"/> <!-- Earth Stone (+ 60) - Event --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="1600"/> <!-- Mentee's Mark --> 
-		<production id="33866" count="1"/> <!-- Wind Stone (+ 60) - Event --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="1600"/> <!-- Mentee's Mark --> 
-		<production id="33867" count="1"/> <!-- Dark Stone (+ 60) - Event --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="1600"/> <!-- Mentee's Mark --> 
-		<production id="33868" count="1"/> <!-- Holy Stone (+ 60) - Event --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="3200"/> <!-- Mentee's Mark --> 
-		<production id="33869" count="1"/> <!-- Fire Stone (+ 150) - Event --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="3200"/> <!-- Mentee's Mark --> 
-		<production id="33870" count="1"/> <!-- Water Stone (+ 150) - Event --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="3200"/> <!-- Mentee's Mark --> 
-		<production id="33871" count="1"/> <!-- Earth Stone (+ 150) - Event --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="3200"/> <!-- Mentee's Mark --> 
-		<production id="33872" count="1"/> <!-- Wind Stone (+ 150) - Event --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="3200"/> <!-- Mentee's Mark --> 
-		<production id="33873" count="1"/> <!-- Dark Stone (+ 150) - Event --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="3200"/> <!-- Mentee's Mark --> 
-		<production id="33874" count="1"/> <!-- Holy Stone (+ 150) - Event --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="1600"/> <!-- Mentee's Mark --> 
-		<production id="33833" count="1"/> <!-- Attribute Change Crystal (S-grade) - Event --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="1600"/> <!-- Mentee's Mark --> 
-		<production id="33834" count="1"/> <!-- Attribute Change Crystal (S80-grade) - Event --> 
+		<ingredient id="33804" count="5000"/> <!-- Mentee's Mark --> 
+		<production id="48848" count="1"/> <!-- Freya's Ice Rose - Event --> 
 	</item>
 	<item>
 		<ingredient id="33804" count="8000"/> <!-- Mentee's Mark --> 
-		<production id="33835" count="1"/> <!-- Attribute Change Crystal (R-grade) - Event --> 
+		<production id="80832" count="1"/> <!-- Emperor's Special Cocktail Event --> 
 	</item>
 	<item>
-		<ingredient id="33804" count="10000"/> <!-- Mentee's Mark --> 
-		<production id="33836" count="1"/> <!-- Attribute Change Crystal (R95-grade) - Event --> 
+		<ingredient id="33804" count="5000"/> <!-- Mentee's Mark --> 
+		<!-- TODO: Swap on Event item -->
+		<production id="80842" count="1"/> <!-- Honey Dark Beer Event --> 
 	</item>
 	<item>
-		<ingredient id="33804" count="12500"/> <!-- Mentee's Mark --> 
-		<production id="33837" count="1"/> <!-- Attribute Change Crystal (R99-grade) - Event --> 
+		<ingredient id="33804" count="5000"/> <!-- Mentee's Mark --> 
+		<production id="48755" count="1"/> <!-- Glowing Dragon's Attribute Potion (XP) Event --> 
 	</item>
 	<item>
-		<ingredient id="33804" count="700"/> <!-- Mentee's Mark --> 
-		<production id="36285" count="1"/> <!-- Unbind Scroll: Armor (R-grade) --> 
+		<ingredient id="33804" count="20000"/> <!-- Mentee's Mark --> 
+		<production id="80797" count="1"/> <!-- Shining Nevit's Gold Hourglass Event --> 
 	</item>
+	<!-- TODO: Part 3
 	<item>
-		<ingredient id="33804" count="2139"/> <!-- Mentee's Mark --> 
-		<production id="36286" count="1"/> <!-- Unbind Scroll: Armor (R95-grade) --> 
-	</item>
+		<ingredient id="33804" count="5000"/> --> <!-- Mentee's Mark --> 
+		<!-- <production id="33870" count="1"/> --> <!-- Blessed Scroll: Enchant Bracelet --> 
+	<!--</item>-->
 	<item>
-		<ingredient id="33804" count="4713"/> <!-- Mentee's Mark --> 
-		<production id="36287" count="1"/> <!-- Unbind Scroll: Armor (R99-grade) --> 
+		<ingredient id="33804" count="20000"/> <!-- Mentee's Mark --> 
+		<production id="48498" count="1"/> <!-- Blessed Scroll: Enchant Dragon Shirt --> 
 	</item>
+	<!-- TODO: Part 3
 	<item>
-		<ingredient id="33804" count="3964"/> <!-- Mentee's Mark --> 
-		<production id="36288" count="1"/> <!-- Unbind Scroll: Weapon (R-grade) --> 
-	</item>
+		<ingredient id="33804" count="45000"/> --> <!-- Mentee's Mark --> 
+		<!-- <production id="33872" count="1"/> --> <!-- Blessed Scroll: Enchant Circlet --> 
+	<!--</item>-->
+	<!-- TODO: Part 3
 	<item>
-		<ingredient id="33804" count="12104"/> <!-- Mentee's Mark --> 
-		<production id="36289" count="1"/> <!-- Unbind Scroll: Weapon (R95-grade) --> 
-	</item>
+		<ingredient id="33804" count="100000"/> --> <!-- Mentee's Mark --> 
+		<!-- <production id="33873" count="1"/> --> <!-- Shining Platinum Jewelry --> 
+	<!--</item>-->
 	<item>
-		<ingredient id="33804" count="26774"/> <!-- Mentee's Mark --> 
-		<production id="36290" count="1"/> <!-- Unbind Scroll: Weapon (R99-grade) --> 
+		<ingredient id="33804" count="50000"/> <!-- Mentee's Mark --> 
+		<production id="48124" count="1"/> <!-- Fairy Agathion Charm --> 
 	</item>
-	<item>
-		<ingredient id="33804" count="9000"/> <!-- Mentee's Mark --> 
-		<production id="36606" count="1"/> <!-- Scroll: Modify Weapon (R-grade) 15-day --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="4955"/> <!-- Mentee's Mark --> 
-		<production id="36607" count="1"/> <!-- Scroll: Modify Weapon (S-grade) 15-day --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="1521"/> <!-- Mentee's Mark --> 
-		<production id="36608" count="1"/> <!-- Scroll: Modify Weapon (A-grade) 15-day --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="492"/> <!-- Mentee's Mark --> 
-		<production id="36609" count="1"/> <!-- Scroll: Modify Weapon (B-grade) 15-day --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="27"/> <!-- Mentee's Mark --> 
-		<production id="36610" count="1"/> <!-- Scroll: Modify Weapon (C-grade) 15-day --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="24"/> <!-- Mentee's Mark --> 
-		<production id="36611" count="1"/> <!-- Scroll: Modify Weapon (D-grade) 15-day --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="1500"/> <!-- Mentee's Mark --> 
-		<production id="36618" count="1"/> <!-- Scroll: Modify Armor (R-grade) 15-day --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="826"/> <!-- Mentee's Mark --> 
-		<production id="36619" count="1"/> <!-- Scroll: Modify Armor (S-grade) 15-day --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="255"/> <!-- Mentee's Mark --> 
-		<production id="36620" count="1"/> <!-- Scroll: Modify Armor (A-grade) 15-day --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="81"/> <!-- Mentee's Mark --> 
-		<production id="36621" count="1"/> <!-- Scroll: Modify Armor (B-grade) 15-day --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="30"/> <!-- Mentee's Mark --> 
-		<production id="36622" count="1"/> <!-- Scroll: Modify Armor (C-grade) 15-day --> 
-	</item>
-	<item>
-		<ingredient id="33804" count="6"/> <!-- Mentee's Mark --> 
-		<production id="36623" count="1"/> <!-- Scroll: Modify Armor (D-grade) 15-day --> 
-	</item>
-
 </list>
