@@ -3254,60 +3254,9 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="VampiricAttack">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">0</value>
-					<value level="8">0</value>
-					<value level="9">0</value>
-					<value level="10">0</value>
-					<value level="11">0</value>
-					<value level="12">0</value>
-					<value level="13">0</value>
-					<value level="14">0</value>
-					<value level="15">0</value>
-					<value level="16">0</value>
-					<value level="17">0</value>
-					<value level="18">0</value>
-					<value level="19">0</value>
-					<value level="20">0</value>
-					<value level="21">0</value>
-					<value level="22">0</value>
-					<value level="23">0</value>
-					<value level="24">0</value>
-					<value level="25">0</value>
-					<value level="26">0</value>
-					<value level="27">0</value>
-					<value level="28">0</value>
-					<value level="29">0</value>
-					<value level="30">0</value>
-					<value level="31">0</value>
-					<value level="32">0</value>
-					<value level="33">0</value>
-					<value level="34">0</value>
-					<value level="35">0</value>
-					<value level="36">0</value>
-					<value level="37">0</value>
-					<value level="38">0</value>
-					<value level="39">0</value>
-					<value level="40">0</value>
-					<value level="41">0</value>
-					<value level="42">0</value>
-					<value level="43">10</value>
-					<value level="44">10</value>
-					<value level="45">10</value>
-					<value level="46">10</value>
-					<value level="47">10</value>
-					<value level="48">10</value>
-					<value level="49">10</value>
-					<value level="50">10</value>
-				</amount>
-				<chance>100</chance> <!-- Seven Signs -->
+			<effect name="MpVampiricAttack" fromLevel="43" toLevel="50">
+				<amount>10</amount>
+				<chance>100</chance>
 			</effect>
 			<effect name="Accuracy">
 				<amount>-8</amount>
@@ -7095,24 +7044,54 @@
 					<item>DUALFIST</item>
 				</weaponType>
 			</effect>
-			<effect name="PAtk" fromLevel="6" toLevel="9">
-				<amount>10</amount>
+			<effect name="PAtk">
+				<amount>20</amount>
 				<mode>PER</mode>
 				<hpPercent>60</hpPercent>
 			</effect>
-			<effect name="CriticalRate" fromLevel="6" toLevel="9">
+			<effect name="CriticalRate">
 				<amount>100</amount>
 				<mode>DIFF</mode>
 				<hpPercent>60</hpPercent>
 			</effect>
-			<effect name="PAtk" fromLevel="6" toLevel="9">
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+				<hpPercent>60</hpPercent>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+				<hpPercent>60</hpPercent>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+				<hpPercent>60</hpPercent>
+			</effect>
+			<effect name="PAtk">
 				<amount>30</amount>
 				<mode>PER</mode>
 				<hpPercent>30</hpPercent>
 			</effect>
-			<effect name="CriticalRate" fromLevel="6" toLevel="9">
-				<amount>300</amount>
+			<effect name="CriticalRate">
+				<amount>200</amount>
 				<mode>DIFF</mode>
+				<hpPercent>30</hpPercent>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+				<hpPercent>30</hpPercent>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>6</amount>
+				<mode>DIFF</mode>
+				<hpPercent>30</hpPercent>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
 				<hpPercent>30</hpPercent>
 			</effect>
 		</effects>
