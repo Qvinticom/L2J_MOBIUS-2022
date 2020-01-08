@@ -1225,7 +1225,14 @@ public class Config
 	public static Map<Integer, Integer> HOPZONE_REWARD = new HashMap<>();
 	public static int HOPZONE_DUALBOXES_ALLOWED;
 	public static boolean ALLOW_HOPZONE_GAME_SERVER_REPORT;
-	
+	public static boolean ALLOW_L2TOP_VOTE_REWARD;
+	public static String L2TOP_SERVER_LINK;
+	public static int L2TOP_VOTES_DIFFERENCE;
+	public static int L2TOP_REWARD_CHECK_TIME;
+	public static Map<Integer, Integer> L2TOP_REWARD = new HashMap<>();
+	public static int L2TOP_DUALBOXES_ALLOWED;
+	public static boolean ALLOW_L2TOP_GAME_SERVER_REPORT;
+
 	/**
 	 * This class initializes all global variables for configuration.<br>
 	 * If the key doesn't appear in properties file, a default value is set by this class. {@link #SERVER_CONFIG_FILE} (properties file) for configuring your server.
@@ -3318,6 +3325,7 @@ public class Config
 			// Load VoteReward config file (if exists)
 			final PropertiesParser VoteReward = new PropertiesParser(CUSTOM_VOTE_REWARD_CONFIG_FILE);
 			
+			// L2network.eu
 			ALLOW_NETWORK_VOTE_REWARD = VoteReward.getBoolean("AllowNetworkVoteReward", false);
 			NETWORK_SERVER_LINK = VoteReward.getString("NetworkServerLink", "");
 			NETWORK_VOTES_DIFFERENCE = VoteReward.getInt("NetworkVotesDifference", 5);
@@ -3331,6 +3339,7 @@ public class Config
 			}
 			NETWORK_DUALBOXES_ALLOWED = VoteReward.getInt("NetworkDualboxesAllowed", 1);
 			ALLOW_NETWORK_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowNetworkGameServerReport", false);
+			// Topzone.com
 			ALLOW_TOPZONE_VOTE_REWARD = VoteReward.getBoolean("AllowTopzoneVoteReward", false);
 			TOPZONE_SERVER_LINK = VoteReward.getString("TopzoneServerLink", "");
 			TOPZONE_VOTES_DIFFERENCE = VoteReward.getInt("TopzoneVotesDifference", 5);
@@ -3344,6 +3353,7 @@ public class Config
 			}
 			TOPZONE_DUALBOXES_ALLOWED = VoteReward.getInt("TopzoneDualboxesAllowed", 1);
 			ALLOW_TOPZONE_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowTopzoneGameServerReport", false);
+			// Hopzone.net
 			ALLOW_HOPZONE_VOTE_REWARD = VoteReward.getBoolean("AllowHopzoneVoteReward", false);
 			HOPZONE_SERVER_LINK = VoteReward.getString("HopzoneServerLink", "");
 			HOPZONE_VOTES_DIFFERENCE = VoteReward.getInt("HopzoneVotesDifference", 5);
@@ -3357,6 +3367,20 @@ public class Config
 			}
 			HOPZONE_DUALBOXES_ALLOWED = VoteReward.getInt("HopzoneDualboxesAllowed", 1);
 			ALLOW_HOPZONE_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowHopzoneGameServerReport", false);
+			// L2top.co
+			ALLOW_L2TOP_VOTE_REWARD = VoteReward.getBoolean("AllowL2topVoteReward", false);
+			L2TOP_SERVER_LINK = VoteReward.getString("L2topServerLink", "");
+			L2TOP_VOTES_DIFFERENCE = VoteReward.getInt("L2topVotesDifference", 5);
+			L2TOP_REWARD_CHECK_TIME = VoteReward.getInt("L2topRewardCheckTime", 5);
+			final String L2TOP_SMALL_REWARD_VALUE = VoteReward.getString("L2topReward", "57,100000000;");
+			final String[] l2top_small_reward_splitted_1 = L2TOP_SMALL_REWARD_VALUE.split(";");
+			for (String i : l2top_small_reward_splitted_1)
+			{
+				final String[] l2top_small_reward_splitted_2 = i.split(",");
+				L2TOP_REWARD.put(Integer.parseInt(l2top_small_reward_splitted_2[0]), Integer.parseInt(l2top_small_reward_splitted_2[1]));
+			}
+			L2TOP_DUALBOXES_ALLOWED = VoteReward.getInt("L2topDualboxesAllowed", 1);
+			ALLOW_L2TOP_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowL2topGameServerReport", false);
 			
 			// Load WalkerBotProtection config file (if exists)
 			final PropertiesParser WalkerBotProtection = new PropertiesParser(CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE);

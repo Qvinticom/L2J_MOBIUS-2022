@@ -76,6 +76,6 @@ public class Hopzone extends VoteSystem
 	@Override
 	public String getSiteName()
 	{
-		return "Hopzone";
+		return "Hopzone.net";
 	}
 }

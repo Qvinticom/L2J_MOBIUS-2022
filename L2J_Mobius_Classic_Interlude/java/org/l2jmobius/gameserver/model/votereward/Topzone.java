@@ -64,7 +64,7 @@ public class Topzone extends VoteSystem
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("VoteSystem: Error while getting server vote count from " + getSiteName() + ". " + e);
+			LOGGER.warning("VoteSystem: Error while getting server vote count from " + getSiteName() + ".");
 		}
 		
 		return -1;
@@ -73,6 +73,6 @@ public class Topzone extends VoteSystem
 	@Override
 	public String getSiteName()
 	{
-		return "Topzone";
+		return "Topzone.com";
 	}
 }

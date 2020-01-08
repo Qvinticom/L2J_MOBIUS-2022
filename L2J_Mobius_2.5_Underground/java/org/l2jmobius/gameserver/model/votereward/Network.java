@@ -67,7 +67,7 @@ public class Network extends VoteSystem
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("VoteSystem: Error while getting server vote count from " + getSiteName() + ". " + e);
+			LOGGER.warning("VoteSystem: Error while getting server vote count from " + getSiteName() + ".");
 		}
 		
 		return -1;
@@ -76,6 +76,6 @@ public class Network extends VoteSystem
 	@Override
 	public String getSiteName()
 	{
-		return "Network";
+		return "L2network.eu";
 	}
 }

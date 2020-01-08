@@ -76,6 +76,6 @@ public class Network extends VoteSystem
 	@Override
 	public String getSiteName()
 	{
-		return "Network";
+		return "L2network.eu";
 	}
 }

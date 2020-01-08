@@ -50,35 +50,44 @@ public abstract class VoteSystem implements Runnable
 	
 	public static void initialize()
 	{
-		if (Config.ALLOW_NETWORK_VOTE_REWARD || Config.ALLOW_TOPZONE_VOTE_REWARD || Config.ALLOW_HOPZONE_VOTE_REWARD)
+		if (Config.ALLOW_NETWORK_VOTE_REWARD || Config.ALLOW_TOPZONE_VOTE_REWARD || Config.ALLOW_HOPZONE_VOTE_REWARD || Config.ALLOW_L2TOP_VOTE_REWARD)
 		{
 			LOGGER.info("VoteSystem: Initialized.");
 			if (Config.ALLOW_NETWORK_VOTE_REWARD)
 			{
 				voteSystems.add(new Network(Config.NETWORK_VOTES_DIFFERENCE, Config.ALLOW_NETWORK_GAME_SERVER_REPORT, Config.NETWORK_DUALBOXES_ALLOWED, Config.NETWORK_REWARD, Config.NETWORK_REWARD_CHECK_TIME));
-				LOGGER.info("VoteSystem: Network votes enabled.");
+				LOGGER.info("VoteSystem: L2network.eu votes enabled.");
 			}
 			else
 			{
-				LOGGER.info("VoteSystem: Network votes disabled.");
+				LOGGER.info("VoteSystem: L2network.eu votes disabled.");
 			}
 			if (Config.ALLOW_TOPZONE_VOTE_REWARD)
 			{
 				voteSystems.add(new Topzone(Config.TOPZONE_VOTES_DIFFERENCE, Config.ALLOW_TOPZONE_GAME_SERVER_REPORT, Config.TOPZONE_DUALBOXES_ALLOWED, Config.TOPZONE_REWARD, Config.TOPZONE_REWARD_CHECK_TIME));
-				LOGGER.info("VoteSystem: Topzone votes enabled.");
+				LOGGER.info("VoteSystem: Topzone.com votes enabled.");
 			}
 			else
 			{
-				LOGGER.info("VoteSystem: Topzone votes disabled.");
+				LOGGER.info("VoteSystem: Topzone.com votes disabled.");
 			}
 			if (Config.ALLOW_HOPZONE_VOTE_REWARD)
 			{
 				voteSystems.add(new Hopzone(Config.HOPZONE_VOTES_DIFFERENCE, Config.ALLOW_HOPZONE_GAME_SERVER_REPORT, Config.HOPZONE_DUALBOXES_ALLOWED, Config.HOPZONE_REWARD, Config.HOPZONE_REWARD_CHECK_TIME));
-				LOGGER.info("VoteSystem: Hopzone votes enabled.");
+				LOGGER.info("VoteSystem: Hopzone.net votes enabled.");
 			}
 			else
 			{
-				LOGGER.info("VoteSystem: Hopzone votes disabled.");
+				LOGGER.info("VoteSystem: Hopzone.net votes disabled.");
+			}
+			if (Config.ALLOW_L2TOP_VOTE_REWARD)
+			{
+				voteSystems.add(new L2top(Config.L2TOP_VOTES_DIFFERENCE, Config.ALLOW_L2TOP_GAME_SERVER_REPORT, Config.L2TOP_DUALBOXES_ALLOWED, Config.L2TOP_REWARD, Config.L2TOP_REWARD_CHECK_TIME));
+				LOGGER.info("VoteSystem: L2top.co votes enabled.");
+			}
+			else
+			{
+				LOGGER.info("VoteSystem: L2top.co votes disabled.");
 			}
 		}
 		else

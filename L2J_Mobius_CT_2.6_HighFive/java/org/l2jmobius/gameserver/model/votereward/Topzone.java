@@ -73,6 +73,6 @@ public class Topzone extends VoteSystem
 	@Override
 	public String getSiteName()
 	{
-		return "Topzone";
+		return "Topzone.com";
 	}
 }
