@@ -49,6 +49,22 @@ public class ShadowWeapons extends AbstractNpcAI
 	}
 	
 	@Override
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	{
+		String htmltext = null;
+		
+		switch (event)
+		{
+			case "ShadowCoupon.html":
+			{
+				htmltext = event;
+				break;
+			}
+		}
+		return htmltext;
+	}
+	
+	@Override
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext;

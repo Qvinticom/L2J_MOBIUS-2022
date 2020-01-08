@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="TownOfGludio">
 		<group>
+			<npc id="34505" x="-14143" y="123861" z="-3119" heading="38996" respawnTime="60sec" /> <!-- Tarti -->
 			<npc id="30030" x="-13269" y="121884" z="-2968" heading="49152" respawnTime="60sec" /> <!-- Vivyan -->
 			<npc id="30155" x="-13553" y="122617" z="-3104" heading="19121" respawnTime="60sec" /> <!-- Ellenia -->
 			<npc id="30158" x="-12926" y="121825" z="-2968" heading="44898" respawnTime="60sec" /> <!-- Esrandell -->
@@ -63,7 +64,6 @@
 			<npc id="32327" x="-13905" y="123380" z="-3112" heading="27450" respawnTime="60sec" /> <!-- Adventurers' Guide -->
 			<npc id="32478" x="-13232" y="124624" z="-3120" heading="49000" respawnTime="60sec" /> <!-- Dimensional Merchant -->
 			<npc id="32479" x="-14409" y="121023" z="-3000" heading="49152" respawnTime="60sec" /> <!-- Adios -->
-			<npc id="32484" x="-13948" y="123819" z="-3112" heading="49588" respawnTime="60sec" /> <!-- Pathfinder Worker -->
 			<npc id="32575" x="-12967" y="122166" z="-2984" heading="15991" respawnTime="60sec" /> <!-- Light of Dawn -->
 			<npc id="32576" x="-13976" y="121399" z="-2984" heading="32768" respawnTime="60sec" /> <!-- John -->
 			<npc id="32875" x="-15162" y="124616" z="-3112" heading="25662" respawnTime="60sec" /> <!-- Tahoo -->
@@ -72,7 +72,6 @@
 			<npc id="33552" x="-14760" y="122892" z="-3112" heading="65502" respawnTime="60sec" /> <!-- Sarni -->
 			<npc id="33587" x="-13921" y="123320" z="-3112" heading="26144" respawnTime="60sec" /> <!-- Mentor Guide -->
 			<npc id="33685" x="-15128" y="122147" z="-3080" heading="64246" respawnTime="60sec" /> <!-- Mysterious Butler -->
-			<npc id="33905" x="-14126" y="124066" z="-3112" heading="33220" respawnTime="60sec" /> <!-- Acateo -->
 			<npc id="34095" x="-13896" y="123021" z="-3112" heading="39066" respawnTime="60sec" /> <!-- Neti -->
 			<npc id="35103" x="-15160" y="124292" z="-3120" heading="32672" respawnTime="60sec" /> <!-- Manor Manager -->
 			<npc id="35103" x="-14060" y="121350" z="-2984" heading="14446" respawnTime="60sec" /> <!-- Manor Manager -->
@@ -84,11 +83,9 @@
 			<npc id="35389" x="-14145" y="125551" z="-3136" heading="32768" respawnTime="60sec" /> <!-- Loring -->
 			<npc id="35390" x="-12866" y="124166" z="-3096" heading="57344" respawnTime="60sec" /> <!-- Dillon -->
 			<npc id="35391" x="-12693" y="123815" z="-3112" heading="49152" respawnTime="60sec" /> <!-- Latif -->
-			<npc id="36706" x="-12189" y="122759" z="-3104" heading="23421" respawnTime="60sec" /> <!-- Mermoden -->
 			<npc id="31031" x="-13188" y="124432" z="-3120" heading="16384" respawnTime="5sec" /> <!-- Broadcasting Tower -->
 			<npc id="33946" x="-13838" y="123387" z="-3117" heading="24575" respawnTime="60sec" /> <!-- Adventure Guildsman -->
 			<!-- NEW SPAWN NPC: UPDATE PRELUDE OF WAR -->
-			<npc id="34505" x="-14099" y="123893" z="-3122" heading="34505" respawnTime="60sec" /> <!-- Tarti -->
 		</group>
 	</spawn>
 </list>

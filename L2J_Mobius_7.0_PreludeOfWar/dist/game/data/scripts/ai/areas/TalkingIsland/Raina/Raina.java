@@ -276,10 +276,13 @@ public class Raina extends AbstractNpcAI
 				}
 				break;
 			}
-			case "ertheiaDualClass":
+			case "addDualClass":
 			{
+				if (player.getRace() != Race.ERTHEIA){
+					htmltext = "notImplemented.html";
+				}
 				// TODO: Maybe html is different when you have 85lvl but you haven't completed quest
-				if ((player.getRace() != Race.ERTHEIA) || (player.getLevel() < 85) || !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) || player.hasDualClass() || !haveDoneQuest(player, true))
+				if ((player.getRace() != Race.ERTHEIA) || (player.getLevel() < 105) || !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) || player.hasDualClass() || !haveDoneQuest(player, true))
 				{
 					htmltext = "addDualClassErtheiaFailed.html";
 				}
@@ -298,7 +301,7 @@ public class Raina extends AbstractNpcAI
 			case "addDualClass_SIXTH_WYNN_GROUP":
 			case "addDualClass_SIXTH_EOLH_GROUP":
 			{
-				if ((player.getLevel() < 85) || !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) || player.hasDualClass() || !haveDoneQuest(player, true))
+				if ((player.getLevel() < 105) || !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) || player.hasDualClass() || !haveDoneQuest(player, true))
 				{
 					htmltext = "addDualClassErtheiaFailed.html";
 					break;

@@ -41,11 +41,13 @@ public class ClassTransferTalk extends AbstractNpcAI
 	private static final int KAKAI = 30565;
 	private static final int MOKA = 32157;
 	private static final int VALFAR = 32146;
+	private static final int DRIKUS = 30505;
+	private static final int RAYMOND = 30289;
 	// @formatter:off
 	private static final int[] FIRST_CLASS_TOWNS =
 	{
 		// Town of Gludio
-		30289, 30288, 30297, 30505, 30504, 30503, 32196,
+		30288, 30297, 30504, 30503, 32196,
 		// Town of Dion
 		30070, 30066, 30462, 30508, 30595, 30594, 32199,
 		// Gludin Village
@@ -91,6 +93,8 @@ public class ClassTransferTalk extends AbstractNpcAI
 		
 		switch (event)
 		{
+			case "30289-01.html":
+			case "30505-01.html":
 			case "30565-02.html":
 			case "30565-03.html":
 			case "30565-04.html":
@@ -259,6 +263,26 @@ public class ClassTransferTalk extends AbstractNpcAI
 					// Retail like
 					htmltext = "first_class_transfer.html";
 					break;
+				}
+				case DRIKUS:
+				{
+					if (player.getRace() == Race.ORC)
+					{
+						if (player.isMageClass())
+						{
+							htmltext = "30505-07.html";
+						}
+						else
+						{
+							htmltext = "30505-02.html";
+						}
+						break;
+					}
+					htmltext = "30505-01.html";
+				}
+				case RAYMOND:
+				{
+					htmltext = "30289-01.html";
 				}
 			}
 		}
