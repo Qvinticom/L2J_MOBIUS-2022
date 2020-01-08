@@ -339,6 +339,7 @@ import quests.Q10577_TemperARustingBlade.Q10577_TemperARustingBlade;
 import quests.Q10578_TheSoulOfASword.Q10578_TheSoulOfASword;
 import quests.Q10579_ContainingTheAttributePower.Q10579_ContainingTheAttributePower;
 import quests.Q10597_EscapeToTheShadowOfTheMotherTree.Q10597_EscapeToTheShadowOfTheMotherTree;
+import quests.Q10598_WithAllYourMight.Q10598_WithAllYourMight;
 import quests.Q10658_MakkumInTheDimension.Q10658_MakkumInTheDimension;
 import quests.Q10701_TheRoadToDestruction.Q10701_TheRoadToDestruction;
 import quests.Q10702_TheRoadToInfinity.Q10702_TheRoadToInfinity;
@@ -870,7 +871,7 @@ public class QuestMasterHandler
 		Q10595_TheDimensionalWarpPart8.class, // TODO: Not done.
 		Q10596_TheDimensionalWarpPart9.class, // TODO: Not done.
 		Q10597_EscapeToTheShadowOfTheMotherTree.class,
-		Q10598_WithAllYourMight.class, // TODO: Not done.
+		Q10598_WithAllYourMight.class,
 		Q10599_ThreadOfFateHangingOnTheMotherTree.class, // TODO: Not done.
 		Q10658_MakkumInTheDimension.class,
 		Q10701_TheRoadToDestruction.class,
