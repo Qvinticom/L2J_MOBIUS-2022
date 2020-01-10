@@ -94,7 +94,7 @@ public class BeastSpiritShot implements IItemHandler
 		}
 		
 		// Pet uses the power of spirit.
-		activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
+		activeOwner.sendPacket(SystemMessageId.YOUR_SERVITOR_USES_SPIRITSHOT); // Epilogue system message shift.
 		activeOwner.getSummon().setChargedShot(isBlessed ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, true);
 		
 		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activeOwner.getSummon(), activeOwner.getSummon(), skills[0].getSkillId(), skills[0].getSkillLevel(), 0, 0), 600);
