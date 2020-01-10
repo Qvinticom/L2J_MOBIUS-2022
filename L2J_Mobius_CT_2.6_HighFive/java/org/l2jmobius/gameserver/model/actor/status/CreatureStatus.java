@@ -295,7 +295,9 @@ public class CreatureStatus
 	
 	public void setCurrentHpMp(double newHp, double newMp)
 	{
-		if (setCurrentHp(newHp, false) || setCurrentMp(newMp, false))
+		final boolean hpChanged = setCurrentHp(newHp, false);
+		final boolean mpChanged = setCurrentMp(newMp, false);
+		if (hpChanged || mpChanged)
 		{
 			_creature.broadcastStatusUpdate();
 		}
