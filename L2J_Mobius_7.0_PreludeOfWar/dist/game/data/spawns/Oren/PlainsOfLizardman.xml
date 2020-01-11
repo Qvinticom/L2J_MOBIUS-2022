@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
-	<spawn name="PlainsOfLizardman">
-		<group>
+	<spawn name="PlainsOfLizardman" ai="NoRandomActivity">
+		<parameters>
+			<param name="disableRandomWalk" value="true" />
+		</parameters>
 			<npc id="24334" x="87288" y="84040" z="-3060" heading="47806" respawnTime="60sec" /> <!-- Tanta Lizardman Scout -->
 			<npc id="24335" x="87384" y="84024" z="-3064" heading="63186" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
 			<npc id="24336" x="87400" y="84168" z="-3069" heading="15771" respawnTime="60sec" /> <!-- Tanta Lizardman Soldier -->
@@ -228,16 +230,136 @@
 			<npc id="24338" x="87858" y="92430" z="-3146" heading="25489" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
 			<npc id="24339" x="88056" y="92664" z="-3144" heading="8824" respawnTime="60sec" /> <!-- Tanta Lizardman Wizard -->
 			<npc id="24340" x="88168" y="92568" z="-3154" heading="57784" respawnTime="60sec" /> <!-- Tanta Lizardman Summoner -->
-			<npc id="24342" x="86056" y="93816" z="-3287" heading="30114" respawnTime="60sec" /> <!-- Priest Ugoros -->
-			<npc id="24342" x="92696" y="88056" z="-3566" heading="53517" respawnTime="60sec" /> <!-- Priest Ugoros -->
-			<npc id="24342" x="92056" y="84584" z="-3688" heading="46157" respawnTime="60sec" /> <!-- Priest Ugoros -->
-			<npc id="24342" x="91336" y="80584" z="-3418" heading="47778" respawnTime="60sec" /> <!-- Priest Ugoros -->
-			<npc id="24342" x="88552" y="77944" z="-3366" heading="31066" respawnTime="60sec" /> <!-- Priest Ugoros -->
-			<npc id="24342" x="87400" y="75640" z="-3423" heading="4860" respawnTime="60sec" /> <!-- Priest Ugoros -->
-			<npc id="24342" x="92872" y="75880" z="-3284" heading="14235" respawnTime="60sec" /> <!-- Priest Ugoros -->
-			<npc id="24342" x="85464" y="81240" z="-3685" heading="56803" respawnTime="60sec" /> <!-- Priest Ugoros -->
-			<npc id="24342" x="83288" y="80008" z="-3678" heading="38825" respawnTime="60sec" /> <!-- Priest Ugoros -->
-			<npc id="24342" x="85112" y="75048" z="-3640" heading="50441" respawnTime="60sec" /> <!-- Priest Ugoros -->
-		</group>
+			<npc id="24335" x="88312" y="85192" z="-3074" heading="57809" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="88440" y="85080" z="-3072" heading="57343" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="88456" y="85208" z="-3073" heading="14759" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="88328" y="85112" z="-3073" heading="39215" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="87368" y="84152" z="-3067" heading="45849" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="87368" y="84056" z="-3066" heading="49257" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="87480" y="84008" z="-3065" heading="51781" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="87512" y="84120" z="-3072" heading="13599" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="87592" y="87128" z="-2769" heading="15671" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="87512" y="87288" z="-2746" heading="21684" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="87416" y="87272" z="-2751" heading="33787" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="87416" y="87176" z="-2767" heading="49944" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="89640" y="85368" z="-3397" heading="61445" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="89848" y="85336" z="-3427" heading="63590" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="89832" y="85432" z="-3417" heading="17403" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="89944" y="85192" z="-3452" heading="53953" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="90888" y="86056" z="-3497" heading="14841" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="91208" y="86024" z="-3561" heading="64581" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="91576" y="86040" z="-3606" heading="405" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="91352" y="86200" z="-3566" heading="26101" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="93000" y="86536" z="-3523" heading="1563" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="93160" y="86632" z="-3504" heading="5421" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="93080" y="86712" z="-3508" heading="25615" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="93304" y="86552" z="-3512" heading="59057" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="93416" y="88600" z="-3566" heading="17195" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="93416" y="88936" z="-3565" heading="16447" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="93176" y="89000" z="-3566" heading="29791" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="93240" y="88792" z="-3565" heading="52054" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="94456" y="88472" z="-3490" heading="18043" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="94728" y="88424" z="-3474" heading="63813" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="94872" y="88328" z="-3469" heading="59156" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="94968" y="88440" z="-3465" heading="8985" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="88216" y="92360" z="-3158" heading="34435" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="88088" y="92456" z="-3149" heading="26096" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="87928" y="92296" z="-3149" heading="40472" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="88136" y="92216" z="-3157" heading="61793" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="91224" y="88488" z="-3448" heading="57954" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="91416" y="88360" z="-3448" heading="59402" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="91304" y="88264" z="-3448" heading="40570" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="91208" y="88376" z="-3448" heading="24379" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="93115" y="84234" z="-3648" heading="56562" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="93272" y="84232" z="-3633" heading="65190" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="93192" y="84040" z="-3644" heading="45173" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="93448" y="83960" z="-3609" heading="62534" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="92744" y="82072" z="-3510" heading="44859" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="92840" y="81880" z="-3480" heading="53921" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="92760" y="81720" z="-3458" heading="44289" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="92942" y="82012" z="-3496" heading="9570" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="90488" y="81736" z="-3552" heading="37604" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="90312" y="81688" z="-3549" heading="35554" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="90392" y="81576" z="-3531" heading="55034" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="90568" y="81560" z="-3529" heading="64254" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="89688" y="79752" z="-3335" heading="46972" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="89752" y="79672" z="-3322" heading="56074" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="89800" y="79784" z="-3339" heading="11867" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="89528" y="79592" z="-3318" heading="38875" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="91368" y="78792" z="-3223" heading="65402" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="91400" y="78904" z="-3230" heading="12908" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="91352" y="79000" z="-3235" heading="12752" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="91496" y="78584" z="-3215" heading="52717" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="91784" y="76936" z="-3257" heading="57313" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="91608" y="76680" z="-3213" heading="42765" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="91720" y="76536" z="-3183" heading="55898" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="91816" y="76680" z="-3200" heading="10268" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="90245" y="76077" z="-3206" heading="36707" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="90072" y="76088" z="-3217" heading="32069" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="90008" y="75960" z="-3230" heading="44282" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="90072" y="75880" z="-3231" heading="56500" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="88168" y="74712" z="-3365" heading="40148" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="88072" y="74504" z="-3393" heading="44396" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="87896" y="74536" z="-3415" heading="30802" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="87960" y="74360" z="-3416" heading="52453" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="86424" y="73848" z="-3538" heading="36246" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="86184" y="73752" z="-3552" heading="36882" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="86072" y="73944" z="-3561" heading="21851" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="85752" y="73736" z="-3579" heading="38961" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="84152" y="75032" z="-3632" heading="24795" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="83976" y="75256" z="-3652" heading="23382" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="83848" y="75176" z="-3646" heading="38097" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="83848" y="75400" z="-3662" heading="16429" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="86040" y="76712" z="-3681" heading="3971" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="86360" y="76680" z="-3658" heading="64512" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="86424" y="76856" z="-3640" heading="13082" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="86264" y="76936" z="-3647" heading="27931" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="86360" y="78040" z="-3513" heading="12356" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="86440" y="78408" z="-3513" heading="14228" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="86280" y="78376" z="-3523" heading="35185" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="86328" y="78200" z="-3516" heading="51774" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="86936" y="79960" z="-3517" heading="20055" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="86984" y="80200" z="-3526" heading="14084" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="86792" y="80136" z="-3555" heading="36342" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="86824" y="79960" z="-3537" heading="50809" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="86312" y="82200" z="-3569" heading="15015" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="86120" y="82184" z="-3586" heading="33508" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="85816" y="82344" z="-3569" heading="27837" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="86056" y="82392" z="-3529" heading="1879" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="84776" y="80408" z="-3723" heading="53331" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="84760" y="80152" z="-3717" heading="48691" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="84824" y="79880" z="-3705" heading="51337" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="84840" y="80168" z="-3716" heading="15619" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24338" x="84102" y="81272" z="-3622" heading="23133" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="83832" y="81384" z="-3630" heading="30329" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="83848" y="81192" z="-3640" heading="50254" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="84184" y="81224" z="-3628" heading="4950" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24335" x="81768" y="80792" z="-3457" heading="32354" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="81864" y="80808" z="-3470" heading="1480" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="81656" y="80712" z="-3443" heading="37210" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="81592" y="80552" z="-3442" heading="44883" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="81656" y="79336" z="-3516" heading="49727" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="81656" y="79112" z="-3514" heading="49013" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="81848" y="79208" z="-3546" heading="5119" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="81896" y="79384" z="-3550" heading="13887" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="82360" y="77192" z="-3678" heading="51192" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="82472" y="76920" z="-3683" heading="52906" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="82600" y="76888" z="-3692" heading="62283" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="82712" y="76984" z="-3701" heading="8091" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="82648" y="77096" z="-3700" heading="21819" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24335" x="81032" y="77176" z="-3502" heading="29151" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="80744" y="77208" z="-3467" heading="31484" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24335" x="80792" y="76984" z="-3483" heading="51631" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="24338" x="80936" y="76936" z="-3502" heading="61870" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="24342" x="86056" y="93816" z="-3287" heading="30114" respawnTime="7200sec" /> <!-- Priest Ugoros -->
+			<npc id="24342" x="92696" y="88056" z="-3566" heading="53517" respawnTime="7200sec" /> <!-- Priest Ugoros -->
+			<npc id="24342" x="92056" y="84584" z="-3688" heading="46157" respawnTime="7200sec" /> <!-- Priest Ugoros -->
+			<npc id="24342" x="91336" y="80584" z="-3418" heading="47778" respawnTime="7200sec" /> <!-- Priest Ugoros -->
+			<npc id="24342" x="88552" y="77944" z="-3366" heading="31066" respawnTime="7200sec" /> <!-- Priest Ugoros -->
+			<npc id="24342" x="87400" y="75640" z="-3423" heading="4860" respawnTime="7200sec" /> <!-- Priest Ugoros -->
+			<npc id="24342" x="92872" y="75880" z="-3284" heading="14235" respawnTime="7200sec" /> <!-- Priest Ugoros -->
+			<npc id="24342" x="85464" y="81240" z="-3685" heading="56803" respawnTime="7200sec" /> <!-- Priest Ugoros -->
+			<npc id="24342" x="83288" y="80008" z="-3678" heading="38825" respawnTime="7200sec" /> <!-- Priest Ugoros -->
+			<npc id="24342" x="85112" y="75048" z="-3640" heading="50441" respawnTime="7200sec" /> <!-- Priest Ugoros -->
 	</spawn>
 </list>

@@ -457,18 +457,17 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18908" level="83" type="Monster" name="Sel Mahum Chef">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18908" level="103" type="Monster" name="Sel Mahum Chef">
 		<parameters>
 			<skill name="Skill01_ID" id="6330" level="1" />
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="26321" sp="6" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="7670.033655" hpRegen="8.5" mp="1794.743" mpRegen="3" />
-			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="353.86144" magical="258.94045" />
+		<acquire exp="1453199724" sp="1307788" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
+			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8405" magical="4883" />
 			<attribute>
 				<attack type="FIRE" value="100" />
 				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" default="150" />
@@ -493,11 +492,6 @@
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>XEL_PRIVATE</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="35" />
 			<height normal="32.5" />

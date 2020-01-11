@@ -1607,292 +1607,474 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="24343" level="85" type="Npc" name="Sel Mahum Drill Sergeant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24343" level="103" type="Monster" name="Sel Mahum Drill Sergeant">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1453199724" sp="1307788" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
+			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8405" magical="4883" />
 			<speed>
 				<walk ground="60" />
-				<run ground="150" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<collision>
 			<radius normal="27" />
 			<height normal="31.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24344" level="85" type="Npc" name="Sel Mahum Training Officer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24344" level="103" type="Monster" name="Sel Mahum Training Officer">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1453199724" sp="1307788" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
+			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8405" magical="4883" />
 			<speed>
-				<walk ground="49" />
-				<run ground="150" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<collision>
 			<radius normal="29" />
 			<height normal="33.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24345" level="85" type="Npc" name="Sel Mahum Drill Sergeant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24345" level="103" type="Monster" name="Sel Mahum Drill Sergeant">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1453199724" sp="1307788" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
+			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8405" magical="4883" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<collision>
 			<radius normal="29" />
 			<height normal="37" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24346" level="85" type="Npc" name="Sel Mahum Drill Sergeant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24346" level="103" type="Monster" name="Sel Mahum Drill Sergeant">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1453199724" sp="1307788" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
+			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8405" magical="4883" />
 			<speed>
 				<walk ground="60" />
-				<run ground="150" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<collision>
 			<radius normal="27" />
 			<height normal="31" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24347" level="85" type="Npc" name="Sel Mahum Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24347" level="103" type="Monster" name="Sel Mahum Warrior">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1453199724" sp="1307788" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
+			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8405" magical="4883" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<collision>
 			<radius normal="29" />
 			<height normal="37" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24348" level="85" type="Npc" name="Sel Mahum Recruit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24348" level="103" type="Monster" name="Sel Mahum Recruit">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1453199724" sp="1307788" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
+			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8405" magical="4883" />
 			<speed>
 				<walk ground="60" />
-				<run ground="150" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<collision>
 			<radius normal="27" />
 			<height normal="31.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24349" level="85" type="Npc" name="Sel Mahum Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24349" level="103" type="Monster" name="Sel Mahum Soldier">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1453199724" sp="1307788" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
+			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8405" magical="4883" />
 			<speed>
-				<walk ground="49" />
-				<run ground="150" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<collision>
 			<radius normal="29" />
 			<height normal="33.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24350" level="85" type="Npc" name="Sel Mahum Recruit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24350" level="103" type="Monster" name="Sel Mahum Recruit">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1408114244" sp="1267196" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
+			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8049" magical="4676" />
 			<speed>
 				<walk ground="60" />
-				<run ground="180" />
+				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<collision>
 			<radius normal="29" />
 			<height normal="37" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24351" level="85" type="Npc" name="Sel Mahum Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24351" level="103" type="Monster" name="Sel Mahum Soldier">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1408114244" sp="1267196" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
+			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8049" magical="4676" />
 			<speed>
 				<walk ground="60" />
-				<run ground="180" />
+				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<collision>
 			<radius normal="29" />
 			<height normal="37" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24352" level="85" type="Npc" name="Sel Mahum Recruit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24352" level="103" type="Monster" name="Sel Mahum Recruit">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1453199724" sp="1307788" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="150" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="27" />
-			<height normal="31" />
-		</collision>
-	</npc>
-	<npc id="24353" level="85" type="Npc" name="Sel Mahum Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="150" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="27" />
-			<height normal="31" />
-		</collision>
-	</npc>
-	<npc id="24354" level="85" type="Npc" name="Sel Mahum Squad Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="150" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="27" />
-			<height normal="31.5" />
-		</collision>
-	</npc>
-	<npc id="24355" level="85" type="Npc" name="Sel Mahum Squad Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
+			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8405" magical="4883" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="29" />
-			<height normal="37" />
-		</collision>
-	</npc>
-	<npc id="24356" level="85" type="Npc" name="Sel Mahum Squad Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="150" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<collision>
 			<radius normal="27" />
 			<height normal="31" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24357" level="85" type="Npc" name="Keltron" title="Sel Mahum Chief">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24353" level="103" type="Monster" name="Sel Mahum Soldier">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1408114244" sp="1267196" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
+			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8049" magical="4676" />
+			<speed>
+				<walk ground="60" />
+				<run ground="150" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<collision>
+			<radius normal="27" />
+			<height normal="31" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="24354" level="103" type="Monster" name="Sel Mahum Squad Leader">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1408114244" sp="1267196" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
+			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8049" magical="4676" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<collision>
+			<radius normal="29" />
+			<height normal="37" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="24355" level="103" type="Monster" name="Sel Mahum Squad Leader">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1408114244" sp="1267196" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
+			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8049" magical="4676" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<collision>
+			<radius normal="29" />
+			<height normal="37" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="24356" level="103" type="Monster" name="Sel Mahum Squad Leader">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1453199724" sp="1307788" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
+			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8405" magical="4883" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<collision>
+			<radius normal="27" />
+			<height normal="31" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="24357" level="104" type="Monster" name="Keltron" title="Sel Mahum Chief">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<minions name="Privates">
+				<npc id="24358" count="6" respawnTime="0" weightPoint="1" />
+			</minions>
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="PhysicalSpecial" id="4073" level="6" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="10172398068" sp="9155033" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1665362.603085" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
+			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8405" magical="4883" />
 			<speed>
 				<walk ground="49" />
-				<run ground="128" />
+				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<collision>
 			<radius normal="43.5" />
 			<height normal="51.75" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24358" level="85" type="Npc" name="Keltron's Guard" title="Keltron's Minion">
+	<npc id="24358" level="103" type="Monster" name="Keltron's Guard" title="Keltron's Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

@@ -48,9 +48,9 @@ public class SelMahumSquad extends AbstractNpcAI
 	// Sel Mahum Squad Leaders
 	private static final int[] SQUAD_LEADERS =
 	{
-		22786,
-		22787,
-		22788
+		24354,
+		24355,
+		24356
 	};
 	
 	private static final NpcStringId[] CHEF_FSTRINGS =
