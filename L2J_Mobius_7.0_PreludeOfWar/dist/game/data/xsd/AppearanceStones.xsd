@@ -18,6 +18,7 @@
 										<xs:enumeration value="R" />
 										<xs:enumeration value="R95" />
 										<xs:enumeration value="R99" />
+										<xs:enumeration value="R110" />
 									</xs:restriction>
 								</xs:simpleType>
 							</xs:element>
@@ -231,6 +232,7 @@
 									<xs:enumeration value="R" />
 									<xs:enumeration value="R95" />
 									<xs:enumeration value="R99" />
+									<xs:enumeration value="R110" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
