@@ -2,569 +2,1050 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="BlazingSwamp">
 		<group>
-			<npc id="21110" x="154781" y="-12748" z="-3896" heading="47039" respawnTime="60sec" /> <!-- Swamp Predator -->
-			<npc id="21110" x="155065" y="-12967" z="-3888" heading="25442" respawnTime="60sec" /> <!-- Swamp Predator -->
-			<npc id="21110" x="154310" y="-14027" z="-3752" heading="41853" respawnTime="60sec" /> <!-- Swamp Predator -->
-			<npc id="21110" x="153837" y="-13683" z="-3776" heading="9671" respawnTime="60sec" /> <!-- Swamp Predator -->
-			<npc id="21111" x="153955" y="-14600" z="-3672" heading="44484" respawnTime="60sec" /> <!-- Lava Wyrm -->
-			<npc id="21111" x="155335" y="-12310" z="-3928" heading="27232" respawnTime="60sec" /> <!-- Lava Wyrm -->
-			<npc id="21111" x="154858" y="-12447" z="-3928" heading="5303" respawnTime="60sec" /> <!-- Lava Wyrm -->
-			<npc id="21111" x="153891" y="-13814" z="-3760" heading="8997" respawnTime="60sec" /> <!-- Lava Wyrm -->
-			<npc id="21112" x="154491" y="-13254" z="-3848" heading="32015" respawnTime="60sec" /> <!-- Hames Orc Foot Soldier -->
-			<npc id="21112" x="153767" y="-14293" z="-3720" heading="41728" respawnTime="60sec" /> <!-- Hames Orc Foot Soldier -->
-			<npc id="21112" x="154185" y="-13957" z="-3760" heading="59807" respawnTime="60sec" /> <!-- Hames Orc Foot Soldier -->
-			<npc id="21112" x="155718" y="-11998" z="-3904" heading="8682" respawnTime="60sec" /> <!-- Hames Orc Foot Soldier -->
-			<npc id="21113" x="154306" y="-12604" z="-3880" heading="49502" respawnTime="60sec" /> <!-- Hames Orc Sniper -->
-			<npc id="21113" x="154116" y="-13378" z="-3816" heading="38565" respawnTime="60sec" /> <!-- Hames Orc Sniper -->
-			<npc id="21113" x="153839" y="-13561" z="-3784" heading="26315" respawnTime="60sec" /> <!-- Hames Orc Sniper -->
-			<npc id="21113" x="154705" y="-11886" z="-3984" heading="20139" respawnTime="60sec" /> <!-- Hames Orc Sniper -->
-			<npc id="21115" x="154317" y="-14577" z="-3648" heading="31727" respawnTime="60sec" /> <!-- Hames Orc Shaman -->
-			<npc id="21115" x="155191" y="-12422" z="-3928" heading="63066" respawnTime="60sec" /> <!-- Hames Orc Shaman -->
-			<npc id="21115" x="154256" y="-12714" z="-3872" heading="12227" respawnTime="60sec" /> <!-- Hames Orc Shaman -->
-			<npc id="21115" x="154066" y="-13722" z="-3776" heading="56079" respawnTime="60sec" /> <!-- Hames Orc Shaman -->
-			<npc id="21116" x="154046" y="-14433" z="-3704" heading="58608" respawnTime="60sec" /> <!-- Hames Orc Prefect -->
-			<npc id="21116" x="154726" y="-12552" z="-3912" heading="11433" respawnTime="60sec" /> <!-- Hames Orc Prefect -->
-			<npc id="21116" x="154365" y="-13921" z="-3760" heading="34478" respawnTime="60sec" /> <!-- Hames Orc Prefect -->
-			<npc id="21116" x="155697" y="-12118" z="-3904" heading="4930" respawnTime="60sec" /> <!-- Hames Orc Prefect -->
-			<npc id="23487" x="151418" y="-17470" z="-2960" heading="37631" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="151679" y="-12508" z="-4496" heading="8607" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="151469" y="-17249" z="-2960" heading="25732" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="150988" y="-17039" z="-2960" heading="19169" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="151296" y="-12541" z="-4496" heading="19903" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="151385" y="-12720" z="-4496" heading="31943" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="151627" y="-10192" z="-4536" heading="59722" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="151363" y="-9624" z="-4536" heading="10752" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="151882" y="-10077" z="-4496" heading="43248" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="153318" y="-6781" z="-4488" heading="39562" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="153570" y="-7250" z="-4488" heading="16222" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="153425" y="-7326" z="-4488" heading="9063" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="149684" y="-6569" z="-4424" heading="62887" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="149984" y="-6525" z="-4424" heading="34865" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="150347" y="-6402" z="-4408" heading="25357" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="148847" y="-9980" z="-4576" heading="31598" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="149075" y="-9602" z="-4576" heading="28910" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="147508" y="-4899" z="-4552" heading="8440" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="147430" y="-7210" z="-4520" heading="13072" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="147376" y="-7522" z="-4520" heading="35187" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="147214" y="-7262" z="-4520" heading="15487" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="147106" y="-4899" z="-4552" heading="9994" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="146704" y="-4838" z="-4552" heading="38830" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="144456" y="-8233" z="-4728" heading="31994" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="144405" y="-8593" z="-4728" heading="37626" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="144558" y="-7933" z="-4728" heading="36723" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="143878" y="-4522" z="-4752" heading="61030" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="143598" y="-4354" z="-4752" heading="53669" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="143710" y="-4410" z="-4752" heading="47798" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="142169" y="-6903" z="-4768" heading="18203" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="142729" y="-6903" z="-4768" heading="16148" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="141609" y="-6854" z="-4760" heading="22015" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="140097" y="-7852" z="-4760" heading="42014" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="139975" y="-7596" z="-4760" heading="17507" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="140728" y="-4915" z="-4816" heading="41243" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="140328" y="-4915" z="-4816" heading="27466" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="140528" y="-4719" z="-4816" heading="8110" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="139853" y="-8236" z="-4760" heading="13162" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="138798" y="-11255" z="-4608" heading="24147" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="139206" y="-10937" z="-4640" heading="58647" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="141098" y="-10563" z="-4632" heading="39177" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="141033" y="-10881" z="-4632" heading="16238" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="139308" y="-11096" z="-4640" heading="44193" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="141813" y="-10987" z="-4632" heading="25080" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="143876" y="-11515" z="-4632" heading="45650" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="143600" y="-10771" z="-4632" heading="10207" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="143945" y="-11019" z="-4632" heading="10267" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="140950" y="-12511" z="-4368" heading="16466" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="141066" y="-12299" z="-4368" heading="42011" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="141356" y="-12670" z="-4368" heading="39511" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="143032" y="-14143" z="-4440" heading="46840" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="148505" y="-10295" z="-4576" heading="11792" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="149253" y="-12794" z="-4400" heading="15315" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="149057" y="-12953" z="-4376" heading="10581" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="149400" y="-12900" z="-4400" heading="13211" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="149244" y="-18074" z="-3096" heading="61696" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="142483" y="-14612" z="-4440" heading="44432" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="142971" y="-14947" z="-4440" heading="44188" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="142970" y="-19063" z="-3088" heading="52214" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="143146" y="-18685" z="-3088" heading="60620" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="142970" y="-19009" z="-3088" heading="36478" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="144319" y="-20338" z="-3160" heading="38338" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="141911" y="-21182" z="-3176" heading="19112" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="141575" y="-21362" z="-3176" heading="37776" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="142103" y="-21002" z="-3176" heading="39640" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="144589" y="-20950" z="-3168" heading="32224" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="144535" y="-21001" z="-3168" heading="22345" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="146878" y="-22366" z="-3096" heading="38096" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="146878" y="-22282" z="-3088" heading="59990" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="146706" y="-22408" z="-3080" heading="1465" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="139475" y="-21912" z="-3104" heading="20346" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="139559" y="-21868" z="-3104" heading="3948" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="139349" y="-21868" z="-3104" heading="42956" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="140653" y="-18527" z="-3200" heading="30205" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="140881" y="-18787" z="-3200" heading="16193" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="140938" y="-18371" z="-3200" heading="1021" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="137288" y="-23480" z="-3184" heading="43099" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="141167" y="-24018" z="-2016" heading="48036" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="141107" y="-24557" z="-2008" heading="46714" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="141707" y="-24459" z="-2016" heading="26126" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="137180" y="-23436" z="-3184" heading="7420" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="137180" y="-23920" z="-3184" heading="41946" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="136573" y="-21155" z="-3272" heading="18437" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="136023" y="-21415" z="-3264" heading="65026" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="136223" y="-20531" z="-3264" heading="10813" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="139465" y="-25985" z="-1920" heading="4121" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="139815" y="-25586" z="-1920" heading="7588" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="139915" y="-26327" z="-1920" heading="16132" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="143951" y="-24056" z="-2080" heading="255" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="143996" y="-23806" z="-2072" heading="1933" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="144446" y="-24106" z="-2080" heading="47021" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="148929" y="-24884" z="-3296" heading="62409" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="149187" y="-25056" z="-3304" heading="634" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="148886" y="-25314" z="-3320" heading="37133" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="149415" y="-20527" z="-3120" heading="20680" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="150740" y="-23656" z="-3432" heading="55373" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="150632" y="-23656" z="-3440" heading="16017" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="151010" y="-23398" z="-3440" heading="62545" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="150031" y="-21047" z="-3152" heading="5912" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="149695" y="-20995" z="-3152" heading="20566" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="149616" y="-18522" z="-3096" heading="44489" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23487" x="149616" y="-18690" z="-3096" heading="45107" respawnTime="60sec" /> <!-- Magma Ailith -->
-			<npc id="23489" x="146583" y="-13057" z="-4456" heading="11457" respawnTime="60sec" /> <!-- Lava Wyrm -->
-			<npc id="23489" x="145450" y="-14105" z="-4432" heading="50704" respawnTime="60sec" /> <!-- Lava Wyrm -->
-			<npc id="23489" x="147193" y="-11148" z="-4448" heading="27984" respawnTime="60sec" /> <!-- Lava Wyrm -->
-			<npc id="23489" x="146797" y="-11065" z="-4448" heading="12597" respawnTime="60sec" /> <!-- Lava Wyrm -->
-			<npc id="23489" x="147993" y="-14029" z="-4456" heading="36006" respawnTime="60sec" /> <!-- Lava Wyrm -->
-			<npc id="23489" x="145806" y="-15577" z="-4184" heading="63068" respawnTime="60sec" /> <!-- Lava Wyrm -->
-			<npc id="23489" x="145233" y="-15036" z="-4312" heading="63863" respawnTime="60sec" /> <!-- Lava Wyrm -->
-			<npc id="23489" x="145541" y="-17206" z="-3720" heading="30786" respawnTime="60sec" /> <!-- Lava Wyrm -->
-			<npc id="23489" x="146123" y="-18124" z="-3496" heading="58169" respawnTime="60sec" /> <!-- Lava Wyrm -->
-			<npc id="23490" x="146865" y="-13273" z="-4456" heading="16272" respawnTime="60sec" /> <!-- Lava Drake -->
-			<npc id="23490" x="147288" y="-12841" z="-4448" heading="34769" respawnTime="60sec" /> <!-- Lava Drake -->
-			<npc id="23490" x="145723" y="-13909" z="-4440" heading="19101" respawnTime="60sec" /> <!-- Lava Drake -->
-			<npc id="23490" x="146533" y="-11314" z="-4448" heading="43265" respawnTime="60sec" /> <!-- Lava Drake -->
-			<npc id="23490" x="147457" y="-11895" z="-4448" heading="43449" respawnTime="60sec" /> <!-- Lava Drake -->
-			<npc id="23490" x="147721" y="-11065" z="-4448" heading="56630" respawnTime="60sec" /> <!-- Lava Drake -->
-			<npc id="23490" x="148275" y="-14245" z="-4464" heading="50567" respawnTime="60sec" /> <!-- Lava Drake -->
-			<npc id="23490" x="146124" y="-15540" z="-4184" heading="29370" respawnTime="60sec" /> <!-- Lava Drake -->
-			<npc id="23490" x="145541" y="-15836" z="-4128" heading="60939" respawnTime="60sec" /> <!-- Lava Drake -->
-			<npc id="23490" x="145023" y="-14796" z="-4368" heading="62285" respawnTime="60sec" /> <!-- Lava Drake -->
-			<npc id="23490" x="146319" y="-18298" z="-3464" heading="26583" respawnTime="60sec" /> <!-- Lava Drake -->
-			<npc id="23490" x="147477" y="-20976" z="-3432" heading="8" respawnTime="60sec" /> <!-- Lava Drake -->
-			<npc id="23491" x="151297" y="-10911" z="-4520" heading="25164" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="150548" y="-10078" z="-4520" heading="45747" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="152514" y="-9174" z="-4504" heading="37142" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="152648" y="-9282" z="-4504" heading="5699" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="150974" y="-7859" z="-4536" heading="42510" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="148528" y="-7527" z="-4416" heading="34289" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="148528" y="-6855" z="-4424" heading="50335" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="147223" y="-9072" z="-4384" heading="29672" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="146173" y="-8560" z="-4488" heading="10444" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="143517" y="-8968" z="-4640" heading="47185" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="143590" y="-6731" z="-4688" heading="42605" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="145383" y="-5693" z="-4688" heading="15397" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="144894" y="-5520" z="-4720" heading="22628" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="142301" y="-5484" z="-4784" heading="38150" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="141299" y="-5037" z="-4792" heading="20312" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="140176" y="-9288" z="-4656" heading="45740" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="140956" y="-9288" z="-4560" heading="64251" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="143178" y="-8694" z="-4632" heading="33071" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="140912" y="-13760" z="-4408" heading="53714" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="141069" y="-13986" z="-4440" heading="24367" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="142380" y="-12754" z="-4328" heading="33956" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="149027" y="-10950" z="-4504" heading="4273" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23491" x="149128" y="-15185" z="-4456" heading="25664" respawnTime="60sec" /> <!-- Lava Wendigo -->
-			<npc id="23492" x="149941" y="-17393" z="-3048" heading="38286" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="150550" y="-11666" z="-4384" heading="13112" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="150895" y="-8291" z="-4544" heading="25319" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="151072" y="-7661" z="-4496" heading="61693" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="148968" y="-7975" z="-4488" heading="53785" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="146383" y="-9456" z="-4416" heading="4182" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="144405" y="-6731" z="-4720" heading="17978" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="142635" y="-5484" z="-4784" heading="41212" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="140020" y="-10080" z="-4648" heading="64208" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="142839" y="-10475" z="-4584" heading="23287" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="139970" y="-14325" z="-4384" heading="13166" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="142975" y="-13006" z="-4344" heading="11544" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="149027" y="-11080" z="-4480" heading="22237" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="149386" y="-13921" z="-4392" heading="56727" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="141876" y="-19689" z="-3152" heading="4455" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="141248" y="-19818" z="-3192" heading="44989" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="137291" y="-20481" z="-3312" heading="58321" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="139241" y="-20588" z="-3184" heading="32501" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="138851" y="-20267" z="-3304" heading="17337" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="136777" y="-22487" z="-3184" heading="1907" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="140846" y="-25139" z="-2016" heading="43695" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="142765" y="-24842" z="-2016" heading="48056" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="149238" y="-24058" z="-3424" heading="43142" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23492" x="148851" y="-19412" z="-3168" heading="32863" respawnTime="60sec" /> <!-- Lava Stone Golem -->
-			<npc id="23493" x="150588" y="-18423" z="-2984" heading="38731" respawnTime="60sec" /> <!-- Lava Leviah -->
-			<npc id="23493" x="142033" y="-19560" z="-3120" heading="57055" respawnTime="60sec" /> <!-- Lava Leviah -->
-			<npc id="23493" x="145477" y="-20990" z="-3176" heading="15248" respawnTime="60sec" /> <!-- Lava Leviah -->
-			<npc id="23493" x="141091" y="-20076" z="-3208" heading="30344" respawnTime="60sec" /> <!-- Lava Leviah -->
-			<npc id="23493" x="138292" y="-21577" z="-3136" heading="51365" respawnTime="60sec" /> <!-- Lava Leviah -->
-			<npc id="23493" x="137291" y="-19518" z="-3424" heading="14596" respawnTime="60sec" /> <!-- Lava Leviah -->
-			<npc id="23493" x="139046" y="-20267" z="-3288" heading="63228" respawnTime="60sec" /> <!-- Lava Leviah -->
-			<npc id="23493" x="139241" y="-19732" z="-3376" heading="17102" respawnTime="60sec" /> <!-- Lava Leviah -->
-			<npc id="23493" x="140426" y="-24639" z="-1952" heading="54696" respawnTime="60sec" /> <!-- Lava Leviah -->
-			<npc id="23493" x="142429" y="-25424" z="-2040" heading="16562" respawnTime="60sec" /> <!-- Lava Leviah -->
-			<npc id="23493" x="149665" y="-23936" z="-3432" heading="24090" respawnTime="60sec" /> <!-- Lava Leviah -->
-			<npc id="23493" x="149801" y="-19568" z="-3128" heading="1078" respawnTime="60sec" /> <!-- Lava Leviah -->
-			<npc id="23494" x="151435" y="-17081" z="-2960" heading="53388" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="151447" y="-12692" z="-4496" heading="40204" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="151648" y="-12683" z="-4496" heading="64793" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="151444" y="-17395" z="-2960" heading="27979" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="151243" y="-17462" z="-2952" heading="25408" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="151478" y="-12604" z="-4496" heading="30621" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="151778" y="-10157" z="-4536" heading="39001" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="151505" y="-10279" z="-4536" heading="33437" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="151609" y="-9656" z="-4528" heading="1347" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="152794" y="-7115" z="-4488" heading="7812" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="152913" y="-7223" z="-4488" heading="62818" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="153489" y="-7253" z="-4488" heading="12414" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="150114" y="-5909" z="-4424" heading="10199" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="149928" y="-6417" z="-4424" heading="10338" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="150464" y="-6128" z="-4424" heading="41182" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="148334" y="-9980" z="-4576" heading="48835" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="148847" y="-9791" z="-4576" heading="59691" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="148904" y="-9602" z="-4576" heading="55110" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="147754" y="-7002" z="-4520" heading="30971" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="146782" y="-7054" z="-4520" heading="32961" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="147430" y="-7002" z="-4520" heading="38260" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="146838" y="-4777" z="-4552" heading="16823" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="147173" y="-4350" z="-4552" heading="6743" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="147374" y="-4655" z="-4552" heading="27034" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="144711" y="-8833" z="-4728" heading="31786" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="144405" y="-8233" z="-4728" heading="10171" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="144609" y="-8173" z="-4712" heading="9168" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="143374" y="-4242" z="-4752" heading="4776" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="141959" y="-7295" z="-4768" heading="14141" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="141749" y="-6952" z="-4768" heading="21516" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="142729" y="-7001" z="-4768" heading="19781" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="143262" y="-4746" z="-4752" heading="21377" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="143150" y="-4746" z="-4752" heading="23562" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="140036" y="-7788" z="-4760" heading="19036" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="139365" y="-7468" z="-4744" heading="18139" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="139792" y="-8108" z="-4760" heading="30391" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="140678" y="-5258" z="-4760" heading="48406" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="140228" y="-4817" z="-4800" heading="24281" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="140078" y="-5307" z="-4816" heading="64347" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="139002" y="-11096" z="-4640" heading="20842" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="138543" y="-11043" z="-4640" heading="19084" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="139155" y="-11626" z="-4640" heading="41611" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="141293" y="-10457" z="-4632" heading="60193" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="141423" y="-11252" z="-4632" heading="34713" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="141943" y="-11093" z="-4624" heading="37942" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="144359" y="-10957" z="-4632" heading="26541" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="143462" y="-11205" z="-4632" heading="37074" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="143876" y="-11453" z="-4632" heading="42241" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="140834" y="-13200" z="-4368" heading="9013" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="140776" y="-12564" z="-4368" heading="18977" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="141414" y="-12511" z="-4368" heading="28709" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="142727" y="-14076" z="-4440" heading="40082" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="149130" y="-13068" z="-4400" heading="38953" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="148910" y="-13112" z="-4400" heading="13712" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="149057" y="-12794" z="-4376" heading="32099" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="148810" y="-18354" z="-3096" heading="60852" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="143215" y="-14746" z="-4440" heading="30920" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="142523" y="-14661" z="-4440" heading="62433" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="142618" y="-19117" z="-3088" heading="55842" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="143102" y="-19171" z="-3080" heading="23370" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="143234" y="-19009" z="-3064" heading="63537" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="144211" y="-20389" z="-3168" heading="47951" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="141767" y="-20957" z="-3176" heading="55216" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="141863" y="-20777" z="-3176" heading="11545" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="142007" y="-21137" z="-3176" heading="42584" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="143995" y="-20593" z="-3168" heading="33660" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="144643" y="-21103" z="-3160" heading="18519" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="147179" y="-22114" z="-3096" heading="9226" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="147265" y="-22156" z="-3096" heading="9364" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="146706" y="-21820" z="-3096" heading="10633" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="139559" y="-21692" z="-3104" heading="19526" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="140824" y="-18631" z="-3200" heading="14251" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="140653" y="-19047" z="-3200" heading="30735" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="140197" y="-18527" z="-3200" heading="2725" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="139055" y="-21604" z="-3096" heading="50843" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="138887" y="-21824" z="-3104" heading="38006" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="137648" y="-24008" z="-3184" heading="61291" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="137576" y="-23920" z="-3184" heading="55070" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="137324" y="-23612" z="-3168" heading="40047" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="141287" y="-24410" z="-2016" heading="42427" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="141587" y="-24361" z="-2016" heading="40521" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="136273" y="-20739" z="-3272" heading="7096" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="136623" y="-20843" z="-3256" heading="49585" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="136373" y="-21103" z="-3272" heading="2123" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="139915" y="-26327" z="-1920" heading="4311" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="140065" y="-26156" z="-1920" heading="62875" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="140015" y="-25700" z="-1904" heading="52117" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="141767" y="-24704" z="-2016" heading="51065" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="144626" y="-24256" z="-2080" heading="61761" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="143816" y="-24406" z="-2072" heading="48785" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="144086" y="-23856" z="-2080" heading="46525" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="149359" y="-25271" z="-3320" heading="38067" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="149230" y="-24712" z="-3320" heading="8412" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="149015" y="-24884" z="-3296" heading="47048" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="150956" y="-23484" z="-3440" heading="59171" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="150146" y="-23527" z="-3440" heading="48883" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="150524" y="-23914" z="-3440" heading="2955" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="149975" y="-21047" z="-3152" heading="29467" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="149807" y="-20995" z="-3152" heading="39013" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="149492" y="-18522" z="-3096" heading="52185" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="149120" y="-18466" z="-3096" heading="56512" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23494" x="150031" y="-20371" z="-3152" heading="16639" respawnTime="60sec" /> <!-- Magma Salamander -->
-			<npc id="23495" x="151561" y="-16869" z="-2960" heading="3603" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="151941" y="-12820" z="-4496" heading="5301" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="151345" y="-16851" z="-2960" heading="15906" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="151498" y="-17274" z="-2960" heading="56115" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="149596" y="-12847" z="-4400" heading="31634" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="151185" y="-12920" z="-4496" heading="33593" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="151252" y="-12482" z="-4496" heading="21498" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="151266" y="-10313" z="-4536" heading="13858" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="151154" y="-9487" z="-4536" heading="3995" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="151712" y="-9993" z="-4520" heading="49169" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="153351" y="-7028" z="-4488" heading="52757" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="153590" y="-7085" z="-4488" heading="3397" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="153295" y="-6689" z="-4488" heading="20003" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="149504" y="-6317" z="-4424" heading="55237" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="149621" y="-6723" z="-4424" heading="55951" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="150104" y="-5939" z="-4424" heading="41448" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="148505" y="-9791" z="-4576" heading="24255" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="148619" y="-9791" z="-4576" heading="34142" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="148562" y="-9791" z="-4576" heading="27240" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="147700" y="-7158" z="-4520" heading="11542" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="147106" y="-6742" z="-4520" heading="10100" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="147160" y="-7002" z="-4520" heading="18818" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="147039" y="-4594" z="-4552" heading="60117" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="147106" y="-4289" z="-4552" heading="17868" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="146972" y="-4960" z="-4552" heading="35595" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="144405" y="-8533" z="-4728" heading="14850" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="144558" y="-8233" z="-4720" heading="10860" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="144252" y="-7813" z="-4720" heading="45955" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="143430" y="-4802" z="-4752" heading="5394" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="143374" y="-4018" z="-4752" heading="25539" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="143598" y="-4074" z="-4736" heading="46318" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="142799" y="-6609" z="-4768" heading="3395" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="142099" y="-6805" z="-4768" heading="48453" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="142099" y="-7148" z="-4768" heading="53436" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="139731" y="-7916" z="-4760" heading="35498" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="140028" y="-5160" z="-4816" heading="6593" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="140428" y="-5209" z="-4816" heading="51262" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="139978" y="-4817" z="-4816" heading="37132" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="139060" y="-7980" z="-4760" heading="53778" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="139792" y="-8364" z="-4760" heading="21936" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="138747" y="-11626" z="-4640" heading="19869" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="139155" y="-11361" z="-4640" heading="51642" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="141033" y="-10669" z="-4632" heading="22661" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="141033" y="-11305" z="-4632" heading="17956" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="139308" y="-11043" z="-4640" heading="23944" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="141748" y="-10828" z="-4632" heading="50355" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="144221" y="-11267" z="-4632" heading="5651" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="144014" y="-11081" z="-4632" heading="45853" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="143669" y="-11267" z="-4632" heading="9002" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="141182" y="-12458" z="-4368" heading="33156" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="140834" y="-13200" z="-4368" heading="27526" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="141237" y="-12683" z="-4368" heading="38127" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="142666" y="-14277" z="-4440" heading="43383" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="142727" y="-13942" z="-4440" heading="17655" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="149086" y="-12671" z="-4400" heading="32419" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="149351" y="-12900" z="-4400" heading="50295" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="149368" y="-17962" z="-3096" heading="26141" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="142849" y="-14746" z="-4440" heading="5453" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="142882" y="-18739" z="-3088" heading="50453" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="143146" y="-19117" z="-3064" heading="39975" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="143146" y="-19063" z="-3080" heading="54158" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="142007" y="-21182" z="-3176" heading="34523" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="141719" y="-21047" z="-3176" heading="55008" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="141815" y="-20867" z="-3176" heading="19378" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="144805" y="-20491" z="-3168" heading="51113" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="144103" y="-20491" z="-3168" heading="10774" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="144913" y="-20593" z="-3168" heading="42582" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="146491" y="-22198" z="-3088" heading="63501" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="146835" y="-21904" z="-3096" heading="25410" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="146878" y="-22282" z="-3088" heading="54898" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="139265" y="-21428" z="-3104" heading="21582" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="140653" y="-18943" z="-3200" heading="59427" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="140140" y="-18995" z="-3200" heading="19454" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="140938" y="-18891" z="-3200" heading="9365" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="139223" y="-21868" z="-3104" heading="20412" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="139181" y="-22000" z="-3104" heading="27571" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="137252" y="-23964" z="-3184" heading="8765" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="137324" y="-23304" z="-3184" heading="24599" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="137756" y="-23700" z="-3184" heading="57648" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="141527" y="-24459" z="-2016" heading="5455" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="142127" y="-24361" z="-2016" heading="2747" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="136273" y="-20531" z="-3272" heading="16980" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="136773" y="-20999" z="-3272" heading="35874" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="136123" y="-21155" z="-3272" heading="15050" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="140015" y="-25985" z="-1920" heading="55307" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="139565" y="-25700" z="-1920" heading="13887" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="139815" y="-25472" z="-1920" heading="46572" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="142007" y="-24606" z="-2016" heading="24362" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="144491" y="-24606" z="-2080" heading="39773" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="144356" y="-24606" z="-2080" heading="55114" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="144221" y="-24106" z="-2080" heading="49718" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="149445" y="-25056" z="-3320" heading="49824" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="149359" y="-24970" z="-3320" heading="47321" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="149144" y="-24927" z="-3304" heading="65254" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="150578" y="-23871" z="-3440" heading="5111" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="150740" y="-23656" z="-3432" heading="44281" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="150686" y="-23828" z="-3440" heading="64429" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="149919" y="-20787" z="-3152" heading="5579" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="150031" y="-20631" z="-3152" heading="30143" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="149583" y="-20579" z="-3144" heading="46452" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="149058" y="-18466" z="-3096" heading="28567" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23495" x="149244" y="-18466" z="-3096" heading="34514" respawnTime="60sec" /> <!-- Magma Dre Vanul -->
-			<npc id="23499" x="146865" y="-13705" z="-4440" heading="33067" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="147288" y="-13489" z="-4456" heading="20033" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="145723" y="-13811" z="-4440" heading="23889" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="146929" y="-11231" z="-4448" heading="9106" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="146533" y="-11480" z="-4448" heading="62010" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="147985" y="-11646" z="-4448" heading="62035" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="148275" y="-14461" z="-4456" heading="34097" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="146143" y="-15036" z="-4312" heading="35724" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="145524" y="-16186" z="-4032" heading="32287" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="145619" y="-17206" z="-3728" heading="4243" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="145927" y="-18298" z="-3440" heading="31833" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="145564" y="-16444" z="-3960" heading="49540" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="147297" y="-20840" z="-3432" heading="49057" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="144441" y="-26473" z="-2112" heading="50908" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="145001" y="-26361" z="-2192" heading="51081" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="146391" y="-25672" z="-2928" heading="7918" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="146135" y="-26275" z="-2720" heading="29460" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="148103" y="-22740" z="-3432" heading="25792" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="147938" y="-23724" z="-3280" heading="2421" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="148295" y="-23484" z="-3352" heading="38493" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23499" x="148289" y="-21624" z="-3432" heading="30600" respawnTime="60sec" /> <!-- Flame Preta -->
-			<npc id="23500" x="150415" y="-17525" z="-3016" heading="4468" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="149417" y="-14403" z="-4408" heading="28979" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="150333" y="-10384" z="-4488" heading="36534" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="151613" y="-11749" z="-4480" heading="12358" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="150347" y="-8369" z="-4544" heading="29528" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="152666" y="-9259" z="-4504" heading="10925" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="151433" y="-7459" z="-4448" heading="5572" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="147328" y="-9840" z="-4440" heading="18612" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="146698" y="-9712" z="-4408" heading="3384" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="145709" y="-6039" z="-4600" heading="28158" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="143969" y="-9516" z="-4640" heading="24469" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="143590" y="-6039" z="-4696" heading="55265" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="145220" y="-5347" z="-4720" heading="46706" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="142301" y="-5484" z="-4784" heading="11581" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="142301" y="-5037" z="-4792" heading="62144" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="139084" y="-9684" z="-4504" heading="59210" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="140644" y="-9156" z="-4600" heading="48754" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="141226" y="-14099" z="-4464" heading="55362" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="142890" y="-13258" z="-4360" heading="449" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="145723" y="-14056" z="-4432" heading="28779" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="147721" y="-11148" z="-4448" heading="43500" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="147985" y="-11148" z="-4432" heading="53014" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="147993" y="-13813" z="-4464" heading="18219" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="148134" y="-13705" z="-4456" heading="19974" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="148870" y="-15501" z="-4456" heading="20908" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="145804" y="-16057" z="-4072" heading="4334" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="145163" y="-14916" z="-4344" heading="10262" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="145775" y="-17411" z="-3664" heading="34422" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="142975" y="-20979" z="-3184" heading="33190" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="145550" y="-21730" z="-3112" heading="36" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="146937" y="-20704" z="-3432" heading="13728" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="139826" y="-19518" z="-3248" heading="38039" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="141091" y="-19947" z="-3208" heading="18615" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="139046" y="-20374" z="-3248" heading="42481" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="137486" y="-20053" z="-3352" heading="9969" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="137787" y="-22578" z="-3168" heading="17559" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="142681" y="-25715" z="-2064" heading="43927" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="141581" y="-26139" z="-2008" heading="44861" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="144217" y="-26641" z="-2112" heading="34809" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="144777" y="-26921" z="-2128" heading="21444" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="144217" y="-26305" z="-2112" heading="16530" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="147159" y="-25136" z="-3016" heading="40654" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="146071" y="-26074" z="-2720" heading="41977" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="146967" y="-25337" z="-3016" heading="29826" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="148351" y="-22647" z="-3432" heading="64221" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="148475" y="-23019" z="-3432" heading="44347" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="147836" y="-23844" z="-3248" heading="18503" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="147632" y="-24024" z="-3192" heading="45015" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="148244" y="-23424" z="-3360" heading="12659" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="149421" y="-24424" z="-3296" heading="58543" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="148599" y="-21810" z="-3432" heading="17543" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23500" x="148471" y="-19880" z="-3240" heading="35266" respawnTime="60sec" /> <!-- Flame Crow -->
-			<npc id="23501" x="150063" y="-17919" z="-3048" heading="61633" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="150388" y="-13489" z="-4472" heading="3598" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="151364" y="-8738" z="-4544" heading="48473" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="149847" y="-9491" z="-4544" heading="46357" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="150012" y="-10170" z="-4504" heading="53097" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="151521" y="-7236" z="-4392" heading="46003" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="149441" y="-8853" z="-4544" heading="8328" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="148968" y="-7303" z="-4416" heading="51681" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="145963" y="-9840" z="-4424" heading="30587" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="146593" y="-9200" z="-4392" heading="60044" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="143753" y="-5866" z="-4712" heading="61814" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="140798" y="-7123" z="-4768" heading="61848" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="142613" y="-10201" z="-4576" heading="57012" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="140176" y="-10344" z="-4648" heading="11462" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="139499" y="-13534" z="-4328" heading="41018" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="143315" y="-13006" z="-4368" heading="53441" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="149128" y="-15185" z="-4456" heading="39072" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="145988" y="-21804" z="-3128" heading="65050" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="139631" y="-19732" z="-3320" heading="64679" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="140777" y="-20463" z="-3216" heading="31534" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="141091" y="-20334" z="-3192" heading="45774" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="139046" y="-20481" z="-3216" heading="17586" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="139241" y="-20481" z="-3208" heading="21729" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="136979" y="-22487" z="-3176" heading="39581" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="140951" y="-25939" z="-2008" heading="13836" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="143353" y="-25133" z="-2088" heading="30321" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="149909" y="-23936" z="-3416" heading="46230" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23501" x="148661" y="-19958" z="-3224" heading="20130" respawnTime="60sec" /> <!-- Flame Rael -->
-			<npc id="23502" x="150050" y="-17489" z="-3040" heading="64761" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="150388" y="-13843" z="-4464" heading="47540" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="150231" y="-14205" z="-4456" heading="36527" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="149861" y="-9718" z="-4544" heading="40771" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="150318" y="-10178" z="-4512" heading="1078" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="152797" y="-9676" z="-4496" heading="57058" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="151023" y="-7765" z="-4520" heading="9100" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="148088" y="-7863" z="-4432" heading="23329" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="148198" y="-7639" z="-4416" heading="27511" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="146068" y="-8688" z="-4488" heading="10721" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="147118" y="-8560" z="-4392" heading="24735" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="145709" y="-5693" z="-4576" heading="31051" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="143856" y="-9516" z="-4640" heading="4301" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="143916" y="-7077" z="-4704" heading="54936" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="145057" y="-5520" z="-4720" heading="10160" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="141633" y="-4739" z="-4784" heading="29962" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="140464" y="-6676" z="-4760" heading="16446" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="141299" y="-5037" z="-4792" heading="29940" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="140644" y="-9288" z="-4608" heading="54035" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="142726" y="-9653" z="-4576" heading="24377" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="139864" y="-10344" z="-4672" heading="28168" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="140020" y="-10872" z="-4680" heading="4739" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="139656" y="-14099" z="-4336" heading="40065" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="141069" y="-14099" z="-4456" heading="43092" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="142040" y="-12754" z="-4328" heading="12693" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="142465" y="-12628" z="-4328" heading="61238" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="149224" y="-11340" z="-4472" heading="33405" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="142033" y="-19689" z="-3128" heading="59832" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="145258" y="-21434" z="-3112" heading="23265" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="140777" y="-20334" z="-3232" heading="26612" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="137291" y="-20695" z="-3296" heading="17720" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="138656" y="-20053" z="-3368" heading="4699" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="138461" y="-19304" z="-3448" heading="56798" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="136474" y="-22214" z="-3192" heading="13900" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="140636" y="-25439" z="-2000" heading="6114" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="143269" y="-25715" z="-2072" heading="63982" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="149970" y="-24180" z="-3400" heading="54151" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23502" x="149801" y="-19490" z="-3120" heading="9977" respawnTime="60sec" /> <!-- Flame Salamander -->
-			<npc id="23503" x="149965" y="-14242" z="-4432" heading="58145" respawnTime="60sec" /> <!-- Flame Drake -->
-			<npc id="23503" x="149305" y="-13746" z="-4384" heading="31924" respawnTime="60sec" /> <!-- Flame Drake -->
-			<npc id="23503" x="149481" y="-10983" z="-4472" heading="26634" respawnTime="60sec" /> <!-- Flame Drake -->
-			<npc id="23503" x="149671" y="-11504" z="-4432" heading="43548" respawnTime="60sec" /> <!-- Flame Drake -->
-			<npc id="23503" x="151460" y="-11152" z="-4512" heading="33067" respawnTime="60sec" /> <!-- Flame Drake -->
-			<npc id="23503" x="151035" y="-8618" z="-4544" heading="56305" respawnTime="60sec" /> <!-- Flame Drake -->
-			<npc id="23503" x="150689" y="-7530" z="-4472" heading="55097" respawnTime="60sec" /> <!-- Flame Drake -->
-			<npc id="23503" x="148638" y="-8535" z="-4544" heading="10111" respawnTime="60sec" /> <!-- Flame Drake -->
-			<npc id="23503" x="148748" y="-7751" z="-4448" heading="62571" respawnTime="60sec" /> <!-- Flame Drake -->
-			<npc id="23503" x="143969" y="-9105" z="-4664" heading="45869" respawnTime="60sec" /> <!-- Flame Drake -->
-			<npc id="23503" x="144534" y="-9379" z="-4632" heading="20379" respawnTime="60sec" /> <!-- Flame Drake -->
-			<npc id="23503" x="143590" y="-7942" z="-4712" heading="19989" respawnTime="60sec" /> <!-- Flame Drake -->
-			<npc id="23503" x="142468" y="-5037" z="-4784" heading="19034" respawnTime="60sec" /> <!-- Flame Drake -->
-			<npc id="23503" x="138616" y="-9684" z="-4464" heading="18190" respawnTime="60sec" /> <!-- Flame Drake -->
+			<npc id="23488" x="151576" y="-10424" z="-4538" heading="18541" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="151793" y="-10152" z="-4533" heading="9446" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="151672" y="-10024" z="-4531" heading="27907" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="151496" y="-9816" z="-4524" heading="23899" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="151256" y="-9800" z="-4538" heading="31883" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="151176" y="-9960" z="-4538" heading="49678" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="151192" y="-10152" z="-4538" heading="60246" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="151396" y="-10124" z="-4538" heading="12699" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="151432" y="-10040" z="-4538" heading="12699" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="151368" y="-10232" z="-4538" heading="45747" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="151592" y="-10168" z="-4538" heading="8091" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="151672" y="-9880" z="-4510" heading="13500" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="151784" y="-9560" z="-4538" heading="12671" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="151504" y="-9479" z="-4538" heading="35881" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="151134" y="-9643" z="-4538" heading="38267" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="150984" y="-9816" z="-4538" heading="42328" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="150888" y="-10040" z="-4493" heading="44662" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="151033" y="-10347" z="-4501" heading="57776" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="151224" y="-10424" z="-4521" heading="61931" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="151352" y="-10472" z="-4529" heading="61898" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="152856" y="-7816" z="-4490" heading="7760" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="153176" y="-7800" z="-4494" heading="327" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="153432" y="-7752" z="-4494" heading="13028" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="153450" y="-7308" z="-4494" heading="21284" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="153224" y="-7384" z="-4494" heading="41163" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="152968" y="-7384" z="-4494" heading="32645" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="152801" y="-7140" z="-4494" heading="17003" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="152955" y="-6907" z="-4494" heading="3834" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="153352" y="-6872" z="-4494" heading="64882" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="153608" y="-6952" z="-4494" heading="62317" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="153272" y="-7288" z="-4494" heading="43127" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="153112" y="-7528" z="-4494" heading="43336" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="152771" y="-7533" z="-4494" heading="27431" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="152559" y="-7283" z="-4470" heading="22374" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="152712" y="-6963" z="-4485" heading="11151" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="152985" y="-6534" z="-4487" heading="10301" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="153336" y="-6520" z="-4487" heading="64234" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="153313" y="-6701" z="-4494" heading="45043" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="153198" y="-6913" z="-4494" heading="40861" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="153080" y="-7032" z="-4494" heading="40861" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="150520" y="-6760" z="-4430" heading="27796" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="150648" y="-6552" z="-4415" heading="11032" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="150670" y="-6353" z="-4371" heading="24767" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="150284" y="-6122" z="-4430" heading="30842" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="149848" y="-6312" z="-4430" heading="43470" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="149870" y="-6625" z="-4430" heading="50355" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="149937" y="-6881" z="-4430" heading="57131" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="150221" y="-6966" z="-4430" heading="64238" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="150242" y="-6779" z="-4430" heading="23679" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="150088" y="-6488" z="-4430" heading="16197" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="150504" y="-6616" z="-4430" heading="61524" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="150312" y="-6328" z="-4430" heading="22334" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="149965" y="-6116" z="-4424" heading="27221" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="149772" y="-6384" z="-4430" heading="46699" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="149976" y="-6632" z="-4430" heading="59679" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="150200" y="-6664" z="-4430" heading="64355" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="150382" y="-6777" z="-4430" heading="51271" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="150462" y="-6885" z="-4428" heading="2480" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="150478" y="-6758" z="-4427" heading="18653" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="150376" y="-6296" z="-4430" heading="18653" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="147832" y="-7336" z="-4514" heading="32059" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="147656" y="-6968" z="-4526" heading="21069" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="147368" y="-6968" z="-4526" heading="33061" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="147112" y="-7032" z="-4526" heading="49273" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="147129" y="-7343" z="-4526" heading="52041" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="147218" y="-7535" z="-4525" heading="57828" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="147455" y="-7604" z="-4520" heading="4600" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="147688" y="-7448" z="-4524" heading="6322" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="147552" y="-7259" z="-4524" heading="23044" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="147272" y="-7240" z="-4526" heading="36736" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="146840" y="-7432" z="-4526" heading="52043" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="147080" y="-7624" z="-4526" heading="58404" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="147336" y="-7720" z="-4511" heading="61539" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="147637" y="-7558" z="-4512" heading="10821" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="147772" y="-7288" z="-4519" heading="11990" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="147729" y="-6985" z="-4517" heading="24449" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="147336" y="-6936" z="-4526" heading="35717" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="147112" y="-6952" z="-4526" heading="33231" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="146984" y="-7032" z="-4526" heading="38823" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="146878" y="-7164" z="-4526" heading="61646" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="147192" y="-5320" z="-4544" heading="14434" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="147448" y="-5112" z="-4553" heading="6988" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="147320" y="-4984" z="-4553" heading="22389" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="147143" y="-4711" z="-4553" heading="22675" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="147005" y="-4526" z="-4553" heading="23861" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="146712" y="-4536" z="-4553" heading="38204" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="146632" y="-4760" z="-4553" heading="45688" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="146536" y="-4968" z="-4546" heading="44554" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="146664" y="-5016" z="-4546" heading="57261" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="146821" y="-5193" z="-4545" heading="54920" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="147016" y="-5480" z="-4506" heading="55787" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="147053" y="-5077" z="-4540" heading="15352" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="147166" y="-5006" z="-4553" heading="18312" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="147000" y="-4546" z="-4553" heading="23512" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="146792" y="-4552" z="-4553" heading="36818" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="146840" y="-4776" z="-4553" heading="46678" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="146874" y="-4901" z="-4553" heading="8544" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="147016" y="-4888" z="-4553" heading="50105" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="146840" y="-5032" z="-4553" heading="40100" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="146664" y="-5016" z="-4544" heading="40100" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="144104" y="-4584" z="-4716" heading="29552" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="143896" y="-4280" z="-4755" heading="22606" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="143595" y="-4152" z="-4736" heading="32667" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="143320" y="-4376" z="-4755" heading="43392" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="143160" y="-4680" z="-4755" heading="43948" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="143224" y="-4888" z="-4755" heading="52187" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="143633" y="-5116" z="-4722" heading="63605" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="143720" y="-4936" z="-4755" heading="14833" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="143880" y="-4840" z="-4741" heading="5694" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="143960" y="-4712" z="-4740" heading="10830" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="143496" y="-4424" z="-4755" heading="31111" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="143448" y="-4600" z="-4755" heading="46437" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="143453" y="-4697" z="-4755" heading="7741" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="143736" y="-4520" z="-4755" heading="4631" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="143912" y="-4520" z="-4755" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="143912" y="-4865" z="-4718" heading="48948" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="143512" y="-4805" z="-4746" heading="31093" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="143240" y="-4952" z="-4755" heading="40181" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="143416" y="-4904" z="-4755" heading="2656" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="143624" y="-4936" z="-4755" heading="63789" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="142744" y="-6248" z="-4735" heading="42752" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="142440" y="-6414" z="-4766" heading="37929" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="142040" y="-6488" z="-4770" heading="34329" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="141942" y="-6761" z="-4770" heading="55014" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="142130" y="-6992" z="-4770" heading="58482" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="142486" y="-7091" z="-4770" heading="64110" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="142744" y="-7016" z="-4770" heading="3519" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="142856" y="-6792" z="-4770" heading="11458" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="142792" y="-6696" z="-4770" heading="22275" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="142760" y="-6536" z="-4770" heading="18505" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="142280" y="-6616" z="-4770" heading="36599" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="142168" y="-6872" z="-4770" heading="44620" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="142360" y="-6920" z="-4770" heading="63345" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="142491" y="-6848" z="-4770" heading="23335" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="142472" y="-6696" z="-4770" heading="16210" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="142582" y="-6533" z="-4770" heading="6823" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="142664" y="-6472" z="-4770" heading="6823" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="142709" y="-6293" z="-4732" heading="31190" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="142328" y="-6232" z="-4756" heading="40512" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="142033" y="-6558" z="-4767" heading="44270" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="140840" y="-5576" z="-4800" heading="24273" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="140775" y="-5175" z="-4809" heading="18029" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="140616" y="-4904" z="-4819" heading="26816" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="140261" y="-4760" z="-4810" heading="34414" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="140012" y="-4843" z="-4817" heading="43960" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="140040" y="-5224" z="-4819" heading="53913" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="139985" y="-5551" z="-4800" heading="50874" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="140200" y="-5784" z="-4764" heading="64297" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="140408" y="-5608" z="-4818" heading="7348" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="140431" y="-5382" z="-4812" heading="27945" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="140232" y="-5016" z="-4819" heading="16308" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="140360" y="-4760" z="-4811" heading="11437" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="140536" y="-4892" z="-4819" heading="49311" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="140612" y="-5308" z="-4779" heading="52088" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="140520" y="-5448" z="-4819" heading="42165" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="140181" y="-5284" z="-4819" heading="38361" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="140044" y="-5561" z="-4784" heading="47068" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="139992" y="-5848" z="-4762" heading="48196" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="140248" y="-5784" z="-4769" heading="2280" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="140440" y="-5720" z="-4795" heading="2986" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="140008" y="-7416" z="-4761" heading="46473" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="139752" y="-7432" z="-4761" heading="33470" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="139392" y="-7524" z="-4761" heading="40092" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="139210" y="-7887" z="-4761" heading="46162" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="139257" y="-8263" z="-4761" heading="55946" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="139542" y="-8539" z="-4751" heading="62388" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="139880" y="-8440" z="-4751" heading="7505" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="140020" y="-8197" z="-4760" heading="10781" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="140115" y="-7996" z="-4761" heading="12185" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="140136" y="-7720" z="-4761" heading="16564" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="139976" y="-7608" z="-4761" heading="26589" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="139618" y="-7678" z="-4761" heading="37088" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="139544" y="-7928" z="-4761" heading="54059" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="139576" y="-8120" z="-4761" heading="51180" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="139672" y="-7880" z="-4761" heading="18430" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="140014" y="-7939" z="-4761" heading="63722" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="139721" y="-8196" z="-4761" heading="39825" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="139368" y="-8504" z="-4747" heading="40405" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="139306" y="-8342" z="-4761" heading="22214" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="139217" y="-8100" z="-4761" heading="11251" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="141352" y="-10152" z="-4595" heading="46067" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="141592" y="-10376" z="-4554" heading="57755" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="141714" y="-10755" z="-4622" heading="52417" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="141574" y="-11158" z="-4637" heading="38708" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="141199" y="-11243" z="-4635" heading="30172" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="140848" y="-11188" z="-4637" heading="27999" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="140740" y="-11029" z="-4629" heading="17953" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="140872" y="-10632" z="-4611" heading="8435" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="141112" y="-10413" z="-4633" heading="2555" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="141336" y="-10536" z="-4637" heading="56300" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="141656" y="-10568" z="-4573" heading="64605" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="141535" y="-10892" z="-4637" heading="44535" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="141255" y="-11075" z="-4637" heading="35343" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="141096" y="-10984" z="-4637" heading="23067" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="141179" y="-10813" z="-4637" heading="3450" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="141400" y="-10776" z="-4637" heading="861" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="141657" y="-10783" z="-4624" heading="46296" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="141644" y="-11012" z="-4637" heading="56294" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="141752" y="-11144" z="-4637" heading="56294" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="141571" y="-11288" z="-4611" heading="39793" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="139528" y="-11192" z="-4608" heading="63138" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="139272" y="-10877" z="-4627" heading="23451" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="139096" y="-10936" z="-4644" heading="44587" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="138808" y="-10952" z="-4644" heading="33555" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="138696" y="-11128" z="-4632" heading="43189" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="138578" y="-11392" z="-4621" heading="38635" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="138712" y="-11528" z="-4643" heading="59667" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="138897" y="-11506" z="-4644" heading="852" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="139073" y="-11490" z="-4644" heading="702" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="139300" y="-11440" z="-4640" heading="3392" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="139352" y="-11288" z="-4644" heading="56320" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="139102" y="-11176" z="-4644" heading="32651" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="138814" y="-11207" z="-4624" heading="34778" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="138673" y="-11059" z="-4625" heading="19900" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="138392" y="-10952" z="-4633" heading="37886" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="138480" y="-11188" z="-4631" heading="45322" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="138472" y="-11656" z="-4631" heading="51306" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="138772" y="-11663" z="-4644" heading="3925" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="139193" y="-11512" z="-4644" heading="3445" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="139528" y="-11352" z="-4621" heading="4763" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="138760" y="-14008" z="-4338" heading="40115" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="138297" y="-13976" z="-4338" heading="32103" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="138188" y="-14315" z="-4338" heading="49654" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="138218" y="-14789" z="-4338" heading="50184" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="138504" y="-15160" z="-4338" heading="4254" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="139011" y="-14885" z="-4338" heading="6502" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="139112" y="-14504" z="-4338" heading="10963" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="139064" y="-14168" z="-4266" heading="25081" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="138878" y="-14117" z="-4313" heading="32480" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="138424" y="-13928" z="-4338" heading="25118" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="138552" y="-14104" z="-4338" heading="14656" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="138392" y="-14216" z="-4338" heading="49097" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="138440" y="-14632" z="-4338" heading="51040" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="138636" y="-14853" z="-4338" heading="56037" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="138936" y="-14808" z="-4338" heading="10676" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="138725" y="-14521" z="-4332" heading="26921" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="138744" y="-14376" z="-4338" heading="8617" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="138535" y="-14408" z="-4338" heading="38917" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="138343" y="-14536" z="-4338" heading="38643" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="138264" y="-14396" z="-4338" heading="18347" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="140456" y="-13048" z="-4372" heading="6514" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="140696" y="-13224" z="-4372" heading="58851" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="141112" y="-13211" z="-4358" heading="2573" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="141240" y="-13000" z="-4372" heading="17140" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="141238" y="-12688" z="-4372" heading="19582" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="141011" y="-12323" z="-4372" heading="24459" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="140693" y="-12570" z="-4368" heading="34349" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="140392" y="-12776" z="-4372" heading="42965" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="140661" y="-12944" z="-4372" heading="60955" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="140936" y="-12984" z="-4372" heading="64582" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="141144" y="-12504" z="-4372" heading="9320" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="140968" y="-12728" z="-4372" heading="54928" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="140776" y="-12872" z="-4372" heading="39127" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="140747" y="-13054" z="-4371" heading="52393" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="140729" y="-13204" z="-4368" heading="26235" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="140456" y="-13000" z="-4372" heading="25659" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="140599" y="-12682" z="-4372" heading="12093" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="141000" y="-12616" z="-4372" heading="55621" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="141092" y="-12798" z="-4372" heading="27216" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="140932" y="-12764" z="-4372" heading="31323" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="142360" y="-13784" z="-4417" heading="57427" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="142187" y="-14085" z="-4430" heading="43543" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="142336" y="-14530" z="-4442" heading="56311" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="142600" y="-14568" z="-4442" heading="1651" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="142828" y="-14683" z="-4442" heading="9430" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="143000" y="-14328" z="-4442" heading="13335" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="143018" y="-13948" z="-4441" heading="21462" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="142904" y="-13848" z="-4435" heading="29019" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="142613" y="-13794" z="-4434" heading="34087" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="142453" y="-14010" z="-4442" heading="44385" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="142280" y="-14392" z="-4442" heading="44610" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="142578" y="-14408" z="-4442" heading="65174" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="142792" y="-14280" z="-4442" heading="9724" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="142888" y="-14232" z="-4442" heading="4465" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="142734" y="-14094" z="-4442" heading="24260" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="142517" y="-14102" z="-4442" heading="36537" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="142487" y="-14311" z="-4442" heading="42924" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="142280" y="-14682" z="-4442" heading="45409" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="142457" y="-14755" z="-4442" heading="2427" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="143016" y="-14776" z="-4442" heading="63304" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="143448" y="-11480" z="-4577" heading="11034" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="143832" y="-11416" z="-4639" heading="1691" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="144145" y="-11431" z="-4640" heading="4169" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="144429" y="-11157" z="-4640" heading="9658" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="144399" y="-10754" z="-4639" heading="24676" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="143954" y="-10536" z="-4596" heading="32959" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="143606" y="-10645" z="-4613" heading="38621" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="143279" y="-11032" z="-4586" heading="46616" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="143543" y="-11160" z="-4640" heading="2630" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="143720" y="-10880" z="-4640" heading="16187" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="144136" y="-11080" z="-4640" heading="50925" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="144104" y="-10824" z="-4640" heading="17721" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="143698" y="-11089" z="-4640" heading="38734" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="143768" y="-11224" z="-4640" heading="60725" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="143958" y="-11125" z="-4640" heading="18255" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="143896" y="-10808" z="-4621" heading="18297" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="143528" y="-10888" z="-4640" heading="40283" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="143342" y="-11198" z="-4597" heading="54291" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="143640" y="-11384" z="-4623" heading="63655" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="144023" y="-11251" z="-4634" heading="3355" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="144184" y="-8808" z="-4700" heading="16187" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="144392" y="-8792" z="-4727" heading="765" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="144761" y="-8793" z="-4729" heading="5672" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="144680" y="-8664" z="-4731" heading="27720" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="144568" y="-8376" z="-4723" heading="20346" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="144772" y="-8183" z="-4710" heading="13547" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="144600" y="-7960" z="-4731" heading="32251" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="144424" y="-7928" z="-4731" heading="30697" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="144112" y="-8130" z="-4721" heading="42120" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="144104" y="-8408" z="-4731" heading="55319" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="144376" y="-7896" z="-4731" heading="15415" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="144312" y="-8200" z="-4731" heading="46950" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="144360" y="-8536" z="-4731" heading="58267" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="144392" y="-8760" z="-4731" heading="50866" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="144786" y="-8354" z="-4708" heading="11376" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="144504" y="-8472" z="-4731" heading="36875" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="144551" y="-8010" z="-4731" heading="15179" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="144446" y="-7726" z="-4727" heading="34138" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="144170" y="-7919" z="-4721" heading="46711" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="144264" y="-8008" z="-4731" heading="57892" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="148312" y="-9992" z="-4579" heading="44543" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="148520" y="-10088" z="-4579" heading="61342" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="148973" y="-9839" z="-4579" heading="5663" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="149076" y="-9494" z="-4574" heading="15829" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="148811" y="-9085" z="-4513" heading="20535" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="148520" y="-8968" z="-4545" heading="34762" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="148409" y="-9120" z="-4566" heading="46433" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="148440" y="-9496" z="-4579" heading="51555" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="148493" y="-9792" z="-4579" heading="60099" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="148756" y="-10084" z="-4571" heading="54260" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="148936" y="-9896" z="-4579" heading="10915" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="148936" y="-9592" z="-4579" heading="19150" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="148712" y="-9256" z="-4527" heading="27704" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="148394" y="-9304" z="-4579" heading="32537" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="148515" y="-9629" z="-4579" heading="53126" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="148805" y="-9581" z="-4579" heading="12423" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="149032" y="-9336" z="-4550" heading="6711" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="149208" y="-9528" z="-4579" heading="56968" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="148776" y="-9384" z="-4559" heading="29526" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="148584" y="-9320" z="-4579" heading="12819" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="151928" y="-12648" z="-4498" heading="52718" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="151752" y="-12408" z="-4498" heading="23210" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="151608" y="-12296" z="-4498" heading="39358" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="151166" y="-12587" z="-4498" heading="38136" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="150952" y="-12984" z="-4498" heading="46650" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="151286" y="-13424" z="-4493" heading="57815" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="151457" y="-13294" z="-4498" heading="17268" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="151464" y="-12872" z="-4498" heading="14680" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="151646" y="-12764" z="-4498" heading="62047" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="151980" y="-12952" z="-4498" heading="58127" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="151960" y="-13192" z="-4486" heading="43724" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="151576" y="-13096" z="-4498" heading="30244" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="151368" y="-13064" z="-4498" heading="31477" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="151133" y="-12988" z="-4498" heading="18027" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="151187" y="-12727" z="-4498" heading="13781" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="151416" y="-12616" z="-4498" heading="1979" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="151592" y="-12600" z="-4498" heading="1224" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="151816" y="-12536" z="-4498" heading="2724" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="151832" y="-12808" z="-4498" heading="49489" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="151778" y="-13087" z="-4439" heading="47429" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="149480" y="-13336" z="-4392" heading="26209" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="149224" y="-13199" z="-4394" heading="27731" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="148920" y="-13176" z="-4402" heading="39391" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="149000" y="-12872" z="-4378" heading="13701" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="148967" y="-12631" z="-4402" heading="10347" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="149251" y="-12423" z="-4401" heading="1812" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="149496" y="-12584" z="-4402" heading="56999" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="149608" y="-12760" z="-4402" heading="55161" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="149600" y="-12957" z="-4402" heading="45256" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="149502" y="-13048" z="-4402" heading="32806" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="149192" y="-12888" z="-4389" heading="22469" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="149160" y="-12744" z="-4394" heading="18483" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="149281" y="-12801" z="-4402" heading="51003" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="149336" y="-13128" z="-4402" heading="58870" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="149567" y="-13089" z="-4401" heading="10691" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="149497" y="-12653" z="-4402" heading="19062" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="149480" y="-12440" z="-4387" heading="17022" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="149017" y="-12470" z="-4400" heading="33560" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="148856" y="-12696" z="-4387" heading="43384" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="148840" y="-12968" z="-4382" heading="48653" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="149928" y="-9784" z="-4541" heading="5979" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="149992" y="-9266" z="-4541" heading="15054" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="150140" y="-8708" z="-4541" heading="12777" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="150437" y="-8232" z="-4541" heading="7187" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="150880" y="-7858" z="-4526" heading="7547" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="151159" y="-7381" z="-4451" heading="13071" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="151331" y="-6852" z="-4398" heading="13028" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="151525" y="-6305" z="-4396" heading="12728" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="151656" y="-5960" z="-4394" heading="12728" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="151656" y="-5960" z="-4394" heading="12728" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="151327" y="-8080" z="-4522" heading="60519" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="151799" y="-8411" z="-4527" heading="58843" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="152246" y="-8778" z="-4514" heading="57567" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="152725" y="-9086" z="-4502" heading="61506" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="152901" y="-9469" z="-4495" heading="46218" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="152744" y="-10027" z="-4491" heading="46391" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="152601" y="-10648" z="-4491" heading="47122" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="152289" y="-11143" z="-4492" heading="38529" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="151802" y="-11289" z="-4495" heading="33610" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="151245" y="-11202" z="-4486" heading="28906" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="148055" y="-10225" z="-4493" heading="27999" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="147583" y="-9897" z="-4451" heading="25656" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="147072" y="-9647" z="-4401" heading="29615" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="146591" y="-9557" z="-4408" heading="30848" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="146353" y="-9175" z="-4446" heading="20881" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="146168" y="-8630" z="-4482" heading="18729" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="146283" y="-8052" z="-4495" heading="12223" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="146755" y="-8314" z="-4459" heading="55041" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="147016" y="-8826" z="-4410" heading="53055" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="147306" y="-9324" z="-4393" heading="55264" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="146152" y="-6040" z="-4529" heading="25980" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="145694" y="-6024" z="-4597" heading="32360" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="145126" y="-6106" z="-4666" heading="39506" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="144609" y="-6477" z="-4702" heading="38832" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="144187" y="-6780" z="-4719" heading="40528" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="143831" y="-6558" z="-4705" heading="22522" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="143576" y="-6040" z="-4697" heading="24456" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="143157" y="-5650" z="-4736" heading="29932" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="142608" y="-5472" z="-4776" heading="28163" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="142081" y="-5234" z="-4796" heading="30791" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="141448" y="-5448" z="-4786" heading="41450" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="141456" y="-5853" z="-4779" heading="48129" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="141374" y="-6424" z="-4773" heading="45778" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="141118" y="-6925" z="-4779" heading="40280" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="140687" y="-7314" z="-4763" heading="40462" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="140685" y="-7872" z="-4681" heading="53820" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="141026" y="-8315" z="-4586" heading="58128" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="141534" y="-8524" z="-4450" heading="63013" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="141880" y="-8829" z="-4342" heading="46091" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="141758" y="-9366" z="-4496" heading="49509" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="143016" y="-10520" z="-4588" heading="61039" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="142879" y="-10962" z="-4605" heading="46095" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="142507" y="-11402" z="-4570" heading="40609" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="142102" y="-11804" z="-4469" heading="41509" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="141884" y="-12265" z="-4373" heading="52193" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="142227" y="-12711" z="-4340" heading="57682" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="142657" y="-12921" z="-4334" heading="60164" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="143160" y="-13206" z="-4356" heading="60164" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="143590" y="-13505" z="-4372" heading="58073" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="143956" y="-13940" z="-4362" heading="53940" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="144085" y="-14747" z="-4331" heading="49431" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="144209" y="-15318" z="-4295" heading="51824" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="144392" y="-15859" z="-4201" heading="52447" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="144570" y="-16394" z="-4067" heading="52635" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="144742" y="-16919" z="-3891" heading="51938" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="144847" y="-17446" z="-3684" heading="49322" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="144757" y="-17969" z="-3487" heading="44476" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="144584" y="-18507" z="-3373" heading="46390" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="144427" y="-19058" z="-3287" heading="46045" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="144264" y="-19576" z="-3207" heading="46045" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="144162" y="-20422" z="-3168" heading="47180" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="144196" y="-20768" z="-3157" heading="50268" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="144449" y="-20961" z="-3170" heading="63928" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="144921" y="-20952" z="-3143" heading="2439" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="144889" y="-20688" z="-3170" heading="13389" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="144849" y="-20320" z="-3170" heading="20213" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="144728" y="-20248" z="-3170" heading="29385" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="144456" y="-20328" z="-3158" heading="37322" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="144533" y="-20483" z="-3164" heading="53897" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="144504" y="-20776" z="-3170" heading="46280" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="144648" y="-21016" z="-3170" heading="54632" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="144757" y="-21001" z="-3159" heading="23243" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="144683" y="-20746" z="-3170" heading="17087" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="144904" y="-20616" z="-3170" heading="3927" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="144638" y="-20308" z="-3170" heading="23809" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="144316" y="-20466" z="-3170" heading="39290" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="144296" y="-20760" z="-3170" heading="50359" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="144312" y="-20968" z="-3170" heading="8332" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="144636" y="-20618" z="-3170" heading="9577" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="144667" y="-20405" z="-3170" heading="22247" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="146312" y="-21928" z="-3095" heading="59520" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="146473" y="-22235" z="-3071" heading="54324" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="146840" y="-22165" z="-3083" heading="3977" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="146888" y="-22008" z="-3102" heading="15816" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="147000" y="-21752" z="-3104" heading="18575" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="146792" y="-21625" z="-3092" heading="30299" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="146616" y="-21704" z="-3103" heading="40712" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="146487" y="-21816" z="-3102" heading="43471" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="146471" y="-22095" z="-3104" heading="50008" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="146674" y="-22287" z="-3090" heading="57813" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="146696" y="-22136" z="-3097" heading="24374" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="146816" y="-21967" z="-3098" heading="7584" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="146939" y="-21921" z="-3104" heading="60832" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="147161" y="-22209" z="-3104" heading="52654" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="146936" y="-22408" z="-3104" heading="36744" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="146487" y="-22405" z="-3046" heading="28318" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="146392" y="-22248" z="-3063" heading="19363" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="146632" y="-21944" z="-3104" heading="9475" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="146552" y="-21848" z="-3104" heading="23079" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="146776" y="-21896" z="-3104" heading="63056" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="144680" y="-24392" z="-2058" heading="16704" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="144553" y="-24068" z="-2079" heading="20485" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="144273" y="-23899" z="-2085" heading="28210" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="144040" y="-23960" z="-2085" heading="36601" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="143816" y="-24280" z="-2085" heading="44269" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="143736" y="-24424" z="-2065" heading="43630" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="143865" y="-24678" z="-2060" heading="59445" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="144168" y="-24824" z="-2056" heading="61518" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="144348" y="-24682" z="-2076" heading="9009" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="144433" y="-24510" z="-2085" heading="17825" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="144216" y="-24216" z="-2085" heading="41205" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="144040" y="-24168" z="-2085" heading="29654" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="143999" y="-24349" z="-2085" heading="53500" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="144070" y="-24551" z="-2085" heading="51450" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="144264" y="-24616" z="-2085" heading="65421" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="144344" y="-24344" z="-2085" heading="5540" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="144483" y="-24342" z="-2085" heading="45811" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="144456" y="-24616" z="-2085" heading="49096" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="144167" y="-24588" z="-2085" heading="31885" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="144047" y="-24740" z="-2062" heading="44672" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="142232" y="-24296" z="-2020" heading="372" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="141992" y="-24648" z="-2020" heading="42884" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="141944" y="-24792" z="-2015" heading="45574" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="141441" y="-24726" z="-2016" heading="29731" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="141252" y="-24490" z="-2020" heading="23206" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="141112" y="-24056" z="-2018" heading="16930" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="141384" y="-23912" z="-2020" heading="62434" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="141486" y="-24081" z="-2020" heading="50534" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="141577" y="-24534" z="-2020" heading="52028" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="141822" y="-24442" z="-2020" heading="7525" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="142088" y="-24392" z="-2020" heading="52265" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="141918" y="-24269" z="-2020" heading="33419" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="141526" y="-24280" z="-2020" heading="32906" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="141304" y="-24248" z="-2020" heading="31540" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="141116" y="-24494" z="-2017" heading="47906" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="141176" y="-24680" z="-2010" heading="61165" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="141432" y="-24648" z="-2020" heading="5135" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="141656" y="-24632" z="-2020" heading="1081" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="141825" y="-24621" z="-2017" heading="45103" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="141736" y="-24840" z="-2006" heading="45103" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="139976" y="-25272" z="-1905" heading="43444" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="139608" y="-25416" z="-1918" heading="36653" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="139400" y="-25608" z="-1881" heading="43278" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="139322" y="-26090" z="-1922" heading="53808" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="139576" y="-26168" z="-1920" heading="63386" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="139956" y="-26303" z="-1923" heading="1685" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="140040" y="-26120" z="-1923" heading="14090" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="140142" y="-25799" z="-1882" heading="18892" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="140008" y="-25544" z="-1923" heading="22591" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="139850" y="-25714" z="-1923" heading="41560" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="139480" y="-25976" z="-1923" heading="51707" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="139745" y="-26015" z="-1923" heading="1308" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="139768" y="-25880" z="-1923" heading="19663" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="139896" y="-25816" z="-1923" heading="4271" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="139597" y="-25611" z="-1923" heading="8823" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="139832" y="-25496" z="-1923" heading="2293" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="139725" y="-25647" z="-1923" heading="40697" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="139446" y="-25822" z="-1923" heading="34415" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="139368" y="-25976" z="-1923" heading="47052" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="139480" y="-25976" z="-1920" heading="57787" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="136968" y="-24040" z="-3178" heading="64528" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="137373" y="-24051" z="-3182" heading="65162" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="137624" y="-23767" z="-3189" heading="10050" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="137592" y="-23560" z="-3189" heading="24139" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="137538" y="-23355" z="-3189" heading="23735" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="137242" y="-23222" z="-3179" heading="33237" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="136954" y="-23450" z="-3126" heading="43820" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="137064" y="-23640" z="-3160" heading="60108" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="137384" y="-23576" z="-3179" heading="9185" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="137352" y="-23832" z="-3188" heading="13932" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="137352" y="-23384" z="-3189" heading="31443" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="137176" y="-23480" z="-3185" heading="38062" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="137217" y="-23789" z="-3176" heading="44255" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="137160" y="-24127" z="-3170" heading="48940" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="137544" y="-24136" z="-3182" heading="7068" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="137804" y="-23830" z="-3179" heading="14384" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="137800" y="-23640" z="-3189" heading="17155" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="137724" y="-23380" z="-3182" heading="22100" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="137544" y="-23240" z="-3185" heading="27528" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="137253" y="-23192" z="-3175" heading="34571" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="136680" y="-21384" z="-3273" heading="24747" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="136680" y="-21080" z="-3273" heading="16591" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="136514" y="-20698" z="-3267" heading="22946" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="136168" y="-20680" z="-3273" heading="37570" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="136104" y="-21048" z="-3257" heading="53834" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="136120" y="-21208" z="-3273" heading="50097" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="135971" y="-21445" z="-3263" heading="45418" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="136120" y="-21528" z="-3251" heading="62598" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="136453" y="-21590" z="-3241" heading="64265" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="136675" y="-21701" z="-3227" heading="60345" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="136824" y="-21464" z="-3230" heading="10691" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="136655" y="-21097" z="-3269" heading="23624" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="136526" y="-20866" z="-3268" heading="11894" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="136466" y="-20805" z="-3266" heading="40095" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="136424" y="-21000" z="-3273" heading="49356" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="136303" y="-21211" z="-3273" heading="48411" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="136424" y="-21288" z="-3273" heading="922" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="136328" y="-21512" z="-3248" heading="44763" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="136216" y="-21560" z="-3248" heading="37369" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="136072" y="-21576" z="-3248" heading="33563" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="138632" y="-21688" z="-3078" heading="61386" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="138885" y="-22004" z="-3095" heading="56141" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="139064" y="-22104" z="-3106" heading="60164" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="139272" y="-21992" z="-3111" heading="7579" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="139491" y="-21764" z="-3111" heading="11547" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="139544" y="-21497" z="-3097" heading="18971" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="139315" y="-21263" z="-3108" heading="26977" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="139096" y="-21208" z="-3111" heading="30176" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="138968" y="-21224" z="-3111" heading="33861" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="138824" y="-21288" z="-3073" heading="36796" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="139112" y="-21848" z="-3111" heading="58264" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="139336" y="-21656" z="-3111" heading="7297" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="139240" y="-21464" z="-3111" heading="21307" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="139008" y="-21447" z="-3105" heading="29760" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="138798" y="-21396" z="-3082" heading="31826" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="138616" y="-21384" z="-3059" heading="57573" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="138808" y="-21560" z="-3090" heading="61537" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="139212" y="-21745" z="-3111" heading="60080" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="139448" y="-21880" z="-3111" heading="60080" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="139656" y="-21656" z="-3111" heading="8431" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="141352" y="-20984" z="-3155" heading="4483" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="141480" y="-20808" z="-3168" heading="10133" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="141812" y="-20705" z="-3174" heading="3243" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="142040" y="-20696" z="-3178" heading="64134" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="142176" y="-20897" z="-3181" heading="50832" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="142221" y="-21101" z="-3181" heading="52981" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="142227" y="-21447" z="-3179" heading="45014" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="142024" y="-21464" z="-3181" heading="29711" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="141698" y="-21376" z="-3181" heading="27473" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="141640" y="-21224" z="-3181" heading="15134" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="141592" y="-21032" z="-3181" heading="39191" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="141976" y="-21032" z="-3181" heading="65425" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="142045" y="-21229" z="-3181" heading="61297" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="141983" y="-21229" z="-3181" heading="30059" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="141853" y="-21039" z="-3181" heading="19062" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="142008" y="-20824" z="-3181" heading="8961" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="141736" y="-20888" z="-3181" heading="35060" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="141624" y="-20968" z="-3181" heading="39558" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="141512" y="-21080" z="-3180" heading="51540" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="141617" y="-21322" z="-3181" heading="65068" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="142760" y="-19480" z="-3056" heading="7777" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="143080" y="-19352" z="-3078" heading="3756" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="143128" y="-19064" z="-3094" heading="14868" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="142941" y="-18761" z="-3095" heading="28186" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="142703" y="-18546" z="-3095" heading="22065" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="142508" y="-18748" z="-3070" heading="45204" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="142348" y="-18865" z="-3069" heading="49680" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="142457" y="-19241" z="-3033" heading="53562" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="142584" y="-19336" z="-3044" heading="60352" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="142776" y="-19064" z="-3095" heading="9968" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="142952" y="-19032" z="-3095" heading="15667" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="142792" y="-18776" z="-3095" heading="22084" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="142664" y="-18520" z="-3095" heading="21451" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="142488" y="-18600" z="-3080" heading="36890" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="142709" y="-18906" z="-3093" heading="54744" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="142826" y="-19146" z="-3095" heading="53799" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="142712" y="-19272" z="-3095" heading="39252" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="142952" y="-19240" z="-3095" heading="1429" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="143128" y="-19032" z="-3095" heading="8893" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="143038" y="-18766" z="-3095" heading="31063" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="141256" y="-18664" z="-3191" heading="32865" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="140858" y="-18584" z="-3202" heading="30787" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="140428" y="-18568" z="-3208" heading="32651" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="140232" y="-18860" z="-3208" heading="49299" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="140264" y="-19192" z="-3208" heading="51446" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="140514" y="-19258" z="-3205" heading="4162" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="140856" y="-19148" z="-3202" heading="2755" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="141032" y="-19048" z="-3208" heading="5919" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="141001" y="-18757" z="-3203" heading="29686" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="140746" y="-18751" z="-3208" heading="36736" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="140472" y="-18824" z="-3208" heading="35511" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="140622" y="-18447" z="-3201" heading="12415" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="140808" y="-18216" z="-3196" heading="6582" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="141016" y="-18456" z="-3208" heading="55334" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="141117" y="-18725" z="-3200" heading="52253" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="141099" y="-18915" z="-3199" heading="44919" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="140761" y="-18974" z="-3206" heading="28760" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="140424" y="-19000" z="-3208" heading="35635" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="140511" y="-19169" z="-3204" heading="50570" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="140536" y="-19368" z="-3191" heading="50570" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23489" x="146360" y="-11080" z="-4454" heading="57468" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="146706" y="-11114" z="-4454" heading="64502" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="146897" y="-11136" z="-4454" heading="63984" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="147207" y="-11353" z="-4453" heading="45013" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="147144" y="-11860" z="-4453" heading="49176" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="146809" y="-12023" z="-4453" heading="35868" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="147692" y="-12035" z="-4453" heading="8191" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="147840" y="-11838" z="-4453" heading="14808" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="147854" y="-11524" z="-4453" heading="21139" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="147096" y="-11560" z="-4454" heading="36457" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="146921" y="-11712" z="-4454" heading="40217" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="146673" y="-12183" z="-4453" heading="47714" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="147224" y="-12824" z="-4456" heading="1055" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="147335" y="-12620" z="-4455" heading="11196" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="147544" y="-12344" z="-4453" heading="8684" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="148120" y="-12088" z="-4453" heading="5629" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="148248" y="-11864" z="-4454" heading="10789" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="148216" y="-11576" z="-4454" heading="17689" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="147656" y="-11336" z="-4454" heading="30405" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="147514" y="-11152" z="-4453" heading="23645" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="147752" y="-11224" z="-4454" heading="61975" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="147160" y="-12351" z="-4453" heading="44544" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="147010" y="-12765" z="-4455" heading="46184" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="146935" y="-13133" z="-4460" heading="47518" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="147144" y="-13160" z="-4462" heading="3411" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="147464" y="-13192" z="-4462" heading="64638" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="147752" y="-13384" z="-4464" heading="59200" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="147976" y="-13656" z="-4469" heading="25785" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="148072" y="-13544" z="-4463" heading="9221" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="148056" y="-13368" z="-4460" heading="17830" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="147720" y="-12616" z="-4456" heading="16985" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="147579" y="-12718" z="-4456" heading="39318" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="147109" y="-13058" z="-4456" heading="39318" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="146392" y="-13320" z="-4462" heading="34041" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="146488" y="-13512" z="-4455" heading="54164" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="146713" y="-13694" z="-4449" heading="58503" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="146376" y="-13800" z="-4447" heading="32820" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="146132" y="-13812" z="-4446" heading="33977" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="145944" y="-13832" z="-4444" heading="33977" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="145576" y="-14200" z="-4437" heading="40889" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="145546" y="-14371" z="-4425" heading="47178" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="145512" y="-14568" z="-4412" heading="47178" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="145809" y="-14781" z="-4372" heading="51890" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="145848" y="-14936" z="-4341" heading="62613" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="146056" y="-15000" z="-4329" heading="46868" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="145624" y="-15560" z="-4199" heading="38265" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="145688" y="-15768" z="-4151" heading="52369" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="145880" y="-15624" z="-4181" heading="6459" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="145993" y="-16035" z="-4083" heading="48675" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="145749" y="-16207" z="-4032" heading="38416" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="145736" y="-16493" z="-3944" heading="49262" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="145683" y="-16801" z="-3857" heading="46453" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="145806" y="-16936" z="-3818" heading="2993" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="145976" y="-16888" z="-3833" heading="2993" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="145944" y="-17336" z="-3699" heading="17012" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="145896" y="-17665" z="-3597" heading="47454" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="146056" y="-17624" z="-3611" heading="2452" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="146280" y="-18040" z="-3508" heading="56316" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="146224" y="-18263" z="-3480" heading="46609" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="146254" y="-18582" z="-3452" heading="53669" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="146519" y="-19037" z="-3439" heading="56166" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="146518" y="-19304" z="-3444" heading="36852" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="146537" y="-19609" z="-3442" heading="52787" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="146952" y="-20120" z="-3438" heading="61718" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="146935" y="-20467" z="-3438" heading="48716" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="146824" y="-20776" z="-3438" heading="29256" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="147672" y="-20968" z="-3438" heading="58264" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="147856" y="-21191" z="-3438" heading="56331" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="148094" y="-21359" z="-3438" heading="59771" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="148168" y="-21640" z="-3438" heading="54752" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="148291" y="-21763" z="-3438" heading="57238" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="148520" y="-21992" z="-3438" heading="57238" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="148249" y="-22011" z="-3437" heading="20479" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="148509" y="-22237" z="-3437" heading="58159" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="148476" y="-22516" z="-3438" heading="40361" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="148200" y="-22936" z="-3438" heading="47613" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="148448" y="-22786" z="-3438" heading="5777" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="148885" y="-22416" z="-3437" heading="8979" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="148824" y="-22136" z="-3437" heading="20666" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="148739" y="-22473" z="-3437" heading="46517" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="148545" y="-23015" z="-3417" heading="44696" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="148184" y="-23432" z="-3358" heading="41143" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="147995" y="-23563" z="-3324" heading="39186" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="147742" y="-23973" z="-3223" heading="45508" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="147655" y="-24293" z="-3148" heading="46671" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="147542" y="-24588" z="-3076" heading="44118" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="147367" y="-24953" z="-3021" heading="45190" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="147240" y="-25272" z="-3021" heading="45190" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="147008" y="-25285" z="-3021" heading="33292" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="146776" y="-25640" z="-3007" heading="43910" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="146520" y="-26008" z="-2923" heading="42655" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="146232" y="-26008" z="-2805" heading="32908" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="146082" y="-26057" z="-2730" heading="36239" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="145704" y="-26376" z="-2494" heading="43552" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="145517" y="-26259" z="-2421" heading="27018" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="145245" y="-26394" z="-2287" heading="40452" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="144920" y="-26476" z="-2172" heading="21703" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="144634" y="-26297" z="-2141" heading="30122" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="144305" y="-26335" z="-2117" heading="38250" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="143896" y="-26824" z="-2117" heading="44364" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="144002" y="-26871" z="-2117" heading="61077" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="144184" y="-26952" z="-2117" heading="61077" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23489" x="144392" y="-26760" z="-2116" heading="7514" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="144392" y="-26760" z="-2116" heading="7514" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="144789" y="-26689" z="-2149" heading="1816" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23488" x="148367" y="-25131" z="-3296" heading="5878" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="148666" y="-25308" z="-3301" heading="59748" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="148994" y="-25400" z="-3315" heading="63189" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="149240" y="-25320" z="-3321" heading="5508" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="149409" y="-25028" z="-3321" heading="17044" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="149282" y="-24656" z="-3305" heading="22037" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="148958" y="-24740" z="-3292" heading="31907" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="148760" y="-24728" z="-3290" heading="31907" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="148600" y="-24744" z="-3294" heading="34304" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="148581" y="-24905" z="-3307" heading="54855" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="148840" y="-25144" z="-3321" heading="59590" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="149144" y="-25192" z="-3321" heading="63696" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="149256" y="-25064" z="-3321" heading="8831" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="149256" y="-24920" z="-3321" heading="16733" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="149016" y="-24984" z="-3300" heading="35670" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="148862" y="-24956" z="-3310" heading="43515" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="148696" y="-25064" z="-3321" heading="38717" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="148552" y="-25144" z="-3304" heading="38521" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="148661" y="-25180" z="-3306" heading="62162" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="149080" y="-25320" z="-3321" heading="62162" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="150264" y="-23752" z="-3446" heading="9952" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="150216" y="-23576" z="-3446" heading="19191" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="150216" y="-23368" z="-3446" heading="16179" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="150440" y="-23144" z="-3446" heading="8146" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="150600" y="-23144" z="-3446" heading="65470" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="150760" y="-23192" z="-3428" heading="62633" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="150920" y="-23288" z="-3446" heading="59650" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="150920" y="-23416" z="-3446" heading="48510" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="150895" y="-23612" z="-3443" heading="44852" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="150792" y="-23816" z="-3437" heading="42711" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="150568" y="-23880" z="-3446" heading="28750" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="150456" y="-23800" z="-3446" heading="26247" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="150472" y="-23656" z="-3446" heading="14797" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="150472" y="-23496" z="-3446" heading="16574" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="150488" y="-23304" z="-3446" heading="15443" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="150760" y="-23448" z="-3446" heading="60669" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="150792" y="-23544" z="-3446" heading="52011" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="150968" y="-23544" z="-3446" heading="65232" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="150831" y="-23651" z="-3446" heading="39501" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="150744" y="-23720" z="-3446" heading="39501" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="150120" y="-21224" z="-3158" heading="49332" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="150216" y="-20936" z="-3158" heading="13116" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="150184" y="-20664" z="-3112" heading="17722" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="150024" y="-20360" z="-3158" heading="21407" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="149816" y="-20344" z="-3158" heading="39690" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="149493" y="-20580" z="-3135" heading="37981" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="149307" y="-20750" z="-3121" heading="52553" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="149486" y="-21108" z="-3158" heading="55414" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="149618" y="-21277" z="-3123" heading="56311" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="149827" y="-21171" z="-3143" heading="6506" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="149976" y="-20760" z="-3158" heading="14565" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="149992" y="-20600" z="-3158" heading="15663" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="149712" y="-20635" z="-3158" heading="37909" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="149712" y="-20820" z="-3158" heading="50998" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="149656" y="-21000" z="-3158" heading="44474" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="149784" y="-21080" z="-3158" heading="59993" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="149992" y="-20936" z="-3158" heading="6321" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="150232" y="-20792" z="-3143" heading="5734" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="150152" y="-20520" z="-3116" heading="19196" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="149871" y="-20460" z="-3153" heading="30755" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="149240" y="-18792" z="-3099" heading="14699" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="149432" y="-18600" z="-3099" heading="8165" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="149496" y="-18280" z="-3099" heading="14152" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="149320" y="-18024" z="-3099" heading="22857" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="149144" y="-17880" z="-3099" heading="25521" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="148872" y="-17912" z="-3099" heading="34248" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="148808" y="-18136" z="-3099" heading="46003" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="148744" y="-18280" z="-3099" heading="44686" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="148760" y="-18520" z="-3094" heading="49782" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="148888" y="-18680" z="-3085" heading="56019" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="149304" y="-18472" z="-3099" heading="4926" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="149288" y="-18280" z="-3099" heading="17660" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="149256" y="-18040" z="-3099" heading="18049" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="149144" y="-17736" z="-3099" heading="20204" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="149021" y="-17929" z="-3099" heading="51264" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="149029" y="-18322" z="-3099" heading="47264" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="148872" y="-18344" z="-3099" heading="29158" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="149055" y="-18485" z="-3099" heading="58299" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="149077" y="-18446" z="-3099" heading="16993" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="149064" y="-18168" z="-3099" heading="16993" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="150936" y="-17384" z="-2952" heading="4096" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="151220" y="-17437" z="-2956" heading="63429" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="151795" y="-17464" z="-2959" heading="599" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="151768" y="-17192" z="-2964" heading="16912" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="151644" y="-16783" z="-2961" heading="23500" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="151320" y="-16760" z="-2964" heading="35106" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="151075" y="-16690" z="-2945" heading="38372" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="150812" y="-16977" z="-2934" heading="42481" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="150949" y="-17235" z="-2959" heading="54363" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="151224" y="-17208" z="-2964" heading="1529" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="151464" y="-16968" z="-2964" heading="27086" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="151272" y="-16952" z="-2964" heading="31625" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="151112" y="-16840" z="-2964" heading="26824" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="151243" y="-17091" z="-2964" heading="60617" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="151509" y="-17280" z="-2962" heading="51649" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="151627" y="-17456" z="-2955" heading="11570" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="151848" y="-17016" z="-2964" heading="11570" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="151608" y="-16763" z="-2959" heading="24192" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="151446" y="-16758" z="-2958" heading="38555" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="151096" y="-16984" z="-2964" heading="38555" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="150408" y="-17288" z="-2990" heading="19202" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="150374" y="-17749" z="-3010" heading="48425" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="150328" y="-18282" z="-3034" heading="47874" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="150268" y="-18746" z="-3032" heading="48157" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="150068" y="-19275" z="-3091" heading="41017" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="149581" y="-19538" z="-3132" heading="35089" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="149255" y="-19616" z="-3147" heading="35127" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="148993" y="-19636" z="-3170" heading="33088" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="148930" y="-19871" z="-3182" heading="48932" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="148920" y="-20312" z="-3198" heading="48932" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="149688" y="-22664" z="-3419" heading="53130" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="149774" y="-23119" z="-3428" heading="51021" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="149688" y="-23640" z="-3434" heading="47144" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="149762" y="-24210" z="-3394" heading="51830" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="149575" y="-24350" z="-3316" heading="28103" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="149185" y="-24198" z="-3367" heading="29545" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="148744" y="-24056" z="-3308" heading="29545" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="148690" y="-24413" z="-3275" heading="45235" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="148610" y="-24983" z="-3287" heading="48285" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="148568" y="-25512" z="-3305" heading="48285" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="150392" y="-7672" z="-4500" heading="61753" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="150104" y="-7544" z="-4449" heading="28280" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="149816" y="-7480" z="-4419" heading="30681" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="149544" y="-7352" z="-4412" heading="28215" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="149039" y="-7481" z="-4434" heading="35476" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="148699" y="-7695" z="-4445" heading="39103" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="148699" y="-8004" z="-4489" heading="50639" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="148408" y="-8408" z="-4538" heading="40994" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="148237" y="-8418" z="-4505" heading="33396" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="147896" y="-8440" z="-4438" heading="24952" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="147688" y="-6184" z="-4549" heading="18033" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="147251" y="-6027" z="-4536" heading="29142" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="146792" y="-6072" z="-4514" heading="35124" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="146340" y="-5810" z="-4515" heading="27323" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="145928" y="-5528" z="-4480" heading="26076" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="145509" y="-5574" z="-4667" heading="33785" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="145211" y="-5537" z="-4712" heading="31137" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="144971" y="-5294" z="-4724" heading="22962" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="144535" y="-5071" z="-4723" heading="31880" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="144697" y="-4830" z="-4712" heading="7504" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="143535" y="-7365" z="-4720" heading="50765" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="143596" y="-7941" z="-4704" heading="50173" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="143655" y="-8576" z="-4683" heading="50173" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="143689" y="-8988" z="-4663" heading="49991" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="143685" y="-9449" z="-4643" heading="48615" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="143471" y="-9786" z="-4613" heading="38148" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="143240" y="-9848" z="-4599" heading="34760" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="142904" y="-9944" z="-4592" heading="35516" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="142678" y="-10209" z="-4585" heading="41870" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="142689" y="-10428" z="-4588" heading="52611" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="140297" y="-6860" z="-4770" heading="17102" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="140643" y="-6450" z="-4774" heading="8889" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="140812" y="-6262" z="-4777" heading="8751" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="141213" y="-5844" z="-4783" heading="7904" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="141694" y="-5522" z="-4789" heading="5907" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="142167" y="-5309" z="-4794" heading="3469" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="142581" y="-4922" z="-4760" heading="8812" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="142984" y="-4968" z="-4704" heading="7967" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="142984" y="-4968" z="-4704" heading="51884" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="142984" y="-4968" z="-4704" heading="58832" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="140616" y="-9208" z="-4610" heading="48798" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="140551" y="-9490" z="-4610" heading="46817" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="140369" y="-10036" z="-4627" heading="44343" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="139931" y="-10151" z="-4657" heading="29812" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="139388" y="-10003" z="-4609" heading="25644" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="139061" y="-9693" z="-4508" heading="22914" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="138942" y="-9828" z="-4514" heading="48746" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="139030" y="-10389" z="-4604" heading="51331" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="139482" y="-10719" z="-4650" heading="59763" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="139998" y="-10976" z="-4670" heading="61375" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="139720" y="-13096" z="-4331" heading="46152" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="139526" y="-13452" z="-4330" heading="43959" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="139205" y="-13461" z="-4330" heading="24804" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="139297" y="-13035" z="-4330" heading="22902" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="138980" y="-12913" z="-4326" heading="37424" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="138555" y="-13123" z="-4304" heading="37513" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="138344" y="-13224" z="-4298" heading="30328" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="138029" y="-13076" z="-4280" heading="28244" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="137696" y="-13159" z="-4274" heading="48310" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="137729" y="-13496" z="-4297" heading="65346" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="139401" y="-13815" z="-4320" heading="59941" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="139916" y="-14071" z="-4364" heading="61073" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="140375" y="-14390" z="-4424" heading="56246" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="140656" y="-14932" z="-4433" heading="50621" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="140552" y="-15144" z="-4430" heading="42497" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="140456" y="-15544" z="-4430" heading="46821" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="140392" y="-15272" z="-4445" heading="18921" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="140456" y="-14824" z="-4479" heading="14952" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="140968" y="-14568" z="-4475" heading="4868" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="141368" y="-14680" z="-4454" heading="62647" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="21111" x="140616" y="-16728" z="-4511" heading="38216" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="140880" y="-16609" z="-4508" heading="4701" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="141156" y="-16407" z="-4439" heading="7053" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="21111" x="141608" y="-16504" z="-4488" heading="48457" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="141717" y="-16315" z="-4485" heading="11073" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="141832" y="-16104" z="-4496" heading="11073" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="21111" x="142232" y="-16104" z="-4496" heading="65353" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="142521" y="-16117" z="-4496" heading="64972" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="142552" y="-16280" z="-4496" heading="47732" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="21111" x="142680" y="-16568" z="-4496" heading="53242" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="142904" y="-16792" z="-4496" heading="57273" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="143176" y="-17000" z="-4496" heading="58873" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="21111" x="143387" y="-16560" z="-4500" heading="19143" respawnTime="40sec" /> <!-- Lava Wyrm -->
+			<npc id="23499" x="143252" y="-16286" z="-4499" heading="21844" respawnTime="40sec" /> <!-- Flame Preta -->
+			<npc id="23490" x="143003" y="-15918" z="-4495" heading="23056" respawnTime="40sec" /> <!-- Lava Drake -->
+			<npc id="23488" x="150280" y="-13064" z="-4451" heading="4225" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="150490" y="-12716" z="-4451" heading="10652" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="150696" y="-12471" z="-4453" heading="6548" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="150911" y="-12209" z="-4463" heading="10569" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="151186" y="-11927" z="-4474" heading="5242" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="151146" y="-11675" z="-4473" heading="27761" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="150891" y="-11594" z="-4435" heading="30012" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="150614" y="-11376" z="-4425" heading="24842" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="150269" y="-11333" z="-4426" heading="36497" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="149992" y="-11512" z="-4426" heading="39323" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="152248" y="-9832" z="-4488" heading="10557" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="152181" y="-9432" z="-4514" heading="18236" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="152024" y="-9048" z="-4509" heading="21079" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="152024" y="-8700" z="-4512" heading="16263" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="152008" y="-8325" z="-4519" heading="17847" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="151980" y="-7914" z="-4504" heading="16051" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="151990" y="-7438" z="-4473" heading="16704" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="151976" y="-6968" z="-4423" heading="16704" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="151880" y="-6632" z="-4395" heading="19182" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="151450" y="-6765" z="-4392" heading="39233" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23488" x="150296" y="-8056" z="-4543" heading="40155" respawnTime="40sec" /> <!-- Magma Apophis -->
+			<npc id="23494" x="150067" y="-8318" z="-4543" heading="41580" respawnTime="40sec" /> <!-- Magma Salamander -->
+			<npc id="23487" x="149813" y="-8778" z="-4549" heading="46963" respawnTime="40sec" /> <!-- Magma Ailith -->
+			<npc id="23495" x="149773" y="-9347" z="-4545" heading="50704" respawnTime="40sec" /> <!-- Magma Dre Vanul -->
+			<npc id="23496" x="150088" y="-9815" z="-4535" heading="56432" respawnTime="40sec" /> <!-- Magma Ifrit -->
+			<npc id="23491" x="150473" y="-10248" z="-4515" heading="56822" respawnTime="40sec" /> <!-- Lava Wendigo -->
+			<npc id="23502" x="150103" y="-10613" z="-4472" heading="40714" respawnTime="40sec" /> <!-- Flame Salamander -->
+			<npc id="23503" x="149771" y="-10994" z="-4468" heading="44928" respawnTime="40sec" /> <!-- Flame Drake -->
+			<npc id="23500" x="149678" y="-11539" z="-4439" heading="48912" respawnTime="40sec" /> <!-- Flame Crow -->
+			<npc id="23501" x="149858" y="-12142" z="-4403" heading="52750" respawnTime="40sec" /> <!-- Flame Rael -->
+			<npc id="23497" x="147990" y="-11627" z="-4448" heading="30839" respawnTime="7200sec" /> <!-- Blazing Saurus -->
+			<npc id="23497" x="146136" y="-11688" z="-4453" heading="33109" respawnTime="7200sec" /> <!-- Blazing Saurus -->
+			<npc id="23497" x="146662" y="-13038" z="-4456" heading="53047" respawnTime="7200sec" /> <!-- Blazing Saurus -->
+			<npc id="23497" x="145819" y="-14410" z="-4404" heading="42367" respawnTime="7200sec" /> <!-- Blazing Saurus -->
+			<npc id="23497" x="145688" y="-15512" z="-4209" heading="49582" respawnTime="7200sec" /> <!-- Blazing Saurus -->
+			<npc id="23497" x="145957" y="-17674" z="-3607" heading="50683" respawnTime="7200sec" /> <!-- Blazing Saurus -->
+			<npc id="23497" x="146728" y="-19912" z="-3439" heading="55437" respawnTime="7200sec" /> <!-- Blazing Saurus -->
+			<npc id="23497" x="148207" y="-21524" z="-3438" heading="58631" respawnTime="7200sec" /> <!-- Blazing Saurus -->
+			<npc id="23497" x="148392" y="-22408" z="-3438" heading="51159" respawnTime="7200sec" /> <!-- Blazing Saurus -->
+			<npc id="23497" x="147864" y="-23784" z="-3269" heading="44855" respawnTime="7200sec" /> <!-- Blazing Saurus -->
+			<npc id="23497" x="146936" y="-25608" z="-3015" heading="43925" respawnTime="7200sec" /> <!-- Blazing Saurus -->
+			<npc id="23497" x="145256" y="-26424" z="-2287" heading="38145" respawnTime="7200sec" /> <!-- Blazing Saurus -->
+			<npc id="23498" x="144264" y="-24440" z="-2085" heading="13500" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="141672" y="-24344" z="-2020" heading="28456" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="139704" y="-25928" z="-1923" heading="42691" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="137436" y="-23817" z="-3184" heading="4419" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="136328" y="-20984" z="-3273" heading="25034" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="139112" y="-21608" z="-3102" heading="63355" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="142664" y="-14392" z="-4442" heading="25119" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="140760" y="-12808" z="-4372" heading="30175" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="138888" y="-11288" z="-4633" heading="25477" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="141000" y="-10712" z="-4637" heading="2666" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="139544" y="-8056" z="-4761" heading="21846" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="142168" y="-6856" z="-4770" heading="2849" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="140280" y="-5272" z="-4819" heading="26458" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="143416" y="-4440" z="-4755" heading="4112" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="144552" y="-8136" z="-4731" heading="54825" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="147304" y="-7224" z="-4526" heading="65340" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="146984" y="-4792" z="-4553" heading="17717" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="150088" y="-6456" z="-4430" heading="1400" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="153160" y="-7160" z="-4494" heading="61548" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="151608" y="-9848" z="-4509" heading="44017" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="151496" y="-12808" z="-4498" heading="49178" respawnTime="7200sec" /> <!-- Blazing Wizard -->
+			<npc id="23498" x="149192" y="-12808" z="-4392" heading="37485" respawnTime="7200sec" /> <!-- Blazing Wizard -->
 			<npc id="23504" x="150666" y="-18071" z="-2992" heading="24839" respawnTime="60sec" /> <!-- Flame Votis -->
 			<npc id="23504" x="142975" y="-21882" z="-3120" heading="7779" respawnTime="60sec" /> <!-- Flame Votis -->
 			<npc id="23504" x="145258" y="-21434" z="-3112" heading="3019" respawnTime="60sec" /> <!-- Flame Votis -->

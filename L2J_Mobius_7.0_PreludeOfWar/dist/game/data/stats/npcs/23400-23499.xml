@@ -3452,85 +3452,53 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="2405" max="5615" chance="20" /> <!-- Adena -->
-				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
-				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Caster (60%) -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="340" max="792" chance="20" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="36543" min="1" max="1" chance="2.63" /> <!-- Adamantite Wire -->
-				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
-			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23489" level="70" type="Monster" name="Lava Wyrm">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23489" level="99" type="Monster" name="Lava Wyrm">
+		<parameters>
+			<param name="MoveAroundSocial" value="60" />
+			<param name="MoveAroundSocial1" value="60" />
+			<param name="MoveAroundSocial2" value="60" />
+			<param name="SoulShot" value="200" />
+			<param name="SoulShotRate" value="5" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="10" />
+			<param name="LongRangeGuardRate" value="10" />
+			<skill name="W_LongRangeDDMagic" id="4158" level="7" />
+			<skill name="W_ShortRangeDDMagic" id="4160" level="7" />
+		</parameters>
 		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<acquire exp="19432" sp="4" />
+		<sex>MALE</sex>
+		<acquire exp="225805239" sp="203175" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15761" hpRegen="10.5" mp="2317" mpRegen="3.6" />
+			<vitals hp="83637.246975" hpRegen="8.5" mp="2922.844" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<speed>
-				<walk ground="70" />
-				<run ground="170" />
+				<walk ground="60" />
+				<run ground="70" />
 			</speed>
-			<attack physical="45027.610073614" magical="7933.4485848194" critical="4" attackSpeed="253" range="40" />
-			<defence physical="515.50802139037" magical="297.55916768147" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
+			<hitTime>190</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
-			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4158" level="7" /> <!-- NPC Prominence - Magic -->
+			<skill id="4160" level="7" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
 		<collision>
 			<radius normal="29" />
 			<height normal="72" />
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="50" max="116" chance="70" /> <!-- Adena -->
-				<item id="5166" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot Compressed Package (A-grade) -->
-				<item id="36873" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
-				<item id="36904" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Upgrade -->
-				<item id="36916" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Upgrade -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="819" max="1909" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="23490" level="99" type="Monster" name="Lava Drake">
@@ -3848,22 +3816,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="2479" max="5786" chance="20" /> <!-- Adena -->
-				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
-				<item id="35328" min="1" max="1" chance="0.03" /> <!-- Helios Cutter Fragment -->
-				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="35452" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Cutter (60%) -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="340" max="792" chance="20" /> <!-- Adena -->
 			</drop>
 			<spoil>
 				<item id="36543" min="1" max="1" chance="2.602" /> <!-- Adamantite Wire -->
@@ -3903,28 +3856,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="3099" max="7232" chance="20" /> <!-- Adena -->
-				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
-				<item id="35332" min="1" max="1" chance="0.075" /> <!-- Helios Stormer Fragment -->
-				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="36549" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Stormer (60%) -->
-				<item id="35471" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="340" max="792" chance="20" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="23498" level="99" type="Monster" name="Blazing Wizard" title="Fire Stigma">
@@ -3959,28 +3892,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="3099" max="7232" chance="20" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
-				<item id="35335" min="1" max="1" chance="0.075" /> <!-- Helios Buster Fragment -->
-				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant R-grade Armor -->
-				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
-				<item id="36554" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (High-grade) -->
-				<item id="35459" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Buster (60%) -->
-				<item id="35472" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="340" max="792" chance="20" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="23499" level="99" type="Monster" name="Flame Preta">
