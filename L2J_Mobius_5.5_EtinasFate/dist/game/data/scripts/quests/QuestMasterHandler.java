@@ -127,6 +127,7 @@ import quests.Q00581_ThePurificationRitual.Q00581_ThePurificationRitual;
 import quests.Q00582_WashBloodWithBlood.Q00582_WashBloodWithBlood;
 import quests.Q00583_MeaningOfSurvival.Q00583_MeaningOfSurvival;
 import quests.Q00584_NeverSayGoodBye.Q00584_NeverSayGoodBye;
+import quests.Q00600_KeyToTheRefiningProcess.Q00600_KeyToTheRefiningProcess;
 import quests.Q00617_GatherTheFlames.Q00617_GatherTheFlames;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
 import quests.Q00620_FourGoblets.Q00620_FourGoblets;
@@ -587,7 +588,7 @@ public class QuestMasterHandler
 		Q00590_ToEachTheirOwn.class, // FIXME: Custom.
 		Q00591_GreatAmbitions.class, // TODO: Not done.
 		Q00599_DemonsAndDimensionalEnergy.class, // TODO: Not done.
-		Q00600_KeyToTheRefiningProcess.class, // TODO: Not done.
+		Q00600_KeyToTheRefiningProcess.class,
 		Q00617_GatherTheFlames.class,
 		Q00618_IntoTheFlame.class,
 		Q00620_FourGoblets.class,

@@ -57,6 +57,7 @@ import quests.Q00561_BasicMissionHarnakUndergroundRuins.Q00561_BasicMissionHarna
 import quests.Q00564_BasicMissionKartiasLabyrinthSolo.Q00564_BasicMissionKartiasLabyrinthSolo;
 import quests.Q00567_BasicMissionIsleOfSouls.Q00567_BasicMissionIsleOfSouls;
 import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
+import quests.Q00600_KeyToTheRefiningProcess.Q00600_KeyToTheRefiningProcess;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
 import quests.Q00620_FourGoblets.Q00620_FourGoblets;
 import quests.Q00670_DefeatingTheLordOfSeed.Q00670_DefeatingTheLordOfSeed;
@@ -298,7 +299,7 @@ public class QuestMasterHandler
 		Q00595_SpecialMissionRaidersCrossroads.class, // TODO: Not done.
 		Q00596_SpecialMissionDefeatBaylor.class, // TODO: Not done.
 		Q00599_DemonsAndDimensionalEnergy.class, // TODO: Not done.
-		Q00600_KeyToTheRefiningProcess.class, // TODO: Not done.
+		Q00600_KeyToTheRefiningProcess.class,
 		Q00618_IntoTheFlame.class,
 		Q00620_FourGoblets.class,
 		Q00655_AGrandPlanForTamingWildBeasts.class, // TODO: Not done.
