@@ -3506,6 +3506,10 @@
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" /> <!-- NPC Fire Burn -->
+			<minions name="Privates">
+				<npc id="21391" count="5" respawnTime="0" weightPoint="1" /> <!-- Lavasillisk -->
+			</minions>
+			<param name="SummonPrivateRate" value="30" />
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
