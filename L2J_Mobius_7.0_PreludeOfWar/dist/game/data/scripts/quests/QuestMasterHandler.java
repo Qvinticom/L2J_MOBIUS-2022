@@ -147,6 +147,7 @@ import quests.Q10590_ReawakenedFate.Q10590_ReawakenedFate;
 import quests.Q10591_NobleMaterial.Q10591_NobleMaterial;
 import quests.Q10597_EscapeToTheShadowOfTheMotherTree.Q10597_EscapeToTheShadowOfTheMotherTree;
 import quests.Q10598_WithAllYourMight.Q10598_WithAllYourMight;
+import quests.Q10599_ThreadOfFateHangingOnTheMotherTree.Q10599_ThreadOfFateHangingOnTheMotherTree;
 import quests.Q10658_MakkumInTheDimension.Q10658_MakkumInTheDimension;
 import quests.Q10701_TheRoadToDestruction.Q10701_TheRoadToDestruction;
 import quests.Q10702_TheRoadToInfinity.Q10702_TheRoadToInfinity;
@@ -448,7 +449,7 @@ public class QuestMasterHandler
 		Q10596_TheDimensionalWarpPart9.class, // TODO: Not done.
 		Q10597_EscapeToTheShadowOfTheMotherTree.class,
 		Q10598_WithAllYourMight.class,
-		Q10599_ThreadOfFateHangingOnTheMotherTree.class, // TODO: Not done.
+		Q10599_ThreadOfFateHangingOnTheMotherTree.class,
 		Q10658_MakkumInTheDimension.class,
 		Q10673_ValentinesDayLucysReply.class, // TODO: Not done.
 		Q10701_TheRoadToDestruction.class,
