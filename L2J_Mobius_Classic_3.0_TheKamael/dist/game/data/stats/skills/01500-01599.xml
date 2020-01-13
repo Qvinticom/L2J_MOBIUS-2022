@@ -600,48 +600,31 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1514" toLevel="7" name="Soul Barrier">
+	<skill id="1514" toLevel="2" name="Soul Barrier">
 		<!-- Spreads the soul's defensive barrier to get your Bow Resistance +$s2, Crossbow Resistance +$s3, and M. Def. +$s4 for $s1. -->
 		<icon>icon.skill1514</icon>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>
-			<value fromLevel="1" toLevel="7">30</value>
-			<value fromLevel="6" toLevel="7" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="6" toLevel="7" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
-		</abnormalTime>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_BOW</abnormalType>
 		<effectPoint>
 			<value level="1">138</value>
 			<value level="2">140</value>
-			<value level="3">142</value>
-			<value level="4">144</value>
-			<value level="5">146</value>
-			<value level="6">148</value>
-			<value level="7">150</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>58</magicLvl>
+		<isMagic>0</isMagic>
+		<magicLvl>
+			<value level="1">58</value>
+			<value level="2">80</value>
+		</magicLvl>
 		<mpConsume>
 			<value level="1">50</value>
 			<value level="2">60</value>
-			<value level="3">22</value>
-			<value level="4">24</value>
-			<value level="5">26</value>
-			<value level="6">27</value>
-			<value level="7">28</value>
 		</mpConsume>
-		<mpInitialConsume>
-			<value level="1">5</value>
-			<value level="2">5</value>
-			<value level="3">6</value>
-			<value level="4">6</value>
-			<value level="5">6</value>
-			<value level="6">7</value>
-			<value level="7">7</value>
-		</mpInitialConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>300000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -650,47 +633,13 @@
 			<effect name="DefenceTrait">
 				<BOW>
 					<value level="1">10</value>
-					<value level="2">15</value>
-					<value level="3">20</value>
-					<value level="4">30</value>
-					<value level="5">35</value>
-					<value level="6">40</value>
-					<value level="7">45</value>
+					<value level="2">30</value>
 				</BOW>
-				<TWOHANDCROSSBOW>
-					<value level="1">10</value>
-					<value level="2">15</value>
-					<value level="3">20</value>
-					<value level="4">30</value>
-					<value level="5">35</value>
-					<value level="6">40</value>
-					<value level="7">45</value>
-				</TWOHANDCROSSBOW>
-				<CROSSBOW>
-					<value level="1">10</value>
-					<value level="2">15</value>
-					<value level="3">20</value>
-					<value level="4">30</value>
-					<value level="5">35</value>
-					<value level="6">40</value>
-					<value level="7">45</value>
-				</CROSSBOW>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
-					<value level="1">100</value>
+					<value level="1">50</value>
 					<value level="2">100</value>
-					<value level="3">110</value>
-					<value level="4">120</value>
-					<value level="5">130</value>
-					<value level="6">140</value>
-					<value level="7">150</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PAtk" fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2030">
-				<amount>
-					<value fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>

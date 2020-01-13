@@ -4977,7 +4977,7 @@
 		</effects>
 	</skill>
 	<skill id="994" toLevel="3" name="Rush">
-		<!-- Charges into the enemy. Can be used if distance between the enemy and the character is more than 200. -->
+		<!-- Charges into the enemy. Can be used if distance between the enemy and the character is more than 150. -->
 		<icon>icon.skill0484</icon>
 		<castRange>
 			<value level="1">400</value>
@@ -5002,7 +5002,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpCheckCastRange">
-				<distance>200</distance>
+				<distance>
+					<value level="1">150</value>
+					<value level="2">120</value>
+					<value level="3">100</value>
+				</distance>
 			</condition>
 		</conditions>
 	</skill>

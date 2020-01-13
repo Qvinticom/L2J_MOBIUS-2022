@@ -387,7 +387,21 @@
 														<xs:element minOccurs="0" name="hasAbnormal" type="xs:boolean" />
 														<xs:element minOccurs="0" name="weightPercent" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="slotsPercent" type="xs:unsignedByte" />
-														<xs:element minOccurs="0" name="distance" type="xs:unsignedByte" />
+														<xs:element minOccurs="0" name="distance">
+															<xs:complexType mixed="true">
+																<xs:sequence minOccurs="0">
+																	<xs:element maxOccurs="unbounded" name="value">
+																		<xs:complexType>
+																			<xs:simpleContent>
+																				<xs:extension base="xs:unsignedByte">
+																					<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																				</xs:extension>
+																			</xs:simpleContent>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
 														<xs:element minOccurs="0" name="includeMe" type="xs:boolean" />
 														<xs:element minOccurs="0" name="race" type="xs:string" />
 														<xs:element minOccurs="0" name="amount">

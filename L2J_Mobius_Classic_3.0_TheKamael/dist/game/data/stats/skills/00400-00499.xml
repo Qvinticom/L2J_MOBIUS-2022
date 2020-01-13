@@ -4267,17 +4267,14 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="485" toLevel="16" name="Disarm">
-		<!-- Disarms the enemy for $s1. Requires an ancient sword, sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. -->
+	<skill id="485" toLevel="5" name="Disarm">
+		<!-- Disarms the target for 3 sec. -->
 		<icon>icon.skill0485</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>5</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-		<activateRate>
-			<value fromLevel="1" toLevel="16">70</value>
-			<value fromLevel="15" toLevel="16" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
-		</activateRate>
+		<activateRate>70</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>150</castRange>
 		<coolTime>500</coolTime>
@@ -4287,57 +4284,24 @@
 			<value level="3">-467</value>
 			<value level="4">-523</value>
 			<value level="5">-582</value>
-			<value level="6">-624</value>
-			<value level="7">-655</value>
-			<value level="8">-655</value>
-			<value level="9">-655</value>
-			<value level="10">-655</value>
-			<value level="11">-655</value>
-			<value level="12">-655</value>
-			<value level="13">-655</value>
-			<value level="14">-655</value>
-			<value level="15">-655</value>
-			<value level="16">-655</value>
 		</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>1000</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
-			<value level="1">36</value>
-			<value level="2">43</value>
-			<value level="3">49</value>
-			<value level="4">55</value>
-			<value level="5">62</value>
-			<value level="6">68</value>
-			<value level="7">74</value>
-			<value level="8">75</value>
-			<value level="9">77</value>
-			<value level="10">79</value>
-			<value level="11">81</value>
-			<value level="12">83</value>
-			<value level="13">85</value>
-			<value level="14">90</value>
-			<value level="15">95</value>
-			<value level="16">99</value>
+			<value level="1">76</value>
+			<value level="2">78</value>
+			<value level="3">80</value>
+			<value level="4">82</value>
+			<value level="5">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">100</value>
 			<value level="2">110</value>
-			<value level="3">150</value>
-			<value level="4">35</value>
-			<value level="5">35</value>
-			<value level="6">35</value>
-			<value level="7">35</value>
-			<value level="8">45</value>
-			<value level="9">45</value>
-			<value level="10">45</value>
-			<value level="11">45</value>
-			<value level="12">45</value>
-			<value level="13">55</value>
-			<value level="14">55</value>
-			<value level="15">55</value>
-			<value level="16">55</value>
+			<value level="3">120</value>
+			<value level="4">130</value>
+			<value level="5">140</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -4351,18 +4315,6 @@
 			<effect name="PAtk">
 				<amount>-40</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence" fromLevel="15" toLevel="19" fromSubLevel="2001" toSubLevel="2030">
-				<amount>
-					<value fromLevel="15" toLevel="16" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="Speed" fromLevel="15" toLevel="19" fromSubLevel="3001" toSubLevel="3030">
-				<amount>
-					<value fromLevel="15" toLevel="16" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
-				</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>

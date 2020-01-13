@@ -52,11 +52,17 @@
 	<skill id="501" toLevel="5" name="Magic Break">
 		<!-- For $s1, reduces enemy's M. Atk. by $s2 -->
 		<icon>icon.skill0501</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+		</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
-		<abnormalType>PD_DOWN</abnormalType>
+		<abnormalType>MA_DOWN</abnormalType>
 		<activateRate>80</activateRate>
-		<basicProperty>MAGIC</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>150</castRange>
 		<effectPoint>
 			<value level="1">-234</value>
@@ -68,7 +74,7 @@
 		<effectRange>1100</effectRange>
 		<hitTime>1800</hitTime>
 		<isDebuff>true</isDebuff>
-		<lvlBonusRate>30</lvlBonusRate>
+		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
 			<value level="1">49</value>
 			<value level="2">52</value>
@@ -137,22 +143,26 @@
 	<skill id="503" toLevel="3" name="Scorn">
 		<!-- Provokes the enemies to the front with $s1 Power. -->
 		<icon>icon.skill0503</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>TARGET_LOCK</abnormalType>
+		<isDebuff>true</isDebuff>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>80</affectRange>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
-			<value level="1">-1632</value>
-			<value level="2">-2091</value>
-			<value level="3">-2386</value>
+			<value level="1">-11000</value>
+			<value level="2">-13000</value>
+			<value level="3">-15000</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<fanRange>0;0;80;300</fanRange>
 		<hitTime>1080</hitTime>
 		<magicLvl>
 			<value level="1">43</value>
-			<value level="2">55</value>
-			<value level="3">64</value>
+			<value level="2">56</value>
+			<value level="3">70</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">50</value>
@@ -160,7 +170,8 @@
 			<value level="3">70</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
+		<basicProperty>NONE</basicProperty>
+		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>

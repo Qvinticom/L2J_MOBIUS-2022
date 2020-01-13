@@ -2254,11 +2254,7 @@
 		</effects>
 	</skill>
 	<skill id="1441" toLevel="3" name="Soul Roar">
-		<!-- Instantly recovers Max HP/CP by $s1 and for $s2 minutes, and increases your Max HP/CP by $s3
-			1 - 10, 20, 15
-			2 - 20, 20, 25
-			3 - 35, 20, 40
-		-->
+		<!-- For 20 min., Max HP +25%, additionally recovers 20% HP. -->
 		<icon>icon.skill1441</icon>
 		<effectPoint>
 			<value level="1">408</value>
@@ -2266,28 +2262,47 @@
 			<value level="3">597</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>
-			<value level="1">43</value>
-			<value level="2">55</value>
-			<value level="3">64</value>
-		</magicLvl>
 		<mpConsume>
 			<value level="1">15</value>
 			<value level="2">25</value>
 			<value level="3">35</value>
 		</mpConsume>
-		<mpInitialConsume>
-			<value level="1">8</value>
-			<value level="2">10</value>
-			<value level="3">12</value>
-		</mpInitialConsume>
+		<isMagic>0</isMagic>
+		<magicLvl>
+			<value level="1">28</value>
+			<value level="2">48</value>
+			<value level="3">70</value>
+		</magicLvl>
 		<operateType>A2</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<reuseDelay>150000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealPercent">
+				<power>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">35</value>
+				</power>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">25</value>
+					<value level="3">40</value>
+				</amount>
+				<mode>PER</mode>
+				<heal>false</heal>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="1442" toLevel="3" name="Darkness Protection">
 		<!-- Target's Dark Attack Resistance +$s2 for $s1. -->
