@@ -17,12 +17,7 @@
 package handlers.usercommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.impl.creature.playable.OnPlayableExpChanged;
-import org.l2jmobius.gameserver.model.events.listeners.FunctionEventListener;
-import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 
 /**
  * @author xban1x
@@ -42,7 +37,7 @@ public class ExperienceGain implements IVoicedCommandHandler
 		{
 			if (!player.getVariables().getBoolean("EXPOFF", false))
 			{
-				player.addListener(new FunctionEventListener(player, EventType.ON_PLAYABLE_EXP_CHANGED, (OnPlayableExpChanged event) -> onExperienceReceived(event.getActiveChar()), this));
+				player.disableExpGain();
 				player.getVariables().set("EXPOFF", true);
 				player.sendMessage("Experience gain is disabled.");
 			}
@@ -51,21 +46,12 @@ public class ExperienceGain implements IVoicedCommandHandler
 		{
 			if (player.getVariables().getBoolean("EXPOFF", false))
 			{
-				player.removeListenerIf(EventType.ON_PLAYABLE_EXP_CHANGED, listener -> listener.getOwner() == this);
+				player.enableExpGain();
 				player.getVariables().set("EXPOFF", false);
 				player.sendMessage("Experience gain is enabled.");
 			}
 		}
 		return true;
-	}
-	
-	public TerminateReturn onExperienceReceived(Playable playable)
-	{
-		if (playable.isPlayer() && (playable.getActingPlayer().isDead()))
-		{
-			return new TerminateReturn(false, false, false);
-		}
-		return new TerminateReturn(true, true, true);
 	}
 	
 	@Override

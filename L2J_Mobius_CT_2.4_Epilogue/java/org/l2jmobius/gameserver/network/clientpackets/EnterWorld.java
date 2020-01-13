@@ -617,6 +617,13 @@ public class EnterWorld implements IClientIncomingPacket
 			OfflineTradersTable.onTransaction(player, true, false);
 		}
 		
+		// Check if expoff is enabled.
+		if (player.getVariables().getBoolean("EXPOFF", false))
+		{
+			player.disableExpGain();
+			player.sendMessage("Experience gain is disabled.");
+		}
+		
 		// Prevent relogin in game gfx.
 		player.sendPacket(new ValidateLocation(player));
 		

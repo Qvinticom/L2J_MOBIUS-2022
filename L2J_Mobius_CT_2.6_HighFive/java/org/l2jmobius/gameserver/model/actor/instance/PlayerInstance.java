@@ -192,6 +192,8 @@ import org.l2jmobius.gameserver.model.entity.NevitSystem;
 import org.l2jmobius.gameserver.model.entity.Siege;
 import org.l2jmobius.gameserver.model.entity.TvTEvent;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.impl.creature.playable.OnPlayableExpChanged;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerEquipItem;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerFameChanged;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerHennaRemove;
@@ -204,6 +206,8 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerProfes
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerPvPChanged;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerPvPKill;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerTransform;
+import org.l2jmobius.gameserver.model.events.listeners.FunctionEventListener;
+import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.fishing.Fish;
 import org.l2jmobius.gameserver.model.fishing.Fishing;
 import org.l2jmobius.gameserver.model.holders.AdditionalSkillHolder;
@@ -14535,5 +14539,24 @@ public class PlayerInstance extends Playable
 		final AccountVariables vars = getAccountVariables();
 		vars.set(GAME_POINTS_VAR, Math.max(points, 0));
 		vars.storeMe();
+	}
+	
+	private TerminateReturn onExperienceReceived()
+	{
+		if (isDead())
+		{
+			return new TerminateReturn(false, false, false);
+		}
+		return new TerminateReturn(true, true, true);
+	}
+	
+	public void disableExpGain()
+	{
+		addListener(new FunctionEventListener(this, EventType.ON_PLAYABLE_EXP_CHANGED, (OnPlayableExpChanged event) -> onExperienceReceived(), this));
+	}
+	
+	public void enableExpGain()
+	{
+		removeListenerIf(EventType.ON_PLAYABLE_EXP_CHANGED, listener -> listener.getOwner() == this);
 	}
 }
