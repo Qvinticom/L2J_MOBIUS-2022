@@ -29,14 +29,12 @@ import org.l2jmobius.gameserver.network.GameClient;
  */
 public class RequestDispel implements IClientIncomingPacket
 {
-	private int _objectId;
 	private int _skillId;
 	private int _skillLevel;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		_objectId = packet.readD();
 		_skillId = packet.readD();
 		_skillLevel = packet.readD();
 		return true;
@@ -71,16 +69,7 @@ public class RequestDispel implements IClientIncomingPacket
 		{
 			return;
 		}
-		if (player.getObjectId() == _objectId)
-		{
-			player.stopSkillEffects(true, _skillId);
-		}
-		else
-		{
-			if (player.hasSummon() && (player.getSummon().getObjectId() == _objectId))
-			{
-				player.getSummon().stopSkillEffects(true, _skillId);
-			}
-		}
+		
+		player.stopSkillEffects(true, _skillId);
 	}
 }
