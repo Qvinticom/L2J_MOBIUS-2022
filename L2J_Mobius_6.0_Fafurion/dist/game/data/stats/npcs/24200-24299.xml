@@ -792,11 +792,21 @@
 	<npc id="24226" level="107" type="Monster" name="Aranea" title="Energy of the Sea of Spores Tracker">
 		<race>BUG</race>
 		<sex>MALE</sex>
+		<parameters>
+			<skill name="Skill01_ID" id="32478" level="1" />
+			<skill name="Skill02_ID" id="32479" level="1" />
+			<skill name="Skill03_ID" id="32480" level="1" />
+		</parameters>
 		<acquire exp="330532630" sp="286225" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="209844.221745" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
 			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5913" magical="3434" />
+			<attribute>
+				<defence fire="550" water="550" wind="450" earth="550" holy="550" dark="550" default="550" />
+				<attack type="EARTH" value="550" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -813,6 +823,9 @@
 			<height normal="22.5" />
 		</collision>
 		<skillList>
+			<skill id="32478" level="1" /> <!-- Scale Strike -->
+			<skill id="32479" level="1" /> <!-- Scale Slasher -->
+			<skill id="32480" level="1" /> <!-- Scale Floor -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -837,12 +850,15 @@
 		</dropLists>
 	</npc>
 	<npc id="24227" level="106" type="Monster" name="Keros">
-		<parameters>
-			<skill name="Skill01_ID" id="32475" level="1" />
-			<param name="Skill01_Probablity" value="500" />
-		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
+		<parameters>
+			<skill name="Skill01_ID" id="32469" level="1" />
+			<skill name="Skill02_ID" id="32471" level="1" />
+			<skill name="Skill03_ID" id="32472" level="1" />
+			<skill name="Skill04_ID" id="32475" level="1" />
+			<param name="Skill04_Probablity" value="500" />
+		</parameters>
 		<acquire exp="1338151420" sp="1202252" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1442740.459845" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
@@ -852,6 +868,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<defence fire="550" water="550" wind="450" earth="550" holy="550" dark="550" default="550" />
+				<attack type="EARTH" value="550" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
@@ -865,6 +886,9 @@
 		</collision>
 		<skillList>
 			<skill id="32475" level="1" /> <!-- Tabeth Fear -->
+			<skill id="32469" level="1" /> <!-- Tabeth Strike -->
+			<skill id="32471" level="1" /> <!-- Tabeth Slasher -->
+			<skill id="32472" level="1" /> <!-- Tabeth Poison -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -890,7 +914,9 @@
 	</npc>
 	<npc id="24228" level="106" type="Monster" name="Falena">
 		<parameters>
-			<skill name="Skill01_ID" id="32473" level="1" />
+			<skill name="Skill01_ID" id="32469" level="1" />
+			<skill name="Skill02_ID" id="32473" level="1" />
+			<skill name="Skill03_ID" id="32474" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
 		</parameters>
 		<race>BEAST</race>
@@ -904,6 +930,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<defence fire="550" water="550" wind="450" earth="550" holy="550" dark="550" default="550" />
+				<attack type="WIND" value="550" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
@@ -916,7 +947,9 @@
 			<height normal="35" />
 		</collision>
 		<skillList>
+			<skill id="32469" level="1" /> <!-- Tabeth Strike -->
 			<skill id="32473" level="1" /> <!-- Tabeth Mass Poison -->
+			<skill id="32474" level="1" /> <!-- Tabeth Stun -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -947,6 +980,9 @@
 			<skill name="Skill02_ID" id="32529" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
 			<param name="Skill02_Probablity" value="2000" />
+			<skill name="Skill03_ID" id="32471" level="2" />
+			<skill name="Skill04_ID" id="32474" level="1" />
+			<skill name="Skill05_ID" id="32477" level="1" />
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -959,6 +995,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<defence fire="550" water="550" wind="450" earth="550" holy="550" dark="550" default="550" />
+				<attack type="EARTH" value="550" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
@@ -973,6 +1014,9 @@
 		<skillList>
 			<skill id="32505" level="1" /> <!-- Tabeth Body Attack -->
 			<skill id="32529" level="1" /> <!-- Tabeth Mass Slam -->
+			<skill id="32471" level="2" /> <!-- Tabeth Slasher -->
+			<skill id="32474" level="1" /> <!-- Tabeth Stun -->
+			<skill id="32477" level="1" /> <!-- Tabeth Savage -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -1016,6 +1060,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<defence fire="550" water="550" wind="550" earth="450" holy="550" dark="550" default="550" />
+				<attack type="WIND" value="550" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<ai type="MAGE" clanHelpRange="450" aggroRange="450" isAggressive="true">
@@ -1031,6 +1080,8 @@
 			<skill id="32469" level="1" /> <!-- Tabeth Strike -->
 			<skill id="32471" level="1" /> <!-- Tabeth Slasher -->
 			<skill id="32477" level="1" /> <!-- Tabeth Savage -->
+			<skill id="32470" level="1" /> <!-- Tabeth Spike -->
+			<skill id="32475" level="1" /> <!-- Tabeth Fear -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -1070,6 +1121,11 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<defence fire="550" water="550" wind="550" earth="450" holy="550" dark="550" default="550" />
+				<attack type="WIND" value="550" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<ai type="MAGE" clanHelpRange="450" aggroRange="450" isAggressive="true">
@@ -1083,6 +1139,8 @@
 		</collision>
 		<skillList>
 			<skill id="32501" level="1" /> <!-- Tabeth Spike -->
+			<skill id="32470" level="1" /> <!-- Tabeth Spike -->
+			<skill id="32476" level="1" /> <!-- Tabeth Mass Airbind -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -1106,14 +1164,13 @@
 		</dropLists>
 	</npc>
 	<npc id="24232" level="108" type="Monster" name="Arima" title="Orfen's Handmaiden">
+		<race>BUG</race>
+		<sex>MALE</sex>
 		<parameters>
 			<skill name="Skill01_ID" id="32478" level="1" />
 			<skill name="Skill02_ID" id="32479" level="1" />
-			<param name="Skill01_Probablity" value="2000" />
-			<param name="Skill02_Probablity" value="2000" />
+			<skill name="Skill03_ID" id="32480" level="1" />
 		</parameters>
-		<race>BUG</race>
-		<sex>MALE</sex>
 		<acquire exp="5254515360" sp="4723920" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6820229.635815" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
@@ -1123,6 +1180,11 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<attribute>
+				<defence fire="550" water="550" wind="450" earth="550" holy="550" dark="550" default="550" />
+				<attack type="EARTH" value="550" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
@@ -1184,6 +1246,9 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="32478" level="1" /> <!-- Scale Strike -->
+			<skill id="32479" level="1" /> <!-- Scale Slasher -->
+			<skill id="32480" level="1" /> <!-- Scale Floor -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
@@ -1211,11 +1276,19 @@
 	<npc id="24234" level="106" type="Monster" name="Lesatanas">
 		<race>BEAST</race>
 		<sex>MALE</sex>
+		<parameters>
+			<skill name="Skill01_ID" id="32469" level="1" />
+		</parameters>
 		<acquire exp="191304136" sp="168540" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="192357.781605" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
 			<attack physical="59141" magical="49591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5557" magical="3227" />
+			<attribute>
+				<defence fire="550" water="550" wind="450" earth="550" holy="550" dark="550" default="550" />
+				<attack type="EARTH" value="550" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1227,6 +1300,7 @@
 			<height normal="32" />
 		</collision>
 		<skillList>
+			<skill id="32469" level="1" /> <!-- Tabeth Strike -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -1252,11 +1326,19 @@
 	<npc id="24235" level="107" type="Monster" name="Arbor">
 		<race>BEAST</race>
 		<sex>MALE</sex>
+		<parameters>
+			<skill name="Skill01_ID" id="32471" level="2" />
+		</parameters>
 		<acquire exp="220358903" sp="194633" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="209844.221745" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
 			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5913" magical="3434" />
+			<attribute>
+				<defence fire="550" water="550" wind="450" earth="550" holy="550" dark="550" default="550" />
+				<attack type="EARTH" value="550" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1268,6 +1350,7 @@
 			<height normal="49" />
 		</collision>
 		<skillList>
+			<skill id="32471" level="2" /> <!-- Tabeth Slasher -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -1293,11 +1376,20 @@
 	<npc id="24236" level="106" type="Monster" name="Tergus">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
+		<parameters>
+			<skill name="Skill01_ID" id="32469" level="1" />
+			<skill name="Skill02_ID" id="32474" level="1" />
+		</parameters>
 		<acquire exp="191304136" sp="168540" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="192357.781605" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
 			<attack physical="59141" magical="49591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5557" magical="3227" />
+			<attribute>
+				<defence fire="550" water="550" wind="550" earth="450" holy="550" dark="550" default="550" />
+				<attack type="WIND" value="550" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1309,6 +1401,8 @@
 			<height normal="35" />
 		</collision>
 		<skillList>
+			<skill id="32469" level="1" /> <!-- Tabeth Strike -->
+			<skill id="32474" level="1" /> <!-- Tabeth Stun -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -1334,11 +1428,19 @@
 	<npc id="24237" level="107" type="Monster" name="Skeletus">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
+		<parameters>
+			<skill name="Skill01_ID" id="32471" level="2" />
+		</parameters>
 		<acquire exp="220358903" sp="194633" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="209844.221745" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
 			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5913" magical="3434" />
+			<attribute>
+				<defence fire="550" water="550" wind="550" earth="450" holy="550" dark="550" default="550" />
+				<attack type="WIND" value="550" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1350,6 +1452,7 @@
 			<height normal="35" />
 		</collision>
 		<skillList>
+			<skill id="32471" level="2" /> <!-- Tabeth Slasher -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -1375,11 +1478,20 @@
 	<npc id="24238" level="107" type="Monster" name="Atrofine">
 		<race>BEAST</race>
 		<sex>MALE</sex>
+		<parameters>
+			<skill name="Skill01_ID" id="32469" level="1" />
+			<skill name="Skill02_ID" id="32477" level="1" />
+		</parameters>
 		<acquire exp="220358903" sp="194633" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="209844.221745" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
 			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5913" magical="3434" />
+			<attribute>
+				<defence fire="550" water="550" wind="450" earth="550" holy="550" dark="550" default="550" />
+				<attack type="EARTH" value="550" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1391,6 +1503,8 @@
 			<height normal="25" />
 		</collision>
 		<skillList>
+			<skill id="32469" level="1" /> <!-- Tabeth Strike -->
+			<skill id="32477" level="1" /> <!-- Tabeth Savage -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -1416,11 +1530,21 @@
 	<npc id="24239" level="108" type="Monster" name="Arimus" title="Orfen's Handmaiden">
 		<race>BUG</race>
 		<sex>MALE</sex>
+		<parameters>
+			<skill name="Skill01_ID" id="32478" level="1" />
+			<skill name="Skill02_ID" id="32479" level="1" />
+			<skill name="Skill03_ID" id="32480" level="1" />
+		</parameters>
 		<acquire exp="525848112" sp="466560" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="454663.84743" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
 			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6269" magical="3641" />
+			<attribute>
+				<defence fire="550" water="550" wind="550" earth="450" holy="550" dark="550" default="550" />
+				<attack type="WIND" value="550" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="90" />
 				<run ground="180" />
@@ -1432,6 +1556,9 @@
 			<height normal="101" />
 		</collision>
 		<skillList>
+			<skill id="32478" level="1" /> <!-- Scale Strike -->
+			<skill id="32479" level="1" /> <!-- Scale Slasher -->
+			<skill id="32480" level="1" /> <!-- Scale Floor -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
