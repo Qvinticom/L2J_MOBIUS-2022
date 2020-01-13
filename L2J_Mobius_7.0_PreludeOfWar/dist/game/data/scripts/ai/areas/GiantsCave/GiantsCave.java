@@ -68,7 +68,7 @@ public class GiantsCave extends AbstractNpcAI
 				htmltext = "34223-1.html";
 				break;
 			}
-			case "thrid_area":
+			case "third_area":
 			{
 				htmltext = "34223-1.html";
 				break;
