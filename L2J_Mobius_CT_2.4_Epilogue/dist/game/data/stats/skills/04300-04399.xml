@@ -538,7 +538,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="18" />
 		<set name="operateType" val="A1" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonCubic">
 				<param cubicId="3" cubicDelay="13" cubicDuration="3600" cubicMaxCount="20" />
