@@ -139,7 +139,7 @@ public class Q00383_TreasureHunt extends Quest
 				{
 					if (hasQuestItems(player, THIEF_KEY))
 					{
-						takeItems(player, THIEF_KEY, -1);
+						takeItems(player, THIEF_KEY, 1);
 						qs.exitQuest(true, true);
 						htmltext = event;
 						

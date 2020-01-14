@@ -87,7 +87,7 @@ public class Q00341_HuntingForWildBeasts extends Quest
 	@Override
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (qs.getState())
