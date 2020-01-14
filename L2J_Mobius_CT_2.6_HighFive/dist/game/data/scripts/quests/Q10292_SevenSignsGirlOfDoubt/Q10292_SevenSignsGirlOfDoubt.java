@@ -42,8 +42,8 @@ public class Q10292_SevenSignsGirlOfDoubt extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 81;
 	// Variables
-	private static int killCount = 0;
 	private static final String I_QUEST1 = "I_QUEST1";
+	private static final String KILLCOUNT_VAR = "killCount";
 	// Monster
 	private static final int CREATURE_OF_THE_DUSK1 = 27422;
 	private static final int CREATURE_OF_THE_DUSK2 = 27424;
@@ -208,11 +208,15 @@ public class Q10292_SevenSignsGirlOfDoubt extends Quest
 			}
 			else
 			{
-				killCount++;
-				if (killCount == 2)
+				if (qs.getInt(KILLCOUNT_VAR) == 1)
 				{
+					qs.unset(KILLCOUNT_VAR);
 					qs.setMemoState(6);
 					qs.setCond(6);
+				}
+				else
+				{
+					qs.set(KILLCOUNT_VAR, 1);
 				}
 			}
 		}

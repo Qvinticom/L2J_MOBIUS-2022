@@ -37,7 +37,6 @@ public class Q10292_SevenSignsGirlOfDoubt extends Quest
 	private static final int HARDIN = 30832;
 	private static final int WOOD = 32593;
 	private static final int FRANZ = 32597;
-	private static final int JAINA = 32617;
 	private static final int ELCADIA = 32784;
 	// Item
 	private static final ItemHolder ELCADIAS_MARK = new ItemHolder(17226, 10);
@@ -61,7 +60,7 @@ public class Q10292_SevenSignsGirlOfDoubt extends Quest
 	{
 		super(10292);
 		addStartNpc(WOOD);
-		addTalkId(WOOD, FRANZ, JAINA, ELCADIA, HARDIN);
+		addTalkId(WOOD, FRANZ, ELCADIA, HARDIN);
 		addKillId(MOBS);
 		addKillId(CREATURE_OF_THE_DUSK1, CREATURE_OF_THE_DUSK2);
 		addCondMinLevel(MIN_LEVEL, "32593-03.htm");
