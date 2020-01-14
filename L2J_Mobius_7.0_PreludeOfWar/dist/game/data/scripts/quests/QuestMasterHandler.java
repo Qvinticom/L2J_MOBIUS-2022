@@ -192,6 +192,7 @@ import quests.Q10852_TheMotherTreeRevivalProject.Q10852_TheMotherTreeRevivalProj
 import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.Q10857_SecretTeleport.Q10857_SecretTeleport;
 import quests.Q10891_AtANewPlace.Q10891_AtANewPlace;
+import quests.Q10892_RevengeOneStepAtATime.Q10892_RevengeOneStepAtATime;
 import quests.Q11025_PathOfDestinyProving.Q11025_PathOfDestinyProving;
 import quests.Q11026_PathOfDestinyConviction.Q11026_PathOfDestinyConviction;
 import quests.Q11027_PathOfDestinyOvercome.Q11027_PathOfDestinyOvercome;
@@ -517,7 +518,7 @@ public class QuestMasterHandler
 		Q10889_SaviorsPathFallenEmperorsThrone.class, // TODO: Not done.
 		Q10890_SaviorsPathFallOfEtina.class, // TODO: Not done.
 		Q10891_AtANewPlace.class,
-		Q10892_RevengeOneStepAtATime.class, // TODO: Not done.
+		Q10892_RevengeOneStepAtATime.class,
 		Q10893_EndOfTwistedFate.class, // TODO: Not done.
 		Q10896_VisitTheAdventureGuild.class, // TODO: Not done.
 		Q10897_ShowYourAbility.class, // TODO: Not done.
