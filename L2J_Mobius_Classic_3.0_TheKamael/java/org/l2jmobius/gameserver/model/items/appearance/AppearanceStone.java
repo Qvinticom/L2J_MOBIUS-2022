@@ -285,7 +285,7 @@ public class AppearanceStone
 					return false;
 				}
 				
-				if ((targetItem.isWeapon() && !getTargetTypes().contains(AppearanceTargetType.WEAPON)) || (targetItem.isArmor() && !getTargetTypes().contains(AppearanceTargetType.ARMOR)) || (targetItem.isEtcItem() && !getTargetTypes().contains(AppearanceTargetType.ACCESSORY)))
+				if ((targetItem.isWeapon() && !getTargetTypes().contains(AppearanceTargetType.WEAPON)) || (targetItem.isArmor() && !getTargetTypes().contains(AppearanceTargetType.ARMOR) && !((targetItem.getItem().getBodyPart() == Item.SLOT_HAIR) || (targetItem.getItem().getBodyPart() == Item.SLOT_HAIR2) || (targetItem.getItem().getBodyPart() == Item.SLOT_HAIRALL))) || (targetItem.isEtcItem() && !getTargetTypes().contains(AppearanceTargetType.ACCESSORY)))
 				{
 					player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 					return false;
