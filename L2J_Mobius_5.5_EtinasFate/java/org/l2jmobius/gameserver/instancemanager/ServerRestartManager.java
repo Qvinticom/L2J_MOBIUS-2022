@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.instancemanager;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -25,7 +26,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.Shutdown;
 
 /**
- * @author Gigi
+ * @author Gigi, Mobius
  */
 public class ServerRestartManager
 {
@@ -52,7 +53,15 @@ public class ServerRestartManager
 				
 				if (restartTime.getTimeInMillis() < currentTime.getTimeInMillis())
 				{
-					restartTime.add(Calendar.DAY_OF_MONTH, 1);
+					restartTime.add(Calendar.DAY_OF_WEEK, 1);
+				}
+				
+				if (!Config.SERVER_RESTART_DAYS.isEmpty())
+				{
+					while (!Config.SERVER_RESTART_DAYS.contains(restartTime.get(Calendar.DAY_OF_WEEK)))
+					{
+						restartTime.add(Calendar.DAY_OF_WEEK, 1);
+					}
 				}
 				
 				delay = restartTime.getTimeInMillis() - currentTime.getTimeInMillis();
@@ -70,7 +79,14 @@ public class ServerRestartManager
 			
 			if (lastRestart != null)
 			{
-				nextRestartTime = new SimpleDateFormat("HH:mm").format(lastRestart.getTime());
+				if (Config.SERVER_RESTART_DAYS.isEmpty())
+				{
+					nextRestartTime = new SimpleDateFormat("HH:mm").format(lastRestart.getTime());
+				}
+				else
+				{
+					nextRestartTime = new SimpleDateFormat("MMMM d'" + getDayNumberSuffix(lastRestart.get(Calendar.DAY_OF_MONTH)) + "' HH:mm", Locale.UK).format(lastRestart.getTime());
+				}
 				ThreadPool.schedule(new ServerRestartTask(), lastDelay - (Config.SERVER_RESTART_SCHEDULE_COUNTDOWN * 1000));
 				LOGGER.info("Scheduled server restart at " + lastRestart.getTime() + ".");
 			}
@@ -78,6 +94,33 @@ public class ServerRestartManager
 		catch (Exception e)
 		{
 			LOGGER.info("The scheduled server restart config is not set properly, please correct it!");
+		}
+	}
+	
+	private String getDayNumberSuffix(int day)
+	{
+		switch (day)
+		{
+			case 1:
+			case 21:
+			case 31:
+			{
+				return "st";
+			}
+			case 2:
+			case 22:
+			{
+				return "nd";
+			}
+			case 3:
+			case 23:
+			{
+				return "rd";
+			}
+			default:
+			{
+				return "th";
+			}
 		}
 	}
 	

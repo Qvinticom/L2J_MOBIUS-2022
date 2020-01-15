@@ -760,6 +760,7 @@ public class Config
 	public static boolean SERVER_RESTART_SCHEDULE_MESSAGE;
 	public static int SERVER_RESTART_SCHEDULE_COUNTDOWN;
 	public static String[] SERVER_RESTART_SCHEDULE;
+	public static List<Integer> SERVER_RESTART_DAYS;
 	
 	// --------------------------------------------------
 	// Vitality Settings
@@ -1237,7 +1238,7 @@ public class Config
 	public static Map<Integer, Integer> L2TOP_REWARD = new HashMap<>();
 	public static int L2TOP_DUALBOXES_ALLOWED;
 	public static boolean ALLOW_L2TOP_GAME_SERVER_REPORT;
-
+	
 	/**
 	 * This class initializes all global variables for configuration.<br>
 	 * If the key doesn't appear in properties file, a default value is set by this class. {@link #SERVER_CONFIG_FILE} (properties file) for configuring your server.
@@ -1360,6 +1361,14 @@ public class Config
 			SERVER_RESTART_SCHEDULE_MESSAGE = serverSettings.getBoolean("ServerRestartScheduleMessage", false);
 			SERVER_RESTART_SCHEDULE_COUNTDOWN = serverSettings.getInt("ServerRestartScheduleCountdown", 600);
 			SERVER_RESTART_SCHEDULE = serverSettings.getString("ServerRestartSchedule", "08:00").split(",");
+			SERVER_RESTART_DAYS = new ArrayList<>();
+			for (String day : serverSettings.getString("ServerRestartDays", "").trim().split(","))
+			{
+				if (Util.isDigit(day))
+				{
+					SERVER_RESTART_DAYS.add(Integer.parseInt(day));
+				}
+			}
 			
 			// Hosts and Subnets
 			final IPConfigData ipcd = new IPConfigData();
