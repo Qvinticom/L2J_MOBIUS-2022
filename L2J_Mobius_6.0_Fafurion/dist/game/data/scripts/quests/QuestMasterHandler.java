@@ -318,6 +318,7 @@ import quests.Q10527_TheAssassinationOfTheKetraOrcCommander.Q10527_TheAssassinat
 import quests.Q10528_TheAssassinationOfTheKetraOrcChief.Q10528_TheAssassinationOfTheKetraOrcChief;
 import quests.Q10530_KekropusLetterTheDragonsTransition.Q10530_KekropusLetterTheDragonsTransition;
 import quests.Q10531_OddHappeningsAtDragonValley.Q10531_OddHappeningsAtDragonValley;
+import quests.Q10532_UncoveringTheConspiracy.Q10532_UncoveringTheConspiracy;
 import quests.Q10534_HatchlingResearch.Q10534_HatchlingResearch;
 import quests.Q10537_KamaelDisarray.Q10537_KamaelDisarray;
 import quests.Q10538_GiantsEvolution.Q10538_GiantsEvolution;
@@ -853,7 +854,7 @@ public class QuestMasterHandler
 		Q10529_IvoryTowersResearchFloatingSeaJournal.class, // FIXME: Custom.
 		Q10530_KekropusLetterTheDragonsTransition.class,
 		Q10531_OddHappeningsAtDragonValley.class,
-		Q10532_UncoveringTheConspiracy.class, // TODO: Not done.
+		Q10532_UncoveringTheConspiracy.class,
 		Q10533_OrfensAmbition.class, // FIXME: Custom.
 		Q10534_HatchlingResearch.class,
 		Q10535_BlacksmithsSoul3.class, // TODO: Not done.
