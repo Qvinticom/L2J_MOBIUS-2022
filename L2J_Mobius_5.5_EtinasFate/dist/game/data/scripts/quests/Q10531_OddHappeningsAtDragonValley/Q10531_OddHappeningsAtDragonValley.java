@@ -54,8 +54,9 @@ public class Q10531_OddHappeningsAtDragonValley extends Quest
 		23439, // IRON CAVE SERVANT
 		20146, // HEADLESS KNIGHT
 	};
+	
 	// Rewards
-	private static final int XP = 54308087;
+	private static final int XP = 651696104;
 	private static final int SP = 23435;
 	// Misc
 	private static final int MIN_LEVEL = 81;
@@ -93,7 +94,12 @@ public class Q10531_OddHappeningsAtDragonValley extends Quest
 				htmltext = event;
 				break;
 			}
-			case "33973-06.html":
+			case "33973-05.htm":
+			{
+				htmltext = event;
+				break;
+			}
+			case "33973-06.htm":
 			{
 				if (qs.isCond(2))
 				{
@@ -118,7 +124,8 @@ public class Q10531_OddHappeningsAtDragonValley extends Quest
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, false);
+		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -128,9 +135,9 @@ public class Q10531_OddHappeningsAtDragonValley extends Quest
 			}
 			case State.STARTED:
 			{
-				if (qs.isCond(1))
+				if (qs.isCond(2))
 				{
-					htmltext = "33973-05.html";
+					htmltext = "33973-05.htm";
 				}
 				break;
 			}
@@ -147,21 +154,18 @@ public class Q10531_OddHappeningsAtDragonValley extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isStarted() && qs.isCond(1))
 		{
 			int killCount = qs.getInt("KILLED_COUNT");
-			
-			if (killCount < 100)
-			{
-				killCount++;
-				qs.set("KILLED_COUNT", killCount);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-			
-			if (killCount == 200)
+			killCount++;
+			qs.set("KILLED_COUNT", killCount);
+			if (killCount >= 200)
 			{
 				qs.setCond(2, true);
+			}
+			else
+			{
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -179,5 +183,4 @@ public class Q10531_OddHappeningsAtDragonValley extends Quest
 		}
 		return super.getNpcLogList(player);
 	}
-	
 }
