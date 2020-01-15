@@ -19,8 +19,6 @@ package quests.TerritoryWarScripts;
 import java.util.Calendar;
 
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager.TerritoryNPCSpawn;
 import org.l2jmobius.gameserver.model.TerritoryWard;
@@ -66,38 +64,12 @@ public class TerritoryWarSuperClass extends Quest
 		
 		if (questId < 0)
 		{
-			// Outpost and Ward handled by the Super Class script
+			// Outpost and Ward handled by the Super Class script.
 			addSkillSeeId(36590);
 			
-			// Calculate next TW date
-			final Calendar cal = Calendar.getInstance();
-			
-			final long nextSiegeDate = GlobalVariablesManager.getInstance().getLong(TerritoryWarManager.GLOBAL_VARIABLE, 0);
-			if (nextSiegeDate > System.currentTimeMillis())
-			{
-				cal.setTimeInMillis(nextSiegeDate);
-			}
-			else
-			{
-				// Let's check if territory war date was in the past
-				if (cal.before(Calendar.getInstance()))
-				{
-					cal.setTimeInMillis(System.currentTimeMillis());
-				}
-				
-				final boolean hasOwnedCastle = CastleManager.getInstance().hasOwnedCastle();
-				cal.set(Calendar.DAY_OF_WEEK, hasOwnedCastle ? Calendar.SATURDAY : Calendar.SUNDAY);
-				cal.set(Calendar.HOUR_OF_DAY, hasOwnedCastle ? 20 : 22);
-				cal.set(Calendar.MINUTE, 0);
-				cal.set(Calendar.SECOND, 0);
-				if (cal.before(Calendar.getInstance()))
-				{
-					cal.add(Calendar.WEEK_OF_YEAR, 2);
-				}
-				GlobalVariablesManager.getInstance().set(TerritoryWarManager.GLOBAL_VARIABLE, cal.getTimeInMillis());
-			}
-			TerritoryWarManager.getInstance().setTWStartTimeInMillis(cal.getTimeInMillis());
-			LOGGER.info(getClass().getSimpleName() + ": Siege date: " + cal.getTime());
+			// Calculate next TW date.
+			TerritoryWarManager.getInstance().setNextTWDate();
+			LOGGER.info(getClass().getSimpleName() + ": Siege date: " + TerritoryWarManager.getInstance().getTWStart().getTime());
 		}
 	}
 	
