@@ -1292,6 +1292,20 @@
 		</dropLists>
 	</npc>
 	<npc id="20941" level="108" type="Monster" name="Tanor Silenos Chieftain" title="Lord of Tanor Canyon">
+		<parameters>
+		<param name="MoveAroundSocial" value="80" />
+		<param name="MoveAroundSocial1" value="80" />
+		<param name="MoveAroundSocial2" value="80" />
+		<minions name="Privates">
+			<npc id="20939" count="6" respawnTime="0" weightPoint="1" />
+		</minions>
+		<param name="SoulShot" value="100" />
+		<param name="SoulShotRate" value="10" />
+		<param name="SpiritShot" value="100" />
+		<param name="SpiritShotRate" value="5" />
+		<param name="LongRangeGuardRate" value="5" />
+		<skill name="PhysicalSpecial" id="4073" level="6" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="75" /> 
@@ -1405,6 +1419,20 @@
 		</dropLists>
 	</npc>
 	<npc id="20944" level="108" type="Monster" name="Nightmare Lord" title="Watcher of Tanor Canyon">
+		<parameters>
+		<param name="MoveAroundSocial" value="80" />
+		<param name="MoveAroundSocial1" value="80" />
+		<param name="MoveAroundSocial2" value="80" />
+		<minions name="Privates">
+			<npc id="20943" count="6" respawnTime="0" weightPoint="1" />
+		</minions>
+		<param name="SoulShot" value="100" />
+		<param name="SoulShotRate" value="10" />
+		<param name="SpiritShot" value="100" />
+		<param name="SpiritShotRate" value="5" />
+		<param name="LongRangeGuardRate" value="5" />
+		<skill name="PhysicalSpecial" id="4073" level="6" />
+		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1176396048" sp="1058742" />
@@ -1426,6 +1454,11 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="3296" max="7687" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="20954" level="60" type="Monster" name="Starving Corpse">
 		<!-- Confirmed CT2.5 -->
