@@ -79,7 +79,7 @@ public class ServerRestartManager
 			
 			if (lastRestart != null)
 			{
-				if (Config.SERVER_RESTART_DAYS.isEmpty())
+				if (Config.SERVER_RESTART_DAYS.isEmpty() || (Config.SERVER_RESTART_DAYS.size() == 7))
 				{
 					nextRestartTime = new SimpleDateFormat("HH:mm").format(lastRestart.getTime());
 				}
