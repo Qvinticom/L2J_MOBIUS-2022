@@ -48,6 +48,7 @@ import ai.AbstractNpcAI;
 
 /**
  * Baium AI.
+ * Updated to Prelude Of War Edoo.<br>
  * @author St3eT
  */
 public class Baium extends AbstractNpcAI
@@ -55,7 +56,7 @@ public class Baium extends AbstractNpcAI
 	// NPCs
 	private static final int BAIUM = 29020; // Baium
 	private static final int BAIUM_STONE = 29025; // Baium
-	private static final int ANG_VORTEX = 31862; // Angelic Vortex
+	private static final int DIMENSION_VORTEX_1 = 30952; // Dimensional Vortex
 	private static final int ARCHANGEL = 29021; // Archangel
 	private static final int TELE_CUBE = 31842; // Teleportation Cubic
 	// Skills
@@ -69,8 +70,6 @@ public class Baium extends AbstractNpcAI
 	private static final SkillHolder HEAL_OF_BAIUM = new SkillHolder(4135, 1); // Baium Heal
 	private static final SkillHolder BAIUM_PRESENT = new SkillHolder(4136, 1); // Baium's Gift
 	private static final SkillHolder ANTI_STRIDER = new SkillHolder(4258, 1); // Hinder Strider
-	// Items
-	private static final int FABRIC = 4295; // Blooded Fabric
 	// Zone
 	private static final NoRestartZone zone = ZoneManager.getInstance().getZoneById(70051, NoRestartZone.class); // Baium zone
 	// Status
@@ -104,9 +103,9 @@ public class Baium extends AbstractNpcAI
 	
 	private Baium()
 	{
-		addFirstTalkId(ANG_VORTEX);
-		addTalkId(ANG_VORTEX, TELE_CUBE, BAIUM_STONE);
-		addStartNpc(ANG_VORTEX, TELE_CUBE, BAIUM_STONE);
+		addFirstTalkId(DIMENSION_VORTEX_1);
+		addTalkId(DIMENSION_VORTEX_1, TELE_CUBE, BAIUM_STONE);
+		addStartNpc(DIMENSION_VORTEX_1, TELE_CUBE, BAIUM_STONE);
 		addAttackId(BAIUM, ARCHANGEL);
 		addKillId(BAIUM);
 		addSeeCreatureId(BAIUM);
@@ -169,7 +168,7 @@ public class Baium extends AbstractNpcAI
 	{
 		switch (event)
 		{
-			case "31862-04.html":
+			case "30952-04.html":
 			{
 				return event;
 			}
@@ -178,19 +177,14 @@ public class Baium extends AbstractNpcAI
 				String htmltext = null;
 				if (getStatus() == DEAD)
 				{
-					htmltext = "31862-03.html";
+					htmltext = "30952-03.html";
 				}
 				else if (getStatus() == IN_FIGHT)
 				{
-					htmltext = "31862-02.html";
-				}
-				else if (!hasQuestItems(player, FABRIC))
-				{
-					htmltext = "31862-01.html";
+					htmltext = "30952-02.html";
 				}
 				else
 				{
-					takeItems(player, FABRIC, 1);
 					player.teleToLocation(TELEPORT_IN_LOC);
 				}
 				return htmltext;

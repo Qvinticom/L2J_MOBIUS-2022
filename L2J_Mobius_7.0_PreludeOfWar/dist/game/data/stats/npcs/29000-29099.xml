@@ -851,16 +851,16 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29021" level="74" type="Monster" name="Archangel">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29021" level="117" type="Monster" name="Archangel">
+		<!-- NEW UPDATE: PRELUDE OF WAR -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="93" /> <!-- Winged Spear -->
-		<acquire exp="9855" sp="2" />
+		<acquire exp="32431118400" sp="29187936" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="186915" hpRegen="158" mp="1475" mpRegen="3" />
-			<attack physical="1395" magical="371" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="5108" magical="1686" evasion="-18" />
+			<vitals hp="3964047.77781" hpRegen="9.5" mp="3958.491" mpRegen="3.3" />
+			<attack physical="106139" magical="100061" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="10541" magical="6125" evasion="-18" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
