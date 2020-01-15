@@ -21,9 +21,11 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.enums.BroochJewel;
 import org.l2jmobius.gameserver.model.Hit;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class Attack implements IClientOutgoingPacket
@@ -32,6 +34,7 @@ public class Attack implements IClientOutgoingPacket
 	private final Location _attackerLoc;
 	private final Location _targetLoc;
 	private final List<Hit> _hits = new ArrayList<>();
+	private final int _soulshotVisualSubstitute;
 	
 	/**
 	 * @param attacker
@@ -42,6 +45,29 @@ public class Attack implements IClientOutgoingPacket
 		_attackerObjId = attacker.getObjectId();
 		_attackerLoc = new Location(attacker);
 		_targetLoc = new Location(target);
+		
+		final PlayerInstance player = attacker.getActingPlayer();
+		if (player == null)
+		{
+			_soulshotVisualSubstitute = 0;
+		}
+		else
+		{
+			final BroochJewel activeRuby = player.getActiveRubyJewel();
+			final BroochJewel activeShappire = player.getActiveShappireJewel();
+			if (activeRuby != null)
+			{
+				_soulshotVisualSubstitute = activeRuby.getItemId();
+			}
+			else if (activeShappire != null)
+			{
+				_soulshotVisualSubstitute = activeShappire.getItemId();
+			}
+			else
+			{
+				_soulshotVisualSubstitute = 0;
+			}
+		}
 	}
 	
 	/**
@@ -88,7 +114,7 @@ public class Attack implements IClientOutgoingPacket
 		
 		packet.writeD(_attackerObjId);
 		packet.writeD(firstHit.getTargetId());
-		packet.writeD(0x00); // Ertheia Unknown
+		packet.writeD(_soulshotVisualSubstitute); // Ertheia
 		packet.writeD(firstHit.getDamage());
 		packet.writeD(firstHit.getFlags());
 		packet.writeD(firstHit.getGrade()); // GOD
