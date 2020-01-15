@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 /**
- * Odd Happenings At Dragon Valley (10532)
+ * Uncovering the Conspiracy (10532)
  * @URL https://youtu.be/y8OmynL8LVA https://l2wiki.com/Uncovering_the_Conspiracy
  * @author Darkloud
  * @date 2020-01-15 - [01:00:1009]
