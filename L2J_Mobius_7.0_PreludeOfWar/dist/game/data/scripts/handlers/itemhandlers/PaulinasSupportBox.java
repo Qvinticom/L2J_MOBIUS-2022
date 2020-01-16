@@ -62,9 +62,10 @@ public class PaulinasSupportBox implements IItemHandler
 	// private static final int WEAPON_BOW_D = 46795;
 	private static final int WEAPON_DAGGER_D = 46796;
 	private static final int WEAPON_STAFF_D = 46797;
-	// private static final int WEAPON_ANCIENT_D = 46798;
+	private static final int WEAPON_ANCIENT_D = 46798;
 	// private static final int WEAPON_RAPIER_D = 46799;
-	private static final int WEAPON_CROSSBOW_D = 46795;
+	private static final int WEAPON_CROSSBOW_D = 46800;
+	private static final int BOLTS_D = 9633;
 	// C-Grade weapon rewards
 	private static final int WEAPON_SWORD_C = 46801;
 	private static final int WEAPON_GSWORD_C = 46802;
@@ -75,9 +76,11 @@ public class PaulinasSupportBox implements IItemHandler
 	private static final int WEAPON_DAGGER_C = 46807;
 	private static final int WEAPON_STAFF_C = 46808;
 	private static final int WEAPON_DUALSWORD_C = 46809;
-	// private static final int WEAPON_ANCIENT_C = 46810;
+	private static final int WEAPON_ANCIENT_C = 46810;
 	private static final int WEAPON_RAPIER_C = 46811;
 	private static final int WEAPON_CROSSBOW_C = 46812;
+	private static final int ARROWS_C = 1342;
+	private static final int BOLTS_C = 9634;
 	// A-Grade weapon rewards
 	private static final int WEAPON_SWORD_A = 46813;
 	private static final int WEAPON_GSWORD_A = 46814;
@@ -88,9 +91,11 @@ public class PaulinasSupportBox implements IItemHandler
 	private static final int WEAPON_DAGGER_A = 46819;
 	private static final int WEAPON_STAFF_A = 46820;
 	private static final int WEAPON_DUALSWORD_A = 46821;
-	// private static final int WEAPON_ANCIENT_A = 46822;
+	private static final int WEAPON_ANCIENT_A = 46822;
 	private static final int WEAPON_RAPIER_A = 46823;
 	private static final int WEAPON_CROSSBOW_A = 46824;
+	private static final int ARROWS_A = 1344;
+	private static final int BOLTS_A = 9636;
 	// S-Grade weapon rewards
 	private static final int WEAPON_SWORD_S = 46825;
 	private static final int WEAPON_GSWORD_S = 46826;
@@ -102,7 +107,7 @@ public class PaulinasSupportBox implements IItemHandler
 	private static final int WEAPON_DAGGER_S = 46831;
 	private static final int WEAPON_STAFF_S = 46832;
 	private static final int WEAPON_DUALSWORD_S = 46833;
-	// private static final int WEAPON_ANCIENT_S = 46834;
+	private static final int WEAPON_ANCIENT_S = 46834;
 	private static final int WEAPON_RAPIER_S = 46835;
 	private static final int WEAPON_CROSSBOW_S = 46836;
 	private static final int BOLT_OF_LIGHT_S = 9637;
@@ -155,7 +160,7 @@ public class PaulinasSupportBox implements IItemHandler
 					case ELF:
 					case DARK_ELF:
 					{
-						if (player.isMageClass())
+						if (CategoryData.getInstance().isInCategory(CategoryType.RECOM_MAGIC_GROUP, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), BOX_D_ROBE, 1, player, true);
 							player.addItem(getClass().getSimpleName(), WEAPON_STAFF_D, 1, player, true);
@@ -193,7 +198,7 @@ public class PaulinasSupportBox implements IItemHandler
 					}
 					case ORC:
 					{
-						if (player.isMageClass())
+						if (CategoryData.getInstance().isInCategory(CategoryType.RECOM_ORCM_GROUP, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), BOX_D_ROBE, 1, player, true);
 							player.addItem(getClass().getSimpleName(), WEAPON_STAFF_D, 1, player, true);
@@ -217,10 +222,11 @@ public class PaulinasSupportBox implements IItemHandler
 						if (CategoryData.getInstance().isInCategory(CategoryType.KAMAEL_FEMALE_MAIN_OCCUPATION, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), WEAPON_CROSSBOW_D, 1, player, true);
+							player.addItem(getClass().getSimpleName(), BOLTS_D, 2000, player, true);
 						}
 						else
 						{
-							player.addItem(getClass().getSimpleName(), WEAPON_GSWORD_D, 1, player, true);
+							player.addItem(getClass().getSimpleName(), WEAPON_ANCIENT_D, 1, player, true);
 						}
 						break;
 					}
@@ -249,7 +255,7 @@ public class PaulinasSupportBox implements IItemHandler
 					case ELF:
 					case DARK_ELF:
 					{
-						if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_WIZARD, classId.getId()))
+						if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_WIZARD, classId.getId()) || (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_HEAL, classId.getId())))
 						{
 							player.addItem(getClass().getSimpleName(), BOX_C_ROBE, 1, player, true);
 							player.addItem(getClass().getSimpleName(), WEAPON_STAFF_C, 1, player, true);
@@ -258,6 +264,7 @@ public class PaulinasSupportBox implements IItemHandler
 						{
 							player.addItem(getClass().getSimpleName(), BOX_C_LIGHT, 1, player, true);
 							player.addItem(getClass().getSimpleName(), WEAPON_BOW_C, 1, player, true);
+							player.addItem(getClass().getSimpleName(), ARROWS_C, 3000, player, true);
 						}
 						else if (CategoryData.getInstance().isInCategory(CategoryType.SUBJOB_GROUP_DAGGER, classId.getId()))
 						{
@@ -302,7 +309,7 @@ public class PaulinasSupportBox implements IItemHandler
 					}
 					case ORC:
 					{
-						if (player.isMageClass())
+						if (CategoryData.getInstance().isInCategory(CategoryType.RECOM_ORCM_GROUP, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), BOX_C_LIGHT, 1, player, true);
 							player.addItem(getClass().getSimpleName(), WEAPON_STAFF_C, 1, player, true);
@@ -330,10 +337,11 @@ public class PaulinasSupportBox implements IItemHandler
 						else if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_ARCHER, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), WEAPON_CROSSBOW_C, 1, player, true);
+							player.addItem(getClass().getSimpleName(), BOLTS_C, 3000, player, true);
 						}
 						else
 						{
-							player.addItem(getClass().getSimpleName(), WEAPON_GSWORD_C, 1, player, true);
+							player.addItem(getClass().getSimpleName(), WEAPON_ANCIENT_C, 1, player, true);
 						}
 						break;
 					}
@@ -362,7 +370,7 @@ public class PaulinasSupportBox implements IItemHandler
 					case ELF:
 					case DARK_ELF:
 					{
-						if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_WIZARD, classId.getId()))
+						if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_WIZARD, classId.getId()) || (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_HEAL, classId.getId())))
 						{
 							player.addItem(getClass().getSimpleName(), BOX_A_ROBE, 1, player, true);
 							player.addItem(getClass().getSimpleName(), WEAPON_STAFF_A, 1, player, true);
@@ -371,6 +379,7 @@ public class PaulinasSupportBox implements IItemHandler
 						{
 							player.addItem(getClass().getSimpleName(), BOX_A_LIGHT, 1, player, true);
 							player.addItem(getClass().getSimpleName(), WEAPON_BOW_A, 1, player, true);
+							player.addItem(getClass().getSimpleName(), ARROWS_A, 3000, player, true);
 						}
 						else if (CategoryData.getInstance().isInCategory(CategoryType.SUBJOB_GROUP_DAGGER, classId.getId()))
 						{
@@ -415,7 +424,7 @@ public class PaulinasSupportBox implements IItemHandler
 					}
 					case ORC:
 					{
-						if (player.isMageClass())
+						if (CategoryData.getInstance().isInCategory(CategoryType.RECOM_ORCM_GROUP, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), BOX_A_ROBE, 1, player, true);
 							player.addItem(getClass().getSimpleName(), WEAPON_STAFF_A, 1, player, true);
@@ -428,7 +437,6 @@ public class PaulinasSupportBox implements IItemHandler
 						else
 						{
 							player.addItem(getClass().getSimpleName(), BOX_A_HEAVY, 1, player, true);
-							player.addItem(getClass().getSimpleName(), WEAPON_SWORD_A, 1, player, true);
 							player.addItem(getClass().getSimpleName(), WEAPON_GSWORD_A, 1, player, true);
 							
 						}
@@ -445,10 +453,11 @@ public class PaulinasSupportBox implements IItemHandler
 						else if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_ARCHER, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), WEAPON_CROSSBOW_A, 1, player, true);
+							player.addItem(getClass().getSimpleName(), BOLTS_A, 3000, player, true);
 						}
 						else
 						{
-							player.addItem(getClass().getSimpleName(), WEAPON_GSWORD_A, 1, player, true);
+							player.addItem(getClass().getSimpleName(), WEAPON_ANCIENT_A, 1, player, true);
 						}
 						break;
 					}
@@ -477,7 +486,7 @@ public class PaulinasSupportBox implements IItemHandler
 					case ELF:
 					case DARK_ELF:
 					{
-						if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_WIZARD, classId.getId()))
+						if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_WIZARD, classId.getId()) || (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_HEAL, classId.getId())))
 						{
 							player.addItem(getClass().getSimpleName(), BOX_S_ROBE, 1, player, true);
 							player.addItem(getClass().getSimpleName(), WEAPON_STAFF_S, 1, player, true);
@@ -531,7 +540,7 @@ public class PaulinasSupportBox implements IItemHandler
 					}
 					case ORC:
 					{
-						if (player.isMageClass())
+						if (CategoryData.getInstance().isInCategory(CategoryType.RECOM_ORCM_GROUP, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), BOX_S_ROBE, 1, player, true);
 							player.addItem(getClass().getSimpleName(), WEAPON_STAFF_S, 1, player, true);
@@ -563,7 +572,7 @@ public class PaulinasSupportBox implements IItemHandler
 						}
 						else
 						{
-							player.addItem(getClass().getSimpleName(), WEAPON_GSWORD_S, 1, player, true);
+							player.addItem(getClass().getSimpleName(), WEAPON_ANCIENT_S, 1, player, true);
 						}
 						break;
 					}
@@ -695,6 +704,7 @@ public class PaulinasSupportBox implements IItemHandler
 						{
 							player.addItem(getClass().getSimpleName(), BOX_R_HEAVY, 1, player, true);
 							player.addItem(getClass().getSimpleName(), WEAPON_BLUNT_R, 1, player, true);
+							player.addItem(getClass().getSimpleName(), WEAPON_SHIELD_R, 1, player, true);
 						}
 						break;
 					}
