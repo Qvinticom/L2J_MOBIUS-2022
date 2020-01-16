@@ -572,7 +572,6 @@ public class FirstClassChange extends Quest
 				}
 				break;
 		}
-		st.exitQuest(true);
 		
 		return htmltext;
 	}
