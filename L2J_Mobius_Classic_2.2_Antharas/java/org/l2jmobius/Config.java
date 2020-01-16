@@ -120,12 +120,14 @@ public class Config
 	private static final String CUSTOM_CLASS_BALANCE_CONFIG_FILE = "./config/Custom/ClassBalance.ini";
 	private static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "./config/Custom/CommunityBoard.ini";
 	private static final String CUSTOM_CUSTOM_MAIL_MANAGER_CONFIG_FILE = "./config/Custom/CustomMailManager.ini";
+	private static final String CUSTOM_DELEVEL_MANAGER_CONFIG_FILE = "./config/Custom/DelevelManager.ini";
 	private static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "./config/Custom/DualboxCheck.ini";
 	private static final String CUSTOM_FACTION_SYSTEM_CONFIG_FILE = "./config/Custom/FactionSystem.ini";
 	private static final String CUSTOM_FAKE_PLAYERS_CONFIG_FILE = "./config/Custom/FakePlayers.ini";
 	private static final String CUSTOM_FIND_PVP_CONFIG_FILE = "./config/Custom/FindPvP.ini";
 	private static final String CUSTOM_MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE = "./config/Custom/MerchantZeroSellPrice.ini";
 	private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
+	private static final String CUSTOM_NOBLESS_MASTER_CONFIG_FILE = "./config/Custom/NoblessMaster.ini";
 	private static final String CUSTOM_NPC_STAT_MULTIPLIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
 	private static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
 	private static final String CUSTOM_PASSWORD_CHANGE_CONFIG_FILE = "./config/Custom/PasswordChange.ini";
@@ -1094,6 +1096,10 @@ public class Config
 	public static List<String> MULTILANG_ALLOWED = new ArrayList<>();
 	public static String MULTILANG_DEFAULT;
 	public static boolean MULTILANG_VOICED_ALLOW;
+	public static boolean NOBLESS_MASTER_ENABLED;
+	public static int NOBLESS_MASTER_NPCID;
+	public static int NOBLESS_MASTER_LEVEL_REQUIREMENT;
+	public static boolean NOBLESS_MASTER_REWARD_TIARA;
 	public static boolean L2WALKER_PROTECTION;
 	public static int DUALBOX_CHECK_MAX_PLAYERS_PER_IP;
 	public static int DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP;
@@ -1152,6 +1158,11 @@ public class Config
 	public static Map<String, Location> COMMUNITY_AVAILABLE_TELEPORTS;
 	public static boolean CUSTOM_MAIL_MANAGER_ENABLED;
 	public static int CUSTOM_MAIL_MANAGER_DELAY;
+	public static boolean DELEVEL_MANAGER_ENABLED;
+	public static int DELEVEL_MANAGER_NPCID;
+	public static int DELEVEL_MANAGER_ITEMID;
+	public static int DELEVEL_MANAGER_ITEMCOUNT;
+	public static int DELEVEL_MANAGER_MINIMUM_DELEVEL;
 	public static boolean FACTION_SYSTEM_ENABLED;
 	public static Location FACTION_STARTING_LOCATION;
 	public static Location FACTION_MANAGER_LOCATION;
@@ -3010,6 +3021,15 @@ public class Config
 			CUSTOM_MAIL_MANAGER_ENABLED = CustomMailManager.getBoolean("CustomMailManagerEnabled", false);
 			CUSTOM_MAIL_MANAGER_DELAY = CustomMailManager.getInt("DatabaseQueryDelay", 30) * 1000;
 			
+			// Load DelevelManager config file (if exists)
+			final PropertiesParser DelevelManager = new PropertiesParser(CUSTOM_DELEVEL_MANAGER_CONFIG_FILE);
+			
+			DELEVEL_MANAGER_ENABLED = DelevelManager.getBoolean("Enabled", false);
+			DELEVEL_MANAGER_NPCID = DelevelManager.getInt("NpcId", 1002000);
+			DELEVEL_MANAGER_ITEMID = DelevelManager.getInt("RequiredItemId", 4356);
+			DELEVEL_MANAGER_ITEMCOUNT = DelevelManager.getInt("RequiredItemCount", 2);
+			DELEVEL_MANAGER_MINIMUM_DELEVEL = DelevelManager.getInt("MimimumDelevel", 20);
+			
 			// Load DualboxCheck config file (if exists)
 			final PropertiesParser DualboxCheck = new PropertiesParser(CUSTOM_DUALBOX_CHECK_CONFIG_FILE);
 			
@@ -3106,6 +3126,14 @@ public class Config
 				LOGGER.warning("MultiLang[Config.load()]: default language: " + MULTILANG_DEFAULT + " is not in allowed list !");
 			}
 			MULTILANG_VOICED_ALLOW = MultilingualSupport.getBoolean("MultiLangVoiceCommand", true);
+			
+			// Load NoblessMaster config file (if exists)
+			final PropertiesParser NoblessMaster = new PropertiesParser(CUSTOM_NOBLESS_MASTER_CONFIG_FILE);
+			
+			NOBLESS_MASTER_ENABLED = NoblessMaster.getBoolean("Enabled", false);
+			NOBLESS_MASTER_NPCID = NoblessMaster.getInt("NpcId", 1003000);
+			NOBLESS_MASTER_LEVEL_REQUIREMENT = NoblessMaster.getInt("LevelRequirement", 80);
+			NOBLESS_MASTER_REWARD_TIARA = NoblessMaster.getBoolean("RewardTiara", false);
 			
 			// Load OfflineTrade config file (if exists)
 			final PropertiesParser OfflineTrade = new PropertiesParser(CUSTOM_OFFLINE_TRADE_CONFIG_FILE);
