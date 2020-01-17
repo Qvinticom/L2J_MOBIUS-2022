@@ -205,6 +205,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
+		<activateRate>100</activateRate>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<castRange>2500</castRange>
 		<effectRange>2500</effectRange>
@@ -217,7 +218,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>157</power> <!-- TODO -->
+				<power>15000</power> <!-- TODO -->
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
@@ -240,8 +241,8 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="PhysicalAttack">
-				<power>34255</power> <!-- TODO -->
+			<effect name="MagicalAttack">
+				<power>15000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -255,6 +256,7 @@
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<affectLimit>40-80</affectLimit>
+		<activateRate>100</activateRate>
 		<affectRange>600</affectRange>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -287,10 +289,12 @@
 		<mpConsume>10</mpConsume>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
+		<activateRate>100</activateRate>
 		<affectLimit>40-80</affectLimit>
 		<affectRange>600</affectRange>
 		<hitTime>2500</hitTime>
 		<effectPoint>-52</effectPoint>
+		<effectRange>2500</effectRange>
 		<trait>GIANT_WEAKNESS</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -298,7 +302,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>157</power> <!-- TODO -->
+				<power>15000</power>
 			</effect>
 			<effect name="PAtk">
 				<amount>30</amount>
@@ -360,6 +364,7 @@
 		<affectLimit>40-80</affectLimit>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>100</activateRate>
 		<affectRange>300</affectRange>
 		<effectRange>2500</effectRange>
 		<trait>PARALYZE</trait>
@@ -381,6 +386,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<mpConsume>10</mpConsume>
 		<affectLimit>45-45</affectLimit>
+		<activateRate>100</activateRate>
 		<castRange>2500</castRange>
 		<affectRange>300</affectRange>
 		<hitTime>3000</hitTime>
@@ -416,14 +422,16 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
+		<activateRate>100</activateRate>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
+		<hitCancelTime>0</hitCancelTime>
 		<trait>PARALYZE</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DamOverTime">
-				<power>512</power> <!-- TODO -->
+				<power>2000</power> <!-- TODO -->
 				<ticks>1</ticks>
 			</effect>
 			<effect name="BlockActions" />
@@ -455,7 +463,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PhysicalAttack"> <!-- TODO -->
-				<power>100000</power>
+				<power>300000</power>
 			</effect>
 			<effect name="KnockBack">
 				<speed>600</speed>
@@ -491,7 +499,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+				<power>15000</power> <!-- TODO -->
 			</effect>
 			<effect name="KnockBack">
 				<speed>600</speed>
@@ -540,7 +548,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+				<power>15000</power>
 			</effect>
 			<effect name="MagicalAttackMp">
 				<power>250</power>
@@ -567,10 +575,10 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>157</power> <!-- TODO -->
+				<power>15000</power>
 			</effect>
 			<effect name="DamOverTime">
-				<power>512</power>
+				<power>5120</power>
 				<ticks>1</ticks>
 			</effect>
 		</effects>
@@ -589,6 +597,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
+		<activateRate>100</activateRate>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
 		<trait>PARALYZE</trait>
@@ -596,9 +605,11 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
+			</effect>
 			<effect name="MagicalAttack">
-				<power>157</power> <!-- TODO -->
+				<power>15000</power>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>-50</amount>
@@ -770,7 +781,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+				<power>15000</power> <!-- TODO -->
 			</effect>
 		</effects>
 	</skill>
@@ -793,7 +804,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+				<power>15000</power> <!-- TODO -->
 			</effect>
 			<effect name="DamOverTime">
 				<power>2000</power> <!-- TODO -->
@@ -818,7 +829,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+				<power>15000</power> <!-- TODO -->
 			</effect>
 			<effect name="MagicalAttackMp">
 				<power>300</power>
@@ -843,7 +854,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+				<power>15000</power> <!-- TODO -->
 			</effect>
 		</effects>
 	</skill>
@@ -869,7 +880,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+				<power>15000</power>
 			</effect>
 			<effect name="Speed">
 				<amount>-80</amount>
@@ -902,9 +913,11 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+				<power>15000</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="16635" toLevel="1" name="Enuma Elish Shot">
@@ -920,7 +933,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack"> <!-- TODO -->
-				<power>100000</power>
+				<power>300000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -949,7 +962,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PhysicalAttack"> <!-- TODO -->
-				<power>100000</power>
+				<power>300000</power>
 			</effect>
 			<effect name="DamOverTime">
 				<power>2000</power>
@@ -963,7 +976,7 @@
 		<operateType>A2</operateType>
 		<castRange>1200</castRange>
 		<hitTime>3000</hitTime>
-		<effectPoint>438</effectPoint>
+		<effectPoint>-438</effectPoint>
 		<isMagic>1</isMagic>
 		<mpConsume>10</mpConsume>
 		<reuseDelay>5000</reuseDelay>
@@ -977,7 +990,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PhysicalAttack"> <!-- TODO -->
-				<power>100000</power>
+				<power>300000</power>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>-50</amount>
@@ -1010,7 +1023,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+				<power>15000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1035,7 +1048,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+				<power>15000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1043,6 +1056,7 @@
 		<!-- Physical Skill that deals great damage to a single enemy -->
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>
+		<effectRange>1400</effectRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-52</effectPoint>
@@ -1051,7 +1065,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack"> <!-- TODO -->
-				<power>100000</power>
+				<power>300000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1060,6 +1074,7 @@
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<castRange>1100</castRange>
+		<effectRange>1400</effectRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-52</effectPoint>
@@ -1068,7 +1083,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+				<power>15000</power> <!-- TODO -->
 			</effect>
 		</effects>
 	</skill>
@@ -1088,7 +1103,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+				<power>15000</power> <!-- TODO -->
 			</effect>
 		</effects>
 	</skill>
@@ -1125,7 +1140,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+				<power>15000</power> <!-- TODO -->
 			</effect>
 		</effects>
 	</skill>
@@ -1151,7 +1166,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+				<power>15000</power> <!-- TODO -->
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
@@ -1170,7 +1185,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+				<power>15000</power> <!-- TODO -->
 			</effect>
 		</effects>
 	</skill>
@@ -1188,7 +1203,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+				<power>15000</power> <!-- TODO -->
 			</effect>
 		</effects>
 	</skill>
@@ -1206,7 +1221,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power> <!-- TODO -->
+				<power>15000</power> <!-- TODO -->
 			</effect>
 		</effects>
 	</skill>
@@ -1241,7 +1256,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack"> <!-- TODO -->
-				<power>100000</power>
+				<power>300000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1259,7 +1274,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack"> <!-- TODO -->
-				<power>100000</power>
+				<power>300000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1295,7 +1310,7 @@
 		<effectPoint>-52</effectPoint>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>100000</power>
+				<power>300000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 		</effects>
@@ -1319,7 +1334,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>100000</power>
+				<power>300000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 			<effect name="BlockActions" />
@@ -1337,7 +1352,7 @@
 		<isMagic>1</isMagic>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1000</power>
+				<power>15000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1356,7 +1371,7 @@
 		<isMagic>1</isMagic>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power>
+				<power>15000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1415,7 +1430,7 @@
 		<effectPoint>-52</effectPoint>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>100000</power>
+				<power>300000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 		</effects>
@@ -1435,7 +1450,7 @@
 		<effectPoint>-52</effectPoint>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>100000</power>
+				<power>300000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 		</effects>
@@ -1459,7 +1474,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>100000</power>
+				<power>300000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 			<effect name="BlockActions" />
@@ -1477,7 +1492,7 @@
 		<isMagic>1</isMagic>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1000</power>
+				<power>15000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1496,7 +1511,7 @@
 		<isMagic>1</isMagic>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power>
+				<power>15000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1536,7 +1551,7 @@
 		<effectPoint>-52</effectPoint>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>100000</power>
+				<power>300000</power>
 				<criticalChance>3</criticalChance>
 			</effect>
 		</effects>
@@ -1555,7 +1570,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>100000</power>
+				<power>300000</power>
 				<criticalChance>5</criticalChance>
 				<overHit>true</overHit>
 			</effect>
@@ -1580,7 +1595,7 @@
 		<isMagic>1</isMagic>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power>
+				<power>15000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1595,7 +1610,7 @@
 		<effectPoint>-52</effectPoint>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>100000</power>
+				<power>300000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 		</effects>
@@ -1633,7 +1648,7 @@
 		<isMagic>1</isMagic>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1000</power>
+				<power>15000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1652,7 +1667,7 @@
 		<isMagic>1</isMagic>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power>
+				<power>15000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1671,7 +1686,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power>
+				<power>15000</power>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>-20</amount>
@@ -1698,7 +1713,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1000</power>
+				<power>15000</power>
 			</effect>
 			<effect name="BlockActions" />
 			<effect name="DefenceTrait">
@@ -1717,7 +1732,7 @@
 		<effectPoint>-52</effectPoint>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>150000</power>
+				<power>300000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 		</effects>
@@ -1732,7 +1747,7 @@
 		<effectPoint>-52</effectPoint>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>150000</power>
+				<power>300000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 		</effects>
@@ -1934,7 +1949,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power>
+				<power>15000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1951,7 +1966,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power>
+				<power>15000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -2155,10 +2170,11 @@
 		<!-- Can be used on Flower Buds to purge contamination. -->
 		<icon>icon.etc_holy_water_i00</icon>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY</targetType>
 		<castRange>300</castRange>
 		<hitTime>1500</hitTime>
 		<reuseDelay>15000</reuseDelay>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="16697" toLevel="1" name="Thirst Quench">
 		<!-- Desert Thirst status is lifted; P./M. Atk., Atk. Spd./Casting Spd. +55%. -->

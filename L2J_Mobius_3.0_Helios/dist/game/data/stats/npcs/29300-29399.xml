@@ -159,55 +159,77 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="29303" level="105" type="Monster" name="Helios" title="Emperor of the Beginning">
+	<npc id="29303" level="105" type="GrandBoss" name="Helios" title="Emperor of the Beginning">
 		<race>GIANT</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="247524303" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3888.88888888889" magical="2258.06451612903" />
+			<attack physical="301079.7437" magical="215919.4101" critical="4.75" accuracy="4.75" attackSpeed="253" range="40" />
+			<defence physical="34907.01512" magical="17038.26718" />
 			<attribute>
-				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
-				<attack type="EARTH" value="430" />
+				<defence fire="750" water="750" wind="650" earth="750" holy="750" dark="750" />
+				<attack type="EARTH" value="750" />
 			</attribute>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status canMove="false" />
 		<skillList>
+			<skill id="4045" level="1" />
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="16746" level="2" /> <!-- Helios -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="16609" level="1" /> <!-- Helios' Plasma -->
+			<skill id="16610" level="1" /> <!-- Helios' Grand Plasma -->
 		</skillList>
+		<ai clanHelpRange="1000" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="105" />
 			<height normal="124" />
 		</collision>
 	</npc>
-	<npc id="29304" level="105" type="Monster" name="Helios" title="Emperor of the Beginning">
+	<npc id="29304" level="105" type="GrandBoss" name="Helios" title="Emperor of the Beginning">
 		<race>GIANT</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="247524303" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
 			<attribute>
-				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
-				<attack type="EARTH" value="430" />
+				<defence fire="750" water="750" wind="650" earth="750" holy="750" dark="750" />
+				<attack type="EARTH" value="750" />
 			</attribute>
+			<abnormalResist physical="230" magical="230" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3888.88888888889" magical="2258.06451612903" />
+			<attack physical="301079.7437" magical="215919.4101" critical="4.75" accuracy="4.75" attackSpeed="253" range="40" />
+			<defence physical="34907.01512" magical="17038.26718" />
 		</stats>
 		<status canMove="false" />
 		<skillList>
+			<skill id="4045" level="1" />
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="16746" level="2" /> <!-- Helios -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="16614" level="1" /> <!-- Helios Plasma Pressure -->
+			<skill id="16615" level="1" /> <!-- Helios Plasma Wall -->
+			<skill id="16616" level="1" /> <!-- Helios' Overawing Gaze -->
+			<skill id="16727" level="1" /> <!-- Helios Storm Fist -->
 		</skillList>
+		<ai clanHelpRange="1000" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="105" />
 			<height normal="152" />
@@ -216,26 +238,41 @@
 	<npc id="29305" level="105" type="GrandBoss" name="Helios" title="Emperor of the Beginning">
 		<race>GIANT</race>
 		<sex>MALE</sex>
-		<acquire exp="6127016742000" sp="14704840180" />
+		<acquire exp="6127016742000" sp="12254033484" raidPoints="1000" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="247524303" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
+			<vitals hp="371833140.10898" hpRegen="444.7141361" mp="84773.83" mpRegen="3.3" />
 			<attribute>
-				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
-				<attack type="EARTH" value="430" />
+				<defence fire="750" water="750" wind="650" earth="750" holy="750" dark="750" />
+				<attack type="EARTH" value="750" />
 			</attribute>
+			<abnormalResist physical="230" magical="230" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3888.88888888889" magical="2258.06451612903" />
+			<attack physical="301079.7437" magical="215919.4101" critical="4.75" accuracy="4.75" attackSpeed="253" range="40" />
+			<defence physical="34907.01512" magical="17038.26718" />
 		</stats>
 		<status canMove="false" />
 		<skillList>
+			<skill id="4045" level="1" />
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="16746" level="2" /> <!-- Helios -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="16610" level="1" /> <!-- Helios' Grand Plasma -->
+			<skill id="16611" level="1" /> <!-- Helios' Throne of Agony -->
+			<skill id="16612" level="1" /> <!-- Emperor Helios' Authority -->
+			<skill id="16614" level="1" /> <!-- Helios Plasma Pressure -->
+			<skill id="16622" level="1" /> <!-- Helios' Bionic Bomb -->
+			<skill id="16623" level="1" /> <!-- Helios' Lightning of Anger -->
 		</skillList>
+		<ai clanHelpRange="1000" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="105" />
 			<height normal="180" />
@@ -380,6 +417,10 @@
 		</collision>
 	</npc>
 	<npc id="29309" level="105" type="Monster" name="Leopold Origin" title="Ultimate Kamael">
+		<parameters>
+			<skill name="Skill01_ID" id="16636" level="1" />
+			<skill name="Skill02_ID" id="16637" level="1" />
+		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -390,6 +431,7 @@
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="55" />
 				<run ground="230" />
@@ -402,8 +444,14 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="11" /> <!-- Giant -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16636" level="1" /> <!-- Origin Spinning Slasher -->
+			<skill id="16637" level="1" /> <!-- Origin Lightning Harpoon -->
 		</skillList>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" clanHelpRange="1000" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="30" />
 			<height normal="35.5" />
@@ -420,6 +468,7 @@
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="55" />
 				<run ground="230" />
@@ -432,8 +481,13 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="11" /> <!-- Giant -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16635" level="1" /> <!-- Enuma Elish Shot -->
 		</skillList>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" clanHelpRange="1000" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="30" />
 			<height normal="35.5" />
@@ -450,6 +504,7 @@
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -465,8 +520,13 @@
 			<skill id="4416" level="11" /> <!-- Giant -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="16608" level="10" /> <!-- Servitor Attack Weakness -->
+			<skill id="16682" level="1" /> <!-- Doom Hammer -->
 		</skillList>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" clanHelpRange="1000" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="45.5" />
@@ -483,6 +543,7 @@
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="55" />
 				<run ground="190" />
@@ -497,8 +558,14 @@
 			<skill id="4416" level="11" /> <!-- Giant -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="16608" level="10" /> <!-- Servitor Attack Weakness -->
+			<skill id="16683" level="1" /> <!-- Stun Shot -->
+			<skill id="16684" level="1" /> <!-- Multi Shot -->
 		</skillList>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" clanHelpRange="1000" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="45.5" />
@@ -515,6 +582,7 @@
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -530,8 +598,14 @@
 			<skill id="4416" level="11" /> <!-- Giant -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="16608" level="10" /> <!-- Servitor Attack Weakness -->
+			<skill id="16685" level="1" /> <!-- Ultra Plasma Ball -->
+			<skill id="16686" level="1" /> <!-- Ultra Plasma Wave -->
 		</skillList>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" clanHelpRange="1000" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="45.5" />
@@ -548,6 +622,7 @@
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -563,7 +638,13 @@
 			<skill id="4416" level="11" /> <!-- Giant -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="16608" level="10" /> <!-- Servitor Attack Weakness -->
+			<skill id="16682" level="1" /> <!-- Doom Hammer -->
 		</skillList>
+		<ai clanHelpRange="1000" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="45.5" />
@@ -580,6 +661,7 @@
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -588,8 +670,13 @@
 		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="16682" level="1" /> <!-- Doom Hammer -->
 		</skillList>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" clanHelpRange="1000" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="32" />
 			<height normal="50.5" />
@@ -606,6 +693,7 @@
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -614,8 +702,13 @@
 		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="16682" level="1" /> <!-- Doom Hammer -->
 		</skillList>
-		<ai type="BALANCED" />
+		<ai type="BALANCED" clanHelpRange="1000" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="32" />
 			<height normal="50.5" />
