@@ -35,13 +35,8 @@ public class Q00567_BasicMissionIsleOfSouls extends Quest
 	// NPCs
 	private static final int PENNY = 34413;
 	private static final int HESET = 33780;
-	private static final int ELISA = 30848;
-	private static final int TAPA = 30499;
-	private static final int DE_VILLAGE_TELEPORT_DEVICE = 30134;
+	private static final int TAPOY = 30499;
 	// Rewards
-	private static final long EXP = 973202790;
-	private static final int SP = 973200;
-	private static final int FP = 260; // Faction points
 	private static final int SCROLL_OF_ESCAPE_SOUL_ISLAND = 47059;
 	private static final int SCROLL_OF_ESCAPE_TOWN_OF_ADEN = 48413;
 	// Misc
@@ -54,9 +49,9 @@ public class Q00567_BasicMissionIsleOfSouls extends Quest
 	{
 		super(567);
 		addStartNpc(PENNY);
-		addTalkId(PENNY, HESET, ELISA, TAPA, DE_VILLAGE_TELEPORT_DEVICE);
+		addTalkId(PENNY, HESET, TAPOY);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "nolevel.html");
-		addFactionLevel(Faction.ADVENTURE_GUILD, 5, "34413-11.html");
+		addFactionLevel(Faction.ADVENTURE_GUILD, 5, "34413-00.htm");
 	}
 	
 	@Override
@@ -75,8 +70,9 @@ public class Q00567_BasicMissionIsleOfSouls extends Quest
 			case "34413-02.htm":
 			case "34413-03.htm":
 			case "34413-06.html":
+			case "34413-07.html":
 			case "30499-02.html":
-			case "33780-03.html":
+			case "33780-02.html":
 			{
 				htmltext = event;
 				break;
@@ -87,50 +83,25 @@ public class Q00567_BasicMissionIsleOfSouls extends Quest
 				htmltext = event;
 				break;
 			}
-			case "34413-05.html":
-			{
-				qs.setCond(5, true);
-				htmltext = event;
-				break;
-			}
-			case "34413-09.html":
+			case "34413-08.html": // PENNY
 			{
 				qs.setCond(2, true);
 				htmltext = event;
 				break;
 			}
-			case "34413-07.html":
-			{
-				final StringBuilder str = new StringBuilder("00");
-				checkQuestCompleted(player, str); // Initialize the array with all quests completed
-				
-				if (str.indexOf("11") != -1) // verify if all quests completed
-				{
-					giveItems(player, SCROLL_OF_ESCAPE_SOUL_ISLAND, 1);
-					addExpAndSp(player, EXP, SP);
-					addFactionPoints(player, Faction.ADVENTURE_GUILD, FP); // add FP points to ADVENTURE_GUILD Faction
-					qs.exitQuest(QuestType.DAILY, true);
-					htmltext = event;
-				}
-				else
-				{
-					htmltext = "34413-08.html";
-				}
-				break;
-			}
-			case "30848-02.html": // ELISA
+			case "30499-03.html": // TAPOY
 			{
 				qs.setCond(3, true);
 				htmltext = event;
 				break;
 			}
-			case "30499-03.html": // TAPA
+			case "33780-03.html": // HESET
 			{
-				qs.setCond(4, true);
+				qs.setCond(5, true);
 				htmltext = event;
 				break;
 			}
-			case "33780-04.html": // HESET
+			case "33780-05.html": // HESET
 			{
 				giveItems(player, SCROLL_OF_ESCAPE_TOWN_OF_ADEN, 1);
 				htmltext = event;
@@ -141,12 +112,25 @@ public class Q00567_BasicMissionIsleOfSouls extends Quest
 				// TODO: force player to use item SCROLL_OF_ESCAPE_TOWN_OF_ADEN
 				player.teleToLocation(TOWN_OF_ADEN); // Town of Aden near Npc Penny - temp solution
 				takeItems(player, SCROLL_OF_ESCAPE_TOWN_OF_ADEN, -1); // remove SOE - temp solution
-				qs.setCond(8, true);
 				break;
 			}
-			case "keepscroll":
+			case "34413-10.html":
 			{
-				qs.setCond(8, true);
+				final StringBuilder str = new StringBuilder("00");
+				checkQuestCompleted(player, str); // Initialize the array with all quests completed
+				
+				if (str.indexOf("11") != -1) // verify if all quests completed
+				{
+					giveItems(player, SCROLL_OF_ESCAPE_SOUL_ISLAND, 1);
+					addExpAndSp(player, 973202790, 973200);
+					addFactionPoints(player, Faction.ADVENTURE_GUILD, 260); // add FP points to ADVENTURE_GUILD Faction
+					qs.exitQuest(QuestType.DAILY, true);
+					htmltext = event;
+				}
+				else
+				{
+					htmltext = "34413-08.html";
+				}
 				break;
 			}
 		}
@@ -177,59 +161,61 @@ public class Q00567_BasicMissionIsleOfSouls extends Quest
 					{
 						if (qs.getCond() == 1)
 						{
-							htmltext = "34413-04.htm";
+							htmltext = "34413-05.html";
 						}
 						else if (qs.getCond() == 2)
 						{
-							// htmltext = qs.getCond() == 2 ? "34413-10.htm" : "34413-06.html";
-							htmltext = "33509-10.htm";
-						}
-						else if (qs.getCond() == 5)
-						{
-							// htmltext = qs.getCond() == 5 ? "34413-08.htm" : "34413-06.html";
 							htmltext = "34413-08.html";
 						}
-						else
+						else if (qs.getCond() == 6)
 						{
-							htmltext = "34413-06.html";
+							htmltext = "34413-09.html";
 						}
 						break;
 					}
-					case ELISA:
+					case TAPOY:
 					{
-						htmltext = "30848-01.html";
-						break;
-					}
-					case TAPA:
-					{
-						htmltext = "30499-01.html";
-						break;
-					}
-					case DE_VILLAGE_TELEPORT_DEVICE:
-					{
-						qs.setCond(5, true);
-						htmltext = "30134-01.html";
+						if (qs.getCond() == 2)
+						{
+							htmltext = "30499-01.html";
+						}
+						else if (qs.getCond() == 3)
+						{
+							final QuestState st = player.getQuestState("Q10386_MysteriousJourney");
+							if ((st != null) && st.isCompleted())
+							{
+								qs.setCond(4, true);
+								htmltext = null;
+							}
+							else
+							{
+								htmltext = "30499-03.html";
+							}
+						}
+						else if (qs.getCond() == 4)
+						{
+							htmltext = "30499-04.html";
+						}
 						break;
 					}
 					case HESET:
 					{
-						if (qs.getCond() == 5)
+						if (qs.getCond() == 4)
 						{
-							qs.setCond(6, true);
 							htmltext = "33780-01.html";
 						}
-						else
+						else if (qs.getCond() == 5)
 						{
 							final StringBuilder str = new StringBuilder("00");
 							checkQuestCompleted(player, str); // Initialize the array with all quests completed
 							if (str.indexOf("11") != -1) // verify if all quests completed
 							{
-								qs.setCond(7, true);
-								htmltext = "33780-02.html";
+								qs.setCond(6, true);
+								htmltext = "33780-04.html";
 							}
 							else
 							{
-								htmltext = "33780-01.html";
+								htmltext = "33780-03.html";
 							}
 						}
 						break;
@@ -238,7 +224,6 @@ public class Q00567_BasicMissionIsleOfSouls extends Quest
 				break;
 			}
 			case State.COMPLETED:
-			
 			{
 				if (qs.isNowAvailable())
 				{
