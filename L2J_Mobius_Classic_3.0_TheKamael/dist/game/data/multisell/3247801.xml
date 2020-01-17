@@ -3,41 +3,29 @@
 	<npcs>
 		<npc>-1</npc> <!-- Dimensional Merchant / Everywhere -->
 	</npcs>
-		<item>
+	<item>
 		<!-- Soulshot Ticket -->
 		<ingredient count="1" id="90907" />
-		<!-- Soulshots (No-grade) -->
-		<production count="500" id="1835" />
+		<!-- Soulshots -->
+		<production count="500" id="91927" />
 	</item>
 	<item>
 		<!-- Soulshot Ticket -->
 		<ingredient count="1" id="90907" />
-		<!-- Soulshots (D-grade) -->
-		<production count="500" id="1463" />
+		<!-- Spiritshot -->
+		<production count="334" id="91928" />
 	</item>
 	<item>
 		<!-- Soulshot Ticket -->
 		<ingredient count="1" id="90907" />
-		<!-- Soulshots (C-grade) -->
-		<production count="250" id="1464" />
+		<!-- Blessed SoulShots -->
+		<production count="200" id="91929" />
 	</item>
 	<item>
 		<!-- Soulshot Ticket -->
 		<ingredient count="1" id="90907" />
-		<!-- Blessed Spiritshot (No-grade) -->
-		<production count="500" id="3947" />
-	</item>
-	<item>
-		<!-- Soulshot Ticket -->
-		<ingredient count="1" id="90907" />
-		<!-- Blessed Spiritshot (D-grade) -->
-		<production count="500" id="3948" />
-	</item>
-	<item>
-		<!-- Soulshot Ticket -->
-		<ingredient count="1" id="90907" />
-		<!-- Blessed Spiritshot (C-grade) -->
-		<production count="250" id="3949" />
+		<!-- Blessed Spiritshot -->
+		<production count="134" id="91930" />
 	</item>
 	<item>
 		<!-- Attendance Coin -->
