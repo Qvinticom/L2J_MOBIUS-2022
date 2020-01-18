@@ -28,6 +28,7 @@ import org.w3c.dom.Document;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Mobius
@@ -86,52 +87,55 @@ public class SendMessageLocalisationData implements IXmlReader
 		}));
 	}
 	
-	public String getLocalisation(String lang, String message)
+	public static String getLocalisation(PlayerInstance player, String message)
 	{
-		final Map<String[], String[]> localisations = SEND_MESSAGE_LOCALISATIONS.get(lang);
-		if (localisations != null)
+		if (Config.MULTILANG_ENABLE)
 		{
-			// No pretty way of doing something like this.
-			// Consider using proper SystemMessages where possible.
-			String[] searchMessage;
-			String[] replacementMessage;
-			boolean found;
-			for (Entry<String[], String[]> entry : localisations.entrySet())
+			final Map<String[], String[]> localisations = SEND_MESSAGE_LOCALISATIONS.get(player.getLang());
+			if (localisations != null)
 			{
-				searchMessage = entry.getKey();
-				replacementMessage = entry.getValue();
-				
-				// Exact match.
-				if (searchMessage.length == 1)
+				// No pretty way of doing something like this.
+				// Consider using proper SystemMessages where possible.
+				String[] searchMessage;
+				String[] replacementMessage;
+				boolean found;
+				for (Entry<String[], String[]> entry : localisations.entrySet())
 				{
-					if (searchMessage[0].equals(message))
+					searchMessage = entry.getKey();
+					replacementMessage = entry.getValue();
+					
+					// Exact match.
+					if (searchMessage.length == 1)
 					{
-						return replacementMessage[0];
-					}
-				}
-				else // Split match.
-				{
-					found = true;
-					for (String part : searchMessage)
-					{
-						if (!message.contains(part))
+						if (searchMessage[0].equals(message))
 						{
-							found = false;
+							return replacementMessage[0];
+						}
+					}
+					else // Split match.
+					{
+						found = true;
+						for (String part : searchMessage)
+						{
+							if (!message.contains(part))
+							{
+								found = false;
+								break;
+							}
+						}
+						if (found)
+						{
+							for (int i = 0; i < searchMessage.length; i++)
+							{
+								message = message.replace(searchMessage[i], replacementMessage[i]);
+							}
 							break;
 						}
-					}
-					if (found)
-					{
-						for (int i = 0; i < searchMessage.length; i++)
-						{
-							message = message.replace(searchMessage[i], replacementMessage[i]);
-						}
-						return message;
 					}
 				}
 			}
 		}
-		return null;
+		return message;
 	}
 	
 	public static SendMessageLocalisationData getInstance()

@@ -8936,16 +8936,7 @@ public class PlayerInstance extends Playable
 	@Override
 	public void sendMessage(String message)
 	{
-		if (Config.MULTILANG_ENABLE)
-		{
-			final String localisation = SendMessageLocalisationData.getInstance().getLocalisation(_lang, message);
-			if (localisation != null)
-			{
-				sendPacket(new SystemMessage(localisation));
-				return;
-			}
-		}
-		sendPacket(new SystemMessage(message));
+		sendPacket(new SystemMessage(SendMessageLocalisationData.getLocalisation(this, message)));
 	}
 	
 	public void setObserving(boolean state)

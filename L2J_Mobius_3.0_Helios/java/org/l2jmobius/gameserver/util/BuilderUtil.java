@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.util;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.data.xml.impl.SendMessageLocalisationData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -41,7 +42,7 @@ public class BuilderUtil
 	{
 		if (Config.GM_STARTUP_BUILDER_HIDE)
 		{
-			player.sendPacket(new CreatureSay(null, ChatType.GENERAL, "SYS", message));
+			player.sendPacket(new CreatureSay(null, ChatType.GENERAL, "SYS", SendMessageLocalisationData.getLocalisation(player, message)));
 		}
 		else
 		{
