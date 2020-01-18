@@ -31,9 +31,9 @@ import org.l2jmobius.gameserver.util.Util;
 import quests.Q10590_ReawakenedFate.Q10590_ReawakenedFate;
 
 /**
- * Q10591_NobleMaterial
+ * Noble Material (10591)
  * @URL https://www.youtube.com/watch?v=HCd784Gnguw
- * @author NightBR
+ * @author NightBR, Mobius
  */
 public class Q10591_NobleMaterial extends Quest
 {
@@ -57,13 +57,11 @@ public class Q10591_NobleMaterial extends Quest
 		23501, // Flame Rael
 		23502, // Flame Salamander
 		23503, // Flame Drake
-		23504 // Flame Votis
+		23504, // Flame Votis
 	};
 	// Item
 	private static final int FLAME_ENERGY = 80856; // Flame Energy - monster drop
 	// Rewards
-	private static final long EXP = 1;
-	private static final int SP = 1;
 	private static final int ADENA_AMOUNT = 5050;
 	private static final int ACHIEVEMENT_BOX_LV_100 = 80910;
 	private static final int ACQUIRE_NOBLESSE_PRIVILEGES = 34983;
@@ -91,7 +89,6 @@ public class Q10591_NobleMaterial extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -160,12 +157,13 @@ public class Q10591_NobleMaterial extends Quest
 			{
 				if (qs.isCond(7) && (player.getLevel() >= MIN_LEVEL))
 				{
-					// Reward №1
-					addExpAndSp(player, EXP, SP);
+					// Reward #1
 					giveAdena(player, ADENA_AMOUNT, false);
 					giveItems(player, ACHIEVEMENT_BOX_LV_100, 1);
 					giveItems(player, ACQUIRE_NOBLESSE_PRIVILEGES, 1);
 					giveItems(player, WARRIOR_CICLET_BOX_LV5, 1);
+					player.setNobleLevel(1);
+					player.broadcastInfo();
 					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
 					qs.exitQuest(false, true);
 					htmltext = event;
@@ -176,12 +174,13 @@ public class Q10591_NobleMaterial extends Quest
 			{
 				if (qs.isCond(7) && (player.getLevel() >= MIN_LEVEL))
 				{
-					// Reward №2
-					addExpAndSp(player, EXP, SP);
+					// Reward #2
 					giveAdena(player, ADENA_AMOUNT, false);
 					giveItems(player, ACHIEVEMENT_BOX_LV_100, 1);
 					giveItems(player, ACQUIRE_NOBLESSE_PRIVILEGES, 1);
 					giveItems(player, WIZARD_CICLET_BOX_LV5, 1);
+					player.setNobleLevel(1);
+					player.broadcastInfo();
 					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
 					qs.exitQuest(false, true);
 					htmltext = event;
@@ -190,22 +189,20 @@ public class Q10591_NobleMaterial extends Quest
 			}
 			case "33907-07.html":
 			{
-				if (qs.isCond(7))
+				if (qs.isCond(7) && (player.getLevel() >= MIN_LEVEL))
 				{
-					if (player.getLevel() >= MIN_LEVEL)
-					{
-						// Reward №3
-						addExpAndSp(player, EXP, SP);
-						giveAdena(player, ADENA_AMOUNT, false);
-						giveItems(player, ACHIEVEMENT_BOX_LV_100, 1);
-						giveItems(player, ACQUIRE_NOBLESSE_PRIVILEGES, 1);
-						giveItems(player, KNIGHT_CICLET_BOX_LV5, 1);
-						showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
-						qs.exitQuest(false, true);
-						htmltext = event;
-					}
-					break;
+					// Reward #3
+					giveAdena(player, ADENA_AMOUNT, false);
+					giveItems(player, ACHIEVEMENT_BOX_LV_100, 1);
+					giveItems(player, ACQUIRE_NOBLESSE_PRIVILEGES, 1);
+					giveItems(player, KNIGHT_CICLET_BOX_LV5, 1);
+					player.setNobleLevel(1);
+					player.broadcastInfo();
+					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
+					qs.exitQuest(false, true);
+					htmltext = event;
 				}
+				break;
 			}
 		}
 		return htmltext;
@@ -233,6 +230,11 @@ public class Q10591_NobleMaterial extends Quest
 				{
 					case JOACHIM:
 					{
+						if ((getQuestItemsCount(player, FLAME_ENERGY) >= 1000) && (player.getLevel() >= MIN_LEVEL))
+						{
+							qs.setCond(3, true);
+						}
+						
 						if (qs.isCond(1))
 						{
 							htmltext = "34513-04.htm";
