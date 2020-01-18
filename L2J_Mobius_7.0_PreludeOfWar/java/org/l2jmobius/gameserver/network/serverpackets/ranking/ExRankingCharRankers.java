@@ -93,7 +93,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 									if (player.getInt("charId") == snapshot.getInt("charId"))
 									{
 										packet.writeD(id2); // server rank snapshot
-										packet.writeD(snapshot.getInt("raceRank")); // race rank snapshot
+										packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
 									}
 								}
 							}
@@ -143,7 +143,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 											if (player.getInt("charId") == snapshot.getInt("charId"))
 											{
 												packet.writeD(id3); // server rank snapshot
-												packet.writeD(snapshot.getInt("raceRank"));
+												packet.writeD(snapshot.getInt("raceRank", 0));
 											}
 										}
 									}
@@ -207,7 +207,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 										if (player.getInt("charId") == snapshot.getInt("charId"))
 										{
 											packet.writeD(id2); // server rank snapshot
-											packet.writeD(snapshot.getInt("raceRank")); // race rank snapshot
+											packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
 										}
 									}
 								}
@@ -314,7 +314,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 									if (player.getInt("charId") == snapshot.getInt("charId"))
 									{
 										packet.writeD(id2); // server rank snapshot
-										packet.writeD(snapshot.getInt("raceRank")); // race rank snapshot
+										packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
 									}
 								}
 							}
@@ -374,7 +374,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 										if (player.getInt("charId") == snapshot.getInt("charId"))
 										{
 											packet.writeD(id2); // server rank snapshot
-											packet.writeD(snapshot.getInt("raceRank")); // race rank snapshot
+											packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
 										}
 									}
 								}
@@ -412,7 +412,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 								if (_player.getObjectId() == snapshot.getInt("charId"))
 								{
 									packet.writeD(id); // server rank snapshot
-									packet.writeD(snapshot.getInt("raceRank")); // race rank snapshot
+									packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
 								}
 							}
 						}
