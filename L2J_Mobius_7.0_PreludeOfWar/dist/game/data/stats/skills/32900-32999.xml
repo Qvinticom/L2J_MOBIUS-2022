@@ -97,6 +97,24 @@
 		<!-- Decreases received P. Critical Rate and received P. Critical Damage. -->
 		<icon>icon.skill0035</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalRate">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32909" toLevel="1" name="Rule of Looting">
 		<!-- There are few rules of looting. If the raiding characters are not in the party, the right to loot is given to the character who has dealt the killing blow. If there are more than one raiding paties, the right to loot is given to the party whose member has dealt the killing blow. If the raiding characters are joined to command channel, the right to loot is given to all members of the command channel whose member has dealt the killing blow. The rule of looting extends for 5 min. -->

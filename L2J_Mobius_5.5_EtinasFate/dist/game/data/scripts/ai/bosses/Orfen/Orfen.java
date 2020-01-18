@@ -64,11 +64,11 @@ public class Orfen extends AbstractNpcAI
 		NpcStringId.S1_DO_YOU_THINK_THAT_S_GOING_TO_WORK
 	};
 	
-	private static final int ORFEN = 29014;
+	private static final int ORFEN = 29325;
 	// private static final int RAIKEL = 29015;
-	private static final int RAIKEL_LEOS = 29016;
+	private static final int ARIMA = 29326;
 	// private static final int RIBA = 29017;
-	private static final int RIBA_IREN = 29018;
+	private static final int ARIMUS = 29327;
 	
 	private static boolean _IsTeleported;
 	private static Set<Attackable> _minions = ConcurrentHashMap.newKeySet();
@@ -86,8 +86,8 @@ public class Orfen extends AbstractNpcAI
 		final int[] mobs =
 		{
 			ORFEN,
-			RAIKEL_LEOS,
-			RIBA_IREN
+			ARIMA,
+			ARIMUS
 		};
 		registerMobs(mobs);
 		_IsTeleported = false;
@@ -158,16 +158,16 @@ public class Orfen extends AbstractNpcAI
 		final int x = npc.getX();
 		final int y = npc.getY();
 		Attackable mob;
-		mob = (Attackable) addSpawn(RAIKEL_LEOS, x + 100, y + 100, npc.getZ(), 0, false, 0);
+		mob = (Attackable) addSpawn(ARIMA, x + 100, y + 100, npc.getZ(), 0, false, 0);
 		mob.setIsRaidMinion(true);
 		_minions.add(mob);
-		mob = (Attackable) addSpawn(RAIKEL_LEOS, x + 100, y - 100, npc.getZ(), 0, false, 0);
+		mob = (Attackable) addSpawn(ARIMA, x + 100, y - 100, npc.getZ(), 0, false, 0);
 		mob.setIsRaidMinion(true);
 		_minions.add(mob);
-		mob = (Attackable) addSpawn(RAIKEL_LEOS, x - 100, y + 100, npc.getZ(), 0, false, 0);
+		mob = (Attackable) addSpawn(ARIMA, x - 100, y + 100, npc.getZ(), 0, false, 0);
 		mob.setIsRaidMinion(true);
 		_minions.add(mob);
-		mob = (Attackable) addSpawn(RAIKEL_LEOS, x - 100, y - 100, npc.getZ(), 0, false, 0);
+		mob = (Attackable) addSpawn(ARIMA, x - 100, y - 100, npc.getZ(), 0, false, 0);
 		mob.setIsRaidMinion(true);
 		_minions.add(mob);
 		startQuestTimer("check_minion_loc", 10000, npc, null, true);
@@ -230,7 +230,7 @@ public class Orfen extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("spawn_minion"))
 		{
-			final Attackable mob = (Attackable) addSpawn(RAIKEL_LEOS, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0);
+			final Attackable mob = (Attackable) addSpawn(ARIMA, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0);
 			mob.setIsRaidMinion(true);
 			_minions.add(mob);
 		}
@@ -263,19 +263,19 @@ public class Orfen extends AbstractNpcAI
 		}
 		final int npcId = npc.getId();
 		final int callerId = caller.getId();
-		if ((npcId == RAIKEL_LEOS) && (getRandom(20) == 0))
+		if ((npcId == ARIMA) && (getRandom(20) == 0))
 		{
 			npc.setTarget(attacker);
 			npc.doCast(BLOW.getSkill());
 		}
-		else if (npcId == RIBA_IREN)
+		else if (npcId == ARIMUS)
 		{
 			int chance = 1;
 			if (callerId == ORFEN)
 			{
 				chance = 9;
 			}
-			if ((callerId != RIBA_IREN) && (caller.getCurrentHp() < (caller.getMaxHp() / 2.0)) && (getRandom(10) < chance))
+			if ((callerId != ARIMUS) && (caller.getCurrentHp() < (caller.getMaxHp() / 2.0)) && (getRandom(10) < chance))
 			{
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null, null);
 				npc.setTarget(caller);
@@ -304,7 +304,7 @@ public class Orfen extends AbstractNpcAI
 				npc.doCast(PARALYSIS.getSkill());
 			}
 		}
-		else if (npcId == RIBA_IREN)
+		else if (npcId == ARIMUS)
 		{
 			if (!npc.isCastingNow(SkillCaster::isAnyNormalType) && ((npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2.0)))
 			{
@@ -335,7 +335,7 @@ public class Orfen extends AbstractNpcAI
 			startQuestTimer("despawn_minions", 20000, null, null);
 			cancelQuestTimers("spawn_minion");
 		}
-		else if ((GrandBossManager.getInstance().getBossStatus(ORFEN) == ALIVE) && (npc.getId() == RAIKEL_LEOS))
+		else if ((GrandBossManager.getInstance().getBossStatus(ORFEN) == ALIVE) && (npc.getId() == ARIMA))
 		{
 			_minions.remove(npc);
 			startQuestTimer("spawn_minion", 360000, npc, null);
