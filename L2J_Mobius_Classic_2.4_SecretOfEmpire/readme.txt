@@ -5,7 +5,7 @@ Use mega downloader to download https://megadownloader.en.softonic.com/
 
 Client mirror 2: https://drive.google.com/uc?id=1yeYwrQEIcmAz5Ha1R05c3QgntRPy9y0V&export=download
 System: https://mega.nz/#!xolCkYjD!TpdBo8SwYpPYJN86H_r5AxZljTZAfyj-o2H9cfy2bNc
-Geodata: http://www.mediafire.com/file/tas8fp9ee2r6mn9/L2J_Mobius_Classic_2.2_Antharas_Geodata.zip
+Geodata: https://www.mediafire.com/file/liyo9ibulkp3l9g/L2J_Mobius_Classic_2.3_SevenSigns_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/

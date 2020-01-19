@@ -3,7 +3,7 @@ Client Mirror 1: https://drive.google.com/uc?id=1rXtgV9l67b5lBeK_wmCKITE1DQ7EgEJ
 Client Mirror 2: https://drive.google.com/uc?id=1IugZjcpS5n9_EJPLCecB3H_tLmVlqo2L&export=download
 System: https://mega.nz/#!98likSra!vP3uaDwJs8oiY5q60UzBSXAbgNELWX_dycWb98Mz96U
 
-Geodata: http://www.mediafire.com/file/tas8fp9ee2r6mn9/L2J_Mobius_Classic_2.2_Antharas_Geodata.zip
+Geodata: https://www.mediafire.com/file/fzw7fplavow88wb/L2J_Mobius_Classic_3.0_TheKamael_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
 
