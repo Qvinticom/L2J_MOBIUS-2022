@@ -86,7 +86,7 @@ public class ChamberOfProphecies extends AbstractInstance
 				qs.setCond(16, true);
 			}
 		}
-		else
+		else if (npc != null)
 		{
 			final Instance world = npc.getInstanceWorld();
 			if (!isInInstance(world))
@@ -106,7 +106,7 @@ public class ChamberOfProphecies extends AbstractInstance
 				}
 				case "33996-02.html":
 				{
-					world.broadcastPacket(ExShowUsm.USM_Q015_E); // TODO not show usim movie
+					world.broadcastPacket(ExShowUsm.USM_Q015_E);
 					world.despawnGroup("q10753_16_instance_grail");
 					world.spawnGroup("q10753_16_instance_wizard");
 					giveItems(player, ATELIA, 1);
