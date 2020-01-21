@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
+import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stats;
 import org.l2jmobius.gameserver.network.serverpackets.ExRegenMax;
@@ -59,6 +60,10 @@ public class HealOverTime extends AbstractEffect
 		if ((item != null) && (item.isPotion() || item.isElixir()))
 		{
 			power += effected.getStat().getValue(Stats.ADDITIONAL_POTION_HP, 0) / getTicks();
+			
+			// Classic Potion Mastery
+			// TODO: Create an effect if more mastery skills are added.
+			power *= 1 + (effected.getAffectedSkillLevel(CommonSkill.POTION_MASTERY.getId()) / 100);
 		}
 		
 		hp += power * getTicksMultiplier();

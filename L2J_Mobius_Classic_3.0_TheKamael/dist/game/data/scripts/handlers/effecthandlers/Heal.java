@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.model.stats.Stats;
@@ -74,6 +75,10 @@ public class Heal extends AbstractEffect
 		if ((item != null) && (item.isPotion() || item.isElixir()))
 		{
 			amount += effected.getStat().getValue(Stats.ADDITIONAL_POTION_HP, 0);
+			
+			// Classic Potion Mastery
+			// TODO: Create an effect if more mastery skills are added.
+			amount *= 1 + (effected.getAffectedSkillLevel(CommonSkill.POTION_MASTERY.getId()) / 100);
 		}
 		
 		double staticShotBonus = 0;

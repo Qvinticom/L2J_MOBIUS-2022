@@ -57,7 +57,8 @@ public enum CommonSkill
 	ALCHEMY_CUBE(17943, 1),
 	ALCHEMY_CUBE_RANDOM_SUCCESS(17966, 1),
 	PET_SWITCH_STANCE(6054, 1),
-	WEIGHT_PENALTY(4270, 1);
+	WEIGHT_PENALTY(4270, 1),
+	POTION_MASTERY(45184, 1);
 	
 	private final SkillHolder _holder;
 	
