@@ -53,8 +53,9 @@ public class MAttackFinalizer implements IStatsFunction
 		}
 		
 		// Calculate modifiers Magic Attack
+		final double physicalBonus = creature.getStat().getValue(Stats.MAGIC_ATTACK_BY_PHYSICAL_ATTACK, 0) * creature.getPAtk();
 		baseValue *= Math.pow(BaseStats.INT.calcBonus(creature) * creature.getLevelMod(), 2.2072);
-		return validateValue(creature, Stats.defaultValue(creature, stat, baseValue), 0, Config.MAX_MATK);
+		return validateValue(creature, Stats.defaultValue(creature, stat, baseValue * (physicalBonus > 0 ? physicalBonus : 1)), 0, Config.MAX_MATK);
 	}
 	
 	@Override
