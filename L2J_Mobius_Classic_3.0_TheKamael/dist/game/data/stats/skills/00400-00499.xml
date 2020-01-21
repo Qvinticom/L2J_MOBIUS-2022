@@ -3601,161 +3601,38 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="474" toLevel="45" name="Rapier Mastery">
-		<!-- P. Atk. +$s1 when using a short sword. -->
+	<skill id="474" toLevel="10" name="Rapier Mastery">
+		<!-- P. Atk. +$s1 when using a Rapier. -->
 		<icon>icon.skill0474</icon>
 		<magicLvl>
 			<value level="1">20</value>
-			<value level="2">24</value>
-			<value level="3">26</value>
-			<value level="4">28</value>
-			<value level="5">30</value>
-			<value level="6">32</value>
-			<value level="7">34</value>
-			<value level="8">36</value>
-			<value level="9">38</value>
-			<value level="10">39</value>
-			<value level="11">40</value>
-			<value level="12">41</value>
-			<value level="13">42</value>
-			<value level="14">43</value>
-			<value level="15">44</value>
-			<value level="16">45</value>
-			<value level="17">46</value>
-			<value level="18">47</value>
-			<value level="19">48</value>
-			<value level="20">49</value>
-			<value level="21">50</value>
-			<value level="22">51</value>
-			<value level="23">52</value>
-			<value level="24">53</value>
-			<value level="25">54</value>
-			<value level="26">55</value>
-			<value level="27">56</value>
-			<value level="28">57</value>
-			<value level="29">58</value>
-			<value level="30">59</value>
-			<value level="31">60</value>
-			<value level="32">61</value>
-			<value level="33">62</value>
-			<value level="34">63</value>
-			<value level="35">64</value>
-			<value level="36">65</value>
-			<value level="37">66</value>
-			<value level="38">67</value>
-			<value level="39">68</value>
-			<value level="40">69</value>
-			<value level="41">70</value>
-			<value level="42">71</value>
-			<value level="43">72</value>
-			<value level="44">73</value>
-			<value level="45">74</value>
+			<value level="2">30</value>
+			<value level="3">40</value>
+			<value level="4">50</value>
+			<value level="5">60</value>
+			<value level="6">70</value>
+			<value level="7">75</value>
+			<value level="8">80</value>
+			<value level="9">85</value>
+			<value level="10">90</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PAtk">
 				<amount>
-					<value level="1">3.2</value>
-					<value level="2">5.28</value>
-					<value level="3">6.48</value>
-					<value level="4">7.84</value>
-					<value level="5">9.36</value>
-					<value level="6">11.12</value>
-					<value level="7">13.04</value>
-					<value level="8">15.2</value>
-					<value level="9">17.52</value>
-					<value level="10">18.8</value>
-					<value level="11">20.08</value>
-					<value level="12">21.44</value>
-					<value level="13">22.88</value>
-					<value level="14">24.4</value>
-					<value level="15">25.92</value>
-					<value level="16">27.6</value>
-					<value level="17">29.28</value>
-					<value level="18">30.96</value>
-					<value level="19">32.8</value>
-					<value level="20">34.64</value>
-					<value level="21">36.56</value>
-					<value level="22">38.56</value>
-					<value level="23">40.64</value>
-					<value level="24">42.72</value>
-					<value level="25">44.88</value>
-					<value level="26">47.12</value>
-					<value level="27">49.44</value>
-					<value level="28">51.76</value>
-					<value level="29">54.16</value>
-					<value level="30">56.56</value>
-					<value level="31">59.04</value>
-					<value level="32">61.52</value>
-					<value level="33">64.08</value>
-					<value level="34">66.72</value>
-					<value level="35">69.36</value>
-					<value level="36">72</value>
-					<value level="37">74.64</value>
-					<value level="38">77.36</value>
-					<value level="39">80.08</value>
-					<value level="40">82.8</value>
-					<value level="41">85.52</value>
-					<value level="42">88.24</value>
-					<value level="43">90.96</value>
-					<value level="44">93.68</value>
-					<value level="45">96.4</value>
+					<value level="1">15</value>
+					<value level="2">30</value>
+					<value level="3">50</value>
+					<value level="4">70</value>
+					<value level="5">90</value>
+					<value level="6">110</value>
+					<value level="7">130</value>
+					<value level="8">160</value>
+					<value level="9">190</value>
+					<value level="10">220</value>
 				</amount>
 				<mode>DIFF</mode>
-				<weaponType>
-					<item>RAPIER</item>
-				</weaponType>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">0</value>
-					<value level="8">0</value>
-					<value level="9">15</value>
-					<value level="10">15</value>
-					<value level="11">15</value>
-					<value level="12">15</value>
-					<value level="13">15</value>
-					<value level="14">15</value>
-					<value level="15">15</value>
-					<value level="16">15</value>
-					<value level="17">15</value>
-					<value level="18">15</value>
-					<value level="19">15</value>
-					<value level="20">15</value>
-					<value level="21">15</value>
-					<value level="22">15</value>
-					<value level="23">15</value>
-					<value level="24">15</value>
-					<value level="25">15</value>
-					<value level="26">15</value>
-					<value level="27">15</value>
-					<value level="28">15</value>
-					<value level="29">15</value>
-					<value level="30">15</value>
-					<value level="31">15</value>
-					<value level="32">15</value>
-					<value level="33">15</value>
-					<value level="34">15</value>
-					<value level="35">15</value>
-					<value level="36">15</value>
-					<value level="37">15</value>
-					<value level="38">15</value>
-					<value level="39">15</value>
-					<value level="40">15</value>
-					<value level="41">15</value>
-					<value level="42">15</value>
-					<value level="43">15</value>
-					<value level="44">15</value>
-					<value level="45">15</value>
-				</amount>
-				<mode>PER</mode>
 				<weaponType>
 					<item>RAPIER</item>
 				</weaponType>

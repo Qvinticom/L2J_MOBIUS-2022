@@ -383,6 +383,23 @@
 		<hitTime>1000</hitTime>
 		<reuseDelay>900000</reuseDelay>
 		<mpConsume>50</mpConsume>
+		<itemConsumeCount>30</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<staticReuse>true</staticReuse>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpSoulMax" />
+		</conditions>
+		<effects>
+			<effect name="FocusSouls">
+				<charge>
+					<value level="1">70</value>
+					<value level="2">100</value>
+				</charge>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45152" toLevel="2" name="Collect Shadow Souls">
 		<!-- Collects $s1 Shadow Souls. Consumes $s2 Spirit Ores. -->
@@ -720,6 +737,7 @@
 		<icon>icon.skill0505</icon>
 		<operateType>A1</operateType>
 		<castRange>120</castRange>
+		<effectRange>400</effectRange>
 		<hitTime>1800</hitTime>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>
@@ -734,6 +752,18 @@
 			<value level="9">-445</value>
 			<value level="10">-470</value>
 		</effectPoint>
+		<magicLvl>
+			<value level="1">20</value>
+			<value level="2">30</value>
+			<value level="3">40</value>
+			<value level="4">50</value>
+			<value level="5">60</value>
+			<value level="6">70</value>
+			<value level="7">75</value>
+			<value level="8">80</value>
+			<value level="9">85</value>
+			<value level="10">90</value>
+		</magicLvl>
 		<mpConsume>
 			<value level="1">18</value>
 			<value level="2">25</value>
@@ -746,14 +776,57 @@
 			<value level="9">66</value>
 			<value level="10">70</value>
 		</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>RAPIER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="FatalBlow">
+				<power>
+					<value level="1">125</value>
+					<value level="2">237</value>
+					<value level="3">427</value>
+					<value level="4">726</value>
+					<value level="5">1162</value>
+					<value level="6">1744</value>
+					<value level="7">2441</value>
+					<value level="8">3174</value>
+					<value level="9">3809</value>
+					<value level="10">4190</value>
+				</power>
+				<overHit>true</overHit>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<chanceBoost>300</chanceBoost>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45161" toLevel="8" name="Soul Thrust">
-		<!-- Attacks 2 opponents with $s1 power added to P. Atk. Deals additional magic damage. M. Def. -10%. In PvE knocks the opponents back. Requires a rapier. Ignores Shield Defense. Critical, over-hit. -->
+		<!-- Attacks the opponents twice with $s1 power added to P. Atk. Deals additional magic damage. M. Def. -10%. In PvE knocks the opponents back. Requires a rapier. Ignores Shield Defense. Critical, over-hit. -->
 		<icon>icon.skill0478</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
 		<castRange>120</castRange>
+		<effectRange>400</effectRange>
 		<hitTime>2000</hitTime>
 		<reuseDelay>3000</reuseDelay>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">50</value>
+			<value level="3">60</value>
+			<value level="4">70</value>
+			<value level="5">75</value>
+			<value level="6">80</value>
+			<value level="7">85</value>
+			<value level="8">90</value>
+		</magicLvl>
 		<effectPoint>
 			<value level="1">-220</value>
 			<value level="2">-270</value>
@@ -774,6 +847,47 @@
 			<value level="7">66</value>
 			<value level="8">70</value>
 		</mpConsume>
+		<lvlBonusRate>20</lvlBonusRate>
+		<activateRate>100</activateRate>
+		<trait>KNOCKDOWN</trait>
+		<isDebuff>true</isDebuff>
+		<nextAction>ATTACK</nextAction>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>RAPIER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">259</value>
+					<value level="2">440</value>
+					<value level="3">704</value>
+					<value level="4">1056</value>
+					<value level="5">1478</value>
+					<value level="6">1921</value>
+					<value level="7">2305</value>
+					<value level="8">2536</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<criticalChance>15</criticalChance>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="KnockBack">
+				<distance>50</distance>
+				<speed>400</speed>
+				<knockDown>false</knockDown>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45162" toLevel="8" name="Ultimate Soul Thrust">
 		<!-- <Ultimate skill>\n\nAttacks 3 opponents with $s1 power added to P. Atk. Deals additional magic damage. M. Def. -10%. In PvE knocks the opponents back. Requires a rapier. Ignores Shield Defense. Critical, over-hit. -->
@@ -809,8 +923,19 @@
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<castRange>600</castRange>
+		<effectRange>1200</effectRange>
 		<hitTime>1500</hitTime>
 		<reuseDelay>2000</reuseDelay>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">50</value>
+			<value level="3">60</value>
+			<value level="4">70</value>
+			<value level="5">75</value>
+			<value level="6">80</value>
+			<value level="7">85</value>
+			<value level="8">90</value>
+		</magicLvl>
 		<effectPoint>
 			<value level="1">-500</value>
 			<value level="2">-600</value>
@@ -831,6 +956,30 @@
 			<value level="7">48</value>
 			<value level="8">52</value>
 		</mpConsume>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>RAPIER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">80</value>
+					<value level="2">90</value>
+					<value level="3">105</value>
+					<value level="4">120</value>
+					<value level="5">130</value>
+					<value level="6">140</value>
+					<value level="7">150</value>
+					<value level="8">165</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45164" toLevel="8" name="Ultimate Soul Spark">
 		<!-- <Ultimate skill>\n\nDeals 2 magic strikes to the target with $s1 power. Requires a rapier. -->
@@ -1391,13 +1540,24 @@
 	<skill id="45183" toLevel="1" name="Soul Chase">
 		<!-- Charges to the target, if the distance between the target and the character is more than 100. -->
 		<icon>icon.skill0479</icon>
-		<operateType>A1</operateType>
 		<castRange>300</castRange>
+		<effectRange>600</effectRange>
+		<magicLvl>40</magicLvl>
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-300</effectPoint>
 		<mpConsume>35</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<operateType>DA1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCheckCastRange">
+				<distance>100</distance>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="45184" toLevel="3" name="Potion Mastery">
 		<!-- HP Recovery Potions' Effect +$s1. -->
@@ -1409,16 +1569,7 @@
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<effects>
-			<effect name="AdditionalPotionHp">
-				<amount>
-					<value level="1">10</value>
-					<value level="2">20</value>
-					<value level="3">30</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
+		<!-- Effects are hardcoded. Leave as is. -->
 	</skill>
 	<skill id="45185" toLevel="1" name="Fatal Slasher">
 		<!-- When attacking, has a chance to deal an additional blow to the target. -->

@@ -2197,7 +2197,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1440" toLevel="5" name="Steal Divinity">
+	<skill id="1440" toLevel="3" name="Steal Divinity">
 		<!-- Steals up to $s1 of the enemy's abnormal statuses. Cannot steal buffs from monsters. -->
 		<icon>icon.skill1440</icon>
 		<castRange>600</castRange>
@@ -2206,33 +2206,21 @@
 			<value level="1">-541</value>
 			<value level="2">-566</value>
 			<value level="3">-597</value>
-			<value level="4">-624</value>
-			<value level="5">-646</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">55</value>
-			<value level="2">60</value>
-			<value level="3">64</value>
-			<value level="4">68</value>
-			<value level="5">72</value>
+			<value level="2">70</value>
+			<value level="3">80</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">40</value>
-			<value level="2">44</value>
-			<value level="3">48</value>
-			<value level="4">51</value>
-			<value level="5">53</value>
+			<value level="2">50</value>
+			<value level="3">60</value>
 		</mpConsume>
-		<mpInitialConsume>
-			<value level="1">10</value>
-			<value level="2">11</value>
-			<value level="3">12</value>
-			<value level="4">13</value>
-			<value level="5">14</value>
-		</mpInitialConsume>
+		<mpInitialConsume>10</mpInitialConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -2243,13 +2231,7 @@
 			<effect name="StealAbnormal">
 				<slot>BUFF</slot>
 				<rate>25</rate>
-				<max>
-					<value level="1">3</value>
-					<value level="2">4</value>
-					<value level="3">5</value>
-					<value level="4">6</value>
-					<value level="5">7</value>
-				</max>
+				<max>3</max>
 			</effect>
 		</effects>
 	</skill>
@@ -2391,6 +2373,7 @@
 		<!-- Atk. Spd. +$s1 when equipping a Rapier -->
 		<icon>icon.skill1444</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -2614,51 +2597,44 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1446" toLevel="11" name="Shadow Bind">
+	<skill id="1446" toLevel="5" name="Shadow Bind">
 		<!-- Catches the enemy's shadow and inflicts hold for $s1. -->
 		<icon>icon.skill1446</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>15</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<castRange>400</castRange>
+		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-495</value>
 			<value level="2">-523</value>
 			<value level="3">-549</value>
 			<value level="4">-566</value>
 			<value level="5">-582</value>
-			<value level="6">-597</value>
-			<value level="7">-611</value>
-			<value level="8">-624</value>
-			<value level="9">-635</value>
-			<value level="10">-646</value>
-			<value level="11">-655</value>
 		</effectPoint>
-		<effectRange>600</effectRange>
+		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
-			<value level="1">52</value>
-			<value level="2">55</value>
-			<value level="3">58</value>
-			<value level="4">60</value>
-			<value level="5">62</value>
-			<value level="6">64</value>
-			<value level="7">66</value>
-			<value level="8">68</value>
-			<value level="9">70</value>
-			<value level="10">72</value>
-			<value level="11">74</value>
+			<value level="1">76</value>
+			<value level="2">78</value>
+			<value level="3">80</value>
+			<value level="4">82</value>
+			<value level="5">84</value>
 		</magicLvl>
-		<mpConsume>20</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
+		<mpConsume>
+			<value level="1">30</value>
+			<value level="2">35</value>
+			<value level="3">40</value>
+			<value level="4">45</value>
+			<value level="5">50</value>
+		</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>8000</reuseDelay>
+		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>HOLD</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2670,47 +2646,44 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1447" toLevel="9" name="Voice Bind">
+	<skill id="1447" toLevel="5" name="Voice Bind">
 		<!-- Seals the enemy's voice, blocking their ability to cast magic for $s1. -->
 		<icon>icon.skill1447</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>20</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<castRange>400</castRange>
+		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-549</value>
 			<value level="2">-566</value>
 			<value level="3">-582</value>
 			<value level="4">-597</value>
 			<value level="5">-611</value>
-			<value level="6">-624</value>
-			<value level="7">-635</value>
-			<value level="8">-646</value>
-			<value level="9">-650</value>
 		</effectPoint>
-		<effectRange>600</effectRange>
+		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
-			<value level="1">58</value>
-			<value level="2">60</value>
-			<value level="3">62</value>
-			<value level="4">64</value>
-			<value level="5">66</value>
-			<value level="6">68</value>
-			<value level="7">70</value>
-			<value level="8">72</value>
-			<value level="9">74</value>
+			<value level="1">76</value>
+			<value level="2">78</value>
+			<value level="3">80</value>
+			<value level="4">82</value>
+			<value level="5">84</value>
 		</magicLvl>
-		<mpConsume>25</mpConsume>
-		<mpInitialConsume>15</mpInitialConsume>
+		<mpConsume>
+			<value level="1">30</value>
+			<value level="2">35</value>
+			<value level="3">40</value>
+			<value level="4">45</value>
+			<value level="5">50</value>
+		</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>8000</reuseDelay>
+		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
