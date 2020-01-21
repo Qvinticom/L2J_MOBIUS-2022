@@ -205,6 +205,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("MagicalSoulAttack", MagicalSoulAttack::new);
 		EffectHandler.getInstance().registerHandler("MagicCriticalDamage", MagicCriticalDamage::new);
 		EffectHandler.getInstance().registerHandler("MagicCriticalRate", MagicCriticalRate::new);
+		EffectHandler.getInstance().registerHandler("MagicCriticalRateByCriticalRate", MagicCriticalRateByCriticalRate::new);
 		EffectHandler.getInstance().registerHandler("MagicMpCost", MagicMpCost::new);
 		EffectHandler.getInstance().registerHandler("ManaCharge", ManaCharge::new);
 		EffectHandler.getInstance().registerHandler("ManaDamOverTime", ManaDamOverTime::new);
@@ -213,6 +214,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("ManaHealOverTime", ManaHealOverTime::new);
 		EffectHandler.getInstance().registerHandler("ManaHealPercent", ManaHealPercent::new);
 		EffectHandler.getInstance().registerHandler("MAtk", MAtk::new);
+		EffectHandler.getInstance().registerHandler("MAtkByPAtk", MAtkByPAtk::new);
 		EffectHandler.getInstance().registerHandler("MaxCp", MaxCp::new);
 		EffectHandler.getInstance().registerHandler("MaxHp", MaxHp::new);
 		EffectHandler.getInstance().registerHandler("MaxMp", MaxMp::new);

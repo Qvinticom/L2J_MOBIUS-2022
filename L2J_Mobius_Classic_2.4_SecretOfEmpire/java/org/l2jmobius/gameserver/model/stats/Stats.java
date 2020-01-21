@@ -124,6 +124,8 @@ public enum Stats
 	// FIXED BONUS
 	PVP_DAMAGE_TAKEN("pvpDamageTaken"),
 	PVE_DAMAGE_TAKEN("pveDamageTaken"),
+	PVE_DAMAGE_TAKEN_MONSTER("pveDamageTakenMonster"),
+	PVE_DAMAGE_TAKEN_RAID("pveDamageTakenRaid"),
 	
 	// ATTACK & DEFENCE RATES
 	MAGIC_CRITICAL_DAMAGE("mCritPower"),

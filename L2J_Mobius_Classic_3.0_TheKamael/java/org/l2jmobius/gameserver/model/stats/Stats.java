@@ -80,6 +80,7 @@ public enum Stats
 	MAGICAL_DEFENCE("mDef", new MDefenseFinalizer()),
 	PHYSICAL_ATTACK("pAtk", new PAttackFinalizer()),
 	MAGIC_ATTACK("mAtk", new MAttackFinalizer()),
+	MAGIC_ATTACK_BY_PHYSICAL_ATTACK("mAtkByPAtk"),
 	PHYSICAL_ATTACK_SPEED("pAtkSpd", new PAttackSpeedFinalizer()),
 	MAGIC_ATTACK_SPEED("mAtkSpd", new MAttackSpeedFinalizer()), // Magic Skill Casting Time Rate
 	ATK_REUSE("atkReuse"), // Bows Hits Reuse Rate
@@ -124,6 +125,8 @@ public enum Stats
 	// FIXED BONUS
 	PVP_DAMAGE_TAKEN("pvpDamageTaken"),
 	PVE_DAMAGE_TAKEN("pveDamageTaken"),
+	PVE_DAMAGE_TAKEN_MONSTER("pveDamageTakenMonster"),
+	PVE_DAMAGE_TAKEN_RAID("pveDamageTakenRaid"),
 	
 	// ATTACK & DEFENCE RATES
 	MAGIC_CRITICAL_DAMAGE("mCritPower"),
@@ -137,6 +140,7 @@ public enum Stats
 	CRITICAL_RATE("rCrit", new PCriticalRateFinalizer(), MathUtil::add, MathUtil::add, 0, 1),
 	CRITICAL_RATE_SKILL("rCritSkill", Stats::defaultValue, MathUtil::add, MathUtil::add, 0, 1),
 	MAGIC_CRITICAL_RATE("mCritRate", new MCritRateFinalizer()),
+	MAGIC_CRITICAL_RATE_BY_CRITICAL_RATE("mCritRateByRCrit"),
 	BLOW_RATE("blowRate"),
 	DEFENCE_CRITICAL_RATE("defCritRate"),
 	DEFENCE_CRITICAL_RATE_ADD("defCritRateAdd"),

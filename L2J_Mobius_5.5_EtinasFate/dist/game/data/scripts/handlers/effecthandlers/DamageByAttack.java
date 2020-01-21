@@ -63,6 +63,16 @@ public class DamageByAttack extends AbstractEffect
 				target.getStat().mergeAdd(Stats.PVE_DAMAGE_TAKEN, _value);
 				break;
 			}
+			case MOB:
+			{
+				target.getStat().mergeAdd(Stats.PVE_DAMAGE_TAKEN_MONSTER, _value);
+				break;
+			}
+			case BOSS:
+			{
+				target.getStat().mergeAdd(Stats.PVE_DAMAGE_TAKEN_RAID, _value);
+				break;
+			}
 		}
 	}
 }
