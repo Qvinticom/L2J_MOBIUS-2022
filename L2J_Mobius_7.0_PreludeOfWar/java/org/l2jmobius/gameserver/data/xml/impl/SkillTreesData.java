@@ -1461,14 +1461,15 @@ public class SkillTreesData implements IXmlReader
 		return result;
 	}
 	
-	public void cleanSkillUponAwakening(PlayerInstance player)
+	public void cleanSkillUponChangeClass(PlayerInstance player)
 	{
+		final ClassId currentClass = player.getClassId();
 		for (Skill skill : player.getAllSkills())
 		{
 			final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getId());
 			final long hashCode = SkillData.getSkillHashCode(skill.getId(), maxLvl);
 			
-			if (!isCurrentClassSkillNoParent(player.getClassId(), hashCode) && !isRemoveSkill(player.getClassId(), skill.getId()) && !isAwakenSaveSkill(player.getClassId(), skill.getId()) && !isAlchemySkill(skill.getId(), skill.getLevel()))
+			if (!isCurrentClassSkillNoParent(currentClass, hashCode) && !isRemoveSkill(currentClass, skill.getId()) && !isAwakenSaveSkill(currentClass, skill.getId()) && !isAlchemySkill(skill.getId(), skill.getLevel()))
 			{
 				player.removeSkill(skill, true, true);
 			}
