@@ -56,6 +56,7 @@ import quests.Q00553_OlympiadUndefeated.Q00553_OlympiadUndefeated;
 import quests.Q00561_BasicMissionHarnakUndergroundRuins.Q00561_BasicMissionHarnakUndergroundRuins;
 import quests.Q00564_BasicMissionKartiasLabyrinthSolo.Q00564_BasicMissionKartiasLabyrinthSolo;
 import quests.Q00567_BasicMissionIsleOfSouls.Q00567_BasicMissionIsleOfSouls;
+import quests.Q00569_BasicMissionSealOfShilen.Q00569_BasicMissionSealOfShilen;
 import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
 import quests.Q00600_KeyToTheRefiningProcess.Q00600_KeyToTheRefiningProcess;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
@@ -63,6 +64,7 @@ import quests.Q00620_FourGoblets.Q00620_FourGoblets;
 import quests.Q00670_DefeatingTheLordOfSeed.Q00670_DefeatingTheLordOfSeed;
 import quests.Q00674_ChangesInTheShadowOfTheMotherTree.Q00674_ChangesInTheShadowOfTheMotherTree;
 import quests.Q00675_WhatTheThreadOfThePastShows.Q00675_WhatTheThreadOfThePastShows;
+import quests.Q00682_TheStrongInTheClosedSpace.Q00682_TheStrongInTheClosedSpace;
 import quests.Q00726_LightWithinTheDarkness.Q00726_LightWithinTheDarkness;
 import quests.Q00727_HopeWithinTheDarkness.Q00727_HopeWithinTheDarkness;
 import quests.Q00737_ASwordHiddenInASmile.Q00737_ASwordHiddenInASmile;
@@ -193,6 +195,9 @@ import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.Q10857_SecretTeleport.Q10857_SecretTeleport;
 import quests.Q10891_AtANewPlace.Q10891_AtANewPlace;
 import quests.Q10892_RevengeOneStepAtATime.Q10892_RevengeOneStepAtATime;
+import quests.Q10896_VisitTheAdventureGuild.Q10896_VisitTheAdventureGuild;
+import quests.Q10897_ShowYourAbility.Q10897_ShowYourAbility;
+import quests.Q10898_TowardAGoal.Q10898_TowardAGoal;
 import quests.Q11025_PathOfDestinyProving.Q11025_PathOfDestinyProving;
 import quests.Q11026_PathOfDestinyConviction.Q11026_PathOfDestinyConviction;
 import quests.Q11027_PathOfDestinyOvercome.Q11027_PathOfDestinyOvercome;
@@ -225,7 +230,104 @@ import quests.custom.Q10519_ControllingYourTemper.Q10519_ControllingYourTemper;
 import quests.custom.Q10520_TempleGuardians.Q10520_TempleGuardians;
 import quests.custom.Q10529_IvoryTowersResearchFloatingSeaJournal.Q10529_IvoryTowersResearchFloatingSeaJournal;
 import quests.custom.Q10533_OrfensAmbition.Q10533_OrfensAmbition;
-import quests.not_done.*;
+import quests.not_done.Q00282_ADayOfKindnessAndCaring;
+import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
+import quests.not_done.Q00568_SpecialMissionNornilsCave;
+import quests.not_done.Q00570_SpecialMissionKartiasLabyrinthParty;
+import quests.not_done.Q00571_SpecialMissionProofOfUnityFieldRaid;
+import quests.not_done.Q00572_SpecialMissionProofOfCourageFieldRaid;
+import quests.not_done.Q00573_SpecialMissionProofOfStrengthFieldRaid;
+import quests.not_done.Q00574_SpecialMissionNornilsGarden;
+import quests.not_done.Q00576_SpecialMissionDefeatSpezion;
+import quests.not_done.Q00577_BasicMissionSilentValley;
+import quests.not_done.Q00578_BasicMissionCemetery;
+import quests.not_done.Q00585_CantGoAgainstTheTime;
+import quests.not_done.Q00586_MutatedCreatures;
+import quests.not_done.Q00587_MoreAggressiveOperation;
+import quests.not_done.Q00588_HeadOnCrash;
+import quests.not_done.Q00591_GreatAmbitions;
+import quests.not_done.Q00593_BasicMissionPaganTemple;
+import quests.not_done.Q00594_BasicMissionDimensionalRift;
+import quests.not_done.Q00595_SpecialMissionRaidersCrossroads;
+import quests.not_done.Q00596_SpecialMissionDefeatBaylor;
+import quests.not_done.Q00599_DemonsAndDimensionalEnergy;
+import quests.not_done.Q00655_AGrandPlanForTamingWildBeasts;
+import quests.not_done.Q00665_BasicTrainingForHunterGuildMember;
+import quests.not_done.Q00666_HunterGuildMembersKnowledge;
+import quests.not_done.Q00668_ABattleWithTheGiants;
+import quests.not_done.Q00669_DesperateFightWithTheDragons;
+import quests.not_done.Q00671_PathToFindingThePast;
+import quests.not_done.Q00672_ArchenemyEmbryo;
+import quests.not_done.Q00673_BelethAmbition;
+import quests.not_done.Q00749_TiesWithTheGuardians;
+import quests.not_done.Q00759_TheDwarvenNightmareContinues;
+import quests.not_done.Q00773_ToCalmTheFlood;
+import quests.not_done.Q00774_DreamingOfPeace;
+import quests.not_done.Q00780_UtilizeTheDarknessSeedOfInfinity;
+import quests.not_done.Q00781_UtilizeTheDarknessSeedOfAnnihilation;
+import quests.not_done.Q00782_UtilizeTheDarknessSeedOfHellfire;
+import quests.not_done.Q00824_AttackTheCommandPost;
+import quests.not_done.Q00836_RequestFromTheBlackbirdClan;
+import quests.not_done.Q00837_RequestFromTheGiantTrackers;
+import quests.not_done.Q00838_RequestFromTheMotherTreeGuardians;
+import quests.not_done.Q00839_RequestFromTheUnworldlyVisitors;
+import quests.not_done.Q00840_RequestFromTheKingdomsRoyalGuard;
+import quests.not_done.Q00843_GiantEvolutionControl;
+import quests.not_done.Q00845_SabotageTheEmbryoSupplies;
+import quests.not_done.Q00846_BuildingUpStrength;
+import quests.not_done.Q00929_SeekerRescue;
+import quests.not_done.Q00930_DisparagingThePhantoms;
+import quests.not_done.Q00985_AdventureGuildsSpecialRequestLv1;
+import quests.not_done.Q00986_AdventureGuildsSpecialRequestLv2;
+import quests.not_done.Q00987_AdventureGuildsSpecialRequestLv3;
+import quests.not_done.Q00988_AdventureGuildsSpecialRequestLv4;
+import quests.not_done.Q00989_AdventureGuildsSpecialRequestLv5;
+import quests.not_done.Q01900_StormIsleSecretSpot;
+import quests.not_done.Q01901_StormIsleFurtiveDeal;
+import quests.not_done.Q10298_WastelandQueen;
+import quests.not_done.Q10355_BlacksmithsSoul1;
+import quests.not_done.Q10356_BlacksmithsSoul2;
+import quests.not_done.Q10373_ExploringTheDimensionSealingTheDimension;
+import quests.not_done.Q10418_TheImmortalPirateKing;
+import quests.not_done.Q10423_EmbryoStrongholdRaid;
+import quests.not_done.Q10454_FinalEmbryoApostle;
+import quests.not_done.Q10457_KefensisIllusion;
+import quests.not_done.Q10514_NewPathToGlory;
+import quests.not_done.Q10515_NewWayForPride;
+import quests.not_done.Q10535_BlacksmithsSoul3;
+import quests.not_done.Q10567_SpecialMissionNornilsGarden;
+import quests.not_done.Q10570_HurrahForKamaelsIndependence;
+import quests.not_done.Q10572_ToExpelTheEmbryosForces;
+import quests.not_done.Q10594_FergasonsScheme;
+import quests.not_done.Q10595_TheDimensionalWarpPart8;
+import quests.not_done.Q10596_TheDimensionalWarpPart9;
+import quests.not_done.Q10673_ValentinesDayLucysReply;
+import quests.not_done.Q10748_MysteriousSuggestion1;
+import quests.not_done.Q10749_MysteriousSuggestion2;
+import quests.not_done.Q10845_BloodyBattleRescueTheSmiths;
+import quests.not_done.Q10846_BloodyBattleMeetingTheCommander;
+import quests.not_done.Q10848_TrialsBeforeTheBattle;
+import quests.not_done.Q10853_ToWeakenTheGiants;
+import quests.not_done.Q10854_ToSeizeTheFortress;
+import quests.not_done.Q10873_ExaltedReachingAnotherLevel;
+import quests.not_done.Q10874_AgainstTheNewEnemy;
+import quests.not_done.Q10875_ForReputation;
+import quests.not_done.Q10876_LeadersGrace;
+import quests.not_done.Q10877_BreakThroughCrisis;
+import quests.not_done.Q10879_ExaltedGuideToPower;
+import quests.not_done.Q10880_TheLastOneStanding;
+import quests.not_done.Q10881_ForThePride;
+import quests.not_done.Q10882_VictoryCollection;
+import quests.not_done.Q10883_ImmortalHonor;
+import quests.not_done.Q10886_SaviorsPathSearchTheRefinery;
+import quests.not_done.Q10887_SaviorsPathDemonsAndAtelia;
+import quests.not_done.Q10888_SaviorsPathDefeatTheEmbryo;
+import quests.not_done.Q10889_SaviorsPathFallenEmperorsThrone;
+import quests.not_done.Q10890_SaviorsPathFallOfEtina;
+import quests.not_done.Q10893_EndOfTwistedFate;
+import quests.not_done.Q10899_VeteranAdventurer;
+import quests.not_done.Q10900_PathToStrength;
+import quests.not_done.Q10901_AModelAdventurer;
 
 /**
  * @author NosBit
@@ -278,7 +380,7 @@ public class QuestMasterHandler
 		Q00564_BasicMissionKartiasLabyrinthSolo.class,
 		Q00567_BasicMissionIsleOfSouls.class,
 		Q00568_SpecialMissionNornilsCave.class, // TODO: Not done.
-		Q00569_BasicMissionSealOfShilen.class, // TODO: Not done.
+		Q00569_BasicMissionSealOfShilen.class,
 		Q00570_SpecialMissionKartiasLabyrinthParty.class, // TODO: Not done.
 		Q00571_SpecialMissionProofOfUnityFieldRaid.class, // TODO: Not done.
 		Q00572_SpecialMissionProofOfCourageFieldRaid.class, // TODO: Not done.
@@ -314,7 +416,7 @@ public class QuestMasterHandler
 		Q00673_BelethAmbition.class, // TODO: Not done.
 		Q00674_ChangesInTheShadowOfTheMotherTree.class,
 		Q00675_WhatTheThreadOfThePastShows.class,
-		Q00682_TheStrongInTheClosedSpace.class, // TODO: Not done.
+		Q00682_TheStrongInTheClosedSpace.class,
 		Q00683_AdventOfKrofinSubspecies.class, // FIXME: Custom.
 		Q00684_DisturbedFields.class, // FIXME: Custom.
 		Q00726_LightWithinTheDarkness.class,
@@ -520,9 +622,9 @@ public class QuestMasterHandler
 		Q10891_AtANewPlace.class,
 		Q10892_RevengeOneStepAtATime.class,
 		Q10893_EndOfTwistedFate.class, // TODO: Not done.
-		Q10896_VisitTheAdventureGuild.class, // TODO: Not done.
-		Q10897_ShowYourAbility.class, // TODO: Not done.
-		Q10898_TowardAGoal.class, // TODO: Not done.
+		Q10896_VisitTheAdventureGuild.class,
+		Q10897_ShowYourAbility.class,
+		Q10898_TowardAGoal.class,
 		Q10899_VeteranAdventurer.class, // TODO: Not done.
 		Q10900_PathToStrength.class, // TODO: Not done.
 		Q10901_AModelAdventurer.class, // TODO: Not done.

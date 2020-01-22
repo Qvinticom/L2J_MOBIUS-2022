@@ -122,6 +122,7 @@ import quests.Q00564_BasicMissionKartiasLabyrinthSolo.Q00564_BasicMissionKartias
 import quests.Q00565_BasicMissionFairySettlementWest.Q00565_BasicMissionFairySettlementWest;
 import quests.Q00566_BasicMissionFairySettlementEast.Q00566_BasicMissionFairySettlementEast;
 import quests.Q00567_BasicMissionIsleOfSouls.Q00567_BasicMissionIsleOfSouls;
+import quests.Q00569_BasicMissionSealOfShilen.Q00569_BasicMissionSealOfShilen;
 import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
 import quests.Q00581_ThePurificationRitual.Q00581_ThePurificationRitual;
 import quests.Q00582_WashBloodWithBlood.Q00582_WashBloodWithBlood;
@@ -141,6 +142,7 @@ import quests.Q00663_SeductiveWhispers.Q00663_SeductiveWhispers;
 import quests.Q00670_DefeatingTheLordOfSeed.Q00670_DefeatingTheLordOfSeed;
 import quests.Q00674_ChangesInTheShadowOfTheMotherTree.Q00674_ChangesInTheShadowOfTheMotherTree;
 import quests.Q00675_WhatTheThreadOfThePastShows.Q00675_WhatTheThreadOfThePastShows;
+import quests.Q00682_TheStrongInTheClosedSpace.Q00682_TheStrongInTheClosedSpace;
 import quests.Q00726_LightWithinTheDarkness.Q00726_LightWithinTheDarkness;
 import quests.Q00727_HopeWithinTheDarkness.Q00727_HopeWithinTheDarkness;
 import quests.Q00737_ASwordHiddenInASmile.Q00737_ASwordHiddenInASmile;
@@ -449,6 +451,9 @@ import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.Q10857_SecretTeleport.Q10857_SecretTeleport;
 import quests.Q10891_AtANewPlace.Q10891_AtANewPlace;
 import quests.Q10892_RevengeOneStepAtATime.Q10892_RevengeOneStepAtATime;
+import quests.Q10896_VisitTheAdventureGuild.Q10896_VisitTheAdventureGuild;
+import quests.Q10897_ShowYourAbility.Q10897_ShowYourAbility;
+import quests.Q10898_TowardAGoal.Q10898_TowardAGoal;
 import quests.custom.Q00529_RegularBarrierMaintenance.Q00529_RegularBarrierMaintenance;
 import quests.custom.Q00560_HowToOvercomeFear.Q00560_HowToOvercomeFear;
 import quests.custom.Q00589_ASecretChange.Q00589_ASecretChange;
@@ -580,7 +585,7 @@ public class QuestMasterHandler
 		Q00566_BasicMissionFairySettlementEast.class,
 		Q00567_BasicMissionIsleOfSouls.class,
 		Q00568_SpecialMissionNornilsCave.class, // TODO: Not done.
-		Q00569_BasicMissionSealOfShilen.class, // TODO: Not done.
+		Q00569_BasicMissionSealOfShilen.class,
 		Q00570_SpecialMissionKartiasLabyrinthParty.class, // TODO: Not done.
 		Q00571_SpecialMissionProofOfUnityFieldRaid.class, // TODO: Not done.
 		Q00572_SpecialMissionProofOfCourageFieldRaid.class, // TODO: Not done.
@@ -630,7 +635,7 @@ public class QuestMasterHandler
 		Q00673_BelethAmbition.class, // TODO: Not done.
 		Q00674_ChangesInTheShadowOfTheMotherTree.class,
 		Q00675_WhatTheThreadOfThePastShows.class,
-		Q00682_TheStrongInTheClosedSpace.class, // TODO: Not done.
+		Q00682_TheStrongInTheClosedSpace.class,
 		Q00683_AdventOfKrofinSubspecies.class, // FIXME: Custom.
 		Q00684_DisturbedFields.class, // FIXME: Custom.
 		Q00726_LightWithinTheDarkness.class,
@@ -1032,9 +1037,9 @@ public class QuestMasterHandler
 		Q10892_RevengeOneStepAtATime.class,
 		Q10893_EndOfTwistedFate.class, // TODO: Not done.
 		Q10895_RestrainQueenKrosha.class, // TODO: Not done.
-		Q10896_VisitTheAdventureGuild.class, // TODO: Not done.
-		Q10897_ShowYourAbility.class, // TODO: Not done.
-		Q10898_TowardAGoal.class, // TODO: Not done.
+		Q10896_VisitTheAdventureGuild.class,
+		Q10897_ShowYourAbility.class,
+		Q10898_TowardAGoal.class,
 		Q10899_VeteranAdventurer.class, // TODO: Not done.
 		Q10900_PathToStrength.class, // TODO: Not done.
 		Q10901_AModelAdventurer.class, // TODO: Not done.
