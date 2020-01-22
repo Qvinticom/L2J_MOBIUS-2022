@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets.classchange;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.base.ClassId;
@@ -93,7 +94,7 @@ public class ExRequestClassChange implements IClientIncomingPacket
 			{
 				player.setBaseClass(player.getActiveClass());
 			}
-			
+			SkillTreesData.getInstance().cleanSkillUponChangeClass(player);
 			if (Config.AUTO_LEARN_SKILLS)
 			{
 				player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
