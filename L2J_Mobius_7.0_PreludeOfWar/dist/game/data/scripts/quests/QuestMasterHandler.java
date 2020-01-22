@@ -58,6 +58,7 @@ import quests.Q00564_BasicMissionKartiasLabyrinthSolo.Q00564_BasicMissionKartias
 import quests.Q00567_BasicMissionIsleOfSouls.Q00567_BasicMissionIsleOfSouls;
 import quests.Q00569_BasicMissionSealOfShilen.Q00569_BasicMissionSealOfShilen;
 import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
+import quests.Q00587_MoreAggressiveOperation.Q00587_MoreAggressiveOperation;
 import quests.Q00600_KeyToTheRefiningProcess.Q00600_KeyToTheRefiningProcess;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
 import quests.Q00620_FourGoblets.Q00620_FourGoblets;
@@ -243,7 +244,6 @@ import quests.not_done.Q00577_BasicMissionSilentValley;
 import quests.not_done.Q00578_BasicMissionCemetery;
 import quests.not_done.Q00585_CantGoAgainstTheTime;
 import quests.not_done.Q00586_MutatedCreatures;
-import quests.not_done.Q00587_MoreAggressiveOperation;
 import quests.not_done.Q00588_HeadOnCrash;
 import quests.not_done.Q00591_GreatAmbitions;
 import quests.not_done.Q00593_BasicMissionPaganTemple;
@@ -392,7 +392,7 @@ public class QuestMasterHandler
 		Q00580_BeyondTheMemories.class,
 		Q00585_CantGoAgainstTheTime.class, // TODO: Not done.
 		Q00586_MutatedCreatures.class, // TODO: Not done.
-		Q00587_MoreAggressiveOperation.class, // TODO: Not done.
+		Q00587_MoreAggressiveOperation.class,
 		Q00588_HeadOnCrash.class, // TODO: Not done.
 		Q00589_ASecretChange.class, // FIXME: Custom.
 		Q00590_ToEachTheirOwn.class, // FIXME: Custom.

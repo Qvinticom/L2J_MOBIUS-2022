@@ -128,6 +128,7 @@ import quests.Q00581_ThePurificationRitual.Q00581_ThePurificationRitual;
 import quests.Q00582_WashBloodWithBlood.Q00582_WashBloodWithBlood;
 import quests.Q00583_MeaningOfSurvival.Q00583_MeaningOfSurvival;
 import quests.Q00584_NeverSayGoodBye.Q00584_NeverSayGoodBye;
+import quests.Q00587_MoreAggressiveOperation.Q00587_MoreAggressiveOperation;
 import quests.Q00600_KeyToTheRefiningProcess.Q00600_KeyToTheRefiningProcess;
 import quests.Q00617_GatherTheFlames.Q00617_GatherTheFlames;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
@@ -586,7 +587,7 @@ public class QuestMasterHandler
 		Q00584_NeverSayGoodBye.class,
 		Q00585_CantGoAgainstTheTime.class, // TODO: Not done.
 		Q00586_MutatedCreatures.class, // TODO: Not done.
-		Q00587_MoreAggressiveOperation.class, // TODO: Not done.
+		Q00587_MoreAggressiveOperation.class,
 		Q00588_HeadOnCrash.class, // TODO: Not done.
 		Q00589_ASecretChange.class, // FIXME: Custom.
 		Q00590_ToEachTheirOwn.class, // FIXME: Custom.
