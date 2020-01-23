@@ -52,7 +52,14 @@ public class ExRequestTeleport implements IClientIncomingPacket
 		final TeleportListHolder teleport = TeleportListData.getInstance().getTeleport(_teleportId);
 		if (teleport == null)
 		{
-			LOGGER.info("No registered teleport location for id: " + _teleportId);
+			LOGGER.warning("No registered teleport location for id: " + _teleportId);
+			return;
+		}
+		
+		// Players should use Scroll of Escape to exit hunting zones.
+		if (player.isInTimedHuntingZone())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_RIGHT_NOW);
 			return;
 		}
 		
