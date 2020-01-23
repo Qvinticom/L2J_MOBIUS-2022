@@ -817,6 +817,7 @@ public class Config
 	public static List<String> TELNET_HOSTS;
 	public static int TELNET_PORT;
 	public static long TIME_LIMITED_ZONE_INITIAL_TIME;
+	public static long TIME_LIMITED_MAX_ADDED_TIME;
 	public static long TIME_LIMITED_ZONE_RESET_DELAY;
 	public static long TIME_LIMITED_ZONE_TELEPORT_FEE;
 	public static boolean TRAINING_CAMP_ENABLE;
@@ -1980,6 +1981,7 @@ public class Config
 			final PropertiesParser timeLimitedZoneSettings = new PropertiesParser(TIME_LIMITED_ZONE_CONFIG_FILE);
 			
 			TIME_LIMITED_ZONE_INITIAL_TIME = timeLimitedZoneSettings.getLong("InitialTime", 3600000);
+			TIME_LIMITED_MAX_ADDED_TIME = timeLimitedZoneSettings.getLong("MaximumAddedTime", 18000000);
 			TIME_LIMITED_ZONE_RESET_DELAY = timeLimitedZoneSettings.getLong("ResetDelay", 36000000);
 			TIME_LIMITED_ZONE_TELEPORT_FEE = timeLimitedZoneSettings.getLong("TeleportFee", 150000);
 			
