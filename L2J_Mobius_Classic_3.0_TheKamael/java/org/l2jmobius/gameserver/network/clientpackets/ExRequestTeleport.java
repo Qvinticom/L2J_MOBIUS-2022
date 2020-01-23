@@ -56,8 +56,8 @@ public class ExRequestTeleport implements IClientIncomingPacket
 			return;
 		}
 		
-		// Players should use Scroll of Escape to exit hunting zones.
-		if (player.isInTimedHuntingZone())
+		// Players should not be able to teleport out of special locations.
+		if (player.isInInstance() || player.isOnEvent() || player.isInOlympiadMode() || player.inObserverMode() || player.isInTraingCamp() || player.isInTimedHuntingZone())
 		{
 			player.sendMessage("You cannot teleport right now.");
 			return;
