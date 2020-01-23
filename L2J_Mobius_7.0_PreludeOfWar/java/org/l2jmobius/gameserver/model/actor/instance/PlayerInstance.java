@@ -14222,17 +14222,39 @@ public class PlayerInstance extends Playable
 	
 	public boolean isInTimedHuntingZone()
 	{
+		return isInTimedHuntingZone(1) // Storm Isle
+			|| isInTimedHuntingZone(6); // Primeval Isle
+	}
+	
+	public boolean isInTimedHuntingZone(int zoneId)
+	{
 		final int x = ((getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
 		final int y = ((getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
-		if (((x == 25) && (y == 23)) // Storm Isle.
-			|| ((x == 20) && (y == 17))) // Primeval Isle.
+		
+		switch (zoneId)
 		{
-			return true;
+			case 1: // Storm Isle
+			{
+				if ((x == 25) && (y == 23))
+				{
+					return true;
+				}
+				break;
+			}
+			case 6: // Primeval Isle
+			{
+				if ((x == 20) && (y == 17))
+				{
+					return true;
+				}
+				break;
+			}
 		}
+		
 		return false;
 	}
 	
-	public void startTimedHuntingZone(long delay)
+	public void startTimedHuntingZone(int zoneId, long delay)
 	{
 		// TODO: Delay window.
 		// sendPacket(new TimedHuntingZoneEnter((int) (delay / 60 / 1000)));
@@ -14241,7 +14263,7 @@ public class PlayerInstance extends Playable
 		
 		_timedHuntingZoneFinishTask = ThreadPool.schedule(() ->
 		{
-			if ((isOnlineInt() > 0) && isInTimedHuntingZone())
+			if ((isOnlineInt() > 0) && isInTimedHuntingZone(zoneId))
 			{
 				sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
 				abortCast();

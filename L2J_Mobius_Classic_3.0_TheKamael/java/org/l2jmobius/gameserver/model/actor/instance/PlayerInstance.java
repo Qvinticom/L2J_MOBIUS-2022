@@ -14168,16 +14168,30 @@ public class PlayerInstance extends Playable
 	
 	public boolean isInTimedHuntingZone()
 	{
+		return isInTimedHuntingZone(2); // Storm Isle
+	}
+	
+	public boolean isInTimedHuntingZone(int zoneId)
+	{
 		final int x = ((getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
 		final int y = ((getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
-		if ((x == 20) && (y == 15)) // Ancient Pirates' Tomb.
+		
+		switch (zoneId)
 		{
-			return true;
+			case 2: // Ancient Pirates' Tomb.
+			{
+				if ((x == 20) && (y == 15))
+				{
+					return true;
+				}
+				break;
+			}
 		}
+		
 		return false;
 	}
 	
-	public void startTimedHuntingZone(long delay)
+	public void startTimedHuntingZone(int zoneId, long delay)
 	{
 		// TODO: Delay window.
 		// sendPacket(new TimedHuntingZoneEnter((int) (delay / 60 / 1000)));
@@ -14186,7 +14200,7 @@ public class PlayerInstance extends Playable
 		
 		_timedHuntingZoneFinishTask = ThreadPool.schedule(() ->
 		{
-			if ((isOnlineInt() > 0) && isInTimedHuntingZone())
+			if ((isOnlineInt() > 0) && isInTimedHuntingZone(zoneId))
 			{
 				sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
 				abortCast();

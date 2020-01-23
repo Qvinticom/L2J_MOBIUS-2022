@@ -29,12 +29,12 @@ import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
  */
 public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 {
-	private int _fieldId;
+	private int _zoneId;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		_fieldId = packet.readD();
+		_zoneId = packet.readD();
 		return true;
 	}
 	
@@ -73,7 +73,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME, 0) > System.currentTimeMillis())
+		if (player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, 0) > System.currentTimeMillis())
 		{
 			if (player.isInTimedHuntingZone())
 			{
@@ -86,18 +86,18 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			return;
 		}
 		
-		if (((_fieldId == 1) && (player.getLevel() < 100)) //
-			|| ((_fieldId == 6) && (player.getLevel() < 105)) //
+		if (((_zoneId == 1) && (player.getLevel() < 100)) //
+			|| ((_zoneId == 6) && (player.getLevel() < 105)) //
 		)
 		{
-			player.sendMessage("Your level is too low.");
+			player.sendMessage("Your level does not corespont the zone equivalent.");
 		}
 		
 		if (player.getAdena() > 150000)
 		{
 			player.reduceAdena("TimedHuntingZone", 150000, player, true);
-			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME, System.currentTimeMillis() + 18000000); // 300 minutes
-			switch (_fieldId)
+			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, System.currentTimeMillis() + 18000000); // 300 minutes
+			switch (_zoneId)
 			{
 				case 1: // Storm Isle
 				{
@@ -110,7 +110,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 					break;
 				}
 			}
-			player.startTimedHuntingZone(18000000); // 300 minutes
+			player.startTimedHuntingZone(_zoneId, 18000000); // 300 minutes
 		}
 		else
 		{

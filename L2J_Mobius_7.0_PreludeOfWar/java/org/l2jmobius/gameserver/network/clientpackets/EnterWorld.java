@@ -648,10 +648,15 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		
 		// Check if in time limited hunting zone.
-		final long exitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME, 0);
-		if (exitTime > System.currentTimeMillis())
+		final long stormIsleExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 1, 0);
+		final long primevalIsleExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 6, 0);
+		if (stormIsleExitTime > System.currentTimeMillis())
 		{
-			player.startTimedHuntingZone(exitTime - System.currentTimeMillis());
+			player.startTimedHuntingZone(1, stormIsleExitTime - System.currentTimeMillis());
+		}
+		else if (primevalIsleExitTime > System.currentTimeMillis())
+		{
+			player.startTimedHuntingZone(6, primevalIsleExitTime - System.currentTimeMillis());
 		}
 		else if (player.isInTimedHuntingZone())
 		{

@@ -63,7 +63,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String FORTUNE_TELLING_VARIABLE = "FortuneTelling";
 	public static final String FORTUNE_TELLING_BLACK_CAT_VARIABLE = "FortuneTellingBlackCat";
 	public static final String DELUSION_RETURN = "DELUSION_RETURN";
-	public static final String HUNTING_ZONE_RESET_TIME = "HUNTING_ZONE_RESET_TIME";
+	public static final String HUNTING_ZONE_RESET_TIME = "HUNTING_ZONE_RESET_TIME_";
 	
 	private final int _objectId;
 	
