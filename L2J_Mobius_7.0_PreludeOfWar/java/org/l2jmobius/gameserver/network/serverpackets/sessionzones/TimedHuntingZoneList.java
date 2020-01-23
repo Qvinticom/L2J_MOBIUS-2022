@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.sessionzones;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
@@ -49,19 +50,19 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		// Storm Isle
 		packet.writeD(1); // required item count
 		packet.writeD(57); // item id
-		packet.writeQ(150000); // item count
+		packet.writeQ(Config.TIME_LIMITED_ZONE_TELEPORT_FEE); // item count
 		packet.writeD(1); // reset cycle
 		packet.writeD(1); // zone id
 		packet.writeD(100); // min level
 		packet.writeD(120); // max level
 		packet.writeD(0); // remain time base?
 		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 1, 0);
-		if ((endTime + 18000000) < currentTime)
+		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		{
-			endTime = currentTime + 18000000;
+			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
 		}
 		packet.writeD((int) (Math.max(endTime - currentTime, 0)) / 1000); // remain time
-		packet.writeD(18000); // remain time max
+		packet.writeD(18000); // TODO: remain time max
 		packet.writeD(3600); // remain refill time
 		packet.writeD(3600); // refill time max
 		packet.writeC(_isInTimedHuntingZone ? 0 : 1); // field activated
@@ -69,19 +70,19 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		// Primeval Isle
 		packet.writeD(1); // required item count
 		packet.writeD(57); // item id
-		packet.writeQ(150000); // item count
+		packet.writeQ(Config.TIME_LIMITED_ZONE_TELEPORT_FEE); // item count
 		packet.writeD(1); // reset cycle
 		packet.writeD(6); // zone id
 		packet.writeD(105); // min level
 		packet.writeD(120); // max level
 		packet.writeD(0); // remain time base?
 		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 6, 0);
-		if ((endTime + 18000000) < currentTime)
+		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		{
-			endTime = currentTime + 18000000;
+			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
 		}
 		packet.writeD((int) (Math.max(endTime - currentTime, 0)) / 1000); // remain time
-		packet.writeD(18000); // remain time max
+		packet.writeD(18000); // TODO: remain time max
 		packet.writeD(3600); // remain refill time
 		packet.writeD(3600); // refill time max
 		packet.writeC(_isInTimedHuntingZone ? 0 : 1); // field activated

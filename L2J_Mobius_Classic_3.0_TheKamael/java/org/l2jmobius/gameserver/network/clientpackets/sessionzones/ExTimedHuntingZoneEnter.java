@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.sessionzones;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
@@ -79,16 +80,16 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 		
 		final long currentTime = System.currentTimeMillis();
 		long endTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, 0);
-		if ((endTime + 18000000) < currentTime)
+		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		{
-			endTime = currentTime + 18000000; // 300 minutes
+			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
 		}
 		
 		if (endTime > currentTime)
 		{
-			if (player.getAdena() > 10000)
+			if (player.getAdena() > Config.TIME_LIMITED_ZONE_TELEPORT_FEE)
 			{
-				player.reduceAdena("TimedHuntingZone", 10000, player, true);
+				player.reduceAdena("TimedHuntingZone", Config.TIME_LIMITED_ZONE_TELEPORT_FEE, player, true);
 			}
 			else
 			{

@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -64,9 +65,9 @@ public class AddHuntingTime extends AbstractEffect
 		else
 		{
 			long endTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, 0);
-			if ((endTime + 18000000) < currentTime)
+			if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 			{
-				endTime = currentTime + 18000000;
+				endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
 			}
 			else if (endTime < currentTime)
 			{
