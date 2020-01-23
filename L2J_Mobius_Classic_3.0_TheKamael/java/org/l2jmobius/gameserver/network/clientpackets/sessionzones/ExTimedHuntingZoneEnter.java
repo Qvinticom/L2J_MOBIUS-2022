@@ -28,10 +28,12 @@ import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
  */
 public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 {
+	private int _fieldId;
+	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		packet.readD(); // Zone id.
+		_fieldId = packet.readD();
 		return true;
 	}
 	
@@ -83,7 +85,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.getLevel() < 78)
+		if ((_fieldId == 2) && (player.getLevel() < 78))
 		{
 			player.sendMessage("Your level is too low.");
 		}
@@ -92,7 +94,14 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 		{
 			player.reduceAdena("TimedHuntingZone", 10000, player, true);
 			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME, System.currentTimeMillis() + 18000000); // 300 minutes
-			player.teleToLocation(13181, -78651, -5977); // Ancient Pirates' Tomb
+			switch (_fieldId)
+			{
+				case 2: // Ancient Pirates' Tomb
+				{
+					player.teleToLocation(13181, -78651, -5977);
+					break;
+				}
+			}
 			player.startTimedHuntingZone(18000000); // 300 minutes
 		}
 		else

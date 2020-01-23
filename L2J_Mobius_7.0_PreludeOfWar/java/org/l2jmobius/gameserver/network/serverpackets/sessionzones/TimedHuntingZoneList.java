@@ -16,17 +16,21 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.sessionzones;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
+/**
+ * @author Mobius
+ */
 public class TimedHuntingZoneList implements IClientOutgoingPacket
 {
-	public TimedHuntingZoneList()
+	private final PlayerInstance _player;
+	
+	public TimedHuntingZoneList(PlayerInstance player)
 	{
+		_player = player;
 	}
 	
 	@Override
@@ -34,78 +38,38 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_TIME_RESTRICT_FIELD_LIST.writeId(packet);
 		
-		final List<TimeRestrictedFieldInfo> infos = new ArrayList<>();
+		packet.writeD(2); // zone count
 		
-		addField(infos);
+		// Isle of Storms
+		packet.writeD(1); // required item count
+		packet.writeD(57); // item id
+		packet.writeQ(150000); // item count
+		packet.writeD(1); // reset cycle
+		packet.writeD(1); // field id
+		packet.writeD(100); // min level
+		packet.writeD(120); // max level
+		packet.writeD(3600); // remain time base
+		packet.writeD(3600); // remain time
+		packet.writeD(21600); // remain time max
+		packet.writeD(18000); // remain refill time
+		packet.writeD(18000); // refill time max
+		packet.writeC(_player.isInTimedHuntingZone() ? 0 : 1); // field activated
 		
-		packet.writeD(infos.size());
-		
-		for (TimeRestrictedFieldInfo info : infos)
-		{
-			packet.writeD(info.requiredItems.size());
-			
-			for (FieldRequiredItem item : info.requiredItems)
-			{
-				packet.writeD(item.itemId);
-				packet.writeQ(item.count);
-			}
-			
-			packet.writeD(info.resetCycle);
-			packet.writeD(info.fieldId);
-			packet.writeD(info.minLevel);
-			packet.writeD(info.maxLevel);
-			packet.writeD(info.remainTimeBase);
-			packet.writeD(info.remainTime);
-			packet.writeD(info.remainTimeMax);
-			packet.writeD(info.remainRefillTime);
-			packet.writeD(info.refillTimeMax);
-			packet.writeC(info.fieldActivated ? 1 : 0);
-		}
+		// Primeval Isle
+		packet.writeD(1); // required item count
+		packet.writeD(57); // item id
+		packet.writeQ(150000); // item count
+		packet.writeD(1); // reset cycle
+		packet.writeD(6); // field id
+		packet.writeD(105); // min level
+		packet.writeD(120); // max level
+		packet.writeD(3600); // remain time base
+		packet.writeD(3600); // remain time
+		packet.writeD(21600); // remain time max
+		packet.writeD(18000); // remain refill time
+		packet.writeD(18000); // refill time max
+		packet.writeC(_player.isInTimedHuntingZone() ? 0 : 1); // field activated
 		
 		return true;
-	}
-	
-	private void addField(List<TimeRestrictedFieldInfo> infos)
-	{
-		final TimeRestrictedFieldInfo field = new TimeRestrictedFieldInfo();
-		field.resetCycle = 1;
-		field.fieldId = 1;
-		field.minLevel = 100;
-		field.maxLevel = 120;
-		field.remainTimeBase = 3600;
-		field.remainTime = 3600;
-		field.remainTimeMax = 21600;
-		field.remainRefillTime = 18000;
-		field.refillTimeMax = 18000;
-		field.fieldActivated = true;
-		
-		final FieldRequiredItem item = new FieldRequiredItem();
-		item.itemId = 57;
-		item.count = 150000;
-		
-		field.requiredItems = List.of(item);
-		infos.add(field);
-	}
-	
-	static class TimeRestrictedFieldInfo
-	{
-		List<FieldRequiredItem> requiredItems;
-		int resetCycle;
-		int fieldId;
-		int minLevel;
-		int maxLevel;
-		int remainTimeBase;
-		int remainTime;
-		int remainTimeMax;
-		int remainRefillTime;
-		int refillTimeMax;
-		boolean fieldActivated;
-		
-	}
-	
-	static class FieldRequiredItem
-	{
-		int itemId;
-		long count;
 	}
 }

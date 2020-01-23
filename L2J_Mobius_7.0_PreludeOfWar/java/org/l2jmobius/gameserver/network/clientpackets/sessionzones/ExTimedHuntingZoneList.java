@@ -22,6 +22,9 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneList;
 
+/**
+ * @author Mobius
+ */
 public class ExTimedHuntingZoneList implements IClientIncomingPacket
 {
 	@Override
@@ -39,6 +42,6 @@ public class ExTimedHuntingZoneList implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new TimedHuntingZoneList());
+		client.sendPacket(new TimedHuntingZoneList(player));
 	}
 }

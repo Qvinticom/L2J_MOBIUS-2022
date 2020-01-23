@@ -14224,7 +14224,8 @@ public class PlayerInstance extends Playable
 	{
 		final int x = ((getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
 		final int y = ((getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
-		if ((x == 25) && (y == 23)) // Storm Isle.
+		if (((x == 25) && (y == 23)) // Storm Isle.
+			|| ((x == 20) && (y == 17))) // Primeval Isle.
 		{
 			return true;
 		}

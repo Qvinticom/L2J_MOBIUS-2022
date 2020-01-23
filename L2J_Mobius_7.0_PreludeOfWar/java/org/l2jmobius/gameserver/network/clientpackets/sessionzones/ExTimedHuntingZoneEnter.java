@@ -29,10 +29,12 @@ import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
  */
 public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 {
+	private int _fieldId;
+	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		packet.readD(); // Zone id.
+		_fieldId = packet.readD();
 		return true;
 	}
 	
@@ -84,7 +86,9 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.getLevel() < 100)
+		if (((_fieldId == 1) && (player.getLevel() < 100)) //
+			|| ((_fieldId == 6) && (player.getLevel() < 105)) //
+		)
 		{
 			player.sendMessage("Your level is too low.");
 		}
@@ -93,7 +97,19 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 		{
 			player.reduceAdena("TimedHuntingZone", 150000, player, true);
 			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME, System.currentTimeMillis() + 18000000); // 300 minutes
-			player.teleToLocation(194291, 176604, -1888); // Storm Isle
+			switch (_fieldId)
+			{
+				case 1: // Storm Isle
+				{
+					player.teleToLocation(194291, 176604, -1888);
+					break;
+				}
+				case 6: // Primeval Isle
+				{
+					player.teleToLocation(9400, -21720, -3634);
+					break;
+				}
+			}
 			player.startTimedHuntingZone(18000000); // 300 minutes
 		}
 		else
