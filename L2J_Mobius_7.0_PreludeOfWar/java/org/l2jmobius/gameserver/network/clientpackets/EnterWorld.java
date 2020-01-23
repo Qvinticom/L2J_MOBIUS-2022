@@ -648,19 +648,23 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		
 		// Check if in time limited hunting zone.
-		final long stormIsleExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 1, 0);
-		final long primevalIsleExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 6, 0);
-		if (stormIsleExitTime > System.currentTimeMillis())
+		if (player.isInTimedHuntingZone())
 		{
-			player.startTimedHuntingZone(1, stormIsleExitTime - System.currentTimeMillis());
-		}
-		else if (primevalIsleExitTime > System.currentTimeMillis())
-		{
-			player.startTimedHuntingZone(6, primevalIsleExitTime - System.currentTimeMillis());
-		}
-		else if (player.isInTimedHuntingZone())
-		{
-			player.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN));
+			final long currentTime = System.currentTimeMillis();
+			final long stormIsleExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 1, 0);
+			final long primevalIsleExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 6, 0);
+			if ((stormIsleExitTime > currentTime) && player.isInTimedHuntingZone(1))
+			{
+				player.startTimedHuntingZone(1, stormIsleExitTime - currentTime);
+			}
+			else if ((primevalIsleExitTime > currentTime) && player.isInTimedHuntingZone(6))
+			{
+				player.startTimedHuntingZone(6, primevalIsleExitTime - currentTime);
+			}
+			else
+			{
+				player.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN));
+			}
 		}
 		
 		if (Config.ENABLE_ATTENDANCE_REWARDS)
