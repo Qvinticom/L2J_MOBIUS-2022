@@ -26,11 +26,11 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class TimedHuntingZoneList implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final boolean _isInTimedHuntingZone;
 	
 	public TimedHuntingZoneList(PlayerInstance player)
 	{
-		_player = player;
+		_isInTimedHuntingZone = player.isInTimedHuntingZone();
 	}
 	
 	@Override
@@ -53,7 +53,7 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		packet.writeD(21600); // remain time max
 		packet.writeD(18000); // remain refill time
 		packet.writeD(18000); // refill time max
-		packet.writeC(_player.isInTimedHuntingZone() ? 0 : 1); // field activated
+		packet.writeC(_isInTimedHuntingZone ? 0 : 1); // field activated
 		
 		// Primeval Isle
 		packet.writeD(1); // required item count
@@ -68,7 +68,7 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		packet.writeD(21600); // remain time max
 		packet.writeD(18000); // remain refill time
 		packet.writeD(18000); // refill time max
-		packet.writeC(_player.isInTimedHuntingZone() ? 0 : 1); // field activated
+		packet.writeC(_isInTimedHuntingZone ? 0 : 1); // field activated
 		
 		return true;
 	}
