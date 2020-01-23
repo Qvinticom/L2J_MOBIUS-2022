@@ -14180,11 +14180,7 @@ public class PlayerInstance extends Playable
 		{
 			case 2: // Ancient Pirates' Tomb.
 			{
-				if ((x == 20) && (y == 15))
-				{
-					return true;
-				}
-				break;
+				return (x == 20) && (y == 15);
 			}
 		}
 		
@@ -14193,10 +14189,11 @@ public class PlayerInstance extends Playable
 	
 	public void startTimedHuntingZone(int zoneId, long delay)
 	{
+		// Stop previous task.
+		stopTimedHuntingZoneTask();
+		
 		// TODO: Delay window.
 		// sendPacket(new TimedHuntingZoneEnter((int) (delay / 60 / 1000)));
-		// For now close window.
-		sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
 		
 		_timedHuntingZoneFinishTask = ThreadPool.schedule(() ->
 		{

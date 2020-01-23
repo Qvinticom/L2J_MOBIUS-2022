@@ -14235,19 +14235,11 @@ public class PlayerInstance extends Playable
 		{
 			case 1: // Storm Isle
 			{
-				if ((x == 25) && (y == 23))
-				{
-					return true;
-				}
-				break;
+				return (x == 25) && (y == 23);
 			}
 			case 6: // Primeval Isle
 			{
-				if ((x == 20) && (y == 17))
-				{
-					return true;
-				}
-				break;
+				return (x == 20) && (y == 17);
 			}
 		}
 		
@@ -14256,10 +14248,11 @@ public class PlayerInstance extends Playable
 	
 	public void startTimedHuntingZone(int zoneId, long delay)
 	{
+		// Stop previous task.
+		stopTimedHuntingZoneTask();
+		
 		// TODO: Delay window.
 		// sendPacket(new TimedHuntingZoneEnter((int) (delay / 60 / 1000)));
-		// For now close window.
-		sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
 		
 		_timedHuntingZoneFinishTask = ThreadPool.schedule(() ->
 		{
