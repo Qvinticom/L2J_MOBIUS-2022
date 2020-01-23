@@ -442,10 +442,27 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="50158" toLevel="1" name="Ancient Pirates' Tomb's Prolongating Stone">
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91939</itemConsumeId> <!-- Ancient Pirates' Tomb's Prolongating Stone -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>78</minLevel>
+				<maxLevel>999</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>2</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50159" toLevel="1" name="Heavenly Rift's Prolongating Stone">
 		<operateType>A1</operateType>
@@ -629,10 +646,27 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="50178" toLevel="1" name="Ancient Pirates' Tomb's Prolongating Stone">
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91984</itemConsumeId> <!-- Ancient Pirates' Tomb's Prolongating Stone -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>78</minLevel>
+				<maxLevel>999</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>2</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50179" toLevel="1" name="Heavenly Rift's Prolongating Stone">
 		<operateType>A1</operateType>

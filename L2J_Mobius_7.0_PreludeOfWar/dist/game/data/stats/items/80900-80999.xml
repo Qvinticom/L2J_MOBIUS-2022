@@ -67,7 +67,7 @@
 	<item id="80905" name="Storm Isle Time Recharge Stone" type="EtcItem">
 		<!-- Use to add 60 minutes to use the timed hunting zone Storm Isle. -->
 		<set name="icon" val="icon.timezone_refill_1" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
@@ -75,11 +75,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39542" level="1" /> <!-- Storm Isle's Prolongating Stone -->
+		</skills>
 	</item>
 	<item id="80906" name="Primeval Isle Time Recharge Stone" type="EtcItem">
 		<!-- Prolongs your Primeval Isle's raid for 60 min. -->
 		<set name="icon" val="icon.timezone_refill_2" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
@@ -87,6 +92,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39543" level="1" /> <!-- Primeval Isle's Prolongating Stone -->
+		</skills>
 	</item>
 	<item id="80907" name="PC Cafe Summoning Stick" type="EtcItem">
 		<!-- Double-click to summon either Pa'agrio Orc or Pa'agrio Orc Hero. -->

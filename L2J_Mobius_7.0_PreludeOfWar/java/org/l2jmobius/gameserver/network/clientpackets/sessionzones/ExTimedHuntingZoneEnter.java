@@ -73,30 +73,32 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, 0) > System.currentTimeMillis())
-		{
-			if (player.isInTimedHuntingZone())
-			{
-				player.sendPacket(SystemMessageId.YOU_WILL_EXCEED_THE_MAX_AMOUNT_OF_TIME_FOR_THE_HUNTING_ZONE_SO_YOU_CANNOT_ADD_ANY_MORE_TIME);
-			}
-			else
-			{
-				player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_TIME_AVAILABLE_TO_ENTER_THE_HUNTING_ZONE);
-			}
-			return;
-		}
-		
 		if (((_zoneId == 1) && (player.getLevel() < 100)) //
 			|| ((_zoneId == 6) && (player.getLevel() < 105)) //
 		)
 		{
-			player.sendMessage("Your level does not corespont the zone equivalent.");
+			player.sendMessage("Your level does not correspond the zone equivalent.");
 		}
 		
-		if (player.getAdena() > 150000)
+		final long currentTime = System.currentTimeMillis();
+		long endTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, 0);
+		if ((endTime + 18000000) < currentTime)
 		{
-			player.reduceAdena("TimedHuntingZone", 150000, player, true);
-			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, System.currentTimeMillis() + 18000000); // 300 minutes
+			endTime = currentTime + 18000000; // 300 minutes
+		}
+		
+		if (endTime > currentTime)
+		{
+			if (player.getAdena() > 150000)
+			{
+				player.reduceAdena("TimedHuntingZone", 150000, player, true);
+			}
+			else
+			{
+				player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
+				return;
+			}
+			
 			switch (_zoneId)
 			{
 				case 1: // Storm Isle
@@ -110,11 +112,13 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 					break;
 				}
 			}
-			player.startTimedHuntingZone(_zoneId, 18000000); // 300 minutes
+			
+			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, endTime);
+			player.startTimedHuntingZone(_zoneId, endTime - currentTime);
 		}
 		else
 		{
-			player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_TIME_AVAILABLE_TO_ENTER_THE_HUNTING_ZONE);
 		}
 	}
 }

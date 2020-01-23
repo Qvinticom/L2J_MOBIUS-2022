@@ -565,11 +565,19 @@
 	<item id="91939" name="Ancient Pirates' Tomb's Prolongating Stone" type="EtcItem">
 		<!-- Prolongs your Ancient Pirates' Tomb's raid for 60 min. -->
 		<set name="icon" val="icon.timezone_refill_2" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="50158" level="1" /> <!-- Ancient Pirates' Tomb's Prolongating Stone -->
+		</skills>
 	</item>
 	<item id="91940" name="Heavenly Rift's Prolongating Stone" type="EtcItem">
 		<!-- Prolongs your Heavenly Rift's raid for 60 min. -->
@@ -1133,7 +1141,7 @@
 	<item id="91984" name="Ancient Pirates' Tomb's Prolongating Stone" additionalName="Event" type="EtcItem">
 		<!-- Prolongs your Ancient Pirates' Tomb's raid for 60 min. -->
 		<set name="icon" val="icon.timezone_refill_2" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
@@ -1141,6 +1149,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="50178" level="1" /> <!-- Ancient Pirates' Tomb's Prolongating Stone -->
+		</skills>
 	</item>
 	<item id="91985" name="Heavenly Rift's Prolongating Stone" additionalName="Event" type="EtcItem">
 		<!-- Prolongs your Heavenly Rift's raid for 60 min. -->

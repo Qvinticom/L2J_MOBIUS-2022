@@ -72,28 +72,30 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, 0) > System.currentTimeMillis())
+		if ((_zoneId == 2) && (player.getLevel() < 78))
 		{
-			if (player.isInTimedHuntingZone())
+			player.sendMessage("Your level does not correspond the zone equivalent.");
+		}
+		
+		final long currentTime = System.currentTimeMillis();
+		long endTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, 0);
+		if ((endTime + 18000000) < currentTime)
+		{
+			endTime = currentTime + 18000000; // 300 minutes
+		}
+		
+		if (endTime > currentTime)
+		{
+			if (player.getAdena() > 10000)
 			{
-				player.sendMessage("You will exceed the max amount of time for the hunting zone, so you cannot add any more time.");
+				player.reduceAdena("TimedHuntingZone", 10000, player, true);
 			}
 			else
 			{
-				player.sendMessage("You don't have enough time available to enter the hunting zone.");
+				player.sendMessage("Not enough adena.");
+				return;
 			}
-			return;
-		}
-		
-		if ((_zoneId == 2) && (player.getLevel() < 78))
-		{
-			player.sendMessage("Your level is too low.");
-		}
-		
-		if (player.getAdena() > 10000)
-		{
-			player.reduceAdena("TimedHuntingZone", 10000, player, true);
-			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, System.currentTimeMillis() + 18000000); // 300 minutes
+			
 			switch (_zoneId)
 			{
 				case 2: // Ancient Pirates' Tomb
@@ -102,11 +104,13 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 					break;
 				}
 			}
-			player.startTimedHuntingZone(_zoneId, 18000000); // 300 minutes
+			
+			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, endTime);
+			player.startTimedHuntingZone(_zoneId, endTime - currentTime);
 		}
 		else
 		{
-			player.sendMessage("Not enough adena.");
+			player.sendMessage("You don't have enough time available to enter the hunting zone.");
 		}
 	}
 }

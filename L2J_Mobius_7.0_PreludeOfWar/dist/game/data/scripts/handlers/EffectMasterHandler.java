@@ -37,6 +37,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("AbsorbDamage", AbsorbDamage::new);
 		EffectHandler.getInstance().registerHandler("Accuracy", Accuracy::new);
 		EffectHandler.getInstance().registerHandler("AddHate", AddHate::new);
+		EffectHandler.getInstance().registerHandler("AddHuntingTime", AddHuntingTime::new);
 		EffectHandler.getInstance().registerHandler("AdditionalPotionCp", AdditionalPotionCp::new);
 		EffectHandler.getInstance().registerHandler("AdditionalPotionHp", AdditionalPotionHp::new);
 		EffectHandler.getInstance().registerHandler("AdditionalPotionMp", AdditionalPotionMp::new);

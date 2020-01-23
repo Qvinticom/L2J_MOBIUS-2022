@@ -291,12 +291,50 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="39542" toLevel="1" name="Storm Isle Time Recharge Stone">
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80905</itemConsumeId> <!-- Storm Isle Time Recharge Stone -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>100</minLevel>
+				<maxLevel>120</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>1</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39543" toLevel="1" name="Primeval Isle's Prolongating Stone">
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80906</itemConsumeId> <!-- Primeval Isle Time Recharge Stone -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>105</minLevel>
+				<maxLevel>120</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>6</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39544" toLevel="1" name="PC Cafe Summoning Stick">
 		<operateType>A1</operateType>

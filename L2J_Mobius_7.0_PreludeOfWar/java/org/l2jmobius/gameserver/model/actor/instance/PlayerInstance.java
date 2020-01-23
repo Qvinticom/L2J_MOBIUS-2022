@@ -14253,6 +14253,7 @@ public class PlayerInstance extends Playable
 		
 		// TODO: Delay window.
 		// sendPacket(new TimedHuntingZoneEnter((int) (delay / 60 / 1000)));
+		sendMessage("You have " + (delay / 60 / 1000) + " minutes left for this timed zone.");
 		
 		_timedHuntingZoneFinishTask = ThreadPool.schedule(() ->
 		{
@@ -14272,7 +14273,16 @@ public class PlayerInstance extends Playable
 		{
 			_timedHuntingZoneFinishTask.cancel(true);
 			_timedHuntingZoneFinishTask = null;
-			sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
 		}
+		sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
+	}
+	
+	public long getTimedHuntingZoneRemainingTime()
+	{
+		if ((_timedHuntingZoneFinishTask != null) && !_timedHuntingZoneFinishTask.isCancelled() && !_timedHuntingZoneFinishTask.isDone())
+		{
+			return _timedHuntingZoneFinishTask.getDelay(TimeUnit.MILLISECONDS);
+		}
+		return 0;
 	}
 }
