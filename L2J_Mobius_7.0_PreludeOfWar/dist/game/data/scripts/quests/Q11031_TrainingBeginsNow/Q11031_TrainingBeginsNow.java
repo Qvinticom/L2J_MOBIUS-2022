@@ -172,8 +172,11 @@ public class Q11031_TrainingBeginsNow extends Quest
 					{
 						if (qs.isCond(1))
 						{
-							startQuestTimer("reward_shots", 100, npc, player);
-							player.sendPacket(new ExTutorialShowId(14)); // Soulshots and Spiritshots
+							if (!player.isSimulatingTalking())
+							{
+								startQuestTimer("reward_shots", 100, npc, player);
+								player.sendPacket(new ExTutorialShowId(14)); // Soulshots and Spiritshots
+							}
 							htmltext = "34505-04.html";
 						}
 						else
