@@ -1877,7 +1877,7 @@ public class NpcInstance extends Creature
 		// collect awaiting quests and start points
 		final List<Quest> options = new ArrayList<>();
 		
-		final QuestState[] awaits = player.getQuestsForTalk(getTemplate().npcId);
+		final List<QuestState> awaits = player.getQuestsForTalk(getTemplate().npcId);
 		final Quest[] starts = getTemplate().getEventQuests(Quest.QuestEventType.QUEST_START);
 		
 		// Quests are limited between 1 and 999 because those are the quests that are supported by the client.

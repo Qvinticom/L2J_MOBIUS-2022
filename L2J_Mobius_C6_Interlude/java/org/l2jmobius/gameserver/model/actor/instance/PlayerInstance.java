@@ -1580,24 +1580,6 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Adds the to quest state array.
-	 * @param questStateArray the quest state array
-	 * @param state the state
-	 * @return the quest state[]
-	 */
-	private QuestState[] addToQuestStateArray(QuestState[] questStateArray, QuestState state)
-	{
-		final int len = questStateArray.length;
-		final QuestState[] tmp = new QuestState[len + 1];
-		for (int i = 0; i < len; i++)
-		{
-			tmp[i] = questStateArray[i];
-		}
-		tmp[len] = state;
-		return tmp;
-	}
-	
-	/**
 	 * Return a list containing all Quest in progress from the table _quests.
 	 * @return the all active quests
 	 */
@@ -1632,15 +1614,14 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return a table containing all QuestState to modify after a Attackable killing.<BR>
-	 * <BR>
+	 * Return a table containing all QuestState to modify after a Attackable killing.
 	 * @param npc the npc
 	 * @return the quests for attacks
 	 */
-	public QuestState[] getQuestsForAttacks(NpcInstance npc)
+	public List<QuestState> getQuestsForAttacks(NpcInstance npc)
 	{
-		// Create a QuestState table that will contain all QuestState to modify
-		QuestState[] states = null;
+		// Create a QuestState lisy that will contain all QuestState to modify
+		List<QuestState> states = new ArrayList<>();
 		
 		// Go through the QuestState of the PlayerInstance quests
 		for (Quest quest : npc.getTemplate().getEventQuests(Quest.QuestEventType.ON_ATTACK))
@@ -1649,34 +1630,23 @@ public class PlayerInstance extends Playable
 			if (getQuestState(quest.getName()) != null)
 			{
 				// Copy the current PlayerInstance QuestState in the QuestState table
-				if (states == null)
-				{
-					states = new QuestState[]
-					{
-						getQuestState(quest.getName())
-					};
-				}
-				else
-				{
-					states = addToQuestStateArray(states, getQuestState(quest.getName()));
-				}
+				states.add(getQuestState(quest.getName()));
 			}
 		}
 		
-		// Return a table containing all QuestState to modify
+		// Return a list containing all QuestState to modify
 		return states;
 	}
 	
 	/**
-	 * Return a table containing all QuestState to modify after a Attackable killing.<BR>
-	 * <BR>
+	 * Return a table containing all QuestState to modify after a Attackable killing.
 	 * @param npc the npc
 	 * @return the quests for kills
 	 */
-	public QuestState[] getQuestsForKills(NpcInstance npc)
+	public List<QuestState> getQuestsForKills(NpcInstance npc)
 	{
-		// Create a QuestState table that will contain all QuestState to modify
-		QuestState[] states = null;
+		// Create a QuestState lisy that will contain all QuestState to modify
+		List<QuestState> states = new ArrayList<>();
 		
 		// Go through the QuestState of the PlayerInstance quests
 		for (Quest quest : npc.getTemplate().getEventQuests(Quest.QuestEventType.ON_KILL))
@@ -1685,34 +1655,23 @@ public class PlayerInstance extends Playable
 			if (getQuestState(quest.getName()) != null)
 			{
 				// Copy the current PlayerInstance QuestState in the QuestState table
-				if (states == null)
-				{
-					states = new QuestState[]
-					{
-						getQuestState(quest.getName())
-					};
-				}
-				else
-				{
-					states = addToQuestStateArray(states, getQuestState(quest.getName()));
-				}
+				states.add(getQuestState(quest.getName()));
 			}
 		}
 		
-		// Return a table containing all QuestState to modify
+		// Return a list containing all QuestState to modify
 		return states;
 	}
 	
 	/**
-	 * Return a table containing all QuestState from the table _quests in which the PlayerInstance must talk to the NPC.<BR>
-	 * <BR>
+	 * Return a table containing all QuestState from the table _quests in which the PlayerInstance must talk to the NPC.
 	 * @param npcId The Identifier of the NPC
 	 * @return the quests for talk
 	 */
-	public QuestState[] getQuestsForTalk(int npcId)
+	public List<QuestState> getQuestsForTalk(int npcId)
 	{
-		// Create a QuestState table that will contain all QuestState to modify
-		QuestState[] states = null;
+		// Create a QuestState list that will contain all QuestState to modify
+		List<QuestState> states = new ArrayList<>();
 		
 		// Go through the QuestState of the PlayerInstance quests
 		final Quest[] quests = NpcTable.getInstance().getTemplate(npcId).getEventQuests(Quest.QuestEventType.QUEST_TALK);
@@ -1723,22 +1682,12 @@ public class PlayerInstance extends Playable
 				// Copy the current PlayerInstance QuestState in the QuestState table
 				if ((quest != null) && (getQuestState(quest.getName()) != null))
 				{
-					if (states == null)
-					{
-						states = new QuestState[]
-						{
-							getQuestState(quest.getName())
-						};
-					}
-					else
-					{
-						states = addToQuestStateArray(states, getQuestState(quest.getName()));
-					}
+					states.add(getQuestState(quest.getName()));
 				}
 			}
 		}
 		
-		// Return a table containing all QuestState to modify
+		// Return a list containing all QuestState to modify
 		return states;
 	}
 	
@@ -1787,9 +1736,8 @@ public class PlayerInstance extends Playable
 			if ((object instanceof NpcInstance) && isInsideRadius(object, NpcInstance.INTERACTION_DISTANCE, false, false))
 			{
 				final NpcInstance npc = (NpcInstance) object;
-				final QuestState[] states = getQuestsForTalk(npc.getNpcId());
-				
-				if (states != null)
+				final List<QuestState> states = getQuestsForTalk(npc.getNpcId());
+				if (!states.isEmpty())
 				{
 					for (QuestState state : states)
 					{
