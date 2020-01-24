@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  * easier handling (s. admin command admin_box_access).<br>
  * <br>
  * To spawn an BoxInstance change the type in npc to Box.<br>
- * example: update npc set type='L2Box' where id=1042;<br>
+ * example: update npc set type='Box' where id=1042;<br>
  * It uses two tables: boxes and boxaccess. Create these with:<br>
  * <code>
   CREATE TABLE boxes (<br>

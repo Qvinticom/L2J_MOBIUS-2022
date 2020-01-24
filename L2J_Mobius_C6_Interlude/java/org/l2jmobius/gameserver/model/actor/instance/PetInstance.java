@@ -845,7 +845,7 @@ public class PetInstance extends Summon
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			if (template.getType().compareToIgnoreCase("BabyPet") == 0)
+			if (template.getType().equalsIgnoreCase("BabyPet"))
 			{
 				pet = new BabyPetInstance(IdFactory.getInstance().getNextId(), template, owner, control);
 			}

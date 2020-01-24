@@ -81,27 +81,27 @@ public class VIP
 	
 	public static void setTeam(String team, PlayerInstance player)
 	{
-		if (team.compareToIgnoreCase("Human") == 0)
+		if (team.equalsIgnoreCase("Human"))
 		{
 			_team = 1;
 			_teamName = "Human";
 		}
-		else if (team.compareToIgnoreCase("Elf") == 0)
+		else if (team.equalsIgnoreCase("Elf"))
 		{
 			_team = 2;
 			_teamName = "Elf";
 		}
-		else if (team.compareToIgnoreCase("Dark") == 0)
+		else if (team.equalsIgnoreCase("Dark"))
 		{
 			_team = 3;
 			_teamName = "Dark Elf";
 		}
-		else if (team.compareToIgnoreCase("Orc") == 0)
+		else if (team.equalsIgnoreCase("Orc"))
 		{
 			_team = 4;
 			_teamName = "Orc";
 		}
-		else if (team.compareToIgnoreCase("Dwarf") == 0)
+		else if (team.equalsIgnoreCase("Dwarf"))
 		{
 			_team = 5;
 			_teamName = "Dwarf";
