@@ -765,10 +765,10 @@ public class NpcInstance extends Creature
 					}
 					else
 					{
-						final Quest[] qlst = getTemplate().getEventQuests(Quest.QuestEventType.NPC_FIRST_TALK);
-						if (qlst.length == 1)
+						final List<Quest> questList = getTemplate().getEventQuests(Quest.QuestEventType.NPC_FIRST_TALK);
+						if (questList.size() == 1)
 						{
-							qlst[0].notifyFirstTalk(this, player);
+							questList.get(0).notifyFirstTalk(this, player);
 						}
 						else
 						{
@@ -1096,10 +1096,10 @@ public class NpcInstance extends Creature
 						}
 						else
 						{
-							final Quest[] qlst = getTemplate().getEventQuests(Quest.QuestEventType.NPC_FIRST_TALK);
-							if (qlst.length == 1)
+							final List<Quest> questList = getTemplate().getEventQuests(Quest.QuestEventType.NPC_FIRST_TALK);
+							if (questList.size() == 1)
 							{
-								qlst[0].notifyFirstTalk(this, player);
+								questList.get(0).notifyFirstTalk(this, player);
 							}
 							else
 							{
@@ -1878,28 +1878,28 @@ public class NpcInstance extends Creature
 		final List<Quest> options = new ArrayList<>();
 		
 		final List<QuestState> awaits = player.getQuestsForTalk(getTemplate().npcId);
-		final Quest[] starts = getTemplate().getEventQuests(Quest.QuestEventType.QUEST_START);
+		final List<Quest> starts = getTemplate().getEventQuests(Quest.QuestEventType.QUEST_START);
 		
 		// Quests are limited between 1 and 999 because those are the quests that are supported by the client.
 		// By limiting them there, we are allowed to create custom quests at higher IDs without interfering
 		if (awaits != null)
 		{
-			for (QuestState x : awaits)
+			for (QuestState qs : awaits)
 			{
-				if (!options.contains(x.getQuest()) && (x.getQuest().getQuestId() > 0) && (x.getQuest().getQuestId() < 1000))
+				if (!options.contains(qs.getQuest()) && (qs.getQuest().getQuestId() > 0) && (qs.getQuest().getQuestId() < 1000))
 				{
-					options.add(x.getQuest());
+					options.add(qs.getQuest());
 				}
 			}
 		}
 		
 		if (starts != null)
 		{
-			for (Quest x : starts)
+			for (Quest quest : starts)
 			{
-				if (!options.contains(x) && (x.getQuestId() > 0) && (x.getQuestId() < 1000))
+				if (!options.contains(quest) && (quest.getQuestId() > 0) && (quest.getQuestId() < 1000))
 				{
-					options.add(x);
+					options.add(quest);
 				}
 			}
 		}

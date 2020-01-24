@@ -1674,21 +1674,22 @@ public class PlayerInstance extends Playable
 		List<QuestState> states = new ArrayList<>();
 		
 		// Go through the QuestState of the PlayerInstance quests
-		final Quest[] quests = NpcTable.getInstance().getTemplate(npcId).getEventQuests(Quest.QuestEventType.QUEST_TALK);
-		if (quests != null)
+		for (Quest quest : NpcTable.getInstance().getTemplate(npcId).getEventQuests(Quest.QuestEventType.QUEST_TALK))
 		{
-			for (Quest quest : quests)
+			// Copy the current PlayerInstance QuestState in the QuestState table
+			if ((quest != null) && (getQuestState(quest.getName()) != null))
 			{
-				// Copy the current PlayerInstance QuestState in the QuestState table
-				if ((quest != null) && (getQuestState(quest.getName()) != null))
-				{
-					states.add(getQuestState(quest.getName()));
-				}
+				states.add(getQuestState(quest.getName()));
 			}
 		}
 		
 		// Return a list containing all QuestState to modify
 		return states;
+	}
+	
+	public Collection<QuestState> getAllQuestStates()
+	{
+		return _quests.values();
 	}
 	
 	/**

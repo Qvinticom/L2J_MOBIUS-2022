@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.model.actor.templates;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.List;
@@ -125,7 +126,7 @@ public class NpcTemplate extends CreatureTemplate
 	private final Map<Integer, Skill> _skills = new HashMap<>();
 	private final Map<Stats, Double> _vulnerabilities = new EnumMap<>(Stats.class);
 	// contains a list of quests for each event type (questStart, questAttack, questKill, etc)
-	private final Map<QuestEventType, Quest[]> _questEvents = new EnumMap<>(QuestEventType.class);
+	private final Map<QuestEventType, List<Quest>> _questEvents = new EnumMap<>(QuestEventType.class);
 	
 	/**
 	 * Constructor of Creature.<BR>
@@ -301,24 +302,22 @@ public class NpcTemplate extends CreatureTemplate
 	{
 		if (_questEvents.get(eventType) == null)
 		{
-			_questEvents.put(eventType, new Quest[]
-			{
-				q
-			});
+			final List<Quest> quests = new ArrayList<>();
+			quests.add(q);
+			_questEvents.put(eventType, quests);
 		}
 		else
 		{
-			final Quest[] quests = _questEvents.get(eventType);
-			final int len = quests.length;
+			final List<Quest> quests = _questEvents.get(eventType);
 			
 			// If only one registration per npc is allowed for this event type then only register this NPC if not already registered for the specified event.
 			// If a quest allows multiple registrations, then register regardless of count.
 			// In all cases, check if this new registration is replacing an older copy of the SAME quest.
 			if (!eventType.isMultipleRegistrationAllowed())
 			{
-				if (quests[0].getName().equals(q.getName()))
+				if (quests.get(0).getName().equals(q.getName()))
 				{
-					quests[0] = q;
+					quests.add(0, q);
 				}
 				else
 				{
@@ -327,30 +326,27 @@ public class NpcTemplate extends CreatureTemplate
 			}
 			else
 			{
-				// Be ready to add a new quest to a new copy of the list, with larger size than previously.
-				final Quest[] tmp = new Quest[len + 1];
 				// Loop through the existing quests and copy them to the new list. While doing so, also check if this new quest happens to be just a replacement for a previously loaded quest.
 				// If so, just save the updated reference and do NOT use the new list. Else, add the new quest to the end of the new list.
-				for (int i = 0; i < len; i++)
+				for (Quest quest : quests)
 				{
-					if (quests[i].getName().equals(q.getName()))
+					if (quest.getName().equals(q.getName()))
 					{
-						quests[i] = q;
+						quest = q;
 						return;
 					}
-					tmp[i] = quests[i];
 				}
-				tmp[len] = q;
-				_questEvents.put(eventType, tmp);
+				quests.add(q);
+				// _questEvents.put(eventType, quests);
 			}
 		}
 	}
 	
-	public Quest[] getEventQuests(Quest.QuestEventType eventType)
+	public List<Quest> getEventQuests(Quest.QuestEventType eventType)
 	{
 		if (_questEvents.get(eventType) == null)
 		{
-			return new Quest[0];
+			return Collections.emptyList();
 		}
 		return _questEvents.get(eventType);
 	}

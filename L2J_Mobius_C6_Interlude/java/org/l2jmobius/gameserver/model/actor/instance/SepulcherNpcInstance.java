@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Future;
 
@@ -238,14 +239,14 @@ public class SepulcherNpcInstance extends NpcInstance
 			}
 			default:
 			{
-				if (getTemplate().getEventQuests(Quest.QuestEventType.QUEST_START).length > 0)
+				if (!getTemplate().getEventQuests(Quest.QuestEventType.QUEST_START).isEmpty())
 				{
 					player.setLastQuestNpcObject(getObjectId());
 				}
-				final Quest[] qlst = getTemplate().getEventQuests(Quest.QuestEventType.QUEST_TALK);
-				if (qlst.length == 1)
+				final List<Quest> questList = getTemplate().getEventQuests(Quest.QuestEventType.QUEST_TALK);
+				if (questList.size() == 1)
 				{
-					qlst[0].notifyFirstTalk(this, player);
+					questList.get(0).notifyFirstTalk(this, player);
 				}
 				else
 				{

@@ -16,37 +16,28 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.List;
+import java.util.Collection;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
 public class QuestList extends GameServerPacket
 {
-	private final List<Quest> _quests;
-	private final PlayerInstance _activeChar;
+	private final Collection<QuestState> _questStates;
 	
 	public QuestList(PlayerInstance player)
 	{
-		_activeChar = player;
-		_quests = player.getAllActiveQuests();
+		_questStates = player.getAllQuestStates();
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0x80);
-		writeH(_quests.size());
-		for (Quest q : _quests)
+		writeH(_questStates.size());
+		for (QuestState qs : _questStates)
 		{
-			writeD(q.getQuestId());
-			final QuestState qs = _activeChar.getQuestState(q.getName());
-			if (qs == null)
-			{
-				writeD(0);
-				continue;
-			}
+			writeD(qs.getQuest().getQuestId());
 			
 			final int states = qs.getInt("__compltdStateFlags");
 			if (states != 0)
