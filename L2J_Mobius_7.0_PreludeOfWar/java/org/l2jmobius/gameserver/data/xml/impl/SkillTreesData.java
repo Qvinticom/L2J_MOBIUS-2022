@@ -51,9 +51,11 @@ import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.base.SocialClass;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.holders.PlayerSkillHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.interfaces.ISkillsHolder;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
@@ -1472,7 +1474,27 @@ public class SkillTreesData implements IXmlReader
 			
 			if (!isCurrentClassSkillNoParent(currentClass, hashCode) && !isRemoveSkill(currentClass, skill.getId()) && !isAwakenSaveSkill(currentClass, skill.getId()) && !isAlchemySkill(skill.getId(), skill.getLevel()))
 			{
-				player.removeSkill(skill, true, true);
+				// Do not remove equipped item skills.
+				boolean isItemSkill = false;
+				SEARCH: for (ItemInstance item : player.getInventory().getItems())
+				{
+					final List<ItemSkillHolder> itemSkills = item.getItem().getAllSkills();
+					if (itemSkills != null)
+					{
+						for (ItemSkillHolder itemSkillHolder : itemSkills)
+						{
+							if (itemSkillHolder.getSkillId() == skill.getId())
+							{
+								isItemSkill = true;
+								break SEARCH;
+							}
+						}
+					}
+				}
+				if (!isItemSkill)
+				{
+					player.removeSkill(skill, true, true);
+				}
 			}
 		}
 		
