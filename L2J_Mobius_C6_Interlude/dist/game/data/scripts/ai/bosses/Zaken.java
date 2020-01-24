@@ -34,6 +34,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -157,8 +158,8 @@ public class Zaken extends Quest
 			}
 		}, 2000L, 600000L);
 		
-		addEventId(ZAKEN, Quest.QuestEventType.ON_KILL);
-		addEventId(ZAKEN, Quest.QuestEventType.ON_ATTACK);
+		addEventId(ZAKEN, EventType.ON_KILL);
+		addEventId(ZAKEN, EventType.ON_ATTACK);
 		
 		_Zone = GrandBossManager.getInstance().getZone(55312, 219168, -3223);
 		

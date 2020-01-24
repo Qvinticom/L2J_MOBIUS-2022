@@ -156,6 +156,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -1624,7 +1625,7 @@ public class PlayerInstance extends Playable
 		List<QuestState> states = new ArrayList<>();
 		
 		// Go through the QuestState of the PlayerInstance quests
-		for (Quest quest : npc.getTemplate().getEventQuests(Quest.QuestEventType.ON_ATTACK))
+		for (Quest quest : npc.getTemplate().getEventQuests(EventType.ON_ATTACK))
 		{
 			// Check if the Identifier of the Attackable attck is needed for the current quest
 			if (getQuestState(quest.getName()) != null)
@@ -1649,7 +1650,7 @@ public class PlayerInstance extends Playable
 		List<QuestState> states = new ArrayList<>();
 		
 		// Go through the QuestState of the PlayerInstance quests
-		for (Quest quest : npc.getTemplate().getEventQuests(Quest.QuestEventType.ON_KILL))
+		for (Quest quest : npc.getTemplate().getEventQuests(EventType.ON_KILL))
 		{
 			// Check if the Identifier of the Attackable killed is needed for the current quest
 			if (getQuestState(quest.getName()) != null)
@@ -1674,7 +1675,7 @@ public class PlayerInstance extends Playable
 		List<QuestState> states = new ArrayList<>();
 		
 		// Go through the QuestState of the PlayerInstance quests
-		for (Quest quest : NpcTable.getInstance().getTemplate(npcId).getEventQuests(Quest.QuestEventType.QUEST_TALK))
+		for (Quest quest : NpcTable.getInstance().getTemplate(npcId).getEventQuests(EventType.QUEST_TALK))
 		{
 			// Copy the current PlayerInstance QuestState in the QuestState table
 			if ((quest != null) && (getQuestState(quest.getName()) != null))

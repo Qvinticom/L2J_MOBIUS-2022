@@ -30,6 +30,7 @@ import org.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -239,11 +240,11 @@ public class SepulcherNpcInstance extends NpcInstance
 			}
 			default:
 			{
-				if (!getTemplate().getEventQuests(Quest.QuestEventType.QUEST_START).isEmpty())
+				if (!getTemplate().getEventQuests(EventType.QUEST_START).isEmpty())
 				{
 					player.setLastQuestNpcObject(getObjectId());
 				}
-				final List<Quest> questList = getTemplate().getEventQuests(Quest.QuestEventType.QUEST_TALK);
+				final List<Quest> questList = getTemplate().getEventQuests(EventType.QUEST_TALK);
 				if (questList.size() == 1)
 				{
 					questList.get(0).notifyFirstTalk(this, player);

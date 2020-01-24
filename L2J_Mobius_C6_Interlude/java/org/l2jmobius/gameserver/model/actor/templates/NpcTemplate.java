@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.quest.Quest;
-import org.l2jmobius.gameserver.model.quest.Quest.QuestEventType;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.skills.Stats;
 
 /**
@@ -126,7 +126,7 @@ public class NpcTemplate extends CreatureTemplate
 	private final Map<Integer, Skill> _skills = new HashMap<>();
 	private final Map<Stats, Double> _vulnerabilities = new EnumMap<>(Stats.class);
 	// contains a list of quests for each event type (questStart, questAttack, questKill, etc)
-	private final Map<QuestEventType, List<Quest>> _questEvents = new EnumMap<>(QuestEventType.class);
+	private final Map<EventType, List<Quest>> _questEvents = new EnumMap<>(EventType.class);
 	
 	/**
 	 * Constructor of Creature.<BR>
@@ -298,7 +298,7 @@ public class NpcTemplate extends CreatureTemplate
 		return _skills;
 	}
 	
-	public void addQuestEvent(Quest.QuestEventType eventType, Quest q)
+	public void addQuestEvent(EventType eventType, Quest q)
 	{
 		if (_questEvents.get(eventType) == null)
 		{
@@ -342,7 +342,7 @@ public class NpcTemplate extends CreatureTemplate
 		}
 	}
 	
-	public List<Quest> getEventQuests(Quest.QuestEventType eventType)
+	public List<Quest> getEventQuests(EventType eventType)
 	{
 		if (_questEvents.get(eventType) == null)
 		{

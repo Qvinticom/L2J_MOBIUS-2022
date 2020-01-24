@@ -52,6 +52,7 @@ import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.RiftInvaderInstance;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
 /**
@@ -452,7 +453,7 @@ public class AttackableAI extends CreatureAI
 					{
 						final PlayerInstance targetPlayer = obj instanceof PlayerInstance ? (PlayerInstance) obj : ((Summon) obj).getOwner();
 						
-						for (Quest quest : npc.getTemplate().getEventQuests(Quest.QuestEventType.ON_AGGRO_RANGE_ENTER))
+						for (Quest quest : npc.getTemplate().getEventQuests(EventType.ON_AGGRO_RANGE_ENTER))
 						{
 							quest.notifyAggroRangeEnter(npc, targetPlayer, obj instanceof Summon);
 						}
@@ -676,8 +677,8 @@ public class AttackableAI extends CreatureAI
 		 * mobs else if ("c_dungeon_nephi".equals(faction_id) && "c_dungeon_clan".equals(npcfaction)) sevenSignFaction = true; if (!faction_id.equals(npc.getFactionId()) && !sevenSignFaction) continue; // Check if the WorldObject is inside the Faction Range of // the actor if
 		 * (_actor.isInsideRadius(npc, npc.getFactionRange() + npc.getTemplate().collisionRadius, true, false) && npc.getAI() != null) { if (Math.abs(originalAttackTarget.getZ() - npc.getZ()) < 600 && _actor.getAttackByList().contains(originalAttackTarget) && (npc.getAI()._intention ==
 		 * CtrlIntention.AI_INTENTION_IDLE || npc.getAI()._intention == CtrlIntention.AI_INTENTION_ACTIVE) && GeoEngine.getInstance().canSeeTarget(_actor, npc)) { if ((originalAttackTarget instanceof PlayerInstance) || (originalAttackTarget instanceof Summon)) { if
-		 * (npc.getTemplate().getEventQuests(Quest.QuestEventType.ON_FACTION_CALL) != null) { PlayerInstance player = (originalAttackTarget instanceof PlayerInstance) ? (PlayerInstance) originalAttackTarget : ((Summon) originalAttackTarget).getOwner(); for (Quest quest :
-		 * npc.getTemplate().getEventQuests(Quest.QuestEventType.ON_FACTION_CALL)) quest.notifyFactionCall(npc, (NpcInstance) _actor, player, (originalAttackTarget instanceof Summon)); } } else if (npc instanceof Attackable && getAttackTarget() != null && npc.getAI()._intention !=
+		 * (npc.getTemplate().getEventQuests(EventType.ON_FACTION_CALL) != null) { PlayerInstance player = (originalAttackTarget instanceof PlayerInstance) ? (PlayerInstance) originalAttackTarget : ((Summon) originalAttackTarget).getOwner(); for (Quest quest :
+		 * npc.getTemplate().getEventQuests(EventType.ON_FACTION_CALL)) quest.notifyFactionCall(npc, (NpcInstance) _actor, player, (originalAttackTarget instanceof Summon)); } } else if (npc instanceof Attackable && getAttackTarget() != null && npc.getAI()._intention !=
 		 * CtrlIntention.AI_INTENTION_ATTACK) { ((Attackable) npc).addDamageHate(getAttackTarget(), 0, ((Attackable) _actor).getHating(getAttackTarget())); npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, getAttackTarget()); } } } } } } catch (NullPointerException e) { LOGGER.warning(
 		 * "AttackableAI: thinkAttack() faction call failed: " + e.getMessage()); } }
 		 */
@@ -725,7 +726,7 @@ public class AttackableAI extends CreatureAI
 							if ((originalAttackTarget instanceof PlayerInstance) || (originalAttackTarget instanceof Summon))
 							{
 								final PlayerInstance player = originalAttackTarget instanceof PlayerInstance ? (PlayerInstance) originalAttackTarget : ((Summon) originalAttackTarget).getOwner();
-								for (Quest quest : npc.getTemplate().getEventQuests(Quest.QuestEventType.ON_FACTION_CALL))
+								for (Quest quest : npc.getTemplate().getEventQuests(EventType.ON_FACTION_CALL))
 								{
 									quest.notifyFactionCall(npc, (NpcInstance) _actor, player, (originalAttackTarget instanceof Summon));
 								}

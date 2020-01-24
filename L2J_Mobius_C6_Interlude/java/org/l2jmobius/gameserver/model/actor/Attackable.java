@@ -56,6 +56,7 @@ import org.l2jmobius.gameserver.model.base.SoulCrystal;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.skills.Stats;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -552,7 +553,7 @@ public class Attackable extends NpcInstance
 				final PlayerInstance player = killer instanceof PlayerInstance ? (PlayerInstance) killer : ((Summon) killer).getOwner();
 				
 				// only 1 randomly choosen quest of all quests registered to this character can be applied
-				for (Quest quest : getTemplate().getEventQuests(Quest.QuestEventType.ON_KILL))
+				for (Quest quest : getTemplate().getEventQuests(EventType.ON_KILL))
 				{
 					quest.notifyKill(this, player, killer instanceof Summon);
 				}
@@ -1027,7 +1028,7 @@ public class Attackable extends NpcInstance
 				{
 					final PlayerInstance player = attacker instanceof PlayerInstance ? (PlayerInstance) attacker : ((Summon) attacker).getOwner();
 					
-					for (Quest quest : getTemplate().getEventQuests(Quest.QuestEventType.ON_ATTACK))
+					for (Quest quest : getTemplate().getEventQuests(EventType.ON_ATTACK))
 					{
 						quest.notifyAttack(this, player, damage, attacker instanceof Summon);
 					}

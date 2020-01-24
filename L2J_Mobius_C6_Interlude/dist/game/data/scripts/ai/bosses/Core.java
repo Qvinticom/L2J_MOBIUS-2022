@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Announcements;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -93,8 +94,8 @@ public class Core extends Quest
 		
 		for (int mob : mobs)
 		{
-			addEventId(mob, Quest.QuestEventType.ON_KILL);
-			addEventId(mob, Quest.QuestEventType.ON_ATTACK);
+			addEventId(mob, EventType.ON_KILL);
+			addEventId(mob, EventType.ON_ATTACK);
 		}
 		
 		_firstAttacked = false;

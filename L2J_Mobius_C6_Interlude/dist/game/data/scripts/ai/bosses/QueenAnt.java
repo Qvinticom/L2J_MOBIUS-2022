@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Announcements;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -84,8 +85,8 @@ public class QueenAnt extends Quest
 		};
 		for (int mob : mobs)
 		{
-			addEventId(mob, Quest.QuestEventType.ON_KILL);
-			addEventId(mob, Quest.QuestEventType.ON_ATTACK);
+			addEventId(mob, EventType.ON_KILL);
+			addEventId(mob, EventType.ON_ATTACK);
 		}
 		
 		_zone = GrandBossManager.getInstance().getZone(-21610, 181594, -5734);

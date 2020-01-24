@@ -189,54 +189,6 @@ public class Quest extends ManagedScript
 	{
 	}
 	
-	public enum QuestEventType
-	{
-		/**
-		 * control the first dialog shown by NPCs when they are clicked (some quests must override the default npc action)
-		 */
-		NPC_FIRST_TALK(false),
-		
-		/** onTalk action from start npcs */
-		QUEST_START(true),
-		
-		/** onTalk action from npcs participating in a quest */
-		QUEST_TALK(true),
-		
-		/** Call a faction for support */
-		ON_FACTION_CALL(true),
-		
-		/** on spell finished action when npc finish casting skill */
-		ON_SPELL_FINISHED(true),
-		
-		/** a person came within the Npc/Mob's range */
-		ON_AGGRO_RANGE_ENTER(true),
-		
-		/** OnSpawn РґРµР№СЃС‚РІРёРµ РїСЂРё СЃРїР°СѓРЅРµ РјРѕР±Р° */
-		ON_SPAWN(true),
-		
-		/** OnSkillUse РґРµР№СЃС‚РІРёРµ РїСЂРё РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё СЃРєРёР»Р»Р° (MOB_TARGETED_BY_SKILL) */
-		ON_SKILL_USE(true),
-		
-		/** OnKill РґРµР№СЃС‚РІРёРµ РїСЂРё СѓР±РёР№СЃС‚РІРµ (MOBKILLED) */
-		ON_KILL(true),
-		
-		/** OnAttack РґРµР№СЃС‚РІРёРµ РїСЂРё Р°С‚Р°РєРµ (MOBGOTATTACKED) */
-		ON_ATTACK(true);
-		
-		// Control whether this event type is allowed for the same npc template in multiple quests or if the npc must be registered in at most one quest for the specified event.
-		private boolean _allowMultipleRegistration;
-		
-		QuestEventType(boolean allowMultipleRegistration)
-		{
-			_allowMultipleRegistration = allowMultipleRegistration;
-		}
-		
-		public boolean isMultipleRegistrationAllowed()
-		{
-			return _allowMultipleRegistration;
-		}
-	}
-	
 	/**
 	 * Return ID of the quest
 	 * @return int
@@ -876,14 +828,14 @@ public class Quest extends ManagedScript
 	 */
 	public NpcTemplate addStartNpc(int npcId)
 	{
-		return addEventId(npcId, QuestEventType.QUEST_START);
+		return addEventId(npcId, EventType.QUEST_START);
 	}
 	
 	public void addStartNpc(int... npcIds)
 	{
 		for (int npcId : npcIds)
 		{
-			addEventId(npcId, QuestEventType.QUEST_START);
+			addEventId(npcId, EventType.QUEST_START);
 		}
 	}
 	
@@ -894,14 +846,14 @@ public class Quest extends ManagedScript
 	 */
 	public NpcTemplate addFirstTalkId(int npcId)
 	{
-		return addEventId(npcId, QuestEventType.NPC_FIRST_TALK);
+		return addEventId(npcId, EventType.NPC_FIRST_TALK);
 	}
 	
 	public void addFirstTalkId(int... npcIds)
 	{
 		for (int npcId : npcIds)
 		{
-			addEventId(npcId, QuestEventType.NPC_FIRST_TALK);
+			addEventId(npcId, EventType.NPC_FIRST_TALK);
 		}
 	}
 	
@@ -913,14 +865,14 @@ public class Quest extends ManagedScript
 	 */
 	public NpcTemplate addAttackId(int attackId)
 	{
-		return addEventId(attackId, QuestEventType.ON_ATTACK);
+		return addEventId(attackId, EventType.ON_ATTACK);
 	}
 	
 	public void addAttackId(int... attackIds)
 	{
 		for (int attackId : attackIds)
 		{
-			addEventId(attackId, QuestEventType.ON_ATTACK);
+			addEventId(attackId, EventType.ON_ATTACK);
 		}
 	}
 	
@@ -932,7 +884,7 @@ public class Quest extends ManagedScript
 	 */
 	public NpcTemplate addKillId(int killId)
 	{
-		return addEventId(killId, QuestEventType.ON_KILL);
+		return addEventId(killId, EventType.ON_KILL);
 	}
 	
 	/**
@@ -943,7 +895,7 @@ public class Quest extends ManagedScript
 	{
 		for (int killId : killIds)
 		{
-			addEventId(killId, QuestEventType.ON_KILL);
+			addEventId(killId, EventType.ON_KILL);
 		}
 	}
 	
@@ -955,7 +907,7 @@ public class Quest extends ManagedScript
 	 */
 	public NpcTemplate addTalkId(int talkId)
 	{
-		return addEventId(talkId, QuestEventType.QUEST_TALK);
+		return addEventId(talkId, EventType.QUEST_TALK);
 	}
 	
 	/**
@@ -966,13 +918,13 @@ public class Quest extends ManagedScript
 	{
 		for (int talkId : talkIds)
 		{
-			addEventId(talkId, QuestEventType.QUEST_TALK);
+			addEventId(talkId, EventType.QUEST_TALK);
 		}
 	}
 	
 	public NpcTemplate addFactionCallId(int npcId)
 	{
-		return addEventId(npcId, QuestEventType.ON_FACTION_CALL);
+		return addEventId(npcId, EventType.ON_FACTION_CALL);
 	}
 	
 	/**
@@ -983,20 +935,20 @@ public class Quest extends ManagedScript
 	 */
 	public NpcTemplate addSkillUseId(int npcId)
 	{
-		return addEventId(npcId, QuestEventType.ON_SKILL_USE);
+		return addEventId(npcId, EventType.ON_SKILL_USE);
 	}
 	
 	public void addSkillUseId(int... npcIds)
 	{
 		for (int npcId : npcIds)
 		{
-			addEventId(npcId, QuestEventType.ON_SKILL_USE);
+			addEventId(npcId, EventType.ON_SKILL_USE);
 		}
 	}
 	
 	public NpcTemplate addSpellFinishedId(int npcId)
 	{
-		return addEventId(npcId, QuestEventType.ON_SPELL_FINISHED);
+		return addEventId(npcId, EventType.ON_SPELL_FINISHED);
 	}
 	
 	/**
@@ -1007,27 +959,27 @@ public class Quest extends ManagedScript
 	 */
 	public NpcTemplate addAggroRangeEnterId(int npcId)
 	{
-		return addEventId(npcId, QuestEventType.ON_AGGRO_RANGE_ENTER);
+		return addEventId(npcId, EventType.ON_AGGRO_RANGE_ENTER);
 	}
 	
 	public void addAggroRangeEnterId(int... npcIds)
 	{
 		for (int npcId : npcIds)
 		{
-			addEventId(npcId, QuestEventType.ON_AGGRO_RANGE_ENTER);
+			addEventId(npcId, EventType.ON_AGGRO_RANGE_ENTER);
 		}
 	}
 	
 	public NpcTemplate addSpawnId(int npcId)
 	{
-		return addEventId(npcId, QuestEventType.ON_SPAWN);
+		return addEventId(npcId, EventType.ON_SPAWN);
 	}
 	
 	public void addSpawnId(int... npcIds)
 	{
 		for (int npcId : npcIds)
 		{
-			addEventId(npcId, QuestEventType.ON_SPAWN);
+			addEventId(npcId, EventType.ON_SPAWN);
 		}
 	}
 	
@@ -1054,12 +1006,11 @@ public class Quest extends ManagedScript
 	 * @param eventType : type of event being registered
 	 * @return NpcTemplate : Npc Template corresponding to the npcId, or null if the id is invalid
 	 */
-	public NpcTemplate addEventId(int npcId, QuestEventType eventType)
+	public NpcTemplate addEventId(int npcId, EventType eventType)
 	{
 		try
 		{
 			final NpcTemplate t = NpcTable.getInstance().getTemplate(npcId);
-			
 			if (t != null)
 			{
 				t.addQuestEvent(eventType, this);
@@ -1870,21 +1821,21 @@ public class Quest extends ManagedScript
 	
 	/**
 	 * This is used to register all monsters contained in mobs for a particular script<BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method register ID for all QuestEventTypes<BR>
+	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method register ID for all EventTypes<BR>
 	 * Do not use for group_template AIs</B></FONT><BR>
 	 * @param mobs
-	 * @see #registerMobs(int[], QuestEventType...)
+	 * @see #registerMobs(int[], EventType...)
 	 */
 	public void registerMobs(int[] mobs)
 	{
 		for (int id : mobs)
 		{
-			addEventId(id, QuestEventType.ON_ATTACK);
-			addEventId(id, QuestEventType.ON_KILL);
-			addEventId(id, QuestEventType.ON_SPAWN);
-			addEventId(id, QuestEventType.ON_SPELL_FINISHED);
-			addEventId(id, QuestEventType.ON_FACTION_CALL);
-			addEventId(id, QuestEventType.ON_AGGRO_RANGE_ENTER);
+			addEventId(id, EventType.ON_ATTACK);
+			addEventId(id, EventType.ON_KILL);
+			addEventId(id, EventType.ON_SPAWN);
+			addEventId(id, EventType.ON_SPELL_FINISHED);
+			addEventId(id, EventType.ON_FACTION_CALL);
+			addEventId(id, EventType.ON_AGGRO_RANGE_ENTER);
 		}
 	}
 	
@@ -1893,11 +1844,11 @@ public class Quest extends ManagedScript
 	 * @param mobs
 	 * @param types
 	 */
-	public void registerMobs(int[] mobs, QuestEventType... types)
+	public void registerMobs(int[] mobs, EventType... types)
 	{
 		for (int id : mobs)
 		{
-			for (QuestEventType type : types)
+			for (EventType type : types)
 			{
 				addEventId(id, type);
 			}

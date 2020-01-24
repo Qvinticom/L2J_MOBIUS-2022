@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 
@@ -108,9 +109,9 @@ public class Gordon extends Quest
 	{
 		super(-1, "ai/bosses");
 		
-		addEventId(GORDON, Quest.QuestEventType.ON_KILL);
-		addEventId(GORDON, Quest.QuestEventType.ON_ATTACK);
-		addEventId(GORDON, Quest.QuestEventType.ON_SPAWN);
+		addEventId(GORDON, EventType.ON_KILL);
+		addEventId(GORDON, EventType.ON_ATTACK);
+		addEventId(GORDON, EventType.ON_SPAWN);
 		
 		// wait 2 minutes after Start AI
 		startQuestTimer("check_ai", 120000, null, null, true);

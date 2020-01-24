@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.taskmanager.RespawnTaskManager;
 import org.l2jmobius.gameserver.util.Util;
@@ -543,7 +544,7 @@ public class Spawn
 		
 		_lastSpawn = npc;
 		
-		for (Quest quest : npc.getTemplate().getEventQuests(Quest.QuestEventType.ON_SPAWN))
+		for (Quest quest : npc.getTemplate().getEventQuests(EventType.ON_SPAWN))
 		{
 			quest.notifySpawn(npc);
 		}

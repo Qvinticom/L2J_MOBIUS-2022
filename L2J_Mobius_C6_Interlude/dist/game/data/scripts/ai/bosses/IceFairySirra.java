@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
@@ -65,9 +66,9 @@ public class IceFairySirra extends Quest
 		for (int mob : mobs)
 		{
 			// TODO:
-			addEventId(mob, Quest.QuestEventType.QUEST_START);
-			addEventId(mob, Quest.QuestEventType.QUEST_TALK);
-			addEventId(mob, Quest.QuestEventType.NPC_FIRST_TALK);
+			addEventId(mob, EventType.QUEST_START);
+			addEventId(mob, EventType.QUEST_TALK);
+			addEventId(mob, EventType.NPC_FIRST_TALK);
 		}
 		
 		init();

@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
@@ -112,7 +113,7 @@ public class Transform extends Quest
 		
 		for (int mob : mobsKill)
 		{
-			addEventId(mob, Quest.QuestEventType.ON_KILL);
+			addEventId(mob, EventType.ON_KILL);
 		}
 		
 		final int[] mobsAttack =
@@ -132,7 +133,7 @@ public class Transform extends Quest
 		
 		for (int mob : mobsAttack)
 		{
-			addEventId(mob, Quest.QuestEventType.ON_ATTACK);
+			addEventId(mob, EventType.ON_ATTACK);
 		}
 	}
 	

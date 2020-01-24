@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.util.Util;
@@ -62,8 +63,8 @@ public class Monastery extends Quest
 	public Monastery()
 	{
 		super(-1, "ai");
-		registerMobs(MOBS_1, QuestEventType.ON_AGGRO_RANGE_ENTER, QuestEventType.ON_SPAWN, QuestEventType.ON_SPELL_FINISHED);
-		registerMobs(MOBS_2, QuestEventType.ON_SPELL_FINISHED);
+		registerMobs(MOBS_1, EventType.ON_AGGRO_RANGE_ENTER, EventType.ON_SPAWN, EventType.ON_SPELL_FINISHED);
+		registerMobs(MOBS_2, EventType.ON_SPELL_FINISHED);
 	}
 	
 	@Override

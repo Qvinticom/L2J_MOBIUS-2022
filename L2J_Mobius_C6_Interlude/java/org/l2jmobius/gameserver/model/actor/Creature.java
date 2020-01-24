@@ -96,6 +96,7 @@ import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skills.Calculator;
@@ -8111,7 +8112,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			final PlayerInstance player = target instanceof PlayerInstance ? (PlayerInstance) target : ((Summon) target).getOwner();
 			
-			for (Quest quest : ((NpcTemplate) _template).getEventQuests(Quest.QuestEventType.ON_SPELL_FINISHED))
+			for (Quest quest : ((NpcTemplate) _template).getEventQuests(EventType.ON_SPELL_FINISHED))
 			{
 				quest.notifySpellFinished(((NpcInstance) this), player, skill);
 			}
@@ -8625,7 +8626,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					{
 						final NpcInstance npc = (NpcInstance) target;
 						
-						for (Quest quest : npc.getTemplate().getEventQuests(Quest.QuestEventType.ON_SKILL_USE))
+						for (Quest quest : npc.getTemplate().getEventQuests(EventType.ON_SKILL_USE))
 						{
 							quest.notifySkillUse(npc, caster, skill);
 						}

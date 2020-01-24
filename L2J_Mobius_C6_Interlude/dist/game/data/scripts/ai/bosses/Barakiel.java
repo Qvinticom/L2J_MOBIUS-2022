@@ -16,6 +16,7 @@
  */
 package ai.bosses;
 
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
 /*
@@ -30,7 +31,7 @@ public class Barakiel extends Quest
 	{
 		super(-1, "ai/bosses");
 		
-		addEventId(BARAKIEL, Quest.QuestEventType.ON_ATTACK);
+		addEventId(BARAKIEL, EventType.ON_ATTACK);
 	}
 	
 	// FIXME: Mobius - AI does nothing?

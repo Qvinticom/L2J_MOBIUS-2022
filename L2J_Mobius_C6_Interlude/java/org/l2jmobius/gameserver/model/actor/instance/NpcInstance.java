@@ -70,6 +70,7 @@ import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.multisell.Multisell;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -765,7 +766,7 @@ public class NpcInstance extends Creature
 					}
 					else
 					{
-						final List<Quest> questList = getTemplate().getEventQuests(Quest.QuestEventType.NPC_FIRST_TALK);
+						final List<Quest> questList = getTemplate().getEventQuests(EventType.NPC_FIRST_TALK);
 						if (questList.size() == 1)
 						{
 							questList.get(0).notifyFirstTalk(this, player);
@@ -1096,7 +1097,7 @@ public class NpcInstance extends Creature
 						}
 						else
 						{
-							final List<Quest> questList = getTemplate().getEventQuests(Quest.QuestEventType.NPC_FIRST_TALK);
+							final List<Quest> questList = getTemplate().getEventQuests(EventType.NPC_FIRST_TALK);
 							if (questList.size() == 1)
 							{
 								questList.get(0).notifyFirstTalk(this, player);
@@ -1832,7 +1833,7 @@ public class NpcInstance extends Creature
 					}
 				}
 				// Check for start point
-				for (Quest temp : getTemplate().getEventQuests(Quest.QuestEventType.QUEST_START))
+				for (Quest temp : getTemplate().getEventQuests(EventType.QUEST_START))
 				{
 					if (temp == q)
 					{
@@ -1878,7 +1879,7 @@ public class NpcInstance extends Creature
 		final List<Quest> options = new ArrayList<>();
 		
 		final List<QuestState> awaits = player.getQuestsForTalk(getTemplate().npcId);
-		final List<Quest> starts = getTemplate().getEventQuests(Quest.QuestEventType.QUEST_START);
+		final List<Quest> starts = getTemplate().getEventQuests(EventType.QUEST_START);
 		
 		// Quests are limited between 1 and 999 because those are the quests that are supported by the client.
 		// By limiting them there, we are allowed to create custom quests at higher IDs without interfering

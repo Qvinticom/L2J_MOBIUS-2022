@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.model.skills.conditions.ConditionGameChance;
@@ -426,7 +427,7 @@ public class Weapon extends Item
 				
 				if ((caster instanceof PlayerInstance) && (target instanceof NpcInstance))
 				{
-					for (Quest quest : ((NpcInstance) target).getTemplate().getEventQuests(Quest.QuestEventType.ON_SKILL_USE))
+					for (Quest quest : ((NpcInstance) target).getTemplate().getEventQuests(EventType.ON_SKILL_USE))
 					{
 						quest.notifySkillUse((NpcInstance) target, (PlayerInstance) caster, skill);
 					}

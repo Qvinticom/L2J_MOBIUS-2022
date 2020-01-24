@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Announcements;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
@@ -57,8 +58,8 @@ public class Orfen extends Quest
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ORFEN);
 		final Integer status = GrandBossManager.getInstance().getBossStatus(ORFEN);
 		
-		addEventId(ORFEN, Quest.QuestEventType.ON_KILL);
-		addEventId(ORFEN, Quest.QuestEventType.ON_ATTACK);
+		addEventId(ORFEN, EventType.ON_KILL);
+		addEventId(ORFEN, EventType.ON_ATTACK);
 		
 		switch (status)
 		{

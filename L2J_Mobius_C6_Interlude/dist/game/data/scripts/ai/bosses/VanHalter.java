@@ -47,6 +47,7 @@ import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -132,10 +133,10 @@ public class VanHalter extends Quest
 			32066
 		};
 		
-		addEventId(29062, Quest.QuestEventType.ON_ATTACK);
+		addEventId(29062, EventType.ON_ATTACK);
 		for (int mob : mobs)
 		{
-			addEventId(mob, Quest.QuestEventType.ON_KILL);
+			addEventId(mob, EventType.ON_KILL);
 		}
 		
 		// GrandBossManager.getInstance().addBoss(29062);
