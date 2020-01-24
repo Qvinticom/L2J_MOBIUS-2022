@@ -94,7 +94,7 @@ public class ExRequestClassChange implements IClientIncomingPacket
 			{
 				player.setBaseClass(player.getActiveClass());
 			}
-			SkillTreesData.getInstance().cleanSkillUponChangeClass(player);
+			SkillTreesData.getInstance().cleanSkillUponChangeClass(player, false);
 			if (Config.AUTO_LEARN_SKILLS)
 			{
 				player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);

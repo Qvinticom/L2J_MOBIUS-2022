@@ -199,7 +199,7 @@ public class Joachim extends AbstractNpcAI
 					player.setActiveClass(1);
 					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
 					player.sendPacket(getNpcHtmlMessage(player, npc, "34513-07.html"));
-					SkillTreesData.getInstance().cleanSkillUponChangeClass(player);
+					SkillTreesData.getInstance().cleanSkillUponChangeClass(player, false);
 					player.sendPacket(new AcquireSkillList(player));
 					player.sendSkillList();
 					player.broadcastUserInfo();

@@ -414,7 +414,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
-					SkillTreesData.getInstance().cleanSkillUponChangeClass(player);
+					SkillTreesData.getInstance().cleanSkillUponChangeClass(player, true);
 					player.store(false);
 					player.broadcastUserInfo();
 					player.sendSkillList();

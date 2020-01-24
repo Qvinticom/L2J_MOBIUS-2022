@@ -601,7 +601,7 @@ public class Raina extends AbstractNpcAI
 					player.setActiveClass(classIndex);
 					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
 					player.sendPacket(getNpcHtmlMessage(player, npc, "reawakenSuccess.html"));
-					SkillTreesData.getInstance().cleanSkillUponChangeClass(player);
+					SkillTreesData.getInstance().cleanSkillUponChangeClass(player, false);
 					player.sendPacket(new AcquireSkillList(player));
 					player.sendSkillList();
 					giveItems(player, getCloakId(player), 1);
@@ -640,7 +640,7 @@ public class Raina extends AbstractNpcAI
 					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NEW_SLOT_USED));
 					player.sendPacket(SystemMessageId.THE_NEW_SUBCLASS_S1_HAS_BEEN_ADDED_CONGRATS);
 					player.sendPacket(getNpcHtmlMessage(player, npc, "addSuccess.html"));
-					SkillTreesData.getInstance().cleanSkillUponChangeClass(player);
+					SkillTreesData.getInstance().cleanSkillUponChangeClass(player, false);
 					player.sendPacket(new AcquireSkillList(player));
 					player.sendSkillList();
 					giveItems(player, getPowerItemId(player), 1);

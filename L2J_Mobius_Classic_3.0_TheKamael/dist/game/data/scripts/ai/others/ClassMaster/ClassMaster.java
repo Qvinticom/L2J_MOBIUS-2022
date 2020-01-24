@@ -387,7 +387,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 					{
 						player.setBaseClass(player.getActiveClass());
 					}
-					SkillTreesData.getInstance().cleanSkillUponChangeClass(player);
+					SkillTreesData.getInstance().cleanSkillUponChangeClass(player, false);
 					// if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 					// {
 					// for (SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
@@ -788,7 +788,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 			{
 				player.setBaseClass(player.getActiveClass());
 			}
-			SkillTreesData.getInstance().cleanSkillUponChangeClass(player);
+			SkillTreesData.getInstance().cleanSkillUponChangeClass(player, false);
 			// if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 			// {
 			// for (SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
