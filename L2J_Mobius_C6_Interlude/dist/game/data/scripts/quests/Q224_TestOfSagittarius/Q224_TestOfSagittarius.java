@@ -401,7 +401,7 @@ public class Q224_TestOfSagittarius extends Quest
 			case SERPENT_DEMON_KADESH:
 				if (st.getInt("cond") == 13)
 				{
-					if (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == CRESCENT_MOON_BOW)
+					if (player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND) == CRESCENT_MOON_BOW)
 					{
 						st.set("cond", "14");
 						st.playSound(QuestState.SOUND_MIDDLE);

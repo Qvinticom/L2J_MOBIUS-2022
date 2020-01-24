@@ -196,7 +196,7 @@ public class Q403_PathToARogue extends Quest
 			return null;
 		}
 		
-		final int equippedItemId = st.getItemEquipped(Inventory.PAPERDOLL_RHAND);
+		final int equippedItemId = player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND);
 		if ((equippedItemId != NETI_BOW) || (equippedItemId != NETI_DAGGER))
 		{
 			return null;

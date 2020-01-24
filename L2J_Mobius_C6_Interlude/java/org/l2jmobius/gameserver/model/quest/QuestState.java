@@ -23,13 +23,10 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.GameTimeController;
-import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.PlayerInventory;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -42,9 +39,6 @@ import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.QuestList;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.network.serverpackets.TutorialCloseHtml;
-import org.l2jmobius.gameserver.network.serverpackets.TutorialEnableClientEvent;
-import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 import org.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
 
 /**
@@ -79,9 +73,6 @@ public class QuestState
 	
 	/** List of couples (variable for quest,value of the variable for quest) */
 	private Map<String, String> _vars;
-	
-	/** Boolean flag letting QuestStateManager know to exit quest when cleaning up */
-	private boolean _isExitQuestOnCleanUp = false;
 	
 	/**
 	 * Constructor of the QuestState : save the quest in the list of quests of the player.<BR/>
@@ -158,7 +149,6 @@ public class QuestState
 	
 	/**
 	 * Return state of the quest after its initialization.<BR>
-	 * <BR>
 	 * <U><I>Actions :</I></U>
 	 * <LI>Remove drops from previous state</LI>
 	 * <LI>Set new state of the quest</LI>
@@ -166,16 +156,64 @@ public class QuestState
 	 * <LI>Update information in database</LI>
 	 * <LI>Send packet QuestList to client</LI>
 	 * @param state
-	 * @return object
 	 */
-	public Object setState(byte state)
+	public void setState(byte state)
 	{
-		// set new state
-		_state = state;
+		if (_state != state)
+		{
+			_state = state;
+			
+			Quest.updateQuestInDb(this);
+			
+			_player.sendPacket(new QuestList(_player));
+		}
+	}
+	
+	/**
+	 * Destroy element used by quest when quest is exited
+	 * @param repeatable
+	 */
+	public void exitQuest(boolean repeatable)
+	{
+		if (isCompleted())
+		{
+			return;
+		}
 		
-		Quest.updateQuestInDb(this);
-		_player.sendPacket(new QuestList(_player));
-		return state;
+		// Say quest is completed
+		setState(State.COMPLETED);
+		
+		// Clean registered quest items
+		final int[] itemIdList = getQuest().getRegisteredItemIds();
+		if (itemIdList != null)
+		{
+			for (int element : itemIdList)
+			{
+				takeItems(element, -1);
+			}
+		}
+		
+		// If quest is repeatable, delete quest from list of quest of the player and from database (quest CAN be created again => repeatable)
+		if (repeatable)
+		{
+			_player.delQuestState(_questName);
+			Quest.deleteQuestInDb(this);
+			
+			_vars = null;
+		}
+		else
+		{
+			// Otherwise, delete variables for quest and update database (quest CANNOT be created again => not repeatable)
+			if (_vars != null)
+			{
+				for (String var : _vars.keySet())
+				{
+					unset(var);
+				}
+			}
+			
+			Quest.updateQuestInDb(this);
+		}
 	}
 	
 	/**
@@ -184,7 +222,7 @@ public class QuestState
 	 * @param val : String pointing out the value of the variable for quest
 	 * @return String (equal to parameter "val")
 	 */
-	String setInternal(String var, String val)
+	public String setInternal(String var, String val)
 	{
 		if (_vars == null)
 		{
@@ -212,9 +250,8 @@ public class QuestState
 	 * If the key doesn't exist, the couple is added/created in the database</LI>
 	 * @param var : String indicating the name of the variable for quest
 	 * @param val : String indicating the value of the variable for quest
-	 * @return String (equal to parameter "val")
 	 */
-	public String set(String var, String val)
+	public void set(String var, String val)
 	{
 		if (_vars == null)
 		{
@@ -258,8 +295,6 @@ public class QuestState
 				LOGGER.finer(_player.getName() + ", " + _questName + " cond [" + val + "] is not an integer.  Value stored, but no packet was sent: " + e);
 			}
 		}
-		
-		return val;
 	}
 	
 	/**
@@ -355,23 +390,19 @@ public class QuestState
 	 * <BR>
 	 * <U><I>Concept : </I></U> Remove the variable of quest represented by "var" from the class variable Map "vars" and from the database.
 	 * @param var : String designating the variable for the quest to be deleted
-	 * @return String pointing out the previous value associated with the variable "var"
 	 */
-	public String unset(String var)
+	public void unset(String var)
 	{
 		if (_vars == null)
 		{
-			return null;
+			return;
 		}
 		
 		final String old = _vars.remove(var);
-		
 		if (old != null)
 		{
 			Quest.deleteQuestVarInDb(this, var);
 		}
-		
-		return old;
 	}
 	
 	/**
@@ -392,7 +423,7 @@ public class QuestState
 	/**
 	 * Return the value of the variable of quest represented by "var"
 	 * @param var : name of the variable of quest
-	 * @return Object
+	 * @return String
 	 */
 	public String getString(String var)
 	{
@@ -518,23 +549,6 @@ public class QuestState
 	}
 	
 	/**
-	 * Return the level of enchantment on the weapon of the player(Done specifically for weapon SA's)
-	 * @param itemId : ID of the item to check enchantment
-	 * @return int
-	 */
-	public int getEnchantLevel(int itemId)
-	{
-		final ItemInstance enchanteditem = _player.getInventory().getItemByItemId(itemId);
-		
-		if (enchanteditem == null)
-		{
-			return 0;
-		}
-		
-		return enchanteditem.getEnchantLevel();
-	}
-	
-	/**
 	 * Give item/reward to the player
 	 * @param itemId
 	 * @param count
@@ -602,109 +616,55 @@ public class QuestState
 	}
 	
 	/**
-	 * Reward player with items. The amount is affected by Config.RATE_QUEST_REWARD or Config.RATE_QUEST_REWARD_ADENA.
-	 * @param itemId : Identifier of the item.
-	 * @param itemCount : Quantity of item to reward before applying multiplier.
+	 * Remove items from player's inventory when talking to NPC in order to have rewards.<BR>
+	 * <BR>
+	 * <U><I>Actions :</I></U>
+	 * <LI>Destroy quantity of items wanted</LI>
+	 * <LI>Send new inventory list to player</LI>
+	 * @param itemId : Identifier of the item
+	 * @param count : Quantity of items to destroy
 	 */
-	public void rewardItems(int itemId, int itemCount)
+	public void takeItems(int itemId, int count)
 	{
+		// Get object item from player's inventory list
+		final ItemInstance item = _player.getInventory().getItemByItemId(itemId);
+		
+		if (item == null)
+		{
+			return;
+		}
+		
+		if (_player.isProcessingTransaction())
+		{
+			_player.cancelActiveTrade();
+		}
+		
+		// Tests on count value in order not to have negative value
+		if ((count < 0) || (count > item.getCount()))
+		{
+			count = item.getCount();
+		}
+		
+		// Destroy the quantity of items wanted
 		if (itemId == 57)
 		{
-			giveItems(itemId, (int) (itemCount * Config.RATE_QUESTS_REWARD), 0); // TODO: RATE_QUEST_REWARD_ADENA
+			_player.reduceAdena("Quest", count, _player, true);
 		}
 		else
 		{
-			giveItems(itemId, (int) (itemCount * Config.RATE_QUESTS_REWARD), 0);
-		}
-	}
-	
-	/**
-	 * Drop Quest item using Config.RATE_DROP_QUEST
-	 * @param itemId int Item Identifier of the item to be dropped
-	 * @param count (minCount, maxCount) : int Quantity of items to be dropped
-	 * @param neededCount Quantity of items needed for quest
-	 * @param dropChance int Base chance of drop, same as in droplist
-	 * @param sound boolean indicating whether to play sound
-	 * @return boolean indicating whether player has requested number of items
-	 */
-	public boolean dropQuestItems(int itemId, int count, int neededCount, int dropChance, boolean sound)
-	{
-		return dropQuestItems(itemId, count, count, neededCount, dropChance, sound);
-	}
-	
-	public boolean dropQuestItems(int itemId, int minCount, int maxCount, int neededCount, int dropChance, boolean sound)
-	{
-		dropChance *= Config.RATE_DROP_QUEST / (_player.getParty() != null ? _player.getParty().getMemberCount() : 1);
-		
-		final int currentCount = getQuestItemsCount(itemId);
-		
-		if ((neededCount > 0) && (currentCount >= neededCount))
-		{
-			return true;
-		}
-		
-		if (currentCount >= neededCount)
-		{
-			return true;
-		}
-		
-		int itemCount = 0;
-		final int random = Rnd.get(DropData.MAX_CHANCE);
-		
-		while (random < dropChance)
-		{
-			// Get the item quantity dropped
-			if (minCount < maxCount)
+			// Fix for destroyed quest items
+			if (item.isEquipped())
 			{
-				itemCount += Rnd.get(minCount, maxCount);
-			}
-			else if (minCount == maxCount)
-			{
-				itemCount += minCount;
-			}
-			else
-			{
-				itemCount++;
+				_player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart());
 			}
 			
-			// Prepare for next iteration if dropChance > DropData.MAX_CHANCE
-			dropChance -= DropData.MAX_CHANCE;
+			_player.destroyItemByItemId("Quest", itemId, count, _player, true);
 		}
 		
-		if (itemCount > 0)
-		{
-			// if over neededCount, just fill the gap
-			if ((neededCount > 0) && ((currentCount + itemCount) > neededCount))
-			{
-				itemCount = neededCount - currentCount;
-			}
-			
-			// Inventory slot check
-			if (!_player.getInventory().validateCapacityByItemId(itemId))
-			{
-				return false;
-			}
-			
-			// Mobius: Thread.sleep?
-			// just wait 3-5 seconds before the drop
-			// try
-			// {
-			// Thread.sleep(Rnd.get(3, 5) * 1000);
-			// }
-			// catch (InterruptedException e)
-			// {
-			// }
-			
-			// Give the item to Player
-			_player.addItem("Quest", itemId, itemCount, _player.getTarget(), true);
-			
-			if (sound)
-			{
-				playSound((currentCount + itemCount) < neededCount ? "Itemsound.quest_itemget" : "Itemsound.quest_middle");
-			}
-		}
-		
-		return (neededCount > 0) && ((currentCount + itemCount) >= neededCount);
+		// on quests, always refresh inventory
+		final InventoryUpdate u = new InventoryUpdate();
+		u.addItem(item);
+		_player.sendPacket(u);
 	}
 	
 	/**
@@ -924,8 +884,113 @@ public class QuestState
 		return reached;
 	}
 	
+	/**
+	 * Reward player with items. The amount is affected by Config.RATE_QUEST_REWARD or Config.RATE_QUEST_REWARD_ADENA.
+	 * @param itemId : Identifier of the item.
+	 * @param itemCount : Quantity of item to reward before applying multiplier.
+	 */
+	public void rewardItems(int itemId, int itemCount)
+	{
+		if (itemId == 57)
+		{
+			giveItems(itemId, (int) (itemCount * Config.RATE_QUESTS_REWARD), 0); // TODO: RATE_QUEST_REWARD_ADENA
+		}
+		else
+		{
+			giveItems(itemId, (int) (itemCount * Config.RATE_QUESTS_REWARD), 0);
+		}
+	}
+	
+	/**
+	 * Drop Quest item using Config.RATE_DROP_QUEST
+	 * @param itemId int Item Identifier of the item to be dropped
+	 * @param count (minCount, maxCount) : int Quantity of items to be dropped
+	 * @param neededCount Quantity of items needed for quest
+	 * @param dropChance int Base chance of drop, same as in droplist
+	 * @param sound boolean indicating whether to play sound
+	 * @return boolean indicating whether player has requested number of items
+	 */
+	public boolean dropQuestItems(int itemId, int count, int neededCount, int dropChance, boolean sound)
+	{
+		return dropQuestItems(itemId, count, count, neededCount, dropChance, sound);
+	}
+	
+	public boolean dropQuestItems(int itemId, int minCount, int maxCount, int neededCount, int dropChance, boolean sound)
+	{
+		dropChance *= Config.RATE_DROP_QUEST / (_player.getParty() != null ? _player.getParty().getMemberCount() : 1);
+		
+		final int currentCount = getQuestItemsCount(itemId);
+		
+		if ((neededCount > 0) && (currentCount >= neededCount))
+		{
+			return true;
+		}
+		
+		if (currentCount >= neededCount)
+		{
+			return true;
+		}
+		
+		int itemCount = 0;
+		final int random = Rnd.get(DropData.MAX_CHANCE);
+		
+		while (random < dropChance)
+		{
+			// Get the item quantity dropped
+			if (minCount < maxCount)
+			{
+				itemCount += Rnd.get(minCount, maxCount);
+			}
+			else if (minCount == maxCount)
+			{
+				itemCount += minCount;
+			}
+			else
+			{
+				itemCount++;
+			}
+			
+			// Prepare for next iteration if dropChance > DropData.MAX_CHANCE
+			dropChance -= DropData.MAX_CHANCE;
+		}
+		
+		if (itemCount > 0)
+		{
+			// if over neededCount, just fill the gap
+			if ((neededCount > 0) && ((currentCount + itemCount) > neededCount))
+			{
+				itemCount = neededCount - currentCount;
+			}
+			
+			// Inventory slot check
+			if (!_player.getInventory().validateCapacityByItemId(itemId))
+			{
+				return false;
+			}
+			
+			// Mobius: Thread.sleep?
+			// just wait 3-5 seconds before the drop
+			// try
+			// {
+			// Thread.sleep(Rnd.get(3, 5) * 1000);
+			// }
+			// catch (InterruptedException e)
+			// {
+			// }
+			
+			// Give the item to Player
+			_player.addItem("Quest", itemId, itemCount, _player.getTarget(), true);
+			
+			if (sound)
+			{
+				playSound((currentCount + itemCount) < neededCount ? "Itemsound.quest_itemget" : "Itemsound.quest_middle");
+			}
+		}
+		
+		return (neededCount > 0) && ((currentCount + itemCount) >= neededCount);
+	}
+	
 	// TODO: More radar functions need to be added when the radar class is complete.
-	// BEGIN STUFF THAT WILL PROBABLY BE CHANGED
 	public void addRadar(int x, int y, int z)
 	{
 		_player.getRadar().addMarker(x, y, z);
@@ -939,60 +1004,6 @@ public class QuestState
 	public void clearRadar()
 	{
 		_player.getRadar().removeAllMarkers();
-	}
-	
-	// END STUFF THAT WILL PROBABLY BE CHANGED
-	
-	/**
-	 * Remove items from player's inventory when talking to NPC in order to have rewards.<BR>
-	 * <BR>
-	 * <U><I>Actions :</I></U>
-	 * <LI>Destroy quantity of items wanted</LI>
-	 * <LI>Send new inventory list to player</LI>
-	 * @param itemId : Identifier of the item
-	 * @param count : Quantity of items to destroy
-	 */
-	public void takeItems(int itemId, int count)
-	{
-		// Get object item from player's inventory list
-		final ItemInstance item = _player.getInventory().getItemByItemId(itemId);
-		
-		if (item == null)
-		{
-			return;
-		}
-		
-		if (_player.isProcessingTransaction())
-		{
-			_player.cancelActiveTrade();
-		}
-		
-		// Tests on count value in order not to have negative value
-		if ((count < 0) || (count > item.getCount()))
-		{
-			count = item.getCount();
-		}
-		
-		// Destroy the quantity of items wanted
-		if (itemId == 57)
-		{
-			_player.reduceAdena("Quest", count, _player, true);
-		}
-		else
-		{
-			// Fix for destroyed quest items
-			if (item.isEquipped())
-			{
-				_player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart());
-			}
-			
-			_player.destroyItemByItemId("Quest", itemId, count, _player, true);
-		}
-		
-		// on quests, always refresh inventory
-		final InventoryUpdate u = new InventoryUpdate();
-		u.addItem(item);
-		_player.sendPacket(u);
 	}
 	
 	/**
@@ -1015,88 +1026,6 @@ public class QuestState
 	}
 	
 	/**
-	 * Return random value
-	 * @param max : max value for randomisation
-	 * @return int
-	 */
-	public int getRandom(int max)
-	{
-		return Rnd.get(max);
-	}
-	
-	/**
-	 * @param loc
-	 * @return number of ticks from GameTimeController.
-	 */
-	public int getItemEquipped(int loc)
-	{
-		return _player.getInventory().getPaperdollItemId(loc);
-	}
-	
-	/**
-	 * Return the number of ticks from the GameTimeController
-	 * @return int
-	 */
-	public int getGameTicks()
-	{
-		return GameTimeController.getGameTicks();
-	}
-	
-	/**
-	 * Return true if quest is to exited on clean up by QuestStateManager
-	 * @return boolean
-	 */
-	public boolean isExitQuestOnCleanUp()
-	{
-		return _isExitQuestOnCleanUp;
-	}
-	
-	/**
-	 * @param isExitQuestOnCleanUp
-	 */
-	public void setIsExitQuestOnCleanUp(boolean isExitQuestOnCleanUp)
-	{
-		_isExitQuestOnCleanUp = isExitQuestOnCleanUp;
-	}
-	
-	/**
-	 * Start a timer for quest.<BR>
-	 * <BR>
-	 * @param name The name of the timer. Will also be the value for event of onEvent
-	 * @param time The millisecond value the timer will elapse
-	 */
-	public void startQuestTimer(String name, long time)
-	{
-		getQuest().startQuestTimer(name, time, null, getPlayer(), false);
-	}
-	
-	public void startQuestTimer(String name, long time, NpcInstance npc)
-	{
-		getQuest().startQuestTimer(name, time, npc, getPlayer(), false);
-	}
-	
-	public void startRepeatingQuestTimer(String name, long time)
-	{
-		getQuest().startQuestTimer(name, time, null, getPlayer(), true);
-	}
-	
-	public void startRepeatingQuestTimer(String name, long time, NpcInstance npc)
-	{
-		getQuest().startQuestTimer(name, time, npc, getPlayer(), true);
-	}
-	
-	/**
-	 * Return the QuestTimer object with the specified name
-	 * @param name
-	 * @return QuestTimer<BR>
-	 *         Return null if name does not exist
-	 */
-	public QuestTimer getQuestTimer(String name)
-	{
-		return getQuest().getQuestTimer(name, null, getPlayer());
-	}
-	
-	/**
 	 * Add spawn for player instance Return object id of newly spawned npc
 	 * @param npcId
 	 * @return
@@ -1106,30 +1035,9 @@ public class QuestState
 		return addSpawn(npcId, _player.getX(), _player.getY(), _player.getZ(), 0, false, 0);
 	}
 	
-	public NpcInstance addSpawn(int npcId, int despawnDelay)
-	{
-		return addSpawn(npcId, _player.getX(), _player.getY(), _player.getZ(), 0, false, despawnDelay);
-	}
-	
 	public NpcInstance addSpawn(int npcId, int x, int y, int z)
 	{
 		return addSpawn(npcId, x, y, z, 0, false, 0);
-	}
-	
-	/**
-	 * Add spawn for player instance Will despawn after the spawn length expires Uses player's coords and heading. Adds a little randomization in the x y coords Return object id of newly spawned npc
-	 * @param npcId
-	 * @param creature
-	 * @return
-	 */
-	public NpcInstance addSpawn(int npcId, Creature creature)
-	{
-		return addSpawn(npcId, creature, true, 0);
-	}
-	
-	public NpcInstance addSpawn(int npcId, Creature creature, int despawnDelay)
-	{
-		return addSpawn(npcId, creature.getX(), creature.getY(), creature.getZ(), creature.getHeading(), true, despawnDelay);
 	}
 	
 	/**
@@ -1175,61 +1083,6 @@ public class QuestState
 		return getQuest().addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay);
 	}
 	
-	public String showHtmlFile(String fileName)
-	{
-		return getQuest().showHtmlFile(getPlayer(), fileName);
-	}
-	
-	/**
-	 * Destroy element used by quest when quest is exited
-	 * @param repeatable
-	 * @return QuestState
-	 */
-	public QuestState exitQuest(boolean repeatable)
-	{
-		if (isCompleted())
-		{
-			return this;
-		}
-		
-		// Say quest is completed
-		setState(State.COMPLETED);
-		
-		// Clean registered quest items
-		final int[] itemIdList = getQuest().getRegisteredItemIds();
-		if (itemIdList != null)
-		{
-			for (int element : itemIdList)
-			{
-				takeItems(element, -1);
-			}
-		}
-		
-		// If quest is repeatable, delete quest from list of quest of the player and from database (quest CAN be created again => repeatable)
-		if (repeatable)
-		{
-			_player.delQuestState(_questName);
-			Quest.deleteQuestInDb(this);
-			
-			_vars = null;
-		}
-		else
-		{
-			// Otherwise, delete variables for quest and update database (quest CANNOT be created again => not repeatable)
-			if (_vars != null)
-			{
-				for (String var : _vars.keySet())
-				{
-					unset(var);
-				}
-			}
-			
-			Quest.updateQuestInDb(this);
-		}
-		
-		return this;
-	}
-	
 	public void showQuestionMark(int number)
 	{
 		_player.sendPacket(new TutorialShowQuestionMark(number));
@@ -1238,41 +1091,5 @@ public class QuestState
 	public void playTutorialVoice(String voice)
 	{
 		_player.sendPacket(new PlaySound(2, voice, false, 0, _player.getLocation(), 0));
-	}
-	
-	public void showTutorialHTML(String html)
-	{
-		String text = HtmCache.getInstance().getHtm("data/scripts/ai/others/Tutorial/" + html);
-		if (text == null)
-		{
-			LOGGER.warning("missing html page data/scripts/ai/others/Tutorial/" + html);
-			text = "<html><body>File data/scripts/ai/others/Tutorial/" + html + " not found or file is empty.</body></html>";
-		}
-		
-		_player.sendPacket(new TutorialShowHtml(text));
-	}
-	
-	public void closeTutorialHtml()
-	{
-		_player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
-	}
-	
-	public void onTutorialClientEvent(int number)
-	{
-		_player.sendPacket(new TutorialEnableClientEvent(number));
-	}
-	
-	public void dropItem(MonsterInstance npc, PlayerInstance player, int itemId, int count)
-	{
-		npc.DropItem(player, itemId, count);
-	}
-	
-	public NpcInstance getNpc()
-	{
-		if (_player.getTarget() instanceof NpcInstance)
-		{
-			return (NpcInstance) _player.getTarget();
-		}
-		return null;
 	}
 }

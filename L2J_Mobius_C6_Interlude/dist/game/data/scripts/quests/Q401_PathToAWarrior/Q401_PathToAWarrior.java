@@ -213,7 +213,7 @@ public class Q401_PathToAWarrior extends Quest
 			
 			case 20038:
 			case 20043:
-				if ((st.getInt("cond") == 5) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == RUSTED_BRONZE_SWORD_3) && st.dropItemsAlways(POISON_SPIDER_LEG, 1, 20))
+				if ((st.getInt("cond") == 5) && (player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND) == RUSTED_BRONZE_SWORD_3) && st.dropItemsAlways(POISON_SPIDER_LEG, 1, 20))
 				{
 					st.set("cond", "6");
 				}

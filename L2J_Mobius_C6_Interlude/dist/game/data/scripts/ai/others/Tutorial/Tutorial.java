@@ -20,10 +20,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.network.serverpackets.TutorialCloseHtml;
+import org.l2jmobius.gameserver.network.serverpackets.TutorialEnableClientEvent;
+import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 
 public class Tutorial extends Quest
 {
@@ -208,7 +212,7 @@ public class Tutorial extends Quest
 					{
 						qs.showQuestionMark(12);
 						qs.playSound("ItemSound.quest_tutorial");
-						qs.onTutorialClientEvent(0);
+						onTutorialClientEvent(player, 0);
 						break;
 					}
 				}
@@ -253,12 +257,12 @@ public class Tutorial extends Quest
 				{
 					case 0:
 					{
-						qs.closeTutorialHtml();
+						closeTutorialHtml(player);
 						break;
 					}
 					case 1:
 					{
-						qs.closeTutorialHtml();
+						closeTutorialHtml(player);
 						qs.playTutorialVoice("tutorial_voice_006");
 						qs.showQuestionMark(1);
 						qs.playSound("ItemSound.quest_tutorial");
@@ -270,43 +274,43 @@ public class Tutorial extends Quest
 					{
 						qs.playTutorialVoice("tutorial_voice_003");
 						html = "tutorial_02.htm";
-						qs.onTutorialClientEvent(1);
+						onTutorialClientEvent(player, 1);
 						qs.set("Ex", "-5");
 						break;
 					}
 					case 3:
 					{
 						html = "tutorial_03.htm";
-						qs.onTutorialClientEvent(2);
+						onTutorialClientEvent(player, 2);
 						break;
 					}
 					case 5:
 					{
 						html = "tutorial_05.htm";
-						qs.onTutorialClientEvent(8);
+						onTutorialClientEvent(player, 8);
 						break;
 					}
 					case 7:
 					{
 						html = "tutorial_100.htm";
-						qs.onTutorialClientEvent(0);
+						onTutorialClientEvent(player, 0);
 						break;
 					}
 					case 8:
 					{
 						html = "tutorial_101.htm";
-						qs.onTutorialClientEvent(0);
+						onTutorialClientEvent(player, 0);
 						break;
 					}
 					case 10:
 					{
 						html = "tutorial_103.htm";
-						qs.onTutorialClientEvent(0);
+						onTutorialClientEvent(player, 0);
 						break;
 					}
 					case 12:
 					{
-						qs.closeTutorialHtml();
+						closeTutorialHtml(player);
 						break;
 					}
 					case 23:
@@ -360,14 +364,14 @@ public class Tutorial extends Quest
 				qs.playTutorialVoice("tutorial_voice_004");
 				html = "tutorial_03.htm";
 				qs.playSound("ItemSound.quest_tutorial");
-				qs.onTutorialClientEvent(2);
+				onTutorialClientEvent(player, 2);
 			}
 			else if ((eventId == 2) && (player.getLevel() < 6))
 			{
 				qs.playTutorialVoice("tutorial_voice_005");
 				html = "tutorial_05.htm";
 				qs.playSound("ItemSound.quest_tutorial");
-				qs.onTutorialClientEvent(8);
+				onTutorialClientEvent(player, 8);
 			}
 			else if ((eventId == 8) && (player.getLevel() < 6))
 			{
@@ -399,14 +403,14 @@ public class Tutorial extends Quest
 				qs.playSound("ItemSound.quest_tutorial");
 				qs.set("Die", "1");
 				qs.showQuestionMark(8);
-				qs.onTutorialClientEvent(0);
+				onTutorialClientEvent(player, 0);
 			}
 			else if ((eventId == 800000) && (player.getLevel() < 6) && (qs.getInt("sit") == 0))
 			{
 				qs.playTutorialVoice("tutorial_voice_018");
 				qs.playSound("ItemSound.quest_tutorial");
 				qs.set("sit", "1");
-				qs.onTutorialClientEvent(0);
+				onTutorialClientEvent(player, 0);
 				html = "tutorial_21z.htm";
 			}
 			else if (eventId == 40)
@@ -523,7 +527,7 @@ public class Tutorial extends Quest
 				qs.playSound("ItemSound.quest_tutorial");
 				qs.set("HP", "1");
 				qs.showQuestionMark(10);
-				qs.onTutorialClientEvent(800000);
+				onTutorialClientEvent(player, 800000);
 			}
 			else if ((eventId == 57) && (player.getLevel() < 6) && (qs.getInt("Adena") == 0))
 			{
@@ -574,7 +578,7 @@ public class Tutorial extends Quest
 				case 3:
 				{
 					html = "tutorial_09.htm";
-					qs.onTutorialClientEvent(1048576);
+					onTutorialClientEvent(player, 1048576);
 					break;
 				}
 				case 5:
@@ -699,8 +703,30 @@ public class Tutorial extends Quest
 		{
 			return null;
 		}
-		qs.showTutorialHTML(html);
+		showTutorialHTML(player, html);
 		return null;
+	}
+	
+	private void showTutorialHTML(PlayerInstance player, String html)
+	{
+		String text = HtmCache.getInstance().getHtm("data/scripts/ai/others/Tutorial/" + html);
+		if (text == null)
+		{
+			LOGGER.warning("missing html page data/scripts/ai/others/Tutorial/" + html);
+			text = "<html><body>File data/scripts/ai/others/Tutorial/" + html + " not found or file is empty.</body></html>";
+		}
+		
+		player.sendPacket(new TutorialShowHtml(text));
+	}
+	
+	private void closeTutorialHtml(PlayerInstance player)
+	{
+		player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
+	}
+	
+	private void onTutorialClientEvent(PlayerInstance player, int number)
+	{
+		player.sendPacket(new TutorialEnableClientEvent(number));
 	}
 	
 	public static void main(String[] args)

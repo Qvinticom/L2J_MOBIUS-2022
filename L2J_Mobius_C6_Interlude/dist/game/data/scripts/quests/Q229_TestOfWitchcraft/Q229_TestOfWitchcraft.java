@@ -630,7 +630,7 @@ public class Q229_TestOfWitchcraft extends Quest
 				}
 				else if ((cond == 9) && _drevanulPrinceZeruel)
 				{
-					if (st.getItemEquipped(7) == SWORD_OF_BINDING)
+					if (attacker.getInventory().getPaperdollItemId(7) == SWORD_OF_BINDING)
 					{
 						_swordOfBinding = true;
 						

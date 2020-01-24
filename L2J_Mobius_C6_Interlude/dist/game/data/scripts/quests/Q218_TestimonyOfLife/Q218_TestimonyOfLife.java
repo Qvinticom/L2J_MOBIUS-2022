@@ -531,7 +531,7 @@ public class Q218_TestimonyOfLife extends Quest
 				break;
 			
 			case 27077:
-				if ((st.getInt("cond") == 18) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == TALINS_SPEAR))
+				if ((st.getInt("cond") == 18) && (player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND) == TALINS_SPEAR))
 				{
 					st.set("cond", "19");
 					st.playSound(QuestState.SOUND_MIDDLE);

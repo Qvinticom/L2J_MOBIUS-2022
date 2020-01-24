@@ -17,6 +17,7 @@
 package quests.Q648_AnIceMerchantsDream;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -116,7 +117,7 @@ public class Q648_AnIceMerchantsDream extends Quest
 			}
 			case "32023-05.htm":
 			{
-				if (qs.getRandom(100) <= 25)
+				if (Rnd.get(100) <= 25)
 				{
 					qs.giveItems(BLACK_ICE, 1);
 					qs.playSound("ItemSound3.sys_enchant_sucess");
@@ -229,7 +230,7 @@ public class Q648_AnIceMerchantsDream extends Quest
 			int chance = (int) ((npc.getNpcId() - 22050) * Config.RATE_DROP_QUEST);
 			chance /= 100;
 			int numItems = chance;
-			int random = qs.getRandom(100);
+			int random = Rnd.get(100);
 			if (random <= chance)
 			{
 				numItems += 1;
@@ -241,7 +242,7 @@ public class Q648_AnIceMerchantsDream extends Quest
 			}
 			
 			final int cond = qs.getInt("cond");
-			random = qs.getRandom(100);
+			random = Rnd.get(100);
 			if ((cond == 2) && (random <= 10))
 			{
 				qs.giveItems(HEMOCYTE, 1);

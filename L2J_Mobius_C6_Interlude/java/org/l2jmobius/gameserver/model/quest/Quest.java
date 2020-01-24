@@ -356,7 +356,7 @@ public class Quest extends ManagedScript
 				{
 					final QuestTimer tmp = timers.get(i);
 					
-					if ((tmp != null) && tmp.isMatch(this, name, npc, player))
+					if ((tmp != null) && tmp.equals(this, name, npc, player))
 					{
 						timer = tmp;
 						break;
@@ -395,7 +395,7 @@ public class Quest extends ManagedScript
 			{
 				final QuestTimer timer = qt.get(i);
 				
-				if ((timer != null) && timer.isMatch(this, name, npc, player))
+				if ((timer != null) && timer.equals(this, name, npc, player))
 				{
 					return timer;
 				}
@@ -422,9 +422,9 @@ public class Quest extends ManagedScript
 			for (int i = 0; i < qt.size(); i++)
 			{
 				final QuestTimer timer = qt.get(i);
-				if ((timer != null) && timer.isMatch(this, name, npc, player))
+				if ((timer != null) && timer.equals(this, name, npc, player))
 				{
-					timer.cancel(false);
+					timer.cancel();
 					qt.remove(timer);
 					return;
 				}
@@ -452,7 +452,7 @@ public class Quest extends ManagedScript
 			{
 				if (timer != null)
 				{
-					timer.cancel(false);
+					timer.cancel();
 				}
 			}
 			
@@ -469,7 +469,7 @@ public class Quest extends ManagedScript
 		
 		synchronized (_allEventTimers)
 		{
-			final ArrayList<QuestTimer> timers = _allEventTimers.get(timer.getName());
+			final ArrayList<QuestTimer> timers = _allEventTimers.get(timer.toString());
 			
 			if (timers == null)
 			{
@@ -1803,7 +1803,7 @@ public class Quest extends ManagedScript
 			{
 				for (QuestTimer timer : timers)
 				{
-					timer.cancel(false);
+					timer.cancel();
 				}
 			}
 			_allEventTimers.clear();

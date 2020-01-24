@@ -342,7 +342,7 @@ public class Q212_TrialOfDuty extends Quest
 				break;
 			
 			case 27119:
-				if ((cond == 2) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == OLD_KNIGHT_SWORD))
+				if ((cond == 2) && (player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND) == OLD_KNIGHT_SWORD))
 				{
 					st.set("cond", "3");
 					st.playSound(QuestState.SOUND_MIDDLE);

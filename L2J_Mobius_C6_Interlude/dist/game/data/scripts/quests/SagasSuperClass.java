@@ -165,7 +165,7 @@ public class SagasSuperClass extends Quest
 				final NpcInstance archon = st2.addSpawn(_mob[1], xx, yy, zz);
 				addSpawn(st2, archon);
 				st2.set("spawned", "1");
-				st2.startQuestTimer("Archon Hellisha has despawned", 600000, archon);
+				startQuestTimer("Archon Hellisha has despawned", 600000, archon, st2.getPlayer());
 				archon.broadcastNpcSay(_text[13].replace("PLAYERNAME", st2.getPlayer().getName()));
 				((Attackable) archon).addDamageHate(st2.getPlayer(), 0, 99999);
 				archon.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, st2.getPlayer(), null);
@@ -391,8 +391,8 @@ public class SagasSuperClass extends Quest
 				{
 					final NpcInstance mob1 = st.addSpawn(_mob[0], _x[0], _y[0], _z[0]);
 					st.set("spawned", "1");
-					st.startQuestTimer("Mob_1 Timer 1", 500, mob1);
-					st.startQuestTimer("Mob_1 has despawned", 300000, mob1);
+					startQuestTimer("Mob_1 Timer 1", 500, mob1, player);
+					startQuestTimer("Mob_1 has despawned", 300000, mob1, player);
 					addSpawn(st, mob1);
 					htmltext = "7-02.htm";
 				}
@@ -436,10 +436,10 @@ public class SagasSuperClass extends Quest
 					st.set("Mob_2", String.valueOf(mob2.getObjectId()));
 					st.set("Quest0", "1");
 					st.set("Quest1", "45");
-					st.startRepeatingQuestTimer("Mob_3 Timer 1", 500, mob3);
-					st.startQuestTimer("Mob_3 has despawned", 59000, mob3);
-					st.startQuestTimer("Mob_2 Timer 1", 500, mob2);
-					st.startQuestTimer("Mob_2 has despawned", 60000, mob2);
+					startQuestTimer("Mob_3 Timer 1", 500, mob3, player, true);
+					startQuestTimer("Mob_3 has despawned", 59000, mob3, player);
+					startQuestTimer("Mob_2 Timer 1", 500, mob2, player);
+					startQuestTimer("Mob_2 has despawned", 60000, mob2, player);
 					htmltext = "10-02.htm";
 				}
 				else if (st.getInt("Quest1") == 45)
@@ -506,7 +506,7 @@ public class SagasSuperClass extends Quest
 			else if (event.equals("Mob_2 Timer 1"))
 			{
 				npc.broadcastNpcSay(_text[7].replace("PLAYERNAME", player.getName()));
-				st.startQuestTimer("Mob_2 Timer 2", 1500, npc);
+				startQuestTimer("Mob_2 Timer 2", 1500, npc, player);
 				if (st.getInt("Quest1") == 45)
 				{
 					st.set("Quest1", "0");
@@ -516,15 +516,15 @@ public class SagasSuperClass extends Quest
 			else if (event.equals("Mob_2 Timer 2"))
 			{
 				npc.broadcastNpcSay(_text[8].replace("PLAYERNAME", player.getName()));
-				st.startQuestTimer("Mob_2 Timer 3", 10000, npc);
+				startQuestTimer("Mob_2 Timer 3", 10000, npc, player);
 				return null;
 			}
 			else if (event.equals("Mob_2 Timer 3"))
 			{
 				if (st.getInt("Quest0") == 0)
 				{
-					st.startQuestTimer("Mob_2 Timer 3", 13000, npc);
-					if (st.getRandom(2) == 0)
+					startQuestTimer("Mob_2 Timer 3", 13000, npc, player);
+					if (Rnd.nextBoolean())
 					{
 						npc.broadcastNpcSay(_text[9].replace("PLAYERNAME", player.getName()));
 					}
@@ -553,7 +553,7 @@ public class SagasSuperClass extends Quest
 				}
 				else
 				{
-					st.startQuestTimer("Mob_2 has despawned", 1000, npc);
+					startQuestTimer("Mob_2 has despawned", 1000, npc, player);
 				}
 				return null;
 			}
