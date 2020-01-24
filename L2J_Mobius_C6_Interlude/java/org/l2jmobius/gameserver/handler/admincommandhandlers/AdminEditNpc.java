@@ -40,8 +40,6 @@ import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.StoreTradeList;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.BoxInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -493,48 +491,6 @@ public class AdminEditNpc implements IAdminCommandHandler
 			else
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //del_drop <npc_id> <item_id> <category>");
-			}
-		}
-		else if (command.startsWith("admin_box_access"))
-		{
-			final WorldObject target = activeChar.getTarget();
-			final String[] players = command.split(" ");
-			
-			if (target instanceof BoxInstance)
-			{
-				final BoxInstance box = (BoxInstance) target;
-				
-				if (players.length > 1)
-				{
-					boolean access = true;
-					for (int i = 1; i < players.length; i++)
-					{
-						if (players[i].equals("no"))
-						{
-							access = false;
-							continue;
-						}
-						box.grantAccess(players[i], access);
-					}
-				}
-				else
-				{
-					try
-					{
-						String msg = "Access:";
-						
-						for (Object p : box.getAccess())
-						{
-							msg += " " + p;
-						}
-						
-						activeChar.sendMessage(msg);
-					}
-					catch (Exception e)
-					{
-						LOGGER.info("box_access: " + e);
-					}
-				}
 			}
 		}
 		

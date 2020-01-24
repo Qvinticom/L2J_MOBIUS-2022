@@ -442,7 +442,7 @@ public class Spawn
 			};
 			
 			// Call the constructor of the NpcInstance
-			// (can be a ArtefactInstance, FriendlyMobInstance, GuardInstance, MonsterInstance, SiegeGuardInstance, BoxInstance, FeedableBeastInstance, TamedBeastInstance, FolkInstance)
+			// (can be a ArtefactInstance, FriendlyMobInstance, GuardInstance, MonsterInstance, SiegeGuardInstance, FeedableBeastInstance, TamedBeastInstance, FolkInstance)
 			final Object tmp = _constructor.newInstance(parameters);
 			
 			// Must be done before object is spawned into visible world

@@ -102,7 +102,6 @@ import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
  * Creature :<BR>
  * <BR>
  * <li>Attackable</li>
- * <li>BoxInstance</li>
  * <li>FolkInstance</li>
  * @version $Revision: 1.32.2.7.2.24 $ $Date: 2009/04/13 09:17:09 $
  */
