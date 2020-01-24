@@ -30,8 +30,8 @@ import org.l2jmobius.gameserver.model.MinionData;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.EventType;
+import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.skills.Stats;
 
 /**
@@ -317,7 +317,7 @@ public class NpcTemplate extends CreatureTemplate
 			{
 				if (quests.get(0).getName().equals(q.getName()))
 				{
-					quests.add(0, q);
+					quests.set(0, q);
 				}
 				else
 				{
