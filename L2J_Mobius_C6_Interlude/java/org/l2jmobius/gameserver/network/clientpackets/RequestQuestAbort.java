@@ -64,7 +64,7 @@ public class RequestQuestAbort extends GameClientPacket
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				sm.addString("Quest aborted.");
 				player.sendPacket(sm);
-				final QuestList ql = new QuestList();
+				final QuestList ql = new QuestList(player);
 				player.sendPacket(ql);
 			}
 		}

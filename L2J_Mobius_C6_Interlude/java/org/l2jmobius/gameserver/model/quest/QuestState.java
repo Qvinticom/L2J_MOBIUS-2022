@@ -174,8 +174,7 @@ public class QuestState
 		_state = state;
 		
 		Quest.updateQuestInDb(this);
-		final QuestList ql = new QuestList();
-		_player.sendPacket(ql);
+		_player.sendPacket(new QuestList(_player));
 		return state;
 	}
 	
@@ -341,10 +340,9 @@ public class QuestState
 		}
 		
 		// send a packet to the client to inform it of the quest progress (step change)
-		final QuestList ql = new QuestList();
-		_player.sendPacket(ql);
+		_player.sendPacket(new QuestList(_player));
 		
-		final int questId = getQuest().getQuestIntId();
+		final int questId = getQuest().getQuestId();
 		
 		if ((questId > 0) && (questId < 999) && (cond > 0))
 		{
@@ -553,7 +551,7 @@ public class QuestState
 			return;
 		}
 		
-		final int questId = getQuest().getQuestIntId();
+		final int questId = getQuest().getQuestId();
 		
 		// If item for reward is gold (ID=57), modify count with rate for quest reward
 		if ((itemId == 57) && ((questId < 217) || (questId > 233)) && ((questId < 401) || (questId > 418)))
@@ -1239,7 +1237,7 @@ public class QuestState
 	
 	public void playTutorialVoice(String voice)
 	{
-		_player.sendPacket(new PlaySound(2, voice, 0, 0, _player.getX(), _player.getY(), _player.getZ()));
+		_player.sendPacket(new PlaySound(2, voice, false, 0, _player.getLocation(), 0));
 	}
 	
 	public void showTutorialHTML(String html)
@@ -1256,7 +1254,7 @@ public class QuestState
 	
 	public void closeTutorialHtml()
 	{
-		_player.sendPacket(new TutorialCloseHtml());
+		_player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
 	}
 	
 	public void onTutorialClientEvent(int number)

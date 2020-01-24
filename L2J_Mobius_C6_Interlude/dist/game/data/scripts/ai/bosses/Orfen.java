@@ -234,7 +234,7 @@ public class Orfen extends Quest
 	{
 		if (npc.getNpcId() == ORFEN)
 		{
-			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
 			
 			if (!npc.getSpawn().is_customBossInstance())
 			{

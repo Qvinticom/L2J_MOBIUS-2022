@@ -21,6 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.knownlist.RaceManagerKnownList;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.MonsterRace;
@@ -223,9 +224,9 @@ public class RaceManagerInstance extends NpcInstance
 		final MonsterRace race = MonsterRace.getInstance();
 		if (_state == STARTING_RACE)
 		{
-			final PlaySound sRace = new PlaySound(1, "S_Race", 0, 0, 0, 0, 0);
+			final PlaySound sRace = new PlaySound(1, "S_Race");
 			broadcast(sRace);
-			final PlaySound sRace2 = new PlaySound(0, "ItemSound2.race_start", 1, 121209259, 12125, 182487, -3559);
+			final PlaySound sRace2 = new PlaySound(0, "ItemSound2.race_start", true, 121209259, new Location(12125, 182487, -3559), 0);
 			broadcast(sRace2);
 			_packet = new MonRaceInfo(_codes[1][0], _codes[1][1], race.getMonsters(), race.getSpeeds());
 			sendMonsterInfo();

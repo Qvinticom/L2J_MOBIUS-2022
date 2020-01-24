@@ -958,7 +958,7 @@ public class Antharas extends Quest
 	{
 		if ((npc.getNpcId() == 29019) || (npc.getNpcId() == 29066) || (npc.getNpcId() == 29067) || (npc.getNpcId() == 29068))
 		{
-			npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+			npc.broadcastPacket(new PlaySound(1, "BS01_D", npc));
 			
 			if (!npc.getSpawn().is_customBossInstance())
 			{

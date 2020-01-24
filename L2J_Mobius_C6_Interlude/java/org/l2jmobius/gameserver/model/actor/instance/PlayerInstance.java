@@ -1598,11 +1598,10 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return a table containing all Quest in progress from the table _quests.<BR>
-	 * <BR>
+	 * Return a list containing all Quest in progress from the table _quests.
 	 * @return the all active quests
 	 */
-	public Quest[] getAllActiveQuests()
+	public List<Quest> getAllActiveQuests()
 	{
 		final List<Quest> quests = new ArrayList<>();
 		
@@ -1610,7 +1609,7 @@ public class PlayerInstance extends Playable
 		{
 			if (qs != null)
 			{
-				if (qs.getQuest().getQuestIntId() >= 1999)
+				if (qs.getQuest().getQuestId() >= 1999)
 				{
 					continue;
 				}
@@ -1629,7 +1628,7 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
-		return quests.toArray(new Quest[quests.size()]);
+		return quests;
 	}
 	
 	/**
@@ -1794,7 +1793,7 @@ public class PlayerInstance extends Playable
 				{
 					for (QuestState state : states)
 					{
-						if ((state.getQuest().getQuestIntId() == qs.getQuest().getQuestIntId()) && !qs.isCompleted())
+						if ((state.getQuest().getQuestId() == qs.getQuest().getQuestId()) && !qs.isCompleted())
 						{
 							if (qs.getQuest().notifyEvent(event, npc, this))
 							{
@@ -1804,7 +1803,7 @@ public class PlayerInstance extends Playable
 							retval = qs;
 						}
 					}
-					sendPacket(new QuestList());
+					sendPacket(new QuestList(this));
 				}
 			}
 		}
@@ -6326,7 +6325,7 @@ public class PlayerInstance extends Playable
 					{
 						if (!(pk._teamNameTvT.equals(_teamNameTvT)))
 						{
-							final PlaySound ps = new PlaySound(0, "ItemSound.quest_itemget", 1, getObjectId(), getX(), getY(), getZ());
+							final PlaySound ps = new PlaySound(0, "ItemSound.quest_itemget", this);
 							_countTvTdies++;
 							pk._countTvTkills++;
 							pk.setTitle("Kills: " + pk._countTvTkills);
@@ -6381,7 +6380,7 @@ public class PlayerInstance extends Playable
 					if (DM.isTeleport() || DM.is_started())
 					{
 						pk._countDMkills++;
-						final PlaySound ps = new PlaySound(0, "ItemSound.quest_itemget", 1, getObjectId(), getX(), getY(), getZ());
+						final PlaySound ps = new PlaySound(0, "ItemSound.quest_itemget", this);
 						pk.setTitle("Kills: " + pk._countDMkills);
 						pk.sendPacket(ps);
 						pk.broadcastUserInfo();

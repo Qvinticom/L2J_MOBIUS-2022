@@ -133,7 +133,7 @@ public class RequestRecordInfo extends GameClientPacket
 					
 					if (otherPlayer.isInBoat())
 					{
-						otherPlayer.getPosition().setWorldPosition(otherPlayer.getBoat().getPosition().getWorldPosition());
+						otherPlayer.getPosition().setWorldPosition(otherPlayer.getBoat().getLocation());
 						player.sendPacket(new CharInfo(otherPlayer));
 						final int relation = otherPlayer.getRelation(player);
 						

@@ -128,7 +128,7 @@ public class ItemsOnGroundManager
 				}
 				
 				item.getPosition().setWorldPosition(result.getInt(5), result.getInt(6), result.getInt(7));
-				item.getPosition().setWorldRegion(World.getInstance().getRegion(item.getPosition().getWorldPosition()));
+				item.getPosition().setWorldRegion(World.getInstance().getRegion(item.getLocation()));
 				item.getPosition().getWorldRegion().addVisibleObject(item);
 				item.setDropTime(result.getLong(8));
 				item.setProtected(result.getLong(8) == -1);

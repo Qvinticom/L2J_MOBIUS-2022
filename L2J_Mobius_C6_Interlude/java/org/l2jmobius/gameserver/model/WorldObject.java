@@ -386,8 +386,12 @@ public abstract class WorldObject
 		{
 			_position = new ObjectPosition(this);
 		}
-		
 		return _position;
+	}
+	
+	public Location getLocation()
+	{
+		return getPosition().getWorldPosition();
 	}
 	
 	/**

@@ -205,7 +205,7 @@ public class Zaken extends Quest
 		}
 		GrandBossManager.getInstance().addBoss(npc);
 		
-		npc.broadcastPacket(new PlaySound(1, "BS01_A", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+		npc.broadcastPacket(new PlaySound(1, "BS01_A", npc));
 		_ai0 = 0;
 		_ai1 = npc.getX();
 		_ai2 = npc.getY();
@@ -857,7 +857,7 @@ public class Zaken extends Quest
 		
 		if (npcId == ZAKEN)
 		{
-			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
 			
 			if (!npc.getSpawn().is_customBossInstance())
 			{

@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.MonsterRace;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -99,11 +100,11 @@ public class AdminMonsterRace implements IAdminCommandHandler
 			sm.addNumber(0);
 			activeChar.sendPacket(sm);
 			
-			final PlaySound sRace = new PlaySound(1, "S_Race", 0, 0, 0, 0, 0);
+			final PlaySound sRace = new PlaySound(1, "S_Race");
 			activeChar.sendPacket(sRace);
 			activeChar.broadcastPacket(sRace);
 			
-			final PlaySound sRace2 = new PlaySound(0, "ItemSound2.race_start", 1, 121209259, 12125, 182487, -3559);
+			final PlaySound sRace2 = new PlaySound(0, "ItemSound2.race_start", true, 121209259, new Location(12125, 182487, -3559), 0);
 			activeChar.sendPacket(sRace2);
 			activeChar.broadcastPacket(sRace2);
 			

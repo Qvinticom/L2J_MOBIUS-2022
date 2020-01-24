@@ -418,7 +418,7 @@ public class Baium extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
-		npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+		npc.broadcastPacket(new PlaySound(1, "BS01_D", npc));
 		
 		if (!npc.getSpawn().is_customBossInstance())
 		{

@@ -102,7 +102,7 @@ public class DrChaos extends Quest
 					final NpcInstance golem = addSpawn(CHAOS_GOLEM, 94640, -112496, -3336, 0, false, 0);
 					_golemSpawned = 1;
 					startQuestTimer("6", 1000, golem, player);
-					player.sendPacket(new PlaySound(1, "Rm03_A", 0, 0, 0, 0, 0));
+					player.sendPacket(new PlaySound(1, "Rm03_A"));
 				}
 				break;
 			}

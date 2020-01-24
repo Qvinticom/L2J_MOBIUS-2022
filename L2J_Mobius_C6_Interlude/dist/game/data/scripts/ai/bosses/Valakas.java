@@ -599,7 +599,7 @@ public class Valakas extends Quest
 	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 2000, 130, -1, 0));
-		npc.broadcastPacket(new PlaySound(1, "B03_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+		npc.broadcastPacket(new PlaySound(1, "B03_D", npc));
 		startQuestTimer("1111", 500, npc, null);
 		
 		if (!npc.getSpawn().is_customBossInstance())
@@ -969,7 +969,7 @@ public class Valakas extends Quest
 		{
 			if ((obj instanceof PlayerInstance) && Util.checkIfInRange(10000, npc, obj, true))
 			{
-				((Creature) obj).sendPacket(new PlaySound(1, "B03_A", 1, npc.getObjectId(), 212852, -114842, -1632));
+				((Creature) obj).sendPacket(new PlaySound(1, "B03_A", npc));
 				((Creature) obj).sendPacket(new SocialAction(npc.getObjectId(), 3));
 			}
 		}

@@ -103,7 +103,7 @@ public class Fishing implements Runnable
 		
 		final ExFishingStartCombat efsc = new ExFishingStartCombat(_fisher, _time, _fishMaxHp, _mode, _lureType, _deceptiveMode);
 		_fisher.broadcastPacket(efsc);
-		_fisher.sendPacket(new PlaySound(1, "SF_S_01", 0, 0, 0, 0, 0));
+		_fisher.sendPacket(new PlaySound(1, "SF_S_01"));
 		// Succeeded in getting a bite
 		_fisher.sendPacket(SystemMessageId.GOT_A_BITE);
 		

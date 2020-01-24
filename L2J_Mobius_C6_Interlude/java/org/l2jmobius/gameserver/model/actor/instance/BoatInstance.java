@@ -581,7 +581,7 @@ public class BoatInstance extends Creature
 				{
 					sm = new CreatureSay(0, Say2.SHOUT, _t2.npc1, _t2.sysmess10_1);
 				}
-				ps = new PlaySound(0, "itemsound.ship_arrival_departure", 1, getObjectId(), getX(), getY(), getZ());
+				ps = new PlaySound(0, "itemsound.ship_arrival_departure", this);
 				if ((knownPlayers == null) || knownPlayers.isEmpty())
 				{
 					return;
@@ -605,7 +605,7 @@ public class BoatInstance extends Creature
 				{
 					sm = new CreatureSay(0, Say2.SHOUT, _t2.npc1, _t2.sysmess5_1);
 				}
-				ps = new PlaySound(0, "itemsound.ship_5min", 1, getObjectId(), getX(), getY(), getZ());
+				ps = new PlaySound(0, "itemsound.ship_5min", this);
 				if ((knownPlayers == null) || knownPlayers.isEmpty())
 				{
 					return;
@@ -627,7 +627,7 @@ public class BoatInstance extends Creature
 				{
 					sm = new CreatureSay(0, Say2.SHOUT, _t2.npc1, _t2.sysmess1_1);
 				}
-				ps = new PlaySound(0, "itemsound.ship_1min", 1, getObjectId(), getX(), getY(), getZ());
+				ps = new PlaySound(0, "itemsound.ship_1min", this);
 				if ((knownPlayers == null) || knownPlayers.isEmpty())
 				{
 					return;
@@ -669,7 +669,7 @@ public class BoatInstance extends Creature
 				{
 					sm = new CreatureSay(0, Say2.SHOUT, _t2.npc1, _t2.sysmessb_1);
 				}
-				ps = new PlaySound(0, "itemsound.ship_arrival_departure", 1, getObjectId(), getX(), getY(), getZ());
+				ps = new PlaySound(0, "itemsound.ship_arrival_departure", this);
 				for (PlayerInstance player : knownPlayers)
 				{
 					player.sendPacket(sm);

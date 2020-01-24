@@ -20,6 +20,8 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 
 public class Location
 {
+	public static final Location DUMMY_LOC = new Location(0, 0, 0);
+	
 	protected int _x;
 	protected int _y;
 	protected int _z;

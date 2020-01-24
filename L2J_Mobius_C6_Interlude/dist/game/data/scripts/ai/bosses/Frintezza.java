@@ -1232,7 +1232,7 @@ public class Frintezza extends Quest
 			if (npc.isDead())
 			{
 				_onMorph = 1;
-				_zone.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+				_zone.broadcastPacket(new PlaySound(1, "BS01_D", npc));
 				
 				startQuestTimer("attack_stop", 0, _frintezza, null);
 				startQuestTimer("stop_pc", 0, npc, null);

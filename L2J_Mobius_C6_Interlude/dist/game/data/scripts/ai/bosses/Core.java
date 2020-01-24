@@ -146,7 +146,7 @@ public class Core extends Quest
 	public void spawnBoss(GrandBossInstance npc)
 	{
 		GrandBossManager.getInstance().addBoss(npc);
-		npc.broadcastPacket(new PlaySound(1, "BS01_A", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+		npc.broadcastPacket(new PlaySound(1, "BS01_A", npc));
 		// Spawn minions
 		Attackable mob;
 		Location spawnLocation;
@@ -223,11 +223,10 @@ public class Core extends Quest
 		final String name = npc.getName();
 		if (npcId == CORE)
 		{
-			final int objId = npc.getObjectId();
-			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, objId, npc.getX(), npc.getY(), npc.getZ()));
-			npc.broadcastPacket(new CreatureSay(objId, 0, name, "A fatal error has occurred."));
-			npc.broadcastPacket(new CreatureSay(objId, 0, name, "System is being shut down..."));
-			npc.broadcastPacket(new CreatureSay(objId, 0, name, "......"));
+			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
+			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, name, "A fatal error has occurred."));
+			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, name, "System is being shut down..."));
+			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, name, "......"));
 			_firstAttacked = false;
 			
 			if (!npc.getSpawn().is_customBossInstance())

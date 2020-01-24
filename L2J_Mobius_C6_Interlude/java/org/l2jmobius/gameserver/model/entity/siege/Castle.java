@@ -679,7 +679,7 @@ public class Castle
 				clan.setHasCastle(_castleId); // Set has castle flag for new owner
 				Announcements.getInstance().announceToAll(clan.getName() + " has taken " + getName() + " castle!");
 				clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
-				clan.broadcastToOnlineMembers(new PlaySound(1, "Siege_Victory", 0, 0, 0, 0, 0));
+				clan.broadcastToOnlineMembers(new PlaySound(1, "Siege_Victory"));
 				// give crowns
 				CrownManager.getInstance().checkCrowns(clan);
 				

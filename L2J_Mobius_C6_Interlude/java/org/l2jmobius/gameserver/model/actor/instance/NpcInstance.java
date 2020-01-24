@@ -1814,7 +1814,7 @@ public class NpcInstance extends Creature
 		}
 		else
 		{
-			if ((player.getWeightPenalty() >= 3) && (q.getQuestIntId() >= 1) && (q.getQuestIntId() < 1000))
+			if ((player.getWeightPenalty() >= 3) && (q.getQuestId() >= 1) && (q.getQuestId() < 1000))
 			{
 				player.sendPacket(SystemMessageId.INVENTORY_LESS_THAN_80_PERCENT);
 				return;
@@ -1822,10 +1822,10 @@ public class NpcInstance extends Creature
 			
 			if (qs == null)
 			{
-				if ((q.getQuestIntId() >= 1) && (q.getQuestIntId() < 20000))
+				if ((q.getQuestId() >= 1) && (q.getQuestId() < 20000))
 				{
-					final Quest[] questList = player.getAllActiveQuests();
-					if (questList.length >= 25) // if too many ongoing quests, don't show window and send message
+					final List<Quest> questList = player.getAllActiveQuests();
+					if (questList.size() >= 25) // if too many ongoing quests, don't show window and send message
 					{
 						player.sendMessage("You have too many quests, cannot register");
 						return;
@@ -1886,7 +1886,7 @@ public class NpcInstance extends Creature
 		{
 			for (QuestState x : awaits)
 			{
-				if (!options.contains(x.getQuest()) && (x.getQuest().getQuestIntId() > 0) && (x.getQuest().getQuestIntId() < 1000))
+				if (!options.contains(x.getQuest()) && (x.getQuest().getQuestId() > 0) && (x.getQuest().getQuestId() < 1000))
 				{
 					options.add(x.getQuest());
 				}
@@ -1897,7 +1897,7 @@ public class NpcInstance extends Creature
 		{
 			for (Quest x : starts)
 			{
-				if (!options.contains(x) && (x.getQuestIntId() > 0) && (x.getQuestIntId() < 1000))
+				if (!options.contains(x) && (x.getQuestId() > 0) && (x.getQuestId() < 1000))
 				{
 					options.add(x);
 				}

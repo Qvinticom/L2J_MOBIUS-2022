@@ -156,7 +156,7 @@ public class EnterWorld extends GameClientPacket
 		EnterGM(player);
 		
 		Quest.playerEnter(player);
-		player.sendPacket(new QuestList());
+		player.sendPacket(new QuestList(player));
 		
 		if (Config.ENABLE_COMMUNITY_BOARD)
 		{

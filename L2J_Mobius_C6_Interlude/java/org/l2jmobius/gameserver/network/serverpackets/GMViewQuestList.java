@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.List;
+
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -39,24 +41,13 @@ public class GMViewQuestList extends GameServerPacket
 		writeC(0x93);
 		writeS(_player.getName());
 		
-		final Quest[] questList = _player.getAllActiveQuests();
+		final List<Quest> questList = _player.getAllActiveQuests();
 		
-		if (questList.length == 0)
-		{
-			writeC(0);
-			writeH(0);
-			writeH(0);
-			return;
-		}
-		
-		writeH(questList.length); // quest count
-		
+		writeH(questList.size()); // quest count
 		for (Quest q : questList)
 		{
-			writeD(q.getQuestIntId());
-			
+			writeD(q.getQuestId());
 			final QuestState qs = _player.getQuestState(q.getName());
-			
 			if (qs == null)
 			{
 				writeD(0);

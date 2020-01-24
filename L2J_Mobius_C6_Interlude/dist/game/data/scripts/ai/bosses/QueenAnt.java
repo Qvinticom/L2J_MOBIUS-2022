@@ -150,7 +150,7 @@ public class QueenAnt extends Quest
 	private void spawnBoss(GrandBossInstance npc)
 	{
 		startQuestTimer("ACTION", 10000, npc, null, true);
-		npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+		npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
 		startQuestTimer("SPAWN_ROYAL", 1000, npc, null);
 		startQuestTimer("NURSES_SPAWN", 1000, npc, null);
 		startQuestTimer("CHECK_MINIONS_ZONE", 30000, npc, null, true);
@@ -365,7 +365,7 @@ public class QueenAnt extends Quest
 		
 		if (npcId == QUEEN)
 		{
-			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
 			
 			if (!npc.getSpawn().is_customBossInstance())
 			{

@@ -125,7 +125,7 @@ public class Q635_InTheDimensionalRift extends Quest
 				qs.exitQuest(true);
 				htmltext = "1.htm";
 			}
-			else if (player.getAllActiveQuests().length > MAX_QUEST)
+			else if (player.getAllActiveQuests().size() > MAX_QUEST)
 			{
 				qs.exitQuest(true);
 				htmltext = "1a.htm";

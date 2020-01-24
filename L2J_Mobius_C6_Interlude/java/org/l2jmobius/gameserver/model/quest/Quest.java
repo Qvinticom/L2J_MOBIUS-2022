@@ -241,7 +241,7 @@ public class Quest extends ManagedScript
 	 * Return ID of the quest
 	 * @return int
 	 */
-	public int getQuestIntId()
+	public int getQuestId()
 	{
 		return _questId;
 	}

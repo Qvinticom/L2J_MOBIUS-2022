@@ -496,7 +496,7 @@ public class Fort
 				clan.setHasFort(_fortId); // Set has fort flag for new owner
 				Announcements.getInstance().announceToAll(clan.getName() + " has taken " + getName() + " fort!");
 				clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
-				clan.broadcastToOnlineMembers(new PlaySound(1, "Siege_Victory", 0, 0, 0, 0, 0));
+				clan.broadcastToOnlineMembers(new PlaySound(1, "Siege_Victory"));
 			}
 		}
 		catch (Exception e)

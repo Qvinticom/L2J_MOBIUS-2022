@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.QuestList;
 
 public class RequestQuestList extends GameClientPacket
@@ -23,13 +24,17 @@ public class RequestQuestList extends GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		// trigger
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		final QuestList ql = new QuestList();
-		sendPacket(ql);
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		player.sendPacket(new QuestList(player));
 	}
 }

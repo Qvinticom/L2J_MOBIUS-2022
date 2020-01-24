@@ -98,7 +98,7 @@ public class QuestManager
 	{
 		for (Quest q : getQuests().values())
 		{
-			if (q.getQuestIntId() == questId)
+			if (q.getQuestId() == questId)
 			{
 				return q;
 			}
@@ -112,7 +112,7 @@ public class QuestManager
 		{
 			LOGGER.info("Replaced: " + newQuest.getName() + " with a new version.");
 		}
-		else if (newQuest.getQuestIntId() > 0)
+		else if (newQuest.getQuestId() > 0)
 		{
 			_questCount++;
 		}

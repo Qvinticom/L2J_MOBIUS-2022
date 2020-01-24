@@ -429,7 +429,7 @@ public class OracleTeleport extends Quest
 				htmltext = "1.htm";
 				st.exitQuest(true);
 			}
-			else if (player.getAllActiveQuests().length >= 25)
+			else if (player.getAllActiveQuests().size() >= 25)
 			{
 				htmltext = "1a.htm";
 				st.exitQuest(true);
@@ -452,7 +452,7 @@ public class OracleTeleport extends Quest
 				htmltext = "ziggurat_lowlevel.htm";
 				st.exitQuest(true);
 			}
-			else if (player.getAllActiveQuests().length >= 25)
+			else if (player.getAllActiveQuests().size() >= 25)
 			{
 				player.sendPacket(SystemMessageId.TOO_MANY_QUESTS);
 				st.exitQuest(true);
