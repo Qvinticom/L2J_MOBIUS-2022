@@ -63,12 +63,12 @@ public class AdminTest implements IAdminCommandHandler
 			final Creature target = (Creature) activeChar.getTarget();
 			
 			BuilderUtil.sendSysMessage(activeChar, "Activechar Mcrit " + activeChar.getMCriticalHit(null, null));
-			BuilderUtil.sendSysMessage(activeChar, "Activechar baseMCritRate " + activeChar.getTemplate().baseMCritRate);
+			BuilderUtil.sendSysMessage(activeChar, "Activechar baseMCritRate " + activeChar.getTemplate().getBaseMCritRate());
 			
 			if (target != null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Target Mcrit " + target.getMCriticalHit(null, null));
-				BuilderUtil.sendSysMessage(activeChar, "Target baseMCritRate " + target.getTemplate().baseMCritRate);
+				BuilderUtil.sendSysMessage(activeChar, "Target baseMCritRate " + target.getTemplate().getBaseMCritRate());
 			}
 		}
 		if (command.equals("admin_addbufftest"))

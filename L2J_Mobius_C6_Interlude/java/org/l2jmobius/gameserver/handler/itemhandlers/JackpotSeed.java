@@ -75,7 +75,7 @@ public class JackpotSeed implements IItemHandler
 			gourd.setOwner(player.getName());
 			player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-			sm.addString("Created " + template1.name + " at x: " + spawn.getX() + " y: " + spawn.getY() + " z: " + spawn.getZ());
+			sm.addString("Created " + template1.getName() + " at x: " + spawn.getX() + " y: " + spawn.getY() + " z: " + spawn.getZ());
 			player.sendPacket(sm);
 		}
 		catch (Exception e)

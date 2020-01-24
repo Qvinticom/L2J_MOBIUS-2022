@@ -42,9 +42,9 @@ public class ConditionTargetRaceId extends Condition
 		}
 		
 		final NpcInstance target = (NpcInstance) env.target;
-		if ((target.getTemplate() != null) && (target.getTemplate().race != null))
+		if ((target.getTemplate() != null) && (target.getTemplate().getRace() != null))
 		{
-			return _raceIds.contains(((NpcInstance) env.target).getTemplate().race.ordinal() + 1);
+			return _raceIds.contains(((NpcInstance) env.target).getTemplate().getRace().ordinal() + 1);
 		}
 		return false;
 	}

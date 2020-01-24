@@ -1965,7 +1965,7 @@ public class Attackable extends NpcInstance
 		
 		// Instant Item Drop :>
 		final double rateHp = getStat().calcStat(Stats.MAX_HP, 1, this, null);
-		if ((rateHp < 2) && npcTemplate.type.contentEquals("Monster")) // only Monster with <= 1x HP can drop herbs
+		if ((rateHp < 2) && npcTemplate.getType().contentEquals("Monster")) // only Monster with <= 1x HP can drop herbs
 		{
 			boolean hp = false;
 			boolean mp = false;
@@ -2670,7 +2670,7 @@ public class Attackable extends NpcInstance
 		boolean doLevelup = true;
 		final boolean isBossMob = maxAbsorbLevel > 10;
 		
-		final NpcTemplate.AbsorbCrystalType absorbType = getTemplate().absorbType;
+		final NpcTemplate.AbsorbCrystalType absorbType = getTemplate().getAbsorbType();
 		
 		final PlayerInstance killer = attacker instanceof Summon ? ((Summon) attacker).getOwner() : (PlayerInstance) attacker;
 		
@@ -3194,7 +3194,7 @@ public class Attackable extends NpcInstance
 	
 	private int getAbsorbLevel()
 	{
-		return getTemplate().absorbLevel;
+		return getTemplate().getAbsorbLevel();
 	}
 	
 	/**

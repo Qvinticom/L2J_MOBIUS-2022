@@ -484,7 +484,7 @@ public class RaidBossSpawnManager
 			return null;
 		}
 		
-		if (!template.type.equalsIgnoreCase("RaidBoss"))
+		if (!template.getType().equalsIgnoreCase("RaidBoss"))
 		{
 			return null;
 		}

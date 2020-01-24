@@ -118,7 +118,7 @@ public class RequestSellItem extends GameClientPacket
 			return;
 		}
 		
-		if ((_listId > 1000000) && (merchant.getTemplate().npcId != (_listId - 1000000)))
+		if ((_listId > 1000000) && (merchant.getTemplate().getNpcId() != (_listId - 1000000)))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;

@@ -713,10 +713,10 @@ public class Formulas
 		public void calc(Env env)
 		{
 			final PlayerTemplate t = (PlayerTemplate) env.player.getTemplate();
-			final int lvl = env.player.getLevel() - t.classBaseLevel;
-			final double hpmod = t.lvlHpMod * lvl;
-			final double hpmax = (t.lvlHpAdd + hpmod) * lvl;
-			final double hpmin = (t.lvlHpAdd * lvl) + hpmod;
+			final int lvl = env.player.getLevel() - t.getClassBaseLevel();
+			final double hpmod = t.getLvlHpMod() * lvl;
+			final double hpmax = (t.getLvlHpAdd() + hpmod) * lvl;
+			final double hpmin = (t.getLvlHpAdd() * lvl) + hpmod;
 			env.value += (hpmax + hpmin) / 2;
 		}
 	}
@@ -760,10 +760,10 @@ public class Formulas
 		public void calc(Env env)
 		{
 			final PlayerTemplate t = (PlayerTemplate) env.player.getTemplate();
-			final int lvl = env.player.getLevel() - t.classBaseLevel;
-			final double cpmod = t.lvlCpMod * lvl;
-			final double cpmax = (t.lvlCpAdd + cpmod) * lvl;
-			final double cpmin = (t.lvlCpAdd * lvl) + cpmod;
+			final int lvl = env.player.getLevel() - t.getClassBaseLevel();
+			final double cpmod = t.getLvlCpMod() * lvl;
+			final double cpmax = (t.getLvlCpAdd() + cpmod) * lvl;
+			final double cpmin = (t.getLvlCpAdd() * lvl) + cpmod;
 			env.value += (cpmax + cpmin) / 2;
 		}
 	}
@@ -807,10 +807,10 @@ public class Formulas
 		public void calc(Env env)
 		{
 			final PlayerTemplate t = (PlayerTemplate) env.player.getTemplate();
-			final int lvl = env.player.getLevel() - t.classBaseLevel;
-			final double mpmod = t.lvlMpMod * lvl;
-			final double mpmax = (t.lvlMpAdd + mpmod) * lvl;
-			final double mpmin = (t.lvlMpAdd * lvl) + mpmod;
+			final int lvl = env.player.getLevel() - t.getClassBaseLevel();
+			final double mpmod = t.getLvlMpMod() * lvl;
+			final double mpmax = (t.getLvlMpAdd() + mpmod) * lvl;
+			final double mpmin = (t.getLvlMpAdd() * lvl) + mpmod;
 			env.value += (mpmax + mpmin) / 2;
 		}
 	}
@@ -999,7 +999,7 @@ public class Formulas
 	 */
 	public static final double calcHpRegen(Creature creature)
 	{
-		double init = creature.getTemplate().baseHpReg;
+		double init = creature.getTemplate().getBaseHpReg();
 		double hpRegenMultiplier = creature.isRaid() ? Config.RAID_HP_REGEN_MULTIPLIER : Config.HP_REGEN_MULTIPLIER;
 		double hpRegenBonus = 0;
 		
@@ -1082,7 +1082,7 @@ public class Formulas
 	 */
 	public static final double calcMpRegen(Creature creature)
 	{
-		double init = creature.getTemplate().baseMpReg;
+		double init = creature.getTemplate().getBaseMpReg();
 		double mpRegenMultiplier = creature.isRaid() ? Config.RAID_MP_REGEN_MULTIPLIER : Config.MP_REGEN_MULTIPLIER;
 		double mpRegenBonus = 0;
 		
@@ -1152,7 +1152,7 @@ public class Formulas
 	 */
 	public static final double calcCpRegen(Creature creature)
 	{
-		double init = creature.getTemplate().baseHpReg;
+		double init = creature.getTemplate().getBaseHpReg();
 		double cpRegenMultiplier = Config.CP_REGEN_MULTIPLIER;
 		final double cpRegenBonus = 0;
 		
@@ -2185,72 +2185,72 @@ public class Formulas
 				{
 					case AGGRESSION:
 					{
-						multiplier = target.getTemplate().baseAggressionVuln;
+						multiplier = target.getTemplate().getBaseAggressionVuln();
 						break;
 					}
 					case BLEED:
 					{
-						multiplier = target.getTemplate().baseBleedVuln;
+						multiplier = target.getTemplate().getBaseBleedVuln();
 						break;
 					}
 					case POISON:
 					{
-						multiplier = target.getTemplate().basePoisonVuln;
+						multiplier = target.getTemplate().getBasePoisonVuln();
 						break;
 					}
 					case STUN:
 					{
-						multiplier = target.getTemplate().baseStunVuln;
+						multiplier = target.getTemplate().getBaseStunVuln();
 						break;
 					}
 					case ROOT:
 					{
-						multiplier = target.getTemplate().baseRootVuln;
+						multiplier = target.getTemplate().getBaseRootVuln();
 						break;
 					}
 					case MOVEMENT:
 					{
-						multiplier = target.getTemplate().baseMovementVuln;
+						multiplier = target.getTemplate().getBaseMovementVuln();
 						break;
 					}
 					case CONFUSION:
 					{
-						multiplier = target.getTemplate().baseConfusionVuln;
+						multiplier = target.getTemplate().getBaseConfusionVuln();
 						break;
 					}
 					case SLEEP:
 					{
-						multiplier = target.getTemplate().baseSleepVuln;
+						multiplier = target.getTemplate().getBaseSleepVuln();
 						break;
 					}
 					case FIRE:
 					{
-						multiplier = target.getTemplate().baseFireVuln;
+						multiplier = target.getTemplate().getBaseFireVuln();
 						break;
 					}
 					case WIND:
 					{
-						multiplier = target.getTemplate().baseWindVuln;
+						multiplier = target.getTemplate().getBaseWindVuln();
 						break;
 					}
 					case WATER:
 					{
-						multiplier = target.getTemplate().baseWaterVuln;
+						multiplier = target.getTemplate().getBaseWaterVuln();
 						break;
 					}
 					case EARTH:
 					{
-						multiplier = target.getTemplate().baseEarthVuln;
+						multiplier = target.getTemplate().getBaseEarthVuln();
 						break;
 					}
 					case HOLY:
 					{
-						multiplier = target.getTemplate().baseHolyVuln;
+						multiplier = target.getTemplate().getBaseHolyVuln();
 						break;
 					}
 					case DARK:
 					{
-						multiplier = target.getTemplate().baseDarkVuln;
+						multiplier = target.getTemplate().getBaseDarkVuln();
 						break;
 					}
 					default:

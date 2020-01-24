@@ -136,11 +136,11 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			replyMSG.append("<table>");
 			replyMSG.append("<tr><td>First</td><td>Second</td></tr>");
 			replyMSG.append("<tr><td>level " + lvl1 + "</td><td>level " + lvl2 + "</td></tr>");
-			replyMSG.append("<tr><td>id " + npc1.npcId + "</td><td>id " + npc2.npcId + "</td></tr>");
-			replyMSG.append("<tr><td>" + npc1.name + "</td><td>" + npc2.name + "</td></tr>");
+			replyMSG.append("<tr><td>id " + npc1.getNpcId() + "</td><td>id " + npc2.getNpcId() + "</td></tr>");
+			replyMSG.append("<tr><td>" + npc1.getName() + "</td><td>" + npc2.getName() + "</td></tr>");
 			replyMSG.append("</table>");
 			replyMSG.append("<center><br><br><br>");
-			replyMSG.append("<button value=\"OK\" action=\"bypass -h admin_fight_calculator_show " + npc1.npcId + " " + npc2.npcId + "\"  width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
+			replyMSG.append("<button value=\"OK\" action=\"bypass -h admin_fight_calculator_show " + npc1.getNpcId() + " " + npc2.getNpcId() + "\"  width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 			replyMSG.append("</center>");
 			replyMSG.append("</body></html>");
 		}
@@ -153,7 +153,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			
 			for (NpcTemplate n : npcs)
 			{
-				replyMSG.append("<tr><td><a action=\"bypass -h admin_fight_calculator lvl1 " + lvl1 + " lvl2 " + lvl2 + " mid1 " + n.npcId + " mid2 " + mid2 + "\">" + n.name + "</a></td></tr>");
+				replyMSG.append("<tr><td><a action=\"bypass -h admin_fight_calculator lvl1 " + lvl1 + " lvl2 " + lvl2 + " mid1 " + n.getNpcId() + " mid2 " + mid2 + "\">" + n.getName() + "</a></td></tr>");
 			}
 			
 			replyMSG.append("</table></body></html>");
@@ -167,7 +167,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			
 			for (NpcTemplate n : npcs)
 			{
-				replyMSG.append("<tr><td><a action=\"bypass -h admin_fight_calculator lvl1 " + lvl1 + " lvl2 " + lvl2 + " mid1 " + mid1 + " mid2 " + n.npcId + "\">" + n.name + "</a></td></tr>");
+				replyMSG.append("<tr><td><a action=\"bypass -h admin_fight_calculator lvl1 " + lvl1 + " lvl2 " + lvl2 + " mid1 " + mid1 + " mid2 " + n.getNpcId() + "\">" + n.getName() + "</a></td></tr>");
 			}
 			
 			replyMSG.append("</table></body></html>");
@@ -369,7 +369,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		}
 		else
 		{
-			replyMSG.append("<tr><td width=140>Parameter</td><td width=70>" + ((NpcTemplate) npc1.getTemplate()).name + "</td><td width=70>" + ((NpcTemplate) npc2.getTemplate()).name + "</td></tr>");
+			replyMSG.append("<tr><td width=140>Parameter</td><td width=70>" + ((NpcTemplate) npc1.getTemplate()).getName() + "</td><td width=70>" + ((NpcTemplate) npc2.getTemplate()).getName() + "</td></tr>");
 		}
 		
 		replyMSG.append("<tr><td>miss</td><td>" + miss1 + "%</td><td>" + miss2 + "%</td></tr>");
@@ -412,7 +412,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		}
 		else
 		{
-			replyMSG.append("<button value=\"Retry\" action=\"bypass -h admin_fight_calculator_show " + ((NpcTemplate) npc1.getTemplate()).npcId + " " + ((NpcTemplate) npc2.getTemplate()).npcId + "\"  width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
+			replyMSG.append("<button value=\"Retry\" action=\"bypass -h admin_fight_calculator_show " + ((NpcTemplate) npc1.getTemplate()).getNpcId() + " " + ((NpcTemplate) npc2.getTemplate()).getNpcId() + "\"  width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 		}
 		
 		replyMSG.append("</center>");

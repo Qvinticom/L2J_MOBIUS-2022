@@ -923,7 +923,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			if ((target instanceof NpcInstance) && Config.DISABLE_ATTACK_NPC_TYPE)
 			{
-				final String mobtype = ((NpcInstance) target).getTemplate().type;
+				final String mobtype = ((NpcInstance) target).getTemplate().getType();
 				if (!Config.LIST_ALLOWED_NPC_TYPES.contains(mobtype))
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
@@ -1665,7 +1665,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		if ((creature instanceof PlayerInstance) && (target instanceof NpcInstance) && Config.DISABLE_ATTACK_NPC_TYPE)
 		{
-			final String mobtype = ((NpcInstance) target).getTemplate().type;
+			final String mobtype = ((NpcInstance) target).getTemplate().getType();
 			if (!Config.LIST_ALLOWED_NPC_TYPES.contains(mobtype))
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
@@ -2838,7 +2838,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public boolean isUndead()
 	{
-		return _template.isUndead;
+		return _template.isUndead();
 	}
 	
 	@Override
@@ -6480,7 +6480,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				
 				if (this instanceof Summon)
 				{
-					final int mobId = ((Summon) this).getTemplate().npcId;
+					final int mobId = ((Summon) this).getTemplate().getNpcId();
 					sm.addNpcName(mobId);
 				}
 				else
@@ -6528,14 +6528,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 							{
 								MonsterInstance bossInstance = null;
 								
-								if (bossTemplate.type.equals("RaidBoss"))
+								if (bossTemplate.getType().equals("RaidBoss"))
 								{
 									if (RaidBossSpawnManager.getInstance().getStatsSet(bossId) != null)
 									{
 										bossInstance = RaidBossSpawnManager.getInstance().getBoss(bossId);
 									}
 								}
-								else if (bossTemplate.type.equals("GrandBoss"))
+								else if (bossTemplate.getType().equals("GrandBoss"))
 								{
 									if (GrandBossManager.getInstance().getStatsSet(bossId) != null)
 									{
@@ -6897,7 +6897,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		if ((target instanceof NpcInstance) && Config.DISABLE_ATTACK_NPC_TYPE)
 		{
-			final String mobtype = ((NpcInstance) target).getTemplate().type;
+			final String mobtype = ((NpcInstance) target).getTemplate().getType();
 			if (Config.LIST_ALLOWED_NPC_TYPES.contains(mobtype))
 			{
 				return false;
@@ -8360,14 +8360,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 									{
 										MonsterInstance bossInstance = null;
 										
-										if (bossTemplate.type.equals("RaidBoss"))
+										if (bossTemplate.getType().equals("RaidBoss"))
 										{
 											if (RaidBossSpawnManager.getInstance().getStatsSet(bossId) != null)
 											{
 												bossInstance = RaidBossSpawnManager.getInstance().getBoss(bossId);
 											}
 										}
-										else if (bossTemplate.type.equals("GrandBoss"))
+										else if (bossTemplate.getType().equals("GrandBoss"))
 										{
 											if (GrandBossManager.getInstance().getStatsSet(bossId) != null)
 											{

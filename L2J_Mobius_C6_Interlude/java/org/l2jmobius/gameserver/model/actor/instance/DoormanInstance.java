@@ -257,20 +257,20 @@ public class DoormanInstance extends FolkInstance
 	public void showMessageWindow(PlayerInstance player)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
-		String filename = "data/html/doorman/" + getTemplate().npcId + "-no.htm";
+		String filename = "data/html/doorman/" + getTemplate().getNpcId() + "-no.htm";
 		
 		final int condition = validateCondition(player);
 		if (condition == COND_BUSY_BECAUSE_OF_SIEGE)
 		{
-			filename = "data/html/doorman/" + getTemplate().npcId + "-busy.htm"; // Busy because of siege
+			filename = "data/html/doorman/" + getTemplate().getNpcId() + "-busy.htm"; // Busy because of siege
 		}
 		else if (condition == COND_CASTLE_OWNER)
 		{
-			filename = "data/html/doorman/" + getTemplate().npcId + ".htm"; // Owner message window
+			filename = "data/html/doorman/" + getTemplate().getNpcId() + ".htm"; // Owner message window
 		}
 		else if (condition == COND_FORT_OWNER)
 		{
-			filename = "data/html/doorman/fortress/" + getTemplate().npcId + ".htm"; // Owner message window
+			filename = "data/html/doorman/fortress/" + getTemplate().getNpcId() + ".htm"; // Owner message window
 		}
 		
 		// Prepare doorman for clan hall

@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
+import java.util.List;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
@@ -36,7 +38,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class FolkInstance extends NpcInstance
 {
-	private final ClassId[] _classesToTeach;
+	private final List<ClassId> _classesToTeach;
 	
 	/**
 	 * Instantiates a new l2 folk instance.
@@ -63,7 +65,7 @@ public class FolkInstance extends NpcInstance
 	 */
 	public void showSkillList(PlayerInstance player, ClassId classId)
 	{
-		final int npcId = getTemplate().npcId;
+		final int npcId = getTemplate().getNpcId();
 		
 		if (_classesToTeach == null)
 		{
@@ -145,7 +147,7 @@ public class FolkInstance extends NpcInstance
 	 */
 	public void showEnchantSkillList(PlayerInstance player, ClassId classId)
 	{
-		final int npcId = getTemplate().npcId;
+		final int npcId = getTemplate().getNpcId();
 		
 		if (_classesToTeach == null)
 		{
@@ -268,7 +270,7 @@ public class FolkInstance extends NpcInstance
 					}
 					
 					// make a list of classes
-					if (_classesToTeach.length != 0)
+					if (!_classesToTeach.isEmpty())
 					{
 						int count = 0;
 						ClassId classCheck = player.getClassId();

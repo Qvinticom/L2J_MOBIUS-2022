@@ -110,7 +110,7 @@ public class MonsterInstance extends Attackable
 	@Override
 	public boolean isAggressive()
 	{
-		return (getTemplate().aggroRange > 0) && !isEventMob;
+		return (getTemplate().getAggroRange() > 0) && !isEventMob;
 	}
 	
 	@Override
@@ -139,7 +139,7 @@ public class MonsterInstance extends Attackable
 			{
 			}
 			
-			switch (getTemplate().npcId)
+			switch (getTemplate().getNpcId())
 			{
 				case 12372: // baium
 				{

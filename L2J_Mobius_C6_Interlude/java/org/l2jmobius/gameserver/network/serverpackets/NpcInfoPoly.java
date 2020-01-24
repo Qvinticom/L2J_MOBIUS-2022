@@ -72,14 +72,14 @@ public class NpcInfoPoly extends GameServerPacket
 		_rhand = 0;
 		_lhand = 0;
 		_isSummoned = false;
-		_collisionRadius = _template.collisionRadius;
-		_collisionHeight = _template.collisionHeight;
+		_collisionRadius = _template.getCollisionRadius();
+		_collisionHeight = _template.getCollisionHeight();
 		if (_obj instanceof Creature)
 		{
 			_creature = (Creature) obj;
 			_isAttackable = obj.isAutoAttackable(attacker);
-			_rhand = _template.rhand;
-			_lhand = _template.lhand;
+			_rhand = _template.getRhand();
+			_lhand = _template.getLhand();
 		}
 		
 		if (_obj instanceof ItemInstance)

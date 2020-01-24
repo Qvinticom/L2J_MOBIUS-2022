@@ -298,7 +298,7 @@ public class RaceManagerInstance extends NpcInstance
 		{
 			return;
 		}
-		final int npcId = getTemplate().npcId;
+		final int npcId = getTemplate().getNpcId();
 		String filename;
 		String search;
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -308,7 +308,7 @@ public class RaceManagerInstance extends NpcInstance
 		{
 			final int n = i + 1;
 			search = "Mob" + n;
-			html.replace(search, MonsterRace.getInstance().getMonsters()[i].getTemplate().name);
+			html.replace(search, MonsterRace.getInstance().getMonsters()[i].getTemplate().getName());
 		}
 		html.replace("1race", String.valueOf(_raceNumber));
 		html.replace("%objectId%", String.valueOf(getObjectId()));
@@ -318,7 +318,7 @@ public class RaceManagerInstance extends NpcInstance
 	
 	public void showMonsterInfo(PlayerInstance player)
 	{
-		final int npcId = getTemplate().npcId;
+		final int npcId = getTemplate().getNpcId();
 		String filename;
 		String search;
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -328,7 +328,7 @@ public class RaceManagerInstance extends NpcInstance
 		{
 			final int n = i + 1;
 			search = "Mob" + n;
-			html.replace(search, MonsterRace.getInstance().getMonsters()[i].getTemplate().name);
+			html.replace(search, MonsterRace.getInstance().getMonsters()[i].getTemplate().getName());
 		}
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		player.sendPacket(html);
@@ -341,7 +341,7 @@ public class RaceManagerInstance extends NpcInstance
 		{
 			return;
 		}
-		final int npcId = getTemplate().npcId;
+		final int npcId = getTemplate().getNpcId();
 		SystemMessage sm;
 		String filename;
 		String search;
@@ -355,7 +355,7 @@ public class RaceManagerInstance extends NpcInstance
 			{
 				final int n = i + 1;
 				search = "Mob" + n;
-				html.replace(search, MonsterRace.getInstance().getMonsters()[i].getTemplate().name);
+				html.replace(search, MonsterRace.getInstance().getMonsters()[i].getTemplate().getName());
 			}
 			search = "No1";
 			if (val == 0)
@@ -378,7 +378,7 @@ public class RaceManagerInstance extends NpcInstance
 			html.setFile(filename);
 			html.replace("0place", "" + player.getRace(0));
 			search = "Mob1";
-			replace = MonsterRace.getInstance().getMonsters()[player.getRace(0) - 1].getTemplate().name;
+			replace = MonsterRace.getInstance().getMonsters()[player.getRace(0) - 1].getTemplate().getName();
 			html.replace(search, replace);
 			search = "0adena";
 			if (val == 10)
@@ -401,7 +401,7 @@ public class RaceManagerInstance extends NpcInstance
 			html.setFile(filename);
 			html.replace("0place", "" + player.getRace(0));
 			search = "Mob1";
-			replace = MonsterRace.getInstance().getMonsters()[player.getRace(0) - 1].getTemplate().name;
+			replace = MonsterRace.getInstance().getMonsters()[player.getRace(0) - 1].getTemplate().getName();
 			html.replace(search, replace);
 			search = "0adena";
 			final int price = _cost[player.getRace(1) - 1];

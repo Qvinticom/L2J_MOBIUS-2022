@@ -176,11 +176,11 @@ public class Util
 		int rad = 0;
 		if (obj1 instanceof Creature)
 		{
-			rad += ((Creature) obj1).getTemplate().collisionRadius;
+			rad += ((Creature) obj1).getTemplate().getCollisionRadius();
 		}
 		if (obj2 instanceof Creature)
 		{
-			rad += ((Creature) obj2).getTemplate().collisionRadius;
+			rad += ((Creature) obj2).getTemplate().getCollisionRadius();
 		}
 		
 		final double dx = obj1.getX() - obj2.getX();

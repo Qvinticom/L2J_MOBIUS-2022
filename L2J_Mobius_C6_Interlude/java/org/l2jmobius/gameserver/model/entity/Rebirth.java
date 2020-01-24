@@ -88,7 +88,7 @@ public class Rebirth
 			}
 			
 			// Returns true if BASE CLASS is a mage.
-			final boolean isMage = player.getBaseTemplate().classId.isMage();
+			final boolean isMage = player.getBaseTemplate().getClassId().isMage();
 			// Returns the skill based on next Birth and if isMage.
 			final Skill skill = getRebirthSkill((currBirth + 1), isMage);
 			
@@ -305,7 +305,7 @@ public class Rebirth
 		// returns the current Rebirth Level
 		final int rebirthLevel = getRebirthLevel(player);
 		// Returns true if BASE CLASS is a mage.
-		final boolean isMage = player.getBaseTemplate().classId.isMage();
+		final boolean isMage = player.getBaseTemplate().getClassId().isMage();
 		
 		// Simply return since no bonus skills are granted.
 		if (rebirthLevel == 0)

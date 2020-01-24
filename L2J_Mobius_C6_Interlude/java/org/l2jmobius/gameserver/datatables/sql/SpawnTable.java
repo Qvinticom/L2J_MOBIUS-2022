@@ -82,19 +82,19 @@ public class SpawnTable
 				template1 = NpcTable.getInstance().getTemplate(rset.getInt("npc_templateid"));
 				if (template1 != null)
 				{
-					if (template1.type.equalsIgnoreCase("SiegeGuard"))
+					if (template1.getType().equalsIgnoreCase("SiegeGuard"))
 					{
 						// Don't spawn
 					}
-					else if (template1.type.equalsIgnoreCase("RaidBoss"))
+					else if (template1.getType().equalsIgnoreCase("RaidBoss"))
 					{
 						// Don't spawn raidboss
 					}
-					else if (template1.type.equalsIgnoreCase("GrandBoss"))
+					else if (template1.getType().equalsIgnoreCase("GrandBoss"))
 					{
 						// Don't spawn grandboss
 					}
-					else if (!Config.ALLOW_CLASS_MASTERS && template1.type.equals("ClassMaster"))
+					else if (!Config.ALLOW_CLASS_MASTERS && template1.getType().equals("ClassMaster"))
 					{
 						// Dont' spawn class masters
 					}
@@ -188,15 +188,15 @@ public class SpawnTable
 					
 					if (template1 != null)
 					{
-						if (template1.type.equalsIgnoreCase("SiegeGuard"))
+						if (template1.getType().equalsIgnoreCase("SiegeGuard"))
 						{
 							// Don't spawn
 						}
-						else if (template1.type.equalsIgnoreCase("RaidBoss"))
+						else if (template1.getType().equalsIgnoreCase("RaidBoss"))
 						{
 							// Don't spawn raidboss
 						}
-						else if (!Config.ALLOW_CLASS_MASTERS && template1.type.equals("ClassMaster"))
+						else if (!Config.ALLOW_CLASS_MASTERS && template1.getType().equals("ClassMaster"))
 						{
 							// Dont' spawn class masters
 						}
@@ -368,7 +368,7 @@ public class SpawnTable
 				}
 				else
 				{
-					player.sendMessage(index + " - " + spawn.getTemplate().name + " (" + spawn.getId() + "): " + spawn.getX() + " " + spawn.getY() + " " + spawn.getZ());
+					player.sendMessage(index + " - " + spawn.getTemplate().getName() + " (" + spawn.getId() + "): " + spawn.getX() + " " + spawn.getY() + " " + spawn.getZ());
 				}
 			}
 		}

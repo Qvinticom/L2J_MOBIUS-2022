@@ -72,7 +72,7 @@ public class ChestInstance extends MonsterInstance
 	@Override
 	public void doItemDrop(NpcTemplate npcTemplate, Creature lastAttacker)
 	{
-		int id = getTemplate().npcId;
+		int id = getTemplate().getNpcId();
 		
 		if (!_specialDrop)
 		{
@@ -115,7 +115,7 @@ public class ChestInstance extends MonsterInstance
 		int trapSkillId = 0;
 		final int rnd = Rnd.get(120);
 		
-		if (getTemplate().level >= 61)
+		if (getTemplate().getLevel() >= 61)
 		{
 			if (rnd >= 90)
 			{
@@ -134,7 +134,7 @@ public class ChestInstance extends MonsterInstance
 				trapSkillId = 223; // sting
 			}
 		}
-		else if (getTemplate().level >= 41)
+		else if (getTemplate().getLevel() >= 41)
 		{
 			if (rnd >= 90)
 			{
@@ -153,7 +153,7 @@ public class ChestInstance extends MonsterInstance
 				trapSkillId = 4118; // area paralysys
 			}
 		}
-		else if (getTemplate().level >= 21)
+		else if (getTemplate().getLevel() >= 21)
 		{
 			if (rnd >= 80)
 			{
@@ -192,7 +192,7 @@ public class ChestInstance extends MonsterInstance
 	private boolean handleCast(Creature creature, int skillId)
 	{
 		int skillLevel = 1;
-		final byte lvl = getTemplate().level;
+		final byte lvl = getTemplate().getLevel();
 		if ((lvl > 20) && (lvl <= 40))
 		{
 			skillLevel = 3;

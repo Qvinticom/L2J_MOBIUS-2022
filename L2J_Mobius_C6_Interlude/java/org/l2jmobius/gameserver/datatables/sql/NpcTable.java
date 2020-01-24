@@ -107,7 +107,7 @@ public class NpcTable
 				final int skillId = npcskills.getInt("skillid");
 				final int level = npcskills.getInt("level");
 				
-				if ((npcDat.race == null) && (skillId == 4416))
+				if ((npcDat.getRace() == null) && (skillId == 4416))
 				{
 					npcDat.setRace(level);
 					continue;
@@ -548,7 +548,8 @@ public class NpcTable
 			{
 				categories.addAll(old.getDropData());
 			}
-			final ClassId[] classIds = old.getTeachInfo().clone();
+			
+			final List<ClassId> classIds = old.getTeachInfo();
 			
 			final List<MinionData> minions = new ArrayList<>();
 			
@@ -657,7 +658,7 @@ public class NpcTable
 	
 	public void replaceTemplate(NpcTemplate npc)
 	{
-		_npcs.put(npc.npcId, npc);
+		_npcs.put(npc.getNpcId(), npc);
 	}
 	
 	public NpcTemplate getTemplate(int id)
@@ -669,7 +670,7 @@ public class NpcTable
 	{
 		for (NpcTemplate npcTemplate : _npcs.values())
 		{
-			if (npcTemplate.name.equalsIgnoreCase(name))
+			if (npcTemplate.getName().equalsIgnoreCase(name))
 			{
 				return npcTemplate;
 			}
@@ -684,7 +685,7 @@ public class NpcTable
 		
 		for (NpcTemplate t : _npcs.values())
 		{
-			if (t.level == lvl)
+			if (t.getLevel() == lvl)
 			{
 				list.add(t);
 			}
@@ -699,7 +700,7 @@ public class NpcTable
 		
 		for (NpcTemplate t : _npcs.values())
 		{
-			if ((t.level == lvl) && "Monster".equals(t.type))
+			if ((t.getLevel() == lvl) && "Monster".equals(t.getType()))
 			{
 				list.add(t);
 			}
@@ -714,7 +715,7 @@ public class NpcTable
 		
 		for (NpcTemplate t : _npcs.values())
 		{
-			if (t.name.startsWith(letter) && "Npc".equals(t.type))
+			if (t.getName().startsWith(letter) && "Npc".equals(t.getType()))
 			{
 				list.add(t);
 			}

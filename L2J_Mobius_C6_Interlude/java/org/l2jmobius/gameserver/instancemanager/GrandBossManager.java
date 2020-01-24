@@ -448,7 +448,7 @@ public class GrandBossManager
 			return null;
 		}
 		
-		if (!template.type.equalsIgnoreCase("GrandBoss"))
+		if (!template.getType().equalsIgnoreCase("GrandBoss"))
 		{
 			return null;
 		}

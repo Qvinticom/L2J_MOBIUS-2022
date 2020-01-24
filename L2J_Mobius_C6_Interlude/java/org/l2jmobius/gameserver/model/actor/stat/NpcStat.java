@@ -25,7 +25,7 @@ public class NpcStat extends CreatureStat
 	{
 		super(activeChar);
 		
-		setLevel(getActiveChar().getTemplate().level);
+		setLevel(getActiveChar().getTemplate().getLevel());
 	}
 	
 	@Override
@@ -37,6 +37,6 @@ public class NpcStat extends CreatureStat
 	@Override
 	public int getMaxHp()
 	{
-		return (int) calcStat(Stats.MAX_HP, getActiveChar().getTemplate().baseHpMax, null, null);
+		return (int) calcStat(Stats.MAX_HP, getActiveChar().getTemplate().getBaseHpMax(), null, null);
 	}
 }

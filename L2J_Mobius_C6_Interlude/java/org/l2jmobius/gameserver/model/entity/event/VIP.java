@@ -306,7 +306,7 @@ public class VIP
 		}
 		
 		final NpcTemplate npctmp = NpcTable.getInstance().getTemplate(id);
-		return npctmp.name;
+		return npctmp.getName();
 	}
 	
 	public static String getItemName(int id, PlayerInstance player)

@@ -31,47 +31,47 @@ import org.l2jmobius.gameserver.model.items.Item;
 public class PlayerTemplate extends CreatureTemplate
 {
 	/** The Class object of the PlayerInstance */
-	public Race race;
-	public ClassId classId;
+	private final Race _race;
+	private final ClassId _classId;
 	
-	public int _currentCollisionRadius;
-	public int _currentCollisionHeight;
-	public String className;
+	private final int _currentCollisionRadius;
+	private final int _currentCollisionHeight;
+	private final String _className;
 	
-	public int spawnX;
-	public int spawnY;
-	public int spawnZ;
+	private final int _spawnX;
+	private final int _spawnY;
+	private final int _spawnZ;
 	
-	public int classBaseLevel;
-	public float lvlHpAdd;
-	public float lvlHpMod;
-	public float lvlCpAdd;
-	public float lvlCpMod;
-	public float lvlMpAdd;
-	public float lvlMpMod;
+	private final int _classBaseLevel;
+	private final float _lvlHpAdd;
+	private final float _lvlHpMod;
+	private final float _lvlCpAdd;
+	private final float _lvlCpMod;
+	private final float _lvlMpAdd;
+	private final float _lvlMpMod;
 	
 	private final List<Item> _items = new ArrayList<>();
 	
 	public PlayerTemplate(StatsSet set)
 	{
 		super(set);
-		classId = ClassId.getClassId(set.getInt("classId"));
-		race = Race.values()[set.getInt("raceId")];
-		className = set.getString("className");
+		_classId = ClassId.getClassId(set.getInt("classId"));
+		_race = Race.values()[set.getInt("raceId")];
+		_className = set.getString("className");
 		_currentCollisionRadius = set.getInt("collision_radius");
 		_currentCollisionHeight = set.getInt("collision_height");
 		
-		spawnX = set.getInt("spawnX");
-		spawnY = set.getInt("spawnY");
-		spawnZ = set.getInt("spawnZ");
+		_spawnX = set.getInt("spawnX");
+		_spawnY = set.getInt("spawnY");
+		_spawnZ = set.getInt("spawnZ");
 		
-		classBaseLevel = set.getInt("classBaseLevel");
-		lvlHpAdd = set.getFloat("lvlHpAdd");
-		lvlHpMod = set.getFloat("lvlHpMod");
-		lvlCpAdd = set.getFloat("lvlCpAdd");
-		lvlCpMod = set.getFloat("lvlCpMod");
-		lvlMpAdd = set.getFloat("lvlMpAdd");
-		lvlMpMod = set.getFloat("lvlMpMod");
+		_classBaseLevel = set.getInt("classBaseLevel");
+		_lvlHpAdd = set.getFloat("lvlHpAdd");
+		_lvlHpMod = set.getFloat("lvlHpMod");
+		_lvlCpAdd = set.getFloat("lvlCpAdd");
+		_lvlCpMod = set.getFloat("lvlCpMod");
+		_lvlMpAdd = set.getFloat("lvlMpAdd");
+		_lvlMpMod = set.getFloat("lvlMpMod");
 	}
 	
 	/**
@@ -95,39 +95,100 @@ public class PlayerTemplate extends CreatureTemplate
 		return _items.toArray(new Item[_items.size()]);
 	}
 	
-	/**
-	 * @return
-	 */
-	public double getCollisionRadius()
+	public Race getRace()
+	{
+		return _race;
+	}
+	
+	public ClassId getClassId()
+	{
+		return _classId;
+	}
+	
+	@Override
+	public int getCollisionRadius()
 	{
 		return _currentCollisionRadius;
 	}
 	
-	/**
-	 * @return
-	 */
-	public double getCollisionHeight()
+	@Override
+	public int getCollisionHeight()
 	{
 		return _currentCollisionHeight;
 	}
 	
+	public String getClassName()
+	{
+		return _className;
+	}
+	
+	public int getSpawnX()
+	{
+		return _spawnX;
+	}
+	
+	public int getSpawnY()
+	{
+		return _spawnY;
+	}
+	
+	public int getSpawnZ()
+	{
+		return _spawnZ;
+	}
+	
+	public int getClassBaseLevel()
+	{
+		return _classBaseLevel;
+	}
+	
+	public float getLvlHpAdd()
+	{
+		return _lvlHpAdd;
+	}
+	
+	public float getLvlHpMod()
+	{
+		return _lvlHpMod;
+	}
+	
+	public float getLvlCpAdd()
+	{
+		return _lvlCpAdd;
+	}
+	
+	public float getLvlCpMod()
+	{
+		return _lvlCpMod;
+	}
+	
+	public float getLvlMpAdd()
+	{
+		return _lvlMpAdd;
+	}
+	
+	public float getLvlMpMod()
+	{
+		return _lvlMpMod;
+	}
+	
 	public int getBaseFallSafeHeight(boolean female)
 	{
-		if ((classId.getRace() == Race.DARK_ELF) || (classId.getRace() == Race.ELF))
+		if ((_classId.getRace() == Race.DARK_ELF) || (_classId.getRace() == Race.ELF))
 		{
-			return classId.isMage() ? (female ? 330 : 300) : female ? 380 : 350;
+			return _classId.isMage() ? (female ? 330 : 300) : female ? 380 : 350;
 		}
-		else if (classId.getRace() == Race.DWARF)
+		else if (_classId.getRace() == Race.DWARF)
 		{
 			return female ? 200 : 180;
 		}
-		else if (classId.getRace() == Race.HUMAN)
+		else if (_classId.getRace() == Race.HUMAN)
 		{
-			return classId.isMage() ? (female ? 220 : 200) : female ? 270 : 250;
+			return _classId.isMage() ? (female ? 220 : 200) : female ? 270 : 250;
 		}
-		else if (classId.getRace() == Race.ORC)
+		else if (_classId.getRace() == Race.ORC)
 		{
-			return classId.isMage() ? (female ? 280 : 250) : female ? 220 : 200;
+			return _classId.isMage() ? (female ? 280 : 250) : female ? 220 : 200;
 		}
 		
 		return 400;

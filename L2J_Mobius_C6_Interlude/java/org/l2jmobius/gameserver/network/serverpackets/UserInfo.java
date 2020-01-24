@@ -233,13 +233,13 @@ public class UserInfo extends GameServerPacket
 		final Summon pet = _player.getPet();
 		if ((_player.getMountType() != 0) && (pet != null))
 		{
-			writeF(pet.getTemplate().collisionRadius);
-			writeF(pet.getTemplate().collisionHeight);
+			writeF(pet.getTemplate().getCollisionRadius());
+			writeF(pet.getTemplate().getCollisionHeight());
 		}
 		else
 		{
-			writeF(_player.getBaseTemplate().collisionRadius);
-			writeF(_player.getBaseTemplate().collisionHeight);
+			writeF(_player.getBaseTemplate().getCollisionRadius());
+			writeF(_player.getBaseTemplate().getCollisionHeight());
 		}
 		
 		writeD(_player.getAppearance().getHairStyle());
@@ -257,7 +257,7 @@ public class UserInfo extends GameServerPacket
 			final NpcTemplate polyObj = NpcTable.getInstance().getTemplate(_player.getPoly().getPolyId());
 			if (polyObj != null)
 			{
-				title += " - " + polyObj.name;
+				title += " - " + polyObj.getName();
 			}
 		}
 		writeS(title);

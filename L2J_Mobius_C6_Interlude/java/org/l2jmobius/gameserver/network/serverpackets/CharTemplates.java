@@ -41,25 +41,25 @@ public class CharTemplates extends GameServerPacket
 		
 		for (PlayerTemplate temp : _chars)
 		{
-			writeD(temp.race.ordinal());
-			writeD(temp.classId.getId());
+			writeD(temp.getRace().ordinal());
+			writeD(temp.getClassId().getId());
 			writeD(0x46);
-			writeD(temp.baseSTR);
+			writeD(temp.getBaseSTR());
 			writeD(0x0a);
 			writeD(0x46);
-			writeD(temp.baseDEX);
+			writeD(temp.getBaseDEX());
 			writeD(0x0a);
 			writeD(0x46);
-			writeD(temp.baseCON);
+			writeD(temp.getBaseCON());
 			writeD(0x0a);
 			writeD(0x46);
-			writeD(temp.baseINT);
+			writeD(temp.getBaseINT());
 			writeD(0x0a);
 			writeD(0x46);
-			writeD(temp.baseWIT);
+			writeD(temp.getBaseWIT());
 			writeD(0x0a);
 			writeD(0x46);
-			writeD(temp.baseMEN);
+			writeD(temp.getBaseMEN());
 			writeD(0x0a);
 		}
 	}

@@ -153,8 +153,8 @@ public class CharInfo extends GameServerPacket
 				writeD(_flyWalkSpd);
 				writeF(_moveMultiplier);
 				writeF(_attackSpeedMultiplier);
-				writeF(template.collisionRadius);
-				writeF(template.collisionHeight);
+				writeF(template.getCollisionRadius());
+				writeF(template.getCollisionHeight());
 				writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_RHAND)); // right hand weapon
 				writeD(0);
 				writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_LHAND)); // left hand weapon
@@ -284,8 +284,8 @@ public class CharInfo extends GameServerPacket
 			writeD(_flyWalkSpd);
 			writeF(_player.getMovementSpeedMultiplier()); // _activeChar.getProperMultiplier()
 			writeF(_player.getAttackSpeedMultiplier()); // _activeChar.getAttackSpeedMultiplier()
-			writeF(_player.getBaseTemplate().collisionRadius);
-			writeF(_player.getBaseTemplate().collisionHeight);
+			writeF(_player.getBaseTemplate().getCollisionRadius());
+			writeF(_player.getBaseTemplate().getCollisionHeight());
 			
 			writeD(_player.getAppearance().getHairStyle());
 			writeD(_player.getAppearance().getHairColor());

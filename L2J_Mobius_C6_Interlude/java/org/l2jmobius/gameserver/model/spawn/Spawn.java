@@ -95,14 +95,14 @@ public class Spawn
 		}
 		
 		// The Name of the NpcInstance type managed by this Spawn
-		String implementationName = _template.type; // implementing class name
+		String implementationName = _template.getType(); // implementing class name
 		
-		if (mobTemplate.npcId == 30995)
+		if (mobTemplate.getNpcId() == 30995)
 		{
 			implementationName = "RaceManager";
 		}
 		
-		if ((mobTemplate.npcId >= 31046) && (mobTemplate.npcId <= 31053))
+		if ((mobTemplate.getNpcId() >= 31046) && (mobTemplate.getNpcId() <= 31053))
 		{
 			implementationName = "SymbolMaker";
 		}
@@ -174,7 +174,7 @@ public class Spawn
 			return -1;
 		}
 		
-		return _template.npcId;
+		return _template.getNpcId();
 	}
 	
 	/**
@@ -427,7 +427,7 @@ public class Spawn
 		try
 		{
 			// Check if the Spawn is not a Net or Minion spawn
-			if (_template.type.equalsIgnoreCase("Pet") || _template.type.equalsIgnoreCase("Minion"))
+			if (_template.getType().equalsIgnoreCase("Pet") || _template.getType().equalsIgnoreCase("Minion"))
 			{
 				_currentCount++;
 				
@@ -460,7 +460,7 @@ public class Spawn
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("NPC " + _template.npcId + " class not found " + e);
+			LOGGER.warning("NPC " + _template.getNpcId() + " class not found " + e);
 		}
 		return npc;
 	}

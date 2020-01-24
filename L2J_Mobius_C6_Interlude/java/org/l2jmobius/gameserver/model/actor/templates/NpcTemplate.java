@@ -56,26 +56,26 @@ public class NpcTemplate extends CreatureTemplate
 {
 	protected static final Logger LOGGER = Logger.getLogger(NpcTemplate.class.getName());
 	
-	public int npcId;
-	public int idTemplate;
-	public String type;
-	public String name;
-	public boolean serverSideName;
-	public String title;
-	public boolean serverSideTitle;
-	public String sex;
-	public byte level;
-	public int rewardExp;
-	public int rewardSp;
-	public int aggroRange;
-	public int rhand;
-	public int lhand;
-	public int armor;
-	public String factionId;
-	public int factionRange;
-	public int absorbLevel;
-	public AbsorbCrystalType absorbType;
-	public Race race;
+	private final int _npcId;
+	private final int _idTemplate;
+	private final String _type;
+	private final String _name;
+	private final boolean _serverSideName;
+	private final String _title;
+	private final boolean _serverSideTitle;
+	private final String _sex;
+	private final byte _level;
+	private final int _rewardExp;
+	private final int _rewardSp;
+	private final int _aggroRange;
+	private final int _rhand;
+	private final int _lhand;
+	private final int _armor;
+	private final int _absorbLevel;
+	private final AbsorbCrystalType _absorbType;
+	private String _factionId;
+	private final int _factionRange;
+	private Race _race;
 	
 	private final boolean _custom;
 	
@@ -129,41 +129,40 @@ public class NpcTemplate extends CreatureTemplate
 	private final Map<EventType, List<Quest>> _questEvents = new EnumMap<>(EventType.class);
 	
 	/**
-	 * Constructor of Creature.<BR>
-	 * <BR>
+	 * Constructor of Creature.
 	 * @param set The StatsSet object to transfer data to the method
 	 * @param custom
 	 */
 	public NpcTemplate(StatsSet set, boolean custom)
 	{
 		super(set);
-		npcId = set.getInt("npcId");
-		idTemplate = set.getInt("idTemplate");
-		type = set.getString("type");
-		name = set.getString("name");
-		serverSideName = set.getBoolean("serverSideName");
-		title = set.getString("title");
-		serverSideTitle = set.getBoolean("serverSideTitle");
-		sex = set.getString("sex");
-		level = set.getByte("level");
-		rewardExp = set.getInt("rewardExp");
-		rewardSp = set.getInt("rewardSp");
-		aggroRange = set.getInt("aggroRange");
-		rhand = set.getInt("rhand");
-		lhand = set.getInt("lhand");
-		armor = set.getInt("armor");
+		_npcId = set.getInt("npcId");
+		_idTemplate = set.getInt("idTemplate");
+		_type = set.getString("type");
+		_name = set.getString("name");
+		_serverSideName = set.getBoolean("serverSideName");
+		_title = set.getString("title");
+		_serverSideTitle = set.getBoolean("serverSideTitle");
+		_sex = set.getString("sex");
+		_level = set.getByte("level");
+		_rewardExp = set.getInt("rewardExp");
+		_rewardSp = set.getInt("rewardSp");
+		_aggroRange = set.getInt("aggroRange");
+		_rhand = set.getInt("rhand");
+		_lhand = set.getInt("lhand");
+		_armor = set.getInt("armor");
+		_absorbLevel = set.getInt("absorb_level", 0);
+		_absorbType = AbsorbCrystalType.valueOf(set.getString("absorb_type"));
 		final String f = set.getString("factionId", null);
 		if (f == null)
 		{
-			factionId = null;
+			setFactionId(null);
 		}
 		else
 		{
-			factionId = f.intern();
+			setFactionId(f.intern());
 		}
-		factionRange = set.getInt("factionRange", 0);
-		absorbLevel = set.getInt("absorb_level", 0);
-		absorbType = AbsorbCrystalType.valueOf(set.getString("absorb_type"));
+		_factionRange = set.getInt("factionRange", 0);
 		_npcStatsSet = set;
 		_custom = custom;
 	}
@@ -173,9 +172,9 @@ public class NpcTemplate extends CreatureTemplate
 		_teachInfo.add(classId);
 	}
 	
-	public ClassId[] getTeachInfo()
+	public List<ClassId> getTeachInfo()
 	{
-		return _teachInfo.toArray(new ClassId[_teachInfo.size()]);
+		return _teachInfo;
 	}
 	
 	public boolean canTeach(ClassId classId)
@@ -200,7 +199,7 @@ public class NpcTemplate extends CreatureTemplate
 				// if the category exists, add the drop to this category.
 				if (cat.getCategoryType() == categoryType)
 				{
-					cat.addDropData(drop, type.equalsIgnoreCase("RaidBoss") || type.equalsIgnoreCase("GrandBoss"));
+					cat.addDropData(drop, _type.equalsIgnoreCase("RaidBoss") || _type.equalsIgnoreCase("GrandBoss"));
 					catExists = true;
 					break;
 				}
@@ -209,7 +208,7 @@ public class NpcTemplate extends CreatureTemplate
 			if (!catExists)
 			{
 				final DropCategory cat = new DropCategory(categoryType);
-				cat.addDropData(drop, type.equalsIgnoreCase("RaidBoss") || type.equalsIgnoreCase("GrandBoss"));
+				cat.addDropData(drop, _type.equalsIgnoreCase("RaidBoss") || _type.equalsIgnoreCase("GrandBoss"));
 				_categories.add(cat);
 			}
 		}
@@ -230,6 +229,11 @@ public class NpcTemplate extends CreatureTemplate
 		_vulnerabilities.put(id, vuln);
 	}
 	
+	public String getType()
+	{
+		return _type;
+	}
+	
 	public double getVulnerability(Stats id)
 	{
 		if (_vulnerabilities.get(id) == null)
@@ -246,8 +250,7 @@ public class NpcTemplate extends CreatureTemplate
 	}
 	
 	/**
-	 * Return the list of all possible UNCATEGORIZED drops of this NpcTemplate.<BR>
-	 * <BR>
+	 * Return the list of all possible UNCATEGORIZED drops of this NpcTemplate.
 	 * @return
 	 */
 	public List<DropCategory> getDropData()
@@ -258,7 +261,6 @@ public class NpcTemplate extends CreatureTemplate
 	/**
 	 * Return the list of all possible item drops of this NpcTemplate.<BR>
 	 * (ie full drops and part drops, mats, miscellaneous & UNCATEGORIZED)<BR>
-	 * <BR>
 	 * @return
 	 */
 	public List<DropData> getAllDropData()
@@ -321,7 +323,7 @@ public class NpcTemplate extends CreatureTemplate
 				}
 				else
 				{
-					LOGGER.warning("Quest event not allowed in multiple quests.  Skipped addition of Event Type \"" + eventType + "\" for NPC \"" + name + "\" and quest \"" + q.getName() + "\".");
+					LOGGER.warning("Quest event not allowed in multiple quests.  Skipped addition of Event Type \"" + eventType + "\" for NPC \"" + _name + "\" and quest \"" + q.getName() + "\".");
 				}
 			}
 			else
@@ -362,122 +364,122 @@ public class NpcTemplate extends CreatureTemplate
 		{
 			case 1:
 			{
-				race = Race.UNDEAD;
+				_race = Race.UNDEAD;
 				break;
 			}
 			case 2:
 			{
-				race = Race.MAGICCREATURE;
+				_race = Race.MAGICCREATURE;
 				break;
 			}
 			case 3:
 			{
-				race = Race.BEAST;
+				_race = Race.BEAST;
 				break;
 			}
 			case 4:
 			{
-				race = Race.ANIMAL;
+				_race = Race.ANIMAL;
 				break;
 			}
 			case 5:
 			{
-				race = Race.PLANT;
+				_race = Race.PLANT;
 				break;
 			}
 			case 6:
 			{
-				race = Race.HUMANOID;
+				_race = Race.HUMANOID;
 				break;
 			}
 			case 7:
 			{
-				race = Race.SPIRIT;
+				_race = Race.SPIRIT;
 				break;
 			}
 			case 8:
 			{
-				race = Race.ANGEL;
+				_race = Race.ANGEL;
 				break;
 			}
 			case 9:
 			{
-				race = Race.DEMON;
+				_race = Race.DEMON;
 				break;
 			}
 			case 10:
 			{
-				race = Race.DRAGON;
+				_race = Race.DRAGON;
 				break;
 			}
 			case 11:
 			{
-				race = Race.GIANT;
+				_race = Race.GIANT;
 				break;
 			}
 			case 12:
 			{
-				race = Race.BUG;
+				_race = Race.BUG;
 				break;
 			}
 			case 13:
 			{
-				race = Race.FAIRIE;
+				_race = Race.FAIRIE;
 				break;
 			}
 			case 14:
 			{
-				race = Race.HUMAN;
+				_race = Race.HUMAN;
 				break;
 			}
 			case 15:
 			{
-				race = Race.ELVE;
+				_race = Race.ELVE;
 				break;
 			}
 			case 16:
 			{
-				race = Race.DARKELVE;
+				_race = Race.DARKELVE;
 				break;
 			}
 			case 17:
 			{
-				race = Race.ORC;
+				_race = Race.ORC;
 				break;
 			}
 			case 18:
 			{
-				race = Race.DWARVE;
+				_race = Race.DWARVE;
 				break;
 			}
 			case 19:
 			{
-				race = Race.OTHER;
+				_race = Race.OTHER;
 				break;
 			}
 			case 20:
 			{
-				race = Race.NONLIVING;
+				_race = Race.NONLIVING;
 				break;
 			}
 			case 21:
 			{
-				race = Race.SIEGEWEAPON;
+				_race = Race.SIEGEWEAPON;
 				break;
 			}
 			case 22:
 			{
-				race = Race.DEFENDINGARMY;
+				_race = Race.DEFENDINGARMY;
 				break;
 			}
 			case 23:
 			{
-				race = Race.MERCENARIE;
+				_race = Race.MERCENARIE;
 				break;
 			}
 			default:
 			{
-				race = Race.UNKNOWN;
+				_race = Race.UNKNOWN;
 				break;
 			}
 		}
@@ -485,36 +487,106 @@ public class NpcTemplate extends CreatureTemplate
 	
 	public Race getRace()
 	{
-		if (race == null)
+		if (_race == null)
 		{
-			race = Race.UNKNOWN;
+			_race = Race.UNKNOWN;
 		}
-		
-		return race;
+		return _race;
 	}
 	
-	/**
-	 * @return the level
-	 */
 	public byte getLevel()
 	{
-		return level;
+		return _level;
 	}
 	
-	/**
-	 * @return the name
-	 */
 	public String getName()
 	{
-		return name;
+		return _name;
 	}
 	
-	/**
-	 * @return the npcId
-	 */
 	public int getNpcId()
 	{
-		return npcId;
+		return _npcId;
+	}
+	
+	public int getIdTemplate()
+	{
+		return _idTemplate;
+	}
+	
+	public boolean isServerSideName()
+	{
+		return _serverSideName;
+	}
+	
+	public String getTitle()
+	{
+		return _title;
+	}
+	
+	public boolean isServerSideTitle()
+	{
+		return _serverSideTitle;
+	}
+	
+	public String getSex()
+	{
+		return _sex;
+	}
+	
+	public int getRewardExp()
+	{
+		return _rewardExp;
+	}
+	
+	public int getRewardSp()
+	{
+		return _rewardSp;
+	}
+	
+	public int getAggroRange()
+	{
+		return _aggroRange;
+	}
+	
+	public int getRhand()
+	{
+		return _rhand;
+	}
+	
+	public int getLhand()
+	{
+		return _lhand;
+	}
+	
+	public int getArmor()
+	{
+		return _armor;
+	}
+	
+	public int getAbsorbLevel()
+	{
+		return _absorbLevel;
+	}
+	
+	public AbsorbCrystalType getAbsorbType()
+	{
+		return _absorbType;
+	}
+	
+	public String getFactionId()
+	{
+		return _factionId;
+	}
+	
+	public void setFactionId(String id)
+	{
+		_factionId = id;
+	}
+	
+	public int getFactionRange()
+	{
+		return _factionRange;
 	}
 	
 	public boolean isCustom()

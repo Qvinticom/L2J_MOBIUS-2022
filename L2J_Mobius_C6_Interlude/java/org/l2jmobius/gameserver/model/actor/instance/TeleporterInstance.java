@@ -79,7 +79,7 @@ public class TeleporterInstance extends FolkInstance
 		
 		if (actualCommand.equalsIgnoreCase("goto"))
 		{
-			final int npcId = getTemplate().npcId;
+			final int npcId = getTemplate().getNpcId();
 			
 			switch (npcId)
 			{

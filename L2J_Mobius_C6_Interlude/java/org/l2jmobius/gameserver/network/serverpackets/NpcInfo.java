@@ -71,25 +71,25 @@ public class NpcInfo extends GameServerPacket
 			return;
 		}
 		_creature = cha;
-		_idTemplate = cha.getTemplate().idTemplate;
+		_idTemplate = cha.getTemplate().getIdTemplate();
 		_isAttackable = cha.isAutoAttackable(attacker);
 		_rhand = cha.getRightHandItem();
 		_lhand = cha.getLeftHandItem();
 		_isSummoned = false;
 		_collisionHeight = cha.getCollisionHeight();
 		_collisionRadius = cha.getCollisionRadius();
-		if (cha.getTemplate().serverSideName)
+		if (cha.getTemplate().isServerSideName())
 		{
-			_name = cha.getTemplate().name;
+			_name = cha.getTemplate().getName();
 		}
 		
 		if (Config.L2JMOD_CHAMPION_ENABLE && cha.isChampion())
 		{
 			_title = Config.L2JMOD_CHAMP_TITLE;
 		}
-		else if (cha.getTemplate().serverSideTitle)
+		else if (cha.getTemplate().isServerSideTitle())
 		{
-			_title = cha.getTemplate().title;
+			_title = cha.getTemplate().getTitle();
 		}
 		else
 		{
@@ -145,14 +145,14 @@ public class NpcInfo extends GameServerPacket
 	public NpcInfo(Summon cha, Creature attacker)
 	{
 		_creature = cha;
-		_idTemplate = cha.getTemplate().idTemplate;
+		_idTemplate = cha.getTemplate().getIdTemplate();
 		_isAttackable = cha.isAutoAttackable(attacker); // (cha.getKarma() > 0);
 		_rhand = 0;
 		_lhand = 0;
 		_isSummoned = cha.isShowSummonAnimation();
-		_collisionHeight = _creature.getTemplate().collisionHeight;
-		_collisionRadius = _creature.getTemplate().collisionRadius;
-		if (cha.getTemplate().serverSideName || (cha instanceof PetInstance) || (cha instanceof SummonInstance))
+		_collisionHeight = _creature.getTemplate().getCollisionHeight();
+		_collisionRadius = _creature.getTemplate().getCollisionRadius();
+		if (cha.getTemplate().isServerSideName() || (cha instanceof PetInstance) || (cha instanceof SummonInstance))
 		{
 			_name = _creature.getName();
 			_title = cha.getTitle();

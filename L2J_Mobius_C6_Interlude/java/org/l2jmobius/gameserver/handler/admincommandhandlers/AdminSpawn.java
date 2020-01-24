@@ -310,7 +310,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			
 			if (RaidBossSpawnManager.getInstance().isDefined(spawn.getNpcId()) || GrandBossManager.getInstance().isDefined(spawn.getNpcId()))
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Another instance of " + template1.name + " already present into database:");
+				BuilderUtil.sendSysMessage(activeChar, "Another instance of " + template1.getName() + " already present into database:");
 				BuilderUtil.sendSysMessage(activeChar, "It will be spawned but not saved on Database");
 				BuilderUtil.sendSysMessage(activeChar, "After server restart or raid dead, the spawned npc will desappear");
 				permanent = false;
@@ -333,7 +333,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				spawn.stopRespawn();
 			}
 			
-			BuilderUtil.sendSysMessage(activeChar, "Created " + template1.name + " on " + target.getObjectId());
+			BuilderUtil.sendSysMessage(activeChar, "Created " + template1.getName() + " on " + target.getObjectId());
 		}
 		catch (Exception e)
 		{
@@ -356,7 +356,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		boolean ended = true;
 		for (int i = from; i < mobs.length; i++)
 		{
-			final String txt = "<a action=\"bypass -h admin_spawn_monster " + mobs[i].npcId + "\">" + mobs[i].name + "</a><br1>";
+			final String txt = "<a action=\"bypass -h admin_spawn_monster " + mobs[i].getNpcId() + "\">" + mobs[i].getName() + "</a><br1>";
 			
 			if ((tb.length() + txt.length() + end2.length()) > 8192)
 			{
@@ -396,7 +396,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		boolean ended = true;
 		for (int i = from; i < mobs.length; i++)
 		{
-			final String txt = "<a action=\"bypass -h admin_spawn_monster " + mobs[i].npcId + "\">" + mobs[i].name + "</a><br1>";
+			final String txt = "<a action=\"bypass -h admin_spawn_monster " + mobs[i].getNpcId() + "\">" + mobs[i].getName() + "</a><br1>";
 			
 			if ((tb.length() + txt.length() + end2.length()) > 8192)
 			{

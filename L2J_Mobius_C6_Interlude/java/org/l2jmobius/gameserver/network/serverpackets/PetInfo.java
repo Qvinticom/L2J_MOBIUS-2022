@@ -86,7 +86,7 @@ public class PetInfo extends GameServerPacket
 		writeC(0xb1);
 		writeD(_summon.getSummonType());
 		writeD(_summon.getObjectId());
-		writeD(_summon.getTemplate().idTemplate + 1000000);
+		writeD(_summon.getTemplate().getIdTemplate() + 1000000);
 		writeD(0); // 1=attackable
 		
 		writeD(_x);
@@ -107,8 +107,8 @@ public class PetInfo extends GameServerPacket
 		
 		writeF(1/* _cha.getProperMultiplier() */);
 		writeF(1/* _cha.getAttackSpeedMultiplier() */);
-		writeF(_summon.getTemplate().collisionRadius);
-		writeF(_summon.getTemplate().collisionHeight);
+		writeF(_summon.getTemplate().getCollisionRadius());
+		writeF(_summon.getTemplate().getCollisionHeight());
 		writeD(0); // right hand weapon
 		writeD(0);
 		writeD(0); // left hand weapon
@@ -147,7 +147,7 @@ public class PetInfo extends GameServerPacket
 		writeD(_summon.getMAtkSpd()); // casting speed
 		
 		writeD(0); // c2 abnormal visual effect... bleed=1; poison=2; poison & bleed=3; flame=4;
-		final int npcId = _summon.getTemplate().npcId;
+		final int npcId = _summon.getTemplate().getNpcId();
 		
 		if ((npcId >= 12526) && (npcId <= 12528))
 		{

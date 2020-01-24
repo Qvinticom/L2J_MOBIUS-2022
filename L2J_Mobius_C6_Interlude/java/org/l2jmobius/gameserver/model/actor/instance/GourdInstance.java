@@ -69,7 +69,7 @@ public class GourdInstance extends MonsterInstance
 		{
 			damage = 0;
 		}
-		if ((getTemplate().npcId == 12778) || (getTemplate().npcId == 12779))
+		if ((getTemplate().getNpcId() == 12778) || (getTemplate().getNpcId() == 12779))
 		{
 			if ((attacker.getActiveWeaponInstance().getItemId() == 4202) || (attacker.getActiveWeaponInstance().getItemId() == 5133) || (attacker.getActiveWeaponInstance().getItemId() == 5817) || (attacker.getActiveWeaponInstance().getItemId() == 7058))
 			{

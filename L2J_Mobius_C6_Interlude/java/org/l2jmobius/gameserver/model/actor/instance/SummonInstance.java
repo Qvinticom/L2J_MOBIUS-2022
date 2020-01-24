@@ -95,7 +95,7 @@ public class SummonInstance extends Summon
 	@Override
 	public int getLevel()
 	{
-		return getTemplate() != null ? getTemplate().level : 0;
+		return getTemplate() != null ? getTemplate().getLevel() : 0;
 	}
 	
 	@Override
@@ -181,7 +181,7 @@ public class SummonInstance extends Summon
 		
 		if (attacker instanceof NpcInstance)
 		{
-			sm.addNpcName(((NpcInstance) attacker).getTemplate().npcId);
+			sm.addNpcName(((NpcInstance) attacker).getTemplate().getNpcId());
 		}
 		else
 		{

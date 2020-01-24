@@ -81,7 +81,7 @@ public class PetInstance extends Summon
 	{
 		if (_data == null)
 		{
-			_data = PetDataTable.getInstance().getPetData(getTemplate().npcId, getStat().getLevel());
+			_data = PetDataTable.getInstance().getPetData(getTemplate().getNpcId(), getStat().getLevel());
 		}
 		
 		return _data;
@@ -143,7 +143,7 @@ public class PetInstance extends Summon
 					getOwner().sendMessage("Your pet is too hungry to stay summoned.");
 				}
 				
-				final int foodId = PetDataTable.getFoodItemId(getTemplate().npcId);
+				final int foodId = PetDataTable.getFoodItemId(getTemplate().getNpcId());
 				if (foodId == 0)
 				{
 					return;
@@ -221,18 +221,18 @@ public class PetInstance extends Summon
 		// Hatcling : Level 35
 		// Tested and confirmed on official servers
 		// Sin-eaters are defaulted at the owner's level
-		if (template.npcId == 12564)
+		if (template.getNpcId() == 12564)
 		{
 			getStat().setLevel((byte) getOwner().getLevel());
 		}
 		else
 		{
-			getStat().setLevel(template.level);
+			getStat().setLevel(template.getLevel());
 		}
 		
 		_inventory = new PetInventory(this);
 		
-		final int npcId = template.npcId;
+		final int npcId = template.getNpcId();
 		_mountable = PetDataTable.isMountable(npcId);
 	}
 	
@@ -845,7 +845,7 @@ public class PetInstance extends Summon
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			if (template.type.compareToIgnoreCase("BabyPet") == 0)
+			if (template.getType().compareToIgnoreCase("BabyPet") == 0)
 			{
 				pet = new BabyPetInstance(IdFactory.getInstance().getNextId(), template, owner, control);
 			}

@@ -752,7 +752,7 @@ public class AttackableAI extends CreatureAI
 			_actor.setTarget(originalAttackTarget);
 			skills = _actor.getAllSkills();
 			// dist2 = _actor.getPlanDistanceSq(originalAttackTarget.getX(), originalAttackTarget.getY());
-			range = _actor.getPhysicalAttackRange() + _actor.getTemplate().collisionRadius + originalAttackTarget.getTemplate().collisionRadius;
+			range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + originalAttackTarget.getTemplate().getCollisionRadius();
 		}
 		catch (NullPointerException e)
 		{
@@ -761,8 +761,8 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		final Weapon weapon = _actor.getActiveWeaponItem();
-		final int collision = _actor.getTemplate().collisionRadius;
-		final int combinedCollision = collision + originalAttackTarget.getTemplate().collisionRadius;
+		final int collision = _actor.getTemplate().getCollisionRadius();
+		final int combinedCollision = collision + originalAttackTarget.getTemplate().getCollisionRadius();
 		
 		// ------------------------------------------------------
 		// In case many mobs are trying to hit from same place, move a bit,

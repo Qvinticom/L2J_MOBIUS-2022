@@ -153,7 +153,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (float) ((1.1 * getPAtkSpd()) / _creature.getTemplate().basePAtkSpd);
+		return (float) ((1.1 * getPAtkSpd()) / _creature.getTemplate().getBasePAtkSpd());
 	}
 	
 	/**
@@ -167,7 +167,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.STAT_CON, _creature.getTemplate().baseCON, null, null);
+		return (int) calcStat(Stats.STAT_CON, _creature.getTemplate().getBaseCON(), null, null);
 	}
 	
 	/**
@@ -194,7 +194,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		int criticalHit = (int) ((calcStat(Stats.CRITICAL_RATE, _creature.getTemplate().baseCritRate, target, skill) * 10.0) + 0.5);
+		int criticalHit = (int) ((calcStat(Stats.CRITICAL_RATE, _creature.getTemplate().getBaseCritRate(), target, skill) * 10.0) + 0.5);
 		
 		criticalHit /= 10;
 		
@@ -218,7 +218,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.STAT_DEX, _creature.getTemplate().baseDEX, null, null);
+		return (int) calcStat(Stats.STAT_DEX, _creature.getTemplate().getBaseDEX(), null, null);
 	}
 	
 	/**
@@ -265,7 +265,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.STAT_INT, _creature.getTemplate().baseINT, null, null);
+		return (int) calcStat(Stats.STAT_INT, _creature.getTemplate().getBaseINT(), null, null);
 	}
 	
 	/**
@@ -303,7 +303,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return _creature.getTemplate().baseAtkRange;
+		return _creature.getTemplate().getBaseAtkRange();
 	}
 	
 	/**
@@ -317,7 +317,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.MAX_CP, _creature.getTemplate().baseCpMax, null, null);
+		return (int) calcStat(Stats.MAX_CP, _creature.getTemplate().getBaseCpMax(), null, null);
 	}
 	
 	/**
@@ -331,7 +331,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.MAX_HP, _creature.getTemplate().baseHpMax, null, null);
+		return (int) calcStat(Stats.MAX_HP, _creature.getTemplate().getBaseHpMax(), null, null);
 	}
 	
 	/**
@@ -345,7 +345,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.MAX_MP, _creature.getTemplate().baseMpMax, null, null);
+		return (int) calcStat(Stats.MAX_MP, _creature.getTemplate().getBaseMpMax(), null, null);
 	}
 	
 	/**
@@ -373,7 +373,7 @@ public class CreatureStat
 			bonusAtk = Config.L2JMOD_CHAMPION_ATK;
 		}
 		
-		double attack = _creature.getTemplate().baseMAtk * bonusAtk;
+		double attack = _creature.getTemplate().getBaseMAtk() * bonusAtk;
 		
 		// Get the skill type to calculate its effect in function of base stats of the Creature target.
 		final Stats stat = skill == null ? null : skill.getStat();
@@ -384,72 +384,72 @@ public class CreatureStat
 			{
 				case AGGRESSION:
 				{
-					attack += _creature.getTemplate().baseAggression;
+					attack += _creature.getTemplate().getBaseAggression();
 					break;
 				}
 				case BLEED:
 				{
-					attack += _creature.getTemplate().baseBleed;
+					attack += _creature.getTemplate().getBaseBleed();
 					break;
 				}
 				case POISON:
 				{
-					attack += _creature.getTemplate().basePoison;
+					attack += _creature.getTemplate().getBasePoison();
 					break;
 				}
 				case STUN:
 				{
-					attack += _creature.getTemplate().baseStun;
+					attack += _creature.getTemplate().getBaseStun();
 					break;
 				}
 				case ROOT:
 				{
-					attack += _creature.getTemplate().baseRoot;
+					attack += _creature.getTemplate().getBaseRoot();
 					break;
 				}
 				case MOVEMENT:
 				{
-					attack += _creature.getTemplate().baseMovement;
+					attack += _creature.getTemplate().getBaseMovement();
 					break;
 				}
 				case CONFUSION:
 				{
-					attack += _creature.getTemplate().baseConfusion;
+					attack += _creature.getTemplate().getBaseConfusion();
 					break;
 				}
 				case SLEEP:
 				{
-					attack += _creature.getTemplate().baseSleep;
+					attack += _creature.getTemplate().getBaseSleep();
 					break;
 				}
 				case FIRE:
 				{
-					attack += _creature.getTemplate().baseFire;
+					attack += _creature.getTemplate().getBaseFire();
 					break;
 				}
 				case WIND:
 				{
-					attack += _creature.getTemplate().baseWind;
+					attack += _creature.getTemplate().getBaseWind();
 					break;
 				}
 				case WATER:
 				{
-					attack += _creature.getTemplate().baseWater;
+					attack += _creature.getTemplate().getBaseWater();
 					break;
 				}
 				case EARTH:
 				{
-					attack += _creature.getTemplate().baseEarth;
+					attack += _creature.getTemplate().getBaseEarth();
 					break;
 				}
 				case HOLY:
 				{
-					attack += _creature.getTemplate().baseHoly;
+					attack += _creature.getTemplate().getBaseHoly();
 					break;
 				}
 				case DARK:
 				{
-					attack += _creature.getTemplate().baseDark;
+					attack += _creature.getTemplate().getBaseDark();
 					break;
 				}
 			}
@@ -483,7 +483,7 @@ public class CreatureStat
 			bonusSpdAtk = Config.L2JMOD_CHAMPION_SPD_ATK;
 		}
 		
-		double val = calcStat(Stats.MAGIC_ATTACK_SPEED, _creature.getTemplate().baseMAtkSpd * bonusSpdAtk, null, null);
+		double val = calcStat(Stats.MAGIC_ATTACK_SPEED, _creature.getTemplate().getBaseMAtkSpd() * bonusSpdAtk, null, null);
 		
 		val /= _creature.getArmourExpertisePenalty();
 		
@@ -508,7 +508,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		double mrate = calcStat(Stats.MCRITICAL_RATE, (_creature.getTemplate().baseMCritRate) * Config.MCRIT_RATE_MUL, target, skill);
+		double mrate = calcStat(Stats.MCRITICAL_RATE, (_creature.getTemplate().getBaseMCritRate()) * Config.MCRIT_RATE_MUL, target, skill);
 		
 		if (mrate > Config.MAX_MCRIT_RATE)
 		{
@@ -536,7 +536,7 @@ public class CreatureStat
 		}
 		
 		// Get the base MDef of the Creature
-		double defence = _creature.getTemplate().baseMDef;
+		double defence = _creature.getTemplate().getBaseMDef();
 		
 		// Calculate modifier for Raid Bosses
 		if (_creature.isRaid())
@@ -559,7 +559,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.STAT_MEN, _creature.getTemplate().baseMEN, null, null);
+		return (int) calcStat(Stats.STAT_MEN, _creature.getTemplate().getBaseMEN(), null, null);
 	}
 	
 	/**
@@ -573,7 +573,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return Math.max(1, getRunSpeed() / _creature.getTemplate().baseRunSpd);
+		return Math.max(1, getRunSpeed() / _creature.getTemplate().getBaseRunSpd());
 	}
 	
 	public void setGmSpeedMultiplier(float multipier)
@@ -612,7 +612,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return calcStat(Stats.MAGIC_REUSE_RATE, _creature.getTemplate().baseMReuseRate, null, skill);
+		return calcStat(Stats.MAGIC_REUSE_RATE, _creature.getTemplate().getBaseMReuseRate(), null, skill);
 	}
 	
 	/**
@@ -627,7 +627,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return calcStat(Stats.P_REUSE, _creature.getTemplate().baseMReuseRate, null, skill);
+		return calcStat(Stats.P_REUSE, _creature.getTemplate().getBaseMReuseRate(), null, skill);
 	}
 	
 	/**
@@ -649,7 +649,7 @@ public class CreatureStat
 			bonusAtk = Config.L2JMOD_CHAMPION_ATK;
 		}
 		
-		return (int) calcStat(Stats.POWER_ATTACK, _creature.getTemplate().basePAtk * bonusAtk, target, null);
+		return (int) calcStat(Stats.POWER_ATTACK, _creature.getTemplate().getBasePAtk() * bonusAtk, target, null);
 	}
 	
 	/**
@@ -730,7 +730,7 @@ public class CreatureStat
 			bonusAtk = Config.L2JMOD_CHAMPION_SPD_ATK;
 		}
 		
-		double val = calcStat(Stats.POWER_ATTACK_SPEED, _creature.getTemplate().basePAtkSpd * bonusAtk, null, null);
+		double val = calcStat(Stats.POWER_ATTACK_SPEED, _creature.getTemplate().getBasePAtkSpd() * bonusAtk, null, null);
 		
 		val /= _creature.getArmourExpertisePenalty();
 		
@@ -835,7 +835,7 @@ public class CreatureStat
 		}
 		
 		// Get the base PDef of the Creature
-		double defence = _creature.getTemplate().basePDef;
+		double defence = _creature.getTemplate().getBasePDef();
 		
 		// Calculate modifier for Raid Bosses
 		if (_creature.isRaid())
@@ -857,7 +857,7 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		return (int) calcStat(Stats.POWER_ATTACK_RANGE, _creature.getTemplate().baseAtkRange, null, null);
+		return (int) calcStat(Stats.POWER_ATTACK_RANGE, _creature.getTemplate().getBaseAtkRange(), null, null);
 	}
 	
 	/**
@@ -882,7 +882,7 @@ public class CreatureStat
 		}
 		
 		// err we should be adding TO the persons run speed not making it a constant
-		int val = (int) calcStat(Stats.RUN_SPEED, _creature.getTemplate().baseRunSpd, null, null) + Config.RUN_SPD_BOOST;
+		int val = (int) calcStat(Stats.RUN_SPEED, _creature.getTemplate().getBaseRunSpd(), null, null) + Config.RUN_SPD_BOOST;
 		if (_creature.isInsideZone(ZoneId.WATER))
 		{
 			val /= 2;
@@ -947,7 +947,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.STAT_STR, _creature.getTemplate().baseSTR, null, null);
+		return (int) calcStat(Stats.STAT_STR, _creature.getTemplate().getBaseSTR(), null, null);
 	}
 	
 	/**
@@ -965,7 +965,7 @@ public class CreatureStat
 		{
 			return (getRunSpeed() * 70) / 100;
 		}
-		return (int) calcStat(Stats.WALK_SPEED, _creature.getTemplate().baseWalkSpd, null, null);
+		return (int) calcStat(Stats.WALK_SPEED, _creature.getTemplate().getBaseWalkSpd(), null, null);
 	}
 	
 	/**
@@ -979,7 +979,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.STAT_WIT, _creature.getTemplate().baseWIT, null, null);
+		return (int) calcStat(Stats.STAT_WIT, _creature.getTemplate().getBaseWIT(), null, null);
 	}
 	
 	/**

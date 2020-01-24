@@ -47,7 +47,7 @@ public class GroupSpawn extends Spawn
 		
 		try
 		{
-			if (_template.type.equalsIgnoreCase("Pet") || _template.type.equalsIgnoreCase("Minion"))
+			if (_template.getType().equalsIgnoreCase("Pet") || _template.getType().equalsIgnoreCase("Minion"))
 			{
 				return null;
 			}

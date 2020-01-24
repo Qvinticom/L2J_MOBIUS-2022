@@ -155,11 +155,11 @@ public class PlayerStatus extends PlayableStatus
 			
 			if (attacker instanceof NpcInstance)
 			{
-				smsg.addNpcName(((NpcInstance) attacker).getTemplate().idTemplate);
+				smsg.addNpcName(((NpcInstance) attacker).getTemplate().getIdTemplate());
 			}
 			else if (attacker instanceof Summon)
 			{
-				smsg.addNpcName(((Summon) attacker).getTemplate().idTemplate);
+				smsg.addNpcName(((Summon) attacker).getTemplate().getIdTemplate());
 			}
 			else
 			{

@@ -1000,10 +1000,10 @@ public class CreatureAI extends AbstractAI
 			return false;
 		}
 		
-		int offsetWithCollision = offset + _actor.getTemplate().collisionRadius;
+		int offsetWithCollision = offset + _actor.getTemplate().getCollisionRadius();
 		if (target instanceof Creature)
 		{
-			offsetWithCollision += ((Creature) target).getTemplate().collisionRadius;
+			offsetWithCollision += ((Creature) target).getTemplate().getCollisionRadius();
 		}
 		
 		if (!_actor.isInsideRadius(target, offsetWithCollision, false, false))

@@ -196,7 +196,7 @@ public class RequestBuyItem extends GameClientPacket
 		
 		_listId = list.getListId();
 		
-		if ((_listId > 1000000) && (merchant != null) && (merchant.getTemplate().npcId != (_listId - 1000000)))
+		if ((_listId > 1000000) && (merchant != null) && (merchant.getTemplate().getNpcId() != (_listId - 1000000)))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;

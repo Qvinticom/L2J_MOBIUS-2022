@@ -407,13 +407,13 @@ public class GeoEngine
 		double oheight = 0;
 		if (origin.isCreature())
 		{
-			oheight = ((Creature) origin).getTemplate().collisionHeight * 2;
+			oheight = ((Creature) origin).getTemplate().getCollisionHeight() * 2;
 		}
 		
 		double theight = 0;
 		if (target.isCreature())
 		{
-			theight = ((Creature) target).getTemplate().collisionHeight * 2;
+			theight = ((Creature) target).getTemplate().getCollisionHeight() * 2;
 		}
 		
 		// perform geodata check
@@ -475,7 +475,7 @@ public class GeoEngine
 		double oheight = 0;
 		if (origin.isCreature())
 		{
-			oheight = ((Creature) origin).getTemplate().collisionHeight;
+			oheight = ((Creature) origin).getTemplate().getCollisionHeight();
 		}
 		
 		// perform geodata check

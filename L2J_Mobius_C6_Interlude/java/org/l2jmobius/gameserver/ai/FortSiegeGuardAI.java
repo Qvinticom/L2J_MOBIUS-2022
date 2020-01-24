@@ -610,7 +610,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 			_actor.setTarget(attackTarget);
 			skills = _actor.getAllSkills();
 			dist2 = _actor.getPlanDistanceSq(attackTarget.getX(), attackTarget.getY());
-			range = _actor.getPhysicalAttackRange() + _actor.getTemplate().collisionRadius + attackTarget.getTemplate().collisionRadius;
+			range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + attackTarget.getTemplate().getCollisionRadius();
 			if (attackTarget.isMoving())
 			{
 				range += 50;

@@ -2867,7 +2867,7 @@ public class PlayerInstance extends Playable
 	 */
 	public ClassId getClassId()
 	{
-		return getTemplate().classId;
+		return getTemplate().getClassId();
 	}
 	
 	/**
@@ -3212,9 +3212,9 @@ public class PlayerInstance extends Playable
 	{
 		if (!isSubClassActive())
 		{
-			return getTemplate().race;
+			return getTemplate().getRace();
 		}
-		return CharTemplateTable.getInstance().getTemplate(_baseClass).race;
+		return CharTemplateTable.getInstance().getTemplate(_baseClass).getRace();
 	}
 	
 	/**
@@ -8667,8 +8667,8 @@ public class PlayerInstance extends Playable
 			statement.setInt(31, getAppearance().isFemale() ? 1 : 0);
 			statement.setDouble(32, 1/* getMovementMultiplier() */);
 			statement.setDouble(33, 1/* getAttackSpeedMultiplier() */);
-			statement.setDouble(34, getTemplate().collisionRadius/* getCollisionRadius() */);
-			statement.setDouble(35, getTemplate().collisionHeight/* getCollisionHeight() */);
+			statement.setDouble(34, getTemplate().getCollisionRadius());
+			statement.setDouble(35, getTemplate().getCollisionHeight());
 			statement.setLong(36, getExp());
 			statement.setInt(37, getSp());
 			statement.setInt(38, getKarma());
@@ -10945,7 +10945,7 @@ public class PlayerInstance extends Playable
 				// Calculate the distance between the PlayerInstance and the target
 				if (sklTargetType == SkillTargetType.TARGET_GROUND)
 				{
-					if (!isInsideRadius(getCurrentSkillWorldPosition().getX(), getCurrentSkillWorldPosition().getY(), getCurrentSkillWorldPosition().getZ(), (int) (skill.getCastRange() + getTemplate().getCollisionRadius()), false, false))
+					if (!isInsideRadius(getCurrentSkillWorldPosition().getX(), getCurrentSkillWorldPosition().getY(), getCurrentSkillWorldPosition().getZ(), skill.getCastRange() + getTemplate().getCollisionRadius(), false, false))
 					{
 						// Send a System Message to the caster
 						sendPacket(SystemMessageId.TARGET_TOO_FAR);
@@ -10955,7 +10955,7 @@ public class PlayerInstance extends Playable
 						return;
 					}
 				}
-				else if ((skill.getCastRange() > 0) && !isInsideRadius(target, skill.getCastRange() + getTemplate().collisionRadius, false, false)) // Calculate the distance between the PlayerInstance and the target
+				else if ((skill.getCastRange() > 0) && !isInsideRadius(target, skill.getCastRange() + getTemplate().getCollisionRadius(), false, false)) // Calculate the distance between the PlayerInstance and the target
 				{
 					// Send a System Message to the caster
 					sendPacket(SystemMessageId.TARGET_TOO_FAR);
@@ -10966,7 +10966,7 @@ public class PlayerInstance extends Playable
 				}
 			}
 			// Check range for SIGNET skills
-			else if ((sklType == SkillType.SIGNET) && !isInsideRadius(getCurrentSkillWorldPosition().getX(), getCurrentSkillWorldPosition().getY(), getCurrentSkillWorldPosition().getZ(), (int) (skill.getCastRange() + getTemplate().getCollisionRadius()), false, false))
+			else if ((sklType == SkillType.SIGNET) && !isInsideRadius(getCurrentSkillWorldPosition().getX(), getCurrentSkillWorldPosition().getY(), getCurrentSkillWorldPosition().getZ(), skill.getCastRange() + getTemplate().getCollisionRadius(), false, false))
 			{
 				// Send a System Message to the caster
 				sendPacket(SystemMessageId.TARGET_TOO_FAR);

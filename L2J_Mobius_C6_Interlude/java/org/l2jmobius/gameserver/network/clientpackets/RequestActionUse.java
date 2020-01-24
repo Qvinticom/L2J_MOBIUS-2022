@@ -313,7 +313,7 @@ public class RequestActionUse extends GameClientPacket
 						{
 							return;
 						}
-						final Ride mount = new Ride(player.getObjectId(), Ride.ACTION_MOUNT, pet.getTemplate().npcId);
+						final Ride mount = new Ride(player.getObjectId(), Ride.ACTION_MOUNT, pet.getTemplate().getNpcId());
 						player.broadcastPacket(mount);
 						player.setMountType(mount.getMountType());
 						player.setMountObjectID(pet.getControlItemId());

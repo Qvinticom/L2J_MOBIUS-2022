@@ -52,15 +52,15 @@ public class MonRaceInfo extends GameServerPacket
 		for (int i = 0; i < 8; i++)
 		{
 			writeD(_monsters[i].getObjectId()); // npcObjectID
-			writeD(_monsters[i].getTemplate().npcId + 1000000); // npcID
+			writeD(_monsters[i].getTemplate().getNpcId() + 1000000); // npcID
 			writeD(14107); // origin X
 			writeD(181875 + (58 * (7 - i))); // origin Y
 			writeD(-3566); // origin Z
 			writeD(12080); // end X
 			writeD(181875 + (58 * (7 - i))); // end Y
 			writeD(-3566); // end Z
-			writeF(_monsters[i].getTemplate().collisionHeight); // coll. height
-			writeF(_monsters[i].getTemplate().collisionRadius); // coll. radius
+			writeF(_monsters[i].getTemplate().getCollisionHeight()); // coll. height
+			writeF(_monsters[i].getTemplate().getCollisionRadius()); // coll. radius
 			writeD(120); // ?? unknown
 			for (int j = 0; j < 20; j++)
 			{

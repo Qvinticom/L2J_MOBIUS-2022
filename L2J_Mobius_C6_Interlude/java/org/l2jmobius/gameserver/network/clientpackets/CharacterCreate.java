@@ -116,7 +116,7 @@ public class CharacterCreate extends GameClientPacket
 			}
 			
 			template = CharTemplateTable.getInstance().getTemplate(_classId);
-			if ((template == null) || (template.classBaseLevel > 1))
+			if ((template == null) || (template.getClassBaseLevel() > 1))
 			{
 				sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 				return;
@@ -222,7 +222,7 @@ public class CharacterCreate extends GameClientPacket
 		}
 		else
 		{
-			newChar.setXYZInvisible(template.spawnX, template.spawnY, template.spawnZ);
+			newChar.setXYZInvisible(template.getSpawnX(), template.getSpawnY(), template.getSpawnZ());
 		}
 		
 		if (Config.ALLOW_CREATE_LVL)

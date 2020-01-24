@@ -208,7 +208,7 @@ public class SkillSummon extends Skill
 			LOGGER.warning("Summon attempt for nonexisting NPC ID:" + _npcId + ", skill ID:" + getId());
 			return; // npcID doesn't exist
 		}
-		if (summonTemplate.type.equalsIgnoreCase("SiegeSummon"))
+		if (summonTemplate.getType().equalsIgnoreCase("SiegeSummon"))
 		{
 			summon = new SiegeSummonInstance(IdFactory.getInstance().getNextId(), summonTemplate, activeChar, this);
 		}
@@ -217,7 +217,7 @@ public class SkillSummon extends Skill
 			summon = new SummonInstance(IdFactory.getInstance().getNextId(), summonTemplate, activeChar, this);
 		}
 		
-		summon.setName(summonTemplate.name);
+		summon.setName(summonTemplate.getName());
 		summon.setTitle(activeChar.getName());
 		summon.setExpPenalty(_expPenalty);
 		if (summon.getLevel() >= ExperienceData.getInstance().getMaxLevel())

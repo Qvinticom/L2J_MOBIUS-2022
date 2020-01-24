@@ -131,7 +131,7 @@ public class RaidbossInfo extends Quest
 		for (Spawn spawn : SpawnTable.getInstance().getSpawnTable().values())
 		{
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(spawn.getNpcId());
-			if ((template != null) && template.type.equals(BOSS_CLASS_TYPE))
+			if ((template != null) && template.getType().equals(BOSS_CLASS_TYPE))
 			{
 				RADARS.put(spawn.getNpcId(), new Location(spawn.getX(), spawn.getY(), spawn.getZ()));
 			}

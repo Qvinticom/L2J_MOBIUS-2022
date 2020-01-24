@@ -228,14 +228,14 @@ public class NpcInstance extends Creature
 		initCharStatusUpdateValues();
 		
 		// initialize the "current" equipment
-		_currentLHandId = getTemplate().lhand;
-		_currentRHandId = getTemplate().rhand;
+		_currentLHandId = getTemplate().getLhand();
+		_currentRHandId = getTemplate().getRhand();
 		// initialize the "current" collisions
-		_currentCollisionHeight = getTemplate().collisionHeight;
-		_currentCollisionRadius = getTemplate().collisionRadius;
+		_currentCollisionHeight = getTemplate().getCollisionHeight();
+		_currentCollisionRadius = getTemplate().getCollisionRadius();
 		
 		// Set the name of the Creature
-		setName(template.name);
+		setName(template.getName());
 	}
 	
 	public int getScriptValue()
@@ -303,7 +303,7 @@ public class NpcInstance extends Creature
 	 */
 	public int getNpcId()
 	{
-		return getTemplate().npcId;
+		return getTemplate().getNpcId();
 	}
 	
 	@Override
@@ -323,7 +323,7 @@ public class NpcInstance extends Creature
 	 */
 	public String getFactionId()
 	{
-		return getTemplate().factionId;
+		return getTemplate().getFactionId();
 	}
 	
 	/**
@@ -334,7 +334,7 @@ public class NpcInstance extends Creature
 	@Override
 	public int getLevel()
 	{
-		return getTemplate().level;
+		return getTemplate().getLevel();
 	}
 	
 	/**
@@ -354,7 +354,7 @@ public class NpcInstance extends Creature
 	 */
 	public int getAggroRange()
 	{
-		return getTemplate().aggroRange;
+		return getTemplate().getAggroRange();
 	}
 	
 	/**
@@ -364,7 +364,7 @@ public class NpcInstance extends Creature
 	 */
 	public int getFactionRange()
 	{
-		return getTemplate().factionRange;
+		return getTemplate().getFactionRange();
 	}
 	
 	/**
@@ -375,7 +375,7 @@ public class NpcInstance extends Creature
 	@Override
 	public boolean isUndead()
 	{
-		return getTemplate().isUndead;
+		return getTemplate().isUndead();
 	}
 	
 	/**
@@ -847,7 +847,7 @@ public class NpcInstance extends Creature
 			final String className = getClass().getSimpleName();
 			html1.append("<br>");
 			
-			html1.append("Instance Type: " + className + "<br1>Faction: " + getTemplate().factionId + "<br1>Location ID: " + (_spawn != null ? _spawn.getLocation() : 0) + "<br1>");
+			html1.append("Instance Type: " + className + "<br1>Faction: " + getTemplate().getFactionId() + "<br1>Location ID: " + (_spawn != null ? _spawn.getLocation() : 0) + "<br1>");
 			
 			if (this instanceof ControllableMobInstance)
 			{
@@ -859,9 +859,9 @@ public class NpcInstance extends Creature
 			}
 			
 			html1.append("<table border=\"0\" width=\"100%\">");
-			html1.append("<tr><td>Object ID</td><td>" + getObjectId() + "</td><td>NPC ID</td><td>" + getTemplate().npcId + "</td></tr>");
+			html1.append("<tr><td>Object ID</td><td>" + getObjectId() + "</td><td>NPC ID</td><td>" + getTemplate().getNpcId() + "</td></tr>");
 			html1.append("<tr><td>Castle</td><td>" + getCastle().getCastleId() + "</td><td>Coords</td><td>" + getX() + "," + getY() + "," + getZ() + "</td></tr>");
-			html1.append("<tr><td>Level</td><td>" + getTemplate().level + "</td><td>Aggro</td><td>" + (this instanceof Attackable ? ((Attackable) this).getAggroRange() : 0) + "</td></tr>");
+			html1.append("<tr><td>Level</td><td>" + getTemplate().getLevel() + "</td><td>Aggro</td><td>" + (this instanceof Attackable ? ((Attackable) this).getAggroRange() : 0) + "</td></tr>");
 			html1.append("</table><br>");
 			
 			html1.append("<font color=\"LEVEL\">Combat</font>");
@@ -881,11 +881,11 @@ public class NpcInstance extends Creature
 			html1.append("<tr><td>INT</td><td>" + getINT() + "</td><td>WIT</td><td>" + getWIT() + "</td><td>MEN</td><td>" + getMEN() + "</td></tr>");
 			html1.append("</table>");
 			
-			html1.append("<br><center><table><tr><td><button value=\"Edit NPC\" action=\"bypass -h admin_edit_npc " + getTemplate().npcId + "\" width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"><br1></td>");
+			html1.append("<br><center><table><tr><td><button value=\"Edit NPC\" action=\"bypass -h admin_edit_npc " + getTemplate().getNpcId() + "\" width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"><br1></td>");
 			html1.append("<td><button value=\"Kill\" action=\"bypass -h admin_kill\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td><br1></tr>");
-			html1.append("<tr><td><button value=\"Show DropList\" action=\"bypass -h admin_show_droplist " + getTemplate().npcId + "\" width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr>");
+			html1.append("<tr><td><button value=\"Show DropList\" action=\"bypass -h admin_show_droplist " + getTemplate().getNpcId() + "\" width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr>");
 			html1.append("<td><button value=\"Delete\" action=\"bypass -h admin_delete\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr>");
-			html1.append("<tr><td><button value=\"Show Skillist\" action=\"bypass -h admin_show_skilllist_npc " + getTemplate().npcId + "\" width=100 height=20 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td><td></td></tr>");
+			html1.append("<tr><td><button value=\"Show Skillist\" action=\"bypass -h admin_show_skilllist_npc " + getTemplate().getNpcId() + "\" width=100 height=20 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td><td></td></tr>");
 			html1.append("</table></center><br>");
 			html1.append("</body></html>");
 			
@@ -923,7 +923,7 @@ public class NpcInstance extends Creature
 			html1.append("<tr><td>Accuracy</td><td>" + getAccuracy() + "</td><td>Evasion</td><td>" + getEvasionRate(null) + "</td></tr>");
 			html1.append("<tr><td>Critical</td><td>" + getCriticalHit(null, null) + "</td><td>Speed</td><td>" + getRunSpeed() + "</td></tr>");
 			html1.append("<tr><td>Atk.Speed</td><td>" + getPAtkSpd() + "</td><td>Cast.Speed</td><td>" + getMAtkSpd() + "</td></tr>");
-			html1.append("<tr><td>Race</td><td>" + getTemplate().race + "</td><td></td><td></td></tr>");
+			html1.append("<tr><td>Race</td><td>" + getTemplate().getRace() + "</td><td></td><td></td></tr>");
 			html1.append("</table>");
 			
 			html1.append("<br><center><font color=\"LEVEL\">[Basic Stats]</font></center>");
@@ -1583,7 +1583,7 @@ public class NpcInstance extends Creature
 	public Weapon getActiveWeaponItem()
 	{
 		// Get the weapon identifier equiped in the right hand of the NpcInstance
-		final int weaponId = getTemplate().rhand;
+		final int weaponId = getTemplate().getRhand();
 		
 		if (weaponId < 1)
 		{
@@ -1591,7 +1591,7 @@ public class NpcInstance extends Creature
 		}
 		
 		// Get the weapon item equiped in the right hand of the NpcInstance
-		final Item item = ItemTable.getInstance().getTemplate(getTemplate().rhand);
+		final Item item = ItemTable.getInstance().getTemplate(getTemplate().getRhand());
 		
 		if (!(item instanceof Weapon))
 		{
@@ -1653,7 +1653,7 @@ public class NpcInstance extends Creature
 	public Weapon getSecondaryWeaponItem()
 	{
 		// Get the weapon identifier equiped in the right hand of the NpcInstance
-		final int weaponId = getTemplate().lhand;
+		final int weaponId = getTemplate().getLhand();
 		
 		if (weaponId < 1)
 		{
@@ -1661,7 +1661,7 @@ public class NpcInstance extends Creature
 		}
 		
 		// Get the weapon item equiped in the right hand of the NpcInstance
-		final Item item = ItemTable.getInstance().getTemplate(getTemplate().lhand);
+		final Item item = ItemTable.getInstance().getTemplate(getTemplate().getLhand());
 		
 		if (!(item instanceof Weapon))
 		{
@@ -1878,7 +1878,7 @@ public class NpcInstance extends Creature
 		// collect awaiting quests and start points
 		final List<Quest> options = new ArrayList<>();
 		
-		final List<QuestState> awaits = player.getQuestsForTalk(getTemplate().npcId);
+		final List<QuestState> awaits = player.getQuestsForTalk(getTemplate().getNpcId());
 		final List<Quest> starts = getTemplate().getEventQuests(EventType.QUEST_START);
 		
 		// Quests are limited between 1 and 999 because those are the quests that are supported by the client.
@@ -1949,7 +1949,7 @@ public class NpcInstance extends Creature
 	// >24 - check lottery ticket by item object id
 	public void showLotoWindow(PlayerInstance player, int val)
 	{
-		final int npcId = getTemplate().npcId;
+		final int npcId = getTemplate().getNpcId();
 		String filename;
 		SystemMessage sm;
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -2207,7 +2207,7 @@ public class NpcInstance extends Creature
 	 */
 	public void makeCPRecovery(PlayerInstance player)
 	{
-		if ((getTemplate().npcId != 31225) && (getTemplate().npcId != 31226))
+		if ((getTemplate().getNpcId() != 31225) && (getTemplate().getNpcId() != 31226))
 		{
 			return;
 		}
@@ -2400,12 +2400,12 @@ public class NpcInstance extends Creature
 			}
 		}
 		
-		if ((getTemplate().type == "Auctioneer") && (val == 0))
+		if ((getTemplate().getType() == "Auctioneer") && (val == 0))
 		{
 			return;
 		}
 		
-		final int npcId = getTemplate().npcId;
+		final int npcId = getTemplate().getNpcId();
 		
 		/* For use with Seven Signs implementation */
 		String filename = SevenSigns.SEVEN_SIGNS_HTML_PATH;
@@ -2913,7 +2913,7 @@ public class NpcInstance extends Creature
 	public int getExpReward()
 	{
 		final double rateXp = getStat().calcStat(Stats.MAX_HP, 1, this, null);
-		return (int) (getTemplate().rewardExp * rateXp * Config.RATE_XP);
+		return (int) (getTemplate().getRewardExp() * rateXp * Config.RATE_XP);
 	}
 	
 	/**
@@ -2924,7 +2924,7 @@ public class NpcInstance extends Creature
 	public int getSpReward()
 	{
 		final double rateSp = getStat().calcStat(Stats.MAX_HP, 1, this, null);
-		return (int) (getTemplate().rewardSp * rateSp * Config.RATE_SP);
+		return (int) (getTemplate().getRewardSp() * rateSp * Config.RATE_SP);
 	}
 	
 	/**
@@ -2956,10 +2956,10 @@ public class NpcInstance extends Creature
 		}
 		
 		// Normally this wouldn't really be needed, but for those few exceptions, we do need to reset the weapons back to the initial templated weapon.
-		_currentLHandId = getTemplate().lhand;
-		_currentRHandId = getTemplate().rhand;
-		_currentCollisionHeight = getTemplate().collisionHeight;
-		_currentCollisionRadius = getTemplate().collisionRadius;
+		_currentLHandId = getTemplate().getLhand();
+		_currentRHandId = getTemplate().getRhand();
+		_currentCollisionHeight = getTemplate().getCollisionHeight();
+		_currentCollisionRadius = getTemplate().getCollisionRadius();
 		DecayTaskManager.getInstance().addDecayTask(this);
 		return true;
 	}
@@ -3073,7 +3073,7 @@ public class NpcInstance extends Creature
 	@Override
 	public String toString()
 	{
-		return getTemplate().name;
+		return getTemplate().getName();
 	}
 	
 	/**

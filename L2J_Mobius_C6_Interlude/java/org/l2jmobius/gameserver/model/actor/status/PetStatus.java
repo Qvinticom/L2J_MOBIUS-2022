@@ -54,7 +54,7 @@ public class PetStatus extends SummonStatus
 			
 			if (attacker instanceof NpcInstance)
 			{
-				sm.addNpcName(((NpcInstance) attacker).getTemplate().idTemplate);
+				sm.addNpcName(((NpcInstance) attacker).getTemplate().getIdTemplate());
 			}
 			else
 			{

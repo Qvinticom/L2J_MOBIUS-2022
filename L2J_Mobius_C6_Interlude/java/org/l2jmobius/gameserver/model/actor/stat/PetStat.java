@@ -132,7 +132,7 @@ public class PetStat extends SummonStat
 		getActiveChar().stopFeed();
 		super.setLevel(value);
 		
-		getActiveChar().setPetData(PetDataTable.getInstance().getPetData(getActiveChar().getTemplate().npcId, getLevel()));
+		getActiveChar().setPetData(PetDataTable.getInstance().getPetData(getActiveChar().getTemplate().getNpcId(), getLevel()));
 		getActiveChar().startFeed(false);
 		
 		if (getActiveChar().getControlItem() != null)
@@ -170,72 +170,72 @@ public class PetStat extends SummonStat
 			{
 				case AGGRESSION:
 				{
-					attack += getActiveChar().getTemplate().baseAggression;
+					attack += getActiveChar().getTemplate().getBaseAggression();
 					break;
 				}
 				case BLEED:
 				{
-					attack += getActiveChar().getTemplate().baseBleed;
+					attack += getActiveChar().getTemplate().getBaseBleed();
 					break;
 				}
 				case POISON:
 				{
-					attack += getActiveChar().getTemplate().basePoison;
+					attack += getActiveChar().getTemplate().getBasePoison();
 					break;
 				}
 				case STUN:
 				{
-					attack += getActiveChar().getTemplate().baseStun;
+					attack += getActiveChar().getTemplate().getBaseStun();
 					break;
 				}
 				case ROOT:
 				{
-					attack += getActiveChar().getTemplate().baseRoot;
+					attack += getActiveChar().getTemplate().getBaseRoot();
 					break;
 				}
 				case MOVEMENT:
 				{
-					attack += getActiveChar().getTemplate().baseMovement;
+					attack += getActiveChar().getTemplate().getBaseMovement();
 					break;
 				}
 				case CONFUSION:
 				{
-					attack += getActiveChar().getTemplate().baseConfusion;
+					attack += getActiveChar().getTemplate().getBaseConfusion();
 					break;
 				}
 				case SLEEP:
 				{
-					attack += getActiveChar().getTemplate().baseSleep;
+					attack += getActiveChar().getTemplate().getBaseSleep();
 					break;
 				}
 				case FIRE:
 				{
-					attack += getActiveChar().getTemplate().baseFire;
+					attack += getActiveChar().getTemplate().getBaseFire();
 					break;
 				}
 				case WIND:
 				{
-					attack += getActiveChar().getTemplate().baseWind;
+					attack += getActiveChar().getTemplate().getBaseWind();
 					break;
 				}
 				case WATER:
 				{
-					attack += getActiveChar().getTemplate().baseWater;
+					attack += getActiveChar().getTemplate().getBaseWater();
 					break;
 				}
 				case EARTH:
 				{
-					attack += getActiveChar().getTemplate().baseEarth;
+					attack += getActiveChar().getTemplate().getBaseEarth();
 					break;
 				}
 				case HOLY:
 				{
-					attack += getActiveChar().getTemplate().baseHoly;
+					attack += getActiveChar().getTemplate().getBaseHoly();
 					break;
 				}
 				case DARK:
 				{
-					attack += getActiveChar().getTemplate().baseDark;
+					attack += getActiveChar().getTemplate().getBaseDark();
 					break;
 				}
 			}

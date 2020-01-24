@@ -590,7 +590,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		{
 			final NpcInstance target = (NpcInstance) obj;
 			
-			final int monsterTemplate = target.getTemplate().npcId;
+			final int monsterTemplate = target.getTemplate().getNpcId();
 			
 			final NpcTemplate template1 = NpcTable.getInstance().getTemplate(monsterTemplate);
 			
@@ -632,7 +632,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				spawn.init();
 				
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString("Created " + template1.name + " on " + target.getObjectId() + ".");
+				sm.addString("Created " + template1.getName() + " on " + target.getObjectId() + ".");
 				activeChar.sendPacket(sm);
 			}
 			catch (Exception e)
