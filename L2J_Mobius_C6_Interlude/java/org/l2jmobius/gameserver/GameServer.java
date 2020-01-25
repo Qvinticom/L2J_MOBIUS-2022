@@ -389,33 +389,8 @@ public class GameServer
 		
 		Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
 		
-		try
-		{
-			final DoorData doorTable = DoorData.getInstance();
-			
-			// Opened by players like L2OFF
-			doorTable.getDoor(19160012).openMe();
-			doorTable.getDoor(19160013).openMe();
-			doorTable.getDoor(19160014).openMe();
-			doorTable.getDoor(19160015).openMe();
-			doorTable.getDoor(19160016).openMe();
-			doorTable.getDoor(19160017).openMe();
-			doorTable.getDoor(24190001).openMe();
-			doorTable.getDoor(24190002).openMe();
-			doorTable.getDoor(24190003).openMe();
-			doorTable.getDoor(24190004).openMe();
-			doorTable.getDoor(23180001).openMe();
-			doorTable.getDoor(23180002).openMe();
-			doorTable.getDoor(23180003).openMe();
-			doorTable.getDoor(23180004).openMe();
-			doorTable.getDoor(23180005).openMe();
-			doorTable.getDoor(23180006).openMe();
-			doorTable.checkAutoOpen();
-		}
-		catch (NullPointerException e)
-		{
-			LOGGER.info("There are errors in Doors.xml file, or missing doors.");
-		}
+		// Schedule auto opening/closing doors.
+		DoorData.getInstance().checkAutoOpen();
 		
 		Util.printSection("Scripts");
 		if (!Config.ALT_DEV_NO_SCRIPT)

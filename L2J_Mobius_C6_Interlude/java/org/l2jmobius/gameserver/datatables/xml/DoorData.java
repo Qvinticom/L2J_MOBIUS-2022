@@ -74,7 +74,7 @@ public class DoorData implements IXmlReader
 					set.set(attr.getNodeName(), attr.getNodeValue());
 				}
 				
-				final DoorInstance door = parseList(set);
+				final DoorInstance door = createDoor(set);
 				DOORS.put(door.getDoorId(), door);
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
 				final ClanHall clanhall = ClanHallManager.getInstance().getNearbyClanHall(door.getX(), door.getY(), 500);
@@ -91,7 +91,7 @@ public class DoorData implements IXmlReader
 		}
 	}
 	
-	public static DoorInstance parseList(StatsSet set)
+	public static DoorInstance createDoor(StatsSet set)
 	{
 		final String name = set.getString("name");
 		final int id = set.getInt("id");
@@ -108,7 +108,7 @@ public class DoorData implements IXmlReader
 		final int pDef = set.getInt("pDef");
 		final int mDef = set.getInt("mDef");
 		final boolean unlockable = set.getBoolean("unlockable", false);
-		final boolean autoOpen = set.getBoolean("autoOpen", false);
+		final boolean isOpen = set.getBoolean("isOpen", false);
 		
 		if (xMin > xMax)
 		{
@@ -192,7 +192,7 @@ public class DoorData implements IXmlReader
 			LOGGER.warning("Error in door data, ID:" + id + " " + e);
 		}
 		door.setCurrentHpMp(door.getMaxHp(), door.getMaxMp());
-		door.setOpen(autoOpen);
+		door.setOpen(isOpen);
 		door.setXYZInvisible(x, y, z);
 		
 		return door;

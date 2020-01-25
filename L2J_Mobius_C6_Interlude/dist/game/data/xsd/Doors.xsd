@@ -21,7 +21,7 @@
 								<xs:attribute type="xs:int" name="pDef" use="required"/>
 								<xs:attribute type="xs:short" name="mDef" use="required"/>
 								<xs:attribute type="xs:string" name="unlockable" use="required"/>
-								<xs:attribute type="xs:string" name="autoOpen" use="required"/>
+								<xs:attribute type="xs:string" name="isOpen" use="required"/>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>

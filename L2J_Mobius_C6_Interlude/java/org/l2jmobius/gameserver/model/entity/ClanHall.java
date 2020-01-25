@@ -527,7 +527,7 @@ public class ClanHall
 			if (door.getCurrentHp() <= 0)
 			{
 				door.decayMe(); // Kill current if not killed already
-				door = DoorData.parseList(_doorDefault.get(i));
+				door = DoorData.createDoor(_doorDefault.get(i));
 				
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
 				getDoors().set(i, door);
@@ -883,7 +883,7 @@ public class ClanHall
 				set.set("mDef", rs.getInt("mDef"));
 				_doorDefault.add(set);
 				
-				final DoorInstance door = DoorData.parseList(_doorDefault.get(_doorDefault.size() - 1));
+				final DoorInstance door = DoorData.createDoor(set);
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
 				_doors.add(door);
 				DoorData.getInstance().putDoor(door);
