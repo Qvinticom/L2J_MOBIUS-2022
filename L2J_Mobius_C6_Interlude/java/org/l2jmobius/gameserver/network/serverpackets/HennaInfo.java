@@ -16,29 +16,28 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.HennaInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.items.Henna;
 
 public class HennaInfo extends GameServerPacket
 {
 	private final PlayerInstance _player;
-	private final HennaInstance[] _hennas = new HennaInstance[3];
-	private final int _count;
+	private final Henna[] _hennas = new Henna[3];
+	private int _count;
 	
 	public HennaInfo(PlayerInstance player)
 	{
 		_player = player;
+		_count = 0;
 		
-		int j = 0;
 		for (int i = 0; i < 3; i++)
 		{
-			final HennaInstance h = _player.getHennas(i + 1);
-			if (h != null)
+			Henna henna = _player.getHenna(i + 1);
+			if (henna != null)
 			{
-				_hennas[j++] = h;
+				_hennas[_count++] = henna;
 			}
 		}
-		_count = j;
 	}
 	
 	@Override
@@ -53,13 +52,26 @@ public class HennaInfo extends GameServerPacket
 		writeC(_player.getHennaStatDEX()); // equip DEX
 		writeC(_player.getHennaStatWIT()); // equip WIT
 		
-		writeD(3); // slots?
+		// Henna slots
+		int classId = _player.getClassId().level();
+		if (classId == 1)
+		{
+			writeD(2);
+		}
+		else if (classId > 1)
+		{
+			writeD(3);
+		}
+		else
+		{
+			writeD(0);
+		}
 		
 		writeD(_count); // size
 		for (int i = 0; i < _count; i++)
 		{
 			writeD(_hennas[i].getSymbolId());
-			writeD(0x01);
+			writeD(_hennas[i].canBeUsedBy(_player) ? _hennas[i].getSymbolId() : 0);
 		}
 	}
 }

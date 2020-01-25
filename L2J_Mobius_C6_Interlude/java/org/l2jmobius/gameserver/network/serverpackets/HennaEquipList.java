@@ -16,15 +16,17 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.HennaInstance;
+import java.util.List;
+
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.items.Henna;
 
 public class HennaEquipList extends GameServerPacket
 {
 	private final PlayerInstance _player;
-	private final HennaInstance[] _hennaEquipList;
+	private final List<Henna> _hennaEquipList;
 	
-	public HennaEquipList(PlayerInstance player, HennaInstance[] hennaEquipList)
+	public HennaEquipList(PlayerInstance player, List<Henna> hennaEquipList)
 	{
 		_player = player;
 		_hennaEquipList = hennaEquipList;
@@ -34,31 +36,20 @@ public class HennaEquipList extends GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xe2);
-		writeD(_player.getAdena()); // activeChar current amount of aden
-		writeD(3); // available equip slot
-		// writeD(10); // total amount of symbol available which depends on difference classes
-		writeD(_hennaEquipList.length);
+		writeD(_player.getAdena());
+		writeD(3);
+		writeD(_hennaEquipList.size());
 		
-		for (HennaInstance element : _hennaEquipList)
+		for (Henna temp : _hennaEquipList)
 		{
-			/*
-			 * Player must have at least one dye in inventory to be able to see the henna that can be applied with it.
-			 */
-			if (_player.getInventory().getItemByItemId(element.getItemIdDye()) != null)
+			// Player must have at least one dye in inventory to be able to see the henna that can be applied with it.
+			if ((_player.getInventory().getItemByItemId(temp.getDyeId())) != null)
 			{
-				writeD(element.getSymbolId()); // symbolid
-				writeD(element.getItemIdDye()); // itemid of dye
-				writeD(element.getAmountDyeRequire()); // amount of dye require
-				writeD(element.getPrice()); // amount of aden require
+				writeD(temp.getSymbolId()); // symbolid
+				writeD(temp.getDyeId()); // itemid of dye
+				writeD(Henna.getRequiredDyeAmount()); // amount of dyes required
+				writeD(temp.getPrice()); // amount of adenas required
 				writeD(1); // meet the requirement or not
-			}
-			else
-			{
-				writeD(0x00);
-				writeD(0x00);
-				writeD(0x00);
-				writeD(0x00);
-				writeD(0x00);
 			}
 		}
 	}

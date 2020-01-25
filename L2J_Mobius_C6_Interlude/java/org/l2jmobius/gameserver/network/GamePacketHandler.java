@@ -973,6 +973,21 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 						msg = new RequestHennaEquip();
 						break;
 					}
+					case 0xbd:
+					{
+						msg = new RequestHennaRemoveList();
+						break;
+					}
+					case 0xbe:
+					{
+						msg = new RequestHennaItemRemoveInfo();
+						break;
+					}
+					case 0xbf:
+					{
+						msg = new RequestHennaRemove();
+						break;
+					}
 					case 0xc0:
 					{
 						// Clan Privileges

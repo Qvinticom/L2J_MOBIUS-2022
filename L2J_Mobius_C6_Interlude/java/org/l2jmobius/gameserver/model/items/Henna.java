@@ -16,84 +16,98 @@
  */
 package org.l2jmobius.gameserver.model.items;
 
+import org.l2jmobius.commons.util.Util;
 import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
+/**
+ * A datatype used to retain Henna infos. Hennas are called "dye" ingame, and enhance {@link PlayerInstance} stats for a fee.<br>
+ * You can draw up to 3 hennas (depending about your current class rank), but accumulated boni for a stat can't be higher than +5. There is no limit in reduction.
+ */
 public class Henna
 {
-	public int symbolId;
-	public String symbolName;
-	public int dye;
-	public int price;
-	public int amount;
-	public int statINT;
-	public int statSTR;
-	public int statCON;
-	public int statMEM;
-	public int statDEX;
-	public int statWIT;
+	private final int _symbolId;
+	private final int _dyeId;
+	private final int _price;
+	private final int _INT;
+	private final int _STR;
+	private final int _CON;
+	private final int _MEN;
+	private final int _DEX;
+	private final int _WIT;
+	private final int[] _classes;
 	
 	public Henna(StatsSet set)
 	{
-		symbolId = set.getInt("symbol_id");
-		symbolName = ""; // set.getString("symbol_name");
-		dye = set.getInt("dye");
-		price = set.getInt("price");
-		amount = set.getInt("amount");
-		statINT = set.getInt("stat_INT");
-		statSTR = set.getInt("stat_STR");
-		statCON = set.getInt("stat_CON");
-		statMEM = set.getInt("stat_MEM");
-		statDEX = set.getInt("stat_DEX");
-		statWIT = set.getInt("stat_WIT");
+		_symbolId = set.getInt("symbolId");
+		_dyeId = set.getInt("dyeId");
+		_price = set.getInt("price");
+		_INT = set.getInt("INT");
+		_STR = set.getInt("STR");
+		_CON = set.getInt("CON");
+		_MEN = set.getInt("MEN");
+		_DEX = set.getInt("DEX");
+		_WIT = set.getInt("WIT");
+		_classes = set.getIntArray("classes", ";");
 	}
 	
 	public int getSymbolId()
 	{
-		return symbolId;
+		return _symbolId;
 	}
 	
 	public int getDyeId()
 	{
-		return dye;
+		return _dyeId;
 	}
 	
 	public int getPrice()
 	{
-		return price;
+		return _price;
 	}
 	
-	public int getAmountDyeRequire()
+	public static final int getRequiredDyeAmount()
 	{
-		return amount;
+		return 10;
 	}
 	
-	public int getStatINT()
+	public int getINT()
 	{
-		return statINT;
+		return _INT;
 	}
 	
-	public int getStatSTR()
+	public int getSTR()
 	{
-		return statSTR;
+		return _STR;
 	}
 	
-	public int getStatCON()
+	public int getCON()
 	{
-		return statCON;
+		return _CON;
 	}
 	
-	public int getStatMEM()
+	public int getMEN()
 	{
-		return statMEM;
+		return _MEN;
 	}
 	
-	public int getStatDEX()
+	public int getDEX()
 	{
-		return statDEX;
+		return _DEX;
 	}
 	
-	public int getStatWIT()
+	public int getWIT()
 	{
-		return statWIT;
+		return _WIT;
+	}
+	
+	/**
+	 * Seek if this {@link Henna} can be used by a {@link PlayerInstance}, based on his classId.
+	 * @param player : The Player to check.
+	 * @return true if this Henna owns the Player classId.
+	 */
+	public boolean canBeUsedBy(PlayerInstance player)
+	{
+		return Util.contains(_classes, player.getClassId().getId());
 	}
 }

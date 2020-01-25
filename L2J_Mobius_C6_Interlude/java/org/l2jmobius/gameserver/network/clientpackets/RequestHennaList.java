@@ -16,18 +16,12 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.datatables.sql.HennaTreeTable;
-import org.l2jmobius.gameserver.model.actor.instance.HennaInstance;
+import org.l2jmobius.gameserver.datatables.xml.HennaData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.HennaEquipList;
 
-/**
- * RequestHennaList - 0xba
- * @author Tempy
- */
 public class RequestHennaList extends GameClientPacket
 {
-	// This is just a trigger packet...
 	@SuppressWarnings("unused")
 	private int _unknown;
 	
@@ -41,14 +35,11 @@ public class RequestHennaList extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
 		}
 		
-		final HennaInstance[] henna = HennaTreeTable.getInstance().getAvailableHenna(player.getClassId());
-		final HennaEquipList he = new HennaEquipList(player, henna);
-		player.sendPacket(he);
+		player.sendPacket(new HennaEquipList(player, HennaData.getInstance().getAvailableHennasFor(player)));
 	}
 }

@@ -48,7 +48,6 @@ import org.l2jmobius.gameserver.datatables.OfflineTradeTable;
 import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.csv.ExtractableItemsData;
-import org.l2jmobius.gameserver.datatables.csv.HennaTable;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.csv.NpcWalkerRoutesTable;
 import org.l2jmobius.gameserver.datatables.csv.RecipeTable;
@@ -60,7 +59,6 @@ import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.CustomArmorSetsTable;
 import org.l2jmobius.gameserver.datatables.sql.HelperBuffTable;
-import org.l2jmobius.gameserver.datatables.sql.HennaTreeTable;
 import org.l2jmobius.gameserver.datatables.sql.LevelUpData;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.PetDataTable;
@@ -74,6 +72,7 @@ import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.datatables.xml.FenceData;
 import org.l2jmobius.gameserver.datatables.xml.FishData;
+import org.l2jmobius.gameserver.datatables.xml.HennaData;
 import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
@@ -274,15 +273,7 @@ public class GameServer
 		ClanTable.getInstance();
 		CharTemplateTable.getInstance();
 		LevelUpData.getInstance();
-		if (!HennaTable.getInstance().isInitialized())
-		{
-			throw new Exception("Could not initialize the Henna Table");
-		}
-		
-		if (!HennaTreeTable.getInstance().isInitialized())
-		{
-			throw new Exception("Could not initialize the Henna Tree Table");
-		}
+		HennaData.getInstance();
 		
 		if (!HelperBuffTable.getInstance().isInitialized())
 		{

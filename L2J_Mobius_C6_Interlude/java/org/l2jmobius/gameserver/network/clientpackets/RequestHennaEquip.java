@@ -16,18 +16,11 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.csv.HennaTable;
-import org.l2jmobius.gameserver.datatables.sql.HennaTreeTable;
-import org.l2jmobius.gameserver.model.actor.instance.HennaInstance;
+import org.l2jmobius.gameserver.datatables.xml.HennaData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Henna;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.ItemList;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.util.Util;
 
 public class RequestHennaEquip extends GameClientPacket
 {
@@ -43,74 +36,50 @@ public class RequestHennaEquip extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("HennaEquip"))
+		final Henna henna = HennaData.getInstance().getHenna(_symbolId);
+		if (henna == null)
 		{
 			return;
 		}
 		
-		final Henna template = HennaTable.getInstance().getTemplate(_symbolId);
-		
-		if (template == null)
-		{
-			return;
-		}
-		
-		final HennaInstance temp = new HennaInstance(template);
-		
-		// Prevents henna drawing exploit:
-		// 1) talk to SymbolMakerInstance
-		// 2) RequestHennaList
-		// 3) Don't close the window and go to a GrandMaster and change your subclass
-		// 4) Get SymbolMaker range again and press draw You could draw any kind of henna just having the required subclass...
-		boolean cheater = true;
-		for (HennaInstance h : HennaTreeTable.getInstance().getAvailableHenna(player.getClassId()))
-		{
-			if (h.getSymbolId() == temp.getSymbolId())
-			{
-				cheater = false;
-				break;
-			}
-		}
-		
-		int count = 0;
-		if ((player.getInventory() != null) && (player.getInventory().getItemByItemId(temp.getItemIdDye()) != null))
-		{
-			count = player.getInventory().getItemByItemId(temp.getItemIdDye()).getCount();
-		}
-		
-		if (!cheater && (count >= temp.getAmountDyeRequire()) && (player.getAdena() >= temp.getPrice()) && player.addHenna(temp))
-		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
-			sm.addItemName(temp.getItemIdDye());
-			player.sendPacket(sm);
-			player.sendPacket(SystemMessageId.SYMBOL_ADDED);
-			
-			player.getInventory().reduceAdena("Henna", temp.getPrice(), player, player.getLastFolkNPC());
-			final ItemInstance dyeToUpdate = player.getInventory().destroyItemByItemId("Henna", temp.getItemIdDye(), temp.getAmountDyeRequire(), player, player.getLastFolkNPC());
-			
-			// update inventory
-			final InventoryUpdate iu = new InventoryUpdate();
-			iu.addModifiedItem(player.getInventory().getAdenaInstance());
-			iu.addModifiedItem(dyeToUpdate);
-			player.sendPacket(iu);
-			
-			final ItemList il = new ItemList(getClient().getPlayer(), true);
-			sendPacket(il);
-		}
-		else
+		if (!henna.canBeUsedBy(player))
 		{
 			player.sendPacket(SystemMessageId.CANT_DRAW_SYMBOL);
-			
-			if (!player.isGM() && cheater)
-			{
-				Util.handleIllegalPlayerAction(player, "Exploit attempt: Character " + player.getName() + " of account " + player.getAccountName() + " tryed to add a forbidden henna.", Config.DEFAULT_PUNISH);
-			}
+			return;
 		}
+		
+		if (player.getHennaEmptySlots() == 0)
+		{
+			player.sendPacket(SystemMessageId.SYMBOLS_FULL);
+			return;
+		}
+		
+		final ItemInstance ownedDyes = player.getInventory().getItemByItemId(henna.getDyeId());
+		final int count = (ownedDyes == null) ? 0 : ownedDyes.getCount();
+		
+		if (count < Henna.getRequiredDyeAmount())
+		{
+			player.sendPacket(SystemMessageId.CANT_DRAW_SYMBOL);
+			return;
+		}
+		
+		// reduceAdena sends a message.
+		if (!player.reduceAdena("Henna", henna.getPrice(), player.getLastFolkNPC(), true))
+		{
+			return;
+		}
+		
+		// destroyItemByItemId sends a message.
+		if (!player.destroyItemByItemId("Henna", henna.getDyeId(), Henna.getRequiredDyeAmount(), player, true))
+		{
+			return;
+		}
+		
+		player.addHenna(henna);
 	}
 }

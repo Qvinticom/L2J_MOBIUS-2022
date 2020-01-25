@@ -17,8 +17,9 @@
 package org.l2jmobius.gameserver.datatables.xml;
 
 import java.io.File;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
@@ -26,18 +27,18 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.Fish;
 import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.items.Henna;
 
 /**
- * This class loads and stores {@link Fish} infos.
+ * This class loads and stores {@link Henna}s infos. Hennas are called "dye" ingame.
  */
-public class FishData implements IXmlReader
+public class HennaData implements IXmlReader
 {
-	private final List<Fish> _fish = new ArrayList<>();
+	private final Map<Integer, Henna> _hennas = new HashMap<>();
 	
-	protected FishData()
+	protected HennaData()
 	{
 		load();
 	}
@@ -45,8 +46,9 @@ public class FishData implements IXmlReader
 	@Override
 	public void load()
 	{
-		parseDatapackFile("data/Fish.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _fish.size() + " fish.");
+		_hennas.clear();
+		parseDatapackFile("data/Hennas.xml");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _hennas.size() + " hennas.");
 	}
 	
 	@Override
@@ -57,9 +59,10 @@ public class FishData implements IXmlReader
 		
 		// First element is never read.
 		final Node n = doc.getFirstChild();
+		
 		for (Node node = n.getFirstChild(); node != null; node = node.getNextSibling())
 		{
-			if (!"fish".equalsIgnoreCase(node.getNodeName()))
+			if (!"henna".equalsIgnoreCase(node.getNodeName()))
 			{
 				continue;
 			}
@@ -72,31 +75,33 @@ public class FishData implements IXmlReader
 				set.set(attr.getNodeName(), attr.getNodeValue());
 			}
 			
-			// Feed the list with new data.
-			_fish.add(new Fish(set));
+			// Feed the map with new data.
+			_hennas.put(set.getInt("symbolId"), new Henna(set));
 		}
 	}
 	
-	/**
-	 * Get a random {@link FishData} based on level, type and group.
-	 * @param lvl : the fish level to check.
-	 * @param type : the fish type to check.
-	 * @param group : the fish group to check.
-	 * @return a Fish with good criteria.
-	 */
-	public Fish getFish(int lvl, int type, int group)
+	public Henna getHenna(int id)
 	{
-		final List<Fish> fish = _fish.stream().filter(f -> (f.getLevel() == lvl) && (f.getType() == type) && (f.getGroup() == group)).collect(Collectors.toList());
-		return fish.get(Rnd.get(fish.size()));
+		return _hennas.get(id);
 	}
 	
-	public static FishData getInstance()
+	/**
+	 * Retrieve all {@link Henna}s available for a {@link PlayerInstance} class.
+	 * @param player : The Player used as class parameter.
+	 * @return a List of all available Hennas for this Player.
+	 */
+	public List<Henna> getAvailableHennasFor(PlayerInstance player)
+	{
+		return _hennas.values().stream().filter(h -> h.canBeUsedBy(player)).collect(Collectors.toList());
+	}
+	
+	public static HennaData getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final FishData INSTANCE = new FishData();
+		protected static final HennaData INSTANCE = new HennaData();
 	}
 }

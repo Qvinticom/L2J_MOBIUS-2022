@@ -2329,6 +2329,12 @@ public enum SystemMessageId
 	SYMBOL_ADDED(877),
 	
 	/**
+	 * ID: 878<br>
+	 * Message: The symbol has been deleted.
+	 */
+	SYMBOL_DELETED(878),
+	
+	/**
 	 * ID: 879<br>
 	 * Message: The manor system is currently under maintenance.
 	 */
@@ -2435,6 +2441,18 @@ public enum SystemMessageId
 	 * Message: The symbol cannot be drawn.
 	 */
 	CANT_DRAW_SYMBOL(899),
+	
+	/**
+	 * ID: 900<br>
+	 * Message: No slot exists to draw the symbol
+	 */
+	SYMBOLS_FULL(900),
+	
+	/**
+	 * ID: 901<br>
+	 * Message: The symbol information cannot be found.
+	 */
+	SYMBOL_NOT_FOUND(901),
 	
 	/**
 	 * ID: 910<br>

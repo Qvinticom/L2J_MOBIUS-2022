@@ -16,8 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.datatables.csv.HennaTable;
-import org.l2jmobius.gameserver.model.actor.instance.HennaInstance;
+import org.l2jmobius.gameserver.datatables.xml.HennaData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Henna;
 import org.l2jmobius.gameserver.network.serverpackets.HennaItemInfo;
@@ -36,22 +35,17 @@ public class RequestHennaItemInfo extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
 		}
 		
-		final Henna template = HennaTable.getInstance().getTemplate(_symbolId);
-		
+		final Henna template = HennaData.getInstance().getHenna(_symbolId);
 		if (template == null)
 		{
 			return;
 		}
 		
-		final HennaInstance temp = new HennaInstance(template);
-		
-		final HennaItemInfo hii = new HennaItemInfo(temp, player);
-		player.sendPacket(hii);
+		player.sendPacket(new HennaItemInfo(template, player));
 	}
 }

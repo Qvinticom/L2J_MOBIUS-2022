@@ -21,6 +21,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewCharacterInfo;
+import org.l2jmobius.gameserver.network.serverpackets.GMViewHennaInfo;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewItemList;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewPledgeInfo;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewQuestList;
@@ -58,6 +59,7 @@ public class RequestGMCommand extends GameClientPacket
 			case 1: // player status
 			{
 				sendPacket(new GMViewCharacterInfo(player));
+				sendPacket(new GMViewHennaInfo(player));
 				break;
 			}
 			case 2: // player clan
@@ -81,6 +83,7 @@ public class RequestGMCommand extends GameClientPacket
 			case 5: // player inventory
 			{
 				sendPacket(new GMViewItemList(player));
+				sendPacket(new GMViewHennaInfo(player));
 				break;
 			}
 			case 6: // player warehouse

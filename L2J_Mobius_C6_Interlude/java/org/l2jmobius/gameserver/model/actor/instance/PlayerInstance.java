@@ -35,7 +35,6 @@ import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
-import java.util.logging.Level;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -57,7 +56,6 @@ import org.l2jmobius.gameserver.datatables.HeroSkillTable;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.datatables.NobleSkillTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.csv.HennaTable;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.csv.RecipeTable;
 import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
@@ -67,6 +65,7 @@ import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.datatables.xml.FishData;
+import org.l2jmobius.gameserver.datatables.xml.HennaData;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.IItemHandler;
@@ -413,13 +412,15 @@ public class PlayerInstance extends Playable
 	private final List<PlayerInstance> _snoopListener = new ArrayList<>();
 	private final List<PlayerInstance> _snoopedPlayer = new ArrayList<>();
 	private ClassId _skillLearningClassId;
-	private final HennaInstance[] _henna = new HennaInstance[3];
+	
+	private final Henna[] _henna = new Henna[3];
 	private int _hennaSTR;
 	private int _hennaINT;
 	private int _hennaDEX;
 	private int _hennaMEN;
 	private int _hennaWIT;
 	private int _hennaCON;
+	
 	private Summon _summon = null;
 	private TamedBeastInstance _tamedBeast = null;
 	private Radar _radar;
@@ -9963,61 +9964,6 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Retrieve from the database all Henna of this PlayerInstance, add them to _henna and calculate stats of the PlayerInstance.<BR>
-	 * <BR>
-	 */
-	private void restoreHenna()
-	{
-		try (Connection con = DatabaseFactory.getConnection())
-		{
-			final PreparedStatement statement = con.prepareStatement(RESTORE_CHAR_HENNAS);
-			statement.setInt(1, getObjectId());
-			statement.setInt(2, getClassIndex());
-			final ResultSet rset = statement.executeQuery();
-			
-			for (int i = 0; i < 3; i++)
-			{
-				_henna[i] = null;
-			}
-			
-			while (rset.next())
-			{
-				final int slot = rset.getInt("slot");
-				
-				if ((slot < 1) || (slot > 3))
-				{
-					continue;
-				}
-				
-				final int symbol_id = rset.getInt("symbol_id");
-				
-				HennaInstance sym = null;
-				
-				if (symbol_id != 0)
-				{
-					final Henna tpl = HennaTable.getInstance().getTemplate(symbol_id);
-					
-					if (tpl != null)
-					{
-						sym = new HennaInstance(tpl);
-						_henna[slot - 1] = sym;
-					}
-				}
-			}
-			
-			rset.close();
-			statement.close();
-		}
-		catch (Exception e)
-		{
-			LOGGER.warning("could not restore henna: " + e);
-		}
-		
-		// Calculate Henna modifiers of this PlayerInstance
-		recalcHennaStats();
-	}
-	
-	/**
 	 * Retrieve from the database all Recommendation data of this PlayerInstance, add to _recomChars and calculate stats of the PlayerInstance.<BR>
 	 * <BR>
 	 */
@@ -10043,13 +9989,68 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the number of Henna empty slot of the PlayerInstance.<BR>
-	 * <BR>
-	 * @return the henna empty slots
+	 * Retrieve from the database all Henna of this Player, add them to _henna and calculate stats of the Player.
+	 */
+	private void restoreHenna()
+	{
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			PreparedStatement statement = con.prepareStatement(RESTORE_CHAR_HENNAS);
+			statement.setInt(1, getObjectId());
+			statement.setInt(2, getClassIndex());
+			ResultSet rset = statement.executeQuery();
+			
+			for (int i = 0; i < 3; i++)
+			{
+				_henna[i] = null;
+			}
+			
+			while (rset.next())
+			{
+				int slot = rset.getInt("slot");
+				
+				if ((slot < 1) || (slot > 3))
+				{
+					continue;
+				}
+				
+				int symbolId = rset.getInt("symbol_id");
+				if (symbolId != 0)
+				{
+					Henna tpl = HennaData.getInstance().getHenna(symbolId);
+					if (tpl != null)
+					{
+						_henna[slot - 1] = tpl;
+					}
+				}
+			}
+			
+			rset.close();
+			statement.close();
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning("Could not restore henna: " + e);
+		}
+		
+		// Calculate Henna modifiers of this Player
+		recalcHennaStats();
+	}
+	
+	/**
+	 * @return the number of Henna empty slot of the Player.
 	 */
 	public int getHennaEmptySlots()
 	{
-		int totalSlots = 1 + getClassId().level();
+		int totalSlots = 0;
+		if (getClassId().level() == 1)
+		{
+			totalSlots = 2;
+		}
+		else
+		{
+			totalSlots = 3;
+		}
 		
 		for (int i = 0; i < 3; i++)
 		{
@@ -10068,10 +10069,9 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Remove a Henna of the PlayerInstance, save update in the character_hennas table of the database and send Server->Client HennaInfo/UserInfo packet to this PlayerInstance.<BR>
-	 * <BR>
-	 * @param slot the slot
-	 * @return true, if successful
+	 * Remove a Henna of the Player, save update in the character_hennas table of the database and send HennaInfo/UserInfo packet to this Player.
+	 * @param slot The slot number to make checks on.
+	 * @return true if successful.
 	 */
 	public boolean removeHenna(int slot)
 	{
@@ -10082,106 +10082,89 @@ public class PlayerInstance extends Playable
 		
 		slot--;
 		
-		final HennaInstance henna = _henna[slot];
-		if (henna == null)
+		if (_henna[slot] == null)
 		{
 			return false;
 		}
 		
+		Henna henna = _henna[slot];
 		_henna[slot] = null;
 		
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement(DELETE_CHAR_HENNA))
+		try (Connection con = DatabaseFactory.getConnection())
 		{
-			ps.setInt(1, getObjectId());
-			ps.setInt(2, slot + 1);
-			ps.setInt(3, _classIndex);
-			ps.execute();
+			PreparedStatement statement = con.prepareStatement(DELETE_CHAR_HENNA);
+			
+			statement.setInt(1, getObjectId());
+			statement.setInt(2, slot + 1);
+			statement.setInt(3, getClassIndex());
+			
+			statement.execute();
+			statement.close();
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.SEVERE, "Failed removing character henna.", e);
+			LOGGER.warning("Could not remove char henna: " + e);
 		}
 		
-		// Calculate Henna modifiers of this PlayerInstance
+		// Calculate Henna modifiers of this Player
 		recalcHennaStats();
 		
-		// Send Server->Client HennaInfo packet to this PlayerInstance
+		// Send HennaInfo packet to this Player
 		sendPacket(new HennaInfo(this));
 		
-		// Send Server->Client UserInfo packet to this PlayerInstance
+		// Send UserInfo packet to this Player
 		sendPacket(new UserInfo(this));
 		
+		reduceAdena("Henna", henna.getPrice() / 5, this, false);
+		
 		// Add the recovered dyes to the player's inventory and notify them.
-		_inventory.addItem("Henna", henna.getItemIdDye(), henna.getAmountDyeRequire() / 2, this, null);
-		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
-		sm.addItemName(henna.getItemIdDye());
-		sm.addNumber(henna.getAmountDyeRequire() / 2);
-		sendPacket(sm);
-		
+		addItem("Henna", henna.getDyeId(), Henna.getRequiredDyeAmount() / 2, this, true);
+		sendPacket(SystemMessageId.SYMBOL_DELETED);
 		return true;
 	}
 	
 	/**
-	 * Add a Henna to the PlayerInstance, save update in the character_hennas table of the database and send Server->Client HennaInfo/UserInfo packet to this PlayerInstance.<BR>
-	 * <BR>
-	 * @param henna the henna
-	 * @return true, if successful
+	 * Add a Henna to the Player, save update in the character_hennas table of the database and send Server->Client HennaInfo/UserInfo packet to this Player.
+	 * @param henna The Henna template to add.
 	 */
-	public boolean addHenna(HennaInstance henna)
+	public void addHenna(Henna henna)
 	{
-		if (getHennaEmptySlots() == 0)
-		{
-			sendMessage("You may not have more than three equipped symbols at a time.");
-			return false;
-		}
-		
-		// int slot = 0;
 		for (int i = 0; i < 3; i++)
 		{
 			if (_henna[i] == null)
 			{
 				_henna[i] = henna;
 				
-				// Calculate Henna modifiers of this PlayerInstance
+				// Calculate Henna modifiers of this Player
 				recalcHennaStats();
 				
 				try (Connection con = DatabaseFactory.getConnection())
 				{
-					final PreparedStatement statement = con.prepareStatement(ADD_CHAR_HENNA);
+					PreparedStatement statement = con.prepareStatement(ADD_CHAR_HENNA);
+					
 					statement.setInt(1, getObjectId());
 					statement.setInt(2, henna.getSymbolId());
 					statement.setInt(3, i + 1);
 					statement.setInt(4, getClassIndex());
+					
 					statement.execute();
 					statement.close();
 				}
 				catch (Exception e)
 				{
-					LOGGER.warning("could not save char henna: " + e);
+					LOGGER.warning("Could not save char henna: " + e);
 				}
 				
-				// Send Server->Client HennaInfo packet to this PlayerInstance
-				final HennaInfo hi = new HennaInfo(this);
-				sendPacket(hi);
-				
-				// Send Server->Client UserInfo packet to this PlayerInstance
-				final UserInfo ui = new UserInfo(this);
-				sendPacket(ui);
-				
-				getInventory().refreshWeight();
-				
-				return true;
+				sendPacket(new HennaInfo(this));
+				sendPacket(new UserInfo(this));
+				sendPacket(SystemMessageId.SYMBOL_ADDED);
+				return;
 			}
 		}
-		
-		return false;
 	}
 	
 	/**
-	 * Calculate Henna modifiers of this PlayerInstance.<BR>
-	 * <BR>
+	 * Calculate Henna modifiers of this Player.
 	 */
 	private void recalcHennaStats()
 	{
@@ -10198,12 +10181,13 @@ public class PlayerInstance extends Playable
 			{
 				continue;
 			}
-			_hennaINT += _henna[i].getStatINT();
-			_hennaSTR += _henna[i].getStatSTR();
-			_hennaMEN += _henna[i].getStatMEM();
-			_hennaCON += _henna[i].getStatCON();
-			_hennaWIT += _henna[i].getStatWIT();
-			_hennaDEX += _henna[i].getStatDEX();
+			
+			_hennaINT += _henna[i].getINT();
+			_hennaSTR += _henna[i].getSTR();
+			_hennaMEN += _henna[i].getMEN();
+			_hennaCON += _henna[i].getCON();
+			_hennaWIT += _henna[i].getWIT();
+			_hennaDEX += _henna[i].getDEX();
 		}
 		
 		if (_hennaINT > 5)
@@ -10238,12 +10222,10 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the Henna of this PlayerInstance corresponding to the selected slot.<BR>
-	 * <BR>
-	 * @param slot the slot
-	 * @return the hennas
+	 * @param slot A slot to check.
+	 * @return the Henna of this Player corresponding to the selected slot.
 	 */
-	public HennaInstance getHennas(int slot)
+	public Henna getHenna(int slot)
 	{
 		if ((slot < 1) || (slot > 3))
 		{
@@ -10253,61 +10235,31 @@ public class PlayerInstance extends Playable
 		return _henna[slot - 1];
 	}
 	
-	/**
-	 * Return the INT Henna modifier of this PlayerInstance.<BR>
-	 * <BR>
-	 * @return the henna stat int
-	 */
 	public int getHennaStatINT()
 	{
 		return _hennaINT;
 	}
 	
-	/**
-	 * Return the STR Henna modifier of this PlayerInstance.<BR>
-	 * <BR>
-	 * @return the henna stat str
-	 */
 	public int getHennaStatSTR()
 	{
 		return _hennaSTR;
 	}
 	
-	/**
-	 * Return the CON Henna modifier of this PlayerInstance.<BR>
-	 * <BR>
-	 * @return the henna stat con
-	 */
 	public int getHennaStatCON()
 	{
 		return _hennaCON;
 	}
 	
-	/**
-	 * Return the MEN Henna modifier of this PlayerInstance.<BR>
-	 * <BR>
-	 * @return the henna stat men
-	 */
 	public int getHennaStatMEN()
 	{
 		return _hennaMEN;
 	}
 	
-	/**
-	 * Return the WIT Henna modifier of this PlayerInstance.<BR>
-	 * <BR>
-	 * @return the henna stat wit
-	 */
 	public int getHennaStatWIT()
 	{
 		return _hennaWIT;
 	}
 	
-	/**
-	 * Return the DEX Henna modifier of this PlayerInstance.<BR>
-	 * <BR>
-	 * @return the henna stat dex
-	 */
 	public int getHennaStatDEX()
 	{
 		return _hennaDEX;
