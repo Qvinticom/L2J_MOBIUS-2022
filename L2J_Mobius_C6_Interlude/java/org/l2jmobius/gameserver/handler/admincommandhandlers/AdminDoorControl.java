@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
-import org.l2jmobius.gameserver.datatables.csv.DoorTable;
+import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -55,7 +55,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
-		final DoorTable doorTable = DoorTable.getInstance();
+		final DoorData doorTable = DoorData.getInstance();
 		
 		WorldObject target2 = null;
 		

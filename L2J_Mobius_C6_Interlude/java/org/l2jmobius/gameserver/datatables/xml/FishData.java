@@ -52,7 +52,7 @@ public class FishData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		// StatsSet used to feed informations. Cleaned on every entry.
+		// StatsSet used to feed informations.
 		final StatsSet set = new StatsSet();
 		
 		// First element is never read.

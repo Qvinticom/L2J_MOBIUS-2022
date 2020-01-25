@@ -32,9 +32,9 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.datatables.csv.DoorTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -1538,7 +1538,7 @@ public class FourSepulchersManager extends GrandBossManager
 	{
 		for (int doorId : _hallGateKeepers.values())
 		{
-			final DoorInstance door = DoorTable.getInstance().getDoor(doorId);
+			final DoorInstance door = DoorData.getInstance().getDoor(doorId);
 			try
 			{
 				if (door != null)

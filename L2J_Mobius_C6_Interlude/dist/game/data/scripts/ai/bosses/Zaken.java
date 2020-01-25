@@ -24,7 +24,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.csv.DoorTable;
+import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
@@ -137,13 +137,13 @@ public class Zaken extends Quest
 				if (getTimeHour() == 0)
 				{
 					LOGGER.info("Zaken door id 21240006 opened, game time 00.00.");
-					DoorTable.getInstance().getDoor(21240006).openMe();
+					DoorData.getInstance().getDoor(21240006).openMe();
 					ThreadPool.schedule(() ->
 					{
 						try
 						{
 							LOGGER.info("Zaken door id 21240006 closed.");
-							DoorTable.getInstance().getDoor(21240006).closeMe();
+							DoorData.getInstance().getDoor(21240006).closeMe();
 						}
 						catch (Throwable e)
 						{

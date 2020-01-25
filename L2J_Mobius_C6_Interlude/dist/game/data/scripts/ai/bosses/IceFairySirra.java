@@ -22,9 +22,9 @@ import java.util.concurrent.Future;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.cache.HtmCache;
-import org.l2jmobius.gameserver.datatables.csv.DoorTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
@@ -230,7 +230,7 @@ public class IceFairySirra extends Quest
 		{
 			try
 			{
-				final DoorInstance door = DoorTable.getInstance().getDoor(i);
+				final DoorInstance door = DoorData.getInstance().getDoor(i);
 				if (door != null)
 				{
 					door.openMe();
@@ -253,7 +253,7 @@ public class IceFairySirra extends Quest
 		{
 			try
 			{
-				final DoorInstance door = DoorTable.getInstance().getDoor(i);
+				final DoorInstance door = DoorData.getInstance().getDoor(i);
 				if (door != null)
 				{
 					door.closeMe();

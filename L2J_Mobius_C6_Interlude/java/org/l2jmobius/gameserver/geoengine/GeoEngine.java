@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.csv.DoorTable;
+import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.datatables.xml.FenceData;
 import org.l2jmobius.gameserver.geoengine.geodata.ABlock;
 import org.l2jmobius.gameserver.geoengine.geodata.BlockComplex;
@@ -368,7 +368,7 @@ public class GeoEngine
 		final int ty = target.getY();
 		final int tz = target.getZ();
 		
-		if (DoorTable.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz))
+		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz))
 		{
 			return false;
 		}
@@ -436,7 +436,7 @@ public class GeoEngine
 		final int ty = position.getY();
 		final int tz = position.getZ();
 		
-		if (DoorTable.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz))
+		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz))
 		{
 			return false;
 		}
@@ -721,7 +721,7 @@ public class GeoEngine
 	public Location canMoveToTargetLoc(int ox, int oy, int oz, int tx, int ty, int tz, int instanceId)
 	{
 		// Mobius: Double check for doors before normal checkMove to avoid exploiting key movement.
-		if (DoorTable.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz))
+		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz))
 		{
 			return new Location(ox, oy, oz);
 		}
@@ -785,7 +785,7 @@ public class GeoEngine
 	 */
 	protected final GeoLocation checkMove(int gox, int goy, int goz, int gtx, int gty, int gtz, int instanceId)
 	{
-		if (DoorTable.getInstance().checkIfDoorsBetween(gox, goy, goz, gtx, gty, gtz))
+		if (DoorData.getInstance().checkIfDoorsBetween(gox, goy, goz, gtx, gty, gtz))
 		{
 			return new GeoLocation(gox, goy, goz);
 		}

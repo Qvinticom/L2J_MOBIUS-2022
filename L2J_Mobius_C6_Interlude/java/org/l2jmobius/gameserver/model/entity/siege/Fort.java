@@ -26,8 +26,9 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.datatables.csv.DoorTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
+import org.l2jmobius.gameserver.datatables.xml.DoorData;
+import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -47,7 +48,7 @@ public class Fort
 	
 	private int _fortId = 0;
 	private final List<DoorInstance> _doors = new ArrayList<>();
-	private final List<String> _doorDefault = new ArrayList<>();
+	private final List<StatsSet> _doorDefault = new ArrayList<>();
 	private String _name = "";
 	private int _ownerId = 0;
 	private Clan _fortOwner = null;
@@ -286,7 +287,7 @@ public class Fort
 			if (door.getCurrentHp() >= 0)
 			{
 				door.decayMe(); // Kill current if not killed already
-				door = DoorTable.parseList(_doorDefault.get(i));
+				door = DoorData.parseList(_doorDefault.get(i));
 				
 				if (isDoorWeak)
 				{
@@ -394,15 +395,30 @@ public class Fort
 			
 			while (rs.next())
 			{
-				// Create list of the door default for use when respawning dead doors
-				_doorDefault.add(rs.getString("name") + ";" + rs.getInt("id") + ";" + rs.getInt("x") + ";" + rs.getInt("y") + ";" + rs.getInt("z") + ";" + rs.getInt("range_xmin") + ";" + rs.getInt("range_ymin") + ";" + rs.getInt("range_zmin") + ";" + rs.getInt("range_xmax") + ";" + rs.getInt("range_ymax") + ";" + rs.getInt("range_zmax") + ";" + rs.getInt("hp") + ";" + rs.getInt("pDef") + ";" + rs.getInt("mDef"));
+				// Create set of the door default for use when respawning dead doors
+				final StatsSet set = new StatsSet();
+				set.set("name", rs.getString("name"));
+				set.set("id", rs.getInt("id"));
+				set.set("x", rs.getInt("x"));
+				set.set("y", rs.getInt("y"));
+				set.set("z", rs.getInt("z"));
+				set.set("xMin", rs.getInt("range_xmin"));
+				set.set("yMin", rs.getInt("range_ymin"));
+				set.set("zMin", rs.getInt("range_zmin"));
+				set.set("xMax", rs.getInt("range_xmax"));
+				set.set("yMax", rs.getInt("range_ymax"));
+				set.set("zMax", rs.getInt("range_zmax"));
+				set.set("hp", rs.getInt("hp"));
+				set.set("pDef", rs.getInt("pDef"));
+				set.set("mDef", rs.getInt("mDef"));
+				_doorDefault.add(set);
 				
-				final DoorInstance door = DoorTable.parseList(_doorDefault.get(_doorDefault.size() - 1));
+				final DoorInstance door = DoorData.parseList(_doorDefault.get(_doorDefault.size() - 1));
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
 				
 				_doors.add(door);
 				
-				DoorTable.getInstance().putDoor(door);
+				DoorData.getInstance().putDoor(door);
 			}
 			
 			rs.close();

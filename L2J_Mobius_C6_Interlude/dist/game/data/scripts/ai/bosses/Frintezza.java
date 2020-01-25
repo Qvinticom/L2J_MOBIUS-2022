@@ -23,7 +23,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.csv.DoorTable;
+import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.Party;
@@ -332,7 +332,7 @@ public class Frintezza extends Quest
 		// tempfix for messed door cords
 		for (int i = 0; i < 8; i++)
 		{
-			DoorTable.getInstance().getDoor(25150051 + i).setRange(0, 0, 0, 0, 0, 0);
+			DoorData.getInstance().getDoor(25150051 + i).setRange(0, 0, 0, 0, 0, 0);
 		}
 	}
 	
@@ -519,17 +519,17 @@ public class Frintezza extends Quest
 		{
 			for (int i = 25150051; i <= 25150058; i++)
 			{
-				DoorTable.getInstance().getDoor(i).closeMe();
+				DoorData.getInstance().getDoor(i).closeMe();
 			}
 			for (int i = 25150061; i <= 25150070; i++)
 			{
-				DoorTable.getInstance().getDoor(i).closeMe();
+				DoorData.getInstance().getDoor(i).closeMe();
 			}
 			
-			DoorTable.getInstance().getDoor(25150042).closeMe();
-			DoorTable.getInstance().getDoor(25150043).closeMe();
-			DoorTable.getInstance().getDoor(25150045).closeMe();
-			DoorTable.getInstance().getDoor(25150046).closeMe();
+			DoorData.getInstance().getDoor(25150042).closeMe();
+			DoorData.getInstance().getDoor(25150043).closeMe();
+			DoorData.getInstance().getDoor(25150045).closeMe();
+			DoorData.getInstance().getDoor(25150046).closeMe();
 		}
 		/*
 		 * else if (event.equals("loc_check")) { Integer status = GrandBossManager.getInstance().getBossStatus(FRINTEZZA); if (status == FIGHTING) { if (!_Zone.isInsideZone(npc)) npc.teleToLocation(getXFix(174232),getYFix(-88020),getZFix(-5116)); if (npc.getX() < getXFix(171932) || npc.getX() >
@@ -1753,7 +1753,7 @@ public class Frintezza extends Quest
 			{
 				for (int i = 25150051; i <= 25150058; i++)
 				{
-					DoorTable.getInstance().getDoor(i).openMe();
+					DoorData.getInstance().getDoor(i).openMe();
 				}
 			}
 			if (_killHallAlarmDevice == 4)
@@ -1761,8 +1761,8 @@ public class Frintezza extends Quest
 				startQuestTimer("room1_del", 100, npc, null);
 				startQuestTimer("room2_spawn", 100, npc, null);
 				
-				DoorTable.getInstance().getDoor(25150042).openMe();
-				DoorTable.getInstance().getDoor(25150043).openMe();
+				DoorData.getInstance().getDoor(25150042).openMe();
+				DoorData.getInstance().getDoor(25150043).openMe();
 			}
 			/*
 			 * _KillHallAlarmDevice++; if (_KillHallAlarmDevice == 4) { startQuestTimer("room1_del", 100, npc, null); startQuestTimer("room2_spawn", 100, npc, null); DoorTable.getInstance().getDoor(17130042).openMe(); DoorTable.getInstance().getDoor(17130043).openMe(); //
@@ -1774,10 +1774,10 @@ public class Frintezza extends Quest
 			_killDarkChoirPlayer++;
 			if (_killDarkChoirPlayer == 2)
 			{
-				DoorTable.getInstance().getDoor(25150042).closeMe();
-				DoorTable.getInstance().getDoor(25150043).closeMe();
-				DoorTable.getInstance().getDoor(25150045).closeMe();
-				DoorTable.getInstance().getDoor(25150046).closeMe();
+				DoorData.getInstance().getDoor(25150042).closeMe();
+				DoorData.getInstance().getDoor(25150043).closeMe();
+				DoorData.getInstance().getDoor(25150045).closeMe();
+				DoorData.getInstance().getDoor(25150046).closeMe();
 				int outside = 0;
 				synchronized (_playersInside)
 				{
@@ -1800,7 +1800,7 @@ public class Frintezza extends Quest
 				{
 					for (int i = 25150061; i <= 25150070; i++)
 					{
-						DoorTable.getInstance().getDoor(i).openMe();
+						DoorData.getInstance().getDoor(i).openMe();
 					}
 					
 					startQuestTimer("room2_spawn2", 1000, npc, null);
@@ -1814,8 +1814,8 @@ public class Frintezza extends Quest
 			{
 				startQuestTimer("room2_del", 100, npc, null);
 				
-				DoorTable.getInstance().getDoor(25150045).openMe();
-				DoorTable.getInstance().getDoor(25150046).openMe();
+				DoorData.getInstance().getDoor(25150045).openMe();
+				DoorData.getInstance().getDoor(25150046).openMe();
 				
 				startQuestTimer("waiting", 180000, npc, null);
 				cancelQuestTimer("room_final", null, null);

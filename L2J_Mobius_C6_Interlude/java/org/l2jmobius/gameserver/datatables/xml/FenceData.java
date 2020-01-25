@@ -93,7 +93,7 @@ public class FenceData
 			}
 		}
 		
-		LOGGER.info("Loaded " + _fences.size() + " Fences.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _fences.size() + " Fences.");
 	}
 	
 	public int getLoadedElementsCount()

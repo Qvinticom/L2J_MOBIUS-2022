@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.itemhandlers;
 
-import org.l2jmobius.gameserver.datatables.csv.DoorTable;
+import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Playable;
@@ -88,10 +88,10 @@ public class MOSKey implements IItemHandler
 		
 		if ((itemId == 8056) && ((door.getDoorId() == 23150003) || (door.getDoorId() == 23150004)))
 		{
-			DoorTable.getInstance().getDoor(23150003).openMe();
-			DoorTable.getInstance().getDoor(23150004).openMe();
-			DoorTable.getInstance().getDoor(23150003).onOpen();
-			DoorTable.getInstance().getDoor(23150004).onOpen();
+			DoorData.getInstance().getDoor(23150003).openMe();
+			DoorData.getInstance().getDoor(23150004).openMe();
+			DoorData.getInstance().getDoor(23150003).onOpen();
+			DoorData.getInstance().getDoor(23150004).onOpen();
 			player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
 			_lastOpen = System.currentTimeMillis();
 		}

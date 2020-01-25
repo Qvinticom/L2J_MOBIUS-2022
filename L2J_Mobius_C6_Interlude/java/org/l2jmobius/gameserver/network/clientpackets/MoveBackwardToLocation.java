@@ -20,7 +20,7 @@ import java.nio.BufferUnderflowException;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.datatables.csv.DoorTable;
+import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -112,7 +112,7 @@ public class MoveBackwardToLocation extends GameClientPacket
 		}
 		
 		// Mobius: Check for possible door logout and move over exploit. Also checked at ValidatePosition.
-		if (DoorTable.getInstance().checkIfDoorsBetween(player.getX(), player.getY(), player.getZ(), _targetX, _targetY, _targetZ))
+		if (DoorData.getInstance().checkIfDoorsBetween(player.getX(), player.getY(), player.getZ(), _targetX, _targetY, _targetZ))
 		{
 			player.stopMove(player.getLastServerPosition());
 			player.sendPacket(ActionFailed.STATIC_PACKET);

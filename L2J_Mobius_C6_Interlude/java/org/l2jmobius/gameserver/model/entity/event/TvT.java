@@ -28,9 +28,9 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.csv.DoorTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.datatables.xml.ItemTable;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.Location;
@@ -2766,16 +2766,16 @@ public class TvT implements EventTask
 	 */
 	private static void closeFortDoors()
 	{
-		DoorTable.getInstance().getDoor(23170004).closeMe();
-		DoorTable.getInstance().getDoor(23170005).closeMe();
-		DoorTable.getInstance().getDoor(23170002).closeMe();
-		DoorTable.getInstance().getDoor(23170003).closeMe();
-		DoorTable.getInstance().getDoor(23170006).closeMe();
-		DoorTable.getInstance().getDoor(23170007).closeMe();
-		DoorTable.getInstance().getDoor(23170008).closeMe();
-		DoorTable.getInstance().getDoor(23170009).closeMe();
-		DoorTable.getInstance().getDoor(23170010).closeMe();
-		DoorTable.getInstance().getDoor(23170011).closeMe();
+		DoorData.getInstance().getDoor(23170004).closeMe();
+		DoorData.getInstance().getDoor(23170005).closeMe();
+		DoorData.getInstance().getDoor(23170002).closeMe();
+		DoorData.getInstance().getDoor(23170003).closeMe();
+		DoorData.getInstance().getDoor(23170006).closeMe();
+		DoorData.getInstance().getDoor(23170007).closeMe();
+		DoorData.getInstance().getDoor(23170008).closeMe();
+		DoorData.getInstance().getDoor(23170009).closeMe();
+		DoorData.getInstance().getDoor(23170010).closeMe();
+		DoorData.getInstance().getDoor(23170011).closeMe();
 		
 		try
 		{
@@ -2792,16 +2792,16 @@ public class TvT implements EventTask
 	 */
 	private static void openFortDoors()
 	{
-		DoorTable.getInstance().getDoor(23170004).openMe();
-		DoorTable.getInstance().getDoor(23170005).openMe();
-		DoorTable.getInstance().getDoor(23170002).openMe();
-		DoorTable.getInstance().getDoor(23170003).openMe();
-		DoorTable.getInstance().getDoor(23170006).openMe();
-		DoorTable.getInstance().getDoor(23170007).openMe();
-		DoorTable.getInstance().getDoor(23170008).openMe();
-		DoorTable.getInstance().getDoor(23170009).openMe();
-		DoorTable.getInstance().getDoor(23170010).openMe();
-		DoorTable.getInstance().getDoor(23170011).openMe();
+		DoorData.getInstance().getDoor(23170004).openMe();
+		DoorData.getInstance().getDoor(23170005).openMe();
+		DoorData.getInstance().getDoor(23170002).openMe();
+		DoorData.getInstance().getDoor(23170003).openMe();
+		DoorData.getInstance().getDoor(23170006).openMe();
+		DoorData.getInstance().getDoor(23170007).openMe();
+		DoorData.getInstance().getDoor(23170008).openMe();
+		DoorData.getInstance().getDoor(23170009).openMe();
+		DoorData.getInstance().getDoor(23170010).openMe();
+		DoorData.getInstance().getDoor(23170011).openMe();
 	}
 	
 	/**
@@ -2809,8 +2809,8 @@ public class TvT implements EventTask
 	 */
 	private static void closeAdenColosseumDoors()
 	{
-		DoorTable.getInstance().getDoor(24190002).closeMe();
-		DoorTable.getInstance().getDoor(24190003).closeMe();
+		DoorData.getInstance().getDoor(24190002).closeMe();
+		DoorData.getInstance().getDoor(24190003).closeMe();
 		
 		try
 		{
@@ -2827,7 +2827,7 @@ public class TvT implements EventTask
 	 */
 	private static void openAdenColosseumDoors()
 	{
-		DoorTable.getInstance().getDoor(24190002).openMe();
-		DoorTable.getInstance().getDoor(24190003).openMe();
+		DoorData.getInstance().getDoor(24190002).openMe();
+		DoorData.getInstance().getDoor(24190003).openMe();
 	}
 }

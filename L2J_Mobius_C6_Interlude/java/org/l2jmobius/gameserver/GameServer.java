@@ -46,7 +46,6 @@ import org.l2jmobius.gameserver.datatables.NobleSkillTable;
 import org.l2jmobius.gameserver.datatables.OfflineTradeTable;
 import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.csv.DoorTable;
 import org.l2jmobius.gameserver.datatables.csv.ExtractableItemsData;
 import org.l2jmobius.gameserver.datatables.csv.HennaTable;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
@@ -70,6 +69,7 @@ import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.datatables.xml.AugmentationData;
+import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.datatables.xml.FenceData;
 import org.l2jmobius.gameserver.datatables.xml.FishData;
@@ -367,7 +367,7 @@ public class GameServer
 		BoatManager.getInstance();
 		
 		Util.printSection("Doors");
-		DoorTable.getInstance().load();
+		DoorData.getInstance().load();
 		FenceData.getInstance();
 		
 		Util.printSection("Four Sepulchers");
@@ -400,7 +400,7 @@ public class GameServer
 		
 		try
 		{
-			final DoorTable doorTable = DoorTable.getInstance();
+			final DoorData doorTable = DoorData.getInstance();
 			
 			// Opened by players like L2OFF
 			doorTable.getDoor(19160012).openMe();

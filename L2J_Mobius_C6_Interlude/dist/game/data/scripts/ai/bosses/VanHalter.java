@@ -34,9 +34,9 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.csv.DoorTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Location;
@@ -147,11 +147,11 @@ public class VanHalter extends Quest
 		_isHalterSpawned = false;
 		
 		// Setting door state.
-		_doorOfAltar.add(DoorTable.getInstance().getDoor(19160014));
-		_doorOfAltar.add(DoorTable.getInstance().getDoor(19160015));
+		_doorOfAltar.add(DoorData.getInstance().getDoor(19160014));
+		_doorOfAltar.add(DoorData.getInstance().getDoor(19160015));
 		openDoorOfAltar(true);
-		_doorOfSacrifice.add(DoorTable.getInstance().getDoor(19160016));
-		_doorOfSacrifice.add(DoorTable.getInstance().getDoor(19160017));
+		_doorOfSacrifice.add(DoorData.getInstance().getDoor(19160016));
+		_doorOfSacrifice.add(DoorData.getInstance().getDoor(19160017));
 		closeDoorOfSacrifice();
 		
 		// Load spawn data of monsters.

@@ -25,7 +25,7 @@ import java.util.concurrent.Future;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.datatables.csv.DoorTable;
+import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -358,7 +358,7 @@ public class SepulcherNpcInstance extends NpcInstance
 	public void openNextDoor(int npcId)
 	{
 		final int doorId = FourSepulchersManager.getInstance().getHallGateKeepers().get(npcId).intValue();
-		DoorTable.getInstance().getDoor(doorId).openMe();
+		DoorData.getInstance().getDoor(doorId).openMe();
 		if (_closeTask != null)
 		{
 			_closeTask.cancel(true);
@@ -373,7 +373,7 @@ public class SepulcherNpcInstance extends NpcInstance
 	
 	private class CloseNextDoor implements Runnable
 	{
-		final DoorTable _DoorTable = DoorTable.getInstance();
+		final DoorData _DoorTable = DoorData.getInstance();
 		
 		private final int _DoorId;
 		

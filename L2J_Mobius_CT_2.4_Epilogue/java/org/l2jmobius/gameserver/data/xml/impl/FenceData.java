@@ -62,7 +62,7 @@ public class FenceData implements IXmlReader
 		}
 		
 		parseDatapackFile("data/FenceData.xml");
-		LOGGER.info("Loaded " + _fences.size() + " fences.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _fences.size() + " fences.");
 	}
 	
 	@Override

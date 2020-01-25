@@ -18,7 +18,7 @@ package teleports.GrandBossTeleporters;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.datatables.csv.DoorTable;
+import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
@@ -192,15 +192,15 @@ public class GrandBossTeleporters extends Quest
 		}
 		else if (npcId == 31384) // Gatekeeper of Fire Dragon
 		{
-			DoorTable.getInstance().getDoor(24210004).openMe();
+			DoorData.getInstance().getDoor(24210004).openMe();
 		}
 		else if (npcId == 31686) // Gatekeeper of Fire Dragon
 		{
-			DoorTable.getInstance().getDoor(24210005).openMe();
+			DoorData.getInstance().getDoor(24210005).openMe();
 		}
 		else if (npcId == 31687) // Gatekeeper of Fire Dragon
 		{
-			DoorTable.getInstance().getDoor(24210006).openMe();
+			DoorData.getInstance().getDoor(24210006).openMe();
 		}
 		else if (npcId == 31540) // Watcher of Valakas Klein
 		{

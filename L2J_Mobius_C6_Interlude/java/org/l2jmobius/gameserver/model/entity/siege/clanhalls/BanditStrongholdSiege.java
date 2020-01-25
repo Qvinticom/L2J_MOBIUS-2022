@@ -25,9 +25,9 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.datatables.csv.DoorTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
+import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.model.World;
@@ -179,17 +179,17 @@ public class BanditStrongholdSiege extends ClanHallSiege
 	{
 		if (val == 1)
 		{
-			DoorTable.getInstance().getDoor(22170001).openMe();
-			DoorTable.getInstance().getDoor(22170002).openMe();
-			DoorTable.getInstance().getDoor(22170003).closeMe();
-			DoorTable.getInstance().getDoor(22170004).closeMe();
+			DoorData.getInstance().getDoor(22170001).openMe();
+			DoorData.getInstance().getDoor(22170002).openMe();
+			DoorData.getInstance().getDoor(22170003).closeMe();
+			DoorData.getInstance().getDoor(22170004).closeMe();
 		}
 		else if (val == 2)
 		{
-			DoorTable.getInstance().getDoor(22170001).closeMe();
-			DoorTable.getInstance().getDoor(22170002).closeMe();
-			DoorTable.getInstance().getDoor(22170003).closeMe();
-			DoorTable.getInstance().getDoor(22170004).closeMe();
+			DoorData.getInstance().getDoor(22170001).closeMe();
+			DoorData.getInstance().getDoor(22170002).closeMe();
+			DoorData.getInstance().getDoor(22170003).closeMe();
+			DoorData.getInstance().getDoor(22170004).closeMe();
 		}
 	}
 	

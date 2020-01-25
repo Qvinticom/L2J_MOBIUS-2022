@@ -20,7 +20,7 @@ import java.util.Collection;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.datatables.csv.DoorTable;
+import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Location;
@@ -270,12 +270,12 @@ public class Benom extends Quest
 			}
 			case "DoorOpen":
 			{
-				DoorTable.getInstance().getDoor(20160005).openMe();
+				DoorData.getInstance().getDoor(20160005).openMe();
 				break;
 			}
 			case "DoorClose":
 			{
-				DoorTable.getInstance().getDoor(20160005).closeMe();
+				DoorData.getInstance().getDoor(20160005).closeMe();
 				break;
 			}
 			case "Talk":
