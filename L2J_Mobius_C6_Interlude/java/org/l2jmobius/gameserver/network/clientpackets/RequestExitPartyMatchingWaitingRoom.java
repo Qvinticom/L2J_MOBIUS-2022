@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.PartyMatchWaitingList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.partymatching.PartyMatchWaitingList;
 
 /**
  * Format: (ch) this is just a trigger : no data

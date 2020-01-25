@@ -18,10 +18,10 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.model.PartyMatchRoom;
-import org.l2jmobius.gameserver.model.PartyMatchRoomList;
-import org.l2jmobius.gameserver.model.PartyMatchWaitingList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
+import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoomList;
+import org.l2jmobius.gameserver.model.partymatching.PartyMatchWaitingList;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;

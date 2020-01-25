@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.gameserver.instancemanager.TownManager;
-import org.l2jmobius.gameserver.model.PartyMatchRoom;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
 
 /**
  * @author Gnacik

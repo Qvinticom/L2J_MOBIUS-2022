@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.PartyMatchRoom;
+import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
 
 /**
  * @author Gnacik

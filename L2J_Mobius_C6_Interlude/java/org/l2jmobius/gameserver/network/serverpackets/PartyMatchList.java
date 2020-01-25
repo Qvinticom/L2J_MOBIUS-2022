@@ -19,9 +19,9 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.PartyMatchRoom;
-import org.l2jmobius.gameserver.model.PartyMatchRoomList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
+import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoomList;
 
 public class PartyMatchList extends GameServerPacket
 {
