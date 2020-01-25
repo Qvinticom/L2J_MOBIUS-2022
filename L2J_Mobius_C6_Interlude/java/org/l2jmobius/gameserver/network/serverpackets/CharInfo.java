@@ -376,9 +376,9 @@ public class CharInfo extends GameServerPacket
 			writeC((_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) || _player.getIsPVPHero()) ? 1 : 0); // Hero Aura
 			
 			writeC(_player.isFishing() ? 1 : 0); // 0x01: Fishing Mode (Cant be undone by setting back to 0)
-			writeD(_player.GetFishx());
-			writeD(_player.GetFishy());
-			writeD(_player.GetFishz());
+			writeD(_player.getFishX());
+			writeD(_player.getFishY());
+			writeD(_player.getFishZ());
 			
 			writeD(_player.getAppearance().getNameColor());
 			

@@ -149,7 +149,7 @@ public class SetPrivateStoreListSell extends GameClientPacket
 		}
 		
 		// Check maximum number of allowed slots for pvt shops
-		if (_count > player.GetPrivateSellStoreLimit())
+		if (_count > player.getPrivateSellStoreLimit())
 		{
 			player.sendPacket(new PrivateStoreManageListSell(player));
 			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_QUANTITY_THAT_CAN_BE_INPUTTED);

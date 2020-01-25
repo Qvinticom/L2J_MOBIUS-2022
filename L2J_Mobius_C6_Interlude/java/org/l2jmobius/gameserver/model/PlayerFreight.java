@@ -142,6 +142,6 @@ public class PlayerFreight extends ItemContainer
 	@Override
 	public boolean validateCapacity(int slots)
 	{
-		return (getSize() + slots) <= _owner.GetFreightLimit();
+		return (getSize() + slots) <= _owner.getFreightLimit();
 	}
 }

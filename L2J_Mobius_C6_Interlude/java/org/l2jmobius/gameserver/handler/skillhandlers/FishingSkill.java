@@ -48,7 +48,7 @@ public class FishingSkill implements ISkillHandler
 		
 		final PlayerInstance player = (PlayerInstance) creature;
 		
-		final Fishing fish = player.GetFishCombat();
+		final Fishing fish = player.getFishCombat();
 		if (fish == null)
 		{
 			if (skill.getSkillType() == SkillType.PUMPING)

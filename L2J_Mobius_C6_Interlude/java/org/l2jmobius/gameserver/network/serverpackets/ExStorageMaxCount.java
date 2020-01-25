@@ -38,12 +38,12 @@ public class ExStorageMaxCount extends GameServerPacket
 	{
 		_player = character;
 		_inventory = _player.getInventoryLimit();
-		_warehouse = _player.GetWareHouseLimit();
-		_privateSell = _player.GetPrivateSellStoreLimit();
-		_privateBuy = _player.GetPrivateBuyStoreLimit();
-		_freight = _player.GetFreightLimit();
-		_receipeD = _player.GetDwarfRecipeLimit();
-		_recipe = _player.GetCommonRecipeLimit();
+		_warehouse = _player.getWareHouseLimit();
+		_privateSell = _player.getPrivateSellStoreLimit();
+		_privateBuy = _player.getPrivateBuyStoreLimit();
+		_freight = _player.getFreightLimit();
+		_receipeD = _player.getDwarfRecipeLimit();
+		_recipe = _player.getCommonRecipeLimit();
 	}
 	
 	/*

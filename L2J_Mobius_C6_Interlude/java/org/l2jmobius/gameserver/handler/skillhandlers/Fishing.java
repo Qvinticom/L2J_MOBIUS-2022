@@ -64,13 +64,13 @@ public class Fishing implements ISkillHandler
 		
 		if (player.isFishing())
 		{
-			if (player.GetFishCombat() != null)
+			if (player.getFishCombat() != null)
 			{
-				player.GetFishCombat().doDie(false);
+				player.getFishCombat().doDie(false);
 			}
 			else
 			{
-				player.EndFishing(false);
+				player.endFishing(false);
 			}
 			// Cancels fishing
 			player.sendPacket(SystemMessageId.FISHING_ATTEMPT_CANCELLED);
@@ -94,7 +94,7 @@ public class Fishing implements ISkillHandler
 			return;
 		}
 		
-		player.SetLure(lure);
+		player.setLure(lure);
 		ItemInstance lure2 = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		
 		if ((lure2 == null) || (lure2.getCount() < 1)) // Not enough bait.

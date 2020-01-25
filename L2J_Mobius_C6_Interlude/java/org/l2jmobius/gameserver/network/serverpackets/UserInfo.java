@@ -326,9 +326,9 @@ public class UserInfo extends GameServerPacket
 		writeC((_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) || _player.getIsPVPHero()) ? 1 : 0); // 0x01: Hero Aura
 		
 		writeC(_player.isFishing() ? 1 : 0); // Fishing Mode
-		writeD(_player.GetFishx()); // fishing x
-		writeD(_player.GetFishy()); // fishing y
-		writeD(_player.GetFishz()); // fishing z
+		writeD(_player.getFishX()); // fishing x
+		writeD(_player.getFishY()); // fishing y
+		writeD(_player.getFishZ()); // fishing z
 		writeD(_player.getAppearance().getNameColor());
 		
 		writeC(_player.isRunning() ? 0x01 : 0x00); // changes the Speed display on Status Window

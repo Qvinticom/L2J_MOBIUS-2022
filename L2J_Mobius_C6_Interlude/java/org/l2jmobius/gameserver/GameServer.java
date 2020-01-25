@@ -48,7 +48,6 @@ import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.csv.DoorTable;
 import org.l2jmobius.gameserver.datatables.csv.ExtractableItemsData;
-import org.l2jmobius.gameserver.datatables.csv.FishTable;
 import org.l2jmobius.gameserver.datatables.csv.HennaTable;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.csv.NpcWalkerRoutesTable;
@@ -73,6 +72,7 @@ import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.datatables.xml.AugmentationData;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.datatables.xml.FenceData;
+import org.l2jmobius.gameserver.datatables.xml.FishData;
 import org.l2jmobius.gameserver.datatables.xml.ItemTable;
 import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -253,7 +253,7 @@ public class GameServer
 		SummonItemsData.getInstance();
 		if (Config.ALLOWFISHING)
 		{
-			FishTable.getInstance();
+			FishData.getInstance();
 		}
 		
 		Util.printSection("Npc");

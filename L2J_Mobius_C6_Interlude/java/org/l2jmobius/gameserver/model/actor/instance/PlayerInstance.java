@@ -56,7 +56,6 @@ import org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2jmobius.gameserver.datatables.HeroSkillTable;
 import org.l2jmobius.gameserver.datatables.NobleSkillTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.csv.FishTable;
 import org.l2jmobius.gameserver.datatables.csv.HennaTable;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.csv.RecipeTable;
@@ -66,6 +65,7 @@ import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
+import org.l2jmobius.gameserver.datatables.xml.FishData;
 import org.l2jmobius.gameserver.datatables.xml.ItemTable;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -90,7 +90,7 @@ import org.l2jmobius.gameserver.instancemanager.TownManager;
 import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.Effect;
-import org.l2jmobius.gameserver.model.FishData;
+import org.l2jmobius.gameserver.model.Fish;
 import org.l2jmobius.gameserver.model.Fishing;
 import org.l2jmobius.gameserver.model.Inventory;
 import org.l2jmobius.gameserver.model.ItemContainer;
@@ -471,6 +471,7 @@ public class PlayerInstance extends Playable
 	private int _fishX = 0;
 	private int _fishY = 0;
 	private int _fishZ = 0;
+	private ItemInstance _lure = null;
 	private ScheduledFuture<?> _taskRentPet;
 	private ScheduledFuture<?> _taskWater;
 	private final List<String> _validBypass = new ArrayList<>();
@@ -519,7 +520,7 @@ public class PlayerInstance extends Playable
 	private final List<Integer> _selectedFriendList = new ArrayList<>(); // Related to CB.
 	private final List<Integer> _selectedBlocksList = new ArrayList<>(); // Related to CB.
 	private int _mailPosition;
-	private FishData _fish;
+	private Fish _fish;
 	private final Map<Integer, Timestamp> _reuseTimestamps = new ConcurrentHashMap<>();
 	boolean _gmStatus = true; // true by default since this is used by GMs
 	public WorldObject _saymode = null;
@@ -11714,7 +11715,7 @@ public class PlayerInstance extends Playable
 		{
 			if (System.currentTimeMillis() >= _endTaskTime)
 			{
-				EndFishing(false);
+				endFishing(false);
 				return;
 			}
 			if (_fishType == -1)
@@ -11725,7 +11726,7 @@ public class PlayerInstance extends Playable
 			if (_fishGutsCheck > check)
 			{
 				stopLookingForFishTask();
-				StartFishCombat(_isNoob, _isUpperGrade);
+				startFishCombat(_isNoob, _isUpperGrade);
 			}
 		}
 	}
@@ -14914,28 +14915,16 @@ public class PlayerInstance extends Playable
 		return _selectedBlocksList;
 	}
 	
-	/**
-	 * @return the mailPosition.
-	 */
 	public int getMailPosition()
 	{
 		return _mailPosition;
 	}
 	
-	/**
-	 * @param mailPosition The mailPosition to set.
-	 */
 	public void setMailPosition(int mailPosition)
 	{
 		_mailPosition = mailPosition;
 	}
 	
-	/**
-	 * Start fishing.
-	 * @param x the fish x
-	 * @param y the fish y
-	 * @param z the fish z
-	 */
 	public void startFishing(int x, int y, int z)
 	{
 		stopMove(null);
@@ -14946,36 +14935,21 @@ public class PlayerInstance extends Playable
 		_fishZ = z;
 		broadcastUserInfo();
 		// Starts fishing
-		final int lvl = GetRandomFishLvl();
-		final int group = GetRandomGroup();
-		final int type = GetRandomFishType(group);
-		final List<FishData> fishs = FishTable.getInstance().getfish(lvl, type, group);
-		if ((fishs == null) || fishs.isEmpty())
+		final int lvl = getRandomFishLvl();
+		final int group = getRandomGroup();
+		final int type = getRandomFishType(group);
+		_fish = FishData.getInstance().getFish(lvl, type, group);
+		if (_fish == null)
 		{
 			sendMessage("Error - Fishes are not definied");
-			EndFishing(false);
+			endFishing(false);
 			return;
 		}
-		final int check = Rnd.get(fishs.size());
-		// Use a copy constructor else the fish data may be over-written below
-		_fish = new FishData(fishs.get(check));
-		fishs.clear();
 		sendPacket(SystemMessageId.CAST_LINE_AND_START_FISHING);
-		ExFishingStart efs = null;
-		
-		if (!GameTimeController.getInstance().isNowNight() && _lure.isNightLure())
-		{
-			_fish.setType(-1);
-		}
-		
-		efs = new ExFishingStart(this, _fish.getType(), x, y, z, _lure.isNightLure());
-		broadcastPacket(efs);
-		StartLookingForFishTask();
+		broadcastPacket(new ExFishingStart(this, _fish.getType(), x, y, z, _lure.isNightLure()));
+		startLookingForFishTask();
 	}
 	
-	/**
-	 * Stop looking for fish task.
-	 */
 	public void stopLookingForFishTask()
 	{
 		if (_taskforfish != null)
@@ -14985,10 +14959,7 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	/**
-	 * Start looking for fish task.
-	 */
-	public void StartLookingForFishTask()
+	public void startLookingForFishTask()
 	{
 		if (!isDead() && (_taskforfish == null))
 		{
@@ -15014,15 +14985,11 @@ public class PlayerInstance extends Playable
 					checkDelay = Math.round((float) (_fish.getGutsCheckTime() * 0.66));
 				}
 			}
-			_taskforfish = ThreadPool.scheduleAtFixedRate(new LookingForFishTask(_fish.getWaitTime(), _fish.getFishGuts(), _fish.getType(), isNoob, isUpperGrade), 10000, checkDelay);
+			_taskforfish = ThreadPool.scheduleAtFixedRate(new LookingForFishTask(_fish.getWaitTime(), _fish.getGuts(), _fish.getType(), isNoob, isUpperGrade), 10000, checkDelay);
 		}
 	}
 	
-	/**
-	 * Gets the random group.
-	 * @return the int
-	 */
-	private int GetRandomGroup()
+	private int getRandomGroup()
 	{
 		switch (_lure.getItemId())
 		{
@@ -15047,18 +15014,14 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	/**
-	 * Gets the random fish type.
-	 * @param group the group
-	 * @return the int
-	 */
-	private int GetRandomFishType(int group)
+	private int getRandomFishType(int group)
 	{
 		final int check = Rnd.get(100);
 		int type = 1;
 		switch (group)
 		{
 			case 0: // fish for novices
+			{
 				switch (_lure.getItemId())
 				{
 					case 7807: // green lure, preferred by fast-moving (nimble) fish (type 5)
@@ -15127,7 +15090,9 @@ public class PlayerInstance extends Playable
 					}
 				}
 				break;
+			}
 			case 1: // normal fish
+			{
 				switch (_lure.getItemId())
 				{
 					case 7610:
@@ -15228,7 +15193,9 @@ public class PlayerInstance extends Playable
 					}
 				}
 				break;
+			}
 			case 2: // upper grade fish, luminous lure
+			{
 				switch (_lure.getItemId())
 				{
 					case 8506: // green lure, preferred by fast-moving (nimble) fish (type 8)
@@ -15296,15 +15263,13 @@ public class PlayerInstance extends Playable
 						break;
 					}
 				}
+				break;
+			}
 		}
 		return type;
 	}
 	
-	/**
-	 * Gets the random fish lvl.
-	 * @return the int
-	 */
-	private int GetRandomFishLvl()
+	private int getRandomFishLvl()
 	{
 		final Effect[] effects = getAllEffects();
 		int skilllvl = getSkillLevel(1315);
@@ -15346,12 +15311,7 @@ public class PlayerInstance extends Playable
 		return randomlvl;
 	}
 	
-	/**
-	 * Start fish combat.
-	 * @param isNoob the is noob
-	 * @param isUpperGrade the is upper grade
-	 */
-	public void StartFishCombat(boolean isNoob, boolean isUpperGrade)
+	public void startFishCombat(boolean isNoob, boolean isUpperGrade)
 	{
 		_fishCombat = new Fishing(this, _fish, isNoob, isUpperGrade, _lure.getItemId());
 	}
@@ -15360,7 +15320,7 @@ public class PlayerInstance extends Playable
 	 * End fishing.
 	 * @param win the win
 	 */
-	public void EndFishing(boolean win)
+	public void endFishing(boolean win)
 	{
 		final ExFishingEnd efe = new ExFishingEnd(win, this);
 		broadcastPacket(efe);
@@ -15383,74 +15343,46 @@ public class PlayerInstance extends Playable
 		stopLookingForFishTask();
 	}
 	
-	/**
-	 * Gets the fish combat.
-	 * @return the l2 fishing
-	 */
-	public Fishing GetFishCombat()
+	public Fishing getFishCombat()
 	{
 		return _fishCombat;
 	}
 	
-	/**
-	 * Gets the fishx.
-	 * @return the int
-	 */
-	public int GetFishx()
+	public int getFishX()
 	{
 		return _fishX;
 	}
 	
-	/**
-	 * Gets the fishy.
-	 * @return the int
-	 */
-	public int GetFishy()
+	public int getFishY()
 	{
 		return _fishY;
 	}
 	
-	/**
-	 * Gets the fishz.
-	 * @return the int
-	 */
-	public int GetFishz()
+	public int getFishZ()
 	{
 		return _fishZ;
 	}
 	
-	public void SetPartyFind(int find)
-	{
-		_partyFind = find;
-	}
-	
-	public int GetPartyFind()
-	{
-		return _partyFind;
-	}
-	
-	/**
-	 * Sets the lure.
-	 * @param lure the lure
-	 */
-	public void SetLure(ItemInstance lure)
+	public void setLure(ItemInstance lure)
 	{
 		_lure = lure;
 	}
 	
-	/**
-	 * Gets the lure.
-	 * @return the l2 item instance
-	 */
-	public ItemInstance GetLure()
+	public ItemInstance getLure()
 	{
 		return _lure;
 	}
 	
-	/**
-	 * Gets the inventory limit.
-	 * @return the int
-	 */
+	public void setPartyFind(int find)
+	{
+		_partyFind = find;
+	}
+	
+	public int getPartyFind()
+	{
+		return _partyFind;
+	}
+	
 	public int getInventoryLimit()
 	{
 		int ivlim;
@@ -15471,11 +15403,7 @@ public class PlayerInstance extends Playable
 		return ivlim;
 	}
 	
-	/**
-	 * Gets the ware house limit.
-	 * @return the int
-	 */
-	public int GetWareHouseLimit()
+	public int getWareHouseLimit()
 	{
 		int whlim;
 		if (getRace() == Race.DWARF)
@@ -15491,11 +15419,7 @@ public class PlayerInstance extends Playable
 		return whlim;
 	}
 	
-	/**
-	 * Gets the private sell store limit.
-	 * @return the int
-	 */
-	public int GetPrivateSellStoreLimit()
+	public int getPrivateSellStoreLimit()
 	{
 		int pslim;
 		if (getRace() == Race.DWARF)
@@ -15512,11 +15436,7 @@ public class PlayerInstance extends Playable
 		return pslim;
 	}
 	
-	/**
-	 * Gets the private buy store limit.
-	 * @return the int
-	 */
-	public int GetPrivateBuyStoreLimit()
+	public int getPrivateBuyStoreLimit()
 	{
 		int pblim;
 		if (getRace() == Race.DWARF)
@@ -15532,61 +15452,37 @@ public class PlayerInstance extends Playable
 		return pblim;
 	}
 	
-	/**
-	 * Gets the freight limit.
-	 * @return the int
-	 */
-	public int GetFreightLimit()
+	public int getFreightLimit()
 	{
 		return Config.FREIGHT_SLOTS + (int) getStat().calcStat(Stats.FREIGHT_LIM, 0, null, null);
 	}
 	
-	/**
-	 * Gets the dwarf recipe limit.
-	 * @return the int
-	 */
-	public int GetDwarfRecipeLimit()
+	public int getDwarfRecipeLimit()
 	{
 		int recdlim = Config.DWARF_RECIPE_LIMIT;
 		recdlim += (int) getStat().calcStat(Stats.REC_D_LIM, 0, null, null);
 		return recdlim;
 	}
 	
-	/**
-	 * Gets the common recipe limit.
-	 * @return the int
-	 */
-	public int GetCommonRecipeLimit()
+	public int getCommonRecipeLimit()
 	{
 		int recclim = Config.COMMON_RECIPE_LIMIT;
 		recclim += (int) getStat().calcStat(Stats.REC_C_LIM, 0, null, null);
 		return recclim;
 	}
 	
-	/**
-	 * Sets the mount object id.
-	 * @param newID the new mount object id
-	 */
-	public void setMountObjectID(int newID)
+	public void setMountObjectID(int oid)
 	{
-		_mountObjectID = newID;
+		_mountObjectID = oid;
 	}
 	
-	/**
-	 * Gets the mount object id.
-	 * @return the mount object id
-	 */
 	public int getMountObjectID()
 	{
 		return _mountObjectID;
 	}
 	
-	/** The _lure. */
-	private ItemInstance _lure = null;
-	
 	/**
-	 * Get the current skill in use or return null.<BR>
-	 * <BR>
+	 * Get the current skill in use or return null.
 	 * @return the current skill
 	 */
 	public SkillDat getCurrentSkill()
@@ -15595,8 +15491,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Create a new SkillDat object and set the player _currentSkill.<BR>
-	 * <BR>
+	 * Create a new SkillDat object and set the player _currentSkill.
 	 * @param currentSkill the current skill
 	 * @param ctrlPressed the ctrl pressed
 	 * @param shiftPressed the shift pressed

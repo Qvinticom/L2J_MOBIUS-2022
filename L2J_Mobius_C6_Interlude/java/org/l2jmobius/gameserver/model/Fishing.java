@@ -43,6 +43,8 @@ public class Fishing implements Runnable
 	private int _deceptiveMode = 0;
 	private Future<?> _fishAiTask;
 	private boolean _thinking;
+	
+	// Fish datas
 	private final int _fishId;
 	private final int _fishMaxHp;
 	private int _fishCurHp;
@@ -77,10 +79,10 @@ public class Fishing implements Runnable
 		}
 	}
 	
-	public Fishing(PlayerInstance fisher, FishData fish, boolean isNoob, boolean isUpperGrade, int lureId)
+	public Fishing(PlayerInstance fisher, Fish fish, boolean isNoob, boolean isUpperGrade, int lureId)
 	{
 		_fisher = fisher;
-		_fishMaxHp = fish.getHP();
+		_fishMaxHp = fish.getHp();
 		_fishCurHp = _fishMaxHp;
 		_regenHp = fish.getHpRegen();
 		_fishId = fish.getId();
@@ -101,9 +103,9 @@ public class Fishing implements Runnable
 		
 		_mode = Rnd.get(100) >= 80 ? 1 : 0;
 		
-		final ExFishingStartCombat efsc = new ExFishingStartCombat(_fisher, _time, _fishMaxHp, _mode, _lureType, _deceptiveMode);
-		_fisher.broadcastPacket(efsc);
+		_fisher.broadcastPacket(new ExFishingStartCombat(_fisher, _time, _fishMaxHp, _mode, _lureType, _deceptiveMode));
 		_fisher.sendPacket(new PlaySound(1, "SF_S_01"));
+		
 		// Succeeded in getting a bite
 		_fisher.sendPacket(SystemMessageId.GOT_A_BITE);
 		
@@ -121,8 +123,7 @@ public class Fishing implements Runnable
 			_fishCurHp = 0;
 		}
 		
-		final ExFishingHpRegen efhr = new ExFishingHpRegen(_fisher, _time, _fishCurHp, _mode, _goodUse, _anim, pen, _deceptiveMode);
-		_fisher.broadcastPacket(efhr);
+		_fisher.broadcastPacket(new ExFishingHpRegen(_fisher, _time, _fishCurHp, _mode, _goodUse, _anim, pen, _deceptiveMode));
 		_anim = 0;
 		if (_fishCurHp > (_fishMaxHp * 2))
 		{
@@ -153,7 +154,8 @@ public class Fishing implements Runnable
 			final int check = Rnd.get(100);
 			if (check <= 5)
 			{
-				PenaltyMonster();
+				_fisher.sendPacket(SystemMessageId.YOU_CAUGHT_SOMETHING_SMELLY_THROW_IT_BACK);
+				spawnPenaltyMonster();
 			}
 			else
 			{
@@ -162,7 +164,7 @@ public class Fishing implements Runnable
 				FishingChampionshipManager.getInstance().newFish(_fisher, _lureId);
 			}
 		}
-		_fisher.EndFishing(win);
+		_fisher.endFishing(win);
 		_fisher = null;
 	}
 	
@@ -249,15 +251,10 @@ public class Fishing implements Runnable
 			if (_deceptiveMode == 0)
 			{
 				// Reeling is successful, Damage: $s1
-				SystemMessage sm = new SystemMessage(SystemMessageId.REELING_SUCCESFUL_S1_DAMAGE);
-				sm.addNumber(dmg);
-				_fisher.sendPacket(sm);
-				
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.REELING_SUCCESFUL_S1_DAMAGE).addNumber(dmg));
 				if (pen == 50)
 				{
-					sm = new SystemMessage(SystemMessageId.REELING_SUCCESSFUL_PENALTY_S1);
-					sm.addNumber(pen);
-					_fisher.sendPacket(sm);
+					_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.REELING_SUCCESSFUL_PENALTY_S1).addNumber(pen));
 				}
 				
 				_goodUse = 1;
@@ -266,9 +263,7 @@ public class Fishing implements Runnable
 			else
 			{
 				// Reeling failed, Damage: $s1
-				final SystemMessage sm = new SystemMessage(SystemMessageId.FISH_RESISTED_REELING_S1_HP_REGAINED);
-				sm.addNumber(dmg);
-				_fisher.sendPacket(sm);
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FISH_RESISTED_REELING_S1_HP_REGAINED).addNumber(dmg));
 				_goodUse = 2;
 				changeHp(-dmg, pen);
 			}
@@ -276,24 +271,17 @@ public class Fishing implements Runnable
 		else if (_deceptiveMode == 0)
 		{
 			// Reeling failed, Damage: $s1
-			final SystemMessage sm = new SystemMessage(SystemMessageId.FISH_RESISTED_REELING_S1_HP_REGAINED);
-			sm.addNumber(dmg);
-			_fisher.sendPacket(sm);
+			_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FISH_RESISTED_REELING_S1_HP_REGAINED).addNumber(dmg));
 			_goodUse = 2;
 			changeHp(-dmg, pen);
 		}
 		else
 		{
 			// Reeling is successful, Damage: $s1
-			SystemMessage sm = new SystemMessage(SystemMessageId.REELING_SUCCESFUL_S1_DAMAGE);
-			sm.addNumber(dmg);
-			_fisher.sendPacket(sm);
-			
+			_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.REELING_SUCCESFUL_S1_DAMAGE).addNumber(dmg));
 			if (pen == 50)
 			{
-				sm = new SystemMessage(SystemMessageId.REELING_SUCCESSFUL_PENALTY_S1);
-				sm.addNumber(pen);
-				_fisher.sendPacket(sm);
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.REELING_SUCCESSFUL_PENALTY_S1).addNumber(pen));
 			}
 			
 			_goodUse = 1;
@@ -323,15 +311,10 @@ public class Fishing implements Runnable
 			if (_deceptiveMode == 0)
 			{
 				// Pumping is successful. Damage: $s1
-				SystemMessage sm = new SystemMessage(SystemMessageId.PUMPING_SUCCESFUL_S1_DAMAGE);
-				sm.addNumber(dmg);
-				_fisher.sendPacket(sm);
-				
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PUMPING_SUCCESFUL_S1_DAMAGE).addNumber(dmg));
 				if (pen == 50)
 				{
-					sm = new SystemMessage(SystemMessageId.PUMPING_SUCCESSFUL_PENALTY_S1);
-					sm.addNumber(pen);
-					_fisher.sendPacket(sm);
+					_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PUMPING_SUCCESSFUL_PENALTY_S1).addNumber(pen));
 				}
 				
 				_goodUse = 1;
@@ -340,9 +323,7 @@ public class Fishing implements Runnable
 			else
 			{
 				// Pumping failed, Regained: $s1
-				final SystemMessage sm = new SystemMessage(SystemMessageId.FISH_RESISTED_PUMPING_S1_HP_REGAINED);
-				sm.addNumber(dmg);
-				_fisher.sendPacket(sm);
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FISH_RESISTED_PUMPING_S1_HP_REGAINED).addNumber(dmg));
 				_goodUse = 2;
 				changeHp(-dmg, pen);
 			}
@@ -350,24 +331,17 @@ public class Fishing implements Runnable
 		else if (_deceptiveMode == 0)
 		{
 			// Pumping failed, Regained: $s1
-			final SystemMessage sm = new SystemMessage(SystemMessageId.FISH_RESISTED_PUMPING_S1_HP_REGAINED);
-			sm.addNumber(dmg);
-			_fisher.sendPacket(sm);
+			_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FISH_RESISTED_PUMPING_S1_HP_REGAINED).addNumber(dmg));
 			_goodUse = 2;
 			changeHp(-dmg, pen);
 		}
 		else
 		{
 			// Pumping is successful. Damage: $s1
-			SystemMessage sm = new SystemMessage(SystemMessageId.PUMPING_SUCCESFUL_S1_DAMAGE);
-			sm.addNumber(dmg);
-			_fisher.sendPacket(sm);
-			
+			_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PUMPING_SUCCESFUL_S1_DAMAGE).addNumber(dmg));
 			if (pen == 50)
 			{
-				sm = new SystemMessage(SystemMessageId.PUMPING_SUCCESSFUL_PENALTY_S1);
-				sm.addNumber(pen);
-				_fisher.sendPacket(sm);
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PUMPING_SUCCESSFUL_PENALTY_S1).addNumber(pen));
 			}
 			
 			_goodUse = 1;
@@ -375,74 +349,69 @@ public class Fishing implements Runnable
 		}
 	}
 	
-	private void PenaltyMonster()
+	private void spawnPenaltyMonster()
 	{
-		final int lvl = (int) Math.round(_fisher.getLevel() * 0.1);
-		int npcid;
-		
-		_fisher.sendPacket(SystemMessageId.YOU_CAUGHT_SOMETHING_SMELLY_THROW_IT_BACK);
-		switch (lvl)
+		int npcId;
+		switch ((int) Math.round(_fisher.getLevel() * 0.1))
 		{
 			case 0:
 			case 1:
 			{
-				npcid = 18319;
+				npcId = 18319;
 				break;
 			}
 			case 2:
 			{
-				npcid = 18320;
+				npcId = 18320;
 				break;
 			}
 			case 3:
 			{
-				npcid = 18321;
+				npcId = 18321;
 				break;
 			}
 			case 4:
 			{
-				npcid = 18322;
+				npcId = 18322;
 				break;
 			}
 			case 5:
 			{
-				npcid = 18323;
+				npcId = 18323;
 				break;
 			}
 			case 6:
 			{
-				npcid = 18324;
+				npcId = 18324;
 				break;
 			}
 			case 7:
 			{
-				npcid = 18325;
+				npcId = 18325;
 				break;
 			}
 			case 8:
 			case 9:
 			{
-				npcid = 18326;
+				npcId = 18326;
 				break;
 			}
 			default:
 			{
-				npcid = 18319;
+				npcId = 18319;
 				break;
 			}
 		}
 		
-		NpcTemplate temp;
-		temp = NpcTable.getInstance().getTemplate(npcid);
-		
-		if (temp != null)
+		NpcTemplate template = NpcTable.getInstance().getTemplate(npcId);
+		if (template != null)
 		{
 			try
 			{
-				final Spawn spawn = new Spawn(temp);
-				spawn.setX(_fisher.GetFishx());
-				spawn.setY(_fisher.GetFishy());
-				spawn.setZ(_fisher.GetFishz());
+				final Spawn spawn = new Spawn(template);
+				spawn.setX(_fisher.getFishX());
+				spawn.setY(_fisher.getFishY());
+				spawn.setZ(_fisher.getFishZ());
 				spawn.setAmount(1);
 				spawn.setHeading(_fisher.getHeading());
 				spawn.stopRespawn();

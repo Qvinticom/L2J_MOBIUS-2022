@@ -69,10 +69,10 @@ public class Recipes implements IItemHandler
 					// can't add recipe, becouse create item level too low
 					player.sendPacket(new SystemMessage(SystemMessageId.CREATE_LVL_TOO_LOW_TO_REGISTER));
 				}
-				else if (player.getDwarvenRecipeBook().length >= player.GetDwarfRecipeLimit())
+				else if (player.getDwarvenRecipeBook().length >= player.getDwarfRecipeLimit())
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_REGISTER);
-					sm.addNumber(player.GetDwarfRecipeLimit());
+					sm.addNumber(player.getDwarfRecipeLimit());
 					player.sendPacket(sm);
 				}
 				else
@@ -97,10 +97,10 @@ public class Recipes implements IItemHandler
 				// can't add recipe, becouse create item level too low
 				player.sendPacket(new SystemMessage(SystemMessageId.CREATE_LVL_TOO_LOW_TO_REGISTER));
 			}
-			else if (player.getCommonRecipeBook().length >= player.GetCommonRecipeLimit())
+			else if (player.getCommonRecipeBook().length >= player.getCommonRecipeLimit())
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_REGISTER);
-				sm.addNumber(player.GetCommonRecipeLimit());
+				sm.addNumber(player.getCommonRecipeLimit());
 				player.sendPacket(sm);
 			}
 			else

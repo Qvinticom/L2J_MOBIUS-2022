@@ -58,6 +58,6 @@ public class PlayerWarehouse extends Warehouse
 	@Override
 	public boolean validateCapacity(int slots)
 	{
-		return (_items.size() + slots) <= _owner.GetWareHouseLimit();
+		return (_items.size() + slots) <= _owner.getWareHouseLimit();
 	}
 }
