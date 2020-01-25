@@ -103,7 +103,7 @@ public class CursedWeaponsManager
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
 			
-			final File file = new File(Config.DATAPACK_ROOT + "/data/cursedWeapons.xml");
+			final File file = new File(Config.DATAPACK_ROOT + "/data/CursedWeapons.xml");
 			if (!file.exists())
 			{
 				return;

@@ -160,7 +160,7 @@ public class DimensionalRiftManager
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
 			
-			final File file = new File(Config.DATAPACK_ROOT + "/data/dimensionalRift.xml");
+			final File file = new File(Config.DATAPACK_ROOT + "/data/DimensionalRift.xml");
 			if (!file.exists())
 			{
 				throw new IOException();
