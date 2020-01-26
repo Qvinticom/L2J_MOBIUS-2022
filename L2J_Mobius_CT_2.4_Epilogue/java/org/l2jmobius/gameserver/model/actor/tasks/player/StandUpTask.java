@@ -40,7 +40,7 @@ public class StandUpTask implements Runnable
 			return;
 		}
 		
-		_player.setIsSitting(false);
+		_player.setSitting(false);
 		_player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 	}
 }

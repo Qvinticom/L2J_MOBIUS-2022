@@ -178,7 +178,7 @@ public class Valakas extends Quest
 				
 				temp = (System.currentTimeMillis() - lastAttackTime);
 				
-				if ((status == FIGHTING) && !npc.getSpawn().is_customBossInstance() // if it's a custom spawn, dnt despawn it for inactivity
+				if ((status == FIGHTING) && !npc.getSpawn().isCustomBossInstance() // if it's a custom spawn, dnt despawn it for inactivity
 					&& (temp > (Config.VALAKAS_DESPAWN_TIME * 60000))) // 15 mins by default
 				{
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
@@ -284,7 +284,7 @@ public class Valakas extends Quest
 			{
 				GrandBossManager.getInstance().setBossStatus(VALAKAS, FIGHTING);
 				startQuestTimer("check_activity_and_do_actions", 60000, npc, null, true);
-				npc.setIsInvul(false);
+				npc.setInvul(false);
 				getRandomSkill(npc);
 			}
 			else if (event.equals("1111"))
@@ -321,7 +321,7 @@ public class Valakas extends Quest
 			{
 				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 10, 0, 3000, 250));
 				
-				if (!npc.getSpawn().is_customBossInstance())
+				if (!npc.getSpawn().isCustomBossInstance())
 				{
 					addSpawn(31759, 212852, -114842, -1632, 0, false, 900000);
 					final int radius = 1500;
@@ -381,7 +381,7 @@ public class Valakas extends Quest
 		}
 		lastAttackTime = System.currentTimeMillis();
 		/*
-		 * if (!Config.ALLOW_DIRECT_TP_TO_BOSS_ROOM && GrandBossManager.getInstance().getBossStatus(VALAKAS) != FIGHTING && !npc.getSpawn().is_customBossInstance()) { attacker.teleToLocation(150037, -57255, -2976); }
+		 * if (!Config.ALLOW_DIRECT_TP_TO_BOSS_ROOM && GrandBossManager.getInstance().getBossStatus(VALAKAS) != FIGHTING && !npc.getSpawn().isCustomBossInstance()) { attacker.teleToLocation(150037, -57255, -2976); }
 		 */
 		if (attacker.getMountType() == 1)
 		{
@@ -602,7 +602,7 @@ public class Valakas extends Quest
 		npc.broadcastPacket(new PlaySound(1, "B03_D", npc));
 		startQuestTimer("1111", 500, npc, null);
 		
-		if (!npc.getSpawn().is_customBossInstance())
+		if (!npc.getSpawn().isCustomBossInstance())
 		{
 			GrandBossManager.getInstance().setBossStatus(VALAKAS, DEAD);
 			
@@ -952,14 +952,14 @@ public class Valakas extends Quest
 		{
 			timer.cancel();
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			// npc.setIsCastingNow(true);
+			// npc.setCastingNow(true);
 			npc.setTarget(target);
 			npc.doCast(skill);
 		}
 		else
 		{
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, target, null);
-			// npc.setIsCastingNow(false);
+			// npc.setCastingNow(false);
 		}
 	}
 	
@@ -1017,7 +1017,7 @@ public class Valakas extends Quest
 		
 		final Integer status = GrandBossManager.getInstance().getBossStatus(VALAKAS);
 		
-		if ((status == FIGHTING) || npc.getSpawn().is_customBossInstance())
+		if ((status == FIGHTING) || npc.getSpawn().isCustomBossInstance())
 		{
 			if (npc.getCurrentHp() > ((npc.getMaxHp() * 1) / 4))
 			{
@@ -1524,7 +1524,7 @@ public class Valakas extends Quest
 			i_quest4 = ((1 * 1000) + Rnd.get(3000));
 			c_quest4 = player;
 		}
-		if ((status == FIGHTING) || (npc.getSpawn().is_customBossInstance() && !npc.isInvul()))
+		if ((status == FIGHTING) || (npc.getSpawn().isCustomBossInstance() && !npc.isInvul()))
 		{
 			getRandomSkill(npc);
 		}

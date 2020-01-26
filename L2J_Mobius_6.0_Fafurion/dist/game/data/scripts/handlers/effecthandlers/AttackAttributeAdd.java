@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -38,7 +38,7 @@ public class AttackAttributeAdd extends AbstractEffect
 	@Override
 	public void pump(Creature effected, Skill skill)
 	{
-		Stats stat = Stats.FIRE_POWER;
+		Stat stat = Stat.FIRE_POWER;
 		AttributeType maxAttribute = AttributeType.FIRE;
 		int maxValue = 0;
 		
@@ -56,27 +56,27 @@ public class AttackAttributeAdd extends AbstractEffect
 		{
 			case WATER:
 			{
-				stat = Stats.WATER_POWER;
+				stat = Stat.WATER_POWER;
 				break;
 			}
 			case WIND:
 			{
-				stat = Stats.WIND_POWER;
+				stat = Stat.WIND_POWER;
 				break;
 			}
 			case EARTH:
 			{
-				stat = Stats.EARTH_POWER;
+				stat = Stat.EARTH_POWER;
 				break;
 			}
 			case HOLY:
 			{
-				stat = Stats.HOLY_POWER;
+				stat = Stat.HOLY_POWER;
 				break;
 			}
 			case DARK:
 			{
-				stat = Stats.DARK_POWER;
+				stat = Stat.DARK_POWER;
 				break;
 			}
 		}

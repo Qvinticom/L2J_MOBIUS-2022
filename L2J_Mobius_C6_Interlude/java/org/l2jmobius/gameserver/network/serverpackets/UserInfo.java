@@ -323,7 +323,7 @@ public class UserInfo extends GameServerPacket
 		
 		writeD(_player.getClanCrestLargeId());
 		writeC(_player.isNoble() ? 1 : 0); // 0x01: symbol on char menu ctrl+I
-		writeC((_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) || _player.getIsPVPHero()) ? 1 : 0); // 0x01: Hero Aura
+		writeC((_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) || _player.isPVPHero()) ? 1 : 0); // 0x01: Hero Aura
 		
 		writeC(_player.isFishing() ? 1 : 0); // Fishing Mode
 		writeD(_player.getFishX()); // fishing x

@@ -248,7 +248,7 @@ public class IstinaCavern extends AbstractInstance
 					{
 						getTimers().addTimer("BALLISTA_CHECK_TIMER", 1000, npc, null);
 						npc.setTargetable(true);
-						npc.setIsInvul(false);
+						npc.setInvul(false);
 						npcVars.set("COUNTING_ENABLED", true);
 						showOnScreenMsg(instance, NpcStringId.START_CHARGING_MANA_BALLISTA, ExShowScreenMessage.MIDDLE_CENTER, 4000);
 					}
@@ -271,7 +271,7 @@ public class IstinaCavern extends AbstractInstance
 						{
 							npcVars.set("COUNTING_ENABLED", false);
 							npc.setTargetable(false);
-							npc.setIsInvul(true);
+							npc.setInvul(true);
 							getTimers().addTimer("BALLISTA_END_TIMER", 1000, npc, null);
 							instance.getPlayers().forEach(temp -> temp.sendPacket(new ExSendUIEvent(temp, 2, countDown, charged, 0, 2042, 0, NpcStringId.REPLENISH_BALLISTA_MAGIC_POWER.getId())));
 						}
@@ -587,7 +587,7 @@ public class IstinaCavern extends AbstractInstance
 			{
 				npc.disableCoreAI(true);
 				npc.setUndying(true);
-				npc.setIsInvul(true);
+				npc.setInvul(true);
 				npc.setTargetable(false);
 				getTimers().cancelTimer("BALLISTA_START_TIMER", npc, null);
 				getTimers().addTimer("BALLISTA_START_TIMER", 10000, npc, null);

@@ -210,9 +210,9 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		return _isAuthedGG;
 	}
 	
-	public void setGameGuardOk(boolean val)
+	public void setGameGuardOk(boolean value)
 	{
-		_isAuthedGG = val;
+		_isAuthedGG = value;
 	}
 	
 	public void setAccountName(String pAccountName)
@@ -254,9 +254,9 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		return _isDetached;
 	}
 	
-	public void setDetached(boolean b)
+	public void setDetached(boolean value)
 	{
-		_isDetached = b;
+		_isDetached = value;
 	}
 	
 	/**
@@ -806,7 +806,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 							
 							if (Config.OFFLINE_MODE_SET_INVULNERABLE)
 							{
-								_player.setIsInvul(true);
+								_player.setInvul(true);
 							}
 							if (Config.OFFLINE_SET_NAME_COLOR)
 							{
@@ -1005,7 +1005,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	/**
 	 * @return the _forcedToClose
 	 */
-	public boolean is_forcedToClose()
+	public boolean isForcedToClose()
 	{
 		return _forcedToClose;
 	}

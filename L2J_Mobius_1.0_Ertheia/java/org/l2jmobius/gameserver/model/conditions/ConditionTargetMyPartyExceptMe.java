@@ -29,11 +29,11 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class ConditionTargetMyPartyExceptMe extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
-	public ConditionTargetMyPartyExceptMe(boolean val)
+	public ConditionTargetMyPartyExceptMe(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
@@ -57,6 +57,6 @@ public class ConditionTargetMyPartyExceptMe extends Condition
 			player.sendPacket(sm);
 			isPartyMember = false;
 		}
-		return _val == isPartyMember;
+		return _value == isPartyMember;
 	}
 }

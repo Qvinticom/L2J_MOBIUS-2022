@@ -40,11 +40,11 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class ConditionPlayerCanSweep extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
-	public ConditionPlayerCanSweep(boolean val)
+	public ConditionPlayerCanSweep(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
@@ -84,6 +84,6 @@ public class ConditionPlayerCanSweep extends Condition
 				});
 			}
 		}
-		return (_val == canSweep.get());
+		return (_value == canSweep.get());
 	}
 }

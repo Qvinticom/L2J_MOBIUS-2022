@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class PhysicalEvasion extends AbstractConditionalHpEffect
 {
 	public PhysicalEvasion(StatsSet params)
 	{
-		super(params, Stats.EVASION_RATE);
+		super(params, Stat.EVASION_RATE);
 	}
 }

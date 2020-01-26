@@ -50,7 +50,7 @@ import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.model.items.type.ItemType;
 import org.l2jmobius.gameserver.model.items.type.MaterialType;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.FuncAdd;
 import org.l2jmobius.gameserver.model.stats.functions.FuncSet;
 import org.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
@@ -1000,7 +1000,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	{
 	}
 	
-	public double getStats(Stats stat, double defaultValue)
+	public double getStats(Stat stat, double defaultValue)
 	{
 		if (_funcTemplates != null)
 		{

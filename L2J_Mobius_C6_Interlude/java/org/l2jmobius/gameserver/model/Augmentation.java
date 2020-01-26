@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.xml.AugmentationData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.model.skills.funcs.FuncAdd;
 import org.l2jmobius.gameserver.model.skills.funcs.LambdaConst;
 
@@ -65,7 +65,7 @@ public class Augmentation
 	
 	public class augmentationStatBonus
 	{
-		private final Stats[] _stats;
+		private final Stat[] _stats;
 		private final float[] _values;
 		private boolean _active;
 		
@@ -74,7 +74,7 @@ public class Augmentation
 			_active = false;
 			final List<AugmentationData.AugStat> as = AugmentationData.getInstance().getAugStatsById(augmentationId);
 			
-			_stats = new Stats[as.size()];
+			_stats = new Stat[as.size()];
 			_values = new float[as.size()];
 			
 			int i = 0;

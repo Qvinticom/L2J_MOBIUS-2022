@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.actor.stat;
 
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 
 public class NpcStat extends CreatureStat
 {
@@ -37,6 +37,6 @@ public class NpcStat extends CreatureStat
 	@Override
 	public int getMaxHp()
 	{
-		return (int) calcStat(Stats.MAX_HP, getActiveChar().getTemplate().getBaseHpMax(), null, null);
+		return (int) calcStat(Stat.MAX_HP, getActiveChar().getTemplate().getBaseHpMax(), null, null);
 	}
 }

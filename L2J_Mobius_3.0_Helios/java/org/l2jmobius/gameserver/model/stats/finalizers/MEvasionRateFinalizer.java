@@ -21,16 +21,16 @@ import java.util.OptionalDouble;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.stats.IStatsFunction;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.IStatFunction;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author UnAfraid
  */
-public class MEvasionRateFinalizer implements IStatsFunction
+public class MEvasionRateFinalizer implements IStatFunction
 {
 	@Override
-	public double calc(Creature creature, OptionalDouble base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stat stat)
 	{
 		throwIfPresent(base);
 		
@@ -54,7 +54,7 @@ public class MEvasionRateFinalizer implements IStatsFunction
 				baseValue += (level - 69) + 2;
 			}
 		}
-		return validateValue(creature, Stats.defaultValue(creature, stat, baseValue), Double.NEGATIVE_INFINITY, Config.MAX_EVASION);
+		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), Double.NEGATIVE_INFINITY, Config.MAX_EVASION);
 	}
 	
 	@Override

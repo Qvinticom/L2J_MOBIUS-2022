@@ -181,9 +181,9 @@ public class Calculator
 	 * @param owner the owner
 	 * @return a list of modified stats
 	 */
-	public synchronized List<Stats> removeOwner(Object owner)
+	public synchronized List<Stat> removeOwner(Object owner)
 	{
-		final List<Stats> modifiedStats = new ArrayList<>();
+		final List<Stat> modifiedStats = new ArrayList<>();
 		for (AbstractFunction func : _functions)
 		{
 			if (func.getFuncOwner() == owner)

@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoomList;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.ExCloseMPCC;
@@ -125,11 +125,11 @@ public class Party
 	
 	/**
 	 * set invitation process flag and store time for expiration happens when: player join party or player decline to join
-	 * @param val
+	 * @param value
 	 */
-	public void setPendingInvitation(boolean val)
+	public void setPendingInvitation(boolean value)
 	{
-		_pendingInvitation = val;
+		_pendingInvitation = value;
 		_pendingInviteTimeout = GameTimeController.getGameTicks() + (PlayerInstance.REQUEST_TIMEOUT * GameTimeController.TICKS_PER_SECOND);
 	}
 	
@@ -765,7 +765,7 @@ public class Party
 					// Add the XP/SP points to the requested party member
 					if (!member.isDead())
 					{
-						member.addExpAndSp(Math.round(member.calcStat(Stats.EXPSP_RATE, xpReward * preCalculation, null, null)), (int) member.calcStat(Stats.EXPSP_RATE, spReward * preCalculation, null, null));
+						member.addExpAndSp(Math.round(member.calcStat(Stat.EXPSP_RATE, xpReward * preCalculation, null, null)), (int) member.calcStat(Stat.EXPSP_RATE, spReward * preCalculation, null, null));
 					}
 				}
 				else

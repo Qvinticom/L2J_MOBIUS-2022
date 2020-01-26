@@ -107,7 +107,7 @@ public class Ingredient
 		return _itemCount;
 	}
 	
-	public void setIsTaxIngredient(boolean isTaxIngredient)
+	public void setTaxIngredient(boolean isTaxIngredient)
 	{
 		_isTaxIngredient = isTaxIngredient;
 	}

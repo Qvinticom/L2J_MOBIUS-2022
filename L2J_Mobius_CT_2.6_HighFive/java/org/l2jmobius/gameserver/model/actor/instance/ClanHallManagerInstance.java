@@ -1730,9 +1730,9 @@ public class ClanHallManagerInstance extends MerchantInstance
 		return ClanHallManager.getInstance().getClanHallById(_clanHallId);
 	}
 	
-	private void doTeleport(PlayerInstance player, int val)
+	private void doTeleport(PlayerInstance player, int value)
 	{
-		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
+		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(value);
 		if (list != null)
 		{
 			if (player.isCombatFlagEquipped())
@@ -1747,7 +1747,7 @@ public class ClanHallManagerInstance extends MerchantInstance
 		}
 		else
 		{
-			LOGGER.warning("No teleport destination with id:" + val);
+			LOGGER.warning("No teleport destination with id:" + value);
 		}
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}

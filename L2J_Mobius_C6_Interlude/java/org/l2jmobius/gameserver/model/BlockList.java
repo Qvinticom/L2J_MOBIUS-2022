@@ -152,9 +152,9 @@ public class BlockList
 		return blockList.isBlockAll() || blockList.isInBlockList(targetId);
 	}
 	
-	private void setBlockAll(boolean state)
+	private void setBlockAll(boolean value)
 	{
-		_owner.setInRefusalMode(state);
+		_owner.setInRefusalMode(value);
 	}
 	
 	public List<Integer> getBlockList()

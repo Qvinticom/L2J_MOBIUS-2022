@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class PhysicalAbnormalResist extends AbstractStatAddEffect
 {
 	public PhysicalAbnormalResist(StatsSet params)
 	{
-		super(params, Stats.ABNORMAL_RESIST_PHYSICAL);
+		super(params, Stat.ABNORMAL_RESIST_PHYSICAL);
 	}
 }

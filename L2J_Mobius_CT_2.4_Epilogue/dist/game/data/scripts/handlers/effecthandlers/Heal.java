@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.stats.Formulas;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -100,7 +100,7 @@ public class Heal extends AbstractEffect
 		if (!info.getSkill().isStatic())
 		{
 			amount += staticShotBonus + Math.sqrt(mAtkMul * creature.getMAtk(creature, null));
-			amount = target.calcStat(Stats.HEAL_EFFECT, amount, null, null);
+			amount = target.calcStat(Stat.HEAL_EFFECT, amount, null, null);
 			// Heal critic, since CT2.3 Gracia Final
 			if (info.getSkill().isMagic() && Formulas.calcMCrit(creature.getMCriticalHit(target, info.getSkill())))
 			{

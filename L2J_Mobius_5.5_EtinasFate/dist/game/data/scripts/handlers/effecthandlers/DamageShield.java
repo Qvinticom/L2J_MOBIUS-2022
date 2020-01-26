@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class DamageShield extends AbstractStatAddEffect
 {
 	public DamageShield(StatsSet params)
 	{
-		super(params, Stats.REFLECT_DAMAGE_PERCENT);
+		super(params, Stat.REFLECT_DAMAGE_PERCENT);
 	}
 }

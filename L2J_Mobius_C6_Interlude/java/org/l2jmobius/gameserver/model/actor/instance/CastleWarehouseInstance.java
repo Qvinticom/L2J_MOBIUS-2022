@@ -35,7 +35,7 @@ public class CastleWarehouseInstance extends FolkInstance
 	protected static final int COND_OWNER = 2;
 	
 	/**
-	 * Instantiates a new l2 castle warehouse instance.
+	 * Instantiates a new castle warehouse instance.
 	 * @param objectId the object id
 	 * @param template the template
 	 */
@@ -171,7 +171,7 @@ public class CastleWarehouseInstance extends FolkInstance
 	}
 	
 	@Override
-	public void showChatWindow(PlayerInstance player, int val)
+	public void showChatWindow(PlayerInstance player, int value)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		String filename = "data/html/castlewarehouse/castlewarehouse-no.htm";
@@ -185,13 +185,13 @@ public class CastleWarehouseInstance extends FolkInstance
 			}
 			else if (condition == COND_OWNER) // Clan owns castle
 			{
-				if (val == 0)
+				if (value == 0)
 				{
 					filename = "data/html/castlewarehouse/castlewarehouse.htm";
 				}
 				else
 				{
-					filename = "data/html/castlewarehouse/castlewarehouse-" + val + ".htm";
+					filename = "data/html/castlewarehouse/castlewarehouse-" + value + ".htm";
 				}
 			}
 		}
@@ -216,7 +216,7 @@ public class CastleWarehouseInstance extends FolkInstance
 		}
 		if ((getCastle() != null) && (getCastle().getCastleId() > 0) && (player.getClan() != null))
 		{
-			if (getCastle().getSiege().getIsInProgress())
+			if (getCastle().getSiege().isInProgress())
 			{
 				return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
 			}

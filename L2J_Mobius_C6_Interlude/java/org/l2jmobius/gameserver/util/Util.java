@@ -249,20 +249,20 @@ public class Util
 	/**
 	 * Returns the rounded value of val to specified number of digits after the decimal point.<BR>
 	 * (Based on round() in PHP)
-	 * @param val
+	 * @param value
 	 * @param numPlaces
 	 * @return float roundedVal
 	 */
-	public static float roundTo(float val, int numPlaces)
+	public static float roundTo(float value, int numPlaces)
 	{
 		if (numPlaces <= 1)
 		{
-			return Math.round(val);
+			return Math.round(value);
 		}
 		
 		final float exponent = (float) Math.pow(10, numPlaces);
 		
-		return Math.round(val * exponent) / exponent;
+		return Math.round(value * exponent) / exponent;
 	}
 	
 	/**

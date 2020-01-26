@@ -411,7 +411,7 @@ public class SSQDisciplesNecropolisPast extends AbstractInstance
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		npc.setIsMortal(false);
+		npc.setMortal(false);
 		return super.onSpawn(npc);
 	}
 	

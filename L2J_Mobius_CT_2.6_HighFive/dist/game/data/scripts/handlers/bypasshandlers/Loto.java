@@ -80,7 +80,7 @@ public class Loto implements IBypassHandler
 	 * <li>Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet</li><BR>
 	 * @param player The PlayerInstance that talk with the NpcInstance
 	 * @param npc Npc loto instance
-	 * @param val The number of the page of the NpcInstance to display
+	 * @param value The number of the page of the NpcInstance to display
 	 */
 	// 0 - first buy lottery ticket window
 	// 1-20 - buttons
@@ -89,19 +89,19 @@ public class Loto implements IBypassHandler
 	// 23 - current lottery jackpot
 	// 24 - Previous winning numbers/Prize claim
 	// >24 - check lottery ticket by item object id
-	public static void showLotoWindow(PlayerInstance player, Npc npc, int val)
+	public static void showLotoWindow(PlayerInstance player, Npc npc, int value)
 	{
 		final int npcId = npc.getTemplate().getId();
 		String filename;
 		SystemMessage sm;
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		
-		if (val == 0) // 0 - first buy lottery ticket window
+		if (value == 0) // 0 - first buy lottery ticket window
 		{
 			filename = (npc.getHtmlPath(npcId, 1));
 			html.setFile(player, filename);
 		}
-		else if ((val >= 1) && (val <= 21)) // 1-20 - buttons, 21 - second buy lottery ticket window
+		else if ((value >= 1) && (value <= 21)) // 1-20 - buttons, 21 - second buy lottery ticket window
 		{
 			if (!Lottery.getInstance().isStarted())
 			{
@@ -124,7 +124,7 @@ public class Loto implements IBypassHandler
 			// counting buttons and unsetting button if found
 			for (int i = 0; i < 5; i++)
 			{
-				if (player.getLoto(i) == val)
+				if (player.getLoto(i) == value)
 				{
 					// unsetting button
 					player.setLoto(i, 0);
@@ -137,13 +137,13 @@ public class Loto implements IBypassHandler
 			}
 			
 			// if not rearched limit 5 and not unseted value
-			if ((count < 5) && (found == 0) && (val <= 20))
+			if ((count < 5) && (found == 0) && (value <= 20))
 			{
 				for (int i = 0; i < 5; i++)
 				{
 					if (player.getLoto(i) == 0)
 					{
-						player.setLoto(i, val);
+						player.setLoto(i, value);
 						break;
 					}
 				}
@@ -174,7 +174,7 @@ public class Loto implements IBypassHandler
 				html.replace(search, replace);
 			}
 		}
-		else if (val == 22) // 22 - selected ticket with 5 numbers
+		else if (value == 22) // 22 - selected ticket with 5 numbers
 		{
 			if (!Lottery.getInstance().isStarted())
 			{
@@ -242,12 +242,12 @@ public class Loto implements IBypassHandler
 			filename = (npc.getHtmlPath(npcId, 6));
 			html.setFile(player, filename);
 		}
-		else if (val == 23) // 23 - current lottery jackpot
+		else if (value == 23) // 23 - current lottery jackpot
 		{
 			filename = (npc.getHtmlPath(npcId, 3));
 			html.setFile(player, filename);
 		}
-		else if (val == 24) // 24 - Previous winning numbers/Prize claim
+		else if (value == 24) // 24 - Previous winning numbers/Prize claim
 		{
 			filename = (npc.getHtmlPath(npcId, 4));
 			html.setFile(player, filename);
@@ -305,15 +305,15 @@ public class Loto implements IBypassHandler
 			}
 			html.replace("%result%", message);
 		}
-		else if (val == 25) // 25 - lottery instructions
+		else if (value == 25) // 25 - lottery instructions
 		{
 			filename = (npc.getHtmlPath(npcId, 2));
 			html.setFile(player, filename);
 		}
-		else if (val > 25) // >25 - check lottery ticket by item object id
+		else if (value > 25) // >25 - check lottery ticket by item object id
 		{
 			final int lotonumber = Lottery.getInstance().getId();
-			final ItemInstance item = player.getInventory().getItemByObjectId(val);
+			final ItemInstance item = player.getInventory().getItemByObjectId(value);
 			if ((item == null) || (item.getId() != 4442) || (item.getCustomType1() >= lotonumber))
 			{
 				return;

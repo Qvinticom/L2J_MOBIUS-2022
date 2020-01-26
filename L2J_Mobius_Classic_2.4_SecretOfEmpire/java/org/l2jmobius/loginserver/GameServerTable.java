@@ -563,11 +563,11 @@ public class GameServerTable implements IXmlReader
 		
 		/**
 		 * Sets the age limit.
-		 * @param val the new age limit
+		 * @param value the new age limit
 		 */
-		public void setAgeLimit(int val)
+		public void setAgeLimit(int value)
 		{
-			_ageLimit = val;
+			_ageLimit = value;
 		}
 		
 		/**
@@ -581,11 +581,11 @@ public class GameServerTable implements IXmlReader
 		
 		/**
 		 * Sets the server type.
-		 * @param val the new server type
+		 * @param value the new server type
 		 */
-		public void setServerType(int val)
+		public void setServerType(int value)
 		{
-			_serverType = val;
+			_serverType = value;
 		}
 		
 		/**
@@ -599,11 +599,11 @@ public class GameServerTable implements IXmlReader
 		
 		/**
 		 * Sets the showing brackets.
-		 * @param val the new showing brackets
+		 * @param value the new showing brackets
 		 */
-		public void setShowingBrackets(boolean val)
+		public void setShowingBrackets(boolean value)
 		{
-			_isShowingBrackets = val;
+			_isShowingBrackets = value;
 		}
 		
 		/**

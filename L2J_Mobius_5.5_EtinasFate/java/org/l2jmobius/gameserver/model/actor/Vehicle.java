@@ -60,7 +60,7 @@ public abstract class Vehicle extends Creature
 	{
 		super(template);
 		setInstanceType(InstanceType.Vehicle);
-		setIsFlying(true);
+		setFlying(true);
 	}
 	
 	public boolean isBoat()
@@ -343,7 +343,7 @@ public abstract class Vehicle extends Creature
 			stopMove(null);
 		}
 		
-		setIsTeleporting(true);
+		setTeleporting(true);
 		
 		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		

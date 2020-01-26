@@ -128,11 +128,11 @@ import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import org.l2jmobius.gameserver.model.skills.SkillCastingType;
 import org.l2jmobius.gameserver.model.skills.SkillChannelized;
 import org.l2jmobius.gameserver.model.skills.SkillChannelizer;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.BasicPropertyResist;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.model.stats.MoveType;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneRegion;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -345,7 +345,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			}
 		}
 		
-		setIsInvul(true);
+		setInvul(true);
 	}
 	
 	public EffectList getEffectList()
@@ -588,7 +588,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			return;
 		}
 		spawnMe(getX(), getY(), getZ());
-		setIsTeleporting(false);
+		setTeleporting(false);
 		EventDispatcher.getInstance().notifyEventAsync(new OnCreatureTeleported(this), this);
 	}
 	
@@ -765,7 +765,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		abortCast();
 		setTarget(null);
 		
-		setIsTeleporting(true);
+		setTeleporting(true);
 		
 		getAI().setIntention(AI_INTENTION_ACTIVE);
 		
@@ -1197,8 +1197,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		
 		// H5 Changes: without Polearm Mastery (skill 216) max simultaneous attacks is 3 (1 by default + 2 in skill 3599).
-		int attackCountMax = (int) _stat.getValue(Stats.ATTACK_COUNT_MAX, 1);
-		if ((attackCountMax > 1) && !(_stat.getValue(Stats.PHYSICAL_POLEARM_TARGET_SINGLE, 0) > 0))
+		int attackCountMax = (int) _stat.getValue(Stat.ATTACK_COUNT_MAX, 1);
+		if ((attackCountMax > 1) && !(_stat.getValue(Stat.PHYSICAL_POLEARM_TARGET_SINGLE, 0) > 0))
 		{
 			final double headingAngle = Util.convertHeadingToDegree(getHeading());
 			final int maxRadius = _stat.getPhysicalAttackRadius();
@@ -1592,7 +1592,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			
 			// now reset currentHp to zero
 			setCurrentHp(0);
-			setIsDead(true);
+			setDead(true);
 		}
 		EventDispatcher.getInstance().notifyEvent(new OnCreatureDeath(killer, this), this);
 		EventDispatcher.getInstance().notifyEvent(new OnCreatureKilled(killer, this), killer);
@@ -1701,7 +1701,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		if (!_isTeleporting)
 		{
 			setIsPendingRevive(false);
-			setIsDead(false);
+			setDead(false);
 			
 			if ((Config.RESPAWN_RESTORE_CP > 0) && (_status.getCurrentCp() < (_stat.getMaxCp() * Config.RESPAWN_RESTORE_CP)))
 			{
@@ -1879,7 +1879,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _isDead;
 	}
 	
-	public void setIsDead(boolean value)
+	public void setDead(boolean value)
 	{
 		_isDead = value;
 	}
@@ -1889,7 +1889,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _isImmobilized;
 	}
 	
-	public void setIsImmobilized(boolean value)
+	public void setImmobilized(boolean value)
 	{
 		_isImmobilized = value;
 	}
@@ -1927,7 +1927,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Set the overloaded status of the Creature is overloaded (if True, the PlayerInstance can't take more item).
 	 * @param value
 	 */
-	public void setIsOverloaded(boolean value)
+	public void setOverloaded(boolean value)
 	{
 		_isOverloaded = value;
 	}
@@ -2015,7 +2015,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _isRunning;
 	}
 	
-	private final void setIsRunning(boolean value)
+	private final void setRunning(boolean value)
 	{
 		if (_isRunning == value)
 		{
@@ -2063,7 +2063,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/** Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance. */
 	public void setRunning()
 	{
-		setIsRunning(true);
+		setRunning(true);
 	}
 	
 	public boolean hasBlockActions()
@@ -2086,14 +2086,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _isTeleporting;
 	}
 	
-	public void setIsTeleporting(boolean value)
+	public void setTeleporting(boolean value)
 	{
 		_isTeleporting = value;
 	}
 	
-	public void setIsInvul(boolean b)
+	public void setInvul(boolean value)
 	{
-		_isInvul = b;
+		_isInvul = value;
 	}
 	
 	@Override
@@ -2147,7 +2147,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _isFlying;
 	}
 	
-	public void setIsFlying(boolean mode)
+	public void setFlying(boolean mode)
 	{
 		_isFlying = mode;
 	}
@@ -2280,7 +2280,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public void setWalking()
 	{
-		setIsRunning(false);
+		setRunning(false);
 	}
 	
 	/**
@@ -2532,7 +2532,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		public int geoPathGty;
 	}
 	
-	public void broadcastModifiedStats(Set<Stats> changed)
+	public void broadcastModifiedStats(Set<Stat> changed)
 	{
 		if (!isSpawned())
 		{
@@ -2574,7 +2574,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				info = new UserInfo(getActingPlayer(), false);
 				info.addComponentType(UserInfoType.SLOTS, UserInfoType.ENCHANTLEVEL);
 			}
-			for (Stats stat : changed)
+			for (Stat stat : changed)
 			{
 				if (info != null)
 				{
@@ -4155,7 +4155,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public double getRandomDamageMultiplier()
 	{
-		final int random = (int) _stat.getValue(Stats.RANDOM_DAMAGE);
+		final int random = (int) _stat.getValue(Stat.RANDOM_DAMAGE);
 		return (1 + ((double) Rnd.get(-random, random) / 100));
 	}
 	
@@ -4378,7 +4378,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			// RearDamage effect bonus.
 			if (isBehind(target))
 			{
-				damage *= _stat.getValue(Stats.REAR_DAMAGE_RATE, 1);
+				damage *= _stat.getValue(Stat.REAR_DAMAGE_RATE, 1);
 			}
 			
 			// Counterattacks happen before damage received.
@@ -4387,7 +4387,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				Formulas.calcCounterAttack(this, target, skill, true);
 				
 				// Shield Deflect Magic: Reflect all damage on caster.
-				if (skill.isMagic() && (target.getStat().getValue(Stats.VENGEANCE_SKILL_MAGIC_DAMAGE, 0) > Rnd.get(100)))
+				if (skill.isMagic() && (target.getStat().getValue(Stat.VENGEANCE_SKILL_MAGIC_DAMAGE, 0) > Rnd.get(100)))
 				{
 					reduceCurrentHp(damage, target, skill, isDOT, directlyToHp, critical, true);
 					return;
@@ -4404,7 +4404,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			int reflectedDamage = 0;
 			
 			// Reduce HP of the target and calculate reflection damage to reduce HP of attacker if necessary
-			final double reflectPercent = target.getStat().getValue(Stats.REFLECT_DAMAGE_PERCENT, 0) - getStat().getValue(Stats.REFLECT_DAMAGE_PERCENT_DEFENSE, 0);
+			final double reflectPercent = target.getStat().getValue(Stat.REFLECT_DAMAGE_PERCENT, 0) - getStat().getValue(Stat.REFLECT_DAMAGE_PERCENT_DEFENSE, 0);
 			if (reflectPercent > 0)
 			{
 				reflectedDamage = (int) ((reflectPercent / 100.) * damage);
@@ -4427,8 +4427,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			{
 				if (skill == null) // Classic: Skills counted with the Vampiric Rage effect was introduced on GoD chronicles.
 				{
-					final double absorbHpPercent = getStat().getValue(Stats.ABSORB_DAMAGE_PERCENT, 0) * target.getStat().getValue(Stats.ABSORB_DAMAGE_DEFENCE, 1);
-					if ((absorbHpPercent > 0) && (Rnd.nextDouble() < _stat.getValue(Stats.ABSORB_DAMAGE_CHANCE)))
+					final double absorbHpPercent = getStat().getValue(Stat.ABSORB_DAMAGE_PERCENT, 0) * target.getStat().getValue(Stat.ABSORB_DAMAGE_DEFENCE, 1);
+					if ((absorbHpPercent > 0) && (Rnd.nextDouble() < _stat.getValue(Stat.ABSORB_DAMAGE_CHANCE)))
 					{
 						int absorbDamage = (int) Math.min(absorbHpPercent * damage, _stat.getMaxRecoverableHp() - _status.getCurrentHp());
 						absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
@@ -4447,7 +4447,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				{
 					if (Rnd.get(10) < 3) // Classic: Static 30% change.
 					{
-						final double absorbMpPercent = _stat.getValue(Stats.ABSORB_MANA_DAMAGE_PERCENT, 0);
+						final double absorbMpPercent = _stat.getValue(Stat.ABSORB_MANA_DAMAGE_PERCENT, 0);
 						if (absorbMpPercent > 0)
 						{
 							int absorbDamage = (int) Math.min((absorbMpPercent / 100.) * damage, _stat.getMaxRecoverableMp() - _status.getCurrentMp());
@@ -4501,7 +4501,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			}
 		}
 		
-		final double damageCap = _stat.getValue(Stats.DAMAGE_LIMIT);
+		final double damageCap = _stat.getValue(Stat.DAMAGE_LIMIT);
 		if (damageCap > 0)
 		{
 			value = Math.min(value, damageCap);
@@ -4512,11 +4512,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			if (attacker.isPlayable())
 			{
-				value *= (100 + _stat.getValue(Stats.PVP_DAMAGE_TAKEN)) / 100;
+				value *= (100 + _stat.getValue(Stat.PVP_DAMAGE_TAKEN)) / 100;
 			}
 			else
 			{
-				value *= (100 + _stat.getValue(Stats.PVE_DAMAGE_TAKEN)) / 100;
+				value *= (100 + _stat.getValue(Stat.PVE_DAMAGE_TAKEN)) / 100;
 			}
 		}
 		
@@ -4629,8 +4629,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			// Weight Limit = (CON Modifier*69000) * Skills
 			// Source http://l2p.bravehost.com/weightlimit.html (May 2007)
-			final double baseLoad = Math.floor(BaseStats.CON.calcBonus(this) * 69000 * Config.ALT_WEIGHT_LIMIT);
-			return (int) _stat.getValue(Stats.WEIGHT_LIMIT, baseLoad);
+			final double baseLoad = Math.floor(BaseStat.CON.calcBonus(this) * 69000 * Config.ALT_WEIGHT_LIMIT);
+			return (int) _stat.getValue(Stat.WEIGHT_LIMIT, baseLoad);
 		}
 		return 0;
 	}
@@ -4639,7 +4639,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	{
 		if (isPlayer() || isPet())
 		{
-			return (int) _stat.getValue(Stats.WEIGHT_PENALTY, 1);
+			return (int) _stat.getValue(Stat.WEIGHT_PENALTY, 1);
 		}
 		return 0;
 	}
@@ -4694,9 +4694,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		abortAttack();
 	}
 	
-	public void disableCoreAI(boolean val)
+	public void disableCoreAI(boolean value)
 	{
-		_AIdisabled = val;
+		_AIdisabled = value;
 	}
 	
 	public boolean isCoreAIDisabled()
@@ -4764,9 +4764,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		_exceptions = masks;
 	}
 	
-	public void setLethalable(boolean val)
+	public void setLethalable(boolean value)
 	{
-		_lethalable = val;
+		_lethalable = value;
 	}
 	
 	public boolean isLethalable()
@@ -4815,9 +4815,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	/**
 	 * Dummy method overriden in {@link PlayerInstance}
-	 * @param val
+	 * @param value
 	 */
-	public void setCanRevive(boolean val)
+	public void setCanRevive(boolean value)
 	{
 	}
 	

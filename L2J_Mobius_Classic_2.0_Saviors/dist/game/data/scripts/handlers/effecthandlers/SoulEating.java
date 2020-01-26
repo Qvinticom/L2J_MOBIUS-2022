@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayableExpC
 import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExSpawnEmitter;
 
@@ -67,7 +67,7 @@ public class SoulEating extends AbstractEffect
 	@Override
 	public void pump(Creature effected, Skill skill)
 	{
-		effected.getStat().mergeAdd(Stats.MAX_SOULS, _maxSouls);
+		effected.getStat().mergeAdd(Stat.MAX_SOULS, _maxSouls);
 	}
 	
 	private void onExperienceReceived(Playable playable, long exp)
@@ -76,7 +76,7 @@ public class SoulEating extends AbstractEffect
 		if (playable.isPlayer() && (exp >= _expNeeded))
 		{
 			final PlayerInstance player = playable.getActingPlayer();
-			final int maxSouls = (int) player.getStat().getValue(Stats.MAX_SOULS, 0);
+			final int maxSouls = (int) player.getStat().getValue(Stat.MAX_SOULS, 0);
 			if (player.getChargedSouls() >= maxSouls)
 			{
 				playable.sendPacket(SystemMessageId.SOUL_CANNOT_BE_ABSORBED_ANYMORE);

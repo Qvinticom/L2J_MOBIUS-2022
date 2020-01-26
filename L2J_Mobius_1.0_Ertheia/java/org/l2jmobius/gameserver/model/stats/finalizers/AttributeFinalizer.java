@@ -23,13 +23,13 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.stats.IStatsFunction;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.IStatFunction;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author UnAfraid
  */
-public class AttributeFinalizer implements IStatsFunction
+public class AttributeFinalizer implements IStatFunction
 {
 	private final AttributeType _type;
 	private final boolean _isWeapon;
@@ -41,7 +41,7 @@ public class AttributeFinalizer implements IStatsFunction
 	}
 	
 	@Override
-	public double calc(Creature creature, OptionalDouble base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stat stat)
 	{
 		throwIfPresent(base);
 		
@@ -88,6 +88,6 @@ public class AttributeFinalizer implements IStatsFunction
 				}
 			}
 		}
-		return Stats.defaultValue(creature, stat, baseValue);
+		return Stat.defaultValue(creature, stat, baseValue);
 	}
 }

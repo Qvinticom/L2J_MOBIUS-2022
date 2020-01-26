@@ -101,7 +101,7 @@ public class SelMahumSquad extends AbstractNpcAI
 			{
 				if (npc.isMonster())
 				{
-					npc.setIsInvul(false);
+					npc.setInvul(false);
 					npc.getVariables().remove("INVUL_REMOVE_TIMER_STARTED");
 					if ((player != null) && !player.isDead() && npc.isInSurroundingRegion(player))
 					{
@@ -114,7 +114,7 @@ public class SelMahumSquad extends AbstractNpcAI
 			{
 				if (!npc.isDead())
 				{
-					npc.setIsInvul(true);
+					npc.setInvul(true);
 				}
 				break;
 			}
@@ -341,7 +341,7 @@ public class SelMahumSquad extends AbstractNpcAI
 	{
 		if (npc.getId() == CHEF)
 		{
-			npc.setIsInvul(false);
+			npc.setInvul(false);
 		}
 		else if (npc.getId() == FIRE)
 		{

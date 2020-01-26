@@ -111,17 +111,17 @@ public class VillageMasterInstance extends NpcInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
 		
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
 		}
 		else
 		{
-			pom = npcId + "-" + val;
+			pom = npcId + "-" + value;
 		}
 		
 		return "data/html/villagemaster/" + pom + ".htm";

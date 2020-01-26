@@ -122,9 +122,9 @@ public class ClassMasterInstance extends NpcInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
-		return "data/html/classmaster/" + val + ".htm";
+		return "data/html/classmaster/" + value + ".htm";
 	}
 	
 	@Override
@@ -141,9 +141,9 @@ public class ClassMasterInstance extends NpcInstance
 		}
 	}
 	
-	private void changeClass(PlayerInstance player, int val)
+	private void changeClass(PlayerInstance player, int value)
 	{
-		player.setClassId(val);
+		player.setClassId(value);
 		final UserInfo ui = new UserInfo(player);
 		player.sendPacket(ui);
 		final CharInfo info = new CharInfo(player);

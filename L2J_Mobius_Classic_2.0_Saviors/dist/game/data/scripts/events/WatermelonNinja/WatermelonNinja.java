@@ -501,11 +501,11 @@ public class WatermelonNinja extends LongTimeEvent
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		npc.setIsImmobilized(true);
+		npc.setImmobilized(true);
 		npc.disableCoreAI(true);
 		if (LARGE_SQUASH_LIST.contains(npc.getId()))
 		{
-			npc.setIsInvul(true);
+			npc.setInvul(true);
 		}
 		return null;
 	}
@@ -518,13 +518,13 @@ public class WatermelonNinja extends LongTimeEvent
 			if ((attacker.getActiveWeaponItem() != null) && CHRONO_LIST.contains(attacker.getActiveWeaponItem().getId()))
 			{
 				ChronoText(npc);
-				npc.setIsInvul(false);
+				npc.setInvul(false);
 				npc.getStatus().reduceHp(10, attacker);
 			}
 			else
 			{
 				noChronoText(npc);
-				npc.setIsInvul(true);
+				npc.setInvul(true);
 			}
 		}
 		

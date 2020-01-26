@@ -2861,9 +2861,9 @@ public class Quest extends AbstractScript implements IIdentifiable
 		return super.unload();
 	}
 	
-	public void setOnEnterWorld(boolean state)
+	public void setOnEnterWorld(boolean value)
 	{
-		if (state)
+		if (value)
 		{
 			setPlayerLoginId(event -> notifyEnterWorld(event.getPlayer()));
 		}
@@ -2876,11 +2876,11 @@ public class Quest extends AbstractScript implements IIdentifiable
 	/**
 	 * If a quest is set as custom, it will display it's name in the NPC Quest List.<br>
 	 * Retail quests are unhardcoded to display the name using a client string.
-	 * @param val if {@code true} the quest script will be set as custom quest.
+	 * @param value if {@code true} the quest script will be set as custom quest.
 	 */
-	public void setIsCustom(boolean val)
+	public void setCustom(boolean value)
 	{
-		_isCustom = val;
+		_isCustom = value;
 	}
 	
 	/**

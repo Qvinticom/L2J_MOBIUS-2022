@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Env;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -41,7 +41,7 @@ final class EffectCancel extends Effect
 	@Override
 	public void onStart()
 	{
-		final int landrate = (int) getEffector().calcStat(Stats.CANCEL_VULN, 90, getEffected(), null);
+		final int landrate = (int) getEffector().calcStat(Stat.CANCEL_VULN, 90, getEffected(), null);
 		if (Rnd.get(100) < landrate)
 		{
 			final Effect[] effects = getEffected().getAllEffects();

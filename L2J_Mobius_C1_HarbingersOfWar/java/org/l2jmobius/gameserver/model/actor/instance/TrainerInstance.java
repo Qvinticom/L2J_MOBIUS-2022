@@ -31,10 +31,10 @@ public class TrainerInstance extends NpcInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		pom = val == 0 ? "" + npcId : npcId + "-" + val;
+		pom = value == 0 ? "" + npcId : npcId + "-" + value;
 		return "data/html/trainer/" + pom + ".htm";
 	}
 	

@@ -84,6 +84,7 @@ public class ControllableMobInstance extends MonsterInstance
 		return _isInvul;
 	}
 	
+	@Override
 	public void setInvul(boolean isInvul)
 	{
 		_isInvul = isInvul;

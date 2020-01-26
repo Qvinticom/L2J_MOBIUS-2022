@@ -341,9 +341,9 @@ public class Attackable extends NpcInstance
 		return _active;
 	}
 	
-	public void setActive(boolean b)
+	public void setActive(boolean value)
 	{
-		_active = b;
+		_active = value;
 	}
 	
 	// public void setMoveRadius(int i)

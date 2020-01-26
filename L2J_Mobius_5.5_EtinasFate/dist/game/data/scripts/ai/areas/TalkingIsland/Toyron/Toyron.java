@@ -68,7 +68,7 @@ public class Toyron extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		npc.setIsInvul(true);
+		npc.setInvul(true);
 		return super.onSpawn(npc);
 	}
 	

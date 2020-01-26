@@ -71,12 +71,12 @@ public class SendBypassBuildCmd extends ClientBasePacket
 			{
 				if (activeChar.isInvul())
 				{
-					activeChar.setIsInvul(false);
+					activeChar.setInvul(false);
 					activeChar.sendMessage("Your status is set back to mortal.");
 				}
 				else
 				{
-					activeChar.setIsInvul(true);
+					activeChar.setInvul(true);
 					activeChar.sendMessage("You are now Invulnerable.");
 				}
 			}

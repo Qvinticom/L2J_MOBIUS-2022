@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class HateAttack extends AbstractStatPercentEffect
 {
 	public HateAttack(StatsSet params)
 	{
-		super(params, Stats.HATE_ATTACK);
+		super(params, Stat.HATE_ATTACK);
 	}
 }

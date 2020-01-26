@@ -150,7 +150,7 @@ public class Orfen extends Quest
 					break;
 				}
 				double hp = -1;
-				if ((npc.getNpcId() == ORFEN) && !npc.getSpawn().is_customBossInstance())
+				if ((npc.getNpcId() == ORFEN) && !npc.getSpawn().isCustomBossInstance())
 				{
 					hp = GrandBossManager.getInstance().getStatsSet(ORFEN).getDouble("currentHP");
 					if (hp < npc.getCurrentHp())
@@ -237,7 +237,7 @@ public class Orfen extends Quest
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
 			
-			if (!npc.getSpawn().is_customBossInstance())
+			if (!npc.getSpawn().isCustomBossInstance())
 			{
 				GrandBossManager.getInstance().setBossStatus(ORFEN, DEAD);
 				// time is 48hour +/- 20hour

@@ -324,7 +324,7 @@ public class Spawn
 	/**
 	 * @return the _customBossInstance
 	 */
-	public boolean is_customBossInstance()
+	public boolean isCustomBossInstance()
 	{
 		return _customBossInstance;
 	}
@@ -332,7 +332,7 @@ public class Spawn
 	/**
 	 * @param customBossInstance the _customBossInstance to set
 	 */
-	public void set_customBossInstance(boolean customBossInstance)
+	public void setCustomBossInstance(boolean customBossInstance)
 	{
 		_customBossInstance = customBossInstance;
 	}

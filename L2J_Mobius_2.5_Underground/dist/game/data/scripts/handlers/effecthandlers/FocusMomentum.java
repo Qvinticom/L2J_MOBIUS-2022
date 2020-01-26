@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -58,7 +58,7 @@ public class FocusMomentum extends AbstractEffect
 		
 		final PlayerInstance player = effected.getActingPlayer();
 		final int currentCharges = player.getCharges();
-		final int maxCharges = Math.min(_maxCharges, (int) effected.getStat().getValue(Stats.MAX_MOMENTUM, 0));
+		final int maxCharges = Math.min(_maxCharges, (int) effected.getStat().getValue(Stat.MAX_MOMENTUM, 0));
 		
 		if (currentCharges >= maxCharges)
 		{

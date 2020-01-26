@@ -30,11 +30,11 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerCanEscape extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
-	public ConditionPlayerCanEscape(boolean val)
+	public ConditionPlayerCanEscape(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
@@ -74,6 +74,6 @@ public class ConditionPlayerCanEscape extends Condition
 		{
 			canTeleport = false;
 		}
-		return _val == canTeleport;
+		return _value == canTeleport;
 	}
 }

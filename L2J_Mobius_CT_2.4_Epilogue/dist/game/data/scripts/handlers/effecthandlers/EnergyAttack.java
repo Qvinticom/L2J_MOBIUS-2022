@@ -28,9 +28,9 @@ import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.Formulas;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * Energy Attack effect implementation.
@@ -139,18 +139,18 @@ public class EnergyAttack extends AbstractEffect
 			
 			if (target.isPlayer())
 			{
-				defence *= target.getStat().calcStat(Stats.PVP_PHYS_SKILL_DEF, 1.0);
+				defence *= target.getStat().calcStat(Stat.PVP_PHYS_SKILL_DEF, 1.0);
 			}
 			
 			damage = attack / defence;
 			damage *= damageMultiplier;
 			if (target.isPlayer())
 			{
-				damage *= attacker.getStat().calcStat(Stats.PVP_PHYS_SKILL_DMG, 1.0);
-				damage = attacker.getStat().calcStat(Stats.PHYSICAL_SKILL_POWER, damage);
+				damage *= attacker.getStat().calcStat(Stat.PVP_PHYS_SKILL_DMG, 1.0);
+				damage = attacker.getStat().calcStat(Stat.PHYSICAL_SKILL_POWER, damage);
 			}
 			
-			critical = (BaseStats.STR.calcBonus(attacker) * _criticalChance) > (Rnd.nextDouble() * 100);
+			critical = (BaseStat.STR.calcBonus(attacker) * _criticalChance) > (Rnd.nextDouble() * 100);
 			if (critical)
 			{
 				damage *= 2;

@@ -54,7 +54,7 @@ public class ClanHallManagerInstance extends FolkInstance
 	private int _clanHallId = -1;
 	
 	/**
-	 * Instantiates a new l2 clan hall manager instance.
+	 * Instantiates a new clan hall manager instance.
 	 * @param objectId the object id
 	 * @param template the template
 	 */
@@ -1047,11 +1047,11 @@ public class ClanHallManagerInstance extends FolkInstance
 	/**
 	 * Do teleport.
 	 * @param player the player
-	 * @param val the val
+	 * @param value the value
 	 */
-	private void doTeleport(PlayerInstance player, int val)
+	private void doTeleport(PlayerInstance player, int value)
 	{
-		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
+		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(value);
 		if (list != null)
 		{
 			// you cannot teleport to village that is in siege Not sure about this one though
@@ -1067,7 +1067,7 @@ public class ClanHallManagerInstance extends FolkInstance
 		}
 		else
 		{
-			LOGGER.warning("No teleport destination with id:" + val);
+			LOGGER.warning("No teleport destination with id:" + value);
 		}
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
@@ -1075,20 +1075,20 @@ public class ClanHallManagerInstance extends FolkInstance
 	/**
 	 * Show buy window.
 	 * @param player the player
-	 * @param val the val
+	 * @param value the value
 	 */
-	private void showBuyWindow(PlayerInstance player, int val)
+	private void showBuyWindow(PlayerInstance player, int value)
 	{
 		double taxRate = 0;
 		
-		if (getIsInTown())
+		if (isInTown())
 		{
 			taxRate = getCastle().getTaxRate();
 		}
 		
 		player.tempInvetoryDisable();
 		
-		final StoreTradeList list = TradeController.getInstance().getBuyList(val);
+		final StoreTradeList list = TradeController.getInstance().getBuyList(value);
 		
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 		{
@@ -1098,7 +1098,7 @@ public class ClanHallManagerInstance extends FolkInstance
 		else
 		{
 			LOGGER.warning("possible client hacker: " + player.getName() + " attempting to buy from GM shop! (PledgeHallManagerInstance)");
-			LOGGER.warning("buylist id:" + val);
+			LOGGER.warning("buylist id:" + value);
 		}
 		
 		player.sendPacket(ActionFailed.STATIC_PACKET);

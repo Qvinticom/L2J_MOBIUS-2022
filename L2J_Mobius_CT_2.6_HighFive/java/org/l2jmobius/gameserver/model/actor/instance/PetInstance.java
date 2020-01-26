@@ -883,7 +883,7 @@ public class PetInstance extends Summon
 				pet.getStatus().setCurrentCp(pet.getMaxCp());
 				if (rs.getDouble("curHp") < 1)
 				{
-					pet.setIsDead(true);
+					pet.setDead(true);
 					pet.stopHpMpRegeneration();
 				}
 				
@@ -899,9 +899,9 @@ public class PetInstance extends Summon
 	}
 	
 	@Override
-	public void setRestoreSummon(boolean val)
+	public void setRestoreSummon(boolean value)
 	{
-		_restoreSummon = val;
+		_restoreSummon = value;
 	}
 	
 	@Override
@@ -1255,22 +1255,22 @@ public class PetInstance extends Summon
 				if (newWeightPenalty > 0)
 				{
 					addSkill(SkillData.getInstance().getSkill(4270, newWeightPenalty));
-					setIsOverloaded(getCurrentLoad() >= maxLoad);
+					setOverloaded(getCurrentLoad() >= maxLoad);
 				}
 				else
 				{
 					removeSkill(getKnownSkill(4270), true);
-					setIsOverloaded(false);
+					setOverloaded(false);
 				}
 			}
 		}
 	}
 	
 	@Override
-	public void updateAndBroadcastStatus(int val)
+	public void updateAndBroadcastStatus(int value)
 	{
 		refreshOverloaded();
-		super.updateAndBroadcastStatus(val);
+		super.updateAndBroadcastStatus(value);
 	}
 	
 	@Override

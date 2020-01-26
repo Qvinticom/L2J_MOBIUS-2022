@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.events.listeners.FunctionEventListener;
 import org.l2jmobius.gameserver.model.events.returns.DamageReturn;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -33,7 +33,7 @@ public class SphericBarrier extends AbstractStatAddEffect
 {
 	public SphericBarrier(StatsSet params)
 	{
-		super(params, Stats.SPHERIC_BARRIER_RANGE);
+		super(params, Stat.SPHERIC_BARRIER_RANGE);
 	}
 	
 	@Override

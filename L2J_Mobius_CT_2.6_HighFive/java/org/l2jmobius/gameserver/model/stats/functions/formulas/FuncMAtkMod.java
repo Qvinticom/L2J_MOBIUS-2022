@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.model.stats.functions.formulas;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 
 /**
@@ -36,14 +36,14 @@ public class FuncMAtkMod extends AbstractFunction
 	
 	private FuncMAtkMod()
 	{
-		super(Stats.MAGIC_ATTACK, 1, null, 0, null);
+		super(Stat.MAGIC_ATTACK, 1, null, 0, null);
 	}
 	
 	@Override
 	public double calc(Creature effector, Creature effected, Skill skill, double initVal)
 	{
 		// Level Modifier^2 * INT Modifier^2
-		final double lvlMod = effector.isPlayer() ? BaseStats.INT.calcBonus(effector.getActingPlayer()) : BaseStats.INT.calcBonus(effector);
+		final double lvlMod = effector.isPlayer() ? BaseStat.INT.calcBonus(effector.getActingPlayer()) : BaseStat.INT.calcBonus(effector);
 		final double intMod = effector.isPlayer() ? effector.getActingPlayer().getLevelMod() : effector.getLevelMod();
 		return initVal * Math.pow(lvlMod, 2) * Math.pow(intMod, 2);
 	}

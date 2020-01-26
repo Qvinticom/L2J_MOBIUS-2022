@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.skills.funcs;
 
 import org.l2jmobius.gameserver.model.skills.Env;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 
 /**
  * @author ProGramMoS
@@ -26,7 +26,7 @@ public class FuncBaseMul extends Func
 {
 	private final Lambda _lambda;
 	
-	public FuncBaseMul(Stats pStat, int pOrder, Object owner, Lambda lambda)
+	public FuncBaseMul(Stat pStat, int pOrder, Object owner, Lambda lambda)
 	{
 		super(pStat, pOrder, owner);
 		_lambda = lambda;

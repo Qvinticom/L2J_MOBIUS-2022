@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.FuncAdd;
 import org.l2jmobius.gameserver.model.stats.functions.FuncMul;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -78,7 +78,7 @@ public class MaxHp extends AbstractEffect
 				case DIFF:
 				{
 					
-					charStat.getActiveChar().addStatFunc(new FuncAdd(Stats.MAX_HP, 1, this, _power, null));
+					charStat.getActiveChar().addStatFunc(new FuncAdd(Stat.MAX_HP, 1, this, _power, null));
 					if (_heal)
 					{
 						effected.setCurrentHp((currentHp + _power));
@@ -88,7 +88,7 @@ public class MaxHp extends AbstractEffect
 				case PER:
 				{
 					final double maxHp = effected.getMaxHp();
-					charStat.getActiveChar().addStatFunc(new FuncMul(Stats.MAX_HP, 1, this, _power, null));
+					charStat.getActiveChar().addStatFunc(new FuncMul(Stat.MAX_HP, 1, this, _power, null));
 					if (_heal)
 					{
 						amount = (_power - 1) * maxHp;

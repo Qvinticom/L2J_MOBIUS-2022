@@ -182,7 +182,7 @@ public class DoorInstance extends Creature
 	}
 	
 	/**
-	 * Instantiates a new l2 door instance.
+	 * Instantiates a new door instance.
 	 * @param objectId the object id
 	 * @param template the template
 	 * @param doorId the door id
@@ -418,8 +418,8 @@ public class DoorInstance extends Creature
 		}
 		
 		final Clan clan = player.getClan();
-		final boolean isCastle = (getCastle() != null) && (getCastle().getCastleId() > 0) && getCastle().getSiege().getIsInProgress() && getCastle().getSiege().checkIsAttacker(clan);
-		final boolean isFort = (getFort() != null) && (getFort().getFortId() > 0) && getFort().getSiege().getIsInProgress() && getFort().getSiege().checkIsAttacker(clan);
+		final boolean isCastle = (getCastle() != null) && (getCastle().getCastleId() > 0) && getCastle().getSiege().isInProgress() && getCastle().getSiege().checkIsAttacker(clan);
+		final boolean isFort = (getFort() != null) && (getFort().getFortId() > 0) && getFort().getSiege().isInProgress() && getFort().getSiege().checkIsAttacker(clan);
 		if (isFort)
 		{
 			if ((clan != null) && (clan == getFort().getOwnerClan()))
@@ -434,7 +434,7 @@ public class DoorInstance extends Creature
 				return false;
 			}
 		}
-		return isCastle || isFort || DevastatedCastle.getInstance().getIsInProgress();
+		return isCastle || isFort || DevastatedCastle.getInstance().isInProgress();
 	}
 	
 	/**
@@ -908,8 +908,8 @@ public class DoorInstance extends Creature
 			return false;
 		}
 		
-		final boolean isFort = ((getFort() != null) && (getFort().getFortId() > 0) && getFort().getSiege().getIsInProgress());
-		final boolean isCastle = ((getCastle() != null) && (getCastle().getCastleId() > 0) && getCastle().getSiege().getIsInProgress());
+		final boolean isFort = ((getFort() != null) && (getFort().getFortId() > 0) && getFort().getSiege().isInProgress());
+		final boolean isCastle = ((getCastle() != null) && (getCastle().getCastleId() > 0) && getCastle().getSiege().isInProgress());
 		
 		if (isFort || isCastle)
 		{

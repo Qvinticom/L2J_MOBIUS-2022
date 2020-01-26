@@ -61,14 +61,14 @@ public class SeedProduction
 		_amount.set(amount);
 	}
 	
-	public boolean decreaseAmount(long val)
+	public boolean decreaseAmount(long value)
 	{
 		long current;
 		long next;
 		do
 		{
 			current = _amount.get();
-			next = current - val;
+			next = current - value;
 			if (next < 0)
 			{
 				return false;

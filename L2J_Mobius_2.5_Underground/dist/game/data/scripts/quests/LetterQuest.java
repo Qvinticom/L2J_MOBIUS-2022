@@ -103,11 +103,11 @@ public abstract class LetterQuest extends Quest
 	
 	/**
 	 * Sets if quest is only for Ertheia characters or not.
-	 * @param val {@code true} means {@code Race.ERTHEIA}, {@code false} means other
+	 * @param value {@code true} means {@code Race.ERTHEIA}, {@code false} means other
 	 */
-	public void setIsErtheiaQuest(boolean val)
+	public void setIsErtheiaQuest(boolean value)
 	{
-		if (val)
+		if (value)
 		{
 			addCondRace(Race.ERTHEIA, "");
 			_startMessage = NpcStringId.QUEEN_NAVARI_HAS_SENT_A_LETTER_NCLICK_THE_QUESTION_MARK_ICON_TO_READ;

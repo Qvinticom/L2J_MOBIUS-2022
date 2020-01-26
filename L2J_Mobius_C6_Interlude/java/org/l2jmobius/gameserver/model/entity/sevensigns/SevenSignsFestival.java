@@ -4464,7 +4464,7 @@ public class SevenSignsFestival implements SpawnListener
 		private final Map<PlayerInstance, FestivalSpawn> _originalLocations;
 		
 		/**
-		 * Instantiates a new l2 darkness festival.
+		 * Instantiates a new darkness festival.
 		 * @param cabal the cabal
 		 * @param levelRange the level range
 		 */

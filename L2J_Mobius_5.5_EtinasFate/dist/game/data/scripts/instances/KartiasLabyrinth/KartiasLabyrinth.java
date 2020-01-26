@@ -549,12 +549,12 @@ public class KartiasLabyrinth extends AbstractInstance
 				((Attackable) npc).setCanReturnToSpawnPoint(false);
 				npc.setRandomWalking(false);
 				npc.setTargetable(false);
-				npc.setIsInvul(true);
+				npc.setInvul(true);
 			}
 			else if (CommonUtil.contains(MONSTERS, npc.getId()) || CommonUtil.contains(MINI_BOSSES, npc.getId()))
 			{
 				npc.setTargetable(false);
-				npc.setIsInvul(true);
+				npc.setInvul(true);
 			}
 		}
 		return super.onSpawn(npc);
@@ -815,7 +815,7 @@ public class KartiasLabyrinth extends AbstractInstance
 						{
 							npc.stopSkillEffects(BOSS_STONE.getSkill());
 							npc.setTargetable(true);
-							npc.setIsInvul(false);
+							npc.setInvul(false);
 							final Location loc = instance.getTemplateParameters().getLocation("middlePointRoom3");
 							final Location moveTo = new Location(loc.getX() + getRandom(-200, 200), loc.getY() + getRandom(-200, 200), loc.getZ());
 							addMoveToDesire(npc, moveTo, 23);
@@ -844,7 +844,7 @@ public class KartiasLabyrinth extends AbstractInstance
 					{
 						npc.stopSkillEffects(BOSS_STONE.getSkill());
 						npc.setTargetable(true);
-						npc.setIsInvul(false);
+						npc.setInvul(false);
 						npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.THE_RITUAL_IS_COMPLETE_NOW_I_WILL_SHOW_YOU_HELL);
 						final Location loc = instance.getTemplateParameters().getLocation("middlePointRoom3");
 						final Location moveTo = new Location(loc.getX() + getRandom(-200, 200), loc.getY() + getRandom(-200, 200), loc.getZ());
@@ -892,7 +892,7 @@ public class KartiasLabyrinth extends AbstractInstance
 			if ((distance < 450) && !CommonUtil.contains(PRISONERS, creature.getId()))
 			{
 				npc.setTargetable(true);
-				npc.setIsInvul(false);
+				npc.setInvul(false);
 				npc.setScriptValue(1);
 				WalkingManager.getInstance().cancelMoving(npc);
 				((MonsterInstance) npc).addDamageHate(creature, 0, 1000);

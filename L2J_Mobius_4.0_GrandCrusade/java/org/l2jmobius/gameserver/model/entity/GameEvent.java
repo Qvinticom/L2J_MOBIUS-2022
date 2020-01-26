@@ -175,7 +175,7 @@ public class GameEvent
 			spawn.getLastSpawn().setCurrentHp(999999999);
 			spawn.getLastSpawn().setTitle(_eventName);
 			spawn.getLastSpawn().getVariables().set("eventmob", true);
-			spawn.getLastSpawn().setIsInvul(true);
+			spawn.getLastSpawn().setInvul(true);
 			// spawn.getLastSpawn().decayMe();
 			// spawn.getLastSpawn().spawnMe(spawn.getLastSpawn().getX(), spawn.getLastSpawn().getY(), spawn.getLastSpawn().getZ());
 			

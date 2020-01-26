@@ -106,19 +106,19 @@ public class GuardInstance extends Attackable
 	 * <li>if page number > 0 : <B>data/html/guard/12006-1.htm</B> (npcId-page number)</li>
 	 * </ul>
 	 * @param npcId The Identifier of the NpcInstance whose text must be display
-	 * @param val The number of the page to display
+	 * @param value The number of the page to display
 	 */
 	@Override
-	public String getHtmlPath(int npcId, int val, PlayerInstance player)
+	public String getHtmlPath(int npcId, int value, PlayerInstance player)
 	{
 		String pom = "";
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
 		}
 		else
 		{
-			pom = npcId + "-" + val;
+			pom = npcId + "-" + value;
 		}
 		return "data/html/guard/" + pom + ".htm";
 	}

@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class AreaDamage extends AbstractStatAddEffect
 {
 	public AreaDamage(StatsSet params)
 	{
-		super(params, Stats.DAMAGE_ZONE_VULN);
+		super(params, Stat.DAMAGE_ZONE_VULN);
 	}
 }

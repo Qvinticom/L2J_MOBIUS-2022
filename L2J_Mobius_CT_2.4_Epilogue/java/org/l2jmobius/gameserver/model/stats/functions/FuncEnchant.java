@@ -23,11 +23,11 @@ import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 public class FuncEnchant extends AbstractFunction
 {
-	public FuncEnchant(Stats stat, int order, Object owner, double value, Condition applayCond)
+	public FuncEnchant(Stat stat, int order, Object owner, double value, Condition applayCond)
 	{
 		super(stat, order, owner, value, applayCond);
 	}
@@ -68,12 +68,12 @@ public class FuncEnchant extends AbstractFunction
 			}
 		}
 		
-		if ((getStat() == Stats.MAGIC_DEFENCE) || (getStat() == Stats.POWER_DEFENCE))
+		if ((getStat() == Stat.MAGIC_DEFENCE) || (getStat() == Stat.POWER_DEFENCE))
 		{
 			return value + enchant + (3 * overenchant);
 		}
 		
-		if (getStat() == Stats.MAGIC_ATTACK)
+		if (getStat() == Stat.MAGIC_ATTACK)
 		{
 			switch (item.getItem().getCrystalTypePlus())
 			{

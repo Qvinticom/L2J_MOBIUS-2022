@@ -20,17 +20,17 @@ import java.util.OptionalDouble;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.IStatsFunction;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.IStatFunction;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author UnAfraid
  */
-public class MaxCpFinalizer implements IStatsFunction
+public class MaxCpFinalizer implements IStatFunction
 {
 	@Override
-	public double calc(Creature creature, OptionalDouble base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stat stat)
 	{
 		throwIfPresent(base);
 		
@@ -40,8 +40,8 @@ public class MaxCpFinalizer implements IStatsFunction
 		{
 			baseValue = player.getTemplate().getBaseCpMax(player.getLevel());
 		}
-		final double conBonus = creature.getCON() > 0 ? BaseStats.CON.calcBonus(creature) : 1.;
+		final double conBonus = creature.getCON() > 0 ? BaseStat.CON.calcBonus(creature) : 1.;
 		baseValue *= conBonus;
-		return Stats.defaultValue(creature, stat, baseValue);
+		return Stat.defaultValue(creature, stat, baseValue);
 	}
 }

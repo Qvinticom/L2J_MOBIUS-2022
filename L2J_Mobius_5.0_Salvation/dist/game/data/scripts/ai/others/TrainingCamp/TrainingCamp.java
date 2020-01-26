@@ -107,10 +107,10 @@ public class TrainingCamp extends AbstractNpcAI
 						player.disableAutoShotsAll();
 						player.setLastLocation();
 						player.disableAllSkills();
-						player.setIsInvul(true);
+						player.setInvul(true);
 						player.setInvisible(true);
 						player.teleToLocation(TRAINING_LOCATION);
-						player.setIsImmobilized(true);
+						player.setImmobilized(true);
 						// @Sdw: Here we are supposed to send ExUserInfoEquipSlot with a fake equip of a SLS, feels ugly to me, not doing it.
 						player.setTraingCampInfo(new TrainingHolder(player.getObjectId(), player.getClassIndex(), player.getLevel(), System.currentTimeMillis(), -1));
 						final long timeRemaining = Config.TRAINING_CAMP_MAX_DURATION - trainingCampDuration;
@@ -207,9 +207,9 @@ public class TrainingCamp extends AbstractNpcAI
 					holder.setEndTime(System.currentTimeMillis());
 					player.setTraingCampInfo(holder);
 					player.enableAllSkills();
-					player.setIsInvul(false);
+					player.setInvul(false);
 					player.setInvisible(false);
-					player.setIsImmobilized(false);
+					player.setImmobilized(false);
 					player.teleToLocation(player.getLastLocation());
 					player.unsetLastLocation();
 					player.sendPacket(ExTrainingZone_Leaving.STATIC_PACKET);
@@ -318,10 +318,10 @@ public class TrainingCamp extends AbstractNpcAI
 			{
 				player.setLastLocation();
 				player.disableAllSkills();
-				player.setIsInvul(true);
+				player.setInvul(true);
 				player.setInvisible(true);
 				player.teleToLocation(TRAINING_LOCATION);
-				player.setIsImmobilized(true);
+				player.setImmobilized(true);
 				final long remainingDuration = remainingPlayerTime - elapsedTime;
 				player.sendPacket(new ExTrainingZone_Admission(holder.getLevel(), TimeUnit.SECONDS.toMinutes(elapsedTime), remainingDuration));
 				startQuestTimer("finish", TimeUnit.SECONDS.toMillis(remainingDuration), null, player);

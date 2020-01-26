@@ -232,8 +232,8 @@ public class TarBeetleSpawn implements IXmlReader
 						final Npc npc = spawn.doSpawn();
 						spawn.stopRespawn();
 						npc.setRandomWalking(false);
-						npc.setIsImmobilized(true);
-						npc.setIsInvul(true);
+						npc.setImmobilized(true);
+						npc.setInvul(true);
 						npc.disableCoreAI(true);
 						npc.setScriptValue(5);
 						npc.getVariables().set("zoneIndex", _index);

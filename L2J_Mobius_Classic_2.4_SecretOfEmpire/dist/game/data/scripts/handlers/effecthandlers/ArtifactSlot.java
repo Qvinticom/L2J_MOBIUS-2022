@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author hlwrave
@@ -26,6 +26,6 @@ public class ArtifactSlot extends AbstractStatAddEffect
 {
 	public ArtifactSlot(StatsSet params)
 	{
-		super(params, Stats.ARTIFACT_SLOTS);
+		super(params, Stat.ARTIFACT_SLOTS);
 	}
 }

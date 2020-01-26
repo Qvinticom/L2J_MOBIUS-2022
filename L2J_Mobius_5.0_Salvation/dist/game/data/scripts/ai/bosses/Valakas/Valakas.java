@@ -143,7 +143,7 @@ public class Valakas extends AbstractNpcAI
 				GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
 				GrandBossManager.getInstance().addBoss((GrandBossInstance) valakas);
 				
-				valakas.setIsInvul(true);
+				valakas.setInvul(true);
 				valakas.setRunning();
 				
 				valakas.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
@@ -176,7 +176,7 @@ public class Valakas extends AbstractNpcAI
 			else
 			{
 				valakas.teleToLocation(VALAKAS_HIDDEN_LOC);
-				valakas.setIsInvul(true);
+				valakas.setInvul(true);
 				valakas.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				
 				// Start timer to lock entry after 30 minutes
@@ -314,7 +314,7 @@ public class Valakas extends AbstractNpcAI
 			else if (event.equalsIgnoreCase("spawn_10"))
 			{
 				GrandBossManager.getInstance().setBossStatus(VALAKAS, FIGHTING);
-				npc.setIsInvul(false);
+				npc.setInvul(false);
 				
 				startQuestTimer("regen_task", 60000, npc, null, true);
 				startQuestTimer("skill_task", 2000, npc, null, true);
@@ -368,7 +368,7 @@ public class Valakas extends AbstractNpcAI
 		{
 			final Npc valakas = addSpawn(VALAKAS, VALAKAS_REGENERATION_LOC, false, 0);
 			valakas.teleToLocation(VALAKAS_HIDDEN_LOC);
-			valakas.setIsInvul(true);
+			valakas.setInvul(true);
 			valakas.setRunning();
 			valakas.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			GrandBossManager.getInstance().addBoss((GrandBossInstance) valakas);

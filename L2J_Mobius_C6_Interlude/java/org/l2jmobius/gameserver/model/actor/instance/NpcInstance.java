@@ -74,7 +74,7 @@ import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.model.zone.type.TownZone;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -242,14 +242,14 @@ public class NpcInstance extends Creature
 		return _scriptValue;
 	}
 	
-	public void setScriptValue(int val)
+	public void setScriptValue(int value)
 	{
-		_scriptValue = val;
+		_scriptValue = value;
 	}
 	
-	public boolean isScriptValue(int val)
+	public boolean isScriptValue(int value)
 	{
-		return _scriptValue == val;
+		return _scriptValue == value;
 	}
 	
 	@Override
@@ -514,7 +514,7 @@ public class NpcInstance extends Creature
 	 * Gets the checks if is spoiled by.
 	 * @return the checks if is spoiled by
 	 */
-	public int getIsSpoiledBy()
+	public int getSpoiledBy()
 	{
 		return _isSpoiledBy;
 	}
@@ -523,7 +523,7 @@ public class NpcInstance extends Creature
 	 * Sets the checks if is spoiled by.
 	 * @param value the new checks if is spoiled by
 	 */
-	public void setIsSpoiledBy(int value)
+	public void setSpoiledBy(int value)
 	{
 		_isSpoiledBy = value;
 	}
@@ -866,7 +866,7 @@ public class NpcInstance extends Creature
 			html1.append("<font color=\"LEVEL\">Combat</font>");
 			html1.append("<table border=\"0\" width=\"100%\">");
 			html1.append("<tr><td>Current HP</td><td>" + getCurrentHp() + "</td><td>Current MP</td><td>" + getCurrentMp() + "</td></tr>");
-			html1.append("<tr><td>Max.HP</td><td>" + (int) (getMaxHp() / getStat().calcStat(Stats.MAX_HP, 1, this, null)) + "*" + getStat().calcStat(Stats.MAX_HP, 1, this, null) + "</td><td>Max.MP</td><td>" + getMaxMp() + "</td></tr>");
+			html1.append("<tr><td>Max.HP</td><td>" + (int) (getMaxHp() / getStat().calcStat(Stat.MAX_HP, 1, this, null)) + "*" + getStat().calcStat(Stat.MAX_HP, 1, this, null) + "</td><td>Max.MP</td><td>" + getMaxMp() + "</td></tr>");
 			html1.append("<tr><td>P.Atk.</td><td>" + getPAtk(null) + "</td><td>M.Atk.</td><td>" + getMAtk(null, null) + "</td></tr>");
 			html1.append("<tr><td>P.Def.</td><td>" + getPDef(null) + "</td><td>M.Def.</td><td>" + getMDef(null, null) + "</td></tr>");
 			html1.append("<tr><td>Accuracy</td><td>" + getAccuracy() + "</td><td>Evasion</td><td>" + getEvasionRate(null) + "</td></tr>");
@@ -916,7 +916,7 @@ public class NpcInstance extends Creature
 			
 			html1.append("<br><center><font color=\"LEVEL\">[Combat Stats]</font></center>");
 			html1.append("<table border=0 width=\"100%\">");
-			html1.append("<tr><td>Max.HP</td><td>" + (int) (getMaxHp() / getStat().calcStat(Stats.MAX_HP, 1, this, null)) + "*" + (int) getStat().calcStat(Stats.MAX_HP, 1, this, null) + "</td><td>Max.MP</td><td>" + getMaxMp() + "</td></tr>");
+			html1.append("<tr><td>Max.HP</td><td>" + (int) (getMaxHp() / getStat().calcStat(Stat.MAX_HP, 1, this, null)) + "*" + (int) getStat().calcStat(Stat.MAX_HP, 1, this, null) + "</td><td>Max.MP</td><td>" + getMaxMp() + "</td></tr>");
 			html1.append("<tr><td>P.Atk.</td><td>" + getPAtk(null) + "</td><td>M.Atk.</td><td>" + getMAtk(null, null) + "</td></tr>");
 			html1.append("<tr><td>P.Def.</td><td>" + getPDef(null) + "</td><td>M.Def.</td><td>" + getMDef(null, null) + "</td></tr>");
 			html1.append("<tr><td>Accuracy</td><td>" + getAccuracy() + "</td><td>Evasion</td><td>" + getEvasionRate(null) + "</td></tr>");
@@ -1186,7 +1186,7 @@ public class NpcInstance extends Creature
 	 * Gets the checks if is in town.
 	 * @return the checks if is in town
 	 */
-	public boolean getIsInTown()
+	public boolean isInTown()
 	{
 		if (_castleIndex < 0)
 		{
@@ -1699,20 +1699,20 @@ public class NpcInstance extends Creature
 	 * <li>GuardInstance : Set the pathfile to data/html/guard/12006-1.htm (npcId-page number)</li><BR>
 	 * <BR>
 	 * @param npcId The Identifier of the NpcInstance whose text must be display
-	 * @param val The number of the page to display
+	 * @param value The number of the page to display
 	 * @return the html path
 	 */
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
 		
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = "" + npcId;
 		}
 		else
 		{
-			pom = npcId + "-" + val;
+			pom = npcId + "-" + value;
 		}
 		
 		final String temp = "data/html/default/" + pom + ".htm";
@@ -1937,7 +1937,7 @@ public class NpcInstance extends Creature
 	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance</li>
 	 * <li>Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet</li><BR>
 	 * @param player The PlayerInstance that talk with the NpcInstance
-	 * @param val The number of the page of the NpcInstance to display
+	 * @param value The number of the page of the NpcInstance to display
 	 */
 	// 0 - first buy lottery ticket window
 	// 1-20 - buttons
@@ -1946,19 +1946,19 @@ public class NpcInstance extends Creature
 	// 23 - current lottery jackpot
 	// 24 - Previous winning numbers/Prize claim
 	// >24 - check lottery ticket by item object id
-	public void showLotoWindow(PlayerInstance player, int val)
+	public void showLotoWindow(PlayerInstance player, int value)
 	{
 		final int npcId = getTemplate().getNpcId();
 		String filename;
 		SystemMessage sm;
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		
-		if (val == 0) // 0 - first buy lottery ticket window
+		if (value == 0) // 0 - first buy lottery ticket window
 		{
 			filename = getHtmlPath(npcId, 1);
 			html.setFile(filename);
 		}
-		else if ((val >= 1) && (val <= 21)) // 1-20 - buttons, 21 - second buy lottery ticket window
+		else if ((value >= 1) && (value <= 21)) // 1-20 - buttons, 21 - second buy lottery ticket window
 		{
 			if (!Lottery.getInstance().isStarted())
 			{
@@ -1981,7 +1981,7 @@ public class NpcInstance extends Creature
 			// counting buttons and unsetting button if found
 			for (int i = 0; i < 5; i++)
 			{
-				if (player.getLoto(i) == val)
+				if (player.getLoto(i) == value)
 				{
 					// unsetting button
 					player.setLoto(i, 0);
@@ -1994,13 +1994,13 @@ public class NpcInstance extends Creature
 			}
 			
 			// if not rearched limit 5 and not unseted value
-			if ((count < 5) && (found == 0) && (val <= 20))
+			if ((count < 5) && (found == 0) && (value <= 20))
 			{
 				for (int i = 0; i < 5; i++)
 				{
 					if (player.getLoto(i) == 0)
 					{
-						player.setLoto(i, val);
+						player.setLoto(i, value);
 						break;
 					}
 				}
@@ -2031,7 +2031,7 @@ public class NpcInstance extends Creature
 				html.replace(search, replace);
 			}
 		}
-		else if (val == 22) // 22 - selected ticket with 5 numbers
+		else if (value == 22) // 22 - selected ticket with 5 numbers
 		{
 			if (!Lottery.getInstance().isStarted())
 			{
@@ -2100,12 +2100,12 @@ public class NpcInstance extends Creature
 			filename = getHtmlPath(npcId, 3);
 			html.setFile(filename);
 		}
-		else if (val == 23) // 23 - current lottery jackpot
+		else if (value == 23) // 23 - current lottery jackpot
 		{
 			filename = getHtmlPath(npcId, 3);
 			html.setFile(filename);
 		}
-		else if (val == 24) // 24 - Previous winning numbers/Prize claim
+		else if (value == 24) // 24 - Previous winning numbers/Prize claim
 		{
 			filename = getHtmlPath(npcId, 4);
 			html.setFile(filename);
@@ -2163,10 +2163,10 @@ public class NpcInstance extends Creature
 			}
 			html.replace("%result%", message);
 		}
-		else if (val > 24) // >24 - check lottery ticket by item object id
+		else if (value > 24) // >24 - check lottery ticket by item object id
 		{
 			final int lotonumber = Lottery.getInstance().getId();
-			final ItemInstance item = player.getInventory().getItemByObjectId(val);
+			final ItemInstance item = player.getInventory().getItemByObjectId(value);
 			if ((item == null) || (item.getItemId() != 4442) || (item.getCustomType1() >= lotonumber))
 			{
 				return;
@@ -2357,9 +2357,9 @@ public class NpcInstance extends Creature
 	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance</li>
 	 * <li>Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet</li><BR>
 	 * @param player The PlayerInstance that talk with the NpcInstance
-	 * @param val The number of the page of the NpcInstance to display
+	 * @param value The number of the page of the NpcInstance to display
 	 */
-	public void showChatWindow(PlayerInstance player, int val)
+	public void showChatWindow(PlayerInstance player, int value)
 	{
 		// Like L2OFF if char is dead, is sitting, is in trade or is in fakedeath can't speak with npcs
 		if (player.isSitting() || player.isDead() || player.isFakeDeath() || (player.getActiveTradeList() != null))
@@ -2399,7 +2399,7 @@ public class NpcInstance extends Creature
 			}
 		}
 		
-		if ((getTemplate().getType() == "Auctioneer") && (val == 0))
+		if ((getTemplate().getType() == "Auctioneer") && (value == 0))
 		{
 			return;
 		}
@@ -2595,19 +2595,19 @@ public class NpcInstance extends Creature
 								}
 								case SevenSigns.CABAL_NULL:
 								{
-									filename = getHtmlPath(npcId, val); // do the default!
+									filename = getHtmlPath(npcId, value); // do the default!
 									break;
 								}
 							}
 						}
 						else
 						{
-							filename = getHtmlPath(npcId, val); // do the default!
+							filename = getHtmlPath(npcId, value); // do the default!
 						}
 					}
 					else
 					{
-						filename = getHtmlPath(npcId, val); // do the default!
+						filename = getHtmlPath(npcId, value); // do the default!
 					}
 				}
 				else if (playerCabal == SevenSigns.CABAL_NULL)
@@ -2616,7 +2616,7 @@ public class NpcInstance extends Creature
 				}
 				else
 				{
-					filename = getHtmlPath(npcId, val); // do the default!
+					filename = getHtmlPath(npcId, value); // do the default!
 				}
 				break;
 			}
@@ -2649,19 +2649,19 @@ public class NpcInstance extends Creature
 								}
 								case SevenSigns.CABAL_NULL:
 								{
-									filename = getHtmlPath(npcId, val); // do the default!
+									filename = getHtmlPath(npcId, value); // do the default!
 									break;
 								}
 							}
 						}
 						else
 						{
-							filename = getHtmlPath(npcId, val); // do the default!
+							filename = getHtmlPath(npcId, value); // do the default!
 						}
 					}
 					else
 					{
-						filename = getHtmlPath(npcId, val); // do the default!
+						filename = getHtmlPath(npcId, value); // do the default!
 					}
 				}
 				else if (playerCabal == SevenSigns.CABAL_NULL)
@@ -2670,7 +2670,7 @@ public class NpcInstance extends Creature
 				}
 				else
 				{
-					filename = getHtmlPath(npcId, val); // do the default!
+					filename = getHtmlPath(npcId, value); // do the default!
 				}
 				break;
 			}
@@ -2811,7 +2811,7 @@ public class NpcInstance extends Creature
 				}
 				else
 				{
-					filename = getHtmlPath(npcId, val);
+					filename = getHtmlPath(npcId, value);
 				}
 				break;
 			}
@@ -2824,7 +2824,7 @@ public class NpcInstance extends Creature
 				}
 				else
 				{
-					filename = getHtmlPath(npcId, val);
+					filename = getHtmlPath(npcId, value);
 				}
 				break;
 			}
@@ -2839,7 +2839,7 @@ public class NpcInstance extends Creature
 				}
 				else
 				{
-					filename = getHtmlPath(npcId, val);
+					filename = getHtmlPath(npcId, value);
 				}
 				break;
 			}
@@ -2855,7 +2855,7 @@ public class NpcInstance extends Creature
 					return;
 				}
 				// Get the text of the selected HTML file in function of the npcId and of the page number
-				filename = getHtmlPath(npcId, val);
+				filename = getHtmlPath(npcId, value);
 				break;
 			}
 		}
@@ -2911,7 +2911,7 @@ public class NpcInstance extends Creature
 	 */
 	public int getExpReward()
 	{
-		final double rateXp = getStat().calcStat(Stats.MAX_HP, 1, this, null);
+		final double rateXp = getStat().calcStat(Stat.MAX_HP, 1, this, null);
 		return (int) (getTemplate().getRewardExp() * rateXp * Config.RATE_XP);
 	}
 	
@@ -2922,7 +2922,7 @@ public class NpcInstance extends Creature
 	 */
 	public int getSpReward()
 	{
-		final double rateSp = getStat().calcStat(Stats.MAX_HP, 1, this, null);
+		final double rateSp = getStat().calcStat(Stat.MAX_HP, 1, this, null);
 		return (int) (getTemplate().getRewardSp() * rateSp * Config.RATE_SP);
 	}
 	

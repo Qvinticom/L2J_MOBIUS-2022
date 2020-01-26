@@ -25,20 +25,20 @@ import org.l2jmobius.gameserver.model.conditions.ConditionUsingItemType;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
  */
 public class StatBonusSpeed extends AbstractEffect
 {
-	private final BaseStats _stat;
+	private final BaseStat _stat;
 	private final Condition _armorTypeCondition;
 	
 	public StatBonusSpeed(StatsSet params)
 	{
-		_stat = params.getEnum("stat", BaseStats.class, BaseStats.DEX);
+		_stat = params.getEnum("stat", BaseStat.class, BaseStat.DEX);
 		
 		int armorTypesMask = 0;
 		final List<String> armorTypes = params.getList("armorType", String.class);
@@ -66,7 +66,7 @@ public class StatBonusSpeed extends AbstractEffect
 	{
 		if ((_armorTypeCondition == null) || _armorTypeCondition.test(effected, effected, skill))
 		{
-			effected.getStat().mergeAdd(Stats.STAT_BONUS_SPEED, _stat.ordinal());
+			effected.getStat().mergeAdd(Stat.STAT_BONUS_SPEED, _stat.ordinal());
 		}
 	}
 }

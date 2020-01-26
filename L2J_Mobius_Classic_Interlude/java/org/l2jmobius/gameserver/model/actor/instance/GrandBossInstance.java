@@ -58,9 +58,9 @@ public class GrandBossInstance extends MonsterInstance
 		return false;
 	}
 	
-	public void setUseRaidCurse(boolean val)
+	public void setUseRaidCurse(boolean value)
 	{
-		_useRaidCurse = val;
+		_useRaidCurse = value;
 	}
 	
 	@Override

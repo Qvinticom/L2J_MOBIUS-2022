@@ -354,13 +354,13 @@ class OlympiadGame
 			
 			_gamestarted = true;
 			
-			_playerOne.setIsInOlympiadMode(true);
-			_playerOne.setIsOlympiadStart(false);
+			_playerOne.setInOlympiadMode(true);
+			_playerOne.setOlympiadStart(false);
 			_playerOne.setOlympiadSide(1);
 			_playerOne.setOlympiadBuffCount(Config.ALT_OLY_MAX_BUFFS);
 			
-			_playerTwo.setIsInOlympiadMode(true);
-			_playerTwo.setIsOlympiadStart(false);
+			_playerTwo.setInOlympiadMode(true);
+			_playerTwo.setOlympiadStart(false);
 			_playerTwo.setOlympiadSide(2);
 			_playerTwo.setOlympiadBuffCount(Config.ALT_OLY_MAX_BUFFS);
 			
@@ -450,7 +450,7 @@ class OlympiadGame
 				{
 					if (player.isDead())
 					{
-						player.setIsDead(false);
+						player.setDead(false);
 					}
 					
 					player.getStatus().startHpMpRegeneration();
@@ -463,8 +463,8 @@ class OlympiadGame
 				{
 					player.untransform();
 				}
-				player.setIsInOlympiadMode(false);
-				player.setIsOlympiadStart(false);
+				player.setInOlympiadMode(false);
+				player.setOlympiadStart(false);
 				player.setOlympiadSide(-1);
 				player.setOlympiadGameId(-1);
 				player.sendPacket(new ExOlympiadMode(0));
@@ -992,7 +992,7 @@ class OlympiadGame
 		{
 			for (PlayerInstance player : _players)
 			{
-				player.setIsOlympiadStart(true);
+				player.setOlympiadStart(true);
 				player.updateEffectIcons();
 			}
 		}

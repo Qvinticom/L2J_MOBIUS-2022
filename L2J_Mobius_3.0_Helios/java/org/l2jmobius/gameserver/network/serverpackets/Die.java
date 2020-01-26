@@ -81,9 +81,9 @@ public class Die implements IClientOutgoingPacket
 		_isSweepable = creature.isAttackable() && creature.isSweepActive();
 	}
 	
-	public void setHideAnimation(boolean val)
+	public void setHideAnimation(boolean value)
 	{
-		_hideAnimation = val;
+		_hideAnimation = value;
 	}
 	
 	public void addItem(int itemId)
@@ -108,9 +108,9 @@ public class Die implements IClientOutgoingPacket
 		return _items != null ? _items : Collections.emptyList();
 	}
 	
-	public void setItemsEnabled(boolean val)
+	public void setItemsEnabled(boolean value)
 	{
-		_itemsEnabled = val;
+		_itemsEnabled = value;
 	}
 	
 	@Override

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -137,22 +137,22 @@ public class EnergyAttack extends AbstractEffect
 			{
 				if (attacker.isChargedShot(ShotType.SOULSHOTS))
 				{
-					ssmod = 2 * attacker.getStat().getValue(Stats.SHOTS_BONUS); // 2.04 for dual weapon?
+					ssmod = 2 * attacker.getStat().getValue(Stat.SHOTS_BONUS); // 2.04 for dual weapon?
 				}
 				else if (attacker.isChargedShot(ShotType.BLESSED_SOULSHOTS))
 				{
-					ssmod = 4 * attacker.getStat().getValue(Stats.SHOTS_BONUS);
+					ssmod = 4 * attacker.getStat().getValue(Stat.SHOTS_BONUS);
 				}
 			}
 			
 			// ...................________Initial Damage_________...__Charges Additional Damage__...____________________________________
 			// ATTACK CALCULATION ((77 * ((pAtk * lvlMod) + power) * (1 + (0.1 * chargesConsumed)) / pdef) * skillPower) + skillPowerAdd
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-			final double baseMod = (77 * ((attacker.getPAtk() * attacker.getLevelMod()) + _power + effector.getStat().getValue(Stats.SKILL_POWER_ADD, 0))) / defence;
+			final double baseMod = (77 * ((attacker.getPAtk() * attacker.getLevelMod()) + _power + effector.getStat().getValue(Stat.SKILL_POWER_ADD, 0))) / defence;
 			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * energyChargesBoost * pvpPveMod;
 		}
 		
-		damage = Math.max(0, damage * effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 1));
+		damage = Math.max(0, damage * effector.getStat().getValue(Stat.PHYSICAL_SKILL_POWER, 1));
 		
 		effector.doAttack(damage, effected, skill, false, false, critical, false);
 	}

@@ -34,7 +34,7 @@ public class CastleMagicianInstance extends NpcInstance
 	protected static final int COND_OWNER = 2;
 	
 	/**
-	 * Instantiates a new l2 castle magician instance.
+	 * Instantiates a new castle magician instance.
 	 * @param objectId the object id
 	 * @param template the template
 	 */
@@ -44,7 +44,7 @@ public class CastleMagicianInstance extends NpcInstance
 	}
 	
 	@Override
-	public void showChatWindow(PlayerInstance player, int val)
+	public void showChatWindow(PlayerInstance player, int value)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		String filename = "data/html/castlemagician/magician-no.htm";
@@ -58,13 +58,13 @@ public class CastleMagicianInstance extends NpcInstance
 			}
 			else if (condition == COND_OWNER) // Clan owns castle
 			{
-				if (val == 0)
+				if (value == 0)
 				{
 					filename = "data/html/castlemagician/magician.htm";
 				}
 				else
 				{
-					filename = "data/html/castlemagician/magician-" + val + ".htm";
+					filename = "data/html/castlemagician/magician-" + value + ".htm";
 				}
 			}
 		}

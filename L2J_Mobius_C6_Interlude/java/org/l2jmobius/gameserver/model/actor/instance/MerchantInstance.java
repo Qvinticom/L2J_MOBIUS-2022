@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.WearList;
 public class MerchantInstance extends FolkInstance
 {
 	/**
-	 * Instantiates a new l2 merchant instance.
+	 * Instantiates a new merchant instance.
 	 * @param objectId the object id
 	 * @param template the template
 	 */
@@ -46,17 +46,17 @@ public class MerchantInstance extends FolkInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
 		
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = "" + npcId;
 		}
 		else
 		{
-			pom = npcId + "-" + val;
+			pom = npcId + "-" + value;
 		}
 		
 		return "data/html/merchant/" + pom + ".htm";
@@ -65,12 +65,12 @@ public class MerchantInstance extends FolkInstance
 	/**
 	 * Show wear window.
 	 * @param player the player
-	 * @param val the val
+	 * @param value the value
 	 */
-	private void showWearWindow(PlayerInstance player, int val)
+	private void showWearWindow(PlayerInstance player, int value)
 	{
 		player.tempInvetoryDisable();
-		final StoreTradeList list = TradeController.getInstance().getBuyList(val);
+		final StoreTradeList list = TradeController.getInstance().getBuyList(value);
 		
 		if (list != null)
 		{
@@ -79,7 +79,7 @@ public class MerchantInstance extends FolkInstance
 		}
 		else
 		{
-			LOGGER.warning("no buylist with id:" + val);
+			LOGGER.warning("no buylist with id:" + value);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}
@@ -87,20 +87,20 @@ public class MerchantInstance extends FolkInstance
 	/**
 	 * Show buy window.
 	 * @param player the player
-	 * @param val the val
+	 * @param value the value
 	 */
-	private void showBuyWindow(PlayerInstance player, int val)
+	private void showBuyWindow(PlayerInstance player, int value)
 	{
 		double taxRate = 0;
 		
-		if (getIsInTown())
+		if (isInTown())
 		{
 			taxRate = getCastle().getTaxRate();
 		}
 		
 		player.tempInvetoryDisable();
 		
-		final StoreTradeList list = TradeController.getInstance().getBuyList(val);
+		final StoreTradeList list = TradeController.getInstance().getBuyList(value);
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 		{
 			final BuyList bl = new BuyList(list, player.getAdena(), taxRate);
@@ -109,7 +109,7 @@ public class MerchantInstance extends FolkInstance
 		else
 		{
 			LOGGER.warning("possible client hacker: " + player.getName() + " attempting to buy from GM shop! (L2MechantInstance)");
-			LOGGER.warning("buylist id:" + val);
+			LOGGER.warning("buylist id:" + value);
 		}
 		
 		player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -225,9 +225,9 @@ public class MerchantInstance extends FolkInstance
 	/**
 	 * Try rent pet.
 	 * @param player the player
-	 * @param val the val
+	 * @param value the value
 	 */
-	public void tryRentPet(PlayerInstance player, int val)
+	public void tryRentPet(PlayerInstance player, int value)
 	{
 		if ((player == null) || (player.getPet() != null) || player.isMounted() || player.isRentedPet())
 		{
@@ -255,10 +255,10 @@ public class MerchantInstance extends FolkInstance
 			1800
 		};
 		
-		if (val > 10)
+		if (value > 10)
 		{
 			petId = 12526;
-			val -= 10;
+			value -= 10;
 			price /= 2;
 		}
 		else
@@ -266,13 +266,13 @@ public class MerchantInstance extends FolkInstance
 			petId = 12621;
 		}
 		
-		if ((val < 1) || (val > 4))
+		if ((value < 1) || (value > 4))
 		{
 			return;
 		}
 		
-		price *= cost[val - 1];
-		final int time = ridetime[val - 1];
+		price *= cost[value - 1];
+		final int time = ridetime[value - 1];
 		
 		if (!player.reduceAdena("Rent", (int) price, player.getLastFolkNPC(), true))
 		{

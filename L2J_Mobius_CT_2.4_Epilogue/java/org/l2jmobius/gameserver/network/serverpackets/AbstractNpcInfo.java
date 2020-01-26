@@ -349,13 +349,13 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 	{
 		private final Summon _summon;
 		private final int _form;
-		private final int _val;
+		private final int _value;
 		
-		public SummonInfo(Summon cha, Creature attacker, int val)
+		public SummonInfo(Summon cha, Creature attacker, int value)
 		{
 			super(cha, attacker.canOverrideCond(PlayerCondOverride.SEE_ALL_PLAYERS));
 			_summon = cha;
-			_val = val;
+			_value = value;
 			_form = cha.getFormId();
 			
 			_isAttackable = cha.isAutoAttackable(attacker);
@@ -403,7 +403,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeC(0x01); // always running 1=running 0=walking
 			packet.writeC(_summon.isInCombat() ? 1 : 0);
 			packet.writeC(_summon.isAlikeDead() ? 1 : 0);
-			packet.writeC(_isSummoned ? 2 : _val); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
+			packet.writeC(_isSummoned ? 2 : _value); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
 			packet.writeS(_name);
 			packet.writeS(_title);
 			packet.writeD(0x01); // Title color 0=client default

@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.stats.functions.formulas;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 
 /**
@@ -35,7 +35,7 @@ public class FuncAtkEvasion extends AbstractFunction
 	
 	private FuncAtkEvasion()
 	{
-		super(Stats.EVASION_RATE, 1, null, 0, null);
+		super(Stat.EVASION_RATE, 1, null, 0, null);
 	}
 	
 	@Override

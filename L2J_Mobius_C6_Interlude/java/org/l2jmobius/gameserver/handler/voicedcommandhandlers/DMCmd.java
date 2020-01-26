@@ -98,7 +98,7 @@ public class DMCmd implements IVoicedCommandHandler
 			activeChar.sendMessage("You are not allowed to participate to the event because you have Karma.");
 			return false;
 		}
-		else if (DM.isTeleport() || DM.is_started())
+		else if (DM.isTeleport() || DM.hasStarted())
 		{
 			activeChar.sendMessage("DeathMatch Event registration period is over. You can't register now.");
 			return false;
@@ -123,7 +123,7 @@ public class DMCmd implements IVoicedCommandHandler
 			activeChar.sendMessage("There is no DeathMatch Event in progress.");
 			return false;
 		}
-		else if ((DM.isTeleport() || DM.is_started()) && activeChar._inEventDM)
+		else if ((DM.isTeleport() || DM.hasStarted()) && activeChar._inEventDM)
 		{
 			activeChar.sendMessage("You can not leave now because DeathMatch event has started.");
 			return false;
@@ -152,7 +152,7 @@ public class DMCmd implements IVoicedCommandHandler
 			activeChar.sendMessage("There is no DeathMatch Event in progress.");
 			return false;
 		}
-		else if (DM.isTeleport() || DM.is_started())
+		else if (DM.isTeleport() || DM.hasStarted())
 		{
 			activeChar.sendMessage("I can't provide you this info. Command available only in joining period.");
 			return false;

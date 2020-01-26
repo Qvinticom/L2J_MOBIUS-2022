@@ -44,7 +44,7 @@ public abstract class Decoy extends Creature
 		setInstanceType(InstanceType.Decoy);
 		_owner = owner;
 		setXYZInvisible(owner.getX(), owner.getY(), owner.getZ());
-		setIsInvul(false);
+		setInvul(false);
 	}
 	
 	@Override

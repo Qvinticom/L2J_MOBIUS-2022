@@ -22,7 +22,7 @@ import java.util.List;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Henna;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -51,12 +51,12 @@ public class HennaInfo implements IClientOutgoingPacket
 	{
 		OutgoingPackets.HENNA_INFO.writeId(packet);
 		
-		packet.writeH(_player.getHennaValue(BaseStats.INT)); // equip INT
-		packet.writeH(_player.getHennaValue(BaseStats.STR)); // equip STR
-		packet.writeH(_player.getHennaValue(BaseStats.CON)); // equip CON
-		packet.writeH(_player.getHennaValue(BaseStats.MEN)); // equip MEN
-		packet.writeH(_player.getHennaValue(BaseStats.DEX)); // equip DEX
-		packet.writeH(_player.getHennaValue(BaseStats.WIT)); // equip WIT
+		packet.writeH(_player.getHennaValue(BaseStat.INT)); // equip INT
+		packet.writeH(_player.getHennaValue(BaseStat.STR)); // equip STR
+		packet.writeH(_player.getHennaValue(BaseStat.CON)); // equip CON
+		packet.writeH(_player.getHennaValue(BaseStat.MEN)); // equip MEN
+		packet.writeH(_player.getHennaValue(BaseStat.DEX)); // equip DEX
+		packet.writeH(_player.getHennaValue(BaseStat.WIT)); // equip WIT
 		packet.writeH(0x00); // equip LUC
 		packet.writeH(0x00); // equip CHA
 		packet.writeD(3 - _player.getHennaEmptySlots()); // Slots

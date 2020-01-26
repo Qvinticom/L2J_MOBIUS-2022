@@ -21,14 +21,14 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Yamaneko
  */
 public class FuncEnchantHp extends AbstractFunction
 {
-	public FuncEnchantHp(Stats stat, int order, Object owner, double value, Condition applayCond)
+	public FuncEnchantHp(Stat stat, int order, Object owner, double value, Condition applayCond)
 	{
 		super(stat, order, owner, value, applayCond);
 	}

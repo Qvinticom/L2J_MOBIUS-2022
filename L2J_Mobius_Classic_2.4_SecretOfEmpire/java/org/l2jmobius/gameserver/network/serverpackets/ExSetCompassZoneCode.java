@@ -35,9 +35,9 @@ public class ExSetCompassZoneCode implements IClientOutgoingPacket
 	
 	private final int _zoneType;
 	
-	public ExSetCompassZoneCode(int val)
+	public ExSetCompassZoneCode(int value)
 	{
-		_zoneType = val;
+		_zoneType = value;
 	}
 	
 	@Override

@@ -30,17 +30,17 @@ public class PetManagerInstance extends MerchantInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val, PlayerInstance player)
+	public String getHtmlPath(int npcId, int value, PlayerInstance player)
 	{
 		String pom = "";
 		
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
 		}
 		else
 		{
-			pom = npcId + "-" + val;
+			pom = npcId + "-" + value;
 		}
 		
 		return "data/html/petmanager/" + pom + ".htm";

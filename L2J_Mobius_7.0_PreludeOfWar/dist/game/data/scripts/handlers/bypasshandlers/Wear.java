@@ -68,12 +68,12 @@ public class Wear implements IBypassHandler
 		return false;
 	}
 	
-	private void showWearWindow(PlayerInstance player, int val)
+	private void showWearWindow(PlayerInstance player, int value)
 	{
-		final ProductList buyList = BuyListData.getInstance().getBuyList(val);
+		final ProductList buyList = BuyListData.getInstance().getBuyList(value);
 		if (buyList == null)
 		{
-			LOGGER.warning("BuyList not found! BuyListId:" + val);
+			LOGGER.warning("BuyList not found! BuyListId:" + value);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

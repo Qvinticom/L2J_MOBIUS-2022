@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class HpRegen extends AbstractStatEffect
 {
 	public HpRegen(StatsSet params)
 	{
-		super(params, Stats.REGENERATE_HP_RATE);
+		super(params, Stat.REGENERATE_HP_RATE);
 	}
 }

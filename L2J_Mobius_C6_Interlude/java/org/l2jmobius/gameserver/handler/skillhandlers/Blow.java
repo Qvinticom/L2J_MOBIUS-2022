@@ -30,9 +30,9 @@ import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
 import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
-import org.l2jmobius.gameserver.model.skills.BaseStats;
+import org.l2jmobius.gameserver.model.skills.BaseStat;
 import org.l2jmobius.gameserver.model.skills.Formulas;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -147,7 +147,7 @@ public class Blow implements ISkillHandler
 				{
 					crit = true; // if there is not critical condition, calculate critical chance
 				}
-				else if (Formulas.calcCrit(skill.getBaseCritRate() * 10 * BaseStats.DEX.calcBonus(creature)))
+				else if (Formulas.calcCrit(skill.getBaseCritRate() * 10 * BaseStat.DEX.calcBonus(creature)))
 				{
 					crit = true;
 				}
@@ -172,7 +172,7 @@ public class Blow implements ISkillHandler
 							final Summon summon = player.getPet();
 							if ((summon instanceof SummonInstance) && Util.checkIfInRange(900, player, summon, true))
 							{
-								int tDmg = ((int) damage * (int) player.getStat().calcStat(Stats.TRANSFER_DAMAGE_PERCENT, 0, null, null)) / 100;
+								int tDmg = ((int) damage * (int) player.getStat().calcStat(Stat.TRANSFER_DAMAGE_PERCENT, 0, null, null)) / 100;
 								
 								// Only transfer dmg up to current HP, it should not be killed
 								if (summon.getCurrentHp() < tDmg)
@@ -199,7 +199,7 @@ public class Blow implements ISkillHandler
 										player.abortAttack();
 										player.abortCast();
 										player.getStatus().stopHpMpRegeneration();
-										// player.setIsDead(true);
+										// player.setDead(true);
 										player.setIsPendingRevive(true);
 										if (player.getPet() != null)
 										{

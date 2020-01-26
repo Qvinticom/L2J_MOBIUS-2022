@@ -168,10 +168,10 @@ public class Calculator
 	 * @param owner
 	 * @return
 	 */
-	public synchronized List<Stats> removeOwner(Object owner)
+	public synchronized List<Stat> removeOwner(Object owner)
 	{
 		final Func[] funcs = _functions;
-		final List<Stats> modifiedStats = new ArrayList<>();
+		final List<Stat> modifiedStats = new ArrayList<>();
 		
 		for (Func func : funcs)
 		{

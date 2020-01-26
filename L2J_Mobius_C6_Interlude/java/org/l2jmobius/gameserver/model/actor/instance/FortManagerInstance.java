@@ -249,7 +249,7 @@ public class FortManagerInstance extends MerchantInstance
 	{
 		if ((getFort() != null) && (getFort().getFortId() > 0) && (player.getClan() != null))
 		{
-			if (getFort().getSiege().getIsInProgress())
+			if (getFort().getSiege().isInProgress())
 			{
 				return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
 			}

@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
 
 /**
@@ -142,7 +142,7 @@ public class DocumentItem extends DocumentBase implements IXmlReader
 				{
 					if ("stat".equalsIgnoreCase(b.getNodeName()))
 					{
-						final Stats type = Stats.valueOfXml(b.getAttributes().getNamedItem("type").getNodeValue());
+						final Stat type = Stat.valueOfXml(b.getAttributes().getNamedItem("type").getNodeValue());
 						final double value = Double.parseDouble(b.getTextContent());
 						_currentItem.item.addFunctionTemplate(new FuncTemplate(null, null, "add", 0x00, type, value));
 					}

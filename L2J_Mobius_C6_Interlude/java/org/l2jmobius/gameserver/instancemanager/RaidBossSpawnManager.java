@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.Announcements;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 
 /**
@@ -241,7 +241,7 @@ public class RaidBossSpawnManager
 			final RaidBossInstance raidboss = bossId == 25328 ? DayNightSpawnManager.getInstance().handleBoss(spawnDat) : (RaidBossInstance) spawnDat.doSpawn();
 			if (raidboss != null)
 			{
-				final double bonus = raidboss.getStat().calcStat(Stats.MAX_HP, 1, raidboss, null);
+				final double bonus = raidboss.getStat().calcStat(Stat.MAX_HP, 1, raidboss, null);
 				
 				// if new spawn, the currentHp is equal to maxHP/bonus, so set it to max
 				if ((int) (bonus * currentHP) == raidboss.getMaxHp())

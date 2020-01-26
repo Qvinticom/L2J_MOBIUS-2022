@@ -38,14 +38,14 @@ final class EffectParalyze extends Effect
 	{
 		getEffected().stopMove(null);
 		getEffected().startAbnormalEffect(Creature.ABNORMAL_EFFECT_HOLD_1);
-		getEffected().setIsParalyzed(true);
+		getEffected().setParalyzed(true);
 	}
 	
 	@Override
 	public void onExit()
 	{
 		getEffected().stopAbnormalEffect(Creature.ABNORMAL_EFFECT_HOLD_1);
-		getEffected().setIsParalyzed(false);
+		getEffected().setParalyzed(false);
 	}
 	
 	@Override

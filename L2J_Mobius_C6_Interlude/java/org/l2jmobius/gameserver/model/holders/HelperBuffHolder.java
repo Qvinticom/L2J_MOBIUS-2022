@@ -148,7 +148,7 @@ public class HelperBuffHolder
 	 * Sets if this Buff can be cast on a fighter or a mystic
 	 * @param isMagicClass
 	 */
-	public void setIsMagicClass(boolean isMagicClass)
+	public void setMagicClass(boolean isMagicClass)
 	{
 		_isMagicClass = isMagicClass;
 	}

@@ -37,7 +37,7 @@ public class StandUpTask implements Runnable
 	{
 		if (_player != null)
 		{
-			_player.setIsSitting(false);
+			_player.setSitting(false);
 			_player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
 	}

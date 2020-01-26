@@ -338,9 +338,9 @@ public class TerritoryWarSuperClass extends Quest
 	}
 	
 	@Override
-	public void setOnEnterWorld(boolean val)
+	public void setOnEnterWorld(boolean value)
 	{
-		super.setOnEnterWorld(val);
+		super.setOnEnterWorld(value);
 		
 		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
@@ -353,7 +353,7 @@ public class TerritoryWarSuperClass extends Quest
 				}
 				
 				QuestState qs = player.hasQuestState(territoryQuest.getName()) ? player.getQuestState(territoryQuest.getName()) : territoryQuest.newQuestState(player);
-				if (val)
+				if (value)
 				{
 					qs.setState(State.STARTED, false);
 					qs.setCond(1);

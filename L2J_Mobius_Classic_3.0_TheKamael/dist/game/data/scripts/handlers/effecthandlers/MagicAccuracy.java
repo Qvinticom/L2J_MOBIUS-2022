@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class MagicAccuracy extends AbstractStatEffect
 {
 	public MagicAccuracy(StatsSet params)
 	{
-		super(params, Stats.ACCURACY_MAGIC);
+		super(params, Stat.ACCURACY_MAGIC);
 	}
 }

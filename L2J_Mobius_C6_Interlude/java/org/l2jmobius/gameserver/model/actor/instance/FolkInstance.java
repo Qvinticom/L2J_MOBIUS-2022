@@ -41,7 +41,7 @@ public class FolkInstance extends NpcInstance
 	private final List<ClassId> _classesToTeach;
 	
 	/**
-	 * Instantiates a new l2 folk instance.
+	 * Instantiates a new folk instance.
 	 * @param objectId the object id
 	 * @param template the template
 	 */

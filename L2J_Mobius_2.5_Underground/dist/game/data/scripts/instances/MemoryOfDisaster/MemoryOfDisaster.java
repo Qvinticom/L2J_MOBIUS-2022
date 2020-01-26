@@ -253,7 +253,7 @@ public class MemoryOfDisaster extends AbstractInstance
 						case "EVENT_C":
 						{
 							final Npc golem = addSpawn(npc, SIEGE_GOLEM, 116881, -180742, -1248, 1843, false, 0, false, instance.getId());
-							golem.setIsInvul(true);
+							golem.setInvul(true);
 							break;
 						}
 						case "REINFORCE":

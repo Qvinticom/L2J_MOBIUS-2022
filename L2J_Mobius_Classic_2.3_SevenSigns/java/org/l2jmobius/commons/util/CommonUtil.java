@@ -582,14 +582,14 @@ public class CommonUtil
 	}
 	
 	/**
-	 * @param val
+	 * @param value
 	 * @param format
 	 * @return
 	 */
-	public static String formatDouble(double val, String format)
+	public static String formatDouble(double value, String format)
 	{
 		final DecimalFormat formatter = new DecimalFormat(format, new DecimalFormatSymbols(Locale.ENGLISH));
-		return formatter.format(val);
+		return formatter.format(value);
 	}
 	
 	public static boolean isNullOrEmpty(CharSequence value)

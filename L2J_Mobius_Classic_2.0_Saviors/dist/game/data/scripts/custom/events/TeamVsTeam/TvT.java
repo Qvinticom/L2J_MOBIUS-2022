@@ -363,13 +363,13 @@ public class TvT extends Event
 				// Disable players.
 				for (PlayerInstance participant : PLAYER_LIST)
 				{
-					participant.setIsInvul(true);
-					participant.setIsImmobilized(true);
+					participant.setInvul(true);
+					participant.setImmobilized(true);
 					participant.disableAllSkills();
 					for (Summon summon : participant.getServitors().values())
 					{
-						summon.setIsInvul(true);
-						summon.setIsImmobilized(true);
+						summon.setInvul(true);
+						summon.setImmobilized(true);
 						summon.disableAllSkills();
 					}
 				}
@@ -448,13 +448,13 @@ public class TvT extends Event
 				// Enable players.
 				for (PlayerInstance participant : PLAYER_LIST)
 				{
-					participant.setIsInvul(false);
-					participant.setIsImmobilized(false);
+					participant.setInvul(false);
+					participant.setImmobilized(false);
 					participant.enableAllSkills();
 					for (Summon summon : participant.getServitors().values())
 					{
-						summon.setIsInvul(true);
-						summon.setIsImmobilized(true);
+						summon.setInvul(true);
+						summon.setImmobilized(true);
 						summon.disableAllSkills();
 					}
 				}

@@ -88,7 +88,7 @@ public class Monastery extends Quest
 					}
 					default:
 					{
-						npc.setIsRunning(true);
+						npc.setRunning(true);
 						((Attackable) npc).addDamageHate(player, 0, 999);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 						break;
@@ -145,7 +145,7 @@ public class Monastery extends Quest
 							}
 							default:
 							{
-								npc.setIsRunning(true);
+								npc.setRunning(true);
 								((Attackable) npc).addDamageHate(target, 0, 999);
 								npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 								break;
@@ -164,7 +164,7 @@ public class Monastery extends Quest
 	{
 		if (Util.contains(MOBS_1, npc.getNpcId()) && (skill.getId() == 4589))
 		{
-			npc.setIsRunning(true);
+			npc.setRunning(true);
 			((Attackable) npc).addDamageHate(player, 0, 999);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 		}

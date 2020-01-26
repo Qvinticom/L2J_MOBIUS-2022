@@ -35,12 +35,12 @@ public class BlockMove extends AbstractEffect
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
-		effected.setIsImmobilized(true);
+		effected.setImmobilized(true);
 	}
 	
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		effected.setIsImmobilized(false);
+		effected.setImmobilized(false);
 	}
 }

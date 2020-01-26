@@ -63,7 +63,7 @@ public class Anais extends AbstractNpcAI
 		{
 			_current = npc;
 			final QuestTimer checkAround = getQuestTimer("CHECK", anais, null);
-			if (checkAround == null) // || !checkAround.getIsActive()
+			if (checkAround == null) // || !checkAround.isActive()
 			{
 				startQuestTimer("CHECK", 3000, anais, null);
 			}

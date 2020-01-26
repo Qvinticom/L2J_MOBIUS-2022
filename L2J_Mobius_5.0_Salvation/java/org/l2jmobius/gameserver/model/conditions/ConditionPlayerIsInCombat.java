@@ -26,17 +26,17 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  */
 public class ConditionPlayerIsInCombat extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
-	public ConditionPlayerIsInCombat(boolean val)
+	public ConditionPlayerIsInCombat(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		final boolean isInCombat = !AttackStanceTaskManager.getInstance().hasAttackStanceTask(effector);
-		return _val == isInCombat;
+		return _value == isInCombat;
 	}
 }

@@ -17,16 +17,16 @@
 package org.l2jmobius.gameserver.model.skills.conditions;
 
 import org.l2jmobius.gameserver.model.skills.Env;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 
 /**
  * @author mkizub
  */
 public class ConditionSkillStats extends Condition
 {
-	private final Stats _stat;
+	private final Stat _stat;
 	
-	public ConditionSkillStats(Stats stat)
+	public ConditionSkillStats(Stat stat)
 	{
 		super();
 		_stat = stat;

@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 public class WeddingManagerInstance extends NpcInstance
 {
 	/**
-	 * Instantiates a new l2 wedding manager instance.
+	 * Instantiates a new wedding manager instance.
 	 * @param objectId the object id
 	 * @param template the template
 	 * @author evill33t & squeezed
@@ -236,14 +236,14 @@ public class WeddingManagerInstance extends NpcInstance
 				final ItemInstance item3 = inv3.getPaperdollItem(10);
 				if (item3 == null)
 				{
-					player.setIsWearingFormalWear(false);
+					player.setWearingFormalWear(false);
 				}
 				else
 				{
 					final String strItem = Integer.toString(item3.getItemId());
 					final String frmWear = Integer.toString(6408);
 					player.sendMessage(strItem);
-					player.setIsWearingFormalWear(strItem.equals(frmWear));
+					player.setWearingFormalWear(strItem.equals(frmWear));
 				}
 			}
 			
@@ -271,14 +271,14 @@ public class WeddingManagerInstance extends NpcInstance
 				
 				if (null == item3)
 				{
-					player.setIsWearingFormalWear(false);
+					player.setWearingFormalWear(false);
 				}
 				else
 				{
 					final String frmWear = Integer.toString(6408);
 					String strItem = null;
 					strItem = Integer.toString(item3.getItemId());
-					player.setIsWearingFormalWear((null != strItem) && strItem.equals(frmWear));
+					player.setWearingFormalWear((null != strItem) && strItem.equals(frmWear));
 				}
 			}
 			

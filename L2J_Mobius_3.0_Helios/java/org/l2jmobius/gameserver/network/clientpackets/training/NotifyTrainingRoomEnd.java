@@ -55,9 +55,9 @@ public class NotifyTrainingRoomEnd implements IClientIncomingPacket
 			holder.setEndTime(System.currentTimeMillis());
 			player.setTraingCampInfo(holder);
 			player.enableAllSkills();
-			player.setIsInvul(false);
+			player.setInvul(false);
 			player.setInvisible(false);
-			player.setIsImmobilized(false);
+			player.setImmobilized(false);
 			player.teleToLocation(player.getLastLocation());
 			player.sendPacket(ExTrainingZone_Leaving.STATIC_PACKET);
 			holder.setEndTime(System.currentTimeMillis());

@@ -245,7 +245,7 @@ import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 import org.l2jmobius.gameserver.model.stats.Formulas;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -915,9 +915,9 @@ public class PlayerInstance extends Playable
 		return _isSellingBuffs;
 	}
 	
-	public void setIsSellingBuffs(boolean val)
+	public void setSellingBuffs(boolean value)
 	{
-		_isSellingBuffs = val;
+		_isSellingBuffs = value;
 	}
 	
 	public List<SellBuffHolder> getSellingBuffs()
@@ -1249,7 +1249,7 @@ public class PlayerInstance extends Playable
 		return _isCrafting;
 	}
 	
-	public void setIsCrafting(boolean isCrafting)
+	public void setCrafting(boolean isCrafting)
 	{
 		_isCrafting = isCrafting;
 	}
@@ -1602,16 +1602,16 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Set the siege Side of the PlayerInstance.
-	 * @param val
+	 * @param value
 	 */
-	public void setSiegeSide(int val)
+	public void setSiegeSide(int value)
 	{
-		_siegeSide = val;
+		_siegeSide = value;
 	}
 	
-	public boolean isRegisteredOnThisSiegeField(int val)
+	public boolean isRegisteredOnThisSiegeField(int value)
 	{
-		return (_siegeSide == val) || ((_siegeSide >= 81) && (_siegeSide <= 89));
+		return (_siegeSide == value) || ((_siegeSide >= 81) && (_siegeSide <= 89));
 	}
 	
 	@Override
@@ -2137,12 +2137,12 @@ public class PlayerInstance extends Playable
 				if ((newWeightPenalty > 0) && !_dietMode)
 				{
 					addSkill(SkillData.getInstance().getSkill(4270, newWeightPenalty));
-					setIsOverloaded(getCurrentLoad() > maxLoad);
+					setOverloaded(getCurrentLoad() > maxLoad);
 				}
 				else
 				{
 					removeSkill(getKnownSkill(4270), false, true);
-					setIsOverloaded(false);
+					setOverloaded(false);
 				}
 				broadcastUserInfo();
 				sendPacket(new EtcStatusUpdate(this));
@@ -2492,7 +2492,7 @@ public class PlayerInstance extends Playable
 		{
 			setActiveEnchantSupportItemId(ID_NONE);
 			setActiveEnchantTimestamp(0);
-			setIsEnchanting(false);
+			setEnchanting(false);
 		}
 		_activeEnchantItemId = objectId;
 	}
@@ -2517,14 +2517,14 @@ public class PlayerInstance extends Playable
 		return _activeEnchantTimestamp;
 	}
 	
-	public void setActiveEnchantTimestamp(long val)
+	public void setActiveEnchantTimestamp(long value)
 	{
-		_activeEnchantTimestamp = val;
+		_activeEnchantTimestamp = value;
 	}
 	
-	public void setIsEnchanting(boolean val)
+	public void setEnchanting(boolean value)
 	{
-		_isEnchanting = val;
+		_isEnchanting = value;
 	}
 	
 	public boolean isEnchanting()
@@ -2778,9 +2778,9 @@ public class PlayerInstance extends Playable
 	}
 	
 	/* Enable or disable minimap on Hellbound */
-	public void setMinimapAllowed(boolean b)
+	public void setMinimapAllowed(boolean value)
 	{
-		_minimapAllowed = b;
+		_minimapAllowed = value;
 	}
 	
 	/**
@@ -2908,11 +2908,11 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Set _waitTypeSitting to given value
-	 * @param state
+	 * @param value
 	 */
-	public void setIsSitting(boolean state)
+	public void setSitting(boolean value)
 	{
-		_waitTypeSitting = state;
+		_waitTypeSitting = value;
 	}
 	
 	/**
@@ -2937,12 +2937,12 @@ public class PlayerInstance extends Playable
 		}
 		
 		breakAttack();
-		setIsSitting(true);
+		setSitting(true);
 		getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
 		broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_SITTING));
 		// Schedule a sit down task to wait for the animation to finish
 		ThreadPool.schedule(new SitDownTask(this), 2500);
-		setIsParalyzed(true);
+		setParalyzed(true);
 	}
 	
 	/**
@@ -3997,7 +3997,7 @@ public class PlayerInstance extends Playable
 		return _isFakeDeath;
 	}
 	
-	public void setIsFakeDeath(boolean value)
+	public void setFakeDeath(boolean value)
 	{
 		_isFakeDeath = value;
 	}
@@ -4645,8 +4645,8 @@ public class PlayerInstance extends Playable
 	{
 		if ((_currentSkill != null) && !checkUseMagicConditions(skill, _currentSkill.isCtrlPressed(), _currentSkill.isShiftPressed()))
 		{
-			setIsCastingNow(false);
-			setIsCastingSimultaneouslyNow(false);
+			setCastingNow(false);
+			setCastingSimultaneouslyNow(false);
 			return;
 		}
 		super.doCast(skill);
@@ -5022,9 +5022,9 @@ public class PlayerInstance extends Playable
 		return _married;
 	}
 	
-	public void setMarried(boolean state)
+	public void setMarried(boolean value)
 	{
-		_married = state;
+		_married = value;
 	}
 	
 	public boolean isEngageRequest()
@@ -5038,9 +5038,9 @@ public class PlayerInstance extends Playable
 		_engageid = playerid;
 	}
 	
-	public void setMarryRequest(boolean state)
+	public void setMarryRequest(boolean value)
 	{
-		_marryrequest = state;
+		_marryrequest = value;
 	}
 	
 	public boolean isMarryRequest()
@@ -5048,9 +5048,9 @@ public class PlayerInstance extends Playable
 		return _marryrequest;
 	}
 	
-	public void setMarryAccepted(boolean state)
+	public void setMarryAccepted(boolean value)
 	{
-		_marryaccepted = state;
+		_marryaccepted = value;
 	}
 	
 	public boolean isMarryAccepted()
@@ -5703,15 +5703,15 @@ public class PlayerInstance extends Playable
 		{
 			if (killer.isRaid())
 			{
-				percentLost *= calcStat(Stats.REDUCE_EXP_LOST_BY_RAID, 1);
+				percentLost *= calcStat(Stat.REDUCE_EXP_LOST_BY_RAID, 1);
 			}
 			else if (killer.isMonster())
 			{
-				percentLost *= calcStat(Stats.REDUCE_EXP_LOST_BY_MOB, 1);
+				percentLost *= calcStat(Stat.REDUCE_EXP_LOST_BY_MOB, 1);
 			}
 			else if (killer.isPlayable())
 			{
-				percentLost *= calcStat(Stats.REDUCE_EXP_LOST_BY_PVP, 1);
+				percentLost *= calcStat(Stat.REDUCE_EXP_LOST_BY_PVP, 1);
 			}
 		}
 		
@@ -6815,7 +6815,7 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	public void setIsIn7sDungeon(boolean isIn7sDungeon)
+	public void setIn7sDungeon(boolean isIn7sDungeon)
 	{
 		_isIn7sDungeon = isIn7sDungeon;
 	}
@@ -7028,7 +7028,7 @@ public class PlayerInstance extends Playable
 					player.setApprentice(rset.getInt("apprentice"));
 					player.setSponsor(rset.getInt("sponsor"));
 					player.setLvlJoinedAcademy(rset.getInt("lvl_joined_academy"));
-					player.setIsIn7sDungeon(rset.getInt("isin7sdungeon") == 1);
+					player.setIn7sDungeon(rset.getInt("isin7sdungeon") == 1);
 					
 					CursedWeaponsManager.getInstance().checkPlayer(player);
 					
@@ -7141,7 +7141,7 @@ public class PlayerInstance extends Playable
 			
 			if (currentHp < 0.5)
 			{
-				player.setIsDead(true);
+				player.setDead(true);
 				player.stopHpMpRegeneration();
 			}
 			
@@ -8672,7 +8672,7 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		setIsCastingNow(true);
+		setCastingNow(true);
 		// Create a new SkillDat object and set the player _currentSkill
 		// This is used mainly to save & queue the button presses, since Creature has
 		// _lastSkillCast which could otherwise replace it
@@ -8685,7 +8685,7 @@ public class PlayerInstance extends Playable
 		
 		if (!checkUseMagicConditions(skill, forceUse, dontMove))
 		{
-			setIsCastingNow(false);
+			setCastingNow(false);
 			return false;
 		}
 		
@@ -8844,7 +8844,7 @@ public class PlayerInstance extends Playable
 					return false;
 				}
 			}
-			else if ((door.getFort() != null) && (door.getFort().getResidenceId() > 0) && (!door.getFort().getSiege().isInProgress() || !door.getIsShowHp()))
+			else if ((door.getFort() != null) && (door.getFort().getResidenceId() > 0) && (!door.getFort().getSiege().isInProgress() || !door.isShowHp()))
 			{
 				sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
@@ -9244,14 +9244,14 @@ public class PlayerInstance extends Playable
 				if (isFlying())
 				{
 					removeSkill(CommonSkill.WYVERN_BREATH.getSkill().getId(), false);
-					setIsFlying(false);
+					setFlying(false);
 					sendSkillList();
 				}
 				break;
 			}
 			case WYVERN: // Wyvern
 			{
-				setIsFlying(true);
+				setFlying(true);
 				addSkill(CommonSkill.WYVERN_BREATH.getSkill(), false);
 				sendSkillList();
 				break;
@@ -9349,12 +9349,12 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Disable the Inventory and create a new task to enable it after 1.5s.
-	 * @param val
+	 * @param value
 	 */
-	public void setInventoryBlockingStatus(boolean val)
+	public void setInventoryBlockingStatus(boolean value)
 	{
-		_inventoryDisable = val;
-		if (val)
+		_inventoryDisable = value;
+		if (value)
 		{
 			ThreadPool.schedule(new InventoryEnableTask(this), 1500);
 		}
@@ -9620,9 +9620,9 @@ public class PlayerInstance extends Playable
 		
 		_observerMode = true;
 		setTarget(null);
-		setIsParalyzed(true);
+		setParalyzed(true);
 		startParalyze();
-		setIsInvul(true);
+		setInvul(true);
 		setInvisible(true);
 		sendPacket(new ObservationMode(loc));
 		
@@ -9678,7 +9678,7 @@ public class PlayerInstance extends Playable
 		
 		_observerMode = true;
 		setTarget(null);
-		setIsInvul(true);
+		setInvul(true);
 		setInvisible(true);
 		teleToLocation(loc, 0);
 		sendPacket(new ExOlympiadMode(3));
@@ -9694,11 +9694,11 @@ public class PlayerInstance extends Playable
 		unsetLastLocation();
 		sendPacket(new ObservationReturn(getLocation()));
 		
-		setIsParalyzed(false);
+		setParalyzed(false);
 		if (!isGM())
 		{
 			setInvisible(false);
-			setIsInvul(false);
+			setInvul(false);
 		}
 		if (hasAI())
 		{
@@ -9727,7 +9727,7 @@ public class PlayerInstance extends Playable
 		if (!isGM())
 		{
 			setInvisible(false);
-			setIsInvul(false);
+			setInvul(false);
 		}
 		if (hasAI())
 		{
@@ -9795,9 +9795,9 @@ public class PlayerInstance extends Playable
 		_telemode = mode;
 	}
 	
-	public void setLoto(int i, int val)
+	public void setLoto(int i, int value)
 	{
-		_loto[i] = val;
+		_loto[i] = value;
 	}
 	
 	public int getLoto(int i)
@@ -9805,9 +9805,9 @@ public class PlayerInstance extends Playable
 		return _loto[i];
 	}
 	
-	public void setRace(int i, int val)
+	public void setRace(int i, int value)
 	{
-		_race[i] = val;
+		_race[i] = value;
 	}
 	
 	public int getRace(int i)
@@ -9882,14 +9882,14 @@ public class PlayerInstance extends Playable
 		sendSkillList();
 	}
 	
-	public void setIsInOlympiadMode(boolean b)
+	public void setInOlympiadMode(boolean value)
 	{
-		_inOlympiadMode = b;
+		_inOlympiadMode = value;
 	}
 	
-	public void setIsOlympiadStart(boolean b)
+	public void setOlympiadStart(boolean value)
 	{
-		_OlympiadStart = b;
+		_OlympiadStart = value;
 	}
 	
 	public boolean isOlympiadStart()
@@ -9938,7 +9938,7 @@ public class PlayerInstance extends Playable
 	 * Sets up the duel state using a non 0 duelId.
 	 * @param duelId 0=not in a duel
 	 */
-	public void setIsInDuel(int duelId)
+	public void setInDuel(int duelId)
 	{
 		if (duelId > 0)
 		{
@@ -10032,10 +10032,10 @@ public class PlayerInstance extends Playable
 		return _noble;
 	}
 	
-	public void setNoble(boolean val)
+	public void setNoble(boolean value)
 	{
 		final Collection<Skill> nobleSkillTree = SkillTreesData.getInstance().getNobleSkillTree().values();
-		if (val)
+		if (value)
 		{
 			for (Skill skill : nobleSkillTree)
 			{
@@ -10050,7 +10050,7 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
-		_noble = val;
+		_noble = value;
 		
 		sendSkillList();
 	}
@@ -10616,7 +10616,7 @@ public class PlayerInstance extends Playable
 		{
 			return;
 		}
-		final int timeinwater = (int) calcStat(Stats.BREATH, 60000, this, null);
+		final int timeinwater = (int) calcStat(Stat.BREATH, 60000, this, null);
 		sendPacket(new SetupGauge(getObjectId(), 2, timeinwater));
 		_taskWater = ThreadPool.scheduleAtFixedRate(new WaterTask(this), timeinwater, 1000);
 	}
@@ -10647,7 +10647,7 @@ public class PlayerInstance extends Playable
 			if (!isGM() && isIn7sDungeon() && (SevenSigns.getInstance().getPlayerCabal(getObjectId()) != SevenSigns.getInstance().getCabalHighestScore()))
 			{
 				teleToLocation(TeleportWhereType.TOWN);
-				setIsIn7sDungeon(false);
+				setIn7sDungeon(false);
 				sendMessage("You have been teleported to the nearest town due to the beginning of the Seal Validation period.");
 			}
 		}
@@ -10656,7 +10656,7 @@ public class PlayerInstance extends Playable
 			if (!isGM() && isIn7sDungeon() && (SevenSigns.getInstance().getPlayerCabal(getObjectId()) == SevenSigns.CABAL_NULL))
 			{
 				teleToLocation(TeleportWhereType.TOWN);
-				setIsIn7sDungeon(false);
+				setIn7sDungeon(false);
 				sendMessage("You have been teleported to the nearest town because you have not signed for any cabal.");
 			}
 		}
@@ -10971,14 +10971,14 @@ public class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public void setIsTeleporting(boolean teleport)
+	public void setTeleporting(boolean teleport)
 	{
-		setIsTeleporting(teleport, true);
+		setTeleporting(teleport, true);
 	}
 	
-	public void setIsTeleporting(boolean teleport, boolean useWatchDog)
+	public void setTeleporting(boolean teleport, boolean useWatchDog)
 	{
-		super.setIsTeleporting(teleport);
+		super.setTeleporting(teleport);
 		if (!useWatchDog)
 		{
 			return;
@@ -11416,7 +11416,7 @@ public class PlayerInstance extends Playable
 		
 		try
 		{
-			setIsTeleporting(false);
+			setTeleporting(false);
 		}
 		catch (Exception e)
 		{
@@ -11700,7 +11700,7 @@ public class PlayerInstance extends Playable
 	public void startFishing(int x, int y, int z)
 	{
 		stopMove(null);
-		setIsImmobilized(true);
+		setImmobilized(true);
 		_fishing = true;
 		_fishx = x;
 		_fishy = y;
@@ -12110,7 +12110,7 @@ public class PlayerInstance extends Playable
 		// Ends fishing
 		broadcastPacket(new ExFishingEnd(win, this));
 		sendPacket(SystemMessageId.YOU_REEL_YOUR_LINE_IN_AND_STOP_FISHING);
-		setIsImmobilized(false);
+		setImmobilized(false);
 		stopLookingForFishTask();
 	}
 	
@@ -12155,32 +12155,32 @@ public class PlayerInstance extends Playable
 		{
 			ivlim = getRace() == Race.DWARF ? Config.INVENTORY_MAXIMUM_DWARF : Config.INVENTORY_MAXIMUM_NO_DWARF;
 		}
-		return ivlim += (int) getStat().calcStat(Stats.INV_LIM, 0, null, null);
+		return ivlim += (int) getStat().calcStat(Stat.INV_LIM, 0, null, null);
 	}
 	
 	public int getWareHouseLimit()
 	{
-		return (getRace() == Race.DWARF ? Config.WAREHOUSE_SLOTS_DWARF : Config.WAREHOUSE_SLOTS_NO_DWARF) + (int) getStat().calcStat(Stats.WH_LIM, 0, null, null);
+		return (getRace() == Race.DWARF ? Config.WAREHOUSE_SLOTS_DWARF : Config.WAREHOUSE_SLOTS_NO_DWARF) + (int) getStat().calcStat(Stat.WH_LIM, 0, null, null);
 	}
 	
 	public int getPrivateSellStoreLimit()
 	{
-		return (getRace() == Race.DWARF ? Config.MAX_PVTSTORESELL_SLOTS_DWARF : Config.MAX_PVTSTORESELL_SLOTS_OTHER) + (int) getStat().calcStat(Stats.P_SELL_LIM, 0, null, null);
+		return (getRace() == Race.DWARF ? Config.MAX_PVTSTORESELL_SLOTS_DWARF : Config.MAX_PVTSTORESELL_SLOTS_OTHER) + (int) getStat().calcStat(Stat.P_SELL_LIM, 0, null, null);
 	}
 	
 	public int getPrivateBuyStoreLimit()
 	{
-		return (getRace() == Race.DWARF ? Config.MAX_PVTSTOREBUY_SLOTS_DWARF : Config.MAX_PVTSTOREBUY_SLOTS_OTHER) + (int) getStat().calcStat(Stats.P_BUY_LIM, 0, null, null);
+		return (getRace() == Race.DWARF ? Config.MAX_PVTSTOREBUY_SLOTS_DWARF : Config.MAX_PVTSTOREBUY_SLOTS_OTHER) + (int) getStat().calcStat(Stat.P_BUY_LIM, 0, null, null);
 	}
 	
 	public int getDwarfRecipeLimit()
 	{
-		return Config.DWARF_RECIPE_LIMIT + (int) getStat().calcStat(Stats.REC_D_LIM, 0, null, null);
+		return Config.DWARF_RECIPE_LIMIT + (int) getStat().calcStat(Stat.REC_D_LIM, 0, null, null);
 	}
 	
 	public int getCommonRecipeLimit()
 	{
-		return Config.COMMON_RECIPE_LIMIT + (int) getStat().calcStat(Stats.REC_C_LIM, 0, null, null);
+		return Config.COMMON_RECIPE_LIMIT + (int) getStat().calcStat(Stat.REC_C_LIM, 0, null, null);
 	}
 	
 	/**
@@ -12481,15 +12481,15 @@ public class PlayerInstance extends Playable
 		
 		if (killer.isRaid())
 		{
-			percent *= calcStat(Stats.REDUCE_DEATH_PENALTY_BY_RAID, 1);
+			percent *= calcStat(Stat.REDUCE_DEATH_PENALTY_BY_RAID, 1);
 		}
 		else if (killer.isMonster())
 		{
-			percent *= calcStat(Stats.REDUCE_DEATH_PENALTY_BY_MOB, 1);
+			percent *= calcStat(Stat.REDUCE_DEATH_PENALTY_BY_MOB, 1);
 		}
 		else if (killer.isPlayable())
 		{
-			percent *= calcStat(Stats.REDUCE_DEATH_PENALTY_BY_PVP, 1);
+			percent *= calcStat(Stat.REDUCE_DEATH_PENALTY_BY_PVP, 1);
 		}
 		
 		if ((Rnd.get(1, 100) <= ((Config.DEATH_PENALTY_CHANCE) * percent)) && (!killer.isPlayable() || (getKarma() > 0)))
@@ -12860,9 +12860,9 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	public void setIsInSiege(boolean b)
+	public void setInSiege(boolean value)
 	{
-		_isInSiege = b;
+		_isInSiege = value;
 	}
 	
 	public boolean isInSiege()
@@ -12873,7 +12873,7 @@ public class PlayerInstance extends Playable
 	/**
 	 * @param isInHideoutSiege sets the value of {@link #_isInHideoutSiege}.
 	 */
-	public void setIsInHideoutSiege(boolean isInHideoutSiege)
+	public void setInHideoutSiege(boolean isInHideoutSiege)
 	{
 		_isInHideoutSiege = isInHideoutSiege;
 	}
@@ -13569,24 +13569,24 @@ public class PlayerInstance extends Playable
 		return _clientHeading;
 	}
 	
-	public void setClientX(int val)
+	public void setClientX(int value)
 	{
-		_clientX = val;
+		_clientX = value;
 	}
 	
-	public void setClientY(int val)
+	public void setClientY(int value)
 	{
-		_clientY = val;
+		_clientY = value;
 	}
 	
-	public void setClientZ(int val)
+	public void setClientZ(int value)
 	{
-		_clientZ = val;
+		_clientZ = value;
 	}
 	
-	public void setClientHeading(int val)
+	public void setClientHeading(int value)
 	{
-		_clientHeading = val;
+		_clientHeading = value;
 	}
 	
 	/**
@@ -14128,12 +14128,12 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * This method can prevent from displaying 'To Village' button upon death.
-	 * @param val
+	 * @param value
 	 */
 	@Override
-	public void setCanRevive(boolean val)
+	public void setCanRevive(boolean value)
 	{
-		_canRevive = val;
+		_canRevive = value;
 	}
 	
 	/**
@@ -14309,11 +14309,11 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Set true/false if character got Charm of Courage
-	 * @param val true/false
+	 * @param value true/false
 	 */
-	public void setCharmOfCourage(boolean val)
+	public void setCharmOfCourage(boolean value)
 	{
-		_hasCharmOfCourage = val;
+		_hasCharmOfCourage = value;
 	}
 	
 	/**

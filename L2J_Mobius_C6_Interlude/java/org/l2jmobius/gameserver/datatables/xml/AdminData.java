@@ -339,14 +339,13 @@ public class AdminData implements IXmlReader
 	
 	public boolean isGmOnline(boolean includeHidden)
 	{
-		for (boolean b : _gmList.values())
+		for (boolean value : _gmList.values())
 		{
-			if (includeHidden || !b)
+			if (includeHidden || !value)
 			{
 				return true;
 			}
 		}
-		
 		return false;
 	}
 	

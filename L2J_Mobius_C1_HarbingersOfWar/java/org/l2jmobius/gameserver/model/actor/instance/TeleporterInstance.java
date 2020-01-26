@@ -46,16 +46,16 @@ public class TeleporterInstance extends NpcInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		pom = val == 0 ? "" + npcId : npcId + "-" + val;
+		pom = value == 0 ? "" + npcId : npcId + "-" + value;
 		return "data/html/teleporter/" + pom + ".htm";
 	}
 	
-	private void doTeleport(PlayerInstance player, int val)
+	private void doTeleport(PlayerInstance player, int value)
 	{
-		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
+		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(value);
 		if (list != null)
 		{
 			if (player.getAdena() >= list.getPrice())
@@ -71,7 +71,7 @@ public class TeleporterInstance extends NpcInstance
 		}
 		else
 		{
-			_log.warning("No teleport destination with id:" + val);
+			_log.warning("No teleport destination with id:" + value);
 		}
 		player.sendPacket(new ActionFailed());
 	}

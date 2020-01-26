@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.RecipeInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -204,7 +204,7 @@ public class RecipeController
 			_skillLevel = _player.getSkillLevel(_skillId);
 			_skill = _player.getKnownSkill(_skillId);
 			
-			_player.setIsCrafting(true);
+			_player.setCrafting(true);
 			
 			if (_player.isAlikeDead())
 			{
@@ -314,7 +314,7 @@ public class RecipeController
 			updateCurMp();
 			updateCurLoad();
 			
-			_player.setIsCrafting(false);
+			_player.setCrafting(false);
 			_isValid = true;
 		}
 		
@@ -459,7 +459,7 @@ public class RecipeController
 			updateCurMp();
 			updateCurLoad();
 			_activeMakers.remove(_player);
-			_player.setIsCrafting(false);
+			_player.setCrafting(false);
 			_target.sendPacket(new ItemList(_target, false));
 		}
 		
@@ -594,7 +594,7 @@ public class RecipeController
 		private void abort()
 		{
 			updateMakeInfo(false);
-			_player.setIsCrafting(false);
+			_player.setCrafting(false);
 			_activeMakers.remove(_player);
 		}
 		
@@ -712,7 +712,7 @@ public class RecipeController
 				// you can use ALT_GAME_CREATION_XP_RATE/SP to
 				// modify XP/SP gained (default = 1)
 				
-				_player.addExpAndSp((int) _player.calcStat(Stats.EXPSP_RATE, exp * Config.ALT_GAME_CREATION_XP_RATE * Config.ALT_GAME_CREATION_SPEED, null, null), (int) _player.calcStat(Stats.EXPSP_RATE, sp * Config.ALT_GAME_CREATION_SP_RATE * Config.ALT_GAME_CREATION_SPEED, null, null));
+				_player.addExpAndSp((int) _player.calcStat(Stat.EXPSP_RATE, exp * Config.ALT_GAME_CREATION_XP_RATE * Config.ALT_GAME_CREATION_SPEED, null, null), (int) _player.calcStat(Stat.EXPSP_RATE, sp * Config.ALT_GAME_CREATION_SP_RATE * Config.ALT_GAME_CREATION_SPEED, null, null));
 			}
 			updateMakeInfo(true); // success
 		}
@@ -725,7 +725,7 @@ public class RecipeController
 		if ((recipeList == null) || (recipeList.getRecipes().length == 0))
 		{
 			player.sendMessage("No recipe for: " + id);
-			player.setIsCrafting(false);
+			player.setCrafting(false);
 			return null;
 		}
 		return recipeList;

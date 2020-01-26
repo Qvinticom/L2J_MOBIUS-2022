@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -40,33 +40,33 @@ public class DefenceAttribute extends AbstractEffect
 	@Override
 	public void pump(Creature effected, Skill skill)
 	{
-		Stats stat = Stats.FIRE_RES;
+		Stat stat = Stat.FIRE_RES;
 		
 		switch (_attribute)
 		{
 			case WATER:
 			{
-				stat = Stats.WATER_RES;
+				stat = Stat.WATER_RES;
 				break;
 			}
 			case WIND:
 			{
-				stat = Stats.WIND_RES;
+				stat = Stat.WIND_RES;
 				break;
 			}
 			case EARTH:
 			{
-				stat = Stats.EARTH_RES;
+				stat = Stat.EARTH_RES;
 				break;
 			}
 			case HOLY:
 			{
-				stat = Stats.HOLY_RES;
+				stat = Stat.HOLY_RES;
 				break;
 			}
 			case DARK:
 			{
-				stat = Stats.DARK_RES;
+				stat = Stat.DARK_RES;
 				break;
 			}
 		}

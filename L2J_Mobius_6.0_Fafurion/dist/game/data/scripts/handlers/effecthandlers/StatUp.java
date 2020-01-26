@@ -20,63 +20,63 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
  */
 public class StatUp extends AbstractEffect
 {
-	private final BaseStats _stat;
+	private final BaseStat _stat;
 	private final double _amount;
 	
 	public StatUp(StatsSet params)
 	{
 		_amount = params.getDouble("amount", 0);
-		_stat = params.getEnum("stat", BaseStats.class, BaseStats.STR);
+		_stat = params.getEnum("stat", BaseStat.class, BaseStat.STR);
 	}
 	
 	@Override
 	public void pump(Creature effected, Skill skill)
 	{
-		Stats stat = Stats.STAT_STR;
+		Stat stat = Stat.STAT_STR;
 		
 		switch (_stat)
 		{
 			case INT:
 			{
-				stat = Stats.STAT_INT;
+				stat = Stat.STAT_INT;
 				break;
 			}
 			case DEX:
 			{
-				stat = Stats.STAT_DEX;
+				stat = Stat.STAT_DEX;
 				break;
 			}
 			case WIT:
 			{
-				stat = Stats.STAT_WIT;
+				stat = Stat.STAT_WIT;
 				break;
 			}
 			case CON:
 			{
-				stat = Stats.STAT_CON;
+				stat = Stat.STAT_CON;
 				break;
 			}
 			case MEN:
 			{
-				stat = Stats.STAT_MEN;
+				stat = Stat.STAT_MEN;
 				break;
 			}
 			case CHA:
 			{
-				stat = Stats.STAT_CHA;
+				stat = Stat.STAT_CHA;
 				break;
 			}
 			case LUC:
 			{
-				stat = Stats.STAT_LUC;
+				stat = Stat.STAT_LUC;
 				break;
 			}
 		}

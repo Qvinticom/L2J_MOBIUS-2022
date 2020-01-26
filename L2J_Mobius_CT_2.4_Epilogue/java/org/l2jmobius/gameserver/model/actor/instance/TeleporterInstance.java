@@ -158,16 +158,16 @@ public class TeleporterInstance extends Npc
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
 		}
 		else
 		{
-			pom = npcId + "-" + val;
+			pom = npcId + "-" + value;
 		}
 		
 		return "data/html/teleporter/" + pom + ".htm";
@@ -245,9 +245,9 @@ public class TeleporterInstance extends Npc
 		player.sendPacket(html);
 	}
 	
-	private void doTeleport(PlayerInstance player, int val)
+	private void doTeleport(PlayerInstance player, int value)
 	{
-		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
+		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(value);
 		if (list != null)
 		{
 			// you cannot teleport to village that is in siege
@@ -271,7 +271,7 @@ public class TeleporterInstance extends Npc
 				player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD);
 				return;
 			}
-			else if (list.getIsForNoble() && !player.isNoble())
+			else if (list.isForNoble() && !player.isNoble())
 			{
 				final String filename = "data/html/teleporter/nobleteleporter-no.htm";
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -291,7 +291,7 @@ public class TeleporterInstance extends Npc
 			{
 				price = 0;
 			}
-			else if (!list.getIsForNoble())
+			else if (!list.isForNoble())
 			{
 				final Calendar cal = Calendar.getInstance();
 				if ((cal.get(Calendar.HOUR_OF_DAY) >= 20) && (cal.get(Calendar.HOUR_OF_DAY) <= 23) && ((cal.get(Calendar.DAY_OF_WEEK) == 1) || (cal.get(Calendar.DAY_OF_WEEK) == 7)))
@@ -300,14 +300,14 @@ public class TeleporterInstance extends Npc
 				}
 			}
 			
-			if (Config.FREE_TELEPORTING || player.destroyItemByItemId("Teleport " + (list.getIsForNoble() ? " nobless" : ""), list.getItemId(), price, this, true))
+			if (Config.FREE_TELEPORTING || player.destroyItemByItemId("Teleport " + (list.isForNoble() ? " nobless" : ""), list.getItemId(), price, this, true))
 			{
 				player.teleToLocation(list.getLocX(), list.getLocY(), list.getLocZ(), player.getHeading(), -1);
 			}
 		}
 		else
 		{
-			LOGGER.warning("No teleport destination with id:" + val);
+			LOGGER.warning("No teleport destination with id:" + value);
 		}
 		
 		player.sendPacket(ActionFailed.STATIC_PACKET);

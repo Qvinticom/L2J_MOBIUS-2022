@@ -229,7 +229,7 @@ public class OfflineTradersTable
 					
 					if (isSellBuff)
 					{
-						player.setIsSellingBuffs(true);
+						player.setSellingBuffs(true);
 					}
 					
 					player.spawnMe(player.getX(), player.getY(), player.getZ());

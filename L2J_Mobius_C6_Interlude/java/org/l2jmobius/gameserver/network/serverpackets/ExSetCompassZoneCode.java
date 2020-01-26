@@ -45,11 +45,11 @@ public class ExSetCompassZoneCode extends GameServerPacket
 	
 	/**
 	 * Instantiates a new ex set compass zone code.
-	 * @param val the val
+	 * @param value the value
 	 */
-	public ExSetCompassZoneCode(int val)
+	public ExSetCompassZoneCode(int value)
 	{
-		_zoneType = val;
+		_zoneType = value;
 	}
 	
 	@Override

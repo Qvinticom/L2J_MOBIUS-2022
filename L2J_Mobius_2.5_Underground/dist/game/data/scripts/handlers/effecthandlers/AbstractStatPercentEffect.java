@@ -21,17 +21,17 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Mobius
  */
 public class AbstractStatPercentEffect extends AbstractEffect
 {
-	private final Stats _stat;
+	private final Stat _stat;
 	protected final double _amount;
 	
-	public AbstractStatPercentEffect(StatsSet params, Stats stat)
+	public AbstractStatPercentEffect(StatsSet params, Stat stat)
 	{
 		_stat = stat;
 		_amount = params.getDouble("amount", 1);

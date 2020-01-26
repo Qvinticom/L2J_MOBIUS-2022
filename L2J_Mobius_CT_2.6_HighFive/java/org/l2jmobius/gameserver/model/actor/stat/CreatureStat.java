@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Calculator;
 import org.l2jmobius.gameserver.model.stats.MoveType;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.TraitType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 
@@ -57,7 +57,7 @@ public class CreatureStat
 		Arrays.fill(_defenceTraits, 1.0f);
 	}
 	
-	public double calcStat(Stats stat, double init)
+	public double calcStat(Stat stat, double init)
 	{
 		return calcStat(stat, init, null, null);
 	}
@@ -75,7 +75,7 @@ public class CreatureStat
 	 * @param skill The Skill whose properties will be used in the calculation (ex : Level...)
 	 * @return
 	 */
-	public double calcStat(Stats stat, double initVal, Creature target, Skill skill)
+	public double calcStat(Stat stat, double initVal, Creature target, Skill skill)
 	{
 		double value = initVal;
 		if (stat == null)
@@ -141,7 +141,7 @@ public class CreatureStat
 	 */
 	public int getAccuracy()
 	{
-		return (int) Math.round(calcStat(Stats.ACCURACY_COMBAT, 0, null, null));
+		return (int) Math.round(calcStat(Stat.ACCURACY_COMBAT, 0, null, null));
 	}
 	
 	public Creature getActiveChar()
@@ -164,7 +164,7 @@ public class CreatureStat
 	 */
 	public double getCriticalDmg(Creature target, double init)
 	{
-		return calcStat(Stats.CRITICAL_DAMAGE, init, target, null);
+		return calcStat(Stat.CRITICAL_DAMAGE, init, target, null);
 	}
 	
 	/**
@@ -174,7 +174,7 @@ public class CreatureStat
 	 */
 	public int getCriticalHit(Creature target, Skill skill)
 	{
-		double val = calcStat(Stats.CRITICAL_RATE, _creature.getTemplate().getBaseCritRate(), target, skill);
+		double val = calcStat(Stat.CRITICAL_RATE, _creature.getTemplate().getBaseCritRate(), target, skill);
 		if (!_creature.canOverrideCond(PlayerCondOverride.MAX_STATS_VALUE))
 		{
 			val = Math.min(val, Config.MAX_PCRIT_RATE);
@@ -188,7 +188,7 @@ public class CreatureStat
 	 */
 	public int getCriticalHitPos(int base)
 	{
-		return (int) calcStat(Stats.CRITICAL_RATE_POS, base);
+		return (int) calcStat(Stat.CRITICAL_RATE_POS, base);
 	}
 	
 	/**
@@ -197,7 +197,7 @@ public class CreatureStat
 	 */
 	public int getEvasionRate(Creature target)
 	{
-		int val = (int) Math.round(calcStat(Stats.EVASION_RATE, 0, target, null));
+		int val = (int) Math.round(calcStat(Stat.EVASION_RATE, 0, target, null));
 		
 		if (!_creature.canOverrideCond(PlayerCondOverride.MAX_STATS_VALUE))
 		{
@@ -235,7 +235,7 @@ public class CreatureStat
 	{
 		if (skill != null)
 		{
-			return (int) calcStat(Stats.MAGIC_ATTACK_RANGE, skill.getCastRange(), null, skill);
+			return (int) calcStat(Stat.MAGIC_ATTACK_RANGE, skill.getCastRange(), null, skill);
 		}
 		
 		return _creature.getTemplate().getBaseAttackRange();
@@ -243,32 +243,32 @@ public class CreatureStat
 	
 	public int getMaxCp()
 	{
-		return (int) calcStat(Stats.MAX_CP, _creature.getTemplate().getBaseCpMax());
+		return (int) calcStat(Stat.MAX_CP, _creature.getTemplate().getBaseCpMax());
 	}
 	
 	public int getMaxRecoverableCp()
 	{
-		return (int) calcStat(Stats.MAX_RECOVERABLE_CP, getMaxCp());
+		return (int) calcStat(Stat.MAX_RECOVERABLE_CP, getMaxCp());
 	}
 	
 	public int getMaxHp()
 	{
-		return (int) calcStat(Stats.MAX_HP, _creature.getTemplate().getBaseHpMax());
+		return (int) calcStat(Stat.MAX_HP, _creature.getTemplate().getBaseHpMax());
 	}
 	
 	public int getMaxRecoverableHp()
 	{
-		return (int) calcStat(Stats.MAX_RECOVERABLE_HP, getMaxHp());
+		return (int) calcStat(Stat.MAX_RECOVERABLE_HP, getMaxHp());
 	}
 	
 	public int getMaxMp()
 	{
-		return (int) calcStat(Stats.MAX_MP, _creature.getTemplate().getBaseMpMax());
+		return (int) calcStat(Stat.MAX_MP, _creature.getTemplate().getBaseMpMax());
 	}
 	
 	public int getMaxRecoverableMp()
 	{
-		return (int) calcStat(Stats.MAX_RECOVERABLE_MP, getMaxMp());
+		return (int) calcStat(Stat.MAX_RECOVERABLE_MP, getMaxMp());
 	}
 	
 	/**
@@ -291,7 +291,7 @@ public class CreatureStat
 		}
 		
 		// Calculate modifiers Magic Attack
-		return Math.min(calcStat(Stats.MAGIC_ATTACK, _creature.getTemplate().getBaseMAtk() * bonusAtk, target, skill), Config.MAX_MATK);
+		return Math.min(calcStat(Stat.MAGIC_ATTACK, _creature.getTemplate().getBaseMAtk() * bonusAtk, target, skill), Config.MAX_MATK);
 	}
 	
 	/**
@@ -305,7 +305,7 @@ public class CreatureStat
 			bonusSpdAtk = Config.CHAMPION_SPD_ATK;
 		}
 		
-		double val = calcStat(Stats.MAGIC_ATTACK_SPEED, _creature.getTemplate().getBaseMAtkSpd() * bonusSpdAtk);
+		double val = calcStat(Stat.MAGIC_ATTACK_SPEED, _creature.getTemplate().getBaseMAtkSpd() * bonusSpdAtk);
 		
 		if (!_creature.canOverrideCond(PlayerCondOverride.MAX_STATS_VALUE))
 		{
@@ -322,7 +322,7 @@ public class CreatureStat
 	 */
 	public int getMCriticalHit(Creature target, Skill skill)
 	{
-		int val = (int) calcStat(Stats.MCRITICAL_RATE, 1, target, skill) * 10;
+		int val = (int) calcStat(Stat.MCRITICAL_RATE, 1, target, skill) * 10;
 		
 		if (!_creature.canOverrideCond(PlayerCondOverride.MAX_STATS_VALUE))
 		{
@@ -350,7 +350,7 @@ public class CreatureStat
 		}
 		
 		// Calculate modifiers Magic Attack
-		return calcStat(Stats.MAGIC_DEFENCE, defence, target, skill);
+		return calcStat(Stat.MAGIC_DEFENCE, defence, target, skill);
 	}
 	
 	/**
@@ -358,7 +358,7 @@ public class CreatureStat
 	 */
 	public int getCON()
 	{
-		return (int) calcStat(Stats.STAT_CON, _creature.getTemplate().getBaseCON());
+		return (int) calcStat(Stat.STAT_CON, _creature.getTemplate().getBaseCON());
 	}
 	
 	/**
@@ -366,7 +366,7 @@ public class CreatureStat
 	 */
 	public int getDEX()
 	{
-		return (int) calcStat(Stats.STAT_DEX, _creature.getTemplate().getBaseDEX());
+		return (int) calcStat(Stat.STAT_DEX, _creature.getTemplate().getBaseDEX());
 	}
 	
 	/**
@@ -374,7 +374,7 @@ public class CreatureStat
 	 */
 	public int getINT()
 	{
-		return (int) calcStat(Stats.STAT_INT, _creature.getTemplate().getBaseINT());
+		return (int) calcStat(Stat.STAT_INT, _creature.getTemplate().getBaseINT());
 	}
 	
 	/**
@@ -382,7 +382,7 @@ public class CreatureStat
 	 */
 	public int getMEN()
 	{
-		return (int) calcStat(Stats.STAT_MEN, _creature.getTemplate().getBaseMEN());
+		return (int) calcStat(Stat.STAT_MEN, _creature.getTemplate().getBaseMEN());
 	}
 	
 	/**
@@ -390,7 +390,7 @@ public class CreatureStat
 	 */
 	public int getSTR()
 	{
-		return (int) calcStat(Stats.STAT_STR, _creature.getTemplate().getBaseSTR());
+		return (int) calcStat(Stat.STAT_STR, _creature.getTemplate().getBaseSTR());
 	}
 	
 	/**
@@ -398,7 +398,7 @@ public class CreatureStat
 	 */
 	public int getWIT()
 	{
-		return (int) calcStat(Stats.STAT_WIT, _creature.getTemplate().getBaseWIT());
+		return (int) calcStat(Stat.STAT_WIT, _creature.getTemplate().getBaseWIT());
 	}
 	
 	public double getMovementSpeedMultiplier()
@@ -431,7 +431,7 @@ public class CreatureStat
 			return 0;
 		}
 		
-		return calcStat(Stats.MOVE_SPEED, baseRunSpd * _gmSpeedMultiplier, null, null);
+		return calcStat(Stat.MOVE_SPEED, baseRunSpd * _gmSpeedMultiplier, null, null);
 	}
 	
 	/**
@@ -445,7 +445,7 @@ public class CreatureStat
 			return 0;
 		}
 		
-		return calcStat(Stats.MOVE_SPEED, baseWalkSpd * _gmSpeedMultiplier);
+		return calcStat(Stat.MOVE_SPEED, baseWalkSpd * _gmSpeedMultiplier);
 	}
 	
 	/**
@@ -459,7 +459,7 @@ public class CreatureStat
 			return 0;
 		}
 		
-		return calcStat(Stats.MOVE_SPEED, baseRunSpd * _gmSpeedMultiplier, null, null);
+		return calcStat(Stat.MOVE_SPEED, baseRunSpd * _gmSpeedMultiplier, null, null);
 	}
 	
 	/**
@@ -473,7 +473,7 @@ public class CreatureStat
 			return 0;
 		}
 		
-		return calcStat(Stats.MOVE_SPEED, baseWalkSpd * _gmSpeedMultiplier);
+		return calcStat(Stat.MOVE_SPEED, baseWalkSpd * _gmSpeedMultiplier);
 	}
 	
 	/**
@@ -503,7 +503,7 @@ public class CreatureStat
 	 */
 	public double getMReuseRate(Skill skill)
 	{
-		return calcStat(Stats.MAGIC_REUSE_RATE, 1, null, skill);
+		return calcStat(Stat.MAGIC_REUSE_RATE, 1, null, skill);
 	}
 	
 	/**
@@ -521,7 +521,7 @@ public class CreatureStat
 		{
 			bonusAtk *= Config.RAID_PATTACK_MULTIPLIER;
 		}
-		return Math.min(calcStat(Stats.POWER_ATTACK, _creature.getTemplate().getBasePAtk() * bonusAtk, target, null), Config.MAX_PATK);
+		return Math.min(calcStat(Stat.POWER_ATTACK, _creature.getTemplate().getBasePAtk() * bonusAtk, target, null), Config.MAX_PATK);
 	}
 	
 	/**
@@ -534,7 +534,7 @@ public class CreatureStat
 		{
 			bonusAtk = Config.CHAMPION_SPD_ATK;
 		}
-		return Math.round(calcStat(Stats.POWER_ATTACK_SPEED, _creature.getTemplate().getBasePAtkSpd() * bonusAtk, null, null));
+		return Math.round(calcStat(Stat.POWER_ATTACK_SPEED, _creature.getTemplate().getBasePAtkSpd() * bonusAtk, null, null));
 	}
 	
 	/**
@@ -543,7 +543,7 @@ public class CreatureStat
 	 */
 	public double getPDef(Creature target)
 	{
-		return calcStat(Stats.POWER_DEFENCE, _creature.isRaid() ? _creature.getTemplate().getBasePDef() * Config.RAID_PDEFENCE_MULTIPLIER : _creature.getTemplate().getBasePDef(), target, null);
+		return calcStat(Stat.POWER_DEFENCE, _creature.isRaid() ? _creature.getTemplate().getBasePDef() * Config.RAID_PDEFENCE_MULTIPLIER : _creature.getTemplate().getBasePDef(), target, null);
 	}
 	
 	/**
@@ -568,7 +568,7 @@ public class CreatureStat
 			baseAttackRange = _creature.getTemplate().getBaseAttackRange();
 		}
 		
-		return (int) calcStat(Stats.POWER_ATTACK_RANGE, baseAttackRange, null, null);
+		return (int) calcStat(Stat.POWER_ATTACK_RANGE, baseAttackRange, null, null);
 	}
 	
 	public int getPhysicalAttackAngle()
@@ -582,7 +582,7 @@ public class CreatureStat
 	 */
 	public double getWeaponReuseModifier(Creature target)
 	{
-		return calcStat(Stats.ATK_REUSE, 1, target, null);
+		return calcStat(Stat.ATK_REUSE, 1, target, null);
 	}
 	
 	/**
@@ -590,7 +590,7 @@ public class CreatureStat
 	 */
 	public int getShldDef()
 	{
-		return (int) calcStat(Stats.SHIELD_DEFENCE, 0);
+		return (int) calcStat(Stat.SHIELD_DEFENCE, 0);
 	}
 	
 	public long getSp()
@@ -620,17 +620,17 @@ public class CreatureStat
 			mpConsume += _creature.getDanceCount() * nextDanceMpCost;
 		}
 		
-		mpConsume = calcStat(Stats.MP_CONSUME, mpConsume, null, skill);
+		mpConsume = calcStat(Stat.MP_CONSUME, mpConsume, null, skill);
 		
 		if (skill.isDance())
 		{
-			return (int) calcStat(Stats.DANCE_MP_CONSUME_RATE, mpConsume);
+			return (int) calcStat(Stat.DANCE_MP_CONSUME_RATE, mpConsume);
 		}
 		if (skill.isMagic())
 		{
-			return (int) calcStat(Stats.MAGICAL_MP_CONSUME_RATE, mpConsume);
+			return (int) calcStat(Stat.MAGICAL_MP_CONSUME_RATE, mpConsume);
 		}
-		return (int) calcStat(Stats.PHYSICAL_MP_CONSUME_RATE, mpConsume);
+		return (int) calcStat(Stat.PHYSICAL_MP_CONSUME_RATE, mpConsume);
 	}
 	
 	/**
@@ -639,7 +639,7 @@ public class CreatureStat
 	 */
 	public int getMpInitialConsume(Skill skill)
 	{
-		return skill == null ? 1 : (int) calcStat(Stats.MP_CONSUME, skill.getMpInitialConsume(), null, skill);
+		return skill == null ? 1 : (int) calcStat(Stat.MP_CONSUME, skill.getMpInitialConsume(), null, skill);
 	}
 	
 	public byte getAttackElement()
@@ -664,12 +664,12 @@ public class CreatureStat
 		};
 		
 		byte returnVal = -2;
-		stats[0] = (int) calcStat(Stats.FIRE_POWER, _creature.getTemplate().getBaseFire());
-		stats[1] = (int) calcStat(Stats.WATER_POWER, _creature.getTemplate().getBaseWater());
-		stats[2] = (int) calcStat(Stats.WIND_POWER, _creature.getTemplate().getBaseWind());
-		stats[3] = (int) calcStat(Stats.EARTH_POWER, _creature.getTemplate().getBaseEarth());
-		stats[4] = (int) calcStat(Stats.HOLY_POWER, _creature.getTemplate().getBaseHoly());
-		stats[5] = (int) calcStat(Stats.DARK_POWER, _creature.getTemplate().getBaseDark());
+		stats[0] = (int) calcStat(Stat.FIRE_POWER, _creature.getTemplate().getBaseFire());
+		stats[1] = (int) calcStat(Stat.WATER_POWER, _creature.getTemplate().getBaseWater());
+		stats[2] = (int) calcStat(Stat.WIND_POWER, _creature.getTemplate().getBaseWind());
+		stats[3] = (int) calcStat(Stat.EARTH_POWER, _creature.getTemplate().getBaseEarth());
+		stats[4] = (int) calcStat(Stat.HOLY_POWER, _creature.getTemplate().getBaseHoly());
+		stats[5] = (int) calcStat(Stat.DARK_POWER, _creature.getTemplate().getBaseDark());
 		
 		for (byte x = 0; x < 6; x++)
 		{
@@ -694,27 +694,27 @@ public class CreatureStat
 		{
 			case Elementals.FIRE:
 			{
-				return (int) calcStat(Stats.FIRE_POWER, _creature.getTemplate().getBaseFire());
+				return (int) calcStat(Stat.FIRE_POWER, _creature.getTemplate().getBaseFire());
 			}
 			case Elementals.WATER:
 			{
-				return (int) calcStat(Stats.WATER_POWER, _creature.getTemplate().getBaseWater());
+				return (int) calcStat(Stat.WATER_POWER, _creature.getTemplate().getBaseWater());
 			}
 			case Elementals.WIND:
 			{
-				return (int) calcStat(Stats.WIND_POWER, _creature.getTemplate().getBaseWind());
+				return (int) calcStat(Stat.WIND_POWER, _creature.getTemplate().getBaseWind());
 			}
 			case Elementals.EARTH:
 			{
-				return (int) calcStat(Stats.EARTH_POWER, _creature.getTemplate().getBaseEarth());
+				return (int) calcStat(Stat.EARTH_POWER, _creature.getTemplate().getBaseEarth());
 			}
 			case Elementals.HOLY:
 			{
-				return (int) calcStat(Stats.HOLY_POWER, _creature.getTemplate().getBaseHoly());
+				return (int) calcStat(Stat.HOLY_POWER, _creature.getTemplate().getBaseHoly());
 			}
 			case Elementals.DARK:
 			{
-				return (int) calcStat(Stats.DARK_POWER, _creature.getTemplate().getBaseDark());
+				return (int) calcStat(Stat.DARK_POWER, _creature.getTemplate().getBaseDark());
 			}
 			default:
 			{
@@ -729,27 +729,27 @@ public class CreatureStat
 		{
 			case Elementals.FIRE:
 			{
-				return (int) calcStat(Stats.FIRE_RES, _creature.getTemplate().getBaseFireRes());
+				return (int) calcStat(Stat.FIRE_RES, _creature.getTemplate().getBaseFireRes());
 			}
 			case Elementals.WATER:
 			{
-				return (int) calcStat(Stats.WATER_RES, _creature.getTemplate().getBaseWaterRes());
+				return (int) calcStat(Stat.WATER_RES, _creature.getTemplate().getBaseWaterRes());
 			}
 			case Elementals.WIND:
 			{
-				return (int) calcStat(Stats.WIND_RES, _creature.getTemplate().getBaseWindRes());
+				return (int) calcStat(Stat.WIND_RES, _creature.getTemplate().getBaseWindRes());
 			}
 			case Elementals.EARTH:
 			{
-				return (int) calcStat(Stats.EARTH_RES, _creature.getTemplate().getBaseEarthRes());
+				return (int) calcStat(Stat.EARTH_RES, _creature.getTemplate().getBaseEarthRes());
 			}
 			case Elementals.HOLY:
 			{
-				return (int) calcStat(Stats.HOLY_RES, _creature.getTemplate().getBaseHolyRes());
+				return (int) calcStat(Stat.HOLY_RES, _creature.getTemplate().getBaseHolyRes());
 			}
 			case Elementals.DARK:
 			{
-				return (int) calcStat(Stats.DARK_RES, _creature.getTemplate().getBaseDarkRes());
+				return (int) calcStat(Stat.DARK_RES, _creature.getTemplate().getBaseDarkRes());
 			}
 			default:
 			{

@@ -163,11 +163,11 @@ public class Participant
 	}
 	
 	/**
-	 * @param val the disconnected to set
+	 * @param value the disconnected to set
 	 */
-	public void setDisconnected(boolean val)
+	public void setDisconnected(boolean value)
 	{
-		disconnected = val;
+		disconnected = value;
 	}
 	
 	/**
@@ -179,10 +179,10 @@ public class Participant
 	}
 	
 	/**
-	 * @param val the value to set.
+	 * @param value the value to set.
 	 */
-	public void setDefaulted(boolean val)
+	public void setDefaulted(boolean value)
 	{
-		defaulted = val;
+		defaulted = value;
 	}
 }

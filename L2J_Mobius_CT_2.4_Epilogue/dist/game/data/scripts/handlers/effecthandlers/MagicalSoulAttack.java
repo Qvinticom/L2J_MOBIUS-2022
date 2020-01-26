@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.stats.Formulas;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * Magical Soul Attack effect implementation.
@@ -90,7 +90,7 @@ public class MagicalSoulAttack extends AbstractEffect
 			}
 			
 			// Shield Deflect Magic: Reflect all damage on caster.
-			if (target.getStat().calcStat(Stats.VENGEANCE_SKILL_MAGIC_DAMAGE, 0, target, info.getSkill()) > Rnd.get(100))
+			if (target.getStat().calcStat(Stat.VENGEANCE_SKILL_MAGIC_DAMAGE, 0, target, info.getSkill()) > Rnd.get(100))
 			{
 				creature.reduceCurrentHp(damage, target, info.getSkill());
 				creature.notifyDamageReceived(damage, target, info.getSkill(), mcrit, false);

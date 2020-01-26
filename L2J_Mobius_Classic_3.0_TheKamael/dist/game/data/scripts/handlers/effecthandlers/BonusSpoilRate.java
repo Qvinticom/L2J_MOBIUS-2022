@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Mobius
@@ -26,6 +26,6 @@ public class BonusSpoilRate extends AbstractStatPercentEffect
 {
 	public BonusSpoilRate(StatsSet params)
 	{
-		super(params, Stats.BONUS_SPOIL_RATE);
+		super(params, Stat.BONUS_SPOIL_RATE);
 	}
 }

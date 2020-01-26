@@ -74,7 +74,7 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 			}
 			return;
 		}
-		player.setIsEnchanting(true);
+		player.setEnchanting(true);
 		player.setActiveEnchantTimestamp(System.currentTimeMillis());
 		player.sendPacket(new ExPutEnchantTargetItemResult(_objectId));
 	}

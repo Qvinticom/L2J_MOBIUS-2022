@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class ReflectMagic extends AbstractStatAddEffect
 {
 	public ReflectMagic(StatsSet params)
 	{
-		super(params, Stats.VENGEANCE_SKILL_MAGIC_DAMAGE);
+		super(params, Stat.VENGEANCE_SKILL_MAGIC_DAMAGE);
 	}
 }

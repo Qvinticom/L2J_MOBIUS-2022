@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Henna;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -48,17 +48,17 @@ public class HennaItemDrawInfo implements IClientOutgoingPacket
 		packet.writeD(_henna.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00); // able to draw or not 0 is false and 1 is true
 		packet.writeQ(_player.getAdena());
 		packet.writeD(_player.getINT()); // current INT
-		packet.writeH(_player.getINT() + _player.getHennaValue(BaseStats.INT)); // equip INT
+		packet.writeH(_player.getINT() + _player.getHennaValue(BaseStat.INT)); // equip INT
 		packet.writeD(_player.getSTR()); // current STR
-		packet.writeH(_player.getSTR() + _player.getHennaValue(BaseStats.STR)); // equip STR
+		packet.writeH(_player.getSTR() + _player.getHennaValue(BaseStat.STR)); // equip STR
 		packet.writeD(_player.getCON()); // current CON
-		packet.writeH(_player.getCON() + _player.getHennaValue(BaseStats.CON)); // equip CON
+		packet.writeH(_player.getCON() + _player.getHennaValue(BaseStat.CON)); // equip CON
 		packet.writeD(_player.getMEN()); // current MEN
-		packet.writeH(_player.getMEN() + _player.getHennaValue(BaseStats.MEN)); // equip MEN
+		packet.writeH(_player.getMEN() + _player.getHennaValue(BaseStat.MEN)); // equip MEN
 		packet.writeD(_player.getDEX()); // current DEX
-		packet.writeH(_player.getDEX() + _player.getHennaValue(BaseStats.DEX)); // equip DEX
+		packet.writeH(_player.getDEX() + _player.getHennaValue(BaseStat.DEX)); // equip DEX
 		packet.writeD(_player.getWIT()); // current WIT
-		packet.writeH(_player.getWIT() + _player.getHennaValue(BaseStats.WIT)); // equip WIT
+		packet.writeH(_player.getWIT() + _player.getHennaValue(BaseStat.WIT)); // equip WIT
 		packet.writeD(0x00); // TODO: Find me!
 		return true;
 	}

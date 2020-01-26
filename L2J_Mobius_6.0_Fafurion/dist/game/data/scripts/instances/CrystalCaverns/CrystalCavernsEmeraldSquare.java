@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -104,7 +104,7 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 				case "HP_REGEN_TIMER":
 				{
 					final int value = ((baseId == 5) || (baseId == 6)) ? 5 : baseId;
-					npc.getStat().addFixedValue(Stats.REGENERATE_HP_RATE, Double.valueOf(value * 1000));
+					npc.getStat().addFixedValue(Stat.REGENERATE_HP_RATE, Double.valueOf(value * 1000));
 					break;
 				}
 				case "SUPPORT_SPAWN_TIMER":

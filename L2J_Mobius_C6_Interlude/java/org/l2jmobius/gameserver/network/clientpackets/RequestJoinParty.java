@@ -62,7 +62,7 @@ public class RequestJoinParty extends GameClientPacket
 			return;
 		}
 		
-		if ((requestor._inEventDM && (DM.isTeleport() || DM.is_started())) || (target._inEventDM && (DM.isTeleport() || DM.is_started())))
+		if ((requestor._inEventDM && (DM.isTeleport() || DM.hasStarted())) || (target._inEventDM && (DM.isTeleport() || DM.hasStarted())))
 		{
 			requestor.sendMessage("You can't invite that player in party!");
 			return;

@@ -94,7 +94,7 @@ public class ResidenceOfQueenNebula extends AbstractInstance
 				if (player.getAffectedSkillLevel(AQUA_RAGE) == 5)
 				{
 					player.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.FROZEN_PILLAR);
-					player.setIsImmobilized(true);
+					player.setImmobilized(true);
 					startQuestTimer("PLAYER_UNPARA", 5000, npc, player);
 				}
 				
@@ -104,7 +104,7 @@ public class ResidenceOfQueenNebula extends AbstractInstance
 			{
 				player.getEffectList().stopSkillEffects(true, AQUA_RAGE_5.getSkill());
 				player.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.FROZEN_PILLAR);
-				player.setIsImmobilized(false);
+				player.setImmobilized(false);
 				break;
 			}
 			case "CAST_AQUA_RAGE":

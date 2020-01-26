@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -45,7 +45,7 @@ public class ResistAbnormalByCategory extends AbstractEffect
 			// Only this one is in use it seems
 			case DEBUFF:
 			{
-				effected.getStat().mergeMul(Stats.RESIST_ABNORMAL_DEBUFF, 1 + (_amount / 100));
+				effected.getStat().mergeMul(Stat.RESIST_ABNORMAL_DEBUFF, 1 + (_amount / 100));
 				break;
 			}
 		}

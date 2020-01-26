@@ -81,7 +81,7 @@ public class SiegeGuardInstance extends Attackable
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		// Attackable during siege by all except defenders ( Castle or Fort )
-		return (attacker instanceof PlayerInstance) && (((getCastle() != null) && (getCastle().getCastleId() > 0) && getCastle().getSiege().getIsInProgress() && !getCastle().getSiege().checkIsDefender(((PlayerInstance) attacker).getClan())) || DevastatedCastle.getInstance().getIsInProgress());
+		return (attacker instanceof PlayerInstance) && (((getCastle() != null) && (getCastle().getCastleId() > 0) && getCastle().getSiege().isInProgress() && !getCastle().getSiege().checkIsDefender(((PlayerInstance) attacker).getClan())) || DevastatedCastle.getInstance().isInProgress());
 	}
 	
 	@Override
@@ -117,7 +117,7 @@ public class SiegeGuardInstance extends Attackable
 	{
 		if (!isInsideRadius(_homeX, _homeY, 40, false))
 		{
-			setisReturningToSpawnPoint(true);
+			setReturningToSpawnPoint(true);
 			clearAggroList();
 			
 			if (hasAI())

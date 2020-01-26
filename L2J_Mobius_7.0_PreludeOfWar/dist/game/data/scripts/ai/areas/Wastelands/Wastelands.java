@@ -158,7 +158,7 @@ public class Wastelands extends AbstractNpcAI
 						
 						if ((guard.getId() != COMMANDO) && (guard.getId() != COMMANDO_CAPTAIN))
 						{
-							guard.setIsInvul(true);
+							guard.setInvul(true);
 						}
 						
 						if (guard.getId() == SCHUAZEN)
@@ -173,7 +173,7 @@ public class Wastelands extends AbstractNpcAI
 							
 							if (decoGuard != null)
 							{
-								decoGuard.setIsInvul(true);
+								decoGuard.setInvul(true);
 							}
 						}
 					}

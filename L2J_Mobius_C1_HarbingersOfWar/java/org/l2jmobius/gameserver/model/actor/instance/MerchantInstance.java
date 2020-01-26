@@ -36,23 +36,23 @@ public class MerchantInstance extends NpcInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		pom = val == 0 ? "" + npcId : npcId + "-" + val;
+		pom = value == 0 ? "" + npcId : npcId + "-" + value;
 		return "data/html/merchant/" + pom + ".htm";
 	}
 	
-	private void showBuyWindow(PlayerInstance player, int val)
+	private void showBuyWindow(PlayerInstance player, int value)
 	{
-		final TradeList list = TradeController.getInstance().getBuyList(val);
+		final TradeList list = TradeController.getInstance().getBuyList(value);
 		if (list != null)
 		{
 			player.sendPacket(new BuyList(list, player.getAdena()));
 		}
 		else
 		{
-			_log.warning("no buylist with id:" + val);
+			_log.warning("no buylist with id:" + value);
 		}
 		player.sendPacket(new ActionFailed());
 	}

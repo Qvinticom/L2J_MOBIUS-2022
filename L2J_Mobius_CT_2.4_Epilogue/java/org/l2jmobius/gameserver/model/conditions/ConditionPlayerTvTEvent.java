@@ -27,21 +27,21 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerTvTEvent extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
 	/**
 	 * Instantiates a new condition player tv t event.
-	 * @param val the val
+	 * @param value the value
 	 */
-	public ConditionPlayerTvTEvent(boolean val)
+	public ConditionPlayerTvTEvent(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		final PlayerInstance player = effector.getActingPlayer();
-		return (player == null) || !TvTEvent.isStarted() ? !_val : TvTEvent.isPlayerParticipant(player.getObjectId()) == _val;
+		return (player == null) || !TvTEvent.isStarted() ? !_value : TvTEvent.isPlayerParticipant(player.getObjectId()) == _value;
 	}
 }

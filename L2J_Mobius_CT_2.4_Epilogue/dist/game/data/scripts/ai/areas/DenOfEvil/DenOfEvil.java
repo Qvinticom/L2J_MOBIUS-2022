@@ -117,7 +117,7 @@ public class DenOfEvil extends AbstractNpcAI
 	public String onSpawn(Npc npc)
 	{
 		npc.disableCoreAI(true);
-		npc.setIsImmobilized(true);
+		npc.setImmobilized(true);
 		final EffectZone zone = ZoneManager.getInstance().getZone(npc, EffectZone.class);
 		if (zone == null)
 		{

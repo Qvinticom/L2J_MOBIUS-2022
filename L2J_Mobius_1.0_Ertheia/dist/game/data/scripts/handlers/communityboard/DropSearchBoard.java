@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.model.holders.DropHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author yksdtc
@@ -169,9 +169,9 @@ public class DropSearchBoard implements IParseBoardHandler
 				final int start = (page - 1) * 14;
 				final int end = Math.min(list.size() - 1, start + 14);
 				final StringBuilder builder = new StringBuilder();
-				final double dropAmountEffectBonus = player.getStat().getValue(Stats.BONUS_DROP_AMOUNT, 1);
-				final double dropRateEffectBonus = player.getStat().getValue(Stats.BONUS_DROP_RATE, 1);
-				final double spoilRateEffectBonus = player.getStat().getValue(Stats.BONUS_SPOIL_RATE, 1);
+				final double dropAmountEffectBonus = player.getStat().getValue(Stat.BONUS_DROP_AMOUNT, 1);
+				final double dropRateEffectBonus = player.getStat().getValue(Stat.BONUS_DROP_RATE, 1);
+				final double spoilRateEffectBonus = player.getStat().getValue(Stat.BONUS_SPOIL_RATE, 1);
 				for (int index = start; index <= end; index++)
 				{
 					final CBDropHolder cbDropHolder = list.get(index);

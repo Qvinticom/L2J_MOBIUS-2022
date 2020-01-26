@@ -105,34 +105,34 @@ public class ArmorSet
 		_enchant6Skill.add(holder);
 	}
 	
-	public void addCon(int val)
+	public void addCon(int value)
 	{
-		_con = val;
+		_con = value;
 	}
 	
-	public void addDex(int val)
+	public void addDex(int value)
 	{
-		_dex = val;
+		_dex = value;
 	}
 	
-	public void addStr(int val)
+	public void addStr(int value)
 	{
-		_str = val;
+		_str = value;
 	}
 	
-	public void addMen(int val)
+	public void addMen(int value)
 	{
-		_men = val;
+		_men = value;
 	}
 	
-	public void addWit(int val)
+	public void addWit(int value)
 	{
-		_wit = val;
+		_wit = value;
 	}
 	
-	public void addInt(int val)
+	public void addInt(int value)
 	{
-		_int = val;
+		_int = value;
 	}
 	
 	/**

@@ -245,11 +245,11 @@ public class OlympiadManagerInstance extends FolkInstance
 		}
 	}
 	
-	private void showChatWindow(PlayerInstance player, int val, String suffix)
+	private void showChatWindow(PlayerInstance player, int value, String suffix)
 	{
 		String filename = Olympiad.OLYMPIAD_HTML_PATH;
 		
-		filename += "noble_desc" + val;
+		filename += "noble_desc" + value;
 		filename += (suffix != null) ? suffix + ".htm" : ".htm";
 		
 		if (filename.equals(Olympiad.OLYMPIAD_HTML_PATH + "noble_desc0.htm"))

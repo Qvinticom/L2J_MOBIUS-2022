@@ -34,7 +34,7 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType>
 {
 	private final Summon _summon;
 	private final PlayerInstance _attacker;
-	private final int _val;
+	private final int _value;
 	private final byte[] _masks = new byte[]
 	{
 		(byte) 0x00,
@@ -56,12 +56,12 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType>
 	private final String _title;
 	private final Set<AbnormalVisualEffect> _abnormalVisualEffects;
 	
-	public SummonInfo(Summon summon, PlayerInstance attacker, int val)
+	public SummonInfo(Summon summon, PlayerInstance attacker, int value)
 	{
 		_summon = summon;
 		_attacker = attacker;
 		_title = (summon.getOwner() != null) && summon.getOwner().isOnline() ? summon.getOwner().getName() : "";
-		_val = val;
+		_value = value;
 		_abnormalVisualEffects = summon.getEffectList().getCurrentAbnormalVisualEffects();
 		
 		if (summon.getTemplate().getDisplayId() != summon.getTemplate().getId())
@@ -234,7 +234,7 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType>
 		OutgoingPackets.SUMMON_INFO.writeId(packet);
 		
 		packet.writeD(_summon.getObjectId());
-		packet.writeC(_val); // 0=teleported 1=default 2=summoned
+		packet.writeC(_value); // 0=teleported 1=default 2=summoned
 		packet.writeH(37); // mask_bits_37
 		packet.writeB(_masks);
 		

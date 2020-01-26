@@ -240,7 +240,7 @@ public class CTF implements EventTask
 	 * Gets the _reward id.
 	 * @return the _rewardId
 	 */
-	public static int get_rewardId()
+	public static int getRewardId()
 	{
 		return _rewardId;
 	}
@@ -250,7 +250,7 @@ public class CTF implements EventTask
 	 * @param rewardId the _rewardId to set
 	 * @return true, if successful
 	 */
-	public static boolean set_rewardId(int rewardId)
+	public static boolean setRewardId(int rewardId)
 	{
 		if (!_inProgress)
 		{
@@ -264,7 +264,7 @@ public class CTF implements EventTask
 	 * Gets the _reward amount.
 	 * @return the _rewardAmount
 	 */
-	public static int get_rewardAmount()
+	public static int getRewardAmount()
 	{
 		return _rewardAmount;
 	}
@@ -274,7 +274,7 @@ public class CTF implements EventTask
 	 * @param rewardAmount the _rewardAmount to set
 	 * @return true, if successful
 	 */
-	public static boolean set_rewardAmount(int rewardAmount)
+	public static boolean setRewardAmount(int rewardAmount)
 	{
 		if (!_inProgress)
 		{
@@ -288,7 +288,7 @@ public class CTF implements EventTask
 	 * Gets the _minlvl.
 	 * @return the _minlvl
 	 */
-	public static int get_minlvl()
+	public static int getMinLvl()
 	{
 		return _minlvl;
 	}
@@ -298,7 +298,7 @@ public class CTF implements EventTask
 	 * @param minlvl the _minlvl to set
 	 * @return true, if successful
 	 */
-	public static boolean set_minlvl(int minlvl)
+	public static boolean setMinLvl(int minlvl)
 	{
 		if (!_inProgress)
 		{
@@ -312,7 +312,7 @@ public class CTF implements EventTask
 	 * Gets the _maxlvl.
 	 * @return the _maxlvl
 	 */
-	public static int getMaxlvl()
+	public static int getMaxLvl()
 	{
 		return _maxlvl;
 	}
@@ -322,7 +322,7 @@ public class CTF implements EventTask
 	 * @param maxlvl the _maxlvl to set
 	 * @return true, if successful
 	 */
-	public static boolean setMaxlvl(int maxlvl)
+	public static boolean setMaxLvl(int maxlvl)
 	{
 		if (!_inProgress)
 		{
@@ -600,7 +600,7 @@ public class CTF implements EventTask
 		
 		for (Castle castle : CastleManager.getInstance().getCastles())
 		{
-			if ((castle != null) && (castle.getSiege() != null) && castle.getSiege().getIsInProgress())
+			if ((castle != null) && (castle.getSiege() != null) && castle.getSiege().isInProgress())
 			{
 				return false;
 			}

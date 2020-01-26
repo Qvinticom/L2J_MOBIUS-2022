@@ -82,7 +82,7 @@ public class DoorInstance extends Creature
 	{
 		super(template);
 		setInstanceType(InstanceType.DoorInstance);
-		setIsInvul(false);
+		setInvul(false);
 		setLethalable(false);
 		_open = template.isOpenByDefault();
 		_isAttackableDoor = template.isAttackable();
@@ -241,19 +241,19 @@ public class DoorInstance extends Creature
 		}
 	}
 	
-	public boolean getIsAttackableDoor()
+	public boolean isAttackableDoor()
 	{
 		return _isAttackableDoor;
 	}
 	
-	public boolean getIsShowHp()
+	public boolean isShowHp()
 	{
 		return getTemplate().isShowHp();
 	}
 	
-	public void setIsAttackableDoor(boolean val)
+	public void setIsAttackableDoor(boolean value)
 	{
-		_isAttackableDoor = val;
+		_isAttackableDoor = value;
 	}
 	
 	public int getDamage()
@@ -310,15 +310,15 @@ public class DoorInstance extends Creature
 	
 	public boolean isEnemy()
 	{
-		if ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getZone().isActive() && getIsShowHp())
+		if ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getZone().isActive() && isShowHp())
 		{
 			return true;
 		}
-		if ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getZone().isActive() && getIsShowHp())
+		if ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getZone().isActive() && isShowHp())
 		{
 			return true;
 		}
-		if ((_clanHall != null) && _clanHall.isSiegableHall() && ((SiegableHall) _clanHall).getSiegeZone().isActive() && getIsShowHp())
+		if ((_clanHall != null) && _clanHall.isSiegableHall() && ((SiegableHall) _clanHall).getSiegeZone().isActive() && isShowHp())
 		{
 			return true;
 		}
@@ -338,7 +338,7 @@ public class DoorInstance extends Creature
 		{
 			return true;
 		}
-		if (!getIsShowHp())
+		if (!isShowHp())
 		{
 			return false;
 		}
@@ -668,9 +668,9 @@ public class DoorInstance extends Creature
 		}
 	}
 	
-	public void setTargetable(boolean b)
+	public void setTargetable(boolean value)
 	{
-		_isTargetable = b;
+		_isTargetable = value;
 		broadcastStatusUpdate();
 	}
 	

@@ -32,10 +32,10 @@ public class FourSepulchersChangeCoolDownTimeTask implements Runnable
 	public void run()
 	{
 		final FourSepulchersManager manager = FourSepulchersManager.getInstance();
-		manager.setIsEntryTime(false);
-		manager.setIsWarmUpTime(false);
-		manager.setIsAttackTime(false);
-		manager.setIsCoolDownTime(true);
+		manager.setEntryTime(false);
+		manager.setWarmUpTime(false);
+		manager.setAttackTime(false);
+		manager.setCoolDownTime(true);
 		
 		manager.clean();
 		
@@ -49,7 +49,7 @@ public class FourSepulchersChangeCoolDownTimeTask implements Runnable
 		time.set(Calendar.MINUTE, manager.getCycleMin());
 		if (manager.isFirstTimeRun())
 		{
-			manager.setIsFirstTimeRun(false);
+			manager.setFirstTimeRun(false);
 		}
 		
 		final long interval = time.getTimeInMillis() - Calendar.getInstance().getTimeInMillis();

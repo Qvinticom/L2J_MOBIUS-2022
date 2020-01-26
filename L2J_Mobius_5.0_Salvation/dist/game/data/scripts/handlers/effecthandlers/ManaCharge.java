@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class ManaCharge extends AbstractStatAddEffect
 {
 	public ManaCharge(StatsSet params)
 	{
-		super(params, Stats.MANA_CHARGE);
+		super(params, Stat.MANA_CHARGE);
 	}
 }

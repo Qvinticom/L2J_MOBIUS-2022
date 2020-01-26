@@ -47,7 +47,7 @@ final class EffectImobilePetBuff extends Effect
 		if ((getEffected() instanceof Summon) && (getEffector() instanceof PlayerInstance) && (((Summon) getEffected()).getOwner() == getEffector()))
 		{
 			_pet = (Summon) getEffected();
-			_pet.setIsImobilised(true);
+			_pet.setImmobilized(true);
 		}
 	}
 	
@@ -56,7 +56,7 @@ final class EffectImobilePetBuff extends Effect
 	{
 		if (_pet != null)
 		{
-			_pet.setIsImobilised(false);
+			_pet.setImmobilized(false);
 		}
 	}
 	

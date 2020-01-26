@@ -20,24 +20,24 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
  */
 public class SkillCritical extends AbstractEffect
 {
-	private final BaseStats _stat;
+	private final BaseStat _stat;
 	
 	public SkillCritical(StatsSet params)
 	{
-		_stat = params.getEnum("stat", BaseStats.class, BaseStats.STR);
+		_stat = params.getEnum("stat", BaseStat.class, BaseStat.STR);
 	}
 	
 	@Override
 	public void pump(Creature effected, Skill skill)
 	{
-		effected.getStat().mergeAdd(Stats.SKILL_CRITICAL, _stat.ordinal());
+		effected.getStat().mergeAdd(Stat.SKILL_CRITICAL, _stat.ordinal());
 	}
 }

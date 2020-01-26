@@ -686,15 +686,15 @@ public class VanHalter extends Quest
 	protected void spawnVanHalter()
 	{
 		_vanHalter = (RaidBossInstance) _vanHalterSpawn.doSpawn();
-		// _vanHalter.setIsImmobilized(true);
-		_vanHalter.setIsInvul(true);
+		// _vanHalter.setImmobilized(true);
+		_vanHalter.setInvul(true);
 		_isHalterSpawned = true;
 	}
 	
 	protected void deleteVanHalter()
 	{
-		// _vanHalter.setIsImmobilized(false);
-		_vanHalter.setIsInvul(false);
+		// _vanHalter.setImmobilized(false);
+		_vanHalter.setInvul(false);
 		_vanHalter.getSpawn().stopRespawn();
 		_vanHalter.deleteMe();
 	}
@@ -747,16 +747,16 @@ public class VanHalter extends Quest
 	protected void spawnRitualOffering()
 	{
 		_ritualOffering = _ritualOfferingSpawn.doSpawn();
-		// _ritualOffering.setIsImmobilized(true);
-		_ritualOffering.setIsInvul(true);
-		_ritualOffering.setIsParalyzed(true);
+		// _ritualOffering.setImmobilized(true);
+		_ritualOffering.setInvul(true);
+		_ritualOffering.setParalyzed(true);
 	}
 	
 	protected void deleteRitualOffering()
 	{
-		// _ritualOffering.setIsImmobilized(false);
-		_ritualOffering.setIsInvul(false);
-		_ritualOffering.setIsParalyzed(false);
+		// _ritualOffering.setImmobilized(false);
+		_ritualOffering.setInvul(false);
+		_ritualOffering.setParalyzed(false);
 		_ritualOffering.getSpawn().stopRespawn();
 		_ritualOffering.deleteMe();
 	}
@@ -809,8 +809,8 @@ public class VanHalter extends Quest
 	protected void spawnRitualSacrifice()
 	{
 		_ritualSacrifice = _ritualSacrificeSpawn.doSpawn();
-		// _ritualSacrifice.setIsImmobilized(true);
-		_ritualSacrifice.setIsInvul(true);
+		// _ritualSacrifice.setImmobilized(true);
+		_ritualSacrifice.setInvul(true);
 		_isSacrificeSpawned = true;
 	}
 	
@@ -833,7 +833,7 @@ public class VanHalter extends Quest
 		{
 			_cameraMarker.put(i, _cameraMarkerSpawn.get(i).doSpawn());
 			_cameraMarker.get(i).getSpawn().stopRespawn();
-			_cameraMarker.get(i).setIsImobilised(true);
+			_cameraMarker.get(i).setImmobilized(true);
 		}
 	}
 	
@@ -1006,8 +1006,8 @@ public class VanHalter extends Quest
 		spawnGuardOfAltar();
 		openDoorOfSacrifice();
 		
-		// _vanHalter.setIsImmobilized(true);
-		_vanHalter.setIsInvul(true);
+		// _vanHalter.setImmobilized(true);
+		_vanHalter.setInvul(true);
 		spawnCameraMarker();
 		
 		if (_timeUpTask != null)
@@ -1087,7 +1087,7 @@ public class VanHalter extends Quest
 				if (_vanHalter.isAfraid())
 				{
 					_vanHalter.stopEffects(Effect.EffectType.FEAR);
-					_vanHalter.setIsAfraid(false);
+					_vanHalter.setAfraid(false);
 					_vanHalter.updateAbnormalEffect();
 				}
 				else
@@ -1099,7 +1099,7 @@ public class VanHalter extends Quest
 						if ((_vanHalter.getX() == pos.getX()) && (_vanHalter.getY() == pos.getY()))
 						{
 							_vanHalter.stopEffects(Effect.EffectType.FEAR);
-							_vanHalter.setIsAfraid(false);
+							_vanHalter.setAfraid(false);
 							_vanHalter.updateAbnormalEffect();
 						}
 						else
@@ -1127,7 +1127,7 @@ public class VanHalter extends Quest
 			else
 			{
 				_vanHalter.stopEffects(Effect.EffectType.FEAR);
-				_vanHalter.setIsAfraid(false);
+				_vanHalter.setAfraid(false);
 				_vanHalter.updateAbnormalEffect();
 				if (_halterEscapeTask != null)
 				{
@@ -1650,11 +1650,11 @@ public class VanHalter extends Quest
 				{
 					// High Priestess van Halter uses the skill to kill Ritual Offering.
 					final Skill skill = SkillTable.getInstance().getInfo(1168, 7);
-					_ritualOffering.setIsInvul(false);
+					_ritualOffering.setInvul(false);
 					_vanHalter.setTarget(_ritualOffering);
-					// _vanHalter.setIsImmobilized(false);
+					// _vanHalter.setImmobilized(false);
 					_vanHalter.doCast(skill);
-					// _vanHalter.setIsImmobilized(true);
+					// _vanHalter.setImmobilized(true);
 					// Set next task.
 					if (_movieTask != null)
 					{
@@ -1666,7 +1666,7 @@ public class VanHalter extends Quest
 				}
 				case 14:
 				{
-					_ritualOffering.setIsInvul(false);
+					_ritualOffering.setInvul(false);
 					_ritualOffering.reduceCurrentHp(_ritualOffering.getMaxHp() + 1, _vanHalter);
 					// Set next task.
 					if (_movieTask != null)
@@ -1721,8 +1721,8 @@ public class VanHalter extends Quest
 				{
 					deleteRitualSacrifice();
 					deleteCameraMarker();
-					// _vanHalter.setIsImmobilized(false);
-					_vanHalter.setIsInvul(false);
+					// _vanHalter.setImmobilized(false);
+					_vanHalter.setInvul(false);
 					if (_movieTask != null)
 					{
 						_movieTask.cancel(false);

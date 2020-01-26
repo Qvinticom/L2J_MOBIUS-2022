@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Mobius
@@ -45,12 +45,12 @@ public class FatalBlowRate extends AbstractEffect
 		{
 			case DIFF:
 			{
-				effector.getStat().mergeAdd(Stats.BLOW_RATE, _amount);
+				effector.getStat().mergeAdd(Stat.BLOW_RATE, _amount);
 				break;
 			}
 			case PER:
 			{
-				effector.getStat().mergeMul(Stats.BLOW_RATE, (_amount / 100) + 1);
+				effector.getStat().mergeMul(Stat.BLOW_RATE, (_amount / 100) + 1);
 				break;
 			}
 		}
@@ -63,12 +63,12 @@ public class FatalBlowRate extends AbstractEffect
 		{
 			case DIFF:
 			{
-				effector.getStat().mergeAdd(Stats.BLOW_RATE, _amount * -1);
+				effector.getStat().mergeAdd(Stat.BLOW_RATE, _amount * -1);
 				break;
 			}
 			case PER:
 			{
-				effector.getStat().mergeMul(Stats.BLOW_RATE, ((_amount / 100) + 1) * -1);
+				effector.getStat().mergeMul(Stat.BLOW_RATE, ((_amount / 100) + 1) * -1);
 				break;
 			}
 		}

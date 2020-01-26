@@ -25,20 +25,20 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerSubclass extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
 	/**
 	 * Instantiates a new condition player subclass.
-	 * @param val the val
+	 * @param value the value
 	 */
-	public ConditionPlayerSubclass(boolean val)
+	public ConditionPlayerSubclass(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		return (effector.getActingPlayer() == null) || (effector.getActingPlayer().isSubClassActive() == _val);
+		return (effector.getActingPlayer() == null) || (effector.getActingPlayer().isSubClassActive() == _value);
 	}
 }

@@ -728,7 +728,7 @@ public class AttackableAI extends CreatureAI
 			
 			if (!npc.isInsideRadius2D(x1, y1, 0, range))
 			{
-				npc.setisReturningToSpawnPoint(true);
+				npc.setReturningToSpawnPoint(true);
 			}
 			else
 			{

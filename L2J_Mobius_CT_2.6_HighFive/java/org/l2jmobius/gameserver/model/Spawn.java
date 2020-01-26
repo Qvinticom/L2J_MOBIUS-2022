@@ -405,7 +405,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 		
 		npc.stopAllEffects();
 		
-		npc.setIsDead(false);
+		npc.setDead(false);
 		// Reset decay info
 		npc.setDecayed(false);
 		// Set the HP and MP of the NpcInstance to the max

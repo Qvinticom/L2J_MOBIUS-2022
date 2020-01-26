@@ -191,7 +191,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 		
 		if ((target == null) || target.isDead())
 		{
-			// npc.setIsCastingNow(false);
+			// npc.setCastingNow(false);
 			return;
 		}
 		
@@ -199,7 +199,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 		{
 			npc.getAI().setIntention(AI_INTENTION_IDLE);
 			npc.setTarget(target);
-			// npc.setIsCastingNow(true);
+			// npc.setCastingNow(true);
 			_target = null;
 			npc.doCast(skill);
 		}
@@ -207,7 +207,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 		{
 			npc.getAI().setIntention(AI_INTENTION_FOLLOW, target, null);
 			npc.getAI().setIntention(AI_INTENTION_ATTACK, target, null);
-			// npc.setIsCastingNow(false);
+			// npc.setCastingNow(false);
 		}
 	}
 	

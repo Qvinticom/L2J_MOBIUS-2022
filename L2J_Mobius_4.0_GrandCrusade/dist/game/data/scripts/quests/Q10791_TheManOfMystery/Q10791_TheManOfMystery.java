@@ -186,7 +186,7 @@ public class Q10791_TheManOfMystery extends Quest
 						final Npc monster = addSpawn(NEEDLE_STAKATO_CAPTAIN, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 600000, false);
 						final FriendlyNpcInstance kain = (FriendlyNpcInstance) addSpawn(KAIN_VAN_HALTER, killer.getX() + getRandom(-100, 100), killer.getY() + getRandom(-100, 100), killer.getZ(), 0, true, 300000, false);
 						kain.setRunning();
-						kain.setIsInvul(true);
+						kain.setInvul(true);
 						kain.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack
 						addAttackPlayerDesire(monster, killer);
 						qs.setCond(2);

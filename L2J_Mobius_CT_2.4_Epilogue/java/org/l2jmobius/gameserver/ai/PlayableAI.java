@@ -89,7 +89,7 @@ public abstract class PlayableAI extends CreatureAI
 				// Newbie Protection Buff,
 				_actor.getActingPlayer().sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 				clientActionFailed();
-				_actor.setIsCastingNow(false);
+				_actor.setCastingNow(false);
 				return;
 			}
 			
@@ -99,7 +99,7 @@ public abstract class PlayableAI extends CreatureAI
 				// Newbie Protection Buff,
 				_actor.getActingPlayer().sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 				clientActionFailed();
-				_actor.setIsCastingNow(false);
+				_actor.setCastingNow(false);
 				return;
 			}
 			
@@ -107,7 +107,7 @@ public abstract class PlayableAI extends CreatureAI
 			{
 				_actor.getActingPlayer().sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 				clientActionFailed();
-				_actor.setIsCastingNow(false);
+				_actor.setCastingNow(false);
 				return;
 			}
 		}

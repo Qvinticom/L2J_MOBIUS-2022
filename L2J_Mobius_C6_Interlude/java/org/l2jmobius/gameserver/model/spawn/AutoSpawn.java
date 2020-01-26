@@ -743,14 +743,14 @@ public class AutoSpawn
 			_spawnCount = spawnCount;
 		}
 		
-		public void setRandomSpawn(boolean randValue)
+		public void setRandomSpawn(boolean random)
 		{
-			_randomSpawn = randValue;
+			_randomSpawn = random;
 		}
 		
-		public void setBroadcast(boolean broadcastValue)
+		public void setBroadcast(boolean broadcast)
 		{
-			_broadcastAnnouncement = broadcastValue;
+			_broadcastAnnouncement = broadcast;
 		}
 		
 		public boolean isSpawnActive()

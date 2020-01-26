@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.util.MathUtil;
 
 /**
@@ -42,12 +42,12 @@ public class CriticalDamagePosition extends AbstractEffect
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
-		effected.getStat().mergePositionTypeValue(Stats.CRITICAL_DAMAGE, _position, (_amount / 100) + 1, MathUtil::mul);
+		effected.getStat().mergePositionTypeValue(Stat.CRITICAL_DAMAGE, _position, (_amount / 100) + 1, MathUtil::mul);
 	}
 	
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		effected.getStat().mergePositionTypeValue(Stats.CRITICAL_DAMAGE, _position, (_amount / 100) + 1, MathUtil::div);
+		effected.getStat().mergePositionTypeValue(Stat.CRITICAL_DAMAGE, _position, (_amount / 100) + 1, MathUtil::div);
 	}
 }

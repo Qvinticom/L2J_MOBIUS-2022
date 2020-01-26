@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
-import org.l2jmobius.gameserver.model.skills.BaseStats;
+import org.l2jmobius.gameserver.model.skills.BaseStat;
 import org.l2jmobius.gameserver.model.skills.Formulas;
 import org.l2jmobius.gameserver.model.skills.effects.EffectCharge;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -111,7 +111,7 @@ public class Pdam implements ISkillHandler
 			boolean crit = false;
 			if (skill.getBaseCritRate() > 0)
 			{
-				crit = Formulas.calcCrit(skill.getBaseCritRate() * 10 * BaseStats.STR.calcBonus(creature));
+				crit = Formulas.calcCrit(skill.getBaseCritRate() * 10 * BaseStat.STR.calcBonus(creature));
 			}
 			
 			boolean soul = false;

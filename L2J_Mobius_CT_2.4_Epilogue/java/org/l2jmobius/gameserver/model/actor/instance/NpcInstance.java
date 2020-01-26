@@ -44,7 +44,7 @@ public class NpcInstance extends Npc
 	{
 		super(template);
 		setInstanceType(InstanceType.NpcInstance);
-		setIsInvul(false);
+		setInvul(false);
 	}
 	
 	@Override

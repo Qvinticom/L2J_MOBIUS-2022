@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.model.ArmorSet;
 import org.l2jmobius.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
 
 /**
  * Loads armor set bonuses.
@@ -138,7 +138,7 @@ public class ArmorSetsData implements IXmlReader
 									forEach(innerSetNode, b -> "stat".equals(b.getNodeName()), node ->
 									{
 										final NamedNodeMap attrs = node.getAttributes();
-										set.addStatsBonus(parseEnum(attrs, BaseStats.class, "type"), parseInteger(attrs, "val"));
+										set.addStatsBonus(parseEnum(attrs, BaseStat.class, "type"), parseInteger(attrs, "val"));
 									});
 									break;
 								}

@@ -25,15 +25,15 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerIsClanLeader extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
 	/**
 	 * Instantiates a new condition player is clan leader.
-	 * @param val the val
+	 * @param value the value
 	 */
-	public ConditionPlayerIsClanLeader(boolean val)
+	public ConditionPlayerIsClanLeader(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
@@ -43,6 +43,6 @@ public class ConditionPlayerIsClanLeader extends Condition
 		{
 			return false;
 		}
-		return (effector.getActingPlayer().isClanLeader() == _val);
+		return (effector.getActingPlayer().isClanLeader() == _value);
 	}
 }

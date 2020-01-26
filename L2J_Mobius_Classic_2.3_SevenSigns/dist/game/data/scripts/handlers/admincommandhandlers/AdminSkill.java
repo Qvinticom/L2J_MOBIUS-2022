@@ -499,9 +499,9 @@ public class AdminSkill implements IAdminCommandHandler
 	
 	/**
 	 * @param activeChar the active Game Master.
-	 * @param val
+	 * @param value
 	 */
-	private void adminAddSkill(PlayerInstance activeChar, String val)
+	private void adminAddSkill(PlayerInstance activeChar, String value)
 	{
 		final WorldObject target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
@@ -511,7 +511,7 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		final PlayerInstance player = target.getActingPlayer();
-		final StringTokenizer st = new StringTokenizer(val);
+		final StringTokenizer st = new StringTokenizer(value);
 		if ((st.countTokens() != 1) && (st.countTokens() != 2))
 		{
 			showMainPage(activeChar);

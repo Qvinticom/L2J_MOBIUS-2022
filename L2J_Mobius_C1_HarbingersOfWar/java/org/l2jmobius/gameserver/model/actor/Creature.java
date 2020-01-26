@@ -245,7 +245,7 @@ public abstract class Creature extends WorldObject
 		setX(getX());
 		setY(getY());
 		setZ(getZ());
-		setIsMoving(false);
+		setMoving(false);
 	}
 	
 	public int getCon()
@@ -726,9 +726,9 @@ public abstract class Creature extends WorldObject
 		return _running;
 	}
 	
-	public void setRunning(boolean b)
+	public void setRunning(boolean value)
 	{
-		_running = b;
+		_running = value;
 		updateEffectiveSpeed();
 	}
 	
@@ -937,7 +937,7 @@ public abstract class Creature extends WorldObject
 				if (getCurrentState() == CreatureState.INTERACT)
 				{
 					_moveTask = ThreadPool.schedule(newMoveTask, _timeToTarget);
-					setIsMoving(true);
+					setMoving(true);
 					return;
 				}
 				if ((_timeToTarget < 2000L) && (distance > getAttackRange()))
@@ -957,7 +957,7 @@ public abstract class Creature extends WorldObject
 			{
 				_moveTask = ThreadPool.schedule(newMoveTask, _timeToTarget);
 			}
-			setIsMoving(true);
+			setMoving(true);
 		}
 	}
 	
@@ -979,9 +979,9 @@ public abstract class Creature extends WorldObject
 		}
 	}
 	
-	public void setIsMoving(boolean b)
+	public void setMoving(boolean value)
 	{
-		_moving = b;
+		_moving = value;
 	}
 	
 	public double getDistance(int x, int y)
@@ -1308,9 +1308,9 @@ public abstract class Creature extends WorldObject
 		_activeSoulShotGrade = soulshotGrade;
 	}
 	
-	public void setMovingToPawn(boolean val)
+	public void setMovingToPawn(boolean value)
 	{
-		_movingToPawn = val;
+		_movingToPawn = value;
 	}
 	
 	public void setPawnTarget(Creature target)

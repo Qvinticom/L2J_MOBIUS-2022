@@ -88,7 +88,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 			{
 				clan = ClanTable.getInstance().getClanByName(a._clanName);
 			}
-			setIsInProgress(true);
+			setInProgress(true);
 			startSecondStep(clan);
 			anonce("Take place at the siege of his headquarters.", 1);
 			_siegeEndDate = Calendar.getInstance();
@@ -96,7 +96,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 			_endSiegeTask.schedule(1000);
 			return;
 		}
-		setIsInProgress(true);
+		setInProgress(true);
 		spawnFlags();
 		gateControl(1);
 		anonce("Take place at the siege of his headquarters.", 1);
@@ -141,7 +141,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 				anonce("Attention! Clan hall, farm wild animals did not get new owner", 2);
 			}
 		}
-		setIsInProgress(false);
+		setInProgress(false);
 		unSpawnAll();
 		_clansInfo.clear();
 		_clanCounter = 0;
@@ -168,16 +168,16 @@ public class WildBeastFarmSiege extends ClanHallSiege
 		}
 	}
 	
-	public void gateControl(int val)
+	public void gateControl(int value)
 	{
-		if (val == 1)
+		if (value == 1)
 		{
 			DoorData.getInstance().getDoor(21150003).openMe();
 			DoorData.getInstance().getDoor(21150004).openMe();
 			DoorData.getInstance().getDoor(21150001).closeMe();
 			DoorData.getInstance().getDoor(21150002).closeMe();
 		}
-		else if (val == 2)
+		else if (value == 2)
 		{
 			DoorData.getInstance().getDoor(21150001).closeMe();
 			DoorData.getInstance().getDoor(21150002).closeMe();
@@ -501,7 +501,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 		@Override
 		protected void onElapsed()
 		{
-			if (getIsInProgress())
+			if (isInProgress())
 			{
 				cancel();
 				return;
@@ -572,7 +572,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 		@Override
 		protected void onElapsed()
 		{
-			if (!getIsInProgress())
+			if (!isInProgress())
 			{
 				cancel();
 				return;

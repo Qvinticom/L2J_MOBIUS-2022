@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * Function template.
@@ -37,11 +37,11 @@ public class FuncTemplate
 	private final Condition _attachCond;
 	private final Condition _applayCond;
 	private final Constructor<?> _constructor;
-	private final Stats _stat;
+	private final Stat _stat;
 	private final int _order;
 	private final double _value;
 	
-	public FuncTemplate(Condition attachCond, Condition applayCond, String functionName, int order, Stats stat, double value)
+	public FuncTemplate(Condition attachCond, Condition applayCond, String functionName, int order, Stat stat, double value)
 	{
 		final StatFunction function = StatFunction.valueOf(functionName.toUpperCase());
 		if (order >= 0)
@@ -61,7 +61,7 @@ public class FuncTemplate
 		try
 		{
 			final Class<?> functionClass = Class.forName("org.l2jmobius.gameserver.model.stats.functions.Func" + function.getName());
-			_constructor = functionClass.getConstructor(Stats.class, // Stats to update
+			_constructor = functionClass.getConstructor(Stat.class, // Stats to update
 				Integer.TYPE, // Order of execution
 				Object.class, // Owner
 				Double.TYPE, // Value for function
@@ -78,7 +78,7 @@ public class FuncTemplate
 	 * Gets the function stat.
 	 * @return the stat.
 	 */
-	public Stats getStat()
+	public Stat getStat()
 	{
 		return _stat;
 	}

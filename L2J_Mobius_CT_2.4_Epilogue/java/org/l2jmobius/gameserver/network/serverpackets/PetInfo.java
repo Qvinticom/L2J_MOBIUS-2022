@@ -31,7 +31,7 @@ public class PetInfo implements IClientOutgoingPacket
 	private final int _z;
 	private final int _heading;
 	private final boolean _isSummoned;
-	private final int _val;
+	private final int _value;
 	private final int _mAtkSpd;
 	private final int _pAtkSpd;
 	private final int _runSpd;
@@ -46,7 +46,7 @@ public class PetInfo implements IClientOutgoingPacket
 	private int _maxFed;
 	private int _curFed;
 	
-	public PetInfo(Summon summon, int val)
+	public PetInfo(Summon summon, int value)
 	{
 		_summon = summon;
 		_isSummoned = summon.isShowSummonAnimation();
@@ -65,7 +65,7 @@ public class PetInfo implements IClientOutgoingPacket
 		_flyWalkSpd = summon.isFlying() ? _walkSpd : 0;
 		_maxHp = summon.getMaxHp();
 		_maxMp = summon.getMaxMp();
-		_val = val;
+		_value = value;
 		if (summon.isPet())
 		{
 			final PetInstance pet = (PetInstance) _summon;
@@ -115,7 +115,7 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeC(_summon.isRunning() ? 1 : 0); // running=1 (it is always 1, walking mode is calculated from multiplier)
 		packet.writeC(_summon.isInCombat() ? 1 : 0); // attacking 1=true
 		packet.writeC(_summon.isAlikeDead() ? 1 : 0); // dead 1=true
-		packet.writeC(_isSummoned ? 2 : _val); // 0=teleported 1=default 2=summoned
+		packet.writeC(_isSummoned ? 2 : _value); // 0=teleported 1=default 2=summoned
 		if (_summon.isPet())
 		{
 			packet.writeS(_summon.getName()); // Pet name.

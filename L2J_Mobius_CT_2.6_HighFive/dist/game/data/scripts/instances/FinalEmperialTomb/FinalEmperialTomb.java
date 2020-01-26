@@ -604,7 +604,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 				}
 				songEffectTask = null;
 				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
-				activeScarlet.setIsInvul(true);
+				activeScarlet.setInvul(true);
 				if (activeScarlet.isCastingNow())
 				{
 					activeScarlet.abortCast();
@@ -850,7 +850,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 				{
 					final Npc activeScarlet = _world.getParameters().getObject("activeScarlet", Npc.class);
 					activeScarlet.setRHandId(SECOND_SCARLET_WEAPON);
-					activeScarlet.setIsInvul(false);
+					activeScarlet.setInvul(false);
 					break;
 				}
 			}
@@ -911,25 +911,25 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 				case 2:
 				{
 					final Npc frintezzaDummy = addSpawn(29052, -87784, -155083, -9087, 16048, false, 0, false, _world.getInstanceId());
-					frintezzaDummy.setIsInvul(true);
-					frintezzaDummy.setIsImmobilized(true);
+					frintezzaDummy.setInvul(true);
+					frintezzaDummy.setImmobilized(true);
 					_world.setParameter("frintezzaDummy", frintezzaDummy);
 					final Npc overheadDummy = addSpawn(29052, -87784, -153298, -9175, 16384, false, 0, false, _world.getInstanceId());
-					overheadDummy.setIsInvul(true);
-					overheadDummy.setIsImmobilized(true);
+					overheadDummy.setInvul(true);
+					overheadDummy.setImmobilized(true);
 					overheadDummy.setCollisionHeight(600);
 					_world.setParameter("overheadDummy", overheadDummy);
 					final Npc portraitDummy1 = addSpawn(29052, -89566, -153168, -9165, 16048, false, 0, false, _world.getInstanceId());
-					portraitDummy1.setIsImmobilized(true);
-					portraitDummy1.setIsInvul(true);
+					portraitDummy1.setImmobilized(true);
+					portraitDummy1.setInvul(true);
 					_world.setParameter("portraitDummy1", portraitDummy1);
 					final Npc portraitDummy3 = addSpawn(29052, -86004, -153168, -9165, 16048, false, 0, false, _world.getInstanceId());
-					portraitDummy3.setIsImmobilized(true);
-					portraitDummy3.setIsInvul(true);
+					portraitDummy3.setImmobilized(true);
+					portraitDummy3.setInvul(true);
 					_world.setParameter("portraitDummy3", portraitDummy3);
 					final Npc scarletDummy = addSpawn(29053, -87784, -153298, -9175, 16384, false, 0, false, _world.getInstanceId());
-					scarletDummy.setIsInvul(true);
-					scarletDummy.setIsImmobilized(true);
+					scarletDummy.setInvul(true);
+					scarletDummy.setImmobilized(true);
 					_world.setParameter("scarletDummy", scarletDummy);
 					stopPc();
 					ThreadPool.schedule(new IntroTask(_world, 3), 1000);
@@ -942,15 +942,15 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 					broadCastPacket(_world, new SpecialCamera(overheadDummy, 0, 75, -89, 0, 100, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new SpecialCamera(overheadDummy, 300, 90, -10, 6500, 7000, 0, 0, 1, 0, 0));
 					final Npc frintezza = addSpawn(FRINTEZZA, -87780, -155086, -9080, 16384, false, 0, false, _world.getInstanceId());
-					frintezza.setIsImmobilized(true);
-					frintezza.setIsInvul(true);
+					frintezza.setImmobilized(true);
+					frintezza.setInvul(true);
 					frintezza.disableAllSkills();
 					_world.setParameter("frintezza", frintezza);
 					final List<Npc> demons = _world.getParameters().getList("demons", Npc.class, new ArrayList<>());
 					for (int[] element : PORTRAIT_SPAWNS)
 					{
 						final Npc demon = addSpawn(element[0] + 2, element[5], element[6], element[7], element[8], false, 0, false, _world.getInstanceId());
-						demon.setIsImmobilized(true);
+						demon.setImmobilized(true);
 						demon.disableAllSkills();
 						demons.add(demon);
 					}
@@ -1075,8 +1075,8 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 				{
 					final Npc activeScarlet = addSpawn(29046, -87789, -153295, -9176, 16384, false, 0, false, _world.getInstanceId());
 					activeScarlet.setRHandId(FIRST_SCARLET_WEAPON);
-					activeScarlet.setIsInvul(true);
-					activeScarlet.setIsImmobilized(true);
+					activeScarlet.setInvul(true);
+					activeScarlet.setImmobilized(true);
 					activeScarlet.disableAllSkills();
 					broadCastPacket(_world, new SocialAction(activeScarlet.getObjectId(), 3));
 					broadCastPacket(_world, new SpecialCamera(_world.getParameters().getObject("scarletDummy", Npc.class), 800, 180, 10, 1000, 10000, 0, 0, 1, 0, 0));
@@ -1119,19 +1119,19 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 				{
 					for (Npc demon : _world.getAliveNpcs(DEMONS))
 					{
-						demon.setIsImmobilized(false);
+						demon.setImmobilized(false);
 						demon.enableAllSkills();
 					}
 					final Npc activeScarlet = _world.getParameters().getObject("activeScarlet", Npc.class);
-					activeScarlet.setIsInvul(false);
-					activeScarlet.setIsImmobilized(false);
+					activeScarlet.setInvul(false);
+					activeScarlet.setImmobilized(false);
 					activeScarlet.enableAllSkills();
 					activeScarlet.setRunning();
 					activeScarlet.doCast(INTRO_SKILL.getSkill());
 					final Npc frintezza = _world.getParameters().getObject("frintezza", Npc.class);
 					frintezza.enableAllSkills();
 					frintezza.disableCoreAI(true);
-					frintezza.setIsMortal(false);
+					frintezza.setMortal(false);
 					startPc();
 					ThreadPool.schedule(new DemonSpawnTask(_world), TIME_BETWEEN_DEMON_SPAWNS);
 					break;
@@ -1150,8 +1150,8 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 					final Npc activeScarlet = _world.getParameters().getObject("activeScarlet", Npc.class);
 					activeScarlet.abortAttack();
 					activeScarlet.abortCast();
-					activeScarlet.setIsInvul(true);
-					activeScarlet.setIsImmobilized(true);
+					activeScarlet.setInvul(true);
+					activeScarlet.setImmobilized(true);
 					activeScarlet.disableAllSkills();
 					ThreadPool.schedule(new IntroTask(_world, 25), 7000);
 					break;
@@ -1210,8 +1210,8 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 				case 30:
 				{
 					final Npc activeScarlet = addSpawn(SCARLET2, _world.getParameters().getInt("scarlet_x", 0), _world.getParameters().getInt("scarlet_y", 0), _world.getParameters().getInt("scarlet_z", 0), _world.getParameters().getInt("scarlet_h", 0), false, 0, false, _world.getInstanceId());
-					activeScarlet.setIsInvul(true);
-					activeScarlet.setIsImmobilized(true);
+					activeScarlet.setInvul(true);
+					activeScarlet.setImmobilized(true);
 					activeScarlet.disableAllSkills();
 					broadCastPacket(_world, new SpecialCamera(activeScarlet, 450, _world.getParameters().getInt("scarlet_a", 0), 12, 500, 14000, 0, 0, 1, 0, 0));
 					_world.setParameter("activeScarlet", activeScarlet);
@@ -1228,8 +1228,8 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 				{
 					startPc();
 					final Npc activeScarlet = _world.getParameters().getObject("activeScarlet", Npc.class);
-					activeScarlet.setIsInvul(false);
-					activeScarlet.setIsImmobilized(false);
+					activeScarlet.setInvul(false);
+					activeScarlet.setImmobilized(false);
 					activeScarlet.enableAllSkills();
 					_world.setParameter("isVideo", false);
 					break;
@@ -1287,7 +1287,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 					player.disableAllSkills();
 					player.setTarget(null);
 					player.stopMove(null);
-					player.setIsImmobilized(true);
+					player.setImmobilized(true);
 					player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				}
 			}
@@ -1300,7 +1300,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 				if ((player != null) && player.isOnline() && (player.getInstanceId() == _world.getInstanceId()))
 				{
 					player.enableAllSkills();
-					player.setIsImmobilized(false);
+					player.setImmobilized(false);
 				}
 			}
 		}

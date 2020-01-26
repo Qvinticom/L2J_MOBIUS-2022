@@ -53,7 +53,7 @@ public class RetreatOnAttack extends Quest
 	{
 		if (event.equals("Retreat") && (npc != null) && (player != null))
 		{
-			npc.setIsAfraid(false);
+			npc.setAfraid(false);
 			((Attackable) npc).addDamageHate(player, 0, 100);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 		}
@@ -85,7 +85,7 @@ public class RetreatOnAttack extends Quest
 			}
 			posX = posX + signX;
 			posY = posY + signY;
-			npc.setIsAfraid(true);
+			npc.setAfraid(true);
 			npc.setRunning();
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(posX, posY, posZ));
 			startQuestTimer("Retreat", 10000, npc, attacker);

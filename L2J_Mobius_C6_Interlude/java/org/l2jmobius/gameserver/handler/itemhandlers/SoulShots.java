@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -97,7 +97,7 @@ public class SoulShots implements IItemHandler
 			}
 			
 			// Consume Soulshots if player has enough of them
-			final int saSSCount = (int) player.getStat().calcStat(Stats.SOULSHOT_COUNT, 0, null, null);
+			final int saSSCount = (int) player.getStat().calcStat(Stat.SOULSHOT_COUNT, 0, null, null);
 			final int SSCount = saSSCount == 0 ? weaponItem.getSoulShotCount() : saSSCount;
 			
 			if (!Config.DONT_DESTROY_SS && !player.destroyItemWithoutTrace("Consume", item.getObjectId(), SSCount, null, false))

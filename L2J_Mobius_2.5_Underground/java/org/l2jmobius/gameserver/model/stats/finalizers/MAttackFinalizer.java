@@ -21,17 +21,17 @@ import java.util.OptionalDouble;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.IStatsFunction;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.IStatFunction;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author UnAfraid
  */
-public class MAttackFinalizer implements IStatsFunction
+public class MAttackFinalizer implements IStatFunction
 {
 	@Override
-	public double calc(Creature creature, OptionalDouble base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stat stat)
 	{
 		throwIfPresent(base);
 		
@@ -53,9 +53,9 @@ public class MAttackFinalizer implements IStatsFunction
 		}
 		
 		// Calculate modifiers Magic Attack
-		final double chaBonus = creature.isPlayer() ? BaseStats.CHA.calcBonus(creature) : 1.;
-		baseValue *= Math.pow(BaseStats.INT.calcBonus(creature) * creature.getLevelMod() * chaBonus, 2.2072);
-		return validateValue(creature, Stats.defaultValue(creature, stat, baseValue), 0, Config.MAX_MATK);
+		final double chaBonus = creature.isPlayer() ? BaseStat.CHA.calcBonus(creature) : 1.;
+		baseValue *= Math.pow(BaseStat.INT.calcBonus(creature) * creature.getLevelMod() * chaBonus, 2.2072);
+		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 0, Config.MAX_MATK);
 	}
 	
 	@Override

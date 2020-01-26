@@ -243,7 +243,7 @@ public class AdminEffects implements IAdminCommandHandler
 					{
 						creature.startAbnormalEffect(0x0800);
 					}
-					creature.setIsParalyzed(true);
+					creature.setParalyzed(true);
 					final StopMove sm = new StopMove(creature);
 					creature.sendPacket(sm);
 					creature.broadcastPacket(sm);
@@ -263,7 +263,7 @@ public class AdminEffects implements IAdminCommandHandler
 				{
 					creature = (Creature) target;
 					creature.stopAbnormalEffect((short) 0x0400);
-					creature.setIsParalyzed(false);
+					creature.setParalyzed(false);
 				}
 			}
 			catch (Exception e)
@@ -279,7 +279,7 @@ public class AdminEffects implements IAdminCommandHandler
 					if (!player.isGM())
 					{
 						player.startAbnormalEffect(0x0400);
-						player.setIsParalyzed(true);
+						player.setParalyzed(true);
 						final StopMove sm = new StopMove(player);
 						player.sendPacket(sm);
 						player.broadcastPacket(sm);
@@ -297,7 +297,7 @@ public class AdminEffects implements IAdminCommandHandler
 				for (PlayerInstance player : activeChar.getKnownList().getKnownPlayers().values())
 				{
 					player.stopAbnormalEffect(0x0400);
-					player.setIsParalyzed(false);
+					player.setParalyzed(false);
 				}
 			}
 			catch (Exception e)

@@ -436,7 +436,7 @@ public class Raina extends AbstractNpcAI
 					}
 					else
 					{
-						player.getSubClasses().get(player.getClassIndex()).setIsDualClass(true);
+						player.getSubClasses().get(player.getClassIndex()).setDualClassActive(true);
 						
 						final SystemMessage msg = new SystemMessage(SystemMessageId.SUBCLASS_S1_HAS_BEEN_UPGRADED_TO_DUEL_CLASS_S2_CONGRATULATIONS);
 						msg.addClassId(player.getClassId().getId());

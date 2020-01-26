@@ -119,7 +119,7 @@ public class SellBuffsManager implements IXmlReader
 	public void startSellBuffs(PlayerInstance player, String title)
 	{
 		player.sitDown();
-		player.setIsSellingBuffs(true);
+		player.setSellingBuffs(true);
 		player.setPrivateStoreType(PrivateStoreType.PACKAGE_SELL);
 		player.getSellList().setTitle(title);
 		player.getSellList().setPackaged(true);
@@ -130,7 +130,7 @@ public class SellBuffsManager implements IXmlReader
 	
 	public void stopSellBuffs(PlayerInstance player)
 	{
-		player.setIsSellingBuffs(false);
+		player.setSellingBuffs(false);
 		player.setPrivateStoreType(PrivateStoreType.NONE);
 		player.standUp();
 		player.broadcastUserInfo();

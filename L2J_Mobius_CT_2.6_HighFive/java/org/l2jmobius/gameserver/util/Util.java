@@ -439,13 +439,13 @@ public class Util
 	}
 	
 	/**
-	 * @param val
+	 * @param value
 	 * @param format
 	 * @return formatted double value by specified format.
 	 */
-	public static String formatDouble(double val, String format)
+	public static String formatDouble(double value, String format)
 	{
-		return (new DecimalFormat(format, new DecimalFormatSymbols(Locale.ENGLISH))).format(val);
+		return (new DecimalFormat(format, new DecimalFormatSymbols(Locale.ENGLISH))).format(value);
 	}
 	
 	/**

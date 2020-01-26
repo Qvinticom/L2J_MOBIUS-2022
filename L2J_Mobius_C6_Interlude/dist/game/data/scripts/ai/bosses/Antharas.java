@@ -458,7 +458,7 @@ public class Antharas extends Quest
 					_antharas = (GrandBossInstance) antharasSpawn.doSpawn();
 					GrandBossManager.getInstance().addBoss(_antharas);
 					_monsters.add(_antharas);
-					_antharas.setIsImobilised(true);
+					_antharas.setImmobilized(true);
 					GrandBossManager.getInstance().setBossStatus(ANTHARASOLDID, DORMANT);
 					GrandBossManager.getInstance().setBossStatus(npcId, FIGHTING);
 					_LastAction = System.currentTimeMillis();
@@ -883,7 +883,7 @@ public class Antharas extends Quest
 		@Override
 		public void run()
 		{
-			_boss.setIsImobilised(false);
+			_boss.setImmobilized(false);
 			
 			// When it is possible to act, a social action is canceled.
 			if (_socialTask != null)
@@ -916,7 +916,7 @@ public class Antharas extends Quest
 	@Override
 	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
-		if (((npc.getSpawn() != null) && !npc.getSpawn().is_customBossInstance() && (npc.getNpcId() == 29019)) || (npc.getNpcId() == 29066) || (npc.getNpcId() == 29067) || (npc.getNpcId() == 29068))
+		if (((npc.getSpawn() != null) && !npc.getSpawn().isCustomBossInstance() && (npc.getNpcId() == 29019)) || (npc.getNpcId() == 29066) || (npc.getNpcId() == 29067) || (npc.getNpcId() == 29068))
 		{
 			_LastAction = System.currentTimeMillis();
 			/*
@@ -960,7 +960,7 @@ public class Antharas extends Quest
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS01_D", npc));
 			
-			if (!npc.getSpawn().is_customBossInstance())
+			if (!npc.getSpawn().isCustomBossInstance())
 			{
 				_cubeSpawnTask = ThreadPool.schedule(new CubeSpawn(0), 10000);
 				GrandBossManager.getInstance().setBossStatus(npc.getNpcId(), DEAD);

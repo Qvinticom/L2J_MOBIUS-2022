@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw, Mobius
@@ -114,12 +114,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.PHYSICAL_ATTACK, _pAtkAmount);
+					effected.getStat().mergeAdd(Stat.PHYSICAL_ATTACK, _pAtkAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.PHYSICAL_ATTACK, (_pAtkAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.PHYSICAL_ATTACK, (_pAtkAmount / 100) + 1);
 					break;
 				}
 			}
@@ -128,12 +128,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.MAGIC_ATTACK, _mAtkAmount);
+					effected.getStat().mergeAdd(Stat.MAGIC_ATTACK, _mAtkAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.MAGIC_ATTACK, (_mAtkAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.MAGIC_ATTACK, (_mAtkAmount / 100) + 1);
 					break;
 				}
 			}
@@ -142,12 +142,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.PHYSICAL_ATTACK_SPEED, _pAtkSpeedAmount);
+					effected.getStat().mergeAdd(Stat.PHYSICAL_ATTACK_SPEED, _pAtkSpeedAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.PHYSICAL_ATTACK_SPEED, (_pAtkSpeedAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.PHYSICAL_ATTACK_SPEED, (_pAtkSpeedAmount / 100) + 1);
 					break;
 				}
 			}
@@ -156,12 +156,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.MAGIC_ATTACK_SPEED, _mAtkSpeedAmount);
+					effected.getStat().mergeAdd(Stat.MAGIC_ATTACK_SPEED, _mAtkSpeedAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.MAGIC_ATTACK_SPEED, (_mAtkSpeedAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.MAGIC_ATTACK_SPEED, (_mAtkSpeedAmount / 100) + 1);
 					break;
 				}
 			}
@@ -170,12 +170,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.MAGIC_ATTACK, _mAtkAmount);
+					effected.getStat().mergeAdd(Stat.MAGIC_ATTACK, _mAtkAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.MAGIC_ATTACK, (_mAtkAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.MAGIC_ATTACK, (_mAtkAmount / 100) + 1);
 					break;
 				}
 			}
@@ -184,12 +184,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.PHYSICAL_ATTACK_SPEED, _pAtkSpeedAmount);
+					effected.getStat().mergeAdd(Stat.PHYSICAL_ATTACK_SPEED, _pAtkSpeedAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.PHYSICAL_ATTACK_SPEED, (_pAtkSpeedAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.PHYSICAL_ATTACK_SPEED, (_pAtkSpeedAmount / 100) + 1);
 					break;
 				}
 			}
@@ -198,12 +198,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.MAGIC_ATTACK_SPEED, _mAtkSpeedAmount);
+					effected.getStat().mergeAdd(Stat.MAGIC_ATTACK_SPEED, _mAtkSpeedAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.MAGIC_ATTACK_SPEED, (_mAtkSpeedAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.MAGIC_ATTACK_SPEED, (_mAtkSpeedAmount / 100) + 1);
 					break;
 				}
 			}
@@ -212,12 +212,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.ACCURACY_COMBAT, _pAccuracyAmount);
+					effected.getStat().mergeAdd(Stat.ACCURACY_COMBAT, _pAccuracyAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.ACCURACY_COMBAT, (_pAccuracyAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.ACCURACY_COMBAT, (_pAccuracyAmount / 100) + 1);
 					break;
 				}
 			}
@@ -226,12 +226,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.ACCURACY_MAGIC, _mAccuracyAmount);
+					effected.getStat().mergeAdd(Stat.ACCURACY_MAGIC, _mAccuracyAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.ACCURACY_MAGIC, (_mAccuracyAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.ACCURACY_MAGIC, (_mAccuracyAmount / 100) + 1);
 					break;
 				}
 			}
@@ -240,12 +240,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.CRITICAL_RATE, _pCritRateAmount);
+					effected.getStat().mergeAdd(Stat.CRITICAL_RATE, _pCritRateAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.CRITICAL_RATE, (_pCritRateAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.CRITICAL_RATE, (_pCritRateAmount / 100) + 1);
 					break;
 				}
 			}
@@ -254,12 +254,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.MAGIC_CRITICAL_RATE, _mCritRateAmount);
+					effected.getStat().mergeAdd(Stat.MAGIC_CRITICAL_RATE, _mCritRateAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.MAGIC_CRITICAL_RATE, (_mCritRateAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.MAGIC_CRITICAL_RATE, (_mCritRateAmount / 100) + 1);
 					break;
 				}
 			}
@@ -268,12 +268,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.CRITICAL_DAMAGE_ADD, _pCritDamageAmount);
+					effected.getStat().mergeAdd(Stat.CRITICAL_DAMAGE_ADD, _pCritDamageAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.CRITICAL_DAMAGE, (_pCritDamageAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.CRITICAL_DAMAGE, (_pCritDamageAmount / 100) + 1);
 					break;
 				}
 			}
@@ -282,12 +282,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.MAGIC_CRITICAL_DAMAGE_ADD, _mCritDamageAmount);
+					effected.getStat().mergeAdd(Stat.MAGIC_CRITICAL_DAMAGE_ADD, _mCritDamageAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.MAGIC_CRITICAL_DAMAGE, (_mCritDamageAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.MAGIC_CRITICAL_DAMAGE, (_mCritDamageAmount / 100) + 1);
 					break;
 				}
 			}
@@ -296,12 +296,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.MOVE_SPEED, _speedAmount);
+					effected.getStat().mergeAdd(Stat.MOVE_SPEED, _speedAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.MOVE_SPEED, (_speedAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.MOVE_SPEED, (_speedAmount / 100) + 1);
 					break;
 				}
 			}
@@ -310,12 +310,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.ACCURACY_MAGIC, _mAccuracyAmount);
+					effected.getStat().mergeAdd(Stat.ACCURACY_MAGIC, _mAccuracyAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.ACCURACY_MAGIC, (_mAccuracyAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.ACCURACY_MAGIC, (_mAccuracyAmount / 100) + 1);
 					break;
 				}
 			}
@@ -324,12 +324,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.CRITICAL_RATE, _pCritRateAmount);
+					effected.getStat().mergeAdd(Stat.CRITICAL_RATE, _pCritRateAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.CRITICAL_RATE, (_pCritRateAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.CRITICAL_RATE, (_pCritRateAmount / 100) + 1);
 					break;
 				}
 			}
@@ -338,12 +338,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.MAGIC_CRITICAL_RATE, _mCritRateAmount);
+					effected.getStat().mergeAdd(Stat.MAGIC_CRITICAL_RATE, _mCritRateAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.MAGIC_CRITICAL_RATE, (_mCritRateAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.MAGIC_CRITICAL_RATE, (_mCritRateAmount / 100) + 1);
 					break;
 				}
 			}
@@ -352,12 +352,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.CRITICAL_DAMAGE_ADD, _pCritDamageAmount);
+					effected.getStat().mergeAdd(Stat.CRITICAL_DAMAGE_ADD, _pCritDamageAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.CRITICAL_DAMAGE, (_pCritDamageAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.CRITICAL_DAMAGE, (_pCritDamageAmount / 100) + 1);
 					break;
 				}
 			}
@@ -366,12 +366,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.MAGIC_CRITICAL_DAMAGE_ADD, _mCritDamageAmount);
+					effected.getStat().mergeAdd(Stat.MAGIC_CRITICAL_DAMAGE_ADD, _mCritDamageAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.MAGIC_CRITICAL_DAMAGE, (_mCritDamageAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.MAGIC_CRITICAL_DAMAGE, (_mCritDamageAmount / 100) + 1);
 					break;
 				}
 			}
@@ -380,12 +380,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.MOVE_SPEED, _speedAmount);
+					effected.getStat().mergeAdd(Stat.MOVE_SPEED, _speedAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.MOVE_SPEED, (_speedAmount / 100) + 1);
+					effected.getStat().mergeMul(Stat.MOVE_SPEED, (_speedAmount / 100) + 1);
 					break;
 				}
 			}

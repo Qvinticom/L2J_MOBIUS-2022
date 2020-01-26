@@ -178,7 +178,7 @@ public class SilentValley extends AbstractNpcAI
 	{
 		if (npc.getId() == CHEST)
 		{
-			npc.setIsInvul(true);
+			npc.setInvul(true);
 			startQuestTimer("CLEAR_EVENT", 300000, npc, null);
 		}
 		else

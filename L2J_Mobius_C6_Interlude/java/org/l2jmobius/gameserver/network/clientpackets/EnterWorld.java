@@ -380,7 +380,7 @@ public class EnterWorld extends GameClientPacket
 			
 			for (Siege siege : SiegeManager.getInstance().getSieges())
 			{
-				if (!siege.getIsInProgress())
+				if (!siege.isInProgress())
 				{
 					continue;
 				}
@@ -399,7 +399,7 @@ public class EnterWorld extends GameClientPacket
 			
 			for (FortSiege fortsiege : FortSiegeManager.getInstance().getSieges())
 			{
-				if (!fortsiege.getIsInProgress())
+				if (!fortsiege.isInProgress())
 				{
 					continue;
 				}
@@ -506,7 +506,7 @@ public class EnterWorld extends GameClientPacket
 		
 		if (!nProtect.getInstance().checkRestriction(player, RestrictionType.RESTRICT_ENTER))
 		{
-			player.setIsImobilised(true);
+			player.setImmobilized(true);
 			player.disableAllSkills();
 			ThreadPool.schedule(new Disconnection(player), 20000);
 		}
@@ -567,7 +567,7 @@ public class EnterWorld extends GameClientPacket
 				if (Config.GM_STARTUP_BUILDER_HIDE && AdminData.getInstance().hasAccess("admin_hide", player.getAccessLevel()))
 				{
 					player.setInRefusalMode(true);
-					player.setIsInvul(true);
+					player.setInvul(true);
 					player.getAppearance().setInvisible();
 					
 					BuilderUtil.sendSysMessage(player, "hide is default for builder.");
@@ -580,7 +580,7 @@ public class EnterWorld extends GameClientPacket
 				
 				if (Config.GM_STARTUP_INVULNERABLE && AdminData.getInstance().hasAccess("admin_invul", player.getAccessLevel()))
 				{
-					player.setIsInvul(true);
+					player.setInvul(true);
 				}
 				
 				if (Config.GM_STARTUP_INVISIBLE && AdminData.getInstance().hasAccess("admin_invisible", player.getAccessLevel()))

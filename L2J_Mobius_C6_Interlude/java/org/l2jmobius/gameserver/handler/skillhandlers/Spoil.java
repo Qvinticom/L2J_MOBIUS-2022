@@ -74,7 +74,7 @@ public class Spoil implements ISkillHandler
 				if (spoil)
 				{
 					target.setSpoil(true);
-					target.setIsSpoiledBy(creature.getObjectId());
+					target.setSpoiledBy(creature.getObjectId());
 					creature.sendPacket(new SystemMessage(SystemMessageId.SPOIL_SUCCESS));
 				}
 				else

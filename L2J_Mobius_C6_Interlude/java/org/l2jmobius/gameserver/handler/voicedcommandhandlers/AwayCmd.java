@@ -75,7 +75,7 @@ public class AwayCmd implements IVoicedCommandHandler
 		}
 		
 		// Check if player is in Siege
-		if ((siege != null) && siege.getIsInProgress())
+		if ((siege != null) && siege.isInProgress())
 		{
 			activeChar.sendMessage("You are in siege, you can't go Afk.");
 			return false;

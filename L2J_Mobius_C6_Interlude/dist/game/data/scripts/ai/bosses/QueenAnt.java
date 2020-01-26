@@ -158,9 +158,9 @@ public class QueenAnt extends Quest
 		startQuestTimer("HEAL", 1000, null, null, true);
 		_queen = npc;
 		_larva = (MonsterInstance) addSpawn(LARVA, -21600, 179482, -5846, Rnd.get(360), false, 0);
-		_larva.setIsUnkillable(true);
-		_larva.setIsImobilised(true);
-		_larva.setIsAttackDisabled(true);
+		_larva.setUnkillable(true);
+		_larva.setImmobilized(true);
+		_larva.setAttackDisabled(true);
 	}
 	
 	@Override
@@ -195,7 +195,7 @@ public class QueenAnt extends Quest
 					final int x = (int) (radius * Math.cos(i * 1.407)); // 1.407~2pi/6
 					final int y = (int) (radius * Math.sin(i * 1.407));
 					_nurses.add((MonsterInstance) addSpawn(NURSE, npc.getX() + x, npc.getY() + y, npc.getZ(), 0, false, 0));
-					_nurses.get(i).setIsAttackDisabled(true);
+					_nurses.get(i).setAttackDisabled(true);
 				}
 				break;
 			}
@@ -368,7 +368,7 @@ public class QueenAnt extends Quest
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
 			
-			if (!npc.getSpawn().is_customBossInstance())
+			if (!npc.getSpawn().isCustomBossInstance())
 			{
 				GrandBossManager.getInstance().setBossStatus(QUEEN, DEAD);
 				// time is 36hour +/- 17hour

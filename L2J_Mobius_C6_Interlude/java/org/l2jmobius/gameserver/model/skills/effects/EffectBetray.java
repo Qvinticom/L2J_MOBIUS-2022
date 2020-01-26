@@ -47,7 +47,7 @@ final class EffectBetray extends Effect
 			PlayerInstance targetOwner = null;
 			targetOwner = ((Summon) getEffected()).getOwner();
 			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, targetOwner);
-			targetOwner.setIsBetrayed(true);
+			targetOwner.setBetrayed(true);
 			onActionTime();
 		}
 	}
@@ -60,7 +60,7 @@ final class EffectBetray extends Effect
 		{
 			PlayerInstance targetOwner = null;
 			targetOwner = ((Summon) getEffected()).getOwner();
-			targetOwner.setIsBetrayed(false);
+			targetOwner.setBetrayed(false);
 			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
 	}
@@ -70,7 +70,7 @@ final class EffectBetray extends Effect
 	{
 		PlayerInstance targetOwner = null;
 		targetOwner = ((Summon) getEffected()).getOwner();
-		targetOwner.setIsBetrayed(true);
+		targetOwner.setBetrayed(true);
 		return false;
 	}
 }

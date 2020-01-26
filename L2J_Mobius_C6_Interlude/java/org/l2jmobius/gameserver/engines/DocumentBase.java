@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.Env;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.model.skills.conditions.Condition;
 import org.l2jmobius.gameserver.model.skills.conditions.ConditionElementSeed;
 import org.l2jmobius.gameserver.model.skills.conditions.ConditionForceBuff;
@@ -207,7 +207,7 @@ public abstract class DocumentBase
 	
 	protected void attachFunc(Node n, Object template, String name, Condition attachCond)
 	{
-		final Stats stat = Stats.valueOfXml(n.getAttributes().getNamedItem("stat").getNodeValue());
+		final Stat stat = Stat.valueOfXml(n.getAttributes().getNamedItem("stat").getNodeValue());
 		final String order = n.getAttributes().getNamedItem("order").getNodeValue();
 		final Lambda lambda = getLambda(n, template);
 		final int ord = Integer.decode(getValue(order, template));
@@ -752,7 +752,7 @@ public abstract class DocumentBase
 	protected Condition parseSkillCondition(Node n)
 	{
 		final NamedNodeMap attrs = n.getAttributes();
-		final Stats stat = Stats.valueOfXml(attrs.getNamedItem("stat").getNodeValue());
+		final Stat stat = Stat.valueOfXml(attrs.getNamedItem("stat").getNodeValue());
 		return new ConditionSkillStats(stat);
 	}
 	
@@ -902,22 +902,22 @@ public abstract class DocumentBase
 			{
 				if (val.equalsIgnoreCase("$player_level"))
 				{
-					return new LambdaStats(LambdaStats.StatsType.PLAYER_LEVEL);
+					return new LambdaStats(LambdaStats.StatType.PLAYER_LEVEL);
 				}
 				
 				if (val.equalsIgnoreCase("$target_level"))
 				{
-					return new LambdaStats(LambdaStats.StatsType.TARGET_LEVEL);
+					return new LambdaStats(LambdaStats.StatType.TARGET_LEVEL);
 				}
 				
 				if (val.equalsIgnoreCase("$player_max_hp"))
 				{
-					return new LambdaStats(LambdaStats.StatsType.PLAYER_MAX_HP);
+					return new LambdaStats(LambdaStats.StatType.PLAYER_MAX_HP);
 				}
 				
 				if (val.equalsIgnoreCase("$player_max_mp"))
 				{
-					return new LambdaStats(LambdaStats.StatsType.PLAYER_MAX_MP);
+					return new LambdaStats(LambdaStats.StatType.PLAYER_MAX_MP);
 				}
 				
 				// try to find value out of item fields

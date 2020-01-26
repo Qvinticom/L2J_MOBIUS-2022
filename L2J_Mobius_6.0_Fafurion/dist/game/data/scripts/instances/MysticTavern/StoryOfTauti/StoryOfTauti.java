@@ -577,7 +577,7 @@ public class StoryOfTauti extends AbstractInstance
 					}
 					if (world.isStatus(11) && (npc.getCurrentHpPercent() < 5))
 					{
-						npc.setIsInvul(true);
+						npc.setInvul(true);
 						SEAL_ARCHANGEL_WRATH.getSkill().applyEffects(npc, attacker);
 						world.setStatus(12);
 						World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, pl ->

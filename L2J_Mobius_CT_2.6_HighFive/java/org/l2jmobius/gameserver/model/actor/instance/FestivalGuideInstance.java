@@ -192,11 +192,11 @@ public class FestivalGuideInstance extends Npc
 		}
 	}
 	
-	public void showChatWindow(PlayerInstance player, int val, String suffix, boolean isDescription)
+	public void showChatWindow(PlayerInstance player, int value, String suffix, boolean isDescription)
 	{
 		String filename = SevenSigns.SEVEN_SIGNS_HTML_PATH + "festival/";
 		filename += (isDescription) ? "desc_" : "festival_";
-		filename += (suffix != null) ? val + suffix + ".htm" : val + ".htm";
+		filename += (suffix != null) ? value + suffix + ".htm" : value + ".htm";
 		
 		// Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -204,23 +204,23 @@ public class FestivalGuideInstance extends Npc
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%festivalType%", SevenSignsFestival.getFestivalName(_festivalType));
 		html.replace("%cycleMins%", String.valueOf(SevenSignsFestival.getInstance().getMinsToNextCycle()));
-		if (!isDescription && "2b".equals(val + suffix))
+		if (!isDescription && "2b".equals(value + suffix))
 		{
 			html.replace("%minFestivalPartyMembers%", String.valueOf(Config.ALT_FESTIVAL_MIN_PLAYER));
 		}
 		
 		// If the stats or bonus table is required, construct them.
-		if (val == 5)
+		if (value == 5)
 		{
 			html.replace("%statsTable%", getStatsTable());
 		}
-		if (val == 6)
+		if (value == 6)
 		{
 			html.replace("%bonusTable%", getBonusTable());
 		}
 		
 		// festival's fee
-		if (val == 1)
+		if (value == 1)
 		{
 			html.replace("%blueStoneNeeded%", String.valueOf(_blueStonesNeeded));
 			html.replace("%greenStoneNeeded%", String.valueOf(_greenStonesNeeded));

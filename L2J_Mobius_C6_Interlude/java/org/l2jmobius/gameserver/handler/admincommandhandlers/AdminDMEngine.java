@@ -306,18 +306,18 @@ public class AdminDMEngine implements IAdminCommandHandler
 		replyMSG.append("Max lvl:&nbsp;<font color=\"00FF00\">" + DM.getMaxlvl() + "</font><br><br>");
 		replyMSG.append("Death Match Color:&nbsp;<font color=\"00FF00\">" + DM.getPlayerColors() + "</font><br>");
 		
-		final Location playerLoc = DM.get_playersSpawnLocation();
+		final Location playerLoc = DM.getPlayersSpawnLocation();
 		
 		replyMSG.append("Death Match Spawn Pos:&nbsp;<font color=\"00FF00\">" + playerLoc.getX() + "," + playerLoc.getY() + "," + playerLoc.getZ() + "</font><br><br>");
 		replyMSG.append("Current players:<br1>");
 		
-		if (!DM.is_started())
+		if (!DM.hasStarted())
 		{
 			replyMSG.append("<br1>");
 			replyMSG.append(DM._players.size() + " players participating.");
 			replyMSG.append("<br><br>");
 		}
-		else if (DM.is_started())
+		else if (DM.hasStarted())
 		{
 			replyMSG.append("<br1>");
 			replyMSG.append(DM._players.size() + " players in fighting event.");

@@ -36,7 +36,7 @@ public class ImmobilePetBuff extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		effected.setIsImmobilized(false);
+		effected.setImmobilized(false);
 	}
 	
 	@Override
@@ -44,7 +44,7 @@ public class ImmobilePetBuff extends AbstractEffect
 	{
 		if (effected.isSummon() && effector.isPlayer() && (((Summon) effected).getOwner() == effector))
 		{
-			effected.setIsImmobilized(true);
+			effected.setImmobilized(true);
 		}
 	}
 }

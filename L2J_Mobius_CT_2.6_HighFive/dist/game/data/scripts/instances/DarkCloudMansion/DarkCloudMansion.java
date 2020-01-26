@@ -633,7 +633,7 @@ public class DarkCloudMansion extends AbstractInstance
 		{
 			if (npc.status == 0)
 			{
-				npc.npc.setIsInvul(true);
+				npc.npc.setInvul(true);
 			}
 		}
 		

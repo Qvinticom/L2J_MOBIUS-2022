@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.enums.StatFunction;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
 
 /**
@@ -101,7 +101,7 @@ public class EnchantItemHPBonusData implements IXmlReader
 						case Item.SLOT_L_HAND:
 						case Item.SLOT_BELT:
 						{
-							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
+							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stat.MAX_HP, 0));
 							break;
 						}
 						default:

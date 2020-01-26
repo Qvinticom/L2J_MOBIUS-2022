@@ -51,17 +51,17 @@ public class MerchantInstance extends NpcInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
 		
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
 		}
 		else
 		{
-			pom = npcId + "-" + val;
+			pom = npcId + "-" + value;
 		}
 		
 		return "data/html/merchant/" + pom + ".htm";
@@ -75,24 +75,24 @@ public class MerchantInstance extends NpcInstance
 		return _mpc;
 	}
 	
-	public void showBuyWindow(PlayerInstance player, int val)
+	public void showBuyWindow(PlayerInstance player, int value)
 	{
-		showBuyWindow(player, val, true);
+		showBuyWindow(player, value, true);
 	}
 	
-	public void showBuyWindow(PlayerInstance player, int val, boolean applyTax)
+	public void showBuyWindow(PlayerInstance player, int value, boolean applyTax)
 	{
-		final BuyListHolder buyList = BuyListData.getInstance().getBuyList(val);
+		final BuyListHolder buyList = BuyListData.getInstance().getBuyList(value);
 		if (buyList == null)
 		{
-			LOGGER.warning("BuyList not found! BuyListId:" + val);
+			LOGGER.warning("BuyList not found! BuyListId:" + value);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (!buyList.isNpcAllowed(getId()))
 		{
-			LOGGER.warning("Npc not allowed in BuyList! BuyListId:" + val + " NpcId:" + getId());
+			LOGGER.warning("Npc not allowed in BuyList! BuyListId:" + value + " NpcId:" + getId());
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

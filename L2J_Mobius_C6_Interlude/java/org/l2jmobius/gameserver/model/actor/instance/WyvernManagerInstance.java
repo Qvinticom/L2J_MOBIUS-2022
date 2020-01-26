@@ -36,7 +36,7 @@ public class WyvernManagerInstance extends CastleChamberlainInstance
 	private int _clanHallId = -1;
 	
 	/**
-	 * Instantiates a new l2 wyvern manager instance.
+	 * Instantiates a new wyvern manager instance.
 	 * @param objectId the object id
 	 * @param template the template
 	 */
@@ -218,7 +218,7 @@ public class WyvernManagerInstance extends CastleChamberlainInstance
 		else if ((super.getCastle() != null) && (super.getCastle().getCastleId() > 0) && (player.getClan() != null))
 		{
 			// Checks if player is in Sieage Zone, he can't use wyvern!!
-			if (super.isInsideZone(ZoneId.SIEGE) || super.getCastle().getSiege().getIsInProgress())
+			if (super.isInsideZone(ZoneId.SIEGE) || super.getCastle().getSiege().isInProgress())
 			{
 				return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
 			}

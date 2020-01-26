@@ -450,9 +450,9 @@ public abstract class Summon extends Playable
 		_attackRange = range;
 	}
 	
-	public void setFollowStatus(boolean state)
+	public void setFollowStatus(boolean value)
 	{
-		_follow = state;
+		_follow = value;
 		
 		if (_follow)
 		{
@@ -735,9 +735,9 @@ public abstract class Summon extends Playable
 	}
 	
 	@Override
-	public void setIsImobilised(boolean value)
+	public void setImmobilized(boolean value)
 	{
-		super.setIsImobilised(value);
+		super.setImmobilized(value);
 		
 		if (value)
 		{

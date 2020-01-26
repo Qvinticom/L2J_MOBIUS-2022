@@ -47,7 +47,7 @@ public class CommanderInstance extends Attackable
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		// Attackable during siege by all except defenders
-		return (attacker instanceof PlayerInstance) && (getFort() != null) && (getFort().getFortId() > 0) && getFort().getSiege().getIsInProgress() && !getFort().getSiege().checkIsDefender(((PlayerInstance) attacker).getClan());
+		return (attacker instanceof PlayerInstance) && (getFort() != null) && (getFort().getFortId() > 0) && getFort().getSiege().isInProgress() && !getFort().getSiege().checkIsDefender(((PlayerInstance) attacker).getClan());
 	}
 	
 	@Override
@@ -82,7 +82,7 @@ public class CommanderInstance extends Attackable
 			return false;
 		}
 		
-		if (getFort().getSiege().getIsInProgress())
+		if (getFort().getSiege().isInProgress())
 		{
 			getFort().getSiege().killedCommander(this);
 		}
@@ -117,7 +117,7 @@ public class CommanderInstance extends Attackable
 	{
 		if (!isInsideRadius(_homeX, _homeY, 40, false))
 		{
-			setisReturningToSpawnPoint(true);
+			setReturningToSpawnPoint(true);
 			clearAggroList();
 			
 			if (hasAI())

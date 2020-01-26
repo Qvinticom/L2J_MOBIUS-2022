@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Mobius
@@ -26,6 +26,6 @@ public class FishingExpSpBonus extends AbstractStatPercentEffect
 {
 	public FishingExpSpBonus(StatsSet params)
 	{
-		super(params, Stats.FISHING_EXP_SP_BONUS);
+		super(params, Stat.FISHING_EXP_SP_BONUS);
 	}
 }

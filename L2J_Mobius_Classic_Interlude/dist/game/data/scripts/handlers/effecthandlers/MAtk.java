@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class MAtk extends AbstractStatEffect
 {
 	public MAtk(StatsSet params)
 	{
-		super(params, Stats.MAGIC_ATTACK);
+		super(params, Stat.MAGIC_ATTACK);
 	}
 }

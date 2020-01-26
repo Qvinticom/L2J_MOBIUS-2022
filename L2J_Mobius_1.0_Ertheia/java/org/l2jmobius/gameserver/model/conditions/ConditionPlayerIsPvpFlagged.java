@@ -26,20 +26,20 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerIsPvpFlagged extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
 	/**
 	 * Instantiates a new condition player is PvP flagged.
-	 * @param val the val
+	 * @param value the value
 	 */
-	public ConditionPlayerIsPvpFlagged(boolean val)
+	public ConditionPlayerIsPvpFlagged(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		return (effector.getActingPlayer() != null) && ((effector.getActingPlayer().getPvpFlag() > 0) == _val);
+		return (effector.getActingPlayer() != null) && ((effector.getActingPlayer().getPvpFlag() > 0) == _value);
 	}
 }

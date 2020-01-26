@@ -159,9 +159,9 @@ import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
-import org.l2jmobius.gameserver.model.skills.BaseStats;
+import org.l2jmobius.gameserver.model.skills.BaseStat;
 import org.l2jmobius.gameserver.model.skills.Formulas;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.model.skills.effects.EffectCharge;
 import org.l2jmobius.gameserver.model.skills.handlers.SkillSummon;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
@@ -1187,7 +1187,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Instantiates a new l2 pc instance.
+	 * Instantiates a new pc instance.
 	 * @param objectId the object id
 	 */
 	private PlayerInstance(int objectId)
@@ -1384,7 +1384,7 @@ public class PlayerInstance extends Playable
 	 * Checks if is in craft mode.
 	 * @param isCrafting
 	 */
-	public void setIsCrafting(boolean isCrafting)
+	public void setCrafting(boolean isCrafting)
 	{
 		_isCrafting = isCrafting;
 	}
@@ -2310,8 +2310,8 @@ public class PlayerInstance extends Playable
 			return 176000;
 		}
 		
-		final double baseLoad = Math.floor(BaseStats.CON.calcBonus(this) * 69000 * Config.ALT_WEIGHT_LIMIT);
-		return (int) calcStat(Stats.MAX_LOAD, baseLoad, this, null);
+		final double baseLoad = Math.floor(BaseStat.CON.calcBonus(this) * 69000 * Config.ALT_WEIGHT_LIMIT);
+		return (int) calcStat(Stat.MAX_LOAD, baseLoad, this, null);
 	}
 	
 	/**
@@ -2362,11 +2362,11 @@ public class PlayerInstance extends Playable
 	{
 		if (Config.DISABLE_WEIGHT_PENALTY)
 		{
-			setIsOverloaded(false);
+			setOverloaded(false);
 		}
 		else if (_dietMode)
 		{
-			setIsOverloaded(false);
+			setOverloaded(false);
 			_curWeightPenalty = 0;
 			super.removeSkill(getKnownSkill(4270));
 			sendPacket(new EtcStatusUpdate(this));
@@ -2377,7 +2377,7 @@ public class PlayerInstance extends Playable
 			final int maxLoad = getMaxLoad();
 			if (maxLoad > 0)
 			{
-				final long weightproc = (long) (((getCurrentLoad() - calcStat(Stats.WEIGHT_PENALTY, 1, this, null)) * 1000) / maxLoad);
+				final long weightproc = (long) (((getCurrentLoad() - calcStat(Stat.WEIGHT_PENALTY, 1, this, null)) * 1000) / maxLoad);
 				int newWeightPenalty;
 				
 				if (weightproc < 500)
@@ -3390,11 +3390,11 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Set _waitTypeSitting to given value.
-	 * @param state the new checks if is sitting
+	 * @param value the new checks if is sitting
 	 */
-	public void setIsSitting(boolean state)
+	public void setSitting(boolean value)
 	{
-		_waitTypeSitting = state;
+		_waitTypeSitting = value;
 	}
 	
 	/**
@@ -3412,14 +3412,14 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if (!_waitTypeSitting && !isAttackingDisabled() && !isOutOfControl() && !isImobilised())
+		if (!_waitTypeSitting && !isAttackingDisabled() && !isOutOfControl() && !isImmobilized())
 		{
 			breakAttack();
-			setIsSitting(true);
+			setSitting(true);
 			broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_SITTING));
 			// Schedule a sit down task to wait for the animation to finish
 			ThreadPool.schedule(new SitDownTask(this), 2500);
-			setIsParalyzed(true);
+			setParalyzed(true);
 		}
 	}
 	
@@ -3435,8 +3435,8 @@ public class PlayerInstance extends Playable
 		@Override
 		public void run()
 		{
-			setIsSitting(true);
-			_player.setIsParalyzed(false);
+			setSitting(true);
+			_player.setParalyzed(false);
 			_player.getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
 		}
 	}
@@ -3453,8 +3453,8 @@ public class PlayerInstance extends Playable
 		@Override
 		public void run()
 		{
-			_player.setIsSitting(false);
-			_player.setIsImobilised(false);
+			_player.setSitting(false);
+			_player.setImmobilized(false);
 			_player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
 	}
@@ -3468,7 +3468,7 @@ public class PlayerInstance extends Playable
 		{
 			broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_STANDING));
 			// Schedule a stand up task to wait for the animation to finish
-			setIsImobilised(true);
+			setImmobilized(true);
 			ThreadPool.schedule(new StandUpTask(this), 2000);
 			stopFakeDeath(null);
 		}
@@ -3499,18 +3499,18 @@ public class PlayerInstance extends Playable
 			
 			broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_STANDING));
 			// Schedule a stand up task to wait for the animation to finish
-			setIsImobilised(true);
+			setImmobilized(true);
 			ThreadPool.schedule(new StandUpTask(this), 2500);
 		}
 	}
 	
 	/**
 	 * Set the value of the _relax value. Must be True if using skill Relax and False if not.
-	 * @param val the new relax
+	 * @param value the new relax
 	 */
-	public void setRelax(boolean val)
+	public void setRelax(boolean value)
 	{
-		_relax = val;
+		_relax = value;
 	}
 	
 	/**
@@ -4761,7 +4761,7 @@ public class PlayerInstance extends Playable
 	public void onAction(PlayerInstance player)
 	{
 		// no Interaction with not participant to events
-		if (((TvT.isStarted() || TvT.isTeleport()) && !Config.TVT_ALLOW_INTERFERENCE) || ((CTF.isStarted() || CTF.isTeleport()) && !Config.CTF_ALLOW_INTERFERENCE) || ((DM.is_started() || DM.isTeleport()) && !Config.DM_ALLOW_INTERFERENCE))
+		if (((TvT.isStarted() || TvT.isTeleport()) && !Config.TVT_ALLOW_INTERFERENCE) || ((CTF.isStarted() || CTF.isTeleport()) && !Config.CTF_ALLOW_INTERFERENCE) || ((DM.hasStarted() || DM.isTeleport()) && !Config.DM_ALLOW_INTERFERENCE))
 		{
 			if ((_inEventTvT && !player._inEventTvT) || (!_inEventTvT && player._inEventTvT))
 			{
@@ -4827,7 +4827,7 @@ public class PlayerInstance extends Playable
 				{
 					final Siege siege = SiegeManager.getInstance().getSiege(player);
 					
-					if ((siege != null) && siege.getIsInProgress())
+					if ((siege != null) && siege.isInProgress())
 					{
 						if ((player.getLevel() > 20) && (((Creature) player.getTarget()).getLevel() < 20))
 						{
@@ -4948,7 +4948,7 @@ public class PlayerInstance extends Playable
 		}
 		else // Like L2OFF set the target of the PlayerInstance player
 		{
-			if (((TvT.isStarted() || TvT.isTeleport()) && !Config.TVT_ALLOW_INTERFERENCE) || ((CTF.isStarted() || CTF.isTeleport()) && !Config.CTF_ALLOW_INTERFERENCE) || ((DM.is_started() || DM.isTeleport()) && !Config.DM_ALLOW_INTERFERENCE))
+			if (((TvT.isStarted() || TvT.isTeleport()) && !Config.TVT_ALLOW_INTERFERENCE) || ((CTF.isStarted() || CTF.isTeleport()) && !Config.CTF_ALLOW_INTERFERENCE) || ((DM.hasStarted() || DM.isTeleport()) && !Config.DM_ALLOW_INTERFERENCE))
 			{
 				if ((_inEventTvT && !player._inEventTvT) || (!_inEventTvT && player._inEventTvT))
 				{
@@ -5015,7 +5015,7 @@ public class PlayerInstance extends Playable
 					{
 						final Siege siege = SiegeManager.getInstance().getSiege(player);
 						
-						if ((siege != null) && siege.getIsInProgress())
+						if ((siege != null) && siege.isInProgress())
 						{
 							if ((player.getLevel() > 20) && (((Creature) player.getTarget()).getLevel() < 20))
 							{
@@ -5177,7 +5177,7 @@ public class PlayerInstance extends Playable
 	
 	public boolean isInStartedDMEvent()
 	{
-		return (DM.is_started() && _inEventDM);
+		return (DM.hasStarted() && _inEventDM);
 	}
 	
 	public boolean isRegisteredInDMEvent()
@@ -5996,7 +5996,7 @@ public class PlayerInstance extends Playable
 	 * Sets the checks if is wearing formal wear.
 	 * @param value the new checks if is wearing formal wear
 	 */
-	public void setIsWearingFormalWear(boolean value)
+	public void setWearingFormalWear(boolean value)
 	{
 		_isWearingFormalWear = value;
 	}
@@ -6012,11 +6012,11 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Sets the married.
-	 * @param state the new married
+	 * @param value the new married
 	 */
-	public void setMarried(boolean state)
+	public void setMarried(boolean value)
 	{
-		_married = state;
+		_married = value;
 	}
 	
 	/**
@@ -6059,11 +6059,11 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Sets the mary request.
-	 * @param state the new mary request
+	 * @param value the new mary request
 	 */
-	public void setMaryRequest(boolean state)
+	public void setMaryRequest(boolean value)
 	{
-		_marryrequest = state;
+		_marryrequest = value;
 	}
 	
 	/**
@@ -6077,11 +6077,11 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Sets the marry accepted.
-	 * @param state the new marry accepted
+	 * @param value the new marry accepted
 	 */
-	public void setMarryAccepted(boolean state)
+	public void setMarryAccepted(boolean value)
 	{
-		_marryaccepted = state;
+		_marryaccepted = value;
 	}
 	
 	/**
@@ -6329,7 +6329,7 @@ public class PlayerInstance extends Playable
 				}
 				else if (_inEventDM && pk._inEventDM)
 				{
-					if (DM.isTeleport() || DM.is_started())
+					if (DM.isTeleport() || DM.hasStarted())
 					{
 						pk._countDMkills++;
 						final PlaySound ps = new PlaySound(0, "ItemSound.quest_itemget", this);
@@ -6349,7 +6349,7 @@ public class PlayerInstance extends Playable
 						sendMessage("You will be revived and teleported to spot in 20 seconds!");
 						ThreadPool.schedule(() ->
 						{
-							final Location ploc = DM.get_playersSpawnLocation();
+							final Location ploc = DM.getPlayersSpawnLocation();
 							teleToLocation(ploc.getX(), ploc.getY(), ploc.getZ(), false);
 							doRevive();
 						}, Config.DM_REVIVE_DELAY);
@@ -6357,12 +6357,12 @@ public class PlayerInstance extends Playable
 				}
 				else if (_inEventDM)
 				{
-					if (DM.isTeleport() || DM.is_started())
+					if (DM.isTeleport() || DM.hasStarted())
 					{
 						sendMessage("You will be revived and teleported to spot in 20 seconds!");
 						ThreadPool.schedule(() ->
 						{
-							final Location ploc = DM.get_playersSpawnLocation();
+							final Location ploc = DM.getPlayersSpawnLocation();
 							teleToLocation(ploc.getX(), ploc.getY(), ploc.getZ(), false);
 							doRevive();
 						}, 20000);
@@ -6505,7 +6505,7 @@ public class PlayerInstance extends Playable
 	 */
 	private void onDieDropItem(Creature killer)
 	{
-		if (atEvent || (TvT.isStarted() && _inEventTvT) || (DM.is_started() && _inEventDM) || (CTF.isStarted() && _inEventCTF) || (VIP._started && _inEventVIP) || (killer == null))
+		if (atEvent || (TvT.isStarted() && _inEventTvT) || (DM.hasStarted() && _inEventDM) || (CTF.isStarted() && _inEventCTF) || (VIP._started && _inEventVIP) || (killer == null))
 		{
 			return;
 		}
@@ -6628,7 +6628,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if ((_inEventCTF && CTF.isStarted()) || (_inEventTvT && TvT.isStarted()) || (_inEventVIP && VIP._started) || (_inEventDM && DM.is_started()))
+		if ((_inEventCTF && CTF.isStarted()) || (_inEventTvT && TvT.isStarted()) || (_inEventVIP && VIP._started) || (_inEventDM && DM.hasStarted()))
 		{
 			return;
 		}
@@ -6721,7 +6721,7 @@ public class PlayerInstance extends Playable
 			}
 			
 			// 'No war' or 'One way war' -> 'Normal PK'
-			if ((!_inEventTvT || !TvT.isStarted()) || (!_inEventCTF || !CTF.isStarted()) || (!_inEventVIP || !VIP._started) || (!_inEventDM || !DM.is_started()))
+			if ((!_inEventTvT || !TvT.isStarted()) || (!_inEventCTF || !CTF.isStarted()) || (!_inEventVIP || !VIP._started) || (!_inEventDM || !DM.hasStarted()))
 			{
 				if (targetPlayer.getKarma() > 0) // Target player has karma
 				{
@@ -6750,7 +6750,7 @@ public class PlayerInstance extends Playable
 			Announcements.getInstance().announceToAll("Player " + getName() + " killed Player " + target.getName());
 		}
 		
-		if (_inEventDM && DM.is_started())
+		if (_inEventDM && DM.hasStarted())
 		{
 			return;
 		}
@@ -6926,7 +6926,7 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
-		if ((TvT.isStarted() && _inEventTvT) || (DM.is_started() && _inEventDM) || (CTF.isStarted() && _inEventCTF) || (VIP._started && _inEventVIP))
+		if ((TvT.isStarted() && _inEventTvT) || (DM.hasStarted() && _inEventDM) || (CTF.isStarted() && _inEventCTF) || (VIP._started && _inEventVIP))
 		{
 			return;
 		}
@@ -7185,7 +7185,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void increasePkKillsAndKarma(int targLVL)
 	{
-		if ((TvT.isStarted() && _inEventTvT) || (DM.is_started() && _inEventDM) || (CTF.isStarted() && _inEventCTF) || (VIP._started && _inEventVIP))
+		if ((TvT.isStarted() && _inEventTvT) || (DM.hasStarted() && _inEventDM) || (CTF.isStarted() && _inEventCTF) || (VIP._started && _inEventVIP))
 		{
 			return;
 		}
@@ -7339,7 +7339,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void updatePvPStatus()
 	{
-		if ((TvT.isStarted() && _inEventTvT) || (CTF.isStarted() && _inEventCTF) || (DM.is_started() && _inEventDM) || (VIP._started && _inEventVIP))
+		if ((TvT.isStarted() && _inEventTvT) || (CTF.isStarted() && _inEventCTF) || (DM.hasStarted() && _inEventDM) || (VIP._started && _inEventVIP))
 		{
 			return;
 		}
@@ -7379,7 +7379,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if ((TvT.isStarted() && _inEventTvT && targetPlayer._inEventTvT) || (DM.is_started() && _inEventDM && targetPlayer._inEventDM) || (CTF.isStarted() && _inEventCTF && targetPlayer._inEventCTF) || (VIP._started && _inEventVIP && targetPlayer._inEventVIP))
+		if ((TvT.isStarted() && _inEventTvT && targetPlayer._inEventTvT) || (DM.hasStarted() && _inEventDM && targetPlayer._inEventDM) || (CTF.isStarted() && _inEventCTF && targetPlayer._inEventCTF) || (VIP._started && _inEventVIP && targetPlayer._inEventVIP))
 		{
 			return;
 		}
@@ -7470,7 +7470,7 @@ public class PlayerInstance extends Playable
 		
 		// Calculate the Experience loss
 		long lostExp = 0;
-		if (!atEvent && (!_inEventTvT || !TvT.isStarted()) && (!_inEventDM || !DM.is_started()) && (!_inEventCTF || !CTF.isStarted()) && (!_inEventVIP || !VIP._started))
+		if (!atEvent && (!_inEventTvT || !TvT.isStarted()) && (!_inEventDM || !DM.hasStarted()) && (!_inEventCTF || !CTF.isStarted()) && (!_inEventVIP || !VIP._started))
 		{
 			final byte maxLvl = ExperienceData.getInstance().getMaxLevel();
 			if (lvl < maxLvl)
@@ -8537,7 +8537,7 @@ public class PlayerInstance extends Playable
 	 * Sets the checks if is in7s dungeon.
 	 * @param isIn7sDungeon the new checks if is in7s dungeon
 	 */
-	public void setIsIn7sDungeon(boolean isIn7sDungeon)
+	public void setIn7sDungeon(boolean isIn7sDungeon)
 	{
 		if (_isIn7sDungeon != isIn7sDungeon)
 		{
@@ -8859,7 +8859,7 @@ public class PlayerInstance extends Playable
 				player.setApprentice(rset.getInt("apprentice"));
 				player.setSponsor(rset.getInt("sponsor"));
 				player.setLvlJoinedAcademy(rset.getInt("lvl_joined_academy"));
-				player.setIsIn7sDungeon(rset.getInt("isin7sdungeon") == 1);
+				player.setIn7sDungeon(rset.getInt("isin7sdungeon") == 1);
 				
 				player.setPunishLevel(rset.getInt("punish_level"));
 				if (player.getPunishLevel() != PunishLevel.NONE)
@@ -10353,7 +10353,7 @@ public class PlayerInstance extends Playable
 				// checks for events
 				if (player.isInFunEvent())
 				{
-					return (_inEventTvT && player._inEventTvT && TvT.isStarted() && !_teamNameTvT.equals(player._teamNameTvT)) || (_inEventCTF && player._inEventCTF && CTF.isStarted() && !_teamNameCTF.equals(player._teamNameCTF)) || (_inEventDM && player._inEventDM && DM.is_started()) || (_inEventVIP && player._inEventVIP && VIP._started);
+					return (_inEventTvT && player._inEventTvT && TvT.isStarted() && !_teamNameTvT.equals(player._teamNameTvT)) || (_inEventCTF && player._inEventCTF && CTF.isStarted() && !_teamNameCTF.equals(player._teamNameCTF)) || (_inEventDM && player._inEventDM && DM.hasStarted()) || (_inEventVIP && player._inEventVIP && VIP._started);
 				}
 				return false;
 			}
@@ -10429,7 +10429,7 @@ public class PlayerInstance extends Playable
 			if (getClan() != null)
 			{
 				final Siege siege = SiegeManager.getInstance().getSiege(this);
-				return ((siege != null) && siege.checkIsAttacker(getClan())) || DevastatedCastle.getInstance().getIsInProgress();
+				return ((siege != null) && siege.checkIsAttacker(getClan())) || DevastatedCastle.getInstance().isInProgress();
 			}
 		}
 		else if (attacker instanceof FortSiegeGuardInstance)
@@ -10677,8 +10677,8 @@ public class PlayerInstance extends Playable
 		// Ignore skill UNLOCK
 		if (skill.isOffensive() && (target instanceof DoorInstance))
 		{
-			final boolean isCastle = ((((DoorInstance) target).getCastle() != null) && (((DoorInstance) target).getCastle().getCastleId() > 0) && ((DoorInstance) target).getCastle().getSiege().getIsInProgress());
-			final boolean isFort = ((((DoorInstance) target).getFort() != null) && (((DoorInstance) target).getFort().getFortId() > 0) && ((DoorInstance) target).getFort().getSiege().getIsInProgress());
+			final boolean isCastle = ((((DoorInstance) target).getCastle() != null) && (((DoorInstance) target).getCastle().getCastleId() > 0) && ((DoorInstance) target).getCastle().getSiege().isInProgress());
+			final boolean isFort = ((((DoorInstance) target).getFort() != null) && (((DoorInstance) target).getFort().getFortId() > 0) && ((DoorInstance) target).getFort().getSiege().isInProgress());
 			if ((!isCastle && !isFort))
 			{
 				return;
@@ -10884,7 +10884,7 @@ public class PlayerInstance extends Playable
 			}
 			
 			// Check if a Forced ATTACK is in progress on non-attackable target
-			if (!target.isAutoAttackable(this) && (!forceUse && ((skill.getId() != 3261) && (skill.getId() != 3260) && (skill.getId() != 3262))) && (!_inEventTvT || !TvT.isStarted()) && (!_inEventDM || !DM.is_started()) && (!_inEventCTF || !CTF.isStarted()) && (!_inEventVIP || !VIP._started) && (sklTargetType != SkillTargetType.TARGET_AURA) && (sklTargetType != SkillTargetType.TARGET_CLAN) && (sklTargetType != SkillTargetType.TARGET_ALLY) && (sklTargetType != SkillTargetType.TARGET_PARTY) && (sklTargetType != SkillTargetType.TARGET_SELF) && (sklTargetType != SkillTargetType.TARGET_GROUND))
+			if (!target.isAutoAttackable(this) && (!forceUse && ((skill.getId() != 3261) && (skill.getId() != 3260) && (skill.getId() != 3262))) && (!_inEventTvT || !TvT.isStarted()) && (!_inEventDM || !DM.hasStarted()) && (!_inEventCTF || !CTF.isStarted()) && (!_inEventVIP || !VIP._started) && (sklTargetType != SkillTargetType.TARGET_AURA) && (sklTargetType != SkillTargetType.TARGET_CLAN) && (sklTargetType != SkillTargetType.TARGET_ALLY) && (sklTargetType != SkillTargetType.TARGET_PARTY) && (sklTargetType != SkillTargetType.TARGET_SELF) && (sklTargetType != SkillTargetType.TARGET_GROUND))
 			
 			{
 				// Send a Server->Client packet ActionFailed to the PlayerInstance
@@ -10951,7 +10951,7 @@ public class PlayerInstance extends Playable
 		// Check if the skill is Sweep type and if conditions not apply
 		if ((sklType == SkillType.SWEEP) && (target instanceof Attackable))
 		{
-			final int spoilerId = ((Attackable) target).getIsSpoiledBy();
+			final int spoilerId = ((Attackable) target).getSpoiledBy();
 			
 			if (((Attackable) target).isDead())
 			{
@@ -11111,7 +11111,7 @@ public class PlayerInstance extends Playable
 		// Check if player and target are in events and on the same team.
 		if (target instanceof PlayerInstance)
 		{
-			if ((skill.isOffensive() && (_inEventTvT && ((PlayerInstance) target)._inEventTvT && TvT.isStarted() && !_teamNameTvT.equals(((PlayerInstance) target)._teamNameTvT))) || (_inEventCTF && ((PlayerInstance) target)._inEventCTF && CTF.isStarted() && !_teamNameCTF.equals(((PlayerInstance) target)._teamNameCTF)) || (_inEventDM && ((PlayerInstance) target)._inEventDM && DM.is_started()) || (_inEventVIP && ((PlayerInstance) target)._inEventVIP && VIP._started))
+			if ((skill.isOffensive() && (_inEventTvT && ((PlayerInstance) target)._inEventTvT && TvT.isStarted() && !_teamNameTvT.equals(((PlayerInstance) target)._teamNameTvT))) || (_inEventCTF && ((PlayerInstance) target)._inEventCTF && CTF.isStarted() && !_teamNameCTF.equals(((PlayerInstance) target)._teamNameCTF)) || (_inEventDM && ((PlayerInstance) target)._inEventDM && DM.hasStarted()) || (_inEventVIP && ((PlayerInstance) target)._inEventVIP && VIP._started))
 			{
 				return true;
 			}
@@ -11239,13 +11239,13 @@ public class PlayerInstance extends Playable
 		{
 			case 0:
 			{
-				setIsFlying(false);
-				setIsRiding(false);
+				setFlying(false);
+				setRiding(false);
 				break; // Dismounted
 			}
 			case 1:
 			{
-				setIsRiding(true);
+				setRiding(true);
 				if (isNoble())
 				{
 					final Skill striderAssaultSkill = SkillTable.getInstance().getInfo(325, 1);
@@ -11255,7 +11255,7 @@ public class PlayerInstance extends Playable
 			}
 			case 2:
 			{
-				setIsFlying(true);
+				setFlying(true);
 				break; // Flying Wyvern
 			}
 		}
@@ -11806,8 +11806,8 @@ public class PlayerInstance extends Playable
 		_observerMode = true;
 		setTarget(null);
 		stopMove(null);
-		setIsParalyzed(true);
-		setIsInvul(true);
+		setParalyzed(true);
+		setInvul(true);
 		
 		_wasInvisible = getAppearance().isInvisible();
 		getAppearance().setInvisible();
@@ -11858,7 +11858,7 @@ public class PlayerInstance extends Playable
 		
 		_observerMode = true;
 		setTarget(null);
-		setIsInvul(true);
+		setInvul(true);
 		_wasInvisible = getAppearance().isInvisible();
 		getAppearance().setInvisible();
 		
@@ -11879,7 +11879,7 @@ public class PlayerInstance extends Playable
 		}
 		setTarget(null);
 		setXYZ(_obsX, _obsY, _obsZ);
-		setIsParalyzed(false);
+		setParalyzed(false);
 		
 		if (_wasInvisible)
 		{
@@ -11890,7 +11890,7 @@ public class PlayerInstance extends Playable
 			getAppearance().setVisible();
 		}
 		
-		setIsInvul(false);
+		setInvul(false);
 		
 		if (getAI() != null)
 		{
@@ -11916,7 +11916,7 @@ public class PlayerInstance extends Playable
 		sendPacket(new ExOlympiadMode(0, this));
 		teleToLocation(_obsX, _obsY, _obsZ, true);
 		getAppearance().setVisible();
-		setIsInvul(false);
+		setInvul(false);
 		if (getAI() != null)
 		{
 			getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
@@ -12114,11 +12114,11 @@ public class PlayerInstance extends Playable
 	/**
 	 * Sets the loto.
 	 * @param i the i
-	 * @param val the val
+	 * @param value the value
 	 */
-	public void setLoto(int i, int val)
+	public void setLoto(int i, int value)
 	{
-		_loto[i] = val;
+		_loto[i] = value;
 	}
 	
 	/**
@@ -12134,11 +12134,11 @@ public class PlayerInstance extends Playable
 	/**
 	 * Sets the race.
 	 * @param i the i
-	 * @param val the val
+	 * @param value the value
 	 */
-	public void setRace(int i, int val)
+	public void setRace(int i, int value)
 	{
-		_race[i] = val;
+		_race[i] = value;
 	}
 	
 	/**
@@ -12251,7 +12251,7 @@ public class PlayerInstance extends Playable
 	 * Gets the checks if is pvp hero.
 	 * @return the checks if is pvp hero
 	 */
-	public boolean getIsPVPHero()
+	public boolean isPVPHero()
 	{
 		return _isPvpHero;
 	}
@@ -12325,29 +12325,29 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Sets the checks if is away.
-	 * @param state the new checks if is away
+	 * @param value the new checks if is away
 	 */
-	public void setIsAway(boolean state)
+	public void setAway(boolean value)
 	{
-		_isAway = state;
+		_isAway = value;
 	}
 	
 	/**
 	 * Sets the checks if is in olympiad mode.
-	 * @param b the new checks if is in olympiad mode
+	 * @param value the new checks if is in olympiad mode
 	 */
-	public void setIsInOlympiadMode(boolean b)
+	public void setInOlympiadMode(boolean value)
 	{
-		_inOlympiadMode = b;
+		_inOlympiadMode = value;
 	}
 	
 	/**
 	 * Sets the checks if is olympiad start.
-	 * @param b the new checks if is olympiad start
+	 * @param value the new checks if is olympiad start
 	 */
-	public void setIsOlympiadStart(boolean b)
+	public void setOlympiadStart(boolean value)
 	{
-		_olympiadStart = b;
+		_olympiadStart = value;
 	}
 	
 	/**
@@ -12469,7 +12469,7 @@ public class PlayerInstance extends Playable
 	 * Sets up the duel state using a non 0 duelId.
 	 * @param duelId 0=not in a duel
 	 */
-	public void setIsInDuel(int duelId)
+	public void setInDuel(int duelId)
 	{
 		if (duelId > 0)
 		{
@@ -12567,11 +12567,11 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Sets the noble.
-	 * @param val the new noble
+	 * @param value the new noble
 	 */
-	public void setNoble(boolean val)
+	public void setNoble(boolean value)
 	{
-		if (val)
+		if (value)
 		{
 			for (Skill s : NobleSkillTable.getInstance().GetNobleSkills())
 			{
@@ -12585,18 +12585,18 @@ public class PlayerInstance extends Playable
 				super.removeSkill(s); // Just Remove skills without deleting from Sql
 			}
 		}
-		_noble = val;
+		_noble = value;
 		
 		sendSkillList();
 	}
 	
 	/**
 	 * Adds the clan leader skills.
-	 * @param val the val
+	 * @param value the value
 	 */
-	public void addClanLeaderSkills(boolean val)
+	public void addClanLeaderSkills(boolean value)
 	{
-		if (val)
+		if (value)
 		{
 			SiegeManager.getInstance().addSiegeSkills(this);
 		}
@@ -13406,14 +13406,14 @@ public class PlayerInstance extends Playable
 			if (!isGM() && isIn7sDungeon() && (SevenSigns.getInstance().getPlayerCabal(this) != SevenSigns.getInstance().getCabalHighestScore()))
 			{
 				teleToLocation(MapRegionTable.TeleportWhereType.Town);
-				setIsIn7sDungeon(false);
+				setIn7sDungeon(false);
 				sendMessage("You have been teleported to the nearest town due to the beginning of the Seal Validation period.");
 			}
 		}
 		else if (!isGM() && isIn7sDungeon() && (SevenSigns.getInstance().getPlayerCabal(this) == SevenSigns.CABAL_NULL))
 		{
 			teleToLocation(MapRegionTable.TeleportWhereType.Town);
-			setIsIn7sDungeon(false);
+			setIn7sDungeon(false);
 			sendMessage("You have been teleported to the nearest town because you have not signed for any cabal.");
 		}
 		
@@ -13551,7 +13551,7 @@ public class PlayerInstance extends Playable
 			getParty().getDimensionalRift().memberRessurected(this);
 		}
 		
-		if ((_inEventTvT && TvT.isStarted() && Config.TVT_REVIVE_RECOVERY) || (_inEventCTF && CTF.isStarted() && Config.CTF_REVIVE_RECOVERY) || (_inEventDM && DM.is_started() && Config.DM_REVIVE_RECOVERY))
+		if ((_inEventTvT && TvT.isStarted() && Config.TVT_REVIVE_RECOVERY) || (_inEventCTF && CTF.isStarted() && Config.CTF_REVIVE_RECOVERY) || (_inEventDM && DM.hasStarted() && Config.DM_REVIVE_RECOVERY))
 		{
 			getStatus().setCurrentHp(getMaxHp());
 			getStatus().setCurrentMp(getMaxMp());
@@ -14880,7 +14880,7 @@ public class PlayerInstance extends Playable
 	public void startFishing(int x, int y, int z)
 	{
 		stopMove(null);
-		setIsImobilised(true);
+		setImmobilized(true);
 		_fishing = true;
 		_fishX = x;
 		_fishY = y;
@@ -15291,7 +15291,7 @@ public class PlayerInstance extends Playable
 		_lure = null;
 		// Ends fishing
 		sendPacket(SystemMessageId.REEL_LINE_AND_STOP_FISHING);
-		setIsImobilised(false);
+		setImmobilized(false);
 		stopLookingForFishTask();
 	}
 	
@@ -15350,7 +15350,7 @@ public class PlayerInstance extends Playable
 		{
 			ivlim = Config.INVENTORY_MAXIMUM_NO_DWARF;
 		}
-		ivlim += (int) getStat().calcStat(Stats.INV_LIM, 0, null, null);
+		ivlim += (int) getStat().calcStat(Stat.INV_LIM, 0, null, null);
 		
 		return ivlim;
 	}
@@ -15366,7 +15366,7 @@ public class PlayerInstance extends Playable
 		{
 			whlim = Config.WAREHOUSE_SLOTS_NO_DWARF;
 		}
-		whlim += (int) getStat().calcStat(Stats.WH_LIM, 0, null, null);
+		whlim += (int) getStat().calcStat(Stat.WH_LIM, 0, null, null);
 		
 		return whlim;
 	}
@@ -15383,7 +15383,7 @@ public class PlayerInstance extends Playable
 		{
 			pslim = Config.MAX_PVTSTORE_SLOTS_OTHER;
 		}
-		pslim += (int) getStat().calcStat(Stats.P_SELL_LIM, 0, null, null);
+		pslim += (int) getStat().calcStat(Stat.P_SELL_LIM, 0, null, null);
 		
 		return pslim;
 	}
@@ -15399,27 +15399,27 @@ public class PlayerInstance extends Playable
 		{
 			pblim = Config.MAX_PVTSTORE_SLOTS_OTHER;
 		}
-		pblim += (int) getStat().calcStat(Stats.P_BUY_LIM, 0, null, null);
+		pblim += (int) getStat().calcStat(Stat.P_BUY_LIM, 0, null, null);
 		
 		return pblim;
 	}
 	
 	public int getFreightLimit()
 	{
-		return Config.FREIGHT_SLOTS + (int) getStat().calcStat(Stats.FREIGHT_LIM, 0, null, null);
+		return Config.FREIGHT_SLOTS + (int) getStat().calcStat(Stat.FREIGHT_LIM, 0, null, null);
 	}
 	
 	public int getDwarfRecipeLimit()
 	{
 		int recdlim = Config.DWARF_RECIPE_LIMIT;
-		recdlim += (int) getStat().calcStat(Stats.REC_D_LIM, 0, null, null);
+		recdlim += (int) getStat().calcStat(Stat.REC_D_LIM, 0, null, null);
 		return recdlim;
 	}
 	
 	public int getCommonRecipeLimit()
 	{
 		int recclim = Config.COMMON_RECIPE_LIMIT;
-		recclim += (int) getStat().calcStat(Stats.REC_C_LIM, 0, null, null);
+		recclim += (int) getStat().calcStat(Stat.REC_C_LIM, 0, null, null);
 		return recclim;
 	}
 	
@@ -15543,11 +15543,11 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Sets the charm of courage.
-	 * @param val the new charm of courage
+	 * @param value the new charm of courage
 	 */
-	public void setCharmOfCourage(boolean val)
+	public void setCharmOfCourage(boolean value)
 	{
-		_charmOfCourage = val;
+		_charmOfCourage = value;
 		sendPacket(new EtcStatusUpdate(this));
 	}
 	
@@ -15827,11 +15827,11 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Sets the gm status active.
-	 * @param state the new gm status active
+	 * @param value the new gm status active
 	 */
-	public void setGmStatusActive(boolean state)
+	public void setGmStatusActive(boolean value)
 	{
-		_gmStatus = state;
+		_gmStatus = value;
 	}
 	
 	/**
@@ -16364,11 +16364,11 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Sets the inside TW town.
-	 * @param b the new inside TW town
+	 * @param value the new inside TW town
 	 */
-	public void setInsideTWTown(boolean b)
+	public void setInsideTWTown(boolean value)
 	{
-		_isInsideTWTown = true;
+		_isInsideTWTown = true; // FIXME: TRUE?
 	}
 	
 	/**
@@ -16465,11 +16465,11 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Sets the aio.
-	 * @param val the new aio
+	 * @param value the new aio
 	 */
-	public void setAio(boolean val)
+	public void setAio(boolean value)
 	{
-		_isAio = val;
+		_isAio = value;
 		
 	}
 	
@@ -16507,39 +16507,39 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Sets the aio end time.
-	 * @param val the new aio end time
+	 * @param value the new aio end time
 	 */
-	public void setAioEndTime(long val)
+	public void setAioEndTime(long value)
 	{
-		_aioEndTime = val;
+		_aioEndTime = value;
 	}
 	
 	/**
 	 * Sets the end time.
 	 * @param process the process
-	 * @param val the val
+	 * @param value the value
 	 */
-	public void setEndTime(String process, int val)
+	public void setEndTime(String process, int value)
 	{
-		if (val > 0)
+		if (value > 0)
 		{
 			long endDay;
 			final Calendar calendar = Calendar.getInstance();
-			if (val >= 30)
+			if (value >= 30)
 			{
-				while (val >= 30)
+				while (value >= 30)
 				{
 					if (calendar.get(Calendar.MONTH) == 11)
 					{
 						calendar.roll(Calendar.YEAR, true);
 					}
 					calendar.roll(Calendar.MONTH, true);
-					val -= 30;
+					value -= 30;
 				}
 			}
-			if ((val < 30) && (val > 0))
+			if ((value < 30) && (value > 0))
 			{
-				while (val > 0)
+				while (value > 0)
 				{
 					if ((calendar.get(Calendar.DATE) == 28) && (calendar.get(Calendar.MONTH) == 1))
 					{
@@ -16554,7 +16554,7 @@ public class PlayerInstance extends Playable
 						calendar.roll(Calendar.MONTH, true);
 					}
 					calendar.roll(Calendar.DATE, true);
-					val--;
+					value--;
 				}
 			}
 			
@@ -16706,7 +16706,7 @@ public class PlayerInstance extends Playable
 	 * Sets the _awaying.
 	 * @param awaying the _awaying to set
 	 */
-	public void set_awaying(boolean awaying)
+	public void setAwaying(boolean awaying)
 	{
 		_awaying = awaying;
 	}
@@ -17016,7 +17016,7 @@ public class PlayerInstance extends Playable
 				}
 				sendPacket(htmlMsg);
 				setInstanceId(0);
-				setIsIn7sDungeon(false);
+				setIn7sDungeon(false);
 				
 				teleToLocation(-114356, -249645, -2984, false); // Jail
 				break;
@@ -17236,7 +17236,7 @@ public class PlayerInstance extends Playable
 	 * Gets the _instance login time.
 	 * @return the _instanceLoginTime
 	 */
-	public long get_instanceLoginTime()
+	public long getInstanceLoginTime()
 	{
 		return _instanceLoginTime;
 	}
@@ -17284,9 +17284,9 @@ public class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public void setIsTeleporting(boolean value)
+	public void setTeleporting(boolean value)
 	{
-		super.setIsTeleporting(value);
+		super.setTeleporting(value);
 		if (value)
 		{
 			_lastTeleportAction = System.currentTimeMillis();
@@ -17367,7 +17367,7 @@ public class PlayerInstance extends Playable
 			_obsZ = getZ();
 		}
 		setTarget(null);
-		setIsInvul(true);
+		setInvul(true);
 		getAppearance().setInvisible();
 		teleToLocation(x, y, z, true);
 		sendPacket(new ExOlympiadMode(3, this));
@@ -17386,7 +17386,7 @@ public class PlayerInstance extends Playable
 		}
 		if (!AdminData.getInstance().hasAccess("admin_invul", getAccessLevel()))
 		{
-			setIsInvul(false);
+			setInvul(false);
 		}
 		if (getAI() != null)
 		{

@@ -38,13 +38,13 @@ final class EffectImobileBuff extends Effect
 	@Override
 	public void onStart()
 	{
-		getEffector().setIsImobilised(true);
+		getEffector().setImmobilized(true);
 	}
 	
 	@Override
 	public void onExit()
 	{
-		getEffector().setIsImobilised(false);
+		getEffector().setImmobilized(false);
 	}
 	
 	@Override

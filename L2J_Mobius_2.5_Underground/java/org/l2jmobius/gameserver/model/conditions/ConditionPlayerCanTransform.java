@@ -28,11 +28,11 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class ConditionPlayerCanTransform extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
-	public ConditionPlayerCanTransform(boolean val)
+	public ConditionPlayerCanTransform(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
@@ -69,6 +69,6 @@ public class ConditionPlayerCanTransform extends Condition
 			player.sendMessage("You cannot transform while registered on an event.");
 			canTransform = false;
 		}
-		return (_val == canTransform);
+		return (_value == canTransform);
 	}
 }

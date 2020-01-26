@@ -151,10 +151,10 @@ public class TeleporterInstance extends Npc
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val, PlayerInstance player)
+	public String getHtmlPath(int npcId, int value, PlayerInstance player)
 	{
 		String pom;
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = String.valueOf(npcId);
 			if ((player != null) && QUEST_RECOMENDATIONS.containsKey(npcId))
@@ -178,7 +178,7 @@ public class TeleporterInstance extends Npc
 		}
 		else
 		{
-			pom = (npcId + "-" + val);
+			pom = (npcId + "-" + value);
 		}
 		return "data/html/teleporter/" + pom + ".htm";
 	}

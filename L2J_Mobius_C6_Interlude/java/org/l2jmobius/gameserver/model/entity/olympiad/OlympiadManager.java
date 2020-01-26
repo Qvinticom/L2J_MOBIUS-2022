@@ -125,8 +125,8 @@ class OlympiadManager implements Runnable
 										for (PlayerInstance player : _olympiadInstances.get(i).getPlayers())
 										{
 											player.sendMessage("Your olympiad registration was canceled due to an error");
-											player.setIsInOlympiadMode(false);
-											player.setIsOlympiadStart(false);
+											player.setInOlympiadMode(false);
+											player.setOlympiadStart(false);
 											player.setOlympiadSide(-1);
 											player.setOlympiadGameId(-1);
 										}
@@ -157,8 +157,8 @@ class OlympiadManager implements Runnable
 										for (PlayerInstance player : _olympiadInstances.get(i).getPlayers())
 										{
 											player.sendMessage("Your olympiad registration was canceled due to an error");
-											player.setIsInOlympiadMode(false);
-											player.setIsOlympiadStart(false);
+											player.setInOlympiadMode(false);
+											player.setOlympiadStart(false);
 											player.setOlympiadSide(-1);
 											player.setOlympiadGameId(-1);
 										}
@@ -190,8 +190,8 @@ class OlympiadManager implements Runnable
 									for (PlayerInstance player : _olympiadInstances.get(i).getPlayers())
 									{
 										player.sendMessage("Your olympiad registration was canceled due to an error");
-										player.setIsInOlympiadMode(false);
-										player.setIsOlympiadStart(false);
+										player.setInOlympiadMode(false);
+										player.setOlympiadStart(false);
 										player.setOlympiadSide(-1);
 										player.setOlympiadGameId(-1);
 									}
@@ -222,8 +222,8 @@ class OlympiadManager implements Runnable
 									for (PlayerInstance player : _olympiadInstances.get(i).getPlayers())
 									{
 										player.sendMessage("Your olympiad registration was canceled due to an error");
-										player.setIsInOlympiadMode(false);
-										player.setIsOlympiadStart(false);
+										player.setInOlympiadMode(false);
+										player.setOlympiadStart(false);
 										player.setOlympiadSide(-1);
 										player.setOlympiadGameId(-1);
 									}

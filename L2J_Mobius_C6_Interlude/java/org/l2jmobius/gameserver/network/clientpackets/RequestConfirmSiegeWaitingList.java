@@ -70,7 +70,7 @@ public class RequestConfirmSiegeWaitingList extends GameClientPacket
 			return;
 		}
 		
-		if (!castle.getSiege().getIsRegistrationOver())
+		if (!castle.getSiege().isRegistrationOver())
 		{
 			if (_approved == 1)
 			{

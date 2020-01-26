@@ -202,7 +202,7 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 						getTimers().addTimer("FIRE_REGION_TIMER_1", ((timeLimit * 30) * 100), npc, null);
 					}
 					npc.setTargetable(false);
-					npc.setIsInvul(true);
+					npc.setInvul(true);
 					npc.setRandomAnimation(false);
 					npc.setRandomWalking(false);
 					npc.disableCoreAI(true);

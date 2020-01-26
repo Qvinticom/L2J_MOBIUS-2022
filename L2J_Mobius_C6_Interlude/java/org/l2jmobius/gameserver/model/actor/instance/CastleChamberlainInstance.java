@@ -627,7 +627,7 @@ public class CastleChamberlainInstance extends FolkInstance
 	{
 		if ((getCastle() != null) && (getCastle().getCastleId() > 0) && (player.getClan() != null))
 		{
-			if (getCastle().getSiege().getIsInProgress())
+			if (getCastle().getSiege().isInProgress())
 			{
 				return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
 			}

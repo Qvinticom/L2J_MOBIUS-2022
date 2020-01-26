@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExMagicAttackInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -73,14 +73,14 @@ public class Heal extends AbstractEffect
 		double amount = _power;
 		if ((item != null) && (item.isPotion() || item.isElixir()))
 		{
-			amount += effected.getStat().getValue(Stats.ADDITIONAL_POTION_HP, 0);
+			amount += effected.getStat().getValue(Stat.ADDITIONAL_POTION_HP, 0);
 		}
 		
 		double staticShotBonus = 0;
 		double mAtkMul = 1;
 		final boolean sps = skill.isMagic() && effector.isChargedShot(ShotType.SPIRITSHOTS);
 		final boolean bss = skill.isMagic() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		final double shotsBonus = effector.getStat().getValue(Stats.SHOTS_BONUS);
+		final double shotsBonus = effector.getStat().getValue(Stat.SHOTS_BONUS);
 		if (((sps || bss) && (effector.isPlayer() && effector.getActingPlayer().isMageClass())) || effector.isSummon())
 		{
 			staticShotBonus = skill.getMpConsume(); // static bonus for spiritshots
@@ -108,8 +108,8 @@ public class Heal extends AbstractEffect
 		if (!skill.isStatic())
 		{
 			amount += staticShotBonus + Math.sqrt(mAtkMul * effector.getMAtk());
-			amount *= effected.getStat().getValue(Stats.HEAL_EFFECT, 1);
-			amount += effected.getStat().getValue(Stats.HEAL_EFFECT_ADD, 0);
+			amount *= effected.getStat().getValue(Stat.HEAL_EFFECT, 1);
+			amount += effected.getStat().getValue(Stat.HEAL_EFFECT_ADD, 0);
 			amount *= (item == null) && effector.isPlayable() ? Config.PLAYER_HEALING_SKILL_MULTIPLIERS.getOrDefault(effector.getActingPlayer().getClassId(), 1f) : 1;
 			// Heal critic, since CT2.3 Gracia Final
 			if (skill.isMagic() && Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill))

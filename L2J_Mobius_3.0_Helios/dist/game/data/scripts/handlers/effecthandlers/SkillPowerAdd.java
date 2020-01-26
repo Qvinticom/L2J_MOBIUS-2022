@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Mobius
@@ -26,6 +26,6 @@ public class SkillPowerAdd extends AbstractStatAddEffect
 {
 	public SkillPowerAdd(StatsSet params)
 	{
-		super(params, Stats.SKILL_POWER_ADD);
+		super(params, Stat.SKILL_POWER_ADD);
 	}
 }

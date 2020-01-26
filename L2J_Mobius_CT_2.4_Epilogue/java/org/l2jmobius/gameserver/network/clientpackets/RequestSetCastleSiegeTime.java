@@ -67,12 +67,12 @@ public class RequestSetCastleSiegeTime implements IClientIncomingPacket
 		{
 			LOGGER.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + player + " castle: " + castle + " castleId: " + _castleId + " is trying to change siege date but is not clan leader!");
 		}
-		else if (!castle.getIsTimeRegistrationOver())
+		else if (!castle.isTimeRegistrationOver())
 		{
 			if (isSiegeTimeValid(castle.getSiegeDate().getTimeInMillis(), _time))
 			{
 				castle.getSiegeDate().setTimeInMillis(_time);
-				castle.setIsTimeRegistrationOver(true);
+				castle.setTimeRegistrationOver(true);
 				castle.getSiege().saveSiegeDate();
 				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_ANNOUNCED_THE_NEXT_CASTLE_SIEGE_TIME);
 				msg.addCastleId(_castleId);

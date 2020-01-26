@@ -430,9 +430,9 @@ public class CreatureTemplate extends ListenersContainer
 		return _baseMCritRate;
 	}
 	
-	public void setBaseMoveSpeed(MoveType type, double val)
+	public void setBaseMoveSpeed(MoveType type, double value)
 	{
-		_moveType[type.ordinal()] = val;
+		_moveType[type.ordinal()] = value;
 	}
 	
 	public double getBaseMoveSpeed(MoveType mt)
@@ -611,11 +611,11 @@ public class CreatureTemplate extends ListenersContainer
 	
 	/**
 	 * Sets base attack range.
-	 * @param val
+	 * @param value
 	 */
-	public void setBaseAttackRange(int val)
+	public void setBaseAttackRange(int value)
 	{
-		_baseAttackRange = val;
+		_baseAttackRange = value;
 	}
 	
 	/**

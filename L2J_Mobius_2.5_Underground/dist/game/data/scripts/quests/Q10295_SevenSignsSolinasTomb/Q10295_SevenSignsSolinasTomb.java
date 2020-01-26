@@ -205,7 +205,7 @@ public class Q10295_SevenSignsSolinasTomb extends Quest
 				{
 					takeItems(player, STAFF_RELIC, -1);
 					final Npc guardian = player.getInstanceWorld().getNpc(GUARDIAN_STAFF);
-					guardian.setIsInvul(false);
+					guardian.setInvul(false);
 					guardian.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 				}
 				return null;
@@ -216,7 +216,7 @@ public class Q10295_SevenSignsSolinasTomb extends Quest
 				{
 					takeItems(player, SWORD_RELIC, -1);
 					final Npc guardian = player.getInstanceWorld().getNpc(GUARDIAN_SWORD);
-					guardian.setIsInvul(false);
+					guardian.setInvul(false);
 					guardian.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 				}
 				return null;
@@ -227,7 +227,7 @@ public class Q10295_SevenSignsSolinasTomb extends Quest
 				{
 					takeItems(player, SHIELD_RELIC, -1);
 					final Npc guardian = player.getInstanceWorld().getNpc(GUARDIAN_SHIELD);
-					guardian.setIsInvul(false);
+					guardian.setInvul(false);
 					guardian.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 				}
 				return null;
@@ -238,7 +238,7 @@ public class Q10295_SevenSignsSolinasTomb extends Quest
 				{
 					takeItems(player, SCROLL_RELIC, -1);
 					final Npc guardian = player.getInstanceWorld().getNpc(GUARDIAN_SCROLL);
-					guardian.setIsInvul(false);
+					guardian.setInvul(false);
 					guardian.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 				}
 				return null;

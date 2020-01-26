@@ -43,10 +43,10 @@ public class VillageMasterInstance extends NpcInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		pom = val == 0 ? "" + npcId : npcId + "-" + val;
+		pom = value == 0 ? "" + npcId : npcId + "-" + value;
 		return "data/html/villagemaster/" + pom + ".htm";
 	}
 	
@@ -79,7 +79,7 @@ public class VillageMasterInstance extends NpcInstance
 		}
 		player.setClan(clan);
 		player.setClanId(clan.getClanId());
-		player.setIsClanLeader(true);
+		player.setClanLeader(true);
 		final PledgeShowInfoUpdate pu = new PledgeShowInfoUpdate(clan, player);
 		player.sendPacket(pu);
 		final UserInfo ui = new UserInfo(player);

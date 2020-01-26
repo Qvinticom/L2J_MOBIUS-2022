@@ -140,7 +140,7 @@ import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.spawns.SpawnGroup;
 import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -2244,7 +2244,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		final TrapInstance trap = new TrapInstance(npcTemplate, instanceId, -1);
 		trap.setCurrentHp(trap.getMaxHp());
 		trap.setCurrentMp(trap.getMaxMp());
-		trap.setIsInvul(true);
+		trap.setInvul(true);
 		trap.setHeading(heading);
 		trap.spawnMe(x, y, z);
 		return trap;
@@ -2965,7 +2965,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		{
 			return;
 		}
-		player.addExpAndSp((long) player.getStat().getValue(Stats.EXPSP_RATE, (exp * Config.RATE_QUEST_REWARD_XP)), (int) player.getStat().getValue(Stats.EXPSP_RATE, (sp * Config.RATE_QUEST_REWARD_SP)));
+		player.addExpAndSp((long) player.getStat().getValue(Stat.EXPSP_RATE, (exp * Config.RATE_QUEST_REWARD_XP)), (int) player.getStat().getValue(Stat.EXPSP_RATE, (sp * Config.RATE_QUEST_REWARD_SP)));
 		PcCafePointsManager.getInstance().givePcCafePoint(player, (long) (exp * Config.RATE_QUEST_REWARD_XP));
 	}
 	

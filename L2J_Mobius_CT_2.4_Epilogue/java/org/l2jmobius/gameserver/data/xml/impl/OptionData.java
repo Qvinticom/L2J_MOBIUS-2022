@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.options.Options;
 import org.l2jmobius.gameserver.model.options.OptionsSkillHolder;
 import org.l2jmobius.gameserver.model.options.OptionsSkillType;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
 
 /**
@@ -130,7 +130,7 @@ public class OptionData implements IXmlReader
 	
 	private void parseFuncs(NamedNodeMap attrs, String functionName, Options op)
 	{
-		final Stats stat = Stats.valueOfXml(parseString(attrs, "stat"));
+		final Stat stat = Stat.valueOfXml(parseString(attrs, "stat"));
 		final double val = parseDouble(attrs, "val");
 		int order = -1;
 		final Node orderNode = attrs.getNamedItem("order");

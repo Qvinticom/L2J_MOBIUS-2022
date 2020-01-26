@@ -154,20 +154,20 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 	
 	/**
 	 * Allow summoning players (that are out of instance) to instance world by players inside.
-	 * @param val {@code true} means summon is allowed, {@code false} means summon is prohibited
+	 * @param value {@code true} means summon is allowed, {@code false} means summon is prohibited
 	 */
-	public void allowPlayerSummon(boolean val)
+	public void allowPlayerSummon(boolean value)
 	{
-		_allowPlayerSummon = val;
+		_allowPlayerSummon = value;
 	}
 	
 	/**
 	 * Set instance as PvP world.
-	 * @param val {@code true} world is PvP zone, {@code false} world use classic zones
+	 * @param value {@code true} world is PvP zone, {@code false} world use classic zones
 	 */
-	public void setIsPvP(boolean val)
+	public void setPvP(boolean value)
 	{
-		_isPvP = val;
+		_isPvP = value;
 	}
 	
 	/**

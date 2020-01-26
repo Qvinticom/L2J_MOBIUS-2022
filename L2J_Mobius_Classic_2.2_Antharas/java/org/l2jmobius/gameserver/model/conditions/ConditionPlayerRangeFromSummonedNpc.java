@@ -34,13 +34,13 @@ public class ConditionPlayerRangeFromSummonedNpc extends Condition
 	/** Radius to check. */
 	private final int _radius;
 	/** Expected value. */
-	private final boolean _val;
+	private final boolean _value;
 	
-	public ConditionPlayerRangeFromSummonedNpc(int[] npcIds, int radius, boolean val)
+	public ConditionPlayerRangeFromSummonedNpc(int[] npcIds, int radius, boolean value)
 	{
 		_npcIds = npcIds;
 		_radius = radius;
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
@@ -58,6 +58,6 @@ public class ConditionPlayerRangeFromSummonedNpc extends Condition
 				}
 			}
 		}
-		return existNpc == _val;
+		return existNpc == _value;
 	}
 }

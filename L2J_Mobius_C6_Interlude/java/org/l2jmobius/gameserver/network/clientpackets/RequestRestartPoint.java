@@ -65,7 +65,7 @@ public class RequestRestartPoint extends GameClientPacket
 		@Override
 		public void run()
 		{
-			if ((_player._inEventTvT && TvT.isStarted()) || (_player._inEventDM && DM.is_started()) || (_player._inEventCTF && CTF.isStarted()))
+			if ((_player._inEventTvT && TvT.isStarted()) || (_player._inEventDM && DM.hasStarted()) || (_player._inEventCTF && CTF.isStarted()))
 			{
 				_player.sendMessage("You can't restart in Event!");
 				return;
@@ -119,11 +119,11 @@ public class RequestRestartPoint extends GameClientPacket
 						castle = CastleManager.getInstance().getCastle(_player);
 						fort = FortManager.getInstance().getFort(_player);
 						MapRegionTable.TeleportWhereType teleportWhere = MapRegionTable.TeleportWhereType.Town;
-						if ((castle != null) && castle.getSiege().getIsInProgress() && castle.getSiege().checkIsDefender(_player.getClan()))
+						if ((castle != null) && castle.getSiege().isInProgress() && castle.getSiege().checkIsDefender(_player.getClan()))
 						{
 							isInDefense = true;
 						}
-						if ((fort != null) && fort.getSiege().getIsInProgress() && fort.getSiege().checkIsDefender(_player.getClan()))
+						if ((fort != null) && fort.getSiege().isInProgress() && fort.getSiege().checkIsDefender(_player.getClan()))
 						{
 							isInDefense = true;
 						}
@@ -150,11 +150,11 @@ public class RequestRestartPoint extends GameClientPacket
 						SiegeClan siegeClan = null;
 						castle = CastleManager.getInstance().getCastle(_player);
 						fort = FortManager.getInstance().getFort(_player);
-						if ((castle != null) && castle.getSiege().getIsInProgress())
+						if ((castle != null) && castle.getSiege().isInProgress())
 						{
 							siegeClan = castle.getSiege().getAttackerClan(_player.getClan());
 						}
-						else if ((fort != null) && fort.getSiege().getIsInProgress())
+						else if ((fort != null) && fort.getSiege().isInProgress())
 						{
 							siegeClan = fort.getSiege().getAttackerClan(_player.getClan());
 						}
@@ -202,7 +202,7 @@ public class RequestRestartPoint extends GameClientPacket
 				}
 				
 				// Stand up and teleport, proof dvp video.
-				_player.setIsIn7sDungeon(false);
+				_player.setIn7sDungeon(false);
 				_player.setIsPendingRevive(true);
 				_player.teleToLocation(loc, true);
 			}
@@ -236,7 +236,7 @@ public class RequestRestartPoint extends GameClientPacket
 		}
 		
 		final Castle castle = CastleManager.getInstance().getCastle(player.getX(), player.getY(), player.getZ());
-		if ((castle != null) && castle.getSiege().getIsInProgress() && (player.getClan() != null) && castle.getSiege().checkIsAttacker(player.getClan()))
+		if ((castle != null) && castle.getSiege().isInProgress() && (player.getClan() != null) && castle.getSiege().checkIsAttacker(player.getClan()))
 		{
 			// Schedule respawn delay for attacker
 			ThreadPool.schedule(new DeathTask(player), castle.getSiege().getAttackerRespawnDelay());

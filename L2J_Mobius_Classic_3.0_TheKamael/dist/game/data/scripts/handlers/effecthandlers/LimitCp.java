@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class LimitCp extends AbstractStatEffect
 {
 	public LimitCp(StatsSet params)
 	{
-		super(params, Stats.MAX_RECOVERABLE_CP);
+		super(params, Stat.MAX_RECOVERABLE_CP);
 	}
 }

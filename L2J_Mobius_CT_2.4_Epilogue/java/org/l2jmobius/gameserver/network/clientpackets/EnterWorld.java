@@ -183,7 +183,7 @@ public class EnterWorld implements IClientIncomingPacket
 				
 				if (Config.GM_STARTUP_INVULNERABLE && AdminData.getInstance().hasAccess("admin_invul", player.getAccessLevel()))
 				{
-					player.setIsInvul(true);
+					player.setInvul(true);
 				}
 				
 				if (Config.GM_STARTUP_INVISIBLE && AdminData.getInstance().hasAccess("admin_invisible", player.getAccessLevel()))
@@ -226,7 +226,7 @@ public class EnterWorld implements IClientIncomingPacket
 		// Set dead status if applies
 		if (player.getCurrentHp() < 0.5)
 		{
-			player.setIsDead(true);
+			player.setDead(true);
 		}
 		
 		boolean showClanNotice = false;
@@ -301,7 +301,7 @@ public class EnterWorld implements IClientIncomingPacket
 				{
 					player.setSiegeState((byte) 1);
 					player.setSiegeSide(hall.getId());
-					player.setIsInHideoutSiege(true);
+					player.setInHideoutSiege(true);
 				}
 			}
 			

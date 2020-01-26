@@ -25,20 +25,20 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerCloakStatus extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
 	/**
 	 * Instantiates a new condition player cloak status.
-	 * @param val the val
+	 * @param value the value
 	 */
-	public ConditionPlayerCloakStatus(boolean val)
+	public ConditionPlayerCloakStatus(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		return (effector.getActingPlayer() != null) && (effector.getActingPlayer().getInventory().canEquipCloak() == _val);
+		return (effector.getActingPlayer() != null) && (effector.getActingPlayer().getInventory().canEquipCloak() == _value);
 	}
 }

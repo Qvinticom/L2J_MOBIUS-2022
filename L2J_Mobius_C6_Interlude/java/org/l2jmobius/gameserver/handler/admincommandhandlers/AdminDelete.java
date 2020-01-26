@@ -70,14 +70,14 @@ public class AdminDelete implements IAdminCommandHandler
 			{
 				spawn.stopRespawn();
 				
-				if (RaidBossSpawnManager.getInstance().isDefined(spawn.getNpcId()) && !spawn.is_customBossInstance())
+				if (RaidBossSpawnManager.getInstance().isDefined(spawn.getNpcId()) && !spawn.isCustomBossInstance())
 				{
 					RaidBossSpawnManager.getInstance().deleteSpawn(spawn, true);
 				}
 				else
 				{
 					boolean update = true;
-					if (GrandBossManager.getInstance().isDefined(spawn.getNpcId()) && spawn.is_customBossInstance())
+					if (GrandBossManager.getInstance().isDefined(spawn.getNpcId()) && spawn.isCustomBossInstance())
 					{
 						update = false;
 					}

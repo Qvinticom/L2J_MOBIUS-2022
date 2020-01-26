@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.playable.OnPlayableExpChanged;
 import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExSpawnEmitter;
 
@@ -59,7 +59,7 @@ public class SoulEating extends AbstractEffect
 		if (playable.isPlayer() && (exp >= _expNeeded))
 		{
 			final PlayerInstance player = playable.getActingPlayer();
-			final int maxSouls = (int) player.calcStat(Stats.MAX_SOULS, 0, null, null);
+			final int maxSouls = (int) player.calcStat(Stat.MAX_SOULS, 0, null, null);
 			if (player.getChargedSouls() >= maxSouls)
 			{
 				playable.sendPacket(SystemMessageId.SOUL_CANNOT_BE_ABSORBED_ANYMORE);

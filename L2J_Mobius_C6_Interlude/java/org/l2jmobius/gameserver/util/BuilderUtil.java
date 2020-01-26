@@ -67,7 +67,7 @@ public class BuilderUtil
 	public static boolean setHiding(PlayerInstance player, boolean hide)
 	{
 		player.setInRefusalMode(hide);
-		player.setIsInvul(hide);
+		player.setInvul(hide);
 		if (hide)
 		{
 			player.getAppearance().setInvisible();

@@ -266,7 +266,7 @@ public class OracleTeleport extends Quest
 			{
 				final Location loc = RETURN_LOCS[st.getInt("id")];
 				player.teleToLocation(loc.getX(), loc.getY(), loc.getZ());
-				player.setIsIn7sDungeon(false);
+				player.setIn7sDungeon(false);
 				st.exitQuest(true);
 			}
 			else if (Util.contains(RIFT_POSTERS, npcId) && (st.getState() == State.STARTED))
@@ -283,12 +283,12 @@ public class OracleTeleport extends Quest
 			if (Util.contains(TOWN_DAWN, id))
 			{
 				player.teleToLocation(-80157, 111344, -4901);
-				player.setIsIn7sDungeon(true);
+				player.setIn7sDungeon(true);
 			}
 			else if (Util.contains(TOWN_DUSK, id))
 			{
 				player.teleToLocation(-81261, 86531, -5157);
-				player.setIsIn7sDungeon(true);
+				player.setIn7sDungeon(true);
 			}
 			else
 			{
@@ -400,7 +400,7 @@ public class OracleTeleport extends Quest
 			st.set("id", Integer.toString(i));
 			st.playSound(QuestState.SOUND_ACCEPT);
 			player.teleToLocation(-80157, 111344, -4901);
-			player.setIsIn7sDungeon(true);
+			player.setIn7sDungeon(true);
 		}
 		
 		if (Util.contains(TOWN_DUSK, npcId))
@@ -420,7 +420,7 @@ public class OracleTeleport extends Quest
 			st.set("id", Integer.toString(i));
 			st.playSound(QuestState.SOUND_ACCEPT);
 			player.teleToLocation(-81261, 86531, -5157);
-			player.setIsIn7sDungeon(true);
+			player.setIn7sDungeon(true);
 		}
 		else if ((npcId >= 31494) && (npcId <= 31507))
 		{

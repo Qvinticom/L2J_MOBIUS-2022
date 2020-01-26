@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class SkillCriticalProbability extends AbstractStatPercentEffect
 {
 	public SkillCriticalProbability(StatsSet params)
 	{
-		super(params, Stats.SKILL_CRITICAL_PROBABILITY);
+		super(params, Stat.SKILL_CRITICAL_PROBABILITY);
 	}
 }

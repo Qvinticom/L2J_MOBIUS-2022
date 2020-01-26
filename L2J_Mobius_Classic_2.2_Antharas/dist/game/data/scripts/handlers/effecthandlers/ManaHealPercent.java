@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -66,7 +66,7 @@ public class ManaHealPercent extends AbstractEffect
 		amount = full ? effected.getMaxMp() : (effected.getMaxMp() * power) / 100.0;
 		if ((item != null) && (item.isPotion() || item.isElixir()))
 		{
-			amount += effected.getStat().getValue(Stats.ADDITIONAL_POTION_MP, 0);
+			amount += effected.getStat().getValue(Stat.ADDITIONAL_POTION_MP, 0);
 		}
 		
 		// Prevents overheal

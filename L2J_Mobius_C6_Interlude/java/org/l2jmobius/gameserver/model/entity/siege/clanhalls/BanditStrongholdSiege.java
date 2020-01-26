@@ -93,14 +93,14 @@ public class BanditStrongholdSiege extends ClanHallSiege
 			{
 				clan = ClanTable.getInstance().getClanByName(a._clanName);
 			}
-			setIsInProgress(true);
+			setInProgress(true);
 			startSecondStep(clan);
 			_siegeEndDate = Calendar.getInstance();
 			_siegeEndDate.add(Calendar.MINUTE, 20);
 			_endSiegeTask.schedule(1000);
 			return;
 		}
-		setIsInProgress(true);
+		setInProgress(true);
 		spawnFlags();
 		gateControl(1);
 		anonce("Take place at the siege of his headquarters.", 1);
@@ -146,7 +146,7 @@ public class BanditStrongholdSiege extends ClanHallSiege
 				anonce("Attention! Clan hall, Fortress robbers did not get a new owner", 2);
 			}
 		}
-		setIsInProgress(false);
+		setInProgress(false);
 		unSpawnAll();
 		_clansInfo.clear();
 		_clanCounter = 0;
@@ -175,16 +175,16 @@ public class BanditStrongholdSiege extends ClanHallSiege
 		}
 	}
 	
-	public void gateControl(int val)
+	public void gateControl(int value)
 	{
-		if (val == 1)
+		if (value == 1)
 		{
 			DoorData.getInstance().getDoor(22170001).openMe();
 			DoorData.getInstance().getDoor(22170002).openMe();
 			DoorData.getInstance().getDoor(22170003).closeMe();
 			DoorData.getInstance().getDoor(22170004).closeMe();
 		}
-		else if (val == 2)
+		else if (value == 2)
 		{
 			DoorData.getInstance().getDoor(22170001).closeMe();
 			DoorData.getInstance().getDoor(22170002).closeMe();
@@ -513,7 +513,7 @@ public class BanditStrongholdSiege extends ClanHallSiege
 		@Override
 		protected void onElapsed()
 		{
-			if (getIsInProgress())
+			if (isInProgress())
 			{
 				cancel();
 				return;
@@ -585,7 +585,7 @@ public class BanditStrongholdSiege extends ClanHallSiege
 		@Override
 		protected void onElapsed()
 		{
-			if (!getIsInProgress())
+			if (!isInProgress())
 			{
 				cancel();
 				return;

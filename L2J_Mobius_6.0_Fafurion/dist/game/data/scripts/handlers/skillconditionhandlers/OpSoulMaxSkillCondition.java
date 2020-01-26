@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author UnAfraid
@@ -35,7 +35,7 @@ public class OpSoulMaxSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		final int maxSouls = (int) caster.getStat().getValue(Stats.MAX_SOULS);
+		final int maxSouls = (int) caster.getStat().getValue(Stat.MAX_SOULS);
 		return caster.isPlayable() && (caster.getActingPlayer().getChargedSouls() < maxSouls);
 	}
 }

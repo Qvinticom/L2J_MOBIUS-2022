@@ -101,7 +101,7 @@ public class FortSiegeManager
 		{
 			sm.addString("You must be on fort ground to summon this");
 		}
-		else if (!fort.getSiege().getIsInProgress())
+		else if (!fort.getSiege().isInProgress())
 		{
 			sm.addString("You can only summon this during a siege.");
 		}
@@ -439,7 +439,7 @@ public class FortSiegeManager
 	{
 		for (Fort fort : FortManager.getInstance().getForts())
 		{
-			if (checkIsRegistered(clan, fort.getFortId()) && (fort.getSiege() != null) && fort.getSiege().getIsInProgress())
+			if (checkIsRegistered(clan, fort.getFortId()) && (fort.getSiege() != null) && fort.getSiege().isInProgress())
 			{
 				return true;
 			}

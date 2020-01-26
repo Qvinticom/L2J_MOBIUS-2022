@@ -1004,7 +1004,7 @@ public class FortSiege
 		}
 		
 		LOGGER.info("Siege of " + getFort().getName() + ": " + getFort().getSiegeDate().getTime());
-		setIsScheduled(true);
+		setScheduled(true);
 		loadSiegeClan();
 		
 		// Schedule registration end
@@ -1256,7 +1256,7 @@ public class FortSiege
 	{
 		clearSiegeDate(); // clear siege date
 		saveSiegeDate(); // Save the new date
-		setIsScheduled(false);
+		setScheduled(false);
 	}
 	
 	/** Save siege date to database. */
@@ -1596,7 +1596,7 @@ public class FortSiege
 	 * Gets the checks if is in progress.
 	 * @return the checks if is in progress
 	 */
-	public boolean getIsInProgress()
+	public boolean isInProgress()
 	{
 		return _isInProgress;
 	}
@@ -1605,7 +1605,7 @@ public class FortSiege
 	 * Gets the checks if is scheduled.
 	 * @return the checks if is scheduled
 	 */
-	public boolean getIsScheduled()
+	public boolean isScheduled()
 	{
 		return _isScheduled;
 	}
@@ -1614,7 +1614,7 @@ public class FortSiege
 	 * Sets the checks if is scheduled.
 	 * @param isScheduled the new checks if is scheduled
 	 */
-	public void setIsScheduled(boolean isScheduled)
+	public void setScheduled(boolean isScheduled)
 	{
 		_isScheduled = isScheduled;
 	}
@@ -1623,7 +1623,7 @@ public class FortSiege
 	 * Gets the checks if is registration over.
 	 * @return the checks if is registration over
 	 */
-	public boolean getIsRegistrationOver()
+	public boolean isRegistrationOver()
 	{
 		return _isRegistrationOver;
 	}

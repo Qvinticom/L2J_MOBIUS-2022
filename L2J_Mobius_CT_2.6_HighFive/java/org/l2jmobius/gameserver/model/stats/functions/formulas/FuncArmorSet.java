@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 
 /**
@@ -33,9 +33,9 @@ import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
  */
 public class FuncArmorSet extends AbstractFunction
 {
-	private static final Map<Stats, FuncArmorSet> _fh_instance = new EnumMap<>(Stats.class);
+	private static final Map<Stat, FuncArmorSet> _fh_instance = new EnumMap<>(Stat.class);
 	
-	public static AbstractFunction getInstance(Stats st)
+	public static AbstractFunction getInstance(Stat st)
 	{
 		if (!_fh_instance.containsKey(st))
 		{
@@ -44,7 +44,7 @@ public class FuncArmorSet extends AbstractFunction
 		return _fh_instance.get(st);
 	}
 	
-	private FuncArmorSet(Stats stat)
+	private FuncArmorSet(Stat stat)
 	{
 		super(stat, 1, null, 0, null);
 	}

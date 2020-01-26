@@ -49,7 +49,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.html.PageBuilder;
 import org.l2jmobius.gameserver.model.html.PageResult;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
@@ -995,8 +995,8 @@ public class AdminEditChar implements IAdminCommandHandler
 			
 			try
 			{
-				Stats stat = null;
-				for (Stats stats : Stats.values())
+				Stat stat = null;
+				for (Stat stats : Stat.values())
 				{
 					if (statName.equalsIgnoreCase(stats.name()) || statName.equalsIgnoreCase(stats.getValue()))
 					{
@@ -1046,8 +1046,8 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			final String statName = st.nextToken();
 			
-			Stats stat = null;
-			for (Stats stats : Stats.values())
+			Stat stat = null;
+			for (Stat stats : Stat.values())
 			{
 				if (statName.equalsIgnoreCase(stats.name()) || statName.equalsIgnoreCase(stats.getValue()))
 				{

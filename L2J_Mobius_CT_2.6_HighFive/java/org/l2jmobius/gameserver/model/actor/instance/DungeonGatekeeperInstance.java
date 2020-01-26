@@ -97,7 +97,7 @@ public class DungeonGatekeeperInstance extends Npc
 			else
 			{
 				doTeleport(player, Integer.parseInt(st.nextToken()));
-				player.setIsIn7sDungeon(true);
+				player.setIn7sDungeon(true);
 			}
 		}
 		else if (actualCommand.startsWith("cata"))
@@ -142,13 +142,13 @@ public class DungeonGatekeeperInstance extends Npc
 			else
 			{
 				doTeleport(player, Integer.parseInt(st.nextToken()));
-				player.setIsIn7sDungeon(true);
+				player.setIn7sDungeon(true);
 			}
 		}
 		else if (actualCommand.startsWith("exit"))
 		{
 			doTeleport(player, Integer.parseInt(st.nextToken()));
-			player.setIsIn7sDungeon(false);
+			player.setIn7sDungeon(false);
 		}
 		else if (actualCommand.startsWith("goto"))
 		{
@@ -160,9 +160,9 @@ public class DungeonGatekeeperInstance extends Npc
 		}
 	}
 	
-	private void doTeleport(PlayerInstance player, int val)
+	private void doTeleport(PlayerInstance player, int value)
 	{
-		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
+		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(value);
 		if (list != null)
 		{
 			if (player.isAlikeDead())
@@ -174,23 +174,23 @@ public class DungeonGatekeeperInstance extends Npc
 		}
 		else
 		{
-			LOGGER.warning("No teleport destination with id:" + val);
+			LOGGER.warning("No teleport destination with id:" + value);
 		}
 		
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
 		}
 		else
 		{
-			pom = npcId + "-" + val;
+			pom = npcId + "-" + value;
 		}
 		
 		return "data/html/teleporter/" + pom + ".htm";

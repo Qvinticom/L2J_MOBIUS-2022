@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class SafeFallHeight extends AbstractStatEffect
 {
 	public SafeFallHeight(StatsSet params)
 	{
-		super(params, Stats.FALL);
+		super(params, Stat.FALL);
 	}
 }

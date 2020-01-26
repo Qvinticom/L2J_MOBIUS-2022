@@ -1500,7 +1500,7 @@ public class SevenSigns
 				if (!player.isGM() && player.isIn7sDungeon() && ((currPlayer == null) || !currPlayer.getString("cabal").equals(compWinner)))
 				{
 					player.teleToLocation(TeleportWhereType.TOWN);
-					player.setIsIn7sDungeon(false);
+					player.setIn7sDungeon(false);
 					player.sendMessage("You have been teleported to the nearest town due to the beginning of the Seal Validation period.");
 				}
 			}
@@ -1509,7 +1509,7 @@ public class SevenSigns
 				if (!player.isGM() && player.isIn7sDungeon() && ((currPlayer == null) || !currPlayer.getString("cabal").isEmpty()))
 				{
 					player.teleToLocation(TeleportWhereType.TOWN);
-					player.setIsIn7sDungeon(false);
+					player.setIn7sDungeon(false);
 					player.sendMessage("You have been teleported to the nearest town because you have not signed for any cabal.");
 				}
 			}

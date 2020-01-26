@@ -146,7 +146,7 @@ public class PailakaDevilsLegacy extends AbstractInstance
 					{
 						final Npc follower = addSpawn(FOLLOWERS, loc, false, 0, false, world.getInstanceId());
 						follower.disableCoreAI(true);
-						follower.setIsImmobilized(true);
+						follower.setImmobilized(true);
 						followerslist.add(follower);
 					}
 					world.setParameter("followerslist", followerslist);

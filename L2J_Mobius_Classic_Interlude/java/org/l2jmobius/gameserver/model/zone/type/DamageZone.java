@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Castle;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
 import org.l2jmobius.gameserver.model.zone.TaskZoneSettings;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -202,7 +202,7 @@ public class DamageZone extends ZoneType
 						}
 					}
 					
-					final double multiplier = 1 + (temp.getStat().getValue(Stats.DAMAGE_ZONE_VULN, 0) / 100);
+					final double multiplier = 1 + (temp.getStat().getValue(Stat.DAMAGE_ZONE_VULN, 0) / 100);
 					
 					if (getHPDamagePerSecond() != 0)
 					{

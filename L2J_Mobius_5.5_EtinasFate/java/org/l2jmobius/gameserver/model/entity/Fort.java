@@ -474,11 +474,11 @@ public class Fort extends AbstractResidence
 		}
 	}
 	
-	public void setSupplyLvL(int val)
+	public void setSupplyLvL(int value)
 	{
-		if (val <= Config.FS_MAX_SUPPLY_LEVEL)
+		if (value <= Config.FS_MAX_SUPPLY_LEVEL)
 		{
-			_supplyLvL = val;
+			_supplyLvL = value;
 		}
 	}
 	
@@ -504,14 +504,14 @@ public class Fort extends AbstractResidence
 	
 	/**
 	 * Show or hide flag inside flag pole.
-	 * @param val
+	 * @param value
 	 */
-	public void setVisibleFlag(boolean val)
+	public void setVisibleFlag(boolean value)
 	{
 		final StaticObjectInstance flagPole = _flagPole;
 		if (flagPole != null)
 		{
-			flagPole.setMeshIndex(val ? 1 : 0);
+			flagPole.setMeshIndex(value ? 1 : 0);
 		}
 	}
 	

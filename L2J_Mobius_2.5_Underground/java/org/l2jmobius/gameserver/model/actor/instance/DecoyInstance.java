@@ -49,7 +49,7 @@ public class DecoyInstance extends Creature
 		setInstanceType(InstanceType.DecoyInstance);
 		_owner = owner;
 		setXYZInvisible(owner.getX(), owner.getY(), owner.getZ());
-		setIsInvul(false);
+		setInvul(false);
 		_totalLifeTime = totalLifeTime;
 		_timeRemaining = _totalLifeTime;
 		final int hateSpamSkillId = 5272;

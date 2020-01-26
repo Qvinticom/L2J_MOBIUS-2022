@@ -192,7 +192,7 @@ public class StrSiegeAssault implements ISkillHandler
 		{
 			sm.addString("You must be on castle ground to use strider siege assault");
 		}
-		else if (!castle.getSiege().getIsInProgress())
+		else if (!castle.getSiege().isInProgress())
 		{
 			sm.addString("You can only use strider siege assault during a siege.");
 		}
@@ -231,7 +231,7 @@ public class StrSiegeAssault implements ISkillHandler
 		{
 			sm.addString("You must be on fort ground to use strider siege assault");
 		}
-		else if (!fort.getSiege().getIsInProgress())
+		else if (!fort.getSiege().isInProgress())
 		{
 			sm.addString("You can only use strider siege assault during a siege.");
 		}

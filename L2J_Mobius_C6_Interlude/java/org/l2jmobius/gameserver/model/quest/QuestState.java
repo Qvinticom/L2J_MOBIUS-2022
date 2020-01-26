@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowQuestMark;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -219,60 +219,60 @@ public class QuestState
 	/**
 	 * Add parameter used in quests.
 	 * @param var : String pointing out the name of the variable for quest
-	 * @param val : String pointing out the value of the variable for quest
-	 * @return String (equal to parameter "val")
+	 * @param value : String pointing out the value of the variable for quest
+	 * @return String (equal to parameter "value")
 	 */
-	public String setInternal(String var, String val)
+	public String setInternal(String var, String value)
 	{
 		if (_vars == null)
 		{
 			_vars = new HashMap<>();
 		}
 		
-		if (val == null)
+		if (value == null)
 		{
-			val = "";
+			value = "";
 		}
 		
-		_vars.put(var, val);
+		_vars.put(var, value);
 		
-		return val;
+		return value;
 	}
 	
 	/**
-	 * Return value of parameter "val" after adding the couple (var,val) in class variable "vars".<BR>
+	 * Return value of parameter "value" after adding the couple (var,value) in class variable "vars".<BR>
 	 * <BR>
 	 * <U><I>Actions :</I></U><BR>
 	 * <LI>Initialize class variable "vars" if is null</LI>
-	 * <LI>Initialize parameter "val" if is null</LI>
-	 * <LI>Add/Update couple (var,val) in class variable Map "vars"</LI>
-	 * <LI>If the key represented by "var" exists in Map "vars", the couple (var,val) is updated in the database. The key is known as existing if the preceding value of the key (given as result of function put()) is not null.<BR>
+	 * <LI>Initialize parameter "value" if is null</LI>
+	 * <LI>Add/Update couple (var,value) in class variable Map "vars"</LI>
+	 * <LI>If the key represented by "var" exists in Map "vars", the couple (var,value) is updated in the database. The key is known as existing if the preceding value of the key (given as result of function put()) is not null.<BR>
 	 * If the key doesn't exist, the couple is added/created in the database</LI>
 	 * @param var : String indicating the name of the variable for quest
-	 * @param val : String indicating the value of the variable for quest
+	 * @param value : String indicating the value of the variable for quest
 	 */
-	public void set(String var, String val)
+	public void set(String var, String value)
 	{
 		if (_vars == null)
 		{
 			_vars = new HashMap<>();
 		}
 		
-		if (val == null)
+		if (value == null)
 		{
-			val = "";
+			value = "";
 		}
 		
 		// Map.put() returns previous value associated with specified key, or null if there was no mapping for key.
-		final String old = _vars.put(var, val);
+		final String old = _vars.put(var, value);
 		
 		if (old != null)
 		{
-			Quest.updateQuestVarInDb(this, var, val);
+			Quest.updateQuestVarInDb(this, var, value);
 		}
 		else
 		{
-			Quest.createQuestVarInDb(this, var, val);
+			Quest.createQuestVarInDb(this, var, value);
 		}
 		
 		if (var.equals("cond"))
@@ -288,11 +288,11 @@ public class QuestState
 				{
 					previousVal = 0;
 				}
-				setCond(Integer.parseInt(val), previousVal);
+				setCond(Integer.parseInt(value), previousVal);
 			}
 			catch (Exception e)
 			{
-				LOGGER.finer(_player.getName() + ", " + _questName + " cond [" + val + "] is not an integer.  Value stored, but no packet was sent: " + e);
+				LOGGER.finer(_player.getName() + ", " + _questName + " cond [" + value + "] is not an integer.  Value stored, but no packet was sent: " + e);
 			}
 		}
 	}
@@ -1022,7 +1022,7 @@ public class QuestState
 	 */
 	public void rewardExpAndSp(int exp, int sp)
 	{
-		_player.addExpAndSp((int) _player.calcStat(Stats.EXPSP_RATE, exp * Config.RATE_QUESTS_REWARD, null, null), (int) _player.calcStat(Stats.EXPSP_RATE, sp * Config.RATE_QUESTS_REWARD, null, null));
+		_player.addExpAndSp((int) _player.calcStat(Stat.EXPSP_RATE, exp * Config.RATE_QUESTS_REWARD, null, null), (int) _player.calcStat(Stat.EXPSP_RATE, sp * Config.RATE_QUESTS_REWARD, null, null));
 	}
 	
 	/**

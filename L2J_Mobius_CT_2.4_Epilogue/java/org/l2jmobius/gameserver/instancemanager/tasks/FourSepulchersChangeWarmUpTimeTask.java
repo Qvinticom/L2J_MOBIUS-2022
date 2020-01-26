@@ -33,10 +33,10 @@ public class FourSepulchersChangeWarmUpTimeTask implements Runnable
 	public void run()
 	{
 		final FourSepulchersManager manager = FourSepulchersManager.getInstance();
-		manager.setIsEntryTime(true);
-		manager.setIsWarmUpTime(false);
-		manager.setIsAttackTime(false);
-		manager.setIsCoolDownTime(false);
+		manager.setEntryTime(true);
+		manager.setWarmUpTime(false);
+		manager.setAttackTime(false);
+		manager.setCoolDownTime(false);
 		
 		final long interval = manager.isFirstTimeRun() ? manager.getWarmUpTimeEnd() - Calendar.getInstance().getTimeInMillis() : Config.FS_TIME_WARMUP * 60000;
 		manager.setChangeAttackTimeTask(ThreadPool.schedule(new FourSepulchersChangeAttackTimeTask(), interval));

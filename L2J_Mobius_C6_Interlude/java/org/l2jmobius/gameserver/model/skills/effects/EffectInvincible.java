@@ -35,20 +35,20 @@ public class EffectInvincible extends Effect
 	@Override
 	public void onStart()
 	{
-		getEffected().setIsInvul(true);
+		getEffected().setInvul(true);
 	}
 	
 	@Override
 	public boolean onActionTime()
 	{
 		// Commented. But I'm not really sure about this, could cause some bugs.
-		// getEffected().setIsInvul(false);
+		// getEffected().setInvul(false);
 		return false;
 	}
 	
 	@Override
 	public void onExit()
 	{
-		getEffected().setIsInvul(false);
+		getEffected().setInvul(false);
 	}
 }

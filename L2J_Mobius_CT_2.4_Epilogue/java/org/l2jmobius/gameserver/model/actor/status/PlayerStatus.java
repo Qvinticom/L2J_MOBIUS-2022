@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
 import org.l2jmobius.gameserver.model.entity.Duel;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.stats.Formulas;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -139,7 +139,7 @@ public class PlayerStatus extends PlayableStatus
 			final Summon summon = getActiveChar().getSummon();
 			if (getActiveChar().hasServitor() && Util.checkIfInRange(1000, getActiveChar(), summon, true))
 			{
-				tDmg = ((int) value * (int) getActiveChar().getStat().calcStat(Stats.TRANSFER_DAMAGE_PERCENT, 0, null, null)) / 100;
+				tDmg = ((int) value * (int) getActiveChar().getStat().calcStat(Stat.TRANSFER_DAMAGE_PERCENT, 0, null, null)) / 100;
 				
 				// Only transfer dmg up to current HP, it should not be killed
 				tDmg = Math.min((int) summon.getCurrentHp() - 1, tDmg);
@@ -151,7 +151,7 @@ public class PlayerStatus extends PlayableStatus
 				}
 			}
 			
-			mpDam = ((int) value * (int) getActiveChar().getStat().calcStat(Stats.MANA_SHIELD_PERCENT, 0, null, null)) / 100;
+			mpDam = ((int) value * (int) getActiveChar().getStat().calcStat(Stat.MANA_SHIELD_PERCENT, 0, null, null)) / 100;
 			
 			if (mpDam > 0)
 			{
@@ -176,7 +176,7 @@ public class PlayerStatus extends PlayableStatus
 			final PlayerInstance caster = getActiveChar().getTransferingDamageTo();
 			if ((caster != null) && (getActiveChar().getParty() != null) && Util.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && (getActiveChar() != caster) && getActiveChar().getParty().getMembers().contains(caster))
 			{
-				int transferDmg = Math.min((int) caster.getCurrentHp() - 1, ((int) value * (int) getActiveChar().getStat().calcStat(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0, null, null)) / 100);
+				int transferDmg = Math.min((int) caster.getCurrentHp() - 1, ((int) value * (int) getActiveChar().getStat().calcStat(Stat.TRANSFER_DAMAGE_TO_PLAYER, 0, null, null)) / 100);
 				
 				if (transferDmg > 0)
 				{
@@ -293,7 +293,7 @@ public class PlayerStatus extends PlayableStatus
 			if (getActiveChar().isInOlympiadMode())
 			{
 				stopHpMpRegeneration();
-				getActiveChar().setIsDead(true);
+				getActiveChar().setDead(true);
 				getActiveChar().setIsPendingRevive(true);
 				if (getActiveChar().hasSummon())
 				{

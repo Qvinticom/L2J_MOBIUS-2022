@@ -25,19 +25,19 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerVehicleMounted extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
 	/**
-	 * @param val the val
+	 * @param value the value
 	 */
-	public ConditionPlayerVehicleMounted(boolean val)
+	public ConditionPlayerVehicleMounted(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		return (effector.getActingPlayer() == null) || (effector.getActingPlayer().isInVehicle() == _val);
+		return (effector.getActingPlayer() == null) || (effector.getActingPlayer().isInVehicle() == _value);
 	}
 }

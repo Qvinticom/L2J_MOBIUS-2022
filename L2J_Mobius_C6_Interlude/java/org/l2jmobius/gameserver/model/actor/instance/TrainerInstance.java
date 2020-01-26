@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 public class TrainerInstance extends FolkInstance
 {
 	/**
-	 * Instantiates a new l2 trainer instance.
+	 * Instantiates a new trainer instance.
 	 * @param objectId the object id
 	 * @param template the template
 	 */
@@ -31,16 +31,16 @@ public class TrainerInstance extends FolkInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = "" + npcId;
 		}
 		else
 		{
-			pom = npcId + "-" + val;
+			pom = npcId + "-" + value;
 		}
 		
 		return "data/html/trainer/" + pom + ".htm";

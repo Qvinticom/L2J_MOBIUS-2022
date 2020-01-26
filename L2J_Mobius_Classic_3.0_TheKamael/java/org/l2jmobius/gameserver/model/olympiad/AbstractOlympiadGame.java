@@ -178,8 +178,8 @@ public abstract class AbstractOlympiadGame
 			player.setTarget(null);
 			
 			player.setOlympiadGameId(id);
-			player.setIsInOlympiadMode(true);
-			player.setIsOlympiadStart(false);
+			player.setInOlympiadMode(true);
+			player.setOlympiadStart(false);
 			player.setOlympiadSide(par.getSide());
 			player.teleToLocation(loc, instance);
 			player.sendPacket(new ExOlympiadMode(2));
@@ -296,7 +296,7 @@ public abstract class AbstractOlympiadGame
 		try
 		{
 			// prevent players kill each other
-			player.setIsOlympiadStart(false);
+			player.setOlympiadStart(false);
 			player.setTarget(null);
 			player.abortAttack();
 			player.abortCast();
@@ -304,7 +304,7 @@ public abstract class AbstractOlympiadGame
 			
 			if (player.isDead())
 			{
-				player.setIsDead(false);
+				player.setDead(false);
 			}
 			
 			player.stopAllEffectsExceptThoseThatLastThroughDeath();
@@ -353,8 +353,8 @@ public abstract class AbstractOlympiadGame
 				player.untransform();
 			}
 			
-			player.setIsInOlympiadMode(false);
-			player.setIsOlympiadStart(false);
+			player.setInOlympiadMode(false);
+			player.setOlympiadStart(false);
 			player.setOlympiadSide(-1);
 			player.setOlympiadGameId(-1);
 			player.sendPacket(new ExOlympiadMode(0));

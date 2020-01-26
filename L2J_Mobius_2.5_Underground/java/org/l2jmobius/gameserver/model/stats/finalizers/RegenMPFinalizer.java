@@ -33,9 +33,9 @@ import org.l2jmobius.gameserver.model.entity.Fort.FortFunction;
 import org.l2jmobius.gameserver.model.residences.AbstractResidence;
 import org.l2jmobius.gameserver.model.residences.ResidenceFunction;
 import org.l2jmobius.gameserver.model.residences.ResidenceFunctionType;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.IStatsFunction;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.IStatFunction;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.type.CastleZone;
 import org.l2jmobius.gameserver.model.zone.type.ClanHallZone;
@@ -45,10 +45,10 @@ import org.l2jmobius.gameserver.model.zone.type.MotherTreeZone;
 /**
  * @author UnAfraid
  */
-public class RegenMPFinalizer implements IStatsFunction
+public class RegenMPFinalizer implements IStatFunction
 {
 	@Override
-	public double calc(Creature creature, OptionalDouble base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stat stat)
 	{
 		throwIfPresent(base);
 		
@@ -139,13 +139,13 @@ public class RegenMPFinalizer implements IStatsFunction
 			}
 			
 			// Add MEN bonus
-			baseValue *= creature.getLevelMod() * BaseStats.MEN.calcBonus(creature);
+			baseValue *= creature.getLevelMod() * BaseStat.MEN.calcBonus(creature);
 		}
 		else if (creature.isPet())
 		{
 			baseValue = ((PetInstance) creature).getPetLevelData().getPetRegenMP() * Config.PET_MP_REGEN_MULTIPLIER;
 		}
 		
-		return Stats.defaultValue(creature, stat, baseValue);
+		return Stat.defaultValue(creature, stat, baseValue);
 	}
 }

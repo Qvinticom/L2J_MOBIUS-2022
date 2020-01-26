@@ -32,11 +32,11 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class ConditionPlayerCanTakeFort extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
-	public ConditionPlayerCanTakeFort(boolean val)
+	public ConditionPlayerCanTakeFort(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
@@ -44,7 +44,7 @@ public class ConditionPlayerCanTakeFort extends Condition
 	{
 		if ((effector == null) || !effector.isPlayer())
 		{
-			return !_val;
+			return !_value;
 		}
 		
 		final PlayerInstance player = effector.getActingPlayer();
@@ -68,6 +68,6 @@ public class ConditionPlayerCanTakeFort extends Condition
 			player.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
 			canTakeFort = false;
 		}
-		return _val == canTakeFort;
+		return _value == canTakeFort;
 	}
 }

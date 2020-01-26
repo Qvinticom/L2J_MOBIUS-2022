@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.model.Augmentation;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 
 /**
  * This class manages the augmentation data and can also create new augmentations.
@@ -260,7 +260,7 @@ public class AugmentationData
 								}
 								
 								// store this stat
-								_augmentationStats[(i - 1)].add(new augmentationStat(Stats.valueOfXml(statName), soloValues, combinedValues));
+								_augmentationStats[(i - 1)].add(new augmentationStat(Stat.valueOfXml(statName), soloValues, combinedValues));
 							}
 						}
 					}
@@ -452,16 +452,16 @@ public class AugmentationData
 	
 	public class AugStat
 	{
-		private final Stats _stat;
+		private final Stat _stat;
 		private final float _value;
 		
-		public AugStat(Stats stat, float value)
+		public AugStat(Stat stat, float value)
 		{
 			_stat = stat;
 			_value = value;
 		}
 		
-		public Stats getStat()
+		public Stat getStat()
 		{
 			return _stat;
 		}
@@ -546,7 +546,7 @@ public class AugmentationData
 					
 					// get 2nd stat
 					as = _augmentationStats[block].get(rescales + stats[i]);
-					if (as.getStat() == Stats.CRITICAL_DAMAGE)
+					if (as.getStat() == Stat.CRITICAL_DAMAGE)
 					{
 						temp.add(new AugStat(as.getStat(), as.getCombinedStatValue(subblock)));
 					}
@@ -563,22 +563,22 @@ public class AugmentationData
 				{
 					case BASESTAT_STR:
 					{
-						temp.add(new AugStat(Stats.STAT_STR, 1.0f));
+						temp.add(new AugStat(Stat.STAT_STR, 1.0f));
 						break;
 					}
 					case BASESTAT_CON:
 					{
-						temp.add(new AugStat(Stats.STAT_CON, 1.0f));
+						temp.add(new AugStat(Stat.STAT_CON, 1.0f));
 						break;
 					}
 					case BASESTAT_INT:
 					{
-						temp.add(new AugStat(Stats.STAT_INT, 1.0f));
+						temp.add(new AugStat(Stat.STAT_INT, 1.0f));
 						break;
 					}
 					case BASESTAT_MEN:
 					{
-						temp.add(new AugStat(Stats.STAT_MEN, 1.0f));
+						temp.add(new AugStat(Stat.STAT_MEN, 1.0f));
 						break;
 					}
 				}
@@ -619,13 +619,13 @@ public class AugmentationData
 	
 	public class augmentationStat
 	{
-		private final Stats _stat;
+		private final Stat _stat;
 		private final int _singleSize;
 		private final int _combinedSize;
 		private final float[] _singleValues;
 		private final float[] _combinedValues;
 		
-		public augmentationStat(Stats stat, float[] sValues, float[] cValues)
+		public augmentationStat(Stat stat, float[] sValues, float[] cValues)
 		{
 			_stat = stat;
 			_singleSize = sValues.length;
@@ -664,7 +664,7 @@ public class AugmentationData
 			return _combinedValues[i];
 		}
 		
-		public Stats getStat()
+		public Stat getStat()
 		{
 			return _stat;
 		}

@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class MagicalEvasion extends AbstractStatEffect
 {
 	public MagicalEvasion(StatsSet params)
 	{
-		super(params, Stats.MAGIC_EVASION_RATE);
+		super(params, Stat.MAGIC_EVASION_RATE);
 	}
 }

@@ -268,7 +268,7 @@ public class DevastatedCastle
 		ch.banishForeigners();
 		ch.spawnDoor();
 		
-		setIsInProgress(true);
+		setInProgress(true);
 		
 		try
 		{
@@ -748,7 +748,7 @@ public class DevastatedCastle
 			sp.getLastSpawn().doDie(sp.getLastSpawn());
 		}
 		_spawns.clear();
-		setIsInProgress(false);
+		setInProgress(false);
 		_spawns = null;
 	}
 	
@@ -782,12 +782,12 @@ public class DevastatedCastle
 		return (player != null) && (player.getClan() != null) && player.isClanLeader() && (player.getClan().getAuctionBiddedAt() <= 0) && (ClanHallManager.getInstance().getClanHallByOwner(player.getClan()) == null) && (player.getClan().getLevel() > 3);
 	}
 	
-	public boolean getIsInProgress()
+	public boolean isInProgress()
 	{
 		return _progress;
 	}
 	
-	public void setIsInProgress(boolean is)
+	public void setInProgress(boolean is)
 	{
 		_progress = is;
 	}

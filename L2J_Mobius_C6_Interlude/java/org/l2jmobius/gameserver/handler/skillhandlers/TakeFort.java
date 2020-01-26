@@ -32,7 +32,7 @@ package org.l2jmobius.gameserver.handler.skillhandlers;
 /*
  * public static boolean checkIfOkToCastFlagDisplay(Creature creature, boolean isCheckOnly) { return checkIfOkToCastFlagDisplay(activeChar, FortManager.getInstance().getFort(activeChar), isCheckOnly); } public static boolean checkIfOkToCastFlagDisplay(Creature creature, Fort fort, boolean
  * isCheckOnly) { if (activeChar == null || !(activeChar instanceof PlayerInstance)) return false; SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2); PlayerInstance player = (PlayerInstance)activeChar; if (fort == null || fort.getFortId() <= 0)
- * sm.addString("You must be on fort ground to use this skill"); else if (player.getTarget() == null && !(player.getTarget() instanceof ArtefactInstance)) sm.addString("You can only use this skill on an flagpole"); else if (!fort.getSiege().getIsInProgress())
+ * sm.addString("You must be on fort ground to use this skill"); else if (player.getTarget() == null && !(player.getTarget() instanceof ArtefactInstance)) sm.addString("You can only use this skill on an flagpole"); else if (!fort.getSiege().isInProgress())
  * sm.addString("You can only use this skill during a siege."); else if (!Util.checkIfInRange(200, player, player.getTarget(), true)) sm.addString("You are not in range of the flagpole."); else if (fort.getSiege().getAttackerClan(player.getClan()) == null)
  * sm.addString("You must be an attacker to use this skill"); else { if (!isCheckOnly) fort.getSiege().announceToPlayer("Clan " + player.getClan().getName() + " has begun to raise flag.", true); return true; } if (!isCheckOnly) { player.sendPacket(sm); } return false; } }
  */

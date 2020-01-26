@@ -46,7 +46,7 @@ public class TeleporterInstance extends FolkInstance
 	private static final int COND_REGULAR = 3;
 	
 	/**
-	 * Instantiates a new l2 teleporter instance.
+	 * Instantiates a new teleporter instance.
 	 * @param objectId the object id
 	 * @param template the template
 	 */
@@ -98,7 +98,7 @@ public class TeleporterInstance extends FolkInstance
 				case 31118: //
 				case 31119: //
 				{
-					player.setIsIn7sDungeon(true);
+					player.setIn7sDungeon(true);
 					break;
 				}
 				case 31103: //
@@ -116,7 +116,7 @@ public class TeleporterInstance extends FolkInstance
 				case 31124: //
 				case 31125: //
 				{
-					player.setIsIn7sDungeon(false);
+					player.setIn7sDungeon(false);
 					break;
 				}
 			}
@@ -157,16 +157,16 @@ public class TeleporterInstance extends FolkInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = "" + npcId;
 		}
 		else
 		{
-			pom = npcId + "-" + val;
+			pom = npcId + "-" + value;
 		}
 		
 		return "data/html/teleporter/" + pom + ".htm";
@@ -205,20 +205,20 @@ public class TeleporterInstance extends FolkInstance
 	/**
 	 * Do teleport.
 	 * @param player the player
-	 * @param val the val
+	 * @param value the value
 	 */
-	private void doTeleport(PlayerInstance player, int val)
+	private void doTeleport(PlayerInstance player, int value)
 	{
-		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
+		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(value);
 		if (list != null)
 		{
 			// you cannot teleport to village that is in siege
-			if (!SiegeManager.getInstance().is_teleport_to_siege_allowed() && (SiegeManager.getInstance().getSiege(list.getX(), list.getY(), list.getZ()) != null) && !player.isNoble())
+			if (!SiegeManager.getInstance().isTeleportToSiegeAllowed() && (SiegeManager.getInstance().getSiege(list.getX(), list.getY(), list.getZ()) != null) && !player.isNoble())
 			{
 				player.sendPacket(SystemMessageId.NO_PORT_THAT_IS_IN_SIGE);
 				return;
 			}
-			else if (!SiegeManager.getInstance().is_teleport_to_siege_town_allowed() && TownManager.getInstance().townHasCastleInSiege(list.getX(), list.getY()) && !player.isNoble())
+			else if (!SiegeManager.getInstance().isTeleportToSiegeTownAllowed() && TownManager.getInstance().townHasCastleInSiege(list.getX(), list.getY()) && !player.isNoble())
 			{
 				player.sendPacket(SystemMessageId.NO_PORT_THAT_IS_IN_SIGE);
 				return;
@@ -240,7 +240,7 @@ public class TeleporterInstance extends FolkInstance
 				player.sendPacket(sm);
 				return;
 			}
-			else if (list.getIsForNoble() && !player.isNoble())
+			else if (list.isForNoble() && !player.isNoble())
 			{
 				final String filename = "data/html/teleporter/nobleteleporter-no.htm";
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -279,18 +279,18 @@ public class TeleporterInstance extends FolkInstance
 				zone.allowPlayerEntry(player, 300);
 				player.teleToLocation(list.getX(), list.getY(), list.getZ(), true);
 			}
-			else if (!list.getIsForNoble() && (Config.ALT_GAME_FREE_TELEPORT || player.reduceAdena("Teleport", list.getPrice(), this, true)))
+			else if (!list.isForNoble() && (Config.ALT_GAME_FREE_TELEPORT || player.reduceAdena("Teleport", list.getPrice(), this, true)))
 			{
 				player.teleToLocation(list.getX(), list.getY(), list.getZ(), true);
 			}
-			else if (list.getIsForNoble() && (Config.ALT_GAME_FREE_TELEPORT || player.destroyItemByItemId("Noble Teleport", 6651, list.getPrice(), this, true)))
+			else if (list.isForNoble() && (Config.ALT_GAME_FREE_TELEPORT || player.destroyItemByItemId("Noble Teleport", 6651, list.getPrice(), this, true)))
 			{
 				player.teleToLocation(list.getX(), list.getY(), list.getZ(), true);
 			}
 		}
 		else
 		{
-			LOGGER.warning("No teleport destination with id:" + val);
+			LOGGER.warning("No teleport destination with id:" + value);
 		}
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
@@ -306,7 +306,7 @@ public class TeleporterInstance extends FolkInstance
 		{
 			return COND_REGULAR; // Regular access
 		}
-		else if (getCastle().getSiege().getIsInProgress())
+		else if (getCastle().getSiege().isInProgress())
 		{
 			return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
 		}

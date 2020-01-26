@@ -262,7 +262,7 @@ public class FortSiege implements Siegable
 				ownerId = _fort.getOwnerClan().getId();
 			}
 			_fort.getZone().banishForeigners(ownerId);
-			_fort.getZone().setIsActive(false);
+			_fort.getZone().setActive(false);
 			_fort.getZone().updateZoneStatusForCharactersInside();
 			_fort.getZone().setSiegeInstance(null);
 			
@@ -332,7 +332,7 @@ public class FortSiege implements Siegable
 			spawnSiegeGuard(); // Spawn siege guard
 			_fort.setVisibleFlag(false);
 			_fort.getZone().setSiegeInstance(this);
-			_fort.getZone().setIsActive(true);
+			_fort.getZone().setActive(true);
 			_fort.getZone().updateZoneStatusForCharactersInside();
 			
 			// Schedule a task to prepare auto siege end
@@ -405,7 +405,7 @@ public class FortSiege implements Siegable
 				{
 					member.setSiegeState((byte) 0);
 					member.setSiegeSide(0);
-					member.setIsInSiege(false);
+					member.setInSiege(false);
 					member.stopFameTask();
 				}
 				else
@@ -414,7 +414,7 @@ public class FortSiege implements Siegable
 					member.setSiegeSide(_fort.getResidenceId());
 					if (checkIfInZone(member))
 					{
-						member.setIsInSiege(true);
+						member.setInSiege(true);
 						member.startFameTask(Config.FORTRESS_ZONE_FAME_TASK_FREQUENCY * 1000, Config.FORTRESS_ZONE_FAME_AQUIRE_POINTS);
 					}
 				}
@@ -435,7 +435,7 @@ public class FortSiege implements Siegable
 				{
 					member.setSiegeState((byte) 0);
 					member.setSiegeSide(0);
-					member.setIsInSiege(false);
+					member.setInSiege(false);
 					member.stopFameTask();
 				}
 				else
@@ -444,7 +444,7 @@ public class FortSiege implements Siegable
 					member.setSiegeSide(_fort.getResidenceId());
 					if (checkIfInZone(member))
 					{
-						member.setIsInSiege(true);
+						member.setInSiege(true);
 						member.startFameTask(Config.FORTRESS_ZONE_FAME_TASK_FREQUENCY * 1000, Config.FORTRESS_ZONE_FAME_AQUIRE_POINTS);
 					}
 				}
@@ -661,7 +661,7 @@ public class FortSiege implements Siegable
 					// open doors in main building
 					for (DoorInstance door : _fort.getDoors())
 					{
-						if (door.getIsShowHp())
+						if (door.isShowHp())
 						{
 							continue;
 						}

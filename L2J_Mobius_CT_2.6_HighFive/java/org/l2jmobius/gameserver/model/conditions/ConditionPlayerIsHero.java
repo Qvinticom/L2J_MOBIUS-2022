@@ -25,20 +25,20 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerIsHero extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
 	/**
 	 * Instantiates a new condition player is hero.
-	 * @param val the val
+	 * @param value the value
 	 */
-	public ConditionPlayerIsHero(boolean val)
+	public ConditionPlayerIsHero(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		return (effector.getActingPlayer() != null) && (effector.getActingPlayer().isHero() == _val);
+		return (effector.getActingPlayer() != null) && (effector.getActingPlayer().isHero() == _value);
 	}
 }

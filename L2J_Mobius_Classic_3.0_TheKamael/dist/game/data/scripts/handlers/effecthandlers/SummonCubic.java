@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.cubic.CubicInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoCubic;
 
 /**
@@ -90,7 +90,7 @@ public class SummonCubic extends AbstractEffect
 		{
 			// If maximum amount is reached, random cubic is removed.
 			// Players with no mastery can have only one cubic.
-			final double allowedCubicCount = player.getStat().getValue(Stats.MAX_CUBIC, 1);
+			final double allowedCubicCount = player.getStat().getValue(Stat.MAX_CUBIC, 1);
 			
 			// Extra cubics are removed, one by one, randomly.
 			final int currentCubicCount = player.getCubics().size();

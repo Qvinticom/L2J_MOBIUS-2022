@@ -119,7 +119,7 @@ public class SubClass
 		return _dualClass;
 	}
 	
-	public void setIsDualClass(boolean dualClass)
+	public void setDualClassActive(boolean dualClass)
 	{
 		_dualClass = dualClass;
 	}

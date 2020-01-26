@@ -311,7 +311,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 			{
 				npc.stopSkillEffects(PETRIFY.getSkill());
 				npc.setTargetable(true);
-				npc.setIsInvul(false);
+				npc.setInvul(false);
 				return null;
 			}
 			case "WAVE_DEFEATED_CHECK":
@@ -402,7 +402,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 			npc.doCast(PETRIFY.getSkill());
 			((Attackable) npc).setCanReturnToSpawnPoint(false);
 			npc.setTargetable(false);
-			npc.setIsInvul(true);
+			npc.setInvul(true);
 			cancelQuestTimer("REMOVE_PETRIFY", npc, null);
 			startQuestTimer("REMOVE_PETRIFY", 5 * 60 * 1000, npc, null, false); // 5 minutes
 		}

@@ -1864,7 +1864,7 @@ public class Siege
 	 * Gets the checks if is in progress.
 	 * @return the checks if is in progress
 	 */
-	public boolean getIsInProgress()
+	public boolean isInProgress()
 	{
 		return _isInProgress;
 	}
@@ -1873,7 +1873,7 @@ public class Siege
 	 * Gets the checks if is registration over.
 	 * @return the checks if is registration over
 	 */
-	public boolean getIsRegistrationOver()
+	public boolean isRegistrationOver()
 	{
 		return _isRegistrationOver;
 	}

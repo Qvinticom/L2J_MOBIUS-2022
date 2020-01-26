@@ -497,7 +497,7 @@ public class CreatureStatus
 				// Set the RegenActive flag to false
 				_currentHp = maxHp;
 				_flagsRegenActive &= ~REGEN_FLAG_HP;
-				_creature.setIsKilledAlready(false);
+				_creature.setKilledAlready(false);
 				
 				// Stop the HP/MP/CP Regeneration task
 				if (_flagsRegenActive == 0)
@@ -513,7 +513,7 @@ public class CreatureStatus
 				
 				if (!_creature.isDead())
 				{
-					_creature.setIsKilledAlready(false);
+					_creature.setKilledAlready(false);
 				}
 				
 				// Start the HP/MP/CP Regeneration task with Medium priority

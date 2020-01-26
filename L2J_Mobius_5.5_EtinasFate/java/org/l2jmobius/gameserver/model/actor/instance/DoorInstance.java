@@ -61,7 +61,7 @@ public class DoorInstance extends Creature
 	{
 		super(template);
 		setInstanceType(InstanceType.DoorInstance);
-		setIsInvul(false);
+		setInvul(false);
 		setLethalable(false);
 		_open = template.isOpenByDefault();
 		_isAttackableDoor = template.isAttackable();
@@ -224,7 +224,7 @@ public class DoorInstance extends Creature
 		}
 	}
 	
-	public boolean getIsAttackableDoor()
+	public boolean isAttackableDoor()
 	{
 		return _isAttackableDoor;
 	}
@@ -234,14 +234,14 @@ public class DoorInstance extends Creature
 		return _isInverted;
 	}
 	
-	public boolean getIsShowHp()
+	public boolean isShowHp()
 	{
 		return getTemplate().isShowHp();
 	}
 	
-	public void setIsAttackableDoor(boolean val)
+	public void setIsAttackableDoor(boolean value)
 	{
-		_isAttackableDoor = val;
+		_isAttackableDoor = value;
 	}
 	
 	public int getDamage()
@@ -274,11 +274,11 @@ public class DoorInstance extends Creature
 	
 	public boolean isEnemy()
 	{
-		if ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getZone().isActive() && getIsShowHp())
+		if ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getZone().isActive() && isShowHp())
 		{
 			return true;
 		}
-		else if ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getZone().isActive() && getIsShowHp())
+		else if ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getZone().isActive() && isShowHp())
 		{
 			return true;
 		}
@@ -297,7 +297,7 @@ public class DoorInstance extends Creature
 		{
 			return true;
 		}
-		else if (!getIsShowHp())
+		else if (!isShowHp())
 		{
 			return false;
 		}

@@ -76,7 +76,7 @@ public class RequestConfirmSiegeWaitingList implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!castle.getSiege().getIsRegistrationOver())
+		if (!castle.getSiege().isRegistrationOver())
 		{
 			if (_approved == 1)
 			{

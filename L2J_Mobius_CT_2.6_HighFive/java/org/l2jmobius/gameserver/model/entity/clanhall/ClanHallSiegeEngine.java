@@ -336,7 +336,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 			{
 				pc.setSiegeState(state);
 				pc.broadcastUserInfo();
-				pc.setIsInHideoutSiege(true);
+				pc.setInHideoutSiege(true);
 			}
 		}
 		
@@ -387,7 +387,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 			{
 				player.setSiegeState(state);
 				player.broadcastUserInfo();
-				player.setIsInHideoutSiege(false);
+				player.setInHideoutSiege(false);
 			}
 		}
 		

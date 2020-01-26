@@ -366,14 +366,14 @@ public class Util
 	}
 	
 	/**
-	 * @param val
+	 * @param value
 	 * @param format
 	 * @return formatted double value by specified format.
 	 */
-	public static String formatDouble(double val, String format)
+	public static String formatDouble(double value, String format)
 	{
 		final DecimalFormat formatter = new DecimalFormat(format, new DecimalFormatSymbols(Locale.ENGLISH));
-		return formatter.format(val);
+		return formatter.format(value);
 	}
 	
 	/**

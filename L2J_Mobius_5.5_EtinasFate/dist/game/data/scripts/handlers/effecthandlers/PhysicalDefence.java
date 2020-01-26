@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class PhysicalDefence extends AbstractConditionalHpEffect
 {
 	public PhysicalDefence(StatsSet params)
 	{
-		super(params, Stats.PHYSICAL_DEFENCE);
+		super(params, Stat.PHYSICAL_DEFENCE);
 	}
 }

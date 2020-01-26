@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.stats.Formulas;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -294,10 +294,10 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		final int tdmg2 = (int) (sAtk2 * dmg2);
 		// HP restored per 100 seconds
 		final double maxHp1 = npc1.getMaxHp();
-		final int hp1 = (int) ((npc1.getStat().getValue(Stats.REGENERATE_HP_RATE) * 100000) / Formulas.getRegeneratePeriod(npc1));
+		final int hp1 = (int) ((npc1.getStat().getValue(Stat.REGENERATE_HP_RATE) * 100000) / Formulas.getRegeneratePeriod(npc1));
 		
 		final double maxHp2 = npc2.getMaxHp();
-		final int hp2 = (int) ((npc2.getStat().getValue(Stats.REGENERATE_HP_RATE) * 100000) / Formulas.getRegeneratePeriod(npc2));
+		final int hp2 = (int) ((npc2.getStat().getValue(Stat.REGENERATE_HP_RATE) * 100000) / Formulas.getRegeneratePeriod(npc2));
 		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		

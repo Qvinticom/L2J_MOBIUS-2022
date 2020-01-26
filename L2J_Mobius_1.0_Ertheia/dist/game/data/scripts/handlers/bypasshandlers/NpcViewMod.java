@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.DropHolder;
 import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.HtmlUtil;
 import org.l2jmobius.gameserver.util.Util;
@@ -398,9 +398,9 @@ public class NpcViewMod implements IBypassHandler
 		
 		int leftHeight = 0;
 		int rightHeight = 0;
-		final double dropAmountEffectBonus = player.getStat().getValue(Stats.BONUS_DROP_AMOUNT, 1);
-		final double dropRateEffectBonus = player.getStat().getValue(Stats.BONUS_DROP_RATE, 1);
-		final double spoilRateEffectBonus = player.getStat().getValue(Stats.BONUS_SPOIL_RATE, 1);
+		final double dropAmountEffectBonus = player.getStat().getValue(Stat.BONUS_DROP_AMOUNT, 1);
+		final double dropRateEffectBonus = player.getStat().getValue(Stat.BONUS_DROP_RATE, 1);
+		final double spoilRateEffectBonus = player.getStat().getValue(Stat.BONUS_SPOIL_RATE, 1);
 		final StringBuilder leftSb = new StringBuilder();
 		final StringBuilder rightSb = new StringBuilder();
 		String limitReachedMsg = "";

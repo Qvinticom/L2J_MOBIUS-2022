@@ -27,20 +27,20 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
  */
 public class ConditionPlayerLandingZone extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
 	/**
 	 * Instantiates a new condition player landing zone.
-	 * @param val the val
+	 * @param value the value
 	 */
-	public ConditionPlayerLandingZone(boolean val)
+	public ConditionPlayerLandingZone(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		return effector.isInsideZone(ZoneId.LANDING) == _val;
+		return effector.isInsideZone(ZoneId.LANDING) == _value;
 	}
 }

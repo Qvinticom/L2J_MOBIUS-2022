@@ -289,7 +289,7 @@ public class Lindvior extends AbstractNpcAI
 				p.broadcastPacket(new ExShowScreenMessage(NpcStringId.A_FEARSOME_POWER_EMANATES_FROM_LINDVIOR, ExShowScreenMessage.TOP_CENTER, 2000, true));
 			});
 			_lindvior.broadcastPacket(new SocialAction(_lindvior.getObjectId(), 1));
-			_lindvior.setIsDead(true);
+			_lindvior.setDead(true);
 			_lindvior.deleteMe();
 			
 			_lindvior = (GrandBossInstance) addSpawn(LINDVIOR_FLY, _lindvior.getLocation(), false, 0, false);
@@ -314,7 +314,7 @@ public class Lindvior extends AbstractNpcAI
 		else if ((percent <= 60) && (_status == 2))
 		{
 			_lindvior.broadcastPacket(new SocialAction(_lindvior.getObjectId(), 1));
-			_lindvior.setIsDead(true);
+			_lindvior.setDead(true);
 			_lindvior.deleteMe();
 			
 			_lindvior = (GrandBossInstance) addSpawn(LINDVIOR_GROUND, _lindvior.getLocation(), false, 0, false);
@@ -330,7 +330,7 @@ public class Lindvior extends AbstractNpcAI
 		else if ((percent <= 40) && (_status == 3))
 		{
 			_lindvior.broadcastPacket(new SocialAction(_lindvior.getObjectId(), 1));
-			_lindvior.setIsDead(true);
+			_lindvior.setDead(true);
 			_lindvior.deleteMe();
 			
 			_lindvior = (GrandBossInstance) addSpawn(LINDVIOR_FLY, _lindvior.getLocation(), false, 0, false);
@@ -365,7 +365,7 @@ public class Lindvior extends AbstractNpcAI
 			}
 			_zoneLair.broadcastPacket(new ExShowScreenMessage(NpcStringId.LINDVIOR_HAS_LANDED, 2, 5000, true));
 			_lindvior.broadcastPacket(new SocialAction(_lindvior.getObjectId(), 1));
-			_lindvior.setIsDead(true);
+			_lindvior.setDead(true);
 			_lindvior.deleteMe();
 			_lindvior = (GrandBossInstance) addSpawn(LINDVIOR_RAID, _lindvior.getLocation(), false, 0, false);
 			_lindvior.setCurrentHp(_lindvior.getMaxHp() * 0.2);
@@ -439,7 +439,7 @@ public class Lindvior extends AbstractNpcAI
 			if (mob.isNpc())
 			{
 				mob.deleteMe();
-				mob.setIsDead(true);
+				mob.setDead(true);
 			}
 		});
 	}
@@ -525,7 +525,7 @@ public class Lindvior extends AbstractNpcAI
 			case GENERATOR_GUARD:
 			{
 				getTimers().addTimer("NPC_SHOUT", (10 + getRandom(5)) * 1000, npc, null);
-				((FriendlyNpcInstance) npc).setIsInvul(true);
+				((FriendlyNpcInstance) npc).setInvul(true);
 				break;
 			}
 			case NPC_GENERATOR:
@@ -533,7 +533,7 @@ public class Lindvior extends AbstractNpcAI
 				npc.disableCoreAI(true);
 				npc.setDisplayEffect(1);
 				npc.setRandomWalking(false);
-				npc.setIsInvul(true); // Can't get damage now
+				npc.setInvul(true); // Can't get damage now
 				_activeMask = 0;
 				_chargedMask = 0;
 				break;
@@ -605,7 +605,7 @@ public class Lindvior extends AbstractNpcAI
 				_generatorSpawn.forEach(npc ->
 				{
 					npc.setDisplayEffect(1);
-					npc.setIsInvul(false);
+					npc.setInvul(false);
 					npc.broadcastInfo();
 				});
 				
@@ -680,7 +680,7 @@ public class Lindvior extends AbstractNpcAI
 					}
 				});
 				cancelQuestTimers("attack_generator");
-				_lindvior2.setIsDead(true);
+				_lindvior2.setDead(true);
 				_lindvior2.deleteMe();
 				GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, FIGHTING);
 				_lionel = addSpawn(LIONEL_HUNTER, 42630, -48231, -792, 855, false, 0, false);
@@ -756,7 +756,7 @@ public class Lindvior extends AbstractNpcAI
 						{
 							guard.setTarget(generators);
 							guard.doCast(RECHARGE.getSkill());
-							guard.setIsInvul(false);
+							guard.setInvul(false);
 							if (!guard.isDead())
 							{
 								guard.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(GUARD_MSG_1));
@@ -905,9 +905,9 @@ public class Lindvior extends AbstractNpcAI
 		}
 	}
 	
-	private static boolean hasFlag(int val, int flag)
+	private static boolean hasFlag(int value, int flag)
 	{
-		return (val & flag) == flag;
+		return (value & flag) == flag;
 	}
 	
 	public void setLindviorSpawnTask()

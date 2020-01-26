@@ -296,7 +296,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 		}
 		final Npc mob = addSpawn(TUMOR_ALIVE, TUMOR_SPAWNS[world.getStatus()][0], TUMOR_SPAWNS[world.getStatus()][1], TUMOR_SPAWNS[world.getStatus()][2], 0, false, 0, false, world.getInstanceId());
 		mob.disableCoreAI(true);
-		mob.setIsImmobilized(true);
+		mob.setImmobilized(true);
 		mob.setCurrentHp(mob.getMaxHp() * 0.5);
 		world.npcList.put(mob, false);
 		world.incStatus();
@@ -307,8 +307,8 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 		world.incStatus();
 		world.klodekus = addSpawn(TWIN_SPAWNS[0][0], TWIN_SPAWNS[0][1], TWIN_SPAWNS[0][2], TWIN_SPAWNS[0][3], 0, false, 0, false, world.getInstanceId());
 		world.klanikus = addSpawn(TWIN_SPAWNS[1][0], TWIN_SPAWNS[1][1], TWIN_SPAWNS[1][2], TWIN_SPAWNS[1][3], 0, false, 0, false, world.getInstanceId());
-		world.klanikus.setIsMortal(false);
-		world.klodekus.setIsMortal(false);
+		world.klanikus.setMortal(false);
+		world.klodekus.setMortal(false);
 	}
 	
 	protected void bossSimpleDie(Npc boss)
@@ -322,7 +322,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 			}
 			// now reset currentHp to zero
 			boss.setCurrentHp(0);
-			boss.setIsDead(true);
+			boss.setDead(true);
 		}
 		
 		// Set target to null and cancel Attack or Cast
@@ -390,13 +390,13 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 			{
 				if (Util.checkIfInRange(500, world.klanikus, world.klodekus, false))
 				{
-					world.klanikus.setIsInvul(false);
-					world.klodekus.setIsInvul(false);
+					world.klanikus.setInvul(false);
+					world.klodekus.setInvul(false);
 				}
 				else
 				{
-					world.klanikus.setIsInvul(true);
-					world.klodekus.setIsInvul(true);
+					world.klanikus.setInvul(true);
+					world.klodekus.setInvul(true);
 				}
 				startQuestTimer("isTwinSeparated", 10000, npc, null);
 			}
@@ -415,12 +415,12 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 					npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, hated, 1000);
 				}
 				
-				aliveTwin.setIsInvul(true); // make other boss invul
+				aliveTwin.setInvul(true); // make other boss invul
 				startQuestTimer("uninvul", BOSS_INVUL_TIME, aliveTwin, null);
 			}
 			else if (event.equals("uninvul"))
 			{
-				npc.setIsInvul(false);
+				npc.setInvul(false);
 			}
 		}
 		return "";
@@ -461,13 +461,13 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 			{
 				if (world.klanikus.isDead())
 				{
-					world.klanikus.setIsDead(false);
+					world.klanikus.setDead(false);
 					world.klanikus.doDie(attacker);
 					world.klodekus.doDie(attacker);
 				}
 				else if (((HSAWorld) tmpworld).klodekus.isDead())
 				{
-					world.klodekus.setIsDead(false);
+					world.klodekus.setDead(false);
 					world.klodekus.doDie(attacker);
 					world.klanikus.doDie(attacker);
 				}

@@ -231,7 +231,7 @@ public class Benom extends Quest
 			}
 			case "BenomWalkFinish":
 			{
-				if (npc.getCastle().getSiege().getIsInProgress())
+				if (npc.getCastle().getSiege().isInProgress())
 				{
 					cancelQuestTimer("Attacking", npc, player);
 					npc.teleToLocation(WALK_ROUTES[_benomWalkRouteStep], false);

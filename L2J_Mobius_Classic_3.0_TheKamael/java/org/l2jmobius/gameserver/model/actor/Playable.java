@@ -63,14 +63,14 @@ public abstract class Playable extends Creature
 	{
 		super(objectId, template);
 		setInstanceType(InstanceType.Playable);
-		setIsInvul(false);
+		setInvul(false);
 	}
 	
 	public Playable(CreatureTemplate template)
 	{
 		super(template);
 		setInstanceType(InstanceType.Playable);
-		setIsInvul(false);
+		setInvul(false);
 	}
 	
 	@Override
@@ -115,7 +115,7 @@ public abstract class Playable extends Creature
 			}
 			// now reset currentHp to zero
 			setCurrentHp(0);
-			setIsDead(true);
+			setDead(true);
 		}
 		
 		abortAttack();

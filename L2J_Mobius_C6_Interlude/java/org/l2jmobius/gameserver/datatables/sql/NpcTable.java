@@ -36,8 +36,8 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.model.skills.BaseStats;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.BaseStat;
+import org.l2jmobius.gameserver.model.skills.Stat;
 
 /**
  * @version $Revision: 1.8.2.6.2.9 $ $Date: 2005/04/06 16:13:25 $
@@ -504,12 +504,12 @@ public class NpcTable
 			npcDat.set("baseRunSpd", npcData.getInt("runspd"));
 			
 			// constants, until we have stats in DB
-			npcDat.safeSet("baseSTR", npcData.getInt("str"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
-			npcDat.safeSet("baseCON", npcData.getInt("con"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
-			npcDat.safeSet("baseDEX", npcData.getInt("dex"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
-			npcDat.safeSet("baseINT", npcData.getInt("int"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
-			npcDat.safeSet("baseWIT", npcData.getInt("wit"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
-			npcDat.safeSet("baseMEN", npcData.getInt("men"), 0, BaseStats.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
+			npcDat.safeSet("baseSTR", npcData.getInt("str"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
+			npcDat.safeSet("baseCON", npcData.getInt("con"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
+			npcDat.safeSet("baseDEX", npcData.getInt("dex"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
+			npcDat.safeSet("baseINT", npcData.getInt("int"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
+			npcDat.safeSet("baseWIT", npcData.getInt("wit"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
+			npcDat.safeSet("baseMEN", npcData.getInt("men"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
 			
 			npcDat.set("baseCpMax", 0);
 			
@@ -522,9 +522,9 @@ public class NpcTable
 			npcDat.set("absorb_type", npcData.getString("absorb_type"));
 			
 			final NpcTemplate template = new NpcTemplate(npcDat, custom);
-			template.addVulnerability(Stats.BOW_WPN_VULN, 1);
-			template.addVulnerability(Stats.BLUNT_WPN_VULN, 1);
-			template.addVulnerability(Stats.DAGGER_WPN_VULN, 1);
+			template.addVulnerability(Stat.BOW_WPN_VULN, 1);
+			template.addVulnerability(Stat.BLUNT_WPN_VULN, 1);
+			template.addVulnerability(Stat.DAGGER_WPN_VULN, 1);
 			
 			_npcs.put(id, template);
 		}

@@ -21,14 +21,14 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author UnAfraid
  */
 public class FuncShare extends AbstractFunction
 {
-	public FuncShare(Stats stat, int order, Object owner, double value, Condition applayCond)
+	public FuncShare(Stat stat, int order, Object owner, double value, Condition applayCond)
 	{
 		super(stat, order, owner, value, applayCond);
 	}
@@ -48,7 +48,7 @@ public class FuncShare extends AbstractFunction
 		return initVal;
 	}
 	
-	public static double getBaseValue(Stats stat, PlayerInstance player)
+	public static double getBaseValue(Stat stat, PlayerInstance player)
 	{
 		switch (stat)
 		{

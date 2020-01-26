@@ -611,7 +611,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			
 			final int respawnTime = spawn.getRespawnDelay() / 1000;
-			final boolean custom_boss_spawn = spawn.is_customBossInstance();
+			final boolean custom_boss_spawn = spawn.isCustomBossInstance();
 			
 			target.deleteMe();
 			spawn.stopRespawn();

@@ -218,16 +218,16 @@ public class SchemeBufferInstance extends FolkInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String filename = "";
-		if (val == 0)
+		if (value == 0)
 		{
 			filename = Integer.toString(npcId);
 		}
 		else
 		{
-			filename = npcId + "-" + val;
+			filename = npcId + "-" + value;
 		}
 		
 		return "data/html/mods/SchemeBuffer/" + filename + ".htm";

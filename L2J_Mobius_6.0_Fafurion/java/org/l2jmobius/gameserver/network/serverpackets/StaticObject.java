@@ -64,7 +64,7 @@ public class StaticObject implements IClientOutgoingPacket
 		_isEnemy = door.isEnemy();
 		_maxHp = door.getMaxHp();
 		_currentHp = (int) door.getCurrentHp();
-		_showHp = door.getIsShowHp();
+		_showHp = door.isShowHp();
 		_damageGrade = door.getDamage();
 	}
 	

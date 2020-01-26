@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -37,6 +37,6 @@ public class InstantKillResist extends AbstractEffect
 	@Override
 	public void pump(Creature effected, Skill skill)
 	{
-		effected.getStat().mergeAdd(Stats.INSTANT_KILL_RESIST, _amount);
+		effected.getStat().mergeAdd(Stat.INSTANT_KILL_RESIST, _amount);
 	}
 }

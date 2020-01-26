@@ -345,19 +345,19 @@ public class ClanHallSiegeInfInstance extends NpcInstance
 		player.sendPacket(html);
 	}
 	
-	public void showMessageWindow(PlayerInstance player, int val)
+	public void showMessageWindow(PlayerInstance player, int value)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		long startSiege = 0;
 		final int npcId = getTemplate().getNpcId();
 		String filename;
-		if (val == 0)
+		if (value == 0)
 		{
 			filename = "data/html/default/" + npcId + ".htm";
 		}
 		else
 		{
-			filename = "data/html/default/" + npcId + "-" + val + ".htm";
+			filename = "data/html/default/" + npcId + "-" + value + ".htm";
 		}
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(filename);

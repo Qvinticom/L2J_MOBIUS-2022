@@ -212,11 +212,11 @@ public class BuffInfo
 	
 	/**
 	 * Set the buff info to removed.
-	 * @param val the value to set
+	 * @param value the value to set
 	 */
-	public void setRemoved(boolean val)
+	public void setRemoved(boolean value)
 	{
-		_isRemoved = val;
+		_isRemoved = value;
 	}
 	
 	/**
@@ -230,16 +230,16 @@ public class BuffInfo
 	
 	/**
 	 * Set the buff info to in use.
-	 * @param val the value to set
+	 * @param value the value to set
 	 */
-	public void setInUse(boolean val)
+	public void setInUse(boolean value)
 	{
-		_isInUse = val;
+		_isInUse = value;
 		
 		// Send message that the effect is applied or removed.
 		if ((_skill != null) && !_skill.isHidingMessages() && _effected.isPlayer())
 		{
-			if (val)
+			if (value)
 			{
 				if (!_hideStartMessage && !_skill.isAura())
 				{

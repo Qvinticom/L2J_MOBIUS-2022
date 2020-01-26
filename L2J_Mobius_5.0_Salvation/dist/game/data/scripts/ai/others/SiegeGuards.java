@@ -170,7 +170,7 @@ public class SiegeGuards extends AbstractNpcAI
 		npc.setRandomWalking(false);
 		if ((npc.getTemplate().getBaseAttackType() != WeaponType.SWORD) && (npc.getTemplate().getBaseAttackType() != WeaponType.POLE))
 		{
-			npc.setIsImmobilized(true);
+			npc.setImmobilized(true);
 		}
 		final Castle castle = npc.getCastle();
 		final Fort fortress = npc.getFort();

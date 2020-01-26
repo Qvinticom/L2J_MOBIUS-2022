@@ -69,11 +69,11 @@ public class TeleportLocation
 	}
 	
 	/**
-	 * @param val
+	 * @param value
 	 */
-	public void setIsForNoble(boolean val)
+	public void setForNoble(boolean value)
 	{
-		_forNoble = val;
+		_forNoble = value;
 	}
 	
 	/**
@@ -119,7 +119,7 @@ public class TeleportLocation
 	/**
 	 * @return
 	 */
-	public boolean getIsForNoble()
+	public boolean isForNoble()
 	{
 		return _forNoble;
 	}

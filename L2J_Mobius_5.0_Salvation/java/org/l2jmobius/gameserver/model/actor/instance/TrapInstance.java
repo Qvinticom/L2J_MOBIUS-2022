@@ -68,7 +68,7 @@ public class TrapInstance extends Npc
 		setInstanceType(InstanceType.TrapInstance);
 		setInstanceById(instanceId);
 		setName(template.getName());
-		setIsInvul(false);
+		setInvul(false);
 		_owner = null;
 		_isTriggered = false;
 		_skill = getParameters().getObject("trap_skill", SkillHolder.class);
@@ -364,9 +364,9 @@ public class TrapInstance extends Npc
 		return _hasLifeTime;
 	}
 	
-	public void setHasLifeTime(boolean val)
+	public void setHasLifeTime(boolean value)
 	{
-		_hasLifeTime = val;
+		_hasLifeTime = value;
 	}
 	
 	public int getRemainingTime()

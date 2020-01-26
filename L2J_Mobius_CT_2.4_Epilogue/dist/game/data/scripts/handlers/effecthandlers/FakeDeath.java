@@ -71,7 +71,7 @@ public class FakeDeath extends AbstractEffect
 	{
 		if (info.getEffected().isPlayer())
 		{
-			info.getEffected().getActingPlayer().setIsFakeDeath(false);
+			info.getEffected().getActingPlayer().setFakeDeath(false);
 			info.getEffected().getActingPlayer().setRecentFakeDeath(true);
 		}
 		

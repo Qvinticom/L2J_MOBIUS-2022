@@ -21,16 +21,16 @@ import java.util.OptionalDouble;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.stats.IStatsFunction;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.IStatFunction;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author UnAfraid
  */
-public class PAccuracyFinalizer implements IStatsFunction
+public class PAccuracyFinalizer implements IStatFunction
 {
 	@Override
-	public double calc(Creature creature, OptionalDouble base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stat stat)
 	{
 		throwIfPresent(base);
 		
@@ -73,10 +73,10 @@ public class PAccuracyFinalizer implements IStatsFunction
 		// Shadow sense
 		if (GameTimeController.getInstance().isNight())
 		{
-			baseValue += creature.getStat().getAdd(Stats.HIT_AT_NIGHT, 0);
+			baseValue += creature.getStat().getAdd(Stat.HIT_AT_NIGHT, 0);
 		}
 		
-		return Stats.defaultValue(creature, stat, baseValue);
+		return Stat.defaultValue(creature, stat, baseValue);
 	}
 	
 	@Override

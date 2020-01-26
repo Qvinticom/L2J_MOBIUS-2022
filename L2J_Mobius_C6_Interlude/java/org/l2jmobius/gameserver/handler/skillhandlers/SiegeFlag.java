@@ -85,8 +85,8 @@ public class SiegeFlag implements ISkillHandler
 			
 			if (skill.isAdvancedFlag())
 			{
-				flag.set_advanceFlag(true);
-				flag.set_advanceMultiplier(skill.getAdvancedMultiplier());
+				flag.setAdvanceFlag(true);
+				flag.setAdvanceMultiplier(skill.getAdvancedMultiplier());
 			}
 			
 			flag.setTitle(player.getClan().getName());
@@ -152,7 +152,7 @@ public class SiegeFlag implements ISkillHandler
 		{
 			sm.addString("You must be on castle ground to place a flag");
 		}
-		else if (!castle.getSiege().getIsInProgress())
+		else if (!castle.getSiege().isInProgress())
 		{
 			sm.addString("You can only place a flag during a siege.");
 		}
@@ -198,7 +198,7 @@ public class SiegeFlag implements ISkillHandler
 		{
 			sm.addString("You must be on fort ground to place a flag");
 		}
-		else if (!fort.getSiege().getIsInProgress())
+		else if (!fort.getSiege().isInProgress())
 		{
 			sm.addString("You can only place a flag during a siege.");
 		}

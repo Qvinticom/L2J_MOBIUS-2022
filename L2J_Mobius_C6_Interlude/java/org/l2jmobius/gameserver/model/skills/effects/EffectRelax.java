@@ -101,11 +101,11 @@ class EffectRelax extends Effect
 		return retval;
 	}
 	
-	private void setRelax(boolean val)
+	private void setRelax(boolean value)
 	{
 		if (getEffected() instanceof PlayerInstance)
 		{
-			((PlayerInstance) getEffected()).setRelax(val);
+			((PlayerInstance) getEffected()).setRelax(value);
 		}
 	}
 }

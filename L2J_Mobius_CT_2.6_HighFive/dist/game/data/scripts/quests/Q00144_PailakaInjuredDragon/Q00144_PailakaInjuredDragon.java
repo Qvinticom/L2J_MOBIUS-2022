@@ -334,8 +334,8 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			npc.setScriptValue(1);
 			npc.abortAttack();
 			npc.abortCast();
-			npc.setIsInvul(true);
-			npc.setIsImmobilized(true);
+			npc.setInvul(true);
+			npc.setImmobilized(true);
 			npc.disableAllSkills();
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			player.abortAttack();
@@ -398,8 +398,8 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		}
 		else if (event.equals("LATANA_INTRO_CAMERA_9"))
 		{
-			npc.setIsInvul(false);
-			npc.setIsImmobilized(false);
+			npc.setInvul(false);
+			npc.setImmobilized(false);
 			npc.enableAllSkills();
 			npc.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, player);
 			return null;
@@ -859,7 +859,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				if (mobId == npc.getId())
 				{
 					final MonsterInstance monster = (MonsterInstance) npc;
-					monster.setIsImmobilized(true);
+					monster.setImmobilized(true);
 					break;
 				}
 			}

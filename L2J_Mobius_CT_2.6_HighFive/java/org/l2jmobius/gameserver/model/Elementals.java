@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.FuncAdd;
 
 public class Elementals
@@ -259,32 +259,32 @@ public class Elementals
 			{
 				case FIRE:
 				{
-					player.addStatFunc(new FuncAdd(isArmor ? Stats.FIRE_RES : Stats.FIRE_POWER, 0x40, this, _elementalValue, null));
+					player.addStatFunc(new FuncAdd(isArmor ? Stat.FIRE_RES : Stat.FIRE_POWER, 0x40, this, _elementalValue, null));
 					break;
 				}
 				case WATER:
 				{
-					player.addStatFunc(new FuncAdd(isArmor ? Stats.WATER_RES : Stats.WATER_POWER, 0x40, this, _elementalValue, null));
+					player.addStatFunc(new FuncAdd(isArmor ? Stat.WATER_RES : Stat.WATER_POWER, 0x40, this, _elementalValue, null));
 					break;
 				}
 				case WIND:
 				{
-					player.addStatFunc(new FuncAdd(isArmor ? Stats.WIND_RES : Stats.WIND_POWER, 0x40, this, _elementalValue, null));
+					player.addStatFunc(new FuncAdd(isArmor ? Stat.WIND_RES : Stat.WIND_POWER, 0x40, this, _elementalValue, null));
 					break;
 				}
 				case EARTH:
 				{
-					player.addStatFunc(new FuncAdd(isArmor ? Stats.EARTH_RES : Stats.EARTH_POWER, 0x40, this, _elementalValue, null));
+					player.addStatFunc(new FuncAdd(isArmor ? Stat.EARTH_RES : Stat.EARTH_POWER, 0x40, this, _elementalValue, null));
 					break;
 				}
 				case DARK:
 				{
-					player.addStatFunc(new FuncAdd(isArmor ? Stats.DARK_RES : Stats.DARK_POWER, 0x40, this, _elementalValue, null));
+					player.addStatFunc(new FuncAdd(isArmor ? Stat.DARK_RES : Stat.DARK_POWER, 0x40, this, _elementalValue, null));
 					break;
 				}
 				case HOLY:
 				{
-					player.addStatFunc(new FuncAdd(isArmor ? Stats.HOLY_RES : Stats.HOLY_POWER, 0x40, this, _elementalValue, null));
+					player.addStatFunc(new FuncAdd(isArmor ? Stat.HOLY_RES : Stat.HOLY_POWER, 0x40, this, _elementalValue, null));
 					break;
 				}
 			}
@@ -305,9 +305,9 @@ public class Elementals
 			_active = false;
 		}
 		
-		public void setValue(int val)
+		public void setValue(int value)
 		{
-			_elementalValue = val;
+			_elementalValue = value;
 		}
 		
 		public void setElement(byte type)
@@ -337,10 +337,10 @@ public class Elementals
 		return _value;
 	}
 	
-	public void setValue(int val)
+	public void setValue(int value)
 	{
-		_value = val;
-		_bonus.setValue(val);
+		_value = value;
+		_bonus.setValue(value);
 	}
 	
 	@Override

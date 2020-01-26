@@ -495,7 +495,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 		if (CommonUtil.contains(NOTMOVE, npc.getId()))
 		{
 			npc.setRandomWalking(false);
-			npc.setIsImmobilized(true);
+			npc.setImmobilized(true);
 		}
 		
 		if (npc.getId() == SEED)

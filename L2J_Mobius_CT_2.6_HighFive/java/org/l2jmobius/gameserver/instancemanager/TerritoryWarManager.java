@@ -335,7 +335,7 @@ public class TerritoryWarManager implements Siegable
 		}
 	}
 	
-	public boolean getIsRegistrationOver()
+	public boolean isRegistrationOver()
 	{
 		return _isRegistrationOver;
 	}
@@ -946,7 +946,7 @@ public class TerritoryWarManager implements Siegable
 				t.changeNPCsSpawn(2, true);
 				castle.spawnDoor(); // Spawn door
 				castle.getZone().setSiegeInstance(this);
-				castle.getZone().setIsActive(true);
+				castle.getZone().setActive(true);
 				castle.getZone().updateZoneStatusForCharactersInside();
 			}
 			else
@@ -958,7 +958,7 @@ public class TerritoryWarManager implements Siegable
 				t.changeNPCsSpawn(1, true);
 				fort.resetDoors(); // Spawn door
 				fort.getZone().setSiegeInstance(this);
-				fort.getZone().setIsActive(true);
+				fort.getZone().setActive(true);
 				fort.getZone().updateZoneStatusForCharactersInside();
 			}
 			else
@@ -1043,7 +1043,7 @@ public class TerritoryWarManager implements Siegable
 				{
 					castle.spawnDoor();
 					t.changeNPCsSpawn(2, false);
-					castle.getZone().setIsActive(false);
+					castle.getZone().setActive(false);
 					castle.getZone().updateZoneStatusForCharactersInside();
 					castle.getZone().setSiegeInstance(null);
 				}
@@ -1055,7 +1055,7 @@ public class TerritoryWarManager implements Siegable
 				if (fort != null)
 				{
 					t.changeNPCsSpawn(1, false);
-					fort.getZone().setIsActive(false);
+					fort.getZone().setActive(false);
 					fort.getZone().updateZoneStatusForCharactersInside();
 					fort.getZone().setSiegeInstance(null);
 				}
@@ -1698,9 +1698,9 @@ public class TerritoryWarManager implements Siegable
 			return _isInProgress;
 		}
 		
-		public void setIsInProgress(boolean val)
+		public void setInProgress(boolean value)
 		{
-			_isInProgress = val;
+			_isInProgress = value;
 		}
 	}
 	

@@ -592,14 +592,14 @@ public class AttackableAI extends CreatureAI
 				
 				if (distance2 > (Config.MAX_DRIFT_RANGE * Config.MAX_DRIFT_RANGE))
 				{
-					npc.setisReturningToSpawnPoint(true);
+					npc.setReturningToSpawnPoint(true);
 					final float delay = (float) Math.sqrt(distance2) / Config.MAX_DRIFT_RANGE;
 					x1 = _actor.getX() + (int) ((x1 - _actor.getX()) / delay);
 					y1 = _actor.getY() + (int) ((y1 - _actor.getY()) / delay);
 				}
 				else
 				{
-					npc.setisReturningToSpawnPoint(false);
+					npc.setReturningToSpawnPoint(false);
 				}
 			}
 			else

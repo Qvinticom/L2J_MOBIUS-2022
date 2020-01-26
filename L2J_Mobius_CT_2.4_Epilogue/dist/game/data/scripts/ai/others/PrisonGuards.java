@@ -136,8 +136,8 @@ public class PrisonGuards extends AbstractNpcAI
 	{
 		if (npc.getId() == GUARD_HEAD)
 		{
-			npc.setIsImmobilized(true);
-			npc.setIsInvul(true);
+			npc.setImmobilized(true);
+			npc.setInvul(true);
 		}
 		else
 		{

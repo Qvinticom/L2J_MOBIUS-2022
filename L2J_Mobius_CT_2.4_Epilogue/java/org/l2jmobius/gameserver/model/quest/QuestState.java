@@ -181,65 +181,65 @@ public class QuestState
 	/**
 	 * Add parameter used in quests.
 	 * @param var String pointing out the name of the variable for quest
-	 * @param val String pointing out the value of the variable for quest
-	 * @return String (equal to parameter "val")
+	 * @param value String pointing out the value of the variable for quest
+	 * @return String (equal to parameter "value")
 	 */
-	public String setInternal(String var, String val)
+	public String setInternal(String var, String value)
 	{
 		if (_vars == null)
 		{
 			_vars = new HashMap<>();
 		}
 		
-		if (val == null)
+		if (value == null)
 		{
-			val = "";
+			value = "";
 		}
 		
-		_vars.put(var, val);
-		return val;
+		_vars.put(var, value);
+		return value;
 	}
 	
-	public String set(String var, int val)
+	public String set(String var, int value)
 	{
-		return set(var, Integer.toString(val));
+		return set(var, Integer.toString(value));
 	}
 	
 	/**
-	 * Return value of parameter "val" after adding the couple (var,val) in class variable "vars".<br>
+	 * Return value of parameter "value" after adding the couple (var,value) in class variable "vars".<br>
 	 * Actions:<br>
 	 * <ul>
 	 * <li>Initialize class variable "vars" if is null.</li>
-	 * <li>Initialize parameter "val" if is null</li>
-	 * <li>Add/Update couple (var,val) in class variable Map "vars"</li>
-	 * <li>If the key represented by "var" exists in Map "vars", the couple (var,val) is updated in the database.<br>
+	 * <li>Initialize parameter "value" if is null</li>
+	 * <li>Add/Update couple (var,value) in class variable Map "vars"</li>
+	 * <li>If the key represented by "var" exists in Map "vars", the couple (var,value) is updated in the database.<br>
 	 * The key is known as existing if the preceding value of the key (given as result of function put()) is not null.<br>
 	 * If the key doesn't exist, the couple is added/created in the database</li>
 	 * <ul>
 	 * @param var String indicating the name of the variable for quest
-	 * @param val String indicating the value of the variable for quest
-	 * @return String (equal to parameter "val")
+	 * @param value String indicating the value of the variable for quest
+	 * @return String (equal to parameter "value")
 	 */
-	public String set(String var, String val)
+	public String set(String var, String value)
 	{
 		if (_vars == null)
 		{
 			_vars = new HashMap<>();
 		}
 		
-		if (val == null)
+		if (value == null)
 		{
-			val = "";
+			value = "";
 		}
 		
-		final String old = _vars.put(var, val);
+		final String old = _vars.put(var, value);
 		if (old != null)
 		{
-			Quest.updateQuestVarInDb(this, var, val);
+			Quest.updateQuestVarInDb(this, var, value);
 		}
 		else
 		{
-			Quest.createQuestVarInDb(this, var, val);
+			Quest.createQuestVarInDb(this, var, value);
 		}
 		
 		if ("cond".equals(var))
@@ -255,15 +255,15 @@ public class QuestState
 				{
 					previousVal = 0;
 				}
-				setCond(Integer.parseInt(val), previousVal);
+				setCond(Integer.parseInt(value), previousVal);
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.WARNING, _player.getName() + ", " + _questName + " cond [" + val + "] is not an integer.  Value stored, but no packet was sent: " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, _player.getName() + ", " + _questName + " cond [" + value + "] is not an integer.  Value stored, but no packet was sent: " + e.getMessage(), e);
 			}
 		}
 		
-		return val;
+		return value;
 	}
 	
 	/**
@@ -442,7 +442,7 @@ public class QuestState
 	 * Sets the quest state progress ({@code cond}) to the specified step.
 	 * @param value the new value of the quest state progress
 	 * @return this {@link QuestState} object
-	 * @see #set(String var, String val)
+	 * @see #set(String var, String value)
 	 * @see #setCond(int, boolean)
 	 */
 	public QuestState setCond(int value)
@@ -485,7 +485,7 @@ public class QuestState
 	 * @param playQuestMiddle if {@code true}, plays "ItemSound.quest_middle"
 	 * @return this {@link QuestState} object
 	 * @see #setCond(int value)
-	 * @see #set(String var, String val)
+	 * @see #set(String var, String value)
 	 */
 	public QuestState setCond(int value, boolean playQuestMiddle)
 	{

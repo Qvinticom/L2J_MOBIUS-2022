@@ -335,7 +335,7 @@ public class RaceManagerInstance extends NpcInstance
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
-	public void showBuyTicket(PlayerInstance player, int val)
+	public void showBuyTicket(PlayerInstance player, int value)
 	{
 		if (_state != ACCEPTING_BETS)
 		{
@@ -347,7 +347,7 @@ public class RaceManagerInstance extends NpcInstance
 		String search;
 		String replace;
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		if (val < 10)
+		if (value < 10)
 		{
 			filename = getHtmlPath(npcId, 2);
 			html.setFile(filename);
@@ -358,17 +358,17 @@ public class RaceManagerInstance extends NpcInstance
 				html.replace(search, MonsterRace.getInstance().getMonsters()[i].getTemplate().getName());
 			}
 			search = "No1";
-			if (val == 0)
+			if (value == 0)
 			{
 				html.replace(search, "");
 			}
 			else
 			{
-				html.replace(search, "" + val);
-				player.setRace(0, val);
+				html.replace(search, "" + value);
+				player.setRace(0, value);
 			}
 		}
-		else if (val < 20)
+		else if (value < 20)
 		{
 			if (player.getRace(0) == 0)
 			{
@@ -381,17 +381,17 @@ public class RaceManagerInstance extends NpcInstance
 			replace = MonsterRace.getInstance().getMonsters()[player.getRace(0) - 1].getTemplate().getName();
 			html.replace(search, replace);
 			search = "0adena";
-			if (val == 10)
+			if (value == 10)
 			{
 				html.replace(search, "");
 			}
 			else
 			{
-				html.replace(search, "" + _cost[val - 11]);
-				player.setRace(1, val - 10);
+				html.replace(search, "" + _cost[value - 11]);
+				player.setRace(1, value - 10);
 			}
 		}
-		else if (val == 20)
+		else if (value == 20)
 		{
 			if ((player.getRace(0) == 0) || (player.getRace(1) == 0))
 			{

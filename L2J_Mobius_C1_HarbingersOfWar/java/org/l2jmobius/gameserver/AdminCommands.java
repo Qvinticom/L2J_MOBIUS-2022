@@ -1207,11 +1207,11 @@ public class AdminCommands extends Thread
 		showSkillsPage(client);
 	}
 	
-	private void adminAddSkill(ClientThread client, String val)
+	private void adminAddSkill(ClientThread client, String value)
 	{
 		final PlayerInstance activeChar = client.getActiveChar();
 		final PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
-		final StringTokenizer st = new StringTokenizer(val);
+		final StringTokenizer st = new StringTokenizer(value);
 		if (st.countTokens() != 2)
 		{
 			showSkillsPage(client);
@@ -1255,10 +1255,10 @@ public class AdminCommands extends Thread
 		removeSkillsPage(client);
 	}
 	
-	public void showSkill(ClientThread client, String val)
+	public void showSkill(ClientThread client, String value)
 	{
 		final PlayerInstance activeChar = client.getActiveChar();
-		final int skillid = Integer.parseInt(val);
+		final int skillid = Integer.parseInt(value);
 		final Skill skill = SkillTable.getInstance().getInfo(skillid, 1);
 		if ((skill != null) && (skill.getTargetType() == 0))
 		{

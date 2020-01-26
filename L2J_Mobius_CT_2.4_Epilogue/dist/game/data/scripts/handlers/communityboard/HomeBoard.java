@@ -183,7 +183,7 @@ public class HomeBoard implements IParseBoardHandler
 				player.disableAllSkills();
 				player.sendPacket(new ShowBoard());
 				player.destroyItemByItemId("CB_Teleport", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_TELEPORT_PRICE, player, true);
-				player.setIsIn7sDungeon(false);
+				player.setIn7sDungeon(false);
 				player.setInstanceId(0);
 				player.teleToLocation(Config.COMMUNITY_AVAILABLE_TELEPORTS.get(teleBuypass), 0);
 				ThreadPool.schedule(player::enableAllSkills, 3000);

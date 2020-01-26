@@ -39,7 +39,7 @@ public class Scarecrow extends AbstractNpcAI
 	public String onSpawn(Npc npc)
 	{
 		npc.disableCoreAI(true);
-		npc.setIsImmobilized(true);
+		npc.setImmobilized(true);
 		return super.onSpawn(npc);
 	}
 	

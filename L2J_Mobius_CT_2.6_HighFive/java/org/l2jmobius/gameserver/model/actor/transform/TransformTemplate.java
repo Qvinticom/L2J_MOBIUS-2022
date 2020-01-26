@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.stats.MoveType;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 
 /**
@@ -68,17 +68,17 @@ public class TransformTemplate
 		addSpeed(MoveType.SLOW_FLY, set.getDouble("flyWalk", 0));
 		addSpeed(MoveType.FAST_FLY, set.getDouble("flyRun", 0));
 		
-		addStats(Stats.POWER_ATTACK, set.getDouble("pAtk", 0));
-		addStats(Stats.MAGIC_ATTACK, set.getDouble("mAtk", 0));
-		addStats(Stats.POWER_ATTACK_RANGE, set.getInt("range", 0));
-		addStats(Stats.POWER_ATTACK_SPEED, set.getInt("attackSpeed", 0));
-		addStats(Stats.CRITICAL_RATE, set.getInt("critRate", 0));
-		addStats(Stats.STAT_STR, set.getInt("str", 0));
-		addStats(Stats.STAT_INT, set.getInt("int", 0));
-		addStats(Stats.STAT_CON, set.getInt("con", 0));
-		addStats(Stats.STAT_DEX, set.getInt("dex", 0));
-		addStats(Stats.STAT_WIT, set.getInt("wit", 0));
-		addStats(Stats.STAT_MEN, set.getInt("men", 0));
+		addStats(Stat.POWER_ATTACK, set.getDouble("pAtk", 0));
+		addStats(Stat.MAGIC_ATTACK, set.getDouble("mAtk", 0));
+		addStats(Stat.POWER_ATTACK_RANGE, set.getInt("range", 0));
+		addStats(Stat.POWER_ATTACK_SPEED, set.getInt("attackSpeed", 0));
+		addStats(Stat.CRITICAL_RATE, set.getInt("critRate", 0));
+		addStats(Stat.STAT_STR, set.getInt("str", 0));
+		addStats(Stat.STAT_INT, set.getInt("int", 0));
+		addStats(Stat.STAT_CON, set.getInt("con", 0));
+		addStats(Stat.STAT_DEX, set.getInt("dex", 0));
+		addStats(Stat.STAT_WIT, set.getInt("wit", 0));
+		addStats(Stat.STAT_MEN, set.getInt("men", 0));
 		
 		addDefense(Inventory.PAPERDOLL_CHEST, set.getInt("chest", 0));
 		addDefense(Inventory.PAPERDOLL_LEGS, set.getInt("legs", 0));
@@ -94,13 +94,13 @@ public class TransformTemplate
 		addDefense(Inventory.PAPERDOLL_NECK, set.getInt("neck", 0));
 	}
 	
-	private void addSpeed(MoveType type, double val)
+	private void addSpeed(MoveType type, double value)
 	{
 		if (_baseSpeed == null)
 		{
 			_baseSpeed = new HashMap<>();
 		}
-		_baseSpeed.put(type.ordinal(), val);
+		_baseSpeed.put(type.ordinal(), value);
 	}
 	
 	public double getBaseMoveSpeed(MoveType type)
@@ -112,13 +112,13 @@ public class TransformTemplate
 		return _baseSpeed.get(type.ordinal());
 	}
 	
-	private void addDefense(int type, int val)
+	private void addDefense(int type, int value)
 	{
 		if (_baseDefense == null)
 		{
 			_baseDefense = new HashMap<>();
 		}
-		_baseDefense.put(type, val);
+		_baseDefense.put(type, value);
 	}
 	
 	public int getDefense(int type)
@@ -130,22 +130,22 @@ public class TransformTemplate
 		return _baseDefense.get(type);
 	}
 	
-	private void addStats(Stats stats, double val)
+	private void addStats(Stat stat, double value)
 	{
 		if (_baseStats == null)
 		{
 			_baseStats = new HashMap<>();
 		}
-		_baseStats.put(stats.ordinal(), val);
+		_baseStats.put(stat.ordinal(), value);
 	}
 	
-	public double getStats(Stats stats)
+	public double getStats(Stat stat)
 	{
-		if ((_baseStats == null) || !_baseStats.containsKey(stats.ordinal()))
+		if ((_baseStats == null) || !_baseStats.containsKey(stat.ordinal()))
 		{
 			return 0;
 		}
-		return _baseStats.get(stats.ordinal());
+		return _baseStats.get(stat.ordinal());
 	}
 	
 	public double getCollisionRadius()

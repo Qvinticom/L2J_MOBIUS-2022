@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -37,7 +37,7 @@ public class PolearmSingleTarget extends AbstractEffect
 	{
 		if (effected.isPlayer())
 		{
-			effected.getStat().addFixedValue(Stats.PHYSICAL_POLEARM_TARGET_SINGLE, 1.0);
+			effected.getStat().addFixedValue(Stat.PHYSICAL_POLEARM_TARGET_SINGLE, 1.0);
 		}
 	}
 	
@@ -46,7 +46,7 @@ public class PolearmSingleTarget extends AbstractEffect
 	{
 		if (effected.isPlayer())
 		{
-			effected.getStat().removeFixedValue(Stats.PHYSICAL_POLEARM_TARGET_SINGLE);
+			effected.getStat().removeFixedValue(Stat.PHYSICAL_POLEARM_TARGET_SINGLE);
 		}
 	}
 }

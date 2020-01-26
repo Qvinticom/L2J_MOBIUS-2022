@@ -17,13 +17,13 @@
 package org.l2jmobius.gameserver.model.skills.funcs;
 
 import org.l2jmobius.gameserver.model.skills.Env;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 
 public class FuncAdd extends Func
 {
 	private final Lambda _lambda;
 	
-	public FuncAdd(Stats pStat, int pOrder, Object owner, Lambda lambda)
+	public FuncAdd(Stat pStat, int pOrder, Object owner, Lambda lambda)
 	{
 		super(pStat, pOrder, owner);
 		_lambda = lambda;

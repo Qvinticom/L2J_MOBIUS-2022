@@ -83,11 +83,11 @@ public class FortSiegeGuardInstance extends Attackable
 		boolean isFort = false;
 		if (attacker instanceof PlayerInstance)
 		{
-			isFort = ((getFort() != null) && (getFort().getFortId() > 0) && getFort().getSiege().getIsInProgress() && !getFort().getSiege().checkIsDefender(((PlayerInstance) attacker).getClan()));
+			isFort = ((getFort() != null) && (getFort().getFortId() > 0) && getFort().getSiege().isInProgress() && !getFort().getSiege().checkIsDefender(((PlayerInstance) attacker).getClan()));
 		}
 		else
 		{
-			isFort = ((getFort() != null) && (getFort().getFortId() > 0) && getFort().getSiege().getIsInProgress() && !getFort().getSiege().checkIsDefender(((Summon) attacker).getOwner().getClan()));
+			isFort = ((getFort() != null) && (getFort().getFortId() > 0) && getFort().getSiege().isInProgress() && !getFort().getSiege().checkIsDefender(((Summon) attacker).getOwner().getClan()));
 		}
 		
 		// Attackable during siege by all except defenders
@@ -111,7 +111,7 @@ public class FortSiegeGuardInstance extends Attackable
 		}
 		if (!isInsideRadius(getSpawn().getX(), getSpawn().getY(), 40, false))
 		{
-			setisReturningToSpawnPoint(true);
+			setReturningToSpawnPoint(true);
 			clearAggroList();
 			
 			if (hasAI())

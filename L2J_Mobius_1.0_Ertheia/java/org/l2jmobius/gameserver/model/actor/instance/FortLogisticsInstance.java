@@ -182,19 +182,19 @@ public class FortLogisticsInstance extends MerchantInstance
 		showMessageWindow(player, 0);
 	}
 	
-	private void showMessageWindow(PlayerInstance player, int val)
+	private void showMessageWindow(PlayerInstance player, int value)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		
 		String filename;
 		
-		if (val == 0)
+		if (value == 0)
 		{
 			filename = "data/html/fortress/logistics.htm";
 		}
 		else
 		{
-			filename = "data/html/fortress/logistics-" + val + ".htm";
+			filename = "data/html/fortress/logistics-" + value + ".htm";
 		}
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -213,17 +213,17 @@ public class FortLogisticsInstance extends MerchantInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val, PlayerInstance player)
+	public String getHtmlPath(int npcId, int value, PlayerInstance player)
 	{
 		String pom = "";
 		
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = "logistics";
 		}
 		else
 		{
-			pom = "logistics-" + val;
+			pom = "logistics-" + value;
 		}
 		
 		return "data/html/fortress/" + pom + ".htm";

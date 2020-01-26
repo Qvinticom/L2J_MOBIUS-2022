@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Calculator;
 import org.l2jmobius.gameserver.model.skills.Env;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 
 public class CreatureStat
@@ -61,7 +61,7 @@ public class CreatureStat
 	 * @param skill The Skill whose properties will be used in the calculation (ex : Level...)
 	 * @return the double
 	 */
-	public double calcStat(Stats stat, double init, Creature target, Skill skill)
+	public double calcStat(Stat stat, double init, Creature target, Skill skill)
 	{
 		if (_creature == null)
 		{
@@ -130,7 +130,7 @@ public class CreatureStat
 			return 0;
 		}
 		
-		return (int) (calcStat(Stats.ACCURACY_COMBAT, 0, null, null) / _creature.getWeaponExpertisePenalty());
+		return (int) (calcStat(Stat.ACCURACY_COMBAT, 0, null, null) / _creature.getWeaponExpertisePenalty());
 	}
 	
 	/**
@@ -167,7 +167,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.STAT_CON, _creature.getTemplate().getBaseCON(), null, null);
+		return (int) calcStat(Stat.STAT_CON, _creature.getTemplate().getBaseCON(), null, null);
 	}
 	
 	/**
@@ -178,7 +178,7 @@ public class CreatureStat
 	 */
 	public double getCriticalDmg(Creature target, double init)
 	{
-		return calcStat(Stats.CRITICAL_DAMAGE, init, target, null);
+		return calcStat(Stat.CRITICAL_DAMAGE, init, target, null);
 	}
 	
 	/**
@@ -194,7 +194,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		int criticalHit = (int) ((calcStat(Stats.CRITICAL_RATE, _creature.getTemplate().getBaseCritRate(), target, skill) * 10.0) + 0.5);
+		int criticalHit = (int) ((calcStat(Stat.CRITICAL_RATE, _creature.getTemplate().getBaseCritRate(), target, skill) * 10.0) + 0.5);
 		
 		criticalHit /= 10;
 		
@@ -218,7 +218,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.STAT_DEX, _creature.getTemplate().getBaseDEX(), null, null);
+		return (int) calcStat(Stat.STAT_DEX, _creature.getTemplate().getBaseDEX(), null, null);
 	}
 	
 	/**
@@ -233,7 +233,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) (calcStat(Stats.EVASION_RATE, 0, target, null) / _creature.getArmourExpertisePenalty());
+		return (int) (calcStat(Stat.EVASION_RATE, 0, target, null) / _creature.getArmourExpertisePenalty());
 	}
 	
 	/**
@@ -265,7 +265,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.STAT_INT, _creature.getTemplate().getBaseINT(), null, null);
+		return (int) calcStat(Stat.STAT_INT, _creature.getTemplate().getBaseINT(), null, null);
 	}
 	
 	/**
@@ -295,7 +295,7 @@ public class CreatureStat
 	{
 		if (skill != null)
 		{
-			return (int) calcStat(Stats.MAGIC_ATTACK_RANGE, skill.getCastRange(), null, skill);
+			return (int) calcStat(Stat.MAGIC_ATTACK_RANGE, skill.getCastRange(), null, skill);
 		}
 		
 		if (_creature == null)
@@ -317,7 +317,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.MAX_CP, _creature.getTemplate().getBaseCpMax(), null, null);
+		return (int) calcStat(Stat.MAX_CP, _creature.getTemplate().getBaseCpMax(), null, null);
 	}
 	
 	/**
@@ -331,7 +331,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.MAX_HP, _creature.getTemplate().getBaseHpMax(), null, null);
+		return (int) calcStat(Stat.MAX_HP, _creature.getTemplate().getBaseHpMax(), null, null);
 	}
 	
 	/**
@@ -345,7 +345,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.MAX_MP, _creature.getTemplate().getBaseMpMax(), null, null);
+		return (int) calcStat(Stat.MAX_MP, _creature.getTemplate().getBaseMpMax(), null, null);
 	}
 	
 	/**
@@ -376,7 +376,7 @@ public class CreatureStat
 		double attack = _creature.getTemplate().getBaseMAtk() * bonusAtk;
 		
 		// Get the skill type to calculate its effect in function of base stats of the Creature target.
-		final Stats stat = skill == null ? null : skill.getStat();
+		final Stat stat = skill == null ? null : skill.getStat();
 		
 		if (stat != null)
 		{
@@ -462,7 +462,7 @@ public class CreatureStat
 		}
 		
 		// Calculate modifiers Magic Attack
-		return (int) calcStat(Stats.MAGIC_ATTACK, attack, target, skill);
+		return (int) calcStat(Stat.MAGIC_ATTACK, attack, target, skill);
 	}
 	
 	/**
@@ -483,7 +483,7 @@ public class CreatureStat
 			bonusSpdAtk = Config.L2JMOD_CHAMPION_SPD_ATK;
 		}
 		
-		double val = calcStat(Stats.MAGIC_ATTACK_SPEED, _creature.getTemplate().getBaseMAtkSpd() * bonusSpdAtk, null, null);
+		double val = calcStat(Stat.MAGIC_ATTACK_SPEED, _creature.getTemplate().getBaseMAtkSpd() * bonusSpdAtk, null, null);
 		
 		val /= _creature.getArmourExpertisePenalty();
 		
@@ -508,7 +508,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		double mrate = calcStat(Stats.MCRITICAL_RATE, (_creature.getTemplate().getBaseMCritRate()) * Config.MCRIT_RATE_MUL, target, skill);
+		double mrate = calcStat(Stat.MCRITICAL_RATE, (_creature.getTemplate().getBaseMCritRate()) * Config.MCRIT_RATE_MUL, target, skill);
 		
 		if (mrate > Config.MAX_MCRIT_RATE)
 		{
@@ -545,7 +545,7 @@ public class CreatureStat
 		}
 		
 		// Calculate modifiers Magic Attack
-		return (int) calcStat(Stats.MAGIC_DEFENCE, defence, target, skill);
+		return (int) calcStat(Stat.MAGIC_DEFENCE, defence, target, skill);
 	}
 	
 	/**
@@ -559,7 +559,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.STAT_MEN, _creature.getTemplate().getBaseMEN(), null, null);
+		return (int) calcStat(Stat.STAT_MEN, _creature.getTemplate().getBaseMEN(), null, null);
 	}
 	
 	/**
@@ -612,7 +612,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return calcStat(Stats.MAGIC_REUSE_RATE, _creature.getTemplate().getBaseMReuseRate(), null, skill);
+		return calcStat(Stat.MAGIC_REUSE_RATE, _creature.getTemplate().getBaseMReuseRate(), null, skill);
 	}
 	
 	/**
@@ -627,7 +627,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return calcStat(Stats.P_REUSE, _creature.getTemplate().getBaseMReuseRate(), null, skill);
+		return calcStat(Stat.P_REUSE, _creature.getTemplate().getBaseMReuseRate(), null, skill);
 	}
 	
 	/**
@@ -649,7 +649,7 @@ public class CreatureStat
 			bonusAtk = Config.L2JMOD_CHAMPION_ATK;
 		}
 		
-		return (int) calcStat(Stats.POWER_ATTACK, _creature.getTemplate().getBasePAtk() * bonusAtk, target, null);
+		return (int) calcStat(Stat.POWER_ATTACK, _creature.getTemplate().getBasePAtk() * bonusAtk, target, null);
 	}
 	
 	/**
@@ -659,7 +659,7 @@ public class CreatureStat
 	 */
 	public double getPAtkAnimals(Creature target)
 	{
-		return calcStat(Stats.PATK_ANIMALS, 1, target, null);
+		return calcStat(Stat.PATK_ANIMALS, 1, target, null);
 	}
 	
 	/**
@@ -669,7 +669,7 @@ public class CreatureStat
 	 */
 	public double getPAtkDragons(Creature target)
 	{
-		return calcStat(Stats.PATK_DRAGONS, 1, target, null);
+		return calcStat(Stat.PATK_DRAGONS, 1, target, null);
 	}
 	
 	/**
@@ -679,7 +679,7 @@ public class CreatureStat
 	 */
 	public double getPAtkAngels(Creature target)
 	{
-		return calcStat(Stats.PATK_ANGELS, 1, target, null);
+		return calcStat(Stat.PATK_ANGELS, 1, target, null);
 	}
 	
 	/**
@@ -689,7 +689,7 @@ public class CreatureStat
 	 */
 	public double getPAtkInsects(Creature target)
 	{
-		return calcStat(Stats.PATK_INSECTS, 1, target, null);
+		return calcStat(Stat.PATK_INSECTS, 1, target, null);
 	}
 	
 	/**
@@ -699,7 +699,7 @@ public class CreatureStat
 	 */
 	public double getPAtkMonsters(Creature target)
 	{
-		return calcStat(Stats.PATK_MONSTERS, 1, target, null);
+		return calcStat(Stat.PATK_MONSTERS, 1, target, null);
 	}
 	
 	/**
@@ -709,7 +709,7 @@ public class CreatureStat
 	 */
 	public double getPAtkPlants(Creature target)
 	{
-		return calcStat(Stats.PATK_PLANTS, 1, target, null);
+		return calcStat(Stat.PATK_PLANTS, 1, target, null);
 	}
 	
 	/**
@@ -730,7 +730,7 @@ public class CreatureStat
 			bonusAtk = Config.L2JMOD_CHAMPION_SPD_ATK;
 		}
 		
-		double val = calcStat(Stats.POWER_ATTACK_SPEED, _creature.getTemplate().getBasePAtkSpd() * bonusAtk, null, null);
+		double val = calcStat(Stat.POWER_ATTACK_SPEED, _creature.getTemplate().getBasePAtkSpd() * bonusAtk, null, null);
 		
 		val /= _creature.getArmourExpertisePenalty();
 		
@@ -749,7 +749,7 @@ public class CreatureStat
 	 */
 	public double getPAtkUndead(Creature target)
 	{
-		return calcStat(Stats.PATK_UNDEAD, 1, target, null);
+		return calcStat(Stat.PATK_UNDEAD, 1, target, null);
 	}
 	
 	/**
@@ -759,7 +759,7 @@ public class CreatureStat
 	 */
 	public double getPDefUndead(Creature target)
 	{
-		return calcStat(Stats.PDEF_UNDEAD, 1, target, null);
+		return calcStat(Stat.PDEF_UNDEAD, 1, target, null);
 	}
 	
 	/**
@@ -769,7 +769,7 @@ public class CreatureStat
 	 */
 	public double getPDefPlants(Creature target)
 	{
-		return calcStat(Stats.PDEF_PLANTS, 1, target, null);
+		return calcStat(Stat.PDEF_PLANTS, 1, target, null);
 	}
 	
 	/**
@@ -779,7 +779,7 @@ public class CreatureStat
 	 */
 	public double getPDefInsects(Creature target)
 	{
-		return calcStat(Stats.PDEF_INSECTS, 1, target, null);
+		return calcStat(Stat.PDEF_INSECTS, 1, target, null);
 	}
 	
 	/**
@@ -789,7 +789,7 @@ public class CreatureStat
 	 */
 	public double getPDefAnimals(Creature target)
 	{
-		return calcStat(Stats.PDEF_ANIMALS, 1, target, null);
+		return calcStat(Stat.PDEF_ANIMALS, 1, target, null);
 	}
 	
 	/**
@@ -799,7 +799,7 @@ public class CreatureStat
 	 */
 	public double getPDefMonsters(Creature target)
 	{
-		return calcStat(Stats.PDEF_MONSTERS, 1, target, null);
+		return calcStat(Stat.PDEF_MONSTERS, 1, target, null);
 	}
 	
 	/**
@@ -809,7 +809,7 @@ public class CreatureStat
 	 */
 	public double getPDefDragons(Creature target)
 	{
-		return calcStat(Stats.PDEF_DRAGONS, 1, target, null);
+		return calcStat(Stat.PDEF_DRAGONS, 1, target, null);
 	}
 	
 	/**
@@ -819,7 +819,7 @@ public class CreatureStat
 	 */
 	public double getPDefAngels(Creature target)
 	{
-		return calcStat(Stats.PDEF_ANGELS, 1, target, null);
+		return calcStat(Stat.PDEF_ANGELS, 1, target, null);
 	}
 	
 	/**
@@ -844,7 +844,7 @@ public class CreatureStat
 		}
 		
 		// Calculate modifiers Magic Attack
-		return (int) calcStat(Stats.POWER_DEFENCE, defence, target, null);
+		return (int) calcStat(Stat.POWER_DEFENCE, defence, target, null);
 	}
 	
 	/**
@@ -857,7 +857,7 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		return (int) calcStat(Stats.POWER_ATTACK_RANGE, _creature.getTemplate().getBaseAtkRange(), null, null);
+		return (int) calcStat(Stat.POWER_ATTACK_RANGE, _creature.getTemplate().getBaseAtkRange(), null, null);
 	}
 	
 	/**
@@ -867,7 +867,7 @@ public class CreatureStat
 	 */
 	public double getReuseModifier(Creature target)
 	{
-		return calcStat(Stats.ATK_REUSE, 1, target, null);
+		return calcStat(Stat.ATK_REUSE, 1, target, null);
 	}
 	
 	/**
@@ -882,7 +882,7 @@ public class CreatureStat
 		}
 		
 		// err we should be adding TO the persons run speed not making it a constant
-		int val = (int) calcStat(Stats.RUN_SPEED, _creature.getTemplate().getBaseRunSpd(), null, null) + Config.RUN_SPD_BOOST;
+		int val = (int) calcStat(Stat.RUN_SPEED, _creature.getTemplate().getBaseRunSpd(), null, null) + Config.RUN_SPD_BOOST;
 		if (_creature.isInsideZone(ZoneId.WATER))
 		{
 			val /= 2;
@@ -915,7 +915,7 @@ public class CreatureStat
 	 */
 	public int getShldDef()
 	{
-		return (int) calcStat(Stats.SHIELD_DEFENCE, 0, null, null);
+		return (int) calcStat(Stat.SHIELD_DEFENCE, 0, null, null);
 	}
 	
 	/**
@@ -947,7 +947,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.STAT_STR, _creature.getTemplate().getBaseSTR(), null, null);
+		return (int) calcStat(Stat.STAT_STR, _creature.getTemplate().getBaseSTR(), null, null);
 	}
 	
 	/**
@@ -965,7 +965,7 @@ public class CreatureStat
 		{
 			return (getRunSpeed() * 70) / 100;
 		}
-		return (int) calcStat(Stats.WALK_SPEED, _creature.getTemplate().getBaseWalkSpd(), null, null);
+		return (int) calcStat(Stat.WALK_SPEED, _creature.getTemplate().getBaseWalkSpd(), null, null);
 	}
 	
 	/**
@@ -979,7 +979,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.STAT_WIT, _creature.getTemplate().getBaseWIT(), null, null);
+		return (int) calcStat(Stat.STAT_WIT, _creature.getTemplate().getBaseWIT(), null, null);
 	}
 	
 	/**
@@ -1001,7 +1001,7 @@ public class CreatureStat
 			mpconsume += _creature.getDanceCount() * skill.getNextDanceMpCost();
 		}
 		
-		return (int) calcStat(Stats.MP_CONSUME, mpconsume, null, skill);
+		return (int) calcStat(Stat.MP_CONSUME, mpconsume, null, skill);
 	}
 	
 	/**
@@ -1016,7 +1016,7 @@ public class CreatureStat
 			return 1;
 		}
 		
-		return (int) calcStat(Stats.MP_CONSUME, skill.getMpInitialConsume(), null, skill);
+		return (int) calcStat(Stat.MP_CONSUME, skill.getMpInitialConsume(), null, skill);
 	}
 	
 	/**
@@ -1026,7 +1026,7 @@ public class CreatureStat
 	 */
 	public double getPDefGiants(Creature target)
 	{
-		return calcStat(Stats.PDEF_GIANTS, 1, target, null);
+		return calcStat(Stat.PDEF_GIANTS, 1, target, null);
 	}
 	
 	/**
@@ -1036,7 +1036,7 @@ public class CreatureStat
 	 */
 	public double getPDefMagicCreatures(Creature target)
 	{
-		return calcStat(Stats.PDEF_MCREATURES, 1, target, null);
+		return calcStat(Stat.PDEF_MCREATURES, 1, target, null);
 	}
 	
 	/**
@@ -1046,7 +1046,7 @@ public class CreatureStat
 	 */
 	public double getPAtkGiants(Creature target)
 	{
-		return calcStat(Stats.PATK_GIANTS, 1, target, null);
+		return calcStat(Stat.PATK_GIANTS, 1, target, null);
 	}
 	
 	/**
@@ -1056,6 +1056,6 @@ public class CreatureStat
 	 */
 	public double getPAtkMagicCreatures(Creature target)
 	{
-		return calcStat(Stats.PATK_MCREATURES, 1, target, null);
+		return calcStat(Stat.PATK_MCREATURES, 1, target, null);
 	}
 }

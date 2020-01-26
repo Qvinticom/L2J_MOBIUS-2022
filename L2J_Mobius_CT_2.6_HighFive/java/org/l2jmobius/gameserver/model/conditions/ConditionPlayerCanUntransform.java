@@ -29,11 +29,11 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class ConditionPlayerCanUntransform extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
-	public ConditionPlayerCanUntransform(boolean val)
+	public ConditionPlayerCanUntransform(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
@@ -54,6 +54,6 @@ public class ConditionPlayerCanUntransform extends Condition
 			player.sendPacket(SystemMessageId.YOU_ARE_TOO_HIGH_TO_PERFORM_THIS_ACTION_PLEASE_LOWER_YOUR_ALTITUDE_AND_TRY_AGAIN); // TODO: check if message is retail like.
 			canUntransform = false;
 		}
-		return _val == canUntransform;
+		return _value == canUntransform;
 	}
 }

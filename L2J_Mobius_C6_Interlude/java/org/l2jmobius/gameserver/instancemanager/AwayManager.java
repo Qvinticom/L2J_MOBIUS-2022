@@ -69,13 +69,13 @@ public class AwayManager
 	
 	public void setAway(PlayerInstance player, String text)
 	{
-		player.set_awaying(true);
+		player.setAwaying(true);
 		player.broadcastPacket(new SocialAction(player.getObjectId(), 9));
 		player.sendMessage("Your status is Away in " + Config.AWAY_TIMER + " Sec.");
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		final SetupGauge sg = new SetupGauge(SetupGauge.BLUE, Config.AWAY_TIMER * 1000);
 		player.sendPacket(sg);
-		player.setIsImobilised(true);
+		player.setImmobilized(true);
 		ThreadPool.schedule(new setPlayerAwayTask(player, text), Config.AWAY_TIMER * 1000);
 	}
 	
@@ -132,7 +132,7 @@ public class AwayManager
 			_player.abortAttack();
 			_player.abortCast();
 			_player.setTarget(null);
-			_player.setIsImobilised(false);
+			_player.setImmobilized(false);
 			if (!_player.isSitting())
 			{
 				_player.sitDown();
@@ -158,9 +158,9 @@ public class AwayManager
 			}
 			
 			_player.broadcastUserInfo();
-			_player.setIsParalyzed(true);
-			_player.setIsAway(true);
-			_player.set_awaying(false);
+			_player.setParalyzed(true);
+			_player.setAway(true);
+			_player.setAwaying(false);
 		}
 	}
 	
@@ -187,9 +187,9 @@ public class AwayManager
 				return;
 			}
 			
-			_player.setIsParalyzed(false);
+			_player.setParalyzed(false);
 			_player.enableAllSkills();
-			_player.setIsAway(false);
+			_player.setAway(false);
 			
 			if (rd.isSitForced())
 			{

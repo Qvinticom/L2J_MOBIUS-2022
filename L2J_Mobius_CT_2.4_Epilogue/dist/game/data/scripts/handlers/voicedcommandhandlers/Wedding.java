@@ -504,9 +504,9 @@ public class Wedding implements IVoicedCommandHandler
 				return;
 			}
 			
-			_player.setIsIn7sDungeon(_to7sDungeon);
+			_player.setIn7sDungeon(_to7sDungeon);
 			_player.enableAllSkills();
-			_player.setIsCastingNow(false);
+			_player.setCastingNow(false);
 			
 			try
 			{

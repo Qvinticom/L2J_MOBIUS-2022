@@ -93,7 +93,7 @@ public class Recall implements ISkillHandler
 						continue;
 					}
 					
-					if ((targetChar._inEventCTF && CTF.isStarted()) || (targetChar._inEventTvT && TvT.isStarted()) || (targetChar._inEventDM && DM.is_started()) || (targetChar._inEventVIP && VIP._started))
+					if ((targetChar._inEventCTF && CTF.isStarted()) || (targetChar._inEventTvT && TvT.isStarted()) || (targetChar._inEventDM && DM.hasStarted()) || (targetChar._inEventVIP && VIP._started))
 					{
 						targetChar.sendMessage("You can't use escape skill in Event.");
 						continue;

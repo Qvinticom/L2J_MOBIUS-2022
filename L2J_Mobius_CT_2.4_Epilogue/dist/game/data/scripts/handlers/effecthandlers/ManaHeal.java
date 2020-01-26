@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -59,7 +59,7 @@ public class ManaHeal extends AbstractEffect
 		
 		if (!info.getSkill().isStatic())
 		{
-			amount = target.calcStat(Stats.MANA_CHARGE, amount, null, null);
+			amount = target.calcStat(Stat.MANA_CHARGE, amount, null, null);
 		}
 		
 		// Prevents overheal and negative amount

@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -53,7 +53,7 @@ public class ManaHeal implements ISkillHandler
 			}
 			else
 			{
-				mp = (skill.getSkillType() == SkillType.MANARECHARGE) ? target.calcStat(Stats.RECHARGE_MP_RATE, mp, null, null) : mp;
+				mp = (skill.getSkillType() == SkillType.MANARECHARGE) ? target.calcStat(Stat.RECHARGE_MP_RATE, mp, null, null) : mp;
 			}
 			
 			target.setLastHealAmount((int) mp);

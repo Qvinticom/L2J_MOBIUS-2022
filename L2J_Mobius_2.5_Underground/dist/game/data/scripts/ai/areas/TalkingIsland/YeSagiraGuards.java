@@ -62,7 +62,7 @@ public class YeSagiraGuards extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		npc.setIsInvul(true);
+		npc.setInvul(true);
 		startQuestTimer("GUARD_AGGRO", 5000, npc, null);
 		return super.onSpawn(npc);
 	}

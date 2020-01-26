@@ -575,9 +575,9 @@ public abstract class ZoneType extends ListenersContainer
 		_zone.visualizeZone(z);
 	}
 	
-	public void setEnabled(boolean state)
+	public void setEnabled(boolean value)
 	{
-		_enabled = state;
+		_enabled = value;
 	}
 	
 	public boolean isEnabled()

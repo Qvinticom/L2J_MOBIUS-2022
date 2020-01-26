@@ -56,7 +56,7 @@ public class TamedBeastInstance extends FeedableBeastInstance
 	private Future<?> _durationCheckTask = null;
 	
 	/**
-	 * Instantiates a new l2 tamed beast instance.
+	 * Instantiates a new tamed beast instance.
 	 * @param objectId the object id
 	 * @param template the template
 	 */
@@ -67,7 +67,7 @@ public class TamedBeastInstance extends FeedableBeastInstance
 	}
 	
 	/**
-	 * Instantiates a new l2 tamed beast instance.
+	 * Instantiates a new tamed beast instance.
 	 * @param objectId the object id
 	 * @param template the template
 	 * @param owner the owner

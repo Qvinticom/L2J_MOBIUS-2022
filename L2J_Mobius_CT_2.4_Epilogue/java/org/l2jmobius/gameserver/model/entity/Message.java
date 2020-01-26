@@ -313,9 +313,9 @@ public class Message
 		return _returned;
 	}
 	
-	public void setIsReturned(boolean val)
+	public void setReturned(boolean value)
 	{
-		_returned = val;
+		_returned = value;
 	}
 	
 	public long getReqAdena()

@@ -61,7 +61,7 @@ public class StaticObjectInstance extends WorldObject
 	}
 	
 	/**
-	 * Instantiates a new l2 static object instance.
+	 * Instantiates a new static object instance.
 	 * @param objectId the object id
 	 */
 	public StaticObjectInstance(int objectId)

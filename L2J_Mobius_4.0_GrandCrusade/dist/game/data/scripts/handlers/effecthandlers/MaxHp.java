@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author NosBit
@@ -32,7 +32,7 @@ public class MaxHp extends AbstractStatEffect
 	
 	public MaxHp(StatsSet params)
 	{
-		super(params, Stats.MAX_HP);
+		super(params, Stat.MAX_HP);
 		
 		_heal = params.getBoolean("heal", false);
 	}

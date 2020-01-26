@@ -60,14 +60,14 @@ public class SiegeFlagInstance extends NpcInstance
 	public boolean isAttackable()
 	{
 		// Attackable during siege by attacker only
-		return (getCastle() != null) && (getCastle().getCastleId() > 0) && getCastle().getSiege().getIsInProgress();
+		return (getCastle() != null) && (getCastle().getCastleId() > 0) && getCastle().getSiege().isInProgress();
 	}
 	
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		// Attackable during siege by attacker only
-		return (attacker instanceof PlayerInstance) && (getCastle() != null) && (getCastle().getCastleId() > 0) && getCastle().getSiege().getIsInProgress();
+		return (attacker instanceof PlayerInstance) && (getCastle() != null) && (getCastle().getCastleId() > 0) && getCastle().getSiege().isInProgress();
 	}
 	
 	@Override

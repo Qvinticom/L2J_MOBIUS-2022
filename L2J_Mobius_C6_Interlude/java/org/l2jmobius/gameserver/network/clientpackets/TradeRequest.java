@@ -104,9 +104,9 @@ public class TradeRequest extends GameClientPacket
 			return;
 		}
 		
-		if (partner.isImobilised())
+		if (partner.isImmobilized())
 		{
-			player.sendMessage("You can't Request a Trade when partner is Imobilised");
+			player.sendMessage("You can't Request a Trade when partner is Immobilized");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -181,9 +181,9 @@ public class TradeRequest extends GameClientPacket
 			return;
 		}
 		
-		if (player.isImobilised())
+		if (player.isImmobilized())
 		{
-			player.sendMessage("You can't Request a Trade when you are Imobilised");
+			player.sendMessage("You can't Request a Trade when you are Immobilized");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

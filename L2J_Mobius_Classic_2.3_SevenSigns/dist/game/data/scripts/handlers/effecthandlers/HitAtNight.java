@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Mobius
@@ -30,7 +30,7 @@ public class HitAtNight extends AbstractStatEffect
 {
 	public HitAtNight(StatsSet params)
 	{
-		super(params, Stats.HIT_AT_NIGHT);
+		super(params, Stat.HIT_AT_NIGHT);
 	}
 	
 	@Override

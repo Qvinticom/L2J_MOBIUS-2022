@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Mobius
@@ -26,6 +26,6 @@ public class AdditionalPotionMp extends AbstractStatAddEffect
 {
 	public AdditionalPotionMp(StatsSet params)
 	{
-		super(params, Stats.ADDITIONAL_POTION_MP);
+		super(params, Stat.ADDITIONAL_POTION_MP);
 	}
 }

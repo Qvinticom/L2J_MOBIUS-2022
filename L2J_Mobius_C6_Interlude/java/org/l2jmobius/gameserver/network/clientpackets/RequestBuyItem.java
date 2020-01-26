@@ -210,7 +210,7 @@ public class RequestBuyItem extends GameClientPacket
 		
 		double taxRate = 0;
 		
-		if ((merchant != null) && merchant.getIsInTown())
+		if ((merchant != null) && merchant.isInTown())
 		{
 			taxRate = merchant.getCastle().getTaxRate();
 		}
@@ -316,7 +316,7 @@ public class RequestBuyItem extends GameClientPacket
 			return;
 		}
 		
-		if ((merchant != null) && merchant.getIsInTown() && (merchant.getCastle().getOwnerId() > 0))
+		if ((merchant != null) && merchant.isInTown() && (merchant.getCastle().getOwnerId() > 0))
 		{
 			merchant.getCastle().addToTreasury(tax);
 		}

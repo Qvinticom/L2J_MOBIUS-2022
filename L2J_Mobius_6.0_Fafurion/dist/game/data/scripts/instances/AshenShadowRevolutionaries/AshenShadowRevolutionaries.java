@@ -294,7 +294,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 		npc.setRandomWalking(false);
 		if (npc.getId() == 34103)
 		{
-			npc.setIsImmobilized(true);
+			npc.setImmobilized(true);
 			npc.detachAI();
 		}
 		return super.onSpawn(npc);

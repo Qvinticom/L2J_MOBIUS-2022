@@ -21,17 +21,17 @@ import java.util.OptionalDouble;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.IStatsFunction;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.IStatFunction;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author UnAfraid
  */
-public class MCritRateFinalizer implements IStatsFunction
+public class MCritRateFinalizer implements IStatFunction
 {
 	@Override
-	public double calc(Creature creature, OptionalDouble base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stat stat)
 	{
 		throwIfPresent(base);
 		
@@ -42,9 +42,9 @@ public class MCritRateFinalizer implements IStatsFunction
 			baseValue += calcEnchantBodyPart(creature, Item.SLOT_LEGS);
 		}
 		
-		final double physicalBonus = creature.getStat().getValue(Stats.MAGIC_CRITICAL_RATE_BY_CRITICAL_RATE, 0) * creature.getStat().getCriticalHit();
-		final double witBonus = creature.getWIT() > 0 ? BaseStats.WIT.calcBonus(creature) : 1.;
-		return validateValue(creature, Stats.defaultValue(creature, stat, (baseValue * witBonus * 10) + physicalBonus), 0, Config.MAX_MCRIT_RATE);
+		final double physicalBonus = creature.getStat().getValue(Stat.MAGIC_CRITICAL_RATE_BY_CRITICAL_RATE, 0) * creature.getStat().getCriticalHit();
+		final double witBonus = creature.getWIT() > 0 ? BaseStat.WIT.calcBonus(creature) : 1.;
+		return validateValue(creature, Stat.defaultValue(creature, stat, (baseValue * witBonus * 10) + physicalBonus), 0, Config.MAX_MCRIT_RATE);
 	}
 	
 	@Override

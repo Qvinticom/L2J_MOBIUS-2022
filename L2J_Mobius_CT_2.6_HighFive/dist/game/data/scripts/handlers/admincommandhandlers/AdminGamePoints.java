@@ -112,7 +112,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 		activeChar.sendPacket(html);
 	}
 	
-	private boolean addGamePoints(PlayerInstance admin, String val)
+	private boolean addGamePoints(PlayerInstance admin, String value)
 	{
 		final WorldObject target = admin.getTarget();
 		PlayerInstance player = null;
@@ -126,7 +126,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 			return false;
 		}
 		
-		final Long points = Long.parseLong(val);
+		final Long points = Long.parseLong(value);
 		if (points < 1)
 		{
 			admin.sendMessage("Invalid game point count.");
@@ -148,7 +148,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 		return true;
 	}
 	
-	private boolean setGamePoints(PlayerInstance admin, String val)
+	private boolean setGamePoints(PlayerInstance admin, String value)
 	{
 		final WorldObject target = admin.getTarget();
 		PlayerInstance player = null;
@@ -162,7 +162,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 			return false;
 		}
 		
-		final Long points = Long.parseLong(val);
+		final Long points = Long.parseLong(value);
 		if (points < 0)
 		{
 			admin.sendMessage("Invalid game point count.");
@@ -174,7 +174,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 		return true;
 	}
 	
-	private boolean subtractGamePoints(PlayerInstance admin, String val)
+	private boolean subtractGamePoints(PlayerInstance admin, String value)
 	{
 		final WorldObject target = admin.getTarget();
 		PlayerInstance player = null;
@@ -188,7 +188,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 			return false;
 		}
 		
-		final Long points = Long.parseLong(val);
+		final Long points = Long.parseLong(value);
 		if (points < 1)
 		{
 			admin.sendMessage("Invalid game point count.");

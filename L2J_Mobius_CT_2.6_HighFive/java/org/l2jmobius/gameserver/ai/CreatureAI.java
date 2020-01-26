@@ -298,7 +298,7 @@ public class CreatureAI extends AbstractAI
 		if ((getIntention() == AI_INTENTION_REST) && skill.isMagic())
 		{
 			clientActionFailed();
-			_actor.setIsCastingNow(false);
+			_actor.setCastingNow(false);
 			return;
 		}
 		
@@ -668,7 +668,7 @@ public class CreatureAI extends AbstractAI
 		
 		if (_actor.isAttackable())
 		{
-			((Attackable) _actor).setisReturningToSpawnPoint(false);
+			((Attackable) _actor).setReturningToSpawnPoint(false);
 		}
 		clientStoppedMoving();
 		

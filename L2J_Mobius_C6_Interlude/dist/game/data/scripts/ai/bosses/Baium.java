@@ -156,8 +156,8 @@ public class Baium extends Quest
 				try
 				{
 					baium.setCurrentHpMp(hp, mp);
-					baium.setIsInvul(true);
-					// _baium.setIsImobilised(true);
+					baium.setInvul(true);
+					// _baium.setImobilised(true);
 					baium.broadcastPacket(new SocialAction(baium.getObjectId(), 2));
 					startQuestTimer("baium_wakeup", 15000, baium, null);
 				}
@@ -206,7 +206,7 @@ public class Baium extends Quest
 				// start monitoring baium's inactivity
 				_lastAttackVsBaiumTime = System.currentTimeMillis();
 				
-				if (!npc.getSpawn().is_customBossInstance())
+				if (!npc.getSpawn().isCustomBossInstance())
 				{
 					startQuestTimer("baium_despawn", 60000, npc, null, true);
 				}
@@ -224,8 +224,8 @@ public class Baium extends Quest
 				{
 					try
 					{
-						baium.setIsInvul(false);
-						// baium.setIsImobilised(false);
+						baium.setInvul(false);
+						// baium.setImobilised(false);
 						// for (NpcInstance minion : _Minions)
 						// minion.setShowSummonAnimation(false);
 						baium.getAttackByList().addAll(_zone.getCharactersInside().values());
@@ -240,7 +240,7 @@ public class Baium extends Quest
 				for (int[] element : ANGEL_LOCATION)
 				{
 					final MonsterInstance angel = (MonsterInstance) addSpawn(ARCHANGEL, element[0], element[1], element[2], element[3], false, 0);
-					angel.setIsInvul(true);
+					angel.setInvul(true);
 					_minions.add(angel);
 					angel.getAttackByList().addAll(_zone.getCharactersInside().values());
 					angel.isAggressive();
@@ -277,10 +277,10 @@ public class Baium extends Quest
 				}
 				else if (((_lastAttackVsBaiumTime + 300000) < System.currentTimeMillis()) && (npc.getCurrentHp() < ((npc.getMaxHp() * 3) / 4.0)))
 				{
-					// npc.setIsCastingNow(false); //just in case
+					// npc.setCastingNow(false); //just in case
 					npc.setTarget(npc);
 					npc.doCast(SkillTable.getInstance().getInfo(4135, 1));
-					// npc.setIsCastingNow(true);
+					// npc.setCastingNow(true);
 				}
 			}
 		}
@@ -317,7 +317,7 @@ public class Baium extends Quest
 				{
 					try
 					{
-						baium.setIsInvul(true);
+						baium.setInvul(true);
 						baium.setRunning();
 						baium.broadcastPacket(new SocialAction(baium.getObjectId(), 2));
 						startQuestTimer("baium_wakeup", 15000, baium, player);
@@ -420,7 +420,7 @@ public class Baium extends Quest
 	{
 		npc.broadcastPacket(new PlaySound(1, "BS01_D", npc));
 		
-		if (!npc.getSpawn().is_customBossInstance())
+		if (!npc.getSpawn().isCustomBossInstance())
 		{
 			cancelQuestTimer("baium_despawn", npc, null);
 			// spawn the "Teleportation Cubic" for 15 minutes (to allow players to exit the lair)
@@ -524,7 +524,7 @@ public class Baium extends Quest
 		}
 		if ((target == null) || target.isDead() || !(_zone.isInsideZone(target)))
 		{
-			// npc.setIsCastingNow(false);
+			// npc.setCastingNow(false);
 			return;
 		}
 		
@@ -532,7 +532,7 @@ public class Baium extends Quest
 		{
 			npc.getAI().setIntention(AI_INTENTION_IDLE);
 			npc.setTarget(target);
-			// npc.setIsCastingNow(true);
+			// npc.setCastingNow(true);
 			if (getDist(skill.getCastRange()) > 0)
 			{
 				npc.broadcastPacket(new MoveToPawn(npc, target, getDist(skill.getCastRange())));
@@ -551,7 +551,7 @@ public class Baium extends Quest
 		else
 		{
 			npc.getAI().setIntention(AI_INTENTION_FOLLOW, target, null);
-			// npc.setIsCastingNow(false);
+			// npc.setCastingNow(false);
 		}
 	}
 	

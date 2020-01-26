@@ -34,7 +34,7 @@ public class CastleTeleporterInstance extends NpcInstance
 	private boolean _currentTask = false;
 	
 	/**
-	 * Instantiates a new l2 castle teleporter instance.
+	 * Instantiates a new castle teleporter instance.
 	 * @param objectId the object id
 	 * @param template the template
 	 */
@@ -54,7 +54,7 @@ public class CastleTeleporterInstance extends NpcInstance
 			int delay;
 			if (!_currentTask)
 			{
-				if (getCastle().getSiege().getIsInProgress() && (getCastle().getSiege().getControlTowerCount() == 0))
+				if (getCastle().getSiege().isInProgress() && (getCastle().getSiege().getControlTowerCount() == 0))
 				{
 					delay = 480000;
 				}
@@ -82,7 +82,7 @@ public class CastleTeleporterInstance extends NpcInstance
 		String filename;
 		if (!_currentTask)
 		{
-			if (getCastle().getSiege().getIsInProgress() && (getCastle().getSiege().getControlTowerCount() == 0))
+			if (getCastle().getSiege().isInProgress() && (getCastle().getSiege().getControlTowerCount() == 0))
 			{
 				filename = "data/html/castleteleporter/MassGK-2.htm";
 			}
@@ -129,8 +129,8 @@ public class CastleTeleporterInstance extends NpcInstance
 		return _currentTask;
 	}
 	
-	public void setTask(boolean state)
+	public void setTask(boolean value)
 	{
-		_currentTask = state;
+		_currentTask = value;
 	}
 }

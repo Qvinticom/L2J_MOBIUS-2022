@@ -98,7 +98,7 @@ public class GainakSiege extends AbstractNpcAI
 				GAINAK_TOWN_ZONE.setEnabled(true); // enable before broadcast
 				GAINAK_TOWN_ZONE.broadcastPacket(new OnEventTrigger(SIEGE_EFFECT, false));
 				GAINAK_TOWN_ZONE.broadcastPacket(new ExShowScreenMessage(NpcStringId.GAINAK_IN_PEACE, ExShowScreenMessage.TOP_CENTER, 5000, true));
-				GAINAK_SIEGE_ZONE.setIsActive(false);
+				GAINAK_SIEGE_ZONE.setActive(false);
 				GAINAK_SIEGE_ZONE.updateZoneStatusForCharactersInside();
 				startQuestTimer("GAINAK_WAR", getTimeBetweenSieges() * 60000, null, null);
 				if (Config.ANNOUNCE_GAINAK_SIEGE)
@@ -118,7 +118,7 @@ public class GainakSiege extends AbstractNpcAI
 				GAINAK_TOWN_ZONE.broadcastPacket(new OnEventTrigger(SIEGE_EFFECT, true));
 				GAINAK_TOWN_ZONE.broadcastPacket(new ExShowScreenMessage(NpcStringId.GAINAK_IN_WAR, ExShowScreenMessage.TOP_CENTER, 5000, true));
 				GAINAK_TOWN_ZONE.setEnabled(false); // disable after broadcast
-				GAINAK_SIEGE_ZONE.setIsActive(true);
+				GAINAK_SIEGE_ZONE.setActive(true);
 				GAINAK_SIEGE_ZONE.updateZoneStatusForCharactersInside();
 				startQuestTimer("GAINAK_WAR", SIEGE_DURATION * 60000, null, null);
 				if (Config.ANNOUNCE_GAINAK_SIEGE)

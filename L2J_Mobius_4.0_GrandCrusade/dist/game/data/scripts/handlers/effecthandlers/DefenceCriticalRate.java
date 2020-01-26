@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class DefenceCriticalRate extends AbstractStatEffect
 {
 	public DefenceCriticalRate(StatsSet params)
 	{
-		super(params, Stats.DEFENCE_CRITICAL_RATE, Stats.DEFENCE_CRITICAL_RATE_ADD);
+		super(params, Stat.DEFENCE_CRITICAL_RATE, Stat.DEFENCE_CRITICAL_RATE_ADD);
 	}
 }

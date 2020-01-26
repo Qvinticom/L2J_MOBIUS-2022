@@ -278,7 +278,7 @@ public class ClientThread extends Thread
 				else
 				{
 					character.setClan(clan);
-					character.setIsClanLeader(clan.getLeaderId() == character.getObjectId());
+					character.setClanLeader(clan.getLeaderId() == character.getObjectId());
 				}
 			}
 		}

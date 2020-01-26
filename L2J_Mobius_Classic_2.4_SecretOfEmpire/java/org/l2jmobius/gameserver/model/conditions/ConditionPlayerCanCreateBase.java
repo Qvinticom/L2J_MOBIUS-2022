@@ -36,11 +36,11 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class ConditionPlayerCanCreateBase extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
-	public ConditionPlayerCanCreateBase(boolean val)
+	public ConditionPlayerCanCreateBase(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
@@ -48,7 +48,7 @@ public class ConditionPlayerCanCreateBase extends Condition
 	{
 		if ((effector == null) || !effector.isPlayer())
 		{
-			return !_val;
+			return !_value;
 		}
 		
 		final PlayerInstance player = effector.getActingPlayer();
@@ -101,6 +101,6 @@ public class ConditionPlayerCanCreateBase extends Condition
 			player.sendPacket(SystemMessageId.YOU_CAN_T_BUILD_HEADQUARTERS_HERE);
 			canCreateBase = false;
 		}
-		return (_val == canCreateBase);
+		return (_value == canCreateBase);
 	}
 }

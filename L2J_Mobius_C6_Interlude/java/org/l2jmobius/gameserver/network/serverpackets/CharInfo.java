@@ -113,15 +113,15 @@ public class CharInfo extends GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		boolean receiver_is_gm = false;
+		boolean isGM = false;
 		
 		final PlayerInstance tmp = getClient().getPlayer();
 		if ((tmp != null) && tmp.isGM())
 		{
-			receiver_is_gm = true;
+			isGM = true;
 		}
 		
-		if (!receiver_is_gm && _player.getAppearance().isInvisible())
+		if (!isGM && _player.getAppearance().isInvisible())
 		{
 			return;
 		}
@@ -373,7 +373,7 @@ public class CharInfo extends GameServerPacket
 			
 			writeD(_player.getClanCrestLargeId());
 			writeC(_player.isNoble() ? 1 : 0); // Symbol on char menu ctrl+I
-			writeC((_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) || _player.getIsPVPHero()) ? 1 : 0); // Hero Aura
+			writeC((_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) || _player.isPVPHero()) ? 1 : 0); // Hero Aura
 			
 			writeC(_player.isFishing() ? 1 : 0); // 0x01: Fishing Mode (Cant be undone by setting back to 0)
 			writeD(_player.getFishX());

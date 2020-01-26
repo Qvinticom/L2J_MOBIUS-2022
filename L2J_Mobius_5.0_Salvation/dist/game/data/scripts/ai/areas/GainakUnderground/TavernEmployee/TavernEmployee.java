@@ -170,7 +170,7 @@ public class TavernEmployee extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		npc.setIsTalkable(false);
+		npc.setTalkable(false);
 		
 		if (npc.getId() == LOYEE1)
 		{

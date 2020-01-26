@@ -376,7 +376,7 @@ public class Trasken extends AbstractNpcAI
 			if (mob.isNpc())
 			{
 				mob.deleteMe();
-				mob.setIsDead(true);
+				mob.setDead(true);
 			}
 		});
 		_zoneLair2.getCharactersInside().forEach(mob ->
@@ -384,7 +384,7 @@ public class Trasken extends AbstractNpcAI
 			if (mob.isNpc())
 			{
 				mob.deleteMe();
-				mob.setIsDead(true);
+				mob.setDead(true);
 			}
 		});
 	}
@@ -475,23 +475,23 @@ public class Trasken extends AbstractNpcAI
 		{
 			case TAIL_TRASKEN:
 			{
-				npc.setIsOverloaded(true);
+				npc.setOverloaded(true);
 				npc.setRandomWalking(true);
 				npc.doCast(SKILL_TAIL.getSkill());
 				break;
 			}
 			case TRASKEN:
 			{
-				npc.setIsOverloaded(true);
+				npc.setOverloaded(true);
 				npc.setRandomWalking(true);
-				npc.setIsDead(false);
+				npc.setDead(false);
 				break;
 			}
 			case TIE:
 			case BIG_TIE:
 			{
 				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 600, npc::setTarget);
-				npc.setIsOverloaded(true);
+				npc.setOverloaded(true);
 				npc.setRandomWalking(true);
 				npc.getSpawn().setRespawnDelay(60);
 				break;
@@ -520,7 +520,7 @@ public class Trasken extends AbstractNpcAI
 			}
 			case DIGISTIVE:
 			{
-				npc.setIsOverloaded(true);
+				npc.setOverloaded(true);
 				npc.setRandomWalking(true);
 				npc.getSpawn().setRespawnDelay(60);
 				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, npc::setTarget);
@@ -528,7 +528,7 @@ public class Trasken extends AbstractNpcAI
 			}
 			case HEART_ERTHWYRM:
 			{
-				npc.setIsOverloaded(true);
+				npc.setOverloaded(true);
 				npc.setRandomWalking(true);
 				break;
 			}
@@ -586,7 +586,7 @@ public class Trasken extends AbstractNpcAI
 			case "finish":
 			{
 				_trasken.doDie(player);
-				_trasken.setIsDead(true);
+				_trasken.setDead(true);
 				_zoneLair2.getPlayersInside().forEach(players -> players.teleToLocation(CENTER_LOCATION));
 				_zoneLair2.getPlayersInside().forEach(p -> playMovie(p, Movie.SC_EARTHWORM_ENDING));
 				if (_collapseTask != null)

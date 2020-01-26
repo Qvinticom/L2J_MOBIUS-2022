@@ -303,7 +303,7 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("Your partner is in the observation.");
 			return false;
 		}
-		else if ((partner.getClan() != null) && (CastleManager.getInstance().getCastleByOwner(partner.getClan()) != null) && CastleManager.getInstance().getCastleByOwner(partner.getClan()).getSiege().getIsInProgress())
+		else if ((partner.getClan() != null) && (CastleManager.getInstance().getCastleByOwner(partner.getClan()) != null) && CastleManager.getInstance().getCastleByOwner(partner.getClan()).getSiege().isInProgress())
 		{
 			activeChar.sendMessage("Your partner is in siege, you can't go to your partner.");
 			return false;
@@ -333,7 +333,7 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("You may not use go to love in CTF.");
 			return false;
 		}
-		if (activeChar._inEventDM && DM.is_started())
+		if (activeChar._inEventDM && DM.hasStarted())
 		{
 			activeChar.sendMessage("You may not use go to love in DM.");
 			return false;
@@ -353,7 +353,7 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("You are in the observation.");
 			return false;
 		}
-		else if ((activeChar.getClan() != null) && (CastleManager.getInstance().getCastleByOwner(activeChar.getClan()) != null) && CastleManager.getInstance().getCastleByOwner(activeChar.getClan()).getSiege().getIsInProgress())
+		else if ((activeChar.getClan() != null) && (CastleManager.getInstance().getCastleByOwner(activeChar.getClan()) != null) && CastleManager.getInstance().getCastleByOwner(activeChar.getClan()).getSiege().isInProgress())
 		{
 			activeChar.sendMessage("You are in siege, you can't go to your partner.");
 			return false;
@@ -428,7 +428,7 @@ public class Wedding implements IVoicedCommandHandler
 				return;
 			}
 			
-			_player.setIsIn7sDungeon(_to7sDungeon);
+			_player.setIn7sDungeon(_to7sDungeon);
 			_player.enableAllSkills();
 			
 			try

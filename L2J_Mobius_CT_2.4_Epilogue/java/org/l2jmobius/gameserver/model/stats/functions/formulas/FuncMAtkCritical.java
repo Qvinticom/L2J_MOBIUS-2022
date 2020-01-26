@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.model.stats.functions.formulas;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 
 /**
@@ -36,7 +36,7 @@ public class FuncMAtkCritical extends AbstractFunction
 	
 	private FuncMAtkCritical()
 	{
-		super(Stats.MCRITICAL_RATE, 1, null, 0, null);
+		super(Stat.MCRITICAL_RATE, 1, null, 0, null);
 	}
 	
 	@Override
@@ -45,7 +45,7 @@ public class FuncMAtkCritical extends AbstractFunction
 		// CT2: The magic critical rate has been increased to 10 times.
 		if (!effector.isPlayer() || (effector.getActiveWeaponInstance() != null))
 		{
-			return initVal * BaseStats.WIT.calcBonus(effector) * 10;
+			return initVal * BaseStat.WIT.calcBonus(effector) * 10;
 		}
 		return initVal;
 	}

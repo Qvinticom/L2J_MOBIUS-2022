@@ -93,7 +93,7 @@ public class Chimeras extends AbstractNpcAI
 				HellboundEngine.getInstance().updateTrust(3, true);
 			}
 			
-			npc.setIsDead(true);
+			npc.setDead(true);
 			if (npc.getId() == CELTUS)
 			{
 				npc.dropItem(caster, CONTAINED_LIFE_FORCE, CONTAINED_LIFE_FORCE_AMOUNT);

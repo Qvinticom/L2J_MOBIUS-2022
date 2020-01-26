@@ -150,11 +150,11 @@ public class PetData
 	}
 	
 	/**
-	 * @param val synchronizes level with master or not.
+	 * @param value synchronizes level with master or not.
 	 */
-	public void setSyncLevel(boolean val)
+	public void setSyncLevel(boolean value)
 	{
-		_syncLevel = val;
+		_syncLevel = value;
 	}
 	
 	// SKILS

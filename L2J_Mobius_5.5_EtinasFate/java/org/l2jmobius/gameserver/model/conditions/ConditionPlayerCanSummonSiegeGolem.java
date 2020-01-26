@@ -32,11 +32,11 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class ConditionPlayerCanSummonSiegeGolem extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
-	public ConditionPlayerCanSummonSiegeGolem(boolean val)
+	public ConditionPlayerCanSummonSiegeGolem(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
@@ -44,7 +44,7 @@ public class ConditionPlayerCanSummonSiegeGolem extends Condition
 	{
 		if ((effector == null) || !effector.isPlayer())
 		{
-			return !_val;
+			return !_value;
 		}
 		
 		final PlayerInstance player = effector.getActingPlayer();
@@ -76,6 +76,6 @@ public class ConditionPlayerCanSummonSiegeGolem extends Condition
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			canSummonSiegeGolem = false;
 		}
-		return (_val == canSummonSiegeGolem);
+		return (_value == canSummonSiegeGolem);
 	}
 }

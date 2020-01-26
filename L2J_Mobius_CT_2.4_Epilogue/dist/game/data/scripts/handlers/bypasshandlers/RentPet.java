@@ -78,7 +78,7 @@ public class RentPet implements IBypassHandler
 		return false;
 	}
 	
-	public static void tryRentPet(PlayerInstance player, int val)
+	public static void tryRentPet(PlayerInstance player, int value)
 	{
 		if ((player == null) || player.hasSummon() || player.isMounted() || player.isRentedPet() || player.isTransformed() || player.isCursedWeaponEquipped())
 		{
@@ -106,10 +106,10 @@ public class RentPet implements IBypassHandler
 			1800
 		};
 		
-		if (val > 10)
+		if (value > 10)
 		{
 			petId = 12526;
-			val -= 10;
+			value -= 10;
 			price /= 2;
 		}
 		else
@@ -117,13 +117,13 @@ public class RentPet implements IBypassHandler
 			petId = 12621;
 		}
 		
-		if ((val < 1) || (val > 4))
+		if ((value < 1) || (value > 4))
 		{
 			return;
 		}
 		
-		price *= cost[val - 1];
-		final int time = ridetime[val - 1];
+		price *= cost[value - 1];
+		final int time = ridetime[value - 1];
 		
 		if (!player.reduceAdena("Rent", (long) price, player.getLastFolkNPC(), true))
 		{

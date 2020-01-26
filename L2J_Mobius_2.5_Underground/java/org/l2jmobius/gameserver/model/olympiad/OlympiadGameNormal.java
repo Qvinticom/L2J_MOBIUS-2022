@@ -204,9 +204,9 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			return false;
 		}
 		
-		_playerOne.getPlayer().setIsOlympiadStart(true);
+		_playerOne.getPlayer().setOlympiadStart(true);
 		_playerOne.getPlayer().updateEffectIcons();
-		_playerTwo.getPlayer().setIsOlympiadStart(true);
+		_playerTwo.getPlayer().setOlympiadStart(true);
 		_playerTwo.getPlayer().updateEffectIcons();
 		return true;
 	}
@@ -803,11 +803,11 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	{
 		if (_playerOne.getPlayer() != null)
 		{
-			_playerOne.getPlayer().setIsInvul(true);
+			_playerOne.getPlayer().setInvul(true);
 		}
 		if (_playerTwo.getPlayer() != null)
 		{
-			_playerTwo.getPlayer().setIsInvul(true);
+			_playerTwo.getPlayer().setInvul(true);
 		}
 	}
 	
@@ -816,11 +816,11 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	{
 		if (_playerOne.getPlayer() != null)
 		{
-			_playerOne.getPlayer().setIsInvul(false);
+			_playerOne.getPlayer().setInvul(false);
 		}
 		if (_playerTwo.getPlayer() != null)
 		{
-			_playerTwo.getPlayer().setIsInvul(false);
+			_playerTwo.getPlayer().setInvul(false);
 		}
 	}
 }

@@ -102,7 +102,7 @@ public class NevitSystem implements IUniqueId
 		stopAdventTask(false);
 	}
 	
-	public void addPoints(int val)
+	public void addPoints(int value)
 	{
 		if (getEffectTime() > 0)
 		{
@@ -110,7 +110,7 @@ public class NevitSystem implements IUniqueId
 		}
 		else
 		{
-			setAdventPoints(getAdventPoints() + val);
+			setAdventPoints(getAdventPoints() + value);
 		}
 		
 		if (getAdventPoints() > Config.NEVIT_MAX_POINTS)

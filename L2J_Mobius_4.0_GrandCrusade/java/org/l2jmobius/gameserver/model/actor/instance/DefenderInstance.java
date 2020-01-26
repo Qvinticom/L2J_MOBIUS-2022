@@ -99,7 +99,7 @@ public class DefenderInstance extends Attackable
 		}
 		if (!isInsideRadius2D(getSpawn(), 40))
 		{
-			setisReturningToSpawnPoint(true);
+			setReturningToSpawnPoint(true);
 			clearAggroList();
 			
 			if (hasAI())

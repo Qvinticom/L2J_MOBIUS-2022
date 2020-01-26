@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.MoveType;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * StatByMoveType effect implementation.
@@ -30,13 +30,13 @@ import org.l2jmobius.gameserver.model.stats.Stats;
  */
 public class StatByMoveType extends AbstractEffect
 {
-	private final Stats _stat;
+	private final Stat _stat;
 	private final MoveType _type;
 	private final double _value;
 	
 	public StatByMoveType(StatsSet params)
 	{
-		_stat = params.getEnum("stat", Stats.class);
+		_stat = params.getEnum("stat", Stat.class);
 		_type = params.getEnum("type", MoveType.class);
 		_value = params.getDouble("value");
 	}

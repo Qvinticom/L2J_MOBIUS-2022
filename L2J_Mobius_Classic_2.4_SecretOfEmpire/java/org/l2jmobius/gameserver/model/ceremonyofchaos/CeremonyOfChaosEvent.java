@@ -126,7 +126,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			
 			if (player.isInDuel())
 			{
-				player.setIsInDuel(0);
+				player.setInDuel(0);
 			}
 			
 			// Remember player's last location
@@ -148,7 +148,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			player.stopAllEffectsExceptThoseThatLastThroughDeath();
 			
 			// Player shouldn't be able to move and is hidden
-			player.setIsImmobilized(true);
+			player.setImmobilized(true);
 			player.setInvisible(true);
 			
 			// Same goes for summon
@@ -156,7 +156,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			{
 				s.stopAllEffectsExceptThoseThatLastThroughDeath();
 				s.setInvisible(true);
-				s.setIsImmobilized(true);
+				s.setImmobilized(true);
 			});
 			
 			if (player.isFlyingMounted())
@@ -259,14 +259,14 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			if (player != null)
 			{
 				player.sendPacket(SystemMessageId.THE_MATCH_HAS_STARTED_FIGHT);
-				player.setIsImmobilized(false);
+				player.setImmobilized(false);
 				player.setInvisible(false);
 				player.broadcastInfo();
 				player.sendPacket(new ExUserInfoAbnormalVisualEffect(player));
 				player.getServitors().values().forEach(s ->
 				{
 					s.setInvisible(false);
-					s.setIsImmobilized(false);
+					s.setImmobilized(false);
 					s.broadcastInfo();
 				});
 			}

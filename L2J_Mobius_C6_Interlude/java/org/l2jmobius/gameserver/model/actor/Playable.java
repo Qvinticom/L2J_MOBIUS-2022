@@ -211,7 +211,7 @@ public abstract class Playable extends Creature
 	 * Sets the checks if is noblesse blessed.
 	 * @param value the new checks if is noblesse blessed
 	 */
-	public void setIsNoblesseBlessed(boolean value)
+	public void setNoblesseBlessed(boolean value)
 	{
 		_isNoblesseBlessed = value;
 	}
@@ -223,7 +223,7 @@ public abstract class Playable extends Creature
 	public void startNoblesseBlessing(Effect effect)
 	{
 		_lastNoblessEffect = effect;
-		setIsNoblesseBlessed(true);
+		setNoblesseBlessed(true);
 		updateAbnormalEffect();
 	}
 	
@@ -248,7 +248,7 @@ public abstract class Playable extends Creature
 			removeEffect(effect);
 		}
 		
-		setIsNoblesseBlessed(false);
+		setNoblesseBlessed(false);
 		updateAbnormalEffect();
 		_lastNoblessEffect = null;
 		
@@ -327,7 +327,7 @@ public abstract class Playable extends Creature
 	 * Sets the checks if is phoenix blessed.
 	 * @param value the new checks if is phoenix blessed
 	 */
-	public void setIsPhoenixBlessed(boolean value)
+	public void setPhoenixBlessed(boolean value)
 	{
 		_isPhoenixBlessed = value;
 	}
@@ -339,7 +339,7 @@ public abstract class Playable extends Creature
 	public void startPhoenixBlessing(Effect effect)
 	{
 		_lastPhoenixBlessedEffect = effect;
-		setIsPhoenixBlessed(true);
+		setPhoenixBlessed(true);
 		updateAbnormalEffect();
 	}
 	
@@ -363,7 +363,7 @@ public abstract class Playable extends Creature
 			removeEffect(effect);
 		}
 		
-		setIsPhoenixBlessed(false);
+		setPhoenixBlessed(false);
 		updateAbnormalEffect();
 		_lastPhoenixBlessedEffect = null;
 	}

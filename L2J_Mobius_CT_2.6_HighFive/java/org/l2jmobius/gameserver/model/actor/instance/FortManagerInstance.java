@@ -986,9 +986,9 @@ public class FortManagerInstance extends MerchantInstance
 		player.sendPacket(html);
 	}
 	
-	private void doTeleport(PlayerInstance player, int val)
+	private void doTeleport(PlayerInstance player, int value)
 	{
-		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
+		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(value);
 		if (list != null)
 		{
 			if (player.destroyItemByItemId("Teleport", list.getItemId(), list.getPrice(), this, true))
@@ -998,7 +998,7 @@ public class FortManagerInstance extends MerchantInstance
 		}
 		else
 		{
-			LOGGER.warning("No teleport destination with id:" + val);
+			LOGGER.warning("No teleport destination with id:" + value);
 		}
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}

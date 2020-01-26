@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 public class PetInfo implements IClientOutgoingPacket
 {
 	private final Summon _summon;
-	private final int _val;
+	private final int _value;
 	private final int _runSpd;
 	private final int _walkSpd;
 	private final int _swimRunSpd;
@@ -43,7 +43,7 @@ public class PetInfo implements IClientOutgoingPacket
 	private int _curFed;
 	private int _statusMask = 0;
 	
-	public PetInfo(Summon summon, int val)
+	public PetInfo(Summon summon, int value)
 	{
 		_summon = summon;
 		_moveMultiplier = summon.getMovementSpeedMultiplier();
@@ -53,7 +53,7 @@ public class PetInfo implements IClientOutgoingPacket
 		_swimWalkSpd = (int) Math.round(summon.getSwimWalkSpeed() / _moveMultiplier);
 		_flyRunSpd = summon.isFlying() ? _runSpd : 0;
 		_flyWalkSpd = summon.isFlying() ? _walkSpd : 0;
-		_val = val;
+		_value = value;
 		if (summon.isPet())
 		{
 			final PetInstance pet = (PetInstance) _summon;
@@ -126,7 +126,7 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeD(_summon.getArmor()); // body armor
 		packet.writeD(0x00); // left hand weapon
 		
-		packet.writeC(_summon.isShowSummonAnimation() ? 0x02 : _val); // 0=teleported 1=default 2=summoned
+		packet.writeC(_summon.isShowSummonAnimation() ? 0x02 : _value); // 0=teleported 1=default 2=summoned
 		packet.writeD(-1); // High Five NPCString ID
 		if (_summon.isPet())
 		{

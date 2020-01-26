@@ -109,19 +109,19 @@ public class FortMerchantInstance extends NpcWalkerInstance
 		showMessageWindow(player, 0);
 	}
 	
-	private void showMessageWindow(PlayerInstance player, int val)
+	private void showMessageWindow(PlayerInstance player, int value)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		
 		String filename;
 		
-		if (val == 0)
+		if (value == 0)
 		{
 			filename = "data/html/fortress/merchant.htm";
 		}
 		else
 		{
-			filename = "data/html/fortress/merchant-" + val + ".htm";
+			filename = "data/html/fortress/merchant-" + value + ".htm";
 		}
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -149,7 +149,7 @@ public class FortMerchantInstance extends NpcWalkerInstance
 	public void showSiegeInfoWindow(PlayerInstance player)
 	{
 		final FortSiege siege = getFort().getSiege();
-		if (siege.getIsInProgress())
+		if (siege.isInProgress())
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			html.setFile("data/html/fortress/merchant-busy.htm");

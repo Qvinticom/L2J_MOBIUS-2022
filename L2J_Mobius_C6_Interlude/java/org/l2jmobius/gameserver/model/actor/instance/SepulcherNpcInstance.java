@@ -206,7 +206,7 @@ public class SepulcherNpcInstance extends NpcInstance
 			case 31486:
 			case 31487:
 			{
-				setIsInvul(false);
+				setInvul(false);
 				reduceCurrentHp(getMaxHp() + 1, player);
 				if (_spawnMonsterTask != null)
 				{
@@ -229,7 +229,7 @@ public class SepulcherNpcInstance extends NpcInstance
 			case 31466:
 			case 31467:
 			{
-				setIsInvul(false);
+				setInvul(false);
 				reduceCurrentHp(getMaxHp() + 1, player);
 				if ((player.getParty() != null) && !player.getParty().isLeader(player))
 				{
@@ -259,25 +259,25 @@ public class SepulcherNpcInstance extends NpcInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = "" + npcId;
 		}
 		else
 		{
-			pom = npcId + "-" + val;
+			pom = npcId + "-" + value;
 		}
 		
 		return HTML_FILE_PATH + pom + ".htm";
 	}
 	
 	@Override
-	public void showChatWindow(PlayerInstance player, int val)
+	public void showChatWindow(PlayerInstance player, int value)
 	{
-		final String filename = getHtmlPath(getNpcId(), val);
+		final String filename = getHtmlPath(getNpcId(), value);
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));

@@ -604,11 +604,11 @@ public class SignsPriestInstance extends FolkInstance
 		return playerClan.getHasCastle() > 0;
 	}
 	
-	private void showChatWindow(PlayerInstance player, int val, String suffix, boolean isDescription)
+	private void showChatWindow(PlayerInstance player, int value, String suffix, boolean isDescription)
 	{
 		String filename = SevenSigns.SEVEN_SIGNS_HTML_PATH;
 		
-		filename += isDescription ? "desc_" + val : "signs_" + val;
+		filename += isDescription ? "desc_" + value : "signs_" + value;
 		filename += suffix != null ? "_" + suffix + ".htm" : ".htm";
 		
 		showChatWindow(player, filename);

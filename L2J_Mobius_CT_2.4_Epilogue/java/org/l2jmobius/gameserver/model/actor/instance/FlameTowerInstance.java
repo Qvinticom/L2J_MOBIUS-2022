@@ -58,7 +58,7 @@ public class FlameTowerInstance extends Tower
 		return super.deleteMe();
 	}
 	
-	public void enableZones(boolean state)
+	public void enableZones(boolean value)
 	{
 		if ((_zoneList != null) && (_upgradeLevel != 0))
 		{
@@ -68,7 +68,7 @@ public class FlameTowerInstance extends Tower
 				final ZoneType zone = ZoneManager.getInstance().getZoneById(_zoneList.get(i));
 				if (zone != null)
 				{
-					zone.setEnabled(state);
+					zone.setEnabled(value);
 				}
 			}
 		}

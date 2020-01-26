@@ -28,11 +28,11 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerCanRefuelAirship extends Condition
 {
-	private final int _val;
+	private final int _value;
 	
-	public ConditionPlayerCanRefuelAirship(int val)
+	public ConditionPlayerCanRefuelAirship(int value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
@@ -40,7 +40,7 @@ public class ConditionPlayerCanRefuelAirship extends Condition
 	{
 		boolean canRefuelAirship = true;
 		final PlayerInstance player = effector.getActingPlayer();
-		if ((player == null) || (player.getAirShip() == null) || !(player.getAirShip() instanceof ControllableAirShipInstance) || ((player.getAirShip().getFuel() + _val) > player.getAirShip().getMaxFuel()))
+		if ((player == null) || (player.getAirShip() == null) || !(player.getAirShip() instanceof ControllableAirShipInstance) || ((player.getAirShip().getFuel() + _value) > player.getAirShip().getMaxFuel()))
 		{
 			canRefuelAirship = false;
 		}

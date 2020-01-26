@@ -21,19 +21,19 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
  */
 public class ReflectSkill extends AbstractEffect
 {
-	private final Stats _stat;
+	private final Stat _stat;
 	private final double _amount;
 	
 	public ReflectSkill(StatsSet params)
 	{
-		_stat = params.getEnum("type", BasicProperty.class, BasicProperty.PHYSICAL) == BasicProperty.PHYSICAL ? Stats.REFLECT_SKILL_PHYSIC : Stats.REFLECT_SKILL_MAGIC;
+		_stat = params.getEnum("type", BasicProperty.class, BasicProperty.PHYSICAL) == BasicProperty.PHYSICAL ? Stat.REFLECT_SKILL_PHYSIC : Stat.REFLECT_SKILL_MAGIC;
 		_amount = params.getDouble("amount", 0);
 	}
 	

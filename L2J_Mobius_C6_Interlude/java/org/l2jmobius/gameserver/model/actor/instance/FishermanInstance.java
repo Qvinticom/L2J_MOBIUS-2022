@@ -43,31 +43,31 @@ public class FishermanInstance extends FolkInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
 		
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = "" + npcId;
 		}
 		else
 		{
-			pom = npcId + "-" + val;
+			pom = npcId + "-" + value;
 		}
 		
 		return "data/html/fisherman/" + pom + ".htm";
 	}
 	
-	private void showBuyWindow(PlayerInstance player, int val)
+	private void showBuyWindow(PlayerInstance player, int value)
 	{
 		double taxRate = 0;
-		if (getIsInTown())
+		if (isInTown())
 		{
 			taxRate = getCastle().getTaxRate();
 		}
 		player.tempInvetoryDisable();
-		final StoreTradeList list = TradeController.getInstance().getBuyList(val);
+		final StoreTradeList list = TradeController.getInstance().getBuyList(value);
 		
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 		{
@@ -77,7 +77,7 @@ public class FishermanInstance extends FolkInstance
 		else
 		{
 			LOGGER.warning("possible client hacker: " + player.getName() + " attempting to buy from GM shop! (L2FishermanInstance)");
-			LOGGER.warning("buylist id:" + val);
+			LOGGER.warning("buylist id:" + value);
 		}
 		
 		player.sendPacket(ActionFailed.STATIC_PACKET);

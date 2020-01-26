@@ -115,7 +115,7 @@ public class MercTicket implements IItemHandler
 			return;
 		}
 		
-		if ((castle == null) || castle.getSiege().getIsInProgress())
+		if ((castle == null) || castle.getSiege().isInProgress())
 		{
 			player.sendMessage("You cannot hire mercenary while siege is in progress!");
 			return;

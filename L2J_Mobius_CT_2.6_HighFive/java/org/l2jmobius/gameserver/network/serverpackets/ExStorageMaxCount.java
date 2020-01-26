@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -46,7 +46,7 @@ public class ExStorageMaxCount implements IClientOutgoingPacket
 		_clan = Config.WAREHOUSE_SLOTS_CLAN;
 		_receipeD = player.getDwarfRecipeLimit();
 		_recipe = player.getCommonRecipeLimit();
-		_inventoryExtraSlots = (int) player.getStat().calcStat(Stats.INV_LIM, 0, null, null);
+		_inventoryExtraSlots = (int) player.getStat().calcStat(Stat.INV_LIM, 0, null, null);
 		_inventoryQuestItems = Config.INVENTORY_MAXIMUM_QUEST_ITEMS;
 	}
 	

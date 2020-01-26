@@ -176,7 +176,7 @@ public class InstanceManager implements IXmlReader
 				{
 					final NamedNodeMap attrs = innerNode.getAttributes();
 					template.allowPlayerSummon(parseBoolean(attrs, "allowPlayerSummon", false));
-					template.setIsPvP(parseBoolean(attrs, "isPvP", false));
+					template.setPvP(parseBoolean(attrs, "isPvP", false));
 					break;
 				}
 				case "rates":

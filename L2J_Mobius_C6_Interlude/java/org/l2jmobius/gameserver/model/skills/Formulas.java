@@ -68,9 +68,9 @@ public class Formulas
 	
 	static class FuncAddLevel3 extends Func
 	{
-		static final FuncAddLevel3[] _instancies = new FuncAddLevel3[Stats.NUM_STATS];
+		static final FuncAddLevel3[] _instancies = new FuncAddLevel3[Stat.NUM_STATS];
 		
-		static Func getInstance(Stats stat)
+		static Func getInstance(Stat stat)
 		{
 			final int pos = stat.ordinal();
 			
@@ -81,7 +81,7 @@ public class Formulas
 			return _instancies[pos];
 		}
 		
-		private FuncAddLevel3(Stats pStat)
+		private FuncAddLevel3(Stat pStat)
 		{
 			super(pStat, 0x10, null);
 		}
@@ -95,9 +95,9 @@ public class Formulas
 	
 	static class FuncMultLevelMod extends Func
 	{
-		static final FuncMultLevelMod[] _instancies = new FuncMultLevelMod[Stats.NUM_STATS];
+		static final FuncMultLevelMod[] _instancies = new FuncMultLevelMod[Stat.NUM_STATS];
 		
-		static Func getInstance(Stats stat)
+		static Func getInstance(Stat stat)
 		{
 			final int pos = stat.ordinal();
 			
@@ -108,7 +108,7 @@ public class Formulas
 			return _instancies[pos];
 		}
 		
-		private FuncMultLevelMod(Stats pStat)
+		private FuncMultLevelMod(Stat pStat)
 		{
 			super(pStat, 0x20, null);
 		}
@@ -122,13 +122,13 @@ public class Formulas
 	
 	static class FuncMultRegenResting extends Func
 	{
-		static final FuncMultRegenResting[] _instancies = new FuncMultRegenResting[Stats.NUM_STATS];
+		static final FuncMultRegenResting[] _instancies = new FuncMultRegenResting[Stat.NUM_STATS];
 		
 		/**
 		 * @param stat
 		 * @return the Func object corresponding to the state concerned.
 		 */
-		static Func getInstance(Stats stat)
+		static Func getInstance(Stat stat)
 		{
 			final int pos = stat.ordinal();
 			
@@ -145,7 +145,7 @@ public class Formulas
 		 * <BR>
 		 * @param pStat
 		 */
-		private FuncMultRegenResting(Stats pStat)
+		private FuncMultRegenResting(Stat pStat)
 		{
 			super(pStat, 0x20, null);
 			setCondition(new ConditionPlayerState(CheckPlayerState.RESTING, true));
@@ -178,7 +178,7 @@ public class Formulas
 		
 		private FuncPAtkMod()
 		{
-			super(Stats.POWER_ATTACK, 0x30, null);
+			super(Stat.POWER_ATTACK, 0x30, null);
 		}
 		
 		@Override
@@ -188,12 +188,12 @@ public class Formulas
 			{
 				if (env.player.getActiveWeaponInstance() != null)
 				{
-					env.value *= BaseStats.STR.calcBonus(env.player);
+					env.value *= BaseStat.STR.calcBonus(env.player);
 				}
 			}
 			else
 			{
-				env.value *= BaseStats.STR.calcBonus(env.player) * env.player.getLevelMod();
+				env.value *= BaseStat.STR.calcBonus(env.player) * env.player.getLevelMod();
 			}
 		}
 	}
@@ -209,13 +209,13 @@ public class Formulas
 		
 		private FuncMAtkMod()
 		{
-			super(Stats.MAGIC_ATTACK, 0x20, null);
+			super(Stat.MAGIC_ATTACK, 0x20, null);
 		}
 		
 		@Override
 		public void calc(Env env)
 		{
-			final double intb = BaseStats.INT.calcBonus(env.player);
+			final double intb = BaseStat.INT.calcBonus(env.player);
 			final double lvlb = env.player.getLevelMod();
 			env.value *= (lvlb * lvlb) * (intb * intb);
 		}
@@ -232,7 +232,7 @@ public class Formulas
 		
 		private FuncMDefMod()
 		{
-			super(Stats.MAGIC_DEFENCE, 0x20, null);
+			super(Stat.MAGIC_DEFENCE, 0x20, null);
 		}
 		
 		@Override
@@ -262,7 +262,7 @@ public class Formulas
 					env.value -= 13;
 				}
 			}
-			env.value *= BaseStats.MEN.calcBonus(env.player) * env.player.getLevelMod();
+			env.value *= BaseStat.MEN.calcBonus(env.player) * env.player.getLevelMod();
 		}
 	}
 	
@@ -277,7 +277,7 @@ public class Formulas
 		
 		private FuncPDefMod()
 		{
-			super(Stats.POWER_DEFENCE, 0x20, null);
+			super(Stat.POWER_DEFENCE, 0x20, null);
 		}
 		
 		@Override
@@ -324,7 +324,7 @@ public class Formulas
 		
 		private FuncBowAtkRange()
 		{
-			super(Stats.POWER_ATTACK_RANGE, 0x10, null);
+			super(Stat.POWER_ATTACK_RANGE, 0x10, null);
 			setCondition(new ConditionUsingItemType(WeaponType.BOW.mask()));
 		}
 		
@@ -350,7 +350,7 @@ public class Formulas
 		
 		private FuncAtkAccuracy()
 		{
-			super(Stats.ACCURACY_COMBAT, 0x10, null);
+			super(Stat.ACCURACY_COMBAT, 0x10, null);
 		}
 		
 		@Override
@@ -395,7 +395,7 @@ public class Formulas
 		
 		private FuncAtkEvasion()
 		{
-			super(Stats.EVASION_RATE, 0x10, null);
+			super(Stat.EVASION_RATE, 0x10, null);
 		}
 		
 		@Override
@@ -435,13 +435,13 @@ public class Formulas
 		
 		private FuncAtkCritical()
 		{
-			super(Stats.CRITICAL_RATE, 0x09, null);
+			super(Stat.CRITICAL_RATE, 0x09, null);
 		}
 		
 		@Override
 		public void calc(Env env)
 		{
-			env.value *= BaseStats.DEX.calcBonus(env.player);
+			env.value *= BaseStat.DEX.calcBonus(env.player);
 			
 			final Creature p = env.player;
 			if (!(p instanceof PetInstance))
@@ -464,7 +464,7 @@ public class Formulas
 		
 		private FuncMAtkCritical()
 		{
-			super(Stats.MCRITICAL_RATE, 0x30, null);
+			super(Stat.MCRITICAL_RATE, 0x30, null);
 		}
 		
 		@Override
@@ -477,7 +477,7 @@ public class Formulas
 			}
 			else if ((p instanceof PlayerInstance) && (p.getActiveWeaponInstance() != null))
 			{
-				env.value *= BaseStats.WIT.calcBonus(p);
+				env.value *= BaseStat.WIT.calcBonus(p);
 			}
 		}
 	}
@@ -493,13 +493,13 @@ public class Formulas
 		
 		private FuncMoveSpeed()
 		{
-			super(Stats.RUN_SPEED, 0x30, null);
+			super(Stat.RUN_SPEED, 0x30, null);
 		}
 		
 		@Override
 		public void calc(Env env)
 		{
-			env.value *= BaseStats.DEX.calcBonus(env.player);
+			env.value *= BaseStat.DEX.calcBonus(env.player);
 		}
 	}
 	
@@ -514,13 +514,13 @@ public class Formulas
 		
 		private FuncPAtkSpeed()
 		{
-			super(Stats.POWER_ATTACK_SPEED, 0x20, null);
+			super(Stat.POWER_ATTACK_SPEED, 0x20, null);
 		}
 		
 		@Override
 		public void calc(Env env)
 		{
-			env.value *= BaseStats.DEX.calcBonus(env.player);
+			env.value *= BaseStat.DEX.calcBonus(env.player);
 		}
 	}
 	
@@ -535,13 +535,13 @@ public class Formulas
 		
 		private FuncMAtkSpeed()
 		{
-			super(Stats.MAGIC_ATTACK_SPEED, 0x20, null);
+			super(Stat.MAGIC_ATTACK_SPEED, 0x20, null);
 		}
 		
 		@Override
 		public void calc(Env env)
 		{
-			env.value *= BaseStats.WIT.calcBonus(env.player);
+			env.value *= BaseStat.WIT.calcBonus(env.player);
 		}
 	}
 	
@@ -556,7 +556,7 @@ public class Formulas
 		
 		private FuncHennaSTR()
 		{
-			super(Stats.STAT_STR, 0x10, null);
+			super(Stat.STAT_STR, 0x10, null);
 		}
 		
 		@Override
@@ -581,7 +581,7 @@ public class Formulas
 		
 		private FuncHennaDEX()
 		{
-			super(Stats.STAT_DEX, 0x10, null);
+			super(Stat.STAT_DEX, 0x10, null);
 		}
 		
 		@Override
@@ -606,7 +606,7 @@ public class Formulas
 		
 		private FuncHennaINT()
 		{
-			super(Stats.STAT_INT, 0x10, null);
+			super(Stat.STAT_INT, 0x10, null);
 		}
 		
 		@Override
@@ -631,7 +631,7 @@ public class Formulas
 		
 		private FuncHennaMEN()
 		{
-			super(Stats.STAT_MEN, 0x10, null);
+			super(Stat.STAT_MEN, 0x10, null);
 		}
 		
 		@Override
@@ -656,7 +656,7 @@ public class Formulas
 		
 		private FuncHennaCON()
 		{
-			super(Stats.STAT_CON, 0x10, null);
+			super(Stat.STAT_CON, 0x10, null);
 		}
 		
 		@Override
@@ -681,7 +681,7 @@ public class Formulas
 		
 		private FuncHennaWIT()
 		{
-			super(Stats.STAT_WIT, 0x10, null);
+			super(Stat.STAT_WIT, 0x10, null);
 		}
 		
 		@Override
@@ -706,7 +706,7 @@ public class Formulas
 		
 		private FuncMaxHpAdd()
 		{
-			super(Stats.MAX_HP, 0x10, null);
+			super(Stat.MAX_HP, 0x10, null);
 		}
 		
 		@Override
@@ -732,13 +732,13 @@ public class Formulas
 		
 		private FuncMaxHpMul()
 		{
-			super(Stats.MAX_HP, 0x20, null);
+			super(Stat.MAX_HP, 0x20, null);
 		}
 		
 		@Override
 		public void calc(Env env)
 		{
-			env.value *= BaseStats.CON.calcBonus(env.player);
+			env.value *= BaseStat.CON.calcBonus(env.player);
 		}
 	}
 	
@@ -753,7 +753,7 @@ public class Formulas
 		
 		private FuncMaxCpAdd()
 		{
-			super(Stats.MAX_CP, 0x10, null);
+			super(Stat.MAX_CP, 0x10, null);
 		}
 		
 		@Override
@@ -779,13 +779,13 @@ public class Formulas
 		
 		private FuncMaxCpMul()
 		{
-			super(Stats.MAX_CP, 0x20, null);
+			super(Stat.MAX_CP, 0x20, null);
 		}
 		
 		@Override
 		public void calc(Env env)
 		{
-			env.value *= BaseStats.CON.calcBonus(env.player);
+			env.value *= BaseStat.CON.calcBonus(env.player);
 		}
 	}
 	
@@ -800,7 +800,7 @@ public class Formulas
 		
 		private FuncMaxMpAdd()
 		{
-			super(Stats.MAX_MP, 0x10, null);
+			super(Stat.MAX_MP, 0x10, null);
 		}
 		
 		@Override
@@ -826,13 +826,13 @@ public class Formulas
 		
 		private FuncMaxMpMul()
 		{
-			super(Stats.MAX_MP, 0x20, null);
+			super(Stat.MAX_MP, 0x20, null);
 		}
 		
 		@Override
 		public void calc(Env env)
 		{
-			env.value *= BaseStats.MEN.calcBonus(env.player);
+			env.value *= BaseStat.MEN.calcBonus(env.player);
 		}
 	}
 	
@@ -874,46 +874,46 @@ public class Formulas
 	 */
 	public Calculator[] getStdNPCCalculators()
 	{
-		final Calculator[] std = new Calculator[Stats.NUM_STATS];
+		final Calculator[] std = new Calculator[Stat.NUM_STATS];
 		
-		std[Stats.MAX_HP.ordinal()] = new Calculator();
-		std[Stats.MAX_HP.ordinal()].addFunc(FuncMaxHpMul.getInstance());
+		std[Stat.MAX_HP.ordinal()] = new Calculator();
+		std[Stat.MAX_HP.ordinal()].addFunc(FuncMaxHpMul.getInstance());
 		
-		std[Stats.MAX_MP.ordinal()] = new Calculator();
-		std[Stats.MAX_MP.ordinal()].addFunc(FuncMaxMpMul.getInstance());
+		std[Stat.MAX_MP.ordinal()] = new Calculator();
+		std[Stat.MAX_MP.ordinal()].addFunc(FuncMaxMpMul.getInstance());
 		
-		std[Stats.POWER_ATTACK.ordinal()] = new Calculator();
-		std[Stats.POWER_ATTACK.ordinal()].addFunc(FuncPAtkMod.getInstance());
+		std[Stat.POWER_ATTACK.ordinal()] = new Calculator();
+		std[Stat.POWER_ATTACK.ordinal()].addFunc(FuncPAtkMod.getInstance());
 		
-		std[Stats.MAGIC_ATTACK.ordinal()] = new Calculator();
-		std[Stats.MAGIC_ATTACK.ordinal()].addFunc(FuncMAtkMod.getInstance());
+		std[Stat.MAGIC_ATTACK.ordinal()] = new Calculator();
+		std[Stat.MAGIC_ATTACK.ordinal()].addFunc(FuncMAtkMod.getInstance());
 		
-		std[Stats.POWER_DEFENCE.ordinal()] = new Calculator();
-		std[Stats.POWER_DEFENCE.ordinal()].addFunc(FuncPDefMod.getInstance());
+		std[Stat.POWER_DEFENCE.ordinal()] = new Calculator();
+		std[Stat.POWER_DEFENCE.ordinal()].addFunc(FuncPDefMod.getInstance());
 		
-		std[Stats.MAGIC_DEFENCE.ordinal()] = new Calculator();
-		std[Stats.MAGIC_DEFENCE.ordinal()].addFunc(FuncMDefMod.getInstance());
+		std[Stat.MAGIC_DEFENCE.ordinal()] = new Calculator();
+		std[Stat.MAGIC_DEFENCE.ordinal()].addFunc(FuncMDefMod.getInstance());
 		
-		std[Stats.CRITICAL_RATE.ordinal()] = new Calculator();
-		std[Stats.CRITICAL_RATE.ordinal()].addFunc(FuncAtkCritical.getInstance());
+		std[Stat.CRITICAL_RATE.ordinal()] = new Calculator();
+		std[Stat.CRITICAL_RATE.ordinal()].addFunc(FuncAtkCritical.getInstance());
 		
-		std[Stats.MCRITICAL_RATE.ordinal()] = new Calculator();
-		std[Stats.MCRITICAL_RATE.ordinal()].addFunc(FuncMAtkCritical.getInstance());
+		std[Stat.MCRITICAL_RATE.ordinal()] = new Calculator();
+		std[Stat.MCRITICAL_RATE.ordinal()].addFunc(FuncMAtkCritical.getInstance());
 		
-		std[Stats.ACCURACY_COMBAT.ordinal()] = new Calculator();
-		std[Stats.ACCURACY_COMBAT.ordinal()].addFunc(FuncAtkAccuracy.getInstance());
+		std[Stat.ACCURACY_COMBAT.ordinal()] = new Calculator();
+		std[Stat.ACCURACY_COMBAT.ordinal()].addFunc(FuncAtkAccuracy.getInstance());
 		
-		std[Stats.EVASION_RATE.ordinal()] = new Calculator();
-		std[Stats.EVASION_RATE.ordinal()].addFunc(FuncAtkEvasion.getInstance());
+		std[Stat.EVASION_RATE.ordinal()] = new Calculator();
+		std[Stat.EVASION_RATE.ordinal()].addFunc(FuncAtkEvasion.getInstance());
 		
-		std[Stats.POWER_ATTACK_SPEED.ordinal()] = new Calculator();
-		std[Stats.POWER_ATTACK_SPEED.ordinal()].addFunc(FuncPAtkSpeed.getInstance());
+		std[Stat.POWER_ATTACK_SPEED.ordinal()] = new Calculator();
+		std[Stat.POWER_ATTACK_SPEED.ordinal()].addFunc(FuncPAtkSpeed.getInstance());
 		
-		std[Stats.MAGIC_ATTACK_SPEED.ordinal()] = new Calculator();
-		std[Stats.MAGIC_ATTACK_SPEED.ordinal()].addFunc(FuncMAtkSpeed.getInstance());
+		std[Stat.MAGIC_ATTACK_SPEED.ordinal()] = new Calculator();
+		std[Stat.MAGIC_ATTACK_SPEED.ordinal()].addFunc(FuncMAtkSpeed.getInstance());
 		
-		std[Stats.RUN_SPEED.ordinal()] = new Calculator();
-		std[Stats.RUN_SPEED.ordinal()].addFunc(FuncMoveSpeed.getInstance());
+		std[Stat.RUN_SPEED.ordinal()] = new Calculator();
+		std[Stat.RUN_SPEED.ordinal()].addFunc(FuncMoveSpeed.getInstance());
 		
 		return std;
 	}
@@ -1063,7 +1063,7 @@ public class Formulas
 			}
 			
 			// Add CON bonus
-			init *= creature.getLevelMod() * BaseStats.CON.calcBonus(creature);
+			init *= creature.getLevelMod() * BaseStat.CON.calcBonus(creature);
 		}
 		
 		if (init < 1)
@@ -1071,7 +1071,7 @@ public class Formulas
 			init = 1;
 		}
 		
-		return (creature.calcStat(Stats.REGENERATE_HP_RATE, init, null, null) * hpRegenMultiplier) + hpRegenBonus;
+		return (creature.calcStat(Stat.REGENERATE_HP_RATE, init, null, null) * hpRegenMultiplier) + hpRegenBonus;
 	}
 	
 	/**
@@ -1133,7 +1133,7 @@ public class Formulas
 			}
 			
 			// Add MEN bonus
-			init *= creature.getLevelMod() * BaseStats.MEN.calcBonus(creature);
+			init *= creature.getLevelMod() * BaseStat.MEN.calcBonus(creature);
 		}
 		
 		if (init < 1)
@@ -1141,7 +1141,7 @@ public class Formulas
 			init = 1;
 		}
 		
-		return (creature.calcStat(Stats.REGENERATE_MP_RATE, init, null, null) * mpRegenMultiplier) + mpRegenBonus;
+		return (creature.calcStat(Stat.REGENERATE_MP_RATE, init, null, null) * mpRegenMultiplier) + mpRegenBonus;
 	}
 	
 	/**
@@ -1188,13 +1188,13 @@ public class Formulas
 		}
 		
 		// Apply CON bonus
-		init *= creature.getLevelMod() * BaseStats.CON.calcBonus(creature);
+		init *= creature.getLevelMod() * BaseStat.CON.calcBonus(creature);
 		if (init < 1)
 		{
 			init = 1;
 		}
 		
-		return (creature.calcStat(Stats.REGENERATE_CP_RATE, init, null, null) * cpRegenMultiplier) + cpRegenBonus;
+		return (creature.calcStat(Stat.REGENERATE_CP_RATE, init, null, null) * cpRegenMultiplier) + cpRegenBonus;
 	}
 	
 	@SuppressWarnings("deprecation")
@@ -1234,7 +1234,7 @@ public class Formulas
 		}
 		
 		final Siege siege = SiegeManager.getInstance().getSiege(player.getPosition().getX(), player.getPosition().getY(), player.getPosition().getZ());
-		if ((siege == null) || !siege.getIsInProgress())
+		if ((siege == null) || !siege.isInProgress())
 		{
 			return 0;
 		}
@@ -1276,8 +1276,8 @@ public class Formulas
 		if (crit)
 		{
 			// double cAtkMultiplied = (damage) + attacker.calcStat(Stats.CRITICAL_DAMAGE, damage, target, skill);
-			final double improvedDamageByCriticalVuln = target.calcStat(Stats.CRIT_VULN, damage, target, skill);
-			final double improvedDamageByCriticalVulnAndAdd = (attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, improvedDamageByCriticalVuln, target, skill));
+			final double improvedDamageByCriticalVuln = target.calcStat(Stat.CRIT_VULN, damage, target, skill);
+			final double improvedDamageByCriticalVulnAndAdd = (attacker.calcStat(Stat.CRITICAL_DAMAGE_ADD, improvedDamageByCriticalVuln, target, skill));
 			
 			damage = improvedDamageByCriticalVulnAndAdd;
 			
@@ -1318,7 +1318,7 @@ public class Formulas
 		}
 		
 		// possible skill power critical hit, based on Official Description:
-		if (calcCrit(skill.getBaseCritRate() * 10 * BaseStats.DEX.calcBonus(attacker)))
+		if (calcCrit(skill.getBaseCritRate() * 10 * BaseStat.DEX.calcBonus(attacker)))
 		{
 			damage *= 2;
 		}
@@ -1328,15 +1328,15 @@ public class Formulas
 		// finally, apply the critical multiplier if present (it's not subjected to defense)
 		if (crit)
 		{
-			damage = attacker.calcStat(Stats.CRITICAL_DAMAGE, damage, target, skill);
+			damage = attacker.calcStat(Stat.CRITICAL_DAMAGE, damage, target, skill);
 		}
 		
 		// get the vulnerability for the instance due to skills (buffs, passives, toggles, etc)
-		damage = target.calcStat(Stats.DAGGER_WPN_VULN, damage, target, null);
+		damage = target.calcStat(Stat.DAGGER_WPN_VULN, damage, target, null);
 		// get the natural vulnerability for the template
 		if (target instanceof NpcInstance)
 		{
-			damage *= ((NpcInstance) target).getTemplate().getVulnerability(Stats.DAGGER_WPN_VULN);
+			damage *= ((NpcInstance) target).getTemplate().getVulnerability(Stat.DAGGER_WPN_VULN);
 		}
 		
 		// Weapon random damage
@@ -1453,64 +1453,64 @@ public class Formulas
 		
 		// defence modifier depending of the attacker weapon
 		final Weapon weapon = attacker.getActiveWeaponItem();
-		Stats stat = null;
+		Stat stat = null;
 		if (weapon != null)
 		{
 			switch (weapon.getItemType())
 			{
 				case BOW:
 				{
-					stat = Stats.BOW_WPN_VULN;
+					stat = Stat.BOW_WPN_VULN;
 					break;
 				}
 				case BLUNT:
 				{
-					stat = Stats.BLUNT_WPN_VULN;
+					stat = Stat.BLUNT_WPN_VULN;
 					break;
 				}
 				case DAGGER:
 				{
-					stat = Stats.DAGGER_WPN_VULN;
+					stat = Stat.DAGGER_WPN_VULN;
 					break;
 				}
 				case DUAL:
 				{
-					stat = Stats.DUAL_WPN_VULN;
+					stat = Stat.DUAL_WPN_VULN;
 					break;
 				}
 				case DUALFIST:
 				{
-					stat = Stats.DUALFIST_WPN_VULN;
+					stat = Stat.DUALFIST_WPN_VULN;
 					break;
 				}
 				case ETC:
 				{
-					stat = Stats.ETC_WPN_VULN;
+					stat = Stat.ETC_WPN_VULN;
 					break;
 				}
 				case FIST:
 				{
-					stat = Stats.FIST_WPN_VULN;
+					stat = Stat.FIST_WPN_VULN;
 					break;
 				}
 				case POLE:
 				{
-					stat = Stats.POLE_WPN_VULN;
+					stat = Stat.POLE_WPN_VULN;
 					break;
 				}
 				case SWORD:
 				{
-					stat = Stats.SWORD_WPN_VULN;
+					stat = Stat.SWORD_WPN_VULN;
 					break;
 				}
 				case BIGSWORD:
 				{
-					stat = Stats.BIGSWORD_WPN_VULN;
+					stat = Stat.BIGSWORD_WPN_VULN;
 					break;
 				}
 				case BIGBLUNT:
 				{
-					stat = Stats.BIGBLUNT_WPN_VULN;
+					stat = Stat.BIGBLUNT_WPN_VULN;
 					break;
 				}
 			}
@@ -1519,10 +1519,10 @@ public class Formulas
 		if (crit)
 		{
 			// Finally retail like formula
-			final double cAtkMultiplied = damage + attacker.calcStat(Stats.CRITICAL_DAMAGE, damage, target, skill);
-			final double cAtkVuln = target.calcStat(Stats.CRIT_VULN, 1, target, null);
+			final double cAtkMultiplied = damage + attacker.calcStat(Stat.CRITICAL_DAMAGE, damage, target, skill);
+			final double cAtkVuln = target.calcStat(Stat.CRIT_VULN, 1, target, null);
 			final double improvedDamageByCriticalMulAndVuln = cAtkMultiplied * cAtkVuln;
-			final double improvedDamageByCriticalMulAndAdd = improvedDamageByCriticalMulAndVuln + attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, 0, target, skill);
+			final double improvedDamageByCriticalMulAndAdd = improvedDamageByCriticalMulAndVuln + attacker.calcStat(Stat.CRITICAL_DAMAGE_ADD, 0, target, skill);
 			damage = improvedDamageByCriticalMulAndAdd;
 		}
 		
@@ -1675,11 +1675,11 @@ public class Formulas
 		{
 			if (skill == null)
 			{
-				damage *= attacker.calcStat(Stats.PVP_PHYSICAL_DMG, 1, null, null);
+				damage *= attacker.calcStat(Stat.PVP_PHYSICAL_DMG, 1, null, null);
 			}
 			else
 			{
-				damage *= attacker.calcStat(Stats.PVP_PHYS_SKILL_DMG, 1, null, null);
+				damage *= attacker.calcStat(Stat.PVP_PHYS_SKILL_DMG, 1, null, null);
 			}
 		}
 		
@@ -1838,11 +1838,11 @@ public class Formulas
 		{
 			if (skill.isMagic())
 			{
-				damage *= attacker.calcStat(Stats.PVP_MAGICAL_DMG, 1, null, null);
+				damage *= attacker.calcStat(Stat.PVP_MAGICAL_DMG, 1, null, null);
 			}
 			else
 			{
-				damage *= attacker.calcStat(Stats.PVP_PHYS_SKILL_DMG, 1, null, null);
+				damage *= attacker.calcStat(Stat.PVP_PHYS_SKILL_DMG, 1, null, null);
 			}
 		}
 		
@@ -1917,7 +1917,7 @@ public class Formulas
 	 */
 	public boolean calcBlow(Creature creature, Creature target, int chance)
 	{
-		return creature.calcStat(Stats.BLOW_RATE, chance * (1.0 + ((creature.getDEX() - 20) / 100)), target, null) > Rnd.get(100);
+		return creature.calcStat(Stat.BLOW_RATE, chance * (1.0 + ((creature.getDEX() - 20) / 100)), target, null) > Rnd.get(100);
 	}
 	
 	/**
@@ -1929,7 +1929,7 @@ public class Formulas
 	 */
 	public static final double calcLethal(Creature creature, Creature target, int baseLethal)
 	{
-		double mult = 0.1 * target.calcStat(Stats.LETHAL_RATE, 100, target, null);
+		double mult = 0.1 * target.calcStat(Stat.LETHAL_RATE, 100, target, null);
 		mult *= baseLethal;
 		return mult;
 	}
@@ -2030,10 +2030,10 @@ public class Formulas
 		init += Math.sqrt(13 * dmg);
 		
 		// Chance is affected by target MEN
-		init -= ((BaseStats.MEN.calcBonus(target) * 100) - 100);
+		init -= ((BaseStat.MEN.calcBonus(target) * 100) - 100);
 		
 		// Calculate all modifiers for ATTACK_CANCEL
-		double rate = target.calcStat(Stats.ATTACK_CANCEL, init, null, null);
+		double rate = target.calcStat(Stat.ATTACK_CANCEL, init, null, null);
 		
 		// Adjust the rate to be between 1 and 99
 		if (rate > 99)
@@ -2125,7 +2125,7 @@ public class Formulas
 	{
 		final Weapon weapon = attacker.getActiveWeaponItem();
 		// double shldRate = target.calcStat(Stats.SHIELD_RATE, 0, attacker, null) * DEXbonus[target.getDEX()];
-		double shldRate = target.calcStat(Stats.SHIELD_RATE, 0, attacker, null) * BaseStats.DEX.calcBonus(target);
+		double shldRate = target.calcStat(Stat.SHIELD_RATE, 0, attacker, null) * BaseStat.DEX.calcBonus(target);
 		if (shldRate == 0.0)
 		{
 			return false;
@@ -2161,7 +2161,7 @@ public class Formulas
 			return (d > 0) && (Rnd.get(1000) == 1);
 		}
 		
-		if ((target.calcStat(Stats.DEBUFF_IMMUNITY, 0, null, skill) > 0) && skill.isDebuff())
+		if ((target.calcStat(Stat.DEBUFF_IMMUNITY, 0, null, skill) > 0) && skill.isDebuff())
 		{
 			return false;
 		}
@@ -2178,7 +2178,7 @@ public class Formulas
 		if (skill != null)
 		{
 			// first, get the natural template vulnerability values for the target
-			final Stats stat = skill.getStat();
+			final Stat stat = skill.getStat();
 			if (stat != null)
 			{
 				switch (stat)
@@ -2265,32 +2265,32 @@ public class Formulas
 			{
 				case Skill.ELEMENT_EARTH:
 				{
-					multiplier = target.calcStat(Stats.EARTH_VULN, multiplier, target, skill);
+					multiplier = target.calcStat(Stat.EARTH_VULN, multiplier, target, skill);
 					break;
 				}
 				case Skill.ELEMENT_FIRE:
 				{
-					multiplier = target.calcStat(Stats.FIRE_VULN, multiplier, target, skill);
+					multiplier = target.calcStat(Stat.FIRE_VULN, multiplier, target, skill);
 					break;
 				}
 				case Skill.ELEMENT_WATER:
 				{
-					multiplier = target.calcStat(Stats.WATER_VULN, multiplier, target, skill);
+					multiplier = target.calcStat(Stat.WATER_VULN, multiplier, target, skill);
 					break;
 				}
 				case Skill.ELEMENT_WIND:
 				{
-					multiplier = target.calcStat(Stats.WIND_VULN, multiplier, target, skill);
+					multiplier = target.calcStat(Stat.WIND_VULN, multiplier, target, skill);
 					break;
 				}
 				case Skill.ELEMENT_HOLY:
 				{
-					multiplier = target.calcStat(Stats.HOLY_VULN, multiplier, target, skill);
+					multiplier = target.calcStat(Stat.HOLY_VULN, multiplier, target, skill);
 					break;
 				}
 				case Skill.ELEMENT_DARK:
 				{
-					multiplier = target.calcStat(Stats.DARK_VULN, multiplier, target, skill);
+					multiplier = target.calcStat(Stat.DARK_VULN, multiplier, target, skill);
 					break;
 				}
 			}
@@ -2310,32 +2310,32 @@ public class Formulas
 				{
 					case BLEED:
 					{
-						multiplier = target.calcStat(Stats.BLEED_VULN, multiplier, target, null);
+						multiplier = target.calcStat(Stat.BLEED_VULN, multiplier, target, null);
 						break;
 					}
 					case POISON:
 					{
-						multiplier = target.calcStat(Stats.POISON_VULN, multiplier, target, null);
+						multiplier = target.calcStat(Stat.POISON_VULN, multiplier, target, null);
 						break;
 					}
 					case STUN:
 					{
-						multiplier = target.calcStat(Stats.STUN_VULN, multiplier, target, null);
+						multiplier = target.calcStat(Stat.STUN_VULN, multiplier, target, null);
 						break;
 					}
 					case PARALYZE:
 					{
-						multiplier = target.calcStat(Stats.PARALYZE_VULN, multiplier, target, null);
+						multiplier = target.calcStat(Stat.PARALYZE_VULN, multiplier, target, null);
 						break;
 					}
 					case ROOT:
 					{
-						multiplier = target.calcStat(Stats.ROOT_VULN, multiplier, target, null);
+						multiplier = target.calcStat(Stat.ROOT_VULN, multiplier, target, null);
 						break;
 					}
 					case SLEEP:
 					{
-						multiplier = target.calcStat(Stats.SLEEP_VULN, multiplier, target, null);
+						multiplier = target.calcStat(Stat.SLEEP_VULN, multiplier, target, null);
 						break;
 					}
 					case MUTE:
@@ -2343,23 +2343,23 @@ public class Formulas
 					case BETRAY:
 					case AGGREDUCE_CHAR:
 					{
-						multiplier = target.calcStat(Stats.DERANGEMENT_VULN, multiplier, target, null);
+						multiplier = target.calcStat(Stat.DERANGEMENT_VULN, multiplier, target, null);
 						break;
 					}
 					case CONFUSION:
 					{
-						multiplier = target.calcStat(Stats.CONFUSION_VULN, multiplier, target, null);
+						multiplier = target.calcStat(Stat.CONFUSION_VULN, multiplier, target, null);
 						break;
 					}
 					case DEBUFF:
 					case WEAKNESS:
 					{
-						multiplier = target.calcStat(Stats.DEBUFF_VULN, multiplier, target, null);
+						multiplier = target.calcStat(Stat.DEBUFF_VULN, multiplier, target, null);
 						break;
 					}
 					case BUFF:
 					{
-						multiplier = target.calcStat(Stats.BUFF_VULN, multiplier, target, null);
+						multiplier = target.calcStat(Stat.BUFF_VULN, multiplier, target, null);
 						break;
 					}
 				}
@@ -2370,7 +2370,7 @@ public class Formulas
 	
 	public static double calcSkillStatModifier(Skill skill, Creature target)
 	{
-		final BaseStats saveVs = skill.getSavevs();
+		final BaseStat saveVs = skill.getSavevs();
 		if (saveVs == null)
 		{
 			return 1;
@@ -2386,7 +2386,7 @@ public class Formulas
 			return false;
 		}
 		
-		if ((target.calcStat(Stats.DEBUFF_IMMUNITY, 0, null, skill) > 0) && skill.isDebuff())
+		if ((target.calcStat(Stat.DEBUFF_IMMUNITY, 0, null, skill) > 0) && skill.isDebuff())
 		{
 			return false;
 		}
@@ -2485,7 +2485,7 @@ public class Formulas
 			return false;
 		}
 		
-		if ((target.calcStat(Stats.DEBUFF_IMMUNITY, 0, null, skill) > 0) && skill.isDebuff())
+		if ((target.calcStat(Stat.DEBUFF_IMMUNITY, 0, null, skill) > 0) && skill.isDebuff())
 		{
 			return false;
 		}
@@ -2596,7 +2596,7 @@ public class Formulas
 			return false;
 		}
 		
-		if ((target.calcStat(Stats.DEBUFF_IMMUNITY, 0, null, skill) > 0) && skill.isDebuff())
+		if ((target.calcStat(Stat.DEBUFF_IMMUNITY, 0, null, skill) > 0) && skill.isDebuff())
 		{
 			return false;
 		}
@@ -2710,32 +2710,32 @@ public class Formulas
 			{
 				case BLEED:
 				{
-					multiplier = target.calcStat(Stats.BLEED_VULN, multiplier, target, null);
+					multiplier = target.calcStat(Stat.BLEED_VULN, multiplier, target, null);
 					break;
 				}
 				case POISON:
 				{
-					multiplier = target.calcStat(Stats.POISON_VULN, multiplier, target, null);
+					multiplier = target.calcStat(Stat.POISON_VULN, multiplier, target, null);
 					break;
 				}
 				case STUN:
 				{
-					multiplier = target.calcStat(Stats.STUN_VULN, multiplier, target, null);
+					multiplier = target.calcStat(Stat.STUN_VULN, multiplier, target, null);
 					break;
 				}
 				case PARALYZE:
 				{
-					multiplier = target.calcStat(Stats.PARALYZE_VULN, multiplier, target, null);
+					multiplier = target.calcStat(Stat.PARALYZE_VULN, multiplier, target, null);
 					break;
 				}
 				case ROOT:
 				{
-					multiplier = target.calcStat(Stats.ROOT_VULN, multiplier, target, null);
+					multiplier = target.calcStat(Stat.ROOT_VULN, multiplier, target, null);
 					break;
 				}
 				case SLEEP:
 				{
-					multiplier = target.calcStat(Stats.SLEEP_VULN, multiplier, target, null);
+					multiplier = target.calcStat(Stat.SLEEP_VULN, multiplier, target, null);
 					break;
 				}
 				case MUTE:
@@ -2744,28 +2744,28 @@ public class Formulas
 				case AGGDEBUFF:
 				case ERASE:
 				{
-					multiplier = target.calcStat(Stats.DERANGEMENT_VULN, multiplier, target, null);
+					multiplier = target.calcStat(Stat.DERANGEMENT_VULN, multiplier, target, null);
 					break;
 				}
 				case CONFUSION:
 				case CONFUSE_MOB_ONLY:
 				{
-					multiplier = target.calcStat(Stats.CONFUSION_VULN, multiplier, target, null);
+					multiplier = target.calcStat(Stat.CONFUSION_VULN, multiplier, target, null);
 					break;
 				}
 				case DEBUFF:
 				{
-					multiplier = target.calcStat(Stats.DEBUFF_VULN, multiplier, target, null);
+					multiplier = target.calcStat(Stat.DEBUFF_VULN, multiplier, target, null);
 					break;
 				}
 				case BUFF:
 				{
-					multiplier = target.calcStat(Stats.BUFF_VULN, multiplier, target, null);
+					multiplier = target.calcStat(Stat.BUFF_VULN, multiplier, target, null);
 					break;
 				}
 				case CANCEL:
 				{
-					multiplier = target.calcStat(Stats.CANCEL_VULN, multiplier, target, null);
+					multiplier = target.calcStat(Stat.CANCEL_VULN, multiplier, target, null);
 					break;
 				}
 				default:
@@ -2994,7 +2994,7 @@ public class Formulas
 		double restorePercent = baseRestorePercent;
 		
 		// double modifier = WITbonus[casterWIT];
-		final double modifier = BaseStats.WIT.calcBonus(caster);
+		final double modifier = BaseStat.WIT.calcBonus(caster);
 		
 		if ((restorePercent != 100) && (restorePercent != 0))
 		{
@@ -3025,7 +3025,7 @@ public class Formulas
 			return false;
 		}
 		
-		return Rnd.get(100) < target.calcStat(Stats.P_SKILL_EVASION, 0, null, skill);
+		return Rnd.get(100) < target.calcStat(Stat.P_SKILL_EVASION, 0, null, skill);
 	}
 	
 	public boolean calcSkillMastery(Creature actor)
@@ -3035,17 +3035,17 @@ public class Formulas
 			return false;
 		}
 		
-		double val = actor.getStat().calcStat(Stats.SKILL_MASTERY, 0, null, null);
+		double val = actor.getStat().calcStat(Stat.SKILL_MASTERY, 0, null, null);
 		
 		if (actor instanceof PlayerInstance)
 		{
 			if (((PlayerInstance) actor).isMageClass())
 			{
-				val *= BaseStats.INT.calcBonus(actor);
+				val *= BaseStat.INT.calcBonus(actor);
 			}
 			else
 			{
-				val *= BaseStats.STR.calcBonus(actor);
+				val *= BaseStat.STR.calcBonus(actor);
 			}
 		}
 		
@@ -3064,7 +3064,7 @@ public class Formulas
 		{
 			return 0;
 		}
-		return creature.calcStat(Stats.FALL, (fallHeight * creature.getMaxHp()) / 1000, null, null);
+		return creature.calcStat(Stat.FALL, (fallHeight * creature.getMaxHp()) / 1000, null, null);
 	}
 	
 	/**
@@ -3100,8 +3100,8 @@ public class Formulas
 		
 		if (crit)
 		{
-			final double improvedDamageByCriticalVuln = target.calcStat(Stats.CRIT_VULN, damage, target, skill);
-			damage = (attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, improvedDamageByCriticalVuln, target, skill));
+			final double improvedDamageByCriticalVuln = target.calcStat(Stat.CRIT_VULN, damage, target, skill);
+			damage = (attacker.calcStat(Stat.CRITICAL_DAMAGE_ADD, improvedDamageByCriticalVuln, target, skill));
 		}
 		
 		if (skill != null) // skill add is not influenced by criticals improvements, so it's applied later
@@ -3138,69 +3138,69 @@ public class Formulas
 		// finally, apply the critical multiplier if present (it's not subjected to defense)
 		if (crit)
 		{
-			damage = attacker.calcStat(Stats.CRITICAL_DAMAGE, damage, target, skill);
+			damage = attacker.calcStat(Stat.CRITICAL_DAMAGE, damage, target, skill);
 		}
 		
 		// defence modifier depending of the attacker weapon
 		final Weapon weapon = attacker.getActiveWeaponItem();
-		Stats stat = null;
+		Stat stat = null;
 		if (weapon != null)
 		{
 			switch (weapon.getItemType())
 			{
 				case BOW:
 				{
-					stat = Stats.BOW_WPN_VULN;
+					stat = Stat.BOW_WPN_VULN;
 					break;
 				}
 				case BLUNT:
 				{
-					stat = Stats.BLUNT_WPN_VULN;
+					stat = Stat.BLUNT_WPN_VULN;
 					break;
 				}
 				case BIGSWORD:
 				{
-					stat = Stats.BIGSWORD_WPN_VULN;
+					stat = Stat.BIGSWORD_WPN_VULN;
 					break;
 				}
 				case BIGBLUNT:
 				{
-					stat = Stats.BIGBLUNT_WPN_VULN;
+					stat = Stat.BIGBLUNT_WPN_VULN;
 					break;
 				}
 				case DAGGER:
 				{
-					stat = Stats.DAGGER_WPN_VULN;
+					stat = Stat.DAGGER_WPN_VULN;
 					break;
 				}
 				case DUAL:
 				{
-					stat = Stats.DUAL_WPN_VULN;
+					stat = Stat.DUAL_WPN_VULN;
 					break;
 				}
 				case DUALFIST:
 				{
-					stat = Stats.DUALFIST_WPN_VULN;
+					stat = Stat.DUALFIST_WPN_VULN;
 					break;
 				}
 				case ETC:
 				{
-					stat = Stats.ETC_WPN_VULN;
+					stat = Stat.ETC_WPN_VULN;
 					break;
 				}
 				case FIST:
 				{
-					stat = Stats.FIST_WPN_VULN;
+					stat = Stat.FIST_WPN_VULN;
 					break;
 				}
 				case POLE:
 				{
-					stat = Stats.POLE_WPN_VULN;
+					stat = Stat.POLE_WPN_VULN;
 					break;
 				}
 				case SWORD:
 				{
-					stat = Stats.SWORD_WPN_VULN;
+					stat = Stat.SWORD_WPN_VULN;
 					break;
 				}
 			}
@@ -3310,11 +3310,11 @@ public class Formulas
 		{
 			if (skill == null)
 			{
-				damage *= attacker.calcStat(Stats.PVP_PHYSICAL_DMG, 1, null, null);
+				damage *= attacker.calcStat(Stat.PVP_PHYSICAL_DMG, 1, null, null);
 			}
 			else
 			{
-				damage *= attacker.calcStat(Stats.PVP_PHYS_SKILL_DMG, 1, null, null);
+				damage *= attacker.calcStat(Stat.PVP_PHYS_SKILL_DMG, 1, null, null);
 			}
 		}
 		

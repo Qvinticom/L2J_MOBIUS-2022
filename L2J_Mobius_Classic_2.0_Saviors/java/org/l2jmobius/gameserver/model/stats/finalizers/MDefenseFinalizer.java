@@ -24,14 +24,14 @@ import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.IStatsFunction;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.IStatFunction;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author UnAfraid
  */
-public class MDefenseFinalizer implements IStatsFunction
+public class MDefenseFinalizer implements IStatFunction
 {
 	private static final int[] SLOTS =
 	{
@@ -43,7 +43,7 @@ public class MDefenseFinalizer implements IStatsFunction
 	};
 	
 	@Override
-	public double calc(Creature creature, OptionalDouble base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stat stat)
 	{
 		throwIfPresent(base);
 		double baseValue = creature.getTemplate().getBaseValue(stat, 0);
@@ -84,12 +84,12 @@ public class MDefenseFinalizer implements IStatsFunction
 			baseValue *= Config.RAID_MDEFENCE_MULTIPLIER;
 		}
 		
-		final double bonus = creature.getMEN() > 0 ? BaseStats.MEN.calcBonus(creature) : 1.;
+		final double bonus = creature.getMEN() > 0 ? BaseStat.MEN.calcBonus(creature) : 1.;
 		baseValue *= bonus * creature.getLevelMod();
 		return defaultValue(creature, stat, baseValue);
 	}
 	
-	private double defaultValue(Creature creature, Stats stat, double baseValue)
+	private double defaultValue(Creature creature, Stat stat, double baseValue)
 	{
 		final double mul = Math.max(creature.getStat().getMul(stat), 0.5);
 		final double add = creature.getStat().getAdd(stat);

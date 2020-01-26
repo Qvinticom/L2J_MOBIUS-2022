@@ -645,7 +645,7 @@ public class AuctioneerInstance extends FolkInstance
 	{
 		if ((getCastle() != null) && (getCastle().getCastleId() > 0))
 		{
-			if (getCastle().getSiege().getIsInProgress())
+			if (getCastle().getSiege().isInProgress())
 			{
 				return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
 			}

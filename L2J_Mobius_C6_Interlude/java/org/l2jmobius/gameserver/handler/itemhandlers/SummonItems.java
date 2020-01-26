@@ -67,7 +67,7 @@ public class SummonItems implements IItemHandler
 			return;
 		}
 		
-		if (player._inEventDM && DM.is_started() && !Config.DM_ALLOW_SUMMON)
+		if (player._inEventDM && DM.hasStarted() && !Config.DM_ALLOW_SUMMON)
 		{
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
 			player.sendPacket(af);

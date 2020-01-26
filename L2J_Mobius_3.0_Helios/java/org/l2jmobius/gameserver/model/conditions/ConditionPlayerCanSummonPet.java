@@ -30,11 +30,11 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class ConditionPlayerCanSummonPet extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
-	public ConditionPlayerCanSummonPet(boolean val)
+	public ConditionPlayerCanSummonPet(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
@@ -62,6 +62,6 @@ public class ConditionPlayerCanSummonPet extends Condition
 		{
 			canSummon = false;
 		}
-		return (_val == canSummon);
+		return (_value == canSummon);
 	}
 }

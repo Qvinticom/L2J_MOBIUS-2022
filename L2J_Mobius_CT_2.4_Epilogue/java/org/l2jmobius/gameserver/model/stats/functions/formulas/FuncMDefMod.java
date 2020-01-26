@@ -20,8 +20,8 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 
 /**
@@ -38,7 +38,7 @@ public class FuncMDefMod extends AbstractFunction
 	
 	private FuncMDefMod()
 	{
-		super(Stats.MAGIC_DEFENCE, 1, null, 0, null);
+		super(Stat.MAGIC_DEFENCE, 1, null, 0, null);
 	}
 	
 	@Override
@@ -73,6 +73,6 @@ public class FuncMDefMod extends AbstractFunction
 		{
 			value -= 13;
 		}
-		return value * BaseStats.MEN.calcBonus(effector) * effector.getLevelMod();
+		return value * BaseStat.MEN.calcBonus(effector) * effector.getLevelMod();
 	}
 }

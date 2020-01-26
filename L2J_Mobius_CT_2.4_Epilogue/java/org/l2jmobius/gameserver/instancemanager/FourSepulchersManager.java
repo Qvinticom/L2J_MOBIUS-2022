@@ -771,7 +771,7 @@ public class FourSepulchersManager
 		return _inAttackTime;
 	}
 	
-	public void setIsAttackTime(boolean attackTime)
+	public void setAttackTime(boolean attackTime)
 	{
 		_inAttackTime = attackTime;
 	}
@@ -781,7 +781,7 @@ public class FourSepulchersManager
 		return _inCoolDownTime;
 	}
 	
-	public void setIsCoolDownTime(boolean isCoolDownTime)
+	public void setCoolDownTime(boolean isCoolDownTime)
 	{
 		_inCoolDownTime = isCoolDownTime;
 	}
@@ -791,7 +791,7 @@ public class FourSepulchersManager
 		return _inEntryTime;
 	}
 	
-	public void setIsEntryTime(boolean entryTime)
+	public void setEntryTime(boolean entryTime)
 	{
 		_inEntryTime = entryTime;
 	}
@@ -801,7 +801,7 @@ public class FourSepulchersManager
 		return _firstTimeRun;
 	}
 	
-	public void setIsFirstTimeRun(boolean isFirstTimeRun)
+	public void setFirstTimeRun(boolean isFirstTimeRun)
 	{
 		_firstTimeRun = isFirstTimeRun;
 	}
@@ -811,7 +811,7 @@ public class FourSepulchersManager
 		return _inWarmUpTime;
 	}
 	
-	public void setIsWarmUpTime(boolean isWarmUpTime)
+	public void setWarmUpTime(boolean isWarmUpTime)
 	{
 		_inWarmUpTime = isWarmUpTime;
 	}

@@ -20,7 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.SevenSigns;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 
 /**
@@ -37,7 +37,7 @@ public class FuncGatesMDefMod extends AbstractFunction
 	
 	private FuncGatesMDefMod()
 	{
-		super(Stats.MAGIC_DEFENCE, 1, null, 0, null);
+		super(Stat.MAGIC_DEFENCE, 1, null, 0, null);
 	}
 	
 	@Override

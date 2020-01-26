@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
-import org.l2jmobius.gameserver.model.skills.BaseStats;
+import org.l2jmobius.gameserver.model.skills.BaseStat;
 import org.l2jmobius.gameserver.model.skills.Formulas;
 import org.l2jmobius.gameserver.model.skills.effects.EffectCharge;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -119,7 +119,7 @@ public class SkillChargeDmg extends Skill
 			
 			if (getBaseCritRate() > 0)
 			{
-				crit = Formulas.calcCrit(getBaseCritRate() * 10 * BaseStats.STR.calcBonus(caster));
+				crit = Formulas.calcCrit(getBaseCritRate() * 10 * BaseStat.STR.calcBonus(caster));
 			}
 			
 			// damage calculation

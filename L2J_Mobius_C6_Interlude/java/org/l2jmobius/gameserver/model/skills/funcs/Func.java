@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.skills.funcs;
 
 import org.l2jmobius.gameserver.model.skills.Env;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.model.skills.conditions.Condition;
 
 /**
@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.skills.conditions.Condition;
 public abstract class Func
 {
 	/** Statistics, that is affected by this function (See Creature.CALCULATOR_XXX constants) */
-	public Stats stat;
+	public Stat stat;
 	
 	/**
 	 * Order of functions calculation. Functions with lower order are executed first. Functions with the same order are executed in unspecified order. Usually add/subtract functions has lowest order, then bonus/penalty functions (Multiply/divide) are applied, then functions that do more complex
@@ -55,7 +55,7 @@ public abstract class Func
 	 * @param pOrder
 	 * @param owner
 	 */
-	public Func(Stats pStat, int pOrder, Object owner)
+	public Func(Stat pStat, int pOrder, Object owner)
 	{
 		stat = pStat;
 		order = pOrder;

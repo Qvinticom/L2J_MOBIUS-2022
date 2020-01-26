@@ -66,7 +66,7 @@ import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -115,7 +115,7 @@ public class Attackable extends Npc
 	{
 		super(template);
 		setInstanceType(InstanceType.Attackable);
-		setIsInvul(false);
+		setInvul(false);
 		_mustGiveExpSp = true;
 	}
 	
@@ -147,7 +147,7 @@ public class Attackable extends Npc
 		return _isReturningToSpawnPoint;
 	}
 	
-	public void setisReturningToSpawnPoint(boolean value)
+	public void setReturningToSpawnPoint(boolean value)
 	{
 		_isReturningToSpawnPoint = value;
 	}
@@ -167,9 +167,9 @@ public class Attackable extends Npc
 		return _seeThroughSilentMove;
 	}
 	
-	public void setSeeThroughSilentMove(boolean val)
+	public void setSeeThroughSilentMove(boolean value)
 	{
-		_seeThroughSilentMove = val;
+		_seeThroughSilentMove = value;
 	}
 	
 	/**
@@ -472,8 +472,8 @@ public class Attackable extends Npc
 							// Distribute the Exp and SP between the PlayerInstance and its Summon
 							if (!attacker.isDead())
 							{
-								final long addexp = Math.round(attacker.calcStat(Stats.EXPSP_RATE, exp, null, null));
-								final int addsp = (int) attacker.calcStat(Stats.EXPSP_RATE, sp, null, null);
+								final long addexp = Math.round(attacker.calcStat(Stat.EXPSP_RATE, exp, null, null));
+								final int addsp = (int) attacker.calcStat(Stat.EXPSP_RATE, sp, null, null);
 								
 								attacker.addExpAndSp(addexp, addsp, useVitalityRate());
 								if (addexp > 0)
@@ -1701,12 +1701,12 @@ public class Attackable extends Npc
 	
 	/**
 	 * Set this Npc as a Minion instance.
-	 * @param val
+	 * @param value
 	 */
-	public void setIsRaidMinion(boolean val)
+	public void setIsRaidMinion(boolean value)
 	{
-		_isRaid = val;
-		_isRaidMinion = val;
+		_isRaid = value;
+		_isRaidMinion = value;
 	}
 	
 	@Override

@@ -291,7 +291,7 @@ public class MinionList
 	protected static MonsterInstance initializeNpcInstance(MonsterInstance master, MonsterInstance minion)
 	{
 		minion.stopAllEffects();
-		minion.setIsDead(false);
+		minion.setDead(false);
 		minion.setDecayed(false);
 		
 		// Set the Minion HP, MP and Heading

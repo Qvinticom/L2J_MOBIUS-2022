@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -149,20 +149,20 @@ public class PetStat extends SummonStat
 	@Override
 	public int getMaxHp()
 	{
-		return (int) calcStat(Stats.MAX_HP, getActiveChar().getPetData().getPetMaxHP(), null, null);
+		return (int) calcStat(Stat.MAX_HP, getActiveChar().getPetData().getPetMaxHP(), null, null);
 	}
 	
 	@Override
 	public int getMaxMp()
 	{
-		return (int) calcStat(Stats.MAX_MP, getActiveChar().getPetData().getPetMaxMP(), null, null);
+		return (int) calcStat(Stat.MAX_MP, getActiveChar().getPetData().getPetMaxMP(), null, null);
 	}
 	
 	@Override
 	public int getMAtk(Creature target, Skill skill)
 	{
 		double attack = getActiveChar().getPetData().getPetMAtk();
-		final Stats stat = skill == null ? null : skill.getStat();
+		final Stat stat = skill == null ? null : skill.getStat();
 		
 		if (stat != null)
 		{
@@ -246,7 +246,7 @@ public class PetStat extends SummonStat
 			attack += skill.getPower();
 		}
 		
-		return (int) calcStat(Stats.MAGIC_ATTACK, attack, target, skill);
+		return (int) calcStat(Stat.MAGIC_ATTACK, attack, target, skill);
 	}
 	
 	@Override
@@ -254,54 +254,54 @@ public class PetStat extends SummonStat
 	{
 		final double defence = getActiveChar().getPetData().getPetMDef();
 		
-		return (int) calcStat(Stats.MAGIC_DEFENCE, defence, target, skill);
+		return (int) calcStat(Stat.MAGIC_DEFENCE, defence, target, skill);
 	}
 	
 	@Override
 	public int getPAtk(Creature target)
 	{
-		return (int) calcStat(Stats.POWER_ATTACK, getActiveChar().getPetData().getPetPAtk(), target, null);
+		return (int) calcStat(Stat.POWER_ATTACK, getActiveChar().getPetData().getPetPAtk(), target, null);
 	}
 	
 	@Override
 	public int getPDef(Creature target)
 	{
-		return (int) calcStat(Stats.POWER_DEFENCE, getActiveChar().getPetData().getPetPDef(), target, null);
+		return (int) calcStat(Stat.POWER_DEFENCE, getActiveChar().getPetData().getPetPDef(), target, null);
 	}
 	
 	@Override
 	public int getAccuracy()
 	{
-		return (int) calcStat(Stats.ACCURACY_COMBAT, getActiveChar().getPetData().getPetAccuracy(), null, null);
+		return (int) calcStat(Stat.ACCURACY_COMBAT, getActiveChar().getPetData().getPetAccuracy(), null, null);
 	}
 	
 	@Override
 	public int getCriticalHit(Creature target, Skill skill)
 	{
-		return (int) calcStat(Stats.CRITICAL_RATE, getActiveChar().getPetData().getPetCritical(), target, null);
+		return (int) calcStat(Stat.CRITICAL_RATE, getActiveChar().getPetData().getPetCritical(), target, null);
 	}
 	
 	@Override
 	public int getEvasionRate(Creature target)
 	{
-		return (int) calcStat(Stats.EVASION_RATE, getActiveChar().getPetData().getPetEvasion(), target, null);
+		return (int) calcStat(Stat.EVASION_RATE, getActiveChar().getPetData().getPetEvasion(), target, null);
 	}
 	
 	@Override
 	public int getRunSpeed()
 	{
-		return (int) calcStat(Stats.RUN_SPEED, getActiveChar().getPetData().getPetSpeed(), null, null);
+		return (int) calcStat(Stat.RUN_SPEED, getActiveChar().getPetData().getPetSpeed(), null, null);
 	}
 	
 	@Override
 	public int getPAtkSpd()
 	{
-		return (int) calcStat(Stats.POWER_ATTACK_SPEED, getActiveChar().getPetData().getPetAtkSpeed(), null, null);
+		return (int) calcStat(Stat.POWER_ATTACK_SPEED, getActiveChar().getPetData().getPetAtkSpeed(), null, null);
 	}
 	
 	@Override
 	public int getMAtkSpd()
 	{
-		return (int) calcStat(Stats.MAGIC_ATTACK_SPEED, getActiveChar().getPetData().getPetCastSpeed(), null, null);
+		return (int) calcStat(Stat.MAGIC_ATTACK_SPEED, getActiveChar().getPetData().getPetCastSpeed(), null, null);
 	}
 }

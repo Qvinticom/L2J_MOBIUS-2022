@@ -29,11 +29,11 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class ConditionPlayerCallPc extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
-	public ConditionPlayerCallPc(boolean val)
+	public ConditionPlayerCallPc(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
@@ -59,6 +59,6 @@ public class ConditionPlayerCallPc extends Condition
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_SUMMONING_OR_TELEPORTING_IN_THIS_AREA);
 			canCallPlayer = false;
 		}
-		return (_val == canCallPlayer);
+		return (_value == canCallPlayer);
 	}
 }

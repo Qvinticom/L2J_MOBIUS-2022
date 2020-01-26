@@ -162,7 +162,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	@Override
 	public void changeIntention(CtrlIntention intention, Object arg0, Object arg1)
 	{
-		((Attackable) _actor).setisReturningToSpawnPoint(false);
+		((Attackable) _actor).setReturningToSpawnPoint(false);
 		
 		if (intention == AI_INTENTION_IDLE /* || intention == AI_INTENTION_ACTIVE */) // active becomes idle if only a summon is present
 		{

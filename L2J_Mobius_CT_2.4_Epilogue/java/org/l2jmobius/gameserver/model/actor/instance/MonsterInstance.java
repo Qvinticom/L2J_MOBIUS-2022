@@ -144,9 +144,9 @@ public class MonsterInstance extends Attackable
 		_master = leader;
 	}
 	
-	public void enableMinions(boolean b)
+	public void enableMinions(boolean value)
 	{
-		_enableMinions = b;
+		_enableMinions = value;
 	}
 	
 	public boolean hasMinions()
@@ -199,8 +199,8 @@ public class MonsterInstance extends Attackable
 		// Might need some exceptions here, but it will prevent the monster buffing player bug.
 		if (!skill.isBad() && (getTarget() != null) && getTarget().isPlayer())
 		{
-			setIsCastingNow(false);
-			setIsCastingSimultaneouslyNow(false);
+			setCastingNow(false);
+			setCastingSimultaneouslyNow(false);
 			return;
 		}
 		super.doCast(skill, target, targets);

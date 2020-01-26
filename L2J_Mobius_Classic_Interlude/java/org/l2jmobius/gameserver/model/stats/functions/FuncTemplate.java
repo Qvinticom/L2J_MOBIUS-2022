@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.enums.StatFunction;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * Function template.
@@ -31,11 +31,11 @@ public class FuncTemplate
 	private final Class<?> _functionClass;
 	private final Condition _attachCond;
 	private final Condition _applayCond;
-	private final Stats _stat;
+	private final Stat _stat;
 	private final int _order;
 	private final double _value;
 	
-	public FuncTemplate(Condition attachCond, Condition applayCond, String functionName, int order, Stats stat, double value)
+	public FuncTemplate(Condition attachCond, Condition applayCond, String functionName, int order, Stat stat, double value)
 	{
 		final StatFunction function = StatFunction.valueOf(functionName.toUpperCase());
 		if (order >= 0)
@@ -71,7 +71,7 @@ public class FuncTemplate
 	 * Gets the function stat.
 	 * @return the stat.
 	 */
-	public Stats getStat()
+	public Stat getStat()
 	{
 		return _stat;
 	}

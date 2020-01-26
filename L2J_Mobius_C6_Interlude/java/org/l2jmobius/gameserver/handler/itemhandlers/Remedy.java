@@ -137,7 +137,7 @@ public class Remedy implements IItemHandler
 				}
 			}
 			
-			player.setIsImobilised(false);
+			player.setImmobilized(false);
 			
 			if (player.getFirstEffect(Effect.EffectType.ROOT) == null)
 			{

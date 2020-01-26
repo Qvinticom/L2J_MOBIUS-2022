@@ -105,7 +105,7 @@ public class Product
 		_count.set(currentCount);
 	}
 	
-	public boolean decreaseCount(long val)
+	public boolean decreaseCount(long value)
 	{
 		if (_count == null)
 		{
@@ -115,7 +115,7 @@ public class Product
 		{
 			_restockTask = ThreadPool.schedule(new RestockTask(), _restockDelay);
 		}
-		final boolean result = _count.addAndGet(-val) >= 0;
+		final boolean result = _count.addAndGet(-value) >= 0;
 		save();
 		return result;
 	}

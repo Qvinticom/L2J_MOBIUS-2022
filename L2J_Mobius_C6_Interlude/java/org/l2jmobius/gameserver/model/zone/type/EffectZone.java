@@ -228,9 +228,9 @@ public class EffectZone extends ZoneType
 		return _skills.get(skillId);
 	}
 	
-	public void setZoneEnabled(boolean val)
+	public void setZoneEnabled(boolean value)
 	{
-		_enabled = val;
+		_enabled = value;
 	}
 	
 	protected Collection<Creature> getCharacterList()

@@ -25,17 +25,17 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerImmobile extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
-	public ConditionPlayerImmobile(boolean val)
+	public ConditionPlayerImmobile(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		final boolean isImmobile = !effector.isMovementDisabled();
-		return _val == isImmobile;
+		return _value == isImmobile;
 	}
 }

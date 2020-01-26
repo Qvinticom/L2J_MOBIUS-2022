@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.fishing.FishingRod;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -96,7 +96,7 @@ public class Pumping extends AbstractEffect
 		}
 		final FishingRod fishingRod = FishingRodsData.getInstance().getFishingRod(weaponItem.getId());
 		final double gradeBonus = fishingRod.getFishingRodLevel() * 0.1; // TODO: Check this formula (is guessed)
-		int dmg = (int) ((fishingRod.getFishingRodDamage() + player.calcStat(Stats.FISHING_EXPERTISE, 1, null, null) + _power) * gradeBonus * ss);
+		int dmg = (int) ((fishingRod.getFishingRodDamage() + player.calcStat(Stat.FISHING_EXPERTISE, 1, null, null) + _power) * gradeBonus * ss);
 		// Penalty 5% less damage dealt
 		if (player.getSkillLevel(1315) <= (info.getSkill().getLevel() - 2)) // 1315 - Fish Expertise
 		{

@@ -53,7 +53,7 @@ import org.l2jmobius.gameserver.model.entity.TvTEvent;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.model.stats.TraitType;
 import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
@@ -160,7 +160,7 @@ public class Skill implements IIdentifiable
 	private final byte _element;
 	private final int _elementPower;
 	
-	private final BaseStats _basicProperty;
+	private final BaseStat _basicProperty;
 	
 	private final boolean _overhit;
 	
@@ -314,7 +314,7 @@ public class Skill implements IIdentifiable
 		_element = set.getByte("element", (byte) -1);
 		_elementPower = set.getInt("elementPower", 0);
 		
-		_basicProperty = set.getEnum("basicProperty", BaseStats.class, BaseStats.NONE);
+		_basicProperty = set.getEnum("basicProperty", BaseStat.class, BaseStat.NONE);
 		
 		_overhit = set.getBoolean("overHit", false);
 		_isSuicideAttack = set.getBoolean("isSuicideAttack", false);
@@ -695,7 +695,7 @@ public class Skill implements IIdentifiable
 	 * Return skill basicProperty base stat (STR, INT ...).
 	 * @return
 	 */
-	public BaseStats getBasicProperty()
+	public BaseStat getBasicProperty()
 	{
 		return _basicProperty;
 	}
@@ -1590,9 +1590,9 @@ public class Skill implements IIdentifiable
 		return _refId;
 	}
 	
-	public void setReferenceItemId(int val)
+	public void setReferenceItemId(int value)
 	{
-		_refId = val;
+		_refId = value;
 	}
 	
 	public String getAttributeName()

@@ -22,7 +22,7 @@ import java.util.Map;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 
 /**
@@ -30,9 +30,9 @@ import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
  */
 public class FuncHenna extends AbstractFunction
 {
-	private static final Map<Stats, FuncHenna> _fh_instance = new EnumMap<>(Stats.class);
+	private static final Map<Stat, FuncHenna> _fh_instance = new EnumMap<>(Stat.class);
 	
-	public static AbstractFunction getInstance(Stats st)
+	public static AbstractFunction getInstance(Stat st)
 	{
 		if (!_fh_instance.containsKey(st))
 		{
@@ -41,7 +41,7 @@ public class FuncHenna extends AbstractFunction
 		return _fh_instance.get(st);
 	}
 	
-	private FuncHenna(Stats stat)
+	private FuncHenna(Stat stat)
 	{
 		super(stat, 1, null, 0, null);
 	}

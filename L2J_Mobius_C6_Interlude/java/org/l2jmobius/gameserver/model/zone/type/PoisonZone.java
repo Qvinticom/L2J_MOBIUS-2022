@@ -140,9 +140,9 @@ public class PoisonZone extends ZoneType
 		return _chance;
 	}
 	
-	public void setZoneEnabled(boolean val)
+	public void setZoneEnabled(boolean value)
 	{
-		_enabled = val;
+		_enabled = value;
 	}
 	
 	class ApplySkill implements Runnable

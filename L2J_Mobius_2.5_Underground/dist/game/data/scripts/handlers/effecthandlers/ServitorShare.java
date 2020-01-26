@@ -25,14 +25,14 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * Servitor Share effect implementation.
  */
 public class ServitorShare extends AbstractEffect
 {
-	private final Map<Stats, Float> _sharedStats = new EnumMap<>(Stats.class);
+	private final Map<Stat, Float> _sharedStats = new EnumMap<>(Stat.class);
 	
 	public ServitorShare(StatsSet params)
 	{
@@ -43,7 +43,7 @@ public class ServitorShare extends AbstractEffect
 		
 		for (Entry<String, Object> param : params.getSet().entrySet())
 		{
-			_sharedStats.put(Stats.valueOf(param.getKey()), (Float.parseFloat((String) param.getValue())) / 100);
+			_sharedStats.put(Stat.valueOf(param.getKey()), (Float.parseFloat((String) param.getValue())) / 100);
 		}
 	}
 	
@@ -59,7 +59,7 @@ public class ServitorShare extends AbstractEffect
 		final PlayerInstance owner = effected.getActingPlayer();
 		if (owner != null)
 		{
-			for (Entry<Stats, Float> stats : _sharedStats.entrySet())
+			for (Entry<Stat, Float> stats : _sharedStats.entrySet())
 			{
 				effected.getStat().mergeAdd(stats.getKey(), owner.getStat().getValue(stats.getKey()) * stats.getValue());
 			}

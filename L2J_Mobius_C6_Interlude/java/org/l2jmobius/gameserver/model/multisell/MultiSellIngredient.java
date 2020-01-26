@@ -37,7 +37,7 @@ public class MultiSellIngredient
 		setItemId(itemId);
 		setItemCount(itemCount);
 		setEnchantmentLevel(enchantmentLevel);
-		setIsTaxIngredient(isTaxIngredient);
+		setTaxIngredient(isTaxIngredient);
 		setMantainIngredient(mantainIngredient);
 	}
 	
@@ -98,7 +98,7 @@ public class MultiSellIngredient
 		return _enchantmentLevel;
 	}
 	
-	public void setIsTaxIngredient(boolean isTaxIngredient)
+	public void setTaxIngredient(boolean isTaxIngredient)
 	{
 		_isTaxIngredient = isTaxIngredient;
 	}

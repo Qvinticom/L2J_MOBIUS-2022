@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -41,7 +41,7 @@ public class AdminGmSpeed implements IAdminCommandHandler
 		"admin_gmspeed",
 	};
 	
-	private static final Set<Stats> SPEED_STATS = EnumSet.of(Stats.RUN_SPEED, Stats.WALK_SPEED, Stats.SWIM_RUN_SPEED, Stats.SWIM_WALK_SPEED, Stats.FLY_RUN_SPEED, Stats.FLY_WALK_SPEED);
+	private static final Set<Stat> SPEED_STATS = EnumSet.of(Stat.RUN_SPEED, Stat.WALK_SPEED, Stat.SWIM_RUN_SPEED, Stat.SWIM_WALK_SPEED, Stat.FLY_RUN_SPEED, Stat.FLY_WALK_SPEED);
 	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance player)

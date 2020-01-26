@@ -80,7 +80,7 @@ public class CubicInstance
 	private Future<?> _actionTask;
 	
 	/**
-	 * Instantiates a new l2 cubic instance.
+	 * Instantiates a new cubic instance.
 	 * @param owner the owner
 	 * @param id the id
 	 * @param level the level

@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
 import org.l2jmobius.gameserver.model.skills.Formulas;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -233,7 +233,7 @@ public class Disablers implements ISkillHandler
 					if (target instanceof Attackable)
 					{
 						skill.getEffects(creature, target, ss, sps, bss);
-						final double aggdiff = ((Attackable) target).getHating(creature) - target.calcStat(Stats.AGGRESSION, ((Attackable) target).getHating(creature), target, skill);
+						final double aggdiff = ((Attackable) target).getHating(creature) - target.calcStat(Stat.AGGRESSION, ((Attackable) target).getHating(creature), target, skill);
 						if (skill.getPower() > 0)
 						{
 							((Attackable) target).reduceHate(null, (int) skill.getPower());
@@ -441,7 +441,7 @@ public class Disablers implements ISkillHandler
 						{
 							landrate = 90 - (4 * (target.getLevel() - lvlmodifier));
 						}
-						landrate = (int) target.calcStat(Stats.CANCEL_VULN, landrate, target, null);
+						landrate = (int) target.calcStat(Stat.CANCEL_VULN, landrate, target, null);
 						if (Rnd.get(100) < landrate)
 						{
 							final Effect[] effects = target.getAllEffects();
@@ -506,7 +506,7 @@ public class Disablers implements ISkillHandler
 					}
 					
 					int landrate = (int) skill.getPower();
-					landrate = (int) target.calcStat(Stats.CANCEL_VULN, landrate, target, null);
+					landrate = (int) target.calcStat(Stat.CANCEL_VULN, landrate, target, null);
 					if (Rnd.get(100) < landrate)
 					{
 						final Effect[] effects = target.getAllEffects();
@@ -594,7 +594,7 @@ public class Disablers implements ISkillHandler
 								{
 									landrate = 90 - (4 * (target.getLevel() - lvlmodifier));
 								}
-								landrate = (int) target.calcStat(Stats.CANCEL_VULN, landrate, target, null);
+								landrate = (int) target.calcStat(Stat.CANCEL_VULN, landrate, target, null);
 								if (Rnd.get(100) < landrate)
 								{
 									negateEffect(target, SkillType.BUFF, -1);
@@ -697,7 +697,7 @@ public class Disablers implements ISkillHandler
 										{
 											landrate = 90 - (4 * (target.getLevel() - lvlmodifier));
 										}
-										landrate = (int) target.calcStat(Stats.CANCEL_VULN, landrate, target, null);
+										landrate = (int) target.calcStat(Stat.CANCEL_VULN, landrate, target, null);
 										if (Rnd.get(100) < landrate)
 										{
 											target.stopEffects(effectType);

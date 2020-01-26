@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureHpChange;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.stats.Formulas;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 public class CreatureStatus
 {
@@ -388,8 +388,8 @@ public class CreatureStatus
 		// Modify the current HP/MP of the Creature and broadcast Server->Client packet StatusUpdate
 		if (!_creature.isDead() && ((_currentHp < _creature.getMaxRecoverableHp()) || (_currentMp < _creature.getMaxRecoverableMp())))
 		{
-			final double newHp = _currentHp + _creature.getStat().getValue(Stats.REGENERATE_HP_RATE);
-			final double newMp = _currentMp + _creature.getStat().getValue(Stats.REGENERATE_MP_RATE);
+			final double newHp = _currentHp + _creature.getStat().getValue(Stat.REGENERATE_HP_RATE);
+			final double newMp = _currentMp + _creature.getStat().getValue(Stat.REGENERATE_MP_RATE);
 			setCurrentHpMp(newHp, newMp);
 		}
 		else

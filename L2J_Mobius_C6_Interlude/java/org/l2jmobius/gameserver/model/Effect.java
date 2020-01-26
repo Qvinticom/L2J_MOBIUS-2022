@@ -679,7 +679,7 @@ public abstract class Effect
 		return _template.showIcon;
 	}
 	
-	public EffectState get_state()
+	public EffectState getState()
 	{
 		return _state;
 	}

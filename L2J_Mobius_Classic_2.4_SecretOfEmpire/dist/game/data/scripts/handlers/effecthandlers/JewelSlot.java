@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class JewelSlot extends AbstractStatAddEffect
 {
 	public JewelSlot(StatsSet params)
 	{
-		super(params, Stats.BROOCH_JEWELS);
+		super(params, Stat.BROOCH_JEWELS);
 	}
 }

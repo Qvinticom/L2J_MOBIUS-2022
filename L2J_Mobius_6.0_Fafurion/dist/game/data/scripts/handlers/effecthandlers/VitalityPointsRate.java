@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class VitalityPointsRate extends AbstractStatPercentEffect
 {
 	public VitalityPointsRate(StatsSet params)
 	{
-		super(params, Stats.VITALITY_CONSUME_RATE);
+		super(params, Stat.VITALITY_CONSUME_RATE);
 	}
 }

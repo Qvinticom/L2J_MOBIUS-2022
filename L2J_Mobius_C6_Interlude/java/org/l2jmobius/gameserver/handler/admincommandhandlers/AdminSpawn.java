@@ -314,7 +314,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "It will be spawned but not saved on Database");
 				BuilderUtil.sendSysMessage(activeChar, "After server restart or raid dead, the spawned npc will desappear");
 				permanent = false;
-				spawn.set_customBossInstance(true); // for raids, this value is used in order to segnalate to not save respawn time - status for custom instance
+				spawn.setCustomBossInstance(true); // for raids, this value is used in order to segnalate to not save respawn time - status for custom instance
 			}
 			
 			if (RaidBossSpawnManager.getInstance().getValidTemplate(spawn.getNpcId()) != null)

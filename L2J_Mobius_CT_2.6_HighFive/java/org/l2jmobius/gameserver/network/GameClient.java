@@ -196,9 +196,9 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 		return _floodProtectors;
 	}
 	
-	public void setGameGuardOk(boolean val)
+	public void setGameGuardOk(boolean value)
 	{
-		_isAuthedGG = val;
+		_isAuthedGG = value;
 	}
 	
 	public boolean isAuthedGG()
@@ -283,9 +283,9 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 		return _isDetached;
 	}
 	
-	public void setDetached(boolean b)
+	public void setDetached(boolean value)
 	{
-		_isDetached = b;
+		_isDetached = value;
 	}
 	
 	/**
@@ -681,9 +681,9 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 		return _protocolOk;
 	}
 	
-	public void setProtocolOk(boolean b)
+	public void setProtocolOk(boolean value)
 	{
-		_protocolOk = b;
+		_protocolOk = value;
 	}
 	
 	public void setClientTracert(int[][] tracert)

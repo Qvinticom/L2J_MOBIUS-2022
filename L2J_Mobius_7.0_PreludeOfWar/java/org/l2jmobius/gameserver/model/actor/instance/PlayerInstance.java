@@ -261,10 +261,10 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import org.l2jmobius.gameserver.model.skills.SkillCastingType;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.model.stats.MoveType;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -603,7 +603,7 @@ public class PlayerInstance extends Playable
 	
 	/** Hennas */
 	private final Henna[] _henna = new Henna[4];
-	private final Map<BaseStats, Integer> _hennaBaseStats = new ConcurrentHashMap<>();
+	private final Map<BaseStat, Integer> _hennaBaseStats = new ConcurrentHashMap<>();
 	private final Map<Integer, ScheduledFuture<?>> _hennaRemoveSchedules = new ConcurrentHashMap<>(4);
 	
 	private static final String SYMBOL_POINTS_VAR = "SYMBOL_POINTS";
@@ -880,9 +880,9 @@ public class PlayerInstance extends Playable
 		return _isSellingBuffs;
 	}
 	
-	public void setIsSellingBuffs(boolean val)
+	public void setSellingBuffs(boolean value)
 	{
-		_isSellingBuffs = val;
+		_isSellingBuffs = value;
 	}
 	
 	public List<SellBuffHolder> getSellingBuffs()
@@ -1278,7 +1278,7 @@ public class PlayerInstance extends Playable
 		return _isCrafting;
 	}
 	
-	public void setIsCrafting(boolean isCrafting)
+	public void setCrafting(boolean isCrafting)
 	{
 		_isCrafting = isCrafting;
 	}
@@ -1658,16 +1658,16 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Set the siege Side of the PlayerInstance.
-	 * @param val
+	 * @param value
 	 */
-	public void setSiegeSide(int val)
+	public void setSiegeSide(int value)
 	{
-		_siegeSide = val;
+		_siegeSide = value;
 	}
 	
-	public boolean isRegisteredOnThisSiegeField(int val)
+	public boolean isRegisteredOnThisSiegeField(int value)
 	{
-		return (_siegeSide == val) || ((_siegeSide >= 81) && (_siegeSide <= 89));
+		return (_siegeSide == value) || ((_siegeSide >= 81) && (_siegeSide <= 89));
 	}
 	
 	public int getSiegeSide()
@@ -2107,12 +2107,12 @@ public class PlayerInstance extends Playable
 				if ((newWeightPenalty > 0) && !_dietMode)
 				{
 					addSkill(SkillData.getInstance().getSkill(CommonSkill.WEIGHT_PENALTY.getId(), newWeightPenalty));
-					setIsOverloaded(getCurrentLoad() > maxLoad);
+					setOverloaded(getCurrentLoad() > maxLoad);
 				}
 				else
 				{
 					removeSkill(getKnownSkill(4270), false, true);
-					setIsOverloaded(false);
+					setOverloaded(false);
 				}
 				if (broadcast)
 				{
@@ -2772,11 +2772,11 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Set _waitTypeSitting to given value
-	 * @param state
+	 * @param value
 	 */
-	public void setIsSitting(boolean state)
+	public void setSitting(boolean value)
 	{
-		_waitTypeSitting = state;
+		_waitTypeSitting = value;
 	}
 	
 	/**
@@ -2798,7 +2798,7 @@ public class PlayerInstance extends Playable
 		if (!_waitTypeSitting && !isAttackingDisabled() && !isControlBlocked() && !isImmobilized() && !isFishing())
 		{
 			breakAttack();
-			setIsSitting(true);
+			setSitting(true);
 			getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
 			broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_SITTING));
 			// Schedule a sit down task to wait for the animation to finish
@@ -5251,15 +5251,15 @@ public class PlayerInstance extends Playable
 		{
 			if (killer.isRaid())
 			{
-				percentLost *= getStat().getValue(Stats.REDUCE_EXP_LOST_BY_RAID, 1);
+				percentLost *= getStat().getValue(Stat.REDUCE_EXP_LOST_BY_RAID, 1);
 			}
 			else if (killer.isMonster())
 			{
-				percentLost *= getStat().getValue(Stats.REDUCE_EXP_LOST_BY_MOB, 1);
+				percentLost *= getStat().getValue(Stat.REDUCE_EXP_LOST_BY_MOB, 1);
 			}
 			else if (killer.isPlayable())
 			{
-				percentLost *= getStat().getValue(Stats.REDUCE_EXP_LOST_BY_PVP, 1);
+				percentLost *= getStat().getValue(Stat.REDUCE_EXP_LOST_BY_PVP, 1);
 			}
 		}
 		
@@ -6638,7 +6638,7 @@ public class PlayerInstance extends Playable
 			
 			if (currentHp < 0.5)
 			{
-				player.setIsDead(true);
+				player.setDead(true);
 				player.stopHpMpRegeneration();
 			}
 			
@@ -6811,7 +6811,7 @@ public class PlayerInstance extends Playable
 				{
 					final SubClass subClass = new SubClass();
 					subClass.setClassId(rset.getInt("class_id"));
-					subClass.setIsDualClass(rset.getBoolean("dual_class"));
+					subClass.setDualClassActive(rset.getBoolean("dual_class"));
 					subClass.setVitalityPoints(rset.getInt("vitality_points"));
 					subClass.setLevel(rset.getByte("level"));
 					subClass.setExp(rset.getLong("exp"));
@@ -7955,7 +7955,7 @@ public class PlayerInstance extends Playable
 				continue;
 			}
 			
-			for (Entry<BaseStats, Integer> entry : henna.getBaseStats().entrySet())
+			for (Entry<BaseStat, Integer> entry : henna.getBaseStats().entrySet())
 			{
 				_hennaBaseStats.merge(entry.getKey(), entry.getValue(), Integer::sum);
 			}
@@ -8002,7 +8002,7 @@ public class PlayerInstance extends Playable
 	 * @param stat
 	 * @return the henna bonus of specified base stat
 	 */
-	public int getHennaValue(BaseStats stat)
+	public int getHennaValue(BaseStat stat)
 	{
 		return _hennaBaseStats.getOrDefault(stat, 0);
 	}
@@ -8010,7 +8010,7 @@ public class PlayerInstance extends Playable
 	/**
 	 * @return map of all henna base stats bonus
 	 */
-	public Map<BaseStats, Integer> getHennaBaseStats()
+	public Map<BaseStat, Integer> getHennaBaseStats()
 	{
 		return _hennaBaseStats;
 	}
@@ -8537,7 +8537,7 @@ public class PlayerInstance extends Playable
 		{
 			case NONE: // None
 			{
-				setIsFlying(false);
+				setFlying(false);
 				break;
 			}
 			case STRIDER: // Strider
@@ -8550,7 +8550,7 @@ public class PlayerInstance extends Playable
 			}
 			case WYVERN: // Wyvern
 			{
-				setIsFlying(true);
+				setFlying(true);
 				break;
 			}
 		}
@@ -8634,12 +8634,12 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Disable the Inventory and create a new task to enable it after 1.5s.
-	 * @param val
+	 * @param value
 	 */
-	public void setInventoryBlockingStatus(boolean val)
+	public void setInventoryBlockingStatus(boolean value)
 	{
-		_inventoryDisable = val;
-		if (val)
+		_inventoryDisable = value;
+		if (value)
 		{
 			ThreadPool.schedule(new InventoryEnableTask(this), 1500);
 		}
@@ -8933,14 +8933,14 @@ public class PlayerInstance extends Playable
 		sendPacket(new SystemMessage(SendMessageLocalisationData.getLocalisation(this, message)));
 	}
 	
-	public void setObserving(boolean state)
+	public void setObserving(boolean value)
 	{
-		_observerMode = state;
+		_observerMode = value;
 		setTarget(null);
-		setBlockActions(state);
-		setIsInvul(state);
-		setInvisible(state);
-		if (hasAI() && !state)
+		setBlockActions(value);
+		setInvul(value);
+		setInvisible(value);
+		if (hasAI() && !value)
 		{
 			getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
@@ -9010,7 +9010,7 @@ public class PlayerInstance extends Playable
 		
 		_observerMode = true;
 		setTarget(null);
-		setIsInvul(true);
+		setInvul(true);
 		setInvisible(true);
 		setInstance(OlympiadGameManager.getInstance().getOlympiadTask(id).getStadium().getInstance());
 		teleToLocation(loc, false);
@@ -9031,7 +9031,7 @@ public class PlayerInstance extends Playable
 		if (!isGM())
 		{
 			setInvisible(false);
-			setIsInvul(false);
+			setInvul(false);
 		}
 		if (hasAI())
 		{
@@ -9059,7 +9059,7 @@ public class PlayerInstance extends Playable
 		if (!isGM())
 		{
 			setInvisible(false);
-			setIsInvul(false);
+			setInvul(false);
 		}
 		if (hasAI())
 		{
@@ -9109,9 +9109,9 @@ public class PlayerInstance extends Playable
 		_teleportType = type;
 	}
 	
-	public void setRace(int i, int val)
+	public void setRace(int i, int value)
 	{
-		_race[i] = val;
+		_race[i] = value;
 	}
 	
 	public int getRace(int i)
@@ -9222,14 +9222,14 @@ public class PlayerInstance extends Playable
 		sendSkillList();
 	}
 	
-	public void setIsInOlympiadMode(boolean b)
+	public void setInOlympiadMode(boolean value)
 	{
-		_inOlympiadMode = b;
+		_inOlympiadMode = value;
 	}
 	
-	public void setIsOlympiadStart(boolean b)
+	public void setOlympiadStart(boolean value)
 	{
-		_OlympiadStart = b;
+		_OlympiadStart = value;
 	}
 	
 	public boolean isOlympiadStart()
@@ -9276,7 +9276,7 @@ public class PlayerInstance extends Playable
 	 * Sets up the duel state using a non 0 duelId.
 	 * @param duelId 0=not in a duel
 	 */
-	public void setIsInDuel(int duelId)
+	public void setInDuel(int duelId)
 	{
 		if (duelId > 0)
 		{
@@ -9493,7 +9493,7 @@ public class PlayerInstance extends Playable
 			newClass.setVitalityPoints(PlayerStat.MAX_VITALITY_POINTS);
 			if (isDualClass)
 			{
-				newClass.setIsDualClass(true);
+				newClass.setDualClassActive(true);
 				newClass.setExp(ExperienceData.getInstance().getExpForLevel(Config.BASE_DUALCLASS_LEVEL));
 				newClass.setLevel(Config.BASE_DUALCLASS_LEVEL);
 			}
@@ -9659,11 +9659,11 @@ public class PlayerInstance extends Playable
 		return isInCategory(CategoryType.SIXTH_CLASS_GROUP);
 	}
 	
-	public void setDualClass(int classIndex)
+	public void setDualClassActive(int classIndex)
 	{
 		if (isSubClassActive())
 		{
-			getSubClasses().get(_classIndex).setIsDualClass(true);
+			getSubClasses().get(_classIndex).setDualClassActive(true);
 		}
 	}
 	
@@ -9973,7 +9973,7 @@ public class PlayerInstance extends Playable
 	{
 		if (!isDead() && (_taskWater == null))
 		{
-			final int timeinwater = (int) getStat().getValue(Stats.BREATH, 60000);
+			final int timeinwater = (int) getStat().getValue(Stat.BREATH, 60000);
 			
 			sendPacket(new SetupGauge(getObjectId(), 2, timeinwater));
 			_taskWater = ThreadPool.scheduleAtFixedRate(new WaterTask(this), timeinwater, 1000);
@@ -10328,14 +10328,14 @@ public class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public void setIsTeleporting(boolean teleport)
+	public void setTeleporting(boolean teleport)
 	{
-		setIsTeleporting(teleport, true);
+		setTeleporting(teleport, true);
 	}
 	
-	public void setIsTeleporting(boolean teleport, boolean useWatchDog)
+	public void setTeleporting(boolean teleport, boolean useWatchDog)
 	{
-		super.setIsTeleporting(teleport);
+		super.setTeleporting(teleport);
 		if (!useWatchDog)
 		{
 			return;
@@ -10784,7 +10784,7 @@ public class PlayerInstance extends Playable
 		
 		try
 		{
-			setIsTeleporting(false);
+			setTeleporting(false);
 		}
 		catch (Exception e)
 		{
@@ -11071,7 +11071,7 @@ public class PlayerInstance extends Playable
 		{
 			ivlim = Config.INVENTORY_MAXIMUM_NO_DWARF;
 		}
-		ivlim += (int) getStat().getValue(Stats.INVENTORY_NORMAL, 0);
+		ivlim += (int) getStat().getValue(Stat.INVENTORY_NORMAL, 0);
 		
 		return ivlim;
 	}
@@ -11088,7 +11088,7 @@ public class PlayerInstance extends Playable
 			whlim = Config.WAREHOUSE_SLOTS_NO_DWARF;
 		}
 		
-		whlim += (int) getStat().getValue(Stats.STORAGE_PRIVATE, 0);
+		whlim += (int) getStat().getValue(Stat.STORAGE_PRIVATE, 0);
 		
 		return whlim;
 	}
@@ -11106,7 +11106,7 @@ public class PlayerInstance extends Playable
 			pslim = Config.MAX_PVTSTORESELL_SLOTS_OTHER;
 		}
 		
-		pslim += (int) getStat().getValue(Stats.TRADE_SELL, 0);
+		pslim += (int) getStat().getValue(Stat.TRADE_SELL, 0);
 		
 		return pslim;
 	}
@@ -11123,7 +11123,7 @@ public class PlayerInstance extends Playable
 		{
 			pblim = Config.MAX_PVTSTOREBUY_SLOTS_OTHER;
 		}
-		pblim += (int) getStat().getValue(Stats.TRADE_BUY, 0);
+		pblim += (int) getStat().getValue(Stat.TRADE_BUY, 0);
 		
 		return pblim;
 	}
@@ -11131,14 +11131,14 @@ public class PlayerInstance extends Playable
 	public int getDwarfRecipeLimit()
 	{
 		int recdlim = Config.DWARF_RECIPE_LIMIT;
-		recdlim += (int) getStat().getValue(Stats.RECIPE_DWARVEN, 0);
+		recdlim += (int) getStat().getValue(Stat.RECIPE_DWARVEN, 0);
 		return recdlim;
 	}
 	
 	public int getCommonRecipeLimit()
 	{
 		int recclim = Config.COMMON_RECIPE_LIMIT;
-		recclim += (int) getStat().getValue(Stats.RECIPE_COMMON, 0);
+		recclim += (int) getStat().getValue(Stat.RECIPE_COMMON, 0);
 		return recclim;
 	}
 	
@@ -11381,15 +11381,15 @@ public class PlayerInstance extends Playable
 		
 		if (killer.isRaid())
 		{
-			percent *= getStat().getValue(Stats.REDUCE_DEATH_PENALTY_BY_RAID, 1);
+			percent *= getStat().getValue(Stat.REDUCE_DEATH_PENALTY_BY_RAID, 1);
 		}
 		else if (killer.isMonster())
 		{
-			percent *= getStat().getValue(Stats.REDUCE_DEATH_PENALTY_BY_MOB, 1);
+			percent *= getStat().getValue(Stat.REDUCE_DEATH_PENALTY_BY_MOB, 1);
 		}
 		else if (killer.isPlayable())
 		{
-			percent *= getStat().getValue(Stats.REDUCE_DEATH_PENALTY_BY_PVP, 1);
+			percent *= getStat().getValue(Stat.REDUCE_DEATH_PENALTY_BY_PVP, 1);
 		}
 		
 		if (((killer.isNpc() && ((Npc) killer).getTemplate().isDeathPenalty()) || (Rnd.get(1, 100) <= ((Config.DEATH_PENALTY_CHANCE) * percent))) && (!killer.isPlayable() || (getReputation() < 0)))
@@ -11823,9 +11823,9 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	public void setIsInSiege(boolean b)
+	public void setInSiege(boolean value)
 	{
-		_isInSiege = b;
+		_isInSiege = value;
 	}
 	
 	public boolean isInSiege()
@@ -11836,7 +11836,7 @@ public class PlayerInstance extends Playable
 	/**
 	 * @param isInHideoutSiege sets the value of {@link #_isInHideoutSiege}.
 	 */
-	public void setIsInHideoutSiege(boolean isInHideoutSiege)
+	public void setInHideoutSiege(boolean isInHideoutSiege)
 	{
 		_isInHideoutSiege = isInHideoutSiege;
 	}
@@ -12529,24 +12529,24 @@ public class PlayerInstance extends Playable
 		return _clientHeading;
 	}
 	
-	public void setClientX(int val)
+	public void setClientX(int value)
 	{
-		_clientX = val;
+		_clientX = value;
 	}
 	
-	public void setClientY(int val)
+	public void setClientY(int value)
 	{
-		_clientY = val;
+		_clientY = value;
 	}
 	
-	public void setClientZ(int val)
+	public void setClientZ(int value)
 	{
-		_clientZ = val;
+		_clientZ = value;
 	}
 	
-	public void setClientHeading(int val)
+	public void setClientHeading(int value)
 	{
-		_clientHeading = val;
+		_clientHeading = value;
 	}
 	
 	/**
@@ -12976,9 +12976,9 @@ public class PlayerInstance extends Playable
 		return _recoTwoHoursGiven;
 	}
 	
-	public void setRecoTwoHoursGiven(boolean val)
+	public void setRecoTwoHoursGiven(boolean value)
 	{
-		_recoTwoHoursGiven = val;
+		_recoTwoHoursGiven = value;
 	}
 	
 	public void setPremiumStatus(boolean premiumStatus)
@@ -13093,12 +13093,12 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * This method can prevent from displaying 'To Village' button upon death.
-	 * @param val
+	 * @param value
 	 */
 	@Override
-	public void setCanRevive(boolean val)
+	public void setCanRevive(boolean value)
 	{
-		_canRevive = val;
+		_canRevive = value;
 	}
 	
 	public boolean isOnCustomEvent()
@@ -13268,11 +13268,11 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Set true/false if character got Charm of Courage
-	 * @param val true/false
+	 * @param value true/false
 	 */
-	public void setCharmOfCourage(boolean val)
+	public void setCharmOfCourage(boolean value)
 	{
-		_hasCharmOfCourage = val;
+		_hasCharmOfCourage = value;
 	}
 	
 	/**
@@ -13425,7 +13425,7 @@ public class PlayerInstance extends Playable
 	 */
 	public int getWorldChatPoints()
 	{
-		return (int) getStat().getValue(Stats.WORLD_CHAT_POINTS, Config.WORLD_CHAT_POINTS_PER_DAY);
+		return (int) getStat().getValue(Stat.WORLD_CHAT_POINTS, Config.WORLD_CHAT_POINTS_PER_DAY);
 	}
 	
 	/**
@@ -13493,7 +13493,7 @@ public class PlayerInstance extends Playable
 	 */
 	public int getMaxSummonPoints()
 	{
-		return (int) getStat().getValue(Stats.MAX_SUMMON_POINTS, 0);
+		return (int) getStat().getValue(Stat.MAX_SUMMON_POINTS, 0);
 	}
 	
 	/**
@@ -13789,9 +13789,9 @@ public class PlayerInstance extends Playable
 		return _trueHero;
 	}
 	
-	public void setTrueHero(boolean val)
+	public void setTrueHero(boolean value)
 	{
-		_trueHero = val;
+		_trueHero = value;
 	}
 	
 	public int getFactionPoints(Faction faction)
@@ -13891,7 +13891,7 @@ public class PlayerInstance extends Playable
 	
 	public boolean tryLuck()
 	{
-		if (((Rnd.nextDouble() * 100) < (BaseStats.LUC.getValue(getLUC()) * Config.LUCKY_CHANCE_MULTIPLIER)) && !hasSkillReuse(CommonSkill.LUCKY_CLOVER.getSkill().getReuseHashCode()))
+		if (((Rnd.nextDouble() * 100) < (BaseStat.LUC.getValue(getLUC()) * Config.LUCKY_CHANCE_MULTIPLIER)) && !hasSkillReuse(CommonSkill.LUCKY_CLOVER.getSkill().getReuseHashCode()))
 		{
 			SkillCaster.triggerCast(this, this, CommonSkill.LUCKY_CLOVER.getSkill());
 			sendPacket(SystemMessageId.LADY_LUCK_SMILES_UPON_YOU);

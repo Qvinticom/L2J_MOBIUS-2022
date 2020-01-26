@@ -266,7 +266,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 					case "STAGE_1_START":
 					{
 						final Npc frey = addSpawn(FREYA_THRONE, FREYA_SPAWN, false, 0, true, world.getInstanceId());
-						frey.setIsMortal(false);
+						frey.setMortal(false);
 						manageScreenMsg(world, NpcStringId.BEGIN_STAGE_1);
 						startQuestTimer("CAST_BLIZZARD", 50000, controller, null);
 						world.setParameter("freya", frey);
@@ -293,7 +293,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 					case "STAGE_1_PAUSE":
 					{
 						final GrandBossInstance frey = (GrandBossInstance) addSpawn(FREYA_SPELLING, FREYA_SPELLING_SPAWN, false, 0, true, world.getInstanceId());
-						frey.setIsInvul(true);
+						frey.setInvul(true);
 						frey.setRandomWalking(false);
 						frey.disableCoreAI(true);
 						manageTimer(world, 60, NpcStringId.TIME_REMAINING_UNTIL_NEXT_BATTLE);
@@ -449,21 +449,21 @@ public class IceQueensCastleBattle extends AbstractInstance
 					{
 						for (PlayerInstance players : params.getList("playersInside", PlayerInstance.class))
 						{
-							players.setIsInvul(false);
+							players.setInvul(false);
 						}
-						freya.setIsInvul(false);
+						freya.setInvul(false);
 						freya.disableCoreAI(false);
 						manageScreenMsg(world, NpcStringId.BEGIN_STAGE_4);
 						final QuestGuardInstance jinia = (QuestGuardInstance) addSpawn(SUPP_JINIA, SUPP_JINIA_SPAWN, false, 0, true, world.getInstanceId());
 						jinia.setRunning();
-						jinia.setIsInvul(true);
+						jinia.setInvul(true);
 						jinia.setCanReturnToSpawnPoint(false);
 						jinia.reduceCurrentHp(1, freya, null); // TODO: Find better way for attack
 						freya.reduceCurrentHp(1, jinia, null);
 						
 						final QuestGuardInstance kegor = (QuestGuardInstance) addSpawn(SUPP_KEGOR, SUPP_KEGOR_SPAWN, false, 0, true, world.getInstanceId());
 						kegor.setRunning();
-						kegor.setIsInvul(true);
+						kegor.setInvul(true);
 						kegor.setCanReturnToSpawnPoint(false);
 						kegor.reduceCurrentHp(1, freya, null); // TODO: Find better way for attack
 						freya.reduceCurrentHp(1, kegor, null);
@@ -511,7 +511,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 							final Attackable knight = (Attackable) addSpawn(isHardMode ? KNIGHT_HARD : KNIGHT_EASY, npc.getLocation(), false, 0, false, world.getInstanceId());
 							knight.getVariables().set("SPAWNED_NPC", npc);
 							knight.disableCoreAI(true);
-							knight.setIsImmobilized(true);
+							knight.setImmobilized(true);
 							knight.setDisplayEffect(1);
 							knight.getSpawn().setLocation(loc);
 							
@@ -528,7 +528,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 							final Attackable glacier = (Attackable) addSpawn(GLACIER, loc, false, 0, false, world.getInstanceId());
 							glacier.setDisplayEffect(1);
 							glacier.disableCoreAI(true);
-							glacier.setIsImmobilized(true);
+							glacier.setImmobilized(true);
 							startQuestTimer("CHANGE_STATE", 1400, glacier, null);
 						}
 						break;
@@ -538,7 +538,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 						if (npc.isCoreAIDisabled())
 						{
 							npc.disableCoreAI(false);
-							npc.setIsImmobilized(false);
+							npc.setImmobilized(false);
 							npc.setDisplayEffect(2);
 							manageRandomAttack(world, (Attackable) npc);
 						}
@@ -568,7 +568,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 					case "SUICIDE":
 					{
 						npc.setDisplayEffect(3);
-						npc.setIsMortal(true);
+						npc.setMortal(true);
 						npc.doDie(null);
 						break;
 					}
@@ -861,11 +861,11 @@ public class IceQueensCastleBattle extends AbstractInstance
 					if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.2)) && !params.getBoolean("isSupportActive", false))
 					{
 						world.setParameter("isSupportActive", true);
-						freya.setIsInvul(true);
+						freya.setInvul(true);
 						freya.disableCoreAI(true);
 						for (PlayerInstance players : params.getList("playersInside", PlayerInstance.class))
 						{
-							players.setIsInvul(true);
+							players.setInvul(true);
 							players.abortAttack();
 						}
 						manageMovie(world, Movie.SC_BOSS_KEGOR_INTRUSION);
@@ -963,7 +963,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 					{
 						manageRandomAttack(world, (Attackable) npc);
 						npc.disableCoreAI(false);
-						npc.setIsImmobilized(false);
+						npc.setImmobilized(false);
 						npc.setDisplayEffect(2);
 						cancelQuestTimer("ICE_RUPTURE", npc, null);
 					}

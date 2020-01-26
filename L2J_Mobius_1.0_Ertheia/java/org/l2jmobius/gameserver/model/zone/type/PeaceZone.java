@@ -80,10 +80,10 @@ public class PeaceZone extends ZoneType
 	}
 	
 	@Override
-	public void setEnabled(boolean state)
+	public void setEnabled(boolean value)
 	{
-		super.setEnabled(state);
-		if (state)
+		super.setEnabled(value);
+		if (value)
 		{
 			for (PlayerInstance player : World.getInstance().getPlayers())
 			{

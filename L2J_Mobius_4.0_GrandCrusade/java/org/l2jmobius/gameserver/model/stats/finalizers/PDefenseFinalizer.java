@@ -25,14 +25,14 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.IStatsFunction;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.IStatFunction;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author UnAfraid
  */
-public class PDefenseFinalizer implements IStatsFunction
+public class PDefenseFinalizer implements IStatFunction
 {
 	private static final int[] SLOTS =
 	{
@@ -47,7 +47,7 @@ public class PDefenseFinalizer implements IStatsFunction
 	};
 	
 	@Override
-	public double calc(Creature creature, OptionalDouble base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stat stat)
 	{
 		throwIfPresent(base);
 		double baseValue = creature.getTemplate().getBaseValue(stat, 0);
@@ -78,7 +78,7 @@ public class PDefenseFinalizer implements IStatsFunction
 						baseValue -= creature.getTransformation().map(transform -> transform.getBaseDefBySlot(player, slot)).orElse(defaultStatValue);
 					}
 				}
-				baseValue *= BaseStats.CHA.calcBonus(creature);
+				baseValue *= BaseStat.CHA.calcBonus(creature);
 			}
 		}
 		if (creature.isRaid())
@@ -93,7 +93,7 @@ public class PDefenseFinalizer implements IStatsFunction
 		return defaultValue(creature, stat, baseValue);
 	}
 	
-	private double defaultValue(Creature creature, Stats stat, double baseValue)
+	private double defaultValue(Creature creature, Stat stat, double baseValue)
 	{
 		final double mul = Math.max(creature.getStat().getMul(stat), 0.5);
 		final double add = creature.getStat().getAdd(stat);

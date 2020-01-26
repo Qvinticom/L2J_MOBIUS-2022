@@ -405,12 +405,12 @@ class OlympiadGame
 			_playerOne.sendPacket(new ExOlympiadMode(2, _playerOne));
 			_playerTwo.sendPacket(new ExOlympiadMode(2, _playerTwo));
 			
-			_playerOne.setIsInOlympiadMode(true);
-			_playerOne.setIsOlympiadStart(false);
+			_playerOne.setInOlympiadMode(true);
+			_playerOne.setOlympiadStart(false);
 			_playerOne.setOlympiadSide(1);
 			
-			_playerTwo.setIsInOlympiadMode(true);
-			_playerTwo.setIsOlympiadStart(false);
+			_playerTwo.setInOlympiadMode(true);
+			_playerTwo.setOlympiadStart(false);
 			_playerTwo.setOlympiadSide(2);
 		}
 		catch (NullPointerException e)
@@ -518,8 +518,8 @@ class OlympiadGame
 				player.setCurrentCp(player.getMaxCp());
 				player.setCurrentHp(player.getMaxHp());
 				player.setCurrentMp(player.getMaxMp());
-				player.setIsInOlympiadMode(false);
-				player.setIsOlympiadStart(false);
+				player.setInOlympiadMode(false);
+				player.setOlympiadStart(false);
 				player.setOlympiadSide(-1);
 				player.setOlympiadGameId(-1);
 				player.sendPacket(new ExOlympiadMode(0, player));
@@ -929,7 +929,7 @@ class OlympiadGame
 		{
 			try
 			{
-				player.setIsOlympiadStart(true);
+				player.setOlympiadStart(true);
 			}
 			catch (Exception e)
 			{
@@ -1083,7 +1083,7 @@ class OlympiadGameTask implements Runnable
 		// Put the status back to 0 (removing observer mode on olympiad)
 		player.sendPacket(new ExOlympiadMode(0, player));
 		player.getAppearance().setVisible();
-		player.setIsInvul(false);
+		player.setInvul(false);
 		if (player.getAI() != null)
 		{
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);

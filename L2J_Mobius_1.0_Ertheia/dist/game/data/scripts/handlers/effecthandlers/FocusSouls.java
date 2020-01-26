@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -53,7 +53,7 @@ public class FocusSouls extends AbstractEffect
 		}
 		
 		final PlayerInstance target = effected.getActingPlayer();
-		final int maxSouls = (int) target.getStat().getValue(Stats.MAX_SOULS, 0);
+		final int maxSouls = (int) target.getStat().getValue(Stat.MAX_SOULS, 0);
 		if (maxSouls > 0)
 		{
 			final int amount = _charge;

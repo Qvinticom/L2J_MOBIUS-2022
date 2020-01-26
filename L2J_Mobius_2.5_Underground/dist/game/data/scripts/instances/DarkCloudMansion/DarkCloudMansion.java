@@ -359,7 +359,7 @@ public class DarkCloudMansion extends AbstractInstance
 							for (int x = 0; x < 2; x++)
 							{
 								final Npc col = row.remove(getRandom(row.size()));
-								col.setIsInvul(true);
+								col.setInvul(true);
 							}
 						}
 					}

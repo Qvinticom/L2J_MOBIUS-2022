@@ -55,7 +55,7 @@ public class Die extends GameServerPacket
 			final PlayerInstance player = (PlayerInstance) creature;
 			_access = player.getAccessLevel();
 			_clan = player.getClan();
-			_canTeleport = ((!TvT.isStarted() || !player._inEventTvT) && (!DM.is_started() || !player._inEventDM) && (!CTF.isStarted() || !player._inEventCTF) && !player.isInFunEvent() && !player.isPendingRevive());
+			_canTeleport = ((!TvT.isStarted() || !player._inEventTvT) && (!DM.hasStarted() || !player._inEventDM) && (!CTF.isStarted() || !player._inEventCTF) && !player.isInFunEvent() && !player.isPendingRevive());
 		}
 		_objectId = creature.getObjectId();
 		_fake = !creature.isDead();
@@ -93,7 +93,7 @@ public class Die extends GameServerPacket
 			final Castle castle = CastleManager.getInstance().getCastle(_creature);
 			final Fort fort = FortManager.getInstance().getFort(_creature);
 			
-			if ((castle != null) && castle.getSiege().getIsInProgress())
+			if ((castle != null) && castle.getSiege().isInProgress())
 			{
 				// siege in progress
 				siegeClan = castle.getSiege().getAttackerClan(_clan);
@@ -102,7 +102,7 @@ public class Die extends GameServerPacket
 					isInDefense = true;
 				}
 			}
-			else if ((fort != null) && fort.getSiege().getIsInProgress())
+			else if ((fort != null) && fort.getSiege().isInProgress())
 			{
 				// siege in progress
 				siegeClan = fort.getSiege().getAttackerClan(_clan);

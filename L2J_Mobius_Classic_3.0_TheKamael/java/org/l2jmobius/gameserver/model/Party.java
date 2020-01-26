@@ -48,7 +48,7 @@ import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAskModifyPartyLooting;
 import org.l2jmobius.gameserver.network.serverpackets.ExCloseMPCC;
@@ -144,11 +144,11 @@ public class Party extends AbstractPlayerGroup
 	/**
 	 * Set invitation process flag and store time for expiration. <br>
 	 * Happens when a player joins party or declines to join.
-	 * @param val the pending invitation state to set
+	 * @param value the pending invitation state to set
 	 */
-	public void setPendingInvitation(boolean val)
+	public void setPendingInvitation(boolean value)
 	{
-		_pendingInvitation = val;
+		_pendingInvitation = value;
 		_pendingInviteTimeout = GameTimeController.getInstance().getGameTicks() + (PlayerInstance.REQUEST_TIMEOUT * GameTimeController.TICKS_PER_SECOND);
 	}
 	
@@ -874,8 +874,8 @@ public class Party extends AbstractPlayerGroup
 				final double preCalculation = (sqLevel / sqLevelSum) * penalty;
 				
 				// Add the XP/SP points to the requested party member
-				double exp = member.getStat().getValue(Stats.EXPSP_RATE, xpReward * preCalculation);
-				final double sp = member.getStat().getValue(Stats.EXPSP_RATE, spReward * preCalculation);
+				double exp = member.getStat().getValue(Stat.EXPSP_RATE, xpReward * preCalculation);
+				final double sp = member.getStat().getValue(Stat.EXPSP_RATE, spReward * preCalculation);
 				
 				exp = calculateExpSpPartyCutoff(member.getActingPlayer(), topLvl, exp, sp, target.useVitalityRate());
 				if (exp > 0)

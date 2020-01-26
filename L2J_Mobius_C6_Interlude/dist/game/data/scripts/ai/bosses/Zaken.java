@@ -860,7 +860,7 @@ public class Zaken extends Quest
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
 			
-			if (!npc.getSpawn().is_customBossInstance())
+			if (!npc.getSpawn().isCustomBossInstance())
 			{
 				GrandBossManager.getInstance().setBossStatus(ZAKEN, DEAD);
 				// time is 36hour +/- 17hour

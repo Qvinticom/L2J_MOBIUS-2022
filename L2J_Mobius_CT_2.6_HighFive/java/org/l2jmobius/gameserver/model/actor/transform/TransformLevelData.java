@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author UnAfraid
@@ -35,30 +35,30 @@ public class TransformLevelData
 	{
 		_level = set.getInt("val");
 		_levelMod = set.getDouble("levelMod");
-		addStats(Stats.MAX_HP, set.getDouble("hp"));
-		addStats(Stats.MAX_MP, set.getDouble("mp"));
-		addStats(Stats.MAX_CP, set.getDouble("cp"));
-		addStats(Stats.REGENERATE_HP_RATE, set.getDouble("hpRegen"));
-		addStats(Stats.REGENERATE_MP_RATE, set.getDouble("mpRegen"));
-		addStats(Stats.REGENERATE_CP_RATE, set.getDouble("cpRegen"));
+		addStats(Stat.MAX_HP, set.getDouble("hp"));
+		addStats(Stat.MAX_MP, set.getDouble("mp"));
+		addStats(Stat.MAX_CP, set.getDouble("cp"));
+		addStats(Stat.REGENERATE_HP_RATE, set.getDouble("hpRegen"));
+		addStats(Stat.REGENERATE_MP_RATE, set.getDouble("mpRegen"));
+		addStats(Stat.REGENERATE_CP_RATE, set.getDouble("cpRegen"));
 	}
 	
-	private void addStats(Stats stat, double val)
+	private void addStats(Stat stat, double value)
 	{
 		if (_stats == null)
 		{
 			_stats = new HashMap<>();
 		}
-		_stats.put(stat.ordinal(), val);
+		_stats.put(stat.ordinal(), value);
 	}
 	
-	public double getStats(Stats stats)
+	public double getStats(Stat stat)
 	{
-		if ((_stats == null) || !_stats.containsKey(stats.ordinal()))
+		if ((_stats == null) || !_stats.containsKey(stat.ordinal()))
 		{
 			return 0;
 		}
-		return _stats.get(stats.ordinal());
+		return _stats.get(stat.ordinal());
 	}
 	
 	public int getLevel()

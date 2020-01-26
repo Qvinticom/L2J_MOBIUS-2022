@@ -145,7 +145,7 @@ public class RequestRestart extends GameClientPacket
 		if (player.isTeleporting())
 		{
 			player.abortCast();
-			player.setIsTeleporting(false);
+			player.setTeleporting(false);
 		}
 		
 		// Check if player is trading

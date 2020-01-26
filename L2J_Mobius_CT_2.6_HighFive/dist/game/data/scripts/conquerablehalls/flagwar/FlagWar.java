@@ -391,7 +391,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 					{
 						cancelSiegeTask(); // No time limit now
 						_firstPhase = false;
-						_hall.getSiegeZone().setIsActive(false);
+						_hall.getSiegeZone().setActive(false);
 						for (int doorId : INNER_DOORS_TO_OPEN)
 						{
 							_hall.openCloseDoor(doorId, true);
@@ -414,7 +414,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 								doSpawns(e.getKey(), e.getValue());
 							}
 							
-							_hall.getSiegeZone().setIsActive(true);
+							_hall.getSiegeZone().setActive(true);
 						}, 300000);
 					}
 				}

@@ -552,7 +552,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		if (CommonUtil.contains(NOTMOVE, npc.getId()))
 		{
 			npc.setRandomWalking(false);
-			npc.setIsImmobilized(true);
+			npc.setImmobilized(true);
 		}
 		
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);

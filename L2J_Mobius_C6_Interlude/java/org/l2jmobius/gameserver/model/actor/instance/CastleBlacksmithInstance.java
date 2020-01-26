@@ -102,7 +102,7 @@ public class CastleBlacksmithInstance extends FolkInstance
 		}
 	}
 	
-	private void showMessageWindow(PlayerInstance player, int val)
+	private void showMessageWindow(PlayerInstance player, int value)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		String filename = "data/html/castleblacksmith/castleblacksmith-no.htm";
@@ -117,13 +117,13 @@ public class CastleBlacksmithInstance extends FolkInstance
 			else if (condition == COND_OWNER)
 			{
 				// Clan owns castle
-				if (val == 0)
+				if (value == 0)
 				{
 					filename = "data/html/castleblacksmith/castleblacksmith.htm";
 				}
 				else
 				{
-					filename = "data/html/castleblacksmith/castleblacksmith-" + val + ".htm";
+					filename = "data/html/castleblacksmith/castleblacksmith-" + value + ".htm";
 				}
 			}
 		}
@@ -145,7 +145,7 @@ public class CastleBlacksmithInstance extends FolkInstance
 		
 		if ((getCastle() != null) && (getCastle().getCastleId() > 0) && (player.getClan() != null))
 		{
-			if (getCastle().getSiege().getIsInProgress())
+			if (getCastle().getSiege().isInProgress())
 			{
 				return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
 			}

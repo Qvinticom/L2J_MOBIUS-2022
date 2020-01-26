@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -32,7 +32,7 @@ public class MaxMp extends AbstractStatEffect
 	
 	public MaxMp(StatsSet params)
 	{
-		super(params, Stats.MAX_MP);
+		super(params, Stat.MAX_MP);
 		
 		_heal = params.getBoolean("heal", false);
 	}

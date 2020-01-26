@@ -84,7 +84,7 @@ public class FortZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		if (_fort.getSiege().getIsInProgress())
+		if (_fort.getSiege().isInProgress())
 		{
 			creature.setInsideZone(ZoneId.PVP, true);
 			creature.setInsideZone(ZoneId.SIEGE, true);
@@ -99,7 +99,7 @@ public class FortZone extends ZoneType
 	@Override
 	protected void onExit(Creature creature)
 	{
-		if (_fort.getSiege().getIsInProgress())
+		if (_fort.getSiege().isInProgress())
 		{
 			creature.setInsideZone(ZoneId.PVP, false);
 			creature.setInsideZone(ZoneId.SIEGE, false);
@@ -133,7 +133,7 @@ public class FortZone extends ZoneType
 	
 	public void updateZoneStatusForCharactersInside()
 	{
-		if (_fort.getSiege().getIsInProgress())
+		if (_fort.getSiege().isInProgress())
 		{
 			for (Creature creature : _characterList.values())
 			{

@@ -163,7 +163,7 @@ public class OracleTeleport extends AbstractNpcAI
 			if (CommonUtil.contains(TEMPLE_PRIEST, npcId) && (qs.getState() == State.STARTED))
 			{
 				player.teleToLocation(RETURN_LOCS[qs.getInt("id")]);
-				player.setIsIn7sDungeon(false);
+				player.setIn7sDungeon(false);
 				qs.exitQuest(true);
 			}
 			else if (CommonUtil.contains(RIFT_POSTERS, npcId) && (qs.getState() == State.STARTED))
@@ -176,7 +176,7 @@ public class OracleTeleport extends AbstractNpcAI
 			{
 				player.teleToLocation(getRandomEntry(RETURN_LOCS));
 				htmltext = "rift_back_unknown.htm";
-				player.setIsIn7sDungeon(false);
+				player.setIn7sDungeon(false);
 				qs.exitQuest(true);
 			}
 		}
@@ -186,12 +186,12 @@ public class OracleTeleport extends AbstractNpcAI
 			if (CommonUtil.contains(TOWN_DAWN, id))
 			{
 				player.teleToLocation(new Location(-80157, 111344, -4901));
-				player.setIsIn7sDungeon(true);
+				player.setIn7sDungeon(true);
 			}
 			else if (CommonUtil.contains(TOWN_DUSK, id))
 			{
 				player.teleToLocation(new Location(-81261, 86531, -5157));
-				player.setIsIn7sDungeon(true);
+				player.setIn7sDungeon(true);
 			}
 			else
 			{
@@ -295,7 +295,7 @@ public class OracleTeleport extends AbstractNpcAI
 			qs.set("id", Integer.toString(i));
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
 			player.teleToLocation(new Location(-80157, 111344, -4901));
-			player.setIsIn7sDungeon(true);
+			player.setIn7sDungeon(true);
 		}
 		if (CommonUtil.contains(TOWN_DUSK, npcId))
 		{
@@ -312,7 +312,7 @@ public class OracleTeleport extends AbstractNpcAI
 			qs.set("id", Integer.toString(i));
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
 			player.teleToLocation(new Location(-81261, 86531, -5157));
-			player.setIsIn7sDungeon(true);
+			player.setIn7sDungeon(true);
 		}
 		else if ((npcId >= 31494) && (npcId <= 31507))
 		{

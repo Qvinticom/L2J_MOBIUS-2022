@@ -265,7 +265,7 @@ public class OfflineTradeTable
 					player.sitDown();
 					if (Config.OFFLINE_MODE_SET_INVULNERABLE)
 					{
-						player.setIsInvul(true);
+						player.setInvul(true);
 					}
 					if (Config.OFFLINE_SET_NAME_COLOR)
 					{

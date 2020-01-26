@@ -53,7 +53,7 @@ public class CommanderKnownList extends AttackableKnownList
 		}
 		
 		// Check if siege is in progress
-		if ((getActiveChar().getFort() != null) && getActiveChar().getFort().getSiege().getIsInProgress())
+		if ((getActiveChar().getFort() != null) && getActiveChar().getFort().getSiege().isInProgress())
 		{
 			PlayerInstance player = null;
 			

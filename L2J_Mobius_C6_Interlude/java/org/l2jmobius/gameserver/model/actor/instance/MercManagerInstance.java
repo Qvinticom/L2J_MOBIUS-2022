@@ -114,10 +114,10 @@ public class MercManagerInstance extends FolkInstance
 		super.onBypassFeedback(player, command);
 	}
 	
-	private void showBuyWindow(PlayerInstance player, int val)
+	private void showBuyWindow(PlayerInstance player, int value)
 	{
 		player.tempInvetoryDisable();
-		final StoreTradeList list = TradeController.getInstance().getBuyList(val);
+		final StoreTradeList list = TradeController.getInstance().getBuyList(value);
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 		{
 			final BuyList bl = new BuyList(list, player.getAdena(), 0);
@@ -126,7 +126,7 @@ public class MercManagerInstance extends FolkInstance
 		else
 		{
 			LOGGER.warning("possible client hacker: " + player.getName() + " attempting to buy from GM shop! (L2MercManagerIntance)");
-			LOGGER.warning("buylist id:" + val);
+			LOGGER.warning("buylist id:" + value);
 		}
 	}
 	
@@ -156,7 +156,7 @@ public class MercManagerInstance extends FolkInstance
 	{
 		if ((getCastle() != null) && (getCastle().getCastleId() > 0) && (player.getClan() != null))
 		{
-			if (getCastle().getSiege().getIsInProgress())
+			if (getCastle().getSiege().isInProgress())
 			{
 				return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
 			}

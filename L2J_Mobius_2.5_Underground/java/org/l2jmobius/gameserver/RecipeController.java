@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
@@ -199,7 +199,7 @@ public class RecipeController
 			_skillLevel = _player.getSkillLevel(_skillId);
 			_skill = _player.getKnownSkill(_skillId);
 			
-			_player.setIsCrafting(true);
+			_player.setCrafting(true);
 			
 			if (_player.isAlikeDead())
 			{
@@ -291,7 +291,7 @@ public class RecipeController
 			updateCurMp();
 			updateCurLoad();
 			
-			_player.setIsCrafting(false);
+			_player.setCrafting(false);
 			_isValid = true;
 		}
 		
@@ -439,7 +439,7 @@ public class RecipeController
 			// update load and mana bar of craft window
 			updateCurMp();
 			_activeMakers.remove(_player.getObjectId());
-			_player.setIsCrafting(false);
+			_player.setCrafting(false);
 			_target.sendItemList(false);
 		}
 		
@@ -655,7 +655,7 @@ public class RecipeController
 		private void abort()
 		{
 			updateMakeInfo(false);
-			_player.setIsCrafting(false);
+			_player.setCrafting(false);
 			_activeMakers.remove(_player.getObjectId());
 		}
 		
@@ -769,7 +769,7 @@ public class RecipeController
 				
 				// Added multiplication of Creation speed with XP/SP gain slower crafting -> more XP,
 				// faster crafting -> less XP you can use ALT_GAME_CREATION_XP_RATE/SP to modify XP/SP gained (default = 1)
-				_player.addExpAndSp((int) _player.getStat().getValue(Stats.EXPSP_RATE, _exp * Config.ALT_GAME_CREATION_XP_RATE * Config.ALT_GAME_CREATION_SPEED), (int) _player.getStat().getValue(Stats.EXPSP_RATE, _sp * Config.ALT_GAME_CREATION_SP_RATE * Config.ALT_GAME_CREATION_SPEED));
+				_player.addExpAndSp((int) _player.getStat().getValue(Stat.EXPSP_RATE, _exp * Config.ALT_GAME_CREATION_XP_RATE * Config.ALT_GAME_CREATION_SPEED), (int) _player.getStat().getValue(Stat.EXPSP_RATE, _sp * Config.ALT_GAME_CREATION_SP_RATE * Config.ALT_GAME_CREATION_SPEED));
 			}
 			updateMakeInfo(true); // success
 		}

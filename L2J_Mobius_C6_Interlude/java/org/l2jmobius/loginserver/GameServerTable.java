@@ -410,9 +410,9 @@ public class GameServerTable
 			return _isPvp;
 		}
 		
-		public void setTestServer(boolean val)
+		public void setTestServer(boolean value)
 		{
-			_isTestServer = val;
+			_isTestServer = value;
 		}
 		
 		public boolean isTestServer()
@@ -430,9 +430,9 @@ public class GameServerTable
 			return _isShowingClock;
 		}
 		
-		public void setShowingBrackets(boolean val)
+		public void setShowingBrackets(boolean value)
 		{
-			_isShowingBrackets = val;
+			_isShowingBrackets = value;
 		}
 		
 		public boolean isShowingBrackets()

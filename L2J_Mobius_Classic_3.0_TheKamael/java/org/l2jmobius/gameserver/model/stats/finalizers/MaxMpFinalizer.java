@@ -21,17 +21,17 @@ import java.util.OptionalDouble;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.IStatsFunction;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.IStatFunction;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author UnAfraid
  */
-public class MaxMpFinalizer implements IStatsFunction
+public class MaxMpFinalizer implements IStatFunction
 {
 	@Override
-	public double calc(Creature creature, OptionalDouble base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stat stat)
 	{
 		throwIfPresent(base);
 		
@@ -49,8 +49,8 @@ public class MaxMpFinalizer implements IStatsFunction
 				baseValue = player.getTemplate().getBaseMpMax(player.getLevel());
 			}
 		}
-		final double menBonus = creature.getMEN() > 0 ? BaseStats.MEN.calcBonus(creature) : 1.;
+		final double menBonus = creature.getMEN() > 0 ? BaseStat.MEN.calcBonus(creature) : 1.;
 		baseValue *= menBonus;
-		return Stats.defaultValue(creature, stat, baseValue);
+		return Stat.defaultValue(creature, stat, baseValue);
 	}
 }

@@ -53,7 +53,7 @@ import org.l2jmobius.gameserver.util.Util;
 public class VillageMasterInstance extends FolkInstance
 {
 	/**
-	 * Instantiates a new l2 village master instance.
+	 * Instantiates a new village master instance.
 	 * @param objectId the object id
 	 * @param template the template
 	 */
@@ -546,17 +546,17 @@ public class VillageMasterInstance extends FolkInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
 		
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = "" + npcId;
 		}
 		else
 		{
-			pom = npcId + "-" + val;
+			pom = npcId + "-" + value;
 		}
 		
 		return "data/html/villagemaster/" + pom + ".htm";

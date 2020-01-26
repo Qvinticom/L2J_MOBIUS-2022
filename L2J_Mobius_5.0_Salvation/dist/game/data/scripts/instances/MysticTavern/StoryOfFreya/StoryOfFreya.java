@@ -258,7 +258,7 @@ public class StoryOfFreya extends AbstractInstance
 				{
 					if (nearby.getId() == KNIGHT)
 					{
-						nearby.setIsInvul(true);
+						nearby.setInvul(true);
 						npc.reduceCurrentHp(1, nearby, null);
 						nearby.reduceCurrentHp(1, npc, null);
 						addAttackDesire(nearby, npc);

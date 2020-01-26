@@ -150,8 +150,8 @@ public class Beleth extends AbstractNpcAI
 				ZONE.getCharactersInside().forEach(c ->
 				{
 					c.disableAllSkills();
-					c.setIsInvul(true);
-					c.setIsImmobilized(true);
+					c.setInvul(true);
+					c.setImmobilized(true);
 				});
 				
 				_camera1 = addSpawn(29120, new Location(16323, 213142, -9357));
@@ -233,8 +233,8 @@ public class Beleth extends AbstractNpcAI
 			{
 				_beleth = addSpawn(REAL_BELETH, new Location(16321, 214211, -9352, 49369));
 				_beleth.disableAllSkills();
-				_beleth.setIsInvul(true);
-				_beleth.setIsImmobilized(true);
+				_beleth.setInvul(true);
+				_beleth.setImmobilized(true);
 				
 				startQuestTimer("SPAWN11", 200, null, null);
 				break;
@@ -315,8 +315,8 @@ public class Beleth extends AbstractNpcAI
 				{
 					fakeBeleth.spawnMe();
 					fakeBeleth.disableAllSkills();
-					fakeBeleth.setIsInvul(true);
-					fakeBeleth.setIsImmobilized(true);
+					fakeBeleth.setInvul(true);
+					fakeBeleth.setImmobilized(true);
 				}
 				
 				startQuestTimer("SPAWN20", 3000, null, null);
@@ -369,8 +369,8 @@ public class Beleth extends AbstractNpcAI
 				for (Creature c : ZONE.getCharactersInside())
 				{
 					c.enableAllSkills();
-					c.setIsInvul(false);
-					c.setIsImmobilized(false);
+					c.setInvul(false);
+					c.setImmobilized(false);
 				}
 				
 				_lastAttack = System.currentTimeMillis();
@@ -397,7 +397,7 @@ public class Beleth extends AbstractNpcAI
 					
 					if (a >= 2)
 					{
-						npc.setIsOverloaded(true);
+						npc.setOverloaded(true);
 						a = 0;
 					}
 				}
@@ -410,7 +410,7 @@ public class Beleth extends AbstractNpcAI
 					ym[i] = (int) ((1700 * Math.sin((i * 1.57) + 0.78)) + 213170);
 					
 					npc = addSpawn(FAKE_BELETH, new Location(xm[i], ym[i], -9357, 49152));
-					npc.setIsImmobilized(true);
+					npc.setImmobilized(true);
 					
 					_minions.add(npc);
 				}
@@ -418,22 +418,22 @@ public class Beleth extends AbstractNpcAI
 				xm[4] = (xm[0] + xm[1]) / 2;
 				ym[4] = (ym[0] + ym[1]) / 2;
 				npc = addSpawn(FAKE_BELETH, new Location(xm[4], ym[4], -9357, 49152));
-				npc.setIsImmobilized(true);
+				npc.setImmobilized(true);
 				_minions.add(npc);
 				xm[5] = (xm[1] + xm[2]) / 2;
 				ym[5] = (ym[1] + ym[2]) / 2;
 				npc = addSpawn(FAKE_BELETH, new Location(xm[5], ym[5], -9357, 49152));
-				npc.setIsImmobilized(true);
+				npc.setImmobilized(true);
 				_minions.add(npc);
 				xm[6] = (xm[2] + xm[3]) / 2;
 				ym[6] = (ym[2] + ym[3]) / 2;
 				npc = addSpawn(FAKE_BELETH, new Location(xm[6], ym[6], -9357, 49152));
-				npc.setIsImmobilized(true);
+				npc.setImmobilized(true);
 				_minions.add(npc);
 				xm[7] = (xm[3] + xm[0]) / 2;
 				ym[7] = (ym[3] + ym[0]) / 2;
 				npc = addSpawn(FAKE_BELETH, new Location(xm[7], ym[7], -9357, 49152));
-				npc.setIsImmobilized(true);
+				npc.setImmobilized(true);
 				_minions.add(npc);
 				
 				xm[8] = (xm[0] + xm[4]) / 2;
@@ -537,8 +537,8 @@ public class Beleth extends AbstractNpcAI
 				for (Creature c : ZONE.getCharactersInside())
 				{
 					c.enableAllSkills();
-					c.setIsInvul(false);
-					c.setIsImmobilized(false);
+					c.setInvul(false);
+					c.setImmobilized(false);
 				}
 				break;
 			}
@@ -761,14 +761,14 @@ public class Beleth extends AbstractNpcAI
 			for (Creature c : ZONE.getCharactersInside())
 			{
 				c.disableAllSkills();
-				c.setIsInvul(true);
-				c.setIsImmobilized(true);
+				c.setInvul(true);
+				c.setImmobilized(true);
 			}
 			
 			_beleth = addSpawn(REAL_BELETH, new Location(16323, 213170, -9357, 49152));
 			_beleth.disableAllSkills();
-			_beleth.setIsInvul(true);
-			_beleth.setIsImmobilized(true);
+			_beleth.setInvul(true);
+			_beleth.setImmobilized(true);
 			
 			_priest = addSpawn(ELF, new Location(_beleth));
 			_priest.setShowSummonAnimation(true);

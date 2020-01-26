@@ -33,10 +33,10 @@ public class FourSepulchersChangeEntryTimeTask implements Runnable
 	public void run()
 	{
 		final FourSepulchersManager manager = FourSepulchersManager.getInstance();
-		manager.setIsEntryTime(true);
-		manager.setIsWarmUpTime(false);
-		manager.setIsAttackTime(false);
-		manager.setIsCoolDownTime(false);
+		manager.setEntryTime(true);
+		manager.setWarmUpTime(false);
+		manager.setAttackTime(false);
+		manager.setCoolDownTime(false);
 		
 		final long interval = manager.isFirstTimeRun() ? manager.getEntrytTimeEnd() - Calendar.getInstance().getTimeInMillis() : Config.FS_TIME_ENTRY * 60000;
 		// launching saying process...

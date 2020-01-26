@@ -114,7 +114,7 @@ public class Statues extends AbstractNpcAI
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final Npc buffNpc = addSpawn(BUFF_NPC, npc, false, 5000);
-		buffNpc.setIsInvul(true);
+		buffNpc.setInvul(true);
 		addSkillCastDesire(buffNpc, buffNpc, REWARD_BUFF, 23);
 		return super.onKill(npc, killer, isSummon);
 	}

@@ -224,7 +224,7 @@ public class Core extends AbstractNpcAI
 	{
 		if (npc.getId() == CORE)
 		{
-			npc.setIsImmobilized(true);
+			npc.setImmobilized(true);
 		}
 		return super.onSpawn(npc);
 	}

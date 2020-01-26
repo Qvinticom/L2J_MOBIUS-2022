@@ -58,7 +58,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.Say2;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -297,7 +297,7 @@ public class Attackable extends NpcInstance
 		return _isReturningToSpawnPoint;
 	}
 	
-	public void setisReturningToSpawnPoint(boolean value)
+	public void setReturningToSpawnPoint(boolean value)
 	{
 		_isReturningToSpawnPoint = value;
 	}
@@ -798,7 +798,7 @@ public class Attackable extends NpcInstance
 							// Distribute the Exp and SP between the PlayerInstance and its Summon
 							if (!attacker.isDead())
 							{
-								attacker.addExpAndSp(Math.round(attacker.calcStat(Stats.EXPSP_RATE, exp, null, null)), (int) attacker.calcStat(Stats.EXPSP_RATE, sp, null, null));
+								attacker.addExpAndSp(Math.round(attacker.calcStat(Stat.EXPSP_RATE, exp, null, null)), (int) attacker.calcStat(Stat.EXPSP_RATE, sp, null, null));
 							}
 						}
 					}
@@ -1964,7 +1964,7 @@ public class Attackable extends NpcInstance
 		}
 		
 		// Instant Item Drop :>
-		final double rateHp = getStat().calcStat(Stats.MAX_HP, 1, this, null);
+		final double rateHp = getStat().calcStat(Stat.MAX_HP, 1, this, null);
 		if ((rateHp < 2) && npcTemplate.getType().contentEquals("Monster")) // only Monster with <= 1x HP can drop herbs
 		{
 			boolean hp = false;

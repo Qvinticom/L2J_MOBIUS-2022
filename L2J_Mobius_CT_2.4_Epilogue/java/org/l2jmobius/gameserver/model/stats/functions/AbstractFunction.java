@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * A Function object is a component of a Calculator created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...).<br>
@@ -36,7 +36,7 @@ public abstract class AbstractFunction
 	/** Logger. */
 	protected static final Logger LOG = Logger.getLogger(AbstractFunction.class.getName());
 	/** Statistics, that is affected by this function (See Creature.CALCULATOR_XXX constants) */
-	private final Stats _stat;
+	private final Stat _stat;
 	/**
 	 * Order of functions calculation.<br>
 	 * Functions with lower order are executed first.<br>
@@ -64,7 +64,7 @@ public abstract class AbstractFunction
 	 * @param value the value
 	 * @param applayCond the apply condition
 	 */
-	public AbstractFunction(Stats stat, int order, Object owner, double value, Condition applayCond)
+	public AbstractFunction(Stat stat, int order, Object owner, double value, Condition applayCond)
 	{
 		_stat = stat;
 		_order = order;
@@ -104,7 +104,7 @@ public abstract class AbstractFunction
 	 * Gets the stat.
 	 * @return the stat
 	 */
-	public Stats getStat()
+	public Stat getStat()
 	{
 		return _stat;
 	}

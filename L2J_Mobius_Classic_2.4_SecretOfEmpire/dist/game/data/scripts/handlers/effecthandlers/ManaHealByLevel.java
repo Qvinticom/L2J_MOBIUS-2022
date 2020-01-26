@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -69,7 +69,7 @@ public class ManaHealByLevel extends AbstractEffect
 		
 		// recharged mp influenced by difference between target level and skill level
 		// if target is within 5 levels or lower then skill level there's no penalty.
-		amount = effected.getStat().getValue(Stats.MANA_CHARGE, amount);
+		amount = effected.getStat().getValue(Stat.MANA_CHARGE, amount);
 		if (effected.getLevel() > skill.getMagicLevel())
 		{
 			final int lvlDiff = effected.getLevel() - skill.getMagicLevel();

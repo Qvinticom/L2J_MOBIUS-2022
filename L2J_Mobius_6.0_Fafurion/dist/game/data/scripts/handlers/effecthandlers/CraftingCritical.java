@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Nik
@@ -26,6 +26,6 @@ public class CraftingCritical extends AbstractStatAddEffect
 {
 	public CraftingCritical(StatsSet params)
 	{
-		super(params, Stats.CRAFTING_CRITICAL);
+		super(params, Stat.CRAFTING_CRITICAL);
 	}
 }

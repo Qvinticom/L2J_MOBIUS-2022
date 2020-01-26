@@ -125,7 +125,7 @@ public class TautiWarzone extends AbstractInstance
 			{
 				final Npc axe = addSpawn(npc.getId() == TAUTI_EXTREME ? TAUTI_EXTREME_AXE : TAUTI_COMMON_AXE, npc, false, 0, false, npc.getInstanceId());
 				axe.setRandomWalking(false);
-				axe.setIsImmobilized(true);
+				axe.setImmobilized(true);
 				break;
 			}
 			case "WORLD_STATUS_CHECK":

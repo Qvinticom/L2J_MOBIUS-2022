@@ -426,7 +426,7 @@ public class MultiSellChoose extends GameClientPacket
 		player.broadcastUserInfo();
 		
 		// Finally, give the tax to the castle...
-		if ((merchant != null) && merchant.getIsInTown() && (merchant.getCastle().getOwnerId() > 0))
+		if ((merchant != null) && merchant.isInTown() && (merchant.getCastle().getOwnerId() > 0))
 		{
 			merchant.getCastle().addToTreasury(_transactionTax * _amount);
 		}
@@ -457,7 +457,7 @@ public class MultiSellChoose extends GameClientPacket
 			{
 				double taxRate = 0.0;
 				
-				if (applyTaxes && (merchant != null) && merchant.getIsInTown())
+				if (applyTaxes && (merchant != null) && merchant.isInTown())
 				{
 					taxRate = merchant.getCastle().getTaxRate();
 				}

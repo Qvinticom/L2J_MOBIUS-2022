@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.type.ScriptZone;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowUsm;
@@ -212,12 +212,12 @@ public class OctavisWarzone extends AbstractInstance
 					
 					if ((hpPer < 50) && npc.isScriptValue(0))
 					{
-						npc.getStat().addFixedValue(Stats.REGENERATE_HP_RATE, 100d); // On original script 95000d was added, making Octavis targetable for two seconds.
+						npc.getStat().addFixedValue(Stat.REGENERATE_HP_RATE, 100d); // On original script 95000d was added, making Octavis targetable for two seconds.
 						npc.setScriptValue(1);
 					}
 					else if ((hpPer > 90) && npc.isScriptValue(1))
 					{
-						npc.getStat().addFixedValue(Stats.REGENERATE_HP_RATE, 0d);
+						npc.getStat().addFixedValue(Stat.REGENERATE_HP_RATE, 0d);
 						npc.setScriptValue(0);
 					}
 					

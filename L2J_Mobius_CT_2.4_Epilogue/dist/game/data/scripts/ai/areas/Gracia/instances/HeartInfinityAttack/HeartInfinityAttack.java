@@ -550,13 +550,13 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		if (CommonUtil.contains(NOTMOVE, npc.getId()))
 		{
 			npc.setRandomWalking(false);
-			npc.setIsImmobilized(true);
+			npc.setImmobilized(true);
 		}
 		
 		if (npc.getId() == HOUND)
 		{
 			npc.setRandomWalking(false);
-			npc.setIsImmobilized(true);
+			npc.setImmobilized(true);
 		}
 		
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
@@ -600,7 +600,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 					houndBlocked = true;
 					for (Npc hound : world.hounds)
 					{
-						hound.setIsInvul(true);
+						hound.setInvul(true);
 					}
 					broadCastPacket(world, new ExShowScreenMessage(NpcStringId.WITH_ALL_CONNECTIONS_TO_THE_TUMOR_SEVERED_EKIMUS_HAS_LOST_ITS_POWER_TO_CONTROL_THE_FERAL_HOUND, 2, 8000));
 				}
@@ -708,7 +708,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			houndBlocked = false;
 			for (Npc hound : world.hounds)
 			{
-				hound.setIsInvul(false);
+				hound.setInvul(false);
 			}
 			broadCastPacket(world, new ExShowScreenMessage(NpcStringId.WITH_THE_CONNECTION_TO_THE_TUMOR_RESTORED_EKIMUS_HAS_REGAINED_CONTROL_OVER_THE_FERAL_HOUND, 2, 8000));
 		}

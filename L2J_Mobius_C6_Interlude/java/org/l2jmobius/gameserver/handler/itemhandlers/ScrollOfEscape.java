@@ -109,7 +109,7 @@ public class ScrollOfEscape implements IItemHandler
 			return;
 		}
 		
-		if (player._inEventDM && DM.is_started())
+		if (player._inEventDM && DM.hasStarted())
 		{
 			player.sendMessage("You can't use Scroll of Escape in DM.");
 			return;
@@ -229,7 +229,7 @@ public class ScrollOfEscape implements IItemHandler
 			
 			_player.enableAllSkills();
 			
-			_player.setIsIn7sDungeon(false);
+			_player.setIn7sDungeon(false);
 			
 			try
 			{

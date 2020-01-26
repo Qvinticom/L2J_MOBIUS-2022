@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -45,7 +45,7 @@ public class ResistDispelByCategory extends AbstractEffect
 			// Only this one is in use it seems
 			case BUFF:
 			{
-				effected.getStat().mergeMul(Stats.RESIST_DISPEL_BUFF, 1 + (_amount / 100));
+				effected.getStat().mergeMul(Stat.RESIST_DISPEL_BUFF, 1 + (_amount / 100));
 				break;
 			}
 		}

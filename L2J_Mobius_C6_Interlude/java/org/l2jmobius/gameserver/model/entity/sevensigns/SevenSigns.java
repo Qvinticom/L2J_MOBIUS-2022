@@ -1523,14 +1523,14 @@ public class SevenSigns
 				if (!onlinePlayer.isGM() && onlinePlayer.isIn7sDungeon() && !currPlayer.getString("cabal").equals(compWinner))
 				{
 					onlinePlayer.teleToLocation(MapRegionTable.TeleportWhereType.Town);
-					onlinePlayer.setIsIn7sDungeon(false);
+					onlinePlayer.setIn7sDungeon(false);
 					onlinePlayer.sendMessage("You have been teleported to the nearest town due to the beginning of the Seal Validation period.");
 				}
 			}
 			else if (!onlinePlayer.isGM() && onlinePlayer.isIn7sDungeon() && !currPlayer.getString("cabal").equals(""))
 			{
 				onlinePlayer.teleToLocation(MapRegionTable.TeleportWhereType.Town);
-				onlinePlayer.setIsIn7sDungeon(false);
+				onlinePlayer.setIn7sDungeon(false);
 				onlinePlayer.sendMessage("You have been teleported to the nearest town because you have not signed for any cabal.");
 			}
 		}

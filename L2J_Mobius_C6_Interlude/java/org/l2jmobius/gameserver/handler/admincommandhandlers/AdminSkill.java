@@ -439,7 +439,7 @@ public class AdminSkill implements IAdminCommandHandler
 		showMainPage(activeChar);
 	}
 	
-	private void adminAddSkill(PlayerInstance activeChar, String val)
+	private void adminAddSkill(PlayerInstance activeChar, String value)
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
@@ -464,7 +464,7 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		
-		final StringTokenizer st = new StringTokenizer(val);
+		final StringTokenizer st = new StringTokenizer(value);
 		
 		if (st.countTokens() != 2)
 		{

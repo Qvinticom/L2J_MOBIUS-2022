@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -59,7 +59,7 @@ public class Hp extends AbstractEffect
 		int basicAmount = _amount;
 		if ((item != null) && (item.isPotion() || item.isElixir()))
 		{
-			basicAmount += effected.getStat().getValue(Stats.ADDITIONAL_POTION_HP, 0);
+			basicAmount += effected.getStat().getValue(Stat.ADDITIONAL_POTION_HP, 0);
 			
 			// Classic Potion Mastery
 			// TODO: Create an effect if more mastery skills are added.

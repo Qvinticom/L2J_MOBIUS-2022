@@ -128,7 +128,7 @@ public class Ramona extends AbstractNpcAI
 			{
 				if (ZONE.getCharactersInside().size() >= Config.RAMONA_MIN_PLAYER)
 				{
-					npc.setIsInvul(false);
+					npc.setInvul(false);
 					cancelQuestTimers("SPAWN_MS");
 					startQuestTimer("CHECK_ACTIVITY_TASK", 5000, null, null);
 					_lastAction = System.currentTimeMillis();
@@ -354,7 +354,7 @@ public class Ramona extends AbstractNpcAI
 	@Override
 	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
-		npc.setIsInvul(true);
+		npc.setInvul(true);
 		if (creature.isPlayer())
 		{
 			startQuestTimer("SPAWN_MS", 10000, npc, null, true);

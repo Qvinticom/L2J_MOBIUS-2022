@@ -31,7 +31,7 @@ public abstract class Tower extends Npc
 	public Tower(NpcTemplate template)
 	{
 		super(template);
-		setIsInvul(false);
+		setInvul(false);
 	}
 	
 	@Override

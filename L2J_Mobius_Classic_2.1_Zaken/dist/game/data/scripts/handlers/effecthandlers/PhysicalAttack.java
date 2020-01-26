@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * Physical Attack effect implementation. <br>
@@ -148,7 +148,7 @@ public class PhysicalAttack extends AbstractEffect
 			
 			// Skill specific mods.
 			final double weaponMod = effector.getAttackType().isRanged() ? 70 : 77;
-			final double power = _power + effector.getStat().getValue(Stats.SKILL_POWER_ADD, 0);
+			final double power = _power + effector.getStat().getValue(Stat.SKILL_POWER_ADD, 0);
 			final double rangedBonus = effector.getAttackType().isRanged() ? attack + power : 0;
 			final double abnormalMod = _abnormals.stream().anyMatch(effected::hasAbnormalType) ? _abnormalPowerMod : 1;
 			final double critMod = critical ? Formulas.calcCritDamage(effector, effected, skill) : 1;
@@ -157,11 +157,11 @@ public class PhysicalAttack extends AbstractEffect
 			{
 				if (effector.isChargedShot(ShotType.SOULSHOTS))
 				{
-					ssmod = 2 * effector.getStat().getValue(Stats.SHOTS_BONUS); // 2.04 for dual weapon?
+					ssmod = 2 * effector.getStat().getValue(Stat.SHOTS_BONUS); // 2.04 for dual weapon?
 				}
 				else if (effector.isChargedShot(ShotType.BLESSED_SOULSHOTS))
 				{
-					ssmod = 4 * effector.getStat().getValue(Stats.SHOTS_BONUS);
+					ssmod = 4 * effector.getStat().getValue(Stat.SHOTS_BONUS);
 				}
 			}
 			
@@ -170,7 +170,7 @@ public class PhysicalAttack extends AbstractEffect
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^``````````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 			final double baseMod = (weaponMod * ((attack * effector.getLevelMod()) + power + rangedBonus)) / defence;
 			damage = baseMod * abnormalMod * ssmod * critMod * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * pvpPveMod * randomMod;
-			damage *= effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 1);
+			damage *= effector.getStat().getValue(Stat.PHYSICAL_SKILL_POWER, 1);
 		}
 		
 		effector.doAttack(damage, effected, skill, false, false, critical, false);

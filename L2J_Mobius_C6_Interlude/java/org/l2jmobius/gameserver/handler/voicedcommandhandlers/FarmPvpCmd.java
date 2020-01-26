@@ -116,7 +116,7 @@ public class FarmPvpCmd implements IVoicedCommandHandler
 		}
 		final SetupGauge sg = new SetupGauge(SetupGauge.BLUE, 15000);
 		activeChar.sendPacket(sg);
-		activeChar.setIsImobilised(true);
+		activeChar.setImmobilized(true);
 		
 		ThreadPool.schedule(new teleportTask(activeChar, placex, placey, placez, message), 15000);
 		
@@ -156,7 +156,7 @@ public class FarmPvpCmd implements IVoicedCommandHandler
 			
 			_player.teleToLocation(_x, _y, _z);
 			_player.sendMessage(_message);
-			_player.setIsImobilised(false);
+			_player.setImmobilized(false);
 		}
 	}
 }

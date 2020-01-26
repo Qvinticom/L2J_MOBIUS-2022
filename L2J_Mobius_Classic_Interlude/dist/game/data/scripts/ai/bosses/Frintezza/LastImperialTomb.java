@@ -227,8 +227,8 @@ public class LastImperialTomb extends AbstractInstance
 				broadCastPacket(world, new SpecialCamera(overheadDummy, 300, 90, -10, 6500, 7000, 0, 0, 1, 0, 0));
 				
 				final Npc frintezza = addSpawn(FRINTEZZA, -87780, -155086, -9080, 16384, false, 0, false, world.getId());
-				frintezza.setIsImmobilized(true);
-				frintezza.setIsInvul(true);
+				frintezza.setImmobilized(true);
+				frintezza.setInvul(true);
 				frintezza.disableAllSkills();
 				world.setParameter("frintezza", frintezza);
 				
@@ -236,7 +236,7 @@ public class LastImperialTomb extends AbstractInstance
 				for (int[] element : PORTRAIT_SPAWNS)
 				{
 					final MonsterInstance demon = (MonsterInstance) addSpawn(element[0] + 2, element[5], element[6], element[7], element[8], false, 0, false, world.getId());
-					demon.setIsImmobilized(true);
+					demon.setImmobilized(true);
 					demon.disableAllSkills();
 					demons.add(demon);
 				}
@@ -376,8 +376,8 @@ public class LastImperialTomb extends AbstractInstance
 				final Npc activeScarlet = addSpawn(SCARLET1, -87789, -153295, -9176, 16384, false, 0, false, world.getId());
 				world.setParameter("activeScarlet", activeScarlet);
 				activeScarlet.setRHandId(FIRST_SCARLET_WEAPON);
-				activeScarlet.setIsInvul(true);
-				activeScarlet.setIsImmobilized(true);
+				activeScarlet.setInvul(true);
+				activeScarlet.setImmobilized(true);
 				activeScarlet.disableAllSkills();
 				broadCastPacket(world, new SocialAction(activeScarlet.getObjectId(), 3));
 				broadCastPacket(world, new SpecialCamera(scarletDummy, 800, 180, 10, 1000, 10000, 0, 0, 1, 0, 0));
@@ -427,17 +427,17 @@ public class LastImperialTomb extends AbstractInstance
 				final List<Npc> demons = world.getParameters().getList("demons", Npc.class);
 				for (Npc demon : demons)
 				{
-					demon.setIsImmobilized(false);
+					demon.setImmobilized(false);
 					demon.enableAllSkills();
 				}
-				activeScarlet.setIsInvul(false);
-				activeScarlet.setIsImmobilized(false);
+				activeScarlet.setInvul(false);
+				activeScarlet.setImmobilized(false);
 				activeScarlet.enableAllSkills();
 				activeScarlet.setRunning();
 				activeScarlet.doCast(INTRO_SKILL.getSkill());
 				frintezza.enableAllSkills();
 				frintezza.disableCoreAI(true);
-				frintezza.setIsInvul(true);
+				frintezza.setInvul(true);
 				enablePlayers(world);
 				startQuestTimer("PLAY_RANDOM_SONG", RANDOM_SONG_INTERVAL * 1000, frintezza, null, false);
 				startQuestTimer("SPAWN_DEMONS", TIME_BETWEEN_DEMON_SPAWNS * 1000, null, player, false);
@@ -488,8 +488,8 @@ public class LastImperialTomb extends AbstractInstance
 				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
 				activeScarlet.abortAttack();
 				activeScarlet.abortCast();
-				activeScarlet.setIsInvul(true);
-				activeScarlet.setIsImmobilized(true);
+				activeScarlet.setInvul(true);
+				activeScarlet.setImmobilized(true);
 				activeScarlet.disableAllSkills();
 				playRandomSong(world);
 				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_1", 2000, npc, null, false);
@@ -570,8 +570,8 @@ public class LastImperialTomb extends AbstractInstance
 				final Npc activeScarlet = addSpawn(SCARLET2, scarletLocation, false, 0, false, world.getId());
 				world.setParameter("activeScarlet", activeScarlet);
 				activeScarlet.setRHandId(SECOND_SCARLET_WEAPON);
-				activeScarlet.setIsInvul(true);
-				activeScarlet.setIsImmobilized(true);
+				activeScarlet.setInvul(true);
+				activeScarlet.setImmobilized(true);
 				activeScarlet.disableAllSkills();
 				broadCastPacket(world, new SpecialCamera(activeScarlet, 450, newHeading, 12, 500, 14000, 0, 0, 1, 0, 0));
 				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_8", 8100, npc, null, false);
@@ -589,8 +589,8 @@ public class LastImperialTomb extends AbstractInstance
 			{
 				final Instance world = npc.getInstanceWorld();
 				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
-				activeScarlet.setIsInvul(false);
-				activeScarlet.setIsImmobilized(false);
+				activeScarlet.setInvul(false);
+				activeScarlet.setImmobilized(false);
 				activeScarlet.enableAllSkills();
 				enablePlayers(world);
 				break;
@@ -678,14 +678,14 @@ public class LastImperialTomb extends AbstractInstance
 	public String onSpawn(Npc npc)
 	{
 		npc.setRandomWalking(false);
-		npc.setIsImmobilized(true);
+		npc.setImmobilized(true);
 		if (npc.getId() == HALL_ALARM)
 		{
 			npc.disableCoreAI(true);
 		}
 		else // dummy
 		{
-			npc.setIsInvul(true);
+			npc.setInvul(true);
 		}
 		return super.onSpawn(npc);
 	}
@@ -854,7 +854,7 @@ public class LastImperialTomb extends AbstractInstance
 				player.disableAllSkills();
 				player.setTarget(null);
 				player.stopMove(null);
-				player.setIsImmobilized(true);
+				player.setImmobilized(true);
 				player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			}
 		}
@@ -867,7 +867,7 @@ public class LastImperialTomb extends AbstractInstance
 			if ((player != null) && player.isOnline())
 			{
 				player.enableAllSkills();
-				player.setIsImmobilized(false);
+				player.setImmobilized(false);
 			}
 		}
 	}

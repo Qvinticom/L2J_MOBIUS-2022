@@ -437,7 +437,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		replyMSG.append("Max Players:&nbsp;<font color=\"00FF00\">" + TvT.getMaxPlayers() + "</font><br><br>");
 		replyMSG.append("Joining Time:&nbsp;<font color=\"00FF00\">" + TvT.getJoinTime() + "</font><br>");
 		replyMSG.append("Event Timer:&nbsp;<font color=\"00FF00\">" + TvT.getEventTime() + "</font><br><br>");
-		replyMSG.append("Interval Time:&nbsp;<font color=\"00FF00\">" + TvT.get_intervalBetweenMatches() + "</font><br><br>");
+		replyMSG.append("Interval Time:&nbsp;<font color=\"00FF00\">" + TvT.getIntervalBetweenMatches() + "</font><br><br>");
 		replyMSG.append("Current teams:<br1>");
 		replyMSG.append("<center><table border=\"0\">");
 		

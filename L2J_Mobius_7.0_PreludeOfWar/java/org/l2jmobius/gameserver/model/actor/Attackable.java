@@ -72,7 +72,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.ExMagicAttackInfo;
@@ -123,7 +123,7 @@ public class Attackable extends Npc
 	{
 		super(template);
 		setInstanceType(InstanceType.Attackable);
-		setIsInvul(false);
+		setInvul(false);
 		_mustGiveExpSp = true;
 	}
 	
@@ -155,7 +155,7 @@ public class Attackable extends Npc
 		return _isReturningToSpawnPoint;
 	}
 	
-	public void setisReturningToSpawnPoint(boolean value)
+	public void setReturningToSpawnPoint(boolean value)
 	{
 		_isReturningToSpawnPoint = value;
 	}
@@ -175,9 +175,9 @@ public class Attackable extends Npc
 		return _seeThroughSilentMove;
 	}
 	
-	public void setSeeThroughSilentMove(boolean val)
+	public void setSeeThroughSilentMove(boolean value)
 	{
-		_seeThroughSilentMove = val;
+		_seeThroughSilentMove = value;
 	}
 	
 	/**
@@ -496,8 +496,8 @@ public class Attackable extends Npc
 							// Distribute the Exp and SP between the PlayerInstance and its Summon
 							if (!attacker.isDead())
 							{
-								exp = attacker.getStat().getValue(Stats.EXPSP_RATE, exp) * Config.EXP_AMOUNT_MULTIPLIERS.getOrDefault(attacker.getClassId(), 1f);
-								sp = attacker.getStat().getValue(Stats.EXPSP_RATE, sp) * Config.SP_AMOUNT_MULTIPLIERS.getOrDefault(attacker.getClassId(), 1f);
+								exp = attacker.getStat().getValue(Stat.EXPSP_RATE, exp) * Config.EXP_AMOUNT_MULTIPLIERS.getOrDefault(attacker.getClassId(), 1f);
+								sp = attacker.getStat().getValue(Stat.EXPSP_RATE, sp) * Config.SP_AMOUNT_MULTIPLIERS.getOrDefault(attacker.getClassId(), 1f);
 								
 								attacker.addExpAndSp(exp, sp, useVitalityRate());
 								if (exp > 0)
@@ -662,7 +662,7 @@ public class Attackable extends Npc
 				
 				if (skill == null)
 				{
-					hateValue *= attacker.getStat().getValue(Stats.HATE_ATTACK, 1);
+					hateValue *= attacker.getStat().getValue(Stat.HATE_ATTACK, 1);
 				}
 				
 				addDamageHate(attacker, damage, (int) hateValue);
@@ -1697,12 +1697,12 @@ public class Attackable extends Npc
 	
 	/**
 	 * Set this Npc as a Minion instance.
-	 * @param val
+	 * @param value
 	 */
-	public void setIsRaidMinion(boolean val)
+	public void setIsRaidMinion(boolean value)
 	{
-		_isRaid = val;
-		_isRaidMinion = val;
+		_isRaid = value;
+		_isRaidMinion = value;
 	}
 	
 	@Override

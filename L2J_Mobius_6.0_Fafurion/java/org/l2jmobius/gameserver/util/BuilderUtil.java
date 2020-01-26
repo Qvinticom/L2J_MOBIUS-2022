@@ -81,7 +81,7 @@ public class BuilderUtil
 		}
 		
 		player.setSilenceMode(hide);
-		player.setIsInvul(hide);
+		player.setInvul(hide);
 		player.setInvisible(hide);
 		
 		player.broadcastUserInfo();

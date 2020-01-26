@@ -20,7 +20,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 import org.l2jmobius.gameserver.model.skills.Env;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.model.skills.conditions.Condition;
 
 /**
@@ -32,11 +32,11 @@ public class FuncTemplate
 	public Condition applayCond;
 	public Class<?> func;
 	public Constructor<?> constructor;
-	public Stats stat;
+	public Stat stat;
 	public int order;
 	public Lambda lambda;
 	
-	public FuncTemplate(Condition pAttachCond, Condition pApplayCond, String pFunc, Stats pStat, int pOrder, Lambda pLambda)
+	public FuncTemplate(Condition pAttachCond, Condition pApplayCond, String pFunc, Stat pStat, int pOrder, Lambda pLambda)
 	{
 		attachCond = pAttachCond;
 		applayCond = pApplayCond;
@@ -55,7 +55,7 @@ public class FuncTemplate
 		{
 			constructor = func.getConstructor(new Class[]
 			{
-				Stats.class, // stats to update
+				Stat.class, // stats to update
 				Integer.TYPE, // order of execution
 				Object.class, // owner
 				Lambda.class, // value for function

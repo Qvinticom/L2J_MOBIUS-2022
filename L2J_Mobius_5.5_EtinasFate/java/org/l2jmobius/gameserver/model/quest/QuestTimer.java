@@ -123,12 +123,12 @@ public class QuestTimer
 		return ((npc == _npc) && (player == _player));
 	}
 	
-	public boolean getIsActive()
+	public boolean isActive()
 	{
 		return _isActive;
 	}
 	
-	public boolean getIsRepeating()
+	public boolean isRepeating()
 	{
 		return _isRepeating;
 	}

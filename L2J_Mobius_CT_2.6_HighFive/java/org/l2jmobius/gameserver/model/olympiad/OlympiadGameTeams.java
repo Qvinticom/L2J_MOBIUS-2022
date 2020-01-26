@@ -346,7 +346,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 				return false;
 			}
 			
-			par.getPlayer().setIsOlympiadStart(true);
+			par.getPlayer().setOlympiadStart(true);
 			par.getPlayer().updateEffectIcons();
 		}
 		
@@ -358,7 +358,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 				return false;
 			}
 			
-			par.getPlayer().setIsOlympiadStart(true);
+			par.getPlayer().setOlympiadStart(true);
 			par.getPlayer().updateEffectIcons();
 		}
 		return true;
@@ -1102,14 +1102,14 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 		{
 			if (participant.getPlayer() != null)
 			{
-				participant.getPlayer().setIsInvul(true);
+				participant.getPlayer().setInvul(true);
 			}
 		}
 		for (Participant participant : _teamTwo)
 		{
 			if (participant.getPlayer() != null)
 			{
-				participant.getPlayer().setIsInvul(true);
+				participant.getPlayer().setInvul(true);
 			}
 		}
 	}
@@ -1121,14 +1121,14 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 		{
 			if (participant.getPlayer() != null)
 			{
-				participant.getPlayer().setIsInvul(false);
+				participant.getPlayer().setInvul(false);
 			}
 		}
 		for (Participant participant : _teamTwo)
 		{
 			if (participant.getPlayer() != null)
 			{
-				participant.getPlayer().setIsInvul(false);
+				participant.getPlayer().setInvul(false);
 			}
 		}
 	}

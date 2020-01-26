@@ -101,7 +101,7 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skills.Calculator;
 import org.l2jmobius.gameserver.model.skills.Formulas;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.model.skills.effects.EffectCharge;
 import org.l2jmobius.gameserver.model.skills.funcs.Func;
 import org.l2jmobius.gameserver.model.skills.holders.ISkillsHolder;
@@ -167,9 +167,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	private boolean _isFlying = false; // Is flying Wyvern?
 	private boolean _isFallsdown = false; // Falls down
 	private boolean _isMuted = false; // Cannot use magic
-	private boolean _isPsychicalMuted = false; // Cannot use psychical skills
+	private boolean _isPhysicalMuted = false; // Cannot use psychical skills
 	private boolean _isKilledAlready = false;
-	private int _isImobilised = 0;
+	private int _isImmobilized = 0;
 	private boolean _isOverloaded = false; // the char is carrying too much
 	private boolean _isParalyzed = false;
 	private boolean _isRiding = false; // Is Riding strider?
@@ -290,7 +290,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			if (!Config.NPC_ATTACKABLE || (!(this instanceof Attackable) && !(this instanceof ControlTowerInstance) && !(this instanceof SiegeFlagInstance) && !(this instanceof EffectPointInstance)))
 			{
-				setIsInvul(true);
+				setInvul(true);
 			}
 		}
 		else // not NpcInstance
@@ -299,12 +299,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			_skills = new ConcurrentHashMap<>();
 			
 			// If Creature is a PlayerInstance or a Summon, create the basic calculator set
-			_calculators = new Calculator[Stats.NUM_STATS];
+			_calculators = new Calculator[Stat.NUM_STATS];
 			Formulas.getInstance().addFuncsToNewCharacter(this);
 			
 			if (!(this instanceof Attackable) && !isAttackable() && !(this instanceof DoorInstance))
 			{
-				setIsInvul(true);
+				setInvul(true);
 			}
 		}
 	}
@@ -359,7 +359,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			spawnMe(getPosition().getX(), getPosition().getY(), getPosition().getZ());
 		}
 		
-		setIsTeleporting(false);
+		setTeleporting(false);
 		
 		if (_isPendingRevive)
 		{
@@ -680,7 +680,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		abortAttack();
 		abortCast();
 		
-		setIsTeleporting(true);
+		setTeleporting(true);
 		setTarget(null);
 		
 		// Remove from world regions zones
@@ -998,7 +998,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				if (_disableBowAttackEndTime <= GameTimeController.getGameTicks())
 				{
 					// Verify if PlayerInstance owns enough MP
-					final int saMpConsume = (int) getStat().calcStat(Stats.MP_CONSUME, 0, null, null);
+					final int saMpConsume = (int) getStat().calcStat(Stat.MP_CONSUME, 0, null, null);
 					final int mpConsume = saMpConsume == 0 ? weaponItem.getMpConsume() : saMpConsume;
 					
 					if (getStatus().getCurrentMp() < mpConsume)
@@ -1367,8 +1367,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		double angleChar;
 		double angleTarget;
-		final int maxRadius = (int) getStat().calcStat(Stats.POWER_ATTACK_RANGE, 66, null, null);
-		final int maxAngleDiff = (int) getStat().calcStat(Stats.POWER_ATTACK_ANGLE, 120, null, null);
+		final int maxRadius = (int) getStat().calcStat(Stat.POWER_ATTACK_RANGE, 66, null, null);
+		final int maxAngleDiff = (int) getStat().calcStat(Stat.POWER_ATTACK_ANGLE, 120, null, null);
 		
 		if (_target == null)
 		{
@@ -1380,7 +1380,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		angleChar = Util.convertHeadingToDegree(_heading);
 		double attackpercent = 85;
-		final int attackcountmax = (int) getStat().calcStat(Stats.ATTACK_COUNT_MAX, 3, null, null);
+		final int attackcountmax = (int) getStat().calcStat(Stat.ATTACK_COUNT_MAX, 3, null, null);
 		int attackcount = 0;
 		
 		if (angleChar <= 0)
@@ -1549,7 +1549,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// Check if the skill is psychical and if the Creature is not psychical_muted
-		if (!skill.isMagic() && _isPsychicalMuted && !skill.isPotion())
+		if (!skill.isMagic() && _isPhysicalMuted && !skill.isPotion())
 		{
 			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
 			return;
@@ -1857,15 +1857,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			if (skill.isDance())
 			{
-				getStatus().reduceMp(calcStat(Stats.DANCE_MP_CONSUME_RATE, initmpcons, null, null));
+				getStatus().reduceMp(calcStat(Stat.DANCE_MP_CONSUME_RATE, initmpcons, null, null));
 			}
 			else if (skill.isMagic())
 			{
-				getStatus().reduceMp(calcStat(Stats.MAGICAL_MP_CONSUME_RATE, initmpcons, null, null));
+				getStatus().reduceMp(calcStat(Stat.MAGICAL_MP_CONSUME_RATE, initmpcons, null, null));
 			}
 			else
 			{
-				getStatus().reduceMp(calcStat(Stats.PHYSICAL_MP_CONSUME_RATE, initmpcons, null, null));
+				getStatus().reduceMp(calcStat(Stat.PHYSICAL_MP_CONSUME_RATE, initmpcons, null, null));
 			}
 			
 			su.addAttribute(StatusUpdate.CUR_MP, (int) getStatus().getCurrentMp());
@@ -1984,7 +1984,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				return false;
 			}
 			
-			setIsKilledAlready(true);
+			setKilledAlready(true);
 		}
 		// Set target to null and cancel Attack or Cast
 		setTarget(null);
@@ -2029,7 +2029,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			final PlayerInstance player = (PlayerInstance) this;
 			
 			// to avoid Event Remove buffs on die
-			if (player._inEventDM && DM.is_started())
+			if (player._inEventDM && DM.hasStarted())
 			{
 				if (Config.DM_REMOVE_BUFFS_ON_DIE)
 				{
@@ -2323,7 +2323,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Sets the checks if is afraid.
 	 * @param value the new checks if is afraid
 	 */
-	public void setIsAfraid(boolean value)
+	public void setAfraid(boolean value)
 	{
 		_isAfraid = value;
 	}
@@ -2377,7 +2377,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Sets the checks if is confused.
 	 * @param value the new checks if is confused
 	 */
-	public void setIsConfused(boolean value)
+	public void setConfused(boolean value)
 	{
 		_isConfused = value;
 	}
@@ -2404,7 +2404,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Sets the checks if is fake death.
 	 * @param value the new checks if is fake death
 	 */
-	public void setIsFakeDeath(boolean value)
+	public void setFakeDeath(boolean value)
 	{
 		_isFakeDeath = value;
 	}
@@ -2422,54 +2422,54 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Set the Creature flying mode to True.
 	 * @param mode the new checks if is flying
 	 */
-	public void setIsFlying(boolean mode)
+	public void setFlying(boolean mode)
 	{
 		_isFlying = mode;
 	}
 	
 	/**
-	 * Checks if is fallsdown.
-	 * @return true, if is fallsdown
+	 * Checks if is falling.
+	 * @return true, if is falling
 	 */
-	public boolean isFallsdown()
+	public boolean isFalling()
 	{
 		return _isFallsdown;
 	}
 	
 	/**
-	 * Sets the checks if is fallsdown.
-	 * @param value the new checks if is fallsdown
+	 * Sets the checks if is falling.
+	 * @param value the new checks if is falling
 	 */
-	public void setIsFallsdown(boolean value)
+	public void setFalling(boolean value)
 	{
 		_isFallsdown = value;
 	}
 	
 	/**
-	 * Checks if is imobilised.
-	 * @return true, if is imobilised
+	 * Checks if is immobilized.
+	 * @return true, if is immobilized
 	 */
-	public boolean isImobilised()
+	public boolean isImmobilized()
 	{
-		return _isImobilised > 0;
+		return _isImmobilized > 0;
 	}
 	
 	/**
-	 * Sets the checks if is imobilised.
-	 * @param value the new checks if is imobilised
+	 * Sets the checks if is immobilized.
+	 * @param value the new checks if is immobilized
 	 */
-	public void setIsImobilised(boolean value)
+	public void setImmobilized(boolean value)
 	{
 		// Stop this if he is moving
 		getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		
 		if (value)
 		{
-			_isImobilised++;
+			_isImmobilized++;
 		}
 		else
 		{
-			_isImobilised--;
+			_isImmobilized--;
 		}
 	}
 	
@@ -2522,7 +2522,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Sets the checks if is killed already.
 	 * @param value the new checks if is killed already
 	 */
-	public void setIsKilledAlready(boolean value)
+	public void setKilledAlready(boolean value)
 	{
 		_isKilledAlready = value;
 	}
@@ -2540,27 +2540,27 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Sets the checks if is muted.
 	 * @param value the new checks if is muted
 	 */
-	public void setIsMuted(boolean value)
+	public void setMuted(boolean value)
 	{
 		_isMuted = value;
 	}
 	
 	/**
-	 * Checks if is psychical muted.
-	 * @return true, if is psychical muted
+	 * Checks if is physical muted.
+	 * @return true, if is physical muted
 	 */
-	public boolean isPsychicalMuted()
+	public boolean isPhysicalMuted()
 	{
-		return _isPsychicalMuted;
+		return _isPhysicalMuted;
 	}
 	
 	/**
-	 * Sets the checks if is psychical muted.
-	 * @param value the new checks if is psychical muted
+	 * Sets the checks if is physical muted.
+	 * @param value the new checks if is physical muted
 	 */
-	public void setIsPsychicalMuted(boolean value)
+	public void setPhysicalMuted(boolean value)
 	{
-		_isPsychicalMuted = value;
+		_isPhysicalMuted = value;
 	}
 	
 	/**
@@ -2569,7 +2569,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public boolean isMovementDisabled()
 	{
-		return _isImmobileUntilAttacked || _isStunned || _isRooted || _isSleeping || _isOverloaded || _isParalyzed || isImobilised() || _isFakeDeath || _isFallsdown;
+		return _isImmobileUntilAttacked || _isStunned || _isRooted || _isSleeping || _isOverloaded || _isParalyzed || isImmobilized() || _isFakeDeath || _isFallsdown;
 	}
 	
 	/**
@@ -2594,7 +2594,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Set the overloaded status of the Creature is overloaded (if True, the PlayerInstance can't take more item).
 	 * @param value the new checks if is overloaded
 	 */
-	public void setIsOverloaded(boolean value)
+	public void setOverloaded(boolean value)
 	{
 		_isOverloaded = value;
 	}
@@ -2612,7 +2612,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Sets the checks if is paralyzed.
 	 * @param value the new checks if is paralyzed
 	 */
-	public void setIsParalyzed(boolean value)
+	public void setParalyzed(boolean value)
 	{
 		if (_petrified)
 		{
@@ -2666,7 +2666,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Set the Creature riding mode to True.
 	 * @param mode the new checks if is riding
 	 */
-	public void setIsRiding(boolean mode)
+	public void setRiding(boolean mode)
 	{
 		_isRiding = mode;
 	}
@@ -2684,7 +2684,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Sets the checks if is rooted.
 	 * @param value the new checks if is rooted
 	 */
-	public void setIsRooted(boolean value)
+	public void setRooted(boolean value)
 	{
 		_isRooted = value;
 	}
@@ -2702,7 +2702,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Sets the checks if is running.
 	 * @param value the new checks if is running
 	 */
-	public void setIsRunning(boolean value)
+	public void setRunning(boolean value)
 	{
 		_isRunning = value;
 		broadcastPacket(new ChangeMoveType(this));
@@ -2715,7 +2715,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		if (!_isRunning)
 		{
-			setIsRunning(true);
+			setRunning(true);
 		}
 	}
 	
@@ -2732,7 +2732,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Sets the checks if is immobile until attacked.
 	 * @param value the new checks if is immobile until attacked
 	 */
-	public void setIsImmobileUntilAttacked(boolean value)
+	public void setImmobileUntilAttacked(boolean value)
 	{
 		_isImmobileUntilAttacked = value;
 	}
@@ -2750,7 +2750,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Sets the checks if is sleeping.
 	 * @param value the new checks if is sleeping
 	 */
-	public void setIsSleeping(boolean value)
+	public void setSleeping(boolean value)
 	{
 		_isSleeping = value;
 	}
@@ -2768,7 +2768,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Sets the checks if is stunned.
 	 * @param value the new checks if is stunned
 	 */
-	public void setIsStunned(boolean value)
+	public void setStunned(boolean value)
 	{
 		_isStunned = value;
 	}
@@ -2786,7 +2786,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Sets the checks if is betrayed.
 	 * @param value the new checks if is betrayed
 	 */
-	public void setIsBetrayed(boolean value)
+	public void setBetrayed(boolean value)
 	{
 		_isBetrayed = value;
 	}
@@ -2804,23 +2804,23 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Sets the checks if is teleporting.
 	 * @param value the new checks if is teleporting
 	 */
-	public void setIsTeleporting(boolean value)
+	public void setTeleporting(boolean value)
 	{
 		_isTeleporting = value;
 	}
 	
 	/**
 	 * Sets the checks if is invul.
-	 * @param b the new checks if is invul
+	 * @param value the new checks if is invul
 	 */
-	public void setIsInvul(boolean b)
+	public void setInvul(boolean value)
 	{
 		if (_petrified)
 		{
 			return;
 		}
 		
-		_isInvul = b;
+		_isInvul = value;
 	}
 	
 	/**
@@ -2966,7 +2966,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		if (_isRunning)
 		{
-			setIsRunning(false);
+			setRunning(false);
 		}
 	}
 	
@@ -3589,7 +3589,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void startImmobileUntilAttacked()
 	{
-		setIsImmobileUntilAttacked(true);
+		setImmobileUntilAttacked(true);
 		abortAttack();
 		abortCast();
 		getAI().notifyEvent(CtrlEvent.EVT_SLEEPING);
@@ -3602,7 +3602,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void startConfused()
 	{
-		setIsConfused(true);
+		setConfused(true);
 		getAI().notifyEvent(CtrlEvent.EVT_CONFUSED);
 		updateAbnormalEffect();
 	}
@@ -3613,8 +3613,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void startFakeDeath()
 	{
-		setIsFallsdown(true);
-		setIsFakeDeath(true);
+		setFalling(true);
+		setFakeDeath(true);
 		/* Aborts any attacks/casts if fake dead */
 		abortAttack();
 		abortCast();
@@ -3629,7 +3629,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void startFear()
 	{
-		setIsAfraid(true);
+		setAfraid(true);
 		getAI().notifyEvent(CtrlEvent.EVT_AFFRAID);
 		updateAbnormalEffect();
 	}
@@ -3640,7 +3640,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void startMuted()
 	{
-		setIsMuted(true);
+		setMuted(true);
 		/* Aborts any casts if muted */
 		abortCast();
 		getAI().notifyEvent(CtrlEvent.EVT_MUTED);
@@ -3653,7 +3653,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void startPsychicalMuted()
 	{
-		setIsPsychicalMuted(true);
+		setPhysicalMuted(true);
 		getAI().notifyEvent(CtrlEvent.EVT_MUTED);
 		updateAbnormalEffect();
 	}
@@ -3664,7 +3664,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void startRooted()
 	{
-		setIsRooted(true);
+		setRooted(true);
 		stopMove(null);
 		getAI().notifyEvent(CtrlEvent.EVT_ROOTED, null);
 		updateAbnormalEffect();
@@ -3676,7 +3676,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void startSleeping()
 	{
-		setIsSleeping(true);
+		setSleeping(true);
 		/* Aborts any attacks/casts if sleeped */
 		abortAttack();
 		abortCast();
@@ -3702,7 +3702,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		setIsStunned(true);
+		setStunned(true);
 		/* Aborts any attacks/casts if stunned */
 		abortAttack();
 		abortCast();
@@ -3717,7 +3717,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void startBetray()
 	{
-		setIsBetrayed(true);
+		setBetrayed(true);
 		getAI().notifyEvent(CtrlEvent.EVT_BETRAYED, null);
 		updateAbnormalEffect();
 	}
@@ -3728,7 +3728,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public void stopBetray()
 	{
 		stopEffects(Effect.EffectType.BETRAY);
-		setIsBetrayed(false);
+		setBetrayed(false);
 		updateAbnormalEffect();
 	}
 	
@@ -3796,7 +3796,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			stopSkillEffects(effect.getSkill().getNegateId());
 		}
 		
-		setIsImmobileUntilAttacked(false);
+		setImmobileUntilAttacked(false);
 		getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		updateAbnormalEffect();
 	}
@@ -3824,7 +3824,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			removeEffect(effect);
 		}
 		
-		setIsConfused(false);
+		setConfused(false);
 		getAI().notifyEvent(CtrlEvent.EVT_THINK, null);
 		updateAbnormalEffect();
 	}
@@ -3960,8 +3960,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			removeEffect(effect);
 		}
 		
-		setIsFakeDeath(false);
-		setIsFallsdown(false);
+		setFakeDeath(false);
+		setFalling(false);
 		// if this is a player instance, start the grace period for this character (grace from mobs only)!
 		if (this instanceof PlayerInstance)
 		{
@@ -3997,7 +3997,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			removeEffect(effect);
 		}
 		
-		setIsAfraid(false);
+		setAfraid(false);
 		updateAbnormalEffect();
 	}
 	
@@ -4024,7 +4024,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			removeEffect(effect);
 		}
 		
-		setIsMuted(false);
+		setMuted(false);
 		updateAbnormalEffect();
 	}
 	
@@ -4043,7 +4043,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			removeEffect(effect);
 		}
 		
-		setIsPsychicalMuted(false);
+		setPhysicalMuted(false);
 		updateAbnormalEffect();
 	}
 	
@@ -4070,7 +4070,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			removeEffect(effect);
 		}
 		
-		setIsRooted(false);
+		setRooted(false);
 		getAI().notifyEvent(CtrlEvent.EVT_THINK, null);
 		updateAbnormalEffect();
 	}
@@ -4098,7 +4098,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			removeEffect(effect);
 		}
 		
-		setIsSleeping(false);
+		setSleeping(false);
 		getAI().notifyEvent(CtrlEvent.EVT_THINK, null);
 		updateAbnormalEffect();
 	}
@@ -4131,7 +4131,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			removeEffect(effect);
 		}
 		
-		setIsStunned(false);
+		setStunned(false);
 		getAI().notifyEvent(CtrlEvent.EVT_THINK, null);
 		updateAbnormalEffect();
 	}
@@ -4329,7 +4329,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			ae |= ABNORMAL_EFFECT_AFRAID;
 		}
-		if (_isPsychicalMuted)
+		if (_isPhysicalMuted)
 		{
 			ae |= ABNORMAL_EFFECT_MUTED;
 		}
@@ -4756,9 +4756,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		if (_calculators == NPC_STD_CALCULATOR)
 		{
 			// Create a copy of the standard NPC Calculator set
-			_calculators = new Calculator[Stats.NUM_STATS];
+			_calculators = new Calculator[Stat.NUM_STATS];
 			
-			for (int i = 0; i < Stats.NUM_STATS; i++)
+			for (int i = 0; i < Stat.NUM_STATS; i++)
 			{
 				if (NPC_STD_CALCULATOR[i] != null)
 				{
@@ -4798,7 +4798,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public synchronized void addStatFuncs(Func[] funcs)
 	{
-		final List<Stats> modifiedStats = new ArrayList<>();
+		final List<Stat> modifiedStats = new ArrayList<>();
 		
 		for (Func f : funcs)
 		{
@@ -4855,7 +4855,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			int i = 0;
 			
-			for (; i < Stats.NUM_STATS; i++)
+			for (; i < Stat.NUM_STATS; i++)
 			{
 				if (!Calculator.equalsCals(_calculators[i], NPC_STD_CALCULATOR[i]))
 				{
@@ -4863,7 +4863,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				}
 			}
 			
-			if (i >= Stats.NUM_STATS)
+			if (i >= Stat.NUM_STATS)
 			{
 				_calculators = NPC_STD_CALCULATOR;
 			}
@@ -4888,7 +4888,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public synchronized void removeStatFuncs(Func[] funcs)
 	{
-		final List<Stats> modifiedStats = new ArrayList<>();
+		final List<Stat> modifiedStats = new ArrayList<>();
 		
 		for (Func f : funcs)
 		{
@@ -4924,7 +4924,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void removeStatsOwner(Object owner)
 	{
-		List<Stats> modifiedStats = null;
+		List<Stat> modifiedStats = null;
 		
 		int i = 0;
 		// Go through the Calculator set
@@ -4956,7 +4956,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			if (this instanceof NpcInstance)
 			{
 				i = 0;
-				for (; i < Stats.NUM_STATS; i++)
+				for (; i < Stat.NUM_STATS; i++)
 				{
 					if (!Calculator.equalsCals(_calculators[i], NPC_STD_CALCULATOR[i]))
 					{
@@ -4964,7 +4964,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					}
 				}
 				
-				if (i >= Stats.NUM_STATS)
+				if (i >= Stat.NUM_STATS)
 				{
 					_calculators = NPC_STD_CALCULATOR;
 				}
@@ -4981,7 +4981,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Broadcast modified stats.
 	 * @param stats the stats
 	 */
-	public void broadcastModifiedStats(List<Stats> stats)
+	public void broadcastModifiedStats(List<Stat> stats)
 	{
 		if ((stats == null) || stats.isEmpty())
 		{
@@ -4992,9 +4992,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		boolean otherStats = false;
 		StatusUpdate su = null;
 		
-		for (Stats stat : stats)
+		for (Stat stat : stats)
 		{
-			if (stat == Stats.POWER_ATTACK_SPEED)
+			if (stat == Stat.POWER_ATTACK_SPEED)
 			{
 				if (su == null)
 				{
@@ -5003,7 +5003,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				
 				su.addAttribute(StatusUpdate.ATK_SPD, getStat().getPAtkSpd());
 			}
-			else if (stat == Stats.MAGIC_ATTACK_SPEED)
+			else if (stat == Stat.MAGIC_ATTACK_SPEED)
 			{
 				if (su == null)
 				{
@@ -5012,7 +5012,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				
 				su.addAttribute(StatusUpdate.CAST_SPD, getStat().getMAtkSpd());
 			}
-			else if (stat == Stats.MAX_CP)
+			else if (stat == Stat.MAX_CP)
 			{
 				if (this instanceof PlayerInstance)
 				{
@@ -5024,7 +5024,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					su.addAttribute(StatusUpdate.MAX_CP, getStat().getMaxCp());
 				}
 			}
-			else if (stat == Stats.RUN_SPEED)
+			else if (stat == Stat.RUN_SPEED)
 			{
 				broadcastFull = true;
 			}
@@ -5162,38 +5162,38 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	
 	/**
 	 * Sets the client x.
-	 * @param val the new client x
+	 * @param value the new client x
 	 */
-	public void setClientX(int val)
+	public void setClientX(int value)
 	{
-		_clientX = val;
+		_clientX = value;
 	}
 	
 	/**
 	 * Sets the client y.
-	 * @param val the new client y
+	 * @param value the new client y
 	 */
-	public void setClientY(int val)
+	public void setClientY(int value)
 	{
-		_clientY = val;
+		_clientY = value;
 	}
 	
 	/**
 	 * Sets the client z.
-	 * @param val the new client z
+	 * @param value the new client z
 	 */
-	public void setClientZ(int val)
+	public void setClientZ(int value)
 	{
-		_clientZ = val;
+		_clientZ = value;
 	}
 	
 	/**
 	 * Sets the client heading.
-	 * @param val the new client heading
+	 * @param value the new client heading
 	 */
-	public void setClientHeading(int val)
+	public void setClientHeading(int value)
 	{
-		_clientHeading = val;
+		_clientHeading = value;
 	}
 	
 	/**
@@ -6674,7 +6674,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				if (!isBow) // Do not reflect or absorb if weapon is of type bow
 				{
 					// Absorb HP from the damage inflicted
-					final double absorbPercent = getStat().calcStat(Stats.ABSORB_DAMAGE_PERCENT, 0, null, null);
+					final double absorbPercent = getStat().calcStat(Stat.ABSORB_DAMAGE_PERCENT, 0, null, null);
 					
 					if (absorbPercent > 0)
 					{
@@ -6693,7 +6693,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					}
 					
 					// Reduce HP of the target and calculate reflection damage to reduce HP of attacker if necessary
-					final double reflectPercent = target.getStat().calcStat(Stats.REFLECT_DAMAGE_PERCENT, 0, null, null);
+					final double reflectPercent = target.getStat().calcStat(Stat.REFLECT_DAMAGE_PERCENT, 0, null, null);
 					
 					if (reflectPercent > 0)
 					{
@@ -7907,15 +7907,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			{
 				if (skill.isDance())
 				{
-					getStatus().reduceMp(calcStat(Stats.DANCE_MP_CONSUME_RATE, mpConsume, null, null));
+					getStatus().reduceMp(calcStat(Stat.DANCE_MP_CONSUME_RATE, mpConsume, null, null));
 				}
 				else if (skill.isMagic())
 				{
-					getStatus().reduceMp(calcStat(Stats.MAGICAL_MP_CONSUME_RATE, mpConsume, null, null));
+					getStatus().reduceMp(calcStat(Stat.MAGICAL_MP_CONSUME_RATE, mpConsume, null, null));
 				}
 				else
 				{
-					getStatus().reduceMp(calcStat(Stats.PHYSICAL_MP_CONSUME_RATE, mpConsume, null, null));
+					getStatus().reduceMp(calcStat(Stat.PHYSICAL_MP_CONSUME_RATE, mpConsume, null, null));
 				}
 				
 				su.addAttribute(StatusUpdate.CUR_MP, (int) getStatus().getCurrentMp());
@@ -7927,7 +7927,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			{
 				double consumeHp;
 				
-				consumeHp = calcStat(Stats.HP_CONSUME_RATE, skill.getHpConsume(), null, null);
+				consumeHp = calcStat(Stat.HP_CONSUME_RATE, skill.getHpConsume(), null, null);
 				
 				if ((consumeHp + 1) >= getStatus().getCurrentHp())
 				{
@@ -8998,7 +8998,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * @param skill the skill
 	 * @return the double
 	 */
-	public double calcStat(Stats stat, double init, Creature target, Skill skill)
+	public double calcStat(Stat stat, double init, Creature target, Skill skill)
 	{
 		return getStat().calcStat(stat, init, target, skill);
 	}
@@ -9727,7 +9727,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	/**
 	 * @return the _advanceFlag
 	 */
-	public boolean is_advanceFlag()
+	public boolean isAdvanceFlag()
 	{
 		return _advanceFlag;
 	}
@@ -9735,7 +9735,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	/**
 	 * @param advanceFlag
 	 */
-	public void set_advanceFlag(boolean advanceFlag)
+	public void setAdvanceFlag(boolean advanceFlag)
 	{
 		_advanceFlag = advanceFlag;
 	}
@@ -9743,7 +9743,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	/**
 	 * @param advanceMultiplier
 	 */
-	public void set_advanceMultiplier(int advanceMultiplier)
+	public void setAdvanceMultiplier(int advanceMultiplier)
 	{
 		_advanceMultiplier = advanceMultiplier;
 	}
@@ -9755,7 +9755,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public boolean reflectSkill(Skill skill)
 	{
-		return Rnd.get(100) < calcStat(skill.isMagic() ? Stats.REFLECT_SKILL_MAGIC : Stats.REFLECT_SKILL_PHYSIC, 0, null, null);
+		return Rnd.get(100) < calcStat(skill.isMagic() ? Stat.REFLECT_SKILL_MAGIC : Stat.REFLECT_SKILL_PHYSIC, 0, null, null);
 	}
 	
 	/**
@@ -9767,7 +9767,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		if (!skill.isMagic() && (skill.getCastRange() <= 40))
 		{
-			final double venganceChance = calcStat(Stats.VENGEANCE_SKILL_PHYSICAL_DAMAGE, 0, null, skill);
+			final double venganceChance = calcStat(Stat.VENGEANCE_SKILL_PHYSICAL_DAMAGE, 0, null, skill);
 			if (venganceChance > Rnd.get(100))
 			{
 				return true;
@@ -9918,15 +9918,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		if (petrified)
 		{
-			setIsParalyzed(petrified);
-			setIsInvul(petrified);
+			setParalyzed(petrified);
+			setInvul(petrified);
 			_petrified = petrified;
 		}
 		else
 		{
 			_petrified = petrified;
-			setIsParalyzed(petrified);
-			setIsInvul(petrified);
+			setParalyzed(petrified);
+			setInvul(petrified);
 		}
 	}
 	
@@ -10117,7 +10117,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Sets the checks if is buff protected.
 	 * @param value the new checks if is buff protected
 	 */
-	public void setIsBuffProtected(boolean value)
+	public void setBuffProtected(boolean value)
 	{
 		_isBuffProtected = value;
 	}
@@ -10135,7 +10135,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Gets the _triggered skills.
 	 * @return the _triggeredSkills
 	 */
-	public Map<Integer, Skill> get_triggeredSkills()
+	public Map<Integer, Skill> getTriggeredSkills()
 	{
 		return _triggeredSkills;
 	}
@@ -10178,7 +10178,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	/**
 	 * @param value the _isKillable to set
 	 */
-	public void setIsUnkillable(boolean value)
+	public void setUnkillable(boolean value)
 	{
 		_isUnkillable = value;
 	}
@@ -10194,7 +10194,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	/**
 	 * @param value the _isAttackDisabled to set
 	 */
-	public void setIsAttackDisabled(boolean value)
+	public void setAttackDisabled(boolean value)
 	{
 		_isAttackDisabled = value;
 	}

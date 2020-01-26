@@ -275,7 +275,7 @@ public class RecipeData implements IXmlReader
 		if ((recipeList == null) || (recipeList.getRecipes().length == 0))
 		{
 			player.sendMessage("No recipe for: " + id);
-			player.setIsCrafting(false);
+			player.setCrafting(false);
 			return null;
 		}
 		return recipeList;

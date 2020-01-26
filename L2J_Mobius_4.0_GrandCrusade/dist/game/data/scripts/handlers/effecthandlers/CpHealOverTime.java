@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * Cp Heal Over Time effect implementation.
@@ -56,7 +56,7 @@ public class CpHealOverTime extends AbstractEffect
 		double power = _power;
 		if ((item != null) && (item.isPotion() || item.isElixir()))
 		{
-			power += effected.getStat().getValue(Stats.ADDITIONAL_POTION_CP, 0) / getTicks();
+			power += effected.getStat().getValue(Stat.ADDITIONAL_POTION_CP, 0) / getTicks();
 		}
 		
 		cp += power * getTicksMultiplier();

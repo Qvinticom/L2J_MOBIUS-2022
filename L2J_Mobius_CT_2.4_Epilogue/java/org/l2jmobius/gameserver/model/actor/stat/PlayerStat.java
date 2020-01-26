@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelC
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.model.stats.MoveType;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
@@ -451,7 +451,7 @@ public class PlayerStat extends PlayableStat
 	public int getMaxCp()
 	{
 		// Get the Max CP (base+modifier) of the PlayerInstance
-		final int val = (getActiveChar() == null) ? 1 : (int) calcStat(Stats.MAX_CP, getActiveChar().getTemplate().getBaseCpMax(getActiveChar().getLevel()));
+		final int val = (getActiveChar() == null) ? 1 : (int) calcStat(Stat.MAX_CP, getActiveChar().getTemplate().getBaseCpMax(getActiveChar().getLevel()));
 		if (val != _oldMaxCp)
 		{
 			_oldMaxCp = val;
@@ -469,7 +469,7 @@ public class PlayerStat extends PlayableStat
 	public int getMaxHp()
 	{
 		// Get the Max HP (base+modifier) of the PlayerInstance
-		final int val = (getActiveChar() == null) ? 1 : (int) calcStat(Stats.MAX_HP, getActiveChar().getTemplate().getBaseHpMax(getActiveChar().getLevel()));
+		final int val = (getActiveChar() == null) ? 1 : (int) calcStat(Stat.MAX_HP, getActiveChar().getTemplate().getBaseHpMax(getActiveChar().getLevel()));
 		if (val != _oldMaxHp)
 		{
 			_oldMaxHp = val;
@@ -488,7 +488,7 @@ public class PlayerStat extends PlayableStat
 	public int getMaxMp()
 	{
 		// Get the Max MP (base+modifier) of the PlayerInstance
-		final int val = (getActiveChar() == null) ? 1 : (int) calcStat(Stats.MAX_MP, getActiveChar().getTemplate().getBaseMpMax(getActiveChar().getLevel()));
+		final int val = (getActiveChar() == null) ? 1 : (int) calcStat(Stat.MAX_MP, getActiveChar().getTemplate().getBaseMpMax(getActiveChar().getLevel()));
 		
 		if (val != _oldMaxMp)
 		{
@@ -718,7 +718,7 @@ public class PlayerStat extends PlayableStat
 			
 			if (points < 0) // vitality consumed
 			{
-				final int stat = (int) calcStat(Stats.VITALITY_CONSUME_RATE, 1, getActiveChar(), null);
+				final int stat = (int) calcStat(Stat.VITALITY_CONSUME_RATE, 1, getActiveChar(), null);
 				
 				if (stat == 0)
 				{
@@ -813,7 +813,7 @@ public class PlayerStat extends PlayableStat
 		vitality = getVitalityMultiplier();
 		
 		// Bonus exp from skills
-		bonusExp = 1 + (calcStat(Stats.BONUS_EXP, 0, null, null) / 100);
+		bonusExp = 1 + (calcStat(Stat.BONUS_EXP, 0, null, null) / 100);
 		
 		if (vitality > 1.0)
 		{
@@ -849,7 +849,7 @@ public class PlayerStat extends PlayableStat
 		vitality = getVitalityMultiplier();
 		
 		// Bonus sp from skills
-		bonusSp = 1 + (calcStat(Stats.BONUS_SP, 0, null, null) / 100);
+		bonusSp = 1 + (calcStat(Stat.BONUS_SP, 0, null, null) / 100);
 		
 		if (vitality > 1.0)
 		{

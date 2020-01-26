@@ -43,7 +43,7 @@ public class ImmobilePetBuff extends AbstractEffect
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		info.getEffected().setIsImmobilized(false);
+		info.getEffected().setImmobilized(false);
 	}
 	
 	@Override
@@ -51,7 +51,7 @@ public class ImmobilePetBuff extends AbstractEffect
 	{
 		if (info.getEffected().isSummon() && info.getEffector().isPlayer() && (((Summon) info.getEffected()).getOwner() == info.getEffector()))
 		{
-			info.getEffected().setIsImmobilized(true);
+			info.getEffected().setImmobilized(true);
 		}
 	}
 }

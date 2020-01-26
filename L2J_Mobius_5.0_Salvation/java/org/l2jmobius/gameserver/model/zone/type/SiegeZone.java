@@ -90,9 +90,9 @@ public class SiegeZone extends ZoneType
 			return _isActiveSiege;
 		}
 		
-		public void setActiveSiege(boolean val)
+		public void setActiveSiege(boolean value)
 		{
-			_isActiveSiege = val;
+			_isActiveSiege = value;
 		}
 		
 		@Override
@@ -149,7 +149,7 @@ public class SiegeZone extends ZoneType
 				final PlayerInstance plyer = creature.getActingPlayer();
 				if (plyer.isRegisteredOnThisSiegeField(getSettings().getSiegeableId()))
 				{
-					plyer.setIsInSiege(true); // in siege
+					plyer.setInSiege(true); // in siege
 					if (getSettings().getSiege().giveFame() && (getSettings().getSiege().getFameFrequency() > 0))
 					{
 						plyer.startFameTask(getSettings().getSiege().getFameFrequency() * 1000, getSettings().getSiege().getFameAmount());
@@ -200,7 +200,7 @@ public class SiegeZone extends ZoneType
 		{
 			final PlayerInstance player = creature.getActingPlayer();
 			player.stopFameTask();
-			player.setIsInSiege(false);
+			player.setInSiege(false);
 			
 			if ((getSettings().getSiege() instanceof FortSiege) && (player.getInventory().getItemByItemId(9819) != null))
 			{
@@ -329,9 +329,9 @@ public class SiegeZone extends ZoneType
 		return getSettings().isActiveSiege();
 	}
 	
-	public void setIsActive(boolean val)
+	public void setActive(boolean value)
 	{
-		getSettings().setActiveSiege(val);
+		getSettings().setActiveSiege(value);
 	}
 	
 	public void setSiegeInstance(Siegable siege)

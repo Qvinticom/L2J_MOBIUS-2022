@@ -202,7 +202,7 @@ public class Fort
 		
 		updateOwnerInDB(clan); // Update in database
 		
-		if (getSiege().getIsInProgress())
+		if (getSiege().isInProgress())
 		{
 			getSiege().midVictory(); // Mid victory phase of siege
 		}
@@ -225,7 +225,7 @@ public class Fort
 		
 		updateOwnerInDB(null);
 		
-		if (getSiege().getIsInProgress())
+		if (getSiege().isInProgress())
 		{
 			getSiege().midVictory();
 		}

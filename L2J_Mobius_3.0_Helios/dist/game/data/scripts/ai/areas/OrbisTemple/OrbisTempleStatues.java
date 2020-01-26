@@ -65,7 +65,7 @@ public class OrbisTempleStatues extends AbstractNpcAI
 			{
 				if (npc.isImmobilized())
 				{
-					npc.setIsImmobilized(false);
+					npc.setImmobilized(false);
 					npc.setRHandId(SWORD);
 				}
 				break;
@@ -76,7 +76,7 @@ public class OrbisTempleStatues extends AbstractNpcAI
 			{
 				if (npc.isImmobilized())
 				{
-					npc.setIsImmobilized(false);
+					npc.setImmobilized(false);
 					npc.setRHandId(SPEAR);
 				}
 				break;
@@ -91,7 +91,7 @@ public class OrbisTempleStatues extends AbstractNpcAI
 		npc.setRandomWalking(false);
 		if (npc.getId() < ANCIENT_HERO)
 		{
-			npc.setIsImmobilized(true);
+			npc.setImmobilized(true);
 		}
 		return super.onSpawn(npc);
 	}

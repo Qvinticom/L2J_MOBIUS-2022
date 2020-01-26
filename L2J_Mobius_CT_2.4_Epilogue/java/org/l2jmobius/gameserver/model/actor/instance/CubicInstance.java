@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.model.entity.TvTEventTeam;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -546,7 +546,7 @@ public class CubicInstance implements IIdentifiable
 				}
 				
 				// Shield Deflect Magic: If target is reflecting the skill then no damage is done.
-				if (target.getStat().calcStat(Stats.VENGEANCE_SKILL_MAGIC_DAMAGE, 0, target, skill) > Rnd.get(100))
+				if (target.getStat().calcStat(Stat.VENGEANCE_SKILL_MAGIC_DAMAGE, 0, target, skill) > Rnd.get(100))
 				{
 					damage = 0;
 				}

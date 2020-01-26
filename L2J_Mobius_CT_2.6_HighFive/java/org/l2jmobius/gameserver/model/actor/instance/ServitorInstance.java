@@ -180,9 +180,9 @@ public class ServitorInstance extends Summon implements Runnable
 	}
 	
 	@Override
-	public void setRestoreSummon(boolean val)
+	public void setRestoreSummon(boolean value)
 	{
-		_restoreSummon = val;
+		_restoreSummon = value;
 	}
 	
 	@Override

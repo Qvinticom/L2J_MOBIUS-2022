@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
 
 /**
@@ -42,33 +42,33 @@ public class EnlargeSlot extends AbstractEffect
 	@Override
 	public void pump(Creature effected, Skill skill)
 	{
-		Stats stat = Stats.INVENTORY_NORMAL;
+		Stat stat = Stat.INVENTORY_NORMAL;
 		
 		switch (_type)
 		{
 			case TRADE_BUY:
 			{
-				stat = Stats.TRADE_BUY;
+				stat = Stat.TRADE_BUY;
 				break;
 			}
 			case TRADE_SELL:
 			{
-				stat = Stats.TRADE_SELL;
+				stat = Stat.TRADE_SELL;
 				break;
 			}
 			case RECIPE_DWARVEN:
 			{
-				stat = Stats.RECIPE_DWARVEN;
+				stat = Stat.RECIPE_DWARVEN;
 				break;
 			}
 			case RECIPE_COMMON:
 			{
-				stat = Stats.RECIPE_COMMON;
+				stat = Stat.RECIPE_COMMON;
 				break;
 			}
 			case STORAGE_PRIVATE:
 			{
-				stat = Stats.STORAGE_PRIVATE;
+				stat = Stat.STORAGE_PRIVATE;
 				break;
 			}
 		}

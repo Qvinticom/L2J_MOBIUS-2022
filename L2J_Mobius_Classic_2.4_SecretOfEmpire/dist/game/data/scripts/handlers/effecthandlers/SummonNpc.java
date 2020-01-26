@@ -142,7 +142,7 @@ public class SummonNpc extends AbstractEffect
 				final EffectPointInstance effectPoint = new EffectPointInstance(npcTemplate, player);
 				effectPoint.setCurrentHp(effectPoint.getMaxHp());
 				effectPoint.setCurrentMp(effectPoint.getMaxMp());
-				effectPoint.setIsInvul(true);
+				effectPoint.setInvul(true);
 				effectPoint.setSummoner(player);
 				effectPoint.setTitle(player.getName());
 				effectPoint.spawnMe(x, y, z);

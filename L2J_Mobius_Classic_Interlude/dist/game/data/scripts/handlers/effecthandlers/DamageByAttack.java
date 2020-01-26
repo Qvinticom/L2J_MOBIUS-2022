@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * An effect that changes damage taken from an attack.<br>
@@ -55,12 +55,12 @@ public class DamageByAttack extends AbstractEffect
 		{
 			case PK:
 			{
-				target.getStat().mergeAdd(Stats.PVP_DAMAGE_TAKEN, _value);
+				target.getStat().mergeAdd(Stat.PVP_DAMAGE_TAKEN, _value);
 				break;
 			}
 			case ENEMY_ALL:
 			{
-				target.getStat().mergeAdd(Stats.PVE_DAMAGE_TAKEN, _value);
+				target.getStat().mergeAdd(Stat.PVE_DAMAGE_TAKEN, _value);
 				break;
 			}
 		}

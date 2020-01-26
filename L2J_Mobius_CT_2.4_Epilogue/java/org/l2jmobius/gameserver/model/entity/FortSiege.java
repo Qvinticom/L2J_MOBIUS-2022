@@ -264,7 +264,7 @@ public class FortSiege implements Siegable
 		
 		final int ownerId = _fort.getOwnerClan() != null ? _fort.getOwnerClan().getId() : -1;
 		_fort.getZone().banishForeigners(ownerId);
-		_fort.getZone().setIsActive(false);
+		_fort.getZone().setActive(false);
 		_fort.getZone().updateZoneStatusForCharactersInside();
 		_fort.getZone().setSiegeInstance(null);
 		
@@ -336,7 +336,7 @@ public class FortSiege implements Siegable
 		spawnSiegeGuard(); // Spawn siege guard
 		_fort.setVisibleFlag(false);
 		_fort.getZone().setSiegeInstance(this);
-		_fort.getZone().setIsActive(true);
+		_fort.getZone().setActive(true);
 		_fort.getZone().updateZoneStatusForCharactersInside();
 		
 		// Schedule a task to prepare auto siege end
@@ -401,7 +401,7 @@ public class FortSiege implements Siegable
 				{
 					member.setSiegeState((byte) 0);
 					member.setSiegeSide(0);
-					member.setIsInSiege(false);
+					member.setInSiege(false);
 					member.stopFameTask();
 				}
 				else
@@ -410,7 +410,7 @@ public class FortSiege implements Siegable
 					member.setSiegeSide(_fort.getResidenceId());
 					if (checkIfInZone(member))
 					{
-						member.setIsInSiege(true);
+						member.setInSiege(true);
 						member.startFameTask(Config.FORTRESS_ZONE_FAME_TASK_FREQUENCY * 1000, Config.FORTRESS_ZONE_FAME_AQUIRE_POINTS);
 					}
 				}
@@ -433,7 +433,7 @@ public class FortSiege implements Siegable
 			{
 				member.setSiegeState((byte) 0);
 				member.setSiegeSide(0);
-				member.setIsInSiege(false);
+				member.setInSiege(false);
 				member.stopFameTask();
 			}
 			else
@@ -442,7 +442,7 @@ public class FortSiege implements Siegable
 				member.setSiegeSide(_fort.getResidenceId());
 				if (checkIfInZone(member))
 				{
-					member.setIsInSiege(true);
+					member.setInSiege(true);
 					member.startFameTask(Config.FORTRESS_ZONE_FAME_TASK_FREQUENCY * 1000, Config.FORTRESS_ZONE_FAME_AQUIRE_POINTS);
 				}
 			}
@@ -651,7 +651,7 @@ public class FortSiege implements Siegable
 				// open doors in main building
 				for (DoorInstance door : _fort.getDoors())
 				{
-					if (door.getIsShowHp())
+					if (door.isShowHp())
 					{
 						continue;
 					}
@@ -721,7 +721,7 @@ public class FortSiege implements Siegable
 				return 1; // Player dont havee enough adena to register
 			}
 			
-			else if ((System.currentTimeMillis() < TerritoryWarManager.getInstance().getTWStartTimeInMillis()) && TerritoryWarManager.getInstance().getIsRegistrationOver())
+			else if ((System.currentTimeMillis() < TerritoryWarManager.getInstance().getTWStartTimeInMillis()) && TerritoryWarManager.getInstance().isRegistrationOver())
 			{
 				return 2; // Is not right time to register Fortress now
 			}

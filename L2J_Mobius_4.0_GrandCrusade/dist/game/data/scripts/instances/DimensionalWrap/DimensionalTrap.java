@@ -108,7 +108,7 @@ public class DimensionalTrap extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		npc.setIsInvul(true);
+		npc.setInvul(true);
 		switch (npc.getId())
 		{
 			case DIMENSIONAL_DEBUFF_TRAP_1:

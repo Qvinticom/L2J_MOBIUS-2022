@@ -474,7 +474,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 				break;
 			
 			case HONEY_BEAR:
-				if ((st.getInt("cond") == 5) && (npc.getIsSpoiledBy() == player.getObjectId()) && st.dropItemsAlways(HONEY_JAR, 1, 5))
+				if ((st.getInt("cond") == 5) && (npc.getSpoiledBy() == player.getObjectId()) && st.dropItemsAlways(HONEY_JAR, 1, 5))
 				{
 					st.set("cond", "6");
 				}
@@ -482,7 +482,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 			
 			case HUNTER_TARANTULA:
 			case PLUNDER_TARANTULA:
-				if ((st.getInt("cond") == 7) && (npc.getIsSpoiledBy() == player.getObjectId()) && st.dropItems(BEAD, 1, 20, (npc.getNpcId() == HUNTER_TARANTULA) ? 333333 : 600000))
+				if ((st.getInt("cond") == 7) && (npc.getSpoiledBy() == player.getObjectId()) && st.dropItems(BEAD, 1, 20, (npc.getNpcId() == HUNTER_TARANTULA) ? 333333 : 600000))
 				{
 					st.set("cond", "8");
 				}

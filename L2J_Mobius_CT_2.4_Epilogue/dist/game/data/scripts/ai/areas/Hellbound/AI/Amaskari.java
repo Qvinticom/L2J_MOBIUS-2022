@@ -78,7 +78,7 @@ public class Amaskari extends AbstractNpcAI
 			npc.broadcastSay(ChatType.NPC_GENERAL, AMASKARI_NPCSTRING_ID[2]);
 			((MonsterInstance) npc).clearAggroList();
 			((MonsterInstance) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-			npc.setIsInvul(false);
+			npc.setInvul(false);
 			// npc.doCast(INVINCIBILITY.getSkill())
 		}
 		else if (event.equalsIgnoreCase("onspawn_msg") && (npc != null) && !npc.isDead())
@@ -144,7 +144,7 @@ public class Amaskari extends AbstractNpcAI
 					{
 						master.broadcastSay(ChatType.NPC_GENERAL, AMASKARI_NPCSTRING_ID[3]);
 						// master.doCast(INVINCIBILITY.getSkill())
-						master.setIsInvul(true);
+						master.setInvul(true);
 						startQuestTimer("stop_toggle", 10000, master, null);
 					}
 				}

@@ -90,7 +90,7 @@ public class SiegeInfo implements IClientOutgoingPacket
 			}
 			
 			packet.writeD((int) (System.currentTimeMillis() / 1000));
-			if (!_castle.getIsTimeRegistrationOver() && _player.isClanLeader() && (_player.getClanId() == _castle.getOwnerId()))
+			if (!_castle.isTimeRegistrationOver() && _player.isClanLeader() && (_player.getClanId() == _castle.getOwnerId()))
 			{
 				final Calendar cal = Calendar.getInstance();
 				cal.setTimeInMillis(_castle.getSiegeDate().getTimeInMillis());

@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class SkillCriticalDamage extends AbstractStatEffect
 {
 	public SkillCriticalDamage(StatsSet params)
 	{
-		super(params, Stats.CRITICAL_DAMAGE_SKILL, Stats.CRITICAL_DAMAGE_SKILL_ADD);
+		super(params, Stat.CRITICAL_DAMAGE_SKILL, Stat.CRITICAL_DAMAGE_SKILL_ADD);
 	}
 }

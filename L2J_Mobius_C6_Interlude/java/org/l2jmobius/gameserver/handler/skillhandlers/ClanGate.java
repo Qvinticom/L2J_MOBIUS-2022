@@ -68,7 +68,7 @@ public class ClanGate implements ISkillHandler
 				ThreadPool.schedule(new RemoveClanGate(castle.getCastleId(), player), skill.getTotalLifeTime());
 				castle.createClanGate(player.getX(), player.getY(), player.getZ() + 20);
 				player.getClan().broadcastToOnlineMembers(new SystemMessage(SystemMessageId.COURT_MAGICIAN_CREATED_PORTAL));
-				player.setIsParalyzed(true);
+				player.setParalyzed(true);
 			}
 		}
 		
@@ -96,7 +96,7 @@ public class ClanGate implements ISkillHandler
 		{
 			if (player != null)
 			{
-				player.setIsParalyzed(false);
+				player.setParalyzed(false);
 			}
 			CastleManager.getInstance().getCastleById(castle).destroyClanGate();
 		}

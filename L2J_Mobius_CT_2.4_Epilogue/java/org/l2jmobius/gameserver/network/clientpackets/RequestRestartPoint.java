@@ -272,7 +272,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 		if (loc != null)
 		{
 			player.setInstanceId(instanceId);
-			player.setIsIn7sDungeon(false);
+			player.setIn7sDungeon(false);
 			player.setIsPendingRevive(true);
 			player.teleToLocation(loc, true);
 		}

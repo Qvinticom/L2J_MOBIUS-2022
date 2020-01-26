@@ -626,7 +626,7 @@ public class TradeList
 		}
 		
 		final PlayerInstance player = (PlayerInstance) World.getInstance().findObject(_owner.getObjectId());
-		if ((player == null) || (player.get_instanceLoginTime() != _owner.get_instanceLoginTime()))
+		if ((player == null) || (player.getInstanceLoginTime() != _owner.getInstanceLoginTime()))
 		{
 			LOGGER.warning("Invalid owner of TradeList");
 			return false;

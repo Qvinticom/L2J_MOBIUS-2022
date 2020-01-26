@@ -117,7 +117,7 @@ import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -1921,7 +1921,7 @@ public abstract class AbstractScript extends ManagedScript
 		final TrapInstance trap = new TrapInstance(npcTemplate, instanceId, -1);
 		trap.setCurrentHp(trap.getMaxHp());
 		trap.setCurrentMp(trap.getMaxMp());
-		trap.setIsInvul(true);
+		trap.setInvul(true);
 		trap.setHeading(heading);
 		trap.spawnMe(x, y, z);
 		return trap;
@@ -2586,7 +2586,7 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	public static void addExpAndSp(PlayerInstance player, long exp, int sp)
 	{
-		player.addExpAndSp((long) player.calcStat(Stats.EXPSP_RATE, exp * Config.RATE_QUEST_REWARD_XP, null, null), (int) player.calcStat(Stats.EXPSP_RATE, sp * Config.RATE_QUEST_REWARD_SP, null, null));
+		player.addExpAndSp((long) player.calcStat(Stat.EXPSP_RATE, exp * Config.RATE_QUEST_REWARD_XP, null, null), (int) player.calcStat(Stat.EXPSP_RATE, sp * Config.RATE_QUEST_REWARD_SP, null, null));
 	}
 	
 	/**

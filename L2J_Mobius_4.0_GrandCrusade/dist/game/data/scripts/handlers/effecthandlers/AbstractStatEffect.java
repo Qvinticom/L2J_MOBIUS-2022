@@ -29,25 +29,25 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
  */
 public abstract class AbstractStatEffect extends AbstractEffect
 {
-	protected final Stats _addStat;
-	protected final Stats _mulStat;
+	protected final Stat _addStat;
+	protected final Stat _mulStat;
 	protected final double _amount;
 	protected final StatModifierType _mode;
 	protected final List<Condition> _conditions = new ArrayList<>();
 	
-	public AbstractStatEffect(StatsSet params, Stats stat)
+	public AbstractStatEffect(StatsSet params, Stat stat)
 	{
 		this(params, stat, stat);
 	}
 	
-	public AbstractStatEffect(StatsSet params, Stats mulStat, Stats addStat)
+	public AbstractStatEffect(StatsSet params, Stat mulStat, Stat addStat)
 	{
 		_addStat = addStat;
 		_mulStat = mulStat;

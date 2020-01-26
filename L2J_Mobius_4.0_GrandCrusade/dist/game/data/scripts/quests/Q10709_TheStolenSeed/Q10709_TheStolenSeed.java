@@ -82,8 +82,8 @@ public class Q10709_TheStolenSeed extends Quest
 				akum.reduceCurrentHp(1, embryo, null);
 				embryo.reduceCurrentHp(1, akum, null); // TODO: Find better way for attack
 				
-				embryo.setIsInvul(true);
-				akum.setIsInvul(true);
+				embryo.setInvul(true);
+				akum.setInvul(true);
 				
 				startQuestTimer("EMBRYO_DELAY", 3000, embryo, player);
 			}

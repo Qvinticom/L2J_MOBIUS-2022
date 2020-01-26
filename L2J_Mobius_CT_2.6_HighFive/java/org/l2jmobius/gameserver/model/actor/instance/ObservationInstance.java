@@ -38,30 +38,30 @@ public class ObservationInstance extends Npc
 	}
 	
 	@Override
-	public void showChatWindow(PlayerInstance player, int val)
+	public void showChatWindow(PlayerInstance player, int value)
 	{
 		String filename = null;
 		
 		if (isInsideRadius2D(-79884, 86529, 0, 50) || isInsideRadius2D(-78858, 111358, 0, 50) || isInsideRadius2D(-76973, 87136, 0, 50) || isInsideRadius2D(-75850, 111968, 0, 50))
 		{
-			if (val == 0)
+			if (value == 0)
 			{
 				filename = "data/html/observation/" + getId() + "-Oracle.htm";
 			}
 			else
 			{
-				filename = "data/html/observation/" + getId() + "-Oracle-" + val + ".htm";
+				filename = "data/html/observation/" + getId() + "-Oracle-" + value + ".htm";
 			}
 		}
 		else
 		{
-			if (val == 0)
+			if (value == 0)
 			{
 				filename = "data/html/observation/" + getId() + ".htm";
 			}
 			else
 			{
-				filename = "data/html/observation/" + getId() + "-" + val + ".htm";
+				filename = "data/html/observation/" + getId() + "-" + value + ".htm";
 			}
 		}
 		

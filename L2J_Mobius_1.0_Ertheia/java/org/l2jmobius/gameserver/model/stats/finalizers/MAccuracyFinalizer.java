@@ -20,16 +20,16 @@ import java.util.OptionalDouble;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.stats.IStatsFunction;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.IStatFunction;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author UnAfraid
  */
-public class MAccuracyFinalizer implements IStatsFunction
+public class MAccuracyFinalizer implements IStatFunction
 {
 	@Override
-	public double calc(Creature creature, OptionalDouble base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stat stat)
 	{
 		throwIfPresent(base);
 		
@@ -41,7 +41,7 @@ public class MAccuracyFinalizer implements IStatsFunction
 			baseValue += calcEnchantBodyPart(creature, Item.SLOT_GLOVES);
 		}
 		
-		return Stats.defaultValue(creature, stat, baseValue + (Math.sqrt(creature.getWIT()) * 3) + (creature.getLevel() * 2));
+		return Stat.defaultValue(creature, stat, baseValue + (Math.sqrt(creature.getWIT()) * 3) + (creature.getLevel() * 2));
 	}
 	
 	@Override

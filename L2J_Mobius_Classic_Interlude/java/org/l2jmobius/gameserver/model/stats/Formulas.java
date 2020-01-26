@@ -94,11 +94,11 @@ public class Formulas
 		}
 		
 		// Critical
-		final double criticalMod = attacker.getStat().getValue(Stats.CRITICAL_DAMAGE, 1);
-		final double criticalPositionMod = attacker.getStat().getPositionTypeValue(Stats.CRITICAL_DAMAGE, Position.getPosition(attacker, target));
-		final double criticalVulnMod = target.getStat().getValue(Stats.DEFENCE_CRITICAL_DAMAGE, 1);
-		final double criticalAddMod = attacker.getStat().getValue(Stats.CRITICAL_DAMAGE_ADD, 0);
-		final double criticalAddVuln = target.getStat().getValue(Stats.DEFENCE_CRITICAL_DAMAGE_ADD, 0);
+		final double criticalMod = attacker.getStat().getValue(Stat.CRITICAL_DAMAGE, 1);
+		final double criticalPositionMod = attacker.getStat().getPositionTypeValue(Stat.CRITICAL_DAMAGE, Position.getPosition(attacker, target));
+		final double criticalVulnMod = target.getStat().getValue(Stat.DEFENCE_CRITICAL_DAMAGE, 1);
+		final double criticalAddMod = attacker.getStat().getValue(Stat.CRITICAL_DAMAGE_ADD, 0);
+		final double criticalAddVuln = target.getStat().getValue(Stat.DEFENCE_CRITICAL_DAMAGE_ADD, 0);
 		// Trait, elements
 		final double weaponTraitMod = calcWeaponTraitBonus(attacker, target);
 		final double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
@@ -108,7 +108,7 @@ public class Formulas
 		final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill, true);
 		
 		// Initial damage
-		final double ssmod = ss ? (2 * attacker.getStat().getValue(Stats.SHOTS_BONUS)) : 1; // 2.04 for dual weapon?
+		final double ssmod = ss ? (2 * attacker.getStat().getValue(Stat.SHOTS_BONUS)) : 1; // 2.04 for dual weapon?
 		final double cdMult = criticalMod * (((criticalPositionMod - 1) / 2) + 1) * (((criticalVulnMod - 1) / 2) + 1);
 		final double cdPatk = criticalAddMod + criticalAddVuln;
 		final Position position = Position.getPosition(attacker, target);
@@ -142,7 +142,7 @@ public class Formulas
 	public static double calcMagicDam(Creature attacker, Creature target, Skill skill, double mAtk, double power, double mDef, boolean sps, boolean bss, boolean mcrit)
 	{
 		// Bonus Spirit shot
-		final double shotsBonus = bss ? (4 * attacker.getStat().getValue(Stats.SHOTS_BONUS)) : sps ? (2 * attacker.getStat().getValue(Stats.SHOTS_BONUS)) : 1;
+		final double shotsBonus = bss ? (4 * attacker.getStat().getValue(Stat.SHOTS_BONUS)) : sps ? (2 * attacker.getStat().getValue(Stat.SHOTS_BONUS)) : 1;
 		final double critMod = mcrit ? calcCritDamage(attacker, target, skill) : 1; // TODO not really a proper way... find how it works then implement. // damage += attacker.getStat().getValue(Stats.MAGIC_CRIT_DMG_ADD, 0);
 		
 		// Trait, elements
@@ -153,7 +153,7 @@ public class Formulas
 		final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill, mcrit);
 		
 		// MDAM Formula.
-		double damage = ((77 * (power + attacker.getStat().getValue(Stats.SKILL_POWER_ADD, 0)) * Math.sqrt(mAtk)) / mDef) * shotsBonus;
+		double damage = ((77 * (power + attacker.getStat().getValue(Stat.SKILL_POWER_ADD, 0)) * Math.sqrt(mAtk)) / mDef) * shotsBonus;
 		
 		// Failure calculation
 		if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(attacker, target, skill))
@@ -191,7 +191,7 @@ public class Formulas
 		}
 		
 		damage = damage * critMod * generalTraitMod * weaknessMod * attributeMod * randomMod * pvpPveMod;
-		damage *= attacker.getStat().getValue(Stats.MAGICAL_SKILL_POWER, 1);
+		damage *= attacker.getStat().getValue(Stat.MAGICAL_SKILL_POWER, 1);
 		
 		return damage;
 	}
@@ -217,13 +217,13 @@ public class Formulas
 			// Magic Critical Rate.
 			if (skill.isMagic())
 			{
-				rate = creature.getStat().getValue(Stats.MAGIC_CRITICAL_RATE);
+				rate = creature.getStat().getValue(Stat.MAGIC_CRITICAL_RATE);
 				if ((target == null) || !skill.isBad())
 				{
 					return Math.min(rate, 32) > Rnd.get(100);
 				}
 				
-				double finalRate = target.getStat().getValue(Stats.DEFENCE_MAGIC_CRITICAL_RATE, rate) + target.getStat().getValue(Stats.DEFENCE_MAGIC_CRITICAL_RATE_ADD, 0);
+				double finalRate = target.getStat().getValue(Stat.DEFENCE_MAGIC_CRITICAL_RATE, rate) + target.getStat().getValue(Stat.DEFENCE_MAGIC_CRITICAL_RATE_ADD, 0);
 				if ((creature.getLevel() >= 78) && (target.getLevel() >= 78))
 				{
 					finalRate += Math.sqrt(creature.getLevel()) + ((creature.getLevel() - target.getLevel()) / 25);
@@ -243,19 +243,19 @@ public class Formulas
 			final double statBonus;
 			
 			// There is a chance that activeChar has altered base stat for skill critical.
-			final byte skillCritRateStat = (byte) creature.getStat().getValue(Stats.STAT_BONUS_SKILL_CRITICAL);
-			if ((skillCritRateStat >= 0) && (skillCritRateStat < BaseStats.values().length))
+			final byte skillCritRateStat = (byte) creature.getStat().getValue(Stat.STAT_BONUS_SKILL_CRITICAL);
+			if ((skillCritRateStat >= 0) && (skillCritRateStat < BaseStat.values().length))
 			{
 				// Best tested.
-				statBonus = BaseStats.values()[skillCritRateStat].calcBonus(creature);
+				statBonus = BaseStat.values()[skillCritRateStat].calcBonus(creature);
 			}
 			else
 			{
 				// Default base stat used for skill critical formula is STR.
-				statBonus = BaseStats.STR.calcBonus(creature);
+				statBonus = BaseStat.STR.calcBonus(creature);
 			}
 			
-			final double rateBonus = creature.getStat().getValue(Stats.CRITICAL_RATE_SKILL, 1);
+			final double rateBonus = creature.getStat().getValue(Stat.CRITICAL_RATE_SKILL, 1);
 			
 			double balanceMod = 1;
 			if (creature.isPlayable())
@@ -269,7 +269,7 @@ public class Formulas
 		// Autoattack critical rate.
 		// Even though, visible critical rate is capped to 500, you can reach higher than 50% chance with position and level modifiers.
 		// TODO: Find retail-like calculation for criticalRateMod.
-		final double criticalRateMod = (target.getStat().getValue(Stats.DEFENCE_CRITICAL_RATE, rate) + target.getStat().getValue(Stats.DEFENCE_CRITICAL_RATE_ADD, 0)) / 10;
+		final double criticalRateMod = (target.getStat().getValue(Stat.DEFENCE_CRITICAL_RATE, rate) + target.getStat().getValue(Stat.DEFENCE_CRITICAL_RATE_ADD, 0)) / 10;
 		final double criticalLocBonus = calcCriticalPositionBonus(creature, target);
 		final double criticalHeightBonus = calcCriticalHeightBonus(creature, target);
 		rate = criticalLocBonus * criticalRateMod * criticalHeightBonus;
@@ -305,15 +305,15 @@ public class Formulas
 		{
 			case SIDE: // 10% Critical Chance bonus when attacking from side.
 			{
-				return 1.1 * creature.getStat().getPositionTypeValue(Stats.CRITICAL_RATE, Position.SIDE);
+				return 1.1 * creature.getStat().getPositionTypeValue(Stat.CRITICAL_RATE, Position.SIDE);
 			}
 			case BACK: // 30% Critical Chance bonus when attacking from back.
 			{
-				return 1.3 * creature.getStat().getPositionTypeValue(Stats.CRITICAL_RATE, Position.BACK);
+				return 1.3 * creature.getStat().getPositionTypeValue(Stat.CRITICAL_RATE, Position.BACK);
 			}
 			default: // No Critical Chance bonus when attacking from front.
 			{
-				return creature.getStat().getPositionTypeValue(Stats.CRITICAL_RATE, Position.FRONT);
+				return creature.getStat().getPositionTypeValue(Stat.CRITICAL_RATE, Position.FRONT);
 			}
 		}
 	}
@@ -340,8 +340,8 @@ public class Formulas
 			if (skill.isMagic())
 			{
 				// Magic critical damage.
-				criticalDamage = attacker.getStat().getValue(Stats.MAGIC_CRITICAL_DAMAGE, 1);
-				defenceCriticalDamage = target.getStat().getValue(Stats.DEFENCE_MAGIC_CRITICAL_DAMAGE, 1);
+				criticalDamage = attacker.getStat().getValue(Stat.MAGIC_CRITICAL_DAMAGE, 1);
+				defenceCriticalDamage = target.getStat().getValue(Stat.DEFENCE_MAGIC_CRITICAL_DAMAGE, 1);
 				if (attacker.isPlayable())
 				{
 					balanceMod = target.isPlayable() ? Config.PVP_MAGICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f) : Config.PVE_MAGICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f);
@@ -349,8 +349,8 @@ public class Formulas
 			}
 			else
 			{
-				criticalDamage = attacker.getStat().getValue(Stats.CRITICAL_DAMAGE_SKILL, 1);
-				defenceCriticalDamage = target.getStat().getValue(Stats.DEFENCE_CRITICAL_DAMAGE_SKILL, 1);
+				criticalDamage = attacker.getStat().getValue(Stat.CRITICAL_DAMAGE_SKILL, 1);
+				defenceCriticalDamage = target.getStat().getValue(Stat.DEFENCE_CRITICAL_DAMAGE_SKILL, 1);
 				if (attacker.isPlayable())
 				{
 					balanceMod = target.isPlayable() ? Config.PVP_PHYSICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f) : Config.PVE_PHYSICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f);
@@ -360,8 +360,8 @@ public class Formulas
 		else
 		{
 			// Autoattack critical damage.
-			criticalDamage = attacker.getStat().getValue(Stats.CRITICAL_DAMAGE, 1) * attacker.getStat().getPositionTypeValue(Stats.CRITICAL_DAMAGE, Position.getPosition(attacker, target));
-			defenceCriticalDamage = target.getStat().getValue(Stats.DEFENCE_CRITICAL_DAMAGE, 1);
+			criticalDamage = attacker.getStat().getValue(Stat.CRITICAL_DAMAGE, 1) * attacker.getStat().getPositionTypeValue(Stat.CRITICAL_DAMAGE, Position.getPosition(attacker, target));
+			defenceCriticalDamage = target.getStat().getValue(Stat.DEFENCE_CRITICAL_DAMAGE, 1);
 			if (attacker.isPlayable())
 			{
 				balanceMod = target.isPlayable() ? Config.PVP_PHYSICAL_ATTACK_CRITICAL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f) : Config.PVE_PHYSICAL_ATTACK_CRITICAL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f);
@@ -387,20 +387,20 @@ public class Formulas
 			if (skill.isMagic())
 			{
 				// Magic critical damage.
-				criticalDamageAdd = attacker.getStat().getValue(Stats.MAGIC_CRITICAL_DAMAGE_ADD, 0);
-				defenceCriticalDamageAdd = target.getStat().getValue(Stats.DEFENCE_MAGIC_CRITICAL_DAMAGE_ADD, 0);
+				criticalDamageAdd = attacker.getStat().getValue(Stat.MAGIC_CRITICAL_DAMAGE_ADD, 0);
+				defenceCriticalDamageAdd = target.getStat().getValue(Stat.DEFENCE_MAGIC_CRITICAL_DAMAGE_ADD, 0);
 			}
 			else
 			{
-				criticalDamageAdd = attacker.getStat().getValue(Stats.CRITICAL_DAMAGE_SKILL_ADD, 0);
-				defenceCriticalDamageAdd = target.getStat().getValue(Stats.DEFENCE_CRITICAL_DAMAGE_SKILL_ADD, 0);
+				criticalDamageAdd = attacker.getStat().getValue(Stat.CRITICAL_DAMAGE_SKILL_ADD, 0);
+				defenceCriticalDamageAdd = target.getStat().getValue(Stat.DEFENCE_CRITICAL_DAMAGE_SKILL_ADD, 0);
 			}
 		}
 		else
 		{
 			// Autoattack critical damage.
-			criticalDamageAdd = attacker.getStat().getValue(Stats.CRITICAL_DAMAGE_ADD, 0);
-			defenceCriticalDamageAdd = target.getStat().getValue(Stats.DEFENCE_CRITICAL_DAMAGE_ADD, 0);
+			criticalDamageAdd = attacker.getStat().getValue(Stat.CRITICAL_DAMAGE_ADD, 0);
+			defenceCriticalDamageAdd = target.getStat().getValue(Stat.DEFENCE_CRITICAL_DAMAGE_ADD, 0);
 		}
 		
 		return criticalDamageAdd + defenceCriticalDamageAdd;
@@ -442,10 +442,10 @@ public class Formulas
 		init += Math.sqrt(13 * dmg);
 		
 		// Chance is affected by target MEN
-		init -= ((BaseStats.MEN.calcBonus(target) * 100) - 100);
+		init -= ((BaseStat.MEN.calcBonus(target) * 100) - 100);
 		
 		// Calculate all modifiers for ATTACK_CANCEL
-		double rate = target.getStat().getValue(Stats.ATTACK_CANCEL, init);
+		double rate = target.getStat().getValue(Stat.ATTACK_CANCEL, init);
 		
 		// Adjust the rate to be between 1 and 99
 		rate = Math.max(Math.min(rate, 99), 1);
@@ -472,19 +472,19 @@ public class Formulas
 	public static double calcAtkSpdMultiplier(Creature creature)
 	{
 		final double armorBonus = 1; // EquipedArmorSpeedByCrystal TODO: Implement me!
-		final double dexBonus = BaseStats.DEX.calcBonus(creature);
-		final double weaponAttackSpeed = Stats.weaponBaseValue(creature, Stats.PHYSICAL_ATTACK_SPEED) / armorBonus; // unk868
-		final double attackSpeedPerBonus = creature.getStat().getMul(Stats.PHYSICAL_ATTACK_SPEED);
-		final double attackSpeedDiffBonus = creature.getStat().getAdd(Stats.PHYSICAL_ATTACK_SPEED);
+		final double dexBonus = BaseStat.DEX.calcBonus(creature);
+		final double weaponAttackSpeed = Stat.weaponBaseValue(creature, Stat.PHYSICAL_ATTACK_SPEED) / armorBonus; // unk868
+		final double attackSpeedPerBonus = creature.getStat().getMul(Stat.PHYSICAL_ATTACK_SPEED);
+		final double attackSpeedDiffBonus = creature.getStat().getAdd(Stat.PHYSICAL_ATTACK_SPEED);
 		return (dexBonus * (weaponAttackSpeed / 333) * attackSpeedPerBonus) + (attackSpeedDiffBonus / 333);
 	}
 	
 	public static double calcMAtkSpdMultiplier(Creature creature)
 	{
 		final double armorBonus = 1; // TODO: Implement me!
-		final double witBonus = BaseStats.WIT.calcBonus(creature);
-		final double castingSpeedPerBonus = creature.getStat().getMul(Stats.MAGIC_ATTACK_SPEED);
-		final double castingSpeedDiffBonus = creature.getStat().getAdd(Stats.MAGIC_ATTACK_SPEED);
+		final double witBonus = BaseStat.WIT.calcBonus(creature);
+		final double castingSpeedPerBonus = creature.getStat().getMul(Stat.MAGIC_ATTACK_SPEED);
+		final double castingSpeedDiffBonus = creature.getStat().getAdd(Stat.MAGIC_ATTACK_SPEED);
 		return ((1 / armorBonus) * witBonus * castingSpeedPerBonus) + (castingSpeedDiffBonus / 333);
 	}
 	
@@ -564,7 +564,7 @@ public class Formulas
 			return 0;
 		}
 		
-		double shldRate = target.getStat().getValue(Stats.SHIELD_DEFENCE_RATE) * BaseStats.CON.calcBonus(target);
+		double shldRate = target.getStat().getValue(Stat.SHIELD_DEFENCE_RATE) * BaseStat.CON.calcBonus(target);
 		
 		// if attacker use bow and target wear shield, shield block rate is multiplied by 1.3 (30%)
 		if (attacker.getAttackType().isRanged())
@@ -584,7 +584,7 @@ public class Formulas
 		if (shldRate > Rnd.get(100))
 		{
 			// If shield succeed, check perfect block.
-			if (((100 - (2 * BaseStats.CON.calcBonus(target))) < Rnd.get(100)))
+			if (((100 - (2 * BaseStat.CON.calcBonus(target))) < Rnd.get(100)))
 			{
 				shldSuccess = SHIELD_DEFENSE_PERFECT_BLOCK;
 			}
@@ -683,7 +683,7 @@ public class Formulas
 			
 			if (!resisted)
 			{
-				final double sphericBarrierRange = target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, 0);
+				final double sphericBarrierRange = target.getStat().getValue(Stat.SPHERIC_BARRIER_RANGE, 0);
 				if (sphericBarrierRange > 0)
 				{
 					resisted = attacker.calculateDistance3D(target) > sphericBarrierRange;
@@ -717,7 +717,7 @@ public class Formulas
 		final double elementMod = calcAttributeBonus(attacker, target, skill);
 		final double traitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);
 		final double basicPropertyResist = getBasicPropertyResistBonus(skill.getBasicProperty(), target);
-		final double buffDebuffMod = skill.isDebuff() ? target.getStat().getValue(Stats.RESIST_ABNORMAL_DEBUFF, 1) : 1;
+		final double buffDebuffMod = skill.isDebuff() ? target.getStat().getValue(Stat.RESIST_ABNORMAL_DEBUFF, 1) : 1;
 		final double rate = baseMod * elementMod * traitMod * buffDebuffMod;
 		final double finalRate = traitMod > 0 ? CommonUtil.constrain(rate, skill.getMinChance(), skill.getMaxChance()) * basicPropertyResist : 0;
 		
@@ -834,7 +834,7 @@ public class Formulas
 		}
 		
 		// general magic resist
-		final double resModifier = target.getStat().getValue(Stats.MAGIC_SUCCESS_RES, 1);
+		final double resModifier = target.getStat().getValue(Stat.MAGIC_SUCCESS_RES, 1);
 		final int rate = 100 - Math.round((float) (mAccModifier * lvlModifier * targetModifier * resModifier));
 		
 		return (Rnd.get(100) < rate);
@@ -861,7 +861,7 @@ public class Formulas
 		}
 		
 		// Bonus Spiritshot
-		final double shotsBonus = attacker.getStat().getValue(Stats.SHOTS_BONUS);
+		final double shotsBonus = attacker.getStat().getValue(Stat.SHOTS_BONUS);
 		double sapphireBonus = 0;
 		if (attacker.isPlayer() && (attacker.getActingPlayer().getActiveShappireJewel() != null))
 		{
@@ -910,7 +910,7 @@ public class Formulas
 			return baseRestorePercent;
 		}
 		
-		double restorePercent = baseRestorePercent * BaseStats.WIT.calcBonus(caster);
+		double restorePercent = baseRestorePercent * BaseStat.WIT.calcBonus(caster);
 		if ((restorePercent - baseRestorePercent) > 20.0)
 		{
 			restorePercent += 20.0;
@@ -951,13 +951,13 @@ public class Formulas
 			return false;
 		}
 		
-		final int val = (int) actor.getStat().getAdd(Stats.SKILL_CRITICAL, -1);
+		final int val = (int) actor.getStat().getAdd(Stat.SKILL_CRITICAL, -1);
 		if (val == -1)
 		{
 			return false;
 		}
 		
-		final double chance = BaseStats.values()[val].calcBonus(actor) * actor.getStat().getValue(Stats.SKILL_CRITICAL_PROBABILITY, 1);
+		final double chance = BaseStat.values()[val].calcBonus(actor) * actor.getStat().getValue(Stat.SKILL_CRITICAL_PROBABILITY, 1);
 		
 		return ((Rnd.nextDouble() * 100.) < (chance * Config.SKILL_MASTERY_CHANCE_MULTIPLIERS.getOrDefault(actor.getActingPlayer().getClassId(), 1f)));
 	}
@@ -1011,7 +1011,7 @@ public class Formulas
 			return;
 		}
 		
-		final double chance = target.getStat().getValue(Stats.VENGEANCE_SKILL_PHYSICAL_DAMAGE, 0);
+		final double chance = target.getStat().getValue(Stat.VENGEANCE_SKILL_PHYSICAL_DAMAGE, 0);
 		if (Rnd.get(100) < chance)
 		{
 			if (target.isPlayer())
@@ -1048,7 +1048,7 @@ public class Formulas
 		{
 			return false;
 		}
-		return target.getStat().getValue(skill.isMagic() ? Stats.REFLECT_SKILL_MAGIC : Stats.REFLECT_SKILL_PHYSIC, 0) > Rnd.get(100);
+		return target.getStat().getValue(skill.isMagic() ? Stat.REFLECT_SKILL_MAGIC : Stat.REFLECT_SKILL_PHYSIC, 0) > Rnd.get(100);
 	}
 	
 	/**
@@ -1063,7 +1063,7 @@ public class Formulas
 		{
 			return 0;
 		}
-		return creature.getStat().getValue(Stats.FALL, (fallHeight * creature.getMaxHp()) / 1000.0);
+		return creature.getStat().getValue(Stat.FALL, (fallHeight * creature.getMaxHp()) / 1000.0);
 	}
 	
 	/**
@@ -1086,12 +1086,12 @@ public class Formulas
 	public static boolean calcBlowSuccess(Creature creature, Creature target, Skill skill, double chanceBoost)
 	{
 		final Weapon weapon = creature.getActiveWeaponItem();
-		final double weaponCritical = weapon != null ? weapon.getStats(Stats.CRITICAL_RATE, creature.getTemplate().getBaseCritRate()) : creature.getTemplate().getBaseCritRate();
+		final double weaponCritical = weapon != null ? weapon.getStats(Stat.CRITICAL_RATE, creature.getTemplate().getBaseCritRate()) : creature.getTemplate().getBaseCritRate();
 		// double dexBonus = BaseStats.DEX.calcBonus(activeChar); Not used in GOD
 		final double critHeightBonus = calcCriticalHeightBonus(creature, target);
 		final double criticalPosition = calcCriticalPositionBonus(creature, target); // 30% chance from back, 10% chance from side. Include buffs that give positional crit rate.
 		final double chanceBoostMod = (100 + chanceBoost) / 100;
-		final double blowRateMod = creature.getStat().getValue(Stats.BLOW_RATE, 1);
+		final double blowRateMod = creature.getStat().getValue(Stat.BLOW_RATE, 1);
 		
 		final double rate = criticalPosition * critHeightBonus * weaponCritical * chanceBoostMod * blowRateMod;
 		
@@ -1168,7 +1168,7 @@ public class Formulas
 	
 	public static boolean calcCancelSuccess(BuffInfo info, int cancelMagicLvl, int rate, Skill skill, Creature target)
 	{
-		final int chance = (int) (rate + ((cancelMagicLvl - info.getSkill().getMagicLevel()) * 2) + ((info.getAbnormalTime() / 120) * target.getStat().getValue(Stats.RESIST_DISPEL_BUFF, 1)));
+		final int chance = (int) (rate + ((cancelMagicLvl - info.getSkill().getMagicLevel()) * 2) + ((info.getAbnormalTime() / 120) * target.getStat().getValue(Stat.RESIST_DISPEL_BUFF, 1)));
 		return Rnd.get(100) < CommonUtil.constrain(chance, 25, 75); // TODO: i_dispel_by_slot_probability min = 40, max = 95.
 	}
 	
@@ -1415,7 +1415,7 @@ public class Formulas
 		
 		final Weapon weapon = attacker.getActiveWeaponItem();
 		final boolean isRanged = (weapon != null) && weapon.getItemType().isRanged();
-		final double shotsBonus = attacker.getStat().getValue(Stats.SHOTS_BONUS);
+		final double shotsBonus = attacker.getStat().getValue(Stat.SHOTS_BONUS);
 		
 		final double cAtk = crit ? calcCritDamage(attacker, target, null) : 1;
 		final double cAtkAdd = crit ? calcCritDamageAdd(attacker, target, null) : 0;
@@ -1445,11 +1445,11 @@ public class Formulas
 		{
 			case PHYSICAL:
 			{
-				return target.getStat().getValue(Stats.ABNORMAL_RESIST_PHYSICAL);
+				return target.getStat().getValue(Stat.ABNORMAL_RESIST_PHYSICAL);
 			}
 			case MAGIC:
 			{
-				return target.getStat().getValue(Stats.ABNORMAL_RESIST_MAGICAL);
+				return target.getStat().getValue(Stat.ABNORMAL_RESIST_MAGICAL);
 			}
 			default:
 			{
@@ -1580,21 +1580,21 @@ public class Formulas
 				if (skill.isMagic())
 				{
 					// Magical Skill PvP
-					pvpAttack = attacker.getStat().getValue(Stats.PVP_MAGICAL_SKILL_DAMAGE, 1) * Config.PVP_MAGICAL_SKILL_DAMAGE_MULTIPLIERS.getOrDefault(attackerPlayer.getClassId(), 1f);
-					pvpDefense = target.getStat().getValue(Stats.PVP_MAGICAL_SKILL_DEFENCE, 1) * Config.PVP_MAGICAL_SKILL_DEFENCE_MULTIPLIERS.getOrDefault(targetPlayer.getClassId(), 1f);
+					pvpAttack = attacker.getStat().getValue(Stat.PVP_MAGICAL_SKILL_DAMAGE, 1) * Config.PVP_MAGICAL_SKILL_DAMAGE_MULTIPLIERS.getOrDefault(attackerPlayer.getClassId(), 1f);
+					pvpDefense = target.getStat().getValue(Stat.PVP_MAGICAL_SKILL_DEFENCE, 1) * Config.PVP_MAGICAL_SKILL_DEFENCE_MULTIPLIERS.getOrDefault(targetPlayer.getClassId(), 1f);
 				}
 				else
 				{
 					// Physical Skill PvP
-					pvpAttack = attacker.getStat().getValue(Stats.PVP_PHYSICAL_SKILL_DAMAGE, 1) * Config.PVP_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS.getOrDefault(attackerPlayer.getClassId(), 1f);
-					pvpDefense = target.getStat().getValue(Stats.PVP_PHYSICAL_SKILL_DEFENCE, 1) * Config.PVP_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS.getOrDefault(targetPlayer.getClassId(), 1f);
+					pvpAttack = attacker.getStat().getValue(Stat.PVP_PHYSICAL_SKILL_DAMAGE, 1) * Config.PVP_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS.getOrDefault(attackerPlayer.getClassId(), 1f);
+					pvpDefense = target.getStat().getValue(Stat.PVP_PHYSICAL_SKILL_DEFENCE, 1) * Config.PVP_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS.getOrDefault(targetPlayer.getClassId(), 1f);
 				}
 			}
 			else
 			{
 				// Autoattack PvP
-				pvpAttack = attacker.getStat().getValue(Stats.PVP_PHYSICAL_ATTACK_DAMAGE, 1) * Config.PVP_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS.getOrDefault(attackerPlayer.getClassId(), 1f);
-				pvpDefense = target.getStat().getValue(Stats.PVP_PHYSICAL_ATTACK_DEFENCE, 1) * Config.PVP_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS.getOrDefault(targetPlayer.getClassId(), 1f);
+				pvpAttack = attacker.getStat().getValue(Stat.PVP_PHYSICAL_ATTACK_DAMAGE, 1) * Config.PVP_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS.getOrDefault(attackerPlayer.getClassId(), 1f);
+				pvpDefense = target.getStat().getValue(Stat.PVP_PHYSICAL_ATTACK_DEFENCE, 1) * Config.PVP_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS.getOrDefault(targetPlayer.getClassId(), 1f);
 			}
 			
 			return Math.max(0.05, 1 + (pvpAttack - pvpDefense)); // Bonus should not be negative.
@@ -1626,24 +1626,24 @@ public class Formulas
 				if (skill.isMagic())
 				{
 					// Magical Skill PvE
-					pveAttack = attacker.getStat().getValue(Stats.PVE_MAGICAL_SKILL_DAMAGE, 1) * (attackerPlayer == null ? 1 : Config.PVE_MAGICAL_SKILL_DAMAGE_MULTIPLIERS.getOrDefault(attackerPlayer.getClassId(), 1f));
-					pveDefense = target.getStat().getValue(Stats.PVE_MAGICAL_SKILL_DEFENCE, 1) * (targetPlayer == null ? 1 : Config.PVE_MAGICAL_SKILL_DEFENCE_MULTIPLIERS.getOrDefault(targetPlayer.getClassId(), 1f));
-					pveRaidDefense = attacker.isRaid() ? attacker.getStat().getValue(Stats.PVE_RAID_MAGICAL_SKILL_DEFENCE, 1) : 1;
+					pveAttack = attacker.getStat().getValue(Stat.PVE_MAGICAL_SKILL_DAMAGE, 1) * (attackerPlayer == null ? 1 : Config.PVE_MAGICAL_SKILL_DAMAGE_MULTIPLIERS.getOrDefault(attackerPlayer.getClassId(), 1f));
+					pveDefense = target.getStat().getValue(Stat.PVE_MAGICAL_SKILL_DEFENCE, 1) * (targetPlayer == null ? 1 : Config.PVE_MAGICAL_SKILL_DEFENCE_MULTIPLIERS.getOrDefault(targetPlayer.getClassId(), 1f));
+					pveRaidDefense = attacker.isRaid() ? attacker.getStat().getValue(Stat.PVE_RAID_MAGICAL_SKILL_DEFENCE, 1) : 1;
 				}
 				else
 				{
 					// Physical Skill PvE
-					pveAttack = attacker.getStat().getValue(Stats.PVE_PHYSICAL_SKILL_DAMAGE, 1) * (attackerPlayer == null ? 1 : Config.PVE_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS.getOrDefault(attackerPlayer.getClassId(), 1f));
-					pveDefense = target.getStat().getValue(Stats.PVE_PHYSICAL_SKILL_DEFENCE, 1) * (targetPlayer == null ? 1 : Config.PVE_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS.getOrDefault(targetPlayer.getClassId(), 1f));
-					pveRaidDefense = attacker.isRaid() ? attacker.getStat().getValue(Stats.PVE_RAID_PHYSICAL_SKILL_DEFENCE, 1) : 1;
+					pveAttack = attacker.getStat().getValue(Stat.PVE_PHYSICAL_SKILL_DAMAGE, 1) * (attackerPlayer == null ? 1 : Config.PVE_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS.getOrDefault(attackerPlayer.getClassId(), 1f));
+					pveDefense = target.getStat().getValue(Stat.PVE_PHYSICAL_SKILL_DEFENCE, 1) * (targetPlayer == null ? 1 : Config.PVE_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS.getOrDefault(targetPlayer.getClassId(), 1f));
+					pveRaidDefense = attacker.isRaid() ? attacker.getStat().getValue(Stat.PVE_RAID_PHYSICAL_SKILL_DEFENCE, 1) : 1;
 				}
 			}
 			else
 			{
 				// Autoattack PvE
-				pveAttack = attacker.getStat().getValue(Stats.PVE_PHYSICAL_ATTACK_DAMAGE, 1) * (attackerPlayer == null ? 1 : Config.PVE_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS.getOrDefault(attackerPlayer.getClassId(), 1f));
-				pveDefense = target.getStat().getValue(Stats.PVE_PHYSICAL_ATTACK_DEFENCE, 1) * (targetPlayer == null ? 1 : Config.PVE_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS.getOrDefault(targetPlayer.getClassId(), 1f));
-				pveRaidDefense = attacker.isRaid() ? attacker.getStat().getValue(Stats.PVE_RAID_PHYSICAL_ATTACK_DEFENCE, 1) : 1;
+				pveAttack = attacker.getStat().getValue(Stat.PVE_PHYSICAL_ATTACK_DAMAGE, 1) * (attackerPlayer == null ? 1 : Config.PVE_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS.getOrDefault(attackerPlayer.getClassId(), 1f));
+				pveDefense = target.getStat().getValue(Stat.PVE_PHYSICAL_ATTACK_DEFENCE, 1) * (targetPlayer == null ? 1 : Config.PVE_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS.getOrDefault(targetPlayer.getClassId(), 1f));
+				pveRaidDefense = attacker.isRaid() ? attacker.getStat().getValue(Stat.PVE_RAID_PHYSICAL_ATTACK_DEFENCE, 1) : 1;
 			}
 			
 			return Math.max(0.05, (1 + (pveAttack - (pveDefense * pveRaidDefense))) * pvePenalty); // Bonus should not be negative.

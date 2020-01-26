@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -61,12 +61,12 @@ public class ManaHeal extends AbstractEffect
 		double amount = _power;
 		if ((item != null) && (item.isPotion() || item.isElixir()))
 		{
-			amount += effected.getStat().getValue(Stats.ADDITIONAL_POTION_MP, 0);
+			amount += effected.getStat().getValue(Stat.ADDITIONAL_POTION_MP, 0);
 		}
 		
 		if (!skill.isStatic())
 		{
-			amount = effected.getStat().getValue(Stats.MANA_CHARGE, amount);
+			amount = effected.getStat().getValue(Stat.MANA_CHARGE, amount);
 		}
 		
 		// Prevents overheal and negative amount

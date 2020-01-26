@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 
 /**
@@ -38,7 +38,7 @@ public class FuncPDefMod extends AbstractFunction
 	
 	private FuncPDefMod()
 	{
-		super(Stats.POWER_DEFENCE, 1, null, 0, null);
+		super(Stat.POWER_DEFENCE, 1, null, 0, null);
 	}
 	
 	@Override

@@ -34,11 +34,11 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class ConditionPlayerCanCreateOutpost extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
-	public ConditionPlayerCanCreateOutpost(boolean val)
+	public ConditionPlayerCanCreateOutpost(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
@@ -46,7 +46,7 @@ public class ConditionPlayerCanCreateOutpost extends Condition
 	{
 		if ((effector == null) || !effector.isPlayer())
 		{
-			return !_val;
+			return !_value;
 		}
 		
 		final PlayerInstance player = effector.getActingPlayer();
@@ -88,6 +88,6 @@ public class ConditionPlayerCanCreateOutpost extends Condition
 			player.sendPacket(SystemMessageId.YOU_CANNOT_SET_UP_A_BASE_HERE);
 			canCreateOutpost = false;
 		}
-		return _val == canCreateOutpost;
+		return _value == canCreateOutpost;
 	}
 }

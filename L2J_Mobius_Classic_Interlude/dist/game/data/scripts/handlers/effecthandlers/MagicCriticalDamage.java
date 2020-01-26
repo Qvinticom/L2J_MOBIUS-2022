@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class MagicCriticalDamage extends AbstractStatEffect
 {
 	public MagicCriticalDamage(StatsSet params)
 	{
-		super(params, Stats.MAGIC_CRITICAL_DAMAGE, Stats.MAGIC_CRITICAL_DAMAGE_ADD);
+		super(params, Stat.MAGIC_CRITICAL_DAMAGE, Stat.MAGIC_CRITICAL_DAMAGE_ADD);
 	}
 }

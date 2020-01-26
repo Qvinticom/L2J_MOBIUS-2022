@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -138,7 +138,7 @@ public class Heal implements ISkillHandler
 			}
 			else if (skill.getSkillType() != SkillType.HEAL_PERCENT)
 			{
-				hp *= target.calcStat(Stats.HEAL_EFFECTIVNESS, 100, null, null) / 100;
+				hp *= target.calcStat(Stat.HEAL_EFFECTIVNESS, 100, null, null) / 100;
 			}
 			
 			target.setCurrentHp(hp + target.getCurrentHp());

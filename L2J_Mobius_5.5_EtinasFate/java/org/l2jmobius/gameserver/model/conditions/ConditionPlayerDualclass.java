@@ -22,11 +22,11 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 
 public class ConditionPlayerDualclass extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
-	public ConditionPlayerDualclass(boolean val)
+	public ConditionPlayerDualclass(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
@@ -36,6 +36,6 @@ public class ConditionPlayerDualclass extends Condition
 		{
 			return true;
 		}
-		return effector.getActingPlayer().isDualClassActive() == _val;
+		return effector.getActingPlayer().isDualClassActive() == _value;
 	}
 }

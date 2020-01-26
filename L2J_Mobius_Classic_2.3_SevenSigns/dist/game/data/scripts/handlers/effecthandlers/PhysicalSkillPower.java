@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class PhysicalSkillPower extends AbstractStatEffect
 {
 	public PhysicalSkillPower(StatsSet params)
 	{
-		super(params, Stats.PHYSICAL_SKILL_POWER, Stats.SKILL_POWER_ADD);
+		super(params, Stat.PHYSICAL_SKILL_POWER, Stat.SKILL_POWER_ADD);
 	}
 }

@@ -540,26 +540,26 @@ public class Frintezza extends Quest
 			GrandBossManager.getInstance().setBossStatus(FRINTEZZA, FIGHTING);
 			
 			_frintezzaDummy = addSpawn(29052, 174240, -89805, -5022, 16048, false, 0);
-			_frintezzaDummy.setIsInvul(true);
-			_frintezzaDummy.setIsImobilised(true);
+			_frintezzaDummy.setInvul(true);
+			_frintezzaDummy.setImmobilized(true);
 			
 			_overheadDummy = addSpawn(29052, 174232, -88020, -5110, 16384, false, 0);
-			_overheadDummy.setIsInvul(true);
-			_overheadDummy.setIsImobilised(true);
+			_overheadDummy.setInvul(true);
+			_overheadDummy.setImmobilized(true);
 			_overheadDummy.setCollisionHeight(600);
 			_zone.broadcastPacket(new NpcInfo(_overheadDummy, null));
 			
 			_portraitDummy1 = addSpawn(29052, 172450, -87890, -5100, 16048, false, 0);
-			_portraitDummy1.setIsImobilised(true);
-			_portraitDummy1.setIsInvul(true);
+			_portraitDummy1.setImmobilized(true);
+			_portraitDummy1.setInvul(true);
 			
 			_portraitDummy3 = addSpawn(29052, 176012, -87890, -5100, 16048, false, 0);
-			_portraitDummy3.setIsImobilised(true);
-			_portraitDummy3.setIsInvul(true);
+			_portraitDummy3.setImmobilized(true);
+			_portraitDummy3.setInvul(true);
 			
 			_scarletDummy = addSpawn(29053, 174232, -88020, -5110, 16384, false, 0);
-			_scarletDummy.setIsInvul(true);
-			_scarletDummy.setIsImobilised(true);
+			_scarletDummy.setInvul(true);
+			_scarletDummy.setImmobilized(true);
 			
 			startQuestTimer("stop_pc", 0, npc, null);
 			startQuestTimer("camera_2", 1000, _overheadDummy, null);
@@ -580,28 +580,28 @@ public class Frintezza extends Quest
 			
 			_frintezza = (GrandBossInstance) addSpawn(FRINTEZZA, 174240, -89805, -5022, 16048, false, 0);
 			GrandBossManager.getInstance().addBoss(_frintezza);
-			_frintezza.setIsImobilised(true);
-			_frintezza.setIsInvul(true);
+			_frintezza.setImmobilized(true);
+			_frintezza.setInvul(true);
 			_frintezza.disableAllSkills();
 			_zone.updateKnownList(_frintezza);
 			
 			_demon2 = (MonsterInstance) addSpawn(29051, 175876, -88713, -5100, 28205, false, 0);
-			_demon2.setIsImobilised(true);
+			_demon2.setImmobilized(true);
 			_demon2.disableAllSkills();
 			_zone.updateKnownList(_demon2);
 			
 			_demon3 = (MonsterInstance) addSpawn(29051, 172608, -88702, -5100, 64817, false, 0);
-			_demon3.setIsImobilised(true);
+			_demon3.setImmobilized(true);
 			_demon3.disableAllSkills();
 			_zone.updateKnownList(_demon3);
 			
 			_demon1 = (MonsterInstance) addSpawn(29050, 175833, -87165, -5100, 35048, false, 0);
-			_demon1.setIsImobilised(true);
+			_demon1.setImmobilized(true);
 			_demon1.disableAllSkills();
 			_zone.updateKnownList(_demon1);
 			
 			_demon4 = (MonsterInstance) addSpawn(29050, 172634, -87165, -5100, 57730, false, 0);
-			_demon4.setIsImobilised(true);
+			_demon4.setImmobilized(true);
 			_demon4.disableAllSkills();
 			_zone.updateKnownList(_demon4);
 			
@@ -736,8 +736,8 @@ public class Frintezza extends Quest
 			_zone.broadcastPacket(new MagicSkillUse(_scarletDummy, _overheadDummy, 5004, 1, 5800, 0));
 			
 			_weakScarlet = (GrandBossInstance) addSpawn(SCARLET1, 174232, -88020, -5110, 16384, false, 0);
-			_weakScarlet.setIsInvul(true);
-			_weakScarlet.setIsImobilised(true);
+			_weakScarlet.setInvul(true);
+			_weakScarlet.setImmobilized(true);
 			_weakScarlet.disableAllSkills();
 			_zone.updateKnownList(_weakScarlet);
 			_activeScarlet = _weakScarlet;
@@ -770,22 +770,22 @@ public class Frintezza extends Quest
 		else if (event.equals("camera_22"))
 		{
 			_portrait2 = (MonsterInstance) addSpawn(29049, 175876, -88713, -5000, 28205, false, 0);
-			_portrait2.setIsImobilised(true);
+			_portrait2.setImmobilized(true);
 			_portrait2.disableAllSkills();
 			_zone.updateKnownList(_portrait2);
 			
 			_portrait3 = (MonsterInstance) addSpawn(29049, 172608, -88702, -5000, 64817, false, 0);
-			_portrait3.setIsImobilised(true);
+			_portrait3.setImmobilized(true);
 			_portrait3.disableAllSkills();
 			_zone.updateKnownList(_portrait3);
 			
 			_portrait1 = (MonsterInstance) addSpawn(29048, 175833, -87165, -5000, 35048, false, 0);
-			_portrait1.setIsImobilised(true);
+			_portrait1.setImmobilized(true);
 			_portrait1.disableAllSkills();
 			_zone.updateKnownList(_portrait1);
 			
 			_portrait4 = (MonsterInstance) addSpawn(29048, 172634, -87165, -5000, 57730, false, 0);
-			_portrait4.setIsImobilised(true);
+			_portrait4.setImmobilized(true);
 			_portrait4.disableAllSkills();
 			_zone.updateKnownList(_portrait4);
 			
@@ -802,24 +802,24 @@ public class Frintezza extends Quest
 		}
 		else if (event.equals("camera_23"))
 		{
-			_demon1.setIsImobilised(false);
-			_demon2.setIsImobilised(false);
-			_demon3.setIsImobilised(false);
-			_demon4.setIsImobilised(false);
+			_demon1.setImmobilized(false);
+			_demon2.setImmobilized(false);
+			_demon3.setImmobilized(false);
+			_demon4.setImmobilized(false);
 			_demon1.enableAllSkills();
 			_demon2.enableAllSkills();
 			_demon3.enableAllSkills();
 			_demon4.enableAllSkills();
-			_portrait1.setIsImobilised(false);
-			_portrait2.setIsImobilised(false);
-			_portrait3.setIsImobilised(false);
-			_portrait4.setIsImobilised(false);
+			_portrait1.setImmobilized(false);
+			_portrait2.setImmobilized(false);
+			_portrait3.setImmobilized(false);
+			_portrait4.setImmobilized(false);
 			_portrait1.enableAllSkills();
 			_portrait2.enableAllSkills();
 			_portrait3.enableAllSkills();
 			_portrait4.enableAllSkills();
-			_weakScarlet.setIsInvul(false);
-			_weakScarlet.setIsImobilised(false);
+			_weakScarlet.setInvul(false);
+			_weakScarlet.setImmobilized(false);
 			_weakScarlet.enableAllSkills();
 			_weakScarlet.setRunning();
 			
@@ -837,7 +837,7 @@ public class Frintezza extends Quest
 				creature.disableAllSkills();
 				creature.setTarget(null);
 				creature.stopMove(null);
-				creature.setIsImobilised(true);
+				creature.setImmobilized(true);
 				creature.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			}
 		}
@@ -860,14 +860,14 @@ public class Frintezza extends Quest
 				if (creature != _frintezza)
 				{
 					creature.enableAllSkills();
-					creature.setIsImobilised(false);
+					creature.setImmobilized(false);
 				}
 			}
 		}
 		else if (event.equals("start_npc"))
 		{
 			npc.setRunning();
-			npc.setIsInvul(false);
+			npc.setInvul(false);
 		}
 		else if (event.equals("morph_end"))
 		{
@@ -926,8 +926,8 @@ public class Frintezza extends Quest
 			_weakScarlet = null;
 			_activeScarlet = null;
 			_weakScarlet = (GrandBossInstance) addSpawn(SCARLET1, _scarletX, _scarletY, _scarletZ, _scarletHeading, false, 0);
-			_weakScarlet.setIsInvul(true);
-			_weakScarlet.setIsImobilised(true);
+			_weakScarlet.setInvul(true);
+			_weakScarlet.setImmobilized(true);
 			_weakScarlet.disableAllSkills();
 			_weakScarlet.setRHandId(7903);
 			_zone.updateKnownList(_weakScarlet);
@@ -971,8 +971,8 @@ public class Frintezza extends Quest
 		else if (event.equals("morph_13"))
 		{
 			_strongScarlet = (GrandBossInstance) addSpawn(SCARLET2, reverseXFix(_scarletX), reverseYFix(_scarletY), reverseZFix(_scarletZ), _scarletHeading, false, 0);
-			_strongScarlet.setIsInvul(true);
-			_strongScarlet.setIsImobilised(true);
+			_strongScarlet.setInvul(true);
+			_strongScarlet.setImmobilized(true);
 			_strongScarlet.disableAllSkills();
 			_zone.updateKnownList(_strongScarlet);
 			_activeScarlet = _strongScarlet;
@@ -1188,8 +1188,8 @@ public class Frintezza extends Quest
 						creature.abortCast();
 						creature.disableAllSkills();
 						creature.stopMove(null);
-						creature.setIsImobilised(true);
-						creature.setIsParalyzed(true);
+						creature.setImmobilized(true);
+						creature.setParalyzed(true);
 						creature.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 						skill.getEffects(_frintezza, creature, false, false, false);
 						creature.startAbnormalEffect(Creature.ABNORMAL_EFFECT_DANCE_STUNNED);
@@ -1208,8 +1208,8 @@ public class Frintezza extends Quest
 					creature.stopAbnormalEffect(Creature.ABNORMAL_EFFECT_DANCE_STUNNED);
 					creature.stopAbnormalEffect(Creature.ABNORMAL_EFFECT_FLOATING_ROOT);
 					creature.enableAllSkills();
-					creature.setIsImobilised(false);
-					creature.setIsParalyzed(false);
+					creature.setImmobilized(false);
+					creature.setParalyzed(false);
 				}
 			}
 			_abnormal = 0;
@@ -1262,7 +1262,7 @@ public class Frintezza extends Quest
 				if (skill != null)
 				{
 					_weakScarlet.stopMove(null);
-					// weakScarlet.setIsCastingNow(true);
+					// weakScarlet.setCastingNow(true);
 					_weakScarlet.doCast(skill);
 				}
 				startQuestTimer("skill01", _skill[i][2] + 5000 + Rnd.get(10000), npc, null);
@@ -1286,7 +1286,7 @@ public class Frintezza extends Quest
 				if (skill != null)
 				{
 					_weakScarlet.stopMove(null);
-					// weakScarlet.setIsCastingNow(true);
+					// weakScarlet.setCastingNow(true);
 					_weakScarlet.doCast(skill);
 				}
 				startQuestTimer("skill02", _skill[i][2] + 5000 + Rnd.get(10000), npc, null);
@@ -1316,7 +1316,7 @@ public class Frintezza extends Quest
 				if (skill != null)
 				{
 					_strongScarlet.stopMove(null);
-					// strongScarlet.setIsCastingNow(true);
+					// strongScarlet.setCastingNow(true);
 					_strongScarlet.doCast(skill);
 				}
 				startQuestTimer("skill03", _skill[i][2] + 5000 + Rnd.get(10000), npc, null);
@@ -1344,8 +1344,8 @@ public class Frintezza extends Quest
 						creature.abortCast();
 						creature.disableAllSkills();
 						creature.stopMove(null);
-						creature.setIsImobilised(true);
-						creature.setIsParalyzed(true);
+						creature.setImmobilized(true);
+						creature.setParalyzed(true);
 						creature.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 						creature.startAbnormalEffect(Creature.ABNORMAL_EFFECT_FLOATING_ROOT);
 					}
@@ -1700,7 +1700,7 @@ public class Frintezza extends Quest
 			final Skill skill = SkillTable.getInstance().getInfo(5011, 1);
 			if (skill != null)
 			{
-				// npc.setIsCastingNow(true);
+				// npc.setCastingNow(true);
 				npc.doCast(skill);
 			}
 		}
@@ -1726,7 +1726,7 @@ public class Frintezza extends Quest
 		}
 		else if ((npc.getNpcId() == SCARLET2) && (_onCheck == 1) && (status == FIGHTING))
 		{
-			if (!npc.getSpawn().is_customBossInstance())
+			if (!npc.getSpawn().isCustomBossInstance())
 			{
 				// cancelQuestTimer("loc_check");
 				cancelQuestTimer("spawn_minion", npc, null);

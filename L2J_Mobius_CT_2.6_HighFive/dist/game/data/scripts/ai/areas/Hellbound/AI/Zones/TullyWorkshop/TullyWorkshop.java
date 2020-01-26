@@ -1374,7 +1374,7 @@ public class TullyWorkshop extends AbstractNpcAI
 		{
 			if (pillarSpawn != null)
 			{
-				pillarSpawn.getLastSpawn().setIsInvul(false);
+				pillarSpawn.getLastSpawn().setInvul(false);
 			}
 			
 			handleDoorsOnDeath();
@@ -1404,13 +1404,13 @@ public class TullyWorkshop extends AbstractNpcAI
 		{
 			if (pillarSpawn != null)
 			{
-				pillarSpawn.getLastSpawn().setIsInvul(true);
+				pillarSpawn.getLastSpawn().setInvul(true);
 			}
 			handleDoorsOnRespawn();
 		}
 		else if (npc.getId() == PILLAR)
 		{
-			npc.setIsInvul(RaidBossSpawnManager.getInstance().getRaidBossStatusId(DARION) == RaidBossStatus.ALIVE);
+			npc.setInvul(RaidBossSpawnManager.getInstance().getRaidBossStatusId(DARION) == RaidBossStatus.ALIVE);
 		}
 		return super.onSpawn(npc);
 	}

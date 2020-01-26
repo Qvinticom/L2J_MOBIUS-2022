@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * Character template.
@@ -44,7 +44,7 @@ public class CreatureTemplate extends ListenersContainer
 	private double _fCollisionRadius;
 	private double _fCollisionHeight;
 	
-	protected final Map<Stats, Double> _baseValues = new EnumMap<>(Stats.class);
+	protected final Map<Stat, Double> _baseValues = new EnumMap<>(Stat.class);
 	
 	/** The creature's race. */
 	private Race _race;
@@ -57,65 +57,65 @@ public class CreatureTemplate extends ListenersContainer
 	public void set(StatsSet set)
 	{
 		// Base stats
-		_baseValues.put(Stats.STAT_STR, set.getDouble("baseSTR", 0));
-		_baseValues.put(Stats.STAT_CON, set.getDouble("baseCON", 0));
-		_baseValues.put(Stats.STAT_DEX, set.getDouble("baseDEX", 0));
-		_baseValues.put(Stats.STAT_INT, set.getDouble("baseINT", 0));
-		_baseValues.put(Stats.STAT_WIT, set.getDouble("baseWIT", 0));
-		_baseValues.put(Stats.STAT_MEN, set.getDouble("baseMEN", 0));
-		_baseValues.put(Stats.STAT_LUC, set.getDouble("baseLUC", 0));
-		_baseValues.put(Stats.STAT_CHA, set.getDouble("baseCHA", 0));
+		_baseValues.put(Stat.STAT_STR, set.getDouble("baseSTR", 0));
+		_baseValues.put(Stat.STAT_CON, set.getDouble("baseCON", 0));
+		_baseValues.put(Stat.STAT_DEX, set.getDouble("baseDEX", 0));
+		_baseValues.put(Stat.STAT_INT, set.getDouble("baseINT", 0));
+		_baseValues.put(Stat.STAT_WIT, set.getDouble("baseWIT", 0));
+		_baseValues.put(Stat.STAT_MEN, set.getDouble("baseMEN", 0));
+		_baseValues.put(Stat.STAT_LUC, set.getDouble("baseLUC", 0));
+		_baseValues.put(Stat.STAT_CHA, set.getDouble("baseCHA", 0));
 		
 		// Max HP/MP/CP
-		_baseValues.put(Stats.MAX_HP, set.getDouble("baseHpMax", 0));
-		_baseValues.put(Stats.MAX_MP, set.getDouble("baseMpMax", 0));
-		_baseValues.put(Stats.MAX_CP, set.getDouble("baseCpMax", 0));
+		_baseValues.put(Stat.MAX_HP, set.getDouble("baseHpMax", 0));
+		_baseValues.put(Stat.MAX_MP, set.getDouble("baseMpMax", 0));
+		_baseValues.put(Stat.MAX_CP, set.getDouble("baseCpMax", 0));
 		
 		// Regenerate HP/MP/CP
-		_baseValues.put(Stats.REGENERATE_HP_RATE, set.getDouble("baseHpReg", 0));
-		_baseValues.put(Stats.REGENERATE_MP_RATE, set.getDouble("baseMpReg", 0));
-		_baseValues.put(Stats.REGENERATE_CP_RATE, set.getDouble("baseCpReg", 0));
+		_baseValues.put(Stat.REGENERATE_HP_RATE, set.getDouble("baseHpReg", 0));
+		_baseValues.put(Stat.REGENERATE_MP_RATE, set.getDouble("baseMpReg", 0));
+		_baseValues.put(Stat.REGENERATE_CP_RATE, set.getDouble("baseCpReg", 0));
 		
 		// Attack and Defense
-		_baseValues.put(Stats.PHYSICAL_ATTACK, set.getDouble("basePAtk", 0));
-		_baseValues.put(Stats.MAGIC_ATTACK, set.getDouble("baseMAtk", 0));
-		_baseValues.put(Stats.PHYSICAL_DEFENCE, set.getDouble("basePDef", 0));
-		_baseValues.put(Stats.MAGICAL_DEFENCE, set.getDouble("baseMDef", 0));
+		_baseValues.put(Stat.PHYSICAL_ATTACK, set.getDouble("basePAtk", 0));
+		_baseValues.put(Stat.MAGIC_ATTACK, set.getDouble("baseMAtk", 0));
+		_baseValues.put(Stat.PHYSICAL_DEFENCE, set.getDouble("basePDef", 0));
+		_baseValues.put(Stat.MAGICAL_DEFENCE, set.getDouble("baseMDef", 0));
 		
 		// Attack speed
-		_baseValues.put(Stats.PHYSICAL_ATTACK_SPEED, set.getDouble("basePAtkSpd", 300));
-		_baseValues.put(Stats.MAGIC_ATTACK_SPEED, set.getDouble("baseMAtkSpd", 333));
+		_baseValues.put(Stat.PHYSICAL_ATTACK_SPEED, set.getDouble("basePAtkSpd", 300));
+		_baseValues.put(Stat.MAGIC_ATTACK_SPEED, set.getDouble("baseMAtkSpd", 333));
 		
 		// Misc
-		_baseValues.put(Stats.SHIELD_DEFENCE, set.getDouble("baseShldDef", 0));
-		_baseValues.put(Stats.PHYSICAL_ATTACK_RANGE, set.getDouble("baseAtkRange", 40));
-		_baseValues.put(Stats.RANDOM_DAMAGE, set.getDouble("baseRndDam", 0));
+		_baseValues.put(Stat.SHIELD_DEFENCE, set.getDouble("baseShldDef", 0));
+		_baseValues.put(Stat.PHYSICAL_ATTACK_RANGE, set.getDouble("baseAtkRange", 40));
+		_baseValues.put(Stat.RANDOM_DAMAGE, set.getDouble("baseRndDam", 0));
 		
 		// Shield and critical rates
-		_baseValues.put(Stats.SHIELD_DEFENCE_RATE, set.getDouble("baseShldRate", 0));
-		_baseValues.put(Stats.CRITICAL_RATE, set.getDouble("baseCritRate", 4));
-		_baseValues.put(Stats.MAGIC_CRITICAL_RATE, set.getDouble("baseMCritRate", 0));
+		_baseValues.put(Stat.SHIELD_DEFENCE_RATE, set.getDouble("baseShldRate", 0));
+		_baseValues.put(Stat.CRITICAL_RATE, set.getDouble("baseCritRate", 4));
+		_baseValues.put(Stat.MAGIC_CRITICAL_RATE, set.getDouble("baseMCritRate", 0));
 		
 		// Breath under water
-		_baseValues.put(Stats.BREATH, set.getDouble("baseBreath", 100));
+		_baseValues.put(Stat.BREATH, set.getDouble("baseBreath", 100));
 		
 		// Elemental Attributes
 		// Attack
-		_baseValues.put(Stats.FIRE_POWER, set.getDouble("baseFire", 0));
-		_baseValues.put(Stats.WIND_POWER, set.getDouble("baseWind", 0));
-		_baseValues.put(Stats.WATER_POWER, set.getDouble("baseWater", 0));
-		_baseValues.put(Stats.EARTH_POWER, set.getDouble("baseEarth", 0));
-		_baseValues.put(Stats.HOLY_POWER, set.getDouble("baseHoly", 0));
-		_baseValues.put(Stats.DARK_POWER, set.getDouble("baseDark", 0));
+		_baseValues.put(Stat.FIRE_POWER, set.getDouble("baseFire", 0));
+		_baseValues.put(Stat.WIND_POWER, set.getDouble("baseWind", 0));
+		_baseValues.put(Stat.WATER_POWER, set.getDouble("baseWater", 0));
+		_baseValues.put(Stat.EARTH_POWER, set.getDouble("baseEarth", 0));
+		_baseValues.put(Stat.HOLY_POWER, set.getDouble("baseHoly", 0));
+		_baseValues.put(Stat.DARK_POWER, set.getDouble("baseDark", 0));
 		
 		// Defense
-		_baseValues.put(Stats.FIRE_RES, set.getDouble("baseFireRes", 0));
-		_baseValues.put(Stats.WIND_RES, set.getDouble("baseWindRes", 0));
-		_baseValues.put(Stats.WATER_RES, set.getDouble("baseWaterRes", 0));
-		_baseValues.put(Stats.EARTH_RES, set.getDouble("baseEarthRes", 0));
-		_baseValues.put(Stats.HOLY_RES, set.getDouble("baseHolyRes", 0));
-		_baseValues.put(Stats.DARK_RES, set.getDouble("baseDarkRes", 0));
-		_baseValues.put(Stats.BASE_ATTRIBUTE_RES, set.getDouble("baseElementRes", 0));
+		_baseValues.put(Stat.FIRE_RES, set.getDouble("baseFireRes", 0));
+		_baseValues.put(Stat.WIND_RES, set.getDouble("baseWindRes", 0));
+		_baseValues.put(Stat.WATER_RES, set.getDouble("baseWaterRes", 0));
+		_baseValues.put(Stat.EARTH_RES, set.getDouble("baseEarthRes", 0));
+		_baseValues.put(Stat.HOLY_RES, set.getDouble("baseHolyRes", 0));
+		_baseValues.put(Stat.DARK_RES, set.getDouble("baseDarkRes", 0));
+		_baseValues.put(Stat.BASE_ATTRIBUTE_RES, set.getDouble("baseElementRes", 0));
 		
 		// Geometry
 		_fCollisionHeight = set.getDouble("collision_height", 0);
@@ -124,23 +124,23 @@ public class CreatureTemplate extends ListenersContainer
 		_collisionHeight = (int) _fCollisionHeight;
 		
 		// Speed
-		_baseValues.put(Stats.RUN_SPEED, set.getDouble("baseRunSpd", 120));
-		_baseValues.put(Stats.WALK_SPEED, set.getDouble("baseWalkSpd", 50));
+		_baseValues.put(Stat.RUN_SPEED, set.getDouble("baseRunSpd", 120));
+		_baseValues.put(Stat.WALK_SPEED, set.getDouble("baseWalkSpd", 50));
 		
 		// Swimming
-		_baseValues.put(Stats.SWIM_RUN_SPEED, set.getDouble("baseSwimRunSpd", 120));
-		_baseValues.put(Stats.SWIM_WALK_SPEED, set.getDouble("baseSwimWalkSpd", 50));
+		_baseValues.put(Stat.SWIM_RUN_SPEED, set.getDouble("baseSwimRunSpd", 120));
+		_baseValues.put(Stat.SWIM_WALK_SPEED, set.getDouble("baseSwimWalkSpd", 50));
 		
 		// Flying
-		_baseValues.put(Stats.FLY_RUN_SPEED, set.getDouble("baseFlyRunSpd", 120));
-		_baseValues.put(Stats.FLY_WALK_SPEED, set.getDouble("baseFlyWalkSpd", 50));
+		_baseValues.put(Stat.FLY_RUN_SPEED, set.getDouble("baseFlyRunSpd", 120));
+		_baseValues.put(Stat.FLY_WALK_SPEED, set.getDouble("baseFlyWalkSpd", 50));
 		
 		// Attack type
 		_baseAttackType = set.getEnum("baseAtkType", WeaponType.class, WeaponType.FIST);
 		
 		// Basic property
-		_baseValues.put(Stats.ABNORMAL_RESIST_PHYSICAL, set.getDouble("physicalAbnormalResist", 10));
-		_baseValues.put(Stats.ABNORMAL_RESIST_MAGICAL, set.getDouble("magicAbnormalResist", 10));
+		_baseValues.put(Stat.ABNORMAL_RESIST_PHYSICAL, set.getDouble("physicalAbnormalResist", 10));
+		_baseValues.put(Stat.ABNORMAL_RESIST_MAGICAL, set.getDouble("magicAbnormalResist", 10));
 	}
 	
 	/**
@@ -148,7 +148,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseSTR()
 	{
-		return _baseValues.getOrDefault(Stats.STAT_STR, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.STAT_STR, 0d).intValue();
 	}
 	
 	/**
@@ -156,7 +156,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseCON()
 	{
-		return _baseValues.getOrDefault(Stats.STAT_CON, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.STAT_CON, 0d).intValue();
 	}
 	
 	/**
@@ -164,7 +164,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseDEX()
 	{
-		return _baseValues.getOrDefault(Stats.STAT_DEX, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.STAT_DEX, 0d).intValue();
 	}
 	
 	/**
@@ -172,7 +172,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseINT()
 	{
-		return _baseValues.getOrDefault(Stats.STAT_INT, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.STAT_INT, 0d).intValue();
 	}
 	
 	/**
@@ -180,7 +180,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseWIT()
 	{
-		return _baseValues.getOrDefault(Stats.STAT_WIT, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.STAT_WIT, 0d).intValue();
 	}
 	
 	/**
@@ -188,7 +188,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseMEN()
 	{
-		return _baseValues.getOrDefault(Stats.STAT_MEN, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.STAT_MEN, 0d).intValue();
 	}
 	
 	/**
@@ -196,7 +196,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseLUC()
 	{
-		return _baseValues.getOrDefault(Stats.STAT_LUC, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.STAT_LUC, 0d).intValue();
 	}
 	
 	/**
@@ -204,7 +204,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseCHA()
 	{
-		return _baseValues.getOrDefault(Stats.STAT_CHA, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.STAT_CHA, 0d).intValue();
 	}
 	
 	/**
@@ -212,7 +212,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public float getBaseHpMax()
 	{
-		return _baseValues.getOrDefault(Stats.MAX_HP, 0d).floatValue();
+		return _baseValues.getOrDefault(Stat.MAX_HP, 0d).floatValue();
 	}
 	
 	/**
@@ -220,7 +220,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public float getBaseCpMax()
 	{
-		return _baseValues.getOrDefault(Stats.MAX_CP, 0d).floatValue();
+		return _baseValues.getOrDefault(Stat.MAX_CP, 0d).floatValue();
 	}
 	
 	/**
@@ -228,7 +228,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public float getBaseMpMax()
 	{
-		return _baseValues.getOrDefault(Stats.MAX_MP, 0d).floatValue();
+		return _baseValues.getOrDefault(Stat.MAX_MP, 0d).floatValue();
 	}
 	
 	/**
@@ -236,7 +236,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public float getBaseHpReg()
 	{
-		return _baseValues.getOrDefault(Stats.REGENERATE_HP_RATE, 0d).floatValue();
+		return _baseValues.getOrDefault(Stat.REGENERATE_HP_RATE, 0d).floatValue();
 	}
 	
 	/**
@@ -244,7 +244,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public float getBaseMpReg()
 	{
-		return _baseValues.getOrDefault(Stats.REGENERATE_MP_RATE, 0d).floatValue();
+		return _baseValues.getOrDefault(Stat.REGENERATE_MP_RATE, 0d).floatValue();
 	}
 	
 	/**
@@ -252,7 +252,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseFire()
 	{
-		return _baseValues.getOrDefault(Stats.FIRE_POWER, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.FIRE_POWER, 0d).intValue();
 	}
 	
 	/**
@@ -260,7 +260,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseWind()
 	{
-		return _baseValues.getOrDefault(Stats.WIND_POWER, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.WIND_POWER, 0d).intValue();
 	}
 	
 	/**
@@ -268,7 +268,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseWater()
 	{
-		return _baseValues.getOrDefault(Stats.WATER_POWER, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.WATER_POWER, 0d).intValue();
 	}
 	
 	/**
@@ -276,7 +276,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseEarth()
 	{
-		return _baseValues.getOrDefault(Stats.EARTH_POWER, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.EARTH_POWER, 0d).intValue();
 	}
 	
 	/**
@@ -284,7 +284,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseHoly()
 	{
-		return _baseValues.getOrDefault(Stats.HOLY_POWER, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.HOLY_POWER, 0d).intValue();
 	}
 	
 	/**
@@ -292,7 +292,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseDark()
 	{
-		return _baseValues.getOrDefault(Stats.DARK_POWER, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.DARK_POWER, 0d).intValue();
 	}
 	
 	/**
@@ -300,7 +300,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public double getBaseFireRes()
 	{
-		return _baseValues.getOrDefault(Stats.FIRE_RES, 0d);
+		return _baseValues.getOrDefault(Stat.FIRE_RES, 0d);
 	}
 	
 	/**
@@ -308,7 +308,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public double getBaseWindRes()
 	{
-		return _baseValues.getOrDefault(Stats.WIND_RES, 0d);
+		return _baseValues.getOrDefault(Stat.WIND_RES, 0d);
 	}
 	
 	/**
@@ -316,7 +316,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public double getBaseWaterRes()
 	{
-		return _baseValues.getOrDefault(Stats.WATER_RES, 0d);
+		return _baseValues.getOrDefault(Stat.WATER_RES, 0d);
 	}
 	
 	/**
@@ -324,7 +324,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public double getBaseEarthRes()
 	{
-		return _baseValues.getOrDefault(Stats.EARTH_RES, 0d);
+		return _baseValues.getOrDefault(Stat.EARTH_RES, 0d);
 	}
 	
 	/**
@@ -332,7 +332,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public double getBaseHolyRes()
 	{
-		return _baseValues.getOrDefault(Stats.HOLY_RES, 0d);
+		return _baseValues.getOrDefault(Stat.HOLY_RES, 0d);
 	}
 	
 	/**
@@ -340,7 +340,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public double getBaseDarkRes()
 	{
-		return _baseValues.getOrDefault(Stats.DARK_RES, 0d);
+		return _baseValues.getOrDefault(Stat.DARK_RES, 0d);
 	}
 	
 	/**
@@ -348,7 +348,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public double getBaseElementRes()
 	{
-		return _baseValues.getOrDefault(Stats.BASE_ATTRIBUTE_RES, 0d);
+		return _baseValues.getOrDefault(Stat.BASE_ATTRIBUTE_RES, 0d);
 	}
 	
 	/**
@@ -356,7 +356,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBasePAtk()
 	{
-		return _baseValues.getOrDefault(Stats.PHYSICAL_ATTACK, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.PHYSICAL_ATTACK, 0d).intValue();
 	}
 	
 	/**
@@ -364,7 +364,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseMAtk()
 	{
-		return _baseValues.getOrDefault(Stats.MAGIC_ATTACK, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.MAGIC_ATTACK, 0d).intValue();
 	}
 	
 	/**
@@ -372,7 +372,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBasePDef()
 	{
-		return _baseValues.getOrDefault(Stats.PHYSICAL_DEFENCE, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.PHYSICAL_DEFENCE, 0d).intValue();
 	}
 	
 	/**
@@ -380,7 +380,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseMDef()
 	{
-		return _baseValues.getOrDefault(Stats.MAGICAL_DEFENCE, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.MAGICAL_DEFENCE, 0d).intValue();
 	}
 	
 	/**
@@ -388,7 +388,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBasePAtkSpd()
 	{
-		return _baseValues.getOrDefault(Stats.PHYSICAL_ATTACK_SPEED, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.PHYSICAL_ATTACK_SPEED, 0d).intValue();
 	}
 	
 	/**
@@ -396,7 +396,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseMAtkSpd()
 	{
-		return _baseValues.getOrDefault(Stats.MAGIC_ATTACK_SPEED, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.MAGIC_ATTACK_SPEED, 0d).intValue();
 	}
 	
 	/**
@@ -404,7 +404,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getRandomDamage()
 	{
-		return _baseValues.getOrDefault(Stats.RANDOM_DAMAGE, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.RANDOM_DAMAGE, 0d).intValue();
 	}
 	
 	/**
@@ -412,7 +412,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseShldDef()
 	{
-		return _baseValues.getOrDefault(Stats.SHIELD_DEFENCE, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.SHIELD_DEFENCE, 0d).intValue();
 	}
 	
 	/**
@@ -420,7 +420,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseShldRate()
 	{
-		return _baseValues.getOrDefault(Stats.SHIELD_DEFENCE_RATE, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.SHIELD_DEFENCE_RATE, 0d).intValue();
 	}
 	
 	/**
@@ -428,7 +428,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseCritRate()
 	{
-		return _baseValues.getOrDefault(Stats.CRITICAL_RATE, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.CRITICAL_RATE, 0d).intValue();
 	}
 	
 	/**
@@ -436,7 +436,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseMCritRate()
 	{
-		return _baseValues.getOrDefault(Stats.MAGIC_CRITICAL_RATE, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.MAGIC_CRITICAL_RATE, 0d).intValue();
 	}
 	
 	/**
@@ -444,7 +444,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseBreath()
 	{
-		return _baseValues.getOrDefault(Stats.BREATH, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.BREATH, 0d).intValue();
 	}
 	
 	/**
@@ -452,7 +452,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseAbnormalResistPhysical()
 	{
-		return _baseValues.getOrDefault(Stats.ABNORMAL_RESIST_PHYSICAL, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.ABNORMAL_RESIST_PHYSICAL, 0d).intValue();
 	}
 	
 	/**
@@ -460,7 +460,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseAbnormalResistMagical()
 	{
-		return _baseValues.getOrDefault(Stats.ABNORMAL_RESIST_MAGICAL, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.ABNORMAL_RESIST_MAGICAL, 0d).intValue();
 	}
 	
 	/**
@@ -517,7 +517,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseAttackRange()
 	{
-		return _baseValues.getOrDefault(Stats.PHYSICAL_ATTACK_RANGE, 0d).intValue();
+		return _baseValues.getOrDefault(Stat.PHYSICAL_ATTACK_RANGE, 0d).intValue();
 	}
 	
 	/**
@@ -552,7 +552,7 @@ public class CreatureTemplate extends ListenersContainer
 	 * @param defaultValue
 	 * @return
 	 */
-	public double getBaseValue(Stats stat, double defaultValue)
+	public double getBaseValue(Stat stat, double defaultValue)
 	{
 		return _baseValues.getOrDefault(stat, defaultValue);
 	}

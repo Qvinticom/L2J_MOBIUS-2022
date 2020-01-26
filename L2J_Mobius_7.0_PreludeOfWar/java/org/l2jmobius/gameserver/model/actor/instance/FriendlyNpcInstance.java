@@ -57,9 +57,9 @@ public class FriendlyNpcInstance extends Attackable
 	}
 	
 	@Override
-	public void setAutoAttackable(boolean state)
+	public void setAutoAttackable(boolean value)
 	{
-		_isAutoAttackable = state;
+		_isAutoAttackable = value;
 	}
 	
 	@Override
@@ -149,16 +149,16 @@ public class FriendlyNpcInstance extends Attackable
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val, PlayerInstance player)
+	public String getHtmlPath(int npcId, int value, PlayerInstance player)
 	{
 		String pom = "";
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
 		}
 		else
 		{
-			pom = npcId + "-" + val;
+			pom = npcId + "-" + value;
 		}
 		return "data/html/default/" + pom + ".htm";
 	}

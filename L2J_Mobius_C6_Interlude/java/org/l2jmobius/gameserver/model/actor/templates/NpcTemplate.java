@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 
 /**
  * This cl contains all generic data of a Spawn object.<BR>
@@ -124,7 +124,7 @@ public class NpcTemplate extends CreatureTemplate
 	
 	private final List<ClassId> _teachInfo = new ArrayList<>();
 	private final Map<Integer, Skill> _skills = new HashMap<>();
-	private final Map<Stats, Double> _vulnerabilities = new EnumMap<>(Stats.class);
+	private final Map<Stat, Double> _vulnerabilities = new EnumMap<>(Stat.class);
 	// contains a list of quests for each event type (questStart, questAttack, questKill, etc)
 	private final Map<EventType, List<Quest>> _questEvents = new EnumMap<>(EventType.class);
 	
@@ -224,7 +224,7 @@ public class NpcTemplate extends CreatureTemplate
 		_skills.put(skill.getId(), skill);
 	}
 	
-	public void addVulnerability(Stats id, double vuln)
+	public void addVulnerability(Stat id, double vuln)
 	{
 		_vulnerabilities.put(id, vuln);
 	}
@@ -234,7 +234,7 @@ public class NpcTemplate extends CreatureTemplate
 		return _type;
 	}
 	
-	public double getVulnerability(Stats id)
+	public double getVulnerability(Stat id)
 	{
 		if (_vulnerabilities.get(id) == null)
 		{
@@ -244,7 +244,7 @@ public class NpcTemplate extends CreatureTemplate
 		return _vulnerabilities.get(id);
 	}
 	
-	public double removeVulnerability(Stats id)
+	public double removeVulnerability(Stat id)
 	{
 		return _vulnerabilities.remove(id);
 	}

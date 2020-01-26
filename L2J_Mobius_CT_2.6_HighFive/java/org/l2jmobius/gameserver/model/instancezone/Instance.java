@@ -146,11 +146,11 @@ public class Instance
 	
 	/**
 	 * Sets the status for the instance for summon friend type skills
-	 * @param b
+	 * @param value
 	 */
-	public void setAllowSummon(boolean b)
+	public void setAllowSummon(boolean value)
 	{
-		_allowSummon = b;
+		_allowSummon = value;
 	}
 	
 	/**
@@ -166,7 +166,7 @@ public class Instance
 	 * Sets PvP zone status of the instance
 	 * @param value
 	 */
-	public void setIsPvP(boolean value)
+	public void setPvP(boolean value)
 	{
 		_isPvP = value;
 	}
@@ -557,7 +557,7 @@ public class Instance
 					a = n.getAttributes().getNamedItem("val");
 					if (a != null)
 					{
-						setIsPvP(Boolean.parseBoolean(a.getNodeValue()));
+						setPvP(Boolean.parseBoolean(a.getNodeValue()));
 					}
 					break;
 				}

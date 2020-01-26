@@ -47,11 +47,11 @@ public class GustSpiral extends AbstractNpcAI
 			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.MY_WIND_BARRIER_HOW_ONLY_THE_ERTHEIA_CAN_WAIT_UNLESS_YOU_ARE);
 			}
-			npc.setIsInvul(false);
+			npc.setInvul(false);
 		}
 		else
 		{
-			npc.setIsInvul(true);
+			npc.setInvul(true);
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}

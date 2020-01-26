@@ -412,7 +412,7 @@ public class TvT implements EventTask
 	 * Gets the _interval between matches.
 	 * @return the _intervalBetweenMatches
 	 */
-	public static long get_intervalBetweenMatches()
+	public static long getIntervalBetweenMatches()
 	{
 		return _intervalBetweenMatches;
 	}
@@ -580,7 +580,7 @@ public class TvT implements EventTask
 		
 		for (Castle castle : CastleManager.getInstance().getCastles())
 		{
-			if ((castle != null) && (castle.getSiege() != null) && castle.getSiege().getIsInProgress())
+			if ((castle != null) && (castle.getSiege() != null) && castle.getSiege().isInProgress())
 			{
 				return false;
 			}

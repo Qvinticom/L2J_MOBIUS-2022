@@ -202,7 +202,7 @@ public class PetInstance extends Summon
 	}
 	
 	/**
-	 * Instantiates a new l2 pet instance.
+	 * Instantiates a new pet instance.
 	 * @param objectId the object id
 	 * @param template the template
 	 * @param owner the owner

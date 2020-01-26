@@ -55,9 +55,9 @@ public class EndScenePlayer implements IClientIncomingPacket
 			return;
 		}
 		player.stopMovie();
-		player.setIsTeleporting(true, false); // avoid to get player removed from World
+		player.setTeleporting(true, false); // avoid to get player removed from World
 		player.decayMe();
 		player.spawnMe(player.getX(), player.getY(), player.getZ());
-		player.setIsTeleporting(false, false);
+		player.setTeleporting(false, false);
 	}
 }

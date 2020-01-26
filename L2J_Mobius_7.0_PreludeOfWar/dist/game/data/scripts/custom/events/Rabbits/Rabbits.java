@@ -256,7 +256,7 @@ public class Rabbits extends Event
 		final Npc npc = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
 		if (npc.getId() == CHEST)
 		{
-			npc.setIsImmobilized(true);
+			npc.setImmobilized(true);
 			npc.disableCoreAI(true);
 			npc.setInvisible(true);
 		}

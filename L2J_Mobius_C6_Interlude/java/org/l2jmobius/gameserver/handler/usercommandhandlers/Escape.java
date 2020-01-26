@@ -68,7 +68,7 @@ public class Escape implements IUserCommandHandler
 		}
 		
 		// Check to see if the current player is in DM Event.
-		if (player._inEventDM && DM.is_started())
+		if (player._inEventDM && DM.hasStarted())
 		{
 			player.sendMessage("You may not use an escape skill in DM.");
 			return false;
@@ -171,7 +171,7 @@ public class Escape implements IUserCommandHandler
 				return;
 			}
 			
-			_player.setIsIn7sDungeon(false);
+			_player.setIn7sDungeon(false);
 			_player.enableAllSkills();
 			
 			try

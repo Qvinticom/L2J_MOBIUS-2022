@@ -203,7 +203,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, Min lvl must be lower then Max");
 						return false;
 					}
-					if (CTF.set_minlvl(lvl))
+					if (CTF.setMinLvl(lvl))
 					{
 						showMainPage(activeChar);
 						return true;
@@ -234,7 +234,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, Max lvl must be higher then Min");
 						return false;
 					}
-					if (CTF.setMaxlvl(lvl))
+					if (CTF.setMaxLvl(lvl))
 					{
 						showMainPage(activeChar);
 						return true;
@@ -336,7 +336,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_reward <reward_id>");
 						return false;
 					}
-					if (CTF.set_rewardId(id))
+					if (CTF.setRewardId(id))
 					{
 						showMainPage(activeChar);
 						return true;
@@ -361,7 +361,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_reward_amount <reward_amount>");
 						return false;
 					}
-					if (CTF.set_rewardAmount(amount))
+					if (CTF.setRewardAmount(amount))
 					{
 						showMainPage(activeChar);
 						return true;
@@ -754,18 +754,18 @@ public class AdminCTFEngine implements IAdminCommandHandler
 		
 		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + CTF.getNpcId() + " on pos " + npcLoc.getX() + "," + npcLoc.getY() + "," + npcLoc.getZ() + "</font><br1>");
 		replyMSG.append("<button value=\"Tele->NPC\" action=\"bypass -h admin_ctf_tele_npc\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"><br>");
-		replyMSG.append("Reward ID:&nbsp;<font color=\"00FF00\">" + CTF.get_rewardId() + "</font><br1>");
-		if (ItemTable.getInstance().getTemplate(CTF.get_rewardId()) != null)
+		replyMSG.append("Reward ID:&nbsp;<font color=\"00FF00\">" + CTF.getRewardId() + "</font><br1>");
+		if (ItemTable.getInstance().getTemplate(CTF.getRewardId()) != null)
 		{
-			replyMSG.append("Reward Item:&nbsp;<font color=\"00FF00\">" + ItemTable.getInstance().getTemplate(CTF.get_rewardId()).getName() + "</font><br1>");
+			replyMSG.append("Reward Item:&nbsp;<font color=\"00FF00\">" + ItemTable.getInstance().getTemplate(CTF.getRewardId()).getName() + "</font><br1>");
 		}
 		else
 		{
 			replyMSG.append("Reward Item:&nbsp;<font color=\"00FF00\">(unknown)</font><br1>");
 		}
-		replyMSG.append("Reward Amount:&nbsp;<font color=\"00FF00\">" + CTF.get_rewardAmount() + "</font><br>");
-		replyMSG.append("Min lvl:&nbsp;<font color=\"00FF00\">" + CTF.get_minlvl() + "</font><br1>");
-		replyMSG.append("Max lvl:&nbsp;<font color=\"00FF00\">" + CTF.getMaxlvl() + "</font><br><br>");
+		replyMSG.append("Reward Amount:&nbsp;<font color=\"00FF00\">" + CTF.getRewardAmount() + "</font><br>");
+		replyMSG.append("Min lvl:&nbsp;<font color=\"00FF00\">" + CTF.getMinLvl() + "</font><br1>");
+		replyMSG.append("Max lvl:&nbsp;<font color=\"00FF00\">" + CTF.getMaxLvl() + "</font><br><br>");
 		replyMSG.append("Min Players:&nbsp;<font color=\"00FF00\">" + CTF.getMinPlayers() + "</font><br1>");
 		replyMSG.append("Max Players:&nbsp;<font color=\"00FF00\">" + CTF.getMaxPlayers() + "</font><br>");
 		replyMSG.append("Joining Time:&nbsp;<font color=\"00FF00\">" + CTF.getJoinTime() + "</font><br1>");

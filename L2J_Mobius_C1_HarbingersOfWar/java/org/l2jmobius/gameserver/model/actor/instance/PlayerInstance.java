@@ -1031,19 +1031,19 @@ public class PlayerInstance extends Creature
 		broadcastPacket(userInfo);
 	}
 	
-	public void setPartyMatchingAutomaticRegistration(boolean b)
+	public void setPartyMatchingAutomaticRegistration(boolean value)
 	{
-		_partyMatchingAutomaticRegistration = b;
+		_partyMatchingAutomaticRegistration = value;
 	}
 	
-	public void setPartyMatchingShowLevel(boolean b)
+	public void setPartyMatchingShowLevel(boolean value)
 	{
-		_partyMatchingShowLevel = b;
+		_partyMatchingShowLevel = value;
 	}
 	
-	public void setPartyMatchingShowClass(boolean b)
+	public void setPartyMatchingShowClass(boolean value)
 	{
-		_partyMatchingShowClass = b;
+		_partyMatchingShowClass = value;
 	}
 	
 	public void setPartyMatchingMemo(String memo)
@@ -1464,9 +1464,9 @@ public class PlayerInstance extends Creature
 		return _clan;
 	}
 	
-	public void setIsClanLeader(boolean b)
+	public void setClanLeader(boolean value)
 	{
-		_clanLeader = b;
+		_clanLeader = value;
 	}
 	
 	public boolean isClanLeader()
@@ -1745,9 +1745,9 @@ public class PlayerInstance extends Creature
 		_allSkillsDisabled = false;
 	}
 	
-	public void setIsInvul(boolean b)
+	public void setInvul(boolean value)
 	{
-		_isInvul = b;
+		_isInvul = value;
 	}
 	
 	public boolean isInvul()
@@ -1785,7 +1785,7 @@ public class PlayerInstance extends Creature
 		return _party;
 	}
 	
-	public void setIsGM(boolean status)
+	public void setGM(boolean status)
 	{
 		_isGm = status;
 	}

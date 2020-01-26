@@ -221,9 +221,9 @@ public class LoginClient extends MMOClient<MMOConnection<LoginClient>>
 		return _joinedGS;
 	}
 	
-	public void setJoinedGS(boolean val)
+	public void setJoinedGS(boolean value)
 	{
-		_joinedGS = val;
+		_joinedGS = value;
 	}
 	
 	public void setSessionKey(SessionKey sessionKey)

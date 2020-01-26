@@ -20,17 +20,17 @@ import java.util.OptionalDouble;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.IStatsFunction;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.IStatFunction;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author UnAfraid
  */
-public class PAttackSpeedFinalizer implements IStatsFunction
+public class PAttackSpeedFinalizer implements IStatFunction
 {
 	@Override
-	public double calc(Creature creature, OptionalDouble base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stat stat)
 	{
 		throwIfPresent(base);
 		double baseValue = calcWeaponBaseValue(creature, stat);
@@ -38,12 +38,12 @@ public class PAttackSpeedFinalizer implements IStatsFunction
 		{
 			baseValue *= Config.CHAMPION_SPD_ATK;
 		}
-		final double dexBonus = creature.getDEX() > 0 ? BaseStats.DEX.calcBonus(creature) : 1.;
+		final double dexBonus = creature.getDEX() > 0 ? BaseStat.DEX.calcBonus(creature) : 1.;
 		baseValue *= dexBonus;
 		return validateValue(creature, defaultValue(creature, stat, baseValue), 1, Config.MAX_PATK_SPEED);
 	}
 	
-	private double defaultValue(Creature creature, Stats stat, double baseValue)
+	private double defaultValue(Creature creature, Stat stat, double baseValue)
 	{
 		final double mul = Math.max(creature.getStat().getMul(stat), 0.7);
 		final double add = creature.getStat().getAdd(stat);

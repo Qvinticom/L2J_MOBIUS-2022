@@ -25,19 +25,19 @@ import org.l2jmobius.gameserver.model.PetLevelData;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.IStatsFunction;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.IStatFunction;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.type.SwampZone;
 
 /**
  * @author UnAfraid
  */
-public class SpeedFinalizer implements IStatsFunction
+public class SpeedFinalizer implements IStatFunction
 {
 	@Override
-	public double calc(Creature creature, OptionalDouble base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stat stat)
 	{
 		throwIfPresent(base);
 		
@@ -48,15 +48,15 @@ public class SpeedFinalizer implements IStatsFunction
 			baseValue += calcEnchantBodyPart(creature, Item.SLOT_FEET);
 		}
 		
-		final byte speedStat = (byte) creature.getStat().getAdd(Stats.STAT_BONUS_SPEED, -1);
-		if ((speedStat >= 0) && (speedStat < BaseStats.values().length))
+		final byte speedStat = (byte) creature.getStat().getAdd(Stat.STAT_BONUS_SPEED, -1);
+		if ((speedStat >= 0) && (speedStat < BaseStat.values().length))
 		{
-			final BaseStats baseStat = BaseStats.values()[speedStat];
+			final BaseStat baseStat = BaseStat.values()[speedStat];
 			final double bonusDex = Math.max(0, baseStat.calcValue(creature) - 55);
 			baseValue += bonusDex;
 		}
 		
-		return validateValue(creature, Stats.defaultValue(creature, stat, baseValue), 1, Config.MAX_RUN_SPEED);
+		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, Config.MAX_RUN_SPEED);
 	}
 	
 	@Override
@@ -70,7 +70,7 @@ public class SpeedFinalizer implements IStatsFunction
 		return (0.6 * Math.max(enchantLevel - 3, 0)) + (0.6 * Math.max(enchantLevel - 6, 0));
 	}
 	
-	private double getBaseSpeed(Creature creature, Stats stat)
+	private double getBaseSpeed(Creature creature, Stat stat)
 	{
 		double baseValue = calcWeaponPlusBaseValue(creature, stat);
 		if (creature.isPlayer())

@@ -138,11 +138,11 @@ public class WalkInfo
 	}
 	
 	/**
-	 * @param val
+	 * @param value
 	 */
-	public void setBlocked(boolean val)
+	public void setBlocked(boolean value)
 	{
-		_blocked = val;
+		_blocked = value;
 	}
 	
 	/**
@@ -154,11 +154,11 @@ public class WalkInfo
 	}
 	
 	/**
-	 * @param val
+	 * @param value
 	 */
-	public void setSuspended(boolean val)
+	public void setSuspended(boolean value)
 	{
-		_suspended = val;
+		_suspended = value;
 	}
 	
 	/**
@@ -170,11 +170,11 @@ public class WalkInfo
 	}
 	
 	/**
-	 * @param val
+	 * @param value
 	 */
-	public void setStoppedByAttack(boolean val)
+	public void setStoppedByAttack(boolean value)
 	{
-		_stoppedByAttack = val;
+		_stoppedByAttack = value;
 	}
 	
 	/**
@@ -194,11 +194,11 @@ public class WalkInfo
 	}
 	
 	/**
-	 * @param val
+	 * @param value
 	 */
-	public void setLastAction(long val)
+	public void setLastAction(long value)
 	{
-		_lastActionTime = val;
+		_lastActionTime = value;
 	}
 	
 	/**
@@ -210,11 +210,11 @@ public class WalkInfo
 	}
 	
 	/**
-	 * @param val walking check task.
+	 * @param task walking check task.
 	 */
-	public void setWalkCheckTask(ScheduledFuture<?> val)
+	public void setWalkCheckTask(ScheduledFuture<?> task)
 	{
-		_walkCheckTask = val;
+		_walkCheckTask = task;
 	}
 	
 	@Override

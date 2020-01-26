@@ -182,7 +182,7 @@ public class Npc extends Creature
 		_currentCollisionHeight = getTemplate().getfCollisionHeight();
 		_currentCollisionRadius = getTemplate().getfCollisionRadius();
 		
-		setIsFlying(template.isFlying());
+		setFlying(template.isFlying());
 		initStatusUpdateCache();
 	}
 	
@@ -211,11 +211,11 @@ public class Npc extends Creature
 	
 	/**
 	 * Switches random Animation state into val.
-	 * @param val needed state of random animation
+	 * @param value needed state of random animation
 	 */
-	public void setRandomAnimation(boolean val)
+	public void setRandomAnimation(boolean value)
 	{
-		_isRandomAnimationEnabled = val;
+		_isRandomAnimationEnabled = value;
 	}
 	
 	/**
@@ -646,21 +646,21 @@ public class Npc extends Creature
 	 * <li>if the file doesn't exist on the server : <B>data/html/npcdefault.htm</B> (message : "I have nothing to say to you")</li>
 	 * </ul>
 	 * @param npcId The Identifier of the NpcInstance whose text must be display
-	 * @param val The number of the page to display
+	 * @param value The number of the page to display
 	 * @param player The player that speaks to this NPC
 	 * @return the pathfile of the selected HTML file in function of the npcId and of the page number.
 	 */
-	public String getHtmlPath(int npcId, int val, PlayerInstance player)
+	public String getHtmlPath(int npcId, int value, PlayerInstance player)
 	{
 		String pom = "";
 		
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
 		}
 		else
 		{
-			pom = npcId + "-" + val;
+			pom = npcId + "-" + value;
 		}
 		
 		final String temp = "data/html/default/" + pom + ".htm";
@@ -715,9 +715,9 @@ public class Npc extends Creature
 	 * <li>Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet</li>
 	 * </ul>
 	 * @param player The PlayerInstance that talk with the NpcInstance
-	 * @param val The number of the page of the NpcInstance to display
+	 * @param value The number of the page of the NpcInstance to display
 	 */
-	public void showChatWindow(PlayerInstance player, int val)
+	public void showChatWindow(PlayerInstance player, int value)
 	{
 		if (!_isTalkable)
 		{
@@ -757,7 +757,7 @@ public class Npc extends Creature
 			}
 		}
 		
-		if (getTemplate().isType("Auctioneer") && (val == 0))
+		if (getTemplate().isType("Auctioneer") && (value == 0))
 		{
 			return;
 		}
@@ -775,7 +775,7 @@ public class Npc extends Creature
 				}
 				else
 				{
-					filename = (getHtmlPath(npcId, val, player));
+					filename = (getHtmlPath(npcId, value, player));
 				}
 				break;
 			}
@@ -791,7 +791,7 @@ public class Npc extends Creature
 				}
 				else
 				{
-					filename = (getHtmlPath(npcId, val, player));
+					filename = (getHtmlPath(npcId, value, player));
 				}
 				break;
 			}
@@ -803,7 +803,7 @@ public class Npc extends Creature
 				}
 				else
 				{
-					filename = (getHtmlPath(npcId, val, player));
+					filename = (getHtmlPath(npcId, value, player));
 				}
 				break;
 			}
@@ -814,7 +814,7 @@ public class Npc extends Creature
 					return;
 				}
 				// Get the text of the selected HTML file in function of the npcId and of the page number
-				filename = (getHtmlPath(npcId, val, player));
+				filename = (getHtmlPath(npcId, value, player));
 				break;
 			}
 		}
@@ -1058,7 +1058,7 @@ public class Npc extends Creature
 	public void onRespawn()
 	{
 		// Make it alive
-		setIsDead(false);
+		setDead(false);
 		
 		// Stop all effects and recalculate stats without broadcasting.
 		getEffectList().stopAllEffects(false);
@@ -1309,18 +1309,18 @@ public class Npc extends Creature
 		return getTemplate().getAIType();
 	}
 	
-	public void setDisplayEffect(int val)
+	public void setDisplayEffect(int value)
 	{
-		if (val != _displayEffect)
+		if (value != _displayEffect)
 		{
-			_displayEffect = val;
-			broadcastPacket(new ExChangeNpcState(getObjectId(), val));
+			_displayEffect = value;
+			broadcastPacket(new ExChangeNpcState(getObjectId(), value));
 		}
 	}
 	
-	public boolean hasDisplayEffect(int val)
+	public boolean hasDisplayEffect(int value)
 	{
-		return _displayEffect == val;
+		return _displayEffect == value;
 	}
 	
 	public int getDisplayEffect()
@@ -1416,21 +1416,21 @@ public class Npc extends Creature
 	
 	/**
 	 * Short wrapper for backward compatibility. Stores script value
-	 * @param val value to store
+	 * @param value value to store
 	 */
-	public void setScriptValue(int val)
+	public void setScriptValue(int value)
 	{
-		getVariables().set("SCRIPT_VAL", val);
+		getVariables().set("SCRIPT_VAL", value);
 	}
 	
 	/**
 	 * Short wrapper for backward compatibility.
-	 * @param val value to store
+	 * @param value value to store
 	 * @return {@code true} if stored script value equals given value, {@code false} otherwise
 	 */
-	public boolean isScriptValue(int val)
+	public boolean isScriptValue(int value)
 	{
-		return getVariables().getInt("SCRIPT_VAL") == val;
+		return getVariables().getInt("SCRIPT_VAL") == value;
 	}
 	
 	/**
@@ -1599,11 +1599,11 @@ public class Npc extends Creature
 	
 	/**
 	 * Sets if the players can talk with this npc or not
-	 * @param val {@code true} if the players can talk, {@code false} otherwise
+	 * @param value {@code true} if the players can talk, {@code false} otherwise
 	 */
-	public void setIsTalkable(boolean val)
+	public void setTalkable(boolean value)
 	{
-		_isTalkable = val;
+		_isTalkable = value;
 	}
 	
 	/**

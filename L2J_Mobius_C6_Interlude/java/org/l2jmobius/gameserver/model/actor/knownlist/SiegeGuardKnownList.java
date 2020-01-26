@@ -50,7 +50,7 @@ public class SiegeGuardKnownList extends AttackableKnownList
 		}
 		
 		// Check if siege is in progress
-		if ((getActiveChar().getCastle() != null) && getActiveChar().getCastle().getSiege().getIsInProgress())
+		if ((getActiveChar().getCastle() != null) && getActiveChar().getCastle().getSiege().isInProgress())
 		{
 			PlayerInstance player = null;
 			

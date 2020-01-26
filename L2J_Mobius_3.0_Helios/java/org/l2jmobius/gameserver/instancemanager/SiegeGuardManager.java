@@ -201,7 +201,7 @@ public class SiegeGuardManager
 			npc.setHeading(pos.getHeading());
 			npc.spawnMe(pos.getX(), pos.getY(), (pos.getZ() + 20));
 			npc.scheduleDespawn(3000);
-			npc.setIsImmobilized(holder.isStationary());
+			npc.setImmobilized(holder.isStationary());
 		}
 	}
 	
@@ -343,7 +343,7 @@ public class SiegeGuardManager
 						continue;
 					}
 					
-					spawn.getLastSpawn().setIsImmobilized(holder.isStationary());
+					spawn.getLastSpawn().setImmobilized(holder.isStationary());
 				}
 			}
 		}

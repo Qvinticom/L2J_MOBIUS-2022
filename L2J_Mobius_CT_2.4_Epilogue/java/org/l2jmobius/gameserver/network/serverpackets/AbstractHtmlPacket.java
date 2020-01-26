@@ -111,24 +111,24 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 		replace(pattern, String.valueOf(value));
 	}
 	
-	public void replace(String pattern, boolean val)
+	public void replace(String pattern, boolean value)
 	{
-		replace(pattern, String.valueOf(val));
+		replace(pattern, String.valueOf(value));
 	}
 	
-	public void replace(String pattern, int val)
+	public void replace(String pattern, int value)
 	{
-		replace(pattern, String.valueOf(val));
+		replace(pattern, String.valueOf(value));
 	}
 	
-	public void replace(String pattern, long val)
+	public void replace(String pattern, long value)
 	{
-		replace(pattern, String.valueOf(val));
+		replace(pattern, String.valueOf(value));
 	}
 	
-	public void replace(String pattern, double val)
+	public void replace(String pattern, double value)
 	{
-		replace(pattern, String.valueOf(val));
+		replace(pattern, String.valueOf(value));
 	}
 	
 	@Override

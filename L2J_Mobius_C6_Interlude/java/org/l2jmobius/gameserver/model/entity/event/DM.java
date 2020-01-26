@@ -473,7 +473,7 @@ public class DM implements EventTask
 	 * Checks if is _started.
 	 * @return the _started
 	 */
-	public static boolean is_started()
+	public static boolean hasStarted()
 	{
 		return _started;
 	}
@@ -575,7 +575,7 @@ public class DM implements EventTask
 		
 		for (Castle castle : CastleManager.getInstance().getCastles())
 		{
-			if ((castle != null) && (castle.getSiege() != null) && castle.getSiege().getIsInProgress())
+			if ((castle != null) && (castle.getSiege() != null) && castle.getSiege().isInProgress())
 			{
 				return false;
 			}
@@ -1993,7 +1993,7 @@ public class DM implements EventTask
 	 * Gets the _players spawn location.
 	 * @return the _players spawn location
 	 */
-	public static Location get_playersSpawnLocation()
+	public static Location getPlayersSpawnLocation()
 	{
 		return new Location(_playerX + Rnd.get(Config.DM_SPAWN_OFFSET), _playerY + Rnd.get(Config.DM_SPAWN_OFFSET), _playerZ, 0);
 	}

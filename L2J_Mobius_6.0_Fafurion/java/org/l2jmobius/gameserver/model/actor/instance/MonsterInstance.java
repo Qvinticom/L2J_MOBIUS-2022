@@ -150,9 +150,9 @@ public class MonsterInstance extends Attackable
 		_master = leader;
 	}
 	
-	public void enableMinions(boolean b)
+	public void enableMinions(boolean value)
 	{
-		_enableMinions = b;
+		_enableMinions = value;
 	}
 	
 	public boolean hasMinions()

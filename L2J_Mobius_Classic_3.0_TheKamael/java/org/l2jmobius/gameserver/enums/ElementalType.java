@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.enums;
 
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author JoeAlisson
@@ -82,25 +82,25 @@ public enum ElementalType
 		
 	}
 	
-	public Stats getAttackStat()
+	public Stat getAttackStat()
 	{
 		switch (this)
 		{
 			case EARTH:
 			{
-				return Stats.ELEMENTAL_SPIRIT_EARTH_ATTACK;
+				return Stat.ELEMENTAL_SPIRIT_EARTH_ATTACK;
 			}
 			case WIND:
 			{
-				return Stats.ELEMENTAL_SPIRIT_WIND_ATTACK;
+				return Stat.ELEMENTAL_SPIRIT_WIND_ATTACK;
 			}
 			case FIRE:
 			{
-				return Stats.ELEMENTAL_SPIRIT_FIRE_ATTACK;
+				return Stat.ELEMENTAL_SPIRIT_FIRE_ATTACK;
 			}
 			case WATER:
 			{
-				return Stats.ELEMENTAL_SPIRIT_WATER_ATTACK;
+				return Stat.ELEMENTAL_SPIRIT_WATER_ATTACK;
 			}
 			default:
 			{
@@ -109,25 +109,25 @@ public enum ElementalType
 		}
 	}
 	
-	public Stats getDefenseStat()
+	public Stat getDefenseStat()
 	{
 		switch (this)
 		{
 			case EARTH:
 			{
-				return Stats.ELEMENTAL_SPIRIT_EARTH_DEFENSE;
+				return Stat.ELEMENTAL_SPIRIT_EARTH_DEFENSE;
 			}
 			case WIND:
 			{
-				return Stats.ELEMENTAL_SPIRIT_WIND_DEFENSE;
+				return Stat.ELEMENTAL_SPIRIT_WIND_DEFENSE;
 			}
 			case FIRE:
 			{
-				return Stats.ELEMENTAL_SPIRIT_FIRE_DEFENSE;
+				return Stat.ELEMENTAL_SPIRIT_FIRE_DEFENSE;
 			}
 			case WATER:
 			{
-				return Stats.ELEMENTAL_SPIRIT_WATER_DEFENSE;
+				return Stat.ELEMENTAL_SPIRIT_WATER_DEFENSE;
 			}
 			default:
 			{

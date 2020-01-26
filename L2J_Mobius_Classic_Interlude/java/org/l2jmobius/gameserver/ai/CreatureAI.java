@@ -662,7 +662,7 @@ public class CreatureAI extends AbstractAI
 		
 		if (getActor().isAttackable())
 		{
-			((Attackable) getActor()).setisReturningToSpawnPoint(false);
+			((Attackable) getActor()).setReturningToSpawnPoint(false);
 		}
 		clientStoppedMoving();
 		

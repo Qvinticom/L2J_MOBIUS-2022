@@ -49,10 +49,10 @@ import org.l2jmobius.gameserver.model.entity.event.CTF;
 import org.l2jmobius.gameserver.model.entity.event.DM;
 import org.l2jmobius.gameserver.model.entity.event.TvT;
 import org.l2jmobius.gameserver.model.entity.siege.Siege;
-import org.l2jmobius.gameserver.model.skills.BaseStats;
+import org.l2jmobius.gameserver.model.skills.BaseStat;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.model.skills.Formulas;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.model.skills.conditions.Condition;
 import org.l2jmobius.gameserver.model.skills.effects.EffectCharge;
 import org.l2jmobius.gameserver.model.skills.effects.EffectTemplate;
@@ -454,11 +454,11 @@ public abstract class Skill
 	
 	private final boolean _ispotion;
 	private final int _element;
-	private final BaseStats _saveVs;
+	private final BaseStat _saveVs;
 	
 	private final boolean _isSuicideAttack;
 	
-	private final Stats _stat;
+	private final Stat _stat;
 	
 	private final int _condition;
 	private final int _conditionValue;
@@ -560,7 +560,7 @@ public abstract class Skill
 		_negateId = set.getInt("negateId", 0);
 		_magicLevel = set.getInt("magicLvl", SkillTreeTable.getInstance().getMinSkillLevel(_id, _level));
 		_levelDepend = set.getInt("lvlDepend", 0);
-		_stat = set.getEnum("stat", Stats.class, null);
+		_stat = set.getEnum("stat", Stat.class, null);
 		
 		_skillType = set.getEnum("skillType", SkillType.class);
 		_effectType = set.getEnum("effectType", SkillType.class, null);
@@ -569,7 +569,7 @@ public abstract class Skill
 		_effectLvl = set.getInt("effectLevel", 0);
 		
 		_element = set.getInt("element", 0);
-		_saveVs = set.getEnum("saveVs", BaseStats.class, null);
+		_saveVs = set.getEnum("saveVs", BaseStat.class, null);
 		
 		_condition = set.getInt("condition", 0);
 		_conditionValue = set.getInt("conditionValue", 0);
@@ -735,7 +735,7 @@ public abstract class Skill
 		return _skillType == SkillType.SIGNET_CASTTIME;
 	}
 	
-	public BaseStats getSavevs()
+	public BaseStat getSavevs()
 	{
 		return _saveVs;
 	}
@@ -932,7 +932,7 @@ public abstract class Skill
 	/**
 	 * @return the skill type (ex : BLEED, SLEEP, WATER...).
 	 */
-	public Stats getStat()
+	public Stat getStat()
 	{
 		return _stat;
 	}
@@ -2046,7 +2046,7 @@ public abstract class Skill
 							continue;
 						}
 						// check if allow interference is allowed if player is not on event but target is on event
-						if (((TvT.isStarted() && !Config.TVT_ALLOW_INTERFERENCE) || (CTF.isStarted() && !Config.CTF_ALLOW_INTERFERENCE) || (DM.is_started() && !Config.DM_ALLOW_INTERFERENCE))/* && !player.isGM() */)
+						if (((TvT.isStarted() && !Config.TVT_ALLOW_INTERFERENCE) || (CTF.isStarted() && !Config.CTF_ALLOW_INTERFERENCE) || (DM.hasStarted() && !Config.DM_ALLOW_INTERFERENCE))/* && !player.isGM() */)
 						{
 							if ((partyMember._inEventTvT && !player._inEventTvT) || (!partyMember._inEventTvT && player._inEventTvT))
 							{
@@ -2302,7 +2302,7 @@ public abstract class Skill
 								{
 									// check target is not in a active siege zone
 									final Siege siege = SiegeManager.getInstance().getSiege(newTarget);
-									if ((siege != null) && siege.getIsInProgress())
+									if ((siege != null) && siege.isInProgress())
 									{
 										continue;
 									}

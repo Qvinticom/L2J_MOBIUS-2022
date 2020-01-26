@@ -96,12 +96,12 @@ public abstract class ClanHallSiege
 		_siegeDate = par;
 	}
 	
-	public boolean getIsInProgress()
+	public boolean isInProgress()
 	{
 		return _isInProgress;
 	}
 	
-	public void setIsInProgress(boolean par)
+	public void setInProgress(boolean par)
 	{
 		_isInProgress = par;
 	}

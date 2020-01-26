@@ -411,7 +411,7 @@ public abstract class Summon extends Playable
 		if (isSpawned() && !isDead())
 		{
 			// Prevent adding effects while unsummoning.
-			setIsInvul(true);
+			setInvul(true);
 			
 			abortAttack();
 			abortCast();
@@ -488,9 +488,9 @@ public abstract class Summon extends Playable
 		_attackRange = (range < 36) ? 36 : range;
 	}
 	
-	public void setFollowStatus(boolean state)
+	public void setFollowStatus(boolean value)
 	{
-		_follow = state;
+		_follow = value;
 		if (_follow)
 		{
 			getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, _owner);
@@ -528,7 +528,7 @@ public abstract class Summon extends Playable
 		return null;
 	}
 	
-	public void setRestoreSummon(boolean val)
+	public void setRestoreSummon(boolean value)
 	{
 	}
 	
@@ -701,9 +701,9 @@ public abstract class Summon extends Playable
 	}
 	
 	@Override
-	public void setIsImmobilized(boolean value)
+	public void setImmobilized(boolean value)
 	{
-		super.setIsImmobilized(value);
+		super.setImmobilized(value);
 		
 		if (value)
 		{
@@ -817,18 +817,18 @@ public abstract class Summon extends Playable
 		return _owner;
 	}
 	
-	public void updateAndBroadcastStatus(int val)
+	public void updateAndBroadcastStatus(int value)
 	{
 		if (_owner == null)
 		{
 			return;
 		}
 		
-		sendPacket(new PetInfo(this, val));
+		sendPacket(new PetInfo(this, value));
 		sendPacket(new PetStatusUpdate(this));
 		if (isSpawned())
 		{
-			broadcastNpcInfo(val);
+			broadcastNpcInfo(value);
 		}
 		final Party party = _owner.getParty();
 		if (party != null)
@@ -837,7 +837,7 @@ public abstract class Summon extends Playable
 		}
 	}
 	
-	public void broadcastNpcInfo(int val)
+	public void broadcastNpcInfo(int value)
 	{
 		World.getInstance().forEachVisibleObject(this, PlayerInstance.class, player ->
 		{
@@ -846,7 +846,7 @@ public abstract class Summon extends Playable
 				return;
 			}
 			
-			player.sendPacket(new ExPetInfo(this, player, val));
+			player.sendPacket(new ExPetInfo(this, player, value));
 		});
 	}
 	

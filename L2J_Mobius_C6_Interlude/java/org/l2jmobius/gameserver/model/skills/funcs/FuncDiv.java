@@ -17,13 +17,13 @@
 package org.l2jmobius.gameserver.model.skills.funcs;
 
 import org.l2jmobius.gameserver.model.skills.Env;
-import org.l2jmobius.gameserver.model.skills.Stats;
+import org.l2jmobius.gameserver.model.skills.Stat;
 
 public class FuncDiv extends Func
 {
 	private final Lambda _lambda;
 	
-	public FuncDiv(Stats pStat, int pOrder, Object owner, Lambda lambda)
+	public FuncDiv(Stat pStat, int pOrder, Object owner, Lambda lambda)
 	{
 		super(pStat, pOrder, owner);
 		_lambda = lambda;

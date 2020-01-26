@@ -215,7 +215,7 @@ public class Potions implements IItemHandler
 				return;
 			}
 			
-			if (activeChar._inEventDM && DM.is_started() && !Config.DM_ALLOW_POTIONS)
+			if (activeChar._inEventDM && DM.hasStarted() && !Config.DM_ALLOW_POTIONS)
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				return;

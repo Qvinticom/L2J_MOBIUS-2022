@@ -359,7 +359,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 							manageScreenMsg(world, NpcStringId.WHO_DARES_AWAKEN_THE_MIGHTY_ZAKEN);
 						}
 						world.getParameters().getObject("zaken", Npc.class).setInvisible(false);
-						world.getParameters().getObject("zaken", Npc.class).setIsParalyzed(false);
+						world.getParameters().getObject("zaken", Npc.class).setParalyzed(false);
 						spawnNpc(world.getParameters().getBoolean("is83", false) ? DOLL_BLADER_83 : DOLL_BLADER_60, world.getParameters().getInt("zakenRoom", 0), player, world);
 						spawnNpc(world.getParameters().getBoolean("is83", false) ? PIRATES_ZOMBIE_83 : PIRATES_ZOMBIE_60, world.getParameters().getInt("zakenRoom", 0), player, world);
 						spawnNpc(world.getParameters().getBoolean("is83", false) ? PIRATES_ZOMBIE_CAPTAIN_83 : PIRATES_ZOMBIE_CAPTAIN_60, world.getParameters().getInt("zakenRoom", 0), player, world);
@@ -507,7 +507,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 		}
 		final Npc zaken = spawnNpc(world.getParameters().getBoolean("is83", false) ? ZAKEN_83 : world.getParameters().getBoolean("isNight", false) ? ZAKEN_60_NIGHT : ZAKEN_60, world.getParameters().getInt("zakenRoom", 0), null, world);
 		zaken.setInvisible(true);
-		zaken.setIsParalyzed(true);
+		zaken.setParalyzed(true);
 		world.setParameter("zaken", zaken);
 	}
 	

@@ -50,17 +50,17 @@ public class ClassMasterInstance extends MerchantInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
 		
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
 		}
 		else
 		{
-			pom = npcId + "-" + val;
+			pom = npcId + "-" + value;
 		}
 		
 		return "data/html/classmaster/" + pom + ".htm";
@@ -347,7 +347,7 @@ public class ClassMasterInstance extends MerchantInstance
 		player.sendPacket(new TutorialShowHtml(msg));
 	}
 	
-	private static boolean checkAndChangeClass(PlayerInstance player, int val)
+	private static boolean checkAndChangeClass(PlayerInstance player, int value)
 	{
 		final ClassId currentClassId = player.getClassId();
 		if ((getMinLevel(currentClassId.level()) > player.getLevel()) && !Config.ALLOW_ENTIRE_TREE)
@@ -355,7 +355,7 @@ public class ClassMasterInstance extends MerchantInstance
 			return false;
 		}
 		
-		if (!validateClassId(currentClassId, val))
+		if (!validateClassId(currentClassId, value))
 		{
 			return false;
 		}
@@ -394,7 +394,7 @@ public class ClassMasterInstance extends MerchantInstance
 			player.addItem("ClassMaster", holder.getId(), holder.getCount(), player, true);
 		}
 		
-		player.setClassId(val);
+		player.setClassId(value);
 		
 		if (player.isSubClassActive())
 		{
@@ -445,12 +445,12 @@ public class ClassMasterInstance extends MerchantInstance
 	/**
 	 * Returns true if class change is possible
 	 * @param oldCID current player ClassId
-	 * @param val new class index
+	 * @param value new class index
 	 * @return
 	 */
-	private static boolean validateClassId(ClassId oldCID, int val)
+	private static boolean validateClassId(ClassId oldCID, int value)
 	{
-		return validateClassId(oldCID, ClassId.getClassId(val));
+		return validateClassId(oldCID, ClassId.getClassId(value));
 	}
 	
 	/**

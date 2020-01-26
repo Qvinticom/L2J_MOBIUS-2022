@@ -97,7 +97,7 @@ public class FortCommanderInstance extends DefenderInstance
 	{
 		if (!isInsideRadius2D(getSpawn(), 200))
 		{
-			setisReturningToSpawnPoint(true);
+			setReturningToSpawnPoint(true);
 			clearAggroList();
 			
 			if (hasAI())
@@ -162,9 +162,9 @@ public class FortCommanderInstance extends DefenderInstance
 		}
 	}
 	
-	void setCanTalk(boolean val)
+	void setCanTalk(boolean value)
 	{
-		_canTalk = val;
+		_canTalk = value;
 	}
 	
 	private boolean canTalk()

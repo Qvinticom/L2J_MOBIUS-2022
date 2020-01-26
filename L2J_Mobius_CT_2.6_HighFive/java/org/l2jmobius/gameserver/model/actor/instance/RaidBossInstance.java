@@ -115,9 +115,9 @@ public class RaidBossInstance extends MonsterInstance
 		return Config.RAIDBOSS_USE_VITALITY;
 	}
 	
-	public void setUseRaidCurse(boolean val)
+	public void setUseRaidCurse(boolean value)
 	{
-		_useRaidCurse = val;
+		_useRaidCurse = value;
 	}
 	
 	@Override

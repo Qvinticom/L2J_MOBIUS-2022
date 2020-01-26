@@ -169,7 +169,7 @@ public class Siege implements Siegable
 			
 			try
 			{
-				if (!_castle.getIsTimeRegistrationOver())
+				if (!_castle.isTimeRegistrationOver())
 				{
 					final long regTimeRemaining = getTimeRegistrationOverDate().getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
 					if (regTimeRemaining > 0)
@@ -339,7 +339,7 @@ public class Siege implements Siegable
 				SiegeGuardManager.getInstance().removeSiegeGuards(getCastle());
 			}
 			_castle.spawnDoor(); // Respawn door to castle
-			_castle.getZone().setIsActive(false);
+			_castle.getZone().setActive(false);
 			_castle.getZone().updateZoneStatusForCharactersInside();
 			_castle.getZone().setSiegeInstance(null);
 			
@@ -515,7 +515,7 @@ public class Siege implements Siegable
 			spawnSiegeGuard(); // Spawn siege guard
 			SiegeGuardManager.getInstance().deleteTickets(getCastle().getResidenceId()); // remove the tickets from the ground
 			_castle.getZone().setSiegeInstance(this);
-			_castle.getZone().setIsActive(true);
+			_castle.getZone().setActive(true);
 			_castle.getZone().updateZoneStatusForCharactersInside();
 			
 			// Schedule a task to prepare auto siege end
@@ -580,7 +580,7 @@ public class Siege implements Siegable
 				{
 					member.setSiegeState((byte) 0);
 					member.setSiegeSide(0);
-					member.setIsInSiege(false);
+					member.setInSiege(false);
 					member.stopFameTask();
 				}
 				else
@@ -589,7 +589,7 @@ public class Siege implements Siegable
 					member.setSiegeSide(_castle.getResidenceId());
 					if (checkIfInZone(member))
 					{
-						member.setIsInSiege(true);
+						member.setInSiege(true);
 						member.startFameTask(Config.CASTLE_ZONE_FAME_TASK_FREQUENCY * 1000, Config.CASTLE_ZONE_FAME_AQUIRE_POINTS);
 					}
 				}
@@ -640,7 +640,7 @@ public class Siege implements Siegable
 				{
 					member.setSiegeState((byte) 0);
 					member.setSiegeSide(0);
-					member.setIsInSiege(false);
+					member.setInSiege(false);
 					member.stopFameTask();
 				}
 				else
@@ -649,7 +649,7 @@ public class Siege implements Siegable
 					member.setSiegeSide(_castle.getResidenceId());
 					if (checkIfInZone(member))
 					{
-						member.setIsInSiege(true);
+						member.setInSiege(true);
 						member.startFameTask(Config.CASTLE_ZONE_FAME_TASK_FREQUENCY * 1000, Config.CASTLE_ZONE_FAME_AQUIRE_POINTS);
 					}
 				}
@@ -1328,7 +1328,7 @@ public class Siege implements Siegable
 		// Schedule Time registration end
 		getTimeRegistrationOverDate().setTimeInMillis(Calendar.getInstance().getTimeInMillis());
 		_castle.getTimeRegistrationOverDate().add(Calendar.DAY_OF_MONTH, 1);
-		_castle.setIsTimeRegistrationOver(false);
+		_castle.setTimeRegistrationOver(false);
 		
 		saveSiegeDate(); // Save the new date
 		startAutoTask(); // Prepare auto start siege and end registration
@@ -1348,7 +1348,7 @@ public class Siege implements Siegable
 		{
 			statement.setLong(1, _castle.getSiegeDate().getTimeInMillis());
 			statement.setLong(2, _castle.getTimeRegistrationOverDate().getTimeInMillis());
-			statement.setString(3, String.valueOf(_castle.getIsTimeRegistrationOver()));
+			statement.setString(3, String.valueOf(_castle.isTimeRegistrationOver()));
 			statement.setInt(4, _castle.getResidenceId());
 			statement.execute();
 		}
@@ -1659,14 +1659,14 @@ public class Siege implements Siegable
 		return _isInProgress;
 	}
 	
-	public boolean getIsRegistrationOver()
+	public boolean isRegistrationOver()
 	{
 		return _isRegistrationOver;
 	}
 	
-	public boolean getIsTimeRegistrationOver()
+	public boolean isTimeRegistrationOver()
 	{
-		return _castle.getIsTimeRegistrationOver();
+		return _castle.isTimeRegistrationOver();
 	}
 	
 	@Override
@@ -1682,7 +1682,7 @@ public class Siege implements Siegable
 	
 	public void endTimeRegistration(boolean automatic)
 	{
-		_castle.setIsTimeRegistrationOver(true);
+		_castle.setTimeRegistrationOver(true);
 		if (!automatic)
 		{
 			saveSiegeDate();

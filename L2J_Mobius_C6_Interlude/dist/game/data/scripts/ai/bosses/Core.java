@@ -230,7 +230,7 @@ public class Core extends Quest
 			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, name, "......"));
 			_firstAttacked = false;
 			
-			if (!npc.getSpawn().is_customBossInstance())
+			if (!npc.getSpawn().isCustomBossInstance())
 			{
 				addSpawn(31842, 16502, 110165, -6394, 0, false, 900000);
 				addSpawn(31842, 18948, 110166, -6397, 0, false, 900000);

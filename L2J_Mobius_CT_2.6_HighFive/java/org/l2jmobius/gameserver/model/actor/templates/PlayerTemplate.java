@@ -103,40 +103,40 @@ public class PlayerTemplate extends CreatureTemplate
 	 * Sets the value of level upgain parameter.
 	 * @param paramName name of parameter
 	 * @param level corresponding character level
-	 * @param val value of parameter
+	 * @param value value of parameter
 	 */
-	public void setUpgainValue(String paramName, int level, double val)
+	public void setUpgainValue(String paramName, int level, double value)
 	{
 		switch (paramName)
 		{
 			case "hp":
 			{
-				_baseHp[level] = (float) val;
+				_baseHp[level] = (float) value;
 				break;
 			}
 			case "mp":
 			{
-				_baseMp[level] = (float) val;
+				_baseMp[level] = (float) value;
 				break;
 			}
 			case "cp":
 			{
-				_baseCp[level] = (float) val;
+				_baseCp[level] = (float) value;
 				break;
 			}
 			case "hpRegen":
 			{
-				_baseHpReg[level] = val;
+				_baseHpReg[level] = value;
 				break;
 			}
 			case "mpRegen":
 			{
-				_baseMpReg[level] = val;
+				_baseMpReg[level] = value;
 				break;
 			}
 			case "cpRegen":
 			{
-				_baseCpReg[level] = val;
+				_baseCpReg[level] = value;
 				break;
 			}
 		}

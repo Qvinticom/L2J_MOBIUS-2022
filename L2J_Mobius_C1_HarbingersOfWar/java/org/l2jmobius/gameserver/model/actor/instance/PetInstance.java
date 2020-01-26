@@ -562,9 +562,9 @@ public class PetInstance extends Creature
 		_attackRange = range;
 	}
 	
-	public void setFollowStatus(boolean state)
+	public void setFollowStatus(boolean value)
 	{
-		_follow = state;
+		_follow = value;
 	}
 	
 	public boolean getFollowStatus()

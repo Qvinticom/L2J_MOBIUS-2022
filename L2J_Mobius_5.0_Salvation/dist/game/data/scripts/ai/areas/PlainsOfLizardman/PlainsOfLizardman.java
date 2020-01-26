@@ -142,7 +142,7 @@ public class PlainsOfLizardman extends AbstractNpcAI
 				if (npc.isScriptValue(0))
 				{
 					npc.setScriptValue(1);
-					npc.setIsInvul(true);
+					npc.setInvul(true);
 					World.getInstance().forEachVisibleObjectInRange(npc, Attackable.class, 1000, monster ->
 					{
 						if ((monster.getId() == TANTA_MAGICIAN) || (monster.getId() == TANTA_SCOUT))

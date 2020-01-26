@@ -506,26 +506,26 @@ public class Frintezza extends AbstractNpcAI
 			GrandBossManager.getInstance().setBossStatus(FRINTEZZA, FIGHTING);
 			
 			_frintezzaDummy = addSpawn(29052, 174240, -89805, -5022, 16048, false, 0);
-			_frintezzaDummy.setIsInvul(true);
-			_frintezzaDummy.setIsImmobilized(true);
+			_frintezzaDummy.setInvul(true);
+			_frintezzaDummy.setImmobilized(true);
 			
 			_overheadDummy = addSpawn(29052, 174232, -88020, -5110, 16384, false, 0);
-			_overheadDummy.setIsInvul(true);
-			_overheadDummy.setIsImmobilized(true);
+			_overheadDummy.setInvul(true);
+			_overheadDummy.setImmobilized(true);
 			_overheadDummy.setCollisionHeight(600);
 			_overheadDummy.broadcastInfo();
 			
 			_portraitDummy1 = addSpawn(29052, 172450, -87890, -5100, 16048, false, 0);
-			_portraitDummy1.setIsImmobilized(true);
-			_portraitDummy1.setIsInvul(true);
+			_portraitDummy1.setImmobilized(true);
+			_portraitDummy1.setInvul(true);
 			
 			_portraitDummy3 = addSpawn(29052, 176012, -87890, -5100, 16048, false, 0);
-			_portraitDummy3.setIsImmobilized(true);
-			_portraitDummy3.setIsInvul(true);
+			_portraitDummy3.setImmobilized(true);
+			_portraitDummy3.setInvul(true);
 			
 			_scarletDummy = addSpawn(29053, 174232, -88020, -5110, 16384, false, 0);
-			_scarletDummy.setIsInvul(true);
-			_scarletDummy.setIsImmobilized(true);
+			_scarletDummy.setInvul(true);
+			_scarletDummy.setImmobilized(true);
 			
 			startQuestTimer("stop_pc", 0, npc, null);
 			startQuestTimer("camera_2", 1000, _overheadDummy, null);
@@ -546,28 +546,28 @@ public class Frintezza extends AbstractNpcAI
 			
 			_frintezza = (GrandBossInstance) addSpawn(FRINTEZZA, 174240, -89805, -5022, 16048, false, 0);
 			GrandBossManager.getInstance().addBoss(_frintezza);
-			_frintezza.setIsImmobilized(true);
-			_frintezza.setIsInvul(true);
+			_frintezza.setImmobilized(true);
+			_frintezza.setInvul(true);
 			_frintezza.disableAllSkills();
 			// _Zone.updateKnownList(frintezza);
 			
 			_demon2 = (MonsterInstance) addSpawn(29051, 175876, -88713, -5100, 28205, false, 0);
-			_demon2.setIsImmobilized(true);
+			_demon2.setImmobilized(true);
 			_demon2.disableAllSkills();
 			// _Zone.updateKnownList(demon2);
 			
 			_demon3 = (MonsterInstance) addSpawn(29051, 172608, -88702, -5100, 64817, false, 0);
-			_demon3.setIsImmobilized(true);
+			_demon3.setImmobilized(true);
 			_demon3.disableAllSkills();
 			// _Zone.updateKnownList(demon3);
 			
 			_demon1 = (MonsterInstance) addSpawn(29050, 175833, -87165, -5100, 35048, false, 0);
-			_demon1.setIsImmobilized(true);
+			_demon1.setImmobilized(true);
 			_demon1.disableAllSkills();
 			// _Zone.updateKnownList(demon1);
 			
 			_demon4 = (MonsterInstance) addSpawn(29050, 172634, -87165, -5100, 57730, false, 0);
-			_demon4.setIsImmobilized(true);
+			_demon4.setImmobilized(true);
 			_demon4.disableAllSkills();
 			// _Zone.updateKnownList(demon4);
 			
@@ -702,8 +702,8 @@ public class Frintezza extends AbstractNpcAI
 			_zone.broadcastPacket(new MagicSkillUse(_scarletDummy, _overheadDummy, 5004, 1, 5800, 0));
 			
 			_weakScarlet = (GrandBossInstance) addSpawn(29046, 174232, -88020, -5110, 16384, false, 0, true);
-			_weakScarlet.setIsInvul(true);
-			_weakScarlet.setIsImmobilized(true);
+			_weakScarlet.setInvul(true);
+			_weakScarlet.setImmobilized(true);
 			_weakScarlet.disableAllSkills();
 			// _Zone.updateKnownList(weakScarlet);
 			_activeScarlet = _weakScarlet;
@@ -733,22 +733,22 @@ public class Frintezza extends AbstractNpcAI
 		else if (event.equalsIgnoreCase("camera_22"))
 		{
 			_portrait2 = (MonsterInstance) addSpawn(29049, 175876, -88713, -5000, 28205, false, 0);
-			_portrait2.setIsImmobilized(true);
+			_portrait2.setImmobilized(true);
 			_portrait2.disableAllSkills();
 			// _Zone.updateKnownList(portrait2);
 			
 			_portrait3 = (MonsterInstance) addSpawn(29049, 172608, -88702, -5000, 64817, false, 0);
-			_portrait3.setIsImmobilized(true);
+			_portrait3.setImmobilized(true);
 			_portrait3.disableAllSkills();
 			// _Zone.updateKnownList(portrait3);
 			
 			_portrait1 = (MonsterInstance) addSpawn(29048, 175833, -87165, -5000, 35048, false, 0);
-			_portrait1.setIsImmobilized(true);
+			_portrait1.setImmobilized(true);
 			_portrait1.disableAllSkills();
 			// _Zone.updateKnownList(portrait1);
 			
 			_portrait4 = (MonsterInstance) addSpawn(29048, 172634, -87165, -5000, 57730, false, 0);
-			_portrait4.setIsImmobilized(true);
+			_portrait4.setImmobilized(true);
 			_portrait4.disableAllSkills();
 			// _Zone.updateKnownList(portrait4);
 			
@@ -765,24 +765,24 @@ public class Frintezza extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("camera_23"))
 		{
-			_demon1.setIsImmobilized(false);
-			_demon2.setIsImmobilized(false);
-			_demon3.setIsImmobilized(false);
-			_demon4.setIsImmobilized(false);
+			_demon1.setImmobilized(false);
+			_demon2.setImmobilized(false);
+			_demon3.setImmobilized(false);
+			_demon4.setImmobilized(false);
 			_demon1.enableAllSkills();
 			_demon2.enableAllSkills();
 			_demon3.enableAllSkills();
 			_demon4.enableAllSkills();
-			_portrait1.setIsImmobilized(false);
-			_portrait2.setIsImmobilized(false);
-			_portrait3.setIsImmobilized(false);
-			_portrait4.setIsImmobilized(false);
+			_portrait1.setImmobilized(false);
+			_portrait2.setImmobilized(false);
+			_portrait3.setImmobilized(false);
+			_portrait4.setImmobilized(false);
 			_portrait1.enableAllSkills();
 			_portrait2.enableAllSkills();
 			_portrait3.enableAllSkills();
 			_portrait4.enableAllSkills();
-			_weakScarlet.setIsInvul(false);
-			_weakScarlet.setIsImmobilized(false);
+			_weakScarlet.setInvul(false);
+			_weakScarlet.setImmobilized(false);
 			_weakScarlet.enableAllSkills();
 			_weakScarlet.setRunning();
 			
@@ -800,7 +800,7 @@ public class Frintezza extends AbstractNpcAI
 				cha.disableAllSkills();
 				cha.setTarget(null);
 				cha.stopMove(null);
-				cha.setIsImmobilized(true);
+				cha.setImmobilized(true);
 				cha.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			}
 		}
@@ -823,14 +823,14 @@ public class Frintezza extends AbstractNpcAI
 				if (cha != _frintezza)
 				{
 					cha.enableAllSkills();
-					cha.setIsImmobilized(false);
+					cha.setImmobilized(false);
 				}
 			}
 		}
 		else if (event.equalsIgnoreCase("start_npc"))
 		{
 			npc.setRunning();
-			npc.setIsInvul(false);
+			npc.setInvul(false);
 		}
 		else if (event.equalsIgnoreCase("morph_end"))
 		{
@@ -892,8 +892,8 @@ public class Frintezza extends AbstractNpcAI
 			_weakScarlet = null;
 			_activeScarlet = null;
 			_weakScarlet = (GrandBossInstance) addSpawn(29046, _scarletX, _scarletY, _scarletZ, _scarletH, false, 0);
-			_weakScarlet.setIsInvul(true);
-			_weakScarlet.setIsImmobilized(true);
+			_weakScarlet.setInvul(true);
+			_weakScarlet.setImmobilized(true);
 			_weakScarlet.disableAllSkills();
 			_weakScarlet.setRHandId(7903);
 			// _Zone.updateKnownList(weakScarlet);
@@ -937,8 +937,8 @@ public class Frintezza extends AbstractNpcAI
 		else if (event.equalsIgnoreCase("morph_13"))
 		{
 			_strongScarlet = (GrandBossInstance) addSpawn(SCARLET2, _scarletX, _scarletY, _scarletZ, _scarletH, false, 0);
-			_strongScarlet.setIsInvul(true);
-			_strongScarlet.setIsImmobilized(true);
+			_strongScarlet.setInvul(true);
+			_strongScarlet.setImmobilized(true);
 			_strongScarlet.disableAllSkills();
 			// _Zone.updateKnownList(strongScarlet);
 			_activeScarlet = _strongScarlet;
@@ -1073,8 +1073,8 @@ public class Frintezza extends AbstractNpcAI
 						cha.abortCast();
 						cha.disableAllSkills();
 						cha.stopMove(null);
-						cha.setIsParalyzed(true);
-						cha.setIsImmobilized(true);
+						cha.setParalyzed(true);
+						cha.setImmobilized(true);
 						cha.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 						skill.applyEffects(_frintezza, cha);
 						cha.startAbnormalVisualEffect(true, AbnormalVisualEffect.DANCE_ROOT);
@@ -1093,8 +1093,8 @@ public class Frintezza extends AbstractNpcAI
 					cha.stopAbnormalVisualEffect(true, AbnormalVisualEffect.DANCE_ROOT);
 					cha.stopAbnormalVisualEffect(true, AbnormalVisualEffect.FLOATING_ROOT);
 					cha.enableAllSkills();
-					cha.setIsImmobilized(false);
-					cha.setIsParalyzed(false);
+					cha.setImmobilized(false);
+					cha.setParalyzed(false);
 				}
 			}
 			_abnormal = 0;
@@ -1144,7 +1144,7 @@ public class Frintezza extends AbstractNpcAI
 				if (skill != null)
 				{
 					_weakScarlet.stopMove(null);
-					_weakScarlet.setIsCastingNow(true);
+					_weakScarlet.setCastingNow(true);
 					_weakScarlet.doCast(skill);
 				}
 				startQuestTimer("skill01", _skill[i][2] + 5000 + Rnd.get(10000), npc, null);
@@ -1168,7 +1168,7 @@ public class Frintezza extends AbstractNpcAI
 				if (skill != null)
 				{
 					_weakScarlet.stopMove(null);
-					_weakScarlet.setIsCastingNow(true);
+					_weakScarlet.setCastingNow(true);
 					_weakScarlet.doCast(skill);
 				}
 				startQuestTimer("skill02", _skill[i][2] + 5000 + Rnd.get(10000), npc, null);
@@ -1198,7 +1198,7 @@ public class Frintezza extends AbstractNpcAI
 				if (skill != null)
 				{
 					_strongScarlet.stopMove(null);
-					_strongScarlet.setIsCastingNow(true);
+					_strongScarlet.setCastingNow(true);
 					_strongScarlet.doCast(skill);
 				}
 				startQuestTimer("skill03", _skill[i][2] + 5000 + Rnd.get(10000), npc, null);
@@ -1226,8 +1226,8 @@ public class Frintezza extends AbstractNpcAI
 						cha.abortCast();
 						cha.disableAllSkills();
 						cha.stopMove(null);
-						cha.setIsParalyzed(true);
-						cha.setIsImmobilized(true);
+						cha.setParalyzed(true);
+						cha.setImmobilized(true);
 						cha.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 						cha.startAbnormalVisualEffect(true, AbnormalVisualEffect.FLOATING_ROOT);
 					}
@@ -1469,7 +1469,7 @@ public class Frintezza extends AbstractNpcAI
 			final Skill skill = SkillData.getInstance().getSkill(5011, 1);
 			if (skill != null)
 			{
-				npc.setIsCastingNow(true);
+				npc.setCastingNow(true);
 				npc.doCast(skill);
 			}
 		}

@@ -339,7 +339,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		
 		player.teleToLocation(MapRegionManager.getInstance().getMapRegionByName(regionName).getSpawnLoc(), true);
 		player.setInstanceId(0);
-		player.setIsIn7sDungeon(false);
+		player.setIn7sDungeon(false);
 	}
 	
 	private void teleportTo(PlayerInstance activeChar, String coords)

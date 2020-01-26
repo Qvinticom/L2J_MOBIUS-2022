@@ -297,7 +297,7 @@ public class AltarOfShilen extends AbstractInstance
 					final Npc captain = world.getNpc(boos1);
 					if (captain != null)
 					{
-						captain.setIsInvul(false);
+						captain.setInvul(false);
 					}
 				}
 				if (killedMonsters.containsKey(CORRUPTED_CAPTAIN) && (killedMonsters.get(CORRUPTED_CAPTAIN) >= 1))
@@ -320,7 +320,7 @@ public class AltarOfShilen extends AbstractInstance
 					final Npc priest = world.getNpc(boos2);
 					if (priest != null)
 					{
-						priest.setIsInvul(false);
+						priest.setInvul(false);
 					}
 				}
 				if (killedMonsters.containsKey(CORRUPTED_HIGH_PRIEST) && (killedMonsters.get(CORRUPTED_HIGH_PRIEST) >= 1))
@@ -387,7 +387,7 @@ public class AltarOfShilen extends AbstractInstance
 				case CORRUPTED_CAPTAIN:
 				case CORRUPTED_HIGH_PRIEST:
 				{
-					npc.setIsInvul(true);
+					npc.setInvul(true);
 					break;
 				}
 				case INVISIBLE:

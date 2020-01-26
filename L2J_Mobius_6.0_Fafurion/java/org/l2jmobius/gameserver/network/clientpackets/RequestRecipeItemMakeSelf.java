@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.RecipeHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeItemMakeInfo;
@@ -143,7 +143,7 @@ public class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 			return;
 		}
 		
-		player.setIsCrafting(true);
+		player.setCrafting(true);
 		
 		// Take offerings to increase chance
 		double offeringBonus = 0;
@@ -163,7 +163,7 @@ public class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 		}
 		
 		final boolean success = player.tryLuck() || ((recipe.getSuccessRate() + offeringBonus) > Rnd.get(100));
-		final boolean craftingCritical = success && (player.getStat().getValue(Stats.CRAFTING_CRITICAL) > Rnd.get(100));
+		final boolean craftingCritical = success && (player.getStat().getValue(Stat.CRAFTING_CRITICAL) > Rnd.get(100));
 		
 		if (success) // Successful craft.
 		{
@@ -183,6 +183,6 @@ public class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 		// Send craft window. Must be sent after crafting so it properly counts the items.
 		player.sendPacket(new RecipeItemMakeInfo(recipe.getId(), player, success, recipe.getMaxOffering()));
 		
-		player.setIsCrafting(false);
+		player.setCrafting(false);
 	}
 }

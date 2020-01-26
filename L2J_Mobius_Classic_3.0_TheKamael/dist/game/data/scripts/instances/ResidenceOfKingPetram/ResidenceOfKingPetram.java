@@ -111,12 +111,12 @@ public class ResidenceOfKingPetram extends AbstractInstance
 				_petram.useMagic(EARTh_FURY.getSkill());
 				if (_petram.isInvul())
 				{
-					_petram.setIsInvul(false);
+					_petram.setInvul(false);
 					_petram.broadcastSay(ChatType.NPC_SHOUT, "Nooooo... Nooooo...");
 				}
 				else
 				{
-					_petram.setIsInvul(true);
+					_petram.setInvul(true);
 					_petram.broadcastSay(ChatType.NPC_SHOUT, "HaHa, fighters lets kill them. Now Im invul!!!");
 				}
 				break;

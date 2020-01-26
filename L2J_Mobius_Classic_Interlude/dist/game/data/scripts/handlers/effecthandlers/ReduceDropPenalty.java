@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -46,30 +46,30 @@ public class ReduceDropPenalty extends AbstractEffect
 		{
 			case MOB:
 			{
-				effected.getStat().mergeMul(Stats.REDUCE_EXP_LOST_BY_MOB, (_exp / 100) + 1);
-				effected.getStat().mergeMul(Stats.REDUCE_DEATH_PENALTY_BY_MOB, (_deathPenalty / 100) + 1);
+				effected.getStat().mergeMul(Stat.REDUCE_EXP_LOST_BY_MOB, (_exp / 100) + 1);
+				effected.getStat().mergeMul(Stat.REDUCE_DEATH_PENALTY_BY_MOB, (_deathPenalty / 100) + 1);
 				break;
 			}
 			case PK:
 			{
-				effected.getStat().mergeMul(Stats.REDUCE_EXP_LOST_BY_PVP, (_exp / 100) + 1);
-				effected.getStat().mergeMul(Stats.REDUCE_DEATH_PENALTY_BY_PVP, (_deathPenalty / 100) + 1);
+				effected.getStat().mergeMul(Stat.REDUCE_EXP_LOST_BY_PVP, (_exp / 100) + 1);
+				effected.getStat().mergeMul(Stat.REDUCE_DEATH_PENALTY_BY_PVP, (_deathPenalty / 100) + 1);
 				break;
 			}
 			case RAID:
 			{
-				effected.getStat().mergeMul(Stats.REDUCE_EXP_LOST_BY_RAID, (_exp / 100) + 1);
-				effected.getStat().mergeMul(Stats.REDUCE_DEATH_PENALTY_BY_RAID, (_deathPenalty / 100) + 1);
+				effected.getStat().mergeMul(Stat.REDUCE_EXP_LOST_BY_RAID, (_exp / 100) + 1);
+				effected.getStat().mergeMul(Stat.REDUCE_DEATH_PENALTY_BY_RAID, (_deathPenalty / 100) + 1);
 				break;
 			}
 			case ANY:
 			{
-				effected.getStat().mergeMul(Stats.REDUCE_EXP_LOST_BY_MOB, (_exp / 100) + 1);
-				effected.getStat().mergeMul(Stats.REDUCE_DEATH_PENALTY_BY_MOB, (_deathPenalty / 100) + 1);
-				effected.getStat().mergeMul(Stats.REDUCE_EXP_LOST_BY_PVP, (_exp / 100) + 1);
-				effected.getStat().mergeMul(Stats.REDUCE_DEATH_PENALTY_BY_PVP, (_deathPenalty / 100) + 1);
-				effected.getStat().mergeMul(Stats.REDUCE_EXP_LOST_BY_RAID, (_exp / 100) + 1);
-				effected.getStat().mergeMul(Stats.REDUCE_DEATH_PENALTY_BY_RAID, (_deathPenalty / 100) + 1);
+				effected.getStat().mergeMul(Stat.REDUCE_EXP_LOST_BY_MOB, (_exp / 100) + 1);
+				effected.getStat().mergeMul(Stat.REDUCE_DEATH_PENALTY_BY_MOB, (_deathPenalty / 100) + 1);
+				effected.getStat().mergeMul(Stat.REDUCE_EXP_LOST_BY_PVP, (_exp / 100) + 1);
+				effected.getStat().mergeMul(Stat.REDUCE_DEATH_PENALTY_BY_PVP, (_deathPenalty / 100) + 1);
+				effected.getStat().mergeMul(Stat.REDUCE_EXP_LOST_BY_RAID, (_exp / 100) + 1);
+				effected.getStat().mergeMul(Stat.REDUCE_DEATH_PENALTY_BY_RAID, (_deathPenalty / 100) + 1);
 				break;
 			}
 		}

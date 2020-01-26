@@ -108,12 +108,12 @@ public class EffectChameleonRest extends Effect
 		return retval;
 	}
 	
-	private void setChameleon(boolean val)
+	private void setChameleon(boolean value)
 	{
 		final Creature effected = getEffected();
 		if (effected instanceof PlayerInstance)
 		{
-			((PlayerInstance) effected).setRelax(val);
+			((PlayerInstance) effected).setRelax(value);
 		}
 	}
 }

@@ -458,7 +458,7 @@ public class Duel
 			for (PlayerInstance temp : _playerA.getParty().getPartyMembers())
 			{
 				temp.cancelActiveTrade();
-				temp.setIsInDuel(_duelId);
+				temp.setInDuel(_duelId);
 				temp.setTeam(1);
 				// temp.broadcastStatusUpdate();
 				temp.broadcastUserInfo();
@@ -467,7 +467,7 @@ public class Duel
 			for (PlayerInstance temp : _playerB.getParty().getPartyMembers())
 			{
 				temp.cancelActiveTrade();
-				temp.setIsInDuel(_duelId);
+				temp.setInDuel(_duelId);
 				temp.setTeam(2);
 				// temp.broadcastStatusUpdate();
 				temp.broadcastUserInfo();
@@ -486,9 +486,9 @@ public class Duel
 		else
 		{
 			// set isInDuel() state
-			_playerA.setIsInDuel(_duelId);
+			_playerA.setInDuel(_duelId);
 			_playerA.setTeam(1);
-			_playerB.setIsInDuel(_duelId);
+			_playerB.setInDuel(_duelId);
 			_playerB.setTeam(2);
 			
 			// Send duel Start packets
@@ -552,24 +552,24 @@ public class Duel
 		{
 			for (PlayerInstance temp : _playerA.getParty().getPartyMembers())
 			{
-				temp.setIsInDuel(0);
+				temp.setInDuel(0);
 				temp.setTeam(0);
 				temp.broadcastUserInfo();
 			}
 			
 			for (PlayerInstance temp : _playerB.getParty().getPartyMembers())
 			{
-				temp.setIsInDuel(0);
+				temp.setInDuel(0);
 				temp.setTeam(0);
 				temp.broadcastUserInfo();
 			}
 		}
 		else
 		{
-			_playerA.setIsInDuel(0);
+			_playerA.setInDuel(0);
 			_playerA.setTeam(0);
 			_playerA.broadcastUserInfo();
-			_playerB.setIsInDuel(0);
+			_playerB.setInDuel(0);
 			_playerB.setTeam(0);
 			_playerB.broadcastUserInfo();
 		}
@@ -1139,7 +1139,7 @@ public class Duel
 			if (e != null)
 			{
 				e.teleportBack();
-				e.getPlayer().setIsInDuel(0);
+				e.getPlayer().setInDuel(0);
 			}
 			
 			if (player == _playerA)
@@ -1159,7 +1159,7 @@ public class Duel
 			{
 				e.teleportBack();
 			}
-			player.setIsInDuel(0);
+			player.setInDuel(0);
 		}
 	}
 	

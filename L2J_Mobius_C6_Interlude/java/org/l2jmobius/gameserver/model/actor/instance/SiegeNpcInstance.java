@@ -76,7 +76,7 @@ public class SiegeNpcInstance extends FolkInstance
 	public void showSiegeInfoWindow(PlayerInstance player)
 	{
 		final Siege siege = getCastle().getSiege();
-		if (siege.getIsInProgress())
+		if (siege.isInProgress())
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			html.setFile("data/html/siege/" + getTemplate().getNpcId() + "-busy.htm");

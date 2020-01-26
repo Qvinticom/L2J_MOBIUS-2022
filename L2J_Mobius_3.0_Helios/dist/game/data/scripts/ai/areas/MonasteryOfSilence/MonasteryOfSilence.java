@@ -280,7 +280,7 @@ public class MonasteryOfSilence extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		npc.setIsInvul(true);
+		npc.setInvul(true);
 		npc.disableCoreAI(true);
 		cancelQuestTimer("TRAINING", npc, null);
 		startQuestTimer("TRAINING", 30000, npc, null, true);

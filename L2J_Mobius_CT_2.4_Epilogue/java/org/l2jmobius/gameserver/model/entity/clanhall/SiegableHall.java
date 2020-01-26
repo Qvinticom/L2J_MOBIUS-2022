@@ -251,7 +251,7 @@ public class SiegableHall extends ClanHall
 	
 	public void updateSiegeZone(boolean active)
 	{
-		_siegeZone.setIsActive(active);
+		_siegeZone.setActive(active);
 	}
 	
 	public void showSiegeInfo(PlayerInstance player)

@@ -138,7 +138,7 @@ public class TakeCastle implements ISkillHandler
 		{
 			sm.addString("You can only use this skill on an artifact");
 		}
-		else if (!castle.getSiege().getIsInProgress())
+		else if (!castle.getSiege().isInProgress())
 		{
 			sm.addString("You can only use this skill during a siege.");
 		}
@@ -190,7 +190,7 @@ public class TakeCastle implements ISkillHandler
 		{
 			sm.addString("You can only use this skill on an flagpole");
 		}
-		else if (!fort.getSiege().getIsInProgress())
+		else if (!fort.getSiege().isInProgress())
 		{
 			sm.addString("You can only use this skill during a siege.");
 		}

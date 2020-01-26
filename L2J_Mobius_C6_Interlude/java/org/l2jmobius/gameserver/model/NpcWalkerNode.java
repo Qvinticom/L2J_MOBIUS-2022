@@ -33,9 +33,9 @@ public class NpcWalkerNode
 	
 	private boolean _running;
 	
-	public void setRunning(boolean val)
+	public void setRunning(boolean value)
 	{
-		_running = val;
+		_running = value;
 	}
 	
 	public void setRouteId(int id)
@@ -48,34 +48,34 @@ public class NpcWalkerNode
 		_npcId = id;
 	}
 	
-	public void setMovePoint(String val)
+	public void setMovePoint(String value)
 	{
-		_movePoint = val;
+		_movePoint = value;
 	}
 	
-	public void setChatText(String val)
+	public void setChatText(String value)
 	{
-		_chatText = val;
+		_chatText = value;
 	}
 	
-	public void setMoveX(int val)
+	public void setMoveX(int value)
 	{
-		_moveX = val;
+		_moveX = value;
 	}
 	
-	public void setMoveY(int val)
+	public void setMoveY(int value)
 	{
-		_moveY = val;
+		_moveY = value;
 	}
 	
-	public void setMoveZ(int val)
+	public void setMoveZ(int value)
 	{
-		_moveZ = val;
+		_moveZ = value;
 	}
 	
-	public void setDelay(int val)
+	public void setDelay(int value)
 	{
-		_delay = val;
+		_delay = value;
 	}
 	
 	public int getRouteId()

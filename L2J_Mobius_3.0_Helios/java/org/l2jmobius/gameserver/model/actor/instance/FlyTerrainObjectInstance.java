@@ -27,7 +27,7 @@ public class FlyTerrainObjectInstance extends Npc
 	{
 		super(template);
 		setInstanceType(InstanceType.FlyTerrainObjectInstance);
-		setIsFlying(true);
+		setFlying(true);
 	}
 	
 	@Override

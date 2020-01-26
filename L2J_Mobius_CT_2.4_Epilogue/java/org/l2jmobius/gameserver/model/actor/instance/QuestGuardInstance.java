@@ -80,9 +80,9 @@ public class QuestGuardInstance extends GuardInstance
 		}
 	}
 	
-	public void setPassive(boolean state)
+	public void setPassive(boolean value)
 	{
-		_isPassive = state;
+		_isPassive = value;
 	}
 	
 	@Override
@@ -92,9 +92,9 @@ public class QuestGuardInstance extends GuardInstance
 	}
 	
 	@Override
-	public void setAutoAttackable(boolean state)
+	public void setAutoAttackable(boolean value)
 	{
-		_isAutoAttackable = state;
+		_isAutoAttackable = value;
 	}
 	
 	public boolean isPassive()

@@ -64,7 +64,7 @@ public class SymbolMakerInstance extends FolkInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		return "data/html/symbolmaker/SymbolMaker.htm";
 	}

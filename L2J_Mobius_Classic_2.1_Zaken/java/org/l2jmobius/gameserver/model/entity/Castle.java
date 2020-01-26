@@ -929,14 +929,14 @@ public class Castle extends AbstractResidence
 		return _siegeDate;
 	}
 	
-	public boolean getIsTimeRegistrationOver()
+	public boolean isTimeRegistrationOver()
 	{
 		return _isTimeRegistrationOver;
 	}
 	
-	public void setIsTimeRegistrationOver(boolean val)
+	public void setTimeRegistrationOver(boolean value)
 	{
-		_isTimeRegistrationOver = val;
+		_isTimeRegistrationOver = value;
 	}
 	
 	public Calendar getTimeRegistrationOverDate()

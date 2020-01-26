@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Mobius
@@ -26,6 +26,6 @@ public class BonusDropRate extends AbstractStatPercentEffect
 {
 	public BonusDropRate(StatsSet params)
 	{
-		super(params, Stats.BONUS_DROP_RATE);
+		super(params, Stat.BONUS_DROP_RATE);
 	}
 }

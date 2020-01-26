@@ -93,7 +93,7 @@ public class ZealotOfShilen extends AbstractNpcAI
 		}
 		else
 		{
-			npc.setIsInvul(true);
+			npc.setInvul(true);
 			((Attackable) npc).setCanReturnToSpawnPoint(false);
 			cancelQuestTimer("WATCHING", npc, null);
 			startQuestTimer("WATCHING", 10000, npc, null, true);

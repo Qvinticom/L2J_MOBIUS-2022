@@ -33,11 +33,11 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class ConditionPlayerCanResurrect extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
-	public ConditionPlayerCanResurrect(boolean val)
+	public ConditionPlayerCanResurrect(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
@@ -155,6 +155,6 @@ public class ConditionPlayerCanResurrect extends Condition
 				}
 			}
 		}
-		return _val == canResurrect;
+		return _value == canResurrect;
 	}
 }

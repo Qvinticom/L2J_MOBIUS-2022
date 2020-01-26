@@ -69,7 +69,7 @@ public class Escape extends AbstractEffect
 		else
 		{
 			info.getEffected().teleToLocation(MapRegionManager.getInstance().getTeleToLocation(info.getEffected(), _escapeType), true);
-			info.getEffected().getActingPlayer().setIsIn7sDungeon(false);
+			info.getEffected().getActingPlayer().setIn7sDungeon(false);
 			info.getEffected().setInstanceId(0);
 		}
 	}

@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Mobius
@@ -26,6 +26,6 @@ public class AgathionSlot extends AbstractStatAddEffect
 {
 	public AgathionSlot(StatsSet params)
 	{
-		super(params, Stats.AGATHION_SLOTS);
+		super(params, Stat.AGATHION_SLOTS);
 	}
 }

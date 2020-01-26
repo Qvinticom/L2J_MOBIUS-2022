@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -82,7 +82,7 @@ public class Lethal extends AbstractEffect
 		final double chanceMultiplier = Formulas.calcAttributeBonus(effector, effected, skill) * Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), false);
 		
 		// Calculate instant kill resistance first.
-		if (Rnd.get(100) < effected.getStat().getValue(Stats.INSTANT_KILL_RESIST, 0))
+		if (Rnd.get(100) < effected.getStat().getValue(Stat.INSTANT_KILL_RESIST, 0))
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
 			sm.addString(effected.getName());

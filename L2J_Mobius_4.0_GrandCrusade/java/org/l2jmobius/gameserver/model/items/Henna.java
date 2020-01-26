@@ -24,8 +24,8 @@ import java.util.Map;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * Class for the Henna object.
@@ -36,7 +36,7 @@ public class Henna
 	private final int _dyeId;
 	private final int _dyeItemId;
 	private final boolean _isPremium;
-	private final Map<BaseStats, Integer> _baseStats = new EnumMap<>(BaseStats.class);
+	private final Map<BaseStat, Integer> _baseStats = new EnumMap<>(BaseStat.class);
 	private final int _wear_fee;
 	private final int _wear_count;
 	private final int _cancel_fee;
@@ -50,14 +50,14 @@ public class Henna
 		_dyeId = set.getInt("dyeId");
 		_dyeItemId = set.getInt("dyeItemId");
 		_isPremium = set.getBoolean("isPremium", false);
-		_baseStats.put(BaseStats.STR, set.getInt("str", 0));
-		_baseStats.put(BaseStats.CON, set.getInt("con", 0));
-		_baseStats.put(BaseStats.DEX, set.getInt("dex", 0));
-		_baseStats.put(BaseStats.INT, set.getInt("int", 0));
-		_baseStats.put(BaseStats.MEN, set.getInt("men", 0));
-		_baseStats.put(BaseStats.WIT, set.getInt("wit", 0));
-		_baseStats.put(BaseStats.LUC, set.getInt("luc", 0));
-		_baseStats.put(BaseStats.CHA, set.getInt("cha", 0));
+		_baseStats.put(BaseStat.STR, set.getInt("str", 0));
+		_baseStats.put(BaseStat.CON, set.getInt("con", 0));
+		_baseStats.put(BaseStat.DEX, set.getInt("dex", 0));
+		_baseStats.put(BaseStat.INT, set.getInt("int", 0));
+		_baseStats.put(BaseStat.MEN, set.getInt("men", 0));
+		_baseStats.put(BaseStat.WIT, set.getInt("wit", 0));
+		_baseStats.put(BaseStat.LUC, set.getInt("luc", 0));
+		_baseStats.put(BaseStat.CHA, set.getInt("cha", 0));
 		_wear_fee = set.getInt("wear_fee");
 		_wear_count = set.getInt("wear_count");
 		_cancel_fee = set.getInt("cancel_fee");
@@ -91,12 +91,12 @@ public class Henna
 		return _isPremium;
 	}
 	
-	public int getBaseStats(Stats stat)
+	public int getBaseStats(Stat stat)
 	{
 		return _baseStats.getOrDefault(stat, 0);
 	}
 	
-	public Map<BaseStats, Integer> getBaseStats()
+	public Map<BaseStat, Integer> getBaseStats()
 	{
 		return _baseStats;
 	}

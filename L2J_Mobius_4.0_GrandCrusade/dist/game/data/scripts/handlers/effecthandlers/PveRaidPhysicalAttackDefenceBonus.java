@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -26,6 +26,6 @@ public class PveRaidPhysicalAttackDefenceBonus extends AbstractStatPercentEffect
 {
 	public PveRaidPhysicalAttackDefenceBonus(StatsSet params)
 	{
-		super(params, Stats.PVE_RAID_PHYSICAL_ATTACK_DEFENCE);
+		super(params, Stat.PVE_RAID_PHYSICAL_ATTACK_DEFENCE);
 	}
 }

@@ -233,7 +233,7 @@ public class AdminEffects implements IAdminCommandHandler
 				if (!player.isGM())
 				{
 					player.startAbnormalVisualEffect(true, AbnormalVisualEffect.PARALYZE);
-					player.setIsParalyzed(true);
+					player.setParalyzed(true);
 					player.startParalyze();
 				}
 			});
@@ -243,7 +243,7 @@ public class AdminEffects implements IAdminCommandHandler
 			World.getInstance().forEachVisibleObject(activeChar, PlayerInstance.class, player ->
 			{
 				player.stopAbnormalVisualEffect(true, AbnormalVisualEffect.PARALYZE);
-				player.setIsParalyzed(false);
+				player.setParalyzed(false);
 				
 			});
 		}
@@ -273,7 +273,7 @@ public class AdminEffects implements IAdminCommandHandler
 					{
 						creature.startAbnormalVisualEffect(true, AbnormalVisualEffect.FLESH_STONE);
 					}
-					creature.setIsParalyzed(true);
+					creature.setParalyzed(true);
 					creature.startParalyze();
 				}
 			}
@@ -308,7 +308,7 @@ public class AdminEffects implements IAdminCommandHandler
 					{
 						creature.stopAbnormalVisualEffect(true, AbnormalVisualEffect.FLESH_STONE);
 					}
-					creature.setIsParalyzed(false);
+					creature.setParalyzed(false);
 				}
 			}
 			catch (Exception e)

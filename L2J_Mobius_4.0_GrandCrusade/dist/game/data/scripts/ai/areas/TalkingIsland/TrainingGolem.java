@@ -37,7 +37,7 @@ public class TrainingGolem extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		npc.setIsImmobilized(true);
+		npc.setImmobilized(true);
 		return super.onSpawn(npc);
 	}
 	

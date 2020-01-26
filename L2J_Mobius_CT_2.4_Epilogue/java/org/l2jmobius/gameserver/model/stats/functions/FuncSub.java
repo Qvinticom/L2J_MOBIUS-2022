@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.stats.functions;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * Returns the initial value minus the function value, if the condition are met.
@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
  */
 public class FuncSub extends AbstractFunction
 {
-	public FuncSub(Stats stat, int order, Object owner, double value, Condition applayCond)
+	public FuncSub(Stat stat, int order, Object owner, double value, Condition applayCond)
 	{
 		super(stat, order, owner, value, applayCond);
 	}

@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.stats.Formulas;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
@@ -475,7 +475,7 @@ public class PlayerStat extends PlayableStat
 	
 	public double getVitalityExpBonus()
 	{
-		return (getVitalityPoints() > 0) ? getValue(Stats.VITALITY_EXP_RATE, Config.RATE_VITALITY_EXP_MULTIPLIER) : 1.0;
+		return (getVitalityPoints() > 0) ? getValue(Stat.VITALITY_EXP_RATE, Config.RATE_VITALITY_EXP_MULTIPLIER) : 1.0;
 	}
 	
 	public void setVitalityPoints(int value)
@@ -550,7 +550,7 @@ public class PlayerStat extends PlayableStat
 			
 			if (points < 0) // vitality consumed
 			{
-				final int stat = (int) getValue(Stats.VITALITY_CONSUME_RATE, 1);
+				final int stat = (int) getValue(Stat.VITALITY_CONSUME_RATE, 1);
 				
 				if (stat == 0)
 				{
@@ -601,7 +601,7 @@ public class PlayerStat extends PlayableStat
 		vitality = getVitalityExpBonus();
 		
 		// Bonus exp from skills
-		bonusExp = 1 + (getValue(Stats.BONUS_EXP, 0) / 100);
+		bonusExp = 1 + (getValue(Stat.BONUS_EXP, 0) / 100);
 		
 		if (vitality > 1.0)
 		{
@@ -633,7 +633,7 @@ public class PlayerStat extends PlayableStat
 		vitality = getVitalityExpBonus();
 		
 		// Bonus sp from skills
-		bonusSp = 1 + (getValue(Stats.BONUS_SP, 0) / 100);
+		bonusSp = 1 + (getValue(Stat.BONUS_SP, 0) / 100);
 		
 		if (vitality > 1.0)
 		{
@@ -661,7 +661,7 @@ public class PlayerStat extends PlayableStat
 	 */
 	public int getBroochJewelSlots()
 	{
-		return (int) getValue(Stats.BROOCH_JEWELS, 0);
+		return (int) getValue(Stat.BROOCH_JEWELS, 0);
 	}
 	
 	@Override

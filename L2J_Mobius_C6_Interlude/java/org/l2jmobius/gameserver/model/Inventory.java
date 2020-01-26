@@ -95,7 +95,7 @@ public abstract class Inventory extends ItemContainer
 			final PlayerInstance owner = (PlayerInstance) getOwner();
 			if (item.getItemId() == 6408)
 			{
-				owner.setIsWearingFormalWear(false);
+				owner.setWearingFormalWear(false);
 			}
 		}
 		
@@ -112,7 +112,7 @@ public abstract class Inventory extends ItemContainer
 			// If player equip Formal Wear unequip weapons and abort cast/attack
 			if (item.getItemId() == 6408)
 			{
-				owner.setIsWearingFormalWear(true);
+				owner.setWearingFormalWear(true);
 				if (owner.isCastingNow())
 				{
 					owner.abortCast();

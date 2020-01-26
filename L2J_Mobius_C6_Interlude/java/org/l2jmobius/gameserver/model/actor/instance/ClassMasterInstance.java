@@ -35,7 +35,7 @@ public class ClassMasterInstance extends FolkInstance
 	private static ClassMasterInstance _instance;
 	
 	/**
-	 * Instantiates a new l2 class master instance.
+	 * Instantiates a new class master instance.
 	 * @param objectId the object id
 	 * @param template the template
 	 */
@@ -669,11 +669,11 @@ public class ClassMasterInstance extends FolkInstance
 	/**
 	 * Change class.
 	 * @param player the player
-	 * @param val the val
+	 * @param value the value
 	 */
-	private void changeClass(PlayerInstance player, int val)
+	private void changeClass(PlayerInstance player, int value)
 	{
-		player.setClassId(val);
+		player.setClassId(value);
 		
 		if (player.isSubClassActive())
 		{

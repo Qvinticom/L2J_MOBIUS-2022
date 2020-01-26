@@ -229,7 +229,7 @@ public class NpcInstance extends Creature
 		player.sendPacket(npcReply);
 	}
 	
-	protected void showQuestWindow(PlayerInstance player, int val)
+	protected void showQuestWindow(PlayerInstance player, int value)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(1);
 		html.setHtml("<html><head><body>There is no quests here yet.</body></html>");
@@ -237,10 +237,10 @@ public class NpcInstance extends Creature
 		player.sendPacket(new ActionFailed());
 	}
 	
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		pom = val == 0 ? "" + npcId : npcId + "-" + val;
+		pom = value == 0 ? "" + npcId : npcId + "-" + value;
 		final String temp = "data/html/default/" + pom + ".htm";
 		final File mainText = new File(temp);
 		if (mainText.exists())
@@ -250,10 +250,10 @@ public class NpcInstance extends Creature
 		return "data/html/npcdefault.htm";
 	}
 	
-	public void showChatWindow(PlayerInstance player, int val)
+	public void showChatWindow(PlayerInstance player, int value)
 	{
 		final int npcId = getNpcTemplate().getNpcId();
-		final String filename = getHtmlPath(npcId, val);
+		final String filename = getHtmlPath(npcId, value);
 		final File file = new File(filename);
 		if (!file.exists())
 		{

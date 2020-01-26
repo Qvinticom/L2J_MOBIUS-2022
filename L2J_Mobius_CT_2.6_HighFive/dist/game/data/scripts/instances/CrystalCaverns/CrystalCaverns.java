@@ -1019,7 +1019,7 @@ public class CrystalCaverns extends AbstractInstance
 				}
 				if ((world.dragonScaleNeed == 0) && (getRandom(100) < 80))
 				{
-					npc.setIsInvul(false);
+					npc.setInvul(false);
 				}
 			}
 		}
@@ -1093,7 +1093,7 @@ public class CrystalCaverns extends AbstractInstance
 			else if ((nowHp < (maxHp * 0.15)) && !world.isUsedInvulSkill && ((rand > 994) || (nowHp < (maxHp * 0.1))))
 			{
 				world.isUsedInvulSkill = true;
-				npc.setIsInvul(true);
+				npc.setInvul(true);
 			}
 		}
 		return null;
@@ -1245,10 +1245,10 @@ public class CrystalCaverns extends AbstractInstance
 			{
 				world._camera.decayMe();
 				world._camera = null;
-				npc.setIsParalyzed(false);
+				npc.setParalyzed(false);
 				for (PlayerInstance p : world._raiders)
 				{
-					p.setIsParalyzed(false);
+					p.setParalyzed(false);
 					Throw(npc, p);
 					if (p.getSummon() != null)
 					{
@@ -1287,7 +1287,7 @@ public class CrystalCaverns extends AbstractInstance
 					npc.addSkill(SkillData.getInstance().getSkill(5245, 1));
 					world._alarm = addSpawn(ALARM, spawnLoc[0], spawnLoc[1], spawnLoc[2], 10800, false, 0, false, world.getInstanceId());
 					world._alarm.disableCoreAI(true);
-					world._alarm.setIsImmobilized(true);
+					world._alarm.setImmobilized(true);
 					world._alarm.broadcastPacket(new CreatureSay(world._alarm, ChatType.SHOUT, NpcStringId.AN_ALARM_HAS_BEEN_SET_OFF_EVERYBODY_WILL_BE_IN_DANGER_IF_THEY_ARE_NOT_TAKEN_CARE_OF_IMMEDIATELY));
 				}
 			}
@@ -1335,7 +1335,7 @@ public class CrystalCaverns extends AbstractInstance
 			else if (event.equalsIgnoreCase("Baylor"))
 			{
 				world._baylor = addSpawn(29099, 153572, 142075, -12738, 10800, false, 0, false, world.getInstanceId());
-				world._baylor.setIsParalyzed(true);
+				world._baylor.setParalyzed(true);
 				world._camera = addSpawn(29120, 153273, 141400, -12738, 10800, false, 0, false, world.getInstanceId());
 				world._camera.broadcastPacket(new SpecialCamera(world._camera, 700, -45, 160, 500, 15200, 0, 0, 1, 0, 0));
 				startQuestTimer("baylorMinions", 2000, world._baylor, null);
@@ -1972,7 +1972,7 @@ public class CrystalCaverns extends AbstractInstance
 						pet.setInstanceId(world.getInstanceId());
 						pet.broadcastPacket(new ValidateLocation(pet));
 					}
-					p.setIsParalyzed(true);
+					p.setParalyzed(true);
 					p.broadcastPacket(new ValidateLocation(p));
 				}
 				startQuestTimer("Baylor", 30000, npc, null);

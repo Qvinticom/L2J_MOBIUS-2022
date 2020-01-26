@@ -101,12 +101,12 @@ public class ManorManagerInstance extends MerchantInstance
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
-	private void showBuyWindow(PlayerInstance player, String val)
+	private void showBuyWindow(PlayerInstance player, String value)
 	{
 		final double taxRate = 0;
 		player.tempInvetoryDisable();
 		
-		final StoreTradeList list = TradeController.getInstance().getBuyList(Integer.parseInt(val));
+		final StoreTradeList list = TradeController.getInstance().getBuyList(Integer.parseInt(value));
 		
 		if (list != null)
 		{
@@ -117,7 +117,7 @@ public class ManorManagerInstance extends MerchantInstance
 		else
 		{
 			LOGGER.info("possible client hacker: " + player.getName() + " attempting to buy from GM shop! (L2ManorManagerIntance)");
-			LOGGER.info("buylist id:" + val);
+			LOGGER.info("buylist id:" + value);
 		}
 		
 		player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -256,7 +256,7 @@ public class ManorManagerInstance extends MerchantInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		return "data/html/manormanager/manager.htm"; // Used only in parent method to return from "Territory status" to initial screen.
 	}

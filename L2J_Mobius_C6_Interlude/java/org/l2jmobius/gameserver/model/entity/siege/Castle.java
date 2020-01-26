@@ -346,7 +346,7 @@ public class Castle
 		
 		updateOwnerInDB(clan); // Update in database
 		
-		if (getSiege().getIsInProgress())
+		if (getSiege().isInProgress())
 		{
 			getSiege().midVictory(); // Mid victory phase of siege
 		}
@@ -373,7 +373,7 @@ public class Castle
 		
 		updateOwnerInDB(null);
 		
-		if (getSiege().getIsInProgress())
+		if (getSiege().isInProgress())
 		{
 			getSiege().midVictory();
 		}
@@ -1166,9 +1166,9 @@ public class Castle
 		return _isNextPeriodApproved;
 	}
 	
-	public void setNextPeriodApproved(boolean val)
+	public void setNextPeriodApproved(boolean value)
 	{
-		_isNextPeriodApproved = val;
+		_isNextPeriodApproved = value;
 	}
 	
 	public void updateClansReputation()
@@ -1257,7 +1257,7 @@ public class Castle
 	{
 		if (_siege != null)
 		{
-			return _siege.getIsInProgress();
+			return _siege.isInProgress();
 		}
 		
 		return false;

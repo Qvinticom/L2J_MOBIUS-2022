@@ -21,17 +21,17 @@ import java.util.OptionalDouble;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.IStatsFunction;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.IStatFunction;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author UnAfraid
  */
-public class PCriticalRateFinalizer implements IStatsFunction
+public class PCriticalRateFinalizer implements IStatFunction
 {
 	@Override
-	public double calc(Creature creature, OptionalDouble base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stat stat)
 	{
 		throwIfPresent(base);
 		
@@ -41,8 +41,8 @@ public class PCriticalRateFinalizer implements IStatsFunction
 			// Enchanted legs bonus
 			baseValue += calcEnchantBodyPart(creature, Item.SLOT_LEGS);
 		}
-		final double dexBonus = creature.getDEX() > 0 ? BaseStats.DEX.calcBonus(creature) : 1.;
-		return validateValue(creature, Stats.defaultValue(creature, stat, baseValue * dexBonus * 10), 0, Config.MAX_PCRIT_RATE);
+		final double dexBonus = creature.getDEX() > 0 ? BaseStat.DEX.calcBonus(creature) : 1.;
+		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue * dexBonus * 10), 0, Config.MAX_PCRIT_RATE);
 	}
 	
 	@Override

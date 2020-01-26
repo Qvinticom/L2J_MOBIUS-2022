@@ -26,20 +26,20 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerFlyMounted extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
 	/**
 	 * Instantiates a new condition player fly mounted.
-	 * @param val the val
+	 * @param value the value
 	 */
-	public ConditionPlayerFlyMounted(boolean val)
+	public ConditionPlayerFlyMounted(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		return (effector.getActingPlayer() == null) || (effector.getActingPlayer().isFlyingMounted() == _val);
+		return (effector.getActingPlayer() == null) || (effector.getActingPlayer().isFlyingMounted() == _value);
 	}
 }

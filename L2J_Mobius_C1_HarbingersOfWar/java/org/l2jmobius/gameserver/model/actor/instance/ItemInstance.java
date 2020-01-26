@@ -130,9 +130,9 @@ public class ItemInstance extends WorldObject
 		return _onTheGround;
 	}
 	
-	public void setOnTheGround(boolean b)
+	public void setOnTheGround(boolean value)
 	{
-		_onTheGround = b;
+		_onTheGround = value;
 	}
 	
 	@Override

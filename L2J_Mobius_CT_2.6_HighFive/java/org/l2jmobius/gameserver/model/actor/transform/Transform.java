@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.holders.AdditionalSkillHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 
 /**
@@ -212,7 +212,7 @@ public class Transform implements IIdentifiable
 		// Start flying.
 		if (isFlying())
 		{
-			player.setIsFlying(true);
+			player.setFlying(true);
 		}
 		
 		if (_name != null)
@@ -280,7 +280,7 @@ public class Transform implements IIdentifiable
 		// Stop flying.
 		if (isFlying())
 		{
-			player.setIsFlying(false);
+			player.setFlying(false);
 		}
 		
 		if (_name != null)
@@ -347,17 +347,17 @@ public class Transform implements IIdentifiable
 		}
 	}
 	
-	public double getStat(PlayerInstance player, Stats stats)
+	public double getStat(PlayerInstance player, Stat stat)
 	{
 		double val = 0;
 		final TransformTemplate template = getTemplate(player);
 		if (template != null)
 		{
-			val = template.getStats(stats);
+			val = template.getStats(stat);
 			final TransformLevelData data = template.getData(player.getLevel());
 			if (data != null)
 			{
-				val = data.getStats(stats);
+				val = data.getStats(stat);
 			}
 		}
 		return val;

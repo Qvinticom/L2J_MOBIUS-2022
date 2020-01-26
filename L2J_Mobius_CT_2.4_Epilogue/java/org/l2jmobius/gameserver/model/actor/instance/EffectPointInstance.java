@@ -35,7 +35,7 @@ public class EffectPointInstance extends Npc
 	{
 		super(template);
 		setInstanceType(InstanceType.EffectPointInstance);
-		setIsInvul(false);
+		setInvul(false);
 		_owner = owner == null ? null : owner.getActingPlayer();
 		if (owner != null)
 		{

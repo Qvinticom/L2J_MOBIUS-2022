@@ -43,7 +43,7 @@ public class EnterWorld extends ClientBasePacket
 		final PlayerInstance activeChar = client.getActiveChar();
 		if (client.getAccessLevel() >= 100)
 		{
-			activeChar.setIsGM(true);
+			activeChar.setGM(true);
 			GmListManager.getInstance().addGm(activeChar);
 		}
 		

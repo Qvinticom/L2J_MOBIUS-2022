@@ -410,12 +410,12 @@ public class IceFairySirra extends Quest
 		}
 	}
 	
-	public String getHtmlPath(int val)
+	public String getHtmlPath(int value)
 	{
 		String pom = "";
 		
-		pom = "32029-" + val;
-		if (val == 0)
+		pom = "32029-" + value;
+		if (value == 0)
 		{
 			pom = "32029";
 		}

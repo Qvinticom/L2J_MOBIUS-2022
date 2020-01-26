@@ -130,7 +130,7 @@ import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.EffectScope;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
 
 /**
@@ -249,7 +249,7 @@ public abstract class DocumentBase
 	
 	protected void attachFunc(Node n, Object template, String functionName, Condition attachCond)
 	{
-		final Stats stat = Stats.valueOfXml(n.getAttributes().getNamedItem("stat").getNodeValue());
+		final Stat stat = Stat.valueOfXml(n.getAttributes().getNamedItem("stat").getNodeValue());
 		int order = -1;
 		final Node orderNode = n.getAttributes().getNamedItem("order");
 		if (orderNode != null)

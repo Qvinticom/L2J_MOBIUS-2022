@@ -185,9 +185,9 @@ public class DoppelgangerAI extends CreatureAI
 		}
 	}
 	
-	public void setStartFollowController(boolean val)
+	public void setStartFollowController(boolean value)
 	{
-		_startFollow = val;
+		_startFollow = value;
 	}
 	
 	@Override

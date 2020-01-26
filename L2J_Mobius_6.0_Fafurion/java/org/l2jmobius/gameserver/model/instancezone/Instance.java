@@ -153,17 +153,17 @@ public class Instance implements IIdentifiable, INamable
 	/**
 	 * Set instance world parameter.
 	 * @param key parameter name
-	 * @param val parameter value
+	 * @param value parameter value
 	 */
-	public void setParameter(String key, Object val)
+	public void setParameter(String key, Object value)
 	{
-		if (val == null)
+		if (value == null)
 		{
 			_parameters.remove(key);
 		}
 		else
 		{
-			_parameters.set(key, val);
+			_parameters.set(key, value);
 		}
 	}
 	

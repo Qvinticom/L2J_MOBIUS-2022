@@ -65,12 +65,12 @@ public class SiegeFlagInstance extends Npc
 			if (outPost)
 			{
 				_isAdvanced = false;
-				setIsInvul(true);
+				setInvul(true);
 			}
 			else
 			{
 				_isAdvanced = advanced;
-				setIsInvul(false);
+				setInvul(false);
 			}
 			getStatus();
 			return;
@@ -100,7 +100,7 @@ public class SiegeFlagInstance extends Npc
 		sc.addFlag(this);
 		_isAdvanced = advanced;
 		getStatus();
-		setIsInvul(false);
+		setInvul(false);
 	}
 	
 	@Override
@@ -210,9 +210,9 @@ public class SiegeFlagInstance extends Npc
 		}
 	}
 	
-	void setCanTalk(boolean val)
+	void setCanTalk(boolean value)
 	{
-		_canTalk = val;
+		_canTalk = value;
 	}
 	
 	private boolean canTalk()

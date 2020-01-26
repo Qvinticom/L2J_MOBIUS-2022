@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.RecipeHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopItemInfo;
@@ -174,7 +174,7 @@ public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 			return;
 		}
 		
-		manufacturer.setIsCrafting(true);
+		manufacturer.setCrafting(true);
 		
 		// First you must pay for the manufacturing service of the other player.
 		if (manufactureRecipeCost > 0)
@@ -207,7 +207,7 @@ public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 		}
 		
 		final boolean success = player.tryLuck() || ((recipe.getSuccessRate() + offeringBonus) > Rnd.get(100));
-		final boolean craftingCritical = success && (player.getStat().getValue(Stats.CRAFTING_CRITICAL) > Rnd.get(100));
+		final boolean craftingCritical = success && (player.getStat().getValue(Stat.CRAFTING_CRITICAL) > Rnd.get(100));
 		
 		final ItemHolder craftedItem = recipe.doCraft(player, manufacturer, success, craftingCritical, true);
 		if (success)
@@ -266,6 +266,6 @@ public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 		// Show manufacturing window.
 		player.sendPacket(new RecipeShopItemInfo(manufacturer, recipe.getId(), success, _manufacturePrice, recipe.getMaxOffering()));
 		
-		manufacturer.setIsCrafting(false);
+		manufacturer.setCrafting(false);
 	}
 }

@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -60,42 +60,42 @@ public class Speed extends AbstractEffect
 					{
 						case RUN:
 						{
-							effected.getStat().mergeAdd(Stats.RUN_SPEED, _amount);
+							effected.getStat().mergeAdd(Stat.RUN_SPEED, _amount);
 							break;
 						}
 						case WALK:
 						{
-							effected.getStat().mergeAdd(Stats.WALK_SPEED, _amount);
+							effected.getStat().mergeAdd(Stat.WALK_SPEED, _amount);
 							break;
 						}
 						case SWIM_RUN:
 						{
-							effected.getStat().mergeAdd(Stats.SWIM_RUN_SPEED, _amount);
+							effected.getStat().mergeAdd(Stat.SWIM_RUN_SPEED, _amount);
 							break;
 						}
 						case SWIM_WALK:
 						{
-							effected.getStat().mergeAdd(Stats.SWIM_WALK_SPEED, _amount);
+							effected.getStat().mergeAdd(Stat.SWIM_WALK_SPEED, _amount);
 							break;
 						}
 						case FLY_RUN:
 						{
-							effected.getStat().mergeAdd(Stats.FLY_RUN_SPEED, _amount);
+							effected.getStat().mergeAdd(Stat.FLY_RUN_SPEED, _amount);
 							break;
 						}
 						case FLY_WALK:
 						{
-							effected.getStat().mergeAdd(Stats.FLY_WALK_SPEED, _amount);
+							effected.getStat().mergeAdd(Stat.FLY_WALK_SPEED, _amount);
 							break;
 						}
 						default:
 						{
-							effected.getStat().mergeAdd(Stats.RUN_SPEED, _amount);
-							effected.getStat().mergeAdd(Stats.WALK_SPEED, _amount);
-							effected.getStat().mergeAdd(Stats.SWIM_RUN_SPEED, _amount);
-							effected.getStat().mergeAdd(Stats.SWIM_WALK_SPEED, _amount);
-							effected.getStat().mergeAdd(Stats.FLY_RUN_SPEED, _amount);
-							effected.getStat().mergeAdd(Stats.FLY_WALK_SPEED, _amount);
+							effected.getStat().mergeAdd(Stat.RUN_SPEED, _amount);
+							effected.getStat().mergeAdd(Stat.WALK_SPEED, _amount);
+							effected.getStat().mergeAdd(Stat.SWIM_RUN_SPEED, _amount);
+							effected.getStat().mergeAdd(Stat.SWIM_WALK_SPEED, _amount);
+							effected.getStat().mergeAdd(Stat.FLY_RUN_SPEED, _amount);
+							effected.getStat().mergeAdd(Stat.FLY_WALK_SPEED, _amount);
 							break;
 						}
 					}
@@ -110,42 +110,42 @@ public class Speed extends AbstractEffect
 					{
 						case RUN:
 						{
-							effected.getStat().mergeMul(Stats.RUN_SPEED, (_amount / 100) + 1);
+							effected.getStat().mergeMul(Stat.RUN_SPEED, (_amount / 100) + 1);
 							break;
 						}
 						case WALK:
 						{
-							effected.getStat().mergeMul(Stats.WALK_SPEED, (_amount / 100) + 1);
+							effected.getStat().mergeMul(Stat.WALK_SPEED, (_amount / 100) + 1);
 							break;
 						}
 						case SWIM_RUN:
 						{
-							effected.getStat().mergeMul(Stats.SWIM_RUN_SPEED, (_amount / 100) + 1);
+							effected.getStat().mergeMul(Stat.SWIM_RUN_SPEED, (_amount / 100) + 1);
 							break;
 						}
 						case SWIM_WALK:
 						{
-							effected.getStat().mergeMul(Stats.SWIM_WALK_SPEED, (_amount / 100) + 1);
+							effected.getStat().mergeMul(Stat.SWIM_WALK_SPEED, (_amount / 100) + 1);
 							break;
 						}
 						case FLY_RUN:
 						{
-							effected.getStat().mergeMul(Stats.FLY_RUN_SPEED, (_amount / 100) + 1);
+							effected.getStat().mergeMul(Stat.FLY_RUN_SPEED, (_amount / 100) + 1);
 							break;
 						}
 						case FLY_WALK:
 						{
-							effected.getStat().mergeMul(Stats.FLY_WALK_SPEED, (_amount / 100) + 1);
+							effected.getStat().mergeMul(Stat.FLY_WALK_SPEED, (_amount / 100) + 1);
 							break;
 						}
 						default:
 						{
-							effected.getStat().mergeMul(Stats.RUN_SPEED, (_amount / 100) + 1);
-							effected.getStat().mergeMul(Stats.WALK_SPEED, (_amount / 100) + 1);
-							effected.getStat().mergeMul(Stats.SWIM_RUN_SPEED, (_amount / 100) + 1);
-							effected.getStat().mergeMul(Stats.SWIM_WALK_SPEED, (_amount / 100) + 1);
-							effected.getStat().mergeMul(Stats.FLY_RUN_SPEED, (_amount / 100) + 1);
-							effected.getStat().mergeMul(Stats.FLY_WALK_SPEED, (_amount / 100) + 1);
+							effected.getStat().mergeMul(Stat.RUN_SPEED, (_amount / 100) + 1);
+							effected.getStat().mergeMul(Stat.WALK_SPEED, (_amount / 100) + 1);
+							effected.getStat().mergeMul(Stat.SWIM_RUN_SPEED, (_amount / 100) + 1);
+							effected.getStat().mergeMul(Stat.SWIM_WALK_SPEED, (_amount / 100) + 1);
+							effected.getStat().mergeMul(Stat.FLY_RUN_SPEED, (_amount / 100) + 1);
+							effected.getStat().mergeMul(Stat.FLY_WALK_SPEED, (_amount / 100) + 1);
 							break;
 						}
 					}

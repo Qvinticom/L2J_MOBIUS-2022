@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.model.stats.functions.formulas;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 
 /**
@@ -36,12 +36,12 @@ public class FuncPAtkMod extends AbstractFunction
 	
 	private FuncPAtkMod()
 	{
-		super(Stats.POWER_ATTACK, 1, null, 0, null);
+		super(Stat.POWER_ATTACK, 1, null, 0, null);
 	}
 	
 	@Override
 	public double calc(Creature effector, Creature effected, Skill skill, double initVal)
 	{
-		return initVal * BaseStats.STR.calcBonus(effector) * effector.getLevelMod();
+		return initVal * BaseStat.STR.calcBonus(effector) * effector.getLevelMod();
 	}
 }

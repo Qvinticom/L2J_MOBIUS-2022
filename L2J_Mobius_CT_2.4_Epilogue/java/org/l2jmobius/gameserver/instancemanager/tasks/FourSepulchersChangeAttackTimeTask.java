@@ -33,10 +33,10 @@ public class FourSepulchersChangeAttackTimeTask implements Runnable
 	public void run()
 	{
 		final FourSepulchersManager manager = FourSepulchersManager.getInstance();
-		manager.setIsEntryTime(false);
-		manager.setIsWarmUpTime(false);
-		manager.setIsAttackTime(true);
-		manager.setIsCoolDownTime(false);
+		manager.setEntryTime(false);
+		manager.setWarmUpTime(false);
+		manager.setAttackTime(true);
+		manager.setCoolDownTime(false);
 		
 		manager.locationShadowSpawns();
 		

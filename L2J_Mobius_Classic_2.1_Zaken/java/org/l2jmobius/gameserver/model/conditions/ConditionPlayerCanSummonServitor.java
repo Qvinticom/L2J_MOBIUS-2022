@@ -27,11 +27,11 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerCanSummonServitor extends Condition
 {
-	private final boolean _val;
+	private final boolean _value;
 	
-	public ConditionPlayerCanSummonServitor(boolean val)
+	public ConditionPlayerCanSummonServitor(boolean value)
 	{
-		_val = val;
+		_value = value;
 	}
 	
 	@Override
@@ -53,6 +53,6 @@ public class ConditionPlayerCanSummonServitor extends Condition
 		{
 			canSummon = false;
 		}
-		return canSummon == _val;
+		return canSummon == _value;
 	}
 }

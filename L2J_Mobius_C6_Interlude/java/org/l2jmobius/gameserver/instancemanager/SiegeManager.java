@@ -67,8 +67,8 @@ public class SiegeManager
 	private int _siegeClanMinLevel = 4; // Changeable in siege.config
 	private int _siegeLength = 120; // Time in minute. Changeable in siege.config
 	
-	private boolean _teleport_to_siege = false;
-	private boolean _teleport_to_siege_town = false;
+	private boolean _teleportToSiege = false;
+	private boolean _teleportToSiegeTown = false;
 	
 	private SiegeManager()
 	{
@@ -103,7 +103,7 @@ public class SiegeManager
 		{
 			sm.addString("You must be on castle ground to summon this");
 		}
-		else if (!castle.getSiege().getIsInProgress())
+		else if (!castle.getSiege().isInProgress())
 		{
 			sm.addString("You can only summon this during a siege.");
 		}
@@ -129,7 +129,7 @@ public class SiegeManager
 		
 		for (Castle castle : CastleManager.getInstance().getCastles())
 		{
-			if (checkIsRegistered(clan, castle.getCastleId()) && (castle.getSiege() != null) && castle.getSiege().getIsInProgress())
+			if (checkIsRegistered(clan, castle.getCastleId()) && (castle.getSiege() != null) && castle.getSiege().isInProgress())
 			{
 				return true;
 			}
@@ -208,8 +208,8 @@ public class SiegeManager
 			_siegeLength = Integer.decode(siegeSettings.getProperty("SiegeLength", "120"));
 			
 			// Siege Teleports
-			_teleport_to_siege = Boolean.parseBoolean(siegeSettings.getProperty("AllowTeleportToSiege", "false"));
-			_teleport_to_siege_town = Boolean.parseBoolean(siegeSettings.getProperty("AllowTeleportToSiegeTown", "false"));
+			_teleportToSiege = Boolean.parseBoolean(siegeSettings.getProperty("AllowTeleportToSiege", "false"));
+			_teleportToSiegeTown = Boolean.parseBoolean(siegeSettings.getProperty("AllowTeleportToSiegeTown", "false"));
 			
 			// Siege spawns settings
 			_controlTowerSpawnList = new HashMap<>();
@@ -384,19 +384,19 @@ public class SiegeManager
 	}
 	
 	/**
-	 * @return the _teleport_to_siege
+	 * @return the _teleportToSiege
 	 */
-	public boolean is_teleport_to_siege_allowed()
+	public boolean isTeleportToSiegeAllowed()
 	{
-		return _teleport_to_siege;
+		return _teleportToSiege;
 	}
 	
 	/**
-	 * @return the _teleport_to_siege_town
+	 * @return the _teleportToSiegeTown
 	 */
-	public boolean is_teleport_to_siege_town_allowed()
+	public boolean isTeleportToSiegeTownAllowed()
 	{
-		return _teleport_to_siege_town;
+		return _teleportToSiegeTown;
 	}
 	
 	public class SiegeSpawn

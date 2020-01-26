@@ -149,8 +149,8 @@ public class Sailren extends AbstractNpcAI
 			{
 				final RaidBossInstance sailren = (RaidBossInstance) addSpawn(SAILREN, 27549, -6638, -2008, 0, false, 0);
 				final Npc movieNpc = addSpawn(MOVIE_NPC, sailren.getX(), sailren.getY(), sailren.getZ() + 30, 0, false, 26000);
-				sailren.setIsInvul(true);
-				sailren.setIsImmobilized(true);
+				sailren.setInvul(true);
+				sailren.setImmobilized(true);
 				zone.broadcastPacket(new SpecialCamera(movieNpc, 60, 110, 30, 4000, 1500, 20000, 0, 65, 1, 0, 0));
 				
 				startQuestTimer("ATTACK", 24600, sailren, null);
@@ -205,8 +205,8 @@ public class Sailren extends AbstractNpcAI
 			}
 			case "ATTACK":
 			{
-				npc.setIsInvul(false);
-				npc.setIsImmobilized(false);
+				npc.setInvul(false);
+				npc.setImmobilized(false);
 				break;
 			}
 			case "CLEAR_STATUS":

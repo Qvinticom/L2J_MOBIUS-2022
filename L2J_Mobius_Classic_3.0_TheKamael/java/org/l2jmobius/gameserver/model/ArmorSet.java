@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.stats.BaseStats;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
 
 /**
  * @author UnAfraid
@@ -44,7 +44,7 @@ public class ArmorSet
 	private final Set<Integer> _optionalItems = new LinkedHashSet<>();
 	
 	private final List<ArmorsetSkillHolder> _skills = new ArrayList<>();
-	private final Map<BaseStats, Double> _stats = new LinkedHashMap<>();
+	private final Map<BaseStat, Double> _stats = new LinkedHashMap<>();
 	
 	private static final int[] ARMORSET_SLOTS = new int[]
 	{
@@ -180,7 +180,7 @@ public class ArmorSet
 	 * @param stat
 	 * @param value
 	 */
-	public void addStatsBonus(BaseStats stat, double value)
+	public void addStatsBonus(BaseStat stat, double value)
 	{
 		_stats.putIfAbsent(stat, value);
 	}
@@ -189,7 +189,7 @@ public class ArmorSet
 	 * @param stat
 	 * @return the stats bonus value or 0 if doesn't exists
 	 */
-	public double getStatsBonus(BaseStats stat)
+	public double getStatsBonus(BaseStat stat)
 	{
 		return _stats.getOrDefault(stat, 0d);
 	}

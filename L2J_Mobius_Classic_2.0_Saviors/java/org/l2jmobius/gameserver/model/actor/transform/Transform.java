@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
-import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import org.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
@@ -244,7 +244,7 @@ public class Transform implements IIdentifiable
 			// Start flying.
 			if (isFlying())
 			{
-				creature.setIsFlying(true);
+				creature.setFlying(true);
 			}
 			
 			// Get player a bit higher so he doesn't drops underground after transformation happens
@@ -356,7 +356,7 @@ public class Transform implements IIdentifiable
 			// Stop flying.
 			if (isFlying())
 			{
-				creature.setIsFlying(false);
+				creature.setFlying(false);
 			}
 			
 			if (creature.isPlayer())
@@ -435,17 +435,17 @@ public class Transform implements IIdentifiable
 		return defaultAttackType;
 	}
 	
-	public double getStats(Creature creature, Stats stats, double defaultValue)
+	public double getStats(Creature creature, Stat stat, double defaultValue)
 	{
 		double val = defaultValue;
 		final TransformTemplate template = getTemplate(creature);
 		if (template != null)
 		{
-			val = template.getStats(stats, defaultValue);
+			val = template.getStats(stat, defaultValue);
 			final TransformLevelData data = template.getData(creature.getLevel());
 			if (data != null)
 			{
-				val = data.getStats(stats, defaultValue);
+				val = data.getStats(stat, defaultValue);
 			}
 		}
 		return val;

@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class ObservationInstance extends FolkInstance
 {
 	/**
-	 * Instantiates a new l2 observation instance.
+	 * Instantiates a new observation instance.
 	 * @param objectId the object id
 	 * @param template the template
 	 */
@@ -95,16 +95,16 @@ public class ObservationInstance extends FolkInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		if (val == 0)
+		if (value == 0)
 		{
 			pom = "" + npcId;
 		}
 		else
 		{
-			pom = npcId + "-" + val;
+			pom = npcId + "-" + value;
 		}
 		
 		return "data/html/observation/" + pom + ".htm";
@@ -113,11 +113,11 @@ public class ObservationInstance extends FolkInstance
 	/**
 	 * Do observe.
 	 * @param player the player
-	 * @param val the val
+	 * @param value the value
 	 */
-	private void doObserve(PlayerInstance player, String val)
+	private void doObserve(PlayerInstance player, String value)
 	{
-		final StringTokenizer st = new StringTokenizer(val);
+		final StringTokenizer st = new StringTokenizer(value);
 		st.nextToken(); // Command
 		final int x = Integer.parseInt(st.nextToken());
 		final int y = Integer.parseInt(st.nextToken());
