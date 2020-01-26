@@ -144,15 +144,15 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	private boolean _elementable;
 	private boolean _questItem;
 	private boolean _freightable;
-	private boolean _allow_self_resurrection;
-	private boolean _is_oly_restricted;
-	private boolean _is_coc_restricted;
-	private boolean _for_npc;
+	private boolean _allowSelfResurrection;
+	private boolean _isOlyRestricted;
+	private boolean _isCocRestricted;
+	private boolean _forNpc;
 	private boolean _common;
 	private boolean _heroItem;
 	private boolean _pvpItem;
-	private boolean _immediate_effect;
-	private boolean _ex_immediate_effect;
+	private boolean _immediateEffect;
+	private boolean _exImmediateEffect;
 	private int _defaultEnchantLevel;
 	private ActionType _defaultAction;
 	
@@ -210,15 +210,15 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 		_enchantable = set.getInt("enchant_enabled", 0);
 		_questItem = set.getBoolean("is_questitem", false);
 		_freightable = set.getBoolean("is_freightable", false);
-		_allow_self_resurrection = set.getBoolean("allow_self_resurrection", false);
-		_is_oly_restricted = set.getBoolean("is_oly_restricted", false);
-		_is_coc_restricted = set.getBoolean("is_coc_restricted", false);
-		_for_npc = set.getBoolean("for_npc", false);
+		_allowSelfResurrection = set.getBoolean("allow_self_resurrection", false);
+		_isOlyRestricted = set.getBoolean("is_oly_restricted", false);
+		_isCocRestricted = set.getBoolean("is_coc_restricted", false);
+		_forNpc = set.getBoolean("for_npc", false);
 		_isAppearanceable = set.getBoolean("isAppearanceable", false);
 		_isBlessed = set.getBoolean("blessed", false);
 		
-		_immediate_effect = set.getBoolean("immediate_effect", false);
-		_ex_immediate_effect = set.getBoolean("ex_immediate_effect", false);
+		_immediateEffect = set.getBoolean("immediate_effect", false);
+		_exImmediateEffect = set.getBoolean("ex_immediate_effect", false);
 		
 		_defaultAction = set.getEnum("default_action", ActionType.class, ActionType.NONE);
 		_useSkillDisTime = set.getInt("useSkillDisTime", 0);
@@ -806,7 +806,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 			return false;
 		}
 		
-		if (_is_coc_restricted && (creature.isPlayer() && (creature.getActingPlayer().isOnEvent(CeremonyOfChaosEvent.class))))
+		if (_isCocRestricted && (creature.isPlayer() && (creature.getActingPlayer().isOnEvent(CeremonyOfChaosEvent.class))))
 		{
 			creature.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ITEM_IN_THE_TOURNAMENT);
 			return false;
@@ -874,12 +874,12 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	
 	public boolean isAllowSelfResurrection()
 	{
-		return _allow_self_resurrection;
+		return _allowSelfResurrection;
 	}
 	
 	public boolean isOlyRestrictedItem()
 	{
-		return _is_oly_restricted || Config.LIST_OLY_RESTRICTED_ITEMS.contains(_itemId);
+		return _isOlyRestricted || Config.LIST_OLY_RESTRICTED_ITEMS.contains(_itemId);
 	}
 	
 	/**
@@ -887,12 +887,12 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 */
 	public boolean isCocRestrictedItem()
 	{
-		return _is_coc_restricted;
+		return _isCocRestricted;
 	}
 	
 	public boolean isForNpc()
 	{
-		return _for_npc;
+		return _forNpc;
 	}
 	
 	public boolean isAppearanceable()
@@ -925,7 +925,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 */
 	public boolean hasExImmediateEffect()
 	{
-		return _ex_immediate_effect;
+		return _exImmediateEffect;
 	}
 	
 	/**
@@ -934,7 +934,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 */
 	public boolean hasImmediateEffect()
 	{
-		return _immediate_effect;
+		return _immediateEffect;
 	}
 	
 	/**
