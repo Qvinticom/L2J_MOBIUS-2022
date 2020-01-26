@@ -326,8 +326,7 @@ public class CursedWeapon
 	
 	public boolean checkDrop(Attackable attackable, PlayerInstance player)
 	{
-		
-		if (Rnd.get(100000) < _dropRate)
+		if (Rnd.get(1000000) < _dropRate)
 		{
 			// Drop the item
 			dropIt(attackable, player);
@@ -339,7 +338,6 @@ public class CursedWeapon
 			
 			return true;
 		}
-		
 		return false;
 	}
 	
