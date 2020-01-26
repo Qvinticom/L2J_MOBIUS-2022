@@ -17,27 +17,28 @@
 package org.l2jmobius.gameserver.datatables.xml;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.Fish;
+import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import org.l2jmobius.gameserver.network.serverpackets.StaticObject;
 
 /**
- * This class loads and stores {@link Fish} infos.
+ * This class loads, stores and spawns {@link StaticObject}s.
  */
-public class FishData implements IXmlReader
+public class StaticObjectData implements IXmlReader
 {
-	private final List<Fish> _fish = new ArrayList<>();
+	private final Map<Integer, StaticObjectInstance> _objects = new HashMap<>();
 	
-	protected FishData()
+	protected StaticObjectData()
 	{
 		load();
 	}
@@ -45,14 +46,14 @@ public class FishData implements IXmlReader
 	@Override
 	public void load()
 	{
-		parseDatapackFile("data/Fish.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _fish.size() + " fish.");
+		parseDatapackFile("data/StaticObjects.xml");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _objects.size() + " static objects.");
 	}
 	
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		// StatSet used to feed informations. Cleaned on every entry.
+		// StatsSet used to feed informations. Cleaned on every entry.
 		final StatSet set = new StatSet();
 		
 		// First element is never read.
@@ -60,7 +61,7 @@ public class FishData implements IXmlReader
 		
 		for (Node node = n.getFirstChild(); node != null; node = node.getNextSibling())
 		{
-			if (!"fish".equalsIgnoreCase(node.getNodeName()))
+			if (!"object".equalsIgnoreCase(node.getNodeName()))
 			{
 				continue;
 			}
@@ -73,31 +74,31 @@ public class FishData implements IXmlReader
 				set.set(attr.getNodeName(), attr.getNodeValue());
 			}
 			
-			// Feed the list with new data.
-			_fish.add(new Fish(set));
+			// Create and spawn the StaticObject instance.
+			final StaticObjectInstance obj = new StaticObjectInstance(IdFactory.getInstance().getNextId());
+			obj.setType(set.getInt("type"));
+			obj.setStaticObjectId(set.getInt("id"));
+			obj.setXYZ(set.getInt("x"), set.getInt("y"), set.getInt("z"));
+			obj.setMap(set.getString("texture"), set.getInt("mapX"), set.getInt("mapY"));
+			obj.spawnMe();
+			
+			// Feed the map with new data.
+			_objects.put(obj.getObjectId(), obj);
 		}
 	}
 	
-	/**
-	 * Get a random {@link FishData} based on level, type and group.
-	 * @param lvl : the fish level to check.
-	 * @param type : the fish type to check.
-	 * @param group : the fish group to check.
-	 * @return a Fish with good criteria.
-	 */
-	public Fish getFish(int lvl, int type, int group)
+	public Collection<StaticObjectInstance> getStaticObjects()
 	{
-		final List<Fish> fish = _fish.stream().filter(f -> (f.getLevel() == lvl) && (f.getType() == type) && (f.getGroup() == group)).collect(Collectors.toList());
-		return fish.get(Rnd.get(fish.size()));
+		return _objects.values();
 	}
 	
-	public static FishData getInstance()
+	public static StaticObjectData getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final FishData INSTANCE = new FishData();
+		protected static final StaticObjectData INSTANCE = new StaticObjectData();
 	}
 }
