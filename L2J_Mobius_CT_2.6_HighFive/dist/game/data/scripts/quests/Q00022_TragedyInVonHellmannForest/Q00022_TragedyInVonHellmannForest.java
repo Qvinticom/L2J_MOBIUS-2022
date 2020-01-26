@@ -207,7 +207,7 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 				final QuestTimer qt = getQuestTimer("DESPAWN_GHOST2", npc, player);
 				if ((qt != null) && (npc.getScriptValue() == player.getObjectId()))
 				{
-					qt.cancelAndRemove();
+					qt.cancel();
 					npc.setScriptValue(0);
 					startQuestTimer("DESPAWN_GHOST2", 1000 * 3, npc, player);
 					qs.setCond(8);

@@ -332,7 +332,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 			{
 				for (QuestTimer timer : timers)
 				{
-					if ((timer != null) && timer.isMatch(this, name, npc, player))
+					if ((timer != null) && timer.equals(this, name, npc, player))
 					{
 						return timer;
 					}
@@ -390,7 +390,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		final QuestTimer timer = getQuestTimer(name, npc, player);
 		if (timer != null)
 		{
-			timer.cancelAndRemove();
+			timer.cancel();
 		}
 	}
 	
@@ -403,7 +403,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	{
 		if ((timer != null) && (_questTimers != null))
 		{
-			final List<QuestTimer> timers = getQuestTimers().get(timer.getName());
+			final List<QuestTimer> timers = getQuestTimers().get(timer.toString());
 			if (timers != null)
 			{
 				_writeLock.lock();

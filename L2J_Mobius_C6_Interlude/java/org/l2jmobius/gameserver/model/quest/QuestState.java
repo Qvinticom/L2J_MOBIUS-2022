@@ -42,6 +42,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
 
 /**
+ * Quest state class.
  * @author Luis Arias
  */
 public class QuestState
@@ -62,16 +63,16 @@ public class QuestState
 	public static final byte DROP_FIXED_COUNT = 2;
 	public static final byte DROP_FIXED_BOTH = 3;
 	
-	/** Quest associated to the QuestState */
+	/** The name of the quest of this QuestState */
 	private final String _questName;
 	
-	/** Player who engaged the quest */
+	/** The "owner" of this QuestState object */
 	private final PlayerInstance _player;
 	
-	/** State of the quest */
+	/** The current state of the quest */
 	private byte _state;
 	
-	/** List of couples (variable for quest,value of the variable for quest) */
+	/** A map of key->value pairs containing the quest state variables and their values */
 	private Map<String, String> _vars;
 	
 	/**
@@ -81,30 +82,29 @@ public class QuestState
 	 * <LI>Save informations in the object QuestState created (Quest, Player, Completion, State)</LI>
 	 * <LI>Add the QuestState in the player's list of quests by using setQuestState()</LI>
 	 * <LI>Add drops gotten by the quest</LI> <BR/>
-	 * @param quest : quest associated with the QuestState
-	 * @param player : PlayerInstance pointing out the player
-	 * @param state : state of the quest
+	 * @param quest the {@link Quest} object associated with the QuestState
+	 * @param player the owner of this {@link QuestState} object
+	 * @param state the initial state of the quest
 	 */
-	QuestState(Quest quest, PlayerInstance player, byte state)
+	public QuestState(Quest quest, PlayerInstance player, byte state)
 	{
 		_questName = quest.getName();
 		_player = player;
-		
-		// Save the state of the quest for the player in the player's list of quest owned
-		_player.setQuestState(this);
-		
-		// set the state of the quest
 		_state = state;
+		
+		player.setQuestState(this);
 	}
 	
+	/**
+	 * @return the name of the quest of this QuestState
+	 */
 	public String getQuestName()
 	{
 		return _questName;
 	}
 	
 	/**
-	 * Return the quest
-	 * @return Quest
+	 * @return the {@link Quest} object of this QuestState
 	 */
 	public Quest getQuest()
 	{
@@ -112,8 +112,7 @@ public class QuestState
 	}
 	
 	/**
-	 * Return the PlayerInstance
-	 * @return PlayerInstance
+	 * @return the {@link PlayerInstance} object of the owner of this QuestState
 	 */
 	public PlayerInstance getPlayer()
 	{
@@ -121,8 +120,8 @@ public class QuestState
 	}
 	
 	/**
-	 * Return the state of the quest
-	 * @return State
+	 * @return the current State of this QuestState
+	 * @see org.l2jmobius.gameserver.model.quest.State
 	 */
 	public byte getState()
 	{
@@ -130,21 +129,30 @@ public class QuestState
 	}
 	
 	/**
-	 * Return true if quest completed, false otherwise
-	 * @return boolean
+	 * @return {@code true} if the State of this QuestState is CREATED, {@code false} otherwise
+	 * @see org.l2jmobius.gameserver.model.quest.State
 	 */
-	public boolean isCompleted()
+	public boolean isCreated()
 	{
-		return (_state == State.COMPLETED);
+		return _state == State.CREATED;
 	}
 	
 	/**
-	 * Return true if quest started, false otherwise
-	 * @return boolean
+	 * @return {@code true} if the State of this QuestState is STARTED, {@code false} otherwise
+	 * @see org.l2jmobius.gameserver.model.quest.State
 	 */
 	public boolean isStarted()
 	{
-		return (_state == State.STARTED);
+		return _state == State.STARTED;
+	}
+	
+	/**
+	 * @return {@code true} if the State of this QuestState is COMPLETED, {@code false} otherwise
+	 * @see org.l2jmobius.gameserver.model.quest.State
+	 */
+	public boolean isCompleted()
+	{
+		return _state == State.COMPLETED;
 	}
 	
 	/**
@@ -162,9 +170,7 @@ public class QuestState
 		if (_state != state)
 		{
 			_state = state;
-			
 			Quest.updateQuestInDb(this);
-			
 			_player.sendPacket(new QuestList(_player));
 		}
 	}
@@ -218,11 +224,10 @@ public class QuestState
 	
 	/**
 	 * Add parameter used in quests.
-	 * @param var : String pointing out the name of the variable for quest
-	 * @param value : String pointing out the value of the variable for quest
-	 * @return String (equal to parameter "value")
+	 * @param var String pointing out the name of the variable for quest
+	 * @param value String pointing out the value of the variable for quest
 	 */
-	public String setInternal(String var, String value)
+	public void setInternal(String var, String value)
 	{
 		if (_vars == null)
 		{
@@ -235,8 +240,6 @@ public class QuestState
 		}
 		
 		_vars.put(var, value);
-		
-		return value;
 	}
 	
 	/**
@@ -263,9 +266,7 @@ public class QuestState
 			value = "";
 		}
 		
-		// Map.put() returns previous value associated with specified key, or null if there was no mapping for key.
 		final String old = _vars.put(var, value);
-		
 		if (old != null)
 		{
 			Quest.updateQuestVarInDb(this, var, value);
@@ -311,15 +312,15 @@ public class QuestState
 	 */
 	private void setCond(int cond, int old)
 	{
-		int completedStateFlags = 0; // initializing...
-		
-		// if there is no change since last setting, there is nothing to do here
 		if (cond == old)
 		{
 			return;
 		}
 		
-		// cond 0 and 1 do not need completedStateFlags. Also, if cond > 1, the 1st step must always exist (i.e. it can never be skipped). So if cond is 2, we can still safely assume no steps have been skipped.
+		int completedStateFlags = 0;
+		// cond 0 and 1 do not need completedStateFlags. Also, if cond > 1, the 1st step must
+		// always exist (i.e. it can never be skipped). So if cond is 2, we can still safely
+		// assume no steps have been skipped.
 		// Finally, more than 31 steps CANNOT be supported in any way with skipping.
 		if ((cond < 3) || (cond > 31))
 		{
@@ -367,7 +368,8 @@ public class QuestState
 				set("__compltdStateFlags", String.valueOf(completedStateFlags));
 			}
 		}
-		// if this moves forward, it changes nothing on previously skipped steps...so just mark this state and we are done
+		// If this moves forward, it changes nothing on previously skipped steps.
+		// Just mark this state and we are done.
 		else
 		{
 			completedStateFlags |= 1 << (cond - 1);
@@ -378,7 +380,6 @@ public class QuestState
 		_player.sendPacket(new QuestList(_player));
 		
 		final int questId = getQuest().getQuestId();
-		
 		if ((questId > 0) && (questId < 999) && (cond > 0))
 		{
 			_player.sendPacket(new ExShowQuestMark(questId));
@@ -386,10 +387,8 @@ public class QuestState
 	}
 	
 	/**
-	 * Remove the variable of quest from the list of variables for the quest.<BR>
-	 * <BR>
-	 * <U><I>Concept : </I></U> Remove the variable of quest represented by "var" from the class variable Map "vars" and from the database.
-	 * @param var : String designating the variable for the quest to be deleted
+	 * Removes a quest variable from the list of existing quest variables.
+	 * @param var the name of the variable to remove
 	 */
 	public void unset(String var)
 	{
