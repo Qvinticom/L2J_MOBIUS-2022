@@ -676,7 +676,6 @@ public class QuestState
 		{
 			_player.sendPacket(QuestSound.ITEMSOUND_QUEST_FINISH.getPacket());
 		}
-		return;
 	}
 	
 	public void showQuestionMark(int number)
