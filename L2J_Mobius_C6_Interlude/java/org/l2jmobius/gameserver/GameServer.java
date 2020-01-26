@@ -50,7 +50,6 @@ import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.csv.ExtractableItemsData;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.csv.NpcWalkerRoutesTable;
-import org.l2jmobius.gameserver.datatables.csv.SummonItemsData;
 import org.l2jmobius.gameserver.datatables.sql.ArmorSetsTable;
 import org.l2jmobius.gameserver.datatables.sql.CharNameTable;
 import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
@@ -73,6 +72,7 @@ import org.l2jmobius.gameserver.datatables.xml.FishData;
 import org.l2jmobius.gameserver.datatables.xml.HennaData;
 import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.datatables.xml.StaticObjectData;
+import org.l2jmobius.gameserver.datatables.xml.SummonItemData;
 import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
@@ -249,7 +249,7 @@ public class GameServer
 			CustomArmorSetsTable.getInstance();
 		}
 		ExtractableItemsData.getInstance();
-		SummonItemsData.getInstance();
+		SummonItemData.getInstance();
 		if (Config.ALLOWFISHING)
 		{
 			FishData.getInstance();

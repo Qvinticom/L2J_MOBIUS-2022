@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.csv.SummonItemsData;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
+import org.l2jmobius.gameserver.datatables.xml.SummonItemData;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.Skill;
@@ -44,6 +44,8 @@ import org.l2jmobius.gameserver.network.serverpackets.Ride;
 
 public class SummonItems implements IItemHandler
 {
+	private static final int[] ITEM_IDS = SummonItemData.getInstance().getAllItemIds();
+	
 	@Override
 	public void useItem(Playable playable, ItemInstance item)
 	{
@@ -105,8 +107,7 @@ public class SummonItems implements IItemHandler
 			return;
 		}
 		
-		final SummonItem sitem = SummonItemsData.getInstance().getSummonItem(item.getItemId());
-		
+		final SummonItem sitem = SummonItemData.getInstance().getSummonItem(item.getItemId());
 		if (((player.getPet() != null) || player.isMounted()) && sitem.isPetSummon())
 		{
 			player.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
@@ -304,6 +305,6 @@ public class SummonItems implements IItemHandler
 	@Override
 	public int[] getItemIds()
 	{
-		return SummonItemsData.getInstance().itemIDs();
+		return ITEM_IDS;
 	}
 }

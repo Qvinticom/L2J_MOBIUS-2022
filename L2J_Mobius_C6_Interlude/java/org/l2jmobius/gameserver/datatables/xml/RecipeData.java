@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.datatables.xml;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -137,9 +136,9 @@ public class RecipeData extends RecipeController implements IXmlReader
 		}
 	}
 	
-	public Collection<RecipeList> getAllRecipes()
+	public RecipeList getRecipe(int recipeId)
 	{
-		return _lists.values();
+		return _lists.get(recipeId);
 	}
 	
 	public RecipeList getRecipeByItemId(int itemId)
@@ -154,9 +153,15 @@ public class RecipeData extends RecipeController implements IXmlReader
 		return null;
 	}
 	
-	public RecipeList getRecipe(int recId)
+	public int[] getAllItemIds()
 	{
-		return _lists.get(recId);
+		int index = 0;
+		final int[] ids = new int[_lists.size()];
+		for (RecipeList recipe : _lists.values())
+		{
+			ids[index++] = recipe.getRecipeId();
+		}
+		return ids;
 	}
 	
 	public static RecipeData getInstance()

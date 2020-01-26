@@ -28,17 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Recipes implements IItemHandler
 {
-	private final int[] ITEM_IDS;
-	
-	public Recipes()
-	{
-		int index = 0;
-		ITEM_IDS = new int[RecipeData.getInstance().getAllRecipes().size()];
-		for (RecipeList recipe : RecipeData.getInstance().getAllRecipes())
-		{
-			ITEM_IDS[index++] = recipe.getRecipeId();
-		}
-	}
+	private static final int[] ITEM_IDS = RecipeData.getInstance().getAllItemIds();
 	
 	@Override
 	public void useItem(Playable playable, ItemInstance item)
