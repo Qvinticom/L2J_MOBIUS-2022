@@ -25,7 +25,7 @@ import java.util.List;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.sql.ArmorSetsTable;
+import org.l2jmobius.gameserver.datatables.xml.ArmorSetData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Armor;
 import org.l2jmobius.gameserver.model.items.EtcItem;
@@ -396,7 +396,7 @@ public abstract class Inventory extends ItemContainer
 			}
 			
 			// checks if there is armorset for chest item that player worns
-			final ArmorSet armorSet = ArmorSetsTable.getInstance().getSet(chestItem.getItemId());
+			final ArmorSet armorSet = ArmorSetData.getInstance().getSet(chestItem.getItemId());
 			if (armorSet == null)
 			{
 				return;
@@ -491,7 +491,7 @@ public abstract class Inventory extends ItemContainer
 			
 			if (slot == PAPERDOLL_CHEST)
 			{
-				final ArmorSet armorSet = ArmorSetsTable.getInstance().getSet(item.getItemId());
+				final ArmorSet armorSet = ArmorSetData.getInstance().getSet(item.getItemId());
 				if (armorSet == null)
 				{
 					return;
@@ -510,7 +510,7 @@ public abstract class Inventory extends ItemContainer
 					return;
 				}
 				
-				final ArmorSet armorSet = ArmorSetsTable.getInstance().getSet(chestItem.getItemId());
+				final ArmorSet armorSet = ArmorSetData.getInstance().getSet(chestItem.getItemId());
 				if (armorSet == null)
 				{
 					return;

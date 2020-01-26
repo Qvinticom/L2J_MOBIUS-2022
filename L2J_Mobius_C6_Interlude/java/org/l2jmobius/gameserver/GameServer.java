@@ -50,11 +50,9 @@ import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.csv.ExtractableItemsData;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.csv.NpcWalkerRoutesTable;
-import org.l2jmobius.gameserver.datatables.sql.ArmorSetsTable;
 import org.l2jmobius.gameserver.datatables.sql.CharNameTable;
 import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
-import org.l2jmobius.gameserver.datatables.sql.CustomArmorSetsTable;
 import org.l2jmobius.gameserver.datatables.sql.HelperBuffTable;
 import org.l2jmobius.gameserver.datatables.sql.LevelUpData;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
@@ -64,6 +62,7 @@ import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
+import org.l2jmobius.gameserver.datatables.xml.ArmorSetData;
 import org.l2jmobius.gameserver.datatables.xml.AugmentationData;
 import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
@@ -243,11 +242,7 @@ public class GameServer
 		
 		Util.printSection("Items");
 		ItemTable.getInstance();
-		ArmorSetsTable.getInstance();
-		if (Config.CUSTOM_ARMORSETS_TABLE)
-		{
-			CustomArmorSetsTable.getInstance();
-		}
+		ArmorSetData.getInstance();
 		ExtractableItemsData.getInstance();
 		SummonItemData.getInstance();
 		if (Config.ALLOWFISHING)

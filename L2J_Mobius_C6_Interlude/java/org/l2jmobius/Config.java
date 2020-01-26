@@ -646,8 +646,6 @@ public class Config
 	public static boolean SAVE_GMSPAWN_ON_CUSTOM;
 	public static boolean DELETE_GMSPAWN_ON_CUSTOM;
 	public static boolean CUSTOM_NPC_TABLE = true;
-	public static boolean CUSTOM_ITEM_TABLES = true;
-	public static boolean CUSTOM_ARMORSETS_TABLE = true;
 	public static boolean CUSTOM_TELEPORT_TABLE = true;
 	public static boolean CUSTOM_DROPLIST_TABLE = true;
 	public static boolean CUSTOM_MERCHANT_TABLES = true;

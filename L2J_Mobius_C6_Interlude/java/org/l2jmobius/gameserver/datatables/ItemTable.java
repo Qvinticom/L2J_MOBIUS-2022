@@ -125,7 +125,7 @@ public class ItemTable
 	private void buildFastLookupTable(int size)
 	{
 		// Create a FastLookUp Table called _allTemplates of size : value of the highest item ID
-		LOGGER.info("Highest item id used:" + size);
+		LOGGER.info("Highest item id used: " + size);
 		_allTemplates = new Item[size + 1];
 		
 		// Insert armor item in Fast Look Up Table
