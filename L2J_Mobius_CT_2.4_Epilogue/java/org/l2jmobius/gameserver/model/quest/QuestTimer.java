@@ -98,11 +98,6 @@ public class QuestTimer
 		return _quest;
 	}
 	
-	public String getName()
-	{
-		return _name;
-	}
-	
 	public Npc getNpc()
 	{
 		return _npc;
