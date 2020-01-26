@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.handler.TargetHandler;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.Condition;
@@ -50,7 +50,7 @@ public class TriggerSkillBySkill extends AbstractEffect
 	 * @param params
 	 */
 	
-	public TriggerSkillBySkill(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public TriggerSkillBySkill(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

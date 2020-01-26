@@ -18,7 +18,7 @@ package handlers.skillconditionhandlers;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -35,7 +35,7 @@ public class OpExistNpcSkillCondition implements ISkillCondition
 	private final int _range;
 	private final boolean _isAround;
 	
-	public OpExistNpcSkillCondition(StatsSet params)
+	public OpExistNpcSkillCondition(StatSet params)
 	{
 		_npcIds = params.getList("npcIds", Integer.class);
 		_range = params.getInt("range");

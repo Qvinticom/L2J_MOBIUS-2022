@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.datatables.HeroSkillTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
@@ -641,8 +641,8 @@ class OlympiadGame
 			}
 		}
 		
-		final StatsSet playerOneStat = Olympiad.getNobleStats(_playerOne.getObjectId());
-		final StatsSet playerTwoStat = Olympiad.getNobleStats(_playerTwo.getObjectId());
+		final StatSet playerOneStat = Olympiad.getNobleStats(_playerOne.getObjectId());
+		final StatSet playerTwoStat = Olympiad.getNobleStats(_playerTwo.getObjectId());
 		
 		final int playerOnePlayed = playerOneStat.getInt(COMP_DONE);
 		final int playerTwoPlayed = playerTwoStat.getInt(COMP_DONE);

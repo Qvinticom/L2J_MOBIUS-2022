@@ -26,7 +26,7 @@ import org.w3c.dom.Document;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.datatables.ItemTable;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 
 /**
@@ -64,7 +64,7 @@ public class AttendanceRewardData implements IXmlReader
 	{
 		forEach(doc, "list", listNode -> forEach(listNode, "item", rewardNode ->
 		{
-			final StatsSet set = new StatsSet(parseAttributes(rewardNode));
+			final StatSet set = new StatSet(parseAttributes(rewardNode));
 			final int itemId = set.getInt("id");
 			final int itemCount = set.getInt("count");
 			if (ItemTable.getInstance().getTemplate(itemId) == null)

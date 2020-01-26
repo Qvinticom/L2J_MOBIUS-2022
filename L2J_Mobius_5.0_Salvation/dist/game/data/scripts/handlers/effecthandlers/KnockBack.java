@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -94,7 +94,7 @@ public class KnockBack extends AbstractEffect
 		_chainKnockSkills.put(ClassId.AEORE_SHILLIEN_SAINT, 12000); // Heavy Hit
 	}
 	
-	public KnockBack(StatsSet params)
+	public KnockBack(StatSet params)
 	{
 		_distance = params.getInt("distance", 50);
 		_speed = params.getInt("speed", 0);

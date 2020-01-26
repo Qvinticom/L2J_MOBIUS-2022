@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.VehiclePathPoint;
 
 /**
@@ -34,7 +34,7 @@ public class ShuttleDataHolder
 	private final List<ShuttleStop> _stops = new ArrayList<>(2);
 	private final List<VehiclePathPoint[]> _routes = new ArrayList<>(2);
 	
-	public ShuttleDataHolder(StatsSet set)
+	public ShuttleDataHolder(StatSet set)
 	{
 		_id = set.getInt("id");
 		_loc = new Location(set);

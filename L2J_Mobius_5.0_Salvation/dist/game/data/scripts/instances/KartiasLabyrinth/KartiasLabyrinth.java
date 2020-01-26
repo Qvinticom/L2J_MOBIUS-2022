@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -273,7 +273,7 @@ public class KartiasLabyrinth extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = (npc != null) ? npc.getInstanceWorld() : player.getInstanceWorld();
 		if (instance != null)
@@ -363,7 +363,7 @@ public class KartiasLabyrinth extends AbstractInstance
 		
 		if (instance != null)
 		{
-			final StatsSet param = instance.getParameters();
+			final StatSet param = instance.getParameters();
 			if (param.getBoolean("BOSS_KILL_OPEN_DOOR", false) && CommonUtil.contains(MINI_BOSSES, npc.getId()))
 			{
 				instance.setParameter("BOSS_KILL_OPEN_DOOR", true);
@@ -562,7 +562,7 @@ public class KartiasLabyrinth extends AbstractInstance
 	
 	private void manageProgressInInstance(Instance instance)
 	{
-		final StatsSet param = instance.getParameters();
+		final StatSet param = instance.getParameters();
 		final int room = param.getInt("ROOM", 1);
 		final int stage = param.getInt("STAGE", 1);
 		final int wave = param.getInt("WAVE", 1);

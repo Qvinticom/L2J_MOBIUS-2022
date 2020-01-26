@@ -27,7 +27,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.templates.CubicTemplate;
 import org.l2jmobius.gameserver.model.cubic.CubicSkill;
 import org.l2jmobius.gameserver.model.cubic.ICubicConditionHolder;
@@ -61,7 +61,7 @@ public class CubicData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		forEach(doc, "list", listNode -> forEach(listNode, "cubic", cubicNode -> parseTemplate(cubicNode, new CubicTemplate(new StatsSet(parseAttributes(cubicNode))))));
+		forEach(doc, "list", listNode -> forEach(listNode, "cubic", cubicNode -> parseTemplate(cubicNode, new CubicTemplate(new StatSet(parseAttributes(cubicNode))))));
 	}
 	
 	/**
@@ -137,7 +137,7 @@ public class CubicData implements IXmlReader
 	{
 		forEach(cubicNode, "skill", skillNode ->
 		{
-			final CubicSkill skill = new CubicSkill(new StatsSet(parseAttributes(skillNode)));
+			final CubicSkill skill = new CubicSkill(new StatSet(parseAttributes(skillNode)));
 			forEach(cubicNode, "conditions", conditionNode -> parseConditions(cubicNode, template, skill));
 			template.getSkills().add(skill);
 		});

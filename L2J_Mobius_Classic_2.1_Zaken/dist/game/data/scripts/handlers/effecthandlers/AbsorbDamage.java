@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -37,7 +37,7 @@ public class AbsorbDamage extends AbstractEffect
 	private final double _damage;
 	private static final Map<Integer, Double> _damageHolder = new ConcurrentHashMap<>();
 	
-	public AbsorbDamage(StatsSet params)
+	public AbsorbDamage(StatSet params)
 	{
 		_damage = params.getDouble("damage", 0);
 	}

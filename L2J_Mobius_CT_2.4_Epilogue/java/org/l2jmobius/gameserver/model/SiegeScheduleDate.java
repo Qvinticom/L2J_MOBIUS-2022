@@ -27,7 +27,7 @@ public class SiegeScheduleDate
 	private final int _hour;
 	private final int _maxConcurrent;
 	
-	public SiegeScheduleDate(StatsSet set)
+	public SiegeScheduleDate(StatSet set)
 	{
 		_day = set.getInt("day", Calendar.SUNDAY);
 		_hour = set.getInt("hour", 16);

@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 
@@ -30,7 +30,7 @@ public class DamageBlock extends AbstractEffect
 	private final boolean _blockHp;
 	private final boolean _blockMp;
 	
-	public DamageBlock(StatsSet params)
+	public DamageBlock(StatSet params)
 	{
 		final String type = params.getString("type", null);
 		_blockHp = type.equalsIgnoreCase("BLOCK_HP");

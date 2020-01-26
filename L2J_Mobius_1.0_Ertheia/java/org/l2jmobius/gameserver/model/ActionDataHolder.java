@@ -25,7 +25,7 @@ public class ActionDataHolder
 	private final String _handler;
 	private final int _optionId;
 	
-	public ActionDataHolder(StatsSet set)
+	public ActionDataHolder(StatSet set)
 	{
 		_id = set.getInt("id");
 		_handler = set.getString("handler");

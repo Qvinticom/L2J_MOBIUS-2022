@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.DamageByAttackType;
 import org.l2jmobius.gameserver.enums.StatModifierType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -38,7 +38,7 @@ public class DamageByAttack extends AbstractEffect
 	private final double _value;
 	private final DamageByAttackType _type;
 	
-	public DamageByAttack(StatsSet params)
+	public DamageByAttack(StatSet params)
 	{
 		_value = params.getDouble("amount");
 		_type = params.getEnum("type", DamageByAttackType.class, DamageByAttackType.NONE);

@@ -20,7 +20,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -35,7 +35,7 @@ public class DispelCaster extends AbstractEffect
 {
 	private final Set<AbnormalType> _dispelAbnormals;
 	
-	public DispelCaster(StatsSet params)
+	public DispelCaster(StatSet params)
 	{
 		final String dispel = params.getString("dispel");
 		if ((dispel != null) && !dispel.isEmpty())

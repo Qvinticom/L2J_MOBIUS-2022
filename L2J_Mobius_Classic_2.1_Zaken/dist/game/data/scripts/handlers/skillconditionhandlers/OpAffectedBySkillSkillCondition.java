@@ -16,7 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
@@ -29,7 +29,7 @@ public class OpAffectedBySkillSkillCondition implements ISkillCondition
 {
 	private final int _skillId;
 	
-	public OpAffectedBySkillSkillCondition(StatsSet params)
+	public OpAffectedBySkillSkillCondition(StatSet params)
 	{
 		_skillId = params.getInt("skillId", -1);
 	}

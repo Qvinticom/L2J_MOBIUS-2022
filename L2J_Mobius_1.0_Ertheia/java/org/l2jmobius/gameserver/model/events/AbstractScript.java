@@ -50,7 +50,7 @@ import org.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -182,12 +182,12 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		onTimerCancel(holder.getEvent(), holder.getParams(), holder.getNpc(), holder.getPlayer());
 	}
 	
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 		LOGGER.warning("[" + getClass().getSimpleName() + "]: Timer event arrived at non overriden onTimerEvent method event: " + event + " npc: " + npc + " player: " + player);
 	}
 	
-	public void onTimerCancel(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerCancel(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 	}
 	

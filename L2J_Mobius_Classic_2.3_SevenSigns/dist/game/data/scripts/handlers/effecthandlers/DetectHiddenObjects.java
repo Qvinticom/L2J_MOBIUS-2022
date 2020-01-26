@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.DoorOpenType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class DetectHiddenObjects extends AbstractEffect
 {
-	public DetectHiddenObjects(StatsSet params)
+	public DetectHiddenObjects(StatSet params)
 	{
 	}
 	

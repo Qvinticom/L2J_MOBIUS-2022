@@ -49,7 +49,7 @@ public class Location implements IPositionable
 		this(obj.getX(), obj.getY(), obj.getZ(), obj.getHeading());
 	}
 	
-	public Location(StatsSet set)
+	public Location(StatSet set)
 	{
 		_x = set.getInt("x");
 		_y = set.getInt("y");

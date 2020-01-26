@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.data.xml.impl.SpawnsData;
 import org.l2jmobius.gameserver.datatables.SpawnTable;
 import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.model.Spawn;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
@@ -54,7 +54,7 @@ public class DBSpawnManager
 	
 	protected final Map<Integer, Npc> _npcs = new ConcurrentHashMap<>();
 	protected final Map<Integer, Spawn> _spawns = new ConcurrentHashMap<>();
-	protected final Map<Integer, StatsSet> _storedInfo = new ConcurrentHashMap<>();
+	protected final Map<Integer, StatSet> _storedInfo = new ConcurrentHashMap<>();
 	protected final Map<Integer, ScheduledFuture<?>> _schedules = new ConcurrentHashMap<>();
 	
 	/**
@@ -161,7 +161,7 @@ public class DBSpawnManager
 		{
 			npc.setDBStatus(RaidBossStatus.ALIVE);
 			
-			final StatsSet info = new StatsSet();
+			final StatSet info = new StatSet();
 			info.set("currentHP", npc.getCurrentHp());
 			info.set("currentMP", npc.getCurrentMp());
 			info.set("respawnTime", 0);
@@ -181,7 +181,7 @@ public class DBSpawnManager
 	 */
 	public void updateStatus(Npc npc, boolean isNpcDead)
 	{
-		final StatsSet info = _storedInfo.get(npc.getId());
+		final StatSet info = _storedInfo.get(npc.getId());
 		if (info == null)
 		{
 			return;
@@ -254,7 +254,7 @@ public class DBSpawnManager
 				
 				_npcs.put(npcId, npc);
 				
-				final StatsSet info = new StatsSet();
+				final StatSet info = new StatSet();
 				info.set("currentHP", currentHP);
 				info.set("currentMP", currentMP);
 				info.set("respawnTime", 0);
@@ -316,7 +316,7 @@ public class DBSpawnManager
 		}
 		npc.setDBStatus(RaidBossStatus.ALIVE);
 		
-		final StatsSet info = new StatsSet();
+		final StatSet info = new StatSet();
 		info.set("currentHP", npc.getMaxHp());
 		info.set("currentMP", npc.getMaxMp());
 		info.set("respawnTime", 0);
@@ -401,7 +401,7 @@ public class DBSpawnManager
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("UPDATE npc_respawns SET respawnTime = ?, currentHP = ?, currentMP = ? WHERE id = ?"))
 		{
-			for (Entry<Integer, StatsSet> entry : _storedInfo.entrySet())
+			for (Entry<Integer, StatSet> entry : _storedInfo.entrySet())
 			{
 				final Integer npcId = entry.getKey();
 				if (npcId == null)
@@ -420,7 +420,7 @@ public class DBSpawnManager
 					updateStatus(npc, false);
 				}
 				
-				final StatsSet info = entry.getValue();
+				final StatSet info = entry.getValue();
 				if (info == null)
 				{
 					continue;
@@ -529,7 +529,7 @@ public class DBSpawnManager
 	 */
 	public void notifySpawnNightNpc(Npc npc)
 	{
-		final StatsSet info = new StatsSet();
+		final StatSet info = new StatSet();
 		info.set("currentHP", npc.getCurrentHp());
 		info.set("currentMP", npc.getCurrentMp());
 		info.set("respawnTime", 0);
@@ -572,7 +572,7 @@ public class DBSpawnManager
 	 * Gets the stored info.
 	 * @return the stored info
 	 */
-	public Map<Integer, StatsSet> getStoredInfo()
+	public Map<Integer, StatSet> getStoredInfo()
 	{
 		return _storedInfo;
 	}

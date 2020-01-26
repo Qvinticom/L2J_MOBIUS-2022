@@ -29,7 +29,7 @@ import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -62,7 +62,7 @@ public class DailyMissionData implements IXmlReader
 	{
 		forEach(doc, "list", listNode -> forEach(listNode, "reward", rewardNode ->
 		{
-			final StatsSet set = new StatsSet(parseAttributes(rewardNode));
+			final StatSet set = new StatSet(parseAttributes(rewardNode));
 			
 			final List<ItemHolder> items = new ArrayList<>(1);
 			forEach(rewardNode, "items", itemsNode -> forEach(itemsNode, "item", itemNode ->
@@ -80,14 +80,14 @@ public class DailyMissionData implements IXmlReader
 			
 			// Initial values in case handler doesn't exists
 			set.set("handler", "");
-			set.set("params", StatsSet.EMPTY_STATSET);
+			set.set("params", StatSet.EMPTY_STATSET);
 			
 			// Parse handler and parameters
 			forEach(rewardNode, "handler", handlerNode ->
 			{
 				set.set("handler", parseString(handlerNode.getAttributes(), "name"));
 				
-				final StatsSet params = new StatsSet();
+				final StatSet params = new StatSet();
 				set.set("params", params);
 				forEach(handlerNode, "param", paramNode -> params.set(parseString(paramNode.getAttributes(), "name"), paramNode.getTextContent()));
 			});

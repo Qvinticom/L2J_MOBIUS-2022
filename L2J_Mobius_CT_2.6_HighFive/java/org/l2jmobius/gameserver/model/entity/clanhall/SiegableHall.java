@@ -24,7 +24,7 @@ import java.util.logging.Level;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.SiegeClan.SiegeClanType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -56,7 +56,7 @@ public class SiegableHall extends ClanHall
 	
 	private ClanHallSiegeEngine _siege;
 	
-	public SiegableHall(StatsSet set)
+	public SiegableHall(StatSet set)
 	{
 		super(set);
 		_siegeLength = set.getLong("siegeLenght");

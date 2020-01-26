@@ -31,7 +31,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.AccessLevel;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
@@ -75,7 +75,7 @@ public class AdminData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		StatsSet set = null;
+		StatSet set = null;
 		String command = null;
 		int accessLevel = 0;
 		String name = null;
@@ -101,7 +101,7 @@ public class AdminData implements IXmlReader
 				{
 					if ("access".equals(d.getNodeName()))
 					{
-						set = new StatsSet(parseAttributes(d));
+						set = new StatSet(parseAttributes(d));
 						
 						accessLevel = set.getInt("level");
 						name = set.getString("name");
@@ -175,7 +175,7 @@ public class AdminData implements IXmlReader
 					}
 					else if ("admin".equals(d.getNodeName()))
 					{
-						set = new StatsSet(parseAttributes(d));
+						set = new StatSet(parseAttributes(d));
 						
 						command = set.getString("command");
 						accessLevel = set.getInt("accessLevel");

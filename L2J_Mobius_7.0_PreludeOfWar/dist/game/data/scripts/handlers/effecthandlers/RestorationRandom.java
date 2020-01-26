@@ -25,7 +25,7 @@ import java.util.Map.Entry;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.ExtractableProductItem;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -47,12 +47,12 @@ public class RestorationRandom extends AbstractEffect
 {
 	private final List<ExtractableProductItem> _products = new ArrayList<>();
 	
-	public RestorationRandom(StatsSet params)
+	public RestorationRandom(StatSet params)
 	{
-		for (StatsSet group : params.getList("items", StatsSet.class))
+		for (StatSet group : params.getList("items", StatSet.class))
 		{
 			final List<RestorationItemHolder> items = new ArrayList<>();
-			for (StatsSet item : group.getList(".", StatsSet.class))
+			for (StatSet item : group.getList(".", StatSet.class))
 			{
 				items.add(new RestorationItemHolder(item.getInt(".id"), item.getInt(".count"), item.getInt(".minEnchant", 0), item.getInt(".maxEnchant", 0)));
 			}

@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.entity.Hero;
 import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 
@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
  */
 public class ExHeroList extends GameServerPacket
 {
-	private final Map<Integer, StatsSet> _heroList;
+	private final Map<Integer, StatSet> _heroList;
 	
 	public ExHeroList()
 	{
@@ -42,7 +42,7 @@ public class ExHeroList extends GameServerPacket
 		writeH(0x23);
 		writeD(_heroList.size());
 		
-		for (StatsSet hero : _heroList.values())
+		for (StatSet hero : _heroList.values())
 		{
 			writeS(hero.getString(Olympiad.CHAR_NAME));
 			writeD(hero.getInt(Olympiad.CLASS_ID));

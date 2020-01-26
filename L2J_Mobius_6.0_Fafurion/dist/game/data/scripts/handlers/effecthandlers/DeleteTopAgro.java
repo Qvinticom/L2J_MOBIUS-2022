@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -33,7 +33,7 @@ public class DeleteTopAgro extends AbstractEffect
 {
 	private final int _chance;
 	
-	public DeleteTopAgro(StatsSet params)
+	public DeleteTopAgro(StatSet params)
 	{
 		_chance = params.getInt("chance", 100);
 	}

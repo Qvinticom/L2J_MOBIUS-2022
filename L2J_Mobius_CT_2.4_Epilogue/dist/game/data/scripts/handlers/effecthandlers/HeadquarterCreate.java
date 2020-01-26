@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
@@ -33,7 +33,7 @@ public class HeadquarterCreate extends AbstractEffect
 	private static final int HQ_NPC_ID = 35062;
 	private final boolean _isAdvanced;
 	
-	public HeadquarterCreate(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public HeadquarterCreate(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

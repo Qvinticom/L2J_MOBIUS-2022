@@ -54,7 +54,7 @@ public class EnchantSkillGroup
 		private final int _spCost;
 		private final byte[] _rate;
 		
-		public EnchantSkillHolder(StatsSet set)
+		public EnchantSkillHolder(StatSet set)
 		{
 			_level = set.getInt("level");
 			_adenaCost = set.getInt("adena", 0);

@@ -319,7 +319,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			
 			if (RaidBossSpawnManager.getInstance().getValidTemplate(spawn.getNpcId()) != null)
 			{
-				RaidBossSpawnManager.getInstance().addNewSpawn(spawn, 0, template1.getStatsSet().getDouble("baseHpMax"), template1.getStatsSet().getDouble("baseMpMax"), permanent);
+				RaidBossSpawnManager.getInstance().addNewSpawn(spawn, 0, template1.getStatSet().getDouble("baseHpMax"), template1.getStatSet().getDouble("baseMpMax"), permanent);
 			}
 			else
 			{

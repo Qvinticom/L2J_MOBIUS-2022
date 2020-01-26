@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -34,7 +34,7 @@ public class SummonAgathion extends AbstractEffect
 {
 	private final int _npcId;
 	
-	public SummonAgathion(StatsSet params)
+	public SummonAgathion(StatSet params)
 	{
 		if (params.isEmpty())
 		{

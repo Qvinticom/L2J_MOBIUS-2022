@@ -27,7 +27,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantSupportItem;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -64,7 +64,7 @@ public class EnchantItemData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		StatsSet set;
+		StatSet set;
 		Node att;
 		NamedNodeMap attrs;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
@@ -76,7 +76,7 @@ public class EnchantItemData implements IXmlReader
 					if ("enchant".equalsIgnoreCase(d.getNodeName()))
 					{
 						attrs = d.getAttributes();
-						set = new StatsSet();
+						set = new StatSet();
 						for (int i = 0; i < attrs.getLength(); i++)
 						{
 							att = attrs.item(i);
@@ -107,7 +107,7 @@ public class EnchantItemData implements IXmlReader
 					else if ("support".equalsIgnoreCase(d.getNodeName()))
 					{
 						attrs = d.getAttributes();
-						set = new StatsSet();
+						set = new StatSet();
 						for (int i = 0; i < attrs.getLength(); i++)
 						{
 							att = attrs.item(i);

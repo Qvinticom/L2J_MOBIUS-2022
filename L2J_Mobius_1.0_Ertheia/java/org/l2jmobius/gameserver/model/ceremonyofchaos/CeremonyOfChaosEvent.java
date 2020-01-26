@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Party.MessageType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.appearance.PlayerAppearance;
@@ -244,7 +244,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			player.teleToLocation(_instance.getEnterLocations().get(index++), 0, _instance);
 		}
 		
-		getTimers().addTimer("match_start_countdown", StatsSet.valueOf("time", 60), 100, null, null);
+		getTimers().addTimer("match_start_countdown", StatSet.valueOf("time", 60), 100, null, null);
 		
 		getTimers().addTimer("teleport_message1", 10000, null, null);
 		getTimers().addTimer("teleport_message2", 14000, null, null);
@@ -400,7 +400,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			}
 		}
 		getTimers().cancelTimer("update", null, null);
-		getTimers().addTimer("match_end_countdown", StatsSet.valueOf("time", 30), 30 * 1000, null, null);
+		getTimers().addTimer("match_end_countdown", StatSet.valueOf("time", 30), 30 * 1000, null, null);
 		
 		EventDispatcher.getInstance().notifyEvent(new OnCeremonyOfChaosMatchResult(winners, members));
 	}
@@ -493,7 +493,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{

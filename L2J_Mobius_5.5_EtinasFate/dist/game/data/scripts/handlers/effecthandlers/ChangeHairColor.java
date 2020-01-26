@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -31,7 +31,7 @@ public class ChangeHairColor extends AbstractEffect
 {
 	private final int _value;
 	
-	public ChangeHairColor(StatsSet params)
+	public ChangeHairColor(StatSet params)
 	{
 		_value = params.getInt("value", 0);
 	}

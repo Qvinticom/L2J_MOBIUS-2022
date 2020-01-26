@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
@@ -163,7 +163,7 @@ public class Zaken extends Quest
 		
 		_Zone = GrandBossManager.getInstance().getZone(55312, 219168, -3223);
 		
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ZAKEN);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(ZAKEN);
 		final Integer status = GrandBossManager.getInstance().getBossStatus(ZAKEN);
 		if (status == DEAD)
 		{
@@ -869,9 +869,9 @@ public class Zaken extends Quest
 				cancelQuestTimer("1001", npc, null);
 				cancelQuestTimer("1003", npc, null);
 				// also save the respawn time so that the info is maintained past reboots
-				final StatsSet info = GrandBossManager.getInstance().getStatsSet(ZAKEN);
+				final StatSet info = GrandBossManager.getInstance().getStatSet(ZAKEN);
 				info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-				GrandBossManager.getInstance().setStatsSet(ZAKEN, info);
+				GrandBossManager.getInstance().setStatSet(ZAKEN, info);
 			}
 		}
 		else if (status == ALIVE)

@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
@@ -38,7 +38,7 @@ public class Lethal extends AbstractEffect
 	private final double _fullLethal;
 	private final double _halfLethal;
 	
-	public Lethal(StatsSet params)
+	public Lethal(StatSet params)
 	{
 		_fullLethal = params.getDouble("fullLethal", 0);
 		_halfLethal = params.getDouble("halfLethal", 0);

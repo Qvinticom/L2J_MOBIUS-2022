@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.datatables.ItemTable;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -40,7 +40,7 @@ public class Disarmor extends AbstractEffect
 	private final Map<Integer, Integer> _unequippedItems; // PlayerObjId, ItemObjId
 	private final long _slot;
 	
-	public Disarmor(StatsSet params)
+	public Disarmor(StatSet params)
 	{
 		_unequippedItems = new ConcurrentHashMap<>();
 		

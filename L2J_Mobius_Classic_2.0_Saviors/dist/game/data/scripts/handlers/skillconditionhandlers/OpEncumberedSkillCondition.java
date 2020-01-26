@@ -16,7 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -32,7 +32,7 @@ public class OpEncumberedSkillCondition implements ISkillCondition
 	private final int _slotsPercent;
 	private final int _weightPercent;
 	
-	public OpEncumberedSkillCondition(StatsSet params)
+	public OpEncumberedSkillCondition(StatSet params)
 	{
 		_slotsPercent = params.getInt("slotsPercent");
 		_weightPercent = params.getInt("weightPercent");

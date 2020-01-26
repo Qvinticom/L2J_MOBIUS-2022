@@ -27,7 +27,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.Sex;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.beautyshop.BeautyData;
 import org.l2jmobius.gameserver.model.beautyshop.BeautyItem;
 
@@ -56,7 +56,7 @@ public class BeautyShopData implements IXmlReader
 	public void parseDocument(Document doc, File f)
 	{
 		NamedNodeMap attrs;
-		StatsSet set;
+		StatSet set;
 		Node att;
 		Race race = null;
 		Sex sex = null;
@@ -92,7 +92,7 @@ public class BeautyShopData implements IXmlReader
 									if ("hair".equalsIgnoreCase(a.getNodeName()))
 									{
 										attrs = a.getAttributes();
-										set = new StatsSet();
+										set = new StatSet();
 										for (int i = 0; i < attrs.getLength(); i++)
 										{
 											att = attrs.item(i);
@@ -105,7 +105,7 @@ public class BeautyShopData implements IXmlReader
 											if ("color".equalsIgnoreCase(g.getNodeName()))
 											{
 												attrs = g.getAttributes();
-												set = new StatsSet();
+												set = new StatSet();
 												for (int i = 0; i < attrs.getLength(); i++)
 												{
 													att = attrs.item(i);
@@ -119,7 +119,7 @@ public class BeautyShopData implements IXmlReader
 									else if ("face".equalsIgnoreCase(a.getNodeName()))
 									{
 										attrs = a.getAttributes();
-										set = new StatsSet();
+										set = new StatSet();
 										for (int i = 0; i < attrs.getLength(); i++)
 										{
 											att = attrs.item(i);

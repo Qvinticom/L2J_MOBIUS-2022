@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -31,7 +31,7 @@ public class SkillEvasion extends AbstractEffect
 	private final int _magicType;
 	private final double _amount;
 	
-	public SkillEvasion(StatsSet params)
+	public SkillEvasion(StatSet params)
 	{
 		_magicType = params.getInt("magicType", 0);
 		_amount = params.getDouble("amount", 0);

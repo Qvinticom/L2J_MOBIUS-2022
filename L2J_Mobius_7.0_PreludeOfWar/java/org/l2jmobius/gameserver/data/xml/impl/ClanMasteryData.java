@@ -25,7 +25,7 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.ClanMasteryHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
@@ -57,7 +57,7 @@ public class ClanMasteryData implements IXmlReader
 	{
 		forEach(doc, "list", listNode -> forEach(listNode, "clan", clanNode ->
 		{
-			final StatsSet set = new StatsSet(parseAttributes(clanNode));
+			final StatSet set = new StatSet(parseAttributes(clanNode));
 			final int id = set.getInt("mastery");
 			final int skill1Id = set.getInt("skill1Id");
 			final int skill1Level = set.getInt("skill1Level");

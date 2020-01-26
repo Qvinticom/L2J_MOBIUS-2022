@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -31,7 +31,7 @@ public class DamOverTime extends AbstractEffect
 	private final boolean _canKill;
 	private final double _power;
 	
-	public DamOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public DamOverTime(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

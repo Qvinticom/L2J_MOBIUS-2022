@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
@@ -45,7 +45,7 @@ public class DoubleCast extends AbstractEffect
 	
 	private final Map<Integer, List<SkillHolder>> _addedToggles;
 	
-	public DoubleCast(StatsSet params)
+	public DoubleCast(StatSet params)
 	{
 		_addedToggles = new HashMap<>();
 	}

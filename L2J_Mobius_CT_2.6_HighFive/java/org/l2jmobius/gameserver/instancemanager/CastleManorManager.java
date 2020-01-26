@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.enums.ManorMode;
 import org.l2jmobius.gameserver.model.CropProcure;
 import org.l2jmobius.gameserver.model.Seed;
 import org.l2jmobius.gameserver.model.SeedProduction;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.entity.Castle;
@@ -122,7 +122,7 @@ public class CastleManorManager implements IXmlReader, IStorable
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		StatsSet set;
+		StatSet set;
 		NamedNodeMap attrs;
 		Node att;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
@@ -138,7 +138,7 @@ public class CastleManorManager implements IXmlReader, IStorable
 						{
 							if ("crop".equalsIgnoreCase(c.getNodeName()))
 							{
-								set = new StatsSet();
+								set = new StatSet();
 								set.set("castleId", castleId);
 								
 								attrs = c.getAttributes();

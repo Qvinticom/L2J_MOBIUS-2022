@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.skills.handlers;
 
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -36,7 +36,7 @@ public class SkillChargeDmg extends Skill
 	
 	final int chargeSkillId;
 	
-	public SkillChargeDmg(StatsSet set)
+	public SkillChargeDmg(StatSet set)
 	{
 		super(set);
 		chargeSkillId = set.getInt("charge_skill_id");

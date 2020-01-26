@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.TeleportWhereType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -104,7 +104,7 @@ public class Beleth extends AbstractNpcAI
 		addStartNpc(STONE_COFFIN);
 		addTalkId(STONE_COFFIN);
 		addFirstTalkId(ELF);
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(REAL_BELETH);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(REAL_BELETH);
 		final int status = GrandBossManager.getInstance().getBossStatus(REAL_BELETH);
 		if (status == DEAD)
 		{
@@ -750,9 +750,9 @@ public class Beleth extends AbstractNpcAI
 			setBelethKiller(killer);
 			GrandBossManager.getInstance().setBossStatus(REAL_BELETH, DEAD);
 			final long respawnTime = (Config.BELETH_SPAWN_INTERVAL + getRandom(-Config.BELETH_SPAWN_RANDOM, Config.BELETH_SPAWN_RANDOM)) * 3600000;
-			final StatsSet info = GrandBossManager.getInstance().getStatsSet(REAL_BELETH);
+			final StatSet info = GrandBossManager.getInstance().getStatSet(REAL_BELETH);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-			GrandBossManager.getInstance().setStatsSet(REAL_BELETH, info);
+			GrandBossManager.getInstance().setStatSet(REAL_BELETH, info);
 			startQuestTimer("BELETH_UNLOCK", respawnTime, null, null);
 			
 			deleteAll();

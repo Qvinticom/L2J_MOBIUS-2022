@@ -16,7 +16,7 @@
  */
 package ai.areas.SeedOfHellfire;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 
@@ -61,7 +61,7 @@ public class Zofan extends AbstractNpcAI
 	{
 		if ((npc.getInstanceWorld() == null) && (npc.getSpawn() != null))
 		{
-			final StatsSet params = npc.getParameters();
+			final StatSet params = npc.getParameters();
 			if (params.getInt("i_childrengarden_guard", 0) == 0)
 			{
 				for (String param : MINION_PARAMS)

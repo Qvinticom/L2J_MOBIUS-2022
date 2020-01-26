@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.instancezone.conditions;
 
 import org.l2jmobius.gameserver.model.AbstractPlayerGroup;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 public class ConditionCommandChannelLeader extends Condition
 {
 	
-	public ConditionCommandChannelLeader(InstanceTemplate template, StatsSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
+	public ConditionCommandChannelLeader(InstanceTemplate template, StatSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
 	{
 		super(template, parameters, true, showMessageAndHtml);
 		setSystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);

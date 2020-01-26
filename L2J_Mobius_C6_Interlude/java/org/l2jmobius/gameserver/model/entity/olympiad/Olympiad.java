@@ -45,7 +45,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.instancemanager.OlympiadStadiaManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Announcements;
@@ -59,9 +59,9 @@ public class Olympiad
 {
 	protected static final Logger LOGGER = Logger.getLogger(Olympiad.class.getName());
 	
-	private static Map<Integer, StatsSet> _nobles;
-	private static Map<Integer, StatsSet> _oldnobles;
-	protected static List<StatsSet> _heroesToBe;
+	private static Map<Integer, StatSet> _nobles;
+	private static Map<Integer, StatSet> _oldnobles;
+	protected static List<StatSet> _heroesToBe;
 	private static List<PlayerInstance> _nonClassBasedRegisters;
 	private static Map<Integer, List<PlayerInstance>> _classBasedRegisters;
 	public static final int OLY_MANAGER = 31688;
@@ -255,7 +255,7 @@ public class Olympiad
 			
 			while (rset.next())
 			{
-				final StatsSet statData = new StatsSet();
+				final StatSet statData = new StatSet();
 				final int charId = rset.getInt(CHAR_ID);
 				statData.set(CLASS_ID, rset.getInt(CLASS_ID));
 				statData.set(CHAR_NAME, rset.getString(CHAR_NAME));
@@ -284,7 +284,7 @@ public class Olympiad
 			
 			while (rset.next())
 			{
-				final StatsSet statData = new StatsSet();
+				final StatSet statData = new StatSet();
 				final int charId = rset.getInt(CHAR_ID);
 				statData.set(CLASS_ID, rset.getInt(CLASS_ID));
 				statData.set(CHAR_NAME, rset.getString(CHAR_NAME));
@@ -541,7 +541,7 @@ public class Olympiad
 		
 		if (!_nobles.containsKey(noble.getObjectId()))
 		{
-			final StatsSet statDat = new StatsSet();
+			final StatSet statDat = new StatSet();
 			statDat.set(CLASS_ID, noble.getClassId().getId());
 			statDat.set(CHAR_NAME, noble.getName());
 			statDat.set(POINTS, DEFAULT_POINTS);
@@ -600,18 +600,18 @@ public class Olympiad
 		return _nobles.size();
 	}
 	
-	protected static StatsSet getNobleStats(int playerId)
+	protected static StatSet getNobleStats(int playerId)
 	{
 		return _nobles.get(playerId);
 	}
 	
-	protected static synchronized void updateNobleStats(int playerId, StatsSet stats)
+	protected static synchronized void updateNobleStats(int playerId, StatSet stats)
 	{
 		_nobles.remove(playerId);
 		_nobles.put(playerId, stats);
 	}
 	
-	protected static synchronized void updateOldNobleStats(int playerId, StatsSet stats)
+	protected static synchronized void updateOldNobleStats(int playerId, StatSet stats)
 	{
 		_oldnobles.remove(playerId);
 		_oldnobles.put(playerId, stats);
@@ -1007,10 +1007,10 @@ public class Olympiad
 			return;
 		}
 		
-		for (Entry<Integer, StatsSet> entry : _nobles.entrySet())
+		for (Entry<Integer, StatSet> entry : _nobles.entrySet())
 		{
 			final Integer nobleId = entry.getKey();
-			final StatsSet nobleInfo = entry.getValue();
+			final StatSet nobleInfo = entry.getValue();
 			int currentPoints = nobleInfo.getInt(POINTS);
 			currentPoints += WEEKLY_POINTS;
 			nobleInfo.set(POINTS, currentPoints);
@@ -1136,10 +1136,10 @@ public class Olympiad
 			con = DatabaseFactory.getConnection();
 			PreparedStatement statement;
 			
-			for (Entry<Integer, StatsSet> entry : _nobles.entrySet())
+			for (Entry<Integer, StatSet> entry : _nobles.entrySet())
 			{
 				final Integer nobleId = entry.getKey();
-				final StatsSet nobleInfo = entry.getValue();
+				final StatSet nobleInfo = entry.getValue();
 				
 				if (nobleInfo == null)
 				{
@@ -1202,7 +1202,7 @@ public class Olympiad
 		PreparedStatement statement = null;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final StatsSet nobleInfo = _oldnobles.get(nobleId);
+			final StatSet nobleInfo = _oldnobles.get(nobleId);
 			
 			if (nobleInfo == null)
 			{
@@ -1310,10 +1310,10 @@ public class Olympiad
 		
 		if (_nobles != null)
 		{
-			for (Entry<Integer, StatsSet> entry : _nobles.entrySet())
+			for (Entry<Integer, StatSet> entry : _nobles.entrySet())
 			{
 				final Integer nobleId = entry.getKey();
-				final StatsSet nobleInfo = entry.getValue();
+				final StatSet nobleInfo = entry.getValue();
 				
 				if (nobleInfo == null)
 				{
@@ -1336,7 +1336,7 @@ public class Olympiad
 		ResultSet rset = null;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			StatsSet hero;
+			StatSet hero;
 			for (int HERO_ID : HERO_IDS)
 			{
 				statement = con.prepareStatement(OLYMPIAD_GET_HEROS);
@@ -1345,7 +1345,7 @@ public class Olympiad
 				
 				while (rset.next())
 				{
-					hero = new StatsSet();
+					hero = new StatSet();
 					hero.set(CLASS_ID, HERO_ID);
 					hero.set(CHAR_ID, rset.getInt(CHAR_ID));
 					hero.set(CHAR_NAME, rset.getString(CHAR_NAME));
@@ -1404,11 +1404,11 @@ public class Olympiad
 			return;
 		}
 		
-		for (StatsSet hero : _heroesToBe)
+		for (StatSet hero : _heroesToBe)
 		{
 			final int charId = hero.getInt(CHAR_ID);
 			
-			final StatsSet noble = _nobles.get(charId);
+			final StatSet noble = _nobles.get(charId);
 			int currentPoints = noble.getInt(POINTS);
 			currentPoints += Config.ALT_OLY_HERO_POINTS;
 			noble.set(POINTS, currentPoints);
@@ -1426,7 +1426,7 @@ public class Olympiad
 				return 0;
 			}
 			
-			final StatsSet noble = _nobles.get(objId);
+			final StatSet noble = _nobles.get(objId);
 			if (noble == null)
 			{
 				return 0;
@@ -1450,7 +1450,7 @@ public class Olympiad
 			return 0;
 		}
 		
-		final StatsSet noble = _oldnobles.get(objId);
+		final StatSet noble = _oldnobles.get(objId);
 		if (noble == null)
 		{
 			return 0;
@@ -1495,7 +1495,7 @@ public class Olympiad
 			return 0;
 		}
 		
-		final StatsSet noble = _nobles.get(objId);
+		final StatSet noble = _nobles.get(objId);
 		if (noble == null)
 		{
 			return 0;
@@ -1511,7 +1511,7 @@ public class Olympiad
 			return 0;
 		}
 		
-		final StatsSet noble = _nobles.get(objId);
+		final StatSet noble = _nobles.get(objId);
 		if (noble == null)
 		{
 			return 0;
@@ -1527,7 +1527,7 @@ public class Olympiad
 			return 0;
 		}
 		
-		final StatsSet noble = _nobles.get(objId);
+		final StatSet noble = _nobles.get(objId);
 		if (noble == null)
 		{
 			return 0;
@@ -1543,7 +1543,7 @@ public class Olympiad
 			return 0;
 		}
 		
-		final StatsSet noble = _nobles.get(objId);
+		final StatSet noble = _nobles.get(objId);
 		if (noble == null)
 		{
 			return 0;

@@ -28,7 +28,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.xml.DoorData;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -48,7 +48,7 @@ public class Fort
 	
 	private int _fortId = 0;
 	private final List<DoorInstance> _doors = new ArrayList<>();
-	private final List<StatsSet> _doorDefault = new ArrayList<>();
+	private final List<StatSet> _doorDefault = new ArrayList<>();
 	private String _name = "";
 	private int _ownerId = 0;
 	private Clan _fortOwner = null;
@@ -396,7 +396,7 @@ public class Fort
 			while (rs.next())
 			{
 				// Create set of the door default for use when respawning dead doors
-				final StatsSet set = new StatsSet();
+				final StatSet set = new StatSet();
 				set.set("name", rs.getString("name"));
 				set.set("id", rs.getInt("id"));
 				set.set("x", rs.getInt("x"));

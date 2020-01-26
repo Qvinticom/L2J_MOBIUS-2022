@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.StatModifierType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.conditions.ConditionUsingItemType;
@@ -69,7 +69,7 @@ public class TwoHandedSwordBonus extends AbstractEffect
 	private final double _speedAmount;
 	private final StatModifierType _speedMode;
 	
-	public TwoHandedSwordBonus(StatsSet params)
+	public TwoHandedSwordBonus(StatSet params)
 	{
 		_pAtkAmount = params.getDouble("pAtkAmount", 0);
 		_pAtkMode = params.getEnum("pAtkMode", StatModifierType.class, StatModifierType.DIFF);

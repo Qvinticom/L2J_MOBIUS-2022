@@ -26,7 +26,7 @@ import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.datatables.ItemTable;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.items.combination.CombinationItem;
 import org.l2jmobius.gameserver.model.items.combination.CombinationItemReward;
 import org.l2jmobius.gameserver.model.items.combination.CombinationItemType;
@@ -57,7 +57,7 @@ public class CombinationItemsData implements IXmlReader
 	{
 		forEach(doc, "list", listNode -> forEach(listNode, "item", itemNode ->
 		{
-			final CombinationItem item = new CombinationItem(new StatsSet(parseAttributes(itemNode)));
+			final CombinationItem item = new CombinationItem(new StatSet(parseAttributes(itemNode)));
 			
 			forEach(itemNode, "reward", rewardNode ->
 			{

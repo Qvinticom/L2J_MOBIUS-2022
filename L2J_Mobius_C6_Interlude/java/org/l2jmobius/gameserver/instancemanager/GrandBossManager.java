@@ -30,7 +30,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
@@ -65,7 +65,7 @@ public class GrandBossManager
 	private static final String UPDATE_GRAND_BOSS_DATA2 = "UPDATE grandboss_data set status = ? where boss_id = ?";
 	
 	protected static Map<Integer, GrandBossInstance> _bosses;
-	protected static Map<Integer, StatsSet> _storedInfo;
+	protected static Map<Integer, StatSet> _storedInfo;
 	private Map<Integer, Integer> _bossStatus;
 	private Collection<BossZone> _zones;
 	
@@ -87,7 +87,7 @@ public class GrandBossManager
 			while (rset.next())
 			{
 				// Read all info from DB, and store it for AI to read and decide what to do faster than accessing DB in real time
-				final StatsSet info = new StatsSet();
+				final StatSet info = new StatSet();
 				final int bossId = rset.getInt("boss_id");
 				info.set("loc_x", rset.getInt("loc_x"));
 				info.set("loc_y", rset.getInt("loc_y"));
@@ -248,12 +248,12 @@ public class GrandBossManager
 		return _bosses.remove(bossId);
 	}
 	
-	public StatsSet getStatsSet(int bossId)
+	public StatSet getStatSet(int bossId)
 	{
 		return _storedInfo.get(bossId);
 	}
 	
-	public void setStatsSet(int bossId, StatsSet info)
+	public void setStatSet(int bossId, StatSet info)
 	{
 		if (_storedInfo.containsKey(bossId))
 		{
@@ -268,11 +268,11 @@ public class GrandBossManager
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			for (Entry<Integer, StatsSet> entry : _storedInfo.entrySet())
+			for (Entry<Integer, StatSet> entry : _storedInfo.entrySet())
 			{
 				final int bossId = entry.getKey();
 				final GrandBossInstance boss = _bosses.get(bossId);
-				final StatsSet info = entry.getValue();
+				final StatSet info = entry.getValue();
 				if ((boss == null) || (info == null))
 				{
 					final PreparedStatement update2 = con.prepareStatement(UPDATE_GRAND_BOSS_DATA2);
@@ -341,11 +341,11 @@ public class GrandBossManager
 				}
 			}
 			
-			for (Entry<Integer, StatsSet> entry : _storedInfo.entrySet())
+			for (Entry<Integer, StatSet> entry : _storedInfo.entrySet())
 			{
 				final int bossId = entry.getKey();
 				final GrandBossInstance boss = _bosses.get(bossId);
-				final StatsSet info = entry.getValue();
+				final StatSet info = entry.getValue();
 				if ((boss == null) || (info == null))
 				{
 					final PreparedStatement update2 = con.prepareStatement(UPDATE_GRAND_BOSS_DATA2);
@@ -390,7 +390,7 @@ public class GrandBossManager
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final GrandBossInstance boss = _bosses.get(bossId);
-			final StatsSet info = _storedInfo.get(bossId);
+			final StatSet info = _storedInfo.get(bossId);
 			
 			if (statusOnly || (boss == null) || (info == null))
 			{

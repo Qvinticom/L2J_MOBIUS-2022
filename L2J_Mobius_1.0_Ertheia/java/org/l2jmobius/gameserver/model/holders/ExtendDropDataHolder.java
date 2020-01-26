@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.conditions.ICondition;
@@ -36,7 +36,7 @@ public class ExtendDropDataHolder
 	private final List<ICondition> _conditions;
 	private final Map<Long, SystemMessageId> _systemMessages;
 	
-	public ExtendDropDataHolder(StatsSet set)
+	public ExtendDropDataHolder(StatSet set)
 	{
 		_id = set.getInt("id");
 		_items = set.getList("items", ExtendDropItemHolder.class);

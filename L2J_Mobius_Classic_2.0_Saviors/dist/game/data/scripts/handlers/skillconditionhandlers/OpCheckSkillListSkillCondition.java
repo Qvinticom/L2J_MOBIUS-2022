@@ -19,7 +19,7 @@ package handlers.skillconditionhandlers;
 import java.util.List;
 
 import org.l2jmobius.gameserver.enums.SkillConditionAffectType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -34,7 +34,7 @@ public class OpCheckSkillListSkillCondition implements ISkillCondition
 	private final List<Integer> _skillIds;
 	private final SkillConditionAffectType _affectType;
 	
-	public OpCheckSkillListSkillCondition(StatsSet params)
+	public OpCheckSkillListSkillCondition(StatSet params)
 	{
 		_skillIds = params.getList("skillIds", Integer.class);
 		_affectType = params.getEnum("affectType", SkillConditionAffectType.class);

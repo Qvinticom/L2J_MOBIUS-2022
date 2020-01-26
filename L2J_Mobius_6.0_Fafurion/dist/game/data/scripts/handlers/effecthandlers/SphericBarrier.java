@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageReceived;
@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
  */
 public class SphericBarrier extends AbstractStatAddEffect
 {
-	public SphericBarrier(StatsSet params)
+	public SphericBarrier(StatSet params)
 	{
 		super(params, Stat.SPHERIC_BARRIER_RANGE);
 	}

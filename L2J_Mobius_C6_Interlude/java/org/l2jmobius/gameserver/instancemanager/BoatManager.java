@@ -28,7 +28,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 
@@ -141,7 +141,7 @@ public class BoatManager
 		final int zspawn = Integer.parseInt(st.nextToken());
 		final int heading = Integer.parseInt(st.nextToken());
 		
-		final StatsSet npcDat = new StatsSet();
+		final StatSet npcDat = new StatSet();
 		npcDat.set("npcId", id);
 		npcDat.set("level", 0);
 		npcDat.set("jClass", "boat");

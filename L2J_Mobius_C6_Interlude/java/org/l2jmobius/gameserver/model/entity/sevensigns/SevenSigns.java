@@ -32,7 +32,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.handler.AutoChatHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.spawn.AutoSpawn;
@@ -101,7 +101,7 @@ public class SevenSigns
 	protected int _duskFestivalScore;
 	protected int _compWinner;
 	protected int _previousWinner;
-	private final Map<Integer, StatsSet> _signsPlayerData;
+	private final Map<Integer, StatSet> _signsPlayerData;
 	private final Map<Integer, Integer> _signsSealOwners;
 	private final Map<Integer, Integer> _signsDuskSealTotals;
 	private final Map<Integer, Integer> _signsDawnSealTotals;
@@ -740,7 +740,7 @@ public class SevenSigns
 		int cabalMembers = 0;
 		final String cabalName = getCabalShortName(cabal);
 		
-		for (StatsSet sevenDat : _signsPlayerData.values())
+		for (StatSet sevenDat : _signsPlayerData.values())
 		{
 			if (sevenDat.getString("cabal").equals(cabalName))
 			{
@@ -756,7 +756,7 @@ public class SevenSigns
 	 * @param player the player
 	 * @return the player data
 	 */
-	public StatsSet getPlayerData(PlayerInstance player)
+	public StatSet getPlayerData(PlayerInstance player)
 	{
 		if (!hasRegisteredBefore(player))
 		{
@@ -780,7 +780,7 @@ public class SevenSigns
 		
 		int stoneCount = 0;
 		
-		final StatsSet currPlayer = getPlayerData(player);
+		final StatSet currPlayer = getPlayerData(player);
 		
 		stoneCount += currPlayer.getInt("red_stones");
 		stoneCount += currPlayer.getInt("green_stones");
@@ -801,7 +801,7 @@ public class SevenSigns
 			return 0;
 		}
 		
-		final StatsSet currPlayer = getPlayerData(player);
+		final StatSet currPlayer = getPlayerData(player);
 		
 		return currPlayer.getInt("contribution_score");
 	}
@@ -878,7 +878,7 @@ public class SevenSigns
 			{
 				final int charObjId = rset.getInt("char_obj_id");
 				
-				final StatsSet sevenDat = new StatsSet();
+				final StatSet sevenDat = new StatSet();
 				sevenDat.set("char_obj_id", charObjId);
 				sevenDat.set("cabal", rset.getString("cabal"));
 				sevenDat.set("seal", rset.getInt("seal"));
@@ -950,7 +950,7 @@ public class SevenSigns
 		{
 			PreparedStatement statement = null;
 			
-			for (StatsSet sevenDat : _signsPlayerData.values())
+			for (StatSet sevenDat : _signsPlayerData.values())
 			{
 				if ((player != null) && (sevenDat.getInt("char_obj_id") != player.getObjectId()))
 				{
@@ -1025,7 +1025,7 @@ public class SevenSigns
 	protected void resetPlayerData()
 	{
 		// Reset each player's contribution data as well as seal and cabal.
-		for (StatsSet sevenDat : _signsPlayerData.values())
+		for (StatSet sevenDat : _signsPlayerData.values())
 		{
 			final int charObjId = sevenDat.getInt("char_obj_id");
 			
@@ -1060,7 +1060,7 @@ public class SevenSigns
 	{
 		final int charObjId = player.getObjectId();
 		PreparedStatement statement = null;
-		StatsSet currPlayerData = getPlayerData(player);
+		StatSet currPlayerData = getPlayerData(player);
 		
 		if (currPlayerData != null)
 		{
@@ -1072,7 +1072,7 @@ public class SevenSigns
 		}
 		else
 		{
-			currPlayerData = new StatsSet();
+			currPlayerData = new StatSet();
 			currPlayerData.set("char_obj_id", charObjId);
 			currPlayerData.set("cabal", getCabalShortName(chosenCabal));
 			currPlayerData.set("seal", chosenSeal);
@@ -1124,7 +1124,7 @@ public class SevenSigns
 	 */
 	public int getAncientAdenaReward(PlayerInstance player, boolean removeReward)
 	{
-		final StatsSet currPlayer = getPlayerData(player);
+		final StatSet currPlayer = getPlayerData(player);
 		final int rewardAmount = currPlayer.getInt("ancient_adena_amount");
 		
 		currPlayer.set("red_stones", 0);
@@ -1151,7 +1151,7 @@ public class SevenSigns
 	 */
 	public int addPlayerStoneContrib(PlayerInstance player, int blueCount, int greenCount, int redCount)
 	{
-		final StatsSet currPlayer = getPlayerData(player);
+		final StatSet currPlayer = getPlayerData(player);
 		
 		final int contribScore = calcContributionScore(blueCount, greenCount, redCount);
 		final int totalAncientAdena = currPlayer.getInt("ancient_adena_amount") + calcAncientAdenaReward(blueCount, greenCount, redCount);
@@ -1516,7 +1516,7 @@ public class SevenSigns
 	{
 		for (PlayerInstance onlinePlayer : World.getInstance().getAllPlayers())
 		{
-			final StatsSet currPlayer = getPlayerData(onlinePlayer);
+			final StatSet currPlayer = getPlayerData(onlinePlayer);
 			
 			if (isSealValidationPeriod() || isCompResultsPeriod())
 			{

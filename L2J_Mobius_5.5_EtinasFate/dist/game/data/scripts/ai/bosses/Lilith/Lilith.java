@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Spawn;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.TeleportWhereType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -367,7 +367,7 @@ public class Lilith extends AbstractNpcAI
 		addSkillSeeId(ALL_MOBS);
 		
 		// Unlock
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(LILITH);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(LILITH);
 		final int status = GrandBossManager.getInstance().getBossStatus(LILITH);
 		if (status == DEAD)
 		{
@@ -629,9 +629,9 @@ public class Lilith extends AbstractNpcAI
 			
 			GrandBossManager.getInstance().setBossStatus(LILITH, DEAD);
 			final long respawnTime = getRespawnTime();
-			final StatsSet info = GrandBossManager.getInstance().getStatsSet(LILITH);
+			final StatSet info = GrandBossManager.getInstance().getStatSet(LILITH);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-			GrandBossManager.getInstance().setStatsSet(LILITH, info);
+			GrandBossManager.getInstance().setStatSet(LILITH, info);
 			
 			startQuestTimer("unlock_lilith", respawnTime, null, null);
 			startQuestTimer("end_lilith", 900000, null, null);

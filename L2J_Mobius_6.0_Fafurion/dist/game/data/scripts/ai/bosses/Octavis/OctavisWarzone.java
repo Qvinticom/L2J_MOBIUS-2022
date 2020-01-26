@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -152,13 +152,13 @@ public class OctavisWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
 		{
-			final StatsSet npcVars = npc.getVariables();
-			final StatsSet npcParams = npc.getParameters();
+			final StatSet npcVars = npc.getVariables();
+			final StatSet npcParams = npc.getParameters();
 			
 			switch (event)
 			{
@@ -378,7 +378,7 @@ public class OctavisWarzone extends AbstractInstance
 			}
 			else if (CommonUtil.contains(OCTAVIS_STAGE_2, npc.getId()))
 			{
-				final StatsSet npcVars = npc.getVariables();
+				final StatSet npcVars = npc.getVariables();
 				
 				if (npcVars.getBoolean("START_TIMERS", true))
 				{

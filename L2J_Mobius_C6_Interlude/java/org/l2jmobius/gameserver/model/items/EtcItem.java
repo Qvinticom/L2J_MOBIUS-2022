@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.items;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 
 /**
@@ -29,9 +29,9 @@ public class EtcItem extends Item
 	 * Constructor for EtcItem.
 	 * @see Item constructor
 	 * @param type : EtcItemType designating the type of object Etc
-	 * @param set : StatsSet designating the set of couples (key,value) for description of the Etc
+	 * @param set : StatSet designating the set of couples (key,value) for description of the Etc
 	 */
-	public EtcItem(EtcItemType type, StatsSet set)
+	public EtcItem(EtcItemType type, StatSet set)
 	{
 		super(type, set);
 	}

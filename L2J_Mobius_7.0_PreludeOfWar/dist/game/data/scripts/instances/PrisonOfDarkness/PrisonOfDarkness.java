@@ -19,7 +19,7 @@ package instances.PrisonOfDarkness;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -122,12 +122,12 @@ public class PrisonOfDarkness extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final StatsSet npcVars = npc.getVariables();
+			final StatSet npcVars = npc.getVariables();
 			
 			switch (event)
 			{
@@ -187,7 +187,7 @@ public class PrisonOfDarkness extends AbstractInstance
 			
 			if (isInInstance(instance))
 			{
-				final StatsSet npcVars = npc.getVariables();
+				final StatSet npcVars = npc.getVariables();
 				
 				switch (event)
 				{
@@ -327,7 +327,7 @@ public class PrisonOfDarkness extends AbstractInstance
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final StatsSet npcVars = npc.getVariables();
+			final StatSet npcVars = npc.getVariables();
 			
 			switch (npc.getId())
 			{
@@ -360,7 +360,7 @@ public class PrisonOfDarkness extends AbstractInstance
 		
 		if (isInInstance(instance) && (npc.getId() == EXIT_PORTAL))
 		{
-			final StatsSet npcVars = npc.getVariables();
+			final StatSet npcVars = npc.getVariables();
 			
 			switch (npcVars.getInt("PORTAL_STATE", 0))
 			{

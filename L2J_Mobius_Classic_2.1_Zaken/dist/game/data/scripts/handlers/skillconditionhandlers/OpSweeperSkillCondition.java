@@ -19,7 +19,7 @@ package handlers.skillconditionhandlers;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class OpSweeperSkillCondition implements ISkillCondition
 {
-	public OpSweeperSkillCondition(StatsSet params)
+	public OpSweeperSkillCondition(StatSet params)
 	{
 		
 	}

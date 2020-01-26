@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -30,7 +30,7 @@ public class SkillCritical extends AbstractEffect
 {
 	private final BaseStat _stat;
 	
-	public SkillCritical(StatsSet params)
+	public SkillCritical(StatSet params)
 	{
 		_stat = params.getEnum("stat", BaseStat.class, BaseStat.STR);
 	}

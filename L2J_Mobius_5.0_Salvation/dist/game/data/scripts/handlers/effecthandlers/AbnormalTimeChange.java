@@ -21,7 +21,7 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -40,7 +40,7 @@ public class AbnormalTimeChange extends AbstractEffect
 	private final int _time;
 	private final int _mode;
 	
-	public AbnormalTimeChange(StatsSet params)
+	public AbnormalTimeChange(StatSet params)
 	{
 		final String abnormals = params.getString("slot", null);
 		if ((abnormals != null) && !abnormals.isEmpty())

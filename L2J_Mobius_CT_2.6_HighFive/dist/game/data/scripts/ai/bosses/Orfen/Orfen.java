@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -87,7 +87,7 @@ public class Orfen extends AbstractNpcAI
 		registerMobs(mobs);
 		_hasTeleported = false;
 		ZONE = GrandBossManager.getInstance().getZone(POS[0]);
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ORFEN);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(ORFEN);
 		if (GrandBossManager.getInstance().getBossStatus(ORFEN) == DEAD)
 		{
 			// load the unlock date and time for Orfen from DB
@@ -324,9 +324,9 @@ public class Orfen extends AbstractNpcAI
 			final long respawnTime = (Config.ORFEN_SPAWN_INTERVAL + getRandom(-Config.ORFEN_SPAWN_RANDOM, Config.ORFEN_SPAWN_RANDOM)) * 3600000;
 			startQuestTimer("orfen_unlock", respawnTime, null, null);
 			// also save the respawn time so that the info is maintained past reboots
-			final StatsSet info = GrandBossManager.getInstance().getStatsSet(ORFEN);
+			final StatSet info = GrandBossManager.getInstance().getStatSet(ORFEN);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-			GrandBossManager.getInstance().setStatsSet(ORFEN, info);
+			GrandBossManager.getInstance().setStatSet(ORFEN, info);
 			cancelQuestTimer("check_minion_loc", npc, null);
 			cancelQuestTimer("check_orfen_pos", npc, null);
 			startQuestTimer("despawn_minions", 20000, null, null);

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.SevenSignsFestival;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Party.MessageType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.FestivalGuideInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -195,9 +195,9 @@ public class Festival implements IBypassHandler
 				{
 					final StringBuilder strBuffer = new StringBuilder(500);
 					strBuffer.append("<html><body>Festival Guide:<br>These are the top scores of the week, for the ");
-					final StatsSet dawnData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DAWN, npc.getFestivalType());
-					final StatsSet duskData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DUSK, npc.getFestivalType());
-					final StatsSet overallData = SevenSignsFestival.getInstance().getOverallHighestScoreData(npc.getFestivalType());
+					final StatSet dawnData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DAWN, npc.getFestivalType());
+					final StatSet duskData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DUSK, npc.getFestivalType());
+					final StatSet overallData = SevenSignsFestival.getInstance().getOverallHighestScoreData(npc.getFestivalType());
 					final int dawnScore = dawnData.getInt("score");
 					final int duskScore = duskData.getInt("score");
 					int overallScore = 0;

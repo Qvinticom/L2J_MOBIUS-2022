@@ -133,9 +133,9 @@ public class NpcWalkerNode
 	/**
 	 * Constructor of NpcWalker.<BR>
 	 * <BR>
-	 * @param set The StatsSet object to transfert data to the method
+	 * @param set The StatSet object to transfert data to the method
 	 */
-	public NpcWalkerNode(StatsSet set)
+	public NpcWalkerNode(StatSet set)
 	{
 		_npcId = set.getInt("npc_id");
 		_movePoint = set.getString("move_point");

@@ -18,7 +18,7 @@ package ai.areas.BeastFarm;
 
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -133,7 +133,7 @@ public class ImprovedBabyPets extends AbstractNpcAI
 	private boolean castBuff(Summon summon, int stepNumber, int buffNumber)
 	{
 		final PlayerInstance owner = summon.getOwner();
-		final StatsSet parameters = summon.getTemplate().getParameters();
+		final StatSet parameters = summon.getTemplate().getParameters();
 		final SkillHolder skill = parameters.getObject("step" + stepNumber + "_buff0" + buffNumber, SkillHolder.class);
 		
 		if ((skill != null) && (owner != null))
@@ -177,7 +177,7 @@ public class ImprovedBabyPets extends AbstractNpcAI
 	{
 		final boolean previousFollowStatus = summon.getFollowStatus();
 		final PlayerInstance owner = summon.getOwner();
-		final StatsSet parameters = summon.getTemplate().getParameters();
+		final StatSet parameters = summon.getTemplate().getParameters();
 		final SkillHolder skill = parameters.getObject("step" + stepNumber + "_heal0" + healNumber, SkillHolder.class);
 		final int targetType = parameters.getInt("step" + stepNumber + "_heal_target0" + healNumber, 0);
 		

@@ -19,7 +19,7 @@ package quests.Q10772_ReportsFromCrumaTowerPart1;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -157,7 +157,7 @@ public class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("DESPAWN_OWL") && (npc != null) && (npc.getId() == MAGIC_OWL))
 		{

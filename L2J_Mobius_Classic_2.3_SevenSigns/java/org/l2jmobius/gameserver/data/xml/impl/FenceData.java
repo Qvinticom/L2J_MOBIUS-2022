@@ -30,7 +30,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.enums.FenceState;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.instance.FenceInstance;
@@ -79,7 +79,7 @@ public class FenceData implements IXmlReader
 	
 	private void spawnFence(Node fenceNode)
 	{
-		final StatsSet set = new StatsSet(parseAttributes(fenceNode));
+		final StatSet set = new StatSet(parseAttributes(fenceNode));
 		spawnFence(set.getInt("x"), set.getInt("y"), set.getInt("z"), set.getString("name"), set.getInt("width"), set.getInt("length"), set.getInt("height"), 0, set.getEnum("state", FenceState.class, FenceState.CLOSED));
 	}
 	

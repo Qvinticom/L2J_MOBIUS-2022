@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
@@ -43,7 +43,7 @@ public class ModifyVital extends AbstractEffect
 	private final int _mp;
 	private final int _cp;
 	
-	public ModifyVital(StatsSet params)
+	public ModifyVital(StatSet params)
 	{
 		_type = params.getEnum("type", ModifyType.class);
 		if (_type != ModifyType.SET)

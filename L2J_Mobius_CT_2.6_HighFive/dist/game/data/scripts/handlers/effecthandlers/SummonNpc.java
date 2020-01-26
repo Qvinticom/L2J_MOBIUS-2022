@@ -20,7 +20,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.DecoyInstance;
 import org.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
@@ -44,7 +44,7 @@ public class SummonNpc extends AbstractEffect
 	private final boolean _randomOffset;
 	private final boolean _isSummonSpawn;
 	
-	public SummonNpc(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public SummonNpc(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

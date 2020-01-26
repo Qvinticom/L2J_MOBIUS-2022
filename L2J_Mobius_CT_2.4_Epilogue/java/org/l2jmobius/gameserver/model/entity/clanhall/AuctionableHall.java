@@ -26,7 +26,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import org.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.ClanHall;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -42,7 +42,7 @@ public class AuctionableHall extends ClanHall
 	protected boolean _paid;
 	final int _lease;
 	
-	public AuctionableHall(StatsSet set)
+	public AuctionableHall(StatSet set)
 	{
 		super(set);
 		_paidUntil = set.getLong("paidUntil");

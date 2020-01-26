@@ -19,7 +19,7 @@ package instances.Nursery;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -80,12 +80,12 @@ public class Nursery extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final StatsSet npcVars = npc.getVariables();
+			final StatSet npcVars = npc.getVariables();
 			final int gameStage = npcVars.getInt("GAME_STAGE", 0);
 			
 			switch (event)
@@ -142,7 +142,7 @@ public class Nursery extends AbstractInstance
 		
 		if (isInInstance(instance))
 		{
-			final StatsSet npcVars = npc.getVariables();
+			final StatSet npcVars = npc.getVariables();
 			
 			final int gameStage = npcVars.getInt("GAME_STAGE", 0);
 			switch (gameStage)
@@ -200,7 +200,7 @@ public class Nursery extends AbstractInstance
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final StatsSet npcVars = npc.getVariables();
+			final StatSet npcVars = npc.getVariables();
 			final int gameStage = npcVars.getInt("GAME_STAGE", 0);
 			
 			switch (event)
@@ -281,7 +281,7 @@ public class Nursery extends AbstractInstance
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final StatsSet npcVars = npc.getVariables();
+			final StatSet npcVars = npc.getVariables();
 			final int maguenStatus = npcVars.getInt("MAGUEN_STATUS", 0);
 			
 			switch (maguenStatus)
@@ -407,8 +407,8 @@ public class Nursery extends AbstractInstance
 			final Npc gameManager = instance.getNpc(TIE);
 			if (gameManager != null)
 			{
-				final StatsSet managerVars = gameManager.getVariables();
-				final StatsSet npcVars = npc.getVariables();
+				final StatSet managerVars = gameManager.getVariables();
+				final StatSet npcVars = npc.getVariables();
 				final int gamePoints = managerVars.getInt("GAME_POINTS", 0);
 				
 				if (gamePoints > 0)

@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.AdditionalItemHolder;
 import org.l2jmobius.gameserver.model.holders.AdditionalSkillHolder;
@@ -47,7 +47,7 @@ public class Transform implements IIdentifiable
 	private TransformTemplate _maleTemplate;
 	private TransformTemplate _femaleTemplate;
 	
-	public Transform(StatsSet set)
+	public Transform(StatSet set)
 	{
 		_id = set.getInt("id");
 		_displayId = set.getInt("displayId", _id);

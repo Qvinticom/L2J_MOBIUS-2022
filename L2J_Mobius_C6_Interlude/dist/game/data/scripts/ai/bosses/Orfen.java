@@ -21,7 +21,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -55,7 +55,7 @@ public class Orfen extends Quest
 	{
 		super(-1, "ai/bosses");
 		
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ORFEN);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(ORFEN);
 		final Integer status = GrandBossManager.getInstance().getBossStatus(ORFEN);
 		
 		addEventId(ORFEN, EventType.ON_KILL);
@@ -152,11 +152,11 @@ public class Orfen extends Quest
 				double hp = -1;
 				if ((npc.getNpcId() == ORFEN) && !npc.getSpawn().isCustomBossInstance())
 				{
-					hp = GrandBossManager.getInstance().getStatsSet(ORFEN).getDouble("currentHP");
+					hp = GrandBossManager.getInstance().getStatSet(ORFEN).getDouble("currentHP");
 					if (hp < npc.getCurrentHp())
 					{
 						npc.setCurrentHp(hp);
-						GrandBossManager.getInstance().getStatsSet(ORFEN).set("currentHP", npc.getMaxHp());
+						GrandBossManager.getInstance().getStatSet(ORFEN).set("currentHP", npc.getMaxHp());
 					}
 				}
 				if ((_teleported && (npc.getCurrentHp() > (npc.getMaxHp() * 0.95))))
@@ -205,7 +205,7 @@ public class Orfen extends Quest
 			{
 				if (((npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2)) && !_teleported)
 				{
-					GrandBossManager.getInstance().getStatsSet(ORFEN).set("currentHP", npc.getCurrentHp());
+					GrandBossManager.getInstance().getStatSet(ORFEN).set("currentHP", npc.getCurrentHp());
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 					_teleported = true;
 					npc.getSpawn().setX(43577);
@@ -245,9 +245,9 @@ public class Orfen extends Quest
 				cancelQuestTimer("ORFEN_REFRESH", npc, null);
 				startQuestTimer("ORFEN_SPAWN", respawnTime, null, null);
 				// also save the respawn time so that the info is maintained past reboots
-				final StatsSet info = GrandBossManager.getInstance().getStatsSet(ORFEN);
+				final StatSet info = GrandBossManager.getInstance().getStatSet(ORFEN);
 				info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-				GrandBossManager.getInstance().setStatsSet(ORFEN, info);
+				GrandBossManager.getInstance().setStatSet(ORFEN, info);
 			}
 		}
 		

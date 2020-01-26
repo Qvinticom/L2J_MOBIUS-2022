@@ -23,7 +23,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
@@ -89,7 +89,7 @@ public class QueenAnt extends AbstractNpcAI
 		addFactionCallId(NURSE);
 		
 		_zone = GrandBossManager.getInstance().getZone(QUEEN_X, QUEEN_Y, QUEEN_Z);
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(QUEEN);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(QUEEN);
 		if (GrandBossManager.getInstance().getBossStatus(QUEEN) == DEAD)
 		{
 			// load the unlock date and time for queen ant from DB
@@ -354,9 +354,9 @@ public class QueenAnt extends AbstractNpcAI
 			cancelQuestTimer("action", npc, null);
 			cancelQuestTimer("heal", null, null);
 			// also save the respawn time so that the info is maintained past reboots
-			final StatsSet info = GrandBossManager.getInstance().getStatsSet(QUEEN);
+			final StatSet info = GrandBossManager.getInstance().getStatSet(QUEEN);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-			GrandBossManager.getInstance().setStatsSet(QUEEN, info);
+			GrandBossManager.getInstance().setStatSet(QUEEN, info);
 			_nurses.clear();
 			_larva.deleteMe();
 			_larva = null;

@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public class OutpostDestroy extends AbstractEffect
 {
-	public OutpostDestroy(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public OutpostDestroy(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 	}

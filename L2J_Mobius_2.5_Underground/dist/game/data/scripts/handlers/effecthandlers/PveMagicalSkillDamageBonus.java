@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
  */
 public class PveMagicalSkillDamageBonus extends AbstractStatPercentEffect
 {
-	public PveMagicalSkillDamageBonus(StatsSet params)
+	public PveMagicalSkillDamageBonus(StatSet params)
 	{
 		super(params, Stat.PVE_MAGICAL_SKILL_DAMAGE);
 	}

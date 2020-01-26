@@ -28,7 +28,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.enums.MountType;
 import org.l2jmobius.gameserver.model.PetData;
 import org.l2jmobius.gameserver.model.PetLevelData;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * This class parse and hold all pet parameters.<br>
@@ -112,7 +112,7 @@ public class PetDataTable implements IXmlReader
 							if (s.getNodeName().equals("stat"))
 							{
 								final int level = Integer.parseInt(s.getAttributes().getNamedItem("level").getNodeValue());
-								final StatsSet set = new StatsSet();
+								final StatSet set = new StatSet();
 								for (Node bean = s.getFirstChild(); bean != null; bean = bean.getNextSibling())
 								{
 									if (bean.getNodeName().equals("set"))

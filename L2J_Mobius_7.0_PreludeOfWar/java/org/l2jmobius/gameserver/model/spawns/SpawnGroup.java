@@ -21,7 +21,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.interfaces.IParameterized;
 import org.l2jmobius.gameserver.model.interfaces.ITerritorized;
@@ -31,16 +31,16 @@ import org.l2jmobius.gameserver.model.zone.type.SpawnTerritory;
 /**
  * @author UnAfraid
  */
-public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<StatsSet>
+public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<StatSet>
 {
 	private final String _name;
 	private final boolean _spawnByDefault;
 	private List<SpawnTerritory> _territories;
 	private List<BannedSpawnTerritory> _bannedTerritories;
 	private final List<NpcSpawnTemplate> _spawns = new ArrayList<>();
-	private StatsSet _parameters;
+	private StatSet _parameters;
 	
-	public SpawnGroup(StatsSet set)
+	public SpawnGroup(StatSet set)
 	{
 		this(set.getString("name", null), set.getBoolean("spawnByDefault", true));
 	}
@@ -104,13 +104,13 @@ public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<Stat
 	}
 	
 	@Override
-	public StatsSet getParameters()
+	public StatSet getParameters()
 	{
 		return _parameters;
 	}
 	
 	@Override
-	public void setParameters(StatsSet parameters)
+	public void setParameters(StatSet parameters)
 	{
 		_parameters = parameters;
 	}

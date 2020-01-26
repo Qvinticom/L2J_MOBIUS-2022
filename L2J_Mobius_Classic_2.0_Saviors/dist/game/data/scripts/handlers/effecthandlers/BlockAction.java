@@ -21,7 +21,7 @@ import java.util.Set;
 
 import org.l2jmobius.gameserver.datatables.BotReportTable;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -38,7 +38,7 @@ public class BlockAction extends AbstractEffect
 {
 	private final Set<Integer> _blockedActions = new HashSet<>();
 	
-	public BlockAction(StatsSet params)
+	public BlockAction(StatSet params)
 	{
 		final String[] actions = params.getString("blockedActions").split(",");
 		for (String action : actions)

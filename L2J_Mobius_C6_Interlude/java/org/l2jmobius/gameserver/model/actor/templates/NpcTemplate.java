@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.MinionData;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -114,7 +114,7 @@ public class NpcTemplate extends CreatureTemplate
 		UNKNOWN
 	}
 	
-	private final StatsSet _npcStatsSet;
+	private final StatSet _npcStatSet;
 	
 	/** The table containing all Item that can be dropped by NpcInstance using this NpcTemplate */
 	private final List<DropCategory> _categories = new ArrayList<>();
@@ -130,10 +130,10 @@ public class NpcTemplate extends CreatureTemplate
 	
 	/**
 	 * Constructor of Creature.
-	 * @param set The StatsSet object to transfer data to the method
+	 * @param set The StatSet object to transfer data to the method
 	 * @param custom
 	 */
-	public NpcTemplate(StatsSet set, boolean custom)
+	public NpcTemplate(StatSet set, boolean custom)
 	{
 		super(set);
 		_npcId = set.getInt("npcId");
@@ -163,7 +163,7 @@ public class NpcTemplate extends CreatureTemplate
 			setFactionId(f.intern());
 		}
 		_factionRange = set.getInt("factionRange", 0);
-		_npcStatsSet = set;
+		_npcStatSet = set;
 		_custom = custom;
 	}
 	
@@ -353,9 +353,9 @@ public class NpcTemplate extends CreatureTemplate
 		return _questEvents.get(eventType);
 	}
 	
-	public StatsSet getStatsSet()
+	public StatSet getStatSet()
 	{
-		return _npcStatsSet;
+		return _npcStatSet;
 	}
 	
 	public void setRace(int raceId)

@@ -19,7 +19,7 @@ package instances.KartiasLabyrinth;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -92,7 +92,7 @@ public class KartiaHelperBarton extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if ((instance != null) && event.equals("CHECK_ACTION"))
@@ -170,7 +170,7 @@ public class KartiaHelperBarton extends AbstractNpcAI
 		
 		if ((instance != null) && !npc.isCastingNow() && (!CommonUtil.contains(KARTIA_FRIENDS, target.getId())))
 		{
-			final StatsSet instParams = instance.getTemplateParameters();
+			final StatSet instParams = instance.getTemplateParameters();
 			final SkillHolder skill01 = instParams.getSkillHolder("bartonInfinity");
 			final SkillHolder skill02 = instParams.getSkillHolder("bartonBerserker");
 			final SkillHolder skill03 = instParams.getSkillHolder("bartonHurricane");

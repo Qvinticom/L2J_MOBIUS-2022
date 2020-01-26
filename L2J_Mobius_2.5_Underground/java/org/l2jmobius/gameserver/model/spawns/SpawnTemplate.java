@@ -25,7 +25,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.interfaces.IParameterized;
 import org.l2jmobius.gameserver.model.interfaces.ITerritorized;
@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.zone.type.SpawnTerritory;
 /**
  * @author UnAfraid
  */
-public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<StatsSet>
+public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<StatSet>
 {
 	private final String _name;
 	private final String _ai;
@@ -45,9 +45,9 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
 	private List<SpawnTerritory> _territories;
 	private List<BannedSpawnTerritory> _bannedTerritories;
 	private final List<SpawnGroup> _groups = new ArrayList<>();
-	private StatsSet _parameters;
+	private StatSet _parameters;
 	
-	public SpawnTemplate(StatsSet set, File file)
+	public SpawnTemplate(StatSet set, File file)
 	{
 		this(set.getString("name", null), set.getString("ai", null), set.getBoolean("spawnByDefault", true), file);
 	}
@@ -128,13 +128,13 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
 	}
 	
 	@Override
-	public StatsSet getParameters()
+	public StatSet getParameters()
 	{
 		return _parameters;
 	}
 	
 	@Override
-	public void setParameters(StatsSet parameters)
+	public void setParameters(StatSet parameters)
 	{
 		_parameters = parameters;
 	}

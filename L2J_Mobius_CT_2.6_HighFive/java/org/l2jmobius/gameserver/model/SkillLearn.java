@@ -79,7 +79,7 @@ public class SkillLearn
 	 * Constructor for SkillLearn.
 	 * @param set the set with the SkillLearn data.
 	 */
-	public SkillLearn(StatsSet set)
+	public SkillLearn(StatSet set)
 	{
 		_skillName = set.getString("skillName");
 		_skillId = set.getInt("skillId");

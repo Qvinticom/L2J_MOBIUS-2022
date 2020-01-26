@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.AttackableAI;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -33,7 +33,7 @@ public class RunAway extends AbstractEffect
 	private final int _power;
 	private final int _time;
 	
-	public RunAway(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public RunAway(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

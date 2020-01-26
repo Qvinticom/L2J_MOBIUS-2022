@@ -22,7 +22,7 @@ import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -97,12 +97,12 @@ public class KartiaHelperAdolph extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if ((instance != null) && event.equals("CHECK_ACTION"))
 		{
-			final StatsSet npcVars = npc.getVariables();
+			final StatSet npcVars = npc.getVariables();
 			final PlayerInstance plr = npcVars.getObject("PLAYER_OBJECT", PlayerInstance.class);
 			if (plr != null)
 			{
@@ -159,7 +159,7 @@ public class KartiaHelperAdolph extends AbstractNpcAI
 		
 		if ((instance != null) && !npc.isCastingNow() && (!CommonUtil.contains(KARTIA_FRIENDS, target.getId())))
 		{
-			final StatsSet instParams = instance.getTemplateParameters();
+			final StatSet instParams = instance.getTemplateParameters();
 			final SkillHolder skill_01 = instParams.getSkillHolder("adolphHate");
 			final SkillHolder skill_02 = instParams.getSkillHolder("adolphPunish");
 			final SkillHolder skill_03 = instParams.getSkillHolder("adolphShield");
@@ -256,7 +256,7 @@ public class KartiaHelperAdolph extends AbstractNpcAI
 				{
 					npc.setTarget(event.getAttacker());
 					addAttackDesire(npc, (Creature) npc.getTarget());
-					final StatsSet instParams = instance.getTemplateParameters();
+					final StatSet instParams = instance.getTemplateParameters();
 					final SkillHolder hateSkill = instParams.getSkillHolder("adolphHate");
 					if ((hateSkill != null) && SkillCaster.checkUseConditions(npc, hateSkill.getSkill()))
 					{

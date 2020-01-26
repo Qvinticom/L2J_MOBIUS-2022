@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.olympiad;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
@@ -32,7 +32,7 @@ public class Participant
 	private final int baseClass;
 	private boolean disconnected = false;
 	private boolean defaulted = false;
-	private final StatsSet stats;
+	private final StatSet stats;
 	public String clanName;
 	public int clanId;
 	
@@ -125,7 +125,7 @@ public class Participant
 	/**
 	 * @return the stats
 	 */
-	public StatsSet getStats()
+	public StatSet getStats()
 	{
 		return stats;
 	}

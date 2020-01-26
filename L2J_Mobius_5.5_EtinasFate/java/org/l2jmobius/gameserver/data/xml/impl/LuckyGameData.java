@@ -24,7 +24,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.holders.ItemPointHolder;
 import org.l2jmobius.gameserver.model.holders.LuckyGameDataHolder;
@@ -55,17 +55,17 @@ public class LuckyGameData implements IXmlReader
 	{
 		forEach(doc, "list", listNode -> forEach(listNode, "luckygame", rewardNode ->
 		{
-			final LuckyGameDataHolder holder = new LuckyGameDataHolder(new StatsSet(parseAttributes(rewardNode)));
+			final LuckyGameDataHolder holder = new LuckyGameDataHolder(new StatSet(parseAttributes(rewardNode)));
 			
 			forEach(rewardNode, "common_reward", commonRewardNode -> forEach(commonRewardNode, "item", itemNode ->
 			{
-				final StatsSet stats = new StatsSet(parseAttributes(itemNode));
+				final StatSet stats = new StatSet(parseAttributes(itemNode));
 				holder.addCommonReward(new ItemChanceHolder(stats.getInt("id"), stats.getDouble("chance"), stats.getLong("count")));
 			}));
 			
 			forEach(rewardNode, "unique_reward", uniqueRewardNode -> forEach(uniqueRewardNode, "item", itemNode ->
 			{
-				holder.addUniqueReward(new ItemPointHolder(new StatsSet(parseAttributes(itemNode))));
+				holder.addUniqueReward(new ItemPointHolder(new StatSet(parseAttributes(itemNode))));
 			}));
 			
 			forEach(rewardNode, "modify_reward", uniqueRewardNode ->
@@ -74,7 +74,7 @@ public class LuckyGameData implements IXmlReader
 				holder.setMaxModifyRewardGame(parseInteger(uniqueRewardNode.getAttributes(), "max_game"));
 				forEach(uniqueRewardNode, "item", itemNode ->
 				{
-					final StatsSet stats = new StatsSet(parseAttributes(itemNode));
+					final StatSet stats = new StatSet(parseAttributes(itemNode));
 					holder.addModifyReward(new ItemChanceHolder(stats.getInt("id"), stats.getDouble("chance"), stats.getLong("count")));
 				});
 			});

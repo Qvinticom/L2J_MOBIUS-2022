@@ -20,7 +20,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -41,7 +41,7 @@ public class Synergy extends AbstractEffect
 	private final int _skillLevelScaleTo;
 	private final int _minSlot;
 	
-	public Synergy(StatsSet params)
+	public Synergy(StatSet params)
 	{
 		final String requiredSlots = params.getString("requiredSlots", null);
 		if ((requiredSlots != null) && !requiredSlots.isEmpty())

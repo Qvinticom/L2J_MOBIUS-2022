@@ -19,7 +19,7 @@ package ai.bosses.Spezion.Cannon;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
@@ -171,7 +171,7 @@ public class Cannon extends AbstractNpcAI
 	{
 		if (skill.getId() == PRESENT_SKILL.getSkillId())
 		{
-			final StatsSet npcParams = npc.getParameters();
+			final StatSet npcParams = npc.getParameters();
 			
 			npc.broadcastPacket(new Earthquake(npc, 10, 5));
 			npc.broadcastPacket(new OnEventTrigger(npcParams.getInt("TRIGGER_ID"), true));

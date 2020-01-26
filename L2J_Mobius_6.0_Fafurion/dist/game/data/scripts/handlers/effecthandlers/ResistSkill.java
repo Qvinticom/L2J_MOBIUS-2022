@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -34,7 +34,7 @@ public class ResistSkill extends AbstractEffect
 {
 	private final List<SkillHolder> _skills = new ArrayList<>();
 	
-	public ResistSkill(StatsSet params)
+	public ResistSkill(StatSet params)
 	{
 		for (int i = 1;; i++)
 		{

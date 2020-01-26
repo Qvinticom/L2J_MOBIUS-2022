@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -72,7 +72,7 @@ public class AirBind extends AbstractEffect
 		_chainedAirSkills.put(ClassId.AEORE_SHILLIEN_SAINT, 11999); // Heavy Hit
 	}
 	
-	public AirBind(StatsSet params)
+	public AirBind(StatSet params)
 	{
 	}
 	

@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -33,7 +33,7 @@ public class GiveExpAndSp extends AbstractEffect
 	private final int _xp;
 	private final int _sp;
 	
-	public GiveExpAndSp(StatsSet params)
+	public GiveExpAndSp(StatSet params)
 	{
 		_xp = params.getInt("xp", 0);
 		_sp = params.getInt("sp", 0);

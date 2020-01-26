@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -91,7 +91,7 @@ public class Valakas extends Quest
 		i_quest0 = 0;
 		lastAttackTime = System.currentTimeMillis();
 		_Zone = GrandBossManager.getInstance().getZone(212852, -114842, -1632);
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(VALAKAS);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(VALAKAS);
 		
 		final Integer status = GrandBossManager.getInstance().getBossStatus(VALAKAS);
 		
@@ -610,9 +610,9 @@ public class Valakas extends Quest
 			
 			startQuestTimer("valakas_unlock", respawnTime, null, null);
 			// also save the respawn time so that the info is maintained past reboots
-			final StatsSet info = GrandBossManager.getInstance().getStatsSet(VALAKAS);
+			final StatSet info = GrandBossManager.getInstance().getStatSet(VALAKAS);
 			info.set("respawn_time", (System.currentTimeMillis() + respawnTime));
-			GrandBossManager.getInstance().setStatsSet(VALAKAS, info);
+			GrandBossManager.getInstance().setStatSet(VALAKAS, info);
 		}
 		
 		return super.onKill(npc, killer, isPet);

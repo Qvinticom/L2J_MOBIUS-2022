@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.engines;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.items.Item;
 
 /**
@@ -28,7 +28,7 @@ public class ItemDataHolder
 	public int id;
 	public Enum<?> type;
 	public String name;
-	public StatsSet set;
+	public StatSet set;
 	public int currentLevel;
 	public Item item;
 }

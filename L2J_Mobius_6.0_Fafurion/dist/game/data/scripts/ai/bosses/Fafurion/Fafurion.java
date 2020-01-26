@@ -22,7 +22,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -60,7 +60,7 @@ public class Fafurion extends AbstractNpcAI
 		addFirstTalkId(HEART_OF_TSUNAMI);
 		addKillId(FAFURION_FINAL_FORM);
 		// Unlock
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(FAFURION_GRANDBOSS_ID);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(FAFURION_GRANDBOSS_ID);
 		final int status = GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID);
 		if (status == DEAD)
 		{
@@ -200,9 +200,9 @@ public class Fafurion extends AbstractNpcAI
 		
 		GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, DEAD);
 		final long respawnTime = (Config.FAFURION_SPAWN_INTERVAL + getRandom(-Config.FAFURION_SPAWN_RANDOM, Config.FAFURION_SPAWN_RANDOM)) * 3600000;
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(FAFURION_GRANDBOSS_ID);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(FAFURION_GRANDBOSS_ID);
 		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-		GrandBossManager.getInstance().setStatsSet(FAFURION_GRANDBOSS_ID, info);
+		GrandBossManager.getInstance().setStatSet(FAFURION_GRANDBOSS_ID, info);
 		startQuestTimer("unlock_fafurion", respawnTime, null, null);
 		
 		return super.onKill(npc, killer, isSummon);

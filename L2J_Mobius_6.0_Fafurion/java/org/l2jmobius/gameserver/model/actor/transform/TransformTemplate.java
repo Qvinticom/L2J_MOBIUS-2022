@@ -23,7 +23,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.AdditionalItemHolder;
 import org.l2jmobius.gameserver.model.holders.AdditionalSkillHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -49,7 +49,7 @@ public class TransformTemplate
 	private ExBasicActionList _list;
 	private final Map<Integer, TransformLevelData> _data = new LinkedHashMap<>(100);
 	
-	public TransformTemplate(StatsSet set)
+	public TransformTemplate(StatSet set)
 	{
 		_collisionRadius = set.contains("radius") ? set.getDouble("radius") : null;
 		_collisionHeight = set.contains("height") ? set.getDouble("height") : null;

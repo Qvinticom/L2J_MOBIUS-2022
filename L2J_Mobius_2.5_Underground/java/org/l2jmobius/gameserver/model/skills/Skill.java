@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.handler.IAffectScopeHandler;
 import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.handler.TargetHandler;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.cubic.CubicInstance;
@@ -210,7 +210,7 @@ public class Skill implements IIdentifiable
 	private final SkillBuffType _buffType;
 	private final boolean _displayInList;
 	
-	public Skill(StatsSet set)
+	public Skill(StatSet set)
 	{
 		_id = set.getInt(".id");
 		_level = set.getInt(".level");
@@ -391,7 +391,7 @@ public class Skill implements IIdentifiable
 		
 		_toggleGroupId = set.getInt("toggleGroupId", -1);
 		_attachToggleGroupId = set.getInt("attachToggleGroupId", -1);
-		_attachSkills = set.getList("attachSkillList", StatsSet.class, Collections.emptyList()).stream().map(AttachSkillHolder::fromStatsSet).collect(Collectors.toList());
+		_attachSkills = set.getList("attachSkillList", StatSet.class, Collections.emptyList()).stream().map(AttachSkillHolder::fromStatSet).collect(Collectors.toList());
 		
 		final String abnormalResist = set.getString("abnormalResists", null);
 		if (abnormalResist != null)

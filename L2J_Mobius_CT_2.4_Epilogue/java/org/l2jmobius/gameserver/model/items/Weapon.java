@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.items;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -69,15 +69,15 @@ public class Weapon extends Item
 	
 	/**
 	 * Constructor for Weapon.
-	 * @param set the StatsSet designating the set of couples (key,value) characterizing the weapon.
+	 * @param set the StatSet designating the set of couples (key,value) characterizing the weapon.
 	 */
-	public Weapon(StatsSet set)
+	public Weapon(StatSet set)
 	{
 		super(set);
 	}
 	
 	@Override
-	public void set(StatsSet set)
+	public void set(StatSet set)
 	{
 		super.set(set);
 		_type = WeaponType.valueOf(set.getString("weapon_type", "none").toUpperCase());

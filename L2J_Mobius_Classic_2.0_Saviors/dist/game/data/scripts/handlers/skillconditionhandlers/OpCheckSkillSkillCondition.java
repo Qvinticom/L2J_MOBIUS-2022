@@ -17,7 +17,7 @@
 package handlers.skillconditionhandlers;
 
 import org.l2jmobius.gameserver.enums.SkillConditionAffectType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
@@ -31,7 +31,7 @@ public class OpCheckSkillSkillCondition implements ISkillCondition
 	private final int _skillId;
 	private final SkillConditionAffectType _affectType;
 	
-	public OpCheckSkillSkillCondition(StatsSet params)
+	public OpCheckSkillSkillCondition(StatSet params)
 	{
 		_skillId = params.getInt("skillId");
 		_affectType = params.getEnum("affectType", SkillConditionAffectType.class);

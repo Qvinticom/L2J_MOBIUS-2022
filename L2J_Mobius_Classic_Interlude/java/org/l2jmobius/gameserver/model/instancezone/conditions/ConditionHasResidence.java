@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.instancezone.conditions;
 
 import org.l2jmobius.gameserver.enums.ResidenceType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
  */
 public class ConditionHasResidence extends Condition
 {
-	public ConditionHasResidence(InstanceTemplate template, StatsSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
+	public ConditionHasResidence(InstanceTemplate template, StatSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
 	{
 		super(template, parameters, onlyLeader, showMessageAndHtml);
 	}
@@ -43,7 +43,7 @@ public class ConditionHasResidence extends Condition
 			return false;
 		}
 		
-		final StatsSet params = getParameters();
+		final StatSet params = getParameters();
 		final int id = params.getInt("id");
 		boolean test = false;
 		switch (params.getEnum("type", ResidenceType.class))

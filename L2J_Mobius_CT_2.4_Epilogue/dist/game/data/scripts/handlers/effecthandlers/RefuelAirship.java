@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.AirShipInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -31,7 +31,7 @@ public class RefuelAirship extends AbstractEffect
 {
 	private final int _value;
 	
-	public RefuelAirship(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public RefuelAirship(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

@@ -45,7 +45,7 @@ import org.l2jmobius.gameserver.enums.InstanceReenterType;
 import org.l2jmobius.gameserver.enums.InstanceTeleportType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.TeleportWhereType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -87,7 +87,7 @@ public class Instance implements IIdentifiable, INamable
 	private final Set<PlayerInstance> _players = ConcurrentHashMap.newKeySet(); // Players inside instance
 	private final Set<Npc> _npcs = ConcurrentHashMap.newKeySet(); // Spawned NPCs inside instance
 	private final Map<Integer, DoorInstance> _doors = new HashMap<>(); // Spawned doors inside instance
-	private final StatsSet _parameters = new StatsSet();
+	private final StatSet _parameters = new StatSet();
 	// Timers
 	private final Map<Integer, ScheduledFuture<?>> _ejectDeadTasks = new ConcurrentHashMap<>();
 	private ScheduledFuture<?> _cleanUpTask = null;
@@ -171,7 +171,7 @@ public class Instance implements IIdentifiable, INamable
 	 * Get instance world parameters.
 	 * @return instance parameters
 	 */
-	public StatsSet getParameters()
+	public StatSet getParameters()
 	{
 		return _parameters;
 	}
@@ -1020,7 +1020,7 @@ public class Instance implements IIdentifiable, INamable
 	 * Get parameters from instance template.<br>
 	 * @return template parameters
 	 */
-	public StatsSet getTemplateParameters()
+	public StatSet getTemplateParameters()
 	{
 		return _template.getParameters();
 	}

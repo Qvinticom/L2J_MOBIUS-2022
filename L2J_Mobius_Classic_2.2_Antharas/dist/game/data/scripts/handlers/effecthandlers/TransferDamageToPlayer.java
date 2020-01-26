@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
  */
 public class TransferDamageToPlayer extends AbstractStatAddEffect
 {
-	public TransferDamageToPlayer(StatsSet params)
+	public TransferDamageToPlayer(StatSet params)
 	{
 		super(params, Stat.TRANSFER_DAMAGE_TO_PLAYER);
 	}

@@ -20,7 +20,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.holders.TemplateChanceHolder;
@@ -35,9 +35,9 @@ public class ChangeBody extends AbstractEffect
 {
 	private final Set<TemplateChanceHolder> _transformations = new HashSet<>();
 	
-	public ChangeBody(StatsSet params)
+	public ChangeBody(StatSet params)
 	{
-		for (StatsSet item : params.getList("templates", StatsSet.class))
+		for (StatSet item : params.getList("templates", StatSet.class))
 		{
 			_transformations.add(new TemplateChanceHolder(item.getInt(".templateId"), item.getInt(".minChance"), item.getInt(".maxChance")));
 		}

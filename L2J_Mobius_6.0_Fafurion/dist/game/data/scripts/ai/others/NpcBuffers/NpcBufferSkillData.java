@@ -16,7 +16,7 @@
  */
 package ai.others.NpcBuffers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
@@ -29,7 +29,7 @@ class NpcBufferSkillData
 	private final int _scaleToLevel;
 	private final int _initialDelay;
 	
-	NpcBufferSkillData(StatsSet set)
+	NpcBufferSkillData(StatSet set)
 	{
 		_skill = new SkillHolder(set.getInt("id"), set.getInt("level"));
 		_scaleToLevel = set.getInt("scaleToLevel", -1);

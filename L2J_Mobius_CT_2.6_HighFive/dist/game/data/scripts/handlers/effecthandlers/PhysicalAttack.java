@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.ShotType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class PhysicalAttack extends AbstractEffect
 {
-	public PhysicalAttack(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public PhysicalAttack(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 	}

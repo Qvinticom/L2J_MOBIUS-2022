@@ -28,7 +28,7 @@ import org.w3c.dom.NamedNodeMap;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.enums.TeleportType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.teleporter.TeleportHolder;
 
 /**
@@ -74,7 +74,7 @@ public class TeleportersData implements IXmlReader
 						final String name = parseString(nodeAttrs, "name", type.name());
 						// Parse locations
 						final TeleportHolder holder = new TeleportHolder(name, type);
-						forEach(node, "location", location -> holder.registerLocation(new StatsSet(parseAttributes(location))));
+						forEach(node, "location", location -> holder.registerLocation(new StatSet(parseAttributes(location))));
 						// Register holder
 						if (teleList.putIfAbsent(name, holder) != null)
 						{

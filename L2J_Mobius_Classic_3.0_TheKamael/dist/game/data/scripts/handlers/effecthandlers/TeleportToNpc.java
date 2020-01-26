@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -38,7 +38,7 @@ public class TeleportToNpc extends AbstractEffect
 	private final int _npcId;
 	private final boolean _party;
 	
-	public TeleportToNpc(StatsSet params)
+	public TeleportToNpc(StatSet params)
 	{
 		_npcId = params.getInt("npcId");
 		_party = params.getBoolean("party", false);

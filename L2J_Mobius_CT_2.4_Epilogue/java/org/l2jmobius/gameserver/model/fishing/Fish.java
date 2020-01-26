@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.fishing;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * Class for the Fish object.
@@ -42,7 +42,7 @@ public class Fish implements Cloneable
 	private final double _cheatingProb;
 	private final int _fishGrade;
 	
-	public Fish(StatsSet set)
+	public Fish(StatSet set)
 	{
 		_fishId = set.getInt("fishId");
 		_itemId = set.getInt("itemId");

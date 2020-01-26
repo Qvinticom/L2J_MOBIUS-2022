@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.holders;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * @author Mobius
@@ -52,7 +52,7 @@ public class FakePlayerHolder
 	private final int _clanId;
 	private final int _pledgeStatus;
 	
-	public FakePlayerHolder(StatsSet set)
+	public FakePlayerHolder(StatSet set)
 	{
 		_classId = set.getInt("classId", 182);
 		

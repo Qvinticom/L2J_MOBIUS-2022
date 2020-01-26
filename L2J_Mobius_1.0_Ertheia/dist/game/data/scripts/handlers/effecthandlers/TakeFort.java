@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.entity.Fort;
@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class TakeFort extends AbstractEffect
 {
-	public TakeFort(StatsSet params)
+	public TakeFort(StatSet params)
 	{
 	}
 	

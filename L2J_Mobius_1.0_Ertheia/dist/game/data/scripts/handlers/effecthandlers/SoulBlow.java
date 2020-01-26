@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.ShotType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -36,7 +36,7 @@ public class SoulBlow extends AbstractEffect
 	private final double _chanceBoost;
 	private final boolean _overHit;
 	
-	public SoulBlow(StatsSet params)
+	public SoulBlow(StatSet params)
 	{
 		_power = params.getDouble("power");
 		_chanceBoost = params.getDouble("chanceBoost");

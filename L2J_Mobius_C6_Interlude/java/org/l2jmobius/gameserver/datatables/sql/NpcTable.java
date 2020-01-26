@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.MinionData;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.skills.BaseStat;
@@ -284,7 +284,7 @@ public class NpcTable
 	{
 		while (npcData.next())
 		{
-			final StatsSet npcDat = new StatsSet();
+			final StatSet npcDat = new StatSet();
 			
 			final int id = npcData.getInt("id");
 			
@@ -606,7 +606,7 @@ public class NpcTable
 		load();
 	}
 	
-	public void saveNpc(StatsSet npc)
+	public void saveNpc(StatSet npc)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{

@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import java.util.Collections;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -35,7 +35,7 @@ public class CallSkillOnActionTime extends AbstractEffect
 {
 	private final SkillHolder _skill;
 	
-	public CallSkillOnActionTime(StatsSet params)
+	public CallSkillOnActionTime(StatSet params)
 	{
 		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1), params.getInt("skillSubLevel", 0));
 		setTicks(params.getInt("ticks"));

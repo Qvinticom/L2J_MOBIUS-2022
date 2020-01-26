@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
@@ -242,7 +242,7 @@ public class Antharas extends Quest
 		
 		if (FWA_OLDANTHARAS || (status == WAITING))
 		{
-			final StatsSet info = GrandBossManager.getInstance().getStatsSet(ANTHARASOLDID);
+			final StatSet info = GrandBossManager.getInstance().getStatSet(ANTHARASOLDID);
 			final Long respawnTime = info.getLong("respawn_time");
 			if ((status == DEAD) && (respawnTime <= System.currentTimeMillis()))
 			{
@@ -305,7 +305,7 @@ public class Antharas extends Quest
 			}
 			if ((antharasId != 0) && (status == FIGHTING))
 			{
-				final StatsSet info = GrandBossManager.getInstance().getStatsSet(antharasId);
+				final StatSet info = GrandBossManager.getInstance().getStatSet(antharasId);
 				final int loc_x = info.getInt("loc_x");
 				final int loc_y = info.getInt("loc_y");
 				final int loc_z = info.getInt("loc_z");
@@ -321,7 +321,7 @@ public class Antharas extends Quest
 			}
 			else if ((antharasId != 0) && (status == DEAD))
 			{
-				final StatsSet info = GrandBossManager.getInstance().getStatsSet(antharasId);
+				final StatSet info = GrandBossManager.getInstance().getStatSet(antharasId);
 				final Long respawnTime = info.getLong("respawn_time");
 				if (respawnTime <= System.currentTimeMillis())
 				{
@@ -967,9 +967,9 @@ public class Antharas extends Quest
 				final long respawnTime = (Config.ANTHARAS_RESP_FIRST + Rnd.get(Config.ANTHARAS_RESP_SECOND)) * 3600000;
 				ThreadPool.schedule(new UnlockAntharas(npc.getNpcId()), respawnTime);
 				// also save the respawn time so that the info is maintained past reboots
-				final StatsSet info = GrandBossManager.getInstance().getStatsSet(npc.getNpcId());
+				final StatSet info = GrandBossManager.getInstance().getStatSet(npc.getNpcId());
 				info.set("respawn_time", (System.currentTimeMillis() + respawnTime));
-				GrandBossManager.getInstance().setStatsSet(npc.getNpcId(), info);
+				GrandBossManager.getInstance().setStatSet(npc.getNpcId(), info);
 			}
 		}
 		else if (npc.getNpcId() == 29069)

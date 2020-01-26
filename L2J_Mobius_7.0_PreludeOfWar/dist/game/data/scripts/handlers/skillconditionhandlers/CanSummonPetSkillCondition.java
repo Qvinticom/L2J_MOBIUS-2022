@@ -19,7 +19,7 @@ package handlers.skillconditionhandlers;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  */
 public class CanSummonPetSkillCondition implements ISkillCondition
 {
-	public CanSummonPetSkillCondition(StatsSet params)
+	public CanSummonPetSkillCondition(StatSet params)
 	{
 		
 	}

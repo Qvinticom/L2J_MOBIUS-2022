@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -29,7 +29,7 @@ public class CubicMastery extends AbstractEffect
 {
 	private final int _cubicCount;
 	
-	public CubicMastery(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public CubicMastery(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

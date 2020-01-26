@@ -36,7 +36,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.instancemanager.tasks.GrandBossManagerStoreTask;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
@@ -60,7 +60,7 @@ public class GrandBossManager implements IStorable
 	
 	protected static final Map<Integer, GrandBossInstance> BOSSES = new ConcurrentHashMap<>();
 	
-	protected static Map<Integer, StatsSet> _storedInfo = new HashMap<>();
+	protected static Map<Integer, StatSet> _storedInfo = new HashMap<>();
 	
 	private final Map<Integer, Integer> _bossStatus = new ConcurrentHashMap<>();
 	
@@ -81,7 +81,7 @@ public class GrandBossManager implements IStorable
 			{
 				// Read all info from DB, and store it for AI to read and decide what to do
 				// faster than accessing DB in real time
-				final StatsSet info = new StatsSet();
+				final StatSet info = new StatSet();
 				final int bossId = rs.getInt("boss_id");
 				info.set("loc_x", rs.getInt("loc_x"));
 				info.set("loc_y", rs.getInt("loc_y"));
@@ -215,12 +215,12 @@ public class GrandBossManager implements IStorable
 		return BOSSES.get(bossId);
 	}
 	
-	public StatsSet getStatsSet(int bossId)
+	public StatSet getStatSet(int bossId)
 	{
 		return _storedInfo.get(bossId);
 	}
 	
-	public void setStatsSet(int bossId, StatsSet info)
+	public void setStatSet(int bossId, StatSet info)
 	{
 		_storedInfo.put(bossId, info);
 		updateDb(bossId, false);
@@ -252,10 +252,10 @@ public class GrandBossManager implements IStorable
 					}
 				}
 			}
-			for (Entry<Integer, StatsSet> e : _storedInfo.entrySet())
+			for (Entry<Integer, StatSet> e : _storedInfo.entrySet())
 			{
 				final GrandBossInstance boss = BOSSES.get(e.getKey());
-				final StatsSet info = e.getValue();
+				final StatSet info = e.getValue();
 				if ((boss == null) || (info == null))
 				{
 					try (PreparedStatement update = con.prepareStatement(UPDATE_GRAND_BOSS_DATA2))
@@ -305,7 +305,7 @@ public class GrandBossManager implements IStorable
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final GrandBossInstance boss = BOSSES.get(bossId);
-			final StatsSet info = _storedInfo.get(bossId);
+			final StatSet info = _storedInfo.get(bossId);
 			
 			if (statusOnly || (boss == null) || (info == null))
 			{

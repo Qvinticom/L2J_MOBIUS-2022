@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.instancezone.conditions;
 import java.util.List;
 import java.util.function.BiConsumer;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public abstract class Condition
 {
 	private final InstanceTemplate _template;
-	private final StatsSet _parameters;
+	private final StatSet _parameters;
 	private final boolean _leaderOnly;
 	private final boolean _showMessageAndHtml;
 	private SystemMessageId _systemMsg = null;
@@ -46,7 +46,7 @@ public abstract class Condition
 	 * @param onlyLeader flag which means if only leader should be affected (leader means player who wants to enter not group leader!)
 	 * @param showMessageAndHtml if {@code true} and HTML message is defined then both are send, otherwise only HTML or message is send
 	 */
-	public Condition(InstanceTemplate template, StatsSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
+	public Condition(InstanceTemplate template, StatSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
 	{
 		_template = template;
 		_parameters = parameters;
@@ -58,7 +58,7 @@ public abstract class Condition
 	 * Gets parameters of condition.
 	 * @return set of parameters
 	 */
-	protected final StatsSet getParameters()
+	protected final StatSet getParameters()
 	{
 		return _parameters;
 	}

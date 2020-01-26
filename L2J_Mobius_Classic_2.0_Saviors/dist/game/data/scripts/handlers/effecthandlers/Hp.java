@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.StatModifierType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -35,7 +35,7 @@ public class Hp extends AbstractEffect
 	private final int _amount;
 	private final StatModifierType _mode;
 	
-	public Hp(StatsSet params)
+	public Hp(StatSet params)
 	{
 		_amount = params.getInt("amount", 0);
 		_mode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);

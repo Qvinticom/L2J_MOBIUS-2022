@@ -18,7 +18,7 @@ package ai.bosses.Zaken;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -48,7 +48,7 @@ public class Zaken extends AbstractNpcAI
 	{
 		addKillId(ZAKEN);
 		
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ZAKEN);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(ZAKEN);
 		final int status = GrandBossManager.getInstance().getBossStatus(ZAKEN);
 		if (status == DEAD)
 		{
@@ -96,9 +96,9 @@ public class Zaken extends AbstractNpcAI
 		final long respawnTime = (Config.ZAKEN_SPAWN_INTERVAL + getRandom(-Config.ZAKEN_SPAWN_RANDOM, Config.ZAKEN_SPAWN_RANDOM)) * 3600000;
 		startQuestTimer("zaken_unlock", respawnTime, null, null);
 		// also save the respawn time so that the info is maintained past reboots
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ZAKEN);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(ZAKEN);
 		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-		GrandBossManager.getInstance().setStatsSet(ZAKEN, info);
+		GrandBossManager.getInstance().setStatSet(ZAKEN, info);
 		return super.onKill(npc, killer, isSummon);
 	}
 	

@@ -20,7 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.type.NoSummonFriendZone;
@@ -58,7 +58,7 @@ public class Helios extends AbstractNpcAI
 		// Zone
 		bossZone = ZoneManager.getInstance().getZoneById(ZONE_ID, NoSummonFriendZone.class);
 		// Unlock
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(HELIOS3);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(HELIOS3);
 		final int status = GrandBossManager.getInstance().getBossStatus(HELIOS3);
 		if (status == DEAD)
 		{
@@ -136,9 +136,9 @@ public class Helios extends AbstractNpcAI
 				bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.HELIOS_DEFEATED_TAKES_FLIGHT_DEEP_IN_TO_THE_SUPERION_FORT_HIS_THRONE_IS_RENDERED_INACTIVE, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				GrandBossManager.getInstance().setBossStatus(HELIOS3, DEAD);
 				final long respawnTime = (Config.HELIOS_SPAWN_INTERVAL + getRandom(-Config.HELIOS_SPAWN_RANDOM, Config.HELIOS_SPAWN_RANDOM)) * 3600000;
-				final StatsSet info = GrandBossManager.getInstance().getStatsSet(HELIOS3);
+				final StatSet info = GrandBossManager.getInstance().getStatSet(HELIOS3);
 				info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-				GrandBossManager.getInstance().setStatsSet(HELIOS3, info);
+				GrandBossManager.getInstance().setStatSet(HELIOS3, info);
 				startQuestTimer("unlock_helios", respawnTime, null, null);
 				break;
 			}

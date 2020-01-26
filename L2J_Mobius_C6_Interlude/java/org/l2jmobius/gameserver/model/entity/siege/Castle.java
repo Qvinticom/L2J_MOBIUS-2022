@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.SeedProduction;
 import org.l2jmobius.gameserver.instancemanager.CrownManager;
 import org.l2jmobius.gameserver.model.Manor;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -68,7 +68,7 @@ public class Castle
 	
 	private int _castleId = 0;
 	private final List<DoorInstance> _doors = new ArrayList<>();
-	private final List<StatsSet> _doorDefault = new ArrayList<>();
+	private final List<StatSet> _doorDefault = new ArrayList<>();
 	private String _name = "";
 	private int _ownerId = 0;
 	private Siege _siege = null;
@@ -571,7 +571,7 @@ public class Castle
 			while (rs.next())
 			{
 				// Create set of the door default for use when respawning dead doors
-				final StatsSet set = new StatsSet();
+				final StatSet set = new StatSet();
 				set.set("name", rs.getString("name"));
 				set.set("id", rs.getInt("id"));
 				set.set("x", rs.getInt("x"));

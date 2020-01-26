@@ -27,7 +27,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 
@@ -69,7 +69,7 @@ public class StaticObjectData implements IXmlReader
 					if ("object".equalsIgnoreCase(d.getNodeName()))
 					{
 						final NamedNodeMap attrs = d.getAttributes();
-						final StatsSet set = new StatsSet();
+						final StatSet set = new StatSet();
 						for (int i = 0; i < attrs.getLength(); i++)
 						{
 							final Node att = attrs.item(i);
@@ -86,9 +86,9 @@ public class StaticObjectData implements IXmlReader
 	 * Initialize an static object based on the stats set and add it to the map.
 	 * @param set the stats set to add.
 	 */
-	private void addObject(StatsSet set)
+	private void addObject(StatSet set)
 	{
-		final StaticObjectInstance obj = new StaticObjectInstance(new CreatureTemplate(new StatsSet()), set.getInt("id"));
+		final StaticObjectInstance obj = new StaticObjectInstance(new CreatureTemplate(new StatSet()), set.getInt("id"));
 		obj.setType(set.getInt("type", 0));
 		obj.setName(set.getString("name"));
 		obj.setMap(set.getString("texture", "none"), set.getInt("map_x", 0), set.getInt("map_y", 0));

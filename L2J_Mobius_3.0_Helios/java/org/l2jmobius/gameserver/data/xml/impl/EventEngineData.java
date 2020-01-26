@@ -34,7 +34,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.eventengine.AbstractEventManager;
 import org.l2jmobius.gameserver.model.eventengine.EventMethodNotification;
 import org.l2jmobius.gameserver.model.eventengine.EventScheduler;
@@ -156,7 +156,7 @@ public class EventEngineData implements IXmlReader
 	 */
 	private void parseVariables(AbstractEventManager<?> eventManager, Node innerNode)
 	{
-		final StatsSet variables = new StatsSet(LinkedHashMap::new);
+		final StatSet variables = new StatSet(LinkedHashMap::new);
 		for (Node variableNode = innerNode.getFirstChild(); variableNode != null; variableNode = variableNode.getNextSibling())
 		{
 			if ("variable".equals(variableNode.getNodeName()))
@@ -188,7 +188,7 @@ public class EventEngineData implements IXmlReader
 		{
 			if ("schedule".equals(scheduleNode.getNodeName()))
 			{
-				final StatsSet params = new StatsSet(LinkedHashMap::new);
+				final StatSet params = new StatSet(LinkedHashMap::new);
 				final NamedNodeMap attrs = scheduleNode.getAttributes();
 				for (int i = 0; i < attrs.getLength(); i++)
 				{
@@ -235,7 +235,7 @@ public class EventEngineData implements IXmlReader
 			}
 			else if ("conditionalSchedule".equals(scheduleNode.getNodeName()))
 			{
-				final StatsSet params = new StatsSet(LinkedHashMap::new);
+				final StatSet params = new StatSet(LinkedHashMap::new);
 				final NamedNodeMap attrs = scheduleNode.getAttributes();
 				for (int i = 0; i < attrs.getLength(); i++)
 				{
@@ -346,7 +346,7 @@ public class EventEngineData implements IXmlReader
 	 * @param variableNode
 	 */
 	@SuppressWarnings("unchecked")
-	private void parseListVariables(AbstractEventManager<?> eventManager, StatsSet variables, Node variableNode)
+	private void parseListVariables(AbstractEventManager<?> eventManager, StatSet variables, Node variableNode)
 	{
 		final String name = parseString(variableNode.getAttributes(), "name");
 		final String type = parseString(variableNode.getAttributes(), "type");
@@ -419,7 +419,7 @@ public class EventEngineData implements IXmlReader
 	 * @param variableNode
 	 */
 	@SuppressWarnings("unchecked")
-	private void parseMapVariables(AbstractEventManager<?> eventManager, StatsSet variables, Node variableNode)
+	private void parseMapVariables(AbstractEventManager<?> eventManager, StatSet variables, Node variableNode)
 	{
 		final String name = parseString(variableNode.getAttributes(), "name");
 		final String keyType = parseString(variableNode.getAttributes(), "keyType");

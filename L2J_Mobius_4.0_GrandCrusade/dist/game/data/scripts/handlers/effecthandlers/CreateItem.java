@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -31,7 +31,7 @@ public class CreateItem extends AbstractEffect
 {
 	private final int _recipeLevel;
 	
-	public CreateItem(StatsSet params)
+	public CreateItem(StatSet params)
 	{
 		_recipeLevel = params.getInt("value");
 	}

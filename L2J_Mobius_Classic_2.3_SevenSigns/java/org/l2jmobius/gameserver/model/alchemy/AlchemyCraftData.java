@@ -20,7 +20,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 
 /**
@@ -36,7 +36,7 @@ public class AlchemyCraftData
 	private ItemHolder _productionSuccess;
 	private ItemHolder _productionFailure;
 	
-	public AlchemyCraftData(StatsSet set)
+	public AlchemyCraftData(StatSet set)
 	{
 		_id = set.getInt("id");
 		_level = set.getInt("level");

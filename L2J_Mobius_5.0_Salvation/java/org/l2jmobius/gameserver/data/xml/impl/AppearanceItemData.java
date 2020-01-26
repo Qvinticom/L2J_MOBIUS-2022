@@ -27,7 +27,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.AppearanceHolder;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceStone;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceTargetType;
@@ -83,7 +83,7 @@ public class AppearanceItemData implements IXmlReader
 				{
 					if ("appearance_stone".equalsIgnoreCase(d.getNodeName()))
 					{
-						final AppearanceStone stone = new AppearanceStone(new StatsSet(parseAttributes(d)));
+						final AppearanceStone stone = new AppearanceStone(new StatSet(parseAttributes(d)));
 						for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling())
 						{
 							switch (c.getNodeName())
@@ -120,7 +120,7 @@ public class AppearanceItemData implements IXmlReader
 								}
 								case "visual":
 								{
-									stone.addVisualId(new AppearanceHolder(new StatsSet(parseAttributes(c))));
+									stone.addVisualId(new AppearanceHolder(new StatSet(parseAttributes(c))));
 								}
 							}
 						}

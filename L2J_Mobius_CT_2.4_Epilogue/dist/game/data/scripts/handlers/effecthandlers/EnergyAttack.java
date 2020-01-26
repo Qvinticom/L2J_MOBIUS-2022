@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ShotType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
@@ -42,7 +42,7 @@ public class EnergyAttack extends AbstractEffect
 	private final int _criticalChance;
 	private final boolean _ignoreShieldDefence;
 	
-	public EnergyAttack(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public EnergyAttack(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.templates;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 public class CreatureTemplate
 {
@@ -93,7 +93,7 @@ public class CreatureTemplate
 	private final int _collisionRadius;
 	private final int _collisionHeight;
 	
-	public CreatureTemplate(StatsSet set)
+	public CreatureTemplate(StatSet set)
 	{
 		// Base stats
 		_baseSTR = set.getInt("baseSTR");

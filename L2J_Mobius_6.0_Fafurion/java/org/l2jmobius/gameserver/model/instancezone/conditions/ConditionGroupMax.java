@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.instancezone.conditions;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class ConditionGroupMax extends Condition
 {
-	public ConditionGroupMax(InstanceTemplate template, StatsSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
+	public ConditionGroupMax(InstanceTemplate template, StatSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
 	{
 		super(template, parameters, true, showMessageAndHtml);
 		setSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT);

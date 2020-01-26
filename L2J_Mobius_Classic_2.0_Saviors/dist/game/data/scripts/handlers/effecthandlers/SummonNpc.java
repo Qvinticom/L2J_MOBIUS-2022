@@ -22,7 +22,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.DecoyInstance;
@@ -48,7 +48,7 @@ public class SummonNpc extends AbstractEffect
 	private final boolean _isSummonSpawn;
 	private final boolean _singleInstance; // Only one instance of this NPC is allowed.
 	
-	public SummonNpc(StatsSet params)
+	public SummonNpc(StatSet params)
 	{
 		_despawnDelay = params.getInt("despawnDelay", 20000);
 		_npcId = params.getInt("npcId", 0);

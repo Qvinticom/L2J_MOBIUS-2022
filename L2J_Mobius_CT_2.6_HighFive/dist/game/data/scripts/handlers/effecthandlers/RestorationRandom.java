@@ -24,7 +24,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.model.ExtractableProductItem;
 import org.l2jmobius.gameserver.model.ExtractableSkill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class RestorationRandom extends AbstractEffect
 {
-	public RestorationRandom(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public RestorationRandom(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 	}

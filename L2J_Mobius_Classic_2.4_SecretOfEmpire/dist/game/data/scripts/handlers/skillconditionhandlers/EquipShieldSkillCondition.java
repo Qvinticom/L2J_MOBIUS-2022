@@ -16,7 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class EquipShieldSkillCondition implements ISkillCondition
 {
-	public EquipShieldSkillCondition(StatsSet params)
+	public EquipShieldSkillCondition(StatSet params)
 	{
 	}
 	

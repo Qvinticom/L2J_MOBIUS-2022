@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -52,7 +52,7 @@ public class Blink extends AbstractEffect
 	private final int _flyDelay;
 	private final int _animationSpeed;
 	
-	public Blink(StatsSet params)
+	public Blink(StatSet params)
 	{
 		_flyCourse = params.getInt("angle", 0);
 		_flyRadius = params.getInt("range", 0);

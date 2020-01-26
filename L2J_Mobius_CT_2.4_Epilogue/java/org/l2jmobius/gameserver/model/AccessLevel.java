@@ -52,7 +52,7 @@ public class AccessLevel
 	/** Flag to gain exp in party */
 	private boolean _gainExp = false;
 	
-	public AccessLevel(StatsSet set)
+	public AccessLevel(StatSet set)
 	{
 		_accessLevel = set.getInt("level");
 		_name = set.getString("name");

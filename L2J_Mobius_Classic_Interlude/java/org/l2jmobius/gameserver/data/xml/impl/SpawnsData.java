@@ -36,7 +36,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.ChanceLocation;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.holders.MinionHolder;
 import org.l2jmobius.gameserver.model.interfaces.IParameterized;
@@ -169,7 +169,7 @@ public class SpawnsData implements IXmlReader
 	
 	public void parseSpawn(Node spawnsNode, File file, Collection<SpawnTemplate> spawns)
 	{
-		final SpawnTemplate spawnTemplate = new SpawnTemplate(new StatsSet(parseAttributes(spawnsNode)), file);
+		final SpawnTemplate spawnTemplate = new SpawnTemplate(new StatSet(parseAttributes(spawnsNode)), file);
 		SpawnGroup defaultGroup = null;
 		for (Node innerNode = spawnsNode.getFirstChild(); innerNode != null; innerNode = innerNode.getNextSibling())
 		{
@@ -185,7 +185,7 @@ public class SpawnsData implements IXmlReader
 			{
 				if (defaultGroup == null)
 				{
-					defaultGroup = new SpawnGroup(StatsSet.EMPTY_STATSET);
+					defaultGroup = new SpawnGroup(StatSet.EMPTY_STATSET);
 				}
 				parseNpc(innerNode, spawnTemplate, defaultGroup);
 			}
@@ -244,7 +244,7 @@ public class SpawnsData implements IXmlReader
 	
 	private void parseGroup(Node n, SpawnTemplate spawnTemplate)
 	{
-		final SpawnGroup group = new SpawnGroup(new StatsSet(parseAttributes(n)));
+		final SpawnGroup group = new SpawnGroup(new StatSet(parseAttributes(n)));
 		forEach(n, IXmlReader::isNode, npcNode ->
 		{
 			switch (npcNode.getNodeName())
@@ -271,7 +271,7 @@ public class SpawnsData implements IXmlReader
 	 */
 	private void parseNpc(Node n, SpawnTemplate spawnTemplate, SpawnGroup group)
 	{
-		final NpcSpawnTemplate npcTemplate = new NpcSpawnTemplate(spawnTemplate, group, new StatsSet(parseAttributes(n)));
+		final NpcSpawnTemplate npcTemplate = new NpcSpawnTemplate(spawnTemplate, group, new StatSet(parseAttributes(n)));
 		final NpcTemplate template = NpcData.getInstance().getTemplate(npcTemplate.getId());
 		if (template == null)
 		{
@@ -332,10 +332,10 @@ public class SpawnsData implements IXmlReader
 	 * @param n
 	 * @param npcTemplate
 	 */
-	private void parseParameters(Node n, IParameterized<StatsSet> npcTemplate)
+	private void parseParameters(Node n, IParameterized<StatSet> npcTemplate)
 	{
 		final Map<String, Object> params = parseParameters(n);
-		npcTemplate.setParameters(!params.isEmpty() ? new StatsSet(Collections.unmodifiableMap(params)) : StatsSet.EMPTY_STATSET);
+		npcTemplate.setParameters(!params.isEmpty() ? new StatSet(Collections.unmodifiableMap(params)) : StatSet.EMPTY_STATSET);
 	}
 	
 	/**
@@ -344,7 +344,7 @@ public class SpawnsData implements IXmlReader
 	 */
 	private void parseMinions(Node n, NpcSpawnTemplate npcTemplate)
 	{
-		forEach(n, "minion", minionNode -> npcTemplate.addMinion(new MinionHolder(new StatsSet(parseAttributes(minionNode)))));
+		forEach(n, "minion", minionNode -> npcTemplate.addMinion(new MinionHolder(new StatSet(parseAttributes(minionNode)))));
 	}
 	
 	/**

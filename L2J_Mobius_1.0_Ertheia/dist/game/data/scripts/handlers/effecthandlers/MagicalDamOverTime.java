@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -34,7 +34,7 @@ public class MagicalDamOverTime extends AbstractEffect
 	private final double _power;
 	private final boolean _canKill;
 	
-	public MagicalDamOverTime(StatsSet params)
+	public MagicalDamOverTime(StatSet params)
 	{
 		_power = params.getDouble("power", 0);
 		_canKill = params.getBoolean("canKill", false);

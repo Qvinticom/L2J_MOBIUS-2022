@@ -27,7 +27,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.ClanHall;
@@ -70,7 +70,7 @@ public class ClanHallManager
 			int lease;
 			while (rs.next())
 			{
-				final StatsSet set = new StatsSet();
+				final StatSet set = new StatSet();
 				
 				id = rs.getInt("id");
 				ownerId = rs.getInt("ownerId");

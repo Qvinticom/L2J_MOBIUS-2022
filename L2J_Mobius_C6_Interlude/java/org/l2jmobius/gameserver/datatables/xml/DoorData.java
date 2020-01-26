@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.entity.ClanHall;
@@ -57,7 +57,7 @@ public class DoorData implements IXmlReader
 	{
 		try
 		{
-			final StatsSet set = new StatsSet();
+			final StatSet set = new StatSet();
 			
 			final Node n = doc.getFirstChild();
 			for (Node node = n.getFirstChild(); node != null; node = node.getNextSibling())
@@ -91,7 +91,7 @@ public class DoorData implements IXmlReader
 		}
 	}
 	
-	public static DoorInstance createDoor(StatsSet set)
+	public static DoorInstance createDoor(StatSet set)
 	{
 		final String name = set.getString("name");
 		final int id = set.getInt("id");
@@ -135,7 +135,7 @@ public class DoorData implements IXmlReader
 			collisionRadius = xMax - xMin;
 		}
 		
-		final StatsSet npcDat = new StatsSet();
+		final StatSet npcDat = new StatSet();
 		npcDat.set("npcId", id);
 		npcDat.set("level", 0);
 		npcDat.set("jClass", "door");

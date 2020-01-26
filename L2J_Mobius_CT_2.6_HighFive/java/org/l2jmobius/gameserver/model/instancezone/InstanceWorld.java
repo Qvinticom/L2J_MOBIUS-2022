@@ -23,7 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
@@ -37,7 +37,7 @@ public class InstanceWorld
 {
 	private Instance _instance;
 	private final Set<PlayerInstance> _players = ConcurrentHashMap.newKeySet();
-	private final StatsSet _parameters = new StatsSet();
+	private final StatSet _parameters = new StatSet();
 	
 	/**
 	 * Sets the instance.
@@ -110,7 +110,7 @@ public class InstanceWorld
 	 * Get instance world parameters.
 	 * @return instance parameters
 	 */
-	public StatsSet getParameters()
+	public StatSet getParameters()
 	{
 		return _parameters;
 	}

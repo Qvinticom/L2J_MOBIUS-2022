@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.CeremonyOfChaosState;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -180,7 +180,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 			}
 		}
 		
-		getTimers().addTimer("count_down", StatsSet.valueOf("time", 60), 60 * 1000, null, null);
+		getTimers().addTimer("count_down", StatSet.valueOf("time", 60), 60 * 1000, null, null);
 	}
 	
 	@ScheduleTarget
@@ -253,7 +253,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{

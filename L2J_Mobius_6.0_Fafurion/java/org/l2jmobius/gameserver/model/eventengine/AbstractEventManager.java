@@ -25,7 +25,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.atomic.AtomicReference;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.eventengine.drop.IEventDrop;
 import org.l2jmobius.gameserver.model.events.AbstractScript;
@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout
 public abstract class AbstractEventManager<T extends AbstractEvent<?>>extends AbstractScript
 {
 	private String _name;
-	private StatsSet _variables = StatsSet.EMPTY_STATSET;
+	private StatSet _variables = StatSet.EMPTY_STATSET;
 	private Set<EventScheduler> _schedulers = Collections.emptySet();
 	private Set<IConditionalEventScheduler> _conditionalSchedulers = Collections.emptySet();
 	private Map<String, IEventDrop> _rewards = Collections.emptyMap();
@@ -67,14 +67,14 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>>extends Ab
 	
 	/* ********************** */
 	
-	public StatsSet getVariables()
+	public StatSet getVariables()
 	{
 		return _variables;
 	}
 	
-	public void setVariables(StatsSet variables)
+	public void setVariables(StatSet variables)
 	{
-		_variables = new StatsSet(Collections.unmodifiableMap(variables.getSet()));
+		_variables = new StatSet(Collections.unmodifiableMap(variables.getSet()));
 	}
 	
 	/* ********************** */

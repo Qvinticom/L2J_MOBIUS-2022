@@ -17,7 +17,7 @@
 package instances.CrystalCaverns;
 
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -90,13 +90,13 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final StatsSet npcParams = npc.getParameters();
-			final StatsSet npcVars = npc.getVariables();
+			final StatSet npcParams = npc.getParameters();
+			final StatSet npcVars = npc.getVariables();
 			final int baseId = npcParams.getInt("base_id", -1);
 			
 			switch (event)
@@ -156,7 +156,7 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final StatsSet npcVars = npc.getVariables();
+			final StatSet npcVars = npc.getVariables();
 			
 			switch (npc.getId())
 			{
@@ -205,7 +205,7 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final StatsSet npcParams = npc.getParameters();
+			final StatSet npcParams = npc.getParameters();
 			final int baseId = npcParams.getInt("base_id", -1);
 			
 			switch (npc.getId())
@@ -365,7 +365,7 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 			{
 				case WATER_CANNON:
 				{
-					final StatsSet npcParams = npc.getParameters();
+					final StatSet npcParams = npc.getParameters();
 					final int baseId = npcParams.getInt("base_id", -1);
 					
 					if (baseId != 1)

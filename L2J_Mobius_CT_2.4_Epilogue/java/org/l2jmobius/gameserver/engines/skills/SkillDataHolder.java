@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.engines.skills;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -29,15 +29,15 @@ public class SkillDataHolder
 {
 	public int id;
 	public String name;
-	public StatsSet[] sets;
-	public StatsSet[] enchsets1;
-	public StatsSet[] enchsets2;
-	public StatsSet[] enchsets3;
-	public StatsSet[] enchsets4;
-	public StatsSet[] enchsets5;
-	public StatsSet[] enchsets6;
-	public StatsSet[] enchsets7;
-	public StatsSet[] enchsets8;
+	public StatSet[] sets;
+	public StatSet[] enchsets1;
+	public StatSet[] enchsets2;
+	public StatSet[] enchsets3;
+	public StatSet[] enchsets4;
+	public StatSet[] enchsets5;
+	public StatSet[] enchsets6;
+	public StatSet[] enchsets7;
+	public StatSet[] enchsets8;
 	public int currentLevel;
 	public List<Skill> skills = new ArrayList<>();
 	public List<Skill> currentSkills = new ArrayList<>();

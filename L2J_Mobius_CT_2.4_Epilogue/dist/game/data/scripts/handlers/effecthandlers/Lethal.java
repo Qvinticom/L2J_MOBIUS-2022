@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -34,7 +34,7 @@ public class Lethal extends AbstractEffect
 	private final int _fullLethal;
 	private final int _halfLethal;
 	
-	public Lethal(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Lethal(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

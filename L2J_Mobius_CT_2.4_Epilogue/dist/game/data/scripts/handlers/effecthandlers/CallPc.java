@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.SevenSigns;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -42,7 +42,7 @@ public class CallPc extends AbstractEffect
 	private final int _itemId;
 	private final int _itemCount;
 	
-	public CallPc(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public CallPc(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

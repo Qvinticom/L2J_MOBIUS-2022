@@ -20,7 +20,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
@@ -34,7 +34,7 @@ public class BlockBuffSlot extends AbstractEffect
 {
 	private final Set<AbnormalType> _blockBuffSlots;
 	
-	public BlockBuffSlot(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public BlockBuffSlot(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

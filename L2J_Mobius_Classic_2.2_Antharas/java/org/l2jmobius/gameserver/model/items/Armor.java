@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.items;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
 
 /**
@@ -28,15 +28,15 @@ public class Armor extends Item
 	
 	/**
 	 * Constructor for Armor.
-	 * @param set the StatsSet designating the set of couples (key,value) characterizing the armor.
+	 * @param set the StatSet designating the set of couples (key,value) characterizing the armor.
 	 */
-	public Armor(StatsSet set)
+	public Armor(StatSet set)
 	{
 		super(set);
 	}
 	
 	@Override
-	public void set(StatsSet set)
+	public void set(StatSet set)
 	{
 		super.set(set);
 		_type = set.getEnum("armor_type", ArmorType.class, ArmorType.NONE);

@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.ShotType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  */
 public class SoulBlow extends AbstractEffect
 {
-	public SoulBlow(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public SoulBlow(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 	}

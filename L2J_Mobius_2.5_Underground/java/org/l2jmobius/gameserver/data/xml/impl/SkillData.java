@@ -40,7 +40,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.handler.EffectHandler;
 import org.l2jmobius.gameserver.handler.SkillConditionHandler;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.EffectScope;
@@ -67,9 +67,9 @@ public class SkillData implements IXmlReader
 		private final Integer _toLevel;
 		private final Integer _fromSubLevel;
 		private final Integer _toSubLevel;
-		private final Map<Integer, Map<Integer, StatsSet>> _info;
+		private final Map<Integer, Map<Integer, StatSet>> _info;
 		
-		public NamedParamInfo(String name, Integer fromLevel, Integer toLevel, Integer fromSubLevel, Integer toSubLevel, Map<Integer, Map<Integer, StatsSet>> info)
+		public NamedParamInfo(String name, Integer fromLevel, Integer toLevel, Integer fromSubLevel, Integer toSubLevel, Map<Integer, Map<Integer, StatSet>> info)
 		{
 			_name = name;
 			_fromLevel = fromLevel;
@@ -104,7 +104,7 @@ public class SkillData implements IXmlReader
 			return _toSubLevel;
 		}
 		
-		public Map<Integer, Map<Integer, StatsSet>> getInfo()
+		public Map<Integer, Map<Integer, StatSet>> getInfo()
 		{
 			return _info;
 		}
@@ -241,8 +241,8 @@ public class SkillData implements IXmlReader
 					{
 						NamedNodeMap attributes = listNode.getAttributes();
 						final Map<Integer, Set<Integer>> levels = new HashMap<>();
-						final Map<Integer, Map<Integer, StatsSet>> skillInfo = new HashMap<>();
-						final StatsSet generalSkillInfo = skillInfo.computeIfAbsent(-1, k -> new HashMap<>()).computeIfAbsent(-1, k -> new StatsSet());
+						final Map<Integer, Map<Integer, StatSet>> skillInfo = new HashMap<>();
+						final StatSet generalSkillInfo = skillInfo.computeIfAbsent(-1, k -> new HashMap<>()).computeIfAbsent(-1, k -> new StatSet());
 						
 						parseAttributes(attributes, "", generalSkillInfo);
 						
@@ -321,7 +321,7 @@ public class SkillData implements IXmlReader
 							{
 								return;
 							}
-							subLevelMap.forEach((subLevel, statsSet) ->
+							subLevelMap.forEach((subLevel, statSet) ->
 							{
 								if (subLevel == -1)
 								{
@@ -339,7 +339,7 @@ public class SkillData implements IXmlReader
 								{
 									return;
 								}
-								subLevelMap.forEach((subLevel, statsSet) ->
+								subLevelMap.forEach((subLevel, statSet) ->
 								{
 									if (subLevel == -1)
 									{
@@ -371,31 +371,31 @@ public class SkillData implements IXmlReader
 						
 						levels.forEach((level, subLevels) -> subLevels.forEach(subLevel ->
 						{
-							final StatsSet statsSet = Optional.ofNullable(skillInfo.getOrDefault(level, Collections.emptyMap()).get(subLevel)).orElseGet(StatsSet::new);
-							skillInfo.getOrDefault(level, Collections.emptyMap()).getOrDefault(-1, StatsSet.EMPTY_STATSET).getSet().forEach(statsSet.getSet()::putIfAbsent);
-							skillInfo.getOrDefault(-1, Collections.emptyMap()).getOrDefault(-1, StatsSet.EMPTY_STATSET).getSet().forEach(statsSet.getSet()::putIfAbsent);
-							statsSet.set(".level", level);
-							statsSet.set(".subLevel", subLevel);
-							final Skill skill = new Skill(statsSet);
+							final StatSet statSet = Optional.ofNullable(skillInfo.getOrDefault(level, Collections.emptyMap()).get(subLevel)).orElseGet(StatSet::new);
+							skillInfo.getOrDefault(level, Collections.emptyMap()).getOrDefault(-1, StatSet.EMPTY_STATSET).getSet().forEach(statSet.getSet()::putIfAbsent);
+							skillInfo.getOrDefault(-1, Collections.emptyMap()).getOrDefault(-1, StatSet.EMPTY_STATSET).getSet().forEach(statSet.getSet()::putIfAbsent);
+							statSet.set(".level", level);
+							statSet.set(".subLevel", subLevel);
+							final Skill skill = new Skill(statSet);
 							forEachNamedParamInfoParam(effectParamInfo, level, subLevel, ((effectScope, params) ->
 							{
 								final String effectName = params.getString(".name");
 								params.remove(".name");
 								try
 								{
-									final Function<StatsSet, AbstractEffect> effectFunction = EffectHandler.getInstance().getHandlerFactory(effectName);
+									final Function<StatSet, AbstractEffect> effectFunction = EffectHandler.getInstance().getHandlerFactory(effectName);
 									if (effectFunction != null)
 									{
 										skill.addEffect(effectScope, effectFunction.apply(params));
 									}
 									else
 									{
-										LOGGER.warning(getClass().getSimpleName() + ": Missing effect for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + effectScope + "] Effect Name[" + effectName + "]");
+										LOGGER.warning(getClass().getSimpleName() + ": Missing effect for Skill Id[" + statSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + effectScope + "] Effect Name[" + effectName + "]");
 									}
 								}
 								catch (Exception e)
 								{
-									LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading effect for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + effectScope + "] Effect Name[" + effectName + "]", e);
+									LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading effect for Skill Id[" + statSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + effectScope + "] Effect Name[" + effectName + "]", e);
 								}
 							}));
 							
@@ -405,19 +405,19 @@ public class SkillData implements IXmlReader
 								params.remove(".name");
 								try
 								{
-									final Function<StatsSet, ISkillCondition> conditionFunction = SkillConditionHandler.getInstance().getHandlerFactory(conditionName);
+									final Function<StatSet, ISkillCondition> conditionFunction = SkillConditionHandler.getInstance().getHandlerFactory(conditionName);
 									if (conditionFunction != null)
 									{
 										skill.addCondition(skillConditionScope, conditionFunction.apply(params));
 									}
 									else
 									{
-										LOGGER.warning(getClass().getSimpleName() + ": Missing condition for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + skillConditionScope + "] Effect Name[" + conditionName + "]");
+										LOGGER.warning(getClass().getSimpleName() + ": Missing condition for Skill Id[" + statSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Effect Scope[" + skillConditionScope + "] Effect Name[" + conditionName + "]");
 									}
 								}
 								catch (Exception e)
 								{
-									LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading condition for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Condition Scope[" + skillConditionScope + "] Condition Name[" + conditionName + "]", e);
+									LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading condition for Skill Id[" + statSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Condition Scope[" + skillConditionScope + "] Condition Name[" + conditionName + "]", e);
 								}
 							}));
 							
@@ -434,16 +434,16 @@ public class SkillData implements IXmlReader
 		}
 	}
 	
-	private <T> void forEachNamedParamInfoParam(Map<T, List<NamedParamInfo>> paramInfo, int level, int subLevel, BiConsumer<T, StatsSet> consumer)
+	private <T> void forEachNamedParamInfoParam(Map<T, List<NamedParamInfo>> paramInfo, int level, int subLevel, BiConsumer<T, StatSet> consumer)
 	{
 		paramInfo.forEach((scope, namedParamInfos) -> namedParamInfos.forEach(namedParamInfo ->
 		{
 			if ((((namedParamInfo.getFromLevel() == null) && (namedParamInfo.getToLevel() == null)) || ((namedParamInfo.getFromLevel() <= level) && (namedParamInfo.getToLevel() >= level))) //
 				&& (((namedParamInfo.getFromSubLevel() == null) && (namedParamInfo.getToSubLevel() == null)) || ((namedParamInfo.getFromSubLevel() <= subLevel) && (namedParamInfo.getToSubLevel() >= subLevel))))
 			{
-				final StatsSet params = Optional.ofNullable(namedParamInfo.getInfo().getOrDefault(level, Collections.emptyMap()).get(subLevel)).orElseGet(StatsSet::new);
-				namedParamInfo.getInfo().getOrDefault(level, Collections.emptyMap()).getOrDefault(-1, StatsSet.EMPTY_STATSET).getSet().forEach(params.getSet()::putIfAbsent);
-				namedParamInfo.getInfo().getOrDefault(-1, Collections.emptyMap()).getOrDefault(-1, StatsSet.EMPTY_STATSET).getSet().forEach(params.getSet()::putIfAbsent);
+				final StatSet params = Optional.ofNullable(namedParamInfo.getInfo().getOrDefault(level, Collections.emptyMap()).get(subLevel)).orElseGet(StatSet::new);
+				namedParamInfo.getInfo().getOrDefault(level, Collections.emptyMap()).getOrDefault(-1, StatSet.EMPTY_STATSET).getSet().forEach(params.getSet()::putIfAbsent);
+				namedParamInfo.getInfo().getOrDefault(-1, Collections.emptyMap()).getOrDefault(-1, StatSet.EMPTY_STATSET).getSet().forEach(params.getSet()::putIfAbsent);
 				params.set(".name", namedParamInfo.getName());
 				consumer.accept(scope, params);
 			}
@@ -460,7 +460,7 @@ public class SkillData implements IXmlReader
 		final Integer subLevel = parseInteger(attributes, "subLevel");
 		final Integer fromSubLevel = parseInteger(attributes, "fromSubLevel", subLevel);
 		final Integer toSubLevel = parseInteger(attributes, "toSubLevel", subLevel);
-		final Map<Integer, Map<Integer, StatsSet>> info = new HashMap<>();
+		final Map<Integer, Map<Integer, StatSet>> info = new HashMap<>();
 		for (node = node.getFirstChild(); node != null; node = node.getNextSibling())
 		{
 			if (!node.getNodeName().equals("#text"))
@@ -471,7 +471,7 @@ public class SkillData implements IXmlReader
 		return new NamedParamInfo(name, fromLevel, toLevel, fromSubLevel, toSubLevel, info);
 	}
 	
-	private void parseInfo(Node node, Map<String, Map<Integer, Map<Integer, Object>>> variableValues, Map<Integer, Map<Integer, StatsSet>> info)
+	private void parseInfo(Node node, Map<String, Map<Integer, Map<Integer, Object>>> variableValues, Map<Integer, Map<Integer, StatSet>> info)
 	{
 		Map<Integer, Map<Integer, Object>> values = parseValues(node);
 		final Object generalValue = values.getOrDefault(-1, Collections.emptyMap()).get(-1);
@@ -492,7 +492,7 @@ public class SkillData implements IXmlReader
 			}
 		}
 		
-		values.forEach((level, subLevelMap) -> subLevelMap.forEach((subLevel, value) -> info.computeIfAbsent(level, k -> new HashMap<>()).computeIfAbsent(subLevel, k -> new StatsSet()).set(node.getNodeName(), value)));
+		values.forEach((level, subLevelMap) -> subLevelMap.forEach((subLevel, value) -> info.computeIfAbsent(level, k -> new HashMap<>()).computeIfAbsent(subLevel, k -> new StatSet()).set(node.getNodeName(), value)));
 	}
 	
 	private Map<Integer, Map<Integer, Object>> parseValues(Node node)
@@ -535,7 +535,7 @@ public class SkillData implements IXmlReader
 								variables.put("index", (i - fromLevel) + 1d);
 								variables.put("subIndex", (j - fromSubLevel) + 1d);
 								final Object base = values.getOrDefault(i, Collections.emptyMap()).get(-1);
-								if ((base != null) && !(base instanceof StatsSet))
+								if ((base != null) && !(base instanceof StatSet))
 								{
 									variables.put("base", Double.parseDouble(String.valueOf(base)));
 								}
@@ -555,13 +555,13 @@ public class SkillData implements IXmlReader
 	
 	Object parseValue(Node node, boolean blockValue, boolean parseAttributes, Map<String, Double> variables)
 	{
-		StatsSet statsSet = null;
+		StatSet statSet = null;
 		List<Object> list = null;
 		Object text = null;
 		if (parseAttributes && (!node.getNodeName().equals("value") || !blockValue) && (node.getAttributes().getLength() > 0))
 		{
-			statsSet = new StatsSet();
-			parseAttributes(node.getAttributes(), "", statsSet, variables);
+			statSet = new StatSet();
+			parseAttributes(node.getAttributes(), "", statSet, variables);
 		}
 		for (node = node.getFirstChild(); node != null; node = node.getNextSibling())
 		{
@@ -604,12 +604,12 @@ public class SkillData implements IXmlReader
 					final Object value = parseValue(node, false, true, variables);
 					if (value != null)
 					{
-						if (statsSet == null)
+						if (statSet == null)
 						{
-							statsSet = new StatsSet();
+							statSet = new StatSet();
 						}
 						
-						statsSet.set(nodeName, value);
+						statSet.set(nodeName, value);
 					}
 				}
 			}
@@ -620,9 +620,9 @@ public class SkillData implements IXmlReader
 			{
 				throw new IllegalArgumentException("Text and list in same node are not allowed. Node[" + node + "]");
 			}
-			if (statsSet != null)
+			if (statSet != null)
 			{
-				statsSet.set(".", list);
+				statSet.set(".", list);
 			}
 			else
 			{
@@ -635,30 +635,30 @@ public class SkillData implements IXmlReader
 			{
 				throw new IllegalArgumentException("Text and list in same node are not allowed. Node[" + node + "]");
 			}
-			if (statsSet != null)
+			if (statSet != null)
 			{
-				statsSet.set(".", text);
+				statSet.set(".", text);
 			}
 			else
 			{
 				return text;
 			}
 		}
-		return statsSet;
+		return statSet;
 	}
 	
-	private void parseAttributes(NamedNodeMap attributes, String prefix, StatsSet statsSet, Map<String, Double> variables)
+	private void parseAttributes(NamedNodeMap attributes, String prefix, StatSet statSet, Map<String, Double> variables)
 	{
 		for (int i = 0; i < attributes.getLength(); i++)
 		{
 			final Node attributeNode = attributes.item(i);
-			statsSet.set(prefix + "." + attributeNode.getNodeName(), parseNodeValue(attributeNode.getNodeValue(), variables));
+			statSet.set(prefix + "." + attributeNode.getNodeName(), parseNodeValue(attributeNode.getNodeValue(), variables));
 		}
 	}
 	
-	private void parseAttributes(NamedNodeMap attributes, String prefix, StatsSet statsSet)
+	private void parseAttributes(NamedNodeMap attributes, String prefix, StatSet statSet)
 	{
-		parseAttributes(attributes, prefix, statsSet, Collections.emptyMap());
+		parseAttributes(attributes, prefix, statSet, Collections.emptyMap());
 	}
 	
 	private Object parseNodeValue(String value, Map<String, Double> variables)

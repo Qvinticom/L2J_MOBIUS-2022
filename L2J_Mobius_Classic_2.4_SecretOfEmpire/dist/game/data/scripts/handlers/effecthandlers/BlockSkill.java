@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -35,7 +35,7 @@ public class BlockSkill extends AbstractEffect
 {
 	private final int[] _magicTypes;
 	
-	public BlockSkill(StatsSet params)
+	public BlockSkill(StatSet params)
 	{
 		_magicTypes = params.getIntArray("magicTypes", ";");
 	}

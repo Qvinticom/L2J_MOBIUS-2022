@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -34,7 +34,7 @@ public class AddHuntingTime extends AbstractEffect
 	private final int _zoneId;
 	private final long _time;
 	
-	public AddHuntingTime(StatsSet params)
+	public AddHuntingTime(StatSet params)
 	{
 		_zoneId = params.getInt("zoneId", 0);
 		_time = params.getLong("time", 3600000);

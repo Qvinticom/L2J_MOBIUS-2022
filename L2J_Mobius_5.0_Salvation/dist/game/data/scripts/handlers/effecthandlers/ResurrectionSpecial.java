@@ -20,7 +20,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -39,7 +39,7 @@ public class ResurrectionSpecial extends AbstractEffect
 	private final int _power;
 	private final Set<Integer> _instanceId;
 	
-	public ResurrectionSpecial(StatsSet params)
+	public ResurrectionSpecial(StatSet params)
 	{
 		_power = params.getInt("power", 0);
 		

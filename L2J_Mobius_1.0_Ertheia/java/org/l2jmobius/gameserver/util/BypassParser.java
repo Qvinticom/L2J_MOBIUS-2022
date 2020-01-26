@@ -20,12 +20,12 @@ import java.util.LinkedHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * @author UnAfraid
  */
-public class BypassParser extends StatsSet
+public class BypassParser extends StatSet
 {
 	private static final String ALLOWED_CHARS = "a-zA-Z0-9-_`!@#%^&*()\\[\\]|\\\\/";
 	private static final Pattern PATTERN = Pattern.compile(String.format("([%s]*)=('([%s ]*)'|[%s]*)", ALLOWED_CHARS, ALLOWED_CHARS, ALLOWED_CHARS));

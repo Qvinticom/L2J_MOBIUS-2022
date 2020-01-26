@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
@@ -50,7 +50,7 @@ public class Fishing extends AbstractEffect
 	private static final int MIN_BAIT_DISTANCE = 90;
 	private static final int MAX_BAIT_DISTANCE = 250;
 	
-	public Fishing(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Fishing(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 	}

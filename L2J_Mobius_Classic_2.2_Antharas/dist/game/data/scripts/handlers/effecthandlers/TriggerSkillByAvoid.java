@@ -21,7 +21,7 @@ import java.util.logging.Level;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.handler.TargetHandler;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -47,7 +47,7 @@ public class TriggerSkillByAvoid extends AbstractEffect
 	/**
 	 * @param params
 	 */
-	public TriggerSkillByAvoid(StatsSet params)
+	public TriggerSkillByAvoid(StatSet params)
 	{
 		_chance = params.getInt("chance", 100);
 		_skill = new SkillHolder(params.getInt("skillId", 0), params.getInt("skillLevel", 0));

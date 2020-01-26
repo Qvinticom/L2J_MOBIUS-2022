@@ -21,7 +21,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -34,7 +34,7 @@ public class ResetInstanceEntry extends AbstractEffect
 {
 	private final Set<Integer> _instanceId;
 	
-	public ResetInstanceEntry(StatsSet params)
+	public ResetInstanceEntry(StatSet params)
 	{
 		final String instanceIds = params.getString("instanceId", null);
 		if ((instanceIds != null) && !instanceIds.isEmpty())

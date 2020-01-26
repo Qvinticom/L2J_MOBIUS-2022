@@ -23,7 +23,7 @@ import java.util.Map.Entry;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.StatusUpdateType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -56,7 +56,7 @@ public class RecipeHolder implements IIdentifiable
 	private final double _maxOfferingBonus;
 	private final long _maxOffering;
 	
-	public RecipeHolder(StatsSet set, List<ItemHolder> ingredients, List<ItemChanceHolder> productGroup, List<ItemHolder> npcFee, Map<StatusUpdateType, Double> statUse)
+	public RecipeHolder(StatSet set, List<ItemHolder> ingredients, List<ItemChanceHolder> productGroup, List<ItemHolder> npcFee, Map<StatusUpdateType, Double> statUse)
 	{
 		_id = set.getInt("id");
 		_level = set.getInt("level");

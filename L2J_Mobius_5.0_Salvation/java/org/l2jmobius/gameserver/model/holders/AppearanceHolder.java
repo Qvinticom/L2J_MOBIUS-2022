@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.holders;
 
 import org.l2jmobius.gameserver.datatables.ItemTable;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceHandType;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceMagicType;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceTargetType;
@@ -37,7 +37,7 @@ public class AppearanceHolder
 	private final AppearanceTargetType _targetType;
 	private final long _bodyPart;
 	
-	public AppearanceHolder(StatsSet set)
+	public AppearanceHolder(StatSet set)
 	{
 		_visualId = set.getInt("id", 0);
 		_weaponType = set.getEnum("weaponType", WeaponType.class, WeaponType.NONE);

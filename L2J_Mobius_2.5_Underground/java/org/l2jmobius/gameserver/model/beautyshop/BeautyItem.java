@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.beautyshop;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * @author Sdw
@@ -32,7 +32,7 @@ public class BeautyItem
 	private final int _beautyShopTicket;
 	private final Map<Integer, BeautyItem> _colors = new HashMap<>();
 	
-	public BeautyItem(StatsSet set)
+	public BeautyItem(StatSet set)
 	{
 		_id = set.getInt("id");
 		_adena = set.getInt("adena", 0);
@@ -60,7 +60,7 @@ public class BeautyItem
 		return _beautyShopTicket;
 	}
 	
-	public void addColor(StatsSet set)
+	public void addColor(StatSet set)
 	{
 		final BeautyItem color = new BeautyItem(set);
 		_colors.put(set.getInt("id"), color);

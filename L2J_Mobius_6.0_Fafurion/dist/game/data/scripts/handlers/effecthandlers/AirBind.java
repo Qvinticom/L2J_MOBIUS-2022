@@ -22,7 +22,7 @@ import java.util.Map;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -78,7 +78,7 @@ public class AirBind extends AbstractEffect
 		_chainedAirSkills.put(ClassId.AEORE_SHILLIEN_SAINT, 11999); // Heavy Hit
 	}
 	
-	public AirBind(StatsSet params)
+	public AirBind(StatSet params)
 	{
 	}
 	

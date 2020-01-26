@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import java.util.Set;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class GetAgro extends AbstractEffect
 {
-	public GetAgro(StatsSet params)
+	public GetAgro(StatSet params)
 	{
 	}
 	

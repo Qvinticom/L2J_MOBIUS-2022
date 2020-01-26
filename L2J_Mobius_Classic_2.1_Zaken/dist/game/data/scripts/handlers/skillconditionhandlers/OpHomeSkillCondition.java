@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import org.l2jmobius.gameserver.enums.ResidenceType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -34,7 +34,7 @@ public class OpHomeSkillCondition implements ISkillCondition
 {
 	private final ResidenceType _type;
 	
-	public OpHomeSkillCondition(StatsSet params)
+	public OpHomeSkillCondition(StatSet params)
 	{
 		_type = params.getEnum("type", ResidenceType.class);
 	}

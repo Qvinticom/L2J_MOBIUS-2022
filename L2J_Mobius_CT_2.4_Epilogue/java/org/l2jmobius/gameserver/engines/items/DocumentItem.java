@@ -27,7 +27,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.gameserver.engines.DocumentBase;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.items.Item;
 
@@ -48,7 +48,7 @@ public class DocumentItem extends DocumentBase
 	}
 	
 	@Override
-	protected StatsSet getStatsSet()
+	protected StatSet getStatSet()
 	{
 		return _currentItem.set;
 	}
@@ -102,7 +102,7 @@ public class DocumentItem extends DocumentBase
 		_currentItem.id = itemId;
 		_currentItem.name = itemName;
 		_currentItem.type = className;
-		_currentItem.set = new StatsSet();
+		_currentItem.set = new StatSet();
 		_currentItem.set.set("item_id", itemId);
 		_currentItem.set.set("name", itemName);
 		
@@ -167,7 +167,7 @@ public class DocumentItem extends DocumentBase
 		
 		try
 		{
-			final Constructor<?> itemClass = Class.forName("org.l2jmobius.gameserver.model.items." + _currentItem.type).getConstructor(StatsSet.class);
+			final Constructor<?> itemClass = Class.forName("org.l2jmobius.gameserver.model.items." + _currentItem.type).getConstructor(StatSet.class);
 			_currentItem.item = (Item) itemClass.newInstance(_currentItem.set);
 		}
 		catch (Exception e)

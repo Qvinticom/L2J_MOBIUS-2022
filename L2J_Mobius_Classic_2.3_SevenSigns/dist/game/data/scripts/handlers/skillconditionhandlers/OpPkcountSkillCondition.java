@@ -17,7 +17,7 @@
 package handlers.skillconditionhandlers;
 
 import org.l2jmobius.gameserver.enums.SkillConditionAffectType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
@@ -30,7 +30,7 @@ public class OpPkcountSkillCondition implements ISkillCondition
 {
 	private final SkillConditionAffectType _affectType;
 	
-	public OpPkcountSkillCondition(StatsSet params)
+	public OpPkcountSkillCondition(StatSet params)
 	{
 		_affectType = params.getEnum("affectType", SkillConditionAffectType.class);
 	}

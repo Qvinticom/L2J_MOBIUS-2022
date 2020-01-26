@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.items;
 
 import org.l2jmobius.commons.util.Util;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
@@ -37,7 +37,7 @@ public class Henna
 	private final int _WIT;
 	private final int[] _classes;
 	
-	public Henna(StatsSet set)
+	public Henna(StatSet set)
 	{
 		_symbolId = set.getInt("symbolId");
 		_dyeId = set.getInt("dyeId");

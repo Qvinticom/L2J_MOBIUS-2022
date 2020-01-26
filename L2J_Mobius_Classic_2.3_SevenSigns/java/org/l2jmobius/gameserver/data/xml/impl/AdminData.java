@@ -32,7 +32,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.AdminCommandAccessRight;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -72,7 +72,7 @@ public class AdminData implements IXmlReader
 	{
 		NamedNodeMap attrs;
 		Node attr;
-		StatsSet set;
+		StatSet set;
 		AccessLevel level;
 		AdminCommandAccessRight command;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
@@ -83,7 +83,7 @@ public class AdminData implements IXmlReader
 				{
 					if ("access".equalsIgnoreCase(d.getNodeName()))
 					{
-						set = new StatsSet();
+						set = new StatSet();
 						attrs = d.getAttributes();
 						for (int i = 0; i < attrs.getLength(); i++)
 						{
@@ -99,7 +99,7 @@ public class AdminData implements IXmlReader
 					}
 					else if ("admin".equalsIgnoreCase(d.getNodeName()))
 					{
-						set = new StatsSet();
+						set = new StatSet();
 						attrs = d.getAttributes();
 						for (int i = 0; i < attrs.getLength(); i++)
 						{

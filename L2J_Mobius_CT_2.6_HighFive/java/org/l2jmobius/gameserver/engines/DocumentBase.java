@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.base.PlayerState;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.conditions.ConditionCategoryType;
@@ -168,7 +168,7 @@ public abstract class DocumentBase
 	
 	protected abstract void parseDocument(Document doc);
 	
-	protected abstract StatsSet getStatsSet();
+	protected abstract StatSet getStatSet();
 	
 	protected abstract String getTableValue(String name);
 	
@@ -292,14 +292,14 @@ public abstract class DocumentBase
 	protected void attachEffect(Node n, Object template, Condition attachCond, EffectScope effectScope)
 	{
 		final NamedNodeMap attrs = n.getAttributes();
-		final StatsSet set = new StatsSet();
+		final StatSet set = new StatSet();
 		for (int i = 0; i < attrs.getLength(); i++)
 		{
 			final Node att = attrs.item(i);
 			set.set(att.getNodeName(), getValue(att.getNodeValue(), template));
 		}
 		
-		final StatsSet parameters = parseParameters(n.getFirstChild(), template);
+		final StatSet parameters = parseParameters(n.getFirstChild(), template);
 		final Condition applayCond = parseCondition(n.getFirstChild(), template);
 		
 		if (template instanceof IIdentifiable)
@@ -337,9 +337,9 @@ public abstract class DocumentBase
 	 * @param template the effect template
 	 * @return the list of parameters if any, {@code null} otherwise
 	 */
-	private StatsSet parseParameters(Node n, Object template)
+	private StatSet parseParameters(Node n, Object template)
 	{
-		StatsSet parameters = null;
+		StatSet parameters = null;
 		while ((n != null))
 		{
 			// Parse all parameters.
@@ -347,7 +347,7 @@ public abstract class DocumentBase
 			{
 				if (parameters == null)
 				{
-					parameters = new StatsSet();
+					parameters = new StatSet();
 				}
 				final NamedNodeMap params = n.getAttributes();
 				for (int i = 0; i < params.getLength(); i++)
@@ -358,7 +358,7 @@ public abstract class DocumentBase
 			}
 			n = n.getNextSibling();
 		}
-		return parameters == null ? StatsSet.EMPTY_STATSET : parameters;
+		return parameters == null ? StatSet.EMPTY_STATSET : parameters;
 	}
 	
 	protected Condition parseCondition(Node n, Object template)
@@ -1257,7 +1257,7 @@ public abstract class DocumentBase
 		setTable(name, array.toArray(new String[array.size()]));
 	}
 	
-	protected void parseBeanSet(Node n, StatsSet set, Integer level)
+	protected void parseBeanSet(Node n, StatSet set, Integer level)
 	{
 		final String name = n.getAttributes().getNamedItem("name").getNodeValue().trim();
 		final String value = n.getAttributes().getNamedItem("val").getNodeValue().trim();
@@ -1272,7 +1272,7 @@ public abstract class DocumentBase
 		}
 	}
 	
-	protected void setExtractableSkillData(StatsSet set, String value)
+	protected void setExtractableSkillData(StatSet set, String value)
 	{
 		set.set("capsuled_items_skill", value);
 	}

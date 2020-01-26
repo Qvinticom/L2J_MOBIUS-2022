@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.conditions.ConditionUsingItemType;
@@ -36,7 +36,7 @@ public class StatBonusSpeed extends AbstractEffect
 	private final BaseStat _stat;
 	private final Condition _armorTypeCondition;
 	
-	public StatBonusSpeed(StatsSet params)
+	public StatBonusSpeed(StatSet params)
 	{
 		_stat = params.getEnum("stat", BaseStat.class, BaseStat.DEX);
 		

@@ -31,7 +31,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.enums.StatusUpdateType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.RecipeHolder;
@@ -61,7 +61,7 @@ public class RecipeData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		StatsSet set;
+		StatSet set;
 		Node att;
 		NamedNodeMap attrs;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
@@ -73,7 +73,7 @@ public class RecipeData implements IXmlReader
 					if ("recipe".equalsIgnoreCase(d.getNodeName()))
 					{
 						attrs = d.getAttributes();
-						set = new StatsSet();
+						set = new StatSet();
 						for (int i = 0; i < attrs.getLength(); i++)
 						{
 							att = attrs.item(i);

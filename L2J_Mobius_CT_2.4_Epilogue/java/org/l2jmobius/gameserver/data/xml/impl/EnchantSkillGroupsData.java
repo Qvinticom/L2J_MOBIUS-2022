@@ -30,7 +30,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.EnchantSkillGroup;
 import org.l2jmobius.gameserver.model.EnchantSkillGroup.EnchantSkillHolder;
 import org.l2jmobius.gameserver.model.EnchantSkillLearn;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
@@ -98,7 +98,7 @@ public class EnchantSkillGroupsData implements IXmlReader
 							if ("enchant".equalsIgnoreCase(b.getNodeName()))
 							{
 								attrs = b.getAttributes();
-								final StatsSet set = new StatsSet();
+								final StatSet set = new StatSet();
 								
 								for (int i = 0; i < attrs.getLength(); i++)
 								{

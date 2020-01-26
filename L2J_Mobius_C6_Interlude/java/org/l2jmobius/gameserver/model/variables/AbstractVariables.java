@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.variables;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.interfaces.IDeletable;
 import org.l2jmobius.gameserver.model.interfaces.IRestorable;
 import org.l2jmobius.gameserver.model.interfaces.IStorable;
@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.interfaces.IStorable;
 /**
  * @author UnAfraid
  */
-public abstract class AbstractVariables extends StatsSet implements IRestorable, IStorable, IDeletable
+public abstract class AbstractVariables extends StatSet implements IRestorable, IStorable, IDeletable
 {
 	private final AtomicBoolean _hasChanges = new AtomicBoolean(false);
 	
@@ -41,42 +41,42 @@ public abstract class AbstractVariables extends StatsSet implements IRestorable,
 	 */
 	
 	@Override
-	public StatsSet set(String name, boolean value)
+	public StatSet set(String name, boolean value)
 	{
 		_hasChanges.compareAndSet(false, true);
 		return super.set(name, value);
 	}
 	
 	@Override
-	public StatsSet set(String name, double value)
+	public StatSet set(String name, double value)
 	{
 		_hasChanges.compareAndSet(false, true);
 		return super.set(name, value);
 	}
 	
 	@Override
-	public StatsSet set(String name, Enum<?> value)
+	public StatSet set(String name, Enum<?> value)
 	{
 		_hasChanges.compareAndSet(false, true);
 		return super.set(name, value);
 	}
 	
 	@Override
-	public StatsSet set(String name, int value)
+	public StatSet set(String name, int value)
 	{
 		_hasChanges.compareAndSet(false, true);
 		return super.set(name, value);
 	}
 	
 	@Override
-	public StatsSet set(String name, long value)
+	public StatSet set(String name, long value)
 	{
 		_hasChanges.compareAndSet(false, true);
 		return super.set(name, value);
 	}
 	
 	@Override
-	public StatsSet set(String name, String value)
+	public StatSet set(String name, String value)
 	{
 		_hasChanges.compareAndSet(false, true);
 		return super.set(name, value);

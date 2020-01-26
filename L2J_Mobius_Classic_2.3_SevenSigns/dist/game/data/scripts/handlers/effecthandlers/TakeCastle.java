@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.CastleSide;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.entity.Castle;
@@ -33,7 +33,7 @@ public class TakeCastle extends AbstractEffect
 {
 	private final CastleSide _side;
 	
-	public TakeCastle(StatsSet params)
+	public TakeCastle(StatSet params)
 	{
 		_side = params.getEnum("side", CastleSide.class);
 	}

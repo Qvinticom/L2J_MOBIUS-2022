@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
  */
 public class TransferDamageToSummon extends AbstractStatAddEffect
 {
-	public TransferDamageToSummon(StatsSet params)
+	public TransferDamageToSummon(StatSet params)
 	{
 		super(params, Stat.TRANSFER_DAMAGE_SUMMON_PERCENT);
 	}

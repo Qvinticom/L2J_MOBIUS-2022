@@ -25,7 +25,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -62,7 +62,7 @@ public class CHSiegeManager
 			{
 				final int id = rs.getInt("clanHallId");
 				
-				final StatsSet set = new StatsSet();
+				final StatSet set = new StatSet();
 				
 				set.set("id", id);
 				set.set("name", rs.getString("name"));

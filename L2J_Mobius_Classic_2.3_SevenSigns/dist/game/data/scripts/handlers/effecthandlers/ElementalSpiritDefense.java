@@ -17,14 +17,14 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.ElementalType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * @author JoeAlisson
  */
 public class ElementalSpiritDefense extends AbstractStatEffect
 {
-	public ElementalSpiritDefense(StatsSet params)
+	public ElementalSpiritDefense(StatSet params)
 	{
 		super(params, params.getEnum("type", ElementalType.class).getDefenseStat());
 	}

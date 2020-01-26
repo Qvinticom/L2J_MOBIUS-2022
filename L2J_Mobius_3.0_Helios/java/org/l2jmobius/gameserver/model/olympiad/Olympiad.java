@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Hero;
@@ -61,7 +61,7 @@ public class Olympiad extends ListenersContainer
 	protected static final Logger LOGGER = Logger.getLogger(Olympiad.class.getName());
 	protected static final Logger LOGGER_OLYMPIAD = Logger.getLogger("olympiad");
 	
-	private static final Map<Integer, StatsSet> NOBLES = new ConcurrentHashMap<>();
+	private static final Map<Integer, StatSet> NOBLES = new ConcurrentHashMap<>();
 	private static final Map<Integer, Integer> NOBLES_RANK = new HashMap<>();
 	
 	public static final String OLYMPIAD_HTML_PATH = "data/html/olympiad/";
@@ -229,10 +229,10 @@ public class Olympiad extends ListenersContainer
 			PreparedStatement statement = con.prepareStatement(OLYMPIAD_LOAD_NOBLES);
 			ResultSet rset = statement.executeQuery())
 		{
-			StatsSet statData;
+			StatSet statData;
 			while (rset.next())
 			{
-				statData = new StatsSet();
+				statData = new StatSet();
 				statData.set(CLASS_ID, rset.getInt(CLASS_ID));
 				statData.set(CHAR_NAME, rset.getString(CHAR_NAME));
 				statData.set(POINTS, rset.getInt(POINTS));
@@ -461,7 +461,7 @@ public class Olympiad extends ListenersContainer
 			saveNobleData();
 			
 			_period = 1;
-			final List<StatsSet> heroesToBe = sortHerosToBe();
+			final List<StatSet> heroesToBe = sortHerosToBe();
 			Hero.getInstance().resetData();
 			Hero.getInstance().computeNewHeroes(heroesToBe);
 			
@@ -495,7 +495,7 @@ public class Olympiad extends ListenersContainer
 		return NOBLES.size();
 	}
 	
-	public static StatsSet getNobleStats(int playerId)
+	public static StatSet getNobleStats(int playerId)
 	{
 		return NOBLES.get(playerId);
 	}
@@ -814,7 +814,7 @@ public class Olympiad extends ListenersContainer
 		}
 		
 		int currentPoints;
-		for (StatsSet nobleInfo : NOBLES.values())
+		for (StatSet nobleInfo : NOBLES.values())
 		{
 			currentPoints = nobleInfo.getInt(POINTS);
 			currentPoints += WEEKLY_POINTS;
@@ -832,7 +832,7 @@ public class Olympiad extends ListenersContainer
 			return;
 		}
 		
-		for (StatsSet nobleInfo : NOBLES.values())
+		for (StatSet nobleInfo : NOBLES.values())
 		{
 			nobleInfo.set(COMP_DONE_WEEK, 0);
 			nobleInfo.set(COMP_DONE_WEEK_CLASSED, 0);
@@ -868,9 +868,9 @@ public class Olympiad extends ListenersContainer
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			for (Entry<Integer, StatsSet> entry : NOBLES.entrySet())
+			for (Entry<Integer, StatSet> entry : NOBLES.entrySet())
 			{
-				final StatsSet nobleInfo = entry.getValue();
+				final StatSet nobleInfo = entry.getValue();
 				
 				if (nobleInfo == null)
 				{
@@ -992,7 +992,7 @@ public class Olympiad extends ListenersContainer
 		}
 	}
 	
-	protected List<StatsSet> sortHerosToBe()
+	protected List<StatSet> sortHerosToBe()
 	{
 		if (_period != 1)
 		{
@@ -1000,8 +1000,8 @@ public class Olympiad extends ListenersContainer
 		}
 		
 		LOGGER_OLYMPIAD.info("Noble,charid,classid,compDone,points");
-		StatsSet nobleInfo;
-		for (Entry<Integer, StatsSet> entry : NOBLES.entrySet())
+		StatSet nobleInfo;
+		for (Entry<Integer, StatSet> entry : NOBLES.entrySet())
 		{
 			nobleInfo = entry.getValue();
 			if (nobleInfo == null)
@@ -1018,12 +1018,12 @@ public class Olympiad extends ListenersContainer
 			LOGGER_OLYMPIAD.info(charName + "," + charId + "," + classId + "," + compDone + "," + points);
 		}
 		
-		final List<StatsSet> heroesToBe = new LinkedList<>();
+		final List<StatSet> heroesToBe = new LinkedList<>();
 		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(OLYMPIAD_GET_HEROS))
 		{
-			StatsSet hero;
+			StatSet hero;
 			for (int element : HERO_IDS)
 			{
 				statement.setInt(1, element);
@@ -1032,7 +1032,7 @@ public class Olympiad extends ListenersContainer
 				{
 					if (rset.next())
 					{
-						hero = new StatsSet();
+						hero = new StatSet();
 						hero.set(CLASS_ID, element);
 						hero.set(CHAR_ID, rset.getInt(CHAR_ID));
 						hero.set(CHAR_NAME, rset.getString(CHAR_NAME));
@@ -1086,7 +1086,7 @@ public class Olympiad extends ListenersContainer
 			return 0;
 		}
 		
-		final StatsSet noble = NOBLES.get(objectId);
+		final StatSet noble = NOBLES.get(objectId);
 		if ((noble == null) || (noble.getInt(POINTS) == 0))
 		{
 			return 0;
@@ -1136,7 +1136,7 @@ public class Olympiad extends ListenersContainer
 	{
 		if (!NOBLES.containsKey(player.getObjectId()))
 		{
-			final StatsSet statDat = new StatsSet();
+			final StatSet statDat = new StatSet();
 			statDat.set(CLASS_ID, player.getBaseClass());
 			statDat.set(CHAR_NAME, player.getName());
 			statDat.set(POINTS, DEFAULT_POINTS);
@@ -1318,7 +1318,7 @@ public class Olympiad extends ListenersContainer
 	 * @param data the stats set data to add.
 	 * @return the old stats set if the noble is already present, null otherwise.
 	 */
-	public static StatsSet addNobleStats(int charId, StatsSet data)
+	public static StatSet addNobleStats(int charId, StatSet data)
 	{
 		return NOBLES.put(charId, data);
 	}

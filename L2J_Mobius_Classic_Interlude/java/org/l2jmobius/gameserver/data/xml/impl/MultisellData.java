@@ -35,7 +35,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.file.filter.NumericNameFilter;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.SpecialItemType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
@@ -91,7 +91,7 @@ public class MultisellData implements IXmlReader
 		{
 			forEach(doc, "list", listNode ->
 			{
-				final StatsSet set = new StatsSet(parseAttributes(listNode));
+				final StatSet set = new StatSet(parseAttributes(listNode));
 				final int listId = Integer.parseInt(f.getName().substring(0, f.getName().length() - 4));
 				final List<MultisellEntryHolder> entries = new ArrayList<>(listNode.getChildNodes().getLength());
 				

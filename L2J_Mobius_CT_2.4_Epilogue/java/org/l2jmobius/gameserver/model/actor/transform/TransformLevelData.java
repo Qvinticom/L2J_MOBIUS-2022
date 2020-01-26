@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.actor.transform;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
@@ -31,7 +31,7 @@ public class TransformLevelData
 	private final double _levelMod;
 	private Map<Integer, Double> _stats;
 	
-	public TransformLevelData(StatsSet set)
+	public TransformLevelData(StatSet set)
 	{
 		_level = set.getInt("val");
 		_levelMod = set.getDouble("levelMod");

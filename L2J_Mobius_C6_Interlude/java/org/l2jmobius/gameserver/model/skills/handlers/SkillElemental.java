@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.skills.handlers;
 
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.Formulas;
@@ -30,7 +30,7 @@ public class SkillElemental extends Skill
 	private final int[] _seeds;
 	private final boolean _seedAny;
 	
-	public SkillElemental(StatsSet set)
+	public SkillElemental(StatSet set)
 	{
 		super(set);
 		

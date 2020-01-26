@@ -17,7 +17,7 @@
 package handlers.skillconditionhandlers;
 
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
@@ -30,7 +30,7 @@ public class TargetRaceSkillCondition implements ISkillCondition
 {
 	private final Race _race;
 	
-	public TargetRaceSkillCondition(StatsSet params)
+	public TargetRaceSkillCondition(StatSet params)
 	{
 		_race = params.getEnum("race", Race.class);
 	}

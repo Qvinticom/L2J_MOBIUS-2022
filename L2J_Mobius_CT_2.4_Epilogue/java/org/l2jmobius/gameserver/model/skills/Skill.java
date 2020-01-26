@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import org.l2jmobius.gameserver.model.ExtractableProductItem;
 import org.l2jmobius.gameserver.model.ExtractableSkill;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.BlockInstance;
@@ -215,7 +215,7 @@ public class Skill implements IIdentifiable
 	
 	private final boolean _isPvPOnly;
 	
-	public Skill(StatsSet set)
+	public Skill(StatSet set)
 	{
 		_id = set.getInt("skill_id");
 		_level = set.getInt("level");

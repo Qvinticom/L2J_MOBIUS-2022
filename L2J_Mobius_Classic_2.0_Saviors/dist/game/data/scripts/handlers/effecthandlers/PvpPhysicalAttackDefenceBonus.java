@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
  */
 public class PvpPhysicalAttackDefenceBonus extends AbstractStatPercentEffect
 {
-	public PvpPhysicalAttackDefenceBonus(StatsSet params)
+	public PvpPhysicalAttackDefenceBonus(StatSet params)
 	{
 		super(params, Stat.PVP_PHYSICAL_ATTACK_DEFENCE);
 	}

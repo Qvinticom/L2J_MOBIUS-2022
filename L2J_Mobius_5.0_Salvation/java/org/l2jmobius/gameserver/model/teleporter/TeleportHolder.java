@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.SpecialItemType;
 import org.l2jmobius.gameserver.enums.TeleportType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
@@ -91,7 +91,7 @@ public class TeleportHolder
 	 * Create new teleport location in this holder.
 	 * @param locData information about teleport location
 	 */
-	public void registerLocation(StatsSet locData)
+	public void registerLocation(StatSet locData)
 	{
 		_teleportData.add(new TeleportLocation(_teleportData.size(), locData));
 	}

@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -37,7 +37,7 @@ public class TriggerSkillByKill extends AbstractEffect
 	private final int _chance;
 	private final SkillHolder _skill;
 	
-	public TriggerSkillByKill(StatsSet params)
+	public TriggerSkillByKill(StatSet params)
 	{
 		_chance = params.getInt("chance", 100);
 		_skill = new SkillHolder(params.getInt("skillId", 0), params.getInt("skillLevel", 0));

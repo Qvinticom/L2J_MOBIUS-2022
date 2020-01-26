@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.Weapon;
@@ -123,7 +123,7 @@ public abstract class DocumentBase
 	
 	protected abstract void parseDocument(Document doc);
 	
-	protected abstract StatsSet getStatsSet();
+	protected abstract StatSet getStatSet();
 	
 	protected abstract String getTableValue(String name);
 	
@@ -873,7 +873,7 @@ public abstract class DocumentBase
 		setTable(name, res);
 	}
 	
-	protected void parseBeanSet(Node n, StatsSet set, Integer level)
+	protected void parseBeanSet(Node n, StatSet set, Integer level)
 	{
 		final String name = n.getAttributes().getNamedItem("name").getNodeValue().trim();
 		final String value = n.getAttributes().getNamedItem("val").getNodeValue().trim();
@@ -921,7 +921,7 @@ public abstract class DocumentBase
 				}
 				
 				// try to find value out of item fields
-				final StatsSet set = getStatsSet();
+				final StatSet set = getStatSet();
 				final String field = set.getString(val.substring(1));
 				if (field != null)
 				{

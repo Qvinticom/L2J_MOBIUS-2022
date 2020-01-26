@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
@@ -40,7 +40,7 @@ public class SoulEating extends AbstractEffect
 	private final int _expNeeded;
 	private final int _maxSouls;
 	
-	public SoulEating(StatsSet params)
+	public SoulEating(StatSet params)
 	{
 		_expNeeded = params.getInt("expNeeded");
 		_maxSouls = params.getInt("maxSouls");

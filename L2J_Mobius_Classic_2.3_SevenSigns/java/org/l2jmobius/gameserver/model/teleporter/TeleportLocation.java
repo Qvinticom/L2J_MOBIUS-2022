@@ -21,7 +21,7 @@ import java.util.Collections;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
@@ -38,7 +38,7 @@ public class TeleportLocation extends Location
 	private final long _feeCount;
 	private final List<Integer> _castleId;
 	
-	public TeleportLocation(int id, StatsSet set)
+	public TeleportLocation(int id, StatSet set)
 	{
 		super(set);
 		_id = id;

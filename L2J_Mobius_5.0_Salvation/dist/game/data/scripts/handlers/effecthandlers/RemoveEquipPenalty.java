@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -32,7 +32,7 @@ public class RemoveEquipPenalty extends AbstractEffect
 {
 	private final CrystalType _grade;
 	
-	public RemoveEquipPenalty(StatsSet params)
+	public RemoveEquipPenalty(StatSet params)
 	{
 		_grade = params.getEnum("grade", CrystalType.class);
 	}

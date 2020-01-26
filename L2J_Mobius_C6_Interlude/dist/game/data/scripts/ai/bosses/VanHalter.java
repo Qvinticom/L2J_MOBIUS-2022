@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -1277,13 +1277,13 @@ public class VanHalter extends Quest
 		if (status != INTERVAL)
 		{
 			final long interval = Rnd.get(Config.HPH_FIXINTERVALOFHALTER, Config.HPH_FIXINTERVALOFHALTER + Config.HPH_RANDOMINTERVALOFHALTER)/* * 3600000 */;
-			final StatsSet info = GrandBossManager.getInstance().getStatsSet(29062);
+			final StatSet info = GrandBossManager.getInstance().getStatSet(29062);
 			info.set("respawn_time", (System.currentTimeMillis() + interval));
-			GrandBossManager.getInstance().setStatsSet(29062, info);
+			GrandBossManager.getInstance().setStatSet(29062, info);
 			GrandBossManager.getInstance().setBossStatus(29062, INTERVAL);
 		}
 		
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(29062);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(29062);
 		final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
 		_intervalTask = ThreadPool.schedule(new Interval(), temp);
 	}

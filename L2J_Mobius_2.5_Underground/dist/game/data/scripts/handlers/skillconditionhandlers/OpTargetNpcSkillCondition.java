@@ -18,7 +18,7 @@ package handlers.skillconditionhandlers;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
@@ -31,7 +31,7 @@ public class OpTargetNpcSkillCondition implements ISkillCondition
 {
 	private final List<Integer> _npcId;
 	
-	public OpTargetNpcSkillCondition(StatsSet params)
+	public OpTargetNpcSkillCondition(StatSet params)
 	{
 		_npcId = params.getList("npcIds", Integer.class);
 	}

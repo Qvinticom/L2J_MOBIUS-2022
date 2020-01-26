@@ -1089,7 +1089,7 @@ public class VillageMasterInstance extends FolkInstance
 	 */
 	private final Race getVillageMasterRace()
 	{
-		final String npcClass = getTemplate().getStatsSet().getString("jClass").toLowerCase();
+		final String npcClass = getTemplate().getStatSet().getString("jClass").toLowerCase();
 		
 		if (npcClass.contains("human"))
 		{
@@ -1120,7 +1120,7 @@ public class VillageMasterInstance extends FolkInstance
 	 */
 	private final ClassType getVillageMasterTeachType()
 	{
-		final String npcClass = getTemplate().getStatsSet().getString("jClass");
+		final String npcClass = getTemplate().getStatSet().getString("jClass");
 		
 		if (npcClass.contains("sanctuary") || npcClass.contains("clergyman"))
 		{

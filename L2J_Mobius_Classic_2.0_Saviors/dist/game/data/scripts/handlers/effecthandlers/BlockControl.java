@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.effects.EffectType;
  */
 public class BlockControl extends AbstractEffect
 {
-	public BlockControl(StatsSet params)
+	public BlockControl(StatSet params)
 	{
 	}
 	

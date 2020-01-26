@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -105,13 +105,13 @@ public class TeredorWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final StatsSet npcVars = npc.getVariables();
-			final StatsSet npcParams = npc.getParameters();
+			final StatSet npcVars = npc.getVariables();
+			final StatSet npcParams = npc.getParameters();
 			
 			switch (event)
 			{
@@ -236,7 +236,7 @@ public class TeredorWarzone extends AbstractInstance
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final StatsSet npcParams = npc.getParameters();
+			final StatSet npcParams = npc.getParameters();
 			
 			switch (npc.getId())
 			{
@@ -292,7 +292,7 @@ public class TeredorWarzone extends AbstractInstance
 		
 		if (isInInstance(instance))
 		{
-			final StatsSet npcParams = npc.getParameters();
+			final StatSet npcParams = npc.getParameters();
 			
 			switch (npc.getId())
 			{
@@ -472,7 +472,7 @@ public class TeredorWarzone extends AbstractInstance
 			{
 				case TEREDOR:
 				{
-					final StatsSet npcVars = npc.getVariables();
+					final StatSet npcVars = npc.getVariables();
 					final int hpPer = npc.getCurrentHpPercent();
 					int teredorStatus = npcVars.getInt("TEREDOR_STATUS", 1);
 					

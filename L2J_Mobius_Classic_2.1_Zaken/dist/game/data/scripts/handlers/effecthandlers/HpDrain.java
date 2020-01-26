@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.ShotType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -34,7 +34,7 @@ public class HpDrain extends AbstractEffect
 	private final double _power;
 	private final double _percentage;
 	
-	public HpDrain(StatsSet params)
+	public HpDrain(StatSet params)
 	{
 		_power = params.getDouble("power", 0);
 		_percentage = params.getDouble("percentage", 0);

@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
@@ -43,7 +43,7 @@ public class SummonCubic extends AbstractEffect
 	/** Cubic activation chance. */
 	private final int _cubicSkillChance;
 	
-	public SummonCubic(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public SummonCubic(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

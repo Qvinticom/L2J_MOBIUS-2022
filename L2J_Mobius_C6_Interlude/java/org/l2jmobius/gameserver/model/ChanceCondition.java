@@ -89,7 +89,7 @@ public class ChanceCondition
 		_chance = chance;
 	}
 	
-	public static ChanceCondition parse(StatsSet set)
+	public static ChanceCondition parse(StatSet set)
 	{
 		try
 		{

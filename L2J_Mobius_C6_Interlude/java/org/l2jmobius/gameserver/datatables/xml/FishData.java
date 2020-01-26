@@ -28,7 +28,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.Fish;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * This class loads and stores {@link Fish} infos.
@@ -52,8 +52,8 @@ public class FishData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		// StatsSet used to feed informations. Cleaned on every entry.
-		final StatsSet set = new StatsSet();
+		// StatSet used to feed informations. Cleaned on every entry.
+		final StatSet set = new StatSet();
 		
 		// First element is never read.
 		final Node n = doc.getFirstChild();

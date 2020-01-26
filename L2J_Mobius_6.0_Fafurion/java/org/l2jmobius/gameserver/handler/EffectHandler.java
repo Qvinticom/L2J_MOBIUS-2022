@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
 
@@ -29,14 +29,14 @@ import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
  */
 public class EffectHandler
 {
-	private final Map<String, Function<StatsSet, AbstractEffect>> _effectHandlerFactories = new HashMap<>();
+	private final Map<String, Function<StatSet, AbstractEffect>> _effectHandlerFactories = new HashMap<>();
 	
-	public void registerHandler(String name, Function<StatsSet, AbstractEffect> handlerFactory)
+	public void registerHandler(String name, Function<StatSet, AbstractEffect> handlerFactory)
 	{
 		_effectHandlerFactories.put(name, handlerFactory);
 	}
 	
-	public Function<StatsSet, AbstractEffect> getHandlerFactory(String name)
+	public Function<StatSet, AbstractEffect> getHandlerFactory(String name)
 	{
 		return _effectHandlerFactories.get(name);
 	}

@@ -26,7 +26,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
@@ -99,7 +99,7 @@ public class Core extends Quest
 		}
 		
 		_firstAttacked = false;
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(CORE);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(CORE);
 		if (GrandBossManager.getInstance().getBossStatus(CORE) == DEAD)
 		{
 			// Load the unlock date and time for Core from DB.
@@ -239,9 +239,9 @@ public class Core extends Quest
 				final long respawnTime = (Config.CORE_RESP_FIRST + Rnd.get(Config.CORE_RESP_SECOND)) * 3600000;
 				startQuestTimer("core_unlock", respawnTime, null, null);
 				// Also save the respawn time so that the info is maintained past reboots.
-				final StatsSet info = GrandBossManager.getInstance().getStatsSet(CORE);
+				final StatSet info = GrandBossManager.getInstance().getStatSet(CORE);
 				info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-				GrandBossManager.getInstance().setStatsSet(CORE, info);
+				GrandBossManager.getInstance().setStatSet(CORE, info);
 				startQuestTimer("despawn_minions", 20000, null, null);
 				cancelQuestTimers("spawn_minion");
 			}

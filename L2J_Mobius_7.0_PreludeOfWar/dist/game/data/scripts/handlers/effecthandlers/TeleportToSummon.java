@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -39,7 +39,7 @@ public class TeleportToSummon extends AbstractEffect
 {
 	private final double _maxDistance;
 	
-	public TeleportToSummon(StatsSet params)
+	public TeleportToSummon(StatSet params)
 	{
 		_maxDistance = params.getDouble("distance", -1);
 	}

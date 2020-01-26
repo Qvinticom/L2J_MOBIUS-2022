@@ -1622,7 +1622,7 @@ public class Siege
 			
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(_sp.getNpcId());
 			
-			template.getStatsSet().set("baseHpMax", _sp.getHp());
+			template.getStatSet().set("baseHpMax", _sp.getHp());
 			
 			ct = new ControlTowerInstance(IdFactory.getInstance().getNextId(), template);
 			

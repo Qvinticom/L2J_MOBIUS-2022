@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.model.AggroInfo;
 import org.l2jmobius.gameserver.model.DamageDoneInfo;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -153,13 +153,13 @@ public class IstinaCavern extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final StatsSet npcParams = npc.getParameters();
-			final StatsSet npcVars = npc.getVariables();
+			final StatSet npcParams = npc.getParameters();
+			final StatSet npcVars = npc.getVariables();
 			switch (event)
 			{
 				case "DEATH_TIMER":
@@ -391,7 +391,7 @@ public class IstinaCavern extends AbstractInstance
 			}
 			else
 			{
-				final StatsSet npcParams = npc.getParameters();
+				final StatSet npcParams = npc.getParameters();
 				
 				if (skillId == npcParams.getSkillHolder("Istina_Death_Skill01").getSkillId())
 				{
@@ -440,7 +440,7 @@ public class IstinaCavern extends AbstractInstance
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final StatsSet npcVars = npc.getVariables();
+			final StatSet npcVars = npc.getVariables();
 			final int stage = npcVars.getInt("ISTINA_STAGE", -1);
 			
 			if (npc.getId() == BALLISTA)
@@ -657,7 +657,7 @@ public class IstinaCavern extends AbstractInstance
 	private PlayerInstance setPlayerRewardInfo(Npc npc)
 	{
 		final Map<PlayerInstance, DamageDoneInfo> rewards = new ConcurrentHashMap<>();
-		final StatsSet npcVars = npc.getVariables();
+		final StatSet npcVars = npc.getVariables();
 		PlayerInstance maxDealer = null;
 		long maxDamage = 0;
 		int totalDamage = 0;

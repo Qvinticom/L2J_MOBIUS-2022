@@ -16,7 +16,7 @@
  */
 package ai.others.NpcBuffers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.AffectObject;
@@ -33,7 +33,7 @@ public class NpcBufferSkillData
 	private final AffectScope _affectScope;
 	private final AffectObject _affectObject;
 	
-	public NpcBufferSkillData(StatsSet set)
+	public NpcBufferSkillData(StatSet set)
 	{
 		_skill = new SkillHolder(set.getInt("id"), set.getInt("level"));
 		_initialDelay = set.getInt("skillInitDelay", 0) * 1000;

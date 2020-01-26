@@ -16,7 +16,7 @@
  */
 package handlers.conditions;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.ICondition;
@@ -29,7 +29,7 @@ public class NpcLevelCondition implements ICondition
 	private final int _minLevel;
 	private final int _maxLevel;
 	
-	public NpcLevelCondition(StatsSet params)
+	public NpcLevelCondition(StatSet params)
 	{
 		_minLevel = params.getInt("minLevel");
 		_maxLevel = params.getInt("maxLevel");

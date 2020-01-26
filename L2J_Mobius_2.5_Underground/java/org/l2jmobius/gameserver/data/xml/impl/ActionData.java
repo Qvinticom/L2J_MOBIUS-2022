@@ -25,7 +25,7 @@ import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * @author UnAfraid
@@ -57,7 +57,7 @@ public class ActionData implements IXmlReader
 	{
 		forEach(doc, "list", listNode -> forEach(listNode, "action", actionNode ->
 		{
-			final ActionDataHolder holder = new ActionDataHolder(new StatsSet(parseAttributes(actionNode)));
+			final ActionDataHolder holder = new ActionDataHolder(new StatSet(parseAttributes(actionNode)));
 			_actionData.put(holder.getId(), holder);
 		}));
 	}

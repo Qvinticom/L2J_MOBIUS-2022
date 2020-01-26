@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -31,7 +31,7 @@ public class VitalityPointUp extends AbstractEffect
 {
 	private final int _value;
 	
-	public VitalityPointUp(StatsSet params)
+	public VitalityPointUp(StatSet params)
 	{
 		_value = params.getInt("value", 0);
 	}

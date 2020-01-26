@@ -27,7 +27,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.items.Henna;
 
@@ -82,7 +82,7 @@ public class HennaData implements IXmlReader
 	 */
 	private void parseHenna(Node d)
 	{
-		final StatsSet set = new StatsSet();
+		final StatSet set = new StatSet();
 		final List<ClassId> wearClassIds = new ArrayList<>();
 		NamedNodeMap attrs = d.getAttributes();
 		Node attr;

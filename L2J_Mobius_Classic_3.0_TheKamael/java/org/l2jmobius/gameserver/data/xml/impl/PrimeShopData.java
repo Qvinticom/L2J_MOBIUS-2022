@@ -29,7 +29,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.datatables.ItemTable;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
@@ -83,7 +83,7 @@ public class PrimeShopData implements IXmlReader
 						{
 							NamedNodeMap attrs = d.getAttributes();
 							Node att;
-							final StatsSet set = new StatsSet();
+							final StatSet set = new StatSet();
 							for (int i = 0; i < attrs.getLength(); i++)
 							{
 								att = attrs.item(i);

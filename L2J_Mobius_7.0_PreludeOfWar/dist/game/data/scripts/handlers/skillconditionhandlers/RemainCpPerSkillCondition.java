@@ -17,7 +17,7 @@
 package handlers.skillconditionhandlers;
 
 import org.l2jmobius.gameserver.enums.SkillConditionPercentType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
@@ -31,7 +31,7 @@ public class RemainCpPerSkillCondition implements ISkillCondition
 	private final int _amount;
 	private final SkillConditionPercentType _percentType;
 	
-	public RemainCpPerSkillCondition(StatsSet params)
+	public RemainCpPerSkillCondition(StatSet params)
 	{
 		_amount = params.getInt("amount");
 		_percentType = params.getEnum("percentType", SkillConditionPercentType.class);

@@ -20,7 +20,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -37,7 +37,7 @@ public class DispelBySlotProbability extends AbstractEffect
 	private final Set<AbnormalType> _dispelAbnormals;
 	private final int _rate;
 	
-	public DispelBySlotProbability(StatsSet params)
+	public DispelBySlotProbability(StatSet params)
 	{
 		final String[] dispelEffects = params.getString("dispel").split(";");
 		_rate = params.getInt("rate", 100);

@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.enums.StatModifierType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerIsInCombat;
@@ -42,12 +42,12 @@ public abstract class AbstractStatEffect extends AbstractEffect
 	protected final StatModifierType _mode;
 	protected final List<Condition> _conditions = new ArrayList<>();
 	
-	public AbstractStatEffect(StatsSet params, Stat stat)
+	public AbstractStatEffect(StatSet params, Stat stat)
 	{
 		this(params, stat, stat);
 	}
 	
-	public AbstractStatEffect(StatsSet params, Stat mulStat, Stat addStat)
+	public AbstractStatEffect(StatSet params, Stat mulStat, Stat addStat)
 	{
 		_addStat = addStat;
 		_mulStat = mulStat;

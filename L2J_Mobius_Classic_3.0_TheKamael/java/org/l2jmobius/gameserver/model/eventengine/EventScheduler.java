@@ -28,7 +28,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.util.cron4j.PastPredictor;
 import org.l2jmobius.gameserver.util.cron4j.Predictor;
 
@@ -45,7 +45,7 @@ public class EventScheduler
 	private List<EventMethodNotification> _notifications;
 	private ScheduledFuture<?> _task;
 	
-	public EventScheduler(AbstractEventManager<?> manager, StatsSet set)
+	public EventScheduler(AbstractEventManager<?> manager, StatSet set)
 	{
 		_eventManager = manager;
 		_name = set.getString("name", "");

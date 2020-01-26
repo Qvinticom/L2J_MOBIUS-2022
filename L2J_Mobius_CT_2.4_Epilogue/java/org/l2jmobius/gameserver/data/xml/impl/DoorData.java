@@ -33,7 +33,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
 
@@ -45,7 +45,7 @@ public class DoorData implements IXmlReader
 {
 	private static final Map<String, Set<Integer>> _groups = new HashMap<>();
 	private final Map<Integer, DoorInstance> _doors = new HashMap<>();
-	private final Map<Integer, StatsSet> _templates = new HashMap<>();
+	private final Map<Integer, StatSet> _templates = new HashMap<>();
 	private final Map<Integer, List<DoorInstance>> _regions = new HashMap<>();
 	
 	protected DoorData()
@@ -74,7 +74,7 @@ public class DoorData implements IXmlReader
 					if ("door".equalsIgnoreCase(b.getNodeName()))
 					{
 						final NamedNodeMap attrs = b.getAttributes();
-						final StatsSet set = new StatsSet();
+						final StatSet set = new StatSet();
 						set.set("baseHpMax", 1); // Avoid doors without HP value created dead due to default value 0 in CreatureTemplate
 						for (int i = 0; i < attrs.getLength(); i++)
 						{
@@ -91,7 +91,7 @@ public class DoorData implements IXmlReader
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _doors.size() + " door templates for " + _regions.size() + " regions.");
 	}
 	
-	public void insertCollisionData(StatsSet set)
+	public void insertCollisionData(StatSet set)
 	{
 		int posX;
 		int posY;
@@ -118,7 +118,7 @@ public class DoorData implements IXmlReader
 	/**
 	 * @param set
 	 */
-	private void makeDoor(StatsSet set)
+	private void makeDoor(StatSet set)
 	{
 		insertCollisionData(set);
 		final DoorTemplate template = new DoorTemplate(set);
@@ -128,7 +128,7 @@ public class DoorData implements IXmlReader
 		putDoor(door, MapRegionManager.getInstance().getMapRegionLocId(door));
 	}
 	
-	public StatsSet getDoorTemplate(int doorId)
+	public StatSet getDoorTemplate(int doorId)
 	{
 		return _templates.get(doorId);
 	}

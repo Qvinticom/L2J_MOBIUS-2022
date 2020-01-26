@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -74,13 +74,13 @@ public class Hero
 	// delete hero items
 	private static final String DELETE_ITEMS = "DELETE FROM items WHERE item_id IN (30392, 30393, 30394, 30395, 30396, 30397, 30398, 30399, 30400, 30401, 30402, 30403, 30404, 30405, 30372, 30373, 6842, 6611, 6612, 6613, 6614, 6615, 6616, 6617, 6618, 6619, 6620, 6621, 9388, 9389, 9390) AND owner_id NOT IN (SELECT charId FROM characters WHERE accesslevel > 0)";
 	
-	private static final Map<Integer, StatsSet> HEROES = new ConcurrentHashMap<>();
-	private static final Map<Integer, StatsSet> COMPLETE_HEROS = new ConcurrentHashMap<>();
+	private static final Map<Integer, StatSet> HEROES = new ConcurrentHashMap<>();
+	private static final Map<Integer, StatSet> COMPLETE_HEROS = new ConcurrentHashMap<>();
 	
-	private static final Map<Integer, StatsSet> HERO_COUNTS = new ConcurrentHashMap<>();
-	private static final Map<Integer, List<StatsSet>> HERO_FIGHTS = new ConcurrentHashMap<>();
+	private static final Map<Integer, StatSet> HERO_COUNTS = new ConcurrentHashMap<>();
+	private static final Map<Integer, List<StatSet>> HERO_FIGHTS = new ConcurrentHashMap<>();
 	
-	private static final Map<Integer, List<StatsSet>> HERO_DIARY = new ConcurrentHashMap<>();
+	private static final Map<Integer, List<StatSet>> HERO_DIARY = new ConcurrentHashMap<>();
 	private static final Map<Integer, String> HERO_MESSAGE = new ConcurrentHashMap<>();
 	
 	public static final String COUNT = "count";
@@ -119,7 +119,7 @@ public class Hero
 		{
 			while (rset.next())
 			{
-				final StatsSet hero = new StatsSet();
+				final StatSet hero = new StatSet();
 				final int charId = rset.getInt(Olympiad.CHAR_ID);
 				hero.set(Olympiad.CHAR_NAME, rset.getString(Olympiad.CHAR_NAME));
 				hero.set(Olympiad.CLASS_ID, rset.getInt(Olympiad.CLASS_ID));
@@ -139,7 +139,7 @@ public class Hero
 			
 			while (rset2.next())
 			{
-				final StatsSet hero = new StatsSet();
+				final StatSet hero = new StatSet();
 				final int charId = rset2.getInt(Olympiad.CHAR_ID);
 				hero.set(Olympiad.CHAR_NAME, rset2.getString(Olympiad.CHAR_NAME));
 				hero.set(Olympiad.CLASS_ID, rset2.getInt(Olympiad.CLASS_ID));
@@ -162,7 +162,7 @@ public class Hero
 		LOGGER.info("Hero System: Loaded " + COMPLETE_HEROS.size() + " all time Heroes.");
 	}
 	
-	private void processHeros(PreparedStatement ps, int charId, StatsSet hero) throws SQLException
+	private void processHeros(PreparedStatement ps, int charId, StatSet hero) throws SQLException
 	{
 		ps.setInt(1, charId);
 		try (ResultSet rs = ps.executeQuery())
@@ -227,7 +227,7 @@ public class Hero
 	
 	public void loadDiary(int charId)
 	{
-		final List<StatsSet> diary = new ArrayList<>();
+		final List<StatSet> diary = new ArrayList<>();
 		int diaryentries = 0;
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM  heroes_diary WHERE charId=? ORDER BY time ASC"))
@@ -237,7 +237,7 @@ public class Hero
 			{
 				while (rset.next())
 				{
-					final StatsSet diaryEntry = new StatsSet();
+					final StatSet diaryEntry = new StatSet();
 					
 					final long time = rset.getLong("time");
 					final int action = rset.getInt("action");
@@ -282,8 +282,8 @@ public class Hero
 	
 	public void loadFights(int charId)
 	{
-		final List<StatsSet> fights = new ArrayList<>();
-		final StatsSet heroCountData = new StatsSet();
+		final List<StatSet> fights = new ArrayList<>();
+		final StatSet heroCountData = new StatSet();
 		final Calendar data = Calendar.getInstance();
 		data.set(Calendar.DAY_OF_MONTH, 1);
 		data.set(Calendar.HOUR_OF_DAY, 0);
@@ -329,7 +329,7 @@ public class Hero
 						final String cls = ClassListData.getInstance().getClass(charTwoClass).getClientCode();
 						if ((name != null) && (cls != null))
 						{
-							final StatsSet fight = new StatsSet();
+							final StatSet fight = new StatSet();
 							fight.set("oponent", name);
 							fight.set("oponentclass", cls);
 							
@@ -365,7 +365,7 @@ public class Hero
 						final String cls = ClassListData.getInstance().getClass(charOneClass).getClientCode();
 						if ((name != null) && (cls != null))
 						{
-							final StatsSet fight = new StatsSet();
+							final StatSet fight = new StatSet();
 							fight.set("oponent", name);
 							fight.set("oponentclass", cls);
 							
@@ -413,19 +413,19 @@ public class Hero
 		}
 	}
 	
-	public Map<Integer, StatsSet> getHeroes()
+	public Map<Integer, StatSet> getHeroes()
 	{
 		return HEROES;
 	}
 	
-	public Map<Integer, StatsSet> getCompleteHeroes()
+	public Map<Integer, StatSet> getCompleteHeroes()
 	{
 		return COMPLETE_HEROS;
 	}
 	
 	public int getHeroByClass(int classid)
 	{
-		for (Entry<Integer, StatsSet> e : HEROES.entrySet())
+		for (Entry<Integer, StatSet> e : HEROES.entrySet())
 		{
 			if (e.getValue().getInt(Olympiad.CLASS_ID) == classid)
 			{
@@ -446,7 +446,7 @@ public class Hero
 	public void showHeroDiary(PlayerInstance player, int heroclass, int charid, int page)
 	{
 		final int perpage = 10;
-		final List<StatsSet> mainList = HERO_DIARY.get(charid);
+		final List<StatSet> mainList = HERO_DIARY.get(charid);
 		if (mainList != null)
 		{
 			final NpcHtmlMessage diaryReply = new NpcHtmlMessage();
@@ -461,7 +461,7 @@ public class Hero
 				
 				if (!mainList.isEmpty())
 				{
-					final List<StatsSet> list = new ArrayList<>(mainList);
+					final List<StatSet> list = new ArrayList<>(mainList);
 					Collections.reverse(list);
 					
 					boolean color = true;
@@ -471,7 +471,7 @@ public class Hero
 					for (int i = (page - 1) * perpage; i < list.size(); i++)
 					{
 						breakat = i;
-						final StatsSet diaryEntry = list.get(i);
+						final StatSet diaryEntry = list.get(i);
 						fList.append("<tr><td>");
 						if (color)
 						{
@@ -532,7 +532,7 @@ public class Hero
 		int loss = 0;
 		int draw = 0;
 		
-		final List<StatsSet> heroFights = HERO_FIGHTS.get(charid);
+		final List<StatSet> heroFights = HERO_FIGHTS.get(charid);
 		if (heroFights != null)
 		{
 			final NpcHtmlMessage fightReply = new NpcHtmlMessage();
@@ -544,7 +544,7 @@ public class Hero
 				
 				if (!heroFights.isEmpty())
 				{
-					final StatsSet heroCount = HERO_COUNTS.get(charid);
+					final StatSet heroCount = HERO_COUNTS.get(charid);
 					if (heroCount != null)
 					{
 						win = heroCount.getInt("victory");
@@ -559,7 +559,7 @@ public class Hero
 					for (int i = (page - 1) * perpage; i < heroFights.size(); i++)
 					{
 						breakat = i;
-						final StatsSet fight = heroFights.get(i);
+						final StatSet fight = heroFights.get(i);
 						fList.append("<tr><td>");
 						if (color)
 						{
@@ -617,7 +617,7 @@ public class Hero
 		}
 	}
 	
-	public synchronized void computeNewHeroes(List<StatsSet> newHeroes)
+	public synchronized void computeNewHeroes(List<StatSet> newHeroes)
 	{
 		updateHeroes(true);
 		
@@ -667,13 +667,13 @@ public class Hero
 			return;
 		}
 		
-		for (StatsSet hero : newHeroes)
+		for (StatSet hero : newHeroes)
 		{
 			final int charId = hero.getInt(Olympiad.CHAR_ID);
 			
 			if (COMPLETE_HEROS.containsKey(charId))
 			{
-				final StatsSet oldHero = COMPLETE_HEROS.get(charId);
+				final StatSet oldHero = COMPLETE_HEROS.get(charId);
 				if (hero.getInt(LEGEND_COUNT) == 1)
 				{
 					final int count = oldHero.getInt(LEGEND_COUNT);
@@ -690,7 +690,7 @@ public class Hero
 			}
 			else
 			{
-				final StatsSet newHero = new StatsSet();
+				final StatSet newHero = new StatSet();
 				newHero.set(Olympiad.CHAR_NAME, hero.getString(Olympiad.CHAR_NAME));
 				newHero.set(Olympiad.CLASS_ID, hero.getInt(Olympiad.CLASS_ID));
 				if (hero.getInt(LEGEND_COUNT) == 1)
@@ -723,9 +723,9 @@ public class Hero
 			}
 			else
 			{
-				StatsSet hero;
+				StatSet hero;
 				int heroId;
-				for (Entry<Integer, StatsSet> entry : HEROES.entrySet())
+				for (Entry<Integer, StatSet> entry : HEROES.entrySet())
 				{
 					hero = entry.getValue();
 					heroId = entry.getKey();
@@ -812,13 +812,13 @@ public class Hero
 		setDiaryData(charId, ACTION_RAID_KILLED, npcId);
 		
 		final NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
-		final List<StatsSet> list = HERO_DIARY.get(charId);
+		final List<StatSet> list = HERO_DIARY.get(charId);
 		if ((list == null) || (template == null))
 		{
 			return;
 		}
 		// Prepare new data
-		final StatsSet diaryEntry = new StatsSet();
+		final StatSet diaryEntry = new StatSet();
 		final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(System.currentTimeMillis()));
 		diaryEntry.set("date", date);
 		diaryEntry.set("action", template.getName() + " was defeated");
@@ -831,13 +831,13 @@ public class Hero
 		setDiaryData(charId, ACTION_CASTLE_TAKEN, castleId);
 		
 		final Castle castle = CastleManager.getInstance().getCastleById(castleId);
-		final List<StatsSet> list = HERO_DIARY.get(charId);
+		final List<StatSet> list = HERO_DIARY.get(charId);
 		if ((list == null) || (castle == null))
 		{
 			return;
 		}
 		// Prepare new data
-		final StatsSet diaryEntry = new StatsSet();
+		final StatSet diaryEntry = new StatSet();
 		final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(System.currentTimeMillis()));
 		diaryEntry.set("date", date);
 		diaryEntry.set("action", castle.getName() + " Castle was successfuly taken");
@@ -947,10 +947,10 @@ public class Hero
 	 */
 	public void claimHero(PlayerInstance player)
 	{
-		StatsSet hero = HEROES.get(player.getObjectId());
+		StatSet hero = HEROES.get(player.getObjectId());
 		if (hero == null)
 		{
-			hero = new StatsSet();
+			hero = new StatSet();
 			HEROES.put(player.getObjectId(), hero);
 		}
 		

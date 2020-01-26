@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.FestivalMonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
@@ -3136,7 +3136,7 @@ public class SevenSignsFestival implements SpawnListener
 	protected Map<Integer, List<PlayerInstance>> _duskPreviousParticipants;
 	private Map<Integer, Integer> _dawnFestivalScores;
 	private Map<Integer, Integer> _duskFestivalScores;
-	private Map<Integer, Map<Integer, StatsSet>> _festivalData;
+	private Map<Integer, Map<Integer, StatSet>> _festivalData;
 	
 	/**
 	 * Instantiates a new seven signs festival.
@@ -3314,7 +3314,7 @@ public class SevenSignsFestival implements SpawnListener
 				int festivalId = rset.getInt("festivalId");
 				final String cabal = rset.getString("cabal");
 				
-				final StatsSet festivalDat = new StatsSet();
+				final StatSet festivalDat = new StatSet();
 				festivalDat.set("festivalId", festivalId);
 				festivalDat.set("cabal", cabal);
 				festivalDat.set("cycle", festivalCycle);
@@ -3327,7 +3327,7 @@ public class SevenSignsFestival implements SpawnListener
 					festivalId += FESTIVAL_COUNT;
 				}
 				
-				Map<Integer, StatsSet> tempData = _festivalData.get(festivalCycle);
+				Map<Integer, StatSet> tempData = _festivalData.get(festivalCycle);
 				
 				if (tempData == null)
 				{
@@ -3385,9 +3385,9 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			PreparedStatement statement = null;
 			
-			for (Map<Integer, StatsSet> currCycleData : _festivalData.values())
+			for (Map<Integer, StatSet> currCycleData : _festivalData.values())
 			{
-				for (StatsSet festivalDat : currCycleData.values())
+				for (StatSet festivalDat : currCycleData.values())
 				{
 					final int festivalCycle = festivalDat.getInt("cycle");
 					final int festivalId = festivalDat.getInt("festivalId");
@@ -3441,7 +3441,7 @@ public class SevenSignsFestival implements SpawnListener
 	protected void rewardHighRanked()
 	{
 		String[] partyMembers;
-		StatsSet overallData = getOverallHighestScoreData(FESTIVAL_LEVEL_MAX_FOR_31);
+		StatSet overallData = getOverallHighestScoreData(FESTIVAL_LEVEL_MAX_FOR_31);
 		if (overallData != null)
 		{
 			partyMembers = overallData.getString("members").split(",");
@@ -3570,7 +3570,7 @@ public class SevenSignsFestival implements SpawnListener
 		_duskFestivalScores.clear();
 		
 		// Set up a new data set for the current cycle of festivals
-		final Map<Integer, StatsSet> newData = new HashMap<>();
+		final Map<Integer, StatSet> newData = new HashMap<>();
 		
 		for (int i = 0; i < (FESTIVAL_COUNT * 2); i++)
 		{
@@ -3581,8 +3581,8 @@ public class SevenSignsFestival implements SpawnListener
 				festivalId -= FESTIVAL_COUNT;
 			}
 			
-			// Create a new StatsSet with "default" data for Dusk
-			final StatsSet tempStats = new StatsSet();
+			// Create a new StatSet with "default" data for Dusk
+			final StatSet tempStats = new StatSet();
 			tempStats.set("festivalId", festivalId);
 			tempStats.set("cycle", _signsCycle);
 			tempStats.set("date", "0");
@@ -3918,9 +3918,9 @@ public class SevenSignsFestival implements SpawnListener
 	 * Returns a stats set containing the highest score <b>this cycle</b> for the the specified cabal and associated festival ID.
 	 * @param oracle the oracle
 	 * @param festivalId the festival id
-	 * @return StatsSet festivalDat
+	 * @return StatSet festivalDat
 	 */
-	public StatsSet getHighestScoreData(int oracle, int festivalId)
+	public StatSet getHighestScoreData(int oracle, int festivalId)
 	{
 		int offsetId = festivalId;
 		
@@ -3930,7 +3930,7 @@ public class SevenSignsFestival implements SpawnListener
 		}
 		
 		// Attempt to retrieve existing score data (if found), otherwise create a new blank data set and display a console warning.
-		StatsSet currData = null;
+		StatSet currData = null;
 		
 		if ((_festivalData != null) && (_festivalData.get(_signsCycle) != null))
 		{
@@ -3938,7 +3938,7 @@ public class SevenSignsFestival implements SpawnListener
 		}
 		else
 		{
-			currData = new StatsSet();
+			currData = new StatSet();
 			currData.set("score", 0);
 			currData.set("members", "");
 		}
@@ -3949,16 +3949,16 @@ public class SevenSignsFestival implements SpawnListener
 	/**
 	 * Returns a stats set containing the highest ever recorded score data for the specified festival.
 	 * @param festivalId the festival id
-	 * @return StatsSet result
+	 * @return StatSet result
 	 */
-	public StatsSet getOverallHighestScoreData(int festivalId)
+	public StatSet getOverallHighestScoreData(int festivalId)
 	{
-		StatsSet result = null;
+		StatSet result = null;
 		int highestScore = 0;
 		
-		for (Map<Integer, StatsSet> currCycleData : _festivalData.values())
+		for (Map<Integer, StatSet> currCycleData : _festivalData.values())
 		{
-			for (StatsSet currFestData : currCycleData.values())
+			for (StatSet currFestData : currCycleData.values())
 			{
 				final int currFestID = currFestData.getInt("festivalId");
 				final int festivalScore = currFestData.getInt("score");
@@ -4012,7 +4012,7 @@ public class SevenSignsFestival implements SpawnListener
 			_duskFestivalScores.put(festivalId, offeringScore);
 		}
 		
-		final StatsSet currFestData = getHighestScoreData(oracle, festivalId);
+		final StatSet currFestData = getHighestScoreData(oracle, festivalId);
 		
 		// Check if this is the highest score for this level range so far for the player's cabal.
 		if (offeringScore > thisCabalHighScore)
@@ -4139,7 +4139,7 @@ public class SevenSignsFestival implements SpawnListener
 		
 		if (_festivalData.get(_signsCycle) != null)
 		{
-			for (StatsSet festivalData : _festivalData.get(_signsCycle).values())
+			for (StatSet festivalData : _festivalData.get(_signsCycle).values())
 			{
 				if (festivalData.getString("members").contains(playerName))
 				{

@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import java.util.Collection;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public class Sweeper extends AbstractEffect
 {
-	public Sweeper(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Sweeper(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 	}

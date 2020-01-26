@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -30,7 +30,7 @@ public class VitalityPointUp extends AbstractEffect
 {
 	private final float _value;
 	
-	public VitalityPointUp(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public VitalityPointUp(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

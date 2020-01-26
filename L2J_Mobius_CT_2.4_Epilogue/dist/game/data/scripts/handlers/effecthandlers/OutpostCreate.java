@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
@@ -33,7 +33,7 @@ public class OutpostCreate extends AbstractEffect
 {
 	private static final int HQ_NPC_ID = 36590;
 	
-	public OutpostCreate(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public OutpostCreate(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 	}

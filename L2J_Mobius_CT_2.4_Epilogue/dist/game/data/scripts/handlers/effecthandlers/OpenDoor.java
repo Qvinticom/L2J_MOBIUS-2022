@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
@@ -36,7 +36,7 @@ public class OpenDoor extends AbstractEffect
 	private final int _chance;
 	private final boolean _isItem;
 	
-	public OpenDoor(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public OpenDoor(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

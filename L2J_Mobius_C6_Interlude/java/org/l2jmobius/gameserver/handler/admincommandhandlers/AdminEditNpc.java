@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.StoreTradeList;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -920,7 +920,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void save_npc_property(PlayerInstance activeChar, String[] commandSplit)
 	{
-		final StatsSet newNpcData = new StatsSet();
+		final StatSet newNpcData = new StatSet();
 		
 		try
 		{

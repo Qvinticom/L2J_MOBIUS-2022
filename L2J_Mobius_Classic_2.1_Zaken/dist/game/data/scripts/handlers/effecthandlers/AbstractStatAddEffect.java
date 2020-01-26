@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.StatModifierType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -31,7 +31,7 @@ public class AbstractStatAddEffect extends AbstractEffect
 	private final Stat _stat;
 	protected final double _amount;
 	
-	public AbstractStatAddEffect(StatsSet params, Stat stat)
+	public AbstractStatAddEffect(StatSet params, Stat stat)
 	{
 		_stat = stat;
 		_amount = params.getDouble("amount", 0);

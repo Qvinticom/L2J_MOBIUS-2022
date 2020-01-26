@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.SubclassType;
 import org.l2jmobius.gameserver.model.SkillLearn;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.base.AcquireSkillType;
 import org.l2jmobius.gameserver.model.base.ClassId;
@@ -229,7 +229,7 @@ public class SkillTreesData implements IXmlReader
 						{
 							if ("skill".equalsIgnoreCase(c.getNodeName()))
 							{
-								final StatsSet learnSkillSet = new StatsSet();
+								final StatSet learnSkillSet = new StatSet();
 								attrs = c.getAttributes();
 								for (int i = 0; i < attrs.getLength(); i++)
 								{

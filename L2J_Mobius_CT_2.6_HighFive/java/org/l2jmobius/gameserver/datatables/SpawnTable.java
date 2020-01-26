@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Spawn;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
@@ -200,7 +200,7 @@ public class SpawnTable implements IXmlReader
 									continue;
 								}
 								
-								final StatsSet spawnInfo = new StatsSet();
+								final StatSet spawnInfo = new StatSet();
 								spawnInfo.set("npcTemplateid", templateId);
 								spawnInfo.set("x", x);
 								spawnInfo.set("y", y);
@@ -251,11 +251,11 @@ public class SpawnTable implements IXmlReader
 	
 	/**
 	 * Creates NPC spawn
-	 * @param spawnInfo StatsSet of spawn parameters
+	 * @param spawnInfo StatSet of spawn parameters
 	 * @param aiData Map of specific AI parameters for this spawn
 	 * @return count NPC instances, spawned by this spawn
 	 */
-	private int addSpawn(StatsSet spawnInfo, Map<String, Integer> aiData)
+	private int addSpawn(StatSet spawnInfo, Map<String, Integer> aiData)
 	{
 		Spawn spawnDat;
 		int ret = 0;

@@ -27,7 +27,7 @@ import java.util.GregorianCalendar;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Hero;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
@@ -135,7 +135,7 @@ public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 			int legendCount = 0;
 			if (Hero.getInstance().getCompleteHeroes().containsKey(_player.getObjectId()))
 			{
-				final StatsSet hero = Hero.getInstance().getCompleteHeroes().get(_player.getObjectId());
+				final StatSet hero = Hero.getInstance().getCompleteHeroes().get(_player.getObjectId());
 				heroCount = hero.getInt("count");
 				legendCount = hero.getInt("legend_count");
 			}

@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.AbstractPlayerGroup;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -71,7 +71,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 	private float _spRate = Config.RATE_INSTANCE_SP;
 	private float _expPartyRate = Config.RATE_INSTANCE_PARTY_XP;
 	private float _spPartyRate = Config.RATE_INSTANCE_PARTY_SP;
-	private StatsSet _parameters = StatsSet.EMPTY_STATSET;
+	private StatSet _parameters = StatSet.EMPTY_STATSET;
 	private final Map<Integer, DoorTemplate> _doors = new HashMap<>();
 	private final List<SpawnTemplate> _spawns = new ArrayList<>();
 	// Locations
@@ -92,7 +92,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 	/**
 	 * @param set
 	 */
-	public InstanceTemplate(StatsSet set)
+	public InstanceTemplate(StatSet set)
 	{
 		_templateId = set.getInt("id", 0);
 		_name = set.getString("name", null);
@@ -178,7 +178,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 	{
 		if (!set.isEmpty())
 		{
-			_parameters = new StatsSet(Collections.unmodifiableMap(set));
+			_parameters = new StatSet(Collections.unmodifiableMap(set));
 		}
 	}
 	
@@ -469,7 +469,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 	 * Get instance template parameters.
 	 * @return parameters of template
 	 */
-	public StatsSet getParameters()
+	public StatSet getParameters()
 	{
 		return _parameters;
 	}

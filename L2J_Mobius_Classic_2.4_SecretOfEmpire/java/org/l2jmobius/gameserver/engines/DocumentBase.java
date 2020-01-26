@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.enums.CastleSide;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.base.PlayerState;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.conditions.ConditionCategoryType;
@@ -178,7 +178,7 @@ public abstract class DocumentBase
 	
 	protected abstract void parseDocument(Document doc);
 	
-	protected abstract StatsSet getStatsSet();
+	protected abstract StatSet getStatSet();
 	
 	protected abstract String getTableValue(String name);
 	
@@ -1245,7 +1245,7 @@ public abstract class DocumentBase
 		setTable(name, array.toArray(new String[array.size()]));
 	}
 	
-	protected void parseBeanSet(Node n, StatsSet set, Integer level)
+	protected void parseBeanSet(Node n, StatSet set, Integer level)
 	{
 		final String name = n.getAttributes().getNamedItem("name").getNodeValue().trim();
 		final String value = n.getAttributes().getNamedItem("val").getNodeValue().trim();
@@ -1260,7 +1260,7 @@ public abstract class DocumentBase
 		}
 	}
 	
-	protected void setExtractableSkillData(StatsSet set, String value)
+	protected void setExtractableSkillData(StatSet set, String value)
 	{
 		set.set("capsuled_items_skill", value);
 	}

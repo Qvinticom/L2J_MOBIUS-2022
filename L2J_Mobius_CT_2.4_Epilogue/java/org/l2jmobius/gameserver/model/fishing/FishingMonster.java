@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.fishing;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * Class for the Fishing Monsters object.
@@ -29,7 +29,7 @@ public class FishingMonster
 	private final int _fishingMonsterId;
 	private final int _probability;
 	
-	public FishingMonster(StatsSet set)
+	public FishingMonster(StatSet set)
 	{
 		_userMinLevel = set.getInt("userMinLevel");
 		_userMaxLevel = set.getInt("userMaxLevel");

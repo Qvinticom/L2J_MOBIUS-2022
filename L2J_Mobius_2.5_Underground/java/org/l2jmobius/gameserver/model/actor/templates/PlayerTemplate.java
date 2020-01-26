@@ -23,7 +23,7 @@ import java.util.Map;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 
@@ -50,7 +50,7 @@ public class PlayerTemplate extends CreatureTemplate
 	private final List<Location> _creationPoints;
 	private final Map<Integer, Integer> _baseSlotDef;
 	
-	public PlayerTemplate(StatsSet set, List<Location> creationPoints)
+	public PlayerTemplate(StatSet set, List<Location> creationPoints)
 	{
 		super(set);
 		_classId = ClassId.getClassId(set.getInt("classId"));

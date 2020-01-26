@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.fishing;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * Class for the Fishing Rod object.
@@ -30,7 +30,7 @@ public class FishingRod
 	private final String _fishingRodName;
 	private final double _fishingRodDamage;
 	
-	public FishingRod(StatsSet set)
+	public FishingRod(StatSet set)
 	{
 		_fishingRodId = set.getInt("fishingRodId");
 		_fishingRodItemId = set.getInt("fishingRodItemId");

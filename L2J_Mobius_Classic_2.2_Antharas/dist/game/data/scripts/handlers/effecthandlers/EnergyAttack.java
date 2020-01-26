@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.ShotType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -43,7 +43,7 @@ public class EnergyAttack extends AbstractEffect
 	private final boolean _overHit;
 	private final double _pDefMod;
 	
-	public EnergyAttack(StatsSet params)
+	public EnergyAttack(StatSet params)
 	{
 		_power = params.getDouble("power", 0);
 		_criticalChance = params.getInt("criticalChance", 0);

@@ -16,7 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 
 public class OpRestartPointSkillCondition implements ISkillCondition
 {
-	public OpRestartPointSkillCondition(StatsSet params)
+	public OpRestartPointSkillCondition(StatSet params)
 	{
 		
 	}

@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 
 /**
@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
  */
 public class ChangeFishingMastery extends AbstractEffect
 {
-	public ChangeFishingMastery(StatsSet params)
+	public ChangeFishingMastery(StatSet params)
 	{
 	}
 }

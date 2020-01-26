@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -30,7 +30,7 @@ public class MaxMp extends AbstractStatEffect
 {
 	private final boolean _heal;
 	
-	public MaxMp(StatsSet params)
+	public MaxMp(StatSet params)
 	{
 		super(params, Stat.MAX_MP);
 		

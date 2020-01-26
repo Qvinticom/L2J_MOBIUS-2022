@@ -17,7 +17,7 @@
 package handlers.skillconditionhandlers;
 
 import org.l2jmobius.gameserver.enums.SkillConditionAffectType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
@@ -34,7 +34,7 @@ public class OpCheckAbnormalSkillCondition implements ISkillCondition
 	private final boolean _hasAbnormal;
 	private final SkillConditionAffectType _affectType;
 	
-	public OpCheckAbnormalSkillCondition(StatsSet params)
+	public OpCheckAbnormalSkillCondition(StatSet params)
 	{
 		_type = params.getEnum("type", AbnormalType.class);
 		_level = params.getInt("level");

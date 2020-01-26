@@ -45,7 +45,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.instancemanager.ItemAuctionManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -85,7 +85,7 @@ public class ItemAuctionInstance
 		_items = new ArrayList<>();
 		
 		final NamedNodeMap nanode = node.getAttributes();
-		final StatsSet generatorConfig = new StatsSet();
+		final StatSet generatorConfig = new StatSet();
 		for (int i = nanode.getLength(); i-- > 0;)
 		{
 			final Node n = nanode.item(i);
@@ -116,7 +116,7 @@ public class ItemAuctionInstance
 						throw new IllegalArgumentException("auctionLenght < 1 for instanceId: " + _instanceId + ", itemId " + itemId);
 					}
 					
-					final StatsSet itemExtra = new StatsSet();
+					final StatSet itemExtra = new StatSet();
 					final AuctionItem item = new AuctionItem(auctionItemId, auctionLenght, auctionInitBid, itemId, itemCount, itemExtra);
 					
 					if (!item.checkItemExists())

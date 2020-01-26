@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -33,7 +33,7 @@ public class FocusSouls extends AbstractEffect
 {
 	private final int _charge;
 	
-	public FocusSouls(StatsSet params)
+	public FocusSouls(StatSet params)
 	{
 		_charge = params.getInt("charge", 0);
 	}

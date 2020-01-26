@@ -27,7 +27,7 @@ import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.datatables.ItemTable;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.EquipmentUpgradeHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 
@@ -57,7 +57,7 @@ public class EquipmentUpgradeData implements IXmlReader
 	{
 		forEach(doc, "list", listNode -> forEach(listNode, "upgrade", upgradeNode ->
 		{
-			final StatsSet set = new StatsSet(parseAttributes(upgradeNode));
+			final StatSet set = new StatSet(parseAttributes(upgradeNode));
 			final int id = set.getInt("id");
 			final String[] item = set.getString("item").split(",");
 			final int requiredItemId = Integer.parseInt(item[0]);

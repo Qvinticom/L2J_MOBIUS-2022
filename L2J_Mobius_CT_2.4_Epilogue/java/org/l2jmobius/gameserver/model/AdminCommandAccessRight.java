@@ -27,7 +27,7 @@ public class AdminCommandAccessRight
 	private final int _accessLevel;
 	private final boolean _requireConfirm;
 	
-	public AdminCommandAccessRight(StatsSet set)
+	public AdminCommandAccessRight(StatSet set)
 	{
 		_adminCommand = set.getString("command");
 		_requireConfirm = set.getBoolean("confirmDlg", false);

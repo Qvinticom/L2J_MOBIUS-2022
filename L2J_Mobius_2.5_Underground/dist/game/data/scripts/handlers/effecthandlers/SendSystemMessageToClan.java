@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -33,7 +33,7 @@ public class SendSystemMessageToClan extends AbstractEffect
 {
 	private final SystemMessage _message;
 	
-	public SendSystemMessageToClan(StatsSet params)
+	public SendSystemMessageToClan(StatSet params)
 	{
 		final int id = params.getInt("id", 0);
 		_message = new SystemMessage(id);

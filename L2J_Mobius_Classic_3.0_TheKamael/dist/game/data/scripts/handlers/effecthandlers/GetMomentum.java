@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -34,7 +34,7 @@ public class GetMomentum extends AbstractEffect
 {
 	private static int _ticks;
 	
-	public GetMomentum(StatsSet params)
+	public GetMomentum(StatSet params)
 	{
 		_ticks = params.getInt("ticks", 0);
 	}

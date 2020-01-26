@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -34,7 +34,7 @@ public class FlyAway extends AbstractEffect
 {
 	private final int _radius;
 	
-	public FlyAway(StatsSet params)
+	public FlyAway(StatSet params)
 	{
 		_radius = params.getInt("radius");
 	}

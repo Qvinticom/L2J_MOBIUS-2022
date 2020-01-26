@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.ChanceLocation;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
@@ -46,7 +46,7 @@ import org.l2jmobius.gameserver.model.zone.type.SpawnTerritory;
 /**
  * @author UnAfraid
  */
-public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
+public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 {
 	private static final Logger LOGGER = Logger.getLogger(NpcSpawnTemplate.class.getName());
 	
@@ -56,7 +56,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 	private final Duration _respawnTimeRandom;
 	private List<ChanceLocation> _locations;
 	private SpawnTerritory _zone;
-	private StatsSet _parameters;
+	private StatSet _parameters;
 	private final boolean _spawnAnimation;
 	private final boolean _saveInDB;
 	private final String _dbName;
@@ -82,7 +82,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 		_minions = template._minions;
 	}
 	
-	public NpcSpawnTemplate(SpawnTemplate spawnTemplate, SpawnGroup group, StatsSet set)
+	public NpcSpawnTemplate(SpawnTemplate spawnTemplate, SpawnGroup group, StatSet set)
 	{
 		_spawnTemplate = spawnTemplate;
 		_group = group;
@@ -128,14 +128,14 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 		mergeParameters(spawnTemplate, group);
 	}
 	
-	private StatsSet mergeParameters(SpawnTemplate spawnTemplate, SpawnGroup group)
+	private StatSet mergeParameters(SpawnTemplate spawnTemplate, SpawnGroup group)
 	{
 		if ((_parameters == null) && (spawnTemplate.getParameters() == null) && (group.getParameters() == null))
 		{
 			return null;
 		}
 		
-		final StatsSet set = new StatsSet();
+		final StatSet set = new StatSet();
 		if (spawnTemplate.getParameters() != null)
 		{
 			set.merge(spawnTemplate.getParameters());
@@ -206,13 +206,13 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 	}
 	
 	@Override
-	public StatsSet getParameters()
+	public StatSet getParameters()
 	{
 		return _parameters;
 	}
 	
 	@Override
-	public void setParameters(StatsSet parameters)
+	public void setParameters(StatSet parameters)
 	{
 		if (_parameters == null)
 		{

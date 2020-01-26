@@ -68,7 +68,7 @@ public class RecipeList
 	 * @param set
 	 * @param haveRare
 	 */
-	public RecipeList(StatsSet set, boolean haveRare)
+	public RecipeList(StatSet set, boolean haveRare)
 	{
 		_recipes = new RecipeInstance[0];
 		_statUse = new RecipeStatInstance[0];

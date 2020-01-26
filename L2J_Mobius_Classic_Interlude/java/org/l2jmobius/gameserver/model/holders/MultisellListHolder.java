@@ -20,7 +20,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 
 /**
@@ -52,7 +52,7 @@ public class MultisellListHolder implements IIdentifiable
 	}
 	
 	@SuppressWarnings("unchecked")
-	public MultisellListHolder(StatsSet set)
+	public MultisellListHolder(StatSet set)
 	{
 		_listId = set.getInt("listId");
 		_isChanceMultisell = set.getBoolean("isChanceMultisell", false);

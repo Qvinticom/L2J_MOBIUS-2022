@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.TeleportWhereType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -32,7 +32,7 @@ public class Escape extends AbstractEffect
 {
 	private final TeleportWhereType _escapeType;
 	
-	public Escape(StatsSet params)
+	public Escape(StatSet params)
 	{
 		_escapeType = params.getEnum("escapeType", TeleportWhereType.class, null);
 	}

@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -114,7 +114,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 					
 					if (player.getNobleLevel() > 0)
 					{
-						final StatsSet statDat = getPlayerSet(player);
+						final StatSet statDat = getPlayerSet(player);
 						final int oldpoints = Olympiad.getInstance().getNoblePoints(player);
 						final int points = Math.max(oldpoints + val, 0);
 						if (points > 1000)
@@ -155,7 +155,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 					
 					if (player.getNobleLevel() > 0)
 					{
-						final StatsSet playerStat = Olympiad.getNobleStats(player.getObjectId());
+						final StatSet playerStat = Olympiad.getNobleStats(player.getObjectId());
 						if (playerStat == null)
 						{
 							BuilderUtil.sendSysMessage(activeChar, "This player hasn't played on Olympiad yet!");
@@ -197,7 +197,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 					
 					if (player.getNobleLevel() > 0)
 					{
-						final StatsSet statDat = getPlayerSet(player);
+						final StatSet statDat = getPlayerSet(player);
 						final int oldpoints = Olympiad.getInstance().getNoblePoints(player);
 						final int points = oldpoints - val;
 						if ((points < 1) && (points > 1000))
@@ -237,12 +237,12 @@ public class AdminOlympiad implements IAdminCommandHandler
 		return Integer.decode(token);
 	}
 	
-	private StatsSet getPlayerSet(PlayerInstance player)
+	private StatSet getPlayerSet(PlayerInstance player)
 	{
-		StatsSet statDat = Olympiad.getNobleStats(player.getObjectId());
+		StatSet statDat = Olympiad.getNobleStats(player.getObjectId());
 		if (statDat == null)
 		{
-			statDat = new StatsSet();
+			statDat = new StatSet();
 			statDat.set(Olympiad.CLASS_ID, player.getBaseClass());
 			statDat.set(Olympiad.CHAR_NAME, player.getName());
 			statDat.set(Olympiad.POINTS, Olympiad.DEFAULT_POINTS);

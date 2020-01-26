@@ -17,7 +17,7 @@
 package instances.KartiasLabyrinth;
 
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
@@ -70,7 +70,7 @@ public class KartiaBoss extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("NPC_SAY") && npc.isTargetable())
 		{
@@ -107,7 +107,7 @@ public class KartiaBoss extends AbstractNpcAI
 	
 	public void spawnMinions(Npc npc)
 	{
-		final StatsSet param = npc.getParameters();
+		final StatSet param = npc.getParameters();
 		final int kartiaLevel = param.getInt("cartia_level", 0);
 		final boolean isParty = param.getInt("party_type", 0) == 1;
 		

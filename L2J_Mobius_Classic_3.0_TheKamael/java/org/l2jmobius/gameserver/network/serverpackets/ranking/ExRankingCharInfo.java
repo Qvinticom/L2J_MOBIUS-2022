@@ -20,7 +20,7 @@ import java.util.Map;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -33,8 +33,8 @@ public class ExRankingCharInfo implements IClientOutgoingPacket
 	@SuppressWarnings("unused")
 	private final short _unk;
 	private final PlayerInstance _player;
-	private final Map<Integer, StatsSet> _playerList;
-	private final Map<Integer, StatsSet> _snapshotList;
+	private final Map<Integer, StatSet> _playerList;
+	private final Map<Integer, StatSet> _snapshotList;
 	
 	public ExRankingCharInfo(PlayerInstance player, short unk)
 	{
@@ -53,7 +53,7 @@ public class ExRankingCharInfo implements IClientOutgoingPacket
 		{
 			for (Integer id : _playerList.keySet())
 			{
-				final StatsSet player = _playerList.get(id);
+				final StatSet player = _playerList.get(id);
 				if (player.getInt("charId") == _player.getObjectId())
 				{
 					packet.writeD(id); // server rank
@@ -61,7 +61,7 @@ public class ExRankingCharInfo implements IClientOutgoingPacket
 					
 					for (Integer id2 : _snapshotList.keySet())
 					{
-						final StatsSet snapshot = _snapshotList.get(id2);
+						final StatSet snapshot = _snapshotList.get(id2);
 						if (player.getInt("charId") == snapshot.getInt("charId"))
 						{
 							packet.writeD(id2); // server rank snapshot

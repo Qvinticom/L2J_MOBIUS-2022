@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
@@ -44,7 +44,7 @@ public class Henna
 	private final List<Skill> _skills;
 	private final List<ClassId> _wear_class;
 	
-	public Henna(StatsSet set)
+	public Henna(StatSet set)
 	{
 		_dyeId = set.getInt("dyeId");
 		_dyeItemId = set.getInt("dyeItemId");

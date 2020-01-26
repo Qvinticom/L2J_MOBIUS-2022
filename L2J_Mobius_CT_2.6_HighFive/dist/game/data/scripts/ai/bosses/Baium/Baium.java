@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.enums.MountType;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -110,7 +110,7 @@ public class Baium extends AbstractNpcAI
 		addSeeCreatureId(BAIUM);
 		addSpellFinishedId(BAIUM);
 		
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(BAIUM);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(BAIUM);
 		final double curr_hp = info.getDouble("currentHP");
 		final double curr_mp = info.getDouble("currentMP");
 		final int loc_x = info.getInt("loc_x");
@@ -659,7 +659,7 @@ public class Baium extends AbstractNpcAI
 	
 	private void setRespawn(long respawnTime)
 	{
-		GrandBossManager.getInstance().getStatsSet(BAIUM).set("respawn_time", System.currentTimeMillis() + respawnTime);
+		GrandBossManager.getInstance().getStatSet(BAIUM).set("respawn_time", System.currentTimeMillis() + respawnTime);
 	}
 	
 	private void manageSkills(Npc npc)

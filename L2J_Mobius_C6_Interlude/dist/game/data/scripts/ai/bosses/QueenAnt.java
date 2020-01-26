@@ -24,7 +24,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
@@ -91,7 +91,7 @@ public class QueenAnt extends Quest
 		
 		_zone = GrandBossManager.getInstance().getZone(-21610, 181594, -5734);
 		
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(QUEEN);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(QUEEN);
 		
 		final Integer status = GrandBossManager.getInstance().getBossStatus(QUEEN);
 		
@@ -382,9 +382,9 @@ public class QueenAnt extends Quest
 				cancelQuestTimer("HEAL", null, null);
 				// cancelQuestTimer("CHECK_QA_ZONE", npc, null);
 				// also save the respawn time so that the info is maintained past reboots
-				final StatsSet info = GrandBossManager.getInstance().getStatsSet(QUEEN);
+				final StatSet info = GrandBossManager.getInstance().getStatSet(QUEEN);
 				info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-				GrandBossManager.getInstance().setStatsSet(QUEEN, info);
+				GrandBossManager.getInstance().setStatSet(QUEEN, info);
 			}
 			
 			startQuestTimer("DESPAWN_MINIONS", 10000, null, null);

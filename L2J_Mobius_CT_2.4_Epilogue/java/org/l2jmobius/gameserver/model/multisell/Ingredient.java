@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.multisell;
 
 import org.l2jmobius.gameserver.datatables.ItemTable;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.items.Armor;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.Weapon;
@@ -36,7 +36,7 @@ public class Ingredient
 	private Item _template = null;
 	private ItemInfo _itemInfo = null;
 	
-	public Ingredient(StatsSet set)
+	public Ingredient(StatSet set)
 	{
 		this(set.getInt("id"), set.getLong("count"), set.getInt("enchantmentLevel", 0), set.getBoolean("isTaxIngredient", false), set.getBoolean("maintainIngredient", false));
 	}

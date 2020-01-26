@@ -21,7 +21,7 @@ import java.util.Collections;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -85,12 +85,12 @@ public class CreatureTemplate extends ListenersContainer
 	/** The creature's race. */
 	private Race _race;
 	
-	public CreatureTemplate(StatsSet set)
+	public CreatureTemplate(StatSet set)
 	{
 		set(set);
 	}
 	
-	public void set(StatsSet set)
+	public void set(StatSet set)
 	{
 		// Base stats
 		_baseSTR = set.getInt("baseSTR", 0);

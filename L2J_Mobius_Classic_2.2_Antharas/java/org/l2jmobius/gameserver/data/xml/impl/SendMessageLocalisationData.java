@@ -27,7 +27,7 @@ import org.w3c.dom.Document;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
@@ -82,7 +82,7 @@ public class SendMessageLocalisationData implements IXmlReader
 	{
 		forEach(doc, "list", listNode -> forEach(listNode, "localisation", localisationNode ->
 		{
-			final StatsSet set = new StatsSet(parseAttributes(localisationNode));
+			final StatSet set = new StatSet(parseAttributes(localisationNode));
 			SEND_MESSAGE_LOCALISATIONS.get(_lang).put(set.getString("message").split(SPLIT_STRING), set.getString("translation").split(SPLIT_STRING));
 		}));
 	}

@@ -22,7 +22,7 @@ import java.util.Set;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.ShotType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -52,7 +52,7 @@ public class PhysicalAttack extends AbstractEffect
 	private final Set<AbnormalType> _abnormals;
 	private final double _abnormalPowerMod;
 	
-	public PhysicalAttack(StatsSet params)
+	public PhysicalAttack(StatSet params)
 	{
 		_power = params.getDouble("power", 0);
 		_pAtkMod = params.getDouble("pAtkMod", 1.0);

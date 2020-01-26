@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.holders;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * @author Nik
@@ -43,7 +43,7 @@ public class AttachSkillHolder extends SkillHolder
 		return _requiredSkillLevel;
 	}
 	
-	public static AttachSkillHolder fromStatsSet(StatsSet set)
+	public static AttachSkillHolder fromStatSet(StatSet set)
 	{
 		return new AttachSkillHolder(set.getInt("skillId"), set.getInt("skillLevel", 1), set.getInt("requiredSkillId"), set.getInt("requiredSkillLevel", 1));
 	}

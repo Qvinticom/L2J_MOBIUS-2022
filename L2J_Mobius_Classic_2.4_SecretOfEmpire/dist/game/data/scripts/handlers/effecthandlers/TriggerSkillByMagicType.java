@@ -22,7 +22,7 @@ import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.handler.TargetHandler;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -52,7 +52,7 @@ public class TriggerSkillByMagicType extends AbstractEffect
 	 * @param params
 	 */
 	
-	public TriggerSkillByMagicType(StatsSet params)
+	public TriggerSkillByMagicType(StatSet params)
 	{
 		_chance = params.getInt("chance", 100);
 		_magicTypes = params.getIntArray("magicTypes", ";");

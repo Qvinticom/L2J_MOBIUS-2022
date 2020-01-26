@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.DispelSlotType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -31,7 +31,7 @@ public class ResistAbnormalByCategory extends AbstractEffect
 	private final DispelSlotType _slot;
 	private final double _amount;
 	
-	public ResistAbnormalByCategory(StatsSet params)
+	public ResistAbnormalByCategory(StatSet params)
 	{
 		_amount = params.getDouble("amount", 0);
 		_slot = params.getEnum("slot", DispelSlotType.class, DispelSlotType.DEBUFF);

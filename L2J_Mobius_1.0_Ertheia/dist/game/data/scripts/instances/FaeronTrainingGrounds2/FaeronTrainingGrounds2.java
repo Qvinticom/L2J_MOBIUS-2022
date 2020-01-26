@@ -18,7 +18,7 @@ package instances.FaeronTrainingGrounds2;
 
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -270,7 +270,7 @@ public class FaeronTrainingGrounds2 extends AbstractInstance
 		final Instance world = player.getInstanceWorld();
 		if (world != null)
 		{
-			final StatsSet params = world.getParameters();
+			final StatSet params = world.getParameters();
 			for (int i = 0; i < MOB_SPAWNS.length; i++)
 			{
 				if (params.getObject("Mob" + i, Npc.class) == null)
@@ -292,7 +292,7 @@ public class FaeronTrainingGrounds2 extends AbstractInstance
 		final Instance world = player.getInstanceWorld();
 		if (world != null)
 		{
-			final StatsSet params = world.getParameters();
+			final StatSet params = world.getParameters();
 			for (int i = 0; i < MOB_SPAWNS.length; i++)
 			{
 				final Npc mob = params.getObject("Mob" + i, Npc.class);

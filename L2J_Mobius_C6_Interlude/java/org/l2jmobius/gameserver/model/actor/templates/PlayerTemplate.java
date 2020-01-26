@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.items.Item;
 
@@ -52,7 +52,7 @@ public class PlayerTemplate extends CreatureTemplate
 	
 	private final List<Item> _items = new ArrayList<>();
 	
-	public PlayerTemplate(StatsSet set)
+	public PlayerTemplate(StatSet set)
 	{
 		super(set);
 		_classId = ClassId.getClassId(set.getInt("classId"));

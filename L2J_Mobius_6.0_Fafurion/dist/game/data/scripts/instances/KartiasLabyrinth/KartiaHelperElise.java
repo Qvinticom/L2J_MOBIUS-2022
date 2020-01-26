@@ -26,7 +26,7 @@ import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -115,12 +115,12 @@ public class KartiaHelperElise extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if ((instance != null) && event.equals("CHECK_ACTION"))
 		{
-			final StatsSet npcVars = npc.getVariables();
+			final StatSet npcVars = npc.getVariables();
 			final FriendlyNpcInstance adolph = npcVars.getObject("ADOLPH_OBJECT", FriendlyNpcInstance.class);
 			if (!npc.isCastingNow())
 			{
@@ -153,8 +153,8 @@ public class KartiaHelperElise extends AbstractNpcAI
 		final Instance instance = npc.getInstanceWorld();
 		if (instance != null)
 		{
-			final StatsSet npcVars = npc.getVariables();
-			final StatsSet instParams = instance.getTemplateParameters();
+			final StatSet npcVars = npc.getVariables();
+			final StatSet instParams = instance.getTemplateParameters();
 			if (!npc.isCastingNow())
 			{
 				final PlayerInstance plr = npcVars.getObject("PLAYER_OBJECT", PlayerInstance.class);
@@ -248,7 +248,7 @@ public class KartiaHelperElise extends AbstractNpcAI
 	{
 		if (creature.isPlayer() || (creature instanceof FriendlyNpcInstance))
 		{
-			final StatsSet npcVars = npc.getVariables();
+			final StatSet npcVars = npc.getVariables();
 			
 			if (creature.isPlayer())
 			{

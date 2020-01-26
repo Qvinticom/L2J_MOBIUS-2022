@@ -20,7 +20,7 @@ import java.util.EnumMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -35,7 +35,7 @@ public class DefenceTrait extends AbstractEffect
 {
 	private final Map<TraitType, Float> _defenceTraits = new EnumMap<>(TraitType.class);
 	
-	public DefenceTrait(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public DefenceTrait(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

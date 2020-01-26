@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.ExtractableProduct;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 
@@ -38,15 +38,15 @@ public class EtcItem extends Item
 	
 	/**
 	 * Constructor for EtcItem.
-	 * @param set StatsSet designating the set of couples (key,value) for description of the Etc
+	 * @param set StatSet designating the set of couples (key,value) for description of the Etc
 	 */
-	public EtcItem(StatsSet set)
+	public EtcItem(StatSet set)
 	{
 		super(set);
 	}
 	
 	@Override
-	public void set(StatsSet set)
+	public void set(StatSet set)
 	{
 		super.set(set);
 		_type = set.getEnum("etcitem_type", EtcItemType.class, EtcItemType.NONE);

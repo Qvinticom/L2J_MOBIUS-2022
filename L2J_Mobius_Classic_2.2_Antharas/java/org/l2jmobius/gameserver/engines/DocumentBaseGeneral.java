@@ -21,7 +21,7 @@ import java.io.File;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 
 /**
@@ -41,7 +41,7 @@ public class DocumentBaseGeneral extends DocumentBase
 	}
 	
 	@Override
-	protected StatsSet getStatsSet()
+	protected StatSet getStatSet()
 	{
 		return null;
 	}

@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.datatables.SpawnTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Spawn;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.FakePlayerChatHolder;
@@ -73,7 +73,7 @@ public class FakePlayerChatManager implements IXmlReader
 	{
 		forEach(doc, "list", listNode -> forEach(listNode, "fakePlayerChat", fakePlayerChatNode ->
 		{
-			final StatsSet set = new StatsSet(parseAttributes(fakePlayerChatNode));
+			final StatSet set = new StatSet(parseAttributes(fakePlayerChatNode));
 			MESSAGES.add(new FakePlayerChatHolder(set.getString("fpcName"), set.getString("searchMethod"), set.getString("searchText"), set.getString("answers")));
 		}));
 	}

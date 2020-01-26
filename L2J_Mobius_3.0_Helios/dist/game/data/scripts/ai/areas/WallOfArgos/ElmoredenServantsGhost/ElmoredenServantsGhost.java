@@ -17,7 +17,7 @@
 package ai.areas.WallOfArgos.ElmoredenServantsGhost;
 
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
@@ -58,7 +58,7 @@ public class ElmoredenServantsGhost extends AbstractNpcAI
 				takeItems(player, USED_GRAVE_PASS, 1);
 				
 				final Location loc;
-				final StatsSet npcParameters = npc.getParameters();
+				final StatSet npcParameters = npc.getParameters();
 				if (event.equals("teleport1"))
 				{
 					loc = new Location(npcParameters.getInt("TelPos_X1", 0), npcParameters.getInt("TelPos_Y1", 0), npcParameters.getInt("TelPos_Z1", 0));

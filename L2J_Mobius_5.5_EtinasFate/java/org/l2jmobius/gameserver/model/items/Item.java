@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.enums.ItemGrade;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.model.ExtractableProduct;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
@@ -180,14 +180,14 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * Constructor of the Item that fill class variables.<BR>
 	 * <BR>
-	 * @param set : StatsSet corresponding to a set of couples (key,value) for description of the item
+	 * @param set : StatSet corresponding to a set of couples (key,value) for description of the item
 	 */
-	protected Item(StatsSet set)
+	protected Item(StatSet set)
 	{
 		set(set);
 	}
 	
-	public void set(StatsSet set)
+	public void set(StatSet set)
 	{
 		_itemId = set.getInt("item_id");
 		_displayId = set.getInt("displayId", _itemId);

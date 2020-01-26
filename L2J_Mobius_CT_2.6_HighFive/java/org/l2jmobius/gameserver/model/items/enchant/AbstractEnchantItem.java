@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.datatables.ItemTable;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
@@ -51,7 +51,7 @@ public abstract class AbstractEnchantItem
 	private final int _maxEnchantLevel;
 	private final double _bonusRate;
 	
-	public AbstractEnchantItem(StatsSet set)
+	public AbstractEnchantItem(StatSet set)
 	{
 		_id = set.getInt("id");
 		if (getItem() == null)

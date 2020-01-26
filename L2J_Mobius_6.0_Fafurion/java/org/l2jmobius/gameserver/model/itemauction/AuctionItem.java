@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.itemauction;
 
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
@@ -34,9 +34,9 @@ public class AuctionItem
 	private final int _itemId;
 	private final long _itemCount;
 	@SuppressWarnings("unused")
-	private final StatsSet _itemExtra;
+	private final StatSet _itemExtra;
 	
-	public AuctionItem(int auctionItemId, int auctionLength, long auctionInitBid, int itemId, long itemCount, StatsSet itemExtra)
+	public AuctionItem(int auctionItemId, int auctionLength, long auctionInitBid, int itemId, long itemCount, StatSet itemExtra)
 	{
 		_auctionItemId = auctionItemId;
 		_auctionLength = auctionLength;

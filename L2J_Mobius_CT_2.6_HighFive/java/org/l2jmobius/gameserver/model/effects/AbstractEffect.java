@@ -25,7 +25,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.EffectHandler;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -56,7 +56,7 @@ public abstract class AbstractEffect
 	 * @param set the attributes
 	 * @param params the parameters
 	 */
-	protected AbstractEffect(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	protected AbstractEffect(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		_attachCond = attachCond;
 		_name = set.getString("name");
@@ -71,7 +71,7 @@ public abstract class AbstractEffect
 	 * @param params the parameters
 	 * @return the new effect
 	 */
-	public static AbstractEffect createEffect(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public static AbstractEffect createEffect(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		final String name = set.getString("name");
 		final Class<? extends AbstractEffect> handler = EffectHandler.getInstance().getHandler(name);
@@ -84,7 +84,7 @@ public abstract class AbstractEffect
 		final Constructor<?> constructor;
 		try
 		{
-			constructor = handler.getConstructor(Condition.class, Condition.class, StatsSet.class, StatsSet.class);
+			constructor = handler.getConstructor(Condition.class, Condition.class, StatSet.class, StatSet.class);
 		}
 		catch (NoSuchMethodException | SecurityException e)
 		{

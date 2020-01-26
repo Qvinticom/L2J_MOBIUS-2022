@@ -35,7 +35,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -51,7 +51,7 @@ public class DoorData implements IXmlReader
 	// Info holders
 	private final Map<String, Set<Integer>> _groups = new HashMap<>();
 	private final Map<Integer, DoorInstance> _doors = new HashMap<>();
-	private final Map<Integer, StatsSet> _templates = new HashMap<>();
+	private final Map<Integer, StatSet> _templates = new HashMap<>();
 	private final Map<Integer, List<DoorInstance>> _regions = new HashMap<>();
 	
 	protected DoorData()
@@ -75,9 +75,9 @@ public class DoorData implements IXmlReader
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _doors.size() + " Door Templates for " + _regions.size() + " regions.");
 	}
 	
-	public StatsSet parseDoor(Node doorNode)
+	public StatSet parseDoor(Node doorNode)
 	{
-		final StatsSet params = new StatsSet(parseAttributes(doorNode));
+		final StatSet params = new StatSet(parseAttributes(doorNode));
 		params.set("baseHpMax", 1); // Avoid doors without HP value created dead due to default value 0 in CreatureTemplate
 		
 		forEach(doorNode, IXmlReader::isNode, innerDoorNode ->
@@ -115,7 +115,7 @@ public class DoorData implements IXmlReader
 	/**
 	 * @param set
 	 */
-	private void applyCollisions(StatsSet set)
+	private void applyCollisions(StatSet set)
 	{
 		// Insert Collision data
 		if (set.contains("nodeX_0") && set.contains("nodeY_0") && set.contains("nodeX_1") && set.contains("nodeY_1"))
@@ -142,7 +142,7 @@ public class DoorData implements IXmlReader
 	 * @param set
 	 * @return
 	 */
-	public DoorInstance spawnDoor(StatsSet set)
+	public DoorInstance spawnDoor(StatSet set)
 	{
 		// Create door template + door instance
 		final DoorTemplate template = new DoorTemplate(set);
@@ -183,7 +183,7 @@ public class DoorData implements IXmlReader
 		return door;
 	}
 	
-	public StatsSet getDoorTemplate(int doorId)
+	public StatSet getDoorTemplate(int doorId)
 	{
 		return _templates.get(doorId);
 	}

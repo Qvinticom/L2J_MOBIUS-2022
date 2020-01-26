@@ -16,7 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class OpCallPcSkillCondition implements ISkillCondition
 {
-	public OpCallPcSkillCondition(StatsSet params)
+	public OpCallPcSkillCondition(StatSet params)
 	{
 	}
 	

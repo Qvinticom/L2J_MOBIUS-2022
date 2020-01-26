@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -123,7 +123,7 @@ public class Valakas extends AbstractNpcAI
 		registerMobs(VALAKAS);
 		
 		ZONE = ZoneManager.getInstance().getZoneById(12010);
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(VALAKAS);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(VALAKAS);
 		final int status = GrandBossManager.getInstance().getBossStatus(VALAKAS);
 		
 		if (status == DEAD)
@@ -446,9 +446,9 @@ public class Valakas extends AbstractNpcAI
 		final long respawnTime = (Config.VALAKAS_SPAWN_INTERVAL + getRandom(-Config.VALAKAS_SPAWN_RANDOM, Config.VALAKAS_SPAWN_RANDOM)) * 3600000;
 		startQuestTimer("valakas_unlock", respawnTime, null, null);
 		// also save the respawn time so that the info is maintained past reboots
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(VALAKAS);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(VALAKAS);
 		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-		GrandBossManager.getInstance().setStatsSet(VALAKAS, info);
+		GrandBossManager.getInstance().setStatSet(VALAKAS, info);
 		
 		return super.onKill(npc, killer, isSummon);
 	}

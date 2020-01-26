@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -34,7 +34,7 @@ public class RecoverVitalityInPeaceZone extends AbstractEffect
 	private final double _amount;
 	private final int _ticks;
 	
-	public RecoverVitalityInPeaceZone(StatsSet params)
+	public RecoverVitalityInPeaceZone(StatSet params)
 	{
 		_amount = params.getDouble("amount", 0);
 		_ticks = params.getInt("ticks", 10);

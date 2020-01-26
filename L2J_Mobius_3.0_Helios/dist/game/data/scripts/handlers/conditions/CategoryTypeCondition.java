@@ -19,7 +19,7 @@ package handlers.conditions;
 import java.util.List;
 
 import org.l2jmobius.gameserver.enums.CategoryType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.ICondition;
@@ -31,7 +31,7 @@ public class CategoryTypeCondition implements ICondition
 {
 	private final List<CategoryType> _categoryTypes;
 	
-	public CategoryTypeCondition(StatsSet params)
+	public CategoryTypeCondition(StatSet params)
 	{
 		_categoryTypes = params.getEnumList("category", CategoryType.class);
 	}

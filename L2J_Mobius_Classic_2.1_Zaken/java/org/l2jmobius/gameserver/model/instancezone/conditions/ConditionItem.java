@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.instancezone.conditions;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
@@ -32,7 +32,7 @@ public class ConditionItem extends Condition
 	private final long _count;
 	private final boolean _take;
 	
-	public ConditionItem(InstanceTemplate template, StatsSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
+	public ConditionItem(InstanceTemplate template, StatSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
 	{
 		super(template, parameters, onlyLeader, showMessageAndHtml);
 		// Load params

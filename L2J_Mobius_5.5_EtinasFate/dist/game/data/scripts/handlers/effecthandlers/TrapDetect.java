@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -31,7 +31,7 @@ public class TrapDetect extends AbstractEffect
 {
 	private final int _power;
 	
-	public TrapDetect(StatsSet params)
+	public TrapDetect(StatSet params)
 	{
 		if (params.isEmpty())
 		{

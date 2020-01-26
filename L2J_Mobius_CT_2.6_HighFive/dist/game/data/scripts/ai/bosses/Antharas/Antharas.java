@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -137,7 +137,7 @@ public class Antharas extends AbstractNpcAI
 		addAttackId(ANTHARAS, BOMBER, BEHEMOTH, TERASQUE);
 		addKillId(ANTHARAS, TERASQUE, BEHEMOTH);
 		
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ANTHARAS);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(ANTHARAS);
 		final double curr_hp = info.getDouble("currentHP");
 		final double curr_mp = info.getDouble("currentMP");
 		final int loc_x = info.getInt("loc_x");
@@ -762,7 +762,7 @@ public class Antharas extends AbstractNpcAI
 	
 	private void setRespawn(long respawnTime)
 	{
-		GrandBossManager.getInstance().getStatsSet(ANTHARAS).set("respawn_time", System.currentTimeMillis() + respawnTime);
+		GrandBossManager.getInstance().getStatSet(ANTHARAS).set("respawn_time", System.currentTimeMillis() + respawnTime);
 	}
 	
 	private final void refreshAiParams(PlayerInstance attacker, int damage)

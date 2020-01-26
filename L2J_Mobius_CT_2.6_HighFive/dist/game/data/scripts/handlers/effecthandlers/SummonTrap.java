@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -34,7 +34,7 @@ public class SummonTrap extends AbstractEffect
 	private final int _despawnTime;
 	private final int _npcId;
 	
-	public SummonTrap(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public SummonTrap(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -36,7 +36,7 @@ public class RandomizeHate extends AbstractEffect
 {
 	private final int _chance;
 	
-	public RandomizeHate(StatsSet params)
+	public RandomizeHate(StatSet params)
 	{
 		_chance = params.getInt("chance", 100);
 	}

@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.enums.SubclassInfoType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -40,7 +40,7 @@ public class ClassChange extends AbstractEffect
 	private final int _index;
 	private static final int IDENTITY_CRISIS_SKILL_ID = 1570;
 	
-	public ClassChange(StatsSet params)
+	public ClassChange(StatSet params)
 	{
 		_index = params.getInt("index", 0);
 	}

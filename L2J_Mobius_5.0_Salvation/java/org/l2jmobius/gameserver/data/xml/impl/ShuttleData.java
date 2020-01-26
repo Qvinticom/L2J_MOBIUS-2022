@@ -29,7 +29,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.VehiclePathPoint;
 import org.l2jmobius.gameserver.model.actor.instance.ShuttleInstance;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
@@ -72,7 +72,7 @@ public class ShuttleData implements IXmlReader
 	public void parseDocument(Document doc, File f)
 	{
 		NamedNodeMap attrs;
-		StatsSet set;
+		StatSet set;
 		Node att;
 		ShuttleDataHolder data;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
@@ -84,7 +84,7 @@ public class ShuttleData implements IXmlReader
 					if ("shuttle".equalsIgnoreCase(d.getNodeName()))
 					{
 						attrs = d.getAttributes();
-						set = new StatsSet();
+						set = new StatSet();
 						for (int i = 0; i < attrs.getLength(); i++)
 						{
 							att = attrs.item(i);
@@ -164,7 +164,7 @@ public class ShuttleData implements IXmlReader
 	{
 		for (ShuttleDataHolder data : _shuttles.values())
 		{
-			final ShuttleInstance shuttle = new ShuttleInstance(new CreatureTemplate(new StatsSet()));
+			final ShuttleInstance shuttle = new ShuttleInstance(new CreatureTemplate(new StatSet()));
 			shuttle.setData(data);
 			shuttle.setHeading(data.getLocation().getHeading());
 			shuttle.setLocationInvisible(data.getLocation());

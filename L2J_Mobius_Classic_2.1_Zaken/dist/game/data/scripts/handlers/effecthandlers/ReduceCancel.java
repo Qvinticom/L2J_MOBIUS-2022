@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
  */
 public class ReduceCancel extends AbstractStatEffect
 {
-	public ReduceCancel(StatsSet params)
+	public ReduceCancel(StatSet params)
 	{
 		super(params, Stat.ATTACK_CANCEL);
 	}

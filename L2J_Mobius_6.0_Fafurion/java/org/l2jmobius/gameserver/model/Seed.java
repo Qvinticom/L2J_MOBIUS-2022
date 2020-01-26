@@ -35,7 +35,7 @@ public class Seed
 	private final long _seedReferencePrice;
 	private final long _cropReferencePrice;
 	
-	public Seed(StatsSet set)
+	public Seed(StatSet set)
 	{
 		_cropId = set.getInt("id");
 		_seedId = set.getInt("seedId");

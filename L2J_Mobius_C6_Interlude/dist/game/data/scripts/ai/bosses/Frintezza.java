@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
@@ -310,7 +310,7 @@ public class Frintezza extends Quest
 		addStartNpc(CUBE);
 		addTalkId(CUBE);
 		
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(FRINTEZZA);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(FRINTEZZA);
 		final Integer status = GrandBossManager.getInstance().getBossStatus(FRINTEZZA);
 		if (status == DEAD)
 		{
@@ -1741,9 +1741,9 @@ public class Frintezza extends Quest
 				final long respawnTime = (Config.FRINTEZZA_RESP_FIRST + Rnd.get(Config.FRINTEZZA_RESP_SECOND)) * 3600000;
 				startQuestTimer("frintezza_unlock", respawnTime, npc, null);
 				// also save the respawn time so that the info is maintained past reboots
-				final StatsSet info = GrandBossManager.getInstance().getStatsSet(FRINTEZZA);
+				final StatSet info = GrandBossManager.getInstance().getStatSet(FRINTEZZA);
 				info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-				GrandBossManager.getInstance().setStatsSet(FRINTEZZA, info);
+				GrandBossManager.getInstance().setStatSet(FRINTEZZA, info);
 			}
 		}
 		else if (npc.getNpcId() == 18328)

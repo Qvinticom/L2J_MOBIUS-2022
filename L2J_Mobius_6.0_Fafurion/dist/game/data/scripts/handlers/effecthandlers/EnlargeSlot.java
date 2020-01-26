@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.StorageType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -33,7 +33,7 @@ public class EnlargeSlot extends AbstractEffect
 	private final StorageType _type;
 	private final double _amount;
 	
-	public EnlargeSlot(StatsSet params)
+	public EnlargeSlot(StatSet params)
 	{
 		_amount = params.getDouble("amount", 0);
 		_type = params.getEnum("type", StorageType.class, StorageType.INVENTORY_NORMAL);

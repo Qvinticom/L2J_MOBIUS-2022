@@ -19,7 +19,7 @@ package handlers.skillconditionhandlers;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.Weapon;
@@ -34,7 +34,7 @@ public class OpTargetWeaponAttackTypeSkillCondition implements ISkillCondition
 {
 	private final List<WeaponType> _weaponTypes = new ArrayList<>();
 	
-	public OpTargetWeaponAttackTypeSkillCondition(StatsSet params)
+	public OpTargetWeaponAttackTypeSkillCondition(StatSet params)
 	{
 		final List<String> weaponTypes = params.getList("weaponType", String.class);
 		if (weaponTypes != null)

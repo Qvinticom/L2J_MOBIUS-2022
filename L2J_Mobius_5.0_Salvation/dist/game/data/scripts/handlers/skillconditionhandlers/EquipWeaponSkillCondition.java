@@ -18,7 +18,7 @@ package handlers.skillconditionhandlers;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -33,7 +33,7 @@ public class EquipWeaponSkillCondition implements ISkillCondition
 {
 	private int _weaponTypesMask = 0;
 	
-	public EquipWeaponSkillCondition(StatsSet params)
+	public EquipWeaponSkillCondition(StatSet params)
 	{
 		final List<WeaponType> weaponTypes = params.getEnumList("weaponType", WeaponType.class);
 		if (weaponTypes != null)

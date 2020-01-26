@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
@@ -50,10 +50,10 @@ public class Armor extends Item
 	 * <LI>_pDef & _mDef</LI>
 	 * <LI>_mpBonus & _hpBonus</LI>
 	 * @param type : ArmorType designating the type of armor
-	 * @param set : StatsSet designating the set of couples (key,value) caracterizing the armor
+	 * @param set : StatSet designating the set of couples (key,value) caracterizing the armor
 	 * @see Item constructor
 	 */
-	public Armor(ArmorType type, StatsSet set)
+	public Armor(ArmorType type, StatSet set)
 	{
 		super(type, set);
 		_avoidModifier = set.getInt("avoid_modify");

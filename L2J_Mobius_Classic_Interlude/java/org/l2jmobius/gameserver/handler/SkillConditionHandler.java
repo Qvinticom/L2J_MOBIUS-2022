@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
 import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
 
@@ -29,14 +29,14 @@ import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
  */
 public class SkillConditionHandler
 {
-	private final Map<String, Function<StatsSet, ISkillCondition>> _skillConditionHandlerFactories = new HashMap<>();
+	private final Map<String, Function<StatSet, ISkillCondition>> _skillConditionHandlerFactories = new HashMap<>();
 	
-	public void registerHandler(String name, Function<StatsSet, ISkillCondition> handlerFactory)
+	public void registerHandler(String name, Function<StatSet, ISkillCondition> handlerFactory)
 	{
 		_skillConditionHandlerFactories.put(name, handlerFactory);
 	}
 	
-	public Function<StatsSet, ISkillCondition> getHandlerFactory(String name)
+	public Function<StatSet, ISkillCondition> getHandlerFactory(String name)
 	{
 		return _skillConditionHandlerFactories.get(name);
 	}

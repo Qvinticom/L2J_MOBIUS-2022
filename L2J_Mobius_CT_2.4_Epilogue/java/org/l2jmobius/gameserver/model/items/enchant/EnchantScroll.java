@@ -23,7 +23,7 @@ import java.util.logging.Level;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemGroupsData;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
@@ -40,7 +40,7 @@ public class EnchantScroll extends AbstractEnchantItem
 	private final int _scrollGroupId;
 	private Set<Integer> _items;
 	
-	public EnchantScroll(StatsSet set)
+	public EnchantScroll(StatSet set)
 	{
 		super(set);
 		_scrollGroupId = set.getInt("scrollGroupId", 0);

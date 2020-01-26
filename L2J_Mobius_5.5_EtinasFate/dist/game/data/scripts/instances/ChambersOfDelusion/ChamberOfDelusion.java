@@ -29,7 +29,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -350,7 +350,7 @@ public class ChamberOfDelusion extends AbstractInstance
 	
 	protected void changeRoom(Instance world)
 	{
-		final StatsSet params = world.getParameters();
+		final StatSet params = world.getParameters();
 		final List<Location> locations = world.getEnterLocations();
 		
 		int newRoom = params.getInt("currentRoom", 0);

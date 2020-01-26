@@ -6530,14 +6530,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 								
 								if (bossTemplate.getType().equals("RaidBoss"))
 								{
-									if (RaidBossSpawnManager.getInstance().getStatsSet(bossId) != null)
+									if (RaidBossSpawnManager.getInstance().getStatSet(bossId) != null)
 									{
 										bossInstance = RaidBossSpawnManager.getInstance().getBoss(bossId);
 									}
 								}
 								else if (bossTemplate.getType().equals("GrandBoss"))
 								{
-									if (GrandBossManager.getInstance().getStatsSet(bossId) != null)
+									if (GrandBossManager.getInstance().getStatSet(bossId) != null)
 									{
 										bossInstance = GrandBossManager.getInstance().getBoss(bossId);
 									}
@@ -8362,14 +8362,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 										
 										if (bossTemplate.getType().equals("RaidBoss"))
 										{
-											if (RaidBossSpawnManager.getInstance().getStatsSet(bossId) != null)
+											if (RaidBossSpawnManager.getInstance().getStatSet(bossId) != null)
 											{
 												bossInstance = RaidBossSpawnManager.getInstance().getBoss(bossId);
 											}
 										}
 										else if (bossTemplate.getType().equals("GrandBoss"))
 										{
-											if (GrandBossManager.getInstance().getStatsSet(bossId) != null)
+											if (GrandBossManager.getInstance().getStatSet(bossId) != null)
 											{
 												bossInstance = GrandBossManager.getInstance().getBoss(bossId);
 											}

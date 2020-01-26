@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.primeshop;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * @author UnAfraid
@@ -49,7 +49,7 @@ public class PrimeShopGroup
 	private final int _availableCount;
 	private final List<PrimeShopItem> _items;
 	
-	public PrimeShopGroup(StatsSet set, List<PrimeShopItem> items)
+	public PrimeShopGroup(StatSet set, List<PrimeShopItem> items)
 	{
 		_brId = set.getInt("id");
 		_category = set.getInt("cat", 0);

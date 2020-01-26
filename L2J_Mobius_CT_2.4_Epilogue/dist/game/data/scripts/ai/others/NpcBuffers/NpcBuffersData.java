@@ -28,7 +28,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * @author UnAfraid
@@ -52,7 +52,7 @@ public class NpcBuffersData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		StatsSet set;
+		StatSet set;
 		Node attr;
 		NamedNodeMap attrs;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
@@ -73,7 +73,7 @@ public class NpcBuffersData implements IXmlReader
 								case "skill":
 								{
 									attrs = c.getAttributes();
-									set = new StatsSet();
+									set = new StatSet();
 									for (int i = 0; i < attrs.getLength(); i++)
 									{
 										attr = attrs.item(i);

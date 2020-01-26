@@ -26,7 +26,7 @@ import java.util.logging.Level;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.items.Armor;
 import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -104,7 +104,7 @@ final class DocumentItem extends DocumentBase
 	}
 	
 	@Override
-	protected StatsSet getStatsSet()
+	protected StatSet getStatSet()
 	{
 		return _currentItem.set;
 	}
@@ -157,7 +157,7 @@ final class DocumentItem extends DocumentBase
 		
 		_currentItem.id = itemId;
 		_currentItem.name = itemName;
-		_currentItem.set = new StatsSet();
+		_currentItem.set = new StatSet();
 		_currentItem.set.set("item_id", itemId);
 		_currentItem.set.set("name", itemName);
 		

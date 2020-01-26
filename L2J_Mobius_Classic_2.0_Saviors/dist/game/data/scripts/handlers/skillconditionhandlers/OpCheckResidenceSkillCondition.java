@@ -19,7 +19,7 @@ package handlers.skillconditionhandlers;
 import java.util.List;
 
 import org.l2jmobius.gameserver.data.xml.impl.ClanHallData;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -35,7 +35,7 @@ public class OpCheckResidenceSkillCondition implements ISkillCondition
 	private final List<Integer> _residencesId;
 	private final boolean _isWithin;
 	
-	public OpCheckResidenceSkillCondition(StatsSet params)
+	public OpCheckResidenceSkillCondition(StatSet params)
 	{
 		_residencesId = params.getList("residencesId", Integer.class);
 		_isWithin = params.getBoolean("isWithin");

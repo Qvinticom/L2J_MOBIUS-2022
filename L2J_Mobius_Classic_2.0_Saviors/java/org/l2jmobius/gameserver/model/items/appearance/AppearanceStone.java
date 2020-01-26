@@ -23,7 +23,7 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.AppearanceHolder;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -54,7 +54,7 @@ public class AppearanceStone
 	private List<Race> _racesNot;
 	private List<AppearanceHolder> _allVisualIds;
 	
-	public AppearanceStone(StatsSet set)
+	public AppearanceStone(StatSet set)
 	{
 		_id = set.getInt("id");
 		_visualId = set.getInt("visualId", 0);

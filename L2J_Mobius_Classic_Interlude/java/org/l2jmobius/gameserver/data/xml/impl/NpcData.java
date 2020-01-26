@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.enums.AISkillScope;
 import org.l2jmobius.gameserver.enums.DropType;
 import org.l2jmobius.gameserver.enums.MpRewardAffectType;
 import org.l2jmobius.gameserver.enums.MpRewardType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.DropHolder;
@@ -97,7 +97,7 @@ public class NpcData implements IXmlReader
 					if ("npc".equalsIgnoreCase(listNode.getNodeName()))
 					{
 						NamedNodeMap attrs = listNode.getAttributes();
-						final StatsSet set = new StatsSet(new HashMap<>());
+						final StatSet set = new StatSet(new HashMap<>());
 						final int npcId = parseInteger(attrs, "id");
 						Map<String, Object> parameters = null;
 						Map<Integer, Skill> skills = null;
@@ -524,11 +524,11 @@ public class NpcData implements IXmlReader
 						if (parameters != null)
 						{
 							// Using unmodifiable map parameters of template are not meant to be changed at runtime.
-							template.setParameters(new StatsSet(Collections.unmodifiableMap(parameters)));
+							template.setParameters(new StatSet(Collections.unmodifiableMap(parameters)));
 						}
 						else
 						{
-							template.setParameters(StatsSet.EMPTY_STATSET);
+							template.setParameters(StatSet.EMPTY_STATSET);
 						}
 						
 						if (skills != null)

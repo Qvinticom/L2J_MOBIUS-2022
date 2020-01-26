@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -35,7 +35,7 @@ public class CallRandomSkill extends AbstractEffect
 {
 	private final List<SkillHolder> _skills = new ArrayList<>();
 	
-	public CallRandomSkill(StatsSet params)
+	public CallRandomSkill(StatSet params)
 	{
 		final String skills = params.getString("skills", null);
 		if (skills != null)

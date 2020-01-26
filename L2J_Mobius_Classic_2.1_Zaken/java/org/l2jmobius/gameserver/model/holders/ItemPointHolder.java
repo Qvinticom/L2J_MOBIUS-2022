@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.holders;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * @author Sdw
@@ -25,7 +25,7 @@ public class ItemPointHolder extends ItemHolder
 {
 	private final int _points;
 	
-	public ItemPointHolder(StatsSet params)
+	public ItemPointHolder(StatSet params)
 	{
 		this(params.getInt("id"), params.getLong("count"), params.getInt("points"));
 	}

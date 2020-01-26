@@ -16,7 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
@@ -29,7 +29,7 @@ public class OpHaveSummonedNpcSkillCondition implements ISkillCondition
 {
 	private final int _npcId;
 	
-	public OpHaveSummonedNpcSkillCondition(StatsSet params)
+	public OpHaveSummonedNpcSkillCondition(StatSet params)
 	{
 		_npcId = params.getInt("npcId");
 	}

@@ -28,7 +28,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.items.PlayerItemTemplate;
 
@@ -91,7 +91,7 @@ public class InitialEquipmentData implements IXmlReader
 		{
 			if ("item".equalsIgnoreCase(c.getNodeName()))
 			{
-				final StatsSet set = new StatsSet();
+				final StatSet set = new StatSet();
 				attrs = c.getAttributes();
 				for (int i = 0; i < attrs.getLength(); i++)
 				{

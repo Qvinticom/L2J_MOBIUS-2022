@@ -21,7 +21,7 @@ import java.util.List;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -39,7 +39,7 @@ public class SkillCreateItem extends Skill
 	private final int _createItemCount;
 	private final int _randomCount;
 	
-	public SkillCreateItem(StatsSet set)
+	public SkillCreateItem(StatSet set)
 	{
 		super(set);
 		_createItemId = set.getList("create_item_id", Integer.class);

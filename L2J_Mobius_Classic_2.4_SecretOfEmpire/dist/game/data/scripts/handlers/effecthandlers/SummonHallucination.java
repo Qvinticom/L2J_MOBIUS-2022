@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.DoppelgangerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -37,7 +37,7 @@ public class SummonHallucination extends AbstractEffect
 	private final int _npcId;
 	private final int _npcCount;
 	
-	public SummonHallucination(StatsSet params)
+	public SummonHallucination(StatSet params)
 	{
 		_despawnDelay = params.getInt("despawnDelay", 20000);
 		_npcId = params.getInt("npcId", 0);

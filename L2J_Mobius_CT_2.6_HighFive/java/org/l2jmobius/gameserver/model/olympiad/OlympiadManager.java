@@ -26,7 +26,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -497,10 +497,10 @@ public class OlympiadManager
 			return false;
 		}
 		
-		StatsSet statDat = Olympiad.getNobleStats(charId);
+		StatSet statDat = Olympiad.getNobleStats(charId);
 		if (statDat == null)
 		{
-			statDat = new StatsSet();
+			statDat = new StatSet();
 			statDat.set(Olympiad.CLASS_ID, noble.getBaseClass());
 			statDat.set(Olympiad.CHAR_NAME, noble.getName());
 			statDat.set(Olympiad.POINTS, Olympiad.DEFAULT_POINTS);

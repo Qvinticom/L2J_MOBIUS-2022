@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.MountType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -35,7 +35,7 @@ public class Feed extends AbstractEffect
 	private final int _ride;
 	private final int _wyvern;
 	
-	public Feed(StatsSet params)
+	public Feed(StatSet params)
 	{
 		_normal = params.getInt("normal", 0);
 		_ride = params.getInt("ride", 0);

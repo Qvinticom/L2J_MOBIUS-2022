@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.instancezone.conditions;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
@@ -32,7 +32,7 @@ public class ConditionLevel extends Condition
 	private final int _min;
 	private final int _max;
 	
-	public ConditionLevel(InstanceTemplate template, StatsSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
+	public ConditionLevel(InstanceTemplate template, StatSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
 	{
 		super(template, parameters, onlyLeader, showMessageAndHtml);
 		// Load params

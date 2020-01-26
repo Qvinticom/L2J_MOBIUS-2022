@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.impl.CubicData;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.CubicTemplate;
@@ -42,7 +42,7 @@ public class SummonCubic extends AbstractEffect
 	private final int _cubicId;
 	private final int _cubicLvl;
 	
-	public SummonCubic(StatsSet params)
+	public SummonCubic(StatSet params)
 	{
 		_cubicId = params.getInt("cubicId", -1);
 		_cubicLvl = params.getInt("cubicLvl", 0);

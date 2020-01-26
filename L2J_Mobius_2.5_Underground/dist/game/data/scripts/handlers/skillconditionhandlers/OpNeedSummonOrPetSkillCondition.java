@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -34,7 +34,7 @@ public class OpNeedSummonOrPetSkillCondition implements ISkillCondition
 {
 	private final List<Integer> _npcIds = new ArrayList<>();
 	
-	public OpNeedSummonOrPetSkillCondition(StatsSet params)
+	public OpNeedSummonOrPetSkillCondition(StatSet params)
 	{
 		final List<String> npcIds = params.getList("npcIds", String.class);
 		if (npcIds != null)

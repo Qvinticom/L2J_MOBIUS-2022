@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.TeleportWhereType;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -116,7 +116,7 @@ public class Kelbim extends AbstractNpcAI
 		addKillId(KELBIM);
 		
 		// Unlock
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(KELBIM);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(KELBIM);
 		final int status = GrandBossManager.getInstance().getBossStatus(KELBIM);
 		if (status == DEAD)
 		{
@@ -429,9 +429,9 @@ public class Kelbim extends AbstractNpcAI
 		
 		GrandBossManager.getInstance().setBossStatus(KELBIM, DEAD);
 		final long respawnTime = (Config.KELBIM_SPAWN_INTERVAL + getRandom(-Config.KELBIM_SPAWN_RANDOM, Config.KELBIM_SPAWN_RANDOM)) * 3600000;
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(KELBIM);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(KELBIM);
 		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-		GrandBossManager.getInstance().setStatsSet(KELBIM, info);
+		GrandBossManager.getInstance().setStatSet(KELBIM, info);
 		
 		startQuestTimer("unlock_kelbim", respawnTime, null, null);
 		startQuestTimer("end_kelbim", 1800000, null, null);

@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.MountType;
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -175,7 +175,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 			final Instance world = npc.getInstanceWorld();
 			if (world != null)
 			{
-				final StatsSet params = world.getParameters();
+				final StatSet params = world.getParameters();
 				final Npc controller = params.getObject("controller", Npc.class);
 				final Npc freya = params.getObject("freya", Npc.class);
 				switch (event)
@@ -734,7 +734,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
 		{
-			final StatsSet params = world.getParameters();
+			final StatSet params = world.getParameters();
 			switch (npc.getId())
 			{
 				case FREYA_THRONE:
@@ -1069,7 +1069,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
 		{
-			final StatsSet params = world.getParameters();
+			final StatSet params = world.getParameters();
 			final Npc controller = params.getObject("controller", Npc.class);
 			switch (npc.getId())
 			{

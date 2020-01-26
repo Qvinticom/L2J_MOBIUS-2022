@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.cubic.conditions.ICubicCondition;
@@ -38,7 +38,7 @@ public class CubicSkill extends SkillHolder implements ICubicConditionHolder
 	private final List<ICubicCondition> _conditions = new ArrayList<>();
 	private final boolean _targetDebuff;
 	
-	public CubicSkill(StatsSet set)
+	public CubicSkill(StatSet set)
 	{
 		super(set.getInt("id"), set.getInt("level"));
 		_triggerRate = set.getInt("triggerRate", 100);

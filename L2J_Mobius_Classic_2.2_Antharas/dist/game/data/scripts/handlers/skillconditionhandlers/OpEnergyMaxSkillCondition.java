@@ -16,7 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
@@ -30,7 +30,7 @@ public class OpEnergyMaxSkillCondition implements ISkillCondition
 {
 	private final int _amount;
 	
-	public OpEnergyMaxSkillCondition(StatsSet params)
+	public OpEnergyMaxSkillCondition(StatSet params)
 	{
 		_amount = params.getInt("amount");
 	}

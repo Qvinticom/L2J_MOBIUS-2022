@@ -20,7 +20,7 @@ import java.util.EnumMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -34,7 +34,7 @@ public class ServitorShare extends AbstractEffect
 {
 	private final Map<Stat, Float> _sharedStats = new EnumMap<>(Stat.class);
 	
-	public ServitorShare(StatsSet params)
+	public ServitorShare(StatSet params)
 	{
 		if (params.isEmpty())
 		{

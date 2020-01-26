@@ -28,7 +28,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.PrimeShopProductHolder;
 
 /**
@@ -62,7 +62,7 @@ public class PrimeShopData implements IXmlReader
 	{
 		NamedNodeMap attrs;
 		Node att;
-		StatsSet set = null;
+		StatSet set = null;
 		for (Node a = doc.getFirstChild(); a != null; a = a.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(a.getNodeName()))
@@ -72,7 +72,7 @@ public class PrimeShopData implements IXmlReader
 					if ("product".equalsIgnoreCase(b.getNodeName()))
 					{
 						attrs = b.getAttributes();
-						set = new StatsSet();
+						set = new StatSet();
 						for (int i = 0; i < attrs.getLength(); i++)
 						{
 							att = attrs.item(i);

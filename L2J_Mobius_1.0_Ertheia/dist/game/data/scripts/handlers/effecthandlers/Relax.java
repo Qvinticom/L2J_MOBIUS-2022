@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
@@ -33,7 +33,7 @@ public class Relax extends AbstractEffect
 {
 	private final double _power;
 	
-	public Relax(StatsSet params)
+	public Relax(StatSet params)
 	{
 		_power = params.getDouble("power", 0);
 		setTicks(params.getInt("ticks"));

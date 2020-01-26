@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.items.enchant;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.model.items.type.ItemType;
 
@@ -30,7 +30,7 @@ public class EnchantSupportItem extends AbstractEnchantItem
 	private final boolean _isGiant;
 	private final ItemType type;
 	
-	public EnchantSupportItem(StatsSet set)
+	public EnchantSupportItem(StatSet set)
 	{
 		super(set);
 		type = getItem().getItemType();

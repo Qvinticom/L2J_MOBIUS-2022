@@ -21,7 +21,7 @@ import java.util.logging.Level;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.handler.TargetHandler;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -59,7 +59,7 @@ public class TriggerSkillByAttack extends AbstractEffect
 	 * @param params
 	 */
 	
-	public TriggerSkillByAttack(StatsSet params)
+	public TriggerSkillByAttack(StatSet params)
 	{
 		_minAttackerLevel = params.getInt("minAttackerLevel", 1);
 		_maxAttackerLevel = params.getInt("maxAttackerLevel", 127);

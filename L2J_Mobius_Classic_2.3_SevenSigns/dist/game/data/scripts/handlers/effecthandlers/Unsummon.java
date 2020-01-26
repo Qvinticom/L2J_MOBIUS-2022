@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -35,7 +35,7 @@ public class Unsummon extends AbstractEffect
 {
 	private final int _chance;
 	
-	public Unsummon(StatsSet params)
+	public Unsummon(StatSet params)
 	{
 		_chance = params.getInt("chance", -1);
 	}

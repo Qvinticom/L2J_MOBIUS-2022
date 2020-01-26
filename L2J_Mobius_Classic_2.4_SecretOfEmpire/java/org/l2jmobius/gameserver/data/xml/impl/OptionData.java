@@ -26,7 +26,7 @@ import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.handler.EffectHandler;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.options.Options;
 import org.l2jmobius.gameserver.model.options.OptionsSkillHolder;
@@ -71,7 +71,7 @@ public class OptionData implements IXmlReader
 						forEach(innerNode, "effect", effectNode ->
 						{
 							final String name = parseString(effectNode.getAttributes(), "name");
-							final StatsSet params = new StatsSet();
+							final StatSet params = new StatSet();
 							forEach(effectNode, IXmlReader::isNode, paramNode -> params.set(paramNode.getNodeName(), SkillData.getInstance().parseValue(paramNode, true, false, Collections.emptyMap())));
 							option.addEffect(EffectHandler.getInstance().getHandlerFactory(name).apply(params));
 						});

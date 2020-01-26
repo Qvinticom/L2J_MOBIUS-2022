@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -33,7 +33,7 @@ public class SkillSignet extends Skill
 	private final int _effectNpcId;
 	public int effectId;
 	
-	public SkillSignet(StatsSet set)
+	public SkillSignet(StatSet set)
 	{
 		super(set);
 		_effectNpcId = set.getInt("effectNpcId", -1);

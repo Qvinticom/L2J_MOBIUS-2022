@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -101,7 +101,7 @@ public class CastleTeleporter extends AbstractNpcAI
 				if (st.hasMoreTokens())
 				{
 					final int unknowInt = Integer.parseInt(st.nextToken());
-					final StatsSet npcParams = npc.getParameters();
+					final StatSet npcParams = npc.getParameters();
 					Location teleLoc = null;
 					switch (unknowInt)
 					{
@@ -191,7 +191,7 @@ public class CastleTeleporter extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private Location getTeleportLocation(StatsSet npcParams, String paramName1, String paramName2, String paramName3)
+	private Location getTeleportLocation(StatSet npcParams, String paramName1, String paramName2, String paramName3)
 	{
 		final Location loc;
 		if (getRandom(100) < 33)

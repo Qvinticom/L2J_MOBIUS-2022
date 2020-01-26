@@ -47,7 +47,7 @@ import org.l2jmobius.gameserver.enums.InstanceReenterType;
 import org.l2jmobius.gameserver.enums.InstanceRemoveBuffType;
 import org.l2jmobius.gameserver.enums.InstanceTeleportType;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
 import org.l2jmobius.gameserver.model.holders.InstanceReenterTimeHolder;
@@ -151,7 +151,7 @@ public class InstanceManager implements IXmlReader
 			return;
 		}
 		
-		final InstanceTemplate template = new InstanceTemplate(new StatsSet(parseAttributes(instanceNode)));
+		final InstanceTemplate template = new InstanceTemplate(new StatSet(parseAttributes(instanceNode)));
 		
 		// Update name if wasn't provided
 		if (template.getName() == null)
@@ -241,10 +241,10 @@ public class InstanceManager implements IXmlReader
 					{
 						if (doorNode.getNodeName().equals("door"))
 						{
-							final StatsSet parsedSet = DoorData.getInstance().parseDoor(doorNode);
-							final StatsSet mergedSet = new StatsSet();
+							final StatSet parsedSet = DoorData.getInstance().parseDoor(doorNode);
+							final StatSet mergedSet = new StatSet();
 							final int doorId = parsedSet.getInt("id");
-							final StatsSet templateSet = DoorData.getInstance().getDoorTemplate(doorId);
+							final StatSet templateSet = DoorData.getInstance().getDoorTemplate(doorId);
 							if (templateSet != null)
 							{
 								mergedSet.merge(templateSet);
@@ -324,14 +324,14 @@ public class InstanceManager implements IXmlReader
 							final boolean onlyLeader = parseBoolean(attrs, "onlyLeader", false);
 							final boolean showMessageAndHtml = parseBoolean(attrs, "showMessageAndHtml", false);
 							// Load parameters
-							StatsSet params = null;
+							StatSet params = null;
 							for (Node f = conditionNode.getFirstChild(); f != null; f = f.getNextSibling())
 							{
 								if (f.getNodeName().equals("param"))
 								{
 									if (params == null)
 									{
-										params = new StatsSet();
+										params = new StatSet();
 									}
 									
 									params.set(parseString(f.getAttributes(), "name"), parseString(f.getAttributes(), "value"));
@@ -341,14 +341,14 @@ public class InstanceManager implements IXmlReader
 							// If none parameters found then set empty StatSet
 							if (params == null)
 							{
-								params = StatsSet.EMPTY_STATSET;
+								params = StatSet.EMPTY_STATSET;
 							}
 							
 							// Now when everything is loaded register condition to template
 							try
 							{
 								final Class<?> clazz = Class.forName("org.l2jmobius.gameserver.model.instancezone.conditions.Condition" + type);
-								final Constructor<?> constructor = clazz.getConstructor(InstanceTemplate.class, StatsSet.class, boolean.class, boolean.class);
+								final Constructor<?> constructor = clazz.getConstructor(InstanceTemplate.class, StatSet.class, boolean.class, boolean.class);
 								conditions.add((Condition) constructor.newInstance(template, params, onlyLeader, showMessageAndHtml));
 							}
 							catch (Exception ex)
@@ -378,7 +378,7 @@ public class InstanceManager implements IXmlReader
 	 */
 	public Instance createInstance()
 	{
-		return new Instance(getNewInstanceId(), new InstanceTemplate(StatsSet.EMPTY_STATSET), null);
+		return new Instance(getNewInstanceId(), new InstanceTemplate(StatSet.EMPTY_STATSET), null);
 	}
 	
 	/**

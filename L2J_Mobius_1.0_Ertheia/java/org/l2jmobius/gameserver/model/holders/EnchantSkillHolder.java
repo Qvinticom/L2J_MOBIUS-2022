@@ -23,7 +23,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.l2jmobius.gameserver.enums.SkillEnchantType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 
 /**
@@ -37,7 +37,7 @@ public class EnchantSkillHolder
 	private final Map<SkillEnchantType, Integer> _chance = new EnumMap<>(SkillEnchantType.class);
 	private final Map<SkillEnchantType, Set<ItemHolder>> _requiredItems = new EnumMap<>(SkillEnchantType.class);
 	
-	public EnchantSkillHolder(StatsSet set)
+	public EnchantSkillHolder(StatSet set)
 	{
 		_level = set.getInt("level");
 		_enchantFailLevel = set.getInt("enchantFailLevel");

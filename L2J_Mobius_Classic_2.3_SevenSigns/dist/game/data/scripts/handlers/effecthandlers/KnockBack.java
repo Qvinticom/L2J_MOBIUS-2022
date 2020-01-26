@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -45,7 +45,7 @@ public class KnockBack extends AbstractEffect
 	private final boolean _knockDown;
 	private final FlyType _type;
 	
-	public KnockBack(StatsSet params)
+	public KnockBack(StatSet params)
 	{
 		_distance = params.getInt("distance", 50);
 		_speed = params.getInt("speed", 0);

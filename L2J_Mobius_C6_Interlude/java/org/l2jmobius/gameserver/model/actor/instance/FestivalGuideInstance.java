@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSignsFestival;
@@ -322,9 +322,9 @@ public class FestivalGuideInstance extends FolkInstance
 				case 4: // Current High Scores
 				{
 					final StringBuilder strBuffer = new StringBuilder("<html><body>Festival Guide:<br>These are the top scores of the week, for the ");
-					final StatsSet dawnData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DAWN, _festivalType);
-					final StatsSet duskData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DUSK, _festivalType);
-					final StatsSet overallData = SevenSignsFestival.getInstance().getOverallHighestScoreData(_festivalType);
+					final StatSet dawnData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DAWN, _festivalType);
+					final StatSet duskData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DUSK, _festivalType);
+					final StatSet overallData = SevenSignsFestival.getInstance().getOverallHighestScoreData(_festivalType);
 					final int dawnScore = dawnData.getInt("score");
 					final int duskScore = duskData.getInt("score");
 					int overallScore = 0;

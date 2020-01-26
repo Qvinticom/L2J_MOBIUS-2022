@@ -17,7 +17,7 @@
 package handlers.skillconditionhandlers;
 
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
@@ -30,7 +30,7 @@ public class TargetMyPartySkillCondition implements ISkillCondition
 {
 	private final boolean _includeMe;
 	
-	public TargetMyPartySkillCondition(StatsSet params)
+	public TargetMyPartySkillCondition(StatSet params)
 	{
 		_includeMe = params.getBoolean("includeMe");
 	}

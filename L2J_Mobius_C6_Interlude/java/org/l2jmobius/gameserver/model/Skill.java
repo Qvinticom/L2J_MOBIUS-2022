@@ -264,11 +264,11 @@ public abstract class Skill
 		
 		private final Class<? extends Skill> _class;
 		
-		public Skill makeSkill(StatsSet set)
+		public Skill makeSkill(StatSet set)
 		{
 			try
 			{
-				final Constructor<? extends Skill> c = _class.getConstructor(StatsSet.class);
+				final Constructor<? extends Skill> c = _class.getConstructor(StatSet.class);
 				
 				return c.newInstance(set);
 			}
@@ -512,7 +512,7 @@ public abstract class Skill
 	private final boolean _advancedFlag;
 	private final int _advancedMultiplier;
 	
-	protected Skill(StatsSet set)
+	protected Skill(StatSet set)
 	{
 		_id = set.getInt("skill_id", 0);
 		_level = set.getInt("level", 1);

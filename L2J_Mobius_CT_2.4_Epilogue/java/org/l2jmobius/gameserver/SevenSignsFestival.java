@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Party.MessageType;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.SpawnListener;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.TeleportWhereType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -780,10 +780,10 @@ public class SevenSignsFestival implements SpawnListener
 	private final Map<Integer, Long> _duskFestivalScores = new HashMap<>();
 	
 	/**
-	 * _festivalData is essentially an instance of the seven_signs_festival table and should be treated as such. Data is initially accessed by the related Seven Signs cycle, with _signsCycle representing data for the current round of Festivals. The actual table data is stored as a series of StatsSet
+	 * _festivalData is essentially an instance of the seven_signs_festival table and should be treated as such. Data is initially accessed by the related Seven Signs cycle, with _signsCycle representing data for the current round of Festivals. The actual table data is stored as a series of StatSet
 	 * constructs. These are accessed by the use of an offset based on the number of festivals, thus: offset = FESTIVAL_COUNT + festivalId (Data for Dawn is always accessed by offset > FESTIVAL_COUNT)
 	 */
-	private final Map<Integer, Map<Integer, StatsSet>> _festivalData = new HashMap<>();
+	private final Map<Integer, Map<Integer, StatSet>> _festivalData = new HashMap<>();
 	
 	protected SevenSignsFestival()
 	{
@@ -950,7 +950,7 @@ public class SevenSignsFestival implements SpawnListener
 				int festivalId = rs.getInt("festivalId");
 				final String cabal = rs.getString("cabal");
 				
-				final StatsSet festivalDat = new StatsSet();
+				final StatSet festivalDat = new StatSet();
 				festivalDat.set("festivalId", festivalId);
 				festivalDat.set("cabal", cabal);
 				festivalDat.set("cycle", festivalCycle);
@@ -963,7 +963,7 @@ public class SevenSignsFestival implements SpawnListener
 					festivalId += FESTIVAL_COUNT;
 				}
 				
-				final Map<Integer, StatsSet> tempData = _festivalData.getOrDefault(festivalCycle, new HashMap<>());
+				final Map<Integer, StatSet> tempData = _festivalData.getOrDefault(festivalCycle, new HashMap<>());
 				tempData.put(festivalId, festivalDat);
 				_festivalData.put(festivalCycle, tempData);
 			}
@@ -1017,9 +1017,9 @@ public class SevenSignsFestival implements SpawnListener
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement psInsert = con.prepareStatement("REPLACE INTO seven_signs_festival (festivalId, cabal, cycle, date, score, members) VALUES (?,?,?,?,?,?)"))
 		{
-			for (Map<Integer, StatsSet> currCycleData : _festivalData.values())
+			for (Map<Integer, StatSet> currCycleData : _festivalData.values())
 			{
-				for (StatsSet festivalDat : currCycleData.values())
+				for (StatSet festivalDat : currCycleData.values())
 				{
 					psInsert.setInt(1, festivalDat.getInt("festivalId"));
 					psInsert.setString(2, festivalDat.getString("cabal"));
@@ -1050,7 +1050,7 @@ public class SevenSignsFestival implements SpawnListener
 	protected void rewardHighestRanked()
 	{
 		String[] partyMembers;
-		StatsSet overallData = getOverallHighestScoreData(FESTIVAL_LEVEL_MAX_31);
+		StatSet overallData = getOverallHighestScoreData(FESTIVAL_LEVEL_MAX_31);
 		if (overallData != null)
 		{
 			partyMembers = overallData.getString("members").split(",");
@@ -1172,7 +1172,7 @@ public class SevenSignsFestival implements SpawnListener
 		_duskFestivalScores.clear();
 		
 		// Set up a new data set for the current cycle of festivals
-		final Map<Integer, StatsSet> newData = new HashMap<>();
+		final Map<Integer, StatSet> newData = new HashMap<>();
 		
 		for (int i = 0; i < (FESTIVAL_COUNT * 2); i++)
 		{
@@ -1183,8 +1183,8 @@ public class SevenSignsFestival implements SpawnListener
 				festivalId -= FESTIVAL_COUNT;
 			}
 			
-			// Create a new StatsSet with "default" data for Dusk
-			final StatsSet tempStats = new StatsSet();
+			// Create a new StatSet with "default" data for Dusk
+			final StatSet tempStats = new StatSet();
 			tempStats.set("festivalId", festivalId);
 			tempStats.set("cycle", _signsCycle);
 			tempStats.set("date", "0");
@@ -1465,9 +1465,9 @@ public class SevenSignsFestival implements SpawnListener
 	 * Returns a stats set containing the highest score <b>this cycle</b> for the the specified cabal and associated festival ID.
 	 * @param oracle
 	 * @param festivalId
-	 * @return StatsSet festivalDat
+	 * @return StatSet festivalDat
 	 */
-	public StatsSet getHighestScoreData(int oracle, int festivalId)
+	public StatSet getHighestScoreData(int oracle, int festivalId)
 	{
 		int offsetId = festivalId;
 		
@@ -1478,7 +1478,7 @@ public class SevenSignsFestival implements SpawnListener
 		
 		// Attempt to retrieve existing score data (if found), otherwise create a
 		// new blank data set and display a console warning.
-		StatsSet currData = null;
+		StatSet currData = null;
 		
 		try
 		{
@@ -1486,7 +1486,7 @@ public class SevenSignsFestival implements SpawnListener
 		}
 		catch (Exception e)
 		{
-			currData = new StatsSet();
+			currData = new StatSet();
 			currData.set("score", 0);
 			currData.set("members", "");
 		}
@@ -1497,16 +1497,16 @@ public class SevenSignsFestival implements SpawnListener
 	/**
 	 * Returns a stats set containing the highest ever recorded score data for the specified festival.
 	 * @param festivalId
-	 * @return StatsSet result
+	 * @return StatSet result
 	 */
-	public StatsSet getOverallHighestScoreData(int festivalId)
+	public StatSet getOverallHighestScoreData(int festivalId)
 	{
-		StatsSet result = null;
+		StatSet result = null;
 		int highestScore = 0;
 		
-		for (Map<Integer, StatsSet> currCycleData : _festivalData.values())
+		for (Map<Integer, StatSet> currCycleData : _festivalData.values())
 		{
-			for (StatsSet currFestData : currCycleData.values())
+			for (StatSet currFestData : currCycleData.values())
 			{
 				final int currFestID = currFestData.getInt("festivalId");
 				final int festivalScore = currFestData.getInt("score");
@@ -1560,7 +1560,7 @@ public class SevenSignsFestival implements SpawnListener
 			_duskFestivalScores.put(festivalId, offeringScore);
 		}
 		
-		final StatsSet currFestData = getHighestScoreData(oracle, festivalId);
+		final StatSet currFestData = getHighestScoreData(oracle, festivalId);
 		
 		// Check if this is the highest score for this level range so far for the player's cabal.
 		if (offeringScore > thisCabalHighScore)
@@ -1663,10 +1663,10 @@ public class SevenSignsFestival implements SpawnListener
 			return 0;
 		}
 		
-		final Map<Integer, StatsSet> festivalDataMap = _festivalData.get(_signsCycle);
+		final Map<Integer, StatSet> festivalDataMap = _festivalData.get(_signsCycle);
 		if (festivalDataMap != null)
 		{
-			for (StatsSet festivalData : festivalDataMap.values())
+			for (StatSet festivalData : festivalDataMap.values())
 			{
 				if (festivalData.getString("members").contains(playerName))
 				{

@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.EffectCalculationType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import org.l2jmobius.gameserver.model.conditions.Condition;
@@ -38,7 +38,7 @@ public class MaxHp extends AbstractEffect
 	private final EffectCalculationType _type;
 	private final boolean _heal;
 	
-	public MaxHp(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public MaxHp(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

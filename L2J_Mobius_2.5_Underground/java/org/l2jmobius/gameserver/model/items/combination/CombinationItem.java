@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.items.combination;
 import java.util.EnumMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * @author UnAfraid
@@ -31,7 +31,7 @@ public class CombinationItem
 	private final int _chance;
 	private final Map<CombinationItemType, CombinationItemReward> _rewards = new EnumMap<>(CombinationItemType.class);
 	
-	public CombinationItem(StatsSet set)
+	public CombinationItem(StatSet set)
 	{
 		_itemOne = set.getInt("one");
 		_itemTwo = set.getInt("two");

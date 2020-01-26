@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.actor.templates;
 
 import org.l2jmobius.gameserver.enums.DoorOpenType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 
 /**
@@ -57,7 +57,7 @@ public class DoorTemplate extends CreatureTemplate implements IIdentifiable
 	private final boolean _stealth;
 	private final boolean _isInverted;
 	
-	public DoorTemplate(StatsSet set)
+	public DoorTemplate(StatSet set)
 	{
 		super(set);
 		_doorId = set.getInt("id");

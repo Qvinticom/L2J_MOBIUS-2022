@@ -49,7 +49,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.MpRewardTask;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Spawn;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.FishermanInstance;
@@ -148,7 +148,7 @@ public class Npc extends Creature
 	private NpcStringId _titleString;
 	private NpcStringId _nameString;
 	
-	private StatsSet _params;
+	private StatSet _params;
 	private RaidBossStatus _raidStatus;
 	
 	/** Contains information about local tax payments. */
@@ -1756,7 +1756,7 @@ public class Npc extends Creature
 	/**
 	 * @return the parameters of the npc merged with the spawn parameters (if there are any)
 	 */
-	public StatsSet getParameters()
+	public StatSet getParameters()
 	{
 		if (_params != null)
 		{
@@ -1768,10 +1768,10 @@ public class Npc extends Creature
 			final NpcSpawnTemplate npcSpawnTemplate = _spawn.getNpcSpawnTemplate();
 			if ((npcSpawnTemplate != null) && (npcSpawnTemplate.getParameters() != null) && !npcSpawnTemplate.getParameters().isEmpty())
 			{
-				final StatsSet params = getTemplate().getParameters();
+				final StatSet params = getTemplate().getParameters();
 				if ((params != null) && !params.getSet().isEmpty())
 				{
-					final StatsSet set = new StatsSet();
+					final StatSet set = new StatSet();
 					set.merge(params);
 					set.merge(npcSpawnTemplate.getParameters());
 					_params = set;

@@ -22,7 +22,7 @@ import java.util.List;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
@@ -159,9 +159,9 @@ public abstract class Item
 	 * <LI>_referencePrice</LI>
 	 * <LI>_sellable</LI>
 	 * @param type : Enum designating the type of the item
-	 * @param set : StatsSet corresponding to a set of couples (key,value) for description of the item
+	 * @param set : StatSet corresponding to a set of couples (key,value) for description of the item
 	 */
-	protected Item(Enum<?> type, StatsSet set)
+	protected Item(Enum<?> type, StatSet set)
 	{
 		_type = type;
 		_itemId = set.getInt("item_id");

@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.ItemGrade;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -32,7 +32,7 @@ public class Crystallize extends AbstractEffect
 {
 	private final ItemGrade _grade;
 	
-	public Crystallize(StatsSet params)
+	public Crystallize(StatSet params)
 	{
 		_grade = params.getEnum("grade", ItemGrade.class);
 	}

@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import java.util.Collection;
 
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class Sweeper extends AbstractEffect
 {
-	public Sweeper(StatsSet params)
+	public Sweeper(StatSet params)
 	{
 	}
 	

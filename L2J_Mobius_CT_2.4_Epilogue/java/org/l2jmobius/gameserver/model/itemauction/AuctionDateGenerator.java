@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.itemauction;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * @author Forsaiken
@@ -40,7 +40,7 @@ public class AuctionDateGenerator
 	private int _hour_of_day;
 	private int _minute_of_hour;
 	
-	public AuctionDateGenerator(StatsSet config)
+	public AuctionDateGenerator(StatSet config)
 	{
 		_calendar = Calendar.getInstance();
 		_interval = config.getInt(FIELD_INTERVAL, -1);

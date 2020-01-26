@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -39,7 +39,7 @@ public class BlockActions extends AbstractEffect
 {
 	private final Set<Integer> _allowedSkills;
 	
-	public BlockActions(StatsSet params)
+	public BlockActions(StatSet params)
 	{
 		final String[] allowedSkills = params.getString("allowedSkills", "").split(";");
 		_allowedSkills = Arrays.stream(allowedSkills).filter(s -> !s.isEmpty()).map(Integer::parseInt).collect(Collectors.toSet());

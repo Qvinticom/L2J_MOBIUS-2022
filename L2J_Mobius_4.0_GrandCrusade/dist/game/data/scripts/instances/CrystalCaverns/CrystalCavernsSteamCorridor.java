@@ -19,7 +19,7 @@ package instances.CrystalCaverns;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -83,12 +83,12 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final StatsSet npcVars = npc.getVariables();
+			final StatSet npcVars = npc.getVariables();
 			
 			switch (event)
 			{
@@ -180,7 +180,7 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final StatsSet npcParams = npc.getParameters();
+			final StatSet npcParams = npc.getParameters();
 			
 			switch (npc.getId())
 			{
@@ -224,7 +224,7 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 		final Instance instance = receiver.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final StatsSet npcParams = receiver.getParameters();
+			final StatSet npcParams = receiver.getParameters();
 			
 			if (eventName.equals(String.valueOf(24220005 + npcParams.getInt("Terri_ID", 0))))
 			{
@@ -265,7 +265,7 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final StatsSet npcParams = npc.getParameters();
+			final StatSet npcParams = npc.getParameters();
 			final int killTarget = instance.getParameters().getInt("KILL_TARGET", 5);
 			int currentKillCount = instance.getParameters().getInt("KILL_COUNT", 0);
 			
@@ -377,7 +377,7 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 		
 		if (isInInstance(instance) && creature.isPlayer())
 		{
-			final StatsSet npcParams = npc.getParameters();
+			final StatSet npcParams = npc.getParameters();
 			
 			switch (npc.getId())
 			{

@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -32,7 +32,7 @@ public class Teleport extends AbstractEffect
 {
 	private final Location _loc;
 	
-	public Teleport(StatsSet params)
+	public Teleport(StatSet params)
 	{
 		_loc = new Location(params.getInt("x", 0), params.getInt("y", 0), params.getInt("z", 0));
 	}

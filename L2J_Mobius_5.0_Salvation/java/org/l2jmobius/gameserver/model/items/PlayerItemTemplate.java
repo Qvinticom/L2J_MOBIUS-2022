@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.items;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 
 /**
@@ -29,7 +29,7 @@ public class PlayerItemTemplate extends ItemHolder
 	/**
 	 * @param set the set containing the values for this object
 	 */
-	public PlayerItemTemplate(StatsSet set)
+	public PlayerItemTemplate(StatSet set)
 	{
 		super(set.getInt("id"), set.getInt("count"));
 		_equipped = set.getBoolean("equipped", false);

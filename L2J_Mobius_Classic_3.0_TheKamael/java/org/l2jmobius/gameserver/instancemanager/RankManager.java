@@ -28,7 +28,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Hero;
 
@@ -47,10 +47,10 @@ public class RankManager
 	private static final String GET_CURRENT_CYCLE_DATA = "SELECT characters.char_name, characters.level, characters.base_class, characters.clanid, olympiad_nobles.charId, olympiad_nobles.olympiad_points, olympiad_nobles.competitions_won, olympiad_nobles.competitions_lost FROM characters, olympiad_nobles WHERE characters.charId = olympiad_nobles.charId ORDER BY olympiad_nobles.olympiad_points DESC LIMIT " + PLAYER_LIMIT;
 	private static final String GET_CHARACTERS_BY_CLASS = "SELECT characters.charId, olympiad_nobles.olympiad_points FROM characters, olympiad_nobles WHERE olympiad_nobles.charId = characters.charId AND characters.base_class = ? ORDER BY olympiad_nobles.olympiad_points DESC LIMIT " + PLAYER_LIMIT;
 	
-	private final Map<Integer, StatsSet> _mainList = new ConcurrentHashMap<>();
-	private Map<Integer, StatsSet> _snapshotList = new ConcurrentHashMap<>();
-	private final Map<Integer, StatsSet> _mainOlyList = new ConcurrentHashMap<>();
-	private Map<Integer, StatsSet> _snapshotOlyList = new ConcurrentHashMap<>();
+	private final Map<Integer, StatSet> _mainList = new ConcurrentHashMap<>();
+	private Map<Integer, StatSet> _snapshotList = new ConcurrentHashMap<>();
+	private final Map<Integer, StatSet> _mainOlyList = new ConcurrentHashMap<>();
+	private Map<Integer, StatSet> _snapshotOlyList = new ConcurrentHashMap<>();
 	
 	protected RankManager()
 	{
@@ -73,7 +73,7 @@ public class RankManager
 				int i = 1;
 				while (rset.next())
 				{
-					final StatsSet player = new StatsSet();
+					final StatSet player = new StatSet();
 					final int charId = rset.getInt("charId");
 					player.set("charId", charId);
 					player.set("name", rset.getString("char_name"));
@@ -112,7 +112,7 @@ public class RankManager
 				int i = 1;
 				while (rset.next())
 				{
-					final StatsSet player = new StatsSet();
+					final StatSet player = new StatSet();
 					final int charId = rset.getInt("charId");
 					player.set("charId", charId);
 					player.set("name", rset.getString("char_name"));
@@ -142,7 +142,7 @@ public class RankManager
 					
 					if (Hero.getInstance().getCompleteHeroes().containsKey(charId))
 					{
-						final StatsSet hero = Hero.getInstance().getCompleteHeroes().get(charId);
+						final StatSet hero = Hero.getInstance().getCompleteHeroes().get(charId);
 						player.set("count", hero.getInt("count"));
 						player.set("legend_count", hero.getInt("legend_count"));
 					}
@@ -165,7 +165,7 @@ public class RankManager
 		}
 	}
 	
-	private void loadClassRank(int charId, int classId, StatsSet player)
+	private void loadClassRank(int charId, int classId, StatSet player)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(GET_CHARACTERS_BY_CLASS))
@@ -194,7 +194,7 @@ public class RankManager
 		}
 	}
 	
-	private void loadRaceRank(int charId, int race, StatsSet player)
+	private void loadRaceRank(int charId, int race, StatSet player)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(SELECT_CHARACTERS_BY_RACE))
@@ -223,22 +223,22 @@ public class RankManager
 		}
 	}
 	
-	public Map<Integer, StatsSet> getRankList()
+	public Map<Integer, StatSet> getRankList()
 	{
 		return _mainList;
 	}
 	
-	public Map<Integer, StatsSet> getSnapshotList()
+	public Map<Integer, StatSet> getSnapshotList()
 	{
 		return _snapshotList;
 	}
 	
-	public Map<Integer, StatsSet> getOlyRankList()
+	public Map<Integer, StatSet> getOlyRankList()
 	{
 		return _mainOlyList;
 	}
 	
-	public Map<Integer, StatsSet> getSnapshotOlyList()
+	public Map<Integer, StatSet> getSnapshotOlyList()
 	{
 		return _snapshotOlyList;
 	}
@@ -246,9 +246,9 @@ public class RankManager
 	public int getPlayerGlobalRank(PlayerInstance player)
 	{
 		final int playerOid = player.getObjectId();
-		for (Entry<Integer, StatsSet> entry : _mainList.entrySet())
+		for (Entry<Integer, StatSet> entry : _mainList.entrySet())
 		{
-			final StatsSet stats = entry.getValue();
+			final StatSet stats = entry.getValue();
 			if (stats.getInt("charId") != playerOid)
 			{
 				continue;
@@ -261,7 +261,7 @@ public class RankManager
 	public int getPlayerRaceRank(PlayerInstance player)
 	{
 		final int playerOid = player.getObjectId();
-		for (StatsSet stats : _mainList.values())
+		for (StatSet stats : _mainList.values())
 		{
 			if (stats.getInt("charId") != playerOid)
 			{

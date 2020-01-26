@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class TeleportToTarget extends AbstractEffect
 {
-	public TeleportToTarget(StatsSet params)
+	public TeleportToTarget(StatSet params)
 	{
 	}
 	

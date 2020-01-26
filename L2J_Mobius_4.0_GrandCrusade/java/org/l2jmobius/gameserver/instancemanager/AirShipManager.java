@@ -28,7 +28,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.AirShipTeleportList;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.VehiclePathPoint;
 import org.l2jmobius.gameserver.model.actor.instance.AirShipInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ControllableAirShipInstance;
@@ -45,13 +45,13 @@ public class AirShipManager
 	private static final String UPDATE_DB = "UPDATE airships SET fuel=? WHERE owner_id=?";
 	
 	private CreatureTemplate _airShipTemplate = null;
-	private final Map<Integer, StatsSet> _airShipsInfo = new HashMap<>();
+	private final Map<Integer, StatSet> _airShipsInfo = new HashMap<>();
 	private final Map<Integer, AirShipInstance> _airShips = new HashMap<>();
 	private final Map<Integer, AirShipTeleportList> _teleports = new HashMap<>();
 	
 	protected AirShipManager()
 	{
-		final StatsSet npcDat = new StatsSet();
+		final StatSet npcDat = new StatSet();
 		npcDat.set("npcId", 9);
 		npcDat.set("level", 0);
 		npcDat.set("jClass", "boat");
@@ -113,7 +113,7 @@ public class AirShipManager
 	
 	public AirShipInstance getNewAirShip(int x, int y, int z, int heading, int ownerId)
 	{
-		final StatsSet info = _airShipsInfo.get(ownerId);
+		final StatSet info = _airShipsInfo.get(ownerId);
 		if (info == null)
 		{
 			return null;
@@ -147,7 +147,7 @@ public class AirShipManager
 		if (ship.getOwnerId() != 0)
 		{
 			storeInDb(ship.getOwnerId());
-			final StatsSet info = _airShipsInfo.get(ship.getOwnerId());
+			final StatSet info = _airShipsInfo.get(ship.getOwnerId());
 			if (info != null)
 			{
 				info.set("fuel", ship.getFuel());
@@ -164,7 +164,7 @@ public class AirShipManager
 	{
 		if (!_airShipsInfo.containsKey(ownerId))
 		{
-			final StatsSet info = new StatsSet();
+			final StatSet info = new StatSet();
 			info.set("fuel", 600);
 			
 			_airShipsInfo.put(ownerId, info);
@@ -264,10 +264,10 @@ public class AirShipManager
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery(LOAD_DB))
 		{
-			StatsSet info;
+			StatSet info;
 			while (rs.next())
 			{
-				info = new StatsSet();
+				info = new StatSet();
 				info.set("fuel", rs.getInt("fuel"));
 				_airShipsInfo.put(rs.getInt("owner_id"), info);
 			}
@@ -285,7 +285,7 @@ public class AirShipManager
 	
 	private void storeInDb(int ownerId)
 	{
-		final StatsSet info = _airShipsInfo.get(ownerId);
+		final StatSet info = _airShipsInfo.get(ownerId);
 		if (info == null)
 		{
 			return;

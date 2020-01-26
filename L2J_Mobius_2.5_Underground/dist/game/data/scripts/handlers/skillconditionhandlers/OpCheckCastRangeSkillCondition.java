@@ -17,7 +17,7 @@
 package handlers.skillconditionhandlers;
 
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
@@ -30,7 +30,7 @@ public class OpCheckCastRangeSkillCondition implements ISkillCondition
 {
 	private final int _distance;
 	
-	public OpCheckCastRangeSkillCondition(StatsSet params)
+	public OpCheckCastRangeSkillCondition(StatSet params)
 	{
 		_distance = params.getInt("distance");
 	}

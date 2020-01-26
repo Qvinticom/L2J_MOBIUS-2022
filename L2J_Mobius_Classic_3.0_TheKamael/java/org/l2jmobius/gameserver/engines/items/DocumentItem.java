@@ -31,7 +31,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.engines.DocumentBase;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.model.ExtractableProduct;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -57,7 +57,7 @@ public class DocumentItem extends DocumentBase implements IXmlReader
 	}
 	
 	@Override
-	protected StatsSet getStatsSet()
+	protected StatSet getStatSet()
 	{
 		return _currentItem.set;
 	}
@@ -111,7 +111,7 @@ public class DocumentItem extends DocumentBase implements IXmlReader
 		_currentItem.id = itemId;
 		_currentItem.name = itemName;
 		_currentItem.type = className;
-		_currentItem.set = new StatsSet();
+		_currentItem.set = new StatSet();
 		_currentItem.set.set("item_id", itemId);
 		_currentItem.set.set("name", itemName);
 		_currentItem.set.set("additionalName", additionalName);
@@ -218,7 +218,7 @@ public class DocumentItem extends DocumentBase implements IXmlReader
 		
 		try
 		{
-			final Constructor<?> itemClass = Class.forName("org.l2jmobius.gameserver.model.items." + _currentItem.type).getConstructor(StatsSet.class);
+			final Constructor<?> itemClass = Class.forName("org.l2jmobius.gameserver.model.items." + _currentItem.type).getConstructor(StatSet.class);
 			_currentItem.item = (Item) itemClass.newInstance(_currentItem.set);
 		}
 		catch (Exception e)

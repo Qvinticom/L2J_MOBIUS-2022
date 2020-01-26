@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.items;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
 
 /**
@@ -42,7 +42,7 @@ public class Henna
 	private final int _cancel_count;
 	private final List<ClassId> _wear_class;
 	
-	public Henna(StatsSet set)
+	public Henna(StatSet set)
 	{
 		_dyeId = set.getInt("dyeId");
 		_dyeItemId = set.getInt("dyeItemId");

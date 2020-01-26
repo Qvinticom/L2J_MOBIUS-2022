@@ -31,7 +31,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.RecipeInstance;
 import org.l2jmobius.gameserver.model.RecipeList;
 import org.l2jmobius.gameserver.model.RecipeStatInstance;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
@@ -82,7 +82,7 @@ public class RecipeData implements IXmlReader
 						Node att;
 						int id = -1;
 						boolean haveRare = false;
-						final StatsSet set = new StatsSet();
+						final StatSet set = new StatSet();
 						
 						att = attrs.getNamedItem("id");
 						if (att == null)

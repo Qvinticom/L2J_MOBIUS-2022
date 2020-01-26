@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.items.enchant;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 
 /**
@@ -26,7 +26,7 @@ public class EnchantSupportItem extends AbstractEnchantItem
 {
 	private final boolean _isWeapon;
 	
-	public EnchantSupportItem(StatsSet set)
+	public EnchantSupportItem(StatSet set)
 	{
 		super(set);
 		_isWeapon = getItem().getItemType() == EtcItemType.SCRL_INC_ENCHANT_PROP_WP;

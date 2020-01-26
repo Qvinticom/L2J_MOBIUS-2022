@@ -19,7 +19,7 @@ package ai.areas.Parnassus.EntrancePortalToCrystalCaverns;
 import java.util.Calendar;
 
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -107,7 +107,7 @@ public class EntrancePortalToCrystalCaverns extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("LOOP_TIMER"))
 		{

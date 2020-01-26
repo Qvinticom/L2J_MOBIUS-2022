@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.RecipeController;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class OpenCommonRecipeBook extends AbstractEffect
 {
-	public OpenCommonRecipeBook(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public OpenCommonRecipeBook(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 	}

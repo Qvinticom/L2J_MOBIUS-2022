@@ -25,7 +25,7 @@ import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.datatables.ItemTable;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.ClanShopProductHolder;
 import org.l2jmobius.gameserver.model.items.Item;
 
@@ -57,7 +57,7 @@ public class ClanShopData implements IXmlReader
 	{
 		forEach(doc, "list", listNode -> forEach(listNode, "clan", productNode ->
 		{
-			final StatsSet set = new StatsSet(parseAttributes(productNode));
+			final StatSet set = new StatSet(parseAttributes(productNode));
 			final int clanLevel = set.getInt("level");
 			final int itemId = set.getInt("item");
 			final int count = set.getInt("count");

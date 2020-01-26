@@ -16,7 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.ChestInstance;
@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class OpUnlockSkillCondition implements ISkillCondition
 {
-	public OpUnlockSkillCondition(StatsSet params)
+	public OpUnlockSkillCondition(StatSet params)
 	{
 		
 	}

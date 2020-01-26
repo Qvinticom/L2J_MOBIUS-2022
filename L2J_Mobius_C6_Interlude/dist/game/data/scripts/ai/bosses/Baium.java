@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -109,7 +109,7 @@ public class Baium extends Quest
 		addTalkId(STONE_BAIUM);
 		addTalkId(ANGELIC_VORTEX);
 		_zone = GrandBossManager.getInstance().getZone(113100, 14500, 10077);
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(LIVE_BAIUM);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(LIVE_BAIUM);
 		
 		final Integer status = GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM);
 		
@@ -430,9 +430,9 @@ public class Baium extends Quest
 			GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, DEAD);
 			startQuestTimer("baium_unlock", respawnTime, null, null);
 			// also save the respawn time so that the info is maintained past reboots
-			final StatsSet info = GrandBossManager.getInstance().getStatsSet(LIVE_BAIUM);
+			final StatSet info = GrandBossManager.getInstance().getStatSet(LIVE_BAIUM);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-			GrandBossManager.getInstance().setStatsSet(LIVE_BAIUM, info);
+			GrandBossManager.getInstance().setStatSet(LIVE_BAIUM, info);
 		}
 		
 		for (NpcInstance minion : _minions)

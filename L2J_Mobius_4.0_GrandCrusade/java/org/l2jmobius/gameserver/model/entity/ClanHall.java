@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.enums.ClanHallGrade;
 import org.l2jmobius.gameserver.enums.ClanHallType;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -75,7 +75,7 @@ public class ClanHall extends AbstractResidence
 	private static final String LOAD_CLANHALL = "SELECT * FROM clanhall WHERE id=?";
 	private static final String UPDATE_CLANHALL = "UPDATE clanhall SET ownerId=?,paidUntil=? WHERE id=?";
 	
-	public ClanHall(StatsSet params)
+	public ClanHall(StatSet params)
 	{
 		super(params.getInt("id"));
 		// Set static parameters

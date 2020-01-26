@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.Map;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.entity.Hero;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExHeroList implements IClientOutgoingPacket
 {
-	private final Map<Integer, StatsSet> _heroList;
+	private final Map<Integer, StatSet> _heroList;
 	
 	public ExHeroList()
 	{
@@ -42,7 +42,7 @@ public class ExHeroList implements IClientOutgoingPacket
 		OutgoingPackets.EX_HERO_LIST.writeId(packet);
 		
 		packet.writeD(_heroList.size());
-		for (StatsSet hero : _heroList.values())
+		for (StatSet hero : _heroList.values())
 		{
 			packet.writeS(hero.getString(Olympiad.CHAR_NAME));
 			packet.writeD(hero.getInt(Olympiad.CLASS_ID));

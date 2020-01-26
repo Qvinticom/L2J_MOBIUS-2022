@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -30,7 +30,7 @@ public class EnlargeAbnormalSlot extends AbstractEffect
 {
 	private final int _slots;
 	
-	public EnlargeAbnormalSlot(StatsSet params)
+	public EnlargeAbnormalSlot(StatSet params)
 	{
 		_slots = params.getInt("slots", 0);
 	}

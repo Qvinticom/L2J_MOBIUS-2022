@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.enums.AIType;
 import org.l2jmobius.gameserver.enums.DropType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.Sex;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.holders.DropHolder;
@@ -58,7 +58,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	private boolean _usingServerSideName;
 	private String _title;
 	private boolean _usingServerSideTitle;
-	private StatsSet _parameters;
+	private StatSet _parameters;
 	private Sex _sex;
 	private int _chestId;
 	private int _rhandId;
@@ -110,15 +110,15 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	
 	/**
 	 * Constructor of Creature.
-	 * @param set The StatsSet object to transfer data to the method
+	 * @param set The StatSet object to transfer data to the method
 	 */
-	public NpcTemplate(StatsSet set)
+	public NpcTemplate(StatSet set)
 	{
 		super(set);
 	}
 	
 	@Override
-	public void set(StatsSet set)
+	public void set(StatSet set)
 	{
 		super.set(set);
 		_id = set.getInt("id");
@@ -293,12 +293,12 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		return _usingServerSideTitle;
 	}
 	
-	public StatsSet getParameters()
+	public StatSet getParameters()
 	{
 		return _parameters;
 	}
 	
-	public void setParameters(StatsSet set)
+	public void setParameters(StatSet set)
 	{
 		_parameters = set;
 	}

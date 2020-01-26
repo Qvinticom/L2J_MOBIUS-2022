@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
 import org.l2jmobius.gameserver.model.actor.instance.FortCommanderInstance;
@@ -40,7 +40,7 @@ public class Fear extends AbstractEffect
 {
 	private static final int FEAR_RANGE = 500;
 	
-	public Fear(StatsSet params)
+	public Fear(StatSet params)
 	{
 		
 	}

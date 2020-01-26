@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.Position;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -33,7 +33,7 @@ public class CriticalRatePositionBonus extends AbstractEffect
 	private final double _amount;
 	private final Position _position;
 	
-	public CriticalRatePositionBonus(StatsSet params)
+	public CriticalRatePositionBonus(StatSet params)
 	{
 		_amount = params.getDouble("amount", 0);
 		_position = params.getEnum("position", Position.class, Position.FRONT);

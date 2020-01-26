@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.handler.SkillHandler;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -78,10 +78,10 @@ public class Weapon extends Item
 	 * <LI>_atkSpeed & _AtkReuse</LI>
 	 * <LI>_mpConsume</LI>
 	 * @param type : ArmorType designating the type of armor
-	 * @param set : StatsSet designating the set of couples (key,value) caracterizing the armor
+	 * @param set : StatSet designating the set of couples (key,value) caracterizing the armor
 	 * @see Item constructor
 	 */
-	public Weapon(WeaponType type, StatsSet set)
+	public Weapon(WeaponType type, StatSet set)
 	{
 		super(type, set);
 		_soulShotCount = set.getInt("soulshots");

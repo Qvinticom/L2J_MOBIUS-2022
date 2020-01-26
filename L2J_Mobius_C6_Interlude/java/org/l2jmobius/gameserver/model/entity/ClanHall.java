@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.instancemanager.AuctionManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -54,7 +54,7 @@ public class ClanHall
 	public static final int FUNC_DECO_CURTAINS = 8;
 	final int _clanHallId;
 	private final List<DoorInstance> _doors = new ArrayList<>();
-	private final List<StatsSet> _doorDefault = new ArrayList<>();
+	private final List<StatSet> _doorDefault = new ArrayList<>();
 	final String _name;
 	private int _ownerId;
 	private Clan _ownerClan;
@@ -866,7 +866,7 @@ public class ClanHall
 			while (rs.next())
 			{
 				// Create set of the door default for use when respawning dead doors
-				final StatsSet set = new StatsSet();
+				final StatSet set = new StatSet();
 				set.set("name", rs.getString("name"));
 				set.set("id", rs.getInt("id"));
 				set.set("x", rs.getInt("x"));

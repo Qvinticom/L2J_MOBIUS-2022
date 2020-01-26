@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Spawn;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.TeleportWhereType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -341,7 +341,7 @@ public class Anakim extends AbstractNpcAI
 		addSkillSeeId(ALL_MOBS);
 		
 		// Unlock
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ANAKIM);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(ANAKIM);
 		final int status = GrandBossManager.getInstance().getBossStatus(ANAKIM);
 		if (status == DEAD)
 		{
@@ -613,9 +613,9 @@ public class Anakim extends AbstractNpcAI
 			
 			GrandBossManager.getInstance().setBossStatus(ANAKIM, DEAD);
 			final long respawnTime = getRespawnTime();
-			final StatsSet info = GrandBossManager.getInstance().getStatsSet(ANAKIM);
+			final StatSet info = GrandBossManager.getInstance().getStatSet(ANAKIM);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-			GrandBossManager.getInstance().setStatsSet(ANAKIM, info);
+			GrandBossManager.getInstance().setStatSet(ANAKIM, info);
 			
 			startQuestTimer("unlock_anakim", respawnTime, null, null);
 			startQuestTimer("end_anakim", 900000, null, null);

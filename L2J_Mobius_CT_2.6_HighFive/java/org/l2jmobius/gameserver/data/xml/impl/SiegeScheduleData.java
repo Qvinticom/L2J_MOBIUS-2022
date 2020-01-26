@@ -28,7 +28,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.SiegeScheduleDate;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -51,7 +51,7 @@ public class SiegeScheduleData implements IXmlReader
 		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _scheduleData.size() + " siege schedulers.");
 		if (_scheduleData.isEmpty())
 		{
-			_scheduleData.add(new SiegeScheduleDate(new StatsSet()));
+			_scheduleData.add(new SiegeScheduleDate(new StatSet()));
 			LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Emergency Loaded: " + _scheduleData.size() + " default siege schedulers.");
 		}
 	}
@@ -69,7 +69,7 @@ public class SiegeScheduleData implements IXmlReader
 					{
 						case "schedule":
 						{
-							final StatsSet set = new StatsSet();
+							final StatSet set = new StatSet();
 							final NamedNodeMap attrs = cd.getAttributes();
 							for (int i = 0; i < attrs.getLength(); i++)
 							{

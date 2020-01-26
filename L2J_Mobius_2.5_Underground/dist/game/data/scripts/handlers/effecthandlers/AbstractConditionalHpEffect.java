@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
@@ -38,7 +38,7 @@ abstract class AbstractConditionalHpEffect extends AbstractStatEffect
 	private final int _hpPercent;
 	private final Map<Creature, AtomicBoolean> _updates = new ConcurrentHashMap<>();
 	
-	protected AbstractConditionalHpEffect(StatsSet params, Stat stat)
+	protected AbstractConditionalHpEffect(StatSet params, Stat stat)
 	{
 		super(params, stat);
 		_hpPercent = params.getInt("hpPercent", 0);

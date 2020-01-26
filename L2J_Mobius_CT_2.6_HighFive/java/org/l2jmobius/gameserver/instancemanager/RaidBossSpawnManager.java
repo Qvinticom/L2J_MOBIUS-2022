@@ -36,7 +36,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.datatables.SpawnTable;
 import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.model.Spawn;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 
 /**
@@ -49,7 +49,7 @@ public class RaidBossSpawnManager
 	
 	protected static final Map<Integer, RaidBossInstance> _bosses = new ConcurrentHashMap<>();
 	protected static final Map<Integer, Spawn> _spawns = new ConcurrentHashMap<>();
-	protected static final Map<Integer, StatsSet> _storedInfo = new ConcurrentHashMap<>();
+	protected static final Map<Integer, StatSet> _storedInfo = new ConcurrentHashMap<>();
 	protected static final Map<Integer, ScheduledFuture<?>> _schedules = new ConcurrentHashMap<>();
 	
 	/**
@@ -131,7 +131,7 @@ public class RaidBossSpawnManager
 			{
 				raidboss.setRaidStatus(RaidBossStatus.ALIVE);
 				
-				final StatsSet info = new StatsSet();
+				final StatSet info = new StatSet();
 				info.set("currentHP", raidboss.getCurrentHp());
 				info.set("currentMP", raidboss.getCurrentMp());
 				info.set("respawnTime", 0);
@@ -154,7 +154,7 @@ public class RaidBossSpawnManager
 	 */
 	public void updateStatus(RaidBossInstance boss, boolean isBossDead)
 	{
-		final StatsSet info = _storedInfo.get(boss.getId());
+		final StatSet info = _storedInfo.get(boss.getId());
 		if (info == null)
 		{
 			return;
@@ -225,7 +225,7 @@ public class RaidBossSpawnManager
 				
 				_bosses.put(bossId, raidboss);
 				
-				final StatsSet info = new StatsSet();
+				final StatSet info = new StatSet();
 				info.set("currentHP", currentHP);
 				info.set("currentMP", currentMP);
 				info.set("respawnTime", 0);
@@ -324,7 +324,7 @@ public class RaidBossSpawnManager
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE raidboss_spawnlist SET respawn_time = ?, currentHP = ?, currentMP = ? WHERE boss_id = ?"))
 		{
-			for (Entry<Integer, StatsSet> entry : _storedInfo.entrySet())
+			for (Entry<Integer, StatSet> entry : _storedInfo.entrySet())
 			{
 				final Integer bossId = entry.getKey();
 				if (bossId == null)
@@ -343,7 +343,7 @@ public class RaidBossSpawnManager
 					updateStatus(boss, false);
 				}
 				
-				final StatsSet info = entry.getValue();
+				final StatSet info = entry.getValue();
 				if (info == null)
 				{
 					continue;
@@ -429,7 +429,7 @@ public class RaidBossSpawnManager
 	 */
 	public void notifySpawnNightBoss(RaidBossInstance raidboss)
 	{
-		final StatsSet info = new StatsSet();
+		final StatSet info = new StatSet();
 		info.set("currentHP", raidboss.getCurrentHp());
 		info.set("currentMP", raidboss.getCurrentMp());
 		info.set("respawnTime", 0);
@@ -475,7 +475,7 @@ public class RaidBossSpawnManager
 	 * Gets the stored info.
 	 * @return the stored info
 	 */
-	public Map<Integer, StatsSet> getStoredInfo()
+	public Map<Integer, StatSet> getStoredInfo()
 	{
 		return _storedInfo;
 	}

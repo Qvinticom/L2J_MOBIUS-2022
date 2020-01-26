@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.residences;
 
 import java.time.Duration;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 
 /**
@@ -33,7 +33,7 @@ public class ResidenceFunctionTemplate
 	private final Duration _duration;
 	private final double _value;
 	
-	public ResidenceFunctionTemplate(StatsSet set)
+	public ResidenceFunctionTemplate(StatSet set)
 	{
 		_id = set.getInt("id");
 		_level = set.getInt("level");

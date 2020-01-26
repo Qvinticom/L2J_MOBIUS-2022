@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class RebalanceHPSummon extends AbstractEffect
 {
-	public RebalanceHPSummon(StatsSet params)
+	public RebalanceHPSummon(StatSet params)
 	{
 	}
 	

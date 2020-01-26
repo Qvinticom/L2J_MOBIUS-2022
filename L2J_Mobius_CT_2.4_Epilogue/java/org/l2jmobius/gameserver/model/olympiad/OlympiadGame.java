@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Spawn;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -576,8 +576,8 @@ class OlympiadGame
 				break;
 		}
 		
-		final StatsSet playerOneStat = Olympiad.getNobleStats(_playerOneID);
-		final StatsSet playerTwoStat = Olympiad.getNobleStats(_playerTwoID);
+		final StatSet playerOneStat = Olympiad.getNobleStats(_playerOneID);
+		final StatSet playerTwoStat = Olympiad.getNobleStats(_playerTwoID);
 		
 		final int playerOnePlayed = playerOneStat.getInt(COMP_DONE);
 		final int playerTwoPlayed = playerTwoStat.getInt(COMP_DONE);

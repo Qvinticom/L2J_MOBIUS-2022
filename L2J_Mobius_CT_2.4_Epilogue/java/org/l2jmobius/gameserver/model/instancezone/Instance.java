@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.enums.InstanceRemoveBuffType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.TeleportWhereType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldRegion;
@@ -73,9 +73,9 @@ public class Instance
 	private boolean _allowRandomWalk = true;
 	private final Collection<Integer> _players = ConcurrentHashMap.newKeySet();
 	private final Collection<Npc> _npcs = ConcurrentHashMap.newKeySet();
-	private final Collection<StatsSet> _doorTemplates = ConcurrentHashMap.newKeySet();
+	private final Collection<StatSet> _doorTemplates = ConcurrentHashMap.newKeySet();
 	private final Map<Integer, DoorInstance> _doors = new ConcurrentHashMap<>();
-	private final Collection<StatsSet> _spawnTemplates = ConcurrentHashMap.newKeySet();
+	private final Collection<StatSet> _spawnTemplates = ConcurrentHashMap.newKeySet();
 	private Collection<Location> _enterLocations = ConcurrentHashMap.newKeySet();
 	private Location _exitLocation = null;
 	private boolean _allowSummon = true;
@@ -245,9 +245,9 @@ public class Instance
 	
 	/**
 	 * Adds a door into the instance
-	 * @param set - StatsSet for initializing door
+	 * @param set - StatSet for initializing door
 	 */
-	public void addDoor(StatsSet set)
+	public void addDoor(StatSet set)
 	{
 		if (_doorTemplates.contains(set))
 		{
@@ -262,11 +262,11 @@ public class Instance
 	 */
 	public void spawnDoors()
 	{
-		for (StatsSet template : _doorTemplates)
+		for (StatSet template : _doorTemplates)
 		{
 			// Create new door instance
 			final int doorId = template.getInt("DoorId");
-			final StatsSet doorTemplate = DoorData.getInstance().getDoorTemplate(doorId);
+			final StatSet doorTemplate = DoorData.getInstance().getDoorTemplate(doorId);
 			final DoorInstance newdoor = new DoorInstance(new DoorTemplate(doorTemplate));
 			newdoor.setInstanceId(_id);
 			newdoor.setCurrentHp(newdoor.getMaxHp());
@@ -420,7 +420,7 @@ public class Instance
 	public List<Npc> spawnGroup(String groupName)
 	{
 		final List<Npc> spawnedNpcs = new ArrayList<>();
-		for (StatsSet set : _spawnTemplates)
+		for (StatSet set : _spawnTemplates)
 		{
 			if (set.getString("spawnGroup").equals(groupName))
 			{
@@ -569,7 +569,7 @@ public class Instance
 						if ("door".equalsIgnoreCase(d.getNodeName()))
 						{
 							doorId = Integer.parseInt(d.getAttributes().getNamedItem("id").getNodeValue());
-							final StatsSet set = new StatsSet();
+							final StatSet set = new StatSet();
 							set.set("DoorId", doorId);
 							for (Node bean = d.getFirstChild(); bean != null; bean = bean.getNextSibling())
 							{
@@ -631,7 +631,7 @@ public class Instance
 										allowRandomWalk = Boolean.parseBoolean(d.getAttributes().getNamedItem("allowRandomWalk").getNodeValue());
 									}
 									
-									final StatsSet spawnSet = new StatsSet();
+									final StatSet spawnSet = new StatSet();
 									spawnSet.set("spawnGroup", spawnGroup);
 									spawnSet.set("npcId", npcId);
 									spawnSet.set("x", x);

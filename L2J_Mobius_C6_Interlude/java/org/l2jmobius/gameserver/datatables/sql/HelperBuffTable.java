@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.HelperBuffHolder;
 
 /**
@@ -84,7 +84,7 @@ public class HelperBuffTable
 	{
 		while (helperBuffData.next())
 		{
-			final StatsSet helperBuffDat = new StatsSet();
+			final StatSet helperBuffDat = new StatSet();
 			final int id = helperBuffData.getInt("id");
 			
 			helperBuffDat.set("id", id);

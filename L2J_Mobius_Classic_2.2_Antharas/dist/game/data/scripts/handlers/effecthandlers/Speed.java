@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.enums.SpeedType;
 import org.l2jmobius.gameserver.enums.StatModifierType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -36,7 +36,7 @@ public class Speed extends AbstractEffect
 	private final StatModifierType _mode;
 	private List<SpeedType> _speedType;
 	
-	public Speed(StatsSet params)
+	public Speed(StatSet params)
 	{
 		_amount = params.getDouble("amount", 0);
 		_mode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);

@@ -28,7 +28,7 @@ import org.w3c.dom.Document;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.sql.impl.CharNameTable;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.holders.FakePlayerHolder;
 
@@ -72,7 +72,7 @@ public class FakePlayerData implements IXmlReader
 	{
 		forEach(doc, "list", listNode -> forEach(listNode, "fakePlayer", fakePlayerNode ->
 		{
-			final StatsSet set = new StatsSet(parseAttributes(fakePlayerNode));
+			final StatSet set = new StatSet(parseAttributes(fakePlayerNode));
 			final int npcId = set.getInt("npcId");
 			final NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
 			final String name = template.getName();

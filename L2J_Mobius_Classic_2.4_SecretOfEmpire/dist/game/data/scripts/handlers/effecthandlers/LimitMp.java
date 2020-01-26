@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
  */
 public class LimitMp extends AbstractStatEffect
 {
-	public LimitMp(StatsSet params)
+	public LimitMp(StatSet params)
 	{
 		super(params, Stat.MAX_RECOVERABLE_MP);
 	}

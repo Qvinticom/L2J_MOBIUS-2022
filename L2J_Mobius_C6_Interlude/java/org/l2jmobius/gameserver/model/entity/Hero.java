@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -58,8 +58,8 @@ public class Hero
 	private static final String GET_CLAN_NAME = "SELECT clan_name FROM clan_data WHERE clan_id = (SELECT clanid FROM characters WHERE char_name = ?)";
 	private static final String DELETE_ITEMS = "DELETE FROM items WHERE item_id IN (6842, 6611, 6612, 6613, 6614, 6615, 6616, 6617, 6618, 6619, 6620, 6621) AND owner_id NOT IN (SELECT obj_id FROM characters WHERE accesslevel > 0)";
 	private static final List<Integer> _heroItems = Arrays.asList(6842, 6611, 6612, 6613, 6614, 6615, 6616, 6617, 6618, 6619, 6620, 6621);
-	private static Map<Integer, StatsSet> _heroes;
-	private static Map<Integer, StatsSet> _completeHeroes;
+	private static Map<Integer, StatSet> _heroes;
+	private static Map<Integer, StatSet> _completeHeroes;
 	
 	public static final String COUNT = "count";
 	public static final String PLAYED = "played";
@@ -88,7 +88,7 @@ public class Hero
 			rset = statement.executeQuery();
 			while (rset.next())
 			{
-				final StatsSet hero = new StatsSet();
+				final StatSet hero = new StatSet();
 				final int charId = rset.getInt(Olympiad.CHAR_ID);
 				hero.set(Olympiad.CHAR_NAME, rset.getString(Olympiad.CHAR_NAME));
 				hero.set(Olympiad.CLASS_ID, rset.getInt(Olympiad.CLASS_ID));
@@ -130,7 +130,7 @@ public class Hero
 			rset = statement.executeQuery();
 			while (rset.next())
 			{
-				final StatsSet hero = new StatsSet();
+				final StatSet hero = new StatSet();
 				final int charId = rset.getInt(Olympiad.CHAR_ID);
 				
 				final String charName = rset.getString(Olympiad.CHAR_NAME);
@@ -190,7 +190,7 @@ public class Hero
 	{
 		try
 		{
-			final StatsSet newHero = new StatsSet();
+			final StatSet newHero = new StatSet();
 			newHero.set(Olympiad.CHAR_NAME, player.getName());
 			newHero.set(Olympiad.CLASS_ID, player.getClassId().getId());
 			newHero.set(COUNT, 1);
@@ -219,19 +219,19 @@ public class Hero
 		}
 	}
 	
-	public Map<Integer, StatsSet> getHeroes()
+	public Map<Integer, StatSet> getHeroes()
 	{
 		return _heroes;
 	}
 	
-	public synchronized void computeNewHeroes(List<StatsSet> newHeroes)
+	public synchronized void computeNewHeroes(List<StatSet> newHeroes)
 	{
 		updateHeroes(true);
 		ItemInstance[] items;
 		InventoryUpdate iu;
 		if (_heroes.size() != 0)
 		{
-			for (StatsSet hero : _heroes.values())
+			for (StatSet hero : _heroes.values())
 			{
 				final String name = hero.getString(Olympiad.CHAR_NAME);
 				final PlayerInstance player = World.getInstance().getPlayer(name);
@@ -305,13 +305,13 @@ public class Hero
 			_heroes.clear();
 			return;
 		}
-		final Map<Integer, StatsSet> heroes = new HashMap<>();
-		for (StatsSet hero : newHeroes)
+		final Map<Integer, StatSet> heroes = new HashMap<>();
+		for (StatSet hero : newHeroes)
 		{
 			final int charId = hero.getInt(Olympiad.CHAR_ID);
 			if ((_completeHeroes != null) && _completeHeroes.containsKey(charId))
 			{
-				final StatsSet oldHero = _completeHeroes.get(charId);
+				final StatSet oldHero = _completeHeroes.get(charId);
 				final int count = oldHero.getInt(COUNT);
 				oldHero.set(COUNT, count + 1);
 				oldHero.set(PLAYED, 1);
@@ -319,7 +319,7 @@ public class Hero
 			}
 			else
 			{
-				final StatsSet newHero = new StatsSet();
+				final StatSet newHero = new StatSet();
 				newHero.set(Olympiad.CHAR_NAME, hero.getString(Olympiad.CHAR_NAME));
 				newHero.set(Olympiad.CLASS_ID, hero.getInt(Olympiad.CLASS_ID));
 				newHero.set(COUNT, 1);
@@ -332,7 +332,7 @@ public class Hero
 		_heroes.putAll(heroes);
 		heroes.clear();
 		updateHeroes(false);
-		for (StatsSet hero : _heroes.values())
+		for (StatSet hero : _heroes.values())
 		{
 			final String name = hero.getString(Olympiad.CHAR_NAME);
 			final PlayerInstance player = World.getInstance().getPlayer(name);
@@ -404,10 +404,10 @@ public class Hero
 			}
 			else
 			{
-				for (Entry<Integer, StatsSet> entry : _heroes.entrySet())
+				for (Entry<Integer, StatSet> entry : _heroes.entrySet())
 				{
 					final Integer heroId = entry.getKey();
-					final StatsSet hero = entry.getValue();
+					final StatSet hero = entry.getValue();
 					if ((_completeHeroes == null) || !_completeHeroes.containsKey(heroId))
 					{
 						statement = con.prepareStatement(INSERT_HERO);

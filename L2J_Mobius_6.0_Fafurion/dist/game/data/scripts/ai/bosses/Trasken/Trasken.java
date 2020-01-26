@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -322,7 +322,7 @@ public class Trasken extends AbstractNpcAI
 			DoorData.getInstance().getDoor(DOOR).openMe();
 		}
 		// Unlock
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(TRASKEN);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(TRASKEN);
 		final int status = GrandBossManager.getInstance().getBossStatus(TRASKEN);
 		if (status == DEAD)
 		{
@@ -603,9 +603,9 @@ public class Trasken extends AbstractNpcAI
 				
 				GrandBossManager.getInstance().setBossStatus(TRASKEN, DEAD);
 				final long respawnTime = (Config.TRASKEN_SPAWN_INTERVAL + getRandom(-Config.TRASKEN_SPAWN_RANDOM, Config.TRASKEN_SPAWN_RANDOM)) * 3600000;
-				final StatsSet info = GrandBossManager.getInstance().getStatsSet(TRASKEN);
+				final StatSet info = GrandBossManager.getInstance().getStatSet(TRASKEN);
 				info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-				GrandBossManager.getInstance().setStatsSet(TRASKEN, info);
+				GrandBossManager.getInstance().setStatSet(TRASKEN, info);
 				startQuestTimer("unlock_trasken", respawnTime, null, null);
 				break;
 			}

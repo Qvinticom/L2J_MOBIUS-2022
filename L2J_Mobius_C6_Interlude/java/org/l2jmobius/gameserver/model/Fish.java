@@ -34,7 +34,7 @@ public class Fish
 	private final int _waitTime;
 	private final int _combatTime;
 	
-	public Fish(StatsSet set)
+	public Fish(StatSet set)
 	{
 		_id = set.getInt("id");
 		_level = set.getInt("level");

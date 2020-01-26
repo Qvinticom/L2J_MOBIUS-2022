@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.ReduceDropType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -32,7 +32,7 @@ public class ReduceDropPenalty extends AbstractEffect
 	private final double _deathPenalty;
 	private final ReduceDropType _type;
 	
-	public ReduceDropPenalty(StatsSet params)
+	public ReduceDropPenalty(StatSet params)
 	{
 		_exp = params.getDouble("exp", 0);
 		_deathPenalty = params.getDouble("deathPenalty", 0);

@@ -39,25 +39,25 @@ import org.l2jmobius.gameserver.util.Util;
  * They are stored as object but can be retrieved in any type wanted. As long as cast is available.<br>
  * @author mkizub
  */
-public class StatsSet implements IParserAdvUtils
+public class StatSet implements IParserAdvUtils
 {
-	private static final Logger LOGGER = Logger.getLogger(StatsSet.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(StatSet.class.getName());
 	/** Static empty immutable map, used to avoid multiple null checks over the source. */
-	public static final StatsSet EMPTY_STATSET = new StatsSet(Collections.emptyMap());
+	public static final StatSet EMPTY_STATSET = new StatSet(Collections.emptyMap());
 	
 	private final Map<String, Object> _set;
 	
-	public StatsSet()
+	public StatSet()
 	{
 		this(ConcurrentHashMap::new);
 	}
 	
-	public StatsSet(Supplier<Map<String, Object>> mapFactory)
+	public StatSet(Supplier<Map<String, Object>> mapFactory)
 	{
 		this(mapFactory.get());
 	}
 	
-	public StatsSet(Map<String, Object> map)
+	public StatSet(Map<String, Object> map)
 	{
 		_set = map;
 	}
@@ -73,9 +73,9 @@ public class StatsSet implements IParserAdvUtils
 	
 	/**
 	 * Add a set of couple values in the current set
-	 * @param newSet : StatsSet pointing out the list of couples to add in the current set
+	 * @param newSet : StatSet pointing out the list of couples to add in the current set
 	 */
-	public void merge(StatsSet newSet)
+	public void merge(StatSet newSet)
 	{
 		_set.putAll(newSet.getSet());
 	}
@@ -871,7 +871,7 @@ public class StatsSet implements IParserAdvUtils
 		return (Map<K, V>) obj;
 	}
 	
-	public StatsSet set(String name, Object value)
+	public StatSet set(String name, Object value)
 	{
 		if (value == null)
 		{
@@ -881,49 +881,49 @@ public class StatsSet implements IParserAdvUtils
 		return this;
 	}
 	
-	public StatsSet set(String key, boolean value)
+	public StatSet set(String key, boolean value)
 	{
 		_set.put(key, value);
 		return this;
 	}
 	
-	public StatsSet set(String key, byte value)
+	public StatSet set(String key, byte value)
 	{
 		_set.put(key, value);
 		return this;
 	}
 	
-	public StatsSet set(String key, short value)
+	public StatSet set(String key, short value)
 	{
 		_set.put(key, value);
 		return this;
 	}
 	
-	public StatsSet set(String key, int value)
+	public StatSet set(String key, int value)
 	{
 		_set.put(key, value);
 		return this;
 	}
 	
-	public StatsSet set(String key, long value)
+	public StatSet set(String key, long value)
 	{
 		_set.put(key, value);
 		return this;
 	}
 	
-	public StatsSet set(String key, float value)
+	public StatSet set(String key, float value)
 	{
 		_set.put(key, value);
 		return this;
 	}
 	
-	public StatsSet set(String key, double value)
+	public StatSet set(String key, double value)
 	{
 		_set.put(key, value);
 		return this;
 	}
 	
-	public StatsSet set(String key, String value)
+	public StatSet set(String key, String value)
 	{
 		if (value == null)
 		{
@@ -933,7 +933,7 @@ public class StatsSet implements IParserAdvUtils
 		return this;
 	}
 	
-	public StatsSet set(String key, Enum<?> value)
+	public StatSet set(String key, Enum<?> value)
 	{
 		if (value == null)
 		{
@@ -943,9 +943,9 @@ public class StatsSet implements IParserAdvUtils
 		return this;
 	}
 	
-	public static StatsSet valueOf(String key, Object value)
+	public static StatSet valueOf(String key, Object value)
 	{
-		final StatsSet set = new StatsSet();
+		final StatSet set = new StatSet();
 		set.set(key, value);
 		return set;
 	}
@@ -963,6 +963,6 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public String toString()
 	{
-		return "StatsSet{_set=" + _set + '}';
+		return "StatSet{_set=" + _set + '}';
 	}
 }

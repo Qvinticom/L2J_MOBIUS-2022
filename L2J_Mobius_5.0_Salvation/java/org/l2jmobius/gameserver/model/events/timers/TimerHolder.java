@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.instancemanager.TimersManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.TimerExecutor;
@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.events.TimerExecutor;
 public class TimerHolder<T> implements Runnable
 {
 	private final T _event;
-	private final StatsSet _params;
+	private final StatSet _params;
 	private final long _time;
 	private final Npc _npc;
 	private final PlayerInstance _player;
@@ -44,7 +44,7 @@ public class TimerHolder<T> implements Runnable
 	private final TimerExecutor<T> _postExecutor;
 	private final ScheduledFuture<?> _task;
 	
-	public TimerHolder(T event, StatsSet params, long time, Npc npc, PlayerInstance player, boolean isRepeating, IEventTimerEvent<T> eventScript, IEventTimerCancel<T> cancelScript, TimerExecutor<T> postExecutor)
+	public TimerHolder(T event, StatSet params, long time, Npc npc, PlayerInstance player, boolean isRepeating, IEventTimerEvent<T> eventScript, IEventTimerCancel<T> cancelScript, TimerExecutor<T> postExecutor)
 	{
 		Objects.requireNonNull(event, getClass().getSimpleName() + ": \"event\" cannot be null!");
 		Objects.requireNonNull(eventScript, getClass().getSimpleName() + ": \"script\" cannot be null!");
@@ -73,7 +73,7 @@ public class TimerHolder<T> implements Runnable
 	/**
 	 * @return the parameters of this timer
 	 */
-	public StatsSet getParams()
+	public StatSet getParams()
 	{
 		return _params;
 	}

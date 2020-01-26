@@ -34,7 +34,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.enums.ClanHallGrade;
 import org.l2jmobius.gameserver.enums.ClanHallType;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.ClanHall;
@@ -66,7 +66,7 @@ public class ClanHallData implements IXmlReader
 		final List<DoorInstance> doors = new ArrayList<>();
 		final List<Integer> npcs = new ArrayList<>();
 		final List<ClanHallTeleportHolder> teleports = new ArrayList<>();
-		final StatsSet params = new StatsSet();
+		final StatSet params = new StatSet();
 		
 		for (Node listNode = doc.getFirstChild(); listNode != null; listNode = listNode.getNextSibling())
 		{

@@ -26,7 +26,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.skills.conditions.Condition;
 
 /**
@@ -48,7 +48,7 @@ final class DocumentSkill extends DocumentBase
 	}
 	
 	@Override
-	protected StatsSet getStatsSet()
+	protected StatSet getStatSet()
 	{
 		return _currentSkill.sets[_currentSkill.currentLevel];
 	}
@@ -135,13 +135,13 @@ final class DocumentSkill extends DocumentBase
 		
 		_currentSkill.id = skillId;
 		_currentSkill.name = skillName;
-		_currentSkill.sets = new StatsSet[lastLvl];
-		_currentSkill.enchsets1 = new StatsSet[enchantLevels1];
-		_currentSkill.enchsets2 = new StatsSet[enchantLevels2];
+		_currentSkill.sets = new StatSet[lastLvl];
+		_currentSkill.enchsets1 = new StatSet[enchantLevels1];
+		_currentSkill.enchsets2 = new StatSet[enchantLevels2];
 		
 		for (int i = 0; i < lastLvl; i++)
 		{
-			_currentSkill.sets[i] = new StatsSet();
+			_currentSkill.sets[i] = new StatSet();
 			_currentSkill.sets[i].set("skill_id", _currentSkill.id);
 			_currentSkill.sets[i].set("level", i + 1);
 			_currentSkill.sets[i].set("name", _currentSkill.name);
@@ -174,7 +174,7 @@ final class DocumentSkill extends DocumentBase
 		
 		for (int i = 0; i < enchantLevels1; i++)
 		{
-			_currentSkill.enchsets1[i] = new StatsSet();
+			_currentSkill.enchsets1[i] = new StatSet();
 			_currentSkill.enchsets1[i].set("skill_id", _currentSkill.id);
 			_currentSkill.enchsets1[i].set("level", i + 101);
 			_currentSkill.enchsets1[i].set("name", _currentSkill.name);
@@ -203,7 +203,7 @@ final class DocumentSkill extends DocumentBase
 		
 		for (int i = 0; i < enchantLevels2; i++)
 		{
-			_currentSkill.enchsets2[i] = new StatsSet();
+			_currentSkill.enchsets2[i] = new StatSet();
 			_currentSkill.enchsets2[i].set("skill_id", _currentSkill.id);
 			_currentSkill.enchsets2[i].set("level", i + 141);
 			_currentSkill.enchsets2[i].set("name", _currentSkill.name);

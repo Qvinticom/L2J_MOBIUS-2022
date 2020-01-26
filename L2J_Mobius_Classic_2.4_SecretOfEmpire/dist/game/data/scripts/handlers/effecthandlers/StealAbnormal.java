@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import java.util.List;
 
 import org.l2jmobius.gameserver.enums.DispelSlotType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -39,7 +39,7 @@ public class StealAbnormal extends AbstractEffect
 	private final int _rate;
 	private final int _max;
 	
-	public StealAbnormal(StatsSet params)
+	public StealAbnormal(StatSet params)
 	{
 		_slot = params.getEnum("slot", DispelSlotType.class, DispelSlotType.BUFF);
 		_rate = params.getInt("rate", 0);

@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.holders;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * @author Sdw
@@ -34,7 +34,7 @@ public class LuckyGameDataHolder
 	private int _minModifyRewardGame;
 	private int _maxModifyRewardGame;
 	
-	public LuckyGameDataHolder(StatsSet params)
+	public LuckyGameDataHolder(StatSet params)
 	{
 		_index = params.getInt("index");
 		_turningPoints = params.getInt("turning_point");

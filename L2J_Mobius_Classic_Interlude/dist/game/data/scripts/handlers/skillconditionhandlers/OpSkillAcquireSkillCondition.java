@@ -16,7 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
@@ -30,7 +30,7 @@ public class OpSkillAcquireSkillCondition implements ISkillCondition
 	private final int _skillId;
 	private final boolean _hasLearned;
 	
-	public OpSkillAcquireSkillCondition(StatsSet params)
+	public OpSkillAcquireSkillCondition(StatSet params)
 	{
 		_skillId = params.getInt("skillId");
 		_hasLearned = params.getBoolean("hasLearned");

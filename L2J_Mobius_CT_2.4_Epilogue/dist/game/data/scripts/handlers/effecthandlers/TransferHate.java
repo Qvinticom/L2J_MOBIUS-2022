@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.conditions.Condition;
@@ -32,7 +32,7 @@ public class TransferHate extends AbstractEffect
 {
 	private final int _chance;
 	
-	public TransferHate(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public TransferHate(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		

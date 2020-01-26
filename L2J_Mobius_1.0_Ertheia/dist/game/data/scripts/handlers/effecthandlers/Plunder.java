@@ -20,7 +20,7 @@ import java.util.Collection;
 
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class Plunder extends AbstractEffect
 {
-	public Plunder(StatsSet params)
+	public Plunder(StatSet params)
 	{
 	}
 	

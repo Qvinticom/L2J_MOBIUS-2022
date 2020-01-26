@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.zone.type.NoRestartZone;
@@ -299,7 +299,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 				}
 			}
 			
-			final StatsSet info = GrandBossManager.getInstance().getStatsSet(grandBossId);
+			final StatSet info = GrandBossManager.getInstance().getStatSet(grandBossId);
 			final String bossRespawn = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(info.getLong("respawn_time"));
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);

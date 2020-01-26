@@ -28,7 +28,7 @@ import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.enums.SkillEnchantType;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.EnchantSkillHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -69,10 +69,10 @@ public class EnchantSkillGroupsData implements IXmlReader
 	{
 		forEach(doc, "list", listNode -> forEach(listNode, "enchant", enchantNode ->
 		{
-			final EnchantSkillHolder enchantSkillHolder = new EnchantSkillHolder(new StatsSet(parseAttributes(enchantNode)));
+			final EnchantSkillHolder enchantSkillHolder = new EnchantSkillHolder(new StatSet(parseAttributes(enchantNode)));
 			forEach(enchantNode, "sps", spsNode -> forEach(spsNode, "sp", spNode -> enchantSkillHolder.addSp(parseEnum(spNode.getAttributes(), SkillEnchantType.class, "type"), parseInteger(spNode.getAttributes(), "amount"))));
 			forEach(enchantNode, "chances", chancesNode -> forEach(chancesNode, "chance", chanceNode -> enchantSkillHolder.addChance(parseEnum(chanceNode.getAttributes(), SkillEnchantType.class, "type"), parseInteger(chanceNode.getAttributes(), "value"))));
-			forEach(enchantNode, "items", itemsNode -> forEach(itemsNode, "item", itemNode -> enchantSkillHolder.addRequiredItem(parseEnum(itemNode.getAttributes(), SkillEnchantType.class, "type"), new ItemHolder(new StatsSet(parseAttributes(itemNode))))));
+			forEach(enchantNode, "items", itemsNode -> forEach(itemsNode, "item", itemNode -> enchantSkillHolder.addRequiredItem(parseEnum(itemNode.getAttributes(), SkillEnchantType.class, "type"), new ItemHolder(new StatSet(parseAttributes(itemNode))))));
 			_enchantSkillHolders.put(parseInteger(enchantNode.getAttributes(), "level"), enchantSkillHolder);
 		}));
 	}

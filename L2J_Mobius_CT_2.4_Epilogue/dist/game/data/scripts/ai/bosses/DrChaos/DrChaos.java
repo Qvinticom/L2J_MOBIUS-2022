@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
@@ -63,7 +63,7 @@ public class DrChaos extends AbstractNpcAI
 		addKillId(CHAOS_GOLEM); // Message + despawn.
 		addAttackId(CHAOS_GOLEM); // Random messages when he attacks.
 		
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(CHAOS_GOLEM);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(CHAOS_GOLEM);
 		final int status = GrandBossManager.getInstance().getBossStatus(CHAOS_GOLEM);
 		
 		// Load the reset date and time for Dr. Chaos from DB.
@@ -249,9 +249,9 @@ public class DrChaos extends AbstractNpcAI
 		startQuestTimer("reset_drchaos", respawnTime, null, null, false);
 		
 		// also save the respawn time so that the info is maintained past reboots
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(CHAOS_GOLEM);
+		final StatSet info = GrandBossManager.getInstance().getStatSet(CHAOS_GOLEM);
 		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-		GrandBossManager.getInstance().setStatsSet(CHAOS_GOLEM, info);
+		GrandBossManager.getInstance().setStatSet(CHAOS_GOLEM, info);
 		
 		return null;
 	}

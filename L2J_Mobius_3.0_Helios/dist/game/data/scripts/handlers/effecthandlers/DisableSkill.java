@@ -20,7 +20,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -34,7 +34,7 @@ public class DisableSkill extends AbstractEffect
 	private final Set<Integer> disableSkills;
 	private Skill knownSKill;
 	
-	public DisableSkill(StatsSet params)
+	public DisableSkill(StatSet params)
 	{
 		final String disable = params.getString("disable");
 		if ((disable != null) && !disable.isEmpty())

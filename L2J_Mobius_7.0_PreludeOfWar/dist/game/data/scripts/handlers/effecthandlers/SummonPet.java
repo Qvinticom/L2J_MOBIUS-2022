@@ -21,7 +21,7 @@ import java.util.logging.Level;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import org.l2jmobius.gameserver.model.PetData;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
  */
 public class SummonPet extends AbstractEffect
 {
-	public SummonPet(StatsSet params)
+	public SummonPet(StatSet params)
 	{
 	}
 	

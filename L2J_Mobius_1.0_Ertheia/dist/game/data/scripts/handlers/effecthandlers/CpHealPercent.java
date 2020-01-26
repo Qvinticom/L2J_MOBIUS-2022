@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -33,7 +33,7 @@ public class CpHealPercent extends AbstractEffect
 {
 	private final double _power;
 	
-	public CpHealPercent(StatsSet params)
+	public CpHealPercent(StatSet params)
 	{
 		_power = params.getDouble("power", 0);
 	}

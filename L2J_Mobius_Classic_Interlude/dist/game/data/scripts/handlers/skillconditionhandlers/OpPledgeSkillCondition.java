@@ -16,7 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -30,7 +30,7 @@ public class OpPledgeSkillCondition implements ISkillCondition
 {
 	private final int _level;
 	
-	public OpPledgeSkillCondition(StatsSet params)
+	public OpPledgeSkillCondition(StatSet params)
 	{
 		_level = params.getInt("level");
 	}

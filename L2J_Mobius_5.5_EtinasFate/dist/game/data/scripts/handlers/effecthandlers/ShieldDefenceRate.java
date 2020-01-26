@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
  */
 public class ShieldDefenceRate extends AbstractStatEffect
 {
-	public ShieldDefenceRate(StatsSet params)
+	public ShieldDefenceRate(StatSet params)
 	{
 		super(params, Stat.SHIELD_DEFENCE_RATE);
 	}

@@ -17,7 +17,7 @@
 package handlers.skillconditionhandlers;
 
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class PossessHolythingSkillCondition implements ISkillCondition
 {
-	public PossessHolythingSkillCondition(StatsSet params)
+	public PossessHolythingSkillCondition(StatSet params)
 	{
 	}
 	

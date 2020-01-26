@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -52,7 +52,7 @@ public class SkillSummon extends Skill
 	// What is the total lifetime of summons (in millisecs)
 	private final int _summonTotalLifeTime;
 	
-	public SkillSummon(StatsSet set)
+	public SkillSummon(StatSet set)
 	{
 		super(set);
 		

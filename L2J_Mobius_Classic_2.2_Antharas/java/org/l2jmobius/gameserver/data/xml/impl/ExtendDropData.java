@@ -30,7 +30,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.handler.ConditionHandler;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.ICondition;
 import org.l2jmobius.gameserver.model.holders.ExtendDropDataHolder;
 import org.l2jmobius.gameserver.model.holders.ExtendDropItemHolder;
@@ -62,7 +62,7 @@ public class ExtendDropData implements IXmlReader
 	{
 		forEach(doc, "list", listNode -> forEach(listNode, "drop", dropNode ->
 		{
-			final StatsSet set = new StatsSet(parseAttributes(dropNode));
+			final StatSet set = new StatSet(parseAttributes(dropNode));
 			
 			final List<ExtendDropItemHolder> items = new ArrayList<>(1);
 			forEach(dropNode, "items", itemsNode -> forEach(itemsNode, "item", itemNode ->
@@ -80,8 +80,8 @@ public class ExtendDropData implements IXmlReader
 			forEach(dropNode, "conditions", conditionsNode -> forEach(conditionsNode, "condition", conditionNode ->
 			{
 				final String conditionName = parseString(conditionNode.getAttributes(), "name");
-				final StatsSet params = (StatsSet) parseValue(conditionNode);
-				final Function<StatsSet, ICondition> conditionFunction = ConditionHandler.getInstance().getHandlerFactory(conditionName);
+				final StatSet params = (StatSet) parseValue(conditionNode);
+				final Function<StatSet, ICondition> conditionFunction = ConditionHandler.getInstance().getHandlerFactory(conditionName);
 				if (conditionFunction != null)
 				{
 					conditions.add(conditionFunction.apply(params));
@@ -109,7 +109,7 @@ public class ExtendDropData implements IXmlReader
 	
 	private Object parseValue(Node node)
 	{
-		StatsSet statsSet = null;
+		StatSet statSet = null;
 		List<Object> list = null;
 		Object text = null;
 		for (node = node.getFirstChild(); node != null; node = node.getNextSibling())
@@ -145,12 +145,12 @@ public class ExtendDropData implements IXmlReader
 					final Object value = parseValue(node);
 					if (value != null)
 					{
-						if (statsSet == null)
+						if (statSet == null)
 						{
-							statsSet = new StatsSet();
+							statSet = new StatSet();
 						}
 						
-						statsSet.set(nodeName, value);
+						statSet.set(nodeName, value);
 					}
 				}
 			}
@@ -161,9 +161,9 @@ public class ExtendDropData implements IXmlReader
 			{
 				throw new IllegalArgumentException("Text and list in same node are not allowed. Node[" + node + "]");
 			}
-			if (statsSet != null)
+			if (statSet != null)
 			{
-				statsSet.set(".", list);
+				statSet.set(".", list);
 			}
 			else
 			{
@@ -176,16 +176,16 @@ public class ExtendDropData implements IXmlReader
 			{
 				throw new IllegalArgumentException("Text and list in same node are not allowed. Node[" + node + "]");
 			}
-			if (statsSet != null)
+			if (statSet != null)
 			{
-				statsSet.set(".", text);
+				statSet.set(".", text);
 			}
 			else
 			{
 				return text;
 			}
 		}
-		return statsSet;
+		return statSet;
 	}
 	
 	public ExtendDropDataHolder getExtendDropById(int id)

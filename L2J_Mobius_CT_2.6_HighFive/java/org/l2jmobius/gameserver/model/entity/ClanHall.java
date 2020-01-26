@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -199,7 +199,7 @@ public abstract class ClanHall
 		}
 	}
 	
-	public ClanHall(StatsSet set)
+	public ClanHall(StatSet set)
 	{
 		_clanHallId = set.getInt("id");
 		_name = set.getString("name");

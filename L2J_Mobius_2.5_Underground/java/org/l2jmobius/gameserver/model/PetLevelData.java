@@ -46,7 +46,7 @@ public class PetLevelData
 	private final double _slowFlySpeedOnRide;
 	private final double _fastFlySpeedOnRide;
 	
-	public PetLevelData(StatsSet set)
+	public PetLevelData(StatSet set)
 	{
 		_ownerExpTaken = set.getInt("get_exp_type");
 		_petMaxExp = set.getLong("exp");

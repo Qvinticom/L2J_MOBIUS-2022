@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
  */
 public class Accuracy extends AbstractStatEffect
 {
-	public Accuracy(StatsSet params)
+	public Accuracy(StatSet params)
 	{
 		super(params, Stat.ACCURACY_COMBAT);
 	}

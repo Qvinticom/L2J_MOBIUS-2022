@@ -29,7 +29,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.residences.ResidenceFunctionTemplate;
 
 /**
@@ -60,7 +60,7 @@ public class ResidenceFunctionsData implements IXmlReader
 		forEach(doc, "list", list -> forEach(list, "function", func ->
 		{
 			final NamedNodeMap attrs = func.getAttributes();
-			final StatsSet set = new StatsSet(HashMap::new);
+			final StatSet set = new StatSet(HashMap::new);
 			for (int i = 0; i < attrs.getLength(); i++)
 			{
 				final Node node = attrs.item(i);
@@ -69,7 +69,7 @@ public class ResidenceFunctionsData implements IXmlReader
 			forEach(func, "function", levelNode ->
 			{
 				final NamedNodeMap levelAttrs = levelNode.getAttributes();
-				final StatsSet levelSet = new StatsSet(HashMap::new);
+				final StatSet levelSet = new StatSet(HashMap::new);
 				levelSet.merge(set);
 				for (int i = 0; i < levelAttrs.getLength(); i++)
 				{

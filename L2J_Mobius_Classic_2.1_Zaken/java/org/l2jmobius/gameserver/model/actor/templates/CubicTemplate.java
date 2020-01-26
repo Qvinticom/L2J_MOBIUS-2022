@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.cubic.CubicInstance;
@@ -46,7 +46,7 @@ public class CubicTemplate implements ICubicConditionHolder
 	private final List<ICubicCondition> _conditions = new ArrayList<>();
 	public List<CubicSkill> _skills = new ArrayList<>();
 	
-	public CubicTemplate(StatsSet set)
+	public CubicTemplate(StatSet set)
 	{
 		_id = set.getInt("id");
 		_level = set.getInt("level");

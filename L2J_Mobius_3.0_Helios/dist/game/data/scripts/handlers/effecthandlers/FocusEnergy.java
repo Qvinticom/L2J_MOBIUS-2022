@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
  */
 public class FocusEnergy extends AbstractStatAddEffect
 {
-	public FocusEnergy(StatsSet params)
+	public FocusEnergy(StatSet params)
 	{
 		super(params, Stat.MAX_MOMENTUM);
 	}

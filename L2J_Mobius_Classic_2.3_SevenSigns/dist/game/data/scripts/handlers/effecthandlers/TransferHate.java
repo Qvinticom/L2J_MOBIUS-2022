@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -34,7 +34,7 @@ public class TransferHate extends AbstractEffect
 {
 	private final int _chance;
 	
-	public TransferHate(StatsSet params)
+	public TransferHate(StatSet params)
 	{
 		_chance = params.getInt("chance", 100);
 	}

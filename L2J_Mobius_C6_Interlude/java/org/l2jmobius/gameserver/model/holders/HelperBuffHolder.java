@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.holders;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 
 /**
  * This class represents a Newbie Helper Buff Author: Ayor
@@ -46,7 +46,7 @@ public class HelperBuffHolder
 	 * <BR>
 	 * @param set
 	 */
-	public HelperBuffHolder(StatsSet set)
+	public HelperBuffHolder(StatSet set)
 	{
 		_lowerLevel = set.getInt("lowerLevel");
 		_upperLevel = set.getInt("upperLevel");

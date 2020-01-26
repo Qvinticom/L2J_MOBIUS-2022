@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ServitorInstance;
@@ -43,7 +43,7 @@ public class Summon extends AbstractEffect
 	private final int _lifeTime;
 	private final int _consumeItemInterval;
 	
-	public Summon(StatsSet params)
+	public Summon(StatSet params)
 	{
 		if (params.isEmpty())
 		{

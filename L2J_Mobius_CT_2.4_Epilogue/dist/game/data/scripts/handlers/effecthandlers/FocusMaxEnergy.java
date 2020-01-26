@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class FocusMaxEnergy extends AbstractEffect
 {
-	public FocusMaxEnergy(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public FocusMaxEnergy(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
 	}
