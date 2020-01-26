@@ -18,9 +18,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-/**
- * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
- */
 public class RecipeShopMsg extends GameServerPacket
 {
 	private final PlayerInstance _player;
@@ -35,6 +32,6 @@ public class RecipeShopMsg extends GameServerPacket
 	{
 		writeC(0xdb);
 		writeD(_player.getObjectId());
-		writeS(_player.getCreateList().getStoreName()); // _activeChar.getTradeList().getSellStoreName());
+		writeS(_player.getCreateList().getStoreName());
 	}
 }

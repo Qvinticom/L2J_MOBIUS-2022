@@ -49,7 +49,6 @@ public class RequestRecipeShopManagePrev extends GameClientPacket
 			return;
 		}
 		
-		final PlayerInstance target = (PlayerInstance) player.getTarget();
-		player.sendPacket(new RecipeShopSellList(player, target));
+		player.sendPacket(new RecipeShopSellList(player, (PlayerInstance) player.getTarget()));
 	}
 }

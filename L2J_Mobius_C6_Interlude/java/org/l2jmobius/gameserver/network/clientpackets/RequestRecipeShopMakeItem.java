@@ -51,7 +51,7 @@ public class RequestRecipeShopMakeItem extends GameClientPacket
 			return;
 		}
 		
-		final PlayerInstance manufacturer = (PlayerInstance) World.getInstance().findObject(_id);
+		final PlayerInstance manufacturer = World.getInstance().getPlayer(_id);
 		if (manufacturer == null)
 		{
 			return;
@@ -59,7 +59,7 @@ public class RequestRecipeShopMakeItem extends GameClientPacket
 		
 		if (player.getPrivateStoreType() != 0)
 		{
-			player.sendMessage("Cannot make items while trading");
+			// player.sendMessage("Cannot create items while trading.");
 			return;
 		}
 		
@@ -71,7 +71,7 @@ public class RequestRecipeShopMakeItem extends GameClientPacket
 		
 		if (player.isCrafting() || manufacturer.isCrafting())
 		{
-			player.sendMessage("Currently in Craft Mode");
+			// player.sendMessage("Currently in Craft Mode.");
 			return;
 		}
 		

@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * dd d(dd) d(ddd)
- * @version $Revision: 1.1.2.2.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
 public class RecipeShopManageList extends GameServerPacket
 {
@@ -77,8 +76,7 @@ public class RecipeShopManageList extends GameServerPacket
 			
 			for (int i = 0; i < _recipes.length; i++)
 			{
-				final RecipeList temp = _recipes[i];
-				writeD(temp.getId());
+				writeD(_recipes[i].getId());
 				writeD(i + 1);
 			}
 		}

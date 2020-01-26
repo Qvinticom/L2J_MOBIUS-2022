@@ -22,19 +22,22 @@ import org.l2jmobius.gameserver.network.serverpackets.RecipeItemMakeInfo;
 public class RequestRecipeItemMakeInfo extends GameClientPacket
 {
 	private int _id;
-	private PlayerInstance _player;
 	
 	@Override
 	protected void readImpl()
 	{
 		_id = readD();
-		_player = getClient().getPlayer();
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		final RecipeItemMakeInfo response = new RecipeItemMakeInfo(_id, _player);
-		sendPacket(response);
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		player.sendPacket(new RecipeItemMakeInfo(_id, player));
 	}
 }

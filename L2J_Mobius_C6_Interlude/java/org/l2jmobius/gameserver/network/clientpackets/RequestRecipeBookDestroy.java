@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.datatables.csv.RecipeTable;
+import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.model.RecipeList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeBookItemList;
@@ -45,7 +45,7 @@ public class RequestRecipeBookDestroy extends GameClientPacket
 				return;
 			}
 			
-			final RecipeList rp = RecipeTable.getInstance().getRecipeList(_recipeID - 1);
+			final RecipeList rp = RecipeData.getInstance().getRecipe(_recipeID);
 			if (rp == null)
 			{
 				return;

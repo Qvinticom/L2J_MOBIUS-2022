@@ -20,6 +20,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class RequestRecipeShopMessageSet extends GameClientPacket
 {
+	private static final int MAX_MSG_LENGTH = 29;
 	private String _name;
 	
 	@Override
@@ -37,11 +38,12 @@ public class RequestRecipeShopMessageSet extends GameClientPacket
 			return;
 		}
 		
-		/*
-		 * if (player.getCreateList() == null) { player.setCreateList(new ManufactureList()); }
-		 */
+		if ((_name != null) && (_name.length() > MAX_MSG_LENGTH))
+		{
+			return;
+		}
 		
-		if ((player.getCreateList() != null) && (_name.length() < 30))
+		if (player.getCreateList() != null)
 		{
 			player.getCreateList().setStoreName(_name);
 		}

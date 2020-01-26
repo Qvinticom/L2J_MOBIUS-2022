@@ -16,13 +16,12 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.datatables.csv.RecipeTable;
+import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.model.RecipeList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * format dddd
- * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
 public class RecipeItemMakeInfo extends GameServerPacket
 {
@@ -47,7 +46,7 @@ public class RecipeItemMakeInfo extends GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		final RecipeList recipe = RecipeTable.getInstance().getRecipeById(_id);
+		final RecipeList recipe = RecipeData.getInstance().getRecipe(_id);
 		if (recipe != null)
 		{
 			writeC(0xD7);

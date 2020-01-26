@@ -27,19 +27,19 @@ public class RecipeList
 	/** The table containing all RecipeInstance (1 line of the recipe : Item-Quantity needed) of the RecipeList */
 	private RecipeInstance[] _recipes;
 	
-	/** The Identifier of the Instance */
+	/** The recipe id */
 	private final int _id;
 	
 	/** The crafting level needed to use this RecipeList */
 	private final int _level;
 	
-	/** The Identifier of the RecipeList */
+	/** The item id of the recipe. */
 	private final int _recipeId;
 	
 	/** The name of the RecipeList */
 	private final String _recipeName;
 	
-	/** The crafting succes rate when using the RecipeList */
+	/** The crafting success rate when using the RecipeList */
 	private final int _successRate;
 	
 	/** The crafting MP cost of this RecipeList */
@@ -94,7 +94,7 @@ public class RecipeList
 	}
 	
 	/**
-	 * @return the Identifier of the Instance.
+	 * @return the recipe id of the recipe.
 	 */
 	public int getId()
 	{
@@ -110,7 +110,7 @@ public class RecipeList
 	}
 	
 	/**
-	 * @return the Identifier of the RecipeList.
+	 * @return the item id of the recipe.
 	 */
 	public int getRecipeId()
 	{

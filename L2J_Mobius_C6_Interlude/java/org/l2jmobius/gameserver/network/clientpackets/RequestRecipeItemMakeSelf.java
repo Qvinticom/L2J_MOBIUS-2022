@@ -45,13 +45,13 @@ public class RequestRecipeItemMakeSelf extends GameClientPacket
 		
 		if (player.getPrivateStoreType() != 0)
 		{
-			player.sendMessage("Cannot make items while trading");
+			// player.sendMessage("Cannot create items while trading.");
 			return;
 		}
 		
 		if (player.isCrafting())
 		{
-			player.sendMessage("Currently in Craft Mode");
+			// player.sendMessage("Currently in Craft Mode.");
 			return;
 		}
 		

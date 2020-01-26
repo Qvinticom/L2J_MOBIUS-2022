@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.gameserver.datatables.csv.RecipeTable;
+import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 
 /**
  * @version $Revision: 1.1.2.2.2.1 $ $Date: 2005/03/27 15:29:32 $
@@ -31,7 +31,7 @@ public class ManufactureItem
 	{
 		_recipeId = recipeId;
 		_cost = cost;
-		_isDwarven = RecipeTable.getInstance().getRecipeById(_recipeId).isDwarvenRecipe();
+		_isDwarven = RecipeData.getInstance().getRecipe(_recipeId).isDwarvenRecipe();
 	}
 	
 	public int getRecipeId()

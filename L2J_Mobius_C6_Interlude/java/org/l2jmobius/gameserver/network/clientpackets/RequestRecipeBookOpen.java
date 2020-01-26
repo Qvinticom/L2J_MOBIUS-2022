@@ -38,7 +38,7 @@ public class RequestRecipeBookOpen extends GameClientPacket
 		
 		if (getClient().getPlayer().getPrivateStoreType() != 0)
 		{
-			getClient().getPlayer().sendMessage("Cannot use recipe book while trading");
+			getClient().getPlayer().sendMessage("Cannot use recipe book while trading.");
 			return;
 		}
 		

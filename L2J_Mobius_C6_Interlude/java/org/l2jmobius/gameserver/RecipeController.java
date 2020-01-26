@@ -27,7 +27,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.datatables.csv.RecipeTable;
+import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.model.Inventory;
 import org.l2jmobius.gameserver.model.ManufactureItem;
 import org.l2jmobius.gameserver.model.RecipeList;
@@ -88,7 +88,6 @@ public class RecipeController
 	public synchronized void requestManufactureItem(PlayerInstance manufacturer, int recipeListId, PlayerInstance player)
 	{
 		final RecipeList recipeList = getValidRecipeList(player, recipeListId);
-		
 		if (recipeList == null)
 		{
 			return;
@@ -471,7 +470,7 @@ public class RecipeController
 			}
 			else
 			{
-				_target.sendPacket(new RecipeShopItemInfo(_player.getObjectId(), _recipeList.getId()));
+				_target.sendPacket(new RecipeShopItemInfo(_player, _recipeList.getId()));
 			}
 		}
 		
@@ -720,8 +719,7 @@ public class RecipeController
 	
 	private RecipeList getValidRecipeList(PlayerInstance player, int id)
 	{
-		final RecipeList recipeList = RecipeTable.getInstance().getRecipeList(id - 1);
-		
+		final RecipeList recipeList = RecipeData.getInstance().getRecipe(id);
 		if ((recipeList == null) || (recipeList.getRecipes().length == 0))
 		{
 			player.sendMessage("No recipe for: " + id);

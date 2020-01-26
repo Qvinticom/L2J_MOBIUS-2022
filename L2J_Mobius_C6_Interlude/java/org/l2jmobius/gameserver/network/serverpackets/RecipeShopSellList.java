@@ -20,44 +20,35 @@ import org.l2jmobius.gameserver.model.ManufactureItem;
 import org.l2jmobius.gameserver.model.ManufactureList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-/**
- * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
- */
 public class RecipeShopSellList extends GameServerPacket
 {
 	private final PlayerInstance _buyer;
-	private final PlayerInstance _manufacturer;
+	private final PlayerInstance _player;
 	
-	public RecipeShopSellList(PlayerInstance buyer, PlayerInstance manufacturer)
+	public RecipeShopSellList(PlayerInstance buyer, PlayerInstance player)
 	{
 		_buyer = buyer;
-		_manufacturer = manufacturer;
+		_player = player;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
-		final ManufactureList createList = _manufacturer.getCreateList();
-		
+		final ManufactureList createList = _player.getCreateList();
 		if (createList != null)
 		{
-			// dddd d(ddd)
 			writeC(0xd9);
-			writeD(_manufacturer.getObjectId());
-			writeD((int) _manufacturer.getCurrentMp()); // Creator's MP
-			writeD(_manufacturer.getMaxMp()); // Creator's MP
+			writeD(_player.getObjectId());
+			writeD((int) _player.getCurrentMp()); // Creator's MP
+			writeD(_player.getMaxMp()); // Creator's MP
 			writeD(_buyer.getAdena()); // Buyer Adena
+			writeD(createList.size());
 			
-			final int count = createList.size();
-			writeD(count);
-			ManufactureItem temp;
-			
-			for (int i = 0; i < count; i++)
+			for (ManufactureItem item : createList.getList())
 			{
-				temp = createList.getList().get(i);
-				writeD(temp.getRecipeId());
+				writeD(item.getRecipeId());
 				writeD(0x00); // unknown
-				writeD(temp.getCost());
+				writeD(item.getCost());
 			}
 		}
 	}

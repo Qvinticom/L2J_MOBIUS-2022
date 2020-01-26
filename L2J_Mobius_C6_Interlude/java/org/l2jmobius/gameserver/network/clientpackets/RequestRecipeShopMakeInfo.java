@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopItemInfo;
 
@@ -40,6 +41,12 @@ public class RequestRecipeShopMakeInfo extends GameClientPacket
 			return;
 		}
 		
-		player.sendPacket(new RecipeShopItemInfo(_playerObjectId, _recipeId));
+		final PlayerInstance shop = World.getInstance().getPlayer(_playerObjectId);
+		if ((shop == null) || (shop.getPrivateStoreType() != 5))
+		{
+			return;
+		}
+		
+		player.sendPacket(new RecipeShopItemInfo(shop, _recipeId));
 	}
 }

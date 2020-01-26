@@ -16,38 +16,30 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * ddddd
- * @version $Revision: 1.1.2.3.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
 public class RecipeShopItemInfo extends GameServerPacket
 {
-	private final int _shopId;
+	private final PlayerInstance _player;
 	private final int _recipeId;
 	
-	public RecipeShopItemInfo(int shopId, int recipeId)
+	public RecipeShopItemInfo(PlayerInstance player, int recipeId)
 	{
-		_shopId = shopId;
+		_player = player;
 		_recipeId = recipeId;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
-		if (!(World.getInstance().findObject(_shopId) instanceof PlayerInstance))
-		{
-			return;
-		}
-		
-		final PlayerInstance manufacturer = (PlayerInstance) World.getInstance().findObject(_shopId);
 		writeC(0xda);
-		writeD(_shopId);
+		writeD(_player.getObjectId());
 		writeD(_recipeId);
-		writeD(manufacturer != null ? (int) manufacturer.getCurrentMp() : 0);
-		writeD(manufacturer != null ? manufacturer.getMaxMp() : 0);
+		writeD((int) _player.getCurrentMp());
+		writeD(_player.getMaxMp());
 		writeD(0xffffffff);
 	}
 }

@@ -57,7 +57,6 @@ import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.datatables.NobleSkillTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
-import org.l2jmobius.gameserver.datatables.csv.RecipeTable;
 import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
@@ -66,6 +65,7 @@ import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.datatables.xml.FishData;
 import org.l2jmobius.gameserver.datatables.xml.HennaData;
+import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.IItemHandler;
@@ -7823,7 +7823,6 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Return the _buyList object of the PlayerInstance.<BR>
-	 * <BR>
 	 * @return the buy list
 	 */
 	public TradeList getBuyList()
@@ -7838,14 +7837,13 @@ public class PlayerInstance extends Playable
 	/**
 	 * Set the Private Store type of the PlayerInstance.<BR>
 	 * <BR>
-	 * <B><U> Values </U> :</B><BR>
-	 * <BR>
+	 * <B><U> Values </U> :</B>
 	 * <li>0 : STORE_PRIVATE_NONE</li>
 	 * <li>1 : STORE_PRIVATE_SELL</li>
-	 * <li>2 : sellmanage</li><BR>
-	 * <li>3 : STORE_PRIVATE_BUY</li><BR>
-	 * <li>4 : buymanage</li><BR>
-	 * <li>5 : STORE_PRIVATE_MANUFACTURE</li><BR>
+	 * <li>2 : sellmanage</li>
+	 * <li>3 : STORE_PRIVATE_BUY</li>
+	 * <li>4 : buymanage</li>
+	 * <li>5 : STORE_PRIVATE_MANUFACTURE</li>
 	 * @param type the new private store type
 	 */
 	public void setPrivateStoreType(int type)
@@ -7871,14 +7869,13 @@ public class PlayerInstance extends Playable
 	/**
 	 * Return the Private Store type of the PlayerInstance.<BR>
 	 * <BR>
-	 * <B><U> Values </U> :</B><BR>
-	 * <BR>
+	 * <B><U> Values </U> :</B>
 	 * <li>0 : STORE_PRIVATE_NONE</li>
 	 * <li>1 : STORE_PRIVATE_SELL</li>
-	 * <li>2 : sellmanage</li><BR>
-	 * <li>3 : STORE_PRIVATE_BUY</li><BR>
-	 * <li>4 : buymanage</li><BR>
-	 * <li>5 : STORE_PRIVATE_MANUFACTURE</li><BR>
+	 * <li>2 : sellmanage</li>
+	 * <li>3 : STORE_PRIVATE_BUY</li>
+	 * <li>4 : buymanage</li>
+	 * <li>5 : STORE_PRIVATE_MANUFACTURE</li>
 	 * @return the private store type
 	 */
 	public int getPrivateStoreType()
@@ -9121,7 +9118,7 @@ public class PlayerInstance extends Playable
 			RecipeList recipe;
 			while (rset.next())
 			{
-				recipe = RecipeTable.getInstance().getRecipeList(rset.getInt("id") - 1);
+				recipe = RecipeData.getInstance().getRecipe(rset.getInt("id"));
 				
 				if (rset.getInt("type") == 1)
 				{

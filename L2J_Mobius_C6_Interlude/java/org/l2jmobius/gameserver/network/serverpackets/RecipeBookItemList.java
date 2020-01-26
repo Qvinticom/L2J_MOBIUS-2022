@@ -57,8 +57,7 @@ public class RecipeBookItemList extends GameServerPacket
 			
 			for (int i = 0; i < _recipes.length; i++)
 			{
-				final RecipeList temp = _recipes[i];
-				writeD(temp.getId());
+				writeD(_recipes[i].getId());
 				writeD(i + 1);
 			}
 		}

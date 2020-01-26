@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.handler.itemhandlers;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.csv.RecipeTable;
+import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.RecipeList;
 import org.l2jmobius.gameserver.model.actor.Playable;
@@ -32,11 +32,11 @@ public class Recipes implements IItemHandler
 	
 	public Recipes()
 	{
-		final RecipeTable rc = RecipeTable.getInstance();
-		ITEM_IDS = new int[rc.getRecipesCount()];
-		for (int i = 0; i < rc.getRecipesCount(); i++)
+		int index = 0;
+		ITEM_IDS = new int[RecipeData.getInstance().getAllRecipes().size()];
+		for (RecipeList recipe : RecipeData.getInstance().getAllRecipes())
 		{
-			ITEM_IDS[i] = rc.getRecipeList(i).getRecipeId();
+			ITEM_IDS[index++] = recipe.getRecipeId();
 		}
 	}
 	
@@ -55,7 +55,7 @@ public class Recipes implements IItemHandler
 			return;
 		}
 		
-		final RecipeList recipe = RecipeTable.getInstance().getRecipeByItemId(item.getItemId());
+		final RecipeList recipe = RecipeData.getInstance().getRecipeByItemId(item.getItemId());
 		if (player.hasRecipeList(recipe.getId()))
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.RECIPE_ALREADY_REGISTERED));
@@ -66,7 +66,7 @@ public class Recipes implements IItemHandler
 			{
 				if (recipe.getLevel() > player.getDwarvenCraft())
 				{
-					// can't add recipe, becouse create item level too low
+					// Cannot add recipe, because create item level too low.
 					player.sendPacket(new SystemMessage(SystemMessageId.CREATE_LVL_TOO_LOW_TO_REGISTER));
 				}
 				else if (player.getDwarvenRecipeBook().length >= player.getDwarfRecipeLimit())
@@ -94,7 +94,7 @@ public class Recipes implements IItemHandler
 		{
 			if (recipe.getLevel() > player.getCommonCraft())
 			{
-				// can't add recipe, becouse create item level too low
+				// Cannot add recipe, because create item level too low.
 				player.sendPacket(new SystemMessage(SystemMessageId.CREATE_LVL_TOO_LOW_TO_REGISTER));
 			}
 			else if (player.getCommonRecipeBook().length >= player.getCommonRecipeLimit())

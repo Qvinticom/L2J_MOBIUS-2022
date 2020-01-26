@@ -50,7 +50,6 @@ import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.csv.ExtractableItemsData;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.csv.NpcWalkerRoutesTable;
-import org.l2jmobius.gameserver.datatables.csv.RecipeTable;
 import org.l2jmobius.gameserver.datatables.csv.SummonItemsData;
 import org.l2jmobius.gameserver.datatables.sql.ArmorSetsTable;
 import org.l2jmobius.gameserver.datatables.sql.CharNameTable;
@@ -72,6 +71,7 @@ import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.datatables.xml.FenceData;
 import org.l2jmobius.gameserver.datatables.xml.FishData;
 import org.l2jmobius.gameserver.datatables.xml.HennaData;
+import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.datatables.xml.StaticObjectData;
 import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -323,7 +323,7 @@ public class GameServer
 		DimensionalRiftManager.getInstance();
 		
 		Util.printSection("Misc");
-		RecipeTable.getInstance();
+		RecipeData.getInstance();
 		RecipeController.getInstance();
 		EventDroplist.getInstance();
 		AugmentationData.getInstance();
