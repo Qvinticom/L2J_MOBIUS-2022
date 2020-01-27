@@ -46,10 +46,10 @@ public class ExShowManorDefaultInfo extends GameServerPacket
 			writeD(SeedData.getInstance().getSeedLevelByCrop(cropId)); // level
 			writeD(SeedData.getInstance().getSeedBasicPriceByCrop(cropId)); // seed price
 			writeD(SeedData.getInstance().getCropBasicPrice(cropId)); // crop price
-			writeC(1); // rewrad 1 Type
-			writeD(SeedData.getInstance().getRewardItem(cropId, 1)); // Rewrad 1 Type Item Id
-			writeC(1); // rewrad 2 Type
-			writeD(SeedData.getInstance().getRewardItem(cropId, 2)); // Rewrad 2 Type Item Id
+			writeC(1); // reward 1 Type
+			writeD(SeedData.getInstance().getRewardItem(cropId, 1)); // Reward 1 Type Item Id
+			writeC(1); // reward 2 Type
+			writeD(SeedData.getInstance().getRewardItem(cropId, 2)); // Reward 2 Type Item Id
 		}
 	}
 }

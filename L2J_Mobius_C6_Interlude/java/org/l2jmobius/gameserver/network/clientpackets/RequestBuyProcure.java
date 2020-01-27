@@ -171,14 +171,14 @@ public class RequestBuyProcure extends GameClientPacket
 				count = 0;
 			}
 			
-			final int rewradItemId = SeedData.getInstance().getRewardItem(itemId, manor.getCastle().getCrop(itemId, CastleManorManager.PERIOD_CURRENT).getReward());
+			final int rewardItemId = SeedData.getInstance().getRewardItem(itemId, manor.getCastle().getCrop(itemId, CastleManorManager.PERIOD_CURRENT).getReward());
 			
-			int rewradItemCount = 1; // Manor.getInstance().getRewardAmount(itemId, manor.getCastle().getCropReward(itemId));
+			int rewardItemCount = 1; // Manor.getInstance().getRewardAmount(itemId, manor.getCastle().getCropReward(itemId));
 			
-			rewradItemCount = count / rewradItemCount;
+			rewardItemCount = count / rewardItemCount;
 			
 			// Add item to Inventory and adjust update packet
-			final ItemInstance item = player.getInventory().addItem("Manor", rewradItemId, rewradItemCount, player, manor);
+			final ItemInstance item = player.getInventory().addItem("Manor", rewardItemId, rewardItemCount, player, manor);
 			final ItemInstance iteme = player.getInventory().destroyItemByItemId("Manor", itemId, count, player, manor);
 			
 			if ((item == null) || (iteme == null))
@@ -187,7 +187,7 @@ public class RequestBuyProcure extends GameClientPacket
 			}
 			
 			playerIU.addRemovedItem(iteme);
-			if (item.getCount() > rewradItemCount)
+			if (item.getCount() > rewardItemCount)
 			{
 				playerIU.addModifiedItem(item);
 			}
@@ -198,8 +198,8 @@ public class RequestBuyProcure extends GameClientPacket
 			
 			// Send Char Buy Messages
 			final SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
-			sm.addItemName(rewradItemId);
-			sm.addNumber(rewradItemCount);
+			sm.addItemName(rewardItemId);
+			sm.addNumber(rewardItemCount);
 			player.sendPacket(sm);
 			
 			// manor.getCastle().setCropAmount(itemId, manor.getCastle().getCrop(itemId, CastleManorManager.PERIOD_CURRENT).getAmount() - count);

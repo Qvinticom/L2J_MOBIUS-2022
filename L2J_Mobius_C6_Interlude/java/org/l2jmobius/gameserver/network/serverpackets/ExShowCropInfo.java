@@ -59,10 +59,10 @@ public class ExShowCropInfo extends GameServerPacket
 			writeD(crop.getPrice()); // Buy price
 			writeC(crop.getReward()); // Reward
 			writeD(SeedData.getInstance().getSeedLevelByCrop(crop.getId())); // Seed Level
-			writeC(1); // rewrad 1 Type
-			writeD(SeedData.getInstance().getRewardItem(crop.getId(), 1)); // Rewrad 1 Type Item Id
-			writeC(1); // rewrad 2 Type
-			writeD(SeedData.getInstance().getRewardItem(crop.getId(), 2)); // Rewrad 2 Type Item Id
+			writeC(1); // reward 1 Type
+			writeD(SeedData.getInstance().getRewardItem(crop.getId(), 1)); // Reward 1 Type Item Id
+			writeC(1); // reward 2 Type
+			writeD(SeedData.getInstance().getRewardItem(crop.getId(), 2)); // Reward 2 Type Item Id
 		}
 	}
 }
