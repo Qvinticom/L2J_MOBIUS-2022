@@ -16,11 +16,15 @@
  */
 package ai.others;
 
-import java.util.Collection;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
 
+import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
+import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -63,7 +67,7 @@ public class SiegeGuards extends AbstractNpcAI
 		35134, 35135, 35136, 35176, 35177, 35178, 35218, 35219, 35220, 35261, 35262, 35263, 35264, 35265, 35308, 35309, 35310, 35352, 35353, 35354, 35497, 35498, 35499, 35500, 35501, 35544, 35545, 35546
 	};
 	//@formatter:on
-	private static final Collection<Npc> SPAWNED_GUARDS = ConcurrentHashMap.newKeySet();
+	private static final Map<Integer, List<Npc>> RESIDENCE_GUARD_MAP = new HashMap<>();
 	
 	public SiegeGuards()
 	{
@@ -77,46 +81,75 @@ public class SiegeGuards extends AbstractNpcAI
 		addKillId(MERCENARIES);
 		addKillId(STATIONARY_MERCENARIES);
 		
-		startQuestTimer("AGGRO_CHECK", 3000, null, null, true);
+		// Start task for unknown residences.
+		RESIDENCE_GUARD_MAP.put(0, new CopyOnWriteArrayList<>());
+		ThreadPool.scheduleAtFixedRate(new AggroCheckTask(0), 0, 3000);
+		
+		// Start tasks for castles.
+		for (Castle castle : CastleManager.getInstance().getCastles())
+		{
+			final int residenceId = castle.getResidenceId();
+			RESIDENCE_GUARD_MAP.put(residenceId, new CopyOnWriteArrayList<>());
+			ThreadPool.scheduleAtFixedRate(new AggroCheckTask(residenceId), residenceId * 100, 3000);
+		}
 	}
 	
-	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	private class AggroCheckTask implements Runnable
 	{
-		for (Npc guard : SPAWNED_GUARDS)
+		private final int _residenceId;
+		
+		public AggroCheckTask(int residenceId)
 		{
-			if (guard != null)
+			_residenceId = residenceId;
+		}
+		
+		@Override
+		public void run()
+		{
+			final List<Npc> guards = RESIDENCE_GUARD_MAP.get(_residenceId);
+			for (Npc guard : guards)
 			{
+				if (guard == null)
+				{
+					continue;
+				}
+				
 				if (guard.isDead())
 				{
-					SPAWNED_GUARDS.remove(guard);
+					guards.remove(guard);
+					continue;
 				}
-				else
+				
+				final WorldObject target = guard.getTarget();
+				if (!guard.isInCombat() || (target == null) || (guard.calculateDistance2D(target) > guard.getAggroRange()) || target.isInvul())
 				{
-					final WorldObject target = guard.getTarget();
-					if (!guard.isInCombat() || (target == null) || (guard.calculateDistance2D(target) > guard.getAggroRange()) || target.isInvul())
+					for (Creature nearby : World.getInstance().getVisibleObjectsInRange(guard, Creature.class, guard.getAggroRange()))
 					{
-						for (Creature nearby : World.getInstance().getVisibleObjectsInRange(guard, Creature.class, guard.getAggroRange()))
+						if (nearby.isPlayable() && GeoEngine.getInstance().canSeeTarget(guard, nearby))
 						{
-							if (nearby.isPlayable() && GeoEngine.getInstance().canSeeTarget(guard, nearby))
+							final Summon summon = nearby.isSummon() ? (Summon) nearby : null;
+							final PlayerInstance pl = summon == null ? (PlayerInstance) nearby : summon.getOwner();
+							if (((pl.getSiegeState() != 2) || pl.isRegisteredOnThisSiegeField(guard.getScriptValue())) && ((pl.getSiegeState() != 0) || (guard.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE)))
 							{
-								final Summon summon = nearby.isSummon() ? (Summon) nearby : null;
-								final PlayerInstance pl = summon == null ? (PlayerInstance) nearby : summon.getOwner();
-								if (((pl.getSiegeState() != 2) || pl.isRegisteredOnThisSiegeField(guard.getScriptValue())) && ((pl.getSiegeState() != 0) || (guard.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE)))
+								// skip invisible players
+								if (pl.isInvisible() || pl.isInvul())
 								{
-									if (!pl.isInvisible() && !pl.isInvul()) // skip invisible players
-									{
-										addAttackPlayerDesire(guard, pl);
-										break; // no need to search more
-									}
+									continue;
 								}
+								
+								if (guard.isAttackable())
+								{
+									((Attackable) guard).addDamageHate(nearby, 0, 999);
+								}
+								guard.setRunning();
+								guard.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+								break; // no need to search more
 							}
 						}
 					}
 				}
 			}
 		}
-		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
@@ -133,7 +166,7 @@ public class SiegeGuards extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		SPAWNED_GUARDS.remove(npc);
+		RESIDENCE_GUARD_MAP.get(npc.getScriptValue()).remove(npc);
 		return super.onKill(npc, killer, isSummon);
 	}
 	
@@ -145,10 +178,20 @@ public class SiegeGuards extends AbstractNpcAI
 		{
 			npc.setImmobilized(true);
 		}
+		
 		final Castle castle = npc.getCastle();
 		final Fort fortress = npc.getFort();
-		npc.setScriptValue(fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : 0));
-		SPAWNED_GUARDS.add(npc);
+		final int residenceId = fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : 0);
+		npc.setScriptValue(residenceId);
+		if (RESIDENCE_GUARD_MAP.containsKey(residenceId))
+		{
+			RESIDENCE_GUARD_MAP.get(residenceId).add(npc);
+		}
+		else // Residence id not found.
+		{
+			RESIDENCE_GUARD_MAP.get(0).add(npc);
+		}
+		
 		return super.onSpawn(npc);
 	}
 	
