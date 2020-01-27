@@ -124,6 +124,7 @@ import quests.Q10386_MysteriousJourney.Q10386_MysteriousJourney;
 import quests.Q10387_SoullessOne.Q10387_SoullessOne;
 import quests.Q10388_ConspiracyBehindDoor.Q10388_ConspiracyBehindDoor;
 import quests.Q10389_TheVoiceOfAuthority.Q10389_TheVoiceOfAuthority;
+import quests.Q10423_EmbryoStrongholdRaid.Q10423_EmbryoStrongholdRaid;
 import quests.Q10445_AnImpendingThreat.Q10445_AnImpendingThreat;
 import quests.Q10446_HitAndRun.Q10446_HitAndRun;
 import quests.Q10447_TimingIsEverything.Q10447_TimingIsEverything;
@@ -199,6 +200,9 @@ import quests.Q10892_RevengeOneStepAtATime.Q10892_RevengeOneStepAtATime;
 import quests.Q10896_VisitTheAdventureGuild.Q10896_VisitTheAdventureGuild;
 import quests.Q10897_ShowYourAbility.Q10897_ShowYourAbility;
 import quests.Q10898_TowardAGoal.Q10898_TowardAGoal;
+import quests.Q10899_VeteranAdventurer.Q10899_VeteranAdventurer;
+import quests.Q10900_PathToStrength.Q10900_PathToStrength;
+import quests.Q10901_AModelAdventurer.Q10901_AModelAdventurer;
 import quests.Q11025_PathOfDestinyProving.Q11025_PathOfDestinyProving;
 import quests.Q11026_PathOfDestinyConviction.Q11026_PathOfDestinyConviction;
 import quests.Q11027_PathOfDestinyOvercome.Q11027_PathOfDestinyOvercome;
@@ -289,7 +293,6 @@ import quests.not_done.Q10355_BlacksmithsSoul1;
 import quests.not_done.Q10356_BlacksmithsSoul2;
 import quests.not_done.Q10373_ExploringTheDimensionSealingTheDimension;
 import quests.not_done.Q10418_TheImmortalPirateKing;
-import quests.not_done.Q10423_EmbryoStrongholdRaid;
 import quests.not_done.Q10454_FinalEmbryoApostle;
 import quests.not_done.Q10457_KefensisIllusion;
 import quests.not_done.Q10514_NewPathToGlory;
@@ -325,9 +328,6 @@ import quests.not_done.Q10888_SaviorsPathDefeatTheEmbryo;
 import quests.not_done.Q10889_SaviorsPathFallenEmperorsThrone;
 import quests.not_done.Q10890_SaviorsPathFallOfEtina;
 import quests.not_done.Q10893_EndOfTwistedFate;
-import quests.not_done.Q10899_VeteranAdventurer;
-import quests.not_done.Q10900_PathToStrength;
-import quests.not_done.Q10901_AModelAdventurer;
 
 /**
  * @author NosBit
@@ -507,7 +507,7 @@ public class QuestMasterHandler
 		Q10388_ConspiracyBehindDoor.class,
 		Q10389_TheVoiceOfAuthority.class,
 		Q10418_TheImmortalPirateKing.class, // TODO: Not done.
-		Q10423_EmbryoStrongholdRaid.class, // TODO: Not done.
+		Q10423_EmbryoStrongholdRaid.class,
 		Q10445_AnImpendingThreat.class,
 		Q10446_HitAndRun.class,
 		Q10447_TimingIsEverything.class,
@@ -625,9 +625,9 @@ public class QuestMasterHandler
 		Q10896_VisitTheAdventureGuild.class,
 		Q10897_ShowYourAbility.class,
 		Q10898_TowardAGoal.class,
-		Q10899_VeteranAdventurer.class, // TODO: Not done.
-		Q10900_PathToStrength.class, // TODO: Not done.
-		Q10901_AModelAdventurer.class, // TODO: Not done.
+		Q10899_VeteranAdventurer.class,
+		Q10900_PathToStrength.class,
+		Q10901_AModelAdventurer.class,
 		Q11025_PathOfDestinyProving.class,
 		Q11026_PathOfDestinyConviction.class,
 		Q11027_PathOfDestinyOvercome.class,

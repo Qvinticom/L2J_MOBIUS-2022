@@ -292,6 +292,7 @@ import quests.Q10419_KekropusLetterKampfsWhereabouts.Q10419_KekropusLetterKampfs
 import quests.Q10420_TheVarkaSilenosSupporters.Q10420_TheVarkaSilenosSupporters;
 import quests.Q10421_AssassinationOfTheVarkaSilenosCommander.Q10421_AssassinationOfTheVarkaSilenosCommander;
 import quests.Q10422_AssassinationOfTheVarkaSilenosChief.Q10422_AssassinationOfTheVarkaSilenosChief;
+import quests.Q10423_EmbryoStrongholdRaid.Q10423_EmbryoStrongholdRaid;
 import quests.Q10424_KekropusLetterBelosWhereabouts.Q10424_KekropusLetterBelosWhereabouts;
 import quests.Q10425_TheKetraOrcSupporters.Q10425_TheKetraOrcSupporters;
 import quests.Q10426_AssassinationOfTheKetraOrcCommander.Q10426_AssassinationOfTheKetraOrcCommander;
@@ -455,6 +456,9 @@ import quests.Q10892_RevengeOneStepAtATime.Q10892_RevengeOneStepAtATime;
 import quests.Q10896_VisitTheAdventureGuild.Q10896_VisitTheAdventureGuild;
 import quests.Q10897_ShowYourAbility.Q10897_ShowYourAbility;
 import quests.Q10898_TowardAGoal.Q10898_TowardAGoal;
+import quests.Q10899_VeteranAdventurer.Q10899_VeteranAdventurer;
+import quests.Q10900_PathToStrength.Q10900_PathToStrength;
+import quests.Q10901_AModelAdventurer.Q10901_AModelAdventurer;
 import quests.custom.Q00529_RegularBarrierMaintenance.Q00529_RegularBarrierMaintenance;
 import quests.custom.Q00560_HowToOvercomeFear.Q00560_HowToOvercomeFear;
 import quests.custom.Q00589_ASecretChange.Q00589_ASecretChange;
@@ -822,7 +826,7 @@ public class QuestMasterHandler
 		Q10420_TheVarkaSilenosSupporters.class,
 		Q10421_AssassinationOfTheVarkaSilenosCommander.class,
 		Q10422_AssassinationOfTheVarkaSilenosChief.class,
-		Q10423_EmbryoStrongholdRaid.class, // TODO: Not done.
+		Q10423_EmbryoStrongholdRaid.class,
 		Q10424_KekropusLetterBelosWhereabouts.class,
 		Q10425_TheKetraOrcSupporters.class,
 		Q10426_AssassinationOfTheKetraOrcCommander.class,
@@ -1041,9 +1045,9 @@ public class QuestMasterHandler
 		Q10896_VisitTheAdventureGuild.class,
 		Q10897_ShowYourAbility.class,
 		Q10898_TowardAGoal.class,
-		Q10899_VeteranAdventurer.class, // TODO: Not done.
-		Q10900_PathToStrength.class, // TODO: Not done.
-		Q10901_AModelAdventurer.class, // TODO: Not done.
+		Q10899_VeteranAdventurer.class,
+		Q10900_PathToStrength.class,
+		Q10901_AModelAdventurer.class,
 	};
 	
 	public static void main(String[] args)

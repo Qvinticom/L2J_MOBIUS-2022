@@ -105,7 +105,7 @@ public class Q10898_TowardAGoal extends Quest
 				{
 					case PENNY:
 					{
-						if ((qs.isCond(1)) && (player.getFactionLevel(Faction.ADVENTURE_GUILD) >= 2))
+						if ((qs.isCond(1)) && (player.getFactionLevel(Faction.ADVENTURE_GUILD) >= 3))
 						{
 							final QuestState st = player.getQuestState("Q00682_TheStrongInTheClosedSpace");
 							if ((st != null) && st.isCompleted())

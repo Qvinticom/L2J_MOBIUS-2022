@@ -333,6 +333,7 @@ import quests.Q10419_KekropusLetterKampfsWhereabouts.Q10419_KekropusLetterKampfs
 import quests.Q10420_TheVarkaSilenosSupporters.Q10420_TheVarkaSilenosSupporters;
 import quests.Q10421_AssassinationOfTheVarkaSilenosCommander.Q10421_AssassinationOfTheVarkaSilenosCommander;
 import quests.Q10422_AssassinationOfTheVarkaSilenosChief.Q10422_AssassinationOfTheVarkaSilenosChief;
+import quests.Q10423_EmbryoStrongholdRaid.Q10423_EmbryoStrongholdRaid;
 import quests.Q10424_KekropusLetterBelosWhereabouts.Q10424_KekropusLetterBelosWhereabouts;
 import quests.Q10425_TheKetraOrcSupporters.Q10425_TheKetraOrcSupporters;
 import quests.Q10426_AssassinationOfTheKetraOrcCommander.Q10426_AssassinationOfTheKetraOrcCommander;
@@ -882,7 +883,7 @@ public class QuestMasterHandler
 		Q10420_TheVarkaSilenosSupporters.class,
 		Q10421_AssassinationOfTheVarkaSilenosCommander.class,
 		Q10422_AssassinationOfTheVarkaSilenosChief.class,
-		Q10423_EmbryoStrongholdRaid.class, // TODO: Not done.
+		Q10423_EmbryoStrongholdRaid.class,
 		Q10424_KekropusLetterBelosWhereabouts.class,
 		Q10425_TheKetraOrcSupporters.class,
 		Q10426_AssassinationOfTheKetraOrcCommander.class,

@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q10898_TowardAGoal;
+package quests.Q10900_PathToStrength;
 
 import org.l2jmobius.gameserver.enums.Faction;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -23,33 +23,34 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
-import quests.Q10897_ShowYourAbility.Q10897_ShowYourAbility;
+import quests.Q10899_VeteranAdventurer.Q10899_VeteranAdventurer;
 
 /**
- * Toward A Goal (10898)
- * @URL https://l2wiki.com/Toward_A_Goal
+ * Veteran Adventurer (10900)
+ * @URL https://l2wiki.com/Path_to_Strength
  * @author Dmitri
  */
-public class Q10898_TowardAGoal extends Quest
+public class Q10900_PathToStrength extends Quest
 {
 	// NPCs
 	private static final int PENNY = 34413;
 	// Misc
 	private static final int MIN_LEVEL = 100;
 	
-	public Q10898_TowardAGoal()
+	public Q10900_PathToStrength()
 	{
-		super(10898);
+		super(10900);
 		addStartNpc(PENNY);
 		addTalkId(PENNY);
 		addCondMinLevel(MIN_LEVEL, "nolevel.html");
-		addCondCompletedQuest(Q10897_ShowYourAbility.class.getSimpleName(), "34413-00.htm");
+		addCondCompletedQuest(Q10899_VeteranAdventurer.class.getSimpleName(), "34413-00.htm");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
+		
 		if (qs == null)
 		{
 			return null;
@@ -73,7 +74,7 @@ public class Q10898_TowardAGoal extends Quest
 			case "34413-07.html":
 			{
 				// Rewards
-				addExpAndSp(player, 20763540000L, 20763540);
+				addExpAndSp(player, 83054160000L, 83054160);
 				addFactionPoints(player, Faction.ADVENTURE_GUILD, 100); // add FP points to ADVENTURE_GUILD Faction
 				qs.exitQuest(false, true);
 				htmltext = event;
@@ -93,37 +94,27 @@ public class Q10898_TowardAGoal extends Quest
 		{
 			case State.CREATED:
 			{
-				if (npc.getId() == PENNY)
-				{
-					htmltext = "34413-01.htm";
-				}
+				htmltext = "34413-01.htm";
 				break;
 			}
 			case State.STARTED:
 			{
-				switch (npc.getId())
+				if ((qs.isCond(1)) && (player.getFactionLevel(Faction.ADVENTURE_GUILD) >= 5))
 				{
-					case PENNY:
+					final QuestState st = player.getQuestState("Q00682_TheStrongInTheClosedSpace");
+					if ((st != null) && st.isCompleted())
 					{
-						if ((qs.isCond(1)) && (player.getFactionLevel(Faction.ADVENTURE_GUILD) >= 3))
-						{
-							final QuestState st = player.getQuestState("Q00682_TheStrongInTheClosedSpace");
-							if ((st != null) && st.isCompleted())
-							{
-								qs.setCond(2, true);
-								htmltext = "34413-06.html";
-							}
-							else
-							{
-								htmltext = "34413-05.html";
-							}
-						}
-						if (qs.isCond(2))
-						{
-							htmltext = "34413-06.html";
-						}
-						break;
+						qs.setCond(2, true);
+						htmltext = "34413-06.html";
 					}
+					else
+					{
+						htmltext = "34413-05.html";
+					}
+				}
+				if (qs.isCond(2))
+				{
+					htmltext = "34413-06.html";
 				}
 				break;
 			}
