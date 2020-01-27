@@ -508,6 +508,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="BRACELET" />
+		<skills>
+			<skill id="50912" level="1" /> <!-- Talisman Bracelet Lv. 1 -->
+		</skills>
 	</item>
 	<item id="91935" name="Adventurer's Agathion Griffin" type="Armor">
 		<!-- Can be used to obtain the power of Agathion Griffin. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Def. increased. <Unique Abilities>. P. Def. +5. -->
