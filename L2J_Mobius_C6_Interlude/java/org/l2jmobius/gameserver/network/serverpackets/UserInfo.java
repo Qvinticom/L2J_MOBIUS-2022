@@ -16,31 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.Map;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.Inventory;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
-/**
- * 0000: 04 03 15 00 00 77 ff 00 00 80 f1 ff ff 00 00 00 .....w.......... 0010: 00 2a 89 00 4c 43 00 61 00 6c 00 61 00 64 00 6f .*..LC.a.l.a.d.o 0020: 00 6e 00 00 00 01 00 00 00 00 00 00 00 19 00 00 .n.............. 0030: 00 0d 00 00 00 ee 81 02 00 15 00 00 00 18 00 00 ................ 0040: 00 19
- * 00 00 00 25 00 00 00 17 00 00 00 28 00 00 .....%.......(.. 0050: 00 14 01 00 00 14 01 00 00 02 01 00 00 02 01 00 ................ 0060: 00 fa 09 00 00 81 06 00 00 26 34 00 00 2e 00 00 .........&4..... 0070: 00 00 00 00 00 db 9f a1 41 93 26 64 41 de c8 31 ........A.&dA..1 0080: 41 ca 73 c0 41 d5
- * 22 d0 41 83 bd 41 41 81 56 10 A.s.A.".A..AA.V. 0090: 41 00 00 00 00 27 7d 30 41 69 aa e0 40 b4 fb d3 A....'}0Ai..@... 00a0: 41 91 f9 63 41 00 00 00 00 81 56 10 41 00 00 00 A..cA.....V.A... 00b0: 00 71 00 00 00 71 00 00 00 76 00 00 00 74 00 00 .q...q...v...t.. 00c0: 00 74 00 00 00 2a 00 00 00 e8
- * 02 00 00 00 00 00 .t...*.......... 00d0: 00 5f 04 00 00 ac 01 00 00 cf 01 00 00 62 04 00 ._...........b.. 00e0: 00 00 00 00 00 e8 02 00 00 0b 00 00 00 52 01 00 .............R.. 00f0: 00 4d 00 00 00 2a 00 00 00 2f 00 00 00 29 00 00 .M...*.../...).. 0100: 00 12 00 00 00 82 01 00 00 52 01 00 00 53
- * 00 00 .........R...S.. 0110: 00 00 00 00 00 00 00 00 00 7a 00 00 00 55 00 00 .........z...U.. 0120: 00 32 00 00 00 32 00 00 00 00 00 00 00 00 00 00 .2...2.......... 0130: 00 00 00 00 00 00 00 00 00 a4 70 3d 0a d7 a3 f0 ..........p=.... 0140: 3f 64 5d dc 46 03 78 f3 3f 00 00 00 00 00 00 1e
- * ?d].F.x.?....... 0150: 40 00 00 00 00 00 00 38 40 02 00 00 00 01 00 00 @......8@....... 0160: 00 00 00 00 00 00 00 00 00 00 00 c1 0c 00 00 01 ................ 0170: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................ 0180: 00 00 00 00 ....
- * dddddSdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddffffddddSdddcccdd (h) dddddSddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd ffffddddSdddddcccddh (h) c dc hhdh
- * dddddSdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddffffddddSdddddcccddh (h) c dc hhdh ddddc c dcc cddd d (from 654) but it actually reads dddddSdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddffffddddSdddddcccddh (h) c dc *dddddddd* hhdh ddddc dcc
- * cddd d *...*: here i am not sure at least it looks like it reads that much data (32 bytes), not sure about the format inside because it is not read thanks to the ususal
- * parsingfunctiondddddSddddQddddddddddddddddddddddddddddddddddddddddddddddddhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhddddddddddddddddddddffffddddSdddddcccddh [h] c dc d hhdh ddddc c dcc cddd d c dd d d
- * @version $Revision: 1.14.2.4.2.12 $ $Date: 2005/04/11 10:05:55 $
- */
 public class UserInfo extends GameServerPacket
 {
 	private final PlayerInstance _player;
@@ -55,11 +39,6 @@ public class UserInfo extends GameServerPacket
 	private int _relation;
 	private final float _moveMultiplier;
 	
-	public boolean _critical_test = false;
-	
-	/**
-	 * @param player
-	 */
 	public UserInfo(PlayerInstance player)
 	{
 		_player = player;
@@ -86,21 +65,10 @@ public class UserInfo extends GameServerPacket
 	{
 		writeC(0x04);
 		
-		if (!_critical_test)
-		{
-			writeD(_player.getX());
-			writeD(_player.getY());
-			writeD(_player.getZ());
-			writeD(_player.getHeading());
-		}
-		else // critical values
-		{
-			writeD(-999999999);
-			writeD(-999999999);
-			writeD(-999999999);
-			writeD(-999999999);
-			writeD(-999999999); // one more to change the UserInfo packet size
-		}
+		writeD(_player.getX());
+		writeD(_player.getY());
+		writeD(_player.getZ());
+		writeD(_player.getBoat() != null ? _player.getBoat().getObjectId() : 0);
 		
 		writeD(_player.getObjectId());
 		writeS(_player.getName());
@@ -132,7 +100,7 @@ public class UserInfo extends GameServerPacket
 		writeD(_player.getCurrentLoad());
 		writeD(_player.getMaxLoad());
 		
-		writeD(_player.getActiveWeaponItem() != null ? 40 : 20); // 20 no weapon, 40 weapon equippe
+		writeD(_player.getActiveWeaponItem() != null ? 40 : 20); // 20 no weapon, 40 weapon equipped
 		
 		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_DHAIR));
 		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_REAR));
@@ -170,6 +138,7 @@ public class UserInfo extends GameServerPacket
 		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
 		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_FACE));
 		
+		// c6 new h's
 		writeH(0x00);
 		writeH(0x00);
 		writeH(0x00);
@@ -202,6 +171,7 @@ public class UserInfo extends GameServerPacket
 		writeH(0x00);
 		writeH(0x00);
 		writeH(0x00);
+		// end of c6 new h's
 		
 		writeD(_player.getPAtk(null));
 		writeD(_player.getPAtkSpd());
@@ -219,16 +189,16 @@ public class UserInfo extends GameServerPacket
 		writeD(_player.getPvpFlag()); // 0-non-pvp 1-pvp = violett name
 		writeD(_player.getKarma());
 		
-		writeD(_runSpd);
-		writeD(_walkSpd);
-		writeD(_swimRunSpd); // swimspeed
-		writeD(_swimWalkSpd); // swimspeed
+		writeD(_runSpd); // base run speed
+		writeD(_walkSpd); // base walk speed
+		writeD(_swimRunSpd); // swim run speed
+		writeD(_swimWalkSpd); // swim walk speed
 		writeD(_flRunSpd);
 		writeD(_flWalkSpd);
-		writeD(_flyRunSpd);
-		writeD(_flyWalkSpd);
-		writeF(_moveMultiplier);
-		writeF(_player.getAttackSpeedMultiplier());
+		writeD(_flyRunSpd); // fly run speed
+		writeD(_flyWalkSpd); // fly walk speed
+		writeF(_moveMultiplier); // run speed multiplier
+		writeF(_player.getAttackSpeedMultiplier()); // attack speed multiplier
 		
 		final Summon pet = _player.getPet();
 		if ((_player.getMountType() != 0) && (pet != null))
@@ -275,11 +245,10 @@ public class UserInfo extends GameServerPacket
 		writeD(_player.getPkKills());
 		writeD(_player.getPvpKills());
 		
-		final Map<Integer, CubicInstance> cubics = _player.getCubics();
-		writeH(cubics.size());
-		for (Integer id : cubics.keySet())
+		writeH(_player.getCubics().size());
+		for (int cubicId : _player.getCubics().keySet())
 		{
-			writeH(id);
+			writeH(cubicId);
 		}
 		
 		writeC(_player.isInPartyMatchRoom() ? 1 : 0);
@@ -293,17 +262,17 @@ public class UserInfo extends GameServerPacket
 			writeD(_player.getAbnormalEffect()); // C2
 		}
 		
-		writeC(0x00); // unk
+		writeC(0x00);
 		
 		writeD(_player.getClanPrivileges());
 		
 		writeH(_player.getRecomLeft()); // c2 recommendations remaining
 		writeH(_player.getRecomHave()); // c2 recommendations received
-		writeD(0x00); // FIXME: MOUNT NPC ID
+		writeD(0x00); // _player.getMountNpcId() > 0 ? _player.getMountNpcId() + 1000000 : 0
 		writeH(_player.getInventoryLimit());
 		
 		writeD(_player.getClassId().getId());
-		writeD(0x00); // FIXME: special effects? circles around player...
+		writeD(0x00); // special effects? circles around player...
 		writeD(_player.getMaxCp());
 		writeD((int) _player.getCurrentCp());
 		writeC(_player.isMounted() ? 0 : _player.getEnchantEffect());
@@ -331,10 +300,11 @@ public class UserInfo extends GameServerPacket
 		writeD(_player.getFishZ()); // fishing z
 		writeD(_player.getAppearance().getNameColor());
 		
+		// new c5
 		writeC(_player.isRunning() ? 0x01 : 0x00); // changes the Speed display on Status Window
 		
 		writeD(_player.getPledgeClass()); // changes the text above CP on Status Window
-		writeD(_player.getPledgeType()); // TODO: PLEDGE TYPE
+		writeD(_player.getPledgeType());
 		
 		writeD(_player.getAppearance().getTitleColor());
 		

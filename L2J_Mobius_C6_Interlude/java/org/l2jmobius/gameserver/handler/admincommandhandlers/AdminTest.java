@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
-import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -37,7 +36,6 @@ public class AdminTest implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{
-		"admin_test",
 		"admin_stats",
 		"admin_mcrit",
 		"admin_addbufftest",
@@ -125,31 +123,6 @@ public class AdminTest implements IAdminCommandHandler
 		{
 			// .dumpPacketHistory();
 			BuilderUtil.sendSysMessage(activeChar, "command not working");
-		}
-		else if (command.equals("admin_test"))
-		{
-			BuilderUtil.sendSysMessage(activeChar, "Now the server will send a packet that client cannot read correctly");
-			BuilderUtil.sendSysMessage(activeChar, "generating a critical error..");
-			
-			int i = 5;
-			while (i > 0)
-			{
-				BuilderUtil.sendSysMessage(activeChar, "Client will crash in " + i + " seconds");
-				
-				try
-				{
-					Thread.sleep(1000);
-					i--;
-				}
-				catch (InterruptedException e)
-				{
-				}
-			}
-			
-			final UserInfo ui = new UserInfo(activeChar);
-			ui._critical_test = true;
-			
-			activeChar.sendPacket(ui);
 		}
 		else if (command.startsWith("admin_oly_obs_mode"))
 		{

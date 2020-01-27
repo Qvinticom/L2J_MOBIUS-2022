@@ -68,7 +68,6 @@ public class AdminEditNpc implements IAdminCommandHandler
 		"admin_showShopList",
 		"admin_addShopItem",
 		"admin_delShopItem",
-		"admin_box_access",
 		"admin_editShopItem",
 		"admin_close_window",
 		"admin_show_skilllist_npc",

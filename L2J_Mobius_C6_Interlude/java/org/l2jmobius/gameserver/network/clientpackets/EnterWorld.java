@@ -280,8 +280,7 @@ public class EnterWorld extends GameClientPacket
 		ColorSystem(player);
 		
 		// Expand Skill
-		final ExStorageMaxCount esmc = new ExStorageMaxCount(player);
-		player.sendPacket(esmc);
+		player.sendPacket(new ExStorageMaxCount(player));
 		
 		player.getMacroses().sendUpdate();
 		

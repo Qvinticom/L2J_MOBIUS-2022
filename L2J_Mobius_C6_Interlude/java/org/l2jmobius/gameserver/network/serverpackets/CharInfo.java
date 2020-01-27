@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.Map;
-import java.util.Set;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -25,45 +23,9 @@ import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.Inventory;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
-/**
- * 0000: 03 32 15 00 00 44 fe 00 00 80 f1 ff ff 00 00 00 .2...D..........
- * <p>
- * 0010: 00 6b b4 c0 4a 45 00 6c 00 6c 00 61 00 6d 00 69 .k..JE.l.l.a.m.i
- * <p>
- * 0020: 00 00 00 01 00 00 00 01 00 00 00 12 00 00 00 00 ................
- * <p>
- * 0030: 00 00 00 2a 00 00 00 42 00 00 00 71 02 00 00 31 ...*...B...q...1
- * <p>
- * 0040: 00 00 00 18 00 00 00 1f 00 00 00 25 00 00 00 00 ...........%....
- * <p>
- * 0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 f9 ................
- * <p>
- * 0060: 00 00 00 b3 01 00 00 00 00 00 00 00 00 00 00 7d ...............}
- * <p>
- * 0070: 00 00 00 5a 00 00 00 32 00 00 00 32 00 00 00 00 ...Z...2...2....
- * <p>
- * 0080: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 67 ...............g
- * <p>
- * 0090: 66 66 66 66 66 f2 3f 5f 63 97 a8 de 1a f9 3f 00 fffff.?_c.....?.
- * <p>
- * 00a0: 00 00 00 00 00 1e 40 00 00 00 00 00 00 37 40 01 .............7..
- * <p>
- * 00b0: 00 00 00 01 00 00 00 01 00 00 00 00 00 c1 0c 00 ................
- * <p>
- * 00c0: 00 00 00 00 00 00 00 00 00 01 01 00 00 00 00 00 ................
- * <p>
- * 00d0: 00 00
- * <p>
- * <p>
- * dddddSdddddddddddddddddddddddddddffffdddSdddccccccc (h)
- * <p>
- * dddddSdddddddddddddddddddddddddddffffdddSdddddccccccch dddddSddddddddddddddddddddddddddddffffdddSdddddccccccch (h) c (dchd) ddc dcc c cddd d dddddSdddddddddddddddhhhhhhhhhhhhhhhhhhhhhhhhddddddddddddddffffdddSdddddccccccch [h] c (ddhd) ddc c ddc cddd d d dd d d d
- * @version $Revision: 1.7.2.6.2.11 $ $Date: 2005/04/11 10:05:54 $
- */
 public class CharInfo extends GameServerPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(CharInfo.class.getName());
@@ -88,9 +50,6 @@ public class CharInfo extends GameServerPacket
 	private final float _attackSpeedMultiplier;
 	private final int _maxCp;
 	
-	/**
-	 * @param player
-	 */
 	public CharInfo(PlayerInstance player)
 	{
 		_player = player;
@@ -213,7 +172,7 @@ public class CharInfo extends GameServerPacket
 			writeD(_x);
 			writeD(_y);
 			writeD(_z);
-			writeD(0x00);
+			writeD(_player.getBoat() != null ? _player.getBoat().getObjectId() : 0);
 			writeD(_player.getObjectId());
 			writeS(_player.getName());
 			writeD(_player.getRace().ordinal());
@@ -306,7 +265,7 @@ public class CharInfo extends GameServerPacket
 			writeD(_player.getAllyCrestId());
 			// In UserInfo leader rights and siege flags, but here found nothing??
 			// Therefore RelationChanged packet with that info is required
-			writeD(0);
+			writeD(0x00);
 			
 			writeC(_player.isSitting() ? 0 : 1); // standing = 1 sitting = 0
 			writeC(_player.isRunning() ? 1 : 0); // running = 1 walking = 0
@@ -315,7 +274,7 @@ public class CharInfo extends GameServerPacket
 			
 			// if(gmSeeInvis)
 			// {
-			writeC(0); // if the charinfo is written means receiver can see the char
+			writeC(0x00); // if the charinfo is written means receiver can see the char
 			// }
 			// else
 			// {
@@ -325,21 +284,13 @@ public class CharInfo extends GameServerPacket
 			writeC(_player.getMountType()); // 1 on strider 2 on wyvern 0 no mount
 			writeC(_player.getPrivateStoreType()); // 1 - sellshop
 			
-			final Map<Integer, CubicInstance> cubics = _player.getCubics();
-			
-			final Set<Integer> cubicsIds = cubics.keySet();
-			
-			writeH(cubicsIds.size());
-			for (Integer id : cubicsIds)
+			writeH(_player.getCubics().size());
+			for (int cubicId : _player.getCubics().keySet())
 			{
-				if (id != null)
-				{
-					writeH(id);
-				}
+				writeH(cubicId);
 			}
 			
 			writeC(_player.isInPartyMatchRoom() ? 1 : 0);
-			// writeC(0x00); // find party members
 			
 			if (_player.getAppearance().isInvisible())
 			{
@@ -350,7 +301,7 @@ public class CharInfo extends GameServerPacket
 				writeD(_player.getAbnormalEffect());
 			}
 			
-			writeC(_player.getRecomLeft()); // Changed by Thorgrim
+			writeC(_player.getRecomLeft());
 			writeH(_player.getRecomHave()); // Blue value for name (0 = white, 255 = pure blue)
 			writeD(_player.getClassId().getId());
 			
@@ -385,11 +336,9 @@ public class CharInfo extends GameServerPacket
 			writeD(_heading);
 			
 			writeD(_player.getPledgeClass());
-			writeD(0x00); // ??
+			writeD(_player.getPledgeType());
 			
 			writeD(_player.getAppearance().getTitleColor());
-			
-			// writeD(0x00); // ??
 			
 			if (_player.isCursedWeaponEquiped())
 			{
