@@ -28,7 +28,6 @@
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="dual"/>
 		<set name="critical" val="8"/>
@@ -47,7 +46,6 @@
 		<set name="soulshots" val="2"/>
 		<set name="spiritshots" val="2"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
@@ -67,7 +65,6 @@
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
@@ -88,7 +85,6 @@
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="dual"/>
 		<set name="critical" val="8"/>
@@ -108,7 +104,6 @@
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="dual"/>
 		<set name="critical" val="8"/>
@@ -128,7 +123,6 @@
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
@@ -148,7 +142,6 @@
 		<set name="soulshots" val="2"/>
 		<set name="spiritshots" val="2"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
@@ -164,13 +157,8 @@
 	<item id="8210" type="Weapon" name="Monster Only (Monk Warrior Shield)">
 		<set name="bodypart" val="lhand"/>
 		<set name="weight" val="4800"/>
-		<set name="soulshots" val="0"/>
-		<set name="spiritshots" val="0"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
-		<set name="rnd_dam" val="0"/>
 		<set name="weapon_type" val="none"/>
-		<set name="critical" val="0"/>
 		<set name="avoid_modify" val="-8"/>
 		<set name="shield_def" val="230"/>
 		<set name="shield_def_rate" val="20"/>
@@ -186,7 +174,6 @@
 		<set name="soulshots" val="2"/>
 		<set name="spiritshots" val="2"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
@@ -206,7 +193,6 @@
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="20"/>
 		<set name="weapon_type" val="blunt"/>
 		<set name="critical" val="4"/>
@@ -227,7 +213,6 @@
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="20"/>
 		<set name="weapon_type" val="blunt"/>
 		<set name="critical" val="4"/>
@@ -247,7 +232,6 @@
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
@@ -269,7 +253,6 @@
 		<set name="soulshots" val="3"/>
 		<set name="spiritshots" val="3"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="bigsword"/>
 		<set name="critical" val="8"/>
@@ -288,7 +271,6 @@
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="5"/>
 		<set name="weapon_type" val="dualfist"/>
 		<set name="critical" val="4"/>
@@ -309,7 +291,6 @@
 		<set name="soulshots" val="2"/>
 		<set name="spiritshots" val="2"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
@@ -330,7 +311,6 @@
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="20"/>
 		<set name="weapon_type" val="blunt"/>
 		<set name="critical" val="4"/>
@@ -351,7 +331,6 @@
 		<set name="soulshots" val="2"/>
 		<set name="spiritshots" val="2"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
@@ -371,7 +350,6 @@
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="5"/>
 		<set name="weapon_type" val="bow"/>
 		<set name="critical" val="12"/>
@@ -392,7 +370,6 @@
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
@@ -414,7 +391,6 @@
 		<set name="soulshots" val="2"/>
 		<set name="spiritshots" val="2"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>

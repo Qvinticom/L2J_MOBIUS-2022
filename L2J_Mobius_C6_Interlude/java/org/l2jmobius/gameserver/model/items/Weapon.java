@@ -84,11 +84,11 @@ public class Weapon extends Item
 	public Weapon(WeaponType type, StatSet set)
 	{
 		super(type, set);
-		_soulShotCount = set.getInt("soulshots");
-		_spiritShotCount = set.getInt("spiritshots");
-		_pDam = set.getInt("p_dam");
-		_rndDam = set.getInt("rnd_dam");
-		_critical = set.getInt("critical");
+		_soulShotCount = set.getInt("soulshots", 0);
+		_spiritShotCount = set.getInt("spiritshots", 0);
+		_pDam = set.getInt("p_dam", 0);
+		_rndDam = set.getInt("rnd_dam", 0);
+		_critical = set.getInt("critical", 0);
 		_hitModifier = set.getDouble("hit_modify", 0);
 		_avoidModifier = set.getInt("avoid_modify", 0);
 		_shieldDef = set.getInt("shield_def", 0);

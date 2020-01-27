@@ -487,13 +487,8 @@
 		<!-- Trap weapon used on the Primeval Isle. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="weight" val="500"/>
-		<set name="soulshots" val="0"/>
-		<set name="spiritshots" val="0"/>
 		<set name="crystal_type" val="a"/>
-		<set name="p_dam" val="0"/>
-		<set name="rnd_dam" val="0"/>
 		<set name="weapon_type" val="blunt"/>
-		<set name="critical" val="0"/>
 		<set name="atk_speed" val="379"/>
 		<for>
 			<set val="0" order="0x08" stat="pAtk"/>

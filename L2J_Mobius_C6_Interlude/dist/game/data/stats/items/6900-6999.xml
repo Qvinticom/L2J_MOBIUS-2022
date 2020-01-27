@@ -21,13 +21,8 @@
 		<set name="bodypart" val="lhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1380"/>
-		<set name="soulshots" val="0"/>
-		<set name="spiritshots" val="0"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
-		<set name="rnd_dam" val="0"/>
 		<set name="weapon_type" val="none"/>
-		<set name="critical" val="0"/>
 		<set name="avoid_modify" val="-8"/>
 		<set name="shield_def" val="90"/>
 		<set name="shield_def_rate" val="20"/>
@@ -153,13 +148,8 @@
 	<item id="6917" type="Weapon" name="Monster Only (Poison Sting)">
 		<set name="bodypart" val="rhand"/>
 		<set name="weight" val="6"/>
-		<set name="soulshots" val="0"/>
-		<set name="spiritshots" val="0"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
-		<set name="rnd_dam" val="0"/>
 		<set name="weapon_type" val="fist"/>
-		<set name="critical" val="0"/>
 		<set name="price" val="2"/>
 		<for>
 			<set val="0" order="0x08" stat="pAtk"/>
@@ -174,13 +164,8 @@
 	<item id="6918" type="Weapon" name="Monster Only (Shield of Silenos)">
 		<set name="bodypart" val="lhand"/>
 		<set name="weight" val="1380"/>
-		<set name="soulshots" val="0"/>
-		<set name="spiritshots" val="0"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
-		<set name="rnd_dam" val="0"/>
 		<set name="weapon_type" val="none"/>
-		<set name="critical" val="0"/>
 		<set name="avoid_modify" val="-8"/>
 		<set name="shield_def" val="90"/>
 		<set name="shield_def_rate" val="20"/>
@@ -195,13 +180,8 @@
 	<item id="6919" type="Weapon" name="Monster Only (Shield of Ketra Orc)">
 		<set name="bodypart" val="lhand"/>
 		<set name="weight" val="1320"/>
-		<set name="soulshots" val="0"/>
-		<set name="spiritshots" val="0"/>
 		<set name="crystal_type" val="none"/>
-		<set name="p_dam" val="0"/>
-		<set name="rnd_dam" val="0"/>
 		<set name="weapon_type" val="none"/>
-		<set name="critical" val="0"/>
 		<set name="avoid_modify" val="-8"/>
 		<set name="shield_def" val="142"/>
 		<set name="shield_def_rate" val="20"/>
