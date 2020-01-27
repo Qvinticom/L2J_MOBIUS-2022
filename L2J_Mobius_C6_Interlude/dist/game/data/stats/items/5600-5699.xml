@@ -13,26 +13,10 @@
 		<set name="weapon_type" val="blunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
 		<set name="onCrit_skill_id" val="3021"/> <!-- Special Ability: Critical Bleed -->
 		<set name="onCrit_skill_lvl" val="5"/>
 		<set name="onCrit_skill_chance" val="35"/>
@@ -62,29 +46,12 @@
 		<set name="weapon_type" val="blunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3056"/> <!-- Special Ability: Rsk. Haste -->
 		<set name="item_skill_lvl" val="2"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="213" order="0x08" stat="pAtk"/>
 			<set val="107" order="0x08" stat="mAtk"/>
@@ -117,29 +84,12 @@
 		<set name="weapon_type" val="blunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3013"/> <!-- Special Ability: Health -->
 		<set name="item_skill_lvl" val="3"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="232" order="0x08" stat="pAtk"/>
 			<set val="114" order="0x08" stat="mAtk"/>
@@ -166,29 +116,12 @@
 		<set name="weapon_type" val="blunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3057"/> <!-- Special Ability: Anger -->
 		<set name="item_skill_lvl" val="2"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="232" order="0x08" stat="pAtk"/>
 			<set val="114" order="0x08" stat="mAtk"/>
@@ -215,29 +148,12 @@
 		<set name="weapon_type" val="blunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3072"/> <!-- Special Ability: Empower -->
 		<set name="item_skill_lvl" val="1"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="232" order="0x08" stat="pAtk"/>
 			<set val="114" order="0x08" stat="mAtk"/>
@@ -264,29 +180,12 @@
 		<set name="weapon_type" val="bigblunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="152"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3048"/> <!-- Special Ability: Conversion -->
 		<set name="item_skill_lvl" val="2"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="226" order="0x08" stat="pAtk"/>
 			<set val="152" order="0x08" stat="mAtk"/>
@@ -311,29 +210,12 @@
 		<set name="weapon_type" val="bigblunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="152"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3552"/> <!-- Special Ability: PvP Damage -->
 		<set name="item_skill_lvl" val="1"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="226" order="0x08" stat="pAtk"/>
 			<set val="152" order="0x08" stat="mAtk"/>
@@ -360,29 +242,12 @@
 		<set name="weapon_type" val="bigblunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="152"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3047"/> <!-- Special Ability: Acumen -->
 		<set name="item_skill_lvl" val="2"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="226" order="0x08" stat="pAtk"/>
 			<set val="152" order="0x08" stat="mAtk"/>
@@ -407,29 +272,11 @@
 		<set name="weapon_type" val="bow"/>
 		<set name="critical" val="12"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="293"/>
 		<set name="mp_consume" val="9"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="440" order="0x08" stat="pAtk"/>
 			<set val="107" order="0x08" stat="mAtk"/>
@@ -456,26 +303,11 @@
 		<set name="weapon_type" val="bow"/>
 		<set name="critical" val="12"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="293"/>
 		<set name="mp_consume" val="9"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
 		<set name="onCrit_skill_id" val="3021"/> <!-- Special Ability: Critical Bleed -->
 		<set name="onCrit_skill_lvl" val="5"/>
 		<set name="onCrit_skill_chance" val="35"/>
@@ -505,29 +337,13 @@
 		<set name="weapon_type" val="bow"/>
 		<set name="critical" val="12"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="293"/>
 		<set name="mp_consume" val="9"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3014"/> <!-- Special Ability: Mana Up -->
 		<set name="item_skill_lvl" val="2"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="440" order="0x08" stat="pAtk"/>
 			<set val="107" order="0x08" stat="mAtk"/>
@@ -551,29 +367,11 @@
 		<set name="weapon_type" val="bow"/>
 		<set name="critical" val="12"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="227"/>
 		<set name="mp_consume" val="10"/>
 		<set name="m_dam" val="125"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="528" order="0x08" stat="pAtk"/>
 			<set val="125" order="0x08" stat="mAtk"/>
@@ -606,29 +404,11 @@
 		<set name="weapon_type" val="bow"/>
 		<set name="critical" val="12"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="227"/>
 		<set name="mp_consume" val="10"/>
 		<set name="m_dam" val="125"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="528" order="0x08" stat="pAtk"/>
 			<set val="125" order="0x08" stat="mAtk"/>
@@ -657,26 +437,11 @@
 		<set name="weapon_type" val="bow"/>
 		<set name="critical" val="12"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="227"/>
 		<set name="mp_consume" val="10"/>
 		<set name="m_dam" val="125"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
 		<set name="onCrit_skill_id" val="3024"/> <!-- Special Ability: Critical Poison -->
 		<set name="onCrit_skill_lvl" val="5"/>
 		<set name="onCrit_skill_chance" val="10"/>
@@ -706,29 +471,12 @@
 		<set name="weapon_type" val="dagger"/>
 		<set name="critical" val="12"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="433"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3051"/> <!-- Special Ability: Focus -->
 		<set name="item_skill_lvl" val="1"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="186" order="0x08" stat="pAtk"/>
 			<set val="107" order="0x08" stat="mAtk"/>
@@ -757,29 +505,12 @@
 		<set name="weapon_type" val="dagger"/>
 		<set name="critical" val="12"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="433"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3599"/> <!-- Polearm Multi-attack -->
 		<set name="item_skill_lvl" val="1"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="186" order="0x08" stat="pAtk"/>
 			<set val="107" order="0x08" stat="mAtk"/>
@@ -806,26 +537,10 @@
 		<set name="weapon_type" val="dagger"/>
 		<set name="critical" val="12"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="433"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
 		<set name="onCrit_skill_id" val="3021"/> <!-- Special Ability: Critical Bleed -->
 		<set name="onCrit_skill_lvl" val="5"/>
 		<set name="onCrit_skill_chance" val="35"/>
@@ -855,29 +570,12 @@
 		<set name="weapon_type" val="dagger"/>
 		<set name="critical" val="12"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="433"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3064"/> <!-- Special Ability: Guidance -->
 		<set name="item_skill_lvl" val="1"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="203" order="0x08" stat="pAtk"/>
 			<set val="114" order="0x08" stat="mAtk"/>
@@ -904,29 +602,12 @@
 		<set name="weapon_type" val="dagger"/>
 		<set name="critical" val="12"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="433"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3066"/> <!-- Special Ability: Critical Damage -->
 		<set name="item_skill_lvl" val="2"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="203" order="0x08" stat="pAtk"/>
 			<set val="114" order="0x08" stat="mAtk"/>
@@ -955,29 +636,12 @@
 		<set name="weapon_type" val="dagger"/>
 		<set name="critical" val="12"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="433"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3056"/> <!-- Special Ability: Rsk. Haste -->
 		<set name="item_skill_lvl" val="2"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="203" order="0x08" stat="pAtk"/>
 			<set val="114" order="0x08" stat="mAtk"/>
@@ -1010,29 +674,12 @@
 		<set name="weapon_type" val="dualfist"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3068"/> <!-- Special Ability: Haste -->
 		<set name="item_skill_lvl" val="2"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="259" order="0x08" stat="pAtk"/>
 			<set val="107" order="0x08" stat="mAtk"/>
@@ -1061,29 +708,12 @@
 		<set name="weapon_type" val="dualfist"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3565"/> <!-- Special Ability: Focus -->
 		<set name="item_skill_lvl" val="1"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="259" order="0x08" stat="pAtk"/>
 			<set val="107" order="0x08" stat="mAtk"/>
@@ -1112,29 +742,12 @@
 		<set name="weapon_type" val="dualfist"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3058"/> <!-- Special Ability: Anger -->
 		<set name="item_skill_lvl" val="1"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="259" order="0x08" stat="pAtk"/>
 			<set val="107" order="0x08" stat="mAtk"/>
@@ -1161,29 +774,12 @@
 		<set name="weapon_type" val="dualfist"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3069"/> <!-- Special Ability: Risky Evasion -->
 		<set name="item_skill_lvl" val="1"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="282" order="0x08" stat="pAtk"/>
 			<set val="114" order="0x08" stat="mAtk"/>
@@ -1216,29 +812,12 @@
 		<set name="weapon_type" val="dualfist"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3065"/> <!-- Special Ability: Guidance -->
 		<set name="item_skill_lvl" val="1"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="282" order="0x08" stat="pAtk"/>
 			<set val="114" order="0x08" stat="mAtk"/>
@@ -1265,29 +844,12 @@
 		<set name="weapon_type" val="dualfist"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3013"/> <!-- Special Ability: Health -->
 		<set name="item_skill_lvl" val="3"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="282" order="0x08" stat="pAtk"/>
 			<set val="114" order="0x08" stat="mAtk"/>
@@ -1314,29 +876,12 @@
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3601"/> <!-- Special Ability: Haste -->
 		<set name="item_skill_lvl" val="7"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="213" order="0x08" stat="pAtk"/>
 			<set val="107" order="0x08" stat="mAtk"/>
@@ -1366,26 +911,10 @@
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
 		<set name="onCrit_skill_id" val="3070"/> <!-- Special Ability: Critical Stun -->
 		<set name="onCrit_skill_lvl" val="1"/>
 		<set name="onCrit_skill_chance" val="25"/>
@@ -1416,29 +945,12 @@
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3599"/> <!-- Polearm Multi-attack -->
 		<set name="item_skill_lvl" val="1"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="213" order="0x08" stat="pAtk"/>
 			<set val="107" order="0x08" stat="mAtk"/>
@@ -1463,29 +975,10 @@
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="109"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="21300000"/>
 		<set name="crystal_count" val="1704"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="219" order="0x08" stat="pAtk"/>
 			<set val="109" order="0x08" stat="mAtk"/>
@@ -1509,29 +1002,10 @@
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="109"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="21300000"/>
 		<set name="crystal_count" val="1704"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="219" order="0x08" stat="pAtk"/>
 			<set val="109" order="0x08" stat="mAtk"/>
@@ -1555,29 +1029,10 @@
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="109"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="21300000"/>
 		<set name="crystal_count" val="1704"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="219" order="0x08" stat="pAtk"/>
 			<set val="109" order="0x08" stat="mAtk"/>
@@ -1602,29 +1057,12 @@
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3602"/> <!-- Special Ability: Guidance -->
 		<set name="item_skill_lvl" val="8"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="232" order="0x08" stat="pAtk"/>
 			<set val="114" order="0x08" stat="mAtk"/>
@@ -1652,29 +1090,12 @@
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3013"/> <!-- Special Ability: Health -->
 		<set name="item_skill_lvl" val="4"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="232" order="0x08" stat="pAtk"/>
 			<set val="114" order="0x08" stat="mAtk"/>
@@ -1702,29 +1123,12 @@
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3599"/> <!-- Polearm Multi-attack -->
 		<set name="item_skill_lvl" val="1"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="232" order="0x08" stat="pAtk"/>
 			<set val="114" order="0x08" stat="mAtk"/>
@@ -1749,27 +1153,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
 		<set name="onCrit_skill_id" val="3024"/> <!-- Special Ability: Critical Poison -->
 		<set name="onCrit_skill_lvl" val="5"/>
 		<set name="onCrit_skill_chance" val="10"/>
@@ -1798,30 +1185,12 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3068"/> <!-- Special Ability: Haste -->
 		<set name="item_skill_lvl" val="2"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="213" order="0x08" stat="pAtk"/>
 			<set val="107" order="0x08" stat="mAtk"/>
@@ -1849,30 +1218,12 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3057"/> <!-- Special Ability: Anger -->
 		<set name="item_skill_lvl" val="1"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="213" order="0x08" stat="pAtk"/>
 			<set val="107" order="0x08" stat="mAtk"/>
@@ -1898,30 +1249,12 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="143"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3073"/> <!-- Special Ability: Magic Power -->
 		<set name="item_skill_lvl" val="1"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="170" order="0x08" stat="pAtk"/>
 			<set val="143" order="0x08" stat="mAtk"/>
@@ -1947,30 +1280,13 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="143"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
 		<set name="onCast_skill_id" val="3075"/> <!-- Special Ability: Magic Paralyze -->
 		<set name="onCast_skill_lvl" val="1"/>
 		<set name="onCast_skill_chance" val="10"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="170" order="0x08" stat="pAtk"/>
 			<set val="143" order="0x08" stat="mAtk"/>
@@ -1996,30 +1312,12 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="143"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3072"/> <!-- Special Ability: Empower -->
 		<set name="item_skill_lvl" val="1"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="170" order="0x08" stat="pAtk"/>
 			<set val="143" order="0x08" stat="mAtk"/>
@@ -2046,30 +1344,12 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="152"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3073"/> <!-- Special Ability: Magic Power -->
 		<set name="item_skill_lvl" val="2"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="186" order="0x08" stat="pAtk"/>
 			<set val="152" order="0x08" stat="mAtk"/>
@@ -2095,30 +1375,13 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="152"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
 		<set name="onCast_skill_id" val="3074"/> <!-- Special Ability: Magic Silence -->
 		<set name="onCast_skill_lvl" val="1"/>
 		<set name="onCast_skill_chance" val="10"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="186" order="0x08" stat="pAtk"/>
 			<set val="152" order="0x08" stat="mAtk"/>
@@ -2144,30 +1407,12 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="152"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3047"/> <!-- Special Ability: Acumen -->
 		<set name="item_skill_lvl" val="2"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="186" order="0x08" stat="pAtk"/>
 			<set val="152" order="0x08" stat="mAtk"/>
@@ -2191,30 +1436,12 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="bigsword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3013"/> <!-- Special Ability: Health -->
 		<set name="item_skill_lvl" val="3"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="282" order="0x08" stat="pAtk"/>
 			<set val="114" order="0x08" stat="mAtk"/>
@@ -2240,27 +1467,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="bigsword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
 		<set name="onCrit_skill_id" val="3021"/> <!-- Special Ability: Critical Bleed -->
 		<set name="onCrit_skill_lvl" val="5"/>
 		<set name="onCrit_skill_chance" val="24"/>
@@ -2289,27 +1499,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="bigsword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
 		<set name="onCrit_skill_id" val="3022"/> <!-- Special Ability: Critical Drain -->
 		<set name="onCrit_skill_lvl" val="4"/>
 		<set name="onCrit_skill_chance" val="20"/>
@@ -2338,30 +1531,12 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3067"/> <!-- Special Ability: Critical Damage -->
 		<set name="item_skill_lvl" val="2"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="232" order="0x08" stat="pAtk"/>
 			<set val="114" order="0x08" stat="mAtk"/>
@@ -2389,30 +1564,12 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3013"/> <!-- Special Ability: Health -->
 		<set name="item_skill_lvl" val="3"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="232" order="0x08" stat="pAtk"/>
 			<set val="114" order="0x08" stat="mAtk"/>
@@ -2438,30 +1595,12 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 		<set name="item_skill_id" val="3071"/> <!-- Special Ability: Rsk. Focus -->
 		<set name="item_skill_lvl" val="2"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="232" order="0x08" stat="pAtk"/>
 			<set val="114" order="0x08" stat="mAtk"/>
@@ -2483,752 +1622,402 @@
 	</item>
 	<item id="5650" type="EtcItem" name="Alternative Dark Coda Seed">
 		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Dark Coda. For best results, a level 5-15 character must plant it on a level 5-15 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="5"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5651" type="EtcItem" name="Alternative Red Coda Seed">
 		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Red Coda. For best results, a level 8-18 character must plant it on a level 8-18 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="5"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5652" type="EtcItem" name="Alternative Chilly Coda Seed">
 		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Chilly Coda. For best results, a level 11-21 character must plant it on a level 11-21 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="5"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5653" type="EtcItem" name="Alternative Blue Coda Seed">
 		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 14-24 character must plant it on a level 14-24 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="10"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5654" type="EtcItem" name="Alternative Golden Coda Seed">
 		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Golden Coda. For best results, a level 17-27 character must plant it on a level 17-27 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="20"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5655" type="EtcItem" name="Alternative Lute Coda Seed">
 		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Lute Coda. For best results, a level 20-30 character must plant it on a level 20-30 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="30"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5656" type="EtcItem" name="Alternative Desert Coda Seed">
 		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Desert Coda. For best results, a level 23-33 character must plant it on a level 23-33 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="20"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5657" type="EtcItem" name="Alternative Blue Cobol Seed">
 		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 32-42 character must plant it on a level 32-42 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5658" type="EtcItem" name="Alternative Blue Coda Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 14-24 character must plant it on a level 14-24 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="10"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5659" type="EtcItem" name="Alternative Golden Coda Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Golden Coda. For best results, a level 17-27 character must plant it on a level 17-27 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="20"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5660" type="EtcItem" name="Alternative Lute Coda Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Lute Coda. For best results, a level 20-23 character must plant it on a level 20-23 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="30"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5661" type="EtcItem" name="Alternative Desert Coda Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Desert Coda. For best results, a level 23-33 character must plant it on a level 23-33 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="20"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5662" type="EtcItem" name="Alternative Red Cobol Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Red Cobol. For best results, a level 26-36 character must plant it on a level 26-36 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="20"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5663" type="EtcItem" name="Alternative Chilly Cobol Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29-39 character must plant it on a level 29-39 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="25"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5664" type="EtcItem" name="Alternative Thorn Cobol Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5665" type="EtcItem" name="Alternative Golden Cobol Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38-48 character must plant it on a level 38-48 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5666" type="EtcItem" name="Alternative Great Cobol Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41-51 character must plant it on a level 41-51 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="40"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5667" type="EtcItem" name="Alternative Red Cobol Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Red Cobol. For best results, a level 26-36 character must plant it on a level 26-36 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="20"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5668" type="EtcItem" name="Alternative Chilly Cobol Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29-39 character must plant it on a level 29-39 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="25"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5669" type="EtcItem" name="Alternative Blue Cobol Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Blue Cobol. For best results, a level 32-42 character must plant it on a level 32-42 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5670" type="EtcItem" name="Alternative Thorn Cobol Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5671" type="EtcItem" name="Alternative Golden Cobol Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38-48 character must plant it on a level 38-48 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5672" type="EtcItem" name="Alternative Great Cobol Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41-51 character must plant it on a level 41-51 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="40"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5673" type="EtcItem" name="Alternative Red Codran Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Red Codran. For best results, a level 44-54 character must plant it on a level 44-54 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="40"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5674" type="EtcItem" name="Alternative Twin Codran Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53-63 character must plant it on a level 53-63 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5675" type="EtcItem" name="Alternative Desert Codran Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Desert Codran. For best results, a level 59-69 character must plant it on a level 59-69 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="100"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5676" type="EtcItem" name="Alternative Dark Coda Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Dark Coda. For best results, a level 5-15 character must plant it on a level 5-15 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="5"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5677" type="EtcItem" name="Alternative Red Coda Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Red Coda. For best results, a level 8-18 character must plant it on a level 8-18 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="5"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5678" type="EtcItem" name="Alternative Blue Coda Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 14-24 character must plant it on a level 14-24 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="10"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5679" type="EtcItem" name="Alternative Red Cobol Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Red Cobol. For best results, a level 26-36 character must plant it on a level 26-36 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="20"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5680" type="EtcItem" name="Alternative Chilly Cobol Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29-39 character must plant it on a level 29-39 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="25"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5681" type="EtcItem" name="Alternative Blue Cobol Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Blue Cobol. For best results, a level 32-42 character must plant it on a level 32-42 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5682" type="EtcItem" name="Alternative Thorn Cobol Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5683" type="EtcItem" name="Alternative Sea Codran Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Sea Codran. For best results, a level 45-55 character must plant it on a level 45-55 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5684" type="EtcItem" name="Alternative Chilly Codran Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Chilly Codran. For best results, a level 47-57 character must plant it on a level 47-57 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="40"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5685" type="EtcItem" name="Alternative Blue Codran Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Blue Codran. For best results, a level 50-60 character must plant it on a level 50-60 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5686" type="EtcItem" name="Alternative Twin Codran Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53-63 character must plant it on a level 53-63 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5687" type="EtcItem" name="Alternative Thorn Cobol Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5688" type="EtcItem" name="Alternative Golden Cobol Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38-48 character must plant it on a level 38-48 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5689" type="EtcItem" name="Alternative Great Cobol Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41-51 character must plant it on a level 41-51 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="40"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5690" type="EtcItem" name="Alternative Red Codran Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Red Codran. For best results, a level 44-54 character must plant it on a level 44-54 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="40"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5691" type="EtcItem" name="Alternative Chilly Codran Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Chilly Codran. For best results, a level 47-57 character must plant it on a level 47-57 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="40"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5692" type="EtcItem" name="Alternative Blue Codran Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Blue Codran. For best results, a level 50-60 character must plant it on a level 50-60 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5693" type="EtcItem" name="Alternative Twin Codran Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53-63 character must plant it on a level 53-63 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5694" type="EtcItem" name="Alternative Great Codran Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Great Codran. For best results, a level 56-66 character must plant it on a level 56-66 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="75"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5695" type="EtcItem" name="Alternative Desert Codran Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Desert Codran. For best results, a level 59-69 character must plant it on a level 59-69 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="100"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5696" type="EtcItem" name="Alternative Chilly Cobol Seed">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29-39 character must plant it on a level 29-39 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="25"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5697" type="EtcItem" name="Alternative Blue Cobol Seed">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Blue Cobol. For best results, a level 32-42 character must plant it on a level 32-42 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5698" type="EtcItem" name="Alternative Thorn Cobol Seed">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5699" type="EtcItem" name="Alternative Golden Cobol Seed">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38-48 character must plant it on a level 38-48 monster. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="50"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 </list>

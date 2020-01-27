@@ -261,15 +261,15 @@ public class ManorSeedData implements IXmlReader
 	 */
 	public List<Integer> getSeedsForCastle(int castleId)
 	{
-		final List<Integer> seedsID = new ArrayList<>();
+		final List<Integer> seedIds = new ArrayList<>();
 		for (SeedDataHolder seed : _seeds.values())
 		{
-			if ((seed.getCastleId() == castleId) && !seedsID.contains(seed.getId()))
+			if ((seed.getCastleId() == castleId) && !seedIds.contains(seed.getId()))
 			{
-				seedsID.add(seed.getId());
+				seedIds.add(seed.getId());
 			}
 		}
-		return seedsID;
+		return seedIds;
 	}
 	
 	/**

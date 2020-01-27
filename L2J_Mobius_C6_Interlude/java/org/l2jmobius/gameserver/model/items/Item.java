@@ -168,8 +168,8 @@ public abstract class Item
 		_name = set.getString("name");
 		_type1 = set.getInt("type1"); // needed for item list (inventory)
 		_type2 = set.getInt("type2"); // different lists for armor, weapon, etc
-		_weight = set.getInt("weight");
-		_crystallizable = set.getBoolean("crystallizable");
+		_weight = set.getInt("weight", 0);
+		_crystallizable = set.getBoolean("crystallizable", false);
 		_stackable = set.getBoolean("stackable", false);
 		switch (set.getString("crystal_type", ""))
 		{
@@ -204,7 +204,7 @@ public abstract class Item
 				break;
 			}
 		}
-		_duration = set.getInt("duration");
+		_duration = set.getInt("duration", -1);
 		switch (set.getString("bodypart", ""))
 		{
 			case "chest":
@@ -331,7 +331,7 @@ public abstract class Item
 			}
 		}
 		
-		_referencePrice = set.getInt("price");
+		_referencePrice = set.getInt("price", 0);
 		_crystalCount = set.getInt("crystal_count", 0);
 		_sellable = set.getBoolean("sellable", true);
 		_dropable = set.getBoolean("dropable", true);

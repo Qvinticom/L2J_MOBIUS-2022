@@ -89,32 +89,32 @@ public class Weapon extends Item
 		_pDam = set.getInt("p_dam");
 		_rndDam = set.getInt("rnd_dam");
 		_critical = set.getInt("critical");
-		_hitModifier = set.getDouble("hit_modify");
-		_avoidModifier = set.getInt("avoid_modify");
-		_shieldDef = set.getInt("shield_def");
-		_shieldDefRate = set.getDouble("shield_def_rate");
-		_atkSpeed = set.getInt("atk_speed");
+		_hitModifier = set.getDouble("hit_modify", 0);
+		_avoidModifier = set.getInt("avoid_modify", 0);
+		_shieldDef = set.getInt("shield_def", 0);
+		_shieldDefRate = set.getDouble("shield_def_rate", 0);
+		_atkSpeed = set.getInt("atk_speed", 0);
 		_atkReuse = set.getInt("atk_reuse", type == WeaponType.BOW ? 1500 : 0);
-		_mpConsume = set.getInt("mp_consume");
-		_mDam = set.getInt("m_dam");
+		_mpConsume = set.getInt("mp_consume", 0);
+		_mDam = set.getInt("m_dam", 0);
 		
-		int sId = set.getInt("item_skill_id");
-		int sLv = set.getInt("item_skill_lvl");
+		int sId = set.getInt("item_skill_id", 0);
+		int sLv = set.getInt("item_skill_lvl", 0);
 		if ((sId > 0) && (sLv > 0))
 		{
 			_itemSkill = SkillTable.getInstance().getInfo(sId, sLv);
 		}
 		
-		sId = set.getInt("enchant4_skill_id");
-		sLv = set.getInt("enchant4_skill_lvl");
+		sId = set.getInt("enchant4_skill_id", 0);
+		sLv = set.getInt("enchant4_skill_lvl", 0);
 		if ((sId > 0) && (sLv > 0))
 		{
 			_enchant4Skill = SkillTable.getInstance().getInfo(sId, sLv);
 		}
 		
-		sId = set.getInt("onCast_skill_id");
-		sLv = set.getInt("onCast_skill_lvl");
-		int sCh = set.getInt("onCast_skill_chance");
+		sId = set.getInt("onCast_skill_id", 0);
+		sLv = set.getInt("onCast_skill_lvl", 0);
+		int sCh = set.getInt("onCast_skill_chance", 0);
 		if ((sId > 0) && (sLv > 0) && (sCh > 0))
 		{
 			final Skill skill = SkillTable.getInstance().getInfo(sId, sLv);
@@ -122,9 +122,9 @@ public class Weapon extends Item
 			attachOnCast(skill);
 		}
 		
-		sId = set.getInt("onCrit_skill_id");
-		sLv = set.getInt("onCrit_skill_lvl");
-		sCh = set.getInt("onCrit_skill_chance");
+		sId = set.getInt("onCrit_skill_id", 0);
+		sLv = set.getInt("onCrit_skill_lvl", 0);
+		sCh = set.getInt("onCrit_skill_chance", 0);
 		if ((sId > 0) && (sLv > 0) && (sCh > 0))
 		{
 			final Skill skill = SkillTable.getInstance().getInfo(sId, sLv);

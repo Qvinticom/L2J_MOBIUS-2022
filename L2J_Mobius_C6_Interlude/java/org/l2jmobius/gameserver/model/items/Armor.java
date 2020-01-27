@@ -56,14 +56,14 @@ public class Armor extends Item
 	public Armor(ArmorType type, StatSet set)
 	{
 		super(type, set);
-		_avoidModifier = set.getInt("avoid_modify");
-		_pDef = set.getInt("p_def");
-		_mDef = set.getInt("m_def");
+		_avoidModifier = set.getInt("avoid_modify", 0);
+		_pDef = set.getInt("p_def", 0);
+		_mDef = set.getInt("m_def", 0);
 		_mpBonus = set.getInt("mp_bonus", 0);
 		_hpBonus = set.getInt("hp_bonus", 0);
 		
-		final int sId = set.getInt("item_skill_id");
-		final int sLv = set.getInt("item_skill_lvl");
+		final int sId = set.getInt("item_skill_id", 0);
+		final int sLv = set.getInt("item_skill_lvl", 0);
 		if ((sId > 0) && (sLv > 0))
 		{
 			_itemSkill = SkillTable.getInstance().getInfo(sId, sLv);

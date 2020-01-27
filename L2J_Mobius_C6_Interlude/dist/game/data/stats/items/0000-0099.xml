@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="1" type="Weapon" name="Short Sword">
 		<set name="bodypart" val="rhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1600"/>
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
@@ -11,30 +10,9 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="6"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="768"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="8" order="0x08" stat="pAtk"/>
 			<set val="6" order="0x08" stat="mAtk"/>
@@ -47,7 +25,6 @@
 	</item>
 	<item id="2" type="Weapon" name="Long Sword">
 		<set name="bodypart" val="rhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1560"/>
 		<set name="soulshots" val="2"/>
 		<set name="spiritshots" val="2"/>
@@ -56,30 +33,9 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="17"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="136000"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="24" order="0x08" stat="pAtk"/>
 			<set val="17" order="0x08" stat="mAtk"/>
@@ -92,7 +48,6 @@
 	</item>
 	<item id="3" type="Weapon" name="Broadsword">
 		<set name="bodypart" val="rhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1590"/>
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
@@ -101,30 +56,9 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="9"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="12500"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="11" order="0x08" stat="pAtk"/>
 			<set val="9" order="0x08" stat="mAtk"/>
@@ -137,7 +71,6 @@
 	</item>
 	<item id="4" type="Weapon" name="Club">
 		<set name="bodypart" val="rhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1870"/>
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
@@ -147,29 +80,9 @@
 		<set name="weapon_type" val="blunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="6"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="768"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="8" order="0x08" stat="pAtk"/>
 			<set val="6" order="0x08" stat="mAtk"/>
@@ -182,7 +95,6 @@
 	</item>
 	<item id="5" type="Weapon" name="Mace">
 		<set name="bodypart" val="rhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1880"/>
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
@@ -192,29 +104,9 @@
 		<set name="weapon_type" val="blunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="9"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="12500"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="11" order="0x08" stat="pAtk"/>
 			<set val="9" order="0x08" stat="mAtk"/>
@@ -227,7 +119,6 @@
 	</item>
 	<item id="6" type="Weapon" name="Apprentice's Wand">
 		<set name="bodypart" val="rhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1350"/>
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
@@ -237,29 +128,12 @@
 		<set name="weapon_type" val="blunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="7"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="138"/>
-		<set name="crystal_count" val="0"/>
 		<set name="sellable" val="false"/>
 		<set name="dropable" val="false"/>
-		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="false"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="5" order="0x08" stat="pAtk"/>
 			<set val="7" order="0x08" stat="mAtk"/>
@@ -272,7 +146,6 @@
 	</item>
 	<item id="7" type="Weapon" name="Apprentice's Rod">
 		<set name="bodypart" val="rhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1330"/>
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
@@ -282,29 +155,9 @@
 		<set name="weapon_type" val="blunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="8"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="768"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="6" order="0x08" stat="pAtk"/>
 			<set val="8" order="0x08" stat="mAtk"/>
@@ -317,7 +170,6 @@
 	</item>
 	<item id="8" type="Weapon" name="Willow Staff">
 		<set name="bodypart" val="lrhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1080"/>
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
@@ -327,29 +179,9 @@
 		<set name="weapon_type" val="bigblunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="12"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="12500"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="11" order="0x08" stat="pAtk"/>
 			<set val="12" order="0x08" stat="mAtk"/>
@@ -362,7 +194,6 @@
 	</item>
 	<item id="9" type="Weapon" name="Cedar Staff">
 		<set name="bodypart" val="lrhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1090"/>
 		<set name="soulshots" val="2"/>
 		<set name="spiritshots" val="2"/>
@@ -372,29 +203,9 @@
 		<set name="weapon_type" val="bigblunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="16"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="54100"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="16" order="0x08" stat="pAtk"/>
 			<set val="16" order="0x08" stat="mAtk"/>
@@ -407,7 +218,6 @@
 	</item>
 	<item id="10" type="Weapon" name="Dagger">
 		<set name="bodypart" val="rhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1160"/>
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
@@ -417,29 +227,12 @@
 		<set name="weapon_type" val="dagger"/>
 		<set name="critical" val="12"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="433"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="5"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="138"/>
-		<set name="crystal_count" val="0"/>
 		<set name="sellable" val="false"/>
 		<set name="dropable" val="false"/>
-		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="false"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="5" order="0x08" stat="pAtk"/>
 			<set val="5" order="0x08" stat="mAtk"/>
@@ -452,7 +245,6 @@
 	</item>
 	<item id="11" type="Weapon" name="Bone Dagger">
 		<set name="bodypart" val="rhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1150"/>
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
@@ -462,29 +254,9 @@
 		<set name="weapon_type" val="dagger"/>
 		<set name="critical" val="12"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="433"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="6"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="768"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="7" order="0x08" stat="pAtk"/>
 			<set val="6" order="0x08" stat="mAtk"/>
@@ -497,7 +269,6 @@
 	</item>
 	<item id="12" type="Weapon" name="Knife">
 		<set name="bodypart" val="rhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1140"/>
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
@@ -507,29 +278,9 @@
 		<set name="weapon_type" val="dagger"/>
 		<set name="critical" val="12"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="433"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="9"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="12500"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="10" order="0x08" stat="pAtk"/>
 			<set val="9" order="0x08" stat="mAtk"/>
@@ -542,7 +293,6 @@
 	</item>
 	<item id="13" type="Weapon" name="Short Bow">
 		<set name="bodypart" val="lrhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1950"/>
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
@@ -552,29 +302,10 @@
 		<set name="weapon_type" val="bow"/>
 		<set name="critical" val="12"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="293"/>
 		<set name="mp_consume" val="1"/>
 		<set name="m_dam" val="6"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="768"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="16" order="0x08" stat="pAtk"/>
 			<set val="6" order="0x08" stat="mAtk"/>
@@ -587,7 +318,6 @@
 	</item>
 	<item id="14" type="Weapon" name="Bow">
 		<set name="bodypart" val="lrhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1930"/>
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
@@ -597,29 +327,10 @@
 		<set name="weapon_type" val="bow"/>
 		<set name="critical" val="12"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="293"/>
 		<set name="mp_consume" val="1"/>
 		<set name="m_dam" val="9"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="12500"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="23" order="0x08" stat="pAtk"/>
 			<set val="9" order="0x08" stat="mAtk"/>
@@ -632,7 +343,6 @@
 	</item>
 	<item id="15" type="Weapon" name="Short Spear">
 		<set name="bodypart" val="lrhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="2140"/>
 		<set name="soulshots" val="2"/>
 		<set name="spiritshots" val="2"/>
@@ -642,29 +352,9 @@
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="17"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="136000"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="24" order="0x08" stat="pAtk"/>
 			<set val="17" order="0x08" stat="mAtk"/>
@@ -678,7 +368,6 @@
 	</item>
 	<item id="16" type="Weapon" name="Long Spear">
 		<set name="bodypart" val="lrhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="2120"/>
 		<set name="soulshots" val="2"/>
 		<set name="spiritshots" val="2"/>
@@ -688,29 +377,9 @@
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="21"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="244000"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="31" order="0x08" stat="pAtk"/>
 			<set val="21" order="0x08" stat="mAtk"/>
@@ -724,22 +393,14 @@
 	</item>
 	<item id="17" type="EtcItem" name="Wooden Arrow">
 		<!-- An arrow made of wood. It is an arrow used for a no grade bow. -->
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="arrow"/>
 		<set name="weight" val="6"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="2"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="18" type="Weapon" name="Leather Shield">
 		<set name="bodypart" val="lhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1430"/>
 		<set name="soulshots" val="0"/>
 		<set name="spiritshots" val="0"/>
@@ -748,30 +409,10 @@
 		<set name="rnd_dam" val="0"/>
 		<set name="weapon_type" val="none"/>
 		<set name="critical" val="0"/>
-		<set name="hit_modify" val="0.00000"/>
 		<set name="avoid_modify" val="-8"/>
 		<set name="shield_def" val="47"/>
 		<set name="shield_def_rate" val="20"/>
-		<set name="atk_speed" val="0"/>
-		<set name="mp_consume" val="0"/>
-		<set name="m_dam" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="39"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<sub val="8" order="0x10" stat="rEvas"/>
 			<set val="47" order="0x08" stat="sDef"/>
@@ -781,7 +422,6 @@
 	</item>
 	<item id="19" type="Weapon" name="Small Shield">
 		<set name="bodypart" val="lhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1420"/>
 		<set name="soulshots" val="0"/>
 		<set name="spiritshots" val="0"/>
@@ -790,30 +430,10 @@
 		<set name="rnd_dam" val="0"/>
 		<set name="weapon_type" val="none"/>
 		<set name="critical" val="0"/>
-		<set name="hit_modify" val="0.00000"/>
 		<set name="avoid_modify" val="-8"/>
 		<set name="shield_def" val="56"/>
 		<set name="shield_def_rate" val="20"/>
-		<set name="atk_speed" val="0"/>
-		<set name="mp_consume" val="0"/>
-		<set name="m_dam" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="638"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<sub val="8" order="0x10" stat="rEvas"/>
 			<set val="56" order="0x08" stat="sDef"/>
@@ -823,7 +443,6 @@
 	</item>
 	<item id="20" type="Weapon" name="Buckler">
 		<set name="bodypart" val="lhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1410"/>
 		<set name="soulshots" val="0"/>
 		<set name="spiritshots" val="0"/>
@@ -832,30 +451,10 @@
 		<set name="rnd_dam" val="0"/>
 		<set name="weapon_type" val="none"/>
 		<set name="critical" val="0"/>
-		<set name="hit_modify" val="0.00000"/>
 		<set name="avoid_modify" val="-8"/>
 		<set name="shield_def" val="67"/>
 		<set name="shield_def_rate" val="20"/>
-		<set name="atk_speed" val="0"/>
-		<set name="mp_consume" val="0"/>
-		<set name="m_dam" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="2780"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<sub val="8" order="0x10" stat="rEvas"/>
 			<set val="67" order="0x08" stat="sDef"/>
@@ -865,437 +464,209 @@
 	</item>
 	<item id="21" type="Armor" name="Shirt">
 		<set name="bodypart" val="chest"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="light"/>
 		<set name="weight" val="4830"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="36"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="147"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="36" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="22" type="Armor" name="Leather Shirt">
 		<set name="bodypart" val="chest"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="light"/>
 		<set name="weight" val="4830"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="43"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="2430"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="43" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="23" type="Armor" name="Wooden Breastplate">
 		<set name="bodypart" val="chest"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="light"/>
 		<set name="weight" val="4820"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="47"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="7960"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add stat="pDef" order="0x10" val="47"/>
 		</for>
 	</item>
 	<item id="24" type="Armor" name="Bone Breastplate">
 		<set name="bodypart" val="chest"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="light"/>
 		<set name="weight" val="4770"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="50"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="20300"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="50" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="25" type="Armor" name="Piece Bone Breastplate">
 		<set name="bodypart" val="chest"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="heavy"/>
 		<set name="weight" val="8970"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="62"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="31800"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="62" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="26" type="Armor" name="Bronze Breastplate">
 		<set name="bodypart" val="chest"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="heavy"/>
 		<set name="weight" val="8920"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="68"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="49200"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="68" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="27" type="Armor" name="Hard Leather Shirt">
 		<set name="bodypart" val="chest"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="light"/>
 		<set name="weight" val="4720"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="53"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="36900"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="53" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="28" type="Armor" name="Pants">
 		<set name="bodypart" val="legs"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="light"/>
 		<set name="weight" val="1740"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="22"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="92"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="22" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="29" type="Armor" name="Leather Pants">
 		<set name="bodypart" val="legs"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="light"/>
 		<set name="weight" val="1730"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="27"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="1520"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="27" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="30" type="Armor" name="Hard Leather Pants">
 		<set name="bodypart" val="legs"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="light"/>
 		<set name="weight" val="1700"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="29"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="4970"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="29" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="31" type="Armor" name="Bone Gaiters">
 		<set name="bodypart" val="legs"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="light"/>
 		<set name="weight" val="1680"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="32"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="12700"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="32" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="32" type="Armor" name="Piece Bone Gaiters">
 		<set name="bodypart" val="legs"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="heavy"/>
 		<set name="weight" val="4020"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="39"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="19900"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="39" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="33" type="Armor" name="Hard Leather Gaiters">
 		<set name="bodypart" val="legs"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="light"/>
 		<set name="weight" val="1610"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="33"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="23000"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="33" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="34" type="Armor" name="Bronze Gaiters">
 		<set name="bodypart" val="legs"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="heavy"/>
 		<set name="weight" val="3960"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="43"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="30700"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="43" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="35" type="Armor" name="Cloth Shoes">
 		<set name="bodypart" val="feet"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="1320"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="9"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="37"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="9" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="36" type="Armor" name="Leather Sandals">
 		<set name="bodypart" val="feet"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="1320"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="9"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="37"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="9" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="37" type="Armor" name="Leather Shoes">
 		<set name="bodypart" val="feet"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="1320"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="13"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="2650"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="13" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="38" type="Armor" name="Low Boots">
 		<set name="bodypart" val="feet"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="1320"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="15"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="6770"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="15" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="39" type="Armor" name="Boots">
 		<set name="bodypart" val="feet"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="1310"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="17"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="12300"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="17" order="0x10" stat="pDef"/>
 		</for>
@@ -1306,19 +677,9 @@
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="1300"/>
 		<set name="crystal_type" val="d"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="19"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="20900"/>
 		<set name="crystal_count" val="38"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="19" order="0x10" stat="pDef"/>
 			<enchant val="0" order="0x0C" stat="pDef"/>
@@ -1326,92 +687,44 @@
 	</item>
 	<item id="41" type="Armor" name="Cloth Cap">
 		<set name="bodypart" val="head"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="660"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="13"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="55"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="13" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="42" type="Armor" name="Leather Cap">
 		<set name="bodypart" val="head"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="660"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="16"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="911"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="16" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="43" type="Armor" name="Wooden Helmet">
 		<set name="bodypart" val="head"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="660"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="19"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="3980"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="19" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="44" type="Armor" name="Leather Helmet">
 		<set name="bodypart" val="head"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="650"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="23"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="10200"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="23" order="0x10" stat="pDef"/>
 		</for>
@@ -1422,19 +735,9 @@
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="640"/>
 		<set name="crystal_type" val="d"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="29"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="31300"/>
 		<set name="crystal_count" val="56"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="29" order="0x10" stat="pDef"/>
 			<enchant val="0" order="0x0C" stat="pDef"/>
@@ -1446,19 +749,9 @@
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="630"/>
 		<set name="crystal_type" val="d"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="33"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="50000"/>
 		<set name="crystal_count" val="90"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="33" order="0x10" stat="pDef"/>
 			<enchant val="0" order="0x0C" stat="pDef"/>
@@ -1470,19 +763,9 @@
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="640"/>
 		<set name="crystal_type" val="d"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="37"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="76200"/>
 		<set name="crystal_count" val="138"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="37" order="0x10" stat="pDef"/>
 			<enchant val="0" order="0x0C" stat="pDef"/>
@@ -1490,224 +773,108 @@
 	</item>
 	<item id="48" type="Armor" name="Short Gloves">
 		<set name="bodypart" val="gloves"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="660"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="9"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="37"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="9" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="49" type="Armor" name="Gloves">
 		<set name="bodypart" val="gloves"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="660"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="13"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="2650"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="13" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="50" type="Armor" name="Leather Gloves">
 		<set name="bodypart" val="gloves"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="650"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="15"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="6770"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="15" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="51" type="Armor" name="Bracer">
 		<set name="bodypart" val="gloves"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="650"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="17"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="12300"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="17" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="52" type="Armor" name="Hemp Cloak">
 		<set name="bodypart" val="underwear"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="260"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="2"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="37"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="2" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="53" type="Armor" name="Cotton Cloak">
 		<set name="bodypart" val="underwear"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="250"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="3"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="607"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="3" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="54" type="Armor" name="Silk Cloak">
 		<set name="bodypart" val="underwear"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="250"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="4"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="2650"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="4" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="55" type="Armor" name="Cotton Undergarment">
 		<set name="bodypart" val="underwear"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="170"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="4"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="18"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="4" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="56" type="Armor" name="Wool Undergarment">
 		<set name="bodypart" val="underwear"/>
-		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="170"/>
 		<set name="crystal_type" val="none"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="5"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="304"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="5" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="57" type="EtcItem" name="Adena">
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
-		<set name="weight" val="0"/>
 		<set name="consume_type" val="asset"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="1"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="58" type="Armor" name="Mithril Breastplate">
 		<set name="bodypart" val="chest"/>
@@ -1715,19 +882,9 @@
 		<set name="armor_type" val="heavy"/>
 		<set name="weight" val="8670"/>
 		<set name="crystal_type" val="d"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="95"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="183000"/>
 		<set name="crystal_count" val="332"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="95" order="0x10" stat="pDef"/>
 			<enchant val="0" order="0x0C" stat="pDef"/>
@@ -1739,19 +896,9 @@
 		<set name="armor_type" val="heavy"/>
 		<set name="weight" val="3830"/>
 		<set name="crystal_type" val="d"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="61"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="127000"/>
 		<set name="crystal_count" val="230"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="61" order="0x10" stat="pDef"/>
 			<enchant val="0" order="0x0C" stat="pDef"/>
@@ -1764,19 +911,9 @@
 		<set name="armor_type" val="heavy"/>
 		<set name="weight" val="10980"/>
 		<set name="crystal_type" val="c"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="224"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="1440000"/>
 		<set name="crystal_count" val="576"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="224" order="0x10" stat="pDef"/>
 			<enchant val="0" order="0x0C" stat="pDef"/>
@@ -1788,19 +925,9 @@
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="630"/>
 		<set name="crystal_type" val="d"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="29"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="97800"/>
 		<set name="crystal_count" val="177"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="29" order="0x10" stat="pDef"/>
 			<enchant val="0" order="0x0C" stat="pDef"/>
@@ -1812,19 +939,9 @@
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="1230"/>
 		<set name="crystal_type" val="c"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="32"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="126000"/>
 		<set name="crystal_count" val="50"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="32" order="0x10" stat="pDef"/>
 			<enchant val="0" order="0x0C" stat="pDef"/>
@@ -1836,19 +953,9 @@
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="640"/>
 		<set name="crystal_type" val="d"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="24"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="50800"/>
 		<set name="crystal_count" val="92"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="24" order="0x10" stat="pDef"/>
 			<enchant val="0" order="0x0C" stat="pDef"/>
@@ -1860,41 +967,23 @@
 		<set name="armor_type" val="none"/>
 		<set name="weight" val="1220"/>
 		<set name="crystal_type" val="c"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="duration" val="-1"/>
 		<set name="p_def" val="36"/>
-		<set name="m_def" val="0"/>
-		<set name="mp_bonus" val="0"/>
 		<set name="price" val="245000"/>
 		<set name="crystal_count" val="98"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
 		<for>
 			<add val="36" order="0x10" stat="pDef"/>
 			<enchant val="0" order="0x0C" stat="pDef"/>
 		</for>
 	</item>
 	<item id="65" type="EtcItem" name="Red Potion">
-		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="potion"/>
 		<set name="weight" val="80"/>
 		<set name="consume_type" val="stackable"/>
 		<set name="crystal_type" val="none"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="40"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
 	</item>
 	<item id="66" type="Weapon" name="Gladius">
 		<set name="bodypart" val="rhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1570"/>
 		<set name="soulshots" val="2"/>
 		<set name="spiritshots" val="2"/>
@@ -1903,30 +992,9 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="12"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="54100"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="17" order="0x08" stat="pAtk"/>
 			<set val="12" order="0x08" stat="mAtk"/>
@@ -1939,7 +1007,6 @@
 	</item>
 	<item id="67" type="Weapon" name="Orcish Sword">
 		<set name="bodypart" val="rhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1570"/>
 		<set name="soulshots" val="2"/>
 		<set name="spiritshots" val="2"/>
@@ -1948,30 +1015,9 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="12"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="54100"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="17" order="0x08" stat="pAtk"/>
 			<set val="12" order="0x08" stat="mAtk"/>
@@ -1984,7 +1030,6 @@
 	</item>
 	<item id="68" type="Weapon" name="Falchion">
 		<set name="bodypart" val="rhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1530"/>
 		<set name="soulshots" val="2"/>
 		<set name="spiritshots" val="2"/>
@@ -1993,30 +1038,9 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="21"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="244000"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="31" order="0x08" stat="pAtk"/>
 			<set val="21" order="0x08" stat="mAtk"/>
@@ -2038,30 +1062,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="32"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="644000"/>
 		<set name="crystal_count" val="1170"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="51" order="0x08" stat="pAtk"/>
 			<set val="32" order="0x08" stat="mAtk"/>
@@ -2083,30 +1087,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="bigsword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="54"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="1800000"/>
 		<set name="crystal_count" val="3272"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="112" order="0x08" stat="pAtk"/>
 			<set val="54" order="0x08" stat="mAtk"/>
@@ -2129,30 +1113,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="bigsword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="61"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="2290000"/>
 		<set name="crystal_count" val="916"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="130" order="0x08" stat="pAtk"/>
 			<set val="61" order="0x08" stat="mAtk"/>
@@ -2175,30 +1139,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="61"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="2290000"/>
 		<set name="crystal_count" val="916"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="107" order="0x08" stat="pAtk"/>
 			<set val="61" order="0x08" stat="mAtk"/>
@@ -2221,30 +1165,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="68"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="2870000"/>
 		<set name="crystal_count" val="1148"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="122" order="0x08" stat="pAtk"/>
 			<set val="68" order="0x08" stat="mAtk"/>
@@ -2267,30 +1191,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="68"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="2870000"/>
 		<set name="crystal_count" val="1148"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="122" order="0x08" stat="pAtk"/>
 			<set val="68" order="0x08" stat="mAtk"/>
@@ -2313,30 +1217,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="76"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="4300000"/>
 		<set name="crystal_count" val="1720"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="139" order="0x08" stat="pAtk"/>
 			<set val="76" order="0x08" stat="mAtk"/>
@@ -2359,30 +1243,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="76"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="4300000"/>
 		<set name="crystal_count" val="1720"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="139" order="0x08" stat="pAtk"/>
 			<set val="76" order="0x08" stat="mAtk"/>
@@ -2405,30 +1269,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="76"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="4300000"/>
 		<set name="crystal_count" val="1720"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="139" order="0x08" stat="pAtk"/>
 			<set val="76" order="0x08" stat="mAtk"/>
@@ -2451,30 +1295,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="bigsword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="91"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="8680000"/>
 		<set name="crystal_count" val="1157"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="213" order="0x08" stat="pAtk"/>
 			<set val="91" order="0x08" stat="mAtk"/>
@@ -2497,30 +1321,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="99"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="13100000"/>
 		<set name="crystal_count" val="1746"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="194" order="0x08" stat="pAtk"/>
 			<set val="99" order="0x08" stat="mAtk"/>
@@ -2543,30 +1347,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="213" order="0x08" stat="pAtk"/>
 			<set val="107" order="0x08" stat="mAtk"/>
@@ -2589,30 +1373,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="bigsword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="114"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="27000000"/>
 		<set name="crystal_count" val="2160"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="282" order="0x08" stat="pAtk"/>
 			<set val="114" order="0x08" stat="mAtk"/>
@@ -2634,30 +1398,13 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="124"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="38000000"/>
 		<set name="crystal_count" val="1900"/>
 		<set name="sellable" val="false"/>
 		<set name="dropable" val="false"/>
-		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="false"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="257" order="0x08" stat="pAtk"/>
 			<set val="124" order="0x08" stat="mAtk"/>
@@ -2679,30 +1426,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="45"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="716000"/>
 		<set name="crystal_count" val="1301"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="43" order="0x08" stat="pAtk"/>
 			<set val="45" order="0x08" stat="mAtk"/>
@@ -2725,30 +1452,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="101"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="4300000"/>
 		<set name="crystal_count" val="1720"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="111" order="0x08" stat="pAtk"/>
 			<set val="101" order="0x08" stat="mAtk"/>
@@ -2770,30 +1477,10 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="sword"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="143"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="170" order="0x08" stat="pAtk"/>
 			<set val="143" order="0x08" stat="mAtk"/>
@@ -2816,29 +1503,10 @@
 		<set name="weapon_type" val="blunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="32"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="644000"/>
 		<set name="crystal_count" val="1170"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="51" order="0x08" stat="pAtk"/>
 			<set val="32" order="0x08" stat="mAtk"/>
@@ -2851,7 +1519,6 @@
 	</item>
 	<item id="87" type="Weapon" name="Iron Hammer">
 		<set name="bodypart" val="rhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1850"/>
 		<set name="soulshots" val="2"/>
 		<set name="spiritshots" val="2"/>
@@ -2861,29 +1528,9 @@
 		<set name="weapon_type" val="blunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="21"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="244000"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="31" order="0x08" stat="pAtk"/>
 			<set val="21" order="0x08" stat="mAtk"/>
@@ -2906,29 +1553,10 @@
 		<set name="weapon_type" val="blunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="47"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="1400000"/>
 		<set name="crystal_count" val="2545"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="79" order="0x08" stat="pAtk"/>
 			<set val="47" order="0x08" stat="mAtk"/>
@@ -2952,29 +1580,10 @@
 		<set name="weapon_type" val="blunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="61"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="2290000"/>
 		<set name="crystal_count" val="916"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="107" order="0x08" stat="pAtk"/>
 			<set val="61" order="0x08" stat="mAtk"/>
@@ -2997,29 +1606,10 @@
 		<set name="weapon_type" val="bigblunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="63"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="1400000"/>
 		<set name="crystal_count" val="2545"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="77" order="0x08" stat="pAtk"/>
 			<set val="63" order="0x08" stat="mAtk"/>
@@ -3043,29 +1633,10 @@
 		<set name="weapon_type" val="blunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="91"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="8680000"/>
 		<set name="crystal_count" val="1157"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="175" order="0x08" stat="pAtk"/>
 			<set val="91" order="0x08" stat="mAtk"/>
@@ -3089,29 +1660,10 @@
 		<set name="weapon_type" val="bigblunt"/>
 		<set name="critical" val="4"/>
 		<set name="hit_modify" val="4.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="122"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="8680000"/>
 		<set name="crystal_count" val="1157"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="170" order="0x08" stat="pAtk"/>
 			<set val="122" order="0x08" stat="mAtk"/>
@@ -3134,29 +1686,10 @@
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="47"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="1400000"/>
 		<set name="crystal_count" val="2545"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="79" order="0x08" stat="pAtk"/>
 			<set val="47" order="0x08" stat="mAtk"/>
@@ -3181,29 +1714,10 @@
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="68"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="2870000"/>
 		<set name="crystal_count" val="1148"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="122" order="0x08" stat="pAtk"/>
 			<set val="68" order="0x08" stat="mAtk"/>
@@ -3228,29 +1742,10 @@
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="76"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="4300000"/>
 		<set name="crystal_count" val="1720"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="139" order="0x08" stat="pAtk"/>
 			<set val="76" order="0x08" stat="mAtk"/>
@@ -3275,29 +1770,10 @@
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="61"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="2290000"/>
 		<set name="crystal_count" val="916"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="107" order="0x08" stat="pAtk"/>
 			<set val="61" order="0x08" stat="mAtk"/>
@@ -3322,29 +1798,10 @@
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="99"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="13100000"/>
 		<set name="crystal_count" val="1746"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="194" order="0x08" stat="pAtk"/>
 			<set val="99" order="0x08" stat="mAtk"/>
@@ -3369,29 +1826,10 @@
 		<set name="weapon_type" val="pole"/>
 		<set name="critical" val="8"/>
 		<set name="hit_modify" val="-3.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="325"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="107"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="18300000"/>
 		<set name="crystal_count" val="1464"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="213" order="0x08" stat="pAtk"/>
 			<set val="107" order="0x08" stat="mAtk"/>
@@ -3405,7 +1843,6 @@
 	</item>
 	<item id="99" type="Weapon" name="Apprentice's Spellbook">
 		<set name="bodypart" val="rhand"/>
-		<set name="crystallizable" val="false"/>
 		<set name="weight" val="650"/>
 		<set name="soulshots" val="1"/>
 		<set name="spiritshots" val="1"/>
@@ -3414,30 +1851,9 @@
 		<set name="rnd_dam" val="10"/>
 		<set name="weapon_type" val="etc"/>
 		<set name="critical" val="8"/>
-		<set name="hit_modify" val="0.00000"/>
-		<set name="avoid_modify" val="0"/>
-		<set name="shield_def" val="0"/>
-		<set name="shield_def_rate" val="0"/>
 		<set name="atk_speed" val="379"/>
-		<set name="mp_consume" val="0"/>
 		<set name="m_dam" val="12"/>
-		<set name="duration" val="-1"/>
 		<set name="price" val="12500"/>
-		<set name="crystal_count" val="0"/>
-		<set name="sellable" val="true"/>
-		<set name="dropable" val="true"/>
-		<set name="destroyable" val="true"/>
-		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="0"/>
-		<set name="item_skill_lvl" val="0"/>
-		<set name="enchant4_skill_id" val="0"/>
-		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="0"/>
-		<set name="onCast_skill_lvl" val="0"/>
-		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="0"/>
-		<set name="onCrit_skill_lvl" val="0"/>
-		<set name="onCrit_skill_chance" val="0"/>
 		<for>
 			<set val="9" order="0x08" stat="pAtk"/>
 			<set val="12" order="0x08" stat="mAtk"/>
