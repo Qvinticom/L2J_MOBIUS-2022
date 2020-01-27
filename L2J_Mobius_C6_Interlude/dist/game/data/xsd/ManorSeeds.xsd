@@ -14,8 +14,8 @@
 								<xs:attribute type="xs:short" name="reward2" use="required"/>
 								<xs:attribute type="xs:byte" name="castleId" use="required"/>
 								<xs:attribute type="xs:boolean" name="isAlternative" use="required"/>
-								<xs:attribute type="xs:short" name="seedsLimit" use="required"/>
-								<xs:attribute type="xs:short" name="cropsLimit" use="required"/>
+								<xs:attribute type="xs:short" name="seedLimit" use="required"/>
+								<xs:attribute type="xs:short" name="cropLimit" use="required"/>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>

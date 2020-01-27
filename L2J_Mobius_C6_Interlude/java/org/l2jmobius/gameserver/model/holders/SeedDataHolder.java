@@ -24,33 +24,33 @@ import org.l2jmobius.Config;
 public class SeedDataHolder
 {
 	private final int _id;
-	private final int _level; // seed level
-	private final int _crop; // crop type
-	private final int _mature; // mature crop type
-	private final int _type1;
-	private final int _type2;
-	private final int _manorId; // id of manor (castle id) where seed can be farmed
+	private final int _level;
+	private final int _cropId;
+	private final int _matureId;
+	private final int _reward1;
+	private final int _reward2;
+	private final int _castleId;
 	private final boolean _isAlternative;
-	private final int _limitSeeds;
-	private final int _limitCrops;
+	private final int _seedLimit;
+	private final int _cropLimit;
 	
-	public SeedDataHolder(int id, int level, int crop, int mature, int type1, int type2, int manorId, boolean isAlternative, int limitSeeds, int limitCrops)
+	public SeedDataHolder(int id, int level, int crop, int mature, int reward1, int reward2, int castleId, boolean isAlternative, int seedLimit, int cropLimit)
 	{
 		_id = id;
 		_level = level;
-		_crop = crop;
-		_mature = mature;
-		_type1 = type1;
-		_type2 = type2;
-		_manorId = manorId;
+		_cropId = crop;
+		_matureId = mature;
+		_reward1 = reward1;
+		_reward2 = reward2;
+		_castleId = castleId;
 		_isAlternative = isAlternative;
-		_limitSeeds = limitSeeds;
-		_limitCrops = limitCrops;
+		_seedLimit = seedLimit;
+		_cropLimit = cropLimit;
 	}
 	
-	public int getManorId()
+	public int getCastleId()
 	{
-		return _manorId;
+		return _castleId;
 	}
 	
 	public int getId()
@@ -58,19 +58,19 @@ public class SeedDataHolder
 		return _id;
 	}
 	
-	public int getCrop()
+	public int getCropId()
 	{
-		return _crop;
+		return _cropId;
 	}
 	
-	public int getMature()
+	public int getMatureId()
 	{
-		return _mature;
+		return _matureId;
 	}
 	
 	public int getReward(int type)
 	{
-		return type == 1 ? _type1 : _type2;
+		return type == 1 ? _reward1 : _reward2;
 	}
 	
 	public int getLevel()
@@ -85,11 +85,11 @@ public class SeedDataHolder
 	
 	public int getSeedLimit()
 	{
-		return _limitSeeds * Config.RATE_DROP_MANOR;
+		return _seedLimit * Config.RATE_DROP_MANOR;
 	}
 	
 	public int getCropLimit()
 	{
-		return _limitCrops * Config.RATE_DROP_MANOR;
+		return _cropLimit * Config.RATE_DROP_MANOR;
 	}
 }

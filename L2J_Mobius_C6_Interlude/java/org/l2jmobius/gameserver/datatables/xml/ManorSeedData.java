@@ -77,7 +77,7 @@ public class ManorSeedData implements IXmlReader
 				}
 				
 				final int id = set.getInt("id");
-				_seeds.put(id, new SeedDataHolder(id, set.getInt("level"), set.getInt("cropId"), set.getInt("matureId"), set.getInt("reward1"), set.getInt("reward2"), set.getInt("castleId"), set.getBoolean("isAlternative"), set.getInt("seedsLimit"), set.getInt("cropsLimit")));
+				_seeds.put(id, new SeedDataHolder(id, set.getInt("level"), set.getInt("cropId"), set.getInt("matureId"), set.getInt("reward1"), set.getInt("reward2"), set.getInt("castleId"), set.getBoolean("isAlternative"), set.getInt("seedLimit"), set.getInt("cropLimit")));
 			}
 		}
 	}
@@ -87,9 +87,9 @@ public class ManorSeedData implements IXmlReader
 		final List<Integer> crops = new ArrayList<>();
 		for (SeedDataHolder seed : _seeds.values())
 		{
-			if (!crops.contains(seed.getCrop()) && (seed.getCrop() != 0))
+			if (!crops.contains(seed.getCropId()) && (seed.getCropId() != 0))
 			{
-				crops.add(seed.getCrop());
+				crops.add(seed.getCropId());
 			}
 		}
 		return crops;
@@ -109,7 +109,7 @@ public class ManorSeedData implements IXmlReader
 	{
 		for (SeedDataHolder seed : _seeds.values())
 		{
-			if (seed.getCrop() == cropId)
+			if (seed.getCropId() == cropId)
 			{
 				return getSeedBasicPrice(seed.getId());
 			}
@@ -131,9 +131,9 @@ public class ManorSeedData implements IXmlReader
 	{
 		for (SeedDataHolder seed : _seeds.values())
 		{
-			if (seed.getCrop() == cropId)
+			if (seed.getCropId() == cropId)
 			{
-				return seed.getMature();
+				return seed.getMatureId();
 			}
 		}
 		return 0;
@@ -174,7 +174,7 @@ public class ManorSeedData implements IXmlReader
 	{
 		for (SeedDataHolder seed : _seeds.values())
 		{
-			if (seed.getCrop() == cropId)
+			if (seed.getCropId() == cropId)
 			{
 				return seed.getLevel();
 			}
@@ -209,7 +209,7 @@ public class ManorSeedData implements IXmlReader
 		final SeedDataHolder seed = _seeds.get(seedId);
 		if (seed != null)
 		{
-			return seed.getCrop();
+			return seed.getCropId();
 		}
 		return -1;
 	}
@@ -218,7 +218,7 @@ public class ManorSeedData implements IXmlReader
 	{
 		for (SeedDataHolder seed : _seeds.values())
 		{
-			if (seed.getCrop() == cropId)
+			if (seed.getCropId() == cropId)
 			{
 				return seed.getReward(type); // there can be several seeds with same crop, but reward should be the same for all
 			}
@@ -246,9 +246,9 @@ public class ManorSeedData implements IXmlReader
 		final List<Integer> crops = new ArrayList<>();
 		for (SeedDataHolder seed : _seeds.values())
 		{
-			if ((seed.getManorId() == castleId) && !crops.contains(seed.getCrop()))
+			if ((seed.getCastleId() == castleId) && !crops.contains(seed.getCropId()))
 			{
-				crops.add(seed.getCrop());
+				crops.add(seed.getCropId());
 			}
 		}
 		return crops;
@@ -264,7 +264,7 @@ public class ManorSeedData implements IXmlReader
 		final List<Integer> seedsID = new ArrayList<>();
 		for (SeedDataHolder seed : _seeds.values())
 		{
-			if ((seed.getManorId() == castleId) && !seedsID.contains(seed.getId()))
+			if ((seed.getCastleId() == castleId) && !seedsID.contains(seed.getId()))
 			{
 				seedsID.add(seed.getId());
 			}
@@ -282,7 +282,7 @@ public class ManorSeedData implements IXmlReader
 		final SeedDataHolder seed = _seeds.get(seedId);
 		if (seed != null)
 		{
-			return seed.getManorId();
+			return seed.getCastleId();
 		}
 		return 0;
 	}
@@ -301,7 +301,7 @@ public class ManorSeedData implements IXmlReader
 	{
 		for (SeedDataHolder seed : _seeds.values())
 		{
-			if (seed.getCrop() == cropId)
+			if (seed.getCropId() == cropId)
 			{
 				return seed.getCropLimit();
 			}
