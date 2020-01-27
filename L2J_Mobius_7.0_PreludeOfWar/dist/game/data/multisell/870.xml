@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>33715</npc> <!-- Seed Talisman Manager -->
+	</npcs>
+	<item> 
+		<ingredient id="57" count="3800000"/> <!-- Adena --> 
+		<production id="36184" count="1"/> <!-- Annihilation Energy --> 
+	</item>
+	<item>
+		<ingredient id="57" count="14250000"/> <!-- Adena --> 
+		<production id="36185" count="1"/> <!-- Hellfire Energy --> 
+	</item>
+	<item>	
+		<ingredient id="57" count="142500000"/> <!-- Adena -->
+		<production id="36186" count="1"/> <!-- Energy of Desire --> 
+	</item>
+    <item>		
+		<ingredient id="57" count="485300000"/> <!-- Adena --> 
+		<production id="26291" count="1"/> <!-- Kaliel's Energy Longing --> 
+	</item>		
+</list>
