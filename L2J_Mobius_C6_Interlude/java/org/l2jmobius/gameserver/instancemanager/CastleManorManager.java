@@ -29,9 +29,9 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
+import org.l2jmobius.gameserver.datatables.xml.SeedData;
 import org.l2jmobius.gameserver.model.ClanWarehouse;
 import org.l2jmobius.gameserver.model.ItemContainer;
-import org.l2jmobius.gameserver.model.Manor;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -328,7 +328,7 @@ public class CastleManorManager
 					
 					if (count >= 1)
 					{
-						cwh.addItem("Manor", Manor.getInstance().getMatureCrop(crop.getId()), count, null, null);
+						cwh.addItem("Manor", SeedData.getInstance().getMatureCrop(crop.getId()), count, null, null);
 					}
 				}
 				
@@ -435,7 +435,7 @@ public class CastleManorManager
 	private List<SeedProduction> getNewSeedsList(int castleId)
 	{
 		final List<SeedProduction> seeds = new ArrayList<>();
-		final List<Integer> seedsIds = Manor.getInstance().getSeedsForCastle(castleId);
+		final List<Integer> seedsIds = SeedData.getInstance().getSeedsForCastle(castleId);
 		for (int sd : seedsIds)
 		{
 			seeds.add(new SeedProduction(sd));
@@ -446,7 +446,7 @@ public class CastleManorManager
 	private List<CropProcure> getNewCropsList(int castleId)
 	{
 		final List<CropProcure> crops = new ArrayList<>();
-		final List<Integer> cropsIds = Manor.getInstance().getCropsForCastle(castleId);
+		final List<Integer> cropsIds = SeedData.getInstance().getCropsForCastle(castleId);
 		for (int cr : cropsIds)
 		{
 			crops.add(new CropProcure(cr));

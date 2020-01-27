@@ -18,10 +18,10 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import org.l2jmobius.gameserver.datatables.xml.SeedData;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
-import org.l2jmobius.gameserver.model.Manor;
 import org.l2jmobius.gameserver.model.entity.siege.Castle;
 
 /**
@@ -44,20 +44,20 @@ public class ExShowCropSetting extends GameServerPacket
 	{
 		_manorId = manorId;
 		final Castle c = CastleManager.getInstance().getCastleById(_manorId);
-		final List<Integer> crops = Manor.getInstance().getCropsForCastle(_manorId);
+		final List<Integer> crops = SeedData.getInstance().getCropsForCastle(_manorId);
 		_count = crops.size();
 		_cropData = new int[_count * 14];
 		int i = 0;
 		for (int cr : crops)
 		{
 			_cropData[(i * 14) + 0] = cr;
-			_cropData[(i * 14) + 1] = Manor.getInstance().getSeedLevelByCrop(cr);
-			_cropData[(i * 14) + 2] = Manor.getInstance().getRewardItem(cr, 1);
-			_cropData[(i * 14) + 3] = Manor.getInstance().getRewardItem(cr, 2);
-			_cropData[(i * 14) + 4] = Manor.getInstance().getCropPuchaseLimit(cr);
+			_cropData[(i * 14) + 1] = SeedData.getInstance().getSeedLevelByCrop(cr);
+			_cropData[(i * 14) + 2] = SeedData.getInstance().getRewardItem(cr, 1);
+			_cropData[(i * 14) + 3] = SeedData.getInstance().getRewardItem(cr, 2);
+			_cropData[(i * 14) + 4] = SeedData.getInstance().getCropPuchaseLimit(cr);
 			_cropData[(i * 14) + 5] = 0; // Looks like not used
-			_cropData[(i * 14) + 6] = (Manor.getInstance().getCropBasicPrice(cr) * 60) / 100;
-			_cropData[(i * 14) + 7] = Manor.getInstance().getCropBasicPrice(cr) * 10;
+			_cropData[(i * 14) + 6] = (SeedData.getInstance().getCropBasicPrice(cr) * 60) / 100;
+			_cropData[(i * 14) + 7] = SeedData.getInstance().getCropBasicPrice(cr) * 10;
 			CropProcure cropPr = c.getCrop(cr, CastleManorManager.PERIOD_CURRENT);
 			if (cropPr != null)
 			{

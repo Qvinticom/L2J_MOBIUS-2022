@@ -31,12 +31,12 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.xml.DoorData;
+import org.l2jmobius.gameserver.datatables.xml.SeedData;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.SeedProduction;
 import org.l2jmobius.gameserver.instancemanager.CrownManager;
-import org.l2jmobius.gameserver.model.Manor;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
@@ -870,7 +870,7 @@ public class Castle
 		{
 			for (SeedProduction seed : production)
 			{
-				total += Manor.getInstance().getSeedBuyPrice(seed.getId()) * seed.getStartProduce();
+				total += SeedData.getInstance().getSeedBuyPrice(seed.getId()) * seed.getStartProduce();
 			}
 		}
 		

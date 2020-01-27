@@ -32,11 +32,11 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.FortSiegeGuardAI;
 import org.l2jmobius.gameserver.ai.SiegeGuardAI;
 import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.datatables.xml.SeedData;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
-import org.l2jmobius.gameserver.model.Manor;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
@@ -3157,7 +3157,7 @@ public class Attackable extends NpcInstance
 			
 		}
 		
-		final int diff = getLevel() - (Manor.getInstance().getSeedLevel(_seedType) - 5);
+		final int diff = getLevel() - (SeedData.getInstance().getSeedLevel(_seedType) - 5);
 		
 		// hi-lvl mobs bonus
 		if (diff > 0)
@@ -3167,7 +3167,7 @@ public class Attackable extends NpcInstance
 		
 		final List<RewardItem> harvested = new ArrayList<>();
 		
-		harvested.add(new RewardItem(Manor.getInstance().getCropType(_seedType), count * Config.RATE_DROP_MANOR));
+		harvested.add(new RewardItem(SeedData.getInstance().getCropType(_seedType), count * Config.RATE_DROP_MANOR));
 		
 		_harvestItems = harvested.toArray(new RewardItem[harvested.size()]);
 	}
