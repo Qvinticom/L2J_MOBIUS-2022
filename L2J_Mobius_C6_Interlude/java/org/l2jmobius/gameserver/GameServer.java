@@ -505,13 +505,14 @@ public class GameServer
 			LOGGER.info("L2Walker protection actived.");
 		}
 		
+		System.gc();
+		
 		Util.printSection("Info");
 		LOGGER.info("Maximum Numbers of Connected Players: " + Config.MAXIMUM_ONLINE_USERS);
 		LOGGER.info("GameServer Started, free memory " + (((Runtime.getRuntime().maxMemory() - Runtime.getRuntime().totalMemory()) + Runtime.getRuntime().freeMemory()) / 1048576) + " Mb of " + (Runtime.getRuntime().maxMemory() / 1048576) + " Mb");
 		LOGGER.info("Used memory: " + ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576) + " MB");
 		
 		Util.printSection("Status");
-		System.gc();
 		LOGGER.info("Server Loaded in " + ((System.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
 		ServerStatus.getInstance();
 		
