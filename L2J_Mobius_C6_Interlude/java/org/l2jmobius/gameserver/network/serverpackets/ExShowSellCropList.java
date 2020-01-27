@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.datatables.xml.SeedData;
+import org.l2jmobius.gameserver.datatables.xml.ManorSeedData;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -42,7 +42,7 @@ public class ExShowSellCropList extends GameServerPacket
 		_castleCrops = new HashMap<>();
 		_cropsItems = new HashMap<>();
 		
-		final List<Integer> allCrops = SeedData.getInstance().getAllCrops();
+		final List<Integer> allCrops = ManorSeedData.getInstance().getAllCrops();
 		for (int cropId : allCrops)
 		{
 			final ItemInstance item = player.getInventory().getItemByItemId(cropId);
@@ -80,11 +80,11 @@ public class ExShowSellCropList extends GameServerPacket
 		{
 			writeD(item.getObjectId()); // Object id
 			writeD(item.getItemId()); // crop id
-			writeD(SeedData.getInstance().getSeedLevelByCrop(item.getItemId())); // seed level
+			writeD(ManorSeedData.getInstance().getSeedLevelByCrop(item.getItemId())); // seed level
 			writeC(1);
-			writeD(SeedData.getInstance().getRewardItem(item.getItemId(), 1)); // reward 1 id
+			writeD(ManorSeedData.getInstance().getRewardItem(item.getItemId(), 1)); // reward 1 id
 			writeC(1);
-			writeD(SeedData.getInstance().getRewardItem(item.getItemId(), 2)); // reward 2 id
+			writeD(ManorSeedData.getInstance().getRewardItem(item.getItemId(), 2)); // reward 2 id
 			
 			if (_castleCrops.containsKey(item.getItemId()))
 			{

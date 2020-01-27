@@ -70,7 +70,7 @@ import org.l2jmobius.gameserver.datatables.xml.FenceData;
 import org.l2jmobius.gameserver.datatables.xml.FishData;
 import org.l2jmobius.gameserver.datatables.xml.HennaData;
 import org.l2jmobius.gameserver.datatables.xml.RecipeData;
-import org.l2jmobius.gameserver.datatables.xml.SeedData;
+import org.l2jmobius.gameserver.datatables.xml.ManorSeedData;
 import org.l2jmobius.gameserver.datatables.xml.StaticObjectData;
 import org.l2jmobius.gameserver.datatables.xml.SummonItemData;
 import org.l2jmobius.gameserver.datatables.xml.ZoneData;
@@ -339,7 +339,7 @@ public class GameServer
 		}
 		
 		Util.printSection("Manor");
-		SeedData.getInstance();
+		ManorSeedData.getInstance();
 		CastleManorManager.getInstance();
 		
 		Util.printSection("Castles");

@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.datatables.xml.SeedData;
+import org.l2jmobius.gameserver.datatables.xml.ManorSeedData;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.SeedProduction;
 
 /**
@@ -56,11 +56,11 @@ public class ExShowSeedInfo extends GameServerPacket
 			writeD(seed.getCanProduce()); // Left to buy
 			writeD(seed.getStartProduce()); // Started amount
 			writeD(seed.getPrice()); // Sell Price
-			writeD(SeedData.getInstance().getSeedLevel(seed.getId())); // Seed Level
+			writeD(ManorSeedData.getInstance().getSeedLevel(seed.getId())); // Seed Level
 			writeC(1); // reward 1 Type
-			writeD(SeedData.getInstance().getRewardItemBySeed(seed.getId(), 1)); // Reward 1 Type Item Id
+			writeD(ManorSeedData.getInstance().getRewardItemBySeed(seed.getId(), 1)); // Reward 1 Type Item Id
 			writeC(1); // reward 2 Type
-			writeD(SeedData.getInstance().getRewardItemBySeed(seed.getId(), 2)); // Reward 2 Type Item Id
+			writeD(ManorSeedData.getInstance().getRewardItemBySeed(seed.getId(), 2)); // Reward 2 Type Item Id
 		}
 	}
 }

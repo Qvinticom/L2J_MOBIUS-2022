@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.datatables.xml.SeedData;
+import org.l2jmobius.gameserver.datatables.xml.ManorSeedData;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
@@ -140,11 +140,11 @@ public class Sow implements ISkillHandler
 		}
 		
 		// TODO: check all the chances
-		int basicSuccess = (SeedData.getInstance().isAlternative(_seedId) ? 20 : 90);
+		int basicSuccess = (ManorSeedData.getInstance().isAlternative(_seedId) ? 20 : 90);
 		int minlevelSeed = 0;
 		int maxlevelSeed = 0;
-		minlevelSeed = SeedData.getInstance().getSeedMinLevel(_seedId);
-		maxlevelSeed = SeedData.getInstance().getSeedMaxLevel(_seedId);
+		minlevelSeed = ManorSeedData.getInstance().getSeedMinLevel(_seedId);
+		maxlevelSeed = ManorSeedData.getInstance().getSeedMaxLevel(_seedId);
 		
 		final int levelPlayer = _player.getLevel(); // Attacker Level
 		final int levelTarget = _target.getLevel(); // taret Level

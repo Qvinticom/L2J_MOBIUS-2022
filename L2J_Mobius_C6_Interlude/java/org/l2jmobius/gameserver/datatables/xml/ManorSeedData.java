@@ -37,13 +37,13 @@ import org.l2jmobius.gameserver.model.items.Item;
  * This class loads and stores manor seed information.
  * @author l3x, Mobius
  */
-public class SeedData implements IXmlReader
+public class ManorSeedData implements IXmlReader
 {
-	private static final Logger LOGGER = Logger.getLogger(SeedData.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ManorSeedData.class.getName());
 	
 	private static Map<Integer, SeedDataHolder> _seeds = new ConcurrentHashMap<>();
 	
-	protected SeedData()
+	protected ManorSeedData()
 	{
 		load();
 	}
@@ -52,7 +52,7 @@ public class SeedData implements IXmlReader
 	public void load()
 	{
 		_seeds.clear();
-		parseDatapackFile("data/Seeds.xml");
+		parseDatapackFile("data/ManorSeeds.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _seeds.size() + " seeds.");
 	}
 	
@@ -309,13 +309,13 @@ public class SeedData implements IXmlReader
 		return 0;
 	}
 	
-	public static SeedData getInstance()
+	public static ManorSeedData getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final SeedData INSTANCE = new SeedData();
+		protected static final ManorSeedData INSTANCE = new ManorSeedData();
 	}
 }

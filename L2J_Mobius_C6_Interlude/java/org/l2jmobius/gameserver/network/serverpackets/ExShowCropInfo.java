@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.datatables.xml.SeedData;
+import org.l2jmobius.gameserver.datatables.xml.ManorSeedData;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
 
 /**
@@ -58,11 +58,11 @@ public class ExShowCropInfo extends GameServerPacket
 			writeD(crop.getStartAmount()); // Buy
 			writeD(crop.getPrice()); // Buy price
 			writeC(crop.getReward()); // Reward
-			writeD(SeedData.getInstance().getSeedLevelByCrop(crop.getId())); // Seed Level
+			writeD(ManorSeedData.getInstance().getSeedLevelByCrop(crop.getId())); // Seed Level
 			writeC(1); // reward 1 Type
-			writeD(SeedData.getInstance().getRewardItem(crop.getId(), 1)); // Reward 1 Type Item Id
+			writeD(ManorSeedData.getInstance().getRewardItem(crop.getId(), 1)); // Reward 1 Type Item Id
 			writeC(1); // reward 2 Type
-			writeD(SeedData.getInstance().getRewardItem(crop.getId(), 2)); // Reward 2 Type Item Id
+			writeD(ManorSeedData.getInstance().getRewardItem(crop.getId(), 2)); // Reward 2 Type Item Id
 		}
 	}
 }

@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.ItemTable;
-import org.l2jmobius.gameserver.datatables.xml.SeedData;
+import org.l2jmobius.gameserver.datatables.xml.ManorSeedData;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
@@ -136,7 +136,7 @@ public class RequestProcureCropList extends GameClientPacket
 			try
 			{
 				final CropProcure crop = CastleManager.getInstance().getCastleById(manorId).getCrop(itemId, CastleManorManager.PERIOD_CURRENT);
-				final int rewardItemId = SeedData.getInstance().getRewardItem(itemId, crop.getReward());
+				final int rewardItemId = ManorSeedData.getInstance().getRewardItem(itemId, crop.getReward());
 				final Item template = ItemTable.getInstance().getTemplate(rewardItemId);
 				weight += count * template.getWeight();
 				
@@ -203,14 +203,14 @@ public class RequestProcureCropList extends GameClientPacket
 			
 			int fee = 0; // fee for selling to other manors
 			
-			final int rewardItem = SeedData.getInstance().getRewardItem(cropId, crop.getReward());
+			final int rewardItem = ManorSeedData.getInstance().getRewardItem(cropId, crop.getReward());
 			
 			if (count > crop.getAmount())
 			{
 				continue;
 			}
 			
-			final int sellPrice = count * SeedData.getInstance().getCropBasicPrice(cropId);
+			final int sellPrice = count * ManorSeedData.getInstance().getCropBasicPrice(cropId);
 			final int rewardPrice = ItemTable.getInstance().getTemplate(rewardItem).getReferencePrice();
 			
 			if (rewardPrice == 0)

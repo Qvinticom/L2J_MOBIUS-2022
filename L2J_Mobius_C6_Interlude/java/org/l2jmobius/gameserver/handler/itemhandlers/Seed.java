@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
-import org.l2jmobius.gameserver.datatables.xml.SeedData;
+import org.l2jmobius.gameserver.datatables.xml.ManorSeedData;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.model.Skill;
@@ -363,7 +363,7 @@ public class Seed implements IItemHandler
 	
 	private boolean areaValid(int castleId)
 	{
-		return SeedData.getInstance().getCastleIdForSeed(_seedId) == castleId;
+		return ManorSeedData.getInstance().getCastleIdForSeed(_seedId) == castleId;
 	}
 	
 	@Override
