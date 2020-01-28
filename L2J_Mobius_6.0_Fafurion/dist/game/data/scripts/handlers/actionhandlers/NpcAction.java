@@ -123,7 +123,7 @@ public class NpcAction implements IActionHandler
 					}
 					
 					// Open a chat window on client with the text of the Npc
-					if (npc.getVariables().getBoolean("eventmob", false))
+					if (npc.hasVariables() && npc.getVariables().getBoolean("eventmob", false))
 					{
 						GameEvent.showEventHtml(player, String.valueOf(target.getObjectId()));
 					}
