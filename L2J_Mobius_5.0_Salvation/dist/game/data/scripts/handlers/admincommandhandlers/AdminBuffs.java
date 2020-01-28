@@ -320,7 +320,7 @@ public class AdminBuffs implements IAdminCommandHandler
 				sb.append(")");
 				sb.append(!info.isInUse() ? FONT_RED2 : "");
 				sb.append("</td><td>");
-				sb.append(info.getSkill().isToggle() ? "T (" + info.getTickCount(effect) + ")" : info.getSkill().isPassive() ? "P" : info.getTime() + "s");
+				sb.append(info.getSkill().isToggle() ? "T" : info.getSkill().isPassive() ? "P" : info.getTime() + "s");
 				sb.append("</td><td><button value=\"X\" action=\"bypass -h admin_stopbuff ");
 				sb.append(target.getObjectId());
 				sb.append(" ");

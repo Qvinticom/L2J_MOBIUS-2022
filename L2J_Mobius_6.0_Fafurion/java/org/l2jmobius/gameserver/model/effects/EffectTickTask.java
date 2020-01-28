@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.effects;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 
 /**
@@ -28,7 +26,6 @@ public class EffectTickTask implements Runnable
 {
 	private final BuffInfo _info;
 	private final AbstractEffect _effect;
-	private final AtomicInteger _tickCount = new AtomicInteger();
 	
 	/**
 	 * EffectTickTask constructor.
@@ -59,18 +56,9 @@ public class EffectTickTask implements Runnable
 		return _effect;
 	}
 	
-	/**
-	 * Gets the current tick count.
-	 * @return the tick count
-	 */
-	public int getTickCount()
-	{
-		return _tickCount.get();
-	}
-	
 	@Override
 	public void run()
 	{
-		_info.onTick(_effect, _tickCount.incrementAndGet());
+		_info.onTick(_effect);
 	}
 }

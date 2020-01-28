@@ -288,9 +288,8 @@ public class BuffInfo
 	 * Called on each tick.<br>
 	 * Verify if the effect should end and the effect task should be cancelled.
 	 * @param effect the effect that is ticking
-	 * @param tickCount the tick count
 	 */
-	public void onTick(AbstractEffect effect, int tickCount)
+	public void onTick(AbstractEffect effect)
 	{
 		boolean continueForever = false;
 		// If the effect is in use, allow it to affect the effected.
@@ -443,21 +442,6 @@ public class BuffInfo
 	{
 		_effects.forEach(_effected::removeStatsOwner);
 		_effected.removeStatsOwner(_skill);
-	}
-	
-	/**
-	 * Gets the effect tick count.
-	 * @param effect the effect
-	 * @return the current tick count
-	 */
-	public int getTickCount(AbstractEffect effect)
-	{
-		final EffectTaskInfo effectTaskInfo = _tasks.get(effect);
-		if (effectTaskInfo != null)
-		{
-			return effectTaskInfo.getEffectTask().getTickCount();
-		}
-		return 0;
 	}
 	
 	@Override

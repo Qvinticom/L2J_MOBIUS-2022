@@ -271,7 +271,7 @@ public class AdminBuffs implements IAdminCommandHandler
 					html.append(")");
 					html.append(!info.isInUse() ? FONT_RED2 : "");
 					html.append("</td><td>");
-					html.append(skill.isToggle() ? "T (" + info.getTickCount(effect) + ")" : skill.isPassive() ? "P" : info.getTime() + "s");
+					html.append(skill.isToggle() ? "T" : skill.isPassive() ? "P" : info.getTime() + "s");
 					html.append("</td><td><button value=\"X\" action=\"bypass -h admin_stopbuff ");
 					html.append(target.getObjectId());
 					html.append(" ");
