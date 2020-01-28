@@ -150,7 +150,7 @@ public class Npc extends Creature
 	private NpcStringId _nameString;
 	
 	private StatSet _params;
-	private int _scriptValue = 0;
+	private volatile int _scriptValue = 0;
 	private RaidBossStatus _raidStatus;
 	
 	/** Contains information about local tax payments. */

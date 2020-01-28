@@ -151,7 +151,7 @@ public class Npc extends Creature
 	private int _shotsMask = 0;
 	private int _killingBlowWeaponId;
 	
-	private int _scriptValue = 0;
+	private volatile int _scriptValue = 0;
 	
 	/** Map of summoned NPCs by this NPC. */
 	private Map<Integer, Npc> _summonedNpcs = null;

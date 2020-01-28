@@ -135,7 +135,7 @@ public class NpcInstance extends Creature
 	private int _currentRHandId; // normally this shouldn't change from the template, but there exist exceptions
 	private int _currentCollisionHeight; // used for npc grow effect skills
 	private int _currentCollisionRadius; // used for npc grow effect skills
-	private int _scriptValue = 0;
+	private volatile int _scriptValue = 0;
 	
 	/**
 	 * Send a packet SocialAction to all PlayerInstance in the _KnownPlayers of the NpcInstance and create a new RandomAnimation Task.
