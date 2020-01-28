@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.model;
 
 import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -30,7 +29,7 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
  */
 public class MpRewardTask
 {
-	private final AtomicInteger _count;
+	private int _count;
 	private final double _value;
 	private final ScheduledFuture<?> _task;
 	private final Creature _creature;
@@ -39,7 +38,7 @@ public class MpRewardTask
 	{
 		final NpcTemplate template = npc.getTemplate();
 		_creature = creature;
-		_count = new AtomicInteger(template.getMpRewardTicks());
+		_count = template.getMpRewardTicks();
 		_value = calculateBaseValue(npc, creature);
 		_task = ThreadPool.scheduleAtFixedRate(this::run, Config.EFFECT_TICK_RATIO, Config.EFFECT_TICK_RATIO);
 	}
@@ -64,7 +63,7 @@ public class MpRewardTask
 	
 	private void run()
 	{
-		if ((_count.decrementAndGet() <= 0) || (_creature.isPlayer() && !_creature.getActingPlayer().isOnline()))
+		if ((--_count <= 0) || (_creature.isPlayer() && !_creature.getActingPlayer().isOnline()))
 		{
 			_task.cancel(false);
 			return;
