@@ -19,10 +19,9 @@ package org.l2jmobius.gameserver.model;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -49,7 +48,7 @@ public class StatSet implements IParserAdvUtils
 	
 	public StatSet()
 	{
-		this(ConcurrentHashMap::new);
+		this(HashMap::new);
 	}
 	
 	public StatSet(Supplier<Map<String, Object>> mapFactory)
@@ -98,7 +97,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public boolean getBoolean(String key)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -127,7 +125,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public boolean getBoolean(String key, boolean defaultValue)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -150,7 +147,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public byte getByte(String key)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -173,7 +169,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public byte getByte(String key, byte defaultValue)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -209,8 +204,6 @@ public class StatSet implements IParserAdvUtils
 	
 	public byte[] getByteArray(String key, String splitOn)
 	{
-		Objects.requireNonNull(key);
-		Objects.requireNonNull(splitOn);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -242,8 +235,6 @@ public class StatSet implements IParserAdvUtils
 	
 	public List<Byte> getByteList(String key, String splitOn)
 	{
-		Objects.requireNonNull(key);
-		Objects.requireNonNull(splitOn);
 		final List<Byte> result = new ArrayList<>();
 		for (Byte i : getByteArray(key, splitOn))
 		{
@@ -255,7 +246,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public short getShort(String key)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -278,7 +268,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public short getShort(String key, short defaultValue)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -315,7 +304,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public int getInt(String key)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -340,7 +328,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public int getInt(String key, int defaultValue)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -376,8 +363,6 @@ public class StatSet implements IParserAdvUtils
 	
 	public int[] getIntArray(String key, String splitOn)
 	{
-		Objects.requireNonNull(key);
-		Objects.requireNonNull(splitOn);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -409,8 +394,6 @@ public class StatSet implements IParserAdvUtils
 	
 	public List<Integer> getIntegerList(String key, String splitOn)
 	{
-		Objects.requireNonNull(key);
-		Objects.requireNonNull(splitOn);
 		final List<Integer> result = new ArrayList<>();
 		for (int i : getIntArray(key, splitOn))
 		{
@@ -422,7 +405,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public long getLong(String key)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -445,7 +427,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public long getLong(String key, long defaultValue)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -482,7 +463,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public float getFloat(String key)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -505,7 +485,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public float getFloat(String key, float defaultValue)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -542,7 +521,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public double getDouble(String key)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -565,7 +543,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public double getDouble(String key, double defaultValue)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -602,7 +579,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public String getString(String key)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -614,7 +590,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public String getString(String key, String defaultValue)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -626,7 +601,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public Duration getDuration(String key)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -638,7 +612,6 @@ public class StatSet implements IParserAdvUtils
 	@Override
 	public Duration getDuration(String key, Duration defaultValue)
 	{
-		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -651,8 +624,6 @@ public class StatSet implements IParserAdvUtils
 	@SuppressWarnings("unchecked")
 	public <T extends Enum<T>> T getEnum(String key, Class<T> enumClass)
 	{
-		Objects.requireNonNull(key);
-		Objects.requireNonNull(enumClass);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -676,8 +647,6 @@ public class StatSet implements IParserAdvUtils
 	@SuppressWarnings("unchecked")
 	public <T extends Enum<T>> T getEnum(String key, Class<T> enumClass, T defaultValue)
 	{
-		Objects.requireNonNull(key);
-		Objects.requireNonNull(enumClass);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -700,8 +669,6 @@ public class StatSet implements IParserAdvUtils
 	@SuppressWarnings("unchecked")
 	public <A> A getObject(String name, Class<A> type)
 	{
-		Objects.requireNonNull(name);
-		Objects.requireNonNull(type);
 		final Object obj = _set.get(name);
 		if ((obj == null) || !type.isAssignableFrom(obj.getClass()))
 		{
@@ -714,8 +681,6 @@ public class StatSet implements IParserAdvUtils
 	@SuppressWarnings("unchecked")
 	public <A> A getObject(String name, Class<A> type, A defaultValue)
 	{
-		Objects.requireNonNull(name);
-		Objects.requireNonNull(type);
 		final Object obj = _set.get(name);
 		if ((obj == null) || !type.isAssignableFrom(obj.getClass()))
 		{
@@ -727,7 +692,6 @@ public class StatSet implements IParserAdvUtils
 	
 	public SkillHolder getSkillHolder(String key)
 	{
-		Objects.requireNonNull(key);
 		final Object obj = _set.get(key);
 		if (!(obj instanceof SkillHolder))
 		{
@@ -739,7 +703,6 @@ public class StatSet implements IParserAdvUtils
 	
 	public Location getLocation(String key)
 	{
-		Objects.requireNonNull(key);
 		final Object obj = _set.get(key);
 		if (!(obj instanceof Location))
 		{
@@ -751,7 +714,6 @@ public class StatSet implements IParserAdvUtils
 	@SuppressWarnings("unchecked")
 	public List<MinionHolder> getMinionList(String key)
 	{
-		Objects.requireNonNull(key);
 		final Object obj = _set.get(key);
 		if (!(obj instanceof List<?>))
 		{
@@ -764,8 +726,6 @@ public class StatSet implements IParserAdvUtils
 	@SuppressWarnings("unchecked")
 	public <T> List<T> getList(String key, Class<T> clazz)
 	{
-		Objects.requireNonNull(key);
-		Objects.requireNonNull(clazz);
 		final Object obj = _set.get(key);
 		if (!(obj instanceof List<?>))
 		{
@@ -871,83 +831,61 @@ public class StatSet implements IParserAdvUtils
 		return (Map<K, V>) obj;
 	}
 	
-	public StatSet set(String name, Object value)
+	public void set(String name, Object value)
 	{
 		if (value == null)
 		{
-			return this;
+			return;
 		}
 		_set.put(name, value);
-		return this;
 	}
 	
-	public StatSet set(String key, boolean value)
+	public void set(String key, byte value)
 	{
 		_set.put(key, value);
-		return this;
 	}
 	
-	public StatSet set(String key, byte value)
+	public void set(String key, short value)
 	{
 		_set.put(key, value);
-		return this;
 	}
 	
-	public StatSet set(String key, short value)
+	public void set(String key, int value)
 	{
 		_set.put(key, value);
-		return this;
 	}
 	
-	public StatSet set(String key, int value)
+	public void set(String key, long value)
 	{
 		_set.put(key, value);
-		return this;
 	}
 	
-	public StatSet set(String key, long value)
+	public void set(String key, float value)
 	{
 		_set.put(key, value);
-		return this;
 	}
 	
-	public StatSet set(String key, float value)
+	public void set(String key, double value)
 	{
 		_set.put(key, value);
-		return this;
 	}
 	
-	public StatSet set(String key, double value)
-	{
-		_set.put(key, value);
-		return this;
-	}
-	
-	public StatSet set(String key, String value)
+	public void set(String key, String value)
 	{
 		if (value == null)
 		{
-			return this;
+			return;
 		}
 		_set.put(key, value);
-		return this;
 	}
 	
-	public StatSet set(String key, Enum<?> value)
+	public void set(String key, Enum<?> value)
 	{
 		if (value == null)
 		{
-			return this;
+			return;
 		}
 		_set.put(key, value);
-		return this;
-	}
-	
-	public static StatSet valueOf(String key, Object value)
-	{
-		final StatSet set = new StatSet();
-		set.set(key, value);
-		return set;
 	}
 	
 	public void remove(String key)

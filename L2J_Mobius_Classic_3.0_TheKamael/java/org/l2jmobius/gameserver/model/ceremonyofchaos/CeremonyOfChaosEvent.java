@@ -244,7 +244,9 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			player.teleToLocation(_instance.getEnterLocations().get(index++), 0, _instance);
 		}
 		
-		getTimers().addTimer("match_start_countdown", StatSet.valueOf("time", 60), 100, null, null);
+		final StatSet params = new StatSet();
+		params.set("time", 60);
+		getTimers().addTimer("match_start_countdown", params, 100, null, null);
 		
 		getTimers().addTimer("teleport_message1", 10000, null, null);
 		getTimers().addTimer("teleport_message2", 14000, null, null);
@@ -394,7 +396,9 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			}
 		}
 		getTimers().cancelTimer("update", null, null);
-		getTimers().addTimer("match_end_countdown", StatSet.valueOf("time", 30), 30 * 1000, null, null);
+		final StatSet params = new StatSet();
+		params.set("time", 30);
+		getTimers().addTimer("match_end_countdown", params, 30 * 1000, null, null);
 		
 		EventDispatcher.getInstance().notifyEvent(new OnCeremonyOfChaosMatchResult(winners, members));
 	}
@@ -530,19 +534,23 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 				// Reschedule
 				if (time == 60)
 				{
-					getTimers().addTimer(event, params.set("time", 30), 30 * 1000, null, null);
+					params.set("time", 30);
+					getTimers().addTimer(event, params, 30 * 1000, null, null);
 				}
 				else if ((time == 30) || (time == 20))
 				{
-					getTimers().addTimer(event, params.set("time", time - 10), 10 * 1000, null, null);
+					params.set("time", time - 10);
+					getTimers().addTimer(event, params, 10 * 1000, null, null);
 				}
 				else if (time == 10)
 				{
-					getTimers().addTimer(event, params.set("time", 5), 5 * 1000, null, null);
+					params.set("time", 5);
+					getTimers().addTimer(event, params, 5 * 1000, null, null);
 				}
 				else if ((time > 1) && (time <= 5))
 				{
-					getTimers().addTimer(event, params.set("time", time - 1), 1000, null, null);
+					params.set("time", time - 1);
+					getTimers().addTimer(event, params, 1000, null, null);
 				}
 				break;
 			}
@@ -556,11 +564,13 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 				// Reschedule
 				if ((time == 30) || (time == 20))
 				{
-					getTimers().addTimer(event, params.set("time", time - 10), 10 * 1000, null, null);
+					params.set("time", time - 10);
+					getTimers().addTimer(event, params, 10 * 1000, null, null);
 				}
 				else if ((time > 0) && (time <= 10))
 				{
-					getTimers().addTimer(event, params.set("time", time - 1), 1000, null, null);
+					params.set("time", time - 1);
+					getTimers().addTimer(event, params, 1000, null, null);
 				}
 				else if (time == 0)
 				{

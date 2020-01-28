@@ -179,8 +179,9 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 				}
 			}
 		}
-		
-		getTimers().addTimer("count_down", StatSet.valueOf("time", 60), 60 * 1000, null, null);
+		final StatSet params = new StatSet();
+		params.set("time", 60);
+		getTimers().addTimer("count_down", params, 60 * 1000, null, null);
 	}
 	
 	@ScheduleTarget
@@ -267,15 +268,18 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 				// Reschedule
 				if (time == 60)
 				{
-					getTimers().addTimer(event, params.set("time", 10), 50 * 1000, null, null);
+					params.set("time", 10);
+					getTimers().addTimer(event, params, 50 * 1000, null, null);
 				}
 				else if (time == 10)
 				{
-					getTimers().addTimer(event, params.set("time", 5), 5 * 1000, null, null);
+					params.set("time", 5);
+					getTimers().addTimer(event, params, 5 * 1000, null, null);
 				}
 				else if ((time > 1) && (time <= 5))
 				{
-					getTimers().addTimer(event, params.set("time", time - 1), 1000, null, null);
+					params.set("time", time - 1);
+					getTimers().addTimer(event, params, 1000, null, null);
 				}
 				break;
 			}

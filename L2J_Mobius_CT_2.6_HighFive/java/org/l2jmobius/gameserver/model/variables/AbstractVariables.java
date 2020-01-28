@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.variables;
 
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.l2jmobius.gameserver.model.StatSet;
@@ -31,55 +30,43 @@ public abstract class AbstractVariables extends StatSet implements IRestorable, 
 {
 	private final AtomicBoolean _hasChanges = new AtomicBoolean(false);
 	
-	public AbstractVariables()
-	{
-		super(new ConcurrentHashMap<>());
-	}
-	
 	/**
 	 * Overriding following methods to prevent from doing useless database operations if there is no changes since player's login.
 	 */
 	
 	@Override
-	public StatSet set(String name, boolean value)
+	public void set(String name, double value)
 	{
 		_hasChanges.compareAndSet(false, true);
-		return super.set(name, value);
+		super.set(name, value);
 	}
 	
 	@Override
-	public StatSet set(String name, double value)
+	public void set(String name, Enum<?> value)
 	{
 		_hasChanges.compareAndSet(false, true);
-		return super.set(name, value);
+		super.set(name, value);
 	}
 	
 	@Override
-	public StatSet set(String name, Enum<?> value)
+	public void set(String name, int value)
 	{
 		_hasChanges.compareAndSet(false, true);
-		return super.set(name, value);
+		super.set(name, value);
 	}
 	
 	@Override
-	public StatSet set(String name, int value)
+	public void set(String name, long value)
 	{
 		_hasChanges.compareAndSet(false, true);
-		return super.set(name, value);
+		super.set(name, value);
 	}
 	
 	@Override
-	public StatSet set(String name, long value)
+	public void set(String name, String value)
 	{
 		_hasChanges.compareAndSet(false, true);
-		return super.set(name, value);
-	}
-	
-	@Override
-	public StatSet set(String name, String value)
-	{
-		_hasChanges.compareAndSet(false, true);
-		return super.set(name, value);
+		super.set(name, value);
 	}
 	
 	/**
@@ -87,15 +74,14 @@ public abstract class AbstractVariables extends StatSet implements IRestorable, 
 	 * @param name
 	 * @param value
 	 * @param markAsChanged
-	 * @return
 	 */
-	public StatSet set(String name, String value, boolean markAsChanged)
+	public void set(String name, String value, boolean markAsChanged)
 	{
 		if (markAsChanged)
 		{
 			_hasChanges.compareAndSet(false, true);
 		}
-		return super.set(name, value);
+		super.set(name, value);
 	}
 	
 	/**
