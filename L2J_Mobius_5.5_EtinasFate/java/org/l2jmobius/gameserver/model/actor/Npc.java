@@ -149,6 +149,7 @@ public class Npc extends Creature
 	private NpcStringId _nameString;
 	
 	private StatSet _params;
+	private int _scriptValue = 0;
 	private RaidBossStatus _raidStatus;
 	
 	/** Contains information about local tax payments. */
@@ -1136,6 +1137,9 @@ public class Npc extends Creature
 		{
 			instance.removeNpc(this);
 		}
+		
+		// Clear script value
+		_scriptValue = 0;
 	}
 	
 	/**
@@ -1406,31 +1410,30 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * Short wrapper for backward compatibility
+	 * Receive the stored int value for this {@link Npc} instance.
 	 * @return stored script value
 	 */
 	public int getScriptValue()
 	{
-		return getVariables().getInt("SCRIPT_VAL");
+		return _scriptValue;
 	}
 	
 	/**
-	 * Short wrapper for backward compatibility. Stores script value
+	 * Sets the script value related with this {@link Npc} instance.
 	 * @param value value to store
 	 */
 	public void setScriptValue(int value)
 	{
-		getVariables().set("SCRIPT_VAL", value);
+		_scriptValue = value;
 	}
 	
 	/**
-	 * Short wrapper for backward compatibility.
 	 * @param value value to store
 	 * @return {@code true} if stored script value equals given value, {@code false} otherwise
 	 */
 	public boolean isScriptValue(int value)
 	{
-		return getVariables().getInt("SCRIPT_VAL") == value;
+		return _scriptValue == value;
 	}
 	
 	/**

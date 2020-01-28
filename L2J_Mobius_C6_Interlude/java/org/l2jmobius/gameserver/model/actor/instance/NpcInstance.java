@@ -237,16 +237,28 @@ public class NpcInstance extends Creature
 		setName(template.getName());
 	}
 	
+	/**
+	 * Receive the stored int value for this {@link NpcInstance}.
+	 * @return stored script value
+	 */
 	public int getScriptValue()
 	{
 		return _scriptValue;
 	}
 	
+	/**
+	 * Sets the script value related with this {@link NpcInstance}.
+	 * @param value value to store
+	 */
 	public void setScriptValue(int value)
 	{
 		_scriptValue = value;
 	}
 	
+	/**
+	 * @param value value to store
+	 * @return {@code true} if stored script value equals given value, {@code false} otherwise
+	 */
 	public boolean isScriptValue(int value)
 	{
 		return _scriptValue == value;
@@ -2964,8 +2976,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Set the spawn of the NpcInstance.<BR>
-	 * <BR>
+	 * Set the spawn of the NpcInstance.
 	 * @param spawn The Spawn that manage the NpcInstance
 	 */
 	public void setSpawn(Spawn spawn)
@@ -3014,6 +3025,9 @@ public class NpcInstance extends Creature
 		{
 			_spawn.decreaseCount(this);
 		}
+		
+		// Clear script value
+		_scriptValue = 0;
 	}
 	
 	/**

@@ -150,6 +150,9 @@ public class Npc extends Creature
 	
 	private int _shotsMask = 0;
 	private int _killingBlowWeaponId;
+	
+	private int _scriptValue = 0;
+	
 	/** Map of summoned NPCs by this NPC. */
 	private Map<Integer, Npc> _summonedNpcs = null;
 	
@@ -1331,6 +1334,9 @@ public class Npc extends Creature
 		{
 			((Npc) summoner).removeSummonedNpc(getObjectId());
 		}
+		
+		// Clear script value
+		_scriptValue = 0;
 	}
 	
 	/**
@@ -1661,31 +1667,30 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * Short wrapper for backward compatibility
+	 * Receive the stored int value for this {@link Npc} instance.
 	 * @return stored script value
 	 */
 	public int getScriptValue()
 	{
-		return getVariables().getInt("SCRIPT_VAL");
+		return _scriptValue;
 	}
 	
 	/**
-	 * Short wrapper for backward compatibility. Stores script value
+	 * Sets the script value related with this {@link Npc} instance.
 	 * @param value value to store
 	 */
 	public void setScriptValue(int value)
 	{
-		getVariables().set("SCRIPT_VAL", value);
+		_scriptValue = value;
 	}
 	
 	/**
-	 * Short wrapper for backward compatibility.
 	 * @param value value to store
 	 * @return {@code true} if stored script value equals given value, {@code false} otherwise
 	 */
 	public boolean isScriptValue(int value)
 	{
-		return getVariables().getInt("SCRIPT_VAL") == value;
+		return _scriptValue == value;
 	}
 	
 	/**
