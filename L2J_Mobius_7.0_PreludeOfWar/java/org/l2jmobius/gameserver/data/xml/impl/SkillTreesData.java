@@ -30,7 +30,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
@@ -117,7 +116,7 @@ public class SkillTreesData implements IXmlReader
 	/** Parent class Ids are read from XML and stored in this map, to allow easy customization. */
 	private static final Map<ClassId, ClassId> _parentClassMap = new ConcurrentHashMap<>();
 	
-	private final AtomicBoolean _isLoading = new AtomicBoolean();
+	private boolean _loading = true;
 	
 	/**
 	 * Instantiates a new skill trees data.
@@ -130,7 +129,7 @@ public class SkillTreesData implements IXmlReader
 	@Override
 	public void load()
 	{
-		_isLoading.set(true);
+		_loading = true;
 		
 		_classSkillTrees.clear();
 		_collectSkillTree.clear();
@@ -161,7 +160,7 @@ public class SkillTreesData implements IXmlReader
 		// Logs a report with skill trees info.
 		report();
 		
-		_isLoading.set(false);
+		_loading = false;
 	}
 	
 	/**
@@ -1717,7 +1716,7 @@ public class SkillTreesData implements IXmlReader
 		}
 		
 		// Prevent accidental skill remove during reload
-		if (_isLoading.get())
+		if (_loading)
 		{
 			return true;
 		}
