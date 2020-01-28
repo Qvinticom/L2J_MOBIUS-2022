@@ -20,7 +20,7 @@ import java.util.HashSet;
 import java.util.OptionalDouble;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
+import org.l2jmobius.gameserver.data.xml.impl.ArmorSetData;
 import org.l2jmobius.gameserver.model.ArmorSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -51,7 +51,7 @@ public class BaseStatFinalizer implements IStatFunction
 			// Armor sets calculation
 			for (ItemInstance item : player.getInventory().getPaperdollItems())
 			{
-				for (ArmorSet set : ArmorSetsData.getInstance().getSets(item.getId()))
+				for (ArmorSet set : ArmorSetData.getInstance().getSets(item.getId()))
 				{
 					if ((set.getPiecesCount(player, ItemInstance::getId) >= set.getMinimumPieces()) && appliedSets.add(set))
 					{

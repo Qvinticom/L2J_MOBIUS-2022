@@ -29,7 +29,7 @@ import java.util.regex.Pattern;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.impl.AdminData;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
-import org.l2jmobius.gameserver.data.xml.impl.SpawnsData;
+import org.l2jmobius.gameserver.data.xml.impl.SpawnData;
 import org.l2jmobius.gameserver.datatables.SpawnTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.DBSpawnManager;
@@ -284,7 +284,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 			}
 			// Reload.
-			SpawnsData.getInstance().init();
+			SpawnData.getInstance().init();
 			DBSpawnManager.getInstance().load();
 			ZoneManager.getInstance().reload();
 			QuestManager.getInstance().reloadAllScripts();

@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.datatables.ItemTable;
-import org.l2jmobius.gameserver.datatables.csv.ExtractableItemsData;
+import org.l2jmobius.gameserver.datatables.csv.ExtractableItemData;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.ExtractableItem;
 import org.l2jmobius.gameserver.model.ExtractableProductItem;
@@ -54,7 +54,7 @@ public class ExtractableItems implements IItemHandler
 		}
 		while (count-- > 0)
 		{
-			final ExtractableItem exitem = ExtractableItemsData.getInstance().getExtractableItem(itemID);
+			final ExtractableItem exitem = ExtractableItemData.getInstance().getExtractableItem(itemID);
 			if (exitem == null)
 			{
 				return;
@@ -158,6 +158,6 @@ public class ExtractableItems implements IItemHandler
 	@Override
 	public int[] getItemIds()
 	{
-		return ExtractableItemsData.getInstance().itemIDs();
+		return ExtractableItemData.getInstance().itemIDs();
 	}
 }

@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.data.xml.impl.DoorData;
-import org.l2jmobius.gameserver.data.xml.impl.TeleportersData;
+import org.l2jmobius.gameserver.data.xml.impl.TeleporterData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.TeleportType;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -92,7 +92,7 @@ public class DoormanInstance extends NpcInstance
 		{
 			if (isOwnerClan(player))
 			{
-				final TeleportHolder holder = TeleportersData.getInstance().getHolder(getId(), TeleportType.OTHER.name());
+				final TeleportHolder holder = TeleporterData.getInstance().getHolder(getId(), TeleportType.OTHER.name());
 				if (holder != null)
 				{
 					final int locId = Integer.parseInt(command.substring(5).trim());

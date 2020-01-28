@@ -22,11 +22,11 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.sql.impl.AnnouncementsTable;
-import org.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
+import org.l2jmobius.gameserver.data.sql.impl.OfflineTraderTable;
 import org.l2jmobius.gameserver.data.xml.impl.AdminData;
 import org.l2jmobius.gameserver.data.xml.impl.BeautyShopData;
 import org.l2jmobius.gameserver.data.xml.impl.ClanHallData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.SubclassInfoType;
@@ -221,12 +221,12 @@ public class EnterWorld implements IClientIncomingPacket
 			
 			if (Config.GM_GIVE_SPECIAL_SKILLS)
 			{
-				SkillTreesData.getInstance().addSkills(player, false);
+				SkillTreeData.getInstance().addSkills(player, false);
 			}
 			
 			if (Config.GM_GIVE_SPECIAL_AURA_SKILLS)
 			{
-				SkillTreesData.getInstance().addSkills(player, true);
+				SkillTreeData.getInstance().addSkills(player, true);
 			}
 		}
 		
@@ -604,7 +604,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.STORE_OFFLINE_TRADE_IN_REALTIME)
 		{
-			OfflineTradersTable.onTransaction(player, true, false);
+			OfflineTraderTable.onTransaction(player, true, false);
 		}
 		
 		// Check if expoff is enabled.

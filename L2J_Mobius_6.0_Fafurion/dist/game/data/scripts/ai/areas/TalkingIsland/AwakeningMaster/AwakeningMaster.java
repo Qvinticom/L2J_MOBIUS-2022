@@ -22,7 +22,7 @@ import java.util.Map.Entry;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.UserInfoType;
@@ -340,8 +340,8 @@ public class AwakeningMaster extends AbstractNpcAI
 		}
 		giveItems(player, player.isDualClassActive() ? CHAOS_POMANDER_DUAL_CLASS : CHAOS_POMANDER, 2);
 		
-		SkillTreesData.getInstance().cleanSkillUponAwakening(player);
-		for (SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
+		SkillTreeData.getInstance().cleanSkillUponAwakening(player);
+		for (SkillLearn skill : SkillTreeData.getInstance().getRaceSkillTree(player.getRace()))
 		{
 			player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
 		}

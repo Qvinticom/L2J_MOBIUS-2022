@@ -225,7 +225,7 @@ public class SkillData implements IXmlReader
 	{
 		load();
 		// Reload Skill Tree as well.
-		SkillTreesData.getInstance().load();
+		SkillTreeData.getInstance().load();
 	}
 	
 	@Override

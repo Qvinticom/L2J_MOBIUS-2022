@@ -39,11 +39,11 @@ import org.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import org.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import org.l2jmobius.gameserver.data.sql.impl.CrestTable;
-import org.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
+import org.l2jmobius.gameserver.data.sql.impl.OfflineTraderTable;
 import org.l2jmobius.gameserver.data.xml.impl.ActionData;
 import org.l2jmobius.gameserver.data.xml.impl.AdminData;
 import org.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
-import org.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
+import org.l2jmobius.gameserver.data.xml.impl.ArmorSetData;
 import org.l2jmobius.gameserver.data.xml.impl.AttendanceRewardData;
 import org.l2jmobius.gameserver.data.xml.impl.BeautyShopData;
 import org.l2jmobius.gameserver.data.xml.impl.BuyListData;
@@ -92,10 +92,10 @@ import org.l2jmobius.gameserver.data.xml.impl.SendMessageLocalisationData;
 import org.l2jmobius.gameserver.data.xml.impl.ShuttleData;
 import org.l2jmobius.gameserver.data.xml.impl.SiegeScheduleData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import org.l2jmobius.gameserver.data.xml.impl.SpawnsData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
+import org.l2jmobius.gameserver.data.xml.impl.SpawnData;
 import org.l2jmobius.gameserver.data.xml.impl.StaticObjectData;
-import org.l2jmobius.gameserver.data.xml.impl.TeleportersData;
+import org.l2jmobius.gameserver.data.xml.impl.TeleporterData;
 import org.l2jmobius.gameserver.data.xml.impl.TransformData;
 import org.l2jmobius.gameserver.data.xml.impl.VariationData;
 import org.l2jmobius.gameserver.datatables.BotReportTable;
@@ -246,7 +246,7 @@ public class GameServer
 		SkillConditionHandler.getInstance().executeScript();
 		EffectHandler.getInstance().executeScript();
 		EnchantSkillGroupsData.getInstance();
-		SkillTreesData.getInstance();
+		SkillTreeData.getInstance();
 		SkillData.getInstance();
 		PetSkillData.getInstance();
 		
@@ -264,7 +264,7 @@ public class GameServer
 		BuyListData.getInstance();
 		MultisellData.getInstance();
 		RecipeData.getInstance();
-		ArmorSetsData.getInstance();
+		ArmorSetData.getInstance();
 		FishingData.getInstance();
 		HennaData.getInstance();
 		PrimeShopData.getInstance();
@@ -317,7 +317,7 @@ public class GameServer
 		FakePlayerData.getInstance();
 		FakePlayerChatManager.getInstance();
 		ExtendDropData.getInstance();
-		SpawnsData.getInstance();
+		SpawnData.getInstance();
 		WalkingManager.getInstance();
 		StaticObjectData.getInstance();
 		ItemAuctionManager.getInstance();
@@ -337,7 +337,7 @@ public class GameServer
 		printSection("Cache");
 		HtmCache.getInstance();
 		CrestTable.getInstance();
-		TeleportersData.getInstance();
+		TeleporterData.getInstance();
 		MatchingRoomManager.getInstance();
 		PetitionManager.getInstance();
 		CursedWeaponsManager.getInstance();
@@ -373,7 +373,7 @@ public class GameServer
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed to execute script list!", e);
 		}
 		
-		SpawnsData.getInstance().init();
+		SpawnData.getInstance().init();
 		DBSpawnManager.getInstance();
 		
 		printSection("Event Engine");
@@ -424,7 +424,7 @@ public class GameServer
 		
 		if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS)
 		{
-			OfflineTradersTable.getInstance().restoreOfflineTraders();
+			OfflineTraderTable.getInstance().restoreOfflineTraders();
 		}
 		
 		if (Config.SERVER_RESTART_SCHEDULE_ENABLED)

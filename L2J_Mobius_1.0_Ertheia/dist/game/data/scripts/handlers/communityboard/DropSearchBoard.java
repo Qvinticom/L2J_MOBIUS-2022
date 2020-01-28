@@ -29,7 +29,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
-import org.l2jmobius.gameserver.data.xml.impl.SpawnsData;
+import org.l2jmobius.gameserver.data.xml.impl.SpawnData;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.DropType;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
@@ -300,7 +300,7 @@ public class DropSearchBoard implements IParseBoardHandler
 			case "_bbs_npc_trace":
 			{
 				final int npcId = Integer.parseInt(params[1]);
-				final List<NpcSpawnTemplate> spawnList = SpawnsData.getInstance().getNpcSpawns(npc -> npc.getId() == npcId);
+				final List<NpcSpawnTemplate> spawnList = SpawnData.getInstance().getNpcSpawns(npc -> npc.getId() == npcId);
 				if (spawnList.isEmpty())
 				{
 					player.sendMessage("Cannot find any spawn. Maybe dropped by a boss or instance monster.");

@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.actor.transform;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.AdditionalItemHolder;
@@ -298,7 +298,7 @@ public class Transform implements IIdentifiable
 			for (SkillHolder holder : template.getSkills())
 			{
 				final Skill skill = holder.getSkill();
-				if (!SkillTreesData.getInstance().isSkillAllowed(player, skill))
+				if (!SkillTreeData.getInstance().isSkillAllowed(player, skill))
 				{
 					player.removeSkill(skill, false, skill.isPassive());
 				}
@@ -311,7 +311,7 @@ public class Transform implements IIdentifiable
 			for (AdditionalSkillHolder holder : template.getAdditionalSkills())
 			{
 				final Skill skill = holder.getSkill();
-				if ((player.getLevel() >= holder.getMinLevel()) && !SkillTreesData.getInstance().isSkillAllowed(player, skill))
+				if ((player.getLevel() >= holder.getMinLevel()) && !SkillTreeData.getInstance().isSkillAllowed(player, skill))
 				{
 					player.removeSkill(skill, false, skill.isPassive());
 				}

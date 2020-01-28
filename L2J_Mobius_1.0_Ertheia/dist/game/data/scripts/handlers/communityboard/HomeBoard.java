@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.handler.IParseBoardHandler;
 import org.l2jmobius.gameserver.instancemanager.PremiumManager;
@@ -285,7 +285,7 @@ public class HomeBoard implements IParseBoardHandler
 				player.setCurrentCp(player.getMaxCp());
 				if (Config.COMMUNITYBOARD_DELEVEL_REMOVE_ABILITIES)
 				{
-					for (SkillLearn sk : SkillTreesData.getInstance().getAbilitySkillTree().values())
+					for (SkillLearn sk : SkillTreeData.getInstance().getAbilitySkillTree().values())
 					{
 						final Skill skill = player.getKnownSkill(sk.getSkillId());
 						if (skill != null)

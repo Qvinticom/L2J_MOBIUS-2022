@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.TradeController;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.csv.NpcWalkerRoutesTable;
+import org.l2jmobius.gameserver.datatables.csv.NpcWalkerRouteTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
@@ -108,7 +108,7 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				else if (type.startsWith("npcwalkers"))
 				{
-					NpcWalkerRoutesTable.getInstance().load();
+					NpcWalkerRouteTable.getInstance().load();
 					sendReloadPage(activeChar);
 					BuilderUtil.sendSysMessage(activeChar, "All NPC walker routes have been reloaded");
 				}

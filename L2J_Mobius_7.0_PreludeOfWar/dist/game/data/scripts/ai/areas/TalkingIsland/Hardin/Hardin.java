@@ -21,7 +21,7 @@ import java.util.List;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.SubclassInfoType;
@@ -149,8 +149,8 @@ public class Hardin extends AbstractNpcAI
 				player.setBaseClass(player.getActiveClass());
 			}
 			// Adjustments
-			SkillTreesData.getInstance().cleanSkillUponChangeClass(player, false);
-			for (SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
+			SkillTreeData.getInstance().cleanSkillUponChangeClass(player, false);
+			for (SkillLearn skill : SkillTreeData.getInstance().getRaceSkillTree(player.getRace()))
 			{
 				player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
 			}

@@ -20,7 +20,7 @@ import java.util.Collection;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -93,7 +93,7 @@ public class HealerTrainer extends AbstractNpcAI
 				
 				final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.TRANSFER);
 				int count = 0;
-				for (SkillLearn skillLearn : SkillTreesData.getInstance().getAvailableTransferSkills(player))
+				for (SkillLearn skillLearn : SkillTreeData.getInstance().getAvailableTransferSkills(player))
 				{
 					if (SkillData.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel()) != null)
 					{
@@ -140,7 +140,7 @@ public class HealerTrainer extends AbstractNpcAI
 				else
 				{
 					boolean hasSkills = false;
-					final Collection<SkillLearn> skills = SkillTreesData.getInstance().getTransferSkillTree(player.getClassId()).values();
+					final Collection<SkillLearn> skills = SkillTreeData.getInstance().getTransferSkillTree(player.getClassId()).values();
 					for (SkillLearn skillLearn : skills)
 					{
 						final Skill skill = player.getKnownSkill(skillLearn.getSkillId());

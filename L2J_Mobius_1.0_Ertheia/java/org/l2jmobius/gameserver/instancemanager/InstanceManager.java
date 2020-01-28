@@ -42,7 +42,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.xml.impl.DoorData;
-import org.l2jmobius.gameserver.data.xml.impl.SpawnsData;
+import org.l2jmobius.gameserver.data.xml.impl.SpawnData;
 import org.l2jmobius.gameserver.enums.InstanceReenterType;
 import org.l2jmobius.gameserver.enums.InstanceRemoveBuffType;
 import org.l2jmobius.gameserver.enums.InstanceTeleportType;
@@ -231,7 +231,7 @@ public class InstanceManager implements IXmlReader
 				case "spawnlist":
 				{
 					final List<SpawnTemplate> spawns = new ArrayList<>();
-					SpawnsData.getInstance().parseSpawn(innerNode, file, spawns);
+					SpawnData.getInstance().parseSpawn(innerNode, file, spawns);
 					template.addSpawns(spawns);
 					break;
 				}

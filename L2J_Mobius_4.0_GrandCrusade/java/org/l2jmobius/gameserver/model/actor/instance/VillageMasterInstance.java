@@ -23,7 +23,7 @@ import java.util.regex.PatternSyntaxException;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
@@ -588,7 +588,7 @@ public class VillageMasterInstance extends NpcInstance
 			return;
 		}
 		
-		final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailablePledgeSkills(player.getClan());
+		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailablePledgeSkills(player.getClan());
 		
 		if (skills.isEmpty())
 		{

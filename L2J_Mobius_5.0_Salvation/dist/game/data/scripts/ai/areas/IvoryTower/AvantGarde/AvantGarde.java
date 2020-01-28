@@ -19,7 +19,7 @@ package ai.areas.IvoryTower.AvantGarde;
 import java.util.List;
 
 import org.l2jmobius.gameserver.data.xml.impl.MultisellData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -124,11 +124,11 @@ public class AvantGarde extends AbstractNpcAI
 	 */
 	public static void showTransformSkillList(PlayerInstance player)
 	{
-		final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableTransformSkills(player);
+		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableTransformSkills(player);
 		
 		if (skills.isEmpty())
 		{
-			final int minlevel = SkillTreesData.getInstance().getMinLevelForNewSkill(player, SkillTreesData.getInstance().getTransformSkillTree());
+			final int minlevel = SkillTreeData.getInstance().getMinLevelForNewSkill(player, SkillTreeData.getInstance().getTransformSkillTree());
 			if (minlevel > 0)
 			{
 				// No more skills to learn, come back when you level.

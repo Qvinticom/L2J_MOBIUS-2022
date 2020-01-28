@@ -30,7 +30,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.Race;
@@ -1323,7 +1323,7 @@ public class VillageMasterInstance extends NpcInstance
 			return;
 		}
 		
-		final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailablePledgeSkills(player.getClan());
+		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailablePledgeSkills(player.getClan());
 		final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.PLEDGE);
 		int counts = 0;
 		

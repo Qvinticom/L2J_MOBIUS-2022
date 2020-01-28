@@ -22,7 +22,7 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.data.xml.impl.ResidenceFunctionsData;
-import org.l2jmobius.gameserver.data.xml.impl.TeleportersData;
+import org.l2jmobius.gameserver.data.xml.impl.TeleporterData;
 import org.l2jmobius.gameserver.enums.ClanHallGrade;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -177,7 +177,7 @@ public class ClanHallManager extends AbstractNpcAI
 									final int teleportLevel = clanHall.getFunctionLevel(ResidenceFunctionType.TELEPORT);
 									if (teleportLevel > 0)
 									{
-										final TeleportHolder holder = TeleportersData.getInstance().getHolder(npc.getId(), "tel" + teleportLevel);
+										final TeleportHolder holder = TeleporterData.getInstance().getHolder(npc.getId(), "tel" + teleportLevel);
 										if (holder != null)
 										{
 											if (!st.hasMoreTokens())

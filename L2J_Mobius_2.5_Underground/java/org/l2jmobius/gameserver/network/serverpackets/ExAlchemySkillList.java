@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -37,7 +37,7 @@ public class ExAlchemySkillList implements IClientOutgoingPacket
 	
 	public ExAlchemySkillList(PlayerInstance player)
 	{
-		_skills.addAll(player.getAllSkills().stream().filter(s -> SkillTreesData.getInstance().isAlchemySkill(s.getId(), s.getLevel())).collect(Collectors.toList()));
+		_skills.addAll(player.getAllSkills().stream().filter(s -> SkillTreeData.getInstance().isAlchemySkill(s.getId(), s.getLevel())).collect(Collectors.toList()));
 		_skills.add(SkillData.getInstance().getSkill(CommonSkill.ALCHEMY_CUBE.getId(), 1));
 	}
 	

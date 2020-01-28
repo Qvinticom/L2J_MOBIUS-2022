@@ -20,7 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.SkillLearn;
@@ -101,10 +101,10 @@ public class ExRequestClassChange implements IClientIncomingPacket
 			{
 				player.setBaseClass(player.getActiveClass());
 			}
-			SkillTreesData.getInstance().cleanSkillUponChangeClass(player, false);
+			SkillTreeData.getInstance().cleanSkillUponChangeClass(player, false);
 			if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 			{
-				for (SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
+				for (SkillLearn skill : SkillTreeData.getInstance().getRaceSkillTree(player.getRace()))
 				{
 					player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
 				}

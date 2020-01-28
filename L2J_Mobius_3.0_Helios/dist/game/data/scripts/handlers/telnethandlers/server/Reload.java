@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import org.l2jmobius.gameserver.data.xml.impl.AbilityPointsData;
 import org.l2jmobius.gameserver.data.xml.impl.AdminData;
 import org.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
-import org.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
+import org.l2jmobius.gameserver.data.xml.impl.ArmorSetData;
 import org.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import org.l2jmobius.gameserver.data.xml.impl.DoorData;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.data.xml.impl.SayuneData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.TeleportersData;
+import org.l2jmobius.gameserver.data.xml.impl.TeleporterData;
 import org.l2jmobius.gameserver.data.xml.impl.TransformData;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
@@ -146,7 +146,7 @@ public class Reload implements ITelnetCommand
 			}
 			case "teleport":
 			{
-				TeleportersData.getInstance().load();
+				TeleporterData.getInstance().load();
 				return AdminData.getInstance().broadcastMessageToGMs("Telnet Admin: Reloaded Teleports.");
 			}
 			case "skill":
@@ -238,7 +238,7 @@ public class Reload implements ITelnetCommand
 			}
 			case "sets":
 			{
-				ArmorSetsData.getInstance().load();
+				ArmorSetData.getInstance().load();
 				return AdminData.getInstance().broadcastMessageToGMs("Telnet Admin: Reloaded Armor sets data.");
 			}
 			case "script":

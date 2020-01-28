@@ -22,7 +22,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.TeleportersData;
+import org.l2jmobius.gameserver.data.xml.impl.TeleporterData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
@@ -932,7 +932,7 @@ public class FortManagerInstance extends MerchantInstance
 				final int funcLvl = (val.length() >= 4) ? CommonUtil.parseInt(val.substring(3), -1) : -1;
 				if (func.getLvl() == funcLvl)
 				{
-					final TeleportHolder holder = TeleportersData.getInstance().getHolder(getId(), val);
+					final TeleportHolder holder = TeleporterData.getInstance().getHolder(getId(), val);
 					if (holder != null)
 					{
 						holder.doTeleport(player, this, CommonUtil.parseNextInt(st, -1));

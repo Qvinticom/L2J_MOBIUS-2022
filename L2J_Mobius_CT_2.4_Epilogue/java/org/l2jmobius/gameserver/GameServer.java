@@ -39,10 +39,10 @@ import org.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import org.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import org.l2jmobius.gameserver.data.sql.impl.CrestTable;
-import org.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
+import org.l2jmobius.gameserver.data.sql.impl.OfflineTraderTable;
 import org.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
 import org.l2jmobius.gameserver.data.xml.impl.AdminData;
-import org.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
+import org.l2jmobius.gameserver.data.xml.impl.ArmorSetData;
 import org.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
@@ -77,7 +77,7 @@ import org.l2jmobius.gameserver.data.xml.impl.SendMessageLocalisationData;
 import org.l2jmobius.gameserver.data.xml.impl.SiegeScheduleData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillLearnData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.data.xml.impl.StaticObjectData;
 import org.l2jmobius.gameserver.data.xml.impl.TransformData;
 import org.l2jmobius.gameserver.data.xml.impl.UIData;
@@ -230,7 +230,7 @@ public class GameServer
 		printSection("Skills");
 		EffectHandler.getInstance().executeScript();
 		EnchantSkillGroupsData.getInstance();
-		SkillTreesData.getInstance();
+		SkillTreeData.getInstance();
 		SkillData.getInstance();
 		PetSkillData.getInstance();
 		
@@ -245,7 +245,7 @@ public class GameServer
 		BuyListData.getInstance();
 		MultisellData.getInstance();
 		RecipeData.getInstance();
-		ArmorSetsData.getInstance();
+		ArmorSetData.getInstance();
 		FishData.getInstance();
 		FishingMonstersData.getInstance();
 		FishingRodsData.getInstance();
@@ -427,7 +427,7 @@ public class GameServer
 		
 		if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS)
 		{
-			OfflineTradersTable.getInstance().restoreOfflineTraders();
+			OfflineTraderTable.getInstance().restoreOfflineTraders();
 		}
 		
 		if (Config.SERVER_RESTART_SCHEDULE_ENABLED)

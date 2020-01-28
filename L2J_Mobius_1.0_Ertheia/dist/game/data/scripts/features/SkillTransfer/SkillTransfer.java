@@ -18,7 +18,7 @@ package features.SkillTransfer;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.SkillLearn;
@@ -111,7 +111,7 @@ public class SkillTransfer extends AbstractNpcAI
 			long count = PORMANDERS[index].getCount() - player.getInventory().getInventoryItemCount(PORMANDERS[index].getId(), -1, false);
 			for (Skill sk : player.getAllSkills())
 			{
-				for (SkillLearn s : SkillTreesData.getInstance().getTransferSkillTree(player.getClassId()).values())
+				for (SkillLearn s : SkillTreeData.getInstance().getTransferSkillTree(player.getClassId()).values())
 				{
 					if (s.getSkillId() == sk.getId())
 					{

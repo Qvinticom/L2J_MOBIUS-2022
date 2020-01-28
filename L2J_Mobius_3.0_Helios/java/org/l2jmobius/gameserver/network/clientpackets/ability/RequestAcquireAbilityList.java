@@ -25,7 +25,7 @@ import java.util.Map;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
@@ -112,7 +112,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 		final List<SkillLearn> skillsToLearn = new ArrayList<>(_skills.size());
 		for (SkillHolder holder : _skills.values())
 		{
-			final SkillLearn learn = SkillTreesData.getInstance().getAbilitySkill(holder.getSkillId(), holder.getSkillLevel());
+			final SkillLearn learn = SkillTreeData.getInstance().getAbilitySkill(holder.getSkillId(), holder.getSkillLevel());
 			if (learn == null)
 			{
 				LOGGER.warning("SkillLearn " + holder.getSkillId() + " (" + holder.getSkillLevel() + ") not found!");

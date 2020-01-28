@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.SkillLearn;
@@ -78,7 +78,7 @@ public class RequestAcquireSkillInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		final SkillLearn s = SkillTreesData.getInstance().getSkillLearn(_skillType, _id, _level, player);
+		final SkillLearn s = SkillTreeData.getInstance().getSkillLearn(_skillType, _id, _level, player);
 		if (s == null)
 		{
 			return;

@@ -35,8 +35,8 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
-import org.l2jmobius.gameserver.data.sql.impl.SummonEffectsTable;
-import org.l2jmobius.gameserver.data.sql.impl.SummonEffectsTable.SummonEffect;
+import org.l2jmobius.gameserver.data.sql.impl.SummonEffectTable;
+import org.l2jmobius.gameserver.data.sql.impl.SummonEffectTable.SummonEffect;
 import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
@@ -902,14 +902,14 @@ public class PetInstance extends Summon
 	public void stopSkillEffects(boolean removed, int skillId)
 	{
 		super.stopSkillEffects(removed, skillId);
-		final Collection<SummonEffect> effects = SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId());
+		final Collection<SummonEffect> effects = SummonEffectTable.getInstance().getPetEffects().get(getControlObjectId());
 		if ((effects != null) && !effects.isEmpty())
 		{
 			for (SummonEffect effect : effects)
 			{
 				if (effect.getSkill().getId() == skillId)
 				{
-					SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId()).remove(effect);
+					SummonEffectTable.getInstance().getPetEffects().get(getControlObjectId()).remove(effect);
 				}
 			}
 		}
@@ -987,7 +987,7 @@ public class PetInstance extends Summon
 		}
 		
 		// Clear list for overwrite
-		SummonEffectsTable.getInstance().getPetEffects().getOrDefault(getControlObjectId(), Collections.emptyList()).clear();
+		SummonEffectTable.getInstance().getPetEffects().getOrDefault(getControlObjectId(), Collections.emptyList()).clear();
 		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps1 = con.prepareStatement(DELETE_SKILL_SAVE);
@@ -1050,7 +1050,7 @@ public class PetInstance extends Summon
 					ps2.setInt(6, ++buffIndex);
 					ps2.addBatch();
 					
-					SummonEffectsTable.getInstance().getPetEffects().computeIfAbsent(getControlObjectId(), k -> ConcurrentHashMap.newKeySet()).add(new SummonEffect(skill, info.getTime()));
+					SummonEffectTable.getInstance().getPetEffects().computeIfAbsent(getControlObjectId(), k -> ConcurrentHashMap.newKeySet()).add(new SummonEffect(skill, info.getTime()));
 				}
 				ps2.executeBatch();
 			}
@@ -1068,7 +1068,7 @@ public class PetInstance extends Summon
 			PreparedStatement ps1 = con.prepareStatement(RESTORE_SKILL_SAVE);
 			PreparedStatement ps2 = con.prepareStatement(DELETE_SKILL_SAVE))
 		{
-			if (!SummonEffectsTable.getInstance().getPetEffects().containsKey(getControlObjectId()))
+			if (!SummonEffectTable.getInstance().getPetEffects().containsKey(getControlObjectId()))
 			{
 				ps1.setInt(1, _controlObjectId);
 				try (ResultSet rset = ps1.executeQuery())
@@ -1085,7 +1085,7 @@ public class PetInstance extends Summon
 						
 						if (skill.hasEffects(EffectScope.GENERAL))
 						{
-							SummonEffectsTable.getInstance().getPetEffects().computeIfAbsent(getControlObjectId(), k -> ConcurrentHashMap.newKeySet()).add(new SummonEffect(skill, effectCurTime));
+							SummonEffectTable.getInstance().getPetEffects().computeIfAbsent(getControlObjectId(), k -> ConcurrentHashMap.newKeySet()).add(new SummonEffect(skill, effectCurTime));
 						}
 					}
 				}
@@ -1100,9 +1100,9 @@ public class PetInstance extends Summon
 		}
 		finally
 		{
-			if (SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId()) != null)
+			if (SummonEffectTable.getInstance().getPetEffects().get(getControlObjectId()) != null)
 			{
-				for (SummonEffect se : SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId()))
+				for (SummonEffect se : SummonEffectTable.getInstance().getPetEffects().get(getControlObjectId()))
 				{
 					if (se != null)
 					{

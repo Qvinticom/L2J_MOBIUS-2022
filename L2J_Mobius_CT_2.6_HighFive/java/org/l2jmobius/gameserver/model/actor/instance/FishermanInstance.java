@@ -20,7 +20,7 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
 import org.l2jmobius.gameserver.model.SkillLearn;
@@ -106,7 +106,7 @@ public class FishermanInstance extends MerchantInstance
 	
 	public static void showFishSkillList(PlayerInstance player)
 	{
-		final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableFishingSkills(player);
+		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableFishingSkills(player);
 		final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.FISHING);
 		
 		int count = 0;
@@ -125,7 +125,7 @@ public class FishermanInstance extends MerchantInstance
 		
 		if (count == 0)
 		{
-			final int minlLevel = SkillTreesData.getInstance().getMinLevelForNewSkill(player, SkillTreesData.getInstance().getFishingSkillTree());
+			final int minlLevel = SkillTreeData.getInstance().getMinLevelForNewSkill(player, SkillTreeData.getInstance().getFishingSkillTree());
 			if (minlLevel > 0)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);

@@ -76,7 +76,7 @@ import org.l2jmobius.gameserver.data.xml.impl.PlayerXpPercentLostData;
 import org.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import org.l2jmobius.gameserver.data.xml.impl.SendMessageLocalisationData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.AdminTeleportType;
 import org.l2jmobius.gameserver.enums.BroochJewel;
@@ -2592,7 +2592,7 @@ public class PlayerInstance extends Playable
 	{
 		int skillCounter = 0;
 		// Get available skills
-		final Collection<Skill> skills = SkillTreesData.getInstance().getAllAvailableSkills(this, getTemplate().getClassId(), includedByFs, includeAutoGet);
+		final Collection<Skill> skills = SkillTreeData.getInstance().getAllAvailableSkills(this, getTemplate().getClassId(), includedByFs, includeAutoGet);
 		final List<Skill> skillsForStore = new ArrayList<>();
 		
 		for (Skill skill : skills)
@@ -2637,7 +2637,7 @@ public class PlayerInstance extends Playable
 	public void giveAvailableAutoGetSkills()
 	{
 		// Get available skills
-		final List<SkillLearn> autoGetSkills = SkillTreesData.getInstance().getAvailableAutoGetSkills(this);
+		final List<SkillLearn> autoGetSkills = SkillTreeData.getInstance().getAvailableAutoGetSkills(this);
 		final SkillData st = SkillData.getInstance();
 		Skill skill;
 		for (SkillLearn s : autoGetSkills)
@@ -7577,7 +7577,7 @@ public class PlayerInstance extends Playable
 					// Add the Skill object to the Creature _skills and its Func objects to the calculator set of the Creature
 					addSkill(skill);
 					
-					if (Config.SKILL_CHECK_ENABLE && (!canOverrideCond(PlayerCondOverride.SKILL_CONDITIONS) || Config.SKILL_CHECK_GM) && !SkillTreesData.getInstance().isSkillAllowed(this, skill))
+					if (Config.SKILL_CHECK_ENABLE && (!canOverrideCond(PlayerCondOverride.SKILL_CONDITIONS) || Config.SKILL_CHECK_GM) && !SkillTreeData.getInstance().isSkillAllowed(this, skill))
 					{
 						Util.handleIllegalPlayerAction(this, "Player " + getName() + " has invalid skill " + skill.getName() + " (" + skill.getId() + "/" + skill.getLevel() + "), class:" + ClassListData.getInstance().getClass(getClassId()).getClassName(), IllegalActionPunishmentType.BROADCAST);
 						if (Config.SKILL_CHECK_REMOVE)
@@ -9212,14 +9212,14 @@ public class PlayerInstance extends Playable
 	{
 		if (hero && (_baseClass == _activeClass))
 		{
-			for (Skill skill : SkillTreesData.getInstance().getHeroSkillTree())
+			for (Skill skill : SkillTreeData.getInstance().getHeroSkillTree())
 			{
 				addSkill(skill, false); // Don't persist hero skills into database
 			}
 		}
 		else
 		{
-			for (Skill skill : SkillTreesData.getInstance().getHeroSkillTree())
+			for (Skill skill : SkillTreeData.getInstance().getHeroSkillTree())
 			{
 				removeSkill(skill, false, true); // Just remove skills from non-hero players
 			}
@@ -9386,11 +9386,11 @@ public class PlayerInstance extends Playable
 	{
 		if (value)
 		{
-			SkillTreesData.getInstance().getNobleSkillAutoGetTree().forEach(skill -> addSkill(skill, false));
+			SkillTreeData.getInstance().getNobleSkillAutoGetTree().forEach(skill -> addSkill(skill, false));
 		}
 		else
 		{
-			SkillTreesData.getInstance().getNobleSkillTree().forEach(skill -> removeSkill(skill, false, true));
+			SkillTreeData.getInstance().getNobleSkillTree().forEach(skill -> removeSkill(skill, false, true));
 		}
 		_noble = value;
 		sendSkillList();
@@ -9529,7 +9529,7 @@ public class PlayerInstance extends Playable
 			getSubClasses().put(newClass.getClassIndex(), newClass);
 			
 			final ClassId subTemplate = ClassId.getClassId(classId);
-			final Map<Long, SkillLearn> skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(subTemplate);
+			final Map<Long, SkillLearn> skillTree = SkillTreeData.getInstance().getCompleteClassSkillTree(subTemplate);
 			final Map<Integer, Skill> prevSkillList = new HashMap<>();
 			for (SkillLearn skillInfo : skillTree.values())
 			{
@@ -9538,7 +9538,7 @@ public class PlayerInstance extends Playable
 					final Skill prevSkill = prevSkillList.get(skillInfo.getSkillId());
 					final Skill newSkill = SkillData.getInstance().getSkill(skillInfo.getSkillId(), skillInfo.getSkillLevel());
 					
-					if (((prevSkill != null) && (prevSkill.getLevel() > newSkill.getLevel())) || SkillTreesData.getInstance().isRemoveSkill(subTemplate, skillInfo.getSkillId()))
+					if (((prevSkill != null) && (prevSkill.getLevel() > newSkill.getLevel())) || SkillTreeData.getInstance().isRemoveSkill(subTemplate, skillInfo.getSkillId()))
 					{
 						continue;
 					}
@@ -11610,7 +11610,7 @@ public class PlayerInstance extends Playable
 		return currentSkills.stream()
 							.filter(Objects::nonNull)
 							.filter(s -> !s.isBlockActionUseSkill()) // Skills that are blocked from player use are not shown in skill list.
-							.filter(s -> !SkillTreesData.getInstance().isAlchemySkill(s.getId(), s.getLevel()))
+							.filter(s -> !SkillTreeData.getInstance().isAlchemySkill(s.getId(), s.getLevel()))
 							.filter(s -> s.isDisplayInList())
 							.collect(Collectors.toList());
 		//@formatter:on
@@ -12649,7 +12649,7 @@ public class PlayerInstance extends Playable
 		SkillLearn learn;
 		for (Entry<Integer, Skill> e : getSkills().entrySet())
 		{
-			learn = SkillTreesData.getInstance().getClassSkill(e.getKey(), e.getValue().getLevel() % 100, getClassId());
+			learn = SkillTreeData.getInstance().getClassSkill(e.getKey(), e.getValue().getLevel() % 100, getClassId());
 			if (learn != null)
 			{
 				final int lvlDiff = e.getKey() == CommonSkill.EXPERTISE.getId() ? 0 : 9;
@@ -12664,7 +12664,7 @@ public class PlayerInstance extends Playable
 	private void deacreaseSkillLevel(Skill skill, int lvlDiff)
 	{
 		int nextLevel = -1;
-		final Map<Long, SkillLearn> skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(getClassId());
+		final Map<Long, SkillLearn> skillTree = SkillTreeData.getInstance().getCompleteClassSkillTree(getClassId());
 		for (SkillLearn sl : skillTree.values())
 		{
 			if ((sl.getSkillId() == skill.getId()) && (nextLevel < sl.getSkillLevel()) && (getLevel() >= (sl.getGetLevel() - lvlDiff)))

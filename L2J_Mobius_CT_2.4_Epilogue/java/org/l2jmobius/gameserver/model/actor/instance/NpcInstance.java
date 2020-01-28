@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -75,7 +75,7 @@ public class NpcInstance extends Npc
 		final int npcId = npc.getTemplate().getId();
 		if (npcId == 32611) // Tolonis (Officer)
 		{
-			final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableCollectSkills(player);
+			final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableCollectSkills(player);
 			final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.COLLECT);
 			
 			int counts = 0;
@@ -92,7 +92,7 @@ public class NpcInstance extends Npc
 			
 			if (counts == 0) // No more skills to learn, come back when you level.
 			{
-				final int minLevel = SkillTreesData.getInstance().getMinLevelForNewSkill(player, SkillTreesData.getInstance().getCollectSkillTree());
+				final int minLevel = SkillTreeData.getInstance().getMinLevelForNewSkill(player, SkillTreeData.getInstance().getCollectSkillTree());
 				if (minLevel > 0)
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
@@ -127,7 +127,7 @@ public class NpcInstance extends Npc
 		}
 		
 		// Normal skills, No LearnedByFS, no AutoGet skills.
-		final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableSkills(player, classId, false, false);
+		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableSkills(player, classId, false, false);
 		final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.CLASS);
 		int count = 0;
 		player.setLearningClass(classId);
@@ -142,8 +142,8 @@ public class NpcInstance extends Npc
 		
 		if (count == 0)
 		{
-			final Map<Integer, SkillLearn> skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(classId);
-			final int minLevel = SkillTreesData.getInstance().getMinLevelForNewSkill(player, skillTree);
+			final Map<Integer, SkillLearn> skillTree = SkillTreeData.getInstance().getCompleteClassSkillTree(classId);
+			final int minLevel = SkillTreeData.getInstance().getMinLevelForNewSkill(player, skillTree);
 			if (minLevel > 0)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);

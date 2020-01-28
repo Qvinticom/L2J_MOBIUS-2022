@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
+import org.l2jmobius.gameserver.data.xml.impl.ArmorSetData;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
@@ -494,11 +494,11 @@ public abstract class Inventory extends ItemContainer
 			}
 			
 			// Checks for armor set for the equipped chest.
-			if (!ArmorSetsData.getInstance().isArmorSet(chestItem.getId()))
+			if (!ArmorSetData.getInstance().isArmorSet(chestItem.getId()))
 			{
 				return;
 			}
-			final ArmorSet armorSet = ArmorSetsData.getInstance().getSet(chestItem.getId());
+			final ArmorSet armorSet = ArmorSetData.getInstance().getSet(chestItem.getId());
 			boolean update = false;
 			boolean updateTimeStamp = false;
 			// Checks if equipped item is part of set
@@ -619,11 +619,11 @@ public abstract class Inventory extends ItemContainer
 			
 			if (slot == PAPERDOLL_CHEST)
 			{
-				if (!ArmorSetsData.getInstance().isArmorSet(item.getId()))
+				if (!ArmorSetData.getInstance().isArmorSet(item.getId()))
 				{
 					return;
 				}
-				final ArmorSet armorSet = ArmorSetsData.getInstance().getSet(item.getId());
+				final ArmorSet armorSet = ArmorSetData.getInstance().getSet(item.getId());
 				remove = true;
 				skills = armorSet.getSkills();
 				shieldSkill = armorSet.getShieldSkillId();
@@ -637,7 +637,7 @@ public abstract class Inventory extends ItemContainer
 					return;
 				}
 				
-				final ArmorSet armorSet = ArmorSetsData.getInstance().getSet(chestItem.getId());
+				final ArmorSet armorSet = ArmorSetData.getInstance().getSet(chestItem.getId());
 				if (armorSet == null)
 				{
 					return;

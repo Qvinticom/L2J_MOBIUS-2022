@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.util;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
+import org.l2jmobius.gameserver.data.sql.impl.OfflineTraderTable;
 import org.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -138,7 +138,7 @@ public class OfflineTradeUtil
 		// Store trade on exit, if realtime saving is enabled.
 		if (Config.STORE_OFFLINE_TRADE_IN_REALTIME)
 		{
-			OfflineTradersTable.onTransaction(player, false, true);
+			OfflineTraderTable.onTransaction(player, false, true);
 		}
 		
 		player.storeMe();

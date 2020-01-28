@@ -21,7 +21,7 @@ import java.util.List;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.UserInfoType;
@@ -132,7 +132,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 			}
 		}
 		
-		final SkillLearn s = SkillTreesData.getInstance().getSkillLearn(_skillType, _id, _level, player);
+		final SkillLearn s = SkillTreeData.getInstance().getSkillLearn(_skillType, _id, _level, player);
 		if (s == null)
 		{
 			return;
@@ -287,7 +287,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 					giveSkill(player, trainer, skill);
 				}
 				
-				final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableTransferSkills(player);
+				final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableTransferSkills(player);
 				if (skills.isEmpty())
 				{
 					player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
@@ -380,7 +380,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 					player.sendPacket(new AcquireSkillDone());
 					player.sendPacket(new ExAlchemySkillList(player));
 					
-					final List<SkillLearn> alchemySkills = SkillTreesData.getInstance().getAvailableAlchemySkills(player);
+					final List<SkillLearn> alchemySkills = SkillTreeData.getInstance().getAvailableAlchemySkills(player);
 					
 					if (alchemySkills.isEmpty())
 					{
@@ -431,7 +431,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 	
 	public static void showSubUnitSkillList(PlayerInstance player)
 	{
-		final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableSubPledgeSkills(player.getClan());
+		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableSubPledgeSkills(player.getClan());
 		
 		if (skills.isEmpty())
 		{
@@ -445,7 +445,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 	
 	public static void showSubSkillList(PlayerInstance player)
 	{
-		final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableSubClassSkills(player);
+		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableSubClassSkills(player);
 		if (!skills.isEmpty())
 		{
 			player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.SUBCLASS));
@@ -458,7 +458,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 	
 	public static void showDualSkillList(PlayerInstance player)
 	{
-		final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableDualClassSkills(player);
+		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableDualClassSkills(player);
 		if (!skills.isEmpty())
 		{
 			player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.DUALCLASS));

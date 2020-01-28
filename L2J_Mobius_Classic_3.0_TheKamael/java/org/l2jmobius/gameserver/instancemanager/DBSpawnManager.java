@@ -34,7 +34,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
-import org.l2jmobius.gameserver.data.xml.impl.SpawnsData;
+import org.l2jmobius.gameserver.data.xml.impl.SpawnData;
 import org.l2jmobius.gameserver.datatables.SpawnTable;
 import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.model.Spawn;
@@ -94,7 +94,7 @@ public class DBSpawnManager
 					spawn.setAmount(1);
 					spawn.setHeading(rset.getInt("heading"));
 					
-					final List<NpcSpawnTemplate> spawns = SpawnsData.getInstance().getNpcSpawns(npc -> (npc.getId() == template.getId()) && npc.hasDBSave());
+					final List<NpcSpawnTemplate> spawns = SpawnData.getInstance().getNpcSpawns(npc -> (npc.getId() == template.getId()) && npc.hasDBSave());
 					if (spawns.isEmpty())
 					{
 						LOGGER.warning(getClass().getSimpleName() + ": Couldn't find spawn declaration for npc: " + template.getId() + " - " + template.getName());

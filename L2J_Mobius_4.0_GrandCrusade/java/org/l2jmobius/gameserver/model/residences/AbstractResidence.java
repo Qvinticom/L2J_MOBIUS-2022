@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.base.SocialClass;
@@ -64,7 +64,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	
 	protected void initResidentialSkills()
 	{
-		_residentialSkills = SkillTreesData.getInstance().getAvailableResidentialSkills(getResidenceId());
+		_residentialSkills = SkillTreeData.getInstance().getAvailableResidentialSkills(getResidenceId());
 	}
 	
 	public int getResidenceId()

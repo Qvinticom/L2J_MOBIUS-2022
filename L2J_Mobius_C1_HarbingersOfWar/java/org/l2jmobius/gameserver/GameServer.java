@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.CharNameTable;
-import org.l2jmobius.gameserver.data.CharStatsTable;
+import org.l2jmobius.gameserver.data.CharStatTable;
 import org.l2jmobius.gameserver.data.CharTemplateTable;
 import org.l2jmobius.gameserver.data.ClanTable;
 import org.l2jmobius.gameserver.data.ExperienceTable;
@@ -74,7 +74,7 @@ public class GameServer extends Thread
 	protected final ExperienceTable _expTable;
 	protected final TeleportLocationTable _teleTable;
 	protected final LevelUpData _levelUpData;
-	protected final CharStatsTable _modifiers;
+	protected final CharStatTable _modifiers;
 	protected final World _world;
 	protected final CharTemplateTable _charTemplates;
 	protected final IdFactory _idFactory;
@@ -172,7 +172,7 @@ public class GameServer extends Thread
 		_expTable = ExperienceTable.getInstance();
 		_teleTable = TeleportLocationTable.getInstance();
 		_levelUpData = LevelUpData.getInstance();
-		_modifiers = CharStatsTable.getInstance();
+		_modifiers = CharStatTable.getInstance();
 		_world = World.getInstance();
 		_spawnTable = SpawnTable.getInstance();
 		_gameTimeController = GameTimeController.getInstance();

@@ -38,7 +38,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
-import org.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
+import org.l2jmobius.gameserver.data.xml.impl.ArmorSetData;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
@@ -663,7 +663,7 @@ public abstract class Inventory extends ItemContainer
 		private static boolean verifyAndApply(PlayerInstance player, ItemInstance item, Function<ItemInstance, Integer> idProvider)
 		{
 			boolean update = false;
-			final List<ArmorSet> armorSets = ArmorSetsData.getInstance().getSets(idProvider.apply(item));
+			final List<ArmorSet> armorSets = ArmorSetData.getInstance().getSets(idProvider.apply(item));
 			for (ArmorSet armorSet : armorSets)
 			{
 				if (applySkills(player, item, armorSet, idProvider))
@@ -677,7 +677,7 @@ public abstract class Inventory extends ItemContainer
 		private static boolean verifyAndRemove(PlayerInstance player, ItemInstance item, Function<ItemInstance, Integer> idProvider)
 		{
 			boolean update = false;
-			final List<ArmorSet> armorSets = ArmorSetsData.getInstance().getSets(idProvider.apply(item));
+			final List<ArmorSet> armorSets = ArmorSetData.getInstance().getSets(idProvider.apply(item));
 			for (ArmorSet armorSet : armorSets)
 			{
 				// Remove all skills that doesn't matches the conditions
@@ -2404,7 +2404,7 @@ public abstract class Inventory extends ItemContainer
 		int maxSetEnchant = 0;
 		for (ItemInstance item : getPaperdollItems())
 		{
-			for (ArmorSet set : ArmorSetsData.getInstance().getSets(item.getId()))
+			for (ArmorSet set : ArmorSetData.getInstance().getSets(item.getId()))
 			{
 				final int enchantEffect = set.getLowestSetEnchant(player);
 				if (enchantEffect > maxSetEnchant)

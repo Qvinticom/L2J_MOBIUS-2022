@@ -26,7 +26,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import org.l2jmobius.gameserver.data.xml.impl.TeleportersData;
+import org.l2jmobius.gameserver.data.xml.impl.TeleporterData;
 import org.l2jmobius.gameserver.enums.CastleSide;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
@@ -987,7 +987,7 @@ public class CastleChamberlain extends AbstractNpcAI
 				else
 				{
 					final String listName = "tel" + castle.getCastleFunction(Castle.FUNC_TELEPORT).getLvl();
-					final TeleportHolder holder = TeleportersData.getInstance().getHolder(npc.getId(), listName);
+					final TeleportHolder holder = TeleporterData.getInstance().getHolder(npc.getId(), listName);
 					if (holder != null)
 					{
 						holder.showTeleportList(player, npc, "Quest CastleChamberlain goto");
@@ -1009,7 +1009,7 @@ public class CastleChamberlain extends AbstractNpcAI
 					final int funcLvl = (listId.length() >= 4) ? CommonUtil.parseInt(listId.substring(3), -1) : -1;
 					if (func.getLvl() == funcLvl)
 					{
-						final TeleportHolder holder = TeleportersData.getInstance().getHolder(npc.getId(), listId);
+						final TeleportHolder holder = TeleporterData.getInstance().getHolder(npc.getId(), listId);
 						if (holder != null)
 						{
 							holder.doTeleport(player, npc, CommonUtil.parseNextInt(st, -1));

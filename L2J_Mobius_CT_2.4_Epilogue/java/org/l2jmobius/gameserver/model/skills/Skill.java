@@ -30,7 +30,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
@@ -325,10 +325,10 @@ public class Skill implements IIdentifiable
 		_soulMaxConsume = set.getInt("soulMaxConsumeCount", 0);
 		_blowChance = set.getInt("blowChance", 0);
 		
-		_isHeroSkill = SkillTreesData.getInstance().isHeroSkill(_id, _level);
-		_isGMSkill = SkillTreesData.getInstance().isGMSkill(_id, _level);
+		_isHeroSkill = SkillTreeData.getInstance().isHeroSkill(_id, _level);
+		_isGMSkill = SkillTreeData.getInstance().isGMSkill(_id, _level);
 		_isSevenSigns = (_id > 4360) && (_id < 4367);
-		_isClanSkill = SkillTreesData.getInstance().isClanSkill(_id, _level);
+		_isClanSkill = SkillTreeData.getInstance().isClanSkill(_id, _level);
 		
 		_baseCritRate = set.getInt("baseCritRate", 0);
 		_directHpDmg = set.getBoolean("dmgDirectlyToHp", false);

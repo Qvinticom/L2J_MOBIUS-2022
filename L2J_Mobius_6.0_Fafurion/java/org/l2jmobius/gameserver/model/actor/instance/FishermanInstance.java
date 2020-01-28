@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -67,11 +67,11 @@ public class FishermanInstance extends MerchantInstance
 	
 	public static void showFishSkillList(PlayerInstance player)
 	{
-		final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableFishingSkills(player);
+		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableFishingSkills(player);
 		
 		if (skills.isEmpty())
 		{
-			final int minlLevel = SkillTreesData.getInstance().getMinLevelForNewSkill(player, SkillTreesData.getInstance().getFishingSkillTree());
+			final int minlLevel = SkillTreeData.getInstance().getMinLevelForNewSkill(player, SkillTreeData.getInstance().getFishingSkillTree());
 			if (minlLevel > 0)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);

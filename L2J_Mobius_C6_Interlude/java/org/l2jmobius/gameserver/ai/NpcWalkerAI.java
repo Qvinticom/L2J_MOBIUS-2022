@@ -20,7 +20,7 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.datatables.csv.NpcWalkerRoutesTable;
+import org.l2jmobius.gameserver.datatables.csv.NpcWalkerRouteTable;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.NpcWalkerNode;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -52,7 +52,7 @@ public class NpcWalkerAI extends CreatureAI implements Runnable
 	/**
 	 * route of the current npc
 	 */
-	private final List<NpcWalkerNode> _route = NpcWalkerRoutesTable.getInstance().getRouteForNpc(getActor().getNpcId());
+	private final List<NpcWalkerNode> _route = NpcWalkerRouteTable.getInstance().getRouteForNpc(getActor().getNpcId());
 	
 	/**
 	 * current node

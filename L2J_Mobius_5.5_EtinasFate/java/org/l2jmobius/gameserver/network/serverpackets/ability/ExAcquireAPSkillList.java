@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -44,7 +44,7 @@ public class ExAcquireAPSkillList implements IClientOutgoingPacket
 		_abilityPoints = player.getAbilityPoints();
 		_usedAbilityPoints = player.getAbilityPointsUsed();
 		// _price = AbilityPointsData.getInstance().getPrice(_abilityPoints); Removed on Grand Crusade
-		for (SkillLearn sk : SkillTreesData.getInstance().getAbilitySkillTree().values())
+		for (SkillLearn sk : SkillTreeData.getInstance().getAbilitySkillTree().values())
 		{
 			final Skill knownSkill = player.getKnownSkill(sk.getSkillId());
 			if ((knownSkill != null) && (knownSkill.getLevel() == sk.getSkillLevel()))

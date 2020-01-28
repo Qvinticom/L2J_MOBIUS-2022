@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.SubclassInfoType;
@@ -616,7 +616,7 @@ public class Raina extends AbstractNpcAI
 					player.setActiveClass(classIndex);
 					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
 					player.sendPacket(getNpcHtmlMessage(player, npc, "reawakenSuccess.html"));
-					SkillTreesData.getInstance().cleanSkillUponAwakening(player);
+					SkillTreeData.getInstance().cleanSkillUponAwakening(player);
 					player.sendPacket(new AcquireSkillList(player));
 					player.sendSkillList();
 					giveItems(player, getCloakId(player), 1);
@@ -651,7 +651,7 @@ public class Raina extends AbstractNpcAI
 					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NEW_SLOT_USED));
 					player.sendPacket(SystemMessageId.THE_NEW_SUBCLASS_HAS_BEEN_ADDED);
 					player.sendPacket(getNpcHtmlMessage(player, npc, "addSuccess.html"));
-					SkillTreesData.getInstance().cleanSkillUponAwakening(player);
+					SkillTreeData.getInstance().cleanSkillUponAwakening(player);
 					player.sendPacket(new AcquireSkillList(player));
 					player.sendSkillList();
 					giveItems(player, getPowerItemId(player), 1);

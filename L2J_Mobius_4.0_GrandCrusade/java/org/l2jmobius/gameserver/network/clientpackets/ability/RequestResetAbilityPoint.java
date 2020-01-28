@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets.ability;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -90,7 +90,7 @@ public class RequestResetAbilityPoint implements IClientIncomingPacket
 		}
 		player.setSp(player.getSp() - Config.ABILITY_POINTS_RESET_SP);
 		
-		for (SkillLearn sk : SkillTreesData.getInstance().getAbilitySkillTree().values())
+		for (SkillLearn sk : SkillTreeData.getInstance().getAbilitySkillTree().values())
 		{
 			final Skill skill = player.getKnownSkill(sk.getSkillId());
 			if (skill != null)

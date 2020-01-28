@@ -44,7 +44,7 @@ public class SkillData
 	{
 		load();
 		// Reload Skill Tree as well.
-		SkillTreesData.getInstance().load();
+		SkillTreeData.getInstance().load();
 	}
 	
 	private void load()

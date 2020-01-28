@@ -29,7 +29,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
-import org.l2jmobius.gameserver.data.sql.impl.SummonEffectsTable;
+import org.l2jmobius.gameserver.data.sql.impl.SummonEffectTable;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -189,7 +189,7 @@ public class ServitorInstance extends Summon implements Runnable
 	public void stopSkillEffects(boolean removed, int skillId)
 	{
 		super.stopSkillEffects(removed, skillId);
-		SummonEffectsTable.getInstance().removeServitorEffects(getOwner(), getReferenceSkill(), skillId);
+		SummonEffectTable.getInstance().removeServitorEffects(getOwner(), getReferenceSkill(), skillId);
 	}
 	
 	@Override
@@ -215,7 +215,7 @@ public class ServitorInstance extends Summon implements Runnable
 		}
 		
 		// Clear list for overwrite
-		SummonEffectsTable.getInstance().clearServitorEffects(getOwner(), getReferenceSkill());
+		SummonEffectTable.getInstance().clearServitorEffects(getOwner(), getReferenceSkill());
 		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(DELETE_SKILL_SAVE))
@@ -276,7 +276,7 @@ public class ServitorInstance extends Summon implements Runnable
 						ps2.setInt(7, ++buffIndex);
 						ps2.addBatch();
 						
-						SummonEffectsTable.getInstance().addServitorEffect(getOwner(), getReferenceSkill(), skill, info.getTime());
+						SummonEffectTable.getInstance().addServitorEffect(getOwner(), getReferenceSkill(), skill, info.getTime());
 					}
 					ps2.executeBatch();
 				}
@@ -298,7 +298,7 @@ public class ServitorInstance extends Summon implements Runnable
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			if (!SummonEffectsTable.getInstance().containsSkill(getOwner(), getReferenceSkill()))
+			if (!SummonEffectTable.getInstance().containsSkill(getOwner(), getReferenceSkill()))
 			{
 				try (PreparedStatement ps = con.prepareStatement(RESTORE_SKILL_SAVE))
 				{
@@ -319,7 +319,7 @@ public class ServitorInstance extends Summon implements Runnable
 							
 							if (skill.hasEffects(EffectScope.GENERAL))
 							{
-								SummonEffectsTable.getInstance().addServitorEffect(getOwner(), getReferenceSkill(), skill, effectCurTime);
+								SummonEffectTable.getInstance().addServitorEffect(getOwner(), getReferenceSkill(), skill, effectCurTime);
 							}
 						}
 					}
@@ -340,7 +340,7 @@ public class ServitorInstance extends Summon implements Runnable
 		}
 		finally
 		{
-			SummonEffectsTable.getInstance().applyServitorEffects(this, getOwner(), getReferenceSkill());
+			SummonEffectTable.getInstance().applyServitorEffects(this, getOwner(), getReferenceSkill());
 		}
 	}
 	

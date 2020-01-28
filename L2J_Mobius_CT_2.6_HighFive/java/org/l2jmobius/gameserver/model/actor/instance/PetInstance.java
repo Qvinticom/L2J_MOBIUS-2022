@@ -31,7 +31,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
-import org.l2jmobius.gameserver.data.sql.impl.SummonEffectsTable;
+import org.l2jmobius.gameserver.data.sql.impl.SummonEffectTable;
 import org.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.datatables.ItemTable;
@@ -908,7 +908,7 @@ public class PetInstance extends Summon
 	public void stopSkillEffects(boolean removed, int skillId)
 	{
 		super.stopSkillEffects(removed, skillId);
-		SummonEffectsTable.getInstance().removePetEffects(getControlObjectId(), skillId);
+		SummonEffectTable.getInstance().removePetEffects(getControlObjectId(), skillId);
 	}
 	
 	@Override
@@ -974,7 +974,7 @@ public class PetInstance extends Summon
 		}
 		
 		// Clear list for overwrite
-		SummonEffectsTable.getInstance().clearPetEffects(getControlObjectId());
+		SummonEffectTable.getInstance().clearPetEffects(getControlObjectId());
 		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps1 = con.prepareStatement(DELETE_SKILL_SAVE);
@@ -1030,7 +1030,7 @@ public class PetInstance extends Summon
 					ps2.setInt(5, ++buffIndex);
 					ps2.addBatch();
 					
-					SummonEffectsTable.getInstance().addPetEffect(getControlObjectId(), skill, info.getTime());
+					SummonEffectTable.getInstance().addPetEffect(getControlObjectId(), skill, info.getTime());
 				}
 				ps2.executeBatch();
 			}
@@ -1048,7 +1048,7 @@ public class PetInstance extends Summon
 			PreparedStatement ps1 = con.prepareStatement(RESTORE_SKILL_SAVE);
 			PreparedStatement ps2 = con.prepareStatement(DELETE_SKILL_SAVE))
 		{
-			if (!SummonEffectsTable.getInstance().containsPetId(getControlObjectId()))
+			if (!SummonEffectTable.getInstance().containsPetId(getControlObjectId()))
 			{
 				ps1.setInt(1, _controlObjectId);
 				try (ResultSet rs = ps1.executeQuery())
@@ -1065,7 +1065,7 @@ public class PetInstance extends Summon
 						
 						if (skill.hasEffects(EffectScope.GENERAL))
 						{
-							SummonEffectsTable.getInstance().addPetEffect(getControlObjectId(), skill, effectCurTime);
+							SummonEffectTable.getInstance().addPetEffect(getControlObjectId(), skill, effectCurTime);
 						}
 					}
 				}
@@ -1080,7 +1080,7 @@ public class PetInstance extends Summon
 		}
 		finally
 		{
-			SummonEffectsTable.getInstance().applyPetEffects(this, getControlObjectId());
+			SummonEffectTable.getInstance().applyPetEffects(this, getControlObjectId());
 		}
 	}
 	

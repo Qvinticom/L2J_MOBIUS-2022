@@ -21,7 +21,7 @@ import java.util.List;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.SkillLearn;
@@ -130,7 +130,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 			}
 		}
 		
-		final SkillLearn s = SkillTreesData.getInstance().getSkillLearn(_skillType, _id, _level, player);
+		final SkillLearn s = SkillTreeData.getInstance().getSkillLearn(_skillType, _id, _level, player);
 		if (s == null)
 		{
 			return;
@@ -383,7 +383,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 	
 	public static void showSubUnitSkillList(PlayerInstance player)
 	{
-		final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableSubPledgeSkills(player.getClan());
+		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableSubPledgeSkills(player.getClan());
 		final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.SUBPLEDGE);
 		int count = 0;
 		

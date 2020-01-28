@@ -20,7 +20,7 @@ import static org.l2jmobius.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
+import org.l2jmobius.gameserver.data.sql.impl.OfflineTraderTable;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.ItemRequest;
 import org.l2jmobius.gameserver.model.TradeList;
@@ -151,7 +151,7 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 		// Update offline trade record, if realtime saving is enabled
 		if (Config.OFFLINE_TRADE_ENABLE && Config.STORE_OFFLINE_TRADE_IN_REALTIME && ((storePlayer.getClient() == null) || storePlayer.getClient().isDetached()))
 		{
-			OfflineTradersTable.onTransaction(storePlayer, storeList.getItemCount() == 0, false);
+			OfflineTraderTable.onTransaction(storePlayer, storeList.getItemCount() == 0, false);
 		}
 		
 		if (storeList.getItemCount() == 0)

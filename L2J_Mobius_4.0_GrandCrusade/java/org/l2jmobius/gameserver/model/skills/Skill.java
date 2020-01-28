@@ -34,7 +34,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.BasicProperty;
 import org.l2jmobius.gameserver.enums.NextActionType;
@@ -1025,12 +1025,12 @@ public class Skill implements IIdentifiable
 	
 	public boolean isHeroSkill()
 	{
-		return SkillTreesData.getInstance().isHeroSkill(_id, _level);
+		return SkillTreeData.getInstance().isHeroSkill(_id, _level);
 	}
 	
 	public boolean isGMSkill()
 	{
-		return SkillTreesData.getInstance().isGMSkill(_id, _level);
+		return SkillTreeData.getInstance().isGMSkill(_id, _level);
 	}
 	
 	public boolean is7Signs()
@@ -1574,7 +1574,7 @@ public class Skill implements IIdentifiable
 	
 	public boolean isClanSkill()
 	{
-		return SkillTreesData.getInstance().isClanSkill(_id, _level);
+		return SkillTreeData.getInstance().isClanSkill(_id, _level);
 	}
 	
 	public boolean isExcludedFromCheck()

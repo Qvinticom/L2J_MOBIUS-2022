@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -324,7 +324,7 @@ public class AdminSkill implements IAdminCommandHandler
 			activeChar.sendPacket(sm);
 		}
 		
-		final Map<Integer, SkillLearn> skills = SkillTreesData.getInstance().getMaxPledgeSkills(clan, includeSquad);
+		final Map<Integer, SkillLearn> skills = SkillTreeData.getInstance().getMaxPledgeSkills(clan, includeSquad);
 		for (SkillLearn s : skills.values())
 		{
 			clan.addNewSkill(SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()));

@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.entity;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
@@ -50,7 +50,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	
 	protected void initResidentialSkills()
 	{
-		for (SkillLearn s : SkillTreesData.getInstance().getAvailableResidentialSkills(getResidenceId()))
+		for (SkillLearn s : SkillTreeData.getInstance().getAvailableResidentialSkills(getResidenceId()))
 		{
 			_residentialSkills.add(new SkillHolder(s.getSkillId(), s.getSkillLevel()));
 		}

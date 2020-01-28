@@ -18,7 +18,7 @@ package ai.areas.TalkingIsland.MonkOfChaos;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.SubclassType;
 import org.l2jmobius.gameserver.model.SkillLearn;
@@ -92,7 +92,7 @@ public class MonkOfChaos extends AbstractNpcAI
 				
 				if (player.isDualClassActive())
 				{
-					final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableRevelationSkills(player, SubclassType.DUALCLASS);
+					final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableRevelationSkills(player, SubclassType.DUALCLASS);
 					if (!skills.isEmpty())
 					{
 						player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.REVELATION_DUALCLASS));
@@ -104,7 +104,7 @@ public class MonkOfChaos extends AbstractNpcAI
 				}
 				else
 				{
-					final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableRevelationSkills(player, SubclassType.BASECLASS);
+					final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableRevelationSkills(player, SubclassType.BASECLASS);
 					if (!skills.isEmpty())
 					{
 						player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.REVELATION));
@@ -146,7 +146,7 @@ public class MonkOfChaos extends AbstractNpcAI
 				}
 				takeItems(player, 57, CANCEL_FEE);
 				
-				for (SkillLearn skillLearn : SkillTreesData.getInstance().getAllRevelationSkills(player, player.isDualClassActive() ? SubclassType.DUALCLASS : SubclassType.BASECLASS))
+				for (SkillLearn skillLearn : SkillTreeData.getInstance().getAllRevelationSkills(player, player.isDualClassActive() ? SubclassType.DUALCLASS : SubclassType.BASECLASS))
 				{
 					final Skill skill = player.getKnownSkill(skillLearn.getSkillId());
 					if (skill != null)

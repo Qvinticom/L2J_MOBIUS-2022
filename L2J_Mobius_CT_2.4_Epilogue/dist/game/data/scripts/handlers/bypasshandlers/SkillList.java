@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.logging.Level;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -91,7 +91,7 @@ public class SkillList implements IBypassHandler
 									continue;
 								}
 								
-								if (SkillTreesData.getInstance().getAvailableSkills(player, cid, false, false).isEmpty())
+								if (SkillTreeData.getInstance().getAvailableSkills(player, cid, false, false).isEmpty())
 								{
 									continue;
 								}

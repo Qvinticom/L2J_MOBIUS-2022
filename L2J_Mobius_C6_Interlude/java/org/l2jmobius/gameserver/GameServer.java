@@ -47,9 +47,9 @@ import org.l2jmobius.gameserver.datatables.NobleSkillTable;
 import org.l2jmobius.gameserver.datatables.OfflineTradeTable;
 import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.csv.ExtractableItemsData;
+import org.l2jmobius.gameserver.datatables.csv.ExtractableItemData;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
-import org.l2jmobius.gameserver.datatables.csv.NpcWalkerRoutesTable;
+import org.l2jmobius.gameserver.datatables.csv.NpcWalkerRouteTable;
 import org.l2jmobius.gameserver.datatables.sql.CharNameTable;
 import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
@@ -243,7 +243,7 @@ public class GameServer
 		Util.printSection("Items");
 		ItemTable.getInstance();
 		ArmorSetData.getInstance();
-		ExtractableItemsData.getInstance();
+		ExtractableItemData.getInstance();
 		SummonItemData.getInstance();
 		if (Config.ALLOWFISHING)
 		{
@@ -252,7 +252,7 @@ public class GameServer
 		
 		Util.printSection("Npc");
 		SchemeBufferTable.getInstance();
-		NpcWalkerRoutesTable.getInstance().load();
+		NpcWalkerRouteTable.getInstance().load();
 		if (!NpcTable.getInstance().isInitialized())
 		{
 			LOGGER.info("Could not find the extracted files. Please Check Your Data.");

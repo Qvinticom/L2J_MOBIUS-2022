@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.holders;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.interfaces.ISkillsHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -36,7 +36,7 @@ public class PlayerSkillHolder implements ISkillsHolder
 		for (Skill skill : player.getSkills().values())
 		{
 			// Adding only skills that can be learned by the player.
-			if (SkillTreesData.getInstance().isSkillAllowed(player, skill))
+			if (SkillTreeData.getInstance().isSkillAllowed(player, skill))
 			{
 				addSkill(skill);
 			}

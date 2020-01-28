@@ -23,7 +23,7 @@ import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.data.xml.impl.TeleportersData;
+import org.l2jmobius.gameserver.data.xml.impl.TeleporterData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.TeleportType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
@@ -104,7 +104,7 @@ public class TeleporterInstance extends Npc
 			case "showTeleports":
 			{
 				final String listName = (st.hasMoreTokens()) ? st.nextToken() : TeleportType.NORMAL.name();
-				final TeleportHolder holder = TeleportersData.getInstance().getHolder(getId(), listName);
+				final TeleportHolder holder = TeleporterData.getInstance().getHolder(getId(), listName);
 				if (holder == null)
 				{
 					LOGGER.warning("Player " + player.getObjectId() + " requested show teleports for list with name " + listName + " at NPC " + getId() + "!");
@@ -116,7 +116,7 @@ public class TeleporterInstance extends Npc
 			case "showTeleportsHunting":
 			{
 				final String listName = (st.hasMoreTokens()) ? st.nextToken() : TeleportType.HUNTING.name();
-				final TeleportHolder holder = TeleportersData.getInstance().getHolder(getId(), listName);
+				final TeleportHolder holder = TeleporterData.getInstance().getHolder(getId(), listName);
 				if (holder == null)
 				{
 					LOGGER.warning("Player " + player.getObjectId() + " requested show teleports for hunting list with name " + listName + " at NPC " + getId() + "!");
@@ -135,7 +135,7 @@ public class TeleporterInstance extends Npc
 				}
 				
 				final String listName = st.nextToken();
-				final TeleportHolder holder = TeleportersData.getInstance().getHolder(getId(), listName);
+				final TeleportHolder holder = TeleporterData.getInstance().getHolder(getId(), listName);
 				if (holder == null)
 				{
 					LOGGER.warning("Player " + player.getObjectId() + " requested unknown teleport list: " + listName + " for npc: " + getId() + "!");

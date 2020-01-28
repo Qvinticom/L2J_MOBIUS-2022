@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.stats.functions.formulas;
 import java.util.EnumMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
+import org.l2jmobius.gameserver.data.xml.impl.ArmorSetData;
 import org.l2jmobius.gameserver.model.ArmorSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -60,7 +60,7 @@ public class FuncArmorSet extends AbstractFunction
 			final ItemInstance chest = player.getChestArmorInstance();
 			if (chest != null)
 			{
-				final ArmorSet set = ArmorSetsData.getInstance().getSet(chest.getId());
+				final ArmorSet set = ArmorSetData.getInstance().getSet(chest.getId());
 				if ((set != null) && set.containAll(player))
 				{
 					switch (getStat())

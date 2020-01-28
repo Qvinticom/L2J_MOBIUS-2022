@@ -26,7 +26,7 @@ import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import org.l2jmobius.gameserver.data.xml.impl.AdminData;
-import org.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
+import org.l2jmobius.gameserver.data.xml.impl.ArmorSetData;
 import org.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import org.l2jmobius.gameserver.data.xml.impl.DoorData;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
@@ -201,7 +201,7 @@ public class Reload implements ITelnetCommand
 			}
 			case "sets":
 			{
-				ArmorSetsData.getInstance().load();
+				ArmorSetData.getInstance().load();
 				return "Telnet Admin: Reloaded Armor sets data.";
 			}
 			case "script":

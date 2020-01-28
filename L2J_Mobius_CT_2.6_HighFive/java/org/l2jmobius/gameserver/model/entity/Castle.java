@@ -33,7 +33,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import org.l2jmobius.gameserver.data.xml.impl.DoorData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.MountType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
@@ -1016,7 +1016,7 @@ public class Castle extends AbstractResidence
 		{
 			for (int wardId : territory.getOwnedWardIds())
 			{
-				final List<SkillLearn> territorySkills = SkillTreesData.getInstance().getAvailableResidentialSkills(wardId);
+				final List<SkillLearn> territorySkills = SkillTreeData.getInstance().getAvailableResidentialSkills(wardId);
 				for (SkillLearn s : territorySkills)
 				{
 					final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());
@@ -1041,7 +1041,7 @@ public class Castle extends AbstractResidence
 		{
 			for (int wardId : TerritoryWarManager.getInstance().getTerritory(getResidenceId()).getOwnedWardIds())
 			{
-				final List<SkillLearn> territorySkills = SkillTreesData.getInstance().getAvailableResidentialSkills(wardId);
+				final List<SkillLearn> territorySkills = SkillTreeData.getInstance().getAvailableResidentialSkills(wardId);
 				for (SkillLearn s : territorySkills)
 				{
 					final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());

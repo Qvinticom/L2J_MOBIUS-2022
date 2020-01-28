@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.impl.PetDataTable;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -88,7 +88,7 @@ public class PlayableStat extends CreatureStat
 		if ((getLevel() > oldLevel) && getActiveChar().isPlayer())
 		{
 			final PlayerInstance player = getActiveChar().getActingPlayer();
-			if (SkillTreesData.getInstance().hasAvailableSkills(player, player.getClassId()))
+			if (SkillTreeData.getInstance().hasAvailableSkills(player, player.getClassId()))
 			{
 				getActiveChar().sendPacket(ExNewSkillToLearnByLevelUp.STATIC_PACKET);
 			}

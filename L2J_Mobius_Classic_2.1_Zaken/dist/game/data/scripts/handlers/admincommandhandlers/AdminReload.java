@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import org.l2jmobius.gameserver.data.xml.impl.AdminData;
 import org.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
-import org.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
+import org.l2jmobius.gameserver.data.xml.impl.ArmorSetData;
 import org.l2jmobius.gameserver.data.xml.impl.AttendanceRewardData;
 import org.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import org.l2jmobius.gameserver.data.xml.impl.CombinationItemsData;
@@ -45,7 +45,7 @@ import org.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
 import org.l2jmobius.gameserver.data.xml.impl.SayuneData;
 import org.l2jmobius.gameserver.data.xml.impl.SendMessageLocalisationData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.TeleportersData;
+import org.l2jmobius.gameserver.data.xml.impl.TeleporterData;
 import org.l2jmobius.gameserver.data.xml.impl.TransformData;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
@@ -184,7 +184,7 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				case "teleport":
 				{
-					TeleportersData.getInstance().load();
+					TeleporterData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Teleports.");
 					break;
 				}
@@ -291,7 +291,7 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				case "sets":
 				{
-					ArmorSetsData.getInstance().load();
+					ArmorSetData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Armor sets data.");
 					break;
 				}

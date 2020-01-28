@@ -24,7 +24,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseBackup;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import org.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
+import org.l2jmobius.gameserver.data.sql.impl.OfflineTraderTable;
 import org.l2jmobius.gameserver.datatables.BotReportTable;
 import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
@@ -125,7 +125,7 @@ public class Shutdown extends Thread
 			{
 				if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS && !Config.STORE_OFFLINE_TRADE_IN_REALTIME)
 				{
-					OfflineTradersTable.getInstance().storeOffliners();
+					OfflineTraderTable.getInstance().storeOffliners();
 					LOGGER.info("Offline Traders Table: Offline shops stored(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 				}
 			}

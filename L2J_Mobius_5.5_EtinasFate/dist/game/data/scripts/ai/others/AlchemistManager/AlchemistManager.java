@@ -18,7 +18,7 @@ package ai.others.AlchemistManager;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -72,7 +72,7 @@ public class AlchemistManager extends AbstractNpcAI
 			{
 				if (player.getRace() == Race.ERTHEIA)
 				{
-					final List<SkillLearn> alchemySkills = SkillTreesData.getInstance().getAvailableAlchemySkills(player);
+					final List<SkillLearn> alchemySkills = SkillTreeData.getInstance().getAvailableAlchemySkills(player);
 					
 					if (alchemySkills.isEmpty())
 					{

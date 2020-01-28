@@ -22,7 +22,7 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.SubclassInfoType;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -199,7 +199,7 @@ public class Joachim extends AbstractNpcAI
 					player.setActiveClass(1);
 					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
 					player.sendPacket(getNpcHtmlMessage(player, npc, "34513-07.html"));
-					SkillTreesData.getInstance().cleanSkillUponChangeClass(player, false);
+					SkillTreeData.getInstance().cleanSkillUponChangeClass(player, false);
 					player.sendPacket(new AcquireSkillList(player));
 					player.sendSkillList();
 					player.broadcastUserInfo();

@@ -24,7 +24,7 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -278,12 +278,12 @@ public class AdminBuffs implements IAdminCommandHandler
 	 */
 	private void switchSkills(PlayerInstance gmchar, boolean toAuraSkills)
 	{
-		final Collection<Skill> skills = toAuraSkills ? SkillTreesData.getInstance().getGMSkillTree() : SkillTreesData.getInstance().getGMAuraSkillTree();
+		final Collection<Skill> skills = toAuraSkills ? SkillTreeData.getInstance().getGMSkillTree() : SkillTreeData.getInstance().getGMAuraSkillTree();
 		for (Skill skill : skills)
 		{
 			gmchar.removeSkill(skill, false); // Don't Save GM skills to database
 		}
-		SkillTreesData.getInstance().addSkills(gmchar, toAuraSkills);
+		SkillTreeData.getInstance().addSkills(gmchar, toAuraSkills);
 	}
 	
 	@Override

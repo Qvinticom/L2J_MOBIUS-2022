@@ -39,7 +39,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.SkillLearn;
@@ -377,7 +377,7 @@ public class TerritoryWarManager implements Siegable
 				{
 					for (int wardId : terNew.getOwnedWardIds())
 					{
-						final List<SkillLearn> residentialSkills = SkillTreesData.getInstance().getAvailableResidentialSkills(wardId);
+						final List<SkillLearn> residentialSkills = SkillTreeData.getInstance().getAvailableResidentialSkills(wardId);
 						for (SkillLearn s : residentialSkills)
 						{
 							final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());
@@ -410,7 +410,7 @@ public class TerritoryWarManager implements Siegable
 				}
 				if (terOld.getOwnerClan() != null)
 				{
-					final List<SkillLearn> territorySkills = SkillTreesData.getInstance().getAvailableResidentialSkills(territoryId);
+					final List<SkillLearn> territorySkills = SkillTreeData.getInstance().getAvailableResidentialSkills(territoryId);
 					for (SkillLearn s : territorySkills)
 					{
 						final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());
@@ -427,7 +427,7 @@ public class TerritoryWarManager implements Siegable
 					{
 						for (int wardId : terOld.getOwnedWardIds())
 						{
-							final List<SkillLearn> wardSkills = SkillTreesData.getInstance().getAvailableResidentialSkills(wardId);
+							final List<SkillLearn> wardSkills = SkillTreeData.getInstance().getAvailableResidentialSkills(wardId);
 							for (SkillLearn s : wardSkills)
 							{
 								final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());

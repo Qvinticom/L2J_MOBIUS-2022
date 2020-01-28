@@ -27,7 +27,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.CharStatsTable;
+import org.l2jmobius.gameserver.data.CharStatTable;
 import org.l2jmobius.gameserver.data.CharTemplateTable;
 import org.l2jmobius.gameserver.data.ExperienceTable;
 import org.l2jmobius.gameserver.data.ItemTable;
@@ -1243,7 +1243,7 @@ public class PlayerInstance extends Creature
 	public void updatePAtk()
 	{
 		final double lvlmod = (89.0 + getLevel()) / 100.0;
-		final StatModifiers modifier = CharStatsTable.getInstance().getTemplate(getClassId());
+		final StatModifiers modifier = CharStatTable.getInstance().getTemplate(getClassId());
 		double strmod = 1.0;
 		if (modifier != null)
 		{
@@ -1330,7 +1330,7 @@ public class PlayerInstance extends Creature
 	{
 		final double lmod = (89.0 + getLevel()) / 100.0;
 		final double lvlmod = Math.sqrt(lmod);
-		final StatModifiers modifier = CharStatsTable.getInstance().getTemplate(getClassId());
+		final StatModifiers modifier = CharStatTable.getInstance().getTemplate(getClassId());
 		double imod = 1.0;
 		if (modifier != null)
 		{
@@ -1364,7 +1364,7 @@ public class PlayerInstance extends Creature
 	{
 		Armor armorPiece;
 		final double lvlBonus = (89.0 + getLevel()) / 100.0;
-		final StatModifiers modifier = CharStatsTable.getInstance().getTemplate(getClassId());
+		final StatModifiers modifier = CharStatTable.getInstance().getTemplate(getClassId());
 		double menBonus = 1.0;
 		if (modifier != null)
 		{

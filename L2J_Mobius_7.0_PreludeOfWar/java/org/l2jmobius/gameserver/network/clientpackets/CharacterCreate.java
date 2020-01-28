@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.data.xml.impl.InitialEquipmentData;
 import org.l2jmobius.gameserver.data.xml.impl.InitialShortcutData;
 import org.l2jmobius.gameserver.data.xml.impl.PlayerTemplateData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.instancemanager.PremiumManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.SkillLearn;
@@ -378,7 +378,7 @@ public class CharacterCreate implements IClientIncomingPacket
 			}
 		}
 		
-		for (SkillLearn skill : SkillTreesData.getInstance().getAvailableSkills(newChar, newChar.getClassId(), false, false, true))
+		for (SkillLearn skill : SkillTreeData.getInstance().getAvailableSkills(newChar, newChar.getClassId(), false, false, true))
 		{
 			newChar.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
 		}

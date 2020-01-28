@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.InventoryBlockType;
 import org.l2jmobius.gameserver.enums.Sex;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -278,7 +278,7 @@ public class Transform implements IIdentifiable
 						.forEach(player::addTransformSkill);
 					
 					// Add collection skills.
-					SkillTreesData.getInstance().getCollectSkillTree().values()
+					SkillTreeData.getInstance().getCollectSkillTree().values()
 						.stream()
 						.map(s -> player.getKnownSkill(s.getSkillId()))
 						.filter(Objects::nonNull)
