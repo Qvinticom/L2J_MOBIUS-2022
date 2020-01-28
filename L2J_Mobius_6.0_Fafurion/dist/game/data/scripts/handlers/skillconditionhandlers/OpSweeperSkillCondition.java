@@ -16,8 +16,6 @@
  */
 package handlers.skillconditionhandlers;
 
-import java.util.concurrent.atomic.AtomicBoolean;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -29,7 +27,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
- * @author Sdw
+ * @author Zoey76
  */
 public class OpSweeperSkillCondition implements ISkillCondition
 {
@@ -41,29 +39,29 @@ public class OpSweeperSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		final AtomicBoolean canSweep = new AtomicBoolean(false);
+		boolean canSweep = false;
 		if (caster.getActingPlayer() != null)
 		{
 			final PlayerInstance sweeper = caster.getActingPlayer();
 			if (skill != null)
 			{
-				skill.forEachTargetAffected(sweeper, target, o ->
+				for (WorldObject wo : skill.getTargetsAffected(sweeper, target))
 				{
-					if (o.isAttackable())
+					if ((wo != null) && wo.isAttackable())
 					{
-						final Attackable a = (Attackable) o;
-						if (a.isDead())
+						final Attackable attackable = (Attackable) wo;
+						if (attackable.isDead())
 						{
-							if (a.isSpoiled())
+							if (attackable.isSpoiled())
 							{
-								canSweep.set(a.checkSpoilOwner(sweeper, true));
-								if (canSweep.get())
+								canSweep = attackable.checkSpoilOwner(sweeper, true);
+								if (canSweep)
 								{
-									canSweep.set(!a.isOldCorpse(sweeper, Config.CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY, true));
+									canSweep = !attackable.isOldCorpse(sweeper, Config.CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY, true);
 								}
-								if (canSweep.get())
+								if (canSweep)
 								{
-									canSweep.set(sweeper.getInventory().checkInventorySlotsAndWeight(a.getSpoilLootItems(), true, true));
+									canSweep = sweeper.getInventory().checkInventorySlotsAndWeight(attackable.getSpoilLootItems(), true, true);
 								}
 							}
 							else
@@ -72,9 +70,9 @@ public class OpSweeperSkillCondition implements ISkillCondition
 							}
 						}
 					}
-				});
+				}
 			}
 		}
-		return canSweep.get();
+		return canSweep;
 	}
 }

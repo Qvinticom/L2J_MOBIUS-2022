@@ -16,9 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.conditions;
 
-import java.util.concurrent.atomic.AtomicBoolean;
-
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -50,29 +49,29 @@ public class ConditionPlayerCanSweep extends Condition
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		final AtomicBoolean canSweep = new AtomicBoolean(false);
+		boolean canSweep = false;
 		if (effector.getActingPlayer() != null)
 		{
 			final PlayerInstance sweeper = effector.getActingPlayer();
 			if (skill != null)
 			{
-				skill.forEachTargetAffected(sweeper, effected, o ->
+				for (WorldObject wo : skill.getTargetsAffected(sweeper, effected))
 				{
-					if ((o != null) && o.isAttackable())
+					if ((wo != null) && wo.isAttackable())
 					{
-						final Attackable target = (Attackable) o;
-						if (target.isDead())
+						final Attackable attackable = (Attackable) wo;
+						if (attackable.isDead())
 						{
-							if (target.isSpoiled())
+							if (attackable.isSpoiled())
 							{
-								canSweep.set(target.checkSpoilOwner(sweeper, true));
-								if (canSweep.get())
+								canSweep = attackable.checkSpoilOwner(sweeper, true);
+								if (canSweep)
 								{
-									canSweep.set(!target.isOldCorpse(sweeper, Config.CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY, true));
+									canSweep = !attackable.isOldCorpse(sweeper, Config.CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY, true);
 								}
-								if (canSweep.get())
+								if (canSweep)
 								{
-									canSweep.set(sweeper.getInventory().checkInventorySlotsAndWeight(target.getSpoilLootItems(), true, true));
+									canSweep = sweeper.getInventory().checkInventorySlotsAndWeight(attackable.getSpoilLootItems(), true, true);
 								}
 							}
 							else
@@ -81,9 +80,9 @@ public class ConditionPlayerCanSweep extends Condition
 							}
 						}
 					}
-				});
+				}
 			}
 		}
-		return (_value == canSweep.get());
+		return _value == canSweep;
 	}
 }
