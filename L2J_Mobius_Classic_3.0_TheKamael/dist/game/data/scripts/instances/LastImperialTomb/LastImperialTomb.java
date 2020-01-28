@@ -697,12 +697,12 @@ public class LastImperialTomb extends AbstractInstance
 	{
 		if (npc.getId() == SCARLET1)
 		{
-			if ((npc.getScriptValue() == 0) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.80)))
+			if (npc.isScriptValue(0) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.80)))
 			{
 				npc.setScriptValue(1);
 				startQuestTimer("SCARLET_FIRST_MORPH", 1000, npc, null, false);
 			}
-			if ((npc.getScriptValue() == 1) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.20)))
+			if (npc.isScriptValue(1) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.20)))
 			{
 				npc.setScriptValue(2);
 				startQuestTimer("SCARLET_SECOND_MORPH", 1000, npc, null, false);

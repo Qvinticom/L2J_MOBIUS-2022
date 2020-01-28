@@ -245,7 +245,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 				{
 					return getNoQuestMsg(player);
 				}
-				if (qs.isStarted() && (npc.getScriptValue() == 0))
+				if (qs.isStarted() && npc.isScriptValue(0))
 				{
 					if (hasQuestItems(player, CHAPEL_KEY))
 					{
@@ -362,7 +362,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 		}
 		if (npc.getId() == MYSTERIOUS_CHEST)
 		{
-			if (npc.getScriptValue() == 0)
+			if (npc.isScriptValue(0))
 			{
 				npc.setScriptValue(1);
 				npc.deleteMe();
@@ -372,7 +372,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 		}
 		if (npc.getId() == KEY_CHEST)
 		{
-			if (npc.getScriptValue() == 0)
+			if (npc.isScriptValue(0))
 			{
 				npc.setScriptValue(1);
 				npc.deleteMe();

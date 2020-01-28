@@ -83,7 +83,7 @@ public class LeopardDragonHachling extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
-		if (npc.getScriptValue() == 0)
+		if (npc.isScriptValue(0))
 		{
 			npc.setScriptValue(1);
 			npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, DRAGON_HACHLING, NpcStringId.HEY_THAT_HURT_YOU_JUST_WAIT_HERE_AND_I_LL_BE_BACK_AS_A_STRONGER_DRAGON));

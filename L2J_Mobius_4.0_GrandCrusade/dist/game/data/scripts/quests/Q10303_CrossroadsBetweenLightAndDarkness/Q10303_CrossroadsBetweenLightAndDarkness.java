@@ -207,7 +207,7 @@ public class Q10303_CrossroadsBetweenLightAndDarkness extends Quest
 							htmltext = "32909-00a.htm";
 							break;
 						}
-						else if (qs.isCond(1) && (npc.getScriptValue() == 0))
+						else if (qs.isCond(1) && npc.isScriptValue(0))
 						{
 							htmltext = "32909-01.htm";
 						}
@@ -220,7 +220,7 @@ public class Q10303_CrossroadsBetweenLightAndDarkness extends Quest
 							htmltext = "33361-00a.htm";
 							break;
 						}
-						else if (qs.isCond(1) && (npc.getScriptValue() == 0))
+						else if (qs.isCond(1) && npc.isScriptValue(0))
 						{
 							htmltext = "33361-01.htm";
 						}

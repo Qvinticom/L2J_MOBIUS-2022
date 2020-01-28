@@ -652,7 +652,7 @@ public class Q348_AnArrogantSearch extends Quest
 		switch (npc.getNpcId())
 		{
 			case ARK_GUARDIAN_ELBEROTH:
-				if (npc.getScriptValue() == 0)
+				if (npc.isScriptValue(0))
 				{
 					npc.broadcastNpcSay("...I feel very sorry, but I have taken your life.");
 					npc.setScriptValue(1);
@@ -660,7 +660,7 @@ public class Q348_AnArrogantSearch extends Quest
 				break;
 			
 			case ARK_GUARDIAN_SHADOW_FANG:
-				if (npc.getScriptValue() == 0)
+				if (npc.isScriptValue(0))
 				{
 					npc.broadcastNpcSay("I will cover this mountain with your blood!");
 					npc.setScriptValue(1);
@@ -668,7 +668,7 @@ public class Q348_AnArrogantSearch extends Quest
 				break;
 			
 			case ANGEL_KILLER:
-				if (npc.getScriptValue() == 0)
+				if (npc.isScriptValue(0))
 				{
 					npc.broadcastNpcSay("Haha.. Really amusing! As for the key, search the corpse!");
 					npc.setScriptValue(1);
