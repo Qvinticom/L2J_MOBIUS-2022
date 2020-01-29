@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.instancemanager.BoatManager;
+import org.l2jmobius.gameserver.datatables.xml.BoatData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
 
 public class RequestGetOnVehicle extends GameClientPacket
 {
-	private int _id;
+	private int _boatId;
 	private int _x;
 	private int _y;
 	private int _z;
@@ -32,7 +32,7 @@ public class RequestGetOnVehicle extends GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_id = readD();
+		_boatId = readD();
 		_x = readD();
 		_y = readD();
 		_z = readD();
@@ -42,22 +42,20 @@ public class RequestGetOnVehicle extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
 		}
 		
-		final BoatInstance boat = BoatManager.getInstance().GetBoat(_id);
+		final BoatInstance boat = BoatData.getInstance().getBoat(_boatId);
 		if (boat == null)
 		{
 			return;
 		}
 		
-		final GetOnVehicle gon = new GetOnVehicle(player, boat, _x, _y, _z);
 		player.setInBoatPosition(new Location(_x, _y, _z));
 		player.getPosition().setXYZ(boat.getPosition().getX(), boat.getPosition().getY(), boat.getPosition().getZ());
-		player.broadcastPacket(gon);
+		player.broadcastPacket(new GetOnVehicle(player, boat, _x, _y, _z));
 		player.revalidateZone(true);
 	}
 }

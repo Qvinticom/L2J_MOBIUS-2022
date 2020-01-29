@@ -64,13 +64,14 @@ import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.datatables.xml.ArmorSetData;
 import org.l2jmobius.gameserver.datatables.xml.AugmentationData;
+import org.l2jmobius.gameserver.datatables.xml.BoatData;
 import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.datatables.xml.FenceData;
 import org.l2jmobius.gameserver.datatables.xml.FishData;
 import org.l2jmobius.gameserver.datatables.xml.HennaData;
-import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.datatables.xml.ManorSeedData;
+import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.datatables.xml.StaticObjectData;
 import org.l2jmobius.gameserver.datatables.xml.SummonItemData;
 import org.l2jmobius.gameserver.datatables.xml.ZoneData;
@@ -86,7 +87,6 @@ import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.AuctionManager;
 import org.l2jmobius.gameserver.instancemanager.AutoSaveManager;
 import org.l2jmobius.gameserver.instancemanager.AwayManager;
-import org.l2jmobius.gameserver.instancemanager.BoatManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
@@ -350,7 +350,7 @@ public class GameServer
 		CrownManager.getInstance();
 		
 		Util.printSection("Boat");
-		BoatManager.getInstance();
+		BoatData.getInstance();
 		
 		Util.printSection("Doors");
 		DoorData.getInstance().load();

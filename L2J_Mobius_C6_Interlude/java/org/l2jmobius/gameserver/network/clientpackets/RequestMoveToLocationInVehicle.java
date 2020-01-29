@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.instancemanager.BoatManager;
+import org.l2jmobius.gameserver.datatables.xml.BoatData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -26,25 +26,16 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public class RequestMoveToLocationInVehicle extends GameClientPacket
 {
-	private final Location _pos = new Location(0, 0, 0);
-	private final Location _originPos = new Location(0, 0, 0);
 	private int _boatId;
+	private Location _targetPos;
+	private Location _originPos;
 	
 	@Override
 	protected void readImpl()
 	{
-		int x;
-		int y;
-		int z;
 		_boatId = readD(); // objectId of boat
-		x = readD();
-		y = readD();
-		z = readD();
-		_pos.setXYZ(x, y, z);
-		x = readD();
-		y = readD();
-		z = readD();
-		_originPos.setXYZ(x, y, z);
+		_targetPos = new Location(readD(), readD(), readD());
+		_originPos = new Location(readD(), readD(), readD());
 	}
 	
 	@Override
@@ -62,15 +53,15 @@ public class RequestMoveToLocationInVehicle extends GameClientPacket
 		}
 		else
 		{
-			final BoatInstance boat = BoatManager.getInstance().GetBoat(_boatId);
+			final BoatInstance boat = BoatData.getInstance().getBoat(_boatId);
 			if (boat == null)
 			{
 				return;
 			}
 			player.setBoat(boat);
 			player.setInBoat(true);
-			player.setInBoatPosition(_pos);
-			player.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO_IN_A_BOAT, new Location(_pos.getX(), _pos.getY(), _pos.getZ(), 0), new Location(_originPos.getX(), _originPos.getY(), _originPos.getZ(), 0));
+			player.setInBoatPosition(_targetPos);
+			player.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO_IN_A_BOAT, _targetPos, _originPos);
 		}
 	}
 }
