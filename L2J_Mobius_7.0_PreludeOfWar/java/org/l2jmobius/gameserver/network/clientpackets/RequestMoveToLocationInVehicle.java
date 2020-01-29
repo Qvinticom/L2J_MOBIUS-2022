@@ -100,24 +100,19 @@ public class RequestMoveToLocationInVehicle implements IClientIncomingPacket
 			return;
 		}
 		
-		final BoatInstance boat;
+		BoatInstance boat;
 		if (player.isInBoat())
 		{
 			boat = player.getBoat();
 			if (boat.getObjectId() != _boatId)
 			{
-				client.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
+				boat = BoatManager.getInstance().getBoat(_boatId);
+				player.setVehicle(boat);
 			}
 		}
 		else
 		{
 			boat = BoatManager.getInstance().getBoat(_boatId);
-			if ((boat == null) || !boat.isInsideRadius3D(player, 300))
-			{
-				client.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
 			player.setVehicle(boat);
 		}
 		

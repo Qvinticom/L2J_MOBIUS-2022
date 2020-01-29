@@ -30,11 +30,6 @@ public class MoveToLocationInVehicle extends GameServerPacket
 	private Location _destination;
 	private Location _origin;
 	
-	/**
-	 * @param actor
-	 * @param destination
-	 * @param origin
-	 */
 	public MoveToLocationInVehicle(Creature actor, Location destination, Location origin)
 	{
 		if (!(actor instanceof PlayerInstance))
@@ -43,7 +38,6 @@ public class MoveToLocationInVehicle extends GameServerPacket
 		}
 		
 		final PlayerInstance player = (PlayerInstance) actor;
-		
 		if (player.getBoat() == null)
 		{
 			return;
@@ -55,10 +49,6 @@ public class MoveToLocationInVehicle extends GameServerPacket
 		_origin = origin;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.serverpackets.ServerBasePacket#writeImpl()
-	 */
 	@Override
 	protected void writeImpl()
 	{

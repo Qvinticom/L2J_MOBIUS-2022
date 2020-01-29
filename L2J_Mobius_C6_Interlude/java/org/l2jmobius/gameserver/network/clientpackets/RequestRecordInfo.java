@@ -136,19 +136,16 @@ public class RequestRecordInfo extends GameClientPacket
 						otherPlayer.getPosition().setWorldPosition(otherPlayer.getBoat().getLocation());
 						player.sendPacket(new CharInfo(otherPlayer));
 						final int relation = otherPlayer.getRelation(player);
-						
 						if ((otherPlayer.getKnownList().getKnownRelations().get(player.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(player.getObjectId()) != relation))
 						{
 							player.sendPacket(new RelationChanged(otherPlayer, relation, player.isAutoAttackable(otherPlayer)));
 						}
-						
-						player.sendPacket(new GetOnVehicle(otherPlayer, otherPlayer.getBoat(), otherPlayer.getInBoatPosition().getX(), otherPlayer.getInBoatPosition().getY(), otherPlayer.getInBoatPosition().getZ()));
+						player.sendPacket(new GetOnVehicle(otherPlayer, otherPlayer.getBoat(), otherPlayer.getBoatPosition().getX(), otherPlayer.getBoatPosition().getY(), otherPlayer.getBoatPosition().getZ()));
 					}
 					else
 					{
 						player.sendPacket(new CharInfo(otherPlayer));
 						final int relation = otherPlayer.getRelation(player);
-						
 						if ((otherPlayer.getKnownList().getKnownRelations().get(player.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(player.getObjectId()) != relation))
 						{
 							player.sendPacket(new RelationChanged(otherPlayer, relation, player.isAutoAttackable(otherPlayer)));

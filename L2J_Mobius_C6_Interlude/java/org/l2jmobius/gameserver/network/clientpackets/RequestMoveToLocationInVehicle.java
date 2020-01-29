@@ -50,18 +50,26 @@ public class RequestMoveToLocationInVehicle extends GameClientPacket
 		if (player.isAttackingNow() && (player.getActiveWeaponItem() != null) && (player.getActiveWeaponItem().getItemType() == WeaponType.BOW))
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		BoatInstance boat;
+		if (player.isInBoat())
+		{
+			boat = player.getBoat();
+			if (boat.getObjectId() != _boatId)
+			{
+				boat = BoatData.getInstance().getBoat(_boatId);
+				player.setBoat(boat);
+			}
 		}
 		else
 		{
-			final BoatInstance boat = BoatData.getInstance().getBoat(_boatId);
-			if (boat == null)
-			{
-				return;
-			}
+			boat = BoatData.getInstance().getBoat(_boatId);
 			player.setBoat(boat);
-			player.setInBoat(true);
-			player.setInBoatPosition(_targetPos);
-			player.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO_IN_A_BOAT, _targetPos, _originPos);
 		}
+		
+		player.setBoatPosition(_targetPos);
+		player.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO_IN_A_BOAT, _targetPos, _originPos);
 	}
 }

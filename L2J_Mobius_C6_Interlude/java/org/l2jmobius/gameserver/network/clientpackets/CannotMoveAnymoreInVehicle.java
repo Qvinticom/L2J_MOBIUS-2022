@@ -52,7 +52,7 @@ public class CannotMoveAnymoreInVehicle extends GameClientPacket
 		
 		if (player.isInBoat() && (player.getBoat().getObjectId() == _boatId))
 		{
-			player.setInBoatPosition(new Location(_x, _y, _z));
+			player.setBoatPosition(new Location(_x, _y, _z));
 			player.getPosition().setHeading(_heading);
 			player.broadcastPacket(new StopMoveInVehicle(player, _boatId));
 		}

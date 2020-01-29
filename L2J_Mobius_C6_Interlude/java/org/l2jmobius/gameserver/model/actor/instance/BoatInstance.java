@@ -147,7 +147,7 @@ public class BoatInstance extends Creature
 				final PlayerInstance player = inboat.get(i);
 				if ((player != null) && player.isInBoat() && (player.getBoat() == this))
 				{
-					player.getPosition().setXYZ(x, y, z);
+					player.setXYZ(x, y, z);
 					player.revalidateZone(false);
 				}
 				

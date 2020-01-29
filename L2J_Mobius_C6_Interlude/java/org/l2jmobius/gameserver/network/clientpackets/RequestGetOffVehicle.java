@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.datatables.xml.BoatData;
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.GetOffVehicle;
 
@@ -49,7 +47,6 @@ public class RequestGetOffVehicle extends GameClientPacket
 			return;
 		}
 		
-		final BoatInstance boat = BoatData.getInstance().getBoat(_boatId);
-		player.broadcastPacket(new GetOffVehicle(player, boat, _x, _y, _z));
+		player.broadcastPacket(new GetOffVehicle(player, _boatId, _x, _y, _z));
 	}
 }

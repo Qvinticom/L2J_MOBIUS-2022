@@ -634,8 +634,7 @@ abstract class AbstractAI implements Ctrl
 			// CharMoveToLocation msg = new CharMoveToLocation(_actor);
 			if (((PlayerInstance) _actor).getBoat() != null)
 			{
-				final MoveToLocationInVehicle msg = new MoveToLocationInVehicle(_actor, destination, origin);
-				_actor.broadcastPacket(msg);
+				_actor.broadcastPacket(new MoveToLocationInVehicle(_actor, destination, origin));
 			}
 		}
 		else

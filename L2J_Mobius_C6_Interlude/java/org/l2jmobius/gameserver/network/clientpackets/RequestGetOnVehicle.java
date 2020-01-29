@@ -53,8 +53,8 @@ public class RequestGetOnVehicle extends GameClientPacket
 			return;
 		}
 		
-		player.setInBoatPosition(new Location(_x, _y, _z));
-		player.getPosition().setXYZ(boat.getPosition().getX(), boat.getPosition().getY(), boat.getPosition().getZ());
+		player.setBoatPosition(new Location(_x, _y, _z));
+		player.setXYZ(boat.getPosition().getX(), boat.getPosition().getY(), boat.getPosition().getZ());
 		player.broadcastPacket(new GetOnVehicle(player, boat, _x, _y, _z));
 		player.revalidateZone(true);
 	}

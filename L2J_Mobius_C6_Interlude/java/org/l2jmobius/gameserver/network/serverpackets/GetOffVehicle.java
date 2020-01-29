@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
@@ -24,49 +23,29 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class GetOffVehicle extends GameServerPacket
 {
+	private final PlayerInstance _player;
+	private final int _boatId;
 	private final int _x;
 	private final int _y;
 	private final int _z;
-	private final PlayerInstance _player;
-	private final BoatInstance _boat;
 	
-	/**
-	 * @param player
-	 * @param boat
-	 * @param x
-	 * @param y
-	 * @param z
-	 */
-	public GetOffVehicle(PlayerInstance player, BoatInstance boat, int x, int y, int z)
+	public GetOffVehicle(PlayerInstance player, int boatId, int x, int y, int z)
 	{
 		_player = player;
-		_boat = boat;
+		_boatId = boatId;
 		_x = x;
 		_y = y;
 		_z = z;
 		
-		if (_player != null)
-		{
-			_player.setInBoat(false);
-			_player.setBoat(null);
-		}
+		_player.setBoat(null);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.serverpackets.ServerBasePacket#writeImpl()
-	 */
 	@Override
 	protected void writeImpl()
 	{
-		if ((_boat == null) || (_player == null))
-		{
-			return;
-		}
-		
 		writeC(0x5d);
 		writeD(_player.getObjectId());
-		writeD(_boat.getObjectId());
+		writeD(_boatId);
 		writeD(_x);
 		writeD(_y);
 		writeD(_z);

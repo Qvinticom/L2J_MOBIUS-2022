@@ -30,13 +30,6 @@ public class GetOnVehicle extends GameServerPacket
 	private final PlayerInstance _player;
 	private final BoatInstance _boat;
 	
-	/**
-	 * @param player
-	 * @param boat
-	 * @param x
-	 * @param y
-	 * @param z
-	 */
 	public GetOnVehicle(PlayerInstance player, BoatInstance boat, int x, int y, int z)
 	{
 		_player = player;
@@ -46,13 +39,8 @@ public class GetOnVehicle extends GameServerPacket
 		_z = z;
 		
 		_player.setBoat(_boat);
-		_player.setInBoat(true);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.serverpackets.ServerBasePacket#writeImpl()
-	 */
 	@Override
 	protected void writeImpl()
 	{

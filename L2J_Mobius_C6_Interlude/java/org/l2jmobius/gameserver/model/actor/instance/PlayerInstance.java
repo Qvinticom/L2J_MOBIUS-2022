@@ -366,7 +366,6 @@ public class PlayerInstance extends Playable
 	private int _duelState = Duel.DUELSTATE_NODUEL;
 	private int _duelId = 0;
 	private SystemMessageId _noDuelReason = SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL;
-	private boolean _inBoat;
 	private BoatInstance _boat;
 	private Location _inBoatPosition;
 	private int _mountType;
@@ -14384,16 +14383,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean isInBoat()
 	{
-		return _inBoat;
-	}
-	
-	/**
-	 * Sets the in boat.
-	 * @param inBoat The inBoat to set.
-	 */
-	public void setInBoat(boolean inBoat)
-	{
-		_inBoat = inBoat;
+		return _boat != null;
 	}
 	
 	/**
@@ -14415,6 +14405,24 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
+	 * Gets the in boat position.
+	 * @return the in boat position
+	 */
+	public Location getBoatPosition()
+	{
+		return _inBoatPosition;
+	}
+	
+	/**
+	 * Sets the in boat position.
+	 * @param location the new in boat location
+	 */
+	public void setBoatPosition(Location location)
+	{
+		_inBoatPosition = location;
+	}
+	
+	/**
 	 * Sets the in crystallize.
 	 * @param inCrystallize the new in crystallize
 	 */
@@ -14430,24 +14438,6 @@ public class PlayerInstance extends Playable
 	public boolean isInCrystallize()
 	{
 		return _inCrystallize;
-	}
-	
-	/**
-	 * Gets the in boat position.
-	 * @return the in boat position
-	 */
-	public Location getInBoatPosition()
-	{
-		return _inBoatPosition;
-	}
-	
-	/**
-	 * Sets the in boat position.
-	 * @param location the new in boat location
-	 */
-	public void setInBoatPosition(Location location)
-	{
-		_inBoatPosition = location;
 	}
 	
 	/**

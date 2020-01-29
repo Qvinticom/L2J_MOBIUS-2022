@@ -46,9 +46,9 @@ public class StopMoveInVehicle extends GameServerPacket
 		writeC(0x72);
 		writeD(_player.getObjectId());
 		writeD(_boatId);
-		writeD(_player.getInBoatPosition().getX());
-		writeD(_player.getInBoatPosition().getY());
-		writeD(_player.getInBoatPosition().getZ());
+		writeD(_player.getBoatPosition().getX());
+		writeD(_player.getBoatPosition().getY());
+		writeD(_player.getBoatPosition().getZ());
 		writeD(_player.getPosition().getHeading());
 	}
 }

@@ -182,13 +182,12 @@ public class PlayerKnownList extends PlayableKnownList
 					activeChar.sendPacket(new CharInfo(otherPlayer));
 					
 					final int relation = otherPlayer.getRelation(activeChar);
-					
 					if ((otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != relation))
 					{
 						activeChar.sendPacket(new RelationChanged(otherPlayer, relation, activeChar.isAutoAttackable(otherPlayer)));
 					}
 					
-					activeChar.sendPacket(new GetOnVehicle(otherPlayer, otherPlayer.getBoat(), otherPlayer.getInBoatPosition().getX(), otherPlayer.getInBoatPosition().getY(), otherPlayer.getInBoatPosition().getZ()));
+					activeChar.sendPacket(new GetOnVehicle(otherPlayer, otherPlayer.getBoat(), otherPlayer.getBoatPosition().getX(), otherPlayer.getBoatPosition().getY(), otherPlayer.getBoatPosition().getZ()));
 					
 				}
 				else
@@ -196,7 +195,6 @@ public class PlayerKnownList extends PlayableKnownList
 					activeChar.sendPacket(new CharInfo(otherPlayer));
 					
 					final int relation = otherPlayer.getRelation(activeChar);
-					
 					if ((otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != relation))
 					{
 						activeChar.sendPacket(new RelationChanged(otherPlayer, relation, activeChar.isAutoAttackable(otherPlayer)));

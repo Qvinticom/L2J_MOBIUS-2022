@@ -69,8 +69,8 @@ public class ValidatePosition extends GameClientPacket
 		{
 			if (Config.COORD_SYNCHRONIZE == 2)
 			{
-				dx = _x - player.getInBoatPosition().getX();
-				dy = _y - player.getInBoatPosition().getY();
+				dx = _x - player.getBoatPosition().getX();
+				dy = _y - player.getBoatPosition().getY();
 				// dz = _z - player.getInVehiclePosition().getZ();
 				diffSq = ((dx * dx) + (dy * dy));
 				if (diffSq > 250000)

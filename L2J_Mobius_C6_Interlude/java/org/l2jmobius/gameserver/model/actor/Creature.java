@@ -5541,7 +5541,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		if (distFraction > 1)
 		{
 			// Set the position of the Creature to the destination
-			super.getPosition().setXYZ(m._xDestination, m._yDestination, m._zDestination);
+			super.setXYZ(m._xDestination, m._yDestination, m._zDestination);
 			if (this instanceof BoatInstance)
 			{
 				((BoatInstance) this).updatePeopleInTheBoat(m._xDestination, m._yDestination, m._zDestination);
@@ -5557,7 +5557,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			m._yAccurate += dy * distFraction;
 			
 			// Set the position of the Creature to estimated after parcial move
-			super.getPosition().setXYZ((int) m._xAccurate, (int) m._yAccurate, zPrev + (int) ((dz * distFraction) + 0.5));
+			super.setXYZ((int) m._xAccurate, (int) m._yAccurate, zPrev + (int) ((dz * distFraction) + 0.5));
 			if (this instanceof BoatInstance)
 			{
 				((BoatInstance) this).updatePeopleInTheBoat((int) m._xAccurate, (int) m._yAccurate, zPrev + (int) ((dz * distFraction) + 0.5));
