@@ -1120,14 +1120,6 @@ public class Config
 	public static ClassMasterSettings CLASS_MASTER_SETTINGS;
 	public static boolean ALLOW_REMOTE_CLASS_MASTERS;
 	
-	public static long AUTOSAVE_INITIAL_TIME;
-	public static long AUTOSAVE_DELAY_TIME;
-	public static long CHECK_CONNECTION_INACTIVITY_TIME;
-	public static long CHECK_CONNECTION_INITIAL_TIME;
-	public static long CHECK_CONNECTION_DELAY_TIME;
-	public static long CLEANDB_INITIAL_TIME;
-	public static long CLEANDB_DELAY_TIME;
-	public static long CHECK_TELEPORT_ZOMBIE_DELAY_TIME;
 	public static long DEADLOCKCHECK_INTIAL_TIME;
 	public static long DEADLOCKCHECK_DELAY_TIME;
 	
@@ -3491,14 +3483,6 @@ public class Config
 		{
 			final L2Properties daemonsSettings = new L2Properties(DAEMONS_CONFIG_FILE);
 			
-			AUTOSAVE_INITIAL_TIME = Long.parseLong(daemonsSettings.getProperty("AutoSaveInitial", "300000"));
-			AUTOSAVE_DELAY_TIME = Long.parseLong(daemonsSettings.getProperty("AutoSaveDelay", "900000"));
-			CHECK_CONNECTION_INITIAL_TIME = Long.parseLong(daemonsSettings.getProperty("CheckConnectionInitial", "300000"));
-			CHECK_CONNECTION_DELAY_TIME = Long.parseLong(daemonsSettings.getProperty("CheckConnectionDelay", "900000"));
-			CHECK_CONNECTION_INACTIVITY_TIME = Long.parseLong(daemonsSettings.getProperty("CheckConnectionInactivityTime", "90000"));
-			CLEANDB_INITIAL_TIME = Long.parseLong(daemonsSettings.getProperty("CleanDBInitial", "300000"));
-			CLEANDB_DELAY_TIME = Long.parseLong(daemonsSettings.getProperty("CleanDBDelay", "900000"));
-			CHECK_TELEPORT_ZOMBIE_DELAY_TIME = Long.parseLong(daemonsSettings.getProperty("CheckTeleportZombiesDelay", "90000"));
 			DEADLOCKCHECK_INTIAL_TIME = Long.parseLong(daemonsSettings.getProperty("DeadLockCheck", "0"));
 			DEADLOCKCHECK_DELAY_TIME = Long.parseLong(daemonsSettings.getProperty("DeadLockDelay", "0"));
 		}

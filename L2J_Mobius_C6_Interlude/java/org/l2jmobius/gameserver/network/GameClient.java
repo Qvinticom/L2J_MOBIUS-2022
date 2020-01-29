@@ -115,8 +115,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	private final ArrayBlockingQueue<ReceivablePacket<GameClient>> _packetQueue;
 	private final ReentrantLock _queueLock = new ReentrantLock();
 	
-	private long _last_received_packet_action_time = 0;
-	
 	private int _protocolVersion;
 	
 	public GameClient(MMOConnection<GameClient> con)
@@ -929,9 +927,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 			return;
 		}
 		
-		// save last action time
-		_last_received_packet_action_time = System.currentTimeMillis();
-		
 		try
 		{
 			if (_state == GameClientState.CONNECTED)
@@ -1002,22 +997,9 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		}
 	}
 	
-	/**
-	 * @return the _forcedToClose
-	 */
 	public boolean isForcedToClose()
 	{
 		return _forcedToClose;
-	}
-	
-	public boolean isConnectionAlive()
-	{
-		if ((System.currentTimeMillis() - _last_received_packet_action_time) > Config.CHECK_CONNECTION_INACTIVITY_TIME)
-		{
-			_last_received_packet_action_time = System.currentTimeMillis();
-			return getConnection().isConnected() && !getConnection().isClosed();
-		}
-		return true;
 	}
 	
 	public void setProtocolVersion(int version)

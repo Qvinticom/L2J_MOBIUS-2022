@@ -24,7 +24,6 @@ import org.l2jmobius.commons.database.DatabaseBackup;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.OfflineTradeTable;
 import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
-import org.l2jmobius.gameserver.instancemanager.AutoSaveManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
@@ -302,8 +301,6 @@ public class Shutdown extends Thread
 		catch (Throwable t)
 		{
 		}
-		
-		AutoSaveManager.getInstance().stopAutoSaveManager();
 		
 		// saveData sends messages to exit players, so shutdown selector after it
 		saveData();

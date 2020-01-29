@@ -281,7 +281,6 @@ public class PlayerInstance extends Playable
 	private long _voteTimestamp = 0;
 	private PlayerStatsHolder savedStatus = null;
 	private final long _instanceLoginTime;
-	private long _lastTeleportAction = 0;
 	protected long TOGGLE_USE = 0;
 	public int _activeBoxes = -1;
 	public List<String> _activeBoxeCharacters = new ArrayList<>();
@@ -9387,7 +9386,6 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	@SuppressWarnings("null")
 	private synchronized void storeEffect()
 	{
 		if (!Config.STORE_SKILL_COOLTIME)
@@ -9423,7 +9421,7 @@ public class PlayerInstance extends Playable
 				}
 				storedSkills.add(skillId);
 				
-				if ((effect != null) && effect.getInUse() && !effect.getSkill().isToggle() && !effect.getStackType().equals("BattleForce") && !effect.getStackType().equals("SpellForce") && (effect.getSkill().getSkillType() != SkillType.FORCE_BUFF))
+				if (effect.getInUse() && !effect.getSkill().isToggle() && !effect.getStackType().equals("BattleForce") && !effect.getStackType().equals("SpellForce") && (effect.getSkill().getSkillType() != SkillType.FORCE_BUFF))
 				{
 					statement.setInt(1, getObjectId());
 					statement.setInt(2, skillId);
@@ -17246,33 +17244,6 @@ public class PlayerInstance extends Playable
 		catch (Exception e)
 		{
 			LOGGER.warning("SetSex:  Could not store data:" + e);
-		}
-	}
-	
-	public boolean checkTeleportOverTime()
-	{
-		if (!isTeleporting())
-		{
-			return false;
-		}
-		
-		if ((System.currentTimeMillis() - _lastTeleportAction) > Config.CHECK_TELEPORT_ZOMBIE_DELAY_TIME)
-		{
-			LOGGER.warning("Player " + getName() + " has been in teleport more then " + (Config.CHECK_TELEPORT_ZOMBIE_DELAY_TIME / 1000) + " seconds.. --> Kicking it");
-			
-			return true;
-		}
-		
-		return false;
-	}
-	
-	@Override
-	public void setTeleporting(boolean value)
-	{
-		super.setTeleporting(value);
-		if (value)
-		{
-			_lastTeleportAction = System.currentTimeMillis();
 		}
 	}
 	

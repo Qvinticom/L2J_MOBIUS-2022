@@ -85,7 +85,6 @@ import org.l2jmobius.gameserver.handler.UserCommandHandler;
 import org.l2jmobius.gameserver.handler.VoicedCommandHandler;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.AuctionManager;
-import org.l2jmobius.gameserver.instancemanager.AutoSaveManager;
 import org.l2jmobius.gameserver.instancemanager.AwayManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
@@ -221,11 +220,6 @@ public class GameServer
 		if (Config.ENABLE_CLASS_DAMAGES)
 		{
 			ClassDamageManager.loadConfig();
-		}
-		
-		if (Config.AUTOSAVE_DELAY_TIME > 0)
-		{
-			AutoSaveManager.getInstance().startAutoSaveManager();
 		}
 		
 		Util.printSection("Skills");
