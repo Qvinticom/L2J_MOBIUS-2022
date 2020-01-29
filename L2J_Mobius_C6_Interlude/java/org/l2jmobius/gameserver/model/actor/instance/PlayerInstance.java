@@ -14401,6 +14401,10 @@ public class PlayerInstance extends Playable
 	 */
 	public void setBoat(BoatInstance boat)
 	{
+		if ((boat == null) && (_boat != null))
+		{
+			_boat.removePassenger(this);
+		}
 		_boat = boat;
 	}
 	

@@ -17,8 +17,9 @@
 package org.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.GameTimeController;
@@ -51,7 +52,7 @@ public class BoatInstance extends Creature
 	private BoatPathHolder pathA;
 	private BoatPathHolder pathB;
 	private boolean needOnVehicleCheckLocation = false;
-	private final Map<Integer, PlayerInstance> inboat = new HashMap<>();
+	private final Set<PlayerInstance> passengers = ConcurrentHashMap.newKeySet();
 	
 	public BoatInstance(int objectId, CreatureTemplate template)
 	{
@@ -125,9 +126,20 @@ public class BoatInstance extends Creature
 		return vd;
 	}
 	
+	public void removePassenger(PlayerInstance player)
+	{
+		try
+		{
+			passengers.remove(player);
+		}
+		catch (Exception e)
+		{
+		}
+	}
+	
 	public void updatePeopleInTheBoat(int x, int y, int z)
 	{
-		if (inboat != null)
+		if (passengers != null)
 		{
 			boolean check = false;
 			if ((lastx == -1) || (lasty == -1))
@@ -142,16 +154,20 @@ public class BoatInstance extends Creature
 				lastx = x;
 				lasty = y;
 			}
-			for (int i = 0; i < inboat.size(); i++)
+			for (PlayerInstance player : passengers)
 			{
-				final PlayerInstance player = inboat.get(i);
-				if ((player != null) && player.isInBoat() && (player.getBoat() == this))
+				if (player == null)
+				{
+					continue;
+				}
+				
+				if (player.isInBoat() && (player.getBoat() == this))
 				{
 					player.setXYZ(x, y, z);
 					player.revalidateZone(false);
 				}
 				
-				if (check && needOnVehicleCheckLocation && (player != null))
+				if (check && needOnVehicleCheckLocation)
 				{
 					player.sendPacket(new OnVehicleCheckLocation(this, x, y, z));
 				}
@@ -173,8 +189,7 @@ public class BoatInstance extends Creature
 			final Collection<PlayerInstance> knownPlayers = getKnownList().getKnownPlayers().values();
 			if ((knownPlayers != null) && !knownPlayers.isEmpty())
 			{
-				inboat.clear();
-				int i = 0;
+				passengers.clear();
 				for (PlayerInstance player : knownPlayers)
 				{
 					if (player.isInBoat() && (player.getBoat() == this))
@@ -187,13 +202,11 @@ public class BoatInstance extends Creature
 							final InventoryUpdate iu = new InventoryUpdate();
 							iu.addModifiedItem(it);
 							player.sendPacket(iu);
-							inboat.put(i, player);
-							i++;
+							passengers.add(player);
 						}
 						else if ((it == null) && (pathA.ticketId == 0))
 						{
-							inboat.put(i, player);
-							i++;
+							passengers.add(player);
 						}
 						else
 						{
@@ -209,8 +222,7 @@ public class BoatInstance extends Creature
 			final Collection<PlayerInstance> knownPlayers = getKnownList().getKnownPlayers().values();
 			if ((knownPlayers != null) && !knownPlayers.isEmpty())
 			{
-				inboat.clear();
-				int i = 0;
+				passengers.clear();
 				for (PlayerInstance player : knownPlayers)
 				{
 					if (player.isInBoat() && (player.getBoat() == this))
@@ -223,13 +235,11 @@ public class BoatInstance extends Creature
 							final InventoryUpdate iu = new InventoryUpdate();
 							iu.addModifiedItem(it);
 							player.sendPacket(iu);
-							inboat.put(i, player);
-							i++;
+							passengers.add(player);
 						}
 						else if ((it == null) && (pathB.ticketId == 0))
 						{
-							inboat.put(i, player);
-							i++;
+							passengers.add(player);
 						}
 						else
 						{
