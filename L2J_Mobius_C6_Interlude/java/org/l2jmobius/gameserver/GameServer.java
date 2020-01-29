@@ -514,7 +514,6 @@ public class GameServer
 		
 		Util.printSection("Status");
 		LOGGER.info("Server Loaded in " + ((System.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
-		ServerStatus.getInstance();
 		
 		// Load telnet status
 		Util.printSection("Telnet");
