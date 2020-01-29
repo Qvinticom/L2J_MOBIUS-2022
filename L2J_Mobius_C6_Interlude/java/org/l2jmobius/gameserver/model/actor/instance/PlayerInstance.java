@@ -537,6 +537,7 @@ public class PlayerInstance extends Playable
 	private final HashMap<Integer, Long> confirmDlgRequests = new HashMap<>();
 	private int _currentMultiSellId = -1;
 	private int _partyroom = 0;
+	private Future<?> _autoSaveTask = null;
 	
 	/** The table containing all minimum level needed for each Expertise (None, D, C, B, A, S). */
 	private static final int[] EXPERTISE_LEVELS =
@@ -602,7 +603,6 @@ public class PlayerInstance extends Playable
 		
 		// Add the player in the characters table of the database
 		final boolean ok = player.createDb();
-		
 		if (!ok)
 		{
 			return null;
@@ -921,7 +921,6 @@ public class PlayerInstance extends Playable
 	 */
 	public class HerbTask implements Runnable
 	{
-		
 		/** The _process. */
 		private final String _process;
 		
@@ -8927,6 +8926,8 @@ public class PlayerInstance extends Playable
 			player.refreshOverloaded();
 			
 			player.restoreFriendList();
+			
+			player.startAutoSaveTask();
 		}
 		catch (Exception e)
 		{
@@ -9234,8 +9235,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Update PlayerInstance stats in the characters table of the database.<BR>
-	 * <BR>
+	 * Update PlayerInstance stats in the characters table of the database.
 	 */
 	public synchronized void store()
 	{
@@ -10249,6 +10249,34 @@ public class PlayerInstance extends Playable
 	public int getHennaStatDEX()
 	{
 		return _hennaDEX;
+	}
+	
+	private void startAutoSaveTask()
+	{
+		if ((Config.CHAR_DATA_STORE_INTERVAL > 0) && (_autoSaveTask == null))
+		{
+			_autoSaveTask = ThreadPool.scheduleAtFixedRate(this::autoSave, Config.CHAR_DATA_STORE_INTERVAL, Config.CHAR_DATA_STORE_INTERVAL);
+		}
+	}
+	
+	private void stopAutoSaveTask()
+	{
+		if (_autoSaveTask != null)
+		{
+			_autoSaveTask.cancel(false);
+			_autoSaveTask = null;
+		}
+	}
+	
+	protected void autoSave()
+	{
+		store();
+		
+		if (Config.UPDATE_ITEMS_ON_CHAR_STORE)
+		{
+			_inventory.updateDatabase();
+			getWarehouse().updateDatabase();
+		}
 	}
 	
 	/**
@@ -14713,6 +14741,8 @@ public class PlayerInstance extends Playable
 		// Remove WorldObject object from _allObjects of World
 		World.getInstance().removeObject(this);
 		World.getInstance().removeFromAllPlayers(this); // force remove in case of crash during teleport
+		
+		stopAutoSaveTask();
 	}
 	
 	private class ShortBuffTask implements Runnable

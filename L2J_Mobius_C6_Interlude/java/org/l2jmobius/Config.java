@@ -194,6 +194,10 @@ public class Config
 	public static int DUMP_INTERVAL_SECONDS = 60;
 	public static int DEFAULT_PUNISH;
 	public static int DEFAULT_PUNISH_PARAM;
+	
+	public static int CHAR_DATA_STORE_INTERVAL;
+	public static boolean UPDATE_ITEMS_ON_CHAR_STORE;
+	
 	public static boolean AUTODELETE_INVALID_QUEST_DATA;
 	public static boolean GRIDS_ALWAYS_ON;
 	public static int GRID_NEIGHBOR_TURNON_TIME;
@@ -1631,6 +1635,7 @@ public class Config
 			{
 				LIST_PROTECTED_ITEMS.add(Integer.parseInt(id));
 			}
+			
 			DESTROY_DROPPED_PLAYER_ITEM = Boolean.parseBoolean(generalSettings.getProperty("DestroyPlayerDroppedItem", "false"));
 			DESTROY_EQUIPABLE_PLAYER_ITEM = Boolean.parseBoolean(generalSettings.getProperty("DestroyEquipableItem", "false"));
 			SAVE_DROPPED_ITEM = Boolean.parseBoolean(generalSettings.getProperty("SaveDroppedItem", "false"));
@@ -1686,6 +1691,9 @@ public class Config
 			FORCE_INVENTORY_UPDATE = Boolean.parseBoolean(generalSettings.getProperty("ForceInventoryUpdate", "false"));
 			
 			FORCE_COMPLETE_STATUS_UPDATE = Boolean.parseBoolean(generalSettings.getProperty("ForceCompletePlayerStatusUpdate", "true"));
+			
+			CHAR_DATA_STORE_INTERVAL = Integer.parseInt(generalSettings.getProperty("CharacterDataStoreInterval", "15")) * 60 * 1000;
+			UPDATE_ITEMS_ON_CHAR_STORE = Boolean.parseBoolean(generalSettings.getProperty("UpdateItemsOnCharStore", "false"));
 			
 			AUTODELETE_INVALID_QUEST_DATA = Boolean.parseBoolean(generalSettings.getProperty("AutoDeleteInvalidQuestData", "false"));
 			
