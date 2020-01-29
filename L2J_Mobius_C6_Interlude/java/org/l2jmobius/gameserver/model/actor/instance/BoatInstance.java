@@ -43,19 +43,20 @@ import org.l2jmobius.gameserver.network.serverpackets.VehicleInfo;
 public class BoatInstance extends Creature
 {
 	public float boatSpeed;
+	public VehicleDeparture vd = null;
+	private int lastx = -1;
+	private int lasty = -1;
+	private int cycle = 0;
+	private int runstate = 0;
+	private BoatPathHolder pathA;
+	private BoatPathHolder pathB;
+	private boolean needOnVehicleCheckLocation = false;
+	private final Map<Integer, PlayerInstance> inboat = new HashMap<>();
 	
-	private final String _name;
-	protected BoatPathHolder _t1;
-	protected BoatPathHolder _t2;
-	protected int _cycle = 0;
-	public VehicleDeparture _vd = null;
-	private Map<Integer, PlayerInstance> _inboat;
-	
-	public BoatInstance(int objectId, CreatureTemplate template, String name)
+	public BoatInstance(int objectId, CreatureTemplate template)
 	{
 		super(objectId, template);
 		super.setKnownList(new BoatKnownList(this));
-		_name = name;
 	}
 	
 	public void moveToLocation(int x, int y, int z, float speed)
@@ -101,159 +102,32 @@ public class BoatInstance extends Creature
 		GameTimeController.getInstance().registerMovingObject(this);
 	}
 	
-	class BoatCaptain implements Runnable
-	{
-		private final int _state;
-		private final BoatInstance _boat;
-		
-		public BoatCaptain(int state, BoatInstance instance)
-		{
-			_state = state;
-			_boat = instance;
-		}
-		
-		@Override
-		public void run()
-		{
-			BoatCaptain bc;
-			switch (_state)
-			{
-				case 1:
-				{
-					_boat.say(5);
-					bc = new BoatCaptain(2, _boat);
-					ThreadPool.schedule(bc, 240000);
-					break;
-				}
-				case 2:
-				{
-					_boat.say(1);
-					bc = new BoatCaptain(3, _boat);
-					ThreadPool.schedule(bc, 40000);
-					break;
-				}
-				case 3:
-				{
-					_boat.say(0);
-					bc = new BoatCaptain(4, _boat);
-					ThreadPool.schedule(bc, 20000);
-					break;
-				}
-				case 4:
-				{
-					_boat.say(-1);
-					_boat.begin();
-					break;
-				}
-			}
-		}
-	}
-	
-	class Boatrun implements Runnable
-	{
-		private int _state;
-		private final BoatInstance _boat;
-		
-		public Boatrun(int state, BoatInstance instance)
-		{
-			_state = state;
-			_boat = instance;
-		}
-		
-		@Override
-		public void run()
-		{
-			_boat._vd = null;
-			_boat.needOnVehicleCheckLocation = false;
-			
-			if (_boat._cycle == 1)
-			{
-				final int time = _boat._t1.state(_state, _boat);
-				if (time > 0)
-				{
-					_state++;
-					final Boatrun bc = new Boatrun(_state, _boat);
-					ThreadPool.schedule(bc, time);
-				}
-				else if (time == 0)
-				{
-					_boat._cycle = 2;
-					_boat.say(10);
-					final BoatCaptain bc = new BoatCaptain(1, _boat);
-					ThreadPool.schedule(bc, 300000);
-				}
-				else
-				{
-					_boat.needOnVehicleCheckLocation = true;
-					_state++;
-					_boat._runstate = _state;
-				}
-			}
-			else if (_boat._cycle == 2)
-			{
-				final int time = _boat._t2.state(_state, _boat);
-				if (time > 0)
-				{
-					_state++;
-					final Boatrun bc = new Boatrun(_state, _boat);
-					ThreadPool.schedule(bc, time);
-				}
-				else if (time == 0)
-				{
-					_boat._cycle = 1;
-					_boat.say(10);
-					final BoatCaptain bc = new BoatCaptain(1, _boat);
-					ThreadPool.schedule(bc, 300000);
-				}
-				else
-				{
-					_boat.needOnVehicleCheckLocation = true;
-					_state++;
-					_boat._runstate = _state;
-				}
-			}
-		}
-	}
-	
-	public int _runstate = 0;
-	
 	public void evtArrived()
 	{
-		if (_runstate != 0)
+		if (runstate != 0)
 		{
-			final Boatrun bc = new Boatrun(_runstate, this);
+			final BoatRun bc = new BoatRun(runstate, this);
 			ThreadPool.schedule(bc, 10);
-			_runstate = 0;
+			runstate = 0;
 		}
 	}
 	
 	public void sendVehicleDeparture(PlayerInstance player)
 	{
-		if (_vd != null)
+		if (vd != null)
 		{
-			player.sendPacket(_vd);
+			player.sendPacket(vd);
 		}
 	}
 	
 	public VehicleDeparture getVehicleDeparture()
 	{
-		return _vd;
+		return vd;
 	}
-	
-	public void beginCycle()
-	{
-		say(10);
-		final BoatCaptain bc = new BoatCaptain(1, this);
-		ThreadPool.schedule(bc, 300000);
-	}
-	
-	private int lastx = -1;
-	private int lasty = -1;
-	protected boolean needOnVehicleCheckLocation = false;
 	
 	public void updatePeopleInTheBoat(int x, int y, int z)
 	{
-		if (_inboat != null)
+		if (inboat != null)
 		{
 			boolean check = false;
 			if ((lastx == -1) || (lasty == -1))
@@ -268,9 +142,9 @@ public class BoatInstance extends Creature
 				lastx = x;
 				lasty = y;
 			}
-			for (int i = 0; i < _inboat.size(); i++)
+			for (int i = 0; i < inboat.size(); i++)
 			{
-				final PlayerInstance player = _inboat.get(i);
+				final PlayerInstance player = inboat.get(i);
 				if ((player != null) && player.isInBoat() && (player.getBoat() == this))
 				{
 					player.getPosition().setXYZ(x, y, z);
@@ -285,85 +159,90 @@ public class BoatInstance extends Creature
 		}
 	}
 	
-	public void begin()
+	private void beginCycle()
 	{
-		if (_cycle == 1)
+		say(10);
+		final BoatCaptain bc = new BoatCaptain(1, this);
+		ThreadPool.schedule(bc, 300000);
+	}
+	
+	private void begin()
+	{
+		if (cycle == 1)
 		{
 			final Collection<PlayerInstance> knownPlayers = getKnownList().getKnownPlayers().values();
 			if ((knownPlayers != null) && !knownPlayers.isEmpty())
 			{
-				_inboat = new HashMap<>();
+				inboat.clear();
 				int i = 0;
 				for (PlayerInstance player : knownPlayers)
 				{
 					if (player.isInBoat() && (player.getBoat() == this))
 					{
 						ItemInstance it;
-						it = player.getInventory().getItemByItemId(_t1.ticketId);
+						it = player.getInventory().getItemByItemId(pathA.ticketId);
 						if ((it != null) && (it.getCount() >= 1))
 						{
 							player.getInventory().destroyItem("Boat", it.getObjectId(), 1, player, this);
 							final InventoryUpdate iu = new InventoryUpdate();
 							iu.addModifiedItem(it);
 							player.sendPacket(iu);
-							_inboat.put(i, player);
+							inboat.put(i, player);
 							i++;
 						}
-						else if ((it == null) && (_t1.ticketId == 0))
+						else if ((it == null) && (pathA.ticketId == 0))
 						{
-							_inboat.put(i, player);
+							inboat.put(i, player);
 							i++;
 						}
 						else
 						{
-							player.teleToLocation(_t1.ntx, _t1.nty, _t1.ntz, false);
+							player.teleToLocation(pathA.ntx, pathA.nty, pathA.ntz, false);
 						}
 					}
 				}
 			}
-			final Boatrun bc = new Boatrun(0, this);
-			ThreadPool.schedule(bc, 0);
+			ThreadPool.execute(new BoatRun(0, this));
 		}
-		else if (_cycle == 2)
+		else if (cycle == 2)
 		{
 			final Collection<PlayerInstance> knownPlayers = getKnownList().getKnownPlayers().values();
 			if ((knownPlayers != null) && !knownPlayers.isEmpty())
 			{
-				_inboat = new HashMap<>();
+				inboat.clear();
 				int i = 0;
 				for (PlayerInstance player : knownPlayers)
 				{
 					if (player.isInBoat() && (player.getBoat() == this))
 					{
 						ItemInstance it;
-						it = player.getInventory().getItemByItemId(_t2.ticketId);
+						it = player.getInventory().getItemByItemId(pathB.ticketId);
 						if ((it != null) && (it.getCount() >= 1))
 						{
 							player.getInventory().destroyItem("Boat", it.getObjectId(), 1, player, this);
 							final InventoryUpdate iu = new InventoryUpdate();
 							iu.addModifiedItem(it);
 							player.sendPacket(iu);
-							_inboat.put(i, player);
+							inboat.put(i, player);
 							i++;
 						}
-						else if ((it == null) && (_t2.ticketId == 0))
+						else if ((it == null) && (pathB.ticketId == 0))
 						{
-							_inboat.put(i, player);
+							inboat.put(i, player);
 							i++;
 						}
 						else
 						{
-							player.teleToLocation(_t2.ntx, _t2.nty, _t2.ntz, false);
+							player.teleToLocation(pathB.ntx, pathB.nty, pathB.ntz, false);
 						}
 					}
 				}
 			}
-			final Boatrun bc = new Boatrun(0, this);
-			ThreadPool.schedule(bc, 0);
+			ThreadPool.execute(new BoatRun(0, this));
 		}
 	}
 	
-	public void say(int id)
+	private void say(int id)
 	{
 		final Collection<PlayerInstance> knownPlayers = getKnownList().getKnownPlayers().values();
 		CreatureSay sm;
@@ -372,13 +251,13 @@ public class BoatInstance extends Creature
 		{
 			case 10:
 			{
-				if (_cycle == 1)
+				if (cycle == 1)
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, _t1.npc, _t1.sysmess10);
+					sm = new CreatureSay(0, Say2.SHOUT, pathA.npc, pathA.sysmess10);
 				}
 				else
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, _t2.npc, _t2.sysmess10);
+					sm = new CreatureSay(0, Say2.SHOUT, pathB.npc, pathB.sysmess10);
 				}
 				ps = new PlaySound(0, "itemsound.ship_arrival_departure", this);
 				if ((knownPlayers == null) || knownPlayers.isEmpty())
@@ -396,13 +275,13 @@ public class BoatInstance extends Creature
 			}
 			case 5:
 			{
-				if (_cycle == 1)
+				if (cycle == 1)
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, _t1.npc, _t1.sysmess5);
+					sm = new CreatureSay(0, Say2.SHOUT, pathA.npc, pathA.sysmess5);
 				}
 				else
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, _t2.npc, _t2.sysmess5);
+					sm = new CreatureSay(0, Say2.SHOUT, pathB.npc, pathB.sysmess5);
 				}
 				ps = new PlaySound(0, "itemsound.ship_5min", this);
 				if ((knownPlayers == null) || knownPlayers.isEmpty())
@@ -418,13 +297,13 @@ public class BoatInstance extends Creature
 			}
 			case 1:
 			{
-				if (_cycle == 1)
+				if (cycle == 1)
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, _t1.npc, _t1.sysmess1);
+					sm = new CreatureSay(0, Say2.SHOUT, pathA.npc, pathA.sysmess1);
 				}
 				else
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, _t2.npc, _t2.sysmess1);
+					sm = new CreatureSay(0, Say2.SHOUT, pathB.npc, pathB.sysmess1);
 				}
 				ps = new PlaySound(0, "itemsound.ship_1min", this);
 				if ((knownPlayers == null) || knownPlayers.isEmpty())
@@ -440,13 +319,13 @@ public class BoatInstance extends Creature
 			}
 			case 0:
 			{
-				if (_cycle == 1)
+				if (cycle == 1)
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, _t1.npc, _t1.sysmess0);
+					sm = new CreatureSay(0, Say2.SHOUT, pathA.npc, pathA.sysmess0);
 				}
 				else
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, _t2.npc, _t2.sysmess0);
+					sm = new CreatureSay(0, Say2.SHOUT, pathB.npc, pathB.sysmess0);
 				}
 				if ((knownPlayers == null) || knownPlayers.isEmpty())
 				{
@@ -460,13 +339,13 @@ public class BoatInstance extends Creature
 			}
 			case -1:
 			{
-				if (_cycle == 1)
+				if (cycle == 1)
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, _t1.npc, _t1.sysmessb);
+					sm = new CreatureSay(0, Say2.SHOUT, pathA.npc, pathA.sysmessb);
 				}
 				else
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, _t2.npc, _t2.sysmessb);
+					sm = new CreatureSay(0, Say2.SHOUT, pathB.npc, pathB.sysmessb);
 				}
 				ps = new PlaySound(0, "itemsound.ship_arrival_departure", this);
 				for (PlayerInstance player : knownPlayers)
@@ -483,28 +362,28 @@ public class BoatInstance extends Creature
 	
 	public void spawn()
 	{
-		final Collection<PlayerInstance> knownPlayers = getKnownList().getKnownPlayers().values();
-		_cycle = 1;
+		cycle = 1;
 		beginCycle();
+		final Collection<PlayerInstance> knownPlayers = getKnownList().getKnownPlayers().values();
 		if ((knownPlayers == null) || knownPlayers.isEmpty())
 		{
 			return;
 		}
-		final VehicleInfo vi = new VehicleInfo(this);
+		final VehicleInfo info = new VehicleInfo(this);
 		for (PlayerInstance player : knownPlayers)
 		{
-			player.sendPacket(vi);
+			player.sendPacket(info);
 		}
 	}
 	
-	public void setPathA(int idWaypoint1, int idWTicket1, int ntx1, int nty1, int ntz1, String idnpc1, String sysmess10, String sysmess5, String sysmess1, String sysmess0, String sysmessb, Map<Integer, BoatPoint> path)
+	public void setPathA(int pathId, int ticketId, int ntx, int nty, int ntz, String announcer, String sysmess10, String sysmess5, String sysmess1, String sysmess0, String sysmessb, Map<Integer, BoatPoint> path)
 	{
-		_t1 = new BoatPathHolder(idWaypoint1, idWTicket1, ntx1, nty1, ntz1, idnpc1, sysmess10, sysmess5, sysmess1, sysmess0, sysmessb, _name, path);
+		pathA = new BoatPathHolder(pathId, ticketId, ntx, nty, ntz, announcer, sysmess10, sysmess5, sysmess1, sysmess0, sysmessb, path);
 	}
 	
-	public void setPathB(int idWaypoint1, int idWTicket1, int ntx1, int nty1, int ntz1, String idnpc1, String sysmess10, String sysmess5, String sysmess1, String sysmess0, String sysmessb, Map<Integer, BoatPoint> path)
+	public void setPathB(int pathId, int ticketId, int ntx, int nty, int ntz, String announcer, String sysmess10, String sysmess5, String sysmess1, String sysmess0, String sysmessb, Map<Integer, BoatPoint> path)
 	{
-		_t2 = new BoatPathHolder(idWaypoint1, idWTicket1, ntx1, nty1, ntz1, idnpc1, sysmess10, sysmess5, sysmess1, sysmess0, sysmessb, _name, path);
+		pathB = new BoatPathHolder(pathId, ticketId, ntx, nty, ntz, announcer, sysmess10, sysmess5, sysmess1, sysmess0, sysmessb, path);
 	}
 	
 	@Override
@@ -553,5 +432,119 @@ public class BoatInstance extends Creature
 	public boolean isBoat()
 	{
 		return true;
+	}
+	
+	private class BoatCaptain implements Runnable
+	{
+		private final int _state;
+		private final BoatInstance _boat;
+		
+		public BoatCaptain(int state, BoatInstance instance)
+		{
+			_state = state;
+			_boat = instance;
+		}
+		
+		@Override
+		public void run()
+		{
+			BoatCaptain bc;
+			switch (_state)
+			{
+				case 1:
+				{
+					_boat.say(5);
+					bc = new BoatCaptain(2, _boat);
+					ThreadPool.schedule(bc, 240000);
+					break;
+				}
+				case 2:
+				{
+					_boat.say(1);
+					bc = new BoatCaptain(3, _boat);
+					ThreadPool.schedule(bc, 40000);
+					break;
+				}
+				case 3:
+				{
+					_boat.say(0);
+					bc = new BoatCaptain(4, _boat);
+					ThreadPool.schedule(bc, 20000);
+					break;
+				}
+				case 4:
+				{
+					_boat.say(-1);
+					_boat.begin();
+					break;
+				}
+			}
+		}
+	}
+	
+	private class BoatRun implements Runnable
+	{
+		private int _state;
+		private final BoatInstance _boat;
+		
+		public BoatRun(int state, BoatInstance instance)
+		{
+			_state = state;
+			_boat = instance;
+		}
+		
+		@Override
+		public void run()
+		{
+			_boat.vd = null;
+			_boat.needOnVehicleCheckLocation = false;
+			
+			if (_boat.cycle == 1)
+			{
+				final int time = _boat.pathA.state(_state, _boat);
+				if (time > 0)
+				{
+					_state++;
+					final BoatRun bc = new BoatRun(_state, _boat);
+					ThreadPool.schedule(bc, time);
+				}
+				else if (time == 0)
+				{
+					_boat.cycle = 2;
+					_boat.say(10);
+					final BoatCaptain bc = new BoatCaptain(1, _boat);
+					ThreadPool.schedule(bc, 300000);
+				}
+				else
+				{
+					_boat.needOnVehicleCheckLocation = true;
+					_state++;
+					_boat.runstate = _state;
+				}
+			}
+			else if (_boat.cycle == 2)
+			{
+				final int time = _boat.pathB.state(_state, _boat);
+				if (time > 0)
+				{
+					_state++;
+					final BoatRun bc = new BoatRun(_state, _boat);
+					ThreadPool.schedule(bc, time);
+				}
+				else if (time == 0)
+				{
+					_boat.cycle = 1;
+					_boat.say(10);
+					final BoatCaptain bc = new BoatCaptain(1, _boat);
+					ThreadPool.schedule(bc, 300000);
+				}
+				else
+				{
+					_boat.needOnVehicleCheckLocation = true;
+					_state++;
+					_boat.runstate = _state;
+				}
+			}
+		}
 	}
 }

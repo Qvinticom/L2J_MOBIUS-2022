@@ -41,7 +41,6 @@ public class BoatData implements IXmlReader
 	private static final Logger LOGGER = Logger.getLogger(BoatData.class.getName());
 	
 	private final Map<Integer, BoatInstance> _boats = new HashMap<>();
-	private final Map<Integer, Map<Integer, BoatPoint>> _paths = new HashMap<>();
 	
 	protected BoatData()
 	{
@@ -52,10 +51,7 @@ public class BoatData implements IXmlReader
 	public void load()
 	{
 		_boats.clear();
-		_paths.clear();
 		parseDatapackFile("data/Boats.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _boats.size() + " boats.");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _paths.size() + " paths.");
 	}
 	
 	@Override
@@ -71,6 +67,7 @@ public class BoatData implements IXmlReader
 			int id;
 			int index;
 			final StatSet set = new StatSet();
+			final Map<Integer, Map<Integer, BoatPoint>> paths = new HashMap<>();
 			
 			final Node n = doc.getFirstChild();
 			for (Node node = n.getFirstChild(); node != null; node = node.getNextSibling())
@@ -84,7 +81,6 @@ public class BoatData implements IXmlReader
 						set.set(attr.getNodeName(), attr.getNodeValue());
 					}
 					
-					final String name = set.getString("name");
 					final StatSet npcDat = new StatSet();
 					npcDat.set("npcId", set.getInt("id"));
 					npcDat.set("level", 0);
@@ -119,7 +115,7 @@ public class BoatData implements IXmlReader
 					npcDat.set("armor", 0);
 					npcDat.set("baseWalkSpd", 0);
 					npcDat.set("baseRunSpd", 0);
-					npcDat.set("name", name);
+					npcDat.set("name", set.getString("name"));
 					npcDat.set("baseHpMax", 50000);
 					npcDat.set("baseHpReg", 3.e-3f);
 					npcDat.set("baseMpReg", 3.e-3f);
@@ -127,11 +123,11 @@ public class BoatData implements IXmlReader
 					npcDat.set("baseMDef", 100);
 					
 					final CreatureTemplate template = new CreatureTemplate(npcDat);
-					final BoatInstance boat = new BoatInstance(IdFactory.getInstance().getNextId(), template, name);
+					final BoatInstance boat = new BoatInstance(IdFactory.getInstance().getNextId(), template);
 					boat.getPosition().setHeading(set.getInt("heading"));
 					boat.setXYZ(set.getInt("spawnX"), set.getInt("spawnY"), set.getInt("spawnZ"));
-					boat.setPathA(set.getInt("pathIdA"), set.getInt("ticketA"), set.getInt("xTeleNoTicketA"), set.getInt("yTeleNoTicketA"), set.getInt("zTeleNoTicketA"), set.getString("announcerA"), set.getString("message10A"), set.getString("message5A"), set.getString("message1A"), set.getString("message0A"), set.getString("messageBeginA"), _paths.get(set.getInt("pathIdA")));
-					boat.setPathB(set.getInt("pathIdB"), set.getInt("ticketB"), set.getInt("xTeleNoTicketB"), set.getInt("yTeleNoTicketB"), set.getInt("zTeleNoTicketB"), set.getString("announcerB"), set.getString("message10B"), set.getString("message5B"), set.getString("message1B"), set.getString("message0B"), set.getString("messageBeginB"), _paths.get(set.getInt("pathIdB")));
+					boat.setPathA(set.getInt("pathIdA"), set.getInt("ticketA"), set.getInt("xTeleNoTicketA"), set.getInt("yTeleNoTicketA"), set.getInt("zTeleNoTicketA"), set.getString("announcerA"), set.getString("message10A"), set.getString("message5A"), set.getString("message1A"), set.getString("message0A"), set.getString("messageBeginA"), paths.get(set.getInt("pathIdA")));
+					boat.setPathB(set.getInt("pathIdB"), set.getInt("ticketB"), set.getInt("xTeleNoTicketB"), set.getInt("yTeleNoTicketB"), set.getInt("zTeleNoTicketB"), set.getString("announcerB"), set.getString("message10B"), set.getString("message5B"), set.getString("message1B"), set.getString("message0B"), set.getString("messageBeginB"), paths.get(set.getInt("pathIdB")));
 					boat.spawn();
 					
 					_boats.put(boat.getObjectId(), boat);
@@ -140,7 +136,7 @@ public class BoatData implements IXmlReader
 				{
 					index = 0;
 					id = Integer.parseInt(node.getAttributes().getNamedItem("id").getNodeValue());
-					_paths.put(id, new HashMap<Integer, BoatPoint>());
+					paths.put(id, new HashMap<Integer, BoatPoint>());
 					for (Node b = node.getFirstChild(); b != null; b = b.getNextSibling())
 					{
 						if (!"point".equalsIgnoreCase(b.getNodeName()))
@@ -163,10 +159,13 @@ public class BoatData implements IXmlReader
 						point.z = set.getInt("z");
 						point.time = set.getInt("time");
 						
-						_paths.get(id).put(index++, point);
+						paths.get(id).put(index++, point);
 					}
 				}
 			}
+			
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _boats.size() + " boats.");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + paths.size() + " paths.");
 		}
 		catch (Exception e)
 		{
@@ -177,11 +176,6 @@ public class BoatData implements IXmlReader
 	public BoatInstance getBoat(int boatId)
 	{
 		return _boats.get(boatId);
-	}
-	
-	public Map<Integer, BoatPoint> getBoatPath(int pathId)
-	{
-		return _paths.get(pathId);
 	}
 	
 	public static final BoatData getInstance()

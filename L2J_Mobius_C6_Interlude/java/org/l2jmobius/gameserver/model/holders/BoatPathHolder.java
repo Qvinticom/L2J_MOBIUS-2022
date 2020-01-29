@@ -37,7 +37,6 @@ public class BoatPathHolder
 	public int ntx;
 	public int nty;
 	public int ntz;
-	public String boatName;
 	public String npc;
 	public String sysmess10;
 	public String sysmess5;
@@ -55,7 +54,7 @@ public class BoatPathHolder
 		public int time;
 	}
 	
-	public BoatPathHolder(int pathId, int pTicketId, int pNtx, int pNty, int pNtz, String pNpc, String pSysmess10, String pSysmess5, String pSysmess1, String pSysmess0, String pSysmessb, String pBoatname, Map<Integer, BoatPoint> path)
+	public BoatPathHolder(int pathId, int pTicketId, int pNtx, int pNty, int pNtz, String pNpc, String pSysmess10, String pSysmess5, String pSysmess1, String pSysmess0, String pSysmessb, Map<Integer, BoatPoint> path)
 	{
 		ticketId = pTicketId;
 		ntx = pNtx;
@@ -67,7 +66,6 @@ public class BoatPathHolder
 		sysmess1 = pSysmess1;
 		sysmessb = pSysmessb;
 		sysmess0 = pSysmess0;
-		boatName = pBoatname;
 		_path = path;
 		_max = _path.size();
 	}
@@ -85,7 +83,7 @@ public class BoatPathHolder
 			
 			boat.getPosition().setHeading((int) (Math.atan2(-sin, -cos) * 10430.378350470452724949566316381) + 32768);
 			
-			boat._vd = new VehicleDeparture(boat, path.speed1, path.speed2, path.x, path.y, path.z);
+			boat.vd = new VehicleDeparture(boat, path.speed1, path.speed2, path.x, path.y, path.z);
 			boat.boatSpeed = path.speed1;
 			boat.moveToLocation(path.x, path.y, path.z, path.speed1);
 			final Collection<PlayerInstance> knownPlayers = boat.getKnownList().getKnownPlayers().values();
@@ -95,7 +93,7 @@ public class BoatPathHolder
 			}
 			for (PlayerInstance player : knownPlayers)
 			{
-				player.sendPacket(boat._vd);
+				player.sendPacket(boat.vd);
 			}
 			if (path.time == 0)
 			{
