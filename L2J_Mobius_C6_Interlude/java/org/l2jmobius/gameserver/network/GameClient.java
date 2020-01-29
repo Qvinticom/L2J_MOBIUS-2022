@@ -43,7 +43,6 @@ import org.l2jmobius.gameserver.LoginServerThread.SessionKey;
 import org.l2jmobius.gameserver.datatables.OfflineTradeTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
-import org.l2jmobius.gameserver.instancemanager.AwayManager;
 import org.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.World;
@@ -687,11 +686,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 						player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
 					}
 					
-					if (player.isAway())
-					{
-						AwayManager.getInstance().extraBack(player);
-					}
-					
 					if (Olympiad.getInstance().isRegistered(player))
 					{
 						Olympiad.getInstance().unRegisterNoble(player);
@@ -770,11 +764,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 					if (player.isFlying())
 					{
 						player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
-					}
-					
-					if (player.isAway())
-					{
-						AwayManager.getInstance().extraBack(player);
 					}
 					
 					if (Olympiad.getInstance().isRegistered(player))

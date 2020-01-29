@@ -68,13 +68,13 @@ public class RequestUnEquipItem extends GameClientPacket
 		}
 		
 		// Prevent player from unequipping items in special conditions
-		if (player.isStunned() || player.isConfused() || player.isAway() || player.isParalyzed() || player.isSleeping() || player.isAlikeDead())
+		if (player.isStunned() || player.isConfused() || player.isParalyzed() || player.isSleeping() || player.isAlikeDead())
 		{
 			player.sendMessage("Your status does not allow you to do that.");
 			return;
 		}
 		
-		if (/* activeChar.isAttackingNow() || */player.isCastingNow() || player.isCastingPotionNow())
+		if (player.isCastingNow() || player.isCastingPotionNow())
 		{
 			return;
 		}

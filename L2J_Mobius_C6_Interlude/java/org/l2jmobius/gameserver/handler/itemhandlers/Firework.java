@@ -79,12 +79,6 @@ public class Firework implements IItemHandler
 			return;
 		}
 		
-		if (player.isAway())
-		{
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
 		if (player.isConfused())
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);

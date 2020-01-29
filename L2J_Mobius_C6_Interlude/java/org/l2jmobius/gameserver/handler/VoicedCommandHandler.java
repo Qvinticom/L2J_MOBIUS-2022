@@ -21,7 +21,6 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.handler.voicedcommandhandlers.AwayCmd;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.BankingCmd;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.CTFCmd;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.DMCmd;
@@ -71,11 +70,6 @@ public class VoicedCommandHandler
 		}
 		
 		registerVoicedCommandHandler(new StatsCmd());
-		
-		if (Config.ALLOW_AWAY_STATUS)
-		{
-			registerVoicedCommandHandler(new AwayCmd());
-		}
 		
 		if (Config.ALLOW_FARM1_COMMAND || Config.ALLOW_FARM2_COMMAND || Config.ALLOW_PVP1_COMMAND || Config.ALLOW_PVP2_COMMAND)
 		{

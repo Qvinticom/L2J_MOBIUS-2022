@@ -94,7 +94,7 @@ public class CustomPotions implements IItemHandler
 		if (skill != null)
 		{
 			player.doCast(skill);
-			if (((!player.isSitting() && !player.isParalyzed() && !player.isAway() && !player.isFakeDeath()) || skill.isPotion()))
+			if (((!player.isSitting() && !player.isParalyzed() && !player.isFakeDeath()) || skill.isPotion()))
 			{
 				return true;
 			}

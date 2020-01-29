@@ -88,7 +88,6 @@ public class Config
 	private static final String EVENT_TVT_CONFIG_FILE = "./config/events/TvT.ini";
 	private static final String EVENT_TW_CONFIG_FILE = "./config/events/TW.ini";
 	// custom
-	private static final String AWAY_CONFIG_FILE = "./config/custom/Away.ini";
 	private static final String BANK_CONFIG_FILE = "./config/custom/Bank.ini";
 	private static final String CHAMPION_CONFIG_FILE = "./config/custom/Champion.ini";
 	private static final String MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE = "./config/custom/MerchantZeroSellPrice.ini";
@@ -570,13 +569,6 @@ public class Config
 	public static double ALT_GAME_CREATION_XP_RATE;
 	public static double ALT_GAME_CREATION_SP_RATE;
 	public static boolean ALT_BLACKSMITH_USE_RECIPES;
-	
-	public static boolean ALLOW_AWAY_STATUS;
-	public static int AWAY_TIMER;
-	public static int BACK_TIMER;
-	public static int AWAY_TITLE_COLOR;
-	public static boolean AWAY_PLAYER_TAKE_AGGRO;
-	public static boolean AWAY_PEACE_ZONE;
 	
 	public static boolean BANKING_SYSTEM_ENABLED;
 	public static int BANKING_SYSTEM_GOLDBARS;
@@ -2001,7 +1993,7 @@ public class Config
 		}
 	}
 	
-	public static void loadREBIRTHConfig()
+	public static void loadRebirthConfig()
 	{
 		try
 		{
@@ -2077,31 +2069,6 @@ public class Config
 		{
 			e.printStackTrace();
 			throw new Error("Failed to Load " + CRAFTING_CONFIG_FILE + " File.");
-		}
-	}
-	
-	public static void loadAWAYConfig()
-	{
-		try
-		{
-			final Properties AWAYSettings = new Properties();
-			final InputStream is = new FileInputStream(new File(AWAY_CONFIG_FILE));
-			AWAYSettings.load(is);
-			is.close();
-			
-			/** Away System **/
-			ALLOW_AWAY_STATUS = Boolean.parseBoolean(AWAYSettings.getProperty("AllowAwayStatus", "false"));
-			AWAY_PLAYER_TAKE_AGGRO = Boolean.parseBoolean(AWAYSettings.getProperty("AwayPlayerTakeAggro", "false"));
-			AWAY_TITLE_COLOR = Integer.decode("0x" + AWAYSettings.getProperty("AwayTitleColor", "0000FF"));
-			AWAY_TIMER = Integer.parseInt(AWAYSettings.getProperty("AwayTimer", "30"));
-			BACK_TIMER = Integer.parseInt(AWAYSettings.getProperty("BackTimer", "30"));
-			AWAY_PEACE_ZONE = Boolean.parseBoolean(AWAYSettings.getProperty("AwayOnlyInPeaceZone", "false"));
-			
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-			throw new Error("Failed to Load " + AWAY_CONFIG_FILE + " File.");
 		}
 	}
 	
@@ -3844,15 +3811,14 @@ public class Config
 			loadFloodConfig();
 			loadPOtherConfig();
 			
-			// Geo&path
+			// Geoengine
 			loadgeodataConfig();
 			
 			// Custom
 			loadChampionConfig();
 			loadMerchantZeroPriceConfig();
 			loadWeddingConfig();
-			loadREBIRTHConfig();
-			loadAWAYConfig();
+			loadRebirthConfig();
 			loadBankingConfig();
 			loadBufferConfig();
 			loadPCBPointConfig();

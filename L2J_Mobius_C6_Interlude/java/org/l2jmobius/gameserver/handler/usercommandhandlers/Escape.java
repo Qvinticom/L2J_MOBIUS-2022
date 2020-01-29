@@ -117,7 +117,7 @@ public class Escape implements IUserCommandHandler
 		}
 		
 		// Check player status.
-		if (player.isCastingNow() || player.isMovementDisabled() || player.isMuted() || player.isAlikeDead() || player.isInOlympiadMode() || player.isAwaying())
+		if (player.isCastingNow() || player.isMovementDisabled() || player.isMuted() || player.isAlikeDead() || player.isInOlympiadMode())
 		{
 			return false;
 		}

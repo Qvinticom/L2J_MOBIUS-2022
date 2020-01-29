@@ -85,7 +85,6 @@ import org.l2jmobius.gameserver.handler.UserCommandHandler;
 import org.l2jmobius.gameserver.handler.VoicedCommandHandler;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.AuctionManager;
-import org.l2jmobius.gameserver.instancemanager.AwayManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
@@ -420,28 +419,14 @@ public class GameServer
 		
 		LOGGER.info("IdFactory: Free ObjectID's remaining: " + IdFactory.getInstance().size());
 		
-		Util.printSection("Custom Mods");
-		
-		if (Config.L2JMOD_ALLOW_WEDDING || Config.ALLOW_AWAY_STATUS || Config.PCB_ENABLE)
+		if (Config.L2JMOD_ALLOW_WEDDING)
 		{
-			if (Config.L2JMOD_ALLOW_WEDDING)
-			{
-				CoupleManager.getInstance();
-			}
-			
-			if (Config.ALLOW_AWAY_STATUS)
-			{
-				AwayManager.getInstance();
-			}
-			
-			if (Config.PCB_ENABLE)
-			{
-				ThreadPool.scheduleAtFixedRate(PcPoint.getInstance(), Config.PCB_INTERVAL * 1000, Config.PCB_INTERVAL * 1000);
-			}
+			CoupleManager.getInstance();
 		}
-		else
+		
+		if (Config.PCB_ENABLE)
 		{
-			LOGGER.info("All custom mods are Disabled.");
+			ThreadPool.scheduleAtFixedRate(PcPoint.getInstance(), Config.PCB_INTERVAL * 1000, Config.PCB_INTERVAL * 1000);
 		}
 		
 		Util.printSection("EventManager");

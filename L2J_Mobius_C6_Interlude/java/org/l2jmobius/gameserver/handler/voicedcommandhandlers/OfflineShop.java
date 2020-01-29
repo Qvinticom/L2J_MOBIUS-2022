@@ -81,12 +81,6 @@ public class OfflineShop implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (player.isAway())
-		{
-			player.sendMessage("You can't restart in Away mode.");
-			return false;
-		}
-		
 		player.getInventory().updateDatabase();
 		
 		if (AttackStanceTaskManager.getInstance().getAttackStanceTask(player) && (!player.isGM() || !Config.GM_RESTART_FIGHTING))

@@ -48,14 +48,8 @@ public class Logout extends GameClientPacket
 		
 		if (player.isInFunEvent() && !player.isGM())
 		{
-			player.sendMessage("You cannot Logout while in registered in an Event.");
+			player.sendMessage("You cannot logout while in registered in an event.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		if (player.isAway())
-		{
-			player.sendMessage("You can't restart in Away mode.");
 			return;
 		}
 		
@@ -71,7 +65,7 @@ public class Logout extends GameClientPacket
 		// Dont allow leaving if player is in combat
 		if (player.isInCombat() && !player.isGM())
 		{
-			player.sendMessage("You cannot Logout while is in Combat mode.");
+			player.sendMessage("You cannot logout while in combat mode.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -79,7 +73,7 @@ public class Logout extends GameClientPacket
 		// Dont allow leaving if player is teleporting
 		if (player.isTeleporting() && !player.isGM())
 		{
-			player.sendMessage("You cannot Logout while is Teleporting.");
+			player.sendMessage("You cannot logout while teleporting.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -102,14 +96,14 @@ public class Logout extends GameClientPacket
 		{
 			if (SevenSignsFestival.getInstance().isFestivalInitialized())
 			{
-				player.sendMessage("You cannot Logout while you are a participant in a Festival.");
+				player.sendMessage("You cannot logout while you are a participant in a festival.");
 				return;
 			}
 			
 			final Party playerParty = player.getParty();
 			if (playerParty != null)
 			{
-				player.getParty().broadcastToPartyMembers(SystemMessage.sendString(player.getName() + " has been removed from the upcoming Festival."));
+				player.getParty().broadcastToPartyMembers(SystemMessage.sendString(player.getName() + " has been removed from the upcoming festival."));
 			}
 		}
 		

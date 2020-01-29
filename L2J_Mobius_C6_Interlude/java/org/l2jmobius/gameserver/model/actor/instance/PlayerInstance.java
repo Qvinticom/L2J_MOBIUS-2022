@@ -313,8 +313,6 @@ public class PlayerInstance extends Playable
 	private boolean _isIn7sDungeon = false;
 	private int _heroConsecutiveKillCount = 0;
 	private boolean _isPvpHero = false;
-	private boolean _awaying = false;
-	private boolean _isAway = false;
 	public int _originalTitleColorAway;
 	public String _originalTitleAway;
 	private boolean _isAio = false;
@@ -3481,10 +3479,6 @@ public class PlayerInstance extends Playable
 		else if (VIP._sitForced && _inEventVIP)
 		{
 			sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
-		}
-		else if (isAway())
-		{
-			sendMessage("You can't stand up if your Status is Away.");
 		}
 		else if (_waitTypeSitting && !isInStoreMode() && !isAlikeDead())
 		{
@@ -12329,24 +12323,6 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Checks if is away.
-	 * @return true, if is away
-	 */
-	public boolean isAway()
-	{
-		return _isAway;
-	}
-	
-	/**
-	 * Sets the checks if is away.
-	 * @param value the new checks if is away
-	 */
-	public void setAway(boolean value)
-	{
-		_isAway = value;
-	}
-	
-	/**
 	 * Sets the checks if is in olympiad mode.
 	 * @param value the new checks if is in olympiad mode
 	 */
@@ -16702,24 +16678,6 @@ public class PlayerInstance extends Playable
 		final double dz = (z - _lastPartyPosition.getZ());
 		
 		return (int) Math.sqrt((dx * dx) + (dy * dy) + (dz * dz));
-	}
-	
-	/**
-	 * Checks if is awaying.
-	 * @return the _awaying
-	 */
-	public boolean isAwaying()
-	{
-		return _awaying;
-	}
-	
-	/**
-	 * Sets the _awaying.
-	 * @param awaying the _awaying to set
-	 */
-	public void setAwaying(boolean awaying)
-	{
-		_awaying = awaying;
 	}
 	
 	/**

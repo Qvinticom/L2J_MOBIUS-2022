@@ -116,7 +116,7 @@ public class UseItem extends GameClientPacket
 		{
 			return;
 		}
-		if (player.isStunned() || player.isConfused() || player.isAway() || player.isParalyzed() || player.isSleeping())
+		if (player.isStunned() || player.isConfused() || player.isParalyzed() || player.isSleeping())
 		{
 			player.sendMessage("You cannot use items right now.");
 			return;

@@ -238,10 +238,6 @@ public class Say2 extends GameClientPacket
 				}
 				if (!receiver.getBlockList().isInBlockList(player) || player.isGM())
 				{
-					if (receiver.isAway())
-					{
-						player.sendMessage("Player is Away try again later.");
-					}
 					if (Config.JAIL_DISABLE_CHAT && receiver.isInJail())
 					{
 						player.sendMessage("Player is in jail.");

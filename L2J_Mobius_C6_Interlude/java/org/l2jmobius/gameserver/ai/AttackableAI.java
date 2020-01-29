@@ -202,12 +202,6 @@ public class AttackableAI extends CreatureAI
 				return false;
 			}
 			
-			// check player is in away mod
-			if (((PlayerInstance) target).isAway() && !Config.AWAY_PLAYER_TAKE_AGGRO)
-			{
-				return false;
-			}
-			
 			if (target.isInParty() && target.getParty().isInDimensionalRift())
 			{
 				final byte riftType = target.getParty().getDimensionalRift().getType();
