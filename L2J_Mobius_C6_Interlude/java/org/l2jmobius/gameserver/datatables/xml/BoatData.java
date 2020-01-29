@@ -17,7 +17,9 @@
 package org.l2jmobius.gameserver.datatables.xml;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -64,10 +66,8 @@ public class BoatData implements IXmlReader
 		
 		try
 		{
-			int id;
-			int index;
 			final StatSet set = new StatSet();
-			final Map<Integer, Map<Integer, BoatPoint>> paths = new HashMap<>();
+			final Map<Integer, List<BoatPoint>> paths = new HashMap<>();
 			
 			final Node n = doc.getFirstChild();
 			for (Node node = n.getFirstChild(); node != null; node = node.getNextSibling())
@@ -134,9 +134,7 @@ public class BoatData implements IXmlReader
 				}
 				else if ("path".equalsIgnoreCase(node.getNodeName()))
 				{
-					index = 0;
-					id = Integer.parseInt(node.getAttributes().getNamedItem("id").getNodeValue());
-					paths.put(id, new HashMap<Integer, BoatPoint>());
+					final List<BoatPoint> pathList = new ArrayList<>();
 					for (Node b = node.getFirstChild(); b != null; b = b.getNextSibling())
 					{
 						if (!"point".equalsIgnoreCase(b.getNodeName()))
@@ -159,8 +157,9 @@ public class BoatData implements IXmlReader
 						point.z = set.getInt("z");
 						point.time = set.getInt("time");
 						
-						paths.get(id).put(index++, point);
+						pathList.add(point);
 					}
+					paths.put(Integer.parseInt(node.getAttributes().getNamedItem("id").getNodeValue()), pathList);
 				}
 			}
 			

@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.holders;
 
 import java.util.Collection;
-import java.util.Map;
+import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
@@ -31,7 +31,7 @@ public class BoatPathHolder
 {
 	protected static final Logger LOGGER = Logger.getLogger(BoatPathHolder.class.getName());
 	
-	private final Map<Integer, BoatPoint> _path;
+	private final List<BoatPoint> _path;
 	private final int _max;
 	public int ticketId;
 	public int ntx;
@@ -54,7 +54,7 @@ public class BoatPathHolder
 		public int time;
 	}
 	
-	public BoatPathHolder(int pathId, int pTicketId, int pNtx, int pNty, int pNtz, String pNpc, String pSysmess10, String pSysmess5, String pSysmess1, String pSysmess0, String pSysmessb, Map<Integer, BoatPoint> path)
+	public BoatPathHolder(int pathId, int pTicketId, int pNtx, int pNty, int pNtz, String pNpc, String pSysmess10, String pSysmess5, String pSysmess1, String pSysmess0, String pSysmessb, List<BoatPoint> path)
 	{
 		ticketId = pTicketId;
 		ntx = pNtx;

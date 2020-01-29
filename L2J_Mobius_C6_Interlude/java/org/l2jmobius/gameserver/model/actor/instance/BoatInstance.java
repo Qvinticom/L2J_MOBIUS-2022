@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.Collection;
-import java.util.Map;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -386,12 +386,12 @@ public class BoatInstance extends Creature
 		}
 	}
 	
-	public void setPathA(int pathId, int ticketId, int ntx, int nty, int ntz, String announcer, String sysmess10, String sysmess5, String sysmess1, String sysmess0, String sysmessb, Map<Integer, BoatPoint> path)
+	public void setPathA(int pathId, int ticketId, int ntx, int nty, int ntz, String announcer, String sysmess10, String sysmess5, String sysmess1, String sysmess0, String sysmessb, List<BoatPoint> path)
 	{
 		pathA = new BoatPathHolder(pathId, ticketId, ntx, nty, ntz, announcer, sysmess10, sysmess5, sysmess1, sysmess0, sysmessb, path);
 	}
 	
-	public void setPathB(int pathId, int ticketId, int ntx, int nty, int ntz, String announcer, String sysmess10, String sysmess5, String sysmess1, String sysmess0, String sysmessb, Map<Integer, BoatPoint> path)
+	public void setPathB(int pathId, int ticketId, int ntx, int nty, int ntz, String announcer, String sysmess10, String sysmess5, String sysmess1, String sysmess0, String sysmessb, List<BoatPoint> path)
 	{
 		pathB = new BoatPathHolder(pathId, ticketId, ntx, nty, ntz, announcer, sysmess10, sysmess5, sysmess1, sysmess0, sysmessb, path);
 	}
