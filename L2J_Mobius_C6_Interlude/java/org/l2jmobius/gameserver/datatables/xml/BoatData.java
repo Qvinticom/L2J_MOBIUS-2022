@@ -134,7 +134,7 @@ public class BoatData implements IXmlReader
 				}
 				else if ("path".equalsIgnoreCase(node.getNodeName()))
 				{
-					final List<BoatPoint> pathList = new ArrayList<>();
+					final List<BoatPoint> points = new ArrayList<>();
 					for (Node b = node.getFirstChild(); b != null; b = b.getNextSibling())
 					{
 						if (!"point".equalsIgnoreCase(b.getNodeName()))
@@ -157,9 +157,9 @@ public class BoatData implements IXmlReader
 						point.z = set.getInt("z");
 						point.time = set.getInt("time");
 						
-						pathList.add(point);
+						points.add(point);
 					}
-					paths.put(Integer.parseInt(node.getAttributes().getNamedItem("id").getNodeValue()), pathList);
+					paths.put(Integer.parseInt(node.getAttributes().getNamedItem("id").getNodeValue()), points);
 				}
 			}
 			

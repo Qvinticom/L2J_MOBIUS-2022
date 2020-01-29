@@ -3640,20 +3640,12 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean reduceAdena(String process, int count, WorldObject reference, boolean sendMessage)
 	{
-		// Game master don't need to pay
-		if (isGM())
-		{
-			sendMessage("You are a Gm, you don't need to pay! reduceAdena = 0.");
-			return true;
-		}
 		if (count > getAdena())
 		{
-			
 			if (sendMessage)
 			{
 				sendPacket(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
 			}
-			
 			return false;
 		}
 		
