@@ -352,12 +352,13 @@ public class ChamberOfProphecies extends AbstractInstance
 					world.openCloseDoor(DOOR_4, true);
 					cancelQuestTimers("ATTACK2");
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, player);
-					startQuestTimer("CLOSE", 15000, world.getNpc(GRAIL), player);
+					startQuestTimer("CLOSE", 15000, null, player);
 					break;
 				}
 				case "CLOSE":
 				{
-					if (player.calculateDistance2D(world.getNpc(GRAIL)) < 390)
+					final Npc grail = world.getNpc(GRAIL);
+					if ((grail != null) && (player.calculateDistance2D(grail) < 390))
 					{
 						world.openCloseDoor(DOOR_4, false);
 						world.despawnGroup("q10753_16_instance_halter_1_1");
