@@ -117,9 +117,9 @@ public class ExtractableItemData implements IXmlReader
 	{
 		int index = 0;
 		final int[] ids = new int[_items.size()];
-		for (ExtractableItem recipe : _items.values())
+		for (ExtractableItem extractable : _items.values())
 		{
-			ids[index++] = recipe.getItemId();
+			ids[index++] = extractable.getItemId();
 		}
 		return ids;
 	}
