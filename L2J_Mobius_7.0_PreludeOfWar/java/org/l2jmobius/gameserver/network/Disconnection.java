@@ -91,6 +91,14 @@ public class Disconnection
 		_client = getClient(client, player);
 		_player = getActiveChar(client, player);
 		
+		// Stop player tasks.
+		if (_player != null)
+		{
+			_player.stopTimedHuntingZoneTask();
+			_player.stopAutoPlayTask();
+			_player.stopAutoUseTask();
+		}
+		
 		// Anti Feed
 		AntiFeedManager.getInstance().onDisconnect(_client);
 		
@@ -116,9 +124,6 @@ public class Disconnection
 		{
 			if (_player != null)
 			{
-				_player.stopTimedHuntingZoneTask();
-				_player.stopAutoPlayTask();
-				_player.stopAutoUseTask();
 				_player.storeMe();
 			}
 		}

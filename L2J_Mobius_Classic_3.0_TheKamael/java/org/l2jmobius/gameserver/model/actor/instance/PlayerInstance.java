@@ -14045,7 +14045,7 @@ public class PlayerInstance extends Playable
 	
 	public void stopAutoUseTask()
 	{
-		if ((_autoUseTask != null) && !_autoUseTask.isCancelled() && !_autoUseTask.isDone() && _autoSupplyItems.isEmpty() && _autoPotionItems.isEmpty() && _autoSkills.isEmpty())
+		if ((_autoUseTask != null) && !_autoUseTask.isCancelled() && !_autoUseTask.isDone())
 		{
 			_autoUseTask.cancel(true);
 			_autoUseTask = null;
