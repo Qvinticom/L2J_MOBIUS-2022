@@ -32,11 +32,11 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -4841,7 +4841,7 @@ public class SevenSignsFestival implements SpawnListener
 				// If an exception occurs, just move the player to the nearest town.
 				try
 				{
-					participant.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+					participant.teleToLocation(TeleportWhereType.TOWN);
 					participant.sendMessage("You have been removed from the festival arena.");
 				}
 				catch (NullPointerException e2)

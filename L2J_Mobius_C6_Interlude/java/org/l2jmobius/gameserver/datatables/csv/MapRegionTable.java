@@ -28,6 +28,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.ArenaManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
@@ -51,15 +52,6 @@ public class MapRegionTable
 	
 	private final int[][] _regions = new int[19][21];
 	private final int[][] _pointsWithKarmas;
-	
-	public enum TeleportWhereType
-	{
-		Castle,
-		ClanHall,
-		SiegeFlag,
-		Town,
-		Fortress
-	}
 	
 	private MapRegionTable()
 	{
@@ -482,7 +474,7 @@ public class MapRegionTable
 			if (player.getClan() != null)
 			{
 				// If teleport to clan hall
-				if (teleportWhere == TeleportWhereType.ClanHall)
+				if (teleportWhere == TeleportWhereType.CLANHALL)
 				{
 					clanhall = ClanHallManager.getInstance().getClanHallByOwner(player.getClan());
 					if (clanhall != null)
@@ -496,13 +488,13 @@ public class MapRegionTable
 				}
 				
 				// If teleport to castle
-				if (teleportWhere == TeleportWhereType.Castle)
+				if (teleportWhere == TeleportWhereType.CASTLE)
 				{
 					castle = CastleManager.getInstance().getCastleByOwner(player.getClan());
 				}
 				
 				// If teleport to fort
-				if (teleportWhere == TeleportWhereType.Fortress)
+				if (teleportWhere == TeleportWhereType.FORTRESS)
 				{
 					fort = FortManager.getInstance().getFortByOwner(player.getClan());
 				}
@@ -522,13 +514,13 @@ public class MapRegionTable
 				{
 					// If Teleporting to castle or
 					// If is on caslte with siege and player's clan is defender
-					if ((teleportWhere == TeleportWhereType.Castle) || ((teleportWhere == TeleportWhereType.Castle) && castle.getSiege().isInProgress() && (castle.getSiege().getDefenderClan(player.getClan()) != null)))
+					if ((teleportWhere == TeleportWhereType.CASTLE) || ((teleportWhere == TeleportWhereType.CASTLE) && castle.getSiege().isInProgress() && (castle.getSiege().getDefenderClan(player.getClan()) != null)))
 					{
 						coord = castle.getZone().getSpawn();
 						return new Location(coord[0], coord[1], coord[2]);
 					}
 					
-					if ((teleportWhere == TeleportWhereType.SiegeFlag) && castle.getSiege().isInProgress())
+					if ((teleportWhere == TeleportWhereType.SIEGEFLAG) && castle.getSiege().isInProgress())
 					{
 						// Check if player's clan is attacker
 						final List<NpcInstance> flags = castle.getSiege().getFlag(player.getClan());
@@ -545,13 +537,13 @@ public class MapRegionTable
 				{
 					// teleporting to castle or fortress
 					// is on caslte with siege and player's clan is defender
-					if ((teleportWhere == TeleportWhereType.Fortress) || ((teleportWhere == TeleportWhereType.Fortress) && fort.getSiege().isInProgress() && (fort.getSiege().getDefenderClan(player.getClan()) != null)))
+					if ((teleportWhere == TeleportWhereType.FORTRESS) || ((teleportWhere == TeleportWhereType.FORTRESS) && fort.getSiege().isInProgress() && (fort.getSiege().getDefenderClan(player.getClan()) != null)))
 					{
 						coord = fort.getZone().getSpawn();
 						return new Location(coord[0], coord[1], coord[2]);
 					}
 					
-					if ((teleportWhere == TeleportWhereType.SiegeFlag) && fort.getSiege().isInProgress())
+					if ((teleportWhere == TeleportWhereType.SIEGEFLAG) && fort.getSiege().isInProgress())
 					{
 						// check if player's clan is attacker
 						final List<NpcInstance> flags = fort.getSiege().getFlag(player.getClan());

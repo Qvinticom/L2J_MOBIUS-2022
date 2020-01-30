@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.zone.type;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -190,7 +190,7 @@ public class CastleZone extends ZoneType
 				continue;
 			}
 			
-			((PlayerInstance) temp).teleToLocation(MapRegionTable.TeleportWhereType.Town);
+			((PlayerInstance) temp).teleToLocation(TeleportWhereType.TOWN);
 		}
 	}
 	

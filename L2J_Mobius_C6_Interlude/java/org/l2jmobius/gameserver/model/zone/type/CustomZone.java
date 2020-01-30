@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -69,7 +70,7 @@ public class CustomZone extends ZoneType
 			final PlayerInstance player = (PlayerInstance) creature;
 			if (!player.isGM() && player.isFlying() && !player.isInJail() && !_isFlyingEnable)
 			{
-				player.teleToLocation(org.l2jmobius.gameserver.datatables.csv.MapRegionTable.TeleportWhereType.Town);
+				player.teleToLocation(TeleportWhereType.TOWN);
 			}
 			
 			if (_zoneName.equalsIgnoreCase("tradeoff"))

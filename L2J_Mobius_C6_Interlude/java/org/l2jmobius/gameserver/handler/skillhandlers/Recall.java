@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Skill;
@@ -146,7 +146,7 @@ public class Recall implements ISkillHandler
 					}
 				}
 				
-				target.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+				target.teleToLocation(TeleportWhereType.TOWN);
 			}
 			
 			if (skill.isMagic() && skill.useSpiritShot())

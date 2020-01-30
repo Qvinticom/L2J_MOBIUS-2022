@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
-import org.l2jmobius.gameserver.model.TeleportWhereType;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Summon;

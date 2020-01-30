@@ -23,7 +23,7 @@ import java.util.Map;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.GameServer;
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -119,7 +119,7 @@ public class BossZone extends ZoneType
 			
 			if (!player.isGM() && player.isFlying() && !_IsFlyingEnable)
 			{
-				player.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+				player.teleToLocation(TeleportWhereType.TOWN);
 				return;
 			}
 			
@@ -153,7 +153,7 @@ public class BossZone extends ZoneType
 			}
 			
 			// teleport out all players who attempt "illegal" (re-)entry
-			player.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+			player.teleToLocation(TeleportWhereType.TOWN);
 		}
 	}
 	
@@ -252,7 +252,7 @@ public class BossZone extends ZoneType
 		}
 		else
 		{
-			player.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+			player.teleToLocation(TeleportWhereType.TOWN);
 			return false;
 		}
 	}
@@ -286,7 +286,7 @@ public class BossZone extends ZoneType
 				
 				if (player.isOnline() == 1)
 				{
-					player.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+					player.teleToLocation(TeleportWhereType.TOWN);
 				}
 			}
 		}

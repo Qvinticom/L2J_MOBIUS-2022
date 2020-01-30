@@ -21,7 +21,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
@@ -238,11 +238,11 @@ public class ScrollOfEscape implements IItemHandler
 				{
 					if (CastleManager.getInstance().getCastleByOwner(_player.getClan()) != null)
 					{
-						_player.teleToLocation(MapRegionTable.TeleportWhereType.Castle);
+						_player.teleToLocation(TeleportWhereType.CASTLE);
 					}
 					else
 					{
-						_player.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+						_player.teleToLocation(TeleportWhereType.TOWN);
 					}
 				}
 				// escape to fortress if own's one if own's one
@@ -250,16 +250,16 @@ public class ScrollOfEscape implements IItemHandler
 				{
 					if (FortManager.getInstance().getFortByOwner(_player.getClan()) != null)
 					{
-						_player.teleToLocation(MapRegionTable.TeleportWhereType.Fortress);
+						_player.teleToLocation(TeleportWhereType.FORTRESS);
 					}
 					else
 					{
-						_player.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+						_player.teleToLocation(TeleportWhereType.TOWN);
 					}
 				}
 				else if (((_itemId == 1829) || (_itemId == 5858)) && (_player.getClan() != null) && (ClanHallManager.getInstance().getClanHallByOwner(_player.getClan()) != null)) // escape to clan hall if own's one
 				{
-					_player.teleToLocation(MapRegionTable.TeleportWhereType.ClanHall);
+					_player.teleToLocation(TeleportWhereType.CLANHALL);
 				}
 				else if (_itemId == 5858) // do nothing
 				{
@@ -271,7 +271,7 @@ public class ScrollOfEscape implements IItemHandler
 				}
 				else if (_itemId < 7117)
 				{
-					_player.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+					_player.teleToLocation(TeleportWhereType.TOWN);
 				}
 				else
 				{
@@ -414,7 +414,7 @@ public class ScrollOfEscape implements IItemHandler
 						}
 						default:
 						{
-							_player.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+							_player.teleToLocation(TeleportWhereType.TOWN);
 							break;
 						}
 					}

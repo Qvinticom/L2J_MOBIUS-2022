@@ -28,9 +28,9 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.crypt.nProtect;
 import org.l2jmobius.commons.crypt.nProtect.RestrictionType;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeGuardManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
@@ -260,13 +260,13 @@ public class FortSiege
 			unSpawnFlags();
 			
 			// Teleport to the second closest town
-			teleportPlayer(TeleportWhoType.Attacker, MapRegionTable.TeleportWhereType.Town);
+			teleportPlayer(TeleportWhoType.Attacker, TeleportWhereType.TOWN);
 			
 			// Teleport to the second closest town
-			teleportPlayer(TeleportWhoType.DefenderNotOwner, MapRegionTable.TeleportWhereType.Town);
+			teleportPlayer(TeleportWhoType.DefenderNotOwner, TeleportWhereType.TOWN);
 			
 			// Teleport to the second closest town
-			teleportPlayer(TeleportWhoType.Spectator, MapRegionTable.TeleportWhereType.Town);
+			teleportPlayer(TeleportWhoType.Spectator, TeleportWhereType.TOWN);
 			
 			// Flag so that siege instance can be started
 			_isInProgress = false;
@@ -412,7 +412,7 @@ public class FortSiege
 			updatePlayerSiegeStateFlags(false);
 			
 			// Teleport to the closest town
-			teleportPlayer(TeleportWhoType.Attacker, MapRegionTable.TeleportWhereType.Town);
+			teleportPlayer(TeleportWhoType.Attacker, TeleportWhereType.TOWN);
 			
 			// Spawn commander
 			spawnCommander(getFort().getFortId());
@@ -1021,7 +1021,7 @@ public class FortSiege
 	 * @param teleportWho the teleport who
 	 * @param teleportWhere the teleport where
 	 */
-	public void teleportPlayer(TeleportWhoType teleportWho, MapRegionTable.TeleportWhereType teleportWhere)
+	public void teleportPlayer(TeleportWhoType teleportWho, TeleportWhereType teleportWhere)
 	{
 		List<PlayerInstance> players;
 		switch (teleportWho)

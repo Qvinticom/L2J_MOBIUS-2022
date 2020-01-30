@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
@@ -120,7 +121,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				final PlayerInstance player = World.getInstance().getPlayer(targetName);
 				if (player != null)
 				{
-					final Location loc = MapRegionTable.getInstance().getTeleToLocation(player, MapRegionTable.TeleportWhereType.Town);
+					final Location loc = MapRegionTable.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN);
 					player.setInstanceId(0);
 					player.teleToLocation(loc, true);
 				}

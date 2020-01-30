@@ -16,7 +16,7 @@
  */
 package ai.areas.GardenOfGenesis.Apherus;
 
-import org.l2jmobius.gameserver.model.TeleportWhereType;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;

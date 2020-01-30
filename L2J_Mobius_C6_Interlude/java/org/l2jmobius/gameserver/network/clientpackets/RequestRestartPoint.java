@@ -21,6 +21,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
@@ -103,14 +104,14 @@ public class RequestRestartPoint extends GameClientPacket
 								Util.handleIllegalPlayerAction(_player, "Player " + _player.getName() + " used respawn cheat.", IllegalPlayerAction.PUNISH_KICK);
 								return;
 							}
-							loc = MapRegionTable.getInstance().getTeleToLocation(_player, MapRegionTable.TeleportWhereType.ClanHall);
+							loc = MapRegionTable.getInstance().getTeleToLocation(_player, TeleportWhereType.CLANHALL);
 							if ((ClanHallManager.getInstance().getClanHallByOwner(_player.getClan()) != null) && (ClanHallManager.getInstance().getClanHallByOwner(_player.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP) != null))
 							{
 								_player.restoreExp(ClanHallManager.getInstance().getClanHallByOwner(_player.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP).getLvl());
 							}
 							break;
 						}
-						loc = MapRegionTable.getInstance().getTeleToLocation(_player, MapRegionTable.TeleportWhereType.Town);
+						loc = MapRegionTable.getInstance().getTeleToLocation(_player, TeleportWhereType.TOWN);
 						break;
 					}
 					case 2: // to castle
@@ -118,7 +119,7 @@ public class RequestRestartPoint extends GameClientPacket
 						Boolean isInDefense = false;
 						castle = CastleManager.getInstance().getCastle(_player);
 						fort = FortManager.getInstance().getFort(_player);
-						MapRegionTable.TeleportWhereType teleportWhere = MapRegionTable.TeleportWhereType.Town;
+						TeleportWhereType teleportWhere = TeleportWhereType.TOWN;
 						if ((castle != null) && castle.getSiege().isInProgress() && castle.getSiege().checkIsDefender(_player.getClan()))
 						{
 							isInDefense = true;
@@ -136,11 +137,11 @@ public class RequestRestartPoint extends GameClientPacket
 						}
 						if (CastleManager.getInstance().getCastleByOwner(_player.getClan()) != null)
 						{
-							teleportWhere = MapRegionTable.TeleportWhereType.Castle;
+							teleportWhere = TeleportWhereType.CASTLE;
 						}
 						else if (FortManager.getInstance().getFortByOwner(_player.getClan()) != null)
 						{
-							teleportWhere = MapRegionTable.TeleportWhereType.Fortress;
+							teleportWhere = TeleportWhereType.FORTRESS;
 						}
 						loc = MapRegionTable.getInstance().getTeleToLocation(_player, teleportWhere);
 						break;
@@ -165,7 +166,7 @@ public class RequestRestartPoint extends GameClientPacket
 							Util.handleIllegalPlayerAction(_player, "Player " + _player.getName() + " used respawn cheat.", IllegalPlayerAction.PUNISH_KICK);
 							return;
 						}
-						loc = MapRegionTable.getInstance().getTeleToLocation(_player, MapRegionTable.TeleportWhereType.SiegeFlag);
+						loc = MapRegionTable.getInstance().getTeleToLocation(_player, TeleportWhereType.SIEGEFLAG);
 						break;
 					}
 					case 4: // Fixed or Player is a festival participant
@@ -196,7 +197,7 @@ public class RequestRestartPoint extends GameClientPacket
 							loc = new Location(17836, 170178, -3507); // Floran Village
 							break;
 						}
-						loc = MapRegionTable.getInstance().getTeleToLocation(_player, MapRegionTable.TeleportWhereType.Town);
+						loc = MapRegionTable.getInstance().getTeleToLocation(_player, TeleportWhereType.TOWN);
 						break;
 					}
 				}

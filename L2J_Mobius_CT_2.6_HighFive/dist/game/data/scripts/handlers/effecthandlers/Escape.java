@@ -16,9 +16,9 @@
  */
 package handlers.effecthandlers;
 
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.TeleportWhereType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.GuardInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;

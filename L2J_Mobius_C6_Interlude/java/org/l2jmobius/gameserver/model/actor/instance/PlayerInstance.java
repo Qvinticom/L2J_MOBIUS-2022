@@ -56,7 +56,6 @@ import org.l2jmobius.gameserver.datatables.HeroSkillTable;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.datatables.NobleSkillTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
@@ -67,6 +66,7 @@ import org.l2jmobius.gameserver.datatables.xml.FishData;
 import org.l2jmobius.gameserver.datatables.xml.HennaData;
 import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.enums.Race;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
@@ -13295,7 +13295,7 @@ public class PlayerInstance extends Playable
 			// if the rent of a wyvern expires while over a flying zone, tp to down before unmounting
 			if (checkLandingState() && (getMountType() == 2))
 			{
-				teleToLocation(MapRegionTable.TeleportWhereType.Town);
+				teleToLocation(TeleportWhereType.TOWN);
 			}
 			
 			if (setMountType(0)) // this should always be true now, since we teleported already
@@ -13395,14 +13395,14 @@ public class PlayerInstance extends Playable
 		{
 			if (!isGM() && isIn7sDungeon() && (SevenSigns.getInstance().getPlayerCabal(this) != SevenSigns.getInstance().getCabalHighestScore()))
 			{
-				teleToLocation(MapRegionTable.TeleportWhereType.Town);
+				teleToLocation(TeleportWhereType.TOWN);
 				setIn7sDungeon(false);
 				sendMessage("You have been teleported to the nearest town due to the beginning of the Seal Validation period.");
 			}
 		}
 		else if (!isGM() && isIn7sDungeon() && (SevenSigns.getInstance().getPlayerCabal(this) == SevenSigns.CABAL_NULL))
 		{
-			teleToLocation(MapRegionTable.TeleportWhereType.Town);
+			teleToLocation(TeleportWhereType.TOWN);
 			setIn7sDungeon(false);
 			sendMessage("You have been teleported to the nearest town because you have not signed for any cabal.");
 		}

@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable.TeleportWhereType;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -62,7 +62,7 @@ public class OlympiadStadiumZone extends ZoneType
 			}
 			else
 			{
-				creature.teleToLocation(TeleportWhereType.Town);
+				creature.teleToLocation(TeleportWhereType.TOWN);
 			}
 		}
 	}

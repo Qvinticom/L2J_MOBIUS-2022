@@ -20,6 +20,7 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -78,16 +79,16 @@ public class AdminZone implements IAdminCommandHandler
 			
 			Location loc;
 			
-			loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, MapRegionTable.TeleportWhereType.Castle);
+			loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, TeleportWhereType.CASTLE);
 			BuilderUtil.sendSysMessage(activeChar, "TeleToLocation (Castle): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 			
-			loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, MapRegionTable.TeleportWhereType.ClanHall);
+			loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, TeleportWhereType.CLANHALL);
 			BuilderUtil.sendSysMessage(activeChar, "TeleToLocation (ClanHall): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 			
-			loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, MapRegionTable.TeleportWhereType.SiegeFlag);
+			loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, TeleportWhereType.SIEGEFLAG);
 			BuilderUtil.sendSysMessage(activeChar, "TeleToLocation (SiegeFlag): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 			
-			loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, MapRegionTable.TeleportWhereType.Town);
+			loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, TeleportWhereType.TOWN);
 			BuilderUtil.sendSysMessage(activeChar, "TeleToLocation (Town): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 		}
 		else if (actualCommand.equalsIgnoreCase("admin_zone_reload"))

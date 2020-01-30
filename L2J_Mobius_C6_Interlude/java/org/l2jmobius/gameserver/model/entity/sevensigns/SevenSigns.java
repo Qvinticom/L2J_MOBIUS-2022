@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.handler.AutoChatHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -1522,14 +1522,14 @@ public class SevenSigns
 			{
 				if (!onlinePlayer.isGM() && onlinePlayer.isIn7sDungeon() && !currPlayer.getString("cabal").equals(compWinner))
 				{
-					onlinePlayer.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+					onlinePlayer.teleToLocation(TeleportWhereType.TOWN);
 					onlinePlayer.setIn7sDungeon(false);
 					onlinePlayer.sendMessage("You have been teleported to the nearest town due to the beginning of the Seal Validation period.");
 				}
 			}
 			else if (!onlinePlayer.isGM() && onlinePlayer.isIn7sDungeon() && !currPlayer.getString("cabal").equals(""))
 			{
-				onlinePlayer.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+				onlinePlayer.teleToLocation(TeleportWhereType.TOWN);
 				onlinePlayer.setIn7sDungeon(false);
 				onlinePlayer.sendMessage("You have been teleported to the nearest town because you have not signed for any cabal.");
 			}
