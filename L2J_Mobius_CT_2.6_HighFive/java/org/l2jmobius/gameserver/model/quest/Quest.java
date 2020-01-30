@@ -22,14 +22,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
-import java.util.concurrent.locks.ReentrantReadWriteLock.ReadLock;
-import java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Predicate;
 import java.util.logging.Level;
 
@@ -77,10 +75,7 @@ import org.l2jmobius.gameserver.util.Util;
 public class Quest extends AbstractScript implements IIdentifiable
 {
 	/** Map containing lists of timers from the name of the timer. */
-	private Map<String, List<QuestTimer>> _questTimers = null;
-	private final ReentrantReadWriteLock _rwLock = new ReentrantReadWriteLock();
-	private final WriteLock _writeLock = _rwLock.writeLock();
-	private final ReadLock _readLock = _rwLock.readLock();
+	private final Map<String, List<QuestTimer>> _questTimers = new HashMap<>();
 	/** Map containing all the start conditions. */
 	private Map<Predicate<PlayerInstance>, String> _startCondition = null;
 	
@@ -230,7 +225,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * Add a timer to the quest (if it doesn't exist already) and start it.
 	 * @param name the name of the timer (also passed back as "event" in {@link #onAdvEvent(String, Npc, PlayerInstance)})
 	 * @param time time in ms for when to fire the timer
-	 * @param npc the npc associated with this timer (can be null)
+	 * @param npc the NPC associated with this timer (can be null)
 	 * @param player the player associated with this timer (can be null)
 	 * @see #startQuestTimer(String, long, Npc, PlayerInstance, boolean)
 	 */
@@ -245,16 +240,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public Map<String, List<QuestTimer>> getQuestTimers()
 	{
-		if (_questTimers == null)
-		{
-			synchronized (this)
-			{
-				if (_questTimers == null)
-				{
-					_questTimers = new ConcurrentHashMap<>(1);
-				}
-			}
-		}
 		return _questTimers;
 	}
 	
@@ -262,25 +247,20 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * Add a timer to the quest (if it doesn't exist already) and start it.
 	 * @param name the name of the timer (also passed back as "event" in {@link #onAdvEvent(String, Npc, PlayerInstance)})
 	 * @param time time in ms for when to fire the timer
-	 * @param npc the npc associated with this timer (can be null)
+	 * @param npc the NPC associated with this timer (can be null)
 	 * @param player the player associated with this timer (can be null)
 	 * @param repeating indicates whether the timer is repeatable or one-time.<br>
 	 *            If {@code true}, the task is repeated every {@code time} milliseconds until explicitly stopped.
 	 */
 	public void startQuestTimer(String name, long time, Npc npc, PlayerInstance player, boolean repeating)
 	{
-		final List<QuestTimer> timers = getQuestTimers().computeIfAbsent(name, k -> new ArrayList<>(1));
-		// If there exists a timer with this name, allow the timer only if the [npc, player] set is unique nulls act as wildcards.
-		if (getQuestTimer(name, npc, player) == null)
+		synchronized (_questTimers)
 		{
-			_writeLock.lock();
-			try
+			final List<QuestTimer> timers = _questTimers.computeIfAbsent(name, k -> new CopyOnWriteArrayList<>());
+			// If there exists a timer with this name, allow the timer only if the [npc, player] set is unique nulls act as wildcards.
+			if (getQuestTimer(name, npc, player) == null)
 			{
 				timers.add(new QuestTimer(this, name, time, npc, player, repeating));
-			}
-			finally
-			{
-				_writeLock.unlock();
 			}
 		}
 	}
@@ -294,31 +274,28 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public QuestTimer getQuestTimer(String name, Npc npc, PlayerInstance player)
 	{
-		if (_questTimers == null)
+		if (name == null)
 		{
 			return null;
 		}
 		
-		final List<QuestTimer> timers = getQuestTimers().get(name);
-		if (timers != null)
+		synchronized (_questTimers)
 		{
-			_readLock.lock();
-			try
+			final List<QuestTimer> timers = _questTimers.get(name);
+			if ((timers == null) || timers.isEmpty())
 			{
-				for (QuestTimer timer : timers)
+				return null;
+			}
+			
+			for (QuestTimer timer : timers)
+			{
+				if ((timer != null) && timer.equals(this, name, npc, player))
 				{
-					if ((timer != null) && timer.equals(this, name, npc, player))
-					{
-						return timer;
-					}
+					return timer;
 				}
 			}
-			finally
-			{
-				_readLock.unlock();
-			}
+			return null;
 		}
-		return null;
 	}
 	
 	/**
@@ -327,30 +304,27 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void cancelQuestTimers(String name)
 	{
-		if (_questTimers == null)
+		if (name == null)
 		{
 			return;
 		}
 		
-		final List<QuestTimer> timers = getQuestTimers().get(name);
-		if (timers != null)
+		synchronized (_questTimers)
 		{
-			_writeLock.lock();
-			try
+			final List<QuestTimer> timers = _questTimers.get(name);
+			if ((timers == null) || timers.isEmpty())
 			{
-				for (QuestTimer timer : timers)
+				return;
+			}
+			
+			for (QuestTimer timer : timers)
+			{
+				if (timer != null)
 				{
-					if (timer != null)
-					{
-						timer.cancel();
-					}
+					timer.cancel();
 				}
-				timers.clear();
 			}
-			finally
-			{
-				_writeLock.unlock();
-			}
+			timers.clear();
 		}
 	}
 	
@@ -362,10 +336,28 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void cancelQuestTimer(String name, Npc npc, PlayerInstance player)
 	{
-		final QuestTimer timer = getQuestTimer(name, npc, player);
-		if (timer != null)
+		if (name == null)
 		{
-			timer.cancel();
+			return;
+		}
+		
+		synchronized (_questTimers)
+		{
+			final List<QuestTimer> timers = _questTimers.get(name);
+			if ((timers == null) || timers.isEmpty())
+			{
+				return;
+			}
+			
+			for (QuestTimer timer : timers)
+			{
+				if ((timer != null) && timer.equals(this, name, npc, player))
+				{
+					timer.cancel();
+					timers.remove(timer);
+					return;
+				}
+			}
 		}
 	}
 	
@@ -376,20 +368,17 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void removeQuestTimer(QuestTimer timer)
 	{
-		if ((timer != null) && (_questTimers != null))
+		if (timer == null)
 		{
-			final List<QuestTimer> timers = getQuestTimers().get(timer.toString());
+			return;
+		}
+		
+		synchronized (_questTimers)
+		{
+			final List<QuestTimer> timers = _questTimers.get(timer.toString());
 			if (timers != null)
 			{
-				_writeLock.lock();
-				try
-				{
-					timers.remove(timer);
-				}
-				finally
-				{
-					_writeLock.unlock();
-				}
+				timers.remove(timer);
 			}
 		}
 	}
@@ -2566,25 +2555,17 @@ public class Quest extends AbstractScript implements IIdentifiable
 		// cancel all pending timers before reloading.
 		// if timers ought to be restarted, the quest can take care of it
 		// with its code (example: save global data indicating what timer must be restarted).
-		if (_questTimers != null)
+		synchronized (_questTimers)
 		{
-			for (List<QuestTimer> timers : getQuestTimers().values())
+			for (List<QuestTimer> timers : _questTimers.values())
 			{
-				_readLock.lock();
-				try
+				for (QuestTimer timer : timers)
 				{
-					for (QuestTimer timer : timers)
-					{
-						timer.cancel();
-					}
-				}
-				finally
-				{
-					_readLock.unlock();
+					timer.cancel();
 				}
 				timers.clear();
 			}
-			getQuestTimers().clear();
+			_questTimers.clear();
 		}
 		
 		if (removeFromList)

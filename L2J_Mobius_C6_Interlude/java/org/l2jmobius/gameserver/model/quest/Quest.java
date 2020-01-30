@@ -27,6 +27,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -64,10 +65,10 @@ public class Quest extends ManagedScript
 	private static final String HTML_NONE_AVAILABLE = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>";
 	private static final String HTML_ALREADY_COMPLETED = "<html><body>This quest has already been completed.</body></html>";
 	
-	/** HashMap containing events from String value of the event */
-	private static Map<String, Quest> _allEventsS = new HashMap<>();
-	/** HashMap containing lists of timers from the name of the timer */
-	private final Map<String, ArrayList<QuestTimer>> _allEventTimers = new HashMap<>();
+	/** Map containing events from String value of the event */
+	private static Map<String, Quest> _allEvents = new HashMap<>();
+	/** Map containing lists of timers from the name of the timer */
+	private final Map<String, List<QuestTimer>> _questTimers = new HashMap<>();
 	
 	private final int _questId;
 	private final String _prefixPath; // used only for admin_quest_reload
@@ -140,7 +141,7 @@ public class Quest extends ManagedScript
 	 */
 	public static Collection<Quest> findAllEvents()
 	{
-		return _allEventsS.values();
+		return _allEvents.values();
 	}
 	
 	/**
@@ -168,7 +169,7 @@ public class Quest extends ManagedScript
 		}
 		else
 		{
-			_allEventsS.put(getName(), this);
+			_allEvents.put(getName(), this);
 		}
 		
 		initGlobalData();
@@ -317,10 +318,12 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * @param name
-	 * @param time
-	 * @param npc
-	 * @param player
+	 * Add a timer to the quest (if it doesn't exist already) and start it.
+	 * @param name the name of the timer (also passed back as "event" in {@link #onAdvEvent(String, NpcInstance, PlayerInstance)})
+	 * @param time time in ms for when to fire the timer
+	 * @param npc the NPC associated with this timer (can be null)
+	 * @param player the player associated with this timer (can be null)
+	 * @see #startQuestTimer(String, long, NpcInstance, PlayerInstance, boolean)
 	 */
 	public void startQuestTimer(String name, long time, NpcInstance npc, PlayerInstance player)
 	{
@@ -328,53 +331,43 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Add a timer to the quest, if it doesn't exist already. If the timer is repeatable, it will auto-fire automatically, at a fixed rate, until explicitly canceled.
-	 * @param name name of the timer (also passed back as "event" in onAdvEvent)
-	 * @param time time in ms for when to fire the timer
-	 * @param npc npc associated with this timer (can be null)
-	 * @param player player associated with this timer (can be null)
-	 * @param repeating indicates if the timer is repeatable or one-time.
+	 * Gets the quest timers.
+	 * @return the quest timers
 	 */
-	public synchronized void startQuestTimer(String name, long time, NpcInstance npc, PlayerInstance player, boolean repeating)
+	public Map<String, List<QuestTimer>> getQuestTimers()
 	{
-		synchronized (_allEventTimers)
+		return _questTimers;
+	}
+	
+	/**
+	 * Add a timer to the quest (if it doesn't exist already) and start it.
+	 * @param name the name of the timer (also passed back as "event" in {@link #onAdvEvent(String, NpcInstance, PlayerInstance)})
+	 * @param time time in ms for when to fire the timer
+	 * @param npc the NPC associated with this timer (can be null)
+	 * @param player the player associated with this timer (can be null)
+	 * @param repeating indicates whether the timer is repeatable or one-time.<br>
+	 *            If {@code true}, the task is repeated every {@code time} milliseconds until explicitly stopped.
+	 */
+	public void startQuestTimer(String name, long time, NpcInstance npc, PlayerInstance player, boolean repeating)
+	{
+		synchronized (_questTimers)
 		{
-			ArrayList<QuestTimer> timers = _allEventTimers.get(name);
-			
-			// no timer exists with the same name, at all
-			if (timers == null)
+			final List<QuestTimer> timers = _questTimers.computeIfAbsent(name, k -> new CopyOnWriteArrayList<>());
+			// If there exists a timer with this name, allow the timer only if the [npc, player] set is unique nulls act as wildcards.
+			if (getQuestTimer(name, npc, player) == null)
 			{
-				timers = new ArrayList<>();
 				timers.add(new QuestTimer(this, name, time, npc, player, repeating));
-				
-				// a timer with this name exists, but may not be for the same set of npc and player
 			}
-			else
-			{
-				QuestTimer timer = null;
-				for (int i = 0; i < timers.size(); i++)
-				{
-					final QuestTimer tmp = timers.get(i);
-					
-					if ((tmp != null) && tmp.equals(this, name, npc, player))
-					{
-						timer = tmp;
-						break;
-					}
-				}
-				
-				// if there exists a timer with this name, allow the timer only if the [npc, player] set is unique
-				// nulls act as wildcards
-				if (timer == null)
-				{
-					timers.add(new QuestTimer(this, name, time, npc, player, repeating));
-				}
-			}
-			
-			_allEventTimers.put(name, timers);
 		}
 	}
 	
+	/**
+	 * Get a quest timer that matches the provided name and parameters.
+	 * @param name the name of the quest timer to get
+	 * @param npc the NPC associated with the quest timer to get
+	 * @param player the player associated with the quest timer to get
+	 * @return the quest timer that matches the specified parameters or {@code null} if nothing was found
+	 */
 	public QuestTimer getQuestTimer(String name, NpcInstance npc, PlayerInstance player)
 	{
 		if (name == null)
@@ -382,19 +375,16 @@ public class Quest extends ManagedScript
 			return null;
 		}
 		
-		synchronized (_allEventTimers)
+		synchronized (_questTimers)
 		{
-			final ArrayList<QuestTimer> qt = _allEventTimers.get(name);
-			
-			if ((qt == null) || qt.isEmpty())
+			final List<QuestTimer> timers = _questTimers.get(name);
+			if ((timers == null) || timers.isEmpty())
 			{
 				return null;
 			}
 			
-			for (int i = 0; i < qt.size(); i++)
+			for (QuestTimer timer : timers)
 			{
-				final QuestTimer timer = qt.get(i);
-				
 				if ((timer != null) && timer.equals(this, name, npc, player))
 				{
 					return timer;
@@ -404,34 +394,10 @@ public class Quest extends ManagedScript
 		}
 	}
 	
-	public void cancelQuestTimer(String name, NpcInstance npc, PlayerInstance player)
-	{
-		if (name == null)
-		{
-			return;
-		}
-		
-		synchronized (_allEventTimers)
-		{
-			final ArrayList<QuestTimer> qt = _allEventTimers.get(name);
-			if ((qt == null) || qt.isEmpty())
-			{
-				return;
-			}
-			
-			for (int i = 0; i < qt.size(); i++)
-			{
-				final QuestTimer timer = qt.get(i);
-				if ((timer != null) && timer.equals(this, name, npc, player))
-				{
-					timer.cancel();
-					qt.remove(timer);
-					return;
-				}
-			}
-		}
-	}
-	
+	/**
+	 * Cancel all quest timers with the specified name.
+	 * @param name the name of the quest timers to cancel
+	 */
 	public void cancelQuestTimers(String name)
 	{
 		if (name == null)
@@ -439,11 +405,10 @@ public class Quest extends ManagedScript
 			return;
 		}
 		
-		synchronized (_allEventTimers)
+		synchronized (_questTimers)
 		{
-			final ArrayList<QuestTimer> timers = _allEventTimers.get(name);
-			
-			if (timers == null)
+			final List<QuestTimer> timers = _questTimers.get(name);
+			if ((timers == null) || timers.isEmpty())
 			{
 				return;
 			}
@@ -455,11 +420,48 @@ public class Quest extends ManagedScript
 					timer.cancel();
 				}
 			}
-			
 			timers.clear();
 		}
 	}
 	
+	/**
+	 * Cancel the quest timer that matches the specified name and parameters.
+	 * @param name the name of the quest timer to cancel
+	 * @param npc the NPC associated with the quest timer to cancel
+	 * @param player the player associated with the quest timer to cancel
+	 */
+	public void cancelQuestTimer(String name, NpcInstance npc, PlayerInstance player)
+	{
+		if (name == null)
+		{
+			return;
+		}
+		
+		synchronized (_questTimers)
+		{
+			final List<QuestTimer> timers = _questTimers.get(name);
+			if ((timers == null) || timers.isEmpty())
+			{
+				return;
+			}
+			
+			for (QuestTimer timer : timers)
+			{
+				if ((timer != null) && timer.equals(this, name, npc, player))
+				{
+					timer.cancel();
+					timers.remove(timer);
+					return;
+				}
+			}
+		}
+	}
+	
+	/**
+	 * Remove a quest timer from the list of all timers.<br>
+	 * Note: does not stop the timer itself!
+	 * @param timer the {@link QuestState} object to remove
+	 */
 	public void removeQuestTimer(QuestTimer timer)
 	{
 		if (timer == null)
@@ -467,20 +469,18 @@ public class Quest extends ManagedScript
 			return;
 		}
 		
-		synchronized (_allEventTimers)
+		synchronized (_questTimers)
 		{
-			final ArrayList<QuestTimer> timers = _allEventTimers.get(timer.toString());
-			
-			if (timers == null)
+			final List<QuestTimer> timers = _questTimers.get(timer.toString());
+			if (timers != null)
 			{
-				return;
+				timers.remove(timer);
 			}
-			
-			timers.remove(timer);
 		}
 	}
 	
-	// these are methods to call from java
+	// These are methods to call within the core to call the quest events.
+	
 	public boolean notifyAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		String res = null;
@@ -1121,7 +1121,7 @@ public class Quest extends ManagedScript
 		}
 		
 		// events
-		for (String name : _allEventsS.keySet())
+		for (String name : _allEvents.keySet())
 		{
 			player.processQuestEvent(name, "enter");
 		}
@@ -1797,16 +1797,17 @@ public class Quest extends ManagedScript
 		saveGlobalData();
 		// Cancel all pending timers before reloading.
 		// If timers ought to be restarted, the quest can take care of it with its code (example: save global data indicating what timer must be restarted).
-		synchronized (_allEventTimers)
+		synchronized (_questTimers)
 		{
-			for (ArrayList<QuestTimer> timers : _allEventTimers.values())
+			for (List<QuestTimer> timers : _questTimers.values())
 			{
 				for (QuestTimer timer : timers)
 				{
 					timer.cancel();
 				}
+				timers.clear();
 			}
-			_allEventTimers.clear();
+			_questTimers.clear();
 		}
 		
 		return QuestManager.getInstance().removeQuest(this);
