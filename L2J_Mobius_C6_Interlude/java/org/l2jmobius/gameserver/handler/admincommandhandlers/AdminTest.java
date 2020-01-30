@@ -56,7 +56,7 @@ public class AdminTest implements IAdminCommandHandler
 				activeChar.sendMessage(line);
 			}
 		}
-		if (command.equals("admin_mcrit"))
+		else if (command.equals("admin_mcrit"))
 		{
 			final Creature target = (Creature) activeChar.getTarget();
 			
@@ -69,7 +69,7 @@ public class AdminTest implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Target baseMCritRate " + target.getTemplate().getBaseMCritRate());
 			}
 		}
-		if (command.equals("admin_addbufftest"))
+		else if (command.equals("admin_addbufftest"))
 		{
 			final Creature target = (Creature) activeChar.getTarget();
 			BuilderUtil.sendSysMessage(activeChar, "cast");
