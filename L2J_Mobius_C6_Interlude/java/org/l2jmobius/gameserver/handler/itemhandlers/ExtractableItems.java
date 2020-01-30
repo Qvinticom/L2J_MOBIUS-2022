@@ -19,9 +19,8 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.datatables.ItemTable;
-import org.l2jmobius.gameserver.datatables.csv.ExtractableItemData;
+import org.l2jmobius.gameserver.datatables.xml.ExtractableItemData;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.ExtractableItem;
 import org.l2jmobius.gameserver.model.ExtractableProductItem;
@@ -29,7 +28,6 @@ import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -39,93 +37,7 @@ public class ExtractableItems implements IItemHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(ExtractableItems.class.getName());
 	
-	public void doExtract(Playable playable, ItemInstance item, int count)
-	{
-		if (!(playable instanceof PlayerInstance))
-		{
-			return;
-		}
-		final PlayerInstance player = (PlayerInstance) playable;
-		final int itemID = item.getItemId();
-		
-		if (count > item.getCount())
-		{
-			return;
-		}
-		while (count-- > 0)
-		{
-			final ExtractableItem exitem = ExtractableItemData.getInstance().getExtractableItem(itemID);
-			if (exitem == null)
-			{
-				return;
-			}
-			int createItemID = 0;
-			int createAmount = 0;
-			final int rndNum = Rnd.get(100);
-			int chanceFrom = 0;
-			for (ExtractableProductItem expi : exitem.getProductItems())
-			{
-				final int chance = expi.getChance();
-				
-				if ((rndNum >= chanceFrom) && (rndNum <= (chance + chanceFrom)))
-				{
-					createItemID = expi.getId();
-					createAmount = expi.getAmmount();
-					break;
-				}
-				
-				chanceFrom += chance;
-			}
-			
-			if (createItemID == 0)
-			{
-				player.sendMessage("Nothing happened.");
-				return;
-			}
-			
-			if (createItemID > 0)
-			{
-				if (ItemTable.getInstance().createDummyItem(createItemID) == null)
-				{
-					LOGGER.warning("createItemID " + createItemID + " doesn't have template!");
-					player.sendMessage("Nothing happened.");
-					return;
-				}
-				
-				if (ItemTable.getInstance().createDummyItem(createItemID).isStackable())
-				{
-					player.addItem("Extract", createItemID, createAmount, item, false);
-				}
-				else
-				{
-					for (int i = 0; i < createAmount; i++)
-					{
-						player.addItem("Extract", createItemID, 1, item, false);
-					}
-				}
-				SystemMessage sm;
-				
-				if (createAmount > 1)
-				{
-					sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
-					sm.addItemName(createItemID);
-					sm.addNumber(createAmount);
-				}
-				else
-				{
-					sm = new SystemMessage(SystemMessageId.EARNED_ITEM);
-					sm.addItemName(createItemID);
-				}
-				player.sendPacket(sm);
-			}
-			else
-			{
-				player.sendMessage("Item failed to open"); // TODO: Put a more proper message here.
-			}
-			
-			player.destroyItemByItemId("Extract", itemID, 1, player.getTarget(), true);
-		}
-	}
+	private static final int[] ITEM_IDS = ExtractableItemData.getInstance().getAllItemIds();
 	
 	@Override
 	public void useItem(Playable playable, ItemInstance item)
@@ -134,30 +46,78 @@ public class ExtractableItems implements IItemHandler
 		{
 			return;
 		}
-		if (item.getCount() > 1)
+		final PlayerInstance player = (PlayerInstance) playable;
+		final int itemId = item.getItemId();
+		
+		final ExtractableItem extractable = ExtractableItemData.getInstance().getExtractableItem(itemId);
+		if (extractable == null)
 		{
-			String message = HtmCache.getInstance().getHtm("data/html/others/extractable.htm");
-			if (message == null)
+			return;
+		}
+		
+		// Destroy item first.
+		player.destroyItemByItemId("Extract", itemId, 1, player.getTarget(), true);
+		
+		int createItemId = 0;
+		int createAmount = 0;
+		float chanceFrom = 0;
+		final float random = Rnd.get(100);
+		for (ExtractableProductItem expi : extractable.getProductItems())
+		{
+			final float chance = expi.getChance();
+			if ((random >= chanceFrom) && (random <= (chance + chanceFrom)))
 			{
-				doExtract(playable, item, 1);
+				createItemId = expi.getId();
+				createAmount = expi.getAmmount();
+				break;
+			}
+			chanceFrom += chance;
+		}
+		
+		if (createItemId > 0)
+		{
+			if (ItemTable.getInstance().createDummyItem(createItemId) == null)
+			{
+				LOGGER.warning("Extractable item with id " + createItemId + " does not have a template!");
+				player.sendMessage("Nothing happened.");
+				return;
+			}
+			
+			if (ItemTable.getInstance().createDummyItem(createItemId).isStackable())
+			{
+				player.addItem("Extract", createItemId, createAmount, item, false);
 			}
 			else
 			{
-				message = message.replace("%objectId%", String.valueOf(item.getObjectId()));
-				message = message.replace("%itemname%", item.getItemName());
-				message = message.replace("%count%", String.valueOf(item.getCount()));
-				playable.sendPacket(new NpcHtmlMessage(5, message));
+				for (int i = 0; i < createAmount; i++)
+				{
+					player.addItem("Extract", createItemId, 1, item, false);
+				}
 			}
+			
+			SystemMessage sm;
+			if (createAmount > 1)
+			{
+				sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
+				sm.addItemName(createItemId);
+				sm.addNumber(createAmount);
+			}
+			else
+			{
+				sm = new SystemMessage(SystemMessageId.EARNED_ITEM);
+				sm.addItemName(createItemId);
+			}
+			player.sendPacket(sm);
 		}
 		else
 		{
-			doExtract(playable, item, 1);
+			player.sendMessage("Nothing happened.");
 		}
 	}
 	
 	@Override
 	public int[] getItemIds()
 	{
-		return ExtractableItemData.getInstance().itemIDs();
+		return ITEM_IDS;
 	}
 }

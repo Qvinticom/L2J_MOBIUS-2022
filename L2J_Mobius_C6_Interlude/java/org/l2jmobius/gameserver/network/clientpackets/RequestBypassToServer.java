@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.communitybbs.CommunityBoard;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.handler.custom.CustomBypassHandler;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -293,7 +292,6 @@ public class RequestBypassToServer extends GameClientPacket
 				
 				final String p = _command.substring(6).trim();
 				final int idx = p.indexOf(' ');
-				
 				if (idx < 0)
 				{
 					player.processQuestEvent(p, "");
@@ -304,12 +302,7 @@ public class RequestBypassToServer extends GameClientPacket
 				}
 			}
 			
-			// Jstar's Custom Bypass Caller!
-			else if (_command.startsWith("custom_"))
-			{
-				CustomBypassHandler.getInstance().handleBypass(player, _command);
-			}
-			else if (_command.startsWith("OlympiadArenaChange"))
+			if (_command.startsWith("OlympiadArenaChange"))
 			{
 				Olympiad.bypassChangeArena(_command, player);
 			}

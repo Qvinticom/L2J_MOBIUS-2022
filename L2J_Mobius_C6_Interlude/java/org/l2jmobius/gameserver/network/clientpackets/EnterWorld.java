@@ -34,7 +34,6 @@ import org.l2jmobius.gameserver.communitybbs.Manager.MailBBSManager;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
-import org.l2jmobius.gameserver.handler.custom.CustomWorldHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.CoupleManager;
@@ -53,6 +52,7 @@ import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.model.entity.ClanHall;
 import org.l2jmobius.gameserver.model.entity.Hero;
+import org.l2jmobius.gameserver.model.entity.Rebirth;
 import org.l2jmobius.gameserver.model.entity.Wedding;
 import org.l2jmobius.gameserver.model.entity.event.CTF;
 import org.l2jmobius.gameserver.model.entity.event.DM;
@@ -431,7 +431,11 @@ public class EnterWorld extends GameClientPacket
 			player.sendMessage("You have been teleported to the nearest town due to you being in siege zone");
 		}
 		
-		CustomWorldHandler.getInstance().enterWorld(player);
+		// Rebirth's skills must be actived only on main class
+		if (Config.REBIRTH_ENABLE && !player.isSubClassActive())
+		{
+			Rebirth.getInstance().grantRebirthSkills(player);
+		}
 		
 		if (TvT._savePlayers.contains(player.getName()))
 		{

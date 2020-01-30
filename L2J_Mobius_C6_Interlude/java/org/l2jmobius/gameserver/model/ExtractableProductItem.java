@@ -23,9 +23,9 @@ public class ExtractableProductItem
 {
 	private final int _id;
 	private final int _ammount;
-	private final int _chance;
+	private final float _chance;
 	
-	public ExtractableProductItem(int id, int ammount, int chance)
+	public ExtractableProductItem(int id, int ammount, float chance)
 	{
 		_id = id;
 		_ammount = ammount;
@@ -42,7 +42,7 @@ public class ExtractableProductItem
 		return _ammount;
 	}
 	
-	public int getChance()
+	public float getChance()
 	{
 		return _chance;
 	}
