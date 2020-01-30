@@ -28,7 +28,6 @@ public class RequestAllyInfo extends GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final AllyInfo ai = new AllyInfo(getClient().getPlayer());
-		sendPacket(ai);
+		sendPacket(new AllyInfo(getClient().getPlayer()));
 	}
 }

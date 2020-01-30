@@ -69,8 +69,7 @@ public class FishingSkill implements ISkillHandler
 		final ItemInstance weaponInst = creature.getActiveWeaponInstance();
 		if ((weaponInst == null) || (weaponItem == null) || (weaponItem.getItemType() != WeaponType.ROD))
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
-			creature.sendPacket(sm);
+			creature.sendPacket(new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED));
 			return;
 		}
 		

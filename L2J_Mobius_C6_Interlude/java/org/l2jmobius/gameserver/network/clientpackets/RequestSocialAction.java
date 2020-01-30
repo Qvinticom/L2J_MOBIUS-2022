@@ -46,8 +46,7 @@ public class RequestSocialAction extends GameClientPacket
 		// You cannot do anything else while fishing
 		if (player.isFishing())
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.CANNOT_DO_WHILE_FISHING_3);
-			player.sendPacket(sm);
+			player.sendPacket(new SystemMessage(SystemMessageId.CANNOT_DO_WHILE_FISHING_3));
 			return;
 		}
 		
@@ -60,8 +59,7 @@ public class RequestSocialAction extends GameClientPacket
 		
 		if ((player.getPrivateStoreType() == 0) && (player.getActiveRequester() == null) && !player.isAlikeDead() && (!player.isAllSkillsDisabled() || player.isInDuel()) && (player.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 		{
-			final SocialAction atk = new SocialAction(player.getObjectId(), _actionId);
-			player.broadcastPacket(atk);
+			player.broadcastPacket(new SocialAction(player.getObjectId(), _actionId));
 		}
 	}
 }

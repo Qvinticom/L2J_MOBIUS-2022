@@ -45,8 +45,7 @@ public class RequestPledgeMemberList implements IClientIncomingPacket
 		final Clan clan = player.getClan();
 		if (clan != null)
 		{
-			final PledgeShowMemberListAll pm = new PledgeShowMemberListAll(clan, player);
-			player.sendPacket(pm);
+			player.sendPacket(new PledgeShowMemberListAll(clan, player));
 		}
 	}
 }

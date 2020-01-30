@@ -74,10 +74,7 @@ public class HandysBlockCheckerEvent extends AbstractNpcAI
 		if (HandysBlockCheckerManager.getInstance().addPlayerToArena(player, arena))
 		{
 			final ArenaParticipantsHolder holder = HandysBlockCheckerManager.getInstance().getHolder(arena);
-			
-			final ExCubeGameTeamList tl = new ExCubeGameTeamList(holder.getRedPlayers(), holder.getBluePlayers(), arena);
-			
-			player.sendPacket(tl);
+			player.sendPacket(new ExCubeGameTeamList(holder.getRedPlayers(), holder.getBluePlayers(), arena));
 			
 			final int countBlue = holder.getBlueTeamSize();
 			final int countRed = holder.getRedTeamSize();

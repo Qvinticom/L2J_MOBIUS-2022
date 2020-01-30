@@ -93,8 +93,7 @@ public class SoulCrystals implements IItemHandler
 		if (!(target instanceof MonsterInstance))
 		{
 			// Send a System Message to the caster
-			final SystemMessage sm = new SystemMessage(SystemMessageId.INCORRECT_TARGET);
-			player.sendPacket(sm);
+			player.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
 			
 			// Send a Server->Client packet ActionFailed to the PlayerInstance
 			player.sendPacket(ActionFailed.STATIC_PACKET);

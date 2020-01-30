@@ -246,10 +246,8 @@ public class RaceManagerInstance extends Npc
 		if (_state == STARTING_RACE)
 		{
 			// state++;
-			final PlaySound sRace = new PlaySound(1, "S_Race", 0, 0, 0, 0, 0);
-			broadcast(sRace);
-			final PlaySound sRace2 = new PlaySound(0, "ItemSound2.race_start", 1, 121209259, 12125, 182487, -3559);
-			broadcast(sRace2);
+			broadcast(new PlaySound(1, "S_Race", 0, 0, 0, 0, 0));
+			broadcast(new PlaySound(0, "ItemSound2.race_start", 1, 121209259, 12125, 182487, -3559));
 			_packet = new MonRaceInfo(_codes[1][0], _codes[1][1], race.getMonsters(), race.getSpeeds());
 			sendMonsterInfo();
 			

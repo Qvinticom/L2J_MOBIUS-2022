@@ -39,24 +39,21 @@ public class RequestAnswerJoinPledge extends ClientBasePacket
 		final PlayerInstance requestor = activeChar.getTransactionRequester();
 		if (answer == 1)
 		{
-			final JoinPledge jp = new JoinPledge(requestor.getClanId());
-			activeChar.sendPacket(jp);
+			activeChar.sendPacket(new JoinPledge(requestor.getClanId()));
 			final Clan clan = requestor.getClan();
 			clan.addClanMember(activeChar);
 			clan.store();
 			activeChar.setClanId(clan.getClanId());
 			activeChar.setClan(clan);
-			final PledgeShowInfoUpdate pu = new PledgeShowInfoUpdate(clan, activeChar);
-			activeChar.sendPacket(pu);
+			activeChar.sendPacket(new PledgeShowInfoUpdate(clan, activeChar));
 			activeChar.sendPacket(new UserInfo(activeChar));
 			activeChar.broadcastPacket(new CharInfo(activeChar));
 			SystemMessage sm = new SystemMessage(SystemMessage.ENTERED_THE_CLAN);
 			activeChar.sendPacket(sm);
 			// ClanMember[] members = clan.getMembers();
-			final PledgeShowMemberListAdd la = new PledgeShowMemberListAdd(activeChar);
 			sm = new SystemMessage(SystemMessage.S1_HAS_JOINED_CLAN);
 			sm.addString(activeChar.getName());
-			clan.broadcastToOnlineMembers(la);
+			clan.broadcastToOnlineMembers(new PledgeShowMemberListAdd(activeChar));
 			clan.broadcastToOnlineMembers(sm);
 			activeChar.sendPacket(new PledgeShowMemberListAll(clan, activeChar));
 		}

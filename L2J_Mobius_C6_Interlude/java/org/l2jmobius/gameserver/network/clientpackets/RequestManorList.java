@@ -51,7 +51,6 @@ public class RequestManorList extends GameClientPacket
 		manorsName.add("goddard");
 		manorsName.add("rune");
 		manorsName.add("schuttgart");
-		final ExSendManorList manorlist = new ExSendManorList(manorsName);
-		player.sendPacket(manorlist);
+		player.sendPacket(new ExSendManorList(manorsName));
 	}
 }

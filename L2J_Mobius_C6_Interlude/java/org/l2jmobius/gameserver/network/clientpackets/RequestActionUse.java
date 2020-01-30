@@ -258,50 +258,42 @@ public class RequestActionUse extends GameClientPacket
 					if (player.isDead())
 					{
 						// A strider cannot be ridden when dead
-						final SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_DEAD);
-						player.sendPacket(msg);
+						player.sendPacket(new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_DEAD));
 					}
 					else if (pet.isDead())
 					{
 						// A dead strider cannot be ridden.
-						final SystemMessage msg = new SystemMessage(SystemMessageId.DEAD_STRIDER_CANT_BE_RIDDEN);
-						player.sendPacket(msg);
+						player.sendPacket(new SystemMessage(SystemMessageId.DEAD_STRIDER_CANT_BE_RIDDEN));
 					}
 					else if (pet.isInCombat() || pet.isRooted())
 					{
 						// A strider in battle cannot be ridden
-						final SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_IN_BATLLE_CANT_BE_RIDDEN);
-						player.sendPacket(msg);
+						player.sendPacket(new SystemMessage(SystemMessageId.STRIDER_IN_BATLLE_CANT_BE_RIDDEN));
 					}
 					else if (player.isInCombat())
 					{
 						// A strider cannot be ridden while in battle
-						final SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE);
-						player.sendPacket(msg);
+						player.sendPacket(new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE));
 					}
 					else if (player.isInFunEvent())
 					{
 						// A strider cannot be ridden while in event
-						final SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE);
-						player.sendPacket(msg);
+						player.sendPacket(new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE));
 					}
 					else if (player.isSitting()) // Like L2OFF you can mount also during movement
 					{
 						// A strider can be ridden only when standing
-						final SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CAN_BE_RIDDEN_ONLY_WHILE_STANDING);
-						player.sendPacket(msg);
+						player.sendPacket(new SystemMessage(SystemMessageId.STRIDER_CAN_BE_RIDDEN_ONLY_WHILE_STANDING));
 					}
 					else if (player.isFishing())
 					{
 						// You can't mount, dismount, break and drop items while fishing
-						final SystemMessage msg = new SystemMessage(SystemMessageId.CANNOT_DO_WHILE_FISHING_2);
-						player.sendPacket(msg);
+						player.sendPacket(new SystemMessage(SystemMessageId.CANNOT_DO_WHILE_FISHING_2));
 					}
 					else if (player.isCursedWeaponEquiped())
 					{
 						// You can't mount, dismount, break and drop items while weilding a cursed weapon
-						final SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE);
-						player.sendPacket(msg);
+						player.sendPacket(new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE));
 					}
 					else if (!pet.isDead() && !player.isMounted())
 					{
@@ -328,8 +320,7 @@ public class RequestActionUse extends GameClientPacket
 							}
 							if (player.setMountType(0))
 							{
-								final Ride dismount = new Ride(player.getObjectId(), Ride.ACTION_DISMOUNT, 0);
-								player.broadcastPacket(dismount);
+								player.broadcastPacket(new Ride(player.getObjectId(), Ride.ACTION_DISMOUNT, 0));
 								player.setMountObjectID(0);
 							}
 						}

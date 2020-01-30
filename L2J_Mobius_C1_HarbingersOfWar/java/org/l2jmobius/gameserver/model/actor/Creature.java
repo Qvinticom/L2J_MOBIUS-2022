@@ -1051,8 +1051,7 @@ public abstract class Creature extends WorldObject
 			setto = new SetToLocation(this);
 			broadcastPacket(setto);
 		}
-		final FinishRotation fr = new FinishRotation(this);
-		broadcastPacket(fr);
+		broadcastPacket(new FinishRotation(this));
 	}
 	
 	public boolean isDead()
@@ -1080,16 +1079,14 @@ public abstract class Creature extends WorldObject
 		{
 			setInCombat(false);
 			setCurrentState(CreatureState.IDLE);
-			final ActionFailed af = new ActionFailed();
-			sendPacket(af);
+			sendPacket(new ActionFailed());
 			return;
 		}
 		if ((getActiveWeapon().getWeaponType() == Weapon.WEAPON_TYPE_BOW) && !checkAndEquipArrows())
 		{
 			setInCombat(false);
 			setCurrentState(CreatureState.IDLE);
-			final ActionFailed af = new ActionFailed();
-			sendPacket(af);
+			sendPacket(new ActionFailed());
 			sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_ARROWS));
 			return;
 		}
@@ -1106,8 +1103,7 @@ public abstract class Creature extends WorldObject
 			{
 				setInCombat(false);
 				setCurrentState(CreatureState.IDLE);
-				final ActionFailed af = new ActionFailed();
-				sendPacket(af);
+				sendPacket(new ActionFailed());
 				return;
 			}
 			if (!_currentlyAttacking)
@@ -1164,8 +1160,7 @@ public abstract class Creature extends WorldObject
 						sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
 						setInCombat(false);
 						setCurrentState(CreatureState.IDLE);
-						final ActionFailed af = new ActionFailed();
-						sendPacket(af);
+						sendPacket(new ActionFailed());
 						return;
 					}
 					reduceCurrentMp(weaponItem.getMpConsume());
@@ -1203,8 +1198,7 @@ public abstract class Creature extends WorldObject
 			setInCombat(false);
 			setTarget(null);
 			setCurrentState(CreatureState.IDLE);
-			final ActionFailed af = new ActionFailed();
-			sendPacket(af);
+			sendPacket(new ActionFailed());
 			return;
 		}
 		if (_currentlyAttacking)
@@ -1282,8 +1276,7 @@ public abstract class Creature extends WorldObject
 		{
 			setInCombat(false);
 			setCurrentState(CreatureState.IDLE);
-			final ActionFailed af = new ActionFailed();
-			sendPacket(af);
+			sendPacket(new ActionFailed());
 			return;
 		}
 		setTarget(target);

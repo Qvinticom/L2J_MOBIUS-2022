@@ -45,9 +45,7 @@ public class RequestSetPledgeCrest extends ClientBasePacket
 		final FileOutputStream out = new FileOutputStream(crestFile);
 		out.write(data);
 		out.close();
-		final UserInfo ui = new UserInfo(activeChar);
-		activeChar.sendPacket(ui);
-		final CharInfo ci = new CharInfo(activeChar);
-		activeChar.broadcastPacket(ci);
+		activeChar.sendPacket(new UserInfo(activeChar));
+		activeChar.broadcastPacket(new CharInfo(activeChar));
 	}
 }

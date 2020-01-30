@@ -994,8 +994,7 @@ public class TerritoryWarManager implements Siegable
 			}
 		}
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.TERRITORY_WAR_HAS_BEGUN);
-		Broadcast.toAllOnlinePlayers(sm);
+		Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.TERRITORY_WAR_HAS_BEGUN));
 	}
 	
 	protected void endTerritoryWar()
@@ -1110,8 +1109,7 @@ public class TerritoryWarManager implements Siegable
 		
 		// Change next TW date.
 		setNextTWDate();
-		final SystemMessage sm = new SystemMessage(SystemMessageId.TERRITORY_WAR_HAS_ENDED);
-		Broadcast.toAllOnlinePlayers(sm);
+		Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.TERRITORY_WAR_HAS_ENDED));
 	}
 	
 	public void setNextTWDate()

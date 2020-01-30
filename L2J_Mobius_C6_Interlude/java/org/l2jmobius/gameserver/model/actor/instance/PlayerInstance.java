@@ -1962,8 +1962,7 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			_lastCompassZone = ExSetCompassZoneCode.SIEGEWARZONE2;
-			final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.SIEGEWARZONE2);
-			sendPacket(cz);
+			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.SIEGEWARZONE2));
 		}
 		else if (isInsideZone(ZoneId.PVP))
 		{
@@ -1972,8 +1971,7 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			_lastCompassZone = ExSetCompassZoneCode.PVPZONE;
-			final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.PVPZONE);
-			sendPacket(cz);
+			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.PVPZONE));
 		}
 		else if (isIn7sDungeon())
 		{
@@ -1982,8 +1980,7 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			_lastCompassZone = ExSetCompassZoneCode.SEVENSIGNSZONE;
-			final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.SEVENSIGNSZONE);
-			sendPacket(cz);
+			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.SEVENSIGNSZONE));
 		}
 		else if (isInsideZone(ZoneId.PEACE))
 		{
@@ -1992,8 +1989,7 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			_lastCompassZone = ExSetCompassZoneCode.PEACEZONE;
-			final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.PEACEZONE);
-			sendPacket(cz);
+			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.PEACEZONE));
 		}
 		else
 		{
@@ -2006,8 +2002,7 @@ public class PlayerInstance extends Playable
 				updatePvPStatus();
 			}
 			_lastCompassZone = ExSetCompassZoneCode.GENERALZONE;
-			final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.GENERALZONE);
-			sendPacket(cz);
+			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.GENERALZONE));
 		}
 	}
 	
@@ -4243,8 +4238,7 @@ public class PlayerInstance extends Playable
 		sendPacket(su);
 		
 		// Send the ItemList Server->Client Packet to the player in order to refresh its Inventory
-		final ItemList il = new ItemList(getInventory().getItems(), true);
-		sendPacket(il);
+		sendPacket(new ItemList(getInventory().getItems(), true));
 		
 		// Send a Server->Client packet UserInfo to this PlayerInstance and CharInfo to all PlayerInstance in its _KnownPlayers
 		broadcastUserInfo();
@@ -4280,7 +4274,6 @@ public class PlayerInstance extends Playable
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			
 			if ((oldItem.getCount() > 0) && (oldItem != newItem))
 			{
 				playerIU.addModifiedItem(oldItem);
@@ -4289,7 +4282,6 @@ public class PlayerInstance extends Playable
 			{
 				playerIU.addRemovedItem(oldItem);
 			}
-			
 			sendPacket(playerIU);
 		}
 		else
@@ -4310,7 +4302,6 @@ public class PlayerInstance extends Playable
 			if (!Config.FORCE_INVENTORY_UPDATE)
 			{
 				final InventoryUpdate playerIU = new InventoryUpdate();
-				
 				if (newItem.getCount() > count)
 				{
 					playerIU.addModifiedItem(newItem);
@@ -4319,7 +4310,6 @@ public class PlayerInstance extends Playable
 				{
 					playerIU.addNewItem(newItem);
 				}
-				
 				targetPlayer.sendPacket(playerIU);
 			}
 			else
@@ -4335,7 +4325,6 @@ public class PlayerInstance extends Playable
 		else if (target instanceof PetInventory)
 		{
 			final PetInventoryUpdate petIU = new PetInventoryUpdate();
-			
 			if (newItem.getCount() > count)
 			{
 				petIU.addModifiedItem(newItem);
@@ -4344,7 +4333,6 @@ public class PlayerInstance extends Playable
 			{
 				petIU.addNewItem(newItem);
 			}
-			
 			((PetInventory) target).getOwner().getOwner().sendPacket(petIU);
 		}
 		
@@ -4362,27 +4350,22 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean dropItem(String process, ItemInstance item, WorldObject reference, boolean sendMessage, boolean protectItem)
 	{
-		
 		if (_freight.getItemByObjectId(item.getObjectId()) != null)
 		{
-			
 			// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
 			sendPacket(ActionFailed.STATIC_PACKET);
 			
 			Util.handleIllegalPlayerAction(this, "Warning!! Character " + getName() + " of account " + getAccountName() + " tried to drop Freight Items", IllegalPlayerAction.PUNISH_KICK);
 			return false;
-			
 		}
 		
 		item = _inventory.dropItem(process, item, this, reference);
-		
 		if (item == null)
 		{
 			if (sendMessage)
 			{
 				sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
 			}
-			
 			return false;
 		}
 		
@@ -4390,7 +4373,6 @@ public class PlayerInstance extends Playable
 		
 		if (Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getItemId()))
 		{
-			
 			if (Config.AUTODESTROY_ITEM_AFTER > 0) // autodestroy enabled
 			{
 				if ((item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !item.isEquipable())
@@ -4402,18 +4384,15 @@ public class PlayerInstance extends Playable
 				{
 					item.setProtected(true);
 				}
-				
 			}
 			else
 			{
 				item.setProtected(true);
 			}
-			
 		}
 		else
 		{
 			item.setProtected(true);
-			
 		}
 		
 		if (protectItem)
@@ -5316,8 +5295,7 @@ public class PlayerInstance extends Playable
 		if (isInParty() && (needCpUpdate(352) || super.needHpUpdate(352) || needMpUpdate(352)))
 		{
 			// Send the Server->Client packet PartySmallWindowUpdate with current HP, MP and Level to all other PlayerInstance of the Party
-			final PartySmallWindowUpdate update = new PartySmallWindowUpdate(this);
-			getParty().broadcastToPartyMembers(this, update);
+			getParty().broadcastToPartyMembers(this, new PartySmallWindowUpdate(this));
 		}
 		
 		if (isInOlympiadMode())
@@ -5344,8 +5322,7 @@ public class PlayerInstance extends Playable
 		}
 		if (isInDuel())
 		{
-			final ExDuelUpdateUserInfo update = new ExDuelUpdateUserInfo(this);
-			DuelManager.getInstance().broadcastToOppositTeam(this, update);
+			DuelManager.getInstance().broadcastToOppositTeam(this, new ExDuelUpdateUserInfo(this));
 		}
 	}
 	
@@ -6260,11 +6237,10 @@ public class PlayerInstance extends Playable
 					{
 						if (!(pk._teamNameTvT.equals(_teamNameTvT)))
 						{
-							final PlaySound ps = new PlaySound(0, "ItemSound.quest_itemget", this);
 							_countTvTdies++;
 							pk._countTvTkills++;
 							pk.setTitle("Kills: " + pk._countTvTkills);
-							pk.sendPacket(ps);
+							pk.sendPacket(new PlaySound(0, "ItemSound.quest_itemget", this));
 							pk.broadcastUserInfo();
 							TvT.setTeamKillsCount(pk._teamNameTvT, TvT.teamKillsCount(pk._teamNameTvT) + 1);
 							pk.broadcastUserInfo();
@@ -6315,9 +6291,8 @@ public class PlayerInstance extends Playable
 					if (DM.isTeleport() || DM.hasStarted())
 					{
 						pk._countDMkills++;
-						final PlaySound ps = new PlaySound(0, "ItemSound.quest_itemget", this);
 						pk.setTitle("Kills: " + pk._countDMkills);
-						pk.sendPacket(ps);
+						pk.sendPacket(new PlaySound(0, "ItemSound.quest_itemget", this));
 						pk.broadcastUserInfo();
 						
 						if (Config.DM_ENABLE_KILL_REWARD)
@@ -6761,10 +6736,8 @@ public class PlayerInstance extends Playable
 	 */
 	private boolean checkAntiFarm(PlayerInstance targetPlayer)
 	{
-		
 		if (Config.ANTI_FARM_ENABLED)
 		{
-			
 			// Anti FARM Clan - Ally
 			if ((Config.ANTI_FARM_CLAN_ALLY_ENABLED && ((getClanId() > 0) && (targetPlayer.getClanId() > 0) && (getClanId() == targetPlayer.getClanId()))) || ((getAllyId() > 0) && (targetPlayer.getAllyId() > 0) && (getAllyId() == targetPlayer.getAllyId())))
 			{
@@ -6834,7 +6807,6 @@ public class PlayerInstance extends Playable
 		{
 			if (targetPlayer.getClient().getConnection().getInetAddress() != _client.getConnection().getInetAddress())
 			{
-				
 				if ((targetPlayer.getKarma() > 0) || (targetPlayer.getPvpFlag() > 0)) // killing target pk or in pvp
 				{
 					if (Config.PVP_REWARD_ENABLED)
@@ -7993,8 +7965,7 @@ public class PlayerInstance extends Playable
 				getInventory().setPaperdollItem(Inventory.PAPERDOLL_LHAND, _arrowItem);
 				
 				// Send a Server->Client packet ItemList to this PlayerInstance to update left hand equipement
-				final ItemList il = new ItemList(this, false);
-				sendPacket(il);
+				sendPacket(new ItemList(this, false));
 			}
 		}
 		else
@@ -8338,10 +8309,9 @@ public class PlayerInstance extends Playable
 		enableAllSkills();
 		
 		// Send a Server->Client Packet MagicSkillCanceld to the PlayerInstance and all PlayerInstance in the _KnownPlayers of the Creature (broadcast)
-		final MagicSkillCanceld msc = new MagicSkillCanceld(getObjectId());
 		
 		// Broadcast the packet to self and known players.
-		Broadcast.toSelfAndKnownPlayersInRadius(this, msc, 810000/* 900 */);
+		Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillCanceld(getObjectId()), 810000/* 900 */);
 	}
 	
 	/**
@@ -11271,8 +11241,7 @@ public class PlayerInstance extends Playable
 		_mountType = mountType;
 		
 		// Send a Server->Client packet InventoryUpdate to the PlayerInstance in order to update speed
-		final UserInfo ui = new UserInfo(this);
-		sendPacket(ui);
+		sendPacket(new UserInfo(this));
 		return true;
 	}
 	
@@ -11603,8 +11572,7 @@ public class PlayerInstance extends Playable
 		{
 			if (isOnline() == 1)
 			{
-				final SystemMessage msg = new SystemMessage(SystemMessageId.PLAYING_FOR_LONG_TIME);
-				PlayerInstance.this.sendPacket(msg);
+				sendPacket(new SystemMessage(SystemMessageId.PLAYING_FOR_LONG_TIME));
 			}
 			else
 			{
@@ -15261,8 +15229,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void endFishing(boolean win)
 	{
-		final ExFishingEnd efe = new ExFishingEnd(win, this);
-		broadcastPacket(efe);
+		broadcastPacket(new ExFishingEnd(win, this));
 		_fishing = false;
 		_fishX = 0;
 		_fishY = 0;
@@ -15933,8 +15900,7 @@ public class PlayerInstance extends Playable
 		{
 			removeSkill(SkillTable.getInstance().getInfo(4289, 1));
 		}
-		final Ride dismount = new Ride(getObjectId(), Ride.ACTION_DISMOUNT, 0);
-		broadcastPacket(dismount);
+		broadcastPacket(new Ride(getObjectId(), Ride.ACTION_DISMOUNT, 0));
 		setMountObjectID(0);
 		broadcastUserInfo();
 		return true;
@@ -15976,8 +15942,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void updatePcBangWnd(int score, boolean add, boolean duble)
 	{
-		final ExPCCafePointInfo wnd = new ExPCCafePointInfo(this, score, add, 24, duble);
-		sendPacket(wnd);
+		sendPacket(new ExPCCafePointInfo(this, score, add, 24, duble));
 	}
 	
 	/**
@@ -15985,8 +15950,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void showPcBangWindow()
 	{
-		final ExPCCafePointInfo wnd = new ExPCCafePointInfo(this, 0, false, 24, false);
-		sendPacket(wnd);
+		sendPacket(new ExPCCafePointInfo(this, 0, false, 24, false));
 	}
 	
 	/**

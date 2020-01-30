@@ -178,7 +178,6 @@ public class SummonInstance extends Summon
 	{
 		super.reduceCurrentHp(damage, attacker);
 		final SystemMessage sm = new SystemMessage(SystemMessageId.SUMMON_RECEIVED_DAMAGE_S2_BY_S1);
-		
 		if (attacker instanceof NpcInstance)
 		{
 			sm.addNpcName(((NpcInstance) attacker).getTemplate().getNpcId());
@@ -187,7 +186,6 @@ public class SummonInstance extends Summon
 		{
 			sm.addString(attacker.getName());
 		}
-		
 		sm.addNumber(damage);
 		getOwner().sendPacket(sm);
 	}

@@ -279,8 +279,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		}
 		if ((party.getCommandChannel().getMembers().size() < Config.HEART_DEFENCE_MIN_PLAYERS) || (party.getCommandChannel().getMembers().size() > Config.HEART_DEFENCE_MAX_PLAYERS))// 18 27
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
-			party.getCommandChannel().broadcastPacket(sm);
+			party.getCommandChannel().broadcastPacket(new SystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY));
 			return false;
 		}
 		for (PlayerInstance partyMember : party.getCommandChannel().getMembers())
@@ -609,8 +608,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		}
 		else
 		{
-			final NpcSay cs = new NpcSay(preawakenedEchmus.getObjectId(), ChatType.SHOUT, preawakenedEchmus.getId(), NpcStringId.BRING_MORE_MORE_SOULS);
-			preawakenedEchmus.broadcastPacket(cs);
+			preawakenedEchmus.broadcastPacket(new NpcSay(preawakenedEchmus.getObjectId(), ChatType.SHOUT, preawakenedEchmus.getId(), NpcStringId.BRING_MORE_MORE_SOULS));
 			final ExShowScreenMessage message = new ExShowScreenMessage(NpcStringId.THE_SOUL_COFFIN_HAS_AWAKENED_EKIMUS_IF_S1_MORE_SOUL_COFFIN_S_ARE_CREATED_THE_DEFENSE_OF_THE_HEART_OF_IMMORTALITY_WILL_FAIL, 2, 8000);
 			message.addStringParameter(Integer.toString(maxCoffins - coffinsCreated));
 			broadCastPacket(world, message);

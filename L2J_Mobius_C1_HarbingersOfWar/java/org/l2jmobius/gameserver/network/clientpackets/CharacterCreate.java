@@ -57,20 +57,17 @@ public class CharacterCreate extends ClientBasePacket
 		
 		if (CharNameTable.getInstance().doesCharNameExist(newChar.getName()))
 		{
-			final CharCreateFail ccf = new CharCreateFail(CharCreateFail.REASON_NAME_ALREADY_EXISTS);
-			client.getConnection().sendPacket(ccf);
+			client.getConnection().sendPacket(new CharCreateFail(CharCreateFail.REASON_NAME_ALREADY_EXISTS));
 		}
 		else if ((newChar.getName().length() <= 16) && isAlphaNumeric(newChar.getName()))
 		{
-			final CharCreateOk cco = new CharCreateOk();
-			client.getConnection().sendPacket(cco);
+			client.getConnection().sendPacket(new CharCreateOk());
 			initNewChar(client, newChar);
 			CharNameTable.getInstance().addCharName(newChar.getName());
 		}
 		else
 		{
-			final CharCreateFail ccf = new CharCreateFail(CharCreateFail.REASON_16_ENG_CHARS);
-			client.getConnection().sendPacket(ccf);
+			client.getConnection().sendPacket(new CharCreateFail(CharCreateFail.REASON_16_ENG_CHARS));
 		}
 	}
 	
@@ -155,7 +152,6 @@ public class CharacterCreate extends ClientBasePacket
 			newChar.addSkill(SkillTable.getInstance().getInfo(startSkill.getId(), startSkill.getLevel()));
 		}
 		client.saveCharToDisk(newChar);
-		final CharSelectInfo cl = new CharSelectInfo(client.getLoginName(), client.getSessionId());
-		client.getConnection().sendPacket(cl);
+		client.getConnection().sendPacket(new CharSelectInfo(client.getLoginName(), client.getSessionId()));
 	}
 }

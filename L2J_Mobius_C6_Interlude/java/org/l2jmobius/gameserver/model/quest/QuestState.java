@@ -661,9 +661,9 @@ public class QuestState
 		}
 		
 		// on quests, always refresh inventory
-		final InventoryUpdate u = new InventoryUpdate();
-		u.addItem(item);
-		_player.sendPacket(u);
+		final InventoryUpdate iu = new InventoryUpdate();
+		iu.addItem(item);
+		_player.sendPacket(iu);
 	}
 	
 	/**

@@ -190,11 +190,9 @@ public class ScrollOfEscape implements IItemHandler
 		player.setTarget(player);
 		
 		final Skill skill = SkillTable.getInstance().getInfo(escapeSkill, 1);
-		final MagicSkillUse msu = new MagicSkillUse(player, escapeSkill, 1, skill.getHitTime(), 0);
-		player.broadcastPacket(msu);
+		player.broadcastPacket(new MagicSkillUse(player, escapeSkill, 1, skill.getHitTime(), 0));
 		player.setTarget(oldtarget);
-		final SetupGauge sg = new SetupGauge(0, skill.getHitTime());
-		player.sendPacket(sg);
+		player.sendPacket(new SetupGauge(0, skill.getHitTime()));
 		// End SoE Animation section
 		player.setTarget(null);
 		

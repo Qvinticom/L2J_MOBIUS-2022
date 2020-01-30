@@ -32,8 +32,7 @@ public class CharacterSelected extends ClientBasePacket
 		final PlayerInstance cha = client.loadCharFromDisk(charSlot);
 		cha.setMoveType(1);
 		cha.setWaitType(1);
-		final CharSelected cs = new CharSelected(cha, client.getSessionId());
-		client.getConnection().sendPacket(cs);
+		client.getConnection().sendPacket(new CharSelected(cha, client.getSessionId()));
 		client.setActiveChar(cha);
 	}
 }

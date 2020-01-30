@@ -72,7 +72,6 @@ public class RequestJoinAlly extends GameClientPacket
 		sm.addString(player.getClan().getAllyName());
 		sm.addString(player.getName());
 		target.sendPacket(sm);
-		final AskJoinAlly aja = new AskJoinAlly(player.getObjectId(), player.getClan().getAllyName());
-		target.sendPacket(aja);
+		target.sendPacket(new AskJoinAlly(player.getObjectId(), player.getClan().getAllyName()));
 	}
 }

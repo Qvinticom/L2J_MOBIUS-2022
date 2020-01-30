@@ -63,113 +63,91 @@ public class CrystalCarol implements IItemHandler
 		
 		if (itemId == 5562) // crystal_carol_01
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2140, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2140, 1, 1, 0));
 		}
 		else if (itemId == 5563) // crystal_carol_02
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2141, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2141, 1, 1, 0));
 		}
 		else if (itemId == 5564) // crystal_carol_03
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2142, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2142, 1, 1, 0));
 		}
 		else if (itemId == 5565) // crystal_carol_04
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2143, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2143, 1, 1, 0));
 		}
 		else if (itemId == 5566) // crystal_carol_05
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2144, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2144, 1, 1, 0));
 		}
 		else if (itemId == 5583) // crystal_carol_06
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2145, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2145, 1, 1, 0));
 		}
 		else if (itemId == 5584) // crystal_carol_07
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2146, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2146, 1, 1, 0));
 		}
 		else if (itemId == 5585) // crystal_carol_08
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2147, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2147, 1, 1, 0));
 		}
 		else if (itemId == 5586) // crystal_carol_09
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2148, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2148, 1, 1, 0));
 		}
 		else if (itemId == 5587) // crystal_carol_10
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2149, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2149, 1, 1, 0));
 		}
 		else if (itemId == 4411) // crystal_journey
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2069, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2069, 1, 1, 0));
 		}
 		else if (itemId == 4412) // crystal_battle
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2068, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2068, 1, 1, 0));
 		}
 		else if (itemId == 4413) // crystal_love
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2070, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2070, 1, 1, 0));
 		}
 		else if (itemId == 4414) // crystal_solitude
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2072, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2072, 1, 1, 0));
 		}
 		else if (itemId == 4415) // crystal_festival
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2071, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2071, 1, 1, 0));
 		}
 		else if (itemId == 4416) // crystal_celebration
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2073, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2073, 1, 1, 0));
 		}
 		else if (itemId == 4417) // crystal_comedy
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2067, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2067, 1, 1, 0));
 		}
 		else if (itemId == 5010) // crystal_victory
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2066, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2066, 1, 1, 0));
 		}
 		else if (itemId == 6903) // music_box_m
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2187, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2187, 1, 1, 0));
 		}
 		else if (itemId == 7061) // crystal_birthday
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2073, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2073, 1, 1, 0));
 		}
 		else if (itemId == 7062) // crystal_wedding
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2230, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2230, 1, 1, 0));
 		}
 		else if (itemId == 8555) // VVKorea
 		{
-			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2272, 1, 1, 0);
-			player.broadcastPacket(msu);
+			player.broadcastPacket(new MagicSkillUse(playable, player, 2272, 1, 1, 0));
 		}
 		player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 	}

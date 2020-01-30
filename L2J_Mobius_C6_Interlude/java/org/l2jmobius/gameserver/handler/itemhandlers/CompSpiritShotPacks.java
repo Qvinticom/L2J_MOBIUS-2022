@@ -74,8 +74,7 @@ public class CompSpiritShotPacks implements IItemHandler
 		sm.addNumber(amount);
 		player.sendPacket(sm);
 		
-		final ItemList playerUI = new ItemList(player, false);
-		player.sendPacket(playerUI);
+		player.sendPacket(new ItemList(player, false));
 	}
 	
 	@Override

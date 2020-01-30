@@ -128,8 +128,7 @@ public class FolkInstance extends NpcInstance
 			}
 			else
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
-				player.sendPacket(sm);
+				player.sendPacket(new SystemMessage(SystemMessageId.NO_MORE_SKILLS_TO_LEARN));
 			}
 		}
 		else

@@ -1596,8 +1596,7 @@ public class CTF implements EventTask
 						player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
 					}
 					
-					final Ride dismount = new Ride(player.getObjectId(), Ride.ACTION_DISMOUNT, 0);
-					player.broadcastPacket(dismount);
+					player.broadcastPacket(new Ride(player.getObjectId(), Ride.ACTION_DISMOUNT, 0));
 					player.setMountObjectID(0);
 				}
 				player.broadcastUserInfo();
@@ -2915,8 +2914,7 @@ public class CTF implements EventTask
 		player.broadcastPacket(new SocialAction(player.getObjectId(), 16)); // Amazing glow
 		player._haveFlagCTF = true;
 		player.broadcastUserInfo();
-		final CreatureSay cs = new CreatureSay(player.getObjectId(), 15, ":", "You got it! Run back! ::"); // 8D
-		player.sendPacket(cs);
+		player.sendPacket(new CreatureSay(player.getObjectId(), 15, ":", "You got it! Run back! ::"));
 	}
 	
 	/**

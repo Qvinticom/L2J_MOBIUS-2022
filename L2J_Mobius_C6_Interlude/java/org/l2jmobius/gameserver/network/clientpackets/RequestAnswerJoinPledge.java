@@ -73,8 +73,7 @@ public class RequestAnswerJoinPledge extends GameClientPacket
 			// we must double check this cause during response time conditions can be changed, i.e. another player could join clan
 			if ((clan != null) && clan.checkClanJoinCondition(requestor, player, requestPacket.getPledgeType()))
 			{
-				final JoinPledge jp = new JoinPledge(requestor.getClanId());
-				player.sendPacket(jp);
+				player.sendPacket(new JoinPledge(requestor.getClanId()));
 				
 				player.setPledgeType(requestPacket.getPledgeType());
 				

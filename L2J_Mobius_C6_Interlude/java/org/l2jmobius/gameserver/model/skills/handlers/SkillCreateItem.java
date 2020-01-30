@@ -92,7 +92,6 @@ public class SkillCreateItem extends Skill
 			smsg.addItemName(item.getItemId());
 			player.sendPacket(smsg);
 		}
-		final ItemList il = new ItemList(player, false);
-		player.sendPacket(il);
+		player.sendPacket(new ItemList(player, false));
 	}
 }

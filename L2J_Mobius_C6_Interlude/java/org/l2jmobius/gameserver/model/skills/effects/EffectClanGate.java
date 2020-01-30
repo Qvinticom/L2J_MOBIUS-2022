@@ -43,8 +43,7 @@ public class EffectClanGate extends Effect
 			final Clan clan = ((PlayerInstance) getEffected()).getClan();
 			if (clan != null)
 			{
-				final SystemMessage msg = new SystemMessage(SystemMessageId.COURT_MAGICIAN_CREATED_PORTAL);
-				clan.broadcastToOtherOnlineMembers(msg, ((PlayerInstance) getEffected()));
+				clan.broadcastToOtherOnlineMembers(new SystemMessage(SystemMessageId.COURT_MAGICIAN_CREATED_PORTAL), ((PlayerInstance) getEffected()));
 			}
 		}
 	}

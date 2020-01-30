@@ -260,9 +260,9 @@ public class CursedWeapon implements INamable
 			_item.setDropTime(0); // Prevent item from being removed by ItemsAutoDestroy
 			
 			// RedSky and Earthquake
-			final ExRedSky packet = new ExRedSky(10);
+			final ExRedSky rs = new ExRedSky(10);
 			final Earthquake eq = new Earthquake(player.getX(), player.getY(), player.getZ(), 14, 3);
-			Broadcast.toAllOnlinePlayers(packet);
+			Broadcast.toAllOnlinePlayers(rs);
 			Broadcast.toAllOnlinePlayers(eq);
 		}
 		else

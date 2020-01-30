@@ -51,7 +51,6 @@ public class SystemMessage extends GameServerPacket
 	{
 		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 		sm.addString(msg);
-		
 		return sm;
 	}
 	
@@ -59,7 +58,6 @@ public class SystemMessage extends GameServerPacket
 	{
 		_types.add(TYPE_TEXT);
 		_values.add(text);
-		
 		return this;
 	}
 	
@@ -74,7 +72,6 @@ public class SystemMessage extends GameServerPacket
 	{
 		_types.add(TYPE_NPC_NAME);
 		_values.add(1000000 + id);
-		
 		return this;
 	}
 	
@@ -82,7 +79,6 @@ public class SystemMessage extends GameServerPacket
 	{
 		_types.add(TYPE_ITEM_NAME);
 		_values.add(id);
-		
 		return this;
 	}
 	
@@ -96,7 +92,6 @@ public class SystemMessage extends GameServerPacket
 			z
 		};
 		_values.add(coord);
-		
 		return this;
 	}
 	

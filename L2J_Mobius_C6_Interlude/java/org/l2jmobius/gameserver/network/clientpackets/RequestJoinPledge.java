@@ -63,8 +63,7 @@ public class RequestJoinPledge extends GameClientPacket
 			return;
 		}
 		
-		final AskJoinPledge ap = new AskJoinPledge(player.getObjectId(), player.getClan().getName());
-		target.sendPacket(ap);
+		target.sendPacket(new AskJoinPledge(player.getObjectId(), player.getClan().getName()));
 	}
 	
 	public int getPledgeType()

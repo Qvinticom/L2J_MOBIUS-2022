@@ -95,8 +95,7 @@ public class ClanHallZone extends ZoneType
 			}
 			
 			// Send decoration packet
-			final ClanHallDecoration deco = new ClanHallDecoration(clanHall);
-			((PlayerInstance) creature).sendPacket(deco);
+			((PlayerInstance) creature).sendPacket(new ClanHallDecoration(clanHall));
 			
 			// Send a message
 			if ((clanHall.getOwnerId() != 0) && (clanHall.getOwnerId() == ((PlayerInstance) creature).getClanId()))

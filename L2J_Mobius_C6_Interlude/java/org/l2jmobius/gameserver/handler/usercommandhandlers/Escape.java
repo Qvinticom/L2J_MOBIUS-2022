@@ -123,7 +123,6 @@ public class Escape implements IUserCommandHandler
 		}
 		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-		
 		if (unstuckTimer < 60000)
 		{
 			sm.addString("You use Escape: " + (unstuckTimer / 1000) + " seconds.");
@@ -140,11 +139,9 @@ public class Escape implements IUserCommandHandler
 		player.setTarget(player);
 		player.disableAllSkills();
 		
-		final MagicSkillUse msk = new MagicSkillUse(player, 1050, 1, unstuckTimer, 0);
 		player.setTarget(null); // Like retail we haven't self target
-		Broadcast.toSelfAndKnownPlayersInRadius(player, msk, 810000);
-		final SetupGauge sg = new SetupGauge(0, unstuckTimer);
-		player.sendPacket(sg);
+		Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, 1050, 1, unstuckTimer, 0), 810000);
+		player.sendPacket(new SetupGauge(0, unstuckTimer));
 		// End SoE Animation section
 		final EscapeFinalizer ef = new EscapeFinalizer(player);
 		// continue execution later

@@ -353,20 +353,18 @@ public class AdminData implements IXmlReader
 	{
 		if (isGmOnline(player.isGM()))
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.GM_LIST);
-			player.sendPacket(sm);
+			player.sendPacket(new SystemMessage(SystemMessageId.GM_LIST));
 			
 			for (String name : getAllGmNames(player.isGM()))
 			{
-				final SystemMessage sm1 = new SystemMessage(SystemMessageId.GM_S1);
-				sm1.addString(name);
-				player.sendPacket(sm1);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.GM_S1);
+				sm.addString(name);
+				player.sendPacket(sm);
 			}
 		}
 		else
 		{
-			final SystemMessage sm2 = new SystemMessage(SystemMessageId.NO_GM_PROVIDING_SERVICE_NOW);
-			player.sendPacket(sm2);
+			player.sendPacket(new SystemMessage(SystemMessageId.NO_GM_PROVIDING_SERVICE_NOW));
 		}
 	}
 	

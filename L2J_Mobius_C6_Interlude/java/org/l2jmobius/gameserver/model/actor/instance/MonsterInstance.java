@@ -143,8 +143,7 @@ public class MonsterInstance extends Attackable
 			{
 				case 12372: // baium
 				{
-					final SocialAction sa = new SocialAction(getObjectId(), 2);
-					broadcastPacket(sa);
+					broadcastPacket(new SocialAction(getObjectId(), 2));
 				}
 			}
 		}

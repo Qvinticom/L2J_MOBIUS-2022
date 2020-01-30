@@ -65,8 +65,7 @@ public class SendPrivateStoreBuyList extends ClientBasePacket
 		}
 		else
 		{
-			final SystemMessage msg = new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA);
-			buyer.sendPacket(msg);
+			buyer.sendPacket(new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA));
 		}
 	}
 }

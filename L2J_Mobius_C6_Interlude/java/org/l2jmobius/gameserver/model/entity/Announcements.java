@@ -73,8 +73,7 @@ public class Announcements
 	{
 		for (String _announcement : _announcements)
 		{
-			final CreatureSay cs = new CreatureSay(0, Say2.ANNOUNCEMENT, player.getName(), _announcement.replace("%name%", player.getName()));
-			player.sendPacket(cs);
+			player.sendPacket(new CreatureSay(0, Say2.ANNOUNCEMENT, player.getName(), _announcement.replace("%name%", player.getName())));
 		}
 		
 		for (List<Object> entry : _eventAnnouncements)
@@ -86,12 +85,10 @@ public class Announcements
 			if (!validDateRange.isValid() || validDateRange.isWithinRange(currentDate))
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				
 				for (String element : msg)
 				{
 					sm.addString(element);
 				}
-				
 				player.sendPacket(sm);
 			}
 		}
@@ -229,7 +226,6 @@ public class Announcements
 	public void announceToAll(String text)
 	{
 		final CreatureSay cs = new CreatureSay(0, Say2.ANNOUNCEMENT, "", text);
-		
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			player.sendPacket(cs);
@@ -241,7 +237,6 @@ public class Announcements
 	public void gameAnnounceToAll(String text)
 	{
 		final CreatureSay cs = new CreatureSay(0, 18, null, text);
-		
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			if ((player != null) && (player.isOnline() != 0))

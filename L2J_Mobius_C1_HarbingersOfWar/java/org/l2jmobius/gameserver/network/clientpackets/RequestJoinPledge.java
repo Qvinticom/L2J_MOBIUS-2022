@@ -40,8 +40,7 @@ public class RequestJoinPledge extends ClientBasePacket
 		}
 		if (target == activeChar.getObjectId())
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessage.CANNOT_INVITE_YOURSELF);
-			activeChar.sendPacket(sm);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.CANNOT_INVITE_YOURSELF));
 			return;
 		}
 		if (activeChar.isClanLeader() && ((object = World.getInstance().findObject(target)) instanceof PlayerInstance))
@@ -63,8 +62,7 @@ public class RequestJoinPledge extends ClientBasePacket
 			}
 			member.setTransactionRequester(activeChar);
 			activeChar.setTransactionRequester(member);
-			final AskJoinPledge ap = new AskJoinPledge(activeChar.getObjectId(), activeChar.getClan().getName());
-			member.sendPacket(ap);
+			member.sendPacket(new AskJoinPledge(activeChar.getObjectId(), activeChar.getClan().getName()));
 		}
 	}
 }

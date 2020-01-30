@@ -51,8 +51,7 @@ public class RequestGetItemFromPet extends ClientBasePacket
 			final PetInventoryUpdate petiu = new PetInventoryUpdate();
 			petiu.addRemovedItem(petItem);
 			client.getActiveChar().sendPacket(petiu);
-			final ItemList playerUI = new ItemList(client.getActiveChar(), false);
-			client.getActiveChar().sendPacket(playerUI);
+			client.getActiveChar().sendPacket(new ItemList(client.getActiveChar(), false));
 		}
 		else
 		{
@@ -61,9 +60,8 @@ public class RequestGetItemFromPet extends ClientBasePacket
 			final PetInventoryUpdate petiu = new PetInventoryUpdate();
 			petiu.addModifiedItem(petItem);
 			playerInventory.addItem(newPlayerItem);
-			final ItemList playerUI = new ItemList(client.getActiveChar(), false);
 			client.getActiveChar().sendPacket(petiu);
-			client.getActiveChar().sendPacket(playerUI);
+			client.getActiveChar().sendPacket(new ItemList(client.getActiveChar(), false));
 		}
 	}
 }

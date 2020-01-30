@@ -164,8 +164,7 @@ public class RequestAutoSoulShot extends GameClientPacket
 					player.sendPacket(sm);
 				}
 				
-				final ExAutoSoulShot atk = new ExAutoSoulShot(_itemId, _type);
-				player.sendPacket(atk);
+				player.sendPacket(new ExAutoSoulShot(_itemId, _type));
 			}
 		}
 	}

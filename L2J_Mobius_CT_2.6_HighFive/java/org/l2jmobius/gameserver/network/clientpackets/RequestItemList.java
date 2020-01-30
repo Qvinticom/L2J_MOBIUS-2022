@@ -36,8 +36,7 @@ public class RequestItemList implements IClientIncomingPacket
 	{
 		if ((client != null) && (client.getPlayer() != null) && !client.getPlayer().isInventoryDisabled())
 		{
-			final ItemList il = new ItemList(client.getPlayer(), true);
-			client.sendPacket(il);
+			client.sendPacket(new ItemList(client.getPlayer(), true));
 		}
 	}
 }

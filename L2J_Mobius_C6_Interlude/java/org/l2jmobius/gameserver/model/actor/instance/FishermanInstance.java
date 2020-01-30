@@ -71,8 +71,7 @@ public class FishermanInstance extends FolkInstance
 		
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 		{
-			final BuyList bl = new BuyList(list, player.getAdena(), taxRate);
-			player.sendPacket(bl);
+			player.sendPacket(new BuyList(list, player.getAdena(), taxRate));
 		}
 		else
 		{

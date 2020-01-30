@@ -230,14 +230,12 @@ public class TrainingCamp extends AbstractNpcAI
 	{
 		if (player.getLevel() <= Config.TRAINING_CAMP_MIN_LEVEL)
 		{
-			final SystemMessage sysMsg = new SystemMessage(SystemMessageId.LV_S1_OR_ABOVE).addInt(Config.TRAINING_CAMP_MIN_LEVEL);
-			player.sendPacket(sysMsg);
+			player.sendPacket(new SystemMessage(SystemMessageId.LV_S1_OR_ABOVE).addInt(Config.TRAINING_CAMP_MIN_LEVEL));
 			return false;
 		}
 		else if (player.getLevel() >= Config.TRAINING_CAMP_MAX_LEVEL)
 		{
-			final SystemMessage sysMsg = new SystemMessage(SystemMessageId.LV_S1_OR_BELOW).addInt(Config.TRAINING_CAMP_MAX_LEVEL);
-			player.sendPacket(sysMsg);
+			player.sendPacket(new SystemMessage(SystemMessageId.LV_S1_OR_BELOW).addInt(Config.TRAINING_CAMP_MAX_LEVEL));
 			return false;
 		}
 		else if (player.isFlyingMounted() || player.isTransformed())

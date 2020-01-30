@@ -104,8 +104,7 @@ public class WarehouseInstance extends FolkInstance
 				player.setActiveWarehouse(player.getClan().getWarehouse());
 				player.tempInvetoryDisable();
 				
-				final WareHouseDepositList dl = new WareHouseDepositList(player, WareHouseDepositList.CLAN);
-				player.sendPacket(dl);
+				player.sendPacket(new WareHouseDepositList(player, WareHouseDepositList.CLAN));
 			}
 		}
 	}

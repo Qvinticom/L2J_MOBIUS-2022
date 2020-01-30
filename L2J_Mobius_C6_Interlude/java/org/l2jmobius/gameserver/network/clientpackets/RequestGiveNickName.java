@@ -51,8 +51,7 @@ public class RequestGiveNickName extends GameClientPacket
 		if (player.isNoble() && _target.matches(player.getName()))
 		{
 			player.setTitle(_title);
-			final SystemMessage sm = new SystemMessage(SystemMessageId.TITLE_CHANGED);
-			player.sendPacket(sm);
+			player.sendPacket(new SystemMessage(SystemMessageId.TITLE_CHANGED));
 			player.broadcastTitleInfo();
 		}
 		// Can the player change/give a title?
@@ -60,8 +59,7 @@ public class RequestGiveNickName extends GameClientPacket
 		{
 			if (player.getClan().getLevel() < 3)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_LVL_3_NEEDED_TO_ENDOWE_TITLE);
-				player.sendPacket(sm);
+				player.sendPacket(new SystemMessage(SystemMessageId.CLAN_LVL_3_NEEDED_TO_ENDOWE_TITLE));
 				return;
 			}
 			
@@ -73,8 +71,7 @@ public class RequestGiveNickName extends GameClientPacket
 				{
 					// is target from the same clan?
 					member.setTitle(_title);
-					final SystemMessage sm = new SystemMessage(SystemMessageId.TITLE_CHANGED);
-					member.sendPacket(sm);
+					member.sendPacket(new SystemMessage(SystemMessageId.TITLE_CHANGED));
 					member.broadcastTitleInfo();
 				}
 				else

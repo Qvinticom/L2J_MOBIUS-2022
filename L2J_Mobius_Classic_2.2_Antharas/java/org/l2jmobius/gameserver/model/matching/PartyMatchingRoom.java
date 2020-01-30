@@ -84,8 +84,7 @@ public class PartyMatchingRoom extends MatchingRoom
 			p.sendPacket(SystemMessageId.THE_LEADER_OF_THE_PARTY_ROOM_HAS_CHANGED);
 		});
 		
-		final SystemMessage sm2 = new SystemMessage(kicked ? SystemMessageId.YOU_HAVE_BEEN_OUSTED_FROM_THE_PARTY_ROOM : SystemMessageId.YOU_HAVE_EXITED_THE_PARTY_ROOM);
-		player.sendPacket(sm2);
+		player.sendPacket(new SystemMessage(kicked ? SystemMessageId.YOU_HAVE_BEEN_OUSTED_FROM_THE_PARTY_ROOM : SystemMessageId.YOU_HAVE_EXITED_THE_PARTY_ROOM));
 		player.sendPacket(ExClosePartyRoom.STATIC_PACKET);
 	}
 	

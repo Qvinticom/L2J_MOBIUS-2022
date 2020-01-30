@@ -90,9 +90,7 @@ public class RequestPartyMatchConfig implements IClientIncomingPacket
 			PartyMatchWaitingList.getInstance().addPlayer(player);
 			
 			// Send Room list
-			final ListPartyWating matchList = new ListPartyWating(player, _auto, _loc, _lvl);
-			
-			player.sendPacket(matchList);
+			player.sendPacket(new ListPartyWating(player, _auto, _loc, _lvl));
 		}
 	}
 }

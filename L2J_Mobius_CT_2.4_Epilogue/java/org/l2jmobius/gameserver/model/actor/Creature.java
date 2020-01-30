@@ -1233,8 +1233,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			sendPacket(SystemMessageId.YOUR_CROSSBOW_IS_PREPARING_TO_FIRE);
 			
 			// Send a Server->Client packet SetupGauge
-			final SetupGauge sg = new SetupGauge(getObjectId(), SetupGauge.RED, sAtk + reuse);
-			sendPacket(sg);
+			sendPacket(new SetupGauge(getObjectId(), SetupGauge.RED, sAtk + reuse));
 		}
 		
 		// Create a new hit task with Medium priority

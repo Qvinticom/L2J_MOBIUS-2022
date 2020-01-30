@@ -71,10 +71,8 @@ public class RequestDestroyItem extends ClientBasePacket
 		final StatusUpdate su = new StatusUpdate(activeChar.getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, activeChar.getCurrentLoad());
 		activeChar.sendPacket(su);
-		final UserInfo ui = new UserInfo(activeChar);
-		activeChar.sendPacket(ui);
-		final CharInfo info = new CharInfo(activeChar);
-		activeChar.broadcastPacket(info);
+		activeChar.sendPacket(new UserInfo(activeChar));
+		activeChar.broadcastPacket(new CharInfo(activeChar));
 		final World world = World.getInstance();
 		world.removeObject(removedItem);
 	}

@@ -65,8 +65,7 @@ public class TeleporterInstance extends NpcInstance
 			}
 			else
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA);
-				player.sendPacket(sm);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA));
 			}
 		}
 		else

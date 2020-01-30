@@ -62,8 +62,7 @@ public class XmassTreeInstance extends NpcInstance
 				setTarget(player);
 				doCast(skill);
 				
-				final MagicSkillUse msu = new MagicSkillUse(_caster, player, skill.getId(), 1, skill.getHitTime(), 0);
-				broadcastPacket(msu);
+				broadcastPacket(new MagicSkillUse(_caster, player, skill.getId(), 1, skill.getHitTime(), 0));
 				return true;
 			}
 			return false;

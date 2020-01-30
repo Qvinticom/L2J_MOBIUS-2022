@@ -56,8 +56,7 @@ public class CannotMoveAnymoreInVehicle implements IClientIncomingPacket
 		{
 			player.setInVehiclePosition(new Location(_x, _y, _z));
 			player.setHeading(_heading);
-			final StopMoveInVehicle msg = new StopMoveInVehicle(player, _boatId);
-			player.broadcastPacket(msg);
+			player.broadcastPacket(new StopMoveInVehicle(player, _boatId));
 		}
 	}
 }

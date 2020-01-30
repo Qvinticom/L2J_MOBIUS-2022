@@ -86,8 +86,7 @@ public class SkillCharge extends Skill
 			}
 			else
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.FORCE_MAXIMUM);
-				caster.sendPacket(sm);
+				caster.sendPacket(new SystemMessage(SystemMessageId.FORCE_MAXIMUM));
 			}
 			return;
 		}

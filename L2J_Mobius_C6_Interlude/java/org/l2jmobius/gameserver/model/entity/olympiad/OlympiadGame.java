@@ -292,8 +292,7 @@ class OlympiadGame
 				for (int itemId : activeSoulShots.values())
 				{
 					player.removeAutoSoulShot(itemId);
-					final ExAutoSoulShot atk = new ExAutoSoulShot(itemId, 0);
-					player.sendPacket(atk);
+					player.sendPacket(new ExAutoSoulShot(itemId, 0));
 				}
 				
 				// Discharge any active shots
@@ -922,8 +921,7 @@ class OlympiadGame
 			return false;
 		}
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.STARTS_THE_GAME);
-		broadcastMessage(sm, true);
+		broadcastMessage(new SystemMessage(SystemMessageId.STARTS_THE_GAME), true);
 		
 		for (PlayerInstance player : _players)
 		{
@@ -1018,9 +1016,7 @@ class OlympiadGame
 			{
 				final int objId = manager.getLastSpawn().getObjectId();
 				final String npcName = manager.getLastSpawn().getName();
-				
-				final CreatureSay cs = new CreatureSay(objId, 1, npcName, "Olympiad is going to begin in Arena " + (_stadiumID + 1) + " in a moment.");
-				manager.getLastSpawn().broadcastPacket(cs);
+				manager.getLastSpawn().broadcastPacket(new CreatureSay(objId, 1, npcName, "Olympiad is going to begin in Arena " + (_stadiumID + 1) + " in a moment."));
 			}
 		}
 	}

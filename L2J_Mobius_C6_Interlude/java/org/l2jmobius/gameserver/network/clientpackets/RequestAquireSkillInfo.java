@@ -135,12 +135,10 @@ public class RequestAquireSkillInfo extends GameClientPacket
 			}
 			
 			final AquireSkillInfo asi = new AquireSkillInfo(skill.getId(), skill.getLevel(), requiredRep, 2);
-			
 			if (Config.LIFE_CRYSTAL_NEEDED)
 			{
 				asi.addRequirement(1, itemId, 1, 0);
 			}
-			
 			sendPacket(asi);
 		}
 		else

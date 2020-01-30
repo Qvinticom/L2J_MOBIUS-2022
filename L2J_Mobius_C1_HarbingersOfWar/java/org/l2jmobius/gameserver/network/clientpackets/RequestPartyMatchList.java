@@ -31,8 +31,7 @@ public class RequestPartyMatchList extends ClientBasePacket
 		final int status = readD();
 		if (status == 1)
 		{
-			final PartyMatchList matchList = new PartyMatchList(World.getInstance().getAllPlayers());
-			client.getConnection().sendPacket(matchList);
+			client.getConnection().sendPacket(new PartyMatchList(World.getInstance().getAllPlayers()));
 		}
 		// else if (status == 3)
 		// {

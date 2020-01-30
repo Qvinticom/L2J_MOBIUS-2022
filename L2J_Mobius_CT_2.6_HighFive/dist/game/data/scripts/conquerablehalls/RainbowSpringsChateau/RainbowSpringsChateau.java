@@ -813,8 +813,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		{
 			_usedTextPassages.put(message, new ArrayList<>());
 			final int objId = npc.getObjectId();
-			final NpcSay say = new NpcSay(objId, ChatType.NPC_SHOUT, npc.getId(), message);
-			npc.broadcastPacket(say);
+			npc.broadcastPacket(new NpcSay(objId, ChatType.NPC_SHOUT, npc.getId(), message));
 		}
 	}
 	

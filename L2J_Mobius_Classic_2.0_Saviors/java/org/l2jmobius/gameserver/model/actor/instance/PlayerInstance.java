@@ -1788,8 +1788,7 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			_lastCompassZone = ExSetCompassZoneCode.ALTEREDZONE;
-			final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.ALTEREDZONE);
-			sendPacket(cz);
+			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.ALTEREDZONE));
 		}
 		else if (isInsideZone(ZoneId.SIEGE))
 		{
@@ -1798,8 +1797,7 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			_lastCompassZone = ExSetCompassZoneCode.SIEGEWARZONE2;
-			final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.SIEGEWARZONE2);
-			sendPacket(cz);
+			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.SIEGEWARZONE2));
 		}
 		else if (isInsideZone(ZoneId.PVP))
 		{
@@ -1808,8 +1806,7 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			_lastCompassZone = ExSetCompassZoneCode.PVPZONE;
-			final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.PVPZONE);
-			sendPacket(cz);
+			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.PVPZONE));
 		}
 		else if (isInsideZone(ZoneId.PEACE))
 		{
@@ -1818,8 +1815,7 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			_lastCompassZone = ExSetCompassZoneCode.PEACEZONE;
-			final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.PEACEZONE);
-			sendPacket(cz);
+			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.PEACEZONE));
 		}
 		else
 		{
@@ -1832,8 +1828,7 @@ public class PlayerInstance extends Playable
 				updatePvPStatus();
 			}
 			_lastCompassZone = ExSetCompassZoneCode.GENERALZONE;
-			final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.GENERALZONE);
-			sendPacket(cz);
+			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.GENERALZONE));
 		}
 	}
 	
@@ -4377,8 +4372,7 @@ public class PlayerInstance extends Playable
 		sendPacket(ActionFailed.STATIC_PACKET);
 		
 		// Send a Server->Client packet StopMove to this PlayerInstance
-		final StopMove sm = new StopMove(this);
-		sendPacket(sm);
+		sendPacket(new StopMove(this));
 		
 		SystemMessage smsg = null;
 		synchronized (target)
@@ -11629,8 +11623,7 @@ public class PlayerInstance extends Playable
 		else if (_canFeed)
 		{
 			setCurrentFeed(getMaxFeed());
-			final SetupGauge sg = new SetupGauge(3, (_curFeed * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume());
-			sendPacket(sg);
+			sendPacket(new SetupGauge(3, (_curFeed * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume()));
 			if (!isDead())
 			{
 				_mountFeedTask = ThreadPool.scheduleAtFixedRate(new PetFeedTask(this), 10000, 10000);
@@ -11689,8 +11682,7 @@ public class PlayerInstance extends Playable
 	{
 		final boolean lastHungryState = isHungry();
 		_curFeed = num > getMaxFeed() ? getMaxFeed() : num;
-		final SetupGauge sg = new SetupGauge(3, (_curFeed * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume());
-		sendPacket(sg);
+		sendPacket(new SetupGauge(3, (_curFeed * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume()));
 		// broadcast move speed change when strider becomes hungry / full
 		if (lastHungryState != isHungry())
 		{

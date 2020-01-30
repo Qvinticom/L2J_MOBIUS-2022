@@ -103,12 +103,9 @@ public class PetSummon implements IItemHandler
 		newpet.setRunning(true);
 		World.getInstance().storeObject(newpet);
 		World.getInstance().addVisibleObject(newpet);
-		final MagicSkillUser msk = new MagicSkillUser(activeChar, 2046, 1, 1000, 600000);
-		activeChar.sendPacket(msk);
-		final PetInfo ownerni = new PetInfo(newpet);
-		final NpcInfo ni = new NpcInfo(newpet);
-		activeChar.broadcastPacket(ni);
-		activeChar.sendPacket(ownerni);
+		activeChar.sendPacket(new MagicSkillUser(activeChar, 2046, 1, 1000, 600000));
+		activeChar.broadcastPacket(new NpcInfo(newpet));
+		activeChar.sendPacket(new PetInfo(newpet));
 		activeChar.sendPacket(new PetItemList(newpet));
 		
 		ThreadPool.schedule(() ->

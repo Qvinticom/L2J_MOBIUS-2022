@@ -65,8 +65,7 @@ public class GrandBossInstance extends MonsterInstance
 		
 		if (player != null)
 		{
-			final SystemMessage msg = new SystemMessage(SystemMessageId.RAID_WAS_SUCCESSFUL);
-			broadcastPacket(msg);
+			broadcastPacket(new SystemMessage(SystemMessageId.RAID_WAS_SUCCESSFUL));
 			if (player.getParty() != null)
 			{
 				for (PlayerInstance member : player.getParty().getPartyMembers())

@@ -110,10 +110,8 @@ public class Unstuck implements IUserCommandHandler
 		player.setTarget(player);
 		player.disableAllSkills();
 		
-		final MagicSkillUse msk = new MagicSkillUse(player, 1050, 1, unstuckTimer, 0);
-		Broadcast.toSelfAndKnownPlayersInRadius(player, msk, 900);
-		final SetupGauge sg = new SetupGauge(player.getObjectId(), 0, unstuckTimer);
-		player.sendPacket(sg);
+		Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, 1050, 1, unstuckTimer, 0), 900);
+		player.sendPacket(new SetupGauge(player.getObjectId(), 0, unstuckTimer));
 		// End SoE Animation section
 		
 		// continue execution later

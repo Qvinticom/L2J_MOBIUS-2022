@@ -58,8 +58,7 @@ public class PenaltyMonsterInstance extends MonsterInstance
 	{
 		if (Rnd.get(100) <= 80)
 		{
-			final CreatureSay cs = new CreatureSay(getObjectId(), Say2.ALL, getName(), "mmm your bait was delicious");
-			broadcastPacket(cs);
+			broadcastPacket(new CreatureSay(getObjectId(), Say2.ALL, getName(), "mmm your bait was delicious"));
 		}
 		_ptk = ptk;
 		addDamageHate(ptk, 10, 10);
@@ -77,8 +76,7 @@ public class PenaltyMonsterInstance extends MonsterInstance
 		
 		if (Rnd.get(100) <= 75)
 		{
-			final CreatureSay cs = new CreatureSay(getObjectId(), Say2.ALL, getName(), "I will tell fishes not to take your bait");
-			broadcastPacket(cs);
+			broadcastPacket(new CreatureSay(getObjectId(), Say2.ALL, getName(), "I will tell fishes not to take your bait"));
 		}
 		return true;
 	}

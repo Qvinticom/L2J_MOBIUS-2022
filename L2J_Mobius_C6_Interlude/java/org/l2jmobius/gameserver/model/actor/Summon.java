@@ -193,8 +193,7 @@ public abstract class Summon extends Playable
 		else if (player.getTarget() != this)
 		{
 			player.setTarget(this);
-			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
-			player.sendPacket(my);
+			player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel() - getLevel()));
 			
 			// update status hp and mp
 			final StatusUpdate su = new StatusUpdate(getObjectId());

@@ -262,8 +262,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 		
 		if ((party.getCommandChannel().getMembers().size() < Config.EROSION_ATTACK_MIN_PLAYERS) || (party.getCommandChannel().getMembers().size() > Config.EROSION_ATTACK_MAX_PLAYERS))// 18 27
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
-			party.getCommandChannel().broadcastPacket(sm);
+			party.getCommandChannel().broadcastPacket(new SystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY));
 			return false;
 		}
 		

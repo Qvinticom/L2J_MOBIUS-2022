@@ -202,7 +202,6 @@ public class RequestDropItem extends GameClientPacket
 			
 			final ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart());
 			final InventoryUpdate iu = new InventoryUpdate();
-			
 			for (ItemInstance element : unequiped)
 			{
 				player.checkSSMatch(null, element);
@@ -212,8 +211,7 @@ public class RequestDropItem extends GameClientPacket
 			player.sendPacket(iu);
 			player.broadcastUserInfo();
 			
-			final ItemList il = new ItemList(player, true);
-			player.sendPacket(il);
+			player.sendPacket(new ItemList(player, true));
 		}
 		
 		final ItemInstance dropedItem = player.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);

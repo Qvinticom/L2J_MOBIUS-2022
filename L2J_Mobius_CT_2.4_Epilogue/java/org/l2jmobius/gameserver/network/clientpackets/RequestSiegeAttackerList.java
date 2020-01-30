@@ -45,16 +45,14 @@ public class RequestSiegeAttackerList implements IClientIncomingPacket
 		final Castle castle = CastleManager.getInstance().getCastleById(_castleId);
 		if (castle != null)
 		{
-			final SiegeAttackerList sal = new SiegeAttackerList(castle);
-			client.sendPacket(sal);
+			client.sendPacket(new SiegeAttackerList(castle));
 		}
 		else
 		{
 			final SiegableHall hall = CHSiegeManager.getInstance().getSiegableHall(_castleId);
 			if (hall != null)
 			{
-				final SiegeAttackerList sal = new SiegeAttackerList(hall);
-				client.sendPacket(sal);
+				client.sendPacket(new SiegeAttackerList(hall));
 			}
 		}
 	}

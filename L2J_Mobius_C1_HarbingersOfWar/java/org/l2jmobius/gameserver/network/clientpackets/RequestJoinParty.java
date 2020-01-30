@@ -39,8 +39,7 @@ public class RequestJoinParty extends ClientBasePacket
 		final PlayerInstance requestor = client.getActiveChar();
 		if (requestor.isTransactionInProgress())
 		{
-			final SystemMessage msg = new SystemMessage(SystemMessage.WAITING_FOR_REPLY);
-			requestor.sendPacket(msg);
+			requestor.sendPacket(new SystemMessage(SystemMessage.WAITING_FOR_REPLY));
 			return;
 		}
 		if (target.isInParty())
@@ -78,16 +77,14 @@ public class RequestJoinParty extends ClientBasePacket
 			{
 				target.setTransactionRequester(requestor);
 				requestor.setTransactionRequester(target);
-				final AskJoinParty ask = new AskJoinParty(requestor.getObjectId(), itemDistribution);
-				target.sendPacket(ask);
+				target.sendPacket(new AskJoinParty(requestor.getObjectId(), itemDistribution));
 				final SystemMessage msg = new SystemMessage(SystemMessage.YOU_INVITED_S1_TO_PARTY);
 				msg.addString(target.getName());
 				requestor.sendPacket(msg);
 			}
 			else
 			{
-				final SystemMessage msg = new SystemMessage(SystemMessage.S1_IS_BUSY_TRY_LATER);
-				requestor.sendPacket(msg);
+				requestor.sendPacket(new SystemMessage(SystemMessage.S1_IS_BUSY_TRY_LATER));
 				_log.warning(requestor.getName() + " already received a party invitation");
 			}
 		}
@@ -106,8 +103,7 @@ public class RequestJoinParty extends ClientBasePacket
 				requestor.setParty(new Party(requestor, itemDistribution == 1));
 				target.setTransactionRequester(requestor);
 				requestor.setTransactionRequester(target);
-				final AskJoinParty ask = new AskJoinParty(requestor.getObjectId(), itemDistribution);
-				target.sendPacket(ask);
+				target.sendPacket(new AskJoinParty(requestor.getObjectId(), itemDistribution));
 				final SystemMessage msg = new SystemMessage(SystemMessage.YOU_INVITED_S1_TO_PARTY);
 				msg.addString(target.getName());
 				requestor.sendPacket(msg);

@@ -212,8 +212,7 @@ public class Disablers implements ISkillHandler
 					}
 					else if (creature instanceof PlayerInstance)
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
-						creature.sendPacket(sm);
+						creature.sendPacket(new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2));
 					}
 					break; // Used to be fallthrough.
 				}
@@ -340,8 +339,7 @@ public class Disablers implements ISkillHandler
 						summonOwner = ((Summon) target).getOwner();
 						summonPet = summonOwner.getPet();
 						summonPet.unSummon(summonOwner);
-						final SystemMessage sm = new SystemMessage(SystemMessageId.LETHAL_STRIKE);
-						summonOwner.sendPacket(sm);
+						summonOwner.sendPacket(new SystemMessage(SystemMessageId.LETHAL_STRIKE));
 					}
 					else if (creature instanceof PlayerInstance)
 					{

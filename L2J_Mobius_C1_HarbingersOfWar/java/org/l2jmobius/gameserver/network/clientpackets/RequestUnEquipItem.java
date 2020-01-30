@@ -45,11 +45,9 @@ public class RequestUnEquipItem extends ClientBasePacket
 		activeChar.updatePAtk();
 		activeChar.updateMDef();
 		activeChar.updateMAtk();
-		final UserInfo ui = new UserInfo(activeChar);
-		activeChar.sendPacket(ui);
+		activeChar.sendPacket(new UserInfo(activeChar));
 		activeChar.setAttackStatus(false);
-		final CharInfo info = new CharInfo(activeChar);
-		activeChar.broadcastPacket(info);
+		activeChar.broadcastPacket(new CharInfo(activeChar));
 		if (!unequiped.isEmpty())
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessage.S1_DISARMED);

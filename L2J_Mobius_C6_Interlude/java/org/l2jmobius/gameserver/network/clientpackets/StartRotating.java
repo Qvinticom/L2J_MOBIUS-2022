@@ -44,7 +44,6 @@ public class StartRotating extends GameClientPacket
 			return;
 		}
 		
-		final BeginRotation br = new BeginRotation(getClient().getPlayer(), _degree, _side, 0);
-		getClient().getPlayer().broadcastPacket(br);
+		getClient().getPlayer().broadcastPacket(new BeginRotation(getClient().getPlayer(), _degree, _side, 0));
 	}
 }

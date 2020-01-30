@@ -67,7 +67,6 @@ public class RequestRecipeBookDestroy implements IClientIncomingPacket
 		player.unregisterRecipeList(_recipeID);
 		
 		// Send the new recipe book.
-		final RecipeBookItemList response = new RecipeBookItemList(player, rp.isDwarvenRecipe());
-		player.sendPacket(response);
+		player.sendPacket(new RecipeBookItemList(player, rp.isDwarvenRecipe()));
 	}
 }

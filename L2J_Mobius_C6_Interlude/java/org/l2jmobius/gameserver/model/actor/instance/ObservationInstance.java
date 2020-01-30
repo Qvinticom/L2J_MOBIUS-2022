@@ -128,8 +128,7 @@ public class ObservationInstance extends FolkInstance
 		{
 			// enter mode
 			player.enterObserverMode(x, y, z);
-			final ItemList il = new ItemList(player, false);
-			player.sendPacket(il);
+			player.sendPacket(new ItemList(player, false));
 		}
 		
 		player.sendPacket(ActionFailed.STATIC_PACKET);

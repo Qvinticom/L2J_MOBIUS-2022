@@ -78,8 +78,7 @@ public class CommandChannelMatchingRoom extends MatchingRoom
 			p.sendPacket(new ExMPCCRoomMember(player, this));
 		});
 		
-		final SystemMessage sm = new SystemMessage(kicked ? SystemMessageId.YOU_WERE_EXPELLED_FROM_THE_COMMAND_CHANNEL_MATCHING_ROOM : SystemMessageId.YOU_EXITED_FROM_THE_COMMAND_CHANNEL_MATCHING_ROOM);
-		player.sendPacket(sm);
+		player.sendPacket(new SystemMessage(kicked ? SystemMessageId.YOU_WERE_EXPELLED_FROM_THE_COMMAND_CHANNEL_MATCHING_ROOM : SystemMessageId.YOU_EXITED_FROM_THE_COMMAND_CHANNEL_MATCHING_ROOM));
 	}
 	
 	@Override

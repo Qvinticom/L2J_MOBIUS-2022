@@ -57,8 +57,7 @@ public class TownPetInstance extends NpcInstance
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
 			// The color to display in the select window is White
-			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
-			player.sendPacket(my);
+			player.sendPacket(new MyTargetSelected(getObjectId(), 0));
 			
 			// Send a Server->Client packet ValidateLocation to correct the ArtefactInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));

@@ -125,7 +125,6 @@ public class FreyaCelebration extends LongTimeEvent
 			{
 				final CreatureSay cs = new CreatureSay(npc, ChatType.NPC_GENERAL, NpcStringId.DEAR_S1_THINK_OF_THIS_AS_MY_APPRECIATION_FOR_THE_GIFT_TAKE_THIS_WITH_YOU_THERE_S_NOTHING_STRANGE_ABOUT_IT_IT_S_JUST_A_BIT_OF_MY_CAPRICIOUSNESS);
 				cs.addStringParameter(caster.getName());
-				
 				npc.broadcastPacket(cs);
 				
 				caster.addItem("FreyaCelebration", FREYA_GIFT, 1, npc, true);

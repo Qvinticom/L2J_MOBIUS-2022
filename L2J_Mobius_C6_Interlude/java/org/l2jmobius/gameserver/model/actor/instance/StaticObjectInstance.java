@@ -139,8 +139,7 @@ public class StaticObjectInstance extends WorldObject
 		}
 		else
 		{
-			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
-			player.sendPacket(my);
+			player.sendPacket(new MyTargetSelected(getObjectId(), 0));
 			
 			// Calculate the distance between the PlayerInstance and the NpcInstance
 			if (!player.isInsideRadius(this, INTERACTION_DISTANCE, false, false))

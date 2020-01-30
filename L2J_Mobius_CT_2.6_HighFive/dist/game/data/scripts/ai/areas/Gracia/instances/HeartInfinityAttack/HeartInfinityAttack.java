@@ -259,8 +259,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		}
 		if ((party.getCommandChannel().getMembers().size() < Config.HEART_ATTACK_MIN_PLAYERS) || (party.getCommandChannel().getMembers().size() > Config.HEART_ATTACK_MAX_PLAYERS))
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
-			party.getCommandChannel().broadcastPacket(sm);
+			party.getCommandChannel().broadcastPacket(new SystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY));
 			return false;
 		}
 		for (PlayerInstance partyMember : party.getCommandChannel().getMembers())
@@ -398,8 +397,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		InstanceManager.getInstance().getInstance(world.getInstanceId()).getDoor(14240102).openMe();
 		broadCastPacket(world, new ExShowScreenMessage(NpcStringId.YOU_CAN_HEAR_THE_UNDEAD_OF_EKIMUS_RUSHING_TOWARD_YOU_S1_S2_IT_HAS_NOW_BEGUN, 2, 8000));
 		world.ekimus = addSpawn(EKIMUS, -179537, 208854, -15504, 16384, false, 0, false, world.getInstanceId());
-		final NpcSay cs = new NpcSay(world.ekimus.getObjectId(), ChatType.SHOUT, world.ekimus.getId(), NpcStringId.I_SHALL_ACCEPT_YOUR_CHALLENGE_S1_COME_AND_DIE_IN_THE_ARMS_OF_IMMORTALITY);
-		world.ekimus.broadcastPacket(cs);
+		world.ekimus.broadcastPacket(new NpcSay(world.ekimus.getObjectId(), ChatType.SHOUT, world.ekimus.getId(), NpcStringId.I_SHALL_ACCEPT_YOUR_CHALLENGE_S1_COME_AND_DIE_IN_THE_ARMS_OF_IMMORTALITY));
 		world.hounds.add(addSpawn(HOUND, -179224, 209624, -15504, 16384, false, 0, false, world.getInstanceId()));
 		world.hounds.add(addSpawn(HOUND, -179880, 209464, -15504, 16384, false, 0, false, world.getInstanceId()));
 		world.startTime = System.currentTimeMillis();

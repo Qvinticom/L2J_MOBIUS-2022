@@ -152,7 +152,6 @@ public class PlayerStatus extends PlayableStatus
 		{
 			// Send a System Message to the PlayerInstance
 			final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_GAVE_YOU_S2_DMG);
-			
 			if (attacker instanceof NpcInstance)
 			{
 				smsg.addNpcName(((NpcInstance) attacker).getTemplate().getIdTemplate());
@@ -165,7 +164,6 @@ public class PlayerStatus extends PlayableStatus
 			{
 				smsg.addString(attacker.getName());
 			}
-			
 			smsg.addNumber(fullValue);
 			getActiveChar().sendPacket(smsg);
 		}

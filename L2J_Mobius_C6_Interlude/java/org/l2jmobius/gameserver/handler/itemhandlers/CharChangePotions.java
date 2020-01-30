@@ -150,8 +150,7 @@ public class CharChangePotions implements IItemHandler
 		}
 		
 		// Create a summon effect!
-		final MagicSkillUse msu = new MagicSkillUse(playable, player, 2003, 1, 1, 0);
-		player.broadcastPacket(msu);
+		player.broadcastPacket(new MagicSkillUse(playable, player, 2003, 1, 1, 0));
 		
 		// Update the changed stat for the character in the DB.
 		player.store();
@@ -160,8 +159,7 @@ public class CharChangePotions implements IItemHandler
 		player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		
 		// Broadcast the changes to the char and all those nearby.
-		final UserInfo ui = new UserInfo(player);
-		player.broadcastPacket(ui);
+		player.broadcastPacket(new UserInfo(player));
 	}
 	
 	@Override

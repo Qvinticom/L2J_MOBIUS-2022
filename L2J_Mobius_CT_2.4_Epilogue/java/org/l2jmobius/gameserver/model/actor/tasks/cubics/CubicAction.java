@@ -106,8 +106,7 @@ public class CubicAction implements Runnable
 			if (useCubicCure)
 			{
 				// Smart Cubic debuff cancel is needed, no other skill is used in this activation period
-				final MagicSkillUse msu = new MagicSkillUse(_cubic.getOwner(), _cubic.getOwner(), CubicInstance.SKILL_CUBIC_CURE, 1, 0, 0);
-				_cubic.getOwner().broadcastPacket(msu);
+				_cubic.getOwner().broadcastPacket(new MagicSkillUse(_cubic.getOwner(), _cubic.getOwner(), CubicInstance.SKILL_CUBIC_CURE, 1, 0, 0));
 				
 				// The cubic has done an action, increase the current count
 				_currentCount.incrementAndGet();

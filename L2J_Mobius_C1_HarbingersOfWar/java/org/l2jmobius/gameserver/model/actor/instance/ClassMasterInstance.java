@@ -40,8 +40,7 @@ public class ClassMasterInstance extends NpcInstance
 		{
 			player.setCurrentState(CreatureState.IDLE);
 			player.setTarget(this);
-			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
-			player.sendPacket(my);
+			player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel() - getLevel()));
 			player.sendPacket(new SetToLocation(this));
 		}
 		else
@@ -144,9 +143,7 @@ public class ClassMasterInstance extends NpcInstance
 	private void changeClass(PlayerInstance player, int value)
 	{
 		player.setClassId(value);
-		final UserInfo ui = new UserInfo(player);
-		player.sendPacket(ui);
-		final CharInfo info = new CharInfo(player);
-		player.broadcastPacket(info);
+		player.sendPacket(new UserInfo(player));
+		player.broadcastPacket(new CharInfo(player));
 	}
 }

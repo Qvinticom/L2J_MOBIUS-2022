@@ -40,8 +40,7 @@ public class RequestPledgeMemberList extends GameClientPacket
 		final Clan clan = player.getClan();
 		if (clan != null)
 		{
-			final PledgeShowMemberListAll pm = new PledgeShowMemberListAll(clan, player);
-			player.sendPacket(pm);
+			player.sendPacket(new PledgeShowMemberListAll(clan, player));
 		}
 	}
 }

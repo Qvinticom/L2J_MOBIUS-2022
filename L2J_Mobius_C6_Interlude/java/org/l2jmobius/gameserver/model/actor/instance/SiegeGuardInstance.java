@@ -145,8 +145,7 @@ public class SiegeGuardInstance extends Attackable
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
-			player.sendPacket(my);
+			player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel() - getLevel()));
 			
 			// Send a Server->Client packet StatusUpdate of the NpcInstance to the PlayerInstance to update its HP bar
 			final StatusUpdate su = new StatusUpdate(getObjectId());

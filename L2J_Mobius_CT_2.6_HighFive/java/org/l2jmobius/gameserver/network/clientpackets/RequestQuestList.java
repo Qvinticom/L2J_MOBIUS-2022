@@ -34,7 +34,6 @@ public class RequestQuestList implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final QuestList ql = new QuestList(client.getPlayer());
-		client.sendPacket(ql);
+		client.sendPacket(new QuestList(client.getPlayer()));
 	}
 }

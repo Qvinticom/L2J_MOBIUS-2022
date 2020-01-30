@@ -260,9 +260,9 @@ public class CursedWeapon implements INamable
 			_item.setDropTime(0); // Prevent item from being removed by ItemsAutoDestroy
 			
 			// RedSky and Earthquake
-			final ExRedSky packet = new ExRedSky(10);
+			final ExRedSky rs = new ExRedSky(10);
 			final Earthquake eq = new Earthquake(player.getX(), player.getY(), player.getZ(), 14, 3);
-			Broadcast.toAllOnlinePlayers(packet);
+			Broadcast.toAllOnlinePlayers(rs);
 			Broadcast.toAllOnlinePlayers(eq);
 		}
 		else
@@ -459,9 +459,7 @@ public class CursedWeapon implements INamable
 		// Refresh player stats
 		_player.broadcastUserInfo();
 		
-		final SocialAction atk = new SocialAction(_player.getObjectId(), 17);
-		
-		_player.broadcastPacket(atk);
+		_player.broadcastPacket(new SocialAction(_player.getObjectId(), 17));
 		
 		sm = new SystemMessage(SystemMessageId.THE_OWNER_OF_S2_APPEARED_IN_S1_LOCATION_THERE_ARE_ADENA_IN_THE_TREASURE_CHEST_S2_S3_NOW_S4_LATER_THE_LAST_OWNER_OF_THE_ITEM_WILL_RECEIVE_THE_ADENA_AT_23_59);
 		sm.addZoneName(_player.getX(), _player.getY(), _player.getZ()); // Region Name

@@ -55,8 +55,7 @@ public class AuthLogin extends ClientBasePacket
 		else
 		{
 			LoginController.getInstance().addGameServerLogin(loginName, client.getConnection());
-			final CharSelectInfo cl = new CharSelectInfo(loginName, client.getSessionId());
-			client.getConnection().sendPacket(cl);
+			client.getConnection().sendPacket(new CharSelectInfo(loginName, client.getSessionId()));
 		}
 		client.setAccessLevel(access);
 	}

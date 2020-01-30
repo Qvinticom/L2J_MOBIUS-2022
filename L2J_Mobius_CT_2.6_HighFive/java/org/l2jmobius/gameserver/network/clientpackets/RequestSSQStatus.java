@@ -51,7 +51,6 @@ public class RequestSSQStatus implements IClientIncomingPacket
 			return;
 		}
 		
-		final SSQStatus ssqs = new SSQStatus(player.getObjectId(), _page);
-		player.sendPacket(ssqs);
+		player.sendPacket(new SSQStatus(player.getObjectId(), _page));
 	}
 }

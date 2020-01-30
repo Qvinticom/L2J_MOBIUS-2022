@@ -74,8 +74,7 @@ public class RequestPledgePower extends GameClientPacket
 		}
 		else
 		{
-			final ManagePledgePower mpp = new ManagePledgePower(getClient().getPlayer().getClan(), _action, _rank);
-			player.sendPacket(mpp);
+			player.sendPacket(new ManagePledgePower(getClient().getPlayer().getClan(), _action, _rank));
 		}
 	}
 }

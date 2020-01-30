@@ -53,8 +53,7 @@ public class EffectTargetMe extends Effect
 			{
 				// Target is different - stop autoattack and break cast
 				getEffected().setTarget(getEffector());
-				final MyTargetSelected my = new MyTargetSelected(getEffector().getObjectId(), 0);
-				getEffected().sendPacket(my);
+				getEffected().sendPacket(new MyTargetSelected(getEffector().getObjectId(), 0));
 				getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			}
 			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, getEffector());

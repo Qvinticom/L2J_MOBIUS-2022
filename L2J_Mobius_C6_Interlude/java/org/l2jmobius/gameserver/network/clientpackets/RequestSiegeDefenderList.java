@@ -48,8 +48,7 @@ public class RequestSiegeDefenderList extends GameClientPacket
 				return;
 			}
 			
-			final SiegeDefenderList sdl = new SiegeDefenderList(castle);
-			sendPacket(sdl);
+			sendPacket(new SiegeDefenderList(castle));
 		}
 		else
 		{
@@ -60,8 +59,7 @@ public class RequestSiegeDefenderList extends GameClientPacket
 				return;
 			}
 			
-			final FortSiegeDefenderList sdl = new FortSiegeDefenderList(fort);
-			sendPacket(sdl);
+			sendPacket(new FortSiegeDefenderList(fort));
 		}
 	}
 }

@@ -1258,7 +1258,6 @@ public class SevenSigns
 	public void sendMessageToAll(SystemMessageId sysMsgId)
 	{
 		final SystemMessage sm = new SystemMessage(sysMsgId);
-		
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			player.sendPacket(sm);
@@ -1620,7 +1619,6 @@ public class SevenSigns
 			teleLosingCabalFromDungeons(getCabalShortName(getCabalHighestScore()));
 			
 			final SignsSky ss = new SignsSky();
-			
 			for (PlayerInstance player : World.getInstance().getAllPlayers())
 			{
 				player.sendPacket(ss);

@@ -101,8 +101,7 @@ public class PaganKeys implements IItemHandler
 					{
 						player.sendMessage("You failed to open Anterooms Door.");
 						player.broadcastPacket(new SocialAction(player.getObjectId(), 13));
-						final PlaySound playSound = new PlaySound("interfacesound.system_close_01");
-						player.sendPacket(playSound);
+						player.sendPacket(new PlaySound("interfacesound.system_close_01"));
 					}
 				}
 				else
@@ -126,8 +125,7 @@ public class PaganKeys implements IItemHandler
 					{
 						player.sendMessage("You failed to open Altar Entrance.");
 						player.broadcastPacket(new SocialAction(player.getObjectId(), 13));
-						final PlaySound playSound = new PlaySound("interfacesound.system_close_01");
-						player.sendPacket(playSound);
+						player.sendPacket(new PlaySound("interfacesound.system_close_01"));
 					}
 				}
 				else
@@ -151,8 +149,7 @@ public class PaganKeys implements IItemHandler
 					{
 						player.sendMessage("You failed to open Door of Darkness.");
 						player.broadcastPacket(new SocialAction(player.getObjectId(), 13));
-						final PlaySound playSound = new PlaySound("interfacesound.system_close_01");
-						player.sendPacket(playSound);
+						player.sendPacket(new PlaySound("interfacesound.system_close_01"));
 					}
 				}
 				else

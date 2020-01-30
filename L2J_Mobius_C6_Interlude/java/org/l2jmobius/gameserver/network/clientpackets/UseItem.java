@@ -145,8 +145,7 @@ public class UseItem extends GameClientPacket
 		
 		if (item.getItem().getType2() == Item.TYPE2_QUEST)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.CANNOT_USE_QUEST_ITEMS);
-			player.sendPacket(sm);
+			player.sendPacket(new SystemMessage(SystemMessageId.CANNOT_USE_QUEST_ITEMS));
 			return;
 		}
 		
@@ -184,8 +183,7 @@ public class UseItem extends GameClientPacket
 		if (player.isFishing() && ((itemId < 6535) || (itemId > 6540)))
 		{
 			// You cannot do anything else while fishing
-			final SystemMessage sm = new SystemMessage(SystemMessageId.CANNOT_DO_WHILE_FISHING_3);
-			getClient().getPlayer().sendPacket(sm);
+			getClient().getPlayer().sendPacket(new SystemMessage(SystemMessageId.CANNOT_DO_WHILE_FISHING_3));
 			return;
 		}
 		
@@ -310,8 +308,7 @@ public class UseItem extends GameClientPacket
 				}
 				else
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.CANNOT_USE_ITEM_WHILE_USING_MAGIC);
-					player.sendPacket(sm);
+					player.sendPacket(new SystemMessage(SystemMessageId.CANNOT_USE_ITEM_WHILE_USING_MAGIC));
 				}
 				return;
 			}
@@ -673,8 +670,7 @@ public class UseItem extends GameClientPacket
 				player.getInventory().setPaperdollItem(Inventory.PAPERDOLL_LHAND, item);
 				player.broadcastUserInfo();
 				// Send a Server->Client packet ItemList to this PlayerInstance to update left hand equipement
-				final ItemList il = new ItemList(player, false);
-				sendPacket(il);
+				sendPacket(new ItemList(player, false));
 			}
 			else
 			{

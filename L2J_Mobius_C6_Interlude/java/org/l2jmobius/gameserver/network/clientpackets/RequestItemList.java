@@ -31,8 +31,7 @@ public class RequestItemList extends GameClientPacket
 	{
 		if ((getClient() != null) && (getClient().getPlayer() != null) && !getClient().getPlayer().isInvetoryDisabled())
 		{
-			final ItemList il = new ItemList(getClient().getPlayer(), true);
-			sendPacket(il);
+			sendPacket(new ItemList(getClient().getPlayer(), true));
 		}
 	}
 }

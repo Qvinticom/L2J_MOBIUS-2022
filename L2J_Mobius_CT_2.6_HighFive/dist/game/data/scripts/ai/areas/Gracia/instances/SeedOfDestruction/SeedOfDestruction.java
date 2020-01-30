@@ -1011,8 +1011,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			}
 			case 1:
 			{
-				final ExShowScreenMessage message1 = new ExShowScreenMessage(NpcStringId.THE_ENEMIES_HAVE_ATTACKED_EVERYONE_COME_OUT_AND_FIGHT_URGH, 5, 5000);
-				sendScreenMessage(world, message1);
+				sendScreenMessage(world, new ExShowScreenMessage(NpcStringId.THE_ENEMIES_HAVE_ATTACKED_EVERYONE_COME_OUT_AND_FIGHT_URGH, 5, 5000));
 				for (int i : ENTRANCE_ROOM_DOORS)
 				{
 					world.openDoor(i);
@@ -1029,8 +1028,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			}
 			case 4:
 			{
-				final ExShowScreenMessage message2 = new ExShowScreenMessage(NpcStringId.OBELISK_HAS_COLLAPSED_DON_T_LET_THE_ENEMIES_JUMP_AROUND_WILDLY_ANYMORE, 5, 5000);
-				sendScreenMessage(world, message2);
+				sendScreenMessage(world, new ExShowScreenMessage(NpcStringId.OBELISK_HAS_COLLAPSED_DON_T_LET_THE_ENEMIES_JUMP_AROUND_WILDLY_ANYMORE, 5, 5000));
 				for (int i : SQUARE_DOORS)
 				{
 					world.openDoor(i);
@@ -1047,8 +1045,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 				spawn(world, SCOUTPASS_SPAWNS_UPPER, false, true);
 				spawn(world, SCOUTPASS_SPAWNS_GROUND, false, false);
 				spawn(world, PREFORT_SPAWNS, false, false);
-				final ExShowScreenMessage message3 = new ExShowScreenMessage(NpcStringId.ENEMIES_ARE_TRYING_TO_DESTROY_THE_FORTRESS_EVERYONE_DEFEND_THE_FORTRESS, 5, 5000);
-				sendScreenMessage(world, message3);
+				sendScreenMessage(world, new ExShowScreenMessage(NpcStringId.ENEMIES_ARE_TRYING_TO_DESTROY_THE_FORTRESS_EVERYONE_DEFEND_THE_FORTRESS, 5, 5000));
 				spawn(world, FORT_SPAWNS_UPPER, false, true);
 				spawn(world, FORT_SPAWNS_GROUND, false, false);
 				world.killedDevice = 0;
@@ -1177,8 +1174,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			{
 				if ((npc.getCurrentHp() < (npc.getMaxHp() / 2)) && (_numAtk < 1))
 				{
-					final ExShowScreenMessage message4 = new ExShowScreenMessage(NpcStringId.COME_OUT_WARRIORS_PROTECT_SEED_OF_DESTRUCTION, 5, 5000);
-					sendScreenMessage(world, message4);
+					sendScreenMessage(world, new ExShowScreenMessage(NpcStringId.COME_OUT_WARRIORS_PROTECT_SEED_OF_DESTRUCTION, 5, 5000));
 					world._tiat.doCast(SkillData.getInstance().getSkill(5818, 1));
 					world._tiat.doCast(SkillData.getInstance().getSkill(181, 1));
 					world.deviceSpawnedMobCount = 0;

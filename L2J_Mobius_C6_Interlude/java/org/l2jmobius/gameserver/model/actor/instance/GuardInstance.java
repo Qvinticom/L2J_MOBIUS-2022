@@ -218,8 +218,7 @@ public class GuardInstance extends Attackable
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
 			// The color to display in the select window is White
-			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
-			player.sendPacket(my);
+			player.sendPacket(new MyTargetSelected(getObjectId(), 0));
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
@@ -239,8 +238,7 @@ public class GuardInstance extends Attackable
 		{
 			// Send a Server->Client packet SocialAction to the all PlayerInstance on the _knownPlayer of the NpcInstance
 			// to display a social action of the GuardInstance on their client
-			final SocialAction sa = new SocialAction(getObjectId(), Rnd.get(8));
-			broadcastPacket(sa);
+			broadcastPacket(new SocialAction(getObjectId(), Rnd.get(8)));
 			
 			// Open a chat window on client with the text of the GuardInstance
 			showChatWindow(player, 0);

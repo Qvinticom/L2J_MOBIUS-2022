@@ -218,20 +218,18 @@ public class CursedWeapon
 		_isActivated = false;
 		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.S2_WAS_DROPPED_IN_THE_S1_REGION);
-		
 		if (fromMonster)
 		{
-			
 			_item = attackable.DropItem(player, _itemId, 1);
 			_item.setDropTime(0); // Prevent item from being removed by ItemsAutoDestroy
 			
 			// RedSky and Earthquake
-			final ExRedSky packet = new ExRedSky(10);
+			final ExRedSky rs = new ExRedSky(10);
 			final Earthquake eq = new Earthquake(player.getX(), player.getY(), player.getZ(), 14, 3);
 			
 			for (PlayerInstance aPlayer : World.getInstance().getAllPlayers())
 			{
-				aPlayer.sendPacket(packet);
+				aPlayer.sendPacket(rs);
 				aPlayer.sendPacket(eq);
 			}
 			
@@ -349,8 +347,7 @@ public class CursedWeapon
 		{
 			if (_player.setMountType(0))
 			{
-				final Ride dismount = new Ride(_player.getObjectId(), Ride.ACTION_DISMOUNT, 0);
-				_player.broadcastPacket(dismount);
+				_player.broadcastPacket(new Ride(_player.getObjectId(), Ride.ACTION_DISMOUNT, 0));
 				_player.setMountObjectID(0);
 			}
 			else
@@ -420,9 +417,7 @@ public class CursedWeapon
 		// Refresh player stats
 		_player.broadcastUserInfo();
 		
-		final SocialAction atk = new SocialAction(_player.getObjectId(), 17);
-		
-		_player.broadcastPacket(atk);
+		_player.broadcastPacket(new SocialAction(_player.getObjectId(), 17));
 		
 		sm = new SystemMessage(SystemMessageId.THE_OWNER_OF_S2_HAS_APPEARED_IN_THE_S1_REGION);
 		sm.addZoneName(_player.getX(), _player.getY(), _player.getZ()); // Region Name

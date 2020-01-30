@@ -61,7 +61,6 @@ public class RequestRecipeBookOpen implements IClientIncomingPacket
 			return;
 		}
 		
-		final RecipeBookItemList response = new RecipeBookItemList(player, _isDwarvenCraft);
-		player.sendPacket(response);
+		player.sendPacket(new RecipeBookItemList(player, _isDwarvenCraft));
 	}
 }

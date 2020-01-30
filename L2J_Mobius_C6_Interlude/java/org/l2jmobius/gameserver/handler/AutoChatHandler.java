@@ -793,12 +793,10 @@ public class AutoChatHandler implements SpawnListener
 						}
 						
 						final CreatureSay cs = new CreatureSay(chatNpc.getObjectId(), 0, creatureName, text);
-						
 						for (PlayerInstance nearbyPlayer : nearbyPlayers)
 						{
 							nearbyPlayer.sendPacket(cs);
 						}
-						
 						for (PlayerInstance nearbyGM : nearbyGMs)
 						{
 							nearbyGM.sendPacket(cs);

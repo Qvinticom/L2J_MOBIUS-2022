@@ -56,8 +56,7 @@ public class ClanHallSiegeInfInstance extends NpcInstance
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance
-			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
-			player.sendPacket(my);
+			player.sendPacket(new MyTargetSelected(getObjectId(), 0));
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));

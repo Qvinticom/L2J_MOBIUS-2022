@@ -175,8 +175,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				{
 					text1 = activeChar.getName() + ": " + text1;
 				}
-				final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), Say2.CRITICAL_ANNOUNCE, "", text1);
-				Broadcast.toAllOnlinePlayers(cs);
+				Broadcast.toAllOnlinePlayers(new CreatureSay(activeChar.getObjectId(), Say2.CRITICAL_ANNOUNCE, "", text1));
 				return true;
 			}
 			case admin_list_autoannouncements:

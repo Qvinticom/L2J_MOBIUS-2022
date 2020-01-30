@@ -60,8 +60,7 @@ public class SendBypassBuildCmd extends ClientBasePacket
 				try
 				{
 					final String text = command.substring(7);
-					final CreatureSay cs = new CreatureSay(0, 9, activeChar.getName(), text);
-					GmListManager.getInstance().broadcastToGMs(cs);
+					GmListManager.getInstance().broadcastToGMs(new CreatureSay(0, 9, activeChar.getName(), text));
 				}
 				catch (StringIndexOutOfBoundsException e)
 				{

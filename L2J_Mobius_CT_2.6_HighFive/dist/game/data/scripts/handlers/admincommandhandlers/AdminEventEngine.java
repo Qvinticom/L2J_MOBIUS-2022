@@ -214,9 +214,9 @@ public class AdminEventEngine implements IAdminCommandHandler
 				activeChar.sendMessage(GameEvent.startEventParticipation());
 				Broadcast.toAllOnlinePlayers(activeChar.getName() + " has started an event. You will find a participation NPC somewhere around you.");
 				
-				final PlaySound _snd = new PlaySound(1, "B03_F", 0, 0, 0, 0, 0);
-				activeChar.sendPacket(_snd);
-				activeChar.broadcastPacket(_snd);
+				final PlaySound snd = new PlaySound(1, "B03_F", 0, 0, 0, 0, 0);
+				activeChar.sendPacket(snd);
+				activeChar.broadcastPacket(snd);
 				
 				final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 				

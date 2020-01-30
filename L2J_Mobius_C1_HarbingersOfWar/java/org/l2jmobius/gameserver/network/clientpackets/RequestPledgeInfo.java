@@ -41,12 +41,10 @@ public class RequestPledgeInfo extends ClientBasePacket
 			_log.warning("Clan data for clanId " + clanId + " is missing");
 			return;
 		}
-		final PledgeInfo pc = new PledgeInfo(clan);
-		activeChar.sendPacket(pc);
+		activeChar.sendPacket(new PledgeInfo(clan));
 		if (clan.getClanId() == activeChar.getClanId())
 		{
-			final PledgeShowMemberListAll pm = new PledgeShowMemberListAll(clan, activeChar);
-			activeChar.sendPacket(pm);
+			activeChar.sendPacket(new PledgeShowMemberListAll(clan, activeChar));
 		}
 	}
 }

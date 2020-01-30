@@ -40,8 +40,7 @@ public class RequestGiveItemToPet extends ClientBasePacket
 			final InventoryUpdate playerUI = new InventoryUpdate();
 			playerUI.addRemovedItem(playerItem);
 			client.getActiveChar().sendPacket(playerUI);
-			final PetItemList petiu = new PetItemList(client.getActiveChar().getPet());
-			client.getActiveChar().sendPacket(petiu);
+			client.getActiveChar().sendPacket(new PetItemList(client.getActiveChar().getPet()));
 		}
 		else
 		{

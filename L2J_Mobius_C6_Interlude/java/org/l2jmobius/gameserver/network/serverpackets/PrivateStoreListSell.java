@@ -39,8 +39,7 @@ public class PrivateStoreListSell extends GameServerPacket
 		
 		if (Config.SELL_BY_ITEM)
 		{
-			final CreatureSay cs11 = new CreatureSay(0, 15, "", "ATTENTION: Store System is not based on Adena, be careful!"); // 8D
-			_player.sendPacket(cs11);
+			_player.sendPacket(new CreatureSay(0, 15, "", "ATTENTION: Store System is not based on Adena, be careful!"));
 			_playerAdena = _player.getItemCount(Config.SELL_ITEM, -1);
 		}
 		else

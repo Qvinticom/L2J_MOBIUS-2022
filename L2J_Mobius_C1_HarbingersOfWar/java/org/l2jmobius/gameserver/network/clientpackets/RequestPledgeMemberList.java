@@ -31,8 +31,7 @@ public class RequestPledgeMemberList extends ClientBasePacket
 		final Clan clan = activeChar.getClan();
 		if (clan != null)
 		{
-			final PledgeShowMemberListAll pm = new PledgeShowMemberListAll(clan, activeChar);
-			activeChar.sendPacket(pm);
+			activeChar.sendPacket(new PledgeShowMemberListAll(clan, activeChar));
 		}
 	}
 }

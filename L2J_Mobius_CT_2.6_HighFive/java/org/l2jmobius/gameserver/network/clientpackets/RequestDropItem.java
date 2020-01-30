@@ -191,8 +191,7 @@ public class RequestDropItem implements IClientIncomingPacket
 			player.sendPacket(iu);
 			player.broadcastUserInfo();
 			
-			final ItemList il = new ItemList(player, true);
-			player.sendPacket(il);
+			player.sendPacket(new ItemList(player, true));
 		}
 		
 		final ItemInstance dropedItem = player.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);

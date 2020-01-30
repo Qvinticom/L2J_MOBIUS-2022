@@ -580,8 +580,7 @@ public class PlayerInstance extends Creature
 		if (player.getTarget() != this)
 		{
 			player.setTarget(this);
-			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
-			player.sendPacket(my);
+			player.sendPacket(new MyTargetSelected(getObjectId(), 0));
 		}
 		else
 		{
@@ -607,8 +606,7 @@ public class PlayerInstance extends Creature
 		}
 		if (isInParty())
 		{
-			final PartySmallWindowUpdate update = new PartySmallWindowUpdate(this);
-			getParty().broadcastToPartyMembers(this, update);
+			getParty().broadcastToPartyMembers(this, new PartySmallWindowUpdate(this));
 		}
 	}
 	
@@ -762,8 +760,7 @@ public class PlayerInstance extends Creature
 		}
 		final ItemInstance target = (ItemInstance) getTarget();
 		sendPacket(new ActionFailed());
-		final StopMove sm = new StopMove(getObjectId(), getX(), getY(), getZ(), getHeading());
-		sendPacket(sm);
+		sendPacket(new StopMove(getObjectId(), getX(), getY(), getZ(), getHeading()));
 		boolean pickupOk = false;
 		synchronized (target)
 		{
@@ -811,8 +808,7 @@ public class PlayerInstance extends Creature
 				iu.addModifiedItem(target2);
 			}
 			sendPacket(iu);
-			final UserInfo ci = new UserInfo(this);
-			sendPacket(ci);
+			sendPacket(new UserInfo(this));
 		}
 		else if (target.getItemId() == 57)
 		{
@@ -1098,8 +1094,7 @@ public class PlayerInstance extends Creature
 		super.addKnownObject(object);
 		if (object instanceof ItemInstance)
 		{
-			final SpawnItem si = new SpawnItem((ItemInstance) object);
-			sendPacket(si);
+			sendPacket(new SpawnItem((ItemInstance) object));
 		}
 		else if (object instanceof NpcInstance)
 		{
@@ -1127,13 +1122,11 @@ public class PlayerInstance extends Creature
 			final Creature obj = (Creature) object;
 			if (obj.isMoving())
 			{
-				final CharMoveToLocation mov = new CharMoveToLocation(obj);
-				sendPacket(mov);
+				sendPacket(new CharMoveToLocation(obj));
 			}
 			else if (obj.isMovingToPawn())
 			{
-				final MoveToPawn mov = new MoveToPawn(obj, obj.getPawnTarget(), obj.getPawnOffset());
-				sendPacket(mov);
+				sendPacket(new MoveToPawn(obj, obj.getPawnTarget(), obj.getPawnOffset()));
 			}
 		}
 	}
@@ -1536,8 +1529,7 @@ public class PlayerInstance extends Creature
 		}
 		final int magicId = skill.getId();
 		final int level = getSkillLevel(magicId);
-		final ActionFailed af = new ActionFailed();
-		sendPacket(af);
+		sendPacket(new ActionFailed());
 		final MagicSkillUser msu = new MagicSkillUser(this, target, magicId, level, skill.getHitTime(), skill.getReuseDelay());
 		sendPacket(msu);
 		broadcastPacket(msu);
@@ -1637,8 +1629,7 @@ public class PlayerInstance extends Creature
 			if (_arrowItem != null)
 			{
 				getInventory().setPaperdollItem(8, _arrowItem);
-				final ItemList il = new ItemList(this, false);
-				sendPacket(il);
+				sendPacket(new ItemList(this, false));
 			}
 		}
 		else

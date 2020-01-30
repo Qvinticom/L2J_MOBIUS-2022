@@ -194,8 +194,7 @@ public class AdminEffects implements IAdminCommandHandler
 				final int intensity = Integer.parseInt(val1);
 				final String val2 = st.nextToken();
 				final int duration = Integer.parseInt(val2);
-				final Earthquake eq = new Earthquake(activeChar.getX(), activeChar.getY(), activeChar.getZ(), intensity, duration);
-				activeChar.broadcastPacket(eq);
+				activeChar.broadcastPacket(new Earthquake(activeChar.getX(), activeChar.getY(), activeChar.getZ(), intensity, duration));
 			}
 			catch (Exception e)
 			{

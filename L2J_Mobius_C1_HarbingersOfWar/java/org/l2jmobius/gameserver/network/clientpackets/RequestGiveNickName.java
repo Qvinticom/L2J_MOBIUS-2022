@@ -38,18 +38,14 @@ public class RequestGiveNickName extends ClientBasePacket
 			PlayerInstance member;
 			if (activeChar.getClan().getLevel() < 3)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessage.CLAN_LVL_3_NEEDED_TO_ENDOVE_TITLE);
-				activeChar.sendPacket(sm);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.CLAN_LVL_3_NEEDED_TO_ENDOVE_TITLE));
 				activeChar.sendMessage("But you can do it freely for now ;)");
-				activeChar.sendPacket(sm);
 			}
 			if ((member = World.getInstance().getPlayer(target)).getClanId() == activeChar.getClanId())
 			{
 				member.setTitle(title);
-				final UserInfo ui = new UserInfo(member);
-				member.sendPacket(ui);
-				final CharInfo ci = new CharInfo(member);
-				member.broadcastPacket(ci);
+				member.sendPacket(new UserInfo(member));
+				member.broadcastPacket(new CharInfo(member));
 			}
 		}
 	}

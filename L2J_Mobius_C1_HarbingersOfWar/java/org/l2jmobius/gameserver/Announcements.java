@@ -71,8 +71,7 @@ public class Announcements
 	{
 		for (int i = 0; i < _announcements.size(); ++i)
 		{
-			final CreatureSay cs = new CreatureSay(0, 10, activeChar.getName(), _announcements.get(i));
-			activeChar.sendPacket(cs);
+			activeChar.sendPacket(new CreatureSay(0, 10, activeChar.getName(), _announcements.get(i)));
 		}
 	}
 	

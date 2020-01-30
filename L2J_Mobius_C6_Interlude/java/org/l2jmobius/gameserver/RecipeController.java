@@ -76,8 +76,7 @@ public class RecipeController
 			return;
 		}
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.CANT_ALTER_RECIPEBOOK_WHILE_CRAFTING);
-		player.sendPacket(sm);
+		player.sendPacket(new SystemMessage(SystemMessageId.CANT_ALTER_RECIPEBOOK_WHILE_CRAFTING));
 	}
 	
 	public synchronized void requestMakeItemAbort(PlayerInstance player)
@@ -379,8 +378,7 @@ public class RecipeController
 					_delay = (int) ((Config.ALT_GAME_CREATION_SPEED * _player.getMReuseRate(_skill) * GameTimeController.TICKS_PER_SECOND) / Config.RATE_CONSUMABLE_COST) * GameTimeController.MILLIS_IN_TICK;
 					
 					// FIXME: please fix this packet to show crafting animation (somebody)
-					final MagicSkillUse msk = new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0);
-					_player.broadcastPacket(msk);
+					_player.broadcastPacket(new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0));
 					
 					_player.sendPacket(new SetupGauge(0, _delay));
 					ThreadPool.schedule(this, 100 + _delay);

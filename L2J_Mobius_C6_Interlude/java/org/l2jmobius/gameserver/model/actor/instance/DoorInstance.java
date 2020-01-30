@@ -532,8 +532,7 @@ public class DoorInstance extends Creature
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
-			player.sendPacket(my);
+			player.sendPacket(new MyTargetSelected(getObjectId(), 0));
 			
 			final DoorStatusUpdate su = new DoorStatusUpdate(this);
 			player.sendPacket(su);
@@ -584,8 +583,7 @@ public class DoorInstance extends Creature
 		if (player.getAccessLevel().isGm())
 		{
 			player.setTarget(this);
-			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel());
-			player.sendPacket(my);
+			player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel()));
 			
 			if (isAutoAttackable(player))
 			{
@@ -621,8 +619,7 @@ public class DoorInstance extends Creature
 		{
 			// ATTACK the mob without moving?
 			player.setTarget(this);
-			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel());
-			player.sendPacket(my);
+			player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel()));
 			
 			if (isAutoAttackable(player))
 			{

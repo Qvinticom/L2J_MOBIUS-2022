@@ -31,7 +31,6 @@ public class RequestPartyMatchDetail extends ClientBasePacket
 		super(decrypt);
 		final int objectId = readD();
 		final PlayerInstance player = (PlayerInstance) World.getInstance().findObject(objectId);
-		final PartyMatchDetail details = new PartyMatchDetail(player);
-		client.getConnection().sendPacket(details);
+		client.getConnection().sendPacket(new PartyMatchDetail(player));
 	}
 }

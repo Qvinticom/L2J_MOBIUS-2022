@@ -77,8 +77,7 @@ public class AdminDisconnect implements IAdminCommandHandler
 			activeChar.sendPacket(sm);
 			
 			// Logout Character
-			final LeaveWorld ql = new LeaveWorld();
-			player.sendPacket(ql);
+			player.sendPacket(new LeaveWorld());
 			
 			player.closeNetConnection();
 		}

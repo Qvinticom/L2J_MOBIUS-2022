@@ -48,8 +48,7 @@ public class WarehouseInstance extends NpcInstance
 		final Warehouse list = player.getWarehouse();
 		if (list != null)
 		{
-			final WareHouseWithdrawalList wl = new WareHouseWithdrawalList(player);
-			player.sendPacket(wl);
+			player.sendPacket(new WareHouseWithdrawalList(player));
 		}
 		else
 		{
@@ -60,8 +59,7 @@ public class WarehouseInstance extends NpcInstance
 	
 	private void showDepositWindow(PlayerInstance player)
 	{
-		final WareHouseDepositList dl = new WareHouseDepositList(player);
-		player.sendPacket(dl);
+		player.sendPacket(new WareHouseDepositList(player));
 		player.sendPacket(new ActionFailed());
 	}
 	

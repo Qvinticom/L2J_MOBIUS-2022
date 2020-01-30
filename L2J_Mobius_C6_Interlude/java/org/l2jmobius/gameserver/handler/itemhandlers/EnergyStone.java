@@ -89,8 +89,7 @@ public class EnergyStone implements IItemHandler
 			if (dummy != null)
 			{
 				dummy.getEffects(player, player);
-				final MagicSkillUse msu = new MagicSkillUse(playable, player, skill.getId(), 1, 1, 0);
-				player.sendPacket(msu);
+				player.sendPacket(new MagicSkillUse(playable, player, skill.getId(), 1, 1, 0));
 				player.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false);
 			}
 			return;

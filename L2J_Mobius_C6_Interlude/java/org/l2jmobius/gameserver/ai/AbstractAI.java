@@ -616,8 +616,7 @@ abstract class AbstractAI implements Ctrl
 			_accessor.moveTo(x, y, z);
 			
 			// Send a Server->Client packet CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
-			final CharMoveToLocation msg = new CharMoveToLocation(_actor);
-			_actor.broadcastPacket(msg);
+			_actor.broadcastPacket(new CharMoveToLocation(_actor));
 		}
 		else
 		{
@@ -665,8 +664,7 @@ abstract class AbstractAI implements Ctrl
 			_clientMoving = false;
 			
 			// Send a Server->Client packet StopMove to the actor and all PlayerInstance in its _knownPlayers
-			final StopMove msg = new StopMove(_actor);
-			_actor.broadcastPacket(msg);
+			_actor.broadcastPacket(new StopMove(_actor));
 			
 			if (pos != null)
 			{
@@ -684,8 +682,7 @@ abstract class AbstractAI implements Ctrl
 		if (_clientMovingToPawnOffset > 0) // movetoPawn needs to be stopped
 		{
 			_clientMovingToPawnOffset = 0;
-			final StopMove msg = new StopMove(_actor);
-			_actor.broadcastPacket(msg);
+			_actor.broadcastPacket(new StopMove(_actor));
 		}
 		_clientMoving = false;
 	}
@@ -768,8 +765,7 @@ abstract class AbstractAI implements Ctrl
 	protected void clientNotifyDead()
 	{
 		// Send a Server->Client packet Die to the actor and all PlayerInstance in its _knownPlayers
-		final Die msg = new Die(_actor);
-		_actor.broadcastPacket(msg);
+		_actor.broadcastPacket(new Die(_actor));
 		
 		// Init AI
 		setIntention(AI_INTENTION_IDLE);
@@ -797,14 +793,12 @@ abstract class AbstractAI implements Ctrl
 			if ((_clientMovingToPawnOffset != 0) && (follow != null))
 			{
 				// Send a Server->Client packet MoveToPawn to the actor and all PlayerInstance in its _knownPlayers
-				final MoveToPawn msg = new MoveToPawn(_actor, follow, _clientMovingToPawnOffset);
-				player.sendPacket(msg);
+				player.sendPacket(new MoveToPawn(_actor, follow, _clientMovingToPawnOffset));
 			}
 			else
 			{
 				// Send a Server->Client packet CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
-				final CharMoveToLocation msg = new CharMoveToLocation(_actor);
-				player.sendPacket(msg);
+				player.sendPacket(new CharMoveToLocation(_actor));
 			}
 		}
 	}

@@ -35,8 +35,7 @@ public class RequestPledgeCrest extends ClientBasePacket
 		final File crestFile = new File("data/crests/Pledge_" + crestId + ".bmp");
 		if (crestFile.exists())
 		{
-			final PledgeCrest pc = new PledgeCrest(crestId, crestFile);
-			client.getConnection().sendPacket(pc);
+			client.getConnection().sendPacket(new PledgeCrest(crestId, crestFile));
 		}
 		else
 		{

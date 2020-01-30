@@ -209,8 +209,7 @@ public class Gui
 				final String message = ((String) input).trim();
 				if (!message.isEmpty())
 				{
-					final CreatureSay cs = new CreatureSay(-1, Say2.ANNOUNCEMENT, "", message);
-					Broadcast.toAllOnlinePlayers(cs);
+					Broadcast.toAllOnlinePlayers(new CreatureSay(-1, Say2.ANNOUNCEMENT, "", message));
 				}
 			}
 		});
@@ -226,8 +225,7 @@ public class Gui
 				final String message = ((String) input).trim();
 				if (!message.isEmpty())
 				{
-					final CreatureSay cs = new CreatureSay(-1, Say2.CRITICAL_ANNOUNCE, "", message);
-					Broadcast.toAllOnlinePlayers(cs);
+					Broadcast.toAllOnlinePlayers(new CreatureSay(-1, Say2.CRITICAL_ANNOUNCE, "", message));
 				}
 			}
 		});

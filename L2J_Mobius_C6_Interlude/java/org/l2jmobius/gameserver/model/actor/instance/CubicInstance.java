@@ -621,8 +621,7 @@ public class CubicInstance
 				{
 					// Smart Cubic debuff cancel is needed, no other skill is used in this
 					// activation period
-					final MagicSkillUse msu = new MagicSkillUse(owner, owner, SKILL_CUBIC_CURE, 1, 0, 0);
-					owner.broadcastPacket(msu);
+					owner.broadcastPacket(new MagicSkillUse(owner, owner, SKILL_CUBIC_CURE, 1, 0, 0));
 				}
 				else if (Rnd.get(100) < _chance)
 				{
@@ -1067,8 +1066,7 @@ public class CubicInstance
 							skill.useSkill(_owner, targets);
 						}
 						
-						final MagicSkillUse msu = new MagicSkillUse(_owner, target, skill.getId(), skill.getLevel(), 0, 0);
-						_owner.broadcastPacket(msu);
+						_owner.broadcastPacket(new MagicSkillUse(_owner, target, skill.getId(), skill.getLevel(), 0, 0));
 					}
 				}
 			}

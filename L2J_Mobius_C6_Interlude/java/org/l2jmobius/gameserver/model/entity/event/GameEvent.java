@@ -282,7 +282,6 @@ public class GameEvent
 	public static void announceAllPlayers(String text)
 	{
 		final CreatureSay cs = new CreatureSay(0, Say2.ANNOUNCEMENT, "", text);
-		
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			player.sendPacket(cs);

@@ -286,8 +286,7 @@ public class PetInstance extends Summon
 		else
 		{
 			player.setTarget(this);
-			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
-			player.sendPacket(my);
+			player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel() - getLevel()));
 		}
 	}
 	
@@ -553,8 +552,7 @@ public class PetInstance extends Summon
 		
 		_inventory.addItem("Pickup", target, getOwner(), this);
 		// FIXME Just send the updates if possible (old way wasn't working though)
-		final PetItemList iu = new PetItemList(this);
-		getOwner().sendPacket(iu);
+		getOwner().sendPacket(new PetItemList(this));
 		
 		getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		
@@ -716,10 +714,9 @@ public class PetInstance extends Summon
 		{
 			getInventory().transferItem("PetTransfer", item.getObjectId(), item.getCount(), getOwner().getInventory(), getOwner(), this);
 			final PetInventoryUpdate petiu = new PetInventoryUpdate();
-			final ItemList playerUI = new ItemList(getOwner(), false);
 			petiu.addRemovedItem(item);
 			getOwner().sendPacket(petiu);
-			getOwner().sendPacket(playerUI);
+			getOwner().sendPacket(new ItemList(getOwner(), false));
 		}
 		catch (Exception e)
 		{

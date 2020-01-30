@@ -55,8 +55,7 @@ public class SendWareHouseWithDrawList extends ClientBasePacket
 			final StatusUpdate su = new StatusUpdate(activeChar.getObjectId());
 			su.addAttribute(StatusUpdate.CUR_LOAD, activeChar.getCurrentLoad());
 			activeChar.sendPacket(su);
-			final ItemList il = new ItemList(activeChar, false);
-			activeChar.sendPacket(il);
+			activeChar.sendPacket(new ItemList(activeChar, false));
 		}
 		else
 		{
@@ -64,8 +63,7 @@ public class SendWareHouseWithDrawList extends ClientBasePacket
 			{
 				World.getInstance().removeVisibleObject(items[i]);
 			}
-			final SystemMessage sm = new SystemMessage(SystemMessage.WEIGHT_LIMIT_EXCEEDED);
-			activeChar.sendPacket(sm);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.WEIGHT_LIMIT_EXCEEDED));
 		}
 	}
 }

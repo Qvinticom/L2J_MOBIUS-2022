@@ -105,8 +105,7 @@ public class GuardInstance extends Attackable
 		{
 			player.setCurrentState(CreatureState.IDLE);
 			player.setTarget(this);
-			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
-			player.sendPacket(my);
+			player.sendPacket(new MyTargetSelected(getObjectId(), 0));
 			player.sendPacket(new SetToLocation(this));
 		}
 		else if (containsTarget(player))

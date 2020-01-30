@@ -72,8 +72,7 @@ public class TradeDone extends ClientBasePacket
 		else
 		{
 			player.sendPacket(new SendTradeDone(0));
-			final SystemMessage msg = new SystemMessage(SystemMessage.TARGET_IS_NOT_FOUND_IN_THE_GAME);
-			player.sendPacket(msg);
+			player.sendPacket(new SystemMessage(SystemMessage.TARGET_IS_NOT_FOUND_IN_THE_GAME));
 			player.setTransactionRequester(null);
 			requestor.setTradeList(null);
 			player.setTradeList(null);

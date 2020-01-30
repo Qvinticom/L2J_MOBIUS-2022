@@ -181,8 +181,7 @@ public abstract class WorldObject
 		final WorldRegion oldregion = getPosition().getWorldRegion();
 		
 		// Create a server->client GetItem packet to pick up the ItemInstance
-		final GetItem gi = new GetItem((ItemInstance) this, creature.getObjectId());
-		creature.broadcastPacket(gi);
+		creature.broadcastPacket(new GetItem((ItemInstance) this, creature.getObjectId()));
 		
 		synchronized (this)
 		{

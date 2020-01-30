@@ -313,8 +313,7 @@ public class Pdam implements ISkillHandler
 					}
 					else
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.FORCE_MAXLEVEL_REACHED);
-						creature.sendPacket(sm);
+						creature.sendPacket(new SystemMessage(SystemMessageId.FORCE_MAXLEVEL_REACHED));
 					}
 				}
 				else if (skill.getId() == 345) // Sonic Rage

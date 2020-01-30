@@ -74,8 +74,7 @@ public class MerchantInstance extends FolkInstance
 		
 		if (list != null)
 		{
-			final WearList bl = new WearList(list, player.getAdena(), player.getExpertiseIndex());
-			player.sendPacket(bl);
+			player.sendPacket(new WearList(list, player.getAdena(), player.getExpertiseIndex()));
 		}
 		else
 		{
@@ -103,8 +102,7 @@ public class MerchantInstance extends FolkInstance
 		final StoreTradeList list = TradeController.getInstance().getBuyList(value);
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 		{
-			final BuyList bl = new BuyList(list, player.getAdena(), taxRate);
-			player.sendPacket(bl);
+			player.sendPacket(new BuyList(list, player.getAdena(), taxRate));
 		}
 		else
 		{
@@ -299,8 +297,7 @@ public class MerchantInstance extends FolkInstance
 		{
 			player.setTarget(this);
 			
-			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
-			player.sendPacket(my);
+			player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel() - getLevel()));
 			
 			if (isAutoAttackable(player))
 			{

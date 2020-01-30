@@ -194,8 +194,7 @@ public abstract class VoteSystem implements Runnable
 	
 	private void announce(String msg)
 	{
-		final CreatureSay cs = new CreatureSay(null, ChatType.CRITICAL_ANNOUNCE, "", msg);
-		Broadcast.toAllOnlinePlayers(cs);
+		Broadcast.toAllOnlinePlayers(new CreatureSay(null, ChatType.CRITICAL_ANNOUNCE, "", msg));
 	}
 	
 	public abstract int getVotes();

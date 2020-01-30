@@ -110,8 +110,7 @@ public class RequestPrivateStoreManageSell extends GameClientPacket
 			
 			if (Config.SELL_BY_ITEM)
 			{
-				final CreatureSay cs11 = new CreatureSay(0, 15, "", "ATTENTION: Store System is not based on Adena, be careful!"); // 8D
-				player.sendPacket(cs11);
+				player.sendPacket(new CreatureSay(0, 15, "", "ATTENTION: Store System is not based on Adena, be careful!"));
 			}
 			
 			player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_SELL + 1);

@@ -259,8 +259,7 @@ public class Blow implements ISkillHandler
 				
 				// Possibility of a lethal strike
 				Formulas.calcLethalHit(creature, target, skill);
-				final PlaySound playSound = new PlaySound("skillsound.critical_hit_02");
-				creature.sendPacket(playSound);
+				creature.sendPacket(new PlaySound("skillsound.critical_hit_02"));
 			}
 			else
 			{

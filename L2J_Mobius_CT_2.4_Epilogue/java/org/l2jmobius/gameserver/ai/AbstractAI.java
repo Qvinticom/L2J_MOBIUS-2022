@@ -789,8 +789,7 @@ public abstract class AbstractAI implements Ctrl
 	protected void clientNotifyDead()
 	{
 		// Send a Server->Client packet Die to the actor and all PlayerInstance in its _knownPlayers
-		final Die msg = new Die(_actor);
-		_actor.broadcastPacket(msg);
+		_actor.broadcastPacket(new Die(_actor));
 		
 		// Init AI
 		_intention = AI_INTENTION_IDLE;

@@ -249,8 +249,7 @@ public class TradeRequest extends GameClientPacket
 		
 		if (Util.calculateDistance(player, partner, true) > 150)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.TARGET_TOO_FAR);
-			player.sendPacket(sm);
+			player.sendPacket(new SystemMessage(SystemMessageId.TARGET_TOO_FAR));
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

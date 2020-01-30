@@ -75,8 +75,7 @@ public class NpcInstance extends Creature
 		if (!isRunning())
 		{
 			setRunning(true);
-			final ChangeMoveType move = new ChangeMoveType(this, ChangeMoveType.RUN);
-			broadcastPacket(move);
+			broadcastPacket(new ChangeMoveType(this, ChangeMoveType.RUN));
 		}
 		super.startAttack(target);
 	}
@@ -132,8 +131,7 @@ public class NpcInstance extends Creature
 			}
 			player.setCurrentState(CreatureState.IDLE);
 			player.setTarget(this);
-			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
-			player.sendPacket(my);
+			player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel() - getLevel()));
 			if (isAutoAttackable())
 			{
 				final StatusUpdate su = new StatusUpdate(getObjectId());

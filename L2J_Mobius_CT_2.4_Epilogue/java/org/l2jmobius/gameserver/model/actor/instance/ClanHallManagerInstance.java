@@ -1759,7 +1759,6 @@ public class ClanHallManagerInstance extends MerchantInstance
 		{
 			return;
 		}
-		final AgitDecoInfo bl = new AgitDecoInfo(ch);
-		player.sendPacket(bl);
+		player.sendPacket(new AgitDecoInfo(ch));
 	}
 }

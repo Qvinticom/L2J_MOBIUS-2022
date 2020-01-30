@@ -152,9 +152,7 @@ public class RequestAquireSkill extends GameClientPacket
 			}
 			else
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.NOT_ENOUGH_SP_TO_LEARN_SKILL);
-				player.sendPacket(sm);
-				
+				player.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_SP_TO_LEARN_SKILL));
 				return;
 			}
 		}
@@ -203,8 +201,7 @@ public class RequestAquireSkill extends GameClientPacket
 			}
 			else
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.NOT_ENOUGH_SP_TO_LEARN_SKILL);
-				player.sendPacket(sm);
+				player.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_SP_TO_LEARN_SKILL));
 				return;
 			}
 		}
@@ -262,8 +259,7 @@ public class RequestAquireSkill extends GameClientPacket
 			}
 			else
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.ACQUIRE_SKILL_FAILED_BAD_CLAN_REP_SCORE);
-				player.sendPacket(sm);
+				player.sendPacket(new SystemMessage(SystemMessageId.ACQUIRE_SKILL_FAILED_BAD_CLAN_REP_SCORE));
 				return;
 			}
 			player.getClan().setReputationScore(player.getClan().getReputationScore() - repCost, true);
@@ -338,8 +334,7 @@ public class RequestAquireSkill extends GameClientPacket
 		
 		if ((_id >= 1368) && (_id <= 1372)) // if skill is expand sendpacket :)
 		{
-			final ExStorageMaxCount esmc = new ExStorageMaxCount(player);
-			player.sendPacket(esmc);
+			player.sendPacket(new ExStorageMaxCount(player));
 		}
 		
 		player.sendSkillList();

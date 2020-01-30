@@ -145,15 +145,13 @@ public class RequestExEnchantSkill extends GameClientPacket
 			}
 			else
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DONT_HAVE_ENOUGH_EXP_TO_ENCHANT_THAT_SKILL);
-				player.sendPacket(sm);
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_DONT_HAVE_ENOUGH_EXP_TO_ENCHANT_THAT_SKILL));
 				return;
 			}
 		}
 		else
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DONT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
-			player.sendPacket(sm);
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DONT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL));
 			return;
 		}
 		if (Rnd.get(100) <= rate)

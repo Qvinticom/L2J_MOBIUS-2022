@@ -64,8 +64,7 @@ public class ManorManagerInstance extends MerchantInstance
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
-			player.sendPacket(my);
+			player.sendPacket(new MyTargetSelected(getObjectId(), 0));
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
@@ -111,8 +110,7 @@ public class ManorManagerInstance extends MerchantInstance
 		if (list != null)
 		{
 			list.getItems().get(0).setCount(1);
-			final BuyList bl = new BuyList(list, player.getAdena(), taxRate);
-			player.sendPacket(bl);
+			player.sendPacket(new BuyList(list, player.getAdena(), taxRate));
 		}
 		else
 		{
@@ -186,8 +184,7 @@ public class ManorManagerInstance extends MerchantInstance
 								tradeList.addItem(item);
 							}
 						}
-						final BuyListSeed bl = new BuyListSeed(tradeList, castleId, player.getAdena());
-						player.sendPacket(bl);
+						player.sendPacket(new BuyListSeed(tradeList, castleId, player.getAdena()));
 					}
 					break;
 				}

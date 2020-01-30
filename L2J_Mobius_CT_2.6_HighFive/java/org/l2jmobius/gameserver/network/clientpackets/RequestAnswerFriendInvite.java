@@ -97,8 +97,7 @@ public class RequestAnswerFriendInvite implements IClientIncomingPacket
 		}
 		else
 		{
-			final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_ADD_A_FRIEND_TO_YOUR_FRIENDS_LIST);
-			requestor.sendPacket(msg);
+			requestor.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_ADD_A_FRIEND_TO_YOUR_FRIENDS_LIST));
 		}
 		
 		player.setActiveRequester(null);

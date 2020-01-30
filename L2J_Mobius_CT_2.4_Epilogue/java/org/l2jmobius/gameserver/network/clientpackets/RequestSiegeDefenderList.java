@@ -45,7 +45,6 @@ public class RequestSiegeDefenderList implements IClientIncomingPacket
 		{
 			return;
 		}
-		final SiegeDefenderList sdl = new SiegeDefenderList(castle);
-		client.sendPacket(sdl);
+		client.sendPacket(new SiegeDefenderList(castle));
 	}
 }

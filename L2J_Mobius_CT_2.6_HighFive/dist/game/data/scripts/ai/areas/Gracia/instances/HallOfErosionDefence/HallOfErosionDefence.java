@@ -264,8 +264,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 		
 		if ((party.getCommandChannel().getMembers().size() < Config.EROSION_DEFENCE_MIN_PLAYERS) || (party.getCommandChannel().getMembers().size() > Config.EROSION_DEFENCE_MAX_PLAYERS))// 18 27
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
-			party.getCommandChannel().broadcastPacket(sm);
+			party.getCommandChannel().broadcastPacket(new SystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY));
 			return false;
 		}
 		
@@ -571,8 +570,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 		{
 			soulwagonSpawned = true;
 			final Npc soul = addSpawn(25636, npc.getLocation(), world.getInstanceId());
-			final NpcSay cs = new NpcSay(soul.getObjectId(), ChatType.SHOUT, soul.getId(), NpcStringId.HA_HA_HA);
-			soul.broadcastPacket(cs);
+			soul.broadcastPacket(new NpcSay(soul.getObjectId(), ChatType.SHOUT, soul.getId(), NpcStringId.HA_HA_HA));
 		}
 	}
 	

@@ -105,7 +105,6 @@ public class RequestExEnchantSkillInfoDetail implements IClientIncomingPacket
 		}
 		
 		// send skill enchantment detail
-		final ExEnchantSkillInfoDetail esd = new ExEnchantSkillInfoDetail(_type, _skillId, _skillLvl, player);
-		player.sendPacket(esd);
+		player.sendPacket(new ExEnchantSkillInfoDetail(_type, _skillId, _skillLvl, player));
 	}
 }

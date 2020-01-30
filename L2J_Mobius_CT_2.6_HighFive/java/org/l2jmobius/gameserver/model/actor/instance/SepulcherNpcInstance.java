@@ -157,8 +157,7 @@ public class SepulcherNpcInstance extends Npc
 					// PlayerInstance on the _knownPlayer of the NpcInstance
 					// to display a social action of the NpcInstance on their
 					// client
-					final SocialAction sa = new SocialAction(getObjectId(), Rnd.get(8));
-					broadcastPacket(sa);
+					broadcastPacket(new SocialAction(getObjectId(), Rnd.get(8)));
 					
 					doAction(player);
 				}

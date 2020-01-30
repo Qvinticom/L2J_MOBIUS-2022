@@ -71,7 +71,6 @@ public class RequestSendFriendMsg extends GameClientPacket
 			_logChat.log(record);
 		}
 		
-		final FriendRecvMsg frm = new FriendRecvMsg(player.getName(), _reciever, _message);
-		targetPlayer.sendPacket(frm);
+		targetPlayer.sendPacket(new FriendRecvMsg(player.getName(), _reciever, _message));
 	}
 }

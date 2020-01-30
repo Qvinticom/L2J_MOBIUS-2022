@@ -1477,9 +1477,7 @@ public class Clan
 		// Order of Knights 10000 points per each
 		if ((pledgeType != -1) && (((_reputationScore < 5000) && (pledgeType < SUBUNIT_KNIGHT1)) || ((_reputationScore < 10000) && (pledgeType > SUBUNIT_ROYAL2))))
 		{
-			final SystemMessage sp = new SystemMessage(SystemMessageId.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW);
-			player.sendPacket(sp);
-			
+			player.sendPacket(new SystemMessage(SystemMessageId.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW));
 			return null;
 		}
 		
@@ -2294,8 +2292,7 @@ public class Clan
 		
 		if (!increaseClanLevel)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.FAILED_TO_INCREASE_CLAN_LEVEL);
-			player.sendPacket(sm);
+			player.sendPacket(new SystemMessage(SystemMessageId.FAILED_TO_INCREASE_CLAN_LEVEL));
 			return;
 		}
 		
@@ -2304,8 +2301,7 @@ public class Clan
 		su.addAttribute(StatusUpdate.SP, player.getSp());
 		player.sendPacket(su);
 		
-		final ItemList il = new ItemList(player, false);
-		player.sendPacket(il);
+		player.sendPacket(new ItemList(player, false));
 		
 		changeLevel(_level + 1);
 	}

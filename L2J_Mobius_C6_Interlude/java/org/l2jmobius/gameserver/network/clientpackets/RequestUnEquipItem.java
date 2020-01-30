@@ -98,14 +98,12 @@ public class RequestUnEquipItem extends GameClientPacket
 		
 		// show the update in the inventory
 		final InventoryUpdate iu = new InventoryUpdate();
-		
 		for (ItemInstance element : unequiped)
 		{
 			player.checkSSMatch(null, element);
 			
 			iu.addModifiedItem(element);
 		}
-		
 		player.sendPacket(iu);
 		
 		player.broadcastUserInfo();

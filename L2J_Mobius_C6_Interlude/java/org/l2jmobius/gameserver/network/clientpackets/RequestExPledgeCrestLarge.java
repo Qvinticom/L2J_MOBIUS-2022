@@ -40,8 +40,7 @@ public class RequestExPledgeCrestLarge extends GameClientPacket
 		
 		if (data != null)
 		{
-			final ExPledgeCrestLarge pcl = new ExPledgeCrestLarge(_crestId, data);
-			sendPacket(pcl);
+			sendPacket(new ExPledgeCrestLarge(_crestId, data));
 		}
 	}
 }

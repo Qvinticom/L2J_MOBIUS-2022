@@ -195,8 +195,7 @@ public class CommunityBoardManager
 				}
 			}
 			htmlCode.append("</td></tr></table></body></html>");
-			final ShowBoard sb = new ShowBoard(activeChar, htmlCode.toString());
-			activeChar.sendPacket(sb);
+			activeChar.sendPacket(new ShowBoard(activeChar, htmlCode.toString()));
 		}
 	}
 }

@@ -533,7 +533,6 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		
 		final StringBuilder replyMSG = new StringBuilder("<html><title>Teleport Character</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("The character you will teleport is " + player.getName() + ".");

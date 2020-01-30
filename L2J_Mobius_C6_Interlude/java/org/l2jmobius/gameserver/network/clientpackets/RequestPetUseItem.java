@@ -160,8 +160,7 @@ public class RequestPetUseItem extends GameClientPacket
 		}
 		else
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS);
-			player.sendPacket(sm);
+			player.sendPacket(new SystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS));
 		}
 	}
 	
@@ -178,11 +177,9 @@ public class RequestPetUseItem extends GameClientPacket
 				pet.getInventory().equipItem(item);
 			}
 			
-			final PetItemList pil = new PetItemList(pet);
-			player.sendPacket(pil);
+			player.sendPacket(new PetItemList(pet));
 			
-			final PetInfo pi = new PetInfo(pet);
-			player.sendPacket(pi);
+			player.sendPacket(new PetInfo(pet));
 			// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
 			pet.updateEffectIcons(true);
 		}

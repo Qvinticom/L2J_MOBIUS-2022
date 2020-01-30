@@ -60,13 +60,10 @@ public class UseItem extends ClientBasePacket
 			final SystemMessage sm = new SystemMessage(SystemMessage.S1_EQUIPPED);
 			sm.addItemName(item.getItemId());
 			activeChar.sendPacket(sm);
-			final InventoryUpdate iu = new InventoryUpdate(items);
-			activeChar.sendPacket(iu);
-			final UserInfo ui = new UserInfo(activeChar);
-			activeChar.sendPacket(ui);
+			activeChar.sendPacket(new InventoryUpdate(items));
+			activeChar.sendPacket(new UserInfo(activeChar));
 			activeChar.setAttackStatus(false);
-			final CharInfo info = new CharInfo(activeChar);
-			activeChar.broadcastPacket(info);
+			activeChar.broadcastPacket(new CharInfo(activeChar));
 		}
 		else if (item != null)
 		{

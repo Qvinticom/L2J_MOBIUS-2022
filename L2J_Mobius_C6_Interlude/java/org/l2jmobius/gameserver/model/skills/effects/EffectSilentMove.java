@@ -79,8 +79,7 @@ final class EffectSilentMove extends Effect
 		
 		if (manaDam > getEffected().getCurrentMp())
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
-			getEffected().sendPacket(sm);
+			getEffected().sendPacket(new SystemMessage(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP));
 			return false;
 		}
 		

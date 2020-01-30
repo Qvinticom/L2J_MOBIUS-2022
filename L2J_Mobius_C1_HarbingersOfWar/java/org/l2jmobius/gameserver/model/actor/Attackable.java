@@ -272,8 +272,7 @@ public class Attackable extends NpcInstance
 				dropit.setY(getY());
 				dropit.setZ(getZ() + 100);
 				dropit.setOnTheGround(true);
-				final DropItem dis = new DropItem(dropit, getObjectId());
-				for (PlayerInstance player : broadcastPacket(dis))
+				for (PlayerInstance player : broadcastPacket(new DropItem(dropit, getObjectId())))
 				{
 					player.addKnownObjectWithoutCreate(dropit);
 				}

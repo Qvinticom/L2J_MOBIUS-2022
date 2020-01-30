@@ -808,11 +808,8 @@ public class AdminEventEngine implements IAdminCommandHandler
 				target.getPoly().setPolyInfo("npc", id);
 				target.teleToLocation(target.getX(), target.getY(), target.getZ(), true);
 				
-				final CharInfo info1 = new CharInfo(target);
-				target.broadcastPacket(info1);
-				
-				final UserInfo info2 = new UserInfo(target);
-				target.sendPacket(info2);
+				target.broadcastPacket(new CharInfo(target));
+				target.sendPacket(new UserInfo(target));
 			}
 			catch (Exception e)
 			{
@@ -835,11 +832,8 @@ public class AdminEventEngine implements IAdminCommandHandler
 				target.decayMe();
 				target.spawnMe(target.getX(), target.getY(), target.getZ());
 				
-				final CharInfo info1 = new CharInfo(target);
-				target.broadcastPacket(info1);
-				
-				final UserInfo info2 = new UserInfo(target);
-				target.sendPacket(info2);
+				target.broadcastPacket(new CharInfo(target));
+				target.sendPacket(new UserInfo(target));
 			}
 			catch (Exception e)
 			{
@@ -851,8 +845,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 	{
 		player.getInventory().addItem("Event", id, num, player, activeChar);
 		
-		final ItemList il = new ItemList(player, true);
-		player.sendPacket(il);
+		player.sendPacket(new ItemList(player, true));
 		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><body>");

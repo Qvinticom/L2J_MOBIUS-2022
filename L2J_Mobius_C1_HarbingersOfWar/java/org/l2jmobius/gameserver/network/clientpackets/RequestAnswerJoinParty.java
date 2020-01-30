@@ -30,16 +30,14 @@ public class RequestAnswerJoinParty extends ClientBasePacket
 		final int response = readD();
 		final PlayerInstance player = client.getActiveChar();
 		final PlayerInstance requestor = player.getTransactionRequester();
-		final JoinParty join = new JoinParty(response);
-		requestor.sendPacket(join);
+		requestor.sendPacket(new JoinParty(response));
 		if (response == 1)
 		{
 			player.joinParty(requestor.getParty());
 		}
 		else
 		{
-			final SystemMessage msg = new SystemMessage(SystemMessage.PLAYER_DECLINED);
-			requestor.sendPacket(msg);
+			requestor.sendPacket(new SystemMessage(SystemMessage.PLAYER_DECLINED));
 			if (requestor.getParty().getMemberCount() == 1)
 			{
 				requestor.setParty(null);

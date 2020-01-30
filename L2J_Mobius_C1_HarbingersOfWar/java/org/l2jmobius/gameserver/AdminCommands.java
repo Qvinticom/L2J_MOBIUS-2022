@@ -428,8 +428,7 @@ public class AdminCommands extends Thread
 		final TradeList list = TradeController.getInstance().getBuyList(val);
 		if (list != null)
 		{
-			final BuyList bl = new BuyList(list, player.getAdena());
-			player.sendPacket(bl);
+			player.sendPacket(new BuyList(list, player.getAdena()));
 		}
 		else
 		{
@@ -489,8 +488,7 @@ public class AdminCommands extends Thread
 		{
 			activeChar.getInventory().addItem(createditem);
 		}
-		final ItemList il = new ItemList(activeChar, true);
-		activeChar.sendPacket(il);
+		activeChar.sendPacket(new ItemList(activeChar, true));
 		activeChar.sendMessage("You have spawned " + num + " item(s) number " + id + " in your inventory.");
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><title>Item Creation Complete</title>");
@@ -762,8 +760,7 @@ public class AdminCommands extends Thread
 		else
 		{
 			activeChar.sendMessage("Character " + player.getName() + " disconnected from server.");
-			final LeaveWorld ql = new LeaveWorld();
-			player.sendPacket(ql);
+			player.sendPacket(new LeaveWorld());
 			try
 			{
 				player.getNetConnection().close();

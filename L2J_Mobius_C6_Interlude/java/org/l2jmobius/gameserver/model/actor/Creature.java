@@ -1259,8 +1259,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			sendPacket(new SystemMessage(SystemMessageId.GETTING_READY_TO_SHOOT_AN_ARROW));
 			
 			// Send a Server->Client packet SetupGauge
-			final SetupGauge sg = new SetupGauge(SetupGauge.RED, sAtk + reuse);
-			sendPacket(sg);
+			sendPacket(new SetupGauge(SetupGauge.RED, sAtk + reuse));
 		}
 		
 		// Create a new hit task with Medium priority
@@ -1558,8 +1557,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// Can't use Hero and resurrect skills during Olympiad
 		if ((creature instanceof PlayerInstance) && ((PlayerInstance) creature).isInOlympiadMode() && (skill.isHeroSkill() || (skill.getSkillType() == SkillType.RESURRECT)))
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
-			sendPacket(sm);
+			sendPacket(new SystemMessage(SystemMessageId.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
 			return;
 		}
 		
@@ -1890,8 +1888,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			// Send a Server->Client packet SetupGauge with the color of the gauge and the casting time
 			if ((creature instanceof PlayerInstance) && !forceBuff)
 			{
-				final SetupGauge sg = new SetupGauge(SetupGauge.BLUE, hitTime);
-				sendPacket(sg);
+				sendPacket(new SetupGauge(SetupGauge.BLUE, hitTime));
 			}
 			
 			// Disable all skills during the casting
@@ -3968,8 +3965,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			((PlayerInstance) this).setRecentFakeDeath(true);
 		}
 		
-		final ChangeWaitType revive = new ChangeWaitType(this, ChangeWaitType.WT_STOP_FAKEDEATH);
-		broadcastPacket(revive);
+		broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_STOP_FAKEDEATH));
 		broadcastPacket(new Revive(this));
 		getAI().notifyEvent(CtrlEvent.EVT_THINK, null);
 	}
@@ -6477,7 +6473,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			if (target instanceof PlayerInstance)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.AVOIDED_S1S_ATTACK);
-				
 				if (this instanceof Summon)
 				{
 					final int mobId = ((Summon) this).getTemplate().getNpcId();
@@ -6487,7 +6482,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				{
 					sm.addString(getName());
 				}
-				
 				((PlayerInstance) target).sendPacket(sm);
 			}
 		}
@@ -10157,8 +10151,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
 		// The player.getLevel() - getLevel() permit to display the correct color in the select window
-		final MyTargetSelected my = new MyTargetSelected(trasformedNpc.getObjectId(), getLevel() - trasformedNpc.getLevel());
-		sendPacket(my);
+		sendPacket(new MyTargetSelected(trasformedNpc.getObjectId(), getLevel() - trasformedNpc.getLevel()));
 		
 		// Send a Server->Client packet StatusUpdate of the NpcInstance to the PlayerInstance to update its HP bar
 		final StatusUpdate su = new StatusUpdate(trasformedNpc.getObjectId());

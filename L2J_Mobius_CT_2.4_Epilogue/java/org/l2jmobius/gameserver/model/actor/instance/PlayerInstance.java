@@ -3643,7 +3643,6 @@ public class PlayerInstance extends Playable
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			
 			if ((oldItem.getCount() > 0) && (oldItem != newItem))
 			{
 				playerIU.addModifiedItem(oldItem);
@@ -3652,7 +3651,6 @@ public class PlayerInstance extends Playable
 			{
 				playerIU.addRemovedItem(oldItem);
 			}
-			
 			sendPacket(playerIU);
 		}
 		else
@@ -3673,7 +3671,6 @@ public class PlayerInstance extends Playable
 			if (!Config.FORCE_INVENTORY_UPDATE)
 			{
 				final InventoryUpdate playerIU = new InventoryUpdate();
-				
 				if (newItem.getCount() > count)
 				{
 					playerIU.addModifiedItem(newItem);
@@ -3682,7 +3679,6 @@ public class PlayerInstance extends Playable
 				{
 					playerIU.addNewItem(newItem);
 				}
-				
 				targetPlayer.sendPacket(playerIU);
 			}
 			else
@@ -3698,7 +3694,6 @@ public class PlayerInstance extends Playable
 		else if (target instanceof PetInventory)
 		{
 			final PetInventoryUpdate petIU = new PetInventoryUpdate();
-			
 			if (newItem.getCount() > count)
 			{
 				petIU.addModifiedItem(newItem);
@@ -3707,7 +3702,6 @@ public class PlayerInstance extends Playable
 			{
 				petIU.addNewItem(newItem);
 			}
-			
 			((PetInventory) target).getOwner().sendPacket(petIU);
 		}
 		return newItem;
@@ -4775,8 +4769,7 @@ public class PlayerInstance extends Playable
 		if (_transformation != null)
 		{
 			// You already polymorphed and cannot polymorph again.
-			final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
-			sendPacket(msg);
+			sendPacket(new SystemMessage(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 			return;
 		}
 		
@@ -12758,8 +12751,7 @@ public class PlayerInstance extends Playable
 		else if (_canFeed)
 		{
 			setCurrentFeed(getMaxFeed());
-			final SetupGauge sg = new SetupGauge(getObjectId(), 3, (_curFeed * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume());
-			sendPacket(sg);
+			sendPacket(new SetupGauge(getObjectId(), 3, (_curFeed * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume()));
 			if (!isDead())
 			{
 				_mountFeedTask = ThreadPool.scheduleAtFixedRate(new PetFeedTask(this), 10000, 10000);
@@ -12805,8 +12797,7 @@ public class PlayerInstance extends Playable
 	{
 		final boolean lastHungryState = isHungry();
 		_curFeed = num > getMaxFeed() ? getMaxFeed() : num;
-		final SetupGauge sg = new SetupGauge(getObjectId(), 3, (_curFeed * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume());
-		sendPacket(sg);
+		sendPacket(new SetupGauge(getObjectId(), 3, (_curFeed * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume()));
 		// broadcast move speed change when strider becomes hungry / full
 		if (lastHungryState != isHungry())
 		{

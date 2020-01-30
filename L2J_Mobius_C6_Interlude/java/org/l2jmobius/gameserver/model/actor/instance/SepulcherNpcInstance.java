@@ -116,8 +116,7 @@ public class SepulcherNpcInstance extends NpcInstance
 			{
 				// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
 				// The player.getLevel() - getLevel() permit to display the correct color in the select window
-				final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
-				player.sendPacket(my);
+				player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel() - getLevel()));
 				
 				// Send a Server->Client packet StatusUpdate of the NpcInstance to the PlayerInstance to update its HP bar
 				final StatusUpdate su = new StatusUpdate(getObjectId());
@@ -128,8 +127,7 @@ public class SepulcherNpcInstance extends NpcInstance
 			else
 			{
 				// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-				final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
-				player.sendPacket(my);
+				player.sendPacket(new MyTargetSelected(getObjectId(), 0));
 			}
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
@@ -164,8 +162,7 @@ public class SepulcherNpcInstance extends NpcInstance
 				else
 				{
 					// Send a Server->Client packet SocialAction to the all PlayerInstance on the _knownPlayer of the NpcInstance to display a social action of the NpcInstance on their client
-					final SocialAction sa = new SocialAction(getObjectId(), Rnd.get(8));
-					broadcastPacket(sa);
+					broadcastPacket(new SocialAction(getObjectId(), Rnd.get(8)));
 					
 					doAction(player);
 				}

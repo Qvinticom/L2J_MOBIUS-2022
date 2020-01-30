@@ -83,8 +83,7 @@ public class ChristmasTree implements IItemHandler
 			
 			player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 			
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-			player.sendPacket(sm);
+			player.sendPacket(new SystemMessage(SystemMessageId.S1_S2));
 			
 			ThreadPool.schedule(new DeSpawn(result), 3600000);
 		}

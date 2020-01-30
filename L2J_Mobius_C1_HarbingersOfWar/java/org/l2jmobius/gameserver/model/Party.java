@@ -170,12 +170,11 @@ public class Party
 	private void dissolveParty()
 	{
 		final SystemMessage msg = new SystemMessage(SystemMessage.PARTY_DISPERSED);
-		for (int i = 0; i < _members.size(); ++i)
+		for (PlayerInstance member : _members)
 		{
-			final PlayerInstance temp = _members.get(i);
-			temp.sendPacket(msg);
-			temp.sendPacket(new PartySmallWindowDeleteAll());
-			temp.setParty(null);
+			member.sendPacket(msg);
+			member.sendPacket(new PartySmallWindowDeleteAll());
+			member.setParty(null);
 		}
 	}
 	
@@ -217,8 +216,7 @@ public class Party
 			iu.addModifiedItem(item2);
 		}
 		target.sendPacket(iu);
-		final UserInfo ci = new UserInfo(target);
-		target.sendPacket(ci);
+		target.sendPacket(new UserInfo(target));
 	}
 	
 	public void distributeAdena(ItemInstance adena)

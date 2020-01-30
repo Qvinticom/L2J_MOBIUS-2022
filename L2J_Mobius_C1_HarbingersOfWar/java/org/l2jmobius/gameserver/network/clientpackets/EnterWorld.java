@@ -50,8 +50,7 @@ public class EnterWorld extends ClientBasePacket
 		activeChar.sendPacket(new SystemMessage(SystemMessage.WELCOME_TO_LINEAGE));
 		Announcements.getInstance().showAnnouncements(activeChar);
 		
-		final ItemList il = new ItemList(activeChar, false);
-		activeChar.sendPacket(il);
+		activeChar.sendPacket(new ItemList(activeChar, false));
 		
 		final ShortCutInit sci = new ShortCutInit();
 		for (ShortCut shortcut : activeChar.getAllShortCuts())

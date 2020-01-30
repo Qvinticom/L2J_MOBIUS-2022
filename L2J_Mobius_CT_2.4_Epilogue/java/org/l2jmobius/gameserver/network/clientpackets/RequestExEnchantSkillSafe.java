@@ -181,8 +181,7 @@ public class RequestExEnchantSkillSafe implements IClientIncomingPacket
 		}
 		else
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
-			player.sendPacket(sm);
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL));
 		}
 	}
 }

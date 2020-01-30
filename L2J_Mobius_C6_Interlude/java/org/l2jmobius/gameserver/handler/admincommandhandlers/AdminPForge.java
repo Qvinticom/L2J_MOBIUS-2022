@@ -75,7 +75,6 @@ public class AdminPForge implements IAdminCommandHandler
 				}
 				
 				final AdminForgePacket sp = new AdminForgePacket();
-				
 				for (int i = 0; i < format.length(); i++)
 				{
 					String val = st.nextToken();

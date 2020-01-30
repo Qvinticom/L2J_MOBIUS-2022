@@ -91,8 +91,7 @@ public class PetInstance extends Creature
 		}
 		player.setCurrentState(CreatureState.IDLE);
 		player.setTarget(this);
-		final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
-		player.sendPacket(my);
+		player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel() - getLevel()));
 	}
 	
 	public void setSummonHp(int hp)
@@ -277,8 +276,7 @@ public class PetInstance extends Creature
 		final StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.LEVEL, getLevel());
 		broadcastPacket(su);
-		final SocialAction sa = new SocialAction(getObjectId(), 15);
-		broadcastPacket(sa);
+		broadcastPacket(new SocialAction(getObjectId(), 15));
 		_owner.sendPacket(new SystemMessage(SystemMessage.YOU_INCREASED_YOUR_LEVEL));
 	}
 	
@@ -343,8 +341,7 @@ public class PetInstance extends Creature
 	
 	private void doPickupItem()
 	{
-		final StopMove sm = new StopMove(getObjectId(), getX(), getY(), getZ(), getHeading());
-		broadcastPacket(sm);
+		broadcastPacket(new StopMove(getObjectId(), getX(), getY(), getZ(), getHeading()));
 		if (!(getTarget() instanceof ItemInstance))
 		{
 			_log.warning("trying to pickup wrong target." + getTarget());
@@ -367,14 +364,11 @@ public class PetInstance extends Creature
 			setCurrentState(CreatureState.IDLE);
 			return;
 		}
-		final GetItem gi = new GetItem(target, getObjectId());
-		broadcastPacket(gi);
+		broadcastPacket(new GetItem(target, getObjectId()));
 		World.getInstance().removeVisibleObject(target);
-		final DeleteObject del = new DeleteObject(target);
-		broadcastPacket(del);
+		broadcastPacket(new DeleteObject(target));
 		getInventory().addItem(target);
-		final PetItemList iu = new PetItemList(this);
-		_owner.sendPacket(iu);
+		_owner.sendPacket(new PetItemList(this));
 		setCurrentState(CreatureState.IDLE);
 		if (getFollowStatus())
 		{
@@ -436,10 +430,9 @@ public class PetInstance extends Creature
 			_owner.getInventory().addItem(item);
 			getInventory().dropItem(item, item.getCount());
 			final PetInventoryUpdate petiu = new PetInventoryUpdate();
-			final ItemList playerUI = new ItemList(_owner, false);
 			petiu.addRemovedItem(item);
 			_owner.sendPacket(petiu);
-			_owner.sendPacket(playerUI);
+			_owner.sendPacket(new ItemList(_owner, false));
 		}
 		catch (Exception e)
 		{
@@ -484,10 +477,8 @@ public class PetInstance extends Creature
 			final StatusUpdate su = new StatusUpdate(owner.getObjectId());
 			su.addAttribute(StatusUpdate.CUR_LOAD, owner.getCurrentLoad());
 			owner.sendPacket(su);
-			final UserInfo ui = new UserInfo(owner);
-			owner.sendPacket(ui);
-			final CharInfo info = new CharInfo(owner);
-			owner.broadcastPacket(info);
+			owner.sendPacket(new UserInfo(owner));
+			owner.broadcastPacket(new CharInfo(owner));
 			final World world = World.getInstance();
 			world.removeObject(removedItem);
 		}
@@ -521,8 +512,7 @@ public class PetInstance extends Creature
 			dropit.setY(getY());
 			dropit.setZ(getZ() + 100);
 			dropit.setOnTheGround(true);
-			final DropItem dis = new DropItem(dropit, getObjectId());
-			for (PlayerInstance player : broadcastPacket(dis))
+			for (PlayerInstance player : broadcastPacket(new DropItem(dropit, getObjectId())))
 			{
 				player.addKnownObjectWithoutCreate(dropit);
 			}
@@ -541,8 +531,7 @@ public class PetInstance extends Creature
 		if (!isRunning())
 		{
 			setRunning(true);
-			final ChangeMoveType move = new ChangeMoveType(this, ChangeMoveType.RUN);
-			broadcastPacket(move);
+			broadcastPacket(new ChangeMoveType(this, ChangeMoveType.RUN));
 		}
 		super.startAttack(target);
 	}

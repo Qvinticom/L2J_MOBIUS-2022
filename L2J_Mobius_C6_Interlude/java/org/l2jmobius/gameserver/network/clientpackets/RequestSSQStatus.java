@@ -48,7 +48,6 @@ public class RequestSSQStatus extends GameClientPacket
 			return;
 		}
 		
-		final SSQStatus ssqs = new SSQStatus(player, _page);
-		player.sendPacket(ssqs);
+		player.sendPacket(new SSQStatus(player, _page));
 	}
 }

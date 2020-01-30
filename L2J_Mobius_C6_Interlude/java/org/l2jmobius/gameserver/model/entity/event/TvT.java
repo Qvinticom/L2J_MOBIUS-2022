@@ -1528,8 +1528,7 @@ public class TvT implements EventTask
 						player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
 					}
 					
-					final Ride dismount = new Ride(player.getObjectId(), Ride.ACTION_DISMOUNT, 0);
-					player.broadcastPacket(dismount);
+					player.broadcastPacket(new Ride(player.getObjectId(), Ride.ACTION_DISMOUNT, 0));
 					player.setMountObjectID(0);
 				}
 				player.broadcastUserInfo();

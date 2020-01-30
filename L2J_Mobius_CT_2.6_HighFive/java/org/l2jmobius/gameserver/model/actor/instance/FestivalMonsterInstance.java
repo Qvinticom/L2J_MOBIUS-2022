@@ -104,7 +104,6 @@ public class FestivalMonsterInstance extends MonsterInstance
 		final ItemInstance addedOfferings = partyLeader.getInventory().addItem("Sign", SevenSignsFestival.FESTIVAL_OFFERING_ID, _bonusMultiplier, partyLeader, this);
 		
 		final InventoryUpdate iu = new InventoryUpdate();
-		
 		if (addedOfferings.getCount() != _bonusMultiplier)
 		{
 			iu.addModifiedItem(addedOfferings);
@@ -113,7 +112,6 @@ public class FestivalMonsterInstance extends MonsterInstance
 		{
 			iu.addNewItem(addedOfferings);
 		}
-		
 		partyLeader.sendPacket(iu);
 		
 		super.doItemDrop(lastAttacker); // Normal drop

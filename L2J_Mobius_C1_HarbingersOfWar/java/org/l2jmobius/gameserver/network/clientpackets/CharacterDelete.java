@@ -32,9 +32,7 @@ public class CharacterDelete extends ClientBasePacket
 		final int charSlot = readD();
 		final Connection con = client.getConnection();
 		client.deleteCharFromDisk(charSlot);
-		final CharDeleteOk ccf = new CharDeleteOk();
-		con.sendPacket(ccf);
-		final CharSelectInfo cl = new CharSelectInfo(client.getLoginName(), client.getSessionId());
-		con.sendPacket(cl);
+		con.sendPacket(new CharDeleteOk());
+		con.sendPacket(new CharSelectInfo(client.getLoginName(), client.getSessionId()));
 	}
 }

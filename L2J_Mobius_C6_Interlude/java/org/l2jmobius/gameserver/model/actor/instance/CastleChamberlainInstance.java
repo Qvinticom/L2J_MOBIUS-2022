@@ -74,8 +74,7 @@ public class CastleChamberlainInstance extends FolkInstance
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
-			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
-			player.sendPacket(my);
+			player.sendPacket(new MyTargetSelected(getObjectId(), 0));
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
@@ -292,8 +291,7 @@ public class CastleChamberlainInstance extends FolkInstance
 					final StoreTradeList list = TradeController.getInstance().getBuyList(buy);
 					if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 					{
-						final BuyList bl = new BuyList(list, player.getAdena(), 0);
-						player.sendPacket(bl);
+						player.sendPacket(new BuyList(list, player.getAdena(), 0));
 					}
 					else
 					{

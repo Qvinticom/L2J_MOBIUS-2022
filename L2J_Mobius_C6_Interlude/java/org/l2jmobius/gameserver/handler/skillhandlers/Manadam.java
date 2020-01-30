@@ -89,7 +89,6 @@ public class Manadam implements ISkillHandler
 				target.sendPacket(sump);
 				
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_MP_HAS_BEEN_DRAINED_BY_S1);
-				
 				if (creature instanceof NpcInstance)
 				{
 					final int mobId = ((NpcInstance) creature).getNpcId();

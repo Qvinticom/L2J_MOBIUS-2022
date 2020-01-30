@@ -350,8 +350,7 @@ public class RecipeController
 					_delay = (int) (Config.ALT_GAME_CREATION_SPEED * _player.getMReuseRate(_skill) * GameTimeController.TICKS_PER_SECOND * GameTimeController.MILLIS_IN_TICK);
 					
 					// FIXME: please fix this packet to show crafting animation (somebody)
-					final MagicSkillUse msk = new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0);
-					_player.broadcastPacket(msk);
+					_player.broadcastPacket(new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0));
 					
 					_player.sendPacket(new SetupGauge(_player.getObjectId(), 0, _delay));
 					ThreadPool.schedule(this, 100 + _delay);
@@ -482,7 +481,7 @@ public class RecipeController
 				
 				if (_target == _player)
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.EQUIPPED_S1_S2); // you equipped ...
+					final SystemMessage sm = new SystemMessage(SystemMessageId.EQUIPPED_S1_S2);
 					sm.addLong(count);
 					sm.addItemName(item.getItemId());
 					_player.sendPacket(sm);
