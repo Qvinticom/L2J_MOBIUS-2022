@@ -595,7 +595,7 @@ public class DoorInstance extends Creature
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			final StringBuilder html1 = new StringBuilder("<html><body><table border=0>");
-			html1.append("<tr><td>S.Y.L. Says:</td></tr>");
+			html1.append("<tr><td><font color=\"LEVEL\">Door Information</font><br></td></tr>");
 			html1.append("<tr><td>Current HP  " + getCurrentHp() + "</td></tr>");
 			html1.append("<tr><td>Max HP       " + getMaxHp() + "</td></tr>");
 			
@@ -603,7 +603,7 @@ public class DoorInstance extends Creature
 			html1.append("<tr><td>Door ID: " + _doorId + "</td></tr>");
 			html1.append("<tr><td><br></td></tr>");
 			
-			html1.append("<tr><td>Class: " + getClass().getName() + "</td></tr>");
+			html1.append("<tr><td>Class: " + getClass().getSimpleName() + "</td></tr>");
 			html1.append("<tr><td><br></td></tr>");
 			html1.append("</table>");
 			

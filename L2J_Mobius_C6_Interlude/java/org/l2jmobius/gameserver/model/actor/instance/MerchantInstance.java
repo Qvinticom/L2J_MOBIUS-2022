@@ -324,7 +324,7 @@ public class MerchantInstance extends FolkInstance
 			html1.append("<tr><td>Level: " + getLevel() + "</td></tr>");
 			html1.append("<tr><td><br></td></tr>");
 			
-			html1.append("<tr><td>Class: " + getClass().getName() + "</td></tr>");
+			html1.append("<tr><td>Class: " + getClass().getSimpleName() + "</td></tr>");
 			html1.append("<tr><td><br></td></tr>");
 			
 			html1.append("</table><table><tr><td><button value=\"Edit NPC\" action=\"bypass -h admin_edit_npc " + getTemplate().getNpcId() + "\" width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
