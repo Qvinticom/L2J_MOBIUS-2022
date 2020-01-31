@@ -28,7 +28,6 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -45,8 +44,6 @@ public class AdminData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(AdminData.class.getName());
 	
-	public AccessLevel _masterAccessLevel;
-	public AccessLevel _userAccessLevel;
 	private final Map<Integer, AccessLevel> _accessLevels = new HashMap<>();
 	private final Map<String, Integer> _adminCommandAccessRights = new HashMap<>();
 	private final Map<PlayerInstance, Boolean> _gmList = new ConcurrentHashMap<>();
@@ -60,12 +57,8 @@ public class AdminData implements IXmlReader
 	public void load()
 	{
 		_accessLevels.clear();
-		_masterAccessLevel = new AccessLevel(Config.MASTERACCESS_LEVEL, "Master Access", Config.MASTERACCESS_NAME_COLOR, Config.MASTERACCESS_TITLE_COLOR, true, true, true, true, true, true, true, true, true, true, true);
-		_userAccessLevel = new AccessLevel(Config.USERACCESS_LEVEL, "User", Integer.decode("0xFFFFFF"), Integer.decode("0xFFFFFF"), false, false, false, true, false, true, true, true, true, true, false);
 		parseDatapackFile("config/AccessLevels.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _accessLevels.size() + " access levels.");
-		LOGGER.info(getClass().getSimpleName() + ": Master access level is " + Config.MASTERACCESS_LEVEL + ".");
-		LOGGER.info(getClass().getSimpleName() + ": User access level is " + Config.USERACCESS_LEVEL + ".");
 		
 		_adminCommandAccessRights.clear();
 		parseDatapackFile("config/AdminCommands.xml");
@@ -106,17 +99,7 @@ public class AdminData implements IXmlReader
 						accessLevel = set.getInt("level");
 						name = set.getString("name");
 						
-						if (accessLevel == Config.USERACCESS_LEVEL)
-						{
-							LOGGER.info(getClass().getSimpleName() + ": Access level with name " + name + " is using reserved user access level " + Config.USERACCESS_LEVEL + ". Ignoring it...");
-							continue;
-						}
-						else if (accessLevel == Config.MASTERACCESS_LEVEL)
-						{
-							LOGGER.info(getClass().getSimpleName() + ": Access level with name " + name + " is using reserved master access level " + Config.MASTERACCESS_LEVEL + ". Ignoring it...");
-							continue;
-						}
-						else if (accessLevel < 0)
+						if (accessLevel < 0)
 						{
 							LOGGER.info(getClass().getSimpleName() + ": Access level with name " + name + " is using banned access level state(below 0). Ignoring it...");
 							continue;
@@ -196,7 +179,6 @@ public class AdminData implements IXmlReader
 	public AccessLevel getAccessLevel(int accessLevelNum)
 	{
 		AccessLevel accessLevel = null;
-		
 		synchronized (_accessLevels)
 		{
 			accessLevel = _accessLevels.get(accessLevelNum);
@@ -212,7 +194,6 @@ public class AdminData implements IXmlReader
 			{
 				return;
 			}
-			
 			_accessLevels.put(accessLevel, new AccessLevel(accessLevel, "Banned", Integer.decode("0x000000"), Integer.decode("0x000000"), false, false, false, false, false, false, false, false, false, false, false));
 		}
 	}
@@ -239,11 +220,6 @@ public class AdminData implements IXmlReader
 			return false;
 		}
 		
-		if (accessLevel.getLevel() == Config.MASTERACCESS_LEVEL)
-		{
-			return true;
-		}
-		
 		String command = adminCommand;
 		if (adminCommand.indexOf(' ') != -1)
 		{
@@ -261,20 +237,13 @@ public class AdminData implements IXmlReader
 			LOGGER.warning("Admin Access Rights: No rights defined for admin command " + command + ".");
 			return false;
 		}
-		else if (acar >= accessLevel.getLevel())
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+		
+		return accessLevel.getLevel() >= acar;
 	}
 	
 	public List<PlayerInstance> getAllGms(boolean includeHidden)
 	{
 		final List<PlayerInstance> tmpGmList = new ArrayList<>();
-		
 		for (Entry<PlayerInstance, Boolean> n : _gmList.entrySet())
 		{
 			if (includeHidden || !n.getValue())
@@ -288,7 +257,6 @@ public class AdminData implements IXmlReader
 	public List<String> getAllGmNames(boolean includeHidden)
 	{
 		final List<String> tmpGmList = new ArrayList<>();
-		
 		for (Entry<PlayerInstance, Boolean> n : _gmList.entrySet())
 		{
 			if (!n.getValue())
@@ -387,10 +355,6 @@ public class AdminData implements IXmlReader
 		}
 	}
 	
-	/**
-	 * Gets the single instance of AdminTable.
-	 * @return AccessLevels: the one and only instance of this class<br>
-	 */
 	public static AdminData getInstance()
 	{
 		return SingletonHolder.INSTANCE;

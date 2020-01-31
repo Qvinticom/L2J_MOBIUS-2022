@@ -8202,9 +8202,8 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return true if the PlayerInstance is a GM.<BR>
-	 * <BR>
-	 * @return true, if is gM
+	 * Return true if the PlayerInstance is a GM.
+	 * @return true, if is GM
 	 */
 	public boolean isGM()
 	{
@@ -8212,37 +8211,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return true if the PlayerInstance is a Administrator.<BR>
-	 * <BR>
-	 * @return true, if is administrator
-	 */
-	public boolean isAdministrator()
-	{
-		return getAccessLevel().getLevel() == Config.MASTERACCESS_LEVEL;
-	}
-	
-	/**
-	 * Return true if the PlayerInstance is a User.<BR>
-	 * <BR>
-	 * @return true, if is user
-	 */
-	public boolean isUser()
-	{
-		return getAccessLevel().getLevel() == Config.USERACCESS_LEVEL;
-	}
-	
-	/**
-	 * Checks if is normal gm.
-	 * @return true, if is normal gm
-	 */
-	public boolean isNormalGm()
-	{
-		return !isAdministrator() && !isUser();
-	}
-	
-	/**
-	 * Manage the Leave Party task of the PlayerInstance.<BR>
-	 * <BR>
+	 * Manage the Leave Party task of the PlayerInstance.
 	 */
 	public void leaveParty()
 	{
@@ -8254,8 +8223,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the _party object of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the _party object of the PlayerInstance.
 	 * @return the party
 	 */
 	@Override
@@ -8322,49 +8290,37 @@ public class PlayerInstance extends Playable
 	 */
 	public void setAccessLevel(int level)
 	{
-		if (level == Config.MASTERACCESS_LEVEL)
+		if (level > 0)
 		{
 			LOGGER.warning("Access level " + level + " set for character " + getName() + "! Just a warning ;)");
-			_accessLevel = AdminData.getInstance()._masterAccessLevel;
 		}
-		else if (level == Config.USERACCESS_LEVEL)
+		
+		final AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
+		if (accessLevel == null)
 		{
-			_accessLevel = AdminData.getInstance()._userAccessLevel;
-		}
-		else
-		{
-			if (level > 0)
+			if (level < 0)
 			{
-				LOGGER.warning("Access level " + level + " set for character " + getName() + "! Just a warning ;)");
-			}
-			final AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
-			
-			if (accessLevel == null)
-			{
-				if (level < 0)
-				{
-					AdminData.getInstance().addBanAccessLevel(level);
-					_accessLevel = AdminData.getInstance().getAccessLevel(level);
-				}
-				else
-				{
-					LOGGER.warning("Tried to set unregistered access level " + level + " to character " + getName() + ". Setting access level without privileges!");
-					_accessLevel = AdminData.getInstance()._userAccessLevel;
-				}
+				AdminData.getInstance().addBanAccessLevel(level);
+				_accessLevel = AdminData.getInstance().getAccessLevel(level);
 			}
 			else
 			{
-				_accessLevel = accessLevel;
+				LOGGER.warning("Tried to set unregistered access level " + level + " to character " + getName() + ". Setting access level without privileges!");
+				_accessLevel = AdminData.getInstance().getAccessLevel(0);
 			}
 		}
-		
-		if (_accessLevel != AdminData.getInstance()._userAccessLevel)
+		else
 		{
-			if (getAccessLevel().useNameColor())
+			_accessLevel = accessLevel;
+		}
+		
+		if (_accessLevel.isGm())
+		{
+			if (_accessLevel.useNameColor())
 			{
 				getAppearance().setNameColor(_accessLevel.getNameColor());
 			}
-			if (getAccessLevel().useTitleColor())
+			if (_accessLevel.useTitleColor())
 			{
 				getAppearance().setTitleColor(_accessLevel.getTitleColor());
 			}
@@ -8390,11 +8346,11 @@ public class PlayerInstance extends Playable
 	{
 		if (Config.EVERYBODY_HAS_ADMIN_RIGHTS)
 		{
-			return AdminData.getInstance()._masterAccessLevel;
+			return AdminData.getInstance().getAccessLevel(100);
 		}
 		else if (_accessLevel == null)
 		{
-			setAccessLevel(Config.USERACCESS_LEVEL);
+			setAccessLevel(0);
 		}
 		return _accessLevel;
 	}
@@ -8575,8 +8531,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Create a new player in the characters table of the database.<BR>
-	 * <BR>
+	 * Create a new player in the characters table of the database.
 	 * @return true, if successful
 	 */
 	private boolean createDb()
@@ -8763,7 +8718,6 @@ public class PlayerInstance extends Playable
 				player.setDeleteTimer(rset.getLong("deletetime"));
 				
 				player.setTitle(rset.getString("title"));
-				player.setAccessLevel(rset.getInt("accesslevel"));
 				player.setFistsWeaponItem(player.findFistsWeaponItem(activeClassId));
 				player.setUptime(System.currentTimeMillis());
 				
@@ -8831,6 +8785,8 @@ public class PlayerInstance extends Playable
 				{
 					// leave them as default
 				}
+				
+				player.setAccessLevel(rset.getInt("accesslevel"));
 				
 				CursedWeaponsManager.getInstance().checkPlayer(player);
 				
@@ -11930,6 +11886,7 @@ public class PlayerInstance extends Playable
 				getAppearance().setNameColor(Config.L2JMOD_WEDDING_NAME_COLOR_NORMAL);
 			}
 		}
+		
 		/** Updates title and name color of a donator **/
 		if (Config.DONATOR_NAME_COLOR_ENABLED && isDonator())
 		{
@@ -11939,64 +11896,12 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Update gm name title color.
-	 */
-	public void updateGmNameTitleColor()
-	{
-		// if this is a GM but has disabled his gM status, so we clear name / title
-		if (isGM() && !hasGmStatusActive())
-		{
-			getAppearance().setNameColor(0xFFFFFF);
-			getAppearance().setTitleColor(0xFFFF77);
-		}
-		// this is a GM but has GM status enabled, so we must set proper values
-		else if (isGM() && hasGmStatusActive())
-		{
-			// Nick Updates
-			if (getAccessLevel().useNameColor())
-			{
-				// this is a normal GM
-				if (isNormalGm())
-				{
-					getAppearance().setNameColor(getAccessLevel().getNameColor());
-				}
-				else if (isAdministrator())
-				{
-					getAppearance().setNameColor(Config.MASTERACCESS_NAME_COLOR);
-				}
-			}
-			else
-			{
-				getAppearance().setNameColor(0xFFFFFF);
-			}
-			
-			// Title Updates
-			if (getAccessLevel().useTitleColor())
-			{
-				// this is a normal GM
-				if (isNormalGm())
-				{
-					getAppearance().setTitleColor(getAccessLevel().getTitleColor());
-				}
-				else if (isAdministrator())
-				{
-					getAppearance().setTitleColor(Config.MASTERACCESS_TITLE_COLOR);
-				}
-			}
-			else
-			{
-				getAppearance().setTitleColor(0xFFFF77);
-			}
-		}
-	}
-	
-	/**
 	 * Sets the olympiad side.
-	 * @param i the new olympiad side
+	 * @param value the new olympiad side
 	 */
-	public void setOlympiadSide(int i)
+	public void setOlympiadSide(int value)
 	{
-		_olympiadSide = i;
+		_olympiadSide = value;
 	}
 	
 	/**

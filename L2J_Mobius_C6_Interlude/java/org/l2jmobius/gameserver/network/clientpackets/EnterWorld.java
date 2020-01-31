@@ -615,16 +615,6 @@ public class EnterWorld extends GameClientPacket
 			{
 				Announcements.getInstance().announceToAll("GM " + player.getName() + " has logged on.");
 			}
-			
-			if (Config.MASTERACCESS_NAME_COLOR_ENABLED)
-			{
-				player.getAppearance().setNameColor(Config.MASTERACCESS_NAME_COLOR);
-			}
-			
-			if (Config.MASTERACCESS_TITLE_COLOR_ENABLED)
-			{
-				player.getAppearance().setTitleColor(Config.MASTERACCESS_TITLE_COLOR);
-			}
 		}
 	}
 	

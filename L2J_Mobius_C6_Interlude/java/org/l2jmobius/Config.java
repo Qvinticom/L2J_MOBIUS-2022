@@ -112,12 +112,6 @@ public class Config
 	public static ServerMode SERVER_MODE = ServerMode.NONE;
 	
 	public static boolean EVERYBODY_HAS_ADMIN_RIGHTS;
-	public static int MASTERACCESS_LEVEL;
-	public static int USERACCESS_LEVEL;
-	public static boolean MASTERACCESS_NAME_COLOR_ENABLED;
-	public static boolean MASTERACCESS_TITLE_COLOR_ENABLED;
-	public static int MASTERACCESS_NAME_COLOR;
-	public static int MASTERACCESS_TITLE_COLOR;
 	public static boolean SHOW_GM_LOGIN;
 	public static boolean GM_STARTUP_INVISIBLE;
 	public static boolean GM_SPECIAL_EFFECT;
@@ -1172,12 +1166,6 @@ public class Config
 			is.close();
 			
 			EVERYBODY_HAS_ADMIN_RIGHTS = Boolean.parseBoolean(accessSettings.getProperty("EverybodyHasAdminRights", "false"));
-			MASTERACCESS_LEVEL = Integer.parseInt(accessSettings.getProperty("MasterAccessLevel", "1"));
-			MASTERACCESS_NAME_COLOR_ENABLED = Boolean.parseBoolean(accessSettings.getProperty("MasterNameColorEnabled", "false"));
-			MASTERACCESS_TITLE_COLOR_ENABLED = Boolean.parseBoolean(accessSettings.getProperty("MasterTitleColorEnabled", "false"));
-			MASTERACCESS_NAME_COLOR = Integer.decode("0x" + accessSettings.getProperty("MasterNameColor", "00FF00"));
-			MASTERACCESS_TITLE_COLOR = Integer.decode("0x" + accessSettings.getProperty("MasterTitleColor", "00FF00"));
-			USERACCESS_LEVEL = Integer.parseInt(accessSettings.getProperty("UserAccessLevel", "0"));
 			GM_STARTUP_AUTO_LIST = Boolean.parseBoolean(accessSettings.getProperty("GMStartupAutoList", "true"));
 			GM_ADMIN_MENU_STYLE = accessSettings.getProperty("GMAdminMenuStyle", "modern");
 			GM_HERO_AURA = Boolean.parseBoolean(accessSettings.getProperty("GMHeroAura", "false"));

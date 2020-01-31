@@ -1587,7 +1587,6 @@ public abstract class Inventory extends ItemContainer
 				final int objectId = inv.getInt(1);
 				
 				item = ItemInstance.restoreFromDb(objectId);
-				
 				if (item == null)
 				{
 					continue;

@@ -16,44 +16,36 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.event.CTF;
 import org.l2jmobius.gameserver.model.entity.event.DM;
 import org.l2jmobius.gameserver.model.entity.event.TvT;
 import org.l2jmobius.gameserver.model.entity.siege.Castle;
 import org.l2jmobius.gameserver.model.entity.siege.Fort;
 
-/**
- * sample 0b 952a1048 objectId 00000000 00000000 00000000 00000000 00000000 00000000 format dddddd rev 377 format ddddddd rev 417
- * @version $Revision: 1.3.3 $ $Date: 2009/04/29 00:46:18 $
- */
 public class Die extends GameServerPacket
 {
 	private final int _objectId;
 	private final boolean _fake;
 	private boolean _sweepable;
 	private boolean _canTeleport;
-	private AccessLevel _access = AdminData.getInstance()._userAccessLevel;
-	private org.l2jmobius.gameserver.model.clan.Clan _clan;
+	private boolean _allowFixedRes;
+	private Clan _clan;
 	Creature _creature;
 	
-	/**
-	 * @param creature
-	 */
 	public Die(Creature creature)
 	{
 		_creature = creature;
 		if (creature instanceof PlayerInstance)
 		{
-			final PlayerInstance player = (PlayerInstance) creature;
-			_access = player.getAccessLevel();
+			final PlayerInstance player = creature.getActingPlayer();
+			_allowFixedRes = player.getAccessLevel().allowFixedRes();
 			_clan = player.getClan();
 			_canTeleport = ((!TvT.isStarted() || !player._inEventTvT) && (!DM.hasStarted() || !player._inEventDM) && (!CTF.isStarted() || !player._inEventCTF) && !player.isInFunEvent() && !player.isPendingRevive());
 		}
@@ -74,8 +66,8 @@ public class Die extends GameServerPacket
 		}
 		
 		writeC(0x06);
-		
 		writeD(_objectId);
+		
 		// NOTE:
 		// 6d 00 00 00 00 - to nearest village
 		// 6d 01 00 00 00 - to hide away
@@ -124,6 +116,6 @@ public class Die extends GameServerPacket
 		}
 		
 		writeD(_sweepable ? 0x01 : 0x00); // sweepable (blue glow)
-		writeD(_access.allowFixedRes() ? 0x01 : 0x00); // 6d 04 00 00 00 - to FIXED
+		writeD(_allowFixedRes ? 0x01 : 0x00); // 6d 04 00 00 00 - to FIXED
 	}
 }
