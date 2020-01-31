@@ -85,6 +85,5 @@ Dueling system.
 
 
 TODO:
-Convert CSV files to XML.
-Drop knownlists -> Use L2World.
+Drop knownlists -> Use World.
 Drop MmoCore -> Use Netty.

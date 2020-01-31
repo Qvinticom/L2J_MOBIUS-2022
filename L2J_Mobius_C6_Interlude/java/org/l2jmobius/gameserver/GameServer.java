@@ -47,7 +47,6 @@ import org.l2jmobius.gameserver.datatables.NobleSkillTable;
 import org.l2jmobius.gameserver.datatables.OfflineTradeTable;
 import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.csv.NpcWalkerRouteTable;
 import org.l2jmobius.gameserver.datatables.sql.CharNameTable;
 import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
@@ -74,6 +73,7 @@ import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.datatables.xml.StaticObjectData;
 import org.l2jmobius.gameserver.datatables.xml.SummonItemData;
+import org.l2jmobius.gameserver.datatables.xml.WalkerRouteData;
 import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
@@ -245,7 +245,7 @@ public class GameServer
 		
 		Util.printSection("Npc");
 		SchemeBufferTable.getInstance();
-		NpcWalkerRouteTable.getInstance().load();
+		WalkerRouteData.getInstance();
 		if (!NpcTable.getInstance().isInitialized())
 		{
 			LOGGER.info("Could not find the extracted files. Please Check Your Data.");

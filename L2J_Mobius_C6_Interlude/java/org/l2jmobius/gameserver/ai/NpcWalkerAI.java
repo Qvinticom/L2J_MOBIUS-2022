@@ -20,7 +20,7 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.datatables.csv.NpcWalkerRouteTable;
+import org.l2jmobius.gameserver.datatables.xml.WalkerRouteData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.NpcWalkerNode;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -52,7 +52,7 @@ public class NpcWalkerAI extends CreatureAI implements Runnable
 	/**
 	 * route of the current npc
 	 */
-	private final List<NpcWalkerNode> _route = NpcWalkerRouteTable.getInstance().getRouteForNpc(getActor().getNpcId());
+	private final List<NpcWalkerNode> _route = WalkerRouteData.getInstance().getRouteForNpc(getActor().getNpcId());
 	
 	/**
 	 * current node
@@ -134,8 +134,7 @@ public class NpcWalkerAI extends CreatureAI implements Runnable
 		if ((getActor().getX() == destinationX) && (getActor().getY() == destinationY) && (getActor().getZ() == destinationZ))
 		{
 			final String chat = _route.get(_currentPos).getChatText();
-			
-			if ((chat != null) && !chat.equals("NULL"))
+			if ((chat != null) && !chat.isEmpty())
 			{
 				try
 				{
