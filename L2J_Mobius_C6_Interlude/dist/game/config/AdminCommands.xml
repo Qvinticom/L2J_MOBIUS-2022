@@ -305,14 +305,12 @@
 	<admin command="admin_removefort" accessLevel="90" />
 
 	<!-- Section: Geodata -->
-	<admin command="admin_geo_z" accessLevel="80" />
-	<admin command="admin_geo_type" accessLevel="80" />
-	<admin command="admin_geo_nswe" accessLevel="80" />
-	<admin command="admin_geo_los" accessLevel="80" />
-	<admin command="admin_geo_position" accessLevel="80" />
-	<admin command="admin_geo_bug" accessLevel="80" />
-	<admin command="admin_geo_load" accessLevel="80" />
-	<admin command="admin_geo_unload" accessLevel="80" />			
+	<admin command="admin_geo_pos" accessLevel="80" />
+	<admin command="admin_geo_spawn_pos" accessLevel="80" />
+	<admin command="admin_geo_can_move" accessLevel="80" />
+	<admin command="admin_geo_can_see" accessLevel="80" />
+	<admin command="admin_geogrid" accessLevel="80" />
+	<admin command="admin_geomap" accessLevel="80" />
 
 	<!-- Section: Gm -->
 	<admin command="admin_gm" accessLevel="100" />
