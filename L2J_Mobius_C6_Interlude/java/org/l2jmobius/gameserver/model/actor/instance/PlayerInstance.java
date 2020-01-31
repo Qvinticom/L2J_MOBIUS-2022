@@ -279,7 +279,6 @@ public class PlayerInstance extends Playable
 	public boolean _isTheVIP = false;
 	public int _originalNameColourVIP;
 	public int _originalKarmaVIP;
-	private long _voteTimestamp = 0;
 	private PlayerStatsHolder savedStatus = null;
 	private final long _instanceLoginTime;
 	protected long TOGGLE_USE = 0;
@@ -772,96 +771,6 @@ public class PlayerInstance extends Playable
 	public PlayerStatsHolder getLastSavedStatus()
 	{
 		return savedStatus;
-	}
-	
-	/**
-	 * Gets the vote timestamp.
-	 * @return the _voteTimestamp
-	 */
-	public long getVoteTimestamp()
-	{
-		return _voteTimestamp;
-	}
-	
-	/**
-	 * Sets the vote timestamp.
-	 * @param timestamp the _voteTimestamp to set
-	 */
-	public void setVoteTimestamp(long timestamp)
-	{
-		_voteTimestamp = timestamp;
-	}
-	
-	/**
-	 * Gets the vote points.
-	 * @return the vote points
-	 */
-	public int getVotePoints()
-	{
-		int votePoints = 0;
-		try (Connection con = DatabaseFactory.getConnection())
-		{
-			PreparedStatement statement;
-			statement = con.prepareStatement("select votePoints from accounts where login=?");
-			statement.setString(1, _accountName);
-			
-			final ResultSet rset = statement.executeQuery();
-			while (rset.next())
-			{
-				votePoints = rset.getInt("votePoints");
-			}
-			rset.close();
-			statement.close();
-		}
-		catch (Exception e)
-		{
-		}
-		return votePoints;
-	}
-	
-	/**
-	 * Sets the vote points.
-	 * @param points the new vote points
-	 */
-	public void setVotePoints(int points)
-	{
-		try (Connection con = DatabaseFactory.getConnection())
-		{
-			PreparedStatement statement;
-			statement = con.prepareStatement("update accounts set votePoints=" + points + " where login='" + _accountName + "'");
-			statement.execute();
-			statement.close();
-		}
-		catch (Exception e)
-		{
-		}
-	}
-	
-	/**
-	 * Gets the vote time.
-	 * @return the vote time
-	 */
-	public int getVoteTime()
-	{
-		int lastVote = 0;
-		try (Connection con = DatabaseFactory.getConnection())
-		{
-			PreparedStatement statement;
-			statement = con.prepareStatement("select lastVote from accounts where login=?");
-			statement.setString(1, _accountName);
-			
-			final ResultSet rset = statement.executeQuery();
-			while (rset.next())
-			{
-				lastVote = rset.getInt("lastVote");
-			}
-			rset.close();
-			statement.close();
-		}
-		catch (Exception e)
-		{
-		}
-		return lastVote;
 	}
 	
 	/**
