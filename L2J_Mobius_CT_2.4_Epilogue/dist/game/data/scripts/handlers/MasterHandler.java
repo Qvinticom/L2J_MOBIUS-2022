@@ -301,7 +301,6 @@ import handlers.voicedcommandhandlers.ChangePassword;
 import handlers.voicedcommandhandlers.ChatAdmin;
 import handlers.voicedcommandhandlers.Lang;
 import handlers.voicedcommandhandlers.Premium;
-import handlers.voicedcommandhandlers.StatsVCmd;
 import handlers.voicedcommandhandlers.Wedding;
 
 /**
@@ -556,8 +555,6 @@ public class MasterHandler
 			SiegeStatus.class,
 		},
 		{
-			// Voiced Command Handlers
-			StatsVCmd.class,
 			// TODO: Add configuration options for this voiced commands:
 			// CastleVCmd.class,
 			// SetVCmd.class,
