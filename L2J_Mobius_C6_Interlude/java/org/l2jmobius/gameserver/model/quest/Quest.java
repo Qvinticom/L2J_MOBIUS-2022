@@ -374,23 +374,20 @@ public class Quest extends ManagedScript
 			return null;
 		}
 		
-		synchronized (_questTimers)
+		final List<QuestTimer> timers = _questTimers.get(name);
+		if ((timers == null) || timers.isEmpty())
 		{
-			final List<QuestTimer> timers = _questTimers.get(name);
-			if ((timers == null) || timers.isEmpty())
-			{
-				return null;
-			}
-			
-			for (QuestTimer timer : timers)
-			{
-				if ((timer != null) && timer.equals(this, name, npc, player))
-				{
-					return timer;
-				}
-			}
 			return null;
 		}
+		
+		for (QuestTimer timer : timers)
+		{
+			if ((timer != null) && timer.equals(this, name, npc, player))
+			{
+				return timer;
+			}
+		}
+		return null;
 	}
 	
 	/**
