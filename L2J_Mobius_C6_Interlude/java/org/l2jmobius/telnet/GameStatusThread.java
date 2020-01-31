@@ -59,7 +59,6 @@ import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
-import org.l2jmobius.gameserver.instancemanager.Manager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.model.Inventory;
@@ -755,12 +754,6 @@ public class GameStatusThread extends Thread
 						{
 							_print.print("Reloading item templates... ");
 							ItemTable.getInstance().reload();
-							_print.println("done");
-						}
-						else if (type.equals("instancemanager"))
-						{
-							_print.print("Reloading instance managers... ");
-							Manager.reloadAll();
 							_print.println("done");
 						}
 						else if (type.equals("zone"))

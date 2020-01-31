@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
 import org.l2jmobius.gameserver.datatables.xml.WalkerRouteData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.DatatablesManager;
-import org.l2jmobius.gameserver.instancemanager.Manager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.multisell.Multisell;
@@ -100,12 +99,6 @@ public class AdminReload implements IAdminCommandHandler
 					sendReloadPage(activeChar);
 					BuilderUtil.sendSysMessage(activeChar, "Item templates reloaded");
 				}
-				else if (type.startsWith("instancemanager"))
-				{
-					Manager.reloadAll();
-					sendReloadPage(activeChar);
-					BuilderUtil.sendSysMessage(activeChar, "All instance manager has been reloaded");
-				}
 				else if (type.startsWith("npcwalkers"))
 				{
 					WalkerRouteData.getInstance().load();
@@ -149,19 +142,6 @@ public class AdminReload implements IAdminCommandHandler
 					BuilderUtil.sendSysMessage(activeChar, "ClanTable reloaded.");
 					BuilderUtil.sendSysMessage(activeChar, "AugmentationData reloaded.");
 					BuilderUtil.sendSysMessage(activeChar, "HelperBuffTable reloaded.");
-				}
-				else if (type.startsWith("scripts_custom"))
-				{
-					// try
-					// {
-					// final File custom_scripts_dir = new File(Config.DATAPACK_ROOT + "/data/scripts/custom");
-					// L2ScriptEngineManager.getInstance().executeAllScriptsInDirectory(custom_scripts_dir, true, 3);
-					// }
-					// catch (Exception ioe)
-					// {
-					// BuilderUtil.sendSysMessage(activeChar, "Failed loading " + Config.DATAPACK_ROOT + "/data/scripts/custom scripts, no script going to be loaded");
-					// ioe.printStackTrace();
-					// }
 				}
 				BuilderUtil.sendSysMessage(activeChar, "WARNING: There are several known issues regarding this feature. Reloading server data during runtime is STRONGLY NOT RECOMMENDED for live servers, just for developing environments.");
 			}
