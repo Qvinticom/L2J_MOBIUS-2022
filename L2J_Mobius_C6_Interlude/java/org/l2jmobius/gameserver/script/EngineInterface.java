@@ -20,7 +20,6 @@ import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.RecipeController;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.sql.CharNameTable;
 import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
@@ -29,6 +28,7 @@ import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.entity.Announcements;
@@ -60,7 +60,7 @@ public interface EngineInterface
 	SpawnTable spawnTable = SpawnTable.getInstance();
 	GameTimeController gameTimeController = GameTimeController.getInstance();
 	Announcements announcements = Announcements.getInstance();
-	MapRegionTable mapRegions = MapRegionTable.getInstance();
+	MapRegionData mapRegions = MapRegionData.getInstance();
 	
 	void addQuestDrop(int npcID, int itemID, int min, int max, int chance, String questID, String[] states);
 	

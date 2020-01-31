@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.model.zone.type;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -101,7 +102,7 @@ public class JailZone extends ZoneType
 		@Override
 		public void run()
 		{
-			_player.teleToLocation(-114356, -249645, -2984); // Jail
+			_player.teleToLocation(MapRegionData.JAIL_LOCATION, false);
 		}
 	}
 }

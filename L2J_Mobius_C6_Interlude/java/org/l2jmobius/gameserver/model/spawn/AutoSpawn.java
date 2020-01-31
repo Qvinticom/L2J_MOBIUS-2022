@@ -31,9 +31,9 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
@@ -542,7 +542,7 @@ public class AutoSpawn
 					}
 				}
 				
-				final String nearestTown = MapRegionTable.getInstance().getClosestTownName(npcInst);
+				final String nearestTown = MapRegionData.getInstance().getClosestTownName(npcInst);
 				
 				// Announce to all players that the spawn has taken place, with the nearest town location.
 				if (spawnInst.isBroadcasting() && (npcInst != null))

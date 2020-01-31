@@ -23,6 +23,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -39,7 +40,7 @@ public class TownZone extends ZoneType
 	private int _redirectTownId;
 	private int _taxById;
 	private boolean _noPeace;
-	private final List<int[]> _spawnLoc;
+	private final List<Location> _spawnLoc;
 	
 	public TownZone(int id)
 	{
@@ -87,29 +88,7 @@ public class TownZone extends ZoneType
 	@Override
 	public void setSpawnLocs(Node node)
 	{
-		final int[] ai = new int[3];
-		
-		Node node1 = node.getAttributes().getNamedItem("X");
-		
-		if (node1 != null)
-		{
-			ai[0] = Integer.parseInt(node1.getNodeValue());
-		}
-		
-		node1 = node.getAttributes().getNamedItem("Y");
-		
-		if (node1 != null)
-		{
-			ai[1] = Integer.parseInt(node1.getNodeValue());
-		}
-		
-		node1 = node.getAttributes().getNamedItem("Z");
-		
-		if (node1 != null)
-		{
-			ai[2] = Integer.parseInt(node1.getNodeValue());
-		}
-		_spawnLoc.add(ai);
+		_spawnLoc.add(new Location(Integer.parseInt(node.getAttributes().getNamedItem("X").getNodeValue()), Integer.parseInt(node.getAttributes().getNamedItem("Y").getNodeValue()), Integer.parseInt(node.getAttributes().getNamedItem("Z").getNodeValue())));
 	}
 	
 	@Override
@@ -180,11 +159,9 @@ public class TownZone extends ZoneType
 	 * Returns this zones spawn location
 	 * @return
 	 */
-	public int[] getSpawnLoc()
+	public Location getSpawnLoc()
 	{
-		int[] ai = new int[3];
-		ai = _spawnLoc.get(Rnd.get(_spawnLoc.size()));
-		return ai;
+		return _spawnLoc.get(Rnd.get(_spawnLoc.size()));
 	}
 	
 	/**

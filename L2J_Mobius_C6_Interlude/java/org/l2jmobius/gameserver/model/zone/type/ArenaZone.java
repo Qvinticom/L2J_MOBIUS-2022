@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.model.zone.type;
 
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -29,13 +30,11 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class ArenaZone extends ZoneType
 {
-	private final int[] _spawnLoc;
+	private final Location _spawnLoc = new Location(0, 0, 0);
 	
 	public ArenaZone(int id)
 	{
 		super(id);
-		
-		_spawnLoc = new int[3];
 	}
 	
 	@Override
@@ -45,17 +44,17 @@ public class ArenaZone extends ZoneType
 		{
 			case "spawnX":
 			{
-				_spawnLoc[0] = Integer.parseInt(value);
+				_spawnLoc.setX(Integer.parseInt(value));
 				break;
 			}
 			case "spawnY":
 			{
-				_spawnLoc[1] = Integer.parseInt(value);
+				_spawnLoc.setY(Integer.parseInt(value));
 				break;
 			}
 			case "spawnZ":
 			{
-				_spawnLoc[2] = Integer.parseInt(value);
+				_spawnLoc.setZ(Integer.parseInt(value));
 				break;
 			}
 			default:
@@ -129,7 +128,7 @@ public class ArenaZone extends ZoneType
 		}
 	}
 	
-	public int[] getSpawnLoc()
+	public Location getSpawnLoc()
 	{
 		return _spawnLoc;
 	}

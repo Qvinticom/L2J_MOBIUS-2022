@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.instancemanager;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.entity.siege.Castle;
 import org.l2jmobius.gameserver.model.zone.type.TownZone;
@@ -44,7 +44,7 @@ public class TownManager
 	
 	public TownZone getClosestTown(WorldObject activeObject)
 	{
-		switch (MapRegionTable.getInstance().getMapRegion(activeObject.getPosition().getX(), activeObject.getPosition().getY()))
+		switch (MapRegionData.getInstance().getMapRegion(activeObject.getPosition().getX(), activeObject.getPosition().getY()))
 		{
 			case 0:
 			{
@@ -129,7 +129,7 @@ public class TownManager
 	
 	public static final int getClosestLocation(WorldObject activeObject)
 	{
-		switch (MapRegionTable.getInstance().getMapRegion(activeObject.getPosition().getX(), activeObject.getPosition().getY()))
+		switch (MapRegionData.getInstance().getMapRegion(activeObject.getPosition().getX(), activeObject.getPosition().getY()))
 		{
 			case 0:
 			{
@@ -242,7 +242,7 @@ public class TownManager
 	
 	public boolean townHasCastleInSiege(int x, int y)
 	{
-		final int curtown = MapRegionTable.getInstance().getMapRegion(x, y);
+		final int curtown = MapRegionData.getInstance().getMapRegion(x, y);
 		final int[] castleidarray =
 		{
 			0,

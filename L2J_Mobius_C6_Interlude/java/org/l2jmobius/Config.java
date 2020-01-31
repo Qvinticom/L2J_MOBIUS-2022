@@ -2400,7 +2400,7 @@ public class Config
 			ALT_GAME_KARMA_PLAYER_CAN_TELEPORT = Boolean.parseBoolean(pvpSettings.getProperty("AltKarmaPlayerCanTeleport", "true"));
 			ALT_GAME_KARMA_PLAYER_CAN_TRADE = Boolean.parseBoolean(pvpSettings.getProperty("AltKarmaPlayerCanTrade", "true"));
 			ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE = Boolean.parseBoolean(pvpSettings.getProperty("AltKarmaPlayerCanUseWareHouse", "true"));
-			ALT_KARMA_TELEPORT_TO_FLORAN = Boolean.parseBoolean(pvpSettings.getProperty("AltKarmaTeleportToFloran", "true"));
+			ALT_KARMA_TELEPORT_TO_FLORAN = Boolean.parseBoolean(pvpSettings.getProperty("AltKarmaTeleportToFloran", "false"));
 			/** Custom Reword **/
 			PVP_REWARD_ENABLED = Boolean.parseBoolean(pvpSettings.getProperty("PvpRewardEnabled", "false"));
 			PVP_REWARD_ID = Integer.parseInt(pvpSettings.getProperty("PvpRewardItemId", "6392"));

@@ -64,6 +64,7 @@ import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.datatables.xml.FishData;
 import org.l2jmobius.gameserver.datatables.xml.HennaData;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
@@ -16952,7 +16953,7 @@ public class PlayerInstance extends Playable
 				setInstanceId(0);
 				setIn7sDungeon(false);
 				
-				teleToLocation(-114356, -249645, -2984, false); // Jail
+				teleToLocation(MapRegionData.JAIL_LOCATION, false);
 				break;
 			}
 			case CHAR: // Ban Character
@@ -17012,7 +17013,7 @@ public class PlayerInstance extends Playable
 			// If player escaped, put him back in jail
 			if ((getPunishLevel() == PunishLevel.JAIL) && !isInsideZone(ZoneId.JAIL))
 			{
-				teleToLocation(-114356, -249645, -2984, true);
+				teleToLocation(MapRegionData.JAIL_LOCATION, false);
 			}
 		}
 	}

@@ -21,6 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
@@ -36,13 +37,11 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 public class CastleZone extends ZoneType
 {
 	private Castle _castle;
-	private final int[] _spawnLoc;
+	private final Location _spawnLoc = new Location(0, 0, 0);
 	
 	public CastleZone(int id)
 	{
 		super(id);
-		
-		_spawnLoc = new int[3];
 	}
 	
 	@Override
@@ -60,17 +59,17 @@ public class CastleZone extends ZoneType
 			}
 			case "spawnX":
 			{
-				_spawnLoc[0] = Integer.parseInt(value);
+				_spawnLoc.setX(Integer.parseInt(value));
 				break;
 			}
 			case "spawnY":
 			{
-				_spawnLoc[1] = Integer.parseInt(value);
+				_spawnLoc.setY(Integer.parseInt(value));
 				break;
 			}
 			case "spawnZ":
 			{
-				_spawnLoc[2] = Integer.parseInt(value);
+				_spawnLoc.setZ(Integer.parseInt(value));
 				break;
 			}
 			default:
@@ -228,7 +227,7 @@ public class CastleZone extends ZoneType
 		return players;
 	}
 	
-	public int[] getSpawn()
+	public Location getSpawn()
 	{
 		return _spawnLoc;
 	}

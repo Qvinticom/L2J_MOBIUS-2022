@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.Location;
@@ -73,22 +73,22 @@ public class AdminZone implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "This is NOT a no-store zone.");
 			}
 			
-			BuilderUtil.sendSysMessage(activeChar, "MapRegion: x:" + MapRegionTable.getInstance().getMapRegionX(activeChar.getX()) + " y:" + MapRegionTable.getInstance().getMapRegionX(activeChar.getY()));
+			BuilderUtil.sendSysMessage(activeChar, "MapRegion: x:" + MapRegionData.getInstance().getMapRegionX(activeChar.getX()) + " y:" + MapRegionData.getInstance().getMapRegionX(activeChar.getY()));
 			
-			BuilderUtil.sendSysMessage(activeChar, "Closest Town: " + MapRegionTable.getInstance().getClosestTownName(activeChar));
+			BuilderUtil.sendSysMessage(activeChar, "Closest Town: " + MapRegionData.getInstance().getClosestTownName(activeChar));
 			
 			Location loc;
 			
-			loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, TeleportWhereType.CASTLE);
+			loc = MapRegionData.getInstance().getTeleToLocation(activeChar, TeleportWhereType.CASTLE);
 			BuilderUtil.sendSysMessage(activeChar, "TeleToLocation (Castle): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 			
-			loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, TeleportWhereType.CLANHALL);
+			loc = MapRegionData.getInstance().getTeleToLocation(activeChar, TeleportWhereType.CLANHALL);
 			BuilderUtil.sendSysMessage(activeChar, "TeleToLocation (ClanHall): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 			
-			loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, TeleportWhereType.SIEGEFLAG);
+			loc = MapRegionData.getInstance().getTeleToLocation(activeChar, TeleportWhereType.SIEGEFLAG);
 			BuilderUtil.sendSysMessage(activeChar, "TeleToLocation (SiegeFlag): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 			
-			loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, TeleportWhereType.TOWN);
+			loc = MapRegionData.getInstance().getTeleToLocation(activeChar, TeleportWhereType.TOWN);
 			BuilderUtil.sendSysMessage(activeChar, "TeleToLocation (Town): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 		}
 		else if (actualCommand.equalsIgnoreCase("admin_zone_reload"))

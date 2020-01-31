@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.usercommandhandlers;
 
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -32,7 +32,7 @@ public class Loc implements IUserCommandHandler
 	@Override
 	public boolean useUserCommand(int id, PlayerInstance player)
 	{
-		final int _nearestTown = MapRegionTable.getInstance().getClosestTownNumber(player);
+		final int _nearestTown = MapRegionData.getInstance().getClosestTownNumber(player);
 		SystemMessageId msg;
 		
 		switch (_nearestTown)

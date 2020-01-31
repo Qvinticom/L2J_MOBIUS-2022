@@ -47,7 +47,6 @@ import org.l2jmobius.gameserver.datatables.NobleSkillTable;
 import org.l2jmobius.gameserver.datatables.OfflineTradeTable;
 import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.csv.NpcWalkerRouteTable;
 import org.l2jmobius.gameserver.datatables.sql.CharNameTable;
 import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
@@ -71,6 +70,7 @@ import org.l2jmobius.gameserver.datatables.xml.FenceData;
 import org.l2jmobius.gameserver.datatables.xml.FishData;
 import org.l2jmobius.gameserver.datatables.xml.HennaData;
 import org.l2jmobius.gameserver.datatables.xml.ManorSeedData;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.datatables.xml.StaticObjectData;
 import org.l2jmobius.gameserver.datatables.xml.SummonItemData;
@@ -203,7 +203,7 @@ public class GameServer
 		
 		Util.printSection("World");
 		World.getInstance();
-		MapRegionTable.getInstance();
+		MapRegionData.getInstance();
 		Announcements.getInstance();
 		AutoAnnouncementHandler.getInstance();
 		GlobalVariablesManager.getInstance();

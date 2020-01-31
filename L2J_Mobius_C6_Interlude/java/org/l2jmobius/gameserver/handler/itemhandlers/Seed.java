@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.handler.itemhandlers;
 
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.xml.ManorSeedData;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.model.Skill;
@@ -348,7 +348,7 @@ public class Seed implements IItemHandler
 		
 		_seedId = item.getItemId();
 		
-		if (areaValid(MapRegionTable.getInstance().getAreaCastle(player)))
+		if (areaValid(MapRegionData.getInstance().getAreaCastle(player)))
 		{
 			// TODO: get right skill level
 			monster.setSeeded(_seedId, player);

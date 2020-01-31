@@ -27,7 +27,6 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.model.Location;
@@ -185,7 +184,7 @@ public class DoorData implements IXmlReader
 		door.setRange(xMin, yMin, zMin, xMax, yMax, zMax);
 		try
 		{
-			door.setMapRegion(MapRegionTable.getInstance().getMapRegion(x, y));
+			door.setMapRegion(MapRegionData.getInstance().getMapRegion(x, y));
 		}
 		catch (Exception e)
 		{
@@ -248,7 +247,7 @@ public class DoorData implements IXmlReader
 		int region;
 		try
 		{
-			region = MapRegionTable.getInstance().getMapRegion(x, y);
+			region = MapRegionData.getInstance().getMapRegion(x, y);
 		}
 		catch (Exception e)
 		{

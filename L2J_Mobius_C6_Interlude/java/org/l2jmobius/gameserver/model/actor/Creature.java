@@ -38,8 +38,8 @@ import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.HeroSkillTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
@@ -807,7 +807,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void teleToLocation(TeleportWhereType teleportWhere)
 	{
-		teleToLocation(MapRegionTable.getInstance().getTeleToLocation(this, teleportWhere), true);
+		teleToLocation(MapRegionData.getInstance().getTeleToLocation(this, teleportWhere), true);
 	}
 	
 	/**

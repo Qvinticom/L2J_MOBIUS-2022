@@ -24,7 +24,7 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import org.l2jmobius.gameserver.handler.VoicedCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
@@ -287,10 +287,10 @@ public class Say2 extends GameClientPacket
 							player.sendMessage("You must have at least " + Config.GLOBAL_PVP_AMOUNT + " pvp kills in order to speak in global chat");
 							return;
 						}
-						final int region = MapRegionTable.getInstance().getMapRegion(player.getX(), player.getY());
+						final int region = MapRegionData.getInstance().getMapRegion(player.getX(), player.getY());
 						for (PlayerInstance plr : World.getInstance().getAllPlayers())
 						{
-							if (region == MapRegionTable.getInstance().getMapRegion(plr.getX(), plr.getY()))
+							if (region == MapRegionData.getInstance().getMapRegion(plr.getX(), plr.getY()))
 							{
 								// Like L2OFF if player is blocked can't read the message
 								if (!plr.getBlockList().isInBlockList(player))
@@ -302,10 +302,10 @@ public class Say2 extends GameClientPacket
 					}
 					else
 					{
-						final int region = MapRegionTable.getInstance().getMapRegion(player.getX(), player.getY());
+						final int region = MapRegionData.getInstance().getMapRegion(player.getX(), player.getY());
 						for (PlayerInstance plr : World.getInstance().getAllPlayers())
 						{
-							if (region == MapRegionTable.getInstance().getMapRegion(plr.getX(), plr.getY()))
+							if (region == MapRegionData.getInstance().getMapRegion(plr.getX(), plr.getY()))
 							{
 								// Like L2OFF if player is blocked can't read the message
 								if (!plr.getBlockList().isInBlockList(player))
@@ -389,10 +389,10 @@ public class Say2 extends GameClientPacket
 							player.sendMessage("You must have at least " + Config.TRADE_PVP_AMOUNT + "  pvp kills in order to speak in trade chat");
 							return;
 						}
-						final int region = MapRegionTable.getInstance().getMapRegion(player.getX(), player.getY());
+						final int region = MapRegionData.getInstance().getMapRegion(player.getX(), player.getY());
 						for (PlayerInstance plr : World.getInstance().getAllPlayers())
 						{
-							if (region == MapRegionTable.getInstance().getMapRegion(plr.getX(), plr.getY()))
+							if (region == MapRegionData.getInstance().getMapRegion(plr.getX(), plr.getY()))
 							{
 								// Like L2OFF if player is blocked can't read the message
 								if (!plr.getBlockList().isInBlockList(player))
@@ -409,10 +409,10 @@ public class Say2 extends GameClientPacket
 							player.sendMessage("Only Nobless Players Can Use This Chat");
 							return;
 						}
-						final int region = MapRegionTable.getInstance().getMapRegion(player.getX(), player.getY());
+						final int region = MapRegionData.getInstance().getMapRegion(player.getX(), player.getY());
 						for (PlayerInstance plr : World.getInstance().getAllPlayers())
 						{
-							if (region == MapRegionTable.getInstance().getMapRegion(plr.getX(), plr.getY()))
+							if (region == MapRegionData.getInstance().getMapRegion(plr.getX(), plr.getY()))
 							{
 								// Like L2OFF if player is blocked can't read the message
 								if (!plr.getBlockList().isInBlockList(player))
@@ -424,10 +424,10 @@ public class Say2 extends GameClientPacket
 					}
 					else
 					{
-						final int region = MapRegionTable.getInstance().getMapRegion(player.getX(), player.getY());
+						final int region = MapRegionData.getInstance().getMapRegion(player.getX(), player.getY());
 						for (PlayerInstance plr : World.getInstance().getAllPlayers())
 						{
-							if (region == MapRegionTable.getInstance().getMapRegion(plr.getX(), plr.getY()))
+							if (region == MapRegionData.getInstance().getMapRegion(plr.getX(), plr.getY()))
 							{
 								// Like L2OFF if player is blocked can't read the message
 								if (!plr.getBlockList().isInBlockList(player))

@@ -24,7 +24,7 @@ import java.util.Map;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.instancemanager.AuctionManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -602,7 +602,7 @@ public class AuctioneerInstance extends FolkInstance
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(1);
 				html.setFile("data/html/auction/location.htm");
-				html.replace("%location%", MapRegionTable.getInstance().getClosestTownName(player));
+				html.replace("%location%", MapRegionData.getInstance().getClosestTownName(player));
 				html.replace("%LOCATION%", getPictureName(player));
 				html.replace("%AGIT_LINK_BACK%", "bypass -h npc_" + getObjectId() + "_start");
 				player.sendPacket(html);
@@ -655,7 +655,7 @@ public class AuctioneerInstance extends FolkInstance
 	
 	private String getPictureName(PlayerInstance plyr)
 	{
-		final int nearestTownId = MapRegionTable.getInstance().getMapRegion(plyr.getX(), plyr.getY());
+		final int nearestTownId = MapRegionData.getInstance().getMapRegion(plyr.getX(), plyr.getY());
 		String nearestTown;
 		
 		switch (nearestTownId)

@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.datatables.csv.MapRegionTable;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
@@ -68,7 +68,7 @@ public class RequestRestartPoint extends GameClientPacket
 		{
 			if ((_player._inEventTvT && TvT.isStarted()) || (_player._inEventDM && DM.hasStarted()) || (_player._inEventCTF && CTF.isStarted()))
 			{
-				_player.sendMessage("You can't restart in Event!");
+				_player.sendMessage("You cannot restart while participating in an event!");
 				return;
 			}
 			try
@@ -104,14 +104,14 @@ public class RequestRestartPoint extends GameClientPacket
 								Util.handleIllegalPlayerAction(_player, "Player " + _player.getName() + " used respawn cheat.", IllegalPlayerAction.PUNISH_KICK);
 								return;
 							}
-							loc = MapRegionTable.getInstance().getTeleToLocation(_player, TeleportWhereType.CLANHALL);
+							loc = MapRegionData.getInstance().getTeleToLocation(_player, TeleportWhereType.CLANHALL);
 							if ((ClanHallManager.getInstance().getClanHallByOwner(_player.getClan()) != null) && (ClanHallManager.getInstance().getClanHallByOwner(_player.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP) != null))
 							{
 								_player.restoreExp(ClanHallManager.getInstance().getClanHallByOwner(_player.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP).getLvl());
 							}
 							break;
 						}
-						loc = MapRegionTable.getInstance().getTeleToLocation(_player, TeleportWhereType.TOWN);
+						loc = MapRegionData.getInstance().getTeleToLocation(_player, TeleportWhereType.TOWN);
 						break;
 					}
 					case 2: // to castle
@@ -143,7 +143,7 @@ public class RequestRestartPoint extends GameClientPacket
 						{
 							teleportWhere = TeleportWhereType.FORTRESS;
 						}
-						loc = MapRegionTable.getInstance().getTeleToLocation(_player, teleportWhere);
+						loc = MapRegionData.getInstance().getTeleToLocation(_player, teleportWhere);
 						break;
 					}
 					case 3: // to siege HQ
@@ -166,7 +166,7 @@ public class RequestRestartPoint extends GameClientPacket
 							Util.handleIllegalPlayerAction(_player, "Player " + _player.getName() + " used respawn cheat.", IllegalPlayerAction.PUNISH_KICK);
 							return;
 						}
-						loc = MapRegionTable.getInstance().getTeleToLocation(_player, TeleportWhereType.SIEGEFLAG);
+						loc = MapRegionData.getInstance().getTeleToLocation(_player, TeleportWhereType.SIEGEFLAG);
 						break;
 					}
 					case 4: // Fixed or Player is a festival participant
@@ -187,17 +187,17 @@ public class RequestRestartPoint extends GameClientPacket
 						{
 							return;
 						}
-						loc = new Location(-114356, -249645, -2984);
+						loc = MapRegionData.JAIL_LOCATION;
 						break;
 					}
 					default:
 					{
 						if ((_player.getKarma() > 0) && Config.ALT_KARMA_TELEPORT_TO_FLORAN)
 						{
-							loc = new Location(17836, 170178, -3507); // Floran Village
+							loc = MapRegionData.FLORAN_VILLAGE_LOCATION; // Floran Village
 							break;
 						}
-						loc = MapRegionTable.getInstance().getTeleToLocation(_player, TeleportWhereType.TOWN);
+						loc = MapRegionData.getInstance().getTeleToLocation(_player, TeleportWhereType.TOWN);
 						break;
 					}
 				}
