@@ -2260,7 +2260,7 @@ public class Config
 			DIFFERENT_Z_CHANGE_OBJECT = Integer.parseInt(CustomServerSettings.getProperty("DifferentZchangeObject", "650"));
 			DIFFERENT_Z_NEW_MOVIE = Integer.parseInt(CustomServerSettings.getProperty("DifferentZnewmovie", "1000"));
 			
-			ALLOW_SIMPLE_STATS_VIEW = Boolean.parseBoolean(CustomServerSettings.getProperty("AllowSimpleStatsView", "true"));
+			ALLOW_SIMPLE_STATS_VIEW = Boolean.parseBoolean(CustomServerSettings.getProperty("AllowSimpleStatsView", "false"));
 			ALLOW_DETAILED_STATS_VIEW = Boolean.parseBoolean(CustomServerSettings.getProperty("AllowDetailedStatsView", "false"));
 			ALLOW_ONLINE_VIEW = Boolean.parseBoolean(CustomServerSettings.getProperty("AllowOnlineView", "false"));
 			

@@ -45,10 +45,9 @@ public class UserCommandHandler
 	private UserCommandHandler()
 	{
 		_datatable = new HashMap<>();
-		registerUserCommandHandler(new Time());
-		registerUserCommandHandler(new OlympiadStat());
-		registerUserCommandHandler(new ChannelLeave());
+		
 		registerUserCommandHandler(new ChannelDelete());
+		registerUserCommandHandler(new ChannelLeave());
 		registerUserCommandHandler(new ChannelListUpdate());
 		registerUserCommandHandler(new ClanPenalty());
 		registerUserCommandHandler(new ClanWarsList());
@@ -56,12 +55,16 @@ public class UserCommandHandler
 		registerUserCommandHandler(new Escape());
 		registerUserCommandHandler(new Loc());
 		registerUserCommandHandler(new Mount());
+		registerUserCommandHandler(new OlympiadStat());
 		registerUserCommandHandler(new PartyInfo());
 		registerUserCommandHandler(new SiegeStatus());
+		registerUserCommandHandler(new Time());
+		
 		if (Config.OFFLINE_TRADE_ENABLE && Config.OFFLINE_COMMAND1)
 		{
 			registerUserCommandHandler(new OfflineShop());
 		}
+		
 		LOGGER.info("UserCommandHandler: Loaded " + _datatable.size() + " handlers.");
 	}
 	

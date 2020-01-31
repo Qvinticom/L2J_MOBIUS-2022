@@ -76,37 +76,37 @@ public class FarmPvpCmd implements IVoicedCommandHandler
 		
 		if (activeChar.isInJail())
 		{
-			activeChar.sendMessage("Sorry,you are in Jail!");
+			activeChar.sendMessage("Sorry, you are in Jail!");
 			return false;
 		}
 		else if (activeChar.isInOlympiadMode())
 		{
-			activeChar.sendMessage("Sorry,you are in the Olympiad now.");
+			activeChar.sendMessage("Sorry, you are in the Olympiad now.");
 			return false;
 		}
 		else if (activeChar.isInFunEvent())
 		{
-			activeChar.sendMessage("Sorry,you are in an event.");
+			activeChar.sendMessage("Sorry, you are in an event.");
 			return false;
 		}
 		else if (activeChar.isInDuel())
 		{
-			activeChar.sendMessage("Sorry,you are in a duel!");
+			activeChar.sendMessage("Sorry, you are in a duel!");
 			return false;
 		}
 		else if (activeChar.inObserverMode())
 		{
-			activeChar.sendMessage("Sorry,you are in the observation mode.");
+			activeChar.sendMessage("Sorry, you are in the observation mode.");
 			return false;
 		}
 		else if (activeChar.isFestivalParticipant())
 		{
-			activeChar.sendMessage("Sorry,you are in a festival.");
+			activeChar.sendMessage("Sorry, you are in a festival.");
 			return false;
 		}
 		else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (activeChar.getKarma() > 0))
 		{
-			activeChar.sendMessage("Sorry,you are PK");
+			activeChar.sendMessage("Sorry, you are PK");
 			return false;
 		}
 		else if (Olympiad.getInstance().isRegistered(activeChar))

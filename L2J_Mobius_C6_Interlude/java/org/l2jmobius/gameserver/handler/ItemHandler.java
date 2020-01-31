@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.handler;
 
+import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.handler.itemhandlers.BeastSoulShot;
@@ -78,54 +78,53 @@ public class ItemHandler
 		return _datatable.size();
 	}
 	
-	/**
-	 * Constructor of ItemHandler
-	 */
 	private ItemHandler()
 	{
-		_datatable = new TreeMap<>();
-		registerItemHandler(new ScrollOfEscape());
-		registerItemHandler(new ScrollOfResurrection());
-		registerItemHandler(new SoulShots());
-		registerItemHandler(new SpiritShot());
-		registerItemHandler(new BlessedSpiritShot());
+		_datatable = new HashMap<>();
+		
 		registerItemHandler(new BeastSoulShot());
+		registerItemHandler(new BeastSpice());
 		registerItemHandler(new BeastSpiritShot());
+		registerItemHandler(new BlessedSpiritShot());
+		registerItemHandler(new Book());
+		registerItemHandler(new BreakingArrow());
+		registerItemHandler(new CharChangePotions());
 		registerItemHandler(new ChestKey());
+		registerItemHandler(new ChristmasTree());
+		registerItemHandler(new CrystalCarol());
+		registerItemHandler(new Crystals());
 		registerItemHandler(new CustomPotions());
-		registerItemHandler(new PaganKeys());
-		registerItemHandler(new Maps());
-		registerItemHandler(new MapForestOfTheDead());
-		registerItemHandler(new Potions());
-		registerItemHandler(new Recipes());
-		registerItemHandler(new RollingDice());
-		registerItemHandler(new MysteryPotion());
 		registerItemHandler(new EnchantScrolls());
 		registerItemHandler(new EnergyStone());
-		registerItemHandler(new Book());
-		registerItemHandler(new Remedy());
-		registerItemHandler(new Scrolls());
-		registerItemHandler(new CrystalCarol());
-		registerItemHandler(new SoulCrystals());
-		registerItemHandler(new SevenSignsRecord());
-		registerItemHandler(new CharChangePotions());
-		registerItemHandler(new Firework());
-		registerItemHandler(new Seed());
-		registerItemHandler(new Harvester());
-		registerItemHandler(new MercTicket());
-		registerItemHandler(new Nectar());
-		registerItemHandler(new FishShots());
 		registerItemHandler(new ExtractableItems());
-		registerItemHandler(new SpecialXMas());
-		registerItemHandler(new SummonItems());
-		registerItemHandler(new BeastSpice());
-		registerItemHandler(new JackpotSeed());
-		registerItemHandler(new NobleCustomItem());
+		registerItemHandler(new Firework());
+		registerItemHandler(new FishShots());
+		registerItemHandler(new Harvester());
 		registerItemHandler(new HeroCustomItem());
+		registerItemHandler(new JackpotSeed());
+		registerItemHandler(new MapForestOfTheDead());
+		registerItemHandler(new Maps());
+		registerItemHandler(new MercTicket());
 		registerItemHandler(new MOSKey());
-		registerItemHandler(new BreakingArrow());
-		registerItemHandler(new ChristmasTree());
-		registerItemHandler(new Crystals());
+		registerItemHandler(new MysteryPotion());
+		registerItemHandler(new Nectar());
+		registerItemHandler(new NobleCustomItem());
+		registerItemHandler(new PaganKeys());
+		registerItemHandler(new Potions());
+		registerItemHandler(new Recipes());
+		registerItemHandler(new Remedy());
+		registerItemHandler(new RollingDice());
+		registerItemHandler(new ScrollOfEscape());
+		registerItemHandler(new ScrollOfResurrection());
+		registerItemHandler(new Scrolls());
+		registerItemHandler(new Seed());
+		registerItemHandler(new SevenSignsRecord());
+		registerItemHandler(new SoulCrystals());
+		registerItemHandler(new SoulShots());
+		registerItemHandler(new SpecialXMas());
+		registerItemHandler(new SpiritShot());
+		registerItemHandler(new SummonItems());
+		
 		LOGGER.info("ItemHandler: Loaded " + _datatable.size() + " handlers.");
 	}
 	

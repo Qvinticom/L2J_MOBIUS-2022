@@ -59,7 +59,7 @@ public class Wedding implements IVoicedCommandHandler
 		
 		if (activeChar.isInFunEvent() || activeChar.isInOlympiadMode())
 		{
-			activeChar.sendMessage("Sorry,you are in event now.");
+			activeChar.sendMessage("Sorry, you are in an event now.");
 			return false;
 		}
 		

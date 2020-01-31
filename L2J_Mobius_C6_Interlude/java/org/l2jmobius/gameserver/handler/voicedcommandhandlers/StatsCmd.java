@@ -39,7 +39,6 @@ public class StatsCmd implements IVoicedCommandHandler
 	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String target)
 	{
 		final CommandEnum comm = CommandEnum.valueOf(command);
-		
 		if (comm == null)
 		{
 			return false;

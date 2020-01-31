@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.handler;
 
+import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.handler.skillhandlers.BalanceLife;
@@ -64,41 +64,43 @@ public class SkillHandler
 	
 	private SkillHandler()
 	{
-		_datatable = new TreeMap<>();
-		registerSkillHandler(new Blow());
-		registerSkillHandler(new Pdam());
-		registerSkillHandler(new Mdam());
-		registerSkillHandler(new CpDam());
-		registerSkillHandler(new Manadam());
-		registerSkillHandler(new Heal());
-		registerSkillHandler(new CombatPointHeal());
-		registerSkillHandler(new ManaHeal());
+		_datatable = new HashMap<>();
+		
 		registerSkillHandler(new BalanceLife());
+		registerSkillHandler(new BeastFeed());
+		registerSkillHandler(new Blow());
 		registerSkillHandler(new Charge());
 		registerSkillHandler(new ClanGate());
+		registerSkillHandler(new CombatPointHeal());
 		registerSkillHandler(new Continuous());
+		registerSkillHandler(new CpDam());
+		registerSkillHandler(new Craft());
+		registerSkillHandler(new DeluxeKey());
+		registerSkillHandler(new Disablers());
+		registerSkillHandler(new DrainSoul());
+		registerSkillHandler(new Fishing());
+		registerSkillHandler(new FishingSkill());
+		registerSkillHandler(new GetPlayer());
+		registerSkillHandler(new Harvest());
+		registerSkillHandler(new Heal());
+		registerSkillHandler(new Manadam());
+		registerSkillHandler(new ManaHeal());
+		registerSkillHandler(new Mdam());
+		registerSkillHandler(new Pdam());
+		registerSkillHandler(new Recall());
 		registerSkillHandler(new Resurrect());
+		registerSkillHandler(new SiegeFlag());
+		registerSkillHandler(new Sow());
 		registerSkillHandler(new Spoil());
-		registerSkillHandler(new Sweep());
 		registerSkillHandler(new StrSiegeAssault());
 		registerSkillHandler(new SummonFriend());
 		registerSkillHandler(new SummonTreasureKey());
-		registerSkillHandler(new Disablers());
-		registerSkillHandler(new Recall());
-		registerSkillHandler(new SiegeFlag());
+		registerSkillHandler(new Sweep());
 		registerSkillHandler(new TakeCastle());
 		registerSkillHandler(new Unlock());
-		registerSkillHandler(new DrainSoul());
-		registerSkillHandler(new Craft());
-		registerSkillHandler(new Fishing());
-		registerSkillHandler(new FishingSkill());
-		registerSkillHandler(new BeastFeed());
-		registerSkillHandler(new DeluxeKey());
-		registerSkillHandler(new Sow());
-		registerSkillHandler(new Harvest());
-		registerSkillHandler(new GetPlayer());
 		registerSkillHandler(new ZakenPlayer());
 		registerSkillHandler(new ZakenSelf());
+		
 		LOGGER.info("SkillHandler: Loaded " + _datatable.size() + " handlers.");
 	}
 	

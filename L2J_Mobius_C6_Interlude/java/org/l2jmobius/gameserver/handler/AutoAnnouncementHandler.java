@@ -62,7 +62,6 @@ public class AutoAnnouncementHandler
 			while (rs.next())
 			{
 				numLoaded++;
-				
 				registerGlobalAnnouncement(rs.getInt("id"), rs.getString("announcement"), rs.getLong("delay"));
 			}
 			

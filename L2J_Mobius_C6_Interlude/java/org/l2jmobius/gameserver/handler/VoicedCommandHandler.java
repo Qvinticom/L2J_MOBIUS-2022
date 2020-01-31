@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.handler.voicedcommandhandlers.OfflineShop;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.Online;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.StatsCmd;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.TvTCmd;
-import org.l2jmobius.gameserver.handler.voicedcommandhandlers.Voting;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.Wedding;
 
 public class VoicedCommandHandler
@@ -41,8 +40,6 @@ public class VoicedCommandHandler
 	private VoicedCommandHandler()
 	{
 		_datatable = new HashMap<>();
-		
-		registerVoicedCommandHandler(new Voting());
 		
 		if (Config.BANKING_SYSTEM_ENABLED)
 		{
@@ -69,7 +66,10 @@ public class VoicedCommandHandler
 			registerVoicedCommandHandler(new Wedding());
 		}
 		
-		registerVoicedCommandHandler(new StatsCmd());
+		if (Config.ALLOW_SIMPLE_STATS_VIEW || Config.ALLOW_DETAILED_STATS_VIEW)
+		{
+			registerVoicedCommandHandler(new StatsCmd());
+		}
 		
 		if (Config.ALLOW_FARM1_COMMAND || Config.ALLOW_FARM2_COMMAND || Config.ALLOW_PVP1_COMMAND || Config.ALLOW_PVP2_COMMAND)
 		{

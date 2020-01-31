@@ -72,17 +72,12 @@ public class AutoChatHandler implements SpawnListener
 				
 				rs2.last();
 				final String[] chatTexts = new String[rs2.getRow()];
-				
 				int i = 0;
-				
 				rs2.first();
-				
 				while (rs2.next())
 				{
-					chatTexts[i] = rs2.getString("chatText");
-					i++;
+					chatTexts[i++] = rs2.getString("chatText");
 				}
-				
 				registerGlobalChat(rs.getInt("npcId"), chatTexts, rs.getLong("chatDelay"));
 				
 				statement2.close();
