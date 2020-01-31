@@ -152,8 +152,7 @@ public class DimensionalRiftManager
 	
 	public void loadSpawns()
 	{
-		int countGood = 0;
-		int countBad = 0;
+		int total = 0;
 		try
 		{
 			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -239,11 +238,7 @@ public class DimensionalRiftManager
 													spawnDat.setRespawnDelay(delay);
 													SpawnTable.getInstance().addNewSpawn(spawnDat, false);
 													_rooms.get(type).get(roomId).getSpawns().add(spawnDat);
-													countGood++;
-												}
-												else
-												{
-													countBad++;
+													total++;
 												}
 											}
 										}
@@ -259,7 +254,7 @@ public class DimensionalRiftManager
 		{
 			LOGGER.warning("Error on loading dimensional rift spawns: " + e);
 		}
-		LOGGER.info("DimensionalRiftManager: Loaded " + countGood + " dimensional rift spawns, " + countBad + " errors.");
+		LOGGER.info("DimensionalRiftManager: Loaded " + total + " dimensional rift spawns.");
 	}
 	
 	public void reload()

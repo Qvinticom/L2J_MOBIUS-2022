@@ -16,32 +16,36 @@
  */
 package org.l2jmobius.log.formatter;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.commons.util.Util;
 
-public class ConsoleLogFormatter extends AbstractFormatter
+public class ConsoleLogFormatter extends Formatter
 {
+	private final SimpleDateFormat dateFmt = new SimpleDateFormat("dd/MM HH:mm:ss");
+	
 	@Override
 	public String format(LogRecord record)
 	{
-		final StringBuilder output = new StringBuilder(128);
-		output.append(super.format(record));
-		output.append(Config.EOL);
+		final StringBuilder output = new StringBuilder(500);
+		StringUtil.append(output, "[", dateFmt.format(new Date(record.getMillis())), "] " + record.getMessage(), Config.EOL);
 		
 		if (record.getThrown() != null)
 		{
 			try
 			{
-				output.append(Util.getStackTrace(record.getThrown()));
-				output.append(Config.EOL);
+				StringUtil.append(output, Util.getStackTrace(record.getThrown()), Config.EOL);
 			}
 			catch (Exception ex)
 			{
+				// Ignore.
 			}
 		}
-		
 		return output.toString();
 	}
 }
