@@ -28,7 +28,6 @@ import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
 import org.l2jmobius.gameserver.datatables.xml.WalkerRouteData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.instancemanager.DatatablesManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.multisell.Multisell;
@@ -112,12 +111,6 @@ public class AdminReload implements IAdminCommandHandler
 					sendReloadPage(activeChar);
 					BuilderUtil.sendSysMessage(activeChar, "Quests Reloaded.");
 				}
-				else if (type.startsWith("npcbuffers"))
-				{
-					DatatablesManager.reloadAll();
-					sendReloadPage(activeChar);
-					BuilderUtil.sendSysMessage(activeChar, "All Buffer skills tables have been reloaded");
-				}
 				else if (type.equals("configs"))
 				{
 					Config.load(ServerMode.GAME);
@@ -129,19 +122,6 @@ public class AdminReload implements IAdminCommandHandler
 					TradeController.getInstance();
 					sendReloadPage(activeChar);
 					BuilderUtil.sendSysMessage(activeChar, "TradeList Table reloaded.");
-				}
-				else if (type.equals("dbs"))
-				{
-					DatatablesManager.reloadAll();
-					sendReloadPage(activeChar);
-					BuilderUtil.sendSysMessage(activeChar, "BufferSkillsTable reloaded.");
-					BuilderUtil.sendSysMessage(activeChar, "NpcBufferSkillIdsTable reloaded.");
-					BuilderUtil.sendSysMessage(activeChar, "AccessLevels reloaded.");
-					BuilderUtil.sendSysMessage(activeChar, "AdminCommandAccessRights reloaded.");
-					BuilderUtil.sendSysMessage(activeChar, "GmListTable reloaded.");
-					BuilderUtil.sendSysMessage(activeChar, "ClanTable reloaded.");
-					BuilderUtil.sendSysMessage(activeChar, "AugmentationData reloaded.");
-					BuilderUtil.sendSysMessage(activeChar, "HelperBuffTable reloaded.");
 				}
 				BuilderUtil.sendSysMessage(activeChar, "WARNING: There are several known issues regarding this feature. Reloading server data during runtime is STRONGLY NOT RECOMMENDED for live servers, just for developing environments.");
 			}
