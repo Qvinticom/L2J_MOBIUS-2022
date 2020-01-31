@@ -27,6 +27,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.model.Inventory;
 import org.l2jmobius.gameserver.model.ManufactureItem;
@@ -153,10 +154,7 @@ public class RecipeController
 		// check if already busy (possible in alt mode only)
 		if (Config.ALT_GAME_CREATION && ((maker = _activeMakers.get(player)) != null))
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-			sm.addString("You are busy creating ");
-			sm.addItemName(recipeList.getItemId());
-			player.sendPacket(sm);
+			player.sendMessage("You are busy creating " + ItemTable.getInstance().getTemplate(recipeList.getItemId()).getName());
 			return;
 		}
 		

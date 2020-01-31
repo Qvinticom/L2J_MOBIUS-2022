@@ -22,8 +22,6 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.Formulas;
-import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class SkillElemental extends Skill
 {
@@ -102,9 +100,7 @@ public class SkillElemental extends Skill
 			}
 			if (!charged)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString("Target is not charged by elements.");
-				creature.sendPacket(sm);
+				creature.sendMessage("Target is not charged by elements.");
 				continue;
 			}
 			

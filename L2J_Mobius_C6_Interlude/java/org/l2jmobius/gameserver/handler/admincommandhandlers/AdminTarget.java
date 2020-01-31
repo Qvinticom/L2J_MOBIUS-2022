@@ -20,8 +20,7 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - target name = sets player with respective name as target
@@ -64,16 +63,12 @@ public class AdminTarget implements IAdminCommandHandler
 			}
 			else
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString("Player " + targetName + " not found");
-				activeChar.sendPacket(sm);
+				BuilderUtil.sendSysMessage(activeChar, "Player " + targetName + " not found");
 			}
 		}
 		catch (IndexOutOfBoundsException e)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-			sm.addString("Please specify correct name.");
-			activeChar.sendPacket(sm);
+			BuilderUtil.sendSysMessage(activeChar, "Please specify correct name.");
 		}
 	}
 }

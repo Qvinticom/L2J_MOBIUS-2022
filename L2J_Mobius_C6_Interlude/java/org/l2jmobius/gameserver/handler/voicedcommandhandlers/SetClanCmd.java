@@ -18,8 +18,6 @@ package org.l2jmobius.gameserver.handler.voicedcommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class SetClanCmd implements IVoicedCommandHandler
 {
@@ -40,9 +38,7 @@ public class SetClanCmd implements IVoicedCommandHandler
 			if ((pc != null) && (((activeChar.getClan().getClanId() == pc.getClan().getClanId()) && (activeChar.getClanPrivileges() > n)) || activeChar.isClanLeader()))
 			{
 				pc.setClanPrivileges(n);
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString("Your clan privileges have been set to " + n + " by " + activeChar.getName());
-				activeChar.sendPacket(sm);
+				activeChar.sendMessage("Your clan privileges have been set to " + n + " by " + activeChar.getName());
 			}
 		}
 		return true;

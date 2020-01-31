@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -52,9 +51,7 @@ public class AdminHeal implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString("Incorrect target/radius specified.");
-				activeChar.sendPacket(sm);
+				BuilderUtil.sendSysMessage(activeChar, "Incorrect target/radius specified.");
 			}
 		}
 		return true;

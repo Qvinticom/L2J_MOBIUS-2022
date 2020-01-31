@@ -51,7 +51,6 @@ import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.scripting.ManagedScript;
 import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
 
@@ -812,9 +811,7 @@ public class Quest extends ManagedScript
 			}
 			else
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString(res);
-				player.sendPacket(sm);
+				player.sendMessage(res);
 			}
 		}
 		

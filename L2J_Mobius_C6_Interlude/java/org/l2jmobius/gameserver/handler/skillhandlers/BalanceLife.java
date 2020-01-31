@@ -24,9 +24,7 @@ import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author earendil
@@ -125,9 +123,7 @@ public class BalanceLife implements ISkillHandler
 			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
 			target.sendPacket(su);
 			
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-			sm.addString("HP of the party has been balanced.");
-			target.sendPacket(sm);
+			target.sendMessage("HP of the party has been balanced.");
 		}
 	}
 	

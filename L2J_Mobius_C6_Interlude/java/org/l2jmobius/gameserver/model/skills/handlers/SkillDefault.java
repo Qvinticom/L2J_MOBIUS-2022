@@ -20,9 +20,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class SkillDefault extends Skill
 {
@@ -36,8 +34,6 @@ public class SkillDefault extends Skill
 	public void useSkill(Creature caster, WorldObject[] targets)
 	{
 		caster.sendPacket(ActionFailed.STATIC_PACKET);
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-		sm.addString("Skill not implemented.  Skill ID: " + getId() + " " + getSkillType());
-		caster.sendPacket(sm);
+		caster.sendMessage("Skill not implemented.  Skill ID: " + getId() + " " + getSkillType());
 	}
 }

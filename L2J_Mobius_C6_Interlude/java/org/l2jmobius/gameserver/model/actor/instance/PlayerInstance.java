@@ -11753,6 +11753,7 @@ public class PlayerInstance extends Playable
 	 * Send message.
 	 * @param message the message
 	 */
+	@Override
 	public void sendMessage(String message)
 	{
 		sendPacket(SystemMessage.sendString(message));

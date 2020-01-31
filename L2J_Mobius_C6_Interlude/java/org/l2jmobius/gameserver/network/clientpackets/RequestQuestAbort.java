@@ -21,9 +21,7 @@ import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.QuestList;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestQuestAbort extends GameClientPacket
 {
@@ -61,9 +59,7 @@ public class RequestQuestAbort extends GameClientPacket
 			if (qs != null)
 			{
 				qs.exitQuest(true);
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString("Quest aborted.");
-				player.sendPacket(sm);
+				player.sendMessage("Quest aborted.");
 				player.sendPacket(new QuestList(player));
 			}
 		}

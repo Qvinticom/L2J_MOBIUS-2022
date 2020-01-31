@@ -41,8 +41,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.siege.Fort;
 import org.l2jmobius.gameserver.model.entity.siege.FortSiege;
-import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class FortSiegeManager
 {
@@ -93,30 +91,29 @@ public class FortSiegeManager
 			return false;
 		}
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 		final PlayerInstance player = (PlayerInstance) creature;
 		final Fort fort = FortManager.getInstance().getFort(player);
-		
+		String message = "";
 		if ((fort == null) || (fort.getFortId() <= 0))
 		{
-			sm.addString("You must be on fort ground to summon this");
+			message = "You must be on fort ground to summon this.";
 		}
 		else if (!fort.getSiege().isInProgress())
 		{
-			sm.addString("You can only summon this during a siege.");
+			message = "You can only summon this during a siege.";
 		}
 		else if ((player.getClanId() != 0) && (fort.getSiege().getAttackerClan(player.getClanId()) == null))
 		{
-			sm.addString("You can only summon this as a registered attacker.");
+			message = "You can only summon this as a registered attacker.";
 		}
 		else
 		{
 			return true;
 		}
 		
-		if (!isCheckOnly)
+		if (!isCheckOnly && !message.isEmpty())
 		{
-			player.sendPacket(sm);
+			player.sendMessage(message);
 		}
 		
 		return false;

@@ -31,7 +31,6 @@ import org.l2jmobius.gameserver.model.zone.type.BossZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * The Class TeleporterInstance.
@@ -235,9 +234,7 @@ public class TeleporterInstance extends FolkInstance
 			}
 			else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (player.getKarma() > 0)) // karma
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString("Go away, you're not welcome here.");
-				player.sendPacket(sm);
+				player.sendMessage("Go away, you're not welcome here.");
 				return;
 			}
 			else if (list.isForNoble() && !player.isNoble())

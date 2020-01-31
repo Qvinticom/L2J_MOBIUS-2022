@@ -41,8 +41,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.siege.Castle;
 import org.l2jmobius.gameserver.model.entity.siege.Siege;
-import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class SiegeManager
 {
@@ -95,30 +93,29 @@ public class SiegeManager
 			return false;
 		}
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 		final PlayerInstance player = (PlayerInstance) creature;
 		final Castle castle = CastleManager.getInstance().getCastle(player);
-		
+		String message = "";
 		if ((castle == null) || (castle.getCastleId() <= 0))
 		{
-			sm.addString("You must be on castle ground to summon this");
+			message = "You must be on castle ground to summon this.";
 		}
 		else if (!castle.getSiege().isInProgress())
 		{
-			sm.addString("You can only summon this during a siege.");
+			message = "You can only summon this during a siege.";
 		}
 		else if ((player.getClanId() != 0) && (castle.getSiege().getAttackerClan(player.getClanId()) == null))
 		{
-			sm.addString("You can only summon this as a registered attacker.");
+			message = "You can only summon this as a registered attacker.";
 		}
 		else
 		{
 			return true;
 		}
 		
-		if (!isCheckOnly)
+		if (!isCheckOnly && !message.isEmpty())
 		{
-			player.sendPacket(sm);
+			player.sendMessage(message);
 		}
 		
 		return false;

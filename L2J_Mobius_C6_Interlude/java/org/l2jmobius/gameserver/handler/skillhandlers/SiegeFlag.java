@@ -32,8 +32,6 @@ import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
 import org.l2jmobius.gameserver.model.entity.siege.Castle;
 import org.l2jmobius.gameserver.model.entity.siege.Fort;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author _drunk_
@@ -145,41 +143,40 @@ public class SiegeFlag implements ISkillHandler
 			return false;
 		}
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 		final PlayerInstance player = (PlayerInstance) creature;
-		
+		String message = "";
 		if ((castle == null) || (castle.getCastleId() <= 0))
 		{
-			sm.addString("You must be on castle ground to place a flag");
+			message = "You must be on castle ground to place a flag.";
 		}
 		else if (!castle.getSiege().isInProgress())
 		{
-			sm.addString("You can only place a flag during a siege.");
+			message = "You can only place a flag during a siege.";
 		}
 		else if (castle.getSiege().getAttackerClan(player.getClan()) == null)
 		{
-			sm.addString("You must be an attacker to place a flag");
+			message = "You must be an attacker to place a flag.";
 		}
 		else if ((player.getClan() == null) || !player.isClanLeader())
 		{
-			sm.addString("You must be a clan leader to place a flag");
+			message = "You must be a clan leader to place a flag.";
 		}
 		else if (castle.getSiege().getAttackerClan(player.getClan()).getNumFlags() >= SiegeManager.getInstance().getFlagMaxCount())
 		{
-			sm.addString("You have already placed the maximum number of flags possible");
+			message = "You have already placed the maximum number of flags possible.";
 		}
 		else if (player.isInsideZone(ZoneId.NO_HQ))
 		{
-			sm.addString("You cannot place flag here.");
+			message = "You cannot place flag here.";
 		}
 		else
 		{
 			return true;
 		}
 		
-		if (!isCheckOnly)
+		if (!isCheckOnly && !message.isEmpty())
 		{
-			player.sendPacket(sm);
+			player.sendMessage(message);
 		}
 		return false;
 	}
@@ -191,41 +188,40 @@ public class SiegeFlag implements ISkillHandler
 			return false;
 		}
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 		final PlayerInstance player = (PlayerInstance) creature;
-		
+		String message = "";
 		if ((fort == null) || (fort.getFortId() <= 0))
 		{
-			sm.addString("You must be on fort ground to place a flag");
+			message = "You must be on fort ground to place a flag.";
 		}
 		else if (!fort.getSiege().isInProgress())
 		{
-			sm.addString("You can only place a flag during a siege.");
+			message = "You can only place a flag during a siege.";
 		}
 		else if (fort.getSiege().getAttackerClan(player.getClan()) == null)
 		{
-			sm.addString("You must be an attacker to place a flag");
+			message = "You must be an attacker to place a flag.";
 		}
 		else if ((player.getClan() == null) || !player.isClanLeader())
 		{
-			sm.addString("You must be a clan leader to place a flag");
+			message = "You must be a clan leader to place a flag.";
 		}
 		else if (fort.getSiege().getAttackerClan(player.getClan()).getNumFlags() >= FortSiegeManager.getInstance().getFlagMaxCount())
 		{
-			sm.addString("You have already placed the maximum number of flags possible");
+			message = "You have already placed the maximum number of flags possible.";
 		}
 		else if (player.isInsideZone(ZoneId.NO_HQ))
 		{
-			sm.addString("You cannot place flag here.");
+			message = "You cannot place flag here.";
 		}
 		else
 		{
 			return true;
 		}
 		
-		if (!isCheckOnly)
+		if (!isCheckOnly && !message.isEmpty())
 		{
-			player.sendPacket(sm);
+			player.sendMessage(message);
 		}
 		
 		return false;

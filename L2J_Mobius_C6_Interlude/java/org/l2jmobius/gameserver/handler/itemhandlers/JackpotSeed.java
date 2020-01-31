@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
-import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class JackpotSeed implements IItemHandler
 {
@@ -74,15 +72,11 @@ public class JackpotSeed implements IItemHandler
 			World.getInstance().storeObject(gourd);
 			gourd.setOwner(player.getName());
 			player.destroyItem("Consume", item.getObjectId(), 1, null, false);
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-			sm.addString("Created " + template1.getName() + " at x: " + spawn.getX() + " y: " + spawn.getY() + " z: " + spawn.getZ());
-			player.sendPacket(sm);
+			player.sendMessage("Created " + template1.getName() + " at x: " + spawn.getX() + " y: " + spawn.getY() + " z: " + spawn.getZ());
 		}
 		catch (Exception e)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-			sm.addString("Target is not ingame.");
-			player.sendPacket(sm);
+			player.sendMessage("Target is not ingame.");
 		}
 	}
 	

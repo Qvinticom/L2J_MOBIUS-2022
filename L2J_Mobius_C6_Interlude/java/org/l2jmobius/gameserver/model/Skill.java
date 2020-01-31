@@ -1387,9 +1387,7 @@ public abstract class Skill
 			final String msg = preCondition.getMessage();
 			if (msg != null)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString(msg);
-				creature.sendPacket(sm);
+				creature.sendMessage(msg);
 			}
 			
 			return false;
@@ -2589,9 +2587,7 @@ public abstract class Skill
 			}
 			case TARGET_ITEM:
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString("Target type of skill is not currently handled");
-				creature.sendPacket(sm);
+				creature.sendMessage("Target type of skill is not currently handled.");
 				return null;
 			}
 			case TARGET_UNDEAD:
@@ -2789,12 +2785,10 @@ public abstract class Skill
 			}
 			default:
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString("Target type of skill is not currently handled");
-				creature.sendPacket(sm);
+				creature.sendMessage("Target type of skill is not currently handled.");
 				return null;
 			}
-		}// end switch
+		}
 	}
 	
 	public WorldObject[] getTargetList(Creature creature)

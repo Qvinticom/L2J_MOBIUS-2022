@@ -19,9 +19,8 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.Ride;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminRideWyvern implements IAdminCommandHandler
 {
@@ -41,10 +40,7 @@ public class AdminRideWyvern implements IAdminCommandHandler
 		{
 			if (activeChar.isMounted() || (activeChar.getPet() != null))
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString("Already Have a Pet or Mounted.");
-				activeChar.sendPacket(sm);
-				
+				BuilderUtil.sendSysMessage(activeChar, "Already Have a Pet or Mounted.");
 				return false;
 			}
 			
@@ -63,10 +59,7 @@ public class AdminRideWyvern implements IAdminCommandHandler
 			}
 			else
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString("Command '" + command + "' not recognized");
-				activeChar.sendPacket(sm);
-				
+				BuilderUtil.sendSysMessage(activeChar, "Command '" + command + "' not recognized");
 				return false;
 			}
 			

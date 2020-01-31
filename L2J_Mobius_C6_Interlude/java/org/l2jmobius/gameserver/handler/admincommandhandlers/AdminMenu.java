@@ -32,7 +32,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -187,19 +186,15 @@ public class AdminMenu implements IAdminCommandHandler
 				st.nextToken();
 				final String player = st.nextToken();
 				final PlayerInstance plyr = World.getInstance().getPlayer(player);
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				
 				if (plyr != null)
 				{
 					plyr.logout();
-					sm.addString("You kicked " + plyr.getName() + " from the game.");
+					BuilderUtil.sendSysMessage(activeChar, "You kicked " + plyr.getName() + " from the game.");
 				}
 				else
 				{
-					sm.addString("Player " + player + " was not found in the game.");
+					BuilderUtil.sendSysMessage(activeChar, "Player " + player + " was not found in the game.");
 				}
-				
-				activeChar.sendPacket(sm);
 			}
 			
 			showMainPage(activeChar);
@@ -346,19 +341,15 @@ public class AdminMenu implements IAdminCommandHandler
 			if (result.next())
 			{
 				final String accName = result.getString(1);
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				
 				if (accName.length() > 0)
 				{
 					LoginServerThread.getInstance().sendAccessLevel(accName, banLevel);
-					sm.addString("Account Access Level for " + player + " set to " + banLevel + ".");
+					BuilderUtil.sendSysMessage(activeChar, "Account Access Level for " + player + " set to " + banLevel + ".");
 				}
 				else
 				{
-					sm.addString("Couldn't find player: " + player + ".");
+					BuilderUtil.sendSysMessage(activeChar, "Couldn't find player: " + player + ".");
 				}
-				
-				activeChar.sendPacket(sm);
 			}
 			else
 			{

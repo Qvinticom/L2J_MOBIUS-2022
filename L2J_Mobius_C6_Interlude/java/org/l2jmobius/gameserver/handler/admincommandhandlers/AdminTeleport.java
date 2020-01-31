@@ -34,7 +34,6 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -506,10 +505,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	{
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		activeChar.teleToLocation(x, y, z, false);
-		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-		sm.addString("You have been teleported to " + x + " " + y + " " + z);
-		activeChar.sendPacket(sm);
+		BuilderUtil.sendSysMessage(activeChar, "You have been teleported to " + x + " " + y + " " + z);
 	}
 	
 	private void showTeleportWindow(PlayerInstance activeChar)
@@ -631,9 +627,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				SpawnTable.getInstance().addNewSpawn(spawn, !custom_boss_spawn);
 				spawn.init();
 				
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString("Created " + template1.getName() + " on " + target.getObjectId() + ".");
-				activeChar.sendPacket(sm);
+				BuilderUtil.sendSysMessage(activeChar, "Created " + template1.getName() + " on " + target.getObjectId() + ".");
 			}
 			catch (Exception e)
 			{

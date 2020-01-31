@@ -28,10 +28,8 @@ import org.l2jmobius.gameserver.model.entity.event.CTF;
 import org.l2jmobius.gameserver.model.entity.event.DM;
 import org.l2jmobius.gameserver.model.entity.event.TvT;
 import org.l2jmobius.gameserver.model.entity.event.VIP;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Broadcast;
 
 public class Escape implements IUserCommandHandler
@@ -122,17 +120,14 @@ public class Escape implements IUserCommandHandler
 			return false;
 		}
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 		if (unstuckTimer < 60000)
 		{
-			sm.addString("You use Escape: " + (unstuckTimer / 1000) + " seconds.");
+			player.sendMessage("You use Escape: " + (unstuckTimer / 1000) + " seconds.");
 		}
 		else
 		{
-			sm.addString("You use Escape: " + (unstuckTimer / 60000) + " minutes.");
+			player.sendMessage("You use Escape: " + (unstuckTimer / 60000) + " minutes.");
 		}
-		
-		player.sendPacket(sm);
 		
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		// SoE Animation section

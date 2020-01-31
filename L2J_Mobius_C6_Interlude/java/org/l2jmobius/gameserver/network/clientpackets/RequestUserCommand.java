@@ -21,8 +21,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.handler.UserCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestUserCommand extends GameClientPacket
 {
@@ -46,14 +44,7 @@ public class RequestUserCommand extends GameClientPacket
 		}
 		
 		final IUserCommandHandler handler = UserCommandHandler.getInstance().getUserCommandHandler(_command);
-		
-		if (handler == null)
-		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-			sm.addString("user commandID " + _command + " not implemented yet");
-			player.sendPacket(sm);
-		}
-		else
+		if (handler != null)
 		{
 			handler.useUserCommand(_command, getClient().getPlayer());
 		}

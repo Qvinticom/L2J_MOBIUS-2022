@@ -30,7 +30,6 @@ import org.l2jmobius.gameserver.model.entity.siege.Fort;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.Formulas;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -185,33 +184,32 @@ public class StrSiegeAssault implements ISkillHandler
 			return false;
 		}
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 		final PlayerInstance player = (PlayerInstance) creature;
-		
+		String message = "";
 		if ((castle == null) || (castle.getCastleId() <= 0))
 		{
-			sm.addString("You must be on castle ground to use strider siege assault");
+			message = "You must be on castle ground to use strider siege assault";
 		}
 		else if (!castle.getSiege().isInProgress())
 		{
-			sm.addString("You can only use strider siege assault during a siege.");
+			message = "You can only use strider siege assault during a siege.";
 		}
 		else if (!(player.getTarget() instanceof DoorInstance))
 		{
-			sm.addString("You can only use strider siege assault on doors and walls.");
+			message = "You can only use strider siege assault on doors and walls.";
 		}
 		else if (!creature.isRiding())
 		{
-			sm.addString("You can only use strider siege assault when on strider.");
+			message = "You can only use strider siege assault when on strider.";
 		}
 		else
 		{
 			return true;
 		}
 		
-		if (!isCheckOnly)
+		if (!isCheckOnly && !message.isEmpty())
 		{
-			player.sendPacket(sm);
+			player.sendMessage(message);
 		}
 		
 		return false;
@@ -224,33 +222,32 @@ public class StrSiegeAssault implements ISkillHandler
 			return false;
 		}
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 		final PlayerInstance player = (PlayerInstance) creature;
-		
+		String message = "";
 		if ((fort == null) || (fort.getFortId() <= 0))
 		{
-			sm.addString("You must be on fort ground to use strider siege assault");
+			message = "You must be on fort ground to use strider siege assault.";
 		}
 		else if (!fort.getSiege().isInProgress())
 		{
-			sm.addString("You can only use strider siege assault during a siege.");
+			message = "You can only use strider siege assault during a siege.";
 		}
 		else if (!(player.getTarget() instanceof DoorInstance))
 		{
-			sm.addString("You can only use strider siege assault on doors and walls.");
+			message = "You can only use strider siege assault on doors and walls.";
 		}
 		else if (!creature.isRiding())
 		{
-			sm.addString("You can only use strider siege assault when on strider.");
+			message = "You can only use strider siege assault when on strider.";
 		}
 		else
 		{
 			return true;
 		}
 		
-		if (!isCheckOnly)
+		if (!isCheckOnly && !message.isEmpty())
 		{
-			player.sendPacket(sm);
+			player.sendMessage(message);
 		}
 		
 		return false;

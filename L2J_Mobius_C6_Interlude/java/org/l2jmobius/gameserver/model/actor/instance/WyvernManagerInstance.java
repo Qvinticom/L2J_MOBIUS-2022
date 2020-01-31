@@ -22,12 +22,10 @@ import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.ClanHall;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.Ride;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
 public class WyvernManagerInstance extends CastleChamberlainInstance
@@ -59,15 +57,11 @@ public class WyvernManagerInstance extends CastleChamberlainInstance
 			{
 				if (player.isMounted())
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-					sm.addString("You Already Have a Pet or Are Mounted.");
-					player.sendPacket(sm);
+					player.sendMessage("You already have a pet or are mounted.");
 				}
 				else
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-					sm.addString("Summon your Strider first.");
-					player.sendPacket(sm);
+					player.sendMessage("Summon your strider first.");
 				}
 			}
 			else if ((player.getPet().getNpcId() == 12526) || (player.getPet().getNpcId() == 12527) || (player.getPet().getNpcId() == 12528))
@@ -76,9 +70,7 @@ public class WyvernManagerInstance extends CastleChamberlainInstance
 				{
 					if (player.getPet().getLevel() < 55)
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-						sm.addString("Your strider has not reached the required level.");
-						player.sendPacket(sm);
+						player.sendMessage("Your strider has not reached the required level.");
 					}
 					else
 					{
@@ -93,23 +85,17 @@ public class WyvernManagerInstance extends CastleChamberlainInstance
 						player.broadcastPacket(mount);
 						player.setMountType(mount.getMountType());
 						player.addSkill(SkillTable.getInstance().getInfo(4289, 1));
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-						sm.addString("The Wyvern has been summoned successfully!");
-						player.sendPacket(sm);
+						player.sendMessage("The wyvern has been summoned successfully!");
 					}
 				}
 				else
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-					sm.addString("You need 10 Crystals: B Grade.");
-					player.sendPacket(sm);
+					player.sendMessage("You need 10 Crystals: B Grade.");
 				}
 			}
 			else
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString("Unsummon your pet.");
-				player.sendPacket(sm);
+				player.sendMessage("Unsummon your pet.");
 			}
 		}
 		else

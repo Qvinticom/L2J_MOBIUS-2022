@@ -74,9 +74,7 @@ class EffectRelax extends Effect
 		
 		if (((getEffected().getCurrentHp() + 1) > getEffected().getMaxHp()) && getSkill().isToggle())
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-			sm.addString("Fully rested. Effect of " + getSkill().getName() + " has been removed.");
-			getEffected().sendPacket(sm);
+			getEffected().sendMessage("Fully rested. Effect of " + getSkill().getName() + " has been removed.");
 			retval = false;
 		}
 		

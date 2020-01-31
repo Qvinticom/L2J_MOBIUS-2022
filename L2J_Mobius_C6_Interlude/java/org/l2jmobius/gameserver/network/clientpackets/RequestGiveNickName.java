@@ -76,16 +76,12 @@ public class RequestGiveNickName extends GameClientPacket
 				}
 				else
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-					sm.addString("Target needs to be online to get a title");
-					player.sendPacket(sm);
+					player.sendMessage("Target needs to be online to get a title.");
 				}
 			}
 			else
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString("Target does not belong to your clan");
-				player.sendPacket(sm);
+				player.sendMessage("Target does not belong to your clan.");
 			}
 		}
 	}

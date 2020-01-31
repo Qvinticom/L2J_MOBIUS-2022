@@ -67,9 +67,7 @@ public class Unlock implements ISkillHandler
 				{
 					door.openMe();
 					door.onOpen();
-					final SystemMessage msg = new SystemMessage(SystemMessageId.S1_S2);
-					msg.addString("Unlock the door!");
-					creature.sendPacket(msg);
+					creature.sendMessage("Unlock the door!");
 				}
 				else
 				{

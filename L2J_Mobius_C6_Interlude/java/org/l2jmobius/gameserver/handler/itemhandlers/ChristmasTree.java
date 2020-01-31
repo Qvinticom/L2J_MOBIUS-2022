@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
-import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class ChristmasTree implements IItemHandler
 {
@@ -83,15 +81,11 @@ public class ChristmasTree implements IItemHandler
 			
 			player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 			
-			player.sendPacket(new SystemMessage(SystemMessageId.S1_S2));
-			
 			ThreadPool.schedule(new DeSpawn(result), 3600000);
 		}
 		catch (Exception e)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-			sm.addString("Target is not ingame.");
-			player.sendPacket(sm);
+			player.sendMessage("Target is not ingame.");
 		}
 	}
 	

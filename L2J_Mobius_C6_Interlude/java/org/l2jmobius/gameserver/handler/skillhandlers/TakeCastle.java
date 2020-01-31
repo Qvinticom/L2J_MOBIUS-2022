@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.model.actor.instance.ArtefactInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.siege.Castle;
 import org.l2jmobius.gameserver.model.entity.siege.Fort;
-import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -127,28 +125,27 @@ public class TakeCastle implements ISkillHandler
 			return false;
 		}
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 		final PlayerInstance player = (PlayerInstance) creature;
-		
+		String message = "";
 		if ((castle == null) || (castle.getCastleId() <= 0))
 		{
-			sm.addString("You must be on castle ground to use this skill");
+			message = "You must be on castle ground to use this skill.";
 		}
 		else if ((player.getTarget() == null) || !player.getTarget().isArtefact())
 		{
-			sm.addString("You can only use this skill on an artifact");
+			message = "You can only use this skill on an artifact.";
 		}
 		else if (!castle.getSiege().isInProgress())
 		{
-			sm.addString("You can only use this skill during a siege.");
+			message = "You can only use this skill during a siege.";
 		}
 		else if (!Util.checkIfInRange(200, player, player.getTarget(), true) || (Math.abs(player.getZ() - player.getTarget().getZ()) > 40))
 		{
-			sm.addString("You are not in range of the artifact.");
+			message = "You are not in range of the artifact.";
 		}
 		else if (castle.getSiege().getAttackerClan(player.getClan()) == null)
 		{
-			sm.addString("You must be an attacker to use this skill");
+			message = "You must be an attacker to use this skill.";
 		}
 		else
 		{
@@ -159,9 +156,9 @@ public class TakeCastle implements ISkillHandler
 			return true;
 		}
 		
-		if (!isCheckOnly)
+		if (!isCheckOnly && !message.isEmpty())
 		{
-			player.sendPacket(sm);
+			player.sendMessage(message);
 		}
 		
 		return false;
@@ -179,28 +176,27 @@ public class TakeCastle implements ISkillHandler
 			return false;
 		}
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 		final PlayerInstance player = (PlayerInstance) creature;
-		
+		String message = "";
 		if ((fort == null) || (fort.getFortId() <= 0))
 		{
-			sm.addString("You must be on fort ground to use this skill");
+			message = "You must be on fort ground to use this skill.";
 		}
 		else if ((player.getTarget() == null) && !player.getTarget().isArtefact())
 		{
-			sm.addString("You can only use this skill on an flagpole");
+			message = "You can only use this skill on an flagpole.";
 		}
 		else if (!fort.getSiege().isInProgress())
 		{
-			sm.addString("You can only use this skill during a siege.");
+			message = "You can only use this skill during a siege.";
 		}
 		else if (!Util.checkIfInRange(200, player, player.getTarget(), true))
 		{
-			sm.addString("You are not in range of the flagpole.");
+			message = "You are not in range of the flagpole.";
 		}
 		else if (fort.getSiege().getAttackerClan(player.getClan()) == null)
 		{
-			sm.addString("You must be an attacker to use this skill");
+			message = "You must be an attacker to use this skill.";
 		}
 		else
 		{
@@ -211,9 +207,9 @@ public class TakeCastle implements ISkillHandler
 			return true;
 		}
 		
-		if (!isCheckOnly)
+		if (!isCheckOnly && !message.isEmpty())
 		{
-			player.sendPacket(sm);
+			player.sendMessage(message);
 		}
 		
 		return false;

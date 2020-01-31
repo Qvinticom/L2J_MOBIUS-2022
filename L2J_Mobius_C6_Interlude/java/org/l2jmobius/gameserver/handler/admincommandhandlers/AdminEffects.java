@@ -38,7 +38,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 import org.l2jmobius.gameserver.network.serverpackets.SunRise;
 import org.l2jmobius.gameserver.network.serverpackets.SunSet;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -398,9 +397,7 @@ public class AdminEffects implements IAdminCommandHandler
 						
 						if (teamVal != 0)
 						{
-							final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-							sm.addString("You have joined team " + teamVal);
-							player.sendPacket(sm);
+							BuilderUtil.sendSysMessage(player, "You have joined team " + teamVal);
 						}
 						
 						player.broadcastUserInfo();
@@ -433,9 +430,7 @@ public class AdminEffects implements IAdminCommandHandler
 			
 			if (teamVal != 0)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString("You have joined team " + teamVal);
-				player.sendPacket(sm);
+				BuilderUtil.sendSysMessage(player, "You have joined team " + teamVal);
 			}
 			
 			player.broadcastUserInfo();
@@ -461,7 +456,7 @@ public class AdminEffects implements IAdminCommandHandler
 						{
 							if (performSocial(social, player, activeChar))
 							{
-								activeChar.sendMessage(player.getName() + " was affected by your request.");
+								BuilderUtil.sendSysMessage(activeChar, player.getName() + " was affected by your request.");
 							}
 						}
 						else
@@ -478,7 +473,7 @@ public class AdminEffects implements IAdminCommandHandler
 									}
 								}
 								
-								activeChar.sendMessage(radius + " units radius affected by your request.");
+								BuilderUtil.sendSysMessage(activeChar, radius + " units radius affected by your request.");
 							}
 							catch (NumberFormatException nbe)
 							{
@@ -498,7 +493,7 @@ public class AdminEffects implements IAdminCommandHandler
 					
 					if (performSocial(social, obj, activeChar))
 					{
-						activeChar.sendMessage(obj.getName() + " was affected by your request.");
+						BuilderUtil.sendSysMessage(activeChar, obj.getName() + " was affected by your request.");
 					}
 					else
 					{
@@ -555,7 +550,7 @@ public class AdminEffects implements IAdminCommandHandler
 						{
 							if (performAbnormal(abnormal, player))
 							{
-								activeChar.sendMessage(player.getName() + "'s abnormal status was affected by your request.");
+								BuilderUtil.sendSysMessage(activeChar, player.getName() + "'s abnormal status was affected by your request.");
 							}
 							else
 							{
@@ -576,7 +571,7 @@ public class AdminEffects implements IAdminCommandHandler
 									}
 								}
 								
-								activeChar.sendMessage(radius + " units radius affected by your request.");
+								BuilderUtil.sendSysMessage(activeChar, radius + " units radius affected by your request.");
 							}
 							catch (NumberFormatException nbe)
 							{
@@ -596,7 +591,7 @@ public class AdminEffects implements IAdminCommandHandler
 					
 					if (performAbnormal(abnormal, obj))
 					{
-						activeChar.sendMessage(obj.getName() + "'s abnormal status was affected by your request.");
+						BuilderUtil.sendSysMessage(activeChar, obj.getName() + "'s abnormal status was affected by your request.");
 					}
 					else
 					{
@@ -646,7 +641,7 @@ public class AdminEffects implements IAdminCommandHandler
 					final Creature target = (Creature) obj;
 					
 					target.broadcastPacket(new MagicSkillUse(target, activeChar, skill, level, hittime, 0));
-					activeChar.sendMessage(obj.getName() + " performs MSU " + skill + "/" + level + " by your request.");
+					BuilderUtil.sendSysMessage(activeChar, obj.getName() + " performs MSU " + skill + "/" + level + " by your request.");
 					
 				}
 			}

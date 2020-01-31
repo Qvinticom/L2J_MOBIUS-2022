@@ -614,6 +614,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// default implementation
 	}
 	
+	/**
+	 * Send message.
+	 * @param message the message
+	 */
+	public void sendMessage(String message)
+	{
+		// default implementation
+	}
+	
 	/** The _in town war. */
 	private boolean _inTownWar;
 	
@@ -926,9 +935,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				final String mobtype = ((NpcInstance) target).getTemplate().getType();
 				if (!Config.LIST_ALLOWED_NPC_TYPES.contains(mobtype))
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-					sm.addString("Npc Type " + mobtype + " has Protection - No Attack Allowed!");
-					((PlayerInstance) this).sendPacket(sm);
+					((PlayerInstance) this).sendMessage("Npc Type " + mobtype + " has Protection - No Attack Allowed!");
 					((PlayerInstance) this).sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
@@ -1666,9 +1673,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			final String mobtype = ((NpcInstance) target).getTemplate().getType();
 			if (!Config.LIST_ALLOWED_NPC_TYPES.contains(mobtype))
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-				sm.addString("Npc Type " + mobtype + " has Protection - No Attack Allowed!");
-				((PlayerInstance) creature).sendPacket(sm);
+				((PlayerInstance) creature).sendMessage("Npc Type " + mobtype + " has Protection - No Attack Allowed!");
 				((PlayerInstance) creature).sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}

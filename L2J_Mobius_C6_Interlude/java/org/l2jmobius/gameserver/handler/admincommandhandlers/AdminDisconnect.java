@@ -19,9 +19,8 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - character_disconnect = disconnects target player
@@ -66,15 +65,11 @@ public class AdminDisconnect implements IAdminCommandHandler
 		
 		if (player.getObjectId() == activeChar.getObjectId())
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-			sm.addString("You cannot logout your character.");
-			activeChar.sendPacket(sm);
+			BuilderUtil.sendSysMessage(activeChar, "You cannot logout your character.");
 		}
 		else
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-			sm.addString("Character " + player.getName() + " disconnected from server.");
-			activeChar.sendPacket(sm);
+			BuilderUtil.sendSysMessage(activeChar, "Character " + player.getName() + " disconnected from server.");
 			
 			// Logout Character
 			player.sendPacket(new LeaveWorld());
