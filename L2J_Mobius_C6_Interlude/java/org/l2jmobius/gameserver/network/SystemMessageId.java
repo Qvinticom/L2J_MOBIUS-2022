@@ -2096,9 +2096,22 @@ public enum SystemMessageId
 	PLAYING_FOR_LONG_TIME(764),
 	
 	/**
-	 * ID: 769 Message: A hacking tool has been discovered. Please try again after closing unnecessary programs.
+	 * ID: 769<br>
+	 * Message: A hacking tool has been discovered. Please try again after closing unnecessary programs.
 	 */
 	HACKING_TOOL(769),
+	
+	/**
+	 * ID: 778<br>
+	 * Message: You may not log out from this location.
+	 */
+	NO_LOGOUT_HERE(778),
+	
+	/**
+	 * ID: 779<br>
+	 * Message: You may not restart in this location.
+	 */
+	NO_RESTART_HERE(779),
 	
 	/**
 	 * ID: 780<br>

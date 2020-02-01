@@ -16,38 +16,29 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.w3c.dom.Node;
-
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.zone.SpawnZone;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
 
 /**
  * A Town zone
  * @author durgus
  */
-public class TownZone extends ZoneType
+public class TownZone extends SpawnZone
 {
 	private String _townName;
 	private int _townId;
 	private int _redirectTownId;
 	private int _taxById;
 	private boolean _noPeace;
-	private final List<Location> _spawnLoc;
 	
 	public TownZone(int id)
 	{
 		super(id);
 		
 		_taxById = 0;
-		_spawnLoc = new ArrayList<>();
 		
 		// Default to Giran
 		_redirectTownId = 9;
@@ -86,12 +77,6 @@ public class TownZone extends ZoneType
 	}
 	
 	@Override
-	public void setSpawnLocs(Node node)
-	{
-		_spawnLoc.add(new Location(Integer.parseInt(node.getAttributes().getNamedItem("X").getNodeValue()), Integer.parseInt(node.getAttributes().getNamedItem("Y").getNodeValue()), Integer.parseInt(node.getAttributes().getNamedItem("Z").getNodeValue())));
-	}
-	
-	@Override
 	protected void onEnter(Creature creature)
 	{
 		// PVP possible during siege, now for siege participants only
@@ -106,6 +91,7 @@ public class TownZone extends ZoneType
 			creature.setInsideZone(ZoneId.PEACE, true);
 		}
 		
+		creature.setInsideZone(ZoneId.TOWN, true);
 	}
 	
 	@Override
@@ -115,6 +101,8 @@ public class TownZone extends ZoneType
 		{
 			creature.setInsideZone(ZoneId.PEACE, false);
 		}
+		
+		creature.setInsideZone(ZoneId.TOWN, false);
 	}
 	
 	@Override
@@ -153,15 +141,6 @@ public class TownZone extends ZoneType
 	public int getRedirectTownId()
 	{
 		return _redirectTownId;
-	}
-	
-	/**
-	 * Returns this zones spawn location
-	 * @return
-	 */
-	public Location getSpawnLoc()
-	{
-		return _spawnLoc.get(Rnd.get(_spawnLoc.size()));
 	}
 	
 	/**

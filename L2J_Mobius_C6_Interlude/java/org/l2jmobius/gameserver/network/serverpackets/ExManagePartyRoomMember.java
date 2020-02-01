@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.instancemanager.TownManager;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
 
@@ -46,7 +46,7 @@ public class ExManagePartyRoomMember extends GameServerPacket
 		writeS(_player.getName());
 		writeD(_player.getActiveClass());
 		writeD(_player.getLevel());
-		writeD(TownManager.getClosestLocation(_player));
+		writeD(MapRegionData.getInstance().getClosestLocation(_player.getX(), _player.getY()));
 		if (_room.getOwner().equals(_player))
 		{
 			writeD(1);

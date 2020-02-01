@@ -534,8 +534,7 @@ public class DoorInstance extends Creature
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
 			player.sendPacket(new MyTargetSelected(getObjectId(), 0));
 			
-			final DoorStatusUpdate su = new DoorStatusUpdate(this);
-			player.sendPacket(su);
+			player.sendPacket(new DoorStatusUpdate(this));
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
@@ -580,31 +579,25 @@ public class DoorInstance extends Creature
 			return;
 		}
 		
-		if (player.getAccessLevel().isGm())
+		if (player.isGM())
 		{
 			player.setTarget(this);
 			player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel()));
-			
 			if (isAutoAttackable(player))
 			{
-				final DoorStatusUpdate su = new DoorStatusUpdate(this);
-				player.sendPacket(su);
+				player.sendPacket(new DoorStatusUpdate(this));
 			}
-			
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			final StringBuilder html1 = new StringBuilder("<html><body><table border=0>");
 			html1.append("<tr><td><font color=\"LEVEL\">Door Information</font><br></td></tr>");
 			html1.append("<tr><td>Current HP  " + getCurrentHp() + "</td></tr>");
 			html1.append("<tr><td>Max HP       " + getMaxHp() + "</td></tr>");
-			
 			html1.append("<tr><td>Object ID: " + getObjectId() + "</td></tr>");
 			html1.append("<tr><td>Door ID: " + _doorId + "</td></tr>");
 			html1.append("<tr><td><br></td></tr>");
-			
 			html1.append("<tr><td>Class: " + getClass().getSimpleName() + "</td></tr>");
 			html1.append("<tr><td><br></td></tr>");
 			html1.append("</table>");
-			
 			html1.append("<table><tr>");
 			html1.append("<td><button value=\"Open\" action=\"bypass -h admin_open " + _doorId + "\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 			html1.append("<td><button value=\"Close\" action=\"bypass -h admin_close " + _doorId + "\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
@@ -623,8 +616,7 @@ public class DoorInstance extends Creature
 			
 			if (isAutoAttackable(player))
 			{
-				final DoorStatusUpdate su = new DoorStatusUpdate(this);
-				player.sendPacket(su);
+				player.sendPacket(new DoorStatusUpdate(this));
 			}
 			
 			final NpcHtmlMessage reply = new NpcHtmlMessage(5);
@@ -643,14 +635,12 @@ public class DoorInstance extends Creature
 	public void broadcastStatusUpdate()
 	{
 		final Collection<PlayerInstance> knownPlayers = getKnownList().getKnownPlayers().values();
-		
 		if ((knownPlayers == null) || knownPlayers.isEmpty())
 		{
 			return;
 		}
 		
 		final DoorStatusUpdate su = new DoorStatusUpdate(this);
-		
 		for (PlayerInstance player : knownPlayers)
 		{
 			player.sendPacket(su);

@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.instancemanager.TownManager;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
@@ -82,8 +82,7 @@ public class RequestOustFromPartyRoom extends GameClientPacket
 			PartyMatchWaitingList.getInstance().addPlayer(member);
 			
 			// Send Room list
-			final int loc = TownManager.getClosestLocation(member);
-			member.sendPacket(new PartyMatchList(member, 0, loc, member.getLevel()));
+			member.sendPacket(new PartyMatchList(member, 0, MapRegionData.getInstance().getClosestLocation(member.getX(), member.getY()), member.getLevel()));
 			
 			// Clean player's LFP title
 			member.broadcastUserInfo();

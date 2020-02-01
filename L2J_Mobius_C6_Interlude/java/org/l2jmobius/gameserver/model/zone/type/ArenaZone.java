@@ -17,58 +17,28 @@
 package org.l2jmobius.gameserver.model.zone.type;
 
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
-import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.zone.SpawnZone;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
  * An arena
  * @author durgus
  */
-public class ArenaZone extends ZoneType
+public class ArenaZone extends SpawnZone
 {
-	private final Location _spawnLoc = new Location(0, 0, 0);
-	
 	public ArenaZone(int id)
 	{
 		super(id);
 	}
 	
 	@Override
-	public void setParameter(String name, String value)
-	{
-		switch (name)
-		{
-			case "spawnX":
-			{
-				_spawnLoc.setX(Integer.parseInt(value));
-				break;
-			}
-			case "spawnY":
-			{
-				_spawnLoc.setY(Integer.parseInt(value));
-				break;
-			}
-			case "spawnZ":
-			{
-				_spawnLoc.setZ(Integer.parseInt(value));
-				break;
-			}
-			default:
-			{
-				super.setParameter(name, value);
-				break;
-			}
-		}
-	}
-	
-	@Override
 	protected void onEnter(Creature creature)
 	{
 		creature.setInsideZone(ZoneId.PVP, true);
+		creature.setInsideZone(ZoneId.NO_SUMMON_FRIEND, true);
 		
 		if (creature instanceof PlayerInstance)
 		{
@@ -80,6 +50,7 @@ public class ArenaZone extends ZoneType
 	protected void onExit(Creature creature)
 	{
 		creature.setInsideZone(ZoneId.PVP, false);
+		creature.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false);
 		
 		if (creature instanceof PlayerInstance)
 		{
@@ -125,10 +96,5 @@ public class ArenaZone extends ZoneType
 				}
 			}
 		}
-	}
-	
-	public Location getSpawnLoc()
-	{
-		return _spawnLoc;
 	}
 }

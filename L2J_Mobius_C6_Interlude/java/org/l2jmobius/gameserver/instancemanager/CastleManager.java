@@ -36,11 +36,6 @@ public class CastleManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(CastleManager.class.getName());
 	
-	public static final CastleManager getInstance()
-	{
-		return SingletonHolder.INSTANCE;
-	}
-	
 	private static final List<Castle> _castles = new CopyOnWriteArrayList<>();
 	
 	private static final int[] _castleCirclets =
@@ -62,25 +57,23 @@ public class CastleManager
 		load();
 	}
 	
-	public int findNearestCastlesIndex(WorldObject obj)
+	public int findNearestCastleIndex(WorldObject obj)
 	{
 		int index = getCastleIndex(obj);
 		if (index < 0)
 		{
-			double closestDistance = 99999999;
+			double closestDistance = Double.MAX_VALUE;
 			double distance;
 			Castle castle;
 			for (int i = 0; i < getCastles().size(); i++)
 			{
 				castle = getCastles().get(i);
-				
 				if (castle == null)
 				{
 					continue;
 				}
 				
 				distance = castle.getDistance(obj);
-				
 				if (closestDistance > distance)
 				{
 					closestDistance = distance;
@@ -89,6 +82,28 @@ public class CastleManager
 			}
 		}
 		return index;
+	}
+	
+	public Castle findNearestCastle(int x, int y)
+	{
+		double closestDistance = Double.MAX_VALUE;
+		double distance;
+		Castle result = null;
+		for (Castle castle : _castles)
+		{
+			if (castle == null)
+			{
+				continue;
+			}
+			
+			distance = castle.getZone().getDistanceToZone(x, y);
+			if (closestDistance > distance)
+			{
+				closestDistance = distance;
+				result = castle;
+			}
+		}
+		return result;
 	}
 	
 	private final void load()
@@ -352,6 +367,11 @@ public class CastleManager
 				e.printStackTrace();
 			}
 		}
+	}
+	
+	public static final CastleManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder

@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.datatables.xml;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -26,12 +25,11 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
-import org.l2jmobius.gameserver.instancemanager.ArenaManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.instancemanager.TownManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -55,29 +53,6 @@ public class MapRegionData implements IXmlReader
 	public static final Location FLORAN_VILLAGE_LOCATION = new Location(17817, 170079, -3530);
 	public static final Location JAIL_LOCATION = new Location(-114356, -249645, -2984);
 	private static final Location EXIT_MONSTER_RACE_LOCATION = new Location(12661, 181687, -3560);
-	private static final List<Location> KARMA_LOCATIONS = new ArrayList<>();
-	static
-	{
-		KARMA_LOCATIONS.add(new Location(-79077, 240355, -3440)); // Talking Island Village
-		KARMA_LOCATIONS.add(new Location(43503, 40398, -3450)); // Elven Village
-		KARMA_LOCATIONS.add(new Location(1675, 19581, -3110)); // Dark Elven Village
-		KARMA_LOCATIONS.add(new Location(-44413, -121762, -235)); // Orc Village
-		KARMA_LOCATIONS.add(new Location(12009, -187319, -3309)); // Dwarven Village
-		KARMA_LOCATIONS.add(new Location(-18872, 126216, -3280)); // Town of Gludio
-		KARMA_LOCATIONS.add(new Location(-85915, 150402, -3060)); // Gludin Village
-		KARMA_LOCATIONS.add(new Location(23652, 144823, -3330)); // Town of Dion
-		KARMA_LOCATIONS.add(new Location(79125, 154197, -3490)); // Town of Giran
-		KARMA_LOCATIONS.add(new Location(73840, 58193, -2730)); // Town of Oren
-		KARMA_LOCATIONS.add(new Location(44413, 22610, 235)); // Town of Aden
-		KARMA_LOCATIONS.add(new Location(114137, 72993, -2445)); // Hunters Village
-		KARMA_LOCATIONS.add(new Location(79125, 154197, -3490)); // Giran Harbor
-		KARMA_LOCATIONS.add(new Location(119536, 218558, -3495)); // Heine
-		KARMA_LOCATIONS.add(new Location(42931, -44733, -1326)); // Rune Township
-		KARMA_LOCATIONS.add(new Location(147419, -64980, -3457)); // Town of Goddard
-		KARMA_LOCATIONS.add(new Location(85184, -138560, -2256)); // Town of Shuttgart
-		KARMA_LOCATIONS.add(new Location(17817, 170079, -3530)); // Floran Village
-		KARMA_LOCATIONS.add(new Location(9927, -24138, -3723)); // Primeval Isle Wharf
-	}
 	private static final int[][] REGIONS = new int[19][21];
 	
 	protected MapRegionData()
@@ -148,11 +123,129 @@ public class MapRegionData implements IXmlReader
 		return (posY >> 15) + 10;
 	}
 	
+	public Location getTeleToLocation(Creature creature, TeleportWhereType teleportWhere)
+	{
+		// The character isn't a player, bypass all checks and retrieve a random spawn location on closest town.
+		if (!(creature instanceof PlayerInstance))
+		{
+			return getClosestTown(creature.getX(), creature.getY()).getSpawnLoc();
+		}
+		
+		final PlayerInstance player = creature.getActingPlayer();
+		
+		// If in Monster Derby Track
+		if (player.isInsideZone(ZoneId.MONSTER_TRACK))
+		{
+			return EXIT_MONSTER_RACE_LOCATION;
+		}
+		
+		Castle castle = null;
+		Fort fort = null;
+		ClanHall clanhall = null;
+		
+		if (player.getClan() != null)
+		{
+			// If teleport to clan hall
+			if (teleportWhere == TeleportWhereType.CLANHALL)
+			{
+				clanhall = ClanHallManager.getInstance().getClanHallByOwner(player.getClan());
+				if (clanhall != null)
+				{
+					final ClanHallZone zone = clanhall.getZone();
+					if (zone != null)
+					{
+						return zone.getSpawnLoc();
+					}
+				}
+			}
+			
+			// If teleport to castle
+			if (teleportWhere == TeleportWhereType.CASTLE)
+			{
+				castle = CastleManager.getInstance().getCastleByOwner(player.getClan());
+			}
+			
+			// If teleport to fort
+			if (teleportWhere == TeleportWhereType.FORTRESS)
+			{
+				fort = FortManager.getInstance().getFortByOwner(player.getClan());
+			}
+			
+			// Check if player is on castle or fortress ground
+			if (castle == null)
+			{
+				castle = CastleManager.getInstance().getCastle(player);
+			}
+			
+			if (fort == null)
+			{
+				fort = FortManager.getInstance().getFort(player);
+			}
+			
+			if ((castle != null) && (castle.getCastleId() > 0))
+			{
+				// If Teleporting to castle or if is on caslte with siege and player's clan is defender
+				if ((teleportWhere == TeleportWhereType.CASTLE) || ((teleportWhere == TeleportWhereType.CASTLE) && castle.getSiege().isInProgress() && (castle.getSiege().getDefenderClan(player.getClan()) != null)))
+				{
+					return castle.getZone().getSpawnLoc();
+				}
+				
+				if ((teleportWhere == TeleportWhereType.SIEGEFLAG) && castle.getSiege().isInProgress())
+				{
+					// Check if player's clan is attacker
+					final List<NpcInstance> flags = castle.getSiege().getFlag(player.getClan());
+					if ((flags != null) && !flags.isEmpty())
+					{
+						// Spawn to flag - Need more work to get player to the nearest flag
+						final NpcInstance flag = flags.get(0);
+						return new Location(flag.getX(), flag.getY(), flag.getZ());
+					}
+				}
+			}
+			else if ((fort != null) && (fort.getFortId() > 0))
+			{
+				// Teleporting to castle or fortress is on castle with siege and player's clan is defender
+				if ((teleportWhere == TeleportWhereType.FORTRESS) || ((teleportWhere == TeleportWhereType.FORTRESS) && fort.getSiege().isInProgress() && (fort.getSiege().getDefenderClan(player.getClan()) != null)))
+				{
+					return fort.getZone().getSpawnLoc();
+				}
+				
+				if ((teleportWhere == TeleportWhereType.SIEGEFLAG) && fort.getSiege().isInProgress())
+				{
+					// Check if player's clan is attacker
+					final List<NpcInstance> flags = fort.getSiege().getFlag(player.getClan());
+					if ((flags != null) && !flags.isEmpty())
+					{
+						// Spawn to flag
+						final NpcInstance flag = flags.get(0);
+						return new Location(flag.getX(), flag.getY(), flag.getZ());
+					}
+				}
+			}
+		}
+		
+		// Karma player lands out of city.
+		if (player.getKarma() > 0)
+		{
+			return getClosestTown(player).getChaoticSpawnLoc();
+		}
+		
+		// Check if player is in arena.
+		final ArenaZone arena = ZoneData.getInstance().getZone(player, ArenaZone.class);
+		if (arena != null)
+		{
+			return arena.getSpawnLoc();
+		}
+		
+		// Retrieve a random spawn location of the nearest town.
+		return getClosestTown(player).getSpawnLoc();
+	}
+	
 	public int getAreaCastle(Creature creature)
 	{
 		switch (getClosestTownNumber(creature))
 		{
-			case 0:// Talking Island Village
+			case 0: // Talking Island Village
 			{
 				return 1;
 			}
@@ -323,137 +416,261 @@ public class MapRegionData implements IXmlReader
 		}
 	}
 	
-	public Location getTeleToLocation(Creature creature, TeleportWhereType teleportWhere)
+	/**
+	 * A specific method, used ONLY by players. There's a Race condition.
+	 * @param player : The player used to find race, x and y.
+	 * @return the closest TownZone based on a X/Y location.
+	 */
+	private TownZone getClosestTown(PlayerInstance player)
 	{
-		if (creature instanceof PlayerInstance)
+		switch (getMapRegion(player.getX(), player.getY()))
 		{
-			final PlayerInstance player = creature.getActingPlayer();
-			
-			// If in Monster Derby Track
-			if (player.isInsideZone(ZoneId.MONSTER_TRACK))
+			case 0: // TI
 			{
-				return EXIT_MONSTER_RACE_LOCATION;
+				return getTown(2);
 			}
-			
-			Castle castle = null;
-			Fort fort = null;
-			ClanHall clanhall = null;
-			
-			if (player.getClan() != null)
+			case 1: // Elven
 			{
-				// If teleport to clan hall
-				if (teleportWhere == TeleportWhereType.CLANHALL)
-				{
-					clanhall = ClanHallManager.getInstance().getClanHallByOwner(player.getClan());
-					if (clanhall != null)
-					{
-						final ClanHallZone zone = clanhall.getZone();
-						if (zone != null)
-						{
-							return zone.getSpawn();
-						}
-					}
-				}
-				
-				// If teleport to castle
-				if (teleportWhere == TeleportWhereType.CASTLE)
-				{
-					castle = CastleManager.getInstance().getCastleByOwner(player.getClan());
-				}
-				
-				// If teleport to fort
-				if (teleportWhere == TeleportWhereType.FORTRESS)
-				{
-					fort = FortManager.getInstance().getFortByOwner(player.getClan());
-				}
-				
-				// Check if player is on castle or fortress ground
-				if (castle == null)
-				{
-					castle = CastleManager.getInstance().getCastle(player);
-				}
-				
-				if (fort == null)
-				{
-					fort = FortManager.getInstance().getFort(player);
-				}
-				
-				if ((castle != null) && (castle.getCastleId() > 0))
-				{
-					// If Teleporting to castle or if is on caslte with siege and player's clan is defender
-					if ((teleportWhere == TeleportWhereType.CASTLE) || ((teleportWhere == TeleportWhereType.CASTLE) && castle.getSiege().isInProgress() && (castle.getSiege().getDefenderClan(player.getClan()) != null)))
-					{
-						return castle.getZone().getSpawn();
-					}
-					
-					if ((teleportWhere == TeleportWhereType.SIEGEFLAG) && castle.getSiege().isInProgress())
-					{
-						// Check if player's clan is attacker
-						final List<NpcInstance> flags = castle.getSiege().getFlag(player.getClan());
-						if ((flags != null) && !flags.isEmpty())
-						{
-							// Spawn to flag - Need more work to get player to the nearest flag
-							final NpcInstance flag = flags.get(0);
-							return new Location(flag.getX(), flag.getY(), flag.getZ());
-						}
-					}
-				}
-				else if ((fort != null) && (fort.getFortId() > 0))
-				{
-					// Teleporting to castle or fortress is on castle with siege and player's clan is defender
-					if ((teleportWhere == TeleportWhereType.FORTRESS) || ((teleportWhere == TeleportWhereType.FORTRESS) && fort.getSiege().isInProgress() && (fort.getSiege().getDefenderClan(player.getClan()) != null)))
-					{
-						return fort.getZone().getSpawn();
-					}
-					
-					if ((teleportWhere == TeleportWhereType.SIEGEFLAG) && fort.getSiege().isInProgress())
-					{
-						// Check if player's clan is attacker
-						final List<NpcInstance> flags = fort.getSiege().getFlag(player.getClan());
-						if ((flags != null) && !flags.isEmpty())
-						{
-							// Spawn to flag
-							final NpcInstance flag = flags.get(0);
-							return new Location(flag.getX(), flag.getY(), flag.getZ());
-						}
-					}
-				}
+				return getTown((player.getTemplate().getRace() == Race.DARK_ELF) ? 1 : 3);
 			}
-			
-			// Teleport red pk 5+ to Floran Village
-			if ((player.getPkKills() > 5) && (player.getKarma() > 1))
+			case 2: // DE
 			{
-				return FLORAN_VILLAGE_LOCATION;
+				return getTown((player.getTemplate().getRace() == Race.ELF) ? 3 : 1);
 			}
-			
-			// Karma player land out of city
-			if (player.getKarma() > 1)
+			case 3: // Orc
 			{
-				final int closest = getMapRegion(creature.getX(), creature.getY());
-				if ((closest >= 0) && (closest < KARMA_LOCATIONS.size()))
-				{
-					return KARMA_LOCATIONS.get(closest);
-				}
-				return FLORAN_VILLAGE_LOCATION;
+				return getTown(4);
 			}
-			
-			// Checking if in arena
-			final ArenaZone arena = ArenaManager.getInstance().getArena(player);
-			if (arena != null)
+			case 4: // Dwarven
 			{
-				return arena.getSpawnLoc();
+				return getTown(6);
+			}
+			case 5: // Gludio
+			{
+				return getTown(7);
+			}
+			case 6: // Gludin
+			{
+				return getTown(5);
+			}
+			case 7: // Dion
+			{
+				return getTown(8);
+			}
+			case 8: // Giran
+			case 12: // Giran Harbor
+			{
+				return getTown(9);
+			}
+			case 9: // Oren
+			{
+				return getTown(10);
+			}
+			case 10: // Aden
+			{
+				return getTown(12);
+			}
+			case 11: // HV
+			{
+				return getTown(11);
+			}
+			case 13: // Heine
+			{
+				return getTown(15);
+			}
+			case 14: // Rune
+			{
+				return getTown(14);
+			}
+			case 15: // Goddard
+			{
+				return getTown(13);
+			}
+			case 16: // Schuttgart
+			{
+				return getTown(17);
+			}
+			case 17: // Floran
+			{
+				return getTown(16);
+			}
+			case 18: // Primeval Isle
+			{
+				return getTown(19);
 			}
 		}
-		
-		// Get the nearest town
-		TownZone localZone = null;
-		if ((creature != null) && ((localZone = TownManager.getInstance().getClosestTown(creature)) != null))
+		return getTown(16); // Default to floran
+	}
+	
+	/**
+	 * @param x : The current character's X location.
+	 * @param y : The current character's Y location.
+	 * @return the closest L2TownZone based on a X/Y location.
+	 */
+	private TownZone getClosestTown(int x, int y)
+	{
+		switch (getMapRegion(x, y))
 		{
-			return localZone.getSpawnLoc();
+			case 0: // TI
+			{
+				return getTown(2);
+			}
+			case 1: // Elven
+			{
+				return getTown(3);
+			}
+			case 2: // DE
+			{
+				return getTown(1);
+			}
+			case 3: // Orc
+			{
+				return getTown(4);
+			}
+			case 4: // Dwarven
+			{
+				return getTown(6);
+			}
+			case 5: // Gludio
+			{
+				return getTown(7);
+			}
+			case 6: // Gludin
+			{
+				return getTown(5);
+			}
+			case 7: // Dion
+			{
+				return getTown(8);
+			}
+			case 8: // Giran
+			case 12: // Giran Harbor
+			{
+				return getTown(9);
+			}
+			case 9: // Oren
+			{
+				return getTown(10);
+			}
+			case 10: // Aden
+			{
+				return getTown(12);
+			}
+			case 11: // HV
+			{
+				return getTown(11);
+			}
+			case 13: // Heine
+			{
+				return getTown(15);
+			}
+			case 14: // Rune
+			{
+				return getTown(14);
+			}
+			case 15: // Goddard
+			{
+				return getTown(13);
+			}
+			case 16: // Schuttgart
+			{
+				return getTown(17);
+			}
+			case 17: // Floran
+			{
+				return getTown(16);
+			}
+			case 18: // Primeval Isle
+			{
+				return getTown(19);
+			}
 		}
-		
-		localZone = TownManager.getInstance().getTown(9); // Giran
-		return localZone.getSpawnLoc();
+		return getTown(16); // Default to floran
+	}
+	
+	/**
+	 * @param x : The current character's X location.
+	 * @param y : The current character's Y location.
+	 * @return the closest region based on a X/Y location.
+	 */
+	public int getClosestLocation(int x, int y)
+	{
+		switch (getMapRegion(x, y))
+		{
+			case 0: // TI
+			{
+				return 1;
+			}
+			case 1: // Elven
+			{
+				return 4;
+			}
+			case 2: // DE
+			{
+				return 3;
+			}
+			case 3: // Orc
+			case 4: // Dwarven
+			case 16: // Schuttgart
+			{
+				return 9;
+			}
+			case 5: // Gludio
+			case 6: // Gludin
+			{
+				return 2;
+			}
+			case 7: // Dion
+			{
+				return 5;
+			}
+			case 8: // Giran
+			case 12: // Giran Harbor
+			{
+				return 6;
+			}
+			case 9: // Oren
+			{
+				return 10;
+			}
+			case 10: // Aden
+			{
+				return 13;
+			}
+			case 11: // HV
+			{
+				return 11;
+			}
+			case 13: // Heine
+			{
+				return 12;
+			}
+			case 14: // Rune
+			{
+				return 14;
+			}
+			case 15: // Goddard
+			{
+				return 15;
+			}
+		}
+		return 0;
+	}
+	
+	/**
+	 * @param townId the townId to match.
+	 * @return a TownZone based on the overall list of TownZone, matching the townId.
+	 */
+	public final TownZone getTown(int townId)
+	{
+		for (TownZone temp : ZoneData.getInstance().getAllZones(TownZone.class))
+		{
+			if (temp.getTownId() == townId)
+			{
+				return temp;
+			}
+		}
+		return null;
 	}
 	
 	public static MapRegionData getInstance()

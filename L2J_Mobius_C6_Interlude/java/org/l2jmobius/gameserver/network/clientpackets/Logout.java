@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSignsFestival;
+import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -38,9 +39,8 @@ public class Logout extends GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		// Dont allow leaving if player is fighting
+		// Do not allow leaving if player is fighting
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -53,7 +53,12 @@ public class Logout extends GameClientPacket
 			return;
 		}
 		
-		player.getInventory().updateDatabase();
+		if (player.isInsideZone(ZoneId.NO_RESTART))
+		{
+			player.sendPacket(SystemMessageId.NO_LOGOUT_HERE);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
 		
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) && (!player.isGM() || !Config.GM_RESTART_FIGHTING))
 		{
@@ -62,7 +67,7 @@ public class Logout extends GameClientPacket
 			return;
 		}
 		
-		// Dont allow leaving if player is in combat
+		// Do not allow leaving if player is in combat
 		if (player.isInCombat() && !player.isGM())
 		{
 			player.sendMessage("You cannot logout while in combat mode.");
@@ -70,7 +75,7 @@ public class Logout extends GameClientPacket
 			return;
 		}
 		
-		// Dont allow leaving if player is teleporting
+		// Do not allow leaving if player is teleporting
 		if (player.isTeleporting() && !player.isGM())
 		{
 			player.sendMessage("You cannot logout while teleporting.");
@@ -106,6 +111,8 @@ public class Logout extends GameClientPacket
 				player.getParty().broadcastToPartyMembers(SystemMessage.sendString(player.getName() + " has been removed from the upcoming festival."));
 			}
 		}
+		
+		player.getInventory().updateDatabase();
 		
 		if (player.isFlying())
 		{

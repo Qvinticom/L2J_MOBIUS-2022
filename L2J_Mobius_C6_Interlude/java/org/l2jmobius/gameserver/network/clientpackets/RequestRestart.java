@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSignsFestival;
+import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.GameClient.GameClientState;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -49,17 +50,21 @@ public class RequestRestart extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
-		// Check if player is == null
 		if (player == null)
 		{
-			LOGGER.warning("[RequestRestart] activeChar null!?");
 			return;
 		}
 		
 		// Check if player is enchanting
 		if (player.getActiveEnchantItem() != null)
 		{
+			sendPacket(RestartResponse.valueOf(false));
+			return;
+		}
+		
+		if (player.isInsideZone(ZoneId.NO_RESTART))
+		{
+			player.sendPacket(SystemMessageId.NO_RESTART_HERE);
 			sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
@@ -71,8 +76,6 @@ public class RequestRestart extends GameClientPacket
 			sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
-		
-		player.getInventory().updateDatabase();
 		
 		// Check if player is in private store
 		if (player.getPrivateStoreType() != 0)
@@ -125,6 +128,8 @@ public class RequestRestart extends GameClientPacket
 			sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
+		
+		player.getInventory().updateDatabase();
 		
 		// Fix against exploit anti-target
 		if (player.isCastingNow())

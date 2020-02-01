@@ -69,14 +69,14 @@ public class RequestRecipeShopListSet extends GameClientPacket
 		
 		if (player.isTradeDisabled())
 		{
-			player.sendMessage("Private manufacture is disabled here. Try in another place.");
+			player.sendMessage("Private manufacture is disabled here. Try another place.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (player.isInsideZone(ZoneId.NO_STORE))
 		{
-			player.sendMessage("Private manufacture is disabled here. Try in another place.");
+			player.sendMessage("Private manufacture is disabled here. Try another place.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

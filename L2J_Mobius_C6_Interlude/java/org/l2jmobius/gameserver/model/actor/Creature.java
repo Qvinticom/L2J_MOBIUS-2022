@@ -40,6 +40,7 @@ import org.l2jmobius.gameserver.datatables.HeroSkillTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
+import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
@@ -49,7 +50,6 @@ import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
-import org.l2jmobius.gameserver.instancemanager.TownManager;
 import org.l2jmobius.gameserver.model.ChanceSkillList;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.ForceBuff;
@@ -663,14 +663,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		if (Config.TW_DISABLE_GK)
 		{
-			int x1;
-			int y1;
-			int z1;
-			x1 = getX();
-			y1 = getY();
-			z1 = getZ();
-			TownZone town;
-			town = TownManager.getInstance().getTown(x1, y1, z1);
+			final TownZone town = ZoneData.getInstance().getZone(getX(), getY(), getZ(), TownZone.class);
 			if ((town != null) && _inTownWar)
 			{
 				if ((town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
@@ -6513,7 +6506,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 						int bossId = -1;
 						NpcTemplate bossTemplate = null;
 						final BossZone bossZone = GrandBossManager.getInstance().getZone(this);
-						
 						if (bossZone != null)
 						{
 							bossId = bossZone.getBossId();
@@ -8301,7 +8293,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				{
 					// Set some values inside target's instance for later use
 					final Creature creature = (Creature) target;
-					
 					if ((skill.getEffectType() == SkillType.BUFF) && creature.isBlockBuff())
 					{
 						continue;
@@ -8310,7 +8301,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					if (target instanceof Creature)
 					{
 						final Creature targ = (Creature) target;
-						
 						if (ChanceSkillList.canTriggerByCast(this, targ, skill))
 						{
 							// Maybe launch chance skills on us
@@ -8345,7 +8335,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 								int bossId = -1;
 								NpcTemplate bossTemplate = null;
 								final BossZone bossZone = GrandBossManager.getInstance().getZone(this);
-								
 								if (bossZone != null)
 								{
 									bossId = bossZone.getBossId();

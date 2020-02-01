@@ -19,25 +19,22 @@ package org.l2jmobius.gameserver.model.zone.type;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
 import org.l2jmobius.gameserver.model.entity.siege.Castle;
+import org.l2jmobius.gameserver.model.zone.SpawnZone;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
  * A castle zone
  * @author durgus
  */
-public class CastleZone extends ZoneType
+public class CastleZone extends SpawnZone
 {
 	private Castle _castle;
-	private final Location _spawnLoc = new Location(0, 0, 0);
 	
 	public CastleZone(int id)
 	{
@@ -57,21 +54,6 @@ public class CastleZone extends ZoneType
 				_castle.setZone(this);
 				break;
 			}
-			case "spawnX":
-			{
-				_spawnLoc.setX(Integer.parseInt(value));
-				break;
-			}
-			case "spawnY":
-			{
-				_spawnLoc.setY(Integer.parseInt(value));
-				break;
-			}
-			case "spawnZ":
-			{
-				_spawnLoc.setZ(Integer.parseInt(value));
-				break;
-			}
 			default:
 			{
 				super.setParameter(name, value);
@@ -83,6 +65,8 @@ public class CastleZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
+		creature.setInsideZone(ZoneId.CASTLE, true);
+		
 		if (_castle.getSiege().isInProgress())
 		{
 			creature.setInsideZone(ZoneId.PVP, true);
@@ -98,6 +82,8 @@ public class CastleZone extends ZoneType
 	@Override
 	protected void onExit(Creature creature)
 	{
+		creature.setInsideZone(ZoneId.CASTLE, false);
+		
 		if (_castle.getSiege().isInProgress())
 		{
 			creature.setInsideZone(ZoneId.PVP, false);
@@ -189,7 +175,7 @@ public class CastleZone extends ZoneType
 				continue;
 			}
 			
-			((PlayerInstance) temp).teleToLocation(TeleportWhereType.TOWN);
+			((PlayerInstance) temp).teleToLocation(getChaoticSpawnLoc(), true);
 		}
 	}
 	
@@ -225,11 +211,6 @@ public class CastleZone extends ZoneType
 		}
 		
 		return players;
-	}
-	
-	public Location getSpawn()
-	{
-		return _spawnLoc;
 	}
 	
 	public boolean isSiegeActive()

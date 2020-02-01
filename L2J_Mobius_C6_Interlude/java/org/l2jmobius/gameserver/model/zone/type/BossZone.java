@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 
 /**
@@ -90,7 +91,14 @@ public class BossZone extends ZoneType
 	 */
 	protected void onEnter(Creature creature)
 	{
-		if (_enabled && (creature instanceof PlayerInstance))
+		if (!_enabled)
+		{
+			return;
+		}
+		
+		creature.setInsideZone(ZoneId.BOSS, true);
+		
+		if (creature instanceof PlayerInstance)
 		{
 			final PlayerInstance player = (PlayerInstance) creature;
 			
@@ -163,7 +171,6 @@ public class BossZone extends ZoneType
 	 * @param y
 	 * @param z
 	 */
-	
 	public void movePlayersTo(int x, int y, int z)
 	{
 		if (_characterList.isEmpty())
@@ -187,7 +194,14 @@ public class BossZone extends ZoneType
 	@Override
 	protected void onExit(Creature creature)
 	{
-		if (_enabled && (creature instanceof PlayerInstance))
+		if (!_enabled)
+		{
+			return;
+		}
+		
+		creature.setInsideZone(ZoneId.BOSS, false);
+		
+		if (creature instanceof PlayerInstance)
 		{
 			// Thread.dumpStack();
 			final PlayerInstance player = (PlayerInstance) creature;

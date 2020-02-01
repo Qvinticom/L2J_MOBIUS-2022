@@ -16,11 +16,10 @@
  */
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
-import java.util.Collection;
-
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
+import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.instancemanager.TownManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -61,63 +60,44 @@ public class AdminTownWar implements IAdminCommandHandler
 		// All Towns will become War Zones
 		if (Config.TW_ALL_TOWNS)
 		{
-			TownManager.getInstance().getTown(1).setParameter("noPeace", "true");
-			TownManager.getInstance().getTown(2).setParameter("noPeace", "true");
-			TownManager.getInstance().getTown(3).setParameter("noPeace", "true");
-			TownManager.getInstance().getTown(4).setParameter("noPeace", "true");
-			TownManager.getInstance().getTown(5).setParameter("noPeace", "true");
-			TownManager.getInstance().getTown(6).setParameter("noPeace", "true");
-			TownManager.getInstance().getTown(7).setParameter("noPeace", "true");
-			TownManager.getInstance().getTown(8).setParameter("noPeace", "true");
-			TownManager.getInstance().getTown(9).setParameter("noPeace", "true");
-			TownManager.getInstance().getTown(10).setParameter("noPeace", "true");
-			TownManager.getInstance().getTown(11).setParameter("noPeace", "true");
-			TownManager.getInstance().getTown(12).setParameter("noPeace", "true");
-			TownManager.getInstance().getTown(13).setParameter("noPeace", "true");
-			TownManager.getInstance().getTown(14).setParameter("noPeace", "true");
-			TownManager.getInstance().getTown(15).setParameter("noPeace", "true");
-			TownManager.getInstance().getTown(16).setParameter("noPeace", "true");
-			TownManager.getInstance().getTown(17).setParameter("noPeace", "true");
-			TownManager.getInstance().getTown(19).setParameter("noPeace", "true");
+			for (TownZone zone : ZoneData.getInstance().getAllZones(TownZone.class))
+			{
+				zone.setParameter("noPeace", "true");
+			}
 		}
 		
 		// A Town will become War Zone
 		if (!Config.TW_ALL_TOWNS && (Config.TW_TOWN_ID != 18) && (Config.TW_TOWN_ID != 21) && (Config.TW_TOWN_ID != 22))
 		{
-			TownManager.getInstance().getTown(Config.TW_TOWN_ID).setParameter("noPeace", "true");
+			MapRegionData.getInstance().getTown(Config.TW_TOWN_ID).setParameter("noPeace", "true");
 		}
 		
-		final Collection<PlayerInstance> pls = World.getInstance().getAllPlayers();
+		int x;
+		int y;
+		int z;
+		TownZone town;
+		for (PlayerInstance onlinePlayer : World.getInstance().getAllPlayers())
 		{
-			int x;
-			int y;
-			int z;
-			TownZone town;
-			
-			for (PlayerInstance onlinePlayer : pls)
+			if (onlinePlayer.isOnline())
 			{
-				if (onlinePlayer.isOnline())
+				x = onlinePlayer.getX();
+				y = onlinePlayer.getY();
+				z = onlinePlayer.getZ();
+				town = ZoneData.getInstance().getZone(x, y, z, TownZone.class);
+				if (town != null)
 				{
-					x = onlinePlayer.getX();
-					y = onlinePlayer.getY();
-					z = onlinePlayer.getZ();
-					
-					town = TownManager.getInstance().getTown(x, y, z);
-					if (town != null)
+					if ((town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
 					{
-						if ((town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
-						{
-							onlinePlayer.setInsideZone(ZoneId.PVP, false);
-							onlinePlayer.revalidateZone(true);
-						}
-						else if (Config.TW_ALL_TOWNS)
-						{
-							onlinePlayer.setInsideZone(ZoneId.PVP, false);
-							onlinePlayer.revalidateZone(true);
-						}
+						onlinePlayer.setInsideZone(ZoneId.PVP, false);
+						onlinePlayer.revalidateZone(true);
 					}
-					onlinePlayer.setInTownWar(true);
+					else if (Config.TW_ALL_TOWNS)
+					{
+						onlinePlayer.setInsideZone(ZoneId.PVP, false);
+						onlinePlayer.revalidateZone(true);
+					}
 				}
+				onlinePlayer.setInTownWar(true);
 			}
 		}
 		
@@ -132,7 +112,7 @@ public class AdminTownWar implements IAdminCommandHandler
 		if (!Config.TW_ALL_TOWNS)
 		{
 			Announcements.getInstance().gameAnnounceToAll("Town War Event!");
-			Announcements.getInstance().gameAnnounceToAll(TownManager.getInstance().getTown(Config.TW_TOWN_ID).getName() + " has been set to war zone by " + activeChar.getName() + ".");
+			Announcements.getInstance().gameAnnounceToAll(MapRegionData.getInstance().getTown(Config.TW_TOWN_ID).getName() + " has been set to war zone by " + activeChar.getName() + ".");
 		}
 	}
 	
@@ -141,63 +121,58 @@ public class AdminTownWar implements IAdminCommandHandler
 		// All Towns will become Peace Zones
 		if (Config.TW_ALL_TOWNS)
 		{
-			TownManager.getInstance().getTown(1).setParameter("noPeace", "false");
-			TownManager.getInstance().getTown(2).setParameter("noPeace", "false");
-			TownManager.getInstance().getTown(3).setParameter("noPeace", "false");
-			TownManager.getInstance().getTown(4).setParameter("noPeace", "false");
-			TownManager.getInstance().getTown(5).setParameter("noPeace", "false");
-			TownManager.getInstance().getTown(6).setParameter("noPeace", "false");
-			TownManager.getInstance().getTown(7).setParameter("noPeace", "false");
-			TownManager.getInstance().getTown(8).setParameter("noPeace", "false");
-			TownManager.getInstance().getTown(9).setParameter("noPeace", "false");
-			TownManager.getInstance().getTown(10).setParameter("noPeace", "false");
-			TownManager.getInstance().getTown(11).setParameter("noPeace", "false");
-			TownManager.getInstance().getTown(12).setParameter("noPeace", "false");
-			TownManager.getInstance().getTown(13).setParameter("noPeace", "false");
-			TownManager.getInstance().getTown(14).setParameter("noPeace", "false");
-			TownManager.getInstance().getTown(15).setParameter("noPeace", "false");
-			TownManager.getInstance().getTown(16).setParameter("noPeace", "false");
-			TownManager.getInstance().getTown(17).setParameter("noPeace", "false");
-			TownManager.getInstance().getTown(19).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(1).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(2).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(3).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(4).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(5).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(6).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(7).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(8).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(9).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(10).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(11).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(12).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(13).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(14).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(15).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(16).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(17).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(19).setParameter("noPeace", "false");
 		}
 		
 		// A Town will become Peace Zone
 		if (!Config.TW_ALL_TOWNS && (Config.TW_TOWN_ID != 18) && (Config.TW_TOWN_ID != 21) && (Config.TW_TOWN_ID != 22))
 		{
-			TownManager.getInstance().getTown(Config.TW_TOWN_ID).setParameter("noPeace", "false");
+			MapRegionData.getInstance().getTown(Config.TW_TOWN_ID).setParameter("noPeace", "false");
 		}
 		
-		final Collection<PlayerInstance> pls = World.getInstance().getAllPlayers();
+		int x;
+		int y;
+		int z;
+		TownZone town;
+		for (PlayerInstance onlinePlayer : World.getInstance().getAllPlayers())
 		{
-			int x;
-			int y;
-			int z;
-			TownZone town;
-			
-			for (PlayerInstance onlinePlayer : pls)
+			if (onlinePlayer.isOnline())
 			{
-				if (onlinePlayer.isOnline())
+				x = onlinePlayer.getX();
+				y = onlinePlayer.getY();
+				z = onlinePlayer.getZ();
+				town = ZoneData.getInstance().getZone(x, y, z, TownZone.class);
+				if (town != null)
 				{
-					x = onlinePlayer.getX();
-					y = onlinePlayer.getY();
-					z = onlinePlayer.getZ();
-					
-					town = TownManager.getInstance().getTown(x, y, z);
-					if (town != null)
+					if ((town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
 					{
-						if ((town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
-						{
-							onlinePlayer.setInsideZone(ZoneId.PVP, true);
-							onlinePlayer.revalidateZone(true);
-						}
-						else if (Config.TW_ALL_TOWNS)
-						{
-							onlinePlayer.setInsideZone(ZoneId.PVP, true);
-							onlinePlayer.revalidateZone(true);
-						}
+						onlinePlayer.setInsideZone(ZoneId.PVP, true);
+						onlinePlayer.revalidateZone(true);
 					}
-					onlinePlayer.setInTownWar(false);
+					else if (Config.TW_ALL_TOWNS)
+					{
+						onlinePlayer.setInsideZone(ZoneId.PVP, true);
+						onlinePlayer.revalidateZone(true);
+					}
 				}
+				onlinePlayer.setInTownWar(false);
 			}
 		}
 		
@@ -210,7 +185,7 @@ public class AdminTownWar implements IAdminCommandHandler
 		// Announce for one town
 		if (!Config.TW_ALL_TOWNS)
 		{
-			Announcements.getInstance().gameAnnounceToAll(TownManager.getInstance().getTown(Config.TW_TOWN_ID).getName() + " has been set back to normal by " + activeChar.getName() + ".");
+			Announcements.getInstance().gameAnnounceToAll(MapRegionData.getInstance().getTown(Config.TW_TOWN_ID).getName() + " has been set back to normal by " + activeChar.getName() + ".");
 		}
 	}
 	

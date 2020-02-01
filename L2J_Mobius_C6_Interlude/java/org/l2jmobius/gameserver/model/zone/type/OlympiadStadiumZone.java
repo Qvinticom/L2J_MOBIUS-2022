@@ -53,6 +53,8 @@ public class OlympiadStadiumZone extends ZoneType
 	public void onEnter(Creature creature)
 	{
 		creature.setInsideZone(ZoneId.PVP, true);
+		creature.setInsideZone(ZoneId.NO_RESTART, true);
+		creature.setInsideZone(ZoneId.NO_SUMMON_FRIEND, true);
 		
 		if (creature instanceof PlayerInstance)
 		{
@@ -71,6 +73,8 @@ public class OlympiadStadiumZone extends ZoneType
 	public void onExit(Creature creature)
 	{
 		creature.setInsideZone(ZoneId.PVP, false);
+		creature.setInsideZone(ZoneId.NO_RESTART, false);
+		creature.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false);
 		
 		if (creature instanceof PlayerInstance)
 		{

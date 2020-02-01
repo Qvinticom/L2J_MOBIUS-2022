@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.partymatching;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.instancemanager.TownManager;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExManagePartyRoomMember;
@@ -44,7 +44,7 @@ public class PartyMatchRoom
 		_id = id;
 		_title = title;
 		_loot = loot;
-		_location = TownManager.getClosestLocation(owner);
+		_location = MapRegionData.getInstance().getClosestLocation(owner.getX(), owner.getY());
 		_minlvl = minlvl;
 		_maxlvl = maxlvl;
 		_maxmem = maxmem;

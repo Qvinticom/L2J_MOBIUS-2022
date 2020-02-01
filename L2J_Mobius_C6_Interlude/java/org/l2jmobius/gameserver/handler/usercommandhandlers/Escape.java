@@ -42,7 +42,7 @@ public class Escape implements IUserCommandHandler
 	@Override
 	public boolean useUserCommand(int id, PlayerInstance player)
 	{
-		final int unstuckTimer = player.getAccessLevel().isGm() ? 1000 : Config.UNSTUCK_INTERVAL * 1000;
+		final int unstuckTimer = player.isGM() ? 1000 : Config.UNSTUCK_INTERVAL * 1000;
 		
 		// Check to see if the current player is in Festival.
 		if (player.isFestivalParticipant())

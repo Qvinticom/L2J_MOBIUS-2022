@@ -20,28 +20,24 @@ import java.util.Map;
 
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
-import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.ClanHall;
+import org.l2jmobius.gameserver.model.zone.SpawnZone;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.ClanHallDecoration;
 
 /**
  * A clan hall zone
  * @author durgus
  */
-public class ClanHallZone extends ZoneType
+public class ClanHallZone extends SpawnZone
 {
 	private int _clanHallId;
-	private final int[] _spawnLoc;
 	
 	public ClanHallZone(int id)
 	{
 		super(id);
-		
-		_spawnLoc = new int[3];
 	}
 	
 	@Override
@@ -54,21 +50,6 @@ public class ClanHallZone extends ZoneType
 				_clanHallId = Integer.parseInt(value);
 				// Register self to the correct clan hall
 				ClanHallManager.getInstance().getClanHallById(_clanHallId).setZone(this);
-				break;
-			}
-			case "spawnX":
-			{
-				_spawnLoc[0] = Integer.parseInt(value);
-				break;
-			}
-			case "spawnY":
-			{
-				_spawnLoc[1] = Integer.parseInt(value);
-				break;
-			}
-			case "spawnZ":
-			{
-				_spawnLoc[2] = Integer.parseInt(value);
 				break;
 			}
 			default:
@@ -100,7 +81,7 @@ public class ClanHallZone extends ZoneType
 			// Send a message
 			if ((clanHall.getOwnerId() != 0) && (clanHall.getOwnerId() == ((PlayerInstance) creature).getClanId()))
 			{
-				((PlayerInstance) creature).sendMessage("You have entered your clan hall");
+				((PlayerInstance) creature).sendMessage("You have entered your clan hall.");
 			}
 		}
 	}
@@ -116,7 +97,7 @@ public class ClanHallZone extends ZoneType
 			// Send a message
 			if ((((PlayerInstance) creature).getClanId() != 0) && (ClanHallManager.getInstance().getClanHallById(_clanHallId).getOwnerId() == ((PlayerInstance) creature).getClanId()))
 			{
-				((PlayerInstance) creature).sendMessage("You have left your clan hall");
+				((PlayerInstance) creature).sendMessage("You have left your clan hall.");
 			}
 		}
 	}
@@ -157,14 +138,5 @@ public class ClanHallZone extends ZoneType
 	public Map<Integer, Creature> getCharactersInside()
 	{
 		return _characterList;
-	}
-	
-	/**
-	 * Get the clan hall's spawn
-	 * @return
-	 */
-	public Location getSpawn()
-	{
-		return new Location(_spawnLoc[0], _spawnLoc[1], _spawnLoc[2]);
 	}
 }

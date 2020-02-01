@@ -54,6 +54,40 @@ public class RequestRestartPoint extends GameClientPacket
 		_requestedPointType = readD();
 	}
 	
+	@Override
+	protected void runImpl()
+	{
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		if (player.isFakeDeath())
+		{
+			player.stopFakeDeath(null);
+			player.broadcastPacket(new Revive(player));
+			return;
+		}
+		else if (!player.isAlikeDead())
+		{
+			LOGGER.warning("Living player [" + player.getName() + "] called RestartPointPacket! Ban this player!");
+			return;
+		}
+		
+		final Castle castle = CastleManager.getInstance().getCastle(player.getX(), player.getY(), player.getZ());
+		if ((castle != null) && castle.getSiege().isInProgress() && (player.getClan() != null) && castle.getSiege().checkIsAttacker(player.getClan()))
+		{
+			// Schedule respawn delay for attacker
+			ThreadPool.schedule(new DeathTask(player), castle.getSiege().getAttackerRespawnDelay());
+			player.sendMessage("You will be re-spawned in " + (castle.getSiege().getAttackerRespawnDelay() / 1000) + " seconds");
+			return;
+		}
+		
+		// Run immediately (no need to schedule)
+		new DeathTask(player).run();
+	}
+	
 	class DeathTask implements Runnable
 	{
 		PlayerInstance _player;
@@ -71,6 +105,7 @@ public class RequestRestartPoint extends GameClientPacket
 				_player.sendMessage("You cannot restart while participating in an event!");
 				return;
 			}
+			
 			try
 			{
 				Location loc = null;
@@ -212,39 +247,5 @@ public class RequestRestartPoint extends GameClientPacket
 				LOGGER.warning(e.toString());
 			}
 		}
-	}
-	
-	@Override
-	protected void runImpl()
-	{
-		final PlayerInstance player = getClient().getPlayer();
-		
-		if (player == null)
-		{
-			return;
-		}
-		
-		if (player.isFakeDeath())
-		{
-			player.stopFakeDeath(null);
-			player.broadcastPacket(new Revive(player));
-			return;
-		}
-		else if (!player.isAlikeDead())
-		{
-			LOGGER.warning("Living player [" + player.getName() + "] called RestartPointPacket! Ban this player!");
-			return;
-		}
-		
-		final Castle castle = CastleManager.getInstance().getCastle(player.getX(), player.getY(), player.getZ());
-		if ((castle != null) && castle.getSiege().isInProgress() && (player.getClan() != null) && castle.getSiege().checkIsAttacker(player.getClan()))
-		{
-			// Schedule respawn delay for attacker
-			ThreadPool.schedule(new DeathTask(player), castle.getSiege().getAttackerRespawnDelay());
-			player.sendMessage("You will be re-spawned in " + (castle.getSiege().getAttackerRespawnDelay() / 1000) + " seconds");
-			return;
-		}
-		// run immediately (no need to schedule)
-		new DeathTask(player).run();
 	}
 }

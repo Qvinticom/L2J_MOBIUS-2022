@@ -758,8 +758,8 @@ public class GameStatusThread extends Thread
 						}
 						else if (type.equals("zone"))
 						{
-							_print.print("Reloading zone tables... ");
-							ZoneData.getInstance().load();
+							_print.print("Reloading zones... ");
+							ZoneData.getInstance().reload();
 							_print.println("done");
 						}
 						else if (type.equals("teleports"))

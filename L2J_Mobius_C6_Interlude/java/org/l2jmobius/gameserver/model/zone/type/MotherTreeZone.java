@@ -40,7 +40,6 @@ public class MotherTreeZone extends ZoneType
 		if (creature instanceof PlayerInstance)
 		{
 			final PlayerInstance player = (PlayerInstance) creature;
-			
 			if (player.isInParty())
 			{
 				for (PlayerInstance member : player.getParty().getPartyMembers())

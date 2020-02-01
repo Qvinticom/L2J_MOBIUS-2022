@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.instancemanager.TownManager;
+import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
 
@@ -41,18 +41,18 @@ public class ExPartyRoomMember extends GameServerPacket
 		writeH(0x0e);
 		writeD(_mode);
 		writeD(_room.getMembers());
-		for (PlayerInstance _member : _room.getPartyMembers())
+		for (PlayerInstance member : _room.getPartyMembers())
 		{
-			writeD(_member.getObjectId());
-			writeS(_member.getName());
-			writeD(_member.getActiveClass());
-			writeD(_member.getLevel());
-			writeD(TownManager.getClosestLocation(_member));
-			if (_room.getOwner().equals(_member))
+			writeD(member.getObjectId());
+			writeS(member.getName());
+			writeD(member.getActiveClass());
+			writeD(member.getLevel());
+			writeD(MapRegionData.getInstance().getClosestLocation(member.getX(), member.getY()));
+			if (_room.getOwner().equals(member))
 			{
 				writeD(1);
 			}
-			else if ((_room.getOwner().isInParty() && _member.isInParty()) && (_room.getOwner().getParty().getPartyLeaderOID() == _member.getParty().getPartyLeaderOID()))
+			else if ((_room.getOwner().isInParty() && member.isInParty()) && (_room.getOwner().getParty().getPartyLeaderOID() == member.getParty().getPartyLeaderOID()))
 			{
 				writeD(2);
 			}

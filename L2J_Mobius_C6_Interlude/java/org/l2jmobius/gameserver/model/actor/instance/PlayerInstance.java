@@ -66,6 +66,7 @@ import org.l2jmobius.gameserver.datatables.xml.FishData;
 import org.l2jmobius.gameserver.datatables.xml.HennaData;
 import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.datatables.xml.RecipeData;
+import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -86,7 +87,6 @@ import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.instancemanager.TownManager;
 import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.Effect;
@@ -6090,14 +6090,7 @@ public class PlayerInstance extends Playable
 	{
 		if (Config.TW_RESS_ON_DIE)
 		{
-			int x1;
-			int y1;
-			int z1;
-			x1 = getX();
-			y1 = getY();
-			z1 = getZ();
-			TownZone town;
-			town = TownManager.getInstance().getTown(x1, y1, z1);
+			final TownZone town = ZoneData.getInstance().getZone(getX(), getY(), getZ(), TownZone.class);
 			if ((town != null) && isinTownWar())
 			{
 				if ((town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
@@ -6769,14 +6762,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void increasePvpKills()
 	{
-		int x;
-		int y;
-		int z;
-		x = getX();
-		y = getY();
-		z = getZ();
-		TownZone town;
-		town = TownManager.getInstance().getTown(x, y, z);
+		final TownZone town = ZoneData.getInstance().getZone(getX(), getY(), getZ(), TownZone.class);
 		if ((town != null) && isinTownWar())
 		{
 			if ((town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
@@ -7117,18 +7103,9 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Add karma to attacker and increase its PK counter
-		int x;
-		int y;
-		int z;
-		x = getX();
-		y = getY();
-		z = getZ();
-		
-		// get local town
-		final TownZone town = TownManager.getInstance().getTown(x, y, z);
-		
 		setPkKills(getPkKills() + 1);
 		
+		final TownZone town = ZoneData.getInstance().getZone(getX(), getY(), getZ(), TownZone.class);
 		if ((town == null) || (isinTownWar() && Config.TW_ALLOW_KARMA))
 		{
 			setKarma(getKarma() + newKarma);

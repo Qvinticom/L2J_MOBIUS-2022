@@ -31,13 +31,13 @@ import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.HelperBuffTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CustomNpcInstanceManager;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
-import org.l2jmobius.gameserver.instancemanager.TownManager;
 import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.Skill;
@@ -829,7 +829,7 @@ public class NpcInstance extends Creature
 		final Weapon currentWeapon = player.getActiveWeaponItem();
 		
 		// Check if the PlayerInstance is a GM
-		if (player.getAccessLevel().isGm())
+		if (player.isGM())
 		{
 			// Set the target of the PlayerInstance player
 			player.setTarget(this);
@@ -1135,8 +1135,7 @@ public class NpcInstance extends Creature
 		// Get castle this NPC belongs to (excluding Attackable)
 		if (_castleIndex < 0)
 		{
-			final TownZone town = TownManager.getInstance().getTown(getX(), getY(), getZ());
-			
+			final TownZone town = ZoneData.getInstance().getZone(getX(), getY(), getZ(), TownZone.class);
 			if (town != null)
 			{
 				_castleIndex = CastleManager.getInstance().getCastleIndex(town.getTaxById());
@@ -1144,7 +1143,7 @@ public class NpcInstance extends Creature
 			
 			if (_castleIndex < 0)
 			{
-				_castleIndex = CastleManager.getInstance().findNearestCastlesIndex(this);
+				_castleIndex = CastleManager.getInstance().findNearestCastleIndex(this);
 			}
 			else
 			{

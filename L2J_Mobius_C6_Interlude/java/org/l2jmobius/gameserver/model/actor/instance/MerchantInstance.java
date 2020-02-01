@@ -293,7 +293,7 @@ public class MerchantInstance extends FolkInstance
 			return;
 		}
 		
-		if (player.getAccessLevel().isGm())
+		if (player.isGM())
 		{
 			player.setTarget(this);
 			

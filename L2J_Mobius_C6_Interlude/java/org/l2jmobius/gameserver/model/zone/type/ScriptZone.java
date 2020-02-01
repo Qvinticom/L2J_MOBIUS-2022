@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.model.zone.type;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 
 /**
@@ -30,13 +31,15 @@ public class ScriptZone extends ZoneType
 	}
 	
 	@Override
-	protected void onEnter(Creature creature)
+	protected void onEnter(Creature character)
 	{
+		character.setInsideZone(ZoneId.SCRIPT, true);
 	}
 	
 	@Override
-	protected void onExit(Creature creature)
+	protected void onExit(Creature character)
 	{
+		character.setInsideZone(ZoneId.SCRIPT, false);
 	}
 	
 	@Override

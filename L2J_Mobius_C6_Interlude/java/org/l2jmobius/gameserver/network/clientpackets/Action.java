@@ -50,7 +50,6 @@ public class Action extends GameClientPacket
 	{
 		// Get the current PlayerInstance of the player
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -64,7 +63,6 @@ public class Action extends GameClientPacket
 		}
 		
 		final WorldObject obj;
-		
 		if (player.getTargetId() == _objectId)
 		{
 			obj = player.getTarget();

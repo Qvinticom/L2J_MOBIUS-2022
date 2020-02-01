@@ -20,14 +20,15 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
+import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.instancemanager.TownManager;
 import org.l2jmobius.gameserver.model.TeleportLocation;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
+import org.l2jmobius.gameserver.model.zone.type.TownZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -217,7 +218,7 @@ public class TeleporterInstance extends FolkInstance
 				player.sendPacket(SystemMessageId.NO_PORT_THAT_IS_IN_SIGE);
 				return;
 			}
-			else if (!SiegeManager.getInstance().isTeleportToSiegeTownAllowed() && TownManager.getInstance().townHasCastleInSiege(list.getX(), list.getY()) && !player.isNoble())
+			else if (!SiegeManager.getInstance().isTeleportToSiegeTownAllowed() && (ZoneData.getInstance().getZone(list.getX(), list.getY(), list.getZ(), TownZone.class) != null) && CastleManager.getInstance().findNearestCastle(list.getX(), list.getY()).getSiege().isInProgress() && !player.isNoble())
 			{
 				player.sendPacket(SystemMessageId.NO_PORT_THAT_IS_IN_SIGE);
 				return;

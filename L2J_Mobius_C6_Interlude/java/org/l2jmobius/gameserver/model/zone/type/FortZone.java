@@ -21,23 +21,21 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
 import org.l2jmobius.gameserver.model.entity.siege.Fort;
+import org.l2jmobius.gameserver.model.zone.SpawnZone;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
  * A castle zone
  * @author programmos
  */
-public class FortZone extends ZoneType
+public class FortZone extends SpawnZone
 {
 	private Fort _fort;
-	private final Location _spawnLoc = new Location(0, 0, 0);
 	
 	public FortZone(int id)
 	{
@@ -55,21 +53,6 @@ public class FortZone extends ZoneType
 				// Register self to the correct fort
 				_fort = FortManager.getInstance().getFortById(fortId);
 				_fort.setZone(this);
-				break;
-			}
-			case "spawnX":
-			{
-				_spawnLoc.setX(Integer.parseInt(value));
-				break;
-			}
-			case "spawnY":
-			{
-				_spawnLoc.setY(Integer.parseInt(value));
-				break;
-			}
-			case "spawnZ":
-			{
-				_spawnLoc.setZ(Integer.parseInt(value));
 				break;
 			}
 			default:
@@ -215,7 +198,6 @@ public class FortZone extends ZoneType
 	public List<PlayerInstance> getAllPlayers()
 	{
 		final List<PlayerInstance> players = new ArrayList<>();
-		
 		for (Creature temp : _characterList.values())
 		{
 			if (temp instanceof PlayerInstance)
@@ -223,16 +205,6 @@ public class FortZone extends ZoneType
 				players.add((PlayerInstance) temp);
 			}
 		}
-		
 		return players;
-	}
-	
-	/**
-	 * Get the forts defender spawn
-	 * @return
-	 */
-	public Location getSpawn()
-	{
-		return _spawnLoc;
 	}
 }

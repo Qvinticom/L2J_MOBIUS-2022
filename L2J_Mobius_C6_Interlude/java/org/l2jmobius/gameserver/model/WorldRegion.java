@@ -17,6 +17,8 @@
 package org.l2jmobius.gameserver.model;
 
 import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
@@ -74,6 +76,15 @@ public class WorldRegion
 		}
 		
 		_zoneManager.unregisterZone(zone);
+	}
+	
+	public List<ZoneType> getZones()
+	{
+		if (_zoneManager == null)
+		{
+			return Collections.emptyList();
+		}
+		return _zoneManager.getZones();
 	}
 	
 	public void revalidateZones(Creature creature)

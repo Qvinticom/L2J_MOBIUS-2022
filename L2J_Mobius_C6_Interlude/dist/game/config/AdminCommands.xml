@@ -617,7 +617,7 @@
 
 	<!-- Section: Zone -->
 	<admin command="admin_zone_check" accessLevel="90" />
-	<admin command="admin_zone_reload" accessLevel="90" />
+	<admin command="admin_zone_visual" accessLevel="90" />
 
 	<!-- Section: Fences -->
 	<admin command="admin_addfence" accessLevel="100" />

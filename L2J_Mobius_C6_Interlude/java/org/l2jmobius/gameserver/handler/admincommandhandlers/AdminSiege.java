@@ -232,10 +232,9 @@ public class AdminSiege implements IAdminCommandHandler
 			else if (command.equalsIgnoreCase("admin_clanhallteleportself"))
 			{
 				final ClanHallZone zone = clanhall.getZone();
-				
 				if (zone != null)
 				{
-					activeChar.teleToLocation(zone.getSpawn(), true);
+					activeChar.teleToLocation(zone.getSpawnLoc(), true);
 				}
 			}
 			else if (command.equalsIgnoreCase("admin_spawn_doors"))

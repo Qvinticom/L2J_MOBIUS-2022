@@ -22,22 +22,26 @@ package org.l2jmobius.gameserver.model.zone;
  */
 public enum ZoneId
 {
-	PVP,
-	PEACE,
-	SIEGE,
-	MOTHERTREE,
+	BOSS,
+	CASTLE,
 	CLAN_HALL,
-	UNUSED,
-	NO_LANDING,
-	WATER,
+	DANGER_AREA,
+	HQ,
 	JAIL,
 	MONSTER_TRACK,
-	SWAMP,
+	MOTHERTREE,
+	NO_LANDING,
+	NO_RESTART,
+	NO_STORE,
 	NO_SUMMON_FRIEND,
 	OLYMPIAD,
-	NO_HQ,
-	DANGER_AREA,
-	NO_STORE;
+	PEACE,
+	PVP,
+	SCRIPT,
+	SIEGE,
+	TOWN,
+	SWAMP,
+	WATER;
 	
 	public static int getZoneCount()
 	{

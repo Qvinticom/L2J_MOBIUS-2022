@@ -19,8 +19,6 @@ package org.l2jmobius.gameserver.model.zone;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.w3c.dom.Node;
-
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -147,10 +145,6 @@ public abstract class ZoneType
 				break;
 			}
 		}
-	}
-	
-	public void setSpawnLocs(Node node1)
-	{
 	}
 	
 	/**
@@ -363,5 +357,10 @@ public abstract class ZoneType
 	public Map<Integer, Creature> getCharactersInside()
 	{
 		return _characterList;
+	}
+	
+	public void visualizeZone(int z)
+	{
+		getZone().visualizeZone(_id, z);
 	}
 }
