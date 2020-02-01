@@ -119,8 +119,7 @@ public class ArenaZone extends ZoneType
 			if (creature instanceof PlayerInstance)
 			{
 				final PlayerInstance player = (PlayerInstance) creature;
-				
-				if (player.isOnline() == 1)
+				if (player.isOnline())
 				{
 					player.teleToLocation(TeleportWhereType.TOWN);
 				}

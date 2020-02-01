@@ -327,14 +327,10 @@ abstract class AbstractAI implements Ctrl
 	@Override
 	public void notifyEvent(CtrlEvent evt, Object arg0, Object arg1)
 	{
-		if (!_actor.isVisible() || !_actor.hasAI() || ((_actor instanceof PlayerInstance) && (((PlayerInstance) _actor).isOnline() == 0)) || ((_actor instanceof PlayerInstance) && ((PlayerInstance) _actor).isInOfflineMode()))
+		if (!_actor.isVisible() || !_actor.hasAI() || ((_actor instanceof PlayerInstance) && !((PlayerInstance) _actor).isOnline()) || ((_actor instanceof PlayerInstance) && ((PlayerInstance) _actor).isInOfflineMode()))
 		{
 			return;
 		}
-		
-		/*
-		 * if (Config.DEBUG) LOGGER.warning("AbstractAI: notifyEvent -> " + evt + " " + arg0 + " " + arg1);
-		 */
 		
 		switch (evt)
 		{
@@ -744,7 +740,7 @@ abstract class AbstractAI implements Ctrl
 		
 		if (_actor instanceof PlayerInstance)
 		{
-			if (!AttackStanceTaskManager.getInstance().getAttackStanceTask(_actor) && isAutoAttacking)
+			if (!AttackStanceTaskManager.getInstance().hasAttackStanceTask(_actor) && isAutoAttacking)
 			{
 				AttackStanceTaskManager.getInstance().addAttackStanceTask(_actor);
 			}

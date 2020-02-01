@@ -83,7 +83,7 @@ public class RequestRestart extends GameClientPacket
 		}
 		
 		// Check if player is in combat
-		if (AttackStanceTaskManager.getInstance().getAttackStanceTask(player) && (!player.isGM() || !Config.GM_RESTART_FIGHTING))
+		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) && (!player.isGM() || !Config.GM_RESTART_FIGHTING))
 		{
 			player.sendPacket(SystemMessageId.CANT_RESTART_WHILE_FIGHTING);
 			sendPacket(RestartResponse.valueOf(false));

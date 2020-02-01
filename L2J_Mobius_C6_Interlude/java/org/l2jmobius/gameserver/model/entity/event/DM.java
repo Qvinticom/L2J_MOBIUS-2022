@@ -1010,7 +1010,7 @@ public class DM implements EventTask
 				{
 					if (player != null)
 					{
-						if (player.isOnline() != 0)
+						if (player.isOnline())
 						{
 							player.teleToLocation(_npcX, _npcY, _npcZ, false);
 						}
@@ -1291,7 +1291,7 @@ public class DM implements EventTask
 						continue;
 					}
 					
-					if ((player._inEventDM && (player.isOnline() == 0)) || player.isInJail() || player.isInOfflineMode())
+					if ((player._inEventDM && !player.isOnline()) || player.isInJail() || player.isInOfflineMode())
 					{
 						if (!_joining)
 						{

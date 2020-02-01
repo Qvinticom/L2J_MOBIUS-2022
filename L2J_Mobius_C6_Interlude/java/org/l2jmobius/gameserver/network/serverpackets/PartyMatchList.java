@@ -48,7 +48,7 @@ public class PartyMatchList extends GameServerPacket
 		
 		for (PartyMatchRoom room : PartyMatchRoomList.getInstance().getRooms())
 		{
-			if ((room.getMembers() < 1) || (room.getOwner() == null) || (room.getOwner().isOnline() == 0) || (room.getOwner().getPartyRoom() != room.getId()))
+			if ((room.getMembers() < 1) || (room.getOwner() == null) || !room.getOwner().isOnline() || (room.getOwner().getPartyRoom() != room.getId()))
 			{
 				PartyMatchRoomList.getInstance().deleteRoom(room.getId());
 				continue;

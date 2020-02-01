@@ -1086,7 +1086,7 @@ public class CTF implements EventTask
 				{
 					if (player != null)
 					{
-						if (player.isOnline() != 0)
+						if (player.isOnline())
 						{
 							player.teleToLocation(_npcX, _npcY, _npcZ, false);
 						}
@@ -1372,7 +1372,7 @@ public class CTF implements EventTask
 				{
 					_playersShuffle.remove(player);
 				}
-				else if ((player.isOnline() == 0) || player.isInJail() || player.isInOfflineMode())
+				else if (!player.isOnline() || player.isInJail() || player.isInOfflineMode())
 				{
 					removePlayer(player);
 				}
@@ -2329,7 +2329,7 @@ public class CTF implements EventTask
 		{
 			for (PlayerInstance player : _players)
 			{
-				if ((player != null) && (player.isOnline() != 0) && (player._inEventCTF))
+				if ((player != null) && player.isOnline() && (player._inEventCTF))
 				{
 					if ((teamName != null) && (player._teamNameCTF.equals(teamName)))
 					{
@@ -2604,7 +2604,7 @@ public class CTF implements EventTask
 		{
 			for (PlayerInstance player : _playersShuffle)
 			{
-				if ((player == null) || (player.isOnline() == 0))
+				if ((player == null) || !player.isOnline())
 				{
 					_playersShuffle.remove(player);
 					eventPlayer._inEventCTF = false;
@@ -2816,8 +2816,9 @@ public class CTF implements EventTask
 				{
 					if (player != null)
 					{
-						if ((player.isOnline() == 0) && player._haveFlagCTF)
-						{ // logged off with a flag in his hands
+						// logged off with a flag in his hands
+						if (!player.isOnline() && player._haveFlagCTF)
+						{
 							Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + player.getName() + " logged off with a CTF flag!");
 							player._haveFlagCTF = false;
 							if ((_teams.indexOf(player._teamNameHaveFlagCTF) >= 0) && _flagsTaken.get(_teams.indexOf(player._teamNameHaveFlagCTF)))
@@ -3189,7 +3190,7 @@ public class CTF implements EventTask
 			{
 				for (PlayerInstance player : _players)
 				{
-					if ((player != null) && (player.isOnline() != 0) && player._teamNameCTF.equals(ourFlag))
+					if ((player != null) && player.isOnline() && player._teamNameCTF.equals(ourFlag))
 					{
 						player.sendMessage(hasFlag.getName() + " took your flag!");
 						if (player._haveFlagCTF)
@@ -3340,6 +3341,6 @@ public class CTF implements EventTask
 	 */
 	public static boolean isOutsideCTFArea(PlayerInstance player)
 	{
-		return (player == null) || (player.isOnline() == 0) || (player.getX() <= (_eventCenterX - _eventOffset)) || (player.getX() >= (_eventCenterX + _eventOffset)) || (player.getY() <= (_eventCenterY - _eventOffset)) || (player.getY() >= (_eventCenterY + _eventOffset)) || (player.getZ() <= (_eventCenterZ - _eventOffset)) || (player.getZ() >= (_eventCenterZ + _eventOffset));
+		return (player == null) || !player.isOnline() || (player.getX() <= (_eventCenterX - _eventOffset)) || (player.getX() >= (_eventCenterX + _eventOffset)) || (player.getY() <= (_eventCenterY - _eventOffset)) || (player.getY() >= (_eventCenterY + _eventOffset)) || (player.getZ() <= (_eventCenterZ - _eventOffset)) || (player.getZ() >= (_eventCenterZ + _eventOffset));
 	}
 }

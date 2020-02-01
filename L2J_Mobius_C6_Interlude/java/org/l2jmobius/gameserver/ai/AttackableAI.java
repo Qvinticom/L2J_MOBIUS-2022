@@ -648,7 +648,7 @@ public class AttackableAI extends CreatureAI
 		
 		final Creature originalAttackTarget = getAttackTarget();
 		// Check if target is dead or if timeout is expired to stop this attack
-		if ((originalAttackTarget == null) || originalAttackTarget.isAlikeDead() || ((originalAttackTarget instanceof PlayerInstance) && (((PlayerInstance) originalAttackTarget).isInOfflineMode() || (((PlayerInstance) originalAttackTarget).isOnline() == 0))) || (_attackTimeout < GameTimeController.getGameTicks()))
+		if ((originalAttackTarget == null) || originalAttackTarget.isAlikeDead() || ((originalAttackTarget instanceof PlayerInstance) && (((PlayerInstance) originalAttackTarget).isInOfflineMode() || !((PlayerInstance) originalAttackTarget).isOnline())) || (_attackTimeout < GameTimeController.getGameTicks()))
 		{
 			// Stop hating this target after the attack timeout or if target is dead
 			if (originalAttackTarget != null)

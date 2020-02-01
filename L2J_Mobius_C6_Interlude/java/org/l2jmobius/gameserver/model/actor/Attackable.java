@@ -691,10 +691,10 @@ public class Attackable extends NpcInstance
 			}
 			
 			// Manage Base, Quests and Sweep drops of the Attackable
-			doItemDrop((maxDealer != null) && (maxDealer.isOnline() == 1) ? maxDealer : lastAttacker);
+			doItemDrop((maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker);
 			
 			// Manage drop of Special Events created by GM for a defined period
-			doEventDrop((maxDealer != null) && (maxDealer.isOnline() == 1) ? maxDealer : lastAttacker);
+			doEventDrop((maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker);
 			
 			if (!_mustGiveExpSp)
 			{
@@ -1148,8 +1148,7 @@ public class Attackable extends NpcInstance
 					continue;
 				}
 				
-				if (ai._attacker.isAlikeDead() || !getKnownList().knowsObject(ai._attacker) || !ai._attacker.isVisible() || ((ai._attacker instanceof PlayerInstance) && (((PlayerInstance) ai._attacker).isOnline() == 0) && !((PlayerInstance) ai._attacker).isInOfflineMode())) // if player go in
-																																																																					// offline
+				if (ai._attacker.isAlikeDead() || !getKnownList().knowsObject(ai._attacker) || !ai._attacker.isVisible() || ((ai._attacker instanceof PlayerInstance) && !((PlayerInstance) ai._attacker).isOnline() && !((PlayerInstance) ai._attacker).isInOfflineMode()))
 				{
 					ai._hate = 0;
 				}

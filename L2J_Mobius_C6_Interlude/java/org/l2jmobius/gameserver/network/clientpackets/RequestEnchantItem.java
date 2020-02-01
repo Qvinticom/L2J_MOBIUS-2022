@@ -139,7 +139,7 @@ public class RequestEnchantItem extends GameClientPacket
 			return;
 		}
 		
-		if (player.isOnline() == 0)
+		if (!player.isOnline())
 		{
 			player.setActiveEnchantItem(null);
 			return;

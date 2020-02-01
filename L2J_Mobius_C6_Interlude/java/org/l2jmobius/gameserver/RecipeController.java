@@ -326,14 +326,14 @@ public class RecipeController
 			
 			if ((_player == null) || (_target == null))
 			{
-				LOGGER.warning("player or target == null (disconnected?), aborting" + _target + _player);
+				LOGGER.warning("Player or target == null (disconnected?), aborting" + _target + _player);
 				abort();
 				return;
 			}
 			
-			if ((_player.isOnline() == 0) || (_target.isOnline() == 0))
+			if (_player.isOnline() || _target.isOnline())
 			{
-				LOGGER.warning("player or target is not online, aborting " + _target + _player);
+				LOGGER.warning("Player or target is not online, aborting " + _target + _player);
 				abort();
 				return;
 			}
@@ -342,12 +342,12 @@ public class RecipeController
 			{
 				if (_target != _player)
 				{
-					_target.sendMessage("Manufacture aborted");
-					_player.sendMessage("Manufacture aborted");
+					_target.sendMessage("Manufacture aborted.");
+					_player.sendMessage("Manufacture aborted.");
 				}
 				else
 				{
-					_player.sendMessage("Item creation aborted");
+					_player.sendMessage("Item creation aborted.");
 				}
 				
 				abort();

@@ -43,7 +43,7 @@ public class PcPoint implements Runnable
 		int score = 0;
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
-			if ((player.isOnline() == 1) && (player.getLevel() > Config.PCB_MIN_LEVEL) && !player.isInOfflineMode())
+			if (player.isOnline() && (player.getLevel() > Config.PCB_MIN_LEVEL) && !player.isInOfflineMode())
 			{
 				score = Rnd.get(Config.PCB_POINT_MIN, Config.PCB_POINT_MAX);
 				

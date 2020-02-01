@@ -55,7 +55,7 @@ public class Logout extends GameClientPacket
 		
 		player.getInventory().updateDatabase();
 		
-		if (AttackStanceTaskManager.getInstance().getAttackStanceTask(player) && (!player.isGM() || !Config.GM_RESTART_FIGHTING))
+		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) && (!player.isGM() || !Config.GM_RESTART_FIGHTING))
 		{
 			player.sendPacket(SystemMessageId.CANT_LOGOUT_WHILE_FIGHTING);
 			player.sendPacket(ActionFailed.STATIC_PACKET);

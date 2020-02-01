@@ -239,7 +239,7 @@ public class Announcements
 		final CreatureSay cs = new CreatureSay(0, 18, null, text);
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
-			if ((player != null) && (player.isOnline() != 0))
+			if ((player != null) && player.isOnline())
 			{
 				player.sendPacket(cs);
 			}

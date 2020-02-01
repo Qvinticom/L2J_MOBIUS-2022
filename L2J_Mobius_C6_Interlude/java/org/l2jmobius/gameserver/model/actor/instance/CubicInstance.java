@@ -573,7 +573,7 @@ public class CubicInstance
 					return;
 				}
 				
-				if (owner.isDead() || (owner.isOnline() == 0))
+				if (owner.isDead() || !owner.isOnline())
 				{
 					stopAction();
 					owner.delCubic(_id);
@@ -582,11 +582,11 @@ public class CubicInstance
 					return;
 				}
 				
-				if (!AttackStanceTaskManager.getInstance().getAttackStanceTask(owner))
+				if (!AttackStanceTaskManager.getInstance().hasAttackStanceTask(owner))
 				{
 					if (owner.getPet() != null)
 					{
-						if (!AttackStanceTaskManager.getInstance().getAttackStanceTask(owner.getPet()))
+						if (!AttackStanceTaskManager.getInstance().hasAttackStanceTask(owner.getPet()))
 						{
 							stopAction();
 							return;
@@ -1026,7 +1026,7 @@ public class CubicInstance
 		@Override
 		public void run()
 		{
-			if (_owner.isDead() || (_owner.isOnline() == 0))
+			if (_owner.isDead() || !_owner.isOnline())
 			{
 				stopAction();
 				_owner.delCubic(_id);

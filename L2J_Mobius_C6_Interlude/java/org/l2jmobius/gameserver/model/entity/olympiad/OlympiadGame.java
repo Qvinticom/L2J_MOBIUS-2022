@@ -790,7 +790,7 @@ class OlympiadGame
 			sm1 = new SystemMessage(SystemMessageId.THE_GAME_ENDED_IN_A_TIE);
 			broadcastMessage(sm1, true);
 		}
-		else if ((_playerTwo == null) || (_playerTwo.isOnline() == 0) || ((playerTwoHp == 0) && (playerOneHp != 0)) || ((_damageP1 > _damageP2) && (playerTwoHp != 0) && (playerOneHp != 0)))
+		else if ((_playerTwo == null) || !_playerTwo.isOnline() || ((playerTwoHp == 0) && (playerOneHp != 0)) || ((_damageP1 > _damageP2) && (playerTwoHp != 0) && (playerOneHp != 0)))
 		{
 			playerOneStat.set(POINTS, playerOnePoints + pointDiff);
 			playerTwoStat.set(POINTS, playerTwoPoints - pointDiff);
@@ -824,7 +824,7 @@ class OlympiadGame
 				LOGGER.warning("Olympiad System: Game - " + _stadiumID + " on player validateWinner, an error has been occurred: " + e);
 			}
 		}
-		else if ((_playerOne == null) || (_playerOne.isOnline() == 0) || ((playerOneHp == 0) && (playerTwoHp != 0)) || ((_damageP2 > _damageP1) && (playerOneHp != 0) && (playerTwoHp != 0)))
+		else if ((_playerOne == null) || !_playerOne.isOnline() || ((playerOneHp == 0) && (playerTwoHp != 0)) || ((_damageP2 > _damageP1) && (playerOneHp != 0) && (playerTwoHp != 0)))
 		{
 			playerTwoStat.set(POINTS, playerTwoPoints + pointDiff);
 			playerOneStat.set(POINTS, playerOnePoints - pointDiff);
@@ -1124,7 +1124,7 @@ class OlympiadGameTask implements Runnable
 			final PlayerInstance otherPlayer = _game._players.get(i ^ 1);
 			SystemMessage sm = null;
 			
-			if ((player == null) || (player.isOnline() == 0))
+			if ((player == null) || !player.isOnline())
 			{
 				defaulted = true;
 			}

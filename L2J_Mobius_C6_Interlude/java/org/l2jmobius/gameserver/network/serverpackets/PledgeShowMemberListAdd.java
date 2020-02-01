@@ -27,7 +27,7 @@ public class PledgeShowMemberListAdd extends GameServerPacket
 	private String _name;
 	private int _lvl;
 	private int _classId;
-	private int _isOnline;
+	private int _objectId;
 	private int _pledgeType;
 	
 	public PledgeShowMemberListAdd(PlayerInstance player)
@@ -35,7 +35,7 @@ public class PledgeShowMemberListAdd extends GameServerPacket
 		_name = player.getName();
 		_lvl = player.getLevel();
 		_classId = player.getClassId().getId();
-		_isOnline = player.isOnline() == 1 ? player.getObjectId() : 0;
+		_objectId = player.isOnline() ? player.getObjectId() : 0;
 		_pledgeType = player.getPledgeType();
 	}
 	
@@ -46,7 +46,7 @@ public class PledgeShowMemberListAdd extends GameServerPacket
 			_name = cm.getName();
 			_lvl = cm.getLevel();
 			_classId = cm.getClassId();
-			_isOnline = cm.isOnline() ? cm.getObjectId() : 0;
+			_objectId = cm.isOnline() ? cm.getObjectId() : 0;
 			_pledgeType = cm.getPledgeType();
 		}
 		catch (Exception e)
@@ -63,7 +63,7 @@ public class PledgeShowMemberListAdd extends GameServerPacket
 		writeD(_classId);
 		writeD(0);
 		writeD(1);
-		writeD(_isOnline); // 1=online 0=offline
+		writeD(_objectId); // 1=online 0=offline?
 		writeD(_pledgeType);
 	}
 }

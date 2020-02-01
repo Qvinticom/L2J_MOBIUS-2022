@@ -32,7 +32,7 @@ public class PledgeShowMemberListUpdate extends GameServerPacket
 	private final int _level;
 	private final int _classId;
 	private final int _objectId;
-	private int _isOnline;
+	private final boolean _isOnline;
 	
 	public PledgeShowMemberListUpdate(PlayerInstance player)
 	{
@@ -42,7 +42,7 @@ public class PledgeShowMemberListUpdate extends GameServerPacket
 		{
 			_hasSponsor = _player.getSponsor() != 0 ? 1 : 0;
 		}
-		else if (_player.isOnline() == 1)
+		else if (_player.isOnline())
 		{
 			_hasSponsor = _player.isClanLeader() ? 1 : 0;
 		}
@@ -64,14 +64,7 @@ public class PledgeShowMemberListUpdate extends GameServerPacket
 		_level = player.getLevel();
 		_classId = player.getClassId();
 		_objectId = player.getObjectId();
-		if (player.isOnline())
-		{
-			_isOnline = 1;
-		}
-		else
-		{
-			_isOnline = 0;
-		}
+		_isOnline = _player.isOnline();
 		_pledgeType = player.getPledgeType();
 		if (_pledgeType == Clan.SUBUNIT_ACADEMY)
 		{
@@ -96,7 +89,7 @@ public class PledgeShowMemberListUpdate extends GameServerPacket
 		writeD(_classId);
 		writeD(0);
 		writeD(_objectId);
-		writeD(_isOnline); // 1=online 0=offline
+		writeD(_isOnline ? 1 : 0); // 1=online 0=offline
 		writeD(_pledgeType);
 		writeD(_hasSponsor);
 	}

@@ -1025,7 +1025,7 @@ public class TvT implements EventTask
 				{
 					if (player != null)
 					{
-						if (player.isOnline() != 0)
+						if (player.isOnline())
 						{
 							player.teleToLocation(_npcX, _npcY, _npcZ, false);
 						}
@@ -1310,7 +1310,7 @@ public class TvT implements EventTask
 				{
 					_playersShuffle.remove(player);
 				}
-				else if ((player.isOnline() == 0) || player.isInJail() || player.isInOfflineMode())
+				else if (!player.isOnline() || player.isInJail() || player.isInOfflineMode())
 				{
 					removePlayer(player);
 				}
@@ -2217,7 +2217,7 @@ public class TvT implements EventTask
 		{
 			for (PlayerInstance player : _players)
 			{
-				if ((player != null) && (player.isOnline() != 0) && (player._inEventTvT) && (!player.equals(looser)) && ((player._countTvTkills > 0) || Config.TVT_PRICE_NO_KILLS))
+				if ((player != null) && player.isOnline() && (player._inEventTvT) && (!player.equals(looser)) && ((player._countTvTkills > 0) || Config.TVT_PRICE_NO_KILLS))
 				{
 					if ((bestKiller != null) && (bestKiller.equals(player)))
 					{
@@ -2489,7 +2489,7 @@ public class TvT implements EventTask
 		{
 			for (PlayerInstance player : _playersShuffle)
 			{
-				if ((player == null) || (player.isOnline() == 0))
+				if ((player == null) || !player.isOnline())
 				{
 					_playersShuffle.remove(player);
 					eventPlayer._inEventTvT = false;
@@ -2644,7 +2644,7 @@ public class TvT implements EventTask
 		{
 			_playersShuffle.remove(playerToKick);
 			removePlayer(playerToKick);
-			if (playerToKick.isOnline() != 0)
+			if (playerToKick.isOnline())
 			{
 				playerToKick.getAppearance().setNameColor(playerToKick._originalNameColorTvT);
 				playerToKick.setKarma(playerToKick._originalKarmaTvT);

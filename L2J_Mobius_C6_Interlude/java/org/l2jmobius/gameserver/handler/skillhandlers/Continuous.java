@@ -227,7 +227,7 @@ public class Continuous implements ISkillHandler
 			}
 			
 			// If target is not in game anymore...
-			if ((target instanceof PlayerInstance) && (((PlayerInstance) target).isOnline() == 0))
+			if ((target instanceof PlayerInstance) && !((PlayerInstance) target).isOnline())
 			{
 				continue;
 			}

@@ -941,13 +941,13 @@ public class AdminEditChar implements IAdminCommandHandler
 	{
 		final List<PlayerInstance> onlinePlayersList = new ArrayList<>();
 		
-		for (PlayerInstance actual_player : World.getInstance().getAllPlayers())
+		for (PlayerInstance actualPlayer : World.getInstance().getAllPlayers())
 		{
-			if ((actual_player != null) && (actual_player.isOnline() == 1) && !actual_player.isInOfflineMode())
+			if ((actualPlayer != null) && actualPlayer.isOnline() && !actualPlayer.isInOfflineMode())
 			{
-				onlinePlayersList.add(actual_player);
+				onlinePlayersList.add(actualPlayer);
 			}
-			else if (actual_player == null)
+			else if (actualPlayer == null)
 			{
 				LOGGER.warning("listCharacters: found player null into World Instance..");
 			}

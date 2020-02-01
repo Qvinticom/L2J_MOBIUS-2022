@@ -53,7 +53,7 @@ public class RequestFriendList extends GameClientPacket
 			
 			final PlayerInstance friend = World.getInstance().getPlayer(id);
 			
-			player.sendPacket(SystemMessage.getSystemMessage(((friend == null) || (friend.isOnline() == 0)) ? SystemMessageId.S1_OFFLINE : SystemMessageId.S1_ONLINE).addString(friendName));
+			player.sendPacket(SystemMessage.getSystemMessage(((friend == null) || !friend.isOnline()) ? SystemMessageId.S1_OFFLINE : SystemMessageId.S1_ONLINE).addString(friendName));
 		}
 		
 		// =========================

@@ -304,7 +304,7 @@ public class TamedBeastInstance extends FeedableBeastInstance
 	public void onOwnerGotAttacked(Creature attacker)
 	{
 		// check if the owner is no longer around...if so, despawn
-		if ((_owner == null) || (_owner.isOnline() == 0))
+		if ((_owner == null) || !_owner.isOnline())
 		{
 			doDespawn();
 			return;
@@ -466,7 +466,7 @@ public class TamedBeastInstance extends FeedableBeastInstance
 			final PlayerInstance owner = _tamedBeast.getOwner();
 			
 			// check if the owner is no longer around...if so, despawn
-			if ((owner == null) || (owner.isOnline() == 0))
+			if ((owner == null) || !owner.isOnline())
 			{
 				doDespawn();
 				return;

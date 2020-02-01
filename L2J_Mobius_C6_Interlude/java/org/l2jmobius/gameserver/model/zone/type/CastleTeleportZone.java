@@ -134,8 +134,7 @@ public class CastleTeleportZone extends ZoneType
 			if ((creature != null) && (creature instanceof PlayerInstance))
 			{
 				final PlayerInstance player = (PlayerInstance) creature;
-				
-				if (player.isOnline() == 1)
+				if (player.isOnline())
 				{
 					player.teleToLocation(Rnd.get(_spawnLoc[0], _spawnLoc[1]), Rnd.get(_spawnLoc[2], _spawnLoc[3]), _spawnLoc[4]);
 				}

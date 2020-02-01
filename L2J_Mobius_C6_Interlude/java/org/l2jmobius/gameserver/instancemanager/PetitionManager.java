@@ -113,7 +113,7 @@ public class PetitionManager
 		public boolean endPetitionConsultation(PetitionState endState)
 		{
 			setState(endState);
-			if ((_responder != null) && (_responder.isOnline() == 1))
+			if ((_responder != null) && _responder.isOnline())
 			{
 				if (endState == PetitionState.Responder_Reject)
 				{
@@ -137,7 +137,7 @@ public class PetitionManager
 			}
 			
 			// End petition consultation and inform them, if they are still online.
-			if ((_petitioner != null) && (_petitioner.isOnline() == 1))
+			if ((_petitioner != null) && _petitioner.isOnline())
 			{
 				_petitioner.sendPacket(SystemMessageId.THIS_END_THE_PETITION_PLEASE_PROVIDE_FEEDBACK);
 			}
@@ -183,7 +183,7 @@ public class PetitionManager
 		
 		public void sendPetitionerPacket(GameServerPacket responsePacket)
 		{
-			if ((_petitioner == null) || (_petitioner.isOnline() == 0))
+			if ((_petitioner == null) || !_petitioner.isOnline())
 			{
 				return;
 			}
@@ -193,7 +193,7 @@ public class PetitionManager
 		
 		public void sendResponderPacket(GameServerPacket responsePacket)
 		{
-			if ((_responder == null) || (_responder.isOnline() == 0))
+			if ((_responder == null) || !_responder.isOnline())
 			{
 				endPetitionConsultation(PetitionState.Responder_Missing);
 				return;

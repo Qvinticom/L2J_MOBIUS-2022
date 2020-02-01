@@ -96,7 +96,7 @@ public class AdminTownWar implements IAdminCommandHandler
 			
 			for (PlayerInstance onlinePlayer : pls)
 			{
-				if (onlinePlayer.isOnline() == 1)
+				if (onlinePlayer.isOnline())
 				{
 					x = onlinePlayer.getX();
 					y = onlinePlayer.getY();
@@ -176,7 +176,7 @@ public class AdminTownWar implements IAdminCommandHandler
 			
 			for (PlayerInstance onlinePlayer : pls)
 			{
-				if (onlinePlayer.isOnline() == 1)
+				if (onlinePlayer.isOnline())
 				{
 					x = onlinePlayer.getX();
 					y = onlinePlayer.getY();

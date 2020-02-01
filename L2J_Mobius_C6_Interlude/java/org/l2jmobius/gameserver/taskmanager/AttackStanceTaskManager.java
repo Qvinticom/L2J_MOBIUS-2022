@@ -79,7 +79,7 @@ public class AttackStanceTaskManager
 		_attackStanceTasks.remove(actor);
 	}
 	
-	public boolean getAttackStanceTask(Creature actor)
+	public boolean hasAttackStanceTask(Creature actor)
 	{
 		if (actor instanceof Summon)
 		{

@@ -35,7 +35,7 @@ public class Appearing extends GameClientPacket
 	{
 		final PlayerInstance player = getClient().getPlayer();
 		
-		if ((player == null) || (player.isOnline() == 0))
+		if ((player == null) || !player.isOnline())
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;

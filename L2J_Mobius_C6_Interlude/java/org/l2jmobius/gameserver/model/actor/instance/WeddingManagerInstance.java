@@ -113,7 +113,7 @@ public class WeddingManagerInstance extends NpcInstance
 		
 		final PlayerInstance ptarget = (PlayerInstance) World.getInstance().findObject(player.getPartnerId());
 		// partner online ?
-		if ((ptarget == null) || (ptarget.isOnline() == 0))
+		if ((ptarget == null) || !ptarget.isOnline())
 		{
 			filename = "data/html/mods/Wedding_notfound.htm";
 			sendHtmlMessage(player, filename, replace);

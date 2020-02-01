@@ -176,7 +176,7 @@ public class BossZone extends ZoneType
 			if (creature instanceof PlayerInstance)
 			{
 				final PlayerInstance player = (PlayerInstance) creature;
-				if (player.isOnline() == 1)
+				if (player.isOnline())
 				{
 					player.teleToLocation(x, y, z);
 				}
@@ -199,7 +199,7 @@ public class BossZone extends ZoneType
 			}
 			
 			// if the player just got disconnected/logged out, store the dc time so that decisions can be made later about allowing or not the player to LOGGER into the zone
-			if ((player.isOnline() == 0) && _playersAllowed.contains(creature.getObjectId()))
+			if (!player.isOnline() && _playersAllowed.contains(creature.getObjectId()))
 			{
 				// mark the time that the player left the zone
 				_playerAllowedReEntryTimes.put(creature.getObjectId(), System.currentTimeMillis() + _timeInvade);
@@ -283,8 +283,7 @@ public class BossZone extends ZoneType
 			if (creature instanceof PlayerInstance)
 			{
 				final PlayerInstance player = (PlayerInstance) creature;
-				
-				if (player.isOnline() == 1)
+				if (player.isOnline())
 				{
 					player.teleToLocation(TeleportWhereType.TOWN);
 				}
@@ -338,7 +337,7 @@ public class BossZone extends ZoneType
 			if (creature instanceof PlayerInstance)
 			{
 				final PlayerInstance player = (PlayerInstance) creature;
-				if ((player.isOnline() == 1) || player.isInOfflineMode())
+				if (player.isOnline() || player.isInOfflineMode())
 				{
 					npcKnownPlayers.put(player.getObjectId(), player);
 				}

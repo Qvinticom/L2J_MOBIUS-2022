@@ -525,7 +525,7 @@ public class ChristmasManager
 					{
 						continue;
 					}
-					else if (pc.isOnline() == 0)
+					else if (!pc.isOnline())
 					{
 						continue;
 					}
@@ -590,7 +590,7 @@ public class ChristmasManager
 					{
 						continue;
 					}
-					else if (pc.isOnline() == 0)
+					else if (!pc.isOnline())
 					{
 						continue;
 					}

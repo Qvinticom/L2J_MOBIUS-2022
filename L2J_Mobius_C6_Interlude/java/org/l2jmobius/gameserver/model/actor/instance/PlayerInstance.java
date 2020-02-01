@@ -6848,7 +6848,7 @@ public class PlayerInstance extends Playable
 					final CreatureSay cs12 = new CreatureSay(0, 15, "", getName() + " 5 consecutive kill! Only Gm."); // 8D
 					for (PlayerInstance player : World.getInstance().getAllPlayers())
 					{
-						if ((player != null) && (player.isOnline() != 0) && player.isGM())
+						if ((player != null) && player.isOnline() && player.isGM())
 						{
 							player.sendPacket(cs12);
 						}
@@ -6861,7 +6861,7 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs = new CreatureSay(0, 15, "", getName() + " is Dominating!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if ((player != null) && (player.isOnline() != 0))
+					if ((player != null) && player.isOnline())
 					{
 						player.sendPacket(cs);
 					}
@@ -6873,7 +6873,7 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs2 = new CreatureSay(0, 15, "", getName() + " is on a Rampage!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if ((player != null) && (player.isOnline() != 0))
+					if ((player != null) && player.isOnline())
 					{
 						player.sendPacket(cs2);
 					}
@@ -6885,7 +6885,7 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs3 = new CreatureSay(0, 15, "", getName() + " is on a Killing Spree!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if ((player != null) && (player.isOnline() != 0))
+					if ((player != null) && player.isOnline())
 					{
 						player.sendPacket(cs3);
 					}
@@ -6897,7 +6897,7 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs4 = new CreatureSay(0, 15, "", getName() + " is on a Monster Kill!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if ((player != null) && (player.isOnline() != 0))
+					if ((player != null) && player.isOnline())
 					{
 						player.sendPacket(cs4);
 					}
@@ -6909,7 +6909,7 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs5 = new CreatureSay(0, 15, "", getName() + " is Unstoppable!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if ((player != null) && (player.isOnline() != 0))
+					if ((player != null) && player.isOnline())
 					{
 						player.sendPacket(cs5);
 					}
@@ -6921,7 +6921,7 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs6 = new CreatureSay(0, 15, "", getName() + " is on an Ultra Kill!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if ((player != null) && (player.isOnline() != 0))
+					if ((player != null) && player.isOnline())
 					{
 						player.sendPacket(cs6);
 					}
@@ -6933,7 +6933,7 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs7 = new CreatureSay(0, 15, "", getName() + " God Blessed!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if ((player != null) && (player.isOnline() != 0))
+					if ((player != null) && player.isOnline())
 					{
 						player.sendPacket(cs7);
 					}
@@ -6945,7 +6945,7 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs8 = new CreatureSay(0, 15, "", getName() + " is Wicked Sick!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if ((player != null) && (player.isOnline() != 0))
+					if ((player != null) && player.isOnline())
 					{
 						player.sendPacket(cs8);
 					}
@@ -6957,7 +6957,7 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs9 = new CreatureSay(0, 15, "", getName() + " is on a Ludricrous Kill!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if ((player != null) && (player.isOnline() != 0))
+					if ((player != null) && player.isOnline())
 					{
 						player.sendPacket(cs9);
 					}
@@ -6969,7 +6969,7 @@ public class PlayerInstance extends Playable
 				final CreatureSay cs10 = new CreatureSay(0, 15, "", getName() + " is GodLike!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					if ((player != null) && (player.isOnline() != 0))
+					if ((player != null) && player.isOnline())
 					{
 						player.sendPacket(cs10);
 					}
@@ -8378,7 +8378,7 @@ public class PlayerInstance extends Playable
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET online=?, lastAccess=? WHERE obj_id=?");
-			statement.setInt(1, isOnline());
+			statement.setInt(1, isOnline() ? 1 : 0);
 			statement.setLong(2, System.currentTimeMillis());
 			statement.setInt(3, getObjectId());
 			statement.execute();
@@ -8499,7 +8499,7 @@ public class PlayerInstance extends Playable
 			statement.setInt(46, hasDwarvenCraft() ? 1 : 0);
 			statement.setString(47, getTitle());
 			statement.setInt(48, getAccessLevel().getLevel());
-			statement.setInt(49, isOnline());
+			statement.setInt(49, isOnline() ? 1 : 0);
 			statement.setInt(50, isIn7sDungeon() ? 1 : 0);
 			statement.setInt(51, getClanPrivileges());
 			statement.setInt(52, getWantsPeace());
@@ -9128,13 +9128,13 @@ public class PlayerInstance extends Playable
 			statement.setString(34, getTitle());
 			statement.setInt(35, getAccessLevel().getLevel());
 			
-			if (_isInOfflineMode || (isOnline() == 1)) // in offline mode or online
+			if (_isInOfflineMode || isOnline()) // in offline mode or online
 			{
 				statement.setInt(36, 1);
 			}
 			else
 			{
-				statement.setInt(36, isOnline());
+				statement.setInt(36, isOnline() ? 1 : 0);
 			}
 			
 			statement.setInt(37, isIn7sDungeon() ? 1 : 0);
@@ -9310,13 +9310,12 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return True if the PlayerInstance is on line.<BR>
-	 * <BR>
-	 * @return the int
+	 * Return True if the PlayerInstance is online.
+	 * @return if player is online
 	 */
-	public int isOnline()
+	public boolean isOnline()
 	{
-		return _isOnline ? 1 : 0;
+		return _isOnline;
 	}
 	
 	/**
@@ -11436,7 +11435,7 @@ public class PlayerInstance extends Playable
 		@Override
 		public void run()
 		{
-			if (isOnline() == 1)
+			if (isOnline())
 			{
 				sendPacket(new SystemMessage(SystemMessageId.PLAYING_FOR_LONG_TIME));
 			}
@@ -16154,7 +16153,7 @@ public class PlayerInstance extends Playable
 			final Collection<PlayerInstance> allPlayers = World.getInstance().getAllPlayers();
 			for (PlayerInstance player : allPlayers)
 			{
-				if ((player != null) && (player.isOnline() == 1) && (player.getClient() != null) && (player.getClient().getConnection() != null) && !player.getClient().getConnection().isClosed() && (player.getClient().getConnection().getInetAddress() != null) && !player.getName().equals(getName()))
+				if ((player != null) && player.isOnline() && (player.getClient() != null) && (player.getClient().getConnection() != null) && !player.getClient().getConnection().isClosed() && (player.getClient().getConnection().getInetAddress() != null) && !player.getName().equals(getName()))
 				{
 					final String ip = player.getClient().getConnection().getInetAddress().getHostAddress();
 					if (thisip.equals(ip) && (this != player))
@@ -16198,7 +16197,7 @@ public class PlayerInstance extends Playable
 			
 			for (PlayerInstance player : players)
 			{
-				if ((player != null) && (player.isOnline() == 1) && (player.getClient() != null) && (player.getClient().getConnection() != null) && !player.getClient().getConnection().isClosed() && !player.getName().equals(getName()))
+				if ((player != null) && player.isOnline() && (player.getClient() != null) && (player.getClient().getConnection() != null) && !player.getClient().getConnection().isClosed() && !player.getName().equals(getName()))
 				{
 					final String ip = player.getClient().getConnection().getInetAddress().getHostAddress();
 					if (thisip.equals(ip) && (this != player))

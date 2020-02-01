@@ -255,7 +255,7 @@ public class FriendsBBSManager extends BaseBBSManager
 			}
 			
 			final PlayerInstance friend = World.getInstance().getPlayer(id);
-			StringUtil.append(sb, "<a action=\"bypass _friend;select;", id, "\">[Select]</a>&nbsp;", friendName, " ", (((friend != null) && (friend.isOnline() == 1)) ? "(on)" : "(off)"), "<br1>");
+			StringUtil.append(sb, "<a action=\"bypass _friend;select;", id, "\">[Select]</a>&nbsp;", friendName, " ", (((friend != null) && friend.isOnline()) ? "(on)" : "(off)"), "<br1>");
 		}
 		content = content.replace("%friendslist%", sb.toString());
 		
@@ -272,7 +272,7 @@ public class FriendsBBSManager extends BaseBBSManager
 			}
 			
 			final PlayerInstance friend = World.getInstance().getPlayer(id);
-			StringUtil.append(sb, "<a action=\"bypass _friend;deselect;", id, "\">[Deselect]</a>&nbsp;", friendName, " ", (((friend != null) && (friend.isOnline() == 1)) ? "(on)" : "(off)"), "<br1>");
+			StringUtil.append(sb, "<a action=\"bypass _friend;deselect;", id, "\">[Deselect]</a>&nbsp;", friendName, " ", (((friend != null) && friend.isOnline()) ? "(on)" : "(off)"), "<br1>");
 		}
 		content = content.replace("%selectedFriendsList%", sb.toString());
 		
@@ -311,7 +311,7 @@ public class FriendsBBSManager extends BaseBBSManager
 			}
 			
 			final PlayerInstance block = World.getInstance().getPlayer(id);
-			StringUtil.append(sb, "<a action=\"bypass _block;select;", id, "\">[Select]</a>&nbsp;", blockName, " ", (((block != null) && (block.isOnline() == 1)) ? "(on)" : "(off)"), "<br1>");
+			StringUtil.append(sb, "<a action=\"bypass _block;select;", id, "\">[Select]</a>&nbsp;", blockName, " ", (((block != null) && block.isOnline()) ? "(on)" : "(off)"), "<br1>");
 		}
 		content = content.replace("%blocklist%", sb.toString());
 		
@@ -328,7 +328,7 @@ public class FriendsBBSManager extends BaseBBSManager
 			}
 			
 			final PlayerInstance block = World.getInstance().getPlayer(id);
-			StringUtil.append(sb, "<a action=\"bypass _block;deselect;", id, "\">[Deselect]</a>&nbsp;", blockName, " ", (((block != null) && (block.isOnline() == 1)) ? "(on)" : "(off)"), "<br1>");
+			StringUtil.append(sb, "<a action=\"bypass _block;deselect;", id, "\">[Deselect]</a>&nbsp;", blockName, " ", (((block != null) && block.isOnline()) ? "(on)" : "(off)"), "<br1>");
 		}
 		content = content.replace("%selectedBlocksList%", sb.toString());
 		
