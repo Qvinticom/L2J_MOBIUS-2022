@@ -61,8 +61,8 @@ public class Config
 	private static final String CHARACTER_CONFIG_FILE = "./config/main/Character.ini";
 	private static final String CLANHALL_CONFIG_FILE = "./config/main/Clanhall.ini";
 	public static final String CLASS_DAMAGE_CONFIG_FILE = "./config/main/ClassDamage.ini";
+	private static final String CONQUERABLE_CLANHALL_CONFIG_FILE = "./config/main/ConquerableClanHalls.ini";
 	private static final String CRAFTING_CONFIG_FILE = "./config/main/Crafting.ini";
-	private static final String ELIT_CLANHALL_CONFIG_FILE = "./config/main/EliteClanhall.ini";
 	private static final String ENCHANT_CONFIG_FILE = "./config/main/Enchant.ini";
 	public static final String FORTSIEGE_CONFIG_FILE = "./config/main/Fort.ini";
 	private static final String GENERAL_CONFIG_FILE = "./config/main/General.ini";
@@ -1811,22 +1811,22 @@ public class Config
 	{
 		try
 		{
-			final Properties elitchSettings = new Properties();
-			final InputStream is = new FileInputStream(new File(ELIT_CLANHALL_CONFIG_FILE));
-			elitchSettings.load(is);
+			final Properties conquerableSettings = new Properties();
+			final InputStream is = new FileInputStream(new File(CONQUERABLE_CLANHALL_CONFIG_FILE));
+			conquerableSettings.load(is);
 			is.close();
 			
-			DEVASTATED_DAY = Integer.parseInt(elitchSettings.getProperty("DevastatedDay", "1"));
-			DEVASTATED_HOUR = Integer.parseInt(elitchSettings.getProperty("DevastatedHour", "18"));
-			DEVASTATED_MINUTES = Integer.parseInt(elitchSettings.getProperty("DevastatedMinutes", "0"));
-			PARTISAN_DAY = Integer.parseInt(elitchSettings.getProperty("PartisanDay", "5"));
-			PARTISAN_HOUR = Integer.parseInt(elitchSettings.getProperty("PartisanHour", "21"));
-			PARTISAN_MINUTES = Integer.parseInt(elitchSettings.getProperty("PartisanMinutes", "0"));
+			DEVASTATED_DAY = Integer.parseInt(conquerableSettings.getProperty("DevastatedDay", "1"));
+			DEVASTATED_HOUR = Integer.parseInt(conquerableSettings.getProperty("DevastatedHour", "18"));
+			DEVASTATED_MINUTES = Integer.parseInt(conquerableSettings.getProperty("DevastatedMinutes", "0"));
+			PARTISAN_DAY = Integer.parseInt(conquerableSettings.getProperty("PartisanDay", "5"));
+			PARTISAN_HOUR = Integer.parseInt(conquerableSettings.getProperty("PartisanHour", "21"));
+			PARTISAN_MINUTES = Integer.parseInt(conquerableSettings.getProperty("PartisanMinutes", "0"));
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			throw new Error("Failed to Load " + ELIT_CLANHALL_CONFIG_FILE + " File.");
+			throw new Error("Failed to Load " + CONQUERABLE_CLANHALL_CONFIG_FILE + " File.");
 		}
 	}
 	
