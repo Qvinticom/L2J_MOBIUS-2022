@@ -138,7 +138,7 @@ public class WorldObjectKnownList
 				}
 			}
 		}
-		else
+		else if (_activeObject != null)
 		{
 			// Go through all visible WorldObject near the Creature
 			for (WorldObject playable : World.getInstance().getVisiblePlayers(_activeObject))
