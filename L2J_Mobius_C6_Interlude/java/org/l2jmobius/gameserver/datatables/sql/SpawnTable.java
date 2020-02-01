@@ -276,7 +276,7 @@ public class SpawnTable
 		{
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				final PreparedStatement statement = con.prepareStatement("INSERT INTO " + (spawn.isCustom() ? "custom_spawnlist" : "spawnlist") + "(id,count,npc_templateid,locx,locy,locz,heading,respawn_delay,loc_id) values(?,?,?,?,?,?,?,?,?)");
+				final PreparedStatement statement = con.prepareStatement("INSERT INTO " + (Config.SAVE_GMSPAWN_ON_CUSTOM ? "custom_spawnlist" : "spawnlist") + "(id,count,npc_templateid,locx,locy,locz,heading,respawn_delay,loc_id) values(?,?,?,?,?,?,?,?,?)");
 				statement.setInt(1, spawn.getId());
 				statement.setInt(2, spawn.getAmount());
 				statement.setInt(3, spawn.getNpcId());
@@ -324,7 +324,7 @@ public class SpawnTable
 			{
 				try (Connection con = DatabaseFactory.getConnection())
 				{
-					final PreparedStatement statement = con.prepareStatement("DELETE FROM " + (spawn.isCustom() ? "custom_spawnlist" : "spawnlist") + " WHERE id=?");
+					final PreparedStatement statement = con.prepareStatement("DELETE FROM " + (Config.SAVE_GMSPAWN_ON_CUSTOM ? "custom_spawnlist" : "spawnlist") + " WHERE id=?");
 					statement.setInt(1, spawn.getId());
 					statement.execute();
 					statement.close();

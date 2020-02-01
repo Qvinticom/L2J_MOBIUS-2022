@@ -916,12 +916,10 @@ public class Antharas extends Quest
 	@Override
 	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
-		if (((npc.getSpawn() != null) && !npc.getSpawn().isCustomBossInstance() && (npc.getNpcId() == 29019)) || (npc.getNpcId() == 29066) || (npc.getNpcId() == 29067) || (npc.getNpcId() == 29068))
+		if ((npc.getNpcId() == 29019) || (npc.getNpcId() == 29066) || (npc.getNpcId() == 29067) || (npc.getNpcId() == 29068))
 		{
 			_LastAction = System.currentTimeMillis();
-			/*
-			 * if (GrandBossManager.getInstance().getBossStatus(_antharas.getNpcId()) != FIGHTING) { _Zone.oustAllPlayers(); } else
-			 */if (!FWA_OLDANTHARAS && (_mobsSpawnTask == null))
+			if (!FWA_OLDANTHARAS && (_mobsSpawnTask == null))
 			{
 				startMinionSpawns(npc.getNpcId());
 			}
@@ -960,17 +958,14 @@ public class Antharas extends Quest
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS01_D", npc));
 			
-			if (!npc.getSpawn().isCustomBossInstance())
-			{
-				_cubeSpawnTask = ThreadPool.schedule(new CubeSpawn(0), 10000);
-				GrandBossManager.getInstance().setBossStatus(npc.getNpcId(), DEAD);
-				final long respawnTime = (Config.ANTHARAS_RESP_FIRST + Rnd.get(Config.ANTHARAS_RESP_SECOND)) * 3600000;
-				ThreadPool.schedule(new UnlockAntharas(npc.getNpcId()), respawnTime);
-				// also save the respawn time so that the info is maintained past reboots
-				final StatSet info = GrandBossManager.getInstance().getStatSet(npc.getNpcId());
-				info.set("respawn_time", (System.currentTimeMillis() + respawnTime));
-				GrandBossManager.getInstance().setStatSet(npc.getNpcId(), info);
-			}
+			_cubeSpawnTask = ThreadPool.schedule(new CubeSpawn(0), 10000);
+			GrandBossManager.getInstance().setBossStatus(npc.getNpcId(), DEAD);
+			final long respawnTime = (Config.ANTHARAS_RESP_FIRST + Rnd.get(Config.ANTHARAS_RESP_SECOND)) * 3600000;
+			ThreadPool.schedule(new UnlockAntharas(npc.getNpcId()), respawnTime);
+			// also save the respawn time so that the info is maintained past reboots
+			final StatSet info = GrandBossManager.getInstance().getStatSet(npc.getNpcId());
+			info.set("respawn_time", (System.currentTimeMillis() + respawnTime));
+			GrandBossManager.getInstance().setStatSet(npc.getNpcId(), info);
 		}
 		else if (npc.getNpcId() == 29069)
 		{

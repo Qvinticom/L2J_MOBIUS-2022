@@ -43,7 +43,39 @@ public class AdminDelete implements IAdminCommandHandler
 	{
 		if (command.equals("admin_delete"))
 		{
-			handleDelete(activeChar);
+			final WorldObject obj = activeChar.getTarget();
+			if (obj instanceof NpcInstance)
+			{
+				final NpcInstance target = (NpcInstance) obj;
+				target.deleteMe();
+				
+				final Spawn spawn = target.getSpawn();
+				if (spawn != null)
+				{
+					if (GrandBossManager.getInstance().isDefined(spawn.getNpcId()))
+					{
+						BuilderUtil.sendSysMessage(activeChar, "You cannot delete a grandboss.");
+						return true;
+					}
+					
+					spawn.stopRespawn();
+					
+					if (RaidBossSpawnManager.getInstance().isDefined(spawn.getNpcId()))
+					{
+						RaidBossSpawnManager.getInstance().deleteSpawn(spawn, true);
+					}
+					else
+					{
+						SpawnTable.getInstance().deleteSpawn(spawn, true);
+					}
+				}
+				
+				BuilderUtil.sendSysMessage(activeChar, "Deleted " + target.getName() + " from " + target.getObjectId() + ".");
+			}
+			else
+			{
+				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			}
 		}
 		
 		return true;
@@ -53,44 +85,5 @@ public class AdminDelete implements IAdminCommandHandler
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
-	}
-	
-	// TODO: add possibility to delete any WorldObject (except PlayerInstance)
-	private void handleDelete(PlayerInstance activeChar)
-	{
-		final WorldObject obj = activeChar.getTarget();
-		
-		if (obj instanceof NpcInstance)
-		{
-			final NpcInstance target = (NpcInstance) obj;
-			target.deleteMe();
-			
-			final Spawn spawn = target.getSpawn();
-			if (spawn != null)
-			{
-				spawn.stopRespawn();
-				
-				if (RaidBossSpawnManager.getInstance().isDefined(spawn.getNpcId()) && !spawn.isCustomBossInstance())
-				{
-					RaidBossSpawnManager.getInstance().deleteSpawn(spawn, true);
-				}
-				else
-				{
-					boolean update = true;
-					if (GrandBossManager.getInstance().isDefined(spawn.getNpcId()) && spawn.isCustomBossInstance())
-					{
-						update = false;
-					}
-					
-					SpawnTable.getInstance().deleteSpawn(spawn, update);
-				}
-			}
-			
-			BuilderUtil.sendSysMessage(activeChar, "Deleted " + target.getName() + " from " + target.getObjectId() + ".");
-		}
-		else
-		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
-		}
 	}
 }

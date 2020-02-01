@@ -95,10 +95,7 @@ public class RaidBossInstance extends MonsterInstance
 			}
 		}
 		
-		if (!getSpawn().isCustomBossInstance())
-		{
-			RaidBossSpawnManager.getInstance().updateStatus(this, true);
-		}
+		RaidBossSpawnManager.getInstance().updateStatus(this, true);
 		
 		return true;
 	}

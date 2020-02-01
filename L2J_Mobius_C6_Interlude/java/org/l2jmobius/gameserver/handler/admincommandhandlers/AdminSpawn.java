@@ -23,7 +23,6 @@ import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
@@ -297,10 +296,6 @@ public class AdminSpawn implements IAdminCommandHandler
 		try
 		{
 			final Spawn spawn = new Spawn(template1);
-			if (Config.SAVE_GMSPAWN_ON_CUSTOM)
-			{
-				spawn.setCustom(true);
-			}
 			spawn.setX(target.getX());
 			spawn.setY(target.getY());
 			spawn.setZ(target.getZ());
@@ -310,11 +305,8 @@ public class AdminSpawn implements IAdminCommandHandler
 			
 			if (RaidBossSpawnManager.getInstance().isDefined(spawn.getNpcId()) || GrandBossManager.getInstance().isDefined(spawn.getNpcId()))
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Another instance of " + template1.getName() + " already present into database:");
-				BuilderUtil.sendSysMessage(activeChar, "It will be spawned but not saved on Database");
-				BuilderUtil.sendSysMessage(activeChar, "After server restart or raid dead, the spawned npc will desappear");
-				permanent = false;
-				spawn.setCustomBossInstance(true); // for raids, this value is used in order to segnalate to not save respawn time - status for custom instance
+				BuilderUtil.sendSysMessage(activeChar, "Another spawn of " + template1.getName() + " is already present in the database.");
+				return;
 			}
 			
 			if (RaidBossSpawnManager.getInstance().getValidTemplate(spawn.getNpcId()) != null)

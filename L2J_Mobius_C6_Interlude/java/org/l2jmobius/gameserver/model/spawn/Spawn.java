@@ -299,45 +299,6 @@ public class Spawn
 	}
 	
 	/**
-	 * Kidzor Set the spawn as custom.
-	 * @param custom
-	 */
-	public void setCustom(boolean custom)
-	{
-		_customSpawn = custom;
-	}
-	
-	/**
-	 * Kidzor Return type of spawn.
-	 * @return
-	 */
-	public boolean isCustom()
-	{
-		return _customSpawn;
-	}
-	
-	/** If true then spawn is custom */
-	private boolean _customSpawn;
-	
-	private boolean _customBossInstance = false;
-	
-	/**
-	 * @return the _customBossInstance
-	 */
-	public boolean isCustomBossInstance()
-	{
-		return _customBossInstance;
-	}
-	
-	/**
-	 * @param customBossInstance the _customBossInstance to set
-	 */
-	public void setCustomBossInstance(boolean customBossInstance)
-	{
-		_customBossInstance = customBossInstance;
-	}
-	
-	/**
 	 * Decrease the current number of NpcInstance of this Spawn and if necessary create a SpawnTask to launch after the respawn Delay.<BR>
 	 * <BR>
 	 * <B><U> Actions</U> :</B><BR>

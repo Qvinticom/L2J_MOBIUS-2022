@@ -1726,25 +1726,22 @@ public class Frintezza extends Quest
 		}
 		else if ((npc.getNpcId() == SCARLET2) && (_onCheck == 1) && (status == FIGHTING))
 		{
-			if (!npc.getSpawn().isCustomBossInstance())
-			{
-				// cancelQuestTimer("loc_check");
-				cancelQuestTimer("spawn_minion", npc, null);
-				cancelQuestTimer("frintezza_despawn", null, null);
-				startQuestTimer("clean", 30000, npc, null);
-				startQuestTimer("close", 30000, npc, null);
-				startQuestTimer("room3_del", 60000, npc, null);
-				startQuestTimer("minions_despawn", 60000, npc, null);
-				startQuestTimer("remove_players", 900000, npc, null);
-				
-				GrandBossManager.getInstance().setBossStatus(FRINTEZZA, DEAD);
-				final long respawnTime = (Config.FRINTEZZA_RESP_FIRST + Rnd.get(Config.FRINTEZZA_RESP_SECOND)) * 3600000;
-				startQuestTimer("frintezza_unlock", respawnTime, npc, null);
-				// also save the respawn time so that the info is maintained past reboots
-				final StatSet info = GrandBossManager.getInstance().getStatSet(FRINTEZZA);
-				info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-				GrandBossManager.getInstance().setStatSet(FRINTEZZA, info);
-			}
+			// cancelQuestTimer("loc_check");
+			cancelQuestTimer("spawn_minion", npc, null);
+			cancelQuestTimer("frintezza_despawn", null, null);
+			startQuestTimer("clean", 30000, npc, null);
+			startQuestTimer("close", 30000, npc, null);
+			startQuestTimer("room3_del", 60000, npc, null);
+			startQuestTimer("minions_despawn", 60000, npc, null);
+			startQuestTimer("remove_players", 900000, npc, null);
+			
+			GrandBossManager.getInstance().setBossStatus(FRINTEZZA, DEAD);
+			final long respawnTime = (Config.FRINTEZZA_RESP_FIRST + Rnd.get(Config.FRINTEZZA_RESP_SECOND)) * 3600000;
+			startQuestTimer("frintezza_unlock", respawnTime, npc, null);
+			// also save the respawn time so that the info is maintained past reboots
+			final StatSet info = GrandBossManager.getInstance().getStatSet(FRINTEZZA);
+			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
+			GrandBossManager.getInstance().setStatSet(FRINTEZZA, info);
 		}
 		else if (npc.getNpcId() == 18328)
 		{

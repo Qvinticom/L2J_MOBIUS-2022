@@ -25,6 +25,8 @@ import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -585,11 +587,8 @@ public class AdminTeleport implements IAdminCommandHandler
 		if (obj instanceof NpcInstance)
 		{
 			final NpcInstance target = (NpcInstance) obj;
-			
 			final int monsterTemplate = target.getTemplate().getNpcId();
-			
 			final NpcTemplate template1 = NpcTable.getInstance().getTemplate(monsterTemplate);
-			
 			if (template1 == null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Incorrect monster template.");
@@ -598,7 +597,6 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			
 			Spawn spawn = target.getSpawn();
-			
 			if (spawn == null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Incorrect monster spawn.");
@@ -606,14 +604,18 @@ public class AdminTeleport implements IAdminCommandHandler
 				return;
 			}
 			
+			if (RaidBossSpawnManager.getInstance().isDefined(spawn.getNpcId()) || GrandBossManager.getInstance().isDefined(spawn.getNpcId()))
+			{
+				BuilderUtil.sendSysMessage(activeChar, "You cannot recall a boss instance.");
+				return;
+			}
+			
 			final int respawnTime = spawn.getRespawnDelay() / 1000;
-			final boolean custom_boss_spawn = spawn.isCustomBossInstance();
 			
 			target.deleteMe();
 			spawn.stopRespawn();
 			
-			// check to avoid that recalling a custom raid it will be saved into database
-			SpawnTable.getInstance().deleteSpawn(spawn, !custom_boss_spawn);
+			SpawnTable.getInstance().deleteSpawn(spawn, true);
 			
 			try
 			{
@@ -624,7 +626,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				spawn.setAmount(1);
 				spawn.setHeading(activeChar.getHeading());
 				spawn.setRespawnDelay(respawnTime);
-				SpawnTable.getInstance().addNewSpawn(spawn, !custom_boss_spawn);
+				SpawnTable.getInstance().addNewSpawn(spawn, true);
 				spawn.init();
 				
 				BuilderUtil.sendSysMessage(activeChar, "Created " + template1.getName() + " on " + target.getObjectId() + ".");

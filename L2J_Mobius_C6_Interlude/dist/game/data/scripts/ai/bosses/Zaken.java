@@ -860,19 +860,16 @@ public class Zaken extends Quest
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
 			
-			if (!npc.getSpawn().isCustomBossInstance())
-			{
-				GrandBossManager.getInstance().setBossStatus(ZAKEN, DEAD);
-				// time is 36hour +/- 17hour
-				final long respawnTime = (Config.ZAKEN_RESP_FIRST + Rnd.get(Config.ZAKEN_RESP_SECOND)) * 3600000;
-				startQuestTimer("zaken_unlock", respawnTime, null, null);
-				cancelQuestTimer("1001", npc, null);
-				cancelQuestTimer("1003", npc, null);
-				// also save the respawn time so that the info is maintained past reboots
-				final StatSet info = GrandBossManager.getInstance().getStatSet(ZAKEN);
-				info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-				GrandBossManager.getInstance().setStatSet(ZAKEN, info);
-			}
+			GrandBossManager.getInstance().setBossStatus(ZAKEN, DEAD);
+			// time is 36hour +/- 17hour
+			final long respawnTime = (Config.ZAKEN_RESP_FIRST + Rnd.get(Config.ZAKEN_RESP_SECOND)) * 3600000;
+			startQuestTimer("zaken_unlock", respawnTime, null, null);
+			cancelQuestTimer("1001", npc, null);
+			cancelQuestTimer("1003", npc, null);
+			// also save the respawn time so that the info is maintained past reboots
+			final StatSet info = GrandBossManager.getInstance().getStatSet(ZAKEN);
+			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
+			GrandBossManager.getInstance().setStatSet(ZAKEN, info);
 		}
 		else if (status == ALIVE)
 		{

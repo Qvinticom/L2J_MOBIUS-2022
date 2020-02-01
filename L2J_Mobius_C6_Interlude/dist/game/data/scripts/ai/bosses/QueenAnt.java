@@ -368,24 +368,21 @@ public class QueenAnt extends Quest
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
 			
-			if (!npc.getSpawn().isCustomBossInstance())
-			{
-				GrandBossManager.getInstance().setBossStatus(QUEEN, DEAD);
-				// time is 36hour +/- 17hour
-				final long respawnTime = (Config.QA_RESP_FIRST + Rnd.get(Config.QA_RESP_SECOND)) * 3600000;
-				startQuestTimer("QUEEN_SPAWN", respawnTime, null, null);
-				startQuestTimer("LARVA_DESPAWN", 4 * 60 * 60 * 1000, null, null);
-				cancelQuestTimer("ACTION", npc, null);
-				cancelQuestTimer("SPAWN_ROYAL", npc, null);
-				cancelQuestTimer("CHECK_MINIONS_ZONE", npc, null);
-				cancelQuestTimer("CHECK_NURSE_ALIVE", npc, null);
-				cancelQuestTimer("HEAL", null, null);
-				// cancelQuestTimer("CHECK_QA_ZONE", npc, null);
-				// also save the respawn time so that the info is maintained past reboots
-				final StatSet info = GrandBossManager.getInstance().getStatSet(QUEEN);
-				info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-				GrandBossManager.getInstance().setStatSet(QUEEN, info);
-			}
+			GrandBossManager.getInstance().setBossStatus(QUEEN, DEAD);
+			// time is 36hour +/- 17hour
+			final long respawnTime = (Config.QA_RESP_FIRST + Rnd.get(Config.QA_RESP_SECOND)) * 3600000;
+			startQuestTimer("QUEEN_SPAWN", respawnTime, null, null);
+			startQuestTimer("LARVA_DESPAWN", 4 * 60 * 60 * 1000, null, null);
+			cancelQuestTimer("ACTION", npc, null);
+			cancelQuestTimer("SPAWN_ROYAL", npc, null);
+			cancelQuestTimer("CHECK_MINIONS_ZONE", npc, null);
+			cancelQuestTimer("CHECK_NURSE_ALIVE", npc, null);
+			cancelQuestTimer("HEAL", null, null);
+			// cancelQuestTimer("CHECK_QA_ZONE", npc, null);
+			// also save the respawn time so that the info is maintained past reboots
+			final StatSet info = GrandBossManager.getInstance().getStatSet(QUEEN);
+			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
+			GrandBossManager.getInstance().setStatSet(QUEEN, info);
 			
 			startQuestTimer("DESPAWN_MINIONS", 10000, null, null);
 		}

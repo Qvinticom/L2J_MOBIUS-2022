@@ -85,10 +85,7 @@ public class GrandBossInstance extends MonsterInstance
 	public void onSpawn()
 	{
 		super.onSpawn();
-		if (!getSpawn().isCustomBossInstance())
-		{
-			GrandBossManager.getInstance().addBoss(this);
-		}
+		GrandBossManager.getInstance().addBoss(this);
 	}
 	
 	@Override
