@@ -64,6 +64,7 @@ import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminMenu;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminMobGroup;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminMonsterRace;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminNoble;
+import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminOnline;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminPForge;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminPetition;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminPledge;
@@ -86,7 +87,6 @@ import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminTest;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminTownWar;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminTvTEngine;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminVIPEngine;
-import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminWho;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminZone;
 
 /**
@@ -146,6 +146,7 @@ public class AdminCommandHandler
 		registerAdminCommandHandler(new AdminMobGroup());
 		registerAdminCommandHandler(new AdminMonsterRace());
 		registerAdminCommandHandler(new AdminNoble());
+		registerAdminCommandHandler(new AdminOnline());
 		registerAdminCommandHandler(new AdminPetition());
 		registerAdminCommandHandler(new AdminPForge());
 		registerAdminCommandHandler(new AdminPledge());
@@ -168,7 +169,6 @@ public class AdminCommandHandler
 		registerAdminCommandHandler(new AdminTownWar());
 		registerAdminCommandHandler(new AdminTvTEngine());
 		registerAdminCommandHandler(new AdminVIPEngine());
-		registerAdminCommandHandler(new AdminWho());
 		registerAdminCommandHandler(new AdminZone());
 		
 		LOGGER.info("AdminCommandHandler: Loaded " + _datatable.size() + " handlers.");

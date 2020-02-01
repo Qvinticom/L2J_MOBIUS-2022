@@ -412,6 +412,9 @@
 	<!-- Section: Noble -->
 	<admin command="admin_setnoble" accessLevel="90" />
 
+	<!-- Section: Online -->
+	<admin command="admin_online" accessLevel="80" />
+
 	<!-- Section: Petitions -->
 	<admin command="admin_view_petitions" accessLevel="80" />
 	<admin command="admin_view_petition" accessLevel="80" />

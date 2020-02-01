@@ -84,8 +84,8 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	public GameClientState _state;
 	
 	// Info
-	public String accountName;
-	public SessionKey sessionId;
+	public String _accountName;
+	public SessionKey _sessionId;
 	public PlayerInstance _player;
 	private final ReentrantLock _playerLock = new ReentrantLock();
 	
@@ -214,22 +214,22 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	
 	public void setAccountName(String pAccountName)
 	{
-		accountName = pAccountName;
+		_accountName = pAccountName;
 	}
 	
 	public String getAccountName()
 	{
-		return accountName;
+		return _accountName;
 	}
 	
 	public void setSessionId(SessionKey sk)
 	{
-		sessionId = sk;
+		_sessionId = sk;
 	}
 	
 	public SessionKey getSessionId()
 	{
-		return sessionId;
+		return _sessionId;
 	}
 	
 	public void sendPacket(GameServerPacket gsp)
@@ -478,7 +478,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		if (character != null)
 		{
 			// exploit prevention, should not happens in normal way
-			LOGGER.warning("Attempt of double login: " + character.getName() + "(" + objId + ") " + accountName);
+			LOGGER.warning("Attempt of double login: " + character.getName() + "(" + objId + ") " + _accountName);
 			
 			if (character.getClient() != null)
 			{
@@ -599,6 +599,21 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		nProtect.getInstance().closeSession(this);
 	}
 	
+	public String getIpAddress()
+	{
+		final InetAddress address = getConnection().getInetAddress();
+		String ip;
+		if (address == null)
+		{
+			ip = "N/A";
+		}
+		else
+		{
+			ip = address.getHostAddress();
+		}
+		return ip;
+	}
+	
 	/**
 	 * Produces the best possible string representation of this client.
 	 */
@@ -607,31 +622,20 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	{
 		try
 		{
-			final InetAddress address = getConnection().getInetAddress();
-			String ip;
-			if (address == null)
-			{
-				ip = "disconnected";
-			}
-			else
-			{
-				ip = address.getHostAddress();
-			}
-			
 			switch (_state)
 			{
 				case CONNECTED:
 				{
-					return "[IP: " + ip + "]";
+					return "[IP: " + getIpAddress() + "]";
 				}
 				case AUTHED:
 				{
-					return "[Account: " + accountName + " - IP: " + ip + "]";
+					return "[Account: " + _accountName + " - IP: " + getIpAddress() + "]";
 				}
 				case ENTERING:
 				case IN_GAME:
 				{
-					return "[Character: " + (_player == null ? "disconnected" : _player.getName()) + " - Account: " + accountName + " - IP: " + ip + "]";
+					return "[Character: " + (_player == null ? "disconnected" : _player.getName()) + " - Account: " + _accountName + " - IP: " + getIpAddress() + "]";
 				}
 				default:
 				{

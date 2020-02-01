@@ -1009,18 +1009,10 @@ public class AdminEditChar implements IAdminCommandHandler
 		String ip = "N/A";
 		String account = "N/A";
 		
-		try
+		if (player.getClient() != null)
 		{
-			final StringTokenizer clientinfo = new StringTokenizer(player.getClient().toString(), " ]:-[");
-			clientinfo.nextToken();
-			clientinfo.nextToken();
-			clientinfo.nextToken();
-			account = clientinfo.nextToken();
-			clientinfo.nextToken();
-			ip = clientinfo.nextToken();
-		}
-		catch (Exception e)
-		{
+			account = player.getClient().getAccountName();
+			ip = player.getClient().getIpAddress();
 		}
 		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
