@@ -115,6 +115,12 @@
 	<!-- Section: Delete -->
 	<admin command="admin_delete" accessLevel="80" />
 
+	<!-- Section: Destroy Items -->
+	<admin command="admin_destroy_items" accessLevel="80" />
+	<admin command="admin_destroy_all_items" accessLevel="80" />
+	<admin command="admin_destroyitems" accessLevel="80" />
+	<admin command="admin_destroyallitems" accessLevel="80" />
+
 	<!-- Section: Disconnect -->
 	<admin command="admin_character_disconnect" accessLevel="90" />
 

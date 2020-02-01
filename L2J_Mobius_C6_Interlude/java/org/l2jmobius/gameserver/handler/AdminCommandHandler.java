@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminCreateItem;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminCursedWeapons;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminDMEngine;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminDelete;
+import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminDestroyItems;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminDonator;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminDoorControl;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminEditChar;
@@ -114,6 +115,7 @@ public class AdminCommandHandler
 		registerAdminCommandHandler(new AdminCTFEngine());
 		registerAdminCommandHandler(new AdminCursedWeapons());
 		registerAdminCommandHandler(new AdminDelete());
+		registerAdminCommandHandler(new AdminDestroyItems());
 		registerAdminCommandHandler(new AdminDMEngine());
 		registerAdminCommandHandler(new AdminDonator());
 		registerAdminCommandHandler(new AdminDoorControl());
