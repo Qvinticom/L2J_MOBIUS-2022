@@ -51,7 +51,16 @@ public class SendBypassBuildCmd extends GameClientPacket
 			return;
 		}
 		
-		// Checks The Access and notify requester if requester access it not allowed for that command
+		// Check if handler exists.
+		final IAdminCommandHandler handler = AdminCommandHandler.getInstance().getAdminCommandHandler(_command);
+		if (handler == null)
+		{
+			player.sendMessage("The command " + _command + " does not exist!");
+			LOGGER.warning("No handler registered for admin command '" + _command + "'.");
+			return;
+		}
+		
+		// Check access level and notify requester if not allowed to use this command.
 		if (!AdminData.getInstance().hasAccess(_command, player.getAccessLevel()))
 		{
 			player.sendMessage("You don't have the access right to use this command!");
@@ -59,23 +68,13 @@ public class SendBypassBuildCmd extends GameClientPacket
 			return;
 		}
 		
-		// gets the Handler of That Commmand
-		final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getAdminCommandHandler(_command);
+		// Log is GM audit is enabled.
+		if (Config.GMAUDIT)
+		{
+			GMAudit.auditGMAction(player.getName() + " [" + player.getObjectId() + "]", _command, (player.getTarget() != null ? player.getTarget().getName() : "no-target"));
+		}
 		
-		// if handler is valid we Audit and use else we notify in console.
-		if (ach != null)
-		{
-			if (Config.GMAUDIT)
-			{
-				GMAudit.auditGMAction(player.getName() + " [" + player.getObjectId() + "]", _command, (player.getTarget() != null ? player.getTarget().getName() : "no-target"));
-			}
-			
-			ach.useAdminCommand(_command, player);
-		}
-		else
-		{
-			player.sendMessage("The command " + _command + " doesn't exists!");
-			LOGGER.warning("No handler registered for admin command '" + _command + "'");
-		}
+		// Run the command.
+		handler.useAdminCommand(_command, player);
 	}
 }
