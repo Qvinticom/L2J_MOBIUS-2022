@@ -1,7 +1,4 @@
--- ---------------------------
--- Table structure for games
--- ---------------------------
-CREATE TABLE IF NOT EXISTS games (
+CREATE TABLE IF NOT EXISTS lottery (
   id INT NOT NULL default 0,
   idnr INT NOT NULL default 0,
   number1 INT NOT NULL default 0,
