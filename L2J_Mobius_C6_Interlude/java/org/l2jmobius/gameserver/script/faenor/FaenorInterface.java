@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.script.faenor;
 import java.util.List;
 import java.util.logging.Logger;
 
+import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -50,7 +51,7 @@ public class FaenorInterface implements EngineInterface
 	@Override
 	public void addQuestDrop(int npcID, int itemID, int min, int max, int chance, String questID, String[] states)
 	{
-		final NpcTemplate npc = npcTable.getTemplate(npcID);
+		final NpcTemplate npc = NpcTable.getInstance().getTemplate(npcID);
 		if (npc == null)
 		{
 			throw new NullPointerException();
@@ -76,7 +77,7 @@ public class FaenorInterface implements EngineInterface
 	 */
 	public void addDrop(int npcID, int itemID, int min, int max, boolean sweep, int chance)
 	{
-		final NpcTemplate npc = npcTable.getTemplate(npcID);
+		final NpcTemplate npc = NpcTable.getInstance().getTemplate(npcID);
 		if (npc == null)
 		{
 			throw new NullPointerException();
