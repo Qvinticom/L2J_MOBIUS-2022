@@ -20,10 +20,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -190,5 +192,30 @@ public class Broadcast
 	public static void toAllOnlinePlayersOnScreen(String text)
 	{
 		toAllOnlinePlayers(new ExShowScreenMessage(text, 10000));
+	}
+	
+	/**
+	 * Send a packet to all players in a specific zone type.
+	 * @param <T> ZoneType.
+	 * @param zoneType : The zone type to send packets.
+	 * @param packets : The packets to send.
+	 */
+	public static <T extends ZoneType> void toAllPlayersInZoneType(Class<T> zoneType, IClientOutgoingPacket... packets)
+	{
+		for (ZoneType zone : ZoneManager.getInstance().getAllZones(zoneType))
+		{
+			for (Creature creature : zone.getCharactersInside())
+			{
+				if (creature == null)
+				{
+					continue;
+				}
+				
+				for (IClientOutgoingPacket packet : packets)
+				{
+					creature.sendPacket(packet);
+				}
+			}
+		}
 	}
 }

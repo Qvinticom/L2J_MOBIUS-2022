@@ -63,7 +63,6 @@ import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminMassControl;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminMassRecall;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminMenu;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminMobGroup;
-import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminMonsterRace;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminNoble;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminOnline;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminPForge;
@@ -146,7 +145,6 @@ public class AdminCommandHandler
 		registerAdminCommandHandler(new AdminMassRecall());
 		registerAdminCommandHandler(new AdminMenu());
 		registerAdminCommandHandler(new AdminMobGroup());
-		registerAdminCommandHandler(new AdminMonsterRace());
 		registerAdminCommandHandler(new AdminNoble());
 		registerAdminCommandHandler(new AdminOnline());
 		registerAdminCommandHandler(new AdminPetition());

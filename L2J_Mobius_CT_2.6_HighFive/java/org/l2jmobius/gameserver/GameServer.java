@@ -134,6 +134,7 @@ import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.instancemanager.games.Lottery;
+import org.l2jmobius.gameserver.instancemanager.games.MonsterRace;
 import org.l2jmobius.gameserver.model.AutoSpawnHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.entity.Hero;

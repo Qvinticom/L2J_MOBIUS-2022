@@ -16,9 +16,11 @@
  */
 package org.l2jmobius.gameserver.util;
 
+import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
 import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
@@ -178,6 +180,31 @@ public class Broadcast
 			}
 			
 			onlinePlayer.sendPacket(packet);
+		}
+	}
+	
+	/**
+	 * Send a packet to all players in a specific zone type.
+	 * @param <T> ZoneType.
+	 * @param zoneType : The zone type to send packets.
+	 * @param packets : The packets to send.
+	 */
+	public static <T extends ZoneType> void toAllPlayersInZoneType(Class<T> zoneType, GameServerPacket... packets)
+	{
+		for (ZoneType zone : ZoneData.getInstance().getAllZones(zoneType))
+		{
+			for (Creature creature : zone.getCharactersInside().values())
+			{
+				if (creature == null)
+				{
+					continue;
+				}
+				
+				for (GameServerPacket packet : packets)
+				{
+					creature.sendPacket(packet);
+				}
+			}
 		}
 	}
 }
