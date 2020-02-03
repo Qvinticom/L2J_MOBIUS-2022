@@ -141,6 +141,7 @@ import org.l2jmobius.gameserver.instancemanager.SiegeGuardManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
+import org.l2jmobius.gameserver.instancemanager.games.Lottery;
 import org.l2jmobius.gameserver.instancemanager.games.MonsterRace;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.entity.Hero;
@@ -403,6 +404,7 @@ public class GameServer
 		}
 		
 		MonsterRace.getInstance();
+		Lottery.getInstance();
 		
 		TaskManager.getInstance();
 		

@@ -713,6 +713,8 @@ public class PlayerInstance extends Playable
 	
 	private byte _handysBlockCheckerEventArena = -1;
 	
+	/** new loto ticket **/
+	private final int[] _loto = new int[5];
 	/** new race ticket **/
 	private final int[] _race = new int[2];
 	
@@ -9108,6 +9110,16 @@ public class PlayerInstance extends Playable
 	public void setTeleMode(AdminTeleportType type)
 	{
 		_teleportType = type;
+	}
+	
+	public void setLoto(int i, int value)
+	{
+		_loto[i] = value;
+	}
+	
+	public int getLoto(int i)
+	{
+		return _loto[i];
 	}
 	
 	public void setRace(int i, int value)

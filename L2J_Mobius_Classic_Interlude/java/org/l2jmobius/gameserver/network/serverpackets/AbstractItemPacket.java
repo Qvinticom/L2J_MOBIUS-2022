@@ -77,7 +77,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		packet.writeH(item.getEquipped()); // Equipped : 00-No, 01-yes
 		packet.writeQ(item.getItem().getBodyPart()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
 		packet.writeC(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
-		packet.writeC(0x01); // TODO : Find me
+		packet.writeC(item.getCustomType2()); // Pet name exists or not shown in control item
 		packet.writeD(item.getMana());
 		packet.writeD(item.getTime());
 		packet.writeC(item.isAvailable() ? 1 : 0); // GOD Item enabled = 1 disabled (red) = 0
