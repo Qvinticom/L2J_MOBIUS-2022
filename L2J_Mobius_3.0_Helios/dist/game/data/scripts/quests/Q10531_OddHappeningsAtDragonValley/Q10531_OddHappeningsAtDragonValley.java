@@ -124,7 +124,7 @@ public class Q10531_OddHappeningsAtDragonValley extends Quest
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, true);
 		
 		switch (qs.getState())
 		{
