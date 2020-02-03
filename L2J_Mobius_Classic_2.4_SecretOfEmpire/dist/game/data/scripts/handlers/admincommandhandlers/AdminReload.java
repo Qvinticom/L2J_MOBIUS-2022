@@ -34,6 +34,7 @@ import org.l2jmobius.gameserver.data.xml.impl.CombinationItemsData;
 import org.l2jmobius.gameserver.data.xml.impl.DoorData;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemGroupsData;
+import org.l2jmobius.gameserver.data.xml.impl.EquipmentUpgradeData;
 import org.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import org.l2jmobius.gameserver.data.xml.impl.FishingData;
 import org.l2jmobius.gameserver.data.xml.impl.ItemCrystallizationData;
@@ -351,6 +352,12 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					CombinationItemsData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Combination data.");
+					break;
+				}
+				case "equipmentupgrade":
+				{
+					EquipmentUpgradeData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Equipment Upgrade data.");
 					break;
 				}
 				default:
