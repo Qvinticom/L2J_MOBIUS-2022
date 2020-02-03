@@ -99,8 +99,13 @@
 		<hitTime>1200</hitTime>
 		<coolTime>300</coolTime>
 		<magicLvl>76</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalType>BLOCK_ESCAPE</abnormalType>
 		<mpConsume>70</mpConsume>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalTime>2</abnormalTime>
+		<activateRate>-1</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
@@ -116,6 +121,9 @@
 		</conditions>
 		<effects>
 			<effect name="Detection" />
+			<effect name="BlockAbnormalSlot">
+				<slot>HIDE</slot>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="53006" toLevel="5" name="Bind">
