@@ -43,17 +43,19 @@ public class StackIDFactory extends IdFactory
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final int[] tmpObjIds = extractUsedObjectIDTable();
+			// con.createStatement().execute("drop table if exists tmp_obj_id");
+			
+			final Integer[] tmpObjIds = extractUsedObjectIDTable();
 			if (tmpObjIds.length > 0)
 			{
 				_curOID = tmpObjIds[tmpObjIds.length - 1];
 			}
 			LOGGER.info("Max Id = " + _curOID);
 			
-			int N = tmpObjIds.length;
-			for (int idx = 0; idx < N; idx++)
+			int n = tmpObjIds.length;
+			for (int idx = 0; idx < n; idx++)
 			{
-				N = insertUntil(tmpObjIds, idx, N, con);
+				n = insertUntil(tmpObjIds, idx, n, con);
 			}
 			
 			_curOID++;
@@ -66,7 +68,7 @@ public class StackIDFactory extends IdFactory
 		}
 	}
 	
-	private int insertUntil(int[] tmpObjIds, int idx, int n, Connection con) throws SQLException
+	private int insertUntil(Integer[] tmpObjIds, int idx, int n, Connection con) throws SQLException
 	{
 		final int id = tmpObjIds[idx];
 		if (id == _tempOID)

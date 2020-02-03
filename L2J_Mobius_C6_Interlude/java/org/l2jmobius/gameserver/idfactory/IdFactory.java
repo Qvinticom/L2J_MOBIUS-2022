@@ -20,6 +20,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -56,6 +59,16 @@ public abstract class IdFactory
 		"SELECT item_obj_id FROM pets                  WHERE item_obj_id >= ? AND item_obj_id < ?",
 		"SELECT object_id   FROM itemsonground        WHERE object_id >= ?   AND object_id < ?"
 	};
+	
+	//@formatter:off
+	private static final String[][] ID_EXTRACTS =
+	{
+		{"characters", "obj_Id"},
+		{"items", "object_id"},
+		{"clan_data", "clan_id"},
+		{"itemsonground", "object_id"}
+	};
+	//@formatter:on
 	
 	protected boolean _initialized;
 	
@@ -166,47 +179,35 @@ public abstract class IdFactory
 		}
 	}
 	
-	protected int[] extractUsedObjectIDTable() throws SQLException
+	/**
+	 * @return
+	 * @throws Exception
+	 * @throws SQLException
+	 */
+	protected final Integer[] extractUsedObjectIDTable() throws Exception
 	{
-		try (Connection con = DatabaseFactory.getConnection())
+		final List<Integer> temp = new ArrayList<>();
+		try (Connection con = DatabaseFactory.getConnection();
+			Statement s = con.createStatement())
 		{
-			// create a temporary table
-			final Statement s = con.createStatement();
-			try
+			String extractUsedObjectIdsQuery = "";
+			
+			for (String[] tblClmn : ID_EXTRACTS)
 			{
-				s.executeUpdate("drop table temporaryObjectTable");
-			}
-			catch (SQLException e)
-			{
-			}
-			s.executeUpdate("delete from itemsonground where object_id in (select object_id from items)");
-			s.executeUpdate("create table temporaryObjectTable (object_id int NOT NULL PRIMARY KEY)");
-			
-			s.executeUpdate("insert into temporaryObjectTable (object_id) select obj_id from characters");
-			s.executeUpdate("insert into temporaryObjectTable (object_id) select object_id from items");
-			s.executeUpdate("insert into temporaryObjectTable (object_id) select clan_id from clan_data");
-			s.executeUpdate("insert into temporaryObjectTable (object_id) select object_id from itemsonground");
-			
-			ResultSet result = s.executeQuery("select count(object_id) from temporaryObjectTable");
-			
-			result.next();
-			final int size = result.getInt(1);
-			final int[] tmp_obj_ids = new int[size];
-			result.close();
-			
-			result = s.executeQuery("select object_id from temporaryObjectTable ORDER BY object_id");
-			
-			int idx = 0;
-			while (result.next())
-			{
-				tmp_obj_ids[idx++] = result.getInt(1);
+				extractUsedObjectIdsQuery += "SELECT " + tblClmn[1] + " FROM " + tblClmn[0] + " UNION ";
 			}
 			
-			result.close();
-			s.close();
-			
-			return tmp_obj_ids;
+			extractUsedObjectIdsQuery = extractUsedObjectIdsQuery.substring(0, extractUsedObjectIdsQuery.length() - 7); // Remove the last " UNION "
+			try (ResultSet rs = s.executeQuery(extractUsedObjectIdsQuery))
+			{
+				while (rs.next())
+				{
+					temp.add(rs.getInt(1));
+				}
+			}
 		}
+		Collections.sort(temp);
+		return temp.toArray(new Integer[temp.size()]);
 	}
 	
 	public boolean isInitialized()
