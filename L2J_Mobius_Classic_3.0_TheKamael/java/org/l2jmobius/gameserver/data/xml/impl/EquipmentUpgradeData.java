@@ -62,7 +62,7 @@ public class EquipmentUpgradeData implements IXmlReader
 			final String[] item = set.getString("item").split(",");
 			final int requiredItemId = Integer.parseInt(item[0]);
 			final int requiredItemEnchant = Integer.parseInt(item[1]);
-			final String materials = set.getString("materials");
+			final String materials = set.getString("materials", "");
 			final List<ItemHolder> materialList = new ArrayList<>();
 			if (!materials.isEmpty())
 			{
