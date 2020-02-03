@@ -64,10 +64,7 @@ public class GlobalVariablesManager extends AbstractVariables
 			LOGGER.warning(getClass().getSimpleName() + ": Couldn't restore global variables.");
 			return false;
 		}
-		finally
-		{
-			compareAndSetChanges(true, false);
-		}
+		
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + getSet().size() + " variables.");
 		return true;
 	}
@@ -75,12 +72,6 @@ public class GlobalVariablesManager extends AbstractVariables
 	@Override
 	public boolean storeMe()
 	{
-		// No changes, nothing to store.
-		if (!hasChanges())
-		{
-			return false;
-		}
-		
 		try (Connection con = DatabaseFactory.getConnection();
 			Statement del = con.createStatement();
 			PreparedStatement st = con.prepareStatement(INSERT_QUERY))
@@ -102,10 +93,7 @@ public class GlobalVariablesManager extends AbstractVariables
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't save global variables to database.", e);
 			return false;
 		}
-		finally
-		{
-			compareAndSetChanges(true, false);
-		}
+		
 		LOGGER.info(getClass().getSimpleName() + ": Stored " + getSet().size() + " variables.");
 		return true;
 	}

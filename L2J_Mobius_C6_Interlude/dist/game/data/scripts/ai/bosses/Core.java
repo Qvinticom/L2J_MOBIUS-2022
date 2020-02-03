@@ -24,6 +24,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -123,8 +124,7 @@ public class Core extends Quest
 		}
 		else
 		{
-			final String test = loadGlobalQuestVar("Core_Attacked");
-			if (test.equalsIgnoreCase("true"))
+			if (GlobalVariablesManager.getInstance().getBoolean("CoreAttacked", false))
 			{
 				_firstAttacked = true;
 			}
@@ -140,8 +140,7 @@ public class Core extends Quest
 	@Override
 	public void saveGlobalData()
 	{
-		final String val = "" + _firstAttacked;
-		saveGlobalQuestVar("Core_Attacked", val);
+		GlobalVariablesManager.getInstance().set("CoreAttacked", _firstAttacked);
 	}
 	
 	public void spawnBoss(GrandBossInstance npc)

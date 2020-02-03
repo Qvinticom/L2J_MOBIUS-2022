@@ -16,6 +16,7 @@
  */
 package ai.bosses;
 
+import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
@@ -95,14 +96,14 @@ public class Sailren extends Quest
 			}
 			case "open":
 			{
-				deleteGlobalQuestVar("close");
+				GlobalVariablesManager.getInstance().remove("SailrenClose");
 				cancelQuestTimer("open", npc, null);
 				break;
 			}
 			case "vkrovatku":
 			{
 				npc.deleteMe();
-				deleteGlobalQuestVar("close");
+				GlobalVariablesManager.getInstance().remove("SailrenClose");
 				cancelQuestTimer("open", npc, null);
 				cancelQuestTimer("vkrovatku", npc, null);
 				break;
@@ -116,14 +117,13 @@ public class Sailren extends Quest
 	{
 		if (player.getInventory().getItemByItemId(STONE) != null)
 		{
-			final String close = loadGlobalQuestVar("close");
-			if (close.equals(""))
+			if (!GlobalVariablesManager.getInstance().hasVariable("SailrenClose"))
 			{
 				final Party party = player.getParty();
 				if (party != null)
 				{
 					player.destroyItemByItemId("Sailren", STONE, 1, player, true);
-					saveGlobalQuestVar("close", "1");
+					GlobalVariablesManager.getInstance().set("SailrenClose", true);
 					final BossZone zone = GrandBossManager.getInstance().getZone(27244, -7026, -1974);
 					for (PlayerInstance member : party.getPartyMembers())
 					{
@@ -170,7 +170,7 @@ public class Sailren extends Quest
 		}
 		else if (npc == _slrnInstance)
 		{
-			deleteGlobalQuestVar("close");
+			GlobalVariablesManager.getInstance().remove("SailrenClose");
 			cancelQuestTimer("open", npc, null);
 		}
 		return super.onKill(npc, killer, isPet);
