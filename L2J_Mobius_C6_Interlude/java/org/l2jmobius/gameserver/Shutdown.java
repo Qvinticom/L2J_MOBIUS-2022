@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
+import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
@@ -453,7 +454,7 @@ public class Shutdown extends Thread
 		
 		// Save Fishing tournament data
 		FishingChampionshipManager.getInstance().shutdown();
-		LOGGER.info("Fishing Championship data has been saved!!");
+		LOGGER.info("Fishing Championship data have been saved!!");
 		
 		// Schemes save.
 		SchemeBufferTable.getInstance().saveSchemes();
@@ -464,6 +465,10 @@ public class Shutdown extends Thread
 		{
 			QuestManager.getInstance().save();
 		}
+		
+		// Save all global variables data
+		GlobalVariablesManager.getInstance().storeMe();
+		LOGGER.info("Global Variables Manager: Variables have been saved!!");
 		
 		// Save items on ground before closing
 		if (Config.SAVE_DROPPED_ITEM)
