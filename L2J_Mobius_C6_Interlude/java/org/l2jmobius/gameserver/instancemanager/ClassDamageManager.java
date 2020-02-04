@@ -68,7 +68,7 @@ public class ClassDamageManager
 				}
 				
 				final String type = classAndType[1];
-				final Integer classId = PlayerTemplateData.getInstance().getClassIdByName(className) - 1;
+				final Integer classId = PlayerTemplateData.getInstance().getClassIdByName(className);
 				
 				ID_TO_NAME.put(classId, className);
 				NAME_TO_ID.put(className, classId);
@@ -116,7 +116,6 @@ public class ClassDamageManager
 	public static double getClassDamageToMage(int id)
 	{
 		final Double multiplier = DAMAGE_TO_MAGE.get(id);
-		
 		if (multiplier != null)
 		{
 			return multiplier;
