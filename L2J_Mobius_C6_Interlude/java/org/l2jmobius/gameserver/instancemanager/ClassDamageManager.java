@@ -211,7 +211,7 @@ public class ClassDamageManager
 		
 		final double output = attackerMulti * attackedMulti;
 		
-		if (Config.ENABLE_CLASS_DAMAGES_LOGGER)
+		if (Config.ENABLE_CLASS_DAMAGE_LOGGER)
 		{
 			LOGGER.info("ClassDamageManager -");
 			LOGGER.info("ClassDamageManager - Attacker: " + attacker.getName() + " Class: " + getNameById(attacker.getClassId().getId()) + " ClassId: " + attacker.getClassId().getId() + " isMage: " + attacker.isMageClass() + " mult: " + attackerMulti);

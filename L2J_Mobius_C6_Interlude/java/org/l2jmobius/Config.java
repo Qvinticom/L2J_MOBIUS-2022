@@ -941,9 +941,9 @@ public class Config
 	public static boolean REMOVE_WEAPON_SUBCLASS;
 	public static boolean REMOVE_CHEST_SUBCLASS;
 	public static boolean REMOVE_LEG_SUBCLASS;
-	public static boolean ENABLE_CLASS_DAMAGES;
-	public static boolean ENABLE_CLASS_DAMAGES_IN_OLY;
-	public static boolean ENABLE_CLASS_DAMAGES_LOGGER;
+	public static boolean ENABLE_CLASS_DAMAGE_SETTINGS;
+	public static boolean ENABLE_CLASS_DAMAGE_SETTINGS_IN_OLY;
+	public static boolean ENABLE_CLASS_DAMAGE_LOGGER;
 	public static boolean LEAVE_BUFFS_ON_DIE;
 	public static boolean ALT_RAIDS_STATS_BONUS;
 	
@@ -2931,9 +2931,9 @@ public class Config
 			PHYSICSSetting.load(is);
 			is.close();
 			
-			ENABLE_CLASS_DAMAGES = Boolean.parseBoolean(PHYSICSSetting.getProperty("EnableClassDamagesSettings", "true"));
-			ENABLE_CLASS_DAMAGES_IN_OLY = Boolean.parseBoolean(PHYSICSSetting.getProperty("EnableClassDamagesSettingsInOly", "true"));
-			ENABLE_CLASS_DAMAGES_LOGGER = Boolean.parseBoolean(PHYSICSSetting.getProperty("EnableClassDamagesLogger", "true"));
+			ENABLE_CLASS_DAMAGE_SETTINGS = Boolean.parseBoolean(PHYSICSSetting.getProperty("EnableClassDamageSettings", "true"));
+			ENABLE_CLASS_DAMAGE_SETTINGS_IN_OLY = Boolean.parseBoolean(PHYSICSSetting.getProperty("EnableClassDamageSettingsInOly", "true"));
+			ENABLE_CLASS_DAMAGE_LOGGER = Boolean.parseBoolean(PHYSICSSetting.getProperty("EnableClassDamageLogger", "false"));
 			
 			BLOW_ATTACK_FRONT = Integer.parseInt(PHYSICSSetting.getProperty("BlowAttackFront", "50"));
 			BLOW_ATTACK_SIDE = Integer.parseInt(PHYSICSSetting.getProperty("BlowAttackSide", "60"));

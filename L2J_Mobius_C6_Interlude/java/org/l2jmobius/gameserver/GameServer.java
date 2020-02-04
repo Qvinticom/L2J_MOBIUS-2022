@@ -217,7 +217,7 @@ public class GameServer
 		
 		Util.printSection("Players");
 		PlayerTemplateData.getInstance();
-		if (Config.ENABLE_CLASS_DAMAGES)
+		if (Config.ENABLE_CLASS_DAMAGE_SETTINGS)
 		{
 			ClassDamageManager.loadConfig();
 		}

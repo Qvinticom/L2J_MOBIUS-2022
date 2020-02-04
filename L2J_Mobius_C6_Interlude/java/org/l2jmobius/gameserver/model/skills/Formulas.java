@@ -1370,11 +1370,11 @@ public class Formulas
 			}
 		}
 		
-		if (Config.ENABLE_CLASS_DAMAGES && (attacker instanceof PlayerInstance) && (target instanceof PlayerInstance))
+		if (Config.ENABLE_CLASS_DAMAGE_SETTINGS && (attacker instanceof PlayerInstance) && (target instanceof PlayerInstance))
 		{
 			if (((PlayerInstance) attacker).isInOlympiadMode() && ((PlayerInstance) target).isInOlympiadMode())
 			{
-				if (Config.ENABLE_CLASS_DAMAGES_IN_OLY)
+				if (Config.ENABLE_CLASS_DAMAGE_SETTINGS_IN_OLY)
 				{
 					damage = damage * ClassDamageManager.getDamageMultiplier((PlayerInstance) attacker, (PlayerInstance) target);
 				}
@@ -1703,11 +1703,11 @@ public class Formulas
 			damage = damage * Config.ALT_NPC_PHYSICAL_DAMAGE_MULTI;
 		}
 		
-		if (Config.ENABLE_CLASS_DAMAGES && (attacker instanceof PlayerInstance) && (target instanceof PlayerInstance))
+		if (Config.ENABLE_CLASS_DAMAGE_SETTINGS && (attacker instanceof PlayerInstance) && (target instanceof PlayerInstance))
 		{
 			if (((PlayerInstance) attacker).isInOlympiadMode() && ((PlayerInstance) target).isInOlympiadMode())
 			{
-				if (Config.ENABLE_CLASS_DAMAGES_IN_OLY)
+				if (Config.ENABLE_CLASS_DAMAGE_SETTINGS_IN_OLY)
 				{
 					damage = damage * ClassDamageManager.getDamageMultiplier((PlayerInstance) attacker, (PlayerInstance) target);
 				}
@@ -1876,11 +1876,11 @@ public class Formulas
 			damage = damage * (1.0 - (attacker.getStatus().getCurrentHp() / attacker.getMaxHp())) * 2.0;
 		}
 		
-		if (Config.ENABLE_CLASS_DAMAGES && (attacker instanceof PlayerInstance) && (target instanceof PlayerInstance))
+		if (Config.ENABLE_CLASS_DAMAGE_SETTINGS && (attacker instanceof PlayerInstance) && (target instanceof PlayerInstance))
 		{
 			if (((PlayerInstance) attacker).isInOlympiadMode() && ((PlayerInstance) target).isInOlympiadMode())
 			{
-				if (Config.ENABLE_CLASS_DAMAGES_IN_OLY)
+				if (Config.ENABLE_CLASS_DAMAGE_SETTINGS_IN_OLY)
 				{
 					damage = damage * ClassDamageManager.getDamageMultiplier((PlayerInstance) attacker, (PlayerInstance) target);
 				}
@@ -3318,11 +3318,11 @@ public class Formulas
 			}
 		}
 		
-		if (Config.ENABLE_CLASS_DAMAGES && (attacker instanceof PlayerInstance) && (target instanceof PlayerInstance))
+		if (Config.ENABLE_CLASS_DAMAGE_SETTINGS && (attacker instanceof PlayerInstance) && (target instanceof PlayerInstance))
 		{
 			if (((PlayerInstance) attacker).isInOlympiadMode() && ((PlayerInstance) target).isInOlympiadMode())
 			{
-				if (Config.ENABLE_CLASS_DAMAGES_IN_OLY)
+				if (Config.ENABLE_CLASS_DAMAGE_SETTINGS_IN_OLY)
 				{
 					damage = damage * ClassDamageManager.getDamageMultiplier((PlayerInstance) attacker, (PlayerInstance) target);
 				}
