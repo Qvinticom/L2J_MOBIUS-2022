@@ -125,7 +125,7 @@ public class HelperBuffTable
 			helperBuff.add(template);
 		}
 		
-		LOGGER.info("Helper Buff Table: Loaded " + helperBuff.size() + " templates");
+		LOGGER.info("HelperBuffTable: Loaded " + helperBuff.size() + " templates.");
 	}
 	
 	public boolean isInitialized()

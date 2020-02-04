@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
+import org.l2jmobius.gameserver.datatables.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 
 public class CustomNpcInfo extends GameServerPacket
@@ -76,8 +76,8 @@ public class CustomNpcInfo extends GameServerPacket
 		writeD(_activeChar.getRunSpeed());
 		writeF(_activeChar.getStat().getMovementSpeedMultiplier());
 		writeF(_activeChar.getStat().getAttackSpeedMultiplier());
-		writeF(CharTemplateTable.getInstance().getTemplate(_activeChar.getCustomNpcInstance().getClassId()).getCollisionRadius());
-		writeF(CharTemplateTable.getInstance().getTemplate(_activeChar.getCustomNpcInstance().getClassId()).getCollisionHeight());
+		writeF(PlayerTemplateData.getInstance().getTemplate(_activeChar.getCustomNpcInstance().getClassId()).getCollisionRadius());
+		writeF(PlayerTemplateData.getInstance().getTemplate(_activeChar.getCustomNpcInstance().getClassId()).getCollisionHeight());
 		writeD(_activeChar.getCustomNpcInstance().getHairStyle());
 		writeD(_activeChar.getCustomNpcInstance().getHairColor());
 		writeD(_activeChar.getCustomNpcInstance().getFace());

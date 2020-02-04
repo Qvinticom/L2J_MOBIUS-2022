@@ -19,80 +19,58 @@ package org.l2jmobius.gameserver.model.actor.templates;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 
 /**
  * @author mkizub
  */
 public class PlayerTemplate extends CreatureTemplate
 {
-	/** The Class object of the PlayerInstance */
 	private final Race _race;
 	private final ClassId _classId;
-	
-	private final int _currentCollisionRadius;
-	private final int _currentCollisionHeight;
 	private final String _className;
-	
+	private final int _classBaseLevel;
+	private final float _levelHpAdd;
+	private final float _levelHpMod;
+	private final float _levelCpAdd;
+	private final float _levelCpMod;
+	private final float _levelMpAdd;
+	private final float _levelMpMod;
 	private final int _spawnX;
 	private final int _spawnY;
 	private final int _spawnZ;
-	
-	private final int _classBaseLevel;
-	private final float _lvlHpAdd;
-	private final float _lvlHpMod;
-	private final float _lvlCpAdd;
-	private final float _lvlCpMod;
-	private final float _lvlMpAdd;
-	private final float _lvlMpMod;
-	
-	private final List<Item> _items = new ArrayList<>();
+	private final List<ItemHolder> _items = new ArrayList<>();
 	
 	public PlayerTemplate(StatSet set)
 	{
 		super(set);
-		_classId = ClassId.getClassId(set.getInt("classId"));
-		_race = Race.values()[set.getInt("raceId")];
-		_className = set.getString("className");
-		_currentCollisionRadius = set.getInt("collision_radius");
-		_currentCollisionHeight = set.getInt("collision_height");
-		
+		_classId = ClassId.getClassId(set.getInt("id"));
+		_race = Enum.valueOf(Race.class, set.getString("race"));
+		_className = set.getString("name");
 		_spawnX = set.getInt("spawnX");
 		_spawnY = set.getInt("spawnY");
 		_spawnZ = set.getInt("spawnZ");
-		
-		_classBaseLevel = set.getInt("classBaseLevel");
-		_lvlHpAdd = set.getFloat("lvlHpAdd");
-		_lvlHpMod = set.getFloat("lvlHpMod");
-		_lvlCpAdd = set.getFloat("lvlCpAdd");
-		_lvlCpMod = set.getFloat("lvlCpMod");
-		_lvlMpAdd = set.getFloat("lvlMpAdd");
-		_lvlMpMod = set.getFloat("lvlMpMod");
-	}
-	
-	/**
-	 * add starter equipment
-	 * @param itemId
-	 */
-	public void addItem(int itemId)
-	{
-		final Item item = ItemTable.getInstance().getTemplate(itemId);
-		if (item != null)
+		_classBaseLevel = set.getInt("baseLevel");
+		_levelHpAdd = set.getFloat("levelHpAdd");
+		_levelHpMod = set.getFloat("levelHpMod");
+		_levelCpAdd = set.getFloat("levelCpAdd");
+		_levelCpMod = set.getFloat("levelCpMod");
+		_levelMpAdd = set.getFloat("levelMpAdd");
+		_levelMpMod = set.getFloat("levelMpMod");
+		String[] item;
+		for (String split : set.getString("items").split(";"))
 		{
-			_items.add(item);
+			item = split.split(",");
+			_items.add(new ItemHolder(Integer.parseInt(item[0]), Integer.parseInt(item[1])));
 		}
 	}
 	
-	/**
-	 * @return itemIds of all the starter equipment
-	 */
-	public Item[] getItems()
+	public List<ItemHolder> getItems()
 	{
-		return _items.toArray(new Item[_items.size()]);
+		return _items;
 	}
 	
 	public Race getRace()
@@ -103,18 +81,6 @@ public class PlayerTemplate extends CreatureTemplate
 	public ClassId getClassId()
 	{
 		return _classId;
-	}
-	
-	@Override
-	public int getCollisionRadius()
-	{
-		return _currentCollisionRadius;
-	}
-	
-	@Override
-	public int getCollisionHeight()
-	{
-		return _currentCollisionHeight;
 	}
 	
 	public String getClassName()
@@ -142,34 +108,34 @@ public class PlayerTemplate extends CreatureTemplate
 		return _classBaseLevel;
 	}
 	
-	public float getLvlHpAdd()
+	public float getLevelHpAdd()
 	{
-		return _lvlHpAdd;
+		return _levelHpAdd;
 	}
 	
-	public float getLvlHpMod()
+	public float getLevelHpMod()
 	{
-		return _lvlHpMod;
+		return _levelHpMod;
 	}
 	
-	public float getLvlCpAdd()
+	public float getLevelCpAdd()
 	{
-		return _lvlCpAdd;
+		return _levelCpAdd;
 	}
 	
-	public float getLvlCpMod()
+	public float getLevelCpMod()
 	{
-		return _lvlCpMod;
+		return _levelCpMod;
 	}
 	
-	public float getLvlMpAdd()
+	public float getLevelMpAdd()
 	{
-		return _lvlMpAdd;
+		return _levelMpAdd;
 	}
 	
-	public float getLvlMpMod()
+	public float getLevelMpMod()
 	{
-		return _lvlMpMod;
+		return _levelMpMod;
 	}
 	
 	public int getBaseFallSafeHeight(boolean female)

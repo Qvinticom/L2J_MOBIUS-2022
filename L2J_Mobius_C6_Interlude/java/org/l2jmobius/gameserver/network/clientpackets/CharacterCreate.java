@@ -26,9 +26,9 @@ import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.sql.CharNameTable;
-import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
 import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
+import org.l2jmobius.gameserver.datatables.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.ShortCut;
@@ -36,6 +36,7 @@ import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -115,7 +116,7 @@ public class CharacterCreate extends GameClientPacket
 				return;
 			}
 			
-			template = CharTemplateTable.getInstance().getTemplate(_classId);
+			template = PlayerTemplateData.getInstance().getTemplate(_classId);
 			if ((template == null) || (template.getClassBaseLevel() > 1))
 			{
 				sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
@@ -249,9 +250,9 @@ public class CharacterCreate extends GameClientPacket
 		newChar.registerShortCut(new ShortCut(3, 0, 3, 5, -1)); // Take
 		newChar.registerShortCut(new ShortCut(10, 0, 3, 0, -1)); // Sit
 		
-		for (Item item : template.getItems())
+		for (ItemHolder item : template.getItems())
 		{
-			final ItemInstance itemInstance = newChar.getInventory().addItem("Init", item.getItemId(), 1, newChar, null);
+			final ItemInstance itemInstance = newChar.getInventory().addItem("Init", item.getId(), (int) item.getCount(), newChar, null);
 			if (itemInstance.getItemId() == 5588)
 			{
 				newChar.registerShortCut(new ShortCut(11, 0, 1, itemInstance.getObjectId(), -1)); // Tutorial Book shortcut

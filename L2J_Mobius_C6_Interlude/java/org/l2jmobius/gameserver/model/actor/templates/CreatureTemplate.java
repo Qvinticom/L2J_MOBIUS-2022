@@ -161,8 +161,8 @@ public class CreatureTemplate
 		_baseHpConsumeRate = set.getInt("baseHpConsumeRate", 0);
 		
 		// Geometry
-		_collisionRadius = set.getInt("collision_radius");
-		_collisionHeight = set.getInt("collision_height");
+		_collisionRadius = (int) set.getFloat("collision_radius"); // TODO: Support float.
+		_collisionHeight = (int) set.getFloat("collision_height"); // TODO: Support float.
 	}
 	
 	public int getBaseSTR()

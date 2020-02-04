@@ -30,11 +30,13 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.SkillTable;
+import org.l2jmobius.gameserver.datatables.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.model.EnchantSkillLearn;
 import org.l2jmobius.gameserver.model.PledgeSkillLearn;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.skills.holders.ISkillsHolder;
 import org.l2jmobius.gameserver.model.skills.holders.PlayerSkillHolder;
@@ -47,42 +49,36 @@ public class SkillTreeTable
 	private static final Logger LOGGER = Logger.getLogger(SkillTreeTable.class.getName());
 	
 	private Map<ClassId, Map<Integer, SkillLearn>> _skillTrees;
-	private List<SkillLearn> _fishingSkillTrees; // all common skills (teached by Fisherman)
-	private List<SkillLearn> _expandDwarfCraftSkillTrees; // list of special skill for dwarf (expand dwarf craft) learned by class teacher
-	private List<PledgeSkillLearn> _pledgeSkillTrees; // pledge skill list
-	private List<EnchantSkillLearn> _enchantSkillTrees; // enchant skill list
+	private List<SkillLearn> _fishingSkillTrees;
+	private List<SkillLearn> _expandDwarfCraftSkillTrees;
+	private List<PledgeSkillLearn> _pledgeSkillTrees;
+	private List<EnchantSkillLearn> _enchantSkillTrees;
 	
 	private SkillTreeTable()
 	{
-		int classId = 0;
 		int count = 0;
+		ClassId classId = null;
+		ClassId parentClassId;
+		Map<Integer, SkillLearn> map;
 		
-		try (Connection con = DatabaseFactory.getConnection())
+		for (PlayerTemplate playerTemplate : PlayerTemplateData.getInstance().getAllTemplates())
 		{
-			final PreparedStatement statement = con.prepareStatement("SELECT * FROM class_list ORDER BY id");
-			final ResultSet classlist = statement.executeQuery();
-			
-			Map<Integer, SkillLearn> map;
-			int parentClassId;
-			SkillLearn skillLearn;
-			
-			while (classlist.next())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				map = new HashMap<>();
-				parentClassId = classlist.getInt("parent_id");
-				classId = classlist.getInt("id");
-				final PreparedStatement statement2 = con.prepareStatement("SELECT class_id, skill_id, level, name, sp, min_level FROM skill_trees where class_id=? ORDER BY skill_id, level");
-				statement2.setInt(1, classId);
-				final ResultSet skilltree = statement2.executeQuery();
+				classId = playerTemplate.getClassId();
+				parentClassId = classId.getParent();
 				
-				if (parentClassId != -1)
+				final PreparedStatement statement = con.prepareStatement("SELECT class_id, skill_id, level, name, sp, min_level FROM skill_trees where class_id=? ORDER BY skill_id, level");
+				statement.setInt(1, classId.getId());
+				final ResultSet skilltree = statement.executeQuery();
+				
+				if (parentClassId != null)
 				{
-					final Map<Integer, SkillLearn> parentMap = getSkillTrees().get(ClassId.getClassId(parentClassId));
-					map.putAll(parentMap);
+					map.putAll(getSkillTrees().get(parentClassId));
 				}
 				
 				int prevSkillId = -1;
-				
 				while (skilltree.next())
 				{
 					final int id = skilltree.getInt("skill_id");
@@ -96,24 +92,22 @@ public class SkillTreeTable
 						prevSkillId = id;
 					}
 					
-					skillLearn = new SkillLearn(id, lvl, minLvl, name, cost, 0, 0);
-					map.put(SkillTable.getSkillHashCode(id, lvl), skillLearn);
+					map.put(SkillTable.getSkillHashCode(id, lvl), new SkillLearn(id, lvl, minLvl, name, cost, 0, 0));
 				}
 				
-				getSkillTrees().put(ClassId.getClassId(classId), map);
-				skilltree.close();
-				statement2.close();
-				
+				getSkillTrees().put(classId, map);
 				count += map.size();
-				// LOGGER.info("SkillTreeTable: skill tree for class " + classId + " has " + map.size() + " skills.");
+				
+				skilltree.close();
+				statement.close();
 			}
-			
-			classlist.close();
-			statement.close();
-		}
-		catch (Exception e)
-		{
-			LOGGER.warning("Error while creating skill tree (Class ID " + classId + "):  " + e);
+			catch (Exception e)
+			{
+				if (classId != null)
+				{
+					LOGGER.warning("Error while creating skill tree (Class ID " + classId.getId() + "):  " + e);
+				}
+			}
 		}
 		
 		LOGGER.info("SkillTreeTable: Loaded " + count + " skills.");

@@ -714,9 +714,9 @@ public class Formulas
 		{
 			final PlayerTemplate t = (PlayerTemplate) env.player.getTemplate();
 			final int lvl = env.player.getLevel() - t.getClassBaseLevel();
-			final double hpmod = t.getLvlHpMod() * lvl;
-			final double hpmax = (t.getLvlHpAdd() + hpmod) * lvl;
-			final double hpmin = (t.getLvlHpAdd() * lvl) + hpmod;
+			final double hpmod = t.getLevelHpMod() * lvl;
+			final double hpmax = (t.getLevelHpAdd() + hpmod) * lvl;
+			final double hpmin = (t.getLevelHpAdd() * lvl) + hpmod;
 			env.value += (hpmax + hpmin) / 2;
 		}
 	}
@@ -761,9 +761,9 @@ public class Formulas
 		{
 			final PlayerTemplate t = (PlayerTemplate) env.player.getTemplate();
 			final int lvl = env.player.getLevel() - t.getClassBaseLevel();
-			final double cpmod = t.getLvlCpMod() * lvl;
-			final double cpmax = (t.getLvlCpAdd() + cpmod) * lvl;
-			final double cpmin = (t.getLvlCpAdd() * lvl) + cpmod;
+			final double cpmod = t.getLevelCpMod() * lvl;
+			final double cpmax = (t.getLevelCpAdd() + cpmod) * lvl;
+			final double cpmin = (t.getLevelCpAdd() * lvl) + cpmod;
 			env.value += (cpmax + cpmin) / 2;
 		}
 	}
@@ -808,9 +808,9 @@ public class Formulas
 		{
 			final PlayerTemplate t = (PlayerTemplate) env.player.getTemplate();
 			final int lvl = env.player.getLevel() - t.getClassBaseLevel();
-			final double mpmod = t.getLvlMpMod() * lvl;
-			final double mpmax = (t.getLvlMpAdd() + mpmod) * lvl;
-			final double mpmin = (t.getLvlMpAdd() * lvl) + mpmod;
+			final double mpmod = t.getLevelMpMod() * lvl;
+			final double mpmax = (t.getLevelMpAdd() + mpmod) * lvl;
+			final double mpmin = (t.getLevelMpAdd() * lvl) + mpmod;
 			env.value += (mpmax + mpmin) / 2;
 		}
 	}

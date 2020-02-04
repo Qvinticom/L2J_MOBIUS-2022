@@ -26,7 +26,7 @@ import java.util.Properties;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
+import org.l2jmobius.gameserver.datatables.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
@@ -46,13 +46,12 @@ public class ClassDamageManager
 	
 	public static void loadConfig()
 	{
-		final String SCRIPT = Config.CLASS_DAMAGE_CONFIG_FILE;
 		InputStream is = null;
 		File file = null;
 		try
 		{
 			final Properties scriptSetting = new Properties();
-			file = new File(SCRIPT);
+			file = new File(Config.CLASS_DAMAGE_CONFIG_FILE);
 			is = new FileInputStream(file);
 			scriptSetting.load(is);
 			
@@ -69,8 +68,7 @@ public class ClassDamageManager
 				}
 				
 				final String type = classAndType[1];
-				
-				final Integer classId = CharTemplateTable.getClassIdByName(className) - 1;
+				final Integer classId = PlayerTemplateData.getInstance().getClassIdByName(className) - 1;
 				
 				ID_TO_NAME.put(classId, className);
 				NAME_TO_ID.put(className, classId);
@@ -93,7 +91,7 @@ public class ClassDamageManager
 				}
 			}
 			
-			LOGGER.info("Loaded " + ID_TO_NAME.size() + " classes Damages configurations");
+			LOGGER.info("Loaded " + ID_TO_NAME.size() + " class damage configurations.");
 		}
 		catch (Exception e)
 		{

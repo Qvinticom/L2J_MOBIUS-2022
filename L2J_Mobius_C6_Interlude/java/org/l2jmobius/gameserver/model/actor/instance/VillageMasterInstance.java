@@ -20,9 +20,9 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
+import org.l2jmobius.gameserver.datatables.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
@@ -287,11 +287,11 @@ public class VillageMasterInstance extends FolkInstance
 						content.append("Which class would you like to switch to?<br>");
 						if (baseClassId == player.getActiveClass())
 						{
-							content.append(CharTemplateTable.getClassNameById(baseClassId) + "&nbsp;<font color=\"LEVEL\">(Base Class)</font><br><br>");
+							content.append(PlayerTemplateData.getInstance().getClassNameById(baseClassId) + "&nbsp;<font color=\"LEVEL\">(Base Class)</font><br><br>");
 						}
 						else
 						{
-							content.append("<a action=\"bypass -h npc_" + getObjectId() + "_Subclass 5 0\">" + CharTemplateTable.getClassNameById(baseClassId) + "</a>&nbsp;<font color=\"LEVEL\">(Base Class)</font><br><br>");
+							content.append("<a action=\"bypass -h npc_" + getObjectId() + "_Subclass 5 0\">" + PlayerTemplateData.getInstance().getClassNameById(baseClassId) + "</a>&nbsp;<font color=\"LEVEL\">(Base Class)</font><br><br>");
 						}
 						for (Iterator<SubClass> subList = iterSubClasses(player); subList.hasNext();)
 						{
@@ -299,11 +299,11 @@ public class VillageMasterInstance extends FolkInstance
 							final int subClassId = subClass.getClassId();
 							if (subClassId == player.getActiveClass())
 							{
-								content.append(CharTemplateTable.getClassNameById(subClassId) + "<br>");
+								content.append(PlayerTemplateData.getInstance().getClassNameById(subClassId) + "<br>");
 							}
 							else
 							{
-								content.append("<a action=\"bypass -h npc_" + getObjectId() + "_Subclass 5 " + subClass.getClassIndex() + "\">" + CharTemplateTable.getClassNameById(subClassId) + "</a><br>");
+								content.append("<a action=\"bypass -h npc_" + getObjectId() + "_Subclass 5 " + subClass.getClassIndex() + "\">" + PlayerTemplateData.getInstance().getClassNameById(subClassId) + "</a><br>");
 							}
 						}
 					}
@@ -317,7 +317,7 @@ public class VillageMasterInstance extends FolkInstance
 					{
 						final SubClass subClass = subList.next();
 						content.append("Sub-class " + classIndex + "<br1>");
-						content.append("<a action=\"bypass -h npc_" + getObjectId() + "_Subclass 6 " + subClass.getClassIndex() + "\">" + CharTemplateTable.getClassNameById(subClass.getClassId()) + "</a><br>");
+						content.append("<a action=\"bypass -h npc_" + getObjectId() + "_Subclass 6 " + subClass.getClassIndex() + "\">" + PlayerTemplateData.getInstance().getClassNameById(subClass.getClassId()) + "</a><br>");
 						classIndex++;
 					}
 					content.append("<br>If you change a sub class, you'll start at level 40 after the 2nd class transfer.");
@@ -394,7 +394,7 @@ public class VillageMasterInstance extends FolkInstance
 					}
 					if (allowAddition)
 					{
-						final String className = CharTemplateTable.getClassNameById(paramOne);
+						final String className = PlayerTemplateData.getInstance().getClassNameById(paramOne);
 						if (!player.addSubClass(paramOne, player.getTotalSubClasses() + 1))
 						{
 							player.sendMessage("The sub class could not be added.");
@@ -448,7 +448,7 @@ public class VillageMasterInstance extends FolkInstance
 						return;
 					}
 					player.setActiveClass(paramOne);
-					content.append("Change Subclass:<br>Your active sub class is now a <font color=\"LEVEL\">" + CharTemplateTable.getClassNameById(player.getActiveClass()) + "</font>.");
+					content.append("Change Subclass:<br>Your active sub class is now a <font color=\"LEVEL\">" + PlayerTemplateData.getInstance().getClassNameById(player.getActiveClass()) + "</font>.");
 					player.sendPacket(SystemMessageId.SUBCLASS_TRANSFER_COMPLETED); // Transfer completed.
 					// check player skills
 					// Player skills are already checked during setActiveClass
@@ -506,7 +506,7 @@ public class VillageMasterInstance extends FolkInstance
 					if (player.modifySubClass(paramOne, paramTwo))
 					{
 						player.setActiveClass(paramOne);
-						content.append("Change Subclass:<br>Your sub class has been changed to <font color=\"LEVEL\">" + CharTemplateTable.getClassNameById(paramTwo) + "</font>.");
+						content.append("Change Subclass:<br>Your sub class has been changed to <font color=\"LEVEL\">" + PlayerTemplateData.getInstance().getClassNameById(paramTwo) + "</font>.");
 						player.sendPacket(SystemMessageId.ADD_NEW_SUBCLASS); // Subclass added.
 						// check player skills
 						// Player skills are already checked during setActiveClass

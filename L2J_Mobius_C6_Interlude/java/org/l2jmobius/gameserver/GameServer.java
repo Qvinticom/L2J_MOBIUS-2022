@@ -48,10 +48,8 @@ import org.l2jmobius.gameserver.datatables.OfflineTradeTable;
 import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.sql.CharNameTable;
-import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.HelperBuffTable;
-import org.l2jmobius.gameserver.datatables.sql.LevelUpData;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.PetDataTable;
 import org.l2jmobius.gameserver.datatables.sql.SkillSpellbookTable;
@@ -70,6 +68,7 @@ import org.l2jmobius.gameserver.datatables.xml.FishData;
 import org.l2jmobius.gameserver.datatables.xml.HennaData;
 import org.l2jmobius.gameserver.datatables.xml.ManorSeedData;
 import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
+import org.l2jmobius.gameserver.datatables.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.datatables.xml.StaticObjectData;
 import org.l2jmobius.gameserver.datatables.xml.SummonItemData;
@@ -216,9 +215,16 @@ public class GameServer
 		ExperienceData.getInstance();
 		DuelManager.getInstance();
 		
+		Util.printSection("Players");
+		PlayerTemplateData.getInstance();
 		if (Config.ENABLE_CLASS_DAMAGES)
 		{
 			ClassDamageManager.loadConfig();
+		}
+		ClanTable.getInstance();
+		if (Config.ENABLE_COMMUNITY_BOARD)
+		{
+			ForumsBBSManager.getInstance().initRoot();
 		}
 		
 		Util.printSection("Skills");
@@ -231,6 +237,10 @@ public class GameServer
 		SkillSpellbookTable.getInstance();
 		NobleSkillTable.getInstance();
 		HeroSkillTable.getInstance();
+		if (!HelperBuffTable.getInstance().isInitialized())
+		{
+			throw new Exception("Could not initialize the Helper Buff Table.");
+		}
 		LOGGER.info("Skills: All skills loaded.");
 		
 		Util.printSection("Items");
@@ -238,6 +248,7 @@ public class GameServer
 		ArmorSetData.getInstance();
 		ExtractableItemData.getInstance();
 		SummonItemData.getInstance();
+		HennaData.getInstance();
 		if (Config.ALLOWFISHING)
 		{
 			FishData.getInstance();
@@ -250,22 +261,6 @@ public class GameServer
 		{
 			LOGGER.info("Could not find the extracted files. Please Check Your Data.");
 			throw new Exception("Could not initialize the npc table");
-		}
-		
-		Util.printSection("Characters");
-		if (Config.ENABLE_COMMUNITY_BOARD)
-		{
-			ForumsBBSManager.getInstance().initRoot();
-		}
-		
-		ClanTable.getInstance();
-		CharTemplateTable.getInstance();
-		LevelUpData.getInstance();
-		HennaData.getInstance();
-		
-		if (!HelperBuffTable.getInstance().isInitialized())
-		{
-			throw new Exception("Could not initialize the Helper Buff Table");
 		}
 		
 		Util.printSection("Geodata");

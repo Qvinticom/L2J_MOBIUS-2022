@@ -56,7 +56,6 @@ import org.l2jmobius.gameserver.datatables.HeroSkillTable;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.datatables.NobleSkillTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
@@ -65,6 +64,7 @@ import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.datatables.xml.FishData;
 import org.l2jmobius.gameserver.datatables.xml.HennaData;
 import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
+import org.l2jmobius.gameserver.datatables.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.enums.Race;
@@ -1016,7 +1016,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Retrieve a PlayerInstance from the characters table of the database and add it in _allObjects of the L2world (call restore method).<BR>
+	 * Retrieve a PlayerInstance from the characters table of the database and add it in _allObjects of the World (call restore method).<BR>
 	 * <BR>
 	 * <B><U> Actions</U> :</B><BR>
 	 * <BR>
@@ -1067,7 +1067,7 @@ public class PlayerInstance extends Playable
 		getKnownList(); // init knownlist
 		getStat(); // init stats
 		getStatus(); // init status
-		super.initCharStatusUpdateValues();
+		initCharStatusUpdateValues();
 		initPcStatusUpdateValues();
 		
 		_accountName = accountName;
@@ -1153,7 +1153,7 @@ public class PlayerInstance extends Playable
 	 */
 	public PlayerTemplate getBaseTemplate()
 	{
-		return CharTemplateTable.getInstance().getTemplate(_baseClass);
+		return PlayerTemplateData.getInstance().getTemplate(_baseClass);
 	}
 	
 	/**
@@ -1172,7 +1172,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void setTemplate(ClassId newclass)
 	{
-		super.setTemplate(CharTemplateTable.getInstance().getTemplate(newclass));
+		super.setTemplate(PlayerTemplateData.getInstance().getTemplate(newclass));
 	}
 	
 	public void setTimerToAttack(long time)
@@ -3116,7 +3116,7 @@ public class PlayerInstance extends Playable
 		{
 			return getTemplate().getRace();
 		}
-		return CharTemplateTable.getInstance().getTemplate(_baseClass).getRace();
+		return PlayerTemplateData.getInstance().getTemplate(_baseClass).getRace();
 	}
 	
 	/**
@@ -8505,7 +8505,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Retrieve a PlayerInstance from the characters table of the database and add it in _allObjects of the L2world.<BR>
+	 * Retrieve a PlayerInstance from the characters table of the database and add it in _allObjects of the World.<BR>
 	 * <BR>
 	 * <B><U> Actions</U> :</B><BR>
 	 * <BR>
@@ -8534,7 +8534,7 @@ public class PlayerInstance extends Playable
 			{
 				final int activeClassId = rset.getInt("classid");
 				final boolean female = rset.getInt("sex") != 0;
-				final PlayerTemplate template = CharTemplateTable.getInstance().getTemplate(activeClassId);
+				final PlayerTemplate template = PlayerTemplateData.getInstance().getTemplate(activeClassId);
 				final PlayerAppearance app = new PlayerAppearance(rset.getByte("face"), rset.getByte("hairColor"), rset.getByte("hairStyle"), female);
 				
 				player = new PlayerInstance(objectId, template, rset.getString("account_name"), app);
@@ -12784,8 +12784,7 @@ public class PlayerInstance extends Playable
 	{
 		_activeClass = classId;
 		
-		final PlayerTemplate t = CharTemplateTable.getInstance().getTemplate(classId);
-		
+		final PlayerTemplate t = PlayerTemplateData.getInstance().getTemplate(classId);
 		if (t == null)
 		{
 			LOGGER.warning("Missing template for classId: " + classId);

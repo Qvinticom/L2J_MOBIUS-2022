@@ -99,7 +99,7 @@ public class DocumentEngine
 				count++;
 			}
 		}
-		LOGGER.info("SkillsEngine: Loaded " + count + " Skill templates from XML files.");
+		LOGGER.info("SkillsEngine: Loaded " + count + " skill templates.");
 	}
 	
 	/**

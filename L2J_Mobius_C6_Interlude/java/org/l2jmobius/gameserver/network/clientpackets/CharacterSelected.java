@@ -68,7 +68,6 @@ public class CharacterSelected extends GameClientPacket
 				{
 					// Load up character from disk
 					final PlayerInstance cha = getClient().loadCharFromDisk(_charSlot);
-					
 					if (cha == null)
 					{
 						LOGGER.warning(getType() + ": Character could not be loaded (slot:" + _charSlot + ")");
