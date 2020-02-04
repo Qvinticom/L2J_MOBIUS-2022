@@ -588,23 +588,19 @@ public class DoorInstance extends Creature
 				player.sendPacket(new DoorStatusUpdate(this));
 			}
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			final StringBuilder html1 = new StringBuilder("<html><body><table border=0>");
-			html1.append("<tr><td><font color=\"LEVEL\">Door Information</font><br></td></tr>");
-			html1.append("<tr><td>Current HP  " + getCurrentHp() + "</td></tr>");
-			html1.append("<tr><td>Max HP       " + getMaxHp() + "</td></tr>");
-			html1.append("<tr><td>Object ID: " + getObjectId() + "</td></tr>");
-			html1.append("<tr><td>Door ID: " + _doorId + "</td></tr>");
-			html1.append("<tr><td><br></td></tr>");
-			html1.append("<tr><td>Class: " + getClass().getSimpleName() + "</td></tr>");
-			html1.append("<tr><td><br></td></tr>");
-			html1.append("</table>");
-			html1.append("<table><tr>");
-			html1.append("<td><button value=\"Open\" action=\"bypass -h admin_open " + _doorId + "\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td>");
-			html1.append("<td><button value=\"Close\" action=\"bypass -h admin_close " + _doorId + "\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td>");
+			final StringBuilder html1 = new StringBuilder("<html><body><center><font color=\"LEVEL\">Door Information</font></center>");
+			html1.append("<table border=0><tr>");
 			html1.append("<td><button value=\"Kill\" action=\"bypass -h admin_kill\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td>");
 			html1.append("<td><button value=\"Delete\" action=\"bypass -h admin_delete\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td>");
-			html1.append("</tr></table></body></html>");
-			
+			html1.append("<td><button value=\"Open\" action=\"bypass -h admin_open " + _doorId + "\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td>");
+			html1.append("<td><button value=\"Close\" action=\"bypass -h admin_close " + _doorId + "\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td>");
+			html1.append("</tr></table><br><table border=0 width=270>");
+			html1.append("<tr><td width=90>Instance Type:</td><td width=180>" + getClass().getSimpleName() + "</td></tr>");
+			html1.append("<tr><td>Current HP:</td><td>" + getCurrentHp() + "</td></tr>");
+			html1.append("<tr><td>Max HP:</td><td>" + getMaxHp() + "</td></tr>");
+			html1.append("<tr><td>Object ID:</td><td>" + getObjectId() + "</td></tr>");
+			html1.append("<tr><td>Door ID:</td><td>" + _doorId + "</td></tr>");
+			html1.append("</table></body></html>");
 			html.setHtml(html1.toString());
 			player.sendPacket(html);
 		}

@@ -853,7 +853,7 @@ public class NpcInstance extends Creature
 			final StringBuilder html1 = new StringBuilder("<html><body><center><font color=\"LEVEL\">NPC Information</font></center>");
 			final String className = getClass().getSimpleName();
 			
-			html1.append("<br><center><table><tr>");
+			html1.append("<center><table><tr>");
 			html1.append("<td><button value=\"Kill\" action=\"bypass -h admin_kill\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td>");
 			html1.append("<td><button value=\"Delete\" action=\"bypass -h admin_delete\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td></tr>");
 			html1.append("<td><button value=\"Skills\" action=\"bypass -h admin_show_skilllist_npc " + getTemplate().getNpcId() + "\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td>");
