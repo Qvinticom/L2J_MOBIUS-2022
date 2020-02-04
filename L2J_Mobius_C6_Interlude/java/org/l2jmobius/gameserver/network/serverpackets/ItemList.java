@@ -47,33 +47,25 @@ public class ItemList extends GameServerPacket
 	{
 		writeC(0x1b);
 		writeH(_showWindow ? 0x01 : 0x00);
-		final int count = _items.length;
-		writeH(count);
+		writeH(_items.length);
 		for (ItemInstance temp : _items)
 		{
 			if ((temp == null) || (temp.getItem() == null))
 			{
 				continue;
 			}
-			writeH(temp.getItem().getType1()); // item type1
+			writeH(temp.getItem().getType1());
 			writeD(temp.getObjectId());
 			writeD(temp.getItemId());
 			writeD(temp.getCount());
-			writeH(temp.getItem().getType2()); // item type2
-			writeH(temp.getCustomType1()); // item type3
+			writeH(temp.getItem().getType2());
+			writeH(temp.getCustomType1());
 			writeH(temp.isEquipped() ? 0x01 : 0x00);
 			writeD(temp.getItem().getBodyPart());
-			writeH(temp.getEnchantLevel()); // enchant level
+			writeH(temp.getEnchantLevel());
 			// race tickets
-			writeH(temp.getCustomType2()); // item type3
-			if (temp.isAugmented())
-			{
-				writeD(temp.getAugmentation().getAugmentationId());
-			}
-			else
-			{
-				writeD(0x00);
-			}
+			writeH(temp.getCustomType2());
+			writeD((temp.isAugmented()) ? temp.getAugmentation().getAugmentationId() : 0x00);
 			writeD(temp.getMana());
 		}
 	}

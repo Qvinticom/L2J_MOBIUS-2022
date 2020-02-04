@@ -53,9 +53,6 @@ public class InventoryUpdate extends GameServerPacket
 		_items = new ArrayList<>();
 	}
 	
-	/**
-	 * @param items
-	 */
 	public InventoryUpdate(List<ItemInfo> items)
 	{
 		_items = items;
@@ -111,8 +108,7 @@ public class InventoryUpdate extends GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x27);
-		final int count = _items.size();
-		writeH(count);
+		writeH(_items.size());
 		for (ItemInfo item : _items)
 		{
 			writeH(item.getChange()); // Update type : 01-add, 02-modify,
