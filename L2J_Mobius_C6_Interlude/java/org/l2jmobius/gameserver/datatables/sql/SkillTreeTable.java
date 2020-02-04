@@ -48,34 +48,45 @@ public class SkillTreeTable
 {
 	private static final Logger LOGGER = Logger.getLogger(SkillTreeTable.class.getName());
 	
-	private Map<ClassId, Map<Integer, SkillLearn>> _skillTrees;
-	private List<SkillLearn> _fishingSkillTrees;
-	private List<SkillLearn> _expandDwarfCraftSkillTrees;
-	private List<PledgeSkillLearn> _pledgeSkillTrees;
-	private List<EnchantSkillLearn> _enchantSkillTrees;
+	private final Map<ClassId, Map<Integer, SkillLearn>> _skillTrees = new EnumMap<>(ClassId.class);
+	private final List<SkillLearn> _fishingSkillTrees = new ArrayList<>();
+	private final List<SkillLearn> _expandDwarfCraftSkillTrees = new ArrayList<>();
+	private final List<PledgeSkillLearn> _pledgeSkillTrees = new ArrayList<>();
+	private final List<EnchantSkillLearn> _enchantSkillTrees = new ArrayList<>();
 	
 	private SkillTreeTable()
 	{
-		int count = 0;
+		load();
+	}
+	
+	public void load()
+	{
+		_skillTrees.clear();
+		_fishingSkillTrees.clear();
+		_expandDwarfCraftSkillTrees.clear();
+		_pledgeSkillTrees.clear();
+		_enchantSkillTrees.clear();
+		
 		ClassId classId = null;
 		ClassId parentClassId;
-		Map<Integer, SkillLearn> map;
 		
-		for (PlayerTemplate playerTemplate : PlayerTemplateData.getInstance().getAllTemplates())
+		int count = 0;
+		try (Connection con = DatabaseFactory.getConnection())
 		{
-			try (Connection con = DatabaseFactory.getConnection())
+			for (PlayerTemplate playerTemplate : PlayerTemplateData.getInstance().getAllTemplates())
 			{
-				map = new HashMap<>();
+				final Map<Integer, SkillLearn> map = new HashMap<>();
 				classId = playerTemplate.getClassId();
 				parentClassId = classId.getParent();
 				
-				final PreparedStatement statement = con.prepareStatement("SELECT class_id, skill_id, level, name, sp, min_level FROM skill_trees where class_id=? ORDER BY skill_id, level");
+				final PreparedStatement statement = con.prepareStatement("SELECT * FROM skill_trees where class_id=? ORDER BY skill_id, level");
 				statement.setInt(1, classId.getId());
 				final ResultSet skilltree = statement.executeQuery();
 				
 				if (parentClassId != null)
 				{
-					map.putAll(getSkillTrees().get(parentClassId));
+					map.putAll(_skillTrees.get(parentClassId));
+					count -= map.size();
 				}
 				
 				int prevSkillId = -1;
@@ -95,47 +106,39 @@ public class SkillTreeTable
 					map.put(SkillTable.getSkillHashCode(id, lvl), new SkillLearn(id, lvl, minLvl, name, cost, 0, 0));
 				}
 				
-				getSkillTrees().put(classId, map);
+				_skillTrees.put(classId, map);
 				count += map.size();
 				
 				skilltree.close();
 				statement.close();
 			}
-			catch (Exception e)
+		}
+		catch (Exception e)
+		{
+			if (classId != null)
 			{
-				if (classId != null)
-				{
-					LOGGER.warning("Error while creating skill tree (Class ID " + classId.getId() + "):  " + e);
-				}
+				LOGGER.warning("Error while creating skill tree (Class ID " + classId.getId() + "):  " + e);
 			}
 		}
-		
 		LOGGER.info("SkillTreeTable: Loaded " + count + " skills.");
-		
-		// Skill tree for fishing skill (from Fisherman)
-		int count2 = 0;
-		int count3 = 0;
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			_fishingSkillTrees = new ArrayList<>();
-			_expandDwarfCraftSkillTrees = new ArrayList<>();
-			
-			final PreparedStatement statement = con.prepareStatement("SELECT skill_id, level, name, sp, min_level, costid, cost, isfordwarf FROM fishing_skill_trees ORDER BY skill_id, level");
-			final ResultSet skilltree2 = statement.executeQuery();
+			final PreparedStatement statement = con.prepareStatement("SELECT * FROM fishing_skill_trees ORDER BY skill_id, level");
+			final ResultSet skilltree = statement.executeQuery();
 			
 			int prevSkillId = -1;
 			
-			while (skilltree2.next())
+			while (skilltree.next())
 			{
-				final int id = skilltree2.getInt("skill_id");
-				final int lvl = skilltree2.getInt("level");
-				final String name = skilltree2.getString("name");
-				final int minLvl = skilltree2.getInt("min_level");
-				final int cost = skilltree2.getInt("sp");
-				final int costId = skilltree2.getInt("costid");
-				final int costCount = skilltree2.getInt("cost");
-				final int isDwarven = skilltree2.getInt("isfordwarf");
+				final int id = skilltree.getInt("skill_id");
+				final int lvl = skilltree.getInt("level");
+				final String name = skilltree.getString("name");
+				final int minLvl = skilltree.getInt("min_level");
+				final int cost = skilltree.getInt("sp");
+				final int costId = skilltree.getInt("costid");
+				final int costCount = skilltree.getInt("cost");
+				final int isDwarven = skilltree.getInt("isfordwarf");
 				
 				if (prevSkillId != id)
 				{
@@ -154,41 +157,35 @@ public class SkillTreeTable
 				}
 			}
 			
-			skilltree2.close();
+			skilltree.close();
 			statement.close();
-			
-			count2 = _fishingSkillTrees.size();
-			count3 = _expandDwarfCraftSkillTrees.size();
 		}
 		catch (Exception e)
 		{
 			LOGGER.warning("Error while creating fishing skill table " + e);
 		}
 		
-		int count4 = 0;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			_enchantSkillTrees = new ArrayList<>();
-			
-			final PreparedStatement statement = con.prepareStatement("SELECT skill_id, level, name, base_lvl, sp, min_skill_lvl, exp, success_rate76, success_rate77, success_rate78,success_rate79,success_rate80 FROM enchant_skill_trees ORDER BY skill_id, level");
-			final ResultSet skilltree3 = statement.executeQuery();
+			final PreparedStatement statement = con.prepareStatement("SELECT * FROM enchant_skill_trees ORDER BY skill_id, level");
+			final ResultSet skilltree = statement.executeQuery();
 			
 			int prevSkillId = -1;
 			
-			while (skilltree3.next())
+			while (skilltree.next())
 			{
-				final int id = skilltree3.getInt("skill_id");
-				final int lvl = skilltree3.getInt("level");
-				final String name = skilltree3.getString("name");
-				final int baseLvl = skilltree3.getInt("base_lvl");
-				final int minSkillLvl = skilltree3.getInt("min_skill_lvl");
-				final int sp = skilltree3.getInt("sp");
-				final int exp = skilltree3.getInt("exp");
-				final byte rate76 = skilltree3.getByte("success_rate76");
-				final byte rate77 = skilltree3.getByte("success_rate77");
-				final byte rate78 = skilltree3.getByte("success_rate78");
-				final byte rate79 = skilltree3.getByte("success_rate79");
-				final byte rate80 = skilltree3.getByte("success_rate80");
+				final int id = skilltree.getInt("skill_id");
+				final int lvl = skilltree.getInt("level");
+				final String name = skilltree.getString("name");
+				final int baseLvl = skilltree.getInt("base_lvl");
+				final int minSkillLvl = skilltree.getInt("min_skill_lvl");
+				final int sp = skilltree.getInt("sp");
+				final int exp = skilltree.getInt("exp");
+				final byte rate76 = skilltree.getByte("success_rate76");
+				final byte rate77 = skilltree.getByte("success_rate77");
+				final byte rate78 = skilltree.getByte("success_rate78");
+				final byte rate79 = skilltree.getByte("success_rate79");
+				final byte rate80 = skilltree.getByte("success_rate80");
 				
 				if (prevSkillId != id)
 				{
@@ -198,34 +195,29 @@ public class SkillTreeTable
 				_enchantSkillTrees.add(new EnchantSkillLearn(id, lvl, minSkillLvl, baseLvl, name, sp, exp, rate76, rate77, rate78, rate79, rate80));
 			}
 			
-			skilltree3.close();
+			skilltree.close();
 			statement.close();
-			
-			count4 = _enchantSkillTrees.size();
 		}
 		catch (Exception e)
 		{
 			LOGGER.warning("Error while creating enchant skill table " + e);
 		}
 		
-		int count5 = 0;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			_pledgeSkillTrees = new ArrayList<>();
-			
-			final PreparedStatement statement = con.prepareStatement("SELECT skill_id, level, name, clan_lvl, repCost, itemId FROM pledge_skill_trees ORDER BY skill_id, level");
-			final ResultSet skilltree4 = statement.executeQuery();
+			final PreparedStatement statement = con.prepareStatement("SELECT * FROM pledge_skill_trees ORDER BY skill_id, level");
+			final ResultSet skilltree = statement.executeQuery();
 			
 			int prevSkillId = -1;
 			
-			while (skilltree4.next())
+			while (skilltree.next())
 			{
-				final int id = skilltree4.getInt("skill_id");
-				final int lvl = skilltree4.getInt("level");
-				final String name = skilltree4.getString("name");
-				final int baseLvl = skilltree4.getInt("clan_lvl");
-				final int sp = skilltree4.getInt("repCost");
-				final int itemId = skilltree4.getInt("itemId");
+				final int id = skilltree.getInt("skill_id");
+				final int lvl = skilltree.getInt("level");
+				final String name = skilltree.getString("name");
+				final int baseLvl = skilltree.getInt("clan_lvl");
+				final int sp = skilltree.getInt("repCost");
+				final int itemId = skilltree.getInt("itemId");
 				
 				if (prevSkillId != id)
 				{
@@ -235,20 +227,18 @@ public class SkillTreeTable
 				_pledgeSkillTrees.add(new PledgeSkillLearn(id, lvl, baseLvl, name, sp, itemId));
 			}
 			
-			skilltree4.close();
+			skilltree.close();
 			statement.close();
-			
-			count5 = _pledgeSkillTrees.size();
 		}
 		catch (Exception e)
 		{
 			LOGGER.warning("Error while creating fishing skill table " + e);
 		}
 		
-		LOGGER.info("FishingSkillTreeTable: Loaded " + count2 + " general skills.");
-		LOGGER.info("FishingSkillTreeTable: Loaded " + count3 + " dwarven skills.");
-		LOGGER.info("EnchantSkillTreeTable: Loaded " + count4 + " enchant skills.");
-		LOGGER.info("PledgeSkillTreeTable: Loaded " + count5 + " pledge skills.");
+		LOGGER.info("FishingSkillTreeTable: Loaded " + _fishingSkillTrees.size() + " general skills.");
+		LOGGER.info("FishingSkillTreeTable: Loaded " + _expandDwarfCraftSkillTrees.size() + " dwarven skills.");
+		LOGGER.info("EnchantSkillTreeTable: Loaded " + _enchantSkillTrees.size() + " enchant skills.");
+		LOGGER.info("PledgeSkillTreeTable: Loaded " + _pledgeSkillTrees.size() + " pledge skills.");
 	}
 	
 	/**
@@ -265,7 +255,7 @@ public class SkillTreeTable
 		}
 		
 		// since expertise comes at same level for all classes we use paladin for now
-		final Map<Integer, SkillLearn> learnMap = getSkillTrees().get(ClassId.PALADIN);
+		final Map<Integer, SkillLearn> learnMap = _skillTrees.get(ClassId.PALADIN);
 		
 		final int skillHashCode = SkillTable.getSkillHashCode(239, grade);
 		
@@ -286,7 +276,7 @@ public class SkillTreeTable
 	 */
 	public int getMinSkillLevel(int skillId, ClassId classId, int skillLvl)
 	{
-		final Map<Integer, SkillLearn> map = getSkillTrees().get(classId);
+		final Map<Integer, SkillLearn> map = _skillTrees.get(classId);
 		
 		final int skillHashCode = SkillTable.getSkillHashCode(skillId, skillLvl);
 		
@@ -303,7 +293,7 @@ public class SkillTreeTable
 		final int skillHashCode = SkillTable.getSkillHashCode(skillId, skillLvl);
 		
 		// Look on all classes for this skill (takes the first one found)
-		for (Map<Integer, SkillLearn> map : getSkillTrees().values())
+		for (Map<Integer, SkillLearn> map : _skillTrees.values())
 		{
 			// checks if the current class has this skill
 			if (map.containsKey(skillHashCode))
@@ -313,15 +303,6 @@ public class SkillTreeTable
 		}
 		
 		return 0;
-	}
-	
-	private Map<ClassId, Map<Integer, SkillLearn>> getSkillTrees()
-	{
-		if (_skillTrees == null)
-		{
-			_skillTrees = new EnumMap<>(ClassId.class);
-		}
-		return _skillTrees;
 	}
 	
 	public SkillLearn[] getAvailableSkills(PlayerInstance player, ClassId classId)
@@ -340,7 +321,7 @@ public class SkillTreeTable
 	private List<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId, ISkillsHolder holder)
 	{
 		final List<SkillLearn> result = new ArrayList<>();
-		final Collection<SkillLearn> skills = getSkillTrees().get(classId).values();
+		final Collection<SkillLearn> skills = _skillTrees.get(classId).values();
 		
 		if (skills.isEmpty())
 		{
@@ -503,13 +484,13 @@ public class SkillTreeTable
 	 */
 	public Collection<SkillLearn> getAllowedSkills(ClassId classId)
 	{
-		return getSkillTrees().get(classId).values();
+		return _skillTrees.get(classId).values();
 	}
 	
 	public int getMinLevelForNewSkill(PlayerInstance player, ClassId classId)
 	{
 		int minLevel = 0;
-		final Collection<SkillLearn> skills = getSkillTrees().get(classId).values();
+		final Collection<SkillLearn> skills = _skillTrees.get(classId).values();
 		
 		for (SkillLearn temp : skills)
 		{
@@ -551,9 +532,9 @@ public class SkillTreeTable
 		final ClassId classId = player.getSkillLearningClassId();
 		final int skillHashCode = SkillTable.getSkillHashCode(skill);
 		
-		if (getSkillTrees().get(classId).containsKey(skillHashCode))
+		if (_skillTrees.get(classId).containsKey(skillHashCode))
 		{
-			final SkillLearn skillLearn = getSkillTrees().get(classId).get(skillHashCode);
+			final SkillLearn skillLearn = _skillTrees.get(classId).get(skillHashCode);
 			if (skillLearn.getMinLevel() <= player.getLevel())
 			{
 				skillCost = skillLearn.getSpCost();
