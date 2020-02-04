@@ -649,7 +649,7 @@ public class Frintezza extends Quest
 			_zone.broadcastPacket(new SocialAction(_demon1.getObjectId(), 1));
 			_zone.broadcastPacket(new SocialAction(_demon4.getObjectId(), 1));
 			
-			for (Creature pc : _zone.getCharactersInside().values())
+			for (Creature pc : _zone.getCharactersInside())
 			{
 				if (pc instanceof PlayerInstance)
 				{
@@ -667,7 +667,7 @@ public class Frintezza extends Quest
 		}
 		else if (event.equals("camera_9c"))
 		{
-			for (Creature pc : _zone.getCharactersInside().values())
+			for (Creature pc : _zone.getCharactersInside())
 			{
 				if (pc instanceof PlayerInstance)
 				{
@@ -830,7 +830,7 @@ public class Frintezza extends Quest
 		}
 		else if (event.equals("stop_pc"))
 		{
-			for (Creature creature : _zone.getCharactersInside().values())
+			for (Creature creature : _zone.getCharactersInside())
 			{
 				creature.abortAttack();
 				creature.abortCast();
@@ -855,7 +855,7 @@ public class Frintezza extends Quest
 		}
 		else if (event.equals("start_pc"))
 		{
-			for (Creature creature : _zone.getCharactersInside().values())
+			for (Creature creature : _zone.getCharactersInside())
 			{
 				if (creature != _frintezza)
 				{
@@ -1169,7 +1169,7 @@ public class Frintezza extends Quest
 			}
 			else if (_onSong == 4)
 			{
-				for (Creature creature : _zone.getCharactersInside().values())
+				for (Creature creature : _zone.getCharactersInside())
 				{
 					if ((creature instanceof PlayerInstance) && (Rnd.get(100) < 80))
 					{
@@ -1180,7 +1180,7 @@ public class Frintezza extends Quest
 			}
 			else if (_onSong == 5)
 			{
-				for (Creature creature : _zone.getCharactersInside().values())
+				for (Creature creature : _zone.getCharactersInside())
 				{
 					if ((creature instanceof PlayerInstance) && (Rnd.get(100) < 70))
 					{
@@ -1201,7 +1201,7 @@ public class Frintezza extends Quest
 		}
 		else if (event.equals("stop_effect"))
 		{
-			for (Creature creature : _zone.getCharactersInside().values())
+			for (Creature creature : _zone.getCharactersInside())
 			{
 				if (creature instanceof PlayerInstance)
 				{
@@ -1336,7 +1336,7 @@ public class Frintezza extends Quest
 			}
 			else
 			{
-				for (Creature creature : _zone.getCharactersInside().values())
+				for (Creature creature : _zone.getCharactersInside())
 				{
 					if ((creature instanceof PlayerInstance) && (creature.getFirstEffect(5016) != null))
 					{

@@ -23,20 +23,20 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.Location;
 
 /**
- * Abstract zone with spawn locations.<br>
- * It inherits regular ZoneType behavior, with the possible addition of 2 Lists holding Locations.
+ * Abstract zone with spawn locations
+ * @author DS, Nyaran (rework 10/07/2011)
  */
-public abstract class SpawnZone extends ZoneType
+public abstract class ZoneRespawn extends ZoneType
 {
 	private List<Location> _spawnLocs = null;
 	private List<Location> _chaoticSpawnLocs = null;
 	
-	public SpawnZone(int id)
+	public ZoneRespawn(int id)
 	{
 		super(id);
 	}
 	
-	public final void addSpawn(int x, int y, int z)
+	public void addSpawn(int x, int y, int z)
 	{
 		if (_spawnLocs == null)
 		{
@@ -46,7 +46,7 @@ public abstract class SpawnZone extends ZoneType
 		_spawnLocs.add(new Location(x, y, z));
 	}
 	
-	public final void addChaoticSpawn(int x, int y, int z)
+	public void addChaoticSpawn(int x, int y, int z)
 	{
 		if (_chaoticSpawnLocs == null)
 		{
@@ -56,17 +56,17 @@ public abstract class SpawnZone extends ZoneType
 		_chaoticSpawnLocs.add(new Location(x, y, z));
 	}
 	
-	public final List<Location> getSpawns()
+	public List<Location> getSpawns()
 	{
 		return _spawnLocs;
 	}
 	
-	public final Location getSpawnLoc()
+	public Location getSpawnLoc()
 	{
 		return _spawnLocs.get(Rnd.get(_spawnLocs.size()));
 	}
 	
-	public final Location getChaoticSpawnLoc()
+	public Location getChaoticSpawnLoc()
 	{
 		if (_chaoticSpawnLocs != null)
 		{

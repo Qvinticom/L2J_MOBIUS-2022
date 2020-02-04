@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
-import java.util.Collection;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
@@ -160,7 +159,7 @@ public class EffectZone extends ZoneType
 			}
 		}
 		
-		if (_characterList.isEmpty() && (_task != null))
+		if (getCharactersInside().isEmpty() && (_task != null))
 		{
 			_task.cancel(true);
 			_task = null;
@@ -233,11 +232,6 @@ public class EffectZone extends ZoneType
 		_enabled = value;
 	}
 	
-	protected Collection<Creature> getCharacterList()
-	{
-		return _characterList.values();
-	}
-	
 	class ApplySkill implements Runnable
 	{
 		ApplySkill()
@@ -253,7 +247,7 @@ public class EffectZone extends ZoneType
 		{
 			if (_enabled)
 			{
-				for (Creature temp : getCharacterList())
+				for (Creature temp : getCharactersInside())
 				{
 					if ((temp != null) && !temp.isDead())
 					{

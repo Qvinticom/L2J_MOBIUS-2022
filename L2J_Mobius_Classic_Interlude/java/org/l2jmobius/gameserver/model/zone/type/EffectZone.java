@@ -183,7 +183,7 @@ public class EffectZone extends ZoneType
 			}
 		}
 		
-		if (_characterList.isEmpty() && (getSettings().getTask() != null))
+		if (getCharactersInside().isEmpty() && (getSettings().getTask() != null))
 		{
 			getSettings().clear();
 		}

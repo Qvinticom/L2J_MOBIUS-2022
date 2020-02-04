@@ -107,7 +107,7 @@ public class CastleTeleportZone extends ZoneType
 	public List<Creature> getAllPlayers()
 	{
 		final List<Creature> players = new ArrayList<>();
-		for (Creature creature : _characterList.values())
+		for (Creature creature : getCharactersInside())
 		{
 			if (creature instanceof PlayerInstance)
 			{
@@ -119,17 +119,7 @@ public class CastleTeleportZone extends ZoneType
 	
 	public void oustAllPlayers()
 	{
-		if (_characterList == null)
-		{
-			return;
-		}
-		
-		if (_characterList.isEmpty())
-		{
-			return;
-		}
-		
-		for (Creature creature : _characterList.values())
+		for (Creature creature : getCharactersInside())
 		{
 			if ((creature != null) && (creature instanceof PlayerInstance))
 			{

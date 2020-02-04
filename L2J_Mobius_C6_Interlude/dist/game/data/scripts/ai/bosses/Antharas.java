@@ -119,7 +119,7 @@ public class Antharas extends Quest
 	
 	protected static long _LastAction = 0;
 	
-	protected static BossZone _Zone;
+	protected static BossZone _zone;
 	
 	// Boss: Antharas
 	public Antharas()
@@ -160,7 +160,7 @@ public class Antharas extends Quest
 		// Setting spawn data of monsters.
 		try
 		{
-			_Zone = GrandBossManager.getInstance().getZone(179700, 113800, -7709);
+			_zone = GrandBossManager.getInstance().getZone(179700, 113800, -7709);
 			NpcTemplate template1;
 			Spawn tempSpawn;
 			
@@ -417,9 +417,9 @@ public class Antharas extends Quest
 		AntharasSpawn(int taskId)
 		{
 			_taskId = taskId;
-			if (_Zone.getCharactersInside() != null)
+			if (_zone.getCharactersInside() != null)
 			{
-				_players = _Zone.getCharactersInside().values();
+				_players = _zone.getCharactersInside();
 			}
 		}
 		
@@ -565,9 +565,9 @@ public class Antharas extends Quest
 	
 	protected void broadcastPacket(GameServerPacket mov)
 	{
-		if (_Zone != null)
+		if (_zone != null)
 		{
-			for (Creature creatures : _Zone.getCharactersInside().values())
+			for (Creature creatures : _zone.getCharactersInside())
 			{
 				if (creatures instanceof PlayerInstance)
 				{
@@ -760,7 +760,7 @@ public class Antharas extends Quest
 	public void setUnspawn()
 	{
 		// Eliminate players.
-		_Zone.oustAllPlayers();
+		_zone.oustAllPlayers();
 		
 		// Not executed tasks is canceled.
 		if (_cubeSpawnTask != null)

@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.zone.SpawnZone;
+import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.form.ZoneCuboid;
 import org.l2jmobius.gameserver.model.zone.form.ZoneCylinder;
@@ -445,7 +445,7 @@ public class ZoneData
 								
 								temp.setParameter(name, val);
 							}
-							else if ("spawn".equalsIgnoreCase(cd.getNodeName()) && (temp instanceof SpawnZone))
+							else if ("spawn".equalsIgnoreCase(cd.getNodeName()) && (temp instanceof ZoneRespawn))
 							{
 								attrs = cd.getAttributes();
 								int spawnX = Integer.parseInt(attrs.getNamedItem("X").getNodeValue());
@@ -455,11 +455,11 @@ public class ZoneData
 								Node val = attrs.getNamedItem("isChaotic");
 								if ((val != null) && Boolean.parseBoolean(val.getNodeValue()))
 								{
-									((SpawnZone) temp).addChaoticSpawn(spawnX, spawnY, spawnZ);
+									((ZoneRespawn) temp).addChaoticSpawn(spawnX, spawnY, spawnZ);
 								}
 								else
 								{
-									((SpawnZone) temp).addSpawn(spawnX, spawnY, spawnZ);
+									((ZoneRespawn) temp).addSpawn(spawnX, spawnY, spawnZ);
 								}
 							}
 						}

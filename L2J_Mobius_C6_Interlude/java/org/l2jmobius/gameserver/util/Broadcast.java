@@ -193,7 +193,7 @@ public class Broadcast
 	{
 		for (ZoneType zone : ZoneData.getInstance().getAllZones(zoneType))
 		{
-			for (Creature creature : zone.getCharactersInside().values())
+			for (Creature creature : zone.getCharactersInside())
 			{
 				if (creature == null)
 				{

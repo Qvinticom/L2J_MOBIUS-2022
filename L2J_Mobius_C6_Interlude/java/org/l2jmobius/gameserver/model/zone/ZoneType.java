@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.zone;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -32,7 +33,7 @@ public abstract class ZoneType
 {
 	private final int _id;
 	protected ZoneForm _zone;
-	public Map<Integer, Creature> _characterList;
+	private final Map<Integer, Creature> _characterList = new ConcurrentHashMap<>();
 	
 	/** Parameters to affect specific characters */
 	private boolean _checkAffected;
@@ -46,7 +47,6 @@ public abstract class ZoneType
 	protected ZoneType(int id)
 	{
 		_id = id;
-		_characterList = new ConcurrentHashMap<>();
 		
 		_checkAffected = false;
 		
@@ -354,9 +354,9 @@ public abstract class ZoneType
 		}
 	}
 	
-	public Map<Integer, Creature> getCharactersInside()
+	public Collection<Creature> getCharactersInside()
 	{
-		return _characterList;
+		return _characterList.values();
 	}
 	
 	public void visualizeZone(int z)

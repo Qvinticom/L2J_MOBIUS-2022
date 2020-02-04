@@ -49,7 +49,7 @@ public abstract class ZoneType extends ListenersContainer
 	private final int _id;
 	protected ZoneForm _zone;
 	protected List<ZoneForm> _blockedZone;
-	protected Map<Integer, Creature> _characterList = new ConcurrentHashMap<>();
+	private final Map<Integer, Creature> _characterList = new ConcurrentHashMap<>();
 	
 	/** Parameters to affect specific characters */
 	private boolean _checkAffected = false;

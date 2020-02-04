@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
-import java.util.Collection;
 import java.util.concurrent.Future;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -66,16 +65,11 @@ public class DamageZone extends ZoneType
 	@Override
 	protected void onExit(Creature creature)
 	{
-		if (_characterList.isEmpty())
+		if (getCharactersInside().isEmpty())
 		{
 			_task.cancel(true);
 			_task = null;
 		}
-	}
-	
-	protected Collection<Creature> getCharacterList()
-	{
-		return _characterList.values();
 	}
 	
 	protected int getDamagePerSecond()
@@ -95,7 +89,7 @@ public class DamageZone extends ZoneType
 		@Override
 		public void run()
 		{
-			for (Creature temp : _dmgZone.getCharacterList())
+			for (Creature temp : _dmgZone.getCharactersInside())
 			{
 				if ((temp != null) && !temp.isDead() && (temp instanceof PlayerInstance))
 				{

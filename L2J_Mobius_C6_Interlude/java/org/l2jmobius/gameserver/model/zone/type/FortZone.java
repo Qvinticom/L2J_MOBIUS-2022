@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
 import org.l2jmobius.gameserver.model.entity.siege.Fort;
-import org.l2jmobius.gameserver.model.zone.SpawnZone;
+import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * A castle zone
  * @author programmos
  */
-public class FortZone extends SpawnZone
+public class FortZone extends ZoneRespawn
 {
 	private Fort _fort;
 	
@@ -117,7 +117,7 @@ public class FortZone extends SpawnZone
 	{
 		if (_fort.getSiege().isInProgress())
 		{
-			for (Creature creature : _characterList.values())
+			for (Creature creature : getCharactersInside())
 			{
 				try
 				{
@@ -130,7 +130,7 @@ public class FortZone extends SpawnZone
 		}
 		else
 		{
-			for (Creature creature : _characterList.values())
+			for (Creature creature : getCharactersInside())
 			{
 				try
 				{
@@ -160,7 +160,7 @@ public class FortZone extends SpawnZone
 	 */
 	public void banishForeigners(int owningClanId)
 	{
-		for (Creature temp : _characterList.values())
+		for (Creature temp : getCharactersInside())
 		{
 			if (!(temp instanceof PlayerInstance))
 			{
@@ -182,7 +182,7 @@ public class FortZone extends SpawnZone
 	 */
 	public void announceToPlayers(String message)
 	{
-		for (Creature temp : _characterList.values())
+		for (Creature temp : getCharactersInside())
 		{
 			if (temp instanceof PlayerInstance)
 			{
@@ -198,7 +198,7 @@ public class FortZone extends SpawnZone
 	public List<PlayerInstance> getAllPlayers()
 	{
 		final List<PlayerInstance> players = new ArrayList<>();
-		for (Creature temp : _characterList.values())
+		for (Creature temp : getCharactersInside())
 		{
 			if (temp instanceof PlayerInstance)
 			{

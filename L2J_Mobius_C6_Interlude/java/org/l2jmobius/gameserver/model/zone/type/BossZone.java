@@ -173,12 +173,7 @@ public class BossZone extends ZoneType
 	 */
 	public void movePlayersTo(int x, int y, int z)
 	{
-		if (_characterList.isEmpty())
-		{
-			return;
-		}
-		
-		for (Creature creature : _characterList.values())
+		for (Creature creature : getCharactersInside())
 		{
 			if (creature instanceof PlayerInstance)
 			{
@@ -277,17 +272,12 @@ public class BossZone extends ZoneType
 	 */
 	public void oustAllPlayers()
 	{
-		if (_characterList == null)
+		if (getCharactersInside().isEmpty())
 		{
 			return;
 		}
 		
-		if (_characterList.isEmpty())
-		{
-			return;
-		}
-		
-		for (Creature creature : _characterList.values())
+		for (Creature creature : getCharactersInside())
 		{
 			if (creature == null)
 			{
@@ -336,13 +326,13 @@ public class BossZone extends ZoneType
 	
 	public void updateKnownList(NpcInstance npc)
 	{
-		if ((_characterList == null) || _characterList.isEmpty())
+		if (getCharactersInside().isEmpty())
 		{
 			return;
 		}
 		
 		final Map<Integer, PlayerInstance> npcKnownPlayers = npc.getKnownList().getKnownPlayers();
-		for (Creature creature : _characterList.values())
+		for (Creature creature : getCharactersInside())
 		{
 			if (creature == null)
 			{

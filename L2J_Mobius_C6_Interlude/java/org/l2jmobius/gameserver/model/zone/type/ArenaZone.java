@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.zone.type;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.zone.SpawnZone;
+import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * An arena
  * @author durgus
  */
-public class ArenaZone extends SpawnZone
+public class ArenaZone extends ZoneRespawn
 {
 	public ArenaZone(int id)
 	{
@@ -70,17 +70,7 @@ public class ArenaZone extends SpawnZone
 	
 	public void oustAllPlayers()
 	{
-		if (_characterList == null)
-		{
-			return;
-		}
-		
-		if (_characterList.isEmpty())
-		{
-			return;
-		}
-		
-		for (Creature creature : _characterList.values())
+		for (Creature creature : getCharactersInside())
 		{
 			if (creature == null)
 			{

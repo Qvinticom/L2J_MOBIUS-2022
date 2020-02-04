@@ -46,7 +46,7 @@ public abstract class ZoneType extends ListenersContainer
 	
 	private final int _id;
 	protected ZoneForm _zone;
-	protected Map<Integer, Creature> _characterList = new ConcurrentHashMap<>();
+	private final Map<Integer, Creature> _characterList = new ConcurrentHashMap<>();
 	
 	/** Parameters to affect specific characters */
 	protected boolean _checkAffected = false;
@@ -487,11 +487,6 @@ public abstract class ZoneType extends ListenersContainer
 	
 	public void onPlayerLogoutInside(PlayerInstance player)
 	{
-	}
-	
-	public Map<Integer, Creature> getCharacters()
-	{
-		return _characterList;
 	}
 	
 	public Collection<Creature> getCharactersInside()

@@ -19,14 +19,14 @@ package org.l2jmobius.gameserver.model.zone.type;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.zone.SpawnZone;
+import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 
 /**
  * A Town zone
  * @author durgus
  */
-public class TownZone extends SpawnZone
+public class TownZone extends ZoneRespawn
 {
 	private String _townName;
 	private int _townId;

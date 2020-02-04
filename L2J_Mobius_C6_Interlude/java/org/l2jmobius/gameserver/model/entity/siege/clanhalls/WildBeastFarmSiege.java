@@ -189,7 +189,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 	public void teleportPlayers()
 	{
 		final ClanHallZone zone = clanhall.getZone();
-		for (Creature creature : zone.getCharactersInside().values())
+		for (Creature creature : zone.getCharactersInside())
 		{
 			if (creature instanceof PlayerInstance)
 			{

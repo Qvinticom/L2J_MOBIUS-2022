@@ -343,11 +343,6 @@ public class BossZone extends ZoneType
 	 */
 	public void movePlayersTo(Location loc)
 	{
-		if (_characterList.isEmpty())
-		{
-			return;
-		}
-		
 		for (Creature creature : getCharactersInside())
 		{
 			if ((creature != null) && creature.isPlayer())
@@ -367,7 +362,7 @@ public class BossZone extends ZoneType
 	 */
 	public void oustAllPlayers()
 	{
-		if (_characterList.isEmpty())
+		if (getCharactersInside().isEmpty())
 		{
 			return;
 		}

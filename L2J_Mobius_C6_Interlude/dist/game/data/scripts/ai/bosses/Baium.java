@@ -225,7 +225,7 @@ public class Baium extends Quest
 						// baium.setImobilised(false);
 						// for (NpcInstance minion : _Minions)
 						// minion.setShowSummonAnimation(false);
-						baium.getAttackByList().addAll(_zone.getCharactersInside().values());
+						baium.getAttackByList().addAll(_zone.getCharactersInside());
 					}
 					catch (Exception e)
 					{
@@ -239,7 +239,7 @@ public class Baium extends Quest
 					final MonsterInstance angel = (MonsterInstance) addSpawn(ARCHANGEL, element[0], element[1], element[2], element[3], false, 0);
 					angel.setInvul(true);
 					_minions.add(angel);
-					angel.getAttackByList().addAll(_zone.getCharactersInside().values());
+					angel.getAttackByList().addAll(_zone.getCharactersInside());
 					angel.isAggressive();
 				}
 			}

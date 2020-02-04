@@ -16,14 +16,12 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
-import java.util.Map;
-
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.ClanHall;
-import org.l2jmobius.gameserver.model.zone.SpawnZone;
+import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.serverpackets.ClanHallDecoration;
 
@@ -31,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ClanHallDecoration;
  * A clan hall zone
  * @author durgus
  */
-public class ClanHallZone extends SpawnZone
+public class ClanHallZone extends ZoneRespawn
 {
 	private int _clanHallId;
 	
@@ -118,7 +116,7 @@ public class ClanHallZone extends SpawnZone
 	 */
 	public void banishForeigners(int owningClanId)
 	{
-		for (Creature temp : _characterList.values())
+		for (Creature temp : getCharactersInside())
 		{
 			if (!(temp instanceof PlayerInstance))
 			{
@@ -132,11 +130,5 @@ public class ClanHallZone extends SpawnZone
 			
 			((PlayerInstance) temp).teleToLocation(TeleportWhereType.TOWN);
 		}
-	}
-	
-	@Override
-	public Map<Integer, Creature> getCharactersInside()
-	{
-		return _characterList;
 	}
 }

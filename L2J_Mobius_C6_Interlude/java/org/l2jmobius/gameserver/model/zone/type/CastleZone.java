@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
 import org.l2jmobius.gameserver.model.entity.siege.Castle;
-import org.l2jmobius.gameserver.model.zone.SpawnZone;
+import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  * A castle zone
  * @author durgus
  */
-public class CastleZone extends SpawnZone
+public class CastleZone extends ZoneRespawn
 {
 	private Castle _castle;
 	
@@ -120,7 +120,7 @@ public class CastleZone extends SpawnZone
 	{
 		if (_castle.getSiege().isInProgress())
 		{
-			for (Creature creature : _characterList.values())
+			for (Creature creature : getCharactersInside())
 			{
 				try
 				{
@@ -133,7 +133,7 @@ public class CastleZone extends SpawnZone
 		}
 		else
 		{
-			for (Creature creature : _characterList.values())
+			for (Creature creature : getCharactersInside())
 			{
 				try
 				{
@@ -163,7 +163,7 @@ public class CastleZone extends SpawnZone
 	 */
 	public void banishForeigners(int owningClanId)
 	{
-		for (Creature temp : _characterList.values())
+		for (Creature temp : getCharactersInside())
 		{
 			if (!(temp instanceof PlayerInstance))
 			{
@@ -185,7 +185,7 @@ public class CastleZone extends SpawnZone
 	 */
 	public void announceToPlayers(String message)
 	{
-		for (Creature temp : _characterList.values())
+		for (Creature temp : getCharactersInside())
 		{
 			if (temp instanceof PlayerInstance)
 			{
@@ -201,15 +201,13 @@ public class CastleZone extends SpawnZone
 	public List<PlayerInstance> getAllPlayers()
 	{
 		final List<PlayerInstance> players = new ArrayList<>();
-		
-		for (Creature temp : _characterList.values())
+		for (Creature temp : getCharactersInside())
 		{
 			if (temp instanceof PlayerInstance)
 			{
 				players.add((PlayerInstance) temp);
 			}
 		}
-		
 		return players;
 	}
 	
@@ -219,7 +217,6 @@ public class CastleZone extends SpawnZone
 		{
 			return _castle.isSiegeInProgress();
 		}
-		
 		return false;
 	}
 }

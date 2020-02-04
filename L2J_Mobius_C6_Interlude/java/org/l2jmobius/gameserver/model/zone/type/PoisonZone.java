@@ -113,7 +113,7 @@ public class PoisonZone extends ZoneType
 	@Override
 	protected void onExit(Creature creature)
 	{
-		if (_characterList.isEmpty() && (_task != null))
+		if (getCharactersInside().isEmpty() && (_task != null))
 		{
 			_task.cancel(true);
 			_task = null;
@@ -152,7 +152,7 @@ public class PoisonZone extends ZoneType
 		{
 			if (_enabled)
 			{
-				for (Creature temp : _characterList.values())
+				for (Creature temp : getCharactersInside())
 				{
 					if ((temp != null) && !temp.isDead() && (((temp instanceof Playable) && _target.equalsIgnoreCase("pc")) || ((temp instanceof PlayerInstance) && _target.equalsIgnoreCase("pc_only")) || ((temp instanceof MonsterInstance) && _target.equalsIgnoreCase("npc"))) && (Rnd.get(100) < _chance))
 					{
