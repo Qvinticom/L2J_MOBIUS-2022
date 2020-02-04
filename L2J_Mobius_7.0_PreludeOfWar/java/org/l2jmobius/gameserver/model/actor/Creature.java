@@ -4513,20 +4513,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			if (attacker.isPlayable())
 			{
-				value *= (100 + _stat.getValue(Stat.PVP_DAMAGE_TAKEN)) / 100;
+				value *= (100 + Math.max(_stat.getValue(Stat.PVP_DAMAGE_TAKEN), -80)) / 100;
 			}
 			else
 			{
-				value *= (100 + _stat.getValue(Stat.PVE_DAMAGE_TAKEN)) / 100;
+				value *= (100 + Math.max(_stat.getValue(Stat.PVE_DAMAGE_TAKEN), -80)) / 100;
 			}
 			
 			if (attacker.isRaid() || attacker.isRaidMinion())
 			{
-				value *= (100 + _stat.getValue(Stat.PVE_DAMAGE_TAKEN_RAID)) / 100;
+				value *= (100 + Math.max(_stat.getValue(Stat.PVE_DAMAGE_TAKEN_RAID), -80)) / 100;
 			}
 			else if (attacker.isMonster())
 			{
-				value *= (100 + _stat.getValue(Stat.PVE_DAMAGE_TAKEN_MONSTER)) / 100;
+				value *= (100 + Math.max(_stat.getValue(Stat.PVE_DAMAGE_TAKEN_MONSTER), -80)) / 100;
 			}
 		}
 		
