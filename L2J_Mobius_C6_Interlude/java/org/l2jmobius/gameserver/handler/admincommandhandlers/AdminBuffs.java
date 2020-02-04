@@ -40,21 +40,11 @@ public class AdminBuffs implements IAdminCommandHandler
 		"admin_areacancel"
 	};
 	
-	private enum CommandEnum
-	{
-		admin_getbuffs,
-		admin_stopbuff,
-		admin_stopallbuffs,
-		admin_areacancel
-	}
-	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
-		
-		final CommandEnum comm = CommandEnum.valueOf(st.nextToken());
-		
+		final String comm = st.nextToken();
 		if (comm == null)
 		{
 			return false;
@@ -62,7 +52,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		
 		switch (comm)
 		{
-			case admin_getbuffs:
+			case "admin_getbuffs":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -87,7 +77,7 @@ public class AdminBuffs implements IAdminCommandHandler
 					return true;
 				}
 			}
-			case admin_stopbuff:
+			case "admin_stopbuff":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -121,7 +111,7 @@ public class AdminBuffs implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //stopbuff <playername> [skillId]");
 				return false;
 			}
-			case admin_stopallbuffs:
+			case "admin_stopallbuffs":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -137,7 +127,7 @@ public class AdminBuffs implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //stopallbuffs <playername>");
 				return false;
 			}
-			case admin_areacancel:
+			case "admin_areacancel":
 			{
 				if (st.hasMoreTokens())
 				{

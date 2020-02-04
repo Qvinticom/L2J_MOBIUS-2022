@@ -42,24 +42,11 @@ public class AdminCache implements IAdminCommandHandler
 		"admin_cache_crest_fix"
 	};
 	
-	private enum CommandEnum
-	{
-		admin_cache_htm_rebuild,
-		admin_cache_htm_reload,
-		admin_cache_reload_path,
-		admin_cache_reload_file,
-		admin_cache_crest_rebuild,
-		admin_cache_crest_reload,
-		admin_cache_crest_fix
-	}
-	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
-		
-		final CommandEnum comm = CommandEnum.valueOf(st.nextToken());
-		
+		final String comm = st.nextToken();
 		if (comm == null)
 		{
 			return false;
@@ -67,14 +54,14 @@ public class AdminCache implements IAdminCommandHandler
 		
 		switch (comm)
 		{
-			case admin_cache_htm_reload:
-			case admin_cache_htm_rebuild:
+			case "admin_cache_htm_reload":
+			case "admin_cache_htm_rebuild":
 			{
 				HtmCache.getInstance().reload(Config.DATAPACK_ROOT);
 				BuilderUtil.sendSysMessage(activeChar, "Cache[HTML]: " + HtmCache.getInstance().getMemoryUsage() + " MB on " + HtmCache.getInstance().getLoadedFiles() + " file(s) loaded.");
 				return true;
 			}
-			case admin_cache_reload_path:
+			case "admin_cache_reload_path":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -86,7 +73,7 @@ public class AdminCache implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //cache_reload_path <path>");
 				return false;
 			}
-			case admin_cache_reload_file:
+			case "admin_cache_reload_file":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -104,14 +91,14 @@ public class AdminCache implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //cache_reload_file <relative_path/file>");
 				return false;
 			}
-			case admin_cache_crest_rebuild:
-			case admin_cache_crest_reload:
+			case "admin_cache_crest_rebuild":
+			case "admin_cache_crest_reload":
 			{
 				CrestCache.getInstance().reload();
 				BuilderUtil.sendSysMessage(activeChar, "Cache[Crest]: " + String.format("%.3f", CrestCache.getInstance().getMemoryUsage()) + " megabytes on " + CrestCache.getInstance().getLoadedFiles() + " files loaded");
 				return true;
 			}
-			case admin_cache_crest_fix:
+			case "admin_cache_crest_fix":
 			{
 				CrestCache.getInstance().convertOldPedgeFiles();
 				BuilderUtil.sendSysMessage(activeChar, "Cache[Crest]: crests fixed");

@@ -39,22 +39,11 @@ public class AdminPetition implements IAdminCommandHandler
 		"admin_reset_petitions"
 	};
 	
-	private enum CommandEnum
-	{
-		admin_view_petitions,
-		admin_view_petition,
-		admin_accept_petition,
-		admin_reject_petition,
-		admin_reset_petitions
-	}
-	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
-		
-		final CommandEnum comm = CommandEnum.valueOf(st.nextToken());
-		
+		final String comm = st.nextToken();
 		if (comm == null)
 		{
 			return false;
@@ -62,12 +51,12 @@ public class AdminPetition implements IAdminCommandHandler
 		
 		switch (comm)
 		{
-			case admin_view_petitions:
+			case "admin_view_petitions":
 			{
 				PetitionManager.getInstance().sendPendingPetitionList(activeChar);
 				return true;
 			}
-			case admin_view_petition:
+			case "admin_view_petition":
 			{
 				int petitionId = -1;
 				if (st.hasMoreTokens())
@@ -85,7 +74,7 @@ public class AdminPetition implements IAdminCommandHandler
 				PetitionManager.getInstance().viewPetition(activeChar, petitionId);
 				return true;
 			}
-			case admin_accept_petition:
+			case "admin_accept_petition":
 			{
 				if (PetitionManager.getInstance().isPlayerInConsultation(activeChar))
 				{
@@ -117,7 +106,7 @@ public class AdminPetition implements IAdminCommandHandler
 				}
 				return true;
 			}
-			case admin_reject_petition:
+			case "admin_reject_petition":
 			{
 				int petitionId = -1;
 				if (st.hasMoreTokens())
@@ -139,7 +128,7 @@ public class AdminPetition implements IAdminCommandHandler
 				}
 				return true;
 			}
-			case admin_reset_petitions:
+			case "admin_reset_petitions":
 			{
 				if (PetitionManager.getInstance().isPetitionInProcess())
 				{

@@ -89,45 +89,11 @@ public class AdminEditChar implements IAdminCommandHandler
 		"admin_sethero"
 	};
 	
-	private enum CommandEnum
-	{
-		admin_changename, // changes char name
-		admin_setname, // changes char name
-		admin_edit_character,
-		admin_current_player,
-		admin_nokarma,
-		admin_setkarma,
-		admin_character_list, // same as character_info, kept for compatibility purposes
-		admin_character_info, // given a player name, displays an information window
-		admin_show_characters,
-		admin_find_character,
-		admin_find_dualbox,
-		admin_find_ip, // find all the player connections from a given IPv4 number
-		admin_find_account, // list all the characters from an account (useful for GMs w/o DB access)
-		admin_save_modifications, // consider it deprecated...
-		admin_rec,
-		admin_setclass,
-		admin_settitle,
-		admin_setsex,
-		admin_setcolor,
-		admin_fullfood,
-		admin_remclanwait,
-		admin_setcp,
-		admin_sethp,
-		admin_setmp,
-		admin_setchar_cp,
-		admin_setchar_hp,
-		admin_setchar_mp,
-		admin_sethero
-	}
-	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
-		
-		final CommandEnum comm = CommandEnum.valueOf(st.nextToken());
-		
+		final String comm = st.nextToken();
 		if (comm == null)
 		{
 			return false;
@@ -135,8 +101,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		switch (comm)
 		{
-			case admin_changename:
-			case admin_setname:
+			case "admin_changename":
+			case "admin_setname":
 			{
 				String val = "";
 				if (st.hasMoreTokens())
@@ -206,22 +172,22 @@ public class AdminEditChar implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Name changed from " + oldName + " to " + val);
 				return true;
 			} // changes char name
-			case admin_edit_character:
+			case "admin_edit_character":
 			{
 				editCharacter(activeChar);
 				return true;
 			}
-			case admin_current_player:
+			case "admin_current_player":
 			{
 				showCharacterInfo(activeChar, null);
 				return true;
 			}
-			case admin_nokarma:
+			case "admin_nokarma":
 			{
 				setTargetKarma(activeChar, 0);
 				return true;
 			}
-			case admin_setkarma:
+			case "admin_setkarma":
 			{
 				int karma = 0;
 				if (st.hasMoreTokens())
@@ -245,8 +211,8 @@ public class AdminEditChar implements IAdminCommandHandler
 				setTargetKarma(activeChar, karma);
 				return true;
 			}
-			case admin_character_list:
-			case admin_character_info:
+			case "admin_character_list":
+			case "admin_character_info":
 			{
 				String val = "";
 				if (st.hasMoreTokens())
@@ -277,7 +243,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				activeChar.sendPacket(SystemMessageId.CHARACTER_DOES_NOT_EXIST);
 				return false;
 			}
-			case admin_show_characters:
+			case "admin_show_characters":
 			{
 				String val = "";
 				if (st.hasMoreTokens())
@@ -300,7 +266,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				listCharacters(activeChar, 0);
 				return false;
 			}
-			case admin_find_character:
+			case "admin_find_character":
 			{
 				String val = "";
 				if (st.hasMoreTokens())
@@ -326,7 +292,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				findCharacter(activeChar, val);
 				return true;
 			}
-			case admin_find_dualbox:
+			case "admin_find_dualbox":
 			{
 				String val = "";
 				int boxes = 2;
@@ -347,7 +313,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				findMultibox(activeChar, boxes);
 				return true;
 			}
-			case admin_find_ip:
+			case "admin_find_ip":
 			{
 				String val = "";
 				if (st.hasMoreTokens())
@@ -372,7 +338,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				return true;
 			}
-			case admin_find_account:
+			case "admin_find_account":
 			{
 				String val = "";
 				if (st.hasMoreTokens())
@@ -388,7 +354,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				findCharactersPerAccount(activeChar, val);
 				return true;
 			}
-			case admin_save_modifications:
+			case "admin_save_modifications":
 			{
 				String val = "";
 				if (st.hasMoreTokens())
@@ -414,7 +380,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				adminModifyCharacter(activeChar, val);
 				return true;
 			}
-			case admin_rec:
+			case "admin_rec":
 			{
 				String val = "";
 				int value = 1;
@@ -455,7 +421,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				player.broadcastUserInfo();
 				return true;
 			}
-			case admin_setclass:
+			case "admin_setclass":
 			{
 				String val = "";
 				int classidval = 0;
@@ -516,7 +482,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //setclass <valid_new_classid>");
 				return false;
 			}
-			case admin_settitle:
+			case "admin_settitle":
 			{
 				String val = "";
 				if (st.hasMoreTokens())
@@ -574,7 +540,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				return true;
 			}
-			case admin_setsex:
+			case "admin_setsex":
 			{
 				final WorldObject target = activeChar.getTarget();
 				PlayerInstance player = null;
@@ -602,7 +568,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				player.broadcastUserInfo();
 				return true;
 			}
-			case admin_setcolor:
+			case "admin_setcolor":
 			{
 				String val = "";
 				if (st.hasMoreTokens())
@@ -631,7 +597,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				player.broadcastUserInfo();
 				return true;
 			}
-			case admin_fullfood:
+			case "admin_fullfood":
 			{
 				final WorldObject target = activeChar.getTarget();
 				if (target instanceof PetInstance)
@@ -647,7 +613,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				return true;
 			}
-			case admin_remclanwait:
+			case "admin_remclanwait":
 			{
 				final WorldObject target = activeChar.getTarget();
 				PlayerInstance player = null;
@@ -673,7 +639,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				return true;
 			}
-			case admin_setcp:
+			case "admin_setcp":
 			{
 				String val = "";
 				int value = 0;
@@ -699,7 +665,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				activeChar.getStatus().setCurrentCp(value);
 				return true;
 			}
-			case admin_sethp:
+			case "admin_sethp":
 			{
 				String val = "";
 				int value = 0;
@@ -725,7 +691,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				activeChar.getStatus().setCurrentHp(value);
 				return true;
 			}
-			case admin_setmp:
+			case "admin_setmp":
 			{
 				String val = "";
 				int value = 0;
@@ -751,7 +717,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				activeChar.getStatus().setCurrentMp(value);
 				return true;
 			}
-			case admin_setchar_cp:
+			case "admin_setchar_cp":
 			{
 				String val = "";
 				int value = 0;
@@ -790,7 +756,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				return true;
 			}
-			case admin_setchar_hp:
+			case "admin_setchar_hp":
 			{
 				String val = "";
 				int value = 0;
@@ -829,7 +795,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				return true;
 			}
-			case admin_setchar_mp:
+			case "admin_setchar_mp":
 			{
 				String val = "";
 				int value = 0;
@@ -868,7 +834,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				return true;
 			}
-			case admin_sethero:
+			case "admin_sethero":
 			{
 				try
 				{
@@ -999,11 +965,6 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	/**
-	 * @param activeChar
-	 * @param player
-	 * @param filename
-	 */
 	public static void gatherCharacterInfo(PlayerInstance activeChar, PlayerInstance player, String filename)
 	{
 		String ip = "N/A";

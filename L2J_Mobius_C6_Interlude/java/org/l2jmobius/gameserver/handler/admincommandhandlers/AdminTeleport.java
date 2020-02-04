@@ -71,36 +71,16 @@ public class AdminTeleport implements IAdminCommandHandler
 		"admin_recall_party",
 	};
 	
-	private enum CommandEnum
-	{
-		admin_show_moves,
-		admin_show_moves_other,
-		admin_show_teleport,
-		admin_teleport_to_character,
-		admin_teleportto,
-		admin_move_to,
-		admin_teleport_character,
-		admin_recall,
-		admin_walk,
-		admin_recall_npc,
-		admin_gonorth,
-		admin_gosouth,
-		admin_goeast,
-		admin_gowest,
-		admin_goup,
-		admin_godown,
-		admin_instant_move,
-		admin_sendhome,
-		admin_tele,
-		admin_teleto,
-		admin_recall_party
-	}
-	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		StringTokenizer st = new StringTokenizer(command);
-		final CommandEnum comm = CommandEnum.valueOf(st.nextToken());
+		final String comm = st.nextToken();
+		if (comm == null)
+		{
+			return false;
+		}
+		
 		// Alt+g window (instant move)
 		if (command.equals("admin_instant_move"))
 		{
@@ -135,34 +115,30 @@ public class AdminTeleport implements IAdminCommandHandler
 			{
 			}
 		}
-		else if (comm == null)
-		{
-			return false;
-		}
 		
 		switch (comm)
 		{
-			case admin_show_moves:
+			case "admin_show_moves":
 			{
 				AdminHelpPage.showHelpPage(activeChar, "teleports.htm");
 				return true;
 			}
-			case admin_show_moves_other:
+			case "admin_show_moves_other":
 			{
 				AdminHelpPage.showHelpPage(activeChar, "tele/other.html");
 				return true;
 			}
-			case admin_show_teleport:
+			case "admin_show_teleport":
 			{
 				showTeleportCharWindow(activeChar);
 				return true;
 			}
-			case admin_teleport_to_character:
+			case "admin_teleport_to_character":
 			{
 				teleportToCharacter(activeChar, activeChar.getTarget());
 				return true;
 			}
-			case admin_teleportto:
+			case "admin_teleportto":
 			{
 				String val = "";
 				if (st.hasMoreTokens())
@@ -184,7 +160,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				teleportToCharacter(activeChar, player);
 				return true;
 			}
-			case admin_recall_party:
+			case "admin_recall_party":
 			{
 				if (activeChar.isGM() && (activeChar.getAccessLevel().getLevel() != 100))
 				{
@@ -231,7 +207,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				}
 				return true;
 			}
-			case admin_move_to:
+			case "admin_move_to":
 			{
 				int x = 0;
 				int y = 0;
@@ -268,7 +244,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				teleportTo(activeChar, x, y, z);
 				return true;
 			}
-			case admin_teleport_character:
+			case "admin_teleport_character":
 			{
 				int x = 0;
 				int y = 0;
@@ -320,7 +296,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				teleportTo(player, x, y, z);
 				return true;
 			}
-			case admin_recall:
+			case "admin_recall":
 			{
 				String val = "";
 				if (st.hasMoreTokens())
@@ -347,7 +323,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				teleportTo(player, activeChar.getX(), activeChar.getY(), activeChar.getZ());
 				return true;
 			}
-			case admin_walk:
+			case "admin_walk":
 			{
 				int x = 0;
 				int y = 0;
@@ -383,17 +359,17 @@ public class AdminTeleport implements IAdminCommandHandler
 				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, pos);
 				return true;
 			}
-			case admin_recall_npc:
+			case "admin_recall_npc":
 			{
 				recallNPC(activeChar);
 				break;
 			}
-			case admin_gonorth:
-			case admin_gosouth:
-			case admin_goeast:
-			case admin_gowest:
-			case admin_goup:
-			case admin_godown:
+			case "admin_gonorth":
+			case "admin_gosouth":
+			case "admin_goeast":
+			case "admin_gowest":
+			case "admin_goup":
+			case "admin_godown":
 			{
 				int intVal = 150;
 				int x = activeChar.getX();
@@ -453,12 +429,12 @@ public class AdminTeleport implements IAdminCommandHandler
 					return false;
 				}
 			}
-			case admin_tele:
+			case "admin_tele":
 			{
 				showTeleportWindow(activeChar);
 				break;
 			}
-			case admin_teleto:
+			case "admin_teleto":
 			{
 				String val = "";
 				if (st.hasMoreTokens())

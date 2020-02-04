@@ -46,20 +46,11 @@ public class AdminCreateItem implements IAdminCommandHandler
 		"admin_create_coin"
 	};
 	
-	private enum CommandEnum
-	{
-		admin_itemcreate,
-		admin_create_item,
-		admin_mass_create,
-		admin_create_coin
-	}
-	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
-		
-		final CommandEnum comm = CommandEnum.valueOf(st.nextToken());
+		final String comm = st.nextToken();
 		if (comm == null)
 		{
 			return false;
@@ -67,12 +58,12 @@ public class AdminCreateItem implements IAdminCommandHandler
 		
 		switch (comm)
 		{
-			case admin_itemcreate:
+			case "admin_itemcreate":
 			{
 				AdminHelpPage.showHelpPage(activeChar, "itemcreation.htm");
 				return true;
 			}
-			case admin_create_item:
+			case "admin_create_item":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -129,7 +120,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				}
 				return false;
 			}
-			case admin_mass_create:
+			case "admin_mass_create":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -181,7 +172,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				}
 				return false;
 			}
-			case admin_create_coin:
+			case "admin_create_coin":
 			{
 				try
 				{
@@ -193,6 +184,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 					}
 					
 					createItem(activeChar, id, (st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : 1);
+					AdminHelpPage.showHelpPage(activeChar, "itemcreation.htm");
 				}
 				catch (Exception e)
 				{

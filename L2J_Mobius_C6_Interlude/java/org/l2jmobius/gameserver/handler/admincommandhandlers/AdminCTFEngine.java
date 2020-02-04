@@ -69,53 +69,11 @@ public class AdminCTFEngine implements IAdminCommandHandler
 		"admin_ctf_interval"
 	};
 	
-	private enum CommandEnum
-	{
-		admin_ctf,
-		admin_ctf_name,
-		admin_ctf_desc,
-		admin_ctf_join_loc,
-		admin_ctf_edit,
-		admin_ctf_control,
-		admin_ctf_minlvl,
-		admin_ctf_maxlvl,
-		admin_ctf_tele_npc,
-		admin_ctf_tele_team,
-		admin_ctf_tele_flag,
-		admin_ctf_npc,
-		admin_ctf_npc_pos,
-		admin_ctf_reward,
-		admin_ctf_reward_amount,
-		admin_ctf_team_add,
-		admin_ctf_team_remove,
-		admin_ctf_team_pos,
-		admin_ctf_team_color,
-		admin_ctf_team_flag,
-		admin_ctf_join,
-		admin_ctf_teleport,
-		admin_ctf_start,
-		admin_ctf_startevent,
-		admin_ctf_abort,
-		admin_ctf_finish,
-		admin_ctf_sit,
-		admin_ctf_dump,
-		admin_ctf_save,
-		admin_ctf_load,
-		admin_ctf_jointime,
-		admin_ctf_eventtime,
-		admin_ctf_autoevent,
-		admin_ctf_minplayers,
-		admin_ctf_maxplayers,
-		admin_ctf_interval
-	}
-	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
-		
-		final CommandEnum comm = CommandEnum.valueOf(st.nextToken());
-		
+		final String comm = st.nextToken();
 		if (comm == null)
 		{
 			return false;
@@ -123,12 +81,12 @@ public class AdminCTFEngine implements IAdminCommandHandler
 		
 		switch (comm)
 		{
-			case admin_ctf:
+			case "admin_ctf":
 			{
 				showMainPage(activeChar);
 				return true;
 			}
-			case admin_ctf_name:
+			case "admin_ctf_name":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -143,7 +101,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_name <event_name>");
 				return false;
 			}
-			case admin_ctf_desc:
+			case "admin_ctf_desc":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -158,7 +116,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_desc <event_descr>");
 				return false;
 			}
-			case admin_ctf_join_loc:
+			case "admin_ctf_join_loc":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -173,17 +131,17 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_join_loc <event_loc_name>");
 				return false;
 			}
-			case admin_ctf_edit:
+			case "admin_ctf_edit":
 			{
 				showEditPage(activeChar);
 				return true;
 			}
-			case admin_ctf_control:
+			case "admin_ctf_control":
 			{
 				showControlPage(activeChar);
 				return true;
 			}
-			case admin_ctf_minlvl:
+			case "admin_ctf_minlvl":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -214,7 +172,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_minlvl <min_lvl_value>");
 				return false;
 			}
-			case admin_ctf_maxlvl:
+			case "admin_ctf_maxlvl":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -245,13 +203,13 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_maxlvl <min_lvl_value>");
 				return false;
 			}
-			case admin_ctf_tele_npc:
+			case "admin_ctf_tele_npc":
 			{
 				activeChar.teleToLocation(CTF.getNpcLocation(), false);
 				showMainPage(activeChar);
 				return false;
 			}
-			case admin_ctf_tele_team:
+			case "admin_ctf_tele_team":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -271,7 +229,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_tele_team <team_name>");
 				return false;
 			}
-			case admin_ctf_tele_flag:
+			case "admin_ctf_tele_flag":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -291,7 +249,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_tele_flag <team_name>");
 				return false;
 			}
-			case admin_ctf_npc:
+			case "admin_ctf_npc":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -316,13 +274,13 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_npc <npc_id>");
 				return false;
 			}
-			case admin_ctf_npc_pos:
+			case "admin_ctf_npc_pos":
 			{
 				CTF.setNpcPos(activeChar);
 				showMainPage(activeChar);
 				return true;
 			}
-			case admin_ctf_reward:
+			case "admin_ctf_reward":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -347,7 +305,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_reward <reward_id>");
 				return false;
 			}
-			case admin_ctf_reward_amount:
+			case "admin_ctf_reward_amount":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -372,7 +330,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_reward_amount <reward_amount>");
 				return false;
 			}
-			case admin_ctf_team_add:
+			case "admin_ctf_team_add":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -383,7 +341,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_team_add <team_name>");
 				return false;
 			}
-			case admin_ctf_team_remove:
+			case "admin_ctf_team_remove":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -394,7 +352,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_team_remove <team_name>");
 				return false;
 			}
-			case admin_ctf_team_pos:
+			case "admin_ctf_team_pos":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -405,7 +363,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_team_pos <team_name>");
 				return false;
 			}
-			case admin_ctf_team_color:
+			case "admin_ctf_team_color":
 			{
 				if (st.countTokens() == 2)
 				{
@@ -428,7 +386,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_team_color <colorHex> <teamName>");
 				return false;
 			}
-			case admin_ctf_team_flag:
+			case "admin_ctf_team_flag":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -439,7 +397,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_team_flag <teamName>");
 				return false;
 			}
-			case admin_ctf_join:
+			case "admin_ctf_join":
 			{
 				if (CTF.startJoin())
 				{
@@ -449,13 +407,13 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Cannot startJoin, check LOGGER for info..");
 				return false;
 			}
-			case admin_ctf_teleport:
+			case "admin_ctf_teleport":
 			{
 				CTF.startTeleport();
 				showMainPage(activeChar);
 				return true;
 			}
-			case admin_ctf_start:
+			case "admin_ctf_start":
 			{
 				if (CTF.startEvent())
 				{
@@ -465,49 +423,49 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Cannot startEvent, check LOGGER for info..");
 				return false;
 			}
-			case admin_ctf_startevent:
+			case "admin_ctf_startevent":
 			{
 				CTF.eventOnceStart();
 				showMainPage(activeChar);
 				return true;
 			}
-			case admin_ctf_abort:
+			case "admin_ctf_abort":
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Aborting event");
 				CTF.abortEvent();
 				showMainPage(activeChar);
 				return true;
 			}
-			case admin_ctf_finish:
+			case "admin_ctf_finish":
 			{
 				CTF.finishEvent();
 				showMainPage(activeChar);
 				return true;
 			}
-			case admin_ctf_sit:
+			case "admin_ctf_sit":
 			{
 				CTF.sit();
 				showMainPage(activeChar);
 				return true;
 			}
-			case admin_ctf_dump:
+			case "admin_ctf_dump":
 			{
 				CTF.dumpData();
 				return true;
 			}
-			case admin_ctf_save:
+			case "admin_ctf_save":
 			{
 				CTF.saveData();
 				showMainPage(activeChar);
 				return true;
 			}
-			case admin_ctf_load:
+			case "admin_ctf_load":
 			{
 				CTF.loadData();
 				showMainPage(activeChar);
 				return true;
 			}
-			case admin_ctf_jointime:
+			case "admin_ctf_jointime":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -533,7 +491,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_jointime <minutes>");
 				return false;
 			}
-			case admin_ctf_eventtime:
+			case "admin_ctf_eventtime":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -559,7 +517,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_eventtime <minutes>");
 				return false;
 			}
-			case admin_ctf_autoevent:
+			case "admin_ctf_autoevent":
 			{
 				if ((CTF.getJoinTime() > 0) && (CTF.getEventTime() > 0))
 				{
@@ -570,7 +528,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, times not defined");
 				return false;
 			}
-			case admin_ctf_interval:
+			case "admin_ctf_interval":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -596,7 +554,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_interval <minutes>");
 				return false;
 			}
-			case admin_ctf_minplayers:
+			case "admin_ctf_minplayers":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -622,7 +580,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_minplayers <number>");
 				return false;
 			}
-			case admin_ctf_maxplayers:
+			case "admin_ctf_maxplayers":
 			{
 				if (st.hasMoreTokens())
 				{

@@ -54,31 +54,11 @@ public class AdminAdmin implements IAdminCommandHandler
 		"admin_manualhero"
 	};
 	
-	private enum CommandEnum
-	{
-		admin_admin,
-		admin_admin1,
-		admin_admin2,
-		admin_admin3,
-		admin_admin4,
-		admin_gmliston,
-		admin_gmlistoff,
-		admin_silence,
-		admin_diet,
-		admin_set,
-		admin_set_menu,
-		admin_set_mod,
-		admin_saveolymp,
-		admin_manualhero
-	}
-	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
-		
-		final CommandEnum comm = CommandEnum.valueOf(st.nextToken());
-		
+		final String comm = st.nextToken();
 		if (comm == null)
 		{
 			return false;
@@ -86,28 +66,28 @@ public class AdminAdmin implements IAdminCommandHandler
 		
 		switch (comm)
 		{
-			case admin_admin:
-			case admin_admin1:
-			case admin_admin2:
-			case admin_admin3:
-			case admin_admin4:
+			case "admin_admin":
+			case "admin_admin1":
+			case "admin_admin2":
+			case "admin_admin3":
+			case "admin_admin4":
 			{
 				showMainPage(activeChar, command);
 				return true;
 			}
-			case admin_gmliston:
+			case "admin_gmliston":
 			{
 				AdminData.getInstance().showGm(activeChar);
 				BuilderUtil.sendSysMessage(activeChar, "Registerd into gm list.");
 				return true;
 			}
-			case admin_gmlistoff:
+			case "admin_gmlistoff":
 			{
 				AdminData.getInstance().hideGm(activeChar);
 				BuilderUtil.sendSysMessage(activeChar, "Removed from gm list.");
 				return true;
 			}
-			case admin_silence:
+			case "admin_silence":
 			{
 				if (activeChar.isInRefusalMode()) // already in message refusal mode
 				{
@@ -121,13 +101,13 @@ public class AdminAdmin implements IAdminCommandHandler
 				}
 				return true;
 			}
-			case admin_saveolymp:
+			case "admin_saveolymp":
 			{
 				Olympiad.getInstance().saveOlympiadStatus();
 				BuilderUtil.sendSysMessage(activeChar, "Olympiad stuff saved!");
 				return true;
 			}
-			case admin_manualhero:
+			case "admin_manualhero":
 			{
 				try
 				{
@@ -140,7 +120,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Heroes formed!");
 				return true;
 			}
-			case admin_diet:
+			case "admin_diet":
 			{
 				boolean noToken = false;
 				if (st.hasMoreTokens())
@@ -176,7 +156,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				activeChar.refreshOverloaded();
 				return true;
 			}
-			case admin_set:
+			case "admin_set":
 			{
 				boolean noToken = false;
 				final String[] cmd = st.nextToken().split("_");

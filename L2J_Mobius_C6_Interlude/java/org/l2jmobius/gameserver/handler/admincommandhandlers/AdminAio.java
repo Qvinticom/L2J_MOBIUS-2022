@@ -44,19 +44,11 @@ public class AdminAio implements IAdminCommandHandler
 		"admin_removeaio"
 	};
 	
-	private enum CommandEnum
-	{
-		admin_setaio,
-		admin_removeaio
-	}
-	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
-		
-		final CommandEnum comm = CommandEnum.valueOf(st.nextToken());
-		
+		final String comm = st.nextToken();
 		if (comm == null)
 		{
 			return false;
@@ -64,7 +56,7 @@ public class AdminAio implements IAdminCommandHandler
 		
 		switch (comm)
 		{
-			case admin_setaio:
+			case "admin_setaio":
 			{
 				boolean noToken = false;
 				if (st.hasMoreTokens())
@@ -121,7 +113,7 @@ public class AdminAio implements IAdminCommandHandler
 				}
 				break;
 			}
-			case admin_removeaio:
+			case "admin_removeaio":
 			{
 				boolean noToken = false;
 				if (st.hasMoreTokens())
