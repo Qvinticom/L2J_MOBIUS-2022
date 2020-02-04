@@ -58,13 +58,14 @@ public class OlympiadStadiumZone extends ZoneType
 		
 		if (creature instanceof PlayerInstance)
 		{
-			if ((((PlayerInstance) creature).getOlympiadGameId() + 1) == _stadiumId)
+			final PlayerInstance player = creature.getActingPlayer();
+			if ((player.getOlympiadGameId() + 1) == _stadiumId)
 			{
-				((PlayerInstance) creature).sendPacket(SystemMessageId.ENTERED_COMBAT_ZONE);
+				player.sendPacket(SystemMessageId.ENTERED_COMBAT_ZONE);
 			}
-			else
+			else if (!player.isGM())
 			{
-				creature.teleToLocation(TeleportWhereType.TOWN);
+				player.teleToLocation(TeleportWhereType.TOWN);
 			}
 		}
 	}
@@ -78,7 +79,7 @@ public class OlympiadStadiumZone extends ZoneType
 		
 		if (creature instanceof PlayerInstance)
 		{
-			((PlayerInstance) creature).sendPacket(SystemMessageId.LEFT_COMBAT_ZONE);
+			creature.getActingPlayer().sendPacket(SystemMessageId.LEFT_COMBAT_ZONE);
 		}
 	}
 	
