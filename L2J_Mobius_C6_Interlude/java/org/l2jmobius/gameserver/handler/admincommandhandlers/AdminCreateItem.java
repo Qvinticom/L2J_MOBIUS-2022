@@ -40,11 +40,10 @@ public class AdminCreateItem implements IAdminCommandHandler
 	private static final Logger LOGGER = Logger.getLogger(AdminCreateItem.class.getName());
 	private static final String[] ADMIN_COMMANDS =
 	{
-		"admin_l2jmobius",
 		"admin_itemcreate",
 		"admin_create_item",
 		"admin_mass_create",
-		"admin_clear_inventory"
+		"admin_create_coin"
 	};
 	
 	private enum CommandEnum
@@ -52,7 +51,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 		admin_itemcreate,
 		admin_create_item,
 		admin_mass_create,
-		admin_clear_inventory
+		admin_create_coin
 	}
 	
 	@Override
@@ -61,7 +60,6 @@ public class AdminCreateItem implements IAdminCommandHandler
 		final StringTokenizer st = new StringTokenizer(command);
 		
 		final CommandEnum comm = CommandEnum.valueOf(st.nextToken());
-		
 		if (comm == null)
 		{
 			return false;
@@ -183,9 +181,23 @@ public class AdminCreateItem implements IAdminCommandHandler
 				}
 				return false;
 			}
-			case admin_clear_inventory:
+			case admin_create_coin:
 			{
-				removeAllItems(activeChar);
+				try
+				{
+					final int id = getCoinId(st.nextToken());
+					if (id <= 0)
+					{
+						activeChar.sendMessage("Usage: //create_coin <name> [amount]");
+						return false;
+					}
+					
+					createItem(activeChar, id, (st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : 1);
+				}
+				catch (Exception e)
+				{
+					activeChar.sendMessage("Usage: //create_coin <name> [amount]");
+				}
 				return true;
 			}
 			default:
@@ -195,10 +207,24 @@ public class AdminCreateItem implements IAdminCommandHandler
 		}
 	}
 	
-	@Override
-	public String[] getAdminCommandList()
+	private static int getCoinId(String name)
 	{
-		return ADMIN_COMMANDS;
+		if (name.equalsIgnoreCase("adena"))
+		{
+			return 57;
+		}
+		
+		if (name.equalsIgnoreCase("ancientadena"))
+		{
+			return 5575;
+		}
+		
+		if (name.equalsIgnoreCase("festivaladena"))
+		{
+			return 6673;
+		}
+		
+		return 0;
 	}
 	
 	private void createItem(PlayerInstance activeChar, int id, int num)
@@ -215,7 +241,6 @@ public class AdminCreateItem implements IAdminCommandHandler
 		}
 		
 		PlayerInstance player = null;
-		
 		if (activeChar.getTarget() != null)
 		{
 			if (activeChar.getTarget() instanceof PlayerInstance)
@@ -243,29 +268,26 @@ public class AdminCreateItem implements IAdminCommandHandler
 			player = activeChar;
 		}
 		
-		player.getInventory().addItem("Admin", id, num, player, null);
+		final ItemInstance newItem = player.getInventory().addItem("Admin", id, num, player, null);
 		player.sendPacket(new ItemList(player, true));
 		if (activeChar.getName().equalsIgnoreCase(player.getName()))
 		{
-			BuilderUtil.sendSysMessage(activeChar, "You have spawned " + num + " item(s) number " + id + " in your inventory.");
+			BuilderUtil.sendSysMessage(activeChar, "You have spawned " + num + " " + newItem.getItemName() + " (" + id + ") in your inventory.");
 		}
 		else
 		{
-			BuilderUtil.sendSysMessage(activeChar, "You have spawned " + num + " item(s) number " + id + " in " + player.getName() + "'s inventory.");
-			player.sendMessage("Admin has spawned " + num + " item(s) number " + id + " in your inventory.");
+			BuilderUtil.sendSysMessage(activeChar, "You have spawned " + num + " " + newItem.getItemName() + " (" + id + ") in " + player.getName() + "'s inventory.");
+			player.sendMessage("Admin has spawned " + num + " " + newItem.getItemName() + " (" + id + ") in your inventory.");
 		}
 	}
 	
 	private void massCreateItem(PlayerInstance activeChar, int id, int num)
 	{
-		if (num > 20)
+		final Item template = ItemTable.getInstance().getTemplate(id);
+		if ((template != null) && !template.isStackable())
 		{
-			final Item template = ItemTable.getInstance().getTemplate(id);
-			if ((template != null) && !template.isStackable())
-			{
-				BuilderUtil.sendSysMessage(activeChar, "This item does not stack - Creation aborted.");
-				return;
-			}
+			BuilderUtil.sendSysMessage(activeChar, "This item does not stack - Creation aborted.");
+			return;
 		}
 		
 		int i = 0;
@@ -287,16 +309,9 @@ public class AdminCreateItem implements IAdminCommandHandler
 		LOGGER.info("GM " + activeChar.getName() + " mass_created item Id: " + id + " (" + num + ")");
 	}
 	
-	private void removeAllItems(PlayerInstance activeChar)
+	@Override
+	public String[] getAdminCommandList()
 	{
-		for (ItemInstance item : activeChar.getInventory().getItems())
-		{
-			if (item.getItemLocation() == ItemInstance.ItemLocation.INVENTORY)
-			{
-				activeChar.getInventory().destroyItem("Destroy", item.getObjectId(), item.getCount(), activeChar, null);
-			}
-		}
-		activeChar.sendPacket(new ItemList(activeChar, false));
-		BuilderUtil.sendSysMessage(activeChar, "Your inventory has been cleared.");
+		return ADMIN_COMMANDS;
 	}
 }

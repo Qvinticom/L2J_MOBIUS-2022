@@ -117,7 +117,6 @@ public class Config
 	public static boolean GM_SPECIAL_EFFECT;
 	public static boolean GM_STARTUP_SILENCE;
 	public static boolean GM_STARTUP_AUTO_LIST;
-	public static String GM_ADMIN_MENU_STYLE;
 	public static boolean GM_HERO_AURA;
 	public static boolean GM_STARTUP_BUILDER_HIDE;
 	public static boolean GM_STARTUP_INVULNERABLE;
@@ -1167,7 +1166,6 @@ public class Config
 			
 			EVERYBODY_HAS_ADMIN_RIGHTS = Boolean.parseBoolean(accessSettings.getProperty("EverybodyHasAdminRights", "false"));
 			GM_STARTUP_AUTO_LIST = Boolean.parseBoolean(accessSettings.getProperty("GMStartupAutoList", "true"));
-			GM_ADMIN_MENU_STYLE = accessSettings.getProperty("GMAdminMenuStyle", "modern");
 			GM_HERO_AURA = Boolean.parseBoolean(accessSettings.getProperty("GMHeroAura", "false"));
 			GM_STARTUP_BUILDER_HIDE = Boolean.parseBoolean(accessSettings.getProperty("GMStartupBuilderHide", "true"));
 			GM_STARTUP_INVULNERABLE = Boolean.parseBoolean(accessSettings.getProperty("GMStartupInvulnerable", "true"));

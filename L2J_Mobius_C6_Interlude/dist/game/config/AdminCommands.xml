@@ -6,7 +6,6 @@
 	<admin command="admin_admin2" accessLevel="80" />
 	<admin command="admin_admin3" accessLevel="80" />
 	<admin command="admin_admin4" accessLevel="80" />
-	<admin command="admin_admin5" accessLevel="80" />
 	<admin command="admin_gmliston" accessLevel="80" />
 	<admin command="admin_gmlistoff" accessLevel="80" />
 	<admin command="admin_silence" accessLevel="80" />
@@ -66,6 +65,8 @@
 	<!-- Section: CreateItem -->
 	<admin command="admin_itemcreate" accessLevel="80" /> <!-- itemcreation.htm -->
 	<admin command="admin_create_item" accessLevel="80" /> <!-- lvl 3: item just on yourself, lvl 2-1: item on other too -->
+	<admin command="admin_create_coin" accessLevel="80" />
+	<admin command="admin_mass_create" accessLevel="100" />
 
 	<!-- Section: CTF -->
 	<admin command="admin_ctf" accessLevel="80" />
@@ -187,6 +188,7 @@
 	<!-- Section: EditChar -->
 	<admin command="admin_edit_npc" accessLevel="90" />
 	<admin command="admin_save_npc" accessLevel="90" />
+	<admin command="admin_show_skilllist_npc" accessLevel="80" />
 	<admin command="admin_show_droplist" accessLevel="80" />
 	<admin command="admin_edit_drop" accessLevel="90" />
 	<admin command="admin_add_drop" accessLevel="90" />

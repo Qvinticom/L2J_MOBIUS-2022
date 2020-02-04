@@ -599,10 +599,10 @@ public class DoorInstance extends Creature
 			html1.append("<tr><td><br></td></tr>");
 			html1.append("</table>");
 			html1.append("<table><tr>");
-			html1.append("<td><button value=\"Open\" action=\"bypass -h admin_open " + _doorId + "\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
-			html1.append("<td><button value=\"Close\" action=\"bypass -h admin_close " + _doorId + "\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
-			html1.append("<td><button value=\"Kill\" action=\"bypass -h admin_kill\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
-			html1.append("<td><button value=\"Delete\" action=\"bypass -h admin_delete\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
+			html1.append("<td><button value=\"Open\" action=\"bypass -h admin_open " + _doorId + "\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td>");
+			html1.append("<td><button value=\"Close\" action=\"bypass -h admin_close " + _doorId + "\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td>");
+			html1.append("<td><button value=\"Kill\" action=\"bypass -h admin_kill\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td>");
+			html1.append("<td><button value=\"Delete\" action=\"bypass -h admin_delete\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td>");
 			html1.append("</tr></table></body></html>");
 			
 			html.setHtml(html1.toString());

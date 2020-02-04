@@ -852,7 +852,14 @@ public class NpcInstance extends Creature
 			final NpcHtmlMessage html = new NpcHtmlMessage(0);
 			final StringBuilder html1 = new StringBuilder("<html><body><center><font color=\"LEVEL\">NPC Information</font></center>");
 			final String className = getClass().getSimpleName();
-			html1.append("<br>");
+			
+			html1.append("<br><center><table><tr>");
+			html1.append("<td><button value=\"Kill\" action=\"bypass -h admin_kill\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td>");
+			html1.append("<td><button value=\"Delete\" action=\"bypass -h admin_delete\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td></tr>");
+			html1.append("<td><button value=\"Skills\" action=\"bypass -h admin_show_skilllist_npc " + getTemplate().getNpcId() + "\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td>");
+			html1.append("<td><button value=\"Droplist\" action=\"bypass -h admin_show_droplist " + getTemplate().getNpcId() + "\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td>");
+			html1.append("<tr><td><button value=\"Edit NPC\" action=\"bypass -h admin_edit_npc " + getTemplate().getNpcId() + "\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"><br1></td></tr>");
+			html1.append("</table></center><br>");
 			
 			html1.append("Instance Type: " + className + "<br1>Faction: " + getTemplate().getFactionId() + "<br1>Location ID: " + (_spawn != null ? _spawn.getLocation() : 0) + "<br1>");
 			
@@ -886,14 +893,8 @@ public class NpcInstance extends Creature
 			html1.append("<table border=\"0\" width=\"100%\">");
 			html1.append("<tr><td>STR</td><td>" + getSTR() + "</td><td>DEX</td><td>" + getDEX() + "</td><td>CON</td><td>" + getCON() + "</td></tr>");
 			html1.append("<tr><td>INT</td><td>" + getINT() + "</td><td>WIT</td><td>" + getWIT() + "</td><td>MEN</td><td>" + getMEN() + "</td></tr>");
-			html1.append("</table>");
+			html1.append("</table><br>");
 			
-			html1.append("<br><center><table><tr><td><button value=\"Edit NPC\" action=\"bypass -h admin_edit_npc " + getTemplate().getNpcId() + "\" width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"><br1></td>");
-			html1.append("<td><button value=\"Kill\" action=\"bypass -h admin_kill\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td><br1></tr>");
-			html1.append("<tr><td><button value=\"Show DropList\" action=\"bypass -h admin_show_droplist " + getTemplate().getNpcId() + "\" width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr>");
-			html1.append("<td><button value=\"Delete\" action=\"bypass -h admin_delete\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr>");
-			html1.append("<tr><td><button value=\"Show Skillist\" action=\"bypass -h admin_show_skilllist_npc " + getTemplate().getNpcId() + "\" width=100 height=20 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td><td></td></tr>");
-			html1.append("</table></center><br>");
 			html1.append("</body></html>");
 			
 			html.setHtml(html1.toString());
@@ -938,7 +939,7 @@ public class NpcInstance extends Creature
 			html1.append("<tr><td>INT</td><td>" + getINT() + "</td><td>WIT</td><td>" + getWIT() + "</td><td>MEN</td><td>" + getMEN() + "</td></tr>");
 			html1.append("</table>");
 			
-			html1.append("<br><center><font color=\"LEVEL\">[Drop Info]</font></center>");
+			html1.append("<br><center><font color=\"LEVEL\">[Drop Info]</font><br>");
 			html1.append("Rates legend: <font color=\"ff0000\">50%+</font> <font color=\"00ff00\">30%+</font> <font color=\"0000ff\">less than 30%</font>");
 			html1.append("<table border=0 width=\"100%\">");
 			

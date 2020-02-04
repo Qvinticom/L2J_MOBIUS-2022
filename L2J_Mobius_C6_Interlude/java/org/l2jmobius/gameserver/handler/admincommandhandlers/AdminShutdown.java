@@ -136,7 +136,7 @@ public class AdminShutdown implements IAdminCommandHandler
 		final int h = t / 60;
 		final int m = t % 60;
 		
-		final SimpleDateFormat format = new SimpleDateFormat("h:mm a");
+		final SimpleDateFormat format = new SimpleDateFormat("h:mm");
 		final Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.HOUR_OF_DAY, h);
 		cal.set(Calendar.MINUTE, m);

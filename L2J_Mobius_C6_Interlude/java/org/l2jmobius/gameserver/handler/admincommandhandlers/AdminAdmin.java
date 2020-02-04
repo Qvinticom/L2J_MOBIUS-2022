@@ -43,7 +43,6 @@ public class AdminAdmin implements IAdminCommandHandler
 		"admin_admin2",
 		"admin_admin3",
 		"admin_admin4",
-		"admin_admin5",
 		"admin_gmliston",
 		"admin_gmlistoff",
 		"admin_silence",
@@ -62,7 +61,6 @@ public class AdminAdmin implements IAdminCommandHandler
 		admin_admin2,
 		admin_admin3,
 		admin_admin4,
-		admin_admin5,
 		admin_gmliston,
 		admin_gmlistoff,
 		admin_silence,
@@ -93,7 +91,6 @@ public class AdminAdmin implements IAdminCommandHandler
 			case admin_admin2:
 			case admin_admin3:
 			case admin_admin4:
-			case admin_admin5:
 			{
 				showMainPage(activeChar, command);
 				return true;
@@ -302,21 +299,9 @@ public class AdminAdmin implements IAdminCommandHandler
 				filename = "server";
 				break;
 			}
-			case 5:
-			{
-				filename = "mods";
-				break;
-			}
 			default:
 			{
-				if (Config.GM_ADMIN_MENU_STYLE.equals("modern"))
-				{
-					filename = "main";
-				}
-				else
-				{
-					filename = "classic";
-				}
+				filename = "main";
 				break;
 			}
 		}
