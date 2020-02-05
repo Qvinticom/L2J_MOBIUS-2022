@@ -16,8 +16,6 @@
  */
 package quests.Q10534_HatchlingResearch;
 
-import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -35,11 +33,8 @@ public class Q10534_HatchlingResearch extends Quest
 {
 	// NPC
 	private static final int STENA = 34221;
-	private static final int[] MONSTERS =
-	{
-		23434, // Dragon Hatchling
-		23435 // Leopard Dragon
-	};
+	private static final int DRAGON_HATCHING = 23434;
+	private static final int LEOPARD_DRAGON = 23435;
 	// Item
 	private static final int HATCHLING_FLASH = 46735;
 	// Misc
@@ -51,7 +46,7 @@ public class Q10534_HatchlingResearch extends Quest
 		super(10534);
 		addStartNpc(STENA);
 		addTalkId(STENA);
-		addKillId(MONSTERS);
+		addKillId(DRAGON_HATCHING, LEOPARD_DRAGON);
 		registerQuestItems(HATCHLING_FLASH);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "34221-08.htm");
 	}
@@ -136,21 +131,16 @@ public class Q10534_HatchlingResearch extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCond(1) && CommonUtil.contains(MONSTERS, npc.getId()) && (getRandom(100) < 70))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && (qs.isCond(1)))
 		{
-			giveItems(player, HATCHLING_FLASH, 1);
-			if (getQuestItemsCount(player, HATCHLING_FLASH) >= 50)
+			if (giveItemRandomly(killer, npc, HATCHLING_FLASH, 1, 50, 0.7, true))
 			{
 				qs.setCond(2, true);
 			}
-			else
-			{
-				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
 		}
-		return super.onKill(npc, player, isSummon);
+		return super.onKill(npc, killer, isSummon);
 	}
 }
