@@ -90,7 +90,7 @@ public class Q10815_StepUp extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32548-08.html":
+			case "30868-08.html":
 			{
 				if (qs.isCond(2))
 				{
