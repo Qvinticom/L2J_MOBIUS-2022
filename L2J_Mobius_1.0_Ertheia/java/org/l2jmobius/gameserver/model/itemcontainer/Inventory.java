@@ -362,7 +362,7 @@ public abstract class Inventory extends ItemContainer
 					{
 						if (player.getSkillLevel(holder.getSkillId()) != 0)
 						{
-							return;
+							continue;
 						}
 						
 						final Skill skill = holder.getSkill();
@@ -472,6 +472,11 @@ public abstract class Inventory extends ItemContainer
 			{
 				for (ItemSkillHolder holder : onEnchantSkills)
 				{
+					if (player.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
+					{
+						continue;
+					}
+					
 					// Add skills bestowed from +4 armor
 					if (item.getEnchantLevel() >= holder.getValue())
 					{
@@ -479,7 +484,7 @@ public abstract class Inventory extends ItemContainer
 						// Check passive skill conditions.
 						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
 						{
-							return;
+							continue;
 						}
 						player.addSkill(skill, false);
 						update = true;
@@ -495,12 +500,17 @@ public abstract class Inventory extends ItemContainer
 			{
 				for (ItemSkillHolder holder : normalSkills)
 				{
+					if (player.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
+					{
+						continue;
+					}
+					
 					final Skill skill = holder.getSkill();
 					if (skill != null)
 					{
 						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
 						{
-							return;
+							continue;
 						}
 						
 						player.addSkill(skill, false);
@@ -534,6 +544,11 @@ public abstract class Inventory extends ItemContainer
 				
 				for (ItemSkillHolder holder : otherEnchantSkills)
 				{
+					if (player.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
+					{
+						continue;
+					}
+					
 					// Add skills bestowed from +4 armor
 					if (equipped.getEnchantLevel() >= holder.getValue())
 					{
@@ -541,7 +556,7 @@ public abstract class Inventory extends ItemContainer
 						// Check passive skill conditions.
 						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
 						{
-							return;
+							continue;
 						}
 						player.addSkill(skill, false);
 						update = true;
@@ -621,6 +636,11 @@ public abstract class Inventory extends ItemContainer
 				boolean update = false;
 				for (ArmorsetSkillHolder holder : armorSet.getSkills())
 				{
+					if (player.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
+					{
+						continue;
+					}
+					
 					if (holder.validateConditions(player, armorSet, idProvider))
 					{
 						final Skill itemSkill = holder.getSkill();
