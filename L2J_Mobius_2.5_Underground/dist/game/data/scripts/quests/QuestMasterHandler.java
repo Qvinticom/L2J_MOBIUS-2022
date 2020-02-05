@@ -494,6 +494,7 @@ import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
 import quests.Q10844_BloodyBattleSeizingSupplies.Q10844_BloodyBattleSeizingSupplies;
+import quests.Q10846_BloodyBattleMeetingTheCommander.Q10846_BloodyBattleMeetingTheCommander;
 import quests.not_done.Q00480_AnotherLegacyOfCrumaTower;
 import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
 import quests.not_done.Q00655_AGrandPlanForTamingWildBeasts;
@@ -533,7 +534,6 @@ import quests.not_done.Q10748_MysteriousSuggestion1;
 import quests.not_done.Q10749_MysteriousSuggestion2;
 import quests.not_done.Q10809_TheHerosJourneyBlazingSwamp;
 import quests.not_done.Q10845_BloodyBattleRescueTheSmiths;
-import quests.not_done.Q10846_BloodyBattleMeetingTheCommander;
 
 /**
  * @author NosBit
@@ -1058,7 +1058,7 @@ public class QuestMasterHandler
 		Q10843_AnomalyInTheEnchantedValley.class,
 		Q10844_BloodyBattleSeizingSupplies.class,
 		Q10845_BloodyBattleRescueTheSmiths.class, // TODO: Not done.
-		Q10846_BloodyBattleMeetingTheCommander.class, // TODO: Not done.
+		Q10846_BloodyBattleMeetingTheCommander.class,
 	};
 	
 	public static void main(String[] args)

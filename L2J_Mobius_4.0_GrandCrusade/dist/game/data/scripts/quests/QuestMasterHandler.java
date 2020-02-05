@@ -159,6 +159,9 @@ import quests.Q00645_GhostsOfBatur.Q00645_GhostsOfBatur;
 import quests.Q00648_AnIceMerchantsDream.Q00648_AnIceMerchantsDream;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
 import quests.Q00663_SeductiveWhispers.Q00663_SeductiveWhispers;
+import quests.Q00665_BasicTrainingForHunterGuildMember.Q00665_BasicTrainingForHunterGuildMember;
+import quests.Q00666_HunterGuildMembersKnowledge.Q00666_HunterGuildMembersKnowledge;
+import quests.Q00668_ABattleWithTheGiants.Q00668_ABattleWithTheGiants;
 import quests.Q00670_DefeatingTheLordOfSeed.Q00670_DefeatingTheLordOfSeed;
 import quests.Q00688_DefeatTheElrokianRaiders.Q00688_DefeatTheElrokianRaiders;
 import quests.Q00726_LightWithinTheDarkness.Q00726_LightWithinTheDarkness;
@@ -200,6 +203,7 @@ import quests.Q00833_DevilsTreasureTauti.Q00833_DevilsTreasureTauti;
 import quests.Q00835_PitiableMelisa.Q00835_PitiableMelisa;
 import quests.Q00842_CaptiveDemons.Q00842_CaptiveDemons;
 import quests.Q00844_GiantsTreasure.Q00844_GiantsTreasure;
+import quests.Q00845_SabotageTheEmbryoSupplies.Q00845_SabotageTheEmbryoSupplies;
 import quests.Q00901_HowLavasaurusesAreMade.Q00901_HowLavasaurusesAreMade;
 import quests.Q00902_ReclaimOurEra.Q00902_ReclaimOurEra;
 import quests.Q00903_TheCallOfAntharas.Q00903_TheCallOfAntharas;
@@ -337,6 +341,7 @@ import quests.Q10447_TimingIsEverything.Q10447_TimingIsEverything;
 import quests.Q10450_ADarkAmbition.Q10450_ADarkAmbition;
 import quests.Q10452_IsItEdible.Q10452_IsItEdible;
 import quests.Q10453_StoppingTheWindDragon.Q10453_StoppingTheWindDragon;
+import quests.Q10454_FinalEmbryoApostle.Q10454_FinalEmbryoApostle;
 import quests.Q10455_ElikiasLetter.Q10455_ElikiasLetter;
 import quests.Q10456_OperationRescue.Q10456_OperationRescue;
 import quests.Q10459_ASickAmbition.Q10459_ASickAmbition;
@@ -472,6 +477,7 @@ import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
 import quests.Q10844_BloodyBattleSeizingSupplies.Q10844_BloodyBattleSeizingSupplies;
+import quests.Q10846_BloodyBattleMeetingTheCommander.Q10846_BloodyBattleMeetingTheCommander;
 import quests.Q10849_TrialsForAdaptation.Q10849_TrialsForAdaptation;
 import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
 import quests.Q10852_TheMotherTreeRevivalProject.Q10852_TheMotherTreeRevivalProject;
@@ -479,10 +485,7 @@ import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.Q10857_SecretTeleport.Q10857_SecretTeleport;
 import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
 import quests.not_done.Q00655_AGrandPlanForTamingWildBeasts;
-import quests.not_done.Q00665_BasicTrainingForHunterGuildMember;
-import quests.not_done.Q00666_KnowledgeableHunterGuildMember;
 import quests.not_done.Q00667_HowToCoverShilensEyes;
-import quests.not_done.Q00668_FightWithGiants;
 import quests.not_done.Q00669_IntenseFightAgainstDragon;
 import quests.not_done.Q00671_PathToFindingThePast;
 import quests.not_done.Q00672_EmbryoTheArchenemy;
@@ -509,7 +512,6 @@ import quests.not_done.Q00839_RequestFromTheUnworldlyVisitors;
 import quests.not_done.Q00840_RequestFromTheKingdomsRoyalGuard;
 import quests.not_done.Q00841_ContaminationContainment;
 import quests.not_done.Q00843_GiantEvolutionControl;
-import quests.not_done.Q00845_SabotageTheEmbryoSupplies;
 import quests.not_done.Q00846_BuildingUpStrength;
 import quests.not_done.Q00929_SeekerRescue;
 import quests.not_done.Q00930_DisparagingThePhantoms;
@@ -525,14 +527,12 @@ import quests.not_done.Q10373_ExploringTheDimensionSealingTheDimension;
 import quests.not_done.Q10396_WitchOfSpores;
 import quests.not_done.Q10418_TheImmortalPirateKing;
 import quests.not_done.Q10423_EmbryoStrongholdAmbush;
-import quests.not_done.Q10454_FinalEmbryoApostle;
 import quests.not_done.Q10457_KefensisIllusion;
 import quests.not_done.Q10506_DianasRequest;
 import quests.not_done.Q10535_BlacksmithsSoulAwakeningWeapon3;
 import quests.not_done.Q10748_MysteriousSuggestion1;
 import quests.not_done.Q10749_MysteriousSuggestion2;
 import quests.not_done.Q10845_BloodyBattleRescueTheSmiths;
-import quests.not_done.Q10846_BloodyBattleMeetingTheCommander;
 import quests.not_done.Q10848_TrialsBeforeTheBattle;
 import quests.not_done.Q10853_ToWeakenTheGiants;
 import quests.not_done.Q10854_ToSeizeTheFortress;
@@ -700,10 +700,10 @@ public class QuestMasterHandler
 		Q00655_AGrandPlanForTamingWildBeasts.class, // TODO: Not done.
 		Q00662_AGameOfCards.class,
 		Q00663_SeductiveWhispers.class,
-		Q00665_BasicTrainingForHunterGuildMember.class, // TODO: Not done.
-		Q00666_KnowledgeableHunterGuildMember.class, // TODO: Not done.
+		Q00665_BasicTrainingForHunterGuildMember.class,
+		Q00666_HunterGuildMembersKnowledge.class,
 		Q00667_HowToCoverShilensEyes.class, // TODO: Not done.
-		Q00668_FightWithGiants.class, // TODO: Not done.
+		Q00668_ABattleWithTheGiants.class,
 		Q00669_IntenseFightAgainstDragon.class, // TODO: Not done.
 		Q00670_DefeatingTheLordOfSeed.class,
 		Q00671_PathToFindingThePast.class, // TODO: Not done.
@@ -771,7 +771,7 @@ public class QuestMasterHandler
 		Q00842_CaptiveDemons.class,
 		Q00843_GiantEvolutionControl.class, // TODO: Not done.
 		Q00844_GiantsTreasure.class,
-		Q00845_SabotageTheEmbryoSupplies.class, // TODO: Not done.
+		Q00845_SabotageTheEmbryoSupplies.class,
 		Q00846_BuildingUpStrength.class, // TODO: Not done.
 		Q00901_HowLavasaurusesAreMade.class,
 		Q00902_ReclaimOurEra.class,
@@ -924,7 +924,7 @@ public class QuestMasterHandler
 		Q10450_ADarkAmbition.class,
 		Q10452_IsItEdible.class,
 		Q10453_StoppingTheWindDragon.class,
-		Q10454_FinalEmbryoApostle.class, // TODO: Not done.
+		Q10454_FinalEmbryoApostle.class,
 		Q10455_ElikiasLetter.class,
 		Q10456_OperationRescue.class,
 		Q10457_KefensisIllusion.class, // TODO: Not done.
@@ -1066,7 +1066,7 @@ public class QuestMasterHandler
 		Q10843_AnomalyInTheEnchantedValley.class,
 		Q10844_BloodyBattleSeizingSupplies.class,
 		Q10845_BloodyBattleRescueTheSmiths.class, // TODO: Not done.
-		Q10846_BloodyBattleMeetingTheCommander.class, // TODO: Not done.
+		Q10846_BloodyBattleMeetingTheCommander.class,
 		Q10848_TrialsBeforeTheBattle.class, // TODO: Not done.
 		Q10849_TrialsForAdaptation.class,
 		Q10851_ElvenBotany.class,

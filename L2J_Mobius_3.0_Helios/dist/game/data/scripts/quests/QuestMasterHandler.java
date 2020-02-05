@@ -199,6 +199,7 @@ import quests.Q00833_DevilsTreasureTauti.Q00833_DevilsTreasureTauti;
 import quests.Q00835_PitiableMelisa.Q00835_PitiableMelisa;
 import quests.Q00842_CaptiveDemons.Q00842_CaptiveDemons;
 import quests.Q00844_GiantsTreasure.Q00844_GiantsTreasure;
+import quests.Q00845_SabotageTheEmbryoSupplies.Q00845_SabotageTheEmbryoSupplies;
 import quests.Q00901_HowLavasaurusesAreMade.Q00901_HowLavasaurusesAreMade;
 import quests.Q00902_ReclaimOurEra.Q00902_ReclaimOurEra;
 import quests.Q00903_TheCallOfAntharas.Q00903_TheCallOfAntharas;
@@ -474,6 +475,7 @@ import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
 import quests.Q10844_BloodyBattleSeizingSupplies.Q10844_BloodyBattleSeizingSupplies;
+import quests.Q10846_BloodyBattleMeetingTheCommander.Q10846_BloodyBattleMeetingTheCommander;
 import quests.Q10849_TrialsForAdaptation.Q10849_TrialsForAdaptation;
 import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
 import quests.Q10852_TheMotherTreeRevivalProject.Q10852_TheMotherTreeRevivalProject;
@@ -503,7 +505,6 @@ import quests.not_done.Q00839_RequestFromTheUnworldlyVisitors;
 import quests.not_done.Q00840_RequestFromTheKingdomsRoyalGuard;
 import quests.not_done.Q00841_ContaminationContainment;
 import quests.not_done.Q00843_GiantEvolutionControl;
-import quests.not_done.Q00845_SabotageTheEmbryoSupplies;
 import quests.not_done.Q00846_BuildingUpStrength;
 import quests.not_done.Q00910_RedLibraRequestLv1;
 import quests.not_done.Q00911_RedLibraRequestLv2;
@@ -523,7 +524,6 @@ import quests.not_done.Q10506_DianasRequest;
 import quests.not_done.Q10748_MysteriousSuggestion1;
 import quests.not_done.Q10749_MysteriousSuggestion2;
 import quests.not_done.Q10845_BloodyBattleRescueTheSmiths;
-import quests.not_done.Q10846_BloodyBattleMeetingTheCommander;
 import quests.not_done.Q10848_TrialsBeforeTheBattle;
 import quests.not_done.Q10853_ToWeakenTheGiants;
 import quests.not_done.Q10854_ToSeizeTheFortress;
@@ -743,7 +743,7 @@ public class QuestMasterHandler
 		Q00842_CaptiveDemons.class,
 		Q00843_GiantEvolutionControl.class, // TODO: Not done.
 		Q00844_GiantsTreasure.class,
-		Q00845_SabotageTheEmbryoSupplies.class, // TODO: Not done.
+		Q00845_SabotageTheEmbryoSupplies.class,
 		Q00846_BuildingUpStrength.class, // TODO: Not done.
 		Q00901_HowLavasaurusesAreMade.class,
 		Q00902_ReclaimOurEra.class,
@@ -1038,7 +1038,7 @@ public class QuestMasterHandler
 		Q10843_AnomalyInTheEnchantedValley.class,
 		Q10844_BloodyBattleSeizingSupplies.class,
 		Q10845_BloodyBattleRescueTheSmiths.class, // TODO: Not done.
-		Q10846_BloodyBattleMeetingTheCommander.class, // TODO: Not done.
+		Q10846_BloodyBattleMeetingTheCommander.class,
 		Q10848_TrialsBeforeTheBattle.class, // TODO: Not done.
 		Q10849_TrialsForAdaptation.class,
 		Q10851_ElvenBotany.class,
