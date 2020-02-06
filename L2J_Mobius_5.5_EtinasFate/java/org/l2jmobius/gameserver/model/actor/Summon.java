@@ -636,7 +636,7 @@ public abstract class Summon extends Playable
 			final WorldObject currentTarget = _owner.getTarget();
 			if (currentTarget != null)
 			{
-				target = skill.getTarget(this, forceUse && (!currentTarget.isPlayable() || !currentTarget.isInsideZone(ZoneId.PEACE)), dontMove, false);
+				target = skill.getTarget(this, forceUse && (!currentTarget.isPlayable() || !currentTarget.isInsideZone(ZoneId.PEACE) || !currentTarget.isInsideZone(ZoneId.NO_PVP)), dontMove, false);
 				final PlayerInstance currentTargetPlayer = currentTarget.getActingPlayer();
 				if (!forceUse && (currentTargetPlayer != null) && !currentTargetPlayer.isAutoAttackable(_owner))
 				{

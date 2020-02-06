@@ -1816,6 +1816,15 @@ public class PlayerInstance extends Playable
 			_lastCompassZone = ExSetCompassZoneCode.PEACEZONE;
 			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.PEACEZONE));
 		}
+		else if (isInsideZone(ZoneId.NO_PVP))
+		{
+			if (_lastCompassZone == ExSetCompassZoneCode.NOPVPZONE)
+			{
+				return;
+			}
+			_lastCompassZone = ExSetCompassZoneCode.NOPVPZONE;
+			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.NOPVPZONE));
+		}
 		else
 		{
 			if (_lastCompassZone == ExSetCompassZoneCode.GENERALZONE)
@@ -8157,7 +8166,7 @@ public class PlayerInstance extends Playable
 		// Check if the attacker is a Playable
 		if (attacker.isPlayable())
 		{
-			if (isInsideZone(ZoneId.PEACE))
+			if (isInsideZone(ZoneId.PEACE) || isInsideZone(ZoneId.NO_PVP))
 			{
 				return false;
 			}
@@ -9348,7 +9357,7 @@ public class PlayerInstance extends Playable
 			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_FISHING;
 			return false;
 		}
-		if (isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.PEACE) || isInsideZone(ZoneId.SIEGE))
+		if (isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.PEACE) || isInsideZone(ZoneId.SIEGE) || isInsideZone(ZoneId.NO_PVP))
 		{
 			_noDuelReason = SystemMessageId.C1_IS_IN_AN_AREA_WHERE_DUEL_IS_NOT_ALLOWED_AND_YOU_CANNOT_APPLY_FOR_A_DUEL;
 			return false;

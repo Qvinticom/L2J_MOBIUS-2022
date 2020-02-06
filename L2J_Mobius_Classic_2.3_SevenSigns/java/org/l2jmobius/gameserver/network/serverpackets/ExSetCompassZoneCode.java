@@ -32,6 +32,8 @@ public class ExSetCompassZoneCode implements IClientOutgoingPacket
 	public static final int SEVENSIGNSZONE = 0x0D;
 	public static final int PVPZONE = 0x0E;
 	public static final int GENERALZONE = 0x0F;
+	// TODO: need to find the desired value
+	public static final int NOPVPZONE = 0x0C;
 	
 	private final int _zoneType;
 	
