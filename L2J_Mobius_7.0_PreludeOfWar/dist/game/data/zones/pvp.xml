@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
 	<!-- PVP Zones -->
-	<zone name="primeval_island_pvp" type="ArenaZone" shape="NPoly" minZ="-3700" maxZ="-1000"> <!-- [20_17] -->
-		<node X="3853" Y="-24754" />
-		<node X="31980" Y="-28553" />
-		<node X="33083" Y="-2402" />
-		<node X="673" Y="242" />
-	</zone>
 	<zone name="dion_monster_pvp" type="ArenaZone" shape="NPoly" minZ="-3596" maxZ="0"> <!-- [20_23] -->
 		<node X="11947" Y="183019" />
 		<node X="12937" Y="183019" />
@@ -50,5 +44,19 @@
 		<node X="150955" Y="46276" />
 		<node X="150956" Y="47052" />
 		<node X="148049" Y="47053" />
+	</zone>
+	<zone name="primeval_island_pvp" type="ArenaZone" shape="NPoly" minZ="-3700" maxZ="-1000"> <!-- [20_17] -->
+		<node X="3853" Y="-24754" />
+		<node X="31980" Y="-28553" />
+		<node X="33083" Y="-2402" />
+		<node X="673" Y="242" />
+	</zone>
+	<zone name="zarich_akamanah_pvp" type="ArenaZone" shape="NPoly" minZ="-3800" maxZ="-3400"> <!-- [22_18] -->
+		<node X="65704" Y="29064" />
+		<node X="66851" Y="29402" />
+		<node X="68488" Y="26840" />
+		<node X="68427" Y="25227" />
+		<node X="67400" Y="22952" />
+		<node X="65720" Y="23000" />
 	</zone>
 </list>
