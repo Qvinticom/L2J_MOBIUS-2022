@@ -13976,7 +13976,7 @@ public class PlayerInstance extends Playable
 	public boolean isInTraingCamp()
 	{
 		final TrainingHolder trainingHolder = getTraingCampInfo();
-		return (trainingHolder != null) && (trainingHolder.getEndTime() > 0);
+		return (trainingHolder != null) && (trainingHolder.getEndTime() > System.currentTimeMillis());
 	}
 	
 	public AttendanceInfoHolder getAttendanceInfo()
