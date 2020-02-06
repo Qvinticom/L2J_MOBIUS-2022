@@ -56,8 +56,8 @@ public class ExRequestTeleport implements IClientIncomingPacket
 			return;
 		}
 		
-		// Players should not be able to teleport out of special locations.
-		if (player.isInInstance() || player.isOnEvent() || player.isInOlympiadMode() || player.inObserverMode() || player.isInTraingCamp() || player.isInTimedHuntingZone())
+		// Players should not be able to teleport if in combat, or in a special location.
+		if (player.isCastingNow() || player.isInCombat() || player.isInInstance() || player.isOnEvent() || player.isInOlympiadMode() || player.inObserverMode() || player.isInTraingCamp() || player.isInTimedHuntingZone())
 		{
 			player.sendMessage("You cannot teleport right now.");
 			return;
