@@ -62,8 +62,8 @@ public class Q00787_TheRoleOfAWatcher extends Quest
 	private static final int DRAGON_BONE_FRAGMENT = 39737; // max 900
 	private static final int EMISSARY_REWARD_BOX = 39728; // Emissary's Reward Box (High-grade)
 	// Misc
-	private static final int MIN_LEVEL = 75;
-	private static final int MAX_LEVEL = 85;
+	private static final int MIN_LEVEL = 81;
+	private static final int MAX_LEVEL = 84;
 	
 	public Q00787_TheRoleOfAWatcher()
 	{

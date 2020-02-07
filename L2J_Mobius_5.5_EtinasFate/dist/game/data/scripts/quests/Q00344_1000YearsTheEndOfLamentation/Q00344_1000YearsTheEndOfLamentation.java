@@ -82,6 +82,7 @@ public class Q00344_1000YearsTheEndOfLamentation extends Quest
 		addStartNpc(GILMORE);
 		addTalkId(KAIEN, GARVARENTZ, GILMORE, RODEMAI, ORVEN);
 		addKillId(MONSTER_CHANCES.keySet());
+		addCondLevel(MIN_LVL, MAX_LVL, "nolevel.html");
 		registerQuestItems(ARTICLES, OLD_KEY.getId(), OLD_HILT.getId(), TOTEM_NECKLACE.getId(), CRUCIFIX.getId());
 	}
 	
