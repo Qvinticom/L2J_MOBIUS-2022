@@ -446,21 +446,24 @@ public class LastImperialTomb extends AbstractInstance
 			case "SPAWN_DEMONS":
 			{
 				final Instance world = player.getInstanceWorld();
-				final Map<Npc, Integer> portraits = world.getParameters().getMap("portraits", Npc.class, Integer.class);
-				if (!portraits.isEmpty())
+				if (world != null)
 				{
-					final List<Npc> demons = world.getParameters().getList("demons", Npc.class);
-					for (int i : portraits.values())
+					final Map<Npc, Integer> portraits = world.getParameters().getMap("portraits", Npc.class, Integer.class);
+					if (!portraits.isEmpty())
 					{
-						if (demons.size() > MAX_DEMONS)
+						final List<Npc> demons = world.getParameters().getList("demons", Npc.class);
+						for (int i : portraits.values())
 						{
-							break;
+							if (demons.size() > MAX_DEMONS)
+							{
+								break;
+							}
+							final Npc demon = addSpawn(PORTRAIT_SPAWNS[i][0] + 2, PORTRAIT_SPAWNS[i][5], PORTRAIT_SPAWNS[i][6], PORTRAIT_SPAWNS[i][7], PORTRAIT_SPAWNS[i][8], false, 0, false, world.getId());
+							demons.add(demon);
 						}
-						final Npc demon = addSpawn(PORTRAIT_SPAWNS[i][0] + 2, PORTRAIT_SPAWNS[i][5], PORTRAIT_SPAWNS[i][6], PORTRAIT_SPAWNS[i][7], PORTRAIT_SPAWNS[i][8], false, 0, false, world.getId());
-						demons.add(demon);
+						world.setParameter("demons", demons);
+						startQuestTimer("SPAWN_DEMONS", TIME_BETWEEN_DEMON_SPAWNS * 1000, null, player, false);
 					}
-					world.setParameter("demons", demons);
-					startQuestTimer("SPAWN_DEMONS", TIME_BETWEEN_DEMON_SPAWNS * 1000, null, player, false);
 				}
 				break;
 			}
