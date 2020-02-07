@@ -38,53 +38,49 @@ public class Q00666_HunterGuildMembersKnowledge extends Quest
 	// BOSS
 	private static final int[] BOSES =
 	{
+		3473, // Omega Golem
 		3477, // Reinforced Super Kat the Cat
 		3479, // Darkened Super Feline Queen
-		25933, // Garden Patrol Captain
 		3481, // Control-crazed Mew the Cat
-		25937, // Spicula Negative
-		3473, // Omega Golem
-		29163, // Tiat (attack type)
+		25876, // Maliss
+		25877, // Isadora
 		25886, // Houpon the Warden Overseer
-		25902, // Gigantic Golem (96 lvl)
 		25887, // Crook the Mad
-		26348, // Summoned Garp
+		25902, // Gigantic Golem (96 lvl)
+		25922, // Nerva Chief Turakan
+		25929, // Tegaffe
+		25931, // Theor
+		25933, // Garden Patrol Captain
+		25937, // Spicula Negative
+		25946, // Antharas' Herald Komabor
+		25948, // Valakas' Herald Potigia
+		25949, // Lindvior's Herald Numa
+		25956, // Vengeful Eligos
+		25957, // Vengeful Agarez
+		25958, // Vengeful Lerazia
+		25959, // Vengeful Oretross
+		25960, // Vengeful Edaire
+		25961, // Vengeful Agonia
+		25982, // Varmonia
+		25983, // Varkaron
+		26001, // Amden Orc Turation
+		26005, // Nerva Orc Nergatt
+		26312, // Lithra
 		26347, // Summoned Harpas
+		26348, // Summoned Garp
 		26349, // Summoned Moricks
 		26431, // Avenger Alusion
 		26432, // Avenger Graff
-		26312, // Lithra
-		26436, // Watcher Setheth
-		26435, // Watcher Tristan
-		25946, // Antharas' Herald Komabor
-		25949, // Lindvior's Herald Numa
-		26442, // Mad Cullan
-		25922, // Nerva Chief Turakan
-		26005, // Nerva Orc Nergatt
-		26001, // Amden Orc Turation
-		25929, // Tegaffe
-		25931, // Theor
-		25948, // Valakas' Herald Potigia
-		25983, // Varkaron
-		25982, // Varmonia
-		25957, // Vengeful Agarez
-		25961, // Vengeful Agonia
-		25960, // Vengeful Edaire
-		25956, // Vengeful Eligos
-		25958, // Vengeful Lerazia
-		25959, // Vengeful Oretross
-		26441, // Witch Moira
-		26440, // Arrogant Lebruum
-		26439, // Ferocious Valac
-		26438, // Berserker Tabris
-		26437, // Berserker Zetahl
-		29374, // Cyrax
 		26433, // Demon Venoma
 		26434, // Fiend Sarboth
-		26443, // Akrikhin Charon
-		26444, // Scorpion King Votan
-		25876, //
-		25877 //
+		26435, // Watcher Tristan
+		26436, // Watcher Setheth
+		26437, // Berserker Zetahl
+		26438, // Berserker Tabris
+		26439, // Ferocious Valac
+		26440, // Arrogant Lebruum
+		29163, // Tiat (attack type)
+		29374, // Cyrax
 	};
 	// Misc
 	private static final int MIN_LEVEL = 85;
