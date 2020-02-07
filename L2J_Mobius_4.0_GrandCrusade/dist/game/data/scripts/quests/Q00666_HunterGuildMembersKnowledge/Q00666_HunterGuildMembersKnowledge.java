@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 /**
  * Knowledgeable Hunter Guild Member (666)
+ * Updated for version Fafurion and below Edoo
  * @URL https://l2wiki.com/Knowledgeable_Hunter_Guild_Member
  * @author Dmitri
  */
@@ -36,56 +37,25 @@ public class Q00666_HunterGuildMembersKnowledge extends Quest
 	private static final int ARCTURUS = 34267;
 	private static final int COLIN = 30703;
 	// BOSS
+	//@formatter:off
 	private static final int[] BOSES =
-	{
-		3477, // Reinforced Super Kat the Cat
-		3479, // Darkened Super Feline Queen
-		25933, // Garden Patrol Captain
-		3481, // Control-crazed Mew the Cat
-		25937, // Spicula Negative
-		3473, // Omega Golem
-		29163, // Tiat (attack type)
-		25886, // Houpon the Warden Overseer
-		25902, // Gigantic Golem (96 lvl)
-		25887, // Crook the Mad
-		26348, // Summoned Garp
-		26347, // Summoned Harpas
-		26349, // Summoned Moricks
-		26431, // Avenger Alusion
-		26432, // Avenger Graff
-		26312, // Lithra
-		26436, // Watcher Setheth
-		26435, // Watcher Tristan
-		25946, // Antharas' Herald Komabor
-		25949, // Lindvior's Herald Numa
-		26442, // Mad Cullan
-		25922, // Nerva Chief Turakan
-		26005, // Nerva Orc Nergatt
-		26001, // Amden Orc Turation
-		25929, // Tegaffe
-		25931, // Theor
-		25948, // Valakas' Herald Potigia
-		25983, // Varkaron
-		25982, // Varmonia
-		25957, // Vengeful Agarez
-		25961, // Vengeful Agonia
-		25960, // Vengeful Edaire
-		25956, // Vengeful Eligos
-		25958, // Vengeful Lerazia
-		25959, // Vengeful Oretross
-		26441, // Witch Moira
-		26440, // Arrogant Lebruum
-		26439, // Ferocious Valac
-		26438, // Berserker Tabris
-		26437, // Berserker Zetahl
-		29374, // Cyrax
-		26433, // Demon Venoma
-		26434, // Fiend Sarboth
-		26443, // Akrikhin Charon
-		26444, // Scorpion King Votan
-		25876, //
-		25877 //
+	{ // BOSS LVL 86-97
+		25932, 25875, 25879, 26077, 26078,
+		26079, 26080, 26081, 26082, 26011,
+		26012, 26013, 26014, 26015, 26016,
+		25944, 3477, 25696, 25697, 25698,
+		26000, 26001, 26002, 26003, 26004,
+		26005, 3479, 25933, 26055, 26056,
+		26057, 26058, 26059, 26060, 25989,
+		25990, 25991, 25992, 25993, 25994,
+		25943, 26066, 26067, 26068, 26069,
+		26070, 26071, 3481, 25937, 25902,
+		3473, 25886, 25887, 25888, 25978,
+		25979, 25980, 25981, 25982, 25983,
+		25967, 25968, 25969, 25970, 25971,
+		25972
 	};
+	//@formatter:on
 	// Misc
 	private static final int MIN_LEVEL = 85;
 	
