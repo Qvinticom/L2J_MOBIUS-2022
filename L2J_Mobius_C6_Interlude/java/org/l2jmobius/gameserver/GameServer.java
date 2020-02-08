@@ -180,7 +180,8 @@ public class GameServer
 		}
 		
 		Util.printSection("IdFactory");
-		if (!IdFactory.getInstance().isInitialized())
+		IdFactory.init();
+		if (!IdFactory.hasInitialized())
 		{
 			LOGGER.severe("IdFactory: Could not read object IDs from database. Please check your configuration.");
 			throw new Exception("Could not initialize the ID factory!");
@@ -412,7 +413,7 @@ public class GameServer
 		
 		Util.printSection("Game Server");
 		
-		LOGGER.info("IdFactory: Free ObjectID's remaining: " + IdFactory.getInstance().size());
+		LOGGER.info("IdFactory: Free ObjectID's remaining: " + IdFactory.size());
 		
 		if (Config.L2JMOD_ALLOW_WEDDING)
 		{

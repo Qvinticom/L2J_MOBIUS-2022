@@ -72,7 +72,7 @@ public class EffectSignetMDam extends Effect
 			return;
 		}
 		
-		final EffectPointInstance effectPoint = new EffectPointInstance(IdFactory.getInstance().getNextId(), template, getEffector());
+		final EffectPointInstance effectPoint = new EffectPointInstance(IdFactory.getNextId(), template, getEffector());
 		effectPoint.getStatus().setCurrentHp(effectPoint.getMaxHp());
 		effectPoint.getStatus().setCurrentMp(effectPoint.getMaxMp());
 		

@@ -716,7 +716,7 @@ public class MercTicketManager
 						{
 							itemId = ITEM_IDS[i];
 							// create the ticket in the gameworld
-							final ItemInstance dropticket = new ItemInstance(IdFactory.getInstance().getNextId(), itemId);
+							final ItemInstance dropticket = new ItemInstance(IdFactory.getNextId(), itemId);
 							dropticket.setLocation(ItemInstance.ItemLocation.VOID);
 							dropticket.dropMe(null, x, y, z);
 							dropticket.setDropTime(0); // avoids it from beeing removed by the auto item destroyer
@@ -840,7 +840,7 @@ public class MercTicketManager
 				castle.getSiege().getSiegeGuardManager().hireMerc(x, y, z, heading, NPC_IDS[i]);
 				
 				// create the ticket in the gameworld
-				final ItemInstance dropticket = new ItemInstance(IdFactory.getInstance().getNextId(), itemId);
+				final ItemInstance dropticket = new ItemInstance(IdFactory.getNextId(), itemId);
 				dropticket.setLocation(ItemInstance.ItemLocation.INVENTORY);
 				dropticket.dropMe(null, x, y, z);
 				dropticket.setDropTime(0); // avoids it from beeing removed by the auto item destroyer
@@ -859,7 +859,7 @@ public class MercTicketManager
 		final NpcTemplate template = NpcTable.getInstance().getTemplate(npcId);
 		if (template != null)
 		{
-			final SiegeGuardInstance npc = new SiegeGuardInstance(IdFactory.getInstance().getNextId(), template);
+			final SiegeGuardInstance npc = new SiegeGuardInstance(IdFactory.getNextId(), template);
 			npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
 			npc.setDecayed(false);
 			npc.spawnMe(x, y, (z + 20));

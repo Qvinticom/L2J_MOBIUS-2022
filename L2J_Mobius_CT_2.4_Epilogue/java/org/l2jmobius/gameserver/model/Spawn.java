@@ -560,7 +560,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	{
 		if (_doRespawn)
 		{
-			oldNpc.refreshID();
+			// oldNpc.refreshId();
 			initializeNpcInstance(oldNpc);
 		}
 	}

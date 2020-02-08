@@ -400,7 +400,7 @@ public class FeedableBeasts extends Quest
 			}
 			
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(nextNpcId);
-			final TamedBeastInstance nextNpc = new TamedBeastInstance(IdFactory.getInstance().getNextId(), template, player, food, npc.getX(), npc.getY(), npc.getZ());
+			final TamedBeastInstance nextNpc = new TamedBeastInstance(IdFactory.getNextId(), template, player, food, npc.getX(), npc.getY(), npc.getZ());
 			
 			nextNpc.setRunning();
 			

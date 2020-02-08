@@ -1595,7 +1595,7 @@ public class Siege
 		{
 			ArtefactInstance art;
 			
-			art = new ArtefactInstance(IdFactory.getInstance().getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
+			art = new ArtefactInstance(IdFactory.getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
 			art.setCurrentHpMp(art.getMaxHp(), art.getMaxMp());
 			art.setHeading(_sp.getLocation().getHeading());
 			art.spawnMe(_sp.getLocation().getX(), _sp.getLocation().getY(), _sp.getLocation().getZ() + 50);
@@ -1624,7 +1624,7 @@ public class Siege
 			
 			template.getStatSet().set("baseHpMax", _sp.getHp());
 			
-			ct = new ControlTowerInstance(IdFactory.getInstance().getNextId(), template);
+			ct = new ControlTowerInstance(IdFactory.getNextId(), template);
 			
 			ct.setCurrentHpMp(ct.getMaxHp(), ct.getMaxMp());
 			ct.spawnMe(_sp.getLocation().getX(), _sp.getLocation().getY(), _sp.getLocation().getZ() + 20);

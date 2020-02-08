@@ -290,7 +290,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public Creature(CreatureTemplate template)
 	{
-		this(IdFactory.getInstance().getNextId(), template);
+		this(IdFactory.getNextId(), template);
 	}
 	
 	/**

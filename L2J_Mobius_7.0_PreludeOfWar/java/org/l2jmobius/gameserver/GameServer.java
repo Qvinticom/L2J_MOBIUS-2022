@@ -213,7 +213,8 @@ public class GameServer
 		ThreadPool.init();
 		
 		printSection("IdFactory");
-		if (!IdFactory.getInstance().isInitialized())
+		IdFactory.init();
+		if (!IdFactory.hasInitialized())
 		{
 			LOGGER.severe(getClass().getSimpleName() + ": Could not read object IDs from database. Please check your configuration.");
 			throw new Exception("Could not initialize the ID factory!");
@@ -432,7 +433,7 @@ public class GameServer
 		
 		Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
 		
-		LOGGER.info("IdFactory: Free ObjectID's remaining: " + IdFactory.getInstance().size());
+		LOGGER.info("IdFactory: Free ObjectID's remaining: " + IdFactory.size());
 		
 		if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS)
 		{

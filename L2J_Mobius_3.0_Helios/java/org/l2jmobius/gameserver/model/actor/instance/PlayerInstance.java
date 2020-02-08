@@ -1143,7 +1143,7 @@ public class PlayerInstance extends Playable
 	 */
 	private PlayerInstance(PlayerTemplate template, String accountName, PlayerAppearance app)
 	{
-		this(IdFactory.getInstance().getNextId(), template, accountName, app);
+		this(IdFactory.getNextId(), template, accountName, app);
 	}
 	
 	@Override

@@ -55,7 +55,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import org.l2jmobius.commons.enums.IdFactoryType;
 import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.PropertiesParser;
@@ -97,7 +96,6 @@ public class Config
 	private static final String GENERAL_CONFIG_FILE = "./config/General.ini";
 	private static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
 	private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
-	private static final String IDFACTORY_CONFIG_FILE = "./config/IdFactory.ini";
 	private static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
 	private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
 	private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
@@ -789,9 +787,6 @@ public class Config
 	public static int PVP_PVP_TIME;
 	public static int MAX_REPUTATION;
 	public static int REPUTATION_INCREASE;
-	
-	public static IdFactoryType IDFACTORY_TYPE;
-	public static boolean BAD_ID_CHECKING;
 	
 	public static int[] ENCHANT_BLACKLIST;
 	public static boolean DISABLE_OVER_ENCHANTING;
@@ -1859,12 +1854,6 @@ public class Config
 			TRAINING_CAMP_MAX_LEVEL = trainingCampSettings.getInt("TrainingCampMaxLevel", 127);
 			TRAINING_CAMP_EXP_MULTIPLIER = trainingCampSettings.getDouble("TrainingCampExpMultiplier", 1.0);
 			TRAINING_CAMP_SP_MULTIPLIER = trainingCampSettings.getDouble("TrainingCampSpMultiplier", 1.0);
-			
-			// Load IdFactory config file (if exists)
-			final PropertiesParser IdFactory = new PropertiesParser(IDFACTORY_CONFIG_FILE);
-			
-			IDFACTORY_TYPE = IdFactory.getEnum("IDFactory", IdFactoryType.class, IdFactoryType.BITSET);
-			BAD_ID_CHECKING = IdFactory.getBoolean("BadIdChecking", true);
 			
 			// Load General config file (if exists)
 			final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);

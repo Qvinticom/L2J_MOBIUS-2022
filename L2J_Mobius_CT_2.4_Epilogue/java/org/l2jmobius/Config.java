@@ -54,7 +54,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import org.l2jmobius.commons.enums.IdFactoryType;
 import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.PropertiesParser;
@@ -94,7 +93,6 @@ public class Config
 	private static final String GENERAL_CONFIG_FILE = "./config/General.ini";
 	private static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
 	private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
-	private static final String IDFACTORY_CONFIG_FILE = "./config/IdFactory.ini";
 	private static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
 	private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
 	private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
@@ -930,9 +928,6 @@ public class Config
 	public static List<String> GAME_SERVER_HOSTS;
 	public static int PVP_NORMAL_TIME;
 	public static int PVP_PVP_TIME;
-	
-	public static IdFactoryType IDFACTORY_TYPE;
-	public static boolean BAD_ID_CHECKING;
 	
 	public static double ENCHANT_CHANCE_ELEMENT_STONE;
 	public static double ENCHANT_CHANCE_ELEMENT_CRYSTAL;
@@ -2015,12 +2010,6 @@ public class Config
 			TELNET_HOSTNAME = telnetSettings.getString("BindAddress", "127.0.0.1");
 			TELNET_PASSWORD = telnetSettings.getString("Password", "");
 			TELNET_HOSTS = Arrays.asList(telnetSettings.getString("ListOfHosts", "127.0.0.1,::1").split(","));
-			
-			// Load IdFactory config file (if exists)
-			final PropertiesParser IdFactory = new PropertiesParser(IDFACTORY_CONFIG_FILE);
-			
-			IDFACTORY_TYPE = IdFactory.getEnum("IDFactory", IdFactoryType.class, IdFactoryType.BITSET);
-			BAD_ID_CHECKING = IdFactory.getBoolean("BadIdChecking", true);
 			
 			// Load General config file (if exists)
 			final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);

@@ -401,7 +401,7 @@ public class Auction
 			else
 			{
 				statement = con.prepareStatement("INSERT INTO auction_bid (id, auctionId, bidderId, bidderName, maxBid, clan_name, time_bid) VALUES (?, ?, ?, ?, ?, ?, ?)");
-				statement.setInt(1, IdFactory.getInstance().getNextId());
+				statement.setInt(1, IdFactory.getNextId());
 				statement.setInt(2, _id);
 				statement.setInt(3, bidder.getClanId());
 				statement.setString(4, bidder.getName());

@@ -2088,7 +2088,7 @@ public class NpcInstance extends Creature
 			sm.addItemName(4442);
 			player.sendPacket(sm);
 			
-			final ItemInstance item = new ItemInstance(IdFactory.getInstance().getNextId(), 4442);
+			final ItemInstance item = new ItemInstance(IdFactory.getNextId(), 4442);
 			item.setCount(1);
 			item.setCustomType1(lotonumber);
 			item.setEnchantLevel(enchant);

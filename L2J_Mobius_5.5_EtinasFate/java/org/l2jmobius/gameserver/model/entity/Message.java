@@ -99,7 +99,7 @@ public class Message
 	 */
 	public Message(int senderId, int receiverId, boolean isCod, String subject, String text, long reqAdena)
 	{
-		_messageId = IdFactory.getInstance().getNextId();
+		_messageId = IdFactory.getNextId();
 		_senderId = senderId;
 		_receiverId = receiverId;
 		_subject = subject;
@@ -118,7 +118,7 @@ public class Message
 	 */
 	public Message(int receiverId, String subject, String content, MailType sendBySystem)
 	{
-		_messageId = IdFactory.getInstance().getNextId();
+		_messageId = IdFactory.getNextId();
 		_senderId = -1;
 		_receiverId = receiverId;
 		_subject = subject;
@@ -138,7 +138,7 @@ public class Message
 	 */
 	public Message(int senderId, int receiverId, String subject, String content, MailType sendBySystem)
 	{
-		_messageId = IdFactory.getInstance().getNextId();
+		_messageId = IdFactory.getNextId();
 		_senderId = senderId;
 		_receiverId = receiverId;
 		_subject = subject;
@@ -157,7 +157,7 @@ public class Message
 	 */
 	public Message(Message msg)
 	{
-		_messageId = IdFactory.getInstance().getNextId();
+		_messageId = IdFactory.getNextId();
 		_senderId = msg.getSenderId();
 		_receiverId = msg.getSenderId();
 		_subject = "";
@@ -177,7 +177,7 @@ public class Message
 	
 	public Message(int receiverId, ItemInstance item, MailType mailType)
 	{
-		_messageId = IdFactory.getInstance().getNextId();
+		_messageId = IdFactory.getNextId();
 		_senderId = -1;
 		_receiverId = receiverId;
 		_subject = "";

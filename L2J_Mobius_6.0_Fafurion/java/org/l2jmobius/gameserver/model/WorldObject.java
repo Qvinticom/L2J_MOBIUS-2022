@@ -151,11 +151,11 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 		return true;
 	}
 	
-	public void refreshID()
+	public void refreshId()
 	{
 		World.getInstance().removeObject(this);
-		IdFactory.getInstance().releaseId(getObjectId());
-		_objectId = IdFactory.getInstance().getNextId();
+		IdFactory.releaseId(getObjectId());
+		_objectId = IdFactory.getNextId();
 	}
 	
 	@Override

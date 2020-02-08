@@ -102,7 +102,7 @@ public class RequestExSetPledgeCrestLarge extends GameClientPacket
 			
 			final CrestCache crestCache = CrestCache.getInstance();
 			
-			final int newId = IdFactory.getInstance().getNextId();
+			final int newId = IdFactory.getNextId();
 			
 			if (!crestCache.savePledgeCrestLarge(newId, _data))
 			{

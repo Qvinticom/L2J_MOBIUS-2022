@@ -189,7 +189,7 @@ public class ClanTable
 			return null;
 		}
 		
-		final Clan clan = new Clan(IdFactory.getInstance().getNextId(), clanName);
+		final Clan clan = new Clan(IdFactory.getNextId(), clanName);
 		final ClanMember leader = new ClanMember(clan, player);
 		clan.setLeader(leader);
 		leader.setPlayerInstance(player);
@@ -264,7 +264,7 @@ public class ClanTable
 		}
 		
 		_clans.remove(clanId);
-		IdFactory.getInstance().releaseId(clanId);
+		IdFactory.releaseId(clanId);
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{

@@ -274,7 +274,7 @@ public class BanditStrongholdSiege extends ClanHallSiege
 					continue;
 				}
 				template = NpcTable.getInstance().getTemplate(35427 + mobCounter);
-				final MonsterInstance questMob = new MonsterInstance(IdFactory.getInstance().getNextId(), template);
+				final MonsterInstance questMob = new MonsterInstance(IdFactory.getNextId(), template);
 				questMob.setHeading(100);
 				questMob.getStatus().setCurrentHpMp(questMob.getMaxHp(), questMob.getMaxMp());
 				if (mobCounter == 1)
@@ -321,7 +321,7 @@ public class BanditStrongholdSiege extends ClanHallSiege
 			{
 				template = NpcTable.getInstance().getTemplate(35422 + flagCounter);
 			}
-			final DecoInstance flag = new DecoInstance(IdFactory.getInstance().getNextId(), template);
+			final DecoInstance flag = new DecoInstance(IdFactory.getNextId(), template);
 			flag.setTitle(clan.getName());
 			flag.setHeading(100);
 			flag.getStatus().setCurrentHpMp(flag.getMaxHp(), flag.getMaxMp());

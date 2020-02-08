@@ -352,7 +352,7 @@ public class Auction
 			{
 				try (PreparedStatement ps = con.prepareStatement("INSERT INTO auction_bid (id, auctionId, bidderId, bidderName, maxBid, clan_name, time_bid) VALUES (?, ?, ?, ?, ?, ?, ?)"))
 				{
-					ps.setInt(1, IdFactory.getInstance().getNextId());
+					ps.setInt(1, IdFactory.getNextId());
 					ps.setInt(2, _id);
 					ps.setInt(3, bidder.getClanId());
 					ps.setString(4, bidder.getName());

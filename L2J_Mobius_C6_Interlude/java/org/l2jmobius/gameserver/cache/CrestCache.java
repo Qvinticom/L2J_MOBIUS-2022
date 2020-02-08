@@ -140,10 +140,8 @@ public class CrestCache
 			
 			LOGGER.info("Found old crest file \"" + file.getName() + "\" for clanId " + clanId);
 			
-			final int newId = IdFactory.getInstance().getNextId();
-			
+			final int newId = IdFactory.getNextId();
 			final Clan clan = ClanTable.getInstance().getClan(clanId);
-			
 			if (clan != null)
 			{
 				removeOldPledgeCrest(clan.getCrestId());

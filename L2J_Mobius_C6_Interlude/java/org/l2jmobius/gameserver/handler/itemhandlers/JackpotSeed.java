@@ -64,7 +64,7 @@ public class JackpotSeed implements IItemHandler
 		try
 		{
 			final Spawn spawn = new Spawn(template1);
-			spawn.setId(IdFactory.getInstance().getNextId());
+			spawn.setId(IdFactory.getNextId());
 			spawn.setX(player.getX());
 			spawn.setY(player.getY());
 			spawn.setZ(player.getZ());

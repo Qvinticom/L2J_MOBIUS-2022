@@ -282,7 +282,7 @@ public class MailManager
 		}
 		
 		_messages.remove(msgId);
-		IdFactory.getInstance().releaseId(msgId);
+		IdFactory.releaseId(msgId);
 	}
 	
 	/**

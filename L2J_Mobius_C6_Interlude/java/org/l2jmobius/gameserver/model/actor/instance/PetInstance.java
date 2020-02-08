@@ -844,11 +844,11 @@ public class PetInstance extends Summon
 		{
 			if (template.getType().equalsIgnoreCase("BabyPet"))
 			{
-				pet = new BabyPetInstance(IdFactory.getInstance().getNextId(), template, owner, control);
+				pet = new BabyPetInstance(IdFactory.getNextId(), template, owner, control);
 			}
 			else
 			{
-				pet = new PetInstance(IdFactory.getInstance().getNextId(), template, owner, control);
+				pet = new PetInstance(IdFactory.getNextId(), template, owner, control);
 			}
 			
 			final PreparedStatement statement = con.prepareStatement("SELECT item_obj_id, name, level, curHp, curMp, exp, sp, karma, pkkills, fed FROM pets WHERE item_obj_id=?");

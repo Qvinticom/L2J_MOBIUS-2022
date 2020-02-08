@@ -95,7 +95,7 @@ public abstract class ZoneForm
 	
 	protected static final void dropDebugItem(int id, int x, int y, int z)
 	{
-		final ItemInstance item = new ItemInstance(IdFactory.getInstance().getNextId(), 57);
+		final ItemInstance item = new ItemInstance(IdFactory.getNextId(), 57);
 		item.setCount(id);
 		item.spawnMe(x, y, z + 5);
 		

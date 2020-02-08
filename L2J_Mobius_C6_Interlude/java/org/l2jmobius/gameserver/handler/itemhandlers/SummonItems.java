@@ -148,7 +148,7 @@ public class SummonItems implements IItemHandler
 				try
 				{
 					final Spawn spawn = new Spawn(npcTemplate);
-					spawn.setId(IdFactory.getInstance().getNextId());
+					spawn.setId(IdFactory.getNextId());
 					spawn.setX(player.getX());
 					spawn.setY(player.getY());
 					spawn.setZ(player.getZ());

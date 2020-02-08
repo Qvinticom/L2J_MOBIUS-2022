@@ -472,7 +472,7 @@ public class ChristmasManager
 			final NpcTemplate template1 = NpcTable.getInstance().getTemplate(id);
 			final Spawn spawn = new Spawn(template1);
 			
-			spawn.setId(IdFactory.getInstance().getNextId());
+			spawn.setId(IdFactory.getNextId());
 			
 			spawn.setX(x);
 			spawn.setY(y);

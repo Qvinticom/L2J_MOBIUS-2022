@@ -32,7 +32,7 @@ public class EventAnnouncement implements IAnnouncement
 	
 	public EventAnnouncement(DateRange range, String content)
 	{
-		_id = IdFactory.getInstance().getNextId();
+		_id = IdFactory.getNextId();
 		_range = range;
 		_content = content;
 	}
@@ -88,7 +88,7 @@ public class EventAnnouncement implements IAnnouncement
 	@Override
 	public boolean deleteMe()
 	{
-		IdFactory.getInstance().releaseId(_id);
+		IdFactory.releaseId(_id);
 		return true;
 	}
 	

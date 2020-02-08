@@ -89,7 +89,7 @@ public class PetitionManager
 		public Petition(PlayerInstance petitioner, String petitionText, int petitionType)
 		{
 			petitionType--;
-			_id = IdFactory.getInstance().getNextId();
+			_id = IdFactory.getNextId();
 			if (petitionType >= PetitionType.values().length)
 			{
 				LOGGER.warning("PetitionManager:Petition : invalid petition type (received type was +1) : " + petitionType);

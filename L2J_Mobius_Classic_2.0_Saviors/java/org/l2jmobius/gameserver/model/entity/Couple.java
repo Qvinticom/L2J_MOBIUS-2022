@@ -34,7 +34,7 @@ public class Couple
 {
 	private static final Logger LOGGER = Logger.getLogger(Couple.class.getName());
 	
-	private int _Id = 0;
+	private int _id = 0;
 	private int _player1Id = 0;
 	private int _player2Id = 0;
 	private boolean _maried = false;
@@ -43,12 +43,12 @@ public class Couple
 	
 	public Couple(int coupleId)
 	{
-		_Id = coupleId;
+		_id = coupleId;
 		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM mods_wedding WHERE id = ?"))
 		{
-			ps.setInt(1, _Id);
+			ps.setInt(1, _id);
 			try (ResultSet rs = ps.executeQuery())
 			{
 				while (rs.next())
@@ -88,8 +88,8 @@ public class Couple
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO mods_wedding (id, player1Id, player2Id, married, affianceDate, weddingDate) VALUES (?, ?, ?, ?, ?, ?)"))
 		{
-			_Id = IdFactory.getInstance().getNextId();
-			ps.setInt(1, _Id);
+			_id = IdFactory.getNextId();
+			ps.setInt(1, _id);
 			ps.setInt(2, _player1Id);
 			ps.setInt(3, _player2Id);
 			ps.setBoolean(4, false);
@@ -111,7 +111,7 @@ public class Couple
 			ps.setBoolean(1, true);
 			_weddingDate = Calendar.getInstance();
 			ps.setLong(2, _weddingDate.getTimeInMillis());
-			ps.setInt(3, _Id);
+			ps.setInt(3, _id);
 			ps.execute();
 			_maried = true;
 		}
@@ -126,7 +126,7 @@ public class Couple
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM mods_wedding WHERE id=?"))
 		{
-			ps.setInt(1, _Id);
+			ps.setInt(1, _id);
 			ps.execute();
 		}
 		catch (Exception e)
@@ -137,7 +137,7 @@ public class Couple
 	
 	public int getId()
 	{
-		return _Id;
+		return _id;
 	}
 	
 	public int getPlayer1Id()

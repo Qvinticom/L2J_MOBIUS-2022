@@ -49,7 +49,7 @@ public class SkillSignet extends Skill
 		}
 		
 		final NpcTemplate template = NpcTable.getInstance().getTemplate(_effectNpcId);
-		final EffectPointInstance effectPoint = new EffectPointInstance(IdFactory.getInstance().getNextId(), template, caster);
+		final EffectPointInstance effectPoint = new EffectPointInstance(IdFactory.getNextId(), template, caster);
 		effectPoint.getStatus().setCurrentHp(effectPoint.getMaxHp());
 		effectPoint.getStatus().setCurrentMp(effectPoint.getMaxMp());
 		World.getInstance().storeObject(effectPoint);

@@ -79,7 +79,7 @@ public class AuctionItem
 	
 	public ItemInstance createNewItemInstance()
 	{
-		final ItemInstance item = new ItemInstance(IdFactory.getInstance().getNextId(), _itemId);
+		final ItemInstance item = new ItemInstance(IdFactory.getNextId(), _itemId);
 		World.getInstance().addObject(item);
 		item.setCount(_itemCount);
 		item.setEnchantLevel(item.getItem().getDefaultEnchantLevel());

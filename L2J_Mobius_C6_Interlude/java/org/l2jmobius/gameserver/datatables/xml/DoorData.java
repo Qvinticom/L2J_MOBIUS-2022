@@ -180,7 +180,7 @@ public class DoorData implements IXmlReader
 		npcDat.set("baseMDef", mDef);
 		
 		final CreatureTemplate template = new CreatureTemplate(npcDat);
-		final DoorInstance door = new DoorInstance(IdFactory.getInstance().getNextId(), template, id, name, unlockable);
+		final DoorInstance door = new DoorInstance(IdFactory.getNextId(), template, id, name, unlockable);
 		door.setRange(xMin, yMin, zMin, xMax, yMax, zMax);
 		try
 		{

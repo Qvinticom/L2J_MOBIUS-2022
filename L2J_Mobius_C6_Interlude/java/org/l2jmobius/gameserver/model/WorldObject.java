@@ -205,11 +205,11 @@ public abstract class WorldObject
 		World.getInstance().removeVisibleObject(this, oldregion);
 	}
 	
-	public void refreshID()
+	public void refreshId()
 	{
 		World.getInstance().removeObject(this);
-		IdFactory.getInstance().releaseId(getObjectId());
-		_objectId = IdFactory.getInstance().getNextId();
+		IdFactory.releaseId(getObjectId());
+		_objectId = IdFactory.getNextId();
 	}
 	
 	/**

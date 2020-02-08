@@ -164,7 +164,7 @@ public class RaceManagerInstance extends FolkInstance
 				player.setRace(0, 0);
 				player.setRace(1, 0);
 				
-				ItemInstance item = new ItemInstance(IdFactory.getInstance().getNextId(), 4443);
+				ItemInstance item = new ItemInstance(IdFactory.getNextId(), 4443);
 				item.setCount(1);
 				item.setEnchantLevel(MonsterRace.getInstance().getRaceNumber());
 				item.setCustomType1(ticket);

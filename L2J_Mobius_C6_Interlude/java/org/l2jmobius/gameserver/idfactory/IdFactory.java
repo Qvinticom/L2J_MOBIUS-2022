@@ -17,24 +17,26 @@
 package org.l2jmobius.gameserver.idfactory;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.BitSet;
 import java.util.Collections;
 import java.util.List;
-import java.util.logging.Level;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
 
-import org.l2jmobius.Config;
+import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.gameserver.util.PrimeFinder;
 
 /**
- * @version $Revision: 1.3.2.1.2.7 $ $Date: 2005/04/11 10:06:12 $
+ * @author Mobius (reworked from L2J version)
  */
 public abstract class IdFactory
 {
-	protected final Logger LOGGER = Logger.getLogger(getClass().getName());
+	private static final Logger LOGGER = Logger.getLogger(IdFactory.class.getName());
 	
 	protected static final String[] ID_CHECKS =
 	{
@@ -59,80 +61,50 @@ public abstract class IdFactory
 		"SELECT item_obj_id FROM pets                  WHERE item_obj_id >= ? AND item_obj_id < ?",
 		"SELECT object_id   FROM itemsonground        WHERE object_id >= ?   AND object_id < ?"
 	};
-	
 	//@formatter:off
 	private static final String[][] ID_EXTRACTS =
 	{
-		{"characters", "obj_Id"},
-		{"items", "object_id"},
-		{"clan_data", "clan_id"},
-		{"itemsonground", "object_id"}
+		{"characters","obj_Id"},
+		{"items","object_id"},
+		{"clan_data","clan_id"},
+		{"itemsonground","object_id"}
 	};
 	//@formatter:on
-	
-	protected boolean _initialized;
-	
+	private static final String[] TIMESTAMPS_CLEAN =
+	{
+		"DELETE FROM character_skills_save WHERE restore_type = 1 AND systime <= ?"
+	};
 	public static final int FIRST_OID = 0x10000000;
 	public static final int LAST_OID = 0x7FFFFFFF;
 	public static final int FREE_OBJECT_ID_SIZE = LAST_OID - FIRST_OID;
 	
-	protected static final IdFactory _instance;
+	private static BitSet _freeIds;
+	private static AtomicInteger _freeIdCount;
+	private static AtomicInteger _nextFreeId;
+	private static boolean _initialized;
 	
-	protected IdFactory()
+	public static void init()
 	{
-		setAllCharacterOffline();
-		cleanUpDB();
-	}
-	
-	static
-	{
-		switch (Config.IDFACTORY_TYPE)
-		{
-			case BITSET:
-			{
-				_instance = new BitSetIDFactory();
-				break;
-			}
-			case STACK:
-			{
-				_instance = new StackIDFactory();
-				break;
-			}
-			default:
-			{
-				_instance = null;
-				break;
-			}
-		}
-	}
-	
-	/**
-	 * Sets all character offline
-	 */
-	private void setAllCharacterOffline()
-	{
+		// Update characters online status.
 		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement())
 		{
 			s.executeUpdate("UPDATE characters SET online = 0");
 			LOGGER.info("Updated characters online status.");
 		}
-		catch (SQLException e)
+		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Could not update characters online status: " + e.getMessage(), e);
+			LOGGER.warning("IdFactory: Could not update characters online status: " + e);
 		}
-	}
-	
-	/**
-	 * Cleans up Database
-	 */
-	private void cleanUpDB()
-	{
-		try (Connection con = DatabaseFactory.getConnection())
+		
+		// Cleanup database.
+		try (Connection con = DatabaseFactory.getConnection();
+			Statement stmt = con.createStatement())
 		{
+			final long cleanupStart = System.currentTimeMillis();
 			int cleanCount = 0;
-			final Statement stmt = con.createStatement();
-			// Character related
+			
+			// Characters
 			cleanCount += stmt.executeUpdate("DELETE FROM character_friends WHERE character_friends.char_id NOT IN (SELECT obj_Id FROM characters);");
 			cleanCount += stmt.executeUpdate("DELETE FROM character_hennas WHERE character_hennas.char_obj_id NOT IN (SELECT obj_Id FROM characters);");
 			cleanCount += stmt.executeUpdate("DELETE FROM character_macroses WHERE character_macroses.char_obj_id NOT IN (SELECT obj_Id FROM characters);");
@@ -147,10 +119,12 @@ public abstract class IdFactory
 			cleanCount += stmt.executeUpdate("DELETE FROM olympiad_nobles WHERE olympiad_nobles.char_id NOT IN (SELECT obj_Id FROM characters);");
 			cleanCount += stmt.executeUpdate("DELETE FROM pets WHERE pets.item_obj_id NOT IN (SELECT object_id FROM items);");
 			cleanCount += stmt.executeUpdate("DELETE FROM seven_signs WHERE seven_signs.char_obj_id NOT IN (SELECT obj_Id FROM characters);");
+			
 			// Auction
 			cleanCount += stmt.executeUpdate("DELETE FROM auction WHERE auction.id IN (SELECT id FROM clanhall WHERE ownerId <> 0);");
 			cleanCount += stmt.executeUpdate("DELETE FROM auction_bid WHERE auctionId IN (SELECT id FROM clanhall WHERE ownerId <> 0)");
-			// Clan related
+			
+			// Clan
 			stmt.executeUpdate("UPDATE clan_data SET auction_bid_at = 0 WHERE auction_bid_at NOT IN (SELECT auctionId FROM auction_bid);");
 			cleanCount += stmt.executeUpdate("DELETE FROM clan_data WHERE clan_data.leader_id NOT IN (SELECT obj_Id FROM characters);");
 			cleanCount += stmt.executeUpdate("DELETE FROM auction_bid WHERE auction_bid.bidderId NOT IN (SELECT clan_id FROM clan_data);");
@@ -162,71 +136,165 @@ public abstract class IdFactory
 			cleanCount += stmt.executeUpdate("DELETE FROM clan_wars WHERE clan_wars.clan2 NOT IN (SELECT clan_id FROM clan_data);");
 			cleanCount += stmt.executeUpdate("DELETE FROM siege_clans WHERE siege_clans.clan_id NOT IN (SELECT clan_id FROM clan_data);");
 			stmt.executeUpdate("UPDATE castle SET taxpercent=0 WHERE castle.id NOT IN (SELECT hasCastle FROM clan_data);");
-			// Character & clan related
-			cleanCount += stmt.executeUpdate("DELETE FROM items WHERE items.owner_id NOT IN (SELECT obj_Id FROM characters) AND items.owner_id NOT IN (SELECT clan_id FROM clan_data);");
-			stmt.executeUpdate("UPDATE characters SET clanid=0 WHERE characters.clanid NOT IN (SELECT clan_id FROM clan_data);");
-			// Forum related
+			
+			// Forums
 			cleanCount += stmt.executeUpdate("DELETE FROM forums WHERE forums.forum_owner_id NOT IN (SELECT clan_id FROM clan_data) AND forums.forum_parent=2;");
 			cleanCount += stmt.executeUpdate("DELETE FROM topic WHERE topic.topic_forum_id NOT IN (SELECT forum_id FROM forums);");
 			cleanCount += stmt.executeUpdate("DELETE FROM posts WHERE posts.post_forum_id NOT IN (SELECT forum_id FROM forums);");
 			
-			stmt.close();
-			LOGGER.info("Cleaned " + cleanCount + " elements from database.");
-		}
-		catch (SQLException e)
-		{
-			// Ignore.
-		}
-	}
-	
-	/**
-	 * @return
-	 * @throws Exception
-	 * @throws SQLException
-	 */
-	protected final Integer[] extractUsedObjectIDTable() throws Exception
-	{
-		final List<Integer> temp = new ArrayList<>();
-		try (Connection con = DatabaseFactory.getConnection();
-			Statement s = con.createStatement())
-		{
-			String extractUsedObjectIdsQuery = "";
+			// Update needed items after cleaning has taken place.
+			cleanCount += stmt.executeUpdate("DELETE FROM items WHERE items.owner_id NOT IN (SELECT obj_Id FROM characters) AND items.owner_id NOT IN (SELECT clan_id FROM clan_data);");
+			stmt.executeUpdate("UPDATE characters SET clanid=0 WHERE characters.clanid NOT IN (SELECT clan_id FROM clan_data);");
 			
-			for (String[] tblClmn : ID_EXTRACTS)
+			LOGGER.info("IdFactory: Cleaned " + cleanCount + " elements from database in " + ((System.currentTimeMillis() - cleanupStart) / 1000) + " seconds.");
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning("IdFactory: Could not clean up database: " + e);
+		}
+		
+		// Cleanup timestamps.
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			int cleanCount = 0;
+			for (String line : TIMESTAMPS_CLEAN)
 			{
-				extractUsedObjectIdsQuery += "SELECT " + tblClmn[1] + " FROM " + tblClmn[0] + " UNION ";
-			}
-			
-			extractUsedObjectIdsQuery = extractUsedObjectIdsQuery.substring(0, extractUsedObjectIdsQuery.length() - 7); // Remove the last " UNION "
-			try (ResultSet rs = s.executeQuery(extractUsedObjectIdsQuery))
-			{
-				while (rs.next())
+				try (PreparedStatement stmt = con.prepareStatement(line))
 				{
-					temp.add(rs.getInt(1));
+					stmt.setLong(1, System.currentTimeMillis());
+					cleanCount += stmt.executeUpdate();
 				}
 			}
+			LOGGER.info("IdFactory: Cleaned " + cleanCount + " expired timestamps from database.");
 		}
-		Collections.sort(temp);
-		return temp.toArray(new Integer[temp.size()]);
+		catch (Exception e)
+		{
+			LOGGER.warning("IdFactory: Could not clean expired timestamps from database. " + e);
+		}
+		
+		// Initialize.
+		try
+		{
+			_freeIds = new BitSet(PrimeFinder.nextPrime(100000));
+			_freeIds.clear();
+			_freeIdCount = new AtomicInteger(FREE_OBJECT_ID_SIZE);
+			
+			// Collect already used ids.
+			final List<Integer> usedIds = new ArrayList<>();
+			try (Connection con = DatabaseFactory.getConnection();
+				Statement statement = con.createStatement())
+			{
+				String extractUsedObjectIdsQuery = "";
+				for (String[] tblClmn : ID_EXTRACTS)
+				{
+					extractUsedObjectIdsQuery += "SELECT " + tblClmn[1] + " FROM " + tblClmn[0] + " UNION ";
+				}
+				extractUsedObjectIdsQuery = extractUsedObjectIdsQuery.substring(0, extractUsedObjectIdsQuery.length() - 7); // Remove the last " UNION "
+				try (ResultSet result = statement.executeQuery(extractUsedObjectIdsQuery))
+				{
+					while (result.next())
+					{
+						usedIds.add(result.getInt(1));
+					}
+				}
+			}
+			Collections.sort(usedIds);
+			
+			// Register used ids.
+			for (int usedObjectId : usedIds)
+			{
+				final int objectId = usedObjectId - FIRST_OID;
+				if (objectId < 0)
+				{
+					LOGGER.warning("IdFactory: Object ID " + usedObjectId + " in DB is less than minimum ID of " + FIRST_OID);
+					continue;
+				}
+				_freeIds.set(usedObjectId - FIRST_OID);
+				_freeIdCount.decrementAndGet();
+			}
+			
+			_nextFreeId = new AtomicInteger(_freeIds.nextClearBit(0));
+			_initialized = true;
+		}
+		catch (Exception e)
+		{
+			_initialized = false;
+			LOGGER.severe("IdFactory: Could not be initialized properly: " + e.getMessage());
+		}
+		
+		// Schedule increase capacity task.
+		ThreadPool.scheduleAtFixedRate(() ->
+		{
+			synchronized (_nextFreeId)
+			{
+				if (PrimeFinder.nextPrime((usedIdCount() * 11) / 10) > _freeIds.size())
+				{
+					increaseBitSetCapacity();
+				}
+			}
+		}, 30000, 30000);
+		
+		LOGGER.info("IdFactory: " + _freeIds.size() + " id's available.");
 	}
 	
-	public boolean isInitialized()
+	public synchronized static void releaseId(int objectId)
+	{
+		synchronized (_nextFreeId)
+		{
+			if ((objectId - FIRST_OID) > -1)
+			{
+				_freeIds.clear(objectId - FIRST_OID);
+				_freeIdCount.incrementAndGet();
+			}
+			else
+			{
+				LOGGER.warning("IdFactory: Release objectID " + objectId + " failed (< " + FIRST_OID + ")");
+			}
+		}
+	}
+	
+	public synchronized static int getNextId()
+	{
+		synchronized (_nextFreeId)
+		{
+			final int newId = _nextFreeId.get();
+			_freeIds.set(newId);
+			_freeIdCount.decrementAndGet();
+			
+			final int nextFree = _freeIds.nextClearBit(newId) < 0 ? _freeIds.nextClearBit(0) : _freeIds.nextClearBit(newId);
+			if (nextFree < 0)
+			{
+				if (_freeIds.size() >= FREE_OBJECT_ID_SIZE)
+				{
+					throw new NullPointerException("IdFactory: Ran out of valid ids.");
+				}
+				increaseBitSetCapacity();
+			}
+			_nextFreeId.set(nextFree);
+			
+			return newId + FIRST_OID;
+		}
+	}
+	
+	private static void increaseBitSetCapacity()
+	{
+		final BitSet newBitSet = new BitSet(PrimeFinder.nextPrime((usedIdCount() * 11) / 10));
+		newBitSet.or(_freeIds);
+		_freeIds = newBitSet;
+	}
+	
+	private static int usedIdCount()
+	{
+		return _freeIdCount.get() - FIRST_OID;
+	}
+	
+	public static int size()
+	{
+		return _freeIdCount.get();
+	}
+	
+	public static boolean hasInitialized()
 	{
 		return _initialized;
 	}
-	
-	public static IdFactory getInstance()
-	{
-		return _instance;
-	}
-	
-	public abstract int getNextId();
-	
-	/**
-	 * return a used Object ID back to the pool
-	 * @param id
-	 */
-	public abstract void releaseId(int id);
-	
-	public abstract int size();
 }

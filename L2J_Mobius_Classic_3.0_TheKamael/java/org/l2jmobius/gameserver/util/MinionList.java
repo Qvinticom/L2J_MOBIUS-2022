@@ -248,7 +248,7 @@ public class MinionList
 			// minion can be already spawned or deleted
 			if (!_master.isAlikeDead() && _master.isSpawned() && !_minion.isSpawned())
 			{
-				_minion.refreshID();
+				// _minion.refreshId();
 				initializeNpcInstance(_master, _minion);
 				
 				// assist master

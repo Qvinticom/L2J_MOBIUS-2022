@@ -180,7 +180,7 @@ public class ItemTable
 	public ItemInstance createItem(String process, int itemId, int count, PlayerInstance actor, WorldObject reference)
 	{
 		// Create and Init the ItemInstance corresponding to the Item Identifier
-		final ItemInstance item = new ItemInstance(IdFactory.getInstance().getNextId(), itemId);
+		final ItemInstance item = new ItemInstance(IdFactory.getNextId(), itemId);
 		
 		// create loot schedule also if autoloot is enabled
 		if (process.equalsIgnoreCase("loot")/* && !Config.AUTO_LOOT */)
@@ -299,7 +299,7 @@ public class ItemTable
 			item.setLastChange(ItemInstance.REMOVED);
 			
 			World.getInstance().removeObject(item);
-			IdFactory.getInstance().releaseId(item.getObjectId());
+			IdFactory.releaseId(item.getObjectId());
 			
 			// if it's a pet control item, delete the pet as well
 			if (PetDataTable.isPetItem(item.getItemId()))

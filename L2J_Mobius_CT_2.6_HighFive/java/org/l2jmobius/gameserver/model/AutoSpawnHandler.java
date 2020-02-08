@@ -193,7 +193,7 @@ public class AutoSpawnHandler
 			}
 		}
 		
-		final int newId = IdFactory.getInstance().getNextId();
+		final int newId = IdFactory.getNextId();
 		newSpawn._objectId = newId;
 		_registeredSpawns.put(newId, newSpawn);
 		

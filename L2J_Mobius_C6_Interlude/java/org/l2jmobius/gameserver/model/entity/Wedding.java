@@ -95,7 +95,7 @@ public class Wedding
 		{
 			PreparedStatement statement;
 			
-			_Id = IdFactory.getInstance().getNextId();
+			_Id = IdFactory.getNextId();
 			
 			statement = con.prepareStatement("INSERT INTO mods_wedding (id, player1Id, player2Id, married, affianceDate, weddingDate) VALUES (?, ?, ?, ?, ?, ?)");
 			statement.setInt(1, _Id);

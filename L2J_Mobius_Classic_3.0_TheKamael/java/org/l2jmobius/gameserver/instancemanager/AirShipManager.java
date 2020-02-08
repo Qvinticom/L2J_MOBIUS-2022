@@ -123,7 +123,7 @@ public class AirShipManager
 		if (_airShips.containsKey(ownerId))
 		{
 			airShip = _airShips.get(ownerId);
-			airShip.refreshID();
+			airShip.refreshId();
 		}
 		else
 		{

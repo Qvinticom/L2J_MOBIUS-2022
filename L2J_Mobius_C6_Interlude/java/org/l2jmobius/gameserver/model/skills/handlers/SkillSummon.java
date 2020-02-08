@@ -210,11 +210,11 @@ public class SkillSummon extends Skill
 		}
 		if (summonTemplate.getType().equalsIgnoreCase("SiegeSummon"))
 		{
-			summon = new SiegeSummonInstance(IdFactory.getInstance().getNextId(), summonTemplate, activeChar, this);
+			summon = new SiegeSummonInstance(IdFactory.getNextId(), summonTemplate, activeChar, this);
 		}
 		else
 		{
-			summon = new SummonInstance(IdFactory.getInstance().getNextId(), summonTemplate, activeChar, this);
+			summon = new SummonInstance(IdFactory.getNextId(), summonTemplate, activeChar, this);
 		}
 		
 		summon.setName(summonTemplate.getName());

@@ -79,7 +79,7 @@ public class SiegeFlag implements ISkillHandler
 		try
 		{
 			// Spawn a new flag
-			final SiegeFlagInstance flag = new SiegeFlagInstance(player, IdFactory.getInstance().getNextId(), NpcTable.getInstance().getTemplate(35062));
+			final SiegeFlagInstance flag = new SiegeFlagInstance(player, IdFactory.getNextId(), NpcTable.getInstance().getTemplate(35062));
 			
 			if (skill.isAdvancedFlag())
 			{

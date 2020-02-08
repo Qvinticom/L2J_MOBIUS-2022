@@ -1363,7 +1363,7 @@ public class FortSiege
 		{
 			CommanderInstance commander;
 			
-			commander = new CommanderInstance(IdFactory.getInstance().getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
+			commander = new CommanderInstance(IdFactory.getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
 			commander.setCurrentHpMp(commander.getMaxHp(), commander.getMaxMp());
 			commander.setHeading(_sp.getLocation().getHeading());
 			commander.spawnMe(_sp.getLocation().getX(), _sp.getLocation().getY(), _sp.getLocation().getZ() + 50);
@@ -1387,7 +1387,7 @@ public class FortSiege
 		{
 			ArtefactInstance combatflag;
 			
-			combatflag = new ArtefactInstance(IdFactory.getInstance().getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
+			combatflag = new ArtefactInstance(IdFactory.getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
 			combatflag.setCurrentHpMp(combatflag.getMaxHp(), combatflag.getMaxMp());
 			combatflag.setHeading(_sp.getLocation().getHeading());
 			combatflag.spawnMe(_sp.getLocation().getX(), _sp.getLocation().getY(), _sp.getLocation().getZ() + 10);

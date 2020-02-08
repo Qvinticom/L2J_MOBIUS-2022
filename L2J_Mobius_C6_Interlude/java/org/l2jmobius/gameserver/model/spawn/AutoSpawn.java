@@ -159,7 +159,7 @@ public class AutoSpawn
 			}
 		}
 		
-		final int newId = IdFactory.getInstance().getNextId();
+		final int newId = IdFactory.getNextId();
 		newSpawn._objectId = newId;
 		
 		synchronized (_registeredSpawns)

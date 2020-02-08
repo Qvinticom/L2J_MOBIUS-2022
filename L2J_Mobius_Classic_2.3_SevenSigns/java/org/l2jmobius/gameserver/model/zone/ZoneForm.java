@@ -50,7 +50,7 @@ public abstract class ZoneForm
 	
 	protected final void dropDebugItem(int itemId, int num, int x, int y, int z)
 	{
-		final ItemInstance item = new ItemInstance(IdFactory.getInstance().getNextId(), itemId);
+		final ItemInstance item = new ItemInstance(IdFactory.getNextId(), itemId);
 		item.setCount(num);
 		item.spawnMe(x, y, z + 5);
 		ZoneManager.getInstance().getDebugItems().add(item);

@@ -52,7 +52,7 @@ public class ControllableAirShipInstance extends AirShipInstance
 		super(template);
 		setInstanceType(InstanceType.ControllableAirShipInstance);
 		_ownerId = ownerId;
-		_helmId = IdFactory.getInstance().getNextId(); // not forget to release !
+		_helmId = IdFactory.getNextId(); // not forget to release !
 	}
 	
 	@Override
@@ -285,11 +285,11 @@ public class ControllableAirShipInstance extends AirShipInstance
 	}
 	
 	@Override
-	public void refreshID()
+	public void refreshId()
 	{
-		super.refreshID();
-		IdFactory.getInstance().releaseId(_helmId);
-		_helmId = IdFactory.getInstance().getNextId();
+		super.refreshId();
+		IdFactory.releaseId(_helmId);
+		_helmId = IdFactory.getNextId();
 	}
 	
 	@Override

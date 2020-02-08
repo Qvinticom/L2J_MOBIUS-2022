@@ -73,7 +73,7 @@ public class ChristmasTree implements IItemHandler
 		try
 		{
 			final Spawn spawn = new Spawn(template1);
-			spawn.setId(IdFactory.getInstance().getNextId());
+			spawn.setId(IdFactory.getNextId());
 			spawn.setX(target.getX());
 			spawn.setY(target.getY());
 			spawn.setZ(target.getZ());

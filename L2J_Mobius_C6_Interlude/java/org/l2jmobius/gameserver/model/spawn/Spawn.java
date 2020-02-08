@@ -398,7 +398,7 @@ public class Spawn
 			// Get NpcInstance Init parameters and its generate an Identifier
 			final Object[] parameters =
 			{
-				IdFactory.getInstance().getNextId(),
+				IdFactory.getNextId(),
 				_template
 			};
 			
@@ -460,9 +460,6 @@ public class Spawn
 			newlocz = _locZ;
 		}
 		
-		// if (npc != null)
-		// {
-		
 		// Do not correct z of flying NPCs.
 		if (!npc.isFlying())
 		{
@@ -512,8 +509,6 @@ public class Spawn
 		
 		// Increase the current number of NpcInstance managed by this Spawn
 		_currentCount++;
-		
-		// }
 		
 		return npc;
 	}
@@ -572,7 +567,7 @@ public class Spawn
 	{
 		if (_doRespawn)
 		{
-			oldNpc.refreshID();
+			// oldNpc.refreshId();
 			initializeNpcInstance(oldNpc);
 		}
 	}

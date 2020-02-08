@@ -75,7 +75,7 @@ public class StaticObjectData implements IXmlReader
 			}
 			
 			// Create and spawn the StaticObject instance.
-			final StaticObjectInstance obj = new StaticObjectInstance(IdFactory.getInstance().getNextId());
+			final StaticObjectInstance obj = new StaticObjectInstance(IdFactory.getNextId());
 			obj.setType(set.getInt("type"));
 			obj.setStaticObjectId(set.getInt("id"));
 			obj.setXYZ(set.getInt("x"), set.getInt("y"), set.getInt("z"));

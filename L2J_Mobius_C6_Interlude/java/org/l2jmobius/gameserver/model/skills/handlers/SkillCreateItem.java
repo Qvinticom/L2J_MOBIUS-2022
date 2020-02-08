@@ -75,7 +75,7 @@ public class SkillCreateItem extends Skill
 	 */
 	public void giveItems(PlayerInstance player, int itemId, int count)
 	{
-		final ItemInstance item = new ItemInstance(IdFactory.getInstance().getNextId(), itemId);
+		final ItemInstance item = new ItemInstance(IdFactory.getNextId(), itemId);
 		item.setCount(count);
 		player.getInventory().addItem("Skill", item, player, player);
 		

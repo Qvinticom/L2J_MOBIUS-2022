@@ -225,7 +225,7 @@ public class MinionList
 		final NpcTemplate minionTemplate = NpcTable.getInstance().getTemplate(minionid);
 		
 		// Create and Init the Minion and generate its Identifier
-		final MinionInstance monster = new MinionInstance(IdFactory.getInstance().getNextId(), minionTemplate);
+		final MinionInstance monster = new MinionInstance(IdFactory.getNextId(), minionTemplate);
 		
 		// Set the Minion HP, MP and Heading
 		monster.setCurrentHpMp(monster.getMaxHp(), monster.getMaxMp());

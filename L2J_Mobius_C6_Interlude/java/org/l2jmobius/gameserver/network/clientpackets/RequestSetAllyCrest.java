@@ -80,7 +80,7 @@ public class RequestSetAllyCrest extends GameClientPacket
 			
 			final CrestCache crestCache = CrestCache.getInstance();
 			
-			final int newId = IdFactory.getInstance().getNextId();
+			final int newId = IdFactory.getNextId();
 			
 			if (!crestCache.saveAllyCrest(newId, _data))
 			{

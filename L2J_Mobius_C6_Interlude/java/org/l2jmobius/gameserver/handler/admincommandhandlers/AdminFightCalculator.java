@@ -216,9 +216,9 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			mid1 = Integer.parseInt(st.nextToken());
 			mid2 = Integer.parseInt(st.nextToken());
 			
-			npc1 = new MonsterInstance(IdFactory.getInstance().getNextId(), NpcTable.getInstance().getTemplate(mid1));
+			npc1 = new MonsterInstance(IdFactory.getNextId(), NpcTable.getInstance().getTemplate(mid1));
 			
-			npc2 = new MonsterInstance(IdFactory.getInstance().getNextId(), NpcTable.getInstance().getTemplate(mid2));
+			npc2 = new MonsterInstance(IdFactory.getNextId(), NpcTable.getInstance().getTemplate(mid2));
 		}
 		
 		int miss1 = 0;

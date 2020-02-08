@@ -123,7 +123,7 @@ public class CharacterCreate extends GameClientPacket
 				return;
 			}
 			
-			final int objectId = IdFactory.getInstance().getNextId();
+			final int objectId = IdFactory.getNextId();
 			newChar = PlayerInstance.create(objectId, template, getClient().getAccountName(), _name, _hairStyle, _hairColor, _face, _sex != 0);
 			
 			newChar.setCurrentHp(newChar.getMaxHp()); // L2Off like

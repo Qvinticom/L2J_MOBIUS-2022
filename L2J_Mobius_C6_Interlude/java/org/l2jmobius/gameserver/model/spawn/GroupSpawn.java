@@ -54,7 +54,7 @@ public class GroupSpawn extends Spawn
 			
 			final Object[] parameters =
 			{
-				IdFactory.getInstance().getNextId(),
+				IdFactory.getNextId(),
 				_template
 			};
 			final Object tmp = _constructor.newInstance(parameters);

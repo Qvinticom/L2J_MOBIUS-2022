@@ -123,7 +123,7 @@ public class BoatData implements IXmlReader
 					npcDat.set("baseMDef", 100);
 					
 					final CreatureTemplate template = new CreatureTemplate(npcDat);
-					final BoatInstance boat = new BoatInstance(IdFactory.getInstance().getNextId(), template);
+					final BoatInstance boat = new BoatInstance(IdFactory.getNextId(), template);
 					boat.getPosition().setHeading(set.getInt("heading"));
 					boat.setXYZ(set.getInt("spawnX"), set.getInt("spawnY"), set.getInt("spawnZ"));
 					boat.setPathA(set.getInt("pathIdA"), set.getInt("ticketA"), set.getInt("xTeleNoTicketA"), set.getInt("yTeleNoTicketA"), set.getInt("zTeleNoTicketA"), set.getString("announcerA"), set.getString("message10A"), set.getString("message5A"), set.getString("message1A"), set.getString("message0A"), set.getString("messageBeginA"), paths.get(set.getInt("pathIdA")));

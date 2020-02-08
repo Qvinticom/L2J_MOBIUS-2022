@@ -332,7 +332,7 @@ public class MonsterRace
 			{
 				final NpcTemplate template = NpcTable.getInstance().getTemplate(_npcTemplates.get(i));
 				_constructor = Class.forName("org.l2jmobius.gameserver.model.actor.instance." + template.getType() + "Instance").getConstructors()[0];
-				final int objectId = IdFactory.getInstance().getNextId();
+				final int objectId = IdFactory.getNextId();
 				_monsters[i] = (NpcInstance) _constructor.newInstance(objectId, template);
 			}
 			catch (Exception e)

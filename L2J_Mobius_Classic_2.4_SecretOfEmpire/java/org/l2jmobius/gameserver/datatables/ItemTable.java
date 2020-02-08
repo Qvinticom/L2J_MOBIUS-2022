@@ -213,7 +213,7 @@ public class ItemTable
 	public ItemInstance createItem(String process, int itemId, long count, Creature actor, Object reference)
 	{
 		// Create and Init the ItemInstance corresponding to the Item Identifier
-		final ItemInstance item = new ItemInstance(IdFactory.getInstance().getNextId(), itemId);
+		final ItemInstance item = new ItemInstance(IdFactory.getNextId(), itemId);
 		
 		if (process.equalsIgnoreCase("loot") && !Config.AUTO_LOOT_ITEM_IDS.contains(itemId))
 		{
@@ -331,7 +331,7 @@ public class ItemTable
 			item.setLastChange(ItemInstance.REMOVED);
 			
 			World.getInstance().removeObject(item);
-			IdFactory.getInstance().releaseId(item.getObjectId());
+			IdFactory.releaseId(item.getObjectId());
 			
 			if (Config.LOG_ITEMS)
 			{

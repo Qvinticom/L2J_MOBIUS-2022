@@ -44,7 +44,7 @@ public class FenceInstance extends WorldObject
 	
 	public FenceInstance(int x, int y, String name, int width, int length, int height, FenceState state)
 	{
-		super(IdFactory.getInstance().getNextId());
+		super(IdFactory.getNextId());
 		
 		_xMin = x - (width / 2);
 		_xMax = x + (width / 2);
@@ -62,7 +62,7 @@ public class FenceInstance extends WorldObject
 			_heightFences = new int[height - 1];
 			for (int i = 0; i < _heightFences.length; i++)
 			{
-				_heightFences[i] = IdFactory.getInstance().getNextId();
+				_heightFences[i] = IdFactory.getNextId();
 			}
 		}
 	}

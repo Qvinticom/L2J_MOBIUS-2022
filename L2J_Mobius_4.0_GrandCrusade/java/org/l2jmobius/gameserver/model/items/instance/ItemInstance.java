@@ -259,7 +259,7 @@ public class ItemInstance extends WorldObject
 	 */
 	public ItemInstance(int itemId)
 	{
-		this(IdFactory.getInstance().getNextId(), itemId);
+		this(IdFactory.getNextId(), itemId);
 	}
 	
 	/**

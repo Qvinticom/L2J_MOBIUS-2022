@@ -36,7 +36,6 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.enums.IdFactoryType;
 import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.util.ClassMasterSettings;
 import org.l2jmobius.commons.util.L2Properties;
@@ -78,7 +77,6 @@ public class Config
 	// protected
 	private static final String DAEMONS_CONFIG_FILE = "./config/protected/Daemons.ini";
 	private static final String PROTECT_FLOOD_CONFIG_FILE = "./config/protected/Flood.ini";
-	private static final String ID_CONFIG_FILE = "./config/protected/IdFactory.ini";
 	private static final String PROTECT_OTHER_CONFIG_FILE = "./config/protected/Other.ini";
 	public static final String TELNET_CONFIG_FILE = "./config/protected/Telnet.ini";
 	// events
@@ -215,9 +213,6 @@ public class Config
 	public static boolean RESERVE_HOST_ON_LOGIN = false;
 	
 	public static boolean IS_TELNET_ENABLED;
-	
-	public static IdFactoryType IDFACTORY_TYPE;
-	public static boolean BAD_ID_CHECKING;
 	
 	public static boolean JAIL_IS_PVP;
 	public static boolean JAIL_DISABLE_CHAT;
@@ -1280,25 +1275,6 @@ public class Config
 			}
 		}
 		
-	}
-	
-	public static void loadIdFactoryConfig()
-	{
-		try
-		{
-			final Properties idSettings = new Properties();
-			final InputStream is = new FileInputStream(new File(ID_CONFIG_FILE));
-			idSettings.load(is);
-			is.close();
-			
-			IDFACTORY_TYPE = IdFactoryType.valueOf(idSettings.getProperty("IDFactory", "BITSET"));
-			BAD_ID_CHECKING = Boolean.parseBoolean(idSettings.getProperty("BadIdChecking", "true"));
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-			throw new Error("Failed to Load " + ID_CONFIG_FILE + " File.");
-		}
 	}
 	
 	public static void loadRatesConfig()
@@ -3767,9 +3743,6 @@ public class Config
 			
 			// Load network
 			loadServerConfig();
-			
-			// Load system
-			loadIdFactoryConfig();
 			
 			// Head
 			loadRatesConfig();

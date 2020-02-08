@@ -532,7 +532,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	{
 		if (_doRespawn)
 		{
-			oldNpc.refreshID();
+			// oldNpc.refreshID();
 			initializeNpcInstance(oldNpc);
 			
 			// Register NPC back to instance world.

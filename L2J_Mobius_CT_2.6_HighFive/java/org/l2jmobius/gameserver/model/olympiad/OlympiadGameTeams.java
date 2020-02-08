@@ -75,7 +75,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 			}
 			else
 			{
-				_teamOne[i] = new Participant(IdFactory.getInstance().getNextId(), 1);
+				_teamOne[i] = new Participant(IdFactory.getNextId(), 1);
 			}
 			
 			if (i < _teamTwoSize)
@@ -89,7 +89,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 			}
 			else
 			{
-				_teamTwo[i] = new Participant(IdFactory.getInstance().getNextId(), 2);
+				_teamTwo[i] = new Participant(IdFactory.getNextId(), 2);
 			}
 		}
 	}
@@ -444,7 +444,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 			}
 			else
 			{
-				IdFactory.getInstance().releaseId(_teamOne[i].getObjectId());
+				IdFactory.releaseId(_teamOne[i].getObjectId());
 			}
 			
 			if (i < _teamTwoSize)
@@ -453,7 +453,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 			}
 			else
 			{
-				IdFactory.getInstance().releaseId(_teamTwo[i].getObjectId());
+				IdFactory.releaseId(_teamTwo[i].getObjectId());
 			}
 			
 			_teamOne[i] = null;
