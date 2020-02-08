@@ -553,6 +553,7 @@ public class Config
 	public static boolean LOG_ITEMS;
 	
 	public static boolean LAZY_CACHE;
+	public static boolean CHECK_HTML_ENCODING;
 	
 	public static boolean IS_CRAFTING_ENABLED;
 	public static int DWARF_RECIPE_LIMIT;
@@ -1384,6 +1385,7 @@ public class Config
 			LOG_ITEMS = Boolean.parseBoolean(generalSettings.getProperty("LogItems", "false"));
 			
 			LAZY_CACHE = Boolean.parseBoolean(generalSettings.getProperty("LazyCache", "false"));
+			CHECK_HTML_ENCODING = Boolean.parseBoolean(generalSettings.getProperty("CheckHtmlEncoding", "true"));
 			
 			REMOVE_CASTLE_CIRCLETS = Boolean.parseBoolean(generalSettings.getProperty("RemoveCastleCirclets", "true"));
 			ALT_GAME_VIEWNPC = Boolean.parseBoolean(generalSettings.getProperty("AltGameViewNpc", "false"));

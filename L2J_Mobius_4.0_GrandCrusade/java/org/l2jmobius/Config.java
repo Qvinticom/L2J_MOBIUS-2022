@@ -467,6 +467,7 @@ public class Config
 	public static boolean MULTIPLE_ITEM_DROP;
 	public static boolean FORCE_INVENTORY_UPDATE;
 	public static boolean LAZY_CACHE;
+	public static boolean CHECK_HTML_ENCODING;
 	public static boolean CACHE_CHAR_NAMES;
 	public static int MIN_NPC_ANIMATION;
 	public static int MAX_NPC_ANIMATION;
@@ -2010,6 +2011,7 @@ public class Config
 			MULTIPLE_ITEM_DROP = General.getBoolean("MultipleItemDrop", true);
 			FORCE_INVENTORY_UPDATE = General.getBoolean("ForceInventoryUpdate", false);
 			LAZY_CACHE = General.getBoolean("LazyCache", true);
+			CHECK_HTML_ENCODING = General.getBoolean("CheckHtmlEncoding", true);
 			CACHE_CHAR_NAMES = General.getBoolean("CacheCharNames", true);
 			MIN_NPC_ANIMATION = General.getInt("MinNpcAnimation", 5);
 			MAX_NPC_ANIMATION = General.getInt("MaxNpcAnimation", 60);
@@ -3248,6 +3250,10 @@ public class Config
 			
 			MULTILANG_DEFAULT = MultilingualSupport.getString("MultiLangDefault", "en").toLowerCase();
 			MULTILANG_ENABLE = MultilingualSupport.getBoolean("MultiLangEnable", false);
+			if (MULTILANG_ENABLE)
+			{
+				CHECK_HTML_ENCODING = false;
+			}
 			final String[] allowed = MultilingualSupport.getString("MultiLangAllowed", MULTILANG_DEFAULT).split(";");
 			MULTILANG_ALLOWED = new ArrayList<>(allowed.length);
 			for (String lang : allowed)

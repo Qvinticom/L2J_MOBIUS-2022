@@ -115,6 +115,7 @@ public class HtmCache
 			return null;
 		}
 		
+		String filePath = null;
 		String content = null;
 		try (FileInputStream fis = new FileInputStream(file);
 			BufferedInputStream bis = new BufferedInputStream(fis))
@@ -126,7 +127,13 @@ public class HtmCache
 			content = new String(raw, StandardCharsets.UTF_8);
 			content = content.replaceAll("(?s)<!--.*?-->", ""); // Remove html comments
 			
-			final String oldContent = HTML_CACHE.put(file.toURI().getPath().substring(Config.DATAPACK_ROOT.toURI().getPath().length()), content);
+			filePath = file.toURI().getPath().substring(Config.DATAPACK_ROOT.toURI().getPath().length());
+			if (Config.CHECK_HTML_ENCODING && !filePath.startsWith("data/lang") && !StandardCharsets.US_ASCII.newEncoder().canEncode(content))
+			{
+				LOGGER.warning("HTML encoding check: File " + filePath + " contains non ASCII content.");
+			}
+			
+			final String oldContent = HTML_CACHE.put(filePath, content);
 			if (oldContent == null)
 			{
 				_bytesBuffLen += bytes;

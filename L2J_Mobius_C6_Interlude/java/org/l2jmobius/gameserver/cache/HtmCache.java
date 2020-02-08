@@ -140,6 +140,11 @@ public class HtmCache
 				final String relpath = Util.getRelativePath(Config.DATAPACK_ROOT, file);
 				final int hashcode = relpath.hashCode();
 				
+				if (Config.CHECK_HTML_ENCODING && !StandardCharsets.US_ASCII.newEncoder().canEncode(content))
+				{
+					LOGGER.warning("HTML encoding check: File " + relpath + " contains non ASCII content.");
+				}
+				
 				final String oldContent = _cache.get(hashcode);
 				
 				if (oldContent == null)
