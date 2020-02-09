@@ -81,7 +81,6 @@ import org.l2jmobius.gameserver.model.actor.instance.RiftInvaderInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
 import org.l2jmobius.gameserver.model.actor.knownlist.CreatureKnownList;
-import org.l2jmobius.gameserver.model.actor.knownlist.WorldObjectKnownList.KnownListAsynchronousUpdateTask;
 import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import org.l2jmobius.gameserver.model.actor.status.CreatureStatus;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
@@ -5638,7 +5637,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		if (updateKnownObjects)
 		{
-			ThreadPool.execute(new KnownListAsynchronousUpdateTask(this));
+			getKnownList().updateKnownObjects();
 		}
 	}
 	

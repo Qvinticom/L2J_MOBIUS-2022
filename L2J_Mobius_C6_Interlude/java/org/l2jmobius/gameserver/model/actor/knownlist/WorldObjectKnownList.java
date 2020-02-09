@@ -19,10 +19,11 @@ package org.l2jmobius.gameserver.model.actor.knownlist;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.util.Util;
@@ -116,36 +117,56 @@ public class WorldObjectKnownList
 	
 	private final void findCloseObjects()
 	{
-		if (_activeObject instanceof Playable)
+		if (_activeObject == null)
 		{
+			return;
+		}
+		
+		if (_activeObject.isPlayable())
+		{
+			int delay = 0;
+			
 			// Go through all visible WorldObject near the Creature
 			for (WorldObject object : World.getInstance().getVisibleObjects(_activeObject))
 			{
-				if (object == null)
+				// Delay is broken down to 100ms intervals.
+				// With the random time added it gives at least 50ms between tasks.
+				if (delay >= 5000)
 				{
-					continue;
+					delay = 0;
 				}
+				delay += 100;
 				
-				// Try to add object to active object's known objects
-				// PlayableInstance sees everything
-				addKnownObject(object);
-				
-				// Try to add active object to object's known objects
-				// Only if object is a Creature and active object is a PlayableInstance
-				if (object instanceof Creature)
+				// Send packets asynchronously. (Obviously heavier on CPU, but significantly reduces network spikes.)
+				// On retail there is a similar, if not greater, delay as well.
+				ThreadPool.schedule(() ->
 				{
-					object.getKnownList().addKnownObject(_activeObject);
-				}
+					if (object == null)
+					{
+						return;
+					}
+					
+					// Try to add object to active object's known objects
+					// PlayableInstance sees everything
+					addKnownObject(object);
+					
+					// Try to add active object to object's known objects
+					// Only if object is a Creature and active object is a PlayableInstance
+					if (object instanceof Creature)
+					{
+						object.getKnownList().addKnownObject(_activeObject);
+					}
+				}, delay + Rnd.get(50)); // Add additional 0-49ms in case of overlapping tasks on heavy load.
 			}
 		}
-		else if (_activeObject != null)
+		else
 		{
 			// Go through all visible WorldObject near the Creature
 			for (WorldObject playable : World.getInstance().getVisiblePlayers(_activeObject))
 			{
 				if (playable == null)
 				{
-					continue;
+					return;
 				}
 				
 				// Try to add object to active object's known objects
@@ -166,23 +187,20 @@ public class WorldObjectKnownList
 				continue;
 			}
 			
-			// Remove all invisible object
-			// Remove all too far object
+			// Remove all invisible objects
+			// Remove all too far objects
 			if (!object.isVisible() || !Util.checkIfInRange(getDistanceToForgetObject(object), _activeObject, object, true))
 			{
 				if ((object instanceof BoatInstance) && (_activeObject instanceof PlayerInstance))
 				{
 					if (((BoatInstance) object).getVehicleDeparture() == null)
 					{
-						//
+						continue;
 					}
-					else if (((PlayerInstance) _activeObject).isInBoat())
+					
+					if (((PlayerInstance) _activeObject).isInBoat())
 					{
-						if (((PlayerInstance) _activeObject).getBoat() == object)
-						{
-							//
-						}
-						else
+						if (((PlayerInstance) _activeObject).getBoat() != object)
 						{
 							removeKnownObject(object);
 						}
@@ -221,24 +239,5 @@ public class WorldObjectKnownList
 	public Map<Integer, WorldObject> getKnownObjects()
 	{
 		return _knownObjects;
-	}
-	
-	public static class KnownListAsynchronousUpdateTask implements Runnable
-	{
-		private final WorldObject _obj;
-		
-		public KnownListAsynchronousUpdateTask(WorldObject obj)
-		{
-			_obj = obj;
-		}
-		
-		@Override
-		public void run()
-		{
-			if (_obj != null)
-			{
-				_obj.getKnownList().updateKnownObjects();
-			}
-		}
 	}
 }

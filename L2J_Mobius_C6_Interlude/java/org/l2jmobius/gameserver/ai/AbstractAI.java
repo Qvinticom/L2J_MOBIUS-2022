@@ -944,5 +944,4 @@ abstract class AbstractAI implements Ctrl
 	{
 		return _intention;
 	}
-	
 }
