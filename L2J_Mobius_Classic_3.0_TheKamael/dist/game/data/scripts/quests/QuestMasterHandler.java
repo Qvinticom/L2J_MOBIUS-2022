@@ -40,6 +40,7 @@ import quests.Q00500_BrothersBoundInChains.Q00500_BrothersBoundInChains;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
 import quests.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss;
 import quests.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss;
+import quests.Q10673_SagaOfLegend.Q10673_SagaOfLegend;
 import quests.Q10866_PunitiveOperationOnTheDevilIsle.Q10866_PunitiveOperationOnTheDevilIsle;
 import quests.Q10961_EffectiveTraining.Q10961_EffectiveTraining;
 import quests.Q10962_NewHorizons.Q10962_NewHorizons;
@@ -112,6 +113,7 @@ public class QuestMasterHandler
 		Q00914_RequestFromTheRedLibraGuildLv5.class, // TODO: Not done.
 		Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.class,
 		Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.class,
+		Q10673_SagaOfLegend.class,
 		Q10861_MonsterArenaTheBirthOfAWarrior.class, // TODO: Not done.
 		Q10862_MonsterArenaChallenge10Battles.class, // TODO: Not done.
 		Q10863_MonsterArenaNewChallenge15Battles.class, // TODO: Not done.
