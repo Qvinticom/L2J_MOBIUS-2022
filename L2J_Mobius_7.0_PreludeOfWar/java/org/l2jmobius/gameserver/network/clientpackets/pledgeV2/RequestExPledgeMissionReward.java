@@ -18,10 +18,13 @@ package org.l2jmobius.gameserver.network.clientpackets.pledgeV2;
 
 import java.util.Collection;
 
+import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.impl.DailyMissionData;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.request.RewardRequest;
+import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.pledgeV2.ExPledgeMissionInfo;
@@ -50,14 +53,26 @@ public class RequestExPledgeMissionReward implements IClientIncomingPacket
 			return;
 		}
 		
-		final Collection<DailyMissionDataHolder> reward = DailyMissionData.getInstance().getDailyMissionData(_id);
-		if ((reward == null) || reward.isEmpty())
+		if (player.hasRequest(RewardRequest.class))
 		{
+			LOGGER.warning("Kicked " + player + " for spamming " + getClass().getSimpleName());
+			Disconnection.of(player).defaultSequence(true);
 			return;
 		}
 		
-		reward.stream().filter(o -> o.isDisplayable(player)).forEach(r -> r.requestReward(player));
-		client.sendPacket(new ExPledgeMissionRewardCount(player));
-		client.sendPacket(new ExPledgeMissionInfo(player));
+		player.addRequest(new RewardRequest(player));
+		
+		final Collection<DailyMissionDataHolder> reward = DailyMissionData.getInstance().getDailyMissionData(_id);
+		if ((reward != null) && !reward.isEmpty())
+		{
+			reward.stream().filter(o -> o.isDisplayable(player)).forEach(r -> r.requestReward(player));
+			client.sendPacket(new ExPledgeMissionRewardCount(player));
+			client.sendPacket(new ExPledgeMissionInfo(player));
+		}
+		
+		ThreadPool.schedule(() ->
+		{
+			player.removeRequest(RewardRequest.class);
+		}, 50);
 	}
 }
