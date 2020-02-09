@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.actor.knownlist;
 
+import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -48,6 +50,8 @@ import org.l2jmobius.gameserver.network.serverpackets.VehicleInfo;
 
 public class PlayerKnownList extends PlayableKnownList
 {
+	private int _packetSendDelay = 0;
+	
 	public PlayerKnownList(PlayerInstance player)
 	{
 		super(player);
@@ -103,130 +107,142 @@ public class PlayerKnownList extends PlayableKnownList
 			return false;
 		}
 		
-		if (object.getPoly().isMorphed() && object.getPoly().getPolyType().equals("item"))
+		// Delay is broken down to 100ms intervals.
+		// With the random time added it gives at least 50ms between tasks.
+		if (_packetSendDelay > 3000)
 		{
-			activeChar.sendPacket(new SpawnItemPoly(object));
+			_packetSendDelay = 0;
 		}
-		else
+		_packetSendDelay += 100;
+		
+		// Send packets asynchronously. (Obviously heavier on CPU, but significantly reduces network spikes.)
+		// On retail there is a similar, if not greater, delay as well.
+		ThreadPool.schedule(() ->
 		{
-			if (object instanceof ItemInstance)
+			if (object.getPoly().isMorphed() && object.getPoly().getPolyType().equals("item"))
 			{
-				if (dropper != null)
-				{
-					activeChar.sendPacket(new DropItem((ItemInstance) object, dropper.getObjectId()));
-				}
-				else
-				{
-					activeChar.sendPacket(new SpawnItem((ItemInstance) object));
-				}
+				activeChar.sendPacket(new SpawnItemPoly(object));
 			}
-			else if (object instanceof DoorInstance)
+			else
 			{
-				if (((DoorInstance) object).getCastle() != null)
+				if (object instanceof ItemInstance)
 				{
-					activeChar.sendPacket(new DoorInfo((DoorInstance) object, true));
-				}
-				else
-				{
-					activeChar.sendPacket(new DoorInfo((DoorInstance) object, false));
-				}
-				activeChar.sendPacket(new DoorStatusUpdate((DoorInstance) object));
-			}
-			else if (object instanceof FenceInstance)
-			{
-				((FenceInstance) object).sendInfo(activeChar);
-			}
-			else if (object instanceof BoatInstance)
-			{
-				if (!activeChar.isInBoat() && (object != activeChar.getBoat()))
-				{
-					activeChar.sendPacket(new VehicleInfo((BoatInstance) object));
-					((BoatInstance) object).sendVehicleDeparture(activeChar);
-				}
-			}
-			else if (object instanceof StaticObjectInstance)
-			{
-				activeChar.sendPacket(new StaticObject((StaticObjectInstance) object));
-			}
-			else if (object instanceof NpcInstance)
-			{
-				activeChar.sendPacket(new NpcInfo((NpcInstance) object, activeChar));
-			}
-			else if (object instanceof Summon)
-			{
-				final Summon summon = (Summon) object;
-				
-				// Check if the PlayerInstance is the owner of the Pet
-				if (activeChar.equals(summon.getOwner()))
-				{
-					activeChar.sendPacket(new PetInfo(summon));
-					// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
-					summon.updateEffectIcons(true);
-					
-					if (summon instanceof PetInstance)
+					if (dropper != null)
 					{
-						activeChar.sendPacket(new PetItemList((PetInstance) summon));
+						activeChar.sendPacket(new DropItem((ItemInstance) object, dropper.getObjectId()));
+					}
+					else
+					{
+						activeChar.sendPacket(new SpawnItem((ItemInstance) object));
 					}
 				}
-				else
+				else if (object instanceof DoorInstance)
 				{
-					activeChar.sendPacket(new NpcInfo(summon, activeChar));
-				}
-			}
-			else if (object instanceof PlayerInstance)
-			{
-				final PlayerInstance otherPlayer = (PlayerInstance) object;
-				if (otherPlayer.isInBoat())
-				{
-					otherPlayer.getPosition().setWorldPosition(otherPlayer.getBoat().getLocation());
-					activeChar.sendPacket(new CharInfo(otherPlayer));
-					
-					final int relation = otherPlayer.getRelation(activeChar);
-					if ((otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != relation))
+					if (((DoorInstance) object).getCastle() != null)
 					{
-						activeChar.sendPacket(new RelationChanged(otherPlayer, relation, activeChar.isAutoAttackable(otherPlayer)));
+						activeChar.sendPacket(new DoorInfo((DoorInstance) object, true));
+					}
+					else
+					{
+						activeChar.sendPacket(new DoorInfo((DoorInstance) object, false));
+					}
+					activeChar.sendPacket(new DoorStatusUpdate((DoorInstance) object));
+				}
+				else if (object instanceof FenceInstance)
+				{
+					((FenceInstance) object).sendInfo(activeChar);
+				}
+				else if (object instanceof BoatInstance)
+				{
+					if (!activeChar.isInBoat() && (object != activeChar.getBoat()))
+					{
+						activeChar.sendPacket(new VehicleInfo((BoatInstance) object));
+						((BoatInstance) object).sendVehicleDeparture(activeChar);
+					}
+				}
+				else if (object instanceof StaticObjectInstance)
+				{
+					activeChar.sendPacket(new StaticObject((StaticObjectInstance) object));
+				}
+				else if (object instanceof NpcInstance)
+				{
+					activeChar.sendPacket(new NpcInfo((NpcInstance) object, activeChar));
+				}
+				else if (object instanceof Summon)
+				{
+					final Summon summon = (Summon) object;
+					
+					// Check if the PlayerInstance is the owner of the Pet
+					if (activeChar.equals(summon.getOwner()))
+					{
+						activeChar.sendPacket(new PetInfo(summon));
+						// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
+						summon.updateEffectIcons(true);
+						
+						if (summon instanceof PetInstance)
+						{
+							activeChar.sendPacket(new PetItemList((PetInstance) summon));
+						}
+					}
+					else
+					{
+						activeChar.sendPacket(new NpcInfo(summon, activeChar));
+					}
+				}
+				else if (object instanceof PlayerInstance)
+				{
+					final PlayerInstance otherPlayer = (PlayerInstance) object;
+					if (otherPlayer.isInBoat())
+					{
+						otherPlayer.getPosition().setWorldPosition(otherPlayer.getBoat().getLocation());
+						activeChar.sendPacket(new CharInfo(otherPlayer));
+						
+						final int relation = otherPlayer.getRelation(activeChar);
+						if ((otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != relation))
+						{
+							activeChar.sendPacket(new RelationChanged(otherPlayer, relation, activeChar.isAutoAttackable(otherPlayer)));
+						}
+						
+						activeChar.sendPacket(new GetOnVehicle(otherPlayer, otherPlayer.getBoat(), otherPlayer.getBoatPosition().getX(), otherPlayer.getBoatPosition().getY(), otherPlayer.getBoatPosition().getZ()));
+					}
+					else
+					{
+						activeChar.sendPacket(new CharInfo(otherPlayer));
+						
+						final int relation = otherPlayer.getRelation(activeChar);
+						if ((otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != relation))
+						{
+							activeChar.sendPacket(new RelationChanged(otherPlayer, relation, activeChar.isAutoAttackable(otherPlayer)));
+						}
 					}
 					
-					activeChar.sendPacket(new GetOnVehicle(otherPlayer, otherPlayer.getBoat(), otherPlayer.getBoatPosition().getX(), otherPlayer.getBoatPosition().getY(), otherPlayer.getBoatPosition().getZ()));
-					
-				}
-				else
-				{
-					activeChar.sendPacket(new CharInfo(otherPlayer));
-					
-					final int relation = otherPlayer.getRelation(activeChar);
-					if ((otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != relation))
+					if (otherPlayer.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_SELL)
 					{
-						activeChar.sendPacket(new RelationChanged(otherPlayer, relation, activeChar.isAutoAttackable(otherPlayer)));
+						activeChar.sendPacket(new PrivateStoreMsgSell(otherPlayer));
+					}
+					else if (otherPlayer.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_BUY)
+					{
+						activeChar.sendPacket(new PrivateStoreMsgBuy(otherPlayer));
+					}
+					else if (otherPlayer.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_MANUFACTURE)
+					{
+						activeChar.sendPacket(new RecipeShopMsg(otherPlayer));
 					}
 				}
 				
-				if (otherPlayer.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_SELL)
+				if (object instanceof Creature)
 				{
-					activeChar.sendPacket(new PrivateStoreMsgSell(otherPlayer));
-				}
-				else if (otherPlayer.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_BUY)
-				{
-					activeChar.sendPacket(new PrivateStoreMsgBuy(otherPlayer));
-				}
-				else if (otherPlayer.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_MANUFACTURE)
-				{
-					activeChar.sendPacket(new RecipeShopMsg(otherPlayer));
-				}
-			}
-			
-			if (object instanceof Creature)
-			{
-				// Update the state of the Creature object client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance
-				final Creature obj = (Creature) object;
-				
-				final CreatureAI objAi = obj.getAI();
-				if (objAi != null)
-				{
-					objAi.describeStateToPlayer(activeChar);
+					// Update the state of the Creature object client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance
+					final Creature obj = (Creature) object;
+					
+					final CreatureAI objAi = obj.getAI();
+					if (objAi != null)
+					{
+						objAi.describeStateToPlayer(activeChar);
+					}
 				}
 			}
-		}
+		}, _packetSendDelay + Rnd.get(50)); // Add additional 0-49ms in case of overlapping tasks on heavy load.
 		
 		return true;
 	}

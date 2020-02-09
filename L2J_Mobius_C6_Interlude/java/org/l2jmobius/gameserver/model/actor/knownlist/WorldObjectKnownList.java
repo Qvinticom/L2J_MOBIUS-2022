@@ -19,8 +19,6 @@ package org.l2jmobius.gameserver.model.actor.knownlist;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -124,39 +122,24 @@ public class WorldObjectKnownList
 		
 		if (_activeObject.isPlayable())
 		{
-			int delay = 0;
-			
 			// Go through all visible WorldObject near the Creature
 			for (WorldObject object : World.getInstance().getVisibleObjects(_activeObject))
 			{
-				// Delay is broken down to 100ms intervals.
-				// With the random time added it gives at least 50ms between tasks.
-				if (delay >= 5000)
+				if (object == null)
 				{
-					delay = 0;
+					continue;
 				}
-				delay += 100;
 				
-				// Send packets asynchronously. (Obviously heavier on CPU, but significantly reduces network spikes.)
-				// On retail there is a similar, if not greater, delay as well.
-				ThreadPool.schedule(() ->
+				// Try to add object to active object's known objects
+				// PlayableInstance sees everything
+				addKnownObject(object);
+				
+				// Try to add active object to object's known objects
+				// Only if object is a Creature and active object is a PlayableInstance
+				if (object instanceof Creature)
 				{
-					if (object == null)
-					{
-						return;
-					}
-					
-					// Try to add object to active object's known objects
-					// PlayableInstance sees everything
-					addKnownObject(object);
-					
-					// Try to add active object to object's known objects
-					// Only if object is a Creature and active object is a PlayableInstance
-					if (object instanceof Creature)
-					{
-						object.getKnownList().addKnownObject(_activeObject);
-					}
-				}, delay + Rnd.get(50)); // Add additional 0-49ms in case of overlapping tasks on heavy load.
+					object.getKnownList().addKnownObject(_activeObject);
+				}
 			}
 		}
 		else
