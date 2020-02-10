@@ -3,7 +3,7 @@ Client Mirror 1: https://drive.google.com/uc?id=1rXtgV9l67b5lBeK_wmCKITE1DQ7EgEJ
 Client Mirror 2: https://drive.google.com/uc?id=1IugZjcpS5n9_EJPLCecB3H_tLmVlqo2L&export=download
 System: https://mega.nz/#!98likSra!vP3uaDwJs8oiY5q60UzBSXAbgNELWX_dycWb98Mz96U
 
-Geodata: https://www.mediafire.com/file/bnarpu5rbkkk4m4/L2J_Mobius_7.0_PreludeOfWar_Geodata.zip
+Geodata: https://www.mediafire.com/file/436qd4e73wvvzyl/L2J_Mobius_7.0_PreludeOfWar_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
 
