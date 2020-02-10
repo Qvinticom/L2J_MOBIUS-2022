@@ -101,7 +101,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			{
 				case 2: // Ancient Pirates' Tomb
 				{
-					player.teleToLocation(13181, -78651, -5977);
+					player.teleToLocation(17613, -76862, -6265);
 					break;
 				}
 			}
