@@ -135,7 +135,7 @@ public class PlayerStat extends PlayableStat
 		}
 		
 		// Send a Server->Client System Message to the PlayerInstance
-		final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_EARNED_S1_EXP_AND_S2_SP);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_EXPERIENCE_AND_S2_SP);
 		sm.addNumber((int) addToExp);
 		sm.addNumber(addToSp);
 		getActiveChar().sendPacket(sm);
@@ -152,11 +152,11 @@ public class PlayerStat extends PlayableStat
 		}
 		
 		// Send a Server->Client System Message to the PlayerInstance
-		SystemMessage sm = new SystemMessage(SystemMessageId.EXP_DECREASED_BY_S1);
+		SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_EXPERIENCE_HAS_DECREASED_BY_S1);
 		sm.addNumber((int) addToExp);
 		getActiveChar().sendPacket(sm);
 		
-		sm = new SystemMessage(SystemMessageId.SP_DECREASED_S1);
+		sm = new SystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
 		sm.addNumber(addToSp);
 		getActiveChar().sendPacket(sm);
 		
@@ -215,7 +215,7 @@ public class PlayerStat extends PlayableStat
 			
 			getActiveChar().setCurrentCp(getMaxCp());
 			getActiveChar().broadcastPacket(new SocialAction(getActiveChar().getObjectId(), 15));
-			getActiveChar().sendPacket(SystemMessageId.YOU_INCREASED_YOUR_LEVEL);
+			getActiveChar().sendPacket(SystemMessageId.YOUR_LEVEL_HAS_INCREASED);
 		}
 		
 		if (getActiveChar().isInFunEvent())

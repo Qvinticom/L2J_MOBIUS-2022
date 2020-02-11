@@ -101,7 +101,7 @@ public class Pdam implements ISkillHandler
 			// Calculate skill evasion
 			if (Formulas.calcPhysicalSkillEvasion(target, skill))
 			{
-				creature.sendPacket(new SystemMessage(SystemMessageId.ATTACK_FAILED));
+				creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_ATTACK_HAS_FAILED));
 				continue;
 			}
 			
@@ -142,7 +142,7 @@ public class Pdam implements ISkillHandler
 				}
 				else
 				{
-					final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_GAVE_YOU_S2_DMG);
+					final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_HIT_YOU_FOR_S2_DAMAGE);
 					smsg.addString(target.getName());
 					smsg.addNumber(damage);
 					creature.sendPacket(smsg);
@@ -155,7 +155,7 @@ public class Pdam implements ISkillHandler
 						creature.stopSkillEffects(skill.getId());
 						
 						skill.getEffects(null, creature, ss, sps, bss);
-						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
 						sm.addSkillName(skill.getId());
 						creature.sendPacket(sm);
 					}
@@ -163,13 +163,13 @@ public class Pdam implements ISkillHandler
 					{
 						// Like L2OFF must remove the first effect if the second effect lands
 						skill.getEffects(creature, target, ss, sps, bss);
-						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
 						sm.addSkillName(skill.getId());
 						target.sendPacket(sm);
 					}
 					else
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
 						creature.sendPacket(sm);
@@ -218,7 +218,7 @@ public class Pdam implements ISkillHandler
 						}
 						// Lethal Strike was succefful!
 						creature.sendPacket(new SystemMessage(SystemMessageId.LETHAL_STRIKE));
-						creature.sendPacket(new SystemMessage(SystemMessageId.LETHAL_STRIKE_SUCCESSFUL));
+						creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL));
 					}
 				}
 				else if (skill.getDmgDirectlyToHP() || !(creature instanceof Playable)) // Make damage directly to HP
@@ -254,7 +254,7 @@ public class Pdam implements ISkillHandler
 								player.setCurrentHp(player.getCurrentHp() - damage);
 							}
 						}
-						final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_GAVE_YOU_S2_DMG);
+						final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_HIT_YOU_FOR_S2_DAMAGE);
 						smsg.addString(creature.getName());
 						smsg.addNumber(damage);
 						player.sendPacket(smsg);
@@ -292,7 +292,7 @@ public class Pdam implements ISkillHandler
 			}
 			else // No - damage
 			{
-				creature.sendPacket(new SystemMessage(SystemMessageId.ATTACK_FAILED));
+				creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_ATTACK_HAS_FAILED));
 			}
 			
 			if ((skill.getId() == 345) || (skill.getId() == 346)) // Sonic Rage or Raging Force
@@ -307,13 +307,13 @@ public class Pdam implements ISkillHandler
 						effect.addNumCharges(1);
 						
 						creature.sendPacket(new EtcStatusUpdate((PlayerInstance) creature));
-						final SystemMessage sm = new SystemMessage(SystemMessageId.FORCE_INCREASED_TO_S1);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FORCE_HAS_INCREASED_TO_S1_LEVEL);
 						sm.addNumber(effectcharge);
 						creature.sendPacket(sm);
 					}
 					else
 					{
-						creature.sendPacket(new SystemMessage(SystemMessageId.FORCE_MAXLEVEL_REACHED));
+						creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY));
 					}
 				}
 				else if (skill.getId() == 345) // Sonic Rage

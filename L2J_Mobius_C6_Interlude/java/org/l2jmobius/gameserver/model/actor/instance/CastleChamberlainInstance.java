@@ -333,7 +333,7 @@ public class CastleChamberlainInstance extends FolkInstance
 							}
 							else
 							{
-								sendPacket(new SystemMessage(SystemMessageId.YOU_NOT_ENOUGH_ADENA));
+								sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 							}
 						}
 					}
@@ -489,7 +489,7 @@ public class CastleChamberlainInstance extends FolkInstance
 						{
 							if (getCastle().isNextPeriodApproved())
 							{
-								player.sendPacket(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_6_AM_AND_8_PM);
+								player.sendPacket(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_6_A_M_AND_8_P_M);
 							}
 							else
 							{
@@ -501,7 +501,7 @@ public class CastleChamberlainInstance extends FolkInstance
 						{
 							if (getCastle().isNextPeriodApproved())
 							{
-								player.sendPacket(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_6_AM_AND_8_PM);
+								player.sendPacket(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_6_A_M_AND_8_P_M);
 							}
 							else
 							{

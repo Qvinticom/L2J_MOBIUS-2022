@@ -52,22 +52,22 @@ public class Mount implements IUserCommandHandler
 			if (player.isDead())
 			{
 				// A strider cannot be ridden when player is dead.
-				player.sendPacket(new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_DEAD));
+				player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHEN_DEAD));
 			}
 			else if (pet.isDead())
 			{
 				// A dead strider cannot be ridden.
-				player.sendPacket(new SystemMessage(SystemMessageId.DEAD_STRIDER_CANT_BE_RIDDEN));
+				player.sendPacket(new SystemMessage(SystemMessageId.A_DEAD_STRIDER_CANNOT_BE_RIDDEN));
 			}
 			else if (pet.isInCombat())
 			{
 				// A strider in battle cannot be ridden.
-				player.sendPacket(new SystemMessage(SystemMessageId.STRIDER_IN_BATLLE_CANT_BE_RIDDEN));
+				player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_IN_BATTLE_CANNOT_BE_RIDDEN));
 			}
 			else if (player.isInCombat())
 			{
 				// A pet cannot be ridden while player is in battle.
-				player.sendPacket(new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE));
+				player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE));
 			}
 			else if (!player.isInsideRadius(pet, 60, true, false))
 			{
@@ -76,13 +76,13 @@ public class Mount implements IUserCommandHandler
 			}
 			else if (!GeoEngine.getInstance().canSeeTarget(player, pet))
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.CANT_SEE_TARGET));
+				player.sendPacket(new SystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
 				return false;
 			}
 			else if (player.isSitting() || player.isMoving())
 			{
 				// A strider can be ridden only when player is standing.
-				player.sendPacket(new SystemMessage(SystemMessageId.STRIDER_CAN_BE_RIDDEN_ONLY_WHILE_STANDING));
+				player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CAN_BE_RIDDEN_ONLY_WHEN_STANDING));
 			}
 			else if (!pet.isDead() && !player.isMounted())
 			{

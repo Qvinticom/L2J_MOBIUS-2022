@@ -42,19 +42,19 @@ public class RequestWithdrawalPledge extends GameClientPacket
 		
 		if (player.getClan() == null)
 		{
-			player.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER);
+			player.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER_AND_CANNOT_PERFORM_THIS_ACTION);
 			return;
 		}
 		
 		if (player.isClanLeader())
 		{
-			player.sendPacket(SystemMessageId.CLAN_LEADER_CANNOT_WITHDRAW);
+			player.sendPacket(SystemMessageId.THE_CLAN_LEADER_CANNOT_WITHDRAW);
 			return;
 		}
 		
 		if (player.isInCombat())
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_LEAVE_DURING_COMBAT);
+			player.sendPacket(SystemMessageId.ONE_CANNOT_LEAVE_ONE_S_CLAN_DURING_COMBAT);
 			return;
 		}
 		
@@ -69,8 +69,8 @@ public class RequestWithdrawalPledge extends GameClientPacket
 		// Remove the Player From the Member list
 		clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(player.getName()));
 		
-		player.sendPacket(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_CLAN);
-		player.sendPacket(SystemMessageId.YOU_MUST_WAIT_BEFORE_JOINING_ANOTHER_CLAN);
+		player.sendPacket(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_THE_CLAN);
+		player.sendPacket(SystemMessageId.AFTER_LEAVING_OR_HAVING_BEEN_DISMISSED_FROM_A_CLAN_YOU_MUST_WAIT_AT_LEAST_A_DAY_BEFORE_JOINING_ANOTHER_CLAN);
 		player.setActiveWarehouse(null);
 	}
 }

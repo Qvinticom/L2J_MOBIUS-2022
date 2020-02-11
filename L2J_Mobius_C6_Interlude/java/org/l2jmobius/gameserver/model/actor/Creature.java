@@ -943,7 +943,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		if ((weaponItem != null) && (weaponItem.getItemType() == WeaponType.ROD))
 		{
 			// You can't make an attack with a fishing pole.
-			((PlayerInstance) this).sendPacket(SystemMessageId.CANNOT_ATTACK_WITH_FISHING_POLE);
+			((PlayerInstance) this).sendPacket(SystemMessageId.YOU_LOOK_ODDLY_AT_THE_FISHING_POLE_IN_DISBELIEF_AND_REALIZE_THAT_YOU_CAN_T_ATTACK_ANYTHING_WITH_THIS);
 			getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			
 			sendPacket(ActionFailed.STATIC_PACKET);
@@ -952,7 +952,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		if ((target instanceof GrandBossInstance) && (((GrandBossInstance) target).getNpcId() == 29022) && (Math.abs(_clientZ - target.getZ()) > 200))
 		{
-			sendPacket(new SystemMessage(SystemMessageId.CANT_SEE_TARGET));
+			sendPacket(new SystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
 			getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -961,7 +961,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// GeoData Los Check here (or dz > 1000)
 		if (!GeoEngine.getInstance().canSeeTarget(this, target))
 		{
-			sendPacket(new SystemMessage(SystemMessageId.CANT_SEE_TARGET));
+			sendPacket(new SystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -977,7 +977,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_ARROWS));
+				sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS));
 				return;
 			}
 			
@@ -1139,7 +1139,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// Check if hit isn't missed
 		if (!hitted)
 		{
-			sendPacket(new SystemMessage(SystemMessageId.MISSED_TARGET));
+			sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_MISSED));
 			// Abort the attack of the Creature and send Server->Client ActionFailed packet
 			abortAttack();
 		}
@@ -1255,7 +1255,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		if (this instanceof PlayerInstance)
 		{
 			// Send a system message
-			sendPacket(new SystemMessage(SystemMessageId.GETTING_READY_TO_SHOOT_AN_ARROW));
+			sendPacket(new SystemMessage(SystemMessageId.YOU_CAREFULLY_NOCK_AN_ARROW));
 			
 			// Send a Server->Client packet SetupGauge
 			sendPacket(new SetupGauge(SetupGauge.RED, sAtk + reuse));
@@ -1541,7 +1541,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			if (isPlayer())
 			{
-				getActingPlayer().sendPacket(SystemMessageId.INCORRECT_TARGET);
+				getActingPlayer().sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 			return;
 		}
@@ -1556,7 +1556,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// Can't use Hero and resurrect skills during Olympiad
 		if ((creature instanceof PlayerInstance) && ((PlayerInstance) creature).isInOlympiadMode() && (skill.isHeroSkill() || (skill.getSkillType() == SkillType.RESURRECT)))
 		{
-			sendPacket(new SystemMessage(SystemMessageId.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
+			sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_USE_THAT_SKILL_IN_A_GRAND_OLYMPIAD_GAMES_MATCH));
 			return;
 		}
 		
@@ -1593,7 +1593,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 			if (!canCast)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 				sm.addSkillName(skill.getId());
 				sendPacket(sm);
 				return;
@@ -1782,7 +1782,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			if (skill.isPotion())
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.USE_S1_);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.USE_S1);
 				if (magicId == 2005)
 				{
 					sm.addItemName(728);
@@ -6469,7 +6469,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			if (target instanceof PlayerInstance)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.AVOIDED_S1S_ATTACK);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_AVOIDED_S1_S_ATTACK);
 				if (this instanceof Summon)
 				{
 					final int mobId = ((Summon) this).getTemplate().getNpcId();
@@ -6643,14 +6643,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				// Check if shield is efficient
 				if (shld)
 				{
-					enemy.sendPacket(SystemMessageId.SHIELD_DEFENCE_SUCCESSFULL);
+					enemy.sendPacket(SystemMessageId.YOUR_SHIELD_DEFENSE_HAS_SUCCEEDED);
 				}
 			}
 			else if (target instanceof Summon)
 			{
 				final Summon activeSummon = (Summon) target;
 				
-				final SystemMessage sm = new SystemMessage(SystemMessageId.PET_RECEIVED_S2_DAMAGE_BY_S1);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PET_RECEIVED_S2_DAMAGE_CAUSED_BY_S1);
 				sm.addString(getName());
 				sm.addNumber(damage);
 				activeSummon.getOwner().sendPacket(sm);
@@ -6754,7 +6754,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				sendPacket(ActionFailed.STATIC_PACKET);
 				
 				// Send a system message
-				sendPacket(new SystemMessage(SystemMessageId.ATTACK_FAILED));
+				sendPacket(new SystemMessage(SystemMessageId.YOUR_ATTACK_HAS_FAILED));
 			}
 		}
 	}
@@ -6774,7 +6774,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			if (this instanceof PlayerInstance)
 			{
 				// Send a system message
-				sendPacket(new SystemMessage(SystemMessageId.CASTING_INTERRUPTED));
+				sendPacket(new SystemMessage(SystemMessageId.YOUR_CASTING_HAS_BEEN_INTERRUPTED));
 			}
 		}
 	}
@@ -6817,7 +6817,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		if (isInsidePeaceZone(player))
 		{
 			// If Creature or target is in a peace zone, send a system message TARGET_IN_PEACEZONE a Server->Client packet ActionFailed
-			player.sendPacket(SystemMessageId.TARGET_IN_PEACEZONE);
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -6853,7 +6853,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// GeoData Los Check or dz > 1000
 		if (!GeoEngine.getInstance().canSeeTarget(player, this))
 		{
-			player.sendPacket(SystemMessageId.CANT_SEE_TARGET);
+			player.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -7730,7 +7730,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				{
 					for (int i = 0; i < skipped; i++)
 					{
-						sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANT_SEE_TARGET));
+						sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
 					}
 				}
 				
@@ -7863,7 +7863,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 						
 						if ((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.SEED))
 						{
-							final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+							final SystemMessage smsg = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
 							smsg.addString(skill.getName());
 							target.sendPacket(smsg);
 						}
@@ -8190,20 +8190,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				if (skill.getSkillType() == SkillType.PUMPING)
 				{
 					// Pumping skill is available only while fishing
-					activeChar.sendPacket(SystemMessageId.CAN_USE_PUMPING_ONLY_WHILE_FISHING);
+					activeChar.sendPacket(SystemMessageId.YOU_MAY_ONLY_USE_THE_PUMPING_SKILL_WHILE_YOU_ARE_FISHING);
 				}
 				else if (skill.getSkillType() == SkillType.REELING)
 				{
 					// Reeling skill is available only while fishing
-					activeChar.sendPacket(SystemMessageId.CAN_USE_REELING_ONLY_WHILE_FISHING);
+					activeChar.sendPacket(SystemMessageId.YOU_MAY_ONLY_USE_THE_REELING_SKILL_WHILE_YOU_ARE_FISHING);
 				}
 				else if (skill.getSkillType() == SkillType.FISHING)
 				{
 					// Player hasn't fishing pole equiped
-					activeChar.sendPacket(SystemMessageId.FISHING_POLE_NOT_EQUIPPED);
+					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_FISHING_POLE_EQUIPPED);
 				}
 				
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 				sm.addString(skill.getName());
 				activeChar.sendPacket(sm);
 				return true;
@@ -8211,7 +8211,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			if (((skill.getSkillType() == SkillType.FISHING) || (skill.getSkillType() == SkillType.REELING) || (skill.getSkillType() == SkillType.PUMPING)) && (activeChar.getActiveWeaponItem() == null))
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 				sm.addString(skill.getName());
 				activeChar.sendPacket(sm);
 				return true;
@@ -8222,15 +8222,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				if (skill.getSkillType() == SkillType.PUMPING)
 				{
 					// Pumping skill is available only while fishing
-					activeChar.sendPacket(SystemMessageId.CAN_USE_PUMPING_ONLY_WHILE_FISHING);
+					activeChar.sendPacket(SystemMessageId.YOU_MAY_ONLY_USE_THE_PUMPING_SKILL_WHILE_YOU_ARE_FISHING);
 				}
 				else if (skill.getSkillType() == SkillType.REELING)
 				{
 					// Reeling skill is available only while fishing
-					activeChar.sendPacket(SystemMessageId.CAN_USE_REELING_ONLY_WHILE_FISHING);
+					activeChar.sendPacket(SystemMessageId.YOU_MAY_ONLY_USE_THE_REELING_SKILL_WHILE_YOU_ARE_FISHING);
 				}
 				
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 				sm.addString(skill.getName());
 				activeChar.sendPacket(sm);
 				return true;

@@ -92,7 +92,7 @@ public class EffectChameleonRest extends Effect
 		
 		if (manaDam > effected.getStatus().getCurrentMp())
 		{
-			effected.sendPacket(new SystemMessage(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP));
+			effected.sendPacket(new SystemMessage(SystemMessageId.YOUR_SKILL_WAS_REMOVED_DUE_TO_A_LACK_OF_MP));
 			return false;
 		}
 		

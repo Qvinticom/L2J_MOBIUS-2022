@@ -53,7 +53,7 @@ public class Harvester implements IItemHandler
 		final PlayerInstance player = (PlayerInstance) playable;
 		if (!(player.getTarget() instanceof MonsterInstance))
 		{
-			player.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			player.sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

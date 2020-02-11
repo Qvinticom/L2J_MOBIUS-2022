@@ -170,19 +170,19 @@ public class ClanTable
 		
 		if (10 > player.getLevel())
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_CRITERIA_IN_ORDER_TO_CREATE_A_CLAN);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_CRITERIA_IR_ORDER_TO_CREATE_A_CLAN);
 			return null;
 		}
 		
 		if (0 != player.getClanId())
 		{
-			player.sendPacket(SystemMessageId.FAILED_TO_CREATE_CLAN);
+			player.sendPacket(SystemMessageId.YOU_HAVE_FAILED_TO_CREATE_A_CLAN);
 			return null;
 		}
 		
 		if (System.currentTimeMillis() < player.getClanCreateExpiryTime())
 		{
-			player.sendPacket(SystemMessageId.YOU_MUST_WAIT_XX_DAYS_BEFORE_CREATING_A_NEW_CLAN);
+			player.sendPacket(SystemMessageId.YOU_MUST_WAIT_10_DAYS_BEFORE_CREATING_A_NEW_CLAN);
 			return null;
 		}
 		
@@ -210,7 +210,7 @@ public class ClanTable
 		player.sendPacket(new PledgeShowMemberListAll(clan, player));
 		player.sendPacket(new UserInfo(player));
 		player.sendPacket(new PledgeShowMemberListUpdate(player));
-		player.sendPacket(SystemMessageId.CLAN_CREATED);
+		player.sendPacket(SystemMessageId.YOUR_CLAN_HAS_BEEN_CREATED);
 		
 		return clan;
 	}
@@ -219,13 +219,13 @@ public class ClanTable
 	{
 		if (!Util.isAlphaNumeric(clanName) || (clanName.length() < 2))
 		{
-			player.sendPacket(SystemMessageId.CLAN_NAME_INCORRECT);
+			player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
 			return false;
 		}
 		
 		if (clanName.length() > 16)
 		{
-			player.sendPacket(SystemMessageId.CLAN_NAME_TOO_LONG);
+			player.sendPacket(SystemMessageId.CLAN_NAME_S_LENGTH_IS_INCORRECT);
 			return false;
 		}
 		
@@ -252,7 +252,7 @@ public class ClanTable
 		
 		if (!match.matches())
 		{
-			player.sendPacket(SystemMessageId.CLAN_NAME_INCORRECT);
+			player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
 			return false;
 		}
 		
@@ -453,11 +453,11 @@ public class ClanTable
 			LOGGER.warning("Could not store clans wars data " + e);
 		}
 		
-		SystemMessage msg = new SystemMessage(SystemMessageId.CLAN_WAR_DECLARED_AGAINST_S1_IF_KILLED_LOSE_LOW_EXP);
+		SystemMessage msg = new SystemMessage(SystemMessageId.A_CLAN_WAR_HAS_BEEN_DECLARED_AGAINST_THE_CLAN_S1_IF_YOU_ARE_KILLED_DURING_THE_CLAN_WAR_BY_MEMBERS_OF_THE_OPPOSING_CLAN_YOU_WILL_ONLY_LOSE_A_QUARTER_OF_THE_NORMAL_EXPERIENCE_FROM_DEATH);
 		msg.addString(clan2.getName());
 		clan1.broadcastToOnlineMembers(msg);
 		
-		msg = new SystemMessage(SystemMessageId.CLAN_S1_DECLARED_WAR);
+		msg = new SystemMessage(SystemMessageId.THE_CLAN_S1_HAS_DECLARED_A_CLAN_WAR);
 		msg.addString(clan1.getName());
 		clan2.broadcastToOnlineMembers(msg);
 	}
@@ -485,11 +485,11 @@ public class ClanTable
 			LOGGER.warning("Could not restore clans wars data " + e);
 		}
 		
-		SystemMessage msg = new SystemMessage(SystemMessageId.WAR_AGAINST_S1_HAS_STOPPED);
+		SystemMessage msg = new SystemMessage(SystemMessageId.THE_WAR_AGAINST_S1_CLAN_HAS_BEEN_STOPPED);
 		msg.addString(clan2.getName());
 		clan1.broadcastToOnlineMembers(msg);
 		
-		msg = new SystemMessage(SystemMessageId.CLAN_S1_HAS_DECIDED_TO_STOP);
+		msg = new SystemMessage(SystemMessageId.THE_CLAN_S1_HAS_DECIDED_TO_STOP_THE_WAR);
 		msg.addString(clan1.getName());
 		clan2.broadcastToOnlineMembers(msg);
 	}

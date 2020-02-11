@@ -78,7 +78,7 @@ public class AdminPetition implements IAdminCommandHandler
 			{
 				if (PetitionManager.getInstance().isPlayerInConsultation(activeChar))
 				{
-					activeChar.sendPacket(SystemMessageId.ONLY_ONE_ACTIVE_PETITION_AT_TIME);
+					activeChar.sendPacket(SystemMessageId.YOU_MAY_ONLY_SUBMIT_ONE_PETITION_ACTIVE_AT_A_TIME);
 					return true;
 				}
 				int petitionId = -1;
@@ -123,7 +123,7 @@ public class AdminPetition implements IAdminCommandHandler
 				}
 				if (!PetitionManager.getInstance().rejectPetition(activeChar, petitionId))
 				{
-					activeChar.sendPacket(SystemMessageId.FAILED_CANCEL_PETITION_TRY_LATER);
+					activeChar.sendPacket(SystemMessageId.FAILED_TO_CANCEL_PETITION_PLEASE_TRY_AGAIN_LATER);
 					return false;
 				}
 				return true;

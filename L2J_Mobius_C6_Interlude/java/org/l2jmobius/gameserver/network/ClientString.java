@@ -14,35 +14,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.clientpackets;
+package org.l2jmobius.gameserver.network;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.SystemMessageId;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
-public class RequestDismissAlly extends GameClientPacket
+/**
+ * @author UnAfraid
+ */
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.FIELD)
+public @interface ClientString
 {
-	@Override
-	protected void readImpl()
-	{
-		// trigger packet
-	}
+	int id();
 	
-	@Override
-	protected void runImpl()
-	{
-		final PlayerInstance player = getClient().getPlayer();
-		
-		if (player == null)
-		{
-			return;
-		}
-		
-		if (!player.isClanLeader())
-		{
-			player.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_ALLIANCE_LEADERS);
-			return;
-		}
-		
-		player.getClan().dissolveAlly(player);
-	}
+	String message();
 }

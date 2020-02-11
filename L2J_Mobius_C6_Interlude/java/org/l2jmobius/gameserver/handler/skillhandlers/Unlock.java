@@ -58,7 +58,7 @@ public class Unlock implements ISkillHandler
 				final DoorInstance door = (DoorInstance) target;
 				if (!door.isUnlockable())
 				{
-					creature.sendPacket(new SystemMessage(SystemMessageId.UNABLE_TO_UNLOCK_DOOR));
+					creature.sendPacket(new SystemMessage(SystemMessageId.THIS_DOOR_CANNOT_BE_UNLOCKED));
 					creature.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
@@ -71,7 +71,7 @@ public class Unlock implements ISkillHandler
 				}
 				else
 				{
-					creature.sendPacket(new SystemMessage(SystemMessageId.FAILED_TO_UNLOCK_DOOR));
+					creature.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_UNLOCK_THE_DOOR));
 				}
 			}
 			else if (target instanceof ChestInstance)

@@ -244,7 +244,7 @@ public class RequestBuyItem extends GameClientPacket
 			if ((count > Integer.MAX_VALUE) || (!template.isStackable() && (count > 1)))
 			{
 				// Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase invalid quantity of items at the same time.", Config.DEFAULT_PUNISH);
-				sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_QUANTITY_THAT_CAN_BE_INPUTTED));
+				sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 				return;
 			}
 			
@@ -280,7 +280,7 @@ public class RequestBuyItem extends GameClientPacket
 			if ((subTotal + tax) > Integer.MAX_VALUE)
 			{
 				// Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + Integer.MAX_VALUE + " adena worth of goods.", Config.DEFAULT_PUNISH);
-				sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_QUANTITY_THAT_CAN_BE_INPUTTED));
+				sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 				return;
 			}
 			
@@ -297,20 +297,20 @@ public class RequestBuyItem extends GameClientPacket
 		
 		if ((weight > Integer.MAX_VALUE) || (weight < 0) || !player.getInventory().validateWeight((int) weight))
 		{
-			player.sendPacket(SystemMessageId.WEIGHT_LIMIT_EXCEEDED);
+			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
 			return;
 		}
 		
 		if ((slots > Integer.MAX_VALUE) || (slots < 0) || !player.getInventory().validateCapacity((int) slots))
 		{
-			player.sendPacket(SystemMessageId.SLOTS_FULL);
+			player.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
 			return;
 		}
 		
 		// Charge buyer and add tax to castle treasury if not owned by npc clan
 		if ((subTotal < 0) || !player.reduceAdena("Buy", (int) (subTotal + tax), player.getLastFolkNPC(), false))
 		{
-			player.sendPacket(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
 		
@@ -338,7 +338,7 @@ public class RequestBuyItem extends GameClientPacket
 			
 			if (list.countDecrease(itemId) && !list.decreaseCount(itemId, count))
 			{
-				sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_QUANTITY_THAT_CAN_BE_INPUTTED));
+				sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 				return;
 			}
 			// Add item to Inventory and adjust update packet

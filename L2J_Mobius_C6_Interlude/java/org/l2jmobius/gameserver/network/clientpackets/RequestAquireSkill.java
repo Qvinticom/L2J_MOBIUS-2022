@@ -142,7 +142,7 @@ public class RequestAquireSkill extends GameClientPacket
 					if (spb == null)
 					{
 						// Haven't spellbook
-						player.sendPacket(SystemMessageId.ITEM_MISSING_TO_LEARN_SKILL);
+						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
 						return;
 					}
 					
@@ -152,7 +152,7 @@ public class RequestAquireSkill extends GameClientPacket
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_SP_TO_LEARN_SKILL));
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL));
 				return;
 			}
 		}
@@ -190,18 +190,18 @@ public class RequestAquireSkill extends GameClientPacket
 				if (!player.destroyItemByItemId("Consume", costid, costcount, trainer, false))
 				{
 					// Haven't spellbook
-					player.sendPacket(SystemMessageId.ITEM_MISSING_TO_LEARN_SKILL);
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
 					return;
 				}
 				
-				final SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 				sm.addNumber(costcount);
 				sm.addItemName(costid);
 				sendPacket(sm);
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_SP_TO_LEARN_SKILL));
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL));
 				return;
 			}
 		}
@@ -247,11 +247,11 @@ public class RequestAquireSkill extends GameClientPacket
 					if (!player.destroyItemByItemId("Consume", itemId, 1, trainer, false))
 					{
 						// Haven't spellbook
-						player.sendPacket(SystemMessageId.ITEM_MISSING_TO_LEARN_SKILL);
+						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
 						return;
 					}
 					
-					final SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 					sm.addItemName(itemId);
 					sm.addNumber(1);
 					sendPacket(sm);
@@ -259,16 +259,16 @@ public class RequestAquireSkill extends GameClientPacket
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.ACQUIRE_SKILL_FAILED_BAD_CLAN_REP_SCORE));
+				player.sendPacket(new SystemMessage(SystemMessageId.THE_ATTEMPT_TO_ACQUIRE_THE_SKILL_HAS_FAILED_BECAUSE_OF_AN_INSUFFICIENT_CLAN_REPUTATION_SCORE));
 				return;
 			}
 			player.getClan().setReputationScore(player.getClan().getReputationScore() - repCost, true);
 			player.getClan().addNewSkill(skill);
 			
-			final SystemMessage cr = new SystemMessage(SystemMessageId.S1_DEDUCTED_FROM_CLAN_REP);
+			final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION_SCORE);
 			cr.addNumber(repCost);
 			player.sendPacket(cr);
-			final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_SKILL_S1_ADDED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED);
 			sm.addSkillName(_id);
 			player.sendPacket(sm);
 			
@@ -299,11 +299,11 @@ public class RequestAquireSkill extends GameClientPacket
 		su.addAttribute(StatusUpdate.SP, player.getSp());
 		player.sendPacket(su);
 		
-		final SystemMessage sp = new SystemMessage(SystemMessageId.SP_DECREASED_S1);
+		final SystemMessage sp = new SystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
 		sp.addNumber(requiredSp);
 		sendPacket(sp);
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.LEARNED_SKILL_S1);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_2);
 		sm.addSkillName(_id);
 		player.sendPacket(sm);
 		

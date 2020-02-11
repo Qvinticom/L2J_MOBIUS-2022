@@ -53,7 +53,7 @@ public class DlgAnswer extends GameClientPacket
 		}
 		getClient().getPlayer().removeConfirmDlgRequestTime(_requestId);
 		
-		if (_messageId == SystemMessageId.RESSURECTION_REQUEST.getId())
+		if (_messageId == SystemMessageId.S1_IS_MAKING_AN_ATTEMPT_AT_RESURRECTION_DO_YOU_WANT_TO_CONTINUE_WITH_THIS_RESURRECTION.getId())
 		{
 			player.reviveAnswer(_answer);
 		}

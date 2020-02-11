@@ -45,7 +45,7 @@ public class BreakingArrow implements IItemHandler
 		final WorldObject target = player.getTarget();
 		if (!(target instanceof GrandBossInstance))
 		{
-			player.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

@@ -144,7 +144,7 @@ public class RequestPledgeSetAcademyMaster extends GameClientPacket
 			apprenticeMember.saveApprenticeAndSponsor(0, sponsorMember.getObjectId());
 			sponsorMember.saveApprenticeAndSponsor(apprenticeMember.getObjectId(), 0);
 			
-			sm = new SystemMessage(SystemMessageId.S2_HAS_BEEN_DESIGNATED_AS_APPRENTICE_OF_CLAN_MEMBER_S1);
+			sm = new SystemMessage(SystemMessageId.S2_HAS_BEEN_DESIGNATED_AS_THE_APPRENTICE_OF_CLAN_MEMBER_S1);
 		}
 		sm.addString(sponsorMember.getName());
 		sm.addString(apprenticeMember.getName());

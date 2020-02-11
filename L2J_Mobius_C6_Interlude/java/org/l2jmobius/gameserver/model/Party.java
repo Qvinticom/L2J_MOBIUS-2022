@@ -354,11 +354,11 @@ public class Party
 		// sends new member party window for all members
 		player.sendPacket(new PartySmallWindowAll(player, this));
 		
-		SystemMessage msg = new SystemMessage(SystemMessageId.YOU_JOINED_S1_PARTY);
+		SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_JOINED_S1_S_PARTY);
 		msg.addString(getLeader().getName());
 		player.sendPacket(msg);
 		
-		msg = new SystemMessage(SystemMessageId.S1_JOINED_PARTY);
+		msg = new SystemMessage(SystemMessageId.S1_HAS_JOINED_THE_PARTY);
 		msg.addString(player.getName());
 		broadcastToPartyMembers(msg);
 		broadcastToPartyMembers(new PartySmallWindowAdd(player, this));
@@ -441,8 +441,8 @@ public class Party
 			
 			if (sendMessage)
 			{
-				player.sendPacket(SystemMessageId.YOU_LEFT_PARTY);
-				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_LEFT_PARTY);
+				player.sendPacket(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_THE_PARTY);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_LEFT_THE_PARTY);
 				msg.addString(player.getName());
 				broadcastToPartyMembers(msg);
 			}
@@ -465,7 +465,7 @@ public class Party
 			
 			if (isLeader && (_members.size() > 1))
 			{
-				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_BECOME_A_PARTY_LEADER);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_BECOME_THE_PARTY_LEADER);
 				msg.addString(getLeader().getName());
 				broadcastToPartyMembers(msg);
 				broadcastToPartyMembersNewLeader();
@@ -521,7 +521,7 @@ public class Party
 			{
 				if (isLeader(player))
 				{
-					player.sendPacket(SystemMessageId.YOU_CANNOT_TRANSFER_RIGHTS_TO_YOURSELF);
+					player.sendPacket(SystemMessageId.SLOW_DOWN_YOU_ARE_ALREADY_THE_PARTY_LEADER);
 				}
 				else
 				{
@@ -532,7 +532,7 @@ public class Party
 					_members.set(0, _members.get(p1));
 					_members.set(p1, temp);
 					
-					SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_BECOME_A_PARTY_LEADER);
+					SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_BECOME_THE_PARTY_LEADER);
 					msg.addString(getLeader().getName());
 					broadcastToPartyMembers(msg);
 					broadcastToPartyMembersNewLeader();
@@ -540,7 +540,7 @@ public class Party
 					if (isInCommandChannel() && temp.equals(_commandChannel.getChannelLeader()))
 					{
 						_commandChannel.setChannelLeader(getLeader());
-						msg = new SystemMessage(SystemMessageId.COMMAND_CHANNEL_LEADER_NOW_S1);
+						msg = new SystemMessage(SystemMessageId.COMMAND_CHANNEL_AUTHORITY_HAS_BEEN_TRANSFERRED_TO_S1);
 						msg.addString(_commandChannel.getChannelLeader().getName());
 						_commandChannel.broadcastToChannelMembers(msg);
 					}
@@ -554,7 +554,7 @@ public class Party
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.YOU_CAN_TRANSFER_RIGHTS_ONLY_TO_ANOTHER_PARTY_MEMBER);
+				player.sendPacket(SystemMessageId.YOU_MAY_ONLY_TRANSFER_PARTY_LEADERSHIP_TO_ANOTHER_MEMBER_OF_THE_PARTY);
 			}
 		}
 	}
@@ -596,7 +596,7 @@ public class Party
 		// Send messages to other party members about reward
 		if (item.getCount() > 1)
 		{
-			final SystemMessage msg = new SystemMessage(SystemMessageId.S1_PICKED_UP_S2_S3);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_OBTAINED_S3_S2);
 			msg.addString(target.getName());
 			msg.addItemName(item.getItemId());
 			msg.addNumber(item.getCount());
@@ -604,7 +604,7 @@ public class Party
 		}
 		else
 		{
-			final SystemMessage msg = new SystemMessage(SystemMessageId.S1_PICKED_UP_S2);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_OBTAINED_S2);
 			msg.addString(target.getName());
 			msg.addItemName(item.getItemId());
 			broadcastToPartyMembers(target, msg);
@@ -638,7 +638,7 @@ public class Party
 		// Send messages to other aprty members about reward
 		if (item.getCount() > 1)
 		{
-			final SystemMessage msg = spoil ? new SystemMessage(SystemMessageId.S1_SWEEPED_UP_S2_S3) : new SystemMessage(SystemMessageId.S1_PICKED_UP_S2_S3);
+			final SystemMessage msg = spoil ? new SystemMessage(SystemMessageId.S1_HAS_OBTAINED_S3_S2_BY_USING_SWEEPER) : new SystemMessage(SystemMessageId.S1_HAS_OBTAINED_S3_S2);
 			msg.addString(looter.getName());
 			msg.addItemName(item.getItemId());
 			msg.addNumber(item.getCount());
@@ -646,7 +646,7 @@ public class Party
 		}
 		else
 		{
-			final SystemMessage msg = spoil ? new SystemMessage(SystemMessageId.S1_SWEEPED_UP_S2) : new SystemMessage(SystemMessageId.S1_PICKED_UP_S2);
+			final SystemMessage msg = spoil ? new SystemMessage(SystemMessageId.S1_HAS_OBTAINED_S2_BY_USING_SWEEPER) : new SystemMessage(SystemMessageId.S1_HAS_OBTAINED_S2);
 			msg.addString(looter.getName());
 			msg.addItemName(item.getItemId());
 			broadcastToPartyMembers(looter, msg);

@@ -1791,18 +1791,18 @@ public class Formulas
 				{
 					if (skill.getSkillType() == SkillType.DRAIN)
 					{
-						attacker.sendPacket(new SystemMessage(SystemMessageId.DRAIN_HALF_SUCCESFUL));
+						attacker.sendPacket(new SystemMessage(SystemMessageId.DRAIN_WAS_ONLY_50_PERCENT_SUCCESSFUL));
 					}
 					else
 					{
-						attacker.sendPacket(new SystemMessage(SystemMessageId.ATTACK_FAILED));
+						attacker.sendPacket(new SystemMessage(SystemMessageId.YOUR_ATTACK_HAS_FAILED));
 					}
 					
 					damage /= 2;
 				}
 				else
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 					sm.addString(target.getName());
 					sm.addSkillName(skill.getId());
 					attacker.sendPacket(sm);
@@ -1815,13 +1815,13 @@ public class Formulas
 			{
 				if (skill.getSkillType() == SkillType.DRAIN)
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.RESISTED_S1_DRAIN);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_RESISTED_S1_S_DRAIN);
 					sm.addString(attacker.getName());
 					target.sendPacket(sm);
 				}
 				else
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.RESISTED_S1_MAGIC);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_RESISTED_S1_S_MAGIC);
 					sm.addString(attacker.getName());
 					target.sendPacket(sm);
 				}
@@ -1958,7 +1958,7 @@ public class Formulas
 						{
 							player.setCurrentHp(1);
 							player.setCurrentCp(1);
-							player.sendPacket(SystemMessageId.LETHAL_STRIKE_SUCCESSFUL);
+							player.sendPacket(SystemMessageId.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
 						}
 					}
 				}

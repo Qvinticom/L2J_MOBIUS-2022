@@ -226,7 +226,7 @@ public class Lottery
 		public void run()
 		{
 			_isSellingTickets = false;
-			Announcements.getInstance().announceToAll(new SystemMessage(SystemMessageId.LOTTERY_TICKET_SALES_TEMP_SUSPENDED));
+			Announcements.getInstance().announceToAll(new SystemMessage(SystemMessageId.LOTTERY_TICKET_SALES_HAVE_BEEN_TEMPORARILY_SUSPENDED));
 		}
 	}
 	
@@ -373,7 +373,7 @@ public class Lottery
 			if (count1 > 0)
 			{
 				// There are winners.
-				sm = new SystemMessage(SystemMessageId.AMOUNT_FOR_WINNER_S1_IS_S2_ADENA_WE_HAVE_S3_PRIZE_WINNER);
+				sm = new SystemMessage(SystemMessageId.THE_PRIZE_AMOUNT_FOR_THE_WINNER_OF_LOTTERY_S1_IS_S2_ADENA_WE_HAVE_S3_FIRST_PRIZE_WINNERS);
 				sm.addNumber(_number);
 				sm.addNumber(_prize);
 				sm.addNumber(count1);
@@ -382,7 +382,7 @@ public class Lottery
 			else
 			{
 				// There are no winners.
-				sm = new SystemMessage(SystemMessageId.AMOUNT_FOR_LOTTERY_S1_IS_S2_ADENA_NO_WINNER);
+				sm = new SystemMessage(SystemMessageId.THE_PRIZE_AMOUNT_FOR_LUCKY_LOTTERY_S1_IS_S2_ADENA_THERE_WAS_NO_FIRST_PRIZE_WINNER_IN_THIS_DRAWING_THEREFORE_THE_JACKPOT_WILL_BE_ADDED_TO_THE_NEXT_DRAWING);
 				sm.addNumber(_number);
 				sm.addNumber(_prize);
 				Announcements.getInstance().announceToAll(sm);

@@ -216,21 +216,21 @@ public class RequestWearItem extends GameClientPacket
 		// Check the weight
 		if (!player.getInventory().validateWeight(weight))
 		{
-			player.sendPacket(SystemMessageId.WEIGHT_LIMIT_EXCEEDED);
+			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
 			return;
 		}
 		
 		// Check the inventory capacity
 		if (!player.getInventory().validateCapacity(slots))
 		{
-			player.sendPacket(SystemMessageId.SLOTS_FULL);
+			player.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
 			return;
 		}
 		
 		// Charge buyer and add tax to castle treasury if not owned by npc clan because a Try On is not Free
 		if ((totalPrice < 0) || !player.reduceAdena("Wear", (int) totalPrice, player.getLastFolkNPC(), false))
 		{
-			player.sendPacket(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
 		

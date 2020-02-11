@@ -55,25 +55,25 @@ public class RequestPetition extends GameClientPacket
 		
 		if (!AdminData.getInstance().isGmOnline(false))
 		{
-			player.sendPacket(SystemMessageId.NO_GM_PROVIDING_SERVICE_NOW);
+			player.sendPacket(SystemMessageId.THERE_ARE_NO_GMS_CURRENTLY_VISIBLE_IN_THE_PUBLIC_LIST_AS_THEY_MAY_BE_PERFORMING_OTHER_FUNCTIONS_AT_THE_MOMENT);
 			return;
 		}
 		
 		if (!PetitionManager.getInstance().isPetitioningAllowed())
 		{
-			player.sendPacket(SystemMessageId.GAME_CLIENT_UNABLE_TO_CONNECT_TO_PETITION_SERVER);
+			player.sendPacket(SystemMessageId.THE_GAME_CLIENT_ENCOUNTERED_AN_ERROR_AND_WAS_UNABLE_TO_CONNECT_TO_THE_PETITION_SERVER);
 			return;
 		}
 		
 		if (PetitionManager.getInstance().isPlayerPetitionPending(player))
 		{
-			player.sendPacket(SystemMessageId.ONLY_ONE_ACTIVE_PETITION_AT_TIME);
+			player.sendPacket(SystemMessageId.YOU_MAY_ONLY_SUBMIT_ONE_PETITION_ACTIVE_AT_A_TIME);
 			return;
 		}
 		
 		if (PetitionManager.getInstance().getPendingPetitionCount() == Config.MAX_PETITIONS_PENDING)
 		{
-			player.sendPacket(SystemMessageId.PETITION_SYSTEM_CURRENT_UNAVAILABLE);
+			player.sendPacket(SystemMessageId.THE_PETITION_SYSTEM_IS_CURRENTLY_UNAVAILABLE_PLEASE_TRY_AGAIN_LATER);
 			return;
 		}
 		
@@ -81,7 +81,7 @@ public class RequestPetition extends GameClientPacket
 		
 		if (totalPetitions > Config.MAX_PETITIONS_PER_PLAYER)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.WE_HAVE_RECEIVED_S1_PETITIONS_TODAY);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.WE_HAVE_RECEIVED_S1_PETITIONS_FROM_YOU_TODAY_AND_THAT_IS_THE_MAXIMUM_THAT_YOU_CAN_SUBMIT_IN_ONE_DAY_YOU_CANNOT_SUBMIT_ANY_MORE_PETITIONS);
 			sm.addNumber(totalPetitions);
 			player.sendPacket(sm);
 			return;
@@ -89,22 +89,22 @@ public class RequestPetition extends GameClientPacket
 		
 		if (_content.length() > 255)
 		{
-			player.sendPacket(SystemMessageId.PETITION_MAX_CHARS_255);
+			player.sendPacket(SystemMessageId.PETITIONS_CANNOT_EXCEED_255_CHARACTERS);
 			return;
 		}
 		
 		final int petitionId = PetitionManager.getInstance().submitPetition(player, _content, _type);
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.PETITION_ACCEPTED_RECENT_NO_S1);
+		SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PETITION_APPLICATION_HAS_BEEN_ACCEPTED_N_RECEIPT_NO_IS_S1);
 		sm.addNumber(petitionId);
 		player.sendPacket(sm);
 		
-		sm = new SystemMessage(SystemMessageId.SUBMITTED_YOU_S1_TH_PETITION_S2_LEFT);
+		sm = new SystemMessage(SystemMessageId.YOU_HAVE_SUBMITTED_S1_PETITION_S_N_YOU_MAY_SUBMIT_S2_MORE_PETITION_S_TODAY);
 		sm.addNumber(totalPetitions);
 		sm.addNumber(Config.MAX_PETITIONS_PER_PLAYER - totalPetitions);
 		player.sendPacket(sm);
 		
-		sm = new SystemMessage(SystemMessageId.S1_PETITION_ON_WAITING_LIST);
+		sm = new SystemMessage(SystemMessageId.THERE_ARE_S1_PETITIONS_CURRENTLY_ON_THE_WAITING_LIST);
 		sm.addNumber(PetitionManager.getInstance().getPendingPetitionCount());
 		player.sendPacket(sm);
 	}

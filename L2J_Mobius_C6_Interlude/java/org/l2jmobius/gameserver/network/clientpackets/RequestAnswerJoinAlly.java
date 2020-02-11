@@ -52,8 +52,8 @@ public class RequestAnswerJoinAlly extends GameClientPacket
 		
 		if (_response == 0)
 		{
-			player.sendPacket(SystemMessageId.YOU_DID_NOT_RESPOND_TO_ALLY_INVITATION);
-			requestor.sendPacket(SystemMessageId.NO_RESPONSE_TO_ALLY_INVITATION);
+			player.sendPacket(SystemMessageId.NO_RESPONSE_YOUR_ENTRANCE_TO_THE_ALLIANCE_HAS_BEEN_CANCELLED);
+			requestor.sendPacket(SystemMessageId.NO_RESPONSE_INVITATION_TO_JOIN_AN_ALLIANCE_HAS_BEEN_CANCELLED);
 		}
 		else
 		{
@@ -67,8 +67,8 @@ public class RequestAnswerJoinAlly extends GameClientPacket
 			if (clan.checkAllyJoinCondition(requestor, player))
 			{
 				// TODO: Need correct message id
-				requestor.sendPacket(SystemMessageId.YOU_HAVE_SUCCEEDED_INVITING_FRIEND);
-				player.sendPacket(SystemMessageId.YOU_ACCEPTED_ALLIANCE);
+				requestor.sendPacket(SystemMessageId.YOU_HAVE_SUCCEEDED_IN_INVITING_A_FRIEND_TO_YOUR_FRIENDS_LIST);
+				player.sendPacket(SystemMessageId.YOU_HAVE_ACCEPTED_THE_ALLIANCE);
 				player.getClan().setAllyId(clan.getAllyId());
 				player.getClan().setAllyName(clan.getAllyName());
 				player.getClan().setAllyPenaltyExpiryTime(0, 0);

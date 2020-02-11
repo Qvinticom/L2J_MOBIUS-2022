@@ -110,7 +110,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 		}
 	}
 	
@@ -125,7 +125,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 		}
 	}
 	

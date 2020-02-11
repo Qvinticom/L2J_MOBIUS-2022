@@ -155,14 +155,14 @@ public class Heal implements ISkillHandler
 				}
 				else if ((creature instanceof PlayerInstance) && (creature != target))
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S2_HP_RESTORED_BY_S1);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S2_HP_HAS_BEEN_RESTORED_BY_S1);
 					sm.addString(creature.getName());
 					sm.addNumber((int) hp);
 					target.sendPacket(sm);
 				}
 				else
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HP_RESTORED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED);
 					sm.addNumber((int) hp);
 					target.sendPacket(sm);
 				}

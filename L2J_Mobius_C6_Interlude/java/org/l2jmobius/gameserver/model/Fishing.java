@@ -64,13 +64,13 @@ public class Fishing implements Runnable
 		if (_fishCurHp >= (_fishMaxHp * 2))
 		{
 			// The fish got away
-			_fisher.sendPacket(SystemMessageId.BAIT_STOLEN_BY_FISH);
+			_fisher.sendPacket(SystemMessageId.YOUR_BAIT_WAS_STOLEN_BY_THAT_FISH);
 			doDie(false);
 		}
 		else if (_time <= 0)
 		{
 			// Time is up, so that fish got away
-			_fisher.sendPacket(SystemMessageId.FISH_SPIT_THE_HOOK);
+			_fisher.sendPacket(SystemMessageId.THAT_FISH_IS_MORE_DETERMINED_THAN_YOU_ARE_IT_SPIT_THE_HOOK);
 			doDie(false);
 		}
 		else
@@ -107,7 +107,7 @@ public class Fishing implements Runnable
 		_fisher.sendPacket(new PlaySound(1, "SF_S_01"));
 		
 		// Succeeded in getting a bite
-		_fisher.sendPacket(SystemMessageId.GOT_A_BITE);
+		_fisher.sendPacket(SystemMessageId.YOU_VE_GOT_A_BITE);
 		
 		if (_fishAiTask == null)
 		{
@@ -154,7 +154,7 @@ public class Fishing implements Runnable
 			final int check = Rnd.get(100);
 			if (check <= 5)
 			{
-				_fisher.sendPacket(SystemMessageId.YOU_CAUGHT_SOMETHING_SMELLY_THROW_IT_BACK);
+				_fisher.sendPacket(SystemMessageId.YOU_CAUGHT_SOMETHING_SMELLY_AND_SCARY_MAYBE_YOU_SHOULD_THROW_IT_BACK);
 				spawnPenaltyMonster();
 			}
 			else
@@ -235,7 +235,7 @@ public class Fishing implements Runnable
 		_anim = 2;
 		if (Rnd.get(100) > 90)
 		{
-			_fisher.sendPacket(SystemMessageId.FISH_RESISTED_ATTEMPT_TO_BRING_IT_IN);
+			_fisher.sendPacket(SystemMessageId.THE_FISH_HAS_RESISTED_YOUR_ATTEMPT_TO_BRING_IT_IN);
 			_goodUse = 0;
 			changeHp(0, pen);
 			return;
@@ -251,10 +251,10 @@ public class Fishing implements Runnable
 			if (_deceptiveMode == 0)
 			{
 				// Reeling is successful, Damage: $s1
-				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.REELING_SUCCESFUL_S1_DAMAGE).addNumber(dmg));
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_REEL_THAT_FISH_IN_CLOSER_AND_CAUSE_S1_DAMAGE).addNumber(dmg));
 				if (pen == 50)
 				{
-					_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.REELING_SUCCESSFUL_PENALTY_S1).addNumber(pen));
+					_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_REELING_WAS_SUCCESSFUL_MASTERY_PENALTY_S1).addNumber(pen));
 				}
 				
 				_goodUse = 1;
@@ -263,7 +263,7 @@ public class Fishing implements Runnable
 			else
 			{
 				// Reeling failed, Damage: $s1
-				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FISH_RESISTED_REELING_S1_HP_REGAINED).addNumber(dmg));
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_REEL_THAT_FISH_IN_FURTHER_AND_IT_REGAINS_S1_HP).addNumber(dmg));
 				_goodUse = 2;
 				changeHp(-dmg, pen);
 			}
@@ -271,17 +271,17 @@ public class Fishing implements Runnable
 		else if (_deceptiveMode == 0)
 		{
 			// Reeling failed, Damage: $s1
-			_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FISH_RESISTED_REELING_S1_HP_REGAINED).addNumber(dmg));
+			_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_REEL_THAT_FISH_IN_FURTHER_AND_IT_REGAINS_S1_HP).addNumber(dmg));
 			_goodUse = 2;
 			changeHp(-dmg, pen);
 		}
 		else
 		{
 			// Reeling is successful, Damage: $s1
-			_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.REELING_SUCCESFUL_S1_DAMAGE).addNumber(dmg));
+			_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_REEL_THAT_FISH_IN_CLOSER_AND_CAUSE_S1_DAMAGE).addNumber(dmg));
 			if (pen == 50)
 			{
-				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.REELING_SUCCESSFUL_PENALTY_S1).addNumber(pen));
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_REELING_WAS_SUCCESSFUL_MASTERY_PENALTY_S1).addNumber(pen));
 			}
 			
 			_goodUse = 1;
@@ -295,7 +295,7 @@ public class Fishing implements Runnable
 		
 		if (Rnd.get(100) > 90)
 		{
-			_fisher.sendPacket(SystemMessageId.FISH_RESISTED_ATTEMPT_TO_BRING_IT_IN);
+			_fisher.sendPacket(SystemMessageId.THE_FISH_HAS_RESISTED_YOUR_ATTEMPT_TO_BRING_IT_IN);
 			_goodUse = 0;
 			changeHp(0, pen);
 			return;
@@ -311,10 +311,10 @@ public class Fishing implements Runnable
 			if (_deceptiveMode == 0)
 			{
 				// Pumping is successful. Damage: $s1
-				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PUMPING_SUCCESFUL_S1_DAMAGE).addNumber(dmg));
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PUMPING_IS_SUCCESSFUL_CAUSING_S1_DAMAGE).addNumber(dmg));
 				if (pen == 50)
 				{
-					_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PUMPING_SUCCESSFUL_PENALTY_S1).addNumber(pen));
+					_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PUMPING_WAS_SUCCESSFUL_MASTERY_PENALTY_S1).addNumber(pen));
 				}
 				
 				_goodUse = 1;
@@ -323,7 +323,7 @@ public class Fishing implements Runnable
 			else
 			{
 				// Pumping failed, Regained: $s1
-				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FISH_RESISTED_PUMPING_S1_HP_REGAINED).addNumber(dmg));
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_DO_ANYTHING_WITH_THE_FISH_AND_IT_REGAINS_S1_HP).addNumber(dmg));
 				_goodUse = 2;
 				changeHp(-dmg, pen);
 			}
@@ -331,17 +331,17 @@ public class Fishing implements Runnable
 		else if (_deceptiveMode == 0)
 		{
 			// Pumping failed, Regained: $s1
-			_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FISH_RESISTED_PUMPING_S1_HP_REGAINED).addNumber(dmg));
+			_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_DO_ANYTHING_WITH_THE_FISH_AND_IT_REGAINS_S1_HP).addNumber(dmg));
 			_goodUse = 2;
 			changeHp(-dmg, pen);
 		}
 		else
 		{
 			// Pumping is successful. Damage: $s1
-			_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PUMPING_SUCCESFUL_S1_DAMAGE).addNumber(dmg));
+			_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PUMPING_IS_SUCCESSFUL_CAUSING_S1_DAMAGE).addNumber(dmg));
 			if (pen == 50)
 			{
-				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PUMPING_SUCCESSFUL_PENALTY_S1).addNumber(pen));
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PUMPING_WAS_SUCCESSFUL_MASTERY_PENALTY_S1).addNumber(pen));
 			}
 			
 			_goodUse = 1;

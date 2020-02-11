@@ -83,7 +83,7 @@ public class PartyMatchRoom
 	{
 		for (PlayerInstance _member : _members)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_LEFT_PARTY_ROOM);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_LEFT_THE_PARTY_ROOM);
 			sm.addString(player.getName());
 			_member.sendPacket(sm);
 			_member.sendPacket(new ExManagePartyRoomMember(player, this, 2));
@@ -121,7 +121,7 @@ public class PartyMatchRoom
 		{
 			member.sendPacket(new ExManagePartyRoomMember(newLeader, this, 1));
 			member.sendPacket(new ExManagePartyRoomMember(oldLeader, this, 1));
-			member.sendPacket(SystemMessageId.PARTY_ROOM_LEADER_CHANGED);
+			member.sendPacket(SystemMessageId.THE_LEADER_OF_THE_PARTY_ROOM_HAS_CHANGED);
 		}
 	}
 	

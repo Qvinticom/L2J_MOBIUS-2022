@@ -68,7 +68,7 @@ public class RequestJoinSiege extends GameClientPacket
 			{
 				if (System.currentTimeMillis() < player.getClan().getDissolvingExpiryTime())
 				{
-					player.sendPacket(SystemMessageId.CANT_PARTICIPATE_IN_SIEGE_WHILE_DISSOLUTION_IN_PROGRESS);
+					player.sendPacket(SystemMessageId.YOUR_CLAN_MAY_NOT_REGISTER_TO_PARTICIPATE_IN_A_SIEGE_WHILE_UNDER_A_GRACE_PERIOD_OF_THE_CLAN_S_DISSOLUTION);
 					return;
 				}
 				
@@ -101,7 +101,7 @@ public class RequestJoinSiege extends GameClientPacket
 			{
 				if (System.currentTimeMillis() < player.getClan().getDissolvingExpiryTime())
 				{
-					player.sendPacket(SystemMessageId.CANT_PARTICIPATE_IN_SIEGE_WHILE_DISSOLUTION_IN_PROGRESS);
+					player.sendPacket(SystemMessageId.YOUR_CLAN_MAY_NOT_REGISTER_TO_PARTICIPATE_IN_A_SIEGE_WHILE_UNDER_A_GRACE_PERIOD_OF_THE_CLAN_S_DISSOLUTION);
 					return;
 				}
 				

@@ -476,7 +476,7 @@ public abstract class Effect
 			
 			if (_skill.isPvpSkill() && (_effected != null) && (_effected instanceof PlayerInstance) && _template.showIcon)
 			{
-				final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+				final SystemMessage smsg = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
 				smsg.addString(_skill.getName());
 				_effected.sendPacket(smsg);
 			}
@@ -529,7 +529,7 @@ public abstract class Effect
 				}
 				else if (_cancelEffect)
 				{
-					final SystemMessage smsg3 = new SystemMessage(SystemMessageId.EFFECT_S1_DISAPPEARED);
+					final SystemMessage smsg3 = new SystemMessage(SystemMessageId.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED);
 					smsg3.addString(_skill.getName());
 					_effected.sendPacket(smsg3);
 				}

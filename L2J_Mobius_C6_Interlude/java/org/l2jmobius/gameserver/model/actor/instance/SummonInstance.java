@@ -177,7 +177,7 @@ public class SummonInstance extends Summon
 	public void reduceCurrentHp(int damage, Creature attacker)
 	{
 		super.reduceCurrentHp(damage, attacker);
-		final SystemMessage sm = new SystemMessage(SystemMessageId.SUMMON_RECEIVED_DAMAGE_S2_BY_S1);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.THE_SUMMONED_MONSTER_RECEIVED_DAMAGE_OF_S2_CAUSED_BY_S1);
 		if (attacker instanceof NpcInstance)
 		{
 			sm.addNpcName(((NpcInstance) attacker).getTemplate().getNpcId());
@@ -304,7 +304,7 @@ public class SummonInstance extends Summon
 		{
 			if (pcrit || mcrit)
 			{
-				getOwner().sendPacket(SystemMessageId.CRITICAL_HIT_BY_SUMMONED_MOB);
+				getOwner().sendPacket(SystemMessageId.SUMMONED_MONSTER_S_CRITICAL_HIT);
 			}
 			
 			if (getOwner().isInOlympiadMode() && (target instanceof PlayerInstance) && ((PlayerInstance) target).isInOlympiadMode() && (((PlayerInstance) target).getOlympiadGameId() == getOwner().getOlympiadGameId()))
@@ -312,7 +312,7 @@ public class SummonInstance extends Summon
 				Olympiad.getInstance().notifyCompetitorDamage(getOwner(), damage, getOwner().getOlympiadGameId());
 			}
 			
-			final SystemMessage sm = new SystemMessage(SystemMessageId.SUMMON_GAVE_DAMAGE_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.THE_SUMMONED_MONSTER_GAVE_DAMAGE_OF_S1);
 			sm.addNumber(damage);
 			getOwner().sendPacket(sm);
 		}

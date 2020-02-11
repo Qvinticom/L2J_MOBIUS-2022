@@ -98,7 +98,7 @@ public class UseItem extends GameClientPacket
 		// Like L2OFF you can't use soulshots while sitting.
 		if (player.isSitting() && SHOT_IDS.contains(item.getItemId()))
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.CANNOT_AUTO_USE_LACK_OF_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.DUE_TO_INSUFFICIENT_S1_THE_AUTOMATIC_USE_FUNCTION_CANNOT_BE_ACTIVATED);
 			sm.addItemName(item.getItemId());
 			player.sendPacket(sm);
 			return;
@@ -124,7 +124,7 @@ public class UseItem extends GameClientPacket
 		
 		if (player.getPrivateStoreType() != 0)
 		{
-			player.sendPacket(SystemMessageId.CANNOT_TRADE_DISCARD_DROP_ITEM_WHILE_IN_SHOPMODE);
+			player.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -145,7 +145,7 @@ public class UseItem extends GameClientPacket
 		
 		if (item.getItem().getType2() == Item.TYPE2_QUEST)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.CANNOT_USE_QUEST_ITEMS));
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_USE_QUEST_ITEMS));
 			return;
 		}
 		
@@ -183,7 +183,7 @@ public class UseItem extends GameClientPacket
 		if (player.isFishing() && ((itemId < 6535) || (itemId > 6540)))
 		{
 			// You cannot do anything else while fishing
-			getClient().getPlayer().sendPacket(new SystemMessage(SystemMessageId.CANNOT_DO_WHILE_FISHING_3));
+			getClient().getPlayer().sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3));
 			return;
 		}
 		
@@ -264,7 +264,7 @@ public class UseItem extends GameClientPacket
 		// Char cannot use item when dead
 		if (player.isDead())
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addItemName(itemId);
 			getClient().getPlayer().sendPacket(sm);
 			return;
@@ -273,7 +273,7 @@ public class UseItem extends GameClientPacket
 		// Char cannot use pet items
 		if (item.getItem().isForWolf() || item.getItem().isForHatchling() || item.getItem().isForStrider() || item.getItem().isForBabyPet())
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.CANNOT_EQUIP_PET_ITEM); // You cannot equip a pet item.
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_MAY_NOT_EQUIP_A_PET_ITEM); // You cannot equip a pet item.
 			sm.addItemName(itemId);
 			getClient().getPlayer().sendPacket(sm);
 			return;
@@ -308,7 +308,7 @@ public class UseItem extends GameClientPacket
 				}
 				else
 				{
-					player.sendPacket(new SystemMessage(SystemMessageId.CANNOT_USE_ITEM_WHILE_USING_MAGIC));
+					player.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_EQUIP_ITEMS_WHILE_CASTING_OR_PERFORMING_A_SKILL));
 				}
 				return;
 			}
@@ -448,13 +448,13 @@ public class UseItem extends GameClientPacket
 				
 				if (item.getEnchantLevel() > 0)
 				{
-					sm = new SystemMessage(SystemMessageId.EQUIPMENT_S1_S2_REMOVED);
+					sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 					sm.addNumber(item.getEnchantLevel());
 					sm.addItemName(itemId);
 				}
 				else
 				{
-					sm = new SystemMessage(SystemMessageId.S1_DISARMED);
+					sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
 					sm.addItemName(itemId);
 				}
 				
@@ -583,13 +583,13 @@ public class UseItem extends GameClientPacket
 				
 				if (item.getEnchantLevel() > 0)
 				{
-					sm = new SystemMessage(SystemMessageId.S1_S2_EQUIPPED);
+					sm = new SystemMessage(SystemMessageId.EQUIPPED_S1_S2);
 					sm.addNumber(item.getEnchantLevel());
 					sm.addItemName(itemId);
 				}
 				else
 				{
-					sm = new SystemMessage(SystemMessageId.S1_EQUIPPED);
+					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
 					sm.addItemName(itemId);
 				}
 				player.sendPacket(sm);

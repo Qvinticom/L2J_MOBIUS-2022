@@ -60,7 +60,7 @@ public class AdminSuperHaste implements IAdminCommandHandler
 					
 					if ((val == 0) && sendMessage)
 					{
-						player.sendPacket(new SystemMessage(SystemMessageId.EFFECT_S1_DISAPPEARED).addSkillName(SUPER_HASTE_ID));
+						player.sendPacket(new SystemMessage(SystemMessageId.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(SUPER_HASTE_ID));
 					}
 					else if ((val >= 1) && (val <= 4))
 					{

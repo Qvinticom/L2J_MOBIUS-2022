@@ -56,12 +56,12 @@ public class RequestAskJoinPartyRoom extends GameClientPacket
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.S1_IS_BUSY_TRY_LATER).addString(target.getName()));
+				player.sendPacket(new SystemMessage(SystemMessageId.S1_IS_BUSY_PLEASE_TRY_AGAIN_LATER).addString(target.getName()));
 			}
 		}
 		else
 		{
-			player.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 		}
 	}
 }

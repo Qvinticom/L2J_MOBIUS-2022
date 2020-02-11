@@ -172,7 +172,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		{
 			for (PlayerInstance player : World.getInstance().getAllPlayers())
 			{
-				player.sendPacket(SystemMessageId.NPC_SERVER_NOT_OPERATING);
+				player.sendPacket(SystemMessageId.THE_NPC_SERVER_IS_NOT_OPERATING_AT_THIS_TIME);
 			}
 			RaidBossSpawnManager.getInstance().cleanUp();
 			DayNightSpawnManager.getInstance().cleanUp();
@@ -329,7 +329,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
-			activeChar.sendPacket(SystemMessageId.TARGET_CANT_FOUND);
+			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
 		}
 	}
 	

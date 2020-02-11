@@ -403,7 +403,7 @@ public class CursedWeapon
 		// ItemInstance[] items =
 		_player.getInventory().equipItemAndRecord(_item);
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.S1_EQUIPPED);
+		SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
 		sm.addItemName(_item.getItemId());
 		_player.sendPacket(sm);
 		

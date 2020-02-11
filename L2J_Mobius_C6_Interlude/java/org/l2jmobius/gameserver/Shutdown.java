@@ -257,7 +257,7 @@ public class Shutdown extends Thread
 				// announce only every minute after 10 minutes left and every second after 20 seconds
 				if (((seconds <= 20) || (seconds == (minutes * 10))) && (seconds <= 600) && (hours <= 1))
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_SERVER_WILL_BE_COMING_DOWN_IN_S1_SECONDS);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_SERVER_WILL_BE_COMING_DOWN_IN_S1_SECOND_S_PLEASE_FIND_A_SAFE_PLACE_TO_LOG_OUT);
 					sm.addString(Integer.toString(seconds));
 					Announcements.getInstance().announceToAll(sm);
 				}

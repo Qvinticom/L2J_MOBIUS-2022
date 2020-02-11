@@ -131,7 +131,7 @@ public class RequestExSetPledgeCrestLarge extends GameClientPacket
 			clan.setCrestLargeId(newId);
 			clan.setHasCrestLarge(true);
 			
-			player.sendPacket(SystemMessageId.CLAN_EMBLEM_WAS_SUCCESSFULLY_REGISTERED);
+			player.sendPacket(SystemMessageId.THE_CLAN_CREST_WAS_SUCCESSFULLY_REGISTERED_REMEMBER_ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_CASTLE_CAN_HAVE_THEIR_CREST_DISPLAYED);
 			
 			for (PlayerInstance member : clan.getOnlineMembers())
 			{

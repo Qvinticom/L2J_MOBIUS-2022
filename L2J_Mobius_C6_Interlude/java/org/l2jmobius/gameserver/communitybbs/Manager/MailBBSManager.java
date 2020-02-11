@@ -551,7 +551,7 @@ public class MailBBSManager extends BaseBBSManager
 		// Check sender mails based on previous timestamp. If more than 10 mails have been found for today, then cancel the use.
 		if (getPlayerMails(activeChar.getObjectId()).stream().filter(l -> l.sentDate.after(ts) && (l.location == MailType.SENTBOX)).count() >= 10)
 		{
-			activeChar.sendPacket(SystemMessageId.NO_MORE_MESSAGES_TODAY);
+			activeChar.sendPacket(SystemMessageId.NO_MORE_MESSAGES_MAY_BE_SENT_AT_THIS_TIME_EACH_ACCOUNT_IS_ALLOWED_10_MESSAGES_PER_DAY);
 			return;
 		}
 		
@@ -559,7 +559,7 @@ public class MailBBSManager extends BaseBBSManager
 		final String[] recipientNames = recipients.trim().split(";");
 		if ((recipientNames.length > 5) && !activeChar.isGM())
 		{
-			activeChar.sendPacket(SystemMessageId.ONLY_FIVE_RECIPIENTS);
+			activeChar.sendPacket(SystemMessageId.YOU_ARE_LIMITED_TO_FIVE_RECIPIENTS_AT_A_TIME);
 			return;
 		}
 		
@@ -585,7 +585,7 @@ public class MailBBSManager extends BaseBBSManager
 				final int recipientId = CharNameTable.getInstance().getPlayerObjectId(recipientName);
 				if ((recipientId <= 0) || (recipientId == activeChar.getObjectId()))
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					continue;
 				}
 				
@@ -596,24 +596,24 @@ public class MailBBSManager extends BaseBBSManager
 					// Sender is a regular player, while recipient is a GM.
 					if (isGM(recipientId))
 					{
-						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_MAIL_GM_S1).addString(recipientName));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MESSAGE_TO_S1_DID_NOT_REACH_IT_S_RECIPIENT_YOU_CANNOT_SEND_MAIL_TO_THE_GM_STAFF).addString(recipientName));
 						continue;
 					}
 					
 					// The recipient is on block mode.
 					if (isBlocked(activeChar, recipientId))
 					{
-						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_BLOCKED_YOU_CANNOT_MAIL).addString(recipientName));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_S1).addString(recipientName));
 						continue;
 					}
 					
 					// The recipient box is already full.
 					if (isRecipInboxFull(recipientId))
 					{
-						activeChar.sendPacket(SystemMessageId.MESSAGE_NOT_SENT);
+						activeChar.sendPacket(SystemMessageId.THE_MESSAGE_WAS_NOT_SENT);
 						if (recipientPlayer != null)
 						{
-							recipientPlayer.sendPacket(SystemMessageId.MAILBOX_FULL);
+							recipientPlayer.sendPacket(SystemMessageId.YOUR_MAILBOX_IS_FULL_THERE_IS_A_100_MESSAGE_LIMIT);
 						}
 						
 						continue;
@@ -652,7 +652,7 @@ public class MailBBSManager extends BaseBBSManager
 				
 				if (recipientPlayer != null)
 				{
-					recipientPlayer.sendPacket(SystemMessageId.NEW_MAIL);
+					recipientPlayer.sendPacket(SystemMessageId.YOU_VE_GOT_MAIL);
 					recipientPlayer.sendPacket(new PlaySound("systemmsg_e.1233"));
 					recipientPlayer.sendPacket(ExMailArrived.STATIC_PACKET);
 				}
@@ -683,7 +683,7 @@ public class MailBBSManager extends BaseBBSManager
 				letter.unread = false;
 				getPlayerMails(activeChar.getObjectId()).add(0, letter);
 				
-				activeChar.sendPacket(SystemMessageId.SENT_MAIL);
+				activeChar.sendPacket(SystemMessageId.YOU_VE_SENT_MAIL);
 			}
 		}
 		catch (Exception e)

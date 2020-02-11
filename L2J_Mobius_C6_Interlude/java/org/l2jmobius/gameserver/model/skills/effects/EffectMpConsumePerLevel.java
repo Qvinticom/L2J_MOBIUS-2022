@@ -47,7 +47,7 @@ public class EffectMpConsumePerLevel extends Effect
 		
 		if (consume > getEffected().getCurrentMp())
 		{
-			getEffected().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP));
+			getEffected().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_SKILL_WAS_REMOVED_DUE_TO_A_LACK_OF_MP));
 			return false;
 		}
 		

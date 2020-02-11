@@ -58,7 +58,7 @@ public class ChestKey implements IItemHandler
 		
 		if (!(target instanceof ChestInstance))
 		{
-			player.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 		else

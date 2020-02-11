@@ -133,17 +133,17 @@ public class RequestDuelStart extends GameClientPacket
 					player.onTransactionRequest(partyLeader);
 					partyLeader.sendPacket(new ExDuelAskStart(player.getName(), _partyDuel));
 					
-					SystemMessage msg = new SystemMessage(SystemMessageId.S1S_PARTY_HAS_BEEN_CHALLENGED_TO_A_DUEL);
+					SystemMessage msg = new SystemMessage(SystemMessageId.S1_S_PARTY_HAS_BEEN_CHALLENGED_TO_A_DUEL);
 					msg.addString(partyLeader.getName());
 					player.sendPacket(msg);
 					
-					msg = new SystemMessage(SystemMessageId.S1S_PARTY_HAS_CHALLENGED_YOUR_PARTY_TO_A_DUEL);
+					msg = new SystemMessage(SystemMessageId.S1_S_PARTY_HAS_CHALLENGED_YOUR_PARTY_TO_A_DUEL);
 					msg.addString(player.getName());
 					targetChar.sendPacket(msg);
 				}
 				else
 				{
-					final SystemMessage msg = new SystemMessage(SystemMessageId.S1_IS_BUSY_TRY_LATER);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.S1_IS_BUSY_PLEASE_TRY_AGAIN_LATER);
 					msg.addString(partyLeader.getName());
 					player.sendPacket(msg);
 				}
@@ -164,7 +164,7 @@ public class RequestDuelStart extends GameClientPacket
 		}
 		else
 		{
-			final SystemMessage msg = new SystemMessage(SystemMessageId.S1_IS_BUSY_TRY_LATER);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.S1_IS_BUSY_PLEASE_TRY_AGAIN_LATER);
 			msg.addString(targetChar.getName());
 			player.sendPacket(msg);
 		}

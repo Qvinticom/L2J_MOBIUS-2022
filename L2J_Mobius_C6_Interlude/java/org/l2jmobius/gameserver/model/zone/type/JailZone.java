@@ -46,7 +46,7 @@ public class JailZone extends ZoneType
 			if (Config.JAIL_IS_PVP)
 			{
 				creature.setInsideZone(ZoneId.PVP, true);
-				((PlayerInstance) creature).sendPacket(SystemMessageId.ENTERED_COMBAT_ZONE);
+				((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
 			}
 			else
 			{
@@ -65,7 +65,7 @@ public class JailZone extends ZoneType
 			if (Config.JAIL_IS_PVP)
 			{
 				creature.setInsideZone(ZoneId.PVP, false);
-				((PlayerInstance) creature).sendPacket(SystemMessageId.LEFT_COMBAT_ZONE);
+				((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 			}
 			else
 			{

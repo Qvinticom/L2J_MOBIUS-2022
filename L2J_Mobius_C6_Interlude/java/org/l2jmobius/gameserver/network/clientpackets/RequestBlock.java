@@ -66,13 +66,13 @@ public class RequestBlock extends GameClientPacket
 				final int targetId = CharNameTable.getInstance().getPlayerObjectId(_name);
 				if ((targetId <= 0) || (player.getObjectId() == targetId))
 				{
-					player.sendPacket(SystemMessageId.FAILED_TO_REGISTER_TO_IGNORE_LIST);
+					player.sendPacket(SystemMessageId.YOU_HAVE_FAILED_TO_REGISTER_THE_USER_TO_YOUR_IGNORE_LIST);
 					return;
 				}
 				// Can't block a GM character.
 				if (CharNameTable.getInstance().getPlayerAccessLevel(targetId) > 0)
 				{
-					player.sendPacket(SystemMessageId.YOU_MAY_NOT_IMPOSE_A_BLOCK_AN_A_GM);
+					player.sendPacket(SystemMessageId.YOU_MAY_NOT_IMPOSE_A_BLOCK_ON_A_GM);
 					return;
 				}
 				if (_type == BLOCK)

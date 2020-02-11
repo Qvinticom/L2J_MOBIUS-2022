@@ -57,7 +57,7 @@ public class BeastSpiritShot implements IItemHandler
 		if (playable instanceof Summon)
 		{
 			activeOwner = ((Summon) playable).getOwner();
-			activeOwner.sendPacket(SystemMessageId.PET_CANNOT_USE_ITEM);
+			activeOwner.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
 			return;
 		}
 		else if (playable instanceof PlayerInstance)
@@ -73,13 +73,13 @@ public class BeastSpiritShot implements IItemHandler
 		final Summon activePet = activeOwner.getPet();
 		if (activePet == null)
 		{
-			activeOwner.sendPacket(SystemMessageId.PETS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
+			activeOwner.sendPacket(SystemMessageId.PETS_AND_SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
 			return;
 		}
 		
 		if (activePet.isDead())
 		{
-			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_PET);
+			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_PET_OR_SERVITOR_SAD_ISN_T_IT);
 			return;
 		}
 		
@@ -97,7 +97,7 @@ public class BeastSpiritShot implements IItemHandler
 			
 			if (weaponInst == null)
 			{
-				activeOwner.sendPacket(SystemMessageId.CANNOT_USE_SPIRITSHOTS);
+				activeOwner.sendPacket(SystemMessageId.YOU_MAY_NOT_USE_SPIRITSHOTS);
 				return;
 			}
 			
@@ -112,14 +112,14 @@ public class BeastSpiritShot implements IItemHandler
 			
 			if (shotConsumption == 0)
 			{
-				activeOwner.sendPacket(SystemMessageId.CANNOT_USE_SPIRITSHOTS);
+				activeOwner.sendPacket(SystemMessageId.YOU_MAY_NOT_USE_SPIRITSHOTS);
 				return;
 			}
 			
 			if ((shotCount <= shotConsumption))
 			{
 				// Not enough SpiritShots to use.
-				activeOwner.sendPacket(SystemMessageId.NOT_ENOUGH_SPIRITHOTS_FOR_PET);
+				activeOwner.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_PET_SERVITOR);
 				return;
 			}
 			
@@ -155,19 +155,19 @@ public class BeastSpiritShot implements IItemHandler
 			{
 				activeOwner.removeAutoSoulShot(itemId);
 				activeOwner.sendPacket(new ExAutoSoulShot(itemId, 0));
-				final SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
 				sm.addString(item.getItem().getName());
 				activeOwner.sendPacket(sm);
 				
 				return;
 			}
 			
-			activeOwner.sendPacket(SystemMessageId.NOT_ENOUGH_SPIRITSHOTS);
+			activeOwner.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SPIRITSHOTS_FOR_THAT);
 			return;
 		}
 		
 		// Pet uses the power of spirit.
-		activeOwner.sendPacket(SystemMessageId.PET_USE_THE_POWER_OF_SPIRIT);
+		activeOwner.sendPacket(SystemMessageId.PET_USES_THE_POWER_OF_SPIRIT);
 		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activePet, activePet, isBlessed ? 2009 : 2008, 1, 0, 0), 360000/* 600 */);
 	}
 	

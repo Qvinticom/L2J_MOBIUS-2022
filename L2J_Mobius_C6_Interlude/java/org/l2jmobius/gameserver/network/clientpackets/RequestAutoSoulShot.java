@@ -76,7 +76,7 @@ public class RequestAutoSoulShot extends GameClientPacket
 		// Like L2OFF you can't use soulshots while sitting
 		if (player.isSitting() && SHOT_IDS.contains(_itemId))
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.CANNOT_AUTO_USE_LACK_OF_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.DUE_TO_INSUFFICIENT_S1_THE_AUTOMATIC_USE_FUNCTION_CANNOT_BE_ACTIVATED);
 			sm.addItemName(_itemId);
 			player.sendPacket(sm);
 			return;
@@ -105,7 +105,7 @@ public class RequestAutoSoulShot extends GameClientPacket
 								// player.sendPacket(atk);
 								
 								// start the auto soulshot use
-								final SystemMessage sm = new SystemMessage(SystemMessageId.USE_OF_S1_WILL_BE_AUTO);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
 								sm.addString(item.getItemName());
 								player.sendPacket(sm);
 								
@@ -113,7 +113,7 @@ public class RequestAutoSoulShot extends GameClientPacket
 							}
 							else
 							{
-								final SystemMessage sm = new SystemMessage(SystemMessageId.NO_SERVITOR_CANNOT_AUTOMATE_USE);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR_OR_PET_AND_THEREFORE_CANNOT_USE_THE_AUTOMATIC_USE_FUNCTION);
 								sm.addString(item.getItemName());
 								player.sendPacket(sm);
 								return;
@@ -125,7 +125,7 @@ public class RequestAutoSoulShot extends GameClientPacket
 							{
 								if ((_itemId >= 3947) && (_itemId <= 3952) && player.isInOlympiadMode())
 								{
-									final SystemMessage sm = new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+									final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_GRAND_OLYMPIAD_GAMES_MATCH);
 									sm.addString(item.getItemName());
 									player.sendPacket(sm);
 								}
@@ -134,18 +134,18 @@ public class RequestAutoSoulShot extends GameClientPacket
 									// player.addAutoSoulShot(_itemId);
 									
 									// start the auto soulshot use
-									final SystemMessage sm = new SystemMessage(SystemMessageId.USE_OF_S1_WILL_BE_AUTO);
+									final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
 									sm.addString(item.getItemName());
 									player.sendPacket(sm);
 								}
 							}
 							else if (((_itemId >= 2509) && (_itemId <= 2514)) || ((_itemId >= 3947) && (_itemId <= 3952)) || (_itemId == 5790))
 							{
-								player.sendPacket(SystemMessageId.SPIRITSHOTS_GRADE_MISMATCH);
+								player.sendPacket(SystemMessageId.THE_SPIRITSHOT_DOES_NOT_MATCH_THE_WEAPON_S_GRADE);
 							}
 							else
 							{
-								player.sendPacket(SystemMessageId.SOULSHOTS_GRADE_MISMATCH);
+								player.sendPacket(SystemMessageId.THE_SOULSHOT_YOU_ARE_ATTEMPTING_TO_USE_DOES_NOT_MATCH_THE_GRADE_OF_YOUR_EQUIPPED_WEAPON);
 							}
 							
 							player.rechargeAutoSoulShot(true, true, false);
@@ -159,7 +159,7 @@ public class RequestAutoSoulShot extends GameClientPacket
 					// player.sendPacket(atk);
 					
 					// cancel the auto soulshot use
-					final SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
 					sm.addString(item.getItemName());
 					player.sendPacket(sm);
 				}

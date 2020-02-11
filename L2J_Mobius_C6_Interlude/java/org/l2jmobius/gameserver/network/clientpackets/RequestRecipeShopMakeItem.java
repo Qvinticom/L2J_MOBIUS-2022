@@ -77,7 +77,7 @@ public class RequestRecipeShopMakeItem extends GameClientPacket
 		
 		if (manufacturer.isInDuel() || player.isInDuel())
 		{
-			player.sendPacket(SystemMessageId.CANT_CRAFT_DURING_COMBAT);
+			player.sendPacket(SystemMessageId.WHILE_YOU_ARE_ENGAGED_IN_COMBAT_YOU_CANNOT_OPERATE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
 			return;
 		}
 		

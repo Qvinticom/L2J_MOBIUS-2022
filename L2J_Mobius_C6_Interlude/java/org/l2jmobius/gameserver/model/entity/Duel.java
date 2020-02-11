@@ -818,7 +818,7 @@ public class Duel
 		SystemMessage sm = null;
 		if (_countdown > 0)
 		{
-			sm = new SystemMessage(SystemMessageId.THE_DUEL_WILL_BEGIN_IN_S1_SECONDS);
+			sm = new SystemMessage(SystemMessageId.THE_DUEL_WILL_BEGIN_IN_S1_SECOND_S);
 			sm.addNumber(_countdown);
 		}
 		else
@@ -858,7 +858,7 @@ public class Duel
 				// send SystemMessage
 				if (_partyDuel)
 				{
-					sm = new SystemMessage(SystemMessageId.S1S_PARTY_HAS_WON_THE_DUEL);
+					sm = new SystemMessage(SystemMessageId.S1_S_PARTY_HAS_WON_THE_DUEL);
 				}
 				else
 				{
@@ -876,7 +876,7 @@ public class Duel
 				// send SystemMessage
 				if (_partyDuel)
 				{
-					sm = new SystemMessage(SystemMessageId.S1S_PARTY_HAS_WON_THE_DUEL);
+					sm = new SystemMessage(SystemMessageId.S1_S_PARTY_HAS_WON_THE_DUEL);
 				}
 				else
 				{

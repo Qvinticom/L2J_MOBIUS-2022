@@ -78,7 +78,7 @@ public class RequestPetUseItem extends GameClientPacket
 		
 		if (player.isAlikeDead() || pet.isDead())
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addItemName(item.getItemId());
 			player.sendPacket(sm);
 			return;
@@ -113,7 +113,7 @@ public class RequestPetUseItem extends GameClientPacket
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+				player.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 				return;
 			}
 		}
@@ -160,7 +160,7 @@ public class RequestPetUseItem extends GameClientPacket
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS));
+			player.sendPacket(new SystemMessage(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM));
 		}
 	}
 	

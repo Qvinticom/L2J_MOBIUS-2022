@@ -50,7 +50,7 @@ public class PetStatus extends SummonStatus
 		
 		if (attacker != null)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.PET_RECEIVED_S2_DAMAGE_BY_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PET_RECEIVED_S2_DAMAGE_CAUSED_BY_S1);
 			if (attacker instanceof NpcInstance)
 			{
 				sm.addNpcName(((NpcInstance) attacker).getTemplate().getIdTemplate());

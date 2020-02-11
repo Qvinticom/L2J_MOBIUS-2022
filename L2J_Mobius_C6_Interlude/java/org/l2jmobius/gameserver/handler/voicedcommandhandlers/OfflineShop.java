@@ -85,7 +85,7 @@ public class OfflineShop implements IVoicedCommandHandler
 		
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) && (!player.isGM() || !Config.GM_RESTART_FIGHTING))
 		{
-			player.sendPacket(SystemMessageId.CANT_LOGOUT_WHILE_FIGHTING);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_EXIT_WHILE_IN_COMBAT);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}

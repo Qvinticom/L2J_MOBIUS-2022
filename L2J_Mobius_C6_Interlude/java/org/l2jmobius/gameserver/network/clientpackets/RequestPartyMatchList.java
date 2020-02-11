@@ -80,7 +80,7 @@ public class RequestPartyMatchList extends GameClientPacket
 					}
 					
 					member.sendPacket(new PartyMatchDetail(room));
-					member.sendPacket(SystemMessageId.PARTY_ROOM_REVISED);
+					member.sendPacket(SystemMessageId.THE_PARTY_ROOM_S_INFORMATION_HAS_BEEN_REVISED);
 				}
 			}
 		}
@@ -118,7 +118,7 @@ public class RequestPartyMatchList extends GameClientPacket
 			player.sendPacket(new PartyMatchDetail(room));
 			player.sendPacket(new ExPartyRoomMember(room, 1));
 			
-			player.sendPacket(SystemMessageId.PARTY_ROOM_CREATED);
+			player.sendPacket(SystemMessageId.A_PARTY_ROOM_HAS_BEEN_CREATED);
 			
 			player.setPartyRoom(maxId);
 			player.broadcastUserInfo();

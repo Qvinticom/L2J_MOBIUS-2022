@@ -190,7 +190,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
@@ -252,7 +252,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			activeChar.sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
 			return;
 		}
 		
@@ -335,7 +335,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
@@ -358,13 +358,13 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
 		if (player.getName().equals(activeChar.getName()))
 		{
-			player.sendPacket(SystemMessageId.CANNOT_USE_ON_YOURSELF);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ON_YOURSELF);
 		}
 		else
 		{
@@ -399,7 +399,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
@@ -460,7 +460,7 @@ public class AdminSkill implements IAdminCommandHandler
 		else
 		{
 			showMainPage(activeChar);
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
@@ -517,7 +517,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
@@ -553,7 +553,7 @@ public class AdminSkill implements IAdminCommandHandler
 		else
 		{
 			showMainPage(activeChar);
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			
 			return;
 		}
@@ -578,7 +578,7 @@ public class AdminSkill implements IAdminCommandHandler
 		if (skill != null)
 		{
 			final String skillname = skill.getName();
-			final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_SKILL_S1_ADDED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED);
 			sm.addSkillName(id);
 			player.sendPacket(sm);
 			player.getClan().broadcastToOnlineMembers(sm);

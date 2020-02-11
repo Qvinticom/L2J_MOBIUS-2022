@@ -101,7 +101,7 @@ public class SignsPriestInstance extends FolkInstance
 				{
 					if (!player.getInventory().validateCapacity(1))
 					{
-						player.sendPacket(SystemMessageId.INVENTORY_VOLUME);
+						player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_YOUR_INVENTORY_VOLUME_LIMIT_AND_CANNOT_TAKE_THIS_ITEM);
 						break;
 					}
 					
@@ -165,7 +165,7 @@ public class SignsPriestInstance extends FolkInstance
 								boolean allowJoinDawn = false;
 								if (player.destroyItemByItemId("SevenSigns", SevenSigns.CERTIFICATE_OF_APPROVAL_ID, 1, this, false))
 								{
-									sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
+									sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 									sm.addNumber(1);
 									sm.addItemName(SevenSigns.CERTIFICATE_OF_APPROVAL_ID);
 									player.sendPacket(sm);
@@ -173,7 +173,7 @@ public class SignsPriestInstance extends FolkInstance
 								}
 								else if (player.reduceAdena("SevenSigns", SevenSigns.ADENA_JOIN_DAWN_COST, this, false))
 								{
-									sm = new SystemMessage(SystemMessageId.DISSAPEARED_ADENA);
+									sm = new SystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED);
 									sm.addNumber(SevenSigns.ADENA_JOIN_DAWN_COST);
 									player.sendPacket(sm);
 									allowJoinDawn = true;
@@ -190,28 +190,28 @@ public class SignsPriestInstance extends FolkInstance
 					// Joined Dawn
 					if (cabal == SevenSigns.CABAL_DAWN)
 					{
-						player.sendPacket(SystemMessageId.SEVENSIGNS_PARTECIPATION_DAWN);
+						player.sendPacket(SystemMessageId.YOU_WILL_PARTICIPATE_IN_THE_SEVEN_SIGNS_AS_A_MEMBER_OF_THE_LORDS_OF_DAWN);
 					}
 					else
 					{
-						player.sendPacket(SystemMessageId.SEVENSIGNS_PARTECIPATION_DUSK); // Joined Dusk
+						player.sendPacket(SystemMessageId.YOU_WILL_PARTICIPATE_IN_THE_SEVEN_SIGNS_AS_A_MEMBER_OF_THE_REVOLUTIONARIES_OF_DUSK); // Joined Dusk
 					}
 					// Show a confirmation message to the user, indicating which seal they chose.
 					switch (newSeal)
 					{
 						case SevenSigns.SEAL_AVARICE:
 						{
-							player.sendPacket(SystemMessageId.FIGHT_FOR_AVARICE);
+							player.sendPacket(SystemMessageId.YOU_VE_CHOSEN_TO_FIGHT_FOR_THE_SEAL_OF_AVARICE_DURING_THIS_QUEST_EVENT_PERIOD);
 							break;
 						}
 						case SevenSigns.SEAL_GNOSIS:
 						{
-							player.sendPacket(SystemMessageId.FIGHT_FOR_GNOSIS);
+							player.sendPacket(SystemMessageId.YOU_VE_CHOSEN_TO_FIGHT_FOR_THE_SEAL_OF_GNOSIS_DURING_THIS_QUEST_EVENT_PERIOD);
 							break;
 						}
 						case SevenSigns.SEAL_STRIFE:
 						{
-							player.sendPacket(SystemMessageId.FIGHT_FOR_STRIFE);
+							player.sendPacket(SystemMessageId.YOU_VE_CHOSEN_TO_FIGHT_FOR_THE_SEAL_OF_STRIFE_DURING_THIS_QUEST_EVENT_PERIOD);
 							break;
 						}
 					}
@@ -232,7 +232,7 @@ public class SignsPriestInstance extends FolkInstance
 					boolean stonesFound = false;
 					if (contribScore == Config.ALT_MAXIMUM_PLAYER_CONTRIB)
 					{
-						player.sendPacket(SystemMessageId.CONTRIB_SCORE_EXCEEDED);
+						player.sendPacket(SystemMessageId.CONTRIBUTION_LEVEL_HAS_EXCEEDED_THE_LIMIT_YOU_MAY_NOT_CONTINUE);
 						break;
 					}
 					int redContribCount = 0;
@@ -311,7 +311,7 @@ public class SignsPriestInstance extends FolkInstance
 					
 					contribScore = SevenSigns.getInstance().addPlayerStoneContrib(player, blueContribCount, greenContribCount, redContribCount);
 					
-					sm = new SystemMessage(SystemMessageId.CONTRIB_SCORE_INCREASED);
+					sm = new SystemMessage(SystemMessageId.YOUR_CONTRIBUTION_SCORE_IS_INCREASED_BY_S1);
 					sm.addNumber(contribScore);
 					player.sendPacket(sm);
 					

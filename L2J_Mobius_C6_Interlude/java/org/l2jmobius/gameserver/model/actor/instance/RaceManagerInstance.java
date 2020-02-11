@@ -58,7 +58,7 @@ public class RaceManagerInstance extends FolkInstance
 		{
 			if (!Config.ALLOW_RACE || (MonsterRace.getInstance().getCurrentRaceState() != RaceState.ACCEPTING_BETS))
 			{
-				player.sendPacket(SystemMessageId.MONSRACE_TICKETS_NOT_AVAILABLE);
+				player.sendPacket(SystemMessageId.MONSTER_RACE_TICKETS_ARE_NO_LONGER_AVAILABLE);
 				super.onBypassFeedback(player, "Chat 0");
 				return;
 			}
@@ -171,7 +171,7 @@ public class RaceManagerInstance extends FolkInstance
 				item.setCustomType2(TICKET_PRICES[priceId - 1] / 100);
 				
 				player.addItem("Race", item, player, false);
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ACQUIRED).addNumber(MonsterRace.getInstance().getRaceNumber()).addItemName(4443));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ACQUIRED_S1_S2).addNumber(MonsterRace.getInstance().getRaceNumber()).addItemName(4443));
 				
 				// Refresh lane bet.
 				MonsterRace.getInstance().setBetOnLane(ticket, TICKET_PRICES[priceId - 1], true);
@@ -187,7 +187,7 @@ public class RaceManagerInstance extends FolkInstance
 		{
 			if (!Config.ALLOW_RACE || (MonsterRace.getInstance().getCurrentRaceState() == RaceState.ACCEPTING_BETS))
 			{
-				player.sendPacket(SystemMessageId.MONSRACE_NO_PAYOUT_INFO);
+				player.sendPacket(SystemMessageId.MONSTER_RACE_PAYOUT_INFORMATION_IS_NOT_AVAILABLE_WHILE_TICKETS_ARE_BEING_SOLD);
 				super.onBypassFeedback(player, "Chat 0");
 				return;
 			}

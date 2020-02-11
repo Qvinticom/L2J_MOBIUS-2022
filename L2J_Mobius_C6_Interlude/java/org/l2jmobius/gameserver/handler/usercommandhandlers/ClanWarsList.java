@@ -63,7 +63,7 @@ public class ClanWarsList implements IUserCommandHandler
 			
 			if (id == 88) // Attack List
 			{
-				player.sendPacket(SystemMessageId.CLANS_YOU_DECLARED_WAR_ON);
+				player.sendPacket(SystemMessageId.CLANS_YOU_VE_DECLARED_WAR_ON);
 				statement = con.prepareStatement("select clan_name,clan_id,ally_id,ally_name from clan_data,clan_wars where clan1=? and clan_id=clan2 and clan2 not in (select clan1 from clan_wars where clan2=?)");
 				statement.setInt(1, clan.getClanId());
 				statement.setInt(2, clan.getClanId());
@@ -98,14 +98,14 @@ public class ClanWarsList implements IUserCommandHandler
 				}
 				else // Target Without Ally
 				{
-					sm = new SystemMessage(SystemMessageId.S1_NO_ALLI_EXISTS);
+					sm = new SystemMessage(SystemMessageId.S1_NO_ALLIANCE_EXISTS);
 					sm.addString(clanName);
 				}
 				
 				player.sendPacket(sm);
 			}
 			
-			player.sendPacket(SystemMessageId.FRIEND_LIST_FOOT);
+			player.sendPacket(SystemMessageId.EMPTY_3);
 			
 			rset.close();
 			statement.close();

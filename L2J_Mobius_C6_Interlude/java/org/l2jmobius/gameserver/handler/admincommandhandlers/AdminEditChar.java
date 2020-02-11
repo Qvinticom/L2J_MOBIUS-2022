@@ -166,7 +166,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				if (oldName == null)
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				BuilderUtil.sendSysMessage(activeChar, "Name changed from " + oldName + " to " + val);
@@ -240,7 +240,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					showCharacterInfo(activeChar, target);
 					return true;
 				}
-				activeChar.sendPacket(SystemMessageId.CHARACTER_DOES_NOT_EXIST);
+				activeChar.sendPacket(SystemMessageId.THAT_CHARACTER_DOES_NOT_EXIST);
 				return false;
 			}
 			case "admin_show_characters":
@@ -608,7 +608,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				return true;

@@ -56,7 +56,7 @@ public class PetStat extends SummonStat
 			return false;
 		}
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.PET_EARNED_S1_EXP);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PET_GAINED_S1_EXPERIENCE_POINTS);
 		sm.addNumber((int) addToExp);
 		
 		getActiveChar().getOwner().sendPacket(sm);

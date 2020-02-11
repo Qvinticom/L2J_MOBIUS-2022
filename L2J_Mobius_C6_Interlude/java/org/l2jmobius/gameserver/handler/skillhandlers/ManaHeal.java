@@ -64,14 +64,14 @@ public class ManaHeal implements ISkillHandler
 			
 			if ((actChar instanceof PlayerInstance) && (actChar != target))
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_MP_RESTORED_BY_S1);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_MP_HAS_BEEN_RESTORED_BY_S1);
 				sm.addString(actChar.getName());
 				sm.addNumber((int) mp);
 				target.sendPacket(sm);
 			}
 			else
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_MP_RESTORED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_MP_HAS_BEEN_RESTORED);
 				sm.addNumber((int) mp);
 				target.sendPacket(sm);
 			}

@@ -57,7 +57,7 @@ public class PaganKeys implements IItemHandler
 		
 		if (!(target instanceof DoorInstance))
 		{
-			player.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

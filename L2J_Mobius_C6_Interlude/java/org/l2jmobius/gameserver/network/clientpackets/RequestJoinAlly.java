@@ -51,7 +51,7 @@ public class RequestJoinAlly extends GameClientPacket
 		
 		if (player.getClan() == null)
 		{
-			player.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER);
+			player.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER_AND_CANNOT_PERFORM_THIS_ACTION);
 			return;
 		}
 		
@@ -68,7 +68,7 @@ public class RequestJoinAlly extends GameClientPacket
 			return;
 		}
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S2_ALLIANCE_LEADER_OF_S1_REQUESTED_ALLIANCE);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_LEADER_S2_HAS_REQUESTED_AN_ALLIANCE);
 		sm.addString(player.getClan().getAllyName());
 		sm.addString(player.getName());
 		target.sendPacket(sm);

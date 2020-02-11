@@ -125,7 +125,7 @@ public class FishingChampionshipManager
 			len += Rnd.get(0, 3000) / 1000.;
 		}
 		
-		pl.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CAUGHT_FISH_S1_LENGTH).addString(String.valueOf(len)));
+		pl.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CAUGHT_A_FISH_S1_IN_LENGTH).addString(String.valueOf(len)));
 		
 		if (_tmpPlayers.size() < 5)
 		{
@@ -136,14 +136,14 @@ public class FishingChampionshipManager
 					if (fisher.getLength() < len)
 					{
 						fisher.setLength(len);
-						pl.sendPacket(SystemMessageId.REGISTERED_IN_FISH_SIZE_RANKING);
+						pl.sendPacket(SystemMessageId.BECAUSE_OF_THE_SIZE_OF_FISH_CAUGHT_YOU_WILL_BE_REGISTERED_IN_THE_RANKING);
 						recalculateMinLength();
 					}
 					return;
 				}
 			}
 			_tmpPlayers.add(new Fisher(pl.getName(), len, 0));
-			pl.sendPacket(SystemMessageId.REGISTERED_IN_FISH_SIZE_RANKING);
+			pl.sendPacket(SystemMessageId.BECAUSE_OF_THE_SIZE_OF_FISH_CAUGHT_YOU_WILL_BE_REGISTERED_IN_THE_RANKING);
 			recalculateMinLength();
 		}
 		else if (_minFishLength < len)
@@ -155,7 +155,7 @@ public class FishingChampionshipManager
 					if (fisher.getLength() < len)
 					{
 						fisher.setLength(len);
-						pl.sendPacket(SystemMessageId.REGISTERED_IN_FISH_SIZE_RANKING);
+						pl.sendPacket(SystemMessageId.BECAUSE_OF_THE_SIZE_OF_FISH_CAUGHT_YOU_WILL_BE_REGISTERED_IN_THE_RANKING);
 						recalculateMinLength();
 					}
 					return;
@@ -174,7 +174,7 @@ public class FishingChampionshipManager
 			}
 			_tmpPlayers.remove(minFisher);
 			_tmpPlayers.add(new Fisher(pl.getName(), len, 0));
-			pl.sendPacket(SystemMessageId.REGISTERED_IN_FISH_SIZE_RANKING);
+			pl.sendPacket(SystemMessageId.BECAUSE_OF_THE_SIZE_OF_FISH_CAUGHT_YOU_WILL_BE_REGISTERED_IN_THE_RANKING);
 			recalculateMinLength();
 		}
 	}

@@ -64,7 +64,7 @@ public class RequestRestart extends GameClientPacket
 		
 		if (player.isInsideZone(ZoneId.NO_RESTART))
 		{
-			player.sendPacket(SystemMessageId.NO_RESTART_HERE);
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_RESTART_IN_THIS_LOCATION);
 			sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
@@ -88,7 +88,7 @@ public class RequestRestart extends GameClientPacket
 		// Check if player is in combat
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) && (!player.isGM() || !Config.GM_RESTART_FIGHTING))
 		{
-			player.sendPacket(SystemMessageId.CANT_RESTART_WHILE_FIGHTING);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_RESTART_WHILE_IN_COMBAT);
 			sendPacket(RestartResponse.valueOf(false));
 			return;
 		}

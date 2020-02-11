@@ -60,7 +60,7 @@ public class MoveBackwardToLocation extends GameClientPacket
 			if (Config.L2WALKER_PROTECTION)
 			{
 				final PlayerInstance player = getClient().getPlayer();
-				player.sendPacket(SystemMessageId.HACKING_TOOL);
+				player.sendPacket(SystemMessageId.A_HACKING_TOOL_HAS_BEEN_DISCOVERED_PLEASE_TRY_PLAYING_AGAIN_AFTER_CLOSING_UNNECESSARY_PROGRAMS);
 				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " trying to use L2Walker!", IllegalPlayerAction.PUNISH_KICK);
 			}
 		}

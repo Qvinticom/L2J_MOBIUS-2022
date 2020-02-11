@@ -55,7 +55,7 @@ public class TradeRequest extends GameClientPacket
 		final WorldObject target = World.getInstance().findObject(_objectId);
 		if ((target == null) || !player.getKnownList().knowsObject(target) || !(target instanceof PlayerInstance) || (target.getObjectId() == player.getObjectId()))
 		{
-			player.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			player.sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -204,7 +204,7 @@ public class TradeRequest extends GameClientPacket
 		
 		if (player.getDistanceSq(partner) > 22500) // 150
 		{
-			player.sendPacket(SystemMessageId.TARGET_TOO_FAR);
+			player.sendPacket(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -219,7 +219,7 @@ public class TradeRequest extends GameClientPacket
 		
 		if ((player.getPrivateStoreType() != 0) || (partner.getPrivateStoreType() != 0))
 		{
-			player.sendPacket(SystemMessageId.CANNOT_TRADE_DISCARD_DROP_ITEM_WHILE_IN_SHOPMODE);
+			player.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -233,14 +233,14 @@ public class TradeRequest extends GameClientPacket
 		
 		if (player.isProcessingTransaction())
 		{
-			player.sendPacket(SystemMessageId.ALREADY_TRADING);
+			player.sendPacket(SystemMessageId.YOU_ARE_ALREADY_TRADING_WITH_SOMEONE);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (partner.isProcessingRequest() || partner.isProcessingTransaction())
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_BUSY_TRY_LATER);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_BUSY_PLEASE_TRY_AGAIN_LATER);
 			sm.addString(partner.getName());
 			player.sendPacket(sm);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -249,14 +249,14 @@ public class TradeRequest extends GameClientPacket
 		
 		if (Util.calculateDistance(player, partner, true) > 150)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.TARGET_TOO_FAR));
+			player.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE));
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		player.onTransactionRequest(partner);
 		partner.sendPacket(new SendTradeRequest(player.getObjectId()));
-		final SystemMessage sm = new SystemMessage(SystemMessageId.REQUEST_S1_FOR_TRADE);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_TRADE_WITH_S1);
 		sm.addString(partner.getName());
 		player.sendPacket(sm);
 	}

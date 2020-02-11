@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.zone.type;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -42,7 +42,7 @@ public class ArenaZone extends ZoneRespawn
 		
 		if (creature instanceof PlayerInstance)
 		{
-			((PlayerInstance) creature).sendPacket(SystemMessageId.ENTERED_COMBAT_ZONE);
+			((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
 		}
 	}
 	
@@ -54,7 +54,7 @@ public class ArenaZone extends ZoneRespawn
 		
 		if (creature instanceof PlayerInstance)
 		{
-			((PlayerInstance) creature).sendPacket(SystemMessageId.LEFT_COMBAT_ZONE);
+			((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 		}
 	}
 	

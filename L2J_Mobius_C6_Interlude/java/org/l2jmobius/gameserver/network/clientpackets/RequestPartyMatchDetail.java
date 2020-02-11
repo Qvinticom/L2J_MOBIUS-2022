@@ -86,7 +86,7 @@ public class RequestPartyMatchDetail extends GameClientPacket
 				}
 				
 				_member.sendPacket(new ExManagePartyRoomMember(player, room, 0));
-				_member.sendPacket(new SystemMessage(SystemMessageId.S1_ENTERED_PARTY_ROOM).addString(player.getName()));
+				_member.sendPacket(new SystemMessage(SystemMessageId.S1_HAS_ENTERED_THE_PARTY_ROOM).addString(player.getName()));
 			}
 			room.addMember(player);
 			
@@ -95,7 +95,7 @@ public class RequestPartyMatchDetail extends GameClientPacket
 		}
 		else
 		{
-			player.sendPacket(SystemMessageId.CANT_ENTER_PARTY_ROOM);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_ENTER_THAT_PARTY_ROOM);
 		}
 	}
 }

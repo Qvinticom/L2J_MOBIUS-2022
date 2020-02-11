@@ -52,7 +52,7 @@ public class ScrollOfResurrection implements IItemHandler
 		
 		if (player.isSitting())
 		{
-			player.sendPacket(SystemMessageId.CANT_MOVE_SITTING);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SITTING);
 			return;
 		}
 		
@@ -106,7 +106,7 @@ public class ScrollOfResurrection implements IItemHandler
 				if ((castle != null) && castle.getSiege().isInProgress())
 				{
 					condGood = false;
-					player.sendPacket(SystemMessageId.CANNOT_BE_RESURRECTED_DURING_SIEGE);
+					player.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEFIELDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
 				}
 				
 				if (targetPet != null)
@@ -117,11 +117,11 @@ public class ScrollOfResurrection implements IItemHandler
 						{
 							if (targetPet.getOwner().isRevivingPet())
 							{
-								player.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
+								player.sendPacket(SystemMessageId.RESURRECTION_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
 							}
 							else
 							{
-								player.sendPacket(SystemMessageId.PET_CANNOT_RES); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
+								player.sendPacket(SystemMessageId.A_PET_CANNOT_BE_RESURRECTED_WHILE_IT_S_OWNER_IS_IN_THE_PROCESS_OF_RESURRECTING); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
 							}
 							condGood = false;
 						}
@@ -143,11 +143,11 @@ public class ScrollOfResurrection implements IItemHandler
 					{
 						if (targetPlayer.isRevivingPet())
 						{
-							player.sendPacket(SystemMessageId.MASTER_CANNOT_RES); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
+							player.sendPacket(SystemMessageId.WHILE_A_PET_IS_ATTEMPTING_TO_RESURRECT_IT_CANNOT_HELP_IN_RESURRECTING_ITS_MASTER); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
 						}
 						else
 						{
-							player.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
+							player.sendPacket(SystemMessageId.RESURRECTION_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
 						}
 						condGood = false;
 					}
@@ -198,7 +198,7 @@ public class ScrollOfResurrection implements IItemHandler
 							return;
 						}
 						
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 						sm.addItemName(itemId);
 						player.sendPacket(sm);
 					}
@@ -207,7 +207,7 @@ public class ScrollOfResurrection implements IItemHandler
 		}
 		else
 		{
-			player.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			player.sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
 		}
 	}
 	

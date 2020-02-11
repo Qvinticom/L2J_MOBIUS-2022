@@ -46,7 +46,7 @@ public class RequestSocialAction extends GameClientPacket
 		// You cannot do anything else while fishing
 		if (player.isFishing())
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.CANNOT_DO_WHILE_FISHING_3));
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3));
 			return;
 		}
 		

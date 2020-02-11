@@ -151,7 +151,7 @@ public class PlayerStatus extends PlayableStatus
 		if ((attacker != null) && (attacker != getActiveChar()) && (fullValue > 0))
 		{
 			// Send a System Message to the PlayerInstance
-			final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_GAVE_YOU_S2_DMG);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_HIT_YOU_FOR_S2_DAMAGE);
 			if (attacker instanceof NpcInstance)
 			{
 				smsg.addNpcName(((NpcInstance) attacker).getTemplate().getIdTemplate());

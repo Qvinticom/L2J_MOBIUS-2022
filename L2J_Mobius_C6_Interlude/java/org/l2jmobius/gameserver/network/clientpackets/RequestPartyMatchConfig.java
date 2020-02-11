@@ -51,7 +51,7 @@ public class RequestPartyMatchConfig extends GameClientPacket
 		
 		if (!player.isInPartyMatchRoom() && (player.getParty() != null) && (player.getParty().getLeader() != player))
 		{
-			player.sendPacket(SystemMessageId.CANT_VIEW_PARTY_ROOMS);
+			player.sendPacket(SystemMessageId.THE_LIST_OF_PARTY_ROOMS_CAN_ONLY_BE_VIEWED_BY_A_PERSON_WHO_HAS_NOT_JOINED_A_PARTY_OR_WHO_IS_CURRENTLY_THE_LEADER_OF_A_PARTY);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

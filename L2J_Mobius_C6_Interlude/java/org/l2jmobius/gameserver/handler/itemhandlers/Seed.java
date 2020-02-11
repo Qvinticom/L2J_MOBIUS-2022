@@ -319,7 +319,7 @@ public class Seed implements IItemHandler
 		
 		if (!(target instanceof NpcInstance))
 		{
-			player.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -335,7 +335,7 @@ public class Seed implements IItemHandler
 		
 		if (monster.isDead())
 		{
-			player.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

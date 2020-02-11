@@ -75,12 +75,12 @@ public class AdminGmChat implements IAdminCommandHandler
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_MUST_SELECT_A_TARGET);
+			activeChar.sendPacket(SystemMessageId.SELECT_TARGET);
 			return;
 		}
 		if (!(target instanceof PlayerInstance))
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		final PlayerInstance player = (PlayerInstance) target;

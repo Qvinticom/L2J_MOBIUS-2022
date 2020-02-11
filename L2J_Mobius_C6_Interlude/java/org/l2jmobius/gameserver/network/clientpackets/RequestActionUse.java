@@ -186,7 +186,7 @@ public class RequestActionUse extends GameClientPacket
 					}
 					if ((target instanceof PlayerInstance) && !player.getAccessLevel().allowPeaceAttack() && Creature.isInsidePeaceZone(pet, target) && (!player.isInFunEvent() || !((PlayerInstance) target).isInFunEvent()))
 					{
-						player.sendPacket(SystemMessageId.TARGET_IN_PEACEZONE);
+						player.sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
 						return;
 					}
 					if (target.isAutoAttackable(player) || _ctrlPressed)
@@ -223,7 +223,7 @@ public class RequestActionUse extends GameClientPacket
 					// returns pet to control item
 					if (pet.isDead())
 					{
-						player.sendPacket(SystemMessageId.DEAD_PET_CANNOT_BE_RETURNED);
+						player.sendPacket(SystemMessageId.A_DEAD_PET_CANNOT_BE_SENT_BACK);
 					}
 					else if (pet.isAttackingNow() || pet.isRooted())
 					{
@@ -244,7 +244,7 @@ public class RequestActionUse extends GameClientPacket
 						}
 						else
 						{
-							player.sendPacket(SystemMessageId.YOU_CANNOT_RESTORE_HUNGRY_PETS);
+							player.sendPacket(SystemMessageId.YOU_MAY_NOT_RESTORE_A_HUNGRY_PET);
 						}
 					}
 				}
@@ -258,42 +258,42 @@ public class RequestActionUse extends GameClientPacket
 					if (player.isDead())
 					{
 						// A strider cannot be ridden when dead
-						player.sendPacket(new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_DEAD));
+						player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHEN_DEAD));
 					}
 					else if (pet.isDead())
 					{
 						// A dead strider cannot be ridden.
-						player.sendPacket(new SystemMessage(SystemMessageId.DEAD_STRIDER_CANT_BE_RIDDEN));
+						player.sendPacket(new SystemMessage(SystemMessageId.A_DEAD_STRIDER_CANNOT_BE_RIDDEN));
 					}
 					else if (pet.isInCombat() || pet.isRooted())
 					{
 						// A strider in battle cannot be ridden
-						player.sendPacket(new SystemMessage(SystemMessageId.STRIDER_IN_BATLLE_CANT_BE_RIDDEN));
+						player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_IN_BATTLE_CANNOT_BE_RIDDEN));
 					}
 					else if (player.isInCombat())
 					{
 						// A strider cannot be ridden while in battle
-						player.sendPacket(new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE));
+						player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE));
 					}
 					else if (player.isInFunEvent())
 					{
 						// A strider cannot be ridden while in event
-						player.sendPacket(new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE));
+						player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE));
 					}
 					else if (player.isSitting()) // Like L2OFF you can mount also during movement
 					{
 						// A strider can be ridden only when standing
-						player.sendPacket(new SystemMessage(SystemMessageId.STRIDER_CAN_BE_RIDDEN_ONLY_WHILE_STANDING));
+						player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CAN_BE_RIDDEN_ONLY_WHEN_STANDING));
 					}
 					else if (player.isFishing())
 					{
 						// You can't mount, dismount, break and drop items while fishing
-						player.sendPacket(new SystemMessage(SystemMessageId.CANNOT_DO_WHILE_FISHING_2));
+						player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_2));
 					}
 					else if (player.isCursedWeaponEquiped())
 					{
 						// You can't mount, dismount, break and drop items while weilding a cursed weapon
-						player.sendPacket(new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE));
+						player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE));
 					}
 					else if (!pet.isDead() && !player.isMounted())
 					{

@@ -798,21 +798,21 @@ public class ItemInstance extends WorldObject
 			{
 				case 10:
 				{
-					sm = new SystemMessage(SystemMessageId.S1S_REMAINING_MANA_IS_NOW_10);
+					sm = new SystemMessage(SystemMessageId.S1_S_REMAINING_MANA_IS_NOW_10);
 					sm.addString(_item.getName());
 					player.sendPacket(sm);
 					break;
 				}
 				case 5:
 				{
-					sm = new SystemMessage(SystemMessageId.S1S_REMAINING_MANA_IS_NOW_5);
+					sm = new SystemMessage(SystemMessageId.S1_S_REMAINING_MANA_IS_NOW_5);
 					sm.addString(_item.getName());
 					player.sendPacket(sm);
 					break;
 				}
 				case 1:
 				{
-					sm = new SystemMessage(SystemMessageId.S1S_REMAINING_MANA_IS_NOW_1);
+					sm = new SystemMessage(SystemMessageId.S1_S_REMAINING_MANA_IS_NOW_1_IT_WILL_DISAPPEAR_SOON);
 					sm.addString(_item.getName());
 					player.sendPacket(sm);
 					break;
@@ -821,7 +821,7 @@ public class ItemInstance extends WorldObject
 			
 			if (_mana == 0) // The life time has expired
 			{
-				sm = new SystemMessage(SystemMessageId.S1S_REMAINING_MANA_IS_NOW_0);
+				sm = new SystemMessage(SystemMessageId.S1_S_REMAINING_MANA_IS_NOW_0_AND_THE_ITEM_HAS_DISAPPEARED);
 				sm.addString(_item.getName());
 				player.sendPacket(sm);
 				

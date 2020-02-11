@@ -57,7 +57,7 @@ public class CommunityBoard
 		
 		if (!Config.ENABLE_COMMUNITY_BOARD)
 		{
-			player.sendPacket(SystemMessageId.CB_OFFLINE);
+			player.sendPacket(SystemMessageId.THE_COMMUNITY_SERVER_IS_CURRENTLY_OFFLINE);
 			return;
 		}
 		
@@ -113,7 +113,7 @@ public class CommunityBoard
 		
 		if (!Config.ENABLE_COMMUNITY_BOARD)
 		{
-			player.sendPacket(SystemMessageId.CB_OFFLINE);
+			player.sendPacket(SystemMessageId.THE_COMMUNITY_SERVER_IS_CURRENTLY_OFFLINE);
 			return;
 		}
 		

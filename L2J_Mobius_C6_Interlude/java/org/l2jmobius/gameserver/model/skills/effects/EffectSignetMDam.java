@@ -130,7 +130,7 @@ public class EffectSignetMDam extends Effect
 				
 				if (mpConsume > caster.getStatus().getCurrentMp())
 				{
-					caster.sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
+					caster.sendPacket(SystemMessageId.YOUR_SKILL_WAS_REMOVED_DUE_TO_A_LACK_OF_MP);
 					return false;
 				}
 				

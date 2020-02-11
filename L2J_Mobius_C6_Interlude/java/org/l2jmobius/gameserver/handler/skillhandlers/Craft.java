@@ -51,7 +51,7 @@ public class Craft implements ISkillHandler
 		
 		if (player.getPrivateStoreType() != 0)
 		{
-			player.sendPacket(SystemMessageId.CANNOT_CREATED_WHILE_ENGAGED_IN_TRADING);
+			player.sendPacket(SystemMessageId.AN_ITEM_MAY_NOT_BE_CREATED_WHILE_ENGAGED_IN_TRADING);
 			return;
 		}
 		RecipeController.getInstance().requestBookOpen(player, (skill.getSkillType() == SkillType.DWARVEN_CRAFT));

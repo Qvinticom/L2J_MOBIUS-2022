@@ -62,7 +62,7 @@ public class Spoil implements ISkillHandler
 			
 			if (target.isSpoil())
 			{
-				creature.sendPacket(new SystemMessage(SystemMessageId.ALREDAY_SPOILED));
+				creature.sendPacket(new SystemMessage(SystemMessageId.IT_HAS_ALREADY_BEEN_SPOILED));
 				continue;
 			}
 			
@@ -75,11 +75,11 @@ public class Spoil implements ISkillHandler
 				{
 					target.setSpoil(true);
 					target.setSpoiledBy(creature.getObjectId());
-					creature.sendPacket(new SystemMessage(SystemMessageId.SPOIL_SUCCESS));
+					creature.sendPacket(new SystemMessage(SystemMessageId.THE_SPOIL_CONDITION_HAS_BEEN_ACTIVATED));
 				}
 				else
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 					sm.addString(target.getName());
 					sm.addSkillName(skill.getDisplayId());
 					creature.sendPacket(sm);

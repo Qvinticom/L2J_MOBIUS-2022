@@ -53,7 +53,7 @@ public class PcPoint implements Runnable
 					
 					player.addPcBangScore(score);
 					
-					final SystemMessage sm = new SystemMessage(SystemMessageId.DOUBLE_POINTS_YOU_GOT_$51_GLASSES_PC);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.DOUBLE_POINTS_YOU_ACQUIRED_S1_PC_BANG_POINT);
 					sm.addNumber(score);
 					player.sendPacket(sm);
 					
@@ -63,7 +63,7 @@ public class PcPoint implements Runnable
 				{
 					player.addPcBangScore(score);
 					
-					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_RECEVIED_$51_GLASSES_PC);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_ACQUIRED_S1_PC_BANG_POINT);
 					sm.addNumber(score);
 					player.sendPacket(sm);
 					

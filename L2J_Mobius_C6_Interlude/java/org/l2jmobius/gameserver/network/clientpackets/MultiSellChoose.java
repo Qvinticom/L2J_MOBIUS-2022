@@ -153,7 +153,7 @@ public class MultiSellChoose extends GameClientPacket
 				{
 					if (((double) ex.getItemCount() + e.getItemCount()) > Integer.MAX_VALUE)
 					{
-						player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_QUANTITY_THAT_CAN_BE_INPUTTED);
+						player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
 						ingredientsList.clear();
 						return;
 					}
@@ -188,7 +188,7 @@ public class MultiSellChoose extends GameClientPacket
 		{
 			if ((e.getItemCount() * _amount) > Integer.MAX_VALUE)
 			{
-				player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_QUANTITY_THAT_CAN_BE_INPUTTED);
+				player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
 				ingredientsList.clear();
 				return;
 			}
@@ -199,7 +199,7 @@ public class MultiSellChoose extends GameClientPacket
 				// otherwise, check only the count of items with exactly the needed enchantment level
 				if (inv.getInventoryItemCount(e.getItemId(), maintainEnchantment ? e.getEnchantmentLevel() : -1) < (Config.ALT_BLACKSMITH_USE_RECIPES || !e.getMantainIngredient() ? e.getItemCount() * _amount : e.getItemCount()))
 				{
-					player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
+					player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 					ingredientsList.clear();
 					return;
 				}
@@ -210,7 +210,7 @@ public class MultiSellChoose extends GameClientPacket
 				{
 					if (player.getClan() == null)
 					{
-						player.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER);
+						player.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER_AND_CANNOT_PERFORM_THIS_ACTION);
 						return;
 					}
 					
@@ -228,7 +228,7 @@ public class MultiSellChoose extends GameClientPacket
 				}
 				if ((e.getItemId() == 65436) && ((e.getItemCount() * _amount) > player.getPcBangScore()))
 				{
-					player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
+					player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 					return;
 				}
 			}
@@ -246,12 +246,12 @@ public class MultiSellChoose extends GameClientPacket
 				{
 					if ((player.getInventoryLimit() < (inv.getSize() + _amount)) && !ItemTable.getInstance().createDummyItem(a.getItemId()).isStackable())
 					{
-						player.sendPacket(SystemMessageId.SLOTS_FULL);
+						player.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
 						return;
 					}
 					if ((player.getInventoryLimit() < inv.getSize()) && ItemTable.getInstance().createDummyItem(a.getItemId()).isStackable())
 					{
-						player.sendPacket(SystemMessageId.SLOTS_FULL);
+						player.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
 						return;
 					}
 				}
@@ -359,13 +359,13 @@ public class MultiSellChoose extends GameClientPacket
 			{
 				final int repCost = player.getClan().getReputationScore() - e.getItemCount();
 				player.getClan().setReputationScore(repCost, true);
-				player.sendPacket(new SystemMessage(SystemMessageId.S1_DEDUCTED_FROM_CLAN_REP).addNumber(e.getItemCount()));
+				player.sendPacket(new SystemMessage(SystemMessageId.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION_SCORE).addNumber(e.getItemCount()));
 				player.getClan().broadcastToOnlineMembers(new PledgeShowInfoUpdate(player.getClan()));
 			}
 			else
 			{
 				player.reducePcBangScore(e.getItemCount() * _amount);
-				player.sendPacket(new SystemMessage(SystemMessageId.USING_S1_PCPOINT).addNumber(e.getItemCount()));
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_USING_S1_POINT).addNumber(e.getItemCount()));
 			}
 		}
 		// Generate the appropriate items
@@ -396,7 +396,7 @@ public class MultiSellChoose extends GameClientPacket
 			
 			if ((e.getItemCount() * _amount) > 1)
 			{
-				sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
+				sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 				sm.addItemName(e.getItemId());
 				sm.addNumber(e.getItemCount() * _amount);
 				player.sendPacket(sm);
@@ -405,13 +405,13 @@ public class MultiSellChoose extends GameClientPacket
 			{
 				if (maintainEnchantment && (e.getEnchantmentLevel() > 0))
 				{
-					sm = new SystemMessage(SystemMessageId.ACQUIRED);
+					sm = new SystemMessage(SystemMessageId.ACQUIRED_S1_S2);
 					sm.addNumber(e.getEnchantmentLevel());
 					sm.addItemName(e.getItemId());
 				}
 				else
 				{
-					sm = new SystemMessage(SystemMessageId.EARNED_ITEM);
+					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 					sm.addItemName(e.getItemId());
 				}
 				player.sendPacket(sm);

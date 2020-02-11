@@ -61,12 +61,12 @@ public class RequestExAcceptJoinMPCC extends GameClientPacket
 			requestor.getParty().getCommandChannel().addParty(player.getParty());
 			if (!newCc)
 			{
-				player.sendPacket(SystemMessageId.JOINED_COMMAND_CHANNEL);
+				player.sendPacket(SystemMessageId.YOU_HAVE_JOINED_THE_COMMAND_CHANNEL);
 			}
 		}
 		else
 		{
-			requestor.sendPacket(new SystemMessage(SystemMessageId.S1_DECLINED_CHANNEL_INVITATION).addString(player.getName()));
+			requestor.sendPacket(new SystemMessage(SystemMessageId.S1_HAS_DECLINED_THE_CHANNEL_INVITATION).addString(player.getName()));
 		}
 		
 		player.setActiveRequester(null);

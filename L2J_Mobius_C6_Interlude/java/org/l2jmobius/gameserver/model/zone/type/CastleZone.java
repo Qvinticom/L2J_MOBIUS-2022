@@ -24,8 +24,8 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
 import org.l2jmobius.gameserver.model.entity.siege.Castle;
-import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -74,7 +74,7 @@ public class CastleZone extends ZoneRespawn
 			
 			if (creature instanceof PlayerInstance)
 			{
-				((PlayerInstance) creature).sendPacket(SystemMessageId.ENTERED_COMBAT_ZONE);
+				((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
 			}
 		}
 	}
@@ -91,7 +91,7 @@ public class CastleZone extends ZoneRespawn
 			
 			if (creature instanceof PlayerInstance)
 			{
-				((PlayerInstance) creature).sendPacket(SystemMessageId.LEFT_COMBAT_ZONE);
+				((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 				
 				// Set pvp flag
 				if (((PlayerInstance) creature).getPvpFlag() == 0)
@@ -142,7 +142,7 @@ public class CastleZone extends ZoneRespawn
 					
 					if (creature instanceof PlayerInstance)
 					{
-						((PlayerInstance) creature).sendPacket(SystemMessageId.LEFT_COMBAT_ZONE);
+						((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 					}
 					
 					if (creature instanceof SiegeSummonInstance)

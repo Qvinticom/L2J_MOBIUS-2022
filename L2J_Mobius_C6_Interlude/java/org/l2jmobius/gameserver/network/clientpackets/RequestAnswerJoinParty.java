@@ -54,7 +54,7 @@ public class RequestAnswerJoinParty extends GameClientPacket
 		
 		if (player.isCursedWeaponEquiped() || requestor.isCursedWeaponEquiped())
 		{
-			requestor.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			requestor.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
@@ -64,7 +64,7 @@ public class RequestAnswerJoinParty extends GameClientPacket
 		{
 			if (requestor.isInParty() && (requestor.getParty().getMemberCount() >= 9))
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.PARTY_FULL);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.THE_PARTY_IS_FULL);
 				player.sendPacket(sm);
 				requestor.sendPacket(sm);
 				return;

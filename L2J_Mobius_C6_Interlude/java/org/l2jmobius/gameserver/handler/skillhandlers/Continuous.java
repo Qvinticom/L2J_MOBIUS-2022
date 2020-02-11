@@ -187,7 +187,7 @@ public class Continuous implements ISkillHandler
 				
 				if (!acted)
 				{
-					creature.sendPacket(new SystemMessage(SystemMessageId.ATTACK_FAILED));
+					creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_ATTACK_HAS_FAILED));
 					continue;
 				}
 			}
@@ -195,7 +195,7 @@ public class Continuous implements ISkillHandler
 			{
 				if (player != null)
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 					sm.addString(target.getName());
 					sm.addSkillName(skill.getDisplayId());
 					creature.sendPacket(sm);

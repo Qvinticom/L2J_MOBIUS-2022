@@ -70,7 +70,7 @@ public class BlessedSpiritShot implements IItemHandler
 		
 		if (player.isInOlympiadMode())
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_GRAND_OLYMPIAD_GAMES_MATCH);
 			sm.addString(item.getItemName());
 			player.sendPacket(sm);
 			
@@ -82,7 +82,7 @@ public class BlessedSpiritShot implements IItemHandler
 		{
 			if (!player.getAutoSoulShot().containsKey(itemId))
 			{
-				player.sendPacket(SystemMessageId.CANNOT_USE_SPIRITSHOTS);
+				player.sendPacket(SystemMessageId.YOU_MAY_NOT_USE_SPIRITSHOTS);
 			}
 			
 			return;
@@ -100,7 +100,7 @@ public class BlessedSpiritShot implements IItemHandler
 		{
 			if (!player.getAutoSoulShot().containsKey(itemId))
 			{
-				player.sendPacket(SystemMessageId.SPIRITSHOTS_GRADE_MISMATCH);
+				player.sendPacket(SystemMessageId.THE_SPIRITSHOT_DOES_NOT_MATCH_THE_WEAPON_S_GRADE);
 			}
 			return;
 		}
@@ -112,14 +112,14 @@ public class BlessedSpiritShot implements IItemHandler
 			{
 				player.removeAutoSoulShot(itemId);
 				player.sendPacket(new ExAutoSoulShot(itemId, 0));
-				final SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
 				sm.addString(item.getItem().getName());
 				player.sendPacket(sm);
 				
 				return;
 			}
 			
-			player.sendPacket(SystemMessageId.NOT_ENOUGH_SPIRITSHOTS);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SPIRITSHOTS_FOR_THAT);
 			return;
 		}
 		
@@ -127,7 +127,7 @@ public class BlessedSpiritShot implements IItemHandler
 		weaponInst.setChargedSpiritshot(ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
 		
 		// Send message to client
-		player.sendPacket(SystemMessageId.ENABLED_SPIRITSHOT);
+		player.sendPacket(SystemMessageId.POWER_OF_MANA_ENABLED);
 		Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, SKILL_IDS[weaponGrade], 1, 0, 0), 360000/* 600 */);
 	}
 	

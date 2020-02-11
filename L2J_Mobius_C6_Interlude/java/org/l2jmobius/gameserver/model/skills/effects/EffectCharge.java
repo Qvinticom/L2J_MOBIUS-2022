@@ -34,7 +34,7 @@ public class EffectCharge extends Effect
 		if (env.target instanceof PlayerInstance)
 		{
 			env.target.sendPacket(new EtcStatusUpdate((PlayerInstance) env.target));
-			final SystemMessage sm = new SystemMessage(SystemMessageId.FORCE_INCREASED_TO_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FORCE_HAS_INCREASED_TO_S1_LEVEL);
 			sm.addNumber(numCharges);
 			getEffected().sendPacket(sm);
 		}

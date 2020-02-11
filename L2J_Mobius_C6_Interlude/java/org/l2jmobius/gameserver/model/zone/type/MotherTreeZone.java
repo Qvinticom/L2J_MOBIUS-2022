@@ -52,7 +52,7 @@ public class MotherTreeZone extends ZoneType
 			}
 			
 			player.setInsideZone(ZoneId.MOTHERTREE, true);
-			player.sendPacket(SystemMessageId.ENTER_SHADOW_MOTHER_TREE);
+			player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_THE_SHADOW_OF_THE_MOTHER_TREE);
 		}
 	}
 	
@@ -62,7 +62,7 @@ public class MotherTreeZone extends ZoneType
 		if ((creature instanceof PlayerInstance) && creature.isInsideZone(ZoneId.MOTHERTREE))
 		{
 			creature.setInsideZone(ZoneId.MOTHERTREE, false);
-			((PlayerInstance) creature).sendPacket(SystemMessageId.EXIT_SHADOW_MOTHER_TREE);
+			((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_THE_SHADOW_OF_THE_MOTHER_TREE);
 		}
 	}
 	

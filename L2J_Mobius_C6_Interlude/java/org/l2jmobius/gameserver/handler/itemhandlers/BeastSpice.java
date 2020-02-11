@@ -46,7 +46,7 @@ public class BeastSpice implements IItemHandler
 		
 		if (!(player.getTarget() instanceof FeedableBeastInstance))
 		{
-			player.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			player.sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
 			return;
 		}
 		

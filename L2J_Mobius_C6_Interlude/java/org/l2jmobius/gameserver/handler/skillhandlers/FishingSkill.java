@@ -69,7 +69,7 @@ public class FishingSkill implements ISkillHandler
 		final ItemInstance weaponInst = creature.getActiveWeaponInstance();
 		if ((weaponInst == null) || (weaponItem == null) || (weaponItem.getItemType() != WeaponType.ROD))
 		{
-			creature.sendPacket(new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED));
+			creature.sendPacket(new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS));
 			return;
 		}
 		
@@ -85,7 +85,7 @@ public class FishingSkill implements ISkillHandler
 		int dmg = (int) (skill.getPower() * gradebonus * ss);
 		if (player.getSkillLevel(1315) <= (skill.getLevel() - 2)) // 1315 - Fish Expertise Penalty
 		{
-			player.sendPacket(SystemMessageId.REELING_PUMPING_3_LEVELS_HIGHER_THAN_FISHING_PENALTY);
+			player.sendPacket(SystemMessageId.DUE_TO_YOUR_REELING_AND_OR_PUMPING_SKILL_BEING_THREE_OR_MORE_LEVELS_HIGHER_THAN_YOUR_FISHING_SKILL_A_50_DAMAGE_PENALTY_WILL_BE_APPLIED);
 			pen = 50;
 			final int penatlydmg = dmg - pen;
 			if (player.isGM())

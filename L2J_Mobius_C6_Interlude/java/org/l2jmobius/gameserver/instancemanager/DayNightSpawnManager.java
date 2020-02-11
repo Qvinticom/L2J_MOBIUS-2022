@@ -260,7 +260,7 @@ public class DayNightSpawnManager
 			return;
 		}
 		
-		final SystemMessageId msg = (mode == 1 ? SystemMessageId.NIGHT_EFFECT_APPLIES : SystemMessageId.DAY_EFFECT_DISAPPEARS);
+		final SystemMessageId msg = (mode == 1 ? SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT : SystemMessageId.IT_IS_DAWN_AND_THE_EFFECT_OF_S1_WILL_NOW_DISAPPEAR);
 		final Collection<PlayerInstance> pls = World.getInstance().getAllPlayers();
 		for (PlayerInstance onlinePlayer : pls)
 		{

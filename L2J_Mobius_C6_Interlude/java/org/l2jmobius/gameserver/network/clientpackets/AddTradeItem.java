@@ -68,7 +68,7 @@ public class AddTradeItem extends GameClientPacket
 				LOGGER.warning("Character:" + player.getName() + " requested invalid trade object: " + _objectId);
 			}
 			
-			player.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 			player.getClient().sendPacket(ActionFailed.STATIC_PACKET);
 			player.cancelActiveTrade();
 			return;

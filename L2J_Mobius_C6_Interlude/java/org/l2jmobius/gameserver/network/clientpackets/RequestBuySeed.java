@@ -155,20 +155,20 @@ public class RequestBuySeed extends GameClientPacket
 		
 		if (!player.getInventory().validateWeight(totalWeight))
 		{
-			player.sendPacket(SystemMessageId.WEIGHT_LIMIT_EXCEEDED);
+			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
 			return;
 		}
 		
 		if (!player.getInventory().validateCapacity(slots))
 		{
-			player.sendPacket(SystemMessageId.SLOTS_FULL);
+			player.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
 			return;
 		}
 		
 		// Charge buyer
 		if ((totalPrice < 0) || !player.reduceAdena("Buy", (int) totalPrice, target, false))
 		{
-			player.sendPacket(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
 		
@@ -209,7 +209,7 @@ public class RequestBuySeed extends GameClientPacket
 			
 			// Send Char Buy Messages
 			SystemMessage sm = null;
-			sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
+			sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 			sm.addItemName(seedId);
 			sm.addNumber(count);
 			player.sendPacket(sm);

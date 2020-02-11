@@ -67,7 +67,7 @@ public class WarehouseInstance extends FolkInstance
 		
 		if (player.getActiveWarehouse().getSize() == 0)
 		{
-			player.sendPacket(SystemMessageId.NO_ITEM_DEPOSITED_IN_WH);
+			player.sendPacket(SystemMessageId.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE);
 			return;
 		}
 		
@@ -97,7 +97,7 @@ public class WarehouseInstance extends FolkInstance
 		{
 			if (player.getClan().getLevel() == 0)
 			{
-				player.sendPacket(SystemMessageId.ONLY_LEVEL_1_CLAN_OR_HIGHER_CAN_USE_WAREHOUSE);
+				player.sendPacket(SystemMessageId.ONLY_CLANS_OF_CLAN_LEVEL_1_OR_HIGHER_CAN_USE_A_CLAN_WAREHOUSE);
 			}
 			else
 			{
@@ -118,13 +118,13 @@ public class WarehouseInstance extends FolkInstance
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		if ((player.getClanPrivileges() & Clan.CP_CL_VIEW_WAREHOUSE) != Clan.CP_CL_VIEW_WAREHOUSE)
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_CLAN_WAREHOUSE);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_THE_CLAN_WAREHOUSE);
 			return;
 		}
 		
 		if (player.getClan().getLevel() == 0)
 		{
-			player.sendPacket(SystemMessageId.ONLY_LEVEL_1_CLAN_OR_HIGHER_CAN_USE_WAREHOUSE);
+			player.sendPacket(SystemMessageId.ONLY_CLANS_OF_CLAN_LEVEL_1_OR_HIGHER_CAN_USE_A_CLAN_WAREHOUSE);
 		}
 		else
 		{
@@ -159,7 +159,7 @@ public class WarehouseInstance extends FolkInstance
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.NO_ITEM_DEPOSITED_IN_WH);
+				player.sendPacket(SystemMessageId.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE);
 			}
 		}
 	}
@@ -173,7 +173,7 @@ public class WarehouseInstance extends FolkInstance
 		// No other chars in the account of this player
 		if (player.getAccountChars().size() == 0)
 		{
-			player.sendPacket(SystemMessageId.CHARACTER_DOES_NOT_EXIST);
+			player.sendPacket(SystemMessageId.THAT_CHARACTER_DOES_NOT_EXIST);
 		}
 		else // One or more chars other than this player for this account
 		{

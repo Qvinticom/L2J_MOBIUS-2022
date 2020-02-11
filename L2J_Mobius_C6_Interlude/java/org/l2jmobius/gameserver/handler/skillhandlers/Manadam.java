@@ -70,7 +70,7 @@ public class Manadam implements ISkillHandler
 			final boolean acted = Formulas.getInstance().calcMagicAffected(creature, target, skill);
 			if (target.isInvul() || !acted)
 			{
-				creature.sendPacket(new SystemMessage(SystemMessageId.MISSED_TARGET));
+				creature.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_MISSED));
 			}
 			else
 			{
@@ -88,7 +88,7 @@ public class Manadam implements ISkillHandler
 				sump.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
 				target.sendPacket(sump);
 				
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_MP_HAS_BEEN_DRAINED_BY_S1);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S_MP_HAS_BEEN_DRAINED_BY_S1);
 				if (creature instanceof NpcInstance)
 				{
 					final int mobId = ((NpcInstance) creature).getNpcId();
@@ -108,7 +108,7 @@ public class Manadam implements ISkillHandler
 				
 				if (creature instanceof PlayerInstance)
 				{
-					final SystemMessage sm2 = new SystemMessage(SystemMessageId.YOUR_OPPONENTS_MP_WAS_REDUCED_BY_S1);
+					final SystemMessage sm2 = new SystemMessage(SystemMessageId.YOUR_OPPONENT_S_MP_WAS_REDUCED_BY_S1);
 					sm2.addNumber((int) mp);
 					creature.sendPacket(sm2);
 				}

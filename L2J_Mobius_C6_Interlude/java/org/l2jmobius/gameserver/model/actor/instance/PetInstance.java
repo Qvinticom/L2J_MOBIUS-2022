@@ -159,7 +159,7 @@ public class PetInstance extends Summon
 						setCurrentFed(_curFed + 100);
 						if (getOwner() != null)
 						{
-							final SystemMessage sm = new SystemMessage(SystemMessageId.PET_TOOK_S1_BECAUSE_HE_WAS_HUNGRY);
+							final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PET_WAS_HUNGRY_SO_IT_ATE_S1);
 							sm.addItemName(foodId);
 							getOwner().sendPacket(sm);
 						}
@@ -389,7 +389,7 @@ public class PetInstance extends Summon
 	 * @param count : int Quantity of items to be destroyed
 	 * @param reference : WorldObject Object referencing current action like NPC selling item or previous item in transformation
 	 * @param sendMessage : boolean Specifies whether to send message to Client about this action
-	 * @return boolean informing if the action was successfull
+	 * @return boolean informing if the action was successful
 	 */
 	@Override
 	public boolean destroyItem(String process, int objectId, int count, WorldObject reference, boolean sendMessage)
@@ -400,7 +400,7 @@ public class PetInstance extends Summon
 		{
 			if (sendMessage)
 			{
-				getOwner().sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
+				getOwner().sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
 			
 			return false;
@@ -413,7 +413,7 @@ public class PetInstance extends Summon
 		
 		if (sendMessage)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 			sm.addNumber(count);
 			sm.addItemName(item.getItemId());
 			getOwner().sendPacket(sm);
@@ -429,7 +429,7 @@ public class PetInstance extends Summon
 	 * @param count : int Quantity of items to be destroyed
 	 * @param reference : WorldObject Object referencing current action like NPC selling item or previous item in transformation
 	 * @param sendMessage : boolean Specifies whether to send message to Client about this action
-	 * @return boolean informing if the action was successfull
+	 * @return boolean informing if the action was successful
 	 */
 	@Override
 	public boolean destroyItemByItemId(String process, int itemId, int count, WorldObject reference, boolean sendMessage)
@@ -440,7 +440,7 @@ public class PetInstance extends Summon
 		{
 			if (sendMessage)
 			{
-				getOwner().sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
+				getOwner().sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
 			return false;
 		}
@@ -452,7 +452,7 @@ public class PetInstance extends Summon
 		
 		if (sendMessage)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 			sm.addNumber(count);
 			sm.addItemName(itemId);
 			getOwner().sendPacket(sm);
@@ -480,7 +480,7 @@ public class PetInstance extends Summon
 		// Herbs
 		if ((target.getItemId() > 8599) && (target.getItemId() < 8615))
 		{
-			final SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
 			smsg.addItemName(target.getItemId());
 			getOwner().sendPacket(smsg);
 			return;
@@ -488,7 +488,7 @@ public class PetInstance extends Summon
 		// Cursed weapons
 		if (CursedWeaponsManager.getInstance().isCursed(target.getItemId()))
 		{
-			final SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
 			smsg.addItemName(target.getItemId());
 			getOwner().sendPacket(smsg);
 			return;
@@ -505,7 +505,7 @@ public class PetInstance extends Summon
 			if (!target.getDropProtection().tryPickUp(this))
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
-				final SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1);
+				final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
 				smsg.addItemName(target.getItemId());
 				getOwner().sendPacket(smsg);
 				return;
@@ -517,20 +517,20 @@ public class PetInstance extends Summon
 				
 				if (target.getItemId() == 57)
 				{
-					final SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1_ADENA);
+					final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
 					smsg.addNumber(target.getCount());
 					getOwner().sendPacket(smsg);
 				}
 				else if (target.getCount() > 1)
 				{
-					final SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S2_S1_S);
+					final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S2_S1_S);
 					smsg.addItemName(target.getItemId());
 					smsg.addNumber(target.getCount());
 					getOwner().sendPacket(smsg);
 				}
 				else
 				{
-					final SystemMessage smsg = new SystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1);
+					final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
 					smsg.addItemName(target.getItemId());
 					getOwner().sendPacket(smsg);
 				}
@@ -1164,10 +1164,10 @@ public class PetInstance extends Summon
 		{
 			if (pcrit || mcrit)
 			{
-				getOwner().sendPacket(SystemMessageId.CRITICAL_HIT_BY_PET);
+				getOwner().sendPacket(SystemMessageId.PET_S_CRITICAL_HIT);
 			}
 			
-			final SystemMessage sm = new SystemMessage(SystemMessageId.PET_HIT_FOR_S1_DAMAGE);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PET_HIT_FOR_S1_DAMAGE);
 			sm.addNumber(damage);
 			getOwner().sendPacket(sm);
 		}

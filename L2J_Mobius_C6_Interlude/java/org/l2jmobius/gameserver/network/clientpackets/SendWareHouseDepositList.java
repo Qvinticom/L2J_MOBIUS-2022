@@ -144,7 +144,7 @@ public class SendWareHouseDepositList extends GameClientPacket
 		// Like L2OFF enchant window must close
 		if (player.getActiveEnchantItem() != null)
 		{
-			player.sendPacket(SystemMessageId.ENCHANT_SCROLL_CANCELLED);
+			player.sendPacket(SystemMessageId.YOU_HAVE_CANCELLED_THE_ENCHANTING_PROCESS);
 			player.sendPacket(new EnchantResult(0));
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -194,14 +194,14 @@ public class SendWareHouseDepositList extends GameClientPacket
 		// Item Max Limit Check
 		if (!warehouse.validateCapacity(slots))
 		{
-			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_QUANTITY_THAT_CAN_BE_INPUTTED);
+			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
 			return;
 		}
 		
 		// Check if enough adena and charge the fee
 		if ((currentAdena < fee) || !player.reduceAdena("Warehouse", fee, player.getLastFolkNPC(), false))
 		{
-			player.sendPacket(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
 		

@@ -332,7 +332,7 @@ public class AdminData implements IXmlReader
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.NO_GM_PROVIDING_SERVICE_NOW));
+			player.sendPacket(new SystemMessage(SystemMessageId.THERE_ARE_NO_GMS_CURRENTLY_VISIBLE_IN_THE_PUBLIC_LIST_AS_THEY_MAY_BE_PERFORMING_OTHER_FUNCTIONS_AT_THE_MOMENT));
 		}
 	}
 	

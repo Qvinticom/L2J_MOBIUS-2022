@@ -74,7 +74,7 @@ public class RequestDestroyItem extends GameClientPacket
 		
 		if (player.getPrivateStoreType() != 0)
 		{
-			player.sendPacket(SystemMessageId.CANNOT_TRADE_DISCARD_DROP_ITEM_WHILE_IN_SHOPMODE);
+			player.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
 			return;
 		}
 		
@@ -89,7 +89,7 @@ public class RequestDestroyItem extends GameClientPacket
 		// Cannot discard item that the skill is consumming
 		if (player.isCastingNow() && (player.getCurrentSkill() != null) && (player.getCurrentSkill().getSkill().getItemConsumeId() == itemToRemove.getItemId()))
 		{
-			player.sendPacket(SystemMessageId.CANNOT_DISCARD_THIS_ITEM);
+			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
 			return;
 		}
 		
@@ -97,7 +97,7 @@ public class RequestDestroyItem extends GameClientPacket
 		
 		if (itemToRemove.isWear() || !itemToRemove.isDestroyable() || CursedWeaponsManager.getInstance().isCursed(itemId))
 		{
-			player.sendPacket(SystemMessageId.CANNOT_DISCARD_THIS_ITEM);
+			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
 			return;
 		}
 		

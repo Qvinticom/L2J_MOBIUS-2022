@@ -41,12 +41,12 @@ public class AllyInfo extends GameServerPacket
 		
 		if (player.getAllyId() == 0)
 		{
-			_player.sendPacket(SystemMessageId.NO_CURRENT_ALLIANCES);
+			_player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_ALLIED_WITH_ANY_CLANS);
 			return;
 		}
 		
 		// ======<AllyInfo>======
-		SystemMessage sm = new SystemMessage(SystemMessageId.ALLIANCE_INFO_HEAD);
+		SystemMessage sm = new SystemMessage(SystemMessageId.ALLIANCE_INFORMATION);
 		_player.sendPacket(sm);
 		// ======<Ally Name>======
 		sm = new SystemMessage(SystemMessageId.ALLIANCE_NAME_S1);
@@ -75,35 +75,35 @@ public class AllyInfo extends GameServerPacket
 		sm.addString(leaderclan.getLeaderName());
 		_player.sendPacket(sm);
 		// clan count
-		sm = new SystemMessage(SystemMessageId.ALLIANCE_CLAN_TOTAL_S1);
+		sm = new SystemMessage(SystemMessageId.AFFILIATED_CLANS_TOTAL_S1_CLAN_S);
 		sm.addString("" + clancount);
 		_player.sendPacket(sm);
 		// clan information
-		sm = new SystemMessage(SystemMessageId.CLAN_INFO_HEAD);
+		sm = new SystemMessage(SystemMessageId.CLAN_INFORMATION);
 		_player.sendPacket(sm);
 		for (Clan clan : ClanTable.getInstance().getClans())
 		{
 			if (clan.getAllyId() == _player.getAllyId())
 			{
 				// clan name
-				sm = new SystemMessage(SystemMessageId.CLAN_INFO_NAME);
+				sm = new SystemMessage(SystemMessageId.CLAN_NAME_S1);
 				sm.addString(clan.getName());
 				_player.sendPacket(sm);
 				// clan leader name
-				sm = new SystemMessage(SystemMessageId.CLAN_INFO_LEADER);
+				sm = new SystemMessage(SystemMessageId.CLAN_LEADER_S1);
 				sm.addString(clan.getLeaderName());
 				_player.sendPacket(sm);
 				// clan level
-				sm = new SystemMessage(SystemMessageId.CLAN_INFO_LEVEL);
+				sm = new SystemMessage(SystemMessageId.CLAN_LEVEL_S1);
 				sm.addNumber(clan.getLevel());
 				_player.sendPacket(sm);
 				// ---------
-				sm = new SystemMessage(SystemMessageId.CLAN_INFO_SEPARATOR);
+				sm = new SystemMessage(SystemMessageId.EMPTY_4);
 				_player.sendPacket(sm);
 			}
 		}
 		// =========================
-		sm = new SystemMessage(SystemMessageId.CLAN_INFO_FOOT);
+		sm = new SystemMessage(SystemMessageId.EMPTY_5);
 		_player.sendPacket(sm);
 	}
 }

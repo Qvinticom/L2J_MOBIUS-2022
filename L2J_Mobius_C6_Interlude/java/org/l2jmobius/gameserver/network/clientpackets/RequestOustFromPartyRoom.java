@@ -68,7 +68,7 @@ public class RequestOustFromPartyRoom extends GameClientPacket
 		
 		if (player.isInParty() && member.isInParty() && (player.getParty().getPartyLeaderOID() == member.getParty().getPartyLeaderOID()))
 		{
-			player.sendPacket(SystemMessageId.CANNOT_DISMISS_PARTY_MEMBER);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_DISMISS_A_PARTY_MEMBER_BY_FORCE);
 		}
 		else
 		{
@@ -87,7 +87,7 @@ public class RequestOustFromPartyRoom extends GameClientPacket
 			// Clean player's LFP title
 			member.broadcastUserInfo();
 			
-			member.sendPacket(SystemMessageId.OUSTED_FROM_PARTY_ROOM);
+			member.sendPacket(SystemMessageId.YOU_HAVE_BEEN_OUSTED_FROM_THE_PARTY_ROOM);
 		}
 	}
 }

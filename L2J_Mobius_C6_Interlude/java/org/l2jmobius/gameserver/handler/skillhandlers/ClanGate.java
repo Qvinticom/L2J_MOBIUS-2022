@@ -67,7 +67,7 @@ public class ClanGate implements ISkillHandler
 				// please note clan gate expires in two minutes WHATEVER happens to the clan leader.
 				ThreadPool.schedule(new RemoveClanGate(castle.getCastleId(), player), skill.getTotalLifeTime());
 				castle.createClanGate(player.getX(), player.getY(), player.getZ() + 20);
-				player.getClan().broadcastToOnlineMembers(new SystemMessage(SystemMessageId.COURT_MAGICIAN_CREATED_PORTAL));
+				player.getClan().broadcastToOnlineMembers(new SystemMessage(SystemMessageId.COURT_MAGICIAN_THE_PORTAL_HAS_BEEN_CREATED));
 				player.setParalyzed(true);
 			}
 		}

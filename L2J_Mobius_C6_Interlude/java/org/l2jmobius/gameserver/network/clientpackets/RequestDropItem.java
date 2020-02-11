@@ -86,19 +86,19 @@ public class RequestDropItem extends GameClientPacket
 		
 		if ((item == null) || (_count == 0) || !player.validateItemManipulation(_objectId, "drop"))
 		{
-			player.sendPacket(SystemMessageId.CANNOT_DISCARD_THIS_ITEM);
+			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
 			return;
 		}
 		
 		if ((!Config.ALLOW_DISCARDITEM && !player.isGM()) || (!item.isDropable()))
 		{
-			player.sendPacket(SystemMessageId.CANNOT_DISCARD_THIS_ITEM);
+			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
 			return;
 		}
 		
 		if (item.isAugmented())
 		{
-			player.sendPacket(SystemMessageId.AUGMENTED_ITEM_CANNOT_BE_DISCARDED);
+			player.sendPacket(SystemMessageId.THE_AUGMENTED_ITEM_CANNOT_BE_DISCARDED);
 			return;
 		}
 		
@@ -125,13 +125,13 @@ public class RequestDropItem extends GameClientPacket
 		
 		if (_count > item.getCount())
 		{
-			player.sendPacket(SystemMessageId.CANNOT_DISCARD_THIS_ITEM);
+			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
 			return;
 		}
 		
 		if ((Config.PLAYER_SPAWN_PROTECTION > 0) && player.isInvul() && !player.isGM())
 		{
-			player.sendPacket(SystemMessageId.CANNOT_DISCARD_THIS_ITEM);
+			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
 			return;
 		}
 		
@@ -157,14 +157,14 @@ public class RequestDropItem extends GameClientPacket
 		
 		if (player.isProcessingTransaction() || (player.getPrivateStoreType() != 0))
 		{
-			player.sendPacket(SystemMessageId.CANNOT_TRADE_DISCARD_DROP_ITEM_WHILE_IN_SHOPMODE);
+			player.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
 			return;
 		}
 		
 		if (player.isFishing())
 		{
 			// You can't mount, dismount, break and drop items while fishing
-			player.sendPacket(SystemMessageId.CANNOT_DO_WHILE_FISHING_2);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_2);
 			return;
 		}
 		
@@ -175,20 +175,20 @@ public class RequestDropItem extends GameClientPacket
 			if ((skillDat != null) && (skillDat.getSkill().getItemConsumeId() == item.getItemId()) //
 				&& ((player.getInventory().getInventoryItemCount(item.getItemId(), -1) - skillDat.getSkill().getItemConsume()) < _count))
 			{
-				player.sendPacket(SystemMessageId.CANNOT_DISCARD_THIS_ITEM);
+				player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
 				return;
 			}
 		}
 		
 		if ((Item.TYPE2_QUEST == item.getItem().getType2()) && !player.isGM())
 		{
-			player.sendPacket(SystemMessageId.CANNOT_DISCARD_EXCHANGE_ITEM);
+			player.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_DISCARDED_OR_EXCHANGED);
 			return;
 		}
 		
 		if (!player.isInsideRadius(_x, _y, 150, false) || (Math.abs(_z - player.getZ()) > 50))
 		{
-			player.sendPacket(SystemMessageId.CANNOT_DISCARD_DISTANCE_TOO_FAR);
+			player.sendPacket(SystemMessageId.THAT_IS_TOO_FAR_FROM_YOU_TO_DISCARD);
 			return;
 		}
 		

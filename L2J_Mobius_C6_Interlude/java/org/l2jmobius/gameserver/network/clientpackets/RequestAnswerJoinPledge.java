@@ -54,10 +54,10 @@ public class RequestAnswerJoinPledge extends GameClientPacket
 		
 		if (_answer == 0)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DID_NOT_RESPOND_TO_S1_CLAN_INVITATION);
+			SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DIDN_T_RESPOND_TO_S1_S_INVITATION_JOINING_HAS_BEEN_CANCELLED);
 			sm.addString(requestor.getName());
 			player.sendPacket(sm);
-			sm = new SystemMessage(SystemMessageId.S1_DID_NOT_RESPOND_TO_CLAN_INVITATION);
+			sm = new SystemMessage(SystemMessageId.S1_DID_NOT_RESPOND_INVITATION_TO_THE_CLAN_HAS_BEEN_CANCELLED);
 			sm.addString(player.getName());
 			requestor.sendPacket(sm);
 		}
@@ -92,7 +92,7 @@ public class RequestAnswerJoinPledge extends GameClientPacket
 				
 				player.sendPacket(SystemMessageId.ENTERED_THE_CLAN);
 				
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_JOINED_CLAN);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_JOINED_THE_CLAN);
 				sm.addString(player.getName());
 				clan.broadcastToOnlineMembers(sm);
 				

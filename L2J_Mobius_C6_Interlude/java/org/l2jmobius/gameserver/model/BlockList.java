@@ -173,7 +173,7 @@ public class BlockList
 		
 		if (listOwner.getFriendList().contains(targetId))
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_IN_FRIENDS_LIST);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_IN_YOUR_FRIENDS_LIST);
 			sm.addString(charName);
 			listOwner.sendPacket(sm);
 			return;
@@ -187,7 +187,7 @@ public class BlockList
 		
 		listOwner.getBlockList().addToBlockList(targetId);
 		
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WAS_ADDED_TO_YOUR_IGNORE_LIST);
+		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_IGNORE_LIST);
 		sm.addString(charName);
 		listOwner.sendPacket(sm);
 		
@@ -195,7 +195,7 @@ public class BlockList
 		
 		if (player != null)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_ADDED_YOU_TO_IGNORE_LIST);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
 			sm.addString(listOwner.getName());
 			player.sendPacket(sm);
 		}
@@ -213,14 +213,14 @@ public class BlockList
 		
 		if (!listOwner.getBlockList().getBlockList().contains(targetId))
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
 			listOwner.sendPacket(sm);
 			return;
 		}
 		
 		listOwner.getBlockList().removeFromBlockList(targetId);
 		
-		sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WAS_REMOVED_FROM_YOUR_IGNORE_LIST);
+		sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_REMOVED_FROM_YOUR_IGNORE_LIST);
 		sm.addString(charName);
 		listOwner.sendPacket(sm);
 	}
@@ -243,14 +243,14 @@ public class BlockList
 	public static void sendListToOwner(PlayerInstance listOwner)
 	{
 		int i = 1;
-		listOwner.sendPacket(SystemMessageId.BLOCK_LIST_HEADER);
+		listOwner.sendPacket(SystemMessageId.IGNORE_LIST);
 		
 		for (int playerId : listOwner.getBlockList().getBlockList())
 		{
 			listOwner.sendMessage((i++) + ". " + CharNameTable.getInstance().getPlayerName(playerId));
 		}
 		
-		listOwner.sendPacket(SystemMessageId.FRIEND_LIST_FOOT);
+		listOwner.sendPacket(SystemMessageId.EMPTY_3);
 	}
 	
 	/**

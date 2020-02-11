@@ -92,7 +92,7 @@ public class RequestGiveItemToPet extends GameClientPacket
 		
 		if (!item.isDropable() || !item.isDestroyable() || !item.isTradeable())
 		{
-			player.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			player.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return;
 		}
 		
@@ -100,7 +100,7 @@ public class RequestGiveItemToPet extends GameClientPacket
 		
 		if (pet.isDead())
 		{
-			player.sendPacket(SystemMessageId.CANNOT_GIVE_ITEMS_TO_DEAD_PET);
+			player.sendPacket(SystemMessageId.YOUR_PET_IS_MOTIONLESS_AND_ANY_ATTEMPT_YOU_MAKE_TO_GIVE_IT_SOMETHING_GOES_UNRECOGNIZED);
 			return;
 		}
 		

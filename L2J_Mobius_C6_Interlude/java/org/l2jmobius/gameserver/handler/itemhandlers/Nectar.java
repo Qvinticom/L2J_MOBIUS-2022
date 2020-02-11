@@ -44,13 +44,13 @@ public class Nectar implements IItemHandler
 		
 		if (!(player.getTarget() instanceof GourdInstance))
 		{
-			player.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			player.sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
 			return;
 		}
 		
 		if (!player.getName().equalsIgnoreCase(((GourdInstance) player.getTarget()).getOwner()))
 		{
-			player.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			player.sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
 			return;
 		}
 		

@@ -49,13 +49,13 @@ public class RequestHennaEquip extends GameClientPacket
 		
 		if (!henna.canBeUsedBy(player))
 		{
-			player.sendPacket(SystemMessageId.CANT_DRAW_SYMBOL);
+			player.sendPacket(SystemMessageId.THE_SYMBOL_CANNOT_BE_DRAWN);
 			return;
 		}
 		
 		if (player.getHennaEmptySlots() == 0)
 		{
-			player.sendPacket(SystemMessageId.SYMBOLS_FULL);
+			player.sendPacket(SystemMessageId.NO_SLOT_EXISTS_TO_DRAW_THE_SYMBOL);
 			return;
 		}
 		
@@ -64,7 +64,7 @@ public class RequestHennaEquip extends GameClientPacket
 		
 		if (count < Henna.getRequiredDyeAmount())
 		{
-			player.sendPacket(SystemMessageId.CANT_DRAW_SYMBOL);
+			player.sendPacket(SystemMessageId.THE_SYMBOL_CANNOT_BE_DRAWN);
 			return;
 		}
 		

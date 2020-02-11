@@ -183,7 +183,7 @@ public class AdminEffects implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+					activeChar.sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
 					return false;
 				}
 			}
@@ -634,7 +634,7 @@ public class AdminEffects implements IAdminCommandHandler
 				
 				if (!(obj instanceof Creature))
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 				else
 				{

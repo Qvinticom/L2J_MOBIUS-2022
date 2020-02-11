@@ -51,7 +51,7 @@ class EffectDamOverTime extends Effect
 		{
 			if (getSkill().isToggle())
 			{
-				getEffected().sendPacket(new SystemMessage(SystemMessageId.SKILL_REMOVED_DUE_LACK_HP));
+				getEffected().sendPacket(new SystemMessage(SystemMessageId.YOUR_SKILL_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_HP));
 				getEffected().removeEffect(this);
 				exit(false);
 				return false;

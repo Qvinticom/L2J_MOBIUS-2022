@@ -163,7 +163,7 @@ public class EnterWorld extends GameClientPacket
 			// Unread mails make a popup appears.
 			if (MailBBSManager.getInstance().checkUnreadMail(player) > 0)
 			{
-				player.sendPacket(SystemMessageId.NEW_MAIL);
+				player.sendPacket(SystemMessageId.YOU_VE_GOT_MAIL);
 				player.sendPacket(new PlaySound("systemmsg_e.1233"));
 				player.sendPacket(ExMailArrived.STATIC_PACKET);
 			}
@@ -296,7 +296,7 @@ public class EnterWorld extends GameClientPacket
 		player.getInventory().reloadEquippedItems();
 		
 		// Welcome to Lineage II
-		player.sendPacket(SystemMessageId.WELCOME_TO_LINEAGE);
+		player.sendPacket(SystemMessageId.WELCOME_TO_THE_WORLD_OF_LINEAGE_II);
 		
 		SevenSigns.getInstance().sendCurrentPeriodMsg(player);
 		Announcements.getInstance().showAnnouncements(player);
@@ -370,7 +370,7 @@ public class EnterWorld extends GameClientPacket
 		
 		if (player.getClanJoinExpiryTime() > System.currentTimeMillis())
 		{
-			player.sendPacket(SystemMessageId.CLAN_MEMBERSHIP_TERMINATED);
+			player.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
 		}
 		
 		if (player.getClan() != null)
@@ -494,13 +494,13 @@ public class EnterWorld extends GameClientPacket
 			{
 				if (GameTimeController.getInstance().isNowNight())
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.NIGHT_EFFECT_APPLIES);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT);
 					sm.addSkillName(294);
 					sendPacket(sm);
 				}
 				else
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.DAY_EFFECT_DISAPPEARS);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IT_IS_DAWN_AND_THE_EFFECT_OF_S1_WILL_NOW_DISAPPEAR);
 					sm.addSkillName(294);
 					sendPacket(sm);
 				}
@@ -848,7 +848,7 @@ public class EnterWorld extends GameClientPacket
 		if (clan != null)
 		{
 			clan.getClanMember(player.getObjectId()).setPlayerInstance(player);
-			clan.broadcastToOtherOnlineMembers(new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_LOGGED_IN).addString(player.getName()), player);
+			clan.broadcastToOtherOnlineMembers(new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME).addString(player.getName()), player);
 			clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(player), player);
 		}
 	}

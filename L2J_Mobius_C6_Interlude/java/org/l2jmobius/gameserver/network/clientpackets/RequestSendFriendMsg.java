@@ -54,7 +54,7 @@ public class RequestSendFriendMsg extends GameClientPacket
 		final PlayerInstance targetPlayer = World.getInstance().getPlayer(_reciever);
 		if ((targetPlayer == null) || !targetPlayer.getFriendList().contains(player.getObjectId()))
 		{
-			player.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 			return;
 		}
 		

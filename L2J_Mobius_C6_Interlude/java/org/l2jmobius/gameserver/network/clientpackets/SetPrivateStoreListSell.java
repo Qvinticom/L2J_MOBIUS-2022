@@ -127,7 +127,7 @@ public class SetPrivateStoreListSell extends GameClientPacket
 			if (totalCost > Integer.MAX_VALUE)
 			{
 				player.sendPacket(new PrivateStoreManageListSell(player));
-				player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_QUANTITY_THAT_CAN_BE_INPUTTED);
+				player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
 				return;
 			}
 			
@@ -152,7 +152,7 @@ public class SetPrivateStoreListSell extends GameClientPacket
 		if (_count > player.getPrivateSellStoreLimit())
 		{
 			player.sendPacket(new PrivateStoreManageListSell(player));
-			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_QUANTITY_THAT_CAN_BE_INPUTTED);
+			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
 			return;
 		}
 		

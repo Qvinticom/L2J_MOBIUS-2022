@@ -45,14 +45,14 @@ public class RequestEvaluate extends GameClientPacket
 		
 		if (!(player.getTarget() instanceof PlayerInstance))
 		{
-			sm = new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT);
+			sm = new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
 			player.sendPacket(sm);
 			return;
 		}
 		
 		if (player.getLevel() < 10)
 		{
-			sm = new SystemMessage(SystemMessageId.ONLY_LEVEL_SUP_10_CAN_RECOMMEND);
+			sm = new SystemMessage(SystemMessageId.ONLY_CHARACTERS_OF_LEVEL_10_OR_ABOVE_ARE_AUTHORIZED_TO_MAKE_RECOMMENDATIONS);
 			player.sendPacket(sm);
 			return;
 		}
@@ -66,7 +66,7 @@ public class RequestEvaluate extends GameClientPacket
 		
 		if (player.getRecomLeft() <= 0)
 		{
-			sm = new SystemMessage(SystemMessageId.NO_MORE_RECOMMENDATIONS_TO_HAVE);
+			sm = new SystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_MAKE_FURTHER_RECOMMENDATIONS_AT_THIS_TIME_YOU_WILL_RECEIVE_MORE_RECOMMENDATION_CREDITS_EACH_DAY_AT_1_P_M);
 			player.sendPacket(sm);
 			return;
 		}
@@ -75,26 +75,26 @@ public class RequestEvaluate extends GameClientPacket
 		
 		if (target.getRecomHave() >= Config.ALT_RECOMMENDATIONS_NUMBER)
 		{
-			sm = new SystemMessage(SystemMessageId.YOU_NO_LONGER_RECIVE_A_RECOMMENDATION);
+			sm = new SystemMessage(SystemMessageId.YOUR_SELECTED_TARGET_CAN_NO_LONGER_RECEIVE_A_RECOMMENDATION);
 			player.sendPacket(sm);
 			return;
 		}
 		
 		if (!player.canRecom(target))
 		{
-			sm = new SystemMessage(SystemMessageId.THAT_CHARACTER_IS_RECOMMENDED);
+			sm = new SystemMessage(SystemMessageId.THAT_CHARACTER_HAS_ALREADY_BEEN_RECOMMENDED);
 			player.sendPacket(sm);
 			return;
 		}
 		
 		player.giveRecom(target);
 		
-		sm = new SystemMessage(SystemMessageId.YOU_HAVE_RECOMMENDED);
+		sm = new SystemMessage(SystemMessageId.YOU_HAVE_RECOMMENDED_S1_YOU_ARE_AUTHORIZED_TO_MAKE_S2_MORE_RECOMMENDATIONS);
 		sm.addString(target.getName());
 		sm.addNumber(player.getRecomLeft());
 		player.sendPacket(sm);
 		
-		sm = new SystemMessage(SystemMessageId.YOU_HAVE_BEEN_RECOMMENDED);
+		sm = new SystemMessage(SystemMessageId.YOU_HAVE_BEEN_RECOMMENDED_BY_S1);
 		sm.addString(player.getName());
 		target.sendPacket(sm);
 		

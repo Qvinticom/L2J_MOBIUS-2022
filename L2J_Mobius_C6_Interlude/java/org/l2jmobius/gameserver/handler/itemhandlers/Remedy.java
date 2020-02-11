@@ -57,7 +57,7 @@ public class Remedy implements IItemHandler
 		
 		if (player.isInOlympiadMode())
 		{
-			player.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_GRAND_OLYMPIAD_GAMES_MATCH);
 			return;
 		}
 		

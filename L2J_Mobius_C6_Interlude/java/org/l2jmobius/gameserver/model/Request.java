@@ -100,7 +100,7 @@ public class Request
 		
 		if (partner.getRequest().isProcessingRequest())
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_BUSY_TRY_LATER);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_BUSY_PLEASE_TRY_AGAIN_LATER);
 			sm.addString(partner.getName());
 			_player.sendPacket(sm);
 			

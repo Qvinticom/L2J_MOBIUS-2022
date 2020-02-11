@@ -96,7 +96,7 @@ public class Mdam implements ISkillHandler
 					{
 						creature.stopSkillEffects(skill.getId());
 						skill.getEffects(null, creature, false, sps, bss);
-						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
 						sm.addSkillName(skill.getId());
 						creature.sendPacket(sm);
 					}
@@ -108,7 +108,7 @@ public class Mdam implements ISkillHandler
 					}
 					else
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
 						creature.sendPacket(sm);

@@ -1820,7 +1820,7 @@ public class NpcInstance extends Creature
 		{
 			if ((player.getWeightPenalty() >= 3) && (q.getQuestId() >= 1) && (q.getQuestId() < 1000))
 			{
-				player.sendPacket(SystemMessageId.INVENTORY_LESS_THAN_80_PERCENT);
+				player.sendPacket(SystemMessageId.PROGRESS_IN_A_QUEST_IS_POSSIBLE_ONLY_WHEN_YOUR_INVENTORY_S_WEIGHT_AND_VOLUME_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
 				return;
 			}
 			
@@ -1967,13 +1967,13 @@ public class NpcInstance extends Creature
 			if (!Lottery.getInstance().isStarted())
 			{
 				// tickets can't be sold
-				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_CURRENT_SOLD);
+				player.sendPacket(SystemMessageId.LOTTERY_TICKETS_ARE_NOT_CURRENTLY_BEING_SOLD);
 				return;
 			}
 			if (!Lottery.getInstance().isSellableTickets())
 			{
 				// tickets can't be sold
-				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_AVAILABLE);
+				player.sendPacket(SystemMessageId.TICKETS_FOR_THE_CURRENT_LOTTERY_ARE_NO_LONGER_AVAILABLE);
 				return;
 			}
 			
@@ -2040,13 +2040,13 @@ public class NpcInstance extends Creature
 			if (!Lottery.getInstance().isStarted())
 			{
 				// tickets can't be sold
-				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_CURRENT_SOLD);
+				player.sendPacket(SystemMessageId.LOTTERY_TICKETS_ARE_NOT_CURRENTLY_BEING_SOLD);
 				return;
 			}
 			if (!Lottery.getInstance().isSellableTickets())
 			{
 				// tickets can't be sold
-				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_AVAILABLE);
+				player.sendPacket(SystemMessageId.TICKETS_FOR_THE_CURRENT_LOTTERY_ARE_NO_LONGER_AVAILABLE);
 				return;
 			}
 			
@@ -2073,7 +2073,7 @@ public class NpcInstance extends Creature
 			}
 			if (player.getAdena() < price)
 			{
-				sm = new SystemMessage(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
+				sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				player.sendPacket(sm);
 				return;
 			}
@@ -2083,7 +2083,7 @@ public class NpcInstance extends Creature
 			}
 			Lottery.getInstance().increasePrize(price);
 			
-			sm = new SystemMessage(SystemMessageId.ACQUIRED);
+			sm = new SystemMessage(SystemMessageId.ACQUIRED_S1_S2);
 			sm.addNumber(lotonumber);
 			sm.addItemName(4442);
 			player.sendPacket(sm);
@@ -2177,7 +2177,7 @@ public class NpcInstance extends Creature
 			}
 			final int[] check = Lottery.getInstance().checkTicket(item);
 			
-			sm = new SystemMessage(SystemMessageId.DISSAPEARED_ITEM);
+			sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 			sm.addItemName(4442);
 			player.sendPacket(sm);
 			
@@ -2237,7 +2237,7 @@ public class NpcInstance extends Creature
 		
 		player.setCurrentCp(player.getMaxCp());
 		// cp restored
-		sm = new SystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
+		sm = new SystemMessage(SystemMessageId.S1_CPS_HAVE_BEEN_RESTORED);
 		sm.addString(player.getName());
 		player.sendPacket(sm);
 	}
@@ -2587,13 +2587,13 @@ public class NpcInstance extends Creature
 							{
 								case SevenSigns.CABAL_DAWN:
 								{
-									player.sendPacket(SystemMessageId.CAN_BE_USED_BY_DAWN);
+									player.sendPacket(SystemMessageId.ONLY_A_LORD_OF_DAWN_MAY_USE_THIS);
 									filename += "necro_no.htm";
 									break;
 								}
 								case SevenSigns.CABAL_DUSK:
 								{
-									player.sendPacket(SystemMessageId.CAN_BE_USED_BY_DUSK);
+									player.sendPacket(SystemMessageId.ONLY_A_REVOLUTIONARY_OF_DUSK_MAY_USE_THIS);
 									filename += "necro_no.htm";
 									break;
 								}
@@ -2641,13 +2641,13 @@ public class NpcInstance extends Creature
 							{
 								case SevenSigns.CABAL_DAWN:
 								{
-									player.sendPacket(SystemMessageId.CAN_BE_USED_BY_DAWN);
+									player.sendPacket(SystemMessageId.ONLY_A_LORD_OF_DAWN_MAY_USE_THIS);
 									filename += "cata_no.htm";
 									break;
 								}
 								case SevenSigns.CABAL_DUSK:
 								{
-									player.sendPacket(SystemMessageId.CAN_BE_USED_BY_DUSK);
+									player.sendPacket(SystemMessageId.ONLY_A_REVOLUTIONARY_OF_DUSK_MAY_USE_THIS);
 									filename += "cata_no.htm";
 									break;
 								}
@@ -2745,7 +2745,7 @@ public class NpcInstance extends Creature
 						{
 							if ((playerCabal != compWinner) || (playerCabal != sealAvariceOwner))
 							{
-								player.sendPacket(SystemMessageId.CAN_BE_USED_BY_DAWN);
+								player.sendPacket(SystemMessageId.ONLY_A_LORD_OF_DAWN_MAY_USE_THIS);
 								return;
 							}
 							break;
@@ -2754,7 +2754,7 @@ public class NpcInstance extends Creature
 						{
 							if ((playerCabal != compWinner) || (playerCabal != sealAvariceOwner))
 							{
-								player.sendPacket(SystemMessageId.CAN_BE_USED_BY_DUSK);
+								player.sendPacket(SystemMessageId.ONLY_A_REVOLUTIONARY_OF_DUSK_MAY_USE_THIS);
 								return;
 							}
 							break;
@@ -2774,7 +2774,7 @@ public class NpcInstance extends Creature
 						{
 							if ((playerCabal != compWinner) || (playerCabal != sealGnosisOwner))
 							{
-								player.sendPacket(SystemMessageId.CAN_BE_USED_BY_DAWN);
+								player.sendPacket(SystemMessageId.ONLY_A_LORD_OF_DAWN_MAY_USE_THIS);
 								return;
 							}
 							break;
@@ -2783,7 +2783,7 @@ public class NpcInstance extends Creature
 						{
 							if ((playerCabal != compWinner) || (playerCabal != sealGnosisOwner))
 							{
-								player.sendPacket(SystemMessageId.CAN_BE_USED_BY_DUSK);
+								player.sendPacket(SystemMessageId.ONLY_A_REVOLUTIONARY_OF_DUSK_MAY_USE_THIS);
 								return;
 							}
 							break;

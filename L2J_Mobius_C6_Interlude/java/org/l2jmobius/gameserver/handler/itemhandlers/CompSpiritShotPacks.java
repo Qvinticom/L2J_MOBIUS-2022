@@ -69,7 +69,7 @@ public class CompSpiritShotPacks implements IItemHandler
 		player.getInventory().destroyItem("Extract", item, player, null);
 		player.getInventory().addItem("Extract", itemToCreateId, amount, player, item);
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 		sm.addItemName(itemToCreateId);
 		sm.addNumber(amount);
 		player.sendPacket(sm);

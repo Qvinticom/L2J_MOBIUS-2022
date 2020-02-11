@@ -49,14 +49,14 @@ public class RequestFriendInvite extends GameClientPacket
 		if ((friend == null) || friend.isOnline() || friend.getAppearance().isInvisible())
 		{
 			// Target is not found in the game.
-			player.sendPacket(SystemMessageId.THE_USER_YOU_REQUESTED_IS_NOT_IN_GAME);
+			player.sendPacket(SystemMessageId.THE_USER_WHO_REQUESTED_TO_BECOME_FRIENDS_IS_NOT_FOUND_IN_THE_GAME);
 			return;
 		}
 		
 		if (friend == player)
 		{
 			// You cannot add yourself to your own friend list.
-			player.sendPacket(SystemMessageId.YOU_CANNOT_ADD_YOURSELF_TO_OWN_FRIEND_LIST);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_ADD_YOURSELF_TO_YOUR_OWN_FRIEND_LIST);
 			return;
 		}
 		
@@ -75,7 +75,7 @@ public class RequestFriendInvite extends GameClientPacket
 		if (player.getFriendList().contains(friend.getObjectId()))
 		{
 			// Player already is in your friendlist
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_IN_FRIENDS_LIST).addString(_name));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_IN_YOUR_FRIENDS_LIST).addString(_name));
 			return;
 		}
 		
@@ -83,12 +83,12 @@ public class RequestFriendInvite extends GameClientPacket
 		{
 			// request to become friend
 			player.onTransactionRequest(friend);
-			friend.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_REQUESTED_TO_BECOME_FRIENDS).addString(player.getName()));
+			friend.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_REQUESTED_TO_BECOME_FRIENDS).addString(player.getName()));
 			friend.sendPacket(new AskJoinFriend(player.getName()));
 		}
 		else
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_IS_BUSY_TRY_LATER).addString(_name));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_IS_BUSY_PLEASE_TRY_AGAIN_LATER).addString(_name));
 		}
 	}
 }

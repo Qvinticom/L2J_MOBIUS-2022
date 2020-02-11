@@ -105,7 +105,7 @@ public class AdminMenu implements IAdminCommandHandler
 				
 				if (player == null)
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return true;
 				}
 				
@@ -137,7 +137,7 @@ public class AdminMenu implements IAdminCommandHandler
 				
 				if (player == null)
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return true;
 				}
 				
@@ -280,7 +280,7 @@ public class AdminMenu implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 		}
 		
 		AdminHelpPage.showHelpPage(activeChar, filename);
@@ -307,13 +307,13 @@ public class AdminMenu implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
 		if (player.getObjectId() == activeChar.getObjectId())
 		{
-			player.sendPacket(SystemMessageId.CANNOT_USE_ON_YOURSELF);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ON_YOURSELF);
 		}
 		else
 		{

@@ -65,20 +65,20 @@ public class EnergyStone implements IItemHandler
 		}
 		if (player.isSitting())
 		{
-			player.sendPacket(SystemMessageId.CANT_MOVE_SITTING);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SITTING);
 			return;
 		}
 		
 		final SkillCharge skill = getChargeSkill(player);
 		if (skill == null)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addItemName(5589);
 			player.sendPacket(sm);
 			return;
 		}
 		
-		final SystemMessage sm1 = new SystemMessage(SystemMessageId.USE_S1_);
+		final SystemMessage sm1 = new SystemMessage(SystemMessageId.USE_S1);
 		sm1.addItemName(5589);
 		player.sendPacket(sm1);
 		
@@ -98,13 +98,13 @@ public class EnergyStone implements IItemHandler
 		if (effect.numCharges < 2)
 		{
 			effect.addNumCharges(1);
-			final SystemMessage sm = new SystemMessage(SystemMessageId.FORCE_INCREASED_TO_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FORCE_HAS_INCREASED_TO_S1_LEVEL);
 			sm.addNumber(effect.getLevel());
 			player.sendPacket(sm);
 		}
 		else if (effect.numCharges == 2)
 		{
-			player.sendPacket(SystemMessageId.FORCE_MAXLEVEL_REACHED);
+			player.sendPacket(SystemMessageId.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY);
 		}
 		
 		final MagicSkillUse msu = new MagicSkillUse(playable, player, skill.getId(), 1, 1, 0);

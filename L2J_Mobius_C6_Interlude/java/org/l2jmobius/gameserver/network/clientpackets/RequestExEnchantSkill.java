@@ -136,7 +136,7 @@ public class RequestExEnchantSkill extends GameClientPacket
 					
 					if (spb == null)// Haven't spellbook
 					{
-						player.sendPacket(SystemMessageId.YOU_DONT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
 						return;
 					}
 					// ok
@@ -145,13 +145,13 @@ public class RequestExEnchantSkill extends GameClientPacket
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.YOU_DONT_HAVE_ENOUGH_EXP_TO_ENCHANT_THAT_SKILL));
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_EXPERIENCE_EXP_TO_ENCHANT_THAT_SKILL));
 				return;
 			}
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DONT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL));
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL));
 			return;
 		}
 		if (Rnd.get(100) <= rate)
@@ -163,15 +163,15 @@ public class RequestExEnchantSkill extends GameClientPacket
 			su.addAttribute(StatusUpdate.SP, player.getSp());
 			player.sendPacket(su);
 			
-			final SystemMessage ep = new SystemMessage(SystemMessageId.EXP_DECREASED_BY_S1);
+			final SystemMessage ep = new SystemMessage(SystemMessageId.YOUR_EXPERIENCE_HAS_DECREASED_BY_S1);
 			ep.addNumber(requiredExp);
 			sendPacket(ep);
 			
-			final SystemMessage sp = new SystemMessage(SystemMessageId.SP_DECREASED_S1);
+			final SystemMessage sp = new SystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
 			sp.addNumber(requiredSp);
 			sendPacket(sp);
 			
-			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_SUCCEEDED_IN_ENCHANTING_THE_SKILL_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
 			sm.addSkillName(_skillId);
 			player.sendPacket(sm);
 		}
@@ -183,7 +183,7 @@ public class RequestExEnchantSkill extends GameClientPacket
 				player.addSkill(SkillTable.getInstance().getInfo(_skillId, _skillLvl), true);
 				player.sendSkillList();
 			}
-			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_ENCHANT_THE_SKILL_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.SKILL_ENCHANT_FAILED_THE_SKILL_WILL_BE_INITIALIZED);
 			sm.addSkillName(_skillId);
 			player.sendPacket(sm);
 		}

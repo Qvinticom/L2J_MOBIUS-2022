@@ -176,7 +176,7 @@ public class RequestPrivateStoreBuy extends GameClientPacket
 		}
 		else if (player.getAdena() < priceTotal)
 		{
-			player.sendPacket(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

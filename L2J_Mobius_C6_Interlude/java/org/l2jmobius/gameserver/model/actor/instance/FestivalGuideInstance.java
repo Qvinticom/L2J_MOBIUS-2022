@@ -306,7 +306,7 @@ public class FestivalGuideInstance extends FolkInstance
 					final boolean isHighestScore = SevenSignsFestival.getInstance().setFinalScore(player, _festivalOracle, _festivalType, offeringScore);
 					player.destroyItem("SevenSigns", bloodOfferings, this, false);
 					// Send message that the contribution score has increased.
-					final SystemMessage sm = new SystemMessage(SystemMessageId.CONTRIB_SCORE_INCREASED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_CONTRIBUTION_SCORE_IS_INCREASED_BY_S1);
 					sm.addNumber(offeringScore);
 					player.sendPacket(sm);
 					if (isHighestScore)

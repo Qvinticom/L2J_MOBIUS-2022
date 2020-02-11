@@ -1228,22 +1228,22 @@ public class SevenSigns
 		{
 			case PERIOD_COMP_RECRUITING:
 			{
-				sm = new SystemMessage(SystemMessageId.PREPARATIONS_PERIOD_BEGUN);
+				sm = new SystemMessage(SystemMessageId.SEVEN_SIGNS_PREPARATIONS_HAVE_BEGUN_FOR_THE_NEXT_QUEST_EVENT);
 				break;
 			}
 			case PERIOD_COMPETITION:
 			{
-				sm = new SystemMessage(SystemMessageId.COMPETITION_PERIOD_BEGUN);
+				sm = new SystemMessage(SystemMessageId.SEVEN_SIGNS_THE_QUEST_EVENT_PERIOD_HAS_BEGUN_SPEAK_WITH_A_PRIEST_OF_DAWN_OR_DUSK_PRIESTESS_IF_YOU_WISH_TO_PARTICIPATE_IN_THE_EVENT);
 				break;
 			}
 			case PERIOD_COMP_RESULTS:
 			{
-				sm = new SystemMessage(SystemMessageId.RESULTS_PERIOD_BEGUN);
+				sm = new SystemMessage(SystemMessageId.SEVEN_SIGNS_QUEST_EVENT_HAS_ENDED_RESULTS_ARE_BEING_TALLIED);
 				break;
 			}
 			case PERIOD_SEAL_VALIDATION:
 			{
-				sm = new SystemMessage(SystemMessageId.VALIDATION_PERIOD_BEGUN);
+				sm = new SystemMessage(SystemMessageId.SEVEN_SIGNS_THIS_IS_THE_SEAL_VALIDATION_PERIOD_A_NEW_QUEST_EVENT_PERIOD_BEGINS_NEXT_MONDAY);
 				break;
 			}
 		}
@@ -1468,11 +1468,11 @@ public class SevenSigns
 				{
 					if (newSealOwner == CABAL_DAWN)
 					{
-						sendMessageToAll(SystemMessageId.DAWN_OBTAINED_AVARICE);
+						sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_LORDS_OF_DAWN_HAVE_OBTAINED_THE_SEAL_OF_AVARICE);
 					}
 					else if (newSealOwner == CABAL_DUSK)
 					{
-						sendMessageToAll(SystemMessageId.DUSK_OBTAINED_AVARICE);
+						sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_REVOLUTIONARIES_OF_DUSK_HAVE_OBTAINED_THE_SEAL_OF_AVARICE);
 					}
 					break;
 				}
@@ -1480,11 +1480,11 @@ public class SevenSigns
 				{
 					if (newSealOwner == CABAL_DAWN)
 					{
-						sendMessageToAll(SystemMessageId.DAWN_OBTAINED_GNOSIS);
+						sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_LORDS_OF_DAWN_HAVE_OBTAINED_THE_SEAL_OF_GNOSIS);
 					}
 					else if (newSealOwner == CABAL_DUSK)
 					{
-						sendMessageToAll(SystemMessageId.DUSK_OBTAINED_GNOSIS);
+						sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_REVOLUTIONARIES_OF_DUSK_HAVE_OBTAINED_THE_SEAL_OF_GNOSIS);
 					}
 					break;
 				}
@@ -1492,11 +1492,11 @@ public class SevenSigns
 				{
 					if (newSealOwner == CABAL_DAWN)
 					{
-						sendMessageToAll(SystemMessageId.DAWN_OBTAINED_STRIFE);
+						sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_LORDS_OF_DAWN_HAVE_OBTAINED_THE_SEAL_OF_STRIFE);
 					}
 					else if (newSealOwner == CABAL_DUSK)
 					{
-						sendMessageToAll(SystemMessageId.DUSK_OBTAINED_STRIFE);
+						sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_REVOLUTIONARIES_OF_DUSK_HAVE_OBTAINED_THE_SEAL_OF_STRIFE);
 					}
 					CastleManager.getInstance().validateTaxes(newSealOwner);
 					break;
@@ -1554,13 +1554,13 @@ public class SevenSigns
 					// Start the Festival of Darkness cycle.
 					SevenSignsFestival.getInstance().startFestivalManager();
 					// Send message that Competition has begun.
-					sendMessageToAll(SystemMessageId.QUEST_EVENT_PERIOD_BEGUN);
+					sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_QUEST_EVENT_PERIOD_HAS_BEGUN_VISIT_A_PRIEST_OF_DAWN_OR_PRIESTESS_OF_DUSK_TO_PARTICIPATE_IN_THE_EVENT);
 					break;
 				}
 				case PERIOD_COMPETITION: // Results Calculation
 				{
 					// Send message that Competition has ended.
-					sendMessageToAll(SystemMessageId.QUEST_EVENT_PERIOD_ENDED);
+					sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_QUEST_EVENT_PERIOD_HAS_ENDED_THE_NEXT_QUEST_EVENT_WILL_START_IN_ONE_WEEK);
 					final int compWinner = getCabalHighestScore();
 					// Schedule a stop of the festival engine.
 					SevenSignsFestival.getInstance().getFestivalManagerSchedule().cancel(false);
@@ -1569,12 +1569,12 @@ public class SevenSigns
 					{
 						case CABAL_DAWN:
 						{
-							sendMessageToAll(SystemMessageId.DAWN_WON);
+							sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_LORDS_OF_DAWN_HAVE_WON);
 							break;
 						}
 						case CABAL_DUSK:
 						{
-							sendMessageToAll(SystemMessageId.DUSK_WON);
+							sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_REVOLUTIONARIES_OF_DUSK_HAVE_WON);
 							break;
 						}
 					}
@@ -1587,7 +1587,7 @@ public class SevenSigns
 					// Perform initial Seal Validation set up.
 					initializeSeals();
 					// Send message that Seal Validation has begun.
-					sendMessageToAll(SystemMessageId.SEAL_VALIDATION_PERIOD_BEGUN);
+					sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_SEAL_VALIDATION_PERIOD_HAS_BEGUN);
 					LOGGER.info("SevenSigns: The " + getCabalName(_previousWinner) + " have won the competition with " + getCurrentScore(_previousWinner) + " points!");
 					break;
 				}
@@ -1597,7 +1597,7 @@ public class SevenSigns
 					// Ensure a cycle restart when this period ends.
 					_activePeriod = PERIOD_COMP_RECRUITING;
 					// Send message that Seal Validation has ended.
-					sendMessageToAll(SystemMessageId.SEAL_VALIDATION_PERIOD_ENDED);
+					sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_SEAL_VALIDATION_PERIOD_HAS_ENDED);
 					// Reset all data
 					resetPlayerData();
 					resetSeals();

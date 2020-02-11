@@ -56,33 +56,33 @@ public class PartyInfo implements IUserCommandHandler
 		{
 			case Party.ITEM_LOOTER:
 			{
-				player.sendPacket(SystemMessageId.LOOTING_FINDERS_KEEPERS);
+				player.sendPacket(SystemMessageId.LOOTING_METHOD_FINDERS_KEEPERS);
 				break;
 			}
 			case Party.ITEM_ORDER:
 			{
-				player.sendPacket(SystemMessageId.LOOTING_BY_TURN);
+				player.sendPacket(SystemMessageId.LOOTING_METHOD_BY_TURN);
 				break;
 			}
 			case Party.ITEM_ORDER_SPOIL:
 			{
-				player.sendPacket(SystemMessageId.LOOTING_BY_TURN_INCLUDE_SPOIL);
+				player.sendPacket(SystemMessageId.LOOTING_METHOD_BY_TURN_INCLUDING_SPOIL);
 				break;
 			}
 			case Party.ITEM_RANDOM:
 			{
-				player.sendPacket(SystemMessageId.LOOTING_RANDOM);
+				player.sendPacket(SystemMessageId.LOOTING_METHOD_RANDOM);
 				break;
 			}
 			case Party.ITEM_RANDOM_SPOIL:
 			{
-				player.sendPacket(SystemMessageId.LOOTING_RANDOM_INCLUDE_SPOIL);
+				player.sendPacket(SystemMessageId.LOOTING_METHOD_RANDOM_INCLUDING_SPOIL);
 				break;
 			}
 		}
 		player.sendPacket(new SystemMessage(SystemMessageId.PARTY_LEADER_S1).addString(partyLeader));
 		player.sendMessage("Members: " + memberCount + "/9");
-		player.sendPacket(SystemMessageId.FRIEND_LIST_FOOT);
+		player.sendPacket(SystemMessageId.EMPTY_3);
 		return true;
 	}
 	

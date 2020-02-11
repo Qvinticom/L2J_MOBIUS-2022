@@ -99,7 +99,7 @@ public class ScrollOfEscape implements IItemHandler
 		// Check to see if player is sitting
 		if (player.isSitting())
 		{
-			player.sendPacket(SystemMessageId.CANT_MOVE_SITTING);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SITTING);
 			return;
 		}
 		
@@ -130,7 +130,7 @@ public class ScrollOfEscape implements IItemHandler
 		// Check to see if player is on olympiad
 		if (player.isInOlympiadMode())
 		{
-			player.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_GRAND_OLYMPIAD_GAMES_MATCH);
 			return;
 		}
 		
@@ -196,7 +196,7 @@ public class ScrollOfEscape implements IItemHandler
 		// End SoE Animation section
 		player.setTarget(null);
 		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 		sm.addItemName(itemId);
 		player.sendPacket(sm);
 		
@@ -261,7 +261,7 @@ public class ScrollOfEscape implements IItemHandler
 				}
 				else if (_itemId == 5858) // do nothing
 				{
-					_player.sendPacket(SystemMessageId.CLAN_HAS_NO_CLAN_HALL);
+					_player.sendPacket(SystemMessageId.THE_CLAN_DOES_NOT_OWN_A_CLAN_HALL);
 				}
 				else if ((_player.getKarma() > 0) && Config.ALT_KARMA_TELEPORT_TO_FLORAN)
 				{

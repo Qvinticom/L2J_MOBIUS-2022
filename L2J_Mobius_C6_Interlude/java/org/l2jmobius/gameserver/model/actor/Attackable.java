@@ -1926,7 +1926,7 @@ public class Attackable extends NpcInstance
 					if ((this instanceof RaidBossInstance) || (this instanceof GrandBossInstance))
 					{
 						SystemMessage sm;
-						sm = new SystemMessage(SystemMessageId.S1_DIED_DROPPED_S3_S2);
+						sm = new SystemMessage(SystemMessageId.S1_DIED_AND_DROPPED_S3_S2);
 						sm.addString(getName());
 						sm.addItemName(item.getItemId());
 						sm.addNumber(item.getCount());
@@ -2850,13 +2850,13 @@ public class Attackable extends NpcInstance
 				// Too many crystals in inventory.
 				if (crystalQTY > 1)
 				{
-					player.sendPacket(SystemMessageId.SOUL_CRYSTAL_ABSORBING_FAILED_RESONATION);
+					player.sendPacket(SystemMessageId.THE_SOUL_CRYSTALS_CAUSED_RESONATION_AND_FAILED_AT_ABSORBING_A_SOUL);
 				}
 				// The soul crystal stage of the player is way too high
 				// Like L2OFF message must not appear if char hasn't crystal on inventory
 				else if (!doLevelup && (crystalQTY > 0))
 				{
-					player.sendPacket(SystemMessageId.SOUL_CRYSTAL_ABSORBING_REFUSED);
+					player.sendPacket(SystemMessageId.THE_SOUL_CRYSTAL_IS_REFUSING_TO_ABSORB_A_SOUL);
 				}
 				
 				crystalQTY = 0;
@@ -2897,7 +2897,7 @@ public class Attackable extends NpcInstance
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.SOUL_CRYSTAL_ABSORBING_FAILED);
+				player.sendPacket(SystemMessageId.THE_SOUL_CRYSTAL_WAS_NOT_ABLE_TO_ABSORB_A_SOUL);
 			}
 		}
 	}
@@ -2918,15 +2918,15 @@ public class Attackable extends NpcInstance
 			// Send a sound event and text message to the player
 			if (broke)
 			{
-				player.sendPacket(SystemMessageId.SOUL_CRYSTAL_BROKE);
+				player.sendPacket(SystemMessageId.THE_SOUL_CRYSTAL_BROKE_BECAUSE_IT_WAS_NOT_ABLE_TO_ENDURE_THE_SOUL_ENERGY);
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.SOUL_CRYSTAL_ABSORBING_SUCCEEDED);
+				player.sendPacket(SystemMessageId.THE_SOUL_CRYSTAL_SUCCEEDED_IN_ABSORBING_A_SOUL);
 			}
 			
 			// Send system message
-			final SystemMessage sms = new SystemMessage(SystemMessageId.EARNED_ITEM);
+			final SystemMessage sms = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 			sms.addItemName(giveid);
 			player.sendPacket(sms);
 			

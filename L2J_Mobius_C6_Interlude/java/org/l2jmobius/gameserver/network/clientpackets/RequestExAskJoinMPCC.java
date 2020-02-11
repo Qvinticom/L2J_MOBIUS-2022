@@ -76,7 +76,7 @@ public class RequestExAskJoinMPCC extends GameClientPacket
 						// targets party already in a CChannel?
 						if (target.getParty().isInCommandChannel())
 						{
-							player.sendPacket(new SystemMessage(SystemMessageId.S1_ALREADY_MEMBER_OF_COMMAND_CHANNEL).addString(target.getName()));
+							player.sendPacket(new SystemMessage(SystemMessageId.S1_S_PARTY_IS_ALREADY_A_MEMBER_OF_THE_COMMAND_CHANNEL).addString(target.getName()));
 						}
 						else
 						{
@@ -90,7 +90,7 @@ public class RequestExAskJoinMPCC extends GameClientPacket
 				}
 				else if (activeParty.isInCommandChannel() && !activeParty.getCommandChannel().getChannelLeader().equals(player))
 				{
-					player.sendPacket(SystemMessageId.CANNOT_INVITE_TO_COMMAND_CHANNEL);
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_AUTHORITY_TO_INVITE_SOMEONE_TO_THE_COMMAND_CHANNEL);
 				}
 				else // target in a party?
 				if (target.isInParty())
@@ -98,7 +98,7 @@ public class RequestExAskJoinMPCC extends GameClientPacket
 					// targets party already in a CChannel?
 					if (target.getParty().isInCommandChannel())
 					{
-						player.sendPacket(new SystemMessage(SystemMessageId.S1_ALREADY_MEMBER_OF_COMMAND_CHANNEL).addString(target.getName()));
+						player.sendPacket(new SystemMessage(SystemMessageId.S1_S_PARTY_IS_ALREADY_A_MEMBER_OF_THE_COMMAND_CHANNEL).addString(target.getName()));
 					}
 					else
 					{
@@ -112,7 +112,7 @@ public class RequestExAskJoinMPCC extends GameClientPacket
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.CANNOT_INVITE_TO_COMMAND_CHANNEL);
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_AUTHORITY_TO_INVITE_SOMEONE_TO_THE_COMMAND_CHANNEL);
 			}
 		}
 	}
@@ -143,7 +143,7 @@ public class RequestExAskJoinMPCC extends GameClientPacket
 		
 		if (!hasRight)
 		{
-			requestor.sendPacket(SystemMessageId.COMMAND_CHANNEL_ONLY_BY_LEVEL_5_CLAN_LEADER_PARTY_LEADER);
+			requestor.sendPacket(SystemMessageId.COMMAND_CHANNELS_CAN_ONLY_BE_FORMED_BY_A_PARTY_LEADER_WHO_IS_ALSO_THE_LEADER_OF_A_LEVEL_5_CLAN);
 			return;
 		}
 		
@@ -151,12 +151,12 @@ public class RequestExAskJoinMPCC extends GameClientPacket
 		if (!targetLeader.isProcessingRequest())
 		{
 			requestor.onTransactionRequest(targetLeader);
-			targetLeader.sendPacket(new SystemMessage(SystemMessageId.COMMAND_CHANNEL_CONFIRM).addString(requestor.getName()));
+			targetLeader.sendPacket(new SystemMessage(SystemMessageId.S1_HAS_INVITED_YOU_TO_JOIN_A_COMMAND_CHANNEL_DO_YOU_WISH_TO_ACCEPT).addString(requestor.getName()));
 			targetLeader.sendPacket(new ExAskJoinMPCC(requestor.getName()));
 		}
 		else
 		{
-			requestor.sendPacket(new SystemMessage(SystemMessageId.S1_IS_BUSY_TRY_LATER).addString(targetLeader.getName()));
+			requestor.sendPacket(new SystemMessage(SystemMessageId.S1_IS_BUSY_PLEASE_TRY_AGAIN_LATER).addString(targetLeader.getName()));
 		}
 	}
 }

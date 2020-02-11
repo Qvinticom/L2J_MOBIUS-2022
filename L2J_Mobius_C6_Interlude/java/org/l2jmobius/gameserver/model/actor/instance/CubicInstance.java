@@ -707,7 +707,7 @@ public class CubicInstance
 				final boolean acted = Formulas.calcCubicSkillSuccess(activeCubic, target, skill);
 				if (!acted)
 				{
-					activeCubic.getOwner().sendPacket(SystemMessageId.ATTACK_FAILED);
+					activeCubic.getOwner().sendPacket(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
 					continue;
 				}
 			}

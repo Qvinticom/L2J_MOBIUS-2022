@@ -66,7 +66,7 @@ public class RequestSetPledgeCrest extends GameClientPacket
 		
 		if (clan.getDissolvingExpiryTime() > System.currentTimeMillis())
 		{
-			player.sendPacket(SystemMessageId.CANNOT_SET_CREST_WHILE_DISSOLUTION_IN_PROGRESS);
+			player.sendPacket(SystemMessageId.DURING_THE_GRACE_PERIOD_FOR_DISSOLVING_A_CLAN_THE_REGISTRATION_OR_DELETION_OF_A_CLAN_S_CREST_IS_NOT_ALLOWED);
 			return;
 		}
 		
@@ -87,7 +87,7 @@ public class RequestSetPledgeCrest extends GameClientPacket
 			CrestCache.getInstance().removePledgeCrest(clan.getCrestId());
 			
 			clan.setHasCrest(false);
-			player.sendPacket(SystemMessageId.CLAN_CREST_HAS_BEEN_DELETED);
+			player.sendPacket(SystemMessageId.THE_CLAN_S_CREST_HAS_BEEN_DELETED);
 			
 			for (PlayerInstance member : clan.getOnlineMembers())
 			{
@@ -101,7 +101,7 @@ public class RequestSetPledgeCrest extends GameClientPacket
 		{
 			if (clan.getLevel() < 3)
 			{
-				player.sendPacket(SystemMessageId.CLAN_LVL_3_NEEDED_TO_SET_CREST);
+				player.sendPacket(SystemMessageId.A_CLAN_CREST_CAN_ONLY_BE_REGISTERED_WHEN_THE_CLAN_S_SKILL_LEVEL_IS_3_OR_ABOVE);
 				return;
 			}
 			

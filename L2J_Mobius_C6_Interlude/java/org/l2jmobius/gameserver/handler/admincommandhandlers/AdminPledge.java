@@ -83,7 +83,7 @@ public class AdminPledge implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					showMainPage(activeChar);
 					return false;
 				}

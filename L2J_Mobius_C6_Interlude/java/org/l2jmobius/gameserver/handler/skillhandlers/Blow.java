@@ -117,13 +117,13 @@ public class Blow implements ISkillHandler
 					if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 					{
 						skill.getEffects(creature, target, ss, sps, bss);
-						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
 						sm.addSkillName(skill);
 						target.sendPacket(sm);
 					}
 					else
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.ATTACK_FAILED);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
 						sm.addSkillName(skill);
 						creature.sendPacket(sm);
 						return;
@@ -217,7 +217,7 @@ public class Blow implements ISkillHandler
 								player.setCurrentHp(player.getCurrentHp() - damage);
 							}
 						}
-						final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_GAVE_YOU_S2_DMG);
+						final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_HIT_YOU_FOR_S2_DAMAGE);
 						smsg.addString(creature.getName());
 						smsg.addNumber((int) damage);
 						player.sendPacket(smsg);
@@ -265,12 +265,12 @@ public class Blow implements ISkillHandler
 			{
 				if (skillIsEvaded && (target instanceof PlayerInstance))
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.AVOIDED_S1S_ATTACK);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_AVOIDED_S1_S_ATTACK);
 					sm.addString(creature.getName());
 					((PlayerInstance) target).sendPacket(sm);
 				}
 				
-				final SystemMessage sm = new SystemMessage(SystemMessageId.ATTACK_FAILED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
 				sm.addSkillName(skill);
 				creature.sendPacket(sm);
 				return;

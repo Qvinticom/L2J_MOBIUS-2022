@@ -120,7 +120,7 @@ public class SetPrivateStoreListBuy extends GameClientPacket
 			
 			if (cost > Integer.MAX_VALUE)
 			{
-				player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_QUANTITY_THAT_CAN_BE_INPUTTED);
+				player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
 				player.sendPacket(new PrivateStoreManageListBuy(player));
 				return;
 			}
@@ -144,7 +144,7 @@ public class SetPrivateStoreListBuy extends GameClientPacket
 		if (_count > player.getPrivateBuyStoreLimit())
 		{
 			player.sendPacket(new PrivateStoreManageListBuy(player));
-			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_QUANTITY_THAT_CAN_BE_INPUTTED);
+			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
 			return;
 		}
 		
@@ -154,14 +154,14 @@ public class SetPrivateStoreListBuy extends GameClientPacket
 			if ((cost > player.getItemCount(Config.SELL_ITEM, -1)) || (cost <= 0))
 			{
 				player.sendPacket(new PrivateStoreManageListBuy(player));
-				player.sendPacket(SystemMessageId.THE_PURCHASE_PRICE_IS_HIGHER_THAN_MONEY);
+				player.sendPacket(SystemMessageId.THE_PURCHASE_PRICE_IS_HIGHER_THAN_THE_AMOUNT_OF_MONEY_THAT_YOU_HAVE_AND_SO_YOU_CANNOT_OPEN_A_PERSONAL_STORE);
 				return;
 			}
 		}
 		else if ((cost > player.getAdena()) || (cost <= 0))
 		{
 			player.sendPacket(new PrivateStoreManageListBuy(player));
-			player.sendPacket(SystemMessageId.THE_PURCHASE_PRICE_IS_HIGHER_THAN_MONEY);
+			player.sendPacket(SystemMessageId.THE_PURCHASE_PRICE_IS_HIGHER_THAN_THE_AMOUNT_OF_MONEY_THAT_YOU_HAVE_AND_SO_YOU_CANNOT_OPEN_A_PERSONAL_STORE);
 			return;
 		}
 		

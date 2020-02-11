@@ -122,7 +122,7 @@ public class SkillDrain extends Skill
 					{
 						creature.stopSkillEffects(getId());
 						getEffects(null, creature, false, sps, bss);
-						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
 						sm.addSkillName(getId());
 						creature.sendPacket(sm);
 					}
@@ -136,7 +136,7 @@ public class SkillDrain extends Skill
 						}
 						else
 						{
-							final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+							final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 							sm.addString(target.getName());
 							sm.addSkillName(getDisplayId());
 							creature.sendPacket(sm);

@@ -51,7 +51,7 @@ public class SkillChargeDmg extends Skill
 			final EffectCharge e = (EffectCharge) player.getFirstEffect(chargeSkillId);
 			if ((e == null) || (e.numCharges < getNumCharges()))
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 				sm.addSkillName(getId());
 				creature.sendPacket(sm);
 				return false;
@@ -72,7 +72,7 @@ public class SkillChargeDmg extends Skill
 		final EffectCharge effect = (EffectCharge) caster.getFirstEffect(chargeSkillId);
 		if ((effect == null) || (effect.numCharges < getNumCharges()))
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addSkillName(getId());
 			caster.sendPacket(sm);
 			return;

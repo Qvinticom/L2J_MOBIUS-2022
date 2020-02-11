@@ -134,7 +134,7 @@ public class OlympiadManagerInstance extends FolkInstance
 						final InventoryUpdate iu = new InventoryUpdate();
 						iu.addModifiedItem(item);
 						player.sendPacket(iu);
-						final SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_ITEM);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 						sm.addNumber(passes);
 						sm.addItemName(item.getItemId());
 						player.sendPacket(sm);

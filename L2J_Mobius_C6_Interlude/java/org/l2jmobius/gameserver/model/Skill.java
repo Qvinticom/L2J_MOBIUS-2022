@@ -1326,7 +1326,7 @@ public abstract class Skill
 		{
 			return true;
 		}
-		final SystemMessage message = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+		final SystemMessage message = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 		message.addSkillName(_id);
 		creature.sendPacket(message);
 		
@@ -1439,7 +1439,7 @@ public abstract class Skill
 		// to avoid attacks during oly start period
 		if ((creature instanceof PlayerInstance) && _isOffensive && (((PlayerInstance) creature).isInOlympiadMode() && !((PlayerInstance) creature).isOlympiadStart()))
 		{
-			creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+			creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 			return null;
 		}
 		
@@ -1502,7 +1502,7 @@ public abstract class Skill
 					{
 						if (checkPartyClan(creature, target))
 						{
-							creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+							creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 							return null;
 						}
 						break;
@@ -1532,7 +1532,7 @@ public abstract class Skill
 						// Like L2OFF if the skills is TARGET_ONE (skillType) can't be used on Npc
 						if ((target instanceof NpcInstance) && !(target instanceof MonsterInstance))
 						{
-							creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+							creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 							return null;
 						}
 						break;
@@ -1542,14 +1542,14 @@ public abstract class Skill
 				// Like L2OFF Shield stun can't be used on Npc
 				if ((_id == 92) && (target instanceof NpcInstance) && !(target instanceof MonsterInstance))
 				{
-					creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 					return null;
 				}
 				
 				// Check for null target or any other invalid target
 				if ((target == null) || target.isDead() || ((target == creature) && !canTargetSelf))
 				{
-					creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 					return null;
 				}
 				
@@ -1740,7 +1740,7 @@ public abstract class Skill
 				if ((!(target instanceof Attackable) && !(target instanceof Playable) && !(target instanceof NpcInstance)) || // Target is not Attackable or PlayableInstance or NpcInstance
 					((_castRange >= 0) && ((target == creature) || target.isAlikeDead()))) // target is null or self or dead/faking
 				{
-					creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 					return null;
 				}
 				Creature cha;
@@ -1920,7 +1920,7 @@ public abstract class Skill
 			{
 				if (!(target instanceof Attackable) && !(target instanceof PlayerInstance))
 				{
-					creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 					return null;
 				}
 				if (!onlyFirst)
@@ -1992,7 +1992,7 @@ public abstract class Skill
 					}
 					if (targetList.isEmpty())
 					{
-						creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_CANT_FOUND));
+						creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND));
 						return null;
 					}
 				}
@@ -2097,7 +2097,7 @@ public abstract class Skill
 						target
 					};
 				}
-				creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+				creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 				return null;
 			}
 			case TARGET_PARTY_OTHER:
@@ -2110,7 +2110,7 @@ public abstract class Skill
 						target
 					};
 				}
-				creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+				creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 				return null;
 			}
 			case TARGET_CORPSE_ALLY:
@@ -2387,7 +2387,7 @@ public abstract class Skill
 							if (target.isInsideZone(ZoneId.SIEGE))
 							{
 								condGood = false;
-								player.sendPacket(SystemMessageId.CANNOT_BE_RESURRECTED_DURING_SIEGE);
+								player.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEFIELDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
 							}
 							if (targetPlayer != null)
 							{
@@ -2395,11 +2395,11 @@ public abstract class Skill
 								{
 									if (targetPlayer.isRevivingPet())
 									{
-										player.sendPacket(SystemMessageId.MASTER_CANNOT_RES); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
+										player.sendPacket(SystemMessageId.WHILE_A_PET_IS_ATTEMPTING_TO_RESURRECT_IT_CANNOT_HELP_IN_RESURRECTING_ITS_MASTER); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
 									}
 									else
 									{
-										player.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
+										player.sendPacket(SystemMessageId.RESURRECTION_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
 									}
 									condGood = false;
 								}
@@ -2427,14 +2427,14 @@ public abstract class Skill
 						}
 					}
 				}
-				creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+				creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 				return null;
 			}
 			case TARGET_CORPSE_MOB:
 			{
 				if (!(target instanceof Attackable) || !target.isDead())
 				{
-					creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 					return null;
 				}
 				if (!onlyFirst)
@@ -2451,7 +2451,7 @@ public abstract class Skill
 			{
 				if (!(target instanceof Attackable) || !target.isDead())
 				{
-					creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 					return null;
 				}
 				if (!onlyFirst)
@@ -2572,7 +2572,7 @@ public abstract class Skill
 				if (!(target instanceof DoorInstance) && !(target instanceof ChestInstance))
 				{
 					// Like L2OFF if target isn't door or chest send message of incorrect target
-					creature.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
+					creature.sendPacket(new SystemMessage(SystemMessageId.INVALID_TARGET));
 					return null;
 				}
 				if (!onlyFirst)
@@ -2596,7 +2596,7 @@ public abstract class Skill
 				{
 					if (!target.isUndead() || target.isDead())
 					{
-						creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+						creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 						return null;
 					}
 					if (!onlyFirst)
@@ -2612,7 +2612,7 @@ public abstract class Skill
 					}
 					return targetList.toArray(new WorldObject[targetList.size()]);
 				}
-				creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+				creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 				return null;
 			}
 			case TARGET_AREA_UNDEAD:
@@ -2722,7 +2722,7 @@ public abstract class Skill
 			{
 				if (target instanceof PlayerInstance)
 				{
-					creature.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 					return null;
 				}
 				if ((target instanceof MonsterInstance) && ((((MonsterInstance) target).getNpcId() == 22217) || (((MonsterInstance) target).getNpcId() == 22216) || (((MonsterInstance) target).getNpcId() == 22215)))
@@ -2955,7 +2955,7 @@ public abstract class Skill
 							if (env.target instanceof PlayerInstance)
 							{
 								env.target.sendPacket(new EtcStatusUpdate((PlayerInstance) env.target));
-								final SystemMessage sm = new SystemMessage(SystemMessageId.FORCE_INCREASED_TO_S1);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FORCE_HAS_INCREASED_TO_S1_LEVEL);
 								sm.addNumber(effectcharge);
 								env.target.sendPacket(sm);
 							}

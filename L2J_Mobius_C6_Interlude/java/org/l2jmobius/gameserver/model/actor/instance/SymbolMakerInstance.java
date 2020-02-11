@@ -54,7 +54,7 @@ public class SymbolMakerInstance extends FolkInstance
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.SYMBOL_NOT_FOUND);
+				player.sendPacket(SystemMessageId.THE_SYMBOL_INFORMATION_CANNOT_BE_FOUND);
 			}
 		}
 		else

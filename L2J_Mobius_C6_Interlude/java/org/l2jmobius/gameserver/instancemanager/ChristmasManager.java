@@ -608,7 +608,7 @@ public class ChristmasManager
 						final String itemName = ItemTable.getInstance().getTemplate(itemId).getName();
 						
 						SystemMessage sm;
-						sm = new SystemMessage(SystemMessageId.EARNED_ITEM);
+						sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 						sm.addString(itemName + " from Santa's Present Bag...");
 						pc.broadcastPacket(sm);
 					}

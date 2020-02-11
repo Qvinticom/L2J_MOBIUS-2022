@@ -64,7 +64,7 @@ public class RequestPetitionCancel extends GameClientPacket
 			{
 				final int numRemaining = Config.MAX_PETITIONS_PER_PLAYER - PetitionManager.getInstance().getPlayerTotalPetitionCount(player);
 				
-				final SystemMessage sm = new SystemMessage(SystemMessageId.PETITION_CANCELED_SUBMIT_S1_MORE_TODAY);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.THE_PETITION_WAS_CANCELED_YOU_MAY_SUBMIT_S1_MORE_PETITION_S_TODAY);
 				sm.addString(String.valueOf(numRemaining));
 				player.sendPacket(sm);
 				
@@ -74,12 +74,12 @@ public class RequestPetitionCancel extends GameClientPacket
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.FAILED_CANCEL_PETITION_TRY_LATER);
+				player.sendPacket(SystemMessageId.FAILED_TO_CANCEL_PETITION_PLEASE_TRY_AGAIN_LATER);
 			}
 		}
 		else
 		{
-			player.sendPacket(SystemMessageId.PETITION_NOT_SUBMITTED);
+			player.sendPacket(SystemMessageId.YOU_HAVE_NOT_SUBMITTED_A_PETITION);
 		}
 	}
 }

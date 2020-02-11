@@ -454,7 +454,7 @@ public class OracleTeleport extends Quest
 			}
 			else if (player.getAllActiveQuests().size() >= 25)
 			{
-				player.sendPacket(SystemMessageId.TOO_MANY_QUESTS);
+				player.sendPacket(SystemMessageId.YOU_CURRENTLY_HAVE_TOO_MANY_QUESTS_IN_PROGRESS);
 				st.exitQuest(true);
 			}
 			else if (!st.hasQuestItems(7079))

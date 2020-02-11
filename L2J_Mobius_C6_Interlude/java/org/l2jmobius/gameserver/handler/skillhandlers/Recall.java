@@ -50,7 +50,7 @@ public class Recall implements ISkillHandler
 				
 				if (instance.isInOlympiadMode())
 				{
-					creature.sendPacket(new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
+					creature.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_GRAND_OLYMPIAD_GAMES_MATCH));
 					return;
 				}
 				
@@ -63,7 +63,7 @@ public class Recall implements ISkillHandler
 				
 				if (creature.isInsideZone(ZoneId.PVP))
 				{
-					creature.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_IN_COMBAT));
+					creature.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_DURING_COMBAT));
 					return;
 				}
 				
@@ -121,7 +121,7 @@ public class Recall implements ISkillHandler
 					
 					if (targetChar.isInStoreMode())
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CURRENTLY_TRADING_OR_OPERATING_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_CURRENTLY_TRADING_OR_OPERATING_A_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED);
 						sm.addString(targetChar.getName());
 						creature.sendPacket(sm);
 						continue;
@@ -135,7 +135,7 @@ public class Recall implements ISkillHandler
 					
 					if (targetChar.isInOlympiadMode())
 					{
-						creature.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_IN_OLYMPIAD));
+						creature.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_CURRENTLY_PARTICIPATING_IN_THE_GRAND_OLYMPIAD));
 						continue;
 					}
 					

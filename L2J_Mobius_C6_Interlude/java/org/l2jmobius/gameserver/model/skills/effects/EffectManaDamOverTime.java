@@ -46,7 +46,7 @@ class EffectManaDamOverTime extends Effect
 		
 		if ((manaDam > getEffected().getCurrentMp()) && getSkill().isToggle())
 		{
-			getEffected().sendPacket(new SystemMessage(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP));
+			getEffected().sendPacket(new SystemMessage(SystemMessageId.YOUR_SKILL_WAS_REMOVED_DUE_TO_A_LACK_OF_MP));
 			return false;
 		}
 		

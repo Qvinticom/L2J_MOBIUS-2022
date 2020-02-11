@@ -119,16 +119,15 @@ public class FolkInstance extends NpcInstance
 		if (counts == 0)
 		{
 			final int minlevel = SkillTreeTable.getInstance().getMinLevelForNewSkill(player, classId);
-			
 			if (minlevel > 0)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.DO_NOT_HAVE_FURTHER_SKILLS_TO_LEARN);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
 				sm.addNumber(minlevel);
 				player.sendPacket(sm);
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.NO_MORE_SKILLS_TO_LEARN));
+				player.sendPacket(new SystemMessage(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN));
 			}
 		}
 		else
@@ -211,7 +210,7 @@ public class FolkInstance extends NpcInstance
 			
 			if (level < 74)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.DO_NOT_HAVE_FURTHER_SKILLS_TO_LEARN);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
 				sm.addNumber(level);
 				player.sendPacket(sm);
 			}

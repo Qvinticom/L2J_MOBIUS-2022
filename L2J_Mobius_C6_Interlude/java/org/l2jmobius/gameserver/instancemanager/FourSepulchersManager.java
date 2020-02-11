@@ -1017,7 +1017,7 @@ public class FourSepulchersManager extends GrandBossManager
 				
 				if (mem.getWeightPenalty() >= 3)
 				{
-					mem.sendPacket(SystemMessageId.INVENTORY_LESS_THAN_80_PERCENT);
+					mem.sendPacket(SystemMessageId.PROGRESS_IN_A_QUEST_IS_POSSIBLE_ONLY_WHEN_YOUR_INVENTORY_S_WEIGHT_AND_VOLUME_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
 					return;
 				}
 			}
@@ -1046,7 +1046,7 @@ public class FourSepulchersManager extends GrandBossManager
 				
 				if (mem.getWeightPenalty() >= 3)
 				{
-					mem.sendPacket(SystemMessageId.INVENTORY_LESS_THAN_80_PERCENT);
+					mem.sendPacket(SystemMessageId.PROGRESS_IN_A_QUEST_IS_POSSIBLE_ONLY_WHEN_YOUR_INVENTORY_S_WEIGHT_AND_VOLUME_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
 					return;
 				}
 			}
@@ -1068,7 +1068,7 @@ public class FourSepulchersManager extends GrandBossManager
 			
 			if (player.getWeightPenalty() >= 3)
 			{
-				player.sendPacket(SystemMessageId.INVENTORY_LESS_THAN_80_PERCENT);
+				player.sendPacket(SystemMessageId.PROGRESS_IN_A_QUEST_IS_POSSIBLE_ONLY_WHEN_YOUR_INVENTORY_S_WEIGHT_AND_VOLUME_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
 				return;
 			}
 		}

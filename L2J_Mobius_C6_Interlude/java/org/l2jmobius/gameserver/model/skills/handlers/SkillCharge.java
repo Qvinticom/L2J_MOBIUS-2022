@@ -42,8 +42,8 @@ public class SkillCharge extends Skill
 			final EffectCharge e = (EffectCharge) creature.getFirstEffect(this);
 			if ((e != null) && (e.numCharges >= getNumCharges()))
 			{
-				creature.sendPacket(new SystemMessage(SystemMessageId.FORCE_MAXLEVEL_REACHED));
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+				creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY));
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 				sm.addSkillName(getId());
 				creature.sendPacket(sm);
 				return false;
@@ -79,14 +79,14 @@ public class SkillCharge extends Skill
 				if (caster instanceof PlayerInstance)
 				{
 					caster.sendPacket(new EtcStatusUpdate((PlayerInstance) caster));
-					final SystemMessage sm = new SystemMessage(SystemMessageId.FORCE_INCREASED_TO_S1);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FORCE_HAS_INCREASED_TO_S1_LEVEL);
 					sm.addNumber(effect.numCharges);
 					caster.sendPacket(sm);
 				}
 			}
 			else
 			{
-				caster.sendPacket(new SystemMessage(SystemMessageId.FORCE_MAXIMUM));
+				caster.sendPacket(new SystemMessage(SystemMessageId.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY_2));
 			}
 			return;
 		}

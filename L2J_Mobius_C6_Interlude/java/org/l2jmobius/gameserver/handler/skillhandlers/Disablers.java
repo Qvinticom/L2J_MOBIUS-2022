@@ -108,7 +108,7 @@ public class Disablers implements ISkillHandler
 					}
 					else
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getId());
 						creature.sendPacket(sm);
@@ -126,7 +126,7 @@ public class Disablers implements ISkillHandler
 					// Calculate skill evasion
 					if (Formulas.calcPhysicalSkillEvasion(target, skill))
 					{
-						creature.sendPacket(new SystemMessage(SystemMessageId.ATTACK_FAILED));
+						creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_ATTACK_HAS_FAILED));
 						break;
 					}
 					// Calculate vengeance
@@ -148,7 +148,7 @@ public class Disablers implements ISkillHandler
 					}
 					else if (creature instanceof PlayerInstance)
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
 						creature.sendPacket(sm);
@@ -168,7 +168,7 @@ public class Disablers implements ISkillHandler
 					}
 					else if (creature instanceof PlayerInstance)
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
 						creature.sendPacket(sm);
@@ -188,7 +188,7 @@ public class Disablers implements ISkillHandler
 					}
 					else if (creature instanceof PlayerInstance)
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
 						creature.sendPacket(sm);
@@ -212,7 +212,7 @@ public class Disablers implements ISkillHandler
 					}
 					else if (creature instanceof PlayerInstance)
 					{
-						creature.sendPacket(new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2));
+						creature.sendPacket(new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2));
 					}
 					break; // Used to be fallthrough.
 				}
@@ -282,7 +282,7 @@ public class Disablers implements ISkillHandler
 					}
 					else if (creature instanceof PlayerInstance)
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getId());
 						creature.sendPacket(sm);
@@ -310,7 +310,7 @@ public class Disablers implements ISkillHandler
 						}
 						else if (creature instanceof PlayerInstance)
 						{
-							final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+							final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 							sm.addString(target.getName());
 							sm.addSkillName(skill.getId());
 							creature.sendPacket(sm);
@@ -343,7 +343,7 @@ public class Disablers implements ISkillHandler
 					}
 					else if (creature instanceof PlayerInstance)
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getId());
 						creature.sendPacket(sm);
@@ -411,7 +411,7 @@ public class Disablers implements ISkillHandler
 						{
 							if (creature instanceof PlayerInstance)
 							{
-								final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 								sm.addString(target.getName());
 								sm.addSkillName(skill.getDisplayId());
 								creature.sendPacket(sm);
@@ -422,7 +422,7 @@ public class Disablers implements ISkillHandler
 						{
 							if (creature instanceof PlayerInstance)
 							{
-								final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 								sm.addString(target.getName());
 								sm.addSkillName(skill.getDisplayId());
 								creature.sendPacket(sm);
@@ -495,7 +495,7 @@ public class Disablers implements ISkillHandler
 						}
 						else if (creature instanceof PlayerInstance)
 						{
-							final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+							final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 							sm.addString(target.getName());
 							sm.addSkillName(skill.getDisplayId());
 							creature.sendPacket(sm);
@@ -556,7 +556,7 @@ public class Disablers implements ISkillHandler
 					}
 					else if (creature instanceof PlayerInstance)
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
 						creature.sendPacket(sm);

@@ -249,11 +249,11 @@ public class ClassMasterInstance extends FolkInstance
 				
 				if (val >= 88)
 				{
-					player.sendPacket(SystemMessageId.THIRD_CLASS_TRANSFER); // system sound 3rd occupation
+					player.sendPacket(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_THE_THIRD_CLASS_TRANSFER_QUEST); // system sound 3rd occupation
 				}
 				else
 				{
-					player.sendPacket(SystemMessageId.CLASS_TRANSFER); // system sound for 1st and 2nd occupation
+					player.sendPacket(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_A_CLASS_TRANSFER); // system sound for 1st and 2nd occupation
 				}
 				
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -359,7 +359,7 @@ public class ClassMasterInstance extends FolkInstance
 				final int _count = Config.CLASS_MASTER_SETTINGS.getRequireItems(jobLevel).get(_itemId);
 				if (player.getInventory().getInventoryItemCount(_itemId, -1) < _count)
 				{
-					player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
+					player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 					return;
 				}
 			}
@@ -390,11 +390,11 @@ public class ClassMasterInstance extends FolkInstance
 			
 			if (val >= 88)
 			{
-				player.sendPacket(SystemMessageId.THIRD_CLASS_TRANSFER); // system sound 3rd occupation
+				player.sendPacket(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_THE_THIRD_CLASS_TRANSFER_QUEST); // system sound 3rd occupation
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.CLASS_TRANSFER); // system sound for 1st and 2nd occupation
+				player.sendPacket(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_A_CLASS_TRANSFER); // system sound for 1st and 2nd occupation
 			}
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());

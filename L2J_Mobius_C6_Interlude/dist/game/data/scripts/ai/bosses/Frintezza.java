@@ -1174,7 +1174,7 @@ public class Frintezza extends Quest
 					if ((creature instanceof PlayerInstance) && (Rnd.get(100) < 80))
 					{
 						skill.getEffects(_frintezza, creature, false, false, false);
-						creature.sendPacket(new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT).addSkillName(5008, 4));
+						creature.sendPacket(new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU).addSkillName(5008, 4));
 					}
 				}
 			}
@@ -1193,7 +1193,7 @@ public class Frintezza extends Quest
 						creature.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 						skill.getEffects(_frintezza, creature, false, false, false);
 						creature.startAbnormalEffect(Creature.ABNORMAL_EFFECT_DANCE_STUNNED);
-						creature.sendPacket(new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT).addSkillName(5008, 5));
+						creature.sendPacket(new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU).addSkillName(5008, 5));
 					}
 				}
 				startQuestTimer("stop_effect", 25000, _frintezza, null);

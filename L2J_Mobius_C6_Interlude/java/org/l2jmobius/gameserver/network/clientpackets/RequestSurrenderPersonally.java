@@ -70,7 +70,7 @@ public class RequestSurrenderPersonally extends GameClientPacket
 		
 		player.setWantsPeace(1);
 		player.deathPenalty(false);
-		final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_PERSONALLY_SURRENDERED_TO_THE_S1_CLAN);
+		final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_PERSONALLY_SURRENDERED_TO_THE_S1_CLAN_YOU_ARE_NO_LONGER_PARTICIPATING_IN_THIS_CLAN_WAR);
 		msg.addString(_pledgeName);
 		player.sendPacket(msg);
 		ClanTable.getInstance().checkSurrender(playerClan, clan);

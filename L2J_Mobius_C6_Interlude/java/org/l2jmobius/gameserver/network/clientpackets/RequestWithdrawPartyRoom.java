@@ -65,7 +65,7 @@ public class RequestWithdrawPartyRoom extends GameClientPacket
 			player.broadcastUserInfo();
 			
 			player.sendPacket(new ExClosePartyRoom());
-			player.sendPacket(SystemMessageId.PARTY_ROOM_EXITED);
+			player.sendPacket(SystemMessageId.YOU_HAVE_EXITED_FROM_THE_PARTY_ROOM);
 		}
 	}
 }

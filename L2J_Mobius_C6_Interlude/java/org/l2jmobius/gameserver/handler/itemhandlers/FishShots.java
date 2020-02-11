@@ -83,7 +83,7 @@ public class FishShots implements IItemHandler
 		if (((grade == Item.CRYSTAL_NONE) && (FishshotId != 6535)) || ((grade == Item.CRYSTAL_D) && (FishshotId != 6536)) || ((grade == Item.CRYSTAL_C) && (FishshotId != 6537)) || ((grade == Item.CRYSTAL_B) && (FishshotId != 6538)) || ((grade == Item.CRYSTAL_A) && (FishshotId != 6539)) || ((grade == Item.CRYSTAL_S) && (FishshotId != 6540)))
 		{
 			// 1479 - This fishing shot is not fit for the fishing pole crystal.
-			player.sendPacket(SystemMessageId.WRONG_FISHINGSHOT_GRADE);
+			player.sendPacket(SystemMessageId.THAT_IS_THE_WRONG_GRADE_OF_SOULSHOT_FOR_THAT_FISHING_POLE);
 			return;
 		}
 		

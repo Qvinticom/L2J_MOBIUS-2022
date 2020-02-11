@@ -52,7 +52,7 @@ public class PartyMatchRoomList
 			}
 			
 			_member.sendPacket(new ExClosePartyRoom());
-			_member.sendPacket(SystemMessageId.PARTY_ROOM_DISBANDED);
+			_member.sendPacket(SystemMessageId.THE_PARTY_ROOM_HAS_BEEN_DISBANDED);
 			
 			_member.setPartyRoom(0);
 			_member.broadcastUserInfo();

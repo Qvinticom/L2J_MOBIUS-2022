@@ -57,7 +57,7 @@ public class SummonFriend implements ISkillHandler
 		
 		if (activePlayer.isInOlympiadMode())
 		{
-			activePlayer.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			activePlayer.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_GRAND_OLYMPIAD_GAMES_MATCH);
 			return;
 		}
 		
@@ -97,7 +97,7 @@ public class SummonFriend implements ISkillHandler
 		// Checks summoner not in arenas, siege zones, jail
 		if (activePlayer.isInsideZone(ZoneId.PVP))
 		{
-			activePlayer.sendPacket(SystemMessageId.YOU_CANNOT_SUMMON_IN_COMBAT);
+			activePlayer.sendPacket(SystemMessageId.YOU_CANNOT_SUMMON_DURING_COMBAT);
 			return;
 		}
 		
@@ -167,7 +167,7 @@ public class SummonFriend implements ISkillHandler
 					
 					if (targetChar.isInStoreMode())
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CURRENTLY_TRADING_OR_OPERATING_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_CURRENTLY_TRADING_OR_OPERATING_A_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED);
 						sm.addString(targetChar.getName());
 						creature.sendPacket(sm);
 						continue;
@@ -190,7 +190,7 @@ public class SummonFriend implements ISkillHandler
 					// Check for the the target's festival status
 					if (targetChar.isInOlympiadMode())
 					{
-						creature.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_IN_OLYMPIAD));
+						creature.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_CURRENTLY_PARTICIPATING_IN_THE_GRAND_OLYMPIAD));
 						continue;
 					}
 					
@@ -222,7 +222,7 @@ public class SummonFriend implements ISkillHandler
 						// Check already summon
 						if (!targetChar.teleportRequest((PlayerInstance) creature, skill))
 						{
-							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_SUMMONED);
+							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_ALREADY_BEEN_SUMMONED);
 							sm.addString(target.getName());
 							creature.sendPacket(sm);
 							continue;

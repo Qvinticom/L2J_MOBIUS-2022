@@ -134,7 +134,7 @@ public class RequestEnchantItem extends GameClientPacket
 		// Fix enchant transactions
 		if (player.isProcessingTransaction())
 		{
-			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITION);
+			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 			player.setActiveEnchantItem(null);
 			return;
 		}
@@ -158,14 +158,14 @@ public class RequestEnchantItem extends GameClientPacket
 		// can't enchant rods and shadow items
 		if ((item.getItem().getItemType() == WeaponType.ROD) || item.isShadowItem())
 		{
-			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITION);
+			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 			player.setActiveEnchantItem(null);
 			return;
 		}
 		
 		if (!Config.ENCHANT_HERO_WEAPON && (item.getItemId() >= 6611) && (item.getItemId() <= 6621))
 		{
-			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITION);
+			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 			player.setActiveEnchantItem(null);
 			return;
 		}
@@ -334,7 +334,7 @@ public class RequestEnchantItem extends GameClientPacket
 		
 		if (!enchantItem)
 		{
-			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITION);
+			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 			return;
 		}
 		
@@ -585,7 +585,7 @@ public class RequestEnchantItem extends GameClientPacket
 		
 		if (((maxEnchantLevel != 0) && (item.getEnchantLevel() >= maxEnchantLevel)) || ((item.getEnchantLevel()) < minEnchantLevel))
 		{
-			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITION);
+			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 			return;
 		}
 		
@@ -600,7 +600,7 @@ public class RequestEnchantItem extends GameClientPacket
 		
 		if (scroll == null)
 		{
-			player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
+			player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to enchant with a scroll he doesnt have", Config.DEFAULT_PUNISH);
 			return;
 		}
@@ -623,25 +623,25 @@ public class RequestEnchantItem extends GameClientPacket
 			{
 				if (item.getOwnerId() != player.getObjectId())
 				{
-					player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITION);
+					player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 					return;
 				}
 				
 				if ((item.getItemLocation() != ItemInstance.ItemLocation.INVENTORY) && (item.getItemLocation() != ItemInstance.ItemLocation.PAPERDOLL))
 				{
-					player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITION);
+					player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 					return;
 				}
 				
 				if (item.getEnchantLevel() == 0)
 				{
-					sm = new SystemMessage(SystemMessageId.S1_SUCCESSFULLY_ENCHANTED);
+					sm = new SystemMessage(SystemMessageId.YOUR_S1_HAS_BEEN_SUCCESSFULLY_ENCHANTED);
 					sm.addItemName(item.getItemId());
 					player.sendPacket(sm);
 				}
 				else
 				{
-					sm = new SystemMessage(SystemMessageId.S1_S2_SUCCESSFULLY_ENCHANTED);
+					sm = new SystemMessage(SystemMessageId.YOUR_S1_S2_HAS_BEEN_SUCCESSFULLY_ENCHANTED);
 					sm.addNumber(item.getEnchantLevel());
 					sm.addItemName(item.getItemId());
 					player.sendPacket(sm);
@@ -659,19 +659,19 @@ public class RequestEnchantItem extends GameClientPacket
 				}
 				else if (blessedScroll)
 				{
-					sm = new SystemMessage(SystemMessageId.BLESSED_ENCHANT_FAILED);
+					sm = new SystemMessage(SystemMessageId.FAILED_IN_BLESSED_ENCHANT_THE_ENCHANT_VALUE_OF_THE_ITEM_BECAME_0);
 					player.sendPacket(sm);
 				}
 				else if (item.getEnchantLevel() > 0)
 				{
-					sm = new SystemMessage(SystemMessageId.ENCHANTMENT_FAILED_S1_S2_EVAPORATED);
+					sm = new SystemMessage(SystemMessageId.THE_ENCHANTMENT_HAS_FAILED_YOUR_S1_S2_HAS_BEEN_CRYSTALLIZED);
 					sm.addNumber(item.getEnchantLevel());
 					sm.addItemName(item.getItemId());
 					player.sendPacket(sm);
 				}
 				else
 				{
-					sm = new SystemMessage(SystemMessageId.ENCHANTMENT_FAILED_S1_EVAPORATED);
+					sm = new SystemMessage(SystemMessageId.THE_ENCHANTMENT_HAS_FAILED_YOUR_S1_HAS_BEEN_CRYSTALLIZED);
 					sm.addItemName(item.getItemId());
 					player.sendPacket(sm);
 				}
@@ -680,14 +680,14 @@ public class RequestEnchantItem extends GameClientPacket
 				{
 					if (item.getEnchantLevel() > 0)
 					{
-						sm = new SystemMessage(SystemMessageId.EQUIPMENT_S1_S2_REMOVED);
+						sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 						sm.addNumber(item.getEnchantLevel());
 						sm.addItemName(item.getItemId());
 						player.sendPacket(sm);
 					}
 					else
 					{
-						sm = new SystemMessage(SystemMessageId.S1_DISARMED);
+						sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
 						sm.addItemName(item.getItemId());
 						player.sendPacket(sm);
 					}
@@ -725,7 +725,7 @@ public class RequestEnchantItem extends GameClientPacket
 					
 					final ItemInstance crystals = player.getInventory().addItem("Enchant", crystalId, count, player, destroyItem);
 					
-					sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
+					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 					sm.addItemName(crystals.getItemId());
 					sm.addNumber(count);
 					player.sendPacket(sm);

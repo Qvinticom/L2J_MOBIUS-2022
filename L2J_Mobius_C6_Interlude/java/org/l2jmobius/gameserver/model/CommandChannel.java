@@ -52,7 +52,7 @@ public class CommandChannel
 		_parties.add(leader.getParty());
 		_channelLvl = leader.getParty().getLevel();
 		leader.getParty().setCommandChannel(this);
-		leader.getParty().broadcastToPartyMembers(new SystemMessage(SystemMessageId.COMMAND_CHANNEL_FORMED));
+		leader.getParty().broadcastToPartyMembers(new SystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_HAS_BEEN_FORMED));
 		leader.getParty().broadcastToPartyMembers(new ExOpenMPCC());
 	}
 	
@@ -75,7 +75,7 @@ public class CommandChannel
 		}
 		
 		party.setCommandChannel(this);
-		party.broadcastToPartyMembers(new SystemMessage(SystemMessageId.JOINED_COMMAND_CHANNEL));
+		party.broadcastToPartyMembers(new SystemMessage(SystemMessageId.YOU_HAVE_JOINED_THE_COMMAND_CHANNEL));
 		party.broadcastToPartyMembers(new ExOpenMPCC());
 	}
 	
@@ -106,7 +106,7 @@ public class CommandChannel
 		
 		if (_parties.size() < 2)
 		{
-			broadcastToChannelMembers(new SystemMessage(SystemMessageId.COMMAND_CHANNEL_DISBANDED));
+			broadcastToChannelMembers(new SystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_HAS_BEEN_DISBANDED));
 			disbandChannel();
 		}
 	}

@@ -55,14 +55,14 @@ public class Logout extends GameClientPacket
 		
 		if (player.isInsideZone(ZoneId.NO_RESTART))
 		{
-			player.sendPacket(SystemMessageId.NO_LOGOUT_HERE);
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_LOG_OUT_FROM_THIS_LOCATION);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) && (!player.isGM() || !Config.GM_RESTART_FIGHTING))
 		{
-			player.sendPacket(SystemMessageId.CANT_LOGOUT_WHILE_FIGHTING);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_EXIT_WHILE_IN_COMBAT);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

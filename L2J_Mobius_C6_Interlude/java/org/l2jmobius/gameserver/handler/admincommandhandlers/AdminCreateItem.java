@@ -291,7 +291,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addItem(item);
 			player.sendPacket(iu);
-			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_PICKED_UP_S1_S2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
 			sm.addItemName(item.getItemId());
 			sm.addNumber(num);
 			player.sendPacket(sm);

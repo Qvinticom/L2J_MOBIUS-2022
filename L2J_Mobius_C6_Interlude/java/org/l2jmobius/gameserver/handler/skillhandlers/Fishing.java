@@ -73,7 +73,7 @@ public class Fishing implements ISkillHandler
 				player.endFishing(false);
 			}
 			// Cancels fishing
-			player.sendPacket(SystemMessageId.FISHING_ATTEMPT_CANCELLED);
+			player.sendPacket(SystemMessageId.YOUR_ATTEMPT_AT_FISHING_HAS_BEEN_CANCELLED);
 			return;
 		}
 		
@@ -87,8 +87,8 @@ public class Fishing implements ISkillHandler
 		if (lure == null)
 		{
 			// Bait not equiped.
-			player.sendPacket(SystemMessageId.CANNOT_FISH_HERE);
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+			player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addString(skill.getName());
 			player.sendPacket(sm);
 			return;
@@ -99,20 +99,20 @@ public class Fishing implements ISkillHandler
 		
 		if ((lure2 == null) || (lure2.getCount() < 1)) // Not enough bait.
 		{
-			player.sendPacket(SystemMessageId.NOT_ENOUGH_BAIT);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_BAIT);
 			return;
 		}
 		
 		if (player.isInBoat())
 		{
 			// You can't fish while you are on boat
-			player.sendPacket(SystemMessageId.CANNOT_FISH_ON_BOAT);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_RIDING_AS_A_PASSENGER_OF_A_BOAT_IT_S_AGAINST_THE_RULES);
 			return;
 		}
 		
 		if (player.isCrafting() || player.isInStoreMode())
 		{
-			player.sendPacket(SystemMessageId.CANNOT_FISH_WHILE_USING_RECIPE_BOOK);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_USING_A_RECIPE_BOOK_PRIVATE_MANUFACTURE_OR_PRIVATE_STORE);
 			// if(!player.isGM())
 			return;
 		}
@@ -146,8 +146,8 @@ public class Fishing implements ISkillHandler
 		else
 		{
 			// You can't fish here
-			player.sendPacket(SystemMessageId.BAIT_ON_HOOK_BEFORE_FISHING);
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+			player.sendPacket(SystemMessageId.YOU_MUST_PUT_BAIT_ON_YOUR_HOOK_BEFORE_YOU_CAN_FISH);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addString(skill.getName());
 			player.sendPacket(sm);
 			return;
@@ -157,7 +157,7 @@ public class Fishing implements ISkillHandler
 		if ((player.getZ() <= -3800) || (player.getZ() < (z - 32)))
 		{
 			// You can't fish in water
-			player.sendPacket(SystemMessageId.CANNOT_FISH_UNDER_WATER);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_UNDER_WATER);
 			return;
 		}
 		// Has enough bait, consume 1 and update inventory. Start fishing follows.

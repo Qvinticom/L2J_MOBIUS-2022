@@ -175,7 +175,7 @@ public class Wedding implements IVoicedCommandHandler
 				if (activeChar.getFirstEffect(skill) == null)
 				{
 					skill.getEffects(activeChar, activeChar, false, false, false);
-					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
 					sm.addSkillName(skillId);
 					activeChar.sendPacket(sm);
 				}

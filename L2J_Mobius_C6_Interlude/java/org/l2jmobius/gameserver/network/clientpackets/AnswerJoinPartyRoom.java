@@ -50,14 +50,14 @@ public class AnswerJoinPartyRoom extends GameClientPacket
 		if (partner == null)
 		{
 			// Partner hasn't be found, cancel the invitation
-			player.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 			player.setActiveRequester(null);
 			return;
 		}
 		else if (World.getInstance().getPlayer(partner.getObjectId()) == null)
 		{
 			// Partner hasn't be found, cancel the invitation
-			player.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 			player.setActiveRequester(null);
 			return;
 		}
@@ -89,7 +89,7 @@ public class AnswerJoinPartyRoom extends GameClientPacket
 					}
 					
 					member.sendPacket(new ExManagePartyRoomMember(player, room, 0));
-					member.sendPacket(new SystemMessage(SystemMessageId.S1_ENTERED_PARTY_ROOM).addString(player.getName()));
+					member.sendPacket(new SystemMessage(SystemMessageId.S1_HAS_ENTERED_THE_PARTY_ROOM).addString(player.getName()));
 				}
 				room.addMember(player);
 				
@@ -98,13 +98,13 @@ public class AnswerJoinPartyRoom extends GameClientPacket
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.CANT_ENTER_PARTY_ROOM);
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_ENTER_THAT_PARTY_ROOM);
 			}
 		}
 		// Else, send a message to requester.
 		else
 		{
-			partner.sendPacket(SystemMessageId.PARTY_MATCHING_REQUEST_NO_RESPONSE);
+			partner.sendPacket(SystemMessageId.THE_RECIPIENT_OF_YOUR_INVITATION_DID_NOT_ACCEPT_THE_PARTY_MATCHING_INVITATION);
 		}
 		
 		// reset transaction timers

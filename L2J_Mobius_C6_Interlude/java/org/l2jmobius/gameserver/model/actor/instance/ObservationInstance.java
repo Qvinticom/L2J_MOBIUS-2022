@@ -81,7 +81,7 @@ public class ObservationInstance extends FolkInstance
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.ONLY_VIEW_SIEGE));
+				player.sendPacket(new SystemMessage(SystemMessageId.OBSERVATION_IS_ONLY_POSSIBLE_DURING_A_SIEGE));
 			}
 		}
 		else if (command.startsWith("observe"))

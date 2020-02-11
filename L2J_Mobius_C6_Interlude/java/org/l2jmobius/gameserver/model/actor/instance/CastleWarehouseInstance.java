@@ -55,7 +55,7 @@ public class CastleWarehouseInstance extends FolkInstance
 		
 		if (player.getActiveWarehouse().getSize() == 0)
 		{
-			player.sendPacket(SystemMessageId.NO_ITEM_DEPOSITED_IN_WH);
+			player.sendPacket(SystemMessageId.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE);
 			return;
 		}
 		
@@ -86,13 +86,13 @@ public class CastleWarehouseInstance extends FolkInstance
 		{
 			if (player.getClan().getLevel() == 0)
 			{
-				player.sendPacket(SystemMessageId.ONLY_LEVEL_1_CLAN_OR_HIGHER_CAN_USE_WAREHOUSE);
+				player.sendPacket(SystemMessageId.ONLY_CLANS_OF_CLAN_LEVEL_1_OR_HIGHER_CAN_USE_A_CLAN_WAREHOUSE);
 			}
 			else
 			{
 				if ((player.getClanPrivileges() & Clan.CP_CL_VIEW_WAREHOUSE) != Clan.CP_CL_VIEW_WAREHOUSE)
 				{
-					player.sendPacket(SystemMessageId.ONLY_CLAN_LEADER_CAN_RETRIEVE_ITEMS_FROM_CLAN_WAREHOUSE);
+					player.sendPacket(SystemMessageId.ITEMS_LEFT_AT_THE_CLAN_HALL_WAREHOUSE_CAN_ONLY_BE_RETRIEVED_BY_THE_CLAN_LEADER_DO_YOU_WANT_TO_CONTINUE);
 				}
 				player.setActiveWarehouse(player.getClan().getWarehouse());
 				player.tempInvetoryDisable();
@@ -111,13 +111,13 @@ public class CastleWarehouseInstance extends FolkInstance
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		if ((player.getClanPrivileges() & Clan.CP_CL_VIEW_WAREHOUSE) != Clan.CP_CL_VIEW_WAREHOUSE)
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_CLAN_WAREHOUSE);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_THE_CLAN_WAREHOUSE);
 			return;
 		}
 		
 		if (player.getClan().getLevel() == 0)
 		{
-			player.sendPacket(SystemMessageId.ONLY_LEVEL_1_CLAN_OR_HIGHER_CAN_USE_WAREHOUSE);
+			player.sendPacket(SystemMessageId.ONLY_CLANS_OF_CLAN_LEVEL_1_OR_HIGHER_CAN_USE_A_CLAN_WAREHOUSE);
 		}
 		else
 		{

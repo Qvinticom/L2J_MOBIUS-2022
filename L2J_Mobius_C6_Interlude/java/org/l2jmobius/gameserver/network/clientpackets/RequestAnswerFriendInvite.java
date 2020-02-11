@@ -65,14 +65,14 @@ public class RequestAnswerFriendInvite extends GameClientPacket
 					statement.execute();
 					statement.close();
 					
-					requestor.sendPacket(SystemMessageId.YOU_HAVE_SUCCEEDED_INVITING_FRIEND);
+					requestor.sendPacket(SystemMessageId.YOU_HAVE_SUCCEEDED_IN_INVITING_A_FRIEND_TO_YOUR_FRIENDS_LIST);
 					
 					// Player added to your friendlist
-					requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_ADDED_TO_FRIENDS).addString(player.getName()));
+					requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_FRIENDS_LIST).addString(player.getName()));
 					requestor.getFriendList().add(player.getObjectId());
 					
 					// has joined as friend.
-					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_JOINED_AS_FRIEND).addString(requestor.getName()));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_JOINED_AS_A_FRIEND).addString(requestor.getName()));
 					player.getFriendList().add(requestor.getObjectId());
 					
 					// update friendLists *heavy method*
@@ -86,7 +86,7 @@ public class RequestAnswerFriendInvite extends GameClientPacket
 			}
 			else
 			{
-				requestor.sendPacket(SystemMessageId.FAILED_TO_INVITE_A_FRIEND);
+				requestor.sendPacket(SystemMessageId.YOU_HAVE_FAILED_TO_ADD_A_FRIEND_TO_YOUR_FRIENDS_LIST);
 			}
 			
 			player.setActiveRequester(null);

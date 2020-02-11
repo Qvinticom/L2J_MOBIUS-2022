@@ -53,7 +53,7 @@ public class RollingDice implements IItemHandler
 		
 		if (!player.getFloodProtectors().getRollDice().tryPerformAction("RollDice"))
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addItemName(itemId);
 			player.sendPacket(sm);
 			return;
@@ -61,7 +61,7 @@ public class RollingDice implements IItemHandler
 		
 		if (player.isInOlympiadMode())
 		{
-			player.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_GRAND_OLYMPIAD_GAMES_MATCH);
 			return;
 		}
 		
@@ -87,7 +87,7 @@ public class RollingDice implements IItemHandler
 			
 			Broadcast.toSelfAndKnownPlayers(player, new Dice(player.getObjectId(), item.getItemId(), number, destination.getX(), destination.getY(), destination.getZ()));
 			
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_ROLLED_S2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_ROLLED_S2);
 			sm.addString(player.getName());
 			sm.addNumber(number);
 			player.sendPacket(sm);

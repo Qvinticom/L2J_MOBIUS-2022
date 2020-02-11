@@ -52,7 +52,7 @@ public class RequestFriendDel extends GameClientPacket
 		final int id = CharNameTable.getInstance().getPlayerObjectId(_name);
 		if ((id <= 0) || !player.getFriendList().contains(id))
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_NOT_ON_YOUR_FRIENDS_LIST).addString(_name));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_ON_YOUR_FRIEND_LIST).addString(_name));
 			return;
 		}
 		

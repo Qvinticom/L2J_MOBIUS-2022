@@ -85,7 +85,7 @@ public class SummonItems implements IItemHandler
 		
 		if (player.isSitting())
 		{
-			player.sendPacket(SystemMessageId.CANT_MOVE_SITTING);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SITTING);
 			return;
 		}
 		
@@ -103,7 +103,7 @@ public class SummonItems implements IItemHandler
 		
 		if (player.isInOlympiadMode())
 		{
-			player.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_GRAND_OLYMPIAD_GAMES_MATCH);
 			return;
 		}
 		
@@ -117,13 +117,13 @@ public class SummonItems implements IItemHandler
 		// Like L2OFF you can't summon pet in combat
 		if (player.isAttackingNow() || player.isInCombat())
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_SUMMON_IN_COMBAT);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_SUMMON_DURING_COMBAT);
 			return;
 		}
 		
 		if (player.isCursedWeaponEquiped() && sitem.isPetSummon())
 		{
-			player.sendPacket(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE);
+			player.sendPacket(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE);
 			return;
 		}
 		
@@ -168,7 +168,7 @@ public class SummonItems implements IItemHandler
 				// Skill 2046 used only for animation
 				final Skill skill = SkillTable.getInstance().getInfo(2046, 1);
 				player.useMagic(skill, true, true);
-				player.sendPacket(SystemMessageId.SUMMON_A_PET);
+				player.sendPacket(SystemMessageId.SUMMONING_YOUR_PET);
 				ThreadPool.schedule(new PetSummonFinalizer(player, npcTemplate, item), 4800);
 				break;
 			}

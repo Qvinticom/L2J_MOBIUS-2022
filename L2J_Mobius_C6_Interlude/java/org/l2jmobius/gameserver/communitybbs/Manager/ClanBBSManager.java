@@ -217,7 +217,7 @@ public class ClanBBSManager extends BaseBBSManager
 		
 		if (clan.getLevel() < 2)
 		{
-			activeChar.sendPacket(SystemMessageId.NO_CB_IN_MY_CLAN);
+			activeChar.sendPacket(SystemMessageId.THERE_ARE_NO_COMMUNITIES_IN_MY_CLAN_CLAN_COMMUNITIES_ARE_ALLOWED_FOR_CLANS_WITH_SKILL_LEVELS_OF_2_AND_HIGHER);
 			sendClanList(activeChar, 1);
 			return;
 		}
@@ -321,7 +321,7 @@ public class ClanBBSManager extends BaseBBSManager
 		
 		if (clan.getLevel() < 2)
 		{
-			activeChar.sendPacket(SystemMessageId.NO_CB_IN_MY_CLAN);
+			activeChar.sendPacket(SystemMessageId.THERE_ARE_NO_COMMUNITIES_IN_MY_CLAN_CLAN_COMMUNITIES_ARE_ALLOWED_FOR_CLANS_WITH_SKILL_LEVELS_OF_2_AND_HIGHER);
 			sendClanList(activeChar, 1);
 			return;
 		}

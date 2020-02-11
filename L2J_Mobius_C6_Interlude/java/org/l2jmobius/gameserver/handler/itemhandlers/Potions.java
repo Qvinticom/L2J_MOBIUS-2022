@@ -235,7 +235,7 @@ public class Potions implements IItemHandler
 			
 			if (activeChar.isInOlympiadMode())
 			{
-				activeChar.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+				activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_GRAND_OLYMPIAD_GAMES_MATCH);
 				return;
 			}
 			
@@ -413,7 +413,7 @@ public class Potions implements IItemHandler
 					}
 					else
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.INCOMPATIBLE_ITEM_GRADE); // INCOMPATIBLE_ITEM_GRADE
+						final SystemMessage sm = new SystemMessage(SystemMessageId.INCOMPATIBLE_ITEM_GRADE_THIS_ITEM_CANNOT_BE_USED); // INCOMPATIBLE_ITEM_GRADE
 						sm.addItemName(itemId);
 						activeChar.sendPacket(sm);
 					}
@@ -437,7 +437,7 @@ public class Potions implements IItemHandler
 					}
 					else
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.INCOMPATIBLE_ITEM_GRADE); // INCOMPATIBLE_ITEM_GRADE
+						final SystemMessage sm = new SystemMessage(SystemMessageId.INCOMPATIBLE_ITEM_GRADE_THIS_ITEM_CANNOT_BE_USED); // INCOMPATIBLE_ITEM_GRADE
 						sm.addItemName(itemId);
 						activeChar.sendPacket(sm);
 					}
@@ -461,7 +461,7 @@ public class Potions implements IItemHandler
 					}
 					else
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.INCOMPATIBLE_ITEM_GRADE); // INCOMPATIBLE_ITEM_GRADE
+						final SystemMessage sm = new SystemMessage(SystemMessageId.INCOMPATIBLE_ITEM_GRADE_THIS_ITEM_CANNOT_BE_USED); // INCOMPATIBLE_ITEM_GRADE
 						sm.addItemName(itemId);
 						activeChar.sendPacket(sm);
 					}
@@ -758,7 +758,7 @@ public class Potions implements IItemHandler
 				{
 					return true;
 				}
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);
 				sm.addItemName(itemId);
 				activeChar.sendPacket(sm);
 				
@@ -794,7 +794,7 @@ public class Potions implements IItemHandler
 					{
 						if ((skill.getId() != 2166))
 						{
-							final SystemMessage sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
+							final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);
 							sm.addSkillName(skill.getId(), skill.getLevel());
 							activeChar.sendPacket(sm);
 						}
@@ -840,7 +840,7 @@ public class Potions implements IItemHandler
 				{
 					if ((skill.getId() != 2166))
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);
 						sm.addSkillName(skill.getId(), skill.getLevel());
 						activeChar.sendPacket(sm);
 					}

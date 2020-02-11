@@ -81,14 +81,14 @@ public class SkillCreateItem extends Skill
 		
 		if (count > 1)
 		{
-			final SystemMessage smsg = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 			smsg.addItemName(item.getItemId());
 			smsg.addNumber(count);
 			player.sendPacket(smsg);
 		}
 		else
 		{
-			final SystemMessage smsg = new SystemMessage(SystemMessageId.EARNED_ITEM);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 			smsg.addItemName(item.getItemId());
 			player.sendPacket(smsg);
 		}
