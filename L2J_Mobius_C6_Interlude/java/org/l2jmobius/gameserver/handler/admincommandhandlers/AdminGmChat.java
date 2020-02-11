@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
-import org.l2jmobius.gameserver.datatables.xml.AdminData;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -102,21 +102,15 @@ public class AdminGmChat implements IAdminCommandHandler
 	{
 		try
 		{
-			int offset = 0;
-			
-			String text;
-			
-			if (command.contains("menu"))
+			final int offset = command.contains("menu") ? 17 : 13;
+			final String text = command.substring(offset);
+			for (PlayerInstance player : World.getInstance().getAllPlayers())
 			{
-				offset = 17;
+				if (player.isGM())
+				{
+					player.sendPacket(new CreatureSay(0, ChatType.ALLIANCE, activeChar.getName(), text));
+				}
 			}
-			else
-			{
-				offset = 13;
-			}
-			
-			text = command.substring(offset);
-			AdminData.broadcastToGMs(new CreatureSay(0, 9, activeChar.getName(), text));
 		}
 		catch (StringIndexOutOfBoundsException e)
 		{

@@ -26,6 +26,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -545,7 +546,7 @@ public class ChristmasManager
 	 */
 	protected CreatureSay getXMasMessage()
 	{
-		return new CreatureSay(0, 17, getRandomSender(), getRandomXMasMessage());
+		return new CreatureSay(0, ChatType.HERO_VOICE, getRandomSender(), getRandomXMasMessage());
 	}
 	
 	/**

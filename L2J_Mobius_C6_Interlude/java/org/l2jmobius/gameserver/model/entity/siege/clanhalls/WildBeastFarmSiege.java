@@ -28,6 +28,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.xml.DoorData;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.model.World;
@@ -540,7 +541,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 	{
 		if (type == 1)
 		{
-			final CreatureSay cs = new CreatureSay(0, 1, "Journal", text);
+			final CreatureSay cs = new CreatureSay(0, ChatType.SHOUT, "Journal", text);
 			for (String clanName : getRegisteredClans())
 			{
 				final Clan clan = ClanTable.getInstance().getClanByName(clanName);
@@ -556,7 +557,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 		}
 		else
 		{
-			final CreatureSay cs = new CreatureSay(0, 1, "Journal", text);
+			final CreatureSay cs = new CreatureSay(0, ChatType.SHOUT, "Journal", text);
 			for (PlayerInstance player : World.getInstance().getAllPlayers())
 			{
 				if (player.getInstanceId() == 0)

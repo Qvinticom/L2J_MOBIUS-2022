@@ -48,8 +48,8 @@ import org.l2jmobius.commons.util.LimitLinesDocumentListener;
 import org.l2jmobius.commons.util.SplashScreen;
 import org.l2jmobius.gameserver.Shutdown;
 import org.l2jmobius.gameserver.cache.HtmCache;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.multisell.Multisell;
-import org.l2jmobius.gameserver.network.clientpackets.Say2;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.Util;
@@ -209,7 +209,7 @@ public class Gui
 				final String message = ((String) input).trim();
 				if (!message.isEmpty())
 				{
-					Broadcast.toAllOnlinePlayers(new CreatureSay(-1, Say2.ANNOUNCEMENT, "", message));
+					Broadcast.toAllOnlinePlayers(new CreatureSay(-1, ChatType.ANNOUNCEMENT, "", message));
 				}
 			}
 		});
@@ -225,7 +225,7 @@ public class Gui
 				final String message = ((String) input).trim();
 				if (!message.isEmpty())
 				{
-					Broadcast.toAllOnlinePlayers(new CreatureSay(-1, Say2.CRITICAL_ANNOUNCE, "", message));
+					Broadcast.toAllOnlinePlayers(new CreatureSay(-1, ChatType.CRITICAL_ANNOUNCE, "", message));
 				}
 			}
 		});

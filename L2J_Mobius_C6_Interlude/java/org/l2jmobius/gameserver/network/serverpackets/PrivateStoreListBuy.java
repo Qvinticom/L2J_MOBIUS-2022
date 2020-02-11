@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
@@ -37,7 +38,7 @@ public class PrivateStoreListBuy extends GameServerPacket
 		
 		if (Config.SELL_BY_ITEM)
 		{
-			_player.sendPacket(new CreatureSay(0, 15, "", "ATTENTION: Store System is not based on Adena, be careful!"));
+			_player.sendPacket(new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", "ATTENTION: Store System is not based on Adena, be careful!"));
 			_playerAdena = _player.getItemCount(Config.SELL_ITEM, -1);
 		}
 		else

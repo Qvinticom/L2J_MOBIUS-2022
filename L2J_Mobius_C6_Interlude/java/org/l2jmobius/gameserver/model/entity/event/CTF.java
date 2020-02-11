@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Inventory;
@@ -744,17 +745,17 @@ public class CTF implements EventTask
 		_inProgress = true;
 		_joining = true;
 		spawnEventNpc();
-		Announcements.getInstance().gameAnnounceToAll(_eventName + ": Event " + _eventName + "!");
+		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Event " + _eventName + "!");
 		if (Config.CTF_ANNOUNCE_REWARD && (ItemTable.getInstance().getTemplate(_rewardId) != null))
 		{
-			Announcements.getInstance().gameAnnounceToAll(_eventName + ": Reward: " + _rewardAmount + " " + ItemTable.getInstance().getTemplate(_rewardId).getName());
+			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Reward: " + _rewardAmount + " " + ItemTable.getInstance().getTemplate(_rewardId).getName());
 		}
-		Announcements.getInstance().gameAnnounceToAll(_eventName + ": Recruiting levels: " + _minlvl + " to " + _maxlvl);
-		Announcements.getInstance().gameAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + ".");
+		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Recruiting levels: " + _minlvl + " to " + _maxlvl);
+		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + ".");
 		
 		if (Config.CTF_COMMAND)
 		{
-			Announcements.getInstance().gameAnnounceToAll(_eventName + ": Commands .ctfjoin .ctfleave .ctfinfo!");
+			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Commands .ctfjoin .ctfleave .ctfinfo!");
 		}
 		
 		return true;
@@ -781,7 +782,7 @@ public class CTF implements EventTask
 			}
 			else if (Config.CTF_EVEN_TEAMS.equals("SHUFFLE") && !checkMinPlayers(_playersShuffle.size()))
 			{
-				Announcements.getInstance().gameAnnounceToAll(_eventName + ": Not enough players for event. Min Requested : " + _minPlayers + ", Participating : " + _playersShuffle.size());
+				Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Not enough players for event. Min Requested : " + _minPlayers + ", Participating : " + _playersShuffle.size());
 				if (Config.CTF_STATS_LOGGER)
 				{
 					LOGGER.info(_eventName + ":Not enough players for event. Min Requested : " + _minPlayers + ", Participating : " + _playersShuffle.size());
@@ -792,7 +793,7 @@ public class CTF implements EventTask
 		}
 		else if (!checkMinPlayers(_players.size()))
 		{
-			Announcements.getInstance().gameAnnounceToAll(_eventName + ": Not enough players for event. Min Requested : " + _minPlayers + ", Participating : " + _players.size());
+			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Not enough players for event. Min Requested : " + _minPlayers + ", Participating : " + _players.size());
 			if (Config.CTF_STATS_LOGGER)
 			{
 				LOGGER.info(_eventName + ":Not enough players for event. Min Requested : " + _minPlayers + ", Participating : " + _players.size());
@@ -801,7 +802,7 @@ public class CTF implements EventTask
 		}
 		
 		_joining = false;
-		Announcements.getInstance().gameAnnounceToAll(_eventName + ": Teleport to team spot in 20 seconds!");
+		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Teleport to team spot in 20 seconds!");
 		
 		setUserData();
 		ThreadPool.schedule(() ->
@@ -889,7 +890,7 @@ public class CTF implements EventTask
 		
 		afterStartOperations();
 		
-		Announcements.getInstance().gameAnnounceToAll(_eventName + ": Started. Go Capture the Flags!");
+		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Started. Go Capture the Flags!");
 		_started = true;
 		
 		return true;
@@ -925,7 +926,7 @@ public class CTF implements EventTask
 		_aborted = false;
 		final long delay = _intervalBetweenMatches;
 		
-		Announcements.getInstance().gameAnnounceToAll(_eventName + ": joining period will be avaible again in " + _intervalBetweenMatches + " minute(s)!");
+		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": joining period will be avaible again in " + _intervalBetweenMatches + " minute(s)!");
 		
 		waiter(delay);
 		
@@ -937,7 +938,7 @@ public class CTF implements EventTask
 			}
 			else
 			{
-				Announcements.getInstance().gameAnnounceToAll(_eventName + ": next event aborted!");
+				Announcements.getInstance().criticalAnnounceToAll(_eventName + ": next event aborted!");
 			}
 		}
 		catch (Exception e)
@@ -972,21 +973,21 @@ public class CTF implements EventTask
 				
 				if (Config.CTF_ANNOUNCE_TEAM_STATS)
 				{
-					Announcements.getInstance().gameAnnounceToAll(_eventName + " Team Statistics:");
+					Announcements.getInstance().criticalAnnounceToAll(_eventName + " Team Statistics:");
 					for (String team : _teams)
 					{
 						final int _flags_ = teamPointsCount(team);
-						Announcements.getInstance().gameAnnounceToAll(_eventName + ": Team: " + team + " - Flags taken: " + _flags_);
+						Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Team: " + team + " - Flags taken: " + _flags_);
 					}
 				}
 				
 				if (_topTeam != null)
 				{
-					Announcements.getInstance().gameAnnounceToAll(_eventName + ": Team " + _topTeam + " wins the match, with " + _topScore + " flags taken!");
+					Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Team " + _topTeam + " wins the match, with " + _topScore + " flags taken!");
 				}
 				else
 				{
-					Announcements.getInstance().gameAnnounceToAll(_eventName + ": The event finished with a TIE: " + _topScore + " flags taken by each team!");
+					Announcements.getInstance().criticalAnnounceToAll(_eventName + ": The event finished with a TIE: " + _topScore + " flags taken by each team!");
 				}
 				rewardTeam(_topTeam);
 				
@@ -1005,7 +1006,7 @@ public class CTF implements EventTask
 			}
 			else
 			{
-				Announcements.getInstance().gameAnnounceToAll(_eventName + ": The event finished with a TIE: No team wins the match(nobody took flags)!");
+				Announcements.getInstance().criticalAnnounceToAll(_eventName + ": The event finished with a TIE: No team wins the match(nobody took flags)!");
 				
 				if (Config.CTF_STATS_LOGGER)
 				{
@@ -1047,7 +1048,7 @@ public class CTF implements EventTask
 			cleanCTF();
 			_joining = false;
 			_inProgress = false;
-			Announcements.getInstance().gameAnnounceToAll(_eventName + ": Match aborted!");
+			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Match aborted!");
 			return;
 		}
 		_joining = false;
@@ -1058,7 +1059,7 @@ public class CTF implements EventTask
 		
 		afterFinish();
 		
-		Announcements.getInstance().gameAnnounceToAll(_eventName + ": Match aborted!");
+		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Match aborted!");
 		teleportFinish();
 	}
 	
@@ -1076,7 +1077,7 @@ public class CTF implements EventTask
 	public static void teleportFinish()
 	{
 		sit();
-		Announcements.getInstance().gameAnnounceToAll(_eventName + ": Teleport back to participation NPC in 20 seconds!");
+		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Teleport back to participation NPC in 20 seconds!");
 		
 		ThreadPool.schedule(() ->
 		{
@@ -1241,12 +1242,12 @@ public class CTF implements EventTask
 						removeOfflinePlayers();
 						if (_joining)
 						{
-							Announcements.getInstance().gameAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + "!");
-							Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + (seconds / 60 / 60) + " hour(s) till registration close!");
+							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + "!");
+							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60 / 60) + " hour(s) till registration close!");
 						}
 						else if (_started)
 						{
-							Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + (seconds / 60 / 60) + " hour(s) till event finish!");
+							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60 / 60) + " hour(s) till event finish!");
 						}
 						break;
 					}
@@ -1261,12 +1262,12 @@ public class CTF implements EventTask
 					{
 						if (_joining)
 						{
-							Announcements.getInstance().gameAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + "!");
-							Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + (seconds / 60) + " minute(s) till registration close!");
+							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + "!");
+							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60) + " minute(s) till registration close!");
 						}
 						else if (_started)
 						{
-							Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + (seconds / 60) + " minute(s) till event finish!");
+							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60) + " minute(s) till event finish!");
 						}
 						break;
 					}
@@ -1283,15 +1284,15 @@ public class CTF implements EventTask
 					{
 						if (_joining)
 						{
-							Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + seconds + " second(s) till registration close!");
+							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + seconds + " second(s) till registration close!");
 						}
 						else if (_teleport)
 						{
-							Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + seconds + " seconds(s) till start fight!");
+							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + seconds + " seconds(s) till start fight!");
 						}
 						else if (_started)
 						{
-							Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + seconds + " second(s) till event finish!");
+							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + seconds + " second(s) till event finish!");
 						}
 						break;
 					}
@@ -2639,7 +2640,7 @@ public class CTF implements EventTask
 	{
 		if (!_started && !_aborted)
 		{
-			Announcements.getInstance().gameAnnounceToAll(_eventName + ": Thank you For Participating At, " + _eventName + " Event.");
+			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Thank you For Participating At, " + _eventName + " Event.");
 		}
 	}
 	
@@ -2819,13 +2820,13 @@ public class CTF implements EventTask
 						// logged off with a flag in his hands
 						if (!player.isOnline() && player._haveFlagCTF)
 						{
-							Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + player.getName() + " logged off with a CTF flag!");
+							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + player.getName() + " logged off with a CTF flag!");
 							player._haveFlagCTF = false;
 							if ((_teams.indexOf(player._teamNameHaveFlagCTF) >= 0) && _flagsTaken.get(_teams.indexOf(player._teamNameHaveFlagCTF)))
 							{
 								_flagsTaken.set(_teams.indexOf(player._teamNameHaveFlagCTF), false);
 								spawnFlag(player._teamNameHaveFlagCTF);
-								Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + player._teamNameHaveFlagCTF + " flag now returned to place.");
+								Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + player._teamNameHaveFlagCTF + " flag now returned to place.");
 							}
 							removeFlagFromPlayer(player);
 							player._teamNameHaveFlagCTF = null;
@@ -2851,7 +2852,7 @@ public class CTF implements EventTask
 				{
 					_flagsTaken.set(index, false);
 					spawnFlag(team);
-					Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + team + " flag returned due to player error.");
+					Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + team + " flag returned due to player error.");
 				}
 			}
 			// Check if a player ran away from the event holding a flag:
@@ -2861,13 +2862,13 @@ public class CTF implements EventTask
 				{
 					if ((player != null) && player._haveFlagCTF && isOutsideCTFArea(player))
 					{
-						Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + player.getName() + " escaped from the event holding a flag!");
+						Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + player.getName() + " escaped from the event holding a flag!");
 						player._haveFlagCTF = false;
 						if ((_teams.indexOf(player._teamNameHaveFlagCTF) >= 0) && _flagsTaken.get(_teams.indexOf(player._teamNameHaveFlagCTF)))
 						{
 							_flagsTaken.set(_teams.indexOf(player._teamNameHaveFlagCTF), false);
 							spawnFlag(player._teamNameHaveFlagCTF);
-							Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + player._teamNameHaveFlagCTF + " flag now returned to place.");
+							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + player._teamNameHaveFlagCTF + " flag now returned to place.");
 						}
 						removeFlagFromPlayer(player);
 						player._teamNameHaveFlagCTF = null;
@@ -2915,7 +2916,7 @@ public class CTF implements EventTask
 		player.broadcastPacket(new SocialAction(player.getObjectId(), 16)); // Amazing glow
 		player._haveFlagCTF = true;
 		player.broadcastUserInfo();
-		player.sendPacket(new CreatureSay(player.getObjectId(), 15, ":", "You got it! Run back! ::"));
+		player.sendPacket(new CreatureSay(player.getObjectId(), ChatType.PARTYROOM_COMMANDER, ":", "You got it! Run back! ::"));
 	}
 	
 	/**
@@ -3149,7 +3150,7 @@ public class CTF implements EventTask
 						player.broadcastUserInfo();
 						removeFlagFromPlayer(player);
 						_teamPointsCount.set(indexOwn, teamPointsCount(team) + 1);
-						Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + player.getName() + " scores for " + player._teamNameCTF + ".");
+						Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + player.getName() + " scores for " + player._teamNameCTF + ".");
 					}
 				}
 				else
@@ -3164,7 +3165,7 @@ public class CTF implements EventTask
 						addFlagToPlayer(player);
 						player.broadcastUserInfo();
 						player._haveFlagCTF = true;
-						Announcements.getInstance().gameAnnounceToAll(_eventName + ": " + team + " flag taken by " + player.getName() + "...");
+						Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + team + " flag taken by " + player.getName() + "...");
 						pointTeamTo(player, team);
 						break;
 					}

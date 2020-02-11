@@ -26,6 +26,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.xml.DoorData;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -436,7 +437,7 @@ public class SepulcherNpcInstance extends NpcInstance
 		{
 			return;
 		}
-		final CreatureSay sm = new CreatureSay(0, 1, getName(), msg);
+		final CreatureSay sm = new CreatureSay(0, ChatType.SHOUT, getName(), msg);
 		for (PlayerInstance player : knownPlayers)
 		{
 			if (player == null)

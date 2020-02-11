@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -110,7 +111,7 @@ public class RequestPrivateStoreManageBuy extends GameClientPacket
 			
 			if (Config.SELL_BY_ITEM)
 			{
-				player.sendPacket(new CreatureSay(0, 15, "", "ATTENTION: Store System is not based on Adena, be careful!"));
+				player.sendPacket(new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", "ATTENTION: Store System is not based on Adena, be careful!"));
 			}
 			
 			player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_BUY + 1);

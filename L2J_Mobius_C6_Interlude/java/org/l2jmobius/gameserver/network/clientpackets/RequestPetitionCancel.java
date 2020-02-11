@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -70,7 +71,7 @@ public class RequestPetitionCancel extends GameClientPacket
 				
 				// Notify all GMs that the player's pending petition has been cancelled.
 				final String msgContent = player.getName() + " has canceled a pending petition.";
-				AdminData.broadcastToGMs(new CreatureSay(player.getObjectId(), 17, "Petition System", msgContent));
+				AdminData.broadcastToGMs(new CreatureSay(player.getObjectId(), ChatType.HERO_VOICE, "Petition System", msgContent));
 			}
 			else
 			{

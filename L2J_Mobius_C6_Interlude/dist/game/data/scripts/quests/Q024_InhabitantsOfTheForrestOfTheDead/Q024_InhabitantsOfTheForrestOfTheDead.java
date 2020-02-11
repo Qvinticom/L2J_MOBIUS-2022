@@ -16,6 +16,7 @@
  */
 package quests.Q024_InhabitantsOfTheForrestOfTheDead;
 
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -275,7 +276,7 @@ public class Q024_InhabitantsOfTheForrestOfTheDead extends Quest
 				
 				for (PlayerInstance nearby : npc.getKnownList().getKnownPlayers().values())
 				{
-					nearby.sendPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), "That sign!"));
+					nearby.sendPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "That sign!"));
 				}
 			}
 		}

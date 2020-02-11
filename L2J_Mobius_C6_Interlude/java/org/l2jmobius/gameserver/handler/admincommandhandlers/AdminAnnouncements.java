@@ -19,12 +19,12 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.handler.AutoAnnouncementHandler;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Announcements;
-import org.l2jmobius.gameserver.network.clientpackets.Say2;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -156,7 +156,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				{
 					text1 = activeChar.getName() + ": " + text1;
 				}
-				Broadcast.toAllOnlinePlayers(new CreatureSay(activeChar.getObjectId(), Say2.CRITICAL_ANNOUNCE, "", text1));
+				Broadcast.toAllOnlinePlayers(new CreatureSay(activeChar.getObjectId(), ChatType.CRITICAL_ANNOUNCE, "", text1));
 				return true;
 			}
 			case "admin_list_autoannouncements":

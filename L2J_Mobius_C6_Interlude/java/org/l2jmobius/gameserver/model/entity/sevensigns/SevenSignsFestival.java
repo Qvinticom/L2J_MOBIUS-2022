@@ -36,6 +36,7 @@ import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
@@ -4168,10 +4169,10 @@ public class SevenSignsFestival implements SpawnListener
 			return;
 		}
 		
-		CreatureSay cs = new CreatureSay(_dawnChatGuide.getObjectId(), 1, senderName, message);
+		CreatureSay cs = new CreatureSay(_dawnChatGuide.getObjectId(), ChatType.SHOUT, senderName, message);
 		_dawnChatGuide.broadcastPacket(cs);
 		
-		cs = new CreatureSay(_duskChatGuide.getObjectId(), 1, senderName, message);
+		cs = new CreatureSay(_duskChatGuide.getObjectId(), ChatType.SHOUT, senderName, message);
 		_duskChatGuide.broadcastPacket(cs);
 	}
 	
@@ -4747,7 +4748,7 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			if (!_participants.isEmpty())
 			{
-				final CreatureSay cs = new CreatureSay(_witchInst.getObjectId(), 0, "Festival Witch", message);
+				final CreatureSay cs = new CreatureSay(_witchInst.getObjectId(), ChatType.GENERAL, "Festival Witch", message);
 				for (PlayerInstance participant : _participants)
 				{
 					try

@@ -16,15 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.nio.BufferUnderflowException;
 import java.util.Collection;
 import java.util.StringTokenizer;
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import org.l2jmobius.gameserver.handler.VoicedCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
@@ -33,7 +31,6 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance.PunishLevel;
-import org.l2jmobius.gameserver.network.SystemChatChannelId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -41,101 +38,84 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class Say2 extends GameClientPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(Say2.class.getName());
-	private static Logger _logChat = Logger.getLogger("chat");
+	private static final Logger LOGGER_CHAT = Logger.getLogger("chat");
 	
-	public static final int ALL = 0;
-	public static final int SHOUT = 1; // !
-	public static final int TELL = 2;
-	public static final int PARTY = 3; // #
-	public static final int CLAN = 4; // @
-	public static final int GM = 5; // //gmchat
-	public static final int PETITION_PLAYER = 6; // used for petition
-	public static final int PETITION_GM = 7; // * used for petition
-	public static final int TRADE = 8; // +
-	public static final int ALLIANCE = 9; // $
-	public static final int ANNOUNCEMENT = 10; // //announce
-	public static final int PARTYROOM_ALL = 16; // (Red)
-	public static final int PARTYROOM_COMMANDER = 15; // (Yellow)
-	public static final int HERO_VOICE = 17; // %
-	public static final int CRITICAL_ANNOUNCE = 18;
-	
-	private static final String[] CHAT_NAMES =
+	private static final String[] WALKER_COMMAND_LIST =
 	{
-		"ALL  ",
-		"SHOUT",
-		"TELL ",
-		"PARTY",
-		"CLAN ",
-		"GM   ",
-		"PETITION_PLAYER",
-		"PETITION_GM",
-		"TRADE",
-		"ALLIANCE",
-		"ANNOUNCEMENT", // 10
-		"WILLCRASHCLIENT:)",
-		"FAKEALL?",
-		"FAKEALL?",
-		"FAKEALL?",
-		"PARTYROOM_ALL",
-		"PARTYROOM_COMMANDER",
-		"CRITICAL_ANNOUNCE",
-		"HERO_VOICE"
+		"USESKILL",
+		"USEITEM",
+		"BUYITEM",
+		"SELLITEM",
+		"SAVEITEM",
+		"LOADITEM",
+		"MSG",
+		"SET",
+		"DELAY",
+		"LABEL",
+		"JMP",
+		"CALL",
+		"RETURN",
+		"MOVETO",
+		"NPCSEL",
+		"NPCDLG",
+		"DLGSEL",
+		"CHARSTATUS",
+		"POSOUTRANGE",
+		"POSINRANGE",
+		"GOHOME",
+		"SAY",
+		"EXIT",
+		"PAUSE",
+		"STRINDLG",
+		"STRNOTINDLG",
+		"CHANGEWAITTYPE",
+		"FORCEATTACK",
+		"ISMEMBER",
+		"REQUESTJOINPARTY",
+		"REQUESTOUTPARTY",
+		"QUITPARTY",
+		"MEMBERSTATUS",
+		"CHARBUFFS",
+		"ITEMCOUNT",
+		"FOLLOWTELEPORT"
 	};
 	
 	private String _text;
 	private int _type;
-	private SystemChatChannelId _type2Check;
 	private String _target;
 	
 	@Override
 	protected void readImpl()
 	{
 		_text = readS();
-		try
-		{
-			_type = readD();
-			_type2Check = SystemChatChannelId.getChatType(_type);
-		}
-		catch (BufferUnderflowException e)
-		{
-			_type = CHAT_NAMES.length;
-			_type2Check = SystemChatChannelId.CHAT_NONE;
-		}
-		_target = _type == TELL ? readS() : null;
+		_type = readD();
+		_target = _type == ChatType.WHISPER.getClientId() ? readS() : null;
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		if ((_type < 0) || (_type >= CHAT_NAMES.length))
-		{
-			LOGGER.warning("Say2: Invalid type: " + _type);
-			return;
-		}
-		
 		final PlayerInstance player = getClient().getPlayer();
-		
-		// Anti-PHX Announce
-		if ((_type2Check == SystemChatChannelId.CHAT_NONE) || (_type2Check == SystemChatChannelId.CHAT_ANNOUNCE) || (_type2Check == SystemChatChannelId.CHAT_CRITICAL_ANNOUNCE) || (_type2Check == SystemChatChannelId.CHAT_SYSTEM) || (_type2Check == SystemChatChannelId.CHAT_CUSTOM) || ((_type2Check == SystemChatChannelId.CHAT_GM_PET) && !player.isGM()))
-		{
-			LOGGER.warning("[Anti-PHX Announce] Illegal Chat ( " + _type2Check + " ) channel was used by character: [" + player.getName() + "]");
-			return;
-		}
-		
 		if (player == null)
 		{
 			LOGGER.warning("[Say2.java] Active Character is null.");
 			return;
 		}
 		
-		if (player.isChatBanned() && !player.isGM() && (_type != CLAN) && (_type != ALLIANCE) && (_type != PARTY))
+		ChatType chatType = ChatType.findByClientId(_type);
+		if (chatType == null)
+		{
+			LOGGER.warning("Say2: Invalid type: " + _type + " Player : " + player.getName() + " text: " + _text);
+			return;
+		}
+		
+		if (player.isChatBanned() && !player.isGM() && (chatType != ChatType.CLAN) && (chatType != ChatType.ALLIANCE) && (chatType != ChatType.PARTY))
 		{
 			player.sendMessage("You may not chat while a chat ban is in effect.");
 			return;
 		}
 		
-		if (player.isInJail() && Config.JAIL_DISABLE_CHAT && ((_type == TELL) || (_type == SHOUT) || (_type == TRADE) || (_type == HERO_VOICE)))
+		if (player.isInJail() && Config.JAIL_DISABLE_CHAT && ((chatType == ChatType.WHISPER) || (chatType == ChatType.SHOUT) || (chatType == ChatType.TRADE) || (chatType == ChatType.HERO_VOICE)))
 		{
 			player.sendMessage("You can not chat with players outside of the jail.");
 			return;
@@ -147,15 +127,15 @@ public class Say2 extends GameClientPacket
 			return;
 		}
 		
-		if (player.isCursedWeaponEquiped() && ((_type == TRADE) || (_type == SHOUT)))
+		if (player.isCursedWeaponEquiped() && ((chatType == ChatType.TRADE) || (chatType == ChatType.SHOUT)))
 		{
 			player.sendMessage("Shout and trade chatting cannot be used while possessing a cursed weapon.");
 			return;
 		}
 		
-		if ((_type == PETITION_PLAYER) && player.isGM())
+		if ((chatType == ChatType.PETITION_PLAYER) && player.isGM())
 		{
-			_type = PETITION_GM;
+			chatType = ChatType.PETITION_GM;
 		}
 		
 		if (_text.length() > Config.MAX_CHAT_LENGTH)
@@ -166,30 +146,17 @@ public class Say2 extends GameClientPacket
 		
 		if (Config.LOG_CHAT)
 		{
-			final LogRecord record = new LogRecord(Level.INFO, _text);
-			record.setLoggerName("chat");
-			
-			if (_type == TELL)
+			if (chatType == ChatType.WHISPER)
 			{
-				record.setParameters(new Object[]
-				{
-					CHAT_NAMES[_type],
-					"[" + player.getName() + " to " + _target + "]"
-				});
+				LOGGER_CHAT.info(chatType.name() + " [" + player + " to " + _target + "] " + _text);
 			}
 			else
 			{
-				record.setParameters(new Object[]
-				{
-					CHAT_NAMES[_type],
-					"[" + player.getName() + "]"
-				});
+				LOGGER_CHAT.info(chatType.name() + " [" + player + "] " + _text);
 			}
-			
-			_logChat.log(record);
 		}
 		
-		if (Config.L2WALKER_PROTECTION && (_type == TELL) && checkBot(_text))
+		if (Config.L2WALKER_PROTECTION && (chatType == ChatType.WHISPER) && checkBot(_text))
 		{
 			Util.handleIllegalPlayerAction(player, "Client Emulator Detect: Player " + player.getName() + " using l2walker.", Config.DEFAULT_PUNISH);
 			return;
@@ -210,7 +177,7 @@ public class Say2 extends GameClientPacket
 			_type = 0;
 			final Collection<WorldObject> list = saymode.getKnownList().getKnownObjects().values();
 			
-			final CreatureSay cs = new CreatureSay(actor, _type, name, _text);
+			final CreatureSay cs = new CreatureSay(actor, chatType, name, _text);
 			for (WorldObject obj : list)
 			{
 				if (!(obj instanceof Creature))
@@ -223,10 +190,10 @@ public class Say2 extends GameClientPacket
 			return;
 		}
 		
-		final CreatureSay cs = new CreatureSay(player.getObjectId(), _type, player.getName(), _text);
-		switch (_type)
+		final CreatureSay cs = new CreatureSay(player.getObjectId(), chatType, player.getName(), _text);
+		switch (chatType)
 		{
-			case TELL:
+			case WHISPER:
 			{
 				final PlayerInstance receiver = World.getInstance().getPlayer(_target);
 				if (receiver == null)
@@ -256,7 +223,7 @@ public class Say2 extends GameClientPacket
 					if (!receiver.isInRefusalMode())
 					{
 						receiver.sendPacket(cs);
-						player.sendPacket(new CreatureSay(player.getObjectId(), _type, "->" + receiver.getName(), _text));
+						player.sendPacket(new CreatureSay(player.getObjectId(), chatType, "->" + receiver.getName(), _text));
 					}
 					else
 					{
@@ -440,7 +407,7 @@ public class Say2 extends GameClientPacket
 				}
 				break;
 			}
-			case ALL:
+			case GENERAL:
 			{
 				if (_text.startsWith("."))
 				{
@@ -567,46 +534,6 @@ public class Say2 extends GameClientPacket
 			}
 		}
 	}
-	
-	private static final String[] WALKER_COMMAND_LIST =
-	{
-		"USESKILL",
-		"USEITEM",
-		"BUYITEM",
-		"SELLITEM",
-		"SAVEITEM",
-		"LOADITEM",
-		"MSG",
-		"SET",
-		"DELAY",
-		"LABEL",
-		"JMP",
-		"CALL",
-		"RETURN",
-		"MOVETO",
-		"NPCSEL",
-		"NPCDLG",
-		"DLGSEL",
-		"CHARSTATUS",
-		"POSOUTRANGE",
-		"POSINRANGE",
-		"GOHOME",
-		"SAY",
-		"EXIT",
-		"PAUSE",
-		"STRINDLG",
-		"STRNOTINDLG",
-		"CHANGEWAITTYPE",
-		"FORCEATTACK",
-		"ISMEMBER",
-		"REQUESTJOINPARTY",
-		"REQUESTOUTPARTY",
-		"QUITPARTY",
-		"MEMBERSTATUS",
-		"CHARBUFFS",
-		"ITEMCOUNT",
-		"FOLLOWTELEPORT"
-	};
 	
 	private boolean checkBot(String text)
 	{

@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.communitybbs.Manager.MailBBSManager;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
@@ -153,7 +154,7 @@ public class EnterWorld extends GameClientPacket
 			notifyPartner(player);
 		}
 		
-		EnterGM(player);
+		enterGM(player);
 		
 		Quest.playerEnter(player);
 		player.sendPacket(new QuestList(player));
@@ -561,7 +562,7 @@ public class EnterWorld extends GameClientPacket
 		return result;
 	}
 	
-	private void EnterGM(PlayerInstance player)
+	private void enterGM(PlayerInstance player)
 	{
 		if (player.isGM())
 		{
@@ -659,8 +660,8 @@ public class EnterWorld extends GameClientPacket
 		
 		if (Config.PM_MESSAGE_ON_START)
 		{
-			player.sendPacket(new CreatureSay(2, Say2.HERO_VOICE, Config.PM_TEXT1, Config.PM_SERVER_NAME));
-			player.sendPacket(new CreatureSay(15, Say2.PARTYROOM_COMMANDER, player.getName(), Config.PM_TEXT2));
+			player.sendPacket(new CreatureSay(2, ChatType.HERO_VOICE, Config.PM_TEXT1, Config.PM_SERVER_NAME));
+			player.sendPacket(new CreatureSay(15, ChatType.PARTYROOM_COMMANDER, player.getName(), Config.PM_TEXT2));
 		}
 		
 		if (Config.SERVER_TIME_ON_START)

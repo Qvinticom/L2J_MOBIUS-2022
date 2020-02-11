@@ -16,31 +16,27 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * CDSDDSS -> (0xd5)(objId)(name)(0x00)(type)(speaker)(name)
  */
-
 public class Snoop extends GameServerPacket
 {
 	private final PlayerInstance _snooped;
-	private final int _type;
+	private final ChatType _type;
 	private final String _speaker;
 	private final String _msg;
 	
-	public Snoop(PlayerInstance snooped, int type, String speaker, String msg)
+	public Snoop(PlayerInstance snooped, ChatType _chatType, String speaker, String msg)
 	{
 		_snooped = snooped;
-		_type = type;
+		_type = _chatType;
 		_speaker = speaker;
 		_msg = msg;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see net.sf.l2j.gameserver.serverpackets.ServerBasePacket#writeImpl()
-	 */
 	@Override
 	protected void writeImpl()
 	{
@@ -48,7 +44,7 @@ public class Snoop extends GameServerPacket
 		writeD(_snooped.getObjectId());
 		writeS(_snooped.getName());
 		writeD(0); // ??
-		writeD(_type);
+		writeD(_type.getClientId());
 		writeS(_speaker);
 		writeS(_msg);
 	}

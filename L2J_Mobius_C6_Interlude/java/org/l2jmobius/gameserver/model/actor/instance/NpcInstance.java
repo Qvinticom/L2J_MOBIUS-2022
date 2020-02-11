@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.HelperBuffTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.xml.ZoneData;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CustomNpcInstanceManager;
@@ -79,7 +80,6 @@ import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.model.zone.type.TownZone;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.clientpackets.Say2;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowVariationCancelWindow;
@@ -1929,7 +1929,7 @@ public class NpcInstance extends Creature
 	 */
 	public void broadcastNpcSay(String message)
 	{
-		broadcastPacket(new CreatureSay(getObjectId(), Say2.ALL, getName(), message));
+		broadcastPacket(new CreatureSay(getObjectId(), ChatType.GENERAL, getName(), message));
 	}
 	
 	/**

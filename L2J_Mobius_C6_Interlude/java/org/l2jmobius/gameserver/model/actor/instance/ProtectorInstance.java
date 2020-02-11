@@ -21,6 +21,7 @@ import java.util.concurrent.ScheduledFuture;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.datatables.SkillTable;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -87,7 +88,7 @@ public class ProtectorInstance extends NpcInstance
 				final int objId = _caster.getObjectId();
 				skill.getEffects(_caster, player, false, false, false);
 				broadcastPacket(new MagicSkillUse(_caster, player, skillId, skillLevel, Config.PROTECTOR_SKILLTIME, 0));
-				broadcastPacket(new CreatureSay(objId, 0, getName(), Config.PROTECTOR_MESSAGE));
+				broadcastPacket(new CreatureSay(objId, ChatType.GENERAL, getName(), Config.PROTECTOR_MESSAGE));
 				
 				return true;
 			}
@@ -109,7 +110,7 @@ public class ProtectorInstance extends NpcInstance
 				final int objId = _caster.getObjectId();
 				skill.getEffects(_caster, player, false, false, false);
 				broadcastPacket(new MagicSkillUse(_caster, player, skillId, skillLevel, Config.PROTECTOR_SKILLTIME, 0));
-				broadcastPacket(new CreatureSay(objId, 0, getName(), Config.PROTECTOR_MESSAGE));
+				broadcastPacket(new CreatureSay(objId, ChatType.GENERAL, getName(), Config.PROTECTOR_MESSAGE));
 				
 				return true;
 			}

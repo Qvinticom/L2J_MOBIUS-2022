@@ -20,6 +20,7 @@ import java.util.concurrent.Future;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.datatables.SkillTable;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -370,7 +371,7 @@ public class SepulcherMonsterInstance extends MonsterInstance
 				return;
 			}
 			
-			broadcastPacket(new CreatureSay(getObjectId(), 0, getName(), "forgive me!!"));
+			broadcastPacket(new CreatureSay(getObjectId(), ChatType.GENERAL, getName(), "forgive me!!"));
 		}
 	}
 	
@@ -397,7 +398,7 @@ public class SepulcherMonsterInstance extends MonsterInstance
 			}
 			
 			FourSepulchersManager.getInstance().spawnKeyBox(_activeChar);
-			broadcastPacket(new CreatureSay(getObjectId(), 0, getName(), "Many thanks for rescue me."));
+			broadcastPacket(new CreatureSay(getObjectId(), ChatType.GENERAL, getName(), "Many thanks for rescue me."));
 		}
 	}
 	

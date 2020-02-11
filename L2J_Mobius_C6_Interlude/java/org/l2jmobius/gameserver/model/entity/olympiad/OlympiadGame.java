@@ -25,6 +25,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.HeroSkillTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -1016,7 +1017,7 @@ class OlympiadGame
 			{
 				final int objId = manager.getLastSpawn().getObjectId();
 				final String npcName = manager.getLastSpawn().getName();
-				manager.getLastSpawn().broadcastPacket(new CreatureSay(objId, 1, npcName, "Olympiad is going to begin in Arena " + (_stadiumID + 1) + " in a moment."));
+				manager.getLastSpawn().broadcastPacket(new CreatureSay(objId, ChatType.SHOUT, npcName, "Olympiad is going to begin in Arena " + (_stadiumID + 1) + " in a moment."));
 			}
 		}
 	}

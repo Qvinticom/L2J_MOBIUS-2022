@@ -901,7 +901,7 @@ public class CreatureStat
 		}
 		
 		val /= _creature.getArmourExpertisePenalty();
-		if ((val > Config.MAX_RUN_SPEED) && !_creature.charIsGM())
+		if ((val > Config.MAX_RUN_SPEED) && !(_creature.isPlayer() && !_creature.getActingPlayer().isGM()))
 		{
 			val = Config.MAX_RUN_SPEED;
 		}

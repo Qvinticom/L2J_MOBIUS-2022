@@ -20,6 +20,7 @@ import java.util.Map;
 
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.NpcWalkerAI;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -81,7 +82,7 @@ public class NpcWalkerInstance extends NpcInstance
 		// we send message to known players only!
 		if (!knownPlayers.isEmpty())
 		{
-			final CreatureSay cs = new CreatureSay(getObjectId(), 0, getName(), chat);
+			final CreatureSay cs = new CreatureSay(getObjectId(), ChatType.GENERAL, getName(), chat);
 			
 			// we interact and list players here
 			for (PlayerInstance players : knownPlayers.values())

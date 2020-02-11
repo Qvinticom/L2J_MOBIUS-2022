@@ -104,15 +104,15 @@ public class AdminTownWar implements IAdminCommandHandler
 		// Announce for all towns
 		if (Config.TW_ALL_TOWNS)
 		{
-			Announcements.getInstance().gameAnnounceToAll("Town War Event!");
-			Announcements.getInstance().gameAnnounceToAll("All towns have been set to war zone by " + activeChar.getName() + ".");
+			Announcements.getInstance().criticalAnnounceToAll("Town War Event!");
+			Announcements.getInstance().criticalAnnounceToAll("All towns have been set to war zone by " + activeChar.getName() + ".");
 		}
 		
 		// Announce for one town
 		if (!Config.TW_ALL_TOWNS)
 		{
-			Announcements.getInstance().gameAnnounceToAll("Town War Event!");
-			Announcements.getInstance().gameAnnounceToAll(MapRegionData.getInstance().getTown(Config.TW_TOWN_ID).getName() + " has been set to war zone by " + activeChar.getName() + ".");
+			Announcements.getInstance().criticalAnnounceToAll("Town War Event!");
+			Announcements.getInstance().criticalAnnounceToAll(MapRegionData.getInstance().getTown(Config.TW_TOWN_ID).getName() + " has been set to war zone by " + activeChar.getName() + ".");
 		}
 	}
 	
@@ -179,13 +179,13 @@ public class AdminTownWar implements IAdminCommandHandler
 		// Announce for all towns
 		if (Config.TW_ALL_TOWNS)
 		{
-			Announcements.getInstance().gameAnnounceToAll("All towns have been set back to normal by " + activeChar.getName() + ".");
+			Announcements.getInstance().criticalAnnounceToAll("All towns have been set back to normal by " + activeChar.getName() + ".");
 		}
 		
 		// Announce for one town
 		if (!Config.TW_ALL_TOWNS)
 		{
-			Announcements.getInstance().gameAnnounceToAll(MapRegionData.getInstance().getTown(Config.TW_TOWN_ID).getName() + " has been set back to normal by " + activeChar.getName() + ".");
+			Announcements.getInstance().criticalAnnounceToAll(MapRegionData.getInstance().getTown(Config.TW_TOWN_ID).getName() + " has been set back to normal by " + activeChar.getName() + ".");
 		}
 	}
 	

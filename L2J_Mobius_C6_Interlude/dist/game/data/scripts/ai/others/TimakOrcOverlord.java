@@ -17,6 +17,7 @@
 package ai.others;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -45,7 +46,7 @@ public class TimakOrcOverlord extends Quest
 		{
 			if (Rnd.get(100) < 50)
 			{
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), "Dear ultimate power!!!"));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "Dear ultimate power!!!"));
 			}
 		}
 		else

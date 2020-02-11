@@ -17,6 +17,7 @@
 package ai.others;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -45,7 +46,7 @@ public class KarulBugbear extends Quest
 		{
 			if (Rnd.get(100) < 4)
 			{
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), "Your rear is practically unguarded!"));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "Your rear is practically unguarded!"));
 			}
 		}
 		else
@@ -53,7 +54,7 @@ public class KarulBugbear extends Quest
 			npc.setScriptValue(1);
 			if (Rnd.get(100) < 4)
 			{
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), "Watch your back!"));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "Watch your back!"));
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isPet);

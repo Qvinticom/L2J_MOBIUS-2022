@@ -19,10 +19,10 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
-import org.l2jmobius.gameserver.network.clientpackets.Say2;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
 public class PenaltyMonsterInstance extends MonsterInstance
@@ -58,7 +58,7 @@ public class PenaltyMonsterInstance extends MonsterInstance
 	{
 		if (Rnd.get(100) <= 80)
 		{
-			broadcastPacket(new CreatureSay(getObjectId(), Say2.ALL, getName(), "mmm your bait was delicious"));
+			broadcastPacket(new CreatureSay(getObjectId(), ChatType.GENERAL, getName(), "mmm your bait was delicious"));
 		}
 		_ptk = ptk;
 		addDamageHate(ptk, 10, 10);
@@ -76,7 +76,7 @@ public class PenaltyMonsterInstance extends MonsterInstance
 		
 		if (Rnd.get(100) <= 75)
 		{
-			broadcastPacket(new CreatureSay(getObjectId(), Say2.ALL, getName(), "I will tell fishes not to take your bait"));
+			broadcastPacket(new CreatureSay(getObjectId(), ChatType.GENERAL, getName(), "I will tell fishes not to take your bait"));
 		}
 		return true;
 	}

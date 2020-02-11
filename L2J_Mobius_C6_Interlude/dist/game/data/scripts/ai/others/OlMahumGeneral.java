@@ -17,6 +17,7 @@
 package ai.others;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -45,13 +46,13 @@ public class OlMahumGeneral extends Quest
 		{
 			if (Rnd.get(100) < 10)
 			{
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), "We shall see about that!"));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "We shall see about that!"));
 			}
 		}
 		else
 		{
 			npc.setScriptValue(1);
-			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), "I will definitely repay this humiliation!"));
+			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "I will definitely repay this humiliation!"));
 		}
 		return super.onAttack(npc, attacker, damage, isPet);
 	}

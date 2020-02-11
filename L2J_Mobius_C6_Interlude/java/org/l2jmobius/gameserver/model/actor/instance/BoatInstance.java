@@ -23,6 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.GameTimeController;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.knownlist.BoatKnownList;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
@@ -30,7 +31,6 @@ import org.l2jmobius.gameserver.model.holders.BoatPathHolder;
 import org.l2jmobius.gameserver.model.holders.BoatPathHolder.BoatPoint;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.network.clientpackets.Say2;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.OnVehicleCheckLocation;
@@ -263,11 +263,11 @@ public class BoatInstance extends Creature
 			{
 				if (cycle == 1)
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, pathA.npc, pathA.sysmess10);
+					sm = new CreatureSay(0, ChatType.SHOUT, pathA.npc, pathA.sysmess10);
 				}
 				else
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, pathB.npc, pathB.sysmess10);
+					sm = new CreatureSay(0, ChatType.SHOUT, pathB.npc, pathB.sysmess10);
 				}
 				ps = new PlaySound(0, "itemsound.ship_arrival_departure", this);
 				if ((knownPlayers == null) || knownPlayers.isEmpty())
@@ -287,11 +287,11 @@ public class BoatInstance extends Creature
 			{
 				if (cycle == 1)
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, pathA.npc, pathA.sysmess5);
+					sm = new CreatureSay(0, ChatType.SHOUT, pathA.npc, pathA.sysmess5);
 				}
 				else
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, pathB.npc, pathB.sysmess5);
+					sm = new CreatureSay(0, ChatType.SHOUT, pathB.npc, pathB.sysmess5);
 				}
 				ps = new PlaySound(0, "itemsound.ship_5min", this);
 				if ((knownPlayers == null) || knownPlayers.isEmpty())
@@ -309,11 +309,11 @@ public class BoatInstance extends Creature
 			{
 				if (cycle == 1)
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, pathA.npc, pathA.sysmess1);
+					sm = new CreatureSay(0, ChatType.SHOUT, pathA.npc, pathA.sysmess1);
 				}
 				else
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, pathB.npc, pathB.sysmess1);
+					sm = new CreatureSay(0, ChatType.SHOUT, pathB.npc, pathB.sysmess1);
 				}
 				ps = new PlaySound(0, "itemsound.ship_1min", this);
 				if ((knownPlayers == null) || knownPlayers.isEmpty())
@@ -331,11 +331,11 @@ public class BoatInstance extends Creature
 			{
 				if (cycle == 1)
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, pathA.npc, pathA.sysmess0);
+					sm = new CreatureSay(0, ChatType.SHOUT, pathA.npc, pathA.sysmess0);
 				}
 				else
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, pathB.npc, pathB.sysmess0);
+					sm = new CreatureSay(0, ChatType.SHOUT, pathB.npc, pathB.sysmess0);
 				}
 				if ((knownPlayers == null) || knownPlayers.isEmpty())
 				{
@@ -351,11 +351,11 @@ public class BoatInstance extends Creature
 			{
 				if (cycle == 1)
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, pathA.npc, pathA.sysmessb);
+					sm = new CreatureSay(0, ChatType.SHOUT, pathA.npc, pathA.sysmessb);
 				}
 				else
 				{
-					sm = new CreatureSay(0, Say2.SHOUT, pathB.npc, pathB.sysmessb);
+					sm = new CreatureSay(0, ChatType.SHOUT, pathB.npc, pathB.sysmessb);
 				}
 				ps = new PlaySound(0, "itemsound.ship_arrival_departure", this);
 				for (PlayerInstance player : knownPlayers)

@@ -348,7 +348,7 @@ public class VIP
 		
 		_inProgress = true;
 		_joining = true;
-		Announcements.getInstance().gameAnnounceToAll("Vip event has started.Use .vipjoin to join or .vipleave to leave.");
+		Announcements.getInstance().criticalAnnounceToAll("Vip event has started.Use .vipjoin to join or .vipleave to leave.");
 		spawnJoinNPC();
 		
 		ThreadPool.schedule(() ->
@@ -361,22 +361,22 @@ public class VIP
 	
 	public static void startEvent()
 	{
-		Announcements.getInstance().gameAnnounceToAll("Registration for the VIP event involving " + _teamName + " has ended.");
-		Announcements.getInstance().gameAnnounceToAll("Players will be teleported to their locations in 20 seconds.");
+		Announcements.getInstance().criticalAnnounceToAll("Registration for the VIP event involving " + _teamName + " has ended.");
+		Announcements.getInstance().criticalAnnounceToAll("Players will be teleported to their locations in 20 seconds.");
 		
 		ThreadPool.schedule(() ->
 		{
 			teleportPlayers();
 			chooseVIP();
 			setUserData();
-			Announcements.getInstance().gameAnnounceToAll("Players have been teleported for the VIP event.");
-			Announcements.getInstance().gameAnnounceToAll("VIP event will start in 20 seconds.");
+			Announcements.getInstance().criticalAnnounceToAll("Players have been teleported for the VIP event.");
+			Announcements.getInstance().criticalAnnounceToAll("VIP event will start in 20 seconds.");
 			spawnEndNPC();
 			
 			ThreadPool.schedule(() ->
 			{
-				Announcements.getInstance().gameAnnounceToAll("VIP event has started. " + _teamName + "'s VIP must get to the starter city and talk with " + getNPCName(_endNPC, null) + ". The opposing team must kill the VIP. All players except the VIP will respawn at their current locations.");
-				Announcements.getInstance().gameAnnounceToAll("VIP event will end if the " + _teamName + " team makes it to their town or when " + (_time / 1000 / 60) + " mins have elapsed.");
+				Announcements.getInstance().criticalAnnounceToAll("VIP event has started. " + _teamName + "'s VIP must get to the starter city and talk with " + getNPCName(_endNPC, null) + ". The opposing team must kill the VIP. All players except the VIP will respawn at their current locations.");
+				Announcements.getInstance().criticalAnnounceToAll("VIP event will end if the " + _teamName + " team makes it to their town or when " + (_time / 1000 / 60) + " mins have elapsed.");
 				VIP.sit();
 				
 				ThreadPool.schedule(VIP::endEventTime, _time);
@@ -394,7 +394,7 @@ public class VIP
 		
 		_started = false;
 		unspawnEventNpcs();
-		Announcements.getInstance().gameAnnounceToAll("The VIP has died. The opposing team has won.");
+		Announcements.getInstance().criticalAnnounceToAll("The VIP has died. The opposing team has won.");
 		rewardNotVIP();
 		teleportFinish();
 	}
@@ -409,7 +409,7 @@ public class VIP
 		
 		_started = false;
 		unspawnEventNpcs();
-		Announcements.getInstance().gameAnnounceToAll("The time has run out and the " + _teamName + "'s have not made it to their goal. Everybody on the opposing team wins.");
+		Announcements.getInstance().criticalAnnounceToAll("The time has run out and the " + _teamName + "'s have not made it to their goal. Everybody on the opposing team wins.");
 		rewardNotVIP();
 		teleportFinish();
 	}
@@ -478,7 +478,7 @@ public class VIP
 		
 		_started = false;
 		unspawnEventNpcs();
-		Announcements.getInstance().gameAnnounceToAll("The VIP has made it to the goal. " + _teamName + " has won. Everybody on that team wins.");
+		Announcements.getInstance().criticalAnnounceToAll("The VIP has made it to the goal. " + _teamName + " has won. Everybody on that team wins.");
 		rewardVIP();
 		teleportFinish();
 	}
@@ -631,7 +631,7 @@ public class VIP
 	
 	public static void teleportFinish()
 	{
-		Announcements.getInstance().gameAnnounceToAll("Teleporting VIP players back to the Registration area in 20 seconds.");
+		Announcements.getInstance().criticalAnnounceToAll("Teleporting VIP players back to the Registration area in 20 seconds.");
 		
 		ThreadPool.schedule(() ->
 		{

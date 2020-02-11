@@ -30,11 +30,11 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
-import org.l2jmobius.gameserver.network.clientpackets.Say2;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -281,7 +281,7 @@ public class GameEvent
 	
 	public static void announceAllPlayers(String text)
 	{
-		final CreatureSay cs = new CreatureSay(0, Say2.ANNOUNCEMENT, "", text);
+		final CreatureSay cs = new CreatureSay(0, ChatType.ANNOUNCEMENT, "", text);
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			player.sendPacket(cs);

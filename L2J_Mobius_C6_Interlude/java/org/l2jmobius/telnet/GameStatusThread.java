@@ -58,6 +58,7 @@ import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.datatables.xml.ZoneData;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
@@ -75,7 +76,6 @@ import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.multisell.Multisell;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.clientpackets.Say2;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -335,7 +335,7 @@ public class GameStatusThread extends Thread
 						final String name = st.nextToken();
 						final String message = val.substring(name.length() + 1);
 						final PlayerInstance reciever = World.getInstance().getPlayer(name);
-						final CreatureSay cs = new CreatureSay(0, Say2.TELL, "Telnet Priv", message);
+						final CreatureSay cs = new CreatureSay(0, ChatType.WHISPER, "Telnet Priv", message);
 						if (reciever != null)
 						{
 							reciever.sendPacket(cs);
@@ -357,7 +357,7 @@ public class GameStatusThread extends Thread
 					try
 					{
 						usrCommand = usrCommand.substring(7);
-						final CreatureSay cs = new CreatureSay(0, Say2.ALLIANCE, "Telnet GM Broadcast from " + _cSocket.getInetAddress().getHostAddress(), usrCommand);
+						final CreatureSay cs = new CreatureSay(0, ChatType.ALLIANCE, "Telnet GM Broadcast from " + _cSocket.getInetAddress().getHostAddress(), usrCommand);
 						AdminData.broadcastToGMs(cs);
 						_print.println("Your Message Has Been Sent To " + getOnlineGMs() + " GM(s).");
 					}

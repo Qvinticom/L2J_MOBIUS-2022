@@ -232,16 +232,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * This will return true if the player is GM,<br>
-	 * but if the player is not GM it will return false.
-	 * @return GM status
-	 */
-	public boolean charIsGM()
-	{
-		return (this instanceof PlayerInstance) && ((PlayerInstance) this).isGM();
-	}
-	
-	/**
 	 * Constructor of Creature.<BR>
 	 * <BR>
 	 * <B><U> Concept</U> :</B><BR>

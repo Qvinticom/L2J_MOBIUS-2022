@@ -23,6 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -416,7 +417,7 @@ public class FeedableBeasts extends Quest
 			final int rand = Rnd.get(20);
 			if (rand < 5)
 			{
-				npc.broadcastPacket(new CreatureSay(nextNpc.getObjectId(), 0, nextNpc.getName(), SPAWN_CHATS[rand].replace("$s1", player.getName())));
+				npc.broadcastPacket(new CreatureSay(nextNpc.getObjectId(), ChatType.GENERAL, nextNpc.getName(), SPAWN_CHATS[rand].replace("$s1", player.getName())));
 			}
 		}
 		else
@@ -523,7 +524,7 @@ public class FeedableBeasts extends Quest
 			// Rare random talk...
 			if (Rnd.get(20) == 0)
 			{
-				npc.broadcastPacket(new CreatureSay(objectId, 0, npc.getName(), TEXT[growthLevel][Rnd.get(TEXT[growthLevel].length)]));
+				npc.broadcastPacket(new CreatureSay(objectId, ChatType.GENERAL, npc.getName(), TEXT[growthLevel][Rnd.get(TEXT[growthLevel].length)]));
 			}
 			
 			if ((growthLevel > 0) && (FEED_INFO.getOrDefault(objectId, 0) != caster.getObjectId()))

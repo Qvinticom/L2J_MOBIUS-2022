@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
@@ -24,20 +25,20 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 public class CreatureSay extends GameServerPacket
 {
 	private final int _objectId;
-	private final int _textType;
+	private final ChatType _chatType;
 	private final String _charName;
 	private final String _text;
 	
 	/**
 	 * @param objectId
-	 * @param messageType
+	 * @param chatType
 	 * @param charName
 	 * @param text
 	 */
-	public CreatureSay(int objectId, int messageType, String charName, String text)
+	public CreatureSay(int objectId, ChatType chatType, String charName, String text)
 	{
 		_objectId = objectId;
-		_textType = messageType;
+		_chatType = chatType;
 		_charName = charName;
 		_text = text;
 	}
@@ -47,14 +48,14 @@ public class CreatureSay extends GameServerPacket
 	{
 		writeC(0x4a);
 		writeD(_objectId);
-		writeD(_textType);
+		writeD(_chatType.getClientId());
 		writeS(_charName);
 		writeS(_text);
 		
 		final PlayerInstance player = getClient().getPlayer();
 		if (player != null)
 		{
-			player.broadcastSnoop(_textType, _charName, _text, this);
+			player.broadcastSnoop(_chatType, _charName, _text, this);
 		}
 	}
 }

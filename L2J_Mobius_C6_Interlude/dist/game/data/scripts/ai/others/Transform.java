@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
@@ -146,7 +147,7 @@ public class Transform extends Quest
 			{
 				if (monster.getMessage() != 0)
 				{
-					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), Message[Rnd.get(monster.getMessage())]));
+					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), Message[Rnd.get(monster.getMessage())]));
 				}
 				npc.onDecay();
 				final Attackable newNpc = (Attackable) addSpawn(monster.getIdPoly(), npc);
@@ -176,7 +177,7 @@ public class Transform extends Quest
 			{
 				if (monster.getMessage() != 0)
 				{
-					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), Message[Rnd.get(monster.getMessage())]));
+					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), Message[Rnd.get(monster.getMessage())]));
 				}
 				final Attackable newNpc = (Attackable) addSpawn(monster.getIdPoly(), npc);
 				final Creature originalAttacker = isPet ? killer.getPet() : killer;

@@ -17,6 +17,7 @@
 package quests.Q025_HidingBehindTheTruth;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -123,7 +124,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 				{
 					qs.set("step", "1");
 					final NpcInstance triol = qs.addSpawn(TRIOL, 59712, -47568, -2712, 300000);
-					triol.broadcastPacket(new CreatureSay(triol.getObjectId(), 0, triol.getName(), "That box was sealed by my master. Don't touch it!"));
+					triol.broadcastPacket(new CreatureSay(triol.getObjectId(), ChatType.GENERAL, triol.getName(), "That box was sealed by my master. Don't touch it!"));
 					triol.setRunning();
 					((Attackable) triol).addDamageHate(player, 0, 999);
 					triol.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -438,7 +439,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 		{
 			qs.playSound("ItemSound.quest_itemget");
 			qs.set("cond", "8");
-			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), "You've ended my immortal life! You've protected by the feudal lord, aren't you?"));
+			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "You've ended my immortal life! You've protected by the feudal lord, aren't you?"));
 			qs.giveItems(TOTEM_DOLL, 1);
 			qs.set("step", "2");
 		}

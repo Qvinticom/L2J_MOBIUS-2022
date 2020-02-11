@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.util;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.clientpackets.Say2;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
 /**
@@ -40,7 +40,7 @@ public class BuilderUtil
 	{
 		if (Config.GM_STARTUP_BUILDER_HIDE)
 		{
-			player.sendPacket(new CreatureSay(0, Say2.ALL, "SYS", message));
+			player.sendPacket(new CreatureSay(0, ChatType.GENERAL, "SYS", message));
 		}
 		else
 		{
@@ -55,7 +55,7 @@ public class BuilderUtil
 	 */
 	public static void sendHtmlMessage(PlayerInstance player, String message)
 	{
-		player.sendPacket(new CreatureSay(0, Say2.ALL, "HTML", message));
+		player.sendPacket(new CreatureSay(0, ChatType.GENERAL, "HTML", message));
 	}
 	
 	/**

@@ -16,6 +16,7 @@
  */
 package quests.Q115_TheOtherSideOfTruth;
 
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -141,7 +142,7 @@ public class Q115_TheOtherSideOfTruth extends Quest
 				qs.playSound("ItemSound.quest_middle");
 				qs.set("cond", "9");
 				final NpcInstance man = qs.addSpawn(SUSPICIOUS, 104562, -107598, -3688, 0, false, 4000);
-				man.broadcastPacket(new CreatureSay(man.getObjectId(), 0, man.getName(), "We meet again."));
+				man.broadcastPacket(new CreatureSay(man.getObjectId(), ChatType.GENERAL, man.getName(), "We meet again."));
 				startQuestTimer("2", 3700, man, player);
 				qs.giveItems(REPORT, 1);
 				break;
@@ -158,7 +159,7 @@ public class Q115_TheOtherSideOfTruth extends Quest
 				qs.playSound("ItemSound.quest_middle");
 				qs.set("cond", "8");
 				final NpcInstance man = qs.addSpawn(SUSPICIOUS, 117890, -126478, -2584, 0, false, 4000);
-				man.broadcastPacket(new CreatureSay(man.getObjectId(), 0, man.getName(), "This looks like the right place..."));
+				man.broadcastPacket(new CreatureSay(man.getObjectId(), ChatType.GENERAL, man.getName(), "This looks like the right place..."));
 				startQuestTimer("1", 3700, man, player);
 				htmltext = "Sculpture-04.htm";
 				if ((qs.getInt("" + SCULPTURE1) == 0) && (qs.getInt("" + SCULPTURE2) == 0))
@@ -174,12 +175,12 @@ public class Q115_TheOtherSideOfTruth extends Quest
 			}
 			case "1":
 			{
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), "I see someone. Is this fate?"));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "I see someone. Is this fate?"));
 				break;
 			}
 			case "2":
 			{
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), "Don't bother trying to find out more about me. Follow your own destiny."));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "Don't bother trying to find out more about me. Follow your own destiny."));
 				break;
 			}
 		}

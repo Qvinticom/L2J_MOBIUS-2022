@@ -67,6 +67,7 @@ import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
 import org.l2jmobius.gameserver.datatables.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.datatables.xml.ZoneData;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -6353,7 +6354,7 @@ public class PlayerInstance extends Playable
 		CTF.removeFlagFromPlayer(this);
 		broadcastUserInfo();
 		_haveFlagCTF = false;
-		Announcements.getInstance().gameAnnounceToAll(CTF.getEventName() + "(CTF): " + _teamNameHaveFlagCTF + "'s flag returned.");
+		Announcements.getInstance().criticalAnnounceToAll(CTF.getEventName() + "(CTF): " + _teamNameHaveFlagCTF + "'s flag returned.");
 	}
 	
 	/**
@@ -6788,7 +6789,7 @@ public class PlayerInstance extends Playable
 		if ((_heroConsecutiveKillCount == Config.KILLS_TO_GET_WAR_LEGEND_AURA) && Config.WAR_LEGEND_AURA)
 		{
 			setHeroAura(true);
-			Announcements.getInstance().gameAnnounceToAll(getName() + " becames War Legend with " + Config.KILLS_TO_GET_WAR_LEGEND_AURA + " PvP!!");
+			Announcements.getInstance().criticalAnnounceToAll(getName() + " becames War Legend with " + Config.KILLS_TO_GET_WAR_LEGEND_AURA + " PvP!!");
 			
 		}
 		
@@ -6827,7 +6828,7 @@ public class PlayerInstance extends Playable
 			{
 				if (Config.ENABLE_ANTI_PVP_FARM_MSG)
 				{
-					final CreatureSay cs12 = new CreatureSay(0, 15, "", getName() + " 5 consecutive kill! Only Gm."); // 8D
+					final CreatureSay cs12 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " 5 consecutive kill! Only Gm."); // 8D
 					for (PlayerInstance player : World.getInstance().getAllPlayers())
 					{
 						if ((player != null) && player.isOnline() && player.isGM())
@@ -6840,7 +6841,7 @@ public class PlayerInstance extends Playable
 			}
 			case 6:
 			{
-				final CreatureSay cs = new CreatureSay(0, 15, "", getName() + " is Dominating!"); // 8D
+				final CreatureSay cs = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is Dominating!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
 					if ((player != null) && player.isOnline())
@@ -6852,7 +6853,7 @@ public class PlayerInstance extends Playable
 			}
 			case 9:
 			{
-				final CreatureSay cs2 = new CreatureSay(0, 15, "", getName() + " is on a Rampage!"); // 8D
+				final CreatureSay cs2 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is on a Rampage!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
 					if ((player != null) && player.isOnline())
@@ -6864,7 +6865,7 @@ public class PlayerInstance extends Playable
 			}
 			case 14:
 			{
-				final CreatureSay cs3 = new CreatureSay(0, 15, "", getName() + " is on a Killing Spree!"); // 8D
+				final CreatureSay cs3 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is on a Killing Spree!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
 					if ((player != null) && player.isOnline())
@@ -6876,7 +6877,7 @@ public class PlayerInstance extends Playable
 			}
 			case 18:
 			{
-				final CreatureSay cs4 = new CreatureSay(0, 15, "", getName() + " is on a Monster Kill!"); // 8D
+				final CreatureSay cs4 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is on a Monster Kill!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
 					if ((player != null) && player.isOnline())
@@ -6888,7 +6889,7 @@ public class PlayerInstance extends Playable
 			}
 			case 22:
 			{
-				final CreatureSay cs5 = new CreatureSay(0, 15, "", getName() + " is Unstoppable!"); // 8D
+				final CreatureSay cs5 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is Unstoppable!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
 					if ((player != null) && player.isOnline())
@@ -6900,7 +6901,7 @@ public class PlayerInstance extends Playable
 			}
 			case 25:
 			{
-				final CreatureSay cs6 = new CreatureSay(0, 15, "", getName() + " is on an Ultra Kill!"); // 8D
+				final CreatureSay cs6 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is on an Ultra Kill!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
 					if ((player != null) && player.isOnline())
@@ -6912,7 +6913,7 @@ public class PlayerInstance extends Playable
 			}
 			case 28:
 			{
-				final CreatureSay cs7 = new CreatureSay(0, 15, "", getName() + " God Blessed!"); // 8D
+				final CreatureSay cs7 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " God Blessed!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
 					if ((player != null) && player.isOnline())
@@ -6924,7 +6925,7 @@ public class PlayerInstance extends Playable
 			}
 			case 32:
 			{
-				final CreatureSay cs8 = new CreatureSay(0, 15, "", getName() + " is Wicked Sick!"); // 8D
+				final CreatureSay cs8 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is Wicked Sick!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
 					if ((player != null) && player.isOnline())
@@ -6936,7 +6937,7 @@ public class PlayerInstance extends Playable
 			}
 			case 35:
 			{
-				final CreatureSay cs9 = new CreatureSay(0, 15, "", getName() + " is on a Ludricrous Kill!"); // 8D
+				final CreatureSay cs9 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is on a Ludricrous Kill!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
 					if ((player != null) && player.isOnline())
@@ -6948,7 +6949,7 @@ public class PlayerInstance extends Playable
 			}
 			case 40:
 			{
-				final CreatureSay cs10 = new CreatureSay(0, 15, "", getName() + " is GodLike!"); // 8D
+				final CreatureSay cs10 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is GodLike!"); // 8D
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
 					if ((player != null) && player.isOnline())
@@ -13873,11 +13874,11 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	public void broadcastSnoop(int type, String name, String text, CreatureSay cs)
+	public void broadcastSnoop(ChatType _chatType, String name, String text, CreatureSay cs)
 	{
 		if (!_snoopListener.isEmpty())
 		{
-			final Snoop sn = new Snoop(this, type, name, text);
+			final Snoop sn = new Snoop(this, _chatType, name, text);
 			for (PlayerInstance pci : _snoopListener)
 			{
 				if (pci != null)

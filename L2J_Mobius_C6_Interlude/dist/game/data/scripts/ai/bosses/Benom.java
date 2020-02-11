@@ -21,6 +21,7 @@ import java.util.Collection;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.xml.DoorData;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Location;
@@ -282,7 +283,7 @@ public class Benom extends Quest
 			{
 				if (Rnd.get(100) < 40)
 				{
-					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, "Benom", TALK[Rnd.get(4)]));
+					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, "Benom", TALK[Rnd.get(4)]));
 				}
 				break;
 			}

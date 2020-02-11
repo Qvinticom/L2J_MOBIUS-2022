@@ -23,6 +23,7 @@ import java.util.List;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.SkillTable;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -75,7 +76,7 @@ public class Monastery extends Quest
 			if ((player.getActiveWeaponInstance() != null) && !player.isSilentMoving())
 			{
 				npc.setTarget(player);
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), TEXT[0]));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), TEXT[0]));
 				
 				switch (npc.getNpcId())
 				{
@@ -132,7 +133,7 @@ public class Monastery extends Quest
 					if ((target.getActiveWeaponInstance() != null) && !npc.isInCombat() && (npc.getTarget() == null))
 					{
 						npc.setTarget(target);
-						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), TEXT[0]));
+						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), TEXT[0]));
 						switch (npc.getNpcId())
 						{
 							case 22124:
@@ -171,7 +172,7 @@ public class Monastery extends Quest
 		
 		if (Util.contains(MOBS_2, npc.getNpcId()) && (skill.getSkillType() == SkillType.AGGDAMAGE))
 		{
-			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), TEXT[Rnd.get(2) + 1].replace("name", player.getName())));
+			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), TEXT[Rnd.get(2) + 1].replace("name", player.getName())));
 			((Attackable) npc).addDamageHate(player, 0, 999);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 		}

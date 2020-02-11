@@ -26,6 +26,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -243,7 +244,7 @@ public class SummonMinions extends Quest
 					}
 					if (npcId == 20767)
 					{
-						npc.broadcastPacket(new CreatureSay(npcObjId, 0, npc.getName(), "Come out, you children of darkness!"));
+						npc.broadcastPacket(new CreatureSay(npcObjId, ChatType.GENERAL, npc.getName(), "Come out, you children of darkness!"));
 					}
 				}
 			}

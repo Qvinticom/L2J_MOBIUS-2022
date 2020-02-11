@@ -24,6 +24,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Location;
@@ -203,14 +204,14 @@ public class Core extends Quest
 			{
 				if (Rnd.get(100) == 0)
 				{
-					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), "Removing intruders."));
+					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "Removing intruders."));
 				}
 			}
 			else
 			{
 				_firstAttacked = true;
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), "A non-permitted target has been discovered."));
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), "Starting intruder removal system."));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "A non-permitted target has been discovered."));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "Starting intruder removal system."));
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isPet);
@@ -224,9 +225,9 @@ public class Core extends Quest
 		if (npcId == CORE)
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
-			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, name, "A fatal error has occurred."));
-			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, name, "System is being shut down..."));
-			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, name, "......"));
+			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, name, "A fatal error has occurred."));
+			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, name, "System is being shut down..."));
+			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, name, "......"));
 			_firstAttacked = false;
 			
 			addSpawn(31842, 16502, 110165, -6394, 0, false, 900000);

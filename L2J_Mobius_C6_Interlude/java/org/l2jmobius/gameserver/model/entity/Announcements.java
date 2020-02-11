@@ -29,10 +29,10 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.cache.HtmCache;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.clientpackets.Say2;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -73,7 +73,7 @@ public class Announcements
 	{
 		for (String _announcement : _announcements)
 		{
-			player.sendPacket(new CreatureSay(0, Say2.ANNOUNCEMENT, player.getName(), _announcement.replace("%name%", player.getName())));
+			player.sendPacket(new CreatureSay(0, ChatType.ANNOUNCEMENT, player.getName(), _announcement.replace("%name%", player.getName())));
 		}
 		
 		for (List<Object> entry : _eventAnnouncements)
@@ -225,18 +225,16 @@ public class Announcements
 	
 	public void announceToAll(String text)
 	{
-		final CreatureSay cs = new CreatureSay(0, Say2.ANNOUNCEMENT, "", text);
+		final CreatureSay cs = new CreatureSay(0, ChatType.ANNOUNCEMENT, "", text);
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			player.sendPacket(cs);
 		}
 	}
 	
-	// Colored Announcements 8D
-	// Used for events
-	public void gameAnnounceToAll(String text)
+	public void criticalAnnounceToAll(String text)
 	{
-		final CreatureSay cs = new CreatureSay(0, 18, null, text);
+		final CreatureSay cs = new CreatureSay(0, ChatType.CRITICAL_ANNOUNCE, null, text);
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			if ((player != null) && player.isOnline())

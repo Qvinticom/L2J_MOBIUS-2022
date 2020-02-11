@@ -17,6 +17,7 @@
 package ai.others;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -45,13 +46,13 @@ public class DeluLizardmanSpecialAgent extends Quest
 		{
 			if (Rnd.get(100) < 40)
 			{
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), "Hey! We're having a duel here!"));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "Hey! We're having a duel here!"));
 			}
 		}
 		else
 		{
 			npc.setScriptValue(1);
-			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), "How dare you interrupt our fight! Hey guys, help!"));
+			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "How dare you interrupt our fight! Hey guys, help!"));
 		}
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
