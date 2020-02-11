@@ -4355,25 +4355,21 @@ public class PlayerInstance extends Playable
 	{
 		if (_freight.getItemByObjectId(objectId) != null)
 		{
-			
 			// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
 			sendPacket(ActionFailed.STATIC_PACKET);
 			
 			Util.handleIllegalPlayerAction(this, "Warning!! Character " + getName() + " of account " + getAccountName() + " tried to drop Freight Items", IllegalPlayerAction.PUNISH_KICK);
 			return null;
-			
 		}
 		
 		final ItemInstance invitem = _inventory.getItemByObjectId(objectId);
 		final ItemInstance item = _inventory.dropItem(process, objectId, count, this, reference);
-		
 		if (item == null)
 		{
 			if (sendMessage)
 			{
 				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
-			
 			return null;
 		}
 		

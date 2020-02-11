@@ -50,7 +50,7 @@ import org.l2jmobius.gameserver.network.serverpackets.VehicleInfo;
 
 public class PlayerKnownList extends PlayableKnownList
 {
-	private int _packetSendDelay = 0;
+	private volatile int _packetSendDelay = 0;
 	
 	public PlayerKnownList(PlayerInstance player)
 	{
@@ -107,6 +107,12 @@ public class PlayerKnownList extends PlayableKnownList
 			return false;
 		}
 		
+		// Avoid delay for self dropped items.
+		if (object.isItem())
+		{
+			_packetSendDelay = 0;
+		}
+		
 		// Delay is broken down to 100ms intervals.
 		// With the random time added it gives at least 50ms between tasks.
 		if (_packetSendDelay > 3000)
@@ -125,7 +131,7 @@ public class PlayerKnownList extends PlayableKnownList
 			}
 			else
 			{
-				if (object instanceof ItemInstance)
+				if (object.isItem())
 				{
 					if (dropper != null)
 					{
@@ -136,7 +142,7 @@ public class PlayerKnownList extends PlayableKnownList
 						activeChar.sendPacket(new SpawnItem((ItemInstance) object));
 					}
 				}
-				else if (object instanceof DoorInstance)
+				else if (object.isDoor())
 				{
 					if (((DoorInstance) object).getCastle() != null)
 					{
@@ -148,11 +154,7 @@ public class PlayerKnownList extends PlayableKnownList
 					}
 					activeChar.sendPacket(new DoorStatusUpdate((DoorInstance) object));
 				}
-				else if (object instanceof FenceInstance)
-				{
-					((FenceInstance) object).sendInfo(activeChar);
-				}
-				else if (object instanceof BoatInstance)
+				else if (object.isBoat())
 				{
 					if (!activeChar.isInBoat() && (object != activeChar.getBoat()))
 					{
@@ -160,15 +162,11 @@ public class PlayerKnownList extends PlayableKnownList
 						((BoatInstance) object).sendVehicleDeparture(activeChar);
 					}
 				}
-				else if (object instanceof StaticObjectInstance)
-				{
-					activeChar.sendPacket(new StaticObject((StaticObjectInstance) object));
-				}
-				else if (object instanceof NpcInstance)
+				else if (object.isNpc())
 				{
 					activeChar.sendPacket(new NpcInfo((NpcInstance) object, activeChar));
 				}
-				else if (object instanceof Summon)
+				else if (object.isSummon())
 				{
 					final Summon summon = (Summon) object;
 					
@@ -189,7 +187,7 @@ public class PlayerKnownList extends PlayableKnownList
 						activeChar.sendPacket(new NpcInfo(summon, activeChar));
 					}
 				}
-				else if (object instanceof PlayerInstance)
+				else if (object.isPlayer())
 				{
 					final PlayerInstance otherPlayer = (PlayerInstance) object;
 					if (otherPlayer.isInBoat())
@@ -229,8 +227,16 @@ public class PlayerKnownList extends PlayableKnownList
 						activeChar.sendPacket(new RecipeShopMsg(otherPlayer));
 					}
 				}
+				else if (object instanceof FenceInstance)
+				{
+					((FenceInstance) object).sendInfo(activeChar);
+				}
+				else if (object instanceof StaticObjectInstance)
+				{
+					activeChar.sendPacket(new StaticObject((StaticObjectInstance) object));
+				}
 				
-				if (object instanceof Creature)
+				if (object.isCreature())
 				{
 					// Update the state of the Creature object client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance
 					final Creature obj = (Creature) object;

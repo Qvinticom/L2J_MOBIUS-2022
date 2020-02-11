@@ -83,7 +83,6 @@ public class RequestDropItem extends GameClientPacket
 		}
 		
 		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
-		
 		if ((item == null) || (_count == 0) || !player.validateItemManipulation(_objectId, "drop"))
 		{
 			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
@@ -115,10 +114,8 @@ public class RequestDropItem extends GameClientPacket
 			return;
 		}
 		
-		final int itemId = item.getItemId();
-		
 		// Cursed Weapons cannot be dropped
-		if (CursedWeaponsManager.getInstance().isCursed(itemId))
+		if (CursedWeaponsManager.getInstance().isCursed(item.getItemId()))
 		{
 			return;
 		}
