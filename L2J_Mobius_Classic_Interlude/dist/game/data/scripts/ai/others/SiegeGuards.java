@@ -166,7 +166,8 @@ public class SiegeGuards extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		RESIDENCE_GUARD_MAP.get(npc.getScriptValue()).remove(npc);
+		final int residenceId = npc.getScriptValue();
+		RESIDENCE_GUARD_MAP.get(RESIDENCE_GUARD_MAP.containsKey(residenceId) ? residenceId : 0).remove(npc);
 		return super.onKill(npc, killer, isSummon);
 	}
 	
