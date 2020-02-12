@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -51,6 +52,8 @@ public class Trandon extends AbstractNpcAI
 	private static final int[] SUB_SKILL_LEVELS = {65, 70, 75, 80};
 	private static final int[] DUAL_SKILL_LEVELS = {85, 90, 95, 99, 101, 103, 105};
 	// @formatter:on
+	private static final String SUB_CERTIFICATE_COUNT_VAR = "SUB_CERTIFICATE_COUNT";
+	private static final String DUAL_CERTIFICATE_COUNT_VAR = "DUAL_CERTIFICATE_COUNT";
 	
 	private Trandon()
 	{
@@ -153,8 +156,14 @@ public class Trandon extends AbstractNpcAI
 				}
 				else
 				{
-					vars.set(getSubSkillVariableName(player, level), true);
-					giveItems(player, SUB_CERTIFICATE, 1);
+					final int subId = player.getClassId().getId();
+					final int currentCount = player.getVariables().getInt(SUB_CERTIFICATE_COUNT_VAR + subId, 0);
+					if (currentCount < SUB_SKILL_LEVELS.length)
+					{
+						player.getVariables().set(SUB_CERTIFICATE_COUNT_VAR + subId, currentCount + 1);
+						vars.set(getSubSkillVariableName(player, level), true);
+						giveItems(player, SUB_CERTIFICATE, 1);
+					}
 					htmltext = "33490-20.html";
 				}
 				break;
@@ -200,6 +209,10 @@ public class Trandon extends AbstractNpcAI
 					htmltext = null; // TODO: Unknown html
 					takeItems(player, SUB_CERTIFICATE, -1);
 					takeItems(player, Inventory.ADENA_ID, Config.FEE_DELETE_SUBCLASS_SKILLS);
+					for (SubClass subclass : player.getSubClasses().values())
+					{
+						player.getVariables().remove(SUB_CERTIFICATE_COUNT_VAR + subclass.getClassId());
+					}
 					
 					final PlayerVariables vars = player.getVariables();
 					for (int i = 1; i <= 3; i++)
@@ -251,8 +264,13 @@ public class Trandon extends AbstractNpcAI
 				}
 				else
 				{
-					vars.set(getDualSkillVariableName(level), true);
-					giveItems(player, DUAL_CERTIFICATE, 1);
+					final int currentCount = player.getVariables().getInt(DUAL_CERTIFICATE_COUNT_VAR, 0);
+					if (currentCount < DUAL_SKILL_LEVELS.length)
+					{
+						player.getVariables().set(DUAL_CERTIFICATE_COUNT_VAR, currentCount + 1);
+						vars.set(getDualSkillVariableName(level), true);
+						giveItems(player, DUAL_CERTIFICATE, 1);
+					}
 					htmltext = getHtm(player, "33490-29.html");
 				}
 				htmltext = htmltext.replace("%level%", String.valueOf(level));
@@ -300,6 +318,7 @@ public class Trandon extends AbstractNpcAI
 					htmltext = null; // TODO: Unknown html
 					takeItems(player, DUAL_CERTIFICATE, -1);
 					takeItems(player, Inventory.ADENA_ID, Config.FEE_DELETE_DUALCLASS_SKILLS);
+					player.getVariables().remove(DUAL_CERTIFICATE_COUNT_VAR);
 					
 					final PlayerVariables vars = player.getVariables();
 					for (int lv : DUAL_SKILL_LEVELS)
