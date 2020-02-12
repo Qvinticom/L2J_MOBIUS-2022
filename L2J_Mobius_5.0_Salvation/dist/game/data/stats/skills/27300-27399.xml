@@ -985,6 +985,9 @@
 		</reuseDelay>
 		<reuseDelayGroup>27352</reuseDelayGroup>
 		<effects>
+			<effect name="BlockSkill">
+				<magicTypes>0;1;2;3;4;22</magicTypes>
+			</effect>
 			<effect name="DispelBySlot">
 				<dispel>CHANGEBODY,9</dispel>
 			</effect>

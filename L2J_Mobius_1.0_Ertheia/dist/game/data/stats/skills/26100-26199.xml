@@ -442,7 +442,11 @@
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<effects>
+			<effect name="BlockSkill">
+				<magicTypes>0;1;2;3;4;22</magicTypes>
+			</effect>
 			<effect name="DispelBySlot">
 				<dispel>CHANGEBODY,9</dispel>
 			</effect>
