@@ -154,7 +154,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM character_daily_rewards WHERE charId = ? AND rewardId = ?"))
 		{
 			ps.setInt(1, objectId);
-			ps.setInt(2, _holder.getId());
+			ps.setInt(2, _holder.getRewardId());
 			try (ResultSet rs = ps.executeQuery())
 			{
 				if (rs.next())
@@ -171,7 +171,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 		
 		if (createIfNone)
 		{
-			final DailyMissionPlayerEntry entry = new DailyMissionPlayerEntry(objectId, _holder.getId());
+			final DailyMissionPlayerEntry entry = new DailyMissionPlayerEntry(objectId, _holder.getRewardId());
 			_entries.put(objectId, entry);
 			return entry;
 		}
