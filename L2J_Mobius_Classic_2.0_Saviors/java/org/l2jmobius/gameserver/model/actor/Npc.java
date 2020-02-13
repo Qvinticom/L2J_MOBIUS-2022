@@ -126,6 +126,7 @@ public class Npc extends Creature
 	/** Support for random animation switching */
 	private boolean _isRandomAnimationEnabled = true;
 	private boolean _isRandomWalkingEnabled = true;
+	private boolean _isWalker = false;
 	private boolean _isTalkable = getTemplate().isTalkable();
 	private final boolean _isQuestMonster = getTemplate().isQuestMonster();
 	private final boolean _isFakePlayer = getTemplate().isFakePlayer();
@@ -1359,13 +1360,15 @@ public class Npc extends Creature
 		broadcastInfo();
 	}
 	
-	/**
-	 * @return {@code true} if this Npc is registered in WalkingManager
-	 */
 	@Override
 	public boolean isWalker()
 	{
-		return WalkingManager.getInstance().isRegistered(this);
+		return _isWalker;
+	}
+	
+	public void setWalker()
+	{
+		_isWalker = true;
 	}
 	
 	@Override

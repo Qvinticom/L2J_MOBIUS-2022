@@ -247,7 +247,7 @@ public class WalkingManager implements IXmlReader
 	 * @param npc NPC to check
 	 * @return {@code true} if given NPC controlled by Walking Manager.
 	 */
-	public boolean isRegistered(Npc npc)
+	private boolean isRegistered(Npc npc)
 	{
 		return _activeRoutes.containsKey(npc.getObjectId());
 	}
@@ -309,6 +309,7 @@ public class WalkingManager implements IXmlReader
 						walk.setWalkCheckTask(newTask); // start walk check task, for resuming walk after fight
 					}
 					
+					npc.setWalker();
 					_activeRoutes.put(npc.getObjectId(), walk); // register route
 				}
 				else
