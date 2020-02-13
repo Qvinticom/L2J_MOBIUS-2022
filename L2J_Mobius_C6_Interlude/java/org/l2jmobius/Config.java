@@ -138,6 +138,11 @@ public class Config
 	public static boolean MULTIPLE_ITEM_DROP;
 	public static int DELETE_DAYS;
 	public static int MAX_DRIFT_RANGE;
+	public static boolean AGGRO_DISTANCE_CHECK_ENABLED;
+	public static int AGGRO_DISTANCE_CHECK_RANGE;
+	public static boolean AGGRO_DISTANCE_CHECK_RAIDS;
+	public static boolean AGGRO_DISTANCE_CHECK_INSTANCES;
+	public static boolean AGGRO_DISTANCE_CHECK_RESTORE_LIFE;
 	public static boolean ALLOWFISHING;
 	public static boolean ALLOW_MANOR;
 	public static int AUTODESTROY_ITEM_AFTER;
@@ -1635,6 +1640,11 @@ public class Config
 			ZONE_TOWN = Integer.parseInt(generalSettings.getProperty("ZoneTown", "0"));
 			
 			MAX_DRIFT_RANGE = Integer.parseInt(generalSettings.getProperty("MaxDriftRange", "300"));
+			AGGRO_DISTANCE_CHECK_ENABLED = Boolean.parseBoolean(generalSettings.getProperty("AggroDistanceCheckEnabled", "false"));
+			AGGRO_DISTANCE_CHECK_RANGE = Integer.parseInt(generalSettings.getProperty("AggroDistanceCheckRange", "1500"));
+			AGGRO_DISTANCE_CHECK_RAIDS = Boolean.parseBoolean(generalSettings.getProperty("AggroDistanceCheckRaids", "false"));
+			AGGRO_DISTANCE_CHECK_INSTANCES = Boolean.parseBoolean(generalSettings.getProperty("AggroDistanceCheckInstances", "false"));
+			AGGRO_DISTANCE_CHECK_RESTORE_LIFE = Boolean.parseBoolean(generalSettings.getProperty("AggroDistanceCheckRestoreLife", "true"));
 			
 			MIN_NPC_ANIMATION = Integer.parseInt(generalSettings.getProperty("MinNpcAnimation", "5"));
 			MAX_NPC_ANIMATION = Integer.parseInt(generalSettings.getProperty("MaxNpcAnimation", "60"));

@@ -35,6 +35,7 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -760,9 +761,61 @@ public class AttackableAI extends CreatureAI
 	protected void thinkAttack()
 	{
 		final Attackable npc = getActiveChar();
-		if (npc.isCastingNow())
+		if ((npc == null) || npc.isCastingNow())
 		{
 			return;
+		}
+		
+		if (Config.AGGRO_DISTANCE_CHECK_ENABLED && npc.isMonster() && !npc.isWalker())
+		{
+			final Spawn spawn = npc.getSpawn();
+			if ((spawn != null) && (npc.calculateDistance3D(spawn.getLocation()) > Config.AGGRO_DISTANCE_CHECK_RANGE))
+			{
+				if ((Config.AGGRO_DISTANCE_CHECK_RAIDS || !npc.isRaid()) && (Config.AGGRO_DISTANCE_CHECK_INSTANCES || (npc.getInstanceId() == 0)))
+				{
+					if (Config.AGGRO_DISTANCE_CHECK_RESTORE_LIFE)
+					{
+						npc.setCurrentHp(npc.getMaxHp());
+						npc.setCurrentMp(npc.getMaxMp());
+					}
+					npc.abortAttack();
+					npc.clearAggroList();
+					npc.getAttackByList().clear();
+					if (npc.hasAI())
+					{
+						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, spawn.getLocation());
+					}
+					else
+					{
+						npc.teleToLocation(spawn.getLocation(), true);
+					}
+					
+					// Minions should return as well.
+					if (((MonsterInstance) _actor).hasMinions())
+					{
+						for (MonsterInstance minion : ((MonsterInstance) _actor).getMinionList().getSpawnedMinions())
+						{
+							if (Config.AGGRO_DISTANCE_CHECK_RESTORE_LIFE)
+							{
+								minion.setCurrentHp(minion.getMaxHp());
+								minion.setCurrentMp(minion.getMaxMp());
+							}
+							minion.abortAttack();
+							minion.clearAggroList();
+							minion.getAttackByList().clear();
+							if (minion.hasAI())
+							{
+								minion.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, spawn.getLocation());
+							}
+							else
+							{
+								minion.teleToLocation(spawn.getLocation(), true);
+							}
+						}
+					}
+					return;
+				}
+			}
 		}
 		
 		if (npc.isCoreAIDisabled())

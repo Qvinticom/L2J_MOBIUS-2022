@@ -713,8 +713,6 @@ public class Config
 	public static boolean ALT_MOB_AGRO_IN_PEACEZONE;
 	public static boolean ALT_ATTACKABLE_NPCS;
 	public static boolean ALT_GAME_VIEWNPC;
-	public static int MAX_AGGRO_RANGE;
-	public static int MAX_DRIFT_RANGE;
 	public static boolean SHOW_NPC_LVL;
 	public static boolean SHOW_NPC_AGGRESSION;
 	public static boolean SHOW_CREST_WITHOUT_QUEST;
@@ -729,6 +727,13 @@ public class Config
 	public static int DEFAULT_CORPSE_TIME;
 	public static int SPOILED_CORPSE_EXTEND_TIME;
 	public static int CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY;
+	public static int MAX_AGGRO_RANGE;
+	public static int MAX_DRIFT_RANGE;
+	public static boolean AGGRO_DISTANCE_CHECK_ENABLED;
+	public static int AGGRO_DISTANCE_CHECK_RANGE;
+	public static boolean AGGRO_DISTANCE_CHECK_RAIDS;
+	public static boolean AGGRO_DISTANCE_CHECK_INSTANCES;
+	public static boolean AGGRO_DISTANCE_CHECK_RESTORE_LIFE;
 	public static boolean GUARD_ATTACK_AGGRO_MOB;
 	public static boolean ENABLE_GUARD_RETURN;
 	public static boolean ALLOW_WYVERN_UPGRADER;
@@ -2244,8 +2249,6 @@ public class Config
 			ALT_MOB_AGRO_IN_PEACEZONE = NPC.getBoolean("AltMobAgroInPeaceZone", true);
 			ALT_ATTACKABLE_NPCS = NPC.getBoolean("AltAttackableNpcs", true);
 			ALT_GAME_VIEWNPC = NPC.getBoolean("AltGameViewNpc", false);
-			MAX_AGGRO_RANGE = NPC.getInt("MaxAggroRange", 450);
-			MAX_DRIFT_RANGE = NPC.getInt("MaxDriftRange", 300);
 			SHOW_NPC_LVL = NPC.getBoolean("ShowNpcLevel", false);
 			SHOW_NPC_AGGRESSION = NPC.getBoolean("ShowNpcAggression", false);
 			SHOW_CREST_WITHOUT_QUEST = NPC.getBoolean("ShowCrestWithoutQuest", false);
@@ -2260,6 +2263,13 @@ public class Config
 			DEFAULT_CORPSE_TIME = NPC.getInt("DefaultCorpseTime", 7);
 			SPOILED_CORPSE_EXTEND_TIME = NPC.getInt("SpoiledCorpseExtendTime", 10);
 			CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY = NPC.getInt("CorpseConsumeSkillAllowedTimeBeforeDecay", 2000);
+			MAX_AGGRO_RANGE = NPC.getInt("MaxAggroRange", 450);
+			MAX_DRIFT_RANGE = NPC.getInt("MaxDriftRange", 300);
+			AGGRO_DISTANCE_CHECK_ENABLED = NPC.getBoolean("AggroDistanceCheckEnabled", false);
+			AGGRO_DISTANCE_CHECK_RANGE = NPC.getInt("AggroDistanceCheckRange", 1500);
+			AGGRO_DISTANCE_CHECK_RAIDS = NPC.getBoolean("AggroDistanceCheckRaids", false);
+			AGGRO_DISTANCE_CHECK_INSTANCES = NPC.getBoolean("AggroDistanceCheckInstances", false);
+			AGGRO_DISTANCE_CHECK_RESTORE_LIFE = NPC.getBoolean("AggroDistanceCheckRestoreLife", true);
 			GUARD_ATTACK_AGGRO_MOB = NPC.getBoolean("GuardAttackAggroMob", false);
 			ENABLE_GUARD_RETURN = NPC.getBoolean("EnableGuardReturn", false);
 			ALLOW_WYVERN_UPGRADER = NPC.getBoolean("AllowWyvernUpgrader", false);

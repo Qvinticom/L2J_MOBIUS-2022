@@ -46,6 +46,7 @@ import org.l2jmobius.gameserver.model.actor.instance.GuardInstance;
 import org.l2jmobius.gameserver.model.actor.instance.MinionInstance;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.instance.NpcWalkerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PenaltyMonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
@@ -54,6 +55,7 @@ import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.spawn.Spawn;
 
 /**
  * This class manages AI of Attackable.<BR>
@@ -609,8 +611,6 @@ public class AttackableAI extends CreatureAI
 				z1 = npc.getZ();
 			}
 			
-			// LOGGER.config("Curent pos ("+getX()+", "+getY()+"), moving to ("+x1+", "+y1+").");
-			// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
 			moveTo(x1, y1, z1);
 		}
 	}
@@ -633,6 +633,58 @@ public class AttackableAI extends CreatureAI
 		{
 			return;
 		}
+		
+		if (Config.AGGRO_DISTANCE_CHECK_ENABLED && _actor.isMonster() && !(_actor instanceof NpcWalkerInstance))
+		{
+			final Spawn spawn = ((NpcInstance) _actor).getSpawn();
+			if ((spawn != null) && !_actor.isInsideRadius(spawn.getX(), spawn.getY(), spawn.getZ(), Config.AGGRO_DISTANCE_CHECK_RANGE, true, false))
+			{
+				if ((Config.AGGRO_DISTANCE_CHECK_RAIDS || !_actor.isRaid()) && (Config.AGGRO_DISTANCE_CHECK_INSTANCES || (_actor.getInstanceId() == 0)))
+				{
+					final Location spawnLocation = new Location(spawn.getX(), spawn.getY(), spawn.getZ());
+					if (Config.AGGRO_DISTANCE_CHECK_RESTORE_LIFE)
+					{
+						_actor.setCurrentHp(_actor.getMaxHp());
+						_actor.setCurrentMp(_actor.getMaxMp());
+					}
+					_actor.abortAttack();
+					_actor.getAttackByList().clear();
+					if (_actor.hasAI())
+					{
+						setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, spawnLocation);
+					}
+					else
+					{
+						_actor.teleToLocation(spawnLocation, true);
+					}
+					
+					// Minions should return as well.
+					if (((MonsterInstance) _actor).hasMinions())
+					{
+						for (MinionInstance minion : ((MonsterInstance) _actor).getSpawnedMinions())
+						{
+							if (Config.AGGRO_DISTANCE_CHECK_RESTORE_LIFE)
+							{
+								minion.setCurrentHp(minion.getMaxHp());
+								minion.setCurrentMp(minion.getMaxMp());
+							}
+							minion.abortAttack();
+							minion.getAttackByList().clear();
+							if (minion.hasAI())
+							{
+								minion.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(spawn.getX(), spawn.getY(), spawn.getZ()));
+							}
+							else
+							{
+								minion.teleToLocation(spawnLocation, true);
+							}
+						}
+					}
+					return;
+				}
+			}
+		}
+		
 		if (_attackTimeout < GameTimeController.getGameTicks())
 		{
 			// Check if the actor is running
@@ -662,20 +714,6 @@ public class AttackableAI extends CreatureAI
 			_actor.setWalking();
 			return;
 		}
-		
-		/*
-		 * // Handle all WorldObject of its Faction inside the Faction Range if (_actor instanceof NpcInstance && ((NpcInstance) _actor).getFactionId() != null) { String faction_id = ((NpcInstance) _actor).getFactionId(); // Go through all WorldObject that belong to its faction
-		 * Collection<WorldObject> objs = _actor.getKnownList().getKnownObjects().values(); //synchronized (_actor.getKnownList().getKnownObjects()) try { for (WorldObject obj : objs) { if (obj instanceof NpcInstance) { NpcInstance npc = (NpcInstance) obj; //Handle SevenSigns mob Factions String
-		 * npcfaction = npc.getFactionId(); boolean sevenSignFaction = false; // TODO: Unhardcode this by AI scripts (DrHouse) //Catacomb mobs should assist lilim and nephilim other than dungeon if ("c_dungeon_clan".equals(faction_id) && ("c_dungeon_lilim".equals(npcfaction) ||
-		 * "c_dungeon_nephi".equals(npcfaction))) sevenSignFaction = true; //Lilim mobs should assist other Lilim and catacomb mobs else if ("c_dungeon_lilim".equals(faction_id) && "c_dungeon_clan".equals(npcfaction)) sevenSignFaction = true; //Nephilim mobs should assist other Nephilim and catacomb
-		 * mobs else if ("c_dungeon_nephi".equals(faction_id) && "c_dungeon_clan".equals(npcfaction)) sevenSignFaction = true; if (!faction_id.equals(npc.getFactionId()) && !sevenSignFaction) continue; // Check if the WorldObject is inside the Faction Range of // the actor if
-		 * (_actor.isInsideRadius(npc, npc.getFactionRange() + npc.getTemplate().collisionRadius, true, false) && npc.getAI() != null) { if (Math.abs(originalAttackTarget.getZ() - npc.getZ()) < 600 && _actor.getAttackByList().contains(originalAttackTarget) && (npc.getAI()._intention ==
-		 * CtrlIntention.AI_INTENTION_IDLE || npc.getAI()._intention == CtrlIntention.AI_INTENTION_ACTIVE) && GeoEngine.getInstance().canSeeTarget(_actor, npc)) { if ((originalAttackTarget instanceof PlayerInstance) || (originalAttackTarget instanceof Summon)) { if
-		 * (npc.getTemplate().getEventQuests(EventType.ON_FACTION_CALL) != null) { PlayerInstance player = (originalAttackTarget instanceof PlayerInstance) ? (PlayerInstance) originalAttackTarget : ((Summon) originalAttackTarget).getOwner(); for (Quest quest :
-		 * npc.getTemplate().getEventQuests(EventType.ON_FACTION_CALL)) quest.notifyFactionCall(npc, (NpcInstance) _actor, player, (originalAttackTarget instanceof Summon)); } } else if (npc instanceof Attackable && getAttackTarget() != null && npc.getAI()._intention !=
-		 * CtrlIntention.AI_INTENTION_ATTACK) { ((Attackable) npc).addDamageHate(getAttackTarget(), 0, ((Attackable) _actor).getHating(getAttackTarget())); npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, getAttackTarget()); } } } } } } catch (NullPointerException e) { LOGGER.warning(
-		 * "AttackableAI: thinkAttack() faction call failed: " + e.getMessage()); } }
-		 */
 		
 		// Call all WorldObject of its Faction inside the Faction Range
 		if (((NpcInstance) _actor).getFactionId() != null)
