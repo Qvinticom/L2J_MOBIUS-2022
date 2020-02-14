@@ -169,7 +169,11 @@ import quests.Q00663_SeductiveWhispers.Q00663_SeductiveWhispers;
 import quests.Q00665_BasicTrainingForHunterGuildMember.Q00665_BasicTrainingForHunterGuildMember;
 import quests.Q00666_HunterGuildMembersKnowledge.Q00666_HunterGuildMembersKnowledge;
 import quests.Q00668_ABattleWithTheGiants.Q00668_ABattleWithTheGiants;
+import quests.Q00669_DesperateFightWithTheDragons.Q00669_DesperateFightWithTheDragons;
 import quests.Q00670_DefeatingTheLordOfSeed.Q00670_DefeatingTheLordOfSeed;
+import quests.Q00671_PathToFindingThePast.Q00671_PathToFindingThePast;
+import quests.Q00672_ArchenemyEmbryo.Q00672_ArchenemyEmbryo;
+import quests.Q00673_BelethAmbition.Q00673_BelethAmbition;
 import quests.Q00674_ChangesInTheShadowOfTheMotherTree.Q00674_ChangesInTheShadowOfTheMotherTree;
 import quests.Q00675_WhatTheThreadOfThePastShows.Q00675_WhatTheThreadOfThePastShows;
 import quests.Q00688_DefeatTheElrokianRaiders.Q00688_DefeatTheElrokianRaiders;
@@ -520,10 +524,6 @@ import quests.not_done.Q00586_MutatedCreatures;
 import quests.not_done.Q00588_HeadOnCrash;
 import quests.not_done.Q00655_AGrandPlanForTamingWildBeasts;
 import quests.not_done.Q00667_CoveringShilensEyes;
-import quests.not_done.Q00669_DesperateFightWithTheDragons;
-import quests.not_done.Q00671_PathToFindingThePast;
-import quests.not_done.Q00672_ArchenemyEmbryo;
-import quests.not_done.Q00673_BelethAmbition;
 import quests.not_done.Q00744_TheAlligatorHunterReturns;
 import quests.not_done.Q00745_TheOutlawsAreIncoming;
 import quests.not_done.Q00746_TheReasonOneCannotWait;
@@ -774,11 +774,11 @@ public class QuestMasterHandler
 		Q00666_HunterGuildMembersKnowledge.class,
 		Q00667_CoveringShilensEyes.class, // TODO: Not done.
 		Q00668_ABattleWithTheGiants.class,
-		Q00669_DesperateFightWithTheDragons.class, // TODO: Not done.
+		Q00669_DesperateFightWithTheDragons.class,
 		Q00670_DefeatingTheLordOfSeed.class,
-		Q00671_PathToFindingThePast.class, // TODO: Not done.
-		Q00672_ArchenemyEmbryo.class, // TODO: Not done.
-		Q00673_BelethAmbition.class, // TODO: Not done.
+		Q00671_PathToFindingThePast.class,
+		Q00672_ArchenemyEmbryo.class,
+		Q00673_BelethAmbition.class,
 		Q00674_ChangesInTheShadowOfTheMotherTree.class,
 		Q00675_WhatTheThreadOfThePastShows.class,
 		Q00688_DefeatTheElrokianRaiders.class,

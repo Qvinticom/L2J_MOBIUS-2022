@@ -37,7 +37,7 @@ public class Q00670_DefeatingTheLordOfSeed extends Quest
 	private static final int ARCTURUS = 34267;
 	private static final int COLIN = 30703;
 	// Monsters
-	private static final int[] BOSES =
+	private static final int[] BOSSES =
 	{
 		29251, // Ekimus
 		29163, // Pelline
@@ -52,7 +52,7 @@ public class Q00670_DefeatingTheLordOfSeed extends Quest
 		super(670);
 		addStartNpc(ARCTURUS, COLIN);
 		addTalkId(ARCTURUS, COLIN);
-		addKillId(BOSES);
+		addKillId(BOSSES);
 		addCondMinLevel(MIN_LEVEL, "34267-00.htm");
 		addFactionLevel(Faction.HUNTERS_GUILD, 2, "34267-00.htm");
 	}

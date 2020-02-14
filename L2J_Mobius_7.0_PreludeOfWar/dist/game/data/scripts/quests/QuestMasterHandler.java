@@ -65,7 +65,11 @@ import quests.Q00620_FourGoblets.Q00620_FourGoblets;
 import quests.Q00665_BasicTrainingForHunterGuildMember.Q00665_BasicTrainingForHunterGuildMember;
 import quests.Q00666_HunterGuildMembersKnowledge.Q00666_HunterGuildMembersKnowledge;
 import quests.Q00668_ABattleWithTheGiants.Q00668_ABattleWithTheGiants;
+import quests.Q00669_DesperateFightWithTheDragons.Q00669_DesperateFightWithTheDragons;
 import quests.Q00670_DefeatingTheLordOfSeed.Q00670_DefeatingTheLordOfSeed;
+import quests.Q00671_PathToFindingThePast.Q00671_PathToFindingThePast;
+import quests.Q00672_ArchenemyEmbryo.Q00672_ArchenemyEmbryo;
+import quests.Q00673_BelethAmbition.Q00673_BelethAmbition;
 import quests.Q00674_ChangesInTheShadowOfTheMotherTree.Q00674_ChangesInTheShadowOfTheMotherTree;
 import quests.Q00675_WhatTheThreadOfThePastShows.Q00675_WhatTheThreadOfThePastShows;
 import quests.Q00682_TheStrongInTheClosedSpace.Q00682_TheStrongInTheClosedSpace;
@@ -262,10 +266,6 @@ import quests.not_done.Q00595_SpecialMissionRaidersCrossroads;
 import quests.not_done.Q00596_SpecialMissionDefeatBaylor;
 import quests.not_done.Q00599_DemonsAndDimensionalEnergy;
 import quests.not_done.Q00655_AGrandPlanForTamingWildBeasts;
-import quests.not_done.Q00669_DesperateFightWithTheDragons;
-import quests.not_done.Q00671_PathToFindingThePast;
-import quests.not_done.Q00672_ArchenemyEmbryo;
-import quests.not_done.Q00673_BelethAmbition;
 import quests.not_done.Q00749_TiesWithTheGuardians;
 import quests.not_done.Q00759_TheDwarvenNightmareContinues;
 import quests.not_done.Q00773_ToCalmTheFlood;
@@ -409,11 +409,11 @@ public class QuestMasterHandler
 		Q00665_BasicTrainingForHunterGuildMember.class,
 		Q00666_HunterGuildMembersKnowledge.class,
 		Q00668_ABattleWithTheGiants.class,
-		Q00669_DesperateFightWithTheDragons.class, // TODO: Not done.
+		Q00669_DesperateFightWithTheDragons.class,
 		Q00670_DefeatingTheLordOfSeed.class,
-		Q00671_PathToFindingThePast.class, // TODO: Not done.
-		Q00672_ArchenemyEmbryo.class, // TODO: Not done.
-		Q00673_BelethAmbition.class, // TODO: Not done.
+		Q00671_PathToFindingThePast.class,
+		Q00672_ArchenemyEmbryo.class,
+		Q00673_BelethAmbition.class,
 		Q00674_ChangesInTheShadowOfTheMotherTree.class,
 		Q00675_WhatTheThreadOfThePastShows.class,
 		Q00682_TheStrongInTheClosedSpace.class,
