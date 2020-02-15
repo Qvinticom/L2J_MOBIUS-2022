@@ -57,6 +57,7 @@ import quests.Q00561_BasicMissionHarnakUndergroundRuins.Q00561_BasicMissionHarna
 import quests.Q00564_BasicMissionKartiasLabyrinthSolo.Q00564_BasicMissionKartiasLabyrinthSolo;
 import quests.Q00567_BasicMissionIsleOfSouls.Q00567_BasicMissionIsleOfSouls;
 import quests.Q00569_BasicMissionSealOfShilen.Q00569_BasicMissionSealOfShilen;
+import quests.Q00574_SpecialMissionNornilsGarden.Q00574_SpecialMissionNornilsGarden;
 import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
 import quests.Q00587_MoreAggressiveOperation.Q00587_MoreAggressiveOperation;
 import quests.Q00600_KeyToTheRefiningProcess.Q00600_KeyToTheRefiningProcess;
@@ -252,7 +253,6 @@ import quests.not_done.Q00570_SpecialMissionKartiasLabyrinthParty;
 import quests.not_done.Q00571_SpecialMissionProofOfUnityFieldRaid;
 import quests.not_done.Q00572_SpecialMissionProofOfCourageFieldRaid;
 import quests.not_done.Q00573_SpecialMissionProofOfStrengthFieldRaid;
-import quests.not_done.Q00574_SpecialMissionNornilsGarden;
 import quests.not_done.Q00576_SpecialMissionDefeatSpezion;
 import quests.not_done.Q00577_BasicMissionSilentValley;
 import quests.not_done.Q00578_BasicMissionCemetery;
@@ -385,7 +385,7 @@ public class QuestMasterHandler
 		Q00571_SpecialMissionProofOfUnityFieldRaid.class, // TODO: Not done.
 		Q00572_SpecialMissionProofOfCourageFieldRaid.class, // TODO: Not done.
 		Q00573_SpecialMissionProofOfStrengthFieldRaid.class, // TODO: Not done.
-		Q00574_SpecialMissionNornilsGarden.class, // TODO: Not done.
+		Q00574_SpecialMissionNornilsGarden.class,
 		Q00576_SpecialMissionDefeatSpezion.class, // TODO: Not done.
 		Q00577_BasicMissionSilentValley.class, // TODO: Not done.
 		Q00578_BasicMissionCemetery.class, // TODO: Not done.

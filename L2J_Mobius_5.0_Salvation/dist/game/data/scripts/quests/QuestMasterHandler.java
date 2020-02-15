@@ -145,6 +145,7 @@ import quests.Q00565_BasicMissionFairySettlementWest.Q00565_BasicMissionFairySet
 import quests.Q00566_BasicMissionFairySettlementEast.Q00566_BasicMissionFairySettlementEast;
 import quests.Q00567_BasicMissionIsleOfSouls.Q00567_BasicMissionIsleOfSouls;
 import quests.Q00569_BasicMissionSealOfShilen.Q00569_BasicMissionSealOfShilen;
+import quests.Q00574_SpecialMissionNornilsGarden.Q00574_SpecialMissionNornilsGarden;
 import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
 import quests.Q00581_ThePurificationRitual.Q00581_ThePurificationRitual;
 import quests.Q00582_WashBloodWithBlood.Q00582_WashBloodWithBlood;
@@ -516,7 +517,6 @@ import quests.not_done.Q00570_SpecialMissionKartiasLabyrinthParty;
 import quests.not_done.Q00571_SpecialMissionProofOfUnityFieldRaid;
 import quests.not_done.Q00572_SpecialMissionProofOfCourageFieldRaid;
 import quests.not_done.Q00573_SpecialMissionProofOfStrengthFieldRaid;
-import quests.not_done.Q00574_SpecialMissionNornilsGarden;
 import quests.not_done.Q00575_SpecialMissionFortuna;
 import quests.not_done.Q00576_SpecialMissionDefeatSpezion;
 import quests.not_done.Q00585_CantGoAgainstTheTime;
@@ -742,7 +742,7 @@ public class QuestMasterHandler
 		Q00571_SpecialMissionProofOfUnityFieldRaid.class, // TODO: Not done.
 		Q00572_SpecialMissionProofOfCourageFieldRaid.class, // TODO: Not done.
 		Q00573_SpecialMissionProofOfStrengthFieldRaid.class, // TODO: Not done.
-		Q00574_SpecialMissionNornilsGarden.class, // TODO: Not done.
+		Q00574_SpecialMissionNornilsGarden.class,
 		Q00575_SpecialMissionFortuna.class, // TODO: Not done.
 		Q00576_SpecialMissionDefeatSpezion.class, // TODO: Not done.
 		Q00580_BeyondTheMemories.class,
