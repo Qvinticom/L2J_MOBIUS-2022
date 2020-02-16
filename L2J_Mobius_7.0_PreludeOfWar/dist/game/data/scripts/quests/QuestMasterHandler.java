@@ -56,10 +56,12 @@ import quests.Q00553_OlympiadUndefeated.Q00553_OlympiadUndefeated;
 import quests.Q00561_BasicMissionHarnakUndergroundRuins.Q00561_BasicMissionHarnakUndergroundRuins;
 import quests.Q00564_BasicMissionKartiasLabyrinthSolo.Q00564_BasicMissionKartiasLabyrinthSolo;
 import quests.Q00567_BasicMissionIsleOfSouls.Q00567_BasicMissionIsleOfSouls;
+import quests.Q00568_SpecialMissionNornilsCave.Q00568_SpecialMissionNornilsCave;
 import quests.Q00569_BasicMissionSealOfShilen.Q00569_BasicMissionSealOfShilen;
 import quests.Q00574_SpecialMissionNornilsGarden.Q00574_SpecialMissionNornilsGarden;
 import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
 import quests.Q00587_MoreAggressiveOperation.Q00587_MoreAggressiveOperation;
+import quests.Q00588_HeadOnCrash.Q00588_HeadOnCrash;
 import quests.Q00600_KeyToTheRefiningProcess.Q00600_KeyToTheRefiningProcess;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
 import quests.Q00620_FourGoblets.Q00620_FourGoblets;
@@ -248,7 +250,6 @@ import quests.custom.Q10529_IvoryTowersResearchFloatingSeaJournal.Q10529_IvoryTo
 import quests.custom.Q10533_OrfensAmbition.Q10533_OrfensAmbition;
 import quests.not_done.Q00282_ADayOfKindnessAndCaring;
 import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
-import quests.not_done.Q00568_SpecialMissionNornilsCave;
 import quests.not_done.Q00570_SpecialMissionKartiasLabyrinthParty;
 import quests.not_done.Q00571_SpecialMissionProofOfUnityFieldRaid;
 import quests.not_done.Q00572_SpecialMissionProofOfCourageFieldRaid;
@@ -258,7 +259,6 @@ import quests.not_done.Q00577_BasicMissionSilentValley;
 import quests.not_done.Q00578_BasicMissionCemetery;
 import quests.not_done.Q00585_CantGoAgainstTheTime;
 import quests.not_done.Q00586_MutatedCreatures;
-import quests.not_done.Q00588_HeadOnCrash;
 import quests.not_done.Q00591_GreatAmbitions;
 import quests.not_done.Q00593_BasicMissionPaganTemple;
 import quests.not_done.Q00594_BasicMissionDimensionalRift;
@@ -379,7 +379,7 @@ public class QuestMasterHandler
 		Q00561_BasicMissionHarnakUndergroundRuins.class,
 		Q00564_BasicMissionKartiasLabyrinthSolo.class,
 		Q00567_BasicMissionIsleOfSouls.class,
-		Q00568_SpecialMissionNornilsCave.class, // TODO: Not done.
+		Q00568_SpecialMissionNornilsCave.class,
 		Q00569_BasicMissionSealOfShilen.class,
 		Q00570_SpecialMissionKartiasLabyrinthParty.class, // TODO: Not done.
 		Q00571_SpecialMissionProofOfUnityFieldRaid.class, // TODO: Not done.
@@ -393,7 +393,7 @@ public class QuestMasterHandler
 		Q00585_CantGoAgainstTheTime.class, // TODO: Not done.
 		Q00586_MutatedCreatures.class, // TODO: Not done.
 		Q00587_MoreAggressiveOperation.class,
-		Q00588_HeadOnCrash.class, // TODO: Not done.
+		Q00588_HeadOnCrash.class,
 		Q00589_ASecretChange.class, // FIXME: Custom.
 		Q00590_ToEachTheirOwn.class, // FIXME: Custom.
 		Q00591_GreatAmbitions.class, // TODO: Not done.

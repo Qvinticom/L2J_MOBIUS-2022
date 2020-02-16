@@ -122,6 +122,7 @@ import quests.Q00564_BasicMissionKartiasLabyrinthSolo.Q00564_BasicMissionKartias
 import quests.Q00565_BasicMissionFairySettlementWest.Q00565_BasicMissionFairySettlementWest;
 import quests.Q00566_BasicMissionFairySettlementEast.Q00566_BasicMissionFairySettlementEast;
 import quests.Q00567_BasicMissionIsleOfSouls.Q00567_BasicMissionIsleOfSouls;
+import quests.Q00568_SpecialMissionNornilsCave.Q00568_SpecialMissionNornilsCave;
 import quests.Q00569_BasicMissionSealOfShilen.Q00569_BasicMissionSealOfShilen;
 import quests.Q00574_SpecialMissionNornilsGarden.Q00574_SpecialMissionNornilsGarden;
 import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
@@ -130,6 +131,7 @@ import quests.Q00582_WashBloodWithBlood.Q00582_WashBloodWithBlood;
 import quests.Q00583_MeaningOfSurvival.Q00583_MeaningOfSurvival;
 import quests.Q00584_NeverSayGoodBye.Q00584_NeverSayGoodBye;
 import quests.Q00587_MoreAggressiveOperation.Q00587_MoreAggressiveOperation;
+import quests.Q00588_HeadOnCrash.Q00588_HeadOnCrash;
 import quests.Q00600_KeyToTheRefiningProcess.Q00600_KeyToTheRefiningProcess;
 import quests.Q00617_GatherTheFlames.Q00617_GatherTheFlames;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
@@ -582,7 +584,7 @@ public class QuestMasterHandler
 		Q00565_BasicMissionFairySettlementWest.class,
 		Q00566_BasicMissionFairySettlementEast.class,
 		Q00567_BasicMissionIsleOfSouls.class,
-		Q00568_SpecialMissionNornilsCave.class, // TODO: Not done.
+		Q00568_SpecialMissionNornilsCave.class,
 		Q00569_BasicMissionSealOfShilen.class,
 		Q00570_SpecialMissionKartiasLabyrinthParty.class, // TODO: Not done.
 		Q00571_SpecialMissionProofOfUnityFieldRaid.class, // TODO: Not done.
@@ -600,7 +602,7 @@ public class QuestMasterHandler
 		Q00585_CantGoAgainstTheTime.class, // TODO: Not done.
 		Q00586_MutatedCreatures.class, // TODO: Not done.
 		Q00587_MoreAggressiveOperation.class,
-		Q00588_HeadOnCrash.class, // TODO: Not done.
+		Q00588_HeadOnCrash.class,
 		Q00589_ASecretChange.class, // FIXME: Custom.
 		Q00590_ToEachTheirOwn.class, // FIXME: Custom.
 		Q00591_GreatAmbitions.class, // TODO: Not done.
