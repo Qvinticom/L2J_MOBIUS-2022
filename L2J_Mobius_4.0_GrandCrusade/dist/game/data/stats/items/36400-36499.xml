@@ -706,7 +706,9 @@
 	<item id="36439" name="Lindvior Shooter" additionalName="Fragment" type="Weapon">
 		<!-- Lindvior's Shooter Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i00" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />

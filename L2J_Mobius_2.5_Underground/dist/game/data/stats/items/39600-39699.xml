@@ -743,7 +743,7 @@
 	<item id="39627" name="Dimensional Lindvior Shooter" type="Weapon">
 		<!-- Top-grade Dragon Weapon. <Passive Skill>. PvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%. <Active Skill>. 1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min. 2. Lindvior's Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min. 3. Lindvior's Wingbeat: Destroys nearby enemies' CP. Cooldown is 5 min. Cannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

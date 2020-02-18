@@ -1968,10 +1968,9 @@
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>3</magicLvl>
 		<operateType>P</operateType>
-		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-		<effect name="AttackAttribute">
+			<effect name="AttackAttribute">
 				<amount>50</amount>
 				<attribute>FIRE</attribute>
 			</effect>
@@ -2006,8 +2005,9 @@
 				<DUALDAGGER>3</DUALDAGGER>
 				<BOW>3</BOW>
 				<CROSSBOW>3</CROSSBOW>
+				<TWOHANDCROSSBOW>3</TWOHANDCROSSBOW>
 			</effect>
-			</effects>
+		</effects>
 	</skill>
 	<skill id="13569" toLevel="3" name="Talisman - Lilith">
 		<!-- Increase M. Def. + $s1, MP recovery + $s2, dark resistance + $s3, and damage reflect resistance + $s4. -->
@@ -2020,7 +2020,6 @@
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>3</magicLvl>
 		<operateType>P</operateType>
-		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalDefence">

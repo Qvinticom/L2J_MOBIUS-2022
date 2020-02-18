@@ -4461,6 +4461,7 @@
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 		</effects>
@@ -5370,6 +5371,7 @@
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 		</effects>
@@ -5492,6 +5494,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</condition>
 			<condition name="TargetMyParty">
@@ -5541,6 +5544,7 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 		</effects>

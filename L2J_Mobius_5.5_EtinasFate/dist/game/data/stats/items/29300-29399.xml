@@ -591,6 +591,8 @@
 		<!-- Lindvior Shooter fragment to celebrate the collaboration with Seven Deadly Sins. Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Lindvior Shooter - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1137,6 +1139,8 @@
 		<!-- Lindvior Shooter fragment to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Crit Rate +100, P. Skill Crit Rate +30%, P. Skill Crit Damage +30%, Damage to Dragons +100%.Active Skills - Can use Dignity and Lindvior's Wingbeat. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

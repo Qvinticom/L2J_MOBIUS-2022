@@ -106,6 +106,7 @@
 			<effect name="DefenceTrait">
 				<BOW>-60</BOW>
 				<CROSSBOW>-60</CROSSBOW>
+				<TWOHANDCROSSBOW>-60</TWOHANDCROSSBOW>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
 				<amount>
@@ -196,6 +197,7 @@
 			<effect name="DefenceTrait">
 				<BOW>50</BOW>
 				<CROSSBOW>50</CROSSBOW>
+				<TWOHANDCROSSBOW>50</TWOHANDCROSSBOW>
 			</effect>
 		</effects>
 	</skill>

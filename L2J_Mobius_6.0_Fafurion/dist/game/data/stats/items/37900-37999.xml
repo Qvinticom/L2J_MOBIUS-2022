@@ -680,6 +680,7 @@
 		<!-- Awakened warrior's weapon. Crossbow. Increases Atk. Spd. 7-day. Cannot be used in the Olympiad. Kamaels can use the Change Weapon skill to turn this into a bow. Cannot be used by Chaotic characters. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i00" />
 		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

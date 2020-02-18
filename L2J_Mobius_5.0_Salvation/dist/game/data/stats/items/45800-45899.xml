@@ -678,7 +678,9 @@
 	<item id="45830" name="Apocalypse Shooter - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Critical +79.2. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1275,7 +1277,9 @@
 	<item id="45858" name="Specter Shooter - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Critical +78.9. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_lapis_i01" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R95" />
@@ -1852,7 +1856,9 @@
 	<item id="45886" name="Helios Shooter - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Critical +78.7. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />

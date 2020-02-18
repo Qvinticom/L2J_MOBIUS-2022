@@ -3940,6 +3940,11 @@
 			<effect name="PhysicalAttackSpeed">
 				<amount>15</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
 			</effect>
 		</effects>
 	</skill>
@@ -3971,6 +3976,7 @@
 				<weaponType>
 					<item>BOW</item>
 					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 		</effects>

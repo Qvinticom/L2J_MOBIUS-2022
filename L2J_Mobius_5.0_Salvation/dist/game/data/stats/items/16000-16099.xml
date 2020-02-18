@@ -1328,6 +1328,9 @@
 	<item id="16040" name="Foundation Vesper Shooter" type="EtcItem">
 		<!-- Rare Vesper Shooter that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />

@@ -720,7 +720,22 @@
 					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
-			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-5</value>
+					<value level="3">-7</value>
+					<value level="4">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</effect>
+			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
 					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
 				</amount>

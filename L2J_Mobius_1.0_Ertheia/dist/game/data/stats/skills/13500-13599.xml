@@ -1969,7 +1969,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-		<effect name="AttackAttribute">
+			<effect name="AttackAttribute">
 				<amount>50</amount>
 				<attribute>FIRE</attribute>
 			</effect>
@@ -2004,8 +2004,9 @@
 				<DUALDAGGER>3</DUALDAGGER>
 				<BOW>3</BOW>
 				<CROSSBOW>3</CROSSBOW>
+				<TWOHANDCROSSBOW>3</TWOHANDCROSSBOW>
 			</effect>
-			</effects>
+		</effects>
 	</skill>
 	<skill id="13569" toLevel="3" name="Talisman - Lilith">
 		<!-- Increase M. Def. + 552, MP recovery + 3, dark resistance + 10, and damage reflect resistance + 6. -->

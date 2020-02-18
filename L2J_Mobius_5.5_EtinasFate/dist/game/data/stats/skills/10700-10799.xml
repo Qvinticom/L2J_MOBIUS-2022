@@ -639,6 +639,27 @@
 			<effect name="MagicMpCost">
 				<amount>-30</amount>
 				<mode>PER</mode>
+				<magicType>0</magicType>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-30</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-30</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
 				<weaponType>
 					<item>BOW</item>
 					<item>CROSSBOW</item>
@@ -1020,6 +1041,21 @@
 				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-6</value>
+					<value level="3">-7</value>
+					<value level="4">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 				<weaponType>
 					<item>BOW</item>
 					<item>CROSSBOW</item>

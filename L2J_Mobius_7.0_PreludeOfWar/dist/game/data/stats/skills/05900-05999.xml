@@ -798,6 +798,7 @@
 			<effect name="DefenceTrait">
 				<BOW>90</BOW>
 				<CROSSBOW>90</CROSSBOW>
+				<TWOHANDCROSSBOW>90</TWOHANDCROSSBOW>
 			</effect>
 		</effects>
 	</skill>
@@ -1998,6 +1999,7 @@
 					<item>BLUNT</item>
 					<item>BOW</item>
 					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 			<effect name="PhysicalAttackRange">
@@ -2006,6 +2008,7 @@
 				<weaponType>
 					<item>BOW</item>
 					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 			<effect name="CriticalRate">

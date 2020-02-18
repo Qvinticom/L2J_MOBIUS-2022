@@ -328,8 +328,9 @@
 		<!-- <Soul Crystal Enhancement>. Increases Attack Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_shyayaka_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="bodypart" val="lrhand" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />

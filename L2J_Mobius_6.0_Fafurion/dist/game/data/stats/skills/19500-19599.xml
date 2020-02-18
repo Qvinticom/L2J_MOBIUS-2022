@@ -2137,14 +2137,18 @@
 				<amount>25</amount>
 			</effect>
 			<effect name="DefenceTrait">
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
 				<BOW>50</BOW>
 				<CROSSBOW>50</CROSSBOW>
+				<TWOHANDCROSSBOW>50</TWOHANDCROSSBOW>
+				<DERANGEMENT>50</DERANGEMENT>
 			</effect>
-			<effect name="DefenceTrait">
-				<KNOCKBACK>100</KNOCKBACK>
-				<AIRBIND>100</AIRBIND>
-				<KNOCKDOWN>100</KNOCKDOWN>
-				<ZONE>100</ZONE>
+			<effect name="TransferDamageToPlayer">
+				<amount>25</amount>
+			</effect>
+			<effect name="GetDamageLimit">
+				<amount>10</amount>
 			</effect>
 		</effects>
 	</skill>

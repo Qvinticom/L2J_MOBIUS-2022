@@ -679,6 +679,8 @@
 				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>SELF</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
 				<allowWeapons>ALL</allowWeapons>
 				<skillId>18721</skillId> <!-- Greater Garnet - Cancel Stun/ Silence -->
 				<skillLevel>1</skillLevel>
@@ -894,6 +896,7 @@
 				<weaponType>
 					<item>BOW</item>
 					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 		</effects>
@@ -914,6 +917,7 @@
 			<effect name="DefenceTrait">
 				<BOW>10</BOW>
 				<CROSSBOW>10</CROSSBOW>
+				<TWOHANDCROSSBOW>10</TWOHANDCROSSBOW>
 			</effect>
 		</effects>
 	</skill>

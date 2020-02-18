@@ -597,6 +597,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">719</stat>
 			<stat type="mAtk">313</stat>

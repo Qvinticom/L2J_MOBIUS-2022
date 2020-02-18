@@ -948,6 +948,7 @@
 			<effect name="DefenceTrait">
 				<BOW>80</BOW>
 				<CROSSBOW>80</CROSSBOW>
+				<TWOHANDCROSSBOW>80</TWOHANDCROSSBOW>
 			</effect>
 		</effects>
 	</skill>
@@ -1369,6 +1370,13 @@
 					<value level="4">10</value>
 					<value level="5">10</value>
 				</CROSSBOW>
+				<TWOHANDCROSSBOW>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</TWOHANDCROSSBOW>
 				<DAGGER>
 					<value level="1">0</value>
 					<value level="2">0</value>

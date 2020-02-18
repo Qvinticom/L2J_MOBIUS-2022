@@ -1214,7 +1214,9 @@
 	<item id="26263" name="Halloween Shooter" type="Weapon">
 		<!-- Halloween weapon. -->
 		<set name="icon" val="icon.ev_wp_halloween" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="bodypart" val="lrhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1596,7 +1598,9 @@
 	<item id="26282" name="Halloween Shooter" type="Weapon">
 		<!-- Halloween weapon. -->
 		<set name="icon" val="icon.ev_wp_halloween" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="bodypart" val="lrhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

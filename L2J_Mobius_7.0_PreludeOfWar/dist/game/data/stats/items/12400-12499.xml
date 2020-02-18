@@ -579,6 +579,9 @@
 	<item id="12428" name="Foundation Reaper" type="EtcItem">
 		<!-- Rare Reaper that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1660" />
@@ -743,6 +746,9 @@
 	<item id="12436" name="Foundation Screaming Vengeance" type="EtcItem">
 		<!-- Rare Screaming Vengeance that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1640" />
@@ -1564,6 +1570,9 @@
 	<item id="12476" name="Foundation Icarus Shooter" type="EtcItem">
 		<!-- Rare Icarus Shooter that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i00" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />

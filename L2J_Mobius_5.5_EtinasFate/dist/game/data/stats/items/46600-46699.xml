@@ -834,7 +834,8 @@
 		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />

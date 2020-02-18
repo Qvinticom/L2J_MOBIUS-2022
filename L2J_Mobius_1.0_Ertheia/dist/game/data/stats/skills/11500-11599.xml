@@ -3850,6 +3850,7 @@
 					<item>RAPIER</item>
 					<item>BOW</item>
 					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
@@ -4435,7 +4436,7 @@
 				<chance>25</chance>
 				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>
-				<allowWeapons>SWORD,BLUNT,DAGGER,DUALDAGGER,DUAL,DUALFIST,POLE,ANCIENTSWORD,RAPIER,BOW,CROSSBOW,DUALBLUNT</allowWeapons>
+				<allowWeapons>SWORD,BLUNT,DAGGER,DUALDAGGER,DUAL,DUALFIST,POLE,ANCIENTSWORD,RAPIER,BOW,CROSSBOW,DUALBLUNT,TWOHANDCROSSBOW</allowWeapons>
 				<skillId>11569</skillId> <!-- Critical Damage Increase -->
 				<skillLevel>1</skillLevel>
 			</effect>

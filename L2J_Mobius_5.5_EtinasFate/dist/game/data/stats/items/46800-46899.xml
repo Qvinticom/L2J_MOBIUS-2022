@@ -187,6 +187,7 @@
 		<set name="weight" val="1720" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
@@ -356,6 +357,7 @@
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
@@ -538,6 +540,7 @@
 		<set name="weight" val="1660" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
@@ -707,6 +710,7 @@
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
@@ -894,6 +898,7 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="6" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
@@ -1700,7 +1705,8 @@
 		<!-- Dimensional Item. A Specter Shooter that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Damage +10%. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
 		<set name="icon" val="icon.bm_weapon_lapis_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -2482,7 +2488,8 @@
 		<!-- A Specter Shooter that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Damage +10%. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
 		<set name="icon" val="icon.weapon_lapis_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />

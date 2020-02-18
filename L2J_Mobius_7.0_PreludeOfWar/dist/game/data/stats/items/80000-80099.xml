@@ -333,8 +333,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="damage_range" val="0;0;40;120" />
+		<set name="damage_range" val="0;0;66;120" />
 		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="35267" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
 		<stats>

@@ -2287,7 +2287,7 @@
 				<chance>3</chance>
 				<targetType>SELF</targetType>
 				<isCritical>false</isCritical>
-				<allowWeapons>CROSSBOW,BOW</allowWeapons>
+				<allowWeapons>CROSSBOW,BOW,TWOHANDCROSSBOW</allowWeapons>
 				<skillId>5559</skillId> <!-- Physical Pose -->
 				<skillLevel>1</skillLevel>
 			</effect>
@@ -2296,6 +2296,7 @@
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 					<item>BOW</item>
 				</weaponType>
 			</effect>
@@ -2304,6 +2305,7 @@
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 					<item>BOW</item>
 				</weaponType>
 			</effect>
@@ -2498,6 +2500,7 @@
 			<effect name="DefenceTrait">
 				<BOW>10</BOW>
 				<CROSSBOW>5</CROSSBOW>
+				<TWOHANDCROSSBOW>5</TWOHANDCROSSBOW>
 			</effect>
 		</effects>
 	</skill>
@@ -2532,6 +2535,7 @@
 			<effect name="DefenceTrait">
 				<BOW>45</BOW>
 				<CROSSBOW>25</CROSSBOW>
+				<TWOHANDCROSSBOW>25</TWOHANDCROSSBOW>
 			</effect>
 			<effect name="MAtk">
 				<amount>-99</amount>

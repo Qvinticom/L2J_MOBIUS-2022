@@ -195,9 +195,10 @@
 	</item>
 	<item id="46211" name="Halloween Shooter" type="Weapon">
 		<set name="icon" val="icon.ev_wp_halloween" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
-		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="bodypart" val="lrhand" />
+		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
