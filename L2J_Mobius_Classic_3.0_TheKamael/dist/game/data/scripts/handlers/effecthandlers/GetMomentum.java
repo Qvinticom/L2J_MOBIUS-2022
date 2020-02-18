@@ -51,7 +51,7 @@ public class GetMomentum extends AbstractEffect
 		if (effected.isPlayer())
 		{
 			final PlayerInstance player = effected.getActingPlayer();
-			final int maxCharge = (int) player.getStat().getValue(Stat.MAX_MOMENTUM, 0);
+			final int maxCharge = (int) player.getStat().getValue(Stat.MAX_MOMENTUM, 1);
 			final int newCharge = Math.min(player.getCharges() + 1, maxCharge);
 			
 			player.setCharges(newCharge);
