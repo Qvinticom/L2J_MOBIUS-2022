@@ -144,7 +144,7 @@ public class EnterWorld extends GameClientPacket
 		player.broadcastKarma(); // include UserInfo
 		
 		// Engage and notify Partner
-		if (Config.L2JMOD_ALLOW_WEDDING)
+		if (Config.ALLOW_WEDDING)
 		{
 			engage(player);
 			notifyPartner(player);

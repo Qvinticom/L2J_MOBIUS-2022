@@ -9460,9 +9460,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		if (Config.L2JMOD_CHAMPION_ENABLE && _champion && (Config.L2JMOD_CHAMPION_HP != 0))
+		if (Config.CHAMPION_ENABLE && _champion && (Config.CHAMPION_HP != 0))
 		{
-			getStatus().reduceHp(i / Config.L2JMOD_CHAMPION_HP, attacker, awake);
+			getStatus().reduceHp(i / Config.CHAMPION_HP, attacker, awake);
 		}
 		else if (_advanceFlag)
 		{

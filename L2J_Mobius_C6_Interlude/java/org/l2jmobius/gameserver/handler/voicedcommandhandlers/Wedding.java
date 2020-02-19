@@ -93,7 +93,7 @@ public class Wedding implements IVoicedCommandHandler
 		if (activeChar.isMarried())
 		{
 			activeChar.sendMessage("You are now divorced.");
-			adenaAmount = (activeChar.getAdena() / 100) * Config.L2JMOD_WEDDING_DIVORCE_COSTS;
+			adenaAmount = (activeChar.getAdena() / 100) * Config.WEDDING_DIVORCE_COSTS;
 			activeChar.getInventory().reduceAdena("Wedding", adenaAmount, activeChar, null);
 		}
 		else
@@ -150,7 +150,7 @@ public class Wedding implements IVoicedCommandHandler
 		{
 			activeChar.sendMessage("You are already engaged.");
 			
-			if (Config.L2JMOD_WEDDING_PUNISH_INFIDELITY)
+			if (Config.WEDDING_PUNISH_INFIDELITY)
 			{
 				activeChar.startAbnormalEffect((short) 0x2000); // give player a Big Head
 				// lets recycle the sevensigns debuffs
@@ -208,7 +208,7 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if ((ptarget.getAppearance().isFemale() == activeChar.getAppearance().isFemale()) && !Config.L2JMOD_WEDDING_SAMESEX)
+		if ((ptarget.getAppearance().isFemale() == activeChar.getAppearance().isFemale()) && !Config.WEDDING_SAMESEX)
 		{
 			activeChar.sendMessage("Gay marriage is not allowed on this server!");
 			return false;
@@ -379,10 +379,10 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		final int teleportTimer = Config.L2JMOD_WEDDING_TELEPORT_DURATION * 1000;
+		final int teleportTimer = Config.WEDDING_TELEPORT_DURATION * 1000;
 		
 		activeChar.sendMessage("After " + (teleportTimer / 60000) + " min. you will be teleported to your fiance.");
-		activeChar.getInventory().reduceAdena("Wedding", Config.L2JMOD_WEDDING_TELEPORT_PRICE, activeChar, null);
+		activeChar.getInventory().reduceAdena("Wedding", Config.WEDDING_TELEPORT_PRICE, activeChar, null);
 		
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		// SoE Animation section

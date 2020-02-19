@@ -69,7 +69,7 @@ public class DlgAnswer extends GameClientPacket
 		{
 			player.gatesAnswer(_answer, 0);
 		}
-		else if ((_messageId == 614) && Config.L2JMOD_ALLOW_WEDDING)
+		else if ((_messageId == 614) && Config.ALLOW_WEDDING)
 		{
 			player.EngageAnswer(_answer);
 		}

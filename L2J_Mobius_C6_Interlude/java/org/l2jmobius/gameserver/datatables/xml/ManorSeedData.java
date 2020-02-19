@@ -292,7 +292,7 @@ public class ManorSeedData implements IXmlReader
 		final SeedDataHolder seed = _seeds.get(seedId);
 		if (seed != null)
 		{
-			return seed.getSeedLimit();
+			return (int) seed.getSeedLimit();
 		}
 		return 0;
 	}
@@ -303,7 +303,7 @@ public class ManorSeedData implements IXmlReader
 		{
 			if (seed.getCropId() == cropId)
 			{
-				return seed.getCropLimit();
+				return (int) seed.getCropLimit();
 			}
 		}
 		return 0;

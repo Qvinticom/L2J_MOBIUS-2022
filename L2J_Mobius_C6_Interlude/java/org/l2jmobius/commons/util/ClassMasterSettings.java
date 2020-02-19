@@ -26,58 +26,52 @@ public class ClassMasterSettings
 	private final Map<Integer, Map<Integer, Integer>> _rewardItems;
 	private final Map<Integer, Boolean> _allowedClassChange;
 	
-	public ClassMasterSettings(String _configLine)
+	public ClassMasterSettings(String configLine)
 	{
 		_claimItems = new HashMap<>();
 		_rewardItems = new HashMap<>();
 		_allowedClassChange = new HashMap<>();
-		if (_configLine != null)
+		if (configLine != null)
 		{
-			parseConfigLine(_configLine.trim());
+			parseConfigLine(configLine.trim());
 		}
 	}
 	
-	private void parseConfigLine(String _configLine)
+	private void parseConfigLine(String configLine)
 	{
-		final StringTokenizer st = new StringTokenizer(_configLine, ";");
-		
+		final StringTokenizer st = new StringTokenizer(configLine, ";");
 		while (st.hasMoreTokens())
 		{
 			final int job = Integer.parseInt(st.nextToken());
-			
 			_allowedClassChange.put(job, true);
-			
-			Map<Integer, Integer> _items = new HashMap<>();
-			
-			if (st.hasMoreTokens())
-			{
-				final StringTokenizer st2 = new StringTokenizer(st.nextToken(), "[],");
-				
-				while (st2.hasMoreTokens())
-				{
-					final StringTokenizer st3 = new StringTokenizer(st2.nextToken(), "()");
-					final int _itemId = Integer.parseInt(st3.nextToken());
-					final int _quantity = Integer.parseInt(st3.nextToken());
-					_items.put(_itemId, _quantity);
-				}
-			}
-			
-			_claimItems.put(job, _items);
-			_items = new HashMap<>();
+			Map<Integer, Integer> items = new HashMap<>();
 			
 			if (st.hasMoreTokens())
 			{
 				final StringTokenizer st2 = new StringTokenizer(st.nextToken(), "[],");
-				
 				while (st2.hasMoreTokens())
 				{
 					final StringTokenizer st3 = new StringTokenizer(st2.nextToken(), "()");
-					final int _itemId = Integer.parseInt(st3.nextToken());
-					final int _quantity = Integer.parseInt(st3.nextToken());
-					_items.put(_itemId, _quantity);
+					final int itemId = Integer.parseInt(st3.nextToken());
+					final int quantity = Integer.parseInt(st3.nextToken());
+					items.put(itemId, quantity);
 				}
 			}
-			_rewardItems.put(job, _items);
+			_claimItems.put(job, items);
+			
+			items = new HashMap<>();
+			if (st.hasMoreTokens())
+			{
+				final StringTokenizer st2 = new StringTokenizer(st.nextToken(), "[],");
+				while (st2.hasMoreTokens())
+				{
+					final StringTokenizer st3 = new StringTokenizer(st2.nextToken(), "()");
+					final int itemId = Integer.parseInt(st3.nextToken());
+					final int quantity = Integer.parseInt(st3.nextToken());
+					items.put(itemId, quantity);
+				}
+			}
+			_rewardItems.put(job, items);
 		}
 	}
 	

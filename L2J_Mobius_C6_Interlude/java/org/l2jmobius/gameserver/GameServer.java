@@ -407,7 +407,7 @@ public class GameServer
 		
 		LOGGER.info("IdFactory: Free ObjectID's remaining: " + IdFactory.size());
 		
-		if (Config.L2JMOD_ALLOW_WEDDING)
+		if (Config.ALLOW_WEDDING)
 		{
 			CoupleManager.getInstance();
 		}

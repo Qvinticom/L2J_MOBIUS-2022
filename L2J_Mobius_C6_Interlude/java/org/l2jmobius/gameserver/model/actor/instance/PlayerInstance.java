@@ -11751,15 +11751,15 @@ public class PlayerInstance extends Playable
 		{
 			if (marriedType() == 1)
 			{
-				getAppearance().setNameColor(Config.L2JMOD_WEDDING_NAME_COLOR_LESBO);
+				getAppearance().setNameColor(Config.WEDDING_NAME_COLOR_LESBO);
 			}
 			else if (marriedType() == 2)
 			{
-				getAppearance().setNameColor(Config.L2JMOD_WEDDING_NAME_COLOR_GEY);
+				getAppearance().setNameColor(Config.WEDDING_NAME_COLOR_GEY);
 			}
 			else
 			{
-				getAppearance().setNameColor(Config.L2JMOD_WEDDING_NAME_COLOR_NORMAL);
+				getAppearance().setNameColor(Config.WEDDING_NAME_COLOR_NORMAL);
 			}
 		}
 		

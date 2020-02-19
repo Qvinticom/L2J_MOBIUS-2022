@@ -86,7 +86,7 @@ public class WeddingManagerInstance extends NpcInstance
 	private void showMessageWindow(PlayerInstance player)
 	{
 		final String filename = "data/html/mods/Wedding_start.htm";
-		final String replace = String.valueOf(Config.L2JMOD_WEDDING_PRICE);
+		final String replace = String.valueOf(Config.WEDDING_PRICE);
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(1);
 		html.setFile(filename);
@@ -141,20 +141,20 @@ public class WeddingManagerInstance extends NpcInstance
 			int type;
 			if (player.getAppearance().isFemale() && ptarget.getAppearance().isFemale())
 			{
-				player.getAppearance().setNameColor(Config.L2JMOD_WEDDING_NAME_COLOR_LESBO);
-				ptarget.getAppearance().setNameColor(Config.L2JMOD_WEDDING_NAME_COLOR_LESBO);
+				player.getAppearance().setNameColor(Config.WEDDING_NAME_COLOR_LESBO);
+				ptarget.getAppearance().setNameColor(Config.WEDDING_NAME_COLOR_LESBO);
 				type = 1;
 			}
 			else if (!player.getAppearance().isFemale() && !ptarget.getAppearance().isFemale())
 			{
-				player.getAppearance().setNameColor(Config.L2JMOD_WEDDING_NAME_COLOR_GEY);
-				ptarget.getAppearance().setNameColor(Config.L2JMOD_WEDDING_NAME_COLOR_GEY);
+				player.getAppearance().setNameColor(Config.WEDDING_NAME_COLOR_GEY);
+				ptarget.getAppearance().setNameColor(Config.WEDDING_NAME_COLOR_GEY);
 				type = 2;
 			}
 			else
 			{
-				player.getAppearance().setNameColor(Config.L2JMOD_WEDDING_NAME_COLOR_NORMAL);
-				ptarget.getAppearance().setNameColor(Config.L2JMOD_WEDDING_NAME_COLOR_NORMAL);
+				player.getAppearance().setNameColor(Config.WEDDING_NAME_COLOR_NORMAL);
+				ptarget.getAppearance().setNameColor(Config.WEDDING_NAME_COLOR_NORMAL);
 				type = 0;
 			}
 			
@@ -171,7 +171,7 @@ public class WeddingManagerInstance extends NpcInstance
 			ptarget.setMaryRequest(false);
 			ptarget.setmarriedType(type);
 			
-			if (Config.WEDDING_GIVE_CUPID_BOW)
+			if (Config.GIVE_CUPID_BOW)
 			{
 				player.addItem("Cupids Bow", 9140, 1, player, true);
 				player.getInventory().updateDatabase();
@@ -230,7 +230,7 @@ public class WeddingManagerInstance extends NpcInstance
 		else if (player.isMaryRequest())
 		{
 			// check for formalwear
-			if (Config.L2JMOD_WEDDING_FORMALWEAR)
+			if (Config.WEDDING_FORMALWEAR)
 			{
 				final Inventory inv3 = player.getInventory();
 				final ItemInstance item3 = inv3.getPaperdollItem(10);
@@ -247,7 +247,7 @@ public class WeddingManagerInstance extends NpcInstance
 				}
 			}
 			
-			if (Config.L2JMOD_WEDDING_FORMALWEAR && !player.isWearingFormalWear())
+			if (Config.WEDDING_FORMALWEAR && !player.isWearingFormalWear())
 			{
 				filename = "data/html/mods/Wedding_noformal.htm";
 				sendHtmlMessage(player, filename, replace);
@@ -264,7 +264,7 @@ public class WeddingManagerInstance extends NpcInstance
 		else if (command.startsWith("AskWedding"))
 		{
 			// check for formalwear
-			if (Config.L2JMOD_WEDDING_FORMALWEAR)
+			if (Config.WEDDING_FORMALWEAR)
 			{
 				final Inventory inv3 = player.getInventory();
 				final ItemInstance item3 = inv3.getPaperdollItem(10);
@@ -282,16 +282,16 @@ public class WeddingManagerInstance extends NpcInstance
 				}
 			}
 			
-			if (Config.L2JMOD_WEDDING_FORMALWEAR && !player.isWearingFormalWear())
+			if (Config.WEDDING_FORMALWEAR && !player.isWearingFormalWear())
 			{
 				filename = "data/html/mods/Wedding_noformal.htm";
 				sendHtmlMessage(player, filename, replace);
 				return;
 			}
-			else if (player.getAdena() < Config.L2JMOD_WEDDING_PRICE)
+			else if (player.getAdena() < Config.WEDDING_PRICE)
 			{
 				filename = "data/html/mods/Wedding_adena.htm";
-				replace = String.valueOf(Config.L2JMOD_WEDDING_PRICE);
+				replace = String.valueOf(Config.WEDDING_PRICE);
 				sendHtmlMessage(player, filename, replace);
 				return;
 			}
@@ -301,7 +301,7 @@ public class WeddingManagerInstance extends NpcInstance
 				ptarget.setMaryRequest(true);
 				replace = ptarget.getName();
 				filename = "data/html/mods/Wedding_requested.htm";
-				player.getInventory().reduceAdena("Wedding", Config.L2JMOD_WEDDING_PRICE, player, player.getLastFolkNPC());
+				player.getInventory().reduceAdena("Wedding", Config.WEDDING_PRICE, player, player.getLastFolkNPC());
 				sendHtmlMessage(player, filename, replace);
 				return;
 			}

@@ -83,12 +83,12 @@ public class SeedDataHolder
 		return _isAlternative;
 	}
 	
-	public int getSeedLimit()
+	public float getSeedLimit()
 	{
 		return _seedLimit * Config.RATE_DROP_MANOR;
 	}
 	
-	public int getCropLimit()
+	public float getCropLimit()
 	{
 		return _cropLimit * Config.RATE_DROP_MANOR;
 	}

@@ -565,10 +565,10 @@ public class Attackable extends NpcInstance
 		}
 		
 		setChampion(false);
-		if (Config.L2JMOD_CHAMPION_ENABLE)
+		if (Config.CHAMPION_ENABLE)
 		{
 			// Set champion on next spawn.
-			if (!(this instanceof GrandBossInstance) && !(this instanceof RaidBossInstance) && (this instanceof MonsterInstance) /* && !getTemplate().isQuestMonster */ && (Config.L2JMOD_CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.L2JMOD_CHAMP_MIN_LVL) && (getLevel() <= Config.L2JMOD_CHAMP_MAX_LVL) && (Rnd.get(100) < Config.L2JMOD_CHAMPION_FREQUENCY))
+			if (!(this instanceof GrandBossInstance) && !(this instanceof RaidBossInstance) && (this instanceof MonsterInstance) /* && !getTemplate().isQuestMonster */ && (Config.CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.CHAMP_MIN_LVL) && (getLevel() <= Config.CHAMP_MAX_LVL) && (Rnd.get(100) < Config.CHAMPION_FREQUENCY))
 			{
 				setChampion(true);
 			}
@@ -773,10 +773,10 @@ public class Attackable extends NpcInstance
 							exp *= 1 - penalty;
 							sp = tmp[1];
 							
-							if (Config.L2JMOD_CHAMPION_ENABLE && isChampion())
+							if (Config.CHAMPION_ENABLE && isChampion())
 							{
-								exp *= Config.L2JMOD_CHAMPION_REWARDS;
-								sp *= Config.L2JMOD_CHAMPION_REWARDS;
+								exp *= Config.CHAMPION_REWARDS;
+								sp *= Config.CHAMPION_REWARDS;
 							}
 							
 							// Check for an over-hit enabled strike and Donator options
@@ -917,10 +917,10 @@ public class Attackable extends NpcInstance
 						exp = tmp[0];
 						sp = tmp[1];
 						
-						if (Config.L2JMOD_CHAMPION_ENABLE && isChampion())
+						if (Config.CHAMPION_ENABLE && isChampion())
 						{
-							exp *= Config.L2JMOD_CHAMPION_REWARDS;
-							sp *= Config.L2JMOD_CHAMPION_REWARDS;
+							exp *= Config.CHAMPION_REWARDS;
+							sp *= Config.CHAMPION_REWARDS;
 						}
 						
 						exp *= partyMul;
@@ -1395,9 +1395,9 @@ public class Attackable extends NpcInstance
 			}
 		}
 		
-		if (Config.L2JMOD_CHAMPION_ENABLE && isChampion())
+		if (Config.CHAMPION_ENABLE && isChampion())
 		{
-			dropChance *= Config.L2JMOD_CHAMPION_REWARDS;
+			dropChance *= Config.CHAMPION_REWARDS;
 		}
 		
 		// Round drop chance
@@ -1457,9 +1457,9 @@ public class Attackable extends NpcInstance
 			// Prepare for next iteration if dropChance > DropData.MAX_CHANCE
 			dropChance -= DropData.MAX_CHANCE;
 		}
-		if (Config.L2JMOD_CHAMPION_ENABLE && isChampion() && ((drop.getItemId() == 57) || ((drop.getItemId() >= 6360) && (drop.getItemId() <= 6362))))
+		if (Config.CHAMPION_ENABLE && isChampion() && ((drop.getItemId() == 57) || ((drop.getItemId() >= 6360) && (drop.getItemId() <= 6362))))
 		{
-			itemCount *= Config.L2JMOD_CHAMPION_ADENAS_REWARDS;
+			itemCount *= Config.CHAMPION_ADENAS_REWARDS;
 		}
 		
 		if ((drop.getItemId() >= 6360) && (drop.getItemId() <= 6362))
@@ -1555,9 +1555,9 @@ public class Attackable extends NpcInstance
 			categoryDropChance *= Config.RATE_DROP_ITEMS;
 		}
 		
-		if (Config.L2JMOD_CHAMPION_ENABLE && isChampion())
+		if (Config.CHAMPION_ENABLE && isChampion())
 		{
-			categoryDropChance *= Config.L2JMOD_CHAMPION_REWARDS;
+			categoryDropChance *= Config.CHAMPION_REWARDS;
 		}
 		
 		// Set our limits for chance of drop
@@ -1690,9 +1690,9 @@ public class Attackable extends NpcInstance
 				}
 			}
 			
-			if (Config.L2JMOD_CHAMPION_ENABLE && isChampion())
+			if (Config.CHAMPION_ENABLE && isChampion())
 			{
-				dropChance *= Config.L2JMOD_CHAMPION_REWARDS;
+				dropChance *= Config.CHAMPION_REWARDS;
 			}
 			
 			if (dropChance < DropData.MAX_CHANCE)
@@ -1750,9 +1750,9 @@ public class Attackable extends NpcInstance
 				// Prepare for next iteration if dropChance > DropData.MAX_CHANCE
 				dropChance -= DropData.MAX_CHANCE;
 			}
-			if (Config.L2JMOD_CHAMPION_ENABLE && isChampion() && ((drop.getItemId() == 57) || ((drop.getItemId() >= 6360) && (drop.getItemId() <= 6362))))
+			if (Config.CHAMPION_ENABLE && isChampion() && ((drop.getItemId() == 57) || ((drop.getItemId() >= 6360) && (drop.getItemId() <= 6362))))
 			{
-				itemCount *= Config.L2JMOD_CHAMPION_ADENAS_REWARDS;
+				itemCount *= Config.CHAMPION_ADENAS_REWARDS;
 			}
 			
 			if ((drop.getItemId() >= 6360) && (drop.getItemId() <= 6362))
@@ -1937,13 +1937,13 @@ public class Attackable extends NpcInstance
 		}
 		
 		// Apply Special Item drop with rnd qty for champions
-		if (Config.L2JMOD_CHAMPION_ENABLE && isChampion() && (player.getLevel() <= (getLevel() + 3)) && (Config.L2JMOD_CHAMPION_REWARD > 0) && (Rnd.get(100) < Config.L2JMOD_CHAMPION_REWARD))
+		if (Config.CHAMPION_ENABLE && isChampion() && (player.getLevel() <= (getLevel() + 3)) && (Config.CHAMPION_REWARD > 0) && (Rnd.get(100) < Config.CHAMPION_REWARD))
 		{
-			int champqty = Rnd.get(Config.L2JMOD_CHAMPION_REWARD_QTY);
+			int champqty = Rnd.get(Config.CHAMPION_REWARD_QTY);
 			champqty++; // quantity should actually vary between 1 and whatever admin specified as max, inclusive.
 			
 			// Give this or these Item(s) to the PlayerInstance that has killed the Attackable
-			final RewardItem item = new RewardItem(Config.L2JMOD_CHAMPION_REWARD_ID, champqty);
+			final RewardItem item = new RewardItem(Config.CHAMPION_REWARD_ID, champqty);
 			if (Config.AUTO_LOOT)
 			{
 				final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
@@ -3166,7 +3166,7 @@ public class Attackable extends NpcInstance
 		
 		final List<RewardItem> harvested = new ArrayList<>();
 		
-		harvested.add(new RewardItem(ManorSeedData.getInstance().getCropType(_seedType), count * Config.RATE_DROP_MANOR));
+		harvested.add(new RewardItem(ManorSeedData.getInstance().getCropType(_seedType), (int) (count * Config.RATE_DROP_MANOR)));
 		
 		_harvestItems = harvested.toArray(new RewardItem[harvested.size()]);
 	}

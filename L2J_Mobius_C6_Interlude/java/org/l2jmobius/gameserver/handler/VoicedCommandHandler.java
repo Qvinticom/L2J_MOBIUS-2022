@@ -61,7 +61,7 @@ public class VoicedCommandHandler
 			registerVoicedCommandHandler(new DMCmd());
 		}
 		
-		if (Config.L2JMOD_ALLOW_WEDDING)
+		if (Config.ALLOW_WEDDING)
 		{
 			registerVoicedCommandHandler(new Wedding());
 		}

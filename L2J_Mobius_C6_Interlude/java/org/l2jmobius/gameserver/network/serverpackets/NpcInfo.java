@@ -83,9 +83,9 @@ public class NpcInfo extends GameServerPacket
 			_name = cha.getTemplate().getName();
 		}
 		
-		if (Config.L2JMOD_CHAMPION_ENABLE && cha.isChampion())
+		if (Config.CHAMPION_ENABLE && cha.isChampion())
 		{
-			_title = Config.L2JMOD_CHAMP_TITLE;
+			_title = Config.CHAMP_TITLE;
 		}
 		else if (cha.getTemplate().isServerSideTitle())
 		{
@@ -122,7 +122,7 @@ public class NpcInfo extends GameServerPacket
 			{
 				t1 += " " + _title;
 			}
-			_title = cha.isChampion() ? Config.L2JMOD_CHAMP_TITLE + " " + t1 : t1;
+			_title = cha.isChampion() ? Config.CHAMP_TITLE + " " + t1 : t1;
 		}
 		
 		_x = _creature.getX();

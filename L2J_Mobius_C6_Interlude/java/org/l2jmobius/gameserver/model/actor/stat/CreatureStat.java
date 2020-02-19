@@ -368,9 +368,9 @@ public class CreatureStat
 		
 		float bonusAtk = 1;
 		
-		if (Config.L2JMOD_CHAMPION_ENABLE && _creature.isChampion())
+		if (Config.CHAMPION_ENABLE && _creature.isChampion())
 		{
-			bonusAtk = Config.L2JMOD_CHAMPION_ATK;
+			bonusAtk = Config.CHAMPION_ATK;
 		}
 		
 		double attack = _creature.getTemplate().getBaseMAtk() * bonusAtk;
@@ -478,9 +478,9 @@ public class CreatureStat
 		
 		float bonusSpdAtk = 1;
 		
-		if (Config.L2JMOD_CHAMPION_ENABLE && _creature.isChampion())
+		if (Config.CHAMPION_ENABLE && _creature.isChampion())
 		{
-			bonusSpdAtk = Config.L2JMOD_CHAMPION_SPD_ATK;
+			bonusSpdAtk = Config.CHAMPION_SPD_ATK;
 		}
 		
 		double val = calcStat(Stat.MAGIC_ATTACK_SPEED, _creature.getTemplate().getBaseMAtkSpd() * bonusSpdAtk, null, null);
@@ -644,9 +644,9 @@ public class CreatureStat
 		
 		float bonusAtk = 1;
 		
-		if (Config.L2JMOD_CHAMPION_ENABLE && _creature.isChampion())
+		if (Config.CHAMPION_ENABLE && _creature.isChampion())
 		{
-			bonusAtk = Config.L2JMOD_CHAMPION_ATK;
+			bonusAtk = Config.CHAMPION_ATK;
 		}
 		
 		return (int) calcStat(Stat.POWER_ATTACK, _creature.getTemplate().getBasePAtk() * bonusAtk, target, null);
@@ -725,9 +725,9 @@ public class CreatureStat
 		
 		float bonusAtk = 1;
 		
-		if (Config.L2JMOD_CHAMPION_ENABLE && _creature.isChampion())
+		if (Config.CHAMPION_ENABLE && _creature.isChampion())
 		{
-			bonusAtk = Config.L2JMOD_CHAMPION_SPD_ATK;
+			bonusAtk = Config.CHAMPION_SPD_ATK;
 		}
 		
 		double val = calcStat(Stat.POWER_ATTACK_SPEED, _creature.getTemplate().getBasePAtkSpd() * bonusAtk, null, null);
