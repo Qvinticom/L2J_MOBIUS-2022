@@ -38,7 +38,6 @@ import java.util.concurrent.locks.ReentrantLock;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.commons.crypt.nProtect;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
@@ -4583,11 +4582,6 @@ public class PlayerInstance extends Playable
 	 */
 	public void setClient(GameClient client)
 	{
-		if ((client == null) && (_client != null))
-		{
-			_client.stopGuardTask();
-			nProtect.getInstance().closeSession(_client);
-		}
 		_client = client;
 	}
 	

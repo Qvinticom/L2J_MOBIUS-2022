@@ -32,11 +32,9 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.commons.crypt.nProtect;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.mmocore.MMOClient;
 import org.l2jmobius.commons.mmocore.MMOConnection;
-import org.l2jmobius.commons.mmocore.NetcoreConfig;
 import org.l2jmobius.commons.mmocore.ReceivablePacket;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.LoginServerThread.SessionKey;
@@ -57,7 +55,6 @@ import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
-import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.util.EventData;
 import org.l2jmobius.gameserver.util.FloodProtectors;
@@ -93,9 +90,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	private final long _connectionStartTime;
 	private final List<Integer> _charSlotMapping = new ArrayList<>();
 	
-	// Task
-	private ScheduledFuture<?> _guardCheckTask = null;
-	
 	protected ScheduledFuture<?> _cleanupTask = null;
 	
 	private final ClientStats _stats;
@@ -103,13 +97,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	// Crypt
 	private final GameCrypt _crypt;
 	
-	// Flood protection
-	public long packetsNextSendTick = 0;
-	
-	protected boolean _closenow = true;
 	private boolean _isDetached = false;
-	
-	protected boolean _forcedToClose = false;
 	
 	private final ArrayBlockingQueue<ReceivablePacket<GameClient>> _packetQueue;
 	private final ReentrantLock _queueLock = new ReentrantLock();
@@ -123,17 +111,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		_connectionStartTime = System.currentTimeMillis();
 		_crypt = new GameCrypt();
 		_stats = new ClientStats();
-		_packetQueue = new ArrayBlockingQueue<>(NetcoreConfig.getInstance().CLIENT_PACKET_QUEUE_SIZE);
-		
-		_guardCheckTask = nProtect.getInstance().startTask(this);
-		ThreadPool.schedule(() ->
-		{
-			if (_closenow)
-			{
-				close(new LeaveWorld());
-			}
-		}, 4000);
-		
+		_packetQueue = new ArrayBlockingQueue<>(Config.CLIENT_PACKET_QUEUE_SIZE);
 	}
 	
 	public byte[] enableCrypt()
@@ -170,7 +148,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	@Override
 	public boolean decrypt(ByteBuffer buf, int size)
 	{
-		_closenow = false;
 		_crypt.decrypt(buf.array(), buf.position(), size);
 		return true;
 	}
@@ -538,22 +515,10 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	}
 	
 	@Override
-	public void onForcedDisconnection(boolean critical)
+	public void onForcedDisconnection()
 	{
-		_forcedToClose = true;
-		
 		// the force operation will allow to not save client position to prevent again criticals and stuck
 		closeNow();
-	}
-	
-	public void stopGuardTask()
-	{
-		if (_guardCheckTask != null)
-		{
-			_guardCheckTask.cancel(true);
-			_guardCheckTask = null;
-		}
-		
 	}
 	
 	@Override
@@ -585,7 +550,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	 */
 	public void close(int delay)
 	{
-		
 		close(ServerClose.STATIC_PACKET);
 		synchronized (this)
 		{
@@ -595,8 +559,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 			}
 			_cleanupTask = ThreadPool.schedule(new CleanupTask(), delay); // delayed
 		}
-		stopGuardTask();
-		nProtect.getInstance().closeSession(this);
 	}
 	
 	public String getIpAddress()
@@ -703,16 +665,8 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 					
 					// prevent closing again
 					player.setClient(null);
-					
 					player.deleteMe();
-					
-					try
-					{
-						player.store(_forcedToClose);
-					}
-					catch (Exception e2)
-					{
-					}
+					player.store(true);
 				}
 				
 				setPlayer(null);
@@ -988,11 +942,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		{
 			_queueLock.unlock();
 		}
-	}
-	
-	public boolean isForcedToClose()
-	{
-		return _forcedToClose;
 	}
 	
 	public void setProtocolVersion(int version)

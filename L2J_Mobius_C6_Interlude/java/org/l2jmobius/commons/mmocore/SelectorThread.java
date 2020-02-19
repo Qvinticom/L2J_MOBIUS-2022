@@ -70,16 +70,16 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 	{
 		super.setName("SelectorThread-" + super.getId());
 		
-		HELPER_BUFFER_SIZE = sc.getHelperBufferSize();
-		HELPER_BUFFER_COUNT = sc.getHelperBufferCount();
-		MAX_SEND_PER_PASS = sc.getMaxSendPerPass();
-		MAX_READ_PER_PASS = sc.getMaxReadPerPass();
+		HELPER_BUFFER_SIZE = sc.HELPER_BUFFER_SIZE;
+		HELPER_BUFFER_COUNT = sc.HELPER_BUFFER_COUNT;
+		MAX_SEND_PER_PASS = sc.MAX_SEND_PER_PASS;
+		MAX_READ_PER_PASS = sc.MAX_READ_PER_PASS;
 		
-		SLEEP_TIME = sc.getSleepTime();
+		SLEEP_TIME = sc.SLEEP_TIME;
 		
-		DIRECT_WRITE_BUFFER = ByteBuffer.allocateDirect(sc.getWriteBufferSize()).order(BYTE_ORDER);
-		WRITE_BUFFER = ByteBuffer.wrap(new byte[sc.getWriteBufferSize()]).order(BYTE_ORDER);
-		READ_BUFFER = ByteBuffer.wrap(new byte[sc.getReadBufferSize()]).order(BYTE_ORDER);
+		DIRECT_WRITE_BUFFER = ByteBuffer.allocateDirect(sc.WRITE_BUFFER_SIZE).order(BYTE_ORDER);
+		WRITE_BUFFER = ByteBuffer.wrap(new byte[sc.WRITE_BUFFER_SIZE]).order(BYTE_ORDER);
+		READ_BUFFER = ByteBuffer.wrap(new byte[sc.READ_BUFFER_SIZE]).order(BYTE_ORDER);
 		
 		STRING_BUFFER = new NioNetStringBuffer(64 * 1024);
 		
@@ -208,16 +208,9 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 			{
 				while (!_pendingClose.isEmpty())
 				{
-					try
-					{
-						con = _pendingClose.removeFirst();
-						writeClosePacket(con);
-						closeConnectionImpl(con.getSelectionKey(), con);
-					}
-					catch (Exception e)
-					{
-						e.printStackTrace();
-					}
+					con = _pendingClose.removeFirst();
+					writeClosePacket(con);
+					closeConnectionImpl(con.getSelectionKey(), con);
 				}
 			}
 			
@@ -241,7 +234,7 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 		}
 		catch (IOException e)
 		{
-			con.getClient().onForcedDisconnection(true);
+			con.getClient().onForcedDisconnection();
 			closeConnectionImpl(key, con);
 		}
 		
@@ -288,6 +281,7 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 		{
 			return;
 		}
+		
 		ByteBuffer buf = con.getReadBuffer();
 		if (buf == null)
 		{
@@ -302,18 +296,13 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 		
 		int result = -2;
 		
-		boolean critical = true;
-		
 		try
 		{
 			result = con.read(buf);
 		}
 		catch (IOException e)
 		{
-			if (!con.isConnected() || !con.isChannelConnected())
-			{
-				critical = false;
-			}
+			// error handling goes bellow
 		}
 		
 		if (result > 0)
@@ -360,7 +349,7 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 				}
 				case -2:
 				{
-					con.getClient().onForcedDisconnection(critical);
+					con.getClient().onForcedDisconnection();
 					closeConnectionImpl(key, con);
 					break;
 				}
@@ -379,7 +368,7 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 			}
 			case 1:
 			{
-				// we don`t have enough data for header so we need to read
+				// we don't have enough data for header so we need to read
 				key.interestOps(key.interestOps() | SelectionKey.OP_READ);
 				
 				// did we use the READ_BUFFER ?
@@ -403,17 +392,14 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 				// do we got enough bytes for the packet?
 				if (dataPending <= buf.remaining())
 				{
-					boolean read = true;
 					// avoid parsing dummy packets (packets without body)
 					if (dataPending > 0)
 					{
 						final int pos = buf.position();
-						if (!parseClientPacket(pos, buf, dataPending, client))
-						{
-							read = false;
-						}
+						parseClientPacket(pos, buf, dataPending, client);
 						buf.position(pos + dataPending);
 					}
+					
 					// if we are done with this buffer
 					if (!buf.hasRemaining())
 					{
@@ -426,17 +412,17 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 						{
 							READ_BUFFER.clear();
 						}
-						read = false;
+						return false;
 					}
-					return read;
+					return true;
 				}
-				// we don`t have enough bytes for the dataPacket so we need
-				// to read
+				// we don't have enough bytes for the dataPacket so we need to read
 				key.interestOps(key.interestOps() | SelectionKey.OP_READ);
+				
 				// did we use the READ_BUFFER ?
 				if (buf == READ_BUFFER)
 				{
-					// move it`s position
+					// move it's position
 					buf.position(buf.position() - HEADER_SIZE);
 					// move the pending byte to the connections READ_BUFFER
 					allocateReadBuffer(con);
@@ -457,7 +443,7 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 		READ_BUFFER.clear();
 	}
 	
-	private final boolean parseClientPacket(int pos, ByteBuffer buf, int dataSize, T client)
+	private final void parseClientPacket(int pos, ByteBuffer buf, int dataSize, T client)
 	{
 		final boolean ret = client.decrypt(buf, dataSize);
 		
@@ -466,7 +452,6 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 			// apply limit
 			final int limit = buf.limit();
 			buf.limit(pos + dataSize);
-			
 			final ReceivablePacket<T> cp = _packetHandler.handlePacket(buf, client);
 			
 			if (cp != null)
@@ -486,8 +471,6 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 			
 			buf.limit(limit);
 		}
-		
-		return true;
 	}
 	
 	private final void writeClosePacket(MMOConnection<T> con)
@@ -566,7 +549,7 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 		}
 		else
 		{
-			con.getClient().onForcedDisconnection(true);
+			con.getClient().onForcedDisconnection();
 			closeConnectionImpl(key, con);
 		}
 	}
@@ -696,11 +679,6 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 	public void shutdown()
 	{
 		_shutdown = true;
-	}
-	
-	public boolean isShutdown()
-	{
-		return _shutdown;
 	}
 	
 	protected void closeSelectorThread()

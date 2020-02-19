@@ -31,7 +31,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseBackup;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.enums.ServerMode;
-import org.l2jmobius.commons.mmocore.NetcoreConfig;
 import org.l2jmobius.commons.mmocore.SelectorConfig;
 import org.l2jmobius.commons.mmocore.SelectorThread;
 import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
@@ -129,10 +128,10 @@ public class LoginServer
 		}
 		
 		final SelectorConfig sc = new SelectorConfig();
-		sc.setMaxReadPerPass(NetcoreConfig.getInstance().MMO_MAX_READ_PER_PASS);
-		sc.setMaxSendPerPass(NetcoreConfig.getInstance().MMO_MAX_SEND_PER_PASS);
-		sc.setSleepTime(NetcoreConfig.getInstance().MMO_SELECTOR_SLEEP_TIME);
-		sc.setHelperBufferCount(NetcoreConfig.getInstance().MMO_HELPER_BUFFER_COUNT);
+		sc.MAX_READ_PER_PASS = Config.MMO_MAX_READ_PER_PASS;
+		sc.MAX_SEND_PER_PASS = Config.MMO_MAX_SEND_PER_PASS;
+		sc.SLEEP_TIME = Config.MMO_SELECTOR_SLEEP_TIME;
+		sc.HELPER_BUFFER_COUNT = Config.MMO_HELPER_BUFFER_COUNT;
 		
 		final LoginPacketHandler lph = new LoginPacketHandler();
 		final SelectorHelper sh = new SelectorHelper();

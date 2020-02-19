@@ -24,7 +24,6 @@ import org.l2jmobius.commons.mmocore.IClientFactory;
 import org.l2jmobius.commons.mmocore.IMMOExecutor;
 import org.l2jmobius.commons.mmocore.IPacketHandler;
 import org.l2jmobius.commons.mmocore.MMOConnection;
-import org.l2jmobius.commons.mmocore.NetcoreConfig;
 import org.l2jmobius.commons.mmocore.ReceivablePacket;
 import org.l2jmobius.commons.util.Util;
 import org.l2jmobius.gameserver.network.GameClient.GameClientState;
@@ -1318,7 +1317,7 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 	
 	private void printDebug(int opcode, ByteBuffer buf, GameClientState state, GameClient client)
 	{
-		if (!NetcoreConfig.getInstance().PACKET_HANDLER_DEBUG)
+		if (!Config.PACKET_HANDLER_DEBUG)
 		{
 			return;
 		}
@@ -1333,7 +1332,7 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 	
 	private void printDebugDoubleOpcode(int opcode, int id2, ByteBuffer buf, GameClientState state, GameClient client)
 	{
-		if (!NetcoreConfig.getInstance().PACKET_HANDLER_DEBUG)
+		if (!Config.PACKET_HANDLER_DEBUG)
 		{
 			return;
 		}

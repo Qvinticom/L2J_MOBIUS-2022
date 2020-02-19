@@ -1156,6 +1156,26 @@ public class Config
 	public static long SESSION_TTL;
 	public static int MAX_LOGINSESSIONS;
 	
+	/** MMO settings */
+	public static final int MMO_SELECTOR_SLEEP_TIME = 20; // default 20
+	public static final int MMO_MAX_SEND_PER_PASS = 80; // default 80
+	public static final int MMO_MAX_READ_PER_PASS = 80; // default 80
+	public static final int MMO_HELPER_BUFFER_COUNT = 20; // default 20
+	
+	/** Client Packets Queue settings */
+	public static final int CLIENT_PACKET_QUEUE_SIZE = 14; // default MMO_MAX_READ_PER_PASS + 2
+	public static final int CLIENT_PACKET_QUEUE_MAX_BURST_SIZE = 13; // default MMO_MAX_READ_PER_PASS + 1
+	public static final int CLIENT_PACKET_QUEUE_MAX_PACKETS_PER_SECOND = 160; // default 160
+	public static final int CLIENT_PACKET_QUEUE_MEASURE_INTERVAL = 5; // default 5
+	public static final int CLIENT_PACKET_QUEUE_MAX_AVERAGE_PACKETS_PER_SECOND = 80; // default 80
+	public static final int CLIENT_PACKET_QUEUE_MAX_FLOODS_PER_MIN = 2; // default 2
+	public static final int CLIENT_PACKET_QUEUE_MAX_OVERFLOWS_PER_MIN = 1; // default 1
+	public static final int CLIENT_PACKET_QUEUE_MAX_UNDERFLOWS_PER_MIN = 1; // default 1
+	public static final int CLIENT_PACKET_QUEUE_MAX_UNKNOWN_PER_MIN = 5; // default 5
+	
+	/** Packet handler settings */
+	public static final boolean PACKET_HANDLER_DEBUG = false;
+	
 	public static void loadAccessConfig()
 	{
 		try

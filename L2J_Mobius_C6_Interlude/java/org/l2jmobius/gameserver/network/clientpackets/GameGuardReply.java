@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.commons.crypt.nProtect;
-
 /**
  * @author zabbix Lets drink to code! Unknown Packet: ca 0000: 45 00 01 00 1e 37 a2 f5 00 00 00 00 00 00 00 00 E....7..........
  */
@@ -37,12 +35,6 @@ public class GameGuardReply extends GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		// TODO: clean nProtect System
-		if (!nProtect.getInstance().checkGameGuardRepy(getClient(), _reply))
-		{
-			return;
-		}
-		
 		getClient().setGameGuardOk(true);
 	}
 }

@@ -17,7 +17,6 @@
 package org.l2jmobius.commons.mmocore;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.nio.ByteBuffer;
@@ -35,8 +34,6 @@ public class MMOConnection<T extends MMOClient<?>>
 	private final SelectorThread<T> _selectorThread;
 	
 	private final Socket _socket;
-	
-	private final InputStream _socket_is;
 	
 	private final InetAddress _address;
 	
@@ -60,16 +57,13 @@ public class MMOConnection<T extends MMOClient<?>>
 	
 	private T _client;
 	
-	public MMOConnection(SelectorThread<T> selectorThread, Socket socket, SelectionKey key) throws IOException
+	public MMOConnection(SelectorThread<T> selectorThread, Socket socket, SelectionKey key)
 	{
 		_selectorThread = selectorThread;
 		_socket = socket;
 		_address = socket.getInetAddress();
 		_readableByteChannel = socket.getChannel();
 		_writableByteChannel = socket.getChannel();
-		
-		_socket_is = socket.getInputStream();
-		
 		_port = socket.getPort();
 		_selectionKey = key;
 		
@@ -100,7 +94,7 @@ public class MMOConnection<T extends MMOClient<?>>
 			_sendQueue.addLast(sp);
 		}
 		
-		if (!_sendQueue.isEmpty() && _selectionKey.isValid())
+		if (!_sendQueue.isEmpty())
 		{
 			try
 			{
@@ -163,6 +157,7 @@ public class MMOConnection<T extends MMOClient<?>>
 			{
 				temp.put(_primaryWriteBuffer);
 				_selectorThread.recycleBuffer(_primaryWriteBuffer);
+				_primaryWriteBuffer = temp;
 			}
 			else
 			{
@@ -198,32 +193,6 @@ public class MMOConnection<T extends MMOClient<?>>
 	final ByteBuffer getReadBuffer()
 	{
 		return _readBuffer;
-	}
-	
-	public boolean isConnected()
-	{
-		return !_socket.isClosed() && _socket.isConnected();
-	}
-	
-	public boolean isChannelConnected()
-	{
-		boolean output = false;
-		
-		if (!_socket.isClosed() && (_socket.getChannel() != null) && _socket.getChannel().isConnected() && _socket.getChannel().isOpen() && !_socket.isInputShutdown())
-		{
-			try
-			{
-				if (_socket_is.available() > 0)
-				{
-					output = true;
-				}
-			}
-			catch (IOException e)
-			{
-				// not useful LOGGER
-			}
-		}
-		return output;
 	}
 	
 	public boolean isClosed()
@@ -269,16 +238,13 @@ public class MMOConnection<T extends MMOClient<?>>
 			}
 		}
 		
-		if (_selectionKey.isValid())
+		try
 		{
-			try
-			{
-				_selectionKey.interestOps(_selectionKey.interestOps() & ~SelectionKey.OP_WRITE);
-			}
-			catch (CancelledKeyException e)
-			{
-				// not useful LOGGER
-			}
+			_selectionKey.interestOps(_selectionKey.interestOps() & ~SelectionKey.OP_WRITE);
+		}
+		catch (CancelledKeyException e)
+		{
+			// ignore
 		}
 		
 		// _closePacket = sp;

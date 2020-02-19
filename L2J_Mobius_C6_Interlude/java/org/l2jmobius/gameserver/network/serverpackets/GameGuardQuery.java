@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.commons.crypt.nProtect;
-
 /**
  * @author zabbix Lets drink to code!
  */
@@ -35,6 +33,5 @@ public class GameGuardQuery extends GameServerPacket
 	public void writeImpl()
 	{
 		writeC(0xf9);
-		nProtect.getInstance().sendGameGuardQuery(this);
 	}
 }

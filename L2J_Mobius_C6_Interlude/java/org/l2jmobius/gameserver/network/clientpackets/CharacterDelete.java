@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.network.serverpackets.CharDeleteFail;
 import org.l2jmobius.gameserver.network.serverpackets.CharDeleteOk;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
@@ -75,13 +74,6 @@ public class CharacterDelete extends GameClientPacket
 		catch (Exception e)
 		{
 			LOGGER.warning("ERROR " + getType() + ": " + e);
-		}
-		
-		// Before the char selection, check shutdown status
-		if (GameServer.getSelectorThread().isShutdown())
-		{
-			getClient().closeNow();
-			return;
 		}
 		
 		final CharSelectInfo cl = new CharSelectInfo(getClient().getAccountName(), getClient().getSessionId().playOkID1, 0);

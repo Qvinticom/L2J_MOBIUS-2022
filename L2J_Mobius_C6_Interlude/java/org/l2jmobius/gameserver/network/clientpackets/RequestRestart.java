@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.model.Inventory;
 import org.l2jmobius.gameserver.model.Party;
@@ -182,13 +181,6 @@ public class RequestRestart extends GameClientPacket
 		
 		// return the client to the authed status
 		client.setState(GameClientState.AUTHED);
-		
-		// before the char selection, check shutdown status
-		if (GameServer.getSelectorThread().isShutdown())
-		{
-			getClient().closeNow();
-			return;
-		}
 		
 		// Restart true
 		sendPacket(RestartResponse.valueOf(true));

@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
 
 public class CharacterRestore extends GameClientPacket
@@ -43,13 +42,6 @@ public class CharacterRestore extends GameClientPacket
 		}
 		catch (Exception e)
 		{
-		}
-		
-		// Before the char selection, check shutdown status
-		if (GameServer.getSelectorThread().isShutdown())
-		{
-			getClient().closeNow();
-			return;
 		}
 		
 		final CharSelectInfo cl = new CharSelectInfo(getClient().getAccountName(), getClient().getSessionId().playOkID1, 0);

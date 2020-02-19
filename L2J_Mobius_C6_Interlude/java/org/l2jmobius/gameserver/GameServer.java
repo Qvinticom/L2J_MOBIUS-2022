@@ -29,10 +29,8 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.commons.crypt.nProtect;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.enums.ServerMode;
-import org.l2jmobius.commons.mmocore.NetcoreConfig;
 import org.l2jmobius.commons.mmocore.SelectorConfig;
 import org.l2jmobius.commons.mmocore.SelectorThread;
 import org.l2jmobius.commons.util.DeadlockDetector;
@@ -194,12 +192,6 @@ public class GameServer
 		HtmCache.getInstance();
 		CrestCache.getInstance();
 		ScriptEngineManager.getInstance();
-		
-		nProtect.getInstance();
-		if (nProtect.isEnabled())
-		{
-			LOGGER.info("nProtect System Enabled");
-		}
 		
 		Util.printSection("World");
 		World.getInstance();
@@ -507,10 +499,10 @@ public class GameServer
 		_loginThread.start();
 		
 		final SelectorConfig sc = new SelectorConfig();
-		sc.setMaxReadPerPass(NetcoreConfig.getInstance().MMO_MAX_READ_PER_PASS);
-		sc.setMaxSendPerPass(NetcoreConfig.getInstance().MMO_MAX_SEND_PER_PASS);
-		sc.setSleepTime(NetcoreConfig.getInstance().MMO_SELECTOR_SLEEP_TIME);
-		sc.setHelperBufferCount(NetcoreConfig.getInstance().MMO_HELPER_BUFFER_COUNT);
+		sc.MAX_READ_PER_PASS = Config.MMO_MAX_READ_PER_PASS;
+		sc.MAX_SEND_PER_PASS = Config.MMO_MAX_SEND_PER_PASS;
+		sc.SLEEP_TIME = Config.MMO_SELECTOR_SLEEP_TIME;
+		sc.HELPER_BUFFER_COUNT = Config.MMO_HELPER_BUFFER_COUNT;
 		
 		_gamePacketHandler = new GamePacketHandler();
 		

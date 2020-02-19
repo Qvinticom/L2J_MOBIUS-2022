@@ -25,8 +25,6 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.commons.crypt.nProtect;
-import org.l2jmobius.commons.crypt.nProtect.RestrictionType;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
@@ -434,11 +432,6 @@ public class FortSiege
 			// Schedule a task to prepare auto siege end
 			_siegeEndDate = Calendar.getInstance();
 			_siegeEndDate.add(Calendar.MINUTE, FortSiegeManager.getInstance().getSiegeLength());
-			nProtect.getInstance().checkRestriction(null, RestrictionType.RESTRICT_EVENT, new Object[]
-			{
-				FortSiege.class,
-				this
-			});
 			ThreadPool.schedule(new ScheduleEndSiegeTask(getFort()), 1000); // Prepare auto end task
 			
 			announceToPlayer("The siege of " + getFort().getName() + " has started!", false);

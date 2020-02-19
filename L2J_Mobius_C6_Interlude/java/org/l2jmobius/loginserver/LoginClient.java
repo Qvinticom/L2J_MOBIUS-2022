@@ -283,7 +283,7 @@ public class LoginClient extends MMOClient<MMOConnection<LoginClient>>
 	}
 	
 	@Override
-	protected void onForcedDisconnection(boolean critical)
+	protected void onForcedDisconnection()
 	{
 		// Empty
 	}

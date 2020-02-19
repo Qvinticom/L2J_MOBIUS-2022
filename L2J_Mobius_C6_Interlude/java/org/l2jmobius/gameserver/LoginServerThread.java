@@ -311,18 +311,9 @@ public class LoginServerThread extends Thread
 									sendPacket(pig);
 									wcToRemove.gameClient.setState(GameClientState.AUTHED);
 									wcToRemove.gameClient.setSessionId(wcToRemove.session);
-									// before the char selection, check shutdown status
-									if (GameServer.getSelectorThread().isShutdown())
-									{
-										wcToRemove.gameClient.getConnection().sendPacket(new AuthLoginFail(1));
-										wcToRemove.gameClient.closeNow();
-									}
-									else
-									{
-										final CharSelectInfo cl = new CharSelectInfo(wcToRemove.account, wcToRemove.gameClient.getSessionId().playOkID1);
-										wcToRemove.gameClient.getConnection().sendPacket(cl);
-										wcToRemove.gameClient.setCharSelection(cl.getCharInfo());
-									}
+									final CharSelectInfo cl = new CharSelectInfo(wcToRemove.account, wcToRemove.gameClient.getSessionId().playOkID1);
+									wcToRemove.gameClient.getConnection().sendPacket(cl);
+									wcToRemove.gameClient.setCharSelection(cl.getCharInfo());
 								}
 								else
 								{

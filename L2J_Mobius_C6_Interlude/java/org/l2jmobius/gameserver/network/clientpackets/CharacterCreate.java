@@ -22,7 +22,6 @@ import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.sql.CharNameTable;
@@ -286,13 +285,6 @@ public class CharacterCreate extends GameClientPacket
 		
 		newChar.store();
 		newChar.deleteMe(); // Release the world of this character and it's inventory
-		
-		// Before the char selection, check shutdown status
-		if (GameServer.getSelectorThread().isShutdown())
-		{
-			client.closeNow();
-			return;
-		}
 		
 		// Send char list
 		final CharSelectInfo cl = new CharSelectInfo(client.getAccountName(), client.getSessionId().playOkID1);

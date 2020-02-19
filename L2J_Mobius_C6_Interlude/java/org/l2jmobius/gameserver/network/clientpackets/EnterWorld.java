@@ -26,9 +26,6 @@ import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.commons.crypt.nProtect;
-import org.l2jmobius.commons.crypt.nProtect.RestrictionType;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.communitybbs.Manager.MailBBSManager;
 import org.l2jmobius.gameserver.datatables.SkillTable;
@@ -68,7 +65,6 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient.GameClientState;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ClientSetTime;
@@ -506,13 +502,6 @@ public class EnterWorld extends GameClientPacket
 					sendPacket(sm);
 				}
 			}
-		}
-		
-		if (!nProtect.getInstance().checkRestriction(player, RestrictionType.RESTRICT_ENTER))
-		{
-			player.setImmobilized(true);
-			player.disableAllSkills();
-			ThreadPool.schedule(new Disconnection(player), 20000);
 		}
 		
 		// Elrokian Trap like L2OFF
