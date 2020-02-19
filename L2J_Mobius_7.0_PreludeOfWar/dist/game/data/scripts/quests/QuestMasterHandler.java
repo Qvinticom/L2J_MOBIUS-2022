@@ -59,9 +59,12 @@ import quests.Q00567_BasicMissionIsleOfSouls.Q00567_BasicMissionIsleOfSouls;
 import quests.Q00568_SpecialMissionNornilsCave.Q00568_SpecialMissionNornilsCave;
 import quests.Q00569_BasicMissionSealOfShilen.Q00569_BasicMissionSealOfShilen;
 import quests.Q00574_SpecialMissionNornilsGarden.Q00574_SpecialMissionNornilsGarden;
+import quests.Q00577_BasicMissionSilentValley.Q00577_BasicMissionSilentValley;
 import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
 import quests.Q00587_MoreAggressiveOperation.Q00587_MoreAggressiveOperation;
 import quests.Q00588_HeadOnCrash.Q00588_HeadOnCrash;
+import quests.Q00589_ASecretChange.Q00589_ASecretChange;
+import quests.Q00590_ToEachTheirOwn.Q00590_ToEachTheirOwn;
 import quests.Q00600_KeyToTheRefiningProcess.Q00600_KeyToTheRefiningProcess;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
 import quests.Q00620_FourGoblets.Q00620_FourGoblets;
@@ -237,8 +240,6 @@ import quests.Q11045_TheyMustBeUpToSomething.Q11045_TheyMustBeUpToSomething;
 import quests.Q11046_PrayingForSafety.Q11046_PrayingForSafety;
 import quests.custom.Q00529_RegularBarrierMaintenance.Q00529_RegularBarrierMaintenance;
 import quests.custom.Q00560_HowToOvercomeFear.Q00560_HowToOvercomeFear;
-import quests.custom.Q00589_ASecretChange.Q00589_ASecretChange;
-import quests.custom.Q00590_ToEachTheirOwn.Q00590_ToEachTheirOwn;
 import quests.custom.Q00683_AdventOfKrofinSubspecies.Q00683_AdventOfKrofinSubspecies;
 import quests.custom.Q00684_DisturbedFields.Q00684_DisturbedFields;
 import quests.custom.Q10516_UnveiledFafurionTemple.Q10516_UnveiledFafurionTemple;
@@ -255,7 +256,6 @@ import quests.not_done.Q00571_SpecialMissionProofOfUnityFieldRaid;
 import quests.not_done.Q00572_SpecialMissionProofOfCourageFieldRaid;
 import quests.not_done.Q00573_SpecialMissionProofOfStrengthFieldRaid;
 import quests.not_done.Q00576_SpecialMissionDefeatSpezion;
-import quests.not_done.Q00577_BasicMissionSilentValley;
 import quests.not_done.Q00578_BasicMissionCemetery;
 import quests.not_done.Q00585_CantGoAgainstTheTime;
 import quests.not_done.Q00586_MutatedCreatures;
@@ -387,15 +387,15 @@ public class QuestMasterHandler
 		Q00573_SpecialMissionProofOfStrengthFieldRaid.class, // TODO: Not done.
 		Q00574_SpecialMissionNornilsGarden.class,
 		Q00576_SpecialMissionDefeatSpezion.class, // TODO: Not done.
-		Q00577_BasicMissionSilentValley.class, // TODO: Not done.
+		Q00577_BasicMissionSilentValley.class,
 		Q00578_BasicMissionCemetery.class, // TODO: Not done.
 		Q00580_BeyondTheMemories.class,
 		Q00585_CantGoAgainstTheTime.class, // TODO: Not done.
 		Q00586_MutatedCreatures.class, // TODO: Not done.
 		Q00587_MoreAggressiveOperation.class,
 		Q00588_HeadOnCrash.class,
-		Q00589_ASecretChange.class, // FIXME: Custom.
-		Q00590_ToEachTheirOwn.class, // FIXME: Custom.
+		Q00589_ASecretChange.class,
+		Q00590_ToEachTheirOwn.class,
 		Q00591_GreatAmbitions.class, // TODO: Not done.
 		Q00593_BasicMissionPaganTemple.class, // TODO: Not done.
 		Q00594_BasicMissionDimensionalRift.class, // TODO: Not done.
