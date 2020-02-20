@@ -1686,6 +1686,34 @@
 		<effectPoint>2</effectPoint>
 		<isMagic>4</isMagic>
 		<effects>
+			<effect name="TriggerSkillBySkill">
+				<skillId>30532</skillId> <!-- Inside Position -->
+				<skillLevel>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">3</value>
+				</skillLevel>
+				<castSkillId>30507</castSkillId> <!-- Left Sidestep -->
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<skillId>30532</skillId> <!-- Inside Position -->
+				<skillLevel>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">3</value>
+				</skillLevel>
+				<castSkillId>30508</castSkillId> <!-- Right Sidestep -->
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="CriticalRate">
 				<amount>
 					<value level="1">10</value>

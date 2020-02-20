@@ -182,6 +182,17 @@
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<nextAction>CAST</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>553</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32219" toLevel="1" name="Darkest Wave">
 		<!-- Knocks back the target and nearby enemies. -->
@@ -273,7 +284,6 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-372</effectPoint>
-		<reuseDelay>10000</reuseDelay>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>400</effectRange>
 		<magicLvl>1</magicLvl>
@@ -318,7 +328,6 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-372</effectPoint>
-		<reuseDelay>10000</reuseDelay>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>400</effectRange>
 		<magicLvl>1</magicLvl>
@@ -442,7 +451,6 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-372</effectPoint>
-		<reuseDelay>10000</reuseDelay>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>400</effectRange>
 		<magicLvl>1</magicLvl>
@@ -472,7 +480,6 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-686</effectPoint>
-		<reuseDelay>7000</reuseDelay>
 		<fanRange>0;0;400;160</fanRange>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
@@ -499,7 +506,6 @@
 		<coolTime>500</coolTime>
 		<magicLvl>85</magicLvl>
 		<mpConsume>80</mpConsume>
-		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -558,7 +564,6 @@
 		<isDebuff>true</isDebuff>
 		<magicLvl>100</magicLvl>
 		<mpConsume>80</mpConsume>
-		<reuseDelay>45000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>PULL</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -568,7 +573,6 @@
 		<castRange>600</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>15000</reuseDelay>
 		<isDebuff>true</isDebuff>
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
 		<attributeType>WATER</attributeType>
@@ -587,28 +591,25 @@
 	<skill id="32237" toLevel="1" name="Rampike Slow">
 		<!-- Suffering damage and low Speed after hit by Rampike's attack. -->
 		<icon>icon.skill0516</icon>
-		<operateType>A1</operateType>
-		<abnormalLvl>9</abnormalLvl>
-		<abnormalTime>20</abnormalTime>
-		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
-		<abnormalType>BLEEDING</abnormalType>
-		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-		<activateRate>50</activateRate>
-		<basicProperty>PHYSICAL</basicProperty>
-		<castRange>40</castRange>
-		<effectRange>400</effectRange>
-		<isDebuff>true</isDebuff>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-183</effectPoint>
+		<isMagic>1</isMagic>
+		<operateType>A2</operateType>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>90</activateRate>
+		<affectLimit>10-10</affectLimit>
+		<affectRange>200</affectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>100</magicLvl>
-		<mpConsume>80</mpConsume>
-		<reuseDelay>3000</reuseDelay>
+		<magicLvl>105</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>BLEED</trait>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>50000</power>
@@ -619,8 +620,8 @@
 				<ticks>5</ticks>
 			</effect>
 			<effect name="Speed">
-				<amount>-50</amount>
-				<mode>PER</mode>
+				<amount>-100</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -667,7 +668,6 @@
 		<effectPoint>-372</effectPoint>
 		<magicLvl>100</magicLvl>
 		<mpConsume>80</mpConsume>
-		<reuseDelay>7000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -689,7 +689,6 @@
 		<effectPoint>-372</effectPoint>
 		<magicLvl>100</magicLvl>
 		<mpConsume>80</mpConsume>
-		<reuseDelay>7000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -722,7 +721,6 @@
 		<effectPoint>-190</effectPoint>
 		<magicLvl>100</magicLvl>
 		<mpConsume>80</mpConsume>
-		<reuseDelay>7000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -755,7 +753,6 @@
 		<effectPoint>-372</effectPoint>
 		<magicLvl>100</magicLvl>
 		<mpConsume>80</mpConsume>
-		<reuseDelay>7000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -777,7 +774,6 @@
 		<effectPoint>-114</effectPoint>
 		<magicLvl>100</magicLvl>
 		<mpConsume>80</mpConsume>
-		<reuseDelay>7000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -799,7 +795,6 @@
 		<effectPoint>-372</effectPoint>
 		<magicLvl>100</magicLvl>
 		<mpConsume>80</mpConsume>
-		<reuseDelay>7000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -821,7 +816,6 @@
 		<effectPoint>-372</effectPoint>
 		<magicLvl>100</magicLvl>
 		<mpConsume>80</mpConsume>
-		<reuseDelay>7000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -844,7 +838,6 @@
 		<magicLvl>100</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>7000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -857,100 +850,102 @@
 	</skill>
 	<skill id="32252" toLevel="1" name="Lithra Fatal Slash">
 		<!-- Attacks enemies in the front and knocks them back with a certain probability. -->
-		<operateType>A1</operateType>
-		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<affectLimit>5-12</affectLimit>
-		<affectRange>900</affectRange>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>100</magicLvl>
-		<mpConsume>175</mpConsume>
-		<nextAction>ATTACK</nextAction>
+		<affectRange>150</affectRange>
+		<activateRate>90</activateRate>
+		<lvlBonusRate>1</lvlBonusRate>
 		<castRange>1100</castRange>
-		<effectRange>1500</effectRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<reuseDelay>7000</reuseDelay>
-		<fanRange>0;0;900;90</fanRange>
-		<targetType>ENEMY</targetType>
+		<operateType>A2</operateType>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<fanRange>0;0;200;180</fanRange>
+		<trait>KNOCKDOWN</trait>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>1000000</power>
-				<overHit>true</overHit>
-				<criticalChance>15</criticalChance>
+				<power>10000</power>
+			</effect>
+			<effect name="KnockBack">
+				<speed>700</speed>
+				<distance>50</distance>
+				<knockDown>true</knockDown>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="32253" toLevel="1" name="Lithra Blow Up">
 		<!-- Attacks nearby enemies and blows them away. -->
-		<operateType>A1</operateType>
-		<affectLimit>5-12</affectLimit>
-		<abnormalTime>1</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
-		<activateRate>60</activateRate>
-		<nextAction>ATTACK</nextAction>
-		<affectRange>600</affectRange>
-		<basicProperty>NONE</basicProperty>
-		<effectRange>600</effectRange>
-		<isDebuff>true</isDebuff>
-		<magicLvl>100</magicLvl>
-		<mpConsume>80</mpConsume>
-		<reuseDelay>45000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
-		<trait>PULL</trait>
-		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>FAN</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-		<fanRange>0;0;600;180</fanRange>
-		<castRange>600</castRange>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<activateRate>90</activateRate>
+		<lvlBonusRate>30</lvlBonusRate>
 		<hitTime>5000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-100</effectPoint>
-		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
-		<attributeType>EARTH</attributeType>
-		<attributeValue>20</attributeValue>
-		<lvlBonusRate>1</lvlBonusRate>
+		<operateType>A2</operateType>
+		<isDebuff>true</isDebuff>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>106</magicLvl>
+		<trait>KNOCKDOWN</trait>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="PhysicalAttack">
-				<power>50000</power>
-				<chance>15</chance>
+			<effect name="KnockBack">
+				<speed>400</speed>
+				<distance>50</distance>
+				<knockDown>true</knockDown>
 			</effect>
-			<effect name="PullBack">
-				<speed>600</speed>
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<SHOCK>100</SHOCK>
+				<AIRBIND>100</AIRBIND>
+				<SLEEP>100</SLEEP>
+				<KNOCKBACK>100</KNOCKBACK>
+				<CHANGEBODY>100</CHANGEBODY>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="32254" toLevel="1" name="Lithra Leash Net">
 		<!-- Attacks nearby enemies and puts them into Immobile and Action Prohibit states. -->
 		<icon>icon.skill1201</icon>
-		<operateType>A1</operateType>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>9</abnormalTime>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>100</activateRate>
 		<affectLimit>5-12</affectLimit>
-		<affectRange>150</affectRange>
-		<basicProperty>PHYSICAL</basicProperty>
-		<isDebuff>true</isDebuff>
+		<affectRange>300</affectRange>
+		<activateRate>130</activateRate>
+		<castRange>1100</castRange>
 		<hitTime>5000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<castRange>1100</castRange>
-		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>100</magicLvl>
-		<mpConsume>80</mpConsume>
-		<reuseDelay>7000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
+		<operateType>A2</operateType>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic>
+		<magicLvl>106</magicLvl>
+		<basicProperty>NONE</basicProperty>
 		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<attributeType>EARTH</attributeType>
-		<attributeValue>20</attributeValue>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>50000</power>
@@ -1013,6 +1008,7 @@
 		<!-- Lithra's trick immobilizes you and limits your action. -->
 		<icon>icon.skill1201</icon>
 		<operateType>A1</operateType>
+		<castRange>1100</castRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1030,7 +1026,6 @@
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>100</magicLvl>
 		<mpConsume>80</mpConsume>
-		<reuseDelay>7000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>

@@ -1364,7 +1364,16 @@
 				<angle>180</angle>
 				<range>250</range>
 			</effect>
+			<effect name="TriggerSkillByMagicType">
+				<!-- Cancel Shadow Move -->
+				<magicTypes>0;1</magicTypes>
+				<skillId>14839</skillId> <!-- Cancel Hide -->
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+			</effect>
 			<effect name="TriggerSkillByAttack">
+				<!-- Cancel Shadow Move -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
@@ -1374,9 +1383,22 @@
 				<allowNormalAttack>true</allowNormalAttack>
 				<allowSkillAttack>true</allowSkillAttack>
 				<isCritical>true</isCritical>
-				<allowWeapons>DAGGER,DUALDAGGER</allowWeapons>
 				<skillId>14839</skillId> <!-- Cancel Hide -->
 				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Cancel Shadow Move -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<allowNormalAttack>true</allowNormalAttack>
+				<allowSkillAttack>true</allowSkillAttack>
+				<skillId>14839</skillId> <!-- Cancel Hide -->
+				<skillLevel>1</skillLevel>
+				<isCritical>false</isCritical>
 			</effect>
 		</effects>
 	</skill>
@@ -1420,6 +1442,7 @@
 		</abnormalTime>
 		<abnormalType>SUPER_AVOID</abnormalType>
 		<operateType>A2</operateType>
+		<isMagic>22</isMagic>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
@@ -1665,6 +1688,7 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>AVOID_SKILL_SPECIAL</abnormalType>
 		<operateType>A2</operateType>
+		<isMagic>22</isMagic>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">91</value>
@@ -1738,6 +1762,7 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SUPER_MOVE</abnormalType>
 		<operateType>A2</operateType>
+		<isMagic>22</isMagic>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
@@ -2092,6 +2117,7 @@
 		</abnormalTime>
 		<abnormalType>MOVEMENT</abnormalType>
 		<operateType>A2</operateType>
+		<isMagic>22</isMagic>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3414,6 +3440,42 @@
 			<effect name="DispelBySlot">
 				<dispel>ROOT_PHYSICALLY,3</dispel>
 			</effect>
+			<effect name="TriggerSkillByMagicType">
+				<!-- Cancel Shadow Move -->
+				<magicTypes>0;1</magicTypes>
+				<skillId>14839</skillId> <!-- Cancel Hide -->
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Cancel Shadow Move -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<allowNormalAttack>true</allowNormalAttack>
+				<allowSkillAttack>true</allowSkillAttack>
+				<isCritical>true</isCritical>
+				<skillId>14839</skillId> <!-- Cancel Hide -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Cancel Shadow Move -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<allowNormalAttack>true</allowNormalAttack>
+				<allowSkillAttack>true</allowSkillAttack>
+				<skillId>14839</skillId> <!-- Cancel Hide -->
+				<skillLevel>1</skillLevel>
+				<isCritical>false</isCritical>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10557" toLevel="2" name="Maximize Critical">
@@ -3475,6 +3537,7 @@
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MIRAGE</abnormalType>
 		<operateType>A2</operateType>
+		<isMagic>22</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<magicLvl>85</magicLvl>
@@ -3546,6 +3609,7 @@
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>MIGHT_MORTAL</abnormalType>
 		<operateType>A2</operateType>
+		<isMagic>22</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>38</mpConsume>
@@ -3645,6 +3709,7 @@
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
 		<operateType>A2</operateType>
+		<isMagic>22</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<magicLvl>85</magicLvl>

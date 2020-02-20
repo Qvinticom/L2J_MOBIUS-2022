@@ -36,6 +36,9 @@
 			<effect name="DispelBySlot">
 				<dispel>CHANGEBODY,9</dispel>
 			</effect>
+			<effect name="BlockSkill">
+				<magicTypes>0;1;2;3;4;22</magicTypes>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="15001" toLevel="1" name="Cancel Transformation">
@@ -2171,7 +2174,7 @@
 		<effectRange>3000</effectRange>
 		<magicLvl>97</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>0</abnormalTime>
+		<abnormalTime>1</abnormalTime>
 		<trait>KNOCKDOWN</trait>
 		<affectRange>150</affectRange>
 		<affectLimit>10-10</affectLimit>

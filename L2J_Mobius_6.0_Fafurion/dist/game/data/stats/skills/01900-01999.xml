@@ -442,6 +442,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-1</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1920" toLevel="2" name="Endurance">
@@ -1322,6 +1327,15 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1956" toLevel="4" name="Sub - P. Atk./ M. Atk. Increase">
@@ -1795,6 +1809,7 @@
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
+		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="AttackTrait">
 				<HOLD>20</HOLD>
@@ -1838,6 +1853,27 @@
 				<allowWeapons>ALL</allowWeapons>
 				<skillId>1975</skillId> <!-- Dual Certification - Berserker's Rage -->
 				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Dual - Berserker's Rage -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>2</chance>
+				<targetType>SELF</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>1975</skillId> <!-- Dual Certification - Berserker's Rage -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByMagicType">
+				<!-- Dual - Berserker's Rage -->
+				<magicTypes>0;1;2;3;4;22</magicTypes>
+				<skillId>1975</skillId> <!-- Dual Certification - Berserker's Rage -->
+				<skillLevel>1</skillLevel>
+				<chance>2</chance>
+				<targetType>SELF</targetType>
 			</effect>
 		</effects>
 	</skill>
@@ -1924,7 +1960,7 @@
 				<skillId>1979</skillId> <!-- Dual Certification - Light of Protection -->
 				<skillLevel>1</skillLevel>
 				<minDamage>1</minDamage>
-				<chance>3</chance>
+				<chance>5</chance>
 				<targetType>SELF</targetType>
 			</effect>
 		</effects>
@@ -1942,7 +1978,6 @@
 		<operateType>A2</operateType>
 		<hitCancelTime>0</hitCancelTime>
 		<staticReuse>true</staticReuse>
-		<staticDelay>true</staticDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1971,7 +2006,7 @@
 				<skillId>1981</skillId> <!-- Dual - Light of Blessing -->
 				<skillLevel>1</skillLevel>
 				<minDamage>1000</minDamage>
-				<chance>20</chance>
+				<chance>5</chance>
 				<targetType>SELF</targetType>
 			</effect>
 		</effects>
@@ -1985,7 +2020,6 @@
 		<operateType>A1</operateType>
 		<hitCancelTime>0</hitCancelTime>
 		<staticReuse>true</staticReuse>
-		<staticDelay>true</staticDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2429,6 +2463,11 @@
 				<amount>-4</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-4</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>

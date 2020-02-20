@@ -2265,6 +2265,11 @@
 				<mode>PER</mode>
 				<magicType>3</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 			<effect name="Speed">
 				<amount>20</amount>
 				<mode>DIFF</mode>
@@ -2320,6 +2325,11 @@
 				<amount>-5</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 			<effect name="Speed">
 				<amount>20</amount>

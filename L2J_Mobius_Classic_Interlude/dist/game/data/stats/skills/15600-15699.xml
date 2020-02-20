@@ -1021,6 +1021,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="15651" toLevel="1" name="Prevailing Sonata (Adventurer)">
@@ -1183,11 +1188,6 @@
 				<amount>-5</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
-			</effect>
-			<effect name="Reuse">
-				<amount>-5</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
 			</effect>
 		</effects>
 	</skill>

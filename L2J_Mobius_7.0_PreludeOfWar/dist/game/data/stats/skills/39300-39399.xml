@@ -252,6 +252,57 @@
 		<!-- If stored in the inventory, increases P. Atk./ M. Atk./ P. Def./ M. Def./ Atk. Spd./ Casting Spd./ P./ M. Critical Rate/ Max HP&MP&CP by 5%, Acquired Acquired XP/ SP in Vitality state by 14%. -->
 		<icon>icon.etc_scroll_of_memory_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>14</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39346" toLevel="4" name="Red Libra Supply Items">
 		<operateType>A1</operateType>
@@ -419,7 +470,14 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39352" toLevel="1" name="Scroll: Enchant Blessed Lucien's Bracelet">
+		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39353" toLevel="1" name="Chronicle Support Box">
 		<operateType>A1</operateType>
@@ -663,9 +721,25 @@
 	<skill id="39370" toLevel="2" name="Gale Scroll">
 		<!-- A scroll to level-up as fast as the wind. Acquired XP/ SP +$s1. Remains active after death. Duration 10 min. Cooldown 9 min. -->
 		<icon>icon.scrl_of_storm</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
 		<reuseDelay>540000</reuseDelay>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<irreplacableBuff>true</irreplacableBuff>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="ExpModify">
+				<amount>200</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>200</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39371" toLevel="2" name="Raging Billow Scroll">
 		<!-- Increases Attack Attribute by $s2, all Attribute Resistance by $s3, and Acquired XP/ SP by $s4 for $s1 Buffs persist after death. -->

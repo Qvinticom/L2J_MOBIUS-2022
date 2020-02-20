@@ -28,141 +28,805 @@
 		<!-- PvP Damage + $s1 when equipping Topaz Lv. 4 or above -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>17701</item> <!-- Topaz -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27805" toLevel="3" name="Ruby Augmentation">
 		<!-- P. Atk. + $s1 when equipping Ruby Lv. 4 or above -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>18717</item> <!-- Ruby -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27806" toLevel="3" name="Sapphire Augmentation">
 		<!-- M. Atk. + $s1 when equipping Sapphire Lv. 4 or above -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>18719</item> <!-- Sapphire -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27807" toLevel="3" name="Obsidian Augmentation">
 		<!-- PvP Received Damage - $s1 when equipping Obsidian Lv. 4 or above -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>17704</item> <!-- Obsidian -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-5</value>
+				</amount>
+				<type>PK</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27808" toLevel="3" name="Opal Augmentation">
 		<!-- Atk. Attribute Bonus + $s1 when equipping Opal Lv. 4 or above -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>17705</item> <!-- Opal -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">50</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27809" toLevel="3" name="Emerald Augmentation">
 		<!-- MEN + $s1 when equipping Emerald Lv. 4 or above -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>17825</item> <!-- Emerald -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">1</value>
+				</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">1</value>
+				</amount>
+				<stat>CHA</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27810" toLevel="3" name="Aquamarine Augmentation">
 		<!-- Max MP + $s1 when equipping Aquamarine Lv. 4 or above -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>17823</item> <!-- Aquamarine -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27811" toLevel="3" name="Diamond Augmentation">
 		<!-- P. Def. + $s1 when equipping Diamond Lv. 4 or above -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>17708</item> <!-- Diamond -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">283</value>
+					<value level="2">567</value>
+					<value level="3">945</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27812" toLevel="3" name="Pearl Augmentation">
 		<!-- M. Def. + $s1 when equipping Pearl Lv. 4 or above -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>17709</item> <!-- Pearl -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">283</value>
+					<value level="2">328</value>
+					<value level="3">548</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27813" toLevel="3" name="Tanzanite Augmentation">
 		<!-- Received Damage - $s1 when equipping Tanzanite Lv. 4 or above -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>18565</item> <!-- Tanzanite -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27814" toLevel="3" name="Garnet Augmentation">
 		<!-- Max HP + $s1 when equipping Garnet Lv. 4 or above -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>18566</item> <!-- Garnet -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">5</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27815" toLevel="3" name="Vital Stone Augmentation">
 		<!-- Vitality Bonus XP + $s1 when equipping Vital Stone Lv. 4 or above -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>18568</item> <!-- Vital Stone -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="VitalityExpRate">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27816" toLevel="3" name="Red Cat's Eye Augmentation">
 		<!-- P. Skill Power + $s1 when equipping Red Cat's Eye Lv. 4 or above -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>18713</item> <!-- Red Cat's Eye -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27817" toLevel="3" name="Blue Cat's Eye Augmentation">
 		<!-- M. Skill Power + $s1 when equipping Blue Cat's Eye Lv. 4 or above -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>18714</item> <!-- Blue Cat's Eye -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27818" toLevel="3" name="Topaz Augmentation">
 		<!-- PvP Damage + $s1 -->
 		<icon>icon.etc_bm_jewel_topaz_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>17701</item> <!-- Topaz -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27819" toLevel="3" name="Ruby Augmentation">
 		<!-- P. Atk. + $s1 -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>18717</item> <!-- Ruby -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27820" toLevel="3" name="Sapphire Augmentation">
 		<!-- M. Atk. + $s1 -->
 		<icon>icon.etc_bm_jewel_sapphire_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>18719</item> <!-- Sapphire -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27821" toLevel="3" name="Obsidian Augmentation">
 		<!-- PvP Received Damage - $s1 -->
 		<icon>icon.etc_bm_jewel_obsidian_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>17704</item> <!-- Obsidian -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27822" toLevel="3" name="Opal Augmentation">
 		<!-- Atk. Attribute Bonus + $s1 -->
 		<icon>icon.etc_bm_jewel_opal_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>17705</item> <!-- Opal -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27823" toLevel="3" name="Emerald Augmentation">
 		<!-- MEN + $s1 -->
 		<icon>icon.etc_bm_jewel_emerald_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>17825</item> <!-- Emerald -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">1</value>
+				</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">1</value>
+				</amount>
+				<stat>CHA</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27824" toLevel="3" name="Aquamarine Augmentation">
 		<!-- Max MP + $s1 -->
 		<icon>icon.etc_bm_jewel_aquamarine_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>17823</item> <!-- Aquamarine -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27825" toLevel="3" name="Diamond Augmentation">
 		<!-- P. Def. + $s1 -->
 		<icon>icon.etc_bm_jewel_diamond_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>17708</item> <!-- Diamond -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">283</value>
+					<value level="2">567</value>
+					<value level="3">945</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27826" toLevel="3" name="Pearl Augmentation">
 		<!-- M. Def. + $s1 -->
 		<icon>icon.etc_bm_jewel_pearl_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>17709</item> <!-- Pearl -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">283</value>
+					<value level="2">328</value>
+					<value level="3">548</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27827" toLevel="3" name="Tanzanite Augmentation">
 		<!-- Received Damage - $s1 -->
 		<icon>icon.etc_bm_jewel_tanzanite</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>18565</item> <!-- Tanzanite -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27828" toLevel="3" name="Garnet Augmentation">
 		<!-- Max HP + $s1 -->
 		<icon>icon.etc_bm_jewel_garnet_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>18566</item> <!-- Garnet -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">5</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27829" toLevel="3" name="Vital Stone Augmentation">
 		<!-- Vitality Bonus XP + $s1 -->
 		<icon>icon.etc_bm_jewel_vital</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>18568</item> <!-- Vital Stone -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="VitalityExpRate">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27830" toLevel="3" name="Red Cat's Eye Augmentation">
 		<!-- P. Skill Power + $s1 -->
 		<icon>icon.bm_jewel_red_catseye</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>18713</item> <!-- Red Cat's Eye -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27831" toLevel="3" name="Blue Cat's Eye Augmentation">
 		<!-- M. Skill Power + $s1 -->
 		<icon>Icon.bm_jewel_blue_catseye</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkillList">
+				<skillIds>
+					<item>18714</item> <!-- Blue Cat's Eye -->
+				</skillIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27832" toLevel="3" name="La Vie en Rose's Radiant Brooch">
 		<!-- Activates 6 jewel slots when equipped. Inventory Slot + 12. -->
@@ -197,67 +861,35 @@
 				<stat>CHA</stat>
 			</effect>
 			<effect name="StatUp" fromLevel="3" toLevel="3">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">2</value>
-				</amount>
+				<amount>2</amount>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp" fromLevel="3" toLevel="3">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">2</value>
-				</amount>
+				<amount>2</amount>
 				<stat>DEX</stat>
 			</effect>
 			<effect name="StatUp" fromLevel="3" toLevel="3">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">2</value>
-				</amount>
+				<amount>2</amount>
 				<stat>CON</stat>
 			</effect>
 			<effect name="StatUp" fromLevel="3" toLevel="3">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">2</value>
-				</amount>
+				<amount>2</amount>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp" fromLevel="3" toLevel="3">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">2</value>
-				</amount>
+				<amount>2</amount>
 				<stat>WIT</stat>
 			</effect>
 			<effect name="StatUp" fromLevel="3" toLevel="3">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">2</value>
-				</amount>
+				<amount>2</amount>
 				<stat>MEN</stat>
 			</effect>
 			<effect name="StatUp" fromLevel="3" toLevel="3">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">2</value>
-				</amount>
+				<amount>2</amount>
 				<stat>LUC</stat>
 			</effect>
 			<effect name="MaxCp" fromLevel="3" toLevel="3">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">12</value>
-				</amount>
+				<amount>12</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -297,21 +929,91 @@
 		<!-- PvP Damage +$s1 -->
 		<icon>BranchIcon.Icon.etc_bm_jewel_amethyst_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27840" toLevel="3" name="Cat's Eye Augmentation">
 		<!-- Reflect $s1 of Received Damage -->
 		<icon>BranchIcon.Icon.etc_bm_jewel_catseye_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DamageShieldResist">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27841" toLevel="3" name="Amethyst Augmentation">
 		<!-- PvP Damage + $s1 when equipping Amethyst Lv. 4 or above -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27842" toLevel="3" name="Cat's Eye Augmentation">
 		<!-- Reflect $s1 of Received Damage when equipping Cat's Eye Lv. 4 or above -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DamageShieldResist">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27843" toLevel="1" name="God's Soul Treasure Chest">
 		<!-- Double-click to obtain various random items. -->
@@ -323,6 +1025,7 @@
 		<!-- It contain's Frintezza's feelings. Doubles P. Atk./M. Atk./Atk. Spd./Casting Spd. and it changes the appearance of your weapon. -->
 		<icon>BranchSys.icon.br_sevenlove_stone_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 		<hitTime>100</hitTime>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>100</effectPoint>

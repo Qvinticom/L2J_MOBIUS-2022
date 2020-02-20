@@ -428,6 +428,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="IgnoreDeath" />
 		</effects>
 	</skill>
 	<skill id="11311" toLevel="3" name="Naviarope Strike">
@@ -794,6 +795,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<trait>AGGRESSION</trait>
+		<nextAction>ATTACK</nextAction>
 		<mpConsume>
 			<value level="1">73</value>
 			<value level="2">76</value>
@@ -829,6 +831,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<trait>SHOCK</trait>
+		<nextAction>ATTACK</nextAction>
 		<mpConsume>
 			<value level="1">73</value>
 			<value level="2">76</value>
@@ -972,6 +975,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -1010,6 +1014,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -1180,6 +1185,7 @@
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<isDebuff>true</isDebuff>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="TargetMe" /> <!-- Guessed -->
 			<effect name="GetAgro" />
@@ -1215,6 +1221,7 @@
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<isDebuff>true</isDebuff>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
@@ -1343,6 +1350,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -1381,6 +1389,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -1551,6 +1560,7 @@
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<isDebuff>true</isDebuff>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="TargetMe" /> <!-- Guessed -->
 			<effect name="GetAgro" />
@@ -1586,6 +1596,7 @@
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<isDebuff>true</isDebuff>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
@@ -1714,6 +1725,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -1752,6 +1764,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>

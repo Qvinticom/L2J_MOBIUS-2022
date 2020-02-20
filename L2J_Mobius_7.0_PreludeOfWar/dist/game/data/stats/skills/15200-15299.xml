@@ -1343,25 +1343,26 @@
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<affectRange>600</affectRange>
 		<hitTime>2500</hitTime>
 		<coolTime>1000</coolTime>
 		<effectPoint>-574</effectPoint>
-		<attributeType>WIND</attributeType>
-		<attributeValue>300</attributeValue>
-		<magicLvl>99</magicLvl>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>118</magicLvl>
 		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>10000</power>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
@@ -1386,7 +1387,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>10000</power>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>-30</amount>
@@ -1404,12 +1405,12 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<coolTime>1500</coolTime>
-		<effectPoint>-574</effectPoint>
+		<coolTime>1000</coolTime>
+		<effectPoint>-100</effectPoint>
 		<attributeType>WIND</attributeType>
 		<attributeValue>300</attributeValue>
 		<fanRange>0;180;1500;600</fanRange>
-		<hitTime>2500</hitTime>
+		<hitTime>3000</hitTime>
 		<magicLvl>110</magicLvl>
 		<operateType>A2</operateType>
 		<trait>SHOCK</trait>
@@ -1418,36 +1419,42 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>10000</power>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="15274" toLevel="1" name="Mighty Wind Strike">
 		<!-- Long-range projectile -->
-		<operateType>A2</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<operateType>A1</operateType>
 		<affectRange>300</affectRange>
 		<castRange>1800</castRange>
+		<effectRange>2700</effectRange>
 		<hitTime>2500</hitTime>
 		<effectPoint>-707</effectPoint>
-		<effectRange>2500</effectRange>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>118</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<affectLimit>5-12</affectLimit>
 		<attributeType>WIND</attributeType>
-		<attributeValue>300</attributeValue>
-		<magicLvl>99</magicLvl>
+		<attributeValue>750</attributeValue>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>157</power>
+				<power>15000</power>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="15275" toLevel="1" name="Tornado">
 		<!-- Lindvior's Takeoff Presentation -->
 		<icon>icon.skill10263</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<hitTime>7000</hitTime>
 		<coolTime>2000</coolTime>
 		<effectPoint>-867</effectPoint>
@@ -1456,7 +1463,15 @@
 		<magicLvl>99</magicLvl>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>150</affectRange>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>10000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15276" toLevel="1" name="Bleed">
 		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->

@@ -1030,7 +1030,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4217" toLevel="1" name="">
+	<skill id="4217" toLevel="1" name="Mass Scatter Enemy">
 		<affectRange>300</affectRange>
 		<castRange>800</castRange>
 		<coolTime>100</coolTime>
@@ -1526,7 +1526,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4235" toLevel="1" name="">
+	<skill id="4235" toLevel="1" name="Ram">
 		<hitTime>15000</hitTime>
 		<magicLvl>70</magicLvl>
 		<operateType>A1</operateType>
@@ -1629,6 +1629,11 @@
 				<amount>200</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>200</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>

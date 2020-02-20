@@ -2147,6 +2147,11 @@
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 			<effect name="AttackAttribute">
 				<amount>
 					<value level="1">0</value>
@@ -3962,7 +3967,6 @@
 		<magicLvl>85</magicLvl>
 		<isMagic>2</isMagic>
 		<reuseDelay>3000</reuseDelay>
-		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -3982,6 +3986,38 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="TriggerSkillByMagicType">
+				<!-- Cancel Shadow Move -->
+				<magicTypes>0;1;2;3;4</magicTypes>
+				<skillId>7097</skillId> <!-- Cancel Shadow Move -->
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
+				<targetType>MY_PARTY</targetType>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Cancel Shadow Move -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>MY_PARTY</targetType>
+				<isCritical>true</isCritical>
+				<skillId>7097</skillId> <!-- Cancel Shadow Move -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Cancel Shadow Move -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>MY_PARTY</targetType>
+				<skillId>7097</skillId> <!-- Cancel Shadow Move -->
+				<skillLevel>1</skillLevel>
+				<isCritical>false</isCritical>
 			</effect>
 		</effects>
 	</skill>

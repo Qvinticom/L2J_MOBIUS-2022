@@ -125,7 +125,7 @@
 		<!-- Cannot target. -->
 		<icon>icon.notargetting</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>MA_DOWN</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<operateType>A2</operateType>
@@ -136,7 +136,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="Untargetable" />
+			<effect name="DisableTargeting" />
 		</effects>
 	</skill>
 	<skill id="15405" toLevel="1" name="Master's Blessing (Awakening)">
@@ -442,20 +442,28 @@
 	<skill id="15430" toLevel="1" name="Lindvior's Jump">
 		<!-- Ranged attack. -->
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>5</abnormalTime>
-		<affectRange>600</affectRange>
 		<hitTime>5000</hitTime>
 		<coolTime>5000</coolTime>
 		<effectPoint>-574</effectPoint>
 		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectRange>1100</affectRange>
+		<magicLvl>118</magicLvl>
+		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>10000</power>
 			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="15431" toLevel="1" name="Supersonic Blaster">

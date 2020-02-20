@@ -82,9 +82,9 @@
 			<value level="1">47178</value> <!-- Basic Supply Box -->
 			<value level="2">47179</value> <!-- Intermediate Supply Box -->
 			<value level="3">47180</value> <!-- Advanced Supply Box -->
-			<value level="4">47180</value> <!-- Advanced Supply Box --> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="5">47180</value> <!-- Advanced Supply Box --> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="6">47180</value> <!-- Advanced Supply Box --> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="4">48397</value> <!-- Mother Tree Guardians Basic Treasure Chest -->
+			<value level="5">48398</value> <!-- Mother Tree Guardians Intermediate Treasure Chest -->
+			<value level="6">48399</value> <!-- Mother Tree Guardians Advanced Treasure Chest -->
 		</itemConsumeId>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
@@ -105,9 +105,9 @@
 					<value level="1">3</value>
 					<value level="2">6</value>
 					<value level="3">9</value>
-					<value level="4">9</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="5">9</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">9</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">3</value>
+					<value level="5">6</value>
+					<value level="6">9</value>
 				</itemCount>
 			</effect>
 			<effect name="Restoration">
@@ -237,6 +237,153 @@
 					</item>
 					<item chance="1.5">
 						<item id="35336" count="1" /> <!-- Helios Caster Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35327" count="1" /> <!-- Helios Shaper Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35329" count="1" /> <!-- Helios Slasher Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35332" count="1" /> <!-- Helios Stormer Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35334" count="1" /> <!-- Helios Shooter Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35333" count="1" /> <!-- Helios Thrower Fragment -->
+					</item>
+					<item chance="27.0">
+						<item id="36524" count="1" /> <!-- Orichalcum -->
+					</item>
+					<item chance="18.5">
+						<item id="36544" count="1" /> <!-- Orichalcum Wire -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" level="4">
+				<items>
+					<item chance="18.5">
+						<item id="36523" count="1" /> <!-- Adamantite -->
+					</item>
+					<item chance="19.5">
+						<item id="36543" count="1" /> <!-- Adamantite Wire -->
+					</item>
+					<item chance="1.5">
+						<item id="35330" count="1" /> <!-- Helios Avenger Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35335" count="1" /> <!-- Helios Buster Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35336" count="1" /> <!-- Helios Caster Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35328" count="1" /> <!-- Helios Cutter Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35331" count="1" /> <!-- Helios Fighter Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35336" count="1" /> <!-- Helios Retributer Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35327" count="1" /> <!-- Helios Shaper Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35329" count="1" /> <!-- Helios Slasher Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35332" count="1" /> <!-- Helios Stormer Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35334" count="1" /> <!-- Helios Shooter Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35333" count="1" /> <!-- Helios Thrower Fragment -->
+					</item>
+					<item chance="27.0">
+						<item id="36524" count="1" /> <!-- Orichalcum -->
+					</item>
+					<item chance="18.5">
+						<item id="36544" count="1" /> <!-- Orichalcum Wire -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" level="5">
+				<items>
+					<item chance="18.5">
+						<item id="36523" count="1" /> <!-- Adamantite -->
+					</item>
+					<item chance="19.5">
+						<item id="36543" count="1" /> <!-- Adamantite Wire -->
+					</item>
+					<item chance="1.5">
+						<item id="35330" count="1" /> <!-- Helios Avenger Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35335" count="1" /> <!-- Helios Buster Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35336" count="1" /> <!-- Helios Caster Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35328" count="1" /> <!-- Helios Cutter Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35331" count="1" /> <!-- Helios Fighter Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35336" count="1" /> <!-- Helios Retributer Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35327" count="1" /> <!-- Helios Shaper Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35329" count="1" /> <!-- Helios Slasher Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35332" count="1" /> <!-- Helios Stormer Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35334" count="1" /> <!-- Helios Shooter Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35333" count="1" /> <!-- Helios Thrower Fragment -->
+					</item>
+					<item chance="27.0">
+						<item id="36524" count="1" /> <!-- Orichalcum -->
+					</item>
+					<item chance="18.5">
+						<item id="36544" count="1" /> <!-- Orichalcum Wire -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" level="6">
+				<items>
+					<item chance="18.5">
+						<item id="36523" count="1" /> <!-- Adamantite -->
+					</item>
+					<item chance="19.5">
+						<item id="36543" count="1" /> <!-- Adamantite Wire -->
+					</item>
+					<item chance="1.5">
+						<item id="35330" count="1" /> <!-- Helios Avenger Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35335" count="1" /> <!-- Helios Buster Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35336" count="1" /> <!-- Helios Caster Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35328" count="1" /> <!-- Helios Cutter Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35331" count="1" /> <!-- Helios Fighter Fragment -->
+					</item>
+					<item chance="1.5">
+						<item id="35336" count="1" /> <!-- Helios Retributer Fragment -->
 					</item>
 					<item chance="1.5">
 						<item id="35327" count="1" /> <!-- Helios Shaper Fragment -->
@@ -1457,9 +1604,23 @@
 	</skill>
 	<skill id="18663" toLevel="4" name="Blueish Box">
 		<!-- Double click to obtain a special item. -->
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47554</itemConsumeId>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="18664" toLevel="7" name="Reward for Defeating the Giant Monsters">
 		<!-- Double click to obtain the reward for Defeating the Giant Monsters. -->
@@ -1744,6 +1905,35 @@
 		<!-- Confusion Resistance +5%, Received PvP damage -3%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i04</icon>
 		<operateType>A2</operateType>
+		<itemConsumeId>47659</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>POTION_OF_PROTECTION</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<DERANGEMENT>5</DERANGEMENT> <!-- Incorrect, there should be TraitType Bluff, but skill Bluff use TraitType DERANGEMENT -->
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18698" toLevel="1" name="Potion of Protection: Bluff">
 		<!-- Obstruction Resistance +5%, Received PvP damage -3%. Cannot be used in the Olympiad. -->
@@ -1783,5 +1973,34 @@
 		<!-- Confusion Resistance +5%, Received PvP damage -3%. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i08</icon>
 		<operateType>A2</operateType>
+		<itemConsumeId>47661</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>POTION_OF_PROTECTION</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<DERANGEMENT>5</DERANGEMENT> <!-- Incorrect, there should be TraitType Bluff, but skill Bluff use TraitType DERANGEMENT -->
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 </list>

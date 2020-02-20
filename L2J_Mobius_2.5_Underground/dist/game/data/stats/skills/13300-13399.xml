@@ -407,6 +407,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 			<effect name="StatUp">
 				<amount>3</amount>
 				<stat>STR</stat>
@@ -615,17 +620,6 @@
 			<effect name="Reuse">
 				<amount>-10</amount>
 				<mode>PER</mode>
-				<magicType>0</magicType>
-			</effect>
-			<effect name="Reuse">
-				<amount>-10</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
-			<effect name="Reuse">
-				<amount>-10</amount>
-				<mode>PER</mode>
-				<magicType>3</magicType>
 			</effect>
 			<effect name="DefenceAttribute">
 				<amount>35</amount>
@@ -1437,7 +1431,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>37</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1462,7 +1456,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>111</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1475,7 +1469,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>37</amount>
 				<mode>DIFF</mode>
 			</effect>

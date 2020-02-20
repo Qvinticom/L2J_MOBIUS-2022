@@ -659,6 +659,7 @@
 		<castRange>300</castRange>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PullBack">
 				<speed>50</speed>

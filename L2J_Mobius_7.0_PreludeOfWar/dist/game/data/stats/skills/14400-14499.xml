@@ -1025,6 +1025,7 @@
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
+		<trait>PULL</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1469,6 +1470,7 @@
 		<abnormalTime>1</abnormalTime>
 		<affectRange>1200</affectRange>
 		<fanRange>0;0;200;0</fanRange>
+		<trait>PULL</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>RING_RANGE</affectScope>
@@ -1534,6 +1536,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<affectRange>300</affectRange>
+		<trait>PULL</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>

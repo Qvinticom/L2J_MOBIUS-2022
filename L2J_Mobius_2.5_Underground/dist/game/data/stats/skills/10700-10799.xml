@@ -1112,22 +1112,8 @@
 			<value level="11">-722</value>
 		</effectPoint>
 		<reuseDelay>7000</reuseDelay>
-		<affectLimit>5-12</affectLimit>
-		<fanRange>
-			<value level="1">0;0;900;50</value>
-			<value level="2">0;0;700;50</value>
-			<value level="3">0;0;700;50</value>
-			<value level="4">0;0;700;50</value>
-			<value level="5">0;0;700;50</value>
-			<value level="6">0;0;700;50</value>
-			<value level="7">0;0;700;50</value>
-			<value level="8">0;0;700;50</value>
-			<value level="9">0;0;700;50</value>
-			<value level="10">0;0;700;50</value>
-			<value level="11">0;0;700;50</value>
-		</fanRange>
 		<targetType>ENEMY</targetType>
-		<affectScope>SQUARE</affectScope>
+		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -2176,39 +2162,35 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="SkillEvasion">
-				<magicType>0</magicType>
-				<amount>
-					<value level="1">80</value>
-					<value level="2">85</value>
-					<value level="3">90</value>
-					<value level="4">95</value>
-				</amount>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="PhysicalEvasion">
 				<amount>
-					<value level="1">60</value>
-					<value level="2">70</value>
-					<value level="3">80</value>
-					<value level="4">90</value>
+					<value level="1">25</value>
+					<value level="2">30</value>
+					<value level="3">35</value>
+					<value level="4">40</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicalEvasion">
+			<effect name="MagicalDefence">
 				<amount>
-					<value level="1">60</value>
-					<value level="2">70</value>
-					<value level="3">80</value>
-					<value level="4">90</value>
+					<value level="1">70</value>
+					<value level="2">80</value>
+					<value level="3">90</value>
+					<value level="4">100</value>
 				</amount>
-				<mode>DIFF</mode>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillEvasion">
+				<amount>
+					<value level="1">35</value>
+					<value level="2">40</value>
+					<value level="3">45</value>
+					<value level="4">50</value>
+				</amount>
+				<magicType>0</magicType>
 			</effect>
 			<effect name="ResistDispelByCategory">
-				<amount>-95</amount>
+				<amount>-90</amount>
 				<slot>BUFF</slot>
 			</effect>
 			<effect name="PAtk" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
@@ -2611,6 +2593,7 @@
 		<hitTime>200</hitTime>
 		<effectPoint>2</effectPoint>
 		<reuseDelay>120000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

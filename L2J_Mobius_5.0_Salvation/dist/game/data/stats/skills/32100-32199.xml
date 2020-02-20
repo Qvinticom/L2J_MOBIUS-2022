@@ -61,14 +61,43 @@
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>900</castRange>
+		<effectRange>1500</effectRange>
 		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic>
 		<effectPoint>-100</effectPoint>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>900</affectRange>
+		<fanRange>0;0;900;90</fanRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>500000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32108" toLevel="1" name="Fast Loading Arrow">
 		<!-- Significantly increases your attack speed. -->
 		<icon>icon.skill0099</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
+		<effectPoint>2</effectPoint>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>180</abnormalTime>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32109" toLevel="1" name="Unholy Spike">
 		<!-- Casts dark magic on the enemy to inflict damage. -->
@@ -90,8 +119,21 @@
 		<icon>icon.skill32111</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
+		<effectRange>1500</effectRange>
 		<hitTime>1500</hitTime>
 		<effectPoint>-100</effectPoint>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>900</affectRange>
+		<isMagic>2</isMagic>
+		<fanRange>0;0;900;90</fanRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>500000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32112" toLevel="1" name="Life Drain">
 		<!-- Attacks the enemy with magic to deal damage and a certain portion of the damage is restored to you. -->
@@ -212,14 +254,14 @@
 	<skill id="32129" toLevel="5" name="Raid Shield">
 		<!-- Reduces Damage Received to $s1. -->
 		<icon>icon.skill0110</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="32130" toLevel="1" name="Member of the Balthus Knight">
 		<!-- Receiving HP/ MP Recovery Bonus and Speed bonus as a Member of the Balthus Knight. -->
 		<icon>icon.balthus_buff</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<effectPoint>687</effectPoint>
 	</skill>
@@ -319,7 +361,7 @@
 	<skill id="32140" toLevel="1" name="Balthus Furious Slasher">
 		<!-- For 60 seconds, P. Atk. +30% if a two-handed sword/ two-handed blunt weapon is equipped. Allows you to attack up to 5 enemies at once with standard attacks. -->
 		<icon>icon.skill10334</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>60000</reuseDelay>
@@ -338,7 +380,7 @@
 	<skill id="32142" toLevel="1" name="Balthus Angel of Death">
 		<!-- For 30 seconds, increases Deadly Attack Rate +40%, P. Skill Power +10%, P. Accuracy +8, and P. Evasion +40, and defends debuff attacks by 5 times. -->
 		<icon>icon.skill10531</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
@@ -387,7 +429,7 @@
 	<skill id="32147" toLevel="1" name="Balthus Arcana's Call">
 		<!-- Uses the power of nature to increase P. Atk./ P. Def/ M. Atk./ M. Def by 20% for 30 seconds. Also increases the Servitor's P. Atk. by 20% and P. Accuracy by 23, and Knock Back and Knock Down Rates by 60%. The Servitor becomes immune to debuff. -->
 		<icon>icon.skill11387</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
@@ -407,7 +449,7 @@
 	<skill id="32149" toLevel="1" name="Balthus Ensemble Melody">
 		<!-- Casts Horn, Drum, Organ, and Guitar Melodies all at once on the target. -->
 		<icon>icon.skill19421</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<castRange>1100</castRange>
 		<hitTime>3000</hitTime>
 		<coolTime>300</coolTime>
@@ -479,7 +521,7 @@
 	<skill id="32156" toLevel="1" name="Balthus Steel Mind">
 		<!-- With indomitable willpower, for 30 seconds increases P. Atk. by15%, P. Critical Damage +10%, P. Skill Critical Damage +10%, Speed +50, and Knock Back/ Knock Down/ Pull/ Danger Zone/ Aerial Yoke/ Aggression defense rates +90%. For standard attacks, deals additional damage as much as 5 times of P. Atk., limits HP drop to 1, and recovers HP 30% until the effect ends. -->
 		<icon>icon.skill30520</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>60000</reuseDelay>
@@ -526,7 +568,7 @@
 	<skill id="32161" toLevel="1" name="Blessed Scroll of Resurrection - Balthus Knight">
 		<!-- Resurrects as fully recovered from death. -->
 		<icon>icon.skill11826</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
@@ -696,7 +738,7 @@
 	<skill id="32181" toLevel="1" name="Balthus Emblem of Salvation">
 		<!-- Resurrects as fully recovered from death. Buffs/ debuffs are retained after death, except for Noblesse Blessing and Lucky Charm. -->
 		<icon>icon.skill11826</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<castRange>1100</castRange>
 		<hitTime>1500</hitTime>
 		<effectPoint>687</effectPoint>
@@ -745,7 +787,7 @@
 	<skill id="32187" toLevel="1" name="Tarti's Eye of the Storm">
 		<!-- Increases M. Critical Rate, P. Def. and M. Def -->
 		<icon>icon.skill30016</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>

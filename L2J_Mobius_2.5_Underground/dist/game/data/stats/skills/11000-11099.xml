@@ -289,6 +289,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 			<effect name="DefenceAttribute">
 				<amount>100</amount>
 				<attribute>WATER</attribute>
@@ -5237,6 +5242,16 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+					<value level="3">-15</value>
+					<value level="4">-20</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 			<effect name="MAtk" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
 				<amount>
 					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{0.4 + 0.6 * subIndex}</value>
@@ -5852,6 +5867,7 @@
 		<reuseDelay>300000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isMagic>1</isMagic>
 		<effects>
 			<effect name="DamageBlock">
 				<type>BLOCK_HP</type>

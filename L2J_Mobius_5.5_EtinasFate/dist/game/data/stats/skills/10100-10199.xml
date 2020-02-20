@@ -407,6 +407,11 @@
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 			<effect name="DefenceCriticalDamage">
 				<amount>-15</amount>
 				<mode>PER</mode>
@@ -474,6 +479,11 @@
 				<amount>-7</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 			<effect name="DefenceCriticalDamage">
 				<amount>-15</amount>
@@ -557,6 +567,11 @@
 				<amount>-7</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 			<effect name="MagicMpCost">
 				<amount>-15</amount>
@@ -658,6 +673,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + (0.4 * subIndex)}</value>
@@ -717,6 +737,11 @@
 				<amount>-7</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 			<effect name="DefenceCriticalDamage">
 				<amount>-15</amount>
@@ -783,6 +808,11 @@
 				<amount>-7</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 			<effect name="DefenceCriticalDamage">
 				<amount>-15</amount>
@@ -854,6 +884,11 @@
 				<amount>-7</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 			<effect name="MagicMpCost">
 				<amount>-15</amount>
@@ -953,6 +988,11 @@
 				<amount>-7</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>

@@ -609,137 +609,353 @@
 	<skill id="32665" toLevel="1" name="Krofin Strike">
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
+		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>10000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32666" toLevel="1" name="Water Spike">
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<castRange>900</castRange>
+		<effectRange>1400</effectRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-115</effectPoint>
 		<mpConsume>1</mpConsume>
-		<affectRange>300</affectRange>
+		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
-		<effectRange>400</effectRange>
-		<basicProperty>NONE</basicProperty>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<magicLvl>110</magicLvl>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>2000</power> <!-- Fix: Retail Missed -->
+				<power>20000</power>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="32667" toLevel="1" name="Water Curse Clear">
 		<!-- Attacks with a cursed weapon. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0485</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<hitTime>4000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<trait>DISARM</trait>
+		<abnormalType>DISARM</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<basicProperty>PHYSICAL</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<castRange>200</castRange>
+		<effectRange>600</effectRange>
+		<lvlBonusRate>1</lvlBonusRate>
+		<activateRate>40</activateRate>
+		<magicLvl>110</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Disarm" />
+		</effects>
 	</skill>
 	<skill id="32668" toLevel="1" name="Water Floating Body">
 		<!-- Energy of water attacks the target and immobilizes it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32644</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<operateType>A2</operateType>
+		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>AIRBIND</abnormalType>
+		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>8000</reuseDelay>
+		<castRange>200</castRange>
+		<effectRange>600</effectRange>
 		<effectPoint>-100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<activateRate>90</activateRate>
+		<magicLvl>110</magicLvl>
+		<trait>AIRBIND</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCheckCrtEffect" />
+		</conditions>
+		<effects>
+			<effect name="AirBind" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+			<effect name="BlockControl" />
+			<effect name="DefenceTrait">
+				<AIRBIND>100</AIRBIND>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32669" toLevel="1" name="Water Curse Scale">
 		<!-- Sticks water scales on the target, decreasing its Atk. Spd./ Casting Spd. by 20% and Speed by 50. -->
 		<icon>icon.skill1160</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<lvlBonusRate>30</lvlBonusRate>
 		<castRange>200</castRange>
+		<effectRange>600</effectRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<operateType>A2</operateType>
+		<magicLvl>110</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>-50</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32670" toLevel="1" name="Water Poison Scale">
 		<!-- Sticks water scales on the target, decreasing its HP over time. -->
 		<icon>icon.skill1102</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<isDebuff>true</isDebuff>
 		<castRange>200</castRange>
-		<hitTime>4000</hitTime>
+		<effectRange>600</effectRange>
+		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicLvl>110</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>POISON</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>5000</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32671" toLevel="1" name="Krofin Stun Slasher">
 		<!-- Attacks enemies in front of the character and stuns them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0100</icon>
-		<operateType>A1</operateType>
-		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<fanRange>0;0;150;180</fanRange>
+		<lvlBonusRate>30</lvlBonusRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>200</castRange>
+		<effectRange>600</effectRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<operateType>A2</operateType>
+		<magicLvl>110</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<trait>SHOCK</trait>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32672" toLevel="1" name="Krofin Stamp Square">
 		<!-- Energy of water deals great damage to the target and immobilizes it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10262</icon>
-		<operateType>A1</operateType>
-		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<activateRate>90</activateRate>
+		<lvlBonusRate>30</lvlBonusRate>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<trait>KNOCKDOWN</trait>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>10000</power>
+			</effect>
+			<effect name="KnockBack">
+				<speed>400</speed>
+				<distance>50</distance>
+				<knockDown>true</knockDown>
+			</effect>
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<SHOCK>100</SHOCK>
+				<AIRBIND>100</AIRBIND>
+				<SLEEP>100</SLEEP>
+				<KNOCKBACK>100</KNOCKBACK>
+				<CHANGEBODY>100</CHANGEBODY>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32673" toLevel="1" name="Water Savage">
 		<!-- Energy of Water increases P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. -->
 		<icon>icon.skill1914</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
+		<isMagic>1</isMagic>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>RACE_ORC1</abnormalType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32674" toLevel="1" name="Water Chain">
 		<!-- Pulls a target to you. -->
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<activateRate>90</activateRate>
+		<lvlBonusRate>30</lvlBonusRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<magicLvl>110</magicLvl>
 		<castRange>1100</castRange>
+		<effectRange>1600</effectRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>8000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<trait>PULL</trait>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PullBack">
+				<speed>600</speed>
+				<delay>600</delay>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32675" toLevel="1" name="Status Effect Resistance">
 		<!-- Becomes immune to all status effects. -->
 		<icon>icon.skill1411</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 		<effects>
+			<!-- TODO p_abnormal_rate_limit -->
 			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<DERANGEMENT>100</DERANGEMENT>
+				<SHOCK>100</SHOCK>
+				<PHYSICAL_BLOCKADE>100</PHYSICAL_BLOCKADE>
 				<KNOCKBACK>100</KNOCKBACK>
-				<KNOCKDOWN>100</KNOCKDOWN>
-				<AIRBIND>100</AIRBIND>
-				<DEPORT>100</DEPORT>
-				<CHANGEBODY>100</CHANGEBODY>
-				<PARALYZE>100</PARALYZE>
-				<TURN_STONE>100</TURN_STONE>
 				<PULL>100</PULL>
 				<DISARM>100</DISARM>
-				<PHYSICAL_BLOCKADE>100</PHYSICAL_BLOCKADE>
-				<DERANGEMENT>100</DERANGEMENT>
+				<TURN_STONE>100</TURN_STONE>
 				<SLEEP>100</SLEEP>
-				<HOLD>100</HOLD>
-				<SHOCK>100</SHOCK>
+				<BOSS>100</BOSS>
+				<AIRBIND>100</AIRBIND>
+				<DEPORT>100</DEPORT>
+				<PARALYZE>100</PARALYZE>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<ZONE>100</ZONE>
+				<PSYCHIC>100</PSYCHIC>
 			</effect>
 		</effects>
 	</skill>
@@ -750,16 +966,13 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 		<effectPoint>-100</effectPoint>
-		<basicProperty>PHYSICAL</basicProperty>
-		<effectRange>400</effectRange>
-		<magicLvl>1</magicLvl>
-		<magicCriticalRate>5</magicCriticalRate>
+		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<magicLvl>110</magicLvl>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>10000</power> <!-- Fix: Retail Missed -->
-				<overHit>true</overHit>
+				<power>10000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -845,7 +1058,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>1000000</power>
+				<power>10000</power>
 			</effect>
 			<effect name="KnockBack">
 				<distance>50</distance>
@@ -881,7 +1094,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>1000000</power>
+				<power>10000</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
 			</effect>
@@ -943,7 +1156,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>1000000</power>
+				<power>10000</power>
 				<criticalChance>15</criticalChance>
 			</effect>
 		</effects>
@@ -972,7 +1185,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>1000000</power>
+				<power>10000</power>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>
@@ -997,6 +1210,7 @@
 		<effectPoint>-1000</effectPoint>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>900</affectRange>
+		<fanRange>0,0,900,90</fanRange>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>100</magicLvl>
 		<mpConsume>175</mpConsume>
@@ -1009,7 +1223,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>1000000</power>
+				<power>10000</power>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>
@@ -1047,7 +1261,7 @@
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>1000000</power>
+				<power>10000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1081,7 +1295,7 @@
 		<attributeValue>20</attributeValue>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>1000000</power>
+				<power>10000</power>
 				<criticalChance>15</criticalChance>
 			</effect>
 			<effect name="BlockActions">
@@ -1123,7 +1337,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>1000000</power>
+				<power>10000</power>
 				<chance>15</chance>
 			</effect>
 			<effect name="PullBack">
@@ -1150,7 +1364,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>1000000</power>
+				<power>10000</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 			</effect>
 		</effects>
@@ -1181,7 +1395,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>1000000</power>
+				<power>10000</power>
 				<criticalChance>10</criticalChance>
 			</effect>
 			<effect name="Speed">
@@ -1219,7 +1433,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>1000000</power>
+				<power>10000</power>
 			</effect>
 			<effect name="KnockBack">
 				<distance>50</distance>
@@ -1257,7 +1471,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>1000000</power>
+				<power>10000</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 			</effect>
 		</effects>
@@ -1345,7 +1559,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>2000</power> <!-- Fix: Retail Missed -->
+				<power>20000</power> <!-- Fix: Retail Missed -->
 			</effect>
 		</effects>
 	</skill>

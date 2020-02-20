@@ -1880,6 +1880,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse" fromLevel="5" toLevel="7">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11125" toLevel="7" name="Superior Spirit Eye">
@@ -3113,6 +3118,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 			<effect name="TriggerSkillBySkill">
 				<castSkillId>11013</castSkillId> <!-- Elemental Spike (Water) -->
 				<skillId>11188</skillId> <!-- Freeze - Slow -->
@@ -3378,6 +3388,11 @@
 				<amount>-25</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-25</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>

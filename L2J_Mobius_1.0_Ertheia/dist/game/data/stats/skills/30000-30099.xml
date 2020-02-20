@@ -84,7 +84,7 @@
 		<castRange>80</castRange>
 		<effectRange>400</effectRange>
 		<effectPoint>-692</effectPoint>
-		<hitTime>1000</hitTime>
+		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<isMagic>1</isMagic>
 		<magicLvl>
@@ -166,6 +166,7 @@
 	<skill id="30002" toLevel="3" name="Storm Sign">
 		<!-- M. Def. - 30%, Speed - 70. -->
 		<icon>icon.skill30027</icon>
+		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -176,12 +177,12 @@
 		<abnormalVisualEffect>
 			<value level="3">STORM_SIGN1</value>
 		</abnormalVisualEffect>
-		<operateType>A2</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<activateRate>100</activateRate>
 		<isMagic>4</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Speed">
 				<amount>-70</amount>
@@ -197,8 +198,7 @@
 		<!-- Eliminates Storm Sign and attacks target with 110 Power added to M. Atk. 10% more damage if target is debuffed. Storm Sign Stage 3 only. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30003</icon>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<reuseDelay>10000</reuseDelay>
 		<mpConsume>
 			<value level="1">47</value>
 			<value level="2">51</value>
@@ -515,6 +515,7 @@
 		<!-- Eliminates Storm Sign and attacks target with 123 Power added to M. atk. and recovers 10% HP and 5% MP. Over-hit. Storm Sign Stage 3 only. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30007</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<magicLvl>
@@ -614,9 +615,9 @@
 			<value level="4">4</value>
 			<value level="5">5</value>
 		</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>WIND_BLEND</abnormalType>
 		<abnormalVisualEffect>WIND_BLEND</abnormalVisualEffect>
-		<abnormalTime>3</abnormalTime>
 		<effectPoint>687</effectPoint>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -641,7 +642,7 @@
 			<value level="4">30000</value>
 			<value level="5">20000</value>
 		</reuseDelay>
-		<isMagic>1</isMagic>
+		<isMagic>22</isMagic>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -705,7 +706,8 @@
 		<abnormalVisualEffect>DECEPTIVE_BLINK</abnormalVisualEffect>
 		<effectPoint>687</effectPoint>
 		<operateType>A2</operateType>
-		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
+		<itemConsumeCount>10</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<removedOnDamage>true</removedOnDamage>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -742,6 +744,54 @@
 			<effect name="Speed">
 				<amount>100</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="9" toLevel="10" fromSubLevel="1001" toSubLevel="1030">
+				<amount>
+					<value fromLevel="9" toLevel="10" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="9" toLevel="10" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="9" toLevel="10" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="TriggerSkillByMagicType">
+				<!-- Cancel Shadow Move -->
+				<magicTypes>0;1</magicTypes>
+				<skillId>14839</skillId> <!-- Cancel Hide -->
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Cancel Shadow Move -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<allowNormalAttack>true</allowNormalAttack>
+				<allowSkillAttack>true</allowSkillAttack>
+				<isCritical>true</isCritical>
+				<skillId>14839</skillId> <!-- Cancel Hide -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Cancel Shadow Move -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<allowNormalAttack>true</allowNormalAttack>
+				<allowSkillAttack>true</allowSkillAttack>
+				<skillId>14839</skillId> <!-- Cancel Hide -->
+				<skillLevel>1</skillLevel>
+				<isCritical>false</isCritical>
 			</effect>
 		</effects>
 	</skill>
@@ -826,7 +876,7 @@
 			<value level="14">37</value>
 			<value level="15">38</value>
 		</mpConsume>
-		<castRange>900</castRange>
+		<castRange>600</castRange>
 		<hitTime>1200</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>15000</reuseDelay>
@@ -975,11 +1025,13 @@
 	<skill id="30014" toLevel="15" name="Compelling Wind">
 		<!-- Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
 		<icon>icon.skill30014</icon>
+		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalVisualEffect>PSY_POWER</abnormalVisualEffect>
+		<basicProperty>MAGIC</basicProperty>
+		<trait>PSYCHIC</trait> <!-- retail confirmed {trait_psychic} -->
 		<effectPoint>-1371</effectPoint>
-		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">31</value>
 			<value level="2">31</value>
@@ -1017,10 +1069,10 @@
 	<skill id="30015" toLevel="1" name="Mass Compelling Wind">
 		<!-- Sends a breeze that pushes target and nearby enemies toward you. -->
 		<icon>icon.skill0028</icon>
+		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalVisualEffect>PSY_POWER</abnormalVisualEffect>
-		<operateType>A2</operateType>
 		<castRange>1100</castRange>
 		<hitTime>1200</hitTime>
 		<coolTime>500</coolTime>
@@ -1042,12 +1094,10 @@
 	<skill id="30016" toLevel="4" name="Eye of the Storm">
 		<!-- For 30 sec., M. Critical Rate + 100%, P./M. Def. + 30%. -->
 		<icon>icon.skill30016</icon>
+		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<effectPoint>687</effectPoint>
-		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
 		<mpConsume>
 			<value level="1">18</value>
 			<value level="2">37</value>
@@ -1057,7 +1107,9 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
-		<isMagic>1</isMagic>
+		<isMagic>22</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
 				<KNOCKDOWN>90</KNOCKDOWN>
@@ -1090,6 +1142,7 @@
 	<skill id="30017" toLevel="4" name="Squall">
 		<!-- For 10 min., Received P./M. Critical Damage - 15%, and Has a chance of striking target with lightning. -->
 		<icon>icon.skill30017</icon>
+		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1099,9 +1152,6 @@
 		<abnormalTime>600</abnormalTime>
 		<abnormalVisualEffect>SQUALL</abnormalVisualEffect>
 		<effectPoint>2</effectPoint>
-		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
 		<magicLvl>
 			<value level="1">40</value>
 			<value level="2">76</value>
@@ -1117,7 +1167,9 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
-		<isMagic>1</isMagic>
+		<isMagic>22</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DefenceMagicCriticalDamage">
 				<amount>
@@ -1163,19 +1215,18 @@
 	<skill id="30018" toLevel="1" name="Windy Illusion">
 		<!-- Removes all debuffs and becomes invincible against targeting for 10 sec. -->
 		<icon>icon.skill30018</icon>
+		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalVisualEffect>WIND_ILLUSION</abnormalVisualEffect>
-		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
 		<mpConsume>41</mpConsume>
-		<castRange>600</castRange>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>100</effectPoint>
 		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Untargetable" />
 			<effect name="DispelByCategory">
@@ -1204,8 +1255,6 @@
 		<abnormalTime>10</abnormalTime>
 		<effectPoint>-687</effectPoint>
 		<operateType>A2</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">87</value>
@@ -1238,6 +1287,8 @@
 		<reuseDelay>15000</reuseDelay>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1284,18 +1335,18 @@
 	<skill id="30020" toLevel="1" name="Sayha's Fury">
 		<!-- For 30 sec., Received P./M. Critical Damage - 50%, and Speed + 70. Has a chance of striking an attacker with lightning and branding them with Storm Sign Stage 4. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30020</icon>
+		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalVisualEffect>SAYHA_FURY</abnormalVisualEffect>
-		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
 		<mpConsume>40</mpConsume>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1410,11 +1461,11 @@
 		<effectRange>1600</effectRange>
 		<effectPoint>-711</effectPoint>
 		<operateType>A2</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
 		<castRange>1100</castRange>
 		<isMagic>4</isMagic>
 		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -1436,17 +1487,18 @@
 		<effectRange>1400</effectRange>
 		<effectPoint>-711</effectPoint>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
 		<castRange>1100</castRange>
 		<isMagic>4</isMagic>
 		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>300</power>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>30005</skillId> <!-- Storm Sign -->
+				<skillLevel>4</skillLevel>
 				<chance>10</chance>
 			</effect>
 		</effects>
@@ -1454,14 +1506,17 @@
 	<skill id="30029" toLevel="4" name="Divine Storm">
 		<!-- Attacks nearby target with 448 Power added to M. Atk. and locks them inside a storm for 5 sec. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
 		<icon>icon.iconskill30007</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
+		<activateRate>
+			<value fromLevel="1" toLevel="4">90</value>
+			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectLimit>10-10</affectLimit> <!-- Unconfirmed -->
 		<affectRange>200</affectRange> <!-- Unconfirmed -->
+		<effectRange>400</effectRange>
 		<effectPoint>-707</effectPoint>
-		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
 		<magicLvl>
 			<value level="1">98</value>
 			<value level="2">101</value>
@@ -1474,6 +1529,13 @@
 		<reuseDelay>30000</reuseDelay>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
+		<magicCriticalRate>
+			<value fromLevel="1" toLevel="4">6</value>
+			<value fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{base + base / 100 * subIndex}</value>
+		</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1492,15 +1554,32 @@
 				</power>
 				<debuffModifier>1.1</debuffModifier>
 			</effect>
-			<!-- TODO Lock inside storm for 5sec. -->
+			<effect name="CallSkill">
+				<skillId>30030</skillId> <!-- Storm Captivity -->
+				<skillLevel>1</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30030" toLevel="1" name="Storm Captivity">
 		<!-- Trapped by a storm that gives continuous damage. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
 		<effectPoint>-707</effectPoint>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>480</power> <!-- Unconfirmed -->
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30031" toLevel="1" name="Magic Potential">
 		<!-- Increases Max. M. Critical Rate to 550. -->
@@ -1508,6 +1587,10 @@
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
 		<effects>
+			<effect name="MagicCriticalRate">
+				<amount>550</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30040" toLevel="17" name="Eminent Blunt Weapon Mastery">
@@ -1789,11 +1872,35 @@
 			<value level="5">icon.skill10504</value>
 			<value level="6">icon.skill10504</value>
 			<value level="7">icon.skill10504</value>
+			<value level="8">icon.skill10504</value>
+			<value level="9">icon.skill10504</value>
+			<value level="10">icon.skill10504</value>
+			<value level="11">icon.skill10504</value>
+			<value level="12">icon.skill10504</value>
+			<value level="13">icon.skill10504</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp" fromLevel="4" toLevel="13">
 				<amount>4891</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">33</value>
+					<value level="2">77</value>
+					<value level="3">223</value>
+					<value level="4">692</value>
+					<value level="5">758</value>
+					<value level="6">827</value>
+					<value level="7">883</value>
+					<value level="8">897</value>
+					<value level="9">925</value>
+					<value level="10">954</value>
+					<value level="11">983</value>
+					<value level="12">1013</value>
+					<value level="13">1043</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MpRegen">
@@ -1822,6 +1929,16 @@
 				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-15</value>
+					<value level="3">-20</value>
+					<value fromLevel="4" toLevel="13">-30</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>

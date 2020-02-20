@@ -589,18 +589,186 @@
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="7.75">
+						<item id="47633" count="1" /> <!-- La Vie En Rose's Aquamarine Box -->
+					</item>
+					<item chance="4.99">
+						<item id="28362" count="1" /> <!-- La Vie En Rose's Amethyst Box -->
+					</item>
+					<item chance="7.5">
+						<item id="47631" count="1" /> <!-- La Vie En Rose's Diamond Box -->
+					</item>
+					<item chance="7.72">
+						<item id="47636" count="1" /> <!-- La Vie En Rose's Garnet Box -->
+					</item>
+					<item chance="8.02">
+						<item id="47634" count="1" /> <!-- La Vie En Rose's Pearl Box -->
+					</item>
+					<item chance="7.39">
+						<item id="47632" count="1" /> <!-- La Vie En Rose's Emerald Box -->
+					</item>
+					<item chance="7.64">
+						<item id="47635" count="1" /> <!-- La Vie En Rose's Vital Stone Box -->
+					</item>
+					<item chance="5.64">
+						<item id="47703" count="1" /> <!-- La Vie En Rose's Red Cat's Eye Box -->
+					</item>
+					<item chance="7.66">
+						<item id="47630" count="1" /> <!-- La Vie En Rose's Obsidian Box -->
+					</item>
+					<item chance="7.78">
+						<item id="47629" count="1" /> <!-- La Vie En Rose's Opal Box -->
+					</item>
+					<item chance="7.88">
+						<item id="47626" count="1" /> <!-- La Vie En Rose's Ruby Box -->
+					</item>
+					<item chance="7.73">
+						<item id="47627" count="1" /> <!-- La Vie En Rose's Sapphire Box -->
+					</item>
+					<item chance="5.14">
+						<item id="47705" count="1" /> <!-- La Vie En Rose's Blue Cat's Eye Box -->
+					</item>
+					<item chance="7.16">
+						<item id="47637" count="1" /> <!-- La Vie En Rose's Tanzanite Box -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28296" toLevel="1" name="Ultimate Lv. 4 Jewelry Box">
 		<!-- Double-click to obtain 1 of the Lv. 4 jewels. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="7.75">
+						<item id="47645" count="1" /> <!-- La Vie En Rose's Aquamarine Box -->
+					</item>
+					<item chance="4.99">
+						<item id="28363" count="1" /> <!-- La Vie En Rose's Amethyst Box -->
+					</item>
+					<item chance="7.5">
+						<item id="47643" count="1" /> <!-- La Vie En Rose's Diamond Box -->
+					</item>
+					<item chance="7.72">
+						<item id="47648" count="1" /> <!-- La Vie En Rose's Garnet Box -->
+					</item>
+					<item chance="8.02">
+						<item id="47646" count="1" /> <!-- La Vie En Rose's Pearl Box -->
+					</item>
+					<item chance="7.39">
+						<item id="47644" count="1" /> <!-- La Vie En Rose's Emerald Box -->
+					</item>
+					<item chance="7.64">
+						<item id="47647" count="1" /> <!-- La Vie En Rose's Vital Stone Box -->
+					</item>
+					<item chance="5.64">
+						<item id="47704" count="1" /> <!-- La Vie En Rose's Red Cat's Eye Box -->
+					</item>
+					<item chance="7.66">
+						<item id="47642" count="1" /> <!-- La Vie En Rose's Obsidian Box -->
+					</item>
+					<item chance="7.78">
+						<item id="47641" count="1" /> <!-- La Vie En Rose's Opal Box -->
+					</item>
+					<item chance="7.88">
+						<item id="47638" count="1" /> <!-- La Vie En Rose's Ruby Box -->
+					</item>
+					<item chance="7.73">
+						<item id="47639" count="1" /> <!-- La Vie En Rose's Sapphire Box -->
+					</item>
+					<item chance="5.14">
+						<item id="47706" count="1" /> <!-- La Vie En Rose's Blue Cat's Eye Box -->
+					</item>
+					<item chance="7.16">
+						<item id="47649" count="1" /> <!-- La Vie En Rose's Tanzanite Box -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28297" toLevel="1" name="Ultimate Lv. 5 Jewelry Box">
 		<!-- Double-click to obtain one level 5 Gem. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="7.75">
+						<item id="26506" count="1" /> <!-- Amethyst lv. 5 -->
+					</item>
+					<item chance="4.99">
+						<item id="38889" count="1" /> <!-- Aquamarine lv. 5 -->
+					</item>
+					<item chance="7.5">
+						<item id="47686" count="1" /> <!-- Blue Cat's Eye lv. 5-->
+					</item>
+					<item chance="7.72">
+						<item id="26501" count="1" /> <!-- Cat's Eye lv. 5 -->
+					</item>
+					<item chance="8.02">
+						<item id="38894" count="1" /> <!-- Diamond lv. 5 -->
+					</item>
+					<item chance="7.39">
+						<item id="38884" count="1" /> <!-- Emerald lv. 5 -->
+					</item>
+					<item chance="6.64">
+						<item id="27473" count="1" /> <!-- Garnet lv. 5 -->
+					</item>
+					<item chance="5.64">
+						<item id="38874" count="1" /> <!-- Obsidian lv. 5 -->
+					</item>
+					<item chance="6.66">
+						<item id="38879" count="1" /> <!-- Opal lv. 5 -->
+					</item>
+					<item chance="5.78">
+						<item id="38899" count="1" /> <!-- Pearl lv. 5 -->
+					</item>
+					<item chance="5.44">
+						<item id="47681" count="1" /> <!-- Red Cat's eye lv. 5 -->
+					</item>
+					<item chance="5.50">
+						<item id="38859" count="1" /> <!-- Ruby lv. 5 -->
+					</item>
+					<item chance="5.14">
+						<item id="38931" count="1" /> <!-- Sapphire lv. 5 -->
+					</item>
+					<item chance="5.16">
+						<item id="27478" count="1" /> <!-- Tanzanite lv. 5 -->
+					</item>
+					<item chance="5.44">
+						<item id="38854" count="1" /> <!-- Topaz lv. 5 -->
+					</item>
+					<item chance="5.23">
+						<item id="27472" count="1" /> <!-- Vital Stone lv. 5 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28298" toLevel="1" name="Jewel Box Lv. 3">
 		<!-- Double-click to obtain 1 of the Lv. 3 La Vie En Rose's Jewelry Boxes. -->

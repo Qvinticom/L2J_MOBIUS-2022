@@ -66,6 +66,10 @@
 			<effect name="PAtk">
 				<amount>30</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -105,6 +109,10 @@
 			<effect name="PvePhysicalAttackDamageBonus">
 				<amount>20</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
 			</effect>
 		</effects>
 	</skill>
@@ -192,6 +200,13 @@
 			<effect name="MaxHp">
 				<amount>4636</amount>
 				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
 				<armorType>
 					<item>LIGHT</item>
 				</armorType>
@@ -1957,6 +1972,10 @@
 			<effect name="PAtk">
 				<amount>30</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -2725,6 +2744,9 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="BlockSkill">
+				<magicTypes>0;1;2;3;4;22</magicTypes>
+			</effect>
 			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="6001" toSubLevel="6030">
 				<amount>
 					<value fromLevel="3" toLevel="7" fromSubLevel="6001" toSubLevel="6030">{0.6 + 0.4 * subIndex}</value>
@@ -2789,6 +2811,9 @@
 			<effect name="PhysicalDefence">
 				<amount>4500</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="BlockSkill">
+				<magicTypes>0;1;2;3;4;22</magicTypes>
 			</effect>
 			<effect name="Heal" fromLevel="1" toLevel="1" fromSubLevel="4001" toSubLevel="4030">
 				<power>
@@ -2959,7 +2984,6 @@
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>687</effectPoint>
-		<abnormalType>RHAPSODY</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>89</magicLvl>
@@ -3689,14 +3713,23 @@
 		<magicLvl>85</magicLvl>
 		<isMagic>2</isMagic>
 		<reuseDelay>3000</reuseDelay>
+		<removedOnDamage>true</removedOnDamage>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectObject>FRIEND_PC</affectObject>
 		<effects>
 			<effect name="SilentMove" />
+			<effect name="DispelBySlot">
+				<dispel>DANCE_OF_SHADOW,-1;STEALTH,-1</dispel>
+			</effect>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
 			<effect name="TriggerSkillByMagicType">
 				<!-- Cancel Shadow Move -->
-				<magicTypes>0;1;2;3;4;22</magicTypes>
+				<magicTypes>0;1;2;3;4</magicTypes>
 				<skillId>7097</skillId> <!-- Cancel Shadow Move -->
 				<skillLevel>1</skillLevel>
 				<chance>100</chance>
@@ -3711,7 +3744,6 @@
 				<chance>100</chance>
 				<targetType>MY_PARTY</targetType>
 				<isCritical>true</isCritical>
-				<allowWeapons>SWORD,BLUNT</allowWeapons>
 				<skillId>7097</skillId> <!-- Cancel Shadow Move -->
 				<skillLevel>1</skillLevel>
 			</effect>
@@ -3726,7 +3758,6 @@
 				<skillId>7097</skillId> <!-- Cancel Shadow Move -->
 				<skillLevel>1</skillLevel>
 				<isCritical>false</isCritical>
-				<allowWeapons>SWORD,BLUNT</allowWeapons>
 			</effect>
 			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
 				<amount>

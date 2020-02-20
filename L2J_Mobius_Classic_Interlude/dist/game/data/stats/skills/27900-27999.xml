@@ -3,7 +3,7 @@
 	<skill id="27900" toLevel="5" name="Empire Cloak Augmentation">
 		<!-- M. Accuracy +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicAccuracy">
 				<amount>
@@ -20,9 +20,7 @@
 	<skill id="27901" toLevel="10" name="Empire Cloak Augmentation">
 		<!-- Max HP +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<effectPoint>1</effectPoint>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
 				<amount>
@@ -44,7 +42,7 @@
 	<skill id="27902" toLevel="10" name="Empire Cloak Augmentation">
 		<!-- Max MP +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxMp">
 				<amount>
@@ -66,7 +64,7 @@
 	<skill id="27903" toLevel="10" name="Empire Cloak Augmentation">
 		<!-- Max CP +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxCp">
 				<amount>
@@ -88,7 +86,7 @@
 	<skill id="27904" toLevel="2" name="Empire Cloak Augmentation">
 		<!-- STR +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -102,7 +100,7 @@
 	<skill id="27905" toLevel="2" name="Empire Cloak Augmentation">
 		<!-- CON +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -116,7 +114,7 @@
 	<skill id="27906" toLevel="2" name="Empire Cloak Augmentation">
 		<!-- MEN +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -130,7 +128,7 @@
 	<skill id="27907" toLevel="2" name="Empire Cloak Augmentation">
 		<!-- DEX +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -144,7 +142,7 @@
 	<skill id="27908" toLevel="2" name="Empire Cloak Augmentation">
 		<!-- WIT +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -158,7 +156,7 @@
 	<skill id="27909" toLevel="2" name="Empire Cloak Augmentation">
 		<!-- LUC +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -172,7 +170,7 @@
 	<skill id="27910" toLevel="2" name="Empire Cloak Augmentation">
 		<!-- CHA +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -186,7 +184,7 @@
 	<skill id="27911" toLevel="2" name="Empire Cloak Augmentation">
 		<!-- INT +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -200,7 +198,7 @@
 	<skill id="27912" toLevel="10" name="Empire Cloak Augmentation">
 		<!-- P. Critical Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalRate">
 				<amount>
@@ -222,7 +220,7 @@
 	<skill id="27913" toLevel="10" name="Empire Cloak Augmentation">
 		<!-- P. Skill Critical Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="SkillCriticalProbability">
 				<amount>
@@ -244,7 +242,7 @@
 	<skill id="27914" toLevel="10" name="Empire Cloak Augmentation">
 		<!-- M. Critical Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicCriticalRate">
 				<amount>
@@ -266,7 +264,7 @@
 	<skill id="27915" toLevel="10" name="Empire Cloak Augmentation">
 		<!-- P. Critical Damage Boost -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalDamage">
 				<amount>
@@ -288,7 +286,7 @@
 	<skill id="27916" toLevel="10" name="Empire Cloak Augmentation">
 		<!-- P. Skill Critical Damage Boost -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="SkillCriticalDamage">
 				<amount>
@@ -310,7 +308,7 @@
 	<skill id="27917" toLevel="10" name="Empire Cloak Augmentation">
 		<!-- M. Critical Damage Boost -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicCriticalDamage">
 				<amount>
@@ -325,14 +323,14 @@
 					<value level="9">6</value>
 					<value level="10">7</value>
 				</amount>
-				<mode>DIFF</mode>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="27918" toLevel="10" name="Empire Cloak Augmentation">
 		<!-- Attack Attribute Bonus +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackAttributeAdd">
 				<amount>
@@ -347,14 +345,14 @@
 					<value level="9">18</value>
 					<value level="10">35</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="27919" toLevel="9" name="Empire Cloak Augmentation">
 		<!-- Stun Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<SHOCK>
@@ -374,7 +372,7 @@
 	<skill id="27920" toLevel="9" name="Empire Cloak Augmentation">
 		<!-- Hold Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<HOLD>
@@ -394,7 +392,7 @@
 	<skill id="27921" toLevel="9" name="Empire Cloak Augmentation">
 		<!-- Bleeding Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<BLEED>
@@ -414,7 +412,7 @@
 	<skill id="27922" toLevel="9" name="Empire Cloak Augmentation">
 		<!-- Paralysis Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<PARALYZE>
@@ -434,7 +432,7 @@
 	<skill id="27923" toLevel="9" name="Empire Cloak Augmentation">
 		<!-- Mind Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<DERANGEMENT>
@@ -454,7 +452,7 @@
 	<skill id="27924" toLevel="9" name="Empire Cloak Augmentation">
 		<!-- Sleep Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<SLEEP>
@@ -474,7 +472,7 @@
 	<skill id="27925" toLevel="9" name="Empire Cloak Augmentation">
 		<!-- Poison Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<POISON>
@@ -494,7 +492,7 @@
 	<skill id="27926" toLevel="9" name="Empire Cloak Augmentation">
 		<!-- Knock Back/Knock Down Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<KNOCKBACK>
@@ -527,7 +525,7 @@
 	<skill id="27927" toLevel="9" name="Empire Cloak Augmentation">
 		<!-- Aerial Yoke Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<AIRBIND>
@@ -547,7 +545,7 @@
 	<skill id="27928" toLevel="9" name="Empire Cloak Augmentation">
 		<!-- Pull Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<PULL>
@@ -567,7 +565,7 @@
 	<skill id="27929" toLevel="9" name="Empire Cloak Augmentation">
 		<!-- Petrification Attack Success Rate -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<TURN_STONE>
@@ -587,9 +585,7 @@
 	<skill id="27930" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- Max HP +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<effectPoint>1</effectPoint>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
 				<amount>
@@ -604,9 +600,7 @@
 	<skill id="27931" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- Max MP +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<effectPoint>1</effectPoint>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxMp">
 				<amount>
@@ -621,9 +615,7 @@
 	<skill id="27932" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- Max CP +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<effectPoint>1</effectPoint>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxCp">
 				<amount>
@@ -638,7 +630,7 @@
 	<skill id="27933" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- P. Atk. +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -653,7 +645,7 @@
 	<skill id="27934" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- P. Def. +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -668,7 +660,7 @@
 	<skill id="27935" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- Atk. Spd. +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -683,22 +675,22 @@
 	<skill id="27936" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- Speed +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="Speed">
 				<amount>
-					<value level="1">4</value>
-					<value level="2">4.5</value>
-					<value level="3">5</value>
+					<value level="1">10</value>
+					<value level="2">13</value>
+					<value level="3">15</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="27937" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- M. Atk. +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MAtk">
 				<amount>
@@ -713,7 +705,7 @@
 	<skill id="27938" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- M. Def. +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>
@@ -728,7 +720,7 @@
 	<skill id="27939" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- Casting Spd. +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalAttackSpeed">
 				<amount>
@@ -743,7 +735,7 @@
 	<skill id="27940" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- PvP Damage +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>
@@ -774,7 +766,7 @@
 	<skill id="27941" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- Received PvP Damage -$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PvpPhysicalAttackDefenceBonus">
 				<amount>
@@ -805,7 +797,7 @@
 	<skill id="27942" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- PvE Damage +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PvePhysicalAttackDamageBonus">
 				<amount>
@@ -836,7 +828,7 @@
 	<skill id="27943" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- Received PvE Damage -$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PvePhysicalAttackDefenceBonus">
 				<amount>
@@ -867,7 +859,7 @@
 	<skill id="27944" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- EXP when hunting +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="ExpModify">
 				<amount>
@@ -881,7 +873,7 @@
 	<skill id="27945" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- SP when hunting +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="SpModify">
 				<amount>
@@ -895,7 +887,7 @@
 	<skill id="27946" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- Has a chance to recover $s1 of damage as HP. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="VampiricAttack">
 				<amount>
@@ -910,12 +902,12 @@
 	<skill id="27947" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- P. Skill MP Consumption -$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicMpCost">
 				<amount>
-					<value level="1">-4</value>
-					<value level="2">-4.5</value>
+					<value level="1">-3</value>
+					<value level="2">-4</value>
 					<value level="3">-5</value>
 				</amount>
 				<mode>PER</mode>
@@ -926,12 +918,12 @@
 	<skill id="27948" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- M. Skill MP Consumption -$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicMpCost">
 				<amount>
-					<value level="1">-4</value>
-					<value level="2">-4.5</value>
+					<value level="1">-3</value>
+					<value level="2">-4</value>
 					<value level="3">-5</value>
 				</amount>
 				<mode>PER</mode>
@@ -942,7 +934,7 @@
 	<skill id="27949" toLevel="3" name="Empire Cloak Augmentation">
 		<!-- Reflect $s1 of received damage -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="DamageShield">
 				<amount>
@@ -956,7 +948,7 @@
 	<skill id="27950" toLevel="10" name="Empire Legendary Cloak Augmentation">
 		<!-- P. Atk. +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -978,7 +970,7 @@
 	<skill id="27951" toLevel="10" name="Empire Legendary Cloak Augmentation">
 		<!-- M. Atk. +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MAtk">
 				<amount>
@@ -1000,7 +992,7 @@
 	<skill id="27952" toLevel="10" name="Empire Legendary Cloak Augmentation">
 		<!-- Atk. Spd. +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -1022,7 +1014,7 @@
 	<skill id="27953" toLevel="10" name="Empire Legendary Cloak Augmentation">
 		<!-- Casting Spd. +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalAttackSpeed">
 				<amount>
@@ -1044,7 +1036,7 @@
 	<skill id="27954" toLevel="5" name="Empire Legendary Cloak Augmentation">
 		<!-- P. Accuracy +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="Accuracy">
 				<amount>
@@ -1061,7 +1053,7 @@
 	<skill id="27955" toLevel="5" name="Empire Legendary Cloak Augmentation">
 		<!-- M. Accuracy +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicAccuracy">
 				<amount>
@@ -1078,9 +1070,7 @@
 	<skill id="27956" toLevel="10" name="Empire Legendary Cloak Augmentation">
 		<!-- Max HP +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<effectPoint>1</effectPoint>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
 				<amount>
@@ -1102,7 +1092,7 @@
 	<skill id="27957" toLevel="10" name="Empire Legendary Cloak Augmentation">
 		<!-- Max MP +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxMp">
 				<amount>
@@ -1124,7 +1114,7 @@
 	<skill id="27958" toLevel="10" name="Empire Legendary Cloak Augmentation">
 		<!-- Max CP +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxCp">
 				<amount>
@@ -1146,7 +1136,7 @@
 	<skill id="27959" toLevel="2" name="Empire Legendary Cloak Augmentation">
 		<!-- STR +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -1160,7 +1150,7 @@
 	<skill id="27960" toLevel="2" name="Empire Legendary Cloak Augmentation">
 		<!-- CON +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -1174,7 +1164,7 @@
 	<skill id="27961" toLevel="2" name="Empire Legendary Cloak Augmentation">
 		<!-- MEN +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -1188,7 +1178,7 @@
 	<skill id="27962" toLevel="2" name="Empire Legendary Cloak Augmentation">
 		<!-- DEX +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -1202,7 +1192,7 @@
 	<skill id="27963" toLevel="2" name="Empire Legendary Cloak Augmentation">
 		<!-- WIT +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -1216,7 +1206,7 @@
 	<skill id="27964" toLevel="2" name="Empire Legendary Cloak Augmentation">
 		<!-- LUC +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -1230,7 +1220,7 @@
 	<skill id="27965" toLevel="2" name="Empire Legendary Cloak Augmentation">
 		<!-- CHA +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -1244,7 +1234,7 @@
 	<skill id="27966" toLevel="2" name="Empire Legendary Cloak Augmentation">
 		<!-- INT +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -1258,7 +1248,7 @@
 	<skill id="27967" toLevel="10" name="Empire Legendary Cloak Augmentation">
 		<!-- P. Critical Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalRate">
 				<amount>
@@ -1280,7 +1270,7 @@
 	<skill id="27968" toLevel="10" name="Empire Legendary Cloak Augmentation">
 		<!-- P. Skill Critical Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="SkillCriticalProbability">
 				<amount>
@@ -1302,7 +1292,7 @@
 	<skill id="27969" toLevel="10" name="Empire Legendary Cloak Augmentation">
 		<!-- M. Critical Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicCriticalRate">
 				<amount>
@@ -1324,7 +1314,7 @@
 	<skill id="27970" toLevel="10" name="Empire Legendary Cloak Augmentation">
 		<!-- P. Critical Damage Boost -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalDamage">
 				<amount>
@@ -1346,7 +1336,7 @@
 	<skill id="27971" toLevel="10" name="Empire Legendary Cloak Augmentation">
 		<!-- P. Skill Critical Damage Boost -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="SkillCriticalDamage">
 				<amount>
@@ -1368,7 +1358,7 @@
 	<skill id="27972" toLevel="10" name="Empire Legendary Cloak Augmentation">
 		<!-- M. Critical Damage Boost -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicCriticalDamage">
 				<amount>
@@ -1390,7 +1380,7 @@
 	<skill id="27973" toLevel="10" name="Empire Legendary Cloak Augmentation">
 		<!-- Attack Attribute Bonus +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackAttributeAdd">
 				<amount>
@@ -1412,7 +1402,7 @@
 	<skill id="27974" toLevel="9" name="Empire Legendary Cloak Augmentation">
 		<!-- Stun Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<SHOCK>
@@ -1432,7 +1422,7 @@
 	<skill id="27975" toLevel="9" name="Empire Legendary Cloak Augmentation">
 		<!-- Hold Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<HOLD>
@@ -1452,7 +1442,7 @@
 	<skill id="27976" toLevel="9" name="Empire Legendary Cloak Augmentation">
 		<!-- Bleeding Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<BLEED>
@@ -1472,7 +1462,7 @@
 	<skill id="27977" toLevel="9" name="Empire Legendary Cloak Augmentation">
 		<!-- Paralysis Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<PARALYZE>
@@ -1492,7 +1482,7 @@
 	<skill id="27978" toLevel="9" name="Empire Legendary Cloak Augmentation">
 		<!-- Mind Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<DERANGEMENT>
@@ -1512,7 +1502,7 @@
 	<skill id="27979" toLevel="9" name="Empire Legendary Cloak Augmentation">
 		<!-- Sleep Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<SLEEP>
@@ -1532,7 +1522,7 @@
 	<skill id="27980" toLevel="9" name="Empire Legendary Cloak Augmentation">
 		<!-- Poison Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<POISON>
@@ -1552,7 +1542,7 @@
 	<skill id="27981" toLevel="9" name="Empire Legendary Cloak Augmentation">
 		<!-- Knock Back/Knock Down Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<KNOCKBACK>
@@ -1585,7 +1575,7 @@
 	<skill id="27982" toLevel="9" name="Empire Legendary Cloak Augmentation">
 		<!-- Aerial Yoke Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<AIRBIND>
@@ -1605,7 +1595,7 @@
 	<skill id="27983" toLevel="9" name="Empire Legendary Cloak Augmentation">
 		<!-- Pull Attack Success Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<PULL>
@@ -1625,7 +1615,7 @@
 	<skill id="27984" toLevel="9" name="Empire Legendary Cloak Augmentation">
 		<!-- Petrification Attack Success Rate -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<TURN_STONE>
@@ -1645,9 +1635,7 @@
 	<skill id="27985" toLevel="3" name="Empire Legendary Cloak Augmentation">
 		<!-- Max HP +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<effectPoint>1</effectPoint>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
 				<amount>
@@ -1662,9 +1650,7 @@
 	<skill id="27986" toLevel="3" name="Empire Legendary Cloak Augmentation">
 		<!-- Max MP +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<effectPoint>1</effectPoint>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxMp">
 				<amount>
@@ -1679,9 +1665,7 @@
 	<skill id="27987" toLevel="3" name="Empire Legendary Cloak Augmentation">
 		<!-- Max CP +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<effectPoint>1</effectPoint>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxCp">
 				<amount>
@@ -1696,7 +1680,7 @@
 	<skill id="27988" toLevel="3" name="Empire Legendary Cloak Augmentation">
 		<!-- P. Atk. +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -1711,7 +1695,7 @@
 	<skill id="27989" toLevel="3" name="Empire Legendary Cloak Augmentation">
 		<!-- P. Def. +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -1726,7 +1710,7 @@
 	<skill id="27990" toLevel="3" name="Empire Legendary Cloak Augmentation">
 		<!-- Atk. Spd. +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -1741,7 +1725,7 @@
 	<skill id="27991" toLevel="3" name="Empire Legendary Cloak Augmentation">
 		<!-- Speed +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="Speed">
 				<amount>
@@ -1756,7 +1740,7 @@
 	<skill id="27992" toLevel="3" name="Empire Legendary Cloak Augmentation">
 		<!-- M. Atk. +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MAtk">
 				<amount>
@@ -1771,7 +1755,7 @@
 	<skill id="27993" toLevel="3" name="Empire Legendary Cloak Augmentation">
 		<!-- M. Def. +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>
@@ -1786,7 +1770,7 @@
 	<skill id="27994" toLevel="3" name="Empire Legendary Cloak Augmentation">
 		<!-- Casting Spd. +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalAttackSpeed">
 				<amount>
@@ -1801,7 +1785,7 @@
 	<skill id="27995" toLevel="3" name="Empire Legendary Cloak Augmentation">
 		<!-- PvP Damage +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>
@@ -1832,7 +1816,7 @@
 	<skill id="27996" toLevel="3" name="Empire Legendary Cloak Augmentation">
 		<!-- Received PvP Damage -$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PvpPhysicalAttackDefenceBonus">
 				<amount>
@@ -1863,7 +1847,7 @@
 	<skill id="27997" toLevel="3" name="Empire Legendary Cloak Augmentation">
 		<!-- PvE Damage +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PvePhysicalAttackDamageBonus">
 				<amount>
@@ -1894,7 +1878,7 @@
 	<skill id="27998" toLevel="3" name="Empire Legendary Cloak Augmentation">
 		<!-- Received PvE Damage -$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PvePhysicalAttackDefenceBonus">
 				<amount>
@@ -1925,7 +1909,7 @@
 	<skill id="27999" toLevel="3" name="Empire Legendary Cloak Augmentation">
 		<!-- EXP when hunting +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="ExpModify">
 				<amount>

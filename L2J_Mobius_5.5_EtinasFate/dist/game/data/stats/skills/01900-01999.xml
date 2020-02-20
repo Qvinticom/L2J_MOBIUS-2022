@@ -442,6 +442,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-1</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1920" toLevel="2" name="Endurance">
@@ -1322,6 +1327,15 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1956" toLevel="4" name="Sub - P. Atk./ M. Atk. Increase">
@@ -1630,7 +1644,6 @@
 			<value level="4">99</value>
 		</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
-		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="MaxMp">
 				<amount>
@@ -1654,7 +1667,6 @@
 			<value level="4">99</value>
 		</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
-		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="MaxCp">
 				<amount>
@@ -1687,7 +1699,6 @@
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
-		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="TriggerSkillByMagicType">
 				<!-- Dual - MP Drain -->
@@ -1773,7 +1784,6 @@
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
-		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="AttackTrait">
 				<SHOCK>20</SHOCK>
@@ -1844,6 +1854,27 @@
 				<skillId>1975</skillId> <!-- Dual Certification - Berserker's Rage -->
 				<skillLevel>1</skillLevel>
 			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Dual - Berserker's Rage -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>2</chance>
+				<targetType>SELF</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>1975</skillId> <!-- Dual Certification - Berserker's Rage -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByMagicType">
+				<!-- Dual - Berserker's Rage -->
+				<magicTypes>0;1;2;3;4;22</magicTypes>
+				<skillId>1975</skillId> <!-- Dual Certification - Berserker's Rage -->
+				<skillLevel>1</skillLevel>
+				<chance>2</chance>
+				<targetType>SELF</targetType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1975" toLevel="1" name="Dual Certification - Berserker's Rage">
@@ -1881,7 +1912,7 @@
 				<magicTypes>0;1;2;3;4;22</magicTypes>
 				<skillId>1977</skillId> <!-- Dual Certification - Master's Rage -->
 				<skillLevel>1</skillLevel>
-				<chance>2</chance>
+				<chance>10</chance>
 				<targetType>SELF</targetType>
 			</effect>
 		</effects>
@@ -1929,7 +1960,7 @@
 				<skillId>1979</skillId> <!-- Dual Certification - Light of Protection -->
 				<skillLevel>1</skillLevel>
 				<minDamage>1</minDamage>
-				<chance>3</chance>
+				<chance>5</chance>
 				<targetType>SELF</targetType>
 			</effect>
 		</effects>
@@ -1947,7 +1978,6 @@
 		<operateType>A2</operateType>
 		<hitCancelTime>0</hitCancelTime>
 		<staticReuse>true</staticReuse>
-		<staticDelay>true</staticDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1967,7 +1997,6 @@
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
-		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Dual - Light of Blessing -->
@@ -1977,7 +2006,7 @@
 				<skillId>1981</skillId> <!-- Dual - Light of Blessing -->
 				<skillLevel>1</skillLevel>
 				<minDamage>1000</minDamage>
-				<chance>20</chance>
+				<chance>5</chance>
 				<targetType>SELF</targetType>
 			</effect>
 		</effects>
@@ -1991,7 +2020,6 @@
 		<operateType>A1</operateType>
 		<hitCancelTime>0</hitCancelTime>
 		<staticReuse>true</staticReuse>
-		<staticDelay>true</staticDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2022,7 +2050,6 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<excludedFromCheck>true</excludedFromCheck>
 		<conditions>
 			<condition name="OpTargetPc" />
 		</conditions>
@@ -2052,7 +2079,6 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<excludedFromCheck>true</excludedFromCheck>
 		<conditions>
 			<condition name="OpTargetPc" />
 		</conditions>
@@ -2085,7 +2111,6 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND_PC</affectObject>
-		<excludedFromCheck>true</excludedFromCheck>
 		<conditions>
 			<condition name="OpTargetPc" />
 		</conditions>
@@ -2114,7 +2139,6 @@
 		<reuseDelay>600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="DamageShieldResist">
 				<amount>100</amount>
@@ -2136,7 +2160,6 @@
 			<value level="6">103</value>
 			<value level="7">105</value>
 		</magicLvl>
-		<targetType>NONE</targetType>
 		<effects>
 			<effect name="MaxHp">
 				<amount>
@@ -2417,10 +2440,35 @@
 		<!-- Vitality Bonus +10%. -->
 		<icon>icon.skill10336</icon>
 		<operateType>P</operateType>
+		<excludedFromCheck>true</excludedFromCheck>
+		<effects>
+			<effect name="VitalityExpRate">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="1999" toLevel="1" name="Dual Certification - Recovery">
 		<!-- Decreases skill cooldown by 4%. -->
 		<icon>icon.skill11226</icon>
 		<operateType>P</operateType>
+		<excludedFromCheck>true</excludedFromCheck>
+		<effects>
+			<effect name="Reuse">
+				<amount>-4</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-4</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-4</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+		</effects>
 	</skill>
 </list>

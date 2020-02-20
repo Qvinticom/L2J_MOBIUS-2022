@@ -88,7 +88,7 @@
 		<castRange>80</castRange>
 		<effectRange>400</effectRange>
 		<effectPoint>-692</effectPoint>
-		<hitTime>1000</hitTime>
+		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<isMagic>1</isMagic>
 		<magicLvl>
@@ -223,6 +223,7 @@
 		<!-- Eliminates Storm Sign and attacks target with $s1 Power added to M. Atk. $s2 more damage if target is debuffed. Storm Sign Stage $s3 only. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30003</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
 		<mpConsume>
 			<value level="1">47</value>
 			<value level="2">51</value>
@@ -355,6 +356,7 @@
 			<value fromLevel="21" toLevel="27" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>
@@ -623,6 +625,7 @@
 		<!-- Eliminates Storm Sign and attacks target with $s1 Power added to M. atk. and recovers $s2 HP and $s3 MP. Over-hit. Storm Sign Stage $s4 only. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30007</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<magicLvl>
@@ -773,7 +776,7 @@
 			<value level="4">30000</value>
 			<value level="5">20000</value>
 		</reuseDelay>
-		<isMagic>1</isMagic>
+		<isMagic>22</isMagic>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -837,7 +840,8 @@
 		<abnormalVisualEffect>DECEPTIVE_BLINK</abnormalVisualEffect>
 		<effectPoint>687</effectPoint>
 		<operateType>A2</operateType>
-		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
+		<itemConsumeCount>10</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<removedOnDamage>true</removedOnDamage>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -886,6 +890,42 @@
 					<value fromLevel="9" toLevel="10" fromSubLevel="2001" toSubLevel="2020">{0.6 + (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="TriggerSkillByMagicType">
+				<!-- Cancel Shadow Move -->
+				<magicTypes>0;1</magicTypes>
+				<skillId>14839</skillId> <!-- Cancel Hide -->
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Cancel Shadow Move -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<allowNormalAttack>true</allowNormalAttack>
+				<allowSkillAttack>true</allowSkillAttack>
+				<isCritical>true</isCritical>
+				<skillId>14839</skillId> <!-- Cancel Hide -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Cancel Shadow Move -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<allowNormalAttack>true</allowNormalAttack>
+				<allowSkillAttack>true</allowSkillAttack>
+				<skillId>14839</skillId> <!-- Cancel Hide -->
+				<skillLevel>1</skillLevel>
+				<isCritical>false</isCritical>
 			</effect>
 		</effects>
 	</skill>
@@ -1161,7 +1201,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>705</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>1200</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -1270,7 +1310,7 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>COMPELLING_WIND</abnormalType>
 		<abnormalVisualEffect>PSY_POWER</abnormalVisualEffect>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<hitTime>1200</hitTime>
 		<coolTime>500</coolTime>
 		<isMagic>1</isMagic>
@@ -1309,7 +1349,7 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
-		<isMagic>1</isMagic>
+		<isMagic>22</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1384,7 +1424,7 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
-		<isMagic>1</isMagic>
+		<isMagic>22</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1615,7 +1655,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>2</effectPoint>
-		<isMagic>1</isMagic>
+		<isMagic>22</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1766,7 +1806,7 @@
 		<effectRange>1600</effectRange>
 		<effectPoint>-711</effectPoint>
 		<operateType>A2</operateType>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<isMagic>4</isMagic>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -1792,7 +1832,7 @@
 		<effectRange>1400</effectRange>
 		<effectPoint>-711</effectPoint>
 		<operateType>A1</operateType>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<isMagic>4</isMagic>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -2253,6 +2293,16 @@
 				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-15</value>
+					<value level="3">-20</value>
+					<value fromLevel="4" toLevel="13">-30</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>

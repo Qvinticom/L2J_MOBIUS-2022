@@ -1489,6 +1489,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="339" toLevel="1" name="Parry Stance">
@@ -2074,6 +2079,11 @@
 				<amount>-20</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -2666,6 +2676,11 @@
 				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -3439,6 +3454,13 @@
 				<amount>-80</amount>
 				<slot>BUFF</slot>
 			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>INVINCIBILITY</slot>
+			</effect>
+			<effect name="ReduceCancel">
+				<amount>-80</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="396" toLevel="1" name="Heroic Berserker">
@@ -3497,9 +3519,14 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-100</amount>
-				<slot>BUFF</slot>
+				<slot>DEBUFF</slot>
 			</effect>
 		</effects>
 	</skill>

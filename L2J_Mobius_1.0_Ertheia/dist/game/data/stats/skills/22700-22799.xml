@@ -1503,6 +1503,7 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="22743" toLevel="1" name="Fantasy Mana Potion">
 		<operateType>A1</operateType>
@@ -1512,10 +1513,10 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<reuseDelay>300000</reuseDelay>
 		<effects>
-			<effect name="Mp">
-				<amount>300</amount>
-				<mode>DIFF</mode>
+			<effect name="ManaHeal">
+				<power>300</power>
 			</effect>
 		</effects>
 	</skill>

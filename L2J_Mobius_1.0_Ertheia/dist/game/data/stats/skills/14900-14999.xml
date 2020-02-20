@@ -1942,7 +1942,6 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="Reuse">
-				<magicType>0</magicType>
 				<amount>-10</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1951,19 +1950,9 @@
 				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Reuse">
-				<magicType>3</magicType>
-				<amount>-10</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="MagicMpCost">
 				<magicType>3</magicType>
 				<amount>-20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="Reuse">
-				<magicType>1</magicType>
-				<amount>-10</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicMpCost">
@@ -1971,13 +1960,8 @@
 				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Reuse">
-				<magicType>22</magicType>
-				<amount>-10</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="MagicMpCost">
-				<magicType>22</magicType>
+				<magicType>2</magicType>
 				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2538,6 +2522,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="14996" toLevel="1" name="Master's Blessing - Prevailing Sonata">
@@ -2717,6 +2706,11 @@
 				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>

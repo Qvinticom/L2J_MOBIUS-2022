@@ -169,6 +169,7 @@
 	<skill id="16919" toLevel="1" name="Highest Meteor">
 		<!-- Drops meteorites to inflict Fire damage in the vicinity of the enemies with 117 power added to magic and continuously inflicts Flame damage for 10 sec. -->
 		<operateType>A1</operateType>
+		<hitTime>5000</hitTime>
 		<isDebuff>true</isDebuff>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>

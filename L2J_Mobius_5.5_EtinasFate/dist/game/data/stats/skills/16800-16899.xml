@@ -180,6 +180,7 @@
 	</skill>
 	<skill id="16817" toLevel="1" name="Atelia Cannon">
 		<!-- Inflicts severe magical damage on the target in the specified range and decreases Attack and Magical Attach by 30%. -->
+		<icon>icon.skill1434</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
@@ -190,6 +191,7 @@
 	</skill>
 	<skill id="16818" toLevel="1" name="Overcharge Blast">
 		<!-- Inflicts severe magical damage on the target in the specified range and Paralyze effect for 5 sec. -->
+		<icon>icon.skill1170</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
@@ -743,41 +745,125 @@
 	<skill id="16867" toLevel="1" name="Joust Lunge">
 		<!-- Stab the spear forward to inflict damage on enemies in front. -->
 		<icon>icon.skill0003</icon>
-		<operateType>A1</operateType>
 		<castRange>100</castRange>
+		<effectRange>400</effectRange>
+		<affectLimit>5-12</affectLimit>
+		<magicLvl>104</magicLvl>
+		<fanRange>0;0;300;100</fanRange>
 		<hitTime>1500</hitTime>
 		<coolTime>400</coolTime>
 		<effectPoint>-100</effectPoint>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SQUARE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>100000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16868" toLevel="1" name="Horizon Bash">
 		<!-- Wields the shield horizontally to inflict damage and Bleed on enemies in front. -->
 		<icon>icon.skill10340</icon>
-		<operateType>A1</operateType>
-		<isDebuff>true</isDebuff>
 		<castRange>100</castRange>
+		<effectRange>400</effectRange>
+		<affectLimit>5-12</affectLimit>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>120</activateRate>
+		<magicLvl>104</magicLvl>
+		<fanRange>0;0;300;100</fanRange>
 		<hitTime>1500</hitTime>
 		<coolTime>400</coolTime>
 		<effectPoint>-125</effectPoint>
+		<isDebuff>true</isDebuff>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<trait>BLEED</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SQUARE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>100000</power>
+			</effect>
+			<effect name="DamOverTime">
+				<power>3700</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16869" toLevel="1" name="Horseshoe Tramping">
 		<!-- Uses the front feet of the holy beast to kick and know down enemies in front. -->
 		<icon>icon.skill16869</icon>
-		<operateType>A1</operateType>
-		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>150</affectRange>
+		<activateRate>120</activateRate>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>104</magicLvl>
 		<castRange>100</castRange>
+		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
 		<coolTime>400</coolTime>
 		<effectPoint>-100</effectPoint>
+		<operateType>A2</operateType>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<fanRange>0;0;200;180</fanRange>
+		<trait>KNOCKDOWN</trait>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>100000</power>
+			</effect>
+			<effect name="KnockBack">
+				<speed>700</speed>
+				<distance>50</distance>
+				<knockDown>true</knockDown>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16870" toLevel="1" name="Gigantic Horse Kick">
 		<!-- Uses the hind feet of the holy beast to kick away the enemies in the back. -->
 		<icon>icon.skill16870</icon>
-		<operateType>A1</operateType>
-		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>FLY_AWAY</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectRange>1500</affectRange>
+		<fanRange>0;180;1500;400</fanRange>
+		<magicLvl>104</magicLvl>
 		<castRange>300</castRange>
+		<effectRange>700</effectRange>
 		<hitTime>1500</hitTime>
 		<coolTime>400</coolTime>
 		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<operateType>A2</operateType>
+		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SQUARE_PB</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>100000</power>
+			</effect>
+			<effect name="FlyAway">
+				<radius>600</radius>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="16871" toLevel="1" name="Etina's Call">
 		<!-- Camille's underlings resurrect following Etina's call. -->

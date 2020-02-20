@@ -701,6 +701,11 @@
 			<effect name="MagicMpCost">
 				<amount>-10</amount>
 				<mode>PER</mode>
+				<magicType>2</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-10</amount>
+				<mode>PER</mode>
 				<magicType>22</magicType>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -1518,6 +1523,21 @@
 		<reuseDelay>1800000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DebuffBlock" />
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>BUFF</slot>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9369" toLevel="2" name="Power of Maphr">
 		<!-- Enchant success rate +$s1. Not for No-grade items. -->

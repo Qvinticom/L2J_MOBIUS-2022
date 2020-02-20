@@ -72,6 +72,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 			<effect name="MagicMpCost">
 				<amount>-15</amount>
 				<mode>PER</mode>
@@ -144,32 +149,148 @@
 	<skill id="19509" toLevel="1" name="Elemental Endurance">
 		<!-- For 30 min., Attribute Resistance of nearby clan members +30. -->
 		<icon>icon.skill19509</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 		<mpConsume>140</mpConsume>
+		<affectRange>1000</affectRange>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalType>ARMOR_ELEMENT_ALL</abnormalType>
+		<abnormalTime>1800</abnormalTime>
+		<mpInitialConsume>28</mpInitialConsume>
+		<isMagic>22</isMagic>
+		<magicLvl>85</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<itemConsumeCount>50</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<affectLimit>50-50</affectLimit> <!-- Custom -->
+		<affectRange>1000</affectRange> <!-- Custom -->
+		<targetType>SELF</targetType>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND_PC</affectObject>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>ARMOR_FIRE;ARMOR_WATER;ARMOR_WIND;ARMOR_EARTH;MD_UP_ATTR;DANCE_OF_AQUA_GUARD;DANCE_OF_EARTH_GUARD;SONG_OF_ELEMENTAL;SONG_OF_FLAME_GUARD;SONG_OF_STORM_GUARD;SONG_OF_WIND</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>ARMOR_FIRE;ARMOR_WATER;ARMOR_WIND;ARMOR_EARTH;MD_UP_ATTR;DANCE_OF_AQUA_GUARD;DANCE_OF_EARTH_GUARD;SONG_OF_ELEMENTAL;SONG_OF_FLAME_GUARD;SONG_OF_STORM_GUARD;SONG_OF_WIND</slot>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19510" toLevel="1" name="Debuff Endurance">
 		<!-- For 30 min., nearby clan members' Resistance to Poison/ Bleed/ Hold/ Sleep/ Mental +50%. -->
 		<icon>icon.skill19510</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 		<mpConsume>140</mpConsume>
+		<affectRange>1000</affectRange>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalType>ARMOR_HOLY</abnormalType>
+		<abnormalTime>1800</abnormalTime>
+		<mpInitialConsume>28</mpInitialConsume>
+		<isMagic>22</isMagic>
+		<magicLvl>85</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<itemConsumeCount>50</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<affectLimit>50-50</affectLimit> <!-- Custom -->
+		<affectRange>1000</affectRange> <!-- Custom -->
+		<targetType>SELF</targetType>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND_PC</affectObject>
+		<effects>
+			<effect name="DefenceTrait">
+				<BLEED>50</BLEED>
+				<POISON>50</POISON>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>DANCE_OF_ALIGNMENT;ARMOR_UNHOLY;DANCE_OF_LIGHT;SONG_OF_INVOCATION;RESIST_BLEEDING</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>DANCE_OF_ALIGNMENT;ARMOR_UNHOLY;DANCE_OF_LIGHT;SONG_OF_INVOCATION;RESIST_BLEEDING</slot>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19511" toLevel="1" name="Mental Endurance">
 		<!-- For 30 min., nearby clan members' Resistance to buff-canceling attacks/ debuff attacks +30. -->
 		<icon>icon.skill19511</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 		<mpConsume>140</mpConsume>
+		<affectRange>1000</affectRange>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalType>RESIST_DERANGEMENT</abnormalType>
+		<abnormalTime>1800</abnormalTime>
+		<mpInitialConsume>28</mpInitialConsume>
+		<isMagic>22</isMagic>
+		<magicLvl>85</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<itemConsumeCount>50</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<affectLimit>50-50</affectLimit> <!-- Custom -->
+		<affectRange>1000</affectRange> <!-- Custom -->
+		<targetType>SELF</targetType>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND_PC</affectObject>
+		<effects>
+			<effect name="DefenceTrait">
+				<HOLD>50</HOLD>
+				<DERANGEMENT>50</DERANGEMENT>
+				<SLEEP>50</SLEEP>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>DANCE_OF_PROTECTION;RESIST_DEBUFF_DISPEL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>DANCE_OF_PROTECTION;RESIST_DEBUFF_DISPEL</slot>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>30</amount>
+				<slot>BUFF</slot>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>20</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19522" toLevel="11" name="Repeat Mark Somersault">
 		<!-- Attacks the target with $s1 Power added to P. Atk., decreases P. Def/ M. Def by $s3 and Movement Speed by $s4 for $s2, and moves $s5 back. Can be cast by consuming Triad. -->
@@ -189,6 +310,7 @@
 			<value level="11">11</value>
 		</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
+		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>100</activateRate>
 		<effectRange>400</effectRange>
 		<magicLvl>
@@ -204,6 +326,19 @@
 			<value level="10">103</value>
 			<value level="11">105</value>
 		</magicLvl>
+		<mpConsume>
+			<value level="1">130</value>
+			<value level="2">132</value>
+			<value level="3">136</value>
+			<value level="4">142</value>
+			<value level="5">146</value>
+			<value level="6">150</value>
+			<value level="7">156</value>
+			<value level="8">160</value>
+			<value level="9">164</value>
+			<value level="10">168</value>
+			<value level="11">172</value>
+		</mpConsume>
 		<effectPoint>-702</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -347,6 +482,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<effects>
 			<effect name="PAtk">
 				<amount>100</amount>
@@ -1805,6 +1941,7 @@
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<reuseDelay>60000</reuseDelay>
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
@@ -2193,6 +2330,7 @@
 		<icon>icon.skill0279</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
+		<reuseDelay>10000</reuseDelay>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>

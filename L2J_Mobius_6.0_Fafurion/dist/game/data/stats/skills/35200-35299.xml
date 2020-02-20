@@ -4,6 +4,8 @@
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_mace_of_hero_i01</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 		<effects>
 			<effect name="MaxCp">
 				<amount>30</amount>
@@ -66,6 +68,11 @@
 				<amount>-5</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -136,6 +143,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="35202" toLevel="1" name="Special Ability Legend Infinity Dual Sword">
@@ -204,6 +216,11 @@
 				<amount>-5</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -274,6 +291,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="35204" toLevel="1" name="Special Ability Legend Infinity Dual Blunt Weapon">
@@ -342,6 +364,11 @@
 				<amount>-5</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -530,6 +557,19 @@
 				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">-10</value>
+					<value level="7">-10</value>
+					<value level="8">-11</value>
+					<value level="9">-12</value>
+					<value level="10">-13</value>
+					<value level="11">-15</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -788,16 +828,131 @@
 		<!-- Can equip $s1 talismans. P. Atk. +$s2. -->
 		<icon>icon.accessary_bracelet_lucien_p01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">6</value>
+					<value level="5">6</value>
+					<value level="6">6</value>
+					<value level="7">6</value>
+					<value level="8">6</value>
+					<value level="9">6</value>
+					<value level="10">6</value>
+					<value level="11">6</value>
+				</slots>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">4</value>
+					<value level="6">5</value>
+					<value level="7">6</value>
+					<value level="8">7</value>
+					<value level="9">8</value>
+					<value level="10">9</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35215" toLevel="11" name="Lucien's Bracelet - Magic">
 		<!-- Can equip $s1 talismans. M. Atk. +$s2. -->
 		<icon>icon.accessary_bracelet_lucien_m01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">6</value>
+					<value level="5">6</value>
+					<value level="6">6</value>
+					<value level="7">6</value>
+					<value level="8">6</value>
+					<value level="9">6</value>
+					<value level="10">6</value>
+					<value level="11">6</value>
+				</slots>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">4</value>
+					<value level="6">5</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35216" toLevel="11" name="Lucien's Bracelet - Defense">
 		<!-- Can equip $s1 talismans. P./ M. Def. +$s2. -->
 		<icon>icon.accessary_bracelet_lucien_d01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">6</value>
+					<value level="5">6</value>
+					<value level="6">6</value>
+					<value level="7">6</value>
+					<value level="8">6</value>
+					<value level="9">6</value>
+					<value level="10">6</value>
+					<value level="11">6</value>
+				</slots>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">4</value>
+					<value level="6">5</value>
+					<value level="7">6</value>
+					<value level="8">7</value>
+					<value level="9">8</value>
+					<value level="10">9</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">4</value>
+					<value level="6">5</value>
+					<value level="7">6</value>
+					<value level="8">7</value>
+					<value level="9">8</value>
+					<value level="10">9</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35217" toLevel="11" name="Fallen Angel's Ring">
 		<!-- Increases Knock Back/ Knock Down/ Pull/ Faint Resistance by $s1. -->
@@ -946,45 +1101,1090 @@
 		<!-- P. Atk. +$s1. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+					<value level="6">8</value>
+					<value level="7">9</value>
+					<value level="8">10</value>
+					<value level="9">12</value>
+					<value level="10">14</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>35226</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>false</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>35226</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35220" toLevel="10" name="Revelation">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+					<value level="6">8</value>
+					<value level="7">9</value>
+					<value level="8">10</value>
+					<value level="9">12</value>
+					<value level="10">14</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>35226</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>false</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>35226</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35221" toLevel="10" name="Greed">
 		<!-- Normal Attack Critical Damage +$s1. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+					<value level="6">8</value>
+					<value level="7">9</value>
+					<value level="8">10</value>
+					<value level="9">12</value>
+					<value level="10">14</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>35226</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>false</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>35226</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35222" toLevel="10" name="Punishment">
 		<!-- P. Skill Critical Damage +$s1. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+					<value level="6">8</value>
+					<value level="7">9</value>
+					<value level="8">10</value>
+					<value level="9">12</value>
+					<value level="10">14</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>35226</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>false</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>35226</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35223" toLevel="10" name="Awakened">
 		<!-- M. Skill Critical Damage +$s1. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+					<value level="6">8</value>
+					<value level="7">9</value>
+					<value level="8">10</value>
+					<value level="9">12</value>
+					<value level="10">14</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1.5</value>
+					<value level="6">2</value>
+					<value level="7">2.5</value>
+					<value level="8">3</value>
+					<value level="9">3.5</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>35226</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>false</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>35226</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35224" toLevel="10" name="Disaster">
 		<!-- Skill Cooldown -$s1. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-5</value>
+					<value level="5">-7</value>
+					<value level="6">-8</value>
+					<value level="7">-9</value>
+					<value level="8">-10</value>
+					<value level="9">-12</value>
+					<value level="10">-14</value>
+				</amount>
+				<magicType>0</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-5</value>
+					<value level="5">-7</value>
+					<value level="6">-8</value>
+					<value level="7">-9</value>
+					<value level="8">-10</value>
+					<value level="9">-12</value>
+					<value level="10">-14</value>
+				</amount>
+				<magicType>1</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-5</value>
+					<value level="5">-7</value>
+					<value level="6">-8</value>
+					<value level="7">-9</value>
+					<value level="8">-10</value>
+					<value level="9">-12</value>
+					<value level="10">-14</value>
+				</amount>
+				<magicType>3</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-5</value>
+					<value level="5">-7</value>
+					<value level="6">-8</value>
+					<value level="7">-9</value>
+					<value level="8">-10</value>
+					<value level="9">-12</value>
+					<value level="10">-14</value>
+				</amount>
+				<magicType>22</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">-5</value>
+					<value level="5">-6</value>
+					<value level="6">-7</value>
+					<value level="7">-8</value>
+					<value level="8">-9</value>
+					<value level="9">-10</value>
+					<value level="10">-12</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">-5</value>
+					<value level="5">-6</value>
+					<value level="6">-7</value>
+					<value level="7">-8</value>
+					<value level="8">-9</value>
+					<value level="9">-10</value>
+					<value level="10">-12</value>
+				</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>35226</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>false</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>35226</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35225" toLevel="10" name="Advent">
 		<!-- Max HP +$s1. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">5</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+					<value level="5">17</value>
+					<value level="6">18</value>
+					<value level="7">19</value>
+					<value level="8">20</value>
+					<value level="9">22</value>
+					<value level="10">24</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">-5</value>
+					<value level="5">-6</value>
+					<value level="6">-7</value>
+					<value level="7">-8</value>
+					<value level="8">-9</value>
+					<value level="9">-10</value>
+					<value level="10">-12</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">-5</value>
+					<value level="5">-6</value>
+					<value level="6">-7</value>
+					<value level="7">-8</value>
+					<value level="8">-9</value>
+					<value level="9">-10</value>
+					<value level="10">-12</value>
+				</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>35226</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>false</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>35226</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35226" toLevel="10" name="Active Stun">
 		<!-- Momentarily immobile due to the Stun effect. Debuff resistance ignored. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>800</activateRate>
+		<basicProperty>NONE</basicProperty>
 		<isDebuff>true</isDebuff>
-		<castRange>1000</castRange>
-		<reuseDelay>60000</reuseDelay>
-		<effectPoint>-100</effectPoint>
+		<lvlBonusRate>30</lvlBonusRate>
+		<magicLvl>-1</magicLvl>
+		<castRange>600</castRange>
+		<effectRange>1500</effectRange>
+		<reuseDelay>30000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<operateType>A2</operateType>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35227" toLevel="1" name="Artifact Set Effect Lv. 1">
 		<!-- Damage +1%, Received Damage -5%. -->
@@ -998,6 +2198,14 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
 				<amount>1</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1031,6 +2239,14 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1339,6 +2555,21 @@
 					<value level="11">15</value>
 				</amount>
 			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="35239" toLevel="11" name="Artifact - Vampiric Rage">
@@ -1600,6 +2831,22 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 		<effects>
+			<effect name="AdditionalPotionCp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">50</value>
+					<value level="3">100</value>
+					<value level="4">200</value>
+					<value level="5">300</value>
+					<value level="6">400</value>
+					<value level="7">500</value>
+					<value level="8">600</value>
+					<value level="9">700</value>
+					<value level="10">800</value>
+					<value level="11">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="AdditionalPotionHp">
 				<amount>
 					<value level="1">0</value>
@@ -1614,6 +2861,23 @@
 					<value level="10">800</value>
 					<value level="11">1000</value>
 				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AdditionalPotionMp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">50</value>
+					<value level="3">100</value>
+					<value level="4">200</value>
+					<value level="5">300</value>
+					<value level="6">400</value>
+					<value level="7">500</value>
+					<value level="8">600</value>
+					<value level="9">700</value>
+					<value level="10">800</value>
+					<value level="11">1000</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1630,50 +2894,72 @@
 				<hasAbnormal>true</hasAbnormal>
 				<affectType>CASTER</affectType>
 			</condition>
+			<condition name="OpCheckAbnormal">
+				<type>AIRBIND</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+				<affectType>CASTER</affectType>
+			</condition>
 		</passiveConditions>
 		<effects>
-			<effect name="PhysicalDefence">
+			<effect name="DamageByAttack">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">1</value>
-					<value level="3">1</value>
-					<value level="4">2</value>
-					<value level="5">3</value>
-					<value level="6">4</value>
-					<value level="7">5</value>
-					<value level="8">6</value>
-					<value level="9">7</value>
-					<value level="10">8</value>
-					<value level="11">10</value>
+					<value level="2">-1</value>
+					<value level="3">-1</value>
+					<value level="4">-2</value>
+					<value level="5">-3</value>
+					<value level="6">-4</value>
+					<value level="7">-5</value>
+					<value level="8">-6</value>
+					<value level="9">-7</value>
+					<value level="10">-8</value>
+					<value level="11">-10</value>
 				</amount>
-				<mode>PER</mode>
+				<type>PK</type>
 			</effect>
-		</effects>
-		<effects>
-			<effect name="MagicalDefence">
+			<effect name="DamageByAttack">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">1</value>
-					<value level="3">1</value>
-					<value level="4">2</value>
-					<value level="5">3</value>
-					<value level="6">4</value>
-					<value level="7">5</value>
-					<value level="8">6</value>
-					<value level="9">7</value>
-					<value level="10">8</value>
-					<value level="11">10</value>
+					<value level="2">-1</value>
+					<value level="3">-1</value>
+					<value level="4">-2</value>
+					<value level="5">-3</value>
+					<value level="6">-4</value>
+					<value level="7">-5</value>
+					<value level="8">-6</value>
+					<value level="9">-7</value>
+					<value level="10">-8</value>
+					<value level="11">-10</value>
 				</amount>
-				<mode>PER</mode>
+				<type>ENEMY_ALL</type>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="35251" toLevel="11" name="Artifact - Fixed Damage Resistance">
-		<!-- Fixed Damage Resistance increased when upgraded. -->
 		<icon>icon.artifact_a_dmg_by_atk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="AbsorbDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+		<!-- Fixed Damage Resistance increased when upgraded. -->
 	</skill>
 	<skill id="35252" toLevel="1" name="Artifact - Atk. Attribute">
 		<!-- Atk. Attribute +30. -->
@@ -1729,6 +3015,12 @@
 		<passiveConditions>
 			<condition name="OpCheckAbnormal">
 				<type>STUN</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpCheckAbnormal">
+				<type>AIRBIND</type>
 				<level>1</level>
 				<hasAbnormal>true</hasAbnormal>
 				<affectType>CASTER</affectType>
@@ -1806,22 +3098,6 @@
 			<effect name="Reuse">
 				<amount>-10</amount>
 				<mode>PER</mode>
-				<magicType>0</magicType>
-			</effect>
-			<effect name="Reuse">
-				<amount>-10</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
-			<effect name="Reuse">
-				<amount>-10</amount>
-				<mode>PER</mode>
-				<magicType>2</magicType>
-			</effect>
-			<effect name="Reuse">
-				<amount>-10</amount>
-				<mode>PER</mode>
-				<magicType>3</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -2266,7 +3542,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>110</magicLvl>
 		<effects>
-			<effect name="CriticalDamage">
+			<effect name="SkillCriticalDamage">
 				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2531,6 +3807,11 @@
 				<amount>-3</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>

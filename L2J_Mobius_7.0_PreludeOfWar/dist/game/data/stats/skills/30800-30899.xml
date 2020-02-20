@@ -435,6 +435,10 @@
 			<value level="1">140</value>
 			<value level="2">151</value>
 		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">28</value>
+			<value level="2">31</value>
+		</mpInitialConsume>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<abnormalLvl>
 			<value level="1">4</value>
@@ -458,6 +462,8 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<castRange>900</castRange>
 		<effectRange>1100</effectRange>
+		<affectRange>1000</affectRange>
+		<affectLimit>50-50</affectLimit>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -560,6 +566,11 @@
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 			<effect name="DispelBySlotProbability">
 				<dispel>MULTI_BUFF;DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;INSTINCT;BERSERKER;PA_PD_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP;SHIELD_PROB_UP;SHIELD_DEFENCE_UP;CANCEL_PROB_DOWN;MA_UP_SPECIAL</dispel>
 				<rate>100</rate>
@@ -607,8 +618,9 @@
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectRange>1100</effectRange>
-		<targetType>TARGET</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectRange>1000</affectRange>
 		<conditions>
 			<condition name="TargetMyParty">
 				<includeMe>true</includeMe>
@@ -665,21 +677,28 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 		<mpConsume>181</mpConsume>
-		<abnormalTime>
-			<value fromLevel="1" toLevel="1">1800</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
-		</abnormalTime>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
-		<itemConsumeCount>10</itemConsumeCount>
+		<abnormalType>DITTY</abnormalType>
+		<itemConsumeCount>50</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<targetType>TARGET</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="TargetMyPledge">
-				<includeMe>true</includeMe>
-			</condition>
-		</conditions>
+		<affectLimit>50-50</affectLimit> <!-- Custom -->
+		<affectRange>1000</affectRange> <!-- Custom -->
+		<targetType>SELF</targetType>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND_PC</affectObject>
 		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>10</amount>
+			</effect>
+			<effect name="Speed">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MpRegen">
 				<amount>10</amount>
 				<mode>PER</mode>
@@ -696,8 +715,17 @@
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="AttackAttributeAdd">
+			<effect name="PvpPhysicalAttackDefenceBonus">
 				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -721,6 +749,7 @@
 			<value fromLevel="1" toLevel="2">1800</value>
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
 		</abnormalTime>
+		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">103</value>
@@ -733,15 +762,14 @@
 		</itemConsumeCount>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<castRange>900</castRange>
-		<effectRange>1100</effectRange>
-		<targetType>TARGET</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="TargetMyPledge">
-				<includeMe>true</includeMe>
-			</condition>
-		</conditions>
+		<castRange>-1</castRange>
+		<itemConsumeCount>50</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<affectLimit>50-50</affectLimit> <!-- Custom -->
+		<affectRange>1000</affectRange> <!-- Custom -->
+		<targetType>SELF</targetType>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND_PC</affectObject>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -841,6 +869,11 @@
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 			<effect name="DispelBySlotProbability">
 				<dispel>MULTI_BUFF;DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;INSTINCT;BERSERKER;PA_PD_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP;SHIELD_PROB_UP;SHIELD_DEFENCE_UP;CANCEL_PROB_DOWN;MA_UP_SPECIAL</dispel>
 				<rate>100</rate>
@@ -914,6 +947,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="PAtk">
 				<amount>4</amount>

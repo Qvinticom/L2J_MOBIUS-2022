@@ -1129,6 +1129,15 @@
 				<magicType>3</magicType>
 				<mode>PER</mode>
 			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-3</value>
+					<value level="2">-5</value>
+					<value level="3">-10</value>
+				</amount>
+				<magicType>22</magicType>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="13935" toLevel="3" name="Paulina's Earrings - Vampiric Rage">
@@ -1595,6 +1604,22 @@
 					<value level="10">-10</value>
 				</amount>
 				<magicType>1</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+					<value level="8">-8</value>
+					<value level="9">-9</value>
+					<value level="10">-10</value>
+				</amount>
+				<magicType>22</magicType>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalAttackDamageBonus">

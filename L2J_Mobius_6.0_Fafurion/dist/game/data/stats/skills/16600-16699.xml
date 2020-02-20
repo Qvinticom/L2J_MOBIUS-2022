@@ -463,7 +463,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PhysicalAttack"> <!-- TODO -->
-				<power>300000</power>
+				<power>10000</power>
 			</effect>
 			<effect name="KnockBack">
 				<speed>600</speed>
@@ -933,7 +933,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack"> <!-- TODO -->
-				<power>300000</power>
+				<power>10000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -962,7 +962,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PhysicalAttack"> <!-- TODO -->
-				<power>300000</power>
+				<power>10000</power>
 			</effect>
 			<effect name="DamOverTime">
 				<power>2000</power>
@@ -990,7 +990,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PhysicalAttack"> <!-- TODO -->
-				<power>300000</power>
+				<power>10000</power>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>-50</amount>
@@ -1065,7 +1065,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack"> <!-- TODO -->
-				<power>300000</power>
+				<power>10000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1256,7 +1256,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack"> <!-- TODO -->
-				<power>300000</power>
+				<power>10000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1274,7 +1274,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack"> <!-- TODO -->
-				<power>300000</power>
+				<power>10000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1310,7 +1310,7 @@
 		<effectPoint>-52</effectPoint>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>300000</power>
+				<power>10000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 		</effects>
@@ -1334,7 +1334,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>300000</power>
+				<power>10000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 			<effect name="BlockActions" />
@@ -1430,7 +1430,7 @@
 		<effectPoint>-52</effectPoint>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>300000</power>
+				<power>10000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 		</effects>
@@ -1450,7 +1450,7 @@
 		<effectPoint>-52</effectPoint>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>300000</power>
+				<power>10000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 		</effects>
@@ -1474,7 +1474,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>300000</power>
+				<power>10000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 			<effect name="BlockActions" />
@@ -1551,7 +1551,7 @@
 		<effectPoint>-52</effectPoint>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>300000</power>
+				<power>10000</power>
 				<criticalChance>3</criticalChance>
 			</effect>
 		</effects>
@@ -1570,7 +1570,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>300000</power>
+				<power>10000</power>
 				<criticalChance>5</criticalChance>
 				<overHit>true</overHit>
 			</effect>
@@ -1610,7 +1610,7 @@
 		<effectPoint>-52</effectPoint>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>300000</power>
+				<power>10000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 		</effects>
@@ -1732,7 +1732,7 @@
 		<effectPoint>-52</effectPoint>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>300000</power>
+				<power>10000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 		</effects>
@@ -1747,7 +1747,7 @@
 		<effectPoint>-52</effectPoint>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>300000</power>
+				<power>10000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 		</effects>

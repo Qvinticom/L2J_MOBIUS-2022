@@ -386,7 +386,7 @@
 		<effectRange>1100</effectRange>
 		<isMagic>1</isMagic>
 		<staticReuse>true</staticReuse>
-		<targetType>TARGET</targetType>
+		<targetType>ENEMY_NOT</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="CanSummonCubic" />
@@ -2715,6 +2715,11 @@
 				<amount>-25</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-25</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>

@@ -67,6 +67,8 @@
 	</skill>
 	<skill id="27611" toLevel="1" name="Lord's Special Supply Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -132,6 +134,8 @@
 	</skill>
 	<skill id="27612" toLevel="1" name="Lord's Special Supply Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -197,6 +201,8 @@
 	</skill>
 	<skill id="27613" toLevel="1" name="Lord's Special Supply Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -262,6 +268,8 @@
 	</skill>
 	<skill id="27614" toLevel="1" name="Lord's Special Supply Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -364,8 +372,6 @@
 		<effects>
 			<effect name="VitalityPointsRate">
 				<amount>-100</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
 			</effect>
 		</effects>
 	</skill>

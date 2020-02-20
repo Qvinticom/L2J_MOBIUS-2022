@@ -582,7 +582,6 @@
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>85</magicLvl>
 		<reuseDelay>1800000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -603,7 +602,6 @@
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>85</magicLvl>
 		<reuseDelay>1800000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -624,7 +622,6 @@
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>85</magicLvl>
 		<reuseDelay>1800000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -645,7 +642,6 @@
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>85</magicLvl>
 		<reuseDelay>1800000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -666,45 +662,27 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
-				<amount>
-					<value level="1">1</value>
-					<value level="2">1</value>
-				</amount>
+				<amount>1</amount>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>
-					<value level="1">1</value>
-					<value level="2">1</value>
-				</amount>
+				<amount>1</amount>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>
-					<value level="1">1</value>
-					<value level="2">1</value>
-				</amount>
+				<amount>1</amount>
 				<stat>CON</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>
-					<value level="1">1</value>
-					<value level="2">1</value>
-				</amount>
+				<amount>1</amount>
 				<stat>DEX</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>
-					<value level="1">1</value>
-					<value level="2">1</value>
-				</amount>
+				<amount>1</amount>
 				<stat>WIT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>
-					<value level="1">1</value>
-					<value level="2">1</value>
-				</amount>
+				<amount>1</amount>
 				<stat>MEN</stat>
 			</effect>
 			<effect name="StatUp">

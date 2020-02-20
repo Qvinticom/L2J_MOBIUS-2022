@@ -151,9 +151,20 @@
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>70</castRange>
+		<effectRange>400</effectRange>
 		<hitTime>1000</hitTime>
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<attributeType>DARK</attributeType>
+		<attributeValue>450</attributeValue>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>800</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15518" toLevel="2" name="Confuse Body">
 		<!-- Confuses the interior of the target's body, decreasing P. Def./ M. Def. by $s1. -->
@@ -193,6 +204,14 @@
 	</skill>
 	<skill id="15522" toLevel="1" name="Dark Poison">
 		<!-- Damages enemy with dark poison and drains HP gradually. -->
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<affectRange>150</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -203,25 +222,65 @@
 		<isMagic>1</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>99</magicLvl>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>POISON</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="DamOverTime">
+				<power>-8000</power>
+				<ticks>2</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15523" toLevel="1" name="Accelerate">
 		<!-- Increases Speed. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
+		<magicLvl>99</magicLvl>
 		<icon>icon.skill1204</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<isMagic>1</isMagic>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>66</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15524" toLevel="1" name="Suck Blood">
 		<!-- Sucks blood from the enemy, continuously draining HP. -->
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
+		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
+		<attributeType>DARK</attributeType>
+		<attributeValue>450</attributeValue>
+		<magicLvl>99</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpDrain">
+				<power>800</power>
+				<percentage>40</percentage>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15525" toLevel="2" name="Rush Attack">
 		<!-- Powerful rush attack on enemy. -->
@@ -237,19 +296,49 @@
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>100</affectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>450</attributeValue>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>160000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15527" toLevel="1" name="Chaos Breath">
 		<!-- AoE M. Atk. On target's area. -->
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>300</castRange>
+		<effectRange>1000</effectRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>100</affectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>450</attributeValue>
+		<magicLvl>99</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>850</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15528" toLevel="1" name="Kaonel Rush">
 		<!-- Powerful rush attack on enemy. -->
@@ -261,25 +350,70 @@
 	</skill>
 	<skill id="15529" toLevel="1" name="Absorb Spirit">
 		<!-- Soul is drained. P./ M. Def. -30%, and Atk. Spd. +10%. -->
+		<abnormalTime>60</abnormalTime>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalType>MARK_OF_LUMI</abnormalType>
+		<activateRate>90</activateRate>
+		<lvlBonusRate>20</lvlBonusRate>
 		<icon>icon.skill1422</icon>
 		<operateType>A2</operateType>
 		<castRange>300</castRange>
+		<effectRange>700</effectRange>
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
+		<magicLvl>99</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15530" toLevel="1" name="Slumber">
 		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>SLEEP</abnormalType>
+		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<basicProperty>MAGIC</basicProperty>
 		<icon>icon.skill4046</icon>
 		<operateType>A2</operateType>
 		<mpConsume>13</mpConsume>
 		<castRange>600</castRange>
+		<effectRange>900</effectRange>
 		<hitTime>3000</hitTime>
 		<reuseDelay>8000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
+		<removedOnDamage>true</removedOnDamage>
+		<magicCriticalRate>5</magicCriticalRate>
+		<lvlBonusRate>30</lvlBonusRate>
+		<magicLvl>99</magicLvl>
+		<trait>SLEEP</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+			<effect name="DefenceTrait">
+				<SLEEP>100</SLEEP>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15531" toLevel="1" name="Hold">
 		<!-- Afflicted with Hold and unable to move momentarily. -->
@@ -680,18 +814,40 @@
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>70</castRange>
+		<effectRange>400</effectRange>
 		<hitTime>2000</hitTime>
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>160000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15565" toLevel="1" name="Theor's AoE Attack">
 		<!-- AoE P. Atk. On nearby enemies. -->
+		<affectLimit>6-12</affectLimit>
+		<affectRange>150</affectRange>
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<hitTime>3000</hitTime>
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<magicLvl>99</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>160000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15566" toLevel="1" name="Disarm">
 		<!-- Disarms nearby enemies. -->
@@ -755,11 +911,25 @@
 	</skill>
 	<skill id="15572" toLevel="1" name="Krogel's Haste">
 		<!-- Atk. Spd. +15%. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<effectPoint>100</effectPoint>
 		<isMagic>1</isMagic>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15573" toLevel="1" name="Master Siege Punch">
 		<!-- Powerful attack and Knock Back on nearby enemies. -->

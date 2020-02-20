@@ -784,9 +784,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="Mp">
-				<amount>100</amount> <!-- Retail value is 60 -->
-				<mode>DIFF</mode>
+			<effect name="ManaHeal">
+				<power>100</power>
 			</effect>
 		</effects>
 	</skill>

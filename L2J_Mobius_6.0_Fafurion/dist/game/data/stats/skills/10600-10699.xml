@@ -7,6 +7,7 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>AVOID_UP_SPECIAL</abnormalType>
 		<operateType>A2</operateType>
+		<isMagic>22</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<magicLvl>85</magicLvl>
@@ -105,6 +106,16 @@
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-6</value>
+					<value level="3">-7</value>
+					<value level="4">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10609" toLevel="1" name="Critical Chances">
@@ -114,6 +125,7 @@
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
 		<operateType>A2</operateType>
+		<isMagic>22</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<magicLvl>85</magicLvl>
@@ -185,6 +197,7 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>COUNTER_SKILL</abnormalType>
 		<operateType>A2</operateType>
+		<isMagic>22</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<magicLvl>85</magicLvl>
@@ -301,6 +314,7 @@
 		<hitTime>2000</hitTime>
 		<effectPoint>669</effectPoint>
 		<reuseDelay>290000</reuseDelay>
+		<isMagic>22</isMagic>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>

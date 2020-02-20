@@ -42,13 +42,6 @@ public class Q00669_DesperateFightWithTheDragons extends Quest
 		29317, // Lindvior 104
 		29068, // Antharas 118
 		29028, // Valakas 118
-		29361, // Fafurion Stage 1 118
-		29362, // Fafurion Stage 2 118
-		29363, // Fafurion Stage 3 118
-		29364, // Fafurion Stage 4 118
-		29365, // Fafurion Stage 5 118
-		29366, // Fafurion Stage 6 118
-		29367, // Fafurion Stage 7 118
 	};
 	// Misc
 	private static final int MIN_LEVEL = 85;

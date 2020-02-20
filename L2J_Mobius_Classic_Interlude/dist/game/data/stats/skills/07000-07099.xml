@@ -415,6 +415,16 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-99</value>
+					<value level="2">-99</value>
+					<value level="3">-99</value>
+					<value level="4">-99</value> <!-- Retail value: 0 -->
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 			<effect name="MAtk"> <!-- custom -->
 				<amount>
 					<value level="1">0</value>

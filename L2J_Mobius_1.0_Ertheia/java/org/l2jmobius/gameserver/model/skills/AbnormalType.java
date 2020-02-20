@@ -519,7 +519,8 @@ public enum AbnormalType
 	SYNERGY_LENKER(589),
 	SYNERGY_SEER(590),
 	INSIDE_POSITION(593),
-	STEEL_MIND(596);
+	STEEL_MIND(596),
+	HELLBOUND_BUFF(598);
 	
 	private int _clientId;
 	

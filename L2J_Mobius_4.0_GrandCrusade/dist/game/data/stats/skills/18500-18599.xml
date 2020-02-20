@@ -138,6 +138,7 @@
 		<!-- The seal of the ruler is engraved on the ancient relic protecting the fort. -->
 		<icon>icon.skill0246</icon>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<mpConsume>10</mpConsume>
 		<castRange>100</castRange>
 		<hitTime>120000</hitTime>
@@ -162,7 +163,7 @@
 				<amount>
 					<value level="1">-10</value>
 					<value level="2">-30</value>
-					<value level="2">-50</value>
+					<value level="3">-50</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -184,6 +185,7 @@
 		<!-- The seal of the ruler is engraved on the ancient relic protecting the fort. -->
 		<icon>icon.skill0246</icon>
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<mpConsume>10</mpConsume>
 		<castRange>100</castRange>
 		<hitTime>120000</hitTime>
@@ -634,7 +636,7 @@
 					<value level="5">30</value>
 					<value level="6">30</value>
 				</amount>
-				<mode>PER</mode>
+				<slot>DEBUFF</slot>
 			</effect>
 			<effect name="TriggerSkillByDamage" fromLevel="6" toLevel="6">
 				<!-- Greater Garnet - Cancel Stun -->
@@ -644,6 +646,8 @@
 				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>SELF</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
 				<allowWeapons>ALL</allowWeapons>
 				<skillId>18721</skillId> <!-- Greater Garnet - Cancel Stun/Silence -->
 				<skillLevel>1</skillLevel>
@@ -1109,6 +1113,11 @@
 				<amount>-20</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>

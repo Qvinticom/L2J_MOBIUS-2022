@@ -94,6 +94,20 @@
 			<value level="2">br_cashtex.item.br_cash_rune_of_feather_i00</value>
 		</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">30</value>
+				</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">30</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17118" toLevel="1" name="Emperor's Growth Scroll">
 		<!-- XP/ SP +30% for 1 hour. -->
@@ -471,6 +485,9 @@
 			<effect name="StatUp">
 				<amount>2</amount>
 				<stat>INT</stat>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-10</amount>
 			</effect>
 			<effect name="DefenceAttribute">
 				<amount>20</amount>
@@ -896,6 +913,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 			<effect name="AttackAttributeAdd">
 				<amount>100</amount>
 			</effect>
@@ -1202,6 +1224,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="17177" toLevel="1" name="Refreshing Sonata - GM's Blessing">
@@ -1363,6 +1390,11 @@
 				<mode>PER</mode>
 				<magicType>3</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="17187" toLevel="1" name="Dandy's Challenge">
@@ -1462,6 +1494,11 @@
 				<amount>-3</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>

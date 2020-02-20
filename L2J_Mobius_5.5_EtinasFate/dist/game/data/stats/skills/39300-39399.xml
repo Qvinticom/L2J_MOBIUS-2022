@@ -252,6 +252,57 @@
 		<!-- If stored in the inventory, increases P. Atk./ M. Atk./ P./ M. Def./ Atk. Spd./ Casting Spd./ P./ M. Critical Rate/ Max HP&MP&CP by 5%, Bonus XP/ SP gain in Vitality state by 14%. -->
 		<icon>icon.etc_scroll_of_memory_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>14</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39346" toLevel="4" name="Red Libra Supply Items">
 		<operateType>A1</operateType>
@@ -420,6 +471,12 @@
 	</skill>
 	<skill id="39352" toLevel="1" name="Scroll: Enchant Blessed Lucien's Bracelet">
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39353" toLevel="1" name="Chronicle Support Box">
 		<operateType>A1</operateType>
@@ -645,6 +702,12 @@
 	</skill>
 	<skill id="39369" toLevel="1" name="Shilen's Scroll: Enchant Weapon (R-grade)">
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39393" toLevel="1" name="Artifact Book Level 1">
 		<!-- Activates Artifact slot level 1. -->
@@ -682,8 +745,48 @@
 	</skill>
 	<skill id="39397" toLevel="4" name="+5 Radiant Circlet of Authority Box">
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">0</value>
+			<value level="4">0</value>
+		</itemConsumeId>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>500</hitTime>
+		<hitCancelTime>0</hitCancelTime>
+		<effects>
+			<effect name="RestorationRandom" level="1">
+				<items>
+					<item chance="100">
+						<item id="48204" count="1" minEnchant="5" maxEnchant="5"/>
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" level="2">
+				<items>
+					<item chance="100">
+						<item id="48207" count="1" minEnchant="5" maxEnchant="5"/>
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" level="3">
+				<items>
+					<item chance="100">
+						<item id="48210" count="1" minEnchant="5" maxEnchant="5"/>
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" level="4">
+				<items>
+					<item chance="100">
+						<item id="48493" count="1" minEnchant="5" maxEnchant="5"/>
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 </list>

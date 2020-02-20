@@ -1415,9 +1415,23 @@
 	</skill>
 	<skill id="18663" toLevel="4" name="Blueish Box">
 		<!-- Double click to obtain a special item. -->
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47554</itemConsumeId>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="18664" toLevel="7" name="Reward for Defeating the Giant Monsters">
 		<!-- Double click to obtain the reward for Defeating the Giant Monsters. -->

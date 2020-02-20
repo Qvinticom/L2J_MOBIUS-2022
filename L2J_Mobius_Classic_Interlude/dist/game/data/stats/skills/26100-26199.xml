@@ -300,6 +300,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<affectRange>1000</affectRange>
 		<reuseDelay>
 			<value level="1">2250000</value>
 			<value level="2">2100000</value>
@@ -314,6 +315,7 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<effects>
 			<effect name="Hp">
 				<amount>100</amount>
@@ -360,6 +362,7 @@
 			<value level="11">38000</value>
 			<value level="12">30000</value>
 		</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<selfEffects>
 			<effect name="Blink">
 				<!-- Teleport to Front -->
@@ -399,6 +402,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<affectRange>1000</affectRange>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<effects>
 			<effect name="RebalanceHP" />
 			<effect name="HealOverTime">
@@ -453,6 +458,9 @@
 				</templates>
 			</effect>
 			<effect name="DeleteHate" />
+			<effect name="BlockSkill">
+				<magicTypes>0;1;2;3;4;22</magicTypes>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="26122" toLevel="12" name="Mad Cow">
@@ -703,7 +711,9 @@
 		</conditions>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="BlockControl" />
 			<effect name="DamOverTime">
 				<power>100</power>
@@ -846,9 +856,146 @@
 	</skill>
 	<skill id="26133" toLevel="1" name="Blessed Amaranthine Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>24142</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="7.14285">
+							<item id="18069" count="1" /> <!-- Blessed Helios Shaper -->
+						</item>
+						<item chance="7.14285">
+							<item id="18070" count="1" /> <!-- Blessed Helios Cutter -->
+						</item>
+						<item chance="7.14285">
+							<item id="18071" count="1" /> <!-- Blessed Helios Slasher -->
+						</item>
+						<item chance="7.14285">
+							<item id="18072" count="1" /> <!-- Blessed Helios Avenger -->
+						</item>
+						<item chance="7.14285">
+							<item id="18073" count="1" /> <!-- Blessed Helios Fighter -->
+						</item>
+						<item chance="7.14285">
+							<item id="18074" count="1" /> <!-- Blessed Helios Stormer -->
+						</item>
+						<item chance="7.14285">
+							<item id="18075" count="1" /> <!-- Blessed Helios Thrower -->
+						</item>
+						<item chance="7.14285">
+							<item id="18076" count="1" /> <!-- Blessed Helios Shooter -->
+						</item>
+						<item chance="7.14285">
+							<item id="18077" count="1" /> <!-- Blessed Helios Buster -->
+						</item>
+						<item chance="7.14285">
+							<item id="18078" count="1" /> <!-- Blessed Helios Caster -->
+						</item>
+						<item chance="7.14285">
+							<item id="18079" count="1" /> <!-- Blessed Helios Retributer -->
+						</item>
+						<item chance="7.14285">
+							<item id="18080" count="1" /> <!-- Blessed Helios Dual Sword -->
+						</item>
+						<item chance="7.14285">
+							<item id="18081" count="1" /> <!-- Blessed Helios Dual Daggers -->
+						</item>
+						<item chance="7.14285">
+							<item id="18082" count="1" /> <!-- Blessed Helios Dual Blunt Weapon -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26134" toLevel="1" name="Blessed Eternal Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>24143</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="5.88235">
+							<item id="18083" count="1" /> <!-- Blessed Eternal Helmet -->
+						</item>
+						<item chance="5.88235">
+							<item id="18084" count="1" /> <!-- Blessed Eternal Breastplate -->
+						</item>
+						<item chance="5.88235">
+							<item id="18085" count="1" /> <!-- Blessed Eternal Gaiters -->
+						</item>
+						<item chance="5.88235">
+							<item id="18086" count="1" /> <!-- Blessed Eternal Gauntlets -->
+						</item>
+						<item chance="5.88235">
+							<item id="18087" count="1" /> <!-- Blessed Eternal Boots -->
+						</item>
+						<item chance="5.88235">
+							<item id="18088" count="1" /> <!-- Blessed Eternal Shield -->
+						</item>
+						<item chance="5.88235">
+							<item id="18089" count="1" /> <!-- Blessed Eternal Leather Helmet -->
+						</item>
+						<item chance="5.88235">
+							<item id="18090" count="1" /> <!-- Blessed Eternal Leather Armor -->
+						</item>
+						<item chance="5.88235">
+							<item id="18091" count="1" /> <!-- Blessed Eternal Leather Leggings -->
+						</item>
+						<item chance="5.88235">
+							<item id="18092" count="1" /> <!-- Blessed Eternal Leather Gloves -->
+						</item>
+						<item chance="5.88235">
+							<item id="18093" count="1" /> <!-- Blessed Eternal Leather Boots -->
+						</item>
+						<item chance="5.88235">
+							<item id="18094" count="1" /> <!-- Blessed Eternal Circlet -->
+						</item>
+						<item chance="5.88235">
+							<item id="18095" count="1" /> <!-- Blessed Eternal Tunic -->
+						</item>
+						<item chance="5.88235">
+							<item id="18096" count="1" /> <!-- Blessed Eternal Stockings -->
+						</item>
+						<item chance="5.88235">
+							<item id="18097" count="1" /> <!-- Blessed Eternal Gloves -->
+						</item>
+						<item chance="5.88235">
+							<item id="18098" count="1" /> <!-- Blessed Eternal Shoes -->
+						</item>
+						<item chance="5.88235">
+							<item id="18099" count="1" /> <!-- Blessed Eternal Sigil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26135" toLevel="1" name="Luck Box 1">
 		<operateType>A1</operateType>

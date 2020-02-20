@@ -212,60 +212,136 @@
 	</skill>
 	<skill id="16109" toLevel="1" name="Heavy Armor Rise">
 		<!-- Critical Damage increased. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>HELLBOUND_BUFF</abnormalType>
 		<icon>icon.m_class_heavy</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>600</castRange>
+		<effectRange>1400</effectRange>
 		<hitTime>1500</hitTime>
 		<reuseDelay>1000</reuseDelay>
 		<effectPoint>650</effectPoint>
 		<isMagic>1</isMagic>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16110" toLevel="1" name="Light Armor Rise">
 		<!-- P. Atk. increased. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>HELLBOUND_BUFF</abnormalType>
 		<icon>icon.m_class_light</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>600</castRange>
+		<effectRange>1400</effectRange>
 		<hitTime>1500</hitTime>
 		<reuseDelay>1000</reuseDelay>
 		<effectPoint>650</effectPoint>
 		<isMagic>1</isMagic>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16111" toLevel="1" name="Robe Rise">
 		<!-- M. Atk. increased. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>HELLBOUND_BUFF</abnormalType>
 		<icon>icon.m_class_robe</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>600</castRange>
+		<effectRange>1400</effectRange>
 		<hitTime>1500</hitTime>
 		<reuseDelay>1000</reuseDelay>
 		<effectPoint>650</effectPoint>
 		<isMagic>1</isMagic>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16112" toLevel="1" name="Speed Rise">
 		<!-- Atk. Spd. and Casting Spd. increased. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>HELLBOUND_BUFF</abnormalType>
 		<icon>icon.m_mystery_brain</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>600</castRange>
+		<effectRange>1400</effectRange>
 		<hitTime>1500</hitTime>
 		<reuseDelay>1000</reuseDelay>
 		<effectPoint>650</effectPoint>
 		<isMagic>1</isMagic>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16113" toLevel="1" name="Tragic Bleed">
 		<!-- Inflicts Bleed. 12 Power. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>DOT_ATTR</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>70</activateRate>
+		<basicProperty>MAGIC</basicProperty>
 		<icon>icon.m_mystery_blood</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
 		<coolTime>800</coolTime>
 		<reuseDelay>1000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>12</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16114" toLevel="1" name="Curse of the Dead">
 		<!-- Cuts target and party members' HP by 95%. -->
@@ -881,15 +957,46 @@
 	</skill>
 	<skill id="16153" toLevel="6" name="Power Slam">
 		<!-- Deals a powerful blow and knocks back the enemy. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<activateRate>120</activateRate>
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
 		<castRange>40</castRange>
+		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isDebuff>true</isDebuff>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>101</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<trait>KNOCKDOWN</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>40289</power>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="KnockBack">
+				<distance>250</distance>
+				<speed>600</speed>
+				<knockDown>true</knockDown>
+			</effect>
+			<effect name="DefenceTrait">
+				<AIRBIND>100</AIRBIND>
+				<KNOCKBACK>100</KNOCKBACK>
+				<SLEEP>100</SLEEP>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<SHOCK>100</SHOCK>
+				<HOLD>100</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16154" toLevel="6" name="Mass Chain Smash">
 		<!-- Pulls target and nearby enemies toward you. -->
@@ -914,52 +1021,63 @@
 	</skill>
 	<skill id="16156" toLevel="8" name="Mass Droop">
 		<!-- Decreases Atk. Spd. and Speed. -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+		</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ATTACK_TIME_UP</abnormalType>
+		<activateRate>80</activateRate>
+		<affectLimit>10-10</affectLimit>
+		<affectRange>200</affectRange>
+		<basicProperty>MAGIC</basicProperty>
 		<icon>icon.skill1206</icon>
 		<operateType>A2</operateType>
 		<mpConsume>94</mpConsume>
 		<castRange>40</castRange>
+		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
 		<coolTime>570</coolTime>
 		<reuseDelay>6000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>-1578</effectPoint>
 		<isDebuff>true</isDebuff>
-		<abnormalLvl>3</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
-		<abnormalType>ATTACK_TIME_UP</abnormalType>
-		<activateRate>60</activateRate>
-		<affectLimit>10-10</affectLimit>
-		<affectRange>200</affectRange>
-		<basicProperty>MAGIC</basicProperty>
-		<lvlBonusRate>20</lvlBonusRate>
+		<lvlBonusRate>30</lvlBonusRate>
+		<magicLvl>100</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
-					<value level="1">-10</value>
-					<value level="2">-20</value>
+					<value level="1">-30</value>
+					<value level="2">-30</value>
 					<value level="3">-30</value>
-					<value level="4">-40</value>
-					<value level="5">-50</value>
-					<value level="6">-60</value>
-					<value level="7">-70</value>
-					<value level="8">-80</value>
+					<value level="4">-30</value>
+					<value level="5">-30</value>
+					<value level="6">-30</value>
+					<value level="7">-30</value>
+					<value level="8">-30</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed">
 				<amount>
-					<value level="1">-10</value>
-					<value level="2">-20</value>
+					<value level="1">-30</value>
+					<value level="2">-30</value>
 					<value level="3">-30</value>
-					<value level="4">-40</value>
-					<value level="5">-50</value>
-					<value level="6">-60</value>
-					<value level="7">-70</value>
-					<value level="8">-80</value>
+					<value level="4">-30</value>
+					<value level="5">-30</value>
+					<value level="6">-30</value>
+					<value level="7">-30</value>
+					<value level="8">-30</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -986,14 +1104,23 @@
 	</skill>
 	<skill id="16158" toLevel="1" name="Beleth's Volcano">
 		<!-- Deals fire damage to target. -->
+		<attributeType>DARK</attributeType>
+		<attributeValue>450</attributeValue>
+		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
-		<mpConsume>51</mpConsume>
 		<castRange>900</castRange>
 		<hitTime>1200</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>2000</reuseDelay>
-		<effectPoint>-709</effectPoint>
 		<isMagic>1</isMagic>
+		<effectPoint>-828</effectPoint>
+		<mpConsume>10</mpConsume>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttackRange">
+				<power>1500</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16159" toLevel="1" name="Beleth's Blaze">
 		<!-- Deals powerful fire damage to nearby enemies. -->
@@ -1004,18 +1131,49 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-1500</effectPoint>
 		<isMagic>1</isMagic>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>200</affectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>450</attributeValue>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>1500</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16160" toLevel="1" name="Beleth's Flame">
 		<!-- Powerful flames burn off HP. -->
 		<icon>icon.skill1101</icon>
-		<operateType>A2</operateType>
-		<mpConsume>96</mpConsume>
-		<hitTime>2000</hitTime>
-		<coolTime>800</coolTime>
-		<reuseDelay>6000</reuseDelay>
-		<isMagic>1</isMagic>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>DOT_ATTR</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>70</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>450</attributeValue>
+		<hitTime>2000</hitTime>
 		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicLvl>99</magicLvl>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>10000</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16161" toLevel="1" name="Darion's Bleed">
 		<!-- Bleed instantly cuts HP. -->
@@ -1030,13 +1188,42 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16162" toLevel="1" name="Beleth's Meteor">
-		<operateType>A1</operateType>
-		<mpConsume>96</mpConsume>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>DOT_ATTR</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>30</lvlBonusRate>
+		<trait>BLEED</trait>
+		<affectLimit>10-10</affectLimit>
+		<affectRange>200</affectRange>
+		<castRange>600</castRange>
+		<effectPoint>-679</effectPoint>
+		<effectRange>1100</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>450</attributeValue>
 		<hitTime>2000</hitTime>
-		<coolTime>800</coolTime>
-		<reuseDelay>6000</reuseDelay>
-		<effectPoint>-1500</effectPoint>
+		<icon>icon.skill1467</icon>
 		<isMagic>1</isMagic>
+		<magicLvl>81</magicLvl>
+		<mpInitialConsume>72</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>1570</power>
+			</effect>
+			<effect name="DamOverTime">
+				<power>3000</power>
+				<ticks>3</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16163" toLevel="1" name="Darion's Sword Storm">
 		<operateType>A1</operateType>
@@ -1345,6 +1532,15 @@
 		<hitTime>1500</hitTime>
 		<effectPoint>-1500</effectPoint>
 		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>10-10</affectLimit>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>1500</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16193" toLevel="1" name="Lurking Lunacy">
 		<!-- Casts Fear on target and nearby enemies for 2 sec. -->
@@ -1376,13 +1572,34 @@
 	</skill>
 	<skill id="16196" toLevel="1" name="Blood Shower">
 		<!-- A magical AoE attack with Bleed. -->
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>10-10</affectLimit>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>300</castRange>
 		<hitTime>1500</hitTime>
 		<isMagic>1</isMagic>
+		<trait>BLEED</trait>
 		<effectPoint>-1500</effectPoint>
 		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="DamOverTime">
+				<power>-13000</power>
+				<ticks>2</ticks>
+			</effect>
+			<effect name="MagicalAttack">
+				<power>1500</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16197" toLevel="1" name="Haughty Slaughter">
 		<!-- Physical AoE attack. -->
@@ -1391,6 +1608,16 @@
 		<castRange>300</castRange>
 		<effectPoint>-1500</effectPoint>
 		<hitTime>1500</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>150</affectRange>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>350000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16198" toLevel="1" name="Continuing Pain">
 		<!-- Physical AoE attack. -->
@@ -1399,6 +1626,16 @@
 		<castRange>300</castRange>
 		<effectPoint>-1500</effectPoint>
 		<hitTime>1500</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>150</affectRange>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>350000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16199" toLevel="1" name="Howling Abyss">
 		<!-- Magical attack on a single target. -->

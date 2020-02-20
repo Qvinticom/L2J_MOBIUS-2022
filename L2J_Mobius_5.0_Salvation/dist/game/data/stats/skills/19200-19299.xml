@@ -987,7 +987,6 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>WIND_BLEND</abnormalVisualEffect>
-		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>
@@ -1008,6 +1007,42 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="TriggerSkillByMagicType">
+				<!-- Cancel Shadow Move -->
+				<magicTypes>0;1</magicTypes>
+				<skillId>14839</skillId> <!-- Cancel Hide -->
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Cancel Shadow Move -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<allowNormalAttack>true</allowNormalAttack>
+				<allowSkillAttack>true</allowSkillAttack>
+				<isCritical>true</isCritical>
+				<skillId>14839</skillId> <!-- Cancel Hide -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Cancel Shadow Move -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<allowNormalAttack>true</allowNormalAttack>
+				<allowSkillAttack>true</allowSkillAttack>
+				<skillId>14839</skillId> <!-- Cancel Hide -->
+				<skillLevel>1</skillLevel>
+				<isCritical>false</isCritical>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="19228" toLevel="1" name="Song of Thief">
@@ -1024,11 +1059,12 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<mpConsume>140</mpConsume>
-		<hitTime>8000</hitTime>
-		<coolTime>300</coolTime>
+		<hitTime>5000</hitTime>
+		<coolTime>500</coolTime>
 		<effectPoint>687</effectPoint>
 		<abnormalTime>30</abnormalTime>
 		<reuseDelay>300000</reuseDelay>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<effects>
 			<effect name="DefenceTrait">
 				<DAGGER>50</DAGGER>
@@ -1501,6 +1537,14 @@
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-3</value>
+					<value level="2">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="19248" toLevel="2" name="Guardian Blessing">
@@ -1875,6 +1919,11 @@
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="19268" toLevel="2" name="Berserker's Blessing">
@@ -2208,6 +2257,14 @@
 				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-3</value>
+					<value level="2">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>

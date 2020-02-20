@@ -155,24 +155,15 @@
 				</amount>
 				<stat>STR</stat>
 			</effect>
-			<effect name="AttackAttributeAdd">
+			<effect name="AttackAttributeAdd" fromLevel="3" toLevel="5">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
 					<value level="3">10</value>
 					<value level="4">30</value>
 					<value level="5">50</value>
 				</amount>
 			</effect>
-			<effect name="VitalityExpRate">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">10</value>
-				</amount>
-				<mode>PER</mode>
+			<effect name="VitalityExpRate" level="5">
+				<amount>10</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -191,33 +182,19 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="CriticalRate">
+			<effect name="CriticalRate" fromLevel="3" toLevel="5">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
 					<value level="3">10</value>
 					<value level="4">30</value>
 					<value level="5">50</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="ExpModify">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">10</value>
-				</amount>
+			<effect name="ExpModify" level="5">
+				<amount>10</amount>
 			</effect>
-			<effect name="SpModify">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">10</value>
-				</amount>
+			<effect name="SpModify" level="5">
+				<amount>10</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -226,7 +203,7 @@
 		<icon>icon.bm_pattack_circlet_03</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="CriticalDamage">
+			<effect name="SkillCriticalDamage">
 				<amount>
 					<value level="1">1</value>
 					<value level="2">3</value>
@@ -236,7 +213,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="SkillCriticalDamage">
+			<effect name="CriticalDamage">
 				<amount>
 					<value level="1">1</value>
 					<value level="2">3</value>
@@ -353,24 +330,15 @@
 				</amount>
 				<stat>INT</stat>
 			</effect>
-			<effect name="AttackAttributeAdd">
+			<effect name="AttackAttributeAdd" fromLevel="3" toLevel="5">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
 					<value level="3">10</value>
 					<value level="4">30</value>
 					<value level="5">50</value>
 				</amount>
 			</effect>
-			<effect name="VitalityExpRate">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">10</value>
-				</amount>
-				<mode>PER</mode>
+			<effect name="VitalityExpRate" level="5">
+				<amount>10</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -389,33 +357,19 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicCriticalRate">
+			<effect name="MagicCriticalRate" fromLevel="3" toLevel="5">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
 					<value level="3">10</value>
 					<value level="4">30</value>
 					<value level="5">50</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
-			<effect name="ExpModify">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">10</value>
-				</amount>
+			<effect name="ExpModify" level="5">
+				<amount>10</amount>
 			</effect>
-			<effect name="SpModify">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">10</value>
-				</amount>
+			<effect name="SpModify" level="5">
+				<amount>10</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -642,55 +596,56 @@
 				</amount>
 				<stat>MEN</stat>
 			</effect>
-			<effect name="DefenceAttribute">
+			<effect name="DefenceAttribute" fromLevel="3" toLevel="5">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
 					<value level="3">10</value>
 					<value level="4">30</value>
 					<value level="5">50</value>
 				</amount>
 				<attribute>FIRE</attribute>
 			</effect>
-			<effect name="DefenceAttribute">
+			<effect name="DefenceAttribute" fromLevel="3" toLevel="5">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
 					<value level="3">10</value>
 					<value level="4">30</value>
 					<value level="5">50</value>
 				</amount>
 				<attribute>WATER</attribute>
 			</effect>
-			<effect name="DefenceAttribute">
+			<effect name="DefenceAttribute" fromLevel="3" toLevel="5">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
 					<value level="3">10</value>
 					<value level="4">30</value>
 					<value level="5">50</value>
 				</amount>
 				<attribute>WIND</attribute>
 			</effect>
-			<effect name="DefenceAttribute">
+			<effect name="DefenceAttribute" fromLevel="3" toLevel="5">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
 					<value level="3">10</value>
 					<value level="4">30</value>
 					<value level="5">50</value>
 				</amount>
 				<attribute>EARTH</attribute>
 			</effect>
-			<effect name="VitalityExpRate">
+			<effect name="DefenceAttribute" fromLevel="3" toLevel="5">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">10</value>
+					<value level="3">10</value>
+					<value level="4">30</value>
+					<value level="5">50</value>
 				</amount>
-				<mode>PER</mode>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute" fromLevel="3" toLevel="5">
+				<amount>
+					<value level="3">10</value>
+					<value level="4">30</value>
+					<value level="5">50</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="VitalityExpRate" level="5">
+				<amount>10</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -704,8 +659,8 @@
 					<value level="1">1</value>
 					<value level="2">2</value>
 					<value level="3">3</value>
-					<value level="4">4</value>
-					<value level="5">5</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -719,33 +674,19 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="ResistAbnormalByCategory">
+			<effect name="ResistAbnormalByCategory" fromLevel="3" toLevel="5">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
 					<value level="3">1</value>
 					<value level="4">3</value>
 					<value level="5">5</value>
 				</amount>
 				<slot>DEBUFF</slot>
 			</effect>
-			<effect name="ExpModify">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">10</value>
-				</amount>
+			<effect name="ExpModify" level="5">
+				<amount>10</amount>
 			</effect>
-			<effect name="SpModify">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">10</value>
-				</amount>
+			<effect name="SpModify" level="5">
+				<amount>10</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -835,6 +776,10 @@
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>5</amount>
 				<mode>PER</mode>
@@ -847,15 +792,15 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>-5</amount>
+				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>-5</amount>
+				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>-5</amount>
+				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -867,10 +812,17 @@
 		<effects>
 			<effect name="PvePhysicalAttackDamageBonus">
 				<amount>5</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PveMagicalSkillDamageBonus">
 				<amount>5</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -881,15 +833,15 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>-5</amount>
+				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>-5</amount>
+				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>-5</amount>
+				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -899,7 +851,13 @@
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
 		<effects>
+			<effect name="AdditionalPotionCp">
+				<amount>500</amount>
+			</effect>
 			<effect name="AdditionalPotionHp">
+				<amount>500</amount>
+			</effect>
+			<effect name="AdditionalPotionMp">
 				<amount>500</amount>
 			</effect>
 		</effects>
@@ -911,6 +869,12 @@
 		<passiveConditions>
 			<condition name="OpCheckAbnormal">
 				<type>STUN</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+				<affectType>TARGET</affectType>
+			</condition>
+			<condition name="OpCheckAbnormal">
+				<type>AIRBIND</type>
 				<level>1</level>
 				<hasAbnormal>true</hasAbnormal>
 				<affectType>TARGET</affectType>
@@ -938,15 +902,21 @@
 				<hasAbnormal>true</hasAbnormal>
 				<affectType>CASTER</affectType>
 			</condition>
+			<condition name="OpCheckAbnormal">
+				<type>AIRBIND</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+				<affectType>CASTER</affectType>
+			</condition>
 		</passiveConditions>
 		<effects>
-			<effect name="PhysicalDefence">
-				<amount>5</amount>
-				<mode>PER</mode>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>PK</type>
 			</effect>
-			<effect name="MagicalDefence">
-				<amount>5</amount>
-				<mode>PER</mode>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>ENEMY_ALL</type>
 			</effect>
 		</effects>
 	</skill>
@@ -1581,10 +1551,10 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="ExpModify">
-				<amount>5</amount>
+				<amount>3</amount>
 			</effect>
 			<effect name="SpModify">
-				<amount>5</amount>
+				<amount>3</amount>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>5</amount>
@@ -1651,6 +1621,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="35184" toLevel="1" name="Dragon Rind Leather Shirt">
@@ -1709,8 +1684,8 @@
 					<value level="2">3</value>
 					<value level="3">3</value>
 					<value level="4">3</value>
-					<value level="5">3</value>
-					<value level="6">3</value>
+					<value level="5">4</value>
+					<value level="6">4</value>
 				</amount>
 				<stat>STR</stat>
 			</effect>
@@ -1720,8 +1695,8 @@
 					<value level="2">3</value>
 					<value level="3">3</value>
 					<value level="4">4</value>
-					<value level="5">3</value>
-					<value level="6">3</value>
+					<value level="5">4</value>
+					<value level="6">4</value>
 				</amount>
 				<stat>DEX</stat>
 			</effect>
@@ -1731,8 +1706,8 @@
 					<value level="2">4</value>
 					<value level="3">4</value>
 					<value level="4">4</value>
-					<value level="5">3</value>
-					<value level="6">3</value>
+					<value level="5">4</value>
+					<value level="6">4</value>
 				</amount>
 				<stat>CON</stat>
 			</effect>
@@ -1772,7 +1747,7 @@
 			<effect name="StatUp">
 				<amount>
 					<value level="1">3</value>
-					<value level="2">4</value>
+					<value level="2">3</value>
 					<value level="3">4</value>
 					<value level="4">4</value>
 					<value level="5">4</value>
@@ -2258,6 +2233,8 @@
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_dagger_of_hero_i01</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 		<effects>
 			<effect name="MaxCp">
 				<amount>30</amount>
@@ -2312,14 +2289,34 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -2327,6 +2324,8 @@
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 		<effects>
 			<effect name="MaxCp">
 				<amount>30</amount>
@@ -2381,14 +2380,34 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -2396,6 +2415,8 @@
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_two_handed_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 		<effects>
 			<effect name="MaxCp">
 				<amount>30</amount>
@@ -2450,14 +2471,34 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -2465,6 +2506,8 @@
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_axe_of_hero_i01</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 		<effects>
 			<effect name="MaxCp">
 				<amount>30</amount>
@@ -2519,14 +2562,34 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -2534,6 +2597,8 @@
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_fist_of_hero_i01</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 		<effects>
 			<effect name="MaxCp">
 				<amount>30</amount>
@@ -2588,14 +2653,34 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -2657,14 +2742,34 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -2672,6 +2777,8 @@
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_the_bow_of_hero_i01</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 		<effects>
 			<effect name="MaxCp">
 				<amount>30</amount>
@@ -2726,14 +2833,34 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -2795,14 +2922,34 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -2810,6 +2957,8 @@
 		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<icon>icon.weapon_infinity_sword_i01</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 		<effects>
 			<effect name="MaxCp">
 				<amount>30</amount>
@@ -2864,14 +3013,34 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
 			</effect>
 		</effects>
 	</skill>

@@ -527,11 +527,22 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DispelBySlotProbability">
-				<dispel>INVINCIBILITY</dispel>
-				<rate>100</rate>
+				<dispel>INVINCIBILITY_SPECIAL;INVINCIBILITY</dispel>
+				<rate>80</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>INVINCIBILITY_SPECIAL</slot>
 			</effect>
 			<effect name="BlockAbnormalSlot">
 				<slot>INVINCIBILITY</slot>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>INVINCIBILITY_SPECIAL;INVINCIBILITY</dispel>
+				<rate>80</rate>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>0</amount>
+				<slot>DEBUFF</slot>
 			</effect>
 		</effects>
 	</skill>

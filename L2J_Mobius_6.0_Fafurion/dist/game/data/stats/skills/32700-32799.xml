@@ -158,13 +158,14 @@
 	</skill>
 	<skill id="32705" toLevel="1" name="Fafurion Normal Attack">
 		<!-- Fafurion Basic Attack -->
+		<affectLimit>50-50</affectLimit>
 		<affectRange>300</affectRange>
 		<castRange>250</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<effectRange>300</effectRange>
 		<attributeType>WATER</attributeType>
-		<attributeValue>450</attributeValue>
+		<attributeValue>850</attributeValue>
 		<hitTime>1000</hitTime>
 		<magicLvl>-1</magicLvl>
 		<operateType>A1</operateType>
@@ -173,7 +174,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>300000</power>
+				<power>10000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -203,7 +204,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>100000</power>
+				<power>500000</power>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="DamOverTime">
@@ -223,12 +224,45 @@
 	<skill id="32708" toLevel="2" name="Fafurion Water Blast">
 		<!-- Suffering magic damage caused by the water pillar that Fafurion summoned and being blown away. -->
 		<icon>icon.skill32708</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<affectLimit>40-40</affectLimit>
+		<affectRange>200</affectRange>
+		<activateRate>500</activateRate>
+		<lvlBonusRate>30</lvlBonusRate>
+		<trait>KNOCKDOWN</trait>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>25000</power>
+			</effect>
+			<effect name="KnockBack">
+				<speed>400</speed>
+				<distance>50</distance>
+				<knockDown>true</knockDown>
+			</effect>
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<SHOCK>100</SHOCK>
+				<AIRBIND>100</AIRBIND>
+				<SLEEP>100</SLEEP>
+				<KNOCKBACK>100</KNOCKBACK>
+				<CHANGEBODY>100</CHANGEBODY>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="32709" toLevel="1" name="Fafurion Water Spiral">
 		<!-- Pulled forcefully after receiving magic damage from Fafurion's cyclone. -->
@@ -254,12 +288,45 @@
 			<value level="1">icon.skill0000</value>
 			<value level="2">icon.skill32708</value>
 		</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<affectLimit>40-40</affectLimit>
+		<affectRange>200</affectRange>
+		<activateRate>500</activateRate>
+		<lvlBonusRate>30</lvlBonusRate>
+		<trait>KNOCKDOWN</trait>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>25000</power>
+			</effect>
+			<effect name="KnockBack">
+				<speed>400</speed>
+				<distance>50</distance>
+				<knockDown>true</knockDown>
+			</effect>
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<SHOCK>100</SHOCK>
+				<AIRBIND>100</AIRBIND>
+				<SLEEP>100</SLEEP>
+				<KNOCKBACK>100</KNOCKBACK>
+				<CHANGEBODY>100</CHANGEBODY>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="32712" toLevel="1" name="Fafurion Hydro Spiral">
 		<!-- Pulled forcefully after receiving magic damage from Fafurion's cyclone. -->
@@ -291,7 +358,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<channelingEffects>
 			<effect name="MagicalAttack">
-				<power>500</power>
+				<power>25000</power>
 			</effect>
 		</channelingEffects>
 	</skill>
@@ -305,18 +372,19 @@
 		<coolTime>1500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<attributeType>WATER</attributeType>
-		<attributeValue>450</attributeValue>
+		<attributeValue>850</attributeValue>
 		<fanRange>0;180;1500;600</fanRange>
 		<hitTime>3000</hitTime>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<trait>SHOCK</trait>
+		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>300000</power>
+				<power>500000</power>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
@@ -331,7 +399,7 @@
 		<coolTime>1500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<attributeType>WATER</attributeType>
-		<attributeValue>450</attributeValue>
+		<attributeValue>850</attributeValue>
 		<fanRange>0;180;1500;600</fanRange>
 		<hitTime>500</hitTime>
 		<magicLvl>-1</magicLvl>
@@ -343,7 +411,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>300000</power>
+				<power>500000</power>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
@@ -357,50 +425,65 @@
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<abnormalTime>2</abnormalTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>100</activateRate>
 		<reuseDelay>30000</reuseDelay>
-		<affectLimit>20-20</affectLimit>
+		<affectLimit>40-40</affectLimit>
 		<castRange>800</castRange>
 		<affectRange>1500</affectRange>
+		<lvlBonusRate>30</lvlBonusRate>
 		<trait>KNOCKDOWN</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>10000</power>
+				<power>25000</power>
 			</effect>
 			<effect name="KnockBack">
 				<speed>600</speed>
 				<distance>100</distance>
 				<knockDown>false</knockDown>
 			</effect>
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<SHOCK>100</SHOCK>
+				<AIRBIND>100</AIRBIND>
+				<SLEEP>100</SLEEP>
+				<KNOCKBACK>100</KNOCKBACK>
+				<CHANGEBODY>100</CHANGEBODY>
+			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="32716" toLevel="3" name="Fafurion Breath">
 		<!-- Fafurion inflicts physical damage to enemies in front of it. -->
 		<icon>icon.skill32716</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<castRange>600</castRange>
+		<effectRange>900</effectRange>
+		<affectLimit>50-50</affectLimit>
+		<affectRange>900</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<hitTime>3000</hitTime>
 		<coolTime>1500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<attributeType>WATER</attributeType>
-		<attributeValue>450</attributeValue>
+		<attributeValue>850</attributeValue>
 		<magicLvl>-1</magicLvl>
 		<isDebuff>true</isDebuff>
 		<fanRange>0;0;2500;900</fanRange>
-		<targetType>SELF</targetType>
-		<affectScope>SQUARE</affectScope>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>300000</power>
+				<power>500000</power>
 			</effect>
 			<effect name="DamOverTime">
 				<power>5120</power>
@@ -412,7 +495,7 @@
 		<!-- Suffering physical damage caused by Fafurion's Energy of Fear. Targets flee with P./ M. Def. decreased. -->
 		<icon>icon.skill32717</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>4</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
 		<affectRange>600</affectRange>
@@ -467,7 +550,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>500000</power>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
@@ -492,7 +575,7 @@
 	<skill id="32721" toLevel="1" name="Fafurion Wing Strike">
 		<!-- Knocked down after receiving physical damage from the strong wind by Fafurion's flapping wings. -->
 		<icon>icon.skill32721</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
 		<hitTime>5000</hitTime>
 		<coolTime>500</coolTime>
@@ -512,7 +595,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>500000</power>
 			</effect>
 			<effect name="KnockBack">
 				<speed>600</speed>
@@ -534,12 +617,45 @@
 	<skill id="32723" toLevel="2" name="Fafurion Tidal Wave">
 		<!-- Knocked back after receiving magic damage from the huge wave created by Fafurion's flapping wings. -->
 		<icon>icon.skill32722</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
-		<hitTime>500</hitTime>
+		<hitTime>7000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<affectLimit>40-40</affectLimit>
+		<affectRange>200</affectRange>
+		<activateRate>500</activateRate>
+		<lvlBonusRate>30</lvlBonusRate>
+		<trait>KNOCKDOWN</trait>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>25000</power>
+			</effect>
+			<effect name="KnockBack">
+				<speed>400</speed>
+				<distance>50</distance>
+				<knockDown>true</knockDown>
+			</effect>
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<SHOCK>100</SHOCK>
+				<AIRBIND>100</AIRBIND>
+				<SLEEP>100</SLEEP>
+				<KNOCKBACK>100</KNOCKBACK>
+				<CHANGEBODY>100</CHANGEBODY>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="32724" toLevel="1" name="Fafurion Fury">
 		<!-- Fafurion becomes enraged, increasing its P. Atk./ M. Atk. -->
@@ -589,22 +705,27 @@
 	</skill>
 	<skill id="32730" toLevel="1" name="Breath">
 		<!-- Makes the servant breathe on the enemies in front of it, inflicting damage. -->
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<castRange>500</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<affectLimit>150-200</affectLimit>
-		<attributeType>WATER</attributeType>
-		<attributeValue>250</attributeValue>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<magicLvl>-1</magicLvl>
+		<isDebuff>true</isDebuff>
+		<fanRange>0;0;2500;900</fanRange>
+		<targetType>SELF</targetType>
+		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="MagicalAttack">
-				<power>553</power>
-				<criticalChance>5</criticalChance>
+			<effect name="PhysicalAttack">
+				<power>500000</power>
+			</effect>
+			<effect name="DamOverTime">
+				<power>5120</power>
+				<ticks>1</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -615,17 +736,16 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<affectLimit>150-200</affectLimit>
-		<affectRange>1050</affectRange>
-		<attributeType>WATER</attributeType>
-		<attributeValue>250</attributeValue>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>200</affectRange>
+		<magicLvl>-1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>553</power>
-				<criticalChance>5</criticalChance>
+				<power>25000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -639,11 +759,8 @@
 		<effectPoint>-100</effectPoint>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
-		<affectLimit>150-200</affectLimit>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<attributeType>WATER</attributeType>
-		<attributeValue>250</attributeValue>
 		<fanRange>0;180;1500;600</fanRange>
 		<magicLvl>-1</magicLvl>
 		<trait>SHOCK</trait>
@@ -652,7 +769,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>300000</power>
+				<power>500000</power>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
@@ -662,21 +779,18 @@
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>100</castRange>
+		<effectRange>400</effectRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<isMagic>1</isMagic> <!-- Static Skill -->
-		<affectLimit>150-200</affectLimit>
-		<attributeType>WATER</attributeType>
-		<attributeValue>250</attributeValue>
-		<targetType>SELF</targetType>
-		<affectScope>FAN</affectScope>
+		<affectRange>300</affectRange>
+		<magicLvl>-1</magicLvl>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<fanRange>0;0;500;90</fanRange>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>150000</power>
-				<criticalChance>5</criticalChance>
+				<power>500000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -699,12 +813,8 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="MagicalAttack">
-				<power>
-					<value level="1">533</value>
-					<value level="2">585</value>
-				</power>
-				<criticalChance>5</criticalChance>
+			<effect name="PhysicalAttack">
+				<power>500000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -717,25 +827,28 @@
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>100</castRange>
+		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
-		<affectLimit>150-200</affectLimit>
+		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<attributeType>WATER</attributeType>
-		<attributeValue>250</attributeValue>
+		<affectLimit>12-12</affectLimit>
+		<affectRange>200</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>-1</magicLvl>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">150000</value>
-					<value level="2">300000</value>				
+					<value level="1">500000</value>
+					<value level="2">600000</value>				
 				</power>
 			</effect>
 			<effect name="BlockActions" />
@@ -795,11 +908,11 @@
 			<value level="1">1</value>
 			<value level="2">2</value>		
 		</abnormalLvl>
-		<abnormalTime>5</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>80</activateRate>
-		<affectRange>600</affectRange>
+		<affectRange>400</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>800</effectRange>
 		<fanRange>0;0;600;60</fanRange>
@@ -924,7 +1037,7 @@
 		<trait>KNOCKDOWN</trait>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>585</power>
+				<power>25000</power>
 			</effect>
 			<effect name="KnockBack">
 				<speed>600</speed>
@@ -937,26 +1050,38 @@
 		<!-- Causes a wave in front of you, dealing magic damage and decreasing Atk. Spd./ Casting Spd./ Speed. -->
 		<icon>icon.oasis_feel</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-100</effectPoint>
-		<mpConsume>1</mpConsume>
-		<attributeType>WATER</attributeType>
-		<attributeValue>250</attributeValue>
-		<castRange>500</castRange>
-		<affectLimit>5-12</affectLimit>
-		<effectRange>700</effectRange>
-		<fanRange>0;0;600;100</fanRange>
-		<targetType>ENEMY</targetType>
-		<affectScope>SQUARE</affectScope>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<affectLimit>12-12</affectLimit>
+		<affectRange>200</affectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicLvl>-1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>585</power>
+				<power>25000</power>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>-50</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -964,29 +1089,40 @@
 		<!-- Summons a wave under the target and nearby enemies, imprisoning them and periodically decreasing their MP. -->
 		<icon>icon.skill5016</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>5</abnormalTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-100</effectPoint>
-		<mpConsume>1</mpConsume>
-		<affectLimit>150-200</affectLimit>
-		<affectRange>750</affectRange>
-		<attributeType>WATER</attributeType>
-		<attributeValue>250</attributeValue>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
+		<affectLimit>12-12</affectLimit>
+		<affectRange>300</affectRange>
+		<magicLvl>-1</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>DEPORT</abnormalType>
+		<abnormalVisualEffect>DEPORT</abnormalVisualEffect>
+		<basicProperty>NONE</basicProperty>
+		<trait>DEPORT</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="MagicalAttack">
-				<power>553</power>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="ManaDamOverTime">
-				<power>553</power>
+				<power>500</power>
 				<ticks>1</ticks>
 			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="BuffBlock" />
+			<effect name="DebuffBlock" />
 		</effects>
 	</skill>
 	<skill id="32744" toLevel="1" name="Fafurion's Blessing">
@@ -994,25 +1130,28 @@
 		<icon>icon.skill4280</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>3600</abnormalTime>
+		<abnormalTime>300</abnormalTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<hitTime>2500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
-		<mpConsume>1</mpConsume>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="AttackAttribute">
+			<effect name="DefenceAttribute">
 				<amount>100</amount>
 				<attribute>WATER</attribute>
 			</effect>
-			<effect name="MagicalDefence">
-				<amount>25</amount>
+			<effect name="MAtk">
+				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>25</amount>
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1048,8 +1187,33 @@
 	<skill id="32751" toLevel="1" name="Limit Barrier">
 		<!-- Barrier broken after 600 hits. If 600 hits are not made within 15 sec., all of the Raid Boss's HP recovers. -->
 		<icon>icon.skill11621</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>INVINCIBILITY</abnormalType>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effectPoint>379</effectPoint>
+		<effects>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+		</effects>
 	</skill>
 </list>

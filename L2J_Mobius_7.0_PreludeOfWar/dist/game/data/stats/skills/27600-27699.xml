@@ -67,6 +67,8 @@
 	</skill>
 	<skill id="27611" toLevel="1" name="Lord's Special Supply Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -132,6 +134,8 @@
 	</skill>
 	<skill id="27612" toLevel="1" name="Lord's Special Supply Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -197,6 +201,8 @@
 	</skill>
 	<skill id="27613" toLevel="1" name="Lord's Special Supply Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -262,6 +268,8 @@
 	</skill>
 	<skill id="27614" toLevel="1" name="Lord's Special Supply Box">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -364,8 +372,6 @@
 		<effects>
 			<effect name="VitalityPointsRate">
 				<amount>-100</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -597,6 +603,18 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-11</value>
+					<value level="3">-12</value>
+					<value level="4">-13</value>
+					<value level="5">-14</value>
+					<value level="6">-15</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 			<effect name="DamageShield">
 				<amount>
 					<value level="1">5</value>
@@ -672,6 +690,48 @@
 					<value level="6">10</value>
 				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>
+					<value level="1">25</value>
+					<value level="2">26</value>
+					<value level="3">27</value>
+					<value level="4">28</value>
+					<value level="5">29</value>
+					<value level="6">30</value>
+				</SHOCK>
+				<AGGRESSION>
+					<value level="1">25</value>
+					<value level="2">26</value>
+					<value level="3">27</value>
+					<value level="4">28</value>
+					<value level="5">29</value>
+					<value level="6">30</value>
+				</AGGRESSION>
+				<DEPORT>
+					<value level="1">25</value>
+					<value level="2">26</value>
+					<value level="3">27</value>
+					<value level="4">28</value>
+					<value level="5">29</value>
+					<value level="6">30</value>
+				</DEPORT>
+				<DISARM>
+					<value level="1">15</value>
+					<value level="2">16</value>
+					<value level="3">17</value>
+					<value level="4">18</value>
+					<value level="5">19</value>
+					<value level="6">20</value>
+				</DISARM>
+				<SLEEP>
+					<value level="1">15</value>
+					<value level="2">16</value>
+					<value level="3">17</value>
+					<value level="4">18</value>
+					<value level="5">19</value>
+					<value level="6">20</value>
+				</SLEEP>
 			</effect>
 			<effect name="DefenceAttribute">
 				<amount>
@@ -824,6 +884,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-11</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 			<effect name="DamageShield">
 				<amount>6</amount>
 			</effect>
@@ -861,7 +926,6 @@
 		</effects>
 	</skill>
 	<skill id="27636" toLevel="1" name="Gran Kain's Necklace">
-		<!-- NOT USE. -->
 		<!-- MP + 121, STR + 4, INT + 4, CON + 4, Skill Cooldown - 12%, Damage Reflect + 7%, P. Atk. + 17%, M. Atk. + 12%, Max HP + 5%, Max MP + 7%. Resistance to the following abnormal conditions: Shock + 27%, Hate + 27%, Windstorm + 27%, Exile + 27%, Disarmament + 17%, Slip + 17%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -887,6 +951,11 @@
 				<amount>-12</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-12</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 			<effect name="DamageShield">
 				<amount>7</amount>
@@ -925,7 +994,6 @@
 		</effects>
 	</skill>
 	<skill id="27637" toLevel="1" name="Gran Kain's Necklace">
-		<!-- NOT USE. -->
 		<!-- MP + 126, STR + 4, INT + 4, CON + 4, Skill Cooldown - 13%, Damage Reflect + 8%, P. Atk. + 18%, M. Atk. + 13%, Max HP + 5%, Max MP + 7%. Resistance to the following abnormal conditions: Shock + 28%, Hate + 28%, Windstorm + 28%, Exile + 28%, Disarmament + 18%, Slip + 18%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -951,6 +1019,11 @@
 				<amount>-13</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-13</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 			<effect name="DamageShield">
 				<amount>8</amount>
@@ -989,7 +1062,6 @@
 		</effects>
 	</skill>
 	<skill id="27638" toLevel="1" name="Gran Kain's Necklace">
-		<!-- NOT USE. -->
 		<!-- MP + 131, STR + 5, INT + 5, CON + 5, Skill Cooldown - 14%, Damage Reflect + 9%, P. Atk. + 19%, M. Atk. + 14%, Max HP + 7%, Max MP + 10%. Resistance to the following abnormal conditions: Shock + 29%, Hate + 29%, Windstorm + 29%, Exile + 29%, Disarmament + 19%, Slip + 19%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1015,6 +1087,11 @@
 				<amount>-14</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-14</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 			<effect name="DamageShield">
 				<amount>9</amount>
@@ -1053,7 +1130,6 @@
 		</effects>
 	</skill>
 	<skill id="27639" toLevel="1" name="Gran Kain's Necklace">
-		<!-- NOT USE. -->
 		<!-- MP + 136, STR + 5, INT + 5, CON + 5, Skill Cooldown - 15%, Damage Reflect + 10%, P. Atk. + 20%, M. Atk. + 15%, Max HP + 7%, Max MP + 10%. Resistance to the following abnormal conditions: Shock + 30%, Hate + 30%, Windstorm + 30%, Exile + 30%, Disarmament + 20%, Slip + 20%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1079,6 +1155,11 @@
 				<amount>-15</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 			<effect name="DamageShield">
 				<amount>10</amount>
@@ -1189,6 +1270,18 @@
 				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-11</value>
+					<value level="3">-12</value>
+					<value level="4">-13</value>
+					<value level="5">-14</value>
+					<value level="6">-15</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 			<effect name="DamageShield">
 				<amount>
@@ -1390,7 +1483,6 @@
 		</effects>
 	</skill>
 	<skill id="27641" toLevel="1" name="Einhasad's Necklace">
-		<!-- NOT USE. -->
 		<!-- MP + 114, STR + 3, INT + 3, CON + 3, Skill Cooldown - 11%, Damage Reflect + 6%, P. Atk. + 11%, M. Atk. + 16%, Max HP + 5%, Max MP + 3%. Resistance to the following abnormal conditions: Shock + 26%, Hate + 26%, Disarmament + 26%, Slip + 26%, Windstorm + 16%, Exile + 16%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1416,6 +1508,11 @@
 				<amount>-11</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-11</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 			<effect name="DamageShield">
 				<amount>6</amount>
@@ -1454,7 +1551,6 @@
 		</effects>
 	</skill>
 	<skill id="27642" toLevel="1" name="Einhasad's Necklace">
-		<!-- NOT USE. -->
 		<!-- MP + 121, STR + 4, INT + 4, CON + 4, Skill Cooldown - 12%, Damage Reflect + 7%, P. Atk. + 12%, M. Atk. + 17%, Max HP + 7%, Max MP + 5%. Resistance to the following abnormal conditions: Shock + 27%, Hate + 27%, Disarmament + 27%, Slip + 27%, Windstorm + 17%, Exile + 17%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1518,7 +1614,6 @@
 		</effects>
 	</skill>
 	<skill id="27643" toLevel="1" name="Einhasad's Necklace">
-		<!-- NOT USE. -->
 		<!-- MP + 126, STR + 4, INT + 4, CON + 4, Skill Cooldown - 13%, Damage Reflect + 8%, P. Atk. + 13%, M. Atk. + 18%, Max HP + 7%, Max MP + 5%. Resistance to the following abnormal conditions: Shock + 28%, Hate + 28%, Disarmament + 28%, Slip + 28%, Windstorm + 18%, Exile + 18%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1582,7 +1677,6 @@
 		</effects>
 	</skill>
 	<skill id="27644" toLevel="1" name="Einhasad's Necklace">
-		<!-- NOT USE. -->
 		<!-- MP + 131, STR + 5, INT + 5, CON + 5, Skill Cooldown - 14%, Damage Reflect + 9%, P. Atk. + 14%, M. Atk. + 19%, Max HP + 10%, Max MP + 7%. Resistance to the following abnormal conditions: Shock + 29%, Hate + 29%, Disarmament + 29%, Slip + 29%, Windstorm + 19%, Exile + 19%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1646,7 +1740,6 @@
 		</effects>
 	</skill>
 	<skill id="27645" toLevel="1" name="Einhasad's Necklace">
-		<!-- NOT USE. -->
 		<!-- MP + 136, STR + 5, INT + 5, CON + 5, Skill Cooldown - 15%, Damage Reflect + 10%, P. Atk. + 15%, M. Atk. + 20%, Max HP + 10%, Max MP + 7%. Resistance to the following abnormal conditions: Shock + 30%, Hate + 30%, Disarmament + 30%, Slip + 30%, Windstorm + 20%, Exile + 20%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2054,7 +2147,6 @@
 		</effects>
 	</skill>
 	<skill id="27647" toLevel="1" name="Pa'agrio's Earring">
-		<!-- NOT USE. -->
 		<!-- MP + 86, DEX + 3, WIT + 3, MEN + 3, Vampiric Effect 5%, MP Consumption - 5%, P. Def. + 15%, M. Def. + 10%, Received Heal Amount + 10%, Recovery Skill Power + 88. Resistance to the following abnormal conditions: Paralysis + 16%, Bluff + 16%, Mental + 16%, Slip + 16%, Aerial Yoke + 11%, Mutation + 11%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2140,7 +2232,6 @@
 		</effects>
 	</skill>
 	<skill id="27648" toLevel="1" name="Pa'agrio's Earring">
-		<!-- NOT USE. -->
 		<!-- MP + 91, DEX + 4, WIT + 4, MEN + 4, Vampiric Effect 6%, MP Consumption - 6%, P. Def. + 16%, M. Def. + 11%, Received Heal Amount + 11%, Recovery Skill Power + 96. Resistance to the following abnormal conditions: Paralysis + 17%, Bluff + 17%, Mental + 17%, Slip + 17%, Aerial Yoke + 12%, Mutation + 12%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2226,7 +2317,6 @@
 		</effects>
 	</skill>
 	<skill id="27649" toLevel="1" name="Pa'agrio's Earring">
-		<!-- NOT USE. -->
 		<!-- MP + 94, DEX + 4, WIT + 4, MEN + 4, Vampiric Effect 6%, MP Consumption - 6%, P. Def. + 16%, M. Def. + 11%, Received Heal Amount + 11%, Recovery Skill Power + 104. Resistance to the following abnormal conditions: Paralysis + 18%, Bluff + 18%, Mental + 18%, Slip + 18%, Aerial Yoke + 13%, Mutation + 13%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2312,7 +2402,6 @@
 		</effects>
 	</skill>
 	<skill id="27650" toLevel="1" name="Pa'agrio's Earring">
-		<!-- NOT USE. -->
 		<!-- MP + 98, DEX + 5, WIT + 5, MEN + 5, Vampiric Effect 7%, MP Consumption - 7%, P. Def. + 17%, M. Def. + 12%, Received Heal Amount + 12%, Recovery Skill Power + 108. Resistance to the following abnormal conditions: Paralysis + 19%, Bluff + 19%, Mental + 19%, Slip + 19%, Aerial Yoke + 14%, Mutation + 14%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2398,7 +2487,6 @@
 		</effects>
 	</skill>
 	<skill id="27651" toLevel="1" name="Pa'agrio's Earring">
-		<!-- NOT USE. -->
 		<!-- MP + 102, DEX + 5, WIT + 5, MEN + 5, Vampiric Effect 7%, MP Consumption - 7%, P. Def. + 17%, M. Def. + 12%, Received Heal Amount + 12%, Recovery Skill Power + 112. Resistance to the following abnormal conditions: Paralysis + 20%, Bluff + 20%, Mental + 20%, Slip + 20%, Aerial Yoke + 15%, Mutation + 15%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2828,7 +2916,6 @@
 		</effects>
 	</skill>
 	<skill id="27653" toLevel="1" name="Eva's Earring">
-		<!-- NOT USE. -->
 		<!-- MP + 86, DEX + 3, WIT + 3, MEN + 3, Vampiric Effect 5%, MP Consumption - 5%, P. Def. + 10%, M. Def. + 15%, Received Heal Amount + 5%, Recovery Skill Power + 168. Resistance to the following abnormal conditions: Paralysis + 16%, Bluff + 16%, Aerial Yoke + 16%, Mutation + 16%, Mental + 11%, Slip + 11%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2914,7 +3001,6 @@
 		</effects>
 	</skill>
 	<skill id="27654" toLevel="1" name="Eva's Earring">
-		<!-- NOT USE. -->
 		<!-- MP + 91, DEX + 4, WIT + 4, MEN + 4, Vampiric Effect 6%, MP Consumption - 6%, P. Def. + 11%, M. Def. + 16%, Received Heal Amount + 6%, Recovery Skill Power + 176. Resistance to the following abnormal conditions: Paralysis + 17%, Bluff + 17%, Aerial Yoke + 17%, Mutation + 17%, Mental + 12%, Slip + 12%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -3000,7 +3086,6 @@
 		</effects>
 	</skill>
 	<skill id="27655" toLevel="1" name="Eva's Earring">
-		<!-- NOT USE. -->
 		<!-- MP + 94, DEX + 4, WIT + 4, MEN + 4, Vampiric Effect 6%, MP Consumption - 6%, P. Def. + 11%, M. Def. + 16%, Received Heal Amount + 6%, Recovery Skill Power + 184. Resistance to the following abnormal conditions: Paralysis + 18%, Bluff + 18%, Aerial Yoke + 18%, Mutation + 18%, Mental + 13%, Slip + 13%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -3086,7 +3171,6 @@
 		</effects>
 	</skill>
 	<skill id="27656" toLevel="1" name="Eva's Earring">
-		<!-- NOT USE. -->
 		<!-- MP + 98, DEX + 5, WIT + 5, MEN + 5, Vampiric Effect 7%, MP Consumption - 7%, P. Def. + 12%, M. Def. + 17%, Received Heal Amount + 7%, Recovery Skill Power + 188. Resistance to the following abnormal conditions: Paralysis + 19%, Bluff + 19%, Aerial Yoke + 19%, Mutation + 19%, Mental + 14%, Slip + 14%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -3172,7 +3256,6 @@
 		</effects>
 	</skill>
 	<skill id="27657" toLevel="1" name="Eva's Earring">
-		<!-- NOT USE. -->
 		<!-- MP + 102, DEX + 5, WIT + 5, MEN + 5, Vampiric Effect 7%, MP Consumption - 7%, P. Def. + 12%, M. Def. + 17%, Received Heal Amount + 7%, Recovery Skill Power + 192. Resistance to the following abnormal conditions: Paralysis + 20%, Bluff + 20%, Aerial Yoke + 20%, Mutation + 20%, Mental + 15%, Slip + 15%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -3560,7 +3643,6 @@
 		</effects>
 	</skill>
 	<skill id="27659" toLevel="1" name="Sayha's Ring">
-		<!-- NOT USE. -->
 		<!-- MP + 57, CHA + 3, LUC + 3, P. Critical Damage + 20%, Atk. Spd. + 6%, Casting Spd. + 6%, PvP Damage + 8%, Received PvP Damage - 5%, P. Skill Critical Damage + 10%, M. Skill Critical Damage + 5%. Resistance to the following abnormal conditions: Shock + 16%, Pull + 16%, Knock Back/Knock Down + 16%, Hold + 16%, Seduction + 11%, Petrification + 11%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -3635,7 +3717,6 @@
 		</effects>
 	</skill>
 	<skill id="27660" toLevel="1" name="Sayha's Ring">
-		<!-- NOT USE. -->
 		<!-- MP + 60, CHA + 4, LUC + 4, P. Critical Damage + 21%, Atk. Spd. + 7%, Casting Spd. + 7%, PvP Damage + 9%, Received PvP Damage - 6%, P. Skill Critical Damage + 11%, M. Skill Critical Damage + 6%. Resistance to the following abnormal conditions: Shock + 17%, Pull + 17%, Knock Back/Knock Down + 17%, Hold + 17%, Seduction + 12%, Petrification + 12%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -3710,7 +3791,6 @@
 		</effects>
 	</skill>
 	<skill id="27661" toLevel="1" name="Sayha's Ring">
-		<!-- NOT USE. -->
 		<!-- MP + 62, CHA + 4, LUC + 4, P. Critical Damage + 21%, Atk. Spd. + 7%, Casting Spd. + 7%, PvP Damage + 9%, Received PvP Damage - 6%, P. Skill Critical Damage + 11%, M. Skill Critical Damage + 6%. Resistance to the following abnormal conditions: Shock + 18%, Pull + 18%, Knock Back/Knock Down + 18%, Hold + 18%, Seduction + 13%, Petrification + 13%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -3785,7 +3865,6 @@
 		</effects>
 	</skill>
 	<skill id="27662" toLevel="1" name="Sayha's Ring">
-		<!-- NOT USE. -->
 		<!-- MP + 64, CHA + 5, LUC + 5, P. Critical Damage + 22%, Atk. Spd. + 8%, Casting Spd. + 8%, PvP Damage + 10%, Received PvP Damage - 7%, P. Skill Critical Damage + 12%, M. Skill Critical Damage + 7%. Resistance to the following abnormal conditions: Shock + 19%, Pull + 19%, Knock Back/Knock Down + 19%, Hold + 19%, Seduction + 14%, Petrification + 14%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -3860,7 +3939,6 @@
 		</effects>
 	</skill>
 	<skill id="27663" toLevel="1" name="Sayha's Ring">
-		<!-- NOT USE. -->
 		<!-- MP + 68, CHA + 5, LUC + 5, P. Critical Damage + 22%, Atk. Spd. + 8%, Casting Spd. + 8%, PvP Damage + 10%, Received PvP Damage - 7%, P. Skill Critical Damage + 12%, M. Skill Critical Damage + 7%. Resistance to the following abnormal conditions: Shock + 20%, Pull + 20%, Knock Back/Knock Down + 20%, Hold + 20%, Seduction + 15%, Petrification + 15%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -4237,7 +4315,6 @@
 		</effects>
 	</skill>
 	<skill id="27665" toLevel="1" name="Maphr's Ring">
-		<!-- NOT USE. -->
 		<!-- MP + 57, CHA + 3, LUC + 3, P. Critical Damage + 20%, Atk. Spd. + 6%, Casting Spd. + 6%, PvP Damage + 5%, Received PvP Damage - 8%, P. Skill Critical Damage + 5%, M. Skill Critical Damage + 10%. Resistance to the following abnormal conditions: Shock + 16%, Pull + 16%, Seduction + 16%, Petrification + 16%, Knock Back/Knock Down + 11%, Hold + 11%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -4312,7 +4389,6 @@
 		</effects>
 	</skill>
 	<skill id="27666" toLevel="1" name="Maphr's Ring">
-		<!-- NOT USE. -->
 		<!-- MP + 60, CHA + 4, LUC + 4, P. Critical Damage + 21%, Atk. Spd. + 7%, Casting Spd. + 7%, PvP Damage + 6%, Received PvP Damage - 9%, P. Skill Critical Damage + 6%, M. Skill Critical Damage + 11%. Resistance to the following abnormal conditions: Shock + 17%, Pull + 17%, Seduction + 17%, Petrification + 17%, Knock Back/Knock Down + 12%, Hold + 12%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -4387,7 +4463,6 @@
 		</effects>
 	</skill>
 	<skill id="27667" toLevel="1" name="Maphr's Ring">
-		<!-- NOT USE. -->
 		<!-- MP + 62, CHA + 4, LUC + 4, P. Critical Damage + 21%, Atk. Spd. + 7%, Casting Spd. + 7%, PvP Damage + 6%, Received PvP Damage - 9%, P. Skill Critical Damage + 6%, M. Skill Critical Damage + 11%. Resistance to the following abnormal conditions: Shock + 18%, Pull + 18%, Seduction + 18%, Petrification + 18%, Knock Back/Knock Down + 13%, Hold + 13%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -4462,7 +4537,6 @@
 		</effects>
 	</skill>
 	<skill id="27668" toLevel="1" name="Maphr's Ring">
-		<!-- NOT USE. -->
 		<!-- MP + 64, CHA + 5, LUC + 5, P. Critical Damage + 22%, Atk. Spd. + 8%, Casting Spd. + 8%, PvP Damage + 7%, Received PvP Damage - 10%, P. Skill Critical Damage + 7%, M. Skill Critical Damage + 12%. Resistance to the following abnormal conditions: Shock + 19%, Pull + 19%, Seduction + 19%, Petrification + 19%, Knock Back/Knock Down + 14%, Hold + 14%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -4537,7 +4611,6 @@
 		</effects>
 	</skill>
 	<skill id="27669" toLevel="1" name="Maphr's Ring">
-		<!-- NOT USE. -->
 		<!-- MP + 68, CHA + 5, LUC + 5, P. Critical Damage + 22%, Atk. Spd. + 8%, Casting Spd. + 8%, PvP Damage + 7%, Received PvP Damage - 10%, P. Skill Critical Damage + 7%, M. Skill Critical Damage + 12%. Resistance to the following abnormal conditions: Shock + 20%, Pull + 20%, Seduction + 20%, Petrification + 20%, Knock Back/Knock Down + 15%, Hold + 15%. -->
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>

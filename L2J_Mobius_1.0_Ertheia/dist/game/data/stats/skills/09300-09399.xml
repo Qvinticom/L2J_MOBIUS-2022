@@ -201,7 +201,6 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -224,7 +223,6 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -247,7 +245,6 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -699,6 +696,11 @@
 				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>2</magicType>
 			</effect>
 			<effect name="MagicMpCost">
 				<amount>-10</amount>
@@ -1520,6 +1522,21 @@
 		<reuseDelay>1800000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DebuffBlock" />
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>BUFF</slot>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9369" toLevel="2" name="Power of Maphr">
 		<!-- Enchant success rate + 10%. Not for No-grade items. -->
@@ -1719,7 +1736,6 @@
 		<icon>icon.skill1403</icon>
 		<operateType>A1</operateType>
 		<mpConsume>20</mpConsume>
-		<castRange>-2</castRange>
 		<hitTime>15000</hitTime>
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>467</effectPoint>

@@ -21,11 +21,11 @@
 			<value level="3">4</value>
 			<value level="4">5</value>
 			<value level="5">6</value>
-			<value level="6">6</value>
-			<value level="7">7</value>
-			<value level="8">8</value>
-			<value level="9">9</value>
-			<value level="10">10</value>
+			<value level="6">7</value>
+			<value level="7">8</value>
+			<value level="8">9</value>
+			<value level="9">10</value>
+			<value level="10">11</value>
 		</abnormalLvl>
 		<magicLvl>
 			<value level="1">1</value>
@@ -154,14 +154,8 @@
 				</amount>
 				<type>PK</type>
 			</effect>
-			<effect name="PhysicalDefence">
+			<effect name="PhysicalDefence" fromLevel="7" toLevel="10">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
 					<value level="7">1</value>
 					<value level="8">2</value>
 					<value level="9">3</value>
@@ -169,14 +163,8 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalDefence">
+			<effect name="MagicalDefence" fromLevel="7" toLevel="10">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
 					<value level="7">1</value>
 					<value level="8">2</value>
 					<value level="9">3</value>

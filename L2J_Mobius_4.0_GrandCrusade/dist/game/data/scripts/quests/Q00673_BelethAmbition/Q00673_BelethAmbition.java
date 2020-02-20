@@ -40,7 +40,6 @@ public class Q00673_BelethAmbition extends Quest
 	{
 		29218, // Balok
 		29250, // Beleth
-		26249, // Darion
 	};
 	// Misc
 	private static final int MIN_LEVEL = 85;

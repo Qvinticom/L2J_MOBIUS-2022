@@ -506,6 +506,11 @@
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 			<effect name="MagicMpCost">
 				<amount>-15</amount>
 				<mode>PER</mode>
@@ -1096,20 +1101,56 @@
 	<skill id="32874" toLevel="1" name="Server Level Ranking 1st Class">
 		<!-- Benefits for ranks 1-10 in server level. All Stats +1, Recovery Potion / Elixir Effect +500 Normal Attack / M. Critical Rate Limit +50, Speed Limit +20 Max HP Limit +30000, Max HP +15000 -->
 		<icon>icon.server_ranking_1</icon>
-		<operateType>A1</operateType>
-		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<canBeDispelled>false</canBeDispelled>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="32875" toLevel="1" name="Server Level Ranking 2nd Class">
 		<!-- Benefits for ranks 11-50 in server level. All Stats +1, Recovery Potion / Elixir Effect +500 Normal Attack / M. Critical Rate Limit +50, Speed Limit +20 -->
 		<icon>icon.server_ranking_2</icon>
-		<operateType>A1</operateType>
-		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<canBeDispelled>false</canBeDispelled>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="32876" toLevel="1" name="Server Level Ranking 3rd Class">
 		<!-- Benefits for ranks 51-100 in server level. All Stats +1, Recovery Potion / Elixir Effect +500 -->
 		<icon>icon.server_ranking_3</icon>
-		<operateType>A1</operateType>
-		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<canBeDispelled>false</canBeDispelled>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="32877" toLevel="1" name="Human Level Ranking 1st Class">
 		<!-- Benefits for ranks 1-10 amongst Humans. P. Atk. / M. Atk. / P. Def. / M. Def. / Max HP / Max MP +1% -->
@@ -1129,8 +1170,7 @@
 		<affectLimit>50-50</affectLimit>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
-		<affectScope>PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MaxHp">
 				<amount>1</amount>
@@ -1172,12 +1212,9 @@
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<canBeDispelled>false</canBeDispelled>
-		<affectRange>1000</affectRange>
-		<affectLimit>50-50</affectLimit>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
-		<affectScope>PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Speed">
 				<amount>20</amount>
@@ -1219,12 +1256,9 @@
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<canBeDispelled>false</canBeDispelled>
-		<affectRange>1000</affectRange>
-		<affectLimit>50-50</affectLimit>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
-		<affectScope>PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="StatUp">
 				<amount>2</amount>
@@ -1270,18 +1304,15 @@
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<canBeDispelled>false</canBeDispelled>
-		<affectRange>1000</affectRange>
-		<affectLimit>50-50</affectLimit>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
-		<affectScope>PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MaxHp">
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
-	  		<effect name="PAtk">
+	 		<effect name="PAtk">
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1301,12 +1332,9 @@
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<canBeDispelled>false</canBeDispelled>
-		<affectRange>1000</affectRange>
-		<affectLimit>50-50</affectLimit>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
-		<affectScope>PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 		 	<effect name="MaxHp">
 				<amount>2</amount>
@@ -1336,12 +1364,9 @@
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<canBeDispelled>false</canBeDispelled>
-		<affectRange>1000</affectRange>
-		<affectLimit>50-50</affectLimit>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
-		<affectScope>PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PvePhysicalAttackDamageBonus">
 				<amount>2</amount>
@@ -1375,8 +1400,6 @@
 		<abnormalTime>-1</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<canBeDispelled>false</canBeDispelled>
-		<affectRange>1000</affectRange>
-		<affectLimit>50-50</affectLimit>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
@@ -1467,6 +1490,7 @@
 				<amount>15000</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<!-- TODO: Add +30000 to hp limit -->
 		</effects>
 	</skill>
 	<skill id="32887" toLevel="1" name="Race Ranking Benefit">

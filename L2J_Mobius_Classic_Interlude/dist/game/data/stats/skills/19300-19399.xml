@@ -2,11 +2,11 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19300" toLevel="1" name="Reverse Mana Drain">
 		<icon>icon.skill19299</icon>
-		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<operateType>A1</operateType>
 		<effectPoint>-709</effectPoint>
 		<isTriggeredSkill>true</isTriggeredSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ManaHealPercent">
 				<power>3</power>
@@ -18,23 +18,29 @@
 		<icon>icon.skill19301</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
-		<magicCriticalRate>5</magicCriticalRate>
-		<mpConsume>
-			<value level="1">76</value>
-			<value level="2">79</value>
-			<value level="3">83</value>
-			<value level="4">87</value>
-			<value level="5">91</value>
-			<value level="6">95</value>
-			<value level="7">99</value>
-			<value level="8">103</value>
-			<value level="9">107</value>
-		</mpConsume>
+		<mpConsume>107</mpConsume>
 		<castRange>900</castRange>
-		<effectRange>1100</effectRange>
-		<hitTime>2000</hitTime>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+		</abnormalLvl>
 		<reuseDelay>15000</reuseDelay>
-		<effectPoint>-711</effectPoint>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>130</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">87</value>
@@ -46,9 +52,19 @@
 			<value level="8">103</value>
 			<value level="9">105</value>
 		</magicLvl>
+		<lvlBonusRate>20</lvlBonusRate>
+		<mpConsume>1</mpConsume>
+		<effectPoint>-711</effectPoint>
+		<effectRange>900</effectRange>
 		<isDebuff>true</isDebuff>
+		<basicProperty>NONE</basicProperty>
+		<hitTime>2000</hitTime>
+		<hitCancelTime>0</hitCancelTime>
+		<trait>ZONE</trait>
 		<targetType>GROUND</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<channelingStart>1</channelingStart>
 		<effects>
 			<effect name="SummonNpc">
 				<npcId>
@@ -63,13 +79,29 @@
 					<value level="9">13549</value>
 				</npcId>
 				<npcCount>1</npcCount>
+				<despawnDelay>15000</despawnDelay>
+				<singleInstance>true</singleInstance>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefence">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="BlockSkill">
+				<magicTypes>1</magicTypes>
 			</effect>
 		</effects>
-		<selfEffects>
-			<effect name="DispelBySlot">
-				<dispel>HIDE,-1</dispel>
-			</effect>
-		</selfEffects>
 	</skill>
 	<skill id="19302" toLevel="9" name="Thrown Acid Sworm">
 		<!-- Poisoned. Decreases Speed/Attack/P. Defense/M. Defense/Shield Defense, blocks magical skills and drains HP by $s1 every second. -->
@@ -162,22 +194,10 @@
 	<skill id="19303" toLevel="7" name="Right Angle Reverse">
 		<!-- Moves to the right side of the target to attempt Deadly Attack with $s1 power added to P. Attack. Causes Bleed on the target for $s2. Half-kill is possible. Requires dagger/dual dagger. -->
 		<icon>icon.skill19303</icon>
-		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">2</value>
-			<value level="3">3</value>
-			<value level="4">4</value>
-			<value level="5">5</value>
-			<value level="6">6</value>
-			<value level="7">7</value>
-		</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>80</activateRate>
 		<operateType>DA5</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
 		<castRange>80</castRange>
 		<magicLvl>
 			<value level="1">85</value>
@@ -197,13 +217,15 @@
 			<value level="6">105</value>
 			<value level="7">110</value>
 		</mpConsume>
+		<activateRate>0</activateRate>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<effectPoint>-709</effectPoint>
-		<isDebuff>true</isDebuff>
 		<nextAction>ATTACK</nextAction>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -236,12 +258,9 @@
 				<fullLethal>0</fullLethal>
 				<halfLethal>15</halfLethal>
 			</effect>
-			<effect name="Heal">
-				<power>-70</power>
-				<ticks>5</ticks>
-			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
+			<effect name="CallSkill">
+				<skillId>19528</skillId> <!-- Right Angle Reverse - Stun -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -277,6 +296,12 @@
 				<amount>10</amount>
 				<mode>PER</mode>
 				<position>BACK</position>
+			</effect>
+			<effect name="ReuseSkillById">
+				<skillId>19303</skillId>
+			</effect>
+			<effect name="ReuseSkillById">
+				<skillId>10705</skillId>
 			</effect>
 		</effects>
 	</skill>
@@ -729,11 +754,12 @@
 		<abnormalType>MANA_BURST</abnormalType>
 		<activateRate>100</activateRate>
 		<operateType>A2</operateType>
-		<isMagic>2</isMagic>
+		<isMagic>22</isMagic>
 		<mpConsume>70</mpConsume>
 		<effectPoint>696</effectPoint>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<reuseDelay>1800</reuseDelay>
 		<effects>
 			<effect name="MAtk">
 				<amount>
@@ -754,6 +780,9 @@
 			</effect>
 		</effects>
 		<endEffects>
+			<effect name="ReuseSkillById">
+				<skillId>11066</skillId> <!--  Arcane Comet Strike -->
+			</effect>
 			<effect name="CallSkill" fromLevel="1" toLevel="1">
 				<skillId>19315</skillId> <!-- Mana Burst -->
 				<skillLevel>2</skillLevel>

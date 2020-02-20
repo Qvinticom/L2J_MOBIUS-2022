@@ -254,6 +254,38 @@
 				<amount>100</amount>
 				<attribute>DARK</attribute>
 			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="18703" toLevel="1" name="Pa'agrio's Blessing - Exp">
@@ -347,6 +379,12 @@
 			<effect name="AttackAttribute">
 				<amount>100</amount>
 				<attribute>DARK</attribute>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-12</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -521,7 +559,9 @@
 			<condition name="OpTargetPc" />
 		</targetConditions>
 		<effects>
-			<effect name="TargetCancel" />
+			<effect name="TargetCancel">
+				<chance>80</chance>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="18721" toLevel="1" name="Greater Garnet - Cancel Stun/Silence">

@@ -66,6 +66,10 @@
 			<effect name="PAtk">
 				<amount>30</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -105,6 +109,10 @@
 			<effect name="PvePhysicalAttackDamageBonus">
 				<amount>20</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
 			</effect>
 		</effects>
 	</skill>
@@ -192,6 +200,13 @@
 			<effect name="MaxHp">
 				<amount>4636</amount>
 				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
 				<armorType>
 					<item>LIGHT</item>
 				</armorType>
@@ -1957,6 +1972,10 @@
 			<effect name="PAtk">
 				<amount>30</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -2725,6 +2744,9 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="BlockSkill">
+				<magicTypes>0;1;2;3;4;22</magicTypes>
+			</effect>
 			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="6001" toSubLevel="6020">
 				<amount>
 					<value fromLevel="3" toLevel="7" fromSubLevel="6001" toSubLevel="6020">{0.6 + 0.4 * subIndex}</value>
@@ -2952,7 +2974,6 @@
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>687</effectPoint>
-		<abnormalType>RHAPSODY</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>89</magicLvl>
@@ -3122,6 +3143,12 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<endEffects>
+			<effect name="CallSkill">
+				<skillId>19504</skillId> <!-- Tempted -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="11547" toLevel="10" name="Superior HP Recovery">
 		<!-- HP Recovery Bonus + $s1. STR + $s2. -->
@@ -3193,7 +3220,7 @@
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>100</minDamage>
-				<chance>5</chance>
+				<chance>30</chance>
 				<targetType>SELF</targetType>
 				<isCritical>false</isCritical>
 				<allowWeapons>SWORD,BLUNT,DUAL,DUALBLUNT</allowWeapons>
@@ -3652,7 +3679,6 @@
 		<magicLvl>85</magicLvl>
 		<isMagic>2</isMagic>
 		<reuseDelay>3000</reuseDelay>
-		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -3672,6 +3698,38 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="TriggerSkillByMagicType">
+				<!-- Cancel Shadow Move -->
+				<magicTypes>0;1;2;3;4</magicTypes>
+				<skillId>7097</skillId> <!-- Cancel Shadow Move -->
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
+				<targetType>MY_PARTY</targetType>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Cancel Shadow Move -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>MY_PARTY</targetType>
+				<isCritical>true</isCritical>
+				<skillId>7097</skillId> <!-- Cancel Shadow Move -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Cancel Shadow Move -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>MY_PARTY</targetType>
+				<skillId>7097</skillId> <!-- Cancel Shadow Move -->
+				<skillLevel>1</skillLevel>
+				<isCritical>false</isCritical>
 			</effect>
 		</effects>
 	</skill>

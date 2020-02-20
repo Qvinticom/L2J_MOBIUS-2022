@@ -399,6 +399,7 @@
 	</skill>
 	<skill id="16727" toLevel="1" name="Helios Storm Fist">
 		<operateType>A1</operateType>
+		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
 		<effectPoint>-100</effectPoint>
 		<effectRange>600</effectRange>
@@ -1015,6 +1016,11 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="16753" toLevel="1" name="Mimir's Worn Ring">
@@ -1100,8 +1106,8 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="KnockBack">
-				<distance>250</distance>
-				<speed>600</speed>
+				<distance>50</distance>
+				<speed>400</speed>
 				<knockDown>true</knockDown>
 			</effect>
 			<effect name="DefenceTrait">
@@ -1175,24 +1181,46 @@
 	</skill>
 	<skill id="16763" toLevel="6" name="Critical Slasher">
 		<icon>icon.skill16636</icon>
+		<castRange>40</castRange>
 		<operateType>A1</operateType>
-		<targetType>SELF</targetType>
 		<mpConsume>1</mpConsume>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
-		<effectPoint>-2</effectPoint>
-		<isDebuff>1</isDebuff>
+		<effectPoint>-100</effectPoint>
+		<effectRange>400</effectRange>
+		<reuseDelay>5000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>12-12</affectLimit>
+		<affectRange>150</affectRange>
+		<magicLvl>-1</magicLvl>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>350000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16764" toLevel="1" name="Fatal Strike">
 		<icon>icon.skill16202</icon>
-		<operateType>A1</operateType>
-		<targetType>SELF</targetType>
-		<mpConsume>1</mpConsume>
 		<castRange>40</castRange>
+		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
 		<hitTime>1500</hitTime>
 		<coolTime>1000</coolTime>
-		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<effectRange>400</effectRange>
+		<reuseDelay>5000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<magicLvl>-1</magicLvl>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>10000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16765" toLevel="1" name="Fatal Shot">
 		<icon>icon.skill16203</icon>
@@ -1207,13 +1235,26 @@
 	</skill>
 	<skill id="16766" toLevel="1" name="Fatal Slasher">
 		<icon>icon.skill16204</icon>
+		<castRange>40</castRange>
 		<operateType>A1</operateType>
-		<targetType>SELF</targetType>
 		<mpConsume>1</mpConsume>
 		<hitTime>2000</hitTime>
 		<coolTime>1000</coolTime>
-		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<effectRange>400</effectRange>
+		<reuseDelay>5000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>150</affectRange>
+		<magicLvl>-1</magicLvl>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>10000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16767" toLevel="1" name="Burst Shot">
 		<icon>icon.skill16205</icon>
@@ -1233,10 +1274,19 @@
 		<castRange>900</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
-		<effectPoint>-100</effectPoint>
+		<effectPoint>-900</effectPoint>
 		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>10000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16769" toLevel="1" name="Energy Burst">
+		<affectLimit>6-12</affectLimit>
+		<affectRange>200</affectRange>
 		<icon>icon.skill16212</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1246,8 +1296,25 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>600</attributeValue>
+		<magicLvl>-1</magicLvl>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>10000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16770" toLevel="1" name="Energy Blast">
+		<affectLimit>5-12</affectLimit>
+		<affectRange>100</affectRange>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>600</attributeValue>
+		<magicLvl>-1</magicLvl>
 		<icon>icon.skill16218</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1258,6 +1325,14 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>10000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16771" toLevel="1" name="Death Lift">
 		<!-- Lifts the target while dealing damage -->
@@ -1536,12 +1611,34 @@
 		<!-- Pulls every target in the specified range toward you. -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
 		<castRange>600</castRange>
 		<hitTime>500</hitTime>
 		<coolTime>1000</coolTime>
 		<effectPoint>-2140</effectPoint>
 		<isDebuff>1</isDebuff>
+		<abnormalType>STUN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>102</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<trait>PULL</trait>
+		<affectRange>1500</affectRange>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PullBack">
+				<speed>600</speed>
+				<delay>650</delay>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
+			</effect>
+			<effect name="GetAgro" />
+		</effects>
 	</skill>
 	<skill id="16795" toLevel="1" name="Vampiric Force">
 		<!-- Applies HP Drain attack to the target in the specified range and obtains the Vampiric Rage effect for 10 sec. -->
@@ -1565,14 +1662,30 @@
 	</skill>
 	<skill id="16797" toLevel="1" name="Curse of Silence">
 		<!-- Attacks the vicinity of the target and blocks P./ M. Skills for 10 sec. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>SILENCE_ALL</abnormalType>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<lvlBonusRate>30</lvlBonusRate>
+		<magicLvl>102</magicLvl>
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
 		<castRange>600</castRange>
 		<hitTime>2000</hitTime>
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
-		<isDebuff>3</isDebuff>
+		<isDebuff>true</isDebuff>
+		<trait>DERANGEMENT</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>1500</affectRange>
+		<effects>
+			<effect name="Mute" />
+			<effect name="PhysicalMute" />
+		</effects>
 	</skill>
 	<skill id="16798" toLevel="1" name="Absolute Black">
 		<!-- Attacks the nearby enemies to inflict Stun for 5 sec. -->

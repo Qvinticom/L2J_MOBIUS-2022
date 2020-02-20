@@ -254,6 +254,38 @@
 				<amount>100</amount>
 				<attribute>DARK</attribute>
 			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="18703" toLevel="1" name="Pa'agrio's Blessing">
@@ -347,6 +379,12 @@
 			<effect name="AttackAttribute">
 				<amount>100</amount>
 				<attribute>DARK</attribute>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-12</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -521,7 +559,9 @@
 			<condition name="OpTargetPc" />
 		</targetConditions>
 		<effects>
-			<effect name="TargetCancel" />
+			<effect name="TargetCancel">
+				<chance>80</chance>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="18721" toLevel="1" name="Greater Garnet - Cancel Stun/Silence">
@@ -1853,29 +1893,29 @@
 		<!-- Increases P. Attack by $s2, P. Defense by $s3, M. Attack by $s4 and M. Defense by $s5 for $s1. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A1</operateType>
-		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
+		<castRange>900</castRange>
 	</skill>
 	<skill id="18773" toLevel="4" name="Drum Melody">
 		<!-- Decreases Maximum MP by $s2, HP Recovery bonus by $s3, M. Critical Rate by $s4, Critical Damage for general attacks by $s5, attack by $s6, P. Defense by $s7, Attack Speed by $s8, M. Attack by $s9, M. Defense by $s10, Casting Speed by $s11, Debuff Resistance by $s12, and Critical Damage Received by $s13 for $s1. Additionally, a party member who is equipped with a melee weapon, bow and crossbow and hit by an attack with certain power experiences boosted critical damage for general attacks. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A1</operateType>
-		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
+		<castRange>900</castRange>
 	</skill>
 	<skill id="18774" toLevel="4" name="Pipe Organ Melody">
 		<!-- Increases Maximum HP by $s2, Maximum MP by $s3, Maximum CP by $s4 and HP Recovery bonus by $s5 for $s1. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A1</operateType>
-		<castRange>900</castRange>
 		<effectPoint>712</effectPoint>
+		<castRange>900</castRange>
 	</skill>
 	<skill id="18775" toLevel="4" name="Guitar Melody">
 		<!-- Increases P. Critical Rate by $s2, P. Critical Damage by $s3, and M. Critical Rate by $s4, and decreases MP consumption by P./M. skills and Yis Enchanter??s enchanting skills by $s5, $s6, and $s7, respectively, for $s1. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A1</operateType>
-		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
+		<castRange>900</castRange>
 	</skill>
 	<skill id="18776" toLevel="4" name="Harp Melody">
 		<!-- Increases P. Accuracy by $s2 and P./M. Evasion by $s3, and Speed by $s4, and decreases Critical Damage Received by $s5 for $s1. -->
@@ -1963,7 +2003,7 @@
 		<reuseDelay>1800000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="18788" toLevel="2" name="Puss the Cat??s Blessing">
+	<skill id="18788" toLevel="2" name="Puss the Cat's Blessing">
 		<!-- Puss the Cat gave you this buff as encouragement for cultivating watermelons. It increases bonus XP obtained under the Vitality state by 30% and gives you 250 Nectars at the end of the buff??s duration. Be careful - you won??t get any of them when you??re dead. -->
 		<icon>icon.accessory_cat_the_cat_cap_i00</icon>
 		<operateType>A1</operateType>
@@ -1971,7 +2011,7 @@
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="18789" toLevel="1" name="Puss the Cat??s Gift">
+	<skill id="18789" toLevel="1" name="Puss the Cat's Gift">
 		<icon>icon.accessory_cat_the_cat_cap_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -2034,7 +2074,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18794" toLevel="2" name="Puss the Cat??s Blessing">
+	<skill id="18794" toLevel="2" name="Puss the Cat's Blessing">
 		<!-- Puss the Cat gave you this buff as encouragement for cultivating watermelons. It increases bonus XP obtained under the Vitality state by 30% and gives you 100 Nectars at the end of the buff??s duration. Be careful - you won??t get any of them when you??re dead. -->
 		<icon>icon.accessory_cat_the_cat_cap_i00</icon>
 		<operateType>A1</operateType>
@@ -2042,19 +2082,19 @@
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="18795" toLevel="1" name="Puss the Cat??s Gift">
+	<skill id="18795" toLevel="1" name="Puss the Cat's Gift">
 		<icon>icon.accessory_cat_the_cat_cap_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="18796" toLevel="3" name="Angel??s Fortune Box">
+	<skill id="18796" toLevel="3" name="Angel's Fortune Box">
 		<!-- Double-click to obtain 30 Shining Magic Baits. Either Archangel??s Box of Grace or Nevit??s Blessing Box is available to get with a random chance. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="18797" toLevel="1" name="Nevit??s Gold Hourglass">
+	<skill id="18797" toLevel="1" name="Nevit's Gold Hourglass">
 		<!-- Increases EXP/SP acquired from hunting by 50% for 30 minutes and obtains 1 Shining Scroll of Growth each time you obtain 5 billion EXP. -->
 		<icon>icon.bm_nebit_bonus_time_up</icon>
 		<operateType>A1</operateType>

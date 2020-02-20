@@ -839,7 +839,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<affectRange>1000</affectRange>
 		<reuseDelay>
 			<value level="1">2250000</value>
 			<value level="2">2100000</value>
@@ -998,6 +1000,9 @@
 				</templates>
 			</effect>
 			<effect name="DeleteHate" />
+			<effect name="BlockSkill">
+				<magicTypes>0;1;2;3;4;22</magicTypes>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="27353" toLevel="12" name="Battle Rhapsody">
@@ -1106,11 +1111,11 @@
 		<isMagic>1</isMagic>
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
 		<abnormalTime>3600</abnormalTime>
-		<effectRange>1100</effectRange>
+		<effectRange>-1</effectRange>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>TARGET</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<reuseDelay>
@@ -1340,7 +1345,6 @@
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<effectPoint>379</effectPoint>
-		<abnormalType>DMG_SHIELD</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>

@@ -342,11 +342,11 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>SWORD</item>
-					<item> BLUNT</item>
-					<item> DUAL</item>
-					<item> DUALFIST</item>
-					<item> POLE</item>
-					<item> DUALBLUNT</item>
+					<item>BLUNT</item>
+					<item>DUAL</item>
+					<item>DUALFIST</item>
+					<item>POLE</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="CriticalDamage">
@@ -354,11 +354,11 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>SWORD</item>
-					<item> BLUNT</item>
-					<item> DUAL</item>
-					<item> DUALFIST</item>
-					<item> POLE</item>
-					<item> DUALBLUNT</item>
+					<item>BLUNT</item>
+					<item>DUAL</item>
+					<item>DUALFIST</item>
+					<item>POLE</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="CriticalRate">
@@ -366,11 +366,11 @@
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>SWORD</item>
-					<item> BLUNT</item>
-					<item> DUAL</item>
-					<item> DUALFIST</item>
-					<item> POLE</item>
-					<item> DUALBLUNT</item>
+					<item>BLUNT</item>
+					<item>DUAL</item>
+					<item>DUALFIST</item>
+					<item>POLE</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
 		</effects>
@@ -1328,6 +1328,9 @@
 				</criticalChance>
 				<pDefMod>0.7</pDefMod>
 			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10331" toLevel="1" name="Last Man Standing">
@@ -1645,16 +1648,8 @@
 	</skill>
 	<skill id="10340" toLevel="3" name="Blade Slasher">
 		<!-- Attacks enemies in front with 16214 Power added to P. Atk. If the target is stunned, attacks with 48641 power. Can be used while a sword or blunt weapon is equipped. Consumes 1 Soulstone. -->
-		<itemConsumeCount>
-			<value level="1">1</value>
-			<value level="2">1</value>
-			<value level="3">1</value>
-		</itemConsumeCount>
-		<itemConsumeId>
-			<value level="1">1785</value>
-			<value level="2">1785</value>
-			<value level="3">1785</value>
-		</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
 		<mpConsume>
 			<value level="1">233</value>
 			<value level="2">236</value>
@@ -1666,18 +1661,18 @@
 			<value level="3">105</value>
 		</magicLvl>
 		<affectLimit>6-12</affectLimit>
-		<affectRange>150</affectRange>
+		<affectRange>400</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<operateType>A1</operateType>
-		<fanRange>0;0;200;900</fanRange>
+		<fanRange>0;0;400;90</fanRange>
 		<castRange>40</castRange>
 		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>s
+		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-125</effectPoint>
 		<staticReuse>true</staticReuse>
-		<targetType>TARGET</targetType>
-		<affectScope>SQUARE_PB</affectScope>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<nextAction>ATTACK</nextAction>
 		<conditions>

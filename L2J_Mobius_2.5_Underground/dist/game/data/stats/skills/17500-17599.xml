@@ -581,7 +581,6 @@
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>85</magicLvl>
 		<reuseDelay>1800000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -601,7 +600,6 @@
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>85</magicLvl>
 		<reuseDelay>1800000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -621,7 +619,6 @@
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>85</magicLvl>
 		<reuseDelay>1800000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -641,7 +638,6 @@
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
-		<magicLvl>85</magicLvl>
 		<reuseDelay>1800000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -667,6 +663,10 @@
 			</effect>
 			<effect name="StatUp">
 				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
 				<stat>CON</stat>
 			</effect>
 			<effect name="StatUp">
@@ -675,11 +675,11 @@
 			</effect>
 			<effect name="StatUp">
 				<amount>1</amount>
-				<stat>INT</stat>
+				<stat>WIT</stat>
 			</effect>
 			<effect name="StatUp">
 				<amount>1</amount>
-				<stat>WIT</stat>
+				<stat>MEN</stat>
 			</effect>
 			<effect name="StatUp">
 				<amount>1</amount>

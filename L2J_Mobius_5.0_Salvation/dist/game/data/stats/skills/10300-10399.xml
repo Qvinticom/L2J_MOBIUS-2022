@@ -1325,7 +1325,6 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>60</activateRate> <!-- Guessed -->
 		<activateRate>
 			<value fromLevel="1" toLevel="7">60</value>
 			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
@@ -1717,16 +1716,8 @@
 			<value level="2">icon.skill0526</value>
 			<value level="3">icon.skill0526</value>
 		</icon>
-		<itemConsumeCount>
-			<value level="1">1</value>
-			<value level="2">1</value>
-			<value level="3">1</value>
-		</itemConsumeCount>
-		<itemConsumeId>
-			<value level="1">1785</value>
-			<value level="2">1785</value>
-			<value level="3">1785</value>
-		</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
 		<mpConsume>
 			<value level="1">233</value>
 			<value level="2">236</value>
@@ -1738,18 +1729,18 @@
 			<value level="3">105</value>
 		</magicLvl>
 		<affectLimit>6-12</affectLimit>
-		<affectRange>150</affectRange>
+		<affectRange>400</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<operateType>A1</operateType>
-		<fanRange>0;0;200;900</fanRange>
+		<fanRange>0;0;400;90</fanRange>
 		<castRange>40</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-125</effectPoint>
 		<staticReuse>true</staticReuse>
-		<targetType>TARGET</targetType>
-		<affectScope>SQUARE_PB</affectScope>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<nextAction>ATTACK</nextAction>
 		<conditions>

@@ -61,14 +61,43 @@
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>900</castRange>
+		<effectRange>1500</effectRange>
 		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic>
 		<effectPoint>-100</effectPoint>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>900</affectRange>
+		<fanRange>0;0;900;90</fanRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>500000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32108" toLevel="1" name="Fast Loading Arrow">
 		<!-- Significantly increases your attack speed. -->
 		<icon>icon.skill0099</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
+		<effectPoint>2</effectPoint>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>180</abnormalTime>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32109" toLevel="1" name="Unholy Spike">
 		<!-- Casts dark magic on the enemy to inflict damage. -->
@@ -90,10 +119,23 @@
 		<icon>icon.skill32111</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
+		<effectRange>1500</effectRange>
 		<hitTime>1500</hitTime>
 		<effectPoint>-100</effectPoint>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>900</affectRange>
+		<isMagic>2</isMagic>
+		<fanRange>0;0;900;90</fanRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>500000</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="32112" toLevel="1" name="Life Drain">
+	<skill id="32112" toLevel="1" name="Drain Energy">
 		<!-- Attacks the enemy with magic to deal damage and a certain portion of the damage is restored to you. -->
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -216,7 +258,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="32130" toLevel="1" name="Member of the Balthus Knights">
+	<skill id="32130" toLevel="1" name="Balthus Knights' Mark">
 		<!-- Receiving HP/ MP recovery bonus and movement speed bonus as a member of the Balthus Knights. -->
 		<icon>icon.balthus_buff</icon>
 		<operateType>A1</operateType>
@@ -776,43 +818,133 @@
 	<skill id="32191" toLevel="1" name="Yoke of Scarlet">
 		<!-- Instantly immobilized. -->
 		<icon>icon.skill5016</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>500</castRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>FLOATING_ROOT</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<affectRange>200</affectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<effectRange>1000</effectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>85</magicLvl>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>DERANGEMENT</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="32192" toLevel="1" name="Scarlett's Rage">
 		<!-- Scarlet van Halisha is enraged and became even more powerful. Increases P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. by 50%. -->
 		<icon>icon.skill1062</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>BIG_BODY</abnormalType>
+		<abnormalVisualEffect>BIG_BODY</abnormalVisualEffect>
+		<activateRate>0</activateRate>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Grow">
+			</effect>
+			<effect name="PAtk">
+				<power>50</power>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32193" toLevel="1" name="Frintezza Demon Energy Bomb">
 		<!-- Stunned after a powerful attack. -->
 		<icon>icon.skill16856</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>FLY_AWAY</abnormalType>
+		<affectRange>300</affectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>180</attributeValue>
+		<magicLvl>85</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15964</power>
+			</effect>
+			<effect name="FlyAway">
+				<radius>300</radius>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="32194" toLevel="1" name="Frintezza Demon Energy Bomb">
 		<!-- Stumbled after a powerful attack from enraged Scarlett. -->
 		<icon>icon.skill16856</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
-		<castRange>1200</castRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>FLY_AWAY</abnormalType>
+		<affectRange>300</affectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>180</attributeValue>
+		<magicLvl>85</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>15964</power>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="32195" toLevel="4" name="Frintezza Demon Field">
 		<!-- Unleashes a powerful attack on the surroundings. -->

@@ -598,7 +598,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
@@ -650,7 +650,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1258,6 +1258,17 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="HpRegen">
+				<amount>1.17</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>0.9</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13161" toLevel="2" name="Standard Magic Rune Clip Immortal Belt">
 		<!-- Increases HP regeneration when equipped. -->
@@ -1265,7 +1276,17 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="HpRegen">
+				<amount>2.93</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>2.25</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13162" toLevel="3" name="High-grade Magic Rune Clip Immortal Belt">
 		<!-- Increases HP regeneration when equipped. -->
@@ -1273,7 +1294,17 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="HpRegen">
+				<amount>4.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>3.15</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13163" toLevel="4" name="Top-grade Magic Rune Clip Immortal Belt">
 		<!-- Increases HP regeneration when equipped. -->
@@ -1281,7 +1312,17 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="HpRegen">
+				<amount>5.58</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>4.5</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13164" toLevel="1" name="Low-grade Magic Rune Clip Immortal Belt">
 		<!-- Increases MP regeneration when equipped. -->
@@ -1289,6 +1330,17 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.45</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>0.45</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13165" toLevel="2" name="Standard Magic Rune Clip Immortal Belt">
 		<!-- Increases MP regeneration when equipped. -->
@@ -1296,7 +1348,17 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="MpRegen">
+				<amount>1.13</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>1.13</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13166" toLevel="3" name="High-grade Magic Rune Clip Immortal Belt">
 		<!-- Increases MP regeneration when equipped. -->
@@ -1304,7 +1366,17 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="MpRegen">
+				<amount>1.58</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>1.58</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13167" toLevel="4" name="Top-grade Magic Rune Clip Immortal Belt">
 		<!-- Increases MP regeneration when equipped. -->
@@ -1312,7 +1384,17 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="MpRegen">
+				<amount>2.25</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>2.25</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13168" toLevel="1" name="Low-grade Magic Ornament Immortal Belt">
 		<!-- Increases normal damage during PvP when equipped. -->
@@ -1320,6 +1402,12 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13169" toLevel="2" name="Standard Magic Ornament Immortal Belt">
 		<!-- Increases normal damage during PvP when equipped. -->
@@ -1327,7 +1415,12 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>2.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13170" toLevel="3" name="High-grade Magic Ornament Immortal Belt">
 		<!-- Increases normal damage during PvP when equipped. -->
@@ -1335,7 +1428,12 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>3.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13171" toLevel="4" name="Top-grade Magic Ornament Immortal Belt">
 		<!-- Increases normal damage during PvP when equipped. -->
@@ -1343,7 +1441,12 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13172" toLevel="1" name="Low-grade Magic Ornament Immortal Belt">
 		<!-- Increases skill/magic damage during PvP when equipped. -->
@@ -1351,6 +1454,16 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13173" toLevel="2" name="Standard Magic Ornament Immortal Belt">
 		<!-- Increases skill/magic damage during PvP when equipped. -->
@@ -1358,7 +1471,16 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>2.5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>2.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13174" toLevel="3" name="High-grade Magic Ornament Immortal Belt">
 		<!-- Increases skill/magic damage during PvP when equipped. -->
@@ -1366,7 +1488,16 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>3.5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>3.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13175" toLevel="4" name="Top-grade Magic Ornament Immortal Belt">
 		<!-- Increases skill/magic damage during PvP when equipped. -->
@@ -1374,7 +1505,16 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13176" toLevel="1" name="Low-grade Magic Ornament Immortal Belt">
 		<!-- Decreases damage received during PvP when equipped. -->
@@ -1382,6 +1522,20 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1.2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>1.2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1.2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13177" toLevel="2" name="Standard Magic Ornament Immortal Belt">
 		<!-- Decreases damage received during PvP when equipped. -->
@@ -1389,7 +1543,20 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13178" toLevel="3" name="High-grade Magic Ornament Immortal Belt">
 		<!-- Decreases damage received during PvP when equipped. -->
@@ -1397,7 +1564,20 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>4.2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>4.2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>4.2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13179" toLevel="4" name="Top-grade Magic Ornament Immortal Belt">
 		<!-- Decreases damage received during PvP when equipped. -->
@@ -1405,7 +1585,20 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13180" toLevel="1" name="Low-grade Magic Rune Clip Twilight Belt">
 		<!-- Increases HP regeneration when equipped. -->
@@ -1413,6 +1606,17 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="HpRegen">
+				<amount>1.41</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>1.08</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13181" toLevel="2" name="Standard Magic Rune Clip Twilight Belt">
 		<!-- Increases HP regeneration when equipped. -->
@@ -1420,7 +1624,17 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="HpRegen">
+				<amount>3.52</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>2.7</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13182" toLevel="3" name="High-grade Magic Rune Clip Twilight Belt">
 		<!-- Increases HP regeneration when equipped. -->
@@ -1428,7 +1642,17 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="HpRegen">
+				<amount>4.92</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>3.78</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13183" toLevel="4" name="Top-grade Magic Rune Clip Twilight Belt">
 		<!-- Increases HP regeneration when equipped. -->
@@ -1436,7 +1660,17 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="HpRegen">
+				<amount>7.02</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>5.4</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13184" toLevel="1" name="Low-grade Magic Rune Clip Twilight Belt">
 		<!-- Increases MP regeneration when equipped. -->
@@ -1444,6 +1678,17 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.54</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>0.54</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13185" toLevel="2" name="Standard Magic Rune Clip Twilight Belt">
 		<!-- Increases MP regeneration when equipped. -->
@@ -1451,7 +1696,17 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="MpRegen">
+				<amount>1.36</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>1.36</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13186" toLevel="3" name="High-grade Magic Rune Clip Twilight Belt">
 		<!-- Increases MP regeneration when equipped. -->
@@ -1459,7 +1714,17 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="MpRegen">
+				<amount>1.9</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>1.9</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13187" toLevel="4" name="Top-grade Magic Rune Clip Twilight Belt">
 		<!-- Increases MP regeneration when equipped. -->
@@ -1467,7 +1732,17 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="MpRegen">
+				<amount>2.7</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>2.7</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13188" toLevel="1" name="Low-grade Magic Ornament Twilight Belt">
 		<!-- Increases normal damage during PvP when equipped. -->
@@ -1475,6 +1750,12 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13189" toLevel="2" name="Standard Magic Ornament Twilight Belt">
 		<!-- Increases normal damage during PvP when equipped. -->
@@ -1482,7 +1763,12 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>2.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13190" toLevel="3" name="High-grade Magic Ornament Twilight Belt">
 		<!-- Increases normal damage during PvP when equipped. -->
@@ -1490,7 +1776,12 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>3.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13191" toLevel="4" name="Top-grade Magic Ornament Twilight Belt">
 		<!-- Increases normal damage during PvP when equipped. -->
@@ -1498,7 +1789,12 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13192" toLevel="1" name="Low-grade Magic Ornament Twilight Belt">
 		<!-- Increases skill/magic damage during PvP when equipped. -->
@@ -1506,6 +1802,16 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13193" toLevel="2" name="Standard Magic Ornament Twilight Belt">
 		<!-- Increases skill/magic damage during PvP when equipped. -->
@@ -1513,7 +1819,16 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>2.5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>2.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13194" toLevel="3" name="High-grade Magic Ornament Twilight Belt">
 		<!-- Increases skill/magic damage during PvP when equipped. -->
@@ -1521,7 +1836,16 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>3.5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>3.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13195" toLevel="4" name="Top-grade Magic Ornament Twilight Belt">
 		<!-- Increases skill/magic damage during PvP when equipped. -->
@@ -1529,7 +1853,16 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13196" toLevel="1" name="Low-grade Magic Ornament Twilight Belt">
 		<!-- Decreases damage received during PvP when equipped. -->
@@ -1537,6 +1870,20 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1.2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>1.2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1.2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13197" toLevel="2" name="Standard Magic Ornament Twilight Belt">
 		<!-- Decreases damage received during PvP when equipped. -->
@@ -1544,7 +1891,20 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13198" toLevel="3" name="High-grade Magic Ornament Twilight Belt">
 		<!-- Decreases damage received during PvP when equipped. -->
@@ -1552,7 +1912,20 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>4.2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>4.2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>4.2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13199" toLevel="4" name="Top-grade Magic Ornament Twilight Belt">
 		<!-- Decreases damage received during PvP when equipped. -->
@@ -1560,6 +1933,19 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 </list>
