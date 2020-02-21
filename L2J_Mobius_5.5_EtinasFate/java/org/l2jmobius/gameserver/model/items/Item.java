@@ -210,10 +210,19 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 		_dropable = set.getBoolean("is_dropable", true);
 		_destroyable = set.getBoolean("is_destroyable", true);
 		_tradeable = set.getBoolean("is_tradable", true);
-		_depositable = set.getBoolean("is_depositable", true);
+		
+		_questItem = set.getBoolean("is_questitem", false);
+		if (Config.CUSTOM_DEPOSITABLE_ENABLED)
+		{
+			_depositable = _questItem ? Config.CUSTOM_DEPOSITABLE_QUEST_ITEMS : true;
+		}
+		else
+		{
+			_depositable = set.getBoolean("is_depositable", true);
+		}
+		
 		_elementable = set.getBoolean("element_enabled", false);
 		_enchantable = set.getInt("enchant_enabled", 0);
-		_questItem = set.getBoolean("is_questitem", false);
 		_freightable = set.getBoolean("is_freightable", false);
 		_allowSelfResurrection = set.getBoolean("allow_self_resurrection", false);
 		_isOlyRestricted = set.getBoolean("is_oly_restricted", false);

@@ -117,6 +117,7 @@ public class Config
 	private static final String CUSTOM_CHAT_MODERATION_CONFIG_FILE = "./config/Custom/ChatModeration.ini";
 	private static final String CUSTOM_CLASS_BALANCE_CONFIG_FILE = "./config/Custom/ClassBalance.ini";
 	private static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "./config/Custom/CommunityBoard.ini";
+	private static final String CUSTOM_CUSTOM_DEPOSITABLE_ITEMS_CONFIG_FILE = "./config/Custom/CustomDepositableItems.ini";
 	private static final String CUSTOM_CUSTOM_MAIL_MANAGER_CONFIG_FILE = "./config/Custom/CustomMailManager.ini";
 	private static final String CUSTOM_DELEVEL_MANAGER_CONFIG_FILE = "./config/Custom/DelevelManager.ini";
 	private static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "./config/Custom/DualboxCheck.ini";
@@ -1163,6 +1164,8 @@ public class Config
 	public static int COMMUNITY_PREMIUM_PRICE_PER_DAY;
 	public static List<Integer> COMMUNITY_AVAILABLE_BUFFS;
 	public static Map<String, Location> COMMUNITY_AVAILABLE_TELEPORTS;
+	public static boolean CUSTOM_DEPOSITABLE_ENABLED;
+	public static boolean CUSTOM_DEPOSITABLE_QUEST_ITEMS;
 	public static boolean CUSTOM_MAIL_MANAGER_ENABLED;
 	public static int CUSTOM_MAIL_MANAGER_DELAY;
 	public static boolean DELEVEL_MANAGER_ENABLED;
@@ -3025,6 +3028,12 @@ public class Config
 				final String splitInfo[] = s.split(",");
 				COMMUNITY_AVAILABLE_TELEPORTS.put(splitInfo[0], new Location(Integer.parseInt(splitInfo[1]), Integer.parseInt(splitInfo[2]), Integer.parseInt(splitInfo[3])));
 			}
+			
+			// Load CustomDepositableItems config file (if exists)
+			final PropertiesParser CustomDepositableItems = new PropertiesParser(CUSTOM_CUSTOM_DEPOSITABLE_ITEMS_CONFIG_FILE);
+			
+			CUSTOM_DEPOSITABLE_ENABLED = CustomDepositableItems.getBoolean("CustomDepositableEnabled", false);
+			CUSTOM_DEPOSITABLE_QUEST_ITEMS = CustomDepositableItems.getBoolean("DepositableQuestItems", false);
 			
 			// Load CustomMailManager config file (if exists)
 			final PropertiesParser CustomMailManager = new PropertiesParser(CUSTOM_CUSTOM_MAIL_MANAGER_CONFIG_FILE);
