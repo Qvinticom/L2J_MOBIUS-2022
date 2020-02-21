@@ -1212,6 +1212,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -1412,13 +1413,20 @@
 	<item id="47396" name="Nurka/ Lidia/ Gustav's Belt Box" type="EtcItem">
 		<!-- Top-grade Balthus Knights' Supply Box. When used, a Nurka/ Lydia/ Gustav's Belt can be obtained. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="36167" min="1" max="1" chance="33.333" /> <!-- Nurka's Belt -->
+			<item id="36168" min="1" max="1" chance="33.333" /> <!-- Lidia's Belt -->
+			<item id="36169" min="1" max="1" chance="33.333" /> <!-- Gustav's Belt -->
+		</capsuled_items>
 	</item>
 	<item id="47397" name="Seven Signs/ Anakim/ Lilith Talisman Supply Box" type="EtcItem">
 		<!-- Top-grade Balthus Knights' Supply Box. When used, a Seven Signs/ Anakim/ Lilith's Talisman can be obtained. Will be deleted after the event. -->

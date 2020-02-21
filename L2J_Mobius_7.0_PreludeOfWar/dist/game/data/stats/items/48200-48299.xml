@@ -114,6 +114,11 @@
 			<skill id="35107" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Radiant Warrior's Circlet Enchant Effect -->
 			<skill id="35107" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Radiant Warrior's Circlet Enchant Effect -->
 			<skill id="35107" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Radiant Warrior's Circlet Enchant Effect -->
+			<skill id="35107" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Radiant Warrior's Circlet Enchant Effect -->
+			<skill id="35107" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Radiant Warrior's Circlet Enchant Effect -->
+			<skill id="35107" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Radiant Warrior's Circlet Enchant Effect -->
+			<skill id="35107" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Radiant Warrior's Circlet Enchant Effect -->
+			<skill id="35107" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Radiant Warrior's Circlet Enchant Effect -->
 		</skills>
 	</item>
 	<item id="48205" name="Wizard's Circlet" type="Armor">
@@ -175,6 +180,11 @@
 			<skill id="35111" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Radiant Wizard's Circlet Enchant Effect -->
 			<skill id="35111" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Radiant Wizard's Circlet Enchant Effect -->
 			<skill id="35111" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Radiant Wizard's Circlet Enchant Effect -->
+			<skill id="35111" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Radiant Wizard's Circlet Enchant Effect -->
+			<skill id="35111" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Radiant Wizard's Circlet Enchant Effect -->
+			<skill id="35111" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Radiant Wizard's Circlet Enchant Effect -->
+			<skill id="35111" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Radiant Wizard's Circlet Enchant Effect -->
+			<skill id="35111" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Radiant Wizard's Circlet Enchant Effect -->
 		</skills>
 	</item>
 	<item id="48208" name="Knight's Circlet" type="Armor">
@@ -236,6 +246,11 @@
 			<skill id="35115" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Radiant Knight's Circlet Enchant Effect -->
 			<skill id="35115" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Radiant Knight's Circlet Enchant Effect -->
 			<skill id="35115" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Radiant Knight's Circlet Enchant Effect -->
+			<skill id="35115" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Radiant Knight's Circlet Enchant Effect -->
+			<skill id="35115" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Radiant Knight's Circlet Enchant Effect -->
+			<skill id="35115" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Radiant Knight's Circlet Enchant Effect -->
+			<skill id="35115" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Radiant Knight's Circlet Enchant Effect -->
+			<skill id="35115" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Radiant Knight's Circlet Enchant Effect -->
 		</skills>
 	</item>
 	<item id="48211" name="Blessed Circlet Enchant Scroll" type="EtcItem">
@@ -1036,6 +1051,7 @@
 		<!-- Equipping it summons a Training Fairy Agathion. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
@@ -1044,6 +1060,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<skills>
+			<skill id="8527" level="1" /> <!-- Release Agathion's Seal - Magmeld Fairy -->
+			<skill id="14288" level="1" /> <!-- Agathion Cute Trick - Magmeld -->
+			<skill id="14187" level="1" /> <!-- Magmeld Teleport -->
+			<skill id="35622" level="1" /> <!-- Agathion Fairy Support -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="48269" name="Huge Giant's Apostle" type="EtcItem">
 		<!-- Obtained after defeating the ruler of the giants. It is needed for declaring Kamael's independence. Take it to Kekropus in the Town of Giran. -->
@@ -1234,6 +1257,7 @@
 		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<skills>
@@ -1252,6 +1276,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -1294,6 +1319,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
@@ -1312,6 +1338,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1431,6 +1458,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />

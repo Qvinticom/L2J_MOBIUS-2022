@@ -19,9 +19,14 @@
 		<!-- When used to enchant. increases P. Def. of R-grade armor and accessories by 2, and higher quality armor by 4. Can enchant safely up to +3. From +4. the enchanted armor's HP also increases according to the enchant level. If enchanting fails. Gran Kain's power prevents the item from being reset and allows retaining its prior enchant value. Cannot be used on armor above +12. -->
 		<set name="icon" val="icon.ev_shilen_scroll_of_enchant_am" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39447" level="1" /> <!-- Gran Kain's Scroll: Enchant Armor (R-grade) -->
+		</skills>
 	</item>
 	<item id="80503" name="Hero's Treasure Chest" type="EtcItem">
 		<!-- Use it to obtain a special item. -->

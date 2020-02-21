@@ -493,6 +493,7 @@
 		<set name="commissionItemType" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -511,6 +512,7 @@
 		<set name="price" val="80" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="for_npc" val="true" />
@@ -534,6 +536,7 @@
 		<set name="commissionItemType" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -549,6 +552,7 @@
 		<set name="price" val="2000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="for_npc" val="true" />
@@ -587,6 +591,7 @@
 		<set name="price" val="240000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
@@ -602,6 +607,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
@@ -614,6 +620,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
@@ -630,6 +637,7 @@
 		<set name="commissionItemType" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<skills>
 			<skill id="2010" level="1" /> <!-- Endeavor Potion -->
 		</skills>
@@ -646,6 +654,7 @@
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="for_npc" val="true" />
@@ -668,6 +677,7 @@
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="for_npc" val="true" />
@@ -688,6 +698,7 @@
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<skills>
@@ -704,6 +715,7 @@
 		<set name="price" val="2000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<skills>

@@ -1547,6 +1547,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="7200" />
+		<skills>
+			<skill id="17117" level="2" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="38097" name="Emperor's Rune Pack (2-hour)" type="EtcItem">
 		<!-- Wrapped Pack containing Emperor's Rune (2-hour). -->
@@ -1556,6 +1559,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38096" min="1" max="1" chance="100" /> <!-- Emperor's Rune -->
+		</capsuled_items>
 	</item>
 	<item id="38098" name="Leona's Will" type="EtcItem">
 		<!-- Wrapped Pack containing supplies sent by Leona. Double-click for a chance to obtain either Leona's Scroll: Buffs x 10, High-grade Lucky Enchant Stone Special Box, Blessed Blessed Lucky Enchant Stone: Weapon (R-grade), or Blessed Lucky Enchant Stone: Armor (R-grade). -->
@@ -1568,6 +1575,15 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37567" min="1" max="1" chance="10" /> <!-- Blessed Lucky Enchant Stone: R-grade Armor -->
+			<item id="37566" min="1" max="1" chance="10" /> <!-- Blessed Lucky Enchant Stone: R-grade Weapon -->
+			<item id="36007" min="1" max="1" chance="10" /> <!-- High-grade Lucky Enchant Stone Special Box -->
+			<item id="36007" min="10" max="10" chance="70" /> <!-- Leona's Scroll: Buffs -->
+		</capsuled_items>
 	</item>
 	<item id="38099" name="Leona's Scroll: Buffs" type="EtcItem">
 		<!-- For 30 min., Acquired XP/ SPed +30%, Max HP/ MP/ CP +30%, P. Def./ M. Def. +30%, Speed +20, P. Atk. +10%, M. Atk. +20%. Skill MP Consumption -15%. Cannot be used with the Art of Seduction. Cooldown is 30min. Cannot be used in the Olympiad. -->

@@ -10,6 +10,12 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="28032" level="1" type="ON_EQUIP" /> <!-- Summon Leo Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+			<skill id="28087" level="1" /> <!-- Maiden's Prayer -->
+			<skill id="28075" level="1" /> <!-- Leo Agathion Unique Ability -->
+		</skills>
 	</item>
 	<item id="29101" name="Gemini Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
 		<!-- A charm that activates the power of the Gemini Agathion. Its special ability is Bountiful Resurrection Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
@@ -21,6 +27,12 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="28033" level="1" type="ON_EQUIP" /> <!-- Summon Gemini Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+			<skill id="28088" level="1" /> <!-- Bountiful Resurrection -->
+			<skill id="28076" level="1" /> <!-- Gemini Agathion Unique Ability -->
+		</skills>
 	</item>
 	<item id="29102" name="Scorpio Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
 		<!-- A charm that activates the power of the Scorpio Agathion. Its special ability is Scorpion's Mass Exile Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
@@ -32,6 +44,12 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="28034" level="1" type="ON_EQUIP" /> <!-- Summon Scorpio Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+			<skill id="28089" level="1" /> <!-- Scorpion's Mass Exile -->
+			<skill id="28077" level="1" /> <!-- Scorpio Agathion Unique Ability -->
+		</skills>
 	</item>
 	<item id="29103" name="Aquarius Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
 		<!-- A charm that activates the power of the Aquarius Agathion. Its special ability is Mass Binding Flood Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
@@ -43,6 +61,12 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="28035" level="1" type="ON_EQUIP" /> <!-- Summon Aquarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+			<skill id="28090" level="1" /> <!-- Mass Binding Flood -->
+			<skill id="28078" level="1" /> <!-- Aquarius Agathion Unique Ability -->
+		</skills>
 	</item>
 	<item id="29104" name="Pisces Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
 		<!-- A charm that activates the power of the Pisces Agathion. Its special ability is Slippery Scale Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
@@ -54,6 +78,12 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="28036" level="1" type="ON_EQUIP" /> <!-- Summon Pisces Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+			<skill id="28091" level="1" /> <!-- Slippery Scale -->
+			<skill id="28079" level="1" /> <!-- Pisces Agathion Unique Ability -->
+		</skills>
 	</item>
 	<item id="29105" name="Sagittarius Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
 		<!-- A charm that activates the power of the Sagittarius Agathion. Its special ability is Archer's Call Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
@@ -65,6 +95,12 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="28037" level="1" type="ON_EQUIP" /> <!-- Summon Sagittarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+			<skill id="28092" level="1" /> <!-- Archer's Call -->
+			<skill id="28080" level="1" /> <!-- Sagittarius Agathion Unique Ability -->
+		</skills>
 	</item>
 	<item id="29106" name="Cancer Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
 		<!-- A charm that activates the power of the Cancer Agathion. Its special ability is Exoskeletal Shield Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
@@ -76,26 +112,38 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="28038" level="1" type="ON_EQUIP" /> <!-- Summon Cancer Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+			<skill id="28093" level="1" /> <!-- Exoskeletal Shield -->
+			<skill id="28081" level="1" /> <!-- Cancer Agathion Unique Ability -->
+		</skills>
 	</item>
 	<item id="29107" name="Virgo Agathion Charm Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Virgo Agathion Charm - Stage 1 (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29095" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Virgo Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29108" name="Virgo Agathion Charm Pack" additionalName="15-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Virgo Agathion Charm - Stage 1 (15-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="21600" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29083" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Virgo Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29109" name="Capricorn Agathion Charm Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Capricorn Agathion Charm - Stage 1 (30-day). -->
@@ -105,7 +153,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29096" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Capricorn Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29110" name="Capricorn Agathion Charm Pack" additionalName="15-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Capricorn Agathion Charm - Stage 1 (15-day). -->
@@ -115,7 +166,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="21600" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29084" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Capricorn Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29111" name="Libra Agathion Charm Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Libra Agathion Charm - Stage 1 (30-day). -->
@@ -125,7 +179,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29097" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Libra Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29112" name="Libra Agathion Charm Pack" additionalName="15-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Libra Agathion Charm - Stage 1 (15-day). -->
@@ -135,7 +192,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="21600" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29085" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Libra Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29113" name="Aries Agathion Charm Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Aries Agathion Charm - Stage 1 (30-day). -->
@@ -145,7 +205,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29098" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Aries Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29114" name="Aries Agathion Charm Pack" additionalName="15-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Aries Agathion Charm - Stage 1 (15-day). -->
@@ -155,7 +218,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="21600" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29086" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Aries Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29115" name="Taurus Agathion Charm Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Taurus Agathion Charm - Stage 1 (30-day). -->
@@ -165,7 +231,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29099" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Taurus Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29116" name="Taurus Agathion Charm Pack" additionalName="15-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Taurus Agathion Charm - Stage 1 (15-day). -->
@@ -175,7 +244,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="21600" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29087" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Taurus Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29117" name="Leo Agathion Charm Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Leo Agathion Charm - Stage 1 (30-day). -->
@@ -185,7 +257,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29100" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Leo Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29118" name="Leo Agathion Charm Pack" additionalName="15-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Leo Agathion Charm - Stage 1 (15-day). -->
@@ -195,7 +270,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="21600" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29088" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Leo Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29119" name="Gemini Agathion Charm Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Gemini Agathion Charm - Stage 1 (30-day). -->
@@ -205,7 +283,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29101" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Gemini Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29120" name="Gemini Agathion Charm Pack" additionalName="15-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Gemini Agathion Charm - Stage 1 (15-day). -->
@@ -215,7 +296,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="21600" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29089" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Gemini Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29121" name="Scorpio Agathion Charm Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Scorpio Agathion Charm - Stage 1 (30-day). -->
@@ -225,7 +309,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29102" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Scorpio Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29122" name="Scorpio Agathion Charm Pack" additionalName="15-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Scorpio Agathion Charm - Stage 1 (15-day). -->
@@ -235,7 +322,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="21600" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29090" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Scorpio Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29123" name="Aquarius Agathion Charm Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Aquarius Agathion Charm - Stage 1 (30-day). -->
@@ -245,7 +335,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29103" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Aquarius Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29124" name="Aquarius Agathion Charm Pack" additionalName="15-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Aquarius Agathion Charm - Stage 1 (15-day). -->
@@ -255,7 +348,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="21600" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29091" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Aquarius Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29125" name="Pisces Agathion Charm Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Pisces Agathion Charm - Stage 1 (30-day). -->
@@ -265,7 +361,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29104" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Pisces Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29126" name="Pisces Agathion Charm Pack" additionalName="15-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Pisces Agathion Charm - Stage 1 (15-day). -->
@@ -275,7 +374,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="21600" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29092" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Pisces Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29127" name="Sagittarius Agathion Charm Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Sagittarius Agathion Charm - Stage 1 (30-day). -->
@@ -285,7 +387,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29105" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Sagittarius Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29128" name="Sagittarius Agathion Charm Pack" additionalName="15-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Sagittarius Agathion Charm - Stage 1 (15-day). -->
@@ -295,7 +400,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="21600" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29093" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Sagittarius Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29129" name="Cancer Agathion Charm Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Cancer Agathion Charm - Stage 1 (30-day). -->
@@ -305,7 +413,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29106" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Cancer Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29130" name="Cancer Agathion Charm Pack" additionalName="15-day" type="EtcItem">
 		<!-- Double-click to obtain a +3 Cancer Agathion Charm - Stage 1 (15-day). -->
@@ -315,7 +426,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="21600" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29094" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Cancer Agathion Charm - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29131" name="Matchstick" type="EtcItem">
 		<!-- Part of the matchsticks that the Match Girls are looking for. It looks like a monster has broken them. Combine with match heads to fix them. Will be deleted after the event. -->
@@ -467,7 +581,7 @@
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
-		<set name="bodypart" val="lbracelet" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
@@ -477,14 +591,25 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<skills>
+			<skill id="27787" level="6" /> <!-- Sayha's Talisman Stage 6 -->
+			<skill id="27789" level="1" /> <!-- Sayha's Protection -->
+			<skill id="27790" level="1" /> <!-- Sayha's Encouragement -->
+		</skills>
 	</item>
 	<item id="29150" name="Low-grade Zodiac Agathion Pack" type="EtcItem">
 		<!-- Double-click to randomly obtain one of the 12 Low-grade Zodiac Agathions. -->
 		<set name="icon" val="icon.bm_dragon_shinning_present" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="0" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27716" level="1" /> <!-- Zodiac Agathion Pack -->
+		</skills>
 	</item>
 	<item id="29151" name="Mid-grade Zodiac Agathion Pack" type="EtcItem">
 		<!-- Double-click to randomly obtain one of the 12 Mid-grade Zodiac Agathions. -->
@@ -517,6 +642,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<skills>
+			<skill id="28172" level="1" /> <!-- High-grade Maphr's Rune -->
+		</skills>
 	</item>
 	<item id="29154" name="Mochi" additionalName="Event" type="EtcItem">
 		<!-- Rice cake that restores a certain amount of Vitality. Cooldown is 1 min. No weekly usage limit. Will be deleted after the event. -->
@@ -709,6 +838,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 	</item>
 	<item id="29175" name="High-grade Drop Rate Rune 300% Pack" additionalName="1-day" type="EtcItem">
 		<!-- Dimensional item Pack. Double click the item obtain 1 High-grade Drop Rate Rune 300% - 1-day. -->
@@ -732,6 +862,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 	</item>
 	<item id="29177" name="Prestige Cube Pack" additionalName="1-day" type="EtcItem">
 		<!-- Double click on the box to obtain 1 Prestige Cube - 1-day. -->

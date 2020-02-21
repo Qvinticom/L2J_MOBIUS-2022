@@ -117,44 +117,134 @@
 	<item id="47707" name="Ultimate Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain 1 of the La Vie En Rose's Jewelry Boxes. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47703" min="1" max="1" chance="3.57142" /> <!-- Red Cat's Eye Lv. 3 Jewelry Box -->
+			<item id="47704" min="1" max="1" chance="3.57142" /> <!-- Red Cat's Eye Lv. 4 Jewelry Box -->
+			<item id="47705" min="1" max="1" chance="3.57142" /> <!-- Blue Cat's Eye Lv. 3 Jewelry Box -->
+			<item id="47706" min="1" max="1" chance="3.57142" /> <!-- Blue Cat's Eye Lv. 4 Jewelry Box -->
+			<item id="47626" min="1" max="1" chance="3.57142" /> <!-- Ruby Lv. 3 Jewelry Box -->
+			<item id="47627" min="1" max="1" chance="3.57142" /> <!-- Sapphire Lv. 3 Jewelry Box -->
+			<item id="47628" min="1" max="1" chance="3.57142" /> <!-- Topaz Lv. 3 Jewelry Box -->
+			<item id="47629" min="1" max="1" chance="3.57142" /> <!-- Opal Lv. 3 Jewelry Box -->
+			<item id="47630" min="1" max="1" chance="3.57142" /> <!-- Obsidian Lv. 3 Jewelry Box -->
+			<item id="47631" min="1" max="1" chance="3.57142" /> <!-- Diamond Lv. 3 Jewelry Box -->
+			<item id="47632" min="1" max="1" chance="3.57142" /> <!-- Emerald Lv. 3 Jewelry Box -->
+			<item id="47633" min="1" max="1" chance="3.57142" /> <!-- Aquamarine Lv. 3 Jewelry Box -->
+			<item id="47634" min="1" max="1" chance="3.57142" /> <!-- Pearl Lv. 3 Jewelry Box -->
+			<item id="47635" min="1" max="1" chance="3.57142" /> <!-- Vital Stone Lv. 3 Jewelry Box -->
+			<item id="47636" min="1" max="1" chance="3.57142" /> <!-- Garnet Lv. 3 Jewelry Box -->
+			<item id="47637" min="1" max="1" chance="3.57142" /> <!-- Tanzanite Lv. 3 Jewelry Box -->
+			<item id="47638" min="1" max="1" chance="3.57142" /> <!-- Ruby Lv. 4 Jewelry Box -->
+			<item id="47639" min="1" max="1" chance="3.57142" /> <!-- Sapphire Lv. 4 Jewelry Box -->
+			<item id="47640" min="1" max="1" chance="3.57142" /> <!-- Topaz Lv. 4 Jewelry Box -->
+			<item id="47641" min="1" max="1" chance="3.57142" /> <!-- Opal Lv. 4 Jewelry Box -->
+			<item id="47642" min="1" max="1" chance="3.57142" /> <!-- Obsidian Lv. 4 Jewelry Box -->
+			<item id="47643" min="1" max="1" chance="3.57142" /> <!-- Diamond Lv. 4 Jewelry Box -->
+			<item id="47644" min="1" max="1" chance="3.57142" /> <!-- Emerald Lv. 4 Jewelry Box -->
+			<item id="47645" min="1" max="1" chance="3.57142" /> <!-- Aquamarine Lv. 4 Jewelry Box -->
+			<item id="47646" min="1" max="1" chance="3.57142" /> <!-- Pearl Lv. 4 Jewelry Box -->
+			<item id="47647" min="1" max="1" chance="3.57142" /> <!-- Vital Stone Lv. 4 Jewelry Box -->
+			<item id="47648" min="1" max="1" chance="3.57142" /> <!-- Garnet Lv. 4 Jewelry Box -->
+			<item id="47649" min="1" max="1" chance="3.57142" /> <!-- Tanzanite Lv. 4 Jewelry Box -->
+		</capsuled_items>
 	</item>
 	<item id="47708" name="Ultimate Fortune Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain 1 of the Fortune Jewelry Boxes. -->
 		<set name="icon" val="icon.bm_pendant_pvp_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47709" min="1" max="1" chance="7.14285" /> <!-- Red Cat's Eye Fortune Box -->
+			<item id="47710" min="1" max="1" chance="7.14285" /> <!-- Blue Cat's Eye Fortune Box -->
+			<item id="46765" min="1" max="1" chance="7.14285" /> <!-- Ruby Fortune Box -->
+			<item id="46766" min="1" max="1" chance="7.14285" /> <!-- Sapphire Fortune Box -->
+			<item id="46767" min="1" max="1" chance="7.14285" /> <!-- Topaz Fortune Box -->
+			<item id="46768" min="1" max="1" chance="7.14285" /> <!-- Opal Fortune Box -->
+			<item id="46769" min="1" max="1" chance="7.14285" /> <!-- Obsidian Fortune Box -->
+			<item id="46770" min="1" max="1" chance="7.14285" /> <!-- Diamond Fortune Box -->
+			<item id="46771" min="1" max="1" chance="7.14285" /> <!-- Emerald Fortune Box -->
+			<item id="46772" min="1" max="1" chance="7.14285" /> <!-- Aquamarine Fortune Box -->
+			<item id="46773" min="1" max="1" chance="7.14285" /> <!-- Pearl Fortune Box -->
+			<item id="46774" min="1" max="1" chance="7.14285" /> <!-- Vital Stone Fortune Box -->
+			<item id="46775" min="1" max="1" chance="7.14285" /> <!-- Garnet Fortune Box -->
+			<item id="46776" min="1" max="1" chance="7.14285" /> <!-- Tanzanite Fortune Box -->
+		</capsuled_items>
 	</item>
 	<item id="47709" name="Red Cat's Eye Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain 1 Red Cat's Eye Lv. 1-5. -->
 		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47677" min="1" max="1" chance="20" /> <!-- Red Cat's Eye lv. 1 -->
+			<item id="47678" min="1" max="1" chance="20" /> <!-- Red Cat's Eye lv. 2 -->
+			<item id="47679" min="1" max="1" chance="20" /> <!-- Red Cat's Eye lv. 3 -->
+			<item id="47680" min="1" max="1" chance="20" /> <!-- Red Cat's Eye lv. 4 -->
+			<item id="47681" min="1" max="1" chance="20" /> <!-- Red Cat's Eye lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="47710" name="Blue Cat's Eye Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain 1 Blue Cat's Eye Lv. 1-5. -->
 		<set name="icon" val="icon.bm_jewelbox_blue_catseye_lavianrose" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47682" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye lv. 1 -->
+			<item id="47683" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye lv. 2 -->
+			<item id="47684" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye lv. 3 -->
+			<item id="47685" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye lv. 4 -->
+			<item id="47686" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="47711" name="Ultimate Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain 1 of the Lv. 3 jewels. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<skills>
+			<skill id="28295" level="1" /> <!-- Ultimate Jewelry Box -->
+		</skills>
 	</item>
 	<item id="47712" name="Ultimate Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain 1 of the Lv. 4 jewels. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<skills>
+			<skill id="28296" level="1" /> <!-- Ultimate Jewelry Box -->
+		</skills>
 	</item>
 	<item id="47713" name="Jewel Ticket" type="EtcItem">
 		<!-- Take it to Shadai in Heine to exchange for a special item. Will be deleted after the event. -->

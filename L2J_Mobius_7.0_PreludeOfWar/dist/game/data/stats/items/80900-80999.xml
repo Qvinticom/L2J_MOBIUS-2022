@@ -427,6 +427,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="17371" min="3" max="500" chance="100" /> <!-- Crystal (R-Grade) -->
+		</capsuled_items>
 	</item>
 	<item id="80935" name="Small Good Luck Festival Fairy�s Coin Box" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to obtain 15 Festival Fairy's Lucky Coins. -->
@@ -439,6 +443,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49783" min="15" max="15" chance="100" /> <!-- Festival Fairy's Coin of Luck (Event) -->
+		</capsuled_items>
 	</item>
 	<item id="80936" name="Greater Virgo Agathion Charm" type="Armor">
 		<!-- A charm that activates the power of the Greater Virgo Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the sub slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->

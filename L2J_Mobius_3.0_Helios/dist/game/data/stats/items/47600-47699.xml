@@ -132,6 +132,7 @@
 		<!-- Double-click to obtain a Ruby Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_depositable" val="false" />
@@ -147,6 +148,7 @@
 		<!-- Double-click to obtain a Sapphire Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_depositable" val="false" />
@@ -165,11 +167,16 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38852" min="1" max="1" chance="100" /> <!-- Topaz Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="47629" name="Opal Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain an Opal Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_depositable" val="false" />
@@ -185,6 +192,7 @@
 		<!-- Double-click to obtain a Obsidian Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_obsidian_i00" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_depositable" val="false" />
@@ -200,6 +208,7 @@
 		<!-- Double-click to obtain a Diamond Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_depositable" val="false" />
@@ -215,6 +224,7 @@
 		<!-- Double-click to obtain a Emerald Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_depositable" val="false" />
@@ -230,6 +240,7 @@
 		<!-- Double-click to obtain a Aquamarine Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_depositable" val="false" />
@@ -245,6 +256,7 @@
 		<!-- Double-click to obtain a Pearl Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_depositable" val="false" />
@@ -263,6 +275,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="26478" min="1" max="1" chance="100" /> <!-- Vital Stone Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="47636" name="Garnet Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Garnet Lv. 3. -->
@@ -271,6 +287,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="26483" min="1" max="1" chance="100" /> <!-- Garnet Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="47637" name="Tanzanite Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Tanzanite Lv. 3. -->
@@ -279,11 +299,16 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="26488" min="1" max="1" chance="100" /> <!-- Tanzanite Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="47638" name="Ruby Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Ruby Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_depositable" val="false" />
@@ -299,6 +324,7 @@
 		<!-- Double-click to obtain a Sapphire Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_depositable" val="false" />
@@ -317,11 +343,16 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38853" min="1" max="1" chance="100" /> <!-- Topaz Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="47641" name="Opal Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain an Opal Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_depositable" val="false" />
@@ -337,6 +368,7 @@
 		<!-- Double-click to obtain a Obsidian Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_obsidian_i00" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_depositable" val="false" />
@@ -352,6 +384,7 @@
 		<!-- Double-click to obtain a Diamond Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_depositable" val="false" />
@@ -367,6 +400,7 @@
 		<!-- Double-click to obtain a Emerald Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_depositable" val="false" />
@@ -382,6 +416,7 @@
 		<!-- Double-click to obtain a Aquamarine Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_depositable" val="false" />
@@ -397,6 +432,7 @@
 		<!-- Double-click to obtain a Pearl Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_depositable" val="false" />
@@ -415,6 +451,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46673" min="1" max="1" chance="100" /> <!-- Vital Stone Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="47648" name="Garnet Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Garnet Lv. 4. -->
@@ -423,6 +463,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46678" min="1" max="1" chance="100" /> <!-- Garnet Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="47649" name="Tanzanite Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Tanzanite Lv. 4. -->
@@ -446,6 +490,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18700" level="1" /> <!-- Freya's Art of Seduction -->
@@ -465,6 +510,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18701" level="1" /> <!-- Freya's Art of Seduction -->
@@ -477,23 +523,38 @@
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="18727" level="1" /> <!-- Pa'agrio's Blessing - Might -->
+			<skill id="18702" level="1" /> <!-- Pa'agrio's Blessing -->
 		</skills>
 	</item>
-	<item id="47666" name="Pa'agrio's Blessing" additionalName="Exp" type="EtcItem">
+	<item id="47676" name="Pa'agrio's Blessing" additionalName="Exp" type="EtcItem">
 		<!-- Dimensional Item. For 30 min., Max HP/MP/CP + 10%, P. Atk. + 20%, M. Atk. + 30%, P./M. Def + 10%, P. Accuracy+ 4, M. Accuracy + 4, Atk./Casting Spd. + 10%, Speed + 10, Attack Attribute + 100, Skill MP Consumption - 10%. Additionally, XP Gain + 30%, Vitality Bonus + 12. Buff remains in place after death. Cooldown is 5 minutes. Cannot be stacked with Art of Seduction. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.nshop_bless_of_paagrio" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18728" level="1" /> <!-- Pa??agrio??s Blessing - EXP -->
+		</skills>
 	</item>
 	<item id="47677" name="Red Cat's Eye" additionalName="Lv. 1" type="Armor">
 		<!-- When using a physical skill after equipping, P. Critical Damage + 1% and P. Skill Critical Damage + 1%. Effect does not stack with additional jewels of the same type. -->

@@ -28,9 +28,10 @@
 			<stat type="mAtk">517</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
+			<stat type="accMagic">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80101" name="Krishna Dual Sword" type="Weapon">
@@ -93,7 +94,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">433</stat>
 			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80103" name="Krishna Dual Blunt" type="Weapon">
@@ -125,7 +126,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80104" name="Leviathan Helmet" additionalName="Heavy Armor" type="Armor">
@@ -141,6 +142,7 @@
 		<set name="price" val="316718000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">175</stat>
 		</stats>
@@ -160,6 +162,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
@@ -183,6 +186,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">293</stat>
 		</stats>
@@ -201,6 +205,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -219,6 +224,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -237,6 +243,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="SHIELD" />
 		<skills>
 			<skill id="8785" level="1" /> <!-- Equip Shield -->
 		</skills>
@@ -259,6 +266,7 @@
 		<set name="price" val="316718000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">175</stat>
 		</stats>
@@ -278,6 +286,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
@@ -285,6 +294,7 @@
 		<stats>
 			<stat type="pDef">375</stat>
 			<stat type="rEvas">5</stat>
+			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
 	<item id="80112" name="Leviathan Leather Leggings" additionalName="Light Armor" type="Armor">
@@ -302,9 +312,11 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">234</stat>
 			<stat type="rEvas">3</stat>
+			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
 	<item id="80113" name="Leviathan Leather Gloves" additionalName="Light Armor" type="Armor">
@@ -321,6 +333,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -339,6 +352,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -356,6 +370,7 @@
 		<set name="price" val="316718000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">175</stat>
 		</stats>
@@ -375,6 +390,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
@@ -400,6 +416,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="mDef">42</stat>
 			<stat type="pDef">161</stat>
@@ -420,6 +437,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -438,6 +456,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -457,6 +476,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="SIGIL" />
 		<stats>
 			<stat type="pDef">58</stat>
 			<stat type="pAtkRange">40</stat>
@@ -666,6 +686,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="17243" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="2020737500" />
@@ -721,6 +742,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80137" name="Enchanted Krishna Fighter" type="Weapon">
@@ -754,7 +776,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80138" name="Enchanted Krishna Stormer" type="Weapon">
@@ -824,7 +846,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">293</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
 	<item id="80140" name="Enchanted Krishna Shooter" type="Weapon">
@@ -859,7 +881,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
 	<item id="80141" name="Enchanted Krishna Buster" type="Weapon">
@@ -893,6 +915,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80142" name="Enchanted Krishna Caster" type="Weapon">
@@ -927,7 +950,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">500</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80143" name="Enchanted Krishna Retributer" type="Weapon">
@@ -960,9 +983,10 @@
 			<stat type="mAtk">532</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
+			<stat type="accMagic">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80144" name="Enchanted Krishna Dual Sword" type="Weapon">
@@ -1029,7 +1053,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">433</stat>
 			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80146" name="Enchanted Krishna Dual Blunt" type="Weapon">
@@ -1063,7 +1087,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80147" name="Bloody Krishna Shaper" type="Weapon">
@@ -1206,6 +1230,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80151" name="Bloody Krishna Fighter" type="Weapon">
@@ -1241,7 +1266,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80152" name="Bloody Krishna Stormer" type="Weapon">
@@ -1315,7 +1340,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">293</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
 	<item id="80154" name="Bloody Krishna Shooter" type="Weapon">
@@ -1352,7 +1377,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
 	<item id="80155" name="Bloody Krishna Buster" type="Weapon">
@@ -1388,6 +1413,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80156" name="Bloody Krishna Caster" type="Weapon">
@@ -1424,7 +1450,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">500</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80157" name="Bloody Krishna Retributer" type="Weapon">
@@ -1459,9 +1485,10 @@
 			<stat type="mAtk">565</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
+			<stat type="accMagic">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80158" name="Bloody Krishna Dual Sword" type="Weapon">
@@ -1532,7 +1559,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">433</stat>
 			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80160" name="Bloody Krishna Dual Blunt Weapon" type="Weapon">
@@ -1568,7 +1595,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80161" name="Dark Krishna Shaper" type="Weapon">
@@ -1711,6 +1738,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80165" name="Dark Krishna Fighter" type="Weapon">
@@ -1746,7 +1774,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80166" name="Dark Krishna Stormer" type="Weapon">
@@ -1820,7 +1848,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">293</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
 	<item id="80168" name="Dark Krishna Shooter" type="Weapon">
@@ -1857,7 +1885,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
 	<item id="80169" name="Dark Krishna Buster" type="Weapon">
@@ -1893,6 +1921,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80170" name="Dark Krishna Caster" type="Weapon">
@@ -1929,7 +1958,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">500</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80171" name="Dark Krishna Retributer" type="Weapon">
@@ -1964,9 +1993,10 @@
 			<stat type="mAtk">565</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
+			<stat type="accMagic">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80172" name="Dark Krishna Dual Sword" type="Weapon">
@@ -2037,7 +2067,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">433</stat>
 			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80174" name="Dark Krishna Dual Blunt Weapon" type="Weapon">
@@ -2073,7 +2103,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80175" name="Limited Krishna Shaper" type="Weapon">
@@ -2331,7 +2361,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">293</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
 	<item id="80182" name="Limited Krishna Shooter" type="Weapon">
@@ -2369,7 +2399,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
 	<item id="80183" name="Limited Krishna Buster" type="Weapon">
@@ -2391,6 +2421,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<skills>
 			<skill id="8857" level="1" /> <!-- PvE Damage Increase -->
@@ -2405,6 +2436,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80184" name="Limited Krishna Caster" type="Weapon">
@@ -2426,6 +2458,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<skills>
 			<skill id="8858" level="1" /> <!-- PvE Damage Increase -->
@@ -2441,7 +2474,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">500</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80185" name="Limited Krishna Retributer" type="Weapon">
@@ -2463,6 +2496,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<skills>
 			<skill id="8859" level="1" /> <!-- PvE Damage Increase -->
@@ -2476,9 +2510,10 @@
 			<stat type="mAtk">617</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
+			<stat type="accMagic">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80186" name="Limited Krishna Dual Sword" type="Weapon">
@@ -2551,7 +2586,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">433</stat>
 			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80188" name="Limited Krishna Dual Blunt" type="Weapon">
@@ -2588,7 +2623,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="80189" name="Enchanted Leviathan Helmet" additionalName="Heavy Armor" type="Armor">
@@ -2603,6 +2638,8 @@
 		<set name="price" val="395897500" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">179</stat>
 		</stats>
@@ -2622,6 +2659,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
@@ -2644,6 +2683,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">299</stat>
 		</stats>
@@ -2661,6 +2702,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
@@ -2678,6 +2721,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
@@ -2697,6 +2742,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="blessed" val="true" />
 		<set name="commissionItemType" val="SHIELD" />
 		<skills>
 			<skill id="8785" level="1" /> <!-- Equip Shield -->
@@ -2720,6 +2766,8 @@
 		<set name="price" val="395897500" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">179</stat>
 		</stats>
@@ -2739,6 +2787,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
@@ -2746,6 +2796,7 @@
 		<stats>
 			<stat type="pDef">382</stat>
 			<stat type="rEvas">5</stat>
+			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
 	<item id="80197" name="Enchanted Leviathan Leather Leggings" additionalName="Light Armor" type="Armor">
@@ -2762,9 +2813,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">239</stat>
 			<stat type="rEvas">3</stat>
+			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
 	<item id="80198" name="Enchanted Leviathan Leather Gloves" additionalName="Light Armor" type="Armor">
@@ -2780,6 +2834,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
@@ -2797,6 +2853,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>

@@ -737,6 +737,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28437" min="1" max="1" chance="100" /> <!-- Sayha's Talisman - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="28448" name="Sayha's Talisman Stage 7 Pack" type="EtcItem">
 		<!-- Wrapped pack containing Sayha's Talisman Stage 7. The talisman cannot be dropped or exchanged. -->
@@ -745,6 +749,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29063" min="1" max="1" chance="100" /> <!-- Sayha's Talisman - Stage 7 -->
+		</capsuled_items>
 	</item>
 	<item id="28449" name="Sayha's Talisman Stage 8 Pack" type="EtcItem">
 		<!-- Wrapped pack containing Sayha's Talisman Stage 8. The talisman cannot be dropped or exchanged. -->
@@ -753,6 +761,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29064" min="1" max="1" chance="100" /> <!-- Sayha's Talisman - Stage 8 -->
+		</capsuled_items>
 	</item>
 	<item id="28450" name="Sayha's Talisman Stage 9 Pack" type="EtcItem">
 		<!-- Wrapped pack containing Sayha's Talisman Stage 9. The talisman cannot be dropped or exchanged. -->
@@ -761,6 +773,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29065" min="1" max="1" chance="100" /> <!-- Sayha's Talisman - Stage 9 -->
+		</capsuled_items>
 	</item>
 	<item id="28451" name="Sayha's Talisman Stage 10 Pack" type="EtcItem">
 		<!-- Wrapped pack containing Sayha's Talisman Stage 10. The talisman cannot be dropped or exchanged. -->
@@ -769,6 +785,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29066" min="1" max="1" chance="100" /> <!-- Sayha's Talisman - Stage 10 -->
+		</capsuled_items>
 	</item>
 	<item id="28452" name="Fortune Talisman Pack" type="EtcItem">
 		<!-- Double-click to obtain a Sayha's Talisman Stage 3-10 or Venir's Talisman Stage 10-15. -->
@@ -796,6 +816,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28456" min="1" max="1" chance="100" /> <!-- Dimensional Bracelet Stage 6 CHA +5 -->
+		</capsuled_items>
 	</item>
 	<item id="28456" name="Dimensional Bracelet Stage 6" additionalName="CHA+5" type="Armor">
 		<!-- CHA +5. Activates 6 talisman slots when equipped. -->
@@ -814,6 +838,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
+			<skill id="18057" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18097" level="1" /> <!-- Dimensional Bracelet Lv1 -->
 		</skills>
 	</item>
@@ -893,9 +918,19 @@
 	<item id="28464" name="Exclusive Reward Chest" type="EtcItem">
 		<!-- Exclusive Reward Chest. Double-click to get a random item. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="19442" min="1" max="100000" chance="100" /> <!-- Blessed Spiritshot (R-grade) -->
+			<item id="19441" min="1" max="100000" chance="100" /> <!-- Soulshot (R-grade) -->
+			<item id="34985" min="1" max="1" chance="100" /> <!-- Talisman - Destruction -->
+			<item id="39634" min="1" max="1" chance="100" /> <!-- Venir's Talisman -->
+			<item id="48124" min="1" max="1" chance="100" /> <!-- Fairy Agathion Charm -->
+			<item id="1538" min="10" max="10" chance="100" /> <!-- Blessed Scroll of Escape -->
+			<item id="46709" min="15" max="15" chance="100" /> <!-- Paβ€™agrioβ€™s Blessing (Event) -->
+		</capsuled_items>
 	</item>
 	<item id="28465" name="Heine Exclusive Reward Chest" type="EtcItem">
 		<!-- Double-click to get Heine Fishing Coins. Has a chance of obtaining an Exclusive Reward Chest. -->
@@ -904,6 +939,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="19442" min="1" max="1" chance="50" /> <!-- Exclusive Reward Chest -->
+			<item id="27640" min="1" max="1" chance="100" /> <!-- Soulshot (R-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="28466" name="Heine Exclusive Fishing Tools - 300 Pack" type="EtcItem">
 		<!-- Double-click to get 300 Heine Exclusive Bait Coupons and 300 Fishing Shots. -->

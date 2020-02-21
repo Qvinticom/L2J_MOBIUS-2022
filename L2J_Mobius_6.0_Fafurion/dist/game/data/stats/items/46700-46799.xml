@@ -373,6 +373,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="18380" level="1" /> <!-- Mysterious Talisman - STR -->
+		</skills>
 	</item>
 	<item id="46718" name="Mysterious Talisman - INT" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. INT +5 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -388,6 +391,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="18381" level="1" /> <!-- Mysterious Talisman - INT -->
+		</skills>
 	</item>
 	<item id="46719" name="Mysterious Talisman - DEX" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. DEX +5 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -403,6 +409,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="18382" level="1" /> <!-- Mysterious Talisman - DEX -->
+		</skills>
 	</item>
 	<item id="46720" name="Mysterious Talisman - WIT" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. WIT +5 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -418,6 +427,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="18383" level="1" /> <!-- Mysterious Talisman - WIT -->
+		</skills>
 	</item>
 	<item id="46721" name="Mysterious Talisman - CON" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. CON +5 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -433,6 +445,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="18384" level="1" /> <!-- Mysterious Talisman - CON -->
+		</skills>
 	</item>
 	<item id="46722" name="Mysterious Talisman - MEN" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. MEN +5 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -448,6 +463,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="18385" level="1" /> <!-- Mysterious Talisman - MEN -->
+		</skills>
 	</item>
 	<item id="46723" name="Mysterious Talisman - STR 30-day pack" type="EtcItem">
 		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - STR (30-day). -->
@@ -461,6 +479,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46717" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - STR -->
+		</capsuled_items>
 	</item>
 	<item id="46724" name="Mysterious Talisman - INT 30-day pack" type="EtcItem">
 		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - INT (30-day). -->
@@ -474,6 +496,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46718" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - INT -->
+		</capsuled_items>
 	</item>
 	<item id="46725" name="Mysterious Talisman - DEX 30-day pack" type="EtcItem">
 		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - DEX (30-day). -->
@@ -487,6 +513,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46719" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - DEX -->
+		</capsuled_items>
 	</item>
 	<item id="46726" name="Mysterious Talisman - WIT 30-day pack" type="EtcItem">
 		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - WIT (30-day). -->
@@ -500,6 +530,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46720" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - WIT -->
+		</capsuled_items>
 	</item>
 	<item id="46727" name="Mysterious Talisman - CON 30-day pack" type="EtcItem">
 		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - CON (30-day). -->
@@ -513,6 +547,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46721" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - CON -->
+		</capsuled_items>
 	</item>
 	<item id="46728" name="Mysterious Talisman - MEN 30-day pack" type="EtcItem">
 		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - MEN (30-day). -->
@@ -526,6 +564,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46722" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - MEN -->
+		</capsuled_items>
 	</item>
 	<item id="46729" name="Scroll of Escape - Town of Goddard" type="EtcItem">
 		<!-- Teleports near the High Priest Gregory in the Town of Goddard. -->

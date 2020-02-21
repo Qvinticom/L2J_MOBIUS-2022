@@ -145,12 +145,16 @@
 	<item id="47916" name="Nevit's Cloak of Light Box" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Cloak of Light (30-day). -->
 		<set name="icon" val="icon.bm_sayha_present" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47917" min="1" max="1" chance="100" /> <!-- Nevit's Cloak of Light -->
+		</capsuled_items>
 	</item>
 	<item id="47917" name="Nevit's Cloak of Light" additionalName="30-day" type="Armor">
 		<!-- By Angel Nevit's strength, when equipped reduces received damage by -10%, and increases all stats by +3. -->

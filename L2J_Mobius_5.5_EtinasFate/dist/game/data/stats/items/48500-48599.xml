@@ -391,6 +391,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="bodypart" val="lhand" />
 		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
@@ -401,6 +402,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="bodypart" val="lhand" />
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
@@ -412,6 +414,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_mailable" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
@@ -420,6 +423,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39209" level="1" /> <!-- Fried Fish -->
@@ -432,6 +436,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_mailable" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
@@ -440,6 +445,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39210" level="1" /> <!-- Steamed Fish -->
@@ -453,6 +459,7 @@
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="true" />
 		<set name="is_mailable" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="true" />
@@ -460,6 +467,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39211" level="1" /> <!-- Grilled Fish -->
@@ -480,6 +488,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39212" level="1" /> <!-- Braised Fish -->
@@ -546,6 +555,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="48550" name="Crystal of Condensed Energy" type="EtcItem">
 		<!-- A crystal of Condensed Energy you can obtain by defeating Dark Atelia Guardians including Atelia Guardian Harke, Atelia Guardian Ergalion and Atelia Guardian Spira. Take it to Devianne to receive an additional reward. -->
@@ -561,12 +571,25 @@
 	<item id="48551" name="Olympiad Class Winner's Rune" type="EtcItem">
 		<!-- A glorious rune awarded to the class winner of the World Olympiad. If stored in the inventory, increases Vitality XP by 30%, P. Def. by 1986, M. Def. by 1150, Speed by 7, and Skill Power by 5%. Will be deleted once the Olympiad cycle ends. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.rune_olympiad_legend_server" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="39219" level="1" /> <!-- Olympiad Class Winner's Rune -->
+		</skills>
 	</item>
 	<item id="48552" name="Olympiad Class Runner-up's Rune" type="EtcItem">
 		<!-- A glorious rune awarded to the class runner-up of the World Olympiad. If stored in the inventory, increases Vitality XP by 20%, P. Def. by 1428, M. Def. by 821, Speed by 3, and Skill Power by 3%. Will be deleted once the Olympiad cycle ends. Cannot be used in Olympiad. -->
@@ -604,8 +627,19 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="weight" val="1300" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<skills>
 			<skill id="35191" level="1" /> <!-- Special Ability Legend Weapon -->
 		</skills>
@@ -617,6 +651,7 @@
 			<stat type="pAtkSpd">433</stat>
 			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
 	<item id="48555" name="Legend Infinity Cutter" type="Weapon">
@@ -635,8 +670,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<skills>
 			<skill id="35192" level="1" /> <!-- Special Ability Legend Weapon -->
 		</skills>
@@ -647,6 +692,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
 	<item id="48556" name="Legend Infinity Slasher" type="Weapon">
@@ -665,8 +711,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<skills>
 			<skill id="35193" level="1" /> <!-- Special Ability Legend Weapon -->
 		</skills>
@@ -677,6 +733,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
 	<item id="48557" name="Legend Infinity Avenger" type="Weapon">
@@ -695,8 +752,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="damage_range" val="0;0;66;120" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<skills>
 			<skill id="35194" level="1" /> <!-- Special Ability Legend Weapon -->
 		</skills>
@@ -707,6 +774,8 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
 	<item id="48558" name="Legend Infinity Fighter" type="Weapon">
@@ -725,8 +794,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="damage_range" val="0;0;32;120" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<skills>
 			<skill id="35195" level="1" /> <!-- Special Ability Legend Weapon -->
 		</skills>
@@ -737,7 +816,8 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
 	<item id="48559" name="Legend Infinity Stormer" type="Weapon">
@@ -756,8 +836,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<skills>
 			<skill id="35196" level="1" /> <!-- Special Ability Legend Weapon -->
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
@@ -788,9 +878,19 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<skills>
 			<skill id="35197" level="1" /> <!-- Special Ability Legend Weapon -->
 		</skills>
@@ -801,7 +901,8 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">293</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
 	<item id="48561" name="Legend Infinity Shooter" type="Weapon">
@@ -818,9 +919,19 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1350" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<skills>
 			<skill id="35198" level="1" /> <!-- Special Ability Legend Weapon -->
 		</skills>
@@ -831,7 +942,8 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
 	<item id="48562" name="Legend Infinity Buster" type="Weapon">
@@ -850,9 +962,19 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<skills>
 			<skill id="35199" level="1" /> <!-- Special Ability Legend Weapon -->
 		</skills>
@@ -862,6 +984,8 @@
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
 	<item id="48563" name="Legend Infinity Caster" type="Weapon">
@@ -880,9 +1004,19 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<skills>
 			<skill id="35200" level="1" /> <!-- Special Ability Legend Weapon -->
 		</skills>
@@ -893,7 +1027,8 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">500</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
 	<item id="48564" name="Legend Infinity Retributer" type="Weapon">
@@ -912,9 +1047,19 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<skills>
 			<skill id="35201" level="1" /> <!-- Special Ability Legend Weapon -->
 		</skills>
@@ -923,9 +1068,11 @@
 			<stat type="mAtk">935</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
+			<stat type="accMagic">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
 	<item id="48565" name="Legend Infinity Dual Sword" type="Weapon">
@@ -944,8 +1091,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<skills>
 			<skill id="35202" level="1" /> <!-- Special Ability Legend Weapon -->
 		</skills>
@@ -956,6 +1113,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
 	<item id="48566" name="Legend Infinity Dual Dagger" type="Weapon">
@@ -972,8 +1130,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<skills>
 			<skill id="35203" level="1" /> <!-- Special Ability Legend Weapon -->
 		</skills>
@@ -984,7 +1152,8 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">433</stat>
 			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
 	<item id="48567" name="Legend Infinity Dual Blunt Weapon" type="Weapon">
@@ -1001,8 +1170,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<skills>
 			<skill id="35204" level="1" /> <!-- Special Ability Legend Weapon -->
 		</skills>
@@ -1013,7 +1192,8 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
 	<item id="48568" name="Guard Agathion Fragment" type="EtcItem">
@@ -1041,6 +1221,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<skills>
 			<skill id="39234" level="1" /> <!-- Book of Growth: Guard Agathion -->
@@ -1055,6 +1236,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<skills>
 			<skill id="39235" level="1" /> <!-- Ancient Book of Growth: Guard Agathion -->
@@ -1178,6 +1360,7 @@
 			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
 			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
 			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
 	<item id="48576" name="Super Advanced Seed Bracelet" additionalName="Stage 3" type="Armor">
@@ -1196,6 +1379,7 @@
 			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
 			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
 			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
 	<item id="48577" name="Super Advanced Seed Bracelet" additionalName="Stage 4" type="Armor">
@@ -1214,6 +1398,7 @@
 			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
 			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
 			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
 	<item id="48578" name="Demon Slayer's Proof" type="EtcItem">
@@ -1226,6 +1411,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="48579" name="Blackbird Clan Basic Box" additionalName="Atelia Refinery" type="EtcItem">
 		<!-- A basic supply box rewarded for helping the Blackbird Clan at the Atelia Refinery. Double-click to see the items inside. -->
@@ -1237,6 +1423,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39237" level="1" /> <!-- Basic Supply Box -->
+		</skills>
 	</item>
 	<item id="48580" name="Blackbird Clan Intermediate Box" additionalName="Atelia Refinery" type="EtcItem">
 		<!-- An intermediate supply box rewarded for helping the Blackbird Clan at the Atelia Refinery. Double-click to see the items inside. -->
@@ -1248,6 +1441,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39237" level="2" /> <!-- Intermediate Supply Box -->
+		</skills>
 	</item>
 	<item id="48581" name="Blackbird Clan Advanced Box" additionalName="Atelia Refinery" type="EtcItem">
 		<!-- An advanced supply box rewarded for helping the Blackbird Clan at the Atelia Refinery. Double-click to see the items inside. -->

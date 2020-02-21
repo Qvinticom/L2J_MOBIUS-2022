@@ -568,6 +568,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="20904" min="10" max="10" chance="100" /> <!-- Rose Essence -->
+		</capsuled_items>
 	</item>
 	<item id="37538" name="Pomona Agathion Pack" type="EtcItem">
 		<!-- Double-click to receive a Pomona Agathion (90-day). Cannot be used in the Olympiad. -->
@@ -579,6 +583,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37525" min="1" max="1" chance="100" /> <!-- Bae Kisung Agathion (90-day) -->
+		</capsuled_items>
 	</item>
 	<item id="37539" name="Enchant Scroll Pack" type="EtcItem">
 		<!-- Double-click to receive 1 Scroll: Enchant Armor (R-grade) and 1 Scroll: Enchant Weapon (R-grade). Cannot be used in the Olympiad. -->
@@ -587,6 +595,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="17526" min="1" max="1" chance="100" /> <!-- Giant's Scroll: Enchant R-Grade Weapon -->
+			<item id="17527" min="1" max="1" chance="100" /> <!-- Giant's Scroll: Enchant R-Grade Armor -->
+		</capsuled_items>
 	</item>
 	<item id="37540" name="Giant's Enchant Scroll Pack" type="EtcItem">
 		<!-- Double-click to receive 1 Giant's Scroll: Enchant Armor (R-grade) and 1 Giant's Scroll: Enchant Weapon (R-grade). Cannot be used in the Olympiad. -->
@@ -595,6 +608,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="36386" min="1" max="1" chance="100" /> <!-- Giant's Scroll: Enchant R-Grade Weapon -->
+			<item id="36389" min="1" max="1" chance="100" /> <!-- Giant's Scroll: Enchant R-Grade Armor -->
+		</capsuled_items>
 	</item>
 	<item id="37541" name="Blessed Enchant Scroll Pack" type="EtcItem">
 		<!-- Double-click to receive 1 Blessed Scroll: Enchant Armor (R-grade) and 1 Blessed Scroll: Enchant Weapon (R-grade). Cannot be used in the Olympiad. -->
@@ -746,6 +764,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37097" min="1" max="1" chance="100" /> <!-- High-grade Elixir of Life -->
+			<item id="37098" min="1" max="1" chance="100" /> <!-- High-grade Elixir of Mind -->
+			<item id="37099" min="1" max="1" chance="100" /> <!-- High-grade Elixir of CP -->
+		</capsuled_items>
 	</item>
 	<item id="37559" name="Shiny Coin" type="EtcItem">
 		<!-- Sparkling coin. Used to exchange for special items through the dimensional merchant. -->
@@ -816,6 +840,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="480" />
+		<skills>
+			<skill id="17117" level="2" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="37565" name="Emperor's Rune Pack" type="EtcItem">
 		<!-- Open the box to obtain the Emperor's Rune (8-hour). Cannot be used in the Olympiad. -->
@@ -823,6 +850,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37565" min="1" max="1" chance="100" /> <!-- Emperor's Rune (8h) -->
+		</capsuled_items>
 	</item>
 	<item id="37566" name="Blessed Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
 		<!-- Enchant success rate + 10% for weapons (R-grade) when using Blessed Scroll: Enchant Weapon. Only for items enchanted between + 3 and + 9. Not for items enchanted to + 10 or above. -->

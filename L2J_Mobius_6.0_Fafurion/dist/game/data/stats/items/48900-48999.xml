@@ -108,7 +108,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<skills>
-			<skill id="39369" level="1" />
+			<skill id="39369" level="1" />  <!-- Gran Kain's Scroll: Enchant Weapon (R-grade) -->
 		</skills>
 	</item>
 	<item id="48913" name="Gale Scroll" type="EtcItem">
@@ -236,6 +236,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="64800" />
+		<skills>
+			<skill id="17708" level="5" /> <!-- Diamond -->
+		</skills>
 	</item>
 	<item id="48923" name="Pearl Lv. 5" additionalName="45-day" type="Armor">
 		<!-- When equipped, M. Def. +1150 and decreases M. Critical Damage Received. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
@@ -250,6 +253,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="64800" />
+		<skills>
+			<skill id="17709" level="5" /> <!-- Pearl -->
+		</skills>
 	</item>
 	<item id="48924" name="Ruby Lv. 5" additionalName="45-day" type="Armor">
 		<!-- When equipped, increases Damage by 20% for Soulshot and Beast Soulshot. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
@@ -264,6 +270,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="64800" />
+		<skills>
+			<skill id="17817" level="1" /> <!-- Ruby -->
+		</skills>
 	</item>
 	<item id="48925" name="Sapphire Lv. 5" additionalName="45-day" type="Armor">
 		<!-- When equipped, Spiritshot and Blessed Spiritshot damage +20%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->

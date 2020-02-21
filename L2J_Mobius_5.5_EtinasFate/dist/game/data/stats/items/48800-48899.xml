@@ -8,6 +8,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17709" level="8" />
+		</skills>
 	</item>
 	<item id="48801" name="Greater Pearl" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, increases M. Def. by 1621 and decreases Received M. Critical Damage by 8%. Additionally increases M. Def. by 10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -17,6 +20,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17709" level="9" />
+		</skills>
 	</item>
 	<item id="48802" name="Greater Pearl" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, increases M. Def. by 1785 and decreases Received M. Critical Damage by 10%. Additionally increases M. Def. by 10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -26,6 +32,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17709" level="10" />
+		</skills>
 	</item>
 	<item id="48803" name="Greater Vital Stone" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases Bonus XP gain in Vitality state by 32%, and decreases Vitality Consumption Spd. by 16%. Additionally increases XP gain by 10%. Can use the Vital Wind skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -35,6 +44,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18568" level="7" />
+			<skill id="27439" level="4" />
+		</skills>
 	</item>
 	<item id="48804" name="Greater Vital Stone" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, increases Bonus XP gain in Vitality state by 34%, and decreases Vitality Consumption Spd. by 17%. Additionally increases XP gain by 10%. Can use the Vital Wind skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -44,24 +57,38 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18568" level="8" />
+			<skill id="27439" level="4" />
+		</skills>
 	</item>
 	<item id="48805" name="Greater Vital Stone" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, increases Bonus XP gain in Vitality state by 36%, and decreases Vitality Consumption Spd. by 18%. Additionally increases XP gain by 10%. Can use the Vital Wind skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
+		<set name="is_stackable" val="false" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18568" level="9" />
+			<skill id="27439" level="4" />
+		</skills>
 	</item>
 	<item id="48806" name="Greater Vital Stone" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, increases Bonus XP gain in Vitality state by 40%, and decreases Vitality Consumption Spd. by 20%. Additionally increases XP gain by 10%. Can use the Vital Wind skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
+		<set name="is_stackable" val="false" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18568" level="10" />
+			<skill id="27439" level="5" />
+		</skills>
 	</item>
 	<item id="48807" name="Greater Garnet" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases All Debuff Defense Success Rates by 30%, Reflect Resistance by 3%, and removes Stun/ Silence if damaged by a PC. When used, removes your debuff. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
@@ -71,6 +98,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18566" level="7" />
+			<skill id="18567" level="2" />
+		</skills>
 	</item>
 	<item id="48808" name="Greater Garnet" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, increases All Debuff Defense Success Rates by 30%, Reflect Resistance by 6%, and removes Stun/ Silence if damaged by a PC. When used, removes your debuff. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
@@ -80,6 +111,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18566" level="8" />
+			<skill id="18567" level="2" />
+		</skills>
 	</item>
 	<item id="48809" name="Greater Garnet" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, increases All Debuff Defense Success Rates by 30%, Reflect Resistance by 9%, and removes Stun/ Silence if damaged by a PC. When used, removes your debuff. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
@@ -89,6 +124,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18566" level="9" />
+			<skill id="18567" level="2" />
+		</skills>
 	</item>
 	<item id="48810" name="Greater Garnet" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, increases All Debuff Defense Success Rates by 30%, Reflect Resistance by 15%, and removes Stun/ Silence if damaged by a PC. When used, removes your debuff. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
@@ -98,6 +137,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18566" level="10" />
+			<skill id="18567" level="2" />
+		</skills>
 	</item>
 	<item id="48811" name="Greater Tanzanite" additionalName="Lv. 2" type="Armor">
 		<!-- When used, creates a barrier that absorbs 55000 Damage for 15 sec, and instantly restores 15% of Max HP. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -107,6 +150,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18565" level="7" /> <!-- Greater Tanzanite - Barrier -->
+		</skills>
 	</item>
 	<item id="48812" name="Greater Tanzanite" additionalName="Lv. 3" type="Armor">
 		<!-- When used, creates a barrier that absorbs 60000 Damage for 15 sec, and instantly restores 15% of Max HP. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -116,6 +162,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18565" level="8" /> <!-- Greater Tanzanite - Barrier -->
+		</skills>
 	</item>
 	<item id="48813" name="Greater Tanzanite" additionalName="Lv. 4" type="Armor">
 		<!-- When used, creates a barrier that absorbs 65000 Damage for 15 sec, and instantly restores 15% of Max HP. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -125,6 +174,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18565" level="9" /> <!-- Greater Tanzanite - Barrier -->
+		</skills>
 	</item>
 	<item id="48814" name="Greater Tanzanite" additionalName="Lv. 5" type="Armor">
 		<!-- When used, creates a barrier that absorbs 70000 Damage for 15 sec, and instantly restores 15% of Max HP. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -134,6 +186,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18565" level="10" /> <!-- Greater Tanzanite - Barrier -->
+		</skills>
 	</item>
 	<item id="48815" name="Greater Red Cat's Eye" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases P. Critical Damage by 13%, P. Skill Critical Damage by 13%, P. Skill Power by 5%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -143,6 +198,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18713" level="7" />
+		</skills>
 	</item>
 	<item id="48816" name="Greater Red Cat's Eye" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, increases P. Critical Damage by 13%, P. Skill Critical Damage by 13%, P. Skill Power by 6%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -152,6 +210,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18713" level="8" />
+		</skills>
 	</item>
 	<item id="48817" name="Greater Red Cat's Eye" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, increases P. Critical Damage by 14%, P. Skill Critical Damage by 14%, P. Skill Power by 6%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -161,6 +222,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18713" level="9" />
+		</skills>
 	</item>
 	<item id="48818" name="Greater Red Cat's Eye" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, increases P. Critical Damage by 15%, P. Skill Critical Damage by 15%, P. Skill Power by 7%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -170,6 +234,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18713" level="10" />
+		</skills>
 	</item>
 	<item id="48819" name="Greater Blue Cat's Eye" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases M. Skill Critical Damage by 13% and M. Skill Power by 5%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -179,6 +246,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18714" level="7" />
+		</skills>
 	</item>
 	<item id="48820" name="Greater Blue Cat's Eye" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, increases M. Skill Critical Damage by 13% and M. Skill Power by 6%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -188,6 +258,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18714" level="8" />
+		</skills>
 	</item>
 	<item id="48821" name="Greater Blue Cat's Eye" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, increases M. Skill Critical Damage by 14% and M. Skill Power by 6%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -197,6 +270,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18714" level="9" />
+		</skills>
 	</item>
 	<item id="48822" name="Greater Blue Cat's Eye" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, increases M. Skill Critical Damage by 15% and M. Skill Power by 7%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -206,6 +282,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18714" level="10" />
+		</skills>
 	</item>
 	<item id="48823" name="Freya's Ice Staff" additionalName="Event" type="Weapon">
 		<!-- Freya's Ice Staff. Enchant it to draw out its power. If you successfully enchant it to a high level, you can exchange it for a special reward through Event NPC Freya. Will be deleted when the event ends. -->
@@ -296,6 +375,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39350" level="1" /> <!-- Freya's Ice Rose -->
@@ -328,6 +408,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="48834" name="Merkios' Mark" type="EtcItem">
 		<!-- An item containing Merkios' magic power. Can be exchanged for special items through Meirin from the Golden Compass Explorers. -->
@@ -430,6 +511,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="8" />
+		<set name="commissionItemType" val="BRACELET" />
+		<skills>
+			<skill id="35214" level="3" /> <!-- Lucien's Bracelet - Attack -->
+		</skills>
 	</item>
 	<item id="48843" name="Lucien's Bracelet" additionalName="Magic" type="Armor">
 		<!-- A magical bracelet with the restored power of Lucien, an ancient Dwarf king. Enchantment increases M. Atk., according to the enchantment level. -->
@@ -444,6 +530,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="8" />
+		<set name="commissionItemType" val="BRACELET" />
+		<skills>
+			<skill id="35215" level="3" /> <!-- Lucien's Bracelet - Magic -->
+		</skills>
 	</item>
 	<item id="48844" name="Lucien's Bracelet" additionalName="Defense" type="Armor">
 		<!-- A magical bracelet with the restored power of Lucien, an ancient Dwarf king. Enchantment increases P. Def./ M. Def., according to the enchantment level. -->
@@ -458,11 +549,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="8" />
+		<set name="commissionItemType" val="BRACELET" />
+		<skills>
+			<skill id="35216" level="3" /> <!-- Lucien's Bracelet - Defense -->
+		</skills>
 	</item>
 	<item id="48845" name="Blessed Scroll: Enchant Lucien's Bracelet" type="EtcItem">
 		<!-- Enchant scroll exclusively for Lucien's Bracelet. When used, the scroll enchants Lucien's Bracelet with a 100% chance and can enchant it up to +10. -->
 		<set name="icon" val="icon.scrl_of_ench_bracelet_lucien" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -470,6 +568,15 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="39352" level="1" /> <!-- Scroll: Enchant Blessed Lucien's Bracelet -->
+		</skills>
 	</item>
 	<item id="48846" name="Chronicle Cube - 30 times" type="EtcItem">
 		<!-- Use it to receive a Chronicle Support Box. You can earn a Greater Vital Stone (30-day) on the 30th use. -->
@@ -508,6 +615,9 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39355" level="1" /> <!-- Freya's Ice Rose -->
@@ -516,6 +626,8 @@
 	<item id="48849" name="Chronicle Token" additionalName="30-day" type="EtcItem">
 		<!-- A rune item. If stored in the inventory, increases P. Atk./ M. Atk./ P. Def./ M. Def./ Atk. Spd./ Casting Spd./ P. Critical Rate/ M. Increases Critical Rate/ Max HP&MP&CP by 5% and Vitality by 14%. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.etc_scroll_of_memory_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -523,17 +635,39 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="39345" level="1" /> <!-- Chronicle Token -->
+		</skills>
 	</item>
 	<item id="48850" name="Chronicle Token" additionalName="90-day" type="EtcItem">
 		<!-- A rune item. If stored in the inventory, increases P. Atk./ M. Atk./ P. Def./ M. Def./ Atk. Spd./ Casting Spd./ P. Critical Rate/ M. Increases Critical Rate/ Max HP&MP&CP by 5% and Vitality by 14%. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.etc_scroll_of_memory_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="time" val="129600" />
+		<skills>
+			<skill id="39345" level="1" /> <!-- Chronicle Token -->
+		</skills>
 	</item>
 	<item id="48851" name="Chronicle Support Box" type="EtcItem">
 		<!-- Double-click to obtain 1 Freya's Ice Rose (Event). There is a chance to obtain a Dark/ Bloody Enhancement Stone, Freya's Wind Scroll, Dandy's Home Run Ball, Vitality Replenishing Star Candy, or Shining Dragon Attribute Tonic (XP) at random. -->
@@ -580,6 +714,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="57" min="1000000000" max="1000000000" chance="100" /> <!-- 1 Billion Adena -->
+		</capsuled_items>
 	</item>
 	<item id="48855" name="2 Billion Adena Box" type="EtcItem">
 		<!-- A gift from Chorong's fortune draw. Use it to earn 2 billion Adena. -->
@@ -593,6 +731,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="57" min="2000000000" max="2000000000" chance="100" /> <!-- 2 Billion Adena -->
+		</capsuled_items>
 	</item>
 	<item id="48856" name="3 Billion Adena Box" type="EtcItem">
 		<!-- A gift from Chorong's fortune draw. Use it to earn 3 billion Adena. -->
@@ -650,6 +792,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="48864" min="1" max="1" chance="100" /> <!-- Fallen Angel's Ring -->
+			<item id="48863" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Fallen Angel Accessory -->
 		</capsuled_items>
 	</item>
 	<item id="48861" name="+9 Fallen Angel's Ring Box" type="EtcItem">
@@ -818,29 +961,41 @@
 		<!-- Double-click to randomly obtain a Forgotten Spellbook Chapter 1, Forgotten Spellbook Chapter 2, or Forgotten Spellbook Chapter 3. The Forgotten Spellbook can boost Forgotten Power: Physical Attack/ Magical Attack/ Armor Defense Skills. -->
 		<set name="icon" val="icon.bm_skill_book_lock" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="weight" val="120" />
+		<set name="price" val="800" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48876" name="Forgotten Spellbook Chapter 1" type="EtcItem">
 		<!-- A spellbook required to learn Forgotten Power Levels 6 to 10. You can exchange it through a Dimensional Merchant for Forgotten Spellbook Chapter 2 or Forgotten Spellbook Chapter 3. -->
 		<set name="icon" val="icon.bm_skill_book_base" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
+		<set name="price" val="800" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48877" name="Forgotten Spellbook Chapter 2" type="EtcItem">
 		<!-- A spellbook required to learn Forgotten Power Levels 11 to 20. -->
 		<set name="icon" val="icon.bm_skill_book_base" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
+		<set name="price" val="800" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48878" name="Forgotten Spellbook Chapter 3" type="EtcItem">
 		<!-- A spellbook required to learn Forgotten Power Levels 21 to 30. -->
 		<set name="icon" val="icon.bm_skill_book_base" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
+		<set name="price" val="800" />
+		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48879" name="Request - Sea of Spores" type="EtcItem">
@@ -877,6 +1032,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="48882" name="Request - Shadow of the Mother Tree" type="EtcItem">
 		<!-- A request issued by the Hunter Guild to eliminate Giant Monsters in the Shadow of the Mother Tree -->
@@ -888,6 +1044,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="48883" name="Letter 2018" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete 2018 HAPPY NEW YEAR/ HAPPY NEW YEAR/ HAPPY and take them to Event NPC Happy Dog to get a reward. -->

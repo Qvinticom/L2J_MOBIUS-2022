@@ -1314,6 +1314,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BeastSoulShot" />
 		<skills>
 			<skill id="22036" level="1" /> <!-- Beast Soulshot -->
 		</skills>

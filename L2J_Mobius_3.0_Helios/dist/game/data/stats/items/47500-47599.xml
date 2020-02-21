@@ -165,6 +165,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="47512" name="Attacker's Soul" type="EtcItem">
 		<!-- The soul of the Attacker that attempts to attack through the Dimensional Rift. Collect these and take them to the Dimensional Researcher Lias. -->
@@ -526,6 +527,7 @@
 		<set name="price" val="3000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 	</item>
 	<item id="47548" name="Bait" additionalName="R99" type="EtcItem">
 		<!-- Fishing time: 105 seconds. Standby time: 15 seconds. Fishing bait that can be used by characters of Level 99 or higher. Fish using this bait to catch a Reddish Box with low probability. -->
@@ -537,6 +539,7 @@
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 	</item>
 	<item id="47549" name="PC Cafe Bait" type="EtcItem">
 		<!-- Fishing time: 105 seconds. Standby time: 15 seconds. Special Fishing Bait. Fish using this bait to catch a Purplish Box with low probability. Can be used outside PC Cafes. -->

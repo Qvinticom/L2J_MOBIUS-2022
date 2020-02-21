@@ -536,8 +536,13 @@
 		<!-- Exclusive Book of Growth for Agathion Charm. Maintains the enchant level when enchantment fails. Cannot be useds on Agathions above +7. -->
 		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="28066" level="1" /> <!-- Ancient Zodiac Agathion Charm Book of Growth -->
+		</skills>
 	</item>
 	<item id="29240" name="Red Light Cheer" additionalName="Event" type="Weapon">
 		<!-- A cheering item used to support favorite athletes. Allows to use the Cheer Firecracker skill. -->

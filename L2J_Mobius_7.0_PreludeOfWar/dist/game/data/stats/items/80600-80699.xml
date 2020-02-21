@@ -136,13 +136,22 @@
 		<!-- When used. Max HP/MP/CP +30%. P. Atk./M. Atk./P. Def./M. Def. +30%. Atk. Spd./Casting Spd. +10%. Speed +20. Attack/Defense Attributes +100. Damage +10%. P./M. Skill Power +10%. XP/SP +30%. Damage Received -10%, and Skill MP Consumption -15% for 30 minutes. Buffs persist after death. Cooldown 5 min. Does not stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_freya_ice_rose" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39350" level="1" /> <!-- Freya's Ice Rose -->
+		</skills>
 	</item>
 	<item id="80613" name="15th Anniversary Rare Earring Gift Box" type="EtcItem">
 		<!-- A reward earned for eating a 15th Anniversary Cake and rescuing Clumsy Snow. Double-click to obtain a Lindvior's Earring. Ramona's Fancy Earring. Helios's Majestic Earring. or Orfen's Soul Earring. -->

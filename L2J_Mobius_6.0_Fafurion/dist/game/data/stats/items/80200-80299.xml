@@ -12,6 +12,8 @@
 		<set name="price" val="395897500" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">179</stat>
 		</stats>
@@ -31,6 +33,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
@@ -38,6 +42,7 @@
 		<stats>
 			<stat type="mDef">64</stat>
 			<stat type="pDef">262</stat>
+			<stat type="mDef">64</stat>
 			<stat type="maxMp">1621</stat>
 		</stats>
 	</item>
@@ -55,9 +60,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="mDef">43</stat>
 			<stat type="pDef">164</stat>
+			<stat type="mDef">43</stat>
 			<stat type="maxMp">1080</stat>
 		</stats>
 	</item>
@@ -74,6 +82,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
@@ -91,6 +101,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
@@ -110,6 +122,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="blessed" val="true" />
 		<set name="crystal_count" val="8393" />
+		<set name="commissionItemType" val="HELMET" />
 		<skills>
 			<skill id="8834" level="1" /> <!-- PvE Defense -->
 			<skill id="13801" level="1" /> <!-- Additional Ability Might -->
@@ -135,6 +148,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="crystal_count" val="3378" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="8835" level="1" /> <!-- PvE Defense -->
@@ -162,6 +176,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="crystal_count" val="3378" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<skills>
 			<skill id="8836" level="1" /> <!-- PvE Defense -->
 			<skill id="13803" level="1" /> <!-- Additional Ability Might -->
@@ -186,6 +201,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="crystal_count" val="3378" />
+		<set name="commissionItemType" val="GLOVES" />
 		<skills>
 			<skill id="8837" level="1" /> <!-- PvE Defense -->
 			<skill id="13804" level="1" /> <!-- Additional Ability Might -->
@@ -210,6 +226,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="crystal_count" val="3378" />
+		<set name="commissionItemType" val="FEET" />
 		<skills>
 			<skill id="8838" level="1" /> <!-- PvE Defense -->
 			<skill id="13805" level="1" /> <!-- Additional Ability Might -->
@@ -231,6 +248,8 @@
 		<set name="price" val="395897500" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<skills>
 			<skill id="8839" level="1" /> <!-- PvE Defense -->
 			<skill id="13806" level="1" /> <!-- Additional Ability Might -->
@@ -254,6 +273,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="8840" level="1" /> <!-- PvE Defense -->
@@ -280,6 +301,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<skills>
 			<skill id="8841" level="1" /> <!-- PvE Defense -->
 			<skill id="13808" level="1" /> <!-- Additional Ability Might -->
@@ -287,6 +310,7 @@
 		<stats>
 			<stat type="pDef">248</stat>
 			<stat type="rEvas">3</stat>
+			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
 	<item id="80213" name="Bloody Leviathan Leather Gloves" additionalName="Light Armor" type="Armor">
@@ -303,6 +327,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<skills>
 			<skill id="8842" level="1" /> <!-- PvE Defense -->
 			<skill id="13809" level="1" /> <!-- Additional Ability Might -->
@@ -325,6 +351,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<skills>
 			<skill id="8843" level="1" /> <!-- PvE Defense -->
 			<skill id="13810" level="1" /> <!-- Additional Ability Might -->
@@ -346,6 +374,8 @@
 		<set name="price" val="395897500" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<skills>
 			<skill id="8844" level="1" /> <!-- PvE Defense -->
 			<skill id="13811" level="1" /> <!-- Additional Ability Might -->
@@ -369,6 +399,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="8845" level="1" /> <!-- PvE Defense -->
@@ -378,6 +410,7 @@
 		<stats>
 			<stat type="mDef">68</stat>
 			<stat type="pDef">273</stat>
+			<stat type="mDef">68</stat>
 			<stat type="maxMp">1668</stat>
 		</stats>
 	</item>
@@ -396,6 +429,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<skills>
 			<skill id="8846" level="1" /> <!-- PvE Defense -->
 			<skill id="13813" level="1" /> <!-- Additional Ability Might -->
@@ -420,6 +455,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<skills>
 			<skill id="8847" level="1" /> <!-- PvE Defense -->
 			<skill id="13814" level="1" /> <!-- Additional Ability Might -->
@@ -442,6 +479,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<skills>
 			<skill id="8848" level="1" /> <!-- PvE Defense -->
 			<skill id="13815" level="1" /> <!-- Additional Ability Might -->
@@ -463,8 +502,11 @@
 		<set name="price" val="395897500" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<skills>
 			<skill id="8805" level="1" /> <!-- PvP Defense -->
+			<skill id="13801" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">186</stat>
@@ -485,9 +527,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="blessed" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="8806" level="1" /> <!-- PvP Defense -->
+			<skill id="13802" level="1" /> <!-- Additional Ability Might -->
 			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
 		</skills>
 		<stats>
@@ -509,8 +554,11 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8807" level="1" /> <!-- PvP Defense -->
+			<skill id="13803" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">311</stat>
@@ -530,8 +578,11 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8808" level="1" /> <!-- PvP Defense -->
+			<skill id="13804" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
@@ -551,8 +602,11 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8809" level="1" /> <!-- PvP Defense -->
+			<skill id="13805" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
@@ -571,8 +625,11 @@
 		<set name="price" val="395897500" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8810" level="1" /> <!-- PvP Defense -->
+			<skill id="13806" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">186</stat>
@@ -593,14 +650,18 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="blessed" val="true" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="8811" level="1" /> <!-- PvP Defense -->
+			<skill id="13807" level="1" /> <!-- Additional Ability Might -->
 			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
 		</skills>
 		<stats>
 			<stat type="pDef">398</stat>
 			<stat type="rEvas">5</stat>
+			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
 	<item id="80227" name="Dark Leviathan Leather Leggings" additionalName="Light Armor" type="Armor">
@@ -618,12 +679,16 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8812" level="1" /> <!-- PvP Defense -->
+			<skill id="13808" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">248</stat>
 			<stat type="rEvas">3</stat>
+			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
 	<item id="80228" name="Dark Leviathan Leather Gloves" additionalName="Light Armor" type="Armor">
@@ -640,8 +705,11 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8813" level="1" /> <!-- PvP Defense -->
+			<skill id="13809" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
@@ -661,8 +729,11 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8814" level="1" /> <!-- PvP Defense -->
+			<skill id="13810" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
@@ -681,8 +752,11 @@
 		<set name="price" val="395897500" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8815" level="1" /> <!-- PvP Defense -->
+			<skill id="13811" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">186</stat>
@@ -703,9 +777,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="blessed" val="true" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="8816" level="1" /> <!-- PvP Defense -->
+			<skill id="13812" level="1" /> <!-- Additional Ability Might -->
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
 		</skills>
 		<stats>
@@ -729,8 +806,11 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8817" level="1" /> <!-- PvP Defense -->
+			<skill id="13813" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="mDef">45</stat>
@@ -752,8 +832,11 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8818" level="1" /> <!-- PvP Defense -->
+			<skill id="13814" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
@@ -773,8 +856,11 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8819" level="1" /> <!-- PvP Defense -->
+			<skill id="13815" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
@@ -793,6 +879,8 @@
 		<set name="price" val="395897500" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="blessed" val="true" />
 		<skills>
 			<skill id="27682" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
 			<skill id="28323" level="1" /> <!-- Additional Ability Might -->
@@ -816,6 +904,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
@@ -842,6 +931,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="27684" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
@@ -865,6 +955,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="27685" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
@@ -888,6 +979,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="27686" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
@@ -910,6 +1002,7 @@
 		<set name="price" val="395897500" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="27687" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
@@ -934,6 +1027,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
@@ -944,6 +1038,7 @@
 		<stats>
 			<stat type="pDef">422</stat>
 			<stat type="rEvas">5</stat>
+			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
 	<item id="80242" name="Limited Leviathan Leather Leggings" additionalName="Light Armor" type="Armor">
@@ -961,6 +1056,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="27689" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
@@ -969,6 +1065,7 @@
 		<stats>
 			<stat type="pDef">264</stat>
 			<stat type="rEvas">3</stat>
+			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
 	<item id="80243" name="Limited Leviathan Leather Gloves" additionalName="Light Armor" type="Armor">
@@ -985,6 +1082,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="27690" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
@@ -1008,6 +1106,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="27691" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
@@ -1030,6 +1129,7 @@
 		<set name="price" val="395897500" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="27692" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
@@ -1054,6 +1154,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
@@ -1064,6 +1165,7 @@
 		<stats>
 			<stat type="mDef">73</stat>
 			<stat type="pDef">290</stat>
+			<stat type="mDef">73</stat>
 			<stat type="maxMp">1741</stat>
 		</stats>
 	</item>
@@ -1082,6 +1184,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="27694" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
@@ -1107,6 +1210,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="27695" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
@@ -1130,6 +1234,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="27696" level="1" /> <!-- Inherent Abilities - Damage Reduction -->

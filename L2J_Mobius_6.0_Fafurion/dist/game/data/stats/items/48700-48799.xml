@@ -88,12 +88,24 @@
 	<item id="48709" name="Chronicle Token" type="EtcItem">
 		<!-- A 14th Anniversary Rune item. If stored in the inventory, increases P. Atk./ M. Atk./ P. Def./ M. Def./ Atk. Spd./ Casting Spd./ P. Critical Rate/ M. Critical Rate/ Max HP&MP&CP by 5%, and Vitality by 14%. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.etc_scroll_of_memory_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="39345" level="1" /> <!-- Chronicle Token -->
+		</skills>
 	</item>
 	<item id="48710" name="Red Libra Supply Items" additionalName="Event" type="EtcItem">
 		<!-- Double-click to earn a specialty item of the Red Libra Merchants. -->
@@ -728,6 +740,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17701" level="7" />
+		</skills>
 	</item>
 	<item id="48768" name="Greater Topaz" additionalName="Lv. 3" type="Armor">
 		<!-- Disrupts the target's skill casting. When used on a PC, inflicts damage with 16461 Power and ignores CP. Low chance of killing the enemy instantly. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -737,6 +752,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17701" level="8" />
+		</skills>
 	</item>
 	<item id="48769" name="Greater Topaz" additionalName="Lv. 4" type="Armor">
 		<!-- Disrupts the target's skill casting. When used on a PC, inflicts damage with 18054 Power and ignores CP. Low chance of killing the enemy instantly. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -746,6 +764,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17701" level="9" />
+		</skills>
 	</item>
 	<item id="48770" name="Greater Topaz" additionalName="Lv. 5" type="Armor">
 		<!-- Disrupts the target's skill casting. When used on a PC, inflicts damage with 19647 Power and ignores CP. Low chance of killing the enemy instantly. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -755,6 +776,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17701" level="10" />
+		</skills>
 	</item>
 	<item id="48771" name="Greater Ruby" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases Damage by 20% and P. Atk. by 10% for Soulshot and Beast Soulshot. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -764,6 +788,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18715" level="1" /> <!-- Greater Ruby -->
+			<skill id="18716" level="1" /> <!-- Greater Ruby -->
+			<skill id="18717" level="7" /> <!-- Ruby -->
+		</skills>
 	</item>
 	<item id="48772" name="Greater Ruby" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, increases Damage by 20% and P. Atk. by 11% for Soulshot and Beast Soulshot. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -773,6 +802,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18715" level="1" /> <!-- Greater Ruby -->
+			<skill id="18716" level="1" /> <!-- Greater Ruby -->
+			<skill id="18717" level="8" /> <!-- Ruby -->
+		</skills>
 	</item>
 	<item id="48773" name="Greater Ruby" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, increases Damage by 20% and P. Atk. by 13% for Soulshot and Beast Soulshot. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -782,6 +816,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18715" level="1" /> <!-- Greater Ruby -->
+			<skill id="18716" level="1" /> <!-- Greater Ruby -->
+			<skill id="18717" level="9" /> <!-- Ruby -->
+		</skills>
 	</item>
 	<item id="48774" name="Greater Ruby" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, increases Damage by 20% and P. Atk. by 15% for Soulshot and Beast Soulshot. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -791,6 +830,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18715" level="1" /> <!-- Greater Ruby -->
+			<skill id="18716" level="1" /> <!-- Greater Ruby -->
+			<skill id="18717" level="10" /> <!-- Ruby -->
+		</skills>
 	</item>
 	<item id="48775" name="Greater Sapphire" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases damage of Spiritshot and Blessed Spiritshot by 20% and M. Atk. by 14%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -800,6 +844,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18718" level="1" /> <!-- Greater Sapphire -->
+			<skill id="18718" level="2" /> <!-- Greater Sapphire -->
+			<skill id="18719" level="7" /> <!-- Sapphire -->
+		</skills>
 	</item>
 	<item id="48776" name="Greater Sapphire" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, increases damage of Spiritshot and Blessed Spiritshot by 20% and M. Atk. by 15%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -809,6 +858,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18718" level="1" /> <!-- Greater Sapphire -->
+			<skill id="18718" level="2" /> <!-- Greater Sapphire -->
+			<skill id="18719" level="8" /> <!-- Sapphire -->
+		</skills>
 	</item>
 	<item id="48777" name="Greater Sapphire" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, increases damage of Spiritshot and Blessed Spiritshot by 20% and M. Atk. by 17%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -818,6 +872,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18718" level="1" /> <!-- Greater Sapphire -->
+			<skill id="18718" level="2" /> <!-- Greater Sapphire -->
+			<skill id="18719" level="9" /> <!-- Sapphire -->
+		</skills>
 	</item>
 	<item id="48778" name="Greater Sapphire" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, increases damage of Spiritshot and Blessed Spiritshot by 20% and M. Atk. by 19%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -827,6 +886,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18718" level="1" /> <!-- Greater Sapphire -->
+			<skill id="18718" level="2" /> <!-- Greater Sapphire -->
+			<skill id="18719" level="10" /> <!-- Sapphire -->
+		</skills>
 	</item>
 	<item id="48779" name="Greater Obsidian" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, decreases Received PvP Damage by 15%, releases the attacker's target if you're hit, and increases P. Def./ M. Def. by 1%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -836,6 +900,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17704" level="7" />
+		</skills>
 	</item>
 	<item id="48780" name="Greater Obsidian" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, decreases Received PvP Damage by 15%, releases the attacker's target if you're hit, and increases P. Def./ M. Def. by 2%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -845,6 +912,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17704" level="8" />
+		</skills>
 	</item>
 	<item id="48781" name="Greater Obsidian" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, decreases Received PvP Damage by 15%, releases the attacker's target if you're hit, and increases P. Def./ M. Def. by 3%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -854,6 +924,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17704" level="9" />
+		</skills>
 	</item>
 	<item id="48782" name="Greater Obsidian" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, decreases Received PvP Damage by 15%, releases the attacker's target if you're hit, and increases P. Def./ M. Def. by 5%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -863,6 +936,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17704" level="10" />
+		</skills>
 	</item>
 	<item id="48783" name="Greater Opal" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases Attack Attribute by 120 and all Attribute Resistance by 80. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -872,6 +948,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17705" level="7" />
+		</skills>
 	</item>
 	<item id="48784" name="Greater Opal" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, increases Attack Attribute by 120 and all Attribute Resistance by 90. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -881,6 +960,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17705" level="8" />
+		</skills>
 	</item>
 	<item id="48785" name="Greater Opal" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, increases Attack Attribute by 120 and all Attribute Resistance by 100. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -890,6 +972,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17705" level="9" />
+		</skills>
 	</item>
 	<item id="48786" name="Greater Opal" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, increases Attack Attribute by 120 and all Attribute Resistance by 120. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -899,6 +984,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17705" level="10" />
+		</skills>
 	</item>
 	<item id="48787" name="Greater Emerald" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases STR by 3, DEX by 3, CON by 4, INT by 3, WIT by 3, MEN by 4, CHA by 3, LUC by 3, and Skill Mastery Rate by 30%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -908,6 +996,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17825" level="7" />
+		</skills>
 	</item>
 	<item id="48788" name="Greater Emerald" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, increases STR by 3, DEX by 4, CON by 4, INT by 3, WIT by 4, MEN by 4, CHA by 3, LUC by 3, and Skill Mastery Rate by 30%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -917,6 +1008,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17825" level="8" />
+		</skills>
 	</item>
 	<item id="48789" name="Greater Emerald" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, increases STR by 4, DEX by 4, CON by 4, INT by 4, WIT by 4, MEN by 4, CHA by 3, LUC by 3, and Skill Mastery Rate by 30%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -926,6 +1020,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17825" level="9" />
+		</skills>
 	</item>
 	<item id="48790" name="Greater Emerald" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, increases STR by 4, DEX by 4, CON by 4, INT by 4, WIT by 4, MEN by 4, CHA by 4, LUC by 4, and Skill Mastery Rate by 30%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -935,6 +1032,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17825" level="10" />
+		</skills>
 	</item>
 	<item id="48791" name="Greater Aquamarine" additionalName="Lv. 2" type="Armor">
 		<!-- If a skill is used after the gem is equipped, there is a 15% chance of restoring 136 MP, decreasing Skill Cooldown by 5%, and increasing Max HP/ MP by 1%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -944,6 +1044,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17823" level="7" />
+		</skills>
 	</item>
 	<item id="48792" name="Greater Aquamarine" additionalName="Lv. 3" type="Armor">
 		<!-- If a skill is used after the gem is equipped, there is a 15% chance of restoring 136 MP, decreasing Skill Cooldown by 5%, and increasing Max HP/ MP by 3%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -953,6 +1056,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17823" level="8" />
+		</skills>
 	</item>
 	<item id="48793" name="Greater Aquamarine" additionalName="Lv. 4" type="Armor">
 		<!-- If a skill is used after the gem is equipped, there is a 15% chance of restoring 136 MP, decreasing Skill Cooldown by 5%, and increasing Max HP/ MP by 5%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -962,6 +1068,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17823" level="9" />
+		</skills>
 	</item>
 	<item id="48794" name="Greater Aquamarine" additionalName="Lv. 5" type="Armor">
 		<!-- If a skill is used after the gem is equipped, there is a 15% chance of restoring 136 MP, decreasing Skill Cooldown by 5%, and increasing Max HP/ MP by 10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -971,6 +1080,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17823" level="10" />
+		</skills>
 	</item>
 	<item id="48795" name="Greater Diamond" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases P. Def. by 2128 and decreases Received P. Critical Damage by 6%. Additionally increases P. Def. by 10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -980,6 +1092,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17708" level="7" />
+		</skills>
 	</item>
 	<item id="48796" name="Greater Diamond" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, increases P. Def. by 2317 and decreases Received P. Critical Damage by 7%. Additionally increases P. Def. by 10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -989,6 +1104,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17708" level="8" />
+		</skills>
 	</item>
 	<item id="48797" name="Greater Diamond" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, increases P. Def. by 2558 and decreases Received P. Critical Damage by 8%. Additionally increases P. Def. by 10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -998,6 +1116,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17708" level="9" />
+		</skills>
 	</item>
 	<item id="48798" name="Greater Diamond" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, increases P. Def. by 2837 and decreases Received P. Critical Damage by 10%. Additionally increases P. Def. by 10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -1007,6 +1128,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17708" level="10" />
+		</skills>
 	</item>
 	<item id="48799" name="Greater Pearl" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases M. Def. by 1375 and decreases Received M. Critical Damage by 6%. Additionally increases M. Def. by 10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
@@ -1016,5 +1140,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17709" level="7" />
+		</skills>
 	</item>
 </list>

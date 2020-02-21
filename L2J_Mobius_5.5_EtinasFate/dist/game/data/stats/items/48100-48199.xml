@@ -332,6 +332,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="8527" level="1" /> <!-- Release Agathion's Seal - Magmeld Fairy -->
+			<skill id="14288" level="1" /> <!-- Agathion Cute Trick - Magmeld -->
+			<skill id="14187" level="1" /> <!-- Magmeld Teleport -->
+			<skill id="35622" level="1" /> <!-- Agathion Fairy Support -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="48125" name="PA - Propeller Agathion Charm" additionalName="PA exclusive" type="Armor">
 		<!-- Charm that summons a Propeller Agathion. Can use a skill that teleports party members back to town after summoning the Agathion. Used for 30 days. -->
@@ -984,6 +991,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="etcitem_type" val="ENCHT_WP" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />

@@ -857,6 +857,10 @@
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="LIFE_STONE" />
+		<cond msgId="113" addName="1">
+			<player level="99" />
+		</cond>
 	</item>
 	<item id="46589" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a Soul, and use a Soul Crystal Stage 1-10 to absorb the soul. -->

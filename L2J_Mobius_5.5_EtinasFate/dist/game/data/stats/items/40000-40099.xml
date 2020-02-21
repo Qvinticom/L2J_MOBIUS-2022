@@ -978,6 +978,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<skills>
+			<skill id="17117" level="1" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="40056" name="Mysterious Wind Scroll" type="EtcItem">
 		<!-- For 60 min., Max HP/ MP/ CP +30%, P./ M. Def. +30%, P. Atk. +10%, M. Atk. +20%, Wind Atk./ Resistance +20. Skill Cooldown -10%. Cannot be used in the Olympiad. Does not stack with Art of Seduction. Effect remains after death. -->

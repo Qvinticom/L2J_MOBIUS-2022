@@ -251,6 +251,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29057" min="1" max="1" chance="100" /> <!-- Sayha's Talisman - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="47818" name="Dimensional Bracelet - Stage 6 Box" type="EtcItem">
 		<!-- When used, a Dimensional Bracelet Stage 6 (CHA+5) can be obtained. Will be deleted on December 28, 2016 (Wed), after regular maintenance. -->
@@ -289,6 +293,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29065" min="1" max="1" chance="100" /> <!-- Sayha's Talisman - Stage 9 -->
+		</capsuled_items>
 	</item>
 	<item id="47821" name="Saiha's Talisman Stage 10 Box" type="EtcItem">
 		<!-- When used, Sayha's Talisman Stage 10 can be obtained. -->
@@ -298,6 +306,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29066" min="1" max="1" chance="100" /> <!-- Sayha's Talisman - Stage 10 -->
+		</capsuled_items>
 	</item>
 	<item id="47822" name="Puss the Cat's Evidence Photo" type="EtcItem">
 		<!-- Photo of the cute face of Puss the Cat. Needed to get a blessing buff from Puss the Cat. Will be deleted on August 24, 2016 (Wed), after regular maintenance. -->
@@ -1013,6 +1025,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<skills>
 			<skill id="13838" level="13" /> <!-- Enhanced Shadow Slasher -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
@@ -1038,6 +1051,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<skills>
 			<skill id="13839" level="13" /> <!-- Enhanced Shadow Fighter -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
@@ -1064,6 +1078,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<skills>
 			<skill id="13840" level="13" /> <!-- Enhanced Shadow Stormer -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
@@ -1089,6 +1104,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<skills>
 			<skill id="13843" level="13" /> <!-- Enhanced Shadow Thrower -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
@@ -1115,6 +1131,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="isAppearanceable" val="true" />
 			<skills>
 			<skill id="13844" level="13" /> <!-- Enhanced Shadow Shooter -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
@@ -1141,6 +1158,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<skills>
 			<skill id="13845" level="13" /> <!-- Enhanced Shadow Buster -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
@@ -1166,6 +1184,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<skills>
 			<skill id="13846" level="13" /> <!-- Enhanced Shadow Retributer -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
@@ -1193,6 +1212,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<skills>
 			<skill id="13841" level="13" /> <!-- Enhanced Shadow Dualsword -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->

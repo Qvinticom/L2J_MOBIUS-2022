@@ -201,13 +201,23 @@
 		<!-- A scroll to level up as fast as the wind. Hunting XP and SP gain +200%. Remains active after death. Duration 10 min. Cooldown 9 min. Only for characters below Lv. 108. Cannot be stacked with Freya s Wind Scroll or Freya s Storm Scroll. -->
 		<set name="icon" val="icon.scrl_of_storm" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="540000" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39370" level="1" /> <!-- Gale Scroll -->
+		</skills>
 	</item>
 	<item id="80413" name="Raging Billow Scroll" type="EtcItem">
 		<!-- A scroll to hunt with the force of a raging billow. When used, attack attribute +100, all Attribute Resistance +100, and Acquired XP/ SP +100% for 30 min. Buffs persist after death. Cooldown 5 min. Only for characters below Lv. 108. Cannot be used in the Olympiad. Cannot be stacked with Dragon's Attribute Potion or Glowing Dragon's Attribute Potion. -->
@@ -525,19 +535,41 @@
 		<!-- Dimensional item. When used, Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attack/ Attribute Resistance +100, Damage +10%, P./ M. Skill Power +10%, Acquired XP/ SP +30%, and Damage Received -10% and Skill MP Consumption -15% for 4 hours.. Buffs persist after death. Cooldown 5 min. Cannot stack with Art of Seduction and Pa agrio s Blessing. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_freya_ice_rose" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39350" level="2" /> <!-- Freya's Ice Rose -->
+		</skills>
 	</item>
 	<item id="80442" name="Freya's Ice Rose" additionalName="8-hour" type="EtcItem">
 		<!-- Dimensional item. When used, Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attack/ Attribute Resistance +100, Damage +10%, P./ M. Skill Power +10%, Acquired XP/ SP +30%, and Damage Received -10% and Skill MP Consumption -15% for 8 hours.. Buffs persist after death. Cooldown 5 min. Cannot stack with Art of Seduction and Pa agrio s Blessing. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_freya_ice_rose" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39350" level="3" /> <!-- Freya's Ice Rose -->
+		</skills>
 	</item>
 	<item id="80443" name="Stage 4 Soul Crystal Box" type="EtcItem">
 		<!-- Double-click to obtain one of the Kain van Halter, Mermoden, Leona, Pantheon, and Lionel Stage 4 Soul Crystals. -->
@@ -670,6 +702,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="80456" name="Red Libra Request - Field of Whispers" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Field of Whispers. -->
@@ -680,6 +713,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="80457" name="Stage 3 Soul Crystal Box" type="EtcItem">
 		<!-- Double-click to obtain one of the Kain van Halter, Mermoden, Leona, Pantheon, and Lionel Stage 3 Soul Crystals. -->
@@ -751,35 +785,74 @@
 	<item id="80464" name="Fighting Spirit Artifact Box" additionalName="Event" type="EtcItem">
 		<!-- Use it to obtain one of the Fighting Spirit Artifacts. -->
 		<set name="icon" val="icon.bm_artifact_b_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48957" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Attack -->
+			<item id="48958" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Attack -->
+			<item id="48959" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Attack -->
+			<item id="48960" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Attack -->
+			<item id="80647" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Attack -->
+			<item id="80648" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Attack -->
+			<item id="80649" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Attack -->
+		</capsuled_items>
 	</item>
 	<item id="80465" name="Protection Artifact Box" additionalName="Event" type="EtcItem">
 		<!-- Use it to obtain one of the Protection Artifacts. -->
 		<set name="icon" val="icon.bm_artifact_c_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48961" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Protection -->
+			<item id="48962" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Protection -->
+			<item id="48963" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Protection -->
+			<item id="48964" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Protection -->
+			<item id="80650" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Protection -->
+			<item id="80651" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Protection -->
+			<item id="80652" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Protection -->
+		</capsuled_items>
 	</item>
 	<item id="80466" name="Support Artifact Box" additionalName="Event" type="EtcItem">
 		<!-- Use it to obtain one of the Support Artifacts. -->
 		<set name="icon" val="icon.bm_artifact_d_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48965" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48966" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48967" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48968" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="80653" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="80654" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="80655" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+		</capsuled_items>
 	</item>
 	<item id="80467" name="Balance Artifact Box" additionalName="Event" type="EtcItem">
 		<!-- Use it to obtain one of the Balance Artifacts. -->
@@ -791,6 +864,37 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48969" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48970" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48971" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48972" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48973" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48974" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48975" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48976" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48977" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48980" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48981" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48982" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48983" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48984" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48985" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="80656" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="80657" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="80658" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="80659" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="80660" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="80661" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="80662" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="80749" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="80750" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="80751" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="80752" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+		</capsuled_items>
 	</item>
 	<item id="80468" name="Red Libra Artifact Box" type="EtcItem">
 		<!-- Use it to obtain one Fighting Spirit Artifact Box, Protection Artifact Box, Support Artifact Box, or Balance Artifact Box. -->
@@ -839,6 +943,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="17701" level="6" /> <!-- Topaz - Spiritshot -->
+		</skills>
 	</item>
 	<item id="80473" name="Greater Ruby Lv. 1" additionalName="Event" type="Armor">
 		<!-- Soulshot/ Beast Soulshot damage +20%, P. Atk. +9%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -852,6 +960,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18715" level="1" /> <!-- Greater Ruby -->
+			<skill id="18716" level="1" /> <!-- Greater Ruby -->
+			<skill id="18717" level="6" /> <!-- Ruby -->
+		</skills>
 	</item>
 	<item id="80474" name="Greater Sapphire Lv. 1" additionalName="Event" type="Armor">
 		<!-- When equipped. increases Spiritshot and Blessed Spiritshot's damage by 20% and M. Atk. by 13%. If identical Gems are equipped. only the effect of the highest level Gem is applied. -->
@@ -865,6 +978,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18718" level="1" /> <!-- Greater Sapphire -->
+			<skill id="18718" level="2" /> <!-- Greater Sapphire -->
+			<skill id="18719" level="6" /> <!-- Sapphire -->
+		</skills>
 	</item>
 	<item id="80475" name="Greater Obsidian Lv. 1" additionalName="30 days" type="Armor">
 		<!-- When equipped. decreases PVP Damage Received by 15% and cancels the attacker's targeting when hit. If identical Gems are equipped. only the effect of the highest level Gem is applied. -->
@@ -878,6 +996,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="17704" level="6" /> <!-- Obsidian -->
+		</skills>
 	</item>
 	<item id="80476" name="Greater Opal Lv. 1" additionalName="30 days" type="Armor">
 		<!-- Attack Attribute +120, all Attribute Resistance +70. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
@@ -891,6 +1013,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="17705" level="6" /> <!-- Opal -->
+		</skills>
 	</item>
 	<item id="80477" name="Greater Emerald Lv. 1" additionalName="30 days" type="Armor">
 		<!-- All basic stats +3, Skill Master Rate +30%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
@@ -904,6 +1030,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="17825" level="6" /> <!-- Emerald -->
+		</skills>
 	</item>
 	<item id="80478" name="Greater Aquamarine Lv. 1" additionalName="30 days" type="Armor">
 		<!-- With a 15% chance recovers 136 MP when using skills, Skill Cooldown -5%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
@@ -917,6 +1047,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="17823" level="6" /> <!-- Aquamarine -->
+		</skills>
 	</item>
 	<item id="80479" name="Greater Diamond Lv. 1" additionalName="30 days" type="Armor">
 		<!-- P. Def. +1986, received P. Critical Damage -5%, P. Def. +10%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
@@ -930,6 +1064,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="17708" level="6" /> <!-- Diamond -->
+		</skills>
 	</item>
 	<item id="80480" name="Greater Pearl Lv. 1" additionalName="30 days" type="Armor">
 		<!-- M. Def. +1150, received M. Critical Damage -5%, M. Def. +10%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
@@ -943,6 +1081,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="17709" level="6" /> <!-- Pearl -->
+		</skills>
 	</item>
 	<item id="80481" name="Greater Vital Stone Lv. 1" additionalName="30 days" type="Armor">
 		<!-- Vitality Bonus +30%, Vitality Consumption Rate +15%, acquired XP +10%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
@@ -956,6 +1098,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="18568" level="6" /> <!-- Vital Stone -->
+		</skills>
 	</item>
 	<item id="80482" name="Greater Garnet Lv. 1" additionalName="30 days" type="Armor">
 		<!-- When equipped. increases All Debuff Defense Success Rates by 30% and removes Stun/Silence if damaged by a PC. When used. removes your debuffs. If identical Gems are equipped. only the effect of the highest level Gem is applied. -->
@@ -969,6 +1115,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="18566" level="6" /> <!-- Garnet -->
+			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
+		</skills>
 	</item>
 	<item id="80483" name="Greater Tanzanite Lv. 1" additionalName="30 days" type="Armor">
 		<!-- Creates a barrier that absorbs 50,000 damage for 15 sec. Instantly restores 15% HP. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
@@ -982,6 +1133,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="18565" level="6" /> <!-- Greater Tanzanite - Barrier -->
+		</skills>
 	</item>
 	<item id="80484" name="Greater Red Cat's Eye Lv. 1" additionalName="30 days" type="Armor">
 		<!-- Increases P. Critical Damage by 12%. P. Skill Critical Damage by 12%, and P. Skill Power by 5%. When you wear the same type of gemstone. only the effect of the highest level gem is applied. -->
@@ -995,6 +1150,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="18713" level="6" /> <!-- Red Cat's Eye -->
+		</skills>
 	</item>
 	<item id="80485" name="Greater Blue Cat's Eye Lv. 1" additionalName="30 days" type="Armor">
 		<!-- Increases Magic Critical Damage by 12%. M. Skill Power by 5%. When you wear the same type of gemstone. only the effect of the highest level gem is applied. -->
@@ -1008,6 +1167,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="18714" level="6" /> <!-- Blue Cat's Eye -->
+		</skills>
 	</item>
 	<item id="80486" name="Mysterious Talisman - STR" additionalName="Event" type="Armor">
 		<!-- When the talisman is equipped. STR +5. When you equip 2 or more of the same talismans or PA talismans with the same effect. only the effect of a single talisman is applied. -->

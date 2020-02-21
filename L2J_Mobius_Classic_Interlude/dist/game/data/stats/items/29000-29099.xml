@@ -187,6 +187,10 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29057" min="1" max="1" chance="100" /> <!-- Sayha's Talisman - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="29068" name="Sayha's Talisman Stage 7 Pack" type="EtcItem">
 		<!-- Wrapped pack containing Sayha's Talisman Stage 7. The talisman cannot be dropped or exchanged. -->
@@ -196,6 +200,10 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29063" min="1" max="1" chance="100" /> <!-- Sayha's Talisman - Stage 7 -->
+		</capsuled_items>
 	</item>
 	<item id="29069" name="Sayha's Talisman Stage 8 Pack" type="EtcItem">
 		<!-- Wrapped pack containing Sayha's Talisman Stage 8. The talisman cannot be dropped or exchanged. -->
@@ -205,6 +213,10 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29064" min="1" max="1" chance="100" /> <!-- Sayha's Talisman - Stage 8 -->
+		</capsuled_items>
 	</item>
 	<item id="29070" name="Sayha's Talisman Stage 9 Pack" type="EtcItem">
 		<!-- Wrapped pack containing Sayha's Talisman Stage 9. The talisman cannot be dropped or exchanged. -->
@@ -214,6 +226,10 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29065" min="1" max="1" chance="100" /> <!-- Sayha's Talisman - Stage 9 -->
+		</capsuled_items>
 	</item>
 	<item id="29071" name="Sayha's Talisman Stage 10 Pack" type="EtcItem">
 		<!-- Wrapped pack containing Sayha's Talisman Stage 10. The talisman cannot be dropped or exchanged. -->
@@ -223,6 +239,10 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29066" min="1" max="1" chance="100" /> <!-- Sayha's Talisman - Stage 10 -->
+		</capsuled_items>
 	</item>
 	<item id="29072" name="Fortune Talisman Pack" type="EtcItem">
 		<!-- Double-click to obtain a Sayha's Talisman Stage 3-10 or Venir's Talisman Stage 10-15. -->

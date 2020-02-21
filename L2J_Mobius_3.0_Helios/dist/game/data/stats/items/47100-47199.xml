@@ -781,6 +781,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="16696" level="1" /> <!-- Purge -->
+		</skills>
 	</item>
 	<item id="47171" name="Shine Stone of the Trackers" type="EtcItem">
 		<!-- Can be used on the upper level of the Giant's Cave where the Shine Stone Crystal lies, to induce marred evolution of the Lesser Giant. -->
@@ -1039,6 +1043,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="47188" name="Memories of the Wind" type="EtcItem">
 		<!-- An item obtained by defeating El Fera or El Floato in the Garden of Spirits. Take it to Master Cyphona around the Garden of Spirits. -->
@@ -1048,6 +1054,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="47189" name="Energy Laden With the Day's Warmth" type="EtcItem">
 		<!-- An item obtained after defeating the Wind Spirits that appear in the Garden of Spirits during the day. Take it to Ferin around the Garden of Spirits. -->
@@ -1057,6 +1065,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="47190" name="Energy Laden with the Night's Icy Air" type="EtcItem">
 		<!-- An item obtained after defeating the Wind Spirits that appear in the Garden of Spirits during the night. Take it to Ferin around the Garden of Spirits. -->
@@ -1066,6 +1076,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="47191" name="Superion Map Piece" type="EtcItem">
 		<!-- A piece of a map showing the detailed geography of Superion. Collect and take them to Histie in order to join the pieces of the map and find out the location of the secret entrance. -->

@@ -1562,6 +1562,7 @@
 		<set name="commissionItemType" val="CLOAK" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<cond>
 				<player level="80" />
 		</cond>

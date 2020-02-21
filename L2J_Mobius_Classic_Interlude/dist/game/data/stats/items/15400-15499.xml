@@ -111,7 +111,6 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="43200" />
 		<capsuled_items>
 			<item id="15418" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 30-day -->
 		</capsuled_items>
@@ -133,7 +132,6 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="36000" />
 		<capsuled_items>
 			<item id="15419" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 25-day -->
 		</capsuled_items>
@@ -155,7 +153,6 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="28800" />
 		<capsuled_items>
 			<item id="15420" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 20-day -->
 		</capsuled_items>
@@ -177,7 +174,6 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="21600" />
 		<capsuled_items>
 			<item id="15421" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 15-day -->
 		</capsuled_items>
@@ -1303,6 +1299,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9070" level="1" /> <!-- Halloween Pumpkin -->
 		</skills>

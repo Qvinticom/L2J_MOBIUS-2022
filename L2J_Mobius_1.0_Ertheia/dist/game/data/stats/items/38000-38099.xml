@@ -4,6 +4,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Leather Leggings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="handler" val="ExtractableItems" />
@@ -22,6 +23,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Leather Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="handler" val="ExtractableItems" />
@@ -39,6 +41,7 @@
 	<item id="38002" name="Twilight Leather Boots Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Leather Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -57,6 +60,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Circlet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="HELMET" />
 		<set name="handler" val="ExtractableItems" />
@@ -74,6 +78,7 @@
 	<item id="38004" name="Twilight Tunic Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Tunic. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -92,6 +97,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Stockings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="handler" val="ExtractableItems" />
@@ -110,6 +116,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="handler" val="ExtractableItems" />
@@ -128,6 +135,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Shoes. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="handler" val="ExtractableItems" />
@@ -145,6 +153,7 @@
 	<item id="38008" name="Twilight Sigil Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Sigil. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -162,6 +171,7 @@
 	<item id="38009" name="Twilight Necklace Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Necklace. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -178,6 +188,7 @@
 	<item id="38010" name="Twilight Earring Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Earring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -194,6 +205,7 @@
 	<item id="38011" name="Twilight Ring Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -210,6 +222,7 @@
 	<item id="38012" name="Specter Shaper Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Shaper. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -228,6 +241,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Cutter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="handler" val="ExtractableItems" />
@@ -246,6 +260,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Slasher. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="handler" val="ExtractableItems" />
@@ -264,6 +279,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Avenger. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="handler" val="ExtractableItems" />
@@ -281,6 +297,7 @@
 	<item id="38016" name="Specter Fighter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Fighter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -298,6 +315,7 @@
 	<item id="38017" name="Specter Stormer Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Stormer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -316,6 +334,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Thrower. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="BOW" />
 		<set name="handler" val="ExtractableItems" />
@@ -333,6 +352,7 @@
 	<item id="38019" name="Specter Shooter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -350,6 +370,7 @@
 	<item id="38020" name="Specter Buster Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Buster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -367,6 +388,7 @@
 	<item id="38021" name="Specter Caster Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Caster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -385,6 +407,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Specter Retributer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="handler" val="ExtractableItems" />
@@ -403,6 +426,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="HELMET" />
 		<set name="handler" val="ExtractableItems" />
@@ -421,6 +445,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="handler" val="ExtractableItems" />
@@ -439,6 +464,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Gaiter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="handler" val="ExtractableItems" />
@@ -457,6 +483,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="handler" val="ExtractableItems" />
@@ -475,6 +502,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="handler" val="ExtractableItems" />
@@ -493,6 +521,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SHIELD" />
 		<set name="handler" val="ExtractableItems" />
@@ -510,6 +539,7 @@
 	<item id="38029" name="Seraph Leather Helmet Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -527,6 +557,7 @@
 	<item id="38030" name="Seraph Leather Armor Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -545,6 +576,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Leather Leggings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="handler" val="ExtractableItems" />
@@ -562,6 +594,7 @@
 	<item id="38032" name="Seraph Leather Gloves Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Leather Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -579,6 +612,7 @@
 	<item id="38033" name="Seraph Leather Boots Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Leather Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -597,6 +631,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Circlet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="HELMET" />
 		<set name="handler" val="ExtractableItems" />
@@ -615,6 +650,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Tunic. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="handler" val="ExtractableItems" />
@@ -633,6 +669,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Stockings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="handler" val="ExtractableItems" />
@@ -651,6 +688,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="handler" val="ExtractableItems" />
@@ -669,6 +707,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Shoes. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="handler" val="ExtractableItems" />
@@ -687,6 +726,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Sigil. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SIGIL" />
 		<set name="handler" val="ExtractableItems" />
@@ -704,6 +744,7 @@
 	<item id="38040" name="Seraph Necklace Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Necklace. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -720,6 +761,7 @@
 	<item id="38041" name="Seraph Earring Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Earring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -736,6 +778,7 @@
 	<item id="38042" name="Seraph Ring Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -752,6 +795,7 @@
 	<item id="38043" name="Amaranthine Shaper Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Shaper. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -769,6 +813,7 @@
 	<item id="38044" name="Amaranthine Cutter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Cutter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -786,6 +831,7 @@
 	<item id="38045" name="Amaranthine Slasher Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Slasher. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -803,6 +849,7 @@
 	<item id="38046" name="Amaranthine Avenger Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Avenger. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -820,6 +867,7 @@
 	<item id="38047" name="Amaranthine Fighter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Fighter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -837,6 +885,7 @@
 	<item id="38048" name="Amaranthine Stormer Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Stormer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -854,6 +903,7 @@
 	<item id="38049" name="Amaranthine Thrower Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Thrower. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -871,6 +921,7 @@
 	<item id="38050" name="Amaranthine Shooter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -888,6 +939,7 @@
 	<item id="38051" name="Amaranthine Buster Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Buster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -905,6 +957,7 @@
 	<item id="38052" name="Amaranthine Caster Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Caster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -922,6 +975,7 @@
 	<item id="38053" name="Amaranthine Retributer Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Amaranthine Retributer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -940,6 +994,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="HELMET" />
 		<set name="handler" val="ExtractableItems" />
@@ -958,6 +1013,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="handler" val="ExtractableItems" />
@@ -975,6 +1031,7 @@
 	<item id="38056" name="Eternal Gaiters Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Gaiter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -993,6 +1050,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="handler" val="ExtractableItems" />
@@ -1011,6 +1069,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="handler" val="ExtractableItems" />
@@ -1028,6 +1087,7 @@
 	<item id="38059" name="Eternal Shield Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1046,6 +1106,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="HELMET" />
 		<set name="handler" val="ExtractableItems" />
@@ -1064,6 +1125,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="handler" val="ExtractableItems" />
@@ -1081,6 +1143,7 @@
 	<item id="38062" name="Eternal Leather Leggings Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Leather Leggings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1098,6 +1161,7 @@
 	<item id="38063" name="Eternal Leather Gloves Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Leather Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1116,6 +1180,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Leather Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="handler" val="ExtractableItems" />
@@ -1134,6 +1199,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Circlet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="HELMET" />
 		<set name="handler" val="ExtractableItems" />
@@ -1152,6 +1218,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Tunic. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="handler" val="ExtractableItems" />
@@ -1170,6 +1237,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Stockings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="handler" val="ExtractableItems" />
@@ -1188,6 +1256,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="handler" val="ExtractableItems" />
@@ -1206,6 +1275,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Shoes. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="handler" val="ExtractableItems" />
@@ -1224,6 +1294,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Sigil. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SIGIL" />
 		<set name="handler" val="ExtractableItems" />
@@ -1241,6 +1312,7 @@
 	<item id="38071" name="Eternal Necklace Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Necklace. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1257,6 +1329,7 @@
 	<item id="38072" name="Eternal Earring Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Earring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1273,6 +1346,7 @@
 	<item id="38073" name="Eternal Ring Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1377,6 +1451,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="38087" name="Territory Card Pouch: Undead" type="EtcItem">
 		<!-- Pouch filled with a rotting stench. Double-click to obtain a card for either Imperial Tomb, Guillotine Fortress, or Pagan Temple. -->
@@ -1385,6 +1460,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="38088" name="Territory Card Pouch: Monster" type="EtcItem">
 		<!-- Pouch with a creepy feel. Double-click to obtain a card for either Seed of Annihilation, Sea of Spores, or Land of Chaos. -->
@@ -1393,6 +1469,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="38089" name="Territory Card Pouch: Orc" type="EtcItem">
 		<!-- Pouch with a tough and heavy feel. Double-click to obtain a card for either Ketra Orc Outpost or Raider's Crossroads. -->
@@ -1401,6 +1478,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="38090" name="Territory Card: Lucky Pouch" type="EtcItem">
 		<!-- Test your luck! You have a chance of obtaining any Territory Card except the Fairy Settlement card. You might also fail to get any! -->
@@ -1409,6 +1487,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="38091" name="Destruction's Shadow" type="EtcItem">
 		<!-- Card obtained from combining the Destruction's Shadow card. For 30 min., Attribute Atk. + 50, and Attribute Resistance + 50. -->
@@ -1416,6 +1495,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38092" name="Evolving Darkness" type="EtcItem">
 		<!-- Card obtained from combining the Evolving Darkness card. For 30 min., Attribute Atk. + 50. -->
@@ -1423,6 +1503,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38093" name="Sliver of Truth" type="EtcItem">
 		<!-- Card obtained from combining the Sliver of Truth card. For 30 min., Attribute Resistance + 50. -->
@@ -1430,6 +1511,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38094" name="Chaotic Ambush" type="EtcItem">
 		<!-- Card obtained from combining the Chaotic Ambush card. For 30 min., Attribute Atk. + 30, and Attribute Resistance + 30. -->
@@ -1437,6 +1519,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38095" name="Leona's Cube" additionalName="30-day" type="EtcItem">
 		<!-- Double-click for a chance to obtain either Emperor's Rune (2-hour), Emperor's Vitality Tonic, Scroll: 1,000,000 SP, Scroll: 5,000,000 SP, or Scroll: 10,000,000 SP. Once a day. 30-day. -->
@@ -1450,6 +1533,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38096" name="Emperor's Rune" additionalName="2-hour" type="EtcItem">
 		<!-- While possessed, character's XP/SP gained + 30%. 2-hour. Only one effect applies if used with Emperor's Rune (8-hour). -->
@@ -1462,7 +1546,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="120" />
+		<set name="time" val="7200" />
+		<skills>
+			<skill id="17117" level="2" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="38097" name="Emperor's Rune Pack (2-hour)" type="EtcItem">
 		<!-- Wrapped Pack containing Emperor's Rune (2-hour). -->
@@ -1471,6 +1558,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38096" min="1" max="1" chance="100" /> <!-- Emperor's Rune -->
+		</capsuled_items>
 	</item>
 	<item id="38098" name="Leona's Will" type="EtcItem">
 		<!-- Wrapped Pack containing supplies sent by Leona. Double-click for a chance to obtain either Leona's Scroll: Buffs x 10, High-grade Lucky Enchant Stone Special Box, Blessed Blessed Lucky Enchant Stone: Weapon (R-grade), or Blessed Lucky Enchant Stone: Armor (R-grade). -->
@@ -1482,6 +1574,16 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37567" min="1" max="1" chance="10" /> <!-- Blessed Lucky Enchant Stone: R-grade Armor -->
+			<item id="37566" min="1" max="1" chance="10" /> <!-- Blessed Lucky Enchant Stone: R-grade Weapon -->
+			<item id="36007" min="1" max="1" chance="10" /> <!-- High-grade Lucky Enchant Stone Special Box -->
+			<item id="36007" min="10" max="10" chance="70" /> <!-- Leona's Scroll: Buffs -->
+		</capsuled_items>
 	</item>
 	<item id="38099" name="Leona's Scroll: Buffs" type="EtcItem">
 		<!-- For 30 min., XP/SP gained + 30%, Max HP/MP/CP + 30%, P. Def./ M. Def. + 30%, Speed + 20, P. Atk. + 10%, M. Atk. + 20%. Skill MP Consumption - 15%. Cannot be used with the Art of Seduction. Cooldown is 30min. Cannot be used in the Olympiad. -->

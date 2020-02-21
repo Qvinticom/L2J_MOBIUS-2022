@@ -50,6 +50,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="48006" name="Essence of Evil Thoughts" type="EtcItem">
 		<!-- Item obtained after defeating Harpe who appeared at the Altar of Oblivion. According to Ferin, it contains information on how the Altar of Oblivion affects other matters in the Material Realm. Take them to Ferin. -->
@@ -62,12 +63,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="48007" name="Bracelet of Challenger" type="Armor">
 		<!-- A Bracelet of Challenger. When equipped, it increases basic stats by 1 and activates 5 talisman slots. -->
 		<set name="icon" val="BranchIcon.icon.bracelet_of_explorer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lbracelet" />
+		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -152,6 +154,7 @@
 		<set name="time" val="120" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="for_npc" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -455,17 +458,27 @@
 		<!-- Zodiac Agathion growth book. Increases M. Def. when the Agathion grows, adding a special ability from +4. Ensures safe enchantment up to +3 and enables the Agathion to be enchanted up to +10. Increases the Agathion's unique ability gradually from +1. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="28065" level="1" /> <!-- Zodiac Agathion Charm Book of Growth -->
+		</skills>
 	</item>
 	<item id="48047" name="Ancient Book of Growth: Zodiac Agathion" type="EtcItem">
 		<!-- Zodiac Agathion growth book. Increases M. Def. when the Agathion grows, adding a Special Ability from +4. Ensures safe enchantment up to +3 and enables the Agathion to be enchanted up to +10. Increases the agathion's Unique Ability gradually from +1. If successful, the Agathion randomly grows to between +1 and +3. Cannot be used past +7. -->
 		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="GIANT_ENCHT_AM" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="28066" level="1" /> <!-- Ancient Zodiac Agathion Charm Book of Growth -->
+		</skills>
 	</item>
 	<item id="48048" name="Virgo Agathion Charm" type="Armor">
 		<!-- A charm that activates the power of the Virgo Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the sub slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
@@ -650,6 +663,7 @@
 			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
 			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
 			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
 	<item id="48061" name="Intermediate Seed Bracelet" type="Armor">
@@ -668,6 +682,7 @@
 			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
 			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
 			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
 	<item id="48062" name="High-grade Seed Bracelet" type="Armor">
@@ -686,6 +701,7 @@
 			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
 			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
 			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
 	<item id="48063" name="Top-grade Seed Bracelet" type="Armor">
@@ -704,6 +720,7 @@
 			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
 			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
 			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
 	<item id="48064" name="Super Advanced Seed Bracelet" additionalName="Stage 1" type="Armor">
@@ -722,6 +739,7 @@
 			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
 			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
 			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
 	<item id="48065" name="Zodiac Cube Fragment" type="EtcItem">

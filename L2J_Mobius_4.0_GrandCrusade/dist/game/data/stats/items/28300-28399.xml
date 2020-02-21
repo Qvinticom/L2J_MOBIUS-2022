@@ -1184,6 +1184,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="19442" min="1" max="1" chance="50" /> <!-- Exclusive Reward Chest -->
+			<item id="27640" min="1" max="1" chance="100" /> <!-- Soulshot (R-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="28395" name="Heine Exclusive Fishing Tools - 300 Pack" type="EtcItem">
 		<!-- Double-click to get 300 Heine Exclusive Bait Coupons and 300 Fishing Shots. -->

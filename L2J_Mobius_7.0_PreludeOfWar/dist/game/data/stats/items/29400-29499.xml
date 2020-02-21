@@ -13,26 +13,53 @@
 	<item id="29401" name="Ultimate Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain 1 of the Lv. 3 jewels. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<skills>
+			<skill id="28295" level="1" /> <!-- Ultimate Jewelry Box -->
+		</skills>
 	</item>
 	<item id="29402" name="Ultimate Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain 1 of the Lv. 4 jewels. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<skills>
+			<skill id="28296" level="1" /> <!-- Ultimate Jewelry Box -->
+		</skills>
 	</item>
 	<item id="29403" name="Ultimate Lv. 5 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain 1 of the Lv. 5 jewels. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<skills>
+			<skill id="28297" level="1" /> <!-- Ultimate Jewelry Box -->
+		</skills>
 	</item>
 	<item id="29404" name="Shiny Coin" type="EtcItem">
 		<!-- Coins that can be exchanged with the Dimensional Merchant for special items. -->
@@ -47,10 +74,19 @@
 	<item id="29405" name="Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain 1 of the Lv. 3 La Vie En Rose's Jewelry Boxes. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<skills>
+			<skill id="28295" level="1" /> <!-- Ultimate Jewelry Box -->
+		</skills>
 	</item>
 	<item id="29406" name="Transformation Sealbook: Sales Part-timer" additionalName="Kat the Cat" type="EtcItem">
 		<!-- Sealbook for learning the skill of transforming yourself into Kat the Cat. -->
@@ -276,6 +312,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<skills>
+			<skill id="28172" level="1" /> <!-- High-grade Maphr's Rune -->
+		</skills>
 	</item>
 	<item id="29433" name="High-grade Maphr's Rune 300% Pack" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional item. Double-click the item to obtain 1 High-grade Maphr's Rune 300% - 30-day. -->
@@ -289,6 +329,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29432" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 300% Pack -->
+		</capsuled_items>
 	</item>
 	<item id="29434" name="High-grade Maphr's Rune 300% Pack" additionalName="7-day" type="EtcItem">
 		<!-- Dimensional item. Double-click the item to obtain 1 High-grade Maphr's Rune 300% - 7-day. -->
@@ -301,7 +345,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="10080" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29435" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 300% Pack -->
+		</capsuled_items>
 	</item>
 	<item id="29435" name="High-grade Maphr's Rune 300%" additionalName="7-day" type="EtcItem">
 		<!-- Dimensional item. If stored in inventory, increases Adena gain by 300%, item drop rate and item gain through spoils by 100%. -->
@@ -312,6 +359,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<skills>
+			<skill id="28172" level="1" /> <!-- High-grade Maphr's Rune -->
+		</skills>
 	</item>
 	<item id="29436" name="High-grade Maphr's Rune 300% Pack" additionalName="1-day" type="EtcItem">
 		<!-- Dimensional item. Double-click the item to obtain 1 High-grade Maphr's Rune 300% - 1-day. -->
@@ -324,7 +375,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="1440" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29437" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 300% Pack -->
+		</capsuled_items>
 	</item>
 	<item id="29437" name="High-grade Maphr's Rune 300%" additionalName="1-day" type="EtcItem">
 		<!-- Dimensional item. If stored in inventory, increases Adena gain by 300%, item drop rate and item gain through spoils by 100%. -->
@@ -335,6 +389,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<skills>
+			<skill id="28172" level="1" /> <!-- High-grade Maphr's Rune -->
+		</skills>
 	</item>
 	<item id="29438" name="Sibi's Suspicious Supply Items" type="EtcItem">
 		<!-- Supply items prepared by Sibi. Use to obtain an item. Will be deleted after the event. -->
@@ -355,6 +413,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18568" level="7" />
+			<skill id="27439" level="4" />
+		</skills>
 	</item>
 	<item id="29440" name="Greater Vital Stone" additionalName="Lv. 3" type="Armor">
 		<!-- Vitality Bonus +54% and Vitality Point Consumption Speed -17%. Acquired XP/ SP +10%. Can use Vital Wind skill. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
@@ -364,6 +426,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18568" level="8" />
+			<skill id="27439" level="4" />
+		</skills>
 	</item>
 	<item id="29441" name="Greater Vital Stone" additionalName="Lv. 4" type="Armor">
 		<!-- Vitality Bonus +56% and Vitality Point Consumption Speed -18%. Acquired XP/ SP +10%. Can use Vital Wind skill. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
@@ -373,6 +439,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18568" level="9" />
+			<skill id="27439" level="4" />
+		</skills>
 	</item>
 	<item id="29442" name="Greater Vital Stone" additionalName="Lv. 5" type="Armor">
 		<!-- Vitality Bonus +60% and Vitality Point Consumption Speed -20%. Acquired XP/ SP +10%. Can use Vital Wind skill. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
@@ -382,6 +452,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18568" level="10" />
+			<skill id="27439" level="5" />
+		</skills>
 	</item>
 	<item id="29443" name="Greater Garnet" additionalName="Lv. 2" type="Armor">
 		<!-- Debuff Defense Success Rate +30%, Reflect Resistance +3%, and when receiving damage from a PC, Stun/ Silence are canceled. Cancels debuff and you become immune to debuffs for 7 sec. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
@@ -391,6 +465,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18566" level="7" />
+			<skill id="18567" level="2" />
+		</skills>
 	</item>
 	<item id="29444" name="Greater Garnet" additionalName="Lv. 3" type="Armor">
 		<!-- Debuff Defense Success Rate +30%, Reflect Resistance +6%, and when receiving damage from a PC, Stun/ Silence are canceled. Cancels debuff and you become immune to debuffs for 7 sec. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
@@ -400,6 +478,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18566" level="8" />
+			<skill id="18567" level="2" />
+		</skills>
 	</item>
 	<item id="29445" name="Greater Garnet" additionalName="Lv. 4" type="Armor">
 		<!-- Debuff Defense Success Rate +30%, Reflect Resistance 9%, and when receiving damage from a PC, Stun/ Silence are canceled. Cancels debuff and you become immune to debuffs for 7 sec. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
@@ -409,6 +491,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18566" level="9" />
+			<skill id="18567" level="2" />
+		</skills>
 	</item>
 	<item id="29446" name="Greater Garnet" additionalName="Lv. 5" type="Armor">
 		<!-- Debuff Defense Success Rate +30%, Reflect Resistance +15%, and when receiving damage from a PC, Stun/ Silence are canceled. Cancels debuff and you become immune to debuffs for 7 sec. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
@@ -418,6 +504,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18566" level="10" />
+			<skill id="18567" level="2" />
+		</skills>
 	</item>
 	<item id="29447" name="Greater Garnet" additionalName="Lv. 2" type="Armor">
 		<!-- Debuff Defense Success Rate +30%, Reflect Resistance +3%, and when receiving damage from a PC, Stun/ Silence are canceled. Cancels debuff and you become immune to debuffs for 7 sec. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
@@ -427,6 +517,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18566" level="7" />
+			<skill id="18567" level="2" />
+		</skills>
 	</item>
 	<item id="29448" name="Greater Garnet" additionalName="Lv. 3" type="Armor">
 		<!-- Debuff Defense Success Rate +30%, Reflect Resistance +6%, and when receiving damage from a PC, Stun/ Silence are canceled. Cancels debuff and you become immune to debuffs for 7 sec. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
@@ -436,6 +530,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18566" level="8" />
+			<skill id="18567" level="2" />
+		</skills>
 	</item>
 	<item id="29449" name="Greater Garnet" additionalName="Lv. 4" type="Armor">
 		<!-- Debuff Defense Success Rate +30%, Reflect Resistance 9%, and when receiving damage from a PC, Stun/ Silence are canceled. Cancels debuff and you become immune to debuffs for 7 sec. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
@@ -445,6 +543,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18566" level="9" />
+			<skill id="18567" level="2" />
+		</skills>
 	</item>
 	<item id="29450" name="Greater Garnet" additionalName="Lv. 5" type="Armor">
 		<!-- Debuff Defense Success Rate +30%, Reflect Resistance +15%, and when receiving damage from a PC, Stun/ Silence are canceled. Cancels debuff and you become immune to debuffs for 7 sec. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
@@ -454,6 +556,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18566" level="10" />
+			<skill id="18567" level="2" />
+		</skills>
 	</item>
 	<item id="29451" name="Greater Tanzanite" additionalName="Lv. 2" type="Armor">
 		<!-- Creates a protection shield that absorbs 55,000 damage for 15 sec. Recover 15% of Max HP instantly. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
@@ -463,6 +569,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18565" level="7" /> <!-- Greater Tanzanite - Barrier -->
+		</skills>
 	</item>
 	<item id="29452" name="Greater Tanzanite" additionalName="Lv. 3" type="Armor">
 		<!-- Creates a protection shield that absorbs 60,000 damage for 15 sec. Recover 15% of Max HP instantly. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
@@ -472,6 +581,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18565" level="8" /> <!-- Greater Tanzanite - Barrier -->
+		</skills>
 	</item>
 	<item id="29453" name="Greater Tanzanite" additionalName="Lv. 4" type="Armor">
 		<!-- Creates a protection shield that absorbs 65,000 damage for 15 sec. Recover 15% of Max HP instantly. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
@@ -481,6 +593,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18565" level="9" /> <!-- Greater Tanzanite - Barrier -->
+		</skills>
 	</item>
 	<item id="29454" name="Greater Tanzanite" additionalName="Lv. 5" type="Armor">
 		<!-- Creates a protection shield that absorbs 70,000 damage for 15 sec. Recover 15% of Max HP instantly. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
@@ -490,6 +605,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18565" level="10" /> <!-- Greater Tanzanite - Barrier -->
+		</skills>
 	</item>
 	<item id="29455" name="Greater Cat's Eye" additionalName="Lv. 2" type="Armor">
 		<!-- Damage Reflection Resistance +55 and there's a 10% chance of reflecting debuffs to the enemy. Can use the invincibility skill. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
@@ -660,7 +778,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47921" min="1" max="1" chance="100" /> <!-- Greater Red Cat's Eye Lv. 1 (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="29471" name="Greater Blue Cat's Eye Lv. 1 Box" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Greater Blue Cat's Eye Lv. 1 (30-day). -->
@@ -673,7 +794,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47922" min="1" max="1" chance="100" /> <!-- Greater Blue Cat's Eye Lv. 1 (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="29472" name="Greater Ruby Lv. 1 Box" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Greater Ruby Lv. 1 (30-day). -->
@@ -686,7 +810,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80473" min="1" max="1" chance="100" /> <!-- Greater Ruby Lv. 1 (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="29473" name="Greater Sapphire Lv. 1 Box" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Greater Sapphire Lv. 1 (30-day). -->
@@ -699,7 +826,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80474" min="1" max="1" chance="100" /> <!-- Greater Sapphire Lv. 1 (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="29474" name="Greater Opal Lv. 1 Box" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Greater Opal Lv. 1 (30-day). -->
@@ -712,7 +842,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80476" min="1" max="1" chance="100" /> <!-- Greater Opal Lv. 1 (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="29475" name="Greater Diamond Lv. 1 Box" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Greater Diamond Lv. 1 (30-day). -->
@@ -725,7 +858,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80479" min="1" max="1" chance="100" /> <!-- Greater Diamond Lv. 1 (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="29476" name="Greater Pearl Lv. 1 Box" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Greater Pearl Lv. 1 (30-day). -->
@@ -738,7 +874,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80480" min="1" max="1" chance="100" /> <!-- Greater Pearl Lv. 1 (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="29477" name="Paulina's Helios Shaper Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Helios Shaper (30-day). -->

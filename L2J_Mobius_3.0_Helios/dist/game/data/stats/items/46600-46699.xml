@@ -337,17 +337,24 @@
 		<set name="icon" val="icon.weapon_stormbringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="C" />
-		<set name="weight" val="1420" />
+		<set name="crystal_count" val="3274" />
+		<set name="weight" val="1520" />
 		<set name="soulshots" val="2" />
-		<set name="bodypart" val="rhand" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="1" />
 		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<stats>
 			<stat type="pAtk">107.0</stat>
 			<stat type="mAtk">68.0</stat>
@@ -1043,6 +1050,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
+		<skills>
+			<skill id="18568" level="1" /> <!-- Vital Stone -->
+		</skills>
 	</item>
 	<item id="46671" name="Vital Stone" additionalName="Lv. 2" type="Armor">
 		<!-- Increases Vitality Status Bonus XP by 6%. Effect does not stack with additional jewels of the same type. -->
@@ -1057,6 +1067,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
+		<skills>
+			<skill id="18568" level="2" /> <!-- Vital Stone -->
+		</skills>
 	</item>
 	<item id="46672" name="Vital Stone" additionalName="Lv. 3" type="Armor">
 		<!-- Increases Vitality Status Bonus XP by 12%. Effect does not stack with additional jewels of the same type. -->
@@ -1071,6 +1084,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
+		<skills>
+			<skill id="18568" level="3" /> <!-- Vital Stone -->
+			<skill id="27439" level="1" /> <!-- Vital Stone - Vital Wind --> 			
+		</skills>
 	</item>
 	<item id="46673" name="Vital Stone" additionalName="Lv. 4" type="Armor">
 		<!-- Increases Vitality Status Bonus XP by 20% and decreases Vitality Point Consumption Speed by 7%. Effect does not stack with additional jewels of the same type. -->
@@ -1085,6 +1102,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
+		<skills>
+			<skill id="18568" level="4" /> <!-- Vital Stone -->
+			<skill id="27439" level="2" /> <!-- Vital Stone - Vital Wind --> 	
+		</skills>
 	</item>
 	<item id="46674" name="Vital Stone" additionalName="Lv. 5" type="Armor">
 		<!-- Increases Vitality Status Bonus XP by 30% and decreases Vitality Point Consumption Speed by 15%. Effect does not stack with additional jewels of the same type. -->
@@ -1094,6 +1115,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="5" />
+		<skills>
+			<skill id="18568" level="5" /> <!-- Vital Stone -->
+			<skill id="27439" level="3" /> <!-- Vital Stone - Vital Wind --> 	
+		</skills>
 	</item>
 	<item id="46675" name="Garnet" additionalName="Lv. 1" type="Armor">
 		<!-- Resistance to Debuffs + 3%. Effect does not stack with additional jewels of the same type. -->

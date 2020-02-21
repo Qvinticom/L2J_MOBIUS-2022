@@ -1029,14 +1029,14 @@
 		<!-- Zodiac Agathion Charm growth book. Increases M. Def. and unique ability from +1 when the Agathion Charm grows. Can enchant between +1 and +3 when it succeeds, but the Agathion Charm disappears if the enchantment fails. Cannot be used above +7. -->
 		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="etcitem_type" val="GIANT_ENCHT_AM" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<skills>
-			<skill id="28065" level="1" /> <!-- Zodiac Agathion Charm Book of Growth -->
+			<skill id="28066" level="1" /> <!-- Ancient Zodiac Agathion Charm Book of Growth -->
 		</skills>
 	</item>
 	<item id="28759" name="Zodiac Agathion Cube" additionalName="Not Used" type="EtcItem">
@@ -1052,13 +1052,13 @@
 		<!-- Activates 1 Agathion main slot. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="D" />
-		<set name="material" val="BRONZE" />
-		<set name="weight" val="630" />
-		<set name="enchant_enabled" val="1" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35069" level="1" /> <!-- Expand Primary Agathion Slot -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="28761" name="Red Starlight Jar" type="EtcItem">
 		<!-- Ingredient needed to upgrade Evolved Agathions. The star-shaped bottle is filled with shiny red stars. -->
@@ -1150,6 +1150,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28027" level="1" type="ON_EQUIP" /> <!-- Summon Virgo Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1166,6 +1173,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28027" level="1" type="ON_EQUIP" /> <!-- Summon Virgo Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1182,6 +1196,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28027" level="1" type="ON_EQUIP" /> <!-- Summon Virgo Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1198,6 +1219,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28027" level="1" type="ON_EQUIP" /> <!-- Summon Virgo Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1214,6 +1242,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28027" level="1" type="ON_EQUIP" /> <!-- Summon Virgo Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1230,6 +1265,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28027" level="1" type="ON_EQUIP" /> <!-- Summon Virgo Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1246,6 +1288,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28027" level="1" type="ON_EQUIP" /> <!-- Summon Virgo Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1262,6 +1311,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28027" level="1" type="ON_EQUIP" /> <!-- Summon Virgo Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1278,6 +1334,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28027" level="1" type="ON_EQUIP" /> <!-- Summon Virgo Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1294,6 +1357,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28027" level="1" type="ON_EQUIP" /> <!-- Summon Virgo Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1310,6 +1380,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28027" level="1" type="ON_EQUIP" /> <!-- Summon Virgo Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1326,6 +1403,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28027" level="1" type="ON_EQUIP" /> <!-- Summon Virgo Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1342,6 +1426,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28028" level="1" type="ON_EQUIP" /> <!-- Summon Capricorn Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1358,6 +1449,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28028" level="1" type="ON_EQUIP" /> <!-- Summon Capricorn Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1374,6 +1472,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28028" level="1" type="ON_EQUIP" /> <!-- Summon Capricorn Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1390,6 +1495,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28028" level="1" type="ON_EQUIP" /> <!-- Summon Capricorn Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1406,6 +1518,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28028" level="1" type="ON_EQUIP" /> <!-- Summon Capricorn Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1422,6 +1541,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28028" level="1" type="ON_EQUIP" /> <!-- Summon Capricorn Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1438,6 +1564,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28028" level="1" type="ON_EQUIP" /> <!-- Summon Capricorn Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1454,6 +1587,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28028" level="1" type="ON_EQUIP" /> <!-- Summon Capricorn Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1470,6 +1610,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28028" level="1" type="ON_EQUIP" /> <!-- Summon Capricorn Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1486,6 +1633,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28028" level="1" type="ON_EQUIP" /> <!-- Summon Capricorn Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1502,6 +1656,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28028" level="1" type="ON_EQUIP" /> <!-- Summon Capricorn Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1518,6 +1679,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28028" level="1" type="ON_EQUIP" /> <!-- Summon Capricorn Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1534,6 +1702,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28029" level="1" type="ON_EQUIP" /> <!-- Summon Libra Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1550,6 +1725,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28029" level="1" type="ON_EQUIP" /> <!-- Summon Libra Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1566,6 +1748,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28029" level="1" type="ON_EQUIP" /> <!-- Summon Libra Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1582,6 +1771,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28029" level="1" type="ON_EQUIP" /> <!-- Summon Libra Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1598,6 +1794,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28029" level="1" type="ON_EQUIP" /> <!-- Summon Libra Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1614,6 +1817,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28029" level="1" type="ON_EQUIP" /> <!-- Summon Libra Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -1630,6 +1840,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="28029" level="1" type="ON_EQUIP" /> <!-- Summon Libra Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
