@@ -35,10 +35,10 @@ public class Q00589_ASecretChange extends Quest
 	// Monsters
 	private static final int[] MONSTERS =
 	{
-		24200,
-		24201,
-		24202,
-		24203,
+		24200, // Silence Warrior
+		24201, // Silence Slave
+		24202, // Silence Claw
+		24203, // Silence Witch
 	};
 	// Misc
 	private static final int MIN_LEVEL = 95;
@@ -126,7 +126,7 @@ public class Q00589_ASecretChange extends Quest
 				{
 					if (!qs.isNowAvailable())
 					{
-						htmltext = "34424-00.html";
+						htmltext = "34424-00.htm";
 						break;
 					}
 					qs.setState(State.CREATED);

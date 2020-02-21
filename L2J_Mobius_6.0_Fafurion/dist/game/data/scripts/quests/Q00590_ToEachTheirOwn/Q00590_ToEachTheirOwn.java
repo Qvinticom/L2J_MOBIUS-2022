@@ -35,9 +35,9 @@ public class Q00590_ToEachTheirOwn extends Quest
 	// Monsters
 	private static final int[] MONSTERS =
 	{
-		24204,
-		24205,
-		24206,
+		24204, // Silence Hannibal
+		24205, // Silence Phantom
+		24206, // Silence Preacle
 	};
 	// Misc
 	private static final int MIN_LEVEL = 95;
@@ -125,7 +125,7 @@ public class Q00590_ToEachTheirOwn extends Quest
 				{
 					if (!qs.isNowAvailable())
 					{
-						htmltext = "34424-00.html";
+						htmltext = "34424-00.htm";
 						break;
 					}
 					qs.setState(State.CREATED);

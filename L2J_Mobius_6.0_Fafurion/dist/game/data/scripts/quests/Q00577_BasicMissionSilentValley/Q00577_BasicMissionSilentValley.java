@@ -66,7 +66,6 @@ public class Q00577_BasicMissionSilentValley extends Quest
 		{
 			case "34413-02.htm":
 			case "34413-03.htm":
-			case "34413-07.html":
 			case "33780-02.html":
 			{
 				htmltext = event;
@@ -97,7 +96,7 @@ public class Q00577_BasicMissionSilentValley extends Quest
 				takeItems(player, SCROLL_OF_ESCAPE_TOWN_OF_ADEN, -1); // remove SOE - temp solution
 				break;
 			}
-			case "34413-08.html":
+			case "34413-07.html":
 			{
 				final StringBuilder str = new StringBuilder("00");
 				checkQuestCompleted(player, str); // Initialize the array with all quests completed
