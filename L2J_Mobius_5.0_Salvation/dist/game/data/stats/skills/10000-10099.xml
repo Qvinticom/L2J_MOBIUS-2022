@@ -679,7 +679,7 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>CRITICAL_DMG_DOWN</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">200</value>
+			<value fromLevel="1" toLevel="11">60</value>
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
@@ -1136,7 +1136,9 @@
 	<skill id="10015" toLevel="9" name="Chain Strike">
 		<!-- Swings a chain to draw the target to you. Requires a sword/ blunt to be equipped. -->
 		<icon>icon.skill10015</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>STUN</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="9">90</value>
 			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
@@ -1154,6 +1156,7 @@
 			<value level="8">103</value>
 			<value level="9">105</value>
 		</magicLvl>
+		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
 			<value level="1">58</value>
@@ -1177,6 +1180,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<trait>PULL</trait>
+		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<nextAction>ATTACK</nextAction>
@@ -1204,7 +1208,9 @@
 	<skill id="10016" toLevel="9" name="Chain Hydra">
 		<!-- Pulls target and nearby enemies to make them attack you. Requires a shield. -->
 		<icon>icon.skill10016</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>STUN</abnormalType>
 		<affectRange>200</affectRange>
 		<activateRate>
 			<value fromLevel="1" toLevel="9">150</value>
@@ -1223,6 +1229,7 @@
 			<value level="8">103</value>
 			<value level="9">105</value>
 		</magicLvl>
+		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">123</value>
 			<value level="2">127</value>
@@ -1256,6 +1263,7 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>PULL</trait>
+		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -2169,7 +2177,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="HateAttack">
-				<amount>500</amount>
+				<amount>50000</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>SWORD</item>
@@ -2195,7 +2203,7 @@
 		<abnormalType>AURA_DEBUFF</abnormalType>
 		<activateRate>100</activateRate>
 		<abnormalVisualEffect>AURA_DEBUFF</abnormalVisualEffect>
-		<affectRange>900</affectRange>
+		<affectRange>600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2210,11 +2218,14 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="GetAgro" />
+			<effect name="TargetMeProbability">
+				<chance>50</chance>
+			</effect>
 			<effect name="AddHate">
-				<power>500</power>
+				<power>50000</power>
 			</effect>
 			<effect name="HateAttack">
-				<amount>500</amount>
+				<amount>50000</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -5805,7 +5816,7 @@
 			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
-		<affectRange>100</affectRange>
+		<affectRange>600</affectRange>
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
 		<itemConsumeId>1785</itemConsumeId>
 		<itemConsumeCount>6</itemConsumeCount>
