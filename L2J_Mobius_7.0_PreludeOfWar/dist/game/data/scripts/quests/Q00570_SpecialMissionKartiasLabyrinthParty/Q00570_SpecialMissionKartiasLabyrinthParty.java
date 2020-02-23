@@ -41,7 +41,7 @@ public class Q00570_SpecialMissionKartiasLabyrinthParty extends Quest
 	
 	public Q00570_SpecialMissionKartiasLabyrinthParty()
 	{
-		super(564);
+		super(570);
 		addStartNpc(PENNY);
 		addTalkId(PENNY, KARTIA);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "nolevel.html");
