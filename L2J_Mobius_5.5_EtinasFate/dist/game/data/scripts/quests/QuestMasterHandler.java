@@ -124,6 +124,7 @@ import quests.Q00566_BasicMissionFairySettlementEast.Q00566_BasicMissionFairySet
 import quests.Q00567_BasicMissionIsleOfSouls.Q00567_BasicMissionIsleOfSouls;
 import quests.Q00568_SpecialMissionNornilsCave.Q00568_SpecialMissionNornilsCave;
 import quests.Q00569_BasicMissionSealOfShilen.Q00569_BasicMissionSealOfShilen;
+import quests.Q00570_SpecialMissionKartiasLabyrinthParty.Q00570_SpecialMissionKartiasLabyrinthParty;
 import quests.Q00574_SpecialMissionNornilsGarden.Q00574_SpecialMissionNornilsGarden;
 import quests.Q00577_BasicMissionSilentValley.Q00577_BasicMissionSilentValley;
 import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
@@ -471,7 +472,6 @@ import quests.Q10891_AtANewPlace.Q10891_AtANewPlace;
 import quests.Q10892_RevengeOneStepAtATime.Q10892_RevengeOneStepAtATime;
 import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
 import quests.not_done.Q00529_RegularBarrierMaintenance;
-import quests.not_done.Q00570_SpecialMissionKartiasLabyrinthParty;
 import quests.not_done.Q00571_SpecialMissionProofOfUnityFieldRaid;
 import quests.not_done.Q00572_SpecialMissionProofOfCourageFieldRaid;
 import quests.not_done.Q00573_SpecialMissionProofOfStrengthFieldRaid;
@@ -682,7 +682,7 @@ public class QuestMasterHandler
 		Q00567_BasicMissionIsleOfSouls.class,
 		Q00568_SpecialMissionNornilsCave.class,
 		Q00569_BasicMissionSealOfShilen.class,
-		Q00570_SpecialMissionKartiasLabyrinthParty.class, // TODO: Not done.
+		Q00570_SpecialMissionKartiasLabyrinthParty.class,
 		Q00571_SpecialMissionProofOfUnityFieldRaid.class, // TODO: Not done.
 		Q00572_SpecialMissionProofOfCourageFieldRaid.class, // TODO: Not done.
 		Q00573_SpecialMissionProofOfStrengthFieldRaid.class, // TODO: Not done.
