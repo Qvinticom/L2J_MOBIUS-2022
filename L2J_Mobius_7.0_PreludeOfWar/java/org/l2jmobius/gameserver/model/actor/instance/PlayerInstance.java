@@ -13868,6 +13868,12 @@ public class PlayerInstance extends Playable
 	
 	public void rewardMonsterBook(int cardId)
 	{
+		if (getLevel() < 99)
+		{
+			sendPacket(new SystemMessage(SystemMessageId.ONLY_CHARACTERS_OF_LEVEL_S1_OR_HIGHER_ARE_ELIGIBLE_FOR_REWARDS).addInt(99));
+			return;
+		}
+		
 		final int rewardLevel = getMonsterBookRewardLevel(cardId);
 		final MonsterBookCardHolder card = MonsterBookData.getInstance().getMonsterBookCardById(cardId);
 		final MonsterBookRewardHolder reward = card.getReward(rewardLevel);
