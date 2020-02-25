@@ -93,7 +93,6 @@ public class Q10453_StoppingTheWindDragon extends Quest
 			{
 				htmltext = "adens_wizard_jenna_q10453_4.html";
 			}
-			
 		}
 		else if (qs.isCompleted())
 		{

@@ -244,7 +244,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	 */
 	public byte markToDeleteChar(int charslot)
 	{
-		
 		final int objid = getObjectIdForSlot(charslot);
 		
 		if (objid < 0)
@@ -306,7 +305,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 				statement.close();
 				rs.close();
 			}
-			
 		}
 		catch (Exception e)
 		{
@@ -473,7 +471,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 				{
 					LOGGER.warning("fixme:unhandled exception " + e2);
 				}
-				
 			}
 		}
 		

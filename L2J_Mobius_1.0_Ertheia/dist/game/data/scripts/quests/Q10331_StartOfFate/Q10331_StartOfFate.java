@@ -765,7 +765,6 @@ public class Q10331_StartOfFate extends Quest
 						break;
 					}
 				}
-				
 			}
 		}
 		return htmltext;

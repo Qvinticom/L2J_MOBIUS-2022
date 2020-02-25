@@ -247,7 +247,6 @@ public class Q00625_TheFinestIngredientsPart2 extends Quest
 						htmltext = "31542-05.html";
 						break;
 					}
-					
 				}
 				break;
 			}

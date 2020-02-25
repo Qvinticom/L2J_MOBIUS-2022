@@ -417,7 +417,6 @@ public class SepulcherMonsterInstance extends MonsterInstance
 			{
 				_victimShout.cancel(true);
 			}
-			
 		}
 	}
 	

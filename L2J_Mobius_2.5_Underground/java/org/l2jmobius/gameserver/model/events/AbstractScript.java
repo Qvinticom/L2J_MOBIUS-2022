@@ -319,7 +319,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 							final List<NpcTemplate> templates = NpcData.getInstance().getAllOfLevel(level);
 							templates.forEach(template -> ids.add(template.getId()));
 						}
-						
 					}
 					else if (annotation instanceof NpcLevelRanges)
 					{
@@ -1901,7 +1900,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 */
 	public void onSpawnActivate(SpawnTemplate template)
 	{
-		
 	}
 	
 	/**
@@ -1909,7 +1907,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 */
 	public void onSpawnDeactivate(SpawnTemplate template)
 	{
-		
 	}
 	
 	/**
@@ -1919,7 +1916,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 */
 	public void onSpawnNpc(SpawnTemplate template, SpawnGroup group, Npc npc)
 	{
-		
 	}
 	
 	/**
@@ -1929,7 +1925,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 */
 	public void onSpawnDespawnNpc(SpawnTemplate template, SpawnGroup group, Npc npc)
 	{
-		
 	}
 	
 	/**
@@ -1940,7 +1935,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 */
 	public void onSpawnNpcDeath(SpawnTemplate template, SpawnGroup group, Npc npc, Creature killer)
 	{
-		
 	}
 	
 	/**

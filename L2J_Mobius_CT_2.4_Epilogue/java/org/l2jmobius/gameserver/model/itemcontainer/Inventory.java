@@ -513,7 +513,6 @@ public abstract class Inventory extends ItemContainer
 					{
 						for (SkillHolder holder : skills)
 						{
-							
 							itemSkill = holder.getSkill();
 							if (itemSkill != null)
 							{

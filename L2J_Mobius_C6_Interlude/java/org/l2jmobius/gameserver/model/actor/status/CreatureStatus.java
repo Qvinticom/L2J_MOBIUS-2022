@@ -519,7 +519,6 @@ public class CreatureStatus
 				// Start the HP/MP/CP Regeneration task with Medium priority
 				startHpMpRegeneration();
 			}
-			
 		}
 		
 		// Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
@@ -636,7 +635,6 @@ public class CreatureStatus
 	 */
 	class RegenTask implements Runnable
 	{
-		
 		/*
 		 * (non-Javadoc)
 		 * @see java.lang.Runnable#run()

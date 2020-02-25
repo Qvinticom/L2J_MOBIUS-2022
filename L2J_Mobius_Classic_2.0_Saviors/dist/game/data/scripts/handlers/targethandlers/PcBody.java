@@ -33,7 +33,6 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class PcBody implements ITargetTypeHandler
 {
-	
 	@Override
 	public Enum<TargetType> getTargetType()
 	{

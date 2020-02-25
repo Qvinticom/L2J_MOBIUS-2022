@@ -254,7 +254,6 @@ public class Race extends Event
 					player.sendMessage("Error while changing transform skill");
 				}
 			}
-			
 		}
 		else if (bypass.startsWith("tele"))
 		{

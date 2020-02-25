@@ -354,7 +354,6 @@ public class Q384_WarehouseKeepersPastime extends Quest
 							{
 								st.giveItems(2463, 1);
 							}
-							
 							break;
 						}
 					}

@@ -4781,7 +4781,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 						setCurrentMp(_status.getCurrentMp() + absorbDamage);
 					}
 				}
-				
 			}
 			
 			// Notify AI with EVT_ATTACKED
@@ -5539,7 +5538,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	// Quest event ON_SPELL_FNISHED
 	protected void notifyQuestEventSkillFinished(Skill skill, WorldObject target)
 	{
-		
 	}
 	
 	/**

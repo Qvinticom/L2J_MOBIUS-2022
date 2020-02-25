@@ -41,13 +41,11 @@ public class FriendlyNpcAI extends AttackableAI
 	@Override
 	protected void onEvtAttacked(Creature attacker)
 	{
-		
 	}
 	
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
-		
 	}
 	
 	@Override

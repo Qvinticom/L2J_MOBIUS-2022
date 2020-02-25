@@ -34,7 +34,6 @@ public class ExShowCastleInfo implements IClientOutgoingPacket
 	
 	private ExShowCastleInfo()
 	{
-		
 	}
 	
 	@Override

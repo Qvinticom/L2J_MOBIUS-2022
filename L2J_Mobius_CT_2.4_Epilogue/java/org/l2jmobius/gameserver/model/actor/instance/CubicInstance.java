@@ -493,7 +493,6 @@ public class CubicInstance implements IIdentifiable
 					_owner.sendPacket(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
 					continue;
 				}
-				
 			}
 			
 			// Apply effects

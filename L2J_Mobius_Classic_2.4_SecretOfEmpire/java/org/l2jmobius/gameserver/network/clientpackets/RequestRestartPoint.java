@@ -289,5 +289,4 @@ public class RequestRestartPoint implements IClientIncomingPacket
 			player.teleToLocation(loc, true, instance);
 		}
 	}
-	
 }

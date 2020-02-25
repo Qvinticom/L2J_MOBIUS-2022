@@ -443,7 +443,6 @@ public class EvilIncubator extends AbstractInstance
 	@Override
 	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
-		
 	}
 	
 	private void manageWaveSpawn(Instance world)

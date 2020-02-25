@@ -569,7 +569,6 @@ public class AdminTeleport implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Target is not in game.");
 			}
-			
 		}
 		else if (obj instanceof RaidBossInstance)
 		{
@@ -605,5 +604,4 @@ public class AdminTeleport implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 		}
 	}
-	
 }

@@ -1231,7 +1231,6 @@ public class Siege implements Siegable
 	/** Load siege clans. */
 	private void loadSiegeClan()
 	{
-		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT clan_id,type FROM siege_clans where castle_id=?"))
 		{

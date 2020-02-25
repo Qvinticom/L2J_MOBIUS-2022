@@ -414,7 +414,6 @@ public class ZoneManager implements IXmlReader
 						{
 							for (int y = 0; y < _zoneRegions[x].length; y++)
 							{
-								
 								final int ax = (x - OFFSET_X) << SHIFT_BY;
 								final int bx = ((x + 1) - OFFSET_X) << SHIFT_BY;
 								final int ay = (y - OFFSET_Y) << SHIFT_BY;

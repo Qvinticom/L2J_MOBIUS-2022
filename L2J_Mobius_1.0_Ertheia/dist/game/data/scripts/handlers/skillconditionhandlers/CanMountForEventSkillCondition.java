@@ -26,7 +26,6 @@ public class CanMountForEventSkillCondition implements ISkillCondition
 {
 	public CanMountForEventSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

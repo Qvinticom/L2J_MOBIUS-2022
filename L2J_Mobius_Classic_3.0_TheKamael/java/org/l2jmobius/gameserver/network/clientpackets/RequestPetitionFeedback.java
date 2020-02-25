@@ -77,5 +77,4 @@ public class RequestPetitionFeedback implements IClientIncomingPacket
 			LOGGER.severe("Error while saving petition feedback");
 		}
 	}
-	
 }

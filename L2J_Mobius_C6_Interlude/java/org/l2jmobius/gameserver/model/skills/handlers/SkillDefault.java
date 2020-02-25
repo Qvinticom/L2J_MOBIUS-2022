@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public class SkillDefault extends Skill
 {
-	
 	public SkillDefault(StatSet set)
 	{
 		super(set);

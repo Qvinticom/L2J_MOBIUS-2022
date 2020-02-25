@@ -498,7 +498,6 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	
 	public void removeStatusListener(Creature object)
 	{
-		
 	}
 	
 	public void setXYZInvisible(int x, int y, int z)

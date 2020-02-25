@@ -840,5 +840,4 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		}
 		_accessor.detachAI();
 	}
-	
 }

@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminVitality implements IAdminCommandHandler
 {
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_set_vitality",

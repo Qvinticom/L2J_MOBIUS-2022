@@ -33,7 +33,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
  */
 public class EffectBluff extends Effect
 {
-	
 	public EffectBluff(Env env, EffectTemplate template)
 	{
 		super(env, template);

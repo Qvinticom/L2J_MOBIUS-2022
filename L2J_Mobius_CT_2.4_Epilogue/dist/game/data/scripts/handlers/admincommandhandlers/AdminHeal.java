@@ -78,7 +78,6 @@ public class AdminHeal implements IAdminCommandHandler
 	
 	private void handleHeal(PlayerInstance activeChar, String player)
 	{
-		
 		WorldObject obj = activeChar.getTarget();
 		if (player != null)
 		{

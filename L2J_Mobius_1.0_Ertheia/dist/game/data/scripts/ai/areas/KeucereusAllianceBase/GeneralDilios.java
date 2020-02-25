@@ -54,7 +54,6 @@ public class GeneralDilios extends AbstractNpcAI
 	
 	public GeneralDilios()
 	{
-		
 		addSpawnId(GENERAL_ID, GUARD_ID);
 	}
 	

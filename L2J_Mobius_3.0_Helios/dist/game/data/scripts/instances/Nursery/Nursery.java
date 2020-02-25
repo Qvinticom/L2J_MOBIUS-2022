@@ -314,7 +314,6 @@ public class Nursery extends AbstractInstance
 					break;
 				}
 			}
-			
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}

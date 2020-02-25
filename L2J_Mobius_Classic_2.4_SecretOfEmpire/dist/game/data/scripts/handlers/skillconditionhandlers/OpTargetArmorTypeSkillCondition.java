@@ -26,7 +26,6 @@ public class OpTargetArmorTypeSkillCondition implements ISkillCondition
 {
 	public OpTargetArmorTypeSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

@@ -41,5 +41,4 @@ public class PlayerLogout extends ClientBasePacket
 	{
 		return _account;
 	}
-	
 }

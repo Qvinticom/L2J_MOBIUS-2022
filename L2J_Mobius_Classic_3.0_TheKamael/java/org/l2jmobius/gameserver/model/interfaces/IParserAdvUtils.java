@@ -25,7 +25,6 @@ import java.time.Duration;
  */
 public interface IParserAdvUtils extends IParserUtils
 {
-	
 	boolean getBoolean(String key);
 	
 	byte getByte(String key);

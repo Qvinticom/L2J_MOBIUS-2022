@@ -21,7 +21,6 @@ public class UnknownFunctionOrVariableException extends IllegalArgumentException
 	
 	private static String token(String expression, int position, int length)
 	{
-		
 		final int len = expression.length();
 		int end = (position + length) - 1;
 		

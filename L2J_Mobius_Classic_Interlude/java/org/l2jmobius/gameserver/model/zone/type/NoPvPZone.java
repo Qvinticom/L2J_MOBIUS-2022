@@ -59,7 +59,6 @@ public class NoPvPZone extends ZoneType
 			creature.setInsideZone(ZoneId.NO_PVP, true);
 		}
 		
-		
 		// Send player info to nearby players.
 		if (creature.isPlayer())
 		{

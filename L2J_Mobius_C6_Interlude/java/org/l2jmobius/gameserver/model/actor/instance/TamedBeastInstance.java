@@ -39,7 +39,6 @@ import org.l2jmobius.gameserver.network.serverpackets.StopMove;
  */
 public class TamedBeastInstance extends FeedableBeastInstance
 {
-	
 	private static final int MAX_DISTANCE_FROM_HOME = 30000;
 	private static final int MAX_DISTANCE_FROM_OWNER = 2000;
 	private static final int MAX_DURATION = 1200000; // 20 minutes

@@ -30,7 +30,6 @@ public class OpInSiegeTimeSkillCondition implements ISkillCondition
 {
 	public OpInSiegeTimeSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

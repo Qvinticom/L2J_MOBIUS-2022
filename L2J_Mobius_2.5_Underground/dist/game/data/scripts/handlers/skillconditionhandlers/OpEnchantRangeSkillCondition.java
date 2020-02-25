@@ -26,7 +26,6 @@ public class OpEnchantRangeSkillCondition implements ISkillCondition
 {
 	public OpEnchantRangeSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

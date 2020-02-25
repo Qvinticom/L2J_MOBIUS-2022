@@ -214,5 +214,4 @@ public class AdminPledge implements IAdminCommandHandler
 	{
 		AdminHtml.showAdminHtml(activeChar, "game_menu.htm");
 	}
-	
 }

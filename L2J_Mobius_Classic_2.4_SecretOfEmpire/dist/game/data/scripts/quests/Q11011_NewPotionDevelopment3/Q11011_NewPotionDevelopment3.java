@@ -90,7 +90,6 @@ public class Q11011_NewPotionDevelopment3 extends Quest
 				showOnScreenMsg(player, NpcStringId.GO_HUNTING_AND_KILL_RATMAN_SCAVENGERS, ExShowScreenMessage.TOP_CENTER, 10000);
 				giveItems(player, MEDICATIONS_RESEARCH, 1);
 				htmltext = event;
-				
 				break;
 			}
 			case "reward1":

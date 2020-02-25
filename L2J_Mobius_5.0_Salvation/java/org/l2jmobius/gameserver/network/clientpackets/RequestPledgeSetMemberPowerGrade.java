@@ -85,5 +85,4 @@ public class RequestPledgeSetMemberPowerGrade implements IClientIncomingPacket
 		clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(member));
 		clan.broadcastToOnlineMembers(new SystemMessage(SystemMessageId.CLAN_MEMBER_C1_S_PRIVILEGE_LEVEL_HAS_BEEN_CHANGED_TO_S2).addString(member.getName()).addInt(_powerGrade));
 	}
-	
 }

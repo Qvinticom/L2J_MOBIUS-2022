@@ -4122,7 +4122,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	// Quest event ON_SPELL_FNISHED
 	public void notifyQuestEventSkillFinished(Skill skill, WorldObject target)
 	{
-		
 	}
 	
 	/**
@@ -4673,7 +4672,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public void sendDamageMessage(Creature target, Skill skill, int damage, boolean crit, boolean miss)
 	{
-		
 	}
 	
 	public AttributeType getAttackElement()

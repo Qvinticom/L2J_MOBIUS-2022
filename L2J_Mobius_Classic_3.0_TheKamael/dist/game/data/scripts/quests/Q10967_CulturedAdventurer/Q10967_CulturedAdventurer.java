@@ -176,7 +176,6 @@ public class Q10967_CulturedAdventurer extends Quest
 	@Override
 	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
-		
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(1))
 		{

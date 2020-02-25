@@ -4230,7 +4230,6 @@ public class SevenSignsFestival implements SpawnListener
 	 */
 	private class FestivalManager implements Runnable
 	{
-		
 		/** The _festival instances. */
 		protected Map<Integer, DarknessFestival> _festivalInstances;
 		

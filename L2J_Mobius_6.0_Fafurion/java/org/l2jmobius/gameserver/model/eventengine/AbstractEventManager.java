@@ -213,7 +213,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>>extends Ab
 	 */
 	protected void onUnregisteredPlayer(PlayerInstance player)
 	{
-		
 	}
 	
 	/**
@@ -223,7 +222,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>>extends Ab
 	 */
 	protected void onStateChange(IEventState previousState, IEventState newState)
 	{
-		
 	}
 	
 	/* ********************** */

@@ -516,7 +516,6 @@ public class Q663_SeductiveWhispers extends Quest
 				{
 					htmltext = "30846-26.htm";
 				}
-				
 				break;
 		}
 		

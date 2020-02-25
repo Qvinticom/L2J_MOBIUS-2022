@@ -33,7 +33,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class SkillChargeDmg extends Skill
 {
-	
 	final int chargeSkillId;
 	
 	public SkillChargeDmg(StatSet set)

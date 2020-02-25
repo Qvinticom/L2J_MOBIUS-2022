@@ -74,7 +74,6 @@ public class AutoSpawn
 		{
 			return _registeredSpawns.size();
 		}
-		
 	}
 	
 	private void restoreSpawnData()
@@ -194,7 +193,6 @@ public class AutoSpawn
 	{
 		synchronized (_registeredSpawns)
 		{
-			
 			if (!_registeredSpawns.containsValue(spawnInst))
 			{
 				return false;
@@ -407,7 +405,6 @@ public class AutoSpawn
 		{
 			return _registeredSpawns.containsKey(objectId);
 		}
-		
 	}
 	
 	/**
@@ -421,7 +418,6 @@ public class AutoSpawn
 		{
 			return _registeredSpawns.containsValue(spawnInst);
 		}
-		
 	}
 	
 	/**

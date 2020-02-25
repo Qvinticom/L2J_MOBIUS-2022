@@ -30,7 +30,6 @@ public class OpFishingReelingSkillCondition implements ISkillCondition
 {
 	public OpFishingReelingSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

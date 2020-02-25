@@ -205,7 +205,6 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 			addKillId(i);
 			addAttackId(i);
 		}
-		
 	}
 	
 	@Override
@@ -468,7 +467,6 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 							world.allMonstersDead = false;
 							break;
 						}
-						
 					}
 					
 					if (world.allMonstersDead)
@@ -768,7 +766,6 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 					
 					for (Npc _npc : inst.getNpcs())
 					{
-						
 						if ((_npc != null) && ((_npc.getId() >= NPC_KNIGHT) && (_npc.getId() <= NPC_WARRIOR)))
 						{
 							cancelQuestTimer("check_for_foes", _npc, null);

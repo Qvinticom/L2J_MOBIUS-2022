@@ -26,7 +26,6 @@ public class OpCheckPcbangPointSkillCondition implements ISkillCondition
 {
 	public OpCheckPcbangPointSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

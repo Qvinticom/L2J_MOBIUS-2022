@@ -241,5 +241,4 @@ public class KartiaHelperGuardian extends AbstractNpcAI
 	{
 		new KartiaHelperGuardian();
 	}
-	
 }

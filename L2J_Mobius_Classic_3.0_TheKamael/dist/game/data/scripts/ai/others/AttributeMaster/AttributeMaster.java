@@ -34,7 +34,6 @@ import ai.AbstractNpcAI;
  */
 public class AttributeMaster extends AbstractNpcAI
 {
-	
 	private static final int SVEIN = 34053;
 	
 	private AttributeMaster()

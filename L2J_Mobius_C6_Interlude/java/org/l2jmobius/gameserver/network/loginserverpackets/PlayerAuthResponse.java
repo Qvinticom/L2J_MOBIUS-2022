@@ -50,5 +50,4 @@ public class PlayerAuthResponse extends LoginServerBasePacket
 	{
 		return _authed;
 	}
-	
 }

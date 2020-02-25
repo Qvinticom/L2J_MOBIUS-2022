@@ -201,7 +201,6 @@ public class Q00106_ForgottenTruth extends Quest
 							}
 							break;
 						}
-						
 					}
 				}
 				break;

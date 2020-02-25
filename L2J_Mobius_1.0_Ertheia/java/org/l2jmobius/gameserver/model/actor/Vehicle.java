@@ -378,7 +378,6 @@ public abstract class Vehicle extends Creature
 			setHeading(loc.getHeading());
 			revalidateZone(true);
 		}
-		
 	}
 	
 	@Override

@@ -196,7 +196,6 @@ public class ClanHallManagerInstance extends MerchantInstance
 				}
 				else if (val.equalsIgnoreCase("support"))
 				{
-					
 					final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 					if (getClanHall().getFunction(ClanHall.FUNC_SUPPORT) == null)
 					{

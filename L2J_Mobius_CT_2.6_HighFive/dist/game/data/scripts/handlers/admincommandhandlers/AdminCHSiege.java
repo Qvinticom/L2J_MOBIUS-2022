@@ -177,7 +177,6 @@ public class AdminCHSiege implements IAdminCommandHandler
 							}
 						}
 					}
-					
 				}
 			}
 		}

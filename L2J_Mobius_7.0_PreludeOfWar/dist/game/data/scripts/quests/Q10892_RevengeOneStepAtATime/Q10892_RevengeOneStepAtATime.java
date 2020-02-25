@@ -168,7 +168,6 @@ public class Q10892_RevengeOneStepAtATime extends Quest
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(1))
 		{
-			
 			int killedMonsters = qs.getInt("killed_" + MONSTERS[0]);
 			int killedGuardian = qs.getInt("killed_" + GUARDIAN[0]);
 			

@@ -163,7 +163,6 @@ public class DarkElfChange2 extends AbstractNpcAI
 					{
 						htmltext = "30474-56.html";
 					}
-					
 				}
 			}
 		}

@@ -2646,7 +2646,6 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean isCastleLord(int castleId)
 	{
-		
 		// player has clan and is the clan leader, check the castle info
 		if ((_clan != null) && (_clan.getLeader().getPlayerInstance() == this))
 		{

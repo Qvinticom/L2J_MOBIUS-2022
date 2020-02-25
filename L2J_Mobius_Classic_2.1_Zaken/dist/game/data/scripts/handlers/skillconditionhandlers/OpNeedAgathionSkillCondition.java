@@ -29,7 +29,6 @@ public class OpNeedAgathionSkillCondition implements ISkillCondition
 {
 	public OpNeedAgathionSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

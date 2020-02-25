@@ -61,5 +61,4 @@ public class RequestPartyMatchDetail implements IClientIncomingPacket
 			room.addMember(player);
 		}
 	}
-	
 }

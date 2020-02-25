@@ -123,7 +123,6 @@ public class SiegeManager
 	
 	public boolean checkIsRegisteredInSiege(Clan clan)
 	{
-		
 		for (Castle castle : CastleManager.getInstance().getCastles())
 		{
 			if (checkIsRegistered(clan, castle.getCastleId()) && (castle.getSiege() != null) && castle.getSiege().isInProgress())
@@ -280,7 +279,6 @@ public class SiegeManager
 		}
 		finally
 		{
-			
 			if (is != null)
 			{
 				try

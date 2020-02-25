@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ManagePledgePower implements IClientOutgoingPacket
 {
-	
 	private final int _action;
 	private final Clan _clan;
 	private final int _rank;

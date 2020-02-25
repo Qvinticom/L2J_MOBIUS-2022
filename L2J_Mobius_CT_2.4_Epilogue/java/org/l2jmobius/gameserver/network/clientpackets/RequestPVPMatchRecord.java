@@ -33,6 +33,5 @@ public class RequestPVPMatchRecord implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		
 	}
 }

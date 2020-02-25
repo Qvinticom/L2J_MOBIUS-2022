@@ -30,7 +30,6 @@ public class OpFishingPumpingSkillCondition implements ISkillCondition
 {
 	public OpFishingPumpingSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

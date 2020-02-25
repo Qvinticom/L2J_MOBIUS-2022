@@ -189,5 +189,4 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 			return _count * _price;
 		}
 	}
-	
 }

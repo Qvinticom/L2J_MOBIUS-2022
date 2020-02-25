@@ -58,5 +58,4 @@ public class RequestPartyLootModification implements IClientIncomingPacket
 		}
 		party.requestLootChange(partyDistributionType);
 	}
-	
 }

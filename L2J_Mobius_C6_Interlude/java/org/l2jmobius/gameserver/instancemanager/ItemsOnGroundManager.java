@@ -229,7 +229,6 @@ public class ItemsOnGroundManager
 			
 			for (ItemInstance item : _items)
 			{
-				
 				if (CursedWeaponsManager.getInstance().isCursed(item.getItemId()))
 				{
 					continue; // Cursed Items not saved to ground, prevent double save

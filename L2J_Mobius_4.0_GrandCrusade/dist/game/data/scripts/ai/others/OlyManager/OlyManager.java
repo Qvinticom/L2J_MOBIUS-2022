@@ -163,7 +163,6 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 				{
 					OlympiadManager.getInstance().registerNoble(player, CompetitionType.CLASSED);
 				}
-				
 				break;
 			}
 			case "unregister":

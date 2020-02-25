@@ -49,5 +49,4 @@ public class AuthResponse extends LoginServerBasePacket
 	{
 		return _serverName;
 	}
-	
 }

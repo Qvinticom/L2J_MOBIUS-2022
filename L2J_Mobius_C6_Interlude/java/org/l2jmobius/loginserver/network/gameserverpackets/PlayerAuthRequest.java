@@ -59,5 +59,4 @@ public class PlayerAuthRequest extends ClientBasePacket
 	{
 		return _sessionKey;
 	}
-	
 }

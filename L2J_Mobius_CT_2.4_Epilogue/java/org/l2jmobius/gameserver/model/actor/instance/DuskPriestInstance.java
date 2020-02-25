@@ -150,5 +150,4 @@ public class DuskPriestInstance extends SignsPriestInstance
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		player.sendPacket(html);
 	}
-	
 }

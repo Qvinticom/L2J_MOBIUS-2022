@@ -247,7 +247,6 @@ public class SubClassSkills extends AbstractNpcAI
 						{
 							Util.handleIllegalPlayerAction(player, "Invalid cert variable:" + qName + "=" + qValue + " - no cert item found in inventory", IllegalActionPunishmentType.NONE);
 						}
-						
 					}
 					catch (NumberFormatException e)
 					{

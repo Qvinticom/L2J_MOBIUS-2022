@@ -112,7 +112,6 @@ public class RequestGMCommand implements IClientIncomingPacket
 				}
 				break;
 			}
-			
 		}
 	}
 }

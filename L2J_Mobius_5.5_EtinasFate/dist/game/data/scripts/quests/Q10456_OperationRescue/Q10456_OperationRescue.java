@@ -131,7 +131,6 @@ public class Q10456_OperationRescue extends Quest
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			}
-			
 		}
 		return htmltext;
 	}

@@ -26,7 +26,6 @@ public class CanChangeVitalItemCountSkillCondition implements ISkillCondition
 {
 	public CanChangeVitalItemCountSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

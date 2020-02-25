@@ -77,7 +77,6 @@ public class MaxHp extends AbstractEffect
 			{
 				case DIFF:
 				{
-					
 					charStat.getActiveChar().addStatFunc(new FuncAdd(Stat.MAX_HP, 1, this, _power, null));
 					if (_heal)
 					{
@@ -126,5 +125,4 @@ public class MaxHp extends AbstractEffect
 			charStat.getActiveChar().removeStatsOwner(this);
 		}
 	}
-	
 }

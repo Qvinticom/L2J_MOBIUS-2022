@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.skills.Env;
  */
 public class EffectPsychicalMute extends Effect
 {
-	
 	public EffectPsychicalMute(Env env, EffectTemplate template)
 	{
 		super(env, template);

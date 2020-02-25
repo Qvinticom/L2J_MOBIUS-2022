@@ -91,5 +91,4 @@ public class RequestPledgeReorganizeMember implements IClientIncomingPacket
 		member2.setPledgeType(oldPledgeType);
 		clan.broadcastClanStatus();
 	}
-	
 }

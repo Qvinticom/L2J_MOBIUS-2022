@@ -33,7 +33,6 @@ public class ExShowFortressInfo implements IClientOutgoingPacket
 	
 	private ExShowFortressInfo()
 	{
-		
 	}
 	
 	@Override

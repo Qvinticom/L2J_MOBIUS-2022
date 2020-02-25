@@ -500,7 +500,6 @@ public class Q00330_AdeptOfTaste extends Quest
 								giveItems(killer, BODY_OF_MONSTER_EYE, 3);
 								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 							}
-							
 						}
 					}
 					break;
@@ -534,7 +533,6 @@ public class Q00330_AdeptOfTaste extends Quest
 								giveItems(killer, BODY_OF_MONSTER_EYE, 2);
 								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 							}
-							
 						}
 					}
 					break;

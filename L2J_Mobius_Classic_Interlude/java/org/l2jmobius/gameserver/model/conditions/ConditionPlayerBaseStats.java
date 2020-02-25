@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerBaseStats extends Condition
 {
-	
 	private final BaseStat _stat;
 	private final int _value;
 	

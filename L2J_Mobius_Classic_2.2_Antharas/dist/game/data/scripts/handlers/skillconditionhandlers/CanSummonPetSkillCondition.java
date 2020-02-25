@@ -35,7 +35,6 @@ public class CanSummonPetSkillCondition implements ISkillCondition
 {
 	public CanSummonPetSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

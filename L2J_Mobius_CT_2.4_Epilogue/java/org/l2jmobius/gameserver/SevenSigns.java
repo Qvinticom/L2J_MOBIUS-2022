@@ -873,7 +873,6 @@ public class SevenSigns
 			try (Statement s = con.createStatement();
 				ResultSet rs = s.executeQuery(LOAD_STATUS))
 			{
-				
 				while (rs.next())
 				{
 					_currentCycle = rs.getInt("current_cycle");

@@ -346,7 +346,6 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 				{
 					LOGGER.info("[Seed of Destruction] Missing zone: " + spw.zone);
 				}
-				
 			}
 			else
 			{

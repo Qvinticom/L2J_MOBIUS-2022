@@ -195,5 +195,4 @@ public class EffectSignetMDam extends Effect
 			_actor.deleteMe();
 		}
 	}
-	
 }

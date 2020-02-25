@@ -47,7 +47,6 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 	
 	public ExEnchantSkillInfoDetail(int type, int skillid, int skilllvl, PlayerInstance ply)
 	{
-		
 		final EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(skillid);
 		EnchantSkillHolder esd = null;
 		// do we have this skill?

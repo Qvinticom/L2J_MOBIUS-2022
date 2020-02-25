@@ -284,7 +284,6 @@ public class Q00218_TestimonyOfLife extends Quest
 						giveItems(killer, HARPYS_DOWN, 4);
 						if (getQuestItemsCount(killer, HARPYS_DOWN) == 20)
 						{
-							
 							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							if (getQuestItemsCount(killer, SPIDER_ICHOR) >= 20)
 							{

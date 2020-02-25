@@ -509,7 +509,6 @@ public class PailakaInjuredDragon extends AbstractInstance
 						npc.getVariables().set("creatureSeen", true);
 					}
 				}
-				
 			}
 		}
 	}

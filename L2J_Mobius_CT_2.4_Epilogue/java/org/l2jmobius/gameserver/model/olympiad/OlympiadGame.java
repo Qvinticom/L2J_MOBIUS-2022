@@ -697,7 +697,6 @@ class OlympiadGame
 				{
 					LOGGER.log(Level.WARNING, "Exception on validateWinnder(): " + e.getMessage(), e);
 				}
-				
 			}
 			else if (_pTwoCrash && !_pOneCrash)
 			{

@@ -79,7 +79,6 @@ public class AdminDMEngine implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
-			
 		}
 		else if (command.startsWith("admin_dmevent_minlvl "))
 		{

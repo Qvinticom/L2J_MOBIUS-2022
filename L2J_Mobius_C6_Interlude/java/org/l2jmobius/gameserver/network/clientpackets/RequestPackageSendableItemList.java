@@ -37,7 +37,6 @@ public class RequestPackageSendableItemList extends GameClientPacket
 	@Override
 	public void runImpl()
 	{
-		
 		final PlayerInstance player = getClient().getPlayer();
 		
 		if (player == null)

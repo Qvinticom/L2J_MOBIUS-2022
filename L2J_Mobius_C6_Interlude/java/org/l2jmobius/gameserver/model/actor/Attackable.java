@@ -141,7 +141,6 @@ public class Attackable extends NpcInstance
 		{
 			return _attacker.getObjectId();
 		}
-		
 	}
 	
 	/**
@@ -1347,7 +1346,6 @@ public class Attackable extends NpcInstance
 					dropChance *= Config.DONATOR_ADENA_RATE;
 				}
 			}
-			
 		}
 		else if (isSweep)
 		{
@@ -3153,7 +3151,6 @@ public class Attackable extends NpcInstance
 					break;
 				}
 			}
-			
 		}
 		
 		final int diff = getLevel() - (ManorSeedData.getInstance().getSeedLevel(_seedType) - 5);

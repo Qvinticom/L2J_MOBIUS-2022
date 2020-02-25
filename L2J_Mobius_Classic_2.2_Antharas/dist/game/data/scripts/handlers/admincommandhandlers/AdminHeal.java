@@ -42,7 +42,6 @@ public class AdminHeal implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
-		
 		if (command.equals("admin_heal"))
 		{
 			handleHeal(activeChar);
@@ -79,7 +78,6 @@ public class AdminHeal implements IAdminCommandHandler
 	
 	private void handleHeal(PlayerInstance activeChar, String player)
 	{
-		
 		WorldObject obj = activeChar.getTarget();
 		if (player != null)
 		{

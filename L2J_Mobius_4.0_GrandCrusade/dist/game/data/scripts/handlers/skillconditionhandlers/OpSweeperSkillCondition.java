@@ -33,7 +33,6 @@ public class OpSweeperSkillCondition implements ISkillCondition
 {
 	public OpSweeperSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

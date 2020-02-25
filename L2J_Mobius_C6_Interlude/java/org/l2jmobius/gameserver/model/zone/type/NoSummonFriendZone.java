@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.model.zone.ZoneType;
  */
 public class NoSummonFriendZone extends ZoneType
 {
-	
 	public NoSummonFriendZone(int id)
 	{
 		super(id);

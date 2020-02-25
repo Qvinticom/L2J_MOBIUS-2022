@@ -178,7 +178,6 @@ public class PlayerStat extends PlayableStat
 			final ClassMasterInstance masterInstance = ClassMasterInstance.getInstance();
 			if (masterInstance != null)
 			{
-				
 				final int curLevel = getActiveChar().getClassId().level();
 				if ((getLevel() >= 20) && (curLevel == 0))
 				{
@@ -442,7 +441,6 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public void setSp(int value)
 	{
-		
 		final PlayerInstance player = getActiveChar();
 		if (player.isSubClassActive())
 		{

@@ -39,7 +39,6 @@ public class AdminInvul implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
-		
 		if (command.equals("admin_invul"))
 		{
 			handleInvul(activeChar);

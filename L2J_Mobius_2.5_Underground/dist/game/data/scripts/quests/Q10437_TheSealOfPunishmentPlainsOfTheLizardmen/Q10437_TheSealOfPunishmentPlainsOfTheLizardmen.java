@@ -156,7 +156,6 @@ public class Q10437_TheSealOfPunishmentPlainsOfTheLizardmen extends Quest
 		
 		switch (qs.getState())
 		{
-			
 			case State.CREATED:
 			{
 				if (npc.getId() == LAKI)

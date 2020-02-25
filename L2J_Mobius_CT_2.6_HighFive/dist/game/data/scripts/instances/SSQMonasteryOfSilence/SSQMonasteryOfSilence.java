@@ -507,7 +507,6 @@ public class SSQMonasteryOfSilence extends AbstractInstance
 					break;
 				}
 			}
-			
 		}
 		return null;
 	}

@@ -106,5 +106,4 @@ public class RequestSetSeed implements IClientIncomingPacket
 		// Save new list
 		manor.setNextSeedProduction(list, _manorId);
 	}
-	
 }

@@ -26,7 +26,6 @@ public class CanAddMaxEntranceInzoneSkillCondition implements ISkillCondition
 {
 	public CanAddMaxEntranceInzoneSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

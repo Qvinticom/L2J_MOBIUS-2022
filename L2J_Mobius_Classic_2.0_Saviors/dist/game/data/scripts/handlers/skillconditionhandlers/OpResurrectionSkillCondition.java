@@ -33,7 +33,6 @@ public class OpResurrectionSkillCondition implements ISkillCondition
 {
 	public OpResurrectionSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

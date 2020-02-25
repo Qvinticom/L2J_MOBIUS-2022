@@ -98,7 +98,6 @@ public class SummonEffectTable
 	{
 		if (containsOwner(owner))
 		{
-			
 			getServitorEffects(owner).getOrDefault(referenceSkill, Collections.emptyList()).clear();
 		}
 	}

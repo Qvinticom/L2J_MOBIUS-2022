@@ -42,7 +42,6 @@ public class Fear extends AbstractEffect
 	
 	public Fear(StatSet params)
 	{
-		
 	}
 	
 	@Override

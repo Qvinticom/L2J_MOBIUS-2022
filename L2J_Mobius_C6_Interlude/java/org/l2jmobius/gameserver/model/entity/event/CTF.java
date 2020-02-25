@@ -2351,7 +2351,6 @@ public class CTF implements EventTask
 					}
 					else if (teamName == null)
 					{
-						
 						int minusReward = 0;
 						if (_topScore != 0)
 						{

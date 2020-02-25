@@ -480,7 +480,6 @@ public class NornilsGarden extends AbstractInstance
 					{
 						spawn4(creature);
 					}
-					
 				}
 			}
 		}

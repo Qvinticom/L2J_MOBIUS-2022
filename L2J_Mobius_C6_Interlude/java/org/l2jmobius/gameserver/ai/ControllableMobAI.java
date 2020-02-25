@@ -565,5 +565,4 @@ public class ControllableMobAI extends AttackableAI
 	{
 		_targetGroup = targetGroup;
 	}
-	
 }

@@ -97,7 +97,6 @@ public class MultisellData implements IXmlReader
 					{
 						try
 						{
-							
 							list.setUseRate(Double.parseDouble(att.getNodeValue()));
 							if (list.getUseRate() <= 1e-6)
 							{
@@ -106,7 +105,6 @@ public class MultisellData implements IXmlReader
 						}
 						catch (NumberFormatException e)
 						{
-							
 							try
 							{
 								list.setUseRate(Config.class.getField(att.getNodeValue()).getDouble(Config.class));
@@ -116,7 +114,6 @@ public class MultisellData implements IXmlReader
 								LOGGER.warning(e1.getMessage() + doc.getLocalName());
 								list.setUseRate(1.0);
 							}
-							
 						}
 						catch (DOMException e)
 						{

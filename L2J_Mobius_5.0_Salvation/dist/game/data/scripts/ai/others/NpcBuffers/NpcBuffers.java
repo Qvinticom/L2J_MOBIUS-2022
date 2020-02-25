@@ -31,7 +31,6 @@ public class NpcBuffers extends AbstractNpcAI
 	
 	private NpcBuffers()
 	{
-		
 		for (int npcId : _npcBuffers.getNpcBufferIds())
 		{
 			// TODO: Cleanup once npc rework is finished and default html is configurable.

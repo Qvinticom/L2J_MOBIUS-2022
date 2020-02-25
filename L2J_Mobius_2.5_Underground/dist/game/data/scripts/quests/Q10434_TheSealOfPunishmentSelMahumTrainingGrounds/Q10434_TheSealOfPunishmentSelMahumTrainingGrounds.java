@@ -164,7 +164,6 @@ public class Q10434_TheSealOfPunishmentSelMahumTrainingGrounds extends Quest
 		
 		switch (qs.getState())
 		{
-			
 			case State.CREATED:
 			{
 				if (npc.getId() == RUA)

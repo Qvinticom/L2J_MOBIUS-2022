@@ -274,7 +274,6 @@ public class Tokenizer
 						argc = 1;
 					}
 				}
-				
 			}
 			op = Operators.getBuiltinOperator(symbol.charAt(0), argc);
 		}

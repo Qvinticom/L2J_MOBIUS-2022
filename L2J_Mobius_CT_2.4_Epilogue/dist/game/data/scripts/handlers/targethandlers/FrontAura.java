@@ -42,7 +42,6 @@ public class FrontAura implements ITargetTypeHandler
 		{
 			if (obj.isAttackable() || obj.isPlayable())
 			{
-				
 				if (!obj.isInFrontOf(creature))
 				{
 					continue;

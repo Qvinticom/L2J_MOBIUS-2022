@@ -974,7 +974,6 @@ public class Duel
 				{
 					temp.setDuelState(DUELSTATE_WINNER);
 				}
-				
 			}
 		}
 		else if (player == _playerA)

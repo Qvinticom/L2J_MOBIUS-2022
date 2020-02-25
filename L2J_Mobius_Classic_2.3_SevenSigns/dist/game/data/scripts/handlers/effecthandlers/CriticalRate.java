@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.model.stats.Stat;
  */
 public class CriticalRate extends AbstractConditionalHpEffect
 {
-	
 	public CriticalRate(StatSet params)
 	{
 		super(params, Stat.CRITICAL_RATE);

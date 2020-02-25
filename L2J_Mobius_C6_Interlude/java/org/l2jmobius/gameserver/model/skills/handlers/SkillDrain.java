@@ -31,7 +31,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class SkillDrain extends Skill
 {
-	
 	private final float _absorbPart;
 	private final int _absorbAbs;
 	

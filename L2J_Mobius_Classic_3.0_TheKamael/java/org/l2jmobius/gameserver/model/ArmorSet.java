@@ -246,7 +246,6 @@ public class ArmorSet
 		{
 			case 1:
 			{
-				
 				for (int artifactSlot : ARTIFACT_1_SLOTS)
 				{
 					final ItemInstance itemPart = inv.getPaperdollItem(artifactSlot);

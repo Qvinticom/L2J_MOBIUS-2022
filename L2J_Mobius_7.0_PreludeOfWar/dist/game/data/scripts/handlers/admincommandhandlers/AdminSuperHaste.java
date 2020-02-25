@@ -70,7 +70,6 @@ public class AdminSuperHaste implements IAdminCommandHandler
 				{
 					player.sendMessage("Usage: //superhaste <Effect level (0-4)> <Time in seconds>");
 				}
-				
 				break;
 			}
 			case "admin_superhaste_menu":

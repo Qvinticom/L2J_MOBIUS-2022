@@ -26,7 +26,6 @@ public class TargetItemCrystalTypeSkillCondition implements ISkillCondition
 {
 	public TargetItemCrystalTypeSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

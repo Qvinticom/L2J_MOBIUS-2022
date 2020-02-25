@@ -30,7 +30,6 @@ public class OpSiegeHammerSkillCondition implements ISkillCondition
 {
 	public OpSiegeHammerSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

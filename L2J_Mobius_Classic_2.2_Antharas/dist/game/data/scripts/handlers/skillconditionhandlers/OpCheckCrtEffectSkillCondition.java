@@ -28,10 +28,8 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class OpCheckCrtEffectSkillCondition implements ISkillCondition
 {
-	
 	public OpCheckCrtEffectSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

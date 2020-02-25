@@ -70,5 +70,4 @@ public class ExCuriousHouseMemberList implements IClientOutgoingPacket
 		}
 		return true;
 	}
-	
 }

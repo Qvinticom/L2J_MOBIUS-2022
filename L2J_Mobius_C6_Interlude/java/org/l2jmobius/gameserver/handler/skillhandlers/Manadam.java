@@ -123,7 +123,6 @@ public class Manadam implements ISkillHandler
 		{
 			creature.removeSps();
 		}
-		
 	}
 	
 	@Override

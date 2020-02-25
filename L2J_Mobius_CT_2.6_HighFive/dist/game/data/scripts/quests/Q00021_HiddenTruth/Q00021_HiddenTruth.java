@@ -364,7 +364,6 @@ public class Q00021_HiddenTruth extends Quest
 			{
 				if (hasQuestItems(player, CROSS_OF_EINHASAD) && qs.isCond(6))
 				{
-					
 					qs.set("BENEDICT", "1");
 					if ((qs.getInt("AGRIPEL") == 1) && (qs.getInt("DOMINIC") == 1) && (qs.getInt("BENEDICT") == 1))
 					{

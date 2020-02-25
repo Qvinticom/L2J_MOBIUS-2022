@@ -510,7 +510,6 @@ public class Q00334_TheWishingPotion extends Quest
 						{
 							if (qs.getInt(EXCHANGE) == 0)
 							{
-								
 								takeItems(player, Q_WISH_POTION, 1);
 								qs.set(I_QUEST0, 1);
 								qs.set(FLAG, 1);
@@ -527,7 +526,6 @@ public class Q00334_TheWishingPotion extends Quest
 						{
 							if (qs.getInt(EXCHANGE) == 0)
 							{
-								
 								takeItems(player, Q_WISH_POTION, 1);
 								qs.set(I_QUEST0, 2);
 								qs.set(FLAG, 2);
@@ -544,7 +542,6 @@ public class Q00334_TheWishingPotion extends Quest
 						{
 							if (qs.getInt(EXCHANGE) == 0)
 							{
-								
 								takeItems(player, Q_WISH_POTION, 1);
 								qs.set(I_QUEST0, 3);
 								qs.set(FLAG, 3);
@@ -561,7 +558,6 @@ public class Q00334_TheWishingPotion extends Quest
 						{
 							if (qs.getInt(EXCHANGE) == 0)
 							{
-								
 								takeItems(player, Q_WISH_POTION, 1);
 								qs.set(I_QUEST0, 4);
 								qs.set(FLAG, 4);
@@ -1026,7 +1022,6 @@ public class Q00334_TheWishingPotion extends Quest
 					break;
 				}
 			}
-			
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -1046,7 +1041,6 @@ public class Q00334_TheWishingPotion extends Quest
 		{
 			player.getParty().getMembers().stream().forEach(pm ->
 			{
-				
 				final QuestState qss = pm.getQuestState(getName());
 				if ((qss != null) && qss.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, pm, true))
 				{

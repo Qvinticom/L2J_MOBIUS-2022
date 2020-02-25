@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerWeight extends Condition
 {
-	
 	private final int _weight;
 	
 	/**

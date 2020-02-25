@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.skills.Env;
 
 public class EffectSilenceMagicPhysical extends Effect
 {
-	
 	public EffectSilenceMagicPhysical(Env env, EffectTemplate template)
 	{
 		super(env, template);

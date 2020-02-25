@@ -163,5 +163,4 @@ public class ConditionSiegeZone extends Condition
 		
 		return false;
 	}
-	
 }

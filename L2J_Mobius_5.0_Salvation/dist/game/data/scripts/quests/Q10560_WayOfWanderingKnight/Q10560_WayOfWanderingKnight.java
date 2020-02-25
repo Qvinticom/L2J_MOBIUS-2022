@@ -296,5 +296,4 @@ public class Q10560_WayOfWanderingKnight extends Quest
 		
 		return null;
 	}
-	
 }

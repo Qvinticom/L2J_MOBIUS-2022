@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.elementalspirits.Elemental
  */
 public class ExElementalSpiritExtractInfo implements IClientIncomingPacket
 {
-	
 	private byte _type;
 	
 	@Override

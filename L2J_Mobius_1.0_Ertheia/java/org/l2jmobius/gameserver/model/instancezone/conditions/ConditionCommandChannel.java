@@ -28,7 +28,6 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class ConditionCommandChannel extends Condition
 {
-	
 	public ConditionCommandChannel(InstanceTemplate template, StatSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
 	{
 		super(template, parameters, true, showMessageAndHtml);

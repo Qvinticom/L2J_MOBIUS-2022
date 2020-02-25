@@ -48,7 +48,6 @@ public class OlympiadLogger
 		}
 		finally
 		{
-			
 			if (save != null)
 			{
 				try

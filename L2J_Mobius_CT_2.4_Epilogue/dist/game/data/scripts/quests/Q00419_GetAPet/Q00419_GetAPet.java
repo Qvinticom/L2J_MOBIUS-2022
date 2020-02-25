@@ -763,7 +763,6 @@ public class Q00419_GetAPet extends Quest
 							qs.setMemoState(1879048192);
 							htmltext = "30731-13.html";
 						}
-						
 					}
 					break;
 				}

@@ -89,22 +89,18 @@ public abstract class AbstractEffect
 	
 	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
-		
 	}
 	
 	public void continuousInstant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
-		
 	}
 	
 	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
-		
 	}
 	
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		
 	}
 	
 	/**
@@ -161,7 +157,6 @@ public abstract class AbstractEffect
 	 */
 	public void pump(Creature effected, Skill skill)
 	{
-		
 	}
 	
 	/**

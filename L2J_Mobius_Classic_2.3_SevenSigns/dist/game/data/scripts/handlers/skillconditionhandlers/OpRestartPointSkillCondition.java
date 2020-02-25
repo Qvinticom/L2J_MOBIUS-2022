@@ -26,7 +26,6 @@ public class OpRestartPointSkillCondition implements ISkillCondition
 {
 	public OpRestartPointSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

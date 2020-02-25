@@ -150,7 +150,6 @@ public class ItemSkillsTemplate implements IItemHandler
 	 */
 	private boolean checkConsume(ItemInstance item, boolean hasConsumeSkill)
 	{
-		
 		switch (item.getItem().getDefaultAction())
 		{
 			case CAPSULE:

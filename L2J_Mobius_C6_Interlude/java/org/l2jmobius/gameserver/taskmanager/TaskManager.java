@@ -167,7 +167,6 @@ public class TaskManager
 			
 			_currentTasks.remove(this);
 		}
-		
 	}
 	
 	private TaskManager()
@@ -224,7 +223,6 @@ public class TaskManager
 						_currentTasks.add(current);
 					}
 				}
-				
 			}
 			
 			rset.close();

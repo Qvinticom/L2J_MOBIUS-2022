@@ -1017,5 +1017,4 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 		}
 		_accessor.detachAI();
 	}
-	
 }

@@ -171,7 +171,6 @@ public class Q00466_PlacingMySmallPower extends Quest
 					}
 					case NOETI_MIMILEAD:
 					{
-						
 						switch (qs.getCond())
 						{
 							case 1:

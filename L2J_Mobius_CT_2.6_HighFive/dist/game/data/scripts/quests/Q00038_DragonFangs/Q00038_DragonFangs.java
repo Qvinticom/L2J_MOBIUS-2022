@@ -96,7 +96,6 @@ public class Q00038_DragonFangs extends Quest
 						htmltext = "30386-07.html";
 					}
 				}
-				
 				break;
 			}
 			case "30034-02.html":

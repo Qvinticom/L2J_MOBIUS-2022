@@ -60,5 +60,4 @@ public class BigheadZone extends ZoneType
 	{
 		onEnter(creature);
 	}
-	
 }

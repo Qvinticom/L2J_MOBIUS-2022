@@ -104,6 +104,6 @@ public class RequestExSetPledgeCrestLarge implements IClientIncomingPacket
 				player.sendPacket(SystemMessageId.THE_CLAN_CREST_WAS_SUCCESSFULLY_REGISTERED_REMEMBER_ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_CASTLE_CAN_DISPLAY_A_CREST);
 			}
 		}
-		
 	}
+	
 }

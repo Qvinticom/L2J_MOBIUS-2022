@@ -43,7 +43,6 @@ public abstract class GameServerPacket extends SendablePacket<GameClient>
 	
 	public void runImpl()
 	{
-		
 	}
 	
 	protected abstract void writeImpl();

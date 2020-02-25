@@ -283,7 +283,6 @@ public class Multisell
 				hash.add(f);
 			}
 		}
-		
 	}
 	
 	private void parse()
@@ -300,7 +299,6 @@ public class Multisell
 			id = Integer.parseInt(f.getName().replaceAll(".xml", ""));
 			try
 			{
-				
 				final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 				factory.setValidating(false);
 				factory.setIgnoringComments(true);
@@ -453,13 +451,11 @@ public class Multisell
 				int totalProductReferencePrice = 0;
 				for (MultiSellIngredient product : entry.getProducts())
 				{
-					
 					totalProductReferencePrice += (ItemTable.getInstance().getTemplate(product.getItemId()).getReferencePrice() * product.getItemCount());
 				}
 				
 				if (entry.getIngredients().get(0).getItemCount() < (totalProductReferencePrice / 2))
 				{
-					
 					LOGGER.warning("Multisell " + container.getListId() + " entryId  " + entry.getEntryId() + " has an ADENA price less then total products reference price.. Automatically Updating it..");
 					entry.getIngredients().get(0).setItemCount(totalProductReferencePrice);
 				}

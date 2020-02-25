@@ -256,7 +256,6 @@ public class ClanBoard implements IWriteBoardHandler
 				html.append(i);
 				html.append(" </a></td>");
 			}
-			
 		}
 		if (index == nbp)
 		{

@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerActiveEffectId extends Condition
 {
-	
 	private final int _effectId;
 	private final int _effectLvl;
 	

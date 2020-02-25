@@ -201,7 +201,6 @@ public class Q104_SpiritOfMirrors extends Quest
 		
 		if (player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND) == GALLINS_OAK_WAND)
 		{
-			
 			switch (npc.getNpcId())
 			{
 				case 27003:

@@ -155,7 +155,6 @@ public class Q10851_ElvenBotany extends Quest
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			}
-			
 		}
 		return htmltext;
 	}

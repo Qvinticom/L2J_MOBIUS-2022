@@ -26,7 +26,6 @@ public class OpUseFirecrackerSkillCondition implements ISkillCondition
 {
 	public OpUseFirecrackerSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

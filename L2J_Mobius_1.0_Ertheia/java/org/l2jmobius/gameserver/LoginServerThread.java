@@ -588,7 +588,6 @@ public class LoginServerThread extends Thread
 	 */
 	private void getCharsOnServer(String account)
 	{
-		
 		int chars = 0;
 		final List<Long> charToDel = new ArrayList<>();
 		try (Connection con = DatabaseFactory.getConnection();

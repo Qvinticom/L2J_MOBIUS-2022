@@ -242,7 +242,6 @@ public class Q00175_TheWayOfTheWarrior extends Quest
 					htmltext = getAlreadyCompletedMsg(player);
 					break;
 				}
-				
 				break;
 			}
 			case PERWAN:

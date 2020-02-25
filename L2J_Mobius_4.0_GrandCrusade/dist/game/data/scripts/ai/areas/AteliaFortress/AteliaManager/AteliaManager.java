@@ -290,7 +290,6 @@ public class AteliaManager extends AbstractNpcAI
 			-2048,
 			0
 		}
-		
 	};
 	// Infusers
 	private static final int INFUSER_1 = 23537;
@@ -621,7 +620,6 @@ public class AteliaManager extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		
 		if ((npc.getZ() <= -2804) && (npc.getZ() >= -2999) && (npc.getId() == INFUSER_1))
 		{
 			startQuestTimer("SH_1", 100, null, null);

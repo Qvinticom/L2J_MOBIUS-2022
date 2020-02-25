@@ -26,7 +26,6 @@ public class CanTransformInDominionSkillCondition implements ISkillCondition
 {
 	public CanTransformInDominionSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

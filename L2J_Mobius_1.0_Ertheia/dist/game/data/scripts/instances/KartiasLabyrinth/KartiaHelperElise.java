@@ -230,7 +230,6 @@ public class KartiaHelperElise extends AbstractNpcAI
 				}
 			}
 		}
-		
 	}
 	
 	public void onInstanceStatusChange(OnInstanceStatusChange event)

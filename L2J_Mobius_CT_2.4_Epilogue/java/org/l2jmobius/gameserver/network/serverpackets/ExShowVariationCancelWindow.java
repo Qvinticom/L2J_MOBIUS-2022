@@ -28,7 +28,6 @@ public class ExShowVariationCancelWindow implements IClientOutgoingPacket
 	
 	private ExShowVariationCancelWindow()
 	{
-		
 	}
 	
 	@Override

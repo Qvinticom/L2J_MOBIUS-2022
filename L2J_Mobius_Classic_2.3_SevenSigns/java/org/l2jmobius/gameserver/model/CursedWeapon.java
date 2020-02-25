@@ -376,7 +376,6 @@ public class CursedWeapon implements INamable
 		{
 			_removeTask = ThreadPool.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000, _durationLost * 12000);
 		}
-		
 	}
 	
 	public boolean checkDrop(Attackable attackable, PlayerInstance player)

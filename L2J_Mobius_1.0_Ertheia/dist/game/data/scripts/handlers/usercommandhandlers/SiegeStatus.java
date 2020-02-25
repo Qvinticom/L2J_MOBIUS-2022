@@ -96,5 +96,4 @@ public class SiegeStatus implements IUserCommandHandler
 	{
 		return COMMAND_IDS;
 	}
-	
 }

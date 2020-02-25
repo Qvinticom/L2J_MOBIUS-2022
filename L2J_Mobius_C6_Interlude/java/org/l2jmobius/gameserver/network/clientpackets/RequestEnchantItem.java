@@ -368,7 +368,6 @@ public class RequestEnchantItem extends GameClientPacket
 		{
 			if (blessedScroll)
 			{
-				
 				for (int blessedweaponscroll : BLESSED_WEAPON_SCROLLS)
 				{
 					if (scroll.getItemId() == blessedweaponscroll)
@@ -386,15 +385,12 @@ public class RequestEnchantItem extends GameClientPacket
 							chance = Config.BLESS_WEAPON_ENCHANT_LEVEL.get(item.getEnchantLevel() + 1);
 						}
 						maxEnchantLevel = Config.ENCHANT_WEAPON_MAX;
-						
 						break;
 					}
 				}
-				
 			}
 			else if (crystalScroll)
 			{
-				
 				for (int crystalweaponscroll : CRYSTAL_WEAPON_SCROLLS)
 				{
 					if (scroll.getItemId() == crystalweaponscroll)
@@ -409,12 +405,10 @@ public class RequestEnchantItem extends GameClientPacket
 						}
 						minEnchantLevel = Config.CRYSTAL_ENCHANT_MIN;
 						maxEnchantLevel = Config.CRYSTAL_ENCHANT_MAX;
-						
 						break;
 						
 					}
 				}
-				
 			}
 			else
 			{ // normal scrolls
@@ -432,19 +426,15 @@ public class RequestEnchantItem extends GameClientPacket
 							chance = Config.NORMAL_WEAPON_ENCHANT_LEVEL.get(item.getEnchantLevel() + 1);
 						}
 						maxEnchantLevel = Config.ENCHANT_WEAPON_MAX;
-						
 						break;
 					}
 				}
-				
 			}
-			
 		}
 		else if (item.getItem().getType2() == Item.TYPE2_SHIELD_ARMOR)
 		{
 			if (blessedScroll)
 			{
-				
 				for (int blessedarmorscroll : BLESSED_ARMOR_SCROLLS)
 				{
 					if (scroll.getItemId() == blessedarmorscroll)
@@ -458,15 +448,12 @@ public class RequestEnchantItem extends GameClientPacket
 							chance = Config.BLESS_ARMOR_ENCHANT_LEVEL.get(item.getEnchantLevel() + 1);
 						}
 						maxEnchantLevel = Config.ENCHANT_ARMOR_MAX;
-						
 						break;
 					}
 				}
-				
 			}
 			else if (crystalScroll)
 			{
-				
 				for (int crystalarmorscroll : CRYSTAL_ARMOR_SCROLLS)
 				{
 					if (scroll.getItemId() == crystalarmorscroll)
@@ -481,11 +468,9 @@ public class RequestEnchantItem extends GameClientPacket
 						}
 						minEnchantLevel = Config.CRYSTAL_ENCHANT_MIN;
 						maxEnchantLevel = Config.CRYSTAL_ENCHANT_MAX;
-						
 						break;
 					}
 				}
-				
 			}
 			else
 			{ // normal scrolls
@@ -503,19 +488,15 @@ public class RequestEnchantItem extends GameClientPacket
 							chance = Config.NORMAL_ARMOR_ENCHANT_LEVEL.get(item.getEnchantLevel() + 1);
 						}
 						maxEnchantLevel = Config.ENCHANT_ARMOR_MAX;
-						
 						break;
 					}
 				}
-				
 			}
-			
 		}
 		else if (item.getItem().getType2() == Item.TYPE2_ACCESSORY)
 		{
 			if (blessedScroll)
 			{
-				
 				for (int blessedjewelscroll : BLESSED_ARMOR_SCROLLS)
 				{
 					if (scroll.getItemId() == blessedjewelscroll)
@@ -529,15 +510,12 @@ public class RequestEnchantItem extends GameClientPacket
 							chance = Config.BLESS_JEWELRY_ENCHANT_LEVEL.get(item.getEnchantLevel() + 1);
 						}
 						maxEnchantLevel = Config.ENCHANT_JEWELRY_MAX;
-						
 						break;
 					}
 				}
-				
 			}
 			else if (crystalScroll)
 			{
-				
 				for (int crystaljewelscroll : CRYSTAL_ARMOR_SCROLLS)
 				{
 					if (scroll.getItemId() == crystaljewelscroll)
@@ -552,15 +530,12 @@ public class RequestEnchantItem extends GameClientPacket
 						}
 						minEnchantLevel = Config.CRYSTAL_ENCHANT_MIN;
 						maxEnchantLevel = Config.CRYSTAL_ENCHANT_MAX;
-						
 						break;
 					}
 				}
-				
 			}
 			else
 			{
-				
 				for (int normaljewelscroll : NORMAL_ARMOR_SCROLLS)
 				{
 					if (scroll.getItemId() == normaljewelscroll)
@@ -574,13 +549,10 @@ public class RequestEnchantItem extends GameClientPacket
 							chance = Config.NORMAL_JEWELRY_ENCHANT_LEVEL.get(item.getEnchantLevel() + 1);
 						}
 						maxEnchantLevel = Config.ENCHANT_JEWELRY_MAX;
-						
 						break;
 					}
 				}
-				
 			}
-			
 		}
 		
 		if (((maxEnchantLevel != 0) && (item.getEnchantLevel() >= maxEnchantLevel)) || ((item.getEnchantLevel()) < minEnchantLevel))

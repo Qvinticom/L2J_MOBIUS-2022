@@ -43,5 +43,4 @@ public class ConditionTargetCheckCrtEffect extends Condition
 		
 		return true;
 	}
-	
 }

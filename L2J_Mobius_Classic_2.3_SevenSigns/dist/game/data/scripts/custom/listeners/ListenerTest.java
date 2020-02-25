@@ -55,7 +55,6 @@ public class ListenerTest extends AbstractNpcAI
 	
 	private ListenerTest()
 	{
-		
 		// Method preset listener registration
 		// An set function which is a Consumer it has one parameter and doesn't returns anything!
 		setAttackableAttackId(this::onAttackableAttack, ELPIES);

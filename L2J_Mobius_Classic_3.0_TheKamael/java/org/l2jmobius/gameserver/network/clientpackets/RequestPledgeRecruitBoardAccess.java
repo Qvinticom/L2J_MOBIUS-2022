@@ -113,5 +113,4 @@ public class RequestPledgeRecruitBoardAccess implements IClientIncomingPacket
 			}
 		}
 	}
-	
 }

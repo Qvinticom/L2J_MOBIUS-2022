@@ -26,8 +26,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
 /**
- * Knowledgeable Hunter Guild Member (666)
- * Updated for version Fafurion and below Edoo
+ * Knowledgeable Hunter Guild Member (666) Updated for version Fafurion and below Edoo
  * @URL https://l2wiki.com/Knowledgeable_Hunter_Guild_Member
  * @author Dmitri
  */

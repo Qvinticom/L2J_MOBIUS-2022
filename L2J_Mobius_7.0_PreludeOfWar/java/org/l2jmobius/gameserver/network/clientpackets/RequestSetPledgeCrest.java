@@ -110,5 +110,4 @@ public class RequestSetPledgeCrest implements IClientIncomingPacket
 			}
 		}
 	}
-	
 }

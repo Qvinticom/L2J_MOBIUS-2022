@@ -97,6 +97,6 @@ public class RequestSetAllyCrest implements IClientIncomingPacket
 				player.sendPacket(SystemMessageId.THE_CREST_WAS_SUCCESSFULLY_REGISTERED);
 			}
 		}
-		
 	}
+	
 }

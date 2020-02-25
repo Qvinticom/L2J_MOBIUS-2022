@@ -231,7 +231,6 @@ public class Q00222_TestOfTheDuelist extends Quest
 				}
 				case EXCURO:
 				{
-					
 					if (qs.isMemoState(2) && hasQuestItems(killer, FINAL_ORDER))
 					{
 						final int i0 = qs.getMemoStateEx(1);

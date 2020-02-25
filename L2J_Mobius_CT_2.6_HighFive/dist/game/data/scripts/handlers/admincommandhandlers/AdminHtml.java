@@ -115,8 +115,6 @@ public class AdminHtml implements IAdminCommandHandler
 	@Override
 	public String[] getAdminCommandList()
 	{
-		
 		return ADMIN_COMMANDS;
 	}
-	
 }

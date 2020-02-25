@@ -33,7 +33,6 @@ import org.l2jmobius.gameserver.network.NpcStringId;
 
 public class FortCommanderInstance extends DefenderInstance
 {
-	
 	private boolean _canTalk;
 	
 	public FortCommanderInstance(NpcTemplate template)

@@ -26,7 +26,6 @@ public class CanUseInDragonLairSkillCondition implements ISkillCondition
 {
 	public CanUseInDragonLairSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

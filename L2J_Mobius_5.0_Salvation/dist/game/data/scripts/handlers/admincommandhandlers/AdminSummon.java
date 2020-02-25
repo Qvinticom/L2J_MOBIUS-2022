@@ -34,7 +34,6 @@ public class AdminSummon implements IAdminCommandHandler
 	@Override
 	public String[] getAdminCommandList()
 	{
-		
 		return ADMIN_COMMANDS;
 	}
 	

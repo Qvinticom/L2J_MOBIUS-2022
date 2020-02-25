@@ -2174,7 +2174,6 @@ public abstract class Inventory extends ItemContainer
 							return;
 						}
 					}
-					
 				}
 				// 1 Protection Artifact Equip
 				if ((item.getId() >= 48961) && (item.getId() <= 48964))
@@ -2187,7 +2186,6 @@ public abstract class Inventory extends ItemContainer
 							return;
 						}
 					}
-					
 				}
 				// 1 Support Artifact Equip
 				if ((item.getId() >= 48965) && (item.getId() <= 48968))
@@ -2200,7 +2198,6 @@ public abstract class Inventory extends ItemContainer
 							return;
 						}
 					}
-					
 				}
 				break;
 			}
@@ -2230,7 +2227,6 @@ public abstract class Inventory extends ItemContainer
 							return;
 						}
 					}
-					
 				}
 				// 2 Protection Artifact Equip
 				if ((item.getId() >= 48961) && (item.getId() <= 48964))
@@ -2243,7 +2239,6 @@ public abstract class Inventory extends ItemContainer
 							return;
 						}
 					}
-					
 				}
 				// 2 Support Artifact Equip
 				if ((item.getId() >= 48965) && (item.getId() <= 48968))
@@ -2256,7 +2251,6 @@ public abstract class Inventory extends ItemContainer
 							return;
 						}
 					}
-					
 				}
 				break;
 			}
@@ -2286,7 +2280,6 @@ public abstract class Inventory extends ItemContainer
 							return;
 						}
 					}
-					
 				}
 				// 3 Protection Artifact Equip
 				if ((item.getId() >= 48961) && (item.getId() <= 48964))
@@ -2299,7 +2292,6 @@ public abstract class Inventory extends ItemContainer
 							return;
 						}
 					}
-					
 				}
 				// 3 Support Artifact Equip
 				if ((item.getId() >= 48965) && (item.getId() <= 48968))
@@ -2312,12 +2304,10 @@ public abstract class Inventory extends ItemContainer
 							return;
 						}
 					}
-					
 				}
 				break;
 			}
 		}
-		
 	}
 	
 	public int getBroochJewelSlots()

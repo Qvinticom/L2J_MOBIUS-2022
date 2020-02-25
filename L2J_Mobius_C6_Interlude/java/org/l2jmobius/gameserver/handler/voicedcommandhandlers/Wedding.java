@@ -56,7 +56,6 @@ public class Wedding implements IVoicedCommandHandler
 	@Override
 	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String target)
 	{
-		
 		if (activeChar.isInFunEvent() || activeChar.isInOlympiadMode())
 		{
 			activeChar.sendMessage("Sorry, you are in an event now.");
@@ -80,7 +79,6 @@ public class Wedding implements IVoicedCommandHandler
 	
 	public boolean Divorce(PlayerInstance activeChar)
 	{
-		
 		if (activeChar.getPartnerId() == 0)
 		{
 			return false;

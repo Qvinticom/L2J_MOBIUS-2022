@@ -285,7 +285,6 @@ public class IstinaCavern extends AbstractInstance
 						}
 						getTimers().addTimer("BALLISTA_CHECK_TIMER", 500, npc, null);
 					}
-					
 					break;
 				}
 				case "BALLISTA_END_TIMER":

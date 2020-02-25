@@ -31,7 +31,6 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
  */
 public class AdminGmChat implements IAdminCommandHandler
 {
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_gmchat",

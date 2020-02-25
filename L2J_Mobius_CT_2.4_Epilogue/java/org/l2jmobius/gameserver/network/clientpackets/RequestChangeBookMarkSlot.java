@@ -33,6 +33,5 @@ public class RequestChangeBookMarkSlot implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		
 	}
 }

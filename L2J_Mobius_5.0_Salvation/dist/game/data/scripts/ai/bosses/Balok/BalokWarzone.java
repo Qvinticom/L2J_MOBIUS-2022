@@ -149,7 +149,6 @@ public class BalokWarzone extends AbstractInstance
 				}
 				case "stage_last_send_minions":
 				{
-					
 					final Npc minion = _minionList.get(Rnd.get(_minionList.size()));
 					if (minion != null)
 					{
@@ -158,7 +157,6 @@ public class BalokWarzone extends AbstractInstance
 						_currentMinion = minion;
 						getTimers().addTimer("stage_last_minion_walk", 2000, minion, player);
 					}
-					
 					break;
 				}
 				case "stage_last_minion_walk":

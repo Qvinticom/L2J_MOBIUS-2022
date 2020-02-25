@@ -47,7 +47,6 @@ public class Q00511_AwlUnderFoot extends Quest
 {
 	protected class FAUWorld extends InstanceWorld
 	{
-		
 	}
 	
 	public static class FortDungeon

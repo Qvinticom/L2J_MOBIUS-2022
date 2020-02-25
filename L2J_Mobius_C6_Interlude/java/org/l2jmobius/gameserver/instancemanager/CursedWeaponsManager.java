@@ -263,7 +263,6 @@ public class CursedWeaponsManager
 						{
 							LOGGER.warning("Error while updating karma & pkkills for userId " + cw.getPlayerId());
 						}
-						
 					}
 					rset.close();
 					statement.close();
@@ -361,7 +360,6 @@ public class CursedWeaponsManager
 			
 			player.sendPacket(sm);
 		}
-		
 	}
 	
 	public void checkPlayer(PlayerInstance player)

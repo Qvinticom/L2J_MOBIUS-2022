@@ -41,5 +41,4 @@ public class InitLS extends LoginServerBasePacket
 		final int size = readD();
 		_key = readB(size);
 	}
-	
 }

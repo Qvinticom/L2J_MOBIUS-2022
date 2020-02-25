@@ -296,7 +296,6 @@ public class AppearanceStone
 					player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 					return false;
 				}
-				
 				break;
 			}
 			default:
@@ -323,7 +322,6 @@ public class AppearanceStone
 							player.sendPacket(SystemMessageId.YOU_CANNOT_MODIFY_OR_RESTORE_NO_GRADE_ITEMS);
 							return false;
 						}
-						
 						break;
 					}
 					case ARMOR:
@@ -339,7 +337,6 @@ public class AppearanceStone
 							player.sendPacket(SystemMessageId.YOU_CANNOT_MODIFY_OR_RESTORE_NO_GRADE_ITEMS);
 							return false;
 						}
-						
 						break;
 					}
 					case ACCESSORY:
@@ -367,7 +364,6 @@ public class AppearanceStone
 						return true;
 					}
 				}
-				
 				break;
 			}
 		}

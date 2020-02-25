@@ -97,7 +97,6 @@ public class ResidenceOfQueenNebula extends AbstractInstance
 					player.setImmobilized(true);
 					startQuestTimer("PLAYER_UNPARA", 5000, npc, player);
 				}
-				
 				break;
 			}
 			case "PLAYER_UNPARA":

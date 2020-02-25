@@ -26,7 +26,6 @@ public class OpTerritorySkillCondition implements ISkillCondition
 {
 	public OpTerritorySkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

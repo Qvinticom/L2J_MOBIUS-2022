@@ -724,7 +724,6 @@ public class HeartInfinityDefence extends AbstractNpcAI
 				inst.setEmptyDestroyTime(5 * 60000);
 			}
 		}
-		
 	}
 	
 	@Override

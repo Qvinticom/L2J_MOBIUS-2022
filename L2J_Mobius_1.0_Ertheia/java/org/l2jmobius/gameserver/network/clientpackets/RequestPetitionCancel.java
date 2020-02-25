@@ -38,7 +38,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class RequestPetitionCancel implements IClientIncomingPacket
 {
-	
 	// private int _unknown;
 	
 	@Override

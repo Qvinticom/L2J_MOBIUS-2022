@@ -26,7 +26,6 @@ public class OpTargetAllItemTypeSkillCondition implements ISkillCondition
 {
 	public OpTargetAllItemTypeSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

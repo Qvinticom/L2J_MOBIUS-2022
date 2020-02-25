@@ -159,7 +159,6 @@ public class Q10440_TheSealOfPunishmentTheFields extends Quest
 				qs.exitQuest(false, true);
 				break;
 			}
-			
 		}
 		return htmltext;
 	}

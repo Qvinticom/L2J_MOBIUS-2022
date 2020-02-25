@@ -651,7 +651,6 @@ public class Formulas
 			{
 				penaltyMod *= Config.NPC_SKILL_DMG_PENALTY.get(lvlDiff);
 			}
-			
 		}
 		
 		damage = (baseMod * criticalMod * criticalModPos * criticalVulnMod * proximityBonus * pvpBonus) + criticalAddMod + criticalAddVuln;

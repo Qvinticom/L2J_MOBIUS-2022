@@ -606,7 +606,6 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 						}
 					}
 				}
-				
 			}
 			// reset spawned if npc regenerated to 90% HP and more
 			else if (percentHp > 90)

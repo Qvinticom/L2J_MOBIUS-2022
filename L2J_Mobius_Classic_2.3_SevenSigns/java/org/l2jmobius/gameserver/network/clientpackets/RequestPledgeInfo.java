@@ -37,7 +37,6 @@ public class RequestPledgeInfo implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		
 		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{

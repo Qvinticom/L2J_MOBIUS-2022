@@ -222,7 +222,6 @@ public class JavaExecutionContext extends JavaScriptingEngine
 						{
 							_currentExecutingScript = null;
 						}
-						
 						break;
 					}
 				}

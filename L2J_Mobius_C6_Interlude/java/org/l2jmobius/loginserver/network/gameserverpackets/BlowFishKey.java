@@ -76,5 +76,4 @@ public class BlowFishKey extends ClientBasePacket
 	{
 		return _key;
 	}
-	
 }

@@ -26,7 +26,6 @@ public class OpCheckOnGoingEventCampaignSkillCondition implements ISkillConditio
 {
 	public OpCheckOnGoingEventCampaignSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

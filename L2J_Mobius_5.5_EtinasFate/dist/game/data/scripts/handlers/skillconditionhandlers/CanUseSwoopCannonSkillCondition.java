@@ -30,7 +30,6 @@ public class CanUseSwoopCannonSkillCondition implements ISkillCondition
 {
 	public CanUseSwoopCannonSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

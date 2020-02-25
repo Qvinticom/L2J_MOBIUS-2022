@@ -77,7 +77,6 @@ public class RequestMentorCancel implements IClientIncomingPacket
 					// Notify to scripts
 					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeRemove(player, mentee), player);
 				}
-				
 			}
 			else if (player.isMentee())
 			{

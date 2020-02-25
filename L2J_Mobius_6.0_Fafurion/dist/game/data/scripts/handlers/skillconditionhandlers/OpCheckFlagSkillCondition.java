@@ -35,7 +35,6 @@ public class OpCheckFlagSkillCondition implements ISkillCondition
 {
 	public OpCheckFlagSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

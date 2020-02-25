@@ -352,7 +352,6 @@ public class Lindvior extends AbstractNpcAI
 					addSpawn(NPC_ATTACKER_SMALL_VORTEX, loc, true, 60000);
 					addSpawn(LINDVIOR_SERVITOR[3], loc, true);
 				}
-				
 			}, 20000, 60000);
 			_status = 5;
 		}
@@ -503,7 +502,6 @@ public class Lindvior extends AbstractNpcAI
 			{
 				World.getInstance().forEachVisibleObjectInRange(npc, FriendlyNpcInstance.class, 800, cha ->
 				{
-					
 					if (cha.getId() == GENERATOR_GUARD)
 					{
 						npc.reduceCurrentHp(1, cha, null);

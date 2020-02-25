@@ -400,7 +400,6 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 						player.sendPacket(new ExAcquirableSkillListByClass(alchemySkills, AcquireSkillType.ALCHEMY));
 					}
 				}
-				
 				break;
 			}
 			case REVELATION:

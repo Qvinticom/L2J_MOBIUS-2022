@@ -881,7 +881,6 @@ public class PlayerInstance extends Playable
 	 */
 	public class SkillDat
 	{
-		
 		/** The _skill. */
 		private final Skill _skill;
 		
@@ -2528,7 +2527,6 @@ public class PlayerInstance extends Playable
 					
 					switch (weaponItem.getItemType())
 					{
-						
 						case BIGBLUNT:
 						case BIGSWORD:
 						{
@@ -2598,7 +2596,6 @@ public class PlayerInstance extends Playable
 					}
 				}
 			}
-			
 		}
 		
 		if (_masteryWeapPenalty != newMasteryPenalty)
@@ -2638,7 +2635,6 @@ public class PlayerInstance extends Playable
 		{
 			if ((item != null) && item.isEquipped()) // Checks if items equipped
 			{
-				
 				final int crystaltype = item.getItem().getCrystalType(); // Gets grade of item
 				// Checks if item crystal levels is above character levels and also if last penalty for weapon was lower.
 				if ((crystaltype > getExpertiseIndex()) && item.isWeapon() && (crystaltype > intensityW))
@@ -3685,7 +3681,6 @@ public class PlayerInstance extends Playable
 						sm.addNumber(item.getCount());
 						sendPacket(sm);
 					}
-					
 				}
 				else if (item.getEnchantLevel() > 0)
 				{
@@ -4685,7 +4680,6 @@ public class PlayerInstance extends Playable
 			}
 			else if (isAutoAttackable(player))
 			{
-				
 				if (Config.ALLOW_CHAR_KILL_PROTECT)
 				{
 					final Siege siege = SiegeManager.getInstance().getSiege(player);
@@ -4873,7 +4867,6 @@ public class PlayerInstance extends Playable
 				}
 				else if (isAutoAttackable(player))
 				{
-					
 					if (Config.ALLOW_CHAR_KILL_PROTECT)
 					{
 						final Siege siege = SiegeManager.getInstance().getSiege(player);
@@ -5003,7 +4996,6 @@ public class PlayerInstance extends Playable
 						{
 							player.sendPacket(ActionFailed.STATIC_PACKET);
 						}
-						
 					}
 				}
 				else if ((currentWeapon != null) && (currentWeapon.getItemType() == WeaponType.BOW)) // Calculate the distance between the PlayerInstance. Only archer can hit from long.
@@ -6191,7 +6183,6 @@ public class PlayerInstance extends Playable
 						
 						if (Config.DM_ENABLE_KILL_REWARD)
 						{
-							
 							final Item reward = ItemTable.getInstance().getTemplate(Config.DM_KILL_REWARD_ID);
 							pk.getInventory().addItem("DM Kill Reward", Config.DM_KILL_REWARD_ID, Config.DM_KILL_REWARD_AMOUNT, this, null);
 							pk.sendMessage("You have earned " + Config.DM_KILL_REWARD_AMOUNT + " item(s) of ID " + reward.getName() + ".");
@@ -8337,7 +8328,6 @@ public class PlayerInstance extends Playable
 	 */
 	public void updateOnlineStatus()
 	{
-		
 		if (isInOfflineMode())
 		{
 			return;
@@ -10655,7 +10645,6 @@ public class PlayerInstance extends Playable
 		// Check if the player use "Fake Death" skill
 		if (isAlikeDead() && !skill.isPotion() && (skill.getSkillType() != SkillType.FAKE_DEATH))
 		{
-			
 			// Send a Server->Client packet ActionFailed to the PlayerInstance
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;

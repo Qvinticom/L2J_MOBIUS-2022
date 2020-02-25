@@ -29,7 +29,6 @@ public class OpCheckAccountTypeSkillCondition implements ISkillCondition
 {
 	public OpCheckAccountTypeSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

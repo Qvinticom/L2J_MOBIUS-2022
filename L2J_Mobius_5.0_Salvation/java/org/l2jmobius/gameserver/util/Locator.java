@@ -241,7 +241,6 @@ public class Locator
 	 */
 	public static URL[] getLocationURLs(File location, String[] extensions) throws MalformedURLException
 	{
-		
 		URL[] urls = new URL[0];
 		
 		if (!location.exists())

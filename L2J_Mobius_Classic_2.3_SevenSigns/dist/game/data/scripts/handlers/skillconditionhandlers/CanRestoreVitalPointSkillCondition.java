@@ -26,7 +26,6 @@ public class CanRestoreVitalPointSkillCondition implements ISkillCondition
 {
 	public CanRestoreVitalPointSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

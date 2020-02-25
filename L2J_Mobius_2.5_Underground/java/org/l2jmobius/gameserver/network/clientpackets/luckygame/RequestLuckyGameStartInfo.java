@@ -34,6 +34,5 @@ public class RequestLuckyGameStartInfo implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		
 	}
 }

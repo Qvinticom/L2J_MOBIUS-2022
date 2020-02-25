@@ -78,5 +78,4 @@ public class RequestPartyMatchList implements IClientIncomingPacket
 			}
 		}
 	}
-	
 }

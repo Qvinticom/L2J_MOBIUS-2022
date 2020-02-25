@@ -869,7 +869,6 @@ public class StoryOfTauti extends AbstractInstance
 						{
 							startQuestTimer("clone_player", 500, npc, nearby);
 						}
-						
 					}
 					break;
 				}

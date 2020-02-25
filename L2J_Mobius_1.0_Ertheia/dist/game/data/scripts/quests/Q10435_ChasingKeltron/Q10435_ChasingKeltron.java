@@ -108,7 +108,6 @@ public class Q10435_ChasingKeltron extends Quest
 		
 		switch (qs.getState())
 		{
-			
 			case State.CREATED:
 			{
 				if (npc.getId() == RUA)

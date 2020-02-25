@@ -241,5 +241,4 @@ public class RequestPreviewItem implements IClientIncomingPacket
 			ThreadPool.schedule(new RemoveWearItemsTask(player), Config.WEAR_DELAY * 1000);
 		}
 	}
-	
 }

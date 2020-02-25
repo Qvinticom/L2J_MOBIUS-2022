@@ -55,5 +55,4 @@ public class ExCuriousHouseResult implements IClientOutgoingPacket
 		});
 		return true;
 	}
-	
 }

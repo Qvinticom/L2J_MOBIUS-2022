@@ -44,7 +44,6 @@ public class PaganKeys implements IItemHandler
 	@Override
 	public void useItem(Playable playable, ItemInstance item)
 	{
-		
 		final int itemId = item.getItemId();
 		
 		if (!(playable instanceof PlayerInstance))

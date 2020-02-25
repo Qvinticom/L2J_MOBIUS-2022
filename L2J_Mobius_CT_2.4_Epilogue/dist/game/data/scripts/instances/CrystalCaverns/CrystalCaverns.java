@@ -1499,7 +1499,6 @@ public class CrystalCaverns extends AbstractInstance
 				giveItems(player, BLACK_SEED_OF_EVIL_SHARD, num);
 			}
 		}
-		
 	}
 	
 	@Override
@@ -2121,7 +2120,6 @@ public class CrystalCaverns extends AbstractInstance
 							break;
 						}
 					}
-					
 				}
 			}
 		}

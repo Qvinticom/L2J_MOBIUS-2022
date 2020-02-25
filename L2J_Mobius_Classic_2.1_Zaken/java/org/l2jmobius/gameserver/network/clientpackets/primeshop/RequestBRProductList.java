@@ -43,7 +43,6 @@ public class RequestBRProductList implements IClientIncomingPacket
 		final PlayerInstance player = client.getPlayer();
 		if (player != null)
 		{
-			
 			switch (_type)
 			{
 				case 0: // Home page

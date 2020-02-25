@@ -26,7 +26,6 @@ public class BuildAdvanceBaseSkillCondition implements ISkillCondition
 {
 	public BuildAdvanceBaseSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

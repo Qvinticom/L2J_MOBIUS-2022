@@ -35,7 +35,6 @@ public class CanSummonSiegeGolemSkillCondition implements ISkillCondition
 {
 	public CanSummonSiegeGolemSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

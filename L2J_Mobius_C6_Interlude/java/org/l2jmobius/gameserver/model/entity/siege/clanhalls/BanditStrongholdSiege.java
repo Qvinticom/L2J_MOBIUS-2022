@@ -578,7 +578,6 @@ public class BanditStrongholdSiege extends ClanHallSiege
 				}
 			}
 		}
-		
 	}
 	
 	protected final ExclusiveTask _endSiegeTask = new ExclusiveTask()

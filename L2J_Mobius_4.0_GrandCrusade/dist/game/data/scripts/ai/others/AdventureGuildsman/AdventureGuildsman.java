@@ -438,7 +438,6 @@ public class AdventureGuildsman extends AbstractNpcAI
 			{
 				htmltext = "pccafe_notpoint001.htm";
 			}
-			
 		}
 		return htmltext;
 	}

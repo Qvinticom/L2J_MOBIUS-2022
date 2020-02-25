@@ -125,5 +125,4 @@ public class MaxCp extends AbstractEffect
 			charStat.getActiveChar().removeStatsOwner(this);
 		}
 	}
-	
 }

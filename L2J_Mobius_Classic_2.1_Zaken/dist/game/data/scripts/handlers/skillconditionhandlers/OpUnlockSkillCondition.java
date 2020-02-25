@@ -30,7 +30,6 @@ public class OpUnlockSkillCondition implements ISkillCondition
 {
 	public OpUnlockSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

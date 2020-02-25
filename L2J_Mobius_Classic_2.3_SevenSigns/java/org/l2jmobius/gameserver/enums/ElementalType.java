@@ -79,7 +79,6 @@ public enum ElementalType
 				return NONE;
 			}
 		}
-		
 	}
 	
 	public Stat getAttackStat()

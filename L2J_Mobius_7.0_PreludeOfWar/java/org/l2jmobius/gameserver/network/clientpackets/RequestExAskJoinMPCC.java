@@ -94,7 +94,6 @@ public class RequestExAskJoinMPCC implements IClientIncomingPacket
 					{
 						player.sendMessage(target.getName() + " doesn't have party and cannot be invited to Command Channel.");
 					}
-					
 				}
 				else if (activeParty.isInCommandChannel() && !activeParty.getCommandChannel().getLeader().equals(player))
 				{

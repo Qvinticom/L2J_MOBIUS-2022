@@ -65,5 +65,4 @@ public class BaseStatFinalizer implements IStatFunction
 		}
 		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, BaseStat.MAX_STAT_VALUE - 1);
 	}
-	
 }

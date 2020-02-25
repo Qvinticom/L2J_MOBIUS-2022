@@ -126,7 +126,6 @@ public interface IClientOutgoingPacket extends IOutgoingPacket
 	
 	default void runImpl(PlayerInstance player)
 	{
-		
 	}
 	
 	default void writeOptionalD(PacketWriter packet, int value)

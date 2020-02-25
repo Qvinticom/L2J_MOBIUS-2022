@@ -26,7 +26,6 @@ public class CanEnchantAttributeSkillCondition implements ISkillCondition
 {
 	public CanEnchantAttributeSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

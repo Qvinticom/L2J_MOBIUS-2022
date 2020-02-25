@@ -26,7 +26,6 @@ public class OpUsePraseedSkillCondition implements ISkillCondition
 {
 	public OpUsePraseedSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

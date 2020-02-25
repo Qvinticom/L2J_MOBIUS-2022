@@ -70,7 +70,6 @@ public class KnownListUpdateTaskManager
 				{
 					fullUpdate = false;
 				}
-				
 			}
 			catch (Throwable e)
 			{
@@ -121,7 +120,6 @@ public class KnownListUpdateTaskManager
 					}
 				}
 			}
-			
 		}
 	}
 	

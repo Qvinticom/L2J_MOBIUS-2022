@@ -118,5 +118,4 @@ public class SiegeScheduleData implements IXmlReader
 	{
 		protected static final SiegeScheduleData INSTANCE = new SiegeScheduleData();
 	}
-	
 }

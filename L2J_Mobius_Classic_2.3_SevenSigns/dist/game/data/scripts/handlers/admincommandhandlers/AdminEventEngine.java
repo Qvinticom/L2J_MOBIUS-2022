@@ -515,7 +515,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 	
 	private void showEventControl(PlayerInstance activeChar)
 	{
-		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		final StringBuilder sb = new StringBuilder();
 		sb.append("<html><title>[ EVENT ENGINE ]</title><body><br><center>Current event: <font color=\"LEVEL\">");

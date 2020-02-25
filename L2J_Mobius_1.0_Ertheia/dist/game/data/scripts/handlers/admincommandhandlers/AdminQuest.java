@@ -149,7 +149,6 @@ public class AdminQuest implements IAdminCommandHandler
 			{
 				showDir(parts[1], activeChar);
 			}
-			
 		}
 		else if (command.startsWith("admin_show_quests"))
 		{

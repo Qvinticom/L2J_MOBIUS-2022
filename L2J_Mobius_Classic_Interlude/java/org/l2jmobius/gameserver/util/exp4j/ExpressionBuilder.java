@@ -209,5 +209,4 @@ public class ExpressionBuilder
 		}
 		return new Expression(ShuntingYard.convertToRPN(expression, userFunctions, userOperators, variableNames, implicitMultiplication), userFunctions.keySet());
 	}
-	
 }

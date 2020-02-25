@@ -83,7 +83,6 @@ public class Q00025_HidingBehindTheTruth extends Quest
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = getNoQuestMsg(player);
 		switch (event)

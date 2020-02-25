@@ -113,7 +113,6 @@ public class CreatureStat
 					env.value = 1;
 				}
 			}
-			
 		}
 		
 		return env.value;

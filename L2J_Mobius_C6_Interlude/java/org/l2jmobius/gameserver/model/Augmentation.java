@@ -190,7 +190,6 @@ public class Augmentation
 		// add the skill if any
 		if (_skill != null)
 		{
-			
 			player.addSkill(_skill);
 			
 			if (_skill.isActive() && (Config.ACTIVE_AUGMENTS_START_REUSE_TIME > 0))
@@ -225,7 +224,6 @@ public class Augmentation
 			
 			if ((_skill.isPassive() && Config.DELETE_AUGM_PASSIVE_ON_CHANGE) || (_skill.isActive() && Config.DELETE_AUGM_ACTIVE_ON_CHANGE))
 			{
-				
 				// Iterate through all effects currently on the character.
 				final Effect[] effects = player.getAllEffects();
 				
@@ -239,7 +237,6 @@ public class Augmentation
 						currenteffect.exit(false);
 					}
 				}
-				
 			}
 			
 			player.sendSkillList();

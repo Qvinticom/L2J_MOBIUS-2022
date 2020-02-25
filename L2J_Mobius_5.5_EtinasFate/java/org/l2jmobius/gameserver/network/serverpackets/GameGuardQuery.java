@@ -29,7 +29,6 @@ public class GameGuardQuery implements IClientOutgoingPacket
 	
 	private GameGuardQuery()
 	{
-		
 	}
 	
 	@Override

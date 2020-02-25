@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class ConditionReenter extends Condition
 {
-	
 	public ConditionReenter(InstanceTemplate template, StatSet parameters, boolean onlyLeader, boolean showMessageAndHtml)
 	{
 		super(template, parameters, onlyLeader, showMessageAndHtml);

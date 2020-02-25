@@ -67,7 +67,6 @@ public class XmassTreeInstance extends NpcInstance
 			}
 			return false;
 		}
-		
 	}
 	
 	public XmassTreeInstance(int objectId, NpcTemplate template)

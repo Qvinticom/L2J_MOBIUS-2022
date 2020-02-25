@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.skills.targets.TargetType;
  */
 public class Self implements ITargetTypeHandler
 {
-	
 	@Override
 	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{

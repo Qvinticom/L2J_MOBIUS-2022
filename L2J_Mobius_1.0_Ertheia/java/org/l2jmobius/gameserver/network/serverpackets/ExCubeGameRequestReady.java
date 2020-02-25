@@ -29,7 +29,6 @@ public class ExCubeGameRequestReady implements IClientOutgoingPacket
 	
 	private ExCubeGameRequestReady()
 	{
-		
 	}
 	
 	@Override

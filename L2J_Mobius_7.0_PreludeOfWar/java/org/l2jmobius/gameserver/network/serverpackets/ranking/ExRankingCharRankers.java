@@ -329,7 +329,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 					{
 						packet.writeD(0);
 					}
-					
 					break;
 				}
 				case 3: // friend

@@ -262,5 +262,4 @@ public class SkillSummon extends Skill
 	{
 		return _isCubic;
 	}
-	
 }

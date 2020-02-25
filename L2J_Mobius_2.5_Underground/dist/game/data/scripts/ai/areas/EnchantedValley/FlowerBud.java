@@ -62,7 +62,6 @@ public class FlowerBud extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		
 		startQuestTimer("spawn", 3000, npc, killer);
 		return super.onKill(npc, killer, isSummon);
 	}

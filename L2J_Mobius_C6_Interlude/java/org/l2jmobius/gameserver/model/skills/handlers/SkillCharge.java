@@ -28,7 +28,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class SkillCharge extends Skill
 {
-	
 	public SkillCharge(StatSet set)
 	{
 		super(set);
@@ -95,5 +94,4 @@ public class SkillCharge extends Skill
 		// cast self effect if any
 		getEffectsSelf(caster);
 	}
-	
 }

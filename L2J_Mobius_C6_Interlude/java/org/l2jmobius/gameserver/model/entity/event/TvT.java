@@ -1090,7 +1090,6 @@ public class TvT implements EventTask
 						
 						if (!_started && !_aborted) // if is not already started and it's not aborted
 						{
-							
 							LOGGER.info(_eventName + ": waiting.....delay for restart event  " + _intervalBetweenMatches + " minutes.");
 							waiter(60000); // just a give a delay to next restart
 							

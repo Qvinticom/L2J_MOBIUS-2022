@@ -139,5 +139,4 @@ public class RequestRegistBeauty implements IClientIncomingPacket
 		
 		player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.CHANGE, ExResponseBeautyRegistReset.SUCCESS));
 	}
-	
 }

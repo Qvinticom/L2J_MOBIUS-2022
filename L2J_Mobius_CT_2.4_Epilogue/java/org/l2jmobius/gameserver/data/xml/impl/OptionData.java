@@ -90,7 +90,6 @@ public class OptionData implements IXmlReader
 												parseFuncs(fd.getAttributes(), fd.getNodeName(), op);
 											}
 										}
-										
 									}
 									break;
 								}

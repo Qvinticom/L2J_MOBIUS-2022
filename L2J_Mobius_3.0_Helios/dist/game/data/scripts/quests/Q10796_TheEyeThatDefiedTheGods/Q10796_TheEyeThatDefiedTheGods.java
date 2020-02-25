@@ -93,7 +93,6 @@ public class Q10796_TheEyeThatDefiedTheGods extends Quest
 			{
 				if (qs.isCond(2) && (qs.getInt(KILL_COUNT_VAR) >= 200))
 				{
-					
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 1088640, 261);

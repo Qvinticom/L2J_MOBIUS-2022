@@ -29,7 +29,6 @@ public class OpNotCursedSkillCondition implements ISkillCondition
 {
 	public OpNotCursedSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

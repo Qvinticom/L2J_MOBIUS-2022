@@ -472,7 +472,6 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 				{
 					giveItems(player, SCRL_OF_ENCH_WP_C, 1);
 				}
-				
 			}
 			else if (qs.getMemoState() == 20)
 			{
@@ -882,7 +881,6 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 					break;
 				}
 			}
-			
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -902,7 +900,6 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 		{
 			player.getParty().getMembers().stream().forEach(pm ->
 			{
-				
 				final QuestState qss = getQuestState(pm, false);
 				if ((qss != null) && qss.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, pm, true))
 				{

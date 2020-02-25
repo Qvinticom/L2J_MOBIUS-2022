@@ -210,5 +210,4 @@ public class RequestPackageSend implements IClientIncomingPacket
 			player.sendItemList();
 		}
 	}
-	
 }

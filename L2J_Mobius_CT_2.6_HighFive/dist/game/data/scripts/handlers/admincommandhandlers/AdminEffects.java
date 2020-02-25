@@ -474,7 +474,6 @@ public class AdminEffects implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
-					
 					return false;
 				}
 				
@@ -542,7 +541,6 @@ public class AdminEffects implements IAdminCommandHandler
 					target.broadcastPacket(new MagicSkillUse(target, activeChar, skill, level, hittime, 0));
 					activeChar.sendMessage(obj.getName() + " performs MSU " + skill + "/" + level + " by your request.");
 				}
-				
 			}
 			catch (Exception e)
 			{

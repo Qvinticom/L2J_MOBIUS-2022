@@ -213,7 +213,6 @@ public class Q00123_TheLeaderAndTheFollower extends Quest
 				}
 				break;
 			}
-			
 		}
 		return htmltext;
 	}

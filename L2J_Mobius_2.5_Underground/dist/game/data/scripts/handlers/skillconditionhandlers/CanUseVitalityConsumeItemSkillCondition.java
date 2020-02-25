@@ -26,7 +26,6 @@ public class CanUseVitalityConsumeItemSkillCondition implements ISkillCondition
 {
 	public CanUseVitalityConsumeItemSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

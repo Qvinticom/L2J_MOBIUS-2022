@@ -26,7 +26,6 @@ public class OpAgathionEnergySkillCondition implements ISkillCondition
 {
 	public OpAgathionEnergySkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

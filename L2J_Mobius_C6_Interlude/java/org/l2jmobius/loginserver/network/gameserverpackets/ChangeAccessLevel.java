@@ -51,5 +51,4 @@ public class ChangeAccessLevel extends ClientBasePacket
 	{
 		return _level;
 	}
-	
 }

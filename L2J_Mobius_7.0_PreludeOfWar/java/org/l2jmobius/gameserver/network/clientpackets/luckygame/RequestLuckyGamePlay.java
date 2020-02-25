@@ -169,7 +169,6 @@ public class RequestLuckyGamePlay implements IClientIncomingPacket
 					player.broadcastPacket(sm, 1000);
 					break;
 				}
-				
 			}
 		}
 		

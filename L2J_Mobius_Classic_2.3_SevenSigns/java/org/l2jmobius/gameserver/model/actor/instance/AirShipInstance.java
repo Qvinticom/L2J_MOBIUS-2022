@@ -89,7 +89,6 @@ public class AirShipInstance extends Vehicle
 	
 	public void setFuel(int f)
 	{
-		
 	}
 	
 	public int getMaxFuel()
@@ -99,7 +98,6 @@ public class AirShipInstance extends Vehicle
 	
 	public void setMaxFuel(int mf)
 	{
-		
 	}
 	
 	@Override

@@ -250,7 +250,6 @@ public class StoreTradeList
 				{
 					_items.remove(temp);
 				}
-				
 				break;
 			}
 		}

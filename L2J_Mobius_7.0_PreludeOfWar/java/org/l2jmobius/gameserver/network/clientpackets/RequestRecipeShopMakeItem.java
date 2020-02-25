@@ -234,7 +234,6 @@ public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 			}
 			else
 			{
-				
 				SystemMessage sm = new SystemMessage(SystemMessageId.S2_HAS_BEEN_CREATED_FOR_C1_AFTER_THE_PAYMENT_OF_S3_ADENA_WAS_RECEIVED);
 				sm.addString(player.getName());
 				sm.addItemName(craftedItem.getId());

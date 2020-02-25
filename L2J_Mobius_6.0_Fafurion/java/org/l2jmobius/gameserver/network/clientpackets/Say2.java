@@ -189,7 +189,6 @@ public class Say2 implements IClientIncomingPacket
 			{
 				LOGGER_CHAT.info(chatType.name() + " [" + player + "] " + _text);
 			}
-			
 		}
 		
 		if ((_text.indexOf(8) >= 0) && !parseAndPublishItem(client, player))

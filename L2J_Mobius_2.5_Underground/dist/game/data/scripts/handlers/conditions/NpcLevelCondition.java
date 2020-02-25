@@ -40,5 +40,4 @@ public class NpcLevelCondition implements ICondition
 	{
 		return object.isNpc() && (((Creature) object).getLevel() >= _minLevel) && (((Creature) object).getLevel() < _maxLevel);
 	}
-	
 }

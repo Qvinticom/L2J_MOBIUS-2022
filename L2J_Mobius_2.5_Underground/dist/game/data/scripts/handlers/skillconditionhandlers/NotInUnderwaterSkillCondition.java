@@ -30,7 +30,6 @@ public class NotInUnderwaterSkillCondition implements ISkillCondition
 {
 	public NotInUnderwaterSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

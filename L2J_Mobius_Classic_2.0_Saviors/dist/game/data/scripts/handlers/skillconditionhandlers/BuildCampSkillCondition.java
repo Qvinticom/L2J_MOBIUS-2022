@@ -39,7 +39,6 @@ public class BuildCampSkillCondition implements ISkillCondition
 {
 	public BuildCampSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

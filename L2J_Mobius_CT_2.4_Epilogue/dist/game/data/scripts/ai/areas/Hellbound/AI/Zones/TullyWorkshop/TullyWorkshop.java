@@ -958,7 +958,6 @@ public class TullyWorkshop extends AbstractNpcAI
 						
 						if (allowAgentSpawn_7th)
 						{
-							
 							if (spawnedAgent != null)
 							{
 								spawnedAgent.deleteMe();

@@ -454,7 +454,6 @@ public class VarkaSilenosSupport extends Quest
 					{
 						player.addItem("Quest", i - 1, 1, player, true);
 					}
-					
 					break;
 				}
 			}

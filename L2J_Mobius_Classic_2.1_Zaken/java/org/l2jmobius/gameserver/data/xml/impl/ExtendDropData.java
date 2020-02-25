@@ -90,7 +90,6 @@ public class ExtendDropData implements IXmlReader
 				{
 					LOGGER.warning(getClass().getSimpleName() + ": Missing condition for ExtendDrop Id[" + set.getInt("id") + "] Condition Name[" + conditionName + "]");
 				}
-				
 			}));
 			set.set("conditions", conditions);
 			

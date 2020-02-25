@@ -94,7 +94,6 @@ public class Q11005_PerfectLeatherArmor3 extends Quest
 				showOnScreenMsg(player, NpcStringId.LECTOR_WANTS_YOU_TO_BRING_HIM_MATERIALS_FOR_NEW_ARMOR_N_GO_HUNTING_AND_KILL_GIANT_SPIDERS, ExShowScreenMessage.TOP_CENTER, 10000);
 				giveItems(player, LECTORS_NOTES, 1);
 				htmltext = event;
-				
 				break;
 			}
 			case "reward1":

@@ -49,5 +49,4 @@ public class LoginServerFail extends LoginServerBasePacket
 	{
 		return _reason;
 	}
-	
 }

@@ -68,7 +68,6 @@ public class ExEnchantSkillInfo implements IClientOutgoingPacket
 					// lvl
 					_routes.add((route * 100) + skillLvL);
 				}
-				
 			}
 			else
 			// not already enchanted

@@ -357,7 +357,6 @@ public class SkillData implements IXmlReader
 									{
 										for (int j = namedParamInfo.getFromSubLevel(); j <= namedParamInfo.getToSubLevel(); j++)
 										{
-											
 											levels.computeIfAbsent(i, k -> new HashSet<>()).add(j);
 										}
 									}

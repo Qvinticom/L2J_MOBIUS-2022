@@ -113,7 +113,6 @@ public class Q00060_GoodWorksReward extends Quest
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		
 		if ("DESPAWN".equals(event))
 		{
 			npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.YOU_HAVE_GOOD_LUCK_I_SHALL_RETURN));
@@ -252,7 +251,6 @@ public class Q00060_GoodWorksReward extends Quest
 					{
 						if (((q217 != null) && q217.isCompleted()) || ((q218 != null) && q218.isCompleted()) || ((q219 != null) && q219.isCompleted()) || ((q220 != null) && q220.isCompleted()) || ((q221 != null) && q221.isCompleted()))
 						{
-							
 							if (((q222 != null) && q222.isCompleted()) || ((q223 != null) && q223.isCompleted()) || ((q224 != null) && q224.isCompleted()) || ((q225 != null) && q225.isCompleted()) || ((q226 != null) && q226.isCompleted()) || ((q227 != null) && q227.isCompleted()) || ((q228 != null) && q228.isCompleted()) || ((q229 != null) && q229.isCompleted()) || ((q230 != null) && q230.isCompleted()) || ((q231 != null) && q231.isCompleted()) || ((q232 != null) && q232.isCompleted()) || ((q233 != null) && q233.isCompleted()))
 							{
 								qs.setMemoStateEx(1, 3);

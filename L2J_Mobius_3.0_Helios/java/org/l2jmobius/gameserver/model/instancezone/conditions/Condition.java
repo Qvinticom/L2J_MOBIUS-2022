@@ -222,6 +222,5 @@ public abstract class Condition
 	 */
 	protected void onSuccess(PlayerInstance player)
 	{
-		
 	}
 }

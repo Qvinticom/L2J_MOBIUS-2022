@@ -1411,7 +1411,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void onSummonSpawn(Summon summon)
 	{
-		
 	}
 	
 	/**
@@ -3268,7 +3267,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	
 	public void onQuestAborted(PlayerInstance player)
 	{
-		
 	}
 	
 	public void giveStoryQuestReward(Npc npc, PlayerInstance player)

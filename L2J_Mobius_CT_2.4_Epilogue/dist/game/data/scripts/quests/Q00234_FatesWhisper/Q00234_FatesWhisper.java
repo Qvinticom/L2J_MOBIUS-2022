@@ -1030,7 +1030,6 @@ public class Q00234_FatesWhisper extends Quest
 					}
 				}
 			}
-			
 		}
 		return htmltext;
 	}
@@ -1182,7 +1181,6 @@ public class Q00234_FatesWhisper extends Quest
 					break;
 				}
 			}
-			
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

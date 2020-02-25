@@ -92,5 +92,4 @@ public class TradeItem
 	{
 		return _enchantLevel;
 	}
-	
 }

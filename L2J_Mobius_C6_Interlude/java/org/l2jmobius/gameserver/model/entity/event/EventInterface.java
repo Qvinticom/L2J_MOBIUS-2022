@@ -22,5 +22,4 @@ package org.l2jmobius.gameserver.model.entity.event;
  */
 public interface EventInterface
 {
-	
 }

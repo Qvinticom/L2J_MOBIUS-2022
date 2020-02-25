@@ -205,7 +205,6 @@ public class ControllableAirShipInstance extends AirShipInstance
 	@Override
 	public void setFuel(int f)
 	{
-		
 		final int old = _fuel;
 		if (f < 0)
 		{

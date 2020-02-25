@@ -459,7 +459,6 @@ public class SignsPriestInstance extends FolkInstance
 					{
 						LOGGER.warning("Problem with HTML text " + SevenSigns.SEVEN_SIGNS_HTML_PATH + "signs_17.htm: " + path);
 					}
-					
 					break;
 				}
 				case 18: // Exchange Seal Stones for Ancient Adena - SevenSigns 18 xxxx xxxxxx

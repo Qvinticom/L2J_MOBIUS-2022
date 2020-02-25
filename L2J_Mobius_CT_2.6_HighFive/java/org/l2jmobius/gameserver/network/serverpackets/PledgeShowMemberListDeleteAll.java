@@ -25,7 +25,6 @@ public class PledgeShowMemberListDeleteAll implements IClientOutgoingPacket
 	
 	private PledgeShowMemberListDeleteAll()
 	{
-		
 	}
 	
 	@Override

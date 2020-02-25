@@ -33,6 +33,5 @@ public class DummyPacket implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		
 	}
 }

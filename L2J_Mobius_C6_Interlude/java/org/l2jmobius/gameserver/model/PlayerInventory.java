@@ -292,7 +292,6 @@ public class PlayerInventory extends Inventory
 		{
 			if (adjItem.isStackable())
 			{
-				
 				if ((adjItem.getItemId() == item.getItem().getItemId()) && (adjItem.getEnchantLevel() == item.getEnchant()))
 				{
 					item.setObjectId(adjItem.getObjectId());
@@ -308,20 +307,17 @@ public class PlayerInventory extends Inventory
 					
 					return item;
 				}
-				
 			}
 			else if ((adjItem.getItemId() == item.getItem().getItemId()) && (adjItem.getEnchantLevel() == item.getEnchant()))
 			{
 				boolean found = false;
 				for (TradeItem actual : list)
 				{
-					
 					if (actual.getObjectId() == adjItem.getObjectId())
 					{
 						found = true;
 						break;
 					}
-					
 				}
 				
 				if (found)

@@ -327,7 +327,6 @@ public class Q10295_SevenSignsSolinasTomb extends Quest
 		{
 			case TELEPORT_DEVICE:
 			{
-				
 				if (qs.getInt("progress") == 2)
 				{
 					htmltext = "32837-02.html";

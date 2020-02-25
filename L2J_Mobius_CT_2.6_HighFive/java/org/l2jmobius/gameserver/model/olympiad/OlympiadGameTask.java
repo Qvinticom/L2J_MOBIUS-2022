@@ -229,7 +229,6 @@ public class OlympiadGameTask implements Runnable
 						_countDown = BATTLE_START_TIME_SECOND[0];
 						delay = getDelay(BATTLE_START_TIME_SECOND);
 					}
-					
 					break;
 				}
 				// Battle start countdown, second part (10-0)
@@ -247,7 +246,6 @@ public class OlympiadGameTask implements Runnable
 					{
 						_state = GameState.BATTLE_STARTED;
 					}
-					
 					break;
 				}
 				// Beginning of the battle
@@ -259,7 +257,6 @@ public class OlympiadGameTask implements Runnable
 					{
 						_state = GameState.GAME_STOPPED;
 					}
-					
 					break;
 				}
 				// Checks during battle
@@ -270,7 +267,6 @@ public class OlympiadGameTask implements Runnable
 					{
 						_state = GameState.GAME_STOPPED;
 					}
-					
 					break;
 				}
 				// Battle cancelled before teleport participants to the stadium
@@ -304,7 +300,6 @@ public class OlympiadGameTask implements Runnable
 					{
 						_state = GameState.CLEANUP;
 					}
-					
 					break;
 				}
 				// Removals

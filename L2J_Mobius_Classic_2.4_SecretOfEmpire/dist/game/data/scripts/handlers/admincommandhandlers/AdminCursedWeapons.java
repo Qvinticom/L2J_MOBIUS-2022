@@ -48,7 +48,6 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
-		
 		final CursedWeaponsManager cwm = CursedWeaponsManager.getInstance();
 		int id = 0;
 		

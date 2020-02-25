@@ -826,7 +826,6 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Usable only with Pets");
 			}
-			
 		}
 		else if (command.startsWith("admin_partyinfo"))
 		{
@@ -860,7 +859,6 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
-			
 		}
 		else if (command.equals("admin_setnoble"))
 		{

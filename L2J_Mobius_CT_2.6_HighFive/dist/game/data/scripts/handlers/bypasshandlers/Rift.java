@@ -81,7 +81,6 @@ public class Rift implements IBypassHandler
 				{
 					DimensionalRiftManager.getInstance().handleCheat(player, (Npc) target);
 				}
-				
 			}
 			return true;
 		}

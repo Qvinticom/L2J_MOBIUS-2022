@@ -42,5 +42,4 @@ public class ConditionUsingSlotType extends Condition
 		
 		return (effector.getActiveWeaponItem().getBodyPart() & _mask) != 0;
 	}
-	
 }

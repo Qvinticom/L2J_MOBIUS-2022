@@ -31,7 +31,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
 public class ControlTowerInstance extends NpcInstance
 {
-	
 	private List<Spawn> _guards;
 	
 	public ControlTowerInstance(int objectId, NpcTemplate template)

@@ -99,7 +99,7 @@ public class Mammons extends AbstractNpcAI
 			case "31126-06.html":
 			case "33739-01.html":
 			case "33739-02.html":
-
+			
 			{
 				htmltext = event;
 				break;

@@ -29,7 +29,6 @@ public class OpMainjobSkillCondition implements ISkillCondition
 {
 	public OpMainjobSkillCondition(StatSet params)
 	{
-		
 	}
 	
 	@Override

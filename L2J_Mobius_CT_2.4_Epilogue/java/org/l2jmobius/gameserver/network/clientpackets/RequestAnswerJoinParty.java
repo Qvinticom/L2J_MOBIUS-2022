@@ -66,7 +66,6 @@ public class RequestAnswerJoinParty implements IClientIncomingPacket
 			}
 			case 0: // Party cancel by player
 			{
-				
 				// requestor.sendPacket(SystemMessageId.PLAYER_DECLINED); FIXME: Done in client?
 				break;
 			}

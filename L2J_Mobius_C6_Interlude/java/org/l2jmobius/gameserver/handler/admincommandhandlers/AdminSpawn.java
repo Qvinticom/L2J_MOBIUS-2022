@@ -354,7 +354,6 @@ public class AdminSpawn implements IAdminCommandHandler
 			{
 				end1 = end1.replace("$from$", "" + i);
 				ended = false;
-				
 				break;
 			}
 			
@@ -394,7 +393,6 @@ public class AdminSpawn implements IAdminCommandHandler
 			{
 				end1 = end1.replace("$from$", "" + i);
 				ended = false;
-				
 				break;
 			}
 			tb.append(txt);

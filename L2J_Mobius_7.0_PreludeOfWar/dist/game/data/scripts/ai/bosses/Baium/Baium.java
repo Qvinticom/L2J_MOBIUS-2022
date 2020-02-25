@@ -47,8 +47,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import ai.AbstractNpcAI;
 
 /**
- * Baium AI.
- * Updated to Prelude Of War Edoo.<br>
+ * Baium AI. Updated to Prelude Of War Edoo.<br>
  * @author St3eT
  */
 public class Baium extends AbstractNpcAI

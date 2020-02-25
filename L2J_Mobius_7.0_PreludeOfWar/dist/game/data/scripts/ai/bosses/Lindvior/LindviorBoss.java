@@ -76,7 +76,6 @@ public class LindviorBoss extends AbstractNpcAI
 			{
 				if ((percent <= 80) && npc.isScriptValue(0))
 				{
-					
 					npc.doCast(SKILL_FLY_UP.getSkill());
 					npc.doCast(SKILL_RABIES.getSkill());
 					npc.setScriptValue(1);
