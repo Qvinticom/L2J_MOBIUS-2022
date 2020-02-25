@@ -86,9 +86,9 @@ public class ChamberOfProphecies extends AbstractInstance
 				qs.setCond(16, true);
 			}
 		}
-		else if (npc != null)
+		else if (player != null)
 		{
-			final Instance world = npc.getInstanceWorld();
+			final Instance world = player.getInstanceWorld();
 			if (!isInInstance(world))
 			{
 				return null;
@@ -151,7 +151,7 @@ public class ChamberOfProphecies extends AbstractInstance
 					world.spawnGroup("wof_room1");
 					player.teleToLocation(FIRST_ROOM_LOC);
 					cancelQuestTimers("CHECK_STATUS");
-					startQuestTimer("CHECK_STATUS", 7000, world.getNpc(KAIN_VAN_HALTER), null);
+					startQuestTimer("CHECK_STATUS", 7000, world.getNpc(KAIN_VAN_HALTER), player);
 					break;
 				}
 				case "CHECK_STATUS":
@@ -162,12 +162,11 @@ public class ChamberOfProphecies extends AbstractInstance
 						{
 							if (world.getAliveNpcs(MonsterInstance.class).isEmpty())
 							{
-								final PlayerInstance pl = world.getFirstPlayer();
-								startQuestTimer("SEY2", 14000, world.getNpc(FERIN), pl);
-								startQuestTimer("SEY_KAIN", 24000, world.getNpc(VAN_HALTER), pl);
-								startQuestTimer("OPEN_DOOR1", 5000, npc, pl);
+								startQuestTimer("SEY2", 14000, world.getNpc(FERIN), player);
+								startQuestTimer("SEY_KAIN", 24000, world.getNpc(VAN_HALTER), player);
+								startQuestTimer("OPEN_DOOR1", 5000, npc, player);
 							}
-							startQuestTimer("CHECK_STATUS", 7000, npc, null);
+							startQuestTimer("CHECK_STATUS", 7000, npc, player);
 							break;
 						}
 						case 1:
@@ -177,18 +176,17 @@ public class ChamberOfProphecies extends AbstractInstance
 								world.spawnGroup("wof_room2_1");
 								world.setStatus(2);
 							}
-							startQuestTimer("CHECK_STATUS", 7000, npc, null);
+							startQuestTimer("CHECK_STATUS", 7000, npc, player);
 							break;
 						}
 						case 2:
 						{
 							if (world.getAliveNpcs(MonsterInstance.class).isEmpty())
 							{
-								final PlayerInstance pl = world.getFirstPlayer();
-								startQuestTimer("SEY3", 8000, world.getNpc(FERIN), pl);
-								startQuestTimer("OPEN_DOOR2", 5000, npc, pl);
+								startQuestTimer("SEY3", 8000, world.getNpc(FERIN), player);
+								startQuestTimer("OPEN_DOOR2", 5000, npc, player);
 							}
-							startQuestTimer("CHECK_STATUS", 7000, npc, null);
+							startQuestTimer("CHECK_STATUS", 7000, npc, player);
 							break;
 						}
 						case 3:
@@ -198,9 +196,9 @@ public class ChamberOfProphecies extends AbstractInstance
 								world.setStatus(4);
 								world.spawnGroup("wof_room3_2");
 								world.openCloseDoor(DOOR_3, false);
-								startQuestTimer("SEY_KAIN_1", 5000, world.getNpc(VAN_HALTER), world.getFirstPlayer());
+								startQuestTimer("SEY_KAIN_1", 5000, world.getNpc(VAN_HALTER), player);
 							}
-							startQuestTimer("CHECK_STATUS", 7000, npc, null);
+							startQuestTimer("CHECK_STATUS", 7000, npc, player);
 							break;
 						}
 						case 4:
@@ -209,13 +207,12 @@ public class ChamberOfProphecies extends AbstractInstance
 							{
 								world.setStatus(5);
 								world.spawnGroup("wof_room4");
-								final PlayerInstance pl = world.getFirstPlayer();
-								startQuestTimer("SEY_KAIN_2", 3000, world.getNpc(VAN_HALTER), pl);
-								startQuestTimer("SEY4", 7000, world.getNpc(FERIN), pl);
+								startQuestTimer("SEY_KAIN_2", 3000, world.getNpc(VAN_HALTER), player);
+								startQuestTimer("SEY4", 7000, world.getNpc(FERIN), player);
 							}
 							else
 							{
-								startQuestTimer("CHECK_STATUS", 7000, npc, null);
+								startQuestTimer("CHECK_STATUS", 7000, npc, player);
 							}
 							break;
 						}
