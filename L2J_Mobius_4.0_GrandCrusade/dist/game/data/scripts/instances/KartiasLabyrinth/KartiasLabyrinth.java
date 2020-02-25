@@ -465,7 +465,7 @@ public class KartiasLabyrinth extends AbstractInstance
 	public String onEnterZone(Creature creature, ZoneType zone)
 	{
 		final Instance instance = creature.getInstanceWorld();
-		if ((instance != null) && creature.isPlayer())
+		if ((instance != null) && creature.isPlayer() && (instance.getTemplateId() >= TEMPLATE_ID_SOLO_85) && (instance.getTemplateId() <= TEMPLATE_ID_GROUP_95))
 		{
 			switch (zone.getId())
 			{
