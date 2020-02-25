@@ -44,6 +44,10 @@ public class ConditionPlayerPledgeClass extends Condition
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		return (effector.getActingPlayer() != null) && (effector.getActingPlayer().getClan() != null) && ((_pledgeClass == -1) ? effector.getActingPlayer().isClanLeader() : (effector.getActingPlayer().getPledgeClass() >= _pledgeClass));
+		if ((effector.getActingPlayer() == null) || (effector.getActingPlayer().getClan() == null))
+		{
+			return false;
+		}
+		return effector.getActingPlayer().isClanLeader() || (effector.getActingPlayer().getPledgeClass() >= _pledgeClass);
 	}
 }

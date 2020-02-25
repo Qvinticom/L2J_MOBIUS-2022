@@ -48,6 +48,6 @@ public class ConditionPlayerPledgeClass extends Condition
 		{
 			return false;
 		}
-		return (_pledgeClass == -1) ? effector.getActingPlayer().isClanLeader() : (effector.getActingPlayer().getPledgeClass() >= _pledgeClass);
+		return effector.getActingPlayer().isClanLeader() || (effector.getActingPlayer().getPledgeClass() >= _pledgeClass);
 	}
 }
