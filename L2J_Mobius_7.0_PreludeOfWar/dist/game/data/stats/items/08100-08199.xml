@@ -1966,8 +1966,7 @@
 		<cond msgId="1518">
 			<and>
 				<player castle="8" />
-				<player pledgeClass="2" />
-				<!-- Heir -->
+				<player pledgeClass="0" /> <!-- Normal member -->
 			</and>
 		</cond>
 		<skills>
@@ -1996,8 +1995,7 @@
 		<cond msgId="1518">
 			<and>
 				<player castle="9" />
-				<player pledgeClass="2" />
-				<!-- Heir -->
+				<player pledgeClass="0" /> <!-- Normal member -->
 			</and>
 		</cond>
 		<skills>

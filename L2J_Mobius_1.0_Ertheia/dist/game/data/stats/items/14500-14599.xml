@@ -2534,8 +2534,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
+			<player pledgeClass="4" /> <!-- Elder -->
 		</cond>
 		<stats>
 			<stat type="pDef">73</stat>
@@ -2563,8 +2562,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>
@@ -2591,8 +2589,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>
@@ -2619,8 +2616,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>
@@ -2647,8 +2643,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
+			<player pledgeClass="4" /> <!-- Elder -->
 		</cond>
 		<stats>
 			<stat type="pDef">220</stat>
@@ -2672,8 +2667,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
+			<player pledgeClass="4" /> <!-- Elder -->
 		</cond>
 		<stats>
 			<stat type="pDef">49</stat>
@@ -2697,8 +2691,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
+			<player pledgeClass="4" /> <!-- Elder -->
 		</cond>
 		<stats>
 			<stat type="pDef">49</stat>
@@ -2726,8 +2719,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>
@@ -2755,8 +2747,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>
@@ -2783,8 +2774,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>

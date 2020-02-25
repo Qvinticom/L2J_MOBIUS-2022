@@ -514,8 +514,7 @@
 		<cond msgId="1518">
 			<and>
 				<player castle="-1" />
-				<player pledgeClass="8" />
-				<!-- Marquis or higher -->
+				<player pledgeClass="8" /> <!-- Marquis or higher -->
 				<player isOnSide="LIGHT" />
 				<player cloakStatus="true" />
 			</and>
@@ -555,8 +554,7 @@
 		<cond msgId="1518">
 			<and>
 				<player castle="-1" />
-				<player pledgeClass="8" />
-				<!-- Marquis or higher -->
+				<player pledgeClass="8" /> <!-- Marquis or higher -->
 				<player isOnSide="DARK" />
 				<player cloakStatus="true" />
 			</and>

@@ -1207,8 +1207,7 @@
 		<set name="commissionItemType" val="HELMET" />
 		<set name="equip_condition" val="{{ec_academy;1}}" />
 		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
+			<player pledgeClass="1" /> <!-- Vassal (Academy) -->
 		</cond>
 		<stats>
 			<stat type="pDef">37</stat>
@@ -1233,8 +1232,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="1" />
-				<!-- Vassal (Academy) -->
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
 			</and>
 		</cond>
 		<stats>
@@ -1258,8 +1256,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="1" />
-				<!-- Vassal (Academy) -->
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
 			</and>
 		</cond>
 		<stats>
@@ -1283,8 +1280,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="1" />
-				<!-- Vassal (Academy) -->
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
 			</and>
 		</cond>
 		<stats>
@@ -1308,8 +1304,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="equip_condition" val="{{ec_academy;1}}" />
 		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
+			<player pledgeClass="1" /> <!-- Vassal (Academy) -->
 		</cond>
 		<stats>
 			<stat type="pDef">119</stat>
@@ -1330,8 +1325,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="equip_condition" val="{{ec_academy;1}}" />
 		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
+			<player pledgeClass="1" /> <!-- Vassal (Academy) -->
 		</cond>
 		<stats>
 			<stat type="pDef">24</stat>
@@ -1352,8 +1346,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="equip_condition" val="{{ec_academy;1}}" />
 		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
+			<player pledgeClass="1" /> <!-- Vassal (Academy) -->
 		</cond>
 		<stats>
 			<stat type="pDef">24</stat>
@@ -1378,8 +1371,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="1" />
-				<!-- Vassal (Academy) -->
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
 			</and>
 		</cond>
 		<stats>
@@ -1404,8 +1396,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="1" />
-				<!-- Vassal (Academy) -->
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
 			</and>
 		</cond>
 		<stats>
@@ -1429,8 +1420,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="1" />
-				<!-- Vassal (Academy) -->
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
 			</and>
 		</cond>
 		<stats>
@@ -1450,8 +1440,7 @@
 		<set name="commissionItemType" val="HELMET" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
+			<player pledgeClass="4" /> <!-- Elder -->
 		</cond>
 		<stats>
 			<stat type="pDef">69</stat>
@@ -1474,8 +1463,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>
@@ -1498,8 +1486,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>
@@ -1522,8 +1509,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>
@@ -1545,8 +1531,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="FULL_BODY" />
 		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
+			<player pledgeClass="4" /> <!-- Elder -->
 		</cond>
 		<stats>
 			<stat type="pDef">209</stat>
@@ -1566,8 +1551,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="GLOVES" />
 		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
+			<player pledgeClass="4" /> <!-- Elder -->
 		</cond>
 		<stats>
 			<stat type="pDef">46</stat>
@@ -1587,8 +1571,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="FEET" />
 		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
+			<player pledgeClass="4" /> <!-- Elder -->
 		</cond>
 		<stats>
 			<stat type="pDef">46</stat>
@@ -1611,8 +1594,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>
@@ -1636,8 +1618,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>
@@ -1660,8 +1641,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>
@@ -1681,8 +1661,7 @@
 		<set name="commissionItemType" val="HELMET" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
+			<player pledgeClass="4" /> <!-- Elder -->
 		</cond>
 		<stats>
 			<stat type="pDef">69</stat>
@@ -1705,8 +1684,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>
@@ -1729,8 +1707,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>
@@ -1753,8 +1730,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>
@@ -1776,8 +1752,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
+			<player pledgeClass="4" /> <!-- Elder -->
 		</cond>
 		<stats>
 			<stat type="pDef">209</stat>
@@ -1797,8 +1772,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
+			<player pledgeClass="4" /> <!-- Elder -->
 		</cond>
 		<stats>
 			<stat type="pDef">46</stat>
@@ -1818,8 +1792,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
+			<player pledgeClass="4" /> <!-- Elder -->
 		</cond>
 		<stats>
 			<stat type="pDef">46</stat>
@@ -1842,8 +1815,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>
@@ -1867,8 +1839,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>
@@ -1891,8 +1862,7 @@
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="4" />
-				<!-- Elder -->
+				<player pledgeClass="4" /> <!-- Elder -->
 			</and>
 		</cond>
 		<stats>
