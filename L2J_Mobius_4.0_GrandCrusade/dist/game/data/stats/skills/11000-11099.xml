@@ -1332,6 +1332,10 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
 				</power>
 			</effect>
+			<effect name="KnockBack">
+				<speed>600</speed>
+				<distance>200</distance>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11021" toLevel="11" name="Elemental Crash (Earth)">

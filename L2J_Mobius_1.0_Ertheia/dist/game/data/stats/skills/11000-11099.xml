@@ -1414,6 +1414,10 @@
 				</power>
 				<overHit>true</overHit>
 			</effect>
+			<effect name="KnockBack">
+				<speed>600</speed>
+				<distance>200</distance>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11021" toLevel="11" name="Elemental Crash (Earth)">
