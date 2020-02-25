@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.model.conditions;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
@@ -44,10 +45,18 @@ public class ConditionPlayerPledgeClass extends Condition
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if ((effector.getActingPlayer() == null) || (effector.getActingPlayer().getClan() == null))
+		final PlayerInstance player = effector.getActingPlayer();
+		if ((player == null) || (player.getClan() == null))
 		{
 			return false;
 		}
-		return effector.getActingPlayer().isClanLeader() || (effector.getActingPlayer().getPledgeClass() >= _pledgeClass);
+		
+		final boolean isClanLeader = player.isClanLeader();
+		if ((_pledgeClass == -1) && !isClanLeader)
+		{
+			return false;
+		}
+		
+		return isClanLeader || (player.getPledgeClass() >= _pledgeClass);
 	}
 }
