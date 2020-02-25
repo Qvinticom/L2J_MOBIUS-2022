@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="13300" fromLevel="3" toLevel="3" name="Magic One-handed Blunt Special Ability">
+	<skill id="13300" toLevel="3" name="Magic One-handed Blunt Special Ability">
 		<!-- M. Critical Damage + 381 and M. Accuracy + 1. -->
 		<icon>icon.weapon_vesper_caster_i00</icon>
 		<operateType>P</operateType>
@@ -18,7 +18,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13301" fromLevel="3" toLevel="3" name="Magic Two-handed Blunt Special Ability">
+	<skill id="13301" toLevel="3" name="Magic Two-handed Blunt Special Ability">
 		<!-- M. Atk. + 44, M. Critical Damage + 381, and Casting Spd. + 1%. -->
 		<icon>icon.weapon_grangkaz_i00</icon>
 		<operateType>P</operateType>
@@ -40,7 +40,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13302" fromLevel="3" toLevel="3" name="Magic Two-handed Blunt Special Ability">
+	<skill id="13302" toLevel="3" name="Magic Two-handed Blunt Special Ability">
 		<!-- M. Atk. + 44, M. Critical Damage + 381, and Casting Spd. + 1%. -->
 		<icon>icon.weapon_herencia_i00</icon>
 		<operateType>P</operateType>
@@ -62,7 +62,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13303" fromLevel="3" toLevel="3" name="Magic Two-handed Blunt Special Ability">
+	<skill id="13303" toLevel="3" name="Magic Two-handed Blunt Special Ability">
 		<!-- M. Atk. + 44, M. Critical Damage + 381, and Casting Spd. + 1%. -->
 		<icon>icon.weapon_rupe_i00</icon>
 		<operateType>P</operateType>
@@ -84,7 +84,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13304" fromLevel="3" toLevel="3" name="Magic Two-handed Blunt Special Ability">
+	<skill id="13304" toLevel="3" name="Magic Two-handed Blunt Special Ability">
 		<!-- M. Atk. + 44, M. Critical Damage + 381, and Casting Spd. + 1%. -->
 		<icon>icon.weapon_shaelon_i00</icon>
 		<operateType>P</operateType>
@@ -106,7 +106,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13305" fromLevel="3" toLevel="3" name="Magic Two-handed Blunt Special Ability">
+	<skill id="13305" toLevel="3" name="Magic Two-handed Blunt Special Ability">
 		<!-- M. Atk. + 44, M. Critical Damage + 381, and Casting Spd. + 1%. -->
 		<icon>icon.weapon_vesper_singer_i00</icon>
 		<operateType>P</operateType>
@@ -128,7 +128,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13306" fromLevel="3" toLevel="3" name="Heavy Armor Top Special Ability">
+	<skill id="13306" toLevel="3" name="Heavy Armor Top Special Ability">
 		<!-- P. Def. + 34 and received P. Critical Damage by - 4.3%. -->
 		<icon>icon.armor_t501_u_i00</icon>
 		<operateType>P</operateType>
@@ -146,7 +146,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13307" fromLevel="3" toLevel="3" name="Heavy Armor Top Special Ability">
+	<skill id="13307" toLevel="3" name="Heavy Armor Top Special Ability">
 		<!-- P. Def. + 34 and received P. Critical Damage by - 4.3%. -->
 		<icon>icon.armor_t601_u_i00</icon>
 		<operateType>P</operateType>
@@ -164,7 +164,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13308" fromLevel="3" toLevel="3" name="Heavy Armor Top Special Ability">
+	<skill id="13308" toLevel="3" name="Heavy Armor Top Special Ability">
 		<!-- P. Def. + 34 and received P. Critical Damage by - 4.3%. -->
 		<icon>icon.armor_t401_u_i00</icon>
 		<operateType>P</operateType>
@@ -182,7 +182,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13309" fromLevel="3" toLevel="3" name="Heavy Armor Top Special Ability">
+	<skill id="13309" toLevel="3" name="Heavy Armor Top Special Ability">
 		<!-- P. Def. + 34 and received P. Critical Damage by - 4.3%. -->
 		<icon>icon.armor_t701_u_i00</icon>
 		<operateType>P</operateType>
@@ -200,7 +200,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13310" fromLevel="3" toLevel="3" name="Heavy Armor Top Special Ability">
+	<skill id="13310" toLevel="3" name="Heavy Armor Top Special Ability">
 		<!-- P. Def. + 34 and received P. Critical Damage by - 4.3%. -->
 		<icon>icon.armor_t501_u_i00</icon>
 		<operateType>P</operateType>
@@ -218,7 +218,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13311" fromLevel="3" toLevel="3" name="Light Armor Top Special Ability">
+	<skill id="13311" toLevel="3" name="Light Armor Top Special Ability">
 		<!-- P. Evasion + 2, Speed + 3, and P. Attribute Resistance + 5. Received P. Critical Rate - 3.4%. -->
 		<icon>icon.armor_t502_u_i00</icon>
 		<operateType>P</operateType>
@@ -244,7 +244,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13312" fromLevel="3" toLevel="3" name="Robe Upper Special Ability">
+	<skill id="13312" toLevel="3" name="Robe Upper Special Ability">
 		<!-- M. Evasion + 3, and M. Attribute Resistance + 9. Received P. Critical Damage - 2.1%, and Received P. Critical Rate - 1.7%. -->
 		<icon>icon.armor_t503_u_i00</icon>
 		<operateType>P</operateType>
