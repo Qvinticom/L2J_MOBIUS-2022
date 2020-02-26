@@ -55,7 +55,7 @@ import quests.Q00833_DevilsTreasureTauti.Q00833_DevilsTreasureTauti;
 /**
  * Mystic Tavern Tauti Instance
  * @VIDEO https://www.youtube.com/watch?v=uPXWZ1ZCtFk
- * @author Gigi
+ * @author Gigi, Mobius
  */
 public class StoryOfTauti extends AbstractInstance
 {
@@ -93,14 +93,13 @@ public class StoryOfTauti extends AbstractInstance
 	private static final Location TELEPORT = new Location(153267, -148441, -11560);
 	private static final int ZONE_1ST_TRIGER = 24137770;
 	private static final int SKILL_TRIGER = 24138880;
-	private static Npc _deton;
 	private static Npc _seal_device;
 	protected int _count = 0;
 	
 	public StoryOfTauti()
 	{
 		super(TEMPLATE_ID);
-		addSpawnId(DETON, SEAL_DEVICE, FLAME_FLOWER, FLAME_STACATO, FLAME_SCORPION, FLAME_SCARAB, FLAME_GOLEM, NPC_1, SEAL_ARCHANGEL);
+		addSpawnId(FLAME_FLOWER, FLAME_STACATO, FLAME_SCORPION, FLAME_SCARAB, FLAME_GOLEM, NPC_1, SEAL_ARCHANGEL);
 		addAttackId(SEAL_TOMBSTONE, SEAL_ARCHANGEL);
 		addKillId(FLAME_STACATO, FLAME_SCORPION, SEAL_TOMBSTONE, SEALED_ANGEL);
 		addSkillSeeId(FLAME_FLOWER, SEAL_TOMBSTONE);
@@ -142,9 +141,9 @@ public class StoryOfTauti extends AbstractInstance
 				{
 					if (world.isStatus(1) || world.isStatus(4))
 					{
-						_deton.setTarget(player);
-						_deton.setRunning();
-						_deton.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
+						world.getNpc(DETON).setTarget(player);
+						world.getNpc(DETON).setRunning();
+						world.getNpc(DETON).getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
 					}
 					else
 					{
@@ -155,64 +154,64 @@ public class StoryOfTauti extends AbstractInstance
 			}
 			case "check_status":
 			{
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ARE_YOU_THE_ONES_WHO_WILL_BE_HELPING_OUT_WELCOME_I_VE_BEEN_WAITING_FOR_YOU);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ARE_YOU_THE_ONES_WHO_WILL_BE_HELPING_OUT_WELCOME_I_VE_BEEN_WAITING_FOR_YOU);
 				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, pl ->
 				{
 					if ((pl != null) && ((pl.isInParty() && pl.getParty().isLeader(pl)) || pl.isGM()))
 					{
-						_deton.setTarget(pl);
-						_deton.setRunning();
-						_deton.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, pl);
+						world.getNpc(DETON).setTarget(pl);
+						world.getNpc(DETON).setRunning();
+						world.getNpc(DETON).getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, pl);
 					}
 				});
-				startQuestTimer("msg_1", 7000, _deton, null);
+				startQuestTimer("msg_1", 7000, world.getNpc(DETON), null);
 				break;
 			}
 			case "msg_1":
 			{
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_HAD_A_HARD_TIME_WORKING_BY_MYSELF_I_M_GLAD_YOU_ARE_HERE_NOW);
-				startQuestTimer("msg_2", 10000, _deton, null);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_HAD_A_HARD_TIME_WORKING_BY_MYSELF_I_M_GLAD_YOU_ARE_HERE_NOW);
+				startQuestTimer("msg_2", 10000, world.getNpc(DETON), null);
 				break;
 			}
 			case "msg_2":
 			{
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DON_T_WORRY_ABOUT_THE_REWARD_WE_LL_FIND_THAT_TREASURE);
-				startQuestTimer("msg_3", 10000, _deton, null);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DON_T_WORRY_ABOUT_THE_REWARD_WE_LL_FIND_THAT_TREASURE);
+				startQuestTimer("msg_3", 10000, world.getNpc(DETON), null);
 				break;
 			}
 			case "msg_3":
 			{
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_M_GLAD_POWERFUL_PEOPLE_LIKE_YOU_GUYS_ARE_HELPING_ME);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_M_GLAD_POWERFUL_PEOPLE_LIKE_YOU_GUYS_ARE_HELPING_ME);
 				break;
 			}
 			case "msg_4":
 			{
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THIS_I_M_SURE_I_VE_SEEN_THIS_BEFORE_YES_THAT_MEANS_THE_STAKATOS);
-				_deton.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, DETON_MOVE);
-				startQuestTimer("msg_5", 7000, _deton, null);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THIS_I_M_SURE_I_VE_SEEN_THIS_BEFORE_YES_THAT_MEANS_THE_STAKATOS);
+				world.getNpc(DETON).getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, DETON_MOVE);
+				startQuestTimer("msg_5", 7000, world.getNpc(DETON), null);
 				break;
 			}
 			case "msg_5":
 			{
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TO_SAVE_THE_FLAME_FLOWER_YOU_NEED_HEAL_WAIT_RADIANT_HEAL_YES_I_M_SURE);
-				startQuestTimer("msg_6", 10000, _deton, null);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TO_SAVE_THE_FLAME_FLOWER_YOU_NEED_HEAL_WAIT_RADIANT_HEAL_YES_I_M_SURE);
+				startQuestTimer("msg_6", 10000, world.getNpc(DETON), null);
 				break;
 			}
 			case "msg_6":
 			{
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WELL_THERE_S_NOT_MUCH_DIFFERENCE_RIGHT_OR_IS_THERE);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WELL_THERE_S_NOT_MUCH_DIFFERENCE_RIGHT_OR_IS_THERE);
 				break;
 			}
 			case "spawn_stacato":
 			{
 				world.spawnGroup("flame_stacato");
-				startQuestTimer("spawn_stacato_1", 50000, _deton, null);
+				startQuestTimer("spawn_stacato_1", 50000, world.getNpc(DETON), null);
 				break;
 			}
 			case "spawn_stacato_1":
 			{
 				world.spawnGroup("flame_stacato");
-				startQuestTimer("spawn_stacato_2", 50000, _deton, null);
+				startQuestTimer("spawn_stacato_2", 50000, world.getNpc(DETON), null);
 				break;
 			}
 			case "spawn_stacato_2":
@@ -223,13 +222,13 @@ public class StoryOfTauti extends AbstractInstance
 			}
 			case "check_flower":
 			{
-				if (!npc.isDead())
+				if ((world != null) && !npc.isDead())
 				{
 					for (Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpcInstance.class, 1000))
 					{
 						if ((nearby.getId() == FLAME_FLOWER) && npc.isScriptValue(0) && nearby.isScriptValue(0))
 						{
-							_deton.setRunning();
+							world.getNpc(DETON).setRunning();
 							addMoveToDesire(npc, nearby.getLocation(), 23);
 							if (npc.calculateDistance3D(nearby) < 100)
 							{
@@ -245,6 +244,7 @@ public class StoryOfTauti extends AbstractInstance
 							}
 						}
 					}
+					startQuestTimer("check_flower", 3000, npc, null);
 				}
 				break;
 			}
@@ -255,13 +255,13 @@ public class StoryOfTauti extends AbstractInstance
 			}
 			case "msg_7":
 			{
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.LET_S_HAVE_SOME_FUN);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.LET_S_HAVE_SOME_FUN);
 				break;
 			}
 			case "spawn_scorpion":
 			{
 				world.spawnGroup("flame_scorpion");
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.EEK_SAVE_THIS_DWARF_I_M_JUST_AN_ARCHAEOLOGIST_I_LL_GIVE_YOU_EVERYTHING_I_HAVE);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.EEK_SAVE_THIS_DWARF_I_M_JUST_AN_ARCHAEOLOGIST_I_LL_GIVE_YOU_EVERYTHING_I_HAVE);
 				if (getRandom(10) < 5)
 				{
 					world.spawnGroup("ifrit");
@@ -275,7 +275,7 @@ public class StoryOfTauti extends AbstractInstance
 				{
 					if ((pl != null) && !pl.isDead())
 					{
-						_deton.setRunning();
+						world.getNpc(DETON).setRunning();
 						addMoveToDesire(npc, new Location(pl.getX() + getRandom(-40, 40), pl.getY() + getRandom(-40, 40), pl.getZ()), 23);
 						addAttackPlayerDesire(npc, pl);
 					}
@@ -288,36 +288,36 @@ public class StoryOfTauti extends AbstractInstance
 			}
 			case "msg_8":
 			{
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.OH_YOU_TRULY_ARE_AMAZING_YOU_ACTUALLY_DEFEATED_THOSE_NASTY_GUYS);
-				startQuestTimer("msg_9", 8000, _deton, null);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.OH_YOU_TRULY_ARE_AMAZING_YOU_ACTUALLY_DEFEATED_THOSE_NASTY_GUYS);
+				startQuestTimer("msg_9", 8000, world.getNpc(DETON), null);
 				break;
 			}
 			case "msg_9":
 			{
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_PATH_SPLITS_NOW_WELL_LET_S_GO_WHICH_WAY);
-				startQuestTimer("msg_10", 10000, _deton, null);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_PATH_SPLITS_NOW_WELL_LET_S_GO_WHICH_WAY);
+				startQuestTimer("msg_10", 10000, world.getNpc(DETON), null);
 				break;
 			}
 			case "msg_10":
 			{
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.BOTH_LOOK_PRETTY_BAD_BUT_WE_MUST_KEEP_GOING);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.BOTH_LOOK_PRETTY_BAD_BUT_WE_MUST_KEEP_GOING);
 				break;
 			}
 			case "spawn_golem":
 			{
 				world.spawnGroup("golem");
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WAHHH_WHAT_ARE_THESE_MONSTERS_HOW_OLD_DO_YOU_HAVE_BE_TO_GET_THAT_BIG);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WAHHH_WHAT_ARE_THESE_MONSTERS_HOW_OLD_DO_YOU_HAVE_BE_TO_GET_THAT_BIG);
 				world.broadcastPacket(new ExShowScreenMessage(NpcStringId.LOOK_AT_THAT_FLAME_GOLEM_IT_S_TERRIFYING, ExShowScreenMessage.BOTTOM_RIGHT, 10000, false));
-				startQuestTimer("run_away", 10000, _deton, null);
+				startQuestTimer("run_away", 10000, world.getNpc(DETON), null);
 				break;
 			}
 			case "run_away":
 			{
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_LL_LEAVE_THOSE_MONSTERS_TO_YOU_I_LL_GO_CHECK_OUT_SOMETHING_OVER_THERE_IT_S_VERY_IMPORTANT);
-				_deton.setTarget(null);
-				_deton.stopMove(null);
-				_deton.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, DETON_MOVE_1);
-				startQuestTimer("delete_daton", 3500, _deton, null);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_LL_LEAVE_THOSE_MONSTERS_TO_YOU_I_LL_GO_CHECK_OUT_SOMETHING_OVER_THERE_IT_S_VERY_IMPORTANT);
+				world.getNpc(DETON).setTarget(null);
+				world.getNpc(DETON).stopMove(null);
+				world.getNpc(DETON).getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, DETON_MOVE_1);
+				startQuestTimer("delete_daton", 3500, world.getNpc(DETON), null);
 				break;
 			}
 			case "delete_daton":
@@ -328,35 +328,35 @@ public class StoryOfTauti extends AbstractInstance
 			}
 			case "msg_11":
 			{
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YES_THE_SEAL_IS_GONE_WELL_YOU_GO_ON_AHEAD_I_LL_MAKE_SOME_RUBBED_COPIES_FIRST);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YES_THE_SEAL_IS_GONE_WELL_YOU_GO_ON_AHEAD_I_LL_MAKE_SOME_RUBBED_COPIES_FIRST);
 				break;
 			}
 			case "msg_12":
 			{
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_CAN_T_BELIEVE_YOU_ACTUALLY_FELL_FOR_THAT_I_WAS_JUST_USING_YOU_KAHAHA);
-				startQuestTimer("msg_13", 9000, _deton, null);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_CAN_T_BELIEVE_YOU_ACTUALLY_FELL_FOR_THAT_I_WAS_JUST_USING_YOU_KAHAHA);
+				startQuestTimer("msg_13", 9000, world.getNpc(DETON), null);
 				break;
 			}
 			case "msg_13":
 			{
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TAUTI_SO_THIS_IS_TAUTI_GIVE_ME_YOUR_POWER_YOU_ARE_MINE_KAHAHAHA);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TAUTI_SO_THIS_IS_TAUTI_GIVE_ME_YOUR_POWER_YOU_ARE_MINE_KAHAHAHA);
 				break;
 			}
 			case "spawn_scarab":
 			{
 				world.spawnGroup("flame_scarab");
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WAHHH_THIS_WAY_WAS_DANGEROUS_TOO_SAVE_ME);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WAHHH_THIS_WAY_WAS_DANGEROUS_TOO_SAVE_ME);
 				world.broadcastPacket(new ExShowScreenMessage(NpcStringId.THAT_FLAME_SCARAB_IT_S_TERRIFYING, ExShowScreenMessage.BOTTOM_RIGHT, 10000, false));
-				startQuestTimer("run_away_1", 8000, _deton, null);
+				startQuestTimer("run_away_1", 8000, world.getNpc(DETON), null);
 				break;
 			}
 			case "run_away_1":
 			{
-				_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DO_SOMETHING_ABOUT_THESE_MONSTERS_SHOW_ME_YOUR_STRENGTH_I_LL_BE_WAITING_OVER_THERE);
-				_deton.setTarget(null);
-				_deton.stopMove(null);
-				_deton.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, DETON_MOVE_1);
-				startQuestTimer("delete_daton", 5000, _deton, null);
+				world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DO_SOMETHING_ABOUT_THESE_MONSTERS_SHOW_ME_YOUR_STRENGTH_I_LL_BE_WAITING_OVER_THERE);
+				world.getNpc(DETON).setTarget(null);
+				world.getNpc(DETON).stopMove(null);
+				world.getNpc(DETON).getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, DETON_MOVE_1);
+				startQuestTimer("delete_daton", 5000, world.getNpc(DETON), null);
 				break;
 			}
 			case "switch_quest":
@@ -496,7 +496,6 @@ public class StoryOfTauti extends AbstractInstance
 			}
 			case "end_instance":
 			{
-				cancelQuestTimers("check_flower");
 				_count = 0;
 				for (Npc n : world.getAliveNpcs())
 				{
@@ -521,14 +520,14 @@ public class StoryOfTauti extends AbstractInstance
 				{
 					if (npc.isScriptValue(0))
 					{
-						_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.SEALED_TABLET_ATTACK_THE_FLAME_FLOWERS_OH_PLANT_THE_FLAME_FLOWERS_AROUND_THE_TABLET_AND_ATTACK_IT_NOW);
+						world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.SEALED_TABLET_ATTACK_THE_FLAME_FLOWERS_OH_PLANT_THE_FLAME_FLOWERS_AROUND_THE_TABLET_AND_ATTACK_IT_NOW);
 						npc.setScriptValue(1);
 						break;
 					}
 					if (npc.isScriptValue(1) && (npc.getCurrentHpPercent() < 60))
 					{
 						_seal_device.setDisplayEffect(1);
-						_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.OH_YES_LOOK_AT_THAT_THE_SEAL_IS_BREAKING_JUST_A_LITTLE_MORE);
+						world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.OH_YES_LOOK_AT_THAT_THE_SEAL_IS_BREAKING_JUST_A_LITTLE_MORE);
 						npc.setScriptValue(2);
 						break;
 					}
@@ -569,10 +568,10 @@ public class StoryOfTauti extends AbstractInstance
 					if (world.isStatus(10) && (npc.getCurrentHpPercent() < 30))
 					{
 						world.spawnGroup("last_deton");
-						_deton.setRunning();
-						_deton.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, DETON_MOVE_3);
-						startQuestTimer("msg_12", 6000, _deton, null);
-						_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.NICE_NICE_I_SEE_THAT_EVERYONE_S_FIGHTING_HARD_FOR_ME);
+						world.getNpc(DETON).setRunning();
+						world.getNpc(DETON).getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, DETON_MOVE_3);
+						startQuestTimer("msg_12", 6000, world.getNpc(DETON), null);
+						world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.NICE_NICE_I_SEE_THAT_EVERYONE_S_FIGHTING_HARD_FOR_ME);
 						world.setStatus(11);
 					}
 					if (world.isStatus(11) && (npc.getCurrentHpPercent() < 5))
@@ -603,7 +602,7 @@ public class StoryOfTauti extends AbstractInstance
 								}
 							}
 						});
-						startQuestTimer("end_instance", 52000, _deton, null);
+						startQuestTimer("end_instance", 52000, world.getNpc(DETON), null);
 						world.despawnGroup("last_deton");
 						world.despawnGroup("last_archagel");
 						playMovie(world.getPlayers(), Movie.EPIC_TAUTI_SCENE);
@@ -627,21 +626,20 @@ public class StoryOfTauti extends AbstractInstance
 				{
 					if (world.isStatus(3) && world.getAliveNpcs(MonsterInstance.class).isEmpty())
 					{
-						cancelQuestTimers("end_instance");
-						cancelQuestTimers("check_flower");
+						cancelQuestTimer("end_instance", world.getNpc(DETON), null);
 						world.getPlayers().forEach(temp -> temp.sendPacket(new ExSendUIEvent(temp, true, true, 0, 0, NpcStringId.ELAPSED_TIME)));
 						world.setStatus(4);
 						World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, pl ->
 						{
 							if ((pl.isInParty() && pl.getParty().isLeader(pl)) || pl.isGM())
 							{
-								_deton.setTarget(pl);
-								_deton.setRunning();
-								_deton.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, pl);
+								world.getNpc(DETON).setTarget(pl);
+								world.getNpc(DETON).setRunning();
+								world.getNpc(DETON).getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, pl);
 							}
 						});
-						_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ANYWAY_THE_STAKATOS_WILL_NOT_COME_OUT_ANYMORE_WHY_WELL);
-						startQuestTimer("msg_7", 7000, _deton, null);
+						world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ANYWAY_THE_STAKATOS_WILL_NOT_COME_OUT_ANYMORE_WHY_WELL);
+						startQuestTimer("msg_7", 7000, world.getNpc(DETON), null);
 					}
 					break;
 				}
@@ -650,7 +648,7 @@ public class StoryOfTauti extends AbstractInstance
 					if (world.isStatus(5) && (world.getAliveNpcs(MonsterInstance.class).size() < 2))
 					{
 						world.broadcastPacket(new ExShowScreenMessage(NpcStringId.LEFT_OR_RIGHT_WHICH_WAY, ExShowScreenMessage.BOTTOM_RIGHT, 10000, false));
-						startQuestTimer("msg_8", 3000, _deton, null);
+						startQuestTimer("msg_8", 3000, world.getNpc(DETON), null);
 						world.setStatus(6);
 					}
 					break;
@@ -660,9 +658,9 @@ public class StoryOfTauti extends AbstractInstance
 					_seal_device.setDisplayEffect(3);
 					_seal_device.doDie(npc);
 					world.broadcastPacket(new ExShowScreenMessage(NpcStringId.LET_S_GO_DOWN_THIS_WAY_I_LL_BE_RIGHT_BEHIND_YOU, ExShowScreenMessage.BOTTOM_RIGHT, 10000, false));
-					_deton.setRunning();
-					_deton.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, DETON_MOVE_2);
-					startQuestTimer("msg_11", 3000, _deton, null);
+					world.getNpc(DETON).setRunning();
+					world.getNpc(DETON).getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, DETON_MOVE_2);
+					startQuestTimer("msg_11", 3000, world.getNpc(DETON), null);
 					break;
 				}
 				case SEALED_ANGEL:
@@ -690,13 +688,13 @@ public class StoryOfTauti extends AbstractInstance
 					if (((player.isInParty() && player.getParty().isLeader(player)) || player.isGM()) && world.isStatus(1))
 					{
 						world.setStatus(2);
-						_deton.setTarget(null);
-						_deton.stopMove(null);
-						startQuestTimer("msg_4", 7000, _deton, null);
+						world.getNpc(DETON).setTarget(null);
+						world.getNpc(DETON).stopMove(null);
+						startQuestTimer("msg_4", 7000, world.getNpc(DETON), null);
 						world.broadcastPacket(new ExShowScreenMessage(NpcStringId.IT_S_A_FLAME_FLOWER_THESE_SHOULD_COME_IN_HANDY_LATER_ON, ExShowScreenMessage.BOTTOM_RIGHT, 10000, false));
 						world.getPlayers().forEach(temp -> temp.sendPacket(new ExSendUIEvent(temp, false, false, 180, 0, NpcStringId.ELAPSED_TIME)));
-						startQuestTimer("end_instance", 190000, _deton, null);
-						startQuestTimer("spawn_stacato", 5000, _deton, null);
+						startQuestTimer("end_instance", 190000, world.getNpc(DETON), null);
+						startQuestTimer("spawn_stacato", 5000, world.getNpc(DETON), null);
 					}
 					break;
 				}
@@ -704,7 +702,7 @@ public class StoryOfTauti extends AbstractInstance
 				{
 					if (world.isStatus(0))
 					{
-						startQuestTimer("check_status", 21000, _deton, player);
+						startQuestTimer("check_status", 21000, world.getNpc(DETON), player);
 						world.setStatus(1);
 					}
 					break;
@@ -714,8 +712,8 @@ public class StoryOfTauti extends AbstractInstance
 					if (world.isStatus(4))
 					{
 						world.broadcastPacket(new ExShowScreenMessage(NpcStringId.A_CROSSROADS_I_DON_T_KNOW_WHICH_WAY_WE_SHOULD_TAKE, ExShowScreenMessage.BOTTOM_RIGHT, 10000, false));
-						_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HMM_WHAT_IS_THIS_I_DON_T_THINK_I_VE_BEEN_AROUND_HERE_BEFORE_THIS_EERIE_FEELING);
-						startQuestTimer("spawn_scorpion", 5000, _deton, player);
+						world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HMM_WHAT_IS_THIS_I_DON_T_THINK_I_VE_BEEN_AROUND_HERE_BEFORE_THIS_EERIE_FEELING);
+						startQuestTimer("spawn_scorpion", 5000, world.getNpc(DETON), player);
 						world.setStatus(5);
 					}
 					break;
@@ -724,8 +722,8 @@ public class StoryOfTauti extends AbstractInstance
 				{
 					if (world.isStatus(6))
 					{
-						_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.OKAY_IT_DOES_LOOK_BETTER_THAN_THE_OTHER_WAY_THE_AIR_FEELS_BETTER_ALREADY);
-						startQuestTimer("spawn_golem", 7000, _deton, player);
+						world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.OKAY_IT_DOES_LOOK_BETTER_THAN_THE_OTHER_WAY_THE_AIR_FEELS_BETTER_ALREADY);
+						startQuestTimer("spawn_golem", 7000, world.getNpc(DETON), player);
 						world.setStatus(7);
 					}
 					break;
@@ -753,8 +751,8 @@ public class StoryOfTauti extends AbstractInstance
 				{
 					if (world.isStatus(6))
 					{
-						_deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THIS_WAY_FEELS_MUCH_SAFER_GOOD_CHOICE_THE_AIR_FEELS_DIFFERENT);
-						startQuestTimer("spawn_scarab", 7000, _deton, player);
+						world.getNpc(DETON).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THIS_WAY_FEELS_MUCH_SAFER_GOOD_CHOICE_THE_AIR_FEELS_DIFFERENT);
+						startQuestTimer("spawn_scarab", 7000, world.getNpc(DETON), player);
 						world.setStatus(7);
 					}
 					break;
@@ -773,11 +771,6 @@ public class StoryOfTauti extends AbstractInstance
 		{
 			switch (npc.getId())
 			{
-				case DETON:
-				{
-					_deton = npc;
-					break;
-				}
 				case SEAL_DEVICE:
 				{
 					_seal_device = npc;
@@ -798,7 +791,7 @@ public class StoryOfTauti extends AbstractInstance
 				}
 				case FLAME_STACATO:
 				{
-					startQuestTimer("check_flower", 3000, npc, null, true);
+					startQuestTimer("check_flower", 3000, npc, null);
 					break;
 				}
 				case FLAME_SCORPION:

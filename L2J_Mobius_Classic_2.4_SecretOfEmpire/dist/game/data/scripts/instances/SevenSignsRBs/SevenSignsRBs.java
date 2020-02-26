@@ -47,10 +47,10 @@ public class SevenSignsRBs extends AbstractInstance
 	private static final int ANAKIM_TEMPLATE_ID = 200;
 	private static final int LILITH_TEMPLATE_ID = 199;
 	
-	private static int MAX_PLAYERS_IN_ZONE = 300;
+	private static final int MAX_PLAYERS_IN_ZONE = 300;
 	
-	private static final NoRestartZone _anakim_zone = ZoneManager.getInstance().getZoneById(70052, NoRestartZone.class);
-	private static final NoRestartZone _lilith_zone = ZoneManager.getInstance().getZoneById(70053, NoRestartZone.class);
+	private static final NoRestartZone ANAKIM_ZONE = ZoneManager.getInstance().getZoneById(70052, NoRestartZone.class);
+	private static final NoRestartZone LILITH_ZONE = ZoneManager.getInstance().getZoneById(70053, NoRestartZone.class);
 	
 	// TELEPORTS
 	private static final Location[] TELEPORT_TO_DARK_ELVEN =
@@ -89,7 +89,7 @@ public class SevenSignsRBs extends AbstractInstance
 					final boolean isInCC = party.isInCommandChannel();
 					final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 					
-					if (members.size() > (MAX_PLAYERS_IN_ZONE - _anakim_zone.getPlayersInside().size()))
+					if (members.size() > (MAX_PLAYERS_IN_ZONE - ANAKIM_ZONE.getPlayersInside().size()))
 					{
 						player.sendMessage("Lilith Sanctum reached 300 players. You cannot enter now.");
 					}
@@ -128,7 +128,7 @@ public class SevenSignsRBs extends AbstractInstance
 					final boolean isInCC = party.isInCommandChannel();
 					final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 					
-					if (members.size() > (MAX_PLAYERS_IN_ZONE - _lilith_zone.getPlayersInside().size()))
+					if (members.size() > (MAX_PLAYERS_IN_ZONE - LILITH_ZONE.getPlayersInside().size()))
 					{
 						player.sendMessage("Lilith Sanctum reached 300 players. You cannot enter now.");
 					}
@@ -161,7 +161,7 @@ public class SevenSignsRBs extends AbstractInstance
 			}
 			case "REMOVE_PLAYERS_FROM_ZONE_ANAKIM":
 			{
-				for (Creature charInside : _anakim_zone.getCharactersInside())
+				for (Creature charInside : ANAKIM_ZONE.getCharactersInside())
 				{
 					if ((charInside != null) && charInside.isPlayer())
 					{
@@ -172,7 +172,7 @@ public class SevenSignsRBs extends AbstractInstance
 			}
 			case "REMOVE_PLAYERS_FROM_ZONE_LILITH":
 			{
-				for (Creature charInside : _lilith_zone.getCharactersInside())
+				for (Creature charInside : LILITH_ZONE.getCharactersInside())
 				{
 					if ((charInside != null) && charInside.isPlayer())
 					{

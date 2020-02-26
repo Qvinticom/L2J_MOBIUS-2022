@@ -192,7 +192,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 					}
 					if (questGiver.getId() == 34097) // Adonius
 					{
-						world.getParameters().set("CAPTIVES", world.spawnGroup("captives"));
+						world.setParameter("CAPTIVES", world.spawnGroup("captives"));
 						for (Npc captive : world.getParameters().getList("CAPTIVES", Npc.class))
 						{
 							captive.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.FLESH_STONE);

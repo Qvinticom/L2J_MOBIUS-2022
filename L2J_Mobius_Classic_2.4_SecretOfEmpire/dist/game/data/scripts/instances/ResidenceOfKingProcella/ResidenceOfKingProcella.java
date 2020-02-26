@@ -17,9 +17,7 @@
 package instances.ResidenceOfKingProcella;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
@@ -27,7 +25,7 @@ import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import instances.AbstractInstance;
 
 /**
- * @author RobikBobik
+ * @author RobikBobik, Mobius
  * @NOTE: Retail like working
  * @TODO: Rewrite code to modern style.
  */
@@ -46,12 +44,7 @@ public class ResidenceOfKingProcella extends AbstractInstance
 	private static final SkillHolder HURRICANE_BOLT_LV_1 = new SkillHolder(50043, 1); // When player in Radius + para
 	// Misc
 	private static final int TEMPLATE_ID = 197;
-	private static int STORM_MAX_COUNT = 16; // TODO: Max is limit ?
-	private int _procellaStormCount;
-	private RaidBossInstance _procella;
-	private MonsterInstance _minion1;
-	private MonsterInstance _minion2;
-	private MonsterInstance _minion3;
+	private static final int STORM_MAX_COUNT = 16; // TODO: Max is limit ?
 	
 	public ResidenceOfKingProcella()
 	{
@@ -69,46 +62,56 @@ public class ResidenceOfKingProcella extends AbstractInstance
 			case "ENTER":
 			{
 				enterInstance(player, npc, TEMPLATE_ID);
-				_procella = (RaidBossInstance) addSpawn(PROCELLA, 212862, 179828, -15489, 49151, false, 0, true, player.getInstanceId());
-				startQuestTimer("SPAWN_MINION", 300000 + getRandom(-15000, 15000), _procella, player);
-				startQuestTimer("SPAWN_STORM", 5000, _procella, player);
-				_procellaStormCount = 0;
+				final Instance world = player.getInstanceWorld();
+				if (world != null)
+				{
+					final Npc procella = addSpawn(PROCELLA, 212862, 179828, -15489, 49151, false, 0, true, player.getInstanceId());
+					startQuestTimer("SPAWN_MINION", 300000 + getRandom(-15000, 15000), procella, player);
+					startQuestTimer("SPAWN_STORM", 5000, procella, player);
+					world.setParameter("stormCount", 0);
+				}
 				break;
 			}
 			case "SPAWN_MINION":
 			{
-				if (npc.getId() == PROCELLA)
+				final Instance world = npc.getInstanceWorld();
+				if ((world != null) && (npc.getId() == PROCELLA))
 				{
-					_minion1 = (MonsterInstance) addSpawn(PROCELLA_GUARDIAN_1, 212663, 179421, -15486, 31011, true, 0, true, npc.getInstanceId());
-					_minion2 = (MonsterInstance) addSpawn(PROCELLA_GUARDIAN_2, 213258, 179822, -15486, 12001, true, 0, true, npc.getInstanceId());
-					_minion3 = (MonsterInstance) addSpawn(PROCELLA_GUARDIAN_3, 212558, 179974, -15486, 12311, true, 0, true, npc.getInstanceId());
-					startQuestTimer("HIDE_PROCELLA", 1000, _procella, null);
+					world.setParameter("minion1", addSpawn(PROCELLA_GUARDIAN_1, 212663, 179421, -15486, 31011, true, 0, true, npc.getInstanceId()));
+					world.setParameter("minion2", addSpawn(PROCELLA_GUARDIAN_2, 213258, 179822, -15486, 12001, true, 0, true, npc.getInstanceId()));
+					world.setParameter("minion3", addSpawn(PROCELLA_GUARDIAN_3, 212558, 179974, -15486, 12311, true, 0, true, npc.getInstanceId()));
+					startQuestTimer("HIDE_PROCELLA", 1000, world.getNpc(PROCELLA), null);
 				}
 				break;
 			}
 			case "SPAWN_STORM":
 			{
-				if (_procellaStormCount < STORM_MAX_COUNT)
+				final Instance world = npc.getInstanceWorld();
+				if ((world != null) && (world.getParameters().getInt("stormCount", 0) < STORM_MAX_COUNT))
 				{
-					_procella.useMagic(HURRICANE_SUMMON.getSkill());
-					final Npc procellaStorm = addSpawn(PROCELLA_STORM, _procella.getX() + getRandom(-500, 500), _procella.getY() + getRandom(-500, 500), _procella.getZ(), 31011, true, 0, true, npc.getInstanceId());
+					world.getNpc(PROCELLA).doCast(HURRICANE_SUMMON.getSkill());
+					final Npc procellaStorm = addSpawn(PROCELLA_STORM, world.getNpc(PROCELLA).getX() + getRandom(-500, 500), world.getNpc(PROCELLA).getY() + getRandom(-500, 500), world.getNpc(PROCELLA).getZ(), 31011, true, 0, true, npc.getInstanceId());
 					procellaStorm.setRandomWalking(true);
-					_procellaStormCount++;
-					startQuestTimer("SPAWN_STORM", 60000, _procella, null);
+					world.getParameters().increaseInt("stormCount", 1);
+					startQuestTimer("SPAWN_STORM", 60000, world.getNpc(PROCELLA), null);
 					startQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", 100, procellaStorm, player); // All time checking
 				}
 				break;
 			}
 			case "HIDE_PROCELLA":
 			{
-				if (_procella.isInvisible())
+				final Instance world = npc.getInstanceWorld();
+				if (world != null)
 				{
-					_procella.setInvisible(false);
-				}
-				else
-				{
-					_procella.setInvisible(true);
-					startQuestTimer("SPAWN_MINION", 300000 + getRandom(-15000, 15000), _procella, player);
+					if (world.getNpc(PROCELLA).isInvisible())
+					{
+						world.getNpc(PROCELLA).setInvisible(false);
+					}
+					else
+					{
+						world.getNpc(PROCELLA).setInvisible(true);
+						startQuestTimer("SPAWN_MINION", 300000 + getRandom(-15000, 15000), world.getNpc(PROCELLA), player);
+					}
 				}
 				break;
 			}
@@ -151,21 +154,24 @@ public class ResidenceOfKingProcella extends AbstractInstance
 	@Override
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
+		final Instance world = npc.getInstanceWorld();
+		if (world == null)
+		{
+			return null;
+		}
+		
 		if (npc.getId() == PROCELLA)
 		{
-			final Instance world = npc.getInstanceWorld();
-			if (world != null)
-			{
-				cancelQuestTimer("SPAWN_MINION", npc, player);
-				cancelQuestTimer("SPAWN_STORM", npc, player);
-				cancelQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", npc, player);
-				world.finishInstance();
-			}
+			cancelQuestTimer("SPAWN_MINION", npc, player);
+			cancelQuestTimer("SPAWN_STORM", npc, player);
+			cancelQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", npc, player);
+			world.finishInstance();
 		}
-		else if ((_minion1.isDead()) && (_minion2.isDead()) && (_minion3.isDead()))
+		else if ((world.getParameters().getObject("minion1", Npc.class).isDead()) && (world.getParameters().getObject("minion2", Npc.class).isDead()) && (world.getParameters().getObject("minion3", Npc.class).isDead()))
 		{
-			startQuestTimer("HIDE_PROCELLA", 1000, _procella, null);
+			startQuestTimer("HIDE_PROCELLA", 1000, world.getNpc(PROCELLA), null);
 		}
+		
 		return super.onKill(npc, player, isSummon);
 	}
 	

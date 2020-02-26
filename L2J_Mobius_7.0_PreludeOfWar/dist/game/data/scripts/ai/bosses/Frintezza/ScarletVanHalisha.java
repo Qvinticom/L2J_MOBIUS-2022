@@ -100,8 +100,8 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		cancelQuestTimers("attack");
-		cancelQuestTimers("random_Target");
+		cancelQuestTimer("attack", npc, null);
+		cancelQuestTimer("random_Target", npc, null);
 		return super.onKill(npc, killer, isSummon);
 	}
 	

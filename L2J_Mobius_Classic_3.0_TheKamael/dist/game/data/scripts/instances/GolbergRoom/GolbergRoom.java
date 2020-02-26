@@ -18,7 +18,6 @@ package instances.GolbergRoom;
 
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -26,7 +25,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import instances.AbstractInstance;
 
 /**
- * @author RobikBobik
+ * @author RobikBobik, Mobius
  * @NOTE: Party instance retail like work.
  * @TODO: Find what all drops from GOLBERG_TREASURE_CHEST
  * @TODO: Golberg skills
@@ -41,9 +40,6 @@ public class GolbergRoom extends AbstractInstance
 	private static final int GOLBERG_KEY_ROOM = 91636;
 	// Misc
 	private static final int TEMPLATE_ID = 207;
-	
-	private MonsterInstance _golberg;
-	private int _treasureCounter;
 	
 	public GolbergRoom()
 	{
@@ -82,8 +78,7 @@ public class GolbergRoom extends AbstractInstance
 						}
 						member.teleToLocation(player, 10, world);
 					}
-					_golberg = (MonsterInstance) player.getInstanceWorld().getNpc(18359);
-					startQuestTimer("GOLBERG_MOVE", 5000, _golberg, player);
+					startQuestTimer("GOLBERG_MOVE", 5000, world.getNpc(GOLBERG), player);
 				}
 				break;
 			}
@@ -93,7 +88,7 @@ public class GolbergRoom extends AbstractInstance
 				if (world != null)
 				{
 					player.sendPacket(new ExShowScreenMessage("Rats have become kings while I've been dormant.", 5000));
-					startQuestTimer("NEXT_TEXT", 7000, _golberg, player);
+					startQuestTimer("NEXT_TEXT", 7000, world.getNpc(GOLBERG), player);
 				}
 				npc.moveToLocation(11711, -86508, -10928, 0);
 				break;
@@ -104,7 +99,7 @@ public class GolbergRoom extends AbstractInstance
 				if (world != null)
 				{
 					player.sendPacket(new ExShowScreenMessage("Zaken or whatever is going wild all over the southern sea.", 5000));
-					startQuestTimer("NEXT_TEXT_2", 7000, _golberg, player);
+					startQuestTimer("NEXT_TEXT_2", 7000, world.getNpc(GOLBERG), player);
 				}
 				break;
 			}
@@ -119,13 +114,19 @@ public class GolbergRoom extends AbstractInstance
 			}
 			case "SPAWN_TRESURE":
 			{
+				final Instance world = player.getInstanceWorld();
+				if (world == null)
+				{
+					return null;
+				}
+				
 				if (player.isGM())
 				{
-					if (_treasureCounter <= 27)
+					if (world.getParameters().getInt("treasureCounter", 0) <= 27)
 					{
 						addSpawn(GOLBERG_TREASURE_CHEST, 11708 + getRandom(-1000, 1000), -86505 + getRandom(-1000, 1000), -10928, 0, true, -1, true, player.getInstanceId());
 						startQuestTimer("SPAWN_TRESURE", 1000, npc, player);
-						_treasureCounter++;
+						world.getParameters().increaseInt("treasureCounter", 1);
 					}
 				}
 				else if (player.getParty() != null)
@@ -134,81 +135,81 @@ public class GolbergRoom extends AbstractInstance
 					{
 						case 2:
 						{
-							if (_treasureCounter <= 1)
+							if (world.getParameters().getInt("treasureCounter", 0) <= 1)
 							{
 								addSpawn(GOLBERG_TREASURE_CHEST, 11708 + getRandom(-1000, 1000), -86505 + getRandom(-1000, 1000), -10928, 0, true, -1, true, player.getInstanceId());
 								startQuestTimer("SPAWN_TRESURE", 1000, npc, player);
-								_treasureCounter++;
+								world.getParameters().increaseInt("treasureCounter", 1);
 							}
 							break;
 						}
 						case 3:
 						{
-							if (_treasureCounter <= 2)
+							if (world.getParameters().getInt("treasureCounter", 0) <= 2)
 							{
 								addSpawn(GOLBERG_TREASURE_CHEST, 11708 + getRandom(-1000, 1000), -86505 + getRandom(-1000, 1000), -10928, 0, true, -1, true, player.getInstanceId());
 								startQuestTimer("SPAWN_TRESURE", 1000, npc, player);
-								_treasureCounter++;
+								world.getParameters().increaseInt("treasureCounter", 1);
 							}
 							break;
 						}
 						case 4:
 						{
-							if (_treasureCounter <= 4)
+							if (world.getParameters().getInt("treasureCounter", 0) <= 4)
 							{
 								addSpawn(GOLBERG_TREASURE_CHEST, 11708 + getRandom(-1000, 1000), -86505 + getRandom(-1000, 1000), -10928, 0, true, -1, true, player.getInstanceId());
 								startQuestTimer("SPAWN_TRESURE", 1000, npc, player);
-								_treasureCounter++;
+								world.getParameters().increaseInt("treasureCounter", 1);
 							}
 							break;
 						}
 						case 5:
 						{
-							if (_treasureCounter <= 7)
+							if (world.getParameters().getInt("treasureCounter", 0) <= 7)
 							{
 								addSpawn(GOLBERG_TREASURE_CHEST, 11708 + getRandom(-1000, 1000), -86505 + getRandom(-1000, 1000), -10928, 0, true, -1, true, player.getInstanceId());
 								startQuestTimer("SPAWN_TRESURE", 1000, npc, player);
-								_treasureCounter++;
+								world.getParameters().increaseInt("treasureCounter", 1);
 							}
 							break;
 						}
 						case 6:
 						{
-							if (_treasureCounter <= 10)
+							if (world.getParameters().getInt("treasureCounter", 0) <= 10)
 							{
 								addSpawn(GOLBERG_TREASURE_CHEST, 11708 + getRandom(-1000, 1000), -86505 + getRandom(-1000, 1000), -10928, 0, true, -1, true, player.getInstanceId());
 								startQuestTimer("SPAWN_TRESURE", 1000, npc, player);
-								_treasureCounter++;
+								world.getParameters().increaseInt("treasureCounter", 1);
 							}
 							break;
 						}
 						case 7:
 						{
-							if (_treasureCounter <= 13)
+							if (world.getParameters().getInt("treasureCounter", 0) <= 13)
 							{
 								addSpawn(GOLBERG_TREASURE_CHEST, 11708 + getRandom(-1000, 1000), -86505 + getRandom(-1000, 1000), -10928, 0, true, -1, true, player.getInstanceId());
 								startQuestTimer("SPAWN_TRESURE", 1000, npc, player);
-								_treasureCounter++;
+								world.getParameters().increaseInt("treasureCounter", 1);
 							}
 							break;
 						}
 						case 8:
 						{
-							if (_treasureCounter <= 16)
+							if (world.getParameters().getInt("treasureCounter", 0) <= 16)
 							{
 								addSpawn(GOLBERG_TREASURE_CHEST, 11708 + getRandom(-1000, 1000), -86505 + getRandom(-1000, 1000), -10928, 0, true, -1, true, player.getInstanceId());
 								startQuestTimer("SPAWN_TRESURE", 1000, npc, player);
-								_treasureCounter++;
+								world.getParameters().increaseInt("treasureCounter", 1);
 							}
 							break;
 						}
 						case 9:
 						{
-							if (_treasureCounter <= 27)
+							if (world.getParameters().getInt("treasureCounter", 0) <= 27)
 							{
 								addSpawn(GOLBERG_TREASURE_CHEST, 11708 + getRandom(-1000, 1000), -86505 + getRandom(-1000, 1000), -10928, 0, true, -1, true, player.getInstanceId());
 								startQuestTimer("SPAWN_TRESURE", 1000, npc, player);
-								_treasureCounter++;
+								world.getParameters().increaseInt("treasureCounter", 1);
 							}
 							break;
 						}

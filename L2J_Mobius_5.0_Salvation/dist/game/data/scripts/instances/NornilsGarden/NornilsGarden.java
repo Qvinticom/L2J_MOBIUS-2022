@@ -34,7 +34,7 @@ import instances.AbstractInstance;
  * Nornils Garden Instance
  * @URL https://l2wiki.com/Nornils_Garden
  * @Video https://www.youtube.com/watch?v=6QKzzmJ5GUs
- * @author Gigi
+ * @author Gigi, Mobius
  * @date 2017-02-22 - [15:22:27]
  */
 public class NornilsGarden extends AbstractInstance
@@ -120,7 +120,7 @@ public class NornilsGarden extends AbstractInstance
 					if (world.isStatus(5) && world.getAliveNpcs(ATTACABLE_MONSTERS).isEmpty())
 					{
 						world.openCloseDoor(16200016, true);
-						cancelQuestTimers("stage2");
+						cancelQuestTimer("stage2", npc, null);
 						world.spawnGroup("wave_3");
 					}
 					break;
@@ -130,14 +130,13 @@ public class NornilsGarden extends AbstractInstance
 					if (world.isStatus(6) && world.getAliveNpcs(ATTACABLE_MONSTERS).isEmpty())
 					{
 						world.openCloseDoor(16200201, true);
-						cancelQuestTimers("stage3");
-						cancelQuestTimers("check_agrro");
+						cancelQuestTimer("stage3", npc, null);
 					}
 					break;
 				}
 				case "check_agrro":
 				{
-					if ((world != null) && !npc.isDead() && !npc.isInCombat())
+					if ((world != null) && !npc.isDead() && !npc.isInCombat() && !world.getDoor(16200201).isOpen())
 					{
 						World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1500, knownChar ->
 						{
@@ -148,6 +147,7 @@ public class NornilsGarden extends AbstractInstance
 								npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, knownChar);
 							}
 						});
+						startQuestTimer("check_agrro", 1000, npc, null);
 					}
 					break;
 				}
@@ -209,7 +209,7 @@ public class NornilsGarden extends AbstractInstance
 			{
 				if (npc.getId() == BOZ_STAGE1)
 				{
-					cancelQuestTimers("stage1_1");
+					cancelQuestTimer("stage1_1", npc, null);
 					world.openCloseDoor(16200015, true);
 					world.setStatus(1);
 				}
@@ -301,7 +301,7 @@ public class NornilsGarden extends AbstractInstance
 		if (isInInstance(world) && (CommonUtil.contains(ATTACABLE_MONSTERS, npc.getId())))
 		{
 			((Attackable) npc).setCanReturnToSpawnPoint(false);
-			startQuestTimer("check_agrro", 1000, npc, null, true);
+			startQuestTimer("check_agrro", 1000, npc, null);
 		}
 		return super.onSpawn(npc);
 	}

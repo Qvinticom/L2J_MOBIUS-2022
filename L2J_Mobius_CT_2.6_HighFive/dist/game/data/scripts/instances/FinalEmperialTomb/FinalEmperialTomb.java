@@ -1173,10 +1173,10 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 				case 27:
 				{
 					final Npc activeScarlet = _world.getParameters().getObject("activeScarlet", Npc.class);
-					_world.getParameters().set("scarlet_x", activeScarlet.getX());
-					_world.getParameters().set("scarlet_y", activeScarlet.getY());
-					_world.getParameters().set("scarlet_z", activeScarlet.getZ());
-					_world.getParameters().set("scarlet_h", activeScarlet.getHeading());
+					_world.setParameter("scarlet_x", activeScarlet.getX());
+					_world.setParameter("scarlet_y", activeScarlet.getY());
+					_world.setParameter("scarlet_z", activeScarlet.getZ());
+					_world.setParameter("scarlet_h", activeScarlet.getHeading());
 					final int scarlet_a;
 					if (activeScarlet.getHeading() < 32768)
 					{
@@ -1186,7 +1186,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 					{
 						scarlet_a = Math.abs(540 - (int) (activeScarlet.getHeading() / 182.044444444));
 					}
-					_world.getParameters().set("scarlet_a", scarlet_a);
+					_world.setParameter("scarlet_a", scarlet_a);
 					broadCastPacket(_world, new SpecialCamera(activeScarlet, 250, scarlet_a, 12, 0, 1000, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new SpecialCamera(activeScarlet, 250, scarlet_a, 12, 0, 10000, 0, 0, 1, 0, 0));
 					ThreadPool.schedule(new IntroTask(_world, 28), 500);

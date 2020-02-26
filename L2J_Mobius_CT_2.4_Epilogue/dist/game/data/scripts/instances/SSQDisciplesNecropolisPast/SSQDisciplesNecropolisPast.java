@@ -137,7 +137,7 @@ public class SSQDisciplesNecropolisPast extends AbstractInstance
 		{
 			anakimGroup.add(addSpawn(entry.getKey(), entry.getValue(), false, 0, false, world.getInstanceId()));
 		}
-		world.getParameters().set("anakimGroup", anakimGroup);
+		world.setParameter("anakimGroup", anakimGroup);
 	}
 	
 	private synchronized void checkDoors(Npc npc, InstanceWorld world)

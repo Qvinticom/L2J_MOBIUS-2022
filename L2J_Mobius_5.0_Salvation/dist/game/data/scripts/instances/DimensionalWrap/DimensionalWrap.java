@@ -17,10 +17,8 @@
 package instances.DimensionalWrap;
 
 import java.util.List;
-import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.enums.CategoryType;
@@ -44,7 +42,7 @@ import instances.AbstractInstance;
  * Dimensional Wrap instance
  * @URL https://l2wiki.com/Dimensional_Warp
  * @Video https://www.youtube.com/watch?v=hOnzk0ELwIg
- * @author Gigi
+ * @author Gigi, Mobius
  * @date 2018-09-04 - [14:33:31]
  */
 public class DimensionalWrap extends AbstractInstance
@@ -82,7 +80,7 @@ public class DimensionalWrap extends AbstractInstance
 		23480, // Abyssal Harpy
 		23481, // Abyssal Binder
 		23482, // Abyssal Archon
-		23483 // Abyssal Golem
+		23483, // Abyssal Golem
 	};
 	private static final int[] TRAPS =
 	{
@@ -92,23 +90,18 @@ public class DimensionalWrap extends AbstractInstance
 		19559, // Damage trap, power 1
 		19560, // Damage trap, power 2
 		19561, // Damage trap, power 3
-		19562 // Heal Trap
+		19562, // Heal Trap
 	};
 	// Location
 	private static final Location TELEPORTS = new Location(-76136, -216216, 4040);
 	private static final Location FIRST_TELEPORT = new Location(-219544, 248776, 3360);
 	private static final Location SECOND_TELEPORT = new Location(-206756, 242009, 6584);
-	private static final Location THRID_TELEPORT = new Location(-219813, 248484, 9928);
+	private static final Location THIRD_TELEPORT = new Location(-219813, 248484, 9928);
 	private static final Location FOURTH_TELEPORT = new Location(-87191, -210129, 6984);
 	// Misc
 	private static final int TEMPLATE_ID = 250;
 	private static final int DIMENSIONAL_DARK_FORCES = 16415;
 	private static final int WARP_CRYSTAL = 39597;
-	protected double _chance = 0;
-	protected int _count = 0;
-	public int _skilllevel = 1;
-	public int _worldState = 0;
-	protected ScheduledFuture<?> _debufTask;
 	
 	public DimensionalWrap()
 	{
@@ -125,429 +118,534 @@ public class DimensionalWrap extends AbstractInstance
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		final Instance world = npc.getInstanceWorld();
-		if (event.equals("enterInstance"))
+		
+		switch (event)
 		{
-			if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
+			case "enterInstance":
 			{
-				htmltext = "no_awakened.html";
+				if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
+				{
+					htmltext = "no_awakened.html";
+				}
+				else if (!player.isInParty())
+				{
+					enterInstance(player, npc, TEMPLATE_ID);
+				}
+				else if (player.isInParty())
+				{
+					if (!player.getParty().isLeader(player))
+					{
+						player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
+					}
+					else
+					{
+						final Party party = player.getParty();
+						final List<PlayerInstance> members = party.getMembers();
+						for (PlayerInstance member : members)
+						{
+							if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
+							{
+								enterInstance(member, npc, TEMPLATE_ID);
+							}
+						}
+					}
+				}
+				break;
 			}
-			else if (!player.isInParty())
+			case "33975-01.html":
 			{
-				enterInstance(player, npc, TEMPLATE_ID);
+				htmltext = event;
+				break;
 			}
-			else if (player.isInParty())
+			case "12_warp_crystals":
 			{
-				if (!player.getParty().isLeader(player))
+				final Instance world = npc.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return null;
+				}
+				
+				world.setParameter("chance", 0.3);
+				if (!player.isInParty())
+				{
+					world.setParameter("count", 12);
+					checkCrystallCount(world, npc);
+					break;
+				}
+				else if (player.isInParty() && !player.getParty().isLeader(player))
 				{
 					player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
+					break;
 				}
-				else
+				switch (player.getParty().getMemberCount())
 				{
-					final Party party = player.getParty();
-					final List<PlayerInstance> members = party.getMembers();
-					for (PlayerInstance member : members)
+					case 2:
 					{
-						if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
-						{
-							enterInstance(member, npc, TEMPLATE_ID);
-						}
+						world.setParameter("count", 6);
+						checkCrystallCount(world, npc);
+						break;
+					}
+					case 3:
+					{
+						world.setParameter("count", 4);
+						checkCrystallCount(world, npc);
+						break;
+					}
+					case 4:
+					{
+						world.setParameter("count", 3);
+						checkCrystallCount(world, npc);
+						break;
 					}
 				}
+				break;
 			}
-		}
-		if (isInInstance(world))
-		{
-			switch (event)
+			case "240_warp_crystals":
 			{
-				case "33975-01.html":
+				final Instance world = npc.getInstanceWorld();
+				if (!isInInstance(world))
 				{
-					htmltext = event;
+					return null;
+				}
+				
+				world.setParameter("chance", 0.6);
+				if (!player.isInParty())
+				{
+					world.setParameter("count", 240);
+					checkCrystallCount(world, npc);
 					break;
 				}
-				case "12_warp_crystals":
+				else if (player.isInParty() && !player.getParty().isLeader(player))
 				{
-					_chance = 0.3;
-					if (!player.isInParty())
+					player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
+					break;
+				}
+				switch (player.getParty().getMemberCount())
+				{
+					case 2:
 					{
-						_count = 12;
-						CheckCrystallCount(world, player, npc);
+						world.setParameter("count", 120);
+						checkCrystallCount(world, npc);
 						break;
 					}
-					else if (player.isInParty() && !player.getParty().isLeader(player))
+					case 3:
 					{
-						player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
+						world.setParameter("count", 80);
+						checkCrystallCount(world, npc);
 						break;
 					}
-					switch (player.getParty().getMemberCount())
+					case 4:
 					{
-						case 2:
-						{
-							_count = 6;
-							CheckCrystallCount(world, player, npc);
-							break;
-						}
-						case 3:
-						{
-							_count = 4;
-							CheckCrystallCount(world, player, npc);
-							break;
-						}
-						case 4:
-						{
-							_count = 3;
-							CheckCrystallCount(world, player, npc);
-							break;
-						}
-					}
-					break;
-				}
-				case "240_warp_crystals":
-				{
-					_chance = 0.6;
-					if (!player.isInParty())
-					{
-						_count = 240;
-						CheckCrystallCount(world, player, npc);
+						world.setParameter("count", 60);
+						checkCrystallCount(world, npc);
 						break;
 					}
-					else if (player.isInParty() && !player.getParty().isLeader(player))
+				}
+				break;
+			}
+			case "1200_warp_crystals":
+			{
+				final Instance world = npc.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return null;
+				}
+				
+				world.setParameter("chance", 0.9);
+				if (!player.isInParty())
+				{
+					world.setParameter("count", 1200);
+					checkCrystallCount(world, npc);
+					break;
+				}
+				else if (player.isInParty() && !player.getParty().isLeader(player))
+				{
+					player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
+					break;
+				}
+				switch (player.getParty().getMemberCount())
+				{
+					case 2:
 					{
-						player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
+						world.setParameter("count", 600);
+						checkCrystallCount(world, npc);
 						break;
 					}
-					switch (player.getParty().getMemberCount())
+					case 3:
 					{
-						case 2:
-						{
-							_count = 120;
-							CheckCrystallCount(world, player, npc);
-							break;
-						}
-						case 3:
-						{
-							_count = 80;
-							CheckCrystallCount(world, player, npc);
-							break;
-						}
-						case 4:
-						{
-							_count = 60;
-							CheckCrystallCount(world, player, npc);
-							break;
-						}
-					}
-					break;
-				}
-				case "1200_warp_crystals":
-				{
-					_chance = 0.9;
-					if (!player.isInParty())
-					{
-						_count = 1200;
-						CheckCrystallCount(world, player, npc);
+						world.setParameter("count", 400);
+						checkCrystallCount(world, npc);
 						break;
 					}
-					else if (player.isInParty() && !player.getParty().isLeader(player))
+					case 4:
 					{
-						player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
+						world.setParameter("count", 300);
+						checkCrystallCount(world, npc);
 						break;
 					}
-					switch (player.getParty().getMemberCount())
-					{
-						case 2:
-						{
-							_count = 600;
-							CheckCrystallCount(world, player, npc);
-							break;
-						}
-						case 3:
-						{
-							_count = 400;
-							CheckCrystallCount(world, player, npc);
-							break;
-						}
-						case 4:
-						{
-							_count = 300;
-							CheckCrystallCount(world, player, npc);
-							break;
-						}
-					}
-					break;
 				}
-				case "send_6_f":
+				break;
+			}
+			case "send_6_f":
+			{
+				final Instance world = npc.getInstanceWorld();
+				if (!isInInstance(world))
 				{
-					if (_worldState == 0)
+					return null;
+				}
+				
+				if (world.getParameters().getInt("worldState", 0) == 0)
+				{
+					htmltext = "33975-02.html";
+					break;
+				}
+				if (player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL", 0) == 0)
+				{
+					htmltext = "33975-05.html";
+					break;
+				}
+				
+				for (Npc n : world.getAliveNpcs())
+				{
+					if (n.getId() != EINSTER)
 					{
-						htmltext = "33975-02.html";
-						break;
+						n.deleteMe();
 					}
-					if (player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL", 0) == 0)
+				}
+				if (world.getStatus() < 5)
+				{
+					world.setStatus(5);
+					cancelQuestTimer("SECOND_SPAWN", null, world.getFirstPlayer());
+					cancelQuestTimer("THIRD_SPAWN", null, world.getFirstPlayer());
+					startQuestTimer("START_STAGE", 5000, null, world.getFirstPlayer());
+				}
+				for (PlayerInstance pl : world.getPlayers())
+				{
+					pl.teleToLocation(FIRST_TELEPORT, world.getTemplateId());
+				}
+				break;
+			}
+			case "send_11_f":
+			{
+				final Instance world = npc.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return null;
+				}
+				
+				if (world.getParameters().getInt("worldState", 0) == 0)
+				{
+					htmltext = "33975-02.html";
+					break;
+				}
+				if ((player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL", 0) == 0) || (player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL") < 2))
+				{
+					htmltext = "33975-05.html";
+					break;
+				}
+				
+				for (Npc n : world.getAliveNpcs())
+				{
+					if (n.getId() != EINSTER)
 					{
-						htmltext = "33975-05.html";
-						break;
+						n.deleteMe();
 					}
-					
-					for (Npc n : world.getAliveNpcs())
+				}
+				if (world.getStatus() < 10)
+				{
+					world.setStatus(10);
+					cancelQuestTimer("SECOND_SPAWN", null, world.getFirstPlayer());
+					cancelQuestTimer("THIRD_SPAWN", null, world.getFirstPlayer());
+					startQuestTimer("START_STAGE", 5000, null, world.getFirstPlayer());
+				}
+				for (PlayerInstance pl : world.getPlayers())
+				{
+					pl.teleToLocation(SECOND_TELEPORT, world.getTemplateId());
+				}
+				break;
+			}
+			case "send_16_f":
+			{
+				final Instance world = npc.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return null;
+				}
+				
+				if (world.getParameters().getInt("worldState", 0) == 0)
+				{
+					htmltext = "33975-02.html";
+					break;
+				}
+				if ((player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL", 0) == 0) || (player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL") < 3))
+				{
+					htmltext = "33975-05.html";
+					break;
+				}
+				
+				for (Npc n : world.getAliveNpcs())
+				{
+					if (n.getId() != EINSTER)
 					{
-						if (n.getId() != EINSTER)
+						n.deleteMe();
+					}
+				}
+				if (world.getStatus() < 15)
+				{
+					world.setStatus(15);
+					cancelQuestTimer("SECOND_SPAWN", null, world.getFirstPlayer());
+					cancelQuestTimer("THIRD_SPAWN", null, world.getFirstPlayer());
+					startQuestTimer("START_STAGE", 5000, null, world.getFirstPlayer());
+				}
+				for (PlayerInstance pl : world.getPlayers())
+				{
+					pl.teleToLocation(THIRD_TELEPORT, world.getTemplateId());
+				}
+				break;
+			}
+			case "send_21_f":
+			{
+				final Instance world = npc.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return null;
+				}
+				
+				if (world.getParameters().getInt("worldState", 0) == 0)
+				{
+					htmltext = "33975-02.html";
+					break;
+				}
+				if ((player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL", 0) == 0) || (player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL") < 4))
+				{
+					htmltext = "33975-05.html";
+					break;
+				}
+				
+				for (Npc n : world.getAliveNpcs())
+				{
+					if (n.getId() != EINSTER)
+					{
+						n.deleteMe();
+					}
+				}
+				if (world.getStatus() < 20)
+				{
+					world.setStatus(20);
+					cancelQuestTimer("SECOND_SPAWN", null, world.getFirstPlayer());
+					cancelQuestTimer("THIRD_SPAWN", null, world.getFirstPlayer());
+					startQuestTimer("START_STAGE", 5000, null, world.getFirstPlayer());
+				}
+				for (PlayerInstance pl : world.getPlayers())
+				{
+					pl.teleToLocation(TELEPORTS, world.getTemplateId());
+				}
+				break;
+			}
+			case "send_26_f":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return null;
+				}
+				
+				if (world.getParameters().getInt("worldState", 0) == 0)
+				{
+					htmltext = "33975-02.html";
+					break;
+				}
+				if ((player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL", 0) == 0) || (player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL") < 5))
+				{
+					htmltext = "33975-05.html";
+					break;
+				}
+				
+				for (Npc n : world.getAliveNpcs())
+				{
+					if (n.getId() != EINSTER)
+					{
+						n.deleteMe();
+					}
+				}
+				if (world.getStatus() < 25)
+				{
+					world.setStatus(25);
+					cancelQuestTimer("SECOND_SPAWN", null, world.getFirstPlayer());
+					cancelQuestTimer("THIRD_SPAWN", null, world.getFirstPlayer());
+					startQuestTimer("START_STAGE", 5000, null, world.getFirstPlayer());
+				}
+				for (PlayerInstance pl : world.getPlayers())
+				{
+					pl.teleToLocation(FOURTH_TELEPORT, world.getTemplateId());
+				}
+				break;
+			}
+			case "jump_location":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return null;
+				}
+				player.teleToLocation(TELEPORTS, world.getTemplateId());
+				break;
+			}
+			case "SALAMANDRA_SPAWN":
+			case "SALAMANDRA_SPAWN_DUMMY":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return null;
+				}
+				if (getRandom(100) < (world.getParameters().getInt("worldState", 0) / 2))
+				{
+					final Npc salamandra = addSpawn(world.getParameters().getInt("worldState", 0) < 17 ? DIMENSIONAL_SALAMANDRA : UNWORDLY_SALAMANDER, npc, false, 0, false, world.getId());
+					salamandra.setRunning();
+					World.getInstance().forEachVisibleObjectInRange(salamandra, PlayerInstance.class, 2500, p ->
+					{
+						if ((p != null) && !p.isDead())
 						{
-							n.deleteMe();
+							addAttackPlayerDesire(salamandra, p);
 						}
-					}
-					if (world.getStatus() < 5)
-					{
-						world.setStatus(5);
-						cancelQuestTimers("SECOND_SPAWN");
-						cancelQuestTimers("THRID_SPAWN");
-						startQuestTimer("START_STAGE", 5000, npc, null);
-					}
-					for (PlayerInstance pl : world.getPlayers())
-					{
-						pl.teleToLocation(FIRST_TELEPORT, world.getTemplateId());
-					}
-					break;
+					});
 				}
-				case "send_11_f":
+				break;
+			}
+			case "START_STAGE":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
 				{
-					if (_worldState == 0)
-					{
-						htmltext = "33975-02.html";
-						break;
-					}
-					if ((player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL", 0) == 0) || (player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL") < 2))
-					{
-						htmltext = "33975-05.html";
-						break;
-					}
-					for (Npc n : world.getAliveNpcs())
-					{
-						if (n.getId() != EINSTER)
-						{
-							n.deleteMe();
-						}
-					}
-					if (world.getStatus() < 10)
-					{
-						world.setStatus(10);
-						cancelQuestTimers("SECOND_SPAWN");
-						cancelQuestTimers("THRID_SPAWN");
-						startQuestTimer("START_STAGE", 5000, npc, null);
-					}
-					for (PlayerInstance pl : world.getPlayers())
-					{
-						pl.teleToLocation(SECOND_TELEPORT, world.getTemplateId());
-					}
-					break;
+					return null;
 				}
-				case "send_16_f":
+				world.setStatus(world.getStatus() + 1);
+				world.setParameter("worldState", world.getStatus());
+				world.broadcastPacket(new ExShowScreenMessage(NpcStringId.DIMENSIONAL_WARP_LV_S1, ExShowScreenMessage.TOP_CENTER, 10000, true, String.valueOf(world.getStatus())));
+				startQuestTimer("FIRST_SPAWN", 1500, null, world.getFirstPlayer());
+				break;
+			}
+			case "FIRST_SPAWN":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
 				{
-					if (_worldState == 0)
-					{
-						htmltext = "33975-02.html";
-						break;
-					}
-					if ((player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL", 0) == 0) || (player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL") < 3))
-					{
-						htmltext = "33975-05.html";
-						break;
-					}
-					for (Npc n : world.getAliveNpcs())
-					{
-						if (n.getId() != EINSTER)
-						{
-							n.deleteMe();
-						}
-					}
-					if (world.getStatus() < 15)
-					{
-						world.setStatus(15);
-						cancelQuestTimers("SECOND_SPAWN");
-						cancelQuestTimers("THRID_SPAWN");
-						startQuestTimer("START_STAGE", 5000, npc, null);
-					}
-					for (PlayerInstance pl : world.getPlayers())
-					{
-						pl.teleToLocation(THRID_TELEPORT, world.getTemplateId());
-					}
-					break;
+					return null;
 				}
-				case "send_21_f":
+				final int worldState = world.getParameters().getInt("worldState", 0);
+				world.spawnGroup(worldState + "_first_spawn");
+				world.spawnGroup(worldState + "_trap_spawn");
+				startQuestTimer("SECOND_SPAWN", 40000, null, world.getFirstPlayer());
+				startQuestTimer("DEBUFF_TASK", 10000, null, world.getFirstPlayer(), true);
+				break;
+			}
+			case "DEBUFF_TASK":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
 				{
-					if (_worldState == 0)
-					{
-						htmltext = "33975-02.html";
-						break;
-					}
-					if ((player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL", 0) == 0) || (player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL") < 4))
-					{
-						htmltext = "33975-05.html";
-						break;
-					}
-					for (Npc n : world.getAliveNpcs())
-					{
-						if (n.getId() != EINSTER)
-						{
-							n.deleteMe();
-						}
-					}
-					if (world.getStatus() < 20)
-					{
-						world.setStatus(20);
-						cancelQuestTimers("SECOND_SPAWN");
-						cancelQuestTimers("THRID_SPAWN");
-						startQuestTimer("START_STAGE", 5000, npc, null);
-					}
-					for (PlayerInstance pl : world.getPlayers())
-					{
-						pl.teleToLocation(TELEPORTS, world.getTemplateId());
-					}
-					break;
+					return null;
 				}
-				case "send_26_f":
+				int skilllevel = 1;
+				final int worldState = world.getParameters().getInt("worldState", 0);
+				if ((worldState > 0) && (worldState <= 11))
 				{
-					if (_worldState == 0)
+					skilllevel = 1;
+				}
+				else if ((worldState > 11) && (worldState <= 20))
+				{
+					skilllevel = 2;
+				}
+				else if ((worldState > 20) && (worldState <= 30))
+				{
+					skilllevel = 3;
+				}
+				else if (worldState > 30)
+				{
+					skilllevel = 4;
+				}
+				final Skill skill = SkillData.getInstance().getSkill(DIMENSIONAL_DARK_FORCES, skilllevel);
+				for (PlayerInstance p : world.getPlayers())
+				{
+					if ((p != null) && !p.isDead())
 					{
-						htmltext = "33975-02.html";
-						break;
+						skill.applyEffects(p, p);
 					}
-					if ((player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL", 0) == 0) || (player.getVariables().getInt("DIMENSIONAL_WRAP_LEVEL") < 5))
+				}
+				break;
+			}
+			case "SECOND_SPAWN":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return null;
+				}
+				world.spawnGroup(world.getParameters().getInt("worldState", 0) + "_second_spawn");
+				startQuestTimer("THIRD_SPAWN", 40000, null, world.getFirstPlayer());
+				break;
+			}
+			case "THIRD_SPAWN":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return null;
+				}
+				world.spawnGroup(world.getParameters().getInt("worldState", 0) + "_thred_spawn");
+				break;
+			}
+			case "CHANGE_LOCATION":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return null;
+				}
+				world.getAliveNpcs(TRAPS).forEach(Npc::deleteMe);
+				world.spawnGroup(world.getParameters().getInt("worldState", 0) + "_trap_spawn");
+				startQuestTimer("CHANGE_LOCATION", 60000 - (world.getParameters().getInt("worldState", 0) * 1430), null, world.getFirstPlayer());
+				break;
+			}
+			case "SWITCH_STAGE":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return null;
+				}
+				if (world.getAliveNpcs(MONSTERS).isEmpty())
+				{
+					world.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_SURROUNDING_ENERGY_HAS_DISSIPATED, ExShowScreenMessage.TOP_CENTER, 5000, true));
+					world.broadcastPacket(new Earthquake(npc, 50, 5));
+					world.openCloseDoor(world.getTemplateParameters().getInt(world.getParameters().getInt("worldState", 0) + "_st_door"), true);
+					clean(world.getFirstPlayer());
+					if (world.getParameters().getInt("worldState", 0) < 35)
 					{
-						htmltext = "33975-05.html";
-						break;
+						startQuestTimer("NEXT_STAGE", 5000, null, world.getFirstPlayer());
 					}
-					for (Npc n : world.getAliveNpcs())
+				}
+				break;
+			}
+			case "NEXT_STAGE":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return null;
+				}
+				world.broadcastPacket(new ExShowScreenMessage(NpcStringId.S1_SECONDS_HAVE_BEEN_ADDED_TO_THE_INSTANCE_ZONE_DURATION, ExShowScreenMessage.TOP_CENTER, 5000, true, String.valueOf(180)));
+				world.setDuration((int) ((world.getRemainingTime() / 60000) + 3));
+				startQuestTimer("START_STAGE", 8000, null, world.getFirstPlayer());
+				for (Npc n : world.getAliveNpcs())
+				{
+					if (n.getId() != EINSTER)
 					{
-						if (n.getId() != EINSTER)
-						{
-							n.deleteMe();
-						}
+						n.deleteMe();
 					}
-					if (world.getStatus() < 25)
-					{
-						world.setStatus(25);
-						cancelQuestTimers("SECOND_SPAWN");
-						cancelQuestTimers("THRID_SPAWN");
-						startQuestTimer("START_STAGE", 5000, npc, null);
-					}
-					for (PlayerInstance pl : world.getPlayers())
-					{
-						pl.teleToLocation(FOURTH_TELEPORT, world.getTemplateId());
-					}
-					break;
 				}
-				case "jump_location":
-				{
-					player.teleToLocation(TELEPORTS, world.getTemplateId());
-					break;
-				}
-				case "SALAMANDRA_SPAWN":
-				case "SALAMANDRA_SPAWN_DUMMY":
-				{
-					if (getRandom(100) < (_worldState / 2))
-					{
-						final Npc salamandra = addSpawn(_worldState < 17 ? DIMENSIONAL_SALAMANDRA : UNWORDLY_SALAMANDER, npc, false, 0, false, world.getId());
-						salamandra.setRunning();
-						World.getInstance().forEachVisibleObjectInRange(salamandra, PlayerInstance.class, 2500, p ->
-						{
-							if ((p != null) && !p.isDead())
-							{
-								addAttackPlayerDesire(salamandra, p);
-							}
-						});
-					}
-					break;
-				}
-				case "START_STAGE":
-				{
-					world.setStatus(world.getStatus() + 1);
-					_worldState = world.getStatus();
-					world.broadcastPacket(new ExShowScreenMessage(NpcStringId.DIMENSIONAL_WARP_LV_S1, ExShowScreenMessage.TOP_CENTER, 10000, true, String.valueOf(world.getStatus())));
-					startQuestTimer("FIRST_SPAWN", 1500, npc, null);
-					break;
-				}
-				case "FIRST_SPAWN":
-				{
-					world.spawnGroup(_worldState + "_first_spawn");
-					world.spawnGroup(_worldState + "_trap_spawn");
-					startQuestTimer("SECOND_SPAWN", 40000, npc, null);
-					_debufTask = ThreadPool.scheduleAtFixedRate(() ->
-					{
-						if ((_worldState > 0) && (_worldState <= 11))
-						{
-							_skilllevel = 1;
-						}
-						else if ((_worldState > 11) && (_worldState <= 20))
-						{
-							_skilllevel = 2;
-						}
-						else if ((_worldState > 20) && (_worldState <= 30))
-						{
-							_skilllevel = 3;
-						}
-						else if (_worldState > 30)
-						{
-							_skilllevel = 4;
-						}
-						final Skill skill = SkillData.getInstance().getSkill(DIMENSIONAL_DARK_FORCES, _skilllevel);
-						for (PlayerInstance p : world.getPlayers())
-						{
-							if ((p != null) && !p.isDead())
-							{
-								skill.applyEffects(p, p);
-							}
-						}
-					}, 5000, 10000);
-					break;
-				}
-				case "SECOND_SPAWN":
-				{
-					world.spawnGroup(_worldState + "_second_spawn");
-					startQuestTimer("THRID_SPAWN", 40000, npc, null);
-					break;
-				}
-				case "THRID_SPAWN":
-				{
-					world.spawnGroup(_worldState + "_thred_spawn");
-					break;
-				}
-				case "CHANGE_LOCATION":
-				{
-					world.getAliveNpcs(TRAPS).forEach(t -> t.deleteMe());
-					world.spawnGroup(_worldState + "_trap_spawn");
-					startQuestTimer("CHANGE_LOCATION", 60000 - (_worldState * 1430), npc, null);
-					break;
-				}
-				case "SWITCH_STAGE":
-				{
-					if (world.getAliveNpcs(MONSTERS).isEmpty())
-					{
-						world.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_SURROUNDING_ENERGY_HAS_DISSIPATED, ExShowScreenMessage.TOP_CENTER, 5000, true));
-						world.broadcastPacket(new Earthquake(npc, 50, 5));
-						world.openCloseDoor(world.getTemplateParameters().getInt(_worldState + "_st_door"), true);
-						Clean();
-						if (_worldState < 35)
-						{
-							startQuestTimer("NEXT_STAGE", 5000, npc, null);
-						}
-					}
-					break;
-				}
-				case "NEXT_STAGE":
-				{
-					world.broadcastPacket(new ExShowScreenMessage(NpcStringId.S1_SECONDS_HAVE_BEEN_ADDED_TO_THE_INSTANCE_ZONE_DURATION, ExShowScreenMessage.TOP_CENTER, 5000, true, String.valueOf(180)));
-					world.setDuration((int) ((world.getRemainingTime() / 60000) + 3));
-					startQuestTimer("START_STAGE", 8000, npc, null);
-					for (Npc n : world.getAliveNpcs())
-					{
-						if (n.getId() != EINSTER)
-						{
-							n.deleteMe();
-						}
-					}
-					break;
-				}
+				break;
 			}
 		}
 		return htmltext;
@@ -559,19 +657,20 @@ public class DimensionalWrap extends AbstractInstance
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
 		{
-			if (CommonUtil.contains(MONSTERS, npc.getId()) && (getRandom(100) < _chance))
+			if (CommonUtil.contains(MONSTERS, npc.getId()) && (getRandom(100) < world.getParameters().getDouble("chance", 0)))
 			{
-				if (_worldState < 9)
+				final int worldState = world.getParameters().getInt("worldState", 0);
+				if (worldState < 9)
 				{
 					addSpawn(DIMENSIONAL_IMP, npc, true, 0, false, world.getId());
 					world.broadcastPacket(new ExShowScreenMessage(NpcStringId.DIMENSIONAL_IMP, ExShowScreenMessage.TOP_CENTER, 5000, true));
 				}
-				else if ((_worldState >= 9) && (_worldState < 20))
+				else if ((worldState >= 9) && (worldState < 20))
 				{
 					addSpawn(UNWORDLY_IMP, npc, true, 0, false, world.getId());
 					world.broadcastPacket(new ExShowScreenMessage(NpcStringId.UNWORLDLY_IMP, ExShowScreenMessage.TOP_CENTER, 5000, true));
 				}
-				else if (_worldState >= 20)
+				else if (worldState >= 20)
 				{
 					addSpawn(ABYSSAL_IMP, npc, true, 0, false, world.getId());
 					world.broadcastPacket(new ExShowScreenMessage(NpcStringId.ABYSSAL_IMP, ExShowScreenMessage.TOP_CENTER, 5000, true));
@@ -581,7 +680,7 @@ public class DimensionalWrap extends AbstractInstance
 			{
 				world.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_INSTANCE_ZONE_WILL_CLOSE_SOON, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				world.finishInstance(3);
-				Clean();
+				clean(world.getFirstPlayer());
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -590,7 +689,8 @@ public class DimensionalWrap extends AbstractInstance
 	@Override
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
-		if (_worldState == 20)
+		final Instance world = npc.getInstanceWorld();
+		if (isInInstance(world) && (world.getParameters().getInt("worldState", 0) == 20))
 		{
 			return "33975-04.html";
 		}
@@ -607,18 +707,18 @@ public class DimensionalWrap extends AbstractInstance
 			{
 				case SALAMANDRA_GENERATOR:
 				{
-					startQuestTimer("SALAMANDRA_SPAWN", 25000, npc, null, true);
-					startQuestTimer("CHANGE_LOCATION", 60000 - (_worldState * 1300), npc, null);
+					startQuestTimer("SALAMANDRA_SPAWN", 25000, null, world.getFirstPlayer(), true);
+					startQuestTimer("CHANGE_LOCATION", 60000 - (world.getParameters().getInt("worldState", 0) * 1300), null, world.getFirstPlayer());
 					break;
 				}
 				case SALAMANDRA_GENERATOR_DUMMY:
 				{
-					startQuestTimer("SALAMANDRA_SPAWN_DUMMY", 20000, npc, null, true);
+					startQuestTimer("SALAMANDRA_SPAWN_DUMMY", 20000, null, world.getFirstPlayer(), true);
 					break;
 				}
 				case DEMINSIONAL_INVISIBLE_FRAGMENT:
 				{
-					startQuestTimer("SWITCH_STAGE", 5000, npc, null, true);
+					startQuestTimer("SWITCH_STAGE", 5000, null, world.getFirstPlayer(), true);
 					break;
 				}
 			}
@@ -626,47 +726,43 @@ public class DimensionalWrap extends AbstractInstance
 		return super.onSpawn(npc);
 	}
 	
-	public void CheckCrystallCount(Instance world, PlayerInstance player, Npc npc)
+	public void checkCrystallCount(Instance world, Npc npc)
 	{
 		boolean canStart = true;
 		for (PlayerInstance p : world.getPlayers())
 		{
-			if (p.getInventory().getInventoryItemCount(WARP_CRYSTAL, -1) < _count)
+			if (p.getInventory().getInventoryItemCount(WARP_CRYSTAL, -1) < world.getParameters().getInt("count", 0))
 			{
 				for (PlayerInstance ps : world.getPlayers())
 				{
 					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
 					packet.setHtml(getHtm(ps, "33975-03.html"));
-					packet.replace("%count%", Integer.toString(_count));
+					packet.replace("%count%", Integer.toString(world.getParameters().getInt("count", 0)));
 					ps.sendPacket(packet);
 					ps.sendPacket(new SystemMessage(SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED).addString(ps.getName()));
 					canStart = false;
 				}
 			}
 		}
-		if (!canStart || (_worldState != 0))
+		if (!canStart || (world.getParameters().getInt("worldState", 0) != 0))
 		{
 			return;
 		}
 		
-		startQuestTimer("START_STAGE", 1000, npc, null);
+		startQuestTimer("START_STAGE", 1000, null, world.getFirstPlayer());
 		for (PlayerInstance p : world.getPlayers())
 		{
-			takeItems(p, WARP_CRYSTAL, _count);
+			takeItems(p, WARP_CRYSTAL, world.getParameters().getInt("count", 0));
 		}
 	}
 	
-	protected void Clean()
+	protected void clean(PlayerInstance player)
 	{
-		cancelQuestTimers("SWITCH_STAGE");
-		cancelQuestTimers("SALAMANDRA_SPAWN");
-		cancelQuestTimers("SALAMANDRA_SPAWN_DUMMY");
-		cancelQuestTimers("CHANGE_LOCATION");
-		if (_debufTask != null)
-		{
-			_debufTask.cancel(false);
-			_debufTask = null;
-		}
+		cancelQuestTimer("SWITCH_STAGE", null, player);
+		cancelQuestTimer("SALAMANDRA_SPAWN", null, player);
+		cancelQuestTimer("SALAMANDRA_SPAWN_DUMMY", null, player);
+		cancelQuestTimer("CHANGE_LOCATION", null, player);
+		cancelQuestTimer("DEBUFF_TASK", null, player);
 	}
 	
 	public static void main(String[] args)

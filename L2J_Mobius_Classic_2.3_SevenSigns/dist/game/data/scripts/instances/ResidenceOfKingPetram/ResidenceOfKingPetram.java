@@ -18,9 +18,7 @@ package instances.ResidenceOfKingPetram;
 
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -28,7 +26,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 import instances.AbstractInstance;
 
 /**
- * @author RobikBobik
+ * @author RobikBobik, Mobius
  * @NOTE: Retail like working
  * @TODO: Rewrite code to modern style.
  * @TODO: Petram Skills and minion skills
@@ -41,17 +39,11 @@ public class ResidenceOfKingPetram extends AbstractInstance
 	private static final int PETRAM_PIECE = 29116;
 	private static final int PETRAM_FRAGMENT = 29117;
 	// Skills
-	private static SkillHolder EARTh_ENERGY = new SkillHolder(50066, 1); // When spawn Minion.
-	private static SkillHolder EARTh_FURY = new SkillHolder(50059, 1); // When change invul state.
-	private static SkillHolder TEST = new SkillHolder(5712, 1); // TODO: This test skill is only for visual effect, but need to find correct skill ID.
+	private static final SkillHolder EARTH_ENERGY = new SkillHolder(50066, 1); // When spawn Minion.
+	private static final SkillHolder EARTH_FURY = new SkillHolder(50059, 1); // When change invul state.
+	private static final SkillHolder TEST = new SkillHolder(5712, 1); // TODO: This test skill is only for visual effect, but need to find correct skill ID.
 	// Misc
 	private static final int TEMPLATE_ID = 198;
-	private RaidBossInstance _petram = null;
-	private MonsterInstance _minion_1 = null;
-	private MonsterInstance _minion_2 = null;
-	private MonsterInstance _minion_3 = null;
-	private MonsterInstance _minion_4 = null;
-	private boolean _spawned_minions;
 	
 	public ResidenceOfKingPetram()
 	{
@@ -70,54 +62,63 @@ public class ResidenceOfKingPetram extends AbstractInstance
 			case "ENTER":
 			{
 				enterInstance(player, npc, TEMPLATE_ID);
-				if (player.getInstanceWorld() != null)
-				{
-					_petram = (RaidBossInstance) player.getInstanceWorld().getNpc(PETRAM);
-				}
 				break;
 			}
 			case "SPAWN_MINION":
 			{
-				_petram.useMagic(EARTh_ENERGY.getSkill());
-				
-				// Prevent to double or higher spawn when HP is between 68-70% + etc...
-				if (!_spawned_minions)
+				final Instance world = npc.getInstanceWorld();
+				if (world != null)
 				{
-					_minion_1 = (MonsterInstance) addSpawn(npc, PETRAM_PIECE, 221543, 191530, -15486, 1131, false, -1, true, npc.getInstanceId());
-					_minion_2 = (MonsterInstance) addSpawn(npc, PETRAM_FRAGMENT, 222069, 192019, -15486, 49364, false, -1, true, npc.getInstanceId());
-					_minion_3 = (MonsterInstance) addSpawn(npc, PETRAM_PIECE, 222595, 191479, -15486, 34013, false, -1, true, npc.getInstanceId());
-					_minion_4 = (MonsterInstance) addSpawn(npc, PETRAM_FRAGMENT, 222077, 191017, -15486, 16383, false, -1, true, npc.getInstanceId());
-					_spawned_minions = true;
+					world.getNpc(PETRAM).doCast(EARTH_ENERGY.getSkill());
+					
+					// Prevent to double or higher spawn when HP is between 68-70% + etc...
+					if (!world.getParameters().getBoolean("spawnedMinions", false))
+					{
+						world.setParameter("minion1", addSpawn(npc, PETRAM_PIECE, 221543, 191530, -15486, 1131, false, -1, true, npc.getInstanceId()));
+						world.setParameter("minion2", addSpawn(npc, PETRAM_FRAGMENT, 222069, 192019, -15486, 49364, false, -1, true, npc.getInstanceId()));
+						world.setParameter("minion3", addSpawn(npc, PETRAM_PIECE, 222595, 191479, -15486, 34013, false, -1, true, npc.getInstanceId()));
+						world.setParameter("minion4", addSpawn(npc, PETRAM_FRAGMENT, 222077, 191017, -15486, 16383, false, -1, true, npc.getInstanceId()));
+						world.getParameters().set("spawnedMinions", true);
+					}
+					
+					startQuestTimer("SUPPORT_PETRAM", 3000, npc, null);
 				}
-				
-				startQuestTimer("SUPPORT_PETRAM", 3000, npc, null);
 				break;
 			}
 			case "SUPPORT_PETRAM":
 			{
-				_minion_1.setTarget(_petram);
-				_minion_1.useMagic(TEST.getSkill());
-				_minion_2.setTarget(_petram);
-				_minion_2.useMagic(TEST.getSkill());
-				_minion_3.setTarget(_petram);
-				_minion_3.useMagic(TEST.getSkill());
-				_minion_4.setTarget(_petram);
-				_minion_4.useMagic(TEST.getSkill());
-				startQuestTimer("SUPPORT_PETRAM", 10100, npc, null); // NOTE: When find correct skill this number is reuse skill + 100
+				final Instance world = npc.getInstanceWorld();
+				if (world != null)
+				{
+					world.getParameters().getObject("minion1", Npc.class).setTarget(world.getNpc(PETRAM));
+					world.getParameters().getObject("minion1", Npc.class).doCast(TEST.getSkill());
+					world.getParameters().getObject("minion2", Npc.class).setTarget(world.getNpc(PETRAM));
+					world.getParameters().getObject("minion2", Npc.class).doCast(TEST.getSkill());
+					world.getParameters().getObject("minion3", Npc.class).setTarget(world.getNpc(PETRAM));
+					world.getParameters().getObject("minion3", Npc.class).doCast(TEST.getSkill());
+					world.getParameters().getObject("minion4", Npc.class).setTarget(world.getNpc(PETRAM));
+					world.getParameters().getObject("minion4", Npc.class).doCast(TEST.getSkill());
+					startQuestTimer("SUPPORT_PETRAM", 10100, npc, null); // NOTE: When find correct skill this number is reuse skill + 100
+				}
 				break;
 			}
 			case "INVUL_MODE":
 			{
-				_petram.useMagic(EARTh_FURY.getSkill());
-				if (_petram.isInvul())
+				final Instance world = npc.getInstanceWorld();
+				if (world != null)
 				{
-					_petram.setInvul(false);
-					_petram.broadcastSay(ChatType.NPC_SHOUT, "Nooooo... Nooooo...");
-				}
-				else
-				{
-					_petram.setInvul(true);
-					_petram.broadcastSay(ChatType.NPC_SHOUT, "HaHa, fighters lets kill them. Now Im invul!!!");
+					final Npc petram = world.getNpc(PETRAM);
+					petram.doCast(EARTH_FURY.getSkill());
+					if (petram.isInvul())
+					{
+						petram.setInvul(false);
+						petram.broadcastSay(ChatType.NPC_SHOUT, "Nooooo... Nooooo...");
+					}
+					else
+					{
+						petram.setInvul(true);
+						petram.broadcastSay(ChatType.NPC_SHOUT, "HaHa, fighters lets kill them. Now Im invul!!!");
+					}
 				}
 				break;
 			}
@@ -157,18 +158,20 @@ public class ResidenceOfKingPetram extends AbstractInstance
 	@Override
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
+		final Instance world = npc.getInstanceWorld();
+		if (world == null)
+		{
+			return null;
+		}
+		
 		if (npc.getId() == PETRAM)
 		{
-			final Instance world = npc.getInstanceWorld();
-			if (world != null)
-			{
-				world.finishInstance();
-			}
+			world.finishInstance();
 		}
-		else if ((_minion_1.isDead()) && (_minion_2.isDead()) && (_minion_3.isDead()) && (_minion_4.isDead()))
+		else if ((world.getParameters().getObject("minion1", Npc.class).isDead()) && (world.getParameters().getObject("minion2", Npc.class).isDead()) && (world.getParameters().getObject("minion3", Npc.class).isDead()) && (world.getParameters().getObject("minion4", Npc.class).isDead()))
 		{
-			startQuestTimer("INVUL_MODE", 3000, _petram, null);
-			_spawned_minions = false;
+			startQuestTimer("INVUL_MODE", 3000, world.getNpc(PETRAM), null);
+			world.getParameters().set("spawnedMinions", false);
 		}
 		return super.onKill(npc, player, isSummon);
 	}

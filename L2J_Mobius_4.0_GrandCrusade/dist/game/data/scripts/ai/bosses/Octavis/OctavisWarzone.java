@@ -171,7 +171,7 @@ public class OctavisWarzone extends AbstractInstance
 				{
 					world.openCloseDoor(MAIN_DOOR_2, false);
 					world.openCloseDoor(MAIN_DOOR_1, false);
-					world.getParameters().set("TELEPORT_ACTIVE", true);
+					world.setParameter("TELEPORT_ACTIVE", true);
 					npc.teleToLocation(BATTLE_LOC);
 					playMovie(world, Movie.SC_OCTABIS_OPENING);
 					getTimers().addTimer("START_STAGE_1", 26500, npc, null);
