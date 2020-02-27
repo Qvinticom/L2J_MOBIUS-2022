@@ -126,6 +126,7 @@ import quests.Q00568_SpecialMissionNornilsCave.Q00568_SpecialMissionNornilsCave;
 import quests.Q00569_BasicMissionSealOfShilen.Q00569_BasicMissionSealOfShilen;
 import quests.Q00570_SpecialMissionKartiasLabyrinthParty.Q00570_SpecialMissionKartiasLabyrinthParty;
 import quests.Q00574_SpecialMissionNornilsGarden.Q00574_SpecialMissionNornilsGarden;
+import quests.Q00576_SpecialMissionDefeatSpezion.Q00576_SpecialMissionDefeatSpezion;
 import quests.Q00577_BasicMissionSilentValley.Q00577_BasicMissionSilentValley;
 import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
 import quests.Q00581_ThePurificationRitual.Q00581_ThePurificationRitual;
@@ -476,7 +477,6 @@ import quests.not_done.Q00571_SpecialMissionProofOfUnityFieldRaid;
 import quests.not_done.Q00572_SpecialMissionProofOfCourageFieldRaid;
 import quests.not_done.Q00573_SpecialMissionProofOfStrengthFieldRaid;
 import quests.not_done.Q00575_SpecialMissionFortuna;
-import quests.not_done.Q00576_SpecialMissionDefeatSpezion;
 import quests.not_done.Q00585_CantGoAgainstTheTime;
 import quests.not_done.Q00586_MutatedCreatures;
 import quests.not_done.Q00591_GreatAmbitions;
@@ -688,7 +688,7 @@ public class QuestMasterHandler
 		Q00573_SpecialMissionProofOfStrengthFieldRaid.class, // TODO: Not done.
 		Q00574_SpecialMissionNornilsGarden.class,
 		Q00575_SpecialMissionFortuna.class, // TODO: Not done.
-		Q00576_SpecialMissionDefeatSpezion.class, // TODO: Not done.
+		Q00576_SpecialMissionDefeatSpezion.class,
 		Q00577_BasicMissionSilentValley.class,
 		Q00580_BeyondTheMemories.class,
 		Q00581_ThePurificationRitual.class,
