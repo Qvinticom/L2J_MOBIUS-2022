@@ -63,7 +63,8 @@ public class ExRequestClassChange implements IClientIncomingPacket
 				break;
 			}
 		}
-		if (!canChange)
+		if (!canChange //
+			&& (_classId != 170) && (player.getClassId().getId() != 133)) // Female Soul Hound fix.
 		{
 			LOGGER.warning(player + " tried to change class from " + player.getClassId() + " to " + ClassId.getClassId(_classId) + "!");
 			return;
