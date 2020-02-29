@@ -13800,15 +13800,7 @@ public class PlayerInstance extends Playable
 	
 	public int getFactionLevel(Faction faction)
 	{
-		final int currentPoints = getFactionPoints(faction);
-		for (int i = 0; i < faction.getLevelCount(); i++)
-		{
-			if (currentPoints <= faction.getPointsOfLevel(i))
-			{
-				return i;
-			}
-		}
-		return 0;
+		return 5;
 	}
 	
 	public float getFactionProgress(Faction faction)

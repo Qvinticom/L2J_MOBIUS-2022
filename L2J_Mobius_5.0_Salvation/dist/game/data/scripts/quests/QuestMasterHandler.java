@@ -147,6 +147,9 @@ import quests.Q00567_BasicMissionIsleOfSouls.Q00567_BasicMissionIsleOfSouls;
 import quests.Q00568_SpecialMissionNornilsCave.Q00568_SpecialMissionNornilsCave;
 import quests.Q00569_BasicMissionSealOfShilen.Q00569_BasicMissionSealOfShilen;
 import quests.Q00570_SpecialMissionKartiasLabyrinthParty.Q00570_SpecialMissionKartiasLabyrinthParty;
+import quests.Q00571_SpecialMissionProofOfUnityFieldRaid.Q00571_SpecialMissionProofOfUnityFieldRaid;
+import quests.Q00572_SpecialMissionProofOfCourageFieldRaid.Q00572_SpecialMissionProofOfCourageFieldRaid;
+import quests.Q00573_SpecialMissionProofOfStrengthFieldRaid.Q00573_SpecialMissionProofOfStrengthFieldRaid;
 import quests.Q00574_SpecialMissionNornilsGarden.Q00574_SpecialMissionNornilsGarden;
 import quests.Q00576_SpecialMissionDefeatSpezion.Q00576_SpecialMissionDefeatSpezion;
 import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
@@ -516,9 +519,6 @@ import quests.Q10852_TheMotherTreeRevivalProject.Q10852_TheMotherTreeRevivalProj
 import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.Q10857_SecretTeleport.Q10857_SecretTeleport;
 import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
-import quests.not_done.Q00571_SpecialMissionProofOfUnityFieldRaid;
-import quests.not_done.Q00572_SpecialMissionProofOfCourageFieldRaid;
-import quests.not_done.Q00573_SpecialMissionProofOfStrengthFieldRaid;
 import quests.not_done.Q00575_SpecialMissionFortuna;
 import quests.not_done.Q00585_CantGoAgainstTheTime;
 import quests.not_done.Q00586_MutatedCreatures;
@@ -739,9 +739,9 @@ public class QuestMasterHandler
 		Q00568_SpecialMissionNornilsCave.class,
 		Q00569_BasicMissionSealOfShilen.class,
 		Q00570_SpecialMissionKartiasLabyrinthParty.class,
-		Q00571_SpecialMissionProofOfUnityFieldRaid.class, // TODO: Not done.
-		Q00572_SpecialMissionProofOfCourageFieldRaid.class, // TODO: Not done.
-		Q00573_SpecialMissionProofOfStrengthFieldRaid.class, // TODO: Not done.
+		Q00571_SpecialMissionProofOfUnityFieldRaid.class,
+		Q00572_SpecialMissionProofOfCourageFieldRaid.class,
+		Q00573_SpecialMissionProofOfStrengthFieldRaid.class,
 		Q00574_SpecialMissionNornilsGarden.class,
 		Q00575_SpecialMissionFortuna.class, // TODO: Not done.
 		Q00576_SpecialMissionDefeatSpezion.class,
