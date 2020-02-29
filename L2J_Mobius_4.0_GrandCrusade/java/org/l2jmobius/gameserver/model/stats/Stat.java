@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.model.stats;
 import java.util.NoSuchElementException;
 import java.util.OptionalDouble;
 import java.util.function.DoubleBinaryOperator;
-import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -282,9 +281,11 @@ public enum Stat
 	CRAFTING_CRITICAL("craftingCritical"),
 	SHOTS_BONUS("shotBonus", new ShotsBonusFinalizer()),
 	WORLD_CHAT_POINTS("worldChatPoints"),
-	ATTACK_DAMAGE("attackDamage");
+	ATTACK_DAMAGE("attackDamage"),
 	
-	static final Logger LOGGER = Logger.getLogger(Stat.class.getName());
+	IMMOBILE_DAMAGE_BONUS("immobileBonus"),
+	IMMOBILE_DAMAGE_RESIST("immobileResist");
+	
 	public static final int NUM_STATS = values().length;
 	
 	private final String _value;

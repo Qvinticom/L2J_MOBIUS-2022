@@ -182,6 +182,8 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("HpRegen", HpRegen::new);
 		EffectHandler.getInstance().registerHandler("HpToOwner", HpToOwner::new);
 		EffectHandler.getInstance().registerHandler("IgnoreDeath", IgnoreDeath::new);
+		EffectHandler.getInstance().registerHandler("ImmobileDamageBonus", ImmobileDamageBonus::new);
+		EffectHandler.getInstance().registerHandler("ImmobileDamageResist", ImmobileDamageResist::new);
 		EffectHandler.getInstance().registerHandler("ImmobilePetBuff", ImmobilePetBuff::new);
 		EffectHandler.getInstance().registerHandler("InstantKillResist", InstantKillResist::new);
 		EffectHandler.getInstance().registerHandler("JewelSlot", JewelSlot::new);
