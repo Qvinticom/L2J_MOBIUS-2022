@@ -655,6 +655,10 @@ public class PlayerInstance extends Playable
 	private ScheduledFuture<?> _chargeTask = null;
 	
 	// Absorbed Souls
+	private final static int KAMAEL_LIGHT_MASTER = 45178;
+	private final static int KAMAEL_SHADOW_MASTER = 45179;
+	private final static int KAMAEL_LIGHT_TRANSFORMATION = 397;
+	private final static int KAMAEL_SHADOW_TRANSFORMATION = 398;
 	private int _souls = 0;
 	private ScheduledFuture<?> _soulTask = null;
 	
@@ -11208,6 +11212,28 @@ public class PlayerInstance extends Playable
 		sendPacket(sm);
 		restartSoulTask();
 		sendPacket(new EtcStatusUpdate(this));
+		
+		// TODO: Unhardcode?
+		if ((getRace() == Race.KAMAEL) && (_souls >= 100))
+		{
+			int skillLevel = getSkillLevel(KAMAEL_SHADOW_MASTER);
+			if (skillLevel > 0)
+			{
+				abortCast();
+				decreaseSouls(100);
+				SkillData.getInstance().getSkill(KAMAEL_SHADOW_TRANSFORMATION, skillLevel).applyEffects(this, this);
+			}
+			else
+			{
+				skillLevel = getSkillLevel(KAMAEL_LIGHT_MASTER);
+				if (skillLevel > 0)
+				{
+					abortCast();
+					decreaseSouls(100);
+					SkillData.getInstance().getSkill(KAMAEL_LIGHT_TRANSFORMATION, skillLevel).applyEffects(this, this);
+				}
+			}
+		}
 	}
 	
 	/**
