@@ -205,6 +205,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	private final byte[] _zones = new byte[ZoneId.getZoneCount()];
 	private boolean _advanceFlag = false;
 	private int _advanceMultiplier = 1;
+	private byte _startingRotationCounter = 4;
 	
 	/**
 	 * Check if the character is in the given zone Id.
@@ -382,17 +383,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Send a packet to the Creature AND to all PlayerInstance in the _KnownPlayers of the Creature.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * PlayerInstance in the detection area of the Creature are identified in <B>_knownPlayers</B>. In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet<BR>
-	 * <BR>
-	 */
-	
-	protected byte _startingRotationCounter = 4;
-	
-	/**
 	 * Checks if is starting rotation allowed.
 	 * @return true, if is starting rotation allowed
 	 */
@@ -412,10 +402,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		return false;
 	}
 	
-	/**
-	 * Broadcast packet.
-	 * @param mov the mov
-	 */
 	public void broadcastPacket(GameServerPacket mov)
 	{
 		if (!(mov instanceof CharInfo))
