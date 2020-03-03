@@ -48,7 +48,7 @@ public class RequestGMCommand extends GameClientPacket
 	{
 		final PlayerInstance player = World.getInstance().getPlayer(_targetName);
 		
-		// prevent non gm or low level GMs from vieweing player stuff
+		// prevent non GM or low level GMs from vieweing player stuff
 		if ((player == null) || !getClient().getPlayer().getAccessLevel().allowAltG())
 		{
 			return;
@@ -88,7 +88,7 @@ public class RequestGMCommand extends GameClientPacket
 			}
 			case 6: // player warehouse
 			{
-				// gm warehouse view to be implemented
+				// GM warehouse view to be implemented
 				sendPacket(new GMViewWarehouseWithdrawList(player));
 				break;
 			}

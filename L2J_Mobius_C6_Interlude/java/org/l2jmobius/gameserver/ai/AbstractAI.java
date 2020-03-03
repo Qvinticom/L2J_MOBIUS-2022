@@ -46,12 +46,10 @@ import org.l2jmobius.gameserver.network.serverpackets.StopRotation;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
 /**
- * Mother class of all objects AI in the world.<BR>
- * <BR>
- * AbastractAI :<BR>
- * <BR>
- * <li>CreatureAI</li><BR>
- * <BR>
+ * Mother class of all objects AI in the world.<br>
+ * <br>
+ * AbastractAI:<br>
+ * <li>CreatureAI</li>
  */
 abstract class AbstractAI implements Ctrl
 {
@@ -139,8 +137,7 @@ abstract class AbstractAI implements Ctrl
 	private static final int ATTACK_FOLLOW_INTERVAL = 500;
 	
 	/**
-	 * Constructor of AbstractAI.<BR>
-	 * <BR>
+	 * Constructor of AbstractAI.
 	 * @param accessor The AI accessor of the Creature
 	 */
 	protected AbstractAI(Creature.AIAccessor accessor)
@@ -152,8 +149,7 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Return the Creature managed by this Accessor AI.<BR>
-	 * <BR>
+	 * Return the Creature managed by this Accessor AI.
 	 */
 	@Override
 	public Creature getActor()
@@ -162,14 +158,13 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Set the Intention of this AbstractAI.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method is USED by AI classes</B></FONT><BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> : </B><BR>
-	 * <B>AttackableAI</B> : Create an AI Task executed every 1s (if necessary)<BR>
-	 * <B>L2PlayerAI</B> : Stores the current AI intention parameters to later restore it if necessary<BR>
-	 * <BR>
+	 * Set the Intention of this AbstractAI.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method is USED by AI classes</b></font><br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <b>AttackableAI</b> : Create an AI Task executed every 1s (if necessary)<br>
+	 * <b>L2PlayerAI</b> : Stores the current AI intention parameters to later restore it if necessary
 	 * @param intention The new Intention to set to the AI
 	 * @param arg0 The first parameter of the Intention
 	 * @param arg1 The second parameter of the Intention
@@ -182,10 +177,8 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Launch the CreatureAI onIntention method corresponding to the new Intention.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Stop the FOLLOW mode if necessary</B></FONT><BR>
-	 * <BR>
+	 * Launch the CreatureAI onIntention method corresponding to the new Intention.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: Stop the FOLLOW mode if necessary</b></font>
 	 * @param intention The new Intention to set to the AI
 	 */
 	@Override
@@ -195,10 +188,8 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Launch the CreatureAI onIntention method corresponding to the new Intention.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Stop the FOLLOW mode if necessary</B></FONT><BR>
-	 * <BR>
+	 * Launch the CreatureAI onIntention method corresponding to the new Intention.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: Stop the FOLLOW mode if necessary</b></font>
 	 * @param intention The new Intention to set to the AI
 	 * @param arg0 The first parameter of the Intention (optional target)
 	 */
@@ -209,10 +200,8 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Launch the CreatureAI onIntention method corresponding to the new Intention.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Stop the FOLLOW mode if necessary</B></FONT><BR>
-	 * <BR>
+	 * Launch the CreatureAI onIntention method corresponding to the new Intention.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: Stop the FOLLOW mode if necessary</b></font>
 	 * @param intention The new Intention to set to the AI
 	 * @param arg0 The first parameter of the Intention (optional target)
 	 * @param arg1 The second parameter of the Intention (optional target)
@@ -288,10 +277,8 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Launch the CreatureAI onEvt method corresponding to the Event.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned periode)</B></FONT><BR>
-	 * <BR>
+	 * Launch the CreatureAI onEvt method corresponding to the Event.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned periode)</b></font>
 	 * @param evt The event whose the AI must be notified
 	 */
 	@Override
@@ -301,10 +288,8 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Launch the CreatureAI onEvt method corresponding to the Event.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned periode)</B></FONT><BR>
-	 * <BR>
+	 * Launch the CreatureAI onEvt method corresponding to the Event.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned periode)</b></font>
 	 * @param evt The event whose the AI must be notified
 	 * @param arg0 The first parameter of the Event (optional target)
 	 */
@@ -315,10 +300,8 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Launch the CreatureAI onEvt method corresponding to the Event.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned periode)</B></FONT><BR>
-	 * <BR>
+	 * Launch the CreatureAI onEvt method corresponding to the Event.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned periode)</b></font>
 	 * @param evt The event whose the AI must be notified
 	 * @param arg0 The first parameter of the Event (optional target)
 	 * @param arg1 The second parameter of the Event (optional target)
@@ -483,10 +466,8 @@ abstract class AbstractAI implements Ctrl
 	protected abstract void onEvtFinishCasting();
 	
 	/**
-	 * Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT><BR>
-	 * <BR>
+	 * Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
 	 */
 	protected void clientActionFailed()
 	{
@@ -497,10 +478,8 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Move the actor to Pawn server side AND client side by sending Server->Client packet MoveToPawn <I>(broadcast)</I>.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT><BR>
-	 * <BR>
+	 * Move the actor to Pawn server side AND client side by sending Server->Client packet MoveToPawn <i>(broadcast)</i>.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
 	 * @param pawn
 	 * @param offset
 	 */
@@ -590,10 +569,8 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation <I>(broadcast)</I>.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT><BR>
-	 * <BR>
+	 * Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation <i>(broadcast)</i>.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
 	 * @param x
 	 * @param y
 	 * @param z
@@ -638,10 +615,8 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation <I>(broadcast)</I>.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT><BR>
-	 * <BR>
+	 * Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation <i>(broadcast)</i>.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
 	 * @param pos
 	 */
 	protected void clientStopMoving(Location pos)
@@ -683,10 +658,8 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Start the actor Auto Attack client side by sending Server->Client packet AutoAttackStart <I>(broadcast)</I>.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT><BR>
-	 * <BR>
+	 * Start the actor Auto Attack client side by sending Server->Client packet AutoAttackStart <i>(broadcast)</i>.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
 	 */
 	public void clientStartAutoAttack()
 	{
@@ -718,10 +691,8 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop <I>(broadcast)</I>.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT><BR>
-	 * <BR>
+	 * Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop <i>(broadcast)</i>.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
 	 */
 	public void clientStopAutoAttack()
 	{
@@ -752,10 +723,8 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Kill the actor client side by sending Server->Client packet AutoAttackStop, StopMove/StopRotation, Die <I>(broadcast)</I>.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT><BR>
-	 * <BR>
+	 * Kill the actor client side by sending Server->Client packet AutoAttackStop, StopMove/StopRotation, Die <i>(broadcast)</i>.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
 	 */
 	protected void clientNotifyDead()
 	{
@@ -773,10 +742,8 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Update the state of this actor client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance player.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT><BR>
-	 * <BR>
+	 * Update the state of this actor client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance player.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
 	 * @param player The PlayerIstance to notify with state of this Creature
 	 */
 	public void describeStateToPlayer(PlayerInstance player)
@@ -798,8 +765,7 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Create and Launch an AI Follow Task to execute every 1s.<BR>
-	 * <BR>
+	 * Create and Launch an AI Follow Task to execute every 1s.
 	 * @param target The Creature to follow
 	 */
 	public synchronized void startFollow(Creature target)
@@ -816,8 +782,7 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Create and Launch an AI Follow Task to execute every 0.5s, following at specified range.<BR>
-	 * <BR>
+	 * Create and Launch an AI Follow Task to execute every 0.5s, following at specified range.
 	 * @param target The Creature to follow
 	 * @param range
 	 */
@@ -834,8 +799,7 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Stop an AI Follow Task.<BR>
-	 * <BR>
+	 * Stop an AI Follow Task.
 	 */
 	public synchronized void stopFollow()
 	{
@@ -882,8 +846,7 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Return current attack target.<BR>
-	 * <BR>
+	 * Return current attack target.
 	 */
 	@Override
 	public synchronized Creature getAttackTarget()
@@ -934,8 +897,7 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Return the current Intention.<BR>
-	 * <BR>
+	 * Return the current Intention.
 	 */
 	@Override
 	public synchronized CtrlIntention getIntention()

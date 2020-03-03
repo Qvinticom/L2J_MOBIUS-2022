@@ -2620,7 +2620,7 @@ public abstract class AbstractScript extends ManagedScript
 	}
 	
 	/**
-	 * Get a random entry.<br>
+	 * Get a random entry.
 	 * @param <T>
 	 * @param array of values.
 	 * @return one value from array.
@@ -2636,7 +2636,7 @@ public abstract class AbstractScript extends ManagedScript
 	}
 	
 	/**
-	 * Get a random entry.<br>
+	 * Get a random entry.
 	 * @param <T>
 	 * @param list of values.
 	 * @return one value from list.
@@ -2651,7 +2651,7 @@ public abstract class AbstractScript extends ManagedScript
 	}
 	
 	/**
-	 * Get a random entry.<br>
+	 * Get a random entry.
 	 * @param array of Integers.
 	 * @return one Integer from array.
 	 */

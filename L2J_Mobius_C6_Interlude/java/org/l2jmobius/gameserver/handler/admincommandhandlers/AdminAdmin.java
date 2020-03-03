@@ -78,13 +78,13 @@ public class AdminAdmin implements IAdminCommandHandler
 			case "admin_gmliston":
 			{
 				AdminData.getInstance().showGm(activeChar);
-				BuilderUtil.sendSysMessage(activeChar, "Registerd into gm list.");
+				BuilderUtil.sendSysMessage(activeChar, "Registerd into GM list.");
 				return true;
 			}
 			case "admin_gmlistoff":
 			{
 				AdminData.getInstance().hideGm(activeChar);
-				BuilderUtil.sendSysMessage(activeChar, "Removed from gm list.");
+				BuilderUtil.sendSysMessage(activeChar, "Removed from GM list.");
 				return true;
 			}
 			case "admin_silence":

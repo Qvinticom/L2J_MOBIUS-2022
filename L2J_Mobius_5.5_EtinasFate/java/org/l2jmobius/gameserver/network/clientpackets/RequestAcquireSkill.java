@@ -496,7 +496,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 	/**
 	 * Perform a simple check for current player and skill.<br>
 	 * Takes the needed SP if the skill require it and all requirements are meet.<br>
-	 * Consume required items if the skill require it and all requirements are meet.<br>
+	 * Consume required items if the skill require it and all requirements are meet.
 	 * @param player the skill learning player.
 	 * @param trainer the skills teaching Npc.
 	 * @param skillLearn the skill to be learn.

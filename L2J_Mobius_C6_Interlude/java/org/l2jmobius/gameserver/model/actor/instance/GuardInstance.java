@@ -33,8 +33,8 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
 /**
- * This class manages all Guards in the world. It inherits all methods from Attackable and adds some more such as tracking PK and aggressive MonsterInstance.<BR>
- * <BR>
+ * This class manages all Guards in the world. It inherits all methods from Attackable and adds some more such as tracking PK and aggressive MonsterInstance.<br>
+ * <br>
  * @version $Revision: 1.11.2.1.2.7 $ $Date: 2005/04/06 16:13:40 $
  */
 public class GuardInstance extends Attackable
@@ -57,14 +57,12 @@ public class GuardInstance extends Attackable
 	}
 	
 	/**
-	 * Constructor of GuardInstance (use Creature and NpcInstance constructor).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Constructor of GuardInstance (use Creature and NpcInstance constructor).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Call the Creature constructor to set the _template of the GuardInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
 	 * <li>Set the name of the GuardInstance</li>
-	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li><BR>
-	 * <BR>
+	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li><br>
 	 * @param objectId Identifier of the object to initialized
 	 * @param template the template
 	 */
@@ -86,8 +84,7 @@ public class GuardInstance extends Attackable
 	}
 	
 	/**
-	 * Return True if the attacker is a MonsterInstance.<BR>
-	 * <BR>
+	 * Return True if the attacker is a MonsterInstance.
 	 * @param attacker the attacker
 	 * @return true, if is auto attackable
 	 */
@@ -98,10 +95,10 @@ public class GuardInstance extends Attackable
 	}
 	
 	/**
-	 * Set home location of the GuardInstance.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
+	 * Set home location of the GuardInstance.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
 	 * Guard will always try to return to this location after it has killed all PK's in range
 	 */
 	public void getHomeLocation()
@@ -121,8 +118,7 @@ public class GuardInstance extends Attackable
 	}
 	
 	/**
-	 * Notify the GuardInstance to return to its home location (AI_INTENTION_MOVE_TO) and clear its _aggroList.<BR>
-	 * <BR>
+	 * Notify the GuardInstance to return to its home location (AI_INTENTION_MOVE_TO) and clear its _aggroList.
 	 */
 	public void returnHome()
 	{
@@ -134,8 +130,7 @@ public class GuardInstance extends Attackable
 	}
 	
 	/**
-	 * Set the home location of its GuardInstance.<BR>
-	 * <BR>
+	 * Set the home location of its GuardInstance.
 	 */
 	@Override
 	public void onSpawn()
@@ -154,13 +149,11 @@ public class GuardInstance extends Attackable
 	}
 	
 	/**
-	 * Return the pathfile of the selected HTML file in function of the GuardInstance Identifier and of the page number.<BR>
-	 * <BR>
-	 * <B><U> Format of the pathfile </U> :</B><BR>
-	 * <BR>
-	 * <li>if page number = 0 : <B>data/html/guard/12006.htm</B> (npcId-page number)</li>
-	 * <li>if page number > 0 : <B>data/html/guard/12006-1.htm</B> (npcId-page number)</li><BR>
-	 * <BR>
+	 * Return the pathfile of the selected HTML file in function of the GuardInstance Identifier and of the page number.<br>
+	 * <br>
+	 * <b><u>Format of the pathfile</u>:</b><br>
+	 * <li>if page number = 0 : <b>data/html/guard/12006.htm</b> (npcId-page number)</li>
+	 * <li>if page number > 0 : <b>data/html/guard/12006-1.htm</b> (npcId-page number)</li><br>
 	 * @param npcId The Identifier of the NpcInstance whose text must be display
 	 * @param value The number of the page to display
 	 * @return the html path
@@ -181,24 +174,20 @@ public class GuardInstance extends Attackable
 	}
 	
 	/**
-	 * Manage actions when a player click on the GuardInstance.<BR>
-	 * <BR>
-	 * <B><U> Actions on first click on the GuardInstance (Select it)</U> :</B><BR>
-	 * <BR>
+	 * Manage actions when a player click on the GuardInstance.<br>
+	 * <br>
+	 * <b><u>Actions on first click on the GuardInstance (Select it)</u>:</b><br>
 	 * <li>Set the GuardInstance as target of the PlayerInstance player (if necessary)</li>
 	 * <li>Send a Server->Client packet MyTargetSelected to the PlayerInstance player (display the select window)</li>
 	 * <li>Set the PlayerInstance Intention to AI_INTENTION_IDLE</li>
-	 * <li>Send a Server->Client packet ValidateLocation to correct the GuardInstance position and heading on the client</li><BR>
-	 * <BR>
-	 * <B><U> Actions on second click on the GuardInstance (Attack it/Interact with it)</U> :</B><BR>
-	 * <BR>
+	 * <li>Send a Server->Client packet ValidateLocation to correct the GuardInstance position and heading on the client</li><br>
+	 * <br>
+	 * <b><u>Actions on second click on the GuardInstance (Attack it/Interact with it)</u>:</b><br>
 	 * <li>If PlayerInstance is in the _aggroList of the GuardInstance, set the PlayerInstance Intention to AI_INTENTION_ATTACK</li>
-	 * <li>If PlayerInstance is NOT in the _aggroList of the GuardInstance, set the PlayerInstance Intention to AI_INTENTION_INTERACT (after a distance verification) and show message</li><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Client packet : Action, AttackRequest</li><BR>
-	 * <BR>
+	 * <li>If PlayerInstance is NOT in the _aggroList of the GuardInstance, set the PlayerInstance Intention to AI_INTENTION_INTERACT (after a distance verification) and show message</li><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Client packet : Action, AttackRequest</li><br>
 	 * @param player The PlayerInstance that start an action on the GuardInstance
 	 */
 	@Override

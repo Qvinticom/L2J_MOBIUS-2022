@@ -564,14 +564,12 @@ public class PlayerInstance extends Playable
 	private final Map<String, Object> _scripts = new ConcurrentHashMap<>();
 	
 	/**
-	 * Create a new PlayerInstance and add it in the characters table of the database.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Create a new PlayerInstance and add it in the characters table of the database.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Create a new PlayerInstance with an account name</li>
 	 * <li>Set the name, the Hair Style, the Hair Color and the Face type of the PlayerInstance</li>
-	 * <li>Add the player in the characters table of the database</li><BR>
-	 * <BR>
+	 * <li>Add the player in the characters table of the database</li><br>
 	 * @param objectId Identifier of the object to initialized
 	 * @param template The PlayerTemplate to apply to the PlayerInstance
 	 * @param accountName The name of the PlayerInstance
@@ -1015,15 +1013,13 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Retrieve a PlayerInstance from the characters table of the database and add it in _allObjects of the World (call restore method).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Retrieve a PlayerInstance from the characters table of the database and add it in _allObjects of the World (call restore method).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Retrieve the PlayerInstance from the characters table of the database</li>
 	 * <li>Add the PlayerInstance object in _allObjects</li>
 	 * <li>Set the x,y,z position of the PlayerInstance and make it invisible</li>
-	 * <li>Update the overloaded status of the PlayerInstance</li><BR>
-	 * <BR>
+	 * <li>Update the overloaded status of the PlayerInstance</li><br>
 	 * @param objectId Identifier of the object to initialized
 	 * @return The PlayerInstance loaded from the database
 	 */
@@ -1046,15 +1042,12 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Constructor of PlayerInstance (use Creature constructor).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Constructor of PlayerInstance (use Creature constructor).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Call the Creature constructor to create an empty _skills slot and copy basic Calculator set to this PlayerInstance</li>
-	 * <li>Set the name of the PlayerInstance</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method SET the level of the PlayerInstance to 1</B></FONT><BR>
-	 * <BR>
+	 * <li>Set the name of the PlayerInstance</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method SET the level of the PlayerInstance to 1</b></font>
 	 * @param objectId Identifier of the object to initialized
 	 * @param template The PlayerTemplate to apply to the PlayerInstance
 	 * @param accountName The name of the account including this PlayerInstance
@@ -1146,8 +1139,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the base PlayerTemplate link to the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the base PlayerTemplate link to the PlayerInstance.
 	 * @return the base template
 	 */
 	public PlayerTemplate getBaseTemplate()
@@ -1185,8 +1177,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the AI of the PlayerInstance (create it if necessary).<BR>
-	 * <BR>
+	 * Return the AI of the PlayerInstance (create it if necessary).
 	 * @return the aI
 	 */
 	@Override
@@ -1228,8 +1219,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the _newbie state of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the _newbie state of the PlayerInstance.
 	 * @return true, if is newbie
 	 */
 	public boolean isNewbie()
@@ -1238,10 +1228,8 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the _newbie state of the PlayerInstance.<BR>
-	 * <BR>
-	 * @param isNewbie The Identifier of the _newbie state<BR>
-	 *            <BR>
+	 * Set the _newbie state of the PlayerInstance.
+	 * @param isNewbie The Identifier of the _newbie state<br>
 	 */
 	public void setNewbie(boolean isNewbie)
 	{
@@ -1297,8 +1285,7 @@ public class PlayerInstance extends Playable
 	private boolean _kicked = false;
 	
 	/**
-	 * Manage Logout Task.<BR>
-	 * <BR>
+	 * Manage Logout Task.
 	 * @param kicked the kicked
 	 */
 	public void logout(boolean kicked)
@@ -1333,8 +1320,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Manage Logout Task.<BR>
-	 * <BR>
+	 * Manage Logout Task.
 	 */
 	public void logout()
 	{
@@ -1342,8 +1328,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return a table containing all Common RecipeList of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return a table containing all Common RecipeList of the PlayerInstance.
 	 * @return the common recipe book
 	 */
 	public RecipeList[] getCommonRecipeBook()
@@ -1352,8 +1337,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return a table containing all Dwarf RecipeList of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return a table containing all Dwarf RecipeList of the PlayerInstance.
 	 * @return the dwarven recipe book
 	 */
 	public RecipeList[] getDwarvenRecipeBook()
@@ -1362,9 +1346,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Add a new RecipList to the table _commonrecipebook containing all RecipeList of the PlayerInstance <BR>
-	 * <BR>
-	 * .
+	 * Add a new RecipList to the table _commonrecipebook containing all RecipeList of the PlayerInstance.
 	 * @param recipe The RecipeList to add to the _recipebook
 	 */
 	public void registerCommonRecipeList(RecipeList recipe)
@@ -1373,9 +1355,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Add a new RecipList to the table _recipebook containing all RecipeList of the PlayerInstance <BR>
-	 * <BR>
-	 * .
+	 * Add a new RecipList to the table _recipebook containing all RecipeList of the PlayerInstance.
 	 * @param recipe The RecipeList to add to the _recipebook
 	 */
 	public void registerDwarvenRecipeList(RecipeList recipe)
@@ -1394,9 +1374,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Tries to remove a RecipList from the table _DwarvenRecipeBook or from table _CommonRecipeBook, those table contain all RecipeList of the PlayerInstance <BR>
-	 * <BR>
-	 * .
+	 * Tries to remove a RecipList from the table _DwarvenRecipeBook or from table _CommonRecipeBook, those table contain all RecipeList of the PlayerInstance.
 	 * @param recipeId the recipe id
 	 */
 	public void unregisterRecipeList(int recipeId)
@@ -1436,8 +1414,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Returns the Id for the last talked quest NPC.<BR>
-	 * <BR>
+	 * Returns the Id for the last talked quest NPC.
 	 * @return the last quest npc object
 	 */
 	public int getLastQuestNpcObject()
@@ -1455,8 +1432,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the QuestState object corresponding to the quest name.<BR>
-	 * <BR>
+	 * Return the QuestState object corresponding to the quest name.
 	 * @param quest The name of the quest
 	 * @return the quest state
 	 */
@@ -1466,8 +1442,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Add a QuestState to the table _quest containing all quests began by the PlayerInstance.<BR>
-	 * <BR>
+	 * Add a QuestState to the table _quest containing all quests began by the PlayerInstance.
 	 * @param qs The QuestState to add to _quest
 	 */
 	public void setQuestState(QuestState qs)
@@ -1476,8 +1451,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Remove a QuestState from the table _quest containing all quests began by the PlayerInstance.<BR>
-	 * <BR>
+	 * Remove a QuestState from the table _quest containing all quests began by the PlayerInstance.
 	 * @param quest The name of the quest
 	 */
 	public void delQuestState(String quest)
@@ -1680,8 +1654,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return a table containing all ShortCut of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return a table containing all ShortCut of the PlayerInstance.
 	 * @return the all short cuts
 	 */
 	public ShortCut[] getAllShortCuts()
@@ -1690,8 +1663,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the ShortCut of the PlayerInstance corresponding to the position (page-slot).<BR>
-	 * <BR>
+	 * Return the ShortCut of the PlayerInstance corresponding to the position (page-slot).
 	 * @param slot The slot in wich the shortCuts is equiped
 	 * @param page The page of shortCuts containing the slot
 	 * @return the short cut
@@ -1702,9 +1674,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Add a L2shortCut to the PlayerInstance _shortCuts<BR>
-	 * <BR>
-	 * .
+	 * Add a L2shortCut to the PlayerInstance _shortCuts.
 	 * @param shortcut the shortcut
 	 */
 	public void registerShortCut(ShortCut shortcut)
@@ -1713,8 +1683,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Delete the ShortCut corresponding to the position (page-slot) from the PlayerInstance _shortCuts.<BR>
-	 * <BR>
+	 * Delete the ShortCut corresponding to the position (page-slot) from the PlayerInstance _shortCuts.
 	 * @param slot the slot
 	 * @param page the page
 	 */
@@ -1724,9 +1693,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Add a Macro to the PlayerInstance _macroses<BR>
-	 * <BR>
-	 * .
+	 * Add a Macro to the PlayerInstance _macroses.
 	 * @param macro the macro
 	 */
 	public void registerMacro(Macro macro)
@@ -1735,8 +1702,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Delete the Macro corresponding to the Identifier from the PlayerInstance _macroses.<BR>
-	 * <BR>
+	 * Delete the Macro corresponding to the Identifier from the PlayerInstance _macroses.
 	 * @param id the id
 	 */
 	public void deleteMacro(int id)
@@ -1745,8 +1711,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return all Macro of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return all Macro of the PlayerInstance.
 	 * @return the macroses
 	 */
 	public MacroList getMacroses()
@@ -1755,8 +1720,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the siege state of the PlayerInstance.<BR>
-	 * <BR>
+	 * Set the siege state of the PlayerInstance.<br>
 	 * 1 = attacker, 2 = defender, 0 = not involved
 	 * @param siegeState the new siege state
 	 */
@@ -1766,8 +1730,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Get the siege state of the PlayerInstance.<BR>
-	 * <BR>
+	 * Get the siege state of the PlayerInstance.<br>
 	 * 1 = attacker, 2 = defender, 0 = not involved
 	 * @return the siege state
 	 */
@@ -1777,8 +1740,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the PvP Flag of the PlayerInstance.<BR>
-	 * <BR>
+	 * Set the PvP Flag of the PlayerInstance.
 	 * @param pvpFlag the new pvp flag
 	 */
 	public void setPvpFlag(int pvpFlag)
@@ -1913,8 +1875,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return True if the PlayerInstance can Craft Dwarven Recipes.<BR>
-	 * <BR>
+	 * Return True if the PlayerInstance can Craft Dwarven Recipes.
 	 * @return true, if successful
 	 */
 	public boolean hasDwarvenCraft()
@@ -1932,8 +1893,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return True if the PlayerInstance can Craft Dwarven Recipes.<BR>
-	 * <BR>
+	 * Return True if the PlayerInstance can Craft Dwarven Recipes.
 	 * @return true, if successful
 	 */
 	public boolean hasCommonCraft()
@@ -1951,8 +1911,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the PK counter of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the PK counter of the PlayerInstance.
 	 * @return the pk kills
 	 */
 	public int getPkKills()
@@ -1961,8 +1920,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the PK counter of the PlayerInstance.<BR>
-	 * <BR>
+	 * Set the PK counter of the PlayerInstance.
 	 * @param pkKills the new pk kills
 	 */
 	public void setPkKills(int pkKills)
@@ -1971,8 +1929,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the _deleteTimer of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the _deleteTimer of the PlayerInstance.
 	 * @return the delete timer
 	 */
 	public long getDeleteTimer()
@@ -1981,8 +1938,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the _deleteTimer of the PlayerInstance.<BR>
-	 * <BR>
+	 * Set the _deleteTimer of the PlayerInstance.
 	 * @param deleteTimer the new delete timer
 	 */
 	public void setDeleteTimer(long deleteTimer)
@@ -1991,8 +1947,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the current weight of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the current weight of the PlayerInstance.
 	 * @return the current load
 	 */
 	public int getCurrentLoad()
@@ -2019,8 +1974,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the number of recommandation obtained by the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the number of recommandation obtained by the PlayerInstance.
 	 * @return the recom have
 	 */
 	public int getRecomHave()
@@ -2029,8 +1983,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Increment the number of recommandation obtained by the PlayerInstance (Max : 255).<BR>
-	 * <BR>
+	 * Increment the number of recommandation obtained by the PlayerInstance (Max : 255).
 	 */
 	protected void incRecomHave()
 	{
@@ -2041,8 +1994,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the number of recommandation obtained by the PlayerInstance (Max : 255).<BR>
-	 * <BR>
+	 * Set the number of recommandation obtained by the PlayerInstance (Max : 255).
 	 * @param value the new recom have
 	 */
 	public void setRecomHave(int value)
@@ -2062,8 +2014,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the number of recommandation that the PlayerInstance can give.<BR>
-	 * <BR>
+	 * Return the number of recommandation that the PlayerInstance can give.
 	 * @return the recom left
 	 */
 	public int getRecomLeft()
@@ -2072,8 +2023,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Increment the number of recommandation that the PlayerInstance can give.<BR>
-	 * <BR>
+	 * Increment the number of recommandation that the PlayerInstance can give.
 	 */
 	protected void decRecomLeft()
 	{
@@ -2138,8 +2088,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the Karma of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the Karma of the PlayerInstance.
 	 * @return the karma
 	 */
 	public int getKarma()
@@ -2148,8 +2097,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the Karma of the PlayerInstance and send a Server->Client packet StatusUpdate (broadcast).<BR>
-	 * <BR>
+	 * Set the Karma of the PlayerInstance and send a Server->Client packet StatusUpdate (broadcast).
 	 * @param karma the new karma
 	 */
 	public void setKarma(int karma)
@@ -2185,8 +2133,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the max weight that the PlayerInstance can load.<BR>
-	 * <BR>
+	 * Return the max weight that the PlayerInstance can load.
 	 * @return the max load
 	 */
 	public int getMaxLoad()
@@ -2250,8 +2197,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Update the overloaded status of the PlayerInstance.<BR>
-	 * <BR>
+	 * Update the overloaded status of the PlayerInstance.
 	 */
 	public void refreshOverloaded()
 	{
@@ -2630,7 +2576,7 @@ public class PlayerInstance extends Playable
 				{
 					intensityW = crystaltype - getExpertiseIndex();
 				}
-				// Checks if equiped armor, accesories are above character level and adds each armor penalty.
+				// Checks if equipped armor, accesories are above character level and adds each armor penalty.
 				if ((crystaltype > getExpertiseIndex()) && !item.isWeapon())
 				{
 					intensityA += crystaltype - getExpertiseIndex();
@@ -2727,8 +2673,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the the PvP Kills of the PlayerInstance (Number of player killed during a PvP).<BR>
-	 * <BR>
+	 * Return the the PvP Kills of the PlayerInstance (Number of player killed during a PvP).
 	 * @return the pvp kills
 	 */
 	public int getPvpKills()
@@ -2737,8 +2682,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the the PvP Kills of the PlayerInstance (Number of player killed during a PvP).<BR>
-	 * <BR>
+	 * Set the the PvP Kills of the PlayerInstance (Number of player killed during a PvP).
 	 * @param pvpKills the new pvp kills
 	 */
 	public void setPvpKills(int pvpKills)
@@ -2747,8 +2691,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the ClassId object of the PlayerInstance contained in PlayerTemplate.<BR>
-	 * <BR>
+	 * Return the ClassId object of the PlayerInstance contained in PlayerTemplate.
 	 * @return the class id
 	 */
 	public ClassId getClassId()
@@ -2757,8 +2700,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the template of the PlayerInstance.<BR>
-	 * <BR>
+	 * Set the template of the PlayerInstance.
 	 * @param id The Identifier of the PlayerTemplate to set to the PlayerInstance
 	 */
 	public void setClassId(int id)
@@ -2828,8 +2770,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the fists weapon of the PlayerInstance (used when no weapon is equiped).<BR>
-	 * <BR>
+	 * Set the fists weapon of the PlayerInstance (used when no weapon is equiped).
 	 * @param weaponItem The fists Weapon to set to the PlayerInstance
 	 */
 	public void setFistsWeaponItem(Weapon weaponItem)
@@ -2838,8 +2779,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the fists weapon of the PlayerInstance (used when no weapon is equiped).<BR>
-	 * <BR>
+	 * Return the fists weapon of the PlayerInstance (used when no weapon is equiped).
 	 * @return the fists weapon item
 	 */
 	public Weapon getFistsWeaponItem()
@@ -2848,10 +2788,9 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the fists weapon of the PlayerInstance Class (used when no weapon is equiped).<BR>
-	 * <BR>
+	 * Return the fists weapon of the PlayerInstance Class (used when no weapon is equiped).
 	 * @param classId the class id
-	 * @return the l2 weapon
+	 * @return the weapon
 	 */
 	public Weapon findFistsWeaponItem(int classId)
 	{
@@ -2914,17 +2853,14 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Give Expertise skill of this level and remove beginner Lucky skill.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Give Expertise skill of this level and remove beginner Lucky skill.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Get the Level of the PlayerInstance</li>
 	 * <li>If PlayerInstance Level is 5, remove beginner Lucky skill</li>
 	 * <li>Add the Expertise skill corresponding to its Expertise level</li>
-	 * <li>Update the overloaded status of the PlayerInstance</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T give other free skills (SP needed = 0)</B></FONT><BR>
-	 * <BR>
+	 * <li>Update the overloaded status of the PlayerInstance</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T give other free skills (SP needed = 0)</b></font>
 	 */
 	public synchronized void rewardSkills()
 	{
@@ -3038,8 +2974,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Give all available skills to the player.<br>
-	 * <br>
+	 * Give all available skills to the player.
 	 */
 	public void giveAvailableSkills()
 	{
@@ -3087,8 +3022,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the Race object of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the Race object of the PlayerInstance.
 	 * @return the race
 	 */
 	public Race getRace()
@@ -3150,8 +3084,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the Clan Identifier of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the Clan Identifier of the PlayerInstance.
 	 * @return the clan id
 	 */
 	public int getClanId()
@@ -3160,8 +3093,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the Clan Crest Identifier of the PlayerInstance or 0.<BR>
-	 * <BR>
+	 * Return the Clan Crest Identifier of the PlayerInstance or 0.
 	 * @return the clan crest id
 	 */
 	public int getClanCrestId()
@@ -3238,8 +3170,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the PcInventory Inventory of the PlayerInstance contained in _inventory.<BR>
-	 * <BR>
+	 * Return the PcInventory Inventory of the PlayerInstance contained in _inventory.
 	 * @return the inventory
 	 */
 	public PlayerInventory getInventory()
@@ -3248,8 +3179,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Delete a ShortCut of the PlayerInstance _shortCuts.<BR>
-	 * <BR>
+	 * Delete a ShortCut of the PlayerInstance _shortCuts.
 	 * @param objectId the object id
 	 */
 	public void removeItemFromShortCut(int objectId)
@@ -3258,8 +3188,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return True if the PlayerInstance is sitting.<BR>
-	 * <BR>
+	 * Return True if the PlayerInstance is sitting.
 	 * @return true, if is sitting
 	 */
 	public boolean isSitting()
@@ -3277,7 +3206,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Sit down the PlayerInstance, set the AI Intention to AI_INTENTION_REST and send a Server->Client ChangeWaitType packet (broadcast)<BR>
+	 * Sit down the PlayerInstance, set the AI Intention to AI_INTENTION_REST and send a Server->Client ChangeWaitType packet (broadcast)
 	 */
 	public void sitDown()
 	{
@@ -3389,8 +3318,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the PcWarehouse object of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the PcWarehouse object of the PlayerInstance.
 	 * @return the warehouse
 	 */
 	public PlayerWarehouse getWarehouse()
@@ -3420,8 +3348,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the PcFreight object of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the PcFreight object of the PlayerInstance.
 	 * @return the freight
 	 */
 	public PlayerFreight getFreight()
@@ -3430,8 +3357,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the Adena amount of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the Adena amount of the PlayerInstance.
 	 * @return the adena
 	 */
 	public int getAdena()
@@ -3440,8 +3366,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the Item amount of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the Item amount of the PlayerInstance.
 	 * @param itemId the item id
 	 * @param enchantLevel the enchant level
 	 * @return the item count
@@ -3452,8 +3377,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the Ancient Adena amount of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the Ancient Adena amount of the PlayerInstance.
 	 * @return the ancient adena
 	 */
 	public int getAncientAdena()
@@ -4017,7 +3941,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Destroy item from inventory by using its <B>itemId</B> and send a Server->Client InventoryUpdate packet to the PlayerInstance.
+	 * Destroy item from inventory by using its <b>itemId</b> and send a Server->Client InventoryUpdate packet to the PlayerInstance.
 	 * @param process : String Identifier of process triggering this action
 	 * @param itemId : int Item identifier of the item to be destroyed
 	 * @param count : int Quantity of items to be destroyed
@@ -4303,7 +4227,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Drop item from inventory by using its <B>objectID</B> and send a Server->Client InventoryUpdate packet to the PlayerInstance.
+	 * Drop item from inventory by using its <b>objectID</b> and send a Server->Client InventoryUpdate packet to the PlayerInstance.
 	 * @param process : String Identifier of process triggering this action
 	 * @param objectId : int Item Instance identifier of the item to be dropped
 	 * @param count : int Quantity of items to be dropped
@@ -4389,7 +4313,7 @@ public class PlayerInstance extends Playable
 	 * @param objectId the object id
 	 * @param count the count
 	 * @param action the action
-	 * @return the l2 item instance
+	 * @return the item instance
 	 */
 	public ItemInstance checkItemManipulation(int objectId, int count, String action)
 	{
@@ -4527,8 +4451,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Get the client owner of this char.<BR>
-	 * <BR>
+	 * Get the client owner of this char.
 	 * @return the client
 	 */
 	public GameClient getClient()
@@ -4546,8 +4469,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Close the active connection with the client.<BR>
-	 * <BR>
+	 * Close the active connection with the client.
 	 */
 	public void closeNetConnection()
 	{
@@ -4559,25 +4481,20 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Manage actions when a player click on this PlayerInstance.<BR>
-	 * <BR>
-	 * <B><U> Actions on first click on the PlayerInstance (Select it)</U> :</B><BR>
-	 * <BR>
+	 * Manage actions when a player click on this PlayerInstance.<br>
+	 * <br>
+	 * <b><u>Actions on first click on the PlayerInstance (Select it)</u>:</b><br>
 	 * <li>Set the target of the player</li>
-	 * <li>Send a Server->Client packet MyTargetSelected to the player (display the select window)</li><BR>
-	 * <BR>
-	 * <B><U> Actions on second click on the PlayerInstance (Follow it/Attack it/Intercat with it)</U> :</B><BR>
-	 * <BR>
+	 * <li>Send a Server->Client packet MyTargetSelected to the player (display the select window)</li><br>
+	 * <br>
+	 * <b><u>Actions on second click on the PlayerInstance (Follow it/Attack it/Intercat with it)</u>:</b><br>
 	 * <li>Send a Server->Client packet MyTargetSelected to the player (display the select window)</li>
 	 * <li>If this PlayerInstance has a Private Store, notify the player AI with AI_INTENTION_INTERACT</li>
-	 * <li>If this PlayerInstance is autoAttackable, notify the player AI with AI_INTENTION_ATTACK</li><BR>
-	 * <BR>
-	 * <li>If this PlayerInstance is NOT autoAttackable, notify the player AI with AI_INTENTION_FOLLOW</li><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Client packet : Action, AttackRequest</li><BR>
-	 * <BR>
+	 * <li>If this PlayerInstance is autoAttackable, notify the player AI with AI_INTENTION_ATTACK</li>
+	 * <li>If this PlayerInstance is NOT autoAttackable, notify the player AI with AI_INTENTION_FOLLOW</li><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Client packet : Action, AttackRequest</li><br>
 	 * @param player The player that start an action on this PlayerInstance
 	 */
 	@Override
@@ -5109,15 +5026,12 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Send packet StatusUpdate with current HP,MP and CP to the PlayerInstance and only current HP, MP and Level to all other PlayerInstance of the Party.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
-	 * <li>Send the Server->Client packet StatusUpdate with current HP, MP and CP to this PlayerInstance</li><BR>
-	 * <li>Send the Server->Client packet PartySmallWindowUpdate with current HP, MP and Level to all other PlayerInstance of the Party</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND current HP and MP to all PlayerInstance of the _statusListener</B></FONT><BR>
-	 * <BR>
+	 * Send packet StatusUpdate with current HP,MP and CP to the PlayerInstance and only current HP, MP and Level to all other PlayerInstance of the Party.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
+	 * <li>Send the Server->Client packet StatusUpdate with current HP, MP and CP to this PlayerInstance</li>
+	 * <li>Send the Server->Client packet PartySmallWindowUpdate with current HP, MP and Level to all other PlayerInstance of the Party</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND current HP and MP to all PlayerInstance of the _statusListener</b></font>
 	 */
 	@Override
 	public void broadcastStatusUpdate()
@@ -5258,19 +5172,16 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Send a Server->Client packet UserInfo to this PlayerInstance and CharInfo to all PlayerInstance in its _KnownPlayers.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * Others PlayerInstance in the detection area of the PlayerInstance are identified in <B>_knownPlayers</B>. In order to inform other players of this PlayerInstance state modifications, server just need to go through _knownPlayers to send Server->Client Packet<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Send a Server->Client packet UserInfo to this PlayerInstance and CharInfo to all PlayerInstance in its _KnownPlayers.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * Others PlayerInstance in the detection area of the PlayerInstance are identified in <b>_knownPlayers</b>. In order to inform other players of this PlayerInstance state modifications, server just need to go through _knownPlayers to send Server->Client Packet<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Send a Server->Client packet UserInfo to this PlayerInstance (Public and Private Data)</li>
-	 * <li>Send a Server->Client packet CharInfo to all PlayerInstance in _KnownPlayers of the PlayerInstance (Public data only)</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : DON'T SEND UserInfo packet to other players instead of CharInfo packet. Indeed, UserInfo packet contains PRIVATE DATA as MaxHP, STR, DEX...</B></FONT><BR>
-	 * <BR>
+	 * <li>Send a Server->Client packet CharInfo to all PlayerInstance in _KnownPlayers of the PlayerInstance (Public data only)</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: DON'T SEND UserInfo packet to other players instead of CharInfo packet. Indeed, UserInfo packet contains PRIVATE DATA as MaxHP, STR, DEX...</b></font>
 	 */
 	public void broadcastUserInfo()
 	{
@@ -5303,14 +5214,12 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Manage Interact Task with another PlayerInstance.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Manage Interact Task with another PlayerInstance.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>If the private store is a STORE_PRIVATE_SELL, send a Server->Client PrivateBuyListSell packet to the PlayerInstance</li>
 	 * <li>If the private store is a STORE_PRIVATE_BUY, send a Server->Client PrivateBuyListBuy packet to the PlayerInstance</li>
-	 * <li>If the private store is a STORE_PRIVATE_MANUFACTURE, send a Server->Client RecipeShopSellList packet to the PlayerInstance</li><BR>
-	 * <BR>
+	 * <li>If the private store is a STORE_PRIVATE_MANUFACTURE, send a Server->Client RecipeShopSellList packet to the PlayerInstance</li><br>
 	 * @param target The Creature targeted
 	 */
 	public void doInteract(Creature target)
@@ -5340,17 +5249,14 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Manage AutoLoot Task.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Manage AutoLoot Task.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Send a System Message to the PlayerInstance : YOU_PICKED_UP_S1_ADENA or YOU_PICKED_UP_S1_S2</li>
 	 * <li>Add the Item to the PlayerInstance inventory</li>
 	 * <li>Send a Server->Client packet InventoryUpdate to this PlayerInstance with NewItem (use a new slot) or ModifiedItem (increase amount)</li>
-	 * <li>Send a Server->Client packet StatusUpdate to this PlayerInstance with current weight</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : If a Party is in progress, distribute Items between party members</B></FONT><BR>
-	 * <BR>
+	 * <li>Send a Server->Client packet StatusUpdate to this PlayerInstance with current weight</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: If a Party is in progress, distribute Items between party members</b></font>
 	 * @param target The ItemInstance dropped
 	 * @param item the item
 	 */
@@ -5371,19 +5277,16 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Manage Pickup Task.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Manage Pickup Task.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Send a Server->Client packet StopMove to this PlayerInstance</li>
 	 * <li>Remove the ItemInstance from the world and send server->client GetItem packets</li>
 	 * <li>Send a System Message to the PlayerInstance : YOU_PICKED_UP_S1_ADENA or YOU_PICKED_UP_S1_S2</li>
 	 * <li>Add the Item to the PlayerInstance inventory</li>
 	 * <li>Send a Server->Client packet InventoryUpdate to this PlayerInstance with NewItem (use a new slot) or ModifiedItem (increase amount)</li>
-	 * <li>Send a Server->Client packet StatusUpdate to this PlayerInstance with current weight</li> <BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : If a Party is in progress, distribute Items between party members</B></FONT><BR>
-	 * <BR>
+	 * <li>Send a Server->Client packet StatusUpdate to this PlayerInstance with current weight</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: If a Party is in progress, distribute Items between party members</b></font>
 	 * @param object The ItemInstance to pick up
 	 */
 	protected void doPickupItem(WorldObject object)
@@ -5574,14 +5477,12 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set a target.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Set a target.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Remove the PlayerInstance from the _statusListener of the old target if it was a Creature</li>
 	 * <li>Add the PlayerInstance to the _statusListener of the new target if it's a Creature</li>
-	 * <li>Target the new WorldObject (add the target to the PlayerInstance _target, _knownObject and PlayerInstance to _KnownObject of the WorldObject)</li><BR>
-	 * <BR>
+	 * <li>Target the new WorldObject (add the target to the PlayerInstance _target, _knownObject and PlayerInstance to _KnownObject of the WorldObject)</li><br>
 	 * @param newTarget The WorldObject to target
 	 */
 	@Override
@@ -5655,8 +5556,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the active weapon instance (always equiped in the right hand).<BR>
-	 * <BR>
+	 * Return the active weapon instance (always equipped in the right hand).
 	 * @return the active weapon instance
 	 */
 	@Override
@@ -5666,8 +5566,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the active weapon item (always equiped in the right hand).<BR>
-	 * <BR>
+	 * Return the active weapon item (always equipped in the right hand).
 	 * @return the active weapon item
 	 */
 	@Override
@@ -5967,8 +5866,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the secondary weapon instance (always equiped in the left hand).<BR>
-	 * <BR>
+	 * Return the secondary weapon instance (always equipped in the left hand).
 	 * @return the secondary weapon instance
 	 */
 	@Override
@@ -5978,8 +5876,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the secondary weapon item (always equiped in the left hand) or the fists weapon.<BR>
-	 * <BR>
+	 * Return the secondary weapon item (always equipped in the left hand) or the fists weapon.
 	 * @return the secondary weapon item
 	 */
 	@Override
@@ -6001,16 +5898,14 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Kill the Creature, Apply Death Penalty, Manage gain/loss Karma and Item Drop.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Kill the Creature, Apply Death Penalty, Manage gain/loss Karma and Item Drop.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Reduce the Experience of the PlayerInstance in function of the calculated Death Penalty</li>
 	 * <li>If necessary, unsummon the Pet of the killed PlayerInstance</li>
 	 * <li>Manage Karma gain for attacker and Karam loss for the killed PlayerInstance</li>
 	 * <li>If the killed PlayerInstance has Karma, manage Drop Item</li>
-	 * <li>Kill the PlayerInstance</li><BR>
-	 * <BR>
+	 * <li>Kill the PlayerInstance</li><br>
 	 * @param killer the killer
 	 * @return true, if successful
 	 */
@@ -6565,7 +6460,7 @@ public class PlayerInstance extends Playable
 			// Anti FARM Clan - Ally
 			if ((Config.ANTI_FARM_CLAN_ALLY_ENABLED && ((getClanId() > 0) && (targetPlayer.getClanId() > 0) && (getClanId() == targetPlayer.getClanId()))) || ((getAllyId() > 0) && (targetPlayer.getAllyId() > 0) && (getAllyId() == targetPlayer.getAllyId())))
 			{
-				sendMessage("Farm is punishable with Ban! Gm informed.");
+				sendMessage("Farm is punishable with Ban! GM informed.");
 				LOGGER.info("PVP POINT FARM ATTEMPT, " + getName() + " and " + targetPlayer.getName() + ". CLAN or ALLY.");
 				return false;
 			}
@@ -6573,7 +6468,7 @@ public class PlayerInstance extends Playable
 			// Anti FARM level player < 40
 			if (Config.ANTI_FARM_LVL_DIFF_ENABLED && (targetPlayer.getLevel() < Config.ANTI_FARM_MAX_LVL_DIFF))
 			{
-				sendMessage("Farm is punishable with Ban! Don't kill new players! Gm informed.");
+				sendMessage("Farm is punishable with Ban! Don't kill new players! GM informed.");
 				LOGGER.info("PVP POINT FARM ATTEMPT, " + getName() + " and " + targetPlayer.getName() + ". LVL DIFF.");
 				return false;
 			}
@@ -6581,7 +6476,7 @@ public class PlayerInstance extends Playable
 			// Anti FARM pdef < 300
 			if (Config.ANTI_FARM_PDEF_DIFF_ENABLED && (targetPlayer.getPDef(targetPlayer) < Config.ANTI_FARM_MAX_PDEF_DIFF))
 			{
-				sendMessage("Farm is punishable with Ban! Gm informed.");
+				sendMessage("Farm is punishable with Ban! GM informed.");
 				LOGGER.info("PVP POINT FARM ATTEMPT, " + getName() + " and " + targetPlayer.getName() + ". MAX PDEF DIFF.");
 				return false;
 			}
@@ -6589,7 +6484,7 @@ public class PlayerInstance extends Playable
 			// Anti FARM p atk < 300
 			if (Config.ANTI_FARM_PATK_DIFF_ENABLED && (targetPlayer.getPAtk(targetPlayer) < Config.ANTI_FARM_MAX_PATK_DIFF))
 			{
-				sendMessage("Farm is punishable with Ban! Gm informed.");
+				sendMessage("Farm is punishable with Ban! GM informed.");
 				LOGGER.info("PVP POINT FARM ATTEMPT, " + getName() + " and " + targetPlayer.getName() + ". MAX PATK DIFF.");
 				return false;
 			}
@@ -6597,7 +6492,7 @@ public class PlayerInstance extends Playable
 			// Anti FARM Party
 			if (Config.ANTI_FARM_PARTY_ENABLED && (getParty() != null) && (targetPlayer.getParty() != null) && getParty().equals(targetPlayer.getParty()))
 			{
-				sendMessage("Farm is punishable with Ban! Gm informed.");
+				sendMessage("Farm is punishable with Ban! GM informed.");
 				LOGGER.info("PVP POINT FARM ATTEMPT, " + getName() + " and " + targetPlayer.getName() + ". SAME PARTY.");
 				return false;
 			}
@@ -6609,7 +6504,7 @@ public class PlayerInstance extends Playable
 				final String ip2 = targetPlayer.getClient().getConnection().getInetAddress().getHostAddress();
 				if (ip1.equals(ip2))
 				{
-					sendMessage("Farm is punishable with Ban! Gm informed.");
+					sendMessage("Farm is punishable with Ban! GM informed.");
 					LOGGER.info("PVP POINT FARM ATTEMPT: " + getName() + " and " + targetPlayer.getName() + ". SAME IP.");
 					return false;
 				}
@@ -7160,8 +7055,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Restore the specified % of experience this PlayerInstance has lost and sends a Server->Client StatusUpdate packet.<BR>
-	 * <BR>
+	 * Restore the specified % of experience this PlayerInstance has lost and sends a Server->Client StatusUpdate packet.
 	 * @param restorePercent the restore percent
 	 */
 	public void restoreExp(double restorePercent)
@@ -7175,15 +7069,13 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Reduce the Experience (and level if necessary) of the PlayerInstance in function of the calculated Death Penalty.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Reduce the Experience (and level if necessary) of the PlayerInstance in function of the calculated Death Penalty.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Calculate the Experience loss</li>
 	 * <li>Set the value of _expBeforeDeath</li>
 	 * <li>Set the new Experience value of the PlayerInstance and Decrease its level if necessary</li>
-	 * <li>Send a Server->Client StatusUpdate packet with its new Experience</li><BR>
-	 * <BR>
+	 * <li>Send a Server->Client StatusUpdate packet with its new Experience</li><br>
 	 * @param atwar the atwar
 	 */
 	public void deathPenalty(boolean atwar)
@@ -7251,17 +7143,15 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Manage the increase level task of a PlayerInstance (Max MP, Max MP, Recommandation, Expertise and beginner skills...).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Manage the increase level task of a PlayerInstance (Max MP, Max MP, Recommandation, Expertise and beginner skills...).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Send a Server->Client System Message to the PlayerInstance : YOU_INCREASED_YOUR_LEVEL</li>
 	 * <li>Send a Server->Client packet StatusUpdate to the PlayerInstance with new LEVEL, MAX_HP and MAX_MP</li>
 	 * <li>Set the current HP and MP of the PlayerInstance, Launch/Stop a HP/MP/CP Regeneration Task and send StatusUpdate packet to all other PlayerInstance to inform (exclusive broadcast)</li>
 	 * <li>Recalculate the party level</li>
 	 * <li>Recalculate the number of Recommandation that the PlayerInstance can give</li>
-	 * <li>Give Expertise skill of this level and remove beginner Lucky skill</li><BR>
-	 * <BR>
+	 * <li>Give Expertise skill of this level and remove beginner Lucky skill</li>
 	 */
 	public void increaseLevel()
 	{
@@ -7271,13 +7161,11 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Stop the HP/MP/CP Regeneration task.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Stop the HP/MP/CP Regeneration task.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Set the RegenActive flag to False</li>
-	 * <li>Stop the HP/MP/CP Regeneration task</li><BR>
-	 * <BR>
+	 * <li>Stop the HP/MP/CP Regeneration task</li>
 	 */
 	public void stopAllTimers()
 	{
@@ -7291,8 +7179,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the Summon of the PlayerInstance or null.<BR>
-	 * <BR>
+	 * Return the Summon of the PlayerInstance or null.
 	 * @return the pet
 	 */
 	@Override
@@ -7302,8 +7189,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the Summon of the PlayerInstance.<BR>
-	 * <BR>
+	 * Set the Summon of the PlayerInstance.
 	 * @param summon the new pet
 	 */
 	public void setPet(Summon summon)
@@ -7312,8 +7198,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the Summon of the PlayerInstance or null.<BR>
-	 * <BR>
+	 * Return the Summon of the PlayerInstance or null.
 	 * @return the trained beast
 	 */
 	public TamedBeastInstance getTrainedBeast()
@@ -7322,8 +7207,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the Summon of the PlayerInstance.<BR>
-	 * <BR>
+	 * Set the Summon of the PlayerInstance.
 	 * @param tamedBeast the new trained beast
 	 */
 	public void setTrainedBeast(TamedBeastInstance tamedBeast)
@@ -7332,8 +7216,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the PlayerInstance requester of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).<BR>
-	 * <BR>
+	 * Return the PlayerInstance requester of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).
 	 * @return the request
 	 */
 	public Request getRequest()
@@ -7342,8 +7225,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the PlayerInstance requester of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).<BR>
-	 * <BR>
+	 * Set the PlayerInstance requester of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).
 	 * @param requester the new active requester
 	 */
 	public synchronized void setActiveRequester(PlayerInstance requester)
@@ -7352,8 +7234,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the PlayerInstance requester of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).<BR>
-	 * <BR>
+	 * Return the PlayerInstance requester of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).
 	 * @return the active requester
 	 */
 	public synchronized PlayerInstance getActiveRequester()
@@ -7367,8 +7248,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return True if a transaction is in progress.<BR>
-	 * <BR>
+	 * Return True if a transaction is in progress.
 	 * @return true, if is processing request
 	 */
 	public boolean isProcessingRequest()
@@ -7377,8 +7257,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return True if a transaction is in progress.<BR>
-	 * <BR>
+	 * Return True if a transaction is in progress.
 	 * @return true, if is processing transaction
 	 */
 	public boolean isProcessingTransaction()
@@ -7387,8 +7266,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Select the Warehouse to be used in next activity.<BR>
-	 * <BR>
+	 * Select the Warehouse to be used in next activity.
 	 * @param partner the partner
 	 */
 	public void onTransactionRequest(PlayerInstance partner)
@@ -7401,8 +7279,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Select the Warehouse to be used in next activity.<BR>
-	 * <BR>
+	 * Select the Warehouse to be used in next activity.
 	 */
 	public void onTransactionResponse()
 	{
@@ -7410,8 +7287,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Select the Warehouse to be used in next activity.<BR>
-	 * <BR>
+	 * Select the Warehouse to be used in next activity.
 	 * @param warehouse the new active warehouse
 	 */
 	public void setActiveWarehouse(ItemContainer warehouse)
@@ -7420,8 +7296,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return active Warehouse.<BR>
-	 * <BR>
+	 * Return active Warehouse.
 	 * @return the active warehouse
 	 */
 	public ItemContainer getActiveWarehouse()
@@ -7430,8 +7305,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Select the TradeList to be used in next activity.<BR>
-	 * <BR>
+	 * Select the TradeList to be used in next activity.
 	 * @param tradeList the new active trade list
 	 */
 	public void setActiveTradeList(TradeList tradeList)
@@ -7440,8 +7314,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return active TradeList.<BR>
-	 * <BR>
+	 * Return active TradeList.
 	 * @return the active trade list
 	 */
 	public TradeList getActiveTradeList()
@@ -7539,8 +7412,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the _createList object of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the _createList object of the PlayerInstance.
 	 * @return the creates the list
 	 */
 	public ManufactureList getCreateList()
@@ -7549,8 +7421,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the _createList object of the PlayerInstance.<BR>
-	 * <BR>
+	 * Set the _createList object of the PlayerInstance.
 	 * @param x the new creates the list
 	 */
 	public void setCreateList(ManufactureList x)
@@ -7559,8 +7430,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the _sellList object of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the _sellList object of the PlayerInstance.
 	 * @return the sell list
 	 */
 	public TradeList getSellList()
@@ -7573,7 +7443,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the _buyList object of the PlayerInstance.<BR>
+	 * Return the _buyList object of the PlayerInstance.
 	 * @return the buy list
 	 */
 	public TradeList getBuyList()
@@ -7586,15 +7456,15 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the Private Store type of the PlayerInstance.<BR>
-	 * <BR>
-	 * <B><U> Values </U> :</B>
+	 * Set the Private Store type of the PlayerInstance.<br>
+	 * <br>
+	 * <b><u>Values</u>:</b>
 	 * <li>0 : STORE_PRIVATE_NONE</li>
 	 * <li>1 : STORE_PRIVATE_SELL</li>
 	 * <li>2 : sellmanage</li>
 	 * <li>3 : STORE_PRIVATE_BUY</li>
 	 * <li>4 : buymanage</li>
-	 * <li>5 : STORE_PRIVATE_MANUFACTURE</li>
+	 * <li>5 : STORE_PRIVATE_MANUFACTURE</li><br>
 	 * @param type the new private store type
 	 */
 	public void setPrivateStoreType(int type)
@@ -7617,9 +7487,9 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the Private Store type of the PlayerInstance.<BR>
-	 * <BR>
-	 * <B><U> Values </U> :</B>
+	 * Return the Private Store type of the PlayerInstance.<br>
+	 * <br>
+	 * <b><u>Values</u>:</b>
 	 * <li>0 : STORE_PRIVATE_NONE</li>
 	 * <li>1 : STORE_PRIVATE_SELL</li>
 	 * <li>2 : sellmanage</li>
@@ -7634,8 +7504,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the _skillLearningClassId object of the PlayerInstance.<BR>
-	 * <BR>
+	 * Set the _skillLearningClassId object of the PlayerInstance.
 	 * @param classId the new skill learning class id
 	 */
 	public void setSkillLearningClassId(ClassId classId)
@@ -7644,8 +7513,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the _skillLearningClassId object of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the _skillLearningClassId object of the PlayerInstance.
 	 * @return the skill learning class id
 	 */
 	public ClassId getSkillLearningClassId()
@@ -7654,8 +7522,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the _clan object, _clanId, _clanLeader Flag and title of the PlayerInstance.<BR>
-	 * <BR>
+	 * Set the _clan object, _clanId, _clanLeader Flag and title of the PlayerInstance.
 	 * @param clan the new clan
 	 */
 	public void setClan(Clan clan)
@@ -7689,8 +7556,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the _clan object of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the _clan object of the PlayerInstance.
 	 * @return the clan
 	 */
 	public Clan getClan()
@@ -7699,8 +7565,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return True if the PlayerInstance is the leader of its clan.<BR>
-	 * <BR>
+	 * Return True if the PlayerInstance is the leader of its clan.
 	 * @return true, if is clan leader
 	 */
 	public boolean isClanLeader()
@@ -7713,8 +7578,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Reduce the number of arrows owned by the PlayerInstance and send it Server->Client Packet InventoryUpdate or ItemList (to unequip if the last arrow was consummed).<BR>
-	 * <BR>
+	 * Reduce the number of arrows owned by the PlayerInstance and send it Server->Client Packet InventoryUpdate or ItemList (to unequip if the last arrow was consummed).
 	 */
 	@Override
 	protected void reduceArrowCount()
@@ -7739,14 +7603,13 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Equip arrows needed in left hand and send a Server->Client packet ItemList to the PlayerInstance then return True.<BR>
-	 * <BR>
+	 * Equip arrows needed in left hand and send a Server->Client packet ItemList to the PlayerInstance then return True.
 	 * @return true, if successful
 	 */
 	@Override
 	protected boolean checkAndEquipArrows()
 	{
-		// Check if nothing is equiped in left hand
+		// Check if nothing is equipped in left hand
 		if ((getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND) == null) //
 			// Mobius: Fix for pickup/equip arrows on dual weapons.
 			&& (getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND).getItemType() == WeaponType.BOW))
@@ -7764,15 +7627,14 @@ public class PlayerInstance extends Playable
 		}
 		else
 		{
-			// Get the ItemInstance of arrows equiped in left hand
+			// Get the ItemInstance of arrows equipped in left hand
 			_arrowItem = getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		}
 		return _arrowItem != null;
 	}
 	
 	/**
-	 * Disarm the player's weapon and shield.<BR>
-	 * <BR>
+	 * Disarm the player's weapon and shield.
 	 * @return true, if successful
 	 */
 	public boolean disarmWeapons()
@@ -7875,8 +7737,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return True if the PlayerInstance use a dual weapon.<BR>
-	 * <BR>
+	 * Return True if the PlayerInstance use a dual weapon.
 	 * @return true, if is using dual weapon
 	 */
 	@Override
@@ -7929,8 +7790,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return True if the PlayerInstance is invulnerable.<BR>
-	 * <BR>
+	 * Return True if the PlayerInstance is invulnerable.
 	 * @return true, if is invul
 	 */
 	@Override
@@ -7940,8 +7800,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return True if the PlayerInstance has a Party in progress.<BR>
-	 * <BR>
+	 * Return True if the PlayerInstance has a Party in progress.
 	 * @return true, if is in party
 	 */
 	@Override
@@ -7951,8 +7810,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the _party object of the PlayerInstance (without joining it).<BR>
-	 * <BR>
+	 * Set the _party object of the PlayerInstance (without joining it).
 	 * @param party the new party
 	 */
 	public void setParty(Party party)
@@ -7961,8 +7819,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the _party object of the PlayerInstance AND join it.<BR>
-	 * <BR>
+	 * Set the _party object of the PlayerInstance AND join it.
 	 * @param party the party
 	 */
 	public void joinParty(Party party)
@@ -8052,14 +7909,12 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Manage a cancel cast task for the PlayerInstance.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Manage a cancel cast task for the PlayerInstance.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Set the Intention of the AI to AI_INTENTION_IDLE</li>
 	 * <li>Enable all skills (set _allSkillsDisabled to False)</li>
-	 * <li>Send a Server->Client Packet MagicSkillCanceld to the PlayerInstance and all PlayerInstance in the _KnownPlayers of the Creature (broadcast)</li><BR>
-	 * <BR>
+	 * <li>Send a Server->Client Packet MagicSkillCanceld to the PlayerInstance and all PlayerInstance in the _KnownPlayers of the Creature (broadcast)</li>
 	 */
 	public void cancelCastMagic()
 	{
@@ -8076,8 +7931,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the _accessLevel of the PlayerInstance.<BR>
-	 * <BR>
+	 * Set the _accessLevel of the PlayerInstance.
 	 * @param level the new access level
 	 */
 	public void setAccessLevel(int level)
@@ -8130,8 +7984,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the _accessLevel of the PlayerInstance.<BR>
-	 * <BR>
+	 * Return the _accessLevel of the PlayerInstance.
 	 * @return the access level
 	 */
 	public AccessLevel getAccessLevel()
@@ -8154,8 +8007,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Update Stats of the PlayerInstance client side by sending Server->Client packet UserInfo/StatusUpdate to this PlayerInstance and CharInfo/StatusUpdate to all PlayerInstance in its _KnownPlayers (broadcast).<BR>
-	 * <BR>
+	 * Update Stats of the PlayerInstance client side by sending Server->Client packet UserInfo/StatusUpdate to this PlayerInstance and CharInfo/StatusUpdate to all PlayerInstance in its _KnownPlayers (broadcast).
 	 * @param broadcastType the broadcast type
 	 */
 	public void updateAndBroadcastStatus(int broadcastType)
@@ -8175,8 +8027,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Send a Server->Client StatusUpdate packet with Karma and PvP Flag to the PlayerInstance and all PlayerInstance to inform (broadcast).<BR>
-	 * <BR>
+	 * Send a Server->Client StatusUpdate packet with Karma and PvP Flag to the PlayerInstance and all PlayerInstance to inform (broadcast).
 	 * @param flag the new karma flag
 	 */
 	public void setKarmaFlag(int flag)
@@ -8193,8 +8044,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Send a Server->Client StatusUpdate packet with Karma to the PlayerInstance and all PlayerInstance to inform (broadcast).<BR>
-	 * <BR>
+	 * Send a Server->Client StatusUpdate packet with Karma to the PlayerInstance and all PlayerInstance to inform (broadcast).
 	 */
 	public void broadcastKarma()
 	{
@@ -8215,8 +8065,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the online Flag to True or False and update the characters table of the database with online status and lastAccess (called when login and logout).<BR>
-	 * <BR>
+	 * Set the online Flag to True or False and update the characters table of the database with online status and lastAccess (called when login and logout).
 	 * @param isOnline the new online status
 	 */
 	public void setOnlineStatus(boolean isOnline)
@@ -8245,8 +8094,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Update the characters table of the database with online status and lastAccess of this PlayerInstance (called when login and logout).<BR>
-	 * <BR>
+	 * Update the characters table of the database with online status and lastAccess of this PlayerInstance (called when login and logout).
 	 */
 	public void updateOnlineStatus()
 	{
@@ -8404,15 +8252,13 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Retrieve a PlayerInstance from the characters table of the database and add it in _allObjects of the World.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Retrieve a PlayerInstance from the characters table of the database and add it in _allObjects of the World.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Retrieve the PlayerInstance from the characters table of the database</li>
 	 * <li>Add the PlayerInstance object in _allObjects</li>
 	 * <li>Set the x,y,z position of the PlayerInstance and make it invisible</li>
-	 * <li>Update the overloaded status of the PlayerInstance</li><BR>
-	 * <BR>
+	 * <li>Update the overloaded status of the PlayerInstance</li><br>
 	 * @param objectId Identifier of the object to initialized
 	 * @return The PlayerInstance loaded from the database
 	 */
@@ -9184,7 +9030,7 @@ public class PlayerInstance extends Playable
 	 * Adds the skill.
 	 * @param newSkill the new skill
 	 * @param store the store
-	 * @return the l2 skill
+	 * @return the skill
 	 */
 	public synchronized Skill addSkill(Skill newSkill, boolean store)
 	{
@@ -9215,7 +9061,7 @@ public class PlayerInstance extends Playable
 	 * Removes the skill.
 	 * @param skill the skill
 	 * @param store the store
-	 * @return the l2 skill
+	 * @return the skill
 	 */
 	public Skill removeSkill(Skill skill, boolean store)
 	{
@@ -9227,21 +9073,19 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Remove a skill from the Creature and its Func objects from calculator set of the Creature and save update in the character_skills table of the database.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All skills own by a Creature are identified in <B>_skills</B><BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Remove a skill from the Creature and its Func objects from calculator set of the Creature and save update in the character_skills table of the database.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All skills own by a Creature are identified in <b>_skills</b><br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Remove the skill from the Creature _skills</li>
-	 * <li>Remove all its Func objects from the Creature calculator set</li><BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>PlayerInstance : Save update in the character_skills table of the database</li><BR>
-	 * <BR>
+	 * <li>Remove all its Func objects from the Creature calculator set</li><br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>PlayerInstance : Save update in the character_skills table of the database</li><br>
 	 * @param skill The Skill to remove from the Creature
 	 * @return The Skill removed
 	 */
@@ -9282,8 +9126,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Add or update a PlayerInstance skill in the character_skills table of the database. <BR>
-	 * <BR>
+	 * Add or update a PlayerInstance skill in the character_skills table of the database.<br>
 	 * If newClassIndex > -1, the skill will be stored with that class index, not the current one.
 	 * @param newSkill the new skill
 	 * @param oldSkill the old skill
@@ -9441,8 +9284,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Retrieve from the database all skills of this PlayerInstance and add them to _skills.<BR>
-	 * <BR>
+	 * Retrieve from the database all skills of this PlayerInstance and add them to _skills.
 	 */
 	public synchronized void restoreSkills()
 	{
@@ -9514,8 +9356,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Retrieve from the database all skill effects of this PlayerInstance and add them to the player.<BR>
-	 * <BR>
+	 * Retrieve from the database all skill effects of this PlayerInstance and add them to the player.
 	 * @param activateEffects
 	 */
 	public void restoreEffects(boolean activateEffects)
@@ -9622,8 +9463,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Retrieve from the database all Recommendation data of this PlayerInstance, add to _recomChars and calculate stats of the PlayerInstance.<BR>
-	 * <BR>
+	 * Retrieve from the database all Recommendation data of this PlayerInstance, add to _recomChars and calculate stats of the PlayerInstance.
 	 */
 	private void restoreRecom()
 	{
@@ -9943,16 +9783,14 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return True if the PlayerInstance is autoAttackable.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Return True if the PlayerInstance is autoAttackable.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Check if the attacker isn't the PlayerInstance Pet</li>
 	 * <li>Check if the attacker is MonsterInstance</li>
 	 * <li>If the attacker is a PlayerInstance, check if it is not in the same party</li>
 	 * <li>Check if the PlayerInstance has Karma</li>
-	 * <li>If the attacker is a PlayerInstance, check if it is not in the same siege clan (Attacker, Defender)</li> <BR>
-	 * <BR>
+	 * <li>If the attacker is a PlayerInstance, check if it is not in the same siege clan (Attacker, Defender)</li>
 	 * @param attacker the attacker
 	 * @return true, if is auto attackable
 	 */
@@ -10122,25 +9960,19 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Check if the active Skill can be casted.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Check if the active Skill can be casted.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Check if the skill isn't toggle and is offensive</li>
 	 * <li>Check if the target is in the skill cast range</li>
 	 * <li>Check if the skill is Spoil type and if the target isn't already spoiled</li>
 	 * <li>Check if the caster owns enought consummed Item, enough HP and MP to cast the skill</li>
 	 * <li>Check if the caster isn't sitting</li>
-	 * <li>Check if all skills are enabled and this skill is enabled</li><BR>
-	 * <BR>
-	 * <li>Check if the caster own the weapon needed</li><BR>
-	 * <BR>
-	 * <li>Check if the skill is active</li><BR>
-	 * <BR>
-	 * <li>Check if all casting conditions are completed</li><BR>
-	 * <BR>
-	 * <li>Notify the AI with AI_INTENTION_CAST and target</li><BR>
-	 * <BR>
+	 * <li>Check if all skills are enabled and this skill is enabled</li>
+	 * <li>Check if the caster own the weapon needed</li>
+	 * <li>Check if the skill is active</li>
+	 * <li>Check if all casting conditions are completed</li>
+	 * <li>Notify the AI with AI_INTENTION_CAST and target</li><br>
 	 * @param skill The Skill to use
 	 * @param forceUse used to force ATTACK on players
 	 * @param dontMove used to prevent movement, if not in range
@@ -10838,8 +10670,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Reduce Item quantity of the PlayerInstance Inventory and send it a Server->Client packet InventoryUpdate.<BR>
-	 * <BR>
+	 * Reduce Item quantity of the PlayerInstance Inventory and send it a Server->Client packet InventoryUpdate.
 	 * @param itemConsumeId the item consume id
 	 * @param itemCount the item count
 	 */
@@ -10853,8 +10684,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return True if the PlayerInstance is a Mage.<BR>
-	 * <BR>
+	 * Return True if the PlayerInstance is a Mage.
 	 * @return true, if is mage class
 	 */
 	public boolean isMageClass()
@@ -10872,8 +10702,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the type of Pet mounted (0 : none, 1 : Stridder, 2 : Wyvern) and send a Server->Client packet InventoryUpdate to the PlayerInstance.<BR>
-	 * <BR>
+	 * Set the type of Pet mounted (0 : none, 1 : Stridder, 2 : Wyvern) and send a Server->Client packet InventoryUpdate to the PlayerInstance.
 	 * @return true, if successful
 	 */
 	public boolean checkLandingState()
@@ -10938,8 +10767,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the type of Pet mounted (0 : none, 1 : Stridder, 2 : Wyvern).<BR>
-	 * <BR>
+	 * Return the type of Pet mounted (0 : none, 1 : Stridder, 2 : Wyvern).
 	 * @return the mount type
 	 */
 	public int getMountType()
@@ -10948,19 +10776,16 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Send a Server->Client packet UserInfo to this PlayerInstance and CharInfo to all PlayerInstance in its _KnownPlayers.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * Others PlayerInstance in the detection area of the PlayerInstance are identified in <B>_knownPlayers</B>. In order to inform other players of this PlayerInstance state modifications, server just need to go through _knownPlayers to send Server->Client Packet<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Send a Server->Client packet UserInfo to this PlayerInstance and CharInfo to all PlayerInstance in its _KnownPlayers.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * Others PlayerInstance in the detection area of the PlayerInstance are identified in <b>_knownPlayers</b>. In order to inform other players of this PlayerInstance state modifications, server just need to go through _knownPlayers to send Server->Client Packet<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Send a Server->Client packet UserInfo to this PlayerInstance (Public and Private Data)</li>
-	 * <li>Send a Server->Client packet CharInfo to all PlayerInstance in _KnownPlayers of the PlayerInstance (Public data only)</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : DON'T SEND UserInfo packet to other players instead of CharInfo packet. Indeed, UserInfo packet contains PRIVATE DATA as MaxHP, STR, DEX...</B></FONT><BR>
-	 * <BR>
+	 * <li>Send a Server->Client packet CharInfo to all PlayerInstance in _KnownPlayers of the PlayerInstance (Public data only)</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: DON'T SEND UserInfo packet to other players instead of CharInfo packet. Indeed, UserInfo packet contains PRIVATE DATA as MaxHP, STR, DEX...</b></font>
 	 */
 	@Override
 	public void updateAbnormalEffect()
@@ -10969,8 +10794,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Disable the Inventory and create a new task to enable it after 1.5s.<BR>
-	 * <BR>
+	 * Disable the Inventory and create a new task to enable it after 1.5s.
 	 */
 	public void tempInvetoryDisable()
 	{
@@ -10979,8 +10803,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return True if the Inventory is disabled.<BR>
-	 * <BR>
+	 * Return True if the Inventory is disabled.
 	 * @return true, if is invetory disabled
 	 */
 	public boolean isInvetoryDisabled()
@@ -11023,8 +10846,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Add a CubicInstance to the PlayerInstance _cubics.<BR>
-	 * <BR>
+	 * Add a CubicInstance to the PlayerInstance _cubics.
 	 * @param id the id
 	 * @param level the level
 	 * @param matk the matk
@@ -11040,8 +10862,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Remove a CubicInstance from the PlayerInstance _cubics.<BR>
-	 * <BR>
+	 * Remove a CubicInstance from the PlayerInstance _cubics.
 	 * @param id the id
 	 */
 	public void delCubic(int id)
@@ -11050,8 +10871,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the CubicInstance corresponding to the Identifier of the PlayerInstance _cubics.<BR>
-	 * <BR>
+	 * Return the CubicInstance corresponding to the Identifier of the PlayerInstance _cubics.
 	 * @param id the id
 	 * @return the cubic
 	 */
@@ -11082,8 +10902,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the modifier corresponding to the Enchant Effect of the Active Weapon (Min : 127).<BR>
-	 * <BR>
+	 * Return the modifier corresponding to the Enchant Effect of the Active Weapon (Min : 127).
 	 * @return the enchant effect
 	 */
 	public int getEnchantEffect()
@@ -11097,8 +10916,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the _lastFolkNpc of the PlayerInstance corresponding to the last Folk wich one the player talked.<BR>
-	 * <BR>
+	 * Set the _lastFolkNpc of the PlayerInstance corresponding to the last Folk wich one the player talked.
 	 * @param folkNpc the new last folk npc
 	 */
 	public void setLastFolkNPC(FolkInstance folkNpc)
@@ -11107,8 +10925,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the _lastFolkNpc of the PlayerInstance corresponding to the last Folk wich one the player talked.<BR>
-	 * <BR>
+	 * Return the _lastFolkNpc of the PlayerInstance corresponding to the last Folk wich one the player talked.
 	 * @return the last folk npc
 	 */
 	public FolkInstance getLastFolkNPC()
@@ -11117,8 +10934,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the Silent Moving mode Flag.<BR>
-	 * <BR>
+	 * Set the Silent Moving mode Flag.
 	 * @param flag the new silent moving
 	 */
 	public void setSilentMoving(boolean flag)
@@ -11134,8 +10950,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return True if the Silent Moving mode is active.<BR>
-	 * <BR>
+	 * Return True if the Silent Moving mode is active.
 	 * @return true, if is silent moving
 	 */
 	public boolean isSilentMoving()
@@ -11144,8 +10959,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return True if PlayerInstance is a participant in the Festival of Darkness.<BR>
-	 * <BR>
+	 * Return True if PlayerInstance is a participant in the Festival of Darkness.
 	 * @return true, if is festival participant
 	 */
 	public boolean isFestivalParticipant()
@@ -11762,8 +11576,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Send a Server->Client packet StatusUpdate to the PlayerInstance.<BR>
-	 * <BR>
+	 * Send a Server->Client packet StatusUpdate to the PlayerInstance.
 	 */
 	@Override
 	public void sendPacket(GameServerPacket packet)
@@ -11775,8 +11588,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Send SystemMessage packet.<BR>
-	 * <BR>
+	 * Send SystemMessage packet.
 	 * @param id
 	 */
 	public void sendPacket(SystemMessageId id)
@@ -12364,7 +12176,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * 1. Add the specified class ID as a subclass (up to the maximum number of <b>three</b>) for this character.<BR>
+	 * 1. Add the specified class ID as a subclass (up to the maximum number of <b>three</b>) for this character.<br>
 	 * 2. This method no longer changes the active _classIndex of the player. This is only done by the calling of setActiveClass() method as that should be the only way to do so.
 	 * @param classId the class id
 	 * @param classIndex the class index
@@ -12494,9 +12306,9 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * 1. Completely erase all existance of the subClass linked to the classIndex.<BR>
-	 * 2. Send over the newClassId to addSubClass()to create a new instance on this classIndex.<BR>
-	 * 3. Upon Exception, revert the player to their BaseClass to avoid further problems.<BR>
+	 * 1. Completely erase all existance of the subClass linked to the classIndex.<br>
+	 * 2. Send over the newClassId to addSubClass()to create a new instance on this classIndex.<br>
+	 * 3. Upon Exception, revert the player to their BaseClass to avoid further problems.
 	 * @param classIndex the class index
 	 * @param newClassId the new class id
 	 * @return boolean subclassAdded
@@ -12634,7 +12446,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Changes the character's class based on the given class index. <BR>
+	 * Changes the character's class based on the given class index.<br>
 	 * An index of zero specifies the character's original (base) class, while indexes 1-3 specifies the character's sub-classes respectively.
 	 * @param classIndex the class index
 	 */
@@ -14018,10 +13830,9 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Manage the delete task of a PlayerInstance (Leave Party, Unsummon pet, Save its inventory in the database, Remove it from the world...).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Manage the delete task of a PlayerInstance (Leave Party, Unsummon pet, Save its inventory in the database, Remove it from the world...).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>If the PlayerInstance is in observer mode, set its position to its position before entering in observer mode</li>
 	 * <li>Set the online Flag to True or False and update the characters table of the database with online status and lastAccess</li>
 	 * <li>Stop the HP/MP/CP Regeneration task</li>
@@ -14030,8 +13841,7 @@ public class PlayerInstance extends Playable
 	 * <li>Stop Party and Unsummon Pet</li>
 	 * <li>Update database with items in its inventory and remove them from the world</li>
 	 * <li>Remove all WorldObject from _knownObjects and _knownPlayer of the Creature then cancel Attak or Cast and notify AI</li>
-	 * <li>Close the connection with the client</li><BR>
-	 * <BR>
+	 * <li>Close the connection with the client</li>
 	 */
 	public synchronized void deleteMe()
 	{
@@ -15022,8 +14832,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Create a new SkillDat object and queue it in the player _queuedSkill.<BR>
-	 * <BR>
+	 * Create a new SkillDat object and queue it in the player _queuedSkill.
 	 * @param queuedSkill the queued skill
 	 * @param ctrlPressed the ctrl pressed
 	 * @param shiftPressed the shift pressed
@@ -15066,8 +14875,8 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Sets the cursed weapon equiped id.
-	 * @param value the new cursed weapon equiped id
+	 * Sets the cursed weapon equipped id.
+	 * @param value the new cursed weapon equipped id
 	 */
 	public void setCursedWeaponEquipedId(int value)
 	{
@@ -15075,8 +14884,8 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Gets the cursed weapon equiped id.
-	 * @return the cursed weapon equiped id
+	 * Gets the cursed weapon equipped id.
+	 * @return the cursed weapon equipped id
 	 */
 	public int getCursedWeaponEquipedId()
 	{
@@ -15377,8 +15186,8 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Sets the gm status active.
-	 * @param value the new gm status active
+	 * Sets the GM status active.
+	 * @param value the new GM status active
 	 */
 	public void setGmStatusActive(boolean value)
 	{
@@ -15386,7 +15195,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Checks for gm status active.
+	 * Checks for GM status active.
 	 * @return true, if successful
 	 */
 	public boolean hasGmStatusActive()
@@ -16934,7 +16743,6 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Get the current pet skill in use or return null.<br>
-	 * <br>
 	 * @return
 	 */
 	public SkillDat getCurrentPetSkill()
@@ -16943,8 +16751,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Create a new SkillDat object and set the player _currentPetSkill.<br>
-	 * <br>
+	 * Create a new SkillDat object and set the player _currentPetSkill.
 	 * @param currentSkill
 	 * @param ctrlPressed
 	 * @param shiftPressed

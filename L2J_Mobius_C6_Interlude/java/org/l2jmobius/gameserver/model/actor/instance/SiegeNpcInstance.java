@@ -67,7 +67,7 @@ public class SiegeNpcInstance extends FolkInstance
 	}
 	
 	/**
-	 * If siege is in progress shows the Busy HTML<BR>
+	 * If siege is in progress shows the Busy HTML<br>
 	 * else Shows the SiegeInfo window
 	 * @param player
 	 */

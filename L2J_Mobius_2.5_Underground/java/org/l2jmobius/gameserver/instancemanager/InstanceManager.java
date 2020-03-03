@@ -456,7 +456,7 @@ public class InstanceManager implements IXmlReader
 	}
 	
 	/**
-	 * Register instance world.<br>
+	 * Register instance world.
 	 * @param instance instance which should be registered
 	 */
 	public void register(Instance instance)

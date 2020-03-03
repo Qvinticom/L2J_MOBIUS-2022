@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
- * It appears you are able to successfully create from manufacture store while casting, while in manufacture store and within 250 range. So basic checks <br>
+ * It appears you are able to successfully create from manufacture store while casting, while in manufacture store and within 250 range. So basic checks<br>
  * from your own recipe list crafting are skipped. With the exception of trading, if you request trade, it is cancelled, if you are already trading, you get message.
  * @author Nik
  */

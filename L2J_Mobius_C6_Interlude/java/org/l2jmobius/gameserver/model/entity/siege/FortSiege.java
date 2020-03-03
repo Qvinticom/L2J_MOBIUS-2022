@@ -235,9 +235,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * When siege ends<BR>
-	 * <BR>
-	 * .
+	 * When siege ends
 	 */
 	public void endSiege()
 	{
@@ -343,9 +341,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * When control of fort changed during siege<BR>
-	 * <BR>
-	 * .
+	 * When control of fort changed during siege
 	 */
 	public void midVictory()
 	{
@@ -370,9 +366,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * When siege starts<BR>
-	 * <BR>
-	 * .
+	 * When siege starts
 	 */
 	public void startSiege()
 	{
@@ -433,8 +427,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * Announce to player.<BR>
-	 * <BR>
+	 * Announce to player.
 	 * @param message The String of the message to send to player
 	 * @param inAreaOnly The boolean flag to show message to players in area only.
 	 */
@@ -506,9 +499,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * Approve clan as defender for siege<BR>
-	 * <BR>
-	 * .
+	 * Approve clan as defender for siege.
 	 * @param clanId The int of player's clan id
 	 */
 	public void approveSiegeDefenderClan(int clanId)
@@ -797,9 +788,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * Register clan as attacker<BR>
-	 * <BR>
-	 * .
+	 * Register clan as attacker.
 	 * @param player The PlayerInstance of the player trying to register
 	 */
 	public void registerAttacker(PlayerInstance player)
@@ -853,9 +842,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * Register clan as defender<BR>
-	 * <BR>
-	 * .
+	 * Register clan as defender.
 	 * @param player The PlayerInstance of the player trying to register
 	 */
 	public void registerDefender(PlayerInstance player)
@@ -881,9 +868,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * Remove clan from siege<BR>
-	 * <BR>
-	 * .
+	 * Remove clan from siege.
 	 * @param clanId The int of player's clan id
 	 */
 	public void removeSiegeClan(int clanId)
@@ -918,9 +903,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * Remove clan from siege<BR>
-	 * <BR>
-	 * .
+	 * Remove clan from siege.
 	 * @param clan the clan
 	 */
 	public void removeSiegeClan(Clan clan)
@@ -934,9 +917,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * Remove clan from siege<BR>
-	 * <BR>
-	 * .
+	 * Remove clan from siege.
 	 * @param player The PlayerInstance of player/clan being removed
 	 */
 	public void removeSiegeClan(PlayerInstance player)
@@ -945,9 +926,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * Start the auto tasks<BR>
-	 * <BR>
-	 * .
+	 * Start the auto tasks
 	 */
 	public void checkAutoTask()
 	{
@@ -963,9 +942,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * Start the auto tasks<BR>
-	 * <BR>
-	 * .
+	 * Start the auto tasks.
 	 * @param setTime the set time
 	 */
 	public void startAutoTask(boolean setTime)
@@ -1036,9 +1013,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * Add clan as attacker<BR>
-	 * <BR>
-	 * .
+	 * Add clan as attacker.
 	 * @param clanId The int of clan's id
 	 */
 	private void addAttacker(int clanId)
@@ -1047,9 +1022,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * Add clan as defender<BR>
-	 * <BR>
-	 * .
+	 * Add clan as defender.
 	 * @param clanId The int of clan's id
 	 */
 	private void addDefender(int clanId)
@@ -1071,9 +1044,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * Add clan as defender waiting approval<BR>
-	 * <BR>
-	 * .
+	 * Add clan as defender waiting approval.
 	 * @param clanId The int of clan's id
 	 */
 	private void addDefenderWaiting(int clanId)
@@ -1082,8 +1053,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * Return true if the player can register.<BR>
-	 * <BR>
+	 * Return true if the player can register.
 	 * @param player The PlayerInstance of the player trying to register
 	 * @return true, if successful
 	 */
@@ -1246,8 +1216,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * Save registration to database.<BR>
-	 * <BR>
+	 * Save registration to database.
 	 * @param clan The Clan of player
 	 * @param typeId -1 = owner 0 = defender, 1 = attacker, 2 = defender waiting
 	 * @param isUpdateRegistration the is update registration
@@ -1380,8 +1349,7 @@ public class FortSiege
 	}
 	
 	/**
-	 * Spawn siege guard.<BR>
-	 * <BR>
+	 * Spawn siege guard.
 	 */
 	private void spawnSiegeGuard()
 	{

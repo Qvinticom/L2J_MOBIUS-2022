@@ -69,10 +69,9 @@ import org.l2jmobius.gameserver.script.EventDroplist.DateDrop;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
- * This class manages all NPC that can be attacked.<BR>
- * <BR>
- * Attackable :<BR>
- * <BR>
+ * This class manages all NPC that can be attacked.<br>
+ * <br>
+ * Attackable:<br>
  * <li>ArtefactInstance</li>
  * <li>FriendlyMobInstance</li>
  * <li>MonsterInstance</li>
@@ -82,14 +81,12 @@ import org.l2jmobius.gameserver.util.Util;
 public class Attackable extends NpcInstance
 {
 	/**
-	 * This class contains all AggroInfo of the Attackable against the attacker Creature.<BR>
-	 * <BR>
-	 * <B><U> Data</U> :</B><BR>
-	 * <BR>
+	 * This class contains all AggroInfo of the Attackable against the attacker Creature.<br>
+	 * <br>
+	 * <b><u>Data</u>:</b><br>
 	 * <li>attacker : The attaker Creature concerned by this AggroInfo of this Attackable</li>
 	 * <li>hate : Hate level of this Attackable against the attaker Creature (hate = damage)</li>
-	 * <li>damage : Number of damages that the attaker Creature gave to this Attackable</li><BR>
-	 * <BR>
+	 * <li>damage : Number of damages that the attaker Creature gave to this Attackable</li>
 	 */
 	public class AggroInfo
 	{
@@ -103,8 +100,7 @@ public class Attackable extends NpcInstance
 		protected int _damage;
 		
 		/**
-		 * Constructor of AggroInfo.<BR>
-		 * <BR>
+		 * Constructor of AggroInfo.
 		 * @param pAttacker
 		 */
 		AggroInfo(Creature pAttacker)
@@ -113,8 +109,7 @@ public class Attackable extends NpcInstance
 		}
 		
 		/**
-		 * Verify is object is equal to this AggroInfo.<BR>
-		 * <BR>
+		 * Verify is object is equal to this AggroInfo.
 		 */
 		@Override
 		public boolean equals(Object obj)
@@ -133,8 +128,7 @@ public class Attackable extends NpcInstance
 		}
 		
 		/**
-		 * Return the Identifier of the attacker Creature.<BR>
-		 * <BR>
+		 * Return the Identifier of the attacker Creature.
 		 */
 		@Override
 		public int hashCode()
@@ -144,10 +138,9 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * This class contains all RewardInfo of the Attackable against the any attacker Creature, based on amount of damage done.<BR>
-	 * <BR>
-	 * <B><U> Data</U> :</B><BR>
-	 * <BR>
+	 * This class contains all RewardInfo of the Attackable against the any attacker Creature, based on amount of damage done.<br>
+	 * <br>
+	 * <b><u>Data</u>:</b><br>
 	 * <li>attacker : The attacker Creature concerned by this RewardInfo of this Attackable</li>
 	 * <li>dmg : Total amount of damage done by the attacker to this Attackable (summon + own)</li>
 	 */
@@ -191,10 +184,9 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * This class contains all AbsorberInfo of the Attackable against the absorber Creature.<BR>
-	 * <BR>
-	 * <B><U> Data</U> :</B><BR>
-	 * <BR>
+	 * This class contains all AbsorberInfo of the Attackable against the absorber Creature.<br>
+	 * <br>
+	 * <b><u>Data</u>:</b><br>
 	 * <li>absorber : The attacker Creature concerned by this AbsorberInfo of this Attackable</li>
 	 */
 	public class AbsorberInfo
@@ -205,8 +197,7 @@ public class Attackable extends NpcInstance
 		protected double _absorbedHP;
 		
 		/**
-		 * Constructor of AbsorberInfo.<BR>
-		 * <BR>
+		 * Constructor of AbsorberInfo.
 		 * @param attacker
 		 * @param pCrystalId
 		 * @param pAbsorbedHP
@@ -219,8 +210,7 @@ public class Attackable extends NpcInstance
 		}
 		
 		/**
-		 * Verify is object is equal to this AbsorberInfo.<BR>
-		 * <BR>
+		 * Verify is object is equal to this AbsorberInfo.
 		 */
 		@Override
 		public boolean equals(Object obj)
@@ -239,8 +229,7 @@ public class Attackable extends NpcInstance
 		}
 		
 		/**
-		 * Return the Identifier of the absorber Creature.<BR>
-		 * <BR>
+		 * Return the Identifier of the absorber Creature.
 		 */
 		@Override
 		public int hashCode()
@@ -250,8 +239,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * This class is used to create item reward lists instead of creating item instances.<BR>
-	 * <BR>
+	 * This class is used to create item reward lists instead of creating item instances.
 	 */
 	public class RewardItem
 	{
@@ -348,14 +336,12 @@ public class Attackable extends NpcInstance
 	public Creature _mostHated;
 	
 	/**
-	 * Constructor of Attackable (use Creature and NpcInstance constructor).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Constructor of Attackable (use Creature and NpcInstance constructor).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Call the Creature constructor to set the _template of the Attackable (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
 	 * <li>Set the name of the Attackable</li>
-	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li><BR>
-	 * <BR>
+	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li><br>
 	 * @param objectId Identifier of the object to initialized
 	 * @param template
 	 */
@@ -377,8 +363,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Return the Creature AI of the Attackable and if its null create a new one.<BR>
-	 * <BR>
+	 * Return the Creature AI of the Attackable and if its null create a new one.
 	 */
 	@Override
 	public CreatureAI getAI()
@@ -397,8 +382,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Not used.<BR>
-	 * <BR>
+	 * Not used.
 	 * @param target
 	 * @return
 	 * @deprecated
@@ -420,8 +404,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Reduce the current HP of the Attackable.<BR>
-	 * <BR>
+	 * Reduce the current HP of the Attackable.
 	 * @param damage The HP decrease value
 	 * @param attacker The Creature who attacks
 	 */
@@ -432,7 +415,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Reduce the current HP of the Attackable, update its _aggroList and launch the doDie Task if necessary.<BR>
+	 * Reduce the current HP of the Attackable, update its _aggroList and launch the doDie Task if necessary.
 	 * @param attacker The Creature who attacks
 	 * @param awake The awake state (If True : stop sleeping)
 	 */
@@ -509,16 +492,13 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Kill the Attackable (the corpse disappeared after 7 seconds), distribute rewards (EXP, SP, Drops...) and notify Quest Engine.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Kill the Attackable (the corpse disappeared after 7 seconds), distribute rewards (EXP, SP, Drops...) and notify Quest Engine.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Distribute Exp and SP rewards to PlayerInstance (including Summon owner) that hit the Attackable and to their Party members</li>
 	 * <li>Notify the Quest Engine of the Attackable death if necessary</li>
-	 * <li>Kill the NpcInstance (the corpse disappeared after 7 seconds)</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T GIVE rewards to PetInstance</B></FONT><BR>
-	 * <BR>
+	 * <li>Kill the NpcInstance (the corpse disappeared after 7 seconds)</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T GIVE rewards to PetInstance</b></font>
 	 * @param killer The Creature that has killed the Attackable
 	 */
 	@Override
@@ -598,16 +578,13 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Distribute Exp and SP rewards to PlayerInstance (including Summon owner) that hit the Attackable and to their Party members.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Distribute Exp and SP rewards to PlayerInstance (including Summon owner) that hit the Attackable and to their Party members.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Get the PlayerInstance owner of the SummonInstance (if necessary) and Party in progress</li>
 	 * <li>Calculate the Experience and SP rewards in function of the level difference</li>
-	 * <li>Add Exp and SP rewards to PlayerInstance (including Summon penalty) and to Party members in the known area of the last attacker</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T GIVE rewards to PetInstance</B></FONT><BR>
-	 * <BR>
+	 * <li>Add Exp and SP rewards to PlayerInstance (including Summon penalty) and to Party members in the known area of the last attacker</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T GIVE rewards to PetInstance</b></font>
 	 * @param lastAttacker The Creature that has killed the Attackable
 	 */
 	@Override
@@ -944,8 +921,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Add damage and hate to the attacker AggroInfo of the Attackable _aggroList.<BR>
-	 * <BR>
+	 * Add damage and hate to the attacker AggroInfo of the Attackable _aggroList.
 	 * @param attacker The Creature that gave damages to this Attackable
 	 * @param damage The number of damages given by the attacker Creature
 	 */
@@ -955,8 +931,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Add damage and hate to the attacker AggroInfo of the Attackable _aggroList.<BR>
-	 * <BR>
+	 * Add damage and hate to the attacker AggroInfo of the Attackable _aggroList.
 	 * @param attacker The Creature that gave damages to this Attackable
 	 * @param damage The number of damages given by the attacker Creature
 	 * @param aggro The hate (=damage) given by the attacker Creature
@@ -1086,8 +1061,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Clears _aggroList hate of the Creature without removing from the list.<BR>
-	 * <BR>
+	 * Clears _aggroList hate of the Creature without removing from the list.
 	 * @param target
 	 */
 	public void stopHating(Creature target)
@@ -1107,8 +1081,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Return the most hated Creature of the Attackable _aggroList.<BR>
-	 * <BR>
+	 * Return the most hated Creature of the Attackable _aggroList.<br>
 	 * @return
 	 */
 	public Creature getMostHated()
@@ -1154,8 +1127,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Return the hate level of the Attackable against this Creature contained in _aggroList.<BR>
-	 * <BR>
+	 * Return the hate level of the Attackable against this Creature contained in _aggroList.
 	 * @param target The Creature whose hate level must be returned
 	 * @return
 	 */
@@ -1200,7 +1172,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Calculates quantity of items for specific drop according to current situation <br>
+	 * Calculates quantity of items for specific drop according to current situation
 	 * @param drop The DropData count is being calculated for
 	 * @param lastAttacker The PlayerInstance that has killed the Attackable
 	 * @param levelModifier level modifier in %'s (will be subtracted from drop chance)
@@ -1452,7 +1424,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Calculates quantity of items for specific drop CATEGORY according to current situation <br>
+	 * Calculates quantity of items for specific drop CATEGORY according to current situation<br>
 	 * Only a max of ONE item from a category is allowed to be dropped.
 	 * @param lastAttacker The PlayerInstance that has killed the Attackable
 	 * @param categoryDrops
@@ -1739,7 +1711,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Calculates the level modifier for drop<br>
+	 * Calculates the level modifier for drop
 	 * @param lastAttacker The PlayerInstance that has killed the Attackable
 	 * @return
 	 */
@@ -1777,22 +1749,20 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Manage Base, Quests and Special Events drops of Attackable (called by calculateRewards).<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * During a Special Event all Attackable can drop extra Items. Those extra Items are defined in the table <B>allNpcDateDrops</B> of the EventDroplist. Each Special Event has a start and end date to stop to drop extra Items automaticaly. <BR>
-	 * <BR>
-	 * <B><U> Actions</U> : </B><BR>
-	 * <BR>
+	 * Manage Base, Quests and Special Events drops of Attackable (called by calculateRewards).<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * During a Special Event all Attackable can drop extra Items. Those extra Items are defined in the table <b>allNpcDateDrops</b> of the EventDroplist. Each Special Event has a start and end date to stop to drop extra Items automaticaly.<br>
+	 * <br>
+	 * <b><u>Actions</u> : </b><br>
 	 * <li>Manage drop of Special Events created by GM for a defined period</li>
 	 * <li>Get all possible drops of this Attackable from NpcTemplate and add it Quest drops</li>
 	 * <li>For each possible drops (base + quests), calculate which one must be dropped (random)</li>
 	 * <li>Get each Item quantity dropped (random)</li>
 	 * <li>Create this or these ItemInstance corresponding to each Item Identifier dropped</li>
 	 * <li>If the autoLoot mode is actif and if the Creature that has killed the Attackable is a PlayerInstance, give this or these Item(s) to the PlayerInstance that has killed the Attackable</li>
-	 * <li>If the autoLoot mode isn't actif or if the Creature that has killed the Attackable is not a PlayerInstance, add this or these Item(s) in the world as a visible object at the position where mob was last</li><BR>
-	 * <BR>
+	 * <li>If the autoLoot mode isn't actif or if the Creature that has killed the Attackable is not a PlayerInstance, add this or these Item(s) in the world as a visible object at the position where mob was last</li><br>
 	 * @param npcTemplate
 	 * @param lastAttacker The Creature that has killed the Attackable
 	 */
@@ -2278,20 +2248,18 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Manage Special Events drops created by GM for a defined period.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * During a Special Event all Attackable can drop extra Items. Those extra Items are defined in the table <B>allNpcDateDrops</B> of the EventDroplist. Each Special Event has a start and end date to stop to drop extra Items automaticaly. <BR>
-	 * <BR>
-	 * <B><U> Actions</U> : <I>If an extra drop must be generated</I></B><BR>
-	 * <BR>
+	 * Manage Special Events drops created by GM for a defined period.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * During a Special Event all Attackable can drop extra Items. Those extra Items are defined in the table <b>allNpcDateDrops</b> of the EventDroplist. Each Special Event has a start and end date to stop to drop extra Items automaticaly.<br>
+	 * <br>
+	 * <b><u>Actions</u> : <i>If an extra drop must be generated</i></b><br>
 	 * <li>Get an Item Identifier (random) from the DateDrop Item table of this Event</li>
 	 * <li>Get the Item quantity dropped (random)</li>
 	 * <li>Create this or these ItemInstance corresponding to this Item Identifier</li>
 	 * <li>If the autoLoot mode is actif and if the Creature that has killed the Attackable is a PlayerInstance, give this or these Item(s) to the PlayerInstance that has killed the Attackable</li>
-	 * <li>If the autoLoot mode isn't actif or if the Creature that has killed the Attackable is not a PlayerInstance, add this or these Item(s) in the world as a visible object at the position where mob was last</li><BR>
-	 * <BR>
+	 * <li>If the autoLoot mode isn't actif or if the Creature that has killed the Attackable is not a PlayerInstance, add this or these Item(s) in the world as a visible object at the position where mob was last</li><br>
 	 * @param lastAttacker The Creature that has killed the Attackable
 	 */
 	public void doEventDrop(Creature lastAttacker)
@@ -2343,8 +2311,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Drop reward item.<BR>
-	 * <BR>
+	 * Drop reward item.
 	 * @param mainDamageDealer
 	 * @param item
 	 * @return
@@ -2388,8 +2355,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Return the active weapon of this Attackable (= null).<BR>
-	 * <BR>
+	 * Return the active weapon of this Attackable (= null).<br>
 	 * @return
 	 */
 	public ItemInstance getActiveWeapon()
@@ -2398,8 +2364,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Return True if the _aggroList of this Attackable is Empty.<BR>
-	 * <BR>
+	 * Return True if the _aggroList of this Attackable is Empty.<br>
 	 * @return
 	 */
 	public boolean noTarget()
@@ -2408,8 +2373,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Return True if the _aggroList of this Attackable contains the Creature.<BR>
-	 * <BR>
+	 * Return True if the _aggroList of this Attackable contains the Creature.
 	 * @param creature The Creature searched in the _aggroList of the Attackable
 	 * @return
 	 */
@@ -2419,8 +2383,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Clear the _aggroList of the Attackable.<BR>
-	 * <BR>
+	 * Clear the _aggroList of the Attackable.
 	 */
 	public void clearAggroList()
 	{
@@ -2428,8 +2391,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Return True if a Dwarf use Sweep on the Attackable and if item can be spoiled.<BR>
-	 * <BR>
+	 * Return True if a Dwarf use Sweep on the Attackable and if item can be spoiled.<br>
 	 * @return
 	 */
 	public boolean isSweepActive()
@@ -2438,8 +2400,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Return table containing all ItemInstance that can be spoiled.<BR>
-	 * <BR>
+	 * Return table containing all ItemInstance that can be spoiled.<br>
 	 * @return
 	 */
 	public synchronized RewardItem[] takeSweep()
@@ -2450,8 +2411,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Return table containing all ItemInstance that can be harvested.<BR>
-	 * <BR>
+	 * Return table containing all ItemInstance that can be harvested.<br>
 	 * @return
 	 */
 	public synchronized RewardItem[] takeHarvest()
@@ -2462,8 +2422,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Set the over-hit flag on the Attackable.<BR>
-	 * <BR>
+	 * Set the over-hit flag on the Attackable.
 	 * @param status The status of the over-hit flag
 	 */
 	public void overhitEnabled(boolean status)
@@ -2472,8 +2431,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Set the over-hit values like the attacker who did the strike and the ammount of damage done by the skill.<BR>
-	 * <BR>
+	 * Set the over-hit values like the attacker who did the strike and the ammount of damage done by the skill.
 	 * @param attacker The Creature who hit on the Attackable using the over-hit enabled skill
 	 * @param damage The ammount of damage done by the over-hit enabled skill on the Attackable
 	 */
@@ -2498,8 +2456,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Return the Creature who hit on the Attackable using an over-hit enabled skill.<BR>
-	 * <BR>
+	 * Return the Creature who hit on the Attackable using an over-hit enabled skill.
 	 * @return Creature attacker
 	 */
 	public Creature getOverhitAttacker()
@@ -2508,8 +2465,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Return the ammount of damage done on the Attackable using an over-hit enabled skill.<BR>
-	 * <BR>
+	 * Return the ammount of damage done on the Attackable using an over-hit enabled skill.
 	 * @return double damage
 	 */
 	public double getOverhitDamage()
@@ -2518,8 +2474,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Return True if the Attackable was hit by an over-hit enabled skill.<BR>
-	 * <BR>
+	 * Return True if the Attackable was hit by an over-hit enabled skill.<br>
 	 * @return
 	 */
 	public boolean isOverhit()
@@ -2528,8 +2483,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Activate the absorbed soul condition on the Attackable.<BR>
-	 * <BR>
+	 * Activate the absorbed soul condition on the Attackable.
 	 */
 	public void absorbSoul()
 	{
@@ -2537,8 +2491,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Return True if the Attackable had his soul absorbed.<BR>
-	 * <BR>
+	 * Return True if the Attackable had his soul absorbed.<br>
 	 * @return
 	 */
 	public boolean isAbsorbed()
@@ -2547,7 +2500,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Adds an attacker that successfully absorbed the soul of this Attackable into the _absorbersList.<BR>
+	 * Adds an attacker that successfully absorbed the soul of this Attackable into the _absorbersList.
 	 * @param attacker - a valid PlayerInstance
 	 * @param crystalId
 	 */
@@ -2893,8 +2846,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Calculate the Experience and SP to distribute to attacker (PlayerInstance, SummonInstance or Party) of the Attackable.<BR>
-	 * <BR>
+	 * Calculate the Experience and SP to distribute to attacker (PlayerInstance, SummonInstance or Party) of the Attackable.
 	 * @param diff The difference of level between attacker (PlayerInstance, SummonInstance or Party) and the Attackable
 	 * @param damage The damages given by the attacker (PlayerInstance, SummonInstance or Party)
 	 * @return
@@ -2968,8 +2920,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Return True.<BR>
-	 * <BR>
+	 * Return True.
 	 */
 	@Override
 	public boolean isAttackable()
@@ -3140,7 +3091,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	/**
-	 * Check if the server allows Random Animation.<BR>
+	 * Check if the server allows Random Animation.<br>
 	 * This is located here because Monster and FriendlyMob both extend this class. The other non-pc instances extend either NpcInstance or MonsterInstance.
 	 */
 	@Override

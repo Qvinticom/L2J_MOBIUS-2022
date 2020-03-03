@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * Task launching the function onHitTimer().<br>
- * <B><U>Actions</U>:</B>
+ * <b><u>Actions</u>:</b>
  * <ul>
  * <li>If the attacker/target is dead or use fake death, notify the AI with EVT_CANCEL and send a Server->Client packet ActionFailed (if attacker is a PlayerInstance)</li>
  * <li>If attack isn't aborted, send a message system (critical hit, missed...) to attacker/target if they are PlayerInstance</li>

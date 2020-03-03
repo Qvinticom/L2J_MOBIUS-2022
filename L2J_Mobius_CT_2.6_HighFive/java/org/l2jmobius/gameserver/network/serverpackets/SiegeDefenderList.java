@@ -24,26 +24,26 @@ import org.l2jmobius.gameserver.model.entity.Castle;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * Populates the Siege Defender List in the SiegeInfo Window<BR>
- * <BR>
- * c = 0xcb<BR>
- * d = CastleID<BR>
- * d = unknow (0x00)<BR>
- * d = unknow (0x01)<BR>
- * d = unknow (0x00)<BR>
- * d = Number of Defending Clans?<BR>
- * d = Number of Defending Clans<BR>
- * { //repeats<BR>
- * d = ClanID<BR>
- * S = ClanName<BR>
- * S = ClanLeaderName<BR>
- * d = ClanCrestID<BR>
- * d = signed time (seconds)<BR>
- * d = Type -> Owner = 0x01 || Waiting = 0x02 || Accepted = 0x03<BR>
- * d = AllyID<BR>
- * S = AllyName<BR>
- * S = AllyLeaderName<BR>
- * d = AllyCrestID<BR>
+ * Populates the Siege Defender List in the SiegeInfo Window<br>
+ * <br>
+ * c = 0xcb<br>
+ * d = CastleID<br>
+ * d = unknow (0x00)<br>
+ * d = unknow (0x01)<br>
+ * d = unknow (0x00)<br>
+ * d = Number of Defending Clans?<br>
+ * d = Number of Defending Clans<br>
+ * { //repeats<br>
+ * d = ClanID<br>
+ * S = ClanName<br>
+ * S = ClanLeaderName<br>
+ * d = ClanCrestID<br>
+ * d = signed time (seconds)<br>
+ * d = Type -> Owner = 0x01 || Waiting = 0x02 || Accepted = 0x03<br>
+ * d = AllyID<br>
+ * S = AllyName<br>
+ * S = AllyLeaderName<br>
+ * d = AllyCrestID<br>
  * @author KenM
  */
 public class SiegeDefenderList implements IClientOutgoingPacket

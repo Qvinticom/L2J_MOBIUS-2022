@@ -103,10 +103,12 @@ public class Formulas
 	
 	/**
 	 * Return the standard NPC Calculator set containing ACCURACY_COMBAT and EVASION_RATE.<br>
-	 * <B><U>Concept</U>:</B><br>
-	 * A calculator is created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...). In fact, each calculator is a table of Func object in which each Func represents a mathematic function : <br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * A calculator is created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...). In fact, each calculator is a table of Func object in which each Func represents a mathematic function :<br>
 	 * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()<br>
-	 * To reduce cache memory use, NPCInstances who don't have skills share the same Calculator set called <B>NPC_STD_CALCULATOR</B>.<br>
+	 * To reduce cache memory use, NPCInstances who don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
 	 * @return
 	 */
 	public static Calculator[] getStdNPCCalculators()
@@ -180,9 +182,11 @@ public class Formulas
 	
 	/**
 	 * Add basics Func objects to PlayerInstance and Summon.<br>
-	 * <B><U>Concept</U>:</B><br>
-	 * A calculator is created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...). In fact, each calculator is a table of Func object in which each Func represents a mathematic function : <br>
-	 * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * A calculator is created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...). In fact, each calculator is a table of Func object in which each Func represents a mathematic function :<br>
+	 * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()
 	 * @param creature PlayerInstance or Summon that must obtain basic Func objects
 	 */
 	public static void addFuncsToNewCharacter(Creature creature)
@@ -1152,7 +1156,7 @@ public class Formulas
 	 * Returns:<br>
 	 * 0 = shield defense doesn't succeed<br>
 	 * 1 = shield defense succeed<br>
-	 * 2 = perfect block<br>
+	 * 2 = perfect block
 	 * @param attacker
 	 * @param target
 	 * @param skill
@@ -1266,7 +1270,7 @@ public class Formulas
 	}
 	
 	/**
-	 * Calculates the effect landing success.<br>
+	 * Calculates the effect landing success.
 	 * @param attacker the attacker
 	 * @param target the target
 	 * @param skill the skill
@@ -1969,7 +1973,7 @@ public class Formulas
 	 * RandomizeHate,<br>
 	 * DeleteHateOfMe,<br>
 	 * TransferHate,<br>
-	 * Confuse<br>
+	 * Confuse
 	 * @param baseChance chance from effect parameter
 	 * @param attacker
 	 * @param target

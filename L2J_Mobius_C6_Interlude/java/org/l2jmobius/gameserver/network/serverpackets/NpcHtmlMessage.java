@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  * <li>TR<br>
  * <li>TITLE<br>
  * <li>TEXTCODE<br>
- * <li>TEXTAREA <br>
+ * <li>TEXTAREA<br>
  * <li>TD<br>
  * <li>TABLE<br>
  * <li>SUP<br>
@@ -51,7 +51,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  * <li>LEFT<br>
  * <li>INPUT<br>
  * <li>IMG<br>
- * <li>I <br>
+ * <li>I<br>
  * <li>HTML<br>
  * <li>H7<br>
  * <li>H6<br>
@@ -91,7 +91,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  * <li>READONLY<br>
  * <li>MULTIPLE<br>
  * <li>SELECTED<br>
- * <li>TYP <br>
+ * <li>TYP<br>
  * <li>TYPE<br>
  * <li>MAXLENGTH<br>
  * <li>CHECKED<br>
@@ -109,7 +109,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  * <li>DEFFON<br>
  * <li>DEFFIXEDFONT<br>
  * <li>WIDTH<br>
- * <li>VALUE <br>
+ * <li>VALUE<br>
  * <li>TOOLTIP<br>
  * <li>NAME<br>
  * <li>MIN<br>

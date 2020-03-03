@@ -22,13 +22,13 @@ import java.util.List;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * 01 // Packet Identifier <BR>
- * c6 37 50 40 // ObjectId <BR>
- * <BR>
- * 01 00 // Number of Attribute Trame of the Packet <BR>
- * <BR>
- * c6 37 50 40 // Attribute Identifier : 01-Level, 02-Experience, 03-STR, 04-DEX, 05-CON, 06-INT, 07-WIT, 08-MEN, 09-Current HP, 0a, Max HP...<BR>
- * cd 09 00 00 // Attribute Value <BR>
+ * 01 // Packet Identifier<br>
+ * c6 37 50 40 // ObjectId<br>
+ * <br>
+ * 01 00 // Number of Attribute Trame of the Packet<br>
+ * <br>
+ * c6 37 50 40 // Attribute Identifier : 01-Level, 02-Experience, 03-STR, 04-DEX, 05-CON, 06-INT, 07-WIT, 08-MEN, 09-Current HP, 0a, Max HP...<br>
+ * cd 09 00 00 // Attribute Value<br>
  * format d d(dd)
  * @version $Revision: 1.3.2.1.2.5 $ $Date: 2005/03/27 15:29:39 $
  */

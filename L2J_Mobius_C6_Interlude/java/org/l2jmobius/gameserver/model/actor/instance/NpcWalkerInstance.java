@@ -26,8 +26,8 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
 /**
- * This class manages some npcs can walk in the city. <br>
- * It inherits all methods from NpcInstance. <br>
+ * This class manages some npcs can walk in the city.<br>
+ * It inherits all methods from NpcInstance.<br>
  * <br>
  * @original author Rayan RPG
  * @since 819
@@ -35,8 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 public class NpcWalkerInstance extends NpcInstance
 {
 	/**
-	 * Constructor of NpcWalkerInstance (use Creature and NpcInstance constructor).<BR>
-	 * <BR>
+	 * Constructor of NpcWalkerInstance (use Creature and NpcInstance constructor).
 	 * @param objectId the object id
 	 * @param template the template
 	 */

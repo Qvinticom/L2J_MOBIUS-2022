@@ -4384,8 +4384,8 @@ public class SevenSignsFestival implements SpawnListener
 		}
 		
 		/**
-		 * Returns the running instance of a festival for the given Oracle and festivalID. <BR>
-		 * A <B>null</B> value is returned if there are no participants in that festival.
+		 * Returns the running instance of a festival for the given Oracle and festivalID.<br>
+		 * A <b>null</b> value is returned if there are no participants in that festival.
 		 * @param oracle the oracle
 		 * @param festivalId the festival id
 		 * @return DarknessFestival festivalInst
@@ -4584,11 +4584,11 @@ public class SevenSignsFestival implements SpawnListener
 		}
 		
 		/**
-		 * Used to spawn monsters unique to the festival. <BR>
-		 * Valid SpawnTypes:<BR>
-		 * 0 - All Primary Monsters (starting monsters) <BR>
-		 * 1 - Same as 0, but without archers/marksmen. (used for challenge increase) <BR>
-		 * 2 - Secondary Monsters (archers) <BR>
+		 * Used to spawn monsters unique to the festival.<br>
+		 * Valid SpawnTypes:<br>
+		 * 0 - All Primary Monsters (starting monsters)<br>
+		 * 1 - Same as 0, but without archers/marksmen. (used for challenge increase)<br>
+		 * 2 - Secondary Monsters (archers)<br>
 		 * 3 - Festival Chests
 		 * @param respawnDelay the respawn delay
 		 * @param spawnType the spawn type

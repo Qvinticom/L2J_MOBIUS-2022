@@ -222,8 +222,7 @@ public class Castle
 	}
 	
 	/**
-	 * Move non clan members off castle area and to nearest town.<BR>
-	 * <BR>
+	 * Move non clan members off castle area and to nearest town.
 	 */
 	public void banishForeigners()
 	{
@@ -425,8 +424,7 @@ public class Castle
 	}
 	
 	/**
-	 * Respawn all doors on castle grounds<BR>
-	 * <BR>
+	 * Respawn all doors on castle grounds.
 	 */
 	public void spawnDoor()
 	{

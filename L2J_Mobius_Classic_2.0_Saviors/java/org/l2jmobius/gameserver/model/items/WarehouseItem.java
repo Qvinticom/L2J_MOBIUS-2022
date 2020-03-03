@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.items.type.ItemType;
 
 /**
- * This class contains ItemInstance<BR>
+ * This class contains ItemInstance<br>
  * Use to sort ItemInstance of :
  * <ul>
  * <li>Armor</li>

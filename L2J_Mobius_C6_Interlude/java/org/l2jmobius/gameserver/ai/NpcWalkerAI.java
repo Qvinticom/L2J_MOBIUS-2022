@@ -60,8 +60,7 @@ public class NpcWalkerAI extends CreatureAI implements Runnable
 	private int _currentPos;
 	
 	/**
-	 * Constructor of CreatureAI.<BR>
-	 * <BR>
+	 * Constructor of CreatureAI.
 	 * @param accessor The AI accessor of the Creature
 	 */
 	public NpcWalkerAI(Creature.AIAccessor accessor)

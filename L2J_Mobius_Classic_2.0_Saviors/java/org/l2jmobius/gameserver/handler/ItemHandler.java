@@ -38,10 +38,9 @@ public class ItemHandler implements IHandler<IItemHandler, EtcItem>
 	}
 	
 	/**
-	 * Adds handler of item type in <I>datatable</I>.<BR>
-	 * <BR>
-	 * <B><I>Concept :</I></U><BR>
-	 * This handler is put in <I>datatable</I> Map &lt;String ; IItemHandler &gt; for each ID corresponding to an item type (existing in classes of package itemhandlers) sets as key of the Map.
+	 * Adds handler of item type in <i>datatable</i>.<br>
+	 * <b><i>Concept :</i></u><br>
+	 * This handler is put in <i>datatable</i> Map &lt;String ; IItemHandler &gt; for each ID corresponding to an item type (existing in classes of package itemhandlers) sets as key of the Map.
 	 * @param handler (IItemHandler)
 	 */
 	@Override

@@ -122,7 +122,7 @@ public class PetInstance extends Summon
 	}
 	
 	/**
-	 * Manage Feeding Task.<BR>
+	 * Manage Feeding Task.<br>
 	 * Feed or kill the pet depending on hunger level.<br>
 	 * If pet has food in inventory and feed level drops below 55% then consume food from inventory.<br>
 	 * Send a broadcastStatusUpdate packet for this PetInstance
@@ -418,7 +418,7 @@ public class PetInstance extends Summon
 	}
 	
 	/**
-	 * Destroy item from inventory by using its <B>itemId</B> and send a Server->Client InventoryUpdate packet to the PlayerInstance.
+	 * Destroy item from inventory by using its <b>itemId</b> and send a Server->Client InventoryUpdate packet to the PlayerInstance.
 	 * @param process : String Identifier of process triggering this action
 	 * @param itemId : int Item identifier of the item to be destroyed
 	 * @param count : int Quantity of items to be destroyed
@@ -1136,8 +1136,7 @@ public class PetInstance extends Summon
 	}
 	
 	/**
-	 * Restore the specified % of experience this PetInstance has lost.<BR>
-	 * <BR>
+	 * Restore the specified % of experience this PetInstance has lost.
 	 * @param restorePercent
 	 */
 	public void restoreExp(double restorePercent)

@@ -20,8 +20,7 @@ import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
- * Get all information from ItemInstance to generate ItemInfo.<BR>
- * <BR>
+ * Get all information from ItemInstance to generate ItemInfo.
  */
 public class ItemInfo
 {
@@ -38,8 +37,7 @@ public class ItemInfo
 	private int _mana;
 	
 	/**
-	 * Get all information from ItemInstance to generate ItemInfo.<BR>
-	 * <BR>
+	 * Get all information from ItemInstance to generate ItemInfo.
 	 * @param item
 	 */
 	public ItemInfo(ItemInstance item)

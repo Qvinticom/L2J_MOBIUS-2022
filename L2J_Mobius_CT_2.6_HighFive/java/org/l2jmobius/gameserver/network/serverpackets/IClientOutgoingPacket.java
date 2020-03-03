@@ -66,7 +66,7 @@ public interface IClientOutgoingPacket extends IOutgoingPacket
 	}
 	
 	/**
-	 * Sends this packet to the target player, useful for lambda operations like <br>
+	 * Sends this packet to the target player, useful for lambda operations like<br>
 	 * {@code World.getInstance().getPlayers().forEach(packet::sendTo)}
 	 * @param player
 	 */

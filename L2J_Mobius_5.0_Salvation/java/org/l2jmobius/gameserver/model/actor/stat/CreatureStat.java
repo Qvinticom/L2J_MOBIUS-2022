@@ -265,7 +265,8 @@ public class CreatureStat
 	
 	/**
 	 * Return the MAtk (base+modifier) of the Creature.<br>
-	 * <B><U>Example of use</U>: Calculate Magic damage
+	 * <br>
+	 * <b><u>Example of use</u>: Calculate Magic damage
 	 * @return
 	 */
 	public int getMAtk()
@@ -290,7 +291,7 @@ public class CreatureStat
 	}
 	
 	/**
-	 * <B><U>Example of use </U>: Calculate Magic damage.
+	 * <b><u>Example of use </u>: Calculate Magic damage.
 	 * @return the MDef (base+modifier) of the Creature against a skill in function of abnormal effects in progress.
 	 */
 	public int getMDef()

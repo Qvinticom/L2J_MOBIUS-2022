@@ -38,7 +38,7 @@ public abstract class SendablePacket<T extends MMOClient<?>>extends AbstractPack
 	}
 	
 	/**
-	 * Write <B>byte</B> to the buffer. <BR>
+	 * Write <b>byte</b> to the buffer.<br>
 	 * 8bit integer (00)
 	 * @param data
 	 */
@@ -48,7 +48,7 @@ public abstract class SendablePacket<T extends MMOClient<?>>extends AbstractPack
 	}
 	
 	/**
-	 * Write <B>double</B> to the buffer. <BR>
+	 * Write <b>double</b> to the buffer.<br>
 	 * 64bit double precision float (00 00 00 00 00 00 00 00)
 	 * @param value
 	 */
@@ -58,7 +58,7 @@ public abstract class SendablePacket<T extends MMOClient<?>>extends AbstractPack
 	}
 	
 	/**
-	 * Write <B>short</B> to the buffer. <BR>
+	 * Write <b>short</b> to the buffer.<br>
 	 * 16bit integer (00 00)
 	 * @param value
 	 */
@@ -68,7 +68,7 @@ public abstract class SendablePacket<T extends MMOClient<?>>extends AbstractPack
 	}
 	
 	/**
-	 * Write <B>int</B> to the buffer. <BR>
+	 * Write <b>int</b> to the buffer.<br>
 	 * 32bit integer (00 00 00 00)
 	 * @param value
 	 */
@@ -78,7 +78,7 @@ public abstract class SendablePacket<T extends MMOClient<?>>extends AbstractPack
 	}
 	
 	/**
-	 * Write <B>long</B> to the buffer. <BR>
+	 * Write <b>long</b> to the buffer.<br>
 	 * 64bit integer (00 00 00 00 00 00 00 00)
 	 * @param value
 	 */
@@ -88,7 +88,7 @@ public abstract class SendablePacket<T extends MMOClient<?>>extends AbstractPack
 	}
 	
 	/**
-	 * Write <B>byte[]</B> to the buffer. <BR>
+	 * Write <b>byte[]</b> to the buffer.<br>
 	 * 8bit integer array (00 ...)
 	 * @param data
 	 */
@@ -98,7 +98,7 @@ public abstract class SendablePacket<T extends MMOClient<?>>extends AbstractPack
 	}
 	
 	/**
-	 * Write <B>String</B> to the buffer.
+	 * Write <b>String</b> to the buffer.
 	 * @param text
 	 */
 	protected final void writeS(String text)

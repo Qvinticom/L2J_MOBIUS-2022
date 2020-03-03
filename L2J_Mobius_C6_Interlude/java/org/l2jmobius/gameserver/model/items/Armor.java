@@ -43,12 +43,11 @@ public class Armor extends Item
 	private Skill _itemSkill = null; // for passive skill
 	
 	/**
-	 * Constructor for Armor.<BR>
-	 * <BR>
-	 * <U><I>Variables filled :</I></U><BR>
-	 * <LI>_avoidModifier</LI>
-	 * <LI>_pDef & _mDef</LI>
-	 * <LI>_mpBonus & _hpBonus</LI>
+	 * Constructor for Armor.<br>
+	 * <u><i>Variables filled :</i></u><br>
+	 * <li>_avoidModifier</li>
+	 * <li>_pDef & _mDef</li>
+	 * <li>_mpBonus & _hpBonus</li><br>
 	 * @param type : ArmorType designating the type of armor
 	 * @param set : StatSet designating the set of couples (key,value) caracterizing the armor
 	 * @see Item constructor

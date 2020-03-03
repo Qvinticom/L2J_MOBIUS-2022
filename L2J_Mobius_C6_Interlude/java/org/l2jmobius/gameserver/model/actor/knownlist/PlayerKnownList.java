@@ -58,33 +58,27 @@ public class PlayerKnownList extends PlayableKnownList
 	}
 	
 	/**
-	 * Add a visible WorldObject to PlayerInstance _knownObjects and _knownPlayer (if necessary) and send Server-Client Packets needed to inform the PlayerInstance of its state and actions in progress.<BR>
-	 * <BR>
-	 * <B><U> object is a ItemInstance </U> :</B><BR>
-	 * <BR>
-	 * <li>Send Server-Client Packet DropItem/SpawnItem to the PlayerInstance</li><BR>
-	 * <BR>
-	 * <B><U> object is a DoorInstance </U> :</B><BR>
-	 * <BR>
+	 * Add a visible WorldObject to PlayerInstance _knownObjects and _knownPlayer (if necessary) and send Server-Client Packets needed to inform the PlayerInstance of its state and actions in progress.<br>
+	 * <br>
+	 * <b><u>object is a ItemInstance</u>:</b><br>
+	 * <li>Send Server-Client Packet DropItem/SpawnItem to the PlayerInstance</li><br>
+	 * <br>
+	 * <b><u>object is a DoorInstance</u>:</b><br>
 	 * <li>Send Server-Client Packets DoorInfo and DoorStatusUpdate to the PlayerInstance</li>
-	 * <li>Send Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance</li><BR>
-	 * <BR>
-	 * <B><U> object is a NpcInstance </U> :</B><BR>
-	 * <BR>
+	 * <li>Send Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance</li><br>
+	 * <br>
+	 * <b><u>object is a NpcInstance</u>:</b><br>
 	 * <li>Send Server-Client Packet NpcInfo to the PlayerInstance</li>
-	 * <li>Send Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance</li><BR>
-	 * <BR>
-	 * <B><U> object is a Summon </U> :</B><BR>
-	 * <BR>
+	 * <li>Send Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance</li><br>
+	 * <br>
+	 * <b><u>object is a Summon</u>:</b><br>
 	 * <li>Send Server-Client Packet NpcInfo/PetItemList (if the PlayerInstance is the owner) to the PlayerInstance</li>
-	 * <li>Send Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance</li><BR>
-	 * <BR>
-	 * <B><U> object is a PlayerInstance </U> :</B><BR>
-	 * <BR>
+	 * <li>Send Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance</li><br>
+	 * <br>
+	 * <b><u>object is a PlayerInstance</u>:</b><br>
 	 * <li>Send Server-Client Packet CharInfo to the PlayerInstance</li>
 	 * <li>If the object has a private store, Send Server-Client Packet PrivateStoreMsgSell to the PlayerInstance</li>
-	 * <li>Send Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance</li><BR>
-	 * <BR>
+	 * <li>Send Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance</li><br>
 	 * @param object The WorldObject to add to _knownObjects and _knownPlayer
 	 */
 	@Override
@@ -252,8 +246,7 @@ public class PlayerKnownList extends PlayableKnownList
 	}
 	
 	/**
-	 * Remove a WorldObject from PlayerInstance _knownObjects and _knownPlayer (if necessary) and send Server-Client Packet DeleteObject to the PlayerInstance.<BR>
-	 * <BR>
+	 * Remove a WorldObject from PlayerInstance _knownObjects and _knownPlayer (if necessary) and send Server-Client Packet DeleteObject to the PlayerInstance.
 	 * @param object The WorldObject to remove from _knownObjects and _knownPlayer
 	 */
 	@Override

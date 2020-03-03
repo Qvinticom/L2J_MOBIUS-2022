@@ -172,7 +172,7 @@ public class AdminSkill implements IAdminCommandHandler
 	
 	/**
 	 * This function will give all the skills that the target can learn at his/her level
-	 * @param activeChar the gm char
+	 * @param activeChar the GM char
 	 */
 	private void adminGiveAllSkills(PlayerInstance activeChar)
 	{

@@ -46,8 +46,7 @@ public class FortSiegeGuardManager
 	}
 	
 	/**
-	 * Add guard.<BR>
-	 * <BR>
+	 * Add guard.
 	 * @param player
 	 * @param npcId
 	 */
@@ -62,8 +61,7 @@ public class FortSiegeGuardManager
 	}
 	
 	/**
-	 * Add guard.<BR>
-	 * <BR>
+	 * Add guard.
 	 * @param x
 	 * @param y
 	 * @param z
@@ -76,8 +74,7 @@ public class FortSiegeGuardManager
 	}
 	
 	/**
-	 * Hire merc.<BR>
-	 * <BR>
+	 * Hire merc.
 	 * @param player
 	 * @param npcId
 	 */
@@ -92,8 +89,7 @@ public class FortSiegeGuardManager
 	}
 	
 	/**
-	 * Hire merc.<BR>
-	 * <BR>
+	 * Hire merc.
 	 * @param x
 	 * @param y
 	 * @param z
@@ -131,8 +127,7 @@ public class FortSiegeGuardManager
 	}
 	
 	/**
-	 * Remove mercs.<BR>
-	 * <BR>
+	 * Remove mercs.
 	 */
 	public void removeMercs()
 	{
@@ -150,8 +145,7 @@ public class FortSiegeGuardManager
 	}
 	
 	/**
-	 * Spawn guards.<BR>
-	 * <BR>
+	 * Spawn guards.
 	 */
 	public void spawnSiegeGuard()
 	{
@@ -173,8 +167,7 @@ public class FortSiegeGuardManager
 	}
 	
 	/**
-	 * Unspawn guards.<BR>
-	 * <BR>
+	 * Unspawn guards.
 	 */
 	public void unspawnSiegeGuard()
 	{
@@ -193,8 +186,7 @@ public class FortSiegeGuardManager
 	}
 	
 	/**
-	 * Load guards.<BR>
-	 * <BR>
+	 * Load guards.
 	 */
 	private void loadSiegeGuard()
 	{
@@ -237,8 +229,7 @@ public class FortSiegeGuardManager
 	}
 	
 	/**
-	 * Save guards.<BR>
-	 * <BR>
+	 * Save guards.
 	 * @param x
 	 * @param y
 	 * @param z

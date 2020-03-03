@@ -34,10 +34,10 @@ import org.l2jmobius.gameserver.taskmanager.RespawnTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
- * This class manages the spawn and respawn of a group of NpcInstance that are in the same are and have the same type. <B><U> Concept</U> :</B><BR>
- * <BR>
- * NpcInstance can be spawned either in a random position into a location area (if Lox=0 and Locy=0), either at an exact position. The heading of the NpcInstance can be a random heading if not defined (value= -1) or an exact heading (ex : merchant...).<BR>
- * <BR>
+ * This class manages the spawn and respawn of a group of NpcInstance that are in the same are and have the same type. <b><u>Concept</u>:</b><br>
+ * <br>
+ * NpcInstance can be spawned either in a random position into a location area (if Lox=0 and Locy=0), either at an exact position. The heading of the NpcInstance can be a random heading if not defined (value= -1) or an exact heading (ex : merchant...).<br>
+ * <br>
  * @author Nightmare
  * @version $Revision: 1.9.2.3.2.8 $ $Date: 2005/03/27 15:29:32 $
  */
@@ -65,21 +65,18 @@ public class Spawn
 	private static List<SpawnListener> _spawnListeners = new ArrayList<>();
 	
 	/**
-	 * Constructor of Spawn.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
+	 * Constructor of Spawn.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
 	 * Each Spawn owns generic and static properties (ex : RewardExp, RewardSP, AggroRange...). All of those properties are stored in a different NpcTemplate for each type of Spawn. Each template is loaded once in the server cache memory (reduce memory use). When a new instance of Spawn is created,
-	 * server just create a link between the instance and the template. This link is stored in <B>_template</B><BR>
-	 * <BR>
-	 * Each NpcInstance is linked to a Spawn that manages its spawn and respawn (delay, location...). This link is stored in <B>_spawn</B> of the NpcInstance<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * server just create a link between the instance and the template. This link is stored in <b>_template</b><br>
+	 * Each NpcInstance is linked to a Spawn that manages its spawn and respawn (delay, location...). This link is stored in <b>_spawn</b> of the NpcInstance<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Set the _template of the Spawn</li>
 	 * <li>Calculate the implementationName used to generate the generic constructor of NpcInstance managed by this Spawn</li>
-	 * <li>Create the generic constructor of NpcInstance managed by this Spawn</li><BR>
-	 * <BR>
+	 * <li>Create the generic constructor of NpcInstance managed by this Spawn</li><br>
 	 * @param mobTemplate The NpcTemplate to link to this Spawn
 	 * @throws ClassNotFoundException
 	 * @throws NoSuchMethodException
@@ -296,16 +293,14 @@ public class Spawn
 	}
 	
 	/**
-	 * Decrease the current number of NpcInstance of this Spawn and if necessary create a SpawnTask to launch after the respawn Delay.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Decrease the current number of NpcInstance of this Spawn and if necessary create a SpawnTask to launch after the respawn Delay.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Decrease the current number of NpcInstance of this Spawn</li>
 	 * <li>Check if respawn is possible to prevent multiple respawning caused by lag</li>
 	 * <li>Update the current number of SpawnTask in progress or stand by of this Spawn</li>
-	 * <li>Create a new SpawnTask to launch after the respawn Delay</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : A respawn is possible ONLY if _doRespawn=True and _scheduledCount + _currentCount < _maximumCount</B></FONT><BR>
+	 * <li>Create a new SpawnTask to launch after the respawn Delay</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: A respawn is possible ONLY if _doRespawn=True and _scheduledCount + _currentCount < _maximumCount</b></font>
 	 * @param oldNpc
 	 */
 	public void decreaseCount(NpcInstance oldNpc)
@@ -325,8 +320,7 @@ public class Spawn
 	}
 	
 	/**
-	 * Create the initial spawning and set _doRespawn to True.<BR>
-	 * <BR>
+	 * Create the initial spawning and set _doRespawn to True.
 	 * @return The number of NpcInstance that were spawned
 	 */
 	public int init()
@@ -356,14 +350,13 @@ public class Spawn
 	}
 	
 	/**
-	 * Create the NpcInstance, add it to the world and launch its OnSpawn action.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * NpcInstance can be spawned either in a random position into a location area (if Lox=0 and Locy=0), either at an exact position. The heading of the NpcInstance can be a random heading if not defined (value= -1) or an exact heading (ex : merchant...).<BR>
-	 * <BR>
-	 * <B><U> Actions for an random spawn into location area</U> : <I>(if Locx=0 and Locy=0)</I></B><BR>
-	 * <BR>
+	 * Create the NpcInstance, add it to the world and launch its OnSpawn action.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * NpcInstance can be spawned either in a random position into a location area (if Lox=0 and Locy=0), either at an exact position. The heading of the NpcInstance can be a random heading if not defined (value= -1) or an exact heading (ex : merchant...).<br>
+	 * <br>
+	 * <b><u>Actions for an random spawn into location area</u> : <i>(if Locx=0 and Locy=0)</i></b><br>
 	 * <li>Get NpcInstance Init parameters and its generate an Identifier</li>
 	 * <li>Call the constructor of the NpcInstance</li>
 	 * <li>Calculate the random position in the location area (if Locx=0 and Locy=0) or get its exact position from the Spawn</li>
@@ -372,10 +365,8 @@ public class Spawn
 	 * <li>Set the heading of the NpcInstance (random heading if not defined : value=-1)</li>
 	 * <li>Link the NpcInstance to this Spawn</li>
 	 * <li>Init other values of the NpcInstance (ex : from its CreatureTemplate for INT, STR, DEX...) and add it in the world</li>
-	 * <li>Lauch the action OnSpawn fo the NpcInstance</li><BR>
-	 * <BR>
-	 * <li>Increase the current number of NpcInstance managed by this Spawn</li><BR>
-	 * <BR>
+	 * <li>Lauch the action OnSpawn fo the NpcInstance</li>
+	 * <li>Increase the current number of NpcInstance managed by this Spawn</li><br>
 	 * @return
 	 */
 	public NpcInstance doSpawn()

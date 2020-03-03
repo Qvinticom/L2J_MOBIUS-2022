@@ -84,8 +84,9 @@ public class QuestLink implements IBypassHandler
 	
 	/**
 	 * Open a choose quest window on client with all quests available of the NpcInstance.<br>
+	 * <br>
 	 * <b><u>Actions</u>:</b><br>
-	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance</li>
+	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance</li><br>
 	 * @param player The PlayerInstance that talk with the NpcInstance
 	 * @param npc The table containing quests of the NpcInstance
 	 * @param quests
@@ -202,6 +203,7 @@ public class QuestLink implements IBypassHandler
 	
 	/**
 	 * Open a quest window on client with the text of the NpcInstance.<br>
+	 * <br>
 	 * <b><u>Actions</u>:</b><br>
 	 * <ul>
 	 * <li>Get the text of the quest state in the folder data/scripts/quests/questId/stateId.htm</li>

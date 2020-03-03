@@ -96,16 +96,16 @@ public class CabaleBufferInstance extends NpcInstance
 			}
 			
 			/**
-			 * For each known player in range, cast either the positive or negative buff. <BR>
-			 * The stats affected depend on the player type, either a fighter or a mystic. <BR>
-			 * <BR>
-			 * Curse of Destruction (Loser)<BR>
-			 * - Fighters: -25% Accuracy, -25% Effect Resistance<BR>
-			 * - Mystics: -25% Casting Speed, -25% Effect Resistance<BR>
-			 * <BR>
-			 * <BR>
-			 * Blessing of Prophecy (Winner) - Fighters: +25% Max Load, +25% Effect Resistance<BR>
-			 * - Mystics: +25% Magic Cancel Resist, +25% Effect Resistance<BR>
+			 * For each known player in range, cast either the positive or negative buff.<br>
+			 * The stats affected depend on the player type, either a fighter or a mystic.<br>
+			 * <br>
+			 * Curse of Destruction (Loser)<br>
+			 * - Fighters: -25% Accuracy, -25% Effect Resistance<br>
+			 * - Mystics: -25% Casting Speed, -25% Effect Resistance<br>
+			 * <br>
+			 * <br>
+			 * Blessing of Prophecy (Winner) - Fighters: +25% Max Load, +25% Effect Resistance<br>
+			 * - Mystics: +25% Magic Cancel Resist, +25% Effect Resistance<br>
 			 */
 			for (PlayerInstance player : getKnownList().getKnownPlayers().values())
 			{

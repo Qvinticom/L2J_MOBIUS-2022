@@ -92,7 +92,7 @@ public class PlayerFreight extends ItemContainer
 	}
 	
 	/**
-	 * Returns the item from inventory by using its <B>itemId</B>
+	 * Returns the item from inventory by using its <b>itemId</b>
 	 * @param itemId : int designating the ID of the item
 	 * @return ItemInstance designating the item or null if not found in inventory
 	 */

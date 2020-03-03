@@ -329,7 +329,7 @@ public class Instance implements IIdentifiable, INamable
 	}
 	
 	/**
-	 * Get player by ID from instance.<br>
+	 * Get player by ID from instance.
 	 * @param id objectId of player
 	 * @return first player by ID, otherwise {@code null}
 	 */
@@ -803,7 +803,7 @@ public class Instance implements IIdentifiable, INamable
 	}
 	
 	/**
-	 * Set reenter penalty for players associated with current instance.<br>
+	 * Set reenter penalty for players associated with current instance.
 	 * @param time penalty time in milliseconds since January 1, 1970
 	 */
 	public void setReenterTime(long time)
@@ -860,8 +860,7 @@ public class Instance implements IIdentifiable, INamable
 	
 	/**
 	 * Set instance world to finish state.<br>
-	 * Calls method {@link Instance#finishInstance(int)} with {@link Config#INSTANCE_FINISH_TIME} as argument.<br>
-	 * See {@link Instance#finishInstance(int)} for more details.
+	 * Calls method {@link Instance#finishInstance(int)} with {@link Config#INSTANCE_FINISH_TIME} as argument.
 	 */
 	public void finishInstance()
 	{
@@ -1016,7 +1015,7 @@ public class Instance implements IIdentifiable, INamable
 	// Template methods
 	// ----------------------------------------------
 	/**
-	 * Get parameters from instance template.<br>
+	 * Get parameters from instance template.
 	 * @return template parameters
 	 */
 	public StatSet getTemplateParameters()

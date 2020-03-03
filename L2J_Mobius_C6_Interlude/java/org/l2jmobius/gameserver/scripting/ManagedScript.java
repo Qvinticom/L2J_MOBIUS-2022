@@ -21,7 +21,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Abstract class for classes that are meant to be implemented by scripts.<BR>
+ * Abstract class for classes that are meant to be implemented by scripts.<br>
  * @author KenM
  */
 public abstract class ManagedScript
@@ -41,7 +41,7 @@ public abstract class ManagedScript
 	public abstract Path getScriptPath();
 	
 	/**
-	 * Attempts to reload this script and to refresh the necessary bindings with it ScriptControler.<BR>
+	 * Attempts to reload this script and to refresh the necessary bindings with it ScriptControler.<br>
 	 * Subclasses of this class should override this method to properly refresh their bindings when necessary.
 	 * @return true if and only if the script was reloaded, false otherwise.
 	 */

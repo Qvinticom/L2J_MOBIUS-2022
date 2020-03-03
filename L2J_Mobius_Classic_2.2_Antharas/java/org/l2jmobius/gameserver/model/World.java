@@ -132,7 +132,8 @@ public class World
 	
 	/**
 	 * Adds an object to the world.<br>
-	 * <B><U>Example of use</U>:</B>
+	 * <br>
+	 * <b><u>Example of use</u>:</b>
 	 * <ul>
 	 * <li>Withdraw an item from the warehouse, create an item</li>
 	 * <li>Spawn a Creature (PC, NPC, Pet)</li>
@@ -172,7 +173,8 @@ public class World
 	
 	/**
 	 * Removes an object from the world.<br>
-	 * <B><U>Example of use</U>:</B>
+	 * <br>
+	 * <b><u>Example of use</u>:</b>
 	 * <ul>
 	 * <li>Delete item from inventory, transfer Item from inventory to warehouse</li>
 	 * <li>Crystallize item</li>
@@ -209,7 +211,7 @@ public class World
 	}
 	
 	/**
-	 * <B><U> Example of use</U>:</B>
+	 * <b><u>Example of use</u>:</b>
 	 * <ul>
 	 * <li>Client packets : Action, AttackRequest, RequestJoinParty, RequestJoinPledge...</li>
 	 * </ul>
@@ -251,7 +253,7 @@ public class World
 	}
 	
 	/**
-	 * <B>If you have access to player objectId use {@link #getPlayer(int playerObjId)}</B>
+	 * <b>If you have access to player objectId use {@link #getPlayer(int playerObjId)}</b>
 	 * @param name Name of the player to get Instance
 	 * @return the player instance corresponding to the given name.
 	 */
@@ -299,18 +301,18 @@ public class World
 	}
 	
 	/**
-	 * Add a WorldObject in the world. <B><U> Concept</U> :</B> WorldObject (including PlayerInstance) are identified in <B>_visibleObjects</B> of his current WorldRegion and in <B>_knownObjects</B> of other surrounding Creatures <BR>
-	 * PlayerInstance are identified in <B>_allPlayers</B> of World, in <B>_allPlayers</B> of his current WorldRegion and in <B>_knownPlayer</B> of other surrounding Creatures <B><U> Actions</U> :</B>
+	 * Add a WorldObject in the world. <b><u>Concept</u>:</b> WorldObject (including PlayerInstance) are identified in <b>_visibleObjects</b> of his current WorldRegion and in <b>_knownObjects</b> of other surrounding Creatures<br>
+	 * PlayerInstance are identified in <b>_allPlayers</b> of World, in <b>_allPlayers</b> of his current WorldRegion and in <b>_knownPlayer</b> of other surrounding Creatures <b><u> Actions</u>:</b>
 	 * <li>Add the WorldObject object in _allPlayers* of World</li>
 	 * <li>Add the WorldObject object in _gmList** of GmListTable</li>
-	 * <li>Add object in _knownObjects and _knownPlayer* of all surrounding WorldRegion Creatures</li><BR>
-	 * <li>If object is a Creature, add all surrounding WorldObject in its _knownObjects and all surrounding PlayerInstance in its _knownPlayer</li><BR>
-	 * <I>* only if object is a PlayerInstance</I><BR>
-	 * <I>** only if object is a GM PlayerInstance</I> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object in _visibleObjects and _allPlayers* of WorldRegion (need synchronisation)</B></FONT><BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object to _allObjects and _allPlayers* of World (need synchronisation)</B></FONT> <B><U> Example of use </U> :</B>
+	 * <li>Add object in _knownObjects and _knownPlayer* of all surrounding WorldRegion Creatures</li>
+	 * <li>If object is a Creature, add all surrounding WorldObject in its _knownObjects and all surrounding PlayerInstance in its _knownPlayer</li><br>
+	 * <i>* only if object is a PlayerInstance</i><br>
+	 * <i>** only if object is a GM PlayerInstance</i> <font color=#FF0000><b><u>Caution</u>: This method DOESN'T ADD the object in _visibleObjects and _allPlayers* of WorldRegion (need synchronisation)</b></font><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T ADD the object to _allObjects and _allPlayers* of World (need synchronisation)</b></font> <b><u> Example of use</u>:</b>
 	 * <li>Drop an Item</li>
 	 * <li>Spawn a Creature</li>
-	 * <li>Apply Death Penalty of a PlayerInstance</li>
+	 * <li>Apply Death Penalty of a PlayerInstance</li><br>
 	 * @param object L2object to add in the world
 	 * @param newRegion WorldRegion in wich the object will be add (not used)
 	 */
@@ -382,16 +384,16 @@ public class World
 	}
 	
 	/**
-	 * Remove a WorldObject from the world. <B><U> Concept</U> :</B> WorldObject (including PlayerInstance) are identified in <B>_visibleObjects</B> of his current WorldRegion and in <B>_knownObjects</B> of other surrounding Creatures <BR>
-	 * PlayerInstance are identified in <B>_allPlayers</B> of World, in <B>_allPlayers</B> of his current WorldRegion and in <B>_knownPlayer</B> of other surrounding Creatures <B><U> Actions</U> :</B>
+	 * Remove a WorldObject from the world. <b><u>Concept</u>:</b> WorldObject (including PlayerInstance) are identified in <b>_visibleObjects</b> of his current WorldRegion and in <b>_knownObjects</b> of other surrounding Creatures<br>
+	 * PlayerInstance are identified in <b>_allPlayers</b> of World, in <b>_allPlayers</b> of his current WorldRegion and in <b>_knownPlayer</b> of other surrounding Creatures <b><u> Actions</u>:</b>
 	 * <li>Remove the WorldObject object from _allPlayers* of World</li>
 	 * <li>Remove the WorldObject object from _visibleObjects and _allPlayers* of WorldRegion</li>
 	 * <li>Remove the WorldObject object from _gmList** of GmListTable</li>
-	 * <li>Remove object from _knownObjects and _knownPlayer* of all surrounding WorldRegion Creatures</li><BR>
-	 * <li>If object is a Creature, remove all WorldObject from its _knownObjects and all PlayerInstance from its _knownPlayer</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of World</B></FONT> <I>* only if object is a PlayerInstance</I><BR>
-	 * <I>** only if object is a GM PlayerInstance</I> <B><U> Example of use </U> :</B>
+	 * <li>Remove object from _knownObjects and _knownPlayer* of all surrounding WorldRegion Creatures</li>
+	 * <li>If object is a Creature, remove all WorldObject from its _knownObjects and all PlayerInstance from its _knownPlayer</li> <font color=#FF0000><b><u>Caution</u>: This method DOESN'T REMOVE the object from _allObjects of World</b></font> <i>* only if object is a PlayerInstance</i><br>
+	 * <i>** only if object is a GM PlayerInstance</i> <b><u> Example of use</u>:</b>
 	 * <li>Pickup an Item</li>
-	 * <li>Decay a Creature</li>
+	 * <li>Decay a Creature</li><br>
 	 * @param object L2object to remove from the world
 	 * @param oldRegion WorldRegion in which the object was before removing
 	 */
@@ -690,9 +692,9 @@ public class World
 	}
 	
 	/**
-	 * Calculate the current WorldRegions of the object according to its position (x,y). <B><U> Example of use </U> :</B>
+	 * Calculate the current WorldRegions of the object according to its position (x,y). <b><u>Example of use</u>:</b>
 	 * <li>Set position of a new WorldObject (drop, spawn...)</li>
-	 * <li>Update position of a WorldObject after a movement</li><BR>
+	 * <li>Update position of a WorldObject after a movement</li><br>
 	 * @param object the object
 	 * @return
 	 */

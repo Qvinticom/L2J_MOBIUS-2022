@@ -866,7 +866,7 @@ public class Hero
 	}
 	
 	/**
-	 * Saving task for {@link Hero}<BR>
+	 * Saving task for {@link Hero}<br>
 	 * Save all hero messages to DB.
 	 */
 	public void shutdown()

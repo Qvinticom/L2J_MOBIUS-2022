@@ -64,8 +64,7 @@ public class PlayerAI extends CreatureAI
 	}
 	
 	/**
-	 * Saves the current Intention for this PlayerAI if necessary and calls changeIntention in AbstractAI.<BR>
-	 * <BR>
+	 * Saves the current Intention for this PlayerAI if necessary and calls changeIntention in AbstractAI.
 	 * @param intention The new Intention to set to the AI
 	 * @param arg0 The first parameter of the Intention
 	 * @param arg1 The second parameter of the Intention
@@ -97,9 +96,8 @@ public class PlayerAI extends CreatureAI
 	}
 	
 	/**
-	 * Finalize the casting of a skill. This method overrides CreatureAI method.<BR>
-	 * <BR>
-	 * <B>What it does:</B> Check if actual intention is set to CAST and, if so, retrieves latest intention before the actual CAST and set it as the current intention for the player
+	 * Finalize the casting of a skill. This method overrides CreatureAI method.<br>
+	 * <b>What it does:</b> Check if actual intention is set to CAST and, if so, retrieves latest intention before the actual CAST and set it as the current intention for the player
 	 */
 	@Override
 	protected void onEvtFinishCasting()

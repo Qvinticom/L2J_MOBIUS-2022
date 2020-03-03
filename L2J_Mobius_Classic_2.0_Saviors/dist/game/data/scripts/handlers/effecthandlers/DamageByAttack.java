@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * An effect that changes damage taken from an attack.<br>
- * The retail implementation seems to be altering whatever damage is taken after the attack has been done and not when attack is being done. <br>
+ * The retail implementation seems to be altering whatever damage is taken after the attack has been done and not when attack is being done.<br>
  * Exceptions for this effect appears to be DOT effects and terrain damage, they are unaffected by this stat.<br>
  * As for example in retail this effect does reduce reflected damage taken (because it is received damage), as well as it does not decrease reflected damage done,<br>
  * because reflected damage is being calculated with the original attack damage and not this altered one.<br>

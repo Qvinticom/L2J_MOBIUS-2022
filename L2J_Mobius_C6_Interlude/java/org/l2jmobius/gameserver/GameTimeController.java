@@ -86,12 +86,11 @@ public class GameTimeController
 	}
 	
 	/**
-	 * Add a Creature to movingObjects of GameTimeController.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All Creature in movement are identified in <B>movingObjects</B> of GameTimeController.<BR>
-	 * <BR>
+	 * Add a Creature to movingObjects of GameTimeController.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All Creature in movement are identified in <b>movingObjects</b> of GameTimeController.
 	 * @param creature The Creature to add to movingObjects of GameTimeController
 	 */
 	public synchronized void registerMovingObject(Creature creature)
@@ -108,18 +107,16 @@ public class GameTimeController
 	}
 	
 	/**
-	 * Move all Creatures contained in movingObjects of GameTimeController.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All Creature in movement are identified in <B>movingObjects</B> of GameTimeController.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Move all Creatures contained in movingObjects of GameTimeController.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All Creature in movement are identified in <b>movingObjects</b> of GameTimeController.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Update the position of each Creature</li>
 	 * <li>If movement is finished, the Creature is removed from movingObjects</li>
-	 * <li>Create a task to update the _knownObject and _knowPlayers of each Creature that finished its movement and of their already known WorldObject then notify AI with EVT_ARRIVED</li><BR>
-	 * <BR>
+	 * <li>Create a task to update the _knownObject and _knowPlayers of each Creature that finished its movement and of their already known WorldObject then notify AI with EVT_ARRIVED</li>
 	 */
 	protected synchronized void moveObjects()
 	{
@@ -233,8 +230,7 @@ public class GameTimeController
 	}
 	
 	/**
-	 * Update the _knownObject and _knowPlayers of each Creature that finished its movement and of their already known WorldObject then notify AI with EVT_ARRIVED.<BR>
-	 * <BR>
+	 * Update the _knownObject and _knowPlayers of each Creature that finished its movement and of their already known WorldObject then notify AI with EVT_ARRIVED.
 	 */
 	class MovingObjectArrived implements Runnable
 	{

@@ -40,12 +40,10 @@ public abstract class Playable extends Creature
 	private boolean _ProtectionBlessing = false;
 	
 	/**
-	 * Constructor of PlayableInstance (use Creature constructor).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
-	 * <li>Call the Creature constructor to create an empty _skills slot and link copy basic Calculator set to this PlayableInstance</li><BR>
-	 * <BR>
+	 * Constructor of PlayableInstance (use Creature constructor).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
+	 * <li>Call the Creature constructor to create an empty _skills slot and link copy basic Calculator set to this PlayableInstance</li><br>
 	 * @param objectId Identifier of the object to initialized
 	 * @param template The CreatureTemplate to apply to the PlayableInstance
 	 */
@@ -185,8 +183,7 @@ public abstract class Playable extends Creature
 	}
 	
 	/**
-	 * Return True.<BR>
-	 * <BR>
+	 * Return True.
 	 * @return true, if is attackable
 	 */
 	@Override

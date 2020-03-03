@@ -62,7 +62,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	}
 	
 	/**
-	 * Get instance world associated with {@code player}.<br>
+	 * Get instance world associated with {@code player}.
 	 * @param player player who wants get instance world
 	 * @return instance world if found, otherwise null
 	 */
@@ -229,8 +229,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	}
 	
 	/**
-	 * Sets instance to finish state. <br>
-	 * See {@link Instance#finishInstance()} for more details.
+	 * Sets instance to finish state.<br>
 	 * @param player player used for determine current instance world
 	 */
 	protected void finishInstance(PlayerInstance player)
@@ -244,7 +243,6 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	
 	/**
 	 * Sets instance to finish state.<br>
-	 * See {@link Instance#finishInstance(int)} for more details.
 	 * @param player player used for determine current instance world
 	 * @param delay finish delay in minutes
 	 */

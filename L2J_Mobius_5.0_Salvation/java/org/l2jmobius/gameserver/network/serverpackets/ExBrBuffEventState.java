@@ -20,9 +20,9 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * Eva's Inferno event packet. info params: <br>
- * type (1 - %, 2 - npcId), <br>
- * value (depending on type: for type 1 - % value; for type 2 - 20573-20575), <br>
+ * Eva's Inferno event packet. info params:<br>
+ * type (1 - %, 2 - npcId),<br>
+ * value (depending on type: for type 1 - % value; for type 2 - 20573-20575),<br>
  * state (0-1), endtime (only when type 2)
  */
 public class ExBrBuffEventState implements IClientOutgoingPacket

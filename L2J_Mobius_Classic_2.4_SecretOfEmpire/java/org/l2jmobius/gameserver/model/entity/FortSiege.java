@@ -703,14 +703,14 @@ public class FortSiege implements Siegable
 	}
 	
 	/**
-	 * Register clan as attacker.<BR>
+	 * Register clan as attacker.
 	 * @param player The PlayerInstance of the player trying to register.
 	 * @param checkConditions True if should be checked conditions, false otherwise
-	 * @return Number that defines what happened. <BR>
-	 *         0 - Player don't have clan.<BR>
-	 *         1 - Player don't have enough adena to register.<BR>
-	 *         2 - Is not right time to register Fortress now.<BR>
-	 *         3 - Players clan is already registered to siege.<BR>
+	 * @return Number that defines what happened.<br>
+	 *         0 - Player don't have clan.<br>
+	 *         1 - Player don't have enough adena to register.<br>
+	 *         2 - Is not right time to register Fortress now.<br>
+	 *         3 - Players clan is already registered to siege.<br>
 	 *         4 - Players clan is successfully registered to siege.
 	 */
 	public int addAttacker(PlayerInstance player, boolean checkConditions)

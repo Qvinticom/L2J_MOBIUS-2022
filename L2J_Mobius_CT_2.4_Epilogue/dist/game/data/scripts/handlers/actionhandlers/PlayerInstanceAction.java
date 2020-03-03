@@ -32,25 +32,20 @@ public class PlayerInstanceAction implements IActionHandler
 	private static final int CURSED_WEAPON_VICTIM_MIN_LEVEL = 21;
 	
 	/**
-	 * Manage actions when a player click on this PlayerInstance.<BR>
-	 * <BR>
-	 * <B><U> Actions on first click on the PlayerInstance (Select it)</U> :</B><BR>
-	 * <BR>
+	 * Manage actions when a player click on this PlayerInstance.<br>
+	 * <br>
+	 * <b><u>Actions on first click on the PlayerInstance (Select it)</u>:</b><br>
 	 * <li>Set the target of the player</li>
-	 * <li>Send a Server->Client packet MyTargetSelected to the player (display the select window)</li><BR>
-	 * <BR>
-	 * <B><U> Actions on second click on the PlayerInstance (Follow it/Attack it/Intercat with it)</U> :</B><BR>
-	 * <BR>
+	 * <li>Send a Server->Client packet MyTargetSelected to the player (display the select window)</li><br>
+	 * <br>
+	 * <b><u>Actions on second click on the PlayerInstance (Follow it/Attack it/Intercat with it)</u>:</b><br>
 	 * <li>Send a Server->Client packet MyTargetSelected to the player (display the select window)</li>
 	 * <li>If target PlayerInstance has a Private Store, notify the player AI with AI_INTENTION_INTERACT</li>
-	 * <li>If target PlayerInstance is autoAttackable, notify the player AI with AI_INTENTION_ATTACK</li> <BR>
-	 * <BR>
-	 * <li>If target PlayerInstance is NOT autoAttackable, notify the player AI with AI_INTENTION_FOLLOW</li><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Client packet : Action, AttackRequest</li><BR>
-	 * <BR>
+	 * <li>If target PlayerInstance is autoAttackable, notify the player AI with AI_INTENTION_ATTACK</li>
+	 * <li>If target PlayerInstance is NOT autoAttackable, notify the player AI with AI_INTENTION_FOLLOW</li><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Client packet : Action, AttackRequest</li><br>
 	 * @param player The player that start an action on target PlayerInstance
 	 */
 	@Override

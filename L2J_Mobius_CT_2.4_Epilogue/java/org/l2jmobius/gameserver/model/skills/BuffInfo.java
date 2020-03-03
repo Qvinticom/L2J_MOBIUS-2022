@@ -97,7 +97,7 @@ public class BuffInfo
 	}
 	
 	/**
-	 * Adds an effect task to this buff info.<br>
+	 * Adds an effect task to this buff info.
 	 * @param effect the effect that owns the task
 	 * @param effectTaskInfo the task info
 	 */

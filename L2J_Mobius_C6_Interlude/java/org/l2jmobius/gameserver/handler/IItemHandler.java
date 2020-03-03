@@ -29,9 +29,8 @@ public interface IItemHandler
 	void useItem(Playable playable, ItemInstance item);
 	
 	/**
-	 * Returns the list of item IDs corresponding to the type of item.<BR>
-	 * <BR>
-	 * <B><I>Use :</I></U><BR>
+	 * Returns the list of item IDs corresponding to the type of item.<br>
+	 * <b><i>Use :</i></u><br>
 	 * This method is called at initialization to register all the item IDs automatically
 	 * @return int[] designating all itemIds for a type of item.
 	 */

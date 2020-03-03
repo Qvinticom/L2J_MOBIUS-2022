@@ -22,8 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
- * <b>This class handles Access Level Management commands:</b><br>
- * <br>
+ * <b>This class handles Access Level Management commands:</b>
  */
 public class AdminChangeAccessLevel implements IAdminCommandHandler
 {

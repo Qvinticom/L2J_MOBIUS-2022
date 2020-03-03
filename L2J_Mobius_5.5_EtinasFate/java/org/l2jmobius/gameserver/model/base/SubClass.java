@@ -20,7 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 
 /**
- * Character Sub-Class Definition <BR>
+ * Character Sub-Class Definition<br>
  * Used to store key information about a character's sub-class.
  * @author Tempy
  */

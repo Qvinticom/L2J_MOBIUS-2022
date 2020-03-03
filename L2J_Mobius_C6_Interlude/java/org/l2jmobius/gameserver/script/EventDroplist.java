@@ -21,8 +21,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * This class manage drop of Special Events created by GM for a defined period. During a Special Event all Attackable can drop extra Items. Those extra Items are defined in the table <B>allNpcDateDrops</B>. Each Special Event has a start and end date to stop to drop extra Items automaticaly.<BR>
- * <BR>
+ * This class manage drop of Special Events created by GM for a defined period. During a Special Event all Attackable can drop extra Items. Those extra Items are defined in the table <b>allNpcDateDrops</b>. Each Special Event has a start and end date to stop to drop extra Items automaticaly.
  */
 public class EventDroplist
 {
@@ -48,8 +47,7 @@ public class EventDroplist
 	}
 	
 	/**
-	 * Constructor of EventDroplist.<BR>
-	 * <BR>
+	 * Constructor of EventDroplist.
 	 */
 	private EventDroplist()
 	{
@@ -57,8 +55,7 @@ public class EventDroplist
 	}
 	
 	/**
-	 * Create and Init a new DateDrop then add it to the allNpcDateDrops of EventDroplist .<BR>
-	 * <BR>
+	 * Create and Init a new DateDrop then add it to the allNpcDateDrops of EventDroplist .
 	 * @param items The table containing all item identifier of this DateDrop
 	 * @param count The table containing min and max value of this DateDrop
 	 * @param chance The chance to obtain this drop

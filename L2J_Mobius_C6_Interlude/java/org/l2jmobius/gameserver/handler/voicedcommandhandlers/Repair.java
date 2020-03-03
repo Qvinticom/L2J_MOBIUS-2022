@@ -30,12 +30,12 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
- * <B><U>User Character .repair voicecommand - SL2 L2JEmu</U></B><BR>
- * <BR>
- * <U>NOTICE:</U> Voice command .repair that when used, allows player to try to repair any of characters on his account, by setting spawn to Floran, removing all shortcuts and moving everything equipped to that char warehouse.<BR>
- * <BR>
- * (solving client crashes on character entering world)<BR>
- * <BR>
+ * <b><u>User Character .repair voicecommand - SL2 L2JEmu</u></b><br>
+ * <br>
+ * <u>NOTICE:</u> Voice command .repair that when used, allows player to try to repair any of characters on his account, by setting spawn to Floran, removing all shortcuts and moving everything equipped to that char warehouse.<br>
+ * <br>
+ * (solving client crashes on character entering world)<br>
+ * <br>
  * @author szponiasty
  * @version $Revision: 0.17.2.95.2.9 $ $Date: 2010/03/03 9:07:11 $
  */

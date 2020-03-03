@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.util.Util;
 
 /**
  * This class manages the spawn and respawn of a group of NpcInstance that are in the same are and have the same type.<br>
- * <B><U>Concept</U>:</B><br>
+ * <b><u>Concept</u>:</b><br>
  * NpcInstance can be spawned either in a random position into a location area (if Lox=0 and Locy=0), either at an exact position.<br>
  * The heading of the NpcInstance can be a random heading if not defined (value= -1) or an exact heading (ex : merchant...).
  * @author Nightmare
@@ -81,13 +81,16 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	
 	/**
 	 * Constructor of Spawn.<br>
-	 * <B><U>Concept</U>:</B><br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
 	 * Each Spawn owns generic and static properties (ex : RewardExp, RewardSP, AggroRange...).<br>
 	 * All of those properties are stored in a different NpcTemplate for each type of Spawn. Each template is loaded once in the server cache memory (reduce memory use).<br>
 	 * When a new instance of Spawn is created, server just create a link between the instance and the template.<br>
-	 * This link is stored in <B>_template</B> Each NpcInstance is linked to a Spawn that manages its spawn and respawn (delay, location...).<br>
-	 * This link is stored in <B>_spawn</B> of the NpcInstance.<br>
-	 * <B><U> Actions</U>:</B><br>
+	 * This link is stored in <b>_template</b> Each NpcInstance is linked to a Spawn that manages its spawn and respawn (delay, location...).<br>
+	 * This link is stored in <b>_spawn</b> of the NpcInstance.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <ul>
 	 * <li>Set the _template of the Spawn</li>
 	 * <li>Calculate the implementationName used to generate the generic constructor of NpcInstance managed by this Spawn</li>
@@ -221,11 +224,11 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	}
 	
 	/**
-	 * Decrease the current number of NpcInstance of this Spawn and if necessary create a SpawnTask to launch after the respawn Delay. <B><U> Actions</U> :</B>
+	 * Decrease the current number of NpcInstance of this Spawn and if necessary create a SpawnTask to launch after the respawn Delay. <b><u>Actions</u>:</b>
 	 * <li>Decrease the current number of NpcInstance of this Spawn</li>
 	 * <li>Check if respawn is possible to prevent multiple respawning caused by lag</li>
 	 * <li>Update the current number of SpawnTask in progress or stand by of this Spawn</li>
-	 * <li>Create a new SpawnTask to launch after the respawn Delay</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : A respawn is possible ONLY if _doRespawn=True and _scheduledCount + _currentCount < _maximumCount</B></FONT>
+	 * <li>Create a new SpawnTask to launch after the respawn Delay</li> <font color=#FF0000><b><u>Caution</u>: A respawn is possible ONLY if _doRespawn=True and _scheduledCount + _currentCount < _maximumCount</b></font>
 	 * @param oldNpc
 	 */
 	public void decreaseCount(Npc oldNpc)
@@ -299,10 +302,13 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	
 	/**
 	 * Create the NpcInstance, add it to the world and lauch its OnSpawn action.<br>
-	 * <B><U>Concept</U>:</B><br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
 	 * NpcInstance can be spawned either in a random position into a location area (if Lox=0 and Locy=0), either at an exact position.<br>
 	 * The heading of the NpcInstance can be a random heading if not defined (value= -1) or an exact heading (ex : merchant...).<br>
-	 * <B><U>Actions for an random spawn into location area</U>:<I> (if Locx=0 and Locy=0)</I></B>
+	 * <br>
+	 * <b><u>Actions for an random spawn into location area</u>:<i> (if Locx=0 and Locy=0)</i></b>
 	 * <ul>
 	 * <li>Get NpcInstance Init parameters and its generate an Identifier</li>
 	 * <li>Call the constructor of the NpcInstance</li>

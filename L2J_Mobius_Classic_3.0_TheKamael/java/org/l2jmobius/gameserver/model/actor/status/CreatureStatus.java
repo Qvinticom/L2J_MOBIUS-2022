@@ -57,11 +57,14 @@ public class CreatureStatus
 	
 	/**
 	 * Add the object to the list of Creature that must be informed of HP/MP updates of this Creature.<br>
-	 * <B><U>Concept</U>:</B><br>
-	 * Each Creature owns a list called <B>_statusListener</B> that contains all PlayerInstance to inform of HP/MP updates.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * Each Creature owns a list called <b>_statusListener</b> that contains all PlayerInstance to inform of HP/MP updates.<br>
 	 * Players who must be informed are players that target this Creature.<br>
 	 * When a RegenTask is in progress sever just need to go through this list to send Server->Client packet StatusUpdate.<br>
-	 * <B><U>Example of use</U>:</B>
+	 * <br>
+	 * <b><u>Example of use</u>:</b>
 	 * <ul>
 	 * <li>Target a PC or NPC</li>
 	 * <ul>
@@ -79,11 +82,14 @@ public class CreatureStatus
 	
 	/**
 	 * Remove the object from the list of Creature that must be informed of HP/MP updates of this Creature.<br>
-	 * <B><U>Concept</U>:</B><br>
-	 * Each Creature owns a list called <B>_statusListener</B> that contains all PlayerInstance to inform of HP/MP updates.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * Each Creature owns a list called <b>_statusListener</b> that contains all PlayerInstance to inform of HP/MP updates.<br>
 	 * Players who must be informed are players that target this Creature.<br>
 	 * When a RegenTask is in progress sever just need to go through this list to send Server->Client packet StatusUpdate.<br>
-	 * <B><U>Example of use </U>:</B>
+	 * <br>
+	 * <b><u>Example of use </u>:</b>
 	 * <ul>
 	 * <li>Untarget a PC or NPC</li>
 	 * </ul>
@@ -96,8 +102,10 @@ public class CreatureStatus
 	
 	/**
 	 * Return the list of Creature that must be informed of HP/MP updates of this Creature.<br>
-	 * <B><U>Concept</U>:</B><br>
-	 * Each Creature owns a list called <B>_statusListener</B> that contains all PlayerInstance to inform of HP/MP updates.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * Each Creature owns a list called <b>_statusListener</b> that contains all PlayerInstance to inform of HP/MP updates.<br>
 	 * Players who must be informed are players that target this Creature.<br>
 	 * When a RegenTask is in progress sever just need to go through this list to send Server->Client packet StatusUpdate.
 	 * @return The list of Creature to inform or null if empty
@@ -188,7 +196,8 @@ public class CreatureStatus
 	
 	/**
 	 * Start the HP/MP/CP Regeneration task.<br>
-	 * <B><U>Actions</U>:</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Calculate the regen task period</li>
 	 * <li>Launch the HP/MP/CP Regeneration task with Medium priority</li>
@@ -208,7 +217,8 @@ public class CreatureStatus
 	
 	/**
 	 * Stop the HP/MP/CP Regeneration task.<br>
-	 * <B><U>Actions</U>:</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Set the RegenActive flag to False</li>
 	 * <li>Stop the HP/MP/CP Regeneration task</li>

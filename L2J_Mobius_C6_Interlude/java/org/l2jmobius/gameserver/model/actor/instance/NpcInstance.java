@@ -97,10 +97,9 @@ import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 
 /**
- * This class represents a Non-Player-Creature in the world. It can be a monster or a friendly creature. It also uses a template to fetch some static values. The templates are hardcoded in the client, so we can rely on them.<BR>
- * <BR>
- * Creature :<BR>
- * <BR>
+ * This class represents a Non-Player-Creature in the world. It can be a monster or a friendly creature. It also uses a template to fetch some static values. The templates are hardcoded in the client, so we can rely on them.<br>
+ * <br>
+ * Creature:<br>
  * <li>Attackable</li>
  * <li>FolkInstance</li>
  * @version $Revision: 1.32.2.7.2.24 $ $Date: 2009/04/13 09:17:09 $
@@ -153,8 +152,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Check if the server allows Random Animation.<BR>
-	 * <BR>
+	 * Check if the server allows Random Animation.
 	 * @return true, if successful
 	 */
 	public boolean hasRandomAnimation()
@@ -206,14 +204,12 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Constructor of NpcInstance (use Creature constructor).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Constructor of NpcInstance (use Creature constructor).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Call the Creature constructor to set the _template of the Creature (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
 	 * <li>Set the name of the Creature</li>
-	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li><BR>
-	 * <BR>
+	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li><br>
 	 * @param objectId Identifier of the object to initialized
 	 * @param template The NpcTemplate to apply to the NPC
 	 */
@@ -305,8 +301,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return the generic Identifier of this NpcInstance contained in the NpcTemplate.<BR>
-	 * <BR>
+	 * Return the generic Identifier of this NpcInstance contained in the NpcTemplate.
 	 * @return the npc id
 	 */
 	public int getNpcId()
@@ -321,12 +316,11 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return the faction Identifier of this NpcInstance contained in the NpcTemplate.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * If a NPC belows to a Faction, other NPC of the faction inside the Faction range will help it if it's attacked<BR>
-	 * <BR>
+	 * Return the faction Identifier of this NpcInstance contained in the NpcTemplate.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * If a NPC belows to a Faction, other NPC of the faction inside the Faction range will help it if it's attacked
 	 * @return the faction id
 	 */
 	public String getFactionId()
@@ -335,8 +329,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return the Level of this NpcInstance contained in the NpcTemplate.<BR>
-	 * <BR>
+	 * Return the Level of this NpcInstance contained in the NpcTemplate.
 	 * @return the level
 	 */
 	@Override
@@ -346,8 +339,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return True if the NpcInstance is agressive (ex : MonsterInstance in function of aggroRange).<BR>
-	 * <BR>
+	 * Return True if the NpcInstance is agressive (ex : MonsterInstance in function of aggroRange).
 	 * @return true, if is aggressive
 	 */
 	public boolean isAggressive()
@@ -356,8 +348,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return the Aggro Range of this NpcInstance contained in the NpcTemplate.<BR>
-	 * <BR>
+	 * Return the Aggro Range of this NpcInstance contained in the NpcTemplate.
 	 * @return the aggro range
 	 */
 	public int getAggroRange()
@@ -366,8 +357,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return the Faction Range of this NpcInstance contained in the NpcTemplate.<BR>
-	 * <BR>
+	 * Return the Faction Range of this NpcInstance contained in the NpcTemplate.
 	 * @return the faction range
 	 */
 	public int getFactionRange()
@@ -376,8 +366,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return True if this NpcInstance is undead in function of the NpcTemplate.<BR>
-	 * <BR>
+	 * Return True if this NpcInstance is undead in function of the NpcTemplate.
 	 * @return true, if is undead
 	 */
 	@Override
@@ -387,8 +376,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Send a packet NpcInfo with state of abnormal effect to all PlayerInstance in the _KnownPlayers of the NpcInstance.<BR>
-	 * <BR>
+	 * Send a packet NpcInfo with state of abnormal effect to all PlayerInstance in the _KnownPlayers of the NpcInstance.
 	 */
 	@Override
 	public void updateAbnormalEffect()
@@ -404,19 +392,17 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return the distance under which the object must be add to _knownObject in function of the object type.<BR>
-	 * <BR>
-	 * <B><U> Values </U> :</B><BR>
-	 * <BR>
+	 * Return the distance under which the object must be add to _knownObject in function of the object type.<br>
+	 * <br>
+	 * <b><u>Values</u>:</b><br>
 	 * <li>object is a FolkInstance : 0 (don't remember it)</li>
 	 * <li>object is a Creature : 0 (don't remember it)</li>
 	 * <li>object is a PlayableInstance : 1500</li>
-	 * <li>others : 500</li><BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>Attackable</li><BR>
-	 * <BR>
+	 * <li>others : 500</li><br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>Attackable</li><br>
 	 * @param object The Object to add to _knownObject
 	 * @return the distance to watch object
 	 */
@@ -441,19 +427,17 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return the distance after which the object must be remove from _knownObject in function of the object type.<BR>
-	 * <BR>
-	 * <B><U> Values </U> :</B><BR>
-	 * <BR>
+	 * Return the distance after which the object must be remove from _knownObject in function of the object type.<br>
+	 * <br>
+	 * <b><u>Values</u>:</b><br>
 	 * <li>object is not a Creature : 0 (don't remember it)</li>
 	 * <li>object is a FolkInstance : 0 (don't remember it)</li>
 	 * <li>object is a PlayableInstance : 3000</li>
-	 * <li>others : 1000</li><BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>Attackable</li><BR>
-	 * <BR>
+	 * <li>others : 1000</li><br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>Attackable</li><br>
 	 * @param object The Object to remove from _knownObject
 	 * @return the distance to forget object
 	 */
@@ -463,13 +447,12 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return False.<BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
+	 * Return False.<br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
 	 * <li>MonsterInstance : Check if the attacker is not another MonsterInstance</li>
-	 * <li>PlayerInstance</li><BR>
-	 * <BR>
+	 * <li>PlayerInstance</li><br>
 	 * @param attacker the attacker
 	 * @return true, if is auto attackable
 	 */
@@ -480,8 +463,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return the Identifier of the item in the left hand of this NpcInstance contained in the NpcTemplate.<BR>
-	 * <BR>
+	 * Return the Identifier of the item in the left hand of this NpcInstance contained in the NpcTemplate.
 	 * @return the left hand item
 	 */
 	public int getLeftHandItem()
@@ -490,8 +472,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return the Identifier of the item in the right hand of this NpcInstance contained in the NpcTemplate.<BR>
-	 * <BR>
+	 * Return the Identifier of the item in the right hand of this NpcInstance contained in the NpcTemplate.
 	 * @return the right hand item
 	 */
 	public int getRightHandItem()
@@ -500,8 +481,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return True if this NpcInstance has drops that can be sweeped.<BR>
-	 * <BR>
+	 * Return True if this NpcInstance has drops that can be sweeped.
 	 * @return true, if is spoil
 	 */
 	public boolean isSpoil()
@@ -510,8 +490,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Set the spoil state of this NpcInstance.<BR>
-	 * <BR>
+	 * Set the spoil state of this NpcInstance.
 	 * @param isSpoil the new spoil
 	 */
 	public void setSpoil(boolean isSpoil)
@@ -538,8 +517,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return the busy status of this NpcInstance.<BR>
-	 * <BR>
+	 * Return the busy status of this NpcInstance.
 	 * @return true, if is busy
 	 */
 	public boolean isBusy()
@@ -548,8 +526,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Set the busy status of this NpcInstance.<BR>
-	 * <BR>
+	 * Set the busy status of this NpcInstance.
 	 * @param isBusy the new busy
 	 */
 	public void setBusy(boolean isBusy)
@@ -558,8 +535,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return the busy message of this NpcInstance.<BR>
-	 * <BR>
+	 * Return the busy message of this NpcInstance.
 	 * @return the busy message
 	 */
 	public String getBusyMessage()
@@ -568,8 +544,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Set the busy message of this NpcInstance.<BR>
-	 * <BR>
+	 * Set the busy message of this NpcInstance.
 	 * @param message the new busy message
 	 */
 	public void setBusyMessage(String message)
@@ -627,33 +602,27 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Manage actions when a player click on the NpcInstance.<BR>
-	 * <BR>
-	 * <B><U> Actions on first click on the NpcInstance (Select it)</U> :</B><BR>
-	 * <BR>
+	 * Manage actions when a player click on the NpcInstance.<br>
+	 * <br>
+	 * <b><u>Actions on first click on the NpcInstance (Select it)</u>:</b><br>
 	 * <li>Set the NpcInstance as target of the PlayerInstance player (if necessary)</li>
 	 * <li>Send a Server->Client packet MyTargetSelected to the PlayerInstance player (display the select window)</li>
 	 * <li>If NpcInstance is autoAttackable, send a Server->Client packet StatusUpdate to the PlayerInstance in order to update NpcInstance HP bar</li>
-	 * <li>Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client</li><BR>
-	 * <BR>
-	 * <B><U> Actions on second click on the NpcInstance (Attack it/Intercat with it)</U> :</B><BR>
-	 * <BR>
+	 * <li>Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client</li><br>
+	 * <br>
+	 * <b><u>Actions on second click on the NpcInstance (Attack it/Intercat with it)</u>:</b><br>
 	 * <li>Send a Server->Client packet MyTargetSelected to the PlayerInstance player (display the select window)</li>
 	 * <li>If NpcInstance is autoAttackable, notify the PlayerInstance AI with AI_INTENTION_ATTACK (after a height verification)</li>
-	 * <li>If NpcInstance is NOT autoAttackable, notify the PlayerInstance AI with AI_INTENTION_INTERACT (after a distance verification) and show message</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Each group of Server->Client packet must be terminated by a ActionFailed packet in order to avoid that client wait an other packet</B></FONT><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Client packet : Action, AttackRequest</li><BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>ArtefactInstance : Manage only fisrt click to select Artefact</li><BR>
-	 * <BR>
-	 * <li>GuardInstance :</li><BR>
-	 * <BR>
+	 * <li>If NpcInstance is NOT autoAttackable, notify the PlayerInstance AI with AI_INTENTION_INTERACT (after a distance verification) and show message</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: Each group of Server->Client packet must be terminated by a ActionFailed packet in order to avoid that client wait an other packet</b></font><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Client packet : Action, AttackRequest</li><br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>ArtefactInstance : Manage only fisrt click to select Artefact</li>
+	 * <li>GuardInstance :</li><br>
 	 * @param player The PlayerInstance that start an action on the NpcInstance
 	 */
 	@Override
@@ -794,21 +763,17 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Manage and Display the GM console to modify the NpcInstance (GM only).<BR>
-	 * <BR>
-	 * <B><U> Actions (If the PlayerInstance is a GM only)</U> :</B><BR>
-	 * <BR>
+	 * Manage and Display the GM console to modify the NpcInstance (GM only).<br>
+	 * <br>
+	 * <b><u>Actions (If the PlayerInstance is a GM only)</u>:</b><br>
 	 * <li>Set the NpcInstance as target of the PlayerInstance player (if necessary)</li>
 	 * <li>Send a Server->Client packet MyTargetSelected to the PlayerInstance player (display the select window)</li>
 	 * <li>If NpcInstance is autoAttackable, send a Server->Client packet StatusUpdate to the PlayerInstance in order to update NpcInstance HP bar</li>
-	 * <li>Send a Server->Client NpcHtmlMessage() containing the GM console about this NpcInstance</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Each group of Server->Client packet must be terminated by a ActionFailed packet in order to avoid that client wait an other packet</B></FONT><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Client packet : Action</li><BR>
-	 * <BR>
+	 * <li>Send a Server->Client NpcHtmlMessage() containing the GM console about this NpcInstance</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: Each group of Server->Client packet must be terminated by a ActionFailed packet in order to avoid that client wait an other packet</b></font><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Client packet : Action</li><br>
 	 * @param client The thread that manage the player that pessed Shift and click on the NpcInstance
 	 */
 	@Override
@@ -1190,12 +1155,10 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Open a quest or chat window on client with the text of the NpcInstance in function of the command.<BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Client packet : RequestBypassToServer</li><BR>
-	 * <BR>
+	 * Open a quest or chat window on client with the text of the NpcInstance in function of the command.<br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Client packet : RequestBypassToServer</li><br>
 	 * @param player the player
 	 * @param command The command string received from client
 	 */
@@ -1555,8 +1518,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return null (regular NPCs don't have weapons instancies).<BR>
-	 * <BR>
+	 * Return null (regular NPCs don't have weapons instancies).
 	 * @return the active weapon instance
 	 */
 	@Override
@@ -1567,21 +1529,20 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return the weapon item equiped in the right hand of the NpcInstance or null.<BR>
-	 * <BR>
+	 * Return the weapon item equipped in the right hand of the NpcInstance or null.
 	 * @return the active weapon item
 	 */
 	@Override
 	public Weapon getActiveWeaponItem()
 	{
-		// Get the weapon identifier equiped in the right hand of the NpcInstance
+		// Get the weapon identifier equipped in the right hand of the NpcInstance
 		final int weaponId = getTemplate().getRhand();
 		if (weaponId < 1)
 		{
 			return null;
 		}
 		
-		// Get the weapon item equiped in the right hand of the NpcInstance
+		// Get the weapon item equipped in the right hand of the NpcInstance
 		final Item item = ItemTable.getInstance().getTemplate(getTemplate().getRhand());
 		if (!(item instanceof Weapon))
 		{
@@ -1623,8 +1584,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return null (regular NPCs don't have weapons instancies).<BR>
-	 * <BR>
+	 * Return null (regular NPCs don't have weapons instancies).
 	 * @return the secondary weapon instance
 	 */
 	@Override
@@ -1635,21 +1595,20 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return the weapon item equiped in the left hand of the NpcInstance or null.<BR>
-	 * <BR>
+	 * Return the weapon item equipped in the left hand of the NpcInstance or null.
 	 * @return the secondary weapon item
 	 */
 	@Override
 	public Weapon getSecondaryWeaponItem()
 	{
-		// Get the weapon identifier equiped in the right hand of the NpcInstance
+		// Get the weapon identifier equipped in the right hand of the NpcInstance
 		final int weaponId = getTemplate().getLhand();
 		if (weaponId < 1)
 		{
 			return null;
 		}
 		
-		// Get the weapon item equiped in the right hand of the NpcInstance
+		// Get the weapon item equipped in the right hand of the NpcInstance
 		final Item item = ItemTable.getInstance().getTemplate(getTemplate().getLhand());
 		if (!(item instanceof Weapon))
 		{
@@ -1660,8 +1619,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Send a Server->Client packet NpcHtmlMessage to the PlayerInstance in order to display the message of the NpcInstance.<BR>
-	 * <BR>
+	 * Send a Server->Client packet NpcHtmlMessage to the PlayerInstance in order to display the message of the NpcInstance.
 	 * @param player The PlayerInstance who talks with the NpcInstance
 	 * @param content The text of the NpcMessage
 	 */
@@ -1675,18 +1633,16 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return the pathfile of the selected HTML file in function of the npcId and of the page number.<BR>
-	 * <BR>
-	 * <B><U> Format of the pathfile </U> :</B><BR>
-	 * <BR>
-	 * <li>if the file exists on the server (page number = 0) : <B>data/html/default/12006.htm</B> (npcId-page number)</li>
-	 * <li>if the file exists on the server (page number > 0) : <B>data/html/default/12006-1.htm</B> (npcId-page number)</li>
-	 * <li>if the file doesn't exist on the server : <B>data/html/npcdefault.htm</B> (message : "I have nothing to say to you")</li><BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>GuardInstance : Set the pathfile to data/html/guard/12006-1.htm (npcId-page number)</li><BR>
-	 * <BR>
+	 * Return the pathfile of the selected HTML file in function of the npcId and of the page number.<br>
+	 * <br>
+	 * <b><u>Format of the pathfile</u>:</b><br>
+	 * <li>if the file exists on the server (page number = 0) : <b>data/html/default/12006.htm</b> (npcId-page number)</li>
+	 * <li>if the file exists on the server (page number > 0) : <b>data/html/default/12006-1.htm</b> (npcId-page number)</li>
+	 * <li>if the file doesn't exist on the server : <b>data/html/npcdefault.htm</b> (message : "I have nothing to say to you")</li><br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>GuardInstance : Set the pathfile to data/html/guard/12006-1.htm (npcId-page number)</li><br>
 	 * @param npcId The Identifier of the NpcInstance whose text must be display
 	 * @param value The number of the page to display
 	 * @return the html path
@@ -1722,12 +1678,10 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Open a choose quest window on client with all quests available of the NpcInstance.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
-	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance</li><BR>
-	 * <BR>
+	 * Open a choose quest window on client with all quests available of the NpcInstance.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
+	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance</li><br>
 	 * @param player The PlayerInstance that talk with the NpcInstance
 	 * @param quests The table containing quests of the NpcInstance
 	 */
@@ -1767,14 +1721,12 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Open a quest window on client with the text of the NpcInstance.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Open a quest window on client with the text of the NpcInstance.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Get the text of the quest state in the folder data/scripts/quests/questId/stateId.htm</li>
 	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance</li>
-	 * <li>Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet</li><BR>
-	 * <BR>
+	 * <li>Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet</li><br>
 	 * @param player The PlayerInstance that talk with the NpcInstance
 	 * @param questId The Identifier of the quest to display the message
 	 */
@@ -1850,8 +1802,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Collect awaiting quests/start points and display a QuestChooseWindow (if several available) or QuestWindow.<BR>
-	 * <BR>
+	 * Collect awaiting quests/start points and display a QuestChooseWindow (if several available) or QuestWindow.
 	 * @param player The PlayerInstance that talk with the NpcInstance
 	 */
 	public void showQuestWindow(PlayerInstance player)
@@ -1910,13 +1861,12 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Open a Loto window on client with the text of the NpcInstance.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Open a Loto window on client with the text of the NpcInstance.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Get the text of the selected HTML file in function of the npcId and of the page number</li>
 	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance</li>
-	 * <li>Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet</li><BR>
+	 * <li>Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet</li><br>
 	 * @param player The PlayerInstance that talk with the NpcInstance
 	 * @param value The number of the page of the NpcInstance to display
 	 */
@@ -2217,16 +2167,13 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Add Newbie helper buffs to Player according to its level.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Add Newbie helper buffs to Player according to its level.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Get the range level in wich player must be to obtain buff</li>
 	 * <li>If player level is out of range, display a message and return</li>
-	 * <li>According to player level cast buff</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> Newbie Helper Buff list is define in sql table helper_buff_list</B></FONT><BR>
-	 * <BR>
+	 * <li>According to player level cast buff</li><br>
+	 * <font color=#FF0000><b> Newbie Helper Buff list is define in sql table helper_buff_list</b></font>
 	 * @param player The PlayerInstance that talk with the NpcInstance if (!FloodProtector.getInstance().tryPerformAction(player.getObjectId(), FloodProtector.PROTECTED_USEITEM)) return;
 	 */
 	public void makeSupportMagic(PlayerInstance player)
@@ -2324,13 +2271,12 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Open a chat window on client with the text of the NpcInstance.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Open a chat window on client with the text of the NpcInstance.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Get the text of the selected HTML file in function of the npcId and of the page number</li>
 	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance</li>
-	 * <li>Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet</li><BR>
+	 * <li>Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet</li><br>
 	 * @param player The PlayerInstance that talk with the NpcInstance
 	 * @param value The number of the page of the NpcInstance to display
 	 */
@@ -2860,9 +2806,8 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Open a chat window on client with the text specified by the given file name and path,<BR>
-	 * relative to the datapack root. <BR>
-	 * <BR>
+	 * Open a chat window on client with the text specified by the given file name and path,<br>
+	 * relative to the datapack root.<br>
 	 * Added by Tempy
 	 * @param player The PlayerInstance that talk with the NpcInstance
 	 * @param filename The filename that contains the text to send
@@ -2880,8 +2825,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return the Exp Reward of this NpcInstance contained in the NpcTemplate (modified by RATE_XP).<BR>
-	 * <BR>
+	 * Return the Exp Reward of this NpcInstance contained in the NpcTemplate (modified by RATE_XP).
 	 * @return the exp reward
 	 */
 	public int getExpReward()
@@ -2891,8 +2835,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return the SP Reward of this NpcInstance contained in the NpcTemplate (modified by RATE_SP).<BR>
-	 * <BR>
+	 * Return the SP Reward of this NpcInstance contained in the NpcTemplate (modified by RATE_SP).
 	 * @return the sp reward
 	 */
 	public int getSpReward()
@@ -2902,22 +2845,20 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Kill the NpcInstance (the corpse disappeared after 7 seconds).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Kill the NpcInstance (the corpse disappeared after 7 seconds).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Create a DecayTask to remove the corpse of the NpcInstance after 7 seconds</li>
 	 * <li>Set target to null and cancel Attack or Cast</li>
 	 * <li>Stop movement</li>
 	 * <li>Stop HP/MP/CP Regeneration task</li>
 	 * <li>Stop all active skills effects in progress on the Creature</li>
 	 * <li>Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform</li>
-	 * <li>Notify Creature AI</li><BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>Attackable</li><BR>
-	 * <BR>
+	 * <li>Notify Creature AI</li><br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>Attackable</li><br>
 	 * @param killer The Creature who killed it
 	 * @return true, if successful
 	 */
@@ -2953,17 +2894,14 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Remove the NpcInstance from the world and update its spawn object (for a complete removal use the deleteMe method).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Remove the NpcInstance from the world and update its spawn object (for a complete removal use the deleteMe method).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Remove the NpcInstance from the world when the decay task is launched</li>
 	 * <li>Decrease its spawn counter</li>
-	 * <li>Manage Siege task (killFlag, killCT)</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of World </B></FONT><BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packets to players</B></FONT><BR>
-	 * <BR>
+	 * <li>Manage Siege task (killFlag, killCT)</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T REMOVE the object from _allObjects of World </b></font><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND Server->Client packets to players</b></font>
 	 */
 	@Override
 	public void onDecay()
@@ -2994,16 +2932,13 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Remove PROPERLY the NpcInstance from the world.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Remove PROPERLY the NpcInstance from the world.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Remove the NpcInstance from the world and update its spawn object</li>
 	 * <li>Remove all WorldObject from _knownObjects and _knownPlayer of the NpcInstance then cancel Attak or Cast and notify AI</li>
-	 * <li>Remove WorldObject object from _allObjects of World</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packets to players</B></FONT><BR>
-	 * <BR>
+	 * <li>Remove WorldObject object from _allObjects of World</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND Server->Client packets to players</b></font>
 	 */
 	public void deleteMe()
 	{
@@ -3037,8 +2972,7 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Return the Spawn object that manage this NpcInstance.<BR>
-	 * <BR>
+	 * Return the Spawn object that manage this NpcInstance.
 	 * @return the spawn
 	 */
 	public Spawn getSpawn()

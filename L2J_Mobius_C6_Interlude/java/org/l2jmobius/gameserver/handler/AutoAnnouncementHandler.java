@@ -123,7 +123,7 @@ public class AutoAnnouncementHandler
 	}
 	
 	/**
-	 * Registers a globally active autoannouncement.<BR>
+	 * Registers a globally active autoannouncement.<br>
 	 * Returns the associated auto announcement instance.
 	 * @param id
 	 * @param announcementTexts
@@ -136,7 +136,7 @@ public class AutoAnnouncementHandler
 	}
 	
 	/**
-	 * Registers a NON globally-active auto announcement <BR>
+	 * Registers a NON globally-active auto announcement<br>
 	 * Returns the associated auto chat instance.
 	 * @param id
 	 * @param announcementTexts
@@ -413,8 +413,8 @@ public class AutoAnnouncementHandler
 		}
 		
 		/**
-		 * Auto Announcement Runner <BR>
-		 * <BR>
+		 * Auto Announcement Runner<br>
+		 * <br>
 		 * Represents the auto announcement scheduled task for each announcement instance.
 		 * @author chief
 		 */

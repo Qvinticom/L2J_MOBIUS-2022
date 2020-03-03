@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
  * A calculator is created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...).<br>
  * In fact, each calculator is a table of Func object in which each Func represents a mathematical function:<br>
  * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()<br>
- * When the calc method of a calculator is launched, each mathematical function is called according to its priority <B>_order</B>.<br>
+ * When the calc method of a calculator is launched, each mathematical function is called according to its priority <b>_order</b>.<br>
  * Indeed, Func with lowest priority order is executed first and Funcs with the same order are executed in unspecified order.<br>
  * The result of the calculation is stored in the value property of an Env class instance.<br>
  * Method addFunc and removeFunc permit to add and remove a Func object from a Calculator.

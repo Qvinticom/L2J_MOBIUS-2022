@@ -38,7 +38,7 @@ import ai.AbstractNpcAI;
  *         OK - Epic Bosses Orfen, Queen Ant and Core also use Limit Barrier.<br>
  *         OK - Epic Bosses Antharas, Zaken and Baium and their analogues in instance zones do not use Limit Barrier.<br>
  *         OK - Raid Bosses in Clan Arena do not use Limit Barrier.<br>
- *         OK - All Raid Bosses who use Limit Barrier are listed below:<br>
+ *         OK - All Raid Bosses who use Limit Barrier are listed below:
  */
 public final class LimitBarrier extends AbstractNpcAI
 {

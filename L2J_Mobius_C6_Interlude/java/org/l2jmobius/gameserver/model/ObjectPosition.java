@@ -42,15 +42,13 @@ public class ObjectPosition
 	}
 	
 	/**
-	 * Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion.<BR>
-	 * <BR>
-	 * <B><U> Assert </U> :</B><BR>
-	 * <BR>
-	 * <li>_worldRegion != null</li><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Update position during and after movement, or after teleport</li><BR>
+	 * Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion.<br>
+	 * <br>
+	 * <b><u>Assert</u>:</b><br>
+	 * <li>_worldRegion != null</li><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Update position during and after movement, or after teleport</li><br>
 	 * @param x the x
 	 * @param y the y
 	 * @param z the z
@@ -82,20 +80,18 @@ public class ObjectPosition
 	}
 	
 	/**
-	 * Set the x,y,z position of the WorldObject and make it invisible.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * A WorldObject is invisble if <B>_hidden</B>=true or <B>_worldregion</B>==null <BR>
-	 * <BR>
-	 * <B><U> Assert </U> :</B><BR>
-	 * <BR>
-	 * <li>_worldregion==null <I>(WorldObject is invisible)</I></li><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
+	 * Set the x,y,z position of the WorldObject and make it invisible.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * A WorldObject is invisble if <b>_hidden</b>=true or <b>_worldregion</b>==null<br>
+	 * <br>
+	 * <b><u>Assert</u>:</b><br>
+	 * <li>_worldregion==null <i>(WorldObject is invisible)</i></li><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Create a Door</li>
-	 * <li>Restore PlayerInstance</li><BR>
+	 * <li>Restore PlayerInstance</li><br>
 	 * @param x the x
 	 * @param y the y
 	 * @param z the z

@@ -25,28 +25,28 @@ import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.siege.Fort;
 
 /**
- * Populates the Siege Attacker List in the SiegeInfo Window<BR>
- * <BR>
- * packet type id 0xca<BR>
- * format: cddddddd + dSSdddSSd<BR>
- * <BR>
- * c = ca<BR>
- * d = FortID<BR>
- * d = unknow (0x00)<BR>
- * d = unknow (0x01)<BR>
- * d = unknow (0x00)<BR>
- * d = Number of Attackers Clans?<BR>
- * d = Number of Attackers Clans<BR>
- * { //repeats<BR>
- * d = ClanID<BR>
- * S = ClanName<BR>
- * S = ClanLeaderName<BR>
- * d = ClanCrestID<BR>
- * d = signed time (seconds)<BR>
- * d = AllyID<BR>
- * S = AllyName<BR>
- * S = AllyLeaderName<BR>
- * d = AllyCrestID<BR>
+ * Populates the Siege Attacker List in the SiegeInfo Window<br>
+ * <br>
+ * packet type id 0xca<br>
+ * format: cddddddd + dSSdddSSd<br>
+ * <br>
+ * c = ca<br>
+ * d = FortID<br>
+ * d = unknow (0x00)<br>
+ * d = unknow (0x01)<br>
+ * d = unknow (0x00)<br>
+ * d = Number of Attackers Clans?<br>
+ * d = Number of Attackers Clans<br>
+ * { //repeats<br>
+ * d = ClanID<br>
+ * S = ClanName<br>
+ * S = ClanLeaderName<br>
+ * d = ClanCrestID<br>
+ * d = signed time (seconds)<br>
+ * d = AllyID<br>
+ * S = AllyName<br>
+ * S = AllyLeaderName<br>
+ * d = AllyCrestID<br>
  * @author programmos, scoria dev
  */
 public class FortSiegeAttackerList extends GameServerPacket

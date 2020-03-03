@@ -34,10 +34,10 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
- * Physical Attack effect implementation. <br>
- * Current formulas were tested to be the best matching retail, damage appears to be identical: <br>
- * For melee skills: 70 * graciaSkillBonus1.10113 * (patk * lvlmod + power) * crit * ss * skillpowerbonus / pdef <br>
- * For ranged skills: 70 * (patk * lvlmod + power + patk + power) * crit * ss * skillpower / pdef <br>
+ * Physical Attack effect implementation.<br>
+ * Current formulas were tested to be the best matching retail, damage appears to be identical:<br>
+ * For melee skills: 70 * graciaSkillBonus1.10113 * (patk * lvlmod + power) * crit * ss * skillpowerbonus / pdef<br>
+ * For ranged skills: 70 * (patk * lvlmod + power + patk + power) * crit * ss * skillpower / pdef<br>
  * @author Nik
  */
 public class PhysicalAttack extends AbstractEffect

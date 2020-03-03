@@ -98,7 +98,7 @@ public class AutoChatHandler implements SpawnListener
 	}
 	
 	/**
-	 * Registers a globally active auto chat for ALL instances of the given NPC ID. <BR>
+	 * Registers a globally active auto chat for ALL instances of the given NPC ID.<br>
 	 * Returns the associated auto chat instance.
 	 * @param npcId
 	 * @param chatTexts
@@ -111,7 +111,7 @@ public class AutoChatHandler implements SpawnListener
 	}
 	
 	/**
-	 * Registers a NON globally-active auto chat for the given NPC instance, and adds to the currently assigned chat instance for this NPC ID, otherwise creates a new instance if a previous one is not found. <BR>
+	 * Registers a NON globally-active auto chat for the given NPC instance, and adds to the currently assigned chat instance for this NPC ID, otherwise creates a new instance if a previous one is not found.<br>
 	 * Returns the associated auto chat instance.
 	 * @param npcInst
 	 * @param chatTexts
@@ -215,8 +215,7 @@ public class AutoChatHandler implements SpawnListener
 	}
 	
 	/**
-	 * Used in conjunction with a SpawnListener, this method is called every time an NPC is spawned in the world. <BR>
-	 * <BR>
+	 * Used in conjunction with a SpawnListener, this method is called every time an NPC is spawned in the world.<br>
 	 * If an auto chat instance is set to be "global", all instances matching the registered NPC ID will be added to that chat instance.
 	 */
 	@Override
@@ -242,8 +241,7 @@ public class AutoChatHandler implements SpawnListener
 	}
 	
 	/**
-	 * Auto Chat Instance <BR>
-	 * <BR>
+	 * Auto Chat Instance<br>
 	 * Manages the auto chat instances for a specific registered NPC ID.
 	 * @author Tempy
 	 */
@@ -281,9 +279,9 @@ public class AutoChatHandler implements SpawnListener
 		}
 		
 		/**
-		 * Defines an auto chat for an instance matching this auto chat instance's registered NPC ID, and launches the scheduled chat task. <BR>
-		 * Returns the object ID for the NPC instance, with which to refer to the created chat definition. <BR>
-		 * <B>Note</B>: Uses pre-defined default values for texts and chat delays from the chat instance.
+		 * Defines an auto chat for an instance matching this auto chat instance's registered NPC ID, and launches the scheduled chat task.<br>
+		 * Returns the object ID for the NPC instance, with which to refer to the created chat definition.<br>
+		 * <b>Note</b>: Uses pre-defined default values for texts and chat delays from the chat instance.
 		 * @param npcInst
 		 * @return objectId
 		 */
@@ -293,7 +291,7 @@ public class AutoChatHandler implements SpawnListener
 		}
 		
 		/**
-		 * Defines an auto chat for an instance matching this auto chat instance's registered NPC ID, and launches the scheduled chat task. <BR>
+		 * Defines an auto chat for an instance matching this auto chat instance's registered NPC ID, and launches the scheduled chat task.<br>
 		 * Returns the object ID for the NPC instance, with which to refer to the created chat definition.
 		 * @param npcInst
 		 * @param chatTexts
@@ -512,9 +510,9 @@ public class AutoChatHandler implements SpawnListener
 		}
 		
 		/**
-		 * Auto Chat Definition <BR>
-		 * <BR>
-		 * Stores information about specific chat data for an instance of the NPC ID specified by the containing auto chat instance. <BR>
+		 * Auto Chat Definition<br>
+		 * <br>
+		 * Stores information about specific chat data for an instance of the NPC ID specified by the containing auto chat instance.<br>
 		 * Each NPC instance of this type should be stored in a subsequent AutoChatDefinition class.
 		 * @author Tempy
 		 */
@@ -618,8 +616,8 @@ public class AutoChatHandler implements SpawnListener
 		}
 		
 		/**
-		 * Auto Chat Runner <BR>
-		 * <BR>
+		 * Auto Chat Runner<br>
+		 * <br>
 		 * Represents the auto chat scheduled task for each chat instance.
 		 * @author Tempy
 		 */

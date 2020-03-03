@@ -670,7 +670,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	}
 	
 	/**
-	 * Sets instance for current object by instance ID.<br>
+	 * Sets instance for current object by instance ID.
 	 * @param id ID of instance world which should be set (0 means normal world)
 	 */
 	public void setInstanceById(int id)

@@ -29,14 +29,14 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
- * <B>Pledge Manipulation:</B><BR>
- * <LI>With target in a character without clan:<BR>
+ * <b>Pledge Manipulation:</b><br>
+ * <li>With target in a character without clan:<br>
  * //pledge create clanname
- * <LI>With target in a clan leader:<BR>
- * //pledge info<BR>
- * //pledge dismiss<BR>
- * //pledge setlevel level<BR>
- * //pledge rep reputation_points<BR>
+ * <li>With target in a clan leader:<br>
+ * //pledge info<br>
+ * //pledge dismiss<br>
+ * //pledge setlevel level<br>
+ * //pledge rep reputation_points
  */
 public class AdminPledge implements IAdminCommandHandler
 {

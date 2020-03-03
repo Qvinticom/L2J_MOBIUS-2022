@@ -25,8 +25,8 @@ package org.l2jmobius.gameserver.handler.skillhandlers;
  * || !checkIfOkToCastFlagDisplay(player, fort, true)) return; try { // if(targets[0] instanceof ArtefactInstance) fort.EndOfSiege(player.getClan()); } catch(Exception e) {} } //public SkillType[] getSkillIds() //{ //return SKILL_IDS; //}
  */
 /**
- * Return true if character clan place a flag<BR>
- * <BR>
+ * Return true if character clan place a flag<br>
+ * <br>
  * @param activeChar The Creature of the creature placing the flag
  */
 /*

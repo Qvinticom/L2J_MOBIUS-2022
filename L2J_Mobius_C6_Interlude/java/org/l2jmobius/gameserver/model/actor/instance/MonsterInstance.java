@@ -32,8 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.util.MinionList;
 
 /**
- * This class manages all Monsters. MonsterInstance :<BR>
- * <BR>
+ * This class manages all Monsters. MonsterInstance:<br>
  * <li>MinionInstance</li>
  * <li>RaidBossInstance</li>
  * <li>GrandBossInstance</li>
@@ -45,14 +44,12 @@ public class MonsterInstance extends Attackable
 	protected ScheduledFuture<?> _minionMaintainTask = null;
 	
 	/**
-	 * Constructor of MonsterInstance (use Creature and NpcInstance constructor).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Constructor of MonsterInstance (use Creature and NpcInstance constructor).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Call the Creature constructor to set the _template of the MonsterInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
 	 * <li>Set the name of the MonsterInstance</li>
-	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li><BR>
-	 * <BR>
+	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li><br>
 	 * @param objectId Identifier of the object to initialized
 	 * @param template the template
 	 */
@@ -86,8 +83,7 @@ public class MonsterInstance extends Attackable
 	}
 	
 	/**
-	 * Return True if the attacker is not another MonsterInstance.<BR>
-	 * <BR>
+	 * Return True if the attacker is not another MonsterInstance.
 	 * @param attacker the attacker
 	 * @return true, if is auto attackable
 	 */
@@ -102,8 +98,7 @@ public class MonsterInstance extends Attackable
 	}
 	
 	/**
-	 * Return True if the MonsterInstance is Agressive (aggroRange > 0).<BR>
-	 * <BR>
+	 * Return True if the MonsterInstance is Agressive (aggroRange > 0).
 	 * @return true, if is aggressive
 	 */
 	@Override

@@ -429,7 +429,7 @@ public class VIP
 		try
 		{
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-			final StringBuilder replyMSG = new StringBuilder("<html><head><body>");
+			final StringBuilder replyMSG = new StringBuilder("<html><body>");
 			replyMSG.append("VIP (End NPC)<br><br>");
 			replyMSG.append("Current event...<br1>");
 			replyMSG.append("Team:&nbsp;<font color=\"FFFFFF\">" + _teamName + "</font><br><br>");
@@ -449,7 +449,7 @@ public class VIP
 				replyMSG.append("I am the character the VIP has to reach in order to win the event.<br>");
 			}
 			
-			replyMSG.append("</head></body></html>");
+			replyMSG.append("</body></html>");
 			adminReply.setHtml(replyMSG.toString());
 			eventPlayer.sendPacket(adminReply);
 		}
@@ -514,7 +514,7 @@ public class VIP
 				
 				final NpcHtmlMessage nhm = new NpcHtmlMessage(5);
 				final StringBuilder replyMSG = new StringBuilder("");
-				replyMSG.append("<html><head><body>Your team has won the event. Your inventory now contains your reward.</body></html>");
+				replyMSG.append("<html><body>Your team has won the event. Your inventory now contains your reward.</body></html>");
 				nhm.setHtml(replyMSG.toString());
 				player.sendPacket(nhm);
 			}
@@ -561,7 +561,7 @@ public class VIP
 				
 				final NpcHtmlMessage nhm = new NpcHtmlMessage(5);
 				final StringBuilder replyMSG = new StringBuilder("");
-				replyMSG.append("<html><head><body>Your team has won the event. Your inventory now contains your reward.</body></html>");
+				replyMSG.append("<html><body>Your team has won the event. Your inventory now contains your reward.</body></html>");
 				nhm.setHtml(replyMSG.toString());
 				player.sendPacket(nhm);
 			}
@@ -601,7 +601,7 @@ public class VIP
 				
 				final NpcHtmlMessage nhm = new NpcHtmlMessage(5);
 				final StringBuilder replyMSG = new StringBuilder("");
-				replyMSG.append("<html><head><body>You team have won the event. Your inventory now contains your reward.</body></html>");
+				replyMSG.append("<html><body>You team have won the event. Your inventory now contains your reward.</body></html>");
 				nhm.setHtml(replyMSG.toString());
 				player.sendPacket(nhm);
 			}
@@ -783,7 +783,7 @@ public class VIP
 		try
 		{
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-			final StringBuilder replyMSG = new StringBuilder("<html><head><body>");
+			final StringBuilder replyMSG = new StringBuilder("<html><body>");
 			replyMSG.append("VIP (Join NPC)<br><br>");
 			replyMSG.append("Current event...<br1>");
 			replyMSG.append("	... Team:&nbsp;<font color=\"FFFFFF\">" + _teamName + "</font><br><br>");
@@ -858,7 +858,7 @@ public class VIP
 				replyMSG.append("<center>The event is already taking place. Please sign up for the next event.</center>");
 			}
 			
-			replyMSG.append("</head></body></html>");
+			replyMSG.append("</body></html>");
 			adminReply.setHtml(replyMSG.toString());
 			eventPlayer.sendPacket(adminReply);
 		}

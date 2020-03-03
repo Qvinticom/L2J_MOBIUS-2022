@@ -32,11 +32,11 @@ import org.l2jmobius.gameserver.model.skills.funcs.Func;
 import org.l2jmobius.gameserver.model.skills.funcs.FuncTemplate;
 
 /**
- * This class contains all informations concerning the item (weapon, armor, etc).<BR>
+ * This class contains all informations concerning the item (weapon, armor, etc).<br>
  * Mother class of :
- * <LI>Armor</LI>
- * <LI>EtcItem</LI>
- * <LI>Weapon</LI>
+ * <li>Armor</li>
+ * <li>EtcItem</li>
+ * <li>Weapon</li>
  * @version $Revision: 1.7.2.2.2.5 $ $Date: 2005/04/06 18:25:18 $
  */
 public abstract class Item
@@ -143,21 +143,20 @@ public abstract class Item
 	protected static final Effect[] _emptyEffectSet = new Effect[0];
 	
 	/**
-	 * Constructor of the Item that fill class variables.<BR>
-	 * <BR>
-	 * <U><I>Variables filled :</I></U><BR>
-	 * <LI>type</LI>
-	 * <LI>_itemId</LI>
-	 * <LI>_name</LI>
-	 * <LI>_type1 & _type2</LI>
-	 * <LI>_weight</LI>
-	 * <LI>_crystallizable</LI>
-	 * <LI>_stackable</LI>
-	 * <LI>_crystalType & _crystlaCount</LI>
-	 * <LI>_duration</LI>
-	 * <LI>_bodypart</LI>
-	 * <LI>_referencePrice</LI>
-	 * <LI>_sellable</LI>
+	 * Constructor of the Item that fill class variables.<br>
+	 * <u><i>Variables filled :</i></u><br>
+	 * <li>type</li>
+	 * <li>_itemId</li>
+	 * <li>_name</li>
+	 * <li>_type1 & _type2</li>
+	 * <li>_weight</li>
+	 * <li>_crystallizable</li>
+	 * <li>_stackable</li>
+	 * <li>_crystalType & _crystlaCount</li>
+	 * <li>_duration</li>
+	 * <li>_bodypart</li>
+	 * <li>_referencePrice</li>
+	 * <li>_sellable</li><br>
 	 * @param type : Enum designating the type of the item
 	 * @param set : StatSet corresponding to a set of couples (key,value) for description of the item
 	 */
@@ -414,9 +413,8 @@ public abstract class Item
 	}
 	
 	/**
-	 * Returns the grade of the item.<BR>
-	 * <BR>
-	 * <U><I>Concept :</I></U><BR>
+	 * Returns the grade of the item.<br>
+	 * <u><i>Concept :</i></u><br>
 	 * In fact, this fucntion returns the type of crystal of the item.
 	 * @return int
 	 */

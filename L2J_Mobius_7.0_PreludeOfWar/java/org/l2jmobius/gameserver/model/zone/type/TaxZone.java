@@ -71,7 +71,7 @@ public class TaxZone extends ZoneType
 	}
 	
 	/**
-	 * Gets castle associated with tax zone.<br>
+	 * Gets castle associated with tax zone.
 	 * @return instance of {@link Castle} if found otherwise {@code null}
 	 */
 	public Castle getCastle()

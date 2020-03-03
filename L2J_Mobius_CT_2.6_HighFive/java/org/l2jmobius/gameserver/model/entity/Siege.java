@@ -374,8 +374,7 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * When control of castle changed during siege<BR>
-	 * <BR>
+	 * When control of castle changed during siege.
 	 */
 	public void midVictory()
 	{
@@ -461,8 +460,7 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * When siege starts<BR>
-	 * <BR>
+	 * When siege starts.
 	 */
 	@Override
 	public void startSiege()
@@ -520,8 +518,7 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * Announce to player.<BR>
-	 * <BR>
+	 * Announce to player.
 	 * @param message The SystemMessage to send to player
 	 * @param bothSides True - broadcast to both attackers and defenders. False - only to defenders.
 	 */
@@ -648,8 +645,7 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * Approve clan as defender for siege<BR>
-	 * <BR>
+	 * Approve clan as defender for siege
 	 * @param clanId The int of player's clan id
 	 */
 	public void approveSiegeDefenderClan(int clanId)
@@ -683,8 +679,7 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * Return true if clan is attacker<BR>
-	 * <BR>
+	 * Return true if clan is attacker
 	 * @param clan The Clan of the player
 	 */
 	@Override
@@ -694,8 +689,7 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * Return true if clan is defender<BR>
-	 * <BR>
+	 * Return true if clan is defender
 	 * @param clan The Clan of the player
 	 */
 	@Override
@@ -873,8 +867,7 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * Register clan as attacker<BR>
-	 * <BR>
+	 * Register clan as attacker
 	 * @param player The PlayerInstance of the player trying to register
 	 */
 	public void registerAttacker(PlayerInstance player)
@@ -951,8 +944,7 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * Remove clan from siege<BR>
-	 * <BR>
+	 * Remove clan from siege
 	 * @param clanId The int of player's clan id
 	 */
 	public void removeSiegeClan(int clanId)
@@ -978,8 +970,7 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * Remove clan from siege<BR>
-	 * <BR>
+	 * Remove clan from siege
 	 * @param clan clan being removed
 	 */
 	public void removeSiegeClan(Clan clan)
@@ -992,8 +983,7 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * Remove clan from siege<BR>
-	 * <BR>
+	 * Remove clan from siege
 	 * @param player The PlayerInstance of player/clan being removed
 	 */
 	public void removeSiegeClan(PlayerInstance player)
@@ -1002,8 +992,7 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * Start the auto tasks<BR>
-	 * <BR>
+	 * Start the auto tasks.
 	 */
 	public void startAutoTask()
 	{
@@ -1076,8 +1065,7 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * Add clan as attacker<BR>
-	 * <BR>
+	 * Add clan as attacker
 	 * @param clanId The int of clan's id
 	 */
 	private void addAttacker(int clanId)
@@ -1086,8 +1074,7 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * Add clan as defender<BR>
-	 * <BR>
+	 * Add clan as defender
 	 * @param clanId The int of clan's id
 	 */
 	private void addDefender(int clanId)
@@ -1108,8 +1095,7 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * Add clan as defender waiting approval<BR>
-	 * <BR>
+	 * Add clan as defender waiting approval
 	 * @param clanId The int of clan's id
 	 */
 	private void addDefenderWaiting(int clanId)
@@ -1201,8 +1187,7 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * Return the correct siege date as Calendar.<BR>
-	 * <BR>
+	 * Return the correct siege date as Calendar.
 	 */
 	public void correctSiegeDateTime()
 	{
@@ -1351,8 +1336,7 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * Save registration to database.<BR>
-	 * <BR>
+	 * Save registration to database.
 	 * @param clan The Clan of player
 	 * @param typeId -1 = owner 0 = defender, 1 = attacker, 2 = defender waiting
 	 * @param isUpdateRegistration
@@ -1497,8 +1481,7 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * Spawn siege guard.<BR>
-	 * <BR>
+	 * Spawn siege guard.
 	 */
 	private void spawnSiegeGuard()
 	{

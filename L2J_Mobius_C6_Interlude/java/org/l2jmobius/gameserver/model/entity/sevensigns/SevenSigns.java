@@ -910,7 +910,7 @@ public class SevenSigns
 	}
 	
 	/**
-	 * Saves all Seven Signs data, both to the database and properties file (if updateSettings = True). Often called to preserve data integrity and synchronization with DB, in case of errors. <BR>
+	 * Saves all Seven Signs data, both to the database and properties file (if updateSettings = True). Often called to preserve data integrity and synchronization with DB, in case of errors.<br>
 	 * If player != null, just that player's data is updated in the database, otherwise all player's data is sequentially updated.
 	 * @param player the player
 	 * @param updateSettings the update settings
@@ -986,7 +986,7 @@ public class SevenSigns
 	}
 	
 	/**
-	 * Used to reset the cabal details of all players, and update the database.<BR>
+	 * Used to reset the cabal details of all players, and update the database.<br>
 	 * Primarily used when beginning a new cycle, and should otherwise never be called.
 	 */
 	protected void resetPlayerData()
@@ -1015,7 +1015,7 @@ public class SevenSigns
 	}
 	
 	/**
-	 * Used to specify cabal-related details for the specified player. This method checks to see if the player has registered before and will update the database if necessary. <BR>
+	 * Used to specify cabal-related details for the specified player. This method checks to see if the player has registered before and will update the database if necessary.<br>
 	 * Returns the cabal ID the player has joined.
 	 * @param player the player
 	 * @param chosenCabal the chosen cabal
@@ -1078,7 +1078,7 @@ public class SevenSigns
 	}
 	
 	/**
-	 * Returns the amount of ancient adena the specified player can claim, if any.<BR>
+	 * Returns the amount of ancient adena the specified player can claim, if any.<br>
 	 * If removeReward = True, all the ancient adena owed to them is removed, then DB is updated.
 	 * @param player the player
 	 * @param removeReward the remove reward
@@ -1101,7 +1101,7 @@ public class SevenSigns
 	}
 	
 	/**
-	 * Used to add the specified player's seal stone contribution points to the current total for their cabal. Returns the point score the contribution was worth. Each stone count <B>must be</B> broken down and specified by the stone's color.
+	 * Used to add the specified player's seal stone contribution points to the current total for their cabal. Returns the point score the contribution was worth. Each stone count <b>must be</b> broken down and specified by the stone's color.
 	 * @param player the player
 	 * @param blueCount the blue count
 	 * @param greenCount the green count
@@ -1145,7 +1145,7 @@ public class SevenSigns
 	}
 	
 	/**
-	 * Adds the specified number of festival points to the specified cabal. Remember, the same number of points are <B>deducted from the rival cabal</B> to maintain proportionality.
+	 * Adds the specified number of festival points to the specified cabal. Remember, the same number of points are <b>deducted from the rival cabal</b> to maintain proportionality.
 	 * @param cabal the cabal
 	 * @param amount the amount
 	 */
@@ -1220,7 +1220,7 @@ public class SevenSigns
 	}
 	
 	/**
-	 * Used to initialize the seals for each cabal. (Used at startup or at beginning of a new cycle). This method should be called after <B>resetSeals()</B> and <B>calcNewSealOwners()</B> on a new cycle.
+	 * Used to initialize the seals for each cabal. (Used at startup or at beginning of a new cycle). This method should be called after <b>resetSeals()</b> and <b>calcNewSealOwners()</b> on a new cycle.
 	 */
 	protected void initializeSeals()
 	{
@@ -1260,8 +1260,7 @@ public class SevenSigns
 	}
 	
 	/**
-	 * Calculates the ownership of the three Seals of the Seven Signs, based on various criterion. <BR>
-	 * <BR>
+	 * Calculates the ownership of the three Seals of the Seven Signs, based on various criterion.<br>
 	 * Should only ever called at the beginning of a new cycle.
 	 */
 	protected void calcNewSealOwners()
@@ -1460,8 +1459,7 @@ public class SevenSigns
 	}
 	
 	/**
-	 * This method is called to remove all players from catacombs and necropolises, who belong to the losing cabal. <BR>
-	 * <BR>
+	 * This method is called to remove all players from catacombs and necropolises, who belong to the losing cabal.<br>
 	 * Should only ever called at the beginning of Seal Validation.
 	 * @param compWinner the comp winner
 	 */

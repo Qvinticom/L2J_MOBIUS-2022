@@ -31,11 +31,11 @@ import org.l2jmobius.gameserver.network.clientpackets.*;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
- * Stateful Packet Handler<BR>
- * The Stateful approach prevents the server from handling inconsistent packets, examples:<BR>
+ * Stateful Packet Handler<br>
+ * The Stateful approach prevents the server from handling inconsistent packets, examples:<br>
  * <li>Clients sends a MoveToLocation packet without having a character attached. (Potential errors handling the packet).</li>
- * <li>Clients sends a RequestAuthLogin being already authed. (Potential exploit).</li> <BR>
- * <BR>
+ * <li>Clients sends a RequestAuthLogin being already authed. (Potential exploit).</li><br>
+ * <br>
  * Note: If for a given exception a packet needs to be handled on more then one state, then it should be added to all these states.
  */
 public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFactory<GameClient>, IMMOExecutor<GameClient>

@@ -272,7 +272,7 @@ public class ManorSeedData implements IXmlReader
 	}
 	
 	/**
-	 * Returns castle id where seed can be showed<br>
+	 * Returns castle id where seed can be showed
 	 * @param seedId
 	 * @return castleId
 	 */

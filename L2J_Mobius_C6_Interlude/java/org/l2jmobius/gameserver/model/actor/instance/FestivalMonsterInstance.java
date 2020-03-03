@@ -32,14 +32,12 @@ public class FestivalMonsterInstance extends MonsterInstance
 	protected int _bonusMultiplier = 1;
 	
 	/**
-	 * Constructor of FestivalMonsterInstance (use Creature and NpcInstance constructor).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Constructor of FestivalMonsterInstance (use Creature and NpcInstance constructor).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Call the Creature constructor to set the _template of the FestivalMonsterInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
 	 * <li>Set the name of the MonsterInstance</li>
-	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li><BR>
-	 * <BR>
+	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li><br>
 	 * @param objectId Identifier of the object to initialized
 	 * @param template the template
 	 */
@@ -58,8 +56,7 @@ public class FestivalMonsterInstance extends MonsterInstance
 	}
 	
 	/**
-	 * Return True if the attacker is not another FestivalMonsterInstance.<BR>
-	 * <BR>
+	 * Return True if the attacker is not another FestivalMonsterInstance.
 	 * @param attacker the attacker
 	 * @return true, if is auto attackable
 	 */
@@ -93,7 +90,7 @@ public class FestivalMonsterInstance extends MonsterInstance
 	 * Actions:
 	 * <li>Check if the killing object is a player, and then find the party they belong to.</li>
 	 * <li>Add a blood offering item to the leader of the party.</li>
-	 * <li>Update the party leader's inventory to show the new item addition.</li>
+	 * <li>Update the party leader's inventory to show the new item addition.</li><br>
 	 * @param lastAttacker the last attacker
 	 */
 	@Override

@@ -398,7 +398,7 @@ public abstract class Inventory extends ItemContainer
 				return;
 			}
 			
-			// checks if equiped item is part of set
+			// checks if equipped item is part of set
 			if (armorSet.containItem(slot, item.getItemId()))
 			{
 				if (armorSet.containAll(player))
@@ -618,7 +618,7 @@ public abstract class Inventory extends ItemContainer
 	}
 	
 	/**
-	 * Drop item from inventory by using its <B>objectID</B> and updates database
+	 * Drop item from inventory by using its <b>objectID</b> and updates database
 	 * @param process : String Identifier of process triggering this action
 	 * @param objectId : int Item Instance identifier of the item to be dropped
 	 * @param count : int Quantity of items to be dropped
@@ -652,8 +652,7 @@ public abstract class Inventory extends ItemContainer
 	}
 	
 	/**
-	 * Adds item to inventory for further adjustments and Equip it if necessary (itemlocation defined)<BR>
-	 * <BR>
+	 * Adds item to inventory for further adjustments and Equip it if necessary (itemlocation defined)
 	 * @param item : ItemInstance to be added from inventory
 	 */
 	@Override
@@ -859,7 +858,7 @@ public abstract class Inventory extends ItemContainer
 	}
 	
 	/**
-	 * Equips an item in the given slot of the paperdoll. <U><I>Remark :</I></U> The item <B>HAS TO BE</B> already in the inventory
+	 * Equips an item in the given slot of the paperdoll. <u><i>Remark :</i></u> The item <b>HAS TO BE</b> already in the inventory
 	 * @param slot : int pointing out the slot of the paperdoll
 	 * @param item : ItemInstance pointing out the item to add in slot
 	 * @return ItemInstance designating the item placed in the slot before
@@ -1479,8 +1478,7 @@ public abstract class Inventory extends ItemContainer
 	}
 	
 	/**
-	 * Return the ItemInstance of the arrows needed for this bow.<BR>
-	 * <BR>
+	 * Return the ItemInstance of the arrows needed for this bow.
 	 * @param bow : Item designating the bow
 	 * @return ItemInstance pointing out arrows for bow
 	 */

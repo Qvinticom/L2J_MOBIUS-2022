@@ -50,7 +50,7 @@ public class ArmorSet
 	}
 	
 	/**
-	 * Checks if player have equiped all items from set (not checking shield)
+	 * Checks if player have equipped all items from set (not checking shield)
 	 * @param player whose inventory is being checked
 	 * @return True if player equips whole set
 	 */

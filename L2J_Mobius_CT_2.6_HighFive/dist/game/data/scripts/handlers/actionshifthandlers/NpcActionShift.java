@@ -38,21 +38,17 @@ import handlers.bypasshandlers.NpcViewMod;
 public class NpcActionShift implements IActionShiftHandler
 {
 	/**
-	 * Manage and Display the GM console to modify the NpcInstance (GM only).<BR>
-	 * <BR>
-	 * <B><U> Actions (If the PlayerInstance is a GM only)</U> :</B><BR>
-	 * <BR>
+	 * Manage and Display the GM console to modify the NpcInstance (GM only).<br>
+	 * <br>
+	 * <b><u>Actions (If the PlayerInstance is a GM only)</u>:</b><br>
 	 * <li>Set the NpcInstance as target of the PlayerInstance player (if necessary)</li>
 	 * <li>Send a Server->Client packet MyTargetSelected to the PlayerInstance player (display the select window)</li>
 	 * <li>If NpcInstance is autoAttackable, send a Server->Client packet StatusUpdate to the PlayerInstance in order to update NpcInstance HP bar</li>
-	 * <li>Send a Server->Client NpcHtmlMessage() containing the GM console about this NpcInstance</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Each group of Server->Client packet must be terminated by a ActionFailed packet in order to avoid that client wait an other packet</B></FONT><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Client packet : Action</li><BR>
-	 * <BR>
+	 * <li>Send a Server->Client NpcHtmlMessage() containing the GM console about this NpcInstance</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: Each group of Server->Client packet must be terminated by a ActionFailed packet in order to avoid that client wait an other packet</b></font><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Client packet : Action</li>
 	 */
 	@Override
 	public boolean action(PlayerInstance player, WorldObject target, boolean interact)

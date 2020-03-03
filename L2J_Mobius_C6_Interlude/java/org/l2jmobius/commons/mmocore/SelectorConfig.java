@@ -42,12 +42,11 @@ public class SelectorConfig
 	public int MAX_READ_PER_PASS = 10;
 	
 	/**
-	 * Defines how much time (in milis) should the selector sleep, an higher value increases throughput but also increases latency(to a max of the sleep value itself).<BR>
-	 * Also an extremely high value(usually > 100) will decrease throughput due to the server not doing enough sends per second (depends on max sends per pass).<BR>
-	 * <BR>
-	 * Recommended values:<BR>
-	 * 1 for minimal latency.<BR>
-	 * 10-30 for an latency/troughput trade-off based on your needs.<BR>
+	 * Defines how much time (in milis) should the selector sleep, an higher value increases throughput but also increases latency(to a max of the sleep value itself).<br>
+	 * Also an extremely high value(usually > 100) will decrease throughput due to the server not doing enough sends per second (depends on max sends per pass).<br>
+	 * Recommended values:<br>
+	 * 1 for minimal latency.<br>
+	 * 10-30 for an latency/troughput trade-off based on your needs.
 	 */
 	public int SLEEP_TIME = 10;
 }

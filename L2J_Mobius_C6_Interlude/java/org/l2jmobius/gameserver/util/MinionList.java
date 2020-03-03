@@ -141,8 +141,7 @@ public class MinionList
 	}
 	
 	/**
-	 * Manage respawning of minions for this RaidBoss.<BR>
-	 * <BR>
+	 * Manage respawning of minions for this RaidBoss.
 	 */
 	public void maintainMinions()
 	{
@@ -168,12 +167,11 @@ public class MinionList
 	}
 	
 	/**
-	 * Manage the spawn of all Minions of this RaidBoss.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Manage the spawn of all Minions of this RaidBoss.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Get the Minion data of all Minions that must be spawn</li>
-	 * <li>For each Minion type, spawn the amount of Minion needed</li><BR>
+	 * <li>For each Minion type, spawn the amount of Minion needed</li>
 	 */
 	public void spawnMinions()
 	{
@@ -203,16 +201,14 @@ public class MinionList
 	}
 	
 	/**
-	 * Init a Minion and add it in the world as a visible object.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Init a Minion and add it in the world as a visible object.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Get the template of the Minion to spawn</li>
 	 * <li>Create and Init the Minion and generate its Identifier</li>
 	 * <li>Set the Minion HP, MP and Heading</li>
 	 * <li>Set the Minion leader to this RaidBoss</li>
-	 * <li>Init the position of the Minion and add it in the world as a visible object</li><BR>
-	 * <BR>
+	 * <li>Init the position of the Minion and add it in the world as a visible object</li><br>
 	 * @param minionid The I2NpcTemplate Identifier of the Minion to spawn
 	 */
 	public void spawnSingleMinion(int minionid)

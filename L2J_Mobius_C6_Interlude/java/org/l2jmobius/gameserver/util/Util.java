@@ -118,7 +118,7 @@ public class Util
 	}
 	
 	/**
-	 * Capitalizes the first letter of a string, and returns the result.<BR>
+	 * Capitalizes the first letter of a string, and returns the result.<br>
 	 * (Based on ucfirst() function of PHP)
 	 * @param str
 	 * @return String containing the modified string.
@@ -134,7 +134,7 @@ public class Util
 	}
 	
 	/**
-	 * Capitalizes the first letter of every "word" in a string.<BR>
+	 * Capitalizes the first letter of every "word" in a string.<br>
 	 * (Based on ucwords() function of PHP)
 	 * @param str
 	 * @return String containing the modified string.
@@ -210,7 +210,7 @@ public class Util
 	}
 	
 	/**
-	 * Returns a delimited string for an given array of string elements.<BR>
+	 * Returns a delimited string for an given array of string elements.<br>
 	 * (Based on implode() in PHP)
 	 * @param strArray
 	 * @param strDelim
@@ -227,7 +227,7 @@ public class Util
 	}
 	
 	/**
-	 * Returns a delimited string for an given collection of string elements.<BR>
+	 * Returns a delimited string for an given collection of string elements.<br>
 	 * (Based on implode() in PHP)
 	 * @param strCollection
 	 * @param strDelim
@@ -239,7 +239,7 @@ public class Util
 	}
 	
 	/**
-	 * Returns the rounded value of val to specified number of digits after the decimal point.<BR>
+	 * Returns the rounded value of val to specified number of digits after the decimal point.<br>
 	 * (Based on round() in PHP)
 	 * @param value
 	 * @param numPlaces

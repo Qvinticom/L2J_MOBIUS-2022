@@ -767,13 +767,12 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Show a message to player.<BR>
-	 * <BR>
-	 * <U><I>Concept : </I></U><BR>
-	 * 3 cases are managed according to the value of the parameter "res" :<BR>
-	 * <LI><U>"res" ends with string ".html" :</U> an HTML is opened in order to be shown in a dialog box</LI>
-	 * <LI><U>"res" starts with "<html>" :</U> the message hold in "res" is shown in a dialog box</LI>
-	 * <LI><U>otherwise :</U> the message hold in "res" is shown in chat box</LI>
+	 * Show a message to player.<br>
+	 * <u><i>Concept:</i></u><br>
+	 * 3 cases are managed according to the value of the parameter "res" :<br>
+	 * <li><u>"res" ends with string ".html" :</u> an HTML is opened in order to be shown in a dialog box</li>
+	 * <li><u>"res" starts with "<html>" :</u> the message hold in "res" is shown in a dialog box</li>
+	 * <li><u>otherwise :</u> the message hold in "res" is shown in chat box</li><br>
 	 * @param object
 	 * @param res : String pointing out the message to show at the player
 	 * @return boolean
@@ -845,8 +844,7 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Add this quest to the list of quests that the passed mob will respond to for Attack Events.<BR>
-	 * <BR>
+	 * Add this quest to the list of quests that the passed mob will respond to for Attack Events.
 	 * @param attackId
 	 * @return int : attackId
 	 */
@@ -864,8 +862,7 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Add this quest to the list of quests that the passed mob will respond to for Kill Events.<BR>
-	 * <BR>
+	 * Add this quest to the list of quests that the passed mob will respond to for Kill Events.
 	 * @param killId
 	 * @return int : killId
 	 */
@@ -887,8 +884,7 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Add this quest to the list of quests that the passed npc will respond to for Talk Events.<BR>
-	 * <BR>
+	 * Add this quest to the list of quests that the passed npc will respond to for Talk Events.
 	 * @param talkId : ID of the NPC
 	 * @return int : ID of the NPC
 	 */
@@ -915,8 +911,7 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Add this quest to the list of quests that the passed npc will respond to for Skill-Use Events.<BR>
-	 * <BR>
+	 * Add this quest to the list of quests that the passed npc will respond to for Skill-Use Events.
 	 * @param npcId : ID of the NPC
 	 * @return int : ID of the NPC
 	 */
@@ -939,8 +934,7 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Add this quest to the list of quests that the passed npc will respond to for Character See Events.<BR>
-	 * <BR>
+	 * Add this quest to the list of quests that the passed npc will respond to for Character See Events.
 	 * @param npcId ID of the NPC
 	 * @return int ID of the NPC
 	 */
@@ -987,8 +981,7 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Add this quest to the list of quests that the passed mob will respond to for the specified Event type.<BR>
-	 * <BR>
+	 * Add this quest to the list of quests that the passed mob will respond to for the specified Event type.
 	 * @param npcId : id of the NPC to register
 	 * @param eventType : type of event being registered
 	 * @return NpcTemplate : Npc Template corresponding to the npcId, or null if the id is invalid
@@ -1012,9 +1005,8 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Add quests to the PlayerInstance of the player.<BR>
-	 * <BR>
-	 * <U><I>Action : </U></I><BR>
+	 * Add quests to the PlayerInstance of the player.<br>
+	 * <u><i>Action : </u></i><br>
 	 * Add state of quests, drops and variables for quests in the HashMap _quest of PlayerInstance
 	 * @param player : Player who is entering the world
 	 */
@@ -1136,16 +1128,14 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Update the value of the variable "var" for the quest.<BR>
-	 * <BR>
-	 * <U><I>Actions :</I></U><BR>
+	 * Update the value of the variable "var" for the quest.<br>
+	 * <u><i>Actions :</i></u><br>
 	 * The selection of the right record is made with :
-	 * <LI>char_id = qs.getPlayer().getObjectID()</LI>
-	 * <LI>name = qs.getQuest().getName()</LI>
-	 * <LI>var = var</LI> <BR>
-	 * <BR>
+	 * <li>char_id = qs.getPlayer().getObjectID()</li>
+	 * <li>name = qs.getQuest().getName()</li>
+	 * <li>var = var</li><br>
 	 * The modification made is :
-	 * <LI>value = parameter value</LI>
+	 * <li>value = parameter value</li><br>
 	 * @param qs : Quest State
 	 * @param var : String designating the name of the variable for quest
 	 * @param value : String designating the value of the variable for quest
@@ -1214,18 +1204,17 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Create a record in database for quest.<BR>
-	 * <BR>
-	 * <U><I>Actions :</I></U><BR>
-	 * Use fucntion createQuestVarInDb() with following parameters :<BR>
-	 * <LI>QuestState : parameter sq that puts in fields of database :
+	 * Create a record in database for quest.<br>
+	 * <u><i>Actions :</i></u><br>
+	 * Use fucntion createQuestVarInDb() with following parameters :<br>
+	 * <li>QuestState : parameter sq that puts in fields of database :
 	 * <UL type="square">
-	 * <LI>char_id : ID of the player</LI>
-	 * <LI>name : name of the quest</LI>
-	 * </UL>
-	 * </LI>
-	 * <LI>var : string "&lt;state&gt;" as the name of the variable for the quest</LI>
-	 * <LI>val : string corresponding at the ID of the state (in fact, initial state)</LI>
+	 * <li>char_id : ID of the player</li>
+	 * <li>name : name of the quest</li>
+	 * </ul>
+	 * </li>
+	 * <li>var : string "&lt;state&gt;" as the name of the variable for the quest</li>
+	 * <li>val : string corresponding at the ID of the state (in fact, initial state)</li><br>
 	 * @param qs : QuestState
 	 */
 	public static void createQuestInDb(QuestState qs)
@@ -1234,11 +1223,11 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Update informations regarding quest in database.<BR>
-	 * <U><I>Actions :</I></U><BR>
-	 * <LI>Get ID state of the quest recorded in object qs</LI>
-	 * <LI>Test if quest is completed. If true, add a star (*) before the ID state</LI>
-	 * <LI>Save in database the ID state (with or without the star) for the variable called "&lt;state&gt;" of the quest</LI>
+	 * Update informations regarding quest in database.<br>
+	 * <u><i>Actions :</i></u><br>
+	 * <li>Get ID state of the quest recorded in object qs</li>
+	 * <li>Test if quest is completed. If true, add a star (*) before the ID state</li>
+	 * <li>Save in database the ID state (with or without the star) for the variable called "&lt;state&gt;" of the quest</li><br>
 	 * @param qs : QuestState
 	 */
 	public static void updateQuestInDb(QuestState qs)
@@ -1704,9 +1693,9 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * This is used to register all monsters contained in mobs for a particular script<BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method register ID for all EventTypes<BR>
-	 * Do not use for group_template AIs</B></FONT><BR>
+	 * This is used to register all monsters contained in mobs for a particular script<br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method register ID for all EventTypes<br>
+	 * Do not use for group_template AIs</b></font>
 	 * @param mobs
 	 * @see #registerMobs(int[], EventType...)
 	 */
@@ -1885,7 +1874,7 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Get a random entry.<br>
+	 * Get a random entry.
 	 * @param <T>
 	 * @param array of values.
 	 * @return one value from array.
@@ -1901,7 +1890,7 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Get a random entry.<br>
+	 * Get a random entry.
 	 * @param <T>
 	 * @param list of values.
 	 * @return one value from list.
@@ -1916,7 +1905,7 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Get a random entry.<br>
+	 * Get a random entry.
 	 * @param array of Integers.
 	 * @return one Integer from array.
 	 */

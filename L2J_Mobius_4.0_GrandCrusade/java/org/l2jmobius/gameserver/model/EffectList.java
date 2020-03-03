@@ -159,7 +159,7 @@ public class EffectList
 	}
 	
 	/**
-	 * Verifies if this effect list contains the given skill ID.<br>
+	 * Verifies if this effect list contains the given skill ID.
 	 * @param skillId the skill ID to verify
 	 * @return {@code true} if the skill ID is present in the effect list (includes active and passive effects), {@code false} otherwise
 	 */
@@ -179,7 +179,7 @@ public class EffectList
 	}
 	
 	/**
-	 * Check if any active {@code BuffInfo} of this {@code AbnormalType} exists.<br>
+	 * Check if any active {@code BuffInfo} of this {@code AbnormalType} exists.
 	 * @param type the abnormal skill type
 	 * @return {@code true} if there is any {@code BuffInfo} matching the specified {@code AbnormalType}, {@code false} otherwise
 	 */
@@ -189,7 +189,7 @@ public class EffectList
 	}
 	
 	/**
-	 * Check if any active {@code BuffInfo} of this {@code AbnormalType} exists.<br>
+	 * Check if any active {@code BuffInfo} of this {@code AbnormalType} exists.
 	 * @param types the abnormal skill type
 	 * @return {@code true} if there is any {@code BuffInfo} matching one of the specified {@code AbnormalType}s, {@code false} otherwise
 	 */
@@ -421,7 +421,7 @@ public class EffectList
 	}
 	
 	/**
-	 * Exit all effects having a specified flag.<br>
+	 * Exit all effects having a specified flag.
 	 * @param effectFlag the flag of the effect to stop
 	 */
 	public void stopEffects(EffectFlag effectFlag)
@@ -438,7 +438,7 @@ public class EffectList
 	 * Removes the stats from the creature.<br>
 	 * Updates the effect flags and icons.<br>
 	 * Presents overload:<br>
-	 * {@link #stopSkillEffects(boolean, Skill)}<br>
+	 * {@link #stopSkillEffects(boolean, Skill)}
 	 * @param removed {@code true} if the effect is removed, {@code false} otherwise
 	 * @param skillId the skill ID
 	 */
@@ -457,7 +457,7 @@ public class EffectList
 	 * Removes the stats from the creature.<br>
 	 * Updates the effect flags and icons.<br>
 	 * Presents overload:<br>
-	 * {@link #stopSkillEffects(boolean, int)}<br>
+	 * {@link #stopSkillEffects(boolean, int)}
 	 * @param removed {@code true} if the effect is removed, {@code false} otherwise
 	 * @param skill the skill
 	 */
@@ -484,7 +484,7 @@ public class EffectList
 	}
 	
 	/**
-	 * Exits all effects created by a specific skill {@code AbnormalType}s.<br>
+	 * Exits all effects created by a specific skill {@code AbnormalType}s.
 	 * @param types the skill {@code AbnormalType}s to be checked and removed.
 	 * @return {@code true} if there was any {@code BuffInfo} with one of the given {@code AbnormalType}s, {@code false} otherwise
 	 */
@@ -500,7 +500,7 @@ public class EffectList
 	}
 	
 	/**
-	 * Exits all effects matched by a specific filter.<br>
+	 * Exits all effects matched by a specific filter.
 	 * @param filter any filter to apply when selecting which {@code BuffInfo}s to be removed.
 	 * @param update update effect flags and icons after the operation finishes.
 	 * @param broadcast {@code true} to broadcast update packets if updating, {@code false} otherwise.

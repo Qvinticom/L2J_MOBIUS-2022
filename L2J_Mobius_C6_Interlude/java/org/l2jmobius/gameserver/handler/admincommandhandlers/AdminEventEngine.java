@@ -495,7 +495,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><body>");
 		replyMSG.append("<center><font color=\"LEVEL\">[ L2J EVENT ENGINE ]</font></center><br>");
-		replyMSG.append("<br><center>Event's Title <br><font color=\"LEVEL\">");
+		replyMSG.append("<br><center>Event's Title<br><font color=\"LEVEL\">");
 		if (tempName.equals(""))
 		{
 			replyMSG.append("Use //event_name text to insert a new title");

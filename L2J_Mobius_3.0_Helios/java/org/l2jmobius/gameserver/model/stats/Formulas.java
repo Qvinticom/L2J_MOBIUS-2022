@@ -550,7 +550,7 @@ public class Formulas
 	 * Returns:<br>
 	 * 0 = shield defense doesn't succeed<br>
 	 * 1 = shield defense succeed<br>
-	 * 2 = perfect block<br>
+	 * 2 = perfect block
 	 * @param attacker
 	 * @param target
 	 * @param sendSysMsg
@@ -655,7 +655,7 @@ public class Formulas
 	}
 	
 	/**
-	 * Calculates the effect landing success.<br>
+	 * Calculates the effect landing success.
 	 * @param attacker the attacker
 	 * @param target the target
 	 * @param skill the skill
@@ -963,9 +963,9 @@ public class Formulas
 	}
 	
 	/**
-	 * Calculates the attribute bonus with the following formula: <BR>
-	 * diff > 0, so AttBonus = 1,025 + sqrt[(diff^3) / 2] * 0,0001, cannot be above 1,25! <BR>
-	 * diff < 0, so AttBonus = 0,975 - sqrt[(diff^3) / 2] * 0,0001, cannot be below 0,75! <BR>
+	 * Calculates the attribute bonus with the following formula:<br>
+	 * diff > 0, so AttBonus = 1,025 + sqrt[(diff^3) / 2] * 0,0001, cannot be above 1,25!<br>
+	 * diff < 0, so AttBonus = 0,975 - sqrt[(diff^3) / 2] * 0,0001, cannot be below 0,75!<br>
 	 * diff == 0, so AttBonus = 1<br>
 	 * It has been tested that physical skills do get affected by attack attribute even<br>
 	 * if they don't have any attribute. In that case only the biggest attack attribute is taken.
@@ -1207,7 +1207,7 @@ public class Formulas
 	 * Confuse<br>
 	 * Compelling,<br>
 	 * Knockback<br>
-	 * Pull<br>
+	 * Pull
 	 * @param baseChance chance from effect parameter
 	 * @param attacker
 	 * @param target

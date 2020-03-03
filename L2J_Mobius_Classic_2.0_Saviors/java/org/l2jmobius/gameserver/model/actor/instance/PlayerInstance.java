@@ -874,7 +874,8 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Create a new PlayerInstance and add it in the characters table of the database.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Create a new PlayerInstance with an account name</li>
 	 * <li>Set the name, the Hair Style, the Hair Color and the Face type of the PlayerInstance</li>
@@ -1065,7 +1066,8 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Retrieve a PlayerInstance from the characters table of the database and add it in _allObjects of the L2world (call restore method).<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Retrieve the PlayerInstance from the characters table of the database</li>
 	 * <li>Add the PlayerInstance object in _allObjects</li>
@@ -1092,12 +1094,13 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Constructor of PlayerInstance (use Creature constructor).<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Call the Creature constructor to create an empty _skills slot and copy basic Calculator set to this PlayerInstance</li>
 	 * <li>Set the name of the PlayerInstance</li>
 	 * </ul>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method SET the level of the PlayerInstance to 1</B></FONT>
+	 * <font color=#FF0000><b><u>Caution</u>: This method SET the level of the PlayerInstance to 1</b></font>
 	 * @param objectId Identifier of the object to initialized
 	 * @param template The PlayerTemplate to apply to the PlayerInstance
 	 * @param accountName The name of the account including this PlayerInstance
@@ -2531,7 +2534,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Re-give all skills which aren't saved to database, like Noble, Hero, Clan Skills.<br>
+	 * Re-give all skills which aren't saved to database, like Noble, Hero, Clan Skills.
 	 */
 	public void regiveTemporarySkills()
 	{
@@ -3474,7 +3477,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Destroy item from inventory by using its <B>itemId</B> and send a Server->Client InventoryUpdate packet to the PlayerInstance.
+	 * Destroy item from inventory by using its <b>itemId</b> and send a Server->Client InventoryUpdate packet to the PlayerInstance.
 	 * @param process : String Identifier of process triggering this action
 	 * @param itemId : int Item identifier of the item to be destroyed
 	 * @param count : int Quantity of items to be destroyed
@@ -3729,7 +3732,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Drop item from inventory by using its <B>objectID</B> and send a Server->Client InventoryUpdate packet to the PlayerInstance.
+	 * Drop item from inventory by using its <b>objectID</b> and send a Server->Client InventoryUpdate packet to the PlayerInstance.
 	 * @param process : String Identifier of process triggering this action
 	 * @param objectId : int Item Instance identifier of the item to be dropped
 	 * @param count : long Quantity of items to be dropped
@@ -3996,9 +3999,9 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Send packet StatusUpdate with current HP,MP and CP to the PlayerInstance and only current HP, MP and Level to all other PlayerInstance of the Party. <B><U> Actions</U> :</B>
-	 * <li>Send the Server->Client packet StatusUpdate with current HP, MP and CP to this PlayerInstance</li><BR>
-	 * <li>Send the Server->Client packet PartySmallWindowUpdate with current HP, MP and Level to all other PlayerInstance of the Party</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND current HP and MP to all PlayerInstance of the _statusListener</B></FONT>
+	 * Send packet StatusUpdate with current HP,MP and CP to the PlayerInstance and only current HP, MP and Level to all other PlayerInstance of the Party. <b><u>Actions</u>:</b>
+	 * <li>Send the Server->Client packet StatusUpdate with current HP, MP and CP to this PlayerInstance</li>
+	 * <li>Send the Server->Client packet PartySmallWindowUpdate with current HP, MP and Level to all other PlayerInstance of the Party</li> <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND current HP and MP to all PlayerInstance of the _statusListener</b></font>
 	 */
 	@Override
 	public void broadcastStatusUpdate(Creature caster)
@@ -4065,11 +4068,11 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Send a Server->Client packet UserInfo to this PlayerInstance and CharInfo to all PlayerInstance in its _KnownPlayers. <B><U> Concept</U> :</B> Others PlayerInstance in the detection area of the PlayerInstance are identified in <B>_knownPlayers</B>. In order to inform other players of this
-	 * PlayerInstance state modifications, server just need to go through _knownPlayers to send Server->Client Packet <B><U> Actions</U> :</B>
+	 * Send a Server->Client packet UserInfo to this PlayerInstance and CharInfo to all PlayerInstance in its _KnownPlayers. <b><u>Concept</u>:</b> Others PlayerInstance in the detection area of the PlayerInstance are identified in <b>_knownPlayers</b>. In order to inform other players of this
+	 * PlayerInstance state modifications, server just need to go through _knownPlayers to send Server->Client Packet <b><u> Actions</u>:</b>
 	 * <li>Send a Server->Client packet UserInfo to this PlayerInstance (Public and Private Data)</li>
-	 * <li>Send a Server->Client packet CharInfo to all PlayerInstance in _KnownPlayers of the PlayerInstance (Public data only)</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : DON'T SEND UserInfo packet to other players instead of CharInfo packet. Indeed, UserInfo packet contains PRIVATE DATA as
-	 * MaxHP, STR, DEX...</B></FONT>
+	 * <li>Send a Server->Client packet CharInfo to all PlayerInstance in _KnownPlayers of the PlayerInstance (Public data only)</li> <font color=#FF0000><b><u>Caution</u>: DON'T SEND UserInfo packet to other players instead of CharInfo packet. Indeed, UserInfo packet contains PRIVATE DATA as MaxHP,
+	 * STR, DEX...</b></font>
 	 */
 	public void broadcastUserInfo()
 	{
@@ -4223,10 +4226,10 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Manage Interact Task with another PlayerInstance. <B><U> Actions</U> :</B>
+	 * Manage Interact Task with another PlayerInstance. <b><u>Actions</u>:</b>
 	 * <li>If the private store is a STORE_PRIVATE_SELL, send a Server->Client PrivateBuyListSell packet to the PlayerInstance</li>
 	 * <li>If the private store is a STORE_PRIVATE_BUY, send a Server->Client PrivateBuyListBuy packet to the PlayerInstance</li>
-	 * <li>If the private store is a STORE_PRIVATE_MANUFACTURE, send a Server->Client RecipeShopSellList packet to the PlayerInstance</li>
+	 * <li>If the private store is a STORE_PRIVATE_MANUFACTURE, send a Server->Client RecipeShopSellList packet to the PlayerInstance</li><br>
 	 * @param target The Creature targeted
 	 */
 	public void doInteract(Creature target)
@@ -4275,7 +4278,7 @@ public class PlayerInstance extends Playable
 	 * <li>Send a Server->Client packet InventoryUpdate to this player with NewItem (use a new slot) or ModifiedItem (increase amount).</li>
 	 * <li>Send a Server->Client packet StatusUpdate to this player with current weight.</li>
 	 * </ul>
-	 * <font color=#FF0000><B><U>Caution</U>: If a party is in progress, distribute the items between the party members!</b></font>
+	 * <font color=#FF0000><b><u>Caution</u>: If a party is in progress, distribute the items between the party members!</b></font>
 	 * @param target the NPC dropping the item
 	 * @param itemId the item ID
 	 * @param itemCount the item count
@@ -4307,13 +4310,13 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Manage Pickup Task. <B><U> Actions</U> :</B>
+	 * Manage Pickup Task. <b><u>Actions</u>:</b>
 	 * <li>Send a Server->Client packet StopMove to this PlayerInstance</li>
 	 * <li>Remove the ItemInstance from the world and send server->client GetItem packets</li>
 	 * <li>Send a System Message to the PlayerInstance : YOU_PICKED_UP_S1_ADENA or YOU_PICKED_UP_S1_S2</li>
 	 * <li>Add the Item to the PlayerInstance inventory</li>
 	 * <li>Send a Server->Client packet InventoryUpdate to this PlayerInstance with NewItem (use a new slot) or ModifiedItem (increase amount)</li>
-	 * <li>Send a Server->Client packet StatusUpdate to this PlayerInstance with current weight</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : If a Party is in progress, distribute Items between party members</B></FONT>
+	 * <li>Send a Server->Client packet StatusUpdate to this PlayerInstance with current weight</li> <font color=#FF0000><b><u>Caution</u>: If a Party is in progress, distribute Items between party members</b></font>
 	 * @param object The ItemInstance to pick up
 	 */
 	@Override
@@ -4576,7 +4579,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set a target. <B><U> Actions</U> :</B>
+	 * Set a target. <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Remove the PlayerInstance from the _statusListener of the old target if it was a Creature</li>
 	 * <li>Add the PlayerInstance to the _statusListener of the new target if it's a Creature</li>
@@ -4668,7 +4671,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the active weapon instance (always equiped in the right hand).
+	 * Return the active weapon instance (always equipped in the right hand).
 	 */
 	@Override
 	public ItemInstance getActiveWeaponInstance()
@@ -4677,7 +4680,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the active weapon item (always equiped in the right hand).
+	 * Return the active weapon item (always equipped in the right hand).
 	 */
 	@Override
 	public Weapon getActiveWeaponItem()
@@ -4766,7 +4769,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the secondary weapon instance (always equiped in the left hand).
+	 * Return the secondary weapon instance (always equipped in the left hand).
 	 */
 	@Override
 	public ItemInstance getSecondaryWeaponInstance()
@@ -4775,8 +4778,8 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the secondary Item item (always equiped in the left hand).<BR>
-	 * Arrows, Shield..<BR>
+	 * Return the secondary Item item (always equipped in the left hand).<br>
+	 * Arrows, Shield..
 	 */
 	@Override
 	public Item getSecondaryWeaponItem()
@@ -4790,12 +4793,12 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Kill the Creature, Apply Death Penalty, Manage gain/loss Karma and Item Drop. <B><U> Actions</U> :</B>
+	 * Kill the Creature, Apply Death Penalty, Manage gain/loss Karma and Item Drop. <b><u>Actions</u>:</b>
 	 * <li>Reduce the Experience of the PlayerInstance in function of the calculated Death Penalty</li>
 	 * <li>If necessary, unsummon the Pet of the killed PlayerInstance</li>
 	 * <li>Manage Karma gain for attacker and Karam loss for the killed PlayerInstance</li>
 	 * <li>If the killed PlayerInstance has Karma, manage Drop Item</li>
-	 * <li>Kill the PlayerInstance</li>
+	 * <li>Kill the PlayerInstance</li><br>
 	 * @param killer
 	 */
 	@Override
@@ -5267,12 +5270,13 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Reduce the Experience (and level if necessary) of the PlayerInstance in function of the calculated Death Penalty.<BR>
-	 * <B><U> Actions</U> :</B>
+	 * Reduce the Experience (and level if necessary) of the PlayerInstance in function of the calculated Death Penalty.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <li>Calculate the Experience loss</li>
 	 * <li>Set the value of _expBeforeDeath</li>
 	 * <li>Set the new Experience value of the PlayerInstance and Decrease its level if necessary</li>
-	 * <li>Send a Server->Client StatusUpdate packet with its new Experience</li>
+	 * <li>Send a Server->Client StatusUpdate packet with its new Experience</li><br>
 	 * @param killer
 	 */
 	public void calculateDeathExpPenalty(Creature killer)
@@ -5324,7 +5328,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Stop the HP/MP/CP Regeneration task. <B><U> Actions</U> :</B>
+	 * Stop the HP/MP/CP Regeneration task. <b><u>Actions</u>:</b>
 	 * <li>Set the RegenActive flag to False</li>
 	 * <li>Stop the HP/MP/CP Regeneration task</li>
 	 */
@@ -5671,13 +5675,13 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the Private Store type of the PlayerInstance. <B><U> Values </U> :</B>
+	 * Set the Private Store type of the PlayerInstance. <b><u>Values</u>:</b>
 	 * <li>0 : STORE_PRIVATE_NONE</li>
 	 * <li>1 : STORE_PRIVATE_SELL</li>
-	 * <li>2 : sellmanage</li><BR>
-	 * <li>3 : STORE_PRIVATE_BUY</li><BR>
-	 * <li>4 : buymanage</li><BR>
-	 * <li>5 : STORE_PRIVATE_MANUFACTURE</li><BR>
+	 * <li>2 : sellmanage</li>
+	 * <li>3 : STORE_PRIVATE_BUY</li>
+	 * <li>4 : buymanage</li>
+	 * <li>5 : STORE_PRIVATE_MANUFACTURE</li><br>
 	 * @param privateStoreType
 	 */
 	public void setPrivateStoreType(PrivateStoreType privateStoreType)
@@ -5690,13 +5694,13 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * <B><U> Values </U> :</B>
+	 * <b><u>Values</u>:</b>
 	 * <li>0 : STORE_PRIVATE_NONE</li>
 	 * <li>1 : STORE_PRIVATE_SELL</li>
-	 * <li>2 : sellmanage</li><BR>
-	 * <li>3 : STORE_PRIVATE_BUY</li><BR>
-	 * <li>4 : buymanage</li><BR>
-	 * <li>5 : STORE_PRIVATE_MANUFACTURE</li><BR>
+	 * <li>2 : sellmanage</li>
+	 * <li>3 : STORE_PRIVATE_BUY</li>
+	 * <li>4 : buymanage</li>
+	 * <li>5 : STORE_PRIVATE_MANUFACTURE</li>
 	 * @return the Private Store type of the PlayerInstance.
 	 */
 	public PrivateStoreType getPrivateStoreType()
@@ -6414,11 +6418,11 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Retrieve a PlayerInstance from the characters table of the database and add it in _allObjects of the L2world. <B><U> Actions</U> :</B>
+	 * Retrieve a PlayerInstance from the characters table of the database and add it in _allObjects of the L2world. <b><u>Actions</u>:</b>
 	 * <li>Retrieve the PlayerInstance from the characters table of the database</li>
 	 * <li>Add the PlayerInstance object in _allObjects</li>
 	 * <li>Set the x,y,z position of the PlayerInstance and make it invisible</li>
-	 * <li>Update the overloaded status of the PlayerInstance</li>
+	 * <li>Update the overloaded status of the PlayerInstance</li><br>
 	 * @param objectId Identifier of the object to initialized
 	 * @return The PlayerInstance loaded from the database
 	 */
@@ -7315,10 +7319,10 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Add a skill to the PlayerInstance _skills and its Func objects to the calculator set of the PlayerInstance and save update in the character_skills table of the database. <B><U> Concept</U> :</B> All skills own by a PlayerInstance are identified in <B>_skills</B> <B><U> Actions</U> :</B>
+	 * Add a skill to the PlayerInstance _skills and its Func objects to the calculator set of the PlayerInstance and save update in the character_skills table of the database. <b><u>Concept</u>:</b> All skills own by a PlayerInstance are identified in <b>_skills</b> <b><u> Actions</u>:</b>
 	 * <li>Replace oldSkill by newSkill or Add the newSkill</li>
 	 * <li>If an old skill has been replaced, remove all its Func objects of Creature calculator set</li>
-	 * <li>Add Func objects of newSkill to the calculator set of the Creature</li>
+	 * <li>Add Func objects of newSkill to the calculator set of the Creature</li><br>
 	 * @param newSkill The Skill to add to the Creature
 	 * @param store
 	 * @return The Skill replaced or null if just added a new Skill
@@ -7349,10 +7353,10 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Remove a skill from the Creature and its Func objects from calculator set of the Creature and save update in the character_skills table of the database. <B><U> Concept</U> :</B> All skills own by a Creature are identified in <B>_skills</B> <B><U> Actions</U> :</B>
+	 * Remove a skill from the Creature and its Func objects from calculator set of the Creature and save update in the character_skills table of the database. <b><u>Concept</u>:</b> All skills own by a Creature are identified in <b>_skills</b> <b><u> Actions</u>:</b>
 	 * <li>Remove the skill from the Creature _skills</li>
-	 * <li>Remove all its Func objects from the Creature calculator set</li> <B><U> Overridden in </U> :</B>
-	 * <li>PlayerInstance : Save update in the character_skills table of the database</li>
+	 * <li>Remove all its Func objects from the Creature calculator set</li> <b><u> Overridden in</u>:</b>
+	 * <li>PlayerInstance : Save update in the character_skills table of the database</li><br>
 	 * @param skill The Skill to remove from the Creature
 	 * @return The Skill removed
 	 */
@@ -8039,7 +8043,8 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Return True if the PlayerInstance is autoAttackable.<br>
-	 * <B><U>Actions</U>:</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Check if the attacker isn't the PlayerInstance Pet</li>
 	 * <li>Check if the attacker is MonsterInstance</li>
@@ -8201,7 +8206,8 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Check if the active Skill can be casted.<br>
-	 * <B><U>Actions</U>:</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Check if the skill isn't toggle and is offensive</li>
 	 * <li>Check if the target is in the skill cast range</li>
@@ -8552,15 +8558,18 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Send a Server->Client packet UserInfo to this PlayerInstance and CharInfo to all PlayerInstance in its _KnownPlayers.<br>
-	 * <B><U>Concept</U>:</B><br>
-	 * Others PlayerInstance in the detection area of the PlayerInstance are identified in <B>_knownPlayers</B>.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * Others PlayerInstance in the detection area of the PlayerInstance are identified in <b>_knownPlayers</b>.<br>
 	 * In order to inform other players of this PlayerInstance state modifications, server just need to go through _knownPlayers to send Server->Client Packet<br>
-	 * <B><U>Actions</U>:</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Send a Server->Client packet UserInfo to this PlayerInstance (Public and Private Data)</li>
 	 * <li>Send a Server->Client packet CharInfo to all PlayerInstance in _KnownPlayers of the PlayerInstance (Public data only)</li>
 	 * </ul>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : DON'T SEND UserInfo packet to other players instead of CharInfo packet. Indeed, UserInfo packet contains PRIVATE DATA as MaxHP, STR, DEX...</B></FONT>
+	 * <font color=#FF0000><b><u>Caution</u>: DON'T SEND UserInfo packet to other players instead of CharInfo packet. Indeed, UserInfo packet contains PRIVATE DATA as MaxHP, STR, DEX...</b></font>
 	 */
 	@Override
 	public void updateAbnormalVisualEffects()
@@ -9377,7 +9386,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * 1. Add the specified class ID as a subclass (up to the maximum number of <b>three</b>) for this character.<BR>
+	 * 1. Add the specified class ID as a subclass (up to the maximum number of <b>three</b>) for this character.<br>
 	 * 2. This method no longer changes the active _classIndex of the player. This is only done by the calling of setActiveClass() method as that should be the only way to do so.
 	 * @param classId
 	 * @param classIndex
@@ -10548,7 +10557,8 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Manage the delete task of a PlayerInstance (Leave Party, Unsummon pet, Save its inventory in the database, Remove it from the world...).<br>
-	 * <B><U>Actions</U>:</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>If the PlayerInstance is in observer mode, set its position to its position before entering in observer mode</li>
 	 * <li>Set the online Flag to True or False and update the characters table of the database with online status and lastAccess</li>

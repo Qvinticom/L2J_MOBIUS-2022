@@ -35,10 +35,9 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.skills.Stat;
 
 /**
- * This cl contains all generic data of a Spawn object.<BR>
- * <BR>
- * <B><U> Data</U> :</B><BR>
- * <BR>
+ * This cl contains all generic data of a Spawn object.<br>
+ * <br>
+ * <b><u>Data</u>:</b><br>
  * <li>npcId, type, name, sex</li>
  * <li>rewardExp, rewardSp</li>
  * <li>aggroRange, factionId, factionRange</li>
@@ -48,8 +47,8 @@ import org.l2jmobius.gameserver.model.skills.Stat;
  * <li>_minions</li>
  * <li>_teachInfo</li>
  * <li>_skills</li>
- * <li>_questsStart</li><BR>
- * <BR>
+ * <li>_questsStart</li><br>
+ * <br>
  * @version $Revision: 1.1.2.4 $ $Date: 2005/04/02 15:57:51 $
  */
 public class NpcTemplate extends CreatureTemplate
@@ -257,8 +256,8 @@ public class NpcTemplate extends CreatureTemplate
 	}
 	
 	/**
-	 * Return the list of all possible item drops of this NpcTemplate.<BR>
-	 * (ie full drops and part drops, mats, miscellaneous & UNCATEGORIZED)<BR>
+	 * Return the list of all possible item drops of this NpcTemplate.<br>
+	 * (ie full drops and part drops, mats, miscellaneous & UNCATEGORIZED)<br>
 	 * @return
 	 */
 	public List<DropData> getAllDropData()

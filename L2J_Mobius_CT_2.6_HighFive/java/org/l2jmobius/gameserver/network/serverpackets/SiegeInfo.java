@@ -29,18 +29,18 @@ import org.l2jmobius.gameserver.model.entity.ClanHall;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * Shows the Siege Info<BR>
- * <BR>
- * c = c9<BR>
- * d = CastleID<BR>
- * d = Show Owner Controls (0x00 default || >=0x02(mask?) owner)<BR>
- * d = Owner ClanID<BR>
- * S = Owner ClanName<BR>
- * S = Owner Clan LeaderName<BR>
- * d = Owner AllyID<BR>
- * S = Owner AllyName<BR>
- * d = current time (seconds)<BR>
- * d = Siege time (seconds) (0 for selectable)<BR>
+ * Shows the Siege Info<br>
+ * <br>
+ * c = c9<br>
+ * d = CastleID<br>
+ * d = Show Owner Controls (0x00 default || >=0x02(mask?) owner)<br>
+ * d = Owner ClanID<br>
+ * S = Owner ClanName<br>
+ * S = Owner Clan LeaderName<br>
+ * d = Owner AllyID<br>
+ * S = Owner AllyName<br>
+ * d = current time (seconds)<br>
+ * d = Siege time (seconds) (0 for selectable)<br>
  * d = (UNKNOW) Siege Time Select Related?
  * @author KenM
  */

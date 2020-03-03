@@ -72,8 +72,7 @@ public class SiegeGuardInstance extends Attackable
 	}
 	
 	/**
-	 * Return True if a siege is in progress and the Creature attacker isn't a Defender.<BR>
-	 * <BR>
+	 * Return True if a siege is in progress and the Creature attacker isn't a Defender.
 	 * @param attacker The Creature that the SiegeGuardInstance try to attack
 	 */
 	@Override

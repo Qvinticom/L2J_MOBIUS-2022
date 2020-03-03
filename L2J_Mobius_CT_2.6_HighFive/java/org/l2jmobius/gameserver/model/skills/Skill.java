@@ -1018,7 +1018,8 @@ public class Skill implements IIdentifiable
 	
 	/**
 	 * Return all targets of the skill in a table in function a the skill type.<br>
-	 * <B><U>Values of skill type</U>:</B>
+	 * <br>
+	 * <b><u>Values of skill type</u>:</b>
 	 * <ul>
 	 * <li>ONE : The skill can only be used on the PlayerInstance targeted, or on the caster if it's a PlayerInstance and no PlayerInstance targeted</li>
 	 * <li>SELF</li>

@@ -90,7 +90,7 @@ public class UseItem implements IClientIncomingPacket
 		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
 		if (item == null)
 		{
-			// gm can use other player item
+			// GM can use other player item
 			if (player.isGM())
 			{
 				final WorldObject obj = World.getInstance().findObject(_objectId);

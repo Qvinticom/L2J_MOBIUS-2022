@@ -78,8 +78,7 @@ public class FortSiegeManager
 	}
 	
 	/**
-	 * Return true if character summon<BR>
-	 * <BR>
+	 * Return true if character summon
 	 * @param creature The Creature of the creature can summon
 	 * @param isCheckOnly
 	 * @return
@@ -120,8 +119,7 @@ public class FortSiegeManager
 	}
 	
 	/**
-	 * Return true if the clan is registered or owner of a fort<BR>
-	 * <BR>
+	 * Return true if the clan is registered or owner of a fort
 	 * @param clan The Clan of the player
 	 * @param fortid
 	 * @return

@@ -29,7 +29,7 @@ public class PlayerInstanceActionShift implements IActionShiftHandler
 	{
 		if (player.isGM())
 		{
-			// Check if the gm already target this l2pcinstance
+			// Check if the GM already target this l2pcinstance
 			if (player.getTarget() != target)
 			{
 				// Set the target of the PlayerInstance player

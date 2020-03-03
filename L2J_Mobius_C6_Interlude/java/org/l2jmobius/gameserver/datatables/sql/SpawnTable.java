@@ -337,8 +337,7 @@ public class SpawnTable
 	}
 	
 	/**
-	 * Get all the spawn of a NPC<BR>
-	 * <BR>
+	 * Get all the spawn of a NPC
 	 * @param player
 	 * @param npcId : ID of the NPC to find.
 	 * @param teleportIndex

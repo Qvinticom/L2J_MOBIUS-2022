@@ -98,8 +98,7 @@ public class TakeCastle implements ISkillHandler
 	}
 	
 	/**
-	 * Return true if character clan place a flag<BR>
-	 * <BR>
+	 * Return true if character clan place a flag
 	 * @param creature The Creature of the creature placing the flag
 	 * @param isCheckOnly
 	 * @return

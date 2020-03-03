@@ -138,8 +138,7 @@ public class Formulas
 		}
 		
 		/**
-		 * Constructor of the FuncMultRegenResting.<BR>
-		 * <BR>
+		 * Constructor of the FuncMultRegenResting.
 		 * @param pStat
 		 */
 		private FuncMultRegenResting(Stat pStat)
@@ -149,8 +148,7 @@ public class Formulas
 		}
 		
 		/**
-		 * Calculate the modifier of the state concerned.<BR>
-		 * <BR>
+		 * Calculate the modifier of the state concerned.
 		 */
 		@Override
 		public void calc(Env env)
@@ -857,14 +855,11 @@ public class Formulas
 	}
 	
 	/**
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * A calculator is created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...). In fact, each calculator is a table of Func object in which each Func represents a Mathematics function : <BR>
-	 * <BR>
-	 * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()<BR>
-	 * <BR>
-	 * To reduce cache memory use, NPCInstances who don't have skills share the same Calculator set called <B>NPC_STD_CALCULATOR</B>.<BR>
-	 * <BR>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * A calculator is created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...). In fact, each calculator is a table of Func object in which each Func represents a Mathematics function :<br>
+	 * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()<br>
+	 * To reduce cache memory use, NPCInstances who don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.
 	 * @return the standard NPC Calculator set containing ACCURACY_COMBAT and EVASION_RATE.
 	 */
 	public Calculator[] getStdNPCCalculators()
@@ -913,14 +908,12 @@ public class Formulas
 	}
 	
 	/**
-	 * Add basics Func objects to PlayerInstance and Summon.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * A calculator is created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...). In fact, each calculator is a table of Func object in which each Func represents a mathematic function : <BR>
-	 * <BR>
-	 * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()<BR>
-	 * <BR>
+	 * Add basics Func objects to PlayerInstance and Summon.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * A calculator is created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...). In fact, each calculator is a table of Func object in which each Func represents a mathematic function :<br>
+	 * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()
 	 * @param creature PlayerInstance or Summon that must obtain basic Func objects
 	 */
 	public void addFuncsToNewCharacter(Creature creature)
@@ -986,8 +979,7 @@ public class Formulas
 	}
 	
 	/**
-	 * Calculate the HP regen rate (base + modifiers).<BR>
-	 * <BR>
+	 * Calculate the HP regen rate (base + modifiers).
 	 * @param creature
 	 * @return
 	 */
@@ -1068,8 +1060,7 @@ public class Formulas
 	}
 	
 	/**
-	 * Calculate the MP regen rate (base + modifiers).<BR>
-	 * <BR>
+	 * Calculate the MP regen rate (base + modifiers).
 	 * @param creature
 	 * @return
 	 */
@@ -1137,8 +1128,7 @@ public class Formulas
 	}
 	
 	/**
-	 * Calculate the CP regen rate (base + modifiers).<BR>
-	 * <BR>
+	 * Calculate the CP regen rate (base + modifiers).
 	 * @param creature
 	 * @return
 	 */

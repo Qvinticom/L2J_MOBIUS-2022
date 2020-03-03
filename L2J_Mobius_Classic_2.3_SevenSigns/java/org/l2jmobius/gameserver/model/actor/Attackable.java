@@ -1071,7 +1071,7 @@ public class Attackable extends Npc
 	 * During a Special Event all Attackable can drop extra Items.<br>
 	 * Those extra Items are defined in the table allNpcDateDrops of the EventDroplist.<br>
 	 * Each Special Event has a start and end date to stop to drop extra Items automatically.<br>
-	 * Actions: <I>If an extra drop must be generated</I><br>
+	 * Actions: <i>If an extra drop must be generated</i><br>
 	 * Get an Item Identifier (random) from the DateDrop Item table of this Event.<br>
 	 * Get the Item quantity dropped (random).<br>
 	 * Create this or these ItemInstance corresponding to this Item Identifier.<br>

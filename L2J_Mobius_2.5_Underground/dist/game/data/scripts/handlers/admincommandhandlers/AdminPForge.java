@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
- * This class handles commands for gm to forge packets
+ * This class handles commands for GM to forge packets
  * @author Maktakien, HorridoJoho
  */
 public class AdminPForge implements IAdminCommandHandler

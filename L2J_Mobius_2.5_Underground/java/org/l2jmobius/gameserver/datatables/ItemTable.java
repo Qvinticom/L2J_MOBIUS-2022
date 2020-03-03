@@ -195,10 +195,10 @@ public class ItemTable
 	}
 	
 	/**
-	 * Create the ItemInstance corresponding to the Item Identifier and quantitiy add logs the activity. <B><U> Actions</U> :</B>
+	 * Create the ItemInstance corresponding to the Item Identifier and quantitiy add logs the activity. <b><u>Actions</u>:</b>
 	 * <li>Create and Init the ItemInstance corresponding to the Item Identifier and quantity</li>
 	 * <li>Add the ItemInstance object to _allObjects of L2world</li>
-	 * <li>Logs Item creation according to log settings</li>
+	 * <li>Logs Item creation according to log settings</li><br>
 	 * @param process : String Identifier of process triggering this action
 	 * @param itemId : int Item Identifier of the item to be created
 	 * @param count : int Quantity of items to be created for stackable items
@@ -304,7 +304,8 @@ public class ItemTable
 	
 	/**
 	 * Destroys the ItemInstance.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Sets ItemInstance parameters to be unusable</li>
 	 * <li>Removes the ItemInstance object to _allObjects of L2world</li>

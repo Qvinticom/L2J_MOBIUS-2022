@@ -86,7 +86,7 @@ public class TvTEvent
 	}
 	
 	/**
-	 * Teams initializing<br>
+	 * Teams initializing
 	 */
 	public static void init()
 	{
@@ -98,9 +98,8 @@ public class TvTEvent
 	/**
 	 * Starts the participation of the TvTEvent<br>
 	 * 1. Get NpcTemplate by Config.TVT_EVENT_PARTICIPATION_NPC_ID<br>
-	 * 2. Try to spawn a new npc of it<br>
-	 * <br>
-	 * @return boolean: true if success, otherwise false<br>
+	 * 2. Try to spawn a new npc of it
+	 * @return boolean: true if success, otherwise false
 	 */
 	public static boolean startParticipation()
 	{
@@ -154,9 +153,8 @@ public class TvTEvent
 	 * 2. Close doors specified in configs<br>
 	 * 3. Abort if not enough participants(return false)<br>
 	 * 4. Set state EventState.STARTED<br>
-	 * 5. Teleport all participants to team spot<br>
-	 * <br>
-	 * @return boolean: true if success, otherwise false<br>
+	 * 5. Teleport all participants to team spot
+	 * @return boolean: true if success, otherwise false
 	 */
 	public static boolean startFight()
 	{
@@ -297,9 +295,8 @@ public class TvTEvent
 	 * 2. Wait till teams are not at a tie anymore<br>
 	 * 3. Set state EvcentState.REWARDING<br>
 	 * 4. Reward team with more points<br>
-	 * 5. Show win html to wining team participants<br>
-	 * <br>
-	 * @return String: winning team name<br>
+	 * 5. Show win html to wining team participants
+	 * @return String: winning team name
 	 */
 	public static String calculateRewards()
 	{
@@ -401,7 +398,7 @@ public class TvTEvent
 	 * 3. Open doors specified in configs<br>
 	 * 4. Teleport all participants back to participation npc location<br>
 	 * 5. Teams cleaning<br>
-	 * 6. Set state EventState.INACTIVE<br>
+	 * 6. Set state EventState.INACTIVE
 	 */
 	public static void stopFight()
 	{
@@ -441,10 +438,9 @@ public class TvTEvent
 	/**
 	 * Adds a player to a TvTEvent team<br>
 	 * 1. Calculate the id of the team in which the player should be added<br>
-	 * 2. Add the player to the calculated team<br>
-	 * <br>
-	 * @param playerInstance as PlayerInstance<br>
-	 * @return boolean: true if success, otherwise false<br>
+	 * 2. Add the player to the calculated team
+	 * @param playerInstance as PlayerInstance
+	 * @return boolean: true if success, otherwise false
 	 */
 	public static synchronized boolean addParticipant(PlayerInstance playerInstance)
 	{
@@ -472,8 +468,7 @@ public class TvTEvent
 	/**
 	 * Removes a TvTEvent player from it's team<br>
 	 * 1. Get team id of the player<br>
-	 * 2. Remove player from it's team<br>
-	 * <br>
+	 * 2. Remove player from it's team
 	 * @param playerObjectId
 	 * @return boolean: true if success, otherwise false
 	 */
@@ -527,9 +522,8 @@ public class TvTEvent
 	/**
 	 * Send a SystemMessage to all participated players<br>
 	 * 1. Send the message to all players of team number one<br>
-	 * 2. Send the message to all players of team number two<br>
-	 * <br>
-	 * @param message as String<br>
+	 * 2. Send the message to all players of team number two
+	 * @param message as String
 	 */
 	public static void sysMsgToAllParticipants(String message)
 	{
@@ -615,9 +609,8 @@ public class TvTEvent
 	}
 	
 	/**
-	 * Called when a player logs in<br>
-	 * <br>
-	 * @param playerInstance as PlayerInstance<br>
+	 * Called when a player logs in
+	 * @param playerInstance as PlayerInstance
 	 */
 	public static void onLogin(PlayerInstance playerInstance)
 	{
@@ -637,9 +630,8 @@ public class TvTEvent
 	}
 	
 	/**
-	 * Called when a player logs out<br>
-	 * <br>
-	 * @param playerInstance as PlayerInstance<br>
+	 * Called when a player logs out
+	 * @param playerInstance as PlayerInstance
 	 */
 	public static void onLogout(PlayerInstance playerInstance)
 	{
@@ -650,8 +642,7 @@ public class TvTEvent
 	}
 	
 	/**
-	 * Called on every onAction in PlayerIstance<br>
-	 * <br>
+	 * Called on every onAction in PlayerIstance
 	 * @param playerInstance
 	 * @param targetedPlayerObjectId
 	 * @return boolean: true if player is allowed to target, otherwise false
@@ -684,8 +675,7 @@ public class TvTEvent
 	}
 	
 	/**
-	 * Called on every scroll use<br>
-	 * <br>
+	 * Called on every scroll use
 	 * @param playerObjectId
 	 * @return boolean: true if player is allowed to use scroll, otherwise false
 	 */
@@ -765,10 +755,9 @@ public class TvTEvent
 	}
 	
 	/**
-	 * Is called when a player is killed<br>
-	 * <br>
-	 * @param killerCharacter as Creature<br>
-	 * @param killedPlayerInstance as PlayerInstance<br>
+	 * Is called when a player is killed
+	 * @param killerCharacter as Creature
+	 * @param killedPlayerInstance as PlayerInstance
 	 */
 	public static void onKill(Creature killerCharacter, PlayerInstance killedPlayerInstance)
 	{
@@ -902,9 +891,8 @@ public class TvTEvent
 	}
 	
 	/**
-	 * Sets the TvTEvent state<br>
-	 * <br>
-	 * @param state as EventState<br>
+	 * Sets the TvTEvent state
+	 * @param state as EventState
 	 */
 	private static void setState(EventState state)
 	{
@@ -915,9 +903,8 @@ public class TvTEvent
 	}
 	
 	/**
-	 * Is TvTEvent inactive?<br>
-	 * <br>
-	 * @return boolean: true if event is inactive(waiting for next event cycle), otherwise false<br>
+	 * Is TvTEvent inactive?
+	 * @return boolean: true if event is inactive(waiting for next event cycle), otherwise false
 	 */
 	public static boolean isInactive()
 	{
@@ -931,9 +918,8 @@ public class TvTEvent
 	}
 	
 	/**
-	 * Is TvTEvent in inactivating?<br>
-	 * <br>
-	 * @return boolean: true if event is in inactivating progress, otherwise false<br>
+	 * Is TvTEvent in inactivating?
+	 * @return boolean: true if event is in inactivating progress, otherwise false
 	 */
 	public static boolean isInactivating()
 	{
@@ -947,9 +933,8 @@ public class TvTEvent
 	}
 	
 	/**
-	 * Is TvTEvent in participation?<br>
-	 * <br>
-	 * @return boolean: true if event is in participation progress, otherwise false<br>
+	 * Is TvTEvent in participation?
+	 * @return boolean: true if event is in participation progress, otherwise false
 	 */
 	public static boolean isParticipating()
 	{
@@ -963,9 +948,8 @@ public class TvTEvent
 	}
 	
 	/**
-	 * Is TvTEvent starting?<br>
-	 * <br>
-	 * @return boolean: true if event is starting up(setting up fighting spot, teleport players etc.), otherwise false<br>
+	 * Is TvTEvent starting?
+	 * @return boolean: true if event is starting up(setting up fighting spot, teleport players etc.), otherwise false
 	 */
 	public static boolean isStarting()
 	{
@@ -979,9 +963,8 @@ public class TvTEvent
 	}
 	
 	/**
-	 * Is TvTEvent started?<br>
-	 * <br>
-	 * @return boolean: true if event is started, otherwise false<br>
+	 * Is TvTEvent started?
+	 * @return boolean: true if event is started, otherwise false
 	 */
 	public static boolean isStarted()
 	{
@@ -995,9 +978,8 @@ public class TvTEvent
 	}
 	
 	/**
-	 * Is TvTEvent rewarding?<br>
-	 * <br>
-	 * @return boolean: true if event is currently rewarding, otherwise false<br>
+	 * Is TvTEvent rewarding?
+	 * @return boolean: true if event is currently rewarding, otherwise false
 	 */
 	public static boolean isRewarding()
 	{
@@ -1061,9 +1043,8 @@ public class TvTEvent
 	}
 	
 	/**
-	 * Returns participated player count<br>
-	 * <br>
-	 * @return int: amount of players registered in the event<br>
+	 * Returns participated player count
+	 * @return int: amount of players registered in the event
 	 */
 	public static int getParticipatedPlayersCount()
 	{
@@ -1071,9 +1052,8 @@ public class TvTEvent
 	}
 	
 	/**
-	 * Returns teams names<br>
-	 * <br>
-	 * @return String[]: names of teams, 2 elements, index 0 for team 1 and index 1 for team 2<br>
+	 * Returns teams names
+	 * @return String[]: names of teams, 2 elements, index 0 for team 1 and index 1 for team 2
 	 */
 	public static String[] getTeamNames()
 	{
@@ -1085,9 +1065,8 @@ public class TvTEvent
 	}
 	
 	/**
-	 * Returns player count of both teams<br>
-	 * <br>
-	 * @return int[]: player count of teams, 2 elements, index 0 for team 1 and index 1 for team 2<br>
+	 * Returns player count of both teams
+	 * @return int[]: player count of teams, 2 elements, index 0 for team 1 and index 1 for team 2
 	 */
 	public static int[] getTeamsPlayerCounts()
 	{
@@ -1100,7 +1079,7 @@ public class TvTEvent
 	
 	/**
 	 * Returns points count of both teams
-	 * @return int[]: points of teams, 2 elements, index 0 for team 1 and index 1 for team 2<br>
+	 * @return int[]: points of teams, 2 elements, index 0 for team 1 and index 1 for team 2
 	 */
 	public static int[] getTeamsPoints()
 	{

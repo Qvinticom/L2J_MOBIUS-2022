@@ -152,7 +152,8 @@ public class StaticObjectInstance extends Creature
 	
 	/**
 	 * Set the meshIndex of the object.<br>
-	 * <B><U> Values </U> :</B>
+	 * <br>
+	 * <b><u>Values</u>:</b>
 	 * <ul>
 	 * <li>default textures : 0</li>
 	 * <li>alternate textures : 1</li>
@@ -166,7 +167,7 @@ public class StaticObjectInstance extends Creature
 	}
 	
 	/**
-	 * <B><U> Values </U> :</B>
+	 * <b><u>Values</u>:</b>
 	 * <ul>
 	 * <li>default textures : 0</li>
 	 * <li>alternate textures : 1</li>

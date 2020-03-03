@@ -31,7 +31,8 @@ public class RaidBossInstance extends MonsterInstance
 	
 	/**
 	 * Constructor of RaidBossInstance (use Creature and NpcInstance constructor).<br>
-	 * <B><U>Actions</U>:</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Call the Creature constructor to set the _template of the RaidBossInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
 	 * <li>Set the name of the RaidBossInstance</li>

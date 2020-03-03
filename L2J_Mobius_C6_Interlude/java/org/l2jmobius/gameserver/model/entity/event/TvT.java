@@ -2609,7 +2609,7 @@ public class TvT implements EventTask
 	/**
 	 * Find best killer.
 	 * @param players the players
-	 * @return the l2 pc instance
+	 * @return the pc instance
 	 */
 	public static PlayerInstance findBestKiller(List<PlayerInstance> players)
 	{
@@ -2631,7 +2631,7 @@ public class TvT implements EventTask
 	/**
 	 * Find looser.
 	 * @param players the players
-	 * @return the l2 pc instance
+	 * @return the pc instance
 	 */
 	public static PlayerInstance findLooser(List<PlayerInstance> players)
 	{

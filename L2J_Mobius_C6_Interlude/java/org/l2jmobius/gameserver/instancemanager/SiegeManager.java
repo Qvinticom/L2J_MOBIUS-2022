@@ -80,8 +80,7 @@ public class SiegeManager
 	}
 	
 	/**
-	 * Return true if character summon<BR>
-	 * <BR>
+	 * Return true if character summon
 	 * @param creature The Creature of the creature can summon
 	 * @param isCheckOnly
 	 * @return
@@ -134,8 +133,7 @@ public class SiegeManager
 	}
 	
 	/**
-	 * Return true if the clan is registered or owner of a castle<BR>
-	 * <BR>
+	 * Return true if the clan is registered or owner of a castle
 	 * @param clan The Clan of the player
 	 * @param castleid
 	 * @return

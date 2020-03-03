@@ -143,8 +143,7 @@ import org.l2jmobius.gameserver.util.Util;
  * <ul>
  * <li>DoorInstance</li>
  * <li>NpcInstance</li>
- * <li>PlayableInstance</li><BR>
- * <br>
+ * <li>PlayableInstance</li><br>
  * <b>Concept of CreatureTemplate:</b><br>
  * Each Creature owns generic and static properties (ex : all Keltir have the same number of HP...).<br>
  * All of those properties are stored in a different template for each type of Creature.<br>
@@ -233,24 +232,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Constructor of Creature.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
+	 * Constructor of Creature.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
 	 * Each Creature owns generic and static properties (ex : all Keltir have the same number of HP...). All of those properties are stored in a different template for each type of Creature. Each template is loaded once in the server cache memory (reduce memory use). When a new instance of Creature
-	 * is spawned, server just create a link between the instance and the template This link is stored in <B>_template</B><BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * is spawned, server just create a link between the instance and the template This link is stored in <b>_template</b><br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Set the _template of the Creature</li>
-	 * <li>Set _overloaded to false (the charcater can take more items)</li> <BR>
-	 * <BR>
+	 * <li>Set _overloaded to false (the charcater can take more items)</li>
 	 * <li>If Creature is a NPCInstance, copy skills from template to object</li>
-	 * <li>If Creature is a NPCInstance, link _calculators to NPC_STD_CALCULATOR</li><BR>
-	 * <BR>
+	 * <li>If Creature is a NPCInstance, link _calculators to NPC_STD_CALCULATOR</li>
 	 * <li>If Creature is NOT a NPCInstance, create an empty _skills slot</li>
-	 * <li>If Creature is a PlayerInstance or Summon, copy basic Calculator set to object</li><BR>
-	 * <BR>
+	 * <li>If Creature is a PlayerInstance or Summon, copy basic Calculator set to object</li><br>
 	 * @param objectId Identifier of the object to initialized
 	 * @param template The CreatureTemplate to apply to the object
 	 */
@@ -307,11 +302,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Remove the Creature from the world when the decay task is launched.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of World </B></FONT><BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packets to players</B></FONT><BR>
-	 * <BR>
+	 * Remove the Creature from the world when the decay task is launched.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T REMOVE the object from _allObjects of World </b></font><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND Server->Client packets to players</b></font>
 	 */
 	public void onDecay()
 	{
@@ -363,8 +356,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Add Creature instance that is attacking to the attacker list.<BR>
-	 * <BR>
+	 * Add Creature instance that is attacking to the attacker list.
 	 * @param creature The Creature that attcks this one
 	 */
 	public void addAttackerToAttackByList(Creature creature)
@@ -441,12 +433,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Send a packet to the Creature AND to all PlayerInstance in the radius (max knownlist radius) from the Creature.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * PlayerInstance in the detection area of the Creature are identified in <B>_knownPlayers</B>. In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet<BR>
-	 * <BR>
+	 * Send a packet to the Creature AND to all PlayerInstance in the radius (max knownlist radius) from the Creature.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * PlayerInstance in the detection area of the Creature are identified in <b>_knownPlayers</b>. In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet
 	 * @param mov the mov
 	 * @param radiusInKnownlist the radius in knownlist
 	 */
@@ -518,19 +509,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Create the Server->Client packet StatusUpdate with current HP and MP</li>
-	 * <li>Send the Server->Client packet StatusUpdate with current HP and MP to all Creature called _statusListener that must be informed of HP/MP updates of this Creature</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND CP information</B></FONT><BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>PlayerInstance : Send current HP,MP and CP to the PlayerInstance and only current HP, MP and Level to all other PlayerInstance of the Party</li><BR>
-	 * <BR>
+	 * <li>Send the Server->Client packet StatusUpdate with current HP and MP to all Creature called _statusListener that must be informed of HP/MP updates of this Creature</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND CP information</b></font><br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>PlayerInstance : Send current HP,MP and CP to the PlayerInstance and only current HP, MP and Level to all other PlayerInstance of the Party</li>
 	 */
 	public void broadcastStatusUpdate()
 	{
@@ -569,12 +557,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Not Implemented.<BR>
-	 * <BR>
-	 * <B><U> Overridden in </U> :</B><BR>
-	 * <BR>
-	 * <li>PlayerInstance</li><BR>
-	 * <BR>
+	 * Not Implemented.<br>
+	 * <br>
+	 * <b><u>Overridden in</u>:</b><br>
+	 * <li>PlayerInstance</li><br>
 	 * @param mov the mov
 	 */
 	public void sendPacket(GameServerPacket mov)
@@ -613,15 +599,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Teleport a Creature and its pet if necessary.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Teleport a Creature and its pet if necessary.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Stop the movement of the Creature</li>
 	 * <li>Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion</li>
 	 * <li>Send a Server->Client packet TeleportToLocationt to the Creature AND to all PlayerInstance in its _KnownPlayers</li>
-	 * <li>Modify the position of the pet if necessary</li><BR>
-	 * <BR>
+	 * <li>Modify the position of the pet if necessary</li><br>
 	 * @param x the x
 	 * @param y the y
 	 * @param z the z
@@ -768,20 +752,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Launch a physical attack against a target (Simple, Bow, Pole or Dual).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
-	 * <li>Get the active weapon (always equiped in the right hand)</li><BR>
-	 * <BR>
+	 * Launch a physical attack against a target (Simple, Bow, Pole or Dual).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
+	 * <li>Get the active weapon (always equipped in the right hand)</li>
 	 * <li>If weapon is a bow, check for arrows, MP and bow re-use delay (if necessary, equip the PlayerInstance with arrows in left hand)</li>
-	 * <li>If weapon is a bow, consume MP and set the new period of bow non re-use</li><BR>
-	 * <BR>
+	 * <li>If weapon is a bow, consume MP and set the new period of bow non re-use</li>
 	 * <li>Get the Attack Speed of the Creature (delay (in milliseconds) before next attack)</li>
 	 * <li>Select the type of attack to start (Simple, Bow, Pole or Dual) and verify if SoulShot are charged then start calculation</li>
 	 * <li>If the Server->Client packet Attack contains at least 1 hit, send the Server->Client packet Attack to the Creature AND to all PlayerInstance in the _KnownPlayers of the Creature</li>
-	 * <li>Notify AI with EVT_READY_TO_ACT</li><BR>
-	 * <BR>
+	 * <li>Notify AI with EVT_READY_TO_ACT</li><br>
 	 * @param target The Creature targeted
 	 */
 	protected void doAttack(Creature target)
@@ -899,10 +879,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 		}
 		
-		// Get the active weapon instance (always equiped in the right hand)
+		// Get the active weapon instance (always equipped in the right hand)
 		final ItemInstance weaponInst = getActiveWeaponInstance();
 		
-		// Get the active weapon item corresponding to the active weapon instance (always equiped in the right hand)
+		// Get the active weapon item corresponding to the active weapon instance (always equipped in the right hand)
 		final Weapon weaponItem = getActiveWeaponItem();
 		if ((weaponItem != null) && (weaponItem.getItemType() == WeaponType.ROD))
 		{
@@ -1161,10 +1141,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Launch a Bow attack.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Launch a Bow attack.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Calculate if hit is missed or not</li>
 	 * <li>Consumme arrows</li>
 	 * <li>If hit isn't missed, calculate if shield defense is efficient</li>
@@ -1173,8 +1152,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <li>If the Creature is a PlayerInstance, Send a Server->Client packet SetupGauge</li>
 	 * <li>Create a new hit task with Medium priority</li>
 	 * <li>Calculate and set the disable delay of the bow in function of the Attack Speed</li>
-	 * <li>Add this hit to the Server-Client packet Attack</li><BR>
-	 * <BR>
+	 * <li>Add this hit to the Server-Client packet Attack</li><br>
 	 * @param attack Server->Client packet Attack in which the hit will be added
 	 * @param target The Creature targeted
 	 * @param sAtk The Attack Speed of the attacker
@@ -1232,17 +1210,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Launch a Dual attack.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Launch a Dual attack.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Calculate if hits are missed or not</li>
 	 * <li>If hits aren't missed, calculate if shield defense is efficient</li>
 	 * <li>If hits aren't missed, calculate if hit is critical</li>
 	 * <li>If hits aren't missed, calculate physical damages</li>
 	 * <li>Create 2 new hit tasks with Medium priority</li>
-	 * <li>Add those hits to the Server-Client packet Attack</li><BR>
-	 * <BR>
+	 * <li>Add those hits to the Server-Client packet Attack</li><br>
 	 * @param attack Server->Client packet Attack in which the hit will be added
 	 * @param target The Creature targeted
 	 * @param sAtk the s atk
@@ -1304,14 +1280,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Launch a Pole attack.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Launch a Pole attack.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Get all visible objects in a spheric area near the Creature to obtain possible targets</li>
 	 * <li>If possible target is the Creature targeted, launch a simple attack against it</li>
-	 * <li>If possible target isn't the Creature targeted but is attakable, launch a simple attack against it</li><BR>
-	 * <BR>
+	 * <li>If possible target isn't the Creature targeted but is attakable, launch a simple attack against it</li><br>
 	 * @param attack Server->Client packet Attack in which the hit will be added
 	 * @param sAtk the s atk
 	 * @return True if one hit isn't missed
@@ -1388,17 +1362,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Launch a simple attack.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Launch a simple attack.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Calculate if hit is missed or not</li>
 	 * <li>If hit isn't missed, calculate if shield defense is efficient</li>
 	 * <li>If hit isn't missed, calculate if hit is critical</li>
 	 * <li>If hit isn't missed, calculate physical damages</li>
 	 * <li>Create a new hit task with Medium priority</li>
-	 * <li>Add this hit to the Server-Client packet Attack</li><BR>
-	 * <BR>
+	 * <li>Add this hit to the Server-Client packet Attack</li><br>
 	 * @param attack Server->Client packet Attack in which the hit will be added
 	 * @param target The Creature targeted
 	 * @param sAtk the s atk
@@ -1454,18 +1426,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Manage the casting task (casting and interrupt time, re-use delay...) and display the casting bar and animation on client.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Manage the casting task (casting and interrupt time, re-use delay...) and display the casting bar and animation on client.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Verify the possibilty of the the cast : skill is a spell, caster isn't muted...</li>
 	 * <li>Get the list of all targets (ex : area effects) and define the Creature targeted (its stats will be used in calculation)</li>
 	 * <li>Calculate the casting time (base + modifier of MAtkSpd), interrupt time and re-use delay</li>
 	 * <li>Send a Server->Client packet MagicSkillUse (to diplay casting animation), a packet SetupGauge (to display casting bar) and a system message</li>
 	 * <li>Disable all skills during the casting time (create a task EnableAllSkills)</li>
 	 * <li>Disable the skill during the re-use delay (create a task EnableSkill)</li>
-	 * <li>Create a task MagicUseTask (that will call method onMagicUseTimer) to launch the Magic Skill at the end of the casting time</li><BR>
-	 * <BR>
+	 * <li>Create a task MagicUseTask (that will call method onMagicUseTimer) to launch the Magic Skill at the end of the casting time</li><br>
 	 * @param skill The Skill to use
 	 */
 	public void doCast(Skill skill)
@@ -1870,7 +1840,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Starts a force buff on target.<br>
+	 * Starts a force buff on target.
 	 * @param target the target
 	 * @param skill the skill
 	 */
@@ -1888,23 +1858,21 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Kill the Creature.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Kill the Creature.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Set target to null and cancel Attack or Cast</li>
 	 * <li>Stop movement</li>
 	 * <li>Stop HP/MP/CP Regeneration task</li>
 	 * <li>Stop all active skills effects in progress on the Creature</li>
 	 * <li>Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform</li>
-	 * <li>Notify Creature AI</li><BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
+	 * <li>Notify Creature AI</li><br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
 	 * <li>NpcInstance : Create a DecayTask to remove the corpse of the NpcInstance after 7 seconds</li>
 	 * <li>Attackable : Distribute rewards (EXP, SP, Drops...) and notify Quest Engine</li>
-	 * <li>PlayerInstance : Apply Death Penalty, Manage gain/loss Karma and Item Drop</li><BR>
-	 * <BR>
+	 * <li>PlayerInstance : Apply Death Penalty, Manage gain/loss Karma and Item Drop</li><br>
 	 * @param killer The Creature who killed it
 	 * @return true, if successful
 	 */
@@ -2094,14 +2062,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Check if the active Skill can be casted.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Check if the active Skill can be casted.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Check if the Creature can cast (ex : not sleeping...)</li>
 	 * <li>Check if the target is correct</li>
-	 * <li>Notify the AI with AI_INTENTION_CAST and target</li><BR>
-	 * <BR>
+	 * <li>Notify the AI with AI_INTENTION_CAST and target</li><br>
 	 * @param skill The Skill to use
 	 */
 	protected void useMagic(Skill skill)
@@ -2570,12 +2536,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the Summon of the Creature.<BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>PlayerInstance</li><BR>
-	 * <BR>
+	 * Return the Summon of the Creature.<br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>PlayerInstance</li>
 	 * @return the pet
 	 */
 	public Summon getPet()
@@ -2835,16 +2800,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Set the template of the Creature.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
+	 * Set the template of the Creature.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
 	 * Each Creature owns generic and static properties (ex : all Keltir have the same number of HP...). All of those properties are stored in a different template for each type of Creature. Each template is loaded once in the server cache memory (reduce memory use). When a new instance of Creature
-	 * is spawned, server just create a link between the instance and the template This link is stored in <B>_template</B><BR>
-	 * <BR>
-	 * <B><U> Assert </U> :</B><BR>
-	 * <BR>
-	 * <li>this instanceof Creature</li><BR>
+	 * is spawned, server just create a link between the instance and the template This link is stored in <b>_template</b><br>
+	 * <br>
+	 * <b><u>Assert</u>:</b><br>
+	 * <li>this instanceof Creature</li><br>
 	 * <BR
 	 * @param template the new template
 	 */
@@ -2933,15 +2897,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Task lauching the function onHitTimer().<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Task lauching the function onHitTimer().<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>If the attacker/target is dead or use fake death, notify the AI with EVT_CANCEL and send a Server->Client packet ActionFailed (if attacker is a PlayerInstance)</li>
 	 * <li>If attack isn't aborted, send a message system (critical hit, missed...) to attacker/target if they are PlayerInstance</li>
 	 * <li>If attack isn't aborted and hit isn't missed, reduce HP of the target and calculate reflection damage to reduce HP of attacker if necessary</li>
-	 * <li>if attack isn't aborted and hit isn't missed, manage attack or cast break of the target (calculating rate, sending message...)</li><BR>
-	 * <BR>
+	 * <li>if attack isn't aborted and hit isn't missed, manage attack or cast break of the target (calculating rate, sending message...)</li>
 	 */
 	class HitTask implements Runnable
 	{
@@ -3184,22 +3146,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public static final int ABNORMAL_EFFECT_AFRAID = 0x0010;
 	
 	/**
-	 * Launch and add Effect (including Stack Group management) to Creature and update client magic icone.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All active skills effects in progress on the Creature are identified in ConcurrentHashMap(Integer,Effect) <B>_effects</B>. The Integer key of _effects is the Skill Identifier that has created the Effect.<BR>
-	 * <BR>
+	 * Launch and add Effect (including Stack Group management) to Creature and update client magic icone.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All active skills effects in progress on the Creature are identified in ConcurrentHashMap(Integer,Effect) <b>_effects</b>. The Integer key of _effects is the Skill Identifier that has created the Effect.<br>
 	 * Several same effect can't be used on a Creature at the same time. Indeed, effects are not stackable and the last cast will replace the previous in progress. More, some effects belong to the same Stack Group (ex WindWald and Haste Potion). If 2 effects of a same group are used at the same time
-	 * on a Creature, only the more efficient (identified by its priority order) will be preserve.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * on a Creature, only the more efficient (identified by its priority order) will be preserve.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Add the Effect to the Creature _effects</li>
 	 * <li>If this effect doesn't belong to a Stack Group, add its Funcs to the Calculator set of the Creature (remove the old one if necessary)</li>
 	 * <li>If this effect has higher priority in its Stack Group, add its Funcs to the Calculator set of the Creature (remove previous stacked effect Funcs if necessary)</li>
 	 * <li>If this effect has NOT higher priority in its Stack Group, set the effect to Not In Use</li>
-	 * <li>Update active skills in progress icones on player client</li><BR>
+	 * <li>Update active skills in progress icones on player client</li><br>
 	 * @param newEffect the new effect
 	 */
 	public synchronized void addEffect(Effect newEffect)
@@ -3357,13 +3317,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Insert an effect at the specified position in a Stack Group.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
+	 * Insert an effect at the specified position in a Stack Group.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
 	 * Several same effect can't be used on a Creature at the same time. Indeed, effects are not stackable and the last cast will replace the previous in progress. More, some effects belong to the same Stack Group (ex WindWald and Haste Potion). If 2 effects of a same group are used at the same time
-	 * on a Creature, only the more efficient (identified by its priority order) will be preserve.<BR>
-	 * <BR>
+	 * on a Creature, only the more efficient (identified by its priority order) will be preserve.
 	 * @param newStackedEffect the new stacked effect
 	 * @param stackQueue The Stack Group in wich the effect must be added
 	 * @return the list
@@ -3404,21 +3363,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Stop and remove Effect (including Stack Group management) from Creature and update client magic icone.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All active skills effects in progress on the Creature are identified in ConcurrentHashMap(Integer,Effect) <B>_effects</B>. The Integer key of _effects is the Skill Identifier that has created the Effect.<BR>
-	 * <BR>
+	 * Stop and remove Effect (including Stack Group management) from Creature and update client magic icone.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All active skills effects in progress on the Creature are identified in ConcurrentHashMap(Integer,Effect) <b>_effects</b>. The Integer key of _effects is the Skill Identifier that has created the Effect.<br>
 	 * Several same effect can't be used on a Creature at the same time. Indeed, effects are not stackable and the last cast will replace the previous in progress. More, some effects belong to the same Stack Group (ex WindWald and Haste Potion). If 2 effects of a same group are used at the same time
-	 * on a Creature, only the more efficient (identified by its priority order) will be preserve.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * on a Creature, only the more efficient (identified by its priority order) will be preserve.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Remove Func added by this effect from the Creature Calculator (Stop Effect)</li>
 	 * <li>If the Effect belongs to a not empty Stack Group, replace theses Funcs by next stacked effect Funcs</li>
 	 * <li>Remove the Effect from _effects of the Creature</li>
-	 * <li>Update active skills in progress icones on player client</li><BR>
+	 * <li>Update active skills in progress icones on player client</li><br>
 	 * @param effect the effect
 	 */
 	public void removeEffect(Effect effect)
@@ -3492,8 +3449,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Active abnormal effects flags in the binary mask and send Server->Client UserInfo/CharInfo packet.<BR>
-	 * <BR>
+	 * Active abnormal effects flags in the binary mask and send Server->Client UserInfo/CharInfo packet.
 	 * @param mask the mask
 	 */
 	public void startAbnormalEffect(int mask)
@@ -3515,8 +3471,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Active the abnormal effect Confused flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet.<BR>
-	 * <BR>
+	 * Active the abnormal effect Confused flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet.
 	 */
 	public void startConfused()
 	{
@@ -3526,8 +3481,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Active the abnormal effect Fake Death flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet.<BR>
-	 * <BR>
+	 * Active the abnormal effect Fake Death flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet.
 	 */
 	public void startFakeDeath()
 	{
@@ -3542,8 +3496,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Active the abnormal effect Fear flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet.<BR>
-	 * <BR>
+	 * Active the abnormal effect Fear flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet.
 	 */
 	public void startFear()
 	{
@@ -3553,8 +3506,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Active the abnormal effect Muted flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet.<BR>
-	 * <BR>
+	 * Active the abnormal effect Muted flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet.
 	 */
 	public void startMuted()
 	{
@@ -3566,8 +3518,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Active the abnormal effect Psychical_Muted flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet.<BR>
-	 * <BR>
+	 * Active the abnormal effect Psychical_Muted flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet.
 	 */
 	public void startPsychicalMuted()
 	{
@@ -3577,8 +3528,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Active the abnormal effect Root flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet.<BR>
-	 * <BR>
+	 * Active the abnormal effect Root flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet.
 	 */
 	public void startRooted()
 	{
@@ -3589,8 +3539,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Active the abnormal effect Sleep flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet.<BR>
-	 * <BR>
+	 * Active the abnormal effect Sleep flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet.
 	 */
 	public void startSleeping()
 	{
@@ -3604,14 +3553,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Launch a Stun Abnormal Effect on the Creature.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Launch a Stun Abnormal Effect on the Creature.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Calculate the success rate of the Stun Abnormal Effect on this Creature</li>
 	 * <li>If Stun succeed, active the abnormal effect Stun flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet</li>
-	 * <li>If Stun NOT succeed, send a system message Failed to the PlayerInstance attacker</li><BR>
-	 * <BR>
+	 * <li>If Stun NOT succeed, send a system message Failed to the PlayerInstance attacker</li>
 	 */
 	public void startStunning()
 	{
@@ -3651,8 +3598,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Modify the abnormal effect map according to the mask.<BR>
-	 * <BR>
+	 * Modify the abnormal effect map according to the mask.
 	 * @param mask the mask
 	 */
 	public void stopAbnormalEffect(int mask)
@@ -3662,8 +3608,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Stop all active skills effects in progress on the Creature.<BR>
-	 * <BR>
+	 * Stop all active skills effects in progress on the Creature.
 	 */
 	public void stopAllEffects()
 	{
@@ -3690,15 +3635,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Stop immobilization until attacked abnormal Effect.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Stop immobilization until attacked abnormal Effect.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Delete a specified/all (if effect=null) immobilization until attacked abnormal Effect from Creature and update client magic icon</li>
 	 * <li>Set the abnormal effect flag _muted to False</li>
 	 * <li>Notify the Creature AI</li>
-	 * <li>Send Server->Client UserInfo/CharInfo packet</li><BR>
-	 * <BR>
+	 * <li>Send Server->Client UserInfo/CharInfo packet</li><br>
 	 * @param effect the effect
 	 */
 	public void stopImmobileUntilAttacked(Effect effect)
@@ -3719,15 +3662,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Stop a specified/all Confused abnormal Effect.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Stop a specified/all Confused abnormal Effect.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Delete a specified/all (if effect=null) Confused abnormal Effect from Creature and update client magic icone</li>
 	 * <li>Set the abnormal effect flag _confused to False</li>
 	 * <li>Notify the Creature AI</li>
-	 * <li>Send Server->Client UserInfo/CharInfo packet</li><BR>
-	 * <BR>
+	 * <li>Send Server->Client UserInfo/CharInfo packet</li><br>
 	 * @param effect the effect
 	 */
 	public void stopConfused(Effect effect)
@@ -3747,12 +3688,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Stop and remove the Effects corresponding to the Skill Identifier and update client magic icone.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All active skills effects in progress on the Creature are identified in ConcurrentHashMap(Integer,Effect) <B>_effects</B>. The Integer key of _effects is the Skill Identifier that has created the Effect.<BR>
-	 * <BR>
+	 * Stop and remove the Effects corresponding to the Skill Identifier and update client magic icone.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All active skills effects in progress on the Creature are identified in ConcurrentHashMap(Integer,Effect) <b>_effects</b>. The Integer key of _effects is the Skill Identifier that has created the Effect.
 	 * @param skillId the skill id
 	 */
 	public void stopSkillEffects(int skillId)
@@ -3777,18 +3717,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Stop and remove all Effect of the selected type (ex : BUFF, DMG_OVER_TIME...) from the Creature and update client magic icone.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All active skills effects in progress on the Creature are identified in ConcurrentHashMap(Integer,Effect) <B>_effects</B>. The Integer key of _effects is the Skill Identifier that has created the Effect.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Stop and remove all Effect of the selected type (ex : BUFF, DMG_OVER_TIME...) from the Creature and update client magic icone.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All active skills effects in progress on the Creature are identified in ConcurrentHashMap(Integer,Effect) <b>_effects</b>. The Integer key of _effects is the Skill Identifier that has created the Effect.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Remove Func added by this effect from the Creature Calculator (Stop Effect)</li>
 	 * <li>Remove the Effect from _effects of the Creature</li>
-	 * <li>Update active skills in progress icones on player client</li><BR>
-	 * <BR>
+	 * <li>Update active skills in progress icones on player client</li><br>
 	 * @param type The type of effect to stop ((ex : BUFF, DMG_OVER_TIME...)
 	 */
 	public void stopEffects(Effect.EffectType type)
@@ -3813,12 +3751,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Stop and remove the Effects corresponding to the SkillType and update client magic icon.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All active skills effects in progress on the Creature are identified in ConcurrentHashMap(Integer,Effect) <B>_effects</B>. The Integer key of _effects is the Skill Identifier that has created the Effect.<BR>
-	 * <BR>
+	 * Stop and remove the Effects corresponding to the SkillType and update client magic icon.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All active skills effects in progress on the Creature are identified in ConcurrentHashMap(Integer,Effect) <b>_effects</b>. The Integer key of _effects is the Skill Identifier that has created the Effect.
 	 * @param skillType The SkillType of the Effect to remove from _effects
 	 * @param power the power
 	 */
@@ -3853,14 +3790,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Stop a specified/all Fake Death abnormal Effect.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Stop a specified/all Fake Death abnormal Effect.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Delete a specified/all (if effect=null) Fake Death abnormal Effect from Creature and update client magic icone</li>
 	 * <li>Set the abnormal effect flag _fake_death to False</li>
-	 * <li>Notify the Creature AI</li><BR>
-	 * <BR>
+	 * <li>Notify the Creature AI</li><br>
 	 * @param effect the effect
 	 */
 	public void stopFakeDeath(Effect effect)
@@ -3888,15 +3823,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Stop a specified/all Fear abnormal Effect.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Stop a specified/all Fear abnormal Effect.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Delete a specified/all (if effect=null) Fear abnormal Effect from Creature and update client magic icone</li>
 	 * <li>Set the abnormal effect flag _affraid to False</li>
 	 * <li>Notify the Creature AI</li>
-	 * <li>Send Server->Client UserInfo/CharInfo packet</li><BR>
-	 * <BR>
+	 * <li>Send Server->Client UserInfo/CharInfo packet</li><br>
 	 * @param effect the effect
 	 */
 	public void stopFear(Effect effect)
@@ -3915,15 +3848,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Stop a specified/all Muted abnormal Effect.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Stop a specified/all Muted abnormal Effect.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Delete a specified/all (if effect=null) Muted abnormal Effect from Creature and update client magic icone</li>
 	 * <li>Set the abnormal effect flag _muted to False</li>
 	 * <li>Notify the Creature AI</li>
-	 * <li>Send Server->Client UserInfo/CharInfo packet</li><BR>
-	 * <BR>
+	 * <li>Send Server->Client UserInfo/CharInfo packet</li><br>
 	 * @param effect the effect
 	 */
 	public void stopMuted(Effect effect)
@@ -3961,15 +3892,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Stop a specified/all Root abnormal Effect.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Stop a specified/all Root abnormal Effect.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Delete a specified/all (if effect=null) Root abnormal Effect from Creature and update client magic icone</li>
 	 * <li>Set the abnormal effect flag _rooted to False</li>
 	 * <li>Notify the Creature AI</li>
-	 * <li>Send Server->Client UserInfo/CharInfo packet</li><BR>
-	 * <BR>
+	 * <li>Send Server->Client UserInfo/CharInfo packet</li><br>
 	 * @param effect the effect
 	 */
 	public void stopRooting(Effect effect)
@@ -3989,15 +3918,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Stop a specified/all Sleep abnormal Effect.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Stop a specified/all Sleep abnormal Effect.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Delete a specified/all (if effect=null) Sleep abnormal Effect from Creature and update client magic icone</li>
 	 * <li>Set the abnormal effect flag _sleeping to False</li>
 	 * <li>Notify the Creature AI</li>
-	 * <li>Send Server->Client UserInfo/CharInfo packet</li><BR>
-	 * <BR>
+	 * <li>Send Server->Client UserInfo/CharInfo packet</li><br>
 	 * @param effect the effect
 	 */
 	public void stopSleeping(Effect effect)
@@ -4017,15 +3944,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Stop a specified/all Stun abnormal Effect.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Stop a specified/all Stun abnormal Effect.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Delete a specified/all (if effect=null) Stun abnormal Effect from Creature and update client magic icone</li>
 	 * <li>Set the abnormal effect flag _stuned to False</li>
 	 * <li>Notify the Creature AI</li>
-	 * <li>Send Server->Client UserInfo/CharInfo packet</li><BR>
-	 * <BR>
+	 * <li>Send Server->Client UserInfo/CharInfo packet</li><br>
 	 * @param effect the effect
 	 */
 	public void stopStunning(Effect effect)
@@ -4050,27 +3975,23 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Not Implemented.<BR>
-	 * <BR>
-	 * <B><U> Overridden in</U> :</B><BR>
-	 * <BR>
+	 * Not Implemented.<br>
+	 * <br>
+	 * <b><u>Overridden in</u>:</b><br>
 	 * <li>NPCInstance</li>
 	 * <li>PlayerInstance</li>
 	 * <li>Summon</li>
-	 * <li>DoorInstance</li><BR>
-	 * <BR>
+	 * <li>DoorInstance</li>
 	 */
 	public abstract void updateAbnormalEffect();
 	
 	/**
-	 * Update active skills in progress (In Use and Not In Use because stacked) icones on client.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All active skills effects in progress (In Use and Not In Use because stacked) are represented by an icone on the client.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method ONLY UPDATE the client of the player and not clients of all players in the party.</B></FONT><BR>
-	 * <BR>
+	 * Update active skills in progress (In Use and Not In Use because stacked) icones on client.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All active skills effects in progress (In Use and Not In Use because stacked) are represented by an icone on the client.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method ONLY UPDATE the client of the player and not clients of all players in the party.</b></font>
 	 */
 	public void updateEffectIcons()
 	{
@@ -4201,16 +4122,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return a map of 16 bits (0x0000) containing all abnormal effect in progress for this Creature.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * In Server->Client packet, each effect is represented by 1 bit of the map (ex : BLEEDING = 0x0001 (bit 1), SLEEP = 0x0080 (bit 8)...). The map is calculated by applying a BINARY OR operation on each effect.<BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Server Packet : CharInfo, NpcInfo, NpcInfoPoly, UserInfo...</li><BR>
-	 * <BR>
+	 * Return a map of 16 bits (0x0000) containing all abnormal effect in progress for this Creature.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * In Server->Client packet, each effect is represented by 1 bit of the map (ex : BLEEDING = 0x0001 (bit 1), SLEEP = 0x0080 (bit 8)...). The map is calculated by applying a BINARY OR operation on each effect.<br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Server Packet : CharInfo, NpcInfo, NpcInfoPoly, UserInfo...</li>
 	 * @return the abnormal effect
 	 */
 	public int getAbnormalEffect()
@@ -4248,12 +4167,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return all active skills effects in progress on the Creature.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All active skills effects in progress on the Creature are identified in <B>_effects</B>. The Integer key of _effects is the Skill Identifier that has created the effect.<BR>
-	 * <BR>
+	 * Return all active skills effects in progress on the Creature.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All active skills effects in progress on the Creature are identified in <b>_effects</b>. The Integer key of _effects is the Skill Identifier that has created the effect.
 	 * @return A table containing all active skills effect in progress on the Creature
 	 */
 	public Effect[] getAllEffects()
@@ -4265,11 +4183,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return Effect in progress on the Creature corresponding to the Skill Identifier.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All active skills effects in progress on the Creature are identified in <B>_effects</B>.
+	 * Return Effect in progress on the Creature corresponding to the Skill Identifier.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All active skills effects in progress on the Creature are identified in <b>_effects</b>.
 	 * @param index The Skill Identifier of the Effect to return from the _effects
 	 * @return The Effect corresponding to the Skill Identifier
 	 */
@@ -4343,11 +4261,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the first Effect in progress on the Creature created by the Skill.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All active skills effects in progress on the Creature are identified in <B>_effects</B>.
+	 * Return the first Effect in progress on the Creature created by the Skill.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All active skills effects in progress on the Creature are identified in <b>_effects</b>.
 	 * @param skill The Skill whose effect must be returned
 	 * @return The first Effect created by the Skill
 	 */
@@ -4384,12 +4302,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the first Effect in progress on the Creature corresponding to the Effect Type (ex : BUFF, STUN, ROOT...).<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All active skills effects in progress on the Creature are identified in ConcurrentHashMap(Integer,Effect) <B>_effects</B>. The Integer key of _effects is the Skill Identifier that has created the Effect.<BR>
-	 * <BR>
+	 * Return the first Effect in progress on the Creature corresponding to the Effect Type (ex : BUFF, STUN, ROOT...).<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All active skills effects in progress on the Creature are identified in ConcurrentHashMap(Integer,Effect) <b>_effects</b>. The Integer key of _effects is the Skill Identifier that has created the Effect.
 	 * @param tp The Effect Type of skills whose effect must be returned
 	 * @return The first Effect corresponding to the Effect Type
 	 */
@@ -4445,8 +4362,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public class AIAccessor
 	{
 		/**
-		 * Return the Creature managed by this Accessor AI.<BR>
-		 * <BR>
+		 * Return the Creature managed by this Accessor AI.
 		 * @return the actor
 		 */
 		public Creature getActor()
@@ -4455,8 +4371,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		/**
-		 * Accessor to Creature moveToLocation() method with an interaction area.<BR>
-		 * <BR>
+		 * Accessor to Creature moveToLocation() method with an interaction area.
 		 * @param x the x
 		 * @param y the y
 		 * @param z the z
@@ -4468,8 +4383,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		/**
-		 * Accessor to Creature moveToLocation() method without interaction area.<BR>
-		 * <BR>
+		 * Accessor to Creature moveToLocation() method without interaction area.
 		 * @param x the x
 		 * @param y the y
 		 * @param z the z
@@ -4480,8 +4394,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		/**
-		 * Accessor to Creature stopMove() method.<BR>
-		 * <BR>
+		 * Accessor to Creature stopMove() method.
 		 * @param pos the pos
 		 */
 		public void stopMove(Location pos)
@@ -4490,8 +4403,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		/**
-		 * Accessor to Creature doAttack() method.<BR>
-		 * <BR>
+		 * Accessor to Creature doAttack() method.
 		 * @param target the target
 		 */
 		public void doAttack(Creature target)
@@ -4500,8 +4412,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		/**
-		 * Accessor to Creature doCast() method.<BR>
-		 * <BR>
+		 * Accessor to Creature doCast() method.
 		 * @param skill the skill
 		 */
 		public void doCast(Skill skill)
@@ -4510,8 +4421,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		/**
-		 * Create a NotifyAITask.<BR>
-		 * <BR>
+		 * Create a NotifyAITask.
 		 * @param evt the evt
 		 * @return the notify ai task
 		 */
@@ -4521,8 +4431,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		/**
-		 * Cancel the AI.<BR>
-		 * <BR>
+		 * Cancel the AI.
 		 */
 		public void detachAI()
 		{
@@ -4531,17 +4440,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * This class group all mouvement data.<BR>
-	 * <BR>
-	 * <B><U> Data</U> :</B><BR>
-	 * <BR>
+	 * This class group all movement data.<br>
+	 * <br>
+	 * <b><u>Data</u>:</b><br>
 	 * <li>_moveTimestamp : Last time position update</li>
 	 * <li>_xDestination, _yDestination, _zDestination : Position of the destination</li>
 	 * <li>_xMoveFrom, _yMoveFrom, _zMoveFrom : Position of the origin</li>
 	 * <li>_moveStartTime : Start time of the movement</li>
-	 * <li>_ticksToMove : Nb of ticks between the start and the destination</li>
-	 * <li>_xSpeedTicks, _ySpeedTicks : Speed in unit/ticks</li><BR>
-	 * <BR>
+	 * <li>_ticksToMove : number of ticks between the start and the destination</li>
+	 * <li>_xSpeedTicks, _ySpeedTicks : Speed in unit/ticks</li>
 	 */
 	public static class MoveData
 	{
@@ -4600,8 +4507,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	private List<QuestState> _NotifyQuestOfDeathList = new ArrayList<>();
 	
 	/**
-	 * Add QuestState instance that is to be notified of character's death.<BR>
-	 * <BR>
+	 * Add QuestState instance that is to be notified of character's death.
 	 * @param qs The QuestState that subscribe to this event
 	 */
 	public void addNotifyQuestOfDeath(QuestState qs)
@@ -4615,8 +4521,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return a list of Creature that attacked.<BR>
-	 * <BR>
+	 * Return a list of Creature that attacked.
 	 * @return the notify quest of death
 	 */
 	public List<QuestState> getNotifyQuestOfDeath()
@@ -4629,20 +4534,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Add a Func to the Calculator set of the Creature.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * A Creature owns a table of Calculators called <B>_calculators</B>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...). To reduce cache memory use,
-	 * NPCInstances who don't have skills share the same Calculator set called <B>NPC_STD_CALCULATOR</B>.<BR>
-	 * <BR>
-	 * That's why, if a NPCInstance is under a skill/spell effect that modify one of its state, a copy of the NPC_STD_CALCULATOR must be create in its _calculators before addind new Func object.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Add a Func to the Calculator set of the Creature.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * A Creature owns a table of Calculators called <b>_calculators</b>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...). To reduce cache memory use,
+	 * NPCInstances who don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
+	 * That's why, if a NPCInstance is under a skill/spell effect that modify one of its state, a copy of the NPC_STD_CALCULATOR must be create in its _calculators before addind new Func object.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>If _calculators is linked to NPC_STD_CALCULATOR, create a copy of NPC_STD_CALCULATOR in _calculators</li>
-	 * <li>Add the Func object to _calculators</li><BR>
-	 * <BR>
+	 * <li>Add the Func object to _calculators</li><br>
 	 * @param f The Func object to add to the Calculator corresponding to the state affected
 	 */
 	public synchronized void addStatFunc(Func f)
@@ -4678,20 +4580,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Add a list of Funcs to the Calculator set of the Creature.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * A Creature owns a table of Calculators called <B>_calculators</B>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...). <BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method is ONLY for PlayerInstance</B></FONT><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
+	 * Add a list of Funcs to the Calculator set of the Creature.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * A Creature owns a table of Calculators called <b>_calculators</b>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...).<br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method is ONLY for PlayerInstance</b></font><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Equip an item from inventory</li>
 	 * <li>Learn a new passive skill</li>
-	 * <li>Use an active skill</li><BR>
-	 * <BR>
+	 * <li>Use an active skill</li><br>
 	 * @param funcs The list of Func objects to add to the Calculator corresponding to the state affected
 	 */
 	public synchronized void addStatFuncs(Func[] funcs)
@@ -4702,26 +4601,21 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			modifiedStats.add(f.stat);
 			addStatFunc(f);
 		}
-		
 		broadcastModifiedStats(modifiedStats);
 	}
 	
 	/**
-	 * Remove a Func from the Calculator set of the Creature.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * A Creature owns a table of Calculators called <B>_calculators</B>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...). To reduce cache memory use,
-	 * NPCInstances who don't have skills share the same Calculator set called <B>NPC_STD_CALCULATOR</B>.<BR>
-	 * <BR>
-	 * That's why, if a NPCInstance is under a skill/spell effect that modify one of its state, a copy of the NPC_STD_CALCULATOR must be create in its _calculators before addind new Func object.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
-	 * <li>Remove the Func object from _calculators</li><BR>
-	 * <BR>
-	 * <li>If Creature is a NPCInstance and _calculators is equal to NPC_STD_CALCULATOR, free cache memory and just create a link on NPC_STD_CALCULATOR in _calculators</li><BR>
-	 * <BR>
+	 * Remove a Func from the Calculator set of the Creature.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * A Creature owns a table of Calculators called <b>_calculators</b>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...). To reduce cache memory use,
+	 * NPCInstances who don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
+	 * That's why, if a NPCInstance is under a skill/spell effect that modify one of its state, a copy of the NPC_STD_CALCULATOR must be create in its _calculators before addind new Func object.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
+	 * <li>Remove the Func object from _calculators</li>
+	 * <li>If Creature is a NPCInstance and _calculators is equal to NPC_STD_CALCULATOR, free cache memory and just create a link on NPC_STD_CALCULATOR in _calculators</li><br>
 	 * @param f The Func object to remove from the Calculator corresponding to the state affected
 	 */
 	public synchronized void removeStatFunc(Func f)
@@ -4766,19 +4660,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Remove a list of Funcs from the Calculator set of the PlayerInstance.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * A Creature owns a table of Calculators called <B>_calculators</B>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...). <BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method is ONLY for PlayerInstance</B></FONT><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
+	 * Remove a list of Funcs from the Calculator set of the PlayerInstance.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * A Creature owns a table of Calculators called <b>_calculators</b>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...).<br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method is ONLY for PlayerInstance</b></font><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Unequip an item from inventory</li>
-	 * <li>Stop an active skill</li><BR>
-	 * <BR>
+	 * <li>Stop an active skill</li><br>
 	 * @param funcs The list of Func objects to add to the Calculator corresponding to the state affected
 	 */
 	public synchronized void removeStatFuncs(Func[] funcs)
@@ -4789,31 +4680,25 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			modifiedStats.add(f.stat);
 			removeStatFunc(f);
 		}
-		
 		broadcastModifiedStats(modifiedStats);
 	}
 	
 	/**
-	 * Remove all Func objects with the selected owner from the Calculator set of the Creature.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * A Creature owns a table of Calculators called <B>_calculators</B>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...). To reduce cache memory use,
-	 * NPCInstances who don't have skills share the same Calculator set called <B>NPC_STD_CALCULATOR</B>.<BR>
-	 * <BR>
-	 * That's why, if a NPCInstance is under a skill/spell effect that modify one of its state, a copy of the NPC_STD_CALCULATOR must be create in its _calculators before addind new Func object.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
-	 * <li>Remove all Func objects of the selected owner from _calculators</li><BR>
-	 * <BR>
-	 * <li>If Creature is a NPCInstance and _calculators is equal to NPC_STD_CALCULATOR, free cache memory and just create a link on NPC_STD_CALCULATOR in _calculators</li><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
+	 * Remove all Func objects with the selected owner from the Calculator set of the Creature.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * A Creature owns a table of Calculators called <b>_calculators</b>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...). To reduce cache memory use,
+	 * NPCInstances who don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
+	 * That's why, if a NPCInstance is under a skill/spell effect that modify one of its state, a copy of the NPC_STD_CALCULATOR must be create in its _calculators before addind new Func object.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
+	 * <li>Remove all Func objects of the selected owner from _calculators</li>
+	 * <li>If Creature is a NPCInstance and _calculators is equal to NPC_STD_CALCULATOR, free cache memory and just create a link on NPC_STD_CALCULATOR in _calculators</li><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Unequip an item from inventory</li>
-	 * <li>Stop an active skill</li><BR>
-	 * <BR>
+	 * <li>Stop an active skill</li><br>
 	 * @param owner The Object(Skill, Item...) that has created the effect
 	 */
 	public void removeStatsOwner(Object owner)
@@ -4996,8 +4881,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the orientation of the Creature.<BR>
-	 * <BR>
+	 * Return the orientation of the Creature.
 	 * @return the heading
 	 */
 	public int getHeading()
@@ -5006,8 +4890,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Set the orientation of the Creature.<BR>
-	 * <BR>
+	 * Set the orientation of the Creature.
 	 * @param heading the new heading
 	 */
 	public void setHeading(int heading)
@@ -5016,8 +4899,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the X destination of the Creature or the X position if not in movement.<BR>
-	 * <BR>
+	 * Return the X destination of the Creature or the X position if not in movement.
 	 * @return the client x
 	 */
 	public int getClientX()
@@ -5103,8 +4985,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the Y destination of the Creature or the Y position if not in movement.<BR>
-	 * <BR>
+	 * Return the Y destination of the Creature or the Y position if not in movement.
 	 * @return the ydestination
 	 */
 	public int getYdestination()
@@ -5118,8 +4999,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the Z destination of the Creature or the Z position if not in movement.<BR>
-	 * <BR>
+	 * Return the Z destination of the Creature or the Z position if not in movement.
 	 * @return the zdestination
 	 */
 	public int getZdestination()
@@ -5133,8 +5013,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return True if the Creature is in combat.<BR>
-	 * <BR>
+	 * Return True if the Creature is in combat.
 	 * @return true, if is in combat
 	 */
 	public boolean isInCombat()
@@ -5143,8 +5022,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return True if the Creature is moving.<BR>
-	 * <BR>
+	 * Return True if the Creature is moving.
 	 * @return true, if is moving
 	 */
 	public boolean isMoving()
@@ -5153,8 +5031,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return True if the Creature is travelling a calculated path.<BR>
-	 * <BR>
+	 * Return True if the Creature is traveling a calculated path.
 	 * @return true, if is on geodata path
 	 */
 	public boolean isOnGeodataPath()
@@ -5176,8 +5053,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return True if the Creature is casting.<BR>
-	 * <BR>
+	 * Return True if the Creature is casting.
 	 * @return true, if is casting now
 	 */
 	public boolean isCastingNow()
@@ -5191,8 +5067,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return True if the Creature is casting.<BR>
-	 * <BR>
+	 * Return True if the Creature is casting.
 	 * @return true, if is casting potion now
 	 */
 	public boolean isCastingPotionNow()
@@ -5201,8 +5076,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return True if the cast of the Creature can be aborted.<BR>
-	 * <BR>
+	 * Return True if the cast of the Creature can be aborted.
 	 * @return true, if successful
 	 */
 	public boolean canAbortCast()
@@ -5211,8 +5085,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return True if the Creature is attacking.<BR>
-	 * <BR>
+	 * Return True if the Creature is attacking.
 	 * @return true, if is attacking now
 	 */
 	public boolean isAttackingNow()
@@ -5221,8 +5094,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return True if the Creature has aborted its attack.<BR>
-	 * <BR>
+	 * Return True if the Creature has aborted its attack.
 	 * @return true, if is attack aborted
 	 */
 	public boolean isAttackAborted()
@@ -5231,9 +5103,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Abort the attack of the Creature and send Server->Client ActionFailed packet.<BR>
-	 * <BR>
-	 * see org.l2jmobius.gameserver.model.Creature
+	 * Abort the attack of the Creature and send Server->Client ActionFailed packet.
 	 */
 	public void abortAttack()
 	{
@@ -5254,8 +5124,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Abort the cast of the Creature and send Server->Client MagicSkillCanceld/ActionFailed packet.<BR>
-	 * <BR>
+	 * Abort the cast of the Creature and send Server->Client MagicSkillCanceld/ActionFailed packet.
 	 */
 	public void abortCast()
 	{
@@ -5263,8 +5132,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Abort the cast of the Creature and send Server->Client MagicSkillCanceld/ActionFailed packet.<BR>
-	 * <BR>
+	 * Abort the cast of the Creature and send Server->Client MagicSkillCanceld/ActionFailed packet.
 	 * @param force the force
 	 */
 	public void abortCast(boolean force)
@@ -5303,20 +5171,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Update the position of the Creature during a movement and return True if the movement is finished.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * At the beginning of the move action, all properties of the movement are stored in the MoveData object called <B>_move</B> of the Creature. The position of the start point and of the destination permit to estimated in function of the movement speed the time to achieve the destination.<BR>
-	 * <BR>
+	 * Update the position of the Creature during a movement and return True if the movement is finished.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * At the beginning of the move action, all properties of the movement are stored in the MoveData object called <b>_move</b> of the Creature. The position of the start point and of the destination permit to estimated in function of the movement speed the time to achieve the destination.<br>
 	 * When the movement is started (ex : by MovetoLocation), this method will be called each 0.1 sec to estimate and update the Creature position on the server. Note, that the current server position can differe from the current client position even if each movement is straight foward. That's why,
-	 * client send regularly a Client->Server ValidatePosition packet to eventually correct the gap on the server. But, it's always the server position that is used in range calculation.<BR>
-	 * <BR>
-	 * At the end of the estimated movement time, the Creature position is automatically set to the destination position even if the movement is not finished.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : The current Z position is obtained FROM THE CLIENT by the Client->Server ValidatePosition Packet. But x and y positions must be calculated to avoid that players try to modify their movement speed.</B></FONT><BR>
-	 * <BR>
-	 * @param gameTicks Nb of ticks since the server start
+	 * client send regularly a Client->Server ValidatePosition packet to eventually correct the gap on the server. But, it's always the server position that is used in range calculation.<br>
+	 * At the end of the estimated movement time, the Creature position is automatically set to the destination position even if the movement is not finished.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: The current Z position is obtained FROM THE CLIENT by the Client->Server ValidatePosition Packet. But x and y positions must be calculated to avoid that players try to modify their movement speed.</b></font>
+	 * @param gameTicks number of ticks since the server start
 	 * @return True if the movement is finished
 	 */
 	public boolean updatePosition(int gameTicks)
@@ -5468,17 +5332,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Stop movement of the Creature (Called by AI Accessor only).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Stop movement of the Creature (Called by AI Accessor only).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Delete movement data of the Creature</li>
 	 * <li>Set the current position (x,y,z), its current WorldRegion if necessary and its heading</li>
 	 * <li>Remove the WorldObject object from _gmList** of GmListTable</li>
-	 * <li>Remove object from _knownObjects and _knownPlayer* of all surrounding WorldRegion Creatures</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T send Server->Client packet StopMove/StopRotation </B></FONT><BR>
-	 * <BR>
+	 * <li>Remove object from _knownObjects and _knownPlayer* of all surrounding WorldRegion Creatures</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T send Server->Client packet StopMove/StopRotation </b></font>
 	 * @param pos the pos
 	 */
 	public void stopMove(Location pos)
@@ -5527,23 +5388,21 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Target a WorldObject (add the target to the Creature _target, _knownObject and Creature to _KnownObject of the WorldObject).<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * The WorldObject (including Creature) targeted is identified in <B>_target</B> of the Creature<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Target a WorldObject (add the target to the Creature _target, _knownObject and Creature to _KnownObject of the WorldObject).<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * The WorldObject (including Creature) targeted is identified in <b>_target</b> of the Creature<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Set the _target of Creature to WorldObject</li>
 	 * <li>If necessary, add WorldObject to _knownObject of the Creature</li>
 	 * <li>If necessary, add Creature to _KnownObject of the WorldObject</li>
-	 * <li>If object==null, cancel Attak or Cast</li><BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>PlayerInstance : Remove the PlayerInstance from the old target _statusListener and add it to the new target if it was a Creature</li><BR>
-	 * <BR>
+	 * <li>If object==null, cancel Attak or Cast</li><br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>PlayerInstance : Remove the PlayerInstance from the old target _statusListener and add it to the new target if it was a Creature</li><br>
 	 * @param object L2object to target
 	 */
 	public void setTarget(WorldObject object)
@@ -5587,8 +5446,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the identifier of the WorldObject targeted or -1.<BR>
-	 * <BR>
+	 * Return the identifier of the WorldObject targeted or -1.
 	 * @return the target id
 	 */
 	public int getTargetId()
@@ -5601,8 +5459,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the WorldObject targeted or null.<BR>
-	 * <BR>
+	 * Return the WorldObject targeted or null.
 	 * @return the target
 	 */
 	public WorldObject getTarget()
@@ -5611,30 +5468,25 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Calculate movement data for a move to location action and add the Creature to movingObjects of GameTimeController (only called by AI Accessor).<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * At the beginning of the move action, all properties of the movement are stored in the MoveData object called <B>_move</B> of the Creature. The position of the start point and of the destination permit to estimated in function of the movement speed the time to achieve the destination.<BR>
-	 * <BR>
-	 * All Creature in movement are identified in <B>movingObjects</B> of GameTimeController that will call the updatePosition method of those Creature each 0.1s.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Calculate movement data for a move to location action and add the Creature to movingObjects of GameTimeController (only called by AI Accessor).<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * At the beginning of the move action, all properties of the movement are stored in the MoveData object called <b>_move</b> of the Creature. The position of the start point and of the destination permit to estimated in function of the movement speed the time to achieve the destination.<br>
+	 * All Creature in movement are identified in <b>movingObjects</b> of GameTimeController that will call the updatePosition method of those Creature each 0.1s.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Get current position of the Creature</li>
 	 * <li>Calculate distance (dx,dy) between current position and destination including offset</li>
 	 * <li>Create and Init a MoveData object</li>
 	 * <li>Set the Creature _move object to MoveData object</li>
 	 * <li>Add the Creature to movingObjects of the GameTimeController</li>
-	 * <li>Create a task to notify the AI that Creature arrives at a check point of the movement</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T send Server->Client packet MoveToPawn/CharMoveToLocation </B></FONT><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
+	 * <li>Create a task to notify the AI that Creature arrives at a check point of the movement</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T send Server->Client packet MoveToPawn/CharMoveToLocation </b></font><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
 	 * <li>AI : onIntentionMoveTo(L2CharPosition), onIntentionPickUp(WorldObject), onIntentionInteract(WorldObject)</li>
-	 * <li>FollowTask</li><BR>
-	 * <BR>
+	 * <li>FollowTask</li><br>
 	 * @param x The X position of the destination
 	 * @param y The Y position of the destination
 	 * @param z The Y position of the destination
@@ -5905,7 +5757,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			distance = Math.hypot(distance, dz);
 		}
 		
-		// Calculate the Nb of ticks between the current position and the destination
+		// Calculate the number of ticks between the current position and the destination
 		// One tick added for rounding reasons
 		final int ticksToMove = 1 + (int) ((GameTimeController.TICKS_PER_SECOND * distance) / speed);
 		m._xDestination = x;
@@ -5997,7 +5849,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			setHeading(Util.calculateHeadingFrom(getX(), getY(), m._xDestination, m._yDestination));
 		}
 		
-		// Calculate the Nb of ticks between the current position and the destination
+		// Calculate the number of ticks between the current position and the destination
 		// One tick added for rounding reasons
 		final int ticksToMove = 1 + (int) ((GameTimeController.TICKS_PER_SECOND * distance) / speed);
 		m._heading = 0; // initial value for coordinate sync
@@ -6047,8 +5899,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the distance between the current position of the Creature and the target (x,y).<BR>
-	 * <BR>
+	 * Return the distance between the current position of the Creature and the target (x,y).
 	 * @param x X position of the target
 	 * @param y Y position of the target
 	 * @return the plan distance
@@ -6063,8 +5914,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the distance between the current position of the Creature and the target (x,y).<BR>
-	 * <BR>
+	 * Return the distance between the current position of the Creature and the target (x,y).
 	 * @param x X position of the target
 	 * @param y Y position of the target
 	 * @param z the z
@@ -6081,8 +5931,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the squared distance between the current position of the Creature and the given object.<BR>
-	 * <BR>
+	 * Return the squared distance between the current position of the Creature and the given object.
 	 * @param object WorldObject
 	 * @return the squared distance
 	 */
@@ -6092,8 +5941,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the squared distance between the current position of the Creature and the given x, y, z.<BR>
-	 * <BR>
+	 * Return the squared distance between the current position of the Creature and the given x, y, z.
 	 * @param x X position of the target
 	 * @param y Y position of the target
 	 * @param z Z position of the target
@@ -6108,9 +5956,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the squared plan distance between the current position of the Creature and the given object.<BR>
-	 * (check only x and y, not z)<BR>
-	 * <BR>
+	 * Return the squared plan distance between the current position of the Creature and the given object.<br>
+	 * (check only x and y, not z)
 	 * @param object WorldObject
 	 * @return the squared plan distance
 	 */
@@ -6120,9 +5967,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the squared plan distance between the current position of the Creature and the given x, y, z.<BR>
-	 * (check only x and y, not z)<BR>
-	 * <BR>
+	 * Return the squared plan distance between the current position of the Creature and the given x, y, z.<br>
+	 * (check only x and y, not z)
 	 * @param x X position of the target
 	 * @param y Y position of the target
 	 * @return the squared plan distance
@@ -6135,8 +5981,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Check if this object is inside the given radius around the given object. Warning: doesn't cover collision radius!<BR>
-	 * <BR>
+	 * Check if this object is inside the given radius around the given object. Warning: doesn't cover collision radius!
 	 * @param object the target
 	 * @param radius the radius around the target
 	 * @param checkZ should we check Z axis also
@@ -6153,8 +5998,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Check if this object is inside the given plan radius around the given point. Warning: doesn't cover collision radius!<BR>
-	 * <BR>
+	 * Check if this object is inside the given plan radius around the given point. Warning: doesn't cover collision radius!
 	 * @param x X position of the target
 	 * @param y Y position of the target
 	 * @param radius the radius around the target
@@ -6167,8 +6011,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Check if this object is inside the given radius around the given point.<BR>
-	 * <BR>
+	 * Check if this object is inside the given radius around the given point.
 	 * @param x X position of the target
 	 * @param y Y position of the target
 	 * @param z Z position of the target
@@ -6198,8 +6041,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the Weapon Expertise Penalty of the Creature.<BR>
-	 * <BR>
+	 * Return the Weapon Expertise Penalty of the Creature.
 	 * @return the weapon expertise penalty
 	 */
 	public float getWeaponExpertisePenalty()
@@ -6208,8 +6050,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the Armour Expertise Penalty of the Creature.<BR>
-	 * <BR>
+	 * Return the Armour Expertise Penalty of the Creature.
 	 * @return the armour expertise penalty
 	 */
 	public float getArmourExpertisePenalty()
@@ -6218,8 +6059,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Set _attacking corresponding to Attacking Body part to CHEST.<BR>
-	 * <BR>
+	 * Set _attacking corresponding to Attacking Body part to CHEST.
 	 */
 	public void setAttackingBodypart()
 	{
@@ -6227,12 +6067,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Retun True if arrows are available.<BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>PlayerInstance</li><BR>
-	 * <BR>
+	 * Retun True if arrows are available.<br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>PlayerInstance</li>
 	 * @return true, if successful
 	 */
 	protected boolean checkAndEquipArrows()
@@ -6241,13 +6080,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Add Exp and Sp to the Creature.<BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
+	 * Add Exp and Sp to the Creature.<br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
 	 * <li>PlayerInstance</li>
-	 * <li>PetInstance</li><BR>
-	 * <BR>
+	 * <li>PetInstance</li><br>
 	 * @param addToExp the add to exp
 	 * @param addToSp the add to sp
 	 */
@@ -6257,61 +6095,55 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the active weapon instance (always equiped in the right hand).<BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>PlayerInstance</li><BR>
-	 * <BR>
+	 * Return the active weapon instance (always equipped in the right hand).<br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>PlayerInstance</li>
 	 * @return the active weapon instance
 	 */
 	public abstract ItemInstance getActiveWeaponInstance();
 	
 	/**
-	 * Return the active weapon item (always equiped in the right hand).<BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>PlayerInstance</li><BR>
-	 * <BR>
+	 * Return the active weapon item (always equipped in the right hand).<br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>PlayerInstance</li>
 	 * @return the active weapon item
 	 */
 	public abstract Weapon getActiveWeaponItem();
 	
 	/**
-	 * Return the secondary weapon instance (always equiped in the left hand).<BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>PlayerInstance</li><BR>
-	 * <BR>
+	 * Return the secondary weapon instance (always equipped in the left hand).<br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>PlayerInstance</li>
 	 * @return the secondary weapon instance
 	 */
 	public abstract ItemInstance getSecondaryWeaponInstance();
 	
 	/**
-	 * Return the secondary weapon item (always equiped in the left hand).<BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>PlayerInstance</li><BR>
-	 * <BR>
+	 * Return the secondary weapon item (always equipped in the left hand).<br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>PlayerInstance</li>
 	 * @return the secondary weapon item
 	 */
 	public abstract Weapon getSecondaryWeaponItem();
 	
 	/**
-	 * Manage hit process (called by Hit Task).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Manage hit process (called by Hit Task).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>If the attacker/target is dead or use fake death, notify the AI with EVT_CANCEL and send a Server->Client packet ActionFailed (if attacker is a PlayerInstance)</li>
 	 * <li>If attack isn't aborted, send a message system (critical hit, missed...) to attacker/target if they are PlayerInstance</li>
 	 * <li>If attack isn't aborted and hit isn't missed, reduce HP of the target and calculate reflection damage to reduce HP of attacker if necessary</li>
-	 * <li>if attack isn't aborted and hit isn't missed, manage attack or cast break of the target (calculating rate, sending message...)</li><BR>
-	 * <BR>
+	 * <li>if attack isn't aborted and hit isn't missed, manage attack or cast break of the target (calculating rate, sending message...)</li><br>
 	 * @param target The Creature targeted
-	 * @param damage Nb of HP to reduce
+	 * @param damage number of HP to reduce
 	 * @param crit True if hit is critical
 	 * @param miss True if hit is missed
 	 * @param soulshot True if SoulShot are charged
@@ -6597,8 +6429,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Break an attack and send Server->Client ActionFailed packet and a System Message to the Creature.<BR>
-	 * <BR>
+	 * Break an attack and send Server->Client ActionFailed packet and a System Message to the Creature.
 	 */
 	public void breakAttack()
 	{
@@ -6618,8 +6449,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Break a cast and send Server->Client ActionFailed packet and a System Message to the Creature.<BR>
-	 * <BR>
+	 * Break a cast and send Server->Client ActionFailed packet and a System Message to the Creature.
 	 */
 	public void breakCast()
 	{
@@ -6638,12 +6468,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Reduce the arrow number of the Creature.<BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>PlayerInstance</li><BR>
-	 * <BR>
+	 * Reduce the arrow number of the Creature.<br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>PlayerInstance</li>
 	 */
 	protected void reduceArrowCount()
 	{
@@ -6651,15 +6480,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Manage Forced attack (shift + select target).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Manage Forced attack (shift + select target).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>If Creature or target is in a town area, send a system message TARGET_IN_PEACEZONE a Server->Client packet ActionFailed</li>
 	 * <li>If target is confused, send a Server->Client packet ActionFailed</li>
 	 * <li>If Creature is a ArtefactInstance, send a Server->Client packet ActionFailed</li>
-	 * <li>Send a Server->Client packet MyTargetSelected to start attack and Notify AI with AI_INTENTION_ATTACK</li><BR>
-	 * <BR>
+	 * <li>Send a Server->Client packet MyTargetSelected to start attack and Notify AI with AI_INTENTION_ATTACK</li><br>
 	 * @param player The PlayerInstance to attack
 	 */
 	@Override
@@ -6719,8 +6546,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return True if inside peace zone.<BR>
-	 * <BR>
+	 * Return True if inside peace zone.
 	 * @param attacker the attacker
 	 * @return true, if is inside peace zone
 	 */
@@ -6909,8 +6735,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return True if the Creature has a Party in progress.<BR>
-	 * <BR>
+	 * Return True if the Creature has a Party in progress.
 	 * @return true, if is in party
 	 */
 	public boolean isInParty()
@@ -6919,8 +6744,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the Party object of the Creature.<BR>
-	 * <BR>
+	 * Return the Party object of the Creature.
 	 * @return the party
 	 */
 	public Party getParty()
@@ -6929,8 +6753,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the Attack Speed of the Creature (delay (in milliseconds) before next attack).<BR>
-	 * <BR>
+	 * Return the Attack Speed of the Creature (delay (in milliseconds) before next attack).
 	 * @param target the target
 	 * @param weapon the weapon
 	 * @return the int
@@ -7004,8 +6827,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return True if the Creature use a dual weapon.<BR>
-	 * <BR>
+	 * Return True if the Creature use a dual weapon.
 	 * @return true, if is using dual weapon
 	 */
 	public boolean isUsingDualWeapon()
@@ -7014,22 +6836,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Add a skill to the Creature _skills and its Func objects to the calculator set of the Creature.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All skills own by a Creature are identified in <B>_skills</B><BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Add a skill to the Creature _skills and its Func objects to the calculator set of the Creature.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All skills own by a Creature are identified in <b>_skills</b><br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Replace oldSkill by newSkill or Add the newSkill</li>
 	 * <li>If an old skill has been replaced, remove all its Func objects of Creature calculator set</li>
-	 * <li>Add Func objects of newSkill to the calculator set of the Creature</li><BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>PlayerInstance : Save update in the character_skills table of the database</li><BR>
-	 * <BR>
+	 * <li>Add Func objects of newSkill to the calculator set of the Creature</li><br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>PlayerInstance : Save update in the character_skills table of the database</li><br>
 	 * @param newSkill The Skill to add to the Creature
 	 * @return The Skill replaced or null if just added a new Skill
 	 */
@@ -7121,21 +6941,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Remove a skill from the Creature and its Func objects from calculator set of the Creature.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All skills own by a Creature are identified in <B>_skills</B><BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Remove a skill from the Creature and its Func objects from calculator set of the Creature.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All skills own by a Creature are identified in <b>_skills</b><br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Remove the skill from the Creature _skills</li>
-	 * <li>Remove all its Func objects from the Creature calculator set</li><BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>PlayerInstance : Save update in the character_skills table of the database</li><BR>
-	 * <BR>
+	 * <li>Remove all its Func objects from the Creature calculator set</li><br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>PlayerInstance : Save update in the character_skills table of the database</li><br>
 	 * @param skill The Skill to remove from the Creature
 	 * @return The Skill removed
 	 */
@@ -7151,7 +6969,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	/**
 	 * Removes the skill.
 	 * @param skillId the skill id
-	 * @return the l2 skill
+	 * @return the skill
 	 */
 	public Skill removeSkill(int skillId)
 	{
@@ -7162,7 +6980,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Removes the skill.
 	 * @param skillId the skill id
 	 * @param cancelEffect the cancel effect
-	 * @return the l2 skill
+	 * @return the skill
 	 */
 	public Skill removeSkill(int skillId, boolean cancelEffect)
 	{
@@ -7171,7 +6989,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// Remove all its Func objects from the Creature calculator set
 		if (oldSkill != null)
 		{
-			// this is just a fail-safe againts buggers and gm dummies...
+			// this is just a fail-safe againts buggers and GM dummies...
 			if (oldSkill.triggerAnotherSkill())
 			{
 				removeSkill(oldSkill.getTriggeredId(), true);
@@ -7200,12 +7018,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return all skills own by the Creature in a table of Skill.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All skills own by a Creature are identified in <B>_skills</B> the Creature <BR>
-	 * <BR>
+	 * Return all skills own by the Creature in a table of Skill.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All skills own by a Creature are identified in <b>_skills</b> the Creature
 	 * @return the all skills
 	 */
 	public Skill[] getAllSkills()
@@ -7232,8 +7049,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the level of a skill owned by the Creature.<BR>
-	 * <BR>
+	 * Return the level of a skill owned by the Creature.
 	 * @param skillId The identifier of the Skill whose level must be returned
 	 * @return The level of the Skill identified by skillId
 	 */
@@ -7245,8 +7061,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return True if the skill is known by the Creature.<BR>
-	 * <BR>
+	 * Return True if the skill is known by the Creature.
 	 * @param skillId The identifier of the Skill to check the knowledge
 	 * @return the known skill
 	 */
@@ -7257,8 +7072,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the number of skills of type(Buff, Debuff, HEAL_PERCENT, MANAHEAL_PERCENT) affecting this Creature.<BR>
-	 * <BR>
+	 * Return the number of skills of type(Buff, Debuff, HEAL_PERCENT, MANAHEAL_PERCENT) affecting this Creature.
 	 * @return The number of Buffs affecting this Creature
 	 */
 	public int getBuffCount()
@@ -7286,8 +7100,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the number of skills of type(Debuff, poison, slow, etc.) affecting this Creature.<BR>
-	 * <BR>
+	 * Return the number of skills of type(Debuff, poison, slow, etc.) affecting this Creature.
 	 * @return The number of debuff affecting this Creature
 	 */
 	public int getDeBuffCount()
@@ -7325,8 +7138,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Removes the first Buff of this Creature.<BR>
-	 * <BR>
+	 * Removes the first Buff of this Creature.
 	 * @param preferSkill If != 0 the given skill Id will be removed instead of first
 	 */
 	public void removeFirstBuff(int preferSkill)
@@ -7370,8 +7182,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Removes the first DeBuff of this Creature.<BR>
-	 * <BR>
+	 * Removes the first DeBuff of this Creature.
 	 * @param preferSkill If != 0 the given skill Id will be removed instead of first
 	 */
 	public void removeFirstDeBuff(int preferSkill)
@@ -7444,8 +7255,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Checks if the given skill stacks with an existing one.<BR>
-	 * <BR>
+	 * Checks if the given skill stacks with an existing one.
 	 * @param checkSkill the skill to be checked
 	 * @return Returns whether or not this skill will stack
 	 */
@@ -7484,19 +7294,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Manage the magic skill launching task (MP, HP, Item consummation...) and display the magic skill animation on client.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Manage the magic skill launching task (MP, HP, Item consummation...) and display the magic skill animation on client.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Send a Server->Client packet MagicSkillLaunched (to display magic skill animation) to all PlayerInstance of Creature _knownPlayers</li>
 	 * <li>Consumme MP, HP and Item if necessary</li>
 	 * <li>Send a Server->Client packet StatusUpdate with MP modification to the PlayerInstance</li>
 	 * <li>Launch the magic skill in order to calculate its effects</li>
 	 * <li>If the skill type is PDAM, notify the AI of the target with AI_INTENTION_ATTACK</li>
-	 * <li>Notify the AI of the Creature with EVT_FINISH_CASTING</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : A magic skill casting MUST BE in progress</B></FONT><BR>
-	 * <BR>
+	 * <li>Notify the AI of the Creature with EVT_FINISH_CASTING</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: A magic skill casting MUST BE in progress</b></font>
 	 * @param targets the targets
 	 * @param skill The Skill to use
 	 * @param coolTime the cool time
@@ -7509,7 +7316,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			_skillCast = null;
 			enableAllSkills();
 			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
-			
 			return;
 		}
 		
@@ -7940,12 +7746,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Reduce the item number of the Creature.<BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
-	 * <li>PlayerInstance</li><BR>
-	 * <BR>
+	 * Reduce the item number of the Creature.<br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
+	 * <li>PlayerInstance</li><br>
 	 * @param itemConsumeId the item consume id
 	 * @param itemCount the item count
 	 */
@@ -7954,12 +7759,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Enable a skill (remove it from _disabledSkills of the Creature).<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All skills disabled are identified by their skillId in <B>_disabledSkills</B> of the Creature <BR>
-	 * <BR>
+	 * Enable a skill (remove it from _disabledSkills of the Creature).<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All skills disabled are identified by their skillId in <b>_disabledSkills</b> of the Creature
 	 * @param skill
 	 */
 	public void enableSkill(Skill skill)
@@ -7995,12 +7799,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Check if a skill is disabled.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All skills disabled are identified by their skillId in <B>_disabledSkills</B> of the Creature <BR>
-	 * <BR>
+	 * Check if a skill is disabled.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All skills disabled are identified by their skillId in <b>_disabledSkills</b> of the Creature
 	 * @param skill the skill to know if its disabled
 	 * @return true, if is skill disabled
 	 */
@@ -8076,8 +7879,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Disable all skills (set _allSkillsDisabled to True).<BR>
-	 * <BR>
+	 * Disable all skills (set _allSkillsDisabled to True).
 	 */
 	public void disableAllSkills()
 	{
@@ -8085,8 +7887,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Enable all skills (set _allSkillsDisabled to False).<BR>
-	 * <BR>
+	 * Enable all skills (set _allSkillsDisabled to False).
 	 */
 	public void enableAllSkills()
 	{
@@ -8094,8 +7895,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Launch the magic skill and calculate its effects on each target contained in the targets table.<BR>
-	 * <BR>
+	 * Launch the magic skill and calculate its effects on each target contained in the targets table.
 	 * @param skill The Skill to use
 	 * @param targets The table of WorldObject targets
 	 */
@@ -8487,8 +8287,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return True if the Creature is behind the target and can't be seen.<BR>
-	 * <BR>
+	 * Return True if the Creature is behind the target and can't be seen.
 	 * @param target the target
 	 * @return true, if is behind
 	 */
@@ -8576,8 +8375,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return True if the Creature is behind the target and can't be seen.<BR>
-	 * <BR>
+	 * Return True if the Creature is behind the target and can't be seen.
 	 * @param target the target
 	 * @return true, if is front
 	 */
@@ -8630,8 +8428,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return True if the Creature is side the target and can't be seen.<BR>
-	 * <BR>
+	 * Return True if the Creature is side the target and can't be seen.
 	 * @param target the target
 	 * @return true, if is side
 	 */
@@ -8660,8 +8457,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return 1.<BR>
-	 * <BR>
+	 * Return 1.
 	 * @return the level mod
 	 */
 	public double getLevelMod()
@@ -8755,8 +8551,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return a Random Damage in function of the weapon.<BR>
-	 * <BR>
+	 * Return a Random Damage in function of the weapon.
 	 * @param target the target
 	 * @return the random damage
 	 */
@@ -8786,8 +8581,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Not Implemented.<BR>
-	 * <BR>
+	 * Not Implemented.
 	 * @return the level
 	 */
 	public abstract int getLevel();
@@ -9579,14 +9373,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Send system message about damage.<BR>
-	 * <BR>
-	 * <B><U> Overriden in </U> :</B><BR>
-	 * <BR>
+	 * Send system message about damage.<br>
+	 * <br>
+	 * <b><u>Overriden in</u>:</b><br>
+	 * <br>
 	 * <li>PlayerInstance
 	 * <li>SummonInstance
-	 * <li>PetInstance</li><BR>
-	 * <BR>
+	 * <li>PetInstance</li><br>
 	 * @param target the target
 	 * @param damage the damage
 	 * @param mcrit the mcrit
@@ -9889,8 +9682,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return a multiplier based on weapon random damage<BR>
-	 * <BR>
+	 * Return a multiplier based on weapon random damage<br>
 	 * .
 	 * @return the random damage multiplier
 	 */

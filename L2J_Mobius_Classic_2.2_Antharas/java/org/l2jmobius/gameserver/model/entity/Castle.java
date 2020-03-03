@@ -616,8 +616,7 @@ public class Castle extends AbstractResidence
 	}
 	
 	/**
-	 * Respawn all doors on castle grounds<BR>
-	 * <BR>
+	 * Respawn all doors on castle grounds
 	 * @param isDoorWeak
 	 */
 	public void spawnDoor(boolean isDoorWeak)

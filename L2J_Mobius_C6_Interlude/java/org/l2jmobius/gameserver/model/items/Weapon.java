@@ -66,17 +66,16 @@ public class Weapon extends Item
 	protected Skill[] _skillsOnCrit;
 	
 	/**
-	 * Constructor for Weapon.<BR>
-	 * <BR>
-	 * <U><I>Variables filled :</I></U><BR>
-	 * <LI>_soulShotCount & _spiritShotCount</LI>
-	 * <LI>_pDam & _mDam & _rndDam</LI>
-	 * <LI>_critical</LI>
-	 * <LI>_hitModifier</LI>
-	 * <LI>_avoidModifier</LI>
-	 * <LI>_shieldDes & _shieldDefRate</LI>
-	 * <LI>_atkSpeed & _AtkReuse</LI>
-	 * <LI>_mpConsume</LI>
+	 * Constructor for Weapon.<br>
+	 * <u><i>Variables filled :</i></u><br>
+	 * <li>_soulShotCount & _spiritShotCount</li>
+	 * <li>_pDam & _mDam & _rndDam</li>
+	 * <li>_critical</li>
+	 * <li>_hitModifier</li>
+	 * <li>_avoidModifier</li>
+	 * <li>_shieldDes & _shieldDefRate</li>
+	 * <li>_atkSpeed & _AtkReuse</li>
+	 * <li>_mpConsume</li><br>
 	 * @param type : ArmorType designating the type of armor
 	 * @param set : StatSet designating the set of couples (key,value) caracterizing the armor
 	 * @see Item constructor
@@ -199,8 +198,7 @@ public class Weapon extends Item
 	}
 	
 	/**
-	 * Return the Attack Reuse Delay of the Weapon.<BR>
-	 * <BR>
+	 * Return the Attack Reuse Delay of the Weapon.
 	 * @return int
 	 */
 	public int getAttackReuseDelay()
@@ -281,7 +279,7 @@ public class Weapon extends Item
 	}
 	
 	/**
-	 * Returns skill that player get when has equiped weapon +4 or more (for duals SA)
+	 * Returns skill that player get when has equipped weapon +4 or more (for duals SA)
 	 * @return
 	 */
 	public Skill getEnchant4Skill()

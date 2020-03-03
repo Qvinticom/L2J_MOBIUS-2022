@@ -50,8 +50,7 @@ public class Request
 	}
 	
 	/**
-	 * Set the PlayerInstance member of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).<BR>
-	 * <BR>
+	 * Set the PlayerInstance member of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).
 	 * @param partner
 	 */
 	private synchronized void setPartner(PlayerInstance partner)
@@ -131,8 +130,7 @@ public class Request
 	}
 	
 	/**
-	 * Clears PC request state. Should be called after answer packet receive.<BR>
-	 * <BR>
+	 * Clears PC request state. Should be called after answer packet receive.
 	 */
 	public void onRequestResponse()
 	{

@@ -36,27 +36,22 @@ import org.l2jmobius.gameserver.network.serverpackets.MoveToPawn;
 public class NpcAction implements IActionHandler
 {
 	/**
-	 * Manage actions when a player click on the Npc.<BR>
-	 * <BR>
-	 * <B><U> Actions on first click on the Npc (Select it)</U> :</B><BR>
-	 * <BR>
+	 * Manage actions when a player click on the Npc.<br>
+	 * <br>
+	 * <b><u>Actions on first click on the Npc (Select it)</u>:</b><br>
 	 * <li>Set the Npc as target of the PlayerInstance player (if necessary)</li>
 	 * <li>Send a Server->Client packet MyTargetSelected to the PlayerInstance player (display the select window)</li>
 	 * <li>If Npc is autoAttackable, send a Server->Client packet StatusUpdate to the PlayerInstance in order to update Npc HP bar</li>
-	 * <li>Send a Server->Client packet ValidateLocation to correct the Npc position and heading on the client</li><BR>
-	 * <BR>
-	 * <B><U> Actions on second click on the Npc (Attack it/Intercat with it)</U> :</B><BR>
-	 * <BR>
+	 * <li>Send a Server->Client packet ValidateLocation to correct the Npc position and heading on the client</li><br>
+	 * <br>
+	 * <b><u>Actions on second click on the Npc (Attack it/Intercat with it)</u>:</b><br>
 	 * <li>Send a Server->Client packet MyTargetSelected to the PlayerInstance player (display the select window)</li>
 	 * <li>If Npc is autoAttackable, notify the PlayerInstance AI with AI_INTENTION_ATTACK (after a height verification)</li>
-	 * <li>If Npc is NOT autoAttackable, notify the PlayerInstance AI with AI_INTENTION_INTERACT (after a distance verification) and show message</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Each group of Server->Client packet must be terminated by a ActionFailed packet in order to avoid that client wait an other packet</B></FONT><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Client packet : Action, AttackRequest</li><BR>
-	 * <BR>
+	 * <li>If Npc is NOT autoAttackable, notify the PlayerInstance AI with AI_INTENTION_INTERACT (after a distance verification) and show message</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: Each group of Server->Client packet must be terminated by a ActionFailed packet in order to avoid that client wait an other packet</b></font><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Client packet : Action, AttackRequest</li><br>
 	 * @param player The PlayerInstance that start an action on the Npc
 	 */
 	@Override

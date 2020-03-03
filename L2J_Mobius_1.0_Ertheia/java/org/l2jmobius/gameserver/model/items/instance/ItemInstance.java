@@ -258,19 +258,15 @@ public class ItemInstance extends WorldObject
 	}
 	
 	/**
-	 * Remove a ItemInstance from the world and send server->client GetItem packets.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Remove a ItemInstance from the world and send server->client GetItem packets.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Send a Server->Client Packet GetItem to player that pick up and its _knowPlayers member</li>
-	 * <li>Remove the WorldObject from the world</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of World </B></FONT><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Do Pickup Item : PCInstance and Pet</li><BR>
-	 * <BR>
+	 * <li>Remove the WorldObject from the world</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T REMOVE the object from _allObjects of World </b></font><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Do Pickup Item : PCInstance and Pet</li><br>
 	 * @param creature Character that pick up the item
 	 */
 	public void pickupMe(Creature creature)
@@ -401,9 +397,8 @@ public class ItemInstance extends WorldObject
 	}
 	
 	/**
-	 * Sets the location of the item.<BR>
-	 * <BR>
-	 * <U><I>Remark :</I></U> If loc and loc_data different from database, say datas not up-to-date
+	 * Sets the location of the item.<br>
+	 * <u><i>Remark :</i></u> If loc and loc_data different from database, say datas not up-to-date
 	 * @param loc : ItemLocation (enumeration)
 	 * @param loc_data : int designating the slot where the item is stored or the village for freights
 	 */
@@ -432,8 +427,7 @@ public class ItemInstance extends WorldObject
 	}
 	
 	/**
-	 * Sets the quantity of the item.<BR>
-	 * <BR>
+	 * Sets the quantity of the item.
 	 * @param count the new count to set
 	 */
 	public void setCount(long count)
@@ -456,9 +450,8 @@ public class ItemInstance extends WorldObject
 	}
 	
 	/**
-	 * Sets the quantity of the item.<BR>
-	 * <BR>
-	 * <U><I>Remark :</I></U> If loc and loc_data different from database, say datas not up-to-date
+	 * Sets the quantity of the item.<br>
+	 * <u><i>Remark :</i></u> If loc and loc_data different from database, say datas not up-to-date
 	 * @param process : String Identifier of process triggering this action
 	 * @param count : int
 	 * @param creator : PlayerInstance Player requesting the item creation
@@ -1468,7 +1461,7 @@ public class ItemInstance extends WorldObject
 	}
 	
 	/**
-	 * Updates the database.<BR>
+	 * Updates the database.
 	 */
 	public void updateDatabase()
 	{
@@ -1476,7 +1469,7 @@ public class ItemInstance extends WorldObject
 	}
 	
 	/**
-	 * Updates the database.<BR>
+	 * Updates the database.
 	 * @param force if the update should necessarilly be done.
 	 */
 	public void updateDatabase(boolean force)
@@ -1512,20 +1505,17 @@ public class ItemInstance extends WorldObject
 	}
 	
 	/**
-	 * Init a dropped ItemInstance and add it in the world as a visible object.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Init a dropped ItemInstance and add it in the world as a visible object.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Set the x,y,z position of the ItemInstance dropped and update its _worldregion</li>
 	 * <li>Add the ItemInstance dropped to _visibleObjects of its WorldRegion</li>
-	 * <li>Add the ItemInstance dropped in the world as a <B>visible</B> object</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object to _allObjects of World </B></FONT><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
+	 * <li>Add the ItemInstance dropped in the world as a <b>visible</b> object</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T ADD the object to _allObjects of World </b></font><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Drop item</li>
-	 * <li>Call Pet</li><BR>
+	 * <li>Call Pet</li>
 	 */
 	public class ItemDropTask implements Runnable
 	{

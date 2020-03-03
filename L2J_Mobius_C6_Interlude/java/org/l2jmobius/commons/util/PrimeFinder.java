@@ -37,7 +37,7 @@ import java.util.Arrays;
 public class PrimeFinder
 {
 	/**
-	 * The largest prime this class can generate; currently equal to <tt>Integer.MAX_VALUE</tt>.
+	 * The largest prime this class can generate; currently equal to <tt>Integer.MAX_VALUE</tt>
 	 */
 	public static final int LARGEST_PRIME = Integer.MAX_VALUE; // yes, it is prime.
 	

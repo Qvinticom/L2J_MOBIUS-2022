@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 
 /**
- * Effect that blocks damage and heals to HP/MP. <BR>
+ * Effect that blocks damage and heals to HP/MP.<br>
  * Regeneration or DOT shouldn't be blocked, Vampiric Rage and Balance Life as well.
  * @author Nik
  */

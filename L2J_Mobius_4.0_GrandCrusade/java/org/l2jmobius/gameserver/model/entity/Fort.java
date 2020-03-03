@@ -273,8 +273,7 @@ public class Fort extends AbstractResidence
 	}
 	
 	/**
-	 * Move non clan members off fort area and to nearest town.<BR>
-	 * <BR>
+	 * Move non clan members off fort area and to nearest town.
 	 */
 	public void banishForeigners()
 	{
@@ -516,8 +515,7 @@ public class Fort extends AbstractResidence
 	}
 	
 	/**
-	 * Respawn all doors on fort grounds<BR>
-	 * <BR>
+	 * Respawn all doors on fort grounds.
 	 */
 	public void resetDoors()
 	{
@@ -976,11 +974,10 @@ public class Fort extends AbstractResidence
 	}
 	
 	/**
-	 * @return Returns state of fortress.<BR>
-	 *         <BR>
-	 *         0 - not decided yet<BR>
-	 *         1 - independent<BR>
-	 *         2 - contracted with castle<BR>
+	 * @return Returns state of fortress.<br>
+	 *         0 - not decided yet<br>
+	 *         1 - independent<br>
+	 *         2 - contracted with castle
 	 */
 	public int getFortState()
 	{

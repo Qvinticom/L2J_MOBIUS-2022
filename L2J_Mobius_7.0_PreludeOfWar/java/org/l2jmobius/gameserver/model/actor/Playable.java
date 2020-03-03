@@ -52,7 +52,8 @@ public abstract class Playable extends Creature
 	
 	/**
 	 * Constructor of Playable.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Call the Creature constructor to create an empty _skills slot and link copy basic Calculator set to this Playable</li>
 	 * </ul>

@@ -55,8 +55,8 @@ public class BlowFishKeygen
 	}
 	
 	/**
-	 * Returns a key from this keygen pool, the logical ownership is retained by this keygen.<BR>
-	 * Thus when getting a key with interests other then read-only a copy must be performed.<BR>
+	 * Returns a key from this keygen pool, the logical ownership is retained by this keygen.<br>
+	 * Thus when getting a key with interests other then read-only a copy must be performed.
 	 * @return A key from this keygen pool.
 	 */
 	public static byte[] getRandomKey()

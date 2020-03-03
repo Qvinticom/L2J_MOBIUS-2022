@@ -95,10 +95,11 @@ public class GuardInstance extends Attackable
 	
 	/**
 	 * Return the pathfile of the selected HTML file in function of the GuardInstance Identifier and of the page number.<br>
-	 * <B><U> Format of the pathfile </U> :</B>
+	 * <br>
+	 * <b><u>Format of the pathfile</u>:</b>
 	 * <ul>
-	 * <li>if page number = 0 : <B>data/html/guard/12006.htm</B> (npcId-page number)</li>
-	 * <li>if page number > 0 : <B>data/html/guard/12006-1.htm</B> (npcId-page number)</li>
+	 * <li>if page number = 0 : <b>data/html/guard/12006.htm</b> (npcId-page number)</li>
+	 * <li>if page number > 0 : <b>data/html/guard/12006-1.htm</b> (npcId-page number)</li>
 	 * </ul>
 	 * @param npcId The Identifier of the NpcInstance whose text must be display
 	 * @param value The number of the page to display
@@ -120,19 +121,22 @@ public class GuardInstance extends Attackable
 	
 	/**
 	 * Manage actions when a player click on the GuardInstance.<br>
-	 * <B><U> Actions on first click on the GuardInstance (Select it)</U> :</B>
+	 * <br>
+	 * <b><u>Actions on first click on the GuardInstance (Select it)</u>:</b>
 	 * <ul>
 	 * <li>Set the GuardInstance as target of the PlayerInstance player (if necessary)</li>
 	 * <li>Send a Server->Client packet MyTargetSelected to the PlayerInstance player (display the select window)</li>
 	 * <li>Set the PlayerInstance Intention to AI_INTENTION_IDLE</li>
 	 * <li>Send a Server->Client packet ValidateLocation to correct the GuardInstance position and heading on the client</li>
 	 * </ul>
-	 * <B><U> Actions on second click on the GuardInstance (Attack it/Interact with it)</U> :</B>
+	 * <br>
+	 * <b><u>Actions on second click on the GuardInstance (Attack it/Interact with it)</u>:</b>
 	 * <ul>
 	 * <li>If PlayerInstance is in the _aggroList of the GuardInstance, set the PlayerInstance Intention to AI_INTENTION_ATTACK</li>
 	 * <li>If PlayerInstance is NOT in the _aggroList of the GuardInstance, set the PlayerInstance Intention to AI_INTENTION_INTERACT (after a distance verification) and show message</li>
 	 * </ul>
-	 * <B><U> Example of use </U> :</B>
+	 * <br>
+	 * <b><u>Example of use</u>:</b>
 	 * <ul>
 	 * <li>Client packet : Action, AttackRequest</li>
 	 * </ul>

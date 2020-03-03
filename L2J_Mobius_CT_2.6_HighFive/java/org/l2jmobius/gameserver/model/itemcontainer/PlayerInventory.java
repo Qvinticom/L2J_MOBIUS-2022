@@ -57,11 +57,11 @@ public class PlayerInventory extends Inventory
 	
 	/**
 	 * Block modes:
-	 * <UL>
-	 * <LI>-1 - no block
-	 * <LI>0 - block items from _invItems, allow usage of other items
-	 * <LI>1 - allow usage of items from _invItems, block other items
-	 * </UL>
+	 * <ul>
+	 * <li>-1 - no block
+	 * <li>0 - block items from _invItems, allow usage of other items
+	 * <li>1 - allow usage of items from _invItems, block other items
+	 * </ul>
 	 */
 	private int _blockMode = -1;
 	
@@ -608,7 +608,7 @@ public class PlayerInventory extends Inventory
 	}
 	
 	/**
-	 * Destroy item from inventory by using its <B>itemId</B> and checks _adena and _ancientAdena
+	 * Destroy item from inventory by using its <b>itemId</b> and checks _adena and _ancientAdena
 	 * @param process : String Identifier of process triggering this action
 	 * @param itemId : int Item identifier of the item to be destroyed
 	 * @param count : int Quantity of items to be destroyed
@@ -655,7 +655,7 @@ public class PlayerInventory extends Inventory
 	}
 	
 	/**
-	 * Drop item from inventory by using its <B>objectID</B> and checks _adena and _ancientAdena
+	 * Drop item from inventory by using its <b>objectID</b> and checks _adena and _ancientAdena
 	 * @param process : String Identifier of process triggering this action
 	 * @param objectId : int Item Instance identifier of the item to be dropped
 	 * @param count : int Quantity of items to be dropped

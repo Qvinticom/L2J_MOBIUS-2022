@@ -88,7 +88,8 @@ public class PlayerAI extends PlayableAI
 	
 	/**
 	 * Launch actions corresponding to the Event ReadyToAct.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Launch actions corresponding to the Event Think</li>
 	 * </ul>
@@ -118,7 +119,8 @@ public class PlayerAI extends PlayableAI
 	
 	/**
 	 * Launch actions corresponding to the Event Cancel.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Stop an AI Follow Task</li>
 	 * <li>Launch actions corresponding to the Event Think</li>
@@ -133,7 +135,7 @@ public class PlayerAI extends PlayableAI
 	
 	/**
 	 * Finalize the casting of a skill. This method overrides CreatureAI method.<br>
-	 * <B>What it does:</B><br>
+	 * <b>What it does:</b><br>
 	 * Check if actual intention is set to CAST and, if so, retrieves latest intention before the actual CAST and set it as the current intention for the player.
 	 */
 	@Override
@@ -185,7 +187,8 @@ public class PlayerAI extends PlayableAI
 	
 	/**
 	 * Manage the Move To Intention : Stop current Attack and Launch a Move to Location Task.<br>
-	 * <B><U> Actions</U> : </B>
+	 * <br>
+	 * <b><u>Actions</u> : </b>
 	 * <ul>
 	 * <li>Stop the actor auto-attack server side AND client side by sending Server->Client packet AutoAttackStop (broadcast)</li>
 	 * <li>Set the Intention of this AI to AI_INTENTION_MOVE_TO</li>

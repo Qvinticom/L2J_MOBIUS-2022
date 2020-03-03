@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
 /**
  * This Blink effect switches the location of the caster and the target.<br>
- * This effect is totally done based on client description. <br>
+ * This effect is totally done based on client description.<br>
  * Assume that geodata checks are done on the skill cast and not needed to repeat here.
  * @author Nik
  */

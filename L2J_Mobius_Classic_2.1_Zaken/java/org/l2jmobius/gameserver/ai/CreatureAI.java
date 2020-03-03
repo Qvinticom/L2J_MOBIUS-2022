@@ -139,7 +139,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Manage the Idle Intention : Stop Attack, Movement and Stand Up the actor.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Set the AI Intention to AI_INTENTION_IDLE</li>
 	 * <li>Init cast and attack target</li>
@@ -164,7 +165,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Manage the Active Intention : Stop Attack, Movement and Launch Think Event.<br>
-	 * <B><U> Actions</U> : <I>if the Intention is not already Active</I></B>
+	 * <br>
+	 * <b><u>Actions</u> : <i>if the Intention is not already Active</i></b>
 	 * <ul>
 	 * <li>Set the AI Intention to AI_INTENTION_ACTIVE</li>
 	 * <li>Init cast and attack target</li>
@@ -195,7 +197,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Manage the Rest Intention.<br>
-	 * <B><U> Actions</U> : </B>
+	 * <br>
+	 * <b><u>Actions</u> : </b>
 	 * <ul>
 	 * <li>Set the AI Intention to AI_INTENTION_IDLE</li>
 	 * </ul>
@@ -209,7 +212,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Manage the Attack Intention : Stop current Attack (if necessary), Start a new Attack and Launch Think Event.<br>
-	 * <B><U> Actions</U> : </B>
+	 * <br>
+	 * <b><u>Actions</u> : </b>
 	 * <ul>
 	 * <li>Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)</li>
 	 * <li>Set the Intention of this AI to AI_INTENTION_ATTACK</li>
@@ -217,7 +221,8 @@ public class CreatureAI extends AbstractAI
 	 * <li>Start the actor Auto Attack client side by sending Server->Client packet AutoAttackStart (broadcast)</li>
 	 * <li>Launch the Think Event</li>
 	 * </ul>
-	 * <B><U> Overridden in</U> :</B>
+	 * <br>
+	 * <b><u>Overridden in</u>:</b>
 	 * <ul>
 	 * <li>AttackableAI : Calculate attack timeout</li>
 	 * </ul>
@@ -281,7 +286,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Manage the Cast Intention : Stop current Attack, Init the AI in order to cast and Launch Think Event.<br>
-	 * <B><U> Actions</U> : </B>
+	 * <br>
+	 * <b><u>Actions</u> : </b>
 	 * <ul>
 	 * <li>Set the AI cast target</li>
 	 * <li>Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)</li>
@@ -331,7 +337,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Manage the Move To Intention : Stop current Attack and Launch a Move to Location Task.<br>
-	 * <B><U> Actions</U> : </B>
+	 * <br>
+	 * <b><u>Actions</u> : </b>
 	 * <ul>
 	 * <li>Stop the actor auto-attack server side AND client side by sending Server->Client packet AutoAttackStop (broadcast)</li>
 	 * <li>Set the Intention of this AI to AI_INTENTION_MOVE_TO</li>
@@ -370,7 +377,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Manage the Follow Intention : Stop current Attack and Launch a Follow Task.<br>
-	 * <B><U> Actions</U> : </B>
+	 * <br>
+	 * <b><u>Actions</u> : </b>
 	 * <ul>
 	 * <li>Stop the actor auto-attack server side AND client side by sending Server->Client packet AutoAttackStop (broadcast)</li>
 	 * <li>Set the Intention of this AI to AI_INTENTION_FOLLOW</li>
@@ -427,7 +435,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Manage the PickUp Intention : Set the pick up target and Launch a Move To Pawn Task (offset=20).<br>
-	 * <B><U> Actions</U> : </B>
+	 * <br>
+	 * <b><u>Actions</u> : </b>
 	 * <ul>
 	 * <li>Set the AI pick up target</li>
 	 * <li>Set the Intention of this AI to AI_INTENTION_PICK_UP</li>
@@ -476,7 +485,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Manage the Interact Intention : Set the interact target and Launch a Move To Pawn Task (offset=60).<br>
-	 * <B><U> Actions</U> : </B>
+	 * <br>
+	 * <b><u>Actions</u> : </b>
 	 * <ul>
 	 * <li>Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)</li>
 	 * <li>Set the AI interact target</li>
@@ -537,7 +547,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Launch actions corresponding to the Event Stunned then onAttacked Event.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)</li>
 	 * <li>Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)</li>
@@ -565,7 +576,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Launch actions corresponding to the Event Rooted.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)</li>
 	 * <li>Launch actions corresponding to the Event onAttacked</li>
@@ -588,7 +600,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Launch actions corresponding to the Event Confused.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)</li>
 	 * <li>Launch actions corresponding to the Event onAttacked</li>
@@ -606,7 +619,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Launch actions corresponding to the Event Muted.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Break a cast and send Server->Client ActionFailed packet and a System Message to the Creature</li>
 	 * </ul>
@@ -629,7 +643,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Launch actions corresponding to the Event ReadyToAct.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Launch actions corresponding to the Event Think</li>
 	 * </ul>
@@ -643,7 +658,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Launch actions corresponding to the Event Arrived.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>If the Intention was AI_INTENTION_MOVE_TO, set the Intention to AI_INTENTION_ACTIVE</li>
 	 * <li>Launch actions corresponding to the Event Think</li>
@@ -686,7 +702,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Launch actions corresponding to the Event ArrivedRevalidate.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Launch actions corresponding to the Event Think</li>
 	 * </ul>
@@ -700,7 +717,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Launch actions corresponding to the Event ArrivedBlocked.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)</li>
 	 * <li>If the Intention was AI_INTENTION_MOVE_TO, set the Intention to AI_INTENTION_ACTIVE</li>
@@ -725,7 +743,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Launch actions corresponding to the Event ForgetObject.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>If the object was targeted and the Intention was AI_INTENTION_INTERACT or AI_INTENTION_PICK_UP, set the Intention to AI_INTENTION_ACTIVE</li>
 	 * <li>If the object was targeted to attack, stop the auto-attack, cancel target and set the Intention to AI_INTENTION_ACTIVE</li>
@@ -781,7 +800,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Launch actions corresponding to the Event Cancel.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Stop an AI Follow Task</li>
 	 * <li>Launch actions corresponding to the Event Think</li>
@@ -806,7 +826,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Launch actions corresponding to the Event Dead.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Stop an AI Follow Task</li>
 	 * <li>Kill the actor client side by sending Server->Client packet AutoAttackStop, StopMove/StopRotation, Die (broadcast)</li>
@@ -829,7 +850,8 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Launch actions corresponding to the Event Fake Death.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Stop an AI Follow Task</li>
 	 * </ul>
@@ -910,13 +932,15 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Manage the Move to Pawn action in function of the distance and of the Interact area.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Get the distance between the current position of the Creature and the target (x,y)</li>
 	 * <li>If the distance > offset+20, move the actor (by running) to Pawn server side AND client side by sending Server->Client packet MoveToPawn (broadcast)</li>
 	 * <li>If the distance <= offset+20, Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)</li>
 	 * </ul>
-	 * <B><U> Example of use </U> :</B>
+	 * <br>
+	 * <b><u>Example of use</u>:</b>
 	 * <ul>
 	 * <li>PLayerAI, SummonAI</li>
 	 * </ul>
@@ -1017,13 +1041,15 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Modify current Intention and actions if the target is lost or dead.<br>
-	 * <B><U> Actions</U> : <I>If the target is lost or dead</I></B>
+	 * <br>
+	 * <b><u>Actions</u> : <i>If the target is lost or dead</i></b>
 	 * <ul>
 	 * <li>Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)</li>
 	 * <li>Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)</li>
 	 * <li>Set the Intention of this AbstractAI to AI_INTENTION_ACTIVE</li>
 	 * </ul>
-	 * <B><U> Example of use </U> :</B>
+	 * <br>
+	 * <b><u>Example of use</u>:</b>
 	 * <ul>
 	 * <li>PLayerAI, SummonAI</li>
 	 * </ul>
@@ -1050,13 +1076,15 @@ public class CreatureAI extends AbstractAI
 	
 	/**
 	 * Modify current Intention and actions if the target is lost.<br>
-	 * <B><U> Actions</U> : <I>If the target is lost</I></B>
+	 * <br>
+	 * <b><u>Actions</u> : <i>If the target is lost</i></b>
 	 * <ul>
 	 * <li>Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)</li>
 	 * <li>Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)</li>
 	 * <li>Set the Intention of this AbstractAI to AI_INTENTION_ACTIVE</li>
 	 * </ul>
-	 * <B><U> Example of use </U> :</B>
+	 * <br>
+	 * <b><u>Example of use</u>:</b>
 	 * <ul>
 	 * <li>PLayerAI, SummonAI</li>
 	 * </ul>

@@ -32,12 +32,12 @@ public class TvTManager
 	protected static final Logger LOGGER = Logger.getLogger(TvTManager.class.getName());
 	
 	/**
-	 * Task for event cycles<br>
+	 * Task for event cycles
 	 */
 	private TvTStartTask _task;
 	
 	/**
-	 * New instance only by getInstance()<br>
+	 * New instance only by getInstance()
 	 */
 	protected TvTManager()
 	{
@@ -55,9 +55,8 @@ public class TvTManager
 	}
 	
 	/**
-	 * Initialize new/Returns the one and only instance<br>
-	 * <br>
-	 * @return TvTManager<br>
+	 * Initialize new/Returns the one and only instance
+	 * @return TvTManager
 	 */
 	public static TvTManager getInstance()
 	{

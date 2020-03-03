@@ -75,7 +75,6 @@ public class LoginServerThread extends Thread
 	 * The BlowFish engine used to encrypt packets<br>
 	 * It is first initialized with a unified key:<br>
 	 * "_;v.]05-31!|+-%xT!^[$\00"<br>
-	 * <br>
 	 * and then after handshake, with a new key sent by<br>
 	 * loginserver during the handshake. This new key is stored<br>
 	 * in {@link #_blowfishKey}

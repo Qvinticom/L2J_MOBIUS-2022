@@ -58,7 +58,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * This class contains all informations concerning the item (weapon, armor, etc).<BR>
+ * This class contains all informations concerning the item (weapon, armor, etc).<br>
  * Mother class of :
  * <ul>
  * <li>Armor</li>
@@ -174,8 +174,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	private boolean _isBlessed;
 	
 	/**
-	 * Constructor of the Item that fill class variables.<BR>
-	 * <BR>
+	 * Constructor of the Item that fill class variables.
 	 * @param set : StatSet corresponding to a set of couples (key,value) for description of the item
 	 */
 	protected Item(StatSet set)

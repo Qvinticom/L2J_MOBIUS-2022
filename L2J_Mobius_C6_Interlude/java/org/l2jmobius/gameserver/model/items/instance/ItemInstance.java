@@ -195,9 +195,8 @@ public class ItemInstance extends WorldObject
 	}
 	
 	/**
-	 * Sets the location of the item.<BR>
-	 * <BR>
-	 * <U><I>Remark :</I></U> If loc and loc_data different from database, say datas not up-to-date
+	 * Sets the location of the item.<br>
+	 * <u><i>Remark :</i></u> If loc and loc_data different from database, say datas not up-to-date
 	 * @param loc : ItemLocation (enumeration)
 	 * @param locData : int designating the slot where the item is stored or the village for freights
 	 */
@@ -236,9 +235,8 @@ public class ItemInstance extends WorldObject
 	}
 	
 	/**
-	 * Sets the quantity of the item.<BR>
-	 * <BR>
-	 * <U><I>Remark :</I></U> If loc and loc_data different from database, say datas not up-to-date
+	 * Sets the quantity of the item.<br>
+	 * <u><i>Remark :</i></u> If loc and loc_data different from database, say datas not up-to-date
 	 * @param process : String Identifier of process triggering this action
 	 * @param count : int
 	 * @param creator : PlayerInstance Player requesting the item creation
@@ -312,9 +310,8 @@ public class ItemInstance extends WorldObject
 	}
 	
 	/**
-	 * Sets the quantity of the item.<BR>
-	 * <BR>
-	 * <U><I>Remark :</I></U> If loc and loc_data different from database, say datas not up-to-date
+	 * Sets the quantity of the item.<br>
+	 * <u><i>Remark :</i></u> If loc and loc_data different from database, say datas not up-to-date
 	 * @param count : int
 	 */
 	public void setCount(int count)
@@ -500,7 +497,7 @@ public class ItemInstance extends WorldObject
 	}
 	
 	/**
-	 * Sets the price of the item for selling <U><I>Remark :</I></U> If loc and loc_data different from database, say datas not up-to-date.
+	 * Sets the price of the item for selling <u><i>Remark :</i></u> If loc and loc_data different from database, say datas not up-to-date.
 	 * @param price : int designating the price
 	 */
 	public void setPriceToSell(int price)
@@ -965,18 +962,17 @@ public class ItemInstance extends WorldObject
 	}
 	
 	/**
-	 * Updates database.<BR>
-	 * <BR>
-	 * <U><I>Concept : </I></U><BR>
-	 * <B>IF</B> the item exists in database :
-	 * <UL>
-	 * <LI><B>IF</B> the item has no owner, or has no location, or has a null quantity : remove item from database</LI>
-	 * <LI><B>ELSE</B> : update item in database</LI>
-	 * </UL>
-	 * <B> Otherwise</B> :
-	 * <UL>
-	 * <LI><B>IF</B> the item hasn't a null quantity, and has a correct location, and has a correct owner : insert item in database</LI>
-	 * </UL>
+	 * Updates database.<br>
+	 * <u><i>Concept:</i></u><br>
+	 * <b>IF</b> the item exists in database :
+	 * <ul>
+	 * <li><b>IF</b> the item has no owner, or has no location, or has a null quantity : remove item from database</li>
+	 * <li><b>ELSE</b> : update item in database</li>
+	 * </ul>
+	 * <b> Otherwise</b> :
+	 * <ul>
+	 * <li><b>IF</b> the item hasn't a null quantity, and has a correct location, and has a correct owner : insert item in database</li>
+	 * </ul>
 	 */
 	public void updateDatabase()
 	{
@@ -1117,24 +1113,20 @@ public class ItemInstance extends WorldObject
 	}
 	
 	/**
-	 * Init a dropped ItemInstance and add it in the world as a visible object.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Init a dropped ItemInstance and add it in the world as a visible object.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Set the x,y,z position of the ItemInstance dropped and update its _worldregion</li>
 	 * <li>Add the ItemInstance dropped to _visibleObjects of its WorldRegion</li>
-	 * <li>Add the ItemInstance dropped in the world as a <B>visible</B> object</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object to _allObjects of World </B></FONT><BR>
-	 * <BR>
-	 * <B><U> Assert </U> :</B><BR>
-	 * <BR>
-	 * <li>_worldRegion == null <I>(WorldObject is invisible at the beginning)</I></li><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
+	 * <li>Add the ItemInstance dropped in the world as a <b>visible</b> object</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T ADD the object to _allObjects of World </b></font><br>
+	 * <br>
+	 * <b><u>Assert</u>:</b><br>
+	 * <li>_worldRegion == null <i>(WorldObject is invisible at the beginning)</i></li><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Drop item</li>
-	 * <li>Call Pet</li><BR>
+	 * <li>Call Pet</li><br>
 	 * @param dropper the dropper
 	 * @param x the x
 	 * @param y the y

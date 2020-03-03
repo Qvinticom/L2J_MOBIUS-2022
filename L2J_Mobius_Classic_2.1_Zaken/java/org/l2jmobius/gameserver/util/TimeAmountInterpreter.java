@@ -67,8 +67,7 @@ public class TimeAmountInterpreter
 	}
 	
 	/**
-	 * Appends an user-friendly description of the given amount of time to the specified text builder.<BR>
-	 * <BR>
+	 * Appends an user-friendly description of the given amount of time to the specified text builder.<br>
 	 * Please keep in mind, that this method is primarily designed to be used with heap text builders. Therefore, if the given text builder throws an {@link IOException}, this exception will be wrapped in a {@link RuntimeException} and returned to the caller as an unchecked exception.
 	 * @param <T>
 	 * @param textBuilder a character sequence builder

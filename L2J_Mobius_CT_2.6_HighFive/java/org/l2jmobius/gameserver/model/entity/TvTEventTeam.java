@@ -27,25 +27,24 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 public class TvTEventTeam
 {
 	/**
-	 * The name of the team<br>
+	 * The name of the team
 	 */
 	private final String _name;
 	/**
-	 * The team spot coordinated<br>
+	 * The team spot coordinated
 	 */
 	private int[] _coordinates = new int[3];
 	/**
-	 * The points of the team<br>
+	 * The points of the team
 	 */
 	private short _points;
 	/** Name and instance of all participated players in map. */
 	private final Map<Integer, PlayerInstance> _participatedPlayers = new ConcurrentHashMap<>();
 	
 	/**
-	 * C'tor initialize the team<br>
-	 * <br>
-	 * @param name as String<br>
-	 * @param coordinates as int[]<br>
+	 * C'tor initialize the team
+	 * @param name as String
+	 * @param coordinates as int[]
 	 */
 	public TvTEventTeam(String name, int[] coordinates)
 	{
@@ -55,10 +54,9 @@ public class TvTEventTeam
 	}
 	
 	/**
-	 * Adds a player to the team<br>
-	 * <br>
-	 * @param playerInstance as PlayerInstance<br>
-	 * @return boolean: true if success, otherwise false<br>
+	 * Adds a player to the team
+	 * @param playerInstance as PlayerInstance
+	 * @return boolean: true if success, otherwise false
 	 */
 	public boolean addPlayer(PlayerInstance playerInstance)
 	{
@@ -82,7 +80,7 @@ public class TvTEventTeam
 	}
 	
 	/**
-	 * Increases the points of the team<br>
+	 * Increases the points of the team
 	 */
 	public void increasePoints()
 	{
@@ -90,7 +88,7 @@ public class TvTEventTeam
 	}
 	
 	/**
-	 * Cleanup the team and make it ready for adding players again<br>
+	 * Cleanup the team and make it ready for adding players again
 	 */
 	public void cleanMe()
 	{
@@ -109,9 +107,8 @@ public class TvTEventTeam
 	}
 	
 	/**
-	 * Returns the name of the team<br>
-	 * <br>
-	 * @return String: name of the team<br>
+	 * Returns the name of the team
+	 * @return String: name of the team
 	 */
 	public String getName()
 	{
@@ -119,9 +116,8 @@ public class TvTEventTeam
 	}
 	
 	/**
-	 * Returns the coordinates of the team spot<br>
-	 * <br>
-	 * @return int[]: team coordinates<br>
+	 * Returns the coordinates of the team spot
+	 * @return int[]: team coordinates
 	 */
 	public int[] getCoordinates()
 	{
@@ -129,9 +125,8 @@ public class TvTEventTeam
 	}
 	
 	/**
-	 * Returns the points of the team<br>
-	 * <br>
-	 * @return short: team points<br>
+	 * Returns the points of the team
+	 * @return short: team points
 	 */
 	public short getPoints()
 	{
@@ -139,9 +134,8 @@ public class TvTEventTeam
 	}
 	
 	/**
-	 * Returns name and instance of all participated players in Map<br>
-	 * <br>
-	 * @return Map<String, PlayerInstance>: map of players in this team<br>
+	 * Returns name and instance of all participated players in Map
+	 * @return Map<String, PlayerInstance>: map of players in this team
 	 */
 	public Map<Integer, PlayerInstance> getParticipatedPlayers()
 	{
@@ -149,9 +143,8 @@ public class TvTEventTeam
 	}
 	
 	/**
-	 * Returns player count of this team<br>
-	 * <br>
-	 * @return int: number of players in team<br>
+	 * Returns player count of this team
+	 * @return int: number of players in team
 	 */
 	public int getParticipatedPlayerCount()
 	{

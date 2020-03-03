@@ -54,7 +54,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Frintezza AI
  * @author Darki699
  * @author SANDMAN L2J_JP(modified)
- * @author JOJO Update by rocknow Updated by L2jOff team Updated by L2jFrozen team <BR>
+ * @author JOJO Update by rocknow Updated by L2jOff team Updated by L2jFrozen team<br>
  *         Warn: be careful with adding new spawns {@link #getXFix(int)}
  */
 public class Frintezza extends Quest
@@ -1787,7 +1787,7 @@ public class Frintezza extends Quest
 	}
 	
 	/**
-	 * Override spawn method to correct spawn cords after lair move<BR>
+	 * Override spawn method to correct spawn cords after lair move<br>
 	 * TODO: Update cords in script, im just lazy :)
 	 */
 	@Override

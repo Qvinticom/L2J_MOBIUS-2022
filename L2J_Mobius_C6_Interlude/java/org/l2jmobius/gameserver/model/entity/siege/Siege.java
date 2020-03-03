@@ -297,9 +297,7 @@ public class Siege
 	}
 	
 	/**
-	 * When siege ends<BR>
-	 * <BR>
-	 * .
+	 * When siege ends
 	 */
 	public void endSiege()
 	{
@@ -418,9 +416,7 @@ public class Siege
 	}
 	
 	/**
-	 * When control of castle changed during siege<BR>
-	 * <BR>
-	 * .
+	 * When control of castle changed during siege
 	 */
 	public void midVictory()
 	{
@@ -526,9 +522,7 @@ public class Siege
 	}
 	
 	/**
-	 * When siege starts<BR>
-	 * <BR>
-	 * .
+	 * When siege starts
 	 */
 	public void startSiege()
 	{
@@ -603,8 +597,7 @@ public class Siege
 	}
 	
 	/**
-	 * Announce to player.<BR>
-	 * <BR>
+	 * Announce to player.
 	 * @param message The String of the message to send to player
 	 * @param inAreaOnly The boolean flag to show message to players in area only.
 	 */
@@ -675,9 +668,7 @@ public class Siege
 	}
 	
 	/**
-	 * Approve clan as defender for siege<BR>
-	 * <BR>
-	 * .
+	 * Approve clan as defender for siege.
 	 * @param clanId The int of player's clan id
 	 */
 	public void approveSiegeDefenderClan(int clanId)
@@ -714,9 +705,7 @@ public class Siege
 	}
 	
 	/**
-	 * Return true if clan is attacker<BR>
-	 * <BR>
-	 * .
+	 * Return true if clan is attacker.
 	 * @param clan The Clan of the player
 	 * @return true, if successful
 	 */
@@ -726,9 +715,7 @@ public class Siege
 	}
 	
 	/**
-	 * Return true if clan is defender<BR>
-	 * <BR>
-	 * .
+	 * Return true if clan is defender.
 	 * @param clan The Clan of the player
 	 * @return true, if successful
 	 */
@@ -738,9 +725,7 @@ public class Siege
 	}
 	
 	/**
-	 * Return true if clan is defender waiting approval<BR>
-	 * <BR>
-	 * .
+	 * Return true if clan is defender waiting approval.
 	 * @param clan The Clan of the player
 	 * @return true, if successful
 	 */
@@ -965,9 +950,7 @@ public class Siege
 	}
 	
 	/**
-	 * Register clan as attacker<BR>
-	 * <BR>
-	 * .
+	 * Register clan as attacker.
 	 * @param player The PlayerInstance of the player trying to register
 	 */
 	public void registerAttacker(PlayerInstance player)
@@ -1006,9 +989,7 @@ public class Siege
 	}
 	
 	/**
-	 * Register clan as defender<BR>
-	 * <BR>
-	 * .
+	 * Register clan as defender.
 	 * @param player The PlayerInstance of the player trying to register
 	 */
 	public void registerDefender(PlayerInstance player)
@@ -1034,9 +1015,7 @@ public class Siege
 	}
 	
 	/**
-	 * Remove clan from siege<BR>
-	 * <BR>
-	 * .
+	 * Remove clan from siege.
 	 * @param clanId The int of player's clan id
 	 */
 	public void removeSiegeClan(int clanId)
@@ -1063,9 +1042,7 @@ public class Siege
 	}
 	
 	/**
-	 * Remove clan from siege<BR>
-	 * <BR>
-	 * .
+	 * Remove clan from siege.
 	 * @param clan the clan
 	 */
 	public void removeSiegeClan(Clan clan)
@@ -1079,9 +1056,7 @@ public class Siege
 	}
 	
 	/**
-	 * Remove clan from siege<BR>
-	 * <BR>
-	 * .
+	 * Remove clan from siege.
 	 * @param player The PlayerInstance of player/clan being removed
 	 */
 	public void removeSiegeClan(PlayerInstance player)
@@ -1090,9 +1065,7 @@ public class Siege
 	}
 	
 	/**
-	 * Start the auto tasks<BR>
-	 * <BR>
-	 * .
+	 * Start the auto tasks
 	 */
 	public void startAutoTask()
 	{
@@ -1158,9 +1131,7 @@ public class Siege
 	}
 	
 	/**
-	 * Add clan as attacker<BR>
-	 * <BR>
-	 * .
+	 * Add clan as attacker.
 	 * @param clanId The int of clan's id
 	 */
 	private void addAttacker(int clanId)
@@ -1170,9 +1141,7 @@ public class Siege
 	}
 	
 	/**
-	 * Add clan as defender<BR>
-	 * <BR>
-	 * .
+	 * Add clan as defender.
 	 * @param clanId The int of clan's id
 	 */
 	private void addDefender(int clanId)
@@ -1195,9 +1164,7 @@ public class Siege
 	}
 	
 	/**
-	 * Add clan as defender waiting approval<BR>
-	 * <BR>
-	 * .
+	 * Add clan as defender waiting approval.
 	 * @param clanId The int of clan's id
 	 */
 	private void addDefenderWaiting(int clanId)
@@ -1207,8 +1174,7 @@ public class Siege
 	}
 	
 	/**
-	 * Return true if the player can register.<BR>
-	 * <BR>
+	 * Return true if the player can register.
 	 * @param player The PlayerInstance of the player trying to register
 	 * @return true, if successful
 	 */
@@ -1254,8 +1220,7 @@ public class Siege
 	}
 	
 	/**
-	 * Return true if the clan has already registered to a siege for the same day.<BR>
-	 * <BR>
+	 * Return true if the clan has already registered to a siege for the same day.
 	 * @param clan The Clan of the player trying to register
 	 * @return true, if successful
 	 */
@@ -1284,8 +1249,7 @@ public class Siege
 	}
 	
 	/**
-	 * Return the correct siege date as Calendar.<BR>
-	 * <BR>
+	 * Return the correct siege date as Calendar.
 	 */
 	private void correctSiegeDateTime()
 	{
@@ -1457,8 +1421,7 @@ public class Siege
 	}
 	
 	/**
-	 * Save registration to database.<BR>
-	 * <BR>
+	 * Save registration to database.
 	 * @param clan The Clan of player
 	 * @param typeId -1 = owner 0 = defender, 1 = attacker, 2 = defender waiting
 	 * @param isUpdateRegistration the is update registration
@@ -1591,8 +1554,7 @@ public class Siege
 	}
 	
 	/**
-	 * Spawn siege guard.<BR>
-	 * <BR>
+	 * Spawn siege guard.
 	 */
 	private void spawnSiegeGuard()
 	{

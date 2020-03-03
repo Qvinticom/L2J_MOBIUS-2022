@@ -36,14 +36,13 @@ public class HelperBuffHolder
 	private int _skillLevel;
 	
 	/**
-	 * If True only Magus class will obtain this Buff <BR>
+	 * If True only Magus class will obtain this Buff<br>
 	 * If False only Fighter class will obtain this Buff
 	 */
 	private boolean _isMagicClass;
 	
 	/**
-	 * Constructor of HelperBuff.<BR>
-	 * <BR>
+	 * Constructor of HelperBuff.
 	 * @param set
 	 */
 	public HelperBuffHolder(StatSet set)

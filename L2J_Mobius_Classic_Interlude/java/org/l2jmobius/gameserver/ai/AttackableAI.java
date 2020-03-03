@@ -212,7 +212,7 @@ public class AttackableAI extends CreatureAI
 	
 	/**
 	 * Set the Intention of this CreatureAI and create an AI Task executed every 1s (call onEvtThink method) for this Attackable.<br>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : If actor _knowPlayer isn't EMPTY, AI_INTENTION_IDLE will be change in AI_INTENTION_ACTIVE</B></FONT>
+	 * <font color=#FF0000><b><u>Caution</u>: If actor _knowPlayer isn't EMPTY, AI_INTENTION_IDLE will be change in AI_INTENTION_ACTIVE</b></font>
 	 * @param intention The new Intention to set to the AI
 	 * @param args The first parameter of the Intention
 	 */
@@ -317,7 +317,7 @@ public class AttackableAI extends CreatureAI
 	}
 	
 	/**
-	 * Manage AI standard thinks of a Attackable (called by onEvtThink). <B><U> Actions</U> :</B>
+	 * Manage AI standard thinks of a Attackable (called by onEvtThink). <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Update every 1s the _globalAggro counter to come close to 0</li>
 	 * <li>If the actor is Aggressive and can attack, add all autoAttackable Creature in its Aggro Range to its _aggroList, chose a target and order to attack it</li>
@@ -612,7 +612,7 @@ public class AttackableAI extends CreatureAI
 	}
 	
 	/**
-	 * Manage AI attack thinks of a Attackable (called by onEvtThink). <B><U> Actions</U> :</B>
+	 * Manage AI attack thinks of a Attackable (called by onEvtThink). <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Update the attack timeout if actor is running</li>
 	 * <li>If target is dead or timeout is expired, stop this attack and set the Intention to AI_INTENTION_ACTIVE</li>
@@ -1243,7 +1243,8 @@ public class AttackableAI extends CreatureAI
 	
 	/**
 	 * Launch actions corresponding to the Event Attacked.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Init the attack : Calculate the attack timeout, Set the _globalAggro to 0, Add the attacker to the actor _aggroList</li>
 	 * <li>Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance</li>
@@ -1307,7 +1308,8 @@ public class AttackableAI extends CreatureAI
 	
 	/**
 	 * Launch actions corresponding to the Event Aggression.<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Add the target to the actor _aggroList or update hate if already present</li>
 	 * <li>Set the actor Intention to AI_INTENTION_ATTACK (if actor is GuardInstance check if it isn't too far from its home location)</li>

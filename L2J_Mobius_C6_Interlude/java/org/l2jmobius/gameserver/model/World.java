@@ -80,12 +80,11 @@ public class World
 	}
 	
 	/**
-	 * Add WorldObject object in _allObjects.<BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
+	 * Add WorldObject object in _allObjects.<br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Withdraw an item from the warehouse, create an item</li>
-	 * <li>Spawn a Creature (PC, NPC, Pet)</li><BR>
+	 * <li>Spawn a Creature (PC, NPC, Pet)</li><br>
 	 * @param object the object
 	 */
 	public void storeObject(WorldObject object)
@@ -94,13 +93,12 @@ public class World
 	}
 	
 	/**
-	 * Remove WorldObject object from _allObjects of World.<BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
+	 * Remove WorldObject object from _allObjects of World.<br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Delete item from inventory, tranfer Item from inventory to warehouse</li>
 	 * <li>Crystallize item</li>
-	 * <li>Remove NPC/PC/Pet from the world</li><BR>
+	 * <li>Remove NPC/PC/Pet from the world</li><br>
 	 * @param object WorldObject to remove from _allObjects of World
 	 */
 	public void removeObject(WorldObject object)
@@ -133,13 +131,12 @@ public class World
 	}
 	
 	/**
-	 * Return the WorldObject object that belongs to an ID or null if no object found.<BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Client packets : Action, AttackRequest, RequestJoinParty, RequestJoinPledge...</li><BR>
+	 * Return the WorldObject object that belongs to an ID or null if no object found.<br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Client packets : Action, AttackRequest, RequestJoinParty, RequestJoinPledge...</li><br>
 	 * @param oID Identifier of the WorldObject
-	 * @return the l2 object
+	 * @return the object
 	 */
 	public WorldObject findObject(int oID)
 	{
@@ -156,8 +153,7 @@ public class World
 	}
 	
 	/**
-	 * Get the count of all visible objects in world.<br>
-	 * <br>
+	 * Get the count of all visible objects in world.
 	 * @return count off all World objects
 	 */
 	public int getAllVisibleObjectsCount()
@@ -166,10 +162,8 @@ public class World
 	}
 	
 	/**
-	 * Return a collection containing all players in game.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Read-only, please! </B></FONT><BR>
-	 * <BR>
+	 * Return a collection containing all players in game.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: Read-only, please! </b></font>
 	 * @return the all players
 	 */
 	public Collection<PlayerInstance> getAllPlayers()
@@ -178,8 +172,7 @@ public class World
 	}
 	
 	/**
-	 * Return how many players are online.<BR>
-	 * <BR>
+	 * Return how many players are online.
 	 * @return number of online players.
 	 */
 	public static Integer getAllPlayersCount()
@@ -215,10 +208,8 @@ public class World
 	}
 	
 	/**
-	 * Return a collection containing all pets in game.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Read-only, please! </B></FONT><BR>
-	 * <BR>
+	 * Return a collection containing all pets in game.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: Read-only, please! </b></font>
 	 * @return the all pets
 	 */
 	public Collection<PetInstance> getAllPets()
@@ -227,8 +218,7 @@ public class World
 	}
 	
 	/**
-	 * Return the pet instance from the given ownerId.<BR>
-	 * <BR>
+	 * Return the pet instance from the given ownerId.
 	 * @param ownerId ID of the owner
 	 * @return the pet
 	 */
@@ -238,11 +228,10 @@ public class World
 	}
 	
 	/**
-	 * Add the given pet instance from the given ownerId.<BR>
-	 * <BR>
+	 * Add the given pet instance from the given ownerId.
 	 * @param ownerId ID of the owner
 	 * @param pet PetInstance of the pet
-	 * @return the l2 pet instance
+	 * @return the pet instance
 	 */
 	public PetInstance addPet(int ownerId, PetInstance pet)
 	{
@@ -250,8 +239,7 @@ public class World
 	}
 	
 	/**
-	 * Remove the given pet instance.<BR>
-	 * <BR>
+	 * Remove the given pet instance.
 	 * @param ownerId ID of the owner
 	 */
 	public void removePet(int ownerId)
@@ -260,8 +248,7 @@ public class World
 	}
 	
 	/**
-	 * Remove the given pet instance.<BR>
-	 * <BR>
+	 * Remove the given pet instance.
 	 * @param pet the pet to remove
 	 */
 	public void removePet(PetInstance pet)
@@ -270,31 +257,27 @@ public class World
 	}
 	
 	/**
-	 * Add a WorldObject in the world.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * WorldObject (including PlayerInstance) are identified in <B>_visibleObjects</B> of his current WorldRegion and in <B>_knownObjects</B> of other surrounding Creatures <BR>
-	 * PlayerInstance are identified in <B>_allPlayers</B> of World, in <B>_allPlayers</B> of his current WorldRegion and in <B>_knownPlayer</B> of other surrounding Creatures <BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Add a WorldObject in the world.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * WorldObject (including PlayerInstance) are identified in <b>_visibleObjects</b> of his current WorldRegion and in <b>_knownObjects</b> of other surrounding Creatures<br>
+	 * PlayerInstance are identified in <b>_allPlayers</b> of World, in <b>_allPlayers</b> of his current WorldRegion and in <b>_knownPlayer</b> of other surrounding Creatures<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Add the WorldObject object in _allPlayers* of World</li>
 	 * <li>Add the WorldObject object in _gmList** of GmListTable</li>
-	 * <li>Add object in _knownObjects and _knownPlayer* of all surrounding WorldRegion Creatures</li> <BR>
-	 * <li>If object is a Creature, add all surrounding WorldObject in its _knownObjects and all surrounding PlayerInstance in its _knownPlayer</li><BR>
-	 * <I>* only if object is a PlayerInstance</I><BR>
-	 * <I>** only if object is a GM PlayerInstance</I><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object in _visibleObjects and _allPlayers* of WorldRegion (need synchronisation)</B></FONT><BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object to _allObjects and _allPlayers* of World (need synchronisation)</B></FONT><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
+	 * <li>Add object in _knownObjects and _knownPlayer* of all surrounding WorldRegion Creatures</li>
+	 * <li>If object is a Creature, add all surrounding WorldObject in its _knownObjects and all surrounding PlayerInstance in its _knownPlayer</li><br>
+	 * <i>* only if object is a PlayerInstance</i><br>
+	 * <i>** only if object is a GM PlayerInstance</i><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T ADD the object in _visibleObjects and _allPlayers* of WorldRegion (need synchronisation)</b></font><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T ADD the object to _allObjects and _allPlayers* of World (need synchronisation)</b></font><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Drop an Item</li>
 	 * <li>Spawn a Creature</li>
-	 * <li>Apply Death Penalty of a PlayerInstance</li><BR>
-	 * <BR>
+	 * <li>Apply Death Penalty of a PlayerInstance</li><br>
 	 * @param object L2object to add in the world
 	 * @param newRegion the new region
 	 * @param dropper Creature who has dropped the object (if necessary)
@@ -383,11 +366,10 @@ public class World
 	}
 	
 	/**
-	 * Remove the PlayerInstance from _allPlayers of World.<BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Remove a player fom the visible objects</li><BR>
+	 * Remove the PlayerInstance from _allPlayers of World.<br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Remove a player fom the visible objects</li><br>
 	 * @param player the cha
 	 */
 	public void removeFromAllPlayers(PlayerInstance player)
@@ -399,31 +381,26 @@ public class World
 	}
 	
 	/**
-	 * Remove a WorldObject from the world.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * WorldObject (including PlayerInstance) are identified in <B>_visibleObjects</B> of his current WorldRegion and in <B>_knownObjects</B> of other surrounding Creatures <BR>
-	 * PlayerInstance are identified in <B>_allPlayers</B> of World, in <B>_allPlayers</B> of his current WorldRegion and in <B>_knownPlayer</B> of other surrounding Creatures <BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Remove a WorldObject from the world.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * WorldObject (including PlayerInstance) are identified in <b>_visibleObjects</b> of his current WorldRegion and in <b>_knownObjects</b> of other surrounding Creatures<br>
+	 * PlayerInstance are identified in <b>_allPlayers</b> of World, in <b>_allPlayers</b> of his current WorldRegion and in <b>_knownPlayer</b> of other surrounding Creatures<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Remove the WorldObject object from _allPlayers* of World</li>
 	 * <li>Remove the WorldObject object from _visibleObjects and _allPlayers* of WorldRegion</li>
 	 * <li>Remove the WorldObject object from _gmList** of GmListTable</li>
-	 * <li>Remove object from _knownObjects and _knownPlayer* of all surrounding WorldRegion Creatures</li><BR>
-	 * <li>If object is a Creature, remove all WorldObject from its _knownObjects and all PlayerInstance from its _knownPlayer</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of World</B></FONT><BR>
-	 * <BR>
-	 * <I>* only if object is a PlayerInstance</I><BR>
-	 * <I>** only if object is a GM PlayerInstance</I><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
+	 * <li>Remove object from _knownObjects and _knownPlayer* of all surrounding WorldRegion Creatures</li>
+	 * <li>If object is a Creature, remove all WorldObject from its _knownObjects and all PlayerInstance from its _knownPlayer</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T REMOVE the object from _allObjects of World</b></font><br>
+	 * <i>* only if object is a PlayerInstance</i><br>
+	 * <i>** only if object is a GM PlayerInstance</i><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Pickup an Item</li>
-	 * <li>Decay a Creature</li><BR>
-	 * <BR>
+	 * <li>Decay a Creature</li><br>
 	 * @param object L2object to remove from the world
 	 * @param oldRegion the old region
 	 */
@@ -483,16 +460,15 @@ public class World
 	}
 	
 	/**
-	 * Return all visible objects of the WorldRegion object's and of its surrounding WorldRegion.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All visible object are identified in <B>_visibleObjects</B> of their current WorldRegion <BR>
-	 * All surrounding WorldRegion are identified in <B>_surroundingRegions</B> of the selected WorldRegion in order to scan a large area around a WorldObject<BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Find Close Objects for Creature</li><BR>
+	 * Return all visible objects of the WorldRegion object's and of its surrounding WorldRegion.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All visible object are identified in <b>_visibleObjects</b> of their current WorldRegion<br>
+	 * All surrounding WorldRegion are identified in <b>_surroundingRegions</b> of the selected WorldRegion in order to scan a large area around a WorldObject<br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Find Close Objects for Creature</li><br>
 	 * @param object L2object that determine the current WorldRegion
 	 * @return the visible objects
 	 */
@@ -540,18 +516,17 @@ public class World
 	}
 	
 	/**
-	 * Return all visible objects of the WorldRegions in the circular area (radius) centered on the object.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All visible object are identified in <B>_visibleObjects</B> of their current WorldRegion <BR>
-	 * All surrounding WorldRegion are identified in <B>_surroundingRegions</B> of the selected WorldRegion in order to scan a large area around a WorldObject<BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
+	 * Return all visible objects of the WorldRegions in the circular area (radius) centered on the object.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All visible object are identified in <b>_visibleObjects</b> of their current WorldRegion<br>
+	 * All surrounding WorldRegion are identified in <b>_surroundingRegions</b> of the selected WorldRegion in order to scan a large area around a WorldObject<br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Define the aggrolist of monster</li>
 	 * <li>Define visible objects of a WorldObject</li>
-	 * <li>Skill : Confusion...</li> <BR>
+	 * <li>Skill : Confusion...</li>
 	 * @param object L2object that determine the center of the circular area
 	 * @param radius Radius of the circular area
 	 * @return the visible objects
@@ -609,18 +584,16 @@ public class World
 	}
 	
 	/**
-	 * Return all visible objects of the WorldRegions in the spheric area (radius) centered on the object.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All visible object are identified in <B>_visibleObjects</B> of their current WorldRegion <BR>
-	 * All surrounding WorldRegion are identified in <B>_surroundingRegions</B> of the selected WorldRegion in order to scan a large area around a WorldObject<BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
+	 * Return all visible objects of the WorldRegions in the spheric area (radius) centered on the object.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All visible object are identified in <b>_visibleObjects</b> of their current WorldRegion<br>
+	 * All surrounding WorldRegion are identified in <b>_surroundingRegions</b> of the selected WorldRegion in order to scan a large area around a WorldObject<br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Define the target list of a skill</li>
-	 * <li>Define the target list of a polearme attack</li><BR>
-	 * <BR>
+	 * <li>Define the target list of a polearme attack</li><br>
 	 * @param object L2object that determine the center of the circular area
 	 * @param radius Radius of the spheric area
 	 * @return the visible objects3 d
@@ -672,16 +645,15 @@ public class World
 	}
 	
 	/**
-	 * Return all visible players of the WorldRegion object's and of its surrounding WorldRegion.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All visible object are identified in <B>_visibleObjects</B> of their current WorldRegion <BR>
-	 * All surrounding WorldRegion are identified in <B>_surroundingRegions</B> of the selected WorldRegion in order to scan a large area around a WorldObject<BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Find Close Objects for Creature</li><BR>
+	 * Return all visible players of the WorldRegion object's and of its surrounding WorldRegion.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All visible object are identified in <b>_visibleObjects</b> of their current WorldRegion<br>
+	 * All surrounding WorldRegion are identified in <b>_surroundingRegions</b> of the selected WorldRegion in order to scan a large area around a WorldObject<br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Find Close Objects for Creature</li><br>
 	 * @param object WorldObject that determine the current WorldRegion
 	 * @return the visible playable
 	 */
@@ -725,12 +697,11 @@ public class World
 	}
 	
 	/**
-	 * Calculate the current WorldRegions of the object according to its position (x,y).<BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
+	 * Calculate the current WorldRegions of the object according to its position (x,y).<br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Set position of a new WorldObject (drop, spawn...)</li>
-	 * <li>Update position of a WorldObject after a mouvement</li><BR>
+	 * <li>Update position of a WorldObject after a mouvement</li><br>
 	 * @param location the point
 	 * @return the region
 	 */
@@ -760,15 +731,14 @@ public class World
 	}
 	
 	/**
-	 * Init each WorldRegion and their surrounding table.<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All surrounding WorldRegion are identified in <B>_surroundingRegions</B> of the selected WorldRegion in order to scan a large area around a WorldObject<BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Constructor of World</li><BR>
+	 * Init each WorldRegion and their surrounding table.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All surrounding WorldRegion are identified in <b>_surroundingRegions</b> of the selected WorldRegion in order to scan a large area around a WorldObject<br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Constructor of World</li>
 	 */
 	private void initRegions()
 	{

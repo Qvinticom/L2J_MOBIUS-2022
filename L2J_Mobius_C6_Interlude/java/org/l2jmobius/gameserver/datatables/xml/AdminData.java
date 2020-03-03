@@ -163,11 +163,9 @@ public class AdminData implements IXmlReader
 	}
 	
 	/**
-	 * Returns the access level by characterAccessLevel<br>
-	 * <br>
+	 * Returns the access level by characterAccessLevel
 	 * @param accessLevelNum as int<br>
-	 *            <br>
-	 * @return AccessLevel: AccessLevel instance by char access level<br>
+	 * @return AccessLevel: AccessLevel instance by char access level
 	 */
 	public AccessLevel getAccessLevel(int accessLevelNum)
 	{

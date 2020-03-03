@@ -168,8 +168,8 @@ public class AutoSpawn
 	}
 	
 	/**
-	 * Registers a spawn with the given parameters with the spawner, and marks it as active. Returns a AutoSpawnInstance containing info about the spawn. <BR>
-	 * <B>Warning:</B> Spawn locations must be specified separately using addSpawnLocation().
+	 * Registers a spawn with the given parameters with the spawner, and marks it as active. Returns a AutoSpawnInstance containing info about the spawn.<br>
+	 * <b>Warning:</b> Spawn locations must be specified separately using addSpawnLocation().
 	 * @param npcId
 	 * @param initialDelay (If < 0 = default value)
 	 * @param respawnDelay (If < 0 = default value)
@@ -337,7 +337,7 @@ public class AutoSpawn
 	}
 	
 	/**
-	 * Attempts to return the AutoSpawnInstance associated with the given NPC or Object ID type. <BR>
+	 * Attempts to return the AutoSpawnInstance associated with the given NPC or Object ID type.<br>
 	 * Note: If isObjectId == false, returns first instance for the specified NPC ID.
 	 * @param id
 	 * @param isObjectId
@@ -413,8 +413,7 @@ public class AutoSpawn
 	}
 	
 	/**
-	 * AutoSpawner Class <BR>
-	 * <BR>
+	 * AutoSpawner Class<br>
 	 * This handles the main spawn task for an auto spawn instance, and initializes a despawner if required.
 	 * @author Tempy
 	 */
@@ -549,8 +548,7 @@ public class AutoSpawn
 	}
 	
 	/**
-	 * AutoDespawner Class <BR>
-	 * <BR>
+	 * AutoDespawner Class<br>
 	 * Simply used as a secondary class for despawning an auto spawn instance.
 	 * @author Tempy
 	 */
@@ -606,8 +604,7 @@ public class AutoSpawn
 	}
 	
 	/**
-	 * AutoSpawnInstance Class <BR>
-	 * <BR>
+	 * AutoSpawnInstance Class<br>
 	 * Stores information about a registered auto spawn.
 	 * @author Tempy
 	 */

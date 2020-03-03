@@ -588,7 +588,8 @@ public abstract class Summon extends Playable
 	
 	/**
 	 * Check if the active Skill can be casted.<br>
-	 * <B><U>Actions</U>:</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Check if the target is correct</li>
 	 * <li>Check if the target is in the skill cast range</li>

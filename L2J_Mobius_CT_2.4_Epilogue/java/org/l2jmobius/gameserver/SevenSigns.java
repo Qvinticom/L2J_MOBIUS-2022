@@ -979,7 +979,7 @@ public class SevenSigns
 	}
 	
 	/**
-	 * Used to reset the cabal details of all players, and update the database.<BR>
+	 * Used to reset the cabal details of all players, and update the database.<br>
 	 * Primarily used when beginning a new cycle, and should otherwise never be called.
 	 */
 	protected void resetPlayerData()
@@ -1060,7 +1060,7 @@ public class SevenSigns
 	}
 	
 	/**
-	 * Returns the amount of ancient adena the specified player can claim, if any.<BR>
+	 * Returns the amount of ancient adena the specified player can claim, if any.<br>
 	 * If removeReward = True, all the ancient adena owed to them is removed, then DB is updated.
 	 * @param objectId
 	 * @param removeReward
@@ -1089,7 +1089,7 @@ public class SevenSigns
 	/**
 	 * Used to add the specified player's seal stone contribution points to the current total for their cabal.<br>
 	 * Returns the point score the contribution was worth.<br>
-	 * Each stone count <B>must be</B> broken down and specified by the stone's color.
+	 * Each stone count <b>must be</b> broken down and specified by the stone's color.
 	 * @param objectId
 	 * @param blueCount
 	 * @param greenCount
@@ -1210,7 +1210,7 @@ public class SevenSigns
 	}
 	
 	/**
-	 * Used to initialize the seals for each cabal.<bR>
+	 * Used to initialize the seals for each cabal.<br>
 	 * (Used at startup or at beginning of a new cycle).<br>
 	 * This method should be called after <b>resetSeals()</b> and <b>calcNewSealOwners()</b> on a new cycle.
 	 */
@@ -1250,8 +1250,7 @@ public class SevenSigns
 	}
 	
 	/**
-	 * Calculates the ownership of the three Seals of the Seven Signs, based on various criterion. <BR>
-	 * <BR>
+	 * Calculates the ownership of the three Seals of the Seven Signs, based on various criterion.<br>
 	 * Should only ever called at the beginning of a new cycle.
 	 */
 	protected void calcNewSealOwners()

@@ -691,7 +691,7 @@ public class CrystalCaverns extends AbstractInstance
 		{
 			if (player.getParty() == null)
 			{
-				// This can happen only if gm enters solo.
+				// This can happen only if GM enters solo.
 				player.sendMessage("Welcome to Crystal Caverns.");
 				teleportPlayer(player, START_LOC, world.getInstanceId());
 				world.addAllowed(player);

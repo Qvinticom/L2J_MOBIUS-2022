@@ -32,10 +32,9 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.GetItem;
 
 /**
- * Mother class of all objects in the world which ones is it possible to interact (PC, NPC, Item...)<BR>
- * <BR>
- * WorldObject :<BR>
- * <BR>
+ * Mother class of all objects in the world which ones is it possible to interact (PC, NPC, Item...)<br>
+ * <br>
+ * WorldObject:<br>
  * <li>Creature</li>
  * <li>ItemInstance</li>
  * <li>Potion</li>
@@ -84,13 +83,11 @@ public abstract class WorldObject
 	}
 	
 	/**
-	 * Do Nothing.<BR>
-	 * <BR>
-	 * <B><U> Overridden in </U> :</B><BR>
-	 * <BR>
+	 * Do Nothing.<br>
+	 * <br>
+	 * <b><u>Overridden in</u>:</b><br>
 	 * <li>GuardInstance : Set the home location of its GuardInstance</li>
-	 * <li>Attackable : Reset the Spoiled flag</li><BR>
-	 * <BR>
+	 * <li>Attackable : Reset the Spoiled flag</li>
 	 */
 	public void onSpawn()
 	{
@@ -123,23 +120,18 @@ public abstract class WorldObject
 	}
 	
 	/**
-	 * Remove a WorldObject from the world.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
-	 * <li>Remove the WorldObject from the world</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of World </B></FONT><BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packets to players</B></FONT><BR>
-	 * <BR>
-	 * <B><U> Assert </U> :</B><BR>
-	 * <BR>
-	 * <li>_worldRegion != null <I>(WorldObject is visible at the beginning)</I></li><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Delete NPC/PC or Unsummon</li><BR>
-	 * <BR>
+	 * Remove a WorldObject from the world.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
+	 * <li>Remove the WorldObject from the world</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T REMOVE the object from _allObjects of World </b></font><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND Server->Client packets to players</b></font><br>
+	 * <br>
+	 * <b><u>Assert</u>:</b><br>
+	 * <li>_worldRegion != null <i>(WorldObject is visible at the beginning)</i></li><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Delete NPC/PC or Unsummon</li>
 	 */
 	public void decayMe()
 	{
@@ -156,24 +148,19 @@ public abstract class WorldObject
 	}
 	
 	/**
-	 * Remove a ItemInstance from the world and send server->client GetItem packets.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Remove a ItemInstance from the world and send server->client GetItem packets.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Send a Server->Client Packet GetItem to player that pick up and its _knowPlayers member</li>
-	 * <li>Remove the WorldObject from the world</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of World </B></FONT><BR>
-	 * <BR>
-	 * <B><U> Assert </U> :</B><BR>
-	 * <BR>
+	 * <li>Remove the WorldObject from the world</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T REMOVE the object from _allObjects of World </b></font><br>
+	 * <br>
+	 * <b><u>Assert</u>:</b><br>
 	 * <li>this instanceof ItemInstance</li>
-	 * <li>_worldRegion != null <I>(WorldObject is visible at the beginning)</I></li> <BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Do Pickup Item : PCInstance and Pet</li><BR>
-	 * <BR>
+	 * <li>_worldRegion != null <i>(WorldObject is visible at the beginning)</i></li><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Do Pickup Item : PCInstance and Pet</li><br>
 	 * @param creature Player that pick up the item
 	 */
 	public void pickupMe(Creature creature) // NOTE: Should move this function into ItemInstance because it does not apply to Creature
@@ -213,23 +200,20 @@ public abstract class WorldObject
 	}
 	
 	/**
-	 * Init the position of a WorldObject spawn and add it in the world as a visible object.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Init the position of a WorldObject spawn and add it in the world as a visible object.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Set the x,y,z position of the WorldObject spawn and update its _worldregion</li>
 	 * <li>Add the WorldObject spawn in the _allobjects of World</li>
 	 * <li>Add the WorldObject spawn to _visibleObjects of its WorldRegion</li>
-	 * <li>Add the WorldObject spawn in the world as a <B>visible</B> object</li><BR>
-	 * <BR>
-	 * <B><U> Assert </U> :</B><BR>
-	 * <BR>
-	 * <li>_worldRegion == null <I>(WorldObject is invisible at the beginning)</I></li><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
+	 * <li>Add the WorldObject spawn in the world as a <b>visible</b> object</li><br>
+	 * <br>
+	 * <b><u>Assert</u>:</b><br>
+	 * <li>_worldRegion == null <i>(WorldObject is invisible at the beginning)</i></li><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Create Door</li>
-	 * <li>Spawn : Monster, Minion, CTs, Summon...</li><BR>
+	 * <li>Spawn : Monster, Minion, CTs, Summon...</li>
 	 */
 	public void spawnMe()
 	{
@@ -315,10 +299,9 @@ public abstract class WorldObject
 	public abstract boolean isAutoAttackable(Creature attacker);
 	
 	/**
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * A WorldObject is visible if <B>__IsVisible</B>=true and <B>_worldregion</B>!=null <BR>
-	 * <BR>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * A WorldObject is visible if <b>__IsVisible</b>=true and <b>_worldregion</b>!=null
 	 * @return the visibility state of the WorldObject.
 	 */
 	public boolean isVisible()

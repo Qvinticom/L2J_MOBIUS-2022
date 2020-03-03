@@ -695,7 +695,7 @@ public class SkillCaster implements Runnable
 	}
 	
 	/**
-	 * Stops this casting and cleans all cast parameters.<br>
+	 * Stops this casting and cleans all cast parameters.
 	 * @param aborted if {@code true}, server will send packets to the player, notifying him that the skill has been aborted.
 	 */
 	public void stopCasting(boolean aborted)

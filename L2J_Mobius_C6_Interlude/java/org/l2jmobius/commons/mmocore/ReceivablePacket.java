@@ -36,7 +36,7 @@ public abstract class ReceivablePacket<T extends MMOClient<?>>extends AbstractPa
 	public abstract void run();
 	
 	/**
-	 * Reads <B>byte[]</B> from the buffer. <BR>
+	 * Reads <b>byte[]</b> from the buffer.<br>
 	 * Reads as many bytes as the length of the array.
 	 * @param dst : the byte array which will be filled with the data.
 	 */
@@ -46,8 +46,8 @@ public abstract class ReceivablePacket<T extends MMOClient<?>>extends AbstractPa
 	}
 	
 	/**
-	 * Reads <B>byte[]</B> from the buffer. <BR>
-	 * Reads as many bytes as the given length (len). Starts to fill the byte array from the given offset to <B>offset</B> + <B>len</B>.
+	 * Reads <b>byte[]</b> from the buffer.<br>
+	 * Reads as many bytes as the given length (len). Starts to fill the byte array from the given offset to <b>offset</b> + <b>len</b>.
 	 * @param dst : the byte array which will be filled with the data.
 	 * @param offset : starts to fill the byte array from the given offset.
 	 * @param len : the given length of bytes to be read.
@@ -58,7 +58,7 @@ public abstract class ReceivablePacket<T extends MMOClient<?>>extends AbstractPa
 	}
 	
 	/**
-	 * Reads <B>byte</B> from the buffer. <BR>
+	 * Reads <b>byte</b> from the buffer.<br>
 	 * 8bit integer (00)
 	 * @return
 	 */
@@ -68,7 +68,7 @@ public abstract class ReceivablePacket<T extends MMOClient<?>>extends AbstractPa
 	}
 	
 	/**
-	 * Reads <B>short</B> from the buffer. <BR>
+	 * Reads <b>short</b> from the buffer.<br>
 	 * 16bit integer (00 00)
 	 * @return
 	 */
@@ -78,7 +78,7 @@ public abstract class ReceivablePacket<T extends MMOClient<?>>extends AbstractPa
 	}
 	
 	/**
-	 * Reads <B>int</B> from the buffer. <BR>
+	 * Reads <b>int</b> from the buffer.<br>
 	 * 32bit integer (00 00 00 00)
 	 * @return
 	 */
@@ -88,7 +88,7 @@ public abstract class ReceivablePacket<T extends MMOClient<?>>extends AbstractPa
 	}
 	
 	/**
-	 * Reads <B>long</B> from the buffer. <BR>
+	 * Reads <b>long</b> from the buffer.<br>
 	 * 64bit integer (00 00 00 00 00 00 00 00)
 	 * @return
 	 */
@@ -98,7 +98,7 @@ public abstract class ReceivablePacket<T extends MMOClient<?>>extends AbstractPa
 	}
 	
 	/**
-	 * Reads <B>double</B> from the buffer. <BR>
+	 * Reads <b>double</b> from the buffer.<br>
 	 * 64bit double precision float (00 00 00 00 00 00 00 00)
 	 * @return
 	 */
@@ -108,7 +108,7 @@ public abstract class ReceivablePacket<T extends MMOClient<?>>extends AbstractPa
 	}
 	
 	/**
-	 * Reads <B>String</B> from the buffer.
+	 * Reads <b>String</b> from the buffer.
 	 * @return
 	 */
 	protected final String readS()

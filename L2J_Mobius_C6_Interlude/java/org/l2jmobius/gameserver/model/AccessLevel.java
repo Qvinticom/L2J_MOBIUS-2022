@@ -38,22 +38,21 @@ public class AccessLevel
 	private boolean _canDisableGmStatus = false;
 	
 	/**
-	 * Initializes members<br>
-	 * <br>
-	 * @param accessLevel as int<br>
-	 * @param name as String<br>
-	 * @param nameColor as int<br>
-	 * @param titleColor as int<br>
-	 * @param isGm as boolean<br>
-	 * @param allowPeaceAttack as boolean<br>
-	 * @param allowFixedRes as boolean<br>
-	 * @param allowTransaction as boolean<br>
-	 * @param allowAltG as boolean<br>
-	 * @param giveDamage as boolean<br>
-	 * @param takeAggro as boolean<br>
-	 * @param gainExp as boolean<br>
-	 * @param useNameColor as boolean<br>
-	 * @param useTitleColor as boolean<br>
+	 * Initializes members
+	 * @param accessLevel as int
+	 * @param name as String
+	 * @param nameColor as int
+	 * @param titleColor as int
+	 * @param isGm as boolean
+	 * @param allowPeaceAttack as boolean
+	 * @param allowFixedRes as boolean
+	 * @param allowTransaction as boolean
+	 * @param allowAltG as boolean
+	 * @param giveDamage as boolean
+	 * @param takeAggro as boolean
+	 * @param gainExp as boolean
+	 * @param useNameColor as boolean
+	 * @param useTitleColor as boolean
 	 * @param canDisableGmStatus
 	 */
 	public AccessLevel(int accessLevel, String name, int nameColor, int titleColor, boolean isGm, boolean allowPeaceAttack, boolean allowFixedRes, boolean allowTransaction, boolean allowAltG, boolean giveDamage, boolean takeAggro, boolean gainExp, boolean useNameColor, boolean useTitleColor, boolean canDisableGmStatus)
@@ -76,9 +75,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns the access level<br>
-	 * <br>
-	 * @return int: access level<br>
+	 * Returns the access level
+	 * @return int: access level
 	 */
 	public int getLevel()
 	{
@@ -86,9 +84,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns the access level name<br>
-	 * <br>
-	 * @return String: access level name<br>
+	 * Returns the access level name
+	 * @return String: access level name
 	 */
 	public String getName()
 	{
@@ -96,9 +93,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns the name color of the access level<br>
-	 * <br>
-	 * @return int: the name color for the access level<br>
+	 * Returns the name color of the access level
+	 * @return int: the name color for the access level
 	 */
 	public int getNameColor()
 	{
@@ -106,9 +102,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns the title color color of the access level<br>
-	 * <br>
-	 * @return int: the title color for the access level<br>
+	 * Returns the title color color of the access level
+	 * @return int: the title color for the access level
 	 */
 	public int getTitleColor()
 	{
@@ -116,9 +111,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Retuns if the access level has gm access or not<br>
-	 * <br>
-	 * @return boolean: true if access level have gm access, otherwise false<br>
+	 * Retuns if the access level has GM access or not
+	 * @return boolean: true if access level have GM access, otherwise false
 	 */
 	public boolean isGm()
 	{
@@ -126,9 +120,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns if the access level is allowed to attack in peace zone or not<br>
-	 * <br>
-	 * @return boolean: true if the access level is allowed to attack in peace zone, otherwise false<br>
+	 * Returns if the access level is allowed to attack in peace zone or not
+	 * @return boolean: true if the access level is allowed to attack in peace zone, otherwise false
 	 */
 	public boolean allowPeaceAttack()
 	{
@@ -144,9 +137,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns if the access level is allowed to perform transactions or not<br>
-	 * <br>
-	 * @return boolean: true if access level is allowed to perform transactions, otherwise false<br>
+	 * Returns if the access level is allowed to perform transactions or not
+	 * @return boolean: true if access level is allowed to perform transactions, otherwise false
 	 */
 	public boolean allowTransaction()
 	{
@@ -154,9 +146,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns if the access level is allowed to use AltG commands or not<br>
-	 * <br>
-	 * @return boolean: true if access level is allowed to use AltG commands, otherwise false<br>
+	 * Returns if the access level is allowed to use AltG commands or not
+	 * @return boolean: true if access level is allowed to use AltG commands, otherwise false
 	 */
 	public boolean allowAltG()
 	{
@@ -164,9 +155,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns if the access level can give damage or not<br>
-	 * <br>
-	 * @return boolean: true if the access level can give damage, otherwise false<br>
+	 * Returns if the access level can give damage or not
+	 * @return boolean: true if the access level can give damage, otherwise false
 	 */
 	public boolean canGiveDamage()
 	{
@@ -174,9 +164,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns if the access level can take aggro or not<br>
-	 * <br>
-	 * @return boolean: true if the access level can take aggro, otherwise false<br>
+	 * Returns if the access level can take aggro or not
+	 * @return boolean: true if the access level can take aggro, otherwise false
 	 */
 	public boolean canTakeAggro()
 	{
@@ -184,9 +173,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns if the access level can gain exp or not<br>
-	 * <br>
-	 * @return boolean: true if the access level can gain exp, otherwise false<br>
+	 * Returns if the access level can gain exp or not
+	 * @return boolean: true if the access level can gain exp, otherwise false
 	 */
 	public boolean canGainExp()
 	{
@@ -204,9 +192,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Retuns if the access level is a gm that can temp disable gm access<br>
-	 * <br>
-	 * @return boolean: true if is a gm that can temp disable gm access, otherwise false<br>
+	 * Retuns if the access level is a GM that can temp disable GM access
+	 * @return boolean: true if is a GM that can temp disable GM access, otherwise false
 	 */
 	public boolean canDisableGmStatus()
 	{

@@ -92,14 +92,12 @@ public class WorldObjectKnownList
 	}
 	
 	/**
-	 * Update the _knownObject and _knowPlayers of the Creature and of its already known WorldObject.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Update the _knownObject and _knowPlayers of the Creature and of its already known WorldObject.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Remove invisible and too far WorldObject from _knowObject and if necessary from _knownPlayers of the Creature</li>
 	 * <li>Add visible WorldObject near the Creature to _knowObject and if necessary to _knownPlayers of the Creature</li>
-	 * <li>Add Creature to _knowObject and if necessary to _knownPlayers of WorldObject alreday known by the Creature</li><BR>
-	 * <BR>
+	 * <li>Add Creature to _knowObject and if necessary to _knownPlayers of WorldObject alreday known by the Creature</li>
 	 */
 	public synchronized void updateKnownObjects()
 	{

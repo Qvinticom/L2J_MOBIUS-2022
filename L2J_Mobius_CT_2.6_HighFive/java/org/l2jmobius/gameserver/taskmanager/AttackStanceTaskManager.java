@@ -88,7 +88,7 @@ public class AttackStanceTaskManager
 	}
 	
 	/**
-	 * Checks for attack stance task.<br>
+	 * Checks for attack stance task.
 	 * @param actor the actor
 	 * @return {@code true} if the character has an attack stance task, {@code false} otherwise
 	 */

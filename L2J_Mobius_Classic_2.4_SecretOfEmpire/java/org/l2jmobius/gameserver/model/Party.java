@@ -142,7 +142,7 @@ public class Party extends AbstractPlayerGroup
 	}
 	
 	/**
-	 * Set invitation process flag and store time for expiration. <br>
+	 * Set invitation process flag and store time for expiration.<br>
 	 * Happens when a player joins party or declines to join.
 	 * @param value the pending invitation state to set
 	 */
@@ -273,8 +273,7 @@ public class Party extends AbstractPlayerGroup
 	}
 	
 	/**
-	 * Send a Server->Client packet to all other PlayerInstance of the Party.<BR>
-	 * <BR>
+	 * Send a Server->Client packet to all other PlayerInstance of the Party.
 	 * @param player
 	 * @param msg
 	 */
@@ -821,12 +820,12 @@ public class Party extends AbstractPlayerGroup
 	}
 	
 	/**
-	 * Distribute Experience and SP rewards to PlayerInstance Party members in the known area of the last attacker.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B>
+	 * Distribute Experience and SP rewards to PlayerInstance Party members in the known area of the last attacker.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <li>Get the PlayerInstance owner of the ServitorInstance (if necessary)</li>
 	 * <li>Calculate the Experience and SP reward distribution rate</li>
-	 * <li>Add Experience and SP to the PlayerInstance</li><BR>
+	 * <li>Add Experience and SP to the PlayerInstance</li><br>
 	 * @param xpReward The Experience reward to distribute
 	 * @param spReward The SP reward to distribute
 	 * @param rewardedMembers The list of PlayerInstance to reward

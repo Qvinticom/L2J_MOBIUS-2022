@@ -891,7 +891,7 @@ public abstract class Inventory extends ItemContainer
 	}
 	
 	/**
-	 * Drop item from inventory by using its <B>objectID</B> and updates database
+	 * Drop item from inventory by using its <b>objectID</b> and updates database
 	 * @param process : String Identifier of process triggering this action
 	 * @param objectId : int Item Instance identifier of the item to be dropped
 	 * @param count : int Quantity of items to be dropped
@@ -1192,7 +1192,7 @@ public abstract class Inventory extends ItemContainer
 	
 	/**
 	 * Equips an item in the given slot of the paperdoll.<br>
-	 * <U><I>Remark :</I></U> The item <B>must be</B> in the inventory already.
+	 * <u><i>Remark :</i></u> The item <b>must be</b> in the inventory already.
 	 * @param slot : int pointing out the slot of the paperdoll
 	 * @param item : ItemInstance pointing out the item to add in slot
 	 * @return ItemInstance designating the item placed in the slot before
@@ -1397,8 +1397,8 @@ public abstract class Inventory extends ItemContainer
 	}
 	
 	/**
-	 * Unequips item in body slot and returns alterations.<BR>
-	 * <B>If you dont need return value use {@link Inventory#unEquipItemInBodySlot(int)} instead</B>
+	 * Unequips item in body slot and returns alterations.<br>
+	 * <b>If you dont need return value use {@link Inventory#unEquipItemInBodySlot(int)} instead</b>
 	 * @param slot : int designating the slot of the paperdoll
 	 * @return ItemInstance[] : list of changes
 	 */
@@ -1428,8 +1428,8 @@ public abstract class Inventory extends ItemContainer
 	}
 	
 	/**
-	 * Unequips item in slot and returns alterations<BR>
-	 * <B>If you dont need return value use {@link Inventory#unEquipItemInSlot(int)} instead</B>
+	 * Unequips item in slot and returns alterations<br>
+	 * <b>If you dont need return value use {@link Inventory#unEquipItemInSlot(int)} instead</b>
 	 * @param slot : int designating the slot
 	 * @return ItemInstance[] : list of items altered
 	 */
@@ -1601,8 +1601,8 @@ public abstract class Inventory extends ItemContainer
 	}
 	
 	/**
-	 * Equips item and returns list of alterations<BR>
-	 * <B>If you don't need return value use {@link Inventory#equipItem(ItemInstance)} instead</B>
+	 * Equips item and returns list of alterations<br>
+	 * <b>If you don't need return value use {@link Inventory#equipItem(ItemInstance)} instead</b>
 	 * @param item : ItemInstance corresponding to the item
 	 * @return ItemInstance[] : list of alterations
 	 */
@@ -2178,8 +2178,9 @@ public abstract class Inventory extends ItemContainer
 	
 	/**
 	 * Reduce the arrow number of the Creature.<br>
-	 * <B><U> Overridden in </U> :</B>
-	 * <li>PlayerInstance</li>
+	 * <br>
+	 * <b><u>Overridden in</u>:</b>
+	 * <li>PlayerInstance</li><br>
 	 * @param type
 	 */
 	public void reduceArrowCount(EtcItemType type)

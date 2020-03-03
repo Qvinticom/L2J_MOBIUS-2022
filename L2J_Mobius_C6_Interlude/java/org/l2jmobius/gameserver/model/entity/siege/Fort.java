@@ -97,8 +97,7 @@ public class Fort
 	}
 	
 	/**
-	 * Move non clan members off fort area and to nearest town.<BR>
-	 * <BR>
+	 * Move non clan members off fort area and to nearest town.
 	 */
 	public void banishForeigners()
 	{
@@ -262,8 +261,7 @@ public class Fort
 	}
 	
 	/**
-	 * Respawn all doors on fort grounds<BR>
-	 * <BR>
+	 * Respawn all doors on fort grounds.
 	 */
 	public void spawnDoor()
 	{

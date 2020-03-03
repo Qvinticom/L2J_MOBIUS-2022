@@ -83,8 +83,7 @@ public abstract class ItemContainer
 	}
 	
 	/**
-	 * Returns the item from inventory by using its <B>itemId</B><BR>
-	 * <BR>
+	 * Returns the item from inventory by using its <b>itemId</b>
 	 * @param itemId : int designating the ID of the item
 	 * @return ItemInstance designating the item or null if not found in inventory
 	 */
@@ -101,8 +100,7 @@ public abstract class ItemContainer
 	}
 	
 	/**
-	 * Returns the item from inventory by using its <B>itemId</B><BR>
-	 * <BR>
+	 * Returns the item from inventory by using its <b>itemId</b>
 	 * @param itemId : int designating the ID of the item
 	 * @param itemToIgnore : used during a loop, to avoid returning the same item
 	 * @return ItemInstance designating the item or null if not found in inventory
@@ -120,7 +118,7 @@ public abstract class ItemContainer
 	}
 	
 	/**
-	 * Returns item from inventory by using its <B>objectId</B>
+	 * Returns item from inventory by using its <b>objectId</b>
 	 * @param objectId : int designating the ID of the object
 	 * @return ItemInstance designating the item or null if not found in inventory
 	 */
@@ -303,8 +301,7 @@ public abstract class ItemContainer
 	}
 	
 	/**
-	 * Adds Wear/Try On item to inventory<BR>
-	 * <BR>
+	 * Adds Wear/Try On item to inventory
 	 * @param process : String Identifier of process triggering this action
 	 * @param itemId : int Item Identifier of the item to be added
 	 * @param actor : PlayerInstance Player requesting the item add
@@ -463,7 +460,7 @@ public abstract class ItemContainer
 	}
 	
 	/**
-	 * Destroy item from inventory by using its <B>objectID</B> and updates database
+	 * Destroy item from inventory by using its <b>objectID</b> and updates database
 	 * @param process : String Identifier of process triggering this action
 	 * @param objectId : int Item Instance identifier of the item to be destroyed
 	 * @param count : int Quantity of items to be destroyed
@@ -498,7 +495,7 @@ public abstract class ItemContainer
 	}
 	
 	/**
-	 * Destroy item from inventory by using its <B>itemId</B> and updates database
+	 * Destroy item from inventory by using its <b>itemId</b> and updates database
 	 * @param process : String Identifier of process triggering this action
 	 * @param itemId : int Item identifier of the item to be destroyed
 	 * @param count : int Quantity of items to be destroyed

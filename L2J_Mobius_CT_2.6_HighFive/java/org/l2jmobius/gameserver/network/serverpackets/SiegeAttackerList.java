@@ -27,25 +27,25 @@ import org.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * Populates the Siege Attacker List in the SiegeInfo Window<BR>
- * <BR>
- * c = ca<BR>
- * d = CastleID<BR>
- * d = unknow (0x00)<BR>
- * d = unknow (0x01)<BR>
- * d = unknow (0x00)<BR>
- * d = Number of Attackers Clans?<BR>
- * d = Number of Attackers Clans<BR>
- * { //repeats<BR>
- * d = ClanID<BR>
- * S = ClanName<BR>
- * S = ClanLeaderName<BR>
- * d = ClanCrestID<BR>
- * d = signed time (seconds)<BR>
- * d = AllyID<BR>
- * S = AllyName<BR>
- * S = AllyLeaderName<BR>
- * d = AllyCrestID<BR>
+ * Populates the Siege Attacker List in the SiegeInfo Window<br>
+ * <br>
+ * c = ca<br>
+ * d = CastleID<br>
+ * d = unknow (0x00)<br>
+ * d = unknow (0x01)<br>
+ * d = unknow (0x00)<br>
+ * d = Number of Attackers Clans?<br>
+ * d = Number of Attackers Clans<br>
+ * { //repeats<br>
+ * d = ClanID<br>
+ * S = ClanName<br>
+ * S = ClanLeaderName<br>
+ * d = ClanCrestID<br>
+ * d = signed time (seconds)<br>
+ * d = AllyID<br>
+ * S = AllyName<br>
+ * S = AllyLeaderName<br>
+ * d = AllyCrestID<br>
  * @author KenM
  */
 public class SiegeAttackerList implements IClientOutgoingPacket

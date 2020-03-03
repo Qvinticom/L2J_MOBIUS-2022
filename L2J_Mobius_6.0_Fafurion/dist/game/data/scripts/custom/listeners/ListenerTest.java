@@ -114,7 +114,7 @@ public class ListenerTest extends AbstractNpcAI
 	}
 	
 	/**
-	 * Prioritized event notification <br>
+	 * Prioritized event notification<br>
 	 * This method will be invoked as soon as creature from level range between 1 and 10 dies.<br>
 	 * This listener is registered into individual npcs container.
 	 * @param event

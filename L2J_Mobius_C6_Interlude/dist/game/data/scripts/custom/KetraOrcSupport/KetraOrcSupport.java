@@ -427,7 +427,7 @@ public class KetraOrcSupport extends Quest
 	}
 	
 	/**
-	 * That method drops current alliance and retrograde badge.<BR>
+	 * That method drops current alliance and retrograde badge.<br>
 	 * If any Varka quest is in progress, it stops the quest (and drop all related qItems) :
 	 * @param player The player to check.
 	 */

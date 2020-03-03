@@ -50,7 +50,7 @@ public class RequestGMCommand implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		// prevent non gm or low level GMs from vieweing player stuff
+		// prevent non GM or low level GMs from vieweing player stuff
 		if (!client.getPlayer().isGM() || !client.getPlayer().getAccessLevel().allowAltG())
 		{
 			return;
@@ -99,7 +99,7 @@ public class RequestGMCommand implements IClientIncomingPacket
 			}
 			case 6: // player warehouse
 			{
-				// gm warehouse view to be implemented
+				// GM warehouse view to be implemented
 				if (player != null)
 				{
 					client.sendPacket(new GMViewWarehouseWithdrawList(player));

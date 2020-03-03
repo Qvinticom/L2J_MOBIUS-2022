@@ -231,8 +231,7 @@ public class SkillTreeTable
 	}
 	
 	/**
-	 * Return the minimum level needed to have this Expertise.<BR>
-	 * <BR>
+	 * Return the minimum level needed to have this Expertise.
 	 * @param grade The grade level searched
 	 * @return
 	 */

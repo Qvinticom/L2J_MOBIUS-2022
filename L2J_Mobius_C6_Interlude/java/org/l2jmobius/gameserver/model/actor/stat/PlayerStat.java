@@ -52,7 +52,7 @@ public class PlayerStat extends PlayableStat
 	{
 		final PlayerInstance player = getActiveChar();
 		
-		// Player is Gm and access level is below or equal to canGainExp and is in party, don't give XP
+		// Player is GM and access level is below or equal to canGainExp and is in party, don't give XP
 		if (!getActiveChar().getAccessLevel().canGainExp() && getActiveChar().isInParty())
 		{
 			return false;
@@ -78,17 +78,15 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	/**
-	 * Add Experience and SP rewards to the PlayerInstance, remove its Karma (if necessary) and Launch increase level task.<BR>
-	 * <BR>
-	 * <B><U> Actions </U> :</B><BR>
-	 * <BR>
+	 * Add Experience and SP rewards to the PlayerInstance, remove its Karma (if necessary) and Launch increase level task.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Remove Karma when the player kills MonsterInstance</li>
 	 * <li>Send a Server->Client packet StatusUpdate to the PlayerInstance</li>
 	 * <li>Send a Server->Client System Message to the PlayerInstance</li>
 	 * <li>If the PlayerInstance increases it's level, send a Server->Client packet SocialAction (broadcast)</li>
 	 * <li>If the PlayerInstance increases it's level, manage the increase level task (Max MP, Max MP, Recommendation, Expertise and beginner skills...)</li>
-	 * <li>If the PlayerInstance increases it's level, send a Server->Client packet UserInfo to the PlayerInstance</li><BR>
-	 * <BR>
+	 * <li>If the PlayerInstance increases it's level, send a Server->Client packet UserInfo to the PlayerInstance</li><br>
 	 * @param addToExp The Experience value to add
 	 * @param addToSp The SP value to add
 	 */
@@ -97,7 +95,7 @@ public class PlayerStat extends PlayableStat
 	{
 		float ratioTakenByPet = 0;
 		
-		// Player is Gm and acces level is below or equal to GM_DONT_TAKE_EXPSP and is in party, don't give Xp/Sp
+		// Player is GM and access level is below or equal to GM_DONT_TAKE_EXPSP and is in party, don't give Xp/Sp
 		final PlayerInstance player = getActiveChar();
 		if (!player.getAccessLevel().canGainExp() && player.isInParty())
 		{

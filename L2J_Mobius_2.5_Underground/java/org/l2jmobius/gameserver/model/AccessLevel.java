@@ -87,9 +87,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns the access level<br>
-	 * <br>
-	 * @return int: access level<br>
+	 * Returns the access level
+	 * @return int: access level
 	 */
 	public int getLevel()
 	{
@@ -97,9 +96,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns the access level name<br>
-	 * <br>
-	 * @return String: access level name<br>
+	 * Returns the access level name
+	 * @return String: access level name
 	 */
 	public String getName()
 	{
@@ -107,9 +105,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns the name color of the access level<br>
-	 * <br>
-	 * @return int: the name color for the access level<br>
+	 * Returns the name color of the access level
+	 * @return int: the name color for the access level
 	 */
 	public int getNameColor()
 	{
@@ -117,9 +114,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns the title color color of the access level<br>
-	 * <br>
-	 * @return int: the title color for the access level<br>
+	 * Returns the title color color of the access level
+	 * @return int: the title color for the access level
 	 */
 	public int getTitleColor()
 	{
@@ -127,9 +123,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Retuns if the access level has gm access or not<br>
-	 * <br>
-	 * @return boolean: true if access level have gm access, otherwise false<br>
+	 * Retuns if the access level has GM access or not
+	 * @return boolean: true if access level have GM access, otherwise false
 	 */
 	public boolean isGm()
 	{
@@ -137,9 +132,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns if the access level is allowed to attack in peace zone or not<br>
-	 * <br>
-	 * @return boolean: true if the access level is allowed to attack in peace zone, otherwise false<br>
+	 * Returns if the access level is allowed to attack in peace zone or not
+	 * @return boolean: true if the access level is allowed to attack in peace zone, otherwise false
 	 */
 	public boolean allowPeaceAttack()
 	{
@@ -147,9 +141,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Retruns if the access level is allowed to use fixed res or not<br>
-	 * <br>
-	 * @return true if the access level is allowed to use fixed res, otherwise false<br>
+	 * Retruns if the access level is allowed to use fixed res or not
+	 * @return true if the access level is allowed to use fixed res, otherwise false
 	 */
 	public boolean allowFixedRes()
 	{
@@ -157,9 +150,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns if the access level is allowed to perform transactions or not<br>
-	 * <br>
-	 * @return boolean: true if access level is allowed to perform transactions, otherwise false<br>
+	 * Returns if the access level is allowed to perform transactions or not
+	 * @return boolean: true if access level is allowed to perform transactions, otherwise false
 	 */
 	public boolean allowTransaction()
 	{
@@ -167,9 +159,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns if the access level is allowed to use AltG commands or not<br>
-	 * <br>
-	 * @return boolean: true if access level is allowed to use AltG commands, otherwise false<br>
+	 * Returns if the access level is allowed to use AltG commands or not
+	 * @return boolean: true if access level is allowed to use AltG commands, otherwise false
 	 */
 	public boolean allowAltG()
 	{
@@ -177,9 +168,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns if the access level can give damage or not<br>
-	 * <br>
-	 * @return boolean: true if the access level can give damage, otherwise false<br>
+	 * Returns if the access level can give damage or not
+	 * @return boolean: true if the access level can give damage, otherwise false
 	 */
 	public boolean canGiveDamage()
 	{
@@ -187,9 +177,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns if the access level can take aggro or not<br>
-	 * <br>
-	 * @return boolean: true if the access level can take aggro, otherwise false<br>
+	 * Returns if the access level can take aggro or not
+	 * @return boolean: true if the access level can take aggro, otherwise false
 	 */
 	public boolean canTakeAggro()
 	{
@@ -197,9 +186,8 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns if the access level can gain exp or not<br>
-	 * <br>
-	 * @return boolean: true if the access level can gain exp, otherwise false<br>
+	 * Returns if the access level can gain exp or not
+	 * @return boolean: true if the access level can gain exp, otherwise false
 	 */
 	public boolean canGainExp()
 	{
@@ -207,9 +195,9 @@ public class AccessLevel
 	}
 	
 	/**
-	 * Returns if the access level contains allowedAccess as child<br>
-	 * @param accessLevel as AccessLevel<br>
-	 * @return boolean: true if a child access level is equals to allowedAccess, otherwise false<br>
+	 * Returns if the access level contains allowedAccess as child
+	 * @param accessLevel as AccessLevel
+	 * @return boolean: true if a child access level is equals to allowedAccess, otherwise false
 	 */
 	public boolean hasChildAccess(AccessLevel accessLevel)
 	{

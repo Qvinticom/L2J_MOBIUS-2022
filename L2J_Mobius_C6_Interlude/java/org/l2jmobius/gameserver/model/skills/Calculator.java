@@ -23,15 +23,14 @@ import java.util.List;
 import org.l2jmobius.gameserver.model.skills.funcs.Func;
 
 /**
- * A calculator is created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...). In fact, each calculator is a table of Func object in which each Func represents a mathematic function : <BR>
- * <BR>
- * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()<BR>
- * <BR>
- * When the calc method of a calculator is launched, each mathematic function is called according to its priority <B>_order</B>. Indeed, Func with lowest priority order is executed first and Funcs with the same order are executed in unspecified order. The result of the calculation is stored in the
- * value property of an Env class instance.<BR>
- * <BR>
- * Method addFunc and removeFunc permit to add and remove a Func object from a Calculator.<BR>
- * <BR>
+ * A calculator is created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...). In fact, each calculator is a table of Func object in which each Func represents a mathematic function:<br>
+ * <br>
+ * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()<br>
+ * <br>
+ * When the calc method of a calculator is launched, each mathematic function is called according to its priority <b>_order</b>. Indeed, Func with lowest priority order is executed first and Funcs with the same order are executed in unspecified order. The result of the calculation is stored in the
+ * value property of an Env class instance.<br>
+ * <br>
+ * Method addFunc and removeFunc permit to add and remove a Func object from a Calculator.
  */
 public class Calculator
 {
@@ -42,8 +41,7 @@ public class Calculator
 	private Func[] _functions;
 	
 	/**
-	 * Constructor of Calculator (Init value : emptyFuncs).<BR>
-	 * <BR>
+	 * Constructor of Calculator (Init value : emptyFuncs).
 	 */
 	public Calculator()
 	{
@@ -51,8 +49,7 @@ public class Calculator
 	}
 	
 	/**
-	 * Constructor of Calculator (Init value : Calculator c).<BR>
-	 * <BR>
+	 * Constructor of Calculator (Init value : Calculator c).
 	 * @param c
 	 */
 	public Calculator(Calculator c)
@@ -61,8 +58,7 @@ public class Calculator
 	}
 	
 	/**
-	 * Check if 2 calculators are equals.<BR>
-	 * <BR>
+	 * Check if 2 calculators are equals.
 	 * @param c1
 	 * @param c2
 	 * @return

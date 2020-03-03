@@ -159,7 +159,8 @@ public class Npc extends Creature
 	
 	/**
 	 * Constructor of NpcInstance (use Creature constructor).<br>
-	 * <B><U>Actions</U>:</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Call the Creature constructor to set the _template of the Creature (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
 	 * <li>Set the name of the Creature</li>
@@ -579,7 +580,8 @@ public class Npc extends Creature
 	
 	/**
 	 * Open a quest or chat window on client with the text of the NpcInstance in function of the command.<br>
-	 * <B><U> Example of use </U> :</B>
+	 * <br>
+	 * <b><u>Example of use</u>:</b>
 	 * <ul>
 	 * <li>Client packet : RequestBypassToServer</li>
 	 * </ul>
@@ -639,11 +641,11 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * <B><U Format of the pathfile</U>:</B>
+	 * <b><U Format of the pathfile</u>:</b>
 	 * <ul>
-	 * <li>if the file exists on the server (page number = 0) : <B>data/html/default/12006.htm</B> (npcId-page number)</li>
-	 * <li>if the file exists on the server (page number > 0) : <B>data/html/default/12006-1.htm</B> (npcId-page number)</li>
-	 * <li>if the file doesn't exist on the server : <B>data/html/npcdefault.htm</B> (message : "I have nothing to say to you")</li>
+	 * <li>if the file exists on the server (page number = 0) : <b>data/html/default/12006.htm</b> (npcId-page number)</li>
+	 * <li>if the file exists on the server (page number > 0) : <b>data/html/default/12006-1.htm</b> (npcId-page number)</li>
+	 * <li>if the file doesn't exist on the server : <b>data/html/npcdefault.htm</b> (message : "I have nothing to say to you")</li>
 	 * </ul>
 	 * @param npcId The Identifier of the NpcInstance whose text must be display
 	 * @param value The number of the page to display
@@ -706,7 +708,8 @@ public class Npc extends Creature
 	
 	/**
 	 * Open a chat window on client with the text of the NpcInstance.<br>
-	 * <B><U>Actions</U>:</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Get the text of the selected HTML file in function of the npcId and of the page number</li>
 	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance</li>
@@ -877,7 +880,8 @@ public class Npc extends Creature
 	
 	/**
 	 * Kill the NpcInstance (the corpse disappeared after 7 seconds).<br>
-	 * <B><U>Actions</U>:</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Create a DecayTask to remove the corpse of the NpcInstance after 7 seconds</li>
 	 * <li>Set target to null and cancel Attack or Cast</li>
@@ -1103,14 +1107,15 @@ public class Npc extends Creature
 	
 	/**
 	 * Remove the NpcInstance from the world and update its spawn object (for a complete removal use the deleteMe method).<br>
-	 * <B><U>Actions</U>:</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Remove the NpcInstance from the world when the decay task is launched</li>
 	 * <li>Decrease its spawn counter</li>
 	 * <li>Manage Siege task (killFlag, killCT)</li>
 	 * </ul>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of World </B></FONT><BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packets to players</B></FONT>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T REMOVE the object from _allObjects of World </b></font><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND Server->Client packets to players</b></font>
 	 */
 	@Override
 	public void onDecay()
@@ -1149,13 +1154,14 @@ public class Npc extends Creature
 	
 	/**
 	 * Remove PROPERLY the NpcInstance from the world.<br>
-	 * <B><U>Actions</U>:</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Remove the NpcInstance from the world and update its spawn object</li>
 	 * <li>Remove all WorldObject from _knownObjects and _knownPlayer of the NpcInstance then cancel Attack or Cast and notify AI</li>
 	 * <li>Remove WorldObject object from _allObjects of World</li>
 	 * </ul>
-	 * <FONT COLOR=#FF0000><B><U>Caution</U>: This method DOESN'T SEND Server->Client packets to players</B></FONT><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND Server->Client packets to players</b></font><br>
 	 * UnAfraid: TODO: Add Listener here
 	 */
 	@Override

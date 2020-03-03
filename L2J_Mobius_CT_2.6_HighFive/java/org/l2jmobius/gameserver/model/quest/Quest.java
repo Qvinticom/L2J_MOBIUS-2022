@@ -965,7 +965,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	
 	/**
 	 * This function is called whenever a player attacks an NPC that is registered for the quest.<br>
-	 * If is not overridden by a subclass, then default to the returned value of the simpler (and older) {@link #onAttack(Npc, PlayerInstance, int, boolean)} override.<br>
+	 * If is not overridden by a subclass, then default to the returned value of the simpler (and older) {@link #onAttack(Npc, PlayerInstance, int, boolean)} override.
 	 * @param npc this parameter contains a reference to the exact instance of the NPC that got attacked.
 	 * @param attacker this parameter contains a reference to the exact instance of the player who attacked the NPC.
 	 * @param damage this parameter represents the total damage that this attack has inflicted to the NPC.
@@ -1080,7 +1080,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * The coder of the script may need to create a new quest state (if necessary).<br>
 	 * <b>Note 3:</b><br>
 	 * The returned value of onFirstTalk replaces the default HTML that would have otherwise been loaded from a sub-folder of DatapackRoot/game/data/html/.<br>
-	 * If you wish to show the default HTML, within onFirstTalk do npc.showChatWindow(player) and then return ""<br>
+	 * If you wish to show the default HTML, within onFirstTalk do npc.showChatWindow(player) and then return ""
 	 * @param npc this parameter contains a reference to the exact instance of the NPC that the player is talking with.
 	 * @param player this parameter contains a reference to the exact instance of the player who is talking to the NPC.
 	 * @return the text returned by the event (may be {@code null}, a filename or just text)
@@ -1207,7 +1207,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	}
 	
 	/**
-	 * This function is called whenever an NPC is teleport.<br>
+	 * This function is called whenever an NPC is teleport.
 	 * @param npc this parameter contains a reference to the exact instance of the NPC who just teleport.
 	 */
 	protected void onTeleport(Npc npc)
@@ -1217,7 +1217,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	/**
 	 * This function is called whenever an NPC is called by another NPC in the same faction.
 	 * @param npc this parameter contains a reference to the exact instance of the NPC who is being asked for help.
-	 * @param caller this parameter contains a reference to the exact instance of the NPC who is asking for help.<br>
+	 * @param caller this parameter contains a reference to the exact instance of the NPC who is asking for help.
 	 * @param attacker this parameter contains a reference to the exact instance of the player who attacked.
 	 * @param isSummon this parameter if it's {@code false} it denotes that the attacker was indeed the player, else it specifies that the attacker was the player's summon.
 	 * @return

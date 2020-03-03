@@ -162,14 +162,12 @@ public class ItemTable
 	}
 	
 	/**
-	 * Create the ItemInstance corresponding to the Item Identifier and quantitiy add logs the activity.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Create the ItemInstance corresponding to the Item Identifier and quantitiy add logs the activity.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Create and Init the ItemInstance corresponding to the Item Identifier and quantity</li>
 	 * <li>Add the ItemInstance object to _allObjects of L2world</li>
-	 * <li>Logs Item creation according to LOGGER settings</li><BR>
-	 * <BR>
+	 * <li>Logs Item creation according to LOGGER settings</li><br>
 	 * @param process : String Identifier of process triggering this action
 	 * @param itemId : int Item Identifier of the item to be created
 	 * @param count : int Quantity of items to be created for stackable items
@@ -240,9 +238,8 @@ public class ItemTable
 	}
 	
 	/**
-	 * Returns a dummy (fr = factice) item.<BR>
-	 * <BR>
-	 * <U><I>Concept :</I></U><BR>
+	 * Returns a dummy (fr = factice) item.<br>
+	 * <u><i>Concept :</i></u><br>
 	 * Dummy item is created by setting the ID of the object in the world at null value
 	 * @param itemId : int designating the item
 	 * @return ItemInstance designating the dummy item created
@@ -275,14 +272,12 @@ public class ItemTable
 	}
 	
 	/**
-	 * Destroys the ItemInstance.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Destroys the ItemInstance.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Sets ItemInstance parameters to be unusable</li>
 	 * <li>Removes the ItemInstance object to _allObjects of L2world</li>
-	 * <li>Logs Item delettion according to LOGGER settings</li><BR>
-	 * <BR>
+	 * <li>Logs Item delettion according to LOGGER settings</li><br>
 	 * @param process : String Identifier of process triggering this action
 	 * @param item
 	 * @param actor : PlayerInstance Player requesting the item destroy

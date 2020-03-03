@@ -19,8 +19,7 @@ package org.l2jmobius.gameserver.model;
 import org.l2jmobius.gameserver.model.actor.instance.RecipeInstance;
 
 /**
- * This class describes a Recipe used by Dwarf to craft Item. All RecipeList are made of RecipeInstance (1 line of the recipe : Item-Quantity needed).<BR>
- * <BR>
+ * This class describes a Recipe used by Dwarf to craft Item. All RecipeList are made of RecipeInstance (1 line of the recipe : Item-Quantity needed).
  */
 public class RecipeList
 {

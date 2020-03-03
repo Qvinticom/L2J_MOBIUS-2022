@@ -76,8 +76,7 @@ public class RequestWearItem extends GameClientPacket
 	}
 	
 	/**
-	 * Decrypt the RequestWearItem Client->Server Packet and Create _items table containing all ItemID to Wear.<BR>
-	 * <BR>
+	 * Decrypt the RequestWearItem Client->Server Packet and Create _items table containing all ItemID to Wear.
 	 */
 	@Override
 	protected void readImpl()
@@ -109,8 +108,7 @@ public class RequestWearItem extends GameClientPacket
 	}
 	
 	/**
-	 * Launch Wear action.<BR>
-	 * <BR>
+	 * Launch Wear action.
 	 */
 	@Override
 	protected void runImpl()

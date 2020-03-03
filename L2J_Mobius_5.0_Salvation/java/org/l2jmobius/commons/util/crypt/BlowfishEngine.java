@@ -1232,8 +1232,7 @@ public class BlowfishEngine
 	
 	/**
 	 * Method to encrypt the block at the given index.<br>
-	 * The encrypted block goes to the destination array at the given index.<br>
-	 * <br>
+	 * The encrypted block goes to the destination array at the given index.
 	 * @param src source array with the plain data
 	 * @param srcIndex index where the block to encrypt is located
 	 * @param dst destination array the encryption will go to

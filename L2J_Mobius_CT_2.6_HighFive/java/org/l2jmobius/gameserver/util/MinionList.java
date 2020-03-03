@@ -58,13 +58,11 @@ public class MinionList
 	}
 	
 	/**
-	 * Manage the spawn of Minions.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Manage the spawn of Minions.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Get the Minion data of all Minions that must be spawn</li>
-	 * <li>For each Minion type, spawn the amount of Minion needed</li><BR>
-	 * <BR>
+	 * <li>For each Minion type, spawn the amount of Minion needed</li><br>
 	 * @param minions
 	 */
 	public void spawnMinions(List<MinionHolder> minions)
@@ -260,16 +258,14 @@ public class MinionList
 	}
 	
 	/**
-	 * Init a Minion and add it in the world as a visible object.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Init a Minion and add it in the world as a visible object.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Get the template of the Minion to spawn</li>
 	 * <li>Create and Init the Minion and generate its Identifier</li>
 	 * <li>Set the Minion HP, MP and Heading</li>
 	 * <li>Set the Minion leader to this RaidBoss</li>
-	 * <li>Init the position of the Minion and add it in the world as a visible object</li><BR>
-	 * <BR>
+	 * <li>Init the position of the Minion and add it in the world as a visible object</li><br>
 	 * @param master MonsterInstance used as master for this minion
 	 * @param minionId The NpcTemplate Identifier of the Minion to spawn
 	 * @return

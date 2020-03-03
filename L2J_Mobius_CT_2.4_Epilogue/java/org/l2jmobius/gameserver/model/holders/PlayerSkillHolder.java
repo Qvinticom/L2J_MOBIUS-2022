@@ -53,7 +53,7 @@ public class PlayerSkillHolder implements ISkillsHolder
 	}
 	
 	/**
-	 * Add a skill to the skills map.<br>
+	 * Add a skill to the skills map.
 	 * @param skill
 	 */
 	@Override

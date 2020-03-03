@@ -96,13 +96,12 @@ public class PetInstance extends Summon
 	}
 	
 	/**
-	 * Manage Feeding Task.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
+	 * Manage Feeding Task.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Feed or kill the pet depending on hunger level</li>
 	 * <li>If pet has food in inventory and feed level drops below 55% then consume food from inventory</li>
-	 * <li>Send a broadcastStatusUpdate packet for this PetInstance</li> <BR>
-	 * <BR>
+	 * <li>Send a broadcastStatusUpdate packet for this PetInstance</li>
 	 */
 	
 	class FeedTask implements Runnable
@@ -178,7 +177,7 @@ public class PetInstance extends Summon
 	 * @param template the template
 	 * @param owner the owner
 	 * @param control the control
-	 * @return the l2 pet instance
+	 * @return the pet instance
 	 */
 	public static synchronized PetInstance spawnPet(NpcTemplate template, PlayerInstance owner, ItemInstance control)
 	{
@@ -415,7 +414,7 @@ public class PetInstance extends Summon
 	}
 	
 	/**
-	 * Destroy item from inventory by using its <B>itemId</B> and send a Server->Client InventoryUpdate packet to the PlayerInstance.
+	 * Destroy item from inventory by using its <b>itemId</b> and send a Server->Client InventoryUpdate packet to the PlayerInstance.
 	 * @param process : String Identifier of process triggering this action
 	 * @param itemId : int Item identifier of the item to be destroyed
 	 * @param count : int Quantity of items to be destroyed
@@ -820,7 +819,7 @@ public class PetInstance extends Summon
 	 * @param control the control
 	 * @param template the template
 	 * @param owner the owner
-	 * @return the l2 pet instance
+	 * @return the pet instance
 	 */
 	private static PetInstance restore(ItemInstance control, NpcTemplate template, PlayerInstance owner)
 	{
@@ -980,8 +979,7 @@ public class PetInstance extends Summon
 	}
 	
 	/**
-	 * Restore the specified % of experience this PetInstance has lost.<BR>
-	 * <BR>
+	 * Restore the specified % of experience this PetInstance has lost.
 	 * @param restorePercent the restore percent
 	 */
 	public void restoreExp(double restorePercent)

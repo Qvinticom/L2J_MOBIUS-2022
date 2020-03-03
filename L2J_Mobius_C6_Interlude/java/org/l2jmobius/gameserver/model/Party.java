@@ -683,17 +683,14 @@ public class Party
 	}
 	
 	/**
-	 * Distribute Experience and SP rewards to PlayerInstance Party members in the known area of the last attacker.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Distribute Experience and SP rewards to PlayerInstance Party members in the known area of the last attacker.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Get the PlayerInstance owner of the SummonInstance (if necessary)</li>
 	 * <li>Calculate the Experience and SP reward distribution rate</li>
-	 * <li>Add Experience and SP to the PlayerInstance</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T GIVE rewards to PetInstance</B></FONT><BR>
-	 * <BR>
-	 * Exception are PetInstances that leech from the owner's XP; they get the exp indirectly, via the owner's exp gain<BR>
+	 * <li>Add Experience and SP to the PlayerInstance</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T GIVE rewards to PetInstance</b></font><br>
+	 * Exception are PetInstances that leech from the owner's XP; they get the exp indirectly, via the owner's exp gain
 	 * @param xpReward The Experience reward to distribute
 	 * @param spReward The SP reward to distribute
 	 * @param rewardedMembers The list of PlayerInstance to reward
@@ -765,9 +762,8 @@ public class Party
 	}
 	
 	/**
-	 * Calculates and gives final XP and SP rewards to the party member.<BR>
-	 * This method takes in consideration number of members, members' levels, rewarder's level and bonus modifier for the actual party.<BR>
-	 * <BR>
+	 * Calculates and gives final XP and SP rewards to the party member.<br>
+	 * This method takes in consideration number of members, members' levels, rewarder's level and bonus modifier for the actual party.
 	 * @param member is the Creature to be rewarded
 	 * @param xpReward is the total amount of XP to be "splited" and given to the member
 	 * @param spReward is the total amount of SP to be "splited" and given to the member

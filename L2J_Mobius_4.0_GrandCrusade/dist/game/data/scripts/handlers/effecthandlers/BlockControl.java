@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 
 /**
- * An effect that blocks the player (NPC?) control. <br>
+ * An effect that blocks the player (NPC?) control.<br>
  * It prevents moving, casting, social actions, etc.
  * @author Nik
  */

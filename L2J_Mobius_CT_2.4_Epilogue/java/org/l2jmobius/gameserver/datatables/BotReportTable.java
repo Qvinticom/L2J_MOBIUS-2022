@@ -207,7 +207,7 @@ public class BotReportTable
 	}
 	
 	/**
-	 * Attempts to perform a bot report. R/W to ip and char id registry is synchronized. Triggers bot punish management<br>
+	 * Attempts to perform a bot report. R/W to ip and char id registry is synchronized. Triggers bot punish management
 	 * @param reporter (PlayerInstance who issued the report)
 	 * @return True, if the report was registered, False otherwise
 	 */

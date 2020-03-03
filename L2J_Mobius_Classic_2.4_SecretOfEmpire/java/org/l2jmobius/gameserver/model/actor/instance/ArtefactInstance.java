@@ -24,21 +24,19 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
- * This class manages all Castle Siege Artefacts.<BR>
- * <BR>
+ * This class manages all Castle Siege Artefacts.<br>
+ * <br>
  * @version $Revision: 1.11.2.1.2.7 $ $Date: 2005/04/06 16:13:40 $
  */
 public class ArtefactInstance extends Npc
 {
 	/**
-	 * Constructor of ArtefactInstance (use Creature and NpcInstance constructor).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Constructor of ArtefactInstance (use Creature and NpcInstance constructor).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Call the Creature constructor to set the _template of the ArtefactInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
 	 * <li>Set the name of the ArtefactInstance</li>
-	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li><BR>
-	 * <BR>
+	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li><br>
 	 * @param template to apply to the NPC
 	 */
 	public ArtefactInstance(NpcTemplate template)

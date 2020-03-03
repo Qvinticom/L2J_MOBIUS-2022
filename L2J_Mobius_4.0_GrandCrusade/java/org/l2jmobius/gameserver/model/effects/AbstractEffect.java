@@ -62,7 +62,7 @@ public abstract class AbstractEffect
 	/**
 	 * Calculates whether this effects land or not.<br>
 	 * If it lands will be scheduled and added to the character effect list.<br>
-	 * Override in effect implementation to change behavior. <br>
+	 * Override in effect implementation to change behavior.<br>
 	 * <b>Warning:</b> Must be used only for instant effects continuous effects will not call this they have their success handled by activate_rate.
 	 * @param effector
 	 * @param effected

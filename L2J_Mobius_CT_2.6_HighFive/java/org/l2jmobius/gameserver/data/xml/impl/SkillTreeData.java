@@ -57,7 +57,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  * Here can be found the following skill trees:<br>
  * <ul>
  * <li>Class skill trees: player skill trees for each class.</li>
- * <li>Transfer skill trees: player skill trees for each healer class.</lI>
+ * <li>Transfer skill trees: player skill trees for each healer class.</li>
  * <li>Collect skill tree: player skill tree for Gracia related skills.</li>
  * <li>Fishing skill tree: player skill tree for fishing related skills.</li>
  * <li>Transform skill tree: player skill tree for transformation related skills.</li>

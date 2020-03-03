@@ -41,8 +41,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
 
 /**
- * This class manages AI of Attackable.<BR>
- * <BR>
+ * This class manages AI of Attackable.
  */
 public class SiegeGuardAI extends CreatureAI implements Runnable
 {
@@ -65,8 +64,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	private final int _attackRange;
 	
 	/**
-	 * Constructor of AttackableAI.<BR>
-	 * <BR>
+	 * Constructor of AttackableAI.
 	 * @param accessor The AI accessor of the Creature
 	 */
 	public SiegeGuardAI(Creature.AIAccessor accessor)
@@ -86,38 +84,33 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	}
 	
 	/**
-	 * Return True if the target is autoattackable (depends on the actor type).<BR>
-	 * <BR>
-	 * <B><U> Actor is a GuardInstance</U> :</B><BR>
-	 * <BR>
+	 * Return True if the target is autoattackable (depends on the actor type).<br>
+	 * <br>
+	 * <b><u>Actor is a GuardInstance</u>:</b><br>
 	 * <li>The target isn't a Folk or a Door</li>
 	 * <li>The target isn't dead, isn't invulnerable, isn't in silent moving mode AND too far (>100)</li>
 	 * <li>The target is in the actor Aggro range and is at the same height</li>
 	 * <li>The PlayerInstance target has karma (=PK)</li>
-	 * <li>The MonsterInstance target is aggressive</li><BR>
-	 * <BR>
-	 * <B><U> Actor is a SiegeGuardInstance</U> :</B><BR>
-	 * <BR>
+	 * <li>The MonsterInstance target is aggressive</li><br>
+	 * <br>
+	 * <b><u>Actor is a SiegeGuardInstance</u>:</b><br>
 	 * <li>The target isn't a Folk or a Door</li>
 	 * <li>The target isn't dead, isn't invulnerable, isn't in silent moving mode AND too far (>100)</li>
 	 * <li>The target is in the actor Aggro range and is at the same height</li>
 	 * <li>A siege is in progress</li>
-	 * <li>The PlayerInstance target isn't a Defender</li> <BR>
-	 * <BR>
-	 * <B><U> Actor is a FriendlyMobInstance</U> :</B><BR>
-	 * <BR>
+	 * <li>The PlayerInstance target isn't a Defender</li><br>
+	 * <br>
+	 * <b><u>Actor is a FriendlyMobInstance</u>:</b><br>
 	 * <li>The target isn't a Folk, a Door or another NpcInstance</li>
 	 * <li>The target isn't dead, isn't invulnerable, isn't in silent moving mode AND too far (>100)</li>
 	 * <li>The target is in the actor Aggro range and is at the same height</li>
-	 * <li>The PlayerInstance target has karma (=PK)</li><BR>
-	 * <BR>
-	 * <B><U> Actor is a MonsterInstance</U> :</B><BR>
-	 * <BR>
+	 * <li>The PlayerInstance target has karma (=PK)</li><br>
+	 * <br>
+	 * <b><u>Actor is a MonsterInstance</u>:</b><br>
 	 * <li>The target isn't a Folk, a Door or another NpcInstance</li>
 	 * <li>The target isn't dead, isn't invulnerable, isn't in silent moving mode AND too far (>100)</li>
 	 * <li>The target is in the actor Aggro range and is at the same height</li>
-	 * <li>The actor is Aggressive</li><BR>
-	 * <BR>
+	 * <li>The actor is Aggressive</li><br>
 	 * @param target The targeted WorldObject
 	 * @return
 	 */
@@ -150,10 +143,8 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	}
 	
 	/**
-	 * Set the Intention of this CreatureAI and create an AI Task executed every 1s (call onEvtThink method) for this Attackable.<BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : If actor _knowPlayer isn't EMPTY, AI_INTENTION_IDLE will be change in AI_INTENTION_ACTIVE</B></FONT><BR>
-	 * <BR>
+	 * Set the Intention of this CreatureAI and create an AI Task executed every 1s (call onEvtThink method) for this Attackable.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: If actor _knowPlayer isn't EMPTY, AI_INTENTION_IDLE will be change in AI_INTENTION_ACTIVE</b></font>
 	 * @param intention The new Intention to set to the AI
 	 * @param arg0 The first parameter of the Intention
 	 * @param arg1 The second parameter of the Intention
@@ -210,8 +201,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	}
 	
 	/**
-	 * Manage the Attack Intention : Stop current Attack (if necessary), Calculate attack timeout, Start a new Attack and Launch Think Event.<BR>
-	 * <BR>
+	 * Manage the Attack Intention : Stop current Attack (if necessary), Calculate attack timeout, Start a new Attack and Launch Think Event.
 	 * @param target The Creature to attack
 	 */
 	@Override
@@ -226,10 +216,9 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	}
 	
 	/**
-	 * Manage AI standard thinks of a Attackable (called by onEvtThink).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Manage AI standard thinks of a Attackable (called by onEvtThink).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Update every 1s the _globalAggro counter to come close to 0</li>
 	 * <li>If the actor is Aggressive and can attack, add all autoAttackable Creature in its Aggro Range to its _aggroList, chose a target and order to attack it</li>
 	 * <li>If the actor can't attack, order to it to return to its home location</li>
@@ -525,15 +514,13 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	}
 	
 	/**
-	 * Manage AI attack thinks of a Attackable (called by onEvtThink).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Manage AI attack thinks of a Attackable (called by onEvtThink).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Update the attack timeout if actor is running</li>
 	 * <li>If target is dead or timeout is expired, stop this attack and set the Intention to AI_INTENTION_ACTIVE</li>
 	 * <li>Call all WorldObject of its Faction inside the Faction Range</li>
-	 * <li>Chose a target and order to attack it with magic skill or physical attack</li><BR>
-	 * <BR>
+	 * <li>Chose a target and order to attack it with magic skill or physical attack</li><br>
 	 * TODO: Manage casting rules to healer mobs (like Ant Nurses)
 	 */
 	private void thinkAttack()
@@ -639,8 +626,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	}
 	
 	/**
-	 * Manage AI thinking actions of a Attackable.<BR>
-	 * <BR>
+	 * Manage AI thinking actions of a Attackable.
 	 */
 	@Override
 	protected void onEvtThink()
@@ -674,14 +660,12 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	}
 	
 	/**
-	 * Launch actions corresponding to the Event Attacked.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Launch actions corresponding to the Event Attacked.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Init the attack : Calculate the attack timeout, Set the _globalAggro to 0, Add the attacker to the actor _aggroList</li>
 	 * <li>Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance</li>
-	 * <li>Set the Intention to AI_INTENTION_ATTACK</li> <BR>
-	 * <BR>
+	 * <li>Set the Intention to AI_INTENTION_ATTACK</li>
 	 * @param attacker The Creature that attacks the actor
 	 */
 	@Override
@@ -715,13 +699,11 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	}
 	
 	/**
-	 * Launch actions corresponding to the Event Aggression.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Launch actions corresponding to the Event Aggression.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Add the target to the actor _aggroList or update hate if already present</li>
-	 * <li>Set the actor Intention to AI_INTENTION_ATTACK (if actor is GuardInstance check if it isn't too far from its home location)</li><BR>
-	 * <BR>
+	 * <li>Set the actor Intention to AI_INTENTION_ATTACK (if actor is GuardInstance check if it isn't too far from its home location)</li><br>
 	 * @param target The Creature that attacks
 	 * @param aggro The value of hate to add to the actor against the target
 	 */

@@ -25,8 +25,7 @@ public class RecipeInstance
 	private final int _quantity;
 	
 	/**
-	 * Constructor of RecipeInstance (create a new line in a RecipeList).<BR>
-	 * <BR>
+	 * Constructor of RecipeInstance (create a new line in a RecipeList).
 	 * @param itemId the item id
 	 * @param quantity the quantity
 	 */
@@ -37,8 +36,7 @@ public class RecipeInstance
 	}
 	
 	/**
-	 * Return the Identifier of the RecipeInstance Item needed.<BR>
-	 * <BR>
+	 * Return the Identifier of the RecipeInstance Item needed.
 	 * @return the item id
 	 */
 	public int getItemId()
@@ -47,8 +45,7 @@ public class RecipeInstance
 	}
 	
 	/**
-	 * Return the Item quantity needed of the RecipeInstance.<BR>
-	 * <BR>
+	 * Return the Item quantity needed of the RecipeInstance.
 	 * @return the quantity
 	 */
 	public int getQuantity()

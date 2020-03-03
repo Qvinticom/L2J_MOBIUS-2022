@@ -30,7 +30,7 @@ public class GMViewCharacterInfo extends GameServerPacket
 	private final PlayerInstance _player;
 	
 	/**
-	 * Instantiates a new gM view character info.
+	 * Instantiates a new GM view character info.
 	 * @param player the player
 	 */
 	public GMViewCharacterInfo(PlayerInstance player)

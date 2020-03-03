@@ -193,10 +193,8 @@ public class RequestPetUseItem extends GameClientPacket
 	}
 	
 	/**
-	 * When fed by owner double click on food from pet inventory. <BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : 1 food = 100 points of currentFed</B></FONT><BR>
-	 * <BR>
+	 * When fed by owner double click on food from pet inventory.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: 1 food = 100 points of currentFed</b></font>
 	 * @param pet
 	 * @param item
 	 */

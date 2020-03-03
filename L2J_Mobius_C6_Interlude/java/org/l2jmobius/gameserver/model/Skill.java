@@ -1390,10 +1390,9 @@ public abstract class Skill
 	}
 	
 	/**
-	 * Return all targets of the skill in a table in function a the skill type.<BR>
-	 * <BR>
-	 * <B><U> Values of skill type</U> :</B><BR>
-	 * <BR>
+	 * Return all targets of the skill in a table in function a the skill type.<br>
+	 * <br>
+	 * <b><u>Values of skill type</u>:</b><br>
 	 * <li>ONE : The skill can only be used on the PlayerInstance targeted, or on the caster if it's a PlayerInstance and no PlayerInstance targeted</li>
 	 * <li>SELF</li>
 	 * <li>HOLY, UNDEAD</li>
@@ -1404,8 +1403,7 @@ public abstract class Skill
 	 * <li>PARTY, CLAN</li>
 	 * <li>CORPSE_PLAYER, CORPSE_MOB, CORPSE_CLAN</li>
 	 * <li>UNLOCKABLE</li>
-	 * <li>ITEM</li><BR>
-	 * <BR>
+	 * <li>ITEM</li><br>
 	 * @param creature The Creature who use the skill
 	 * @param onlyFirst
 	 * @param target

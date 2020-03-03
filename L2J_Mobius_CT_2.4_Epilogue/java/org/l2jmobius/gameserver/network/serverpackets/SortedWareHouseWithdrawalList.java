@@ -450,7 +450,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Weapon</li>
 	 * <li>Arrow</li>
-	 * <li>Money</li>
+	 * <li>Money</li><br>
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
@@ -470,7 +470,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	/**
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Armor</li>
-	 * <li>Money</li>
+	 * <li>Money</li><br>
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
@@ -490,7 +490,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	/**
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Everything which is no Weapon/Armor</li>
-	 * <li>Money</li>
+	 * <li>Money</li><br>
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
@@ -510,7 +510,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	/**
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Materials</li>
-	 * <li>Money</li>
+	 * <li>Money</li><br>
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
@@ -530,7 +530,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	/**
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Recipes</li>
-	 * <li>Money</li>
+	 * <li>Money</li><br>
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
@@ -550,7 +550,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	/**
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Amulett</li>
-	 * <li>Money</li>
+	 * <li>Money</li><br>
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
@@ -570,7 +570,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	/**
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Spellbook & Dwarven Drafts</li>
-	 * <li>Money</li>
+	 * <li>Money</li><br>
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
@@ -590,7 +590,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	/**
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Consumables (Potions, Shots, ...)</li>
-	 * <li>Money</li>
+	 * <li>Money</li><br>
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
@@ -610,7 +610,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	/**
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Shots</li>
-	 * <li>Money</li>
+	 * <li>Money</li><br>
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
@@ -630,7 +630,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	/**
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Scrolls/Potions</li>
-	 * <li>Money</li>
+	 * <li>Money</li><br>
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
@@ -650,7 +650,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	/**
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Seeds</li>
-	 * <li>Money</li>
+	 * <li>Money</li><br>
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
@@ -670,7 +670,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	/**
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Everything which is no Weapon/Armor, Material, Recipe, Spellbook, Scroll or Shot</li>
-	 * <li>Money</li>
+	 * <li>Money</li><br>
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */

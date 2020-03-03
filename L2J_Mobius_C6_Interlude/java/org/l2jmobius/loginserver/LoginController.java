@@ -153,7 +153,7 @@ public class LoginController
 	}
 	
 	/**
-	 * This is mostly to force the initialization of the Crypto Implementation, avoiding it being done on runtime when its first needed.<BR>
+	 * This is mostly to force the initialization of the Crypto Implementation, avoiding it being done on runtime when its first needed.<br>
 	 * In short it avoids the worst-case execution time on runtime by doing it on loading.
 	 * @param key Any private RSA Key just for testing purposes.
 	 * @throws GeneralSecurityException if a underlying exception was thrown by the Cipher
@@ -516,7 +516,7 @@ public class LoginController
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("could not check gm state:" + e);
+			LOGGER.warning("could not check GM state:" + e);
 			ok = false;
 		}
 		return ok;

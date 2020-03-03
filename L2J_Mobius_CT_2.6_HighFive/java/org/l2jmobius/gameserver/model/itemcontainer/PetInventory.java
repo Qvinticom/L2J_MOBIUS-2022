@@ -113,7 +113,7 @@ public class PetInventory extends Inventory
 	public void restore()
 	{
 		super.restore();
-		// check for equiped items from other pets
+		// check for equipped items from other pets
 		for (ItemInstance item : _items)
 		{
 			if (item.isEquipped() && !item.getItem().checkCondition(_owner, _owner, false))

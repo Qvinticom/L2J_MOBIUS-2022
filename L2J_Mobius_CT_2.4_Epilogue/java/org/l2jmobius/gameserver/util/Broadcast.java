@@ -40,11 +40,13 @@ public class Broadcast
 	private static final Logger LOGGER = Logger.getLogger(Broadcast.class.getName());
 	
 	/**
-	 * Send a packet to all PlayerInstance in the _KnownPlayers of the Creature that have the Character targeted.<BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * PlayerInstance in the detection area of the Creature are identified in <B>_knownPlayers</B>.<BR>
-	 * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet<BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</B></FONT><BR>
+	 * Send a packet to all PlayerInstance in the _KnownPlayers of the Creature that have the Character targeted.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * PlayerInstance in the detection area of the Creature are identified in <b>_knownPlayers</b>.<br>
+	 * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet<br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</b></font>
 	 * @param creature
 	 * @param mov
 	 */
@@ -60,11 +62,13 @@ public class Broadcast
 	}
 	
 	/**
-	 * Send a packet to all PlayerInstance in the _KnownPlayers of the Creature.<BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * PlayerInstance in the detection area of the Creature are identified in <B>_knownPlayers</B>.<BR>
-	 * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet<BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</B></FONT><BR>
+	 * Send a packet to all PlayerInstance in the _KnownPlayers of the Creature.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * PlayerInstance in the detection area of the Creature are identified in <b>_knownPlayers</b>.<br>
+	 * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet<br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</b></font>
 	 * @param creature
 	 * @param mov
 	 */
@@ -99,11 +103,13 @@ public class Broadcast
 	}
 	
 	/**
-	 * Send a packet to all PlayerInstance in the _KnownPlayers (in the specified radius) of the Creature.<BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * PlayerInstance in the detection area of the Creature are identified in <B>_knownPlayers</B>.<BR>
-	 * In order to inform other players of state modification on the Creature, server just needs to go through _knownPlayers to send Server->Client Packet and check the distance between the targets.<BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</B></FONT><BR>
+	 * Send a packet to all PlayerInstance in the _KnownPlayers (in the specified radius) of the Creature.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * PlayerInstance in the detection area of the Creature are identified in <b>_knownPlayers</b>.<br>
+	 * In order to inform other players of state modification on the Creature, server just needs to go through _knownPlayers to send Server->Client Packet and check the distance between the targets.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</b></font>
 	 * @param creature
 	 * @param mov
 	 * @param radius
@@ -119,10 +125,12 @@ public class Broadcast
 	}
 	
 	/**
-	 * Send a packet to all PlayerInstance in the _KnownPlayers of the Creature and to the specified character.<BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * PlayerInstance in the detection area of the Creature are identified in <B>_knownPlayers</B>.<BR>
-	 * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet<BR>
+	 * Send a packet to all PlayerInstance in the _KnownPlayers of the Creature and to the specified character.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * PlayerInstance in the detection area of the Creature are identified in <b>_knownPlayers</b>.<br>
+	 * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet
 	 * @param creature
 	 * @param mov
 	 */
@@ -153,10 +161,12 @@ public class Broadcast
 	}
 	
 	/**
-	 * Send a packet to all PlayerInstance present in the world.<BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * In order to inform other players of state modification on the Creature, server just need to go through _allPlayers to send Server->Client Packet<BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</B></FONT><BR>
+	 * Send a packet to all PlayerInstance present in the world.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * In order to inform other players of state modification on the Creature, server just need to go through _allPlayers to send Server->Client Packet<br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</b></font>
 	 * @param packet
 	 */
 	public static void toAllOnlinePlayers(IClientOutgoingPacket packet)

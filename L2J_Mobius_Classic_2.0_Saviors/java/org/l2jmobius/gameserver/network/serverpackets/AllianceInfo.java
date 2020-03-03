@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.clientpackets.RequestAllyInfo;
 
 /**
- * Sent in response to {@link RequestAllyInfo}, if applicable.<BR>
+ * Sent in response to {@link RequestAllyInfo}, if applicable.<br>
  * @author afk5min
  */
 public class AllianceInfo implements IClientOutgoingPacket

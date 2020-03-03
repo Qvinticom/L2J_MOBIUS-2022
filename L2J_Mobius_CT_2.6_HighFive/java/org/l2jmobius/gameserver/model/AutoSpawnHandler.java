@@ -203,7 +203,7 @@ public class AutoSpawnHandler
 	/**
 	 * Registers a spawn with the given parameters with the spawner, and marks it as active.<br>
 	 * Returns a AutoSpawnInstance containing info about the spawn.<br>
-	 * <B>Warning:</B> Spawn locations must be specified separately using addSpawnLocation().
+	 * <b>Warning:</b> Spawn locations must be specified separately using addSpawnLocation().
 	 * @param npcId
 	 * @param initialDelay (If < 0 = default value)
 	 * @param respawnDelay (If < 0 = default value)

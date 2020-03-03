@@ -29,8 +29,8 @@ public interface IBBSHandler
 	String[] getBBSCommands();
 	
 	/**
-	 * @param command as String - _bbs<br>
-	 * @param player as PlayerInstance - Alt+B<br>
+	 * @param command as String - _bbs
+	 * @param player as PlayerInstance - Alt+B
 	 * @param params as String -
 	 */
 	void handleCommand(String command, PlayerInstance player, String params);

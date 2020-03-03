@@ -494,7 +494,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 		sb.append("<td><edit var=\"event_npcid\" width=100 height=20></td></tr>");
 		sb.append("<tr><td><button value=\"Set number of teams\" action=\"bypass -h admin_event_change_teams_number $event_teams_number\" width=140 height=32 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>");
 		sb.append("<td><edit var=\"event_teams_number\" width=100 height=20></td></tr>");
-		sb.append("</table><br><center> <br><br>");
+		sb.append("</table><br><center><br><br>");
 		sb.append("<font color=\"LEVEL\">Teams' names:</font><br><table width=100% cellspacing=8>");
 		for (int i = 1; (i - 1) < teamnumbers; i++) // Team names params
 		{

@@ -118,10 +118,13 @@ public class GameTimeController extends Thread
 	}
 	
 	/**
-	 * Move all Creatures contained in movingObjects of GameTimeController.<BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * All Creature in movement are identified in <B>movingObjects</B> of GameTimeController.<BR>
-	 * <B><U> Actions</U> :</B><BR>
+	 * Move all Creatures contained in movingObjects of GameTimeController.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * All Creature in movement are identified in <b>movingObjects</b> of GameTimeController.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <ul>
 	 * <li>Update the position of each Creature</li>
 	 * <li>If movement is finished, the Creature is removed from movingObjects</li>

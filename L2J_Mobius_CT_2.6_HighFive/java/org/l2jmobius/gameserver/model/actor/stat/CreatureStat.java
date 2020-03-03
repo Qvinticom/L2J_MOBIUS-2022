@@ -63,12 +63,14 @@ public class CreatureStat
 	}
 	
 	/**
-	 * Calculate the new value of the state with modifiers that will be applied on the targeted Creature.<BR>
-	 * <B><U> Concept</U> :</B><BR A Creature owns a table of Calculators called <B>_calculators</B>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...) : <BR>
-	 * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()<BR>
-	 * When the calc method of a calculator is launched, each mathematical function is called according to its priority <B>_order</B>.<br>
+	 * Calculate the new value of the state with modifiers that will be applied on the targeted Creature.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * A Creature owns a table of Calculators called <b>_calculators</b>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...) :<br>
+	 * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()<br>
+	 * When the calc method of a calculator is launched, each mathematical function is called according to its priority <b>_order</b>.<br>
 	 * Indeed, Func with lowest priority order is executed firsta and Funcs with the same order are executed in unspecified order.<br>
-	 * The result of the calculation is stored in the value property of an Env class instance.<br>
+	 * The result of the calculation is stored in the value property of an Env class instance.
 	 * @param stat The stat to calculate the new value with modifiers
 	 * @param initVal The initial value of the stat before applying modifiers
 	 * @param target The Creature whose properties will be used in the calculation (ex : CON, INT...)
@@ -270,7 +272,8 @@ public class CreatureStat
 	
 	/**
 	 * Return the MAtk (base+modifier) of the Creature.<br>
-	 * <B><U>Example of use</U>: Calculate Magic damage
+	 * <br>
+	 * <b><u>Example of use</u>: Calculate Magic damage
 	 * @param target The Creature targeted by the skill
 	 * @param skill The Skill used against the target
 	 * @return
@@ -327,7 +330,7 @@ public class CreatureStat
 	}
 	
 	/**
-	 * <B><U>Example of use </U>: Calculate Magic damage.
+	 * <b><u>Example of use </u>: Calculate Magic damage.
 	 * @param target The Creature targeted by the skill
 	 * @param skill The Skill used against the target
 	 * @return the MDef (base+modifier) of the Creature against a skill in function of abnormal effects in progress.

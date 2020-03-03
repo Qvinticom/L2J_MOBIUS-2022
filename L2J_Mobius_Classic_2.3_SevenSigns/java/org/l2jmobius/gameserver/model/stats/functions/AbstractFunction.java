@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
  * A Function object is a component of a Calculator created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...).<br>
  * In fact, each calculator is a table of functions object in which each function represents a mathematics function:<br>
  * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()<br>
- * When the calc method of a calculator is launched, each mathematics function is called according to its priority <B>_order</B>.<br>
+ * When the calc method of a calculator is launched, each mathematics function is called according to its priority <b>_order</b>.<br>
  * Indeed, functions with lowest priority order is executed first and functions with the same order are executed in unspecified order.<br>
  * @author Zoey76
  */

@@ -75,7 +75,7 @@ public class frmAbout
 		frmAbout.getContentPane().add(lblLoginServer);
 		
 		final JLabel site = new JLabel(URL);
-		site.setText("<HTML><FONT color=\"#000099\"><U>" + URL + "</U></FONT></HTML>");
+		site.setText("<html><font color=\"#000099\"><u>" + URL + "</u></font></html>");
 		site.setHorizontalAlignment(SwingConstants.CENTER);
 		site.setBounds(76, 148, 140, 14);
 		site.addMouseListener(new MouseAdapter()

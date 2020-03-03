@@ -532,8 +532,7 @@ public abstract class Summon extends Playable
 	}
 	
 	/**
-	 * Return the Party object of its PlayerInstance owner or null.<BR>
-	 * <BR>
+	 * Return the Party object of its PlayerInstance owner or null.
 	 */
 	@Override
 	public Party getParty()
@@ -546,8 +545,7 @@ public abstract class Summon extends Playable
 	}
 	
 	/**
-	 * Return True if the Creature has a Party in progress.<BR>
-	 * <BR>
+	 * Return True if the Creature has a Party in progress.
 	 */
 	@Override
 	public boolean isInParty()
@@ -560,19 +558,15 @@ public abstract class Summon extends Playable
 	}
 	
 	/**
-	 * Check if the active Skill can be casted.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Check if the active Skill can be casted.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Check if the target is correct</li>
 	 * <li>Check if the target is in the skill cast range</li>
 	 * <li>Check if the summon owns enough HP and MP to cast the skill</li>
-	 * <li>Check if all skills are enabled and this skill is enabled</li><BR>
-	 * <BR>
-	 * <li>Check if the skill is active</li><BR>
-	 * <BR>
-	 * <li>Notify the AI with AI_INTENTION_CAST and target</li><BR>
-	 * <BR>
+	 * <li>Check if all skills are enabled and this skill is enabled</li>
+	 * <li>Check if the skill is active</li>
+	 * <li>Notify the AI with AI_INTENTION_CAST and target</li><br>
 	 * @param skill The Skill to use
 	 * @param forceUse used to force ATTACK on players
 	 * @param dontMove used to prevent movement, if not in range

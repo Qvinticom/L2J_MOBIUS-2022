@@ -24,21 +24,19 @@ import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
 /**
- * This class manages all Castle Siege Artefacts.<BR>
- * <BR>
+ * This class manages all Castle Siege Artefacts.<br>
+ * <br>
  * @version $Revision: 1.11.2.1.2.7 $ $Date: 2005/04/06 16:13:40 $
  */
 public class ArtefactInstance extends NpcInstance
 {
 	/**
-	 * Constructor of ArtefactInstance (use Creature and NpcInstance constructor).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Constructor of ArtefactInstance (use Creature and NpcInstance constructor).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Call the Creature constructor to set the _template of the ArtefactInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
 	 * <li>Set the name of the ArtefactInstance</li>
-	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li><BR>
-	 * <BR>
+	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li><br>
 	 * @param objectId Identifier of the object to initialized
 	 * @param template
 	 */
@@ -66,18 +64,15 @@ public class ArtefactInstance extends NpcInstance
 	}
 	
 	/**
-	 * Manage actions when a player click on the ArtefactInstance.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Manage actions when a player click on the ArtefactInstance.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Set the NpcInstance as target of the PlayerInstance player (if necessary)</li>
 	 * <li>Send a Server->Client packet MyTargetSelected to the PlayerInstance player (display the select window)</li>
-	 * <li>Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client</li><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Client packet : Action, AttackRequest</li><BR>
-	 * <BR>
+	 * <li>Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client</li><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Client packet : Action, AttackRequest</li><br>
 	 * @param player The PlayerInstance that start an action on the ArtefactInstance
 	 */
 	@Override

@@ -96,7 +96,7 @@ public class RequestDestroyItem implements IClientIncomingPacket
 		// if we can't find the requested item, its actually a cheat
 		if (itemToRemove == null)
 		{
-			// gm can destroy other player items
+			// GM can destroy other player items
 			if (player.isGM())
 			{
 				final WorldObject obj = World.getInstance().findObject(_objectId);

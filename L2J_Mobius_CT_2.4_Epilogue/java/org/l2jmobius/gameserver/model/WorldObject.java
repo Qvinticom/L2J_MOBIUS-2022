@@ -666,7 +666,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	
 	/**
 	 * Sets the instance ID of object.<br>
-	 * 0 - Global<br>
+	 * 0 - Global
 	 * @param instanceId the ID of the instance
 	 */
 	@Override

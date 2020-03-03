@@ -43,7 +43,8 @@ public class MonsterInstance extends Attackable
 	
 	/**
 	 * Constructor of MonsterInstance (use Creature and NpcInstance constructor).<br>
-	 * <B><U> Actions</U> :</B>
+	 * <br>
+	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Call the Creature constructor to set the _template of the MonsterInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
 	 * <li>Set the name of the MonsterInstance</li>

@@ -272,8 +272,8 @@ public class DoorInstance extends Creature
 	}
 	
 	/**
-	 * Sets the delay in milliseconds for automatic opening/closing of this door instance. <BR>
-	 * <B>Note:</B> A value of -1 cancels the auto open/close task.
+	 * Sets the delay in milliseconds for automatic opening/closing of this door instance.<br>
+	 * <b>Note:</b> A value of -1 cancels the auto open/close task.
 	 * @param actionDelay the new auto action delay
 	 */
 	public void setAutoActionDelay(int actionDelay)
@@ -465,13 +465,11 @@ public class DoorInstance extends Creature
 	}
 	
 	/**
-	 * Return the distance after which the object must be remove from _knownObject according to the type of the object.<BR>
-	 * <BR>
-	 * <B><U> Values </U> :</B><BR>
-	 * <BR>
+	 * Return the distance after which the object must be remove from _knownObject according to the type of the object.<br>
+	 * <br>
+	 * <b><u>Values</u>:</b><br>
 	 * <li>object is a PlayerInstance : 4000</li>
-	 * <li>object is not a PlayerInstance : 0</li><BR>
-	 * <BR>
+	 * <li>object is not a PlayerInstance : 0</li><br>
 	 * @param object the object
 	 * @return the distance to forget object
 	 */
@@ -485,8 +483,7 @@ public class DoorInstance extends Creature
 	}
 	
 	/**
-	 * Return null.<BR>
-	 * <BR>
+	 * Return null.
 	 * @return the active weapon instance
 	 */
 	@Override

@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
- * Physical Attack effect implementation. <br>
+ * Physical Attack effect implementation.<br>
  * <b>Note</b>: Initial formula taken from PhysicalAttack.
  * @author Adry_85, Nik
  */

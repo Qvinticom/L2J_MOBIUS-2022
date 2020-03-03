@@ -31,14 +31,12 @@ public class MinionInstance extends MonsterInstance
 	private MonsterInstance _master;
 	
 	/**
-	 * Constructor of MinionInstance (use Creature and NpcInstance constructor).<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Constructor of MinionInstance (use Creature and NpcInstance constructor).<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Call the Creature constructor to set the _template of the MinionInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
 	 * <li>Set the name of the MinionInstance</li>
-	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li><BR>
-	 * <BR>
+	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li><br>
 	 * @param objectId Identifier of the object to initialized
 	 * @param template the template
 	 */
@@ -58,8 +56,7 @@ public class MinionInstance extends MonsterInstance
 	}
 	
 	/**
-	 * Return the master of this MinionInstance.<BR>
-	 * <BR>
+	 * Return the master of this MinionInstance.
 	 * @return the leader
 	 */
 	public MonsterInstance getLeader()
@@ -83,8 +80,7 @@ public class MinionInstance extends MonsterInstance
 	}
 	
 	/**
-	 * Set the master of this MinionInstance.<BR>
-	 * <BR>
+	 * Set the master of this MinionInstance.
 	 * @param leader The Creature that leads this MinionInstance
 	 */
 	public void setLeader(MonsterInstance leader)
@@ -93,10 +89,8 @@ public class MinionInstance extends MonsterInstance
 	}
 	
 	/**
-	 * Manages the doDie event for this MinionInstance.<BR>
-	 * <BR>
-	 * @param killer The Creature that killed this MinionInstance.<BR>
-	 *            <BR>
+	 * Manages the doDie event for this MinionInstance.
+	 * @param killer The Creature that killed this MinionInstance.<br>
 	 * @return true, if successful
 	 */
 	@Override

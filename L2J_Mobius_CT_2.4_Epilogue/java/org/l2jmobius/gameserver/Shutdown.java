@@ -234,7 +234,7 @@ public class Shutdown extends Thread
 		}
 		else
 		{
-			// gm shutdown: send warnings and then call exit to start shutdown sequence
+			// GM shutdown: send warnings and then call exit to start shutdown sequence
 			countdown();
 			// last point where logging is operational :(
 			LOGGER.warning("GM shutdown countdown is over. " + MODE_TEXT[_shutdownMode] + " NOW!");
@@ -563,7 +563,7 @@ public class Shutdown extends Thread
 	}
 	
 	/**
-	 * Get the shutdown-hook instance the shutdown-hook instance is created by the first call of this function, but it has to be registered externally.<br>
+	 * Get the shutdown-hook instance the shutdown-hook instance is created by the first call of this function, but it has to be registered externally.
 	 * @return instance of Shutdown, to be used as shutdown hook
 	 */
 	public static Shutdown getInstance()

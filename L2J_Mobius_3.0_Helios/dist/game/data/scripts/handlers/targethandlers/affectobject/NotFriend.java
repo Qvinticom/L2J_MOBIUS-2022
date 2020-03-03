@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
 /**
  * Not Friend affect object implementation. Based on Gracia Final retail tests.<br>
  * Such are considered flagged/karma players (except party/clan/ally). Doesn't matter if in command channel.<br>
- * In arena such are considered clan/ally/command channel (except party). <br>
+ * In arena such are considered clan/ally/command channel (except party).<br>
  * In peace zone such are considered monsters.<br>
  * Monsters consider such all players, npcs (Citizens, Guild Masters, Merchants, Guards, etc. except monsters). Doesn't matter if in peace zone or arena.
  * @author Nik

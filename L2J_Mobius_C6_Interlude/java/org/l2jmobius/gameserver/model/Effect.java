@@ -351,13 +351,11 @@ public abstract class Effect
 	}
 	
 	/**
-	 * Stop the Effect task and send Server->Client update packet.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Stop the Effect task and send Server->Client update packet.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Cancel the effect in the the abnormal effect map of the Creature</li>
-	 * <li>Stop the task of the Effect, remove it and update client magic icone</li><BR>
-	 * <BR>
+	 * <li>Stop the task of the Effect, remove it and update client magic icone</li>
 	 */
 	public void exit()
 	{
@@ -378,13 +376,11 @@ public abstract class Effect
 	}
 	
 	/**
-	 * Stop the task of the Effect, remove it and update client magic icone.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
+	 * Stop the task of the Effect, remove it and update client magic icone.<br>
+	 * <br>
+	 * <b><u>Actions</u>:</b><br>
 	 * <li>Cancel the task</li>
-	 * <li>Stop and remove Effect from Creature and update client magic icone</li><BR>
-	 * <BR>
+	 * <li>Stop and remove Effect from Creature and update client magic icone</li>
 	 */
 	public synchronized void stopEffectTask()
 	{
@@ -426,8 +422,7 @@ public abstract class Effect
 	}
 	
 	/**
-	 * Cancel the effect in the the abnormal effect map of the effected Creature.<BR>
-	 * <BR>
+	 * Cancel the effect in the the abnormal effect map of the effected Creature.
 	 */
 	public void onExit()
 	{

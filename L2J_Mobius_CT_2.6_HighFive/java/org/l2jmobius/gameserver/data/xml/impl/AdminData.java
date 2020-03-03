@@ -158,7 +158,7 @@ public class AdminData implements IXmlReader
 		AdminCommandAccessRight acar = _adminCommandAccessRights.get(adminCommand);
 		if (acar == null)
 		{
-			// Trying to avoid the spam for next time when the gm would try to use the same command
+			// Trying to avoid the spam for next time when the GM would try to use the same command
 			if ((accessLevel.getLevel() > 0) && (accessLevel.getLevel() == _highestLevel))
 			{
 				acar = new AdminCommandAccessRight(adminCommand, true, accessLevel.getLevel());
@@ -339,7 +339,7 @@ public class AdminData implements IXmlReader
 	
 	/**
 	 * Gets the single instance of AdminTable.
-	 * @return AccessLevels: the one and only instance of this class<br>
+	 * @return AccessLevels: the one and only instance of this class
 	 */
 	public static AdminData getInstance()
 	{

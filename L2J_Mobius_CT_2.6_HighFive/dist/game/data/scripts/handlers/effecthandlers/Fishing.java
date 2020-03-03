@@ -98,7 +98,7 @@ public class Fishing extends AbstractEffect
 			return;
 		}
 		
-		// check for equiped fishing rod
+		// check for equipped fishing rod
 		final Weapon equipedWeapon = player.getActiveWeaponItem();
 		if (((equipedWeapon == null) || (equipedWeapon.getItemType() != WeaponType.FISHINGROD)))
 		{
@@ -106,7 +106,7 @@ public class Fishing extends AbstractEffect
 			return;
 		}
 		
-		// check for equiped lure
+		// check for equipped lure
 		final ItemInstance equipedLeftHand = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		if ((equipedLeftHand == null) || (equipedLeftHand.getItemType() != EtcItemType.LURE))
 		{

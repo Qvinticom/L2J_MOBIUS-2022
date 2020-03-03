@@ -17,17 +17,17 @@
 package org.l2jmobius.gameserver.enums;
 
 /**
- * Basic property type of skills. <BR>
- * Before Goddess of Destruction, BaseStats was used. CON for physical, MEN for magical, and others for special cases. <BR>
- * After, only 3 types are used: physical, magic and none. <BR>
- * <BR>
- * Quote from Juji: <BR>
- * ---------------------------------------------------------------------- <BR>
- * Physical: Stun, Paralyze, Knockback, Knock Down, Hold, Disarm, Petrify <BR>
- * Mental: Sleep, Mutate, Fear, Aerial Yoke, Silence <BR>
- * ---------------------------------------------------------------------- <BR>
- * All other are considered with no basic property aka NONE. <BR>
- * <BR>
+ * Basic property type of skills.<br>
+ * Before Goddess of Destruction, BaseStats was used. CON for physical, MEN for magical, and others for special cases.<br>
+ * After, only 3 types are used: physical, magic and none.<br>
+ * <br>
+ * Quote from Juji:<br>
+ * ----------------------------------------------------------------------<br>
+ * Physical: Stun, Paralyze, Knockback, Knock Down, Hold, Disarm, Petrify<br>
+ * Mental: Sleep, Mutate, Fear, Aerial Yoke, Silence<br>
+ * ----------------------------------------------------------------------<br>
+ * All other are considered with no basic property aka NONE.<br>
+ * <br>
  * @author Nik
  */
 public enum BasicProperty
